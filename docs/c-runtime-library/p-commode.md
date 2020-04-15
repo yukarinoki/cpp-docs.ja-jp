@@ -1,8 +1,9 @@
 ---
 title: __p__commode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__commode
+- _o___p__commode
 api_location:
 - msvcr110.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: e3121c127c3ebf0f5fccdeb7ae0f67d0164d0965
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fa589c1972d27854e3f794d8283f49d9db5d053a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349315"
 ---
 # <a name="__p__commode"></a>__p__commode
 
-ファイルの入出力操作に対して既定の`_commode`ファイル コミット モード*を指定する*  グローバル変数を指し示します。
+ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,8 +51,10 @@ int * __p__commode(
 
 ファイル コミット モードは重要なデータがディスクに書き込まれるタイミングを指定します。 詳細については、「[fflush](../c-runtime-library/reference/fflush.md)」をご覧ください。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |__p\__commode|internal.h|

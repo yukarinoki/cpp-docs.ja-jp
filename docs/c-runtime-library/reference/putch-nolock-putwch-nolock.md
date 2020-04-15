@@ -1,9 +1,11 @@
 ---
 title: _putch_nolock、_putwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch_nolock
 - _putch_nolock
+- _o__putch_nolock
+- _o__putwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 74f1ba5fe43fb8d29a441fd7e024fa195c1c9082
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 16f01e626f72269286cda045615665152361a887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338448"
 ---
 # <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock、_putwch_nolock
 
@@ -63,16 +66,18 @@ wchar_t c
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 出力する文字。
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は、*c* を返します。 **_putch_nolock** は、失敗した場合 **EOF** を返します。 **_putwch_nolock** は、失敗した場合 **WEOF** を返します。
+処理が正常に終了した場合は、*c* を返します。 **_putch_nolock** は、失敗した場合 **EOF** を返します。**_putwch_nolock** は、失敗した場合 **WEOF** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_putch_nolock** と **_putwch_nolock** は、他のスレッドによる干渉から保護されない点を除いて **_putch** および **_putwch** それぞれと同じものです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -82,12 +87,12 @@ wchar_t c
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putch_nolock**|\<conio.h>|
 |**_putwch_nolock**|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 

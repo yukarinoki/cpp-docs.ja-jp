@@ -8,58 +8,58 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: b84365461ce6d45fccdf1922974feff5af93f99f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 872fa7229738314b86b6ae6c0d5dc5a5562b27f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360601"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>レコードセット: 大量のデータの処理 (ODBC)
 
 このトピックは、MFC ODBC クラスと MFC DAO クラスの両方に適用されます。
 
 > [!NOTE]
->  MFC DAO クラスを使用している場合は、 [CLongBinary](../../mfc/reference/clongbinary-class.md)クラスではなくクラス[CByteArray](../../mfc/reference/cbytearray-class.md)を使用して、大きなデータ項目を管理します。 バルク行フェッチで MFC ODBC クラスを使用している場合は、`CByteArray`ではなく `CLongBinary` を使用します。 バルク行フェッチの詳細については、「レコード[セット: バルクデータフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+> MFC DAO クラスを使用している場合は、クラス[CLongBinary](../../mfc/reference/clongbinary-class.md)ではなく[CByteArray](../../mfc/reference/cbytearray-class.md)クラスを使用して大きなデータ項目を管理します。 一括行フェッチで MFC ODBC クラスを使用する場合`CLongBinary`は、`CByteArray`ではなく を使用します。 バルク行フェッチの詳細については、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-たとえば、ビットマップ (従業員の写真、地図、製品の画像、OLE オブジェクトなど) などの大きなデータをデータベースで格納できるとします。 この種類のデータは、次の理由により、バイナリラージオブジェクト (または BLOB) と呼ばれることがよくあります。
+データベースに、ビットマップ (従業員の写真、マップ、製品の画像、OLE オブジェクトなど) などの大きなデータを格納できるとします。 このようなデータは、バイナリ ラージ オブジェクト (BLOB) と呼ばれることが多いのは、次の理由からです。
 
-- 各フィールドの値は大きいです。
+- 各フィールド値は大きいです。
 
-- 数値およびその他の単純なデータ型とは異なり、予測可能なサイズはありません。
+- 数値やその他の単純なデータ型とは異なり、予測可能なサイズはありません。
 
-- データは、プログラムの観点からは formless いません。
+- データはプログラムの観点からは形式が無い。
 
-このトピックでは、このようなオブジェクトを操作するためにデータベースクラスで提供されるサポートについて説明します。
+このトピックでは、このようなオブジェクトを処理するためにデータベース クラスが提供するサポートについて説明します。
 
-##  <a name="managing-large-objects"></a><a name="_core_managing_large_objects"></a>ラージオブジェクトの管理
+## <a name="managing-large-objects"></a><a name="_core_managing_large_objects"></a>ラージ オブジェクトの管理
 
-レコードセットには、バイナリラージオブジェクトを管理するための特殊な難しさを解決する2つの方法があります。 クラス[CByteArray](../../mfc/reference/cbytearray-class.md)を使用することも、 [CLongBinary](../../mfc/reference/clongbinary-class.md)クラスを使用することもできます。 一般に、大規模なバイナリデータを管理するには、`CByteArray` をお勧めします。
+レコードセットには、バイナリ ラージ オブジェクトの管理の特殊な難易度を解決する方法が 2 つあります。 クラス[CByteArray を](../../mfc/reference/cbytearray-class.md)使用するか、クラス[を使用](../../mfc/reference/clongbinary-class.md)することができます。 一般に`CByteArray`、大きなバイナリ データを管理する方法として推奨されます。
 
-`CByteArray` には `CLongBinary` よりも多くのオーバーヘッドが必要ですが、 [CByteArray クラス](#_core_the_cbytearray_class)で説明されているように、より多くの機能を利用できます。 `CLongBinary` については[、CLongBinary クラス](#_core_the_clongbinary_class)で簡単に説明します。
+`CByteArray`より多くのオーバーヘッド`CLongBinary`を必要としますが[、CByteArray クラス](#_core_the_cbytearray_class)で説明されているように、より有能です。 `CLongBinary`[は、CLongBinary クラス](#_core_the_clongbinary_class)で簡単に説明されています。
 
-`CByteArray` を使用して大きなデータ項目を操作する方法の詳細については、「[テクニカルノート 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)」を参照してください。
+大きなデータ項目`CByteArray`の使用の詳細については、テクニカル ノート[45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)を参照してください。
 
-##  <a name="cbytearray-class"></a><a name="_core_the_cbytearray_class"></a>CByteArray クラス
+## <a name="cbytearray-class"></a><a name="_core_the_cbytearray_class"></a>クラス
 
-`CByteArray` は、MFC コレクションクラスの1つです。 `CByteArray` オブジェクトは、動的なバイト配列を格納します。配列は必要に応じて拡張できます。 クラスは、組み込みのC++配列のように、インデックスによる高速アクセスを提供します。 `CByteArray` オブジェクトは、診断用にシリアル化およびダンプできます。 クラスは、指定されたバイトの取得と設定、バイトの挿入と追加、および1バイトまたはすべてのバイトの削除を行うためのメンバー関数を提供します。 これらの機能により、バイナリデータの解析が容易になります。 たとえば、バイナリオブジェクトが OLE オブジェクトの場合は、実際のオブジェクトに移動するためにヘッダーバイトを処理することが必要になることがあります。
+`CByteArray`は MFC コレクション クラスの 1 つです。 オブジェクト`CByteArray`はバイトの動的配列を格納します— 必要に応じて配列が拡張できます。 このクラスは、組み込みの C++ 配列と同様に、インデックスによる高速アクセスを提供します。 `CByteArray`オブジェクトは、診断のためにシリアル化およびダンプできます。 クラスは、指定されたバイトの取得と設定、バイトの挿入と追加、および 1 バイトまたはすべてのバイトの削除を行うメンバー関数を提供します。 これらの機能により、バイナリ データの解析が簡単になります。 たとえば、バイナリ オブジェクトが OLE オブジェクトの場合、実際のオブジェクトに到達するために、いくつかのヘッダー バイトを処理する必要があります。
 
-##  <a name="using-cbytearray-in-recordsets"></a><a name="_core_using_cbytearray_in_recordsets"></a>レコードセットでの CByteArray の使用
+## <a name="using-cbytearray-in-recordsets"></a><a name="_core_using_cbytearray_in_recordsets"></a>レコードセットでの CByteArray の使用
 
-レコードセットのフィールドデータメンバーに型 `CByteArray`を指定することにより、 [RFX](../../data/odbc/record-field-exchange-rfx.md)がレコードセットとデータソースの間のオブジェクトの転送を管理し、オブジェクト内のデータを操作できるようにするための固定ベースを提供します。 RFX は、データを取得するために特定のサイトを必要とします。また、基になるデータにアクセスする方法が必要です。
+レコードセットのフィールド データ メンバに型`CByteArray`を与えることにより[、RFX](../../data/odbc/record-field-exchange-rfx.md)がレコードセットとデータ ソースとの間でこのようなオブジェクトの転送を管理し、オブジェクト内のデータを操作するための固定ベースを提供します。 RFX では、取得したデータに対して特定のサイトが必要であり、基になるデータにアクセスする方法が必要です。
 
-`CByteArray` を使用して大きなデータ項目を操作する方法の詳細については、「[テクニカルノート 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)」を参照してください。
+大きなデータ項目`CByteArray`の使用の詳細については、テクニカル ノート[45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)を参照してください。
 
-##  <a name="clongbinary-class"></a><a name="_core_the_clongbinary_class"></a>CLongBinary クラス
+## <a name="clongbinary-class"></a><a name="_core_the_clongbinary_class"></a>クラスを長くする
 
-[CLongBinary](../../mfc/reference/clongbinary-class.md)オブジェクトは、ヒープに割り当てられたストレージのブロックを `HGLOBAL` ハンドルを囲む単純なシェルです。 バイナリラージオブジェクトを含むテーブル列をバインドすると、RFX はデータをレコードセットに転送する必要があるときに `HGLOBAL` ハンドルを割り当て、そのハンドルをレコードセットの `CLongBinary` フィールドに格納します。
+[CLongBinary](../../mfc/reference/clongbinary-class.md)オブジェクトは、ヒープに割り`HGLOBAL`当てられたストレージのブロックへのハンドルを囲む単純なシェルです。 バイナリ ラージ オブジェクトを含むテーブル列をバインドすると、RFX`HGLOBAL`はデータをレコードセットに転送する必要がある場合にハンドルを割り当`CLongBinary`て、レコードセットのフィールドにハンドルを格納します。
 
-さらに、`HGLOBAL` ハンドル、`m_hData`を使用してデータ自体を操作し、処理データの場合と同様に操作します。 ここで[CByteArray](../../mfc/reference/cbytearray-class.md)が機能を追加します。
+次に、`HGLOBAL`ハンドルを使用して、`m_hData`データ自体を操作し、ハンドル データと同様に操作します。 これは[、CByteArray](../../mfc/reference/cbytearray-class.md)が機能を追加する場所です。
 
 > [!CAUTION]
->  CLongBinary オブジェクトは、関数呼び出しでパラメーターとして使用することはできません。 さらに、`::SQLGetData`を呼び出す実装では、スクロール可能なスナップショットのスクロールパフォーマンスが必ず低下します。 これは、`::SQLGetData` を使用して動的スキーマ列を取得する場合にも当てはまります。
+> CLongBinary オブジェクトは、関数呼び出しのパラメーターとして使用できません。 さらに、その実装は、 を`::SQLGetData`呼び出すが、スクロール可能なスナップショットのスクロールのパフォーマンスを必ずしも遅くします。 これは、呼び出しを使用して`::SQLGetData`動的スキーマ列を取得する場合にも当てはまる場合があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>

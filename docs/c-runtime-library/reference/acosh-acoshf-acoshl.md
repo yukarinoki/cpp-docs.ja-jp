@@ -1,10 +1,13 @@
 ---
 title: acosh、acoshf、acoshl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acoshf
 - acosh
 - acoshl
+- _o_acosh
+- _o_acoshf
+- _o_acoshl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350843"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -59,29 +63,31 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、`errno` は `EDOM` に設定され、結果は簡易な NaN になります。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
+**acosh**関数は*x*の逆ヒベルボリック コサイン (アーク双曲線コサイン) を返します。 これらの関数は、ドメイン*x* ≥ 1 で有効です。 *x*が 1 より`errno`小さい場合`EDOM`は、設定されて、結果は静かな NaN になります。 *x*が静かな NaN、無期限、または無限大の場合は、同じ値が返されます。
 
 |入力|SEH 例外|`_matherr` 例外|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|なし|なし|
-|*x* < 1|なし|なし|
+|± QNAN、IND、INF|none|none|
+|*x* < 1|none|none|
 
 ## <a name="remarks"></a>解説
 
-をC++使用すると、 **float 型**または**long** **double**型の値を受け取って返す**acosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acosh**は常にを受け取り、 **double**を返します。
+C++ を使用すると、**浮動小数点**値または**長倍****精度浮動小数点値**を取得して返す**acosh**のオーバーロードを呼び出すことができます。 C プログラムでは **、acosh は**常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|Function|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
+|**アコシュ**,**アコスフ**,**アコスル**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -111,7 +117,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359266"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator クラス
 
@@ -59,35 +59,35 @@ class CCustomInterpolator;
 
 |名前|説明|
 |----------|-----------------|
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|オーバーロードされます。 カスタム インターポレーター オブジェクトを構築し、期間と指定した値に velocity を初期化します。|
+|[カスタム内挿器::Cカスタム内挿器](#ccustominterpolator)|オーバーロードされます。 カスタム補間オブジェクトを構築し、指定された値に対して期間と速度を初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CCustomInterpolator::GetDependencies](#getdependencies)|補間の依存関係を取得します。|
-|[CCustomInterpolator::GetDuration](#getduration)|インターポレーターの期間を取得します。|
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Interpolator が潜在顧客の最終的な値を取得します。|
-|[CCustomInterpolator::Init](#init)|期間と最終的な値を初期化します。|
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|指定されたオフセット値を補間します。|
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|指定されたオフセット ベロシティの補間します。|
-|[CCustomInterpolator::SetDuration](#setduration)|インターポレーターの期間を設定します。|
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|インターポレーターの初期値と速度を設定します。|
+|[カスタム補間器::取得依存関係](#getdependencies)|インターポレーターの依存関係を取得します。|
+|[カスタム補間器::ゲットデュレーション](#getduration)|インターポレーターの継続時間を取得します。|
+|[カスタムインターポレーター:::最終値を取得します。](#getfinalvalue)|インターポレーターがリードする最終値を取得します。|
+|[カスタム補間器::イニト](#init)|期間と最終値を初期化します。|
+|[カスタム補間器::補間値](#interpolatevalue)|指定したオフセットの値を補間します。|
+|[カスタム補間器::補間速度](#interpolatevelocity)|指定したオフセットの速度を補間します。|
+|[カスタム補間器::設定期間](#setduration)|インターポレーターの継続時間を設定します。|
+|[カスタム補間器:::初期値と速度の設定](#setinitialvalueandvelocity)|インターポレーターの初期値と速度を設定します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|補間値。|
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|挿入の速度。|
-|[CCustomInterpolator::m_duration](#m_duration)|移行の期間です。|
-|[CCustomInterpolator::m_finalValue](#m_finalvalue)|移行の最後に変数の最終的な値。|
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|移行の開始時の変数の値。|
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|移行の開始時の変数の速度。|
+|[カスタム補間器::m_currentValue](#m_currentvalue)|補間された値。|
+|[カスタム補間器::m_currentVelocity](#m_currentvelocity)|補間された速度。|
+|[カスタム補間器::m_duration](#m_duration)|トランジションの期間。|
+|[カスタム補間器::m_finalValue](#m_finalvalue)|遷移の終了時の変数の最終値。|
+|[カスタム補間器::m_initialValue](#m_initialvalue)|遷移の開始時の変数の値。|
+|[カスタム補間器::m_initialVelocity](#m_initialvelocity)|遷移の開始時の変数の速度。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-CCustomInterpolator からクラスを派生し、補間のカスタム アルゴリズムを実装するために必要なすべてのメソッドをオーバーライドします。 CCustomTransition をこのクラスへのポインターをパラメーターとして渡す必要があります。
+CCustomInterpolator からクラスを派生させ、カスタム補間アルゴリズムを実装するために必要なすべてのメソッドをオーバーライドします。 このクラスへのポインターは、パラメーターとして渡す必要があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -97,9 +97,9 @@ CCustomInterpolator からクラスを派生し、補間のカスタム アル�
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator
+## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>カスタム内挿器::Cカスタム内挿器
 
-カスタム インターポレーター オブジェクトを構築し、0 を既定値にすべての値を設定します。
+カスタム補間オブジェクトを構築し、すべての値をデフォルト 0 に設定します。
 
 ```
 CCustomInterpolator();
@@ -111,18 +111,18 @@ CCustomInterpolator(
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-移行の期間です。
+*期間*<br/>
+トランジションの期間。
 
-*finalValue*
+*最終価値*
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CCustomInterpolator::Init を使用して、期間と、コードの後で最終的な値を初期化します。
+CCustomInterpolator::Init を使用して、コードの後で期間と最終値を初期化します。
 
-##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies
+## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>カスタム補間器::取得依存関係
 
-補間の依存関係を取得します。
+インターポレーターの依存関係を取得します。
 
 ```
 virtual BOOL GetDependencies(
@@ -133,22 +133,22 @@ virtual BOOL GetDependencies(
 
 ### <a name="parameters"></a>パラメーター
 
-*initialValueDependencies*<br/>
-出力します。 Interpolator の初期値に依存する側面は、SetInitialValueAndVelocity に渡されます。
+*初期値依存関係*<br/>
+出力。 初期値に基づいて行う補間の側面を設定します。
 
-*initialVelocityDependencies*<br/>
-出力します。 Interpolator の初期速度に依存する側面は、SetInitialValueAndVelocity に渡されます。
+*初期速度依存*<br/>
+出力。 初期速度に依存する補間の側面を設定初期値と速度に渡します。
 
-*durationDependencies*<br/>
-出力します。 Interpolator の期間に依存する側面は、SetDuration に渡されます。
+*期間依存関係*<br/>
+出力。 SetDuration に渡される期間に依存する補間器の特徴。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="getduration"></a>  CCustomInterpolator::GetDuration
+## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a>カスタム補間器::ゲットデュレーション
 
-インターポレーターの期間を取得します。
+インターポレーターの継続時間を取得します。
 
 ```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
@@ -156,16 +156,16 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-出力します。 秒単位での移行の期間です。
+*期間*<br/>
+出力。 遷移の継続時間 (秒単位)。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue
+## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>カスタムインターポレーター:::最終値を取得します。
 
-Interpolator が潜在顧客の最終的な値を取得します。
+インターポレーターがリードする最終値を取得します。
 
 ```
 virtual BOOL GetFinalValue(DOUBLE* value);
@@ -174,15 +174,15 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-出力します。 移行の最後に変数の最終的な値。
+出力。 遷移の終了時の変数の最終値。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="init"></a>  CCustomInterpolator::Init
+## <a name="ccustominterpolatorinit"></a><a name="init"></a>カスタム補間器::イニト
 
-期間と最終的な値を初期化します。
+期間と最終値を初期化します。
 
 ```
 void Init(
@@ -192,15 +192,15 @@ void Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-移行の期間です。
+*期間*<br/>
+トランジションの期間。
 
-*finalValue*<br/>
-移行の最後に変数の最終的な値。
+*最終価値*<br/>
+遷移の終了時の変数の最終値。
 
-##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue
+## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>カスタム補間器::補間値
 
-指定されたオフセット値を補間します。
+指定したオフセットの値を補間します。
 
 ```
 virtual BOOL InterpolateValue(
@@ -211,15 +211,15 @@ virtual BOOL InterpolateValue(
 ### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-出力します。 補間値。
+出力。 補間された値。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity
+## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>カスタム補間器::補間速度
 
-指定されたオフセット ベロシティの補間します。
+指定したオフセットの速度を補間します。
 
 ```
 virtual BOOL InterpolateVelocity(
@@ -229,64 +229,64 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>パラメーター
 
-*ベロシティ*<br/>
-出力します。 オフセットで変数の速度。
+*velocity*<br/>
+出力。 オフセットでの変数の速度。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue
+## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a>カスタム補間器::m_currentValue
 
-補間値。
+補間された値。
 
 ```
 DOUBLE m_currentValue;
 ```
 
-##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity
+## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a>カスタム補間器::m_currentVelocity
 
-挿入の速度。
+補間された速度。
 
 ```
 DOUBLE m_currentVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCustomInterpolator::m_duration
+## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a>カスタム補間器::m_duration
 
-移行の期間です。
+トランジションの期間。
 
 ```
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue
+## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a>カスタム補間器::m_finalValue
 
-移行の最後に変数の最終的な値。
+遷移の終了時の変数の最終値。
 
 ```
 DOUBLE m_finalValue;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue
+## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a>カスタム補間器::m_initialValue
 
-移行の開始時の変数の値。
+遷移の開始時の変数の値。
 
 ```
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity
+## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a>カスタム補間器::m_initialVelocity
 
-移行の開始時の変数の速度。
+遷移の開始時の変数の速度。
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="setduration"></a>  CCustomInterpolator::SetDuration
+## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a>カスタム補間器::設定期間
 
-インターポレーターの期間を設定します。
+インターポレーターの継続時間を設定します。
 
 ```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
@@ -294,14 +294,14 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-移行の期間です。
+*期間*<br/>
+トランジションの期間。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装は常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
-##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity
+## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>カスタム補間器:::初期値と速度の設定
 
 インターポレーターの初期値と速度を設定します。
 
@@ -313,15 +313,15 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>パラメーター
 
-*initialValue*<br/>
-移行の開始時の変数の値。
+*初期値*<br/>
+遷移の開始時の変数の値。
 
-*initialVelocity*<br/>
-移行の開始時の変数の速度。
+*初期速度*<br/>
+遷移の開始時の変数の速度。
 
 ### <a name="return-value"></a>戻り値
 
-基本的な実装を常に TRUE を返します。 FALSE を返すオーバーライドされた実装から、イベントが失敗する場合。
+基本的な実装は常に TRUE を返します。 イベントを失敗する場合は、オーバーライドされた実装から FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352080"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 
@@ -37,15 +37,15 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|`CHtmlEditView` オブジェクトを構築します。|
+|[ビュー::CHtml編集ビュー](#chtmleditview)|`CHtmlEditView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|新しいウィンドウ オブジェクトを作成します。|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|返します、`IHTMLDocument2`現在のドキュメントのインターフェイス。|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|このビューの既定のドキュメントの名前を取得します。|
+|[ビュー::作成](#create)|新しいウィンドウ オブジェクトを作成します。|
+|[ドキュメントを表示します。](#getdhtmldocument)|現在の`IHTMLDocument2`ドキュメントのインターフェイスを返します。|
+|[ビュー::取得ドキュメント](#getstartdocument)|このビューの既定のドキュメントの名前を取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -63,7 +63,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[CHtmlView](../../mfc/reference/chtmlview-class.md)
+[ビュー](../../mfc/reference/chtmlview-class.md)
 
 `CHtmlEditView`
 
@@ -71,7 +71,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **ヘッダー:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>ビュー::CHtml編集ビュー
 
 `CHtmlEditView` オブジェクトを構築します。
 
@@ -79,7 +79,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>ビュー::作成
 
 新しいウィンドウ オブジェクトを作成します。
 
@@ -96,34 +96,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszClassName*<br/>
-Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または`RegisterClass`Windows 関数。 NULL の場合は、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。
+*クラス名*<br/>
+Windows クラスの名前を示す null で終わる文字列を指します。 クラス名は[、AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または Windows 関数に登録`RegisterClass`された任意の名前にすることができます。 NULL の場合、定義済みの既定[の CFrameWnd](../../mfc/reference/cframewnd-class.md)属性が使用されます。
 
-*lpszWindowName*<br/>
-ウィンドウの名前を表す null で終わる文字列へのポインター。
+*名前をクリックします。*<br/>
+ウィンドウ名を表す null で終わる文字列を指します。
 
-*dwStyle*<br/>
-ウィンドウのスタイル属性を指定します。 既定では、WS_VISIBLE と WS_CHILD Windows スタイルが設定されます。
+*Dwstyle*<br/>
+ウィンドウ スタイルの属性を指定します。 既定では、WS_VISIBLEとWS_CHILD Windows スタイルが設定されます。
 
-*rect*<br/>
-参照を[RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。
+*Rect*<br/>
+ウィンドウのサイズと位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。 *rectDefault*値を使用すると、ウィンドウは新しいウィンドウのサイズと位置を指定できます。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウへのポインター。
 
 *nID*<br/>
-ビューの ID 番号。 既定では、AFX_IDW_PANE_FIRST に設定します。
+ビューの ID 番号。 既定では、AFX_IDW_PANE_FIRSTに設定します。
 
 *pContext*<br/>
-ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)します。 既定では NULL です。
+へのポインターを[CCreate コンテキスト](../../mfc/reference/ccreatecontext-structure.md)にします。 既定では NULL です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドが含まれている web ブラウザーを呼び出すことも`Navigate`を既定のドキュメントを読み込むメソッド (を参照してください[CHtmlEditView::GetStartDocument](#getstartdocument))。
+このメソッドは、含まれている WebBrowser の`Navigate`メソッドを呼び出して既定のドキュメントを読み込みます[(CHtmlEditView::GetStartDocument](#getstartdocument)を参照)。
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>ドキュメントを表示します。
 
-返します、`IHTMLDocument2`現在のドキュメントのインターフェイス。
+現在の`IHTMLDocument2`ドキュメントのインターフェイスを返します。
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -132,9 +132,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppDocument*<br/>
-[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))インターフェイス。
+[インターフェイス。](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>ビュー::取得ドキュメント
 
 このビューの既定のドキュメントの名前を取得します。
 
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>関連項目
 
-[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[HTML 編集のサンプル](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)

@@ -1,8 +1,9 @@
 ---
 title: clearerr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr
+- _o_clearerr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350026"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -47,20 +49,22 @@ void clearerr(
 
 ### <a name="parameters"></a>パラメーター
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Clearerr**関数は、*ストリーム*のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出されるまでエラー値を返し続けます。
+**clearerr**関数は、*ストリーム*のエラーインジケータとファイル終了インジケータをリセットします。 エラー インジケータは自動的にクリアされません。指定されたストリームにエラー インジケータが設定されると、そのストリームに対する操作は**clearerr** [、fseek](fseek-fseeki64.md) **、fsetpos**、または[巻き戻](rewind.md)しが呼び出されるまでエラー値を返し続けます。
 
-*Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、を返します。 **Errno**とエラーコードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
+*stream*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定して戻ります。 **errno**およびエラー コードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 この関数のセキュリティが強化されたバージョンについては、「[clearerr_s](clearerr-s.md)」を参照してください。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
@@ -106,7 +110,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Write error: No error

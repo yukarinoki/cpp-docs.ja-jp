@@ -5,14 +5,14 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 989c1e368e95fc0009f0c3f1c71af0bdba20609d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453853"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351715"
 ---
-# <a name="lockguard-class"></a>lock_guard クラス
+# <a name="lock_guard-class"></a>lock_guard クラス
 
 オブジェクトを作成し、そのデストラクタ―が `mutex` のロックを解除するためにインスタンス化できるテンプレートを表します。
 
@@ -23,7 +23,7 @@ template <class Mutex>
 class lock_guard;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 テンプレート引数 `Mutex` には *mutex 型*を指定する必要があります。
 
@@ -44,11 +44,11 @@ class lock_guard;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミューテックス >
+**ヘッダー:**\<ミューテックス>
 
 **名前空間:** std
 
-## <a name="lock_guard"></a>  lock_guard::lock_guard コンストラクター
+## <a name="lock_guardlock_guard-constructor"></a><a name="lock_guard"></a>lock_guard::lock_guardコンストラクタ
 
 `lock_guard` オブジェクトを構築します。
 
@@ -60,16 +60,16 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>パラメーター
 
-*Mtx.exe*\
-*mutex 型*オブジェクト。
+*Mtx*\
+*ミューテックス型*オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-1つ目のコンストラクターは、型`lock_guard`のオブジェクトを構築し、 *mtx.exe*をロックします。 *Mtx.exe*が再帰的なミューテックスでない場合は、このコンストラクターが呼び出されるときにロックを解除する必要があります。
+最初のコンストラクターは型`lock_guard`のオブジェクトを構築し *、Mtx*をロックします。 *Mtx*が再帰ミューテックスでない場合、このコンストラクターが呼び出されたときにロックを解除する必要があります。
 
-2番目のコンストラクターは、 *mtx.exe*をロックしません。 このコンストラクターが呼び出されたときに、 *mtx.exe*をロックする必要があります。 このコンストラクターでは例外はスローされません。
+2 番目のコンストラクターは*Mtx*をロックしません。 このコンストラクタが呼び出されたときに*は、Mtx*をロックする必要があります。 このコンストラクターでは例外はスローされません。
 
-## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard デストラクター
+## <a name="lock_guardlock_guard-destructor"></a><a name="dtorlock_guard_destructor"></a>lock_guard:~lock_guardデストラクタ
 
 コンストラクターに渡された `mutex` をロック解除します。
 
@@ -77,11 +77,11 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 ~lock_guard() noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 デストラクターの実行時に `mutex` が存在しない場合の動作は未定義です。
 
 ## <a name="see-also"></a>関連項目
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[\<ミューテックス>](../standard-library/mutex.md)

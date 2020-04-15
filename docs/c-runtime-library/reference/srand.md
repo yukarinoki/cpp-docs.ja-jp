@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355488"
 ---
 # <a name="srand"></a>srand
 
-**Rand**関数によって使用される擬似乱数ジェネレーターの開始シード値を設定します。
+**rand**関数で使用される擬似乱数ジェネレータの開始シード値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -53,20 +55,22 @@ void srand(
 
 ### <a name="parameters"></a>パラメーター
 
-*シード*<br/>
+*種子*<br/>
 擬似乱数ジェネレーターのシード
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Srand**関数は、現在のスレッドで一連の擬似乱数を生成するための開始点を設定します。 ジェネレーターを再初期化して同じ結果シーケンスを作成するには、 **srand**関数を呼び出し、同じ*シード*引数を再度使用します。 *シード*のその他の値は、擬似乱数シーケンスの異なる開始位置にジェネレーターを設定します。 **rand**は、生成される擬似乱数を取得します。 **Srand**の呼び出しの前に**rand**を呼び出すと、*シード*が1として渡された**srand**を呼び出す場合と同じシーケンスが生成されます。
+**srand**関数は、現在のスレッドで一連の擬似ランダム整数を生成するための開始点を設定します。 同じ結果シーケンスを作成するためにジェネレータを再初期化するには **、srand**関数を呼び出して、同じ*seed*引数を再度使用します。 *シード*のその他の値は、ジェネレータを擬似ランダムシーケンス内の別の開始点に設定します。 **rand は**、生成される擬似乱数を取得します。 **srand**への呼び出しの前に**rand**を呼び出すと、*シード*が 1 として渡された**srand を**呼び出すのと同じシーケンスが生成されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349883"
 ---
 # <a name="source-files-and-source-programs"></a>ソース ファイルとソース プログラム
 
@@ -21,17 +21,17 @@ ms.locfileid: "56152535"
 ## <a name="syntax"></a>構文
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*外部宣言* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*関数定義*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*宣言*
 
-「[宣言の概要](../c-language/overview-of-declarations.md)」では、非終端要素である `declaration` の構文を示します。『*プリプロセッサ リファレンス*』では、[翻訳単位](../preprocessor/phases-of-translation.md)の処理方法について説明します。
+「[宣言の概要](../c-language/overview-of-declarations.md)」では、非終端要素である `declaration` の構文を示します。『プリプロセッサ リファレンス』では、[翻訳単位](../preprocessor/phases-of-translation.md)の処理方法について説明します**。
 
 > [!NOTE]
->  ANSI 構文規則については、「[C 言語の構文の概要](../c-language/c-language-syntax-summary.md)」の説明を参照してください。
+> ANSI 構文規則については、「[C 言語の構文の概要](../c-language/c-language-syntax-summary.md)」の説明を参照してください。
 
 翻訳単位の構成要素は、関数定義および識別子宣言を含む外部宣言です。 これらの宣言と定義は、ソース ファイル、ヘッダー ファイル、ライブラリなど、プログラムが必要とするファイルに含めることができます。 各翻訳単位をコンパイルし、結果のオブジェクト ファイルをリンクして、プログラムを作成する必要があります。
 

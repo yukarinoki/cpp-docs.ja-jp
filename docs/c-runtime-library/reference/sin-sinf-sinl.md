@@ -1,10 +1,11 @@
 ---
 title: sin、sinf、sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354998"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
-浮動小数点値のサインを計算します。
+浮動小数点値の右回を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -60,12 +62,12 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
-**Sin**関数は、 *x*のサインを返します。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
+**この場合の sin**関数は*x*の sine を返します。 *x*が 263 以上、または -263 以下の場合、結果の有意性が失われます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -74,17 +76,19 @@ long double sin(long double x);  // C++ only
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sin**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なため **、float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは **、sin は**常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**sin**、 **sinf**、 **sinf**|\<math.h>|\<cmath> または \<math.h>|
+|**罪**,**罪 ,****罪**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

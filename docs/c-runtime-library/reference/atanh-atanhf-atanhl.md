@@ -1,10 +1,13 @@
 ---
 title: atanh、atanhf、atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939597"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350130"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -56,29 +60,31 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Atanh**関数は、 *x*の逆ハイパーボリックタンジェント (アークハイパーボリックタンジェント) を返します。 *X*が1より大きいか、または-1 未満の場合、 **errno**は**EDOM**に設定され、結果は簡易な NaN になります。 *X*が1または-1 の場合、それぞれ正または負の無限大が返され、 **errno**は**ERANGE**に設定されます。
+**atanh**関数は*x*の逆ハイベルボリックタンジェント(アーク双曲線タンジェント)を返します。 *x*が 1 より大きい場合、または -1 より小さい場合 **、errno**は**EDOM**に設定され、結果は静かな NaN になります。 *x*が 1 または -1 の場合、正または負の無限大がそれぞれ返され **、errno**が**ERANGE**に設定されます。
 
-|入力|SEH 例外|**Matherr**例外的|
+|入力|SEH 例外|**マエラー**例外|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|none|
-|*X* ≥ 1;*x* ≤-1|none|none|
+|*X* ≥ 1;*x* ≤ -1|none|none|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**atanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **atanh**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なため **、float**または**long** **double**値を受け取って返す**atanh**のオーバーロードを呼び出すことができます。 C プログラムでは **、atanh**は常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> または \<math.h>|
+|**アタン**、**アタンフ**、**アタペン**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

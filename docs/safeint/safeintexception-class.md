@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515567"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349948"
 ---
 # <a name="safeintexception-class"></a>SafeIntException クラス
 
 `SafeInt` クラスでは、数学演算を完了できない理由を特定するために `SafeIntException` を使用します。
 
 > [!NOTE]
-> このライブラリの最新バージョンは [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) にあります。
+> このライブラリの最新バージョンは に[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)にあります。
 
 ## <a name="syntax"></a>構文
 
@@ -35,9 +35,9 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-name                                                    | 説明
+名前                                                    | 説明
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | `SafeIntException` オブジェクトを作成します。
+[セーフイント例外::セーフイント例外](#safeintexception) | `SafeIntException` オブジェクトを作成します。
 
 ## <a name="remarks"></a>解説
 
@@ -47,13 +47,13 @@ name                                                    | 説明
 
 `SafeIntException`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** safeint.h
 
 **名前空間:** msl::utilities
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>セーフイント例外::セーフイント例外
 
 `SafeIntException` オブジェクトを作成します。
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>パラメーター
 
-*code*<br/>
+*コード*<br/>
 [in] 発生したエラーを説明する列挙データ値。
 
 ### <a name="remarks"></a>解説

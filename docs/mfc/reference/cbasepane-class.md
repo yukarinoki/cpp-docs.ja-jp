@@ -1,5 +1,5 @@
 ---
-title: CBasePane クラス
+title: Cベースウィンドウクラス
 ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
@@ -166,16 +166,16 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426049"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352935"
 ---
-# <a name="cbasepane-class"></a>CBasePane クラス
+# <a name="cbasepane-class"></a>Cベースウィンドウクラス
 
-MFC のすべてのペインの基本クラスです。
+MFC のすべてのペインの基本クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -187,162 +187,162 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
 |`CBasePane::CBasePane`|既定のコンストラクターです。|
 |`CBasePane::~CBasePane`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|`CBasePane::accHitTest`|画面上の指定された位置にある子要素または子オブジェクトを取得するために、フレームワークによって呼び出されます。 ( [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest)をオーバーライドします)。|
-|`CBasePane::accLocation`|指定されたオブジェクトの現在の画面位置を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: の場所](../../mfc/reference/cwnd-class.md#acclocation)をオーバーライドします)。|
-|[CBasePane:: AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` はこのメソッドを使用しません。|
-|`CBasePane::accSelect`|選択を変更するため、または指定されたオブジェクトのキーボード フォーカスを移動するために、フレームワークによって呼び出されます。 ( [CWnd:: の選択を](../../mfc/reference/cwnd-class.md#accselect)オーバーライドします)。|
-|[CBasePane:: AddPane](#addpane)|ドッキングマネージャーにペインを追加します。|
-|[CBasePane:: AdjustDockingLayout](#adjustdockinglayout)|ドッキングマネージャーへの呼び出しをリダイレクトし、ドッキングレイアウトを調整します。|
-|[CBasePane:: AdjustLayout](#adjustlayout)|ペインが内部レイアウトを調整する必要があるときにフレームワークによって呼び出されます。|
-|[CBasePane:: CalcFixedLayout](#calcfixedlayout)|コントロールバーの水平方向のサイズを計算します。|
-|[CBasePane:: CanAcceptPane](#canacceptpane)|別のペインをペインにドッキングできるかどうかを決定します。|
-|[CBasePane:: CanAutoHide に隠す](#canautohide)|ペインが自動非表示モードをサポートしているかどうかを判断します。|
-|[CBasePane:: CanBeAttached](#canbeattached)|ペインを別のペインにドッキングできるかどうかを決定します。|
-|[CBasePane:: Can/Losed](#canbeclosed)|ペインを閉じることができるかどうかを判断します。|
-|[CBasePane:: CanBeDocked](#canbedocked)|ペインを別のペインにドッキングできるかどうかを決定します。|
-|[CBasePane:: Canのようになります。](#canberesized)|ペインのサイズを変更できるかどうかを決定します。|
-|[CBasePane:: CanBeTabbedDocument](#canbetabbeddocument)|ペインを MDI タブ付きドキュメントに変換できるかどうかを指定します。|
-|[CBasePane:: CanFloat](#canfloat)|ペインをフローティングできるかどうかを判断します。|
-|[CBasePane:: CanFocus](#canfocus)|ペインがフォーカスを受け取ることができるかどうかを指定します。|
-|[CBasePane:: CopyState](#copystate)|指定されたペインの状態をコピーします。|
-|[CBasePane:: CreateDefaultMiniframe フレーム](#createdefaultminiframe)|ペインをフローティングできる場合、はミニフレームウィンドウを作成します。|
-|[CBasePane:: CreateEx](#createex)|ペインコントロールを作成します。|
-|[CBasePane::D ockPane](#dockpane)|ペインを別のペインまたはフレームウィンドウにドッキングします。|
-|[CBasePane::D ockPaneUsingRTTI](#dockpaneusingrtti)|実行時の型情報を使用して、ペインをドッキングします。|
-|[CBasePane::D Ocktoフレームウィンドウ](#docktoframewindow)|ドッキング可能なペインをフレームにドッキングします。|
-|[CBasePane::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|このペインと親フレームの間に別のペインを動的に挿入できるかどうかを決定します。|
-|[CBasePane:: EnableDocking](#enabledocking)|ペインをメインフレームにドッキングできるようにします。|
-|[CBasePane:: EnableGripper](#enablegripper)|グリッパーを有効または無効にします。 グリップが有効になっている場合は、ユーザーはドラッグして、ウィンドウの位置を変更できます。|
+|`CBasePane::accHitTest`|画面上の指定された位置にある子要素または子オブジェクトを取得するために、フレームワークによって呼び出されます。 [(CWnd をオーバーライドします。::アヒットテスト](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CBasePane::accLocation`|指定したオブジェクトの現在の画面位置を取得するために、フレームワークによって呼び出されます。 [(CWnd をオーバーライドします。:アロケーション](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[ウィンドウ::アック通知オブジェクトフォーカスイベント](#accnotifyobjectfocusevent)|`CBasePane`このメソッドは使用しません。|
+|`CBasePane::accSelect`|選択を変更するため、または指定されたオブジェクトのキーボード フォーカスを移動するために、フレームワークによって呼び出されます。 [(CWnd をオーバーライドします::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|[Cベースペイン::ペインの追加](#addpane)|ドッキング マネージャーにペインを追加します。|
+|[CBase ペイン::調整ドッキングレイアウト](#adjustdockinglayout)|ドッキング マネージャーに呼び出しをリダイレクトしてドッキング レイアウトを調整します。|
+|[ウィンドウ::レイアウトの調整](#adjustlayout)|ペインが内部レイアウトを調整する必要があるときに、フレームワークによって呼び出されます。|
+|[Cベースペイン::計算式レイアウト](#calcfixedlayout)|コントロール バーの水平方向のサイズを計算します。|
+|[C ベースペイン::缶アクセプウィンドウ](#canacceptpane)|別のペインをペインにドッキングできるかどうかを判断します。|
+|[CBase ペイン::缶自動非表示](#canautohide)|ペインが自動非表示モードをサポートするかどうかを決定します。|
+|[Cベースペイン::缶詰添付](#canbeattached)|ペインを別のペインにドッキングできるかどうかを判断します。|
+|[Cベースペイン::缶詰閉](#canbeclosed)|ペインを閉じることができるかどうかを判断します。|
+|[Cベースペイン::缶詰](#canbedocked)|ペインを別のペインにドッキングできるかどうかを判断します。|
+|[Cベースペイン::缶ベサイズ](#canberesized)|ペインのサイズを変更できるかどうかを決定します。|
+|[ウィンドウペイン::缶ベタブベドドキュメント](#canbetabbeddocument)|ペインを MDI タブ付きドキュメントに変換できるかどうかを指定します。|
+|[Cベースペイン::缶詰](#canfloat)|ペインをフロートできるかどうかを判断します。|
+|[Cベースペイン::缶フォーカス](#canfocus)|ペインがフォーカスを受け取ることができるかどうかを指定します。|
+|[Cベースペイン::コピーステート](#copystate)|指定されたペインの状態をコピーします。|
+|[Cベースペイン::デフォルトミニフレームの作成](#createdefaultminiframe)|ペインをフローティングできる場合は、ミニフレーム ウィンドウを作成します。|
+|[Cベースペイン::作成Ex](#createex)|ペイン コントロールを作成します。|
+|[Cベースペイン::Dロックウィンドウ](#dockpane)|ペインを別のペインまたはフレーム ウィンドウにドッキングします。|
+|[Cベースペイン::DオックパネusingRTTI](#dockpaneusingrtti)|実行時の型情報を使用してペインをドッキングします。|
+|[ウィンドウ:Dロックウィンドウ](#docktoframewindow)|ドッキング可能なペインをフレームにドッキングします。|
+|[前に挿入:D](#doesallowdyninsertbefore)|このペインと親フレームの間に別のペインを動的に挿入できるかどうかを指定します。|
+|[CBase ペイン::有効化ドッキング](#enabledocking)|ペインをメイン フレームにドッキングできるようにします。|
+|[Cベースペイン::イネーブルグリッパー](#enablegripper)|グリッパーを有効または無効にします。 グリッパーが有効になっている場合、ユーザーはそれをドラッグしてペインの位置を変更できます。|
 |`CBasePane::FillWindowRect`|内部使用。|
-|[CBasePane:: FloatPane](#floatpane)|ペインをフローティングします。|
-|`CBasePane::get_accChild`|指定された子の `IDispatch` インターフェイスのアドレスを取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild)をオーバーライドします)。|
-|`CBasePane::get_accChildCount`|このオブジェクトに属する子の数を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount)をオーバーライドします)。|
-|`CBasePane::get_accDefaultAction`|オブジェクトの既定のアクションを説明する文字列を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction)をオーバーライドします)。|
-|`CBasePane::get_accDescription`|指定されたオブジェクトの外観を記述する文字列を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription)をオーバーライドします)。|
-|`CBasePane::get_accFocus`|キーボード フォーカスを保持するオブジェクトを取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus)をオーバーライドします)。|
-|`CBasePane::get_accHelp`|オブジェクトのヘルププロパティ文字列を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp)をオーバーライドします)。|
-|[CBasePane:: get_accHelpTopic](#get_acchelptopic)|指定されたオブジェクトに関連付けられた WinHelp ファイルの完全パスと、そのファイル内の適切なトピックの識別子を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic)をオーバーライドします)。|
-|`CBasePane::get_accKeyboardShortcut`|オブジェクトの指定されたショートカットキーを取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut)をオーバーライドします)。|
-|`CBasePane::get_accName`|指定されたオブジェクトの名前を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname)をオーバーライドします)。|
-|`CBasePane::get_accParent`|オブジェクトの親の `IDispatch` インターフェイスを取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accParent](../../mfc/reference/cwnd-class.md#get_accparent)をオーバーライドします)。|
-|`CBasePane::get_accRole`|指定されたオブジェクトの役割を記述する情報を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole)をオーバーライドします)。|
-|[CBasePane:: get_accSelection](#get_accselection)|このオブジェクトの選択されている子を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection)をオーバーライドします)。|
-|`CBasePane::get_accState`|指定されたオブジェクトの現在の状態を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate)をオーバーライドします)。|
-|`CBasePane::get_accValue`|指定されたオブジェクトの値を取得するために、フレームワークによって呼び出されます。 ( [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue)をオーバーライドします)。|
-|[CBasePane:: GetCaptionHeight](#getcaptionheight)|キャプションの高さを返します。|
-|[CBasePane:: GetControlBarStyle](#getcontrolbarstyle)|コントロールバーのスタイルを返します。|
-|[CBasePane:: GetCurrentAlignment](#getcurrentalignment)|現在のペインの配置を返します。|
-|[CBasePane:: Getdocによるモード](#getdockingmode)|ペインの現在のドッキングモードを返します。|
-|[CBasePane:: GetDockSiteFrameWnd](#getdocksiteframewnd)|ペインのドッキングサイトであるウィンドウへのポインターを返します。|
-|[CBasePane:: GetEnabledAlignment](#getenabledalignment)|ペインに適用されている CBRS_ALIGN_ スタイルを返します。|
-|[CBasePane:: GetMFCStyle](#getmfcstyle)|MFC に固有のペインスタイルを返します。|
-|[CBasePane:: Getpane アイコン](#getpaneicon)|ペインアイコンへのハンドルを返します。|
+|[Cベースペイン::フロートペイン](#floatpane)|ペインをフローティングします。|
+|`CBasePane::get_accChild`|指定された子の `IDispatch` インターフェイスのアドレスを取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild)をオーバーライドします。|
+|`CBasePane::get_accChildCount`|このオブジェクトに属する子の数を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount)をオーバーライドします。|
+|`CBasePane::get_accDefaultAction`|オブジェクトの既定のアクションを記述する文字列を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction)をオーバーライドします。|
+|`CBasePane::get_accDescription`|指定されたオブジェクトの外観を記述する文字列を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription)をオーバーライドします。|
+|`CBasePane::get_accFocus`|キーボード フォーカスを保持するオブジェクトを取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus)をオーバーライドします。|
+|`CBasePane::get_accHelp`|オブジェクトのヘルプ プロパティ文字列を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp)をオーバーライドします。|
+|[Cベースペイン::get_accHelpTopic](#get_acchelptopic)|指定したオブジェクトに関連付けられている WinHelp ファイルの完全パスとそのファイル内の適切なトピックの識別子を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic)をオーバーライドします。|
+|`CBasePane::get_accKeyboardShortcut`|オブジェクトの指定されたショートカット キーを取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut)をオーバーライドします。|
+|`CBasePane::get_accName`|指定されたオブジェクトの名前を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname)をオーバーライドします。|
+|`CBasePane::get_accParent`|オブジェクトの親のインターフェイスを`IDispatch`取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent)をオーバーライドします。|
+|`CBasePane::get_accRole`|指定されたオブジェクトの役割を記述する情報を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole)をオーバーライドします。|
+|[Cベースペイン::get_accSelection](#get_accselection)|このオブジェクトの選択されている子を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection)をオーバーライドします。|
+|`CBasePane::get_accState`|指定されたオブジェクトの現在の状態を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate)をオーバーライドします。|
+|`CBasePane::get_accValue`|指定されたオブジェクトの値を取得するために、フレームワークによって呼び出されます。 [(CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue)をオーバーライドします。|
+|[ウィンドウ::ゲットキャプションハイト](#getcaptionheight)|キャプションの高さを返します。|
+|[ウィンドウ::コントロールバースタイルを取得します。](#getcontrolbarstyle)|コントロール バーのスタイルを返します。|
+|[ウィンドウ::取得カレントアライメント](#getcurrentalignment)|現在のペインの配置を返します。|
+|[Cベースペイン::取得ドッキングモード](#getdockingmode)|ペインの現在のドッキング モードを返します。|
+|[ウィンドウ::ゲットドックサイトフレームウンド](#getdocksiteframewnd)|ペインのドッキング サイトであるウィンドウへのポインターを返します。|
+|[ウィンドウ::取得有効化アライメント](#getenabledalignment)|ペインに適用されるCBRS_ALIGN_スタイルを返します。|
+|[ウィンドウ::ゲットMFCスタイル](#getmfcstyle)|MFC に固有のペイン スタイルを返します。|
+|[Cベースペイン::ゲットペインアイコン](#getpaneicon)|ペイン アイコンへのハンドルを返します。|
 |`CBasePane::GetPaneRect`|内部使用。|
-|[CBasePane:: GetPaneRow](#getpanerow)|ペインがドッキングされている[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)オブジェクトへのポインターを返します。|
-|[CBasePane:: Getpane Style](#getpanestyle)|ペインのスタイルを返します。|
-|[CBasePane:: GetParentDockSite](#getparentdocksite)|親ドックサイトへのポインターを返します。|
-|[CBasePane:: GetParentMiniFrame](#getparentminiframe)|親ミニフレームウィンドウへのポインターを返します。|
-|[CBasePane:: GetParentTabbedPane](#getparenttabbedpane)|親のタブ付きペインへのポインターを返します。|
-|[CBasePane:: GetParentTabWnd](#getparenttabwnd)|タブ内にある親ウィンドウへのポインターを返します。|
-|[CBasePane:: GetRecentVisibleState](#getrecentvisiblestate)|フレームワークは、アーカイブからペインが復元されるときに、このメソッドを呼び出します。|
-|[CBasePane:: Hideinprintプレビューモード](#hideinprintpreviewmode)|印刷プレビューでペインを非表示にするかどうかを指定します。|
-|[CBasePane:: InsertPane](#insertpane)|指定したペインをドッキングマネージャーに登録します。|
-|[CBasePane:: IsAccessibilityCompatible](#isaccessibilitycompatible)|ペインが Active Accessibility をサポートするかどうかを指定します。|
-|[CBasePane:: IsAutoHideMode](#isautohidemode)|ペインが自動的に隠すモードであるかどうかを判断します。|
-|[CBasePane:: IsDialogControl](#isdialogcontrol)|ペインがダイアログコントロールであるかどうかを指定します。|
-|[CBasePane:: IsDocked](#isdocked)|ペインがドッキングされているかどうかを判断します。|
-|[CBasePane:: IsFloating](#isfloating)|ペインがフローティングかどうかを判断します。|
-|[CBasePane:: IsHorizontal](#ishorizontal)|ペインが水平方向にドッキングされているかどうかを判断します。|
-|[CBasePane:: IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|ペインが複数ペインのフレームウィンドウ内にあるかどうかを指定します。|
-|[CBasePane:: IsMDITabbed](#ismditabbed)|ペインが MDI 子ウィンドウにタブ付きドキュメントとして追加されているかどうかを判断します。|
-|[CBasePane:: IsPaneVisible](#ispanevisible)|ペインに WS_VISIBLE フラグが設定されているかどうかを指定します。|
-|[CBasePane:: IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキングサイトの近くにあるかどうかを判断します。|
-|[CBasePane:: IsResizable 変更可能](#isresizable)|ペインのサイズを変更できるかどうかを決定します。|
-|[CBasePane:: IsRestoredFromRegistry](#isrestoredfromregistry)|ウィンドウがレジストリから復元されるかどうかを決定します。|
-|[CBasePane:: IsTabbed](#istabbed)|タブ付きウィンドウのタブコントロールにペインが挿入されているかどうかを判断します。|
+|[Cベースペイン::ゲットペインロウ](#getpanerow)|ペインがドッキングされている[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)オブジェクトへのポインターを返します。|
+|[ウィンドウ::ゲットペインスタイル](#getpanestyle)|ペインのスタイルを返します。|
+|[Cベースペイン::ゲットペアレントドックサイト](#getparentdocksite)|親ドッキング サイトへのポインターを返します。|
+|[ウィンドウ::ゲットペアレントミニフレーム](#getparentminiframe)|親ミニフレーム ウィンドウへのポインターを返します。|
+|[Cベースペイン::ゲットペアレントタブベドペイン](#getparenttabbedpane)|親タブ付きペインへのポインターを返します。|
+|[ウィンドウ::ゲットペアタブンド](#getparenttabwnd)|タブ内にある親ウィンドウへのポインターを返します。|
+|[ウィンドウ::取得最新の可視状態](#getrecentvisiblestate)|ペインがアーカイブから復元されると、フレームワークはこのメソッドを呼び出します。|
+|[ウィンドウ::非表示印刷プレビューモード](#hideinprintpreviewmode)|印刷プレビューでペインを非表示にするかどうかを指定します。|
+|[CBase ペイン::挿入ペイン](#insertpane)|ドッキング マネージャーに指定されたペインを登録します。|
+|[ウィンドウ::Is アクセシビリティ互換](#isaccessibilitycompatible)|ペインがアクティブなアクセシビリティをサポートするかどうかを指定します。|
+|[CBase ペイン::IsAutoHideモード](#isautohidemode)|ペインが自動非表示モードかどうかを判断します。|
+|[ウィンドウ::IsDialog コントロール](#isdialogcontrol)|ペインがダイアログ コントロールであるかどうかを指定します。|
+|[Cベースペイン::IsDocked](#isdocked)|ペインがドッキングされているかどうかを判断します。|
+|[Cベースペイン::イズフローティング](#isfloating)|ペインがフローティング状態かどうかを判断します。|
+|[Cベースペイン::イス水平](#ishorizontal)|ペインが水平方向にドッキングされているかどうかを判断します。|
+|[ウィンドウ::イインフローティングマルチペインフレームオーニング](#isinfloatingmultipaneframewnd)|ペインが複数のペインのフレーム ウィンドウにあるかどうかを指定します。|
+|[Cベースペイン::イスムディタブベド](#ismditabbed)|ウィンドウがタブ付きドキュメントとして MDI 子ウィンドウに追加されているかどうかを判断します。|
+|[Cベースペイン::イズペインビジブル](#ispanevisible)|ペインにWS_VISIBLEフラグを設定するかどうかを指定します。|
+|[Cベースペイン::イスポイントニアドックサイト](#ispointneardocksite)|指定したポイントがドッキング サイトの近くにあるかどうかを判断します。|
+|[Cベースペイン::イズリジブル](#isresizable)|ペインのサイズを変更できるかどうかを決定します。|
+|[次のレジストリを使用します。](#isrestoredfromregistry)|ペインをレジストリから復元するかどうかを決定します。|
+|[Cベースペイン::イタブベド](#istabbed)|タブ付きウィンドウのタブ コントロールにペインが挿入されているかどうかを判断します。|
 |`CBasePane::IsTooltipTopmost`|内部使用。|
-|[CBasePane:: IsVisible](#isvisible)|ペインが表示されているかどうかを判断します。|
-|[CBasePane:: LoadState](#loadstate)|レジストリからペインの状態を読み込みます。|
-|[CBasePane:: MoveWindow](#movewindow)|ペインを移動します。|
-|[CBasePane:: OnAfterChangeParent](#onafterchangeparent)|ペインの親が変更されたときにフレームワークによって呼び出されます。|
-|[CBasePane:: OnBeforeChangeParent](#onbeforechangeparent)|ペインの親ウィンドウが変更される直前に、フレームワークによって呼び出されます。|
-|[CBasePane:: OnDrawCaption](#ondrawcaption)|フレームワークは、キャプションが描画されるときにこのメソッドを呼び出します。|
-|[CBasePane:: OnMovePaneDivider](#onmovepanedivider)|このメソッドは現在使用されていません。|
-|[CBasePane:: OnPaneContextMenu](#onpanecontextmenu)|ペインのリストを持つメニューをビルドするときに、フレームワークによって呼び出されます。|
-|[CBasePane:: OnRemoveFromMiniFrame フレーム](#onremovefromminiframe)|ペインが親ミニフレームウィンドウから削除されたときに、フレームワークによって呼び出されます。|
-|[CBasePane:: OnSetAccData](#onsetaccdata)|`CBasePane` はこのメソッドを使用しません。|
+|[Cベースペイン::イズビジブル](#isvisible)|ペインが表示されているかどうかを判断します。|
+|[ウィンドウ::ロードステート](#loadstate)|レジストリからペインの状態を読み込みます。|
+|[ウィンドウの移動](#movewindow)|ペインを移動します。|
+|[ウィンドウ::オンアフターチェンジペアレント](#onafterchangeparent)|ペインの親が変更されたときに、フレームワークによって呼び出されます。|
+|[Cベースペイン::オン・オン・チェンジチェンジ・ペアレント](#onbeforechangeparent)|ペインが親ウィンドウを変更する直前に、フレームワークによって呼び出されます。|
+|[ウィンドウ::オンドローキャプション](#ondrawcaption)|キャプションが描画されるときに、フレームワークはこのメソッドを呼び出します。|
+|[Cベースペイン::オンムーブペインディバイダー](#onmovepanedivider)|このメソッドは現在使用されていません。|
+|[C ベースペイン::オンペインコンテキストメニュー](#onpanecontextmenu)|ペインの一覧を含むメニューを構築するときに、フレームワークによって呼び出されます。|
+|[Cベースペイン::オン除去ミニフレーム](#onremovefromminiframe)|ペインが親ミニ フレーム ウィンドウから削除されたときに、フレームワークによって呼び出されます。|
+|[Cベースペイン::オンセットアクデータ](#onsetaccdata)|`CBasePane`このメソッドは使用しません。|
 |`CBasePane::OnUpdateCmdUI`|内部使用。|
-|[CBasePane::P aneFromPoint](#panefrompoint)|指定されたポイントを含むペインを返します。|
-|`CBasePane::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
-|[CBasePane:: RecalcLayout](#recalclayout)|`CBasePane` はこのメソッドを使用しません。|
-|[CBasePane:: RemovePaneFromDockManager](#removepanefromdockmanager)|ペインの登録を解除し、ドッキングマネージャーの一覧から削除します。|
-|[CBasePane:: SaveState](#savestate)|レジストリにペインの状態を保存します。|
-|[CBasePane:: SelectDefaultFont](#selectdefaultfont)|指定されたデバイスコンテキストの既定のフォントを選択します。|
+|[ソースペイン::Pアネフロトポイント](#panefrompoint)|指定したポイントを含むペインを返します。|
+|`CBasePane::PreTranslateMessage`|クラス[CWinApp](../../mfc/reference/cwinapp-class.md)がウィンドウ メッセージを変換するために使用し、[変換メッセージ](/windows/win32/api/winuser/nf-winuser-translatemessage)および[ディスパッチ メッセージ](/windows/win32/api/winuser/nf-winuser-dispatchmessage)Windows 関数にディスパッチします。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
+|[Cベースペイン::リカルクレイアウト](#recalclayout)|`CBasePane`このメソッドは使用しません。|
+|[ウィンドウ::ウィンドウから削除します。](#removepanefromdockmanager)|ペインの登録を解除し、ドッキング マネージャーのリストから削除します。|
+|[ウィンドウ::セーブステート](#savestate)|レジストリにペインの状態を保存します。|
+|[ウィンドウ::デフォルトフォントの選択](#selectdefaultfont)|指定したデバイス コンテキストの既定のフォントを選択します。|
 |`CBasePane::Serialize`|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
-|[CBasePane:: SetControlBarStyle](#setcontrolbarstyle)|コントロールバーのスタイルを設定します。|
-|[CBasePane:: Setdocのモード](#setdockingmode)|ペインのドッキングモードを設定します。|
+|[ウィンドウ::コントロールバースタイルを設定します。](#setcontrolbarstyle)|コントロール バーのスタイルを設定します。|
+|[Cベースペイン::セットドッキングモード](#setdockingmode)|ペインのドッキング モードを設定します。|
 |`CBasePane::SetMDITabbed`|内部使用。|
-|[CBasePane:: Setpane Alignment](#setpanealignment)|ペインの配置を設定します。|
+|[ウィンドウスペイン::セットペイン配置](#setpanealignment)|ペインの配置を設定します。|
 |`CBasePane::SetPaneRect`|内部使用。|
-|[CBasePane:: Setpane Style](#setpanestyle)|ペインのスタイルを設定します。|
+|[Cベースペイン::セットペインスタイル](#setpanestyle)|ペインのスタイルを設定します。|
 |`CBasePane::SetRestoredFromRegistry`|内部使用。|
-|[CBasePane:: SetWindowPos](#setwindowpos)|ペインのサイズ、位置、および Z オーダーを変更します。|
-|[CBasePane:: ShowPane](#showpane)|ペインの表示と非表示を切り替えます。|
-|[CBasePane:: StretchPane](#stretchpane)|垂直または水平方向にウィンドウを拡大します。|
-|[CBasePane:: UndockPane](#undockpane)|ドッキングサイト、既定のスライダー、またはミニフレームウィンドウから、現在ドッキングされているペインを削除します。|
+|[ウィンドウペイン::セットウィンドウポス](#setwindowpos)|ペインのサイズ、位置、および Z オーダーを変更します。|
+|[Cベースペイン::ショーペイン](#showpane)|ウィンドウの表示/非表示を切り替えます。|
+|[Cベースペイン::ストレッチペイン](#stretchpane)|垂直または水平方向にウィンドウを拡大します。|
+|[CBase ペイン::ドッキング解除ペイン](#undockpane)|ドッキング サイト、既定のスライダー、または現在ドッキングされているミニフレーム ウィンドウからペインを削除します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CBasePane::D oPaint](#dopaint)|ペインの背景を塗りつぶします。|
+|[ウィンドウペイン::Doペイント](#dopaint)|ペインの背景を塗りつぶします。|
 
 ## <a name="remarks"></a>解説
 
-MFC で使用できる拡張ドッキング機能をサポートするペインクラスを作成する場合は、`CBasePane` または[CPane クラス](../../mfc/reference/cpane-class.md)から派生させる必要があります。
+MFC で使用できる拡張ドッキング機能をサポートするペイン クラスを作成する場合は[、CPane](../../mfc/reference/cpane-class.md)Class`CBasePane`から派生させる必要があります。
 
 ## <a name="customization-tips"></a>カスタマイズのヒント
 
-次のカスタマイズのヒントは、`CBasePane Class` とそれを継承するクラスに関連しています。
+次のカスタマイズのヒントは、`CBasePane Class`およびそれを継承するすべてのクラスに関連します。
 
-- ウィンドウを作成するときに、次のような新しいスタイルをいくつか適用できます。
+- ペインを作成する場合、いくつかの新しいスタイルを適用できます。
 
-  - AFX_CBRS_FLOAT ペインをフローティングにします。
+  - AFX_CBRS_FLOATペインを浮動させます。
 
-  - AFX_CBRS_AUTOHIDE により、自動非表示モードが有効になります。
+  - AFX_CBRS_AUTOHIDEは自動非表示モードを有効にします。
 
-  - AFX_CBRS_CLOSE を使用すると、ペインを閉じる (非表示) ことができます。
+  - AFX_CBRS_CLOSEを使用すると、ウィンドウを閉じる (非表示) できます。
 
-  これらは、ビットごとの OR 演算と組み合わせることができるフラグです。
+  これらはビットごとの OR 演算で組み合わせることができるフラグです。
 
-`CBasePane` は、これらのフラグを反映するために次の仮想ブール型メソッドを実装します。 [Cbasepane:: can、Losed](#canbeclosed)、 [cbasepane::](#canautohide)canに自動的に隠す、 [Cbasepane:: canfloat](#canfloat)。 派生クラスでオーバーライドして、その動作をカスタマイズできます。
+`CBasePane`これらのフラグを反映するために、次の仮想ブール型メソッドを実装[します。](#canbeclosed) [CBasePane::CanAutoHide](#canautohide) [CBasePane::CanFloat](#canfloat) 派生クラスでオーバーライドして動作をカスタマイズできます。
 
-- [Cbasepane:: CanAcceptPane](#canacceptpane)をオーバーライドすることにより、ドッキング動作をカスタマイズできます。 別のペインがドッキングされないように、このメソッドからペインを FALSE と返すようにします。
+- ドッキング動作をカスタマイズするには[、CBasePane::CanAcceptPane](#canacceptpane)をオーバーライドします。 別のペインがドッキングされないようにするには、このメソッドからペインに FALSE を返してもらいます。
 
-- フロートできず、他のウィンドウがそれより前にドッキングできないようにする静的ペインを作成する場合は (OutlookDemo の例の Outlook バーに似ています)、非フローティングとして作成し、Cbasepane をオーバーライドします[::D oesallowdyninsertbefore](#doesallowdyninsertbefore)は FALSE を返します。 既定の実装では、AFX_CBRS_FLOAT スタイルを指定せずにペインが作成された場合、FALSE が返されます。
+- フローティングできない静的ペインを作成し、その前に他のウィンドウがドッキングされないようにする場合 (OutlookDemo の例では Outlook バーと同様)、非フローティングウィンドウとして作成し[、CBasePane::DoesAllowDynInsertBefore を](#doesallowdyninsertbefore)オーバーライドして FALSE を返します。 ペインがAFX_CBRS_FLOATスタイルなしで作成された場合、既定の実装は FALSE を返します。
 
-- -1 以外の Id を持つすべてのペインを作成します。
+- 1 以外の ID を持つすべてのペインを作成します。
 
-- ペインの表示を決定するには、 [Cbasepane:: IsVisible](#isvisible)を使用します。 このメソッドは、表示状態をタブ付きおよび自動非表示モードで正しく処理します。
+- ペインの表示を確認するには[、CBasePane::IsVisible](#isvisible)を使用します。 タブ付きモードと自動非表示モードでの可視性の状態を正しく処理します。
 
-- 非フローティングのサイズ変更可能なペインを作成する場合は、AFX_CBRS_FLOAT スタイルを指定せずに作成し、 [CFrameWnd::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)を呼び出します。
+- 変更可能なフローティングウィンドウを作成する場合は、AFX_CBRS_FLOATスタイルを使用せずに作成し[、CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)を呼び出します。
 
-- ドッキングレイアウトからペインを除外するか、ドッキングバーからツールバーを削除するには、 [Cbasepane:: UndockPane](#undockpane)を呼び出します。 自動非表示モードのペインや、タブ付きウィンドウのタブにあるペインに対しては、このメソッドを呼び出さないでください。
+- ドッキング レイアウトからペインを除外したり、ドッキング バーからツール バーを削除したりするには[、CBasePane::UndockPane](#undockpane)を呼び出します。 自動非表示モードのペイン、またはタブ付きウィンドウのタブに存在するペインについては、このメソッドを呼び出しません。
 
-- 自動的に隠すモードのペインをフローティングまたはドッキング解除する場合は、 [Cbasepane:: FloatPane](#floatpane)または[Cbasepane:: UndockPane](#undockpane)を呼び出す前に、 [CDockablePane:: setautohidemode](../../mfc/reference/cdockablepane-class.md#setautohidemode)を最初の引数として FALSE を指定して呼び出す必要があります。
+- 自動非表示モードのペインをフローティングまたはドッキング解除する場合は、CBasePane::フロートペインまたは[CBasePane::ドッキングペイン](#undockpane)を呼び出す前に、最初の引数として False を使用して[CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode)を呼び出す必要があります。 [CBasePane::FloatPane](#floatpane)
 
 ## <a name="example"></a>例
 
-`CBasePane` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、`CFrameWndEx` クラスからペインを取得する方法と、ドッキングモード、ペインの配置、およびペインのスタイルを設定する方法を示します。 このコードは、 [Word Pad サンプル](../../overview/visual-cpp-samples.md)からのものです。
+`CBasePane` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、`CFrameWndEx`クラスからペインを取得する方法と、ドッキング モード、ペインの配置、およびペイン スタイルを設定する方法を示します。 コードは[ワード パッドのサンプル](../../overview/visual-cpp-samples.md)です。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -352,17 +352,17 @@ MFC で使用できる拡張ドッキング機能をサポートするペイン�
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[から派生しているのではない](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxbasepane
+**ヘッダー:** afxbasepane.h
 
-##  <a name="accnotifyobjectfocusevent"></a>CBasePane:: AccNotifyObjectFocusEvent
+## <a name="cbasepaneaccnotifyobjectfocusevent"></a><a name="accnotifyobjectfocusevent"></a>ウィンドウ::アック通知オブジェクトフォーカスイベント
 
-`CBasePane` はこのメソッドを使用しません。
+`CBasePane`このメソッドは使用しません。
 
 ```
 virtual void AccNotifyObjectFocusEvent(int);
@@ -371,11 +371,11 @@ virtual void AccNotifyObjectFocusEvent(int);
 ### <a name="parameters"></a>パラメーター
 
 *int*<br/>
-から使用しません。
+[in]使用されていません。
 
-##  <a name="addpane"></a>CBasePane:: AddPane
+## <a name="cbasepaneaddpane"></a><a name="addpane"></a>Cベースペイン::ペインの追加
 
-ドッキングマネージャーにペインを追加します。
+ドッキング マネージャーにペインを追加します。
 
 ```
 void AddPane(CBasePane* pBar);
@@ -383,18 +383,18 @@ void AddPane(CBasePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-から追加するペインへのポインター。
+*pバー*<br/>
+[in]追加するペインへのポインター。
 
 ### <a name="remarks"></a>解説
 
-これは、ドッキングマネージャーにペインを追加する便利な方法です。 このメソッドを使用すると、親フレームの型を分析するコードを記述する必要はありません。
+これは、ドッキング マネージャーにペインを追加する便利なメソッドです。 このメソッドを使用すると、親フレームの型を分析するコードを記述する必要はありません。
 
-詳細については、「 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) and [CMDIFrameWndEx:: addpane](../../mfc/reference/cmdiframewndex-class.md#addpane)」を参照してください。
+詳細については[、「CDockingManager クラス](../../mfc/reference/cdockingmanager-class.md)」および[「CMDIFrameWndEx::AddPane」を参照してください](../../mfc/reference/cmdiframewndex-class.md#addpane)。
 
-##  <a name="adjustdockinglayout"></a>CBasePane:: AdjustDockingLayout
+## <a name="cbasepaneadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CBase ペイン::調整ドッキングレイアウト
 
-ドッキングマネージャーへの呼び出しをリダイレクトし、ドッキングレイアウトを調整します。
+ドッキング マネージャーに呼び出しをリダイレクトしてドッキング レイアウトを調整します。
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -403,17 +403,17 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>パラメーター
 
 *hdwp*<br/>
-入出力複数のウィンドウ位置を含む構造体へのハンドル。
+[アウト]複数のウィンドウ位置を含む構造体へのハンドル。
 
 ### <a name="remarks"></a>解説
 
-これは、ドッキングレイアウトを調整する便利なメソッドです。 このメソッドを使用すると、親フレームの型を分析するコードを記述する必要はありません。
+これは、ドッキング レイアウトを調整する便利な方法です。 このメソッドを使用すると、親フレームの型を分析するコードを記述する必要はありません。
 
-詳細については、「 [CDockingManager:: AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout) 」を参照してください。
+詳細については、[次を](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)参照してください。
 
-##  <a name="adjustlayout"></a>CBasePane:: AdjustLayout
+## <a name="cbasepaneadjustlayout"></a><a name="adjustlayout"></a>ウィンドウ::レイアウトの調整
 
-ペインの内部レイアウトを調整するためにフレームワークによって呼び出されます。
+ペインの内部レイアウトを調整するために、フレームワークによって呼び出されます。
 
 ```
 virtual void AdjustLayout();
@@ -421,11 +421,11 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ペインで内部レイアウトを調整する必要がある場合に、このメソッドを呼び出します。 基本実装では、何も実行されません。
+フレームワークは、ペインが内部レイアウトを調整する必要がある場合に、このメソッドを呼び出します。 基本実装では何も実行されません。
 
-##  <a name="calcfixedlayout"></a>CBasePane:: CalcFixedLayout
+## <a name="cbasepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>Cベースペイン::計算式レイアウト
 
-コントロールバーの水平方向のサイズを計算します。
+コントロール バーの水平方向のサイズを計算します。
 
 ```
 virtual CSize CalcFixedLayout(
@@ -435,23 +435,23 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*bStretch*<br/>
-からバーをフレームのサイズに拡大する必要があるかどうかを示します。 バーがドッキングバーではなく、ドッキングされている (ドッキングで使用可能な) 場合、 *Bstretch*パラメーターは0以外になります。
+*bストレッチ*<br/>
+[in]バーをフレームのサイズまで拡大するかどうかを示します。 バーがドッキング バー (ドッキングには使用できません) でない場合は *、bStretch*パラメーターは 0 以外であり、ドッキングまたはフローティング (ドッキングに使用可能) の場合は 0 です。
 
 *bHorz*<br/>
-からバーが水平方向または垂直方向であることを示します。 *BHorz*パラメーターは、横棒が水平方向の場合は0以外で、垂直方向の場合は0になります。
+[in]バーが水平方向または垂直方向であることを示します。 バーが水平方向の場合は*bHorz*パラメータは 0 以外で、縦方向の場合は 0 です。
 
 ### <a name="return-value"></a>戻り値
 
-`CSize` オブジェクトのコントロールバーのサイズ (ピクセル単位)。
+オブジェクトのコントロール バーのサイズ (`CSize`ピクセル単位)。
 
 ### <a name="remarks"></a>解説
 
-[CControlBar:: CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)の「解説」を参照してください。
+CControlBar の解説セクションを参照[してください::計算固定レイアウト](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>CBasePane:: CanAcceptPane
+## <a name="cbasepanecanacceptpane"></a><a name="canacceptpane"></a>C ベースペイン::缶アクセプウィンドウ
 
-別のペインをペインにドッキングできるかどうかを決定します。
+別のペインをペインにドッキングできるかどうかを判断します。
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -459,24 +459,24 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-からドッキングするペインへのポインター。
+*pバー*<br/>
+[in]ドッキングするペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-別のペインを受け入れることができる場合は TRUE。それ以外の場合は FALSE。
+別のペインを受け入れ可能な場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、 *Pbar*によって指定されたペインを現在のペインにドッキングする前に、このメソッドを呼び出します。
+フレームワークは *、pBar*で指定されたペインを現在のペインにドッキングする前に、このメソッドを呼び出します。
 
-このメソッドと[Cbasepane:: CanBeDocked](#canbedocked)メソッドを使用して、アプリケーションの他のペインにペインをドッキングする方法を制御します。
+このメソッドと[CBasePane::CanBeDocked](#canbedocked)メソッドを使用して、アプリケーション内の他のペインにペインをドッキングする方法を制御します。
 
-既定の実装では、FALSE が返されます。
+既定の実装では FALSE が返されます。
 
-##  <a name="canautohide"></a>CBasePane:: CanAutoHide に隠す
+## <a name="cbasepanecanautohide"></a><a name="canautohide"></a>CBase ペイン::缶自動非表示
 
-ペインが自動非表示モードをサポートしているかどうかを判断します。
+ペインが自動非表示モードをサポートするかどうかを決定します。
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -484,19 +484,19 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>戻り値
 
-このペインが自動非表示モードをサポートしている場合は TRUE。それ以外の場合は FALSE。
+このペインが自動非表示モードをサポートする場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、この関数を呼び出して、ペインが自動非表示モードをサポートしているかどうかを判断します。
+フレームワークは、ペインが自動非表示モードをサポートしているかどうかを判断するために、この関数を呼び出します。
 
-構築時に、AFX_CBRS_AUTOHIDE フラグを[Cbasepane:: CreateEx](#createex)に渡すことによって、この機能を設定できます。
+構築時に[、CBasePane::CreateEx](#createex)にAFX_CBRS_AUTOHIDEフラグを渡すことによって、この機能を設定できます。
 
 既定の実装では、AFX_CBRS_AUTOHIDE フラグがチェックされます。 この動作をカスタマイズするには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="canbeattached"></a>CBasePane:: CanBeAttached
+## <a name="cbasepanecanbeattached"></a><a name="canbeattached"></a>Cベースペイン::缶詰添付
 
-ペインを別のペインまたはフレームウィンドウにドッキングできるかどうかを決定します。
+ペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを決定します。
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -504,13 +504,13 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインを別のペインまたはフレームウィンドウにドッキングできる場合は TRUE。それ以外の場合は FALSE。
+ペインを別のペインまたはフレーム ウィンドウにドッキングできる場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、FALSE が返されます。 派生クラスでこのメソッドをオーバーライドして、 [Cbasepane:: EnableDocking](#enabledocking)を呼び出さずにドッキングする機能を有効または無効にします。
+既定の実装では FALSE が返されます。 [CBasePane](#enabledocking)を呼び出さずにドッキングする機能を有効または無効にするには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="canbeclosed"></a>CBasePane:: Can/Losed
+## <a name="cbasepanecanbeclosed"></a><a name="canbeclosed"></a>Cベースペイン::缶詰閉
 
 ペインを閉じることができるかどうかを判断します。
 
@@ -524,15 +524,15 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを呼び出して、ペインを閉じることができるかどうかを判断します。 メソッドが TRUE を返すと、ウィンドウのタイトルバーに **[閉じる]** ボタンが追加されます。ペインがフローティングの場合は、ペインのミニフレームウィンドウのタイトルバーに移動します。
+フレームワークは、ペインを閉じることができるかどうかを判断するために、このメソッドを呼び出します。 メソッドが TRUE を返す場合は、ペインのタイトル バーに**閉じる**ボタンが追加されるか、ペインがフローティング状態の場合は、ペインのミニフレーム ウィンドウのタイトル バーに追加されます。
 
-構築時に、AFX_CBRS_CLOSE フラグを[Cbasepane:: CreateEx](#createex)に渡すことによって、この機能を設定できます。
+構築中に[、CBasePane::CreateEx](#createex)にAFX_CBRS_CLOSEフラグを渡すことによって、この機能を設定できます。
 
 既定の実装では、AFX_CBRS_CLOSE フラグがチェックされます。
 
-##  <a name="canbedocked"></a>CBasePane:: CanBeDocked
+## <a name="cbasepanecanbedocked"></a><a name="canbedocked"></a>Cベースペイン::缶詰
 
-ペインを別のペインにドッキングできるかどうかを決定します。
+ペインを別のペインにドッキングできるかどうかを判断します。
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -540,8 +540,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pDockBar*<br/>
-から別のペインへのポインター。
+*をクリックします。*<br/>
+[in]別のペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -549,13 +549,13 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、 *pDockBar*によって指定されたペインを現在のペインにドッキングする前に、このメソッドを呼び出します。
+フレームワークは *、pDockBar*で指定されたペインを現在のペインにドッキングする前に、このメソッドを呼び出します。
 
-このメソッドと[Cbasepane:: CanAcceptPane](#canacceptpane)メソッドを使用して、アプリケーションの他のペインにペインをドッキングする方法を制御します。
+このメソッドと[CBasePane::CanAcceptPane](#canacceptpane)メソッドを使用して、ペインをアプリケーション内の他のペインにドッキングする方法を制御します。
 
-既定の実装では、FALSE が返されます。
+既定の実装では FALSE が返されます。
 
-##  <a name="canberesized"></a>CBasePane:: Canのようになります。
+## <a name="cbasepanecanberesized"></a><a name="canberesized"></a>Cベースペイン::缶ベサイズ
 
 ペインのサイズを変更できるかどうかを決定します。
 
@@ -569,9 +569,9 @@ virtual BOOL CanBeResized() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、`CBasePane::OnCreate`に既定で指定されている AFX_CBRS_RESIZE フラグをチェックします。 このフラグが指定されていない場合、ドッキングマネージャーは、ドッキングではなく、ウィンドウに内部的に移動するようにフラグを付けます。
+このメソッドは、既定で指定されている AFX_CBRS_RESIZE フラグを`CBasePane::OnCreate`チェックします。 このフラグを指定しない場合、ドッキング マネージャーはペインをドッキングするのではなく、内部で不動のフラグとしてフラグを設定します。
 
-##  <a name="canbetabbeddocument"></a>CBasePane:: CanBeTabbedDocument
+## <a name="cbasepanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>ウィンドウペイン::缶ベタブベドドキュメント
 
 ペインを MDI タブ付きドキュメントに変換できるかどうかを指定します。
 
@@ -581,15 +581,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインをタブ付きドキュメントに変換できる場合は TRUE。それ以外の場合は FALSE。 `CBasePane::CanBeTabbedDocument` は常に FALSE を返します。
+ペインをタブ付きドキュメントに変換できる場合は TRUE。それ以外の場合は FALSE。 `CBasePane::CanBeTabbedDocument`常に FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)など、特定の `CBasePane`派生型のオブジェクトのみをタブ付きドキュメントに変換できます。
+`CBasePane` [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)などの特定の派生型のオブジェクトのみをタブ付きドキュメントに変換できます。
 
-##  <a name="canfloat"></a>CBasePane:: CanFloat
+## <a name="cbasepanecanfloat"></a><a name="canfloat"></a>Cベースペイン::缶詰
 
-ペインをフローティングできるかどうかを判断します。
+ペインをフロートできるかどうかを判断します。
 
 ```
 virtual BOOL CanFloat() const;
@@ -597,20 +597,20 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインをフローティングできる場合は TRUE。それ以外の場合は FALSE。
+ペインがフローティングできる場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを呼び出して、ペインをフローティングできるかどうかを判断します。
+フレームワークは、ペインをフローティングできるかどうかを判断するために、このメソッドを呼び出します。
 
-構築時に、AFX_CBRS_FLOAT フラグを[Cbasepane:: CreateEx](#createex)に渡すことによって、この機能を設定できます。
+構築時に[、CBasePane::CreateEx](#createex)にAFX_CBRS_FLOATフラグを渡すことによって、この機能を設定できます。
 
 > [!NOTE]
->  フレームワークは、非フローティングペインが静的であり、ドッキング状態を変更できないことを前提としています。 したがって、フレームワークでは、非フローティングペインのドッキング状態は保存されません。
+> フレームワークは、非フローティング ペインが静的であり、ドッキング状態を変更できないと想定しています。 したがって、フレームワークは非フローティング ペインのドッキング状態を保存しません。
 
-既定の実装では、AFX_CBRS_FLOAT スタイルがチェックされます。
+既定の実装では、AFX_CBRS_FLOATスタイルがチェックされます。
 
-##  <a name="canfocus"></a>CBasePane:: CanFocus
+## <a name="cbasepanecanfocus"></a><a name="canfocus"></a>Cベースペイン::缶フォーカス
 
 ペインがフォーカスを受け取ることができるかどうかを指定します。
 
@@ -624,11 +624,11 @@ virtual BOOL CanFocus() const;
 
 ### <a name="remarks"></a>解説
 
-フォーカスを制御するには、派生クラスでこのメソッドをオーバーライドします。 たとえば、ツールバーはフォーカスを受け取ることができないため、このメソッドは、ツールバーオブジェクトで呼び出されたときに FALSE を返します。
+フォーカスを制御するには、派生クラスでこのメソッドをオーバーライドします。 たとえば、ツール バーはフォーカスを受け取ることができないため、このメソッドはツール バー オブジェクトで呼び出されたときに FALSE を返します。
 
-フレームワークは、ペインがドッキングまたはフローティング状態のときに入力フォーカスを設定しようとします。
+フレームワークは、ペインがドッキングまたはフロートされたときに入力フォーカスを設定しようとします。
 
-##  <a name="copystate"></a>CBasePane:: CopyState
+## <a name="cbasepanecopystate"></a><a name="copystate"></a>Cベースペイン::コピーステート
 
 指定されたペインの状態をコピーします。
 
@@ -638,16 +638,16 @@ virtual void CopyState(CBasePane* pOrgBar);
 
 ### <a name="parameters"></a>パラメーター
 
-*pOrgBar*<br/>
-から別のペインへのポインター。
+*グループバー*<br/>
+[in]別のペインへのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、状態を*Porgbar*からこのペインにコピーします。
+このメソッドは *、pOrgBar*からこのペインに状態をコピーします。
 
-##  <a name="createdefaultminiframe"></a>CBasePane:: CreateDefaultMiniframe フレーム
+## <a name="cbasepanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>Cベースペイン::デフォルトミニフレームの作成
 
-ペインをフローティングできる場合、このメソッドはミニフレームウィンドウを作成します。
+ペインをフローティングできる場合、このメソッドは、そのミニフレーム ウィンドウを作成します。
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -655,22 +655,22 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>パラメーター
 
-*rectInitial*<br/>
-からミニフレームウィンドウの初期座標を指定します。
+*レクトイニシャル*<br/>
+[in]ミニフレーム ウィンドウの初期座標を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-新しいミニフレームウィンドウへのポインター。作成に失敗した場合は NULL。
+作成に失敗した場合は、新しいミニフレーム ウィンドウへのポインター。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ペインがフローティング状態に切り替わったときにこのメソッドを呼び出します。 メソッドはミニフレームウィンドウを作成し、ペインをこのウィンドウにアタッチします。
+フレームワークは、ペインがフローティング状態に切り替わったときにこのメソッドを呼び出します。 このメソッドは、ミニフレーム ウィンドウを作成し、ウィンドウをこのウィンドウにアタッチします。
 
-既定の実装では、NULL が返されます。
+既定の実装では NULL が返されます。
 
-##  <a name="createex"></a>CBasePane:: CreateEx
+## <a name="cbasepanecreateex"></a><a name="createex"></a>Cベースペイン::作成Ex
 
-ペインコントロールを作成します。
+ペイン コントロールを作成します。
 
 ```
 virtual BOOL CreateEx(
@@ -687,32 +687,32 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dwスタイル Ex*<br/>
-から拡張スタイル (詳細については、「 [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex) 」を参照してください)。
+*ドウスタイルエックス*<br/>
+[in]拡張スタイル (詳細については[、CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)を参照してください)。
 
-*lpszClassName*<br/>
-からウィンドウクラス名。
+*クラス名*<br/>
+[in]ウィンドウ クラス名。
 
-*lpszWindowName*<br/>
-からウィンドウ名。
+*名前をクリックします。*<br/>
+[in]ウィンドウ名。
 
-*dwStyle*<br/>
-からウィンドウスタイル (「 [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)」を参照)。
+*Dwstyle*<br/>
+[in]ウィンドウ スタイル[(CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)を参照)。
 
-*rect*<br/>
-から最初の四角形。
+*Rect*<br/>
+[in]初期の四角形。
 
 *pParentWnd*<br/>
-から親ウィンドウへのポインター。
+[in]親ウィンドウへのポインター。
 
 *nID*<br/>
-からペイン ID を指定します。 一意である必要があります。
+[in]ペイン ID を指定します。 一意である必要があります。
 
-*dwControlBarStyle*<br/>
-からペインのスタイルフラグ。
+*コントロール バースタイル*<br/>
+[in]ペインのスタイル フラグ。
 
 *pContext*<br/>
-からへのポインター `CcreateContext`
+[in]へのポインタ`CcreateContext`
 
 ### <a name="return-value"></a>戻り値
 
@@ -720,27 +720,27 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`lpszClassName`クラスのウィンドウを作成します。 WS_CAPTION を指定した場合、このメソッドは WS_CAPTION スタイルビットをクリアし、`CBasePane::m_bHasCaption` を TRUE に設定します。これは、ライブラリがキャプション付きのペインをサポートしていないためです。
+クラス`lpszClassName`のウィンドウを作成します。 WS_CAPTION指定すると、ライブラリはキャプション付きのペインをサポートしていないため、`CBasePane::m_bHasCaption`このメソッドはWS_CAPTION スタイル ビットをクリアし、TRUE に設定します。
 
-子ウィンドウスタイルと MFC コントロールバー (CBRS_) スタイルの任意の組み合わせを使用できます。
+子ウィンドウ スタイルと MFC コントロール バー (CBRS_) スタイルを任意に組み合わせて使用できます。
 
-ライブラリには、ペインの新しいスタイルがいくつか追加されています。 次の表では、新しいスタイルについて説明します。
+ライブラリは、ペインに複数の新しいスタイルを追加します。 次の表に、新しいスタイルを示します。
 
-|Style|Description|
+|スタイル|説明|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|ペインはフローティングできます。|
-|AFX_CBRS_AUTOHIDE|ウィンドウは自動的に隠すモードをサポートしています|
-|AFX_CBRS_RESIZE|ペインのサイズを変更できます。 **重要:** このスタイルは実装されていません。|
-|AFX_CBRS_CLOSE|ペインを閉じることができます。|
-|AFX_CBRS_AUTO_ROLLUP|ウィンドウは、フローティング状態のときにロールアップできます。|
-|AFX_CBRS_REGULAR_TABS|このスタイルを持つ別のペインに1つのペインがドッキングされると、通常のタブ付きウィンドウが作成されます。 (詳細については、「 [CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)」を参照してください)。|
-|AFX_CBRS_OUTLOOK_TABS|このスタイルを持つ別のペインに1つのペインをドッキングすると、Outlook スタイルのタブ付きウィンドウが作成されます。 (詳細については、「 [Cmfcoutlookbar クラス](../../mfc/reference/cmfcoutlookbar-class.md)」を参照してください)。|
+|AFX_CBRS_FLOAT|ペインはフローティング可能です。|
+|AFX_CBRS_AUTOHIDE|このペインは自動非表示モードをサポートしています。|
+|AFX_CBRS_RESIZE|ウィンドウのサイズを変更できます。 **重要:** このスタイルは実装されていません。|
+|AFX_CBRS_CLOSE|ウィンドウを閉じることができます。|
+|AFX_CBRS_AUTO_ROLLUP|ウィンドウは、フローティング時にロールアップできます。|
+|AFX_CBRS_REGULAR_TABS|1 つのペインがこのスタイルを持つ別のペインにドッキングすると、通常のタブ付きウィンドウが作成されます。 (詳細については[、「CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)」を参照してください)。|
+|AFX_CBRS_OUTLOOK_TABS|1 つのペインがこのスタイルの別のペインにドッキングすると、Outlook スタイルのタブ付きウィンドウが作成されます。 (詳細については、「[クラスを参照してください](../../mfc/reference/cmfcoutlookbar-class.md)。|
 
-新しいスタイルを使用するには、 *Dwcontrolbarstyle*でそれらを指定します。
+新しいスタイルを使用するには *、dwControlBarStyle*で指定します。
 
-##  <a name="dockpane"></a>CBasePane::D ockPane
+## <a name="cbasepanedockpane"></a><a name="dockpane"></a>Cベースペイン::Dロックウィンドウ
 
-ペインを別のペインまたはフレームウィンドウにドッキングします。
+ペインを別のペインまたはフレーム ウィンドウにドッキングします。
 
 ```
 virtual BOOL DockPane(
@@ -751,28 +751,28 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDockBar*<br/>
-から別のペインへのポインター。
+*をクリックします。*<br/>
+[in]別のペインへのポインター。
 
-*lpRect*<br/>
-からコピー先の四角形を指定します。
+*Lprect*<br/>
+[in]目的の四角形を指定します。
 
-*dockMethod*<br/>
-からドッキングメソッドを指定します。
+*ドックメソッド*<br/>
+[in]ドッキング方法を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-コントロールバーが正常にドッキングされた場合は TRUE。それ以外の場合は FALSE。
+コントロール バーが正常にドッキングされた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-この関数を呼び出して、ペインを別のペイン、または*pDockBar*で指定されたドッキングバー ( [CDockSite クラス](../../mfc/reference/cdocksite-class.md))、または*pDockBar*が NULL の場合はメインフレームにドッキングします。
+*pDockBar*で指定されている別のペインまたはドッキング バー ( [CDockSite クラス](../../mfc/reference/cdocksite-class.md)) にペインをドッキングする場合、または*pDockBar*が NULL の場合はメイン フレームにペインをドッキングします。
 
-*dockMethod*ペインのドッキング方法を指定します。 使用可能な値の一覧については、「 [CPane::D ockPane](../../mfc/reference/cpane-class.md#dockpane) 」を参照してください。
+*ドッキング方法を*指定します。 可能な値のリストについては[、「CPane::DockPane」](../../mfc/reference/cpane-class.md#dockpane)を参照してください。
 
-##  <a name="dockpaneusingrtti"></a>CBasePane::D ockPaneUsingRTTI
+## <a name="cbasepanedockpaneusingrtti"></a><a name="dockpaneusingrtti"></a>Cベースペイン::DオックパネusingRTTI
 
-実行時の型情報を使用して、ペインをドッキングします。
+実行時の型情報を使用してペインをドッキングします。
 
 ```
 void DockPaneUsingRTTI(BOOL bUseDockSite);
@@ -780,10 +780,10 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 
 ### <a name="parameters"></a>パラメーター
 
-*bUseDockSite*<br/>
-からTRUE の場合は、ドッキングサイトにドッキングします。 FALSE の場合は、親フレームにドッキングします。
+*を使用します。*<br/>
+[in]TRUE の場合は、ドッキング サイトにドッキングします。 FALSE の場合は、親フレームにドッキングします。
 
-##  <a name="docktoframewindow"></a>CBasePane::D Ocktoフレームウィンドウ
+## <a name="cbasepanedocktoframewindow"></a><a name="docktoframewindow"></a>ウィンドウ:Dロックウィンドウ
 
 ドッキング可能なペインをフレームにドッキングします。
 
@@ -799,23 +799,23 @@ virtual BOOL DockToFrameWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwAlignment*<br/>
-からペインのドッキング先となる親フレームの辺。
+*dw配置*<br/>
+[in]ペインをドッキングする親フレームの辺。
 
-*lpRect*<br/>
-から目的のサイズ。
+*Lprect*<br/>
+[in]目的のサイズ。
 
-*dwDockFlags*<br/>
-から無効.
+*ドウドックフラグ*<br/>
+[in]無視。
 
-*pRelativeBar*<br/>
-から無効.
+*を使用する*<br/>
+[in]無視。
 
-*nRelativeIndex*<br/>
-から無効.
+*相対インデックス*<br/>
+[in]無視。
 
-*bOuterEdge*<br/>
-からTRUE の場合、 *dwAlignment*によって指定された辺に他のドッキング可能なペインがあると、ペインは親フレームの端に近い他のペインの外側にドッキングされます。 FALSE の場合、ウィンドウはクライアント領域の中央にドッキングされます。
+*ボターエッジ*<br/>
+[in]true の場合 *、dwAlignment*で指定した側に他のドッキング可能なペインがある場合、ペインは親フレームの端に近い他のペインの外側にドッキングされます。 FALSE の場合、ペインはクライアント領域の中心に近い位置にドッキングされます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -823,11 +823,11 @@ virtual BOOL DockToFrameWindow(
 
 ### <a name="remarks"></a>解説
 
-ペインの区切り線 ( [Cpanedivider クラス](../../mfc/reference/cpanedivider-class.md)) を作成できない場合、このメソッドは失敗します。 それ以外の場合は、常に TRUE を返します。
+ペインの区分線 ( [CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)) を作成できない場合、このメソッドは失敗します。 それ以外の場合は、常に TRUE を返します。
 
-##  <a name="doesallowdyninsertbefore"></a>CBasePane::D oesAllowDynInsertBefore
+## <a name="cbasepanedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>前に挿入:D
 
-このペインと親フレームの間に別のペインを動的に挿入できるかどうかを決定します。
+このペインと親フレームの間に別のペインを動的に挿入できるかどうかを指定します。
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -839,15 +839,15 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを呼び出して、ユーザーがこのペインの前にペインを動的に挿入できるかどうかを判断します。
+フレームワークは、このメソッドを呼び出して、ユーザーがこのペインの前に動的にペインを挿入できるかどうかを判断します。
 
-たとえば、アプリケーションで、フレームの左側 (Outlook バーなど) にドッキングされているペインを作成したとします。 ユーザーが最初のペインの左側に別のペインをドッキングできないようにするには、このメソッドをオーバーライドし、FALSE を返します。
+たとえば、アプリケーションがフレームの左側にドッキングされたペイン (Outlook バーなど) を作成するとします。 ユーザーが最初のペインの左側に別のペインをドッキングできないようにするには、このメソッドをオーバーライドして FALSE を返します。
 
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生した非フローティングペインの場合は、このメソッドをオーバーライドして FALSE を返すことをお勧めします。
+このメソッドをオーバーライドし[、CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生したフローティングウィンドウ以外のペインに対して FALSE を返すようにすることをお勧めします。
 
-既定の実装では、TRUE が返されます。
+既定の実装では TRUE が返されます。
 
-##  <a name="dopaint"></a>CBasePane::D oPaint
+## <a name="cbasepanedopaint"></a><a name="dopaint"></a>ウィンドウペイン::Doペイント
 
 ペインの背景を塗りつぶします。
 
@@ -858,15 +858,15 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキストへのポインター。
+[in]デバイス コンテキストへのポインター。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、現在のビジュアルマネージャーを呼び出して、背景を塗りつぶします ( [Cmfcvisualmanager:: OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground))。
+既定の実装は、現在のビジュアル マネージャーを呼び出してバックグラウンドを埋めます ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground))。
 
-##  <a name="enabledocking"></a>CBasePane:: EnableDocking
+## <a name="cbasepaneenabledocking"></a><a name="enabledocking"></a>CBase ペイン::有効化ドッキング
 
-ペインをメインフレームにドッキングできるようにします。
+ペインをメイン フレームにドッキングできるようにします。
 
 ```
 virtual void EnableDocking(DWORD dwAlignment);
@@ -874,20 +874,20 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwAlignment*<br/>
-から有効にするドッキングの配置を指定します。
+*dw配置*<br/>
+[in]有効にするドッキングの配置を指定します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを呼び出して、メインフレームへのドッキングの配置を有効にします。 CBRS_ALIGN_ フラグの組み合わせを渡すことができます (詳細については、「 [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)」を参照してください)。
+メイン フレームへのドッキング配置を有効にします。 CBRS_ALIGN_フラグの組み合わせを渡すことができます (詳細については[、「CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)」を参照してください)。
 
-内部フラグ `CBasePane::m_dwEnabledAlignment` `EnableDocking` 設定し、フレームワークがドッキングされている場合にこのフラグをチェックします。
+`EnableDocking`は内部フラグ`CBasePane::m_dwEnabledAlignment`を設定し、フレームワークはペインがドッキングされたときにこのフラグをチェックします。
 
-[Cbasepane:: GetEnabledAlignment](#getenabledalignment)を呼び出して、ペインのドッキングの配置を決定します。
+ウィンドウのドッキングの配置を決定するには[、CBasePane::GetEnabledAlignment](#getenabledalignment)を呼び出します。
 
-##  <a name="enablegripper"></a>CBasePane:: EnableGripper
+## <a name="cbasepaneenablegripper"></a><a name="enablegripper"></a>Cベースペイン::イネーブルグリッパー
 
-グリッパーを有効または無効にします。 グリップが有効になっている場合は、ユーザーはドラッグして、ウィンドウの位置を変更できます。
+グリッパーを有効または無効にします。 グリッパーが有効になっている場合、ユーザーはそれをドラッグしてペインの位置を変更できます。
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -895,14 +895,14 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-からグリッパーを有効にする場合は TRUE。無効にする場合は FALSE。
+*b 有効にする*<br/>
+[in]グリッパーを有効にする場合は TRUE。無効にする場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを使用して、WS_CAPTION スタイルを使用するのではなく、グリップを有効にします。
+フレームワークは、このメソッドを使用して、WS_CAPTION スタイルを使用する代わりにグリッパーを有効にします。
 
-##  <a name="floatpane"></a>CBasePane:: FloatPane
+## <a name="cbasepanefloatpane"></a><a name="floatpane"></a>Cベースペイン::フロートペイン
 
 ペインをフローティングします。
 
@@ -915,26 +915,26 @@ virtual BOOL FloatPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*rectFloat*<br/>
-からフローティングペインが表示される画面座標を指定します。
+*レクトフロート*<br/>
+[in]フローティング ペインが表示される画面座標を指定します。
 
-*dockMethod*<br/>
-からペインをフローティングするために使用する dock メソッドを指定します。
+*ドックメソッド*<br/>
+[in]ペインのフロートに使用するドッキング メソッドを指定します。
 
-*bShow*<br/>
-からフローティングペインを表示するか (TRUE)、非表示にするか (FALSE) を指定します。
+*bショー*<br/>
+[in]フローティング ペインを表示 (TRUE) または非表示 (FALSE) にするかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ペインが正常にフローティングされた場合は TRUE。それ以外の場合は FALSE。
+ペインが正常にフロートされた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを呼び出して、 *rectFloat*で指定した画面位置にペインをフローティングします。
+*rectFloat*で指定された画面位置にペインをフローティングします。
 
-##  <a name="get_acchelptopic"></a>CBasePane:: get_accHelpTopic
+## <a name="cbasepaneget_acchelptopic"></a><a name="get_acchelptopic"></a>Cベースペイン::get_accHelpTopic
 
-フレームワークは、このメソッドを呼び出して、指定されたオブジェクトに関連付けられている**WinHelp**ファイルの完全パスと、そのファイル内の適切なトピックの識別子を取得します。
+フレームワークは、指定したオブジェクトに関連付けられている**WinHelp**ファイルの完全なパスとそのファイル内の適切なトピックの識別子を取得するには、このメソッドを呼び出します。
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -945,24 +945,24 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszHelpFile*<br/>
-から指定したオブジェクトに関連付けられている**WinHelp**ファイルの完全パスを受け取る BSTR のアドレス (存在する場合)。
+*ファイル*<br/>
+[in]指定したオブジェクトに関連付けられている**WinHelp**ファイルの完全パスを受け取る BSTR のアドレス (存在する場合)。
 
-*varChild*<br/>
-から取得するヘルプトピックがオブジェクトまたはオブジェクトの子要素のいずれかであるかどうかを指定します。 このパラメーターには CHILDID_SELF (オブジェクトのヘルプトピックを取得するため) または子 ID (オブジェクトのいずれかの子要素のヘルプトピックを取得するため) を指定できます。
+*子*<br/>
+[in]取得するヘルプ トピックがオブジェクトのトピックであるか、オブジェクトの子要素のどれであるかを指定します。 このパラメーターは、CHILDID_SELF (オブジェクトのヘルプ トピックを取得する場合) または子 ID (オブジェクトの子要素の 1 つに対するヘルプ トピックを取得する場合) のいずれかです。
 
-*pidTopic*<br/>
-から指定したオブジェクトに関連付けられている**ヘルプ**ファイルのトピックを識別します。
+*ピッドトピック*<br/>
+[in]指定したオブジェクトに関連付けられている**ヘルプ**ファイル トピックを識別します。
 
 ### <a name="return-value"></a>戻り値
 
-`CBasePane` はこのメソッドを実装していません。 したがって、`CBasePane::get_accHelpTopic` は常に S_FALSE を返します。
+`CBasePane`このメソッドは実装されません。 したがって、`CBasePane::get_accHelpTopic`常にS_FALSE返します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、MFC の Active Accessibility サポートの一部です。 派生クラスでこの関数をオーバーライドして、オブジェクトに関するヘルプ情報を提供します。
+この関数は、MFC のアクティブ なアクセシビリティ サポートの一部です。 オブジェクトに関するヘルプ情報を提供するには、派生クラスでこの関数をオーバーライドします。
 
-##  <a name="get_accselection"></a>CBasePane:: get_accSelection
+## <a name="cbasepaneget_accselection"></a><a name="get_accselection"></a>Cベースペイン::get_accSelection
 
 フレームワークは、このメソッドを呼び出して、このオブジェクトの選択された子を取得します。
 
@@ -972,18 +972,18 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>パラメーター
 
-*pvarChildren*<br/>
-から選択された子を識別する情報を受け取ります。
+*pvar子供たち*<br/>
+[in]選択した子を識別する情報を受信します。
 
 ### <a name="return-value"></a>戻り値
 
-`CBasePane` はこのメソッドを実装していません。 *PvarChildren*が NULL の場合、このメソッドは E_INVALIDARG を返します。 それ以外の場合、このメソッドは DISP_E_MEMBERNOTFOUND を返します。
+`CBasePane`このメソッドは実装されません。 *pvarChildren*が NULL の場合、このメソッドはE_INVALIDARG返します。 それ以外の場合、このメソッドはDISP_E_MEMBERNOTFOUND返します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、MFC の Active Accessibility サポートの一部です。 ウィンドウなしの ActiveX コントロール以外の非ウィンドウユーザーインターフェイス要素がある場合は、派生クラスでこの関数をオーバーライドします。
+この関数は、MFC のアクティブ なアクセシビリティ サポートの一部です。 ウィンドウなしの ActiveX コントロール以外のウィンドウのないユーザー インターフェイス要素がある場合は、派生クラスでこの関数をオーバーライドします。
 
-##  <a name="getcaptionheight"></a>CBasePane:: GetCaptionHeight
+## <a name="cbasepanegetcaptionheight"></a><a name="getcaptionheight"></a>ウィンドウ::ゲットキャプションハイト
 
 キャプションの高さを返します。
 
@@ -995,9 +995,9 @@ virtual int GetCaptionHeight() const;
 
 キャプションの高さ。
 
-##  <a name="getcontrolbarstyle"></a>CBasePane:: GetControlBarStyle
+## <a name="cbasepanegetcontrolbarstyle"></a><a name="getcontrolbarstyle"></a>ウィンドウ::コントロールバースタイルを取得します。
 
-コントロールバーのスタイルを返します。
+コントロール バーのスタイルを返します。
 
 ```
 virtual DWORD GetControlBarStyle() const
@@ -1005,20 +1005,20 @@ virtual DWORD GetControlBarStyle() const
 
 ### <a name="return-value"></a>戻り値
 
-AFX_CBRS_ フラグのビットごとの or の組み合わせ。
+AFX_CBRS_ フラグのビットごとの OR の組み合わせ。
 
 ### <a name="remarks"></a>解説
 
-戻り値は、次の有効な値を組み合わせたものです。
+戻り値は、次の値の組み合わせです。
 
-|Style|Description|
+|スタイル|説明|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|コントロールバーを浮動小数点型にします。|
+|AFX_CBRS_FLOAT|コントロール バーをフロートします。|
 |AFX_CBRS_AUTOHIDE|自動非表示モードを有効にします。|
-|AFX_CBRS_RESIZE|コントロールバーのサイズ変更を有効にします。 このフラグが設定されている場合は、コントロールバーをドッキング可能なペインに配置できます。|
-|AFX_CBRS_CLOSE|コントロールバーの非表示を有効にします。|
+|AFX_CBRS_RESIZE|コントロール バーのサイズ変更を有効にします。 このフラグを設定すると、コントロール バーをドッキング可能なペインに配置できます。|
+|AFX_CBRS_CLOSE|コントロール バーの非表示を有効にします。|
 
-##  <a name="getcurrentalignment"></a>CBasePane:: GetCurrentAlignment
+## <a name="cbasepanegetcurrentalignment"></a><a name="getcurrentalignment"></a>ウィンドウ::取得カレントアライメント
 
 現在のペインの配置を返します。
 
@@ -1028,18 +1028,18 @@ virtual DWORD GetCurrentAlignment() const;
 
 ### <a name="return-value"></a>戻り値
 
-コントロールバーの現在の配置。 次の表に、使用可能な値を示します。
+コントロール バーの現在の配置。 次の表に、使用できる値を示します。
 
-|値|Alignment|
+|[値]|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左揃え。|
-|CBRS_ALIGN_RIGHT|Right アラインメント。|
-|CBRS_ALIGN_TOP|上揃え。|
-|CBRS_ALIGN_BOTTOM|下揃え。|
+|CBRS_ALIGN_RIGHT|右揃え。|
+|CBRS_ALIGN_TOP|上部の配置。|
+|CBRS_ALIGN_BOTTOM|下部の配置。|
 
-##  <a name="getdockingmode"></a>CBasePane:: Getdocによるモード
+## <a name="cbasepanegetdockingmode"></a><a name="getdockingmode"></a>Cベースペイン::取得ドッキングモード
 
-ペインの現在のドッキングモードを返します。
+ペインの現在のドッキング モードを返します。
 
 ```
 virtual AFX_DOCK_TYPE GetDockingMode() const;
@@ -1047,17 +1047,17 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウのドラッグが、画面上にドラッグ四角形で示されている場合は DT_STANDARD。 ペインの内容がドラッグされている場合は DT_IMMEDIATE します。
+DT_STANDARDペインをドラッグすると、ドラッグ矩形で画面上に表示されます。 DT_IMMEDIATEペインの内容をドラッグする場合。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを呼び出して、ペインの現在のドッキングモードを決定します。
+フレームワークは、ペインの現在のドッキング モードを確認するために、このメソッドを呼び出します。
 
-`CBasePane::m_dockMode` が定義されていない場合 (DT_UNDEFINED)、ドッキングモードはグローバルドッキングモード (`AFX_GLOBAL_DATA::m_dockModeGlobal`) から取得されます。
+未`CBasePane::m_dockMode`定義 (DT_UNDEFINED) の場合、ドッキング モードはグローバル ドッキング モード (`AFX_GLOBAL_DATA::m_dockModeGlobal`) から取得されます。
 
-*M_dockMode*またはオーバーライド `GetDockingMode` を設定することによって、各ペインのドッキングモードを制御できます。
+*m_dockMode*設定するか、またはオーバーライド`GetDockingMode`することで、各ペインのドッキング モードを制御できます。
 
-##  <a name="getdocksiteframewnd"></a>CBasePane:: GetDockSiteFrameWnd
+## <a name="cbasepanegetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>ウィンドウ::ゲットドックサイトフレームウンド
 
 ペインがドッキングされている[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)オブジェクトへのポインターを返します。
 
@@ -1067,15 +1067,15 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインのドッキングサイトへのポインター。
+ペインのドッキング サイトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-ペインのドッキングサイトへのポインターを取得するには、このメソッドを呼び出します。 ドッキングサイトは、ペインがメインフレームにドッキングされている場合はメインフレームウィンドウ、ペインがフローティングの場合はミニフレームウィンドウのいずれかになります。
+ペインのドッキング サイトへのポインターを取得します。 ドッキング サイトは、ペインがメイン フレームにドッキングされている場合はメイン フレーム ウィンドウ、ペインがフローティング状態の場合はミニフレーム ウィンドウのいずれかになります。
 
-##  <a name="getenabledalignment"></a>CBasePane:: GetEnabledAlignment
+## <a name="cbasepanegetenabledalignment"></a><a name="getenabledalignment"></a>ウィンドウ::取得有効化アライメント
 
-ペインに適用されている CBRS_ALIGN_ スタイルを返します。
+ペインに適用されるCBRS_ALIGN_スタイルを返します。
 
 ```
 virtual DWORD GetEnabledAlignment() const;
@@ -1083,25 +1083,25 @@ virtual DWORD GetEnabledAlignment() const;
 
 ### <a name="return-value"></a>戻り値
 
-CBRS_ALIGN_ スタイルの組み合わせ。 次の表に、使用可能なスタイルを示します。
+CBRS_ALIGN_ スタイルの組み合わせ。 次の表に、使用できるスタイルを示します。
 
-|フラグ|有効なアラインメント|
+|フラグ|有効な配置|
 |----------|-----------------------|
-|CBRS_ALIGN_LEFT|左側.|
+|CBRS_ALIGN_LEFT|左。|
 |CBRS_ALIGN_RIGHT|そうです。|
 |CBRS_ALIGN_TOP|上。|
-|CBRS_ALIGN_BOTTOM|最終.|
+|CBRS_ALIGN_BOTTOM|下部。|
 |CBRS_ALIGN_ANY|すべてのフラグの組み合わせ。|
 
 ### <a name="remarks"></a>解説
 
-ペインに対して有効な配置を決定するには、このメソッドを呼び出します。 有効な配置とは、ウィンドウをドッキングできるメインフレームウィンドウの辺を意味します。
+ペインに対して有効な配置を確認します。 有効な配置とは、ペインをドッキングできるメイン フレーム ウィンドウの辺を意味します。
 
-[Cbasepane:: EnableDocking](#enabledocking)を使用してドッキングの配置を有効にします。
+CBasePane を使用してドッキングの配置[を有効にします。::ドッキングを有効に](#enabledocking)します。
 
-##  <a name="getmfcstyle"></a>CBasePane:: GetMFCStyle
+## <a name="cbasepanegetmfcstyle"></a><a name="getmfcstyle"></a>ウィンドウ::ゲットMFCスタイル
 
-MFC に固有のペインスタイルを返します。
+MFC に固有のペイン スタイルを返します。
 
 ```
 virtual DWORD GetMFCStyle() const;
@@ -1109,11 +1109,11 @@ virtual DWORD GetMFCStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-ライブラリ固有の (AFX_CBRS_) ペインスタイルの組み合わせ。
+ライブラリ固有の (AFX_CBRS_) ペイン スタイルの組み合わせ。
 
-##  <a name="getpaneicon"></a>CBasePane:: Getpane アイコン
+## <a name="cbasepanegetpaneicon"></a><a name="getpaneicon"></a>Cベースペイン::ゲットペインアイコン
 
-ペインアイコンへのハンドルを返します。
+ペイン アイコンへのハンドルを返します。
 
 ```
 virtual HICON GetPaneIcon(BOOL bBigIcon);
@@ -1121,18 +1121,18 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 
 ### <a name="parameters"></a>パラメーター
 
-*bBigIcon*<br/>
-からTRUE の場合、32ピクセル×32ピクセルのアイコンを指定します。FALSE の場合、16ピクセル x 16 ピクセルのアイコンを指定します。
+*ビグビコン*<br/>
+[in]TRUE の場合は 32 ピクセル x 32 ピクセルのアイコンを指定します。FALSE の場合、16 ピクセル x 16 ピクセルのアイコンを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ペインアイコンへのハンドル。 失敗した場合は、NULL を返します。
+ペイン アイコンへのハンドル。 失敗した場合は NULL を返します。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、 [CWnd:: GetIcon](../../mfc/reference/cwnd-class.md#geticon)が呼び出されます。
+既定の実装は[、CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon)を呼び出します。
 
-##  <a name="getpanerow"></a>CBasePane:: GetPaneRow
+## <a name="cbasepanegetpanerow"></a><a name="getpanerow"></a>Cベースペイン::ゲットペインロウ
 
 ペインがドッキングされている[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)オブジェクトへのポインターを返します。
 
@@ -1142,13 +1142,13 @@ CDockingPanesRow* GetPaneRow();
 
 ### <a name="return-value"></a>戻り値
 
-ペインがドッキングされている場合は `CDockingPanesRow` へのポインター。フローティングの場合は NULL。
+ペイン`CDockingPanesRow`がドッキングされているかどうかを示すポインター。
 
 ### <a name="remarks"></a>解説
 
-ペインがドッキングされている行にアクセスするには、このメソッドを呼び出します。 たとえば、特定の行のペインを配置するには、`GetPaneRow` を呼び出し、 [CDockingPanesRow:: Arrange Epanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes)を呼び出します。
+ペインがドッキングされている行にアクセスします。 たとえば、特定の行にペインを配置するには`GetPaneRow`[、CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes)を呼び出して呼び出します。
 
-##  <a name="getpanestyle"></a>CBasePane:: Getpane Style
+## <a name="cbasepanegetpanestyle"></a><a name="getpanestyle"></a>ウィンドウ::ゲットペインスタイル
 
 ペインのスタイルを返します。
 
@@ -1158,11 +1158,11 @@ virtual DWORD GetPaneStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-作成時に[Cbasepane:: Setpane style](#setpanestyle)メソッドによって設定されたコントロールバースタイル (CBRS_ スタイルを含む) の組み合わせ。
+[CBasePane::SetPaneStyle](#setpanestyle)メソッドによって設定されたコントロール バー スタイル (CBRS_ スタイルを含む) の組み合わせです。
 
-##  <a name="getparentdocksite"></a>CBasePane:: GetParentDockSite
+## <a name="cbasepanegetparentdocksite"></a><a name="getparentdocksite"></a>Cベースペイン::ゲットペアレントドックサイト
 
-親ドックサイトへのポインターを返します。
+親ドッキング サイトへのポインターを返します。
 
 ```
 virtual CDockSite* GetParentDockSite() const;
@@ -1170,11 +1170,11 @@ virtual CDockSite* GetParentDockSite() const;
 
 ### <a name="return-value"></a>戻り値
 
-親ドックサイト。
+親ドッキング サイト。
 
-##  <a name="getparentminiframe"></a>CBasePane:: GetParentMiniFrame
+## <a name="cbasepanegetparentminiframe"></a><a name="getparentminiframe"></a>ウィンドウ::ゲットペアレントミニフレーム
 
-親ミニフレームウィンドウへのポインターを返します。
+親ミニフレーム ウィンドウへのポインターを返します。
 
 ```
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
@@ -1182,22 +1182,22 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNoAssert*<br/>
-からTRUE の場合、このメソッドは有効でないポインターをチェックしません。 アプリケーションの終了時にこのメソッドを呼び出した場合は、このパラメーターを TRUE に設定します。
+*アサート*<br/>
+[in]TRUE の場合、このメソッドは無効なポインターをチェックしません。 アプリケーションの終了時にこのメソッドを呼び出す場合は、このパラメーターを TRUE に設定します。
 
 ### <a name="return-value"></a>戻り値
 
-ペインがフローティングの場合は、親ミニフレームウィンドウへの有効なポインターです。それ以外の場合は NULL。
+ペインがフローティング状態の場合は、親ミニフレーム ウィンドウへの有効なポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-親ミニフレームウィンドウへのポインターを取得するには、この関数を呼び出します。 このメソッドは、すべての親を反復処理し、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)から派生したオブジェクトをチェックします。
+親ミニフレーム ウィンドウへのポインターを取得します。 このメソッドは、すべての親を反復処理し[、CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)から派生したオブジェクトをチェックします。
 
-ペインがフローティングかどうかを確認するには、`GetParentMiniFrame` を使用します。
+ペイン`GetParentMiniFrame`がフローティング状態かどうかを判断するために使用します。
 
-##  <a name="getparenttabbedpane"></a>CBasePane:: GetParentTabbedPane
+## <a name="cbasepanegetparenttabbedpane"></a><a name="getparenttabbedpane"></a>Cベースペイン::ゲットペアレントタブベドペイン
 
-親のタブ付きペインへのポインターを返します。
+親タブ付きペインへのポインターを返します。
 
 ```
 CBaseTabbedPane* GetParentTabbedPane() const;
@@ -1205,9 +1205,9 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 
 ### <a name="return-value"></a>戻り値
 
-親のタブ付きペイン (存在する場合) へのポインター。それ以外の場合は NULL。
+親タブ付きペインが存在する場合は、そのペインへのポインター。それ以外の場合は NULL。
 
-##  <a name="getparenttabwnd"></a>CBasePane:: GetParentTabWnd
+## <a name="cbasepanegetparenttabwnd"></a><a name="getparenttabwnd"></a>ウィンドウ::ゲットペアタブンド
 
 タブ内にある親ウィンドウへのポインターを返します。
 
@@ -1217,20 +1217,20 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndTab*<br/>
-入出力戻り値が NULL でない場合、このパラメーターには親のタブ付きウィンドウへのハンドルが格納されます。
+*フーンドタブ*<br/>
+[アウト]戻り値が NULL でない場合、このパラメーターには親タブ付きウィンドウへのハンドルが含まれます。
 
 ### <a name="return-value"></a>戻り値
 
-親タブ付きウィンドウへの有効なポインターまたは NULL。
+親タブ付きウィンドウまたは NULL への有効なポインター。
 
 ### <a name="remarks"></a>解説
 
-親のタブ付きウィンドウへのポインターを取得するには、この関数を使用します。 場合によっては、`GetParent`を呼び出すことができないことがあります。これは、ペインがドッキングラッパー ( [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)) 内またはペインアダプター ( [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)) 内に存在する可能性があるためです。 `GetParentTabWnd` を使用すると、そのような場合に有効なポインターを取得できるようになります (親がタブ付きウィンドウであることを前提としています)。
+この関数は、親タブ付きウィンドウへのポインターを取得するために使います。 ペインがドッキング ラッパー ( `GetParent`CDockablePaneAdapter クラス ) 内にあるか、ペイン アダプタ ( [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)[クラス](../../mfc/reference/cdockablepaneadapter-class.md)) の内部にある可能性があるため、呼び出しに十分でない場合があります。 この`GetParentTabWnd`場合、親がタブ付きウィンドウであると仮定して、有効なポインタを取得することができます。
 
-##  <a name="getrecentvisiblestate"></a>CBasePane:: GetRecentVisibleState
+## <a name="cbasepanegetrecentvisiblestate"></a><a name="getrecentvisiblestate"></a>ウィンドウ::取得最新の可視状態
 
-フレームワークは、アーカイブからペインが復元されるときに、このメソッドを呼び出します。
+ペインがアーカイブから復元されると、フレームワークはこのメソッドを呼び出します。
 
 ```
 virtual BOOL GetRecentVisibleState() const;
@@ -1238,9 +1238,9 @@ virtual BOOL GetRecentVisibleState() const;
 
 ### <a name="return-value"></a>戻り値
 
-最近の表示状態を指定するブール値。 TRUE の場合、シリアル化時にウィンドウが表示され、復元時に表示される必要があります。 FALSE の場合、シリアル化時にペインは非表示になり、復元時に非表示になります。
+最近の表示状態を指定する BOOL。 TRUE の場合、ウィンドウはシリアル化されたときに表示され、復元時に表示されます。 FALSE の場合、ペインはシリアル化時に非表示になり、復元時には非表示にする必要があります。
 
-##  <a name="hideinprintpreviewmode"></a>CBasePane:: Hideinprintプレビューモード
+## <a name="cbasepanehideinprintpreviewmode"></a><a name="hideinprintpreviewmode"></a>ウィンドウ::非表示印刷プレビューモード
 
 印刷プレビューでペインを非表示にするかどうかを指定します。
 
@@ -1250,15 +1250,15 @@ virtual BOOL HideInPrintPreviewMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウが印刷プレビューに表示されない場合は TRUE。それ以外の場合は FALSE。
+ペインが印刷プレビューに表示されない場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-基本ペインは、印刷プレビューでは表示されません。 したがって、このメソッドは常に TRUE を返します。
+基本ウィンドウは印刷プレビューに表示されません。 したがって、このメソッドは常に TRUE を返します。
 
-##  <a name="insertpane"></a>CBasePane:: InsertPane
+## <a name="cbasepaneinsertpane"></a><a name="insertpane"></a>CBase ペイン::挿入ペイン
 
-指定したペインをドッキングマネージャーに登録します。
+ドッキング マネージャーに指定されたペインを登録します。
 
 ```
 BOOL InsertPane(
@@ -1269,22 +1269,22 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*pControlBar*<br/>
-から挿入するペインへのポインター。
+*コントロールバー*<br/>
+[in]挿入するペインへのポインター。
 
-*pTarget*<br/>
-から隣接するペインへのポインター。
+*pターゲット*<br/>
+[in]隣接するペインへのポインター。
 
-*bAfter*<br/>
-からTRUE の場合、 *Ptarget*の後に*pControlBar*が挿入されます。 FALSE の場合、 *Ptarget*の前に*pControlBar*が挿入されます。
+*bアフター*<br/>
+[in]TRUE の場合は *、p コントロール バー*が*pTarget*の後に挿入されます。 FALSE の場合 *、p コントロール バー*は*pTarget*の前に挿入されます。
 
 ### <a name="return-value"></a>戻り値
 
 メソッドが成功した場合は TRUE、それ以外の場合は FALSE。
 
-##  <a name="isaccessibilitycompatible"></a>CBasePane:: IsAccessibilityCompatible
+## <a name="cbasepaneisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>ウィンドウ::Is アクセシビリティ互換
 
-ペインが Active Accessibility をサポートするかどうかを指定します。
+ペインがアクティブなアクセシビリティをサポートするかどうかを指定します。
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1292,11 +1292,11 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>戻り値
 
-ペインが Active Accessibility をサポートする場合は TRUE。それ以外の場合は FALSE。
+ペインがアクティブなアクセシビリティをサポートする場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="isautohidemode"></a>CBasePane:: IsAutoHideMode
+## <a name="cbasepaneisautohidemode"></a><a name="isautohidemode"></a>CBase ペイン::IsAutoHideモード
 
-ペインが自動的に隠すモードであるかどうかを判断します。
+ペインが自動非表示モードかどうかを判断します。
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1308,11 +1308,11 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="remarks"></a>解説
 
-基本ペインは自動的に非表示にできません。 このメソッドは常に FALSE を返します。
+ベース ペインは自動的に非表示にできません。 このメソッドは常に FALSE を返します。
 
-##  <a name="isdialogcontrol"></a>CBasePane:: IsDialogControl
+## <a name="cbasepaneisdialogcontrol"></a><a name="isdialogcontrol"></a>ウィンドウ::IsDialog コントロール
 
-ペインがダイアログボックスコントロールかどうかを指定します。
+ペインがダイアログ ボックス コントロールであるかどうかを指定します。
 
 ```
 BOOL IsDialogControl() const;
@@ -1320,13 +1320,13 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインがダイアログボックスコントロールである場合は TRUE。それ以外の場合は FALSE。
+ペインがダイアログ ボックス コントロールの場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-フレームワークでは、このメソッドを使用して、すべてのペインのレイアウトの一貫性を確保します。
+フレームワークは、このメソッドを使用して、すべてのペインのレイアウトの一貫性を確保します。
 
-##  <a name="isdocked"></a>CBasePane:: IsDocked
+## <a name="cbasepaneisdocked"></a><a name="isdocked"></a>Cベースペイン::IsDocked
 
 ペインがドッキングされているかどうかを判断します。
 
@@ -1336,11 +1336,11 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインの親がミニフレームでない場合、またはペインが別のペインを含むミニフレームでフローティング状態の場合は TRUE。それ以外の場合は FALSE。
+ペインの親がミニフレームでない場合、またはペインが別のペインと共にミニフレームにフローティングされている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="isfloating"></a>CBasePane:: IsFloating
+## <a name="cbasepaneisfloating"></a><a name="isfloating"></a>Cベースペイン::イズフローティング
 
-ペインがフローティングかどうかを判断します。
+ペインがフローティング状態かどうかを判断します。
 
 ```
 virtual BOOL IsFloating() const;
@@ -1348,13 +1348,13 @@ virtual BOOL IsFloating() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインがフローティングの場合は TRUE。それ以外の場合は FALSE。
+ペインがフローティング状態の場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 [Cbasepane:: IsDocked](#isdocked)の逆の値を返します。
+このメソッドは[、CBasePane::IsDocked](#isdocked)の反対の値を返します。
 
-##  <a name="ishorizontal"></a>CBasePane:: IsHorizontal
+## <a name="cbasepaneishorizontal"></a><a name="ishorizontal"></a>Cベースペイン::イス水平
 
 ペインが水平方向にドッキングされているかどうかを判断します。
 
@@ -1368,11 +1368,11 @@ virtual BOOL IsHorizontal() const;
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、CBRS_ORIENT_HORZ の現在のドッキングアラインメントがチェックされます。
+既定の実装では、現在のドッキング位置をチェックCBRS_ORIENT_HORZ。
 
-##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane:: IsInFloatingMultiPaneFrameWnd
+## <a name="cbasepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>ウィンドウ::イインフローティングマルチペインフレームオーニング
 
-ペインが複数ペインのフレームウィンドウ ( [CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)) に含まれるかどうかを指定します。
+ペインがマルチペイン フレーム ウィンドウ[(CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)) 内にあるかどうかを指定します。
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1380,15 +1380,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインが複数ペインのフレームウィンドウにある場合は TRUE。それ以外の場合は FALSE。
+ペインが複数枠のフレーム ウィンドウにある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-複数ペインのフレームウィンドウでフローティングできるのは、ドッキング可能なペインだけです。 したがって、`CBasePane::IsInFloatingMultiPaneFrameWnd` は常に FALSE を返します。
+マルチペイン フレーム ウィンドウにフローティングできるペインのみ。 したがって、`CBasePane::IsInFloatingMultiPaneFrameWnd`常に FALSE を返します。
 
-##  <a name="ismditabbed"></a>CBasePane:: IsMDITabbed
+## <a name="cbasepaneismditabbed"></a><a name="ismditabbed"></a>Cベースペイン::イスムディタブベド
 
-ペインが MDI 子ウィンドウにタブ付きドキュメントとして追加されているかどうかを判断します。
+ウィンドウがタブ付きドキュメントとして MDI 子ウィンドウに追加されているかどうかを判断します。
 
 ```
 virtual BOOL IsMDITabbed() const;
@@ -1396,11 +1396,11 @@ virtual BOOL IsMDITabbed() const;
 
 ### <a name="return-value"></a>戻り値
 
-ペインが MDI 子ウィンドウにタブ付きドキュメントとして追加された場合は TRUE。それ以外の場合は FALSE。
+ペインがタブ付きドキュメントとして MDI 子ウィンドウに追加された場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="ispanevisible"></a>CBasePane:: IsPaneVisible
+## <a name="cbasepaneispanevisible"></a><a name="ispanevisible"></a>Cベースペイン::イズペインビジブル
 
-ペインに WS_VISIBLE フラグが設定されているかどうかを指定します。
+ペインにWS_VISIBLEフラグを設定するかどうかを指定します。
 
 ```
 BOOL IsPaneVisible() const;
@@ -1408,15 +1408,15 @@ BOOL IsPaneVisible() const;
 
 ### <a name="return-value"></a>戻り値
 
-WS_VISIBLE が設定されている場合は TRUE です。それ以外の場合は FALSE。
+WS_VISIBLEが設定されている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-[Cbasepane:: IsVisible](#isvisible)を使用して、ペインの可視性を決定します。
+[ウィンドウの表示設定を決定するには、CBasePane::IsVisible](#isvisible)を使用します。
 
-##  <a name="ispointneardocksite"></a>CBasePane:: IsPointNearDockSite
+## <a name="cbasepaneispointneardocksite"></a><a name="ispointneardocksite"></a>Cベースペイン::イスポイントニアドックサイト
 
-指定したポイントがドッキングサイトの近くにあるかどうかを判断します。
+指定したポイントがドッキング サイトの近くにあるかどうかを判断します。
 
 ```
 BOOL IsPointNearDockSite(
@@ -1427,24 +1427,24 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-*視点*<br/>
-から指定されたポイント。
+*ポイント*<br/>
+[in]指定したポイント。
 
-*dwBarAlignment*<br/>
-入出力ポイントが近づいている端を指定します。 指定できる値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM
+*整列*<br/>
+[アウト]ポイントの近くにあるエッジを指定します。 指定できる値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、およびCBRS_ALIGN_BOTTOM
 
-*bOuterEdge*<br/>
-入出力ポイントがドッキングサイトの外側の境界の近くにある場合は TRUE。それ以外の場合は FALSE。
+*ボターエッジ*<br/>
+[アウト]ポイントがドッキング サイトの外側の境界付近にある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-ポイントがドッキングサイトの近くにある場合は TRUE。それ以外の場合は FALSE。
+ポイントがドッキング サイトの近くにある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ドッキングマネージャーの感度セット内にあるポイントは、ドッキングサイトの近くにあります。 既定の感度は15ピクセルです。
+ドッキング マネージャーで設定されている感度内にある場合、ポイントはドッキング サイトの近くにあります。 既定の感度は 15 ピクセルです。
 
-##  <a name="isresizable"></a>CBasePane:: IsResizable 変更可能
+## <a name="cbasepaneisresizable"></a><a name="isresizable"></a>Cベースペイン::イズリジブル
 
 ペインのサイズを変更できるかどうかを決定します。
 
@@ -1458,13 +1458,13 @@ virtual BOOL IsResizable() const;
 
 ### <a name="remarks"></a>解説
 
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)のペインのサイズを変更できます。
+[CDockablePane クラスのペイン](../../mfc/reference/cdockablepane-class.md)のサイズを変更できます。
 
-ステータスバー ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) と dock バー ( [CDockSite クラス](../../mfc/reference/cdocksite-class.md)) のサイズを変更することはできません。
+ステータス バー ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) とドッキング バー ( [CDockSite クラス](../../mfc/reference/cdocksite-class.md)) のサイズを変更することはできません。
 
-##  <a name="isrestoredfromregistry"></a>CBasePane:: IsRestoredFromRegistry
+## <a name="cbasepaneisrestoredfromregistry"></a><a name="isrestoredfromregistry"></a>次のレジストリを使用します。
 
-ウィンドウがレジストリから復元されるかどうかを決定します。
+ペインをレジストリから復元するかどうかを決定します。
 
 ```
 virtual BOOL IsRestoredFromRegistry() const;
@@ -1472,11 +1472,11 @@ virtual BOOL IsRestoredFromRegistry() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウがレジストリから復元される場合は TRUE。それ以外の場合は FALSE。
+ペインがレジストリから復元される場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="istabbed"></a>CBasePane:: IsTabbed
+## <a name="cbasepaneistabbed"></a><a name="istabbed"></a>Cベースペイン::イタブベド
 
-タブ付きウィンドウのタブコントロールにペインが挿入されているかどうかを判断します。
+タブ付きウィンドウのタブ コントロールにペインが挿入されているかどうかを判断します。
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1484,13 +1484,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ付きウィンドウのタブにコントロールバーが挿入される場合は TRUE。それ以外の場合は FALSE。
+コントロール バーがタブ付きウィンドウのタブに挿入される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、直接の親へのポインターを取得し、親のランタイムクラスが[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)であるかどうかを判断します。
+このメソッドは、直接の親へのポインターを取得し、親のランタイム クラスが[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)かどうかを判断します。
 
-##  <a name="isvisible"></a>CBasePane:: IsVisible
+## <a name="cbasepaneisvisible"></a><a name="isvisible"></a>Cベースペイン::イズビジブル
 
 ペインが表示されているかどうかを判断します。
 
@@ -1504,11 +1504,11 @@ virtual BOOL IsVisible() const;
 
 ### <a name="remarks"></a>解説
 
-ペインの表示/非表示を決定するには、このメソッドを使用します。 `::IsWindowVisible` は使用しないでください。
+このメソッドは、ペインの表示/非表示を決定するために使います。 `::IsWindowVisible` は使用しないでください。
 
-ペインがタブ表示されていない場合 ( [Cbasepane:: IsTabbed](#istabbed)を参照)、このメソッドは WS_VISIBLE スタイルを確認します。 ペインがタブ付きの場合、このメソッドは親のタブ付きウィンドウの表示をチェックします。 親ウィンドウが表示されている場合、関数は[CMFCBaseTabCtrl:: IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)を使用してペインタブの表示を確認します。
+ペインがタブ付きでない場合[(「CBasePane::IsTabbed」](#istabbed)を参照)、このメソッドはWS_VISIBLEスタイルをチェックします。 ペインがタブ付きの場合、このメソッドは親タブ付きウィンドウの表示を確認します。 親ウィンドウが表示されている場合、関数は[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)を使用してペイン タブの可視性をチェックします。
 
-##  <a name="loadstate"></a>CBasePane:: LoadState
+## <a name="cbasepaneloadstate"></a><a name="loadstate"></a>ウィンドウ::ロードステート
 
 レジストリからペインの状態を読み込みます。
 
@@ -1521,14 +1521,14 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-からプロファイル名。
+*名前を指定します。*<br/>
+[in]プロファイル名。
 
 *nIndex*<br/>
-からプロファイルインデックス。
+[in]プロファイル インデックス。
 
-*uiID*<br/>
-からペイン ID。
+*Uiid*<br/>
+[in]ペイン ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1536,9 +1536,9 @@ virtual BOOL LoadState(
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、このメソッドを呼び出して、レジストリからペインの状態を読み込みます。 派生クラスでオーバーライドして、 [Cbasepane:: SaveState](#savestate)によって保存された追加情報を読み込みます。
+フレームワークは、このメソッドを呼び出して、レジストリからペイン状態を読み込みます。 派生クラスでオーバーライドして[、CBasePane](#savestate)によって保存された追加情報を読み込みます。
 
-##  <a name="movewindow"></a>CBasePane:: MoveWindow
+## <a name="cbasepanemovewindow"></a><a name="movewindow"></a>ウィンドウの移動
 
 ペインを移動します。
 
@@ -1551,24 +1551,24 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
-からペインの新しい位置とサイズを指定する四角形。
+*Rect*<br/>
+[in]ペインの新しい場所とサイズを指定する四角形。
 
-*塗装*<br/>
-からTRUE の場合、ペインは再描画されます。 FALSE の場合、ペインは再描画されません。
+*brepaint*<br/>
+[in]TRUE の場合、ペインは再描画されます。 FALSE の場合、ペインは再描画されません。
 
 *hdwp*<br/>
-から遅延ウィンドウ位置の構造体を処理します。
+[in]遅延ウィンドウ位置構造体へのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-遅延ウィンドウ位置の構造体または NULL を表すハンドル。
+遅延ウィンドウ位置構造体へのハンドル、または NULL。
 
 ### <a name="remarks"></a>解説
 
-*Hdwp*パラメーターとして NULL を渡すと、このメソッドはウィンドウを通常どおり移動します。 ハンドルを渡すと、このメソッドは遅延ウィンドウ移動を実行します。 ハンドルを取得するには、 [BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos)を呼び出すか、このメソッドの前の呼び出しの戻り値を格納します。
+*hdwp*パラメーターとして NULL を渡すと、このメソッドはウィンドウを通常どおりに移動します。 ハンドルを渡すと、このメソッドは遅延ウィンドウ移動を実行します。 ハンドルを取得するには[、BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos)を呼び出すか、このメソッドへの以前の呼び出しの戻り値を格納します。
 
-##  <a name="onafterchangeparent"></a>CBasePane:: OnAfterChangeParent
+## <a name="cbasepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>ウィンドウ::オンアフターチェンジペアレント
 
 ペインの親が変更された後に、フレームワークによって呼び出されます。
 
@@ -1578,18 +1578,18 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndOldParent*<br/>
-から前の親へのポインター。
+*親の子*<br/>
+[in]前の親へのポインター。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ペインの親が変更された後にこのメソッドを呼び出します。通常は、ドッキングまたはフローティング操作が原因です。
+フレームワークは、通常、ドッキング操作またはフローティング操作が原因で、ペインの親が変更された後にこのメソッドを呼び出します。
 
 既定の実装では、何も行われません。
 
-##  <a name="onbeforechangeparent"></a>CBasePane:: OnBeforeChangeParent
+## <a name="cbasepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>Cベースペイン::オン・オン・チェンジチェンジ・ペアレント
 
-ペインの親ウィンドウが変更される直前に、フレームワークによって呼び出されます。
+ペインが親ウィンドウを変更する直前に、フレームワークによって呼び出されます。
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1599,21 +1599,21 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndNewParent*<br/>
-から新しい親ウィンドウへのポインター。
+*新しい親*<br/>
+[in]新しい親ウィンドウへのポインター。
 
-*bDelay*<br/>
-からレイアウトの調整を遅延する必要があるかどうかを指定します。
+*bディレイ*<br/>
+[in]レイアウト調整を遅延させるかどうかを指定します。
 
 ### <a name="remarks"></a>解説
 
-フレームワークはペインの親が変更される直前にこのメソッドを呼び出します。通常は、ドッキング、フローティング、または自動非表示の操作が原因です。
+フレームワークは、通常、ドッキング、フローティング、または自動非表示操作のために、ペインの親が変更される直前にこのメソッドを呼び出します。
 
 既定の実装では、何も行われません。
 
-##  <a name="ondrawcaption"></a>CBasePane:: OnDrawCaption
+## <a name="cbasepaneondrawcaption"></a><a name="ondrawcaption"></a>ウィンドウ::オンドローキャプション
 
-フレームワークは、キャプションが描画されるときにこのメソッドを呼び出します。
+キャプションが描画されるときに、フレームワークはこのメソッドを呼び出します。
 
 ```
 virtual void OnDrawCaption();
@@ -1621,9 +1621,9 @@ virtual void OnDrawCaption();
 
 ### <a name="remarks"></a>解説
 
-このメソッドには、`CBasePane` クラスの機能がありません。
+このメソッドには、クラスの`CBasePane`機能はありません。
 
-##  <a name="onmovepanedivider"></a>CBasePane:: OnMovePaneDivider
+## <a name="cbasepaneonmovepanedivider"></a><a name="onmovepanedivider"></a>Cベースペイン::オンムーブペインディバイダー
 
 このメソッドは現在使用されていません。
 
@@ -1634,11 +1634,11 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ### <a name="parameters"></a>パラメーター
 
 *未使用*<br/>
-から使用しません。
+[in]使用されていません。
 
-##  <a name="onpanecontextmenu"></a>CBasePane:: OnPaneContextMenu
+## <a name="cbasepaneonpanecontextmenu"></a><a name="onpanecontextmenu"></a>C ベースペイン::オンペインコンテキストメニュー
 
-ペインのリストを持つメニューをビルドするときに、フレームワークによって呼び出されます。
+ペインの一覧を含むメニューを構築するときに、フレームワークによって呼び出されます。
 
 ```
 virtual void OnPaneContextMenu(
@@ -1648,21 +1648,21 @@ virtual void OnPaneContextMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParentFrame*<br/>
-から親フレームへのポインター。
+*フレーム*<br/>
+[in]親フレームへのポインター。
 
-*視点*<br/>
-からショートカットメニューの場所を指定します。
+*ポイント*<br/>
+[in]ショートカット メニューの場所を指定します。
 
 ### <a name="remarks"></a>解説
 
-`OnPaneContextMenu` は、現在のフレームウィンドウに属しているペインの一覧を保持するドッキングマネージャーを呼び出します。 このメソッドは、ショートカットメニューにペインの名前を追加し、それを表示します。 メニューのコマンドは、個々のペインの表示と非表示を切り替えます。
+`OnPaneContextMenu`現在のフレーム ウィンドウに属するペインの一覧を保持するドッキング マネージャーを呼び出します。 このメソッドは、ペインの名前をショートカット メニューに追加して表示します。 メニューのコマンドは、個々のペインを表示または非表示にします。
 
 この動作をカスタマイズするには、このメソッドをオーバーライドします。
 
-##  <a name="onremovefromminiframe"></a>CBasePane:: OnRemoveFromMiniFrame フレーム
+## <a name="cbasepaneonremovefromminiframe"></a><a name="onremovefromminiframe"></a>Cベースペイン::オン除去ミニフレーム
 
-ペインが親ミニフレームウィンドウから削除されたときに、フレームワークによって呼び出されます。
+ペインが親ミニ フレーム ウィンドウから削除されたときに、フレームワークによって呼び出されます。
 
 ```
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
@@ -1670,18 +1670,18 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMiniFrame フレーム*<br/>
-からペインの削除元となるミニフレームウィンドウへのポインター。
+*フレーム*<br/>
+[in]ペインが削除されるミニフレーム ウィンドウへのポインター。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ウィンドウが親ミニフレームウィンドウから削除されたとき (たとえば、ドッキングの結果として)、このメソッドを呼び出します。
+フレームワークは、ペインが親ミニフレーム ウィンドウから削除されたときにこのメソッドを呼び出します (ドッキングの結果など)。
 
 既定の実装では、何も行われません。
 
-##  <a name="onsetaccdata"></a>CBasePane:: OnSetAccData
+## <a name="cbasepaneonsetaccdata"></a><a name="onsetaccdata"></a>Cベースペイン::オンセットアクデータ
 
-`CBasePane` はこのメソッドを使用しません。
+`CBasePane`このメソッドは使用しません。
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1689,8 +1689,8 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>パラメーター
 
-*lVal*<br/>
-から使用しません。
+*lヴァル*<br/>
+[in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1698,9 +1698,9 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="remarks"></a>解説
 
-##  <a name="panefrompoint"></a>CBasePane::P aneFromPoint
+## <a name="cbasepanepanefrompoint"></a><a name="panefrompoint"></a>ソースペイン::Pアネフロトポイント
 
-指定されたポイントを含むペインを返します。
+指定したポイントを含むペインを返します。
 
 ```
 CBasePane* PaneFromPoint(
@@ -1712,33 +1712,33 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*視点*<br/>
-からチェックするポイントを画面座標で指定します。
+*ポイント*<br/>
+[in]チェックする点を画面座標で指定します。
 
-*nSensitivity*<br/>
-から検索領域をこの量だけ増やします。 指定されたポイントが増加した領域内にある場合、ペインは検索条件を満たします。
+*n感度*<br/>
+[in]検索領域をこの量だけ増やします。 指定したポイントが増加した領域に入ると、ペインは検索条件を満たします。
 
-*bExactBar*<br/>
-から*Nsensitivity*パラメーターを無視する場合は TRUE。それ以外の場合は FALSE。
+*をクリックします。*<br/>
+[in]n感度パラメータを無視する*場合は*TRUE。それ以外の場合は FALSE。
 
-*pRTCBarType*<br/>
-からNULL でない場合、メソッドは、指定された型のペインだけを検索します。
+*タイプを変更します。*<br/>
+[in]NULL でない場合、メソッドは指定された種類のペインのみを検索します。
 
 ### <a name="return-value"></a>戻り値
 
-指定したポイントを含む `CBasePane`派生オブジェクト。ペインが見つからなかった場合は NULL。
+指定`CBasePane`したポイントを含む派生オブジェクト。
 
-##  <a name="recalclayout"></a>CBasePane:: RecalcLayout
+## <a name="cbasepanerecalclayout"></a><a name="recalclayout"></a>Cベースペイン::リカルクレイアウト
 
-`CBasePane` はこのメソッドを使用しません。
+`CBasePane`このメソッドは使用しません。
 
 ```
 virtual void RecalcLayout();
 ```
 
-##  <a name="removepanefromdockmanager"></a>CBasePane:: RemovePaneFromDockManager
+## <a name="cbasepaneremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>ウィンドウ::ウィンドウから削除します。
 
-ペインの登録を解除し、ドッキングマネージャーの一覧から削除します。
+ペインの登録を解除し、ドッキング マネージャーのリストから削除します。
 
 ```
 void RemovePaneFromDockManager(
@@ -1751,22 +1751,22 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-[in]削除するウィンドウへのポインター。
+*pバー*<br/>
+[in]削除するペインへのポインター。
 
-*bDestroy*<br/>
-からTRUE の場合、削除されたペインは破棄されます。
+*bデストロイ*<br/>
+[in]TRUE の場合、削除されたペインは破棄されます。
 
-*bAdjustLayout*<br/>
-からTRUE の場合は、ドッキングレイアウトをすぐに調整します。
+*レイアウトを調整する*<br/>
+[in]TRUE の場合は、ドッキング レイアウトをすぐに調整します。
 
-*bAutoHide に隠す*<br/>
-からTRUE の場合、ドッキングレイアウトは自動的に隠すバーの一覧に関連付けられます。 FALSE の場合、ドッキングレイアウトは通常のペインの一覧に関連付けられます。
+*b 自動非表示*<br/>
+[in]TRUE の場合、ドッキング レイアウトは自動非表示バーのリストに関連付けられています。 FALSE の場合、ドッキング レイアウトは通常のペインのリストに関連付けられています。
 
-*pBarReplacement*<br/>
-から削除されたペインを置き換えるペインへのポインター。
+*交換用*<br/>
+[in]削除されたペインを置き換えるペインへのポインター。
 
-##  <a name="savestate"></a>CBasePane:: SaveState
+## <a name="cbasepanesavestate"></a><a name="savestate"></a>ウィンドウ::セーブステート
 
 レジストリにペインの状態を保存します。
 
@@ -1779,14 +1779,14 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-からプロファイル名。
+*名前を指定します。*<br/>
+[in]プロファイル名。
 
 *nIndex*<br/>
-からプロファイルインデックス。
+[in]プロファイル インデックス。
 
-*uiID*<br/>
-からペイン ID。
+*Uiid*<br/>
+[in]ペイン ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1794,11 +1794,11 @@ virtual BOOL SaveState(
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ペインの状態をレジストリに保存するときに、このメソッドを呼び出します。 派生クラスの `SaveState` をオーバーライドして、追加情報を格納します。
+フレームワークは、ペインの状態をレジストリに保存するときに、このメソッドを呼び出します。 派生`SaveState`クラスでオーバーライドして、追加情報を格納します。
 
-##  <a name="selectdefaultfont"></a>CBasePane:: SelectDefaultFont
+## <a name="cbasepaneselectdefaultfont"></a><a name="selectdefaultfont"></a>ウィンドウ::デフォルトフォントの選択
 
-指定されたデバイスコンテキストの既定のフォントを選択します。
+指定したデバイス コンテキストの既定のフォントを選択します。
 
 ```
 CFont* SelectDefaultFont(CDC* pDC);
@@ -1807,15 +1807,15 @@ CFont* SelectDefaultFont(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキスト。
+[in]デバイス コンテキスト。
 
 ### <a name="return-value"></a>戻り値
 
 既定の[CFont クラス](../../mfc/reference/cfont-class.md)オブジェクトへのポインター。
 
-##  <a name="setcontrolbarstyle"></a>CBasePane:: SetControlBarStyle
+## <a name="cbasepanesetcontrolbarstyle"></a><a name="setcontrolbarstyle"></a>ウィンドウ::コントロールバースタイルを設定します。
 
-コントロールバーのスタイルを設定します。
+コントロール バーのスタイルを設定します。
 
 ```
 virtual void SetControlBarStyle(DWORD dwNewStyle);
@@ -1823,19 +1823,19 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwNewStyle*<br/>
-から次の可能な値のビットごとの or の組み合わせ。
+*ドウニュースタイル*<br/>
+[in]次の値のビットごとの OR の組み合わせ。
 
-|Style|Description|
+|スタイル|説明|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|コントロールバーを浮動小数点型にします。|
+|AFX_CBRS_FLOAT|コントロール バーをフロートします。|
 |AFX_CBRS_AUTOHIDE|自動非表示モードを有効にします。|
-|AFX_CBRS_RESIZE|コントロールバーのサイズ変更を有効にします。 このフラグが設定されている場合は、コントロールバーをドッキング可能なペインに配置できます。|
-|AFX_CBRS_CLOSE|コントロールバーの非表示を有効にします。|
+|AFX_CBRS_RESIZE|コントロール バーのサイズ変更を有効にします。 このフラグを設定すると、コントロール バーをドッキング可能なペインに配置できます。|
+|AFX_CBRS_CLOSE|コントロール バーの非表示を有効にします。|
 
-##  <a name="setdockingmode"></a>CBasePane:: Setdocのモード
+## <a name="cbasepanesetdockingmode"></a><a name="setdockingmode"></a>Cベースペイン::セットドッキングモード
 
-ペインのドッキングモードを設定します。
+ペインのドッキング モードを設定します。
 
 ```
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
@@ -1843,18 +1843,18 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*dockModeNew*<br/>
-からペインの新しいドッキングモードを指定します。
+*ドックモード新しい*<br/>
+[in]ペインの新しいドッキング モードを指定します。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、標準と即時の2つのドッキングモードをサポートしています。
+フレームワークは、標準モードと即時ドッキングモードの 2 つをサポートします。
 
-標準ドッキングモードでは、ペインとミニフレームウィンドウはドラッグ四角形を使用して周囲に移動します。 イミディエイトドッキングモードでは、コントロールバーとミニフレームウィンドウは、そのコンテキストですぐに移動します。
+標準ドッキング モードでは、ペインとミニフレーム ウィンドウはドラッグ四角形を使用して移動されます。 即時ドッキング モードでは、コントロール バーとミニフレーム ウィンドウは、コンテキストと一緒に直ちに移動します。
 
-初期状態では、ドッキングモードは[CDockingManager:: m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal)によってグローバルに定義されます。 `SetDockingMode` 方法を使用して、各ペインのドッキングモードを個別に設定できます。
+最初は、ドッキング モードは[CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal)によってグローバルに定義されます。 このメソッドを使用して、各ペインのドッキング モードを`SetDockingMode`個別に設定できます。
 
-##  <a name="setpanealignment"></a>CBasePane:: Setpane Alignment
+## <a name="cbasepanesetpanealignment"></a><a name="setpanealignment"></a>ウィンドウスペイン::セットペイン配置
 
 ペインの配置を設定します。
 
@@ -1864,23 +1864,23 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwAlignment*<br/>
-から新しい配置を指定します。
+*dw配置*<br/>
+[in]新しい配置を指定します。
 
 ### <a name="remarks"></a>解説
 
-通常、フレームワークは、ペインがメインフレームの片側から別の側にドッキングされている場合に、このメソッドを呼び出します。
+通常、フレームワークは、ペインがメイン フレームの一方の側から別の側にドッキングされている場合に、このメソッドを呼び出します。
 
-次の表は、 *dwAlignment*で使用できる値を示しています。
+次の表は *、dwAlignment*の値を示しています。
 
-|値|Alignment|
+|[値]|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左揃え。|
-|CBRS_ALIGN_RIGHT|Right アラインメント。|
-|CBRS_ALIGN_TOP|上揃え。|
-|CBRS_ALIGN_BOTTOM|下揃え。|
+|CBRS_ALIGN_RIGHT|右揃え。|
+|CBRS_ALIGN_TOP|上部の配置。|
+|CBRS_ALIGN_BOTTOM|下部の配置。|
 
-##  <a name="setpanestyle"></a>CBasePane:: Setpane Style
+## <a name="cbasepanesetpanestyle"></a><a name="setpanestyle"></a>Cベースペイン::セットペインスタイル
 
 ペインのスタイルを設定します。
 
@@ -1890,16 +1890,16 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwNewStyle*<br/>
-から設定する新しいスタイルを指定します。
+*ドウニュースタイル*<br/>
+[in]設定する新しいスタイルを指定します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを使用すると、afxres.h で定義されている任意の CBRS_ スタイルを設定できます。 ペインのスタイルとペインの配置は一緒に格納されるため、次のように現在の配置と組み合わせて新しいスタイルを設定します。
+このメソッドを使用して、afxres.h で定義されているCBRS_スタイルのいずれかを設定できます。 ペイン スタイルとペイン配置は一緒に格納されるため、新しいスタイルを現在の配置と組み合わせて設定します。
 
 `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`
 
-##  <a name="setwindowpos"></a>CBasePane:: SetWindowPos
+## <a name="cbasepanesetwindowpos"></a><a name="setwindowpos"></a>ウィンドウペイン::セットウィンドウポス
 
 ペインのサイズ、位置、および Z オーダーを変更します。
 
@@ -1916,38 +1916,38 @@ virtual HDWP SetWindowPos(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndInsertAfter*<br/>
-からこの `CWnd` オブジェクトの前にある `CWnd` オブジェクトを Z オーダーで識別します。 詳細については、「 [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)」を参照してください。
+*後に挿入します。*<br/>
+[in]この`CWnd`オブジェクトの`CWnd`前に来るオブジェクトを Z オーダーで識別します。 詳細については[、「CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)」を参照してください。
 
-*x*<br/>
-からウィンドウの左側の位置を指定します。
+*X*<br/>
+[in]ウィンドウの左側の位置を指定します。
 
-*y*<br/>
-からウィンドウの上部の位置を指定します。
+*Y*<br/>
+[in]ウィンドウの上端の位置を指定します。
 
-*シリーズ*<br/>
-からウィンドウの幅を指定します。
+*Cx*<br/>
+[in]ウィンドウの幅を指定します。
 
-*暦年*<br/>
-からウィンドウの高さを指定します。
+*Cy*<br/>
+[in]ウィンドウの高さを指定します。
 
-*nFlags*<br/>
-からサイズと位置のオプションを指定します。 詳細については、「 [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)」を参照してください。
+*Nflags*<br/>
+[in]サイズと位置のオプションを指定します。 詳細については[、「CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)」を参照してください。
 
 *hdwp*<br/>
-から1つ以上のウィンドウのサイズと位置に関する情報を格納する構造体を処理します。
+[in]1 つ以上のウィンドウのサイズと位置情報を含む構造体へのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-更新された遅延ウィンドウ位置の構造体または NULL を処理するハンドル。
+更新された遅延ウィンドウ位置構造体へのハンドル、または NULL。
 
 ### <a name="remarks"></a>解説
 
-*PWndInsertAfter*が NULL の場合、このメソッドは[CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を呼び出します。 *PWndInsertAfter*が NULL 以外の場合、このメソッドは `DeferWindowPos`を呼び出します。
+*場合は、NULL*の後、このメソッドは[、CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を呼び出します。 *場合は、この*メソッドを呼び出します`DeferWindowPos`。
 
-##  <a name="showpane"></a>CBasePane:: ShowPane
+## <a name="cbasepaneshowpane"></a><a name="showpane"></a>Cベースペイン::ショーペイン
 
-ペインの表示と非表示を切り替えます。
+ウィンドウの表示/非表示を切り替えます。
 
 ```
 virtual void ShowPane(
@@ -1958,22 +1958,22 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*bShow*<br/>
-からペインを表示するか (TRUE)、非表示にする (FALSE) かを指定します。
+*bショー*<br/>
+[in]ペインを表示 (TRUE) または非表示 (FALSE) にするかどうかを指定します。
 
-*bDelay*<br/>
-からTRUE の場合、ドッキングレイアウトの再計算は遅延されます。
+*bディレイ*<br/>
+[in]TRUE の場合、ドッキング レイアウトの再計算が遅延します。
 
-*bActivate*<br/>
-からTRUE の場合、ウィンドウは表示されるとアクティブになります。
+*bアクティブ化*<br/>
+[in]TRUE の場合、ペインは表示されるときにアクティブになります。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ペインの表示と非表示を切り替えます。 このメソッドは、関連するドッキングマネージャーにペインの表示の変更を通知するため、`ShowWindow` の代わりにこのメソッドを使用します。
+このメソッドは、ペインの表示と非表示を切り替えます。 このメソッドは、関連`ShowWindow`するドッキング マネージャーにペインの表示の変更を通知するため、このメソッドではなく使用します。
 
-[Cbasepane:: IsVisible](#isvisible)を使用して、ペインの現在の可視性を確認します。
+[CBasePane を使用::IsVisible](#isvisible)ペインの現在の可視性を決定します。
 
-##  <a name="stretchpane"></a>CBasePane:: StretchPane
+## <a name="cbasepanestretchpane"></a><a name="stretchpane"></a>Cベースペイン::ストレッチペイン
 
 垂直または水平方向にウィンドウを拡大します。
 
@@ -1985,19 +1985,19 @@ virtual CSize StretchPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*nLength*<br/>
-からペインを伸縮する長さ。
+*nレングス*<br/>
+[in]ペインを拡大する長さ。
 
 *bVert*<br/>
-からTRUE の場合、ペインを垂直方向に拡大します。 FALSE の場合は、ウィンドウを水平方向に拡大します。
+[in]TRUE の場合は、ペインを垂直方向に拡大します。 FALSE の場合は、ペインを水平方向に伸ばします。
 
 ### <a name="return-value"></a>戻り値
 
-拡張されたペインのサイズ。
+拡大されたペインのサイズ。
 
-##  <a name="undockpane"></a>CBasePane:: UndockPane
+## <a name="cbasepaneundockpane"></a><a name="undockpane"></a>CBase ペイン::ドッキング解除ペイン
 
-ドッキングサイト、既定のスライダー、またはミニフレームウィンドウから、現在ドッキングされているペインを削除します。
+ドッキング サイト、既定のスライダー、または現在ドッキングされているミニフレーム ウィンドウからペインを削除します。
 
 ```
 virtual void UndockPane(BOOL bDelay=FALSE);
@@ -2005,18 +2005,18 @@ virtual void UndockPane(BOOL bDelay=FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDelay*<br/>
-TRUE の場合、ドッキングレイアウトはすぐには再計算されません。
+*bディレイ*<br/>
+TRUE の場合、ドッキング レイアウトはすぐに再計算されません。
 
 ### <a name="remarks"></a>解説
 
-ペインの状態を操作するか、ドッキングレイアウトからペインを除外するには、このメソッドを呼び出します。
+ペインの状態を操作するか、ドッキング レイアウトからペインを除外します。
 
-このウィンドウを引き続き使用する場合は、このメソッドを呼び出す前に、 [Cbasepane::D ockPane](#dockpane)または[Cbasepane:: FloatPane](#floatpane)を呼び出してください。
+このウィンドウを引き続き使用する場合は、このメソッドを呼び出す前に[CBasePane::DockPane](#dockpane)または[CBasePane::FloatPane のいずれかを](#floatpane)呼び出します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CPane](../../mfc/reference/cbasepane-class.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)

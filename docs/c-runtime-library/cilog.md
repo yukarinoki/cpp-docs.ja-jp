@@ -1,8 +1,9 @@
 ---
 title: _CIlog
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog
+- _o__CIlog
 api_location:
 - msvcr90.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 629a1aa5e6406be896ccac079d61bd39b2fbd7a5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349589"
 ---
 # <a name="_cilog"></a>_CIlog
 
@@ -45,6 +47,8 @@ void __cdecl _CIlog();
 このバージョンの `log` 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
 
 結果の値は、スタックのトップにプッシュされます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 

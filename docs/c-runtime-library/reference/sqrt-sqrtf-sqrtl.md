@@ -1,10 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355583"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -67,18 +69,20 @@ long double sqrtl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 負でない浮動小数点値
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**long** **double**型。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なため **、float**型または**長い****ダブル**型を使用する**sqrt**のオーバーロードを呼び出すことができます。 C プログラムでは **、sqrt**は常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-**Sqrt**関数は*x*の平方根を返します。 既定では、 *x*が負の場合、 **sqrt**は無限の NaN を返します。
+**sqrt**関数は*x*の平方根を返します。 デフォルトでは *、x*が負の場合 **、sqrt**は無期限 NaN を返します。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
@@ -86,11 +90,11 @@ long double sqrtl(
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**sqrt**、 **sqrtf**、 **sqrtf**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

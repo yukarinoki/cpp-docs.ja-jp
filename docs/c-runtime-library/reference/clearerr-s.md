@@ -1,8 +1,9 @@
 ---
 title: clearerr_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr_s
+- _o_clearerr_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350052"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -47,22 +49,24 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*一連*<br/>
-**ファイル**構造へのポインター
+*ストリーム*<br/>
+**FILE**構造体へのポインター
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0。*Stream*が**NULL**の場合は、 **EINVAL** 。
+成功した場合は 0。*ストリーム*が**NULL**の場合は**EINVAL** 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Clearerr_s**関数は、*ストリーム*のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出されるまでエラー値を返し続けます。
+**clearerr_s**関数は *、stream*のエラーインジケーターとファイル終了インジケーターをリセットします。 エラー インジケータは自動的にクリアされません。指定されたストリームにエラー インジケータが設定されると、そのストリームに対する操作は **、clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻](rewind.md)しが呼び出されるまで、引き続きエラー値を返します。
 
-*Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*stream*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 
@@ -116,7 +120,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Write error: Bad file descriptor

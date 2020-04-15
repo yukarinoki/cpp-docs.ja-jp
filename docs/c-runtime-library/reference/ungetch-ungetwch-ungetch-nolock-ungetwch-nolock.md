@@ -1,11 +1,15 @@
 ---
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
+- _o__ungetch
+- _o__ungetch_nolock
+- _o__ungetwch
+- _o__ungetwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443750"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361319"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -79,18 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 プッシュする文字。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、どちらの関数も文字*c*を返します。 エラーが発生した場合、 **_ungetch**は**EOF**の値を返し、 **_ungetwch**は**WEOF**を返します。
+両方の関数は成功した場合*に文字 c を*返します。 エラーがある場合 **、_ungetch**は**EOF**の値を返し **、_UNGETWCH**は**WEOF**を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) が読み取る次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
+これらの関数は、文字*c*をコンソールに戻し **、_getch**または **_getche** (または **_getwch**または **_getwche)** が読み取る次の文字を*c*にします。 **_ungetch**と **_ungetwch**は、次の読み取り前に複数回呼び出された場合に失敗します。 *c*引数は EOF (**または WEOF)** にすることはできません。 **EOF**
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -99,14 +106,14 @@ wint_t _ungetwch_nolock(
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
+|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -150,7 +157,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

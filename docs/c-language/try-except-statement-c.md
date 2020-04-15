@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152327"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349736"
 ---
 # <a name="try-except-statement-c"></a>try-except ステートメント (C)
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 **try-except** ステートメントは、C 言語に対する Microsoft の拡張機能であり、正常に実行を終了するイベントが発生したときに、アプリケーションがプログラムの制御を取得できるようにします。 このようなイベントは例外と呼ばれ、例外を処理する機構は構造化例外処理と呼ばれます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "56152327"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *expression*  **)**  *compound-statement*
+**__except (**  *式*  **)**  *複合ステートメント*
 
 `__try` 句の後の複合ステートメントは、保護されたセクションです。 `__except` 句の後の複合ステートメントは、例外ハンドラーです。 ハンドラーは、保護されたセクションの実行中に例外が発生した場合に行われる一連の操作を指定します。 次のように実行されます。
 
@@ -48,10 +48,10 @@ ms.locfileid: "56152327"
 `__except` 式は C の式として評価されるため、1 つの値、条件式の演算子、またはコンマ演算子に制限されます。 より広範な処理が必要な場合、前に挙げた 3 つの値の 1 つを返すルーチンを式で呼び出すことができます。
 
 > [!NOTE]
->  構造化例外処理は、C および C++ のソース ファイルに機能します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理メカニズムは、任意の型の例外を処理できるという点で、より柔軟です。
+> 構造化例外処理は、C および C++ のソース ファイルに機能します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理メカニズムは、任意の型の例外を処理できるという点で、より柔軟です。
 
 > [!NOTE]
->  C++ プログラムでは、構造化例外処理ではなく、C++ 例外処理を使用する必要があります。 詳細については、『*C++ 言語リファレンス*』の「[例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
+> C++ プログラムでは、構造化例外処理ではなく、C++ 例外処理を使用する必要があります。 詳細については、『*C++ 言語リファレンス*』の「[例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
 
 アプリケーションの各ルーチンには、それぞれ独自の例外ハンドラーがある場合があります。 `__except` 式は、`__try` 本体のスコープ内で実行されます。 これは、そこで宣言された任意のローカル変数にアクセスできることを意味します。
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 

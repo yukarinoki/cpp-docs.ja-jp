@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cf9a2658807959108b3bb0af672d4c1835b58bc5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425959"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375678"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar クラス
 
@@ -31,26 +31,26 @@ class CDialogBar : public CControlBar
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CDialogBar:: CDialogBar](#cdialogbar)|`CDialogBar` オブジェクトを構築します。|
+|[コントロールバー::Cダイアログバー](#cdialogbar)|`CDialogBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CDialogBar:: Create](#create)|Windows ダイアログバーを作成し、`CDialogBar` オブジェクトにアタッチします。|
+|[コントロールバー::作成](#create)|Windows のダイアログ バーを作成し、オブジェクト`CDialogBar`にアタッチします。|
 
 ## <a name="remarks"></a>解説
 
-ダイアログバーは、ユーザーが tab キーを使用できる標準の Windows コントロールが含まれているのダイアログボックスに似ています。 もう1つの類似性は、ダイアログバーを表すダイアログテンプレートを作成することです。
+ダイアログ バーは、ユーザーがタブで移動できる標準の Windows コントロールが含まれるという、ダイアログ ボックスに似ています。 もう 1 つの類似点は、ダイアログ バーを表すダイアログ テンプレートを作成することです。
 
-ダイアログバーの作成と使用は、`CFormView` オブジェクトの作成と使用に似ています。 最初に、[ダイアログエディター](../../windows/dialog-editor.md)を使用して、スタイル WS_CHILD で他のスタイルを指定せずにダイアログテンプレートを定義します。 テンプレートにスタイル WS_VISIBLE を指定することはできません。 アプリケーションコードで、コンストラクターを呼び出して `CDialogBar` オブジェクトを作成し、`Create` を呼び出してダイアログバーウィンドウを作成し `CDialogBar` オブジェクトにアタッチします。
+ダイアログ バーの作成と使用は、`CFormView`オブジェクトの作成と使用に似ています。 まず、ダイアログ[エディター](../../windows/dialog-editor.md)を使用して、スタイルWS_CHILDを持ち、他のスタイルを使用しないダイアログ テンプレートを定義します。 テンプレートには、スタイル WS_VISIBLEを設定できません。 アプリケーション コードで、コンストラクターを呼び出して`CDialogBar`オブジェクトを構築し`Create`、ダイアログ バー ウィンドウを作成して`CDialogBar`オブジェクトにアタッチします。
 
-`CDialogBar`の詳細については、「[ダイアログバー](../../mfc/dialog-bars.md) 」と「[テクニカルノート 31](../../mfc/tn031-control-bars.md)のコントロールバー」を参照してください。
+の詳細については、[ダイアログ バー](../../mfc/dialog-bars.md)およびテクニカル[ノート 31](../../mfc/tn031-control-bars.md)のコントロール バーを参照してください。 `CDialogBar`
 
 > [!NOTE]
->  現在のリリースでは、`CDialogBar` オブジェクトは Windows フォームコントロールをホストできません。 ビジュアルC++の Windows フォームコントロールの詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
+> 現在のリリースでは、オブジェクト`CDialogBar`は Windows フォーム コントロールをホストできません。 Visual C++ での Windows フォーム コントロールの詳細については[、「MFC での Windows フォーム ユーザー コントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,9 +58,9 @@ class CDialogBar : public CControlBar
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[から派生しているのではない](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[コントロールバー](../../mfc/reference/ccontrolbar-class.md)
 
 `CDialogBar`
 
@@ -68,7 +68,7 @@ class CDialogBar : public CControlBar
 
 **ヘッダー:** afxext.h
 
-##  <a name="cdialogbar"></a>CDialogBar:: CDialogBar
+## <a name="cdialogbarcdialogbar"></a><a name="cdialogbar"></a>コントロールバー::Cダイアログバー
 
 `CDialogBar` オブジェクトを構築します。
 
@@ -76,9 +76,9 @@ class CDialogBar : public CControlBar
 CDialogBar();
 ```
 
-##  <a name="create"></a>CDialogBar:: Create
+## <a name="cdialogbarcreate"></a><a name="create"></a>コントロールバー::作成
 
-`lpszTemplateName` または `nIDTemplate`で指定されたダイアログボックスリソーステンプレートを読み込み、ダイアログバーウィンドウを作成し、そのスタイルを設定して、`CDialogBar` オブジェクトに関連付けます。
+で`lpszTemplateName`指定されたダイアログ ボックス リソース テンプレート`nIDTemplate`を読み込み、ダイアログ バー ウィンドウを作成し、スタイルを設定`CDialogBar`して、オブジェクトに関連付けます。
 
 ```
 virtual BOOL Create(
@@ -97,37 +97,37 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-親 `CWnd` オブジェクトへのポインター。
+親`CWnd`オブジェクトへのポインター。
 
-*lpszTemplateName*<br/>
-`CDialogBar` オブジェクトのダイアログボックスリソーステンプレートの名前へのポインター。
+*テンプレート名*<br/>
+`CDialogBar`オブジェクトのダイアログ ボックス リソース テンプレートの名前へのポインター。
 
 *nStyle*<br/>
-ツールバーのスタイル。 サポートされている追加のツールバースタイルは次のとおりです。
+ツール バーのスタイル。 サポートされる追加のツールバー スタイルは次のとおりです。
 
-- CBRS_TOP コントロールバーは、フレームウィンドウの上部に表示されます。
+- CBRS_TOP コントロール バーは、フレーム ウィンドウの上部にあります。
 
-- CBRS_BOTTOM コントロールバーは、フレームウィンドウの下部に表示されます。
+- CBRS_BOTTOMコントロール バーは、フレーム ウィンドウの下部にあります。
 
-- 親のサイズを変更しても、コントロールバー CBRS_NOALIGN は再配置されません。
+- CBRS_NOALIGNコントロールバーは、親のサイズを変更しても再配置されません。
 
-- CBRS_TOOLTIPS コントロールバーには、ツールヒントが表示されます。
+- CBRS_TOOLTIPSコントロールバーにツールヒントが表示されます。
 
-- CBRS_SIZE_DYNAMIC コントロールバーは動的です。
+- CBRS_SIZE_DYNAMICコントロールバーは動的です。
 
-- CBRS_SIZE_FIXED コントロールバーは固定されています。
+- CBRS_SIZE_FIXEDコントロールバーが固定されています。
 
-- CBRS_FLOATING コントロールバーはフローティングです。
+- CBRS_FLOATINGコントロールバーが浮いている。
 
-- CBRS_FLYBY ステータスバーには、ボタンに関する情報が表示されます。
+- CBRS_FLYBYステータス バーには、ボタンに関する情報が表示されます。
 
-- CBRS_HIDE_INPLACE コントロールバーがユーザーに表示されません。
+- CBRS_HIDE_INPLACEコントロールバーはユーザーに表示されません。
 
 *nID*<br/>
-ダイアログバーのコントロール ID。
+ダイアログ バーのコントロール ID。
 
-*nIDTemplate*<br/>
-`CDialogBar` オブジェクトのダイアログボックステンプレートのリソース ID。
+*テンプレート*<br/>
+オブジェクトの`CDialogBar`ダイアログ ボックス テンプレートのリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -135,16 +135,16 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>解説
 
-CBRS_TOP または CBRS_BOTTOM の配置スタイルを指定した場合、ダイアログバーの幅はフレームウィンドウの幅、高さは*nIDTemplate*で指定されたリソースの高さになります。 CBRS_LEFT または CBRS_RIGHT の配置スタイルを指定した場合、ダイアログバーの高さはフレームウィンドウの高さ、 *nIDTemplate*で指定されたリソースの幅になります。
+CBRS_TOPまたはCBRS_BOTTOMの配置スタイルを指定した場合、ダイアログ バーの幅はフレーム ウィンドウの幅で、高さは*nIDTemplate*で指定されたリソースの幅になります。 CBRS_LEFTまたはCBRS_RIGHTの配置スタイルを指定した場合、ダイアログ バーの高さはフレーム ウィンドウの高さであり、その幅は*nIDTemplate*で指定されたリソースの高さになります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[MFC のサンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CFormView クラス](../../mfc/reference/cformview-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+[MFC サンプル CTRL バー](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラスを表示します。](../../mfc/reference/cformview-class.md)<br/>
+[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)

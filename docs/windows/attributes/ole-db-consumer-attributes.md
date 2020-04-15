@@ -1,5 +1,5 @@
 ---
-title: OLE DB のコンシューマー属性C++ (COM)
+title: OLE DB コンシューマ属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], database
@@ -9,25 +9,26 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 67f58d6dd32360248c6437f66fa7042871bc4ea6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9147d80e87e23a754043a29eb3d15570e85aec0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214703"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377105"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB コンシューマー属性
-OLE DB コンシューマー属性は、 [OLE DB コンシューマーテンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)に基づいてコードを挿入し、テーブルのオープン、コマンドの実行、データへのアクセスなどのタスクを実行する作業 OLE DB コンシューマーを作成します。
 
-|Attribute|説明|
+OLE DB コンシューマー属性は[、OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)に基づいてコードを挿入し、テーブルの開く、コマンドの実行、データへのアクセスなどのタスクを実行する OLE DB コンシューマーを作成します。
+
+|属性|説明|
 |---------------|-----------------|
-|[db_accessor](db-accessor.md)|行セット内の列をバインドし、対応するアクセサーマップにバインドします。|
-|[db_column](db-column.md)|指定された列を行セットにバインドします。|
+|[db_accessor](db-accessor.md)|行セット内の列をバインドし、対応するアクセサー マップにバインドします。|
+|[db_column](db-column.md)|指定した列を行セットにバインドします。|
 |[db_command](db-command.md)|OLE DB コマンドを実行します。|
-|[db_param](db-param.md)|指定されたメンバー変数を入力パラメーターまたは出力パラメーターに関連付けます。|
-|[db_source](db-source.md)|プロバイダーを介してデータソースへの接続を作成し、カプセル化します。|
-|[db_table](db-table.md)|OLE DB テーブルを開きます。|
+|[db_param](db-param.md)|指定したメンバー変数を入力パラメーターまたは出力パラメーターに関連付けます。|
+|[db_source](db-source.md)|プロバイダーを介してデータ ソースへの接続を作成およびカプセル化します。|
+|[Db_table](db-table.md)|OLE DB テーブルを開きます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[グループ別の属性](attributes-by-group.md)
+[グループ別属性](attributes-by-group.md)

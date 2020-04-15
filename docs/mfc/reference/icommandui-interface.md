@@ -1,5 +1,5 @@
 ---
-title: ICommandUI インターフェイス
+title: IコマンドUIインターフェイス
 ms.date: 09/07/2019
 f1_keywords:
 - ICommandUI
@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 335deefc04a80f47151c5d5e71486e30f9918abd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356628"
 ---
-# <a name="icommandui-interface"></a>ICommandUI インターフェイス
+# <a name="icommandui-interface"></a>IコマンドUIインターフェイス
 
-ユーザーインターフェイスコマンドを管理します。
+ユーザー インターフェイス コマンドを管理します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,119 +35,120 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[icommandui__Check](#check)|このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。|
-|[ICommandUI::ContinueRouting](#continuerouting)|は、現在のメッセージのルーティングをハンドラーのチェーンの下位にルーティングするようにコマンドルーティング機構に指示します。|
-|[ICommandUI:: Enabled](#enabled)|このコマンドのユーザーインターフェイス項目を有効または無効にします。|
-|[ICommandUI:: ID](#id)|`ICommandUI` オブジェクトによって表されるユーザーインターフェイスオブジェクトの ID を取得します。|
-|[ICommandUI:: Index](#index)|`ICommandUI` オブジェクトによって表されるユーザーインターフェイスオブジェクトのインデックスを取得します。|
-|[ICommandUI:: Radio](#radio)|このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。|
-|[ICommandUI:: Text](#text)|このコマンドのユーザーインターフェイス項目のテキストを設定します。|
+|[icommandui__Check](#check)|このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。|
+|[IコマンドUI::ルーティングを続行](#continuerouting)|現在のメッセージをハンドラーのチェーンにルーティングし続けるコマンド ルーティング メカニズムを指示します。|
+|[IコマンドUI::有効](#enabled)|このコマンドのユーザー インターフェイス項目を有効または無効にします。|
+|[Iコマンドイイ::ID](#id)|オブジェクトによって表されるユーザー インターフェイス オブジェクトの`ICommandUI`ID を取得します。|
+|[IコマンドUI::インデックス](#index)|オブジェクトによって表されるユーザー インターフェイス オブジェクトのインデックス`ICommandUI`を取得します。|
+|[Iコマンドイ::ラジオ](#radio)|このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。|
+|[IコマンドUI::テキスト](#text)|このコマンドのユーザー インターフェイスアイテムのテキストを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このインターフェイスは、ユーザーインターフェイスコマンドを管理するメソッドとプロパティを提供します。 `ICommandUI` は、.NET コンポーネントと相互運用する MFC アプリケーションで `ICommandUI` が使用される点を除いて、 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)に似ています。
+このインターフェイスには、ユーザー インターフェイス コマンドを管理するメソッドとプロパティが用意されています。 `ICommandUI`は、.NET コンポーネントと相互運用する`ICommandUI`MFC アプリケーションで使用される点を除き[、CCmdUI クラス](../../mfc/reference/ccmdui-class.md)に似ています。
 
-`ICommandUI` は、 [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)派生クラスの ON_UPDATE_COMMAND_UI ハンドラー内で使用されます。 アプリケーションのユーザーがメニューをアクティブ化 (選択またはクリック) すると、各メニュー項目が [有効] または [無効] と表示されます。 各メニューコマンドのターゲットは、ON_UPDATE_COMMAND_UI ハンドラーを実装することによってこの情報を提供します。 アプリケーション内のコマンドユーザーインターフェイスオブジェクトごとに、[クラスウィザード](mfc-class-wizard.md)を使用して、各ハンドラーのメッセージマップエントリと関数プロトタイプを作成します。
+`ICommandUI`は[、ICommandTarget](../../mfc/reference/icommandtarget-interface.md)派生クラスのON_UPDATE_COMMAND_UI ハンドラー内で使用されます。 アプリケーションのユーザーがメニューをアクティブ (選択またはクリック) すると、各メニュー項目は有効または無効として表示されます。 各メニュー コマンドのターゲットは、ON_UPDATE_COMMAND_UI ハンドラーを実装することによって、この情報を提供します。 アプリケーション内のコマンド ユーザー インターフェイス オブジェクトごとに、クラス[ウィザード](mfc-class-wizard.md)を使用して、各ハンドラーのメッセージ マップ エントリと関数プロトタイプを作成します。
 
-コマンドルーティングでの `ICommandUI` インターフェイスの使用方法の詳細については、「[方法: Windows フォームコントロールにコマンドルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)」を参照してください。
+コマンド ルーティングでのインターフェイス`ICommandUI`の使用方法の詳細については、「方法[: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)」を参照してください。
 
-Windows フォームの使用方法の詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
+Windows フォームの使用方法の詳細については、「 [MFC での Windows フォーム ユーザー コントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
-MFC でのユーザーインターフェイスコマンドの管理方法の詳細については、「 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)」を参照してください。
+MFC でユーザー インターフェイス コマンドを管理する方法の詳細については、「 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)」を参照してください。
 
-## <a name="check"></a>ICommandUI:: Check
+## <a name="icommanduicheck"></a><a name="check"></a>IコマンドUI::チェック
 
-このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。
+このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。
 
 ```
 property UICheckState Check;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。 Check を次の値に設定します。
-- 0をオフにする
-- 1チェック
-- 2設定不確定
+このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。 [チェック] を次の値に設定します。
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting
+- 0 チェックを外す
+- 1 チェック
+- 2 不確定の設定
 
-は、現在のメッセージのルーティングをハンドラーのチェーンの下位方向にルーティングするようにコマンドルーティング機構に指示します。
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>IコマンドUI::ルーティングを続行
+
+現在のメッセージをハンドラーのチェーンにルーティングし続けるコマンド ルーティング メカニズムを指示します。
 
 ```
 void ContinueRouting();
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-これは、FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要がある高度なメンバー関数です。 詳細については、「テクニカルノートテクニカルノート 6: メッセージマップ」を参照してください。
+これは、FALSE を返すON_COMMAND_EX ハンドラーと共に使用する高度なメンバー関数です。 詳細については、テクニカル ノート TN006: メッセージ マップを参照してください。
 
-## <a name="enabled"></a>ICommandUI:: Enabled
+## <a name="icommanduienabled"></a><a name="enabled"></a>IコマンドUI::有効
 
-このコマンドのユーザーインターフェイス項目を有効または無効にします。
+このコマンドのユーザー インターフェイス項目を有効または無効にします。
 
 ```
 property bool Enabled;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、このコマンドのユーザーインターフェイス項目を有効または無効にします。 項目を有効にする場合は TRUE に、無効にする場合は FALSE に設定します。
+このプロパティは、このコマンドのユーザー インターフェイス項目を有効または無効にします。 項目を無効にするには、有効に設定して TRUE を、FALSE に設定します。
 
-## <a name="id"></a>ICommandUI:: ID
+## <a name="icommanduiid"></a><a name="id"></a>Iコマンドイイ::ID
 
-ICommandUI オブジェクトによって表されるユーザーインターフェイスオブジェクトの ID を取得します。
+ICommandUI オブジェクトによって表されるユーザー インターフェイス オブジェクトの ID を取得します。
 
 ```
 property unsigned int ID;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、メニュー項目、ツールバーボタン、または ICommandUI オブジェクトによって表されるその他のユーザーインターフェイスオブジェクトの ID (ハンドル) を取得します。
+このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表されるその他のユーザー インターフェイス オブジェクトの ID (ハンドル) を取得します。
 
-## <a name="index"></a>ICommandUI:: Index
+## <a name="icommanduiindex"></a><a name="index"></a>IコマンドUI::インデックス
 
-ICommandUI オブジェクトによって表されるユーザーインターフェイスオブジェクトのインデックスを取得します。
+ICommandUI オブジェクトによって表されるユーザー インターフェイス オブジェクトのインデックスを取得します。
 
 ```
 property unsigned int Index;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、メニュー項目、ツールバーボタン、または ICommandUI オブジェクトによって表されるその他のユーザーインターフェイスオブジェクトのインデックス (ハンドル) を取得します。
+このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表される他のユーザー インターフェイス オブジェクトのインデックス (ハンドル) を取得します。
 
-## <a name="radio"></a>ICommandUI:: Radio
+## <a name="icommanduiradio"></a><a name="radio"></a>Iコマンドイ::ラジオ
 
-このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。
+このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。
 
 ```
 property bool Radio;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、このコマンドのユーザーインターフェイス項目を適切なチェック状態に設定します。 項目を有効にするには、[ラジオ] を [TRUE] に設定します。それ以外の場合は FALSE。
+このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェック状態に設定します。 ラジオを TRUE に設定すると、アイテムが有効になります。それ以外の場合は FALSE。
 
-## <a name="text"></a>ICommandUI:: Text
+## <a name="icommanduitext"></a><a name="text"></a>IコマンドUI::テキスト
 
-このコマンドのユーザーインターフェイス項目のテキストを設定します。
+このコマンドのユーザー インターフェイスアイテムのテキストを設定します。
 
 ```
 property String^ Text;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このプロパティは、このコマンドのユーザーインターフェイス項目のテキストを設定します。 テキストをテキスト文字列ハンドルに設定します。
+このプロパティは、このコマンドのユーザー インターフェイスアイテムのテキストを設定します。 テキストをテキスト文字列ハンドルに設定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxwinforms (アセンブリに定義されています) (アセンブリに定義されています。
+**ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)

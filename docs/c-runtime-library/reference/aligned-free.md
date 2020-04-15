@@ -1,8 +1,9 @@
 ---
 title: _aligned_free
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_free
+- _o__aligned_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 0fa28be550050a7eec2a515cfb47d98fb26591d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6e5f0dcd0bbea436ecdad7abb1fd6fc948f80dc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170970"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350714"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -52,13 +54,15 @@ void _aligned_free (
 
 ## <a name="remarks"></a>解説
 
-**_aligned_free**は `__declspec(noalias)`としてマークされています。つまり、関数はグローバル変数を変更しないことが保証されています。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
+**_aligned_free**はマーク`__declspec(noalias)`が付けられますが、関数はグローバル変数を変更しないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
-この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 *Memblock*が NULL ポインターの場合、この関数は単にアクションを実行しません。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
+この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 *memblock*が NULL ポインターの場合、この関数は単に何のアクションも実行しません。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_free**|\<malloc.h>|
 
@@ -66,6 +70,6 @@ void _aligned_free (
 
 詳細については、「[_aligned_malloc](aligned-malloc.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[データの整列](../../c-runtime-library/data-alignment.md)
+[データの配置](../../c-runtime-library/data-alignment.md)

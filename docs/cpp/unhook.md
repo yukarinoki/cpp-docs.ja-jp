@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: 2a259b80b941e37e0c3040ad55894c114fe4bc82
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 221ffc30a9b8a40c44f8009dfa511b72aa160e01
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160529"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337561"
 ---
 # <a name="__unhook"></a>__unhook
 
@@ -39,68 +39,68 @@ long  __unhook(
 
 #### <a name="parameters"></a>パラメーター
 
-**&** *Sourceclass* `::` *eventmethod*は、イベントハンドラーメソッドをアンフックするイベントメソッドへのポインターです。
+**&** イベント ハンドラー*メソッド*をアンフックするイベント メソッドへのポインター。 *SourceClass* `::`
 
-- ネイティブC++イベント:*Sourceclass*はイベントソースクラスであり、 *eventmethod*はイベントです。
+- ネイティブ C++ イベント: *SourceClass*はイベント ソース クラスであり、*イベント メソッド*はイベントです。
 
-- COM イベント:*Sourceclass*はイベントソースインターフェイスであり、 *eventmethod*はそのメソッドの1つです。
+- COM イベント: *SourceClass*はイベント ソース インターフェイスであり、*イベント メソッド*はそのメソッドの 1 つです。
 
-- マネージイベント:*Sourceclass*はイベントソースクラスであり、 *eventmethod*はイベントです。
+- マネージ イベント: *SourceClass*はイベント ソース クラスで、*イベント メソッド*はイベントです。
 
 *interface*<br/>
-[Event_receiver](../windows/attributes/event-receiver.md)属性の*layout_dependent*パラメーターが**true**である COM イベントレシーバーに対してのみ、*受信側*からアンフックされるインターフェイス名。
+event_receiver[属性の](../windows/attributes/event-receiver.md)*layout_dependent*パラメータが**true**である COM イベント レシーバーの場合のみ *、receiver*からフック解除されるインターフェイス名。
 
-*source*<br/>
-イベント ソースのインスタンスへのポインター。 `event_receiver`に指定されているコード `type` に応じて、 *source*には次のいずれかを指定できます。
+*ソース*<br/>
+イベント ソースのインスタンスへのポインター。 で`event_receiver`指定したコード`type`に応じて *、source*は次のいずれかになります。
 
 - ネイティブ イベント ソース オブジェクト ポインター。
 
-- `IUnknown`ベースのポインター (COM ソース)。
+- ベース`IUnknown`ポインタ (COM ソース)。
 
 - マネージド オブジェクトのポインター (マネージド イベントの場合)。
 
-**&** *receiverclass* `::`&、イベントからアンフックされるイベントハンドラーメソッドへのポインターを `HandlerMethod` します。 ハンドラーは、クラスのメソッドまたは同じに対する参照として指定されています。クラス名を指定しない場合、 **__unhook**は、クラスが呼び出されることを前提とします。
+**&** イベントからフック解除されるイベント ハンドラー メソッドへの*ReceiverClass* `::` `HandlerMethod` A ポインター。 ハンドラーは、クラスのメソッドまたは同じメソッドへの参照として指定されます。クラス名を指定しない場合 **、__unhook**はクラスが呼び出されるクラスであると見なします。
 
-- ネイティブC++イベント:*Receiverclass*はイベントレシーバークラスであり、`HandlerMethod` はハンドラーです。
+- ネイティブ C++ イベント: *ReceiverClass*はイベント`HandlerMethod`レシーバー クラスであり、ハンドラーです。
 
-- COM イベント:*Receiverclass*はイベントレシーバーインターフェイスであり、`HandlerMethod` はそのハンドラーの1つです。
+- COM イベント: *ReceiverClass*はイベント`HandlerMethod`レシーバー インターフェイスであり、そのハンドラーの 1 つです。
 
-- マネージイベント:*Receiverclass*はイベントレシーバークラスであり、`HandlerMethod` はハンドラーです。
+- マネージ イベント: *ReceiverClass*はイベント`HandlerMethod`レシーバー クラスであり、ハンドラーです。
 
-*レシーバー*(省略可能) イベントレシーバークラスのインスタンスへのポインター。 受信側を指定しない場合、既定値は **__unhook**が呼び出されるレシーバークラスまたは構造体です。
+*receiver*(オプション) イベント レシーバー クラスのインスタンスへのポインター。 レシーバーを指定しない場合、デフォルトは **、__unhook**が呼び出されるレシーバー・クラスまたはレシーバー・ストラクチャーです。
 
-## <a name="usage"></a>使用方法
+## <a name="usage"></a>使用法
 
 イベント レシーバー クラス外の main を含む、任意の関数スコープで使用できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-イベントレシーバーで組み込み **__unhook**関数を使用して、イベントメソッドからのハンドラーメソッドを関連付け解除または "アンフック" します。
+イベント レシーバーの組み込み関数 **__unhook**を使用して、イベント メソッドからハンドラー メソッドの関連付けを解除または "アンフック" します。
 
-**__Unhook**には3つの形式があります。 ほとんどの場合、最初の形式 (引数が 4 つ) を使用できます。 2番目 (引数が2つ) の形式の **__unhook**は、COM イベントレシーバーに対してのみ使用できます。これにより、イベントインターフェイス全体がアンフックされます。 3 番目 (引数が 1 つ) の形式は、指定したソースからすべてのデリゲートをアンフックする場合に使用します。
+**__unhook**には 3 つの形式があります。 ほとんどの場合、最初の形式 (引数が 4 つ) を使用できます。 2 番目の (2 つの引数) 形式の **__unhook**は、COM イベント レシーバーに対してのみ使用できます。これにより、イベント インターフェイス全体がアンフックされます。 3 番目 (引数が 1 つ) の形式は、指定したソースからすべてのデリゲートをアンフックする場合に使用します。
 
 ゼロ以外の戻り値は、エラーが発生したことを示します (マネージド イベントは例外をスローします)。
 
-まだフックされていないイベントおよびイベントハンドラーに対して **__unhook**を呼び出すと、無効になります。
+__unhook**をフックされていない**イベントおよびイベント ハンドラーで呼び出しても、そのイベント ハンドラーは無効になります。
 
 コンパイル時に、コンパイラはイベントが存在することを確認し、指定されたハンドラーを使用してパラメーターの型チェックを実行します。
 
-COM イベントを除き、 **__hook**と **__unhook**は、イベントレシーバーの外部で呼び出すことができます。
+COM イベントを除き **、__hook**と **__unhook**はイベント レシーバーの外部で呼び出すことができます。
 
-**__Unhook**を使用する代わりに、-= 演算子を使用することもできます。
+**__unhook**を使用する代わりに、-= 演算子を使用する方法があります。
 
-新しい構文でのマネージイベントのコーディングの詳細については、「 [event](../extensions/event-cpp-component-extensions.md)」を参照してください。
+新しい構文でのマネージ イベントのコーディングについては、「[イベント](../extensions/event-cpp-component-extensions.md)」を参照してください。
 
 > [!NOTE]
->  テンプレート クラスまたは構造体にイベントを含めることはできません。
+> テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="example"></a>例
 
-サンプルについては、「 [COM で](../cpp/event-handling-in-com.md)のネイティブ[ C++ ](../cpp/event-handling-in-native-cpp.md)およびイベント処理のイベント処理」を参照してください。
+サンプルについては、「[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)」および[「COM でのイベント処理](../cpp/event-handling-in-com.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>
 [event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>

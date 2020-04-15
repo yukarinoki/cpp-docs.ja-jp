@@ -4,26 +4,26 @@ description: Visual Studio の C++ コード エディターを使用して、�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 070c79e02f6e05adeda5f17a0dde02afdf22703b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077847"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353741"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Visual Studio での C++ コードの編集とリファクター
 
 Visual Studio には、コードの作成、編集、リファクターに役立つ複数のツールが用意されています。
 
-##  <a name="intellisense"></a>IntelliSense
+## <a name="intellisense"></a>IntelliSense
 
 IntelliSense は、入力時にシンボルとコード スニペットの候補を示す強力なコード補完ツールです。 Visual Studio では C++ IntelliSense はリアルタイムで実行され、コードベースの更新時に分析を行い、レコメンデーションを提供します。 文字を多く入力するほど、推奨される結果のリストが絞り込まれます。
 
 ![C&#43;&#43; のメンバー リスト ドロップダウン](../ide/media/cpp-statement-completion.png)
 
-シンボルの中には、結果を絞り込むために自動的に省略されるものもあります。 たとえば、クラスの外部からクラスオブジェクトのメンバーにアクセスする場合、既定でプライベートメンバーまたはプロテクトメンバー (子クラスのコンテキスト内にない場合) を表示することはできません。 下部にあるボタンを使用してフィルター処理を調整することができます。
+シンボルの中には、結果を絞り込むために自動的に省略されるものもあります。 たとえば、クラスの外部からクラス オブジェクトのメンバーにアクセスする場合、プライベート メンバーやプロテクト メンバー (子クラスのコンテキストでない場合) は、既定では表示できません。 下部にあるボタンを使用してフィルター処理を調整することができます。
 
-ドロップダウンリストからシンボルを選択すると、 **Tab キー**、 **Enter キー**、またはその他のコミット文字 (既定では `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`) を使用して、オートコンプリートを実行できます。 このリストから文字を追加または削除するには、**クイック起動** (Ctrl + Q) で "IntelliSense" を検索し、 **[テキスト エディター] > [C/C++] > [詳細設定]** オプションを選択します。 **[メンバー一覧のコミット文字]** オプションを使用すると、好きなように変更してリストをカスタマイズすることができます。
+ドロップダウン リストからシンボルを選択した後 **、Tab** **、Enter**、またはその他のコミット文字 (既定では、 `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`) を使用して、シンボルをオートコンプリートできます。 このリストから文字を追加または削除するには、**クイック起動** (Ctrl + Q) で "IntelliSense" を検索し、**[テキスト エディター] > [C/C++] > [詳細設定]** オプションを選択します。 **[メンバー一覧のコミット文字]** オプションを使用すると、好きなように変更してリストをカスタマイズすることができます。
 
 **[メンバー一覧のフィルター モード]** オプションは、表示される IntelliSense オートコンプリートの候補の種類を制御します。 既定では **[あいまい]** に設定されています。 あいまい検索では、*MyAwesomeClass* と呼ばれるシンボルがある場合、「MAC」と入力して、オートコンプリートの候補の中からクラスを検索できます。 あいまいアルゴリズムにより、リストに表示するシンボルが満たす必要がある最小しきい値が設定されます。 **スマート** フィルター処理では、入力内容に一致する部分文字列を含むすべてのシンボルが表示されます。 **プレフィックス** フィルター処理では、入力内容で始まる文字列が検索されます。
 
@@ -35,11 +35,11 @@ IntelliCode は、AI 支援 IntelliSense です。 入力候補一覧の先頭�
 
 C++ を記述するときに、IntelliCode は C++ 標準ライブラリのような一般的なライブラリの使用に際して支援を行います。 コードのコンテキストは、最初に最も役に立つレコメンデーションを提供するために使用されます。 次の例では、`size` メンバー関数は `sort` 関数とよく併用されるため、結果リストの先頭に提示されます。
 
-![C&#43; &#43; IntelliCode](../ide/media/intellicode-cpp.png "C++IntelliCode")
+![C&#43;&#43; インテリコード](../ide/media/intellicode-cpp.png "C++ インテリコード")
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 では、IntelliCode は省略可能なコンポーネントとして **C++ によるデスクトップ開発**ワークロードで使用できます。 IntelliCode を C++ に対してアクティブにするには、 **[ツール]**  >  **[オプション]**  >  **[IntelliCode]**  >  **[全般]** の順に移動して、 **[C++ 基本モデル]** を **[有効]** に設定します。
+Visual Studio 2019 では、IntelliCode は省略可能なコンポーネントとして **C++ によるデスクトップ開発**ワークロードで使用できます。 IntelliCode が C++ でアクティブであることを確認するには、[**ツール** > オプション**IntelliCode** > **General]** > に移動し **、[C++ ベース モデル**] を **[有効]** に設定します。**General**
 
 ::: moniker-end
 
@@ -51,11 +51,11 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 ## <a name="predictive-intellisense-experimental"></a>予測 IntelliSense (試験段階)
 
-**予測 IntelliSense** は、コンテキストの認識を使用して IntelliSense ドロップダウン リストに表示される結果の数を制限する試験段階の機能です。 このアルゴリズムは、予測される入力に一致する結果のみが表示されるように、一致する入力に適用されます。 最も簡単なケースでは、「`int x =`」と入力して IntelliSense ドロップダウン リストを呼び出すと、整数または整数を返す関数のみが表示されます。 この機能はまだ開発段階のため、既定でオフになっています。 これはグローバル シンボルで最適に機能します。メンバー関数はまだサポートされていません。 オンにするには、**クイック起動**で「予測」と入力するか、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[試験的]**  >  **[予測 IntelliSense]** の順に移動します。
+**予測 IntelliSense** は、コンテキストの認識を使用して IntelliSense ドロップダウン リストに表示される結果の数を制限する試験段階の機能です。 このアルゴリズムは、予測される入力に一致する結果のみが表示されるように、一致する入力に適用されます。 最も簡単なケースでは、「`int x =`」と入力して IntelliSense ドロップダウン リストを呼び出すと、整数または整数を返す関数のみが表示されます。 この機能はまだ開発段階のため、既定でオフになっています。 これはグローバル シンボルで最適に機能します。メンバー関数はまだサポートされていません。 オンにするには、**クイック起動**で「予測」と入力するか、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C/C++]** > **[試験的]** > **[予測 IntelliSense]** の順に移動します。
 
-**予測 IntelliSense**をオーバーライドして長い一覧を表示するには、 **ctrl + J**キーを押します。**予測 IntelliSense**がオンになっている場合は、 **Ctrl + J**を呼び出すと予測フィルターが削除されます。 **Ctrl + J** をもう一度押すと、該当するメンバー一覧の結果からアクセシビリティ フィルターが削除されます。 IntelliSense のドロップダウンリストの下にある ([+]) ボタンは、 **Ctrl + J**と同じように動作します。ボタンをポイントすると、表示されている内容に関するヒント情報が表示されます。
+予測**IntelliSense**をオーバーライドして長いリストを表示するには **、Ctrl + J**キーを押します。**予測 IntelliSense**がオンの場合 **、Ctrl + J**を呼び出すと予測フィルターが削除されます。 **Ctrl + J** をもう一度押すと、該当するメンバー一覧の結果からアクセシビリティ フィルターが削除されます。 IntelliSense ドロップダウン リストの下にある [[+]] ボタンは **、Ctrl + J と**同じことを行います。ボタンにカーソルを合わせると、表示されている内容に関するツールヒント情報が表示されます。
 
-![C&#43; &#43;予測 IntelliSense](../ide/media/predictive-intellisense-cpp.png "予測 IntelliSense")
+![C&#43;&#43; 予測インテリセンス](../ide/media/predictive-intellisense-cpp.png "予測インテリセンス")
 
 上のスクリーンショットには、ドロップダウン リストの下にいくつかのボタンが表示されています。 これらは、さまざまな種類の結果に対して IntelliSense フィルターを有効にします。
 
@@ -63,7 +63,7 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 - 関数
 - 型
 - マクロ
-- 列挙型
+- 列挙体
 - 名前空間
 
 ボタンは、現在の IntelliSense セッションに関連がある場合にのみ表示されます。 通常は同時にすべてのボタンは表示されません。
@@ -72,25 +72,25 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 キャレットがテンプレート定義内にある場合は、**テンプレート バー**が表示され、ここで IntelliSense 用のサンプル テンプレート引数を指定できます。
 
-![C&#43; &#43;テンプレート IntelliSense による既存のインスタンス化の表示](../ide/media/template-intellisense-cpp-1.png "テンプレート IntelliSense で既存のインスタンス化を表示する")
+![C&#43;&#43; テンプレート IntelliSense は既存のインスタンス化を表示します。](../ide/media/template-intellisense-cpp-1.png "テンプレート IntelliSense は既存のインスタンス化を表示します")
 
-**\<t >** アイコンをクリックして、**テンプレートバー**を展開/折りたたみます。 **[編集]** ウィンドウを開くには、鉛筆アイコンをクリックするか、**テンプレート バー**をダブルクリックします。
+[T]>アイコンをクリックして **、テンプレート バー**を展開/折りたたみします。 ** \<** **[編集]** ウィンドウを開くには、鉛筆アイコンをクリックするか、**テンプレート バー**をダブルクリックします。
 
-![C&#43; &#43;テンプレートの IntelliSense](../ide/media/template-intellisense-cpp-3.png "テンプレート IntelliSense")
+![C&#43;&#43; テンプレート インテリセンス](../ide/media/template-intellisense-cpp-3.png "テンプレート IntelliSense")
 
 ウィンドウで行った編集は、効果をリアルタイムで確認できるように、ソース コードに直接適用されます。
 
 テンプレート バーは、コードでのインスタンス化に基づいて候補を自動設定します。 **[既存のインスタンス化をすべて追加する]** をクリックして、コード ベース全体でテンプレートのインスタンス化に使用されているすべての具体的な引数のリストを表示します。
 
-![C&#43; &#43;テンプレートの IntelliSense の結果一覧](../ide/media/template-intellisense-cpp-2.png "テンプレートの IntelliSense の結果一覧")
+![C&#43;&#43; テンプレート IntelliSense 結果リスト](../ide/media/template-intellisense-cpp-2.png "テンプレートインテリセンス結果リスト")
 
 エディターの下部にあるウィンドウには、各インスタンスが検出された場所とその引数が何であったかが表示されます。
 
-![C&#43; &#43;テンプレート IntelliSense のインスタンス化マップ](../ide/media/template-intellisense-cpp-4.png "テンプレートの IntelliSense のインスタンス化マップ")
+![C&#43;&#43; テンプレート IntelliSense インスタンス化マップ](../ide/media/template-intellisense-cpp-4.png "テンプレート IntelliSense インスタンス化マップ")
 
 **テンプレート バー**情報は、ユーザー固有として扱われます。 これは .vs フォルダーに格納され、ソース管理にはコミットされません。
 
-##  <a name="error-squiggles-and-quick-fixes"></a>エラーの波線とクイック修正
+## <a name="error-squiggles-and-quick-fixes"></a>エラーの波線とクイック修正
 
 エディターでコードの問題が検出されると、問題の下に色付きの波線が追加されます。 赤い波線はコードがコンパイルされないことを示します。 緑の波線は、重大な影響を及ぼす可能性があるその他の問題の種類を示します。 **[エラー一覧]** ウィンドウを開いて問題に関する詳細情報を得ることができます。
 
@@ -98,33 +98,33 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 次の例では、`vector` が宣言されましたが、定義が見つからなかったため、エディターによって含める必要があるヘッダー ファイルが提供されます。
 
-![C&#43; &#43;のクイック修正](../ide/media/quick-fix-for-header-cpp.png "C++クイック修正")
+![C&#43;&#43; クイックフィックス](../ide/media/quick-fix-for-header-cpp.png "C++ クイックフィックス")
 
 エディターでは、いくつかのリファクタリングの機会のためのクイック修正も提供されます。 たとえば、ヘッダー ファイルでクラスを宣言すると、Visual Studio により別の .cpp ファイルでその定義を作成することが提案されます。
 
-![C&#43; &#43;のクイック修正](../ide/media/quick-fix.png "C++クイック修正")
+![C&#43;&#43; クイックフィックス](../ide/media/quick-fix.png "C++ クイックフィックス")
 
 ## <a name="change-tracking"></a>変更の追跡
 
 ファイルに変更を加えると、左側に黄色のバーが表示され、未保存の変更が行われたことが示されます。 ファイルを保存すると、バーが緑色に変わります。 ドキュメントがエディターで開かれている限り、緑色と黄色のバーは保持されます。 これらは、ドキュメントを最後に開いてから加えられた変更を表します。
 
-![C&#43; &#43;変更の追跡](../ide/media/change-tracking-cpp.png "変更の追跡")
+![C&#43;&#43; 変更の追跡](../ide/media/change-tracking-cpp.png "変更の追跡")
 
 ## <a name="move-code"></a>コードの移動
 
 コード行を上下に移動するには、そのコード行を選択し、Alt キーを押しながら、**上方向/下方向**キーを押します。
 
-##  <a name="insert-snippets"></a>スニペットの挿入
+## <a name="insert-snippets"></a>スニペットの挿入
 
-スニペットは、定義済みのソース コードです。 単一のポイント、選択したテキストの上で右クリックすると、スニペットを挿入するか、選択したテキストをスニペットで囲みます。 次の図は、for ループで選択したステートメントを囲む 3 つの手順を示します。 最終的なイメージの黄色のハイライトは、Tab キーでアクセスできる編集可能なフィールドです。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
+スニペットは、定義済みのソース コードです。 単一のポイント、選択したテキストの上で右クリックすると、スニペットを挿入するか、選択したテキストをスニペットで囲みます。 次の図は、for ループで選択したステートメントを囲む 3 つの手順を示します。 最終的なイメージの黄色のハイライトは、Tab キーでアクセスできる編集可能なフィールドです。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
 
-![C&#43; &#43;スニペットの挿入&#45;ドロップダウン](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![C&#43;&#43; スニペットの挿入ドロップダウン&#45;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-##  <a name="add-class"></a>[クラスの追加]
+## <a name="add-class"></a>クラスの追加
 
 **[プロジェクト]** メニューから、または**ソリューション エクスプローラー**のコンテキスト メニューから新しいクラスを追加します。
 
-![C での新しいクラスの追加&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
+![C&#43;&#43;で新しいクラスを追加](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
 クラス ウィザードを使用して、既存のクラスを変更したり、調べたりすることもできます。
 
@@ -132,17 +132,17 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 詳細については、「[コード ウィザードを使用した機能の追加 (C++)](../ide/adding-functionality-with-code-wizards-cpp.md)」を参照してください。
 
-##  <a name="refactoring"></a>リファクタリング
+## <a name="refactoring"></a>Refactoring
 
 クイック操作のコンテキスト メニューから、またはエディターの[電球](/visualstudio/ide/perform-quick-actions-with-light-bulbs)をクリックすることで、リファクタリングが利用できます。  **[編集]、[リファクター]** メニューから利用できるものもあります。  次のような機能が該当します。
 
-* [Rename](refactoring/rename.md)
-* [Extract 関数](refactoring/extract-function.md)
-* [純粋仮想の実装](refactoring/implement-pure-virtuals.md)
-* [宣言/定義の作成](refactoring/create-declaration-definition.md)
-* [Move 関数の定義](refactoring/move-definition-location.md)
-* [未加工の文字列リテラルに変換](refactoring/convert-to-raw-string-literal.md)
-* [署名の変更](refactoring/change-signature.md)
+- [名前の変更](refactoring/rename.md)
+- [Extract 関数](refactoring/extract-function.md)
+- [純粋仮想の実装](refactoring/implement-pure-virtuals.md)
+- [宣言/定義の作成](refactoring/create-declaration-definition.md)
+- [Move 関数の定義](refactoring/move-definition-location.md)
+- [生文字列リテラルに変換](refactoring/convert-to-raw-string-literal.md)
+- [シグネチャの変更](refactoring/change-signature.md)
 
 ## <a name="code-style-enforcement-with-clangformat-and-editorconfig"></a>ClangFormat と EditorConfig を使用したコード スタイルの適用
 
@@ -159,9 +159,9 @@ Visual Studio 2017 以降では、[ClangFormat](https://clang.llvm.org/docs/Clan
 
 ファイルは、ソース管理を通じて簡単に共有できるため、開発チーム全体にコーディング規則を適用することができます。
 
-![C&#43; &#43; clang 形式](../ide/media/clang-format-cpp.png "Clang 形式")
+![C&#43;&#43; クランフォーマット](../ide/media/clang-format-cpp.png "クランフォーマット")
 
-Visual Studio 2017 以降では、同様の方法で機能する [EditorConfig](https://editorconfig.org/) もサポートしています。 ただし、ClangFormat には、C++ 固有のルールなど、EditorConfig よりも多くのスタイル オプションがあります。 **EditorConfig** を使用して、 **.editorconfig** ファイルを作成し、それをご使用のコードベースとは別のフォルダーに配置して、これらのフォルダーとそのサブフォルダーにコード スタイルを指定します。 **.editorconfig** ファイルは、親フォルダー内の他の **.editorconfig** ファイルよりも優先され、 **[ツール]**  >  **[オプション]** から構成されたすべての書式設定を上書きします。 タブと空白、インデントのサイズなどにルールを設定することができます。 詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](/visualstudio/ide/create-portable-custom-editor-options)」を参照してください。
+Visual Studio 2017 以降では、同様の方法で機能する [EditorConfig](https://editorconfig.org/) もサポートしています。 ただし、ClangFormat には、C++ 固有のルールなど、EditorConfig よりも多くのスタイル オプションがあります。 **EditorConfig** を使用して、**.editorconfig** ファイルを作成し、それをご使用のコードベースとは別のフォルダーに配置して、これらのフォルダーとそのサブフォルダーにコード スタイルを指定します。 **.editorconfig** ファイルは、親フォルダー内の他の **.editorconfig** ファイルよりも優先され、**[ツール]** > **[オプション]** から構成されたすべての書式設定を上書きします。 タブと空白、インデントのサイズなどにルールを設定することができます。 詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](/visualstudio/ide/create-portable-custom-editor-options)」を参照してください。
 
 ## <a name="other-formatting-options"></a>その他の書式設定オプション
 
@@ -169,17 +169,17 @@ Visual Studio 2017 以降では、同様の方法で機能する [EditorConfig](
 
 ![Visual Studio のクイック起動](../ide/media/vs2015_cpp_quick_launch.png "クイック起動")
 
-インデント、中かっこの補完、色付けなどの書式設定オプションを設定するには、 **[クイック起動]** ウィンドウに「C++ Formatting」と入力します。
+インデント、中かっこの補完、色付けなどの書式設定オプションを設定するには、**[クイック起動]** ウィンドウに「C++ Formatting」と入力します。
 
 ![C++ 書式設定オプション](media/cpp-formatting-options.png)
 
-他の書式設定オプションは、メイン メニューの **[編集]**  >  **[詳細設定]** で見つかります。
+その他の書式設定オプションは、メインメニューの **[詳細を****編集]** > の下にあります。
 
 ![C++ の高度な編集オプション](media/edit-advanced-cpp.png)
 
-C++ 固有の編集機能の有効化と構成のオプションは、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]** にあります。 設定するオプションを選択した後、ダイアログにフォーカスがあるときに **F1** キーを押すと、詳細なヘルプを表示できます。 コードの一般的な書式設定オプションを確認するには、`Editor C++`[クイック起動] **に「** 」と入力します。
+C++ 固有の編集機能を有効にして構成するためのオプションは、**ツール** > **オプション** > **テキスト エディタ** > **C/C++** にあります。 設定するオプションを選択した後、ダイアログにフォーカスがあるときに **F1** キーを押すと、詳細なヘルプを表示できます。 コードの一般的な書式設定オプションを確認するには、**[クイック起動]** に「`Editor C++`」と入力します。
 
-![Visual Studio Tools の > オプション](../ide/media/tools-options.png "エディター オプション")
+![Visual Studio ツール > オプション](../ide/media/tools-options.png "エディター オプション")
 
 将来のバージョンの Visual Studio に含まれる場合とそうでない場合がある実験用の機能は、[[テキスト エディター]、[C++]、[実験用]](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) ダイアログにあります。 Visual Studio 2017 以降では、このダイアログで**予測 IntelliSense** を有効にすることができます。
 
