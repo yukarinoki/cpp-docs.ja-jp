@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369732"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint クラス
 
@@ -49,48 +49,48 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationPoint::CAnimationPoint](#canimationpoint)|オーバーロードされます。 CAnimationPoint オブジェクトを作成します。|
+|[Cアニメーションポイント::Cアニメーションポイント](#canimationpoint)|オーバーロードされます。 C アニメーション ポイント オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationPoint::AddTransition](#addtransition)|X の遷移を追加します。 座標と Y 座標。|
-|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|既定値を返しますの X 座標と Y 座標。|
-|[CAnimationPoint::GetValue](#getvalue)|現在の値を返します。|
-|[CAnimationPoint::GetX](#getx)|X 座標の CAnimationVariable へのアクセスを提供します。|
-|[CAnimationPoint::GetY](#gety)|CAnimationVariable する Y 座標でのアクセスを提供します。|
-|[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|既定値を設定します。|
+|[Cアニメーションポイント::トランジションの追加](#addtransition)|X 座標と Y 座標の遷移を追加します。|
+|[を取得します。](#getdefaultvalue)|X 座標と Y 座標の既定値を返します。|
+|[次の値を取得します。](#getvalue)|現在の値を返します。|
+|[アニメーションポイント::ゲットエクス](#getx)|X 座標の C アニメーション変数へのアクセスを提供します。|
+|[Cアニメーションポイント::ゲットイ](#gety)|Y 座標の C アニメーション変数へのアクセスを提供します。|
+|[を設定します。](#setdefaultvalue)|既定値を設定します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|カプセル化されたアニメーション変数リストに配置します。 (上書き[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist))。|
+|[アニメーションポイント::アニメーション変数リスト](#getanimationvariablelist)|カプセル化されたアニメーション変数をリストに入れます。 (C[アニメーションベースオブジェクト](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)をオーバーライドします。.|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationPoint::operator CPoint](#operator_cpoint)|CPoint、CAnimationPoint に変換します。|
-|[CAnimationPoint::operator=](#operator_eq)|CAnimationPoint ptSrc に割り当てます。|
+|[Cアニメーションポイント::オペレーターCポイント](#operator_cpoint)|C アニメーションポイントを CPoint に変換します。|
+|[Cアニメーションポイント::オペレーター=](#operator_eq)|c アニメーションポイントに ptSrc を割り当てます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationPoint::m_xValue](#m_xvalue)|カプセル化されたアニメーション変数を表す X アニメーション ポイントの座標。|
-|[CAnimationPoint::m_yValue](#m_yvalue)|アニメーション ポイントの Y 座標を表すアニメーションをカプセル化された変数です。|
+|[アニメーションポイント::m_xValue](#m_xvalue)|アニメーション ポイントの X 座標を表すカプセル化されたアニメーション変数。|
+|[Cアニメーションポイント::m_yValue](#m_yvalue)|アニメーション ポイントの Y 座標を表すカプセル化されたアニメーション変数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-CAnimationPoint クラスは、2 つの CAnimationVariable オブジェクトをカプセル化し、アプリケーションでポイントを表すことができます。 たとえば、このクラスを使用すると、(文字列, 円, ポイントなど) など、画面上のオブジェクトの位置をアニメーション化します。 アプリケーションでこのクラスを使用するだけこのクラスのオブジェクトをインスタンス化、CAnimationController::AddAnimationObject を使用してアニメーション コント ローラーに追加および呼び出しに適用される各遷移の AddTransition X または Y 座標。
+CAnimationPoint クラスは、2 つの CAnimationVariable オブジェクトをカプセル化し、アプリケーション内でポイントを表すことができます。 たとえば、このクラスを使用して、画面上の任意のオブジェクトの位置(テキスト文字列、円、点など)をアニメーション化できます。 アプリケーションでこのクラスを使用するには、このクラスのオブジェクトをインスタンス化し、CAnimationController::AddAnimationObject を使用してアニメーション コントローラに追加し、X 座標および/または Y 座標に適用される各遷移の AddTransition を呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
+[オブジェクト](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationPoint`
 
@@ -98,9 +98,9 @@ CAnimationPoint クラスは、2 つの CAnimationVariable オブジェクトを
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationPoint::AddTransition
+## <a name="canimationpointaddtransition"></a><a name="addtransition"></a>Cアニメーションポイント::トランジションの追加
 
-X の遷移を追加します。 座標と Y 座標。
+X 座標と Y 座標の遷移を追加します。
 
 ```
 void AddTransition(
@@ -110,19 +110,19 @@ void AddTransition(
 
 ### <a name="parameters"></a>パラメーター
 
-*pXTransition*<br/>
+*pX トランジション*<br/>
 X 座標の遷移へのポインター。
 
-*pYTransition*<br/>
-Y の遷移へのポインターを調整します。
+*移行*<br/>
+Y 座標の遷移へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-X のアニメーション変数に適用する遷移の内部一覧に指定された遷移を追加するには、この関数を呼び出す座標と Y 座標。 遷移を追加するとすぐに適用され、内部リストに格納されているはありません。 遷移を (特定の値のストーリー ボードに追加された) に適用されます CAnimationController::AnimateGroup を呼び出すとします。 座標のいずれかに遷移を適用する不要な場合は、NULL を渡すことができます。
+X 座標と Y 座標のアニメーション変数に適用される遷移の内部リストに、指定された遷移を追加します。 遷移を追加しても、すぐには適用されず、内部リストに保存されます。 CAnimationController::AnimateGroup を呼び出すと、トランジションが適用されます (特定の値のストーリーボードに追加されます)。 いずれかの座標にトランジションを適用する必要がない場合は、NULL を渡すことができます。
 
-##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint
+## <a name="canimationpointcanimationpoint"></a><a name="canimationpoint"></a>Cアニメーションポイント::Cアニメーションポイント
 
-CAnimationPoint オブジェクトを作成します。
+C アニメーション ポイント オブジェクトを構築します。
 
 ```
 CAnimationPoint();
@@ -136,25 +136,25 @@ CAnimationPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptDefault*<br/>
-既定のポイントの座標を指定します。
+*デフォルト*<br/>
+既定のポイント座標を指定します。
 
-*nGroupID*<br/>
-グループ ID を指定します
+*グループ ID*<br/>
+グループ ID を指定します。
 
-*nObjectID*<br/>
-オブジェクト ID を指定します
+*オブジェクト ID*<br/>
+オブジェクト ID を指定します。
 
-*dwUserData*<br/>
+*データ*<br/>
 ユーザー定義データを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CAnimationPoint オブジェクトは、既定のプロパティを構築します。 既定のポイント座標、グループ ID とオブジェクト ID が 0 に設定されます。
+既定のポイント座標、グループ ID、およびオブジェクト ID が 0 に設定されている既定のプロパティを持つ CAnimationPoint オブジェクトを構築します。
 
-##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList
+## <a name="canimationpointgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>アニメーションポイント::アニメーション変数リスト
 
-カプセル化されたアニメーション変数リストに配置します。
+カプセル化されたアニメーション変数をリストに入れます。
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVariable*>& lst);
@@ -162,12 +162,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>パラメーター
 
-*lst*<br/>
-関数から制御が戻るときに、X と Y 座標を表す 2 つの CAnimationVariable オブジェクトへのポインターを格納します。
+*Lst*<br/>
+関数が返されるときに、X 座標と Y 座標を表す 2 つの CAnimationVariable オブジェクトへのポインターが含まれています。
 
-##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
+## <a name="canimationpointgetdefaultvalue"></a><a name="getdefaultvalue"></a>を取得します。
 
-既定値を返しますの X 座標と Y 座標。
+X 座標と Y 座標の既定値を返します。
 
 ```
 CPoint GetDefaultValue();
@@ -175,13 +175,13 @@ CPoint GetDefaultValue();
 
 ### <a name="return-value"></a>戻り値
 
-ポイント含んでいる既定値。
+既定値を含むポイント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクターまたは SetDefaultValue によって以前に設定された既定値を取得するには、この関数を呼び出します。
+この関数を呼び出して、以前にコンストラクターまたは SetDefaultValue によって設定された既定値を取得します。
 
-##  <a name="getvalue"></a>  CAnimationPoint::GetValue
+## <a name="canimationpointgetvalue"></a><a name="getvalue"></a>次の値を取得します。
 
 現在の値を返します。
 
@@ -191,20 +191,20 @@ BOOL GetValue(CPoint& ptValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptValue*<br/>
-出力します。 このメソッドが戻るときに、現在の値を格納します。
+*プタバリュー*<br/>
+出力。 このメソッドが返されるときに現在の値を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-現在の値が正常に取得された場合は TRUE。それ以外の場合は FALSE です。
+現在の値が正常に取得された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アニメーション ポイントの現在の値を取得するには、この関数を呼び出します。 このメソッドが失敗または基になる COM オブジェクト X と Y 座標が初期化されていない、ptValue には、コンス トラクターまたは SetDefaultValue によって以前に設定された既定値が含まれています。
+アニメーション ポイントの現在の値を取得します。 このメソッドが失敗した場合、または X 座標と Y 座標の基になる COM オブジェクトが初期化されていない場合、ptValue には、以前にコンストラクターまたは SetDefaultValue によって設定された既定値が格納されます。
 
-##  <a name="getx"></a>  CAnimationPoint::GetX
+## <a name="canimationpointgetx"></a><a name="getx"></a>アニメーションポイント::ゲットエクス
 
-X 座標の CAnimationVariable へのアクセスを提供します。
+X 座標の C アニメーション変数へのアクセスを提供します。
 
 ```
 CAnimationVariable& GetX();
@@ -212,15 +212,15 @@ CAnimationVariable& GetX();
 
 ### <a name="return-value"></a>戻り値
 
-X を表すカプセル化された CAnimationVariable への参照を調整します。
+X 座標を表すカプセル化された CAnimation 変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-X を表す、基になる CAnimationVariable への直接アクセスを取得するには、このメソッドを呼び出すことができますを調整します。
+このメソッドを呼び出して、基になる X 座標を表す CAnimationVariable に直接アクセスできます。
 
-##  <a name="gety"></a>  CAnimationPoint::GetY
+## <a name="canimationpointgety"></a><a name="gety"></a>Cアニメーションポイント::ゲットイ
 
-CAnimationVariable する Y 座標でのアクセスを提供します。
+Y 座標の C アニメーション変数へのアクセスを提供します。
 
 ```
 CAnimationVariable& GetY();
@@ -228,31 +228,31 @@ CAnimationVariable& GetY();
 
 ### <a name="return-value"></a>戻り値
 
-Y 座標を表すカプセル化された CAnimationVariable への参照。
+Y 座標を表すカプセル化された CAnimation 変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Y 座標を表す、基になる CAnimationVariable への直接アクセスを取得するには、このメソッドを呼び出すことができます。
+このメソッドを呼び出して、Y 座標を表す基になる CAnimationVariable に直接アクセスできます。
 
-##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue
+## <a name="canimationpointm_xvalue"></a><a name="m_xvalue"></a>アニメーションポイント::m_xValue
 
-カプセル化されたアニメーション変数を表す X アニメーション ポイントの座標。
+アニメーション ポイントの X 座標を表すカプセル化されたアニメーション変数。
 
 ```
 CAnimationVariable m_xValue;
 ```
 
-##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue
+## <a name="canimationpointm_yvalue"></a><a name="m_yvalue"></a>Cアニメーションポイント::m_yValue
 
-アニメーション ポイントの Y 座標を表すアニメーションをカプセル化された変数です。
+アニメーション ポイントの Y 座標を表すカプセル化されたアニメーション変数。
 
 ```
 CAnimationVariable m_yValue;
 ```
 
-##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint
+## <a name="canimationpointoperator-cpoint"></a><a name="operator_cpoint"></a>Cアニメーションポイント::オペレーターCポイント
 
-CPoint、CAnimationPoint に変換します。
+C アニメーションポイントを CPoint に変換します。
 
 ```
 operator CPoint();
@@ -260,15 +260,15 @@ operator CPoint();
 
 ### <a name="return-value"></a>戻り値
 
-CAnimationPoint CPoint としての現在の値。
+CPoint としての C アニメーションポイントの現在の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、GetValue を内部的に呼び出します。 返されるポイントが X の既定値を含める GetValue 何らかの理由で失敗した場合、座標と Y 座標。
+この関数は、内部的に GetValue を呼び出します。 何らかの理由で GetValue が失敗した場合、返されるポイントには X 座標と Y 座標の既定値が含まれます。
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+## <a name="canimationpointoperator"></a><a name="operator_eq"></a>Cアニメーションポイント::オペレーター=
 
-CAnimationPoint ptSrc に割り当てます。
+c アニメーションポイントに ptSrc を割り当てます。
 
 ```
 void operator=(const CPoint& ptSrc);
@@ -277,13 +277,13 @@ void operator=(const CPoint& ptSrc);
 ### <a name="parameters"></a>パラメーター
 
 *ptSrc*<br/>
-CPoint またはポイントを指します。
+CPoint またはポイントを参照します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CAnimationPoint ptSrc に割り当てます。 いるアニメーションの開始前にこの演算子は、SetDefaultValue を呼び出すため、基になる COM を再作成するオブジェクトの X および Y 座標が作成されている場合に行うことをお勧めします。 イベント (ValueChanged または IntegerValueChanged) には、このアニメーション オブジェクトをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。
+c アニメーションポイントに ptSrc を割り当てます。 アニメーションを開始する前に、この演算子は SetDefaultValue を呼び出し、基になる COM オブジェクトが作成されている場合は X 座標と Y 座標を再作成するため、アニメーションを開始する前に行うことをお勧めします。 このアニメーション オブジェクトをイベントにサブスクライブした場合 (ValueChanged または整数値変更)、これらのイベントを再度有効にする必要があります。
 
-##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue
+## <a name="canimationpointsetdefaultvalue"></a><a name="setdefaultvalue"></a>を設定します。
 
 既定値を設定します。
 
@@ -293,12 +293,12 @@ void SetDefaultValue(const POINT& ptDefault);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptDefault*<br/>
+*デフォルト*<br/>
 既定のポイント値を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を使用すると、アニメーション オブジェクトを既定値を設定できます。 このメソッドは、割り当てる既定値をアニメーションのポイントの座標 X と Y 座標。 作成した場合は、基になる COM オブジェクトも再作成します。 イベント (ValueChanged または IntegerValueChanged) には、このアニメーション オブジェクトをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。
+この関数を使用して、既定値をアニメーション オブジェクトに設定します。 このメソッドは、アニメーション ポイントの X 座標と Y 座標に既定値を割り当てます。 基になる COM オブジェクトが作成されている場合は、そのオブジェクトも再作成されます。 このアニメーション オブジェクトをイベントにサブスクライブした場合 (ValueChanged または整数値変更)、これらのイベントを再度有効にする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

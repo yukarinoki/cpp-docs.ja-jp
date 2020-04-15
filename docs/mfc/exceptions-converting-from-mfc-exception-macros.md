@@ -1,5 +1,5 @@
 ---
-title: 例外:MFC 例外マクロからの変換
+title: '例外処理 : 古いコードの変換'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - converting exceptions [MFC]
@@ -14,102 +14,102 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330f66b1f46542082637645ad53da016b434d4a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372013"
 ---
-# <a name="exceptions-converting-from-mfc-exception-macros"></a>例外:MFC 例外マクロからの変換
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>例外処理 : 古いコードの変換
 
-これは、高度なトピックです。
+これは高度なトピックです。
 
-この記事は、Microsoft Foundation Class のマクロで記述された既存のコードに変換する方法を説明します:**TRY**、**CATCH,** 、**THROW**など -C++ 例外処理を使用するにはキーワード**try**、**catch**、および**throw**します。 ここでは、次の内容について説明します。
+この資料では、 Microsoft Foundation クラス マクロを使用して記述された既存のコード **(TRY、** **CATCH**、 **THROW**など) を変換して、 C++ の例外処理**キーワードを****使用**する方法について**説明します。** 取り上げるトピックは次のとおりです。
 
 - [変換の利点](#_core_advantages_of_converting)
 
-- [C++ 例外を使用する例外処理マクロを含むコードの変換](#_core_doing_the_conversion)
+- [例外マクロを含むコードを C++ 例外を使用するように変換する](#_core_doing_the_conversion)
 
-##  <a name="_core_advantages_of_converting"></a> 変換の利点
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>変換の利点
 
-おそらく必要はありません、既存のコードを変換するが、mfc バージョン 3.0 マクロ実装と以前のバージョンの実装間の相違があります。 これらの相違点とそれ以降のコードの動作変更については[例外。バージョン 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)します。
+MFC バージョン 3.0 のマクロ実装と以前のバージョンの実装の違いに注意する必要がありますが、既存のコードを変換する必要はありません。 これらの相違点とコード動作の後の変更については、「[例外: バージョン 3.0 の例外マクロの変更」を](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)参照してください。
 
-変換の主なメリットは次のとおりです。
+変換の主な利点は次のとおりです。
 
-- C++ 例外処理のキーワードを使用するコードを若干小さいをコンパイルします。EXE またはします。DLL です。
+- C++ の例外処理キーワードを使用するコードは、少し小さいにコンパイルされます。EXE または .Dll。
 
-- C++例外処理キーワードは、汎用性が高まります。コピーできる任意のデータ型の例外を処理できるように (**int**、 **float**、 **char**など)、マクロのみクラスの例外を処理する一方、 `CException`およびそれから派生したクラス。
+- C++ の例外処理キーワードは、より多目的性があります: マクロは、そこから派生した`CException`クラスとクラスの例外のみを処理するのに対し、コピーできる任意のデータ型 **(int** **、float** **、char**など) の例外を処理できます。
 
-マクロとキーワードの主な違いは、例外がスコープから外れたときに、「自動的に」マクロを使用して、コードは、キャッチされた例外を削除します。 です。 キーワードを使用して、コードはしていないため、キャッチされた例外を明示的に削除する必要があります。 詳細については、この記事を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+マクロとキーワードの主な違いは、マクロを使用するコードは、例外がスコープ外になるとキャッチされた例外を自動的に削除することです。 キーワードを使用するコードは使用しないため、キャッチされた例外を明示的に削除する必要があります。 詳細については、「例外 :[例外のキャッチと削除 」を参照してください](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
-別の相違点は、構文です。 マクロとキーワードの構文は、次の 3 つの点で異なります。
+もう 1 つの違いは構文です。 マクロとキーワードの構文は、次の 3 点で異なります。
 
-1. マクロの引数と例外の宣言
+1. マクロ引数と例外宣言:
 
-   **CATCH**マクロ呼び出しは、次の構文。
+   **CATCH**マクロ呼び出しには、次の構文があります。
 
-   **CATCH(** *exception_class*, *exception_object_pointer_name* **)**
+   **キャッチ***exception_class**(exception_class、exception_object_pointer_name)* **)**
 
-   クラス名とオブジェクト ポインター名のコンマに注意してください。
+   クラス名とオブジェクト ポインター名の間のコンマに注意してください。
 
-   例外宣言、**CATCH**キーワードは、この構文を使用します。
+   **catch**キーワードの例外宣言では、次の構文を使用します。
 
-   **catch(** *exception_type* *exception_name* **)**
+   **キャッチ***(exception_typeexception_name)* *exception_name* **)**
 
-   このステートメントを catch の例外の種類を示しますブロックで処理します。
+   この例外宣言ステートメントは、catch ブロックが処理する例外の種類を示します。
 
-2. Catch ブロックの区切り。
+2. キャッチブロックの区切り:
 
-   マクロで、**CATCH**マクロ (とその引数) は、最初の catch ブロックを開始、 **AND_CATCH**マクロは、後続の catch ブロックを開始し、 **END_CATCH**マクロcatch ブロックのシーケンスを終了します。
+   マクロでは **、CATCH**マクロ (引数を持つ) が最初の catch ブロックを開始します。**AND_CATCH**マクロは後続の catch ブロックを開始し **、END_CATCH**マクロは catch ブロックのシーケンスを終了します。
 
-   キーワードで、**CATCH**キーワード (例外宣言) では、各 catch ブロックを開始します。 相当するはありません、 **END_CATCH**マクロは、catch ブロックの右中かっこで終了します。
+   キーワードを使用すると **、catch**キーワード (例外宣言を含む) が各 catch ブロックを開始します。 **END_CATCH**マクロに対応するものはありません。catch ブロックは、右中かっこで終わります。
 
 3. スロー式:
 
-   マクロを使用して、 **THROW_LAST**再び現在の例外をスローします。 **throw**キーワードを引数なしで同じ効果があります。
+   マクロは**THROW_LAST**を使用して現在の例外を再スローします。 引数を指定しない**throw**キーワードも同じ効果を持ちます。
 
-##  <a name="_core_doing_the_conversion"></a> 変換を行う
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>変換を行う
 
-#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>C++ 例外処理キーワードを使用するマクロを使用してコードを変換するには
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>C++ 例外処理キーワードを使用するようにマクロを使用してコードを変換するには
 
-1. MFC のマクロのすべてのアイテムを見つけて**TRY**、**CATCH**、 **AND_CATCH**、 **END_CATCH**、**THROW**、**THROW_LAST**します。
+1. MFC マクロの**TRY**、**キャッチ****、AND_CATCH、END_CATCH、****スロー**、および**THROW_LAST**のすべての出現箇所を探します。 **END_CATCH**
 
-2. 置換、または以下のマクロのすべての出現箇所を削除します。
+2. 次のマクロをすべて置換または削除します。
 
-   **TRY**(コードに置き換えます**try**)
+   **TRY** (**試してみる**と置き換える)
 
-   **CATCH**(コードに置き換えます**catch**)
+   **キャッチ**(**キャッチ**で置き換える)
 
-   **AND_CATCH** (コードに置き換えます**catch**)
+   **AND_CATCH** (**キャッチ**で置き換える)
 
    **END_CATCH** (削除)
 
-   **THROW** (コードに置き換えます**throw**)
+   **スロー** (**スロー**で置き換える)
 
-   **THROW_LAST** (コードに置き換えます**throw**)
+   **THROW_LAST** (**スロー**に置き換える)
 
-3. 有効な例外宣言を形成するために、マクロの引数を変更します。
+3. マクロ引数を変更して、有効な例外宣言を形成します。
 
-   たとえば、変更します。
+   たとえば、
 
    [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   から
+   to
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. 必要に応じて、例外オブジェクトを削除するために、catch ブロックで、コードを変更します。 詳細については、[例外:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
+4. 必要に応じて例外オブジェクトを削除するように、catch ブロック内のコードを変更します。 詳細については、「例外 :[例外のキャッチと削除 」を参照してください](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
-MFC 例外マクロを使用して例外処理コードの例を次に示します。 次の例のコードは、マクロ、例外を使用しているため`e`自動的に削除されます。
+MFC 例外マクロを使用した例外処理コードの例を次に示します。 次の例のコードではマクロが使用されるため、例外`e`は自動的に削除されます。
 
 [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
 
-次の例のコードは、例外を明示的に削除する必要がありますので、C++ の例外のキーワードを使用します。
+次の例のコードでは、C++ 例外キーワードを使用するため、例外を明示的に削除する必要があります。
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-詳細については、[例外:MFC マクロと C++ 例外の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) を参照してください。
+詳細については、「[例外 : MFC マクロと C++ 例外の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

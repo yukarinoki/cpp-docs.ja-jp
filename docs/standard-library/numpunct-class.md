@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0bdd6556df892e5e231919dbc4ae95d14a6f95fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373616"
 ---
 # <a name="numpunct-class"></a>numpunct クラス
 
-数値とブール式の書式設定および区切りに関する情報を表すために使用 `CharType` 型のシーケンスを記述するローカルファセットとして使用できるオブジェクトを表すクラステンプレート。
+数値式とブール式の書式設定と句読点に関する情報を表すために使用される型`CharType`のシーケンスを記述する、ローカル ファセットとして機能するオブジェクトを記述するクラス テンプレート。
 
 ## <a name="syntax"></a>構文
 
@@ -59,20 +59,20 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|Description|
+|Constructor|説明|
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 型のオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|Description|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表すために使用される型。|
 |[string_type](#string_type)|`CharType` 型の文字を格納する文字列を表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|Description|
+|メンバー関数|説明|
 |-|-|
 |[decimal_point](#decimal_point)|小数点として使用するロケール固有の要素を返します。|
 |[do_decimal_point](#do_decimal_point)|小数点として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。|
@@ -81,17 +81,17 @@ class numpunct : public locale::facet;
 |[do_thousands_sep](#do_thousands_sep)|桁区切り記号として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。|
 |[do_truename](#do_truename)|**true** 値のテキスト表現として使用する文字列を返すために呼び出されるプロテクト仮想メンバー関数。|
 |[falsename](#falsename)|**false** 値のテキスト表現として使用する文字列を返します。|
-|[grouping](#grouping)|小数点の左側の数字をグループ化する方法を決定するロケール固有の規則を返します。|
+|[グループ](#grouping)|小数点の左側の数字をグループ化する方法を決定するロケール固有の規則を返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用するロケール固有の要素を返します。|
 |[truename](#truename)|**true** 値のテキスト表現として使用する文字列を返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ロケール >
+**ヘッダー:** \<locale>
 
 **名前空間:** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a>numpunct::char_type
 
 ロケールによって使用される文字を表すために使用される型。
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター CharType のシノニム**です。**
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>numpunct::decimal_point
 
 小数点として使用するロケール固有の要素を返します。
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>numpunct::do_小数点
 
 小数点として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。
 
@@ -160,9 +160,9 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="example"></a>例
 
-[decimal_point](#decimal_point) の例 (仮想メンバー関数が `decimal_point` で呼び出される) をご覧ください。
+[decimal_point](#decimal_point) の例 (仮想メンバー関数が `decimal_point` で呼び出される) を参照してください。
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct::do_falsename
 
 このプロテクト仮想メンバー関数は、**false** 値のテキスト表現として使用するシーケンスを返します。
 
@@ -182,7 +182,7 @@ virtual string_type do_falsename() const;
 
 [falsename](#falsename) の例 (仮想メンバー関数が `falsename` で呼び出される) をご覧ください。
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>numpunct::do_grouping
 
 小数点の左側の数字をグループ化する方法を決定するロケール固有の規則を返すために呼び出されるプロテクト仮想メンバー関数。
 
@@ -200,9 +200,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-[グループ化](#grouping)の例を参照してください。この例では、仮想メンバー関数が `grouping`によって呼び出されています。
+仮想メンバー関数が[grouping](#grouping)によって`grouping`呼び出される grouping の例を参照してください。
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>numpunct::do_千_9月
 
 桁区切り記号として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。
 
@@ -216,13 +216,13 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、小数点の左側にある桁区切り記号として使用する `CharType` 型のロケール固有の要素を返します。
+プロテクト仮想メンバー関数は、小数点の左側にグループ区切`CharType`り記号として使用する、ロケール固有の型の要素を返します。
 
 ### <a name="example"></a>例
 
-[thousands_sep](#thousands_sep) の例 (仮想メンバー関数が `thousands_sep` で呼び出される) をご覧ください。
+[thousands_sep](#thousands_sep) の例 (仮想メンバー関数が `thousands_sep` で呼び出される) を参照してください。
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct::do_truename
 
 **true** 値のテキスト表現として使用する文字列を返すために呼び出されるプロテクト仮想メンバー関数。
 
@@ -240,7 +240,7 @@ virtual string_type do_truename() const;
 
 [truename](#truename) の例 (仮想メンバー関数が `truename` で呼び出される) をご覧ください。
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a>numpunct::偽名
 
 **false** 値のテキスト表現として使用する文字列を返します。
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>戻り値
 
-値**false**のテキスト表現として使用する `CharType`のシーケンスを格納している文字列。
+値 false のテキスト`CharType`表現として使用する s のシーケンスを**false**含む文字列。
 
 ### <a name="remarks"></a>解説
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::grouping
+## <a name="numpunctgrouping"></a><a name="grouping"></a>numpunct::グループ化
 
 小数点の左側の数字をグループ化する方法を決定するロケール固有の規則を返します。
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a>数字::数字
 
 `numpunct` 型のオブジェクトのコンストラクター。
 
@@ -346,23 +346,23 @@ explicit numpunct(size_t _Refs = 0);
 ### <a name="parameters"></a>パラメーター
 
 *_Refs*\
-オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>解説
 
-*_Refs*パラメーターに指定できる値とその意味は次のとおりです。
+*_Refs*パラメータとその有意性の値は次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
 - 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \> 1: これらの値は定義されていません。
+- \>1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンストラクターは、 **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) を使用して、その基本オブジェクトを初期化します。
+コンストラクターは、基本オブジェクトを**locale: ファ**[セット](../standard-library/locale-class.md#facet_class)(`_Refs`) で初期化します。
 
-## <a name="string_type"></a>  numpunct::string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a>数字::string_type
 
 **CharType** 型の文字を格納する文字列を表す型。
 
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、区切り記号のコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
+この型は、句読点シーケンスのコピーを格納できるオブジェクトを持つクラス テンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>numpunct::thousands_sep
 
 桁区切り記号として使用するロケール固有の要素を返します。
 
@@ -417,7 +417,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="numpuncttruename"></a><a name="truename"></a>numpunct::真の名前
 
 **true** 値のテキスト表現として使用する文字列を返します。
 
@@ -466,8 +466,8 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)\
-[facet クラス](../standard-library/locale-class.md#facet_class)\
+[\<ロケール>](../standard-library/locale.md)\
+[ファセットクラス](../standard-library/locale-class.md#facet_class)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

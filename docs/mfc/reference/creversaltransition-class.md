@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d12fb6bbaefcfac1437248ebe11f3a5c24c45b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372128"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368312"
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition クラス
 
@@ -35,39 +35,39 @@ class CReversalTransition : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[CReversalTransition::CReversalTransition](#creversaltransition)|取消遷移オブジェクトを構築し、その継続時間を初期化します。|
+|[逆戻りトランジション::逆戻りトランジション](#creversaltransition)|反転遷移オブジェクトを構築し、その期間を初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CReversalTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|
+|[逆引きトランジション::作成](#create)|カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。 [(CBase トランジションをオーバーライドします。:作成](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CReversalTransition::m_duration](#m_duration)|移行の期間です。|
+|[逆引きトランジション::m_duration](#m_duration)|トランジションの期間。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-逆遷移をスムーズに指定された期間にわたって方向を変更します。 最終的な値には、初期値と同じになります、最終速度の初期速度の負の値になります。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。
+反転遷移は、指定された期間にわたって方向をスムーズに変化させます。 最終的な値は初期値と同じになり、最終速度は初期速度の負になります。 すべてのトランジションは自動的にクリアされるため、演算子 new を使用して割り当てることをお勧めします。 カプセル化された IUIAnimationTransition COM オブジェクトは、それまでは NULL になるまで CAnimationController::AnimateGroup によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても、何も影響しません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[Cベーストランジション](../../mfc/reference/cbasetransition-class.md)
 
-[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+[トランジショントランジション](../../mfc/reference/creversaltransition-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CReversalTransition::Create
+## <a name="creversaltransitioncreate"></a><a name="create"></a>逆引きトランジション::作成
 
-カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。
 
 ```
 virtual BOOL Create(
@@ -77,16 +77,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pLibrary*<br/>
-標準的な遷移の作成を担当する遷移ライブラリへのポインター。
+*pライブラリ*<br/>
+標準遷移の作成を担当する遷移ライブラリへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。
+遷移が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>逆戻りトランジション::逆戻りトランジション
 
-取消遷移オブジェクトを構築し、その継続時間を初期化します。
+反転遷移オブジェクトを構築し、その期間を初期化します。
 
 ```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
@@ -94,12 +94,12 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-移行の期間です。
+*期間*<br/>
+トランジションの期間。
 
-##  <a name="m_duration"></a>  CReversalTransition::m_duration
+## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a>逆引きトランジション::m_duration
 
-移行の期間です。
+トランジションの期間。
 
 ```
 UI_ANIMATION_SECONDS m_duration;

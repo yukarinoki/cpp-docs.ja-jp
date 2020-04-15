@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMapping クラス
+title: クラスを指定します。
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMapping
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318959"
 ---
-# <a name="catlfilemapping-class"></a>CAtlFileMapping クラス
+# <a name="catlfilemapping-class"></a>クラスを指定します。
 
-このクラスのメソッドへのキャスト演算子の追加メモリ マップト ファイルを表します[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)します。
+このクラスは[、CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)のメソッドにキャスト演算子を追加する、メモリ マップト ファイルを表します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -31,7 +31,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-キャスト演算子を使用するデータの型。
+キャスト演算子に使用されるデータの型。
 
 ## <a name="members"></a>メンバー
 
@@ -39,15 +39,15 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlFileMapping::operator T*](#operator_t_star)|暗黙的な変換は、`CAtlFileMapping`オブジェクトを`T*`します。|
+|[カトルファイルマッピング::演算子T*](#operator_t_star)|オブジェクトを`CAtlFileMapping`に暗黙的に`T*`変換できます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスの暗黙的な変換を許可する 1 つのキャスト演算子を追加します`CAtlFileMapping`オブジェクトを`T*`します。 他のメンバーは、基本クラスによって提供される[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)します。
+このクラスは、オブジェクトを に暗黙的に変換できるように`CAtlFileMapping`、単`T*`一のキャスト演算子を追加します。 その他のメンバーは、基本クラス[である CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)によって提供されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)
+[カトルファイルマッピングベース](../../atl/reference/catlfilemappingbase-class.md)
 
 `CAtlFileMapping`
 
@@ -55,9 +55,9 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 **ヘッダー:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T*
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>カトルファイルマッピング::演算子T*
 
-暗黙的な変換は、`CAtlFileMapping`オブジェクトを`T*`します。
+オブジェクトを`CAtlFileMapping`に暗黙的に`T*`変換できます。
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-返します、`T*`メモリ マップト ファイルの先頭へのポインター。
+メモリ`T*`マップト ファイルの先頭へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出し[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)として返されたポインターとして再解釈と、`T*`場所*T*はこのクラスのテンプレート パラメーターとして使用される型です。
+[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)を呼び出し、返されたポインター`T*`を、このクラスのテンプレート パラメーターとして使用される*型である場所*として再解釈します。
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlFileMappingBase クラス](../../atl/reference/catlfilemappingbase-class.md)<br/>
+[クラスを指定します。](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

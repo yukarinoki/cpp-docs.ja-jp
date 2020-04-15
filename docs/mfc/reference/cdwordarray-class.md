@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CDWordArray [MFC], SetAtGrow
 - CDWordArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-ms.openlocfilehash: f17caafd01bb5ddfa49afe378bfd79652149ebd8
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e009ca3e3612d10d9cdf62d4bea32224f7b7522c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447352"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373995"
 ---
 # <a name="cdwordarray-class"></a>CDWordArray クラス
 
@@ -61,7 +61,7 @@ class CDWordArray : public CObject
 
 ## <a name="members"></a>メンバー
 
-`CDWordArray` のメンバー関数は、 [CObArray](../../mfc/reference/cobarray-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CObArray` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが表示されている場合は、`DWORD`を代わりに使用します。
+の`CDWordArray`メンバー関数は、[クラス CObArray](../../mfc/reference/cobarray-class.md)のメンバー関数に似ています。 メンバー関数については `CObArray` クラスの説明を参照してください。 ポインターが`CObject`関数パラメーターまたは戻り値として見える場所はどこでも、`DWORD`を置き換えます。
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,55 +71,55 @@ class CDWordArray : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[CDWordArray:: CDWordArray](../../mfc/reference/cobarray-class.md#cobarray)|空の配列を生成します。|
+|[次の文字列を使用します。](../../mfc/reference/cobarray-class.md#cobarray)|空の配列を生成します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[CDWordArray:: Add](../../mfc/reference/cobarray-class.md#add)|配列の末尾に要素を追加します。必要に応じて、配列を大きくします。|
-|[CDWordArray:: Append](../../mfc/reference/cobarray-class.md#append)|配列に別の配列を追加します。必要に応じて、配列を大きくします。|
-|[CDWordArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
-|[CDWordArray:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|配列内のバイトへの一時的な参照を返します。|
-|[CDWordArray:: FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|
-|[CDWordArray:: GetAt](../../mfc/reference/cobarray-class.md#getat)|指定されたインデックス位置にある値を返します。|
-|[CDWordArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|この配列内の要素の数を取得します。|
-|[CDWordArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
-|[CDWordArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|この配列内の要素の数を取得します。|
-|[CDWordArray:: System.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)|有効な最大のインデックスを返します。|
-|[CDWordArray:: InsertAt](../../mfc/reference/cobarray-class.md#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
-|[CDWordArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|配列が空かどうかを判別します。|
-|[CDWordArray:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|この配列からすべての要素を削除します。|
-|[CDWordArray:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|特定のインデックス位置にある要素を削除します。|
-|[CDWordArray:: SetAt](../../mfc/reference/cobarray-class.md#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
-|[CDWordArray:: SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
-|[CDWordArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|この配列に含まれる要素の数を設定します。|
+|[を追加します。](../../mfc/reference/cobarray-class.md#add)|配列の末尾に要素を追加します。必要に応じて、配列を大きくします。|
+|[を追加します。](../../mfc/reference/cobarray-class.md#append)|配列に別の配列を追加します。必要に応じて、配列を大きくします。|
+|[コピー](../../mfc/reference/cobarray-class.md#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
+|[要素配列::要素](../../mfc/reference/cobarray-class.md#elementat)|配列内のバイトへの一時的な参照を返します。|
+|[キーフリーアレイ::フリーエクストラ](../../mfc/reference/cobarray-class.md#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|
+|[をクリックします。](../../mfc/reference/cobarray-class.md#getat)|指定されたインデックス位置にある値を返します。|
+|[を見る](../../mfc/reference/cobarray-class.md#getcount)|この配列内の要素の数を取得します。|
+|[を取得します。](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
+|[次の文字列を使用します。](../../mfc/reference/cobarray-class.md#getsize)|この配列内の要素の数を取得します。|
+|[を指定します。](../../mfc/reference/cobarray-class.md#getupperbound)|有効な最大のインデックスを返します。|
+|[を挿入します。](../../mfc/reference/cobarray-class.md#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
+|[を指定します。](../../mfc/reference/cobarray-class.md#isempty)|配列が空かどうかを判別します。|
+|[すべてを削除します。](../../mfc/reference/cobarray-class.md#removeall)|この配列からすべての要素を削除します。|
+|[をクリックします。](../../mfc/reference/cobarray-class.md#removeat)|特定のインデックス位置にある要素を削除します。|
+|[セットアレー::セットアット](../../mfc/reference/cobarray-class.md#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
+|[を組み込む](../../mfc/reference/cobarray-class.md#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
+|[を指定します。](../../mfc/reference/cobarray-class.md#setsize)|この配列に含まれる要素の数を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[CDWordArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[演算子\[\]](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`CDWordArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 ダブルワードの配列が、オーバーロードされた挿入 ( **<<** ) 演算子または `Serialize` メンバー関数でアーカイブに格納されている場合は、各要素がシリアル化されます。
+`CDWordArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 倍精度浮動小数点数型の配列が、オーバーロードされた挿入 ( **<<**) 演算子または`Serialize`メンバー関数を使用してアーカイブに格納される場合、各要素はシリアル化されます。
 
 > [!NOTE]
->  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+> 配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
-配列内の個々の要素からのデバッグ出力が必要な場合は、`CDumpContext` オブジェクトの深さを1以上に設定する必要があります。
+配列内の個々の要素からのデバッグ出力が必要な場合は、`CDumpContext`オブジェクトの深さを 1 以上に設定する必要があります。
 
-`CDWordArray`の使用方法の詳細については、「[コレクション](../../mfc/collections.md)」を参照してください。
+の使用方法`CDWordArray`の詳細については、[記事の「コレクション](../../mfc/collections.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CObArray クラス](../../mfc/reference/cobarray-class.md)

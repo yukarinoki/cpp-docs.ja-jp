@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 9fd315f017d3dcc9823054ea99e845ec99bc4192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372659"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 構造体
 
@@ -71,43 +71,43 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>パラメーター
 
 *I0*<br/>
-(必須)インターフェイス ID は 0 です。
+(必須)インターフェイス ID 0。
 
 *I1*<br/>
-(必須)ID 1 のインターフェイスです。
+(必須)インターフェイス ID 1。
 
 *I2*<br/>
-(省略可能)インターフェイス ID 2 です。
+(オプション)インターフェイス ID 2。
 
 *I3*<br/>
-(省略可能)インターフェイス ID 3 です。
+(オプション)インターフェイス ID 3。
 
 *I4*<br/>
-(省略可能)ID 4 のインターフェイスです。
+(オプション)インターフェイス ID 4。
 
 *I5*<br/>
-(省略可能)ID 5 のインターフェイスです。
+(オプション)インターフェイス ID 5。
 
 *I6*<br/>
-(省略可能)ID 6 のインターフェイスです。
+(オプション)インターフェイス ID 6。
 
 *I7*<br/>
-(省略可能)インターフェイス ID 7 です。
+(オプション)インターフェイス ID 7。
 
 *I8*<br/>
-(省略可能)インターフェイス ID 8 です。
+(オプション)インターフェイス ID 8。
 
 *I9*<br/>
-(省略可能)インターフェイス ID は 9 です。
+(オプション)インターフェイス ID 9。
 
-*DerivedType*<br/>
+*派生型*<br/>
 派生型。
 
 *BaseType*<br/>
 派生型の基本型。
 
-*hasImplements*<br/>
-ブール値の場合に**true**、ため使用できません、 [MixIn](mixin-structure.md)構造から派生していないクラスを使用して、[実装](implements-structure.md)構造体。
+*を実装しています*<br/>
+ブール値を指定すると **、実装**構造から派生していないクラスで[MixIn](mixin-structure.md)構造体[を](implements-structure.md)使用することはできません。
 
 ## <a name="members"></a>メンバー
 
@@ -115,16 +115,16 @@ struct ChainInterfaces<
 
 名前                                                   | 説明
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Chaininterfaces::cancastto](#cancastto)               | 指定されたインターフェイス ID をによって定義された特殊な形式をそれぞれにキャストできるかどうかを示す、`ChainInterface`テンプレート パラメーター。
-[Chaininterfaces::casttounknown](#casttounknown)       | によって定義された型のインターフェイス ポインターをキャスト、 *I0*へのポインターをテンプレート パラメーター`IUnknown`します。
-[Chaininterfaces::fillarraywithiid](#fillarraywithiid) | ストアで定義されたインターフェイス ID、 *I0*インターフェイス Id の指定した配列内の指定した場所にテンプレート パラメーター。
-[Chaininterfaces::verify](#verify)                     | 各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9*から継承`IUnknown`や`IInspectable`、および*I0*から継承。*I1*を通じて*I9*します。
+[チェーンインターフェイス::CanCastTo](#cancastto)               | `ChainInterface`指定されたインターフェイス ID を、テンプレート パラメーターで定義された各特殊化にキャストできるかどうかを示します。
+[チェーンインターフェイス::キャストは不明](#casttounknown)       | *I0*テンプレート パラメーターで定義された型のインターフェイス ポインターを、 への`IUnknown`ポインターにキャストします。
+[インターフェイス::フィルアレイウィズイッド](#fillarraywithiid) | *I0*テンプレート パラメーターで定義されたインターフェイス ID を、指定したインターフェイス ID の配列内の指定した場所に格納します。
+[チェーンインターフェイス::検証](#verify)                     | テンプレート パラメータ*I0*から*I9*を通して定義された`IUnknown`各インターフェイスが`IInspectable`、 または から継承し、 *I0*が*I1*から*I9*を継承することを確認します。
 
-### <a name="protected-constants"></a>保護されている定数
+### <a name="protected-constants"></a>保護定数
 
 名前                                   | 説明
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::IidCount](#iidcount) | インターフェイスのテンプレート パラメーターで指定されたインターフェイスに含まれている Id の合計数*I0*を通じて*I9*します。
+[インターフェイス::Iidカウント](#iidcount) | テンプレート パラメータ*I0 から I9*で指定されたインターフェイスに含まれる*I9*インターフェイス ID の総数。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -134,13 +134,13 @@ struct ChainInterfaces<
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**ヘッダー:** 実装.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="cancastto"></a>Chaininterfaces::cancastto
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>チェーンインターフェイス::CanCastTo
 
-指定されたインターフェイス ID を既定以外のテンプレート パラメーターで定義された特殊な形式をそれぞれにキャストできるかどうかを示します。
+既定以外のテンプレート パラメーターで定義された各特殊化に、指定したインターフェイス ID をキャストできるかどうかを示します。
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -154,16 +154,16 @@ __forceinline bool CanCastTo(
 *riid*<br/>
 インターフェイス ID。
 
-*ppv*<br/>
+*Ppv*<br/>
 正常にキャストされた最後のインターフェイス ID へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-**true**すべてのキャスト操作が成功した場合、それ以外の場合**false**します。
+すべてのキャスト操作が成功した場合は**true。** それ以外の場合**は false。**
 
-## <a name="casttounknown"></a>Chaininterfaces::casttounknown
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>チェーンインターフェイス::キャストは不明
 
-によって定義された型のインターフェイス ポインターをキャスト、 *I0*へのポインターをテンプレート パラメーター`IUnknown`します。
+*I0*テンプレート パラメーターで定義された型のインターフェイス ポインターを、 への`IUnknown`ポインターにキャストします。
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -171,11 +171,11 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>戻り値
 
-ポインター`IUnknown`します。
+`IUnknown` を指すポインターです。
 
-## <a name="fillarraywithiid"></a>Chaininterfaces::fillarraywithiid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>インターフェイス::フィルアレイウィズイッド
 
-ストアで定義されたインターフェイス ID、 *I0*インターフェイス Id の指定した配列内の指定した場所にテンプレート パラメーター。
+*I0*テンプレート パラメーターで定義されたインターフェイス ID を、指定したインターフェイス ID の配列内の指定した場所に格納します。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -187,14 +187,14 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>パラメーター
 
 *index*<br/>
-インデックスへのポインター、 *iid*配列。
+*iids*配列へのインデックス値へのポインター。
 
-*iid*<br/>
-インターフェイスの Id の配列。
+*Iid*<br/>
+インターフェイス ID の配列。
 
-## <a name="iidcount"></a>ChainInterfaces::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>インターフェイス::Iidカウント
 
-インターフェイスのテンプレート パラメーターで指定されたインターフェイスに含まれている Id の合計数*I0*を通じて*I9*します。
+テンプレート パラメータ*I0 から I9*で指定されたインターフェイスに含まれる*I9*インターフェイス ID の総数。
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -202,22 +202,22 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイス Id の合計数。
+インターフェイス ID の合計数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テンプレート パラメーター *I0*と*I1*が必要なパラメーターと*I2*を通じて*I9*は省略可能です。 通常、各インターフェイスの IID の数は、1 になります。
+テンプレート パラメータ*I0*および*I1*は必須で、I2 から*I2**I9*までのパラメータはオプションです。 各インターフェイスの IID カウントは、通常 1 です。
 
-## <a name="verify"></a>Chaininterfaces::verify
+## <a name="chaininterfacesverify"></a><a name="verify"></a>チェーンインターフェイス::検証
 
-各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9*から継承`IUnknown`や`IInspectable`、および*I0*から継承。*I1*を通じて*I9*します。
+テンプレート パラメータ*I0*から*I9*を通して定義された`IUnknown`各インターフェイスが`IInspectable`、 または から継承し、 *I0*が*I1*から*I9*を継承することを確認します。
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-検証操作に失敗した場合、`static_assert`エラーを説明するエラー メッセージを出力します。
+検証操作が失敗すると、エラー`static_assert`を説明するエラー メッセージが出力されます。
 
-テンプレート パラメーター *I0*と*I1*が必要なパラメーターと*I2*を通じて*I9*は省略可能です。
+テンプレート パラメータ*I0*および*I1*は必須で、I2 から*I2**I9*までのパラメータはオプションです。

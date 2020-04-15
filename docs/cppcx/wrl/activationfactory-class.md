@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303891"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368707"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory クラス
 
@@ -57,7 +57,7 @@ class ActivationFactory :
 ### <a name="parameters"></a>パラメーター
 
 *I0*<br/>
-0 番目のインターフェイスです。
+0 番目のインターフェイス。
 
 *I1*<br/>
 最初のインターフェイス。
@@ -65,15 +65,15 @@ class ActivationFactory :
 *I2*<br/>
 2 番目のインターフェイス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`ActivationFactory` 登録メソッドとの基本的な機能を提供します、`IActivationFactory`インターフェイス。 `ActivationFactory` カスタム ファクトリの実装を提供することもできます。
+`ActivationFactory`には、インターフェイスの登録メソッドと基本`IActivationFactory`機能が用意されています。 `ActivationFactory`また、カスタム ファクトリ実装を提供することもできます。
 
-次のコード フラグメントでは、シンボリック ActivationFactory を使用する方法を示しています。
+次のコードフラグメントは、ActivationFactory の使用方法をシンボル的に示しています。
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-次のコード フラグメントは、使用する方法を示します、[実装](implements-structure.md)3 つ以上のインターフェイス Id を指定する構造体。
+次のコードは[、Implements](implements-structure.md)構造体を使用して 3 つ以上のインターフェイス ID を指定する方法を示しています。
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -83,18 +83,18 @@ class ActivationFactory :
 
 名前                                                       | 説明
 ---------------------------------------------------------- | ------------------------------------------
-[ActivationFactory::ActivationFactory](#activationfactory) | 初期化します、`ActivationFactory`クラス。
+[アクティベーションファクトリー::アクティベーションファクトリー](#activationfactory) | `ActivationFactory` クラスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                           | 説明
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
-[ActivationFactory::AddRef](#addref)                           | 現在の参照カウントをインクリメント`ActivationFactory`オブジェクト。
-[ActivationFactory::GetIids](#getiids)                         | 実装されたインターフェイス Id の配列を取得します。
-[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | オブジェクトのランタイム クラス名を取得、現在`ActivationFactory`をインスタンス化します。
-[Activationfactory::gettrustlevel](#gettrustlevel)             | オブジェクトの信頼レベルを取得、現在`ActivationFactory`をインスタンス化します。
-[ActivationFactory::QueryInterface](#queryinterface)           | 指定したインターフェイスへのポインターを取得します。
-[ActivationFactory::Release](#release)                         | 現在の参照カウントをデクリメント`ActivationFactory`オブジェクト。
+[アクティベーションファクトリー::AddRef](#addref)                           | 現在`ActivationFactory`のオブジェクトの参照カウントをインクリメントします。
+[アクティベーションファクトリー::ゲットイイド](#getiids)                         | 実装されたインターフェイス ID の配列を取得します。
+[アクティベーションファクトリー::ランタイムクラス名](#getruntimeclassname) | 現在`ActivationFactory`のインスタンスを作成するオブジェクトのランタイム クラス名を取得します。
+[アクティベーションファクトリー::ゲットトラストレベル](#gettrustlevel)             | 現在`ActivationFactory`のインスタンスを作成するオブジェクトの信頼レベルを取得します。
+[アクティベーションファクトリー::クエリインターフェイス](#queryinterface)           | 指定したインターフェイスへのポインターを取得します。
+[アクティベーションファクトリー::リリース](#release)                         | 現在`ActivationFactory`のオブジェクトの参照カウントをデクリメントします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -120,21 +120,21 @@ class ActivationFactory :
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** モジュール.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>アクティベーションファクトリー::アクティベーションファクトリー
 
-初期化します、`ActivationFactory`クラス。
+`ActivationFactory` クラスを初期化します。
 
 ```cpp
 ActivationFactory();
 ```
 
-## <a name="addref"></a>ActivationFactory::AddRef
+## <a name="activationfactoryaddref"></a><a name="addref"></a>アクティベーションファクトリー::AddRef
 
-現在の参照カウントをインクリメント`ActivationFactory`オブジェクト。
+現在`ActivationFactory`のオブジェクトの参照カウントをインクリメントします。
 
 ```cpp
 STDMETHOD_(
@@ -147,9 +147,9 @@ STDMETHOD_(
 
 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
 
-## <a name="getiids"></a>ActivationFactory::GetIids
+## <a name="activationfactorygetiids"></a><a name="getiids"></a>アクティベーションファクトリー::ゲットイイド
 
-実装されたインターフェイス Id の配列を取得します。
+実装されたインターフェイス ID の配列を取得します。
 
 ```cpp
 STDMETHOD(
@@ -159,19 +159,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*iidCount*<br/>
-ときにこの操作が完了すると、インターフェイス Id の数、 *iid*配列。
+*iidカウント*<br/>
+この操作が完了すると *、iids*配列内のインターエース ID の数。
 
-*iid*<br/>
-この操作が完了したらの配列は、インターフェイス Id を実装します。
+*Iid*<br/>
+この操作が完了すると、実装されたインターフェイス ID の配列。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 E_OUTOFMEMORY は、可能性のあるエラーの HRESULT です。
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 E_OUTOFMEMORYは、HRESULT の可能性があります。
 
-## <a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>アクティベーションファクトリー::ランタイムクラス名
 
-オブジェクトのランタイム クラス名を取得、現在`ActivationFactory`をインスタンス化します。
+現在`ActivationFactory`のインスタンスを作成するオブジェクトのランタイム クラス名を取得します。
 
 ```cpp
 STDMETHOD(
@@ -181,16 +181,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*runtimeName*<br/>
-ときにこの操作が完了すると、オブジェクトのランタイム クラス名を含む文字列を識別するハンドルを現在`ActivationFactory`をインスタンス化します。
+*ランタイム名*<br/>
+この操作が完了すると、現在`ActivationFactory`のインスタンスを作成するオブジェクトのランタイム クラス名を含む文字列へのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
 
-## <a name="gettrustlevel"></a>Activationfactory::gettrustlevel
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>アクティベーションファクトリー::ゲットトラストレベル
 
-オブジェクトの信頼レベルを取得、現在`ActivationFactory`をインスタンス化します。
+現在`ActivationFactory`のインスタンスを作成するオブジェクトの信頼レベルを取得します。
 
 ```cpp
 STDMETHOD(
@@ -200,14 +200,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*trustLvl*<br/>
-この操作が完了したら、信頼レベルのランタイム クラス、`ActivationFactory`をインスタンス化します。
+*トラストルヴル*<br/>
+この操作が完了すると、`ActivationFactory`インスタンス化するランタイム クラスの信頼レベル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、アサーション エラーが発生したと*trustLvl*に設定されている`FullTrust`します。
+成功した場合はS_OK。それ以外の場合はアサーション エラーが発生し *、trustLvl*が に`FullTrust`設定されます。
 
-## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>アクティベーションファクトリー::クエリインターフェイス
 
 指定したインターフェイスへのポインターを取得します。
 
@@ -222,16 +222,16 @@ STDMETHOD(
 *riid*<br/>
 インターフェイス ID。
 
-*ppvObject*<br/>
-この操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。
+*オブジェクト*<br/>
+この操作が完了すると、パラメータ*riid*で指定されたインターフェイスへのポインタ。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
 
-## <a name="release"></a>ActivationFactory::Release
+## <a name="activationfactoryrelease"></a><a name="release"></a>アクティベーションファクトリー::リリース
 
-現在の参照カウントをデクリメント`ActivationFactory`オブジェクト。
+現在`ActivationFactory`のオブジェクトの参照カウントをデクリメントします。
 
 ```cpp
 STDMETHOD_(

@@ -51,16 +51,16 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce4fe49e8af85c4b63be31bf10e9f196f85c019f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369320"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap クラス
 
-ID2D1Bitmap のラッパーです。
+ID2D1Bitmap のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -74,62 +74,62 @@ class CD2DBitmap : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|オーバーロードされます。 HBITMAP から CD2DBitmap オブジェクトを構築します。|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|デストラクターです。 D2D ビットマップ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2D ビットマップ::CD2D ビットマップ](#cd2dbitmap)|オーバーロードされます。 HBITMAP から CD2DBitmap オブジェクトを構築します。|
+|[CD2D ビットマップ::~CD2D ビットマップ](#_dtorcd2dbitmap)|デストラクターです。 D2D ビットマップ オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|オーバーロードされます。 CD2DBitmap オブジェクトを構築します。|
+|[CD2D ビットマップ::CD2D ビットマップ](#cd2dbitmap)|オーバーロードされます。 オブジェクトを作成します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::Attach](#attach)|既存のリソース インターフェイス オブジェクトにアタッチします|
-|[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|指定した領域を指定したビットマップからの現在のビットマップにコピーします。|
-|[CD2DBitmap::CopyFromMemory](#copyfrommemory)|指定した領域をメモリからの現在のビットマップにコピーします。|
-|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|現在のビットマップにコピーから、指定した指定した領域のレンダー ターゲット|
-|[CD2DBitmap::Create](#create)|CD2DBitmap を作成します。 (上書き[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create))。|
-|[CD2DBitmap::Destroy](#destroy)|CD2DBitmap オブジェクトを破棄します。 (上書き[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy))。|
-|[CD2DBitmap::Detach](#detach)|オブジェクトからリソースのインターフェイスをデタッチします。|
-|[CD2DBitmap::Get](#get)|返します ID2D1Bitmap インターフェイス|
-|[CD2DBitmap::GetDPI](#getdpi)|ドット/インチ (DPI) のビットマップを返す|
-|[CD2DBitmap::GetPixelFormat](#getpixelformat)|ビットマップのピクセル形式とアルファ モードを取得します。|
-|[CD2DBitmap::GetPixelSize](#getpixelsize)|ビットマップのサイズをデバイスに依存しない単位 (ピクセル単位) を返します|
-|[CD2DBitmap::GetSize](#getsize)|ビットマップのサイズ、デバイスに依存しないピクセル (Dip) を返します|
-|[CD2DBitmap::IsValid](#isvalid)|リソースの有効性を確認します (上書き[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid))。|
+|[CD2D ビットマップ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
+|[ビットマップからコピーします。](#copyfrombitmap)|指定したビットマップから指定した領域を現在のビットマップにコピーします。|
+|[メモリからコピーします。](#copyfrommemory)|指定した領域をメモリから現在のビットマップにコピーします。|
+|[ソースのコピーを作成します。](#copyfromrendertarget)|指定したレンダー ターゲットから現在のビットマップに指定した領域をコピーします。|
+|[CD2D ビットマップ::作成](#create)|CD2D ビットマップを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2D ビットマップ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2D リソース::Dエストロイ](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。|
+|[CD2Dビットマップ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
+|[CD2D ビットマップ::取得します。](#get)|ID2D1 ビットマップ インターフェイスを返します。|
+|[CD2D ビットマップ::ゲットドピ](#getdpi)|ビットマップの 1 インチあたりのドット数 (DPI) を返します。|
+|[CD2D ビットマップ::ピクセルフォーマット](#getpixelformat)|ビットマップのピクセル形式とアルファ モードを取得します。|
+|[ビットマップを使用します。](#getpixelsize)|ビットマップのサイズをデバイスに依存する単位 (ピクセル) で返します。|
+|[CD2D ビットマップ::ゲットサイズ](#getsize)|ビットマップのサイズをデバイスに依存しないピクセル (DIP) で返します。|
+|[CD2D ビットマップ::IsValid](#isvalid)|リソースの妥当性を確認します[(CD2D リソースをオーバーライドします::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::CommonInit](#commoninit)|オブジェクトを初期化します|
+|[CD2Dビットマップ::コモンイニト](#commoninit)|オブジェクトを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|返します ID2D1Bitmap インターフェイス|
+|[CD2D ビットマップ:: 演算子 ID2D1 ビットマップ*](#operator_id2d1bitmap_star)|ID2D1 ビットマップ インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE の場合、m_hBmpSrc を破棄する必要があります。それ以外の場合は FALSE です。|
-|[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|ソース ビットマップ ハンドル。|
-|[CD2DBitmap::m_lpszType](#m_lpsztype)|リソースの種類。|
-|[CD2DBitmap::m_pBitmap](#m_pbitmap)|ID2D1Bitmap オブジェクトへのポインターを格納します。|
-|[CD2DBitmap::m_sizeDest](#m_sizedest)|送信先のサイズをビットマップします。|
-|[CD2DBitmap::m_strPath](#m_strpath)|Botmap ファイルのパス。|
-|[CD2DBitmap::m_uiResID](#m_uiresid)|ビットマップのリソース id です。|
+|[CD2D ビットマップ:m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|m_hBmpSrc破棄する場合は TRUE。それ以外の場合は FALSE。|
+|[CD2D ビットマップ::m_hBmpSrc](#m_hbmpsrc)|ソース ビットマップ ハンドル。|
+|[CD2D ビットマップ:m_lpszType](#m_lpsztype)|リソースの種類。|
+|[CD2D ビットマップ:m_pBitmap](#m_pbitmap)|ID2D1Bitmap オブジェクトへのポインターを格納します。|
+|[CD2D ビットマップ::m_sizeDest](#m_sizedest)|ビットマップの出力先のサイズ。|
+|[CD2D ビットマップ:m_strPath](#m_strpath)|ボットマップ ファイルのパス。|
+|[CD2D ビットマップ:m_uiResID](#m_uiresid)|ビットマップ リソース ID。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[リソース](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBitmap`
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="_dtorcd2dbitmap"></a>CD2D ビットマップ::~CD2D ビットマップ
 
 デストラクターです。 D2D ビットマップ オブジェクトが破棄されるときに呼び出されます。
 
@@ -145,9 +145,9 @@ class CD2DBitmap : public CD2DResource;
 virtual ~CD2DBitmap();
 ```
 
-##  <a name="attach"></a>  CD2DBitmap::Attach
+## <a name="cd2dbitmapattach"></a><a name="attach"></a>CD2D ビットマップ::アタッチ
 
-既存のリソース インターフェイス オブジェクトにアタッチします。
+既存のリソース インターフェイスをオブジェクトにアタッチします。
 
 ```
 void Attach(ID2D1Bitmap* pResource);
@@ -155,10 +155,10 @@ void Attach(ID2D1Bitmap* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*pResource*<br/>
-既存のリソース インターフェイスです。 Nll は指定できません。
+*リソース*<br/>
+既存のリソース インターフェイス。 Nll は指定できません。
 
-##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="cd2dbitmap"></a>CD2D ビットマップ::CD2D ビットマップ
 
 リソースから CD2DBitmap オブジェクトを構築します。
 
@@ -189,28 +189,28 @@ CD2DBitmap(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParentTarget*<br/>
+*ターゲット*<br/>
 レンダー ターゲットへのポインター。
 
-*uiResID*<br/>
+*UIResID*<br/>
 リソースのリソース ID 番号。
 
-*lpszType*<br/>
+*lpsz タイプ*<br/>
 リソースの種類を含む null で終わる文字列へのポインター。
 
-*sizeDest*<br/>
-ビットマップの送信先のサイズ。
+*サイズ最も大きな*<br/>
+ビットマップのコピー先のサイズ。
 
-*bAutoDestroy*<br/>
-所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。
+*b自動破壊*<br/>
+オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-*lpszPath*<br/>
-ファイルの名前を含む null で終わる文字列へのポインター。
+*パス*<br/>
+ファイル名を含む null で終わる文字列へのポインター。
 
 *hbmpSrc*<br/>
-ビットマップへのハンドルします。
+ビットマップへのハンドル。
 
-##  <a name="commoninit"></a>  CD2DBitmap::CommonInit
+## <a name="cd2dbitmapcommoninit"></a><a name="commoninit"></a>CD2Dビットマップ::コモンイニト
 
 オブジェクトを初期化します。
 
@@ -218,9 +218,9 @@ CD2DBitmap(
 void CommonInit();
 ```
 
-##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap
+## <a name="cd2dbitmapcopyfrombitmap"></a><a name="copyfrombitmap"></a>ビットマップからコピーします。
 
-指定した領域を指定したビットマップから現在のビットマップにコピーします。
+指定したビットマップから指定した領域を現在のビットマップにコピーします。
 
 ```
 HRESULT CopyFromBitmap(
@@ -231,22 +231,22 @@ HRESULT CopyFromBitmap(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBitmap*<br/>
-コピーするビットマップ。
+*ビットマップ*<br/>
+コピー元のビットマップ。
 
-*destPoint*<br/>
-現在のビットマップ srcRect でする地域が指定された領域の左上隅がコピーされます。
+*デストポイント*<br/>
+現在のビットマップで、srcRect で指定した領域がコピーされる領域の左上隅。
 
 *srcRect*<br/>
 コピーするビットマップの領域。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory
+## <a name="cd2dbitmapcopyfrommemory"></a><a name="copyfrommemory"></a>メモリからコピーします。
 
-指定した領域をメモリからの現在のビットマップにコピーします。
+指定した領域をメモリから現在のビットマップにコピーします。
 
 ```
 HRESULT CopyFromMemory(
@@ -257,22 +257,22 @@ HRESULT CopyFromMemory(
 
 ### <a name="parameters"></a>パラメーター
 
-*srcData*<br/>
+*srcデータ*<br/>
 コピーするデータ。
 
 *ピッチ*<br/>
-ストライド、または srcData に格納されているソース ビットマップのピッチ、します。 Stride は、スキャン ライン (メモリ内のピクセルの 1 つの行) のバイト数です。 次の式から算出できる stride: ピクセル幅\*ピクセル + メモリ スペースあたりのバイト数。
+srcData に格納されているソース ビットマップのストライド(ピッチ)です。 stride はスキャンラインのバイト数 (メモリ内のピクセルの 1 行) です。 stride は、ピクセルごとのピクセル幅\*バイト + メモリパディングの式から計算できます。
 
-*destRect*<br/>
-現在のビットマップ srcRect でする地域が指定された領域の左上隅がコピーされます。
+*デストレクト*<br/>
+現在のビットマップで、srcRect で指定した領域がコピーされる領域の左上隅。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget
+## <a name="cd2dbitmapcopyfromrendertarget"></a><a name="copyfromrendertarget"></a>ソースのコピーを作成します。
 
-コピーの現在のビットマップに、指定された対象から指定した領域がターゲットをレンダリングします。
+指定したレンダー ターゲットから指定した領域を現在のビットマップにコピーします。
 
 ```
 HRESULT CopyFromRenderTarget(
@@ -283,22 +283,22 @@ HRESULT CopyFromRenderTarget(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRenderTarget*<br/>
-レンダー ターゲットをコピーする領域を保持します。
+*ターゲットをレンダリングします。*<br/>
+コピーする領域を含むレンダー ターゲット。
 
-*destPoint*<br/>
-現在のビットマップ srcRect でする地域が指定された領域の左上隅がコピーされます。
+*デストポイント*<br/>
+現在のビットマップで、srcRect で指定した領域がコピーされる領域の左上隅。
 
 *srcRect*<br/>
-コピーするレンダリング ターゲットの領域。
+コピーするレンダー ターゲットの領域。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="create"></a>  CD2DBitmap::Create
+## <a name="cd2dbitmapcreate"></a><a name="create"></a>CD2D ビットマップ::作成
 
-CD2DBitmap を作成します。
+CD2D ビットマップを作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -306,24 +306,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*pRenderTarget*<br/>
+*ターゲットをレンダリングします。*<br/>
 レンダー ターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="destroy"></a>  CD2DBitmap::Destroy
+## <a name="cd2dbitmapdestroy"></a><a name="destroy"></a>CD2D ビットマップ::Dエストロイ
 
-CD2DBitmap オブジェクトを破棄します。
+オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmap::Detach
+## <a name="cd2dbitmapdetach"></a><a name="detach"></a>CD2Dビットマップ::Dエタッハ
 
-オブジェクトからリソースのインターフェイスをデタッチします。
+オブジェクトからリソース インターフェイスをデタッチします。
 
 ```
 ID2D1Bitmap* Detach();
@@ -331,9 +331,9 @@ ID2D1Bitmap* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスのデタッチされたリソースへのポインター。
+デタッチされたリソース インターフェイスへのポインター。
 
-##  <a name="get"></a>  CD2DBitmap::Get
+## <a name="cd2dbitmapget"></a><a name="get"></a>CD2D ビットマップ::取得します。
 
 ID2D1Bitmap インターフェイスを返します。
 
@@ -343,11 +343,11 @@ ID2D1Bitmap* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Bitmap インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+ID2D1Bitmap インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
 
-##  <a name="getdpi"></a>  CD2DBitmap::GetDPI
+## <a name="cd2dbitmapgetdpi"></a><a name="getdpi"></a>CD2D ビットマップ::ゲットドピ
 
-ドット/インチ (DPI) のビットマップを返します。
+ビットマップのドット/インチ (DPI) を返します。
 
 ```
 CD2DSizeF GetDPI() const;
@@ -355,9 +355,9 @@ CD2DSizeF GetDPI() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップの水平および垂直 DPI。
+ビットマップの水平方向および垂直方向の DPI。
 
-##  <a name="getpixelformat"></a>  CD2DBitmap::GetPixelFormat
+## <a name="cd2dbitmapgetpixelformat"></a><a name="getpixelformat"></a>CD2D ビットマップ::ピクセルフォーマット
 
 ビットマップのピクセル形式とアルファ モードを取得します。
 
@@ -367,11 +367,11 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップのピクセル形式とアルファ モードです。
+ビットマップのピクセル形式とアルファ モード。
 
-##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize
+## <a name="cd2dbitmapgetpixelsize"></a><a name="getpixelsize"></a>ビットマップを使用します。
 
-ビットマップのサイズ、デバイスに依存する単位 (ピクセル単位) を返します。
+ビットマップのサイズをデバイスに依存する単位 (ピクセル) で返します。
 
 ```
 CD2DSizeU GetPixelSize() const;
@@ -379,11 +379,11 @@ CD2DSizeU GetPixelSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップのピクセル単位でサイズ.
+ビットマップのサイズ (ピクセル単位)。
 
-##  <a name="getsize"></a>  CD2DBitmap::GetSize
+## <a name="cd2dbitmapgetsize"></a><a name="getsize"></a>CD2D ビットマップ::ゲットサイズ
 
-ビットマップのサイズ、デバイスに依存しないピクセル (Dip) を返します。
+ビットマップのサイズをデバイスに依存しないピクセル (DIP) で返します。
 
 ```
 CD2DSizeF GetSize() const;
@@ -391,9 +391,9 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-Dip は、ビットマップのサイズ。
+ビットマップのサイズ (DIP 単位)。
 
-##  <a name="isvalid"></a>  CD2DBitmap::IsValid
+## <a name="cd2dbitmapisvalid"></a><a name="isvalid"></a>CD2D ビットマップ::IsValid
 
 リソースの有効性を確認します。
 
@@ -403,17 +403,17 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-リソースが有効な場合は TRUE。それ以外の場合は FALSE です。
+リソースが有効な場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="m_bautodestroyhbmp"></a>  CD2DBitmap::m_bAutoDestroyHBMP
+## <a name="cd2dbitmapm_bautodestroyhbmp"></a><a name="m_bautodestroyhbmp"></a>CD2D ビットマップ:m_bAutoDestroyHBMP
 
-TRUE の場合、m_hBmpSrc を破棄する必要があります。それ以外の場合は FALSE です。
+m_hBmpSrc破棄する場合は TRUE。それ以外の場合は FALSE。
 
 ```
 BOOL m_bAutoDestroyHBMP;
 ```
 
-##  <a name="m_hbmpsrc"></a>  CD2DBitmap::m_hBmpSrc
+## <a name="cd2dbitmapm_hbmpsrc"></a><a name="m_hbmpsrc"></a>CD2D ビットマップ::m_hBmpSrc
 
 ソース ビットマップ ハンドル。
 
@@ -421,7 +421,7 @@ BOOL m_bAutoDestroyHBMP;
 HBITMAP m_hBmpSrc;
 ```
 
-##  <a name="m_lpsztype"></a>  CD2DBitmap::m_lpszType
+## <a name="cd2dbitmapm_lpsztype"></a><a name="m_lpsztype"></a>CD2D ビットマップ:m_lpszType
 
 リソースの種類。
 
@@ -429,7 +429,7 @@ HBITMAP m_hBmpSrc;
 LPCTSTR m_lpszType;
 ```
 
-##  <a name="m_pbitmap"></a>  CD2DBitmap::m_pBitmap
+## <a name="cd2dbitmapm_pbitmap"></a><a name="m_pbitmap"></a>CD2D ビットマップ:m_pBitmap
 
 ID2D1Bitmap オブジェクトへのポインターを格納します。
 
@@ -437,33 +437,33 @@ ID2D1Bitmap オブジェクトへのポインターを格納します。
 ID2D1Bitmap* m_pBitmap;
 ```
 
-##  <a name="m_sizedest"></a>  CD2DBitmap::m_sizeDest
+## <a name="cd2dbitmapm_sizedest"></a><a name="m_sizedest"></a>CD2D ビットマップ::m_sizeDest
 
-送信先のサイズをビットマップします。
+ビットマップの出力先のサイズ。
 
 ```
 CD2DSizeU m_sizeDest;
 ```
 
-##  <a name="m_strpath"></a>  CD2DBitmap::m_strPath
+## <a name="cd2dbitmapm_strpath"></a><a name="m_strpath"></a>CD2D ビットマップ:m_strPath
 
-Botmap ファイルのパス。
+ボットマップ ファイルのパス。
 
 ```
 CString m_strPath;
 ```
 
-##  <a name="m_uiresid"></a>  CD2DBitmap::m_uiResID
+## <a name="cd2dbitmapm_uiresid"></a><a name="m_uiresid"></a>CD2D ビットマップ:m_uiResID
 
-ビットマップのリソース id です。
+ビットマップ リソース ID。
 
 ```
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
+## <a name="cd2dbitmapoperator-id2d1bitmap"></a><a name="operator_id2d1bitmap_star"></a>CD2D ビットマップ:: 演算子 ID2D1 ビットマップ*
 
-返します ID2D1Bitmap インターフェイス
+ID2D1 ビットマップ インターフェイスを返します。
 
 ```
 operator ID2D1Bitmap*();
@@ -471,7 +471,7 @@ operator ID2D1Bitmap*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Bitmap インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+ID2D1Bitmap インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
 
 ## <a name="see-also"></a>関連項目
 

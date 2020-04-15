@@ -1,5 +1,5 @@
 ---
-title: '方法: 部分的に信頼されたアプリケーションの作成 (C +/cli CLI)'
+title: '方法 : 部分信頼されたアプリケーションを作成する (C++/CLI)'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9df3a751f4073472b9495425599aaf43878db99a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364402"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>方法: CRT ライブラリ DLL への依存関係を削除することで部分的に信頼されたアプリケーションを作成します。
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>方法: CRT ライブラリ DLL との依存関係を削除して部分信頼アプリケーションを作成する
 
-このトピックでは、Visual C を使用して、msvcm90.dll との依存関係を削除することで、部分的に信頼された共通言語ランタイム アプリケーションを作成する方法について説明します。
+ここでは、msvcm90.dll への依存関係を削除して、Visual C++ を使用して部分的に信頼された共通言語ランタイム アプリケーションを作成する方法について説明します。
 
-Visual C アプリケーションで構築された **/clr** C ランタイム ライブラリの一部である msvcm90.dll との依存関係になります。 部分信頼環境で使用するアプリケーションを実行する場合に、特定のコード アクセス セキュリティ規則、DLL が CLR に適用されます。 そのため、msvcm90.dll とにはネイティブ コードが含まれていますとにコード アクセス セキュリティ ポリシーを適用することはできませんので、この依存関係を削除する必要があります。
+**/clr**でビルドされた Visual C++ アプリケーションは、C ランタイム ライブラリの一部である msvcm90.dll に依存します。 アプリケーションを部分信頼環境で使用する場合、CLR は、DLL に特定のコード アクセス セキュリティ規則を適用します。 したがって、msvcm90.dll にはネイティブ コードが含まれ、コード アクセス セキュリティ ポリシーを適用できないため、この依存関係を削除する必要があります。
 
-使用する必要があります、アプリケーションは、C ランタイム ライブラリの機能は使用しないで、コードからこのライブラリの依存関係を削除したい場合は、**とき**リンカー オプションとリンクします。 これらのライブラリは、初期化と、アプリケーションの初期化解除用のオブジェクト ファイルを含めることが、例外クラスは、初期化コードで使用され、例外処理コードを管理します。 これらのライブラリのいずれかでリンクすると、msvcm90.dll との依存関係が削除されます。
+アプリケーションが C ランタイム ライブラリの機能を使用せず、コードからこのライブラリへの依存関係を削除する場合は **、/NODEFAULTLIB:msvcmrt.lib**リンカー オプションを使用し、ptrustm.lib または ptrustmd.lib とリンクする必要があります。 これらのライブラリには、アプリケーションの初期化と初期化解除のためのオブジェクト ファイル、初期化コードで使用される例外クラス、マネージ例外処理コードが含まれています。 これらのライブラリの 1 つにリンクすると、msvcm90.dll への依存関係が削除されます。
 
 > [!NOTE]
->  Ptrust ライブラリを使用するアプリケーションのアセンブリの初期化の順序が異なる場合があります。 通常のアプリケーションでは、アセンブリは通常は読み込まれますが、これは保証されませんが、逆の順序でアンロードします。 部分信頼アプリケーションでは、アセンブリは通常に読み込まれる順序と同じ順序でアンロードします。 これは、または保証されません。
+> アセンブリの初期化解除の順序は、ptrust ライブラリを使用するアプリケーションで異なる場合があります。 通常のアプリケーションでは、通常、アセンブリは読み込まれる順序と逆の順序でアンロードされますが、これは保証されません。 部分信頼アプリケーションの場合、通常、アセンブリは読み込まれる順序と同じ順序でアンロードされます。 これは、また、保証されていません。
 
-### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>部分的に信頼を作成するには、混合 (/clr) アプリケーション
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>部分信頼混合 (/clr) アプリケーションを作成するには
 
-1. Msvcm90.dll との依存関係を削除するを使用してこのライブラリを含めないようにリンカーに指定する必要があります、**とき**リンカー オプション。 この操作は、Visual Studio 開発環境を使用またはプログラムを参照してください。 方法について[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md)します。
+1. msvcm90.dll への依存関係を削除するには **、/NODEFAULTLIB:msvcmrt.lib**リンカー オプションを使用して、このライブラリを含めないようにリンカーに指定する必要があります。 Visual Studio 開発環境またはプログラムを使用してこれを行う方法については[、「/NODEFAULTLIB (ライブラリを無視する)」](../build/reference/nodefaultlib-ignore-libraries.md)を参照してください。
 
-1. リンカー入力の依存関係を ptrustm ライブラリを追加できます。 リリース モードでアプリケーションを構築している場合は、ptrustm.lib を使用します。 デバッグ モードでは、ptrustmd.lib を使用します。 この操作は、Visual Studio 開発環境を使用またはプログラムを参照してください。 方法について[します。Lib ファイルをリンカー入力として](../build/reference/dot-lib-files-as-linker-input.md)します。
+1. ptrustm ライブラリの 1 つをリンカー入力の依存関係に追加します。 アプリケーションをリリース モードでビルドする場合は、ptrustm.lib を使用します。 デバッグ モードの場合は、ptrustmd.lib を使用します。 Visual Studio 開発環境またはプログラムを使用してこれを行う方法については、「 [」を参照してください。リンカー入力としてファイルをLib.](../build/reference/dot-lib-files-as-linker-input.md)
 
 ## <a name="see-also"></a>関連項目
 

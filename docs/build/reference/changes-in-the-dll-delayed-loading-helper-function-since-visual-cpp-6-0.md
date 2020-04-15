@@ -7,51 +7,51 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536729e27c89d068957ea451355957e4a35348ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320610"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点
 
-コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例えば:
+コンピュータに複数のバージョンの Visual C++ がある場合、または独自のヘルパー関数を定義している場合は、DLL の遅延読み込みヘルパー関数に対する変更の影響を受ける可能性があります。 次に例を示します。
 
-- **_ _delayloadhelper**が **_ _delayloadhelper2**
+- **__delayLoadHelper**は今 **__delayLoadHelper2**
 
-- **__pfnDliNotifyHook**が **__pfnDliNotifyHook2**
+- **__pfnDliNotifyHook**は今 **__pfnDliNotifyHook2**
 
-- **__pfnDliFailureHook**が **__pfnDliFailureHook2**
+- **__pfnDliFailureHook**は**現在__pfnDliFailureHook2**
 
-- **__FUnloadDelayLoadedDLL**が **__FUnloadDelayLoadedDLL2**
+- **__FUnloadDelayLoadedDLL**は今 **__FUnloadDelayLoadedDLL2**
 
 > [!NOTE]
->  既定のヘルパー関数を使用している場合は、これらの変更は影響を与えません。 リンカーを呼び出す方法に関する変更はありません。
+> 既定のヘルパー関数を使用している場合、これらの変更は影響を与えありません。 リンカーの呼び出し方法に関する変更はありません。
 
-## <a name="multiple-versions-of-visual-c"></a>複数のバージョンの Visual C
+## <a name="multiple-versions-of-visual-c"></a>複数バージョンの Visual C++
 
-コンピューターに複数のバージョンの Visual C をした場合、リンカーは、delayimp.lib と一致することを確認します。 いずれかを報告リンカー エラーが発生した不一致がある場合は`___delayLoadHelper2@8`または`___delayLoadHelper@8`未解決の外部シンボルとして。 前者を古い delayimp.lib では、新しいリンカーを意味し、後者の場合、古いリンカーを新しい delayimp.lib を意味します。
+コンピューターに複数のバージョンの Visual C++ がある場合は、リンカーが delayimp.lib と一致することを確認してください。 不一致がある場合は、リンカー エラー報告のいずれかまたは`___delayLoadHelper2@8``___delayLoadHelper@8`未解決の外部シンボルとして表示されます。 前者は古い delayimp.lib を持つ新しいリンカーを意味し、後者は新しい delayimp.lib を持つ古いリンカーを意味します。
 
-未解決のリンカー エラーが発生する場合は、実行[dumpbin/linkermember](linkermember.md): 1 にするヘルパー関数が代わりに定義されているヘルパー関数を含める必要のある delayimp.lib にします。 ヘルパー関数は、オブジェクト ファイルで定義することも可能性があります。実行[dumpbin/symbols](symbols.md)を探して`delayLoadHelper(2)`します。
+未解決のリンカー エラーが発生した場合は、ヘルパー関数が含まれると予想される delayimp.lib で[dumpbin /linkermember](linkermember.md):1 を実行し、代わりにどのヘルパー関数が定義されているかを確認します。 ヘルパー関数はオブジェクトファイルで定義することもできます。[ダンプビン /シンボル](symbols.md)を実行し`delayLoadHelper(2)`、 を検索します。
 
-わかっている場合、Visual C 6.0 リンカーが、あります。
+Visual C++ 6.0 リンカーがわかっている場合は、次の手順を実行します。
 
-- 遅延読み込みヘルパーの .lib ファイルや .obj ファイルを定義するかどうかを判断する上での dumpbin の実行 **_ _delayloadhelper2**します。 それ以外の場合は、リンクは失敗します。
+- 遅延読み込みヘルパーの .lib ファイルまたは .obj ファイルで dumpbin を実行して **、__delayLoadHelper2**定義されているかどうかを判断します。 そうしないと、リンクは失敗します。
 
-- 定義 **_ _delayloadhelper**遅延読み込みヘルパーの .lib または .obj ファイル。
+- 遅延読み込みヘルパーの .lib ファイルまたは .obj ファイルに **__delayLoadHelper**を定義します。
 
-## <a name="user-defined-helper-function"></a>ユーザー定義のヘルパー関数
+## <a name="user-defined-helper-function"></a>ユーザー定義ヘルパー関数
 
-独自のヘルパー関数を定義し、現在のバージョンの Visual C を使用している場合は、次の操作を行います。
+独自のヘルパー関数を定義し、現在のバージョンの Visual C++ を使用している場合は、次の操作を行います。
 
-- ヘルパー関数の名前を変更 **_ _delayloadhelper2**します。
+- ヘルパー関数の名前を **__delayLoadHelper2**に変更します。
 
-- 遅延記述子 (delayimp.h で ImgDelayDescr) でポインターは、絶対アドレス (VAs) から相対アドレス (Rva) 32 ビットおよび 64 ビットの両方のプログラムに正常に動作に変更されましたが、ために、これらをポインターに変換する必要があります。 新しい関数が導入されています。PFromRva、delayhlp.cpp で見つかりました。 それぞれの記述子フィールドのこの関数を使用すると、それらをいずれかの 32 ビットまたは 64 ビット ポインターに変換します。 既定の遅延読み込みヘルパー関数は、例として使用する適切なテンプレートです。
+- 遅延記述子 (delayimp.h の ImgDelayDescr) のポインターは、絶対アドレス (VA) から相対アドレス (RVA) に変更され、32 ビットと 64 ビットの両方のプログラムで期待どおりに動作するため、これらをポインターに戻す必要があります。 新しい関数が導入されました: PFromRva, delayhlp.cpp で見つかりました. 記述子の各フィールドでこの関数を使用して、それらを 32 ビットまたは 64 ビットのポインターに変換できます。 既定の遅延読み込みヘルパー関数は、引き続き例として使用する適切なテンプレートです。
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込み DLL のすべてのインポートを読み込む
 
-リンカーは、遅延読み込みをするように指定した DLL からのすべてのインポートを読み込むことができます。 参照してください[すべてのインポートを「読み込み](loading-all-imports-for-a-delay-loaded-dll.md)詳細についてはします。
+リンカーは、遅延読み込みとして指定した DLL からすべてのインポートを読み込むことができます。 詳細については、「[遅延読み込み DLL のすべてのインポートを読み込む](loading-all-imports-for-a-delay-loaded-dll.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

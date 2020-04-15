@@ -91,18 +91,18 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: bbd4d7b6e7e7668100b2694fdcf3b785d7681ca3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c6a001797e90bd7381358abb16612926442e8d9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371819"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
-このテンプレートクラスは、ランダムアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー `vector` は、一連の要素を連続したストレージブロックとして管理するために使用します。 ブロックは、必要に応じて拡張される配列として実装されます。
+テンプレート クラスは、ランダム アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー`vector`を使用して、連続したストレージ・ブロックとしてエレメントのシーケンスを管理します。 ブロックは、オンデマンドで拡張される配列として実装されます。
 
-次の説明では、`GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、`Value^`します。
+以下の説明では、`GValue`後者が ref 型でない限り *、値*と同じです。 `Value^`
 
 ## <a name="syntax"></a>構文
 
@@ -127,9 +127,9 @@ template<typename Value>
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/vector >
+**ヘッダー:**\<クリオト/ベクトル>
 
-**名前空間:** cliext
+**名前空間:** クエクスキ
 
 ## <a name="declarations"></a>宣言
 
@@ -139,10 +139,10 @@ template<typename Value>
 |[vector::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[vector::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[vector::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[vector::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリックインターフェイスの型。|
-|[vector::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリックインターフェイスの反復子の型。|
-|[vector::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリックインターフェイスの反転反復子の型。|
-|[vector::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリックインターフェイスの要素の型。|
+|[vector::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリック インターフェイスの型。|
+|[vector::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリック インターフェイスの反復器の型。|
+|[vector::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの逆反復器の型。|
+|[vector::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|
 |[vector::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
 |[vector::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[vector::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
@@ -166,11 +166,11 @@ template<typename Value>
 |[vector::push_back (STL/CLR)](#push_back)|新しい最後の要素を追加します。|
 |[vector::rbegin (STL/CLR)](#rbegin)|反転被制御シーケンスの先頭を指定します。|
 |[vector::rend (STL/CLR)](#rend)|反転被制御シーケンスの末尾を指定します。|
-|[vector::reserve (STL/CLR)](#reserve)|コンテナーの最小拡張容量を確保します。|
+|[vector::reserve (STL/CLR)](#reserve)|コンテナーの最小の拡張容量を確保します。|
 |[vector::resize (STL/CLR)](#resize)|要素の数を変更します。|
 |[vector::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[vector::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|
-|[vector::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
+|[vector::to_array (STL/CLR)](#to_array)|制御されたシーケンスを新しい配列にコピーします。|
 |[vector::vector (STL/CLR)](#vector)|コンテナー オブジェクトを構築します。|
 
 |プロパティ|説明|
@@ -182,40 +182,40 @@ template<typename Value>
 |--------------|-----------------|
 |[vector::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
 |[vector::operator(STL/CLR)](#op)|指定した位置にある要素にアクセスします。|
-|[operator!= (vector) (STL/CLR)](#op_neq)|`vector` オブジェクトが別の `vector` オブジェクトと等しくないかどうかを判断します。|
-|[operator< (vector) (STL/CLR)](#op_lt)|`vector` オブジェクトが、別の `vector` オブジェクトより小さいかどうかを判断します。|
-|[operator<= (vector) (STL/CLR)](#op_lteq)|`vector` オブジェクトが、別の `vector` オブジェクト以下かどうかを判断します。|
-|[operator== (vector) (STL/CLR)](#op_eq)|`vector` オブジェクトが別の `vector` オブジェクトと等しいかどうかを判断します。|
-|[operator> (vector) (STL/CLR)](#op_gt)|`vector` オブジェクトが、別の `vector` オブジェクトより大きいかどうかを判断します。|
-|[operator>= (vector) (STL/CLR)](#op_gteq)|`vector` オブジェクトが、別の `vector` オブジェクト以上かどうかを判断します。|
+|[演算子!= (ベクター) (STL/CLR)](#op_neq)|オブジェクトが別`vector``vector`のオブジェクトと等しくないかどうかを判断します。|
+|[演算子< (ベクトル) (STL/CLR)](#op_lt)|オブジェクトが別`vector``vector`のオブジェクトより小さいかどうかを判断します。|
+|[演算子<= (ベクトル) (STL/CLR)](#op_lteq)|オブジェクトが別`vector``vector`のオブジェクト以下かどうかを判断します。|
+|[演算子==(ベクトル) (STL/CLR)](#op_eq)|オブジェクトが別`vector``vector`のオブジェクトと等しいかどうかを判断します。|
+|[演算子> (ベクトル) (STL/CLR)](#op_gt)|オブジェクトが別`vector``vector`のオブジェクトより大きいかどうかを判断します。|
+|[operator>= (vector) (STL/CLR)](#op_gteq)|オブジェクトが別`vector``vector`のオブジェクト以上かどうかを判断します。|
 
 ## <a name="interfaces"></a>インターフェイス
 
 |インターフェイス|説明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|オブジェクトを複製します。|
-|<xref:System.Collections.IEnumerable>|要素を順番に処理します。|
-|<xref:System.Collections.ICollection>|要素のグループを維持します。|
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番に処理します。|
-|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
-|<xref:System.Collections.Generic.IList%601>|型指定された要素の順序付けされたグループを維持します。|
-|IVector < 値\>|ジェネリックコンテナーを管理します。|
+|<xref:System.ICloneable>|オブジェクトを複製する。|
+|<xref:System.Collections.IEnumerable>|要素を通してシーケンスします。|
+|<xref:System.Collections.ICollection>|要素のグループを管理します。|
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を通してシーケンスします。|
+|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|
+|<xref:System.Collections.Generic.IList%601>|型指定された要素の順序付けられたグループを維持します。|
+|IVector<値\>|汎用コンテナーを管理します。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクトは、必要に応じて拡張される、格納されている*値*要素の配列を通じて制御するシーケンスのストレージを割り当てて解放します。 新しい要素を追加するコストが一定の時間になるような方法で拡張が発生します。 つまり、制御されるシーケンスの長さが大きくなるにつれて、要素を末尾に追加したときのコストが平均で増加することはありません。 したがって、ベクターは、テンプレートクラス[スタック (STL/CLR)](../dotnet/stack-stl-clr.md)の基になるコンテナーに適しています。
+オブジェクトは、必要に応じて増加する*Value*要素の格納された配列を介して、制御するシーケンスのストレージを割り当て、解放します。 成長は、新しい要素を追加するコストが一定の時間を償却するような方法で発生します。 つまり、制御シーケンスの長さが大きくなるにつれて、最後に要素を追加するコストは平均して増加しません。 したがって、ベクトルは、テンプレート クラス[スタック (STL/CLR)](../dotnet/stack-stl-clr.md)の基になるコンテナーの候補として適しています。
 
-`vector` はランダムアクセス反復子をサポートしています。つまり、1つ目の (front) 要素を0から数えて、最後の (back) 要素を `size() - 1` するように、数値の位置を指定して要素を直接参照できます。 また、ベクターがテンプレートクラス[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)の基になるコンテナーの候補として適していることも意味します。
+A`vector`はランダム アクセス反復子をサポートしており、最初の (前面) 要素の 0 から最後の (背面) 要素まで、数値`size() - 1`位置を指定して要素を直接参照できます。 また、ベクターがテンプレート クラス[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)の基になるコンテナーの候補であることを意味します。
 
-ベクター反復子は、関連付けられた vector オブジェクトへのハンドルを、指定する要素のバイアスと共に格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 Vector 要素のバイアスは、その位置と同じです。
+ベクトル反復子は、指定した要素のバイアスと共に、関連するベクトル オブジェクトへのハンドルを格納します。 反復子は、関連付けられたコンテナー オブジェクトでのみ使用できます。 ベクトル要素のバイアスは、その位置と同じです。
 
-要素を挿入または消去すると、指定した位置に格納されている要素の値が変更されるため、反復子によって指定された値も変更される可能性があります。 (コンテナーは、挿入の前に穴を作成したり、消去後に穴を埋めるために、要素を上下にコピーすることが必要になる場合があります)。ただし、そのバイアスが `[0, size()]`範囲内にある限り、ベクター反復子は有効なままです。 さらに、有効な反復子は dereferencable のままです。これを使用すると、指定した要素の値にアクセスしたり変更したりすることができます。これは、バイアスが `size()`と等しくない場合に限ります。
+要素の挿入または削除は、特定の位置に格納されている要素の値を変更できるため、反復子によって指定された値も変更できます。 (挿入の前に穴を作成したり、消去後に穴を埋めるために、コンテナは要素を上下にコピーする必要があります)。それにもかかわらず、ベクトル反復器は、そのバイアスが範囲`[0, size()]`内にある限り有効です。 さらに、有効な反復子は、バイアスが 等しくない限り、指定した要素値にアクセスしたり変更したりするために使用できます`size()`。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄しないことに注意してください。
+要素を削除または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナを破棄すると、すべての要素が消去されます。 したがって、要素型が ref クラスであるコンテナーは、コンテナーより長い要素が存在することを保証します。 ただし、ハンドルのコンテナーは要素を破棄しないことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="vectorassign-stlclr"></a><a name="assign"></a>vector:: assign (STL/CLR)
+## <a name="vectorassign-stlclr"></a><a name="assign"></a>ベクトル::割り当て(STL/CLR)
 
 すべての要素を置換します。
 
@@ -239,19 +239,19 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 挿入する範囲の末尾。
 
-*right*<br/>
+*そうです*<br/>
 挿入する列挙体。
 
-*val*<br/>
+*ヴァル*<br/>
 挿入する要素の値。
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は、被制御シーケンスを、値*val*の*count*要素の繰り返しで置き換えます。 このメソッドを使用して、すべての要素が同じ値を持つコンテナーを塗りつぶします。
+最初のメンバー関数は、制御されたシーケンスを value *val*の*カウント*要素の繰り返しに置き換えます。 この値を使用して、同じ値を持つ要素をすべてコンテナーに埋めます。
 
-`InIt` が整数型の場合、2番目のメンバー関数は `assign((size_type)first, (value_type)last)`と同じように動作します。 それ以外の場合は、被制御シーケンスを [`first`, `last`) のシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを別のシーケンスにコピーします。
+整数`InIt`型の場合、2 番目のメンバー関数は と同`assign((size_type)first, (value_type)last)`じように動作します。 それ以外の場合は、制御されたシーケンスがシーケンス`first`[ `last`, で置き換えられます。 これを使用して、制御されたシーケンスを別のシーケンスにコピーします。
 
-3番目のメンバー関数は、被制御シーケンスを列挙子*権限*によって指定されたシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを列挙子によって記述されたシーケンスのコピーにします。
+3 番目のメンバー関数は、制御されたシーケンスを、列挙子*right*で指定されたシーケンスに置き換えます。 これを使用して、制御されたシーケンスを列挙子によって記述されたシーケンスのコピーにします。
 
 ### <a name="example"></a>例
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="vectorat-stlclr"></a><a name="at"></a>vector:: at (STL/CLR)
+## <a name="vectorat-stlclr"></a><a name="at"></a>ベクトル::at (STL/CLR)
 
 指定した位置にある要素にアクセスします。
 
@@ -313,7 +313,7 @@ reference at(size_type pos);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの要素への参照を位置*pos*に返します。このメソッドを使用して、既知の位置を持つ要素の読み取りまたは書き込みを行います。
+このメンバー関数は、 *pos*位置にある制御シーケンスの要素への参照を返します。位置がわかっている要素を読み書きするために使用します。
 
 ### <a name="example"></a>例
 
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorback-stlclr"></a><a name="back"></a>vector:: back (STL/CLR)
+## <a name="vectorback-stlclr"></a><a name="back"></a>ベクトル::バック(STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -360,7 +360,7 @@ reference back();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最後の要素にアクセスするために使用します。
+メンバー関数は、制御されたシーケンスの最後の要素への参照を返します。 最後の要素にアクセスするために使用します。
 
 ### <a name="example"></a>例
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>vector:: back_item (STL/CLR)
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>ベクトル::back_item (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -411,7 +411,7 @@ property value_type back_item;
 
 ### <a name="remarks"></a>解説
 
-プロパティは、被制御シーケンスの最後の要素にアクセスします。この要素は、空にすることはできません。 このメソッドは、最後の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
+プロパティは、制御されたシーケンスの最後の要素にアクセスします。 最後の要素が存在することがわかっている場合に、最後の要素を読み書きするために使用します。
 
 ### <a name="example"></a>例
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="vectorbegin-stlclr"></a><a name="begin"></a>vector:: begin (STL/CLR)
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a>ベクトル::開始 (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -462,7 +462,7 @@ iterator begin();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定するランダムアクセス反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの最初の要素、または空のシーケンスの末尾を越えた直後を指定するランダム アクセス反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>vector:: capacity (STL/CLR)
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>ベクトル::容量(STL/CLR)
 
 コンテナーに割り当てられたストレージの容量を報告します。
 
@@ -517,7 +517,7 @@ size_type capacity();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスを保持するために現在割り当てられているストレージを返します。この値は、少なくとも[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`になります。 これを使用して、被制御シーケンス用にストレージを再割り当てする前に、コンテナーの拡張量を決定します。
+このメンバー関数は、制御されたシーケンスを保持するために現在割り当てられているストレージを[返](../dotnet/vector-size-stl-clr.md)`()`します。 これを使用して、コンテナーが、制御されたシーケンスの記憶域を再割り当てする前に、どの程度拡張できるかを決定します。
 
 ### <a name="example"></a>例
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorclear-stlclr"></a><a name="clear"></a>vector:: clear (STL/CLR)
+## <a name="vectorclear-stlclr"></a><a name="clear"></a>ベクトル::クリア(STL/CLR)
 
 すべての要素を削除します。
 
@@ -567,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、 [vector:](../dotnet/vector-erase-stl-clr.md) : begin (stl/clr)`(` vector:: [begin](../dotnet/vector-begin-stl-clr.md) (stl/clr)`(),` vector:: [end (stl/](../dotnet/vector-end-stl-clr.md) clr)`())`を効果的に呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+メンバー関数は効果的にベクターを呼び出します[::消去 (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [ベクター::開始 (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [ベクトル::終了 (STL/CLR)](../dotnet/vector-end-stl-clr.md)`())`. これを使用して、制御されたシーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>vector:: const_iterator (STL/CLR)
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>ベクトル::const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -624,7 +624,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数ランダムアクセス反復子として使用できる、指定されていない型 `T2` のオブジェクトを表します。
+この型は、被制御シーケンスの定数ランダム`T2`アクセス反復器として使用できる、未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>vector:: const_reference (STL/CLR)
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>ベクトル::const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -697,9 +697,9 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>vector:: const_reverse_iterator (STL/CLR)
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>ベクトル::const_reverse_iterator (STL/CLR)
 
-被制御シーケンスの定数反転反復子の型。
+制御シーケンスの定数逆反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -709,7 +709,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
+この型は、被制御シーケンスの定数逆`T4`反復器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -739,9 +739,9 @@ int main()
 c b a
 ```
 
-## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>vector::d ifference_type (STL/CLR)
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>ベクトル::difference_型 (STL/CLR)
 
-2つの要素間の符号付き距離の型。
+2 つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -751,7 +751,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、署名された要素の数を表します。
+この型は、符号付き要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="vectorempty-stlclr"></a><a name="empty"></a>vector:: empty (STL/CLR)
+## <a name="vectorempty-stlclr"></a><a name="empty"></a>ベクトル::空 (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -805,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`に相当します。 このメソッドを使用して、ベクターが空であるかどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[ベクトル::サイズ(STL/CLR)と](../dotnet/vector-size-stl-clr.md)`() == 0`同等です。 ベクターが空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="vectorend-stlclr"></a><a name="end"></a>vector:: end (STL/CLR)
+## <a name="vectorend-stlclr"></a><a name="end"></a>ベクトル::終了 (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -856,7 +856,7 @@ iterator end();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示すランダムアクセス反復子を返します。 これを使用して被制御シーケンスの現在の (`current`) 末尾を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの末尾を越えたところを指すランダム アクセス反復器を返します。 これを使用して被制御シーケンスの現在の (`current`) 末尾を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="vectorerase-stlclr"></a><a name="erase"></a>vector:: erase (STL/CLR)
+## <a name="vectorerase-stlclr"></a><a name="erase"></a>ベクトル::消去(STL /CLR)
 
 指定した位置にある要素を削除します。
 
@@ -917,20 +917,20 @@ iterator erase(iterator first, iterator last);
 消去する範囲の先頭。
 
 *last*<br/>
-消去する範囲の末尾。
+消去する範囲の終わり。
 
 *where*<br/>
 消去する要素。
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は、によって示さ*れる*被制御シーケンスの要素を削除します。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数は、 によって指される制御シーケンスの要素を*削除します。* 1 つの要素を削除する場合に使用します。
 
-2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 これを使用して、0個以上の連続する要素を削除します。
+2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 この値を使用して、連続する要素を 0 個以上削除します。
 
-両方のメンバー関数は、削除された要素の後に残った最初の要素を指定する反復子を返します。そのような要素が存在しない場合は[vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)`()` します。
+両方のメンバー関数は、削除された要素を超えて残っている最初の要素を指定する反復子[を返](../dotnet/vector-end-stl-clr.md)`()`します。
 
-要素が消去されるときに、要素のコピー数は、消去の終了位置とシーケンスの一番近い方の要素の数で線形になります。 (シーケンスの両端で1つ以上の要素を消去すると、要素のコピーは行われません)。
+要素を消去する場合、要素のコピー数は、消去の終了とシーケンスの終わり近くの要素の数で線形になります。 (シーケンスの両端で 1 つ以上の要素を削除しても、要素のコピーは発生しません)。
 
 ### <a name="example"></a>例
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="vectorfront-stlclr"></a><a name="front"></a>vector:: front (STL/CLR)
+## <a name="vectorfront-stlclr"></a><a name="front"></a>ベクトル::フロント(STL /CLR)
 
 最初の要素にアクセスします。
 
@@ -991,7 +991,7 @@ reference front();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最初の要素への参照を返します。この要素は、空にすることはできません。 これは、最初の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
+メンバー関数は、制御されたシーケンスの最初の要素への参照を返します。 最初の要素が存在することがわかっている場合に、この要素を使用して読み書きします。
 
 ### <a name="example"></a>例
 
@@ -1030,7 +1030,8 @@ front() = a
 x b c
 ```
 
-## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>vector:: front_item (STL/CLR)
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>ベクトル::front_item (STL/CLR)
+
 最初の要素にアクセスします。
 
 ### <a name="syntax"></a>構文
@@ -1041,7 +1042,7 @@ property value_type front_item;
 
 ### <a name="remarks"></a>解説
 
-プロパティは、被制御シーケンスの最初の要素にアクセスします。この要素は、空にすることはできません。 これは、最初の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
+プロパティは、制御されたシーケンスの最初の要素にアクセスします。 最初の要素が存在することがわかっている場合に、この要素を使用して読み書きします。
 
 ### <a name="example"></a>例
 
@@ -1080,8 +1081,9 @@ front_item = a
 x b c
 ```
 
-## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>vector:: generic_container (STL/CLR)
-コンテナーのジェネリックインターフェイスの型。
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>ベクトル::generic_container (STL/CLR)
+
+コンテナーのジェネリック インターフェイスの型。
 
 ### <a name="syntax"></a>構文
 
@@ -1093,7 +1095,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスを表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスを表します。
 
 ### <a name="example"></a>例
 
@@ -1145,9 +1147,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>vector:: generic_iterator (STL/CLR)
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>ベクトル::generic_iterator (STL/CLR)
 
-コンテナーのジェネリックインターフェイスで使用する反復子の型。
+コンテナーのジェネリック インターフェイスで使用する反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1159,7 +1161,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反復子を表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスで使用できるジェネリック反復器を表します。
 
 ### <a name="example"></a>例
 
@@ -1203,8 +1205,9 @@ a b c
 a a c
 ```
 
-## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>vector:: generic_reverse_iterator (STL/CLR)
-コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>ベクトル::generic_reverse_iterator (STL/CLR)
+
+コンテナのジェネリック インターフェイスで使用するリバース反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1215,7 +1218,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反転反復子を表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスで使用できる汎用リバース 反復処理を表します。
 
 ### <a name="example"></a>例
 
@@ -1259,9 +1262,9 @@ a b c
 a c c
 ```
 
-## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>vector:: generic_value (STL/CLR)
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>ベクトル::generic_value (STL/CLR)
 
-コンテナーのジェネリックインターフェイスで使用する要素の型。
+コンテナーのジェネリック インターフェイスで使用する要素の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1271,7 +1274,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
+この型は、このテンプレート コンテナー`GValue`クラスのジェネリック インターフェイスで使用する格納された要素の値を記述する型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1315,7 +1318,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorinsert-stlclr"></a><a name="insert"></a>vector:: insert (STL/CLR)
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a>ベクトル::挿入(STL/CLR)
 
 指定した位置に要素を追加します。
 
@@ -1341,28 +1344,28 @@ void insert(iterator where,
 *last*<br/>
 挿入する範囲の末尾。
 
-*right*<br/>
+*そうです*<br/>
 挿入する列挙体。
 
-*val*<br/>
+*ヴァル*<br/>
 挿入する要素の値。
 
 *where*<br/>
-コンテナー内のの前に挿入する場所。
+前に挿入するコンテナー内の場所。
 
 ### <a name="remarks"></a>解説
 
-各メンバー関数は、被制御シーケンス内の*where*が指す要素の前に、残りのオペランドによって指定されたシーケンスを挿入します。
+各メンバー関数は、制御されたシーケンスの*位置*で指す要素の前に、残りのオペランドで指定されたシーケンスを挿入します。
 
-1つ目のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 反復子によって指定された場所の前に1つの要素を挿入する場合に使用します。
+最初のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 反復子によって指定された場所の前に単一の要素を挿入する場合に使用します。
 
-2番目のメンバー関数は、値*val*の*count*要素の繰り返しを挿入します。 これを使用して、同じ値のすべてのコピーである0個以上の連続する要素を挿入します。
+2 番目のメンバー関数は、値*val*の*count*要素の繰り返しを挿入します。 この値を使用して、同じ値のすべてのコピーである 0 個以上の連続した要素を挿入します。
 
-`InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 それ以外の場合は、シーケンス [`first`、`last`) を挿入します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の連続する要素を挿入します。
+`InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 それ以外の場合は、シーケンス`first`[ `last`, を挿入します。 別のシーケンスからコピーした連続した要素を 0 個以上挿入する場合に使用します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4 番目のメンバー関数は、*右*で指定されたシーケンスを挿入します。 列挙子によって記述されたシーケンスを挿入する場合に使用します。
 
-1つの要素を挿入する場合、要素のコピー数は、挿入ポイントとそれに近いシーケンスの末尾との間の要素の数で線形になります。 (シーケンスの両端に1つ以上の要素を挿入する場合、要素のコピーは行われません)。`InIt` が入力反復子である場合、3番目のメンバー関数は、シーケンス内の各要素に対して1つの挿入を効果的に実行します。 それ以外の場合、`N` 要素を挿入するときに、要素のコピーの数には、挿入ポイントとそれに近いシーケンスの末尾との間の要素数を加算した値が `N` になります。
+1 つの要素を挿入する場合、要素のコピー数は、挿入ポイントとシーケンスの終わりに近い要素の数に比例します。 (シーケンスの両端に 1 つ以上の要素を挿入する場合、要素のコピーは発生しません)。入力`InIt`反復子の場合、3 番目のメンバー関数は、シーケンス内の各要素に対して 1 つの挿入を効果的に実行します。 それ以外の場合、`N`要素を挿入する場合、要素のコピー数`N`は、挿入ポイントとシーケンスの近い末尾の間の要素数を足した線形になります。
 
 ### <a name="example"></a>例
 
@@ -1424,7 +1427,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>vector:: iterator (STL/CLR)
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>ベクトル::反復器(STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1436,7 +1439,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスのランダムアクセス反復子として使用できる、指定されていない型 `T1` のオブジェクトを表します。
+この型は、被制御シーケンスのランダム`T1`アクセス反復器として使用できる、未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1473,7 +1476,7 @@ a b c
 x b c
 ```
 
-## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>vector:: operator = (STL/CLR)
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>ベクトル::演算子=(STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -1485,12 +1488,12 @@ vector<Value>% operator=(vector<Value>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするコンテナー。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバ オペレータは*オブジェクトに右*をコピーし、`*this`を返します。 これを使用して、制御されたシーケンスを*右側*の制御シーケンスのコピーに置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1526,7 +1529,7 @@ a b c
 a b c
 ```
 
-## <a name="vectoroperatorstlclr"></a><a name="op"></a>vector:: 演算子 (STL/CLR)
+## <a name="vectoroperatorstlclr"></a><a name="op"></a>ベクトル::演算子(STL/CLR)
 
 指定した位置にある要素にアクセスします。
 
@@ -1543,7 +1546,7 @@ reference operator[](size_type pos);
 
 ### <a name="remarks"></a>解説
 
-このメンバー演算子は、 *pos*の位置にある要素に referene を返します。このメソッドを使用して、既知の位置にある要素にアクセスします。
+メンバー演算子は *、pos*位置にある要素への参照を返します。位置がわかっている要素にアクセスするために使用します。
 
 ### <a name="example"></a>例
 
@@ -1578,7 +1581,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>vector::p op_back (STL/CLR)
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>ベクトル::pソップバック(STL/CLR)
 
 最後の要素を削除します。
 
@@ -1590,7 +1593,7 @@ void pop_back();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最後の要素を削除します。この要素は空にすることはできません。 これを使用して、逆に1つの要素でベクトルを短縮します。
+メンバー関数は、制御されたシーケンスの最後の要素を削除します。 この値を使用して、後方の 1 つの要素でベクトルを短くします。
 
 ### <a name="example"></a>例
 
@@ -1625,7 +1628,7 @@ a b c
 a b
 ```
 
-## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>vector::p ush_back (STL/CLR)
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>ベクトル::push_back (STL/CLR)
 
 新しい最後の要素を追加します。
 
@@ -1637,7 +1640,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの末尾に `val` 値を持つ要素を挿入します。 このメソッドを使用して、ベクターに別の要素を追加します。
+メンバー関数は、制御されたシーケンスの末尾`val`に値を持つ要素を挿入します。 ベクターに別の要素を追加するために使用します。
 
 ### <a name="example"></a>例
 
@@ -1665,7 +1668,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>vector:: rbegin (STL/CLR)
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>ベクトル::始まり(STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1677,7 +1680,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最後の要素、または空のシーケンスの先頭の次の位置を指定する反転反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの最後の要素を指定する逆の反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1720,7 +1723,7 @@ a b c
 a y x
 ```
 
-## <a name="vectorreference-stlclr"></a><a name="reference"></a>vector:: reference (STL/CLR)
+## <a name="vectorreference-stlclr"></a><a name="reference"></a>ベクトル::リファレンス(STL/CLR)
 
 要素への参照の型です。
 
@@ -1775,7 +1778,7 @@ a b c
 A B C
 ```
 
-## <a name="vectorrend-stlclr"></a><a name="rend"></a>vector:: rend (STL/CLR)
+## <a name="vectorrend-stlclr"></a><a name="rend"></a>ベクトル::レンド(STL /CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1787,7 +1790,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの先頭を越えた位置を示す反転反復子を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの先頭を越えた位置を指す逆反復器を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1831,9 +1834,9 @@ a b c
 y x c
 ```
 
-## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>vector:: reserve (STL/CLR)
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>ベクトル::リザーブ(STL/CLR)
 
-コンテナーの最小拡張容量を確保します。
+コンテナーの最小の拡張容量を確保します。
 
 ### <a name="syntax"></a>構文
 
@@ -1848,7 +1851,7 @@ void reserve(size_type count);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、`capacity()` その後が少なくとも*count*を返すことを保証します。 これを使用して、指定されたサイズになるまで、コンテナーが被制御シーケンスのストレージを再割り当てしないようにする必要があります。
+メンバー関数は、それ`capacity()`以降は少なくとも*カウント*を返すようになります。 これを使用して、指定したサイズにまで拡大するまで、コンテナーが制御シーケンスの記憶域を再割り当てする必要がないようにします。
 
 ### <a name="example"></a>例
 
@@ -1886,7 +1889,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorresize-stlclr"></a><a name="resize"></a>vector:: resize (STL/CLR)
+## <a name="vectorresize-stlclr"></a><a name="resize"></a>ベクトル::サイズ変更(STL /CLR)
 
 要素の数を変更します。
 
@@ -1900,14 +1903,14 @@ void resize(size_type new_size, value_type val);
 #### <a name="parameters"></a>パラメーター
 
 *new_size*<br/>
-被制御シーケンスの新しいサイズ。
+制御シーケンスの新しいサイズ。
 
-*val*<br/>
+*ヴァル*<br/>
 埋め込み要素の値。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数はどちらも、 [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()` その後が*new_size*を返すことを保証します。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数は値 `value_type()`を持つ要素を追加し、2番目のメンバー関数は値*val*を持つ要素を追加します。 被制御シーケンスを短くするために、両方のメンバー関数は、最後の要素[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() -` `new_size` の時刻を効果的に消去します。 このメソッドを使用すると、現在の被制御シーケンスのトリミングまたは埋め込みによって、被制御シーケンスのサイズが*new_size*になるようにすることができます。
+メンバー関数は両方とも[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`が*new_sizeを返*していることを確認します。 制御シーケンスを長くする必要がある場合、最初のメンバー関数は value`value_type()`を持つ要素を追加し、2 番目のメンバー関数は value *val*を持つ要素を追加します。 制御シーケンスを短くするために、両方のメンバー関数は、最後の要素[ベクトル::サイズ (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() -``new_size`の時間を効果的に消去します。 この値を使用すると、現在の制御シーケンスをトリムまたはパディングすることにより、制御シーケンス*のサイズがnew_size*サイズが確保されます。
 
 ### <a name="example"></a>例
 
@@ -1946,7 +1949,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>vector:: reverse_iterator (STL/CLR)
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>ベクトル::reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -1958,7 +1961,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
+この型は、被制御シーケンスの反転反復`T3`器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1995,7 +1998,7 @@ c b a
 x b a
 ```
 
-## <a name="vectorsize-stlclr"></a><a name="size"></a>vector:: size (STL/CLR)
+## <a name="vectorsize-stlclr"></a><a name="size"></a>ベクトル::サイズ(STL/CLR)
 
 要素の数をカウントします。
 
@@ -2007,7 +2010,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [vector:: empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`」を参照してください。
+このメンバー関数は、被制御シーケンスの長さを返します。 この値を使用して、現在の制御シーケンス内の要素の数を決定します。 シーケンスのサイズが 0 以外であるかどうかが重要な場合は[、「vector::empty (STL/CLR)」](../dotnet/vector-empty-stl-clr.md)`()`を参照してください。
 
 ### <a name="example"></a>例
 
@@ -2048,7 +2051,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>vector:: size_type (STL/CLR)
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>ベクトル::size_type (STL/CLR)
 
 2 つの要素間の距離を表す、符号付きの型です。
 
@@ -2093,7 +2096,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="vectorswap-stlclr"></a><a name="swap"></a>vector:: swap (STL/CLR)
+## <a name="vectorswap-stlclr"></a><a name="swap"></a>ベクトル::スワップ(STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2105,12 +2108,12 @@ void swap(vector<Value>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コンテンツを交換するコンテナー。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
+メンバー関数は、 と*の*間`*this`で制御されたシーケンスを入れ替えます。 これは一定の時間で行われ、例外はスローされません。 2 つのコンテナーの内容を交換する簡単な方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2157,9 +2160,9 @@ x x x x x
 a b c
 ```
 
-## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>vector:: to_array (STL/CLR)
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>ベクトル::to_array (STL/CLR)
 
-被制御シーケンスを新しい配列にコピーします。
+制御されたシーケンスを新しい配列にコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -2169,7 +2172,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
+メンバー関数は、制御されたシーケンスを含む配列を返します。 配列形式で制御シーケンスのコピーを取得するために使用します。
 
 ### <a name="example"></a>例
 
@@ -2206,7 +2209,7 @@ a b c d
 a b c
 ```
 
-## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>vector:: value_type (STL/CLR)
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>ベクトル::value_type (STL/CLR)
 
 要素の型。
 
@@ -2218,7 +2221,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*値*のシノニムです。
+この型は、テンプレート パラメータ Value のシノニム*です*。
 
 ### <a name="example"></a>例
 
@@ -2251,7 +2254,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorvector-stlclr"></a><a name="vector"></a>vector:: vector (STL/CLR)
+## <a name="vectorvector-stlclr"></a><a name="vector"></a>ベクトル::ベクトル(STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -2279,10 +2282,10 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 挿入する範囲の末尾。
 
-*right*<br/>
+*そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
-*val*<br/>
+*ヴァル*<br/>
 挿入する要素の値。
 
 ### <a name="remarks"></a>解説
@@ -2291,31 +2294,31 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector();`
 
-要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、空の初期被制御シーケンスを指定します。
+は、要素なしで制御されたシーケンスを初期化します。 空の初期制御シーケンスを指定するために使用します。
 
 コンストラクター:
 
 `vector(vector<Value>% right);`
 
-シーケンス [`right.begin()`、`right.end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、vector オブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+は、シーケンス [`right.begin()`, `right.end()`) で制御シーケンスを初期化します。 これを使用して、ベクトル オブジェクト*の右*で制御されるシーケンスのコピーである初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `vector(vector<Value>^ right);`
 
-シーケンス [`right->begin()`、`right->end()`) を使用して被制御シーケンスを初期化します。 これを使用して、ハンドルが*right*である vector オブジェクトによって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
+は、シーケンス [`right->begin()`, `right->end()`) で制御シーケンスを初期化します。 このクラスを使用して、ハンドルが*right*であるベクトル オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `explicit vector(size_type count);`
 
-値 `value_type()`を持つ*カウント*要素を使用して、被制御シーケンスを初期化します。 このメソッドを使用して、すべての要素に既定値が設定されたコンテナーにデータを格納します。
+は、各 count*要素を*持つ制御`value_type()`されたシーケンスを value で初期化します。 この値を使用して、既定値を持つ要素をすべてコンテナーに格納します。
 
 コンストラクター:
 
 `vector(size_type count, value_type val);`
 
-値*val*を持つ*カウント*要素を使用して被制御シーケンスを初期化します。 このメソッドを使用して、すべての要素が同じ値を持つコンテナーを塗りつぶします。
+は、値*val*を持つ*カウント*要素を使用して、制御されたシーケンスを初期化します。 この値を使用して、同じ値を持つ要素をすべてコンテナーに埋めます。
 
 コンストラクター:
 
@@ -2323,13 +2326,13 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(InIt first, InIt last);`
 
-シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにします。
+は、シーケンス [`first`, `last`) で制御シーケンスを初期化します。 これを使用して、制御シーケンスを別のシーケンスのコピーにします。
 
 コンストラクター:
 
 `vector(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-列挙子*権限*によって指定されたシーケンスを使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーとして作成します。
+は、列挙子*right*で指定されたシーケンスで制御シーケンスを初期化します。 これを使用して、制御されたシーケンスを列挙子によって記述された別のシーケンスのコピーにします。
 
 ### <a name="example"></a>例
 
@@ -2396,9 +2399,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>operator! = (vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>演算子!= (ベクター) (STL/CLR)
 
-ベクターが等しくないことを比較します。
+ベクトルが比較に等しくない。
 
 ### <a name="syntax"></a>構文
 
@@ -2410,15 +2413,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのベクトルが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数は、`!(left == right)`を返します。 2 つのベクトルが要素ごとに比較される場合、*左*が*右*と同じ順序で並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2465,9 +2468,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>operator&lt; (vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>演算子&lt;(ベクター) (STL/CLR)
 
-ベクターより小さい値。
+比較より少ないベクトル。
 
 ### <a name="syntax"></a>構文
 
@@ -2479,15 +2482,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は、このメソッドを使用して、2つのベクトルが要素によって要素を比較したときに、 *left*が*right*の前に並べられているかどうかをテスト `left->size() < right->size()` ます。
+演算子関数は、その値も true である`i`最下位の`!(right[i] < left[i])`位置に対して`left[i] < right[i]`true を返します。 それ以外の場合`left->size() < right->size()`は、2 つのベクトルが要素によって比較されるときに *、左*が*右*より前に並べられるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2534,9 +2537,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>operator&lt;= (vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>演算子&lt;= (ベクター) (STL/CLR)
 
-ベクターより小さいか等しいかどうかの比較。
+ベクトルの比較が小さいか等しい。
 
 ### <a name="syntax"></a>構文
 
@@ -2548,15 +2551,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのベクトルが要素によって比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数は、`!(right < left)`を返します。 2 つのベクトルが要素ごとに比較されるときに *、左*が*右*の後に並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2603,9 +2606,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>operator = = (vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>演算子==(ベクトル) (STL/CLR)
 
-ベクターの等価比較。
+ベクトル等比較。
 
 ### <a name="syntax"></a>構文
 
@@ -2617,15 +2620,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのベクトルが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、*左右*で制御されるシーケンスの長さが同*right*じ場合にのみ true を返し、`i`各`left[i] ==``right[i]`位置に対して true を返します。 2 つのベクトルが要素ごとに比較される場合、*左*が*右*と同じ順序で並べられるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2672,9 +2675,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>operator&gt; (vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>演算子&gt;(ベクター) (STL/CLR)
 
-ベクターが比較を超えています。
+比較より大きいベクトル。
 
 ### <a name="syntax"></a>構文
 
@@ -2686,15 +2689,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのベクトルが要素によって比較されるときに、 *left*が*right*の後に並べられているかどうかをテストします。
+演算子関数は、`right``<``left`を返します。 2 つのベクトルが要素ごとに比較されるときに *、左*が*右*の後に並べ替えられたかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2741,9 +2744,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>operator&gt;= (vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>演算子&gt;= (ベクター) (STL/CLR)
 
-ベクター以上比較。
+ベクトルの比較が大きいか等しいか。
 
 ### <a name="syntax"></a>構文
 
@@ -2755,15 +2758,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのベクトルが要素によって比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数は、`!(left < right)`を返します。 2 つのベクトルが要素ごとに比較されるときに *、左*が*右*より前に並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 

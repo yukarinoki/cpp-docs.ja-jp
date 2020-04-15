@@ -41,79 +41,79 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f3d8fa63e7fd20f8a0d6759fee8417b3fbc29486
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319215"
 ---
 # <a name="atl-path-functions"></a>ATL パス関数
 
-ATL には、 [Cpatht](cpatht-class.md)の形式でパスを操作するための atlpath クラスが用意されています。 このコードは、atlpath. h にあります。
+ATL は[、パスを CPathT](cpatht-class.md)の形式で操作するための ATLPath クラスを提供します。 このコードは atlpath.h にあります。
 
-### <a name="related-classes"></a>関連クラス
-
-|||
-|-|-|
-|[CPathT クラス](cpatht-class.md)|このクラスは、パスを表します。|
-
-### <a name="related-typedefs"></a>関連する Typedef
+### <a name="related-classes"></a>関連するクラス
 
 |||
 |-|-|
-|`CPath`|`CString`を使用した[Cpatht](cpatht-class.md)の特殊化。|
-|`CPathA`|`CStringA`を使用した[Cpatht](cpatht-class.md)の特殊化。|
-|`CPathW`|`CStringW`を使用した[Cpatht](cpatht-class.md)の特殊化。|
+|[CPathT クラス](cpatht-class.md)|このクラスはパスを表します。|
+
+### <a name="related-typedefs"></a>関連する型定義
+
+|||
+|-|-|
+|`CPath`|を使用した`CString` [CPathT](cpatht-class.md)の特殊化。|
+|`CPathA`|を使用した`CStringA` [CPathT](cpatht-class.md)の特殊化。|
+|`CPathW`|を使用した`CStringW` [CPathT](cpatht-class.md)の特殊化。|
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
-|[ATLPath:: AddBackslash ラッシュ](#addbackslash)|[Pathaddbackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: AddExtension](#addextension)|[Pathaddextension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: Append](#append)|[Pathappend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: BuildRoot](#buildroot)|この関数は、 [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)のオーバーロードされたラッパーです。|
-|[ATLPath:: 正規化](#canonicalize)|[Pathcanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)用のオーバーロードされたラッパーです。|
-|[ATLPath:: 結合](#combine)|[Pathcombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)用のオーバーロードされたラッパーです。|
-|[ATLPath:: CommonPrefix](#commonprefix)|この関数は、 [Pathcommonprefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: CompactPath](#compactpath)|この関数は、 [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)のオーバーロードされたラッパーです。|
-|[ATLPath:: CompactPathEx](#compactpathex)|この関数は、 [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)のオーバーロードされたラッパーです。|
-|[ATLPath:: FileExists](#fileexists)|[Pathfileexists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: FindExtension](#findextension)|この関数は、 [Pathfindextension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: FindFileName](#findfilename)|[Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)用のオーバーロードされたラッパーです。|
-|[ATLPath:: GetDriveNumber](#getdrivenumber)|この関数は、 [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)のオーバーロードされたラッパーです。|
-|[ATLPath:: IsDirectory](#isdirectory)|[Pathisdirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: IsFileSpec](#isfilespec)|[Pathisfilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: IsPrefix](#isprefix)|この関数は、 [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)のオーバーロードされたラッパーです。|
-|[ATLPath:: IsRelative](#isrelative)|[Pathisrelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)用のオーバーロードされたラッパーです。|
-|[ATLPath:: IsRoot](#isroot)|この関数は、 [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)のオーバーロードされたラッパーです。|
-|[ATLPath:: IsSameRoot](#issameroot)|[Pathissameroot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: IsUNC](#isunc)|[Pathisunc](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: Is出ないサーバー](#isuncserver)|この関数は、 [Pathis出ないサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: Is出 Servershare](#isuncservershare)|[Pathisの Servershare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)用のオーバーロードされたラッパーです。|
-|[ATLPath:: MakePretty](#makepretty)|この関数は、 [Pathmakepretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: MatchSpec](#matchspec)|[Pathmatchspec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: QuoteSpaces](#quotespaces)|この関数は、 [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)のオーバーロードされたラッパーです。|
-|[ATLPath:: RelativePathTo](#relativepathto)|この関数は、 [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)のオーバーロードされたラッパーです。|
-|[ATLPath:: RemoveArgs](#removeargs)|[Pathremoveargs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: RemoveBackslash ラッシュ](#removebackslash)|[Pathremovebackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: RemoveBlanks](#removeblanks)|[Pathremoveblanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: RemoveExtension](#removeextension)|[Pathremoveextension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: RemoveFileSpec](#removefilespec)|[Pathremovefilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: RenameExtension](#renameextension)|[Pathrenameextension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: SkipRoot](#skiproot)|この関数は、 [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)のオーバーロードされたラッパーです。|
-|[ATLPath:: ストライプ Ppath](#strippath)|[Pathの Ppath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: トーラス](#striptoroot)|[Pathtoroot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)用のオーバーロードされたラッパーです。|
-|[ATLPath:: UnquoteSpaces](#unquotespaces)|この関数は、 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)のオーバーロードされたラッパーです。|
+|[ATLPath::AddBackslash](#addbackslash)|この関数は、[パスの追加バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)のオーバーロードされたラッパーです。|
+|[ATLPath::AddExtension](#addextension)|この関数は、[パスの追加拡張機能](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)のラッパーをオーバーロードします。|
+|[ATLPath::Append](#append)|この関数は、[パスアペント](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)のオーバーロードされたラッパーです。|
+|[ATLPath::BuildRoot](#buildroot)|この関数は、[パスビルドルート](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)のオーバーロードされたラッパーです。|
+|[ATLPath::Canonicalize](#canonicalize)|この関数は[、PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)のオーバーロードされたラッパーです。|
+|[ATLPath::Combine](#combine)|この関数は[、PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)のオーバーロードされたラッパーです。|
+|[ATLPath::CommonPrefix](#commonprefix)|この関数は、[パスコモン プレフィックス](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)のオーバーロードされたラッパーです。|
+|[ATLPath::CompactPath](#compactpath)|この関数は、[パスのパスのラッパーをオーバーロードします](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)。|
+|[ATLPath::CompactPathEx](#compactpathex)|この関数は、[パスコンパクトパスエックス](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)のオーバーロードされたラッパーです。|
+|[ATLPath::FileExists](#fileexists)|この関数は、[パスファイルの](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)オーバーロードされたラッパーです。|
+|[ATLPath::FindExtension](#findextension)|この関数は、[パス FindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)のオーバーロードされたラッパーです。|
+|[ATLPath::FindFileName](#findfilename)|この関数は、[パス検索ファイル名](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)のオーバーロードされたラッパーです。|
+|[ATLPath::GetDriveNumber](#getdrivenumber)|この関数は、[パス取得ドライブ番号](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsDirectory](#isdirectory)|この関数は[、PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsFileSpec](#isfilespec)|この関数は、[オーバーロードされたラッパーです](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。|
+|[ATLPath::IsPrefix](#isprefix)|この関数は[、PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsRelative](#isrelative)|この関数は[、PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)のオーバーロードされたラッパーです。|
+|[ATLPath::IsRoot](#isroot)|この関数は[、PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsSameRoot](#issameroot)|この関数は[、PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsUNC](#isunc)|この関数は[、PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsUNCServer](#isuncserver)|この関数は、[パスIsUNCサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)のオーバーロードされたラッパーです。|
+|[ATLPath::IsUNCServerShare](#isuncservershare)|この関数は、[パスシスUNCサーバーシェア](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)のオーバーロードされたラッパーです。|
+|[ATLPath::MakePretty](#makepretty)|この関数は、[パスメイクプリティ](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)のオーバーロードされたラッパーです。|
+|[ATLPath::MatchSpec](#matchspec)|この関数は、[パスマッチペック](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)のオーバーロードされたラッパーです。|
+|[ATLPath::QuoteSpaces](#quotespaces)|この関数は、[パスクオーテーションスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)のオーバーロードされたラッパーです。|
+|[ATLPath::RelativePathTo](#relativepathto)|この関数は、[パス相対パスの](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)オーバーロードされたラッパーです。|
+|[ATLPath::RemoveArgs](#removeargs)|この関数は、[オーバーロードされたラッパーです](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)。|
+|[ATLPath::RemoveBackslash](#removebackslash)|この関数は、[パス削除バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)のオーバーロードされたラッパーです。|
+|[ATLPath::RemoveBlanks](#removeblanks)|この関数は、[パス除去空白](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)のオーバーロードされたラッパーです。|
+|[ATLPath::RemoveExtension](#removeextension)|この関数は、オーバーロードされたラッパー[です](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。|
+|[ATLPath::RemoveFileSpec](#removefilespec)|この関数は、オーバーロードされたラッパー[です](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)。|
+|[ATLPath::RenameExtension](#renameextension)|この関数は、[パスの名前を変更拡張機能](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)のオーバーロードされたラッパーです。|
+|[ATLPath::SkipRoot](#skiproot)|この関数は、[パススキップルート](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)のオーバーロードされたラッパーです。|
+|[ATLPath::StripPath](#strippath)|この関数は、[パスストリップパス](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)のオーバーロードされたラッパーです。|
+|[ATLPath::StripToRoot](#striptoroot)|この関数は、[パスストリップルートルート](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)のオーバーロードされたラッパーです。|
+|[ATLPath::UnquoteSpaces](#unquotespaces)|この関数は、[パスアンクォートスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)のオーバーロードされたラッパーです。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlpath .h
+**ヘッダー:** atlpath.h
 
-## <a name="addbackslash"></a>ATLPath:: AddBackSlash ラッシュ
+## <a name="atlpathaddbackslash"></a><a name="addbackslash"></a>ATLパス::AddBackSlash
 
-[Pathaddbackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)用のオーバーロードされたラッパーです。
+この関数は、[パスの追加バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -124,11 +124,11 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathaddbackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)」を参照してください。
+詳細については[、「パスの追加バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)」を参照してください。
 
-## <a name="addextension"></a>ATLPath:: AddExtension
+## <a name="atlpathaddextension"></a><a name="addextension"></a>アトルパス::拡張機能の追加
 
-[Pathaddextension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)用のオーバーロードされたラッパーです。
+この関数は、[パスの追加拡張機能](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)のラッパーをオーバーロードします。
 
 ### <a name="syntax"></a>構文
 
@@ -139,11 +139,11 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathaddextension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) 」を参照してください。
+詳細については[、「パスの追加拡張](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)」を参照してください。
 
-## <a name="append"></a>ATLPath:: Append
+## <a name="atlpathappend"></a><a name="append"></a>ATLパス::追加
 
-[Pathappend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)用のオーバーロードされたラッパーです。
+この関数は、[パスアペント](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -154,11 +154,11 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathappend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) 」を参照してください。
+詳細については[、パスの追加](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)を参照してください。
 
-## <a name="buildroot"></a>ATLPath:: BuildRoot
+## <a name="atlpathbuildroot"></a><a name="buildroot"></a>ATLパス::ビルドルート
 
-この関数は、 [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)のオーバーロードされたラッパーです。
+この関数は、[パスビルドルート](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -169,11 +169,11 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)を参照してください。
+詳細については[、「パスビルドルート](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)」を参照してください。
 
-## <a name="canonicalize"></a>ATLPath:: 正規化
+## <a name="atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::正規化
 
-[Pathcanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)用のオーバーロードされたラッパーです。
+この関数は[、PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -184,11 +184,11 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathcanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) 」を参照してください。
+詳細については[、「パス正規化](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)」を参照してください。
 
-## <a name="combine"></a>ATLPath:: 結合
+## <a name="atlpathcombine"></a><a name="combine"></a>ATLパス::コンバイン
 
-[Pathcombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)用のオーバーロードされたラッパーです。
+この関数は[、PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -207,11 +207,11 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>解説
 
-詳細については、「PathCombine」を参照してください。
+詳細については、「パス結合」を参照してください。
 
-## <a name="commonprefix"></a>ATLPath:: CommonPrefix
+## <a name="atlpathcommonprefix"></a><a name="commonprefix"></a>ATL パス::コモンプレフィックス
 
-この関数は、 [Pathcommonprefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)用のオーバーロードされたラッパーです。
+この関数は、[パスコモン プレフィックス](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -229,11 +229,11 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathcommonprefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) 」を参照してください。
+詳細については[、「パスコモン プレフィックス](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)」を参照してください。
 
-## <a name="compactpath"></a>ATLPath:: CompactPath
+## <a name="atlpathcompactpath"></a><a name="compactpath"></a>ATLパス::コンパクトパス
 
-この関数は、 [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)のオーバーロードされたラッパーです。
+この関数は、[パスのパスのラッパーをオーバーロードします](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)。
 
 ### <a name="syntax"></a>構文
 
@@ -251,11 +251,11 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)を参照してください。
+詳細については、[パスのパスを](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)参照してください。
 
-## <a name="compactpathex"></a>ATLPath:: CompactPathEx
+## <a name="atlpathcompactpathex"></a><a name="compactpathex"></a>ATLパス::コンパクトパスエックス
 
-この関数は、 [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)のオーバーロードされたラッパーです。
+この関数は、[パスコンパクトパスエックス](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -275,11 +275,11 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)を参照してください。
+詳細については[、パスコンパクトパスを](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)参照してください。
 
-## <a name="fileexists"></a>ATLPath:: FileExists
+## <a name="atlpathfileexists"></a><a name="fileexists"></a>ファイルパス::ファイルが存在します
 
-[Pathfileexists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)用のオーバーロードされたラッパーです。
+この関数は、[パスファイルの](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)オーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -290,11 +290,11 @@ inline BOOL FileExists(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathfileexists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) 」を参照してください。
+詳細については[、パスファイルの存在](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)を参照してください。
 
-## <a name="findextension"></a>ATLPath:: FindExtension
+## <a name="atlpathfindextension"></a><a name="findextension"></a>アトルパス::拡張を検索
 
-この関数は、 [Pathfindextension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)用のオーバーロードされたラッパーです。
+この関数は、[パス FindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -305,11 +305,11 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathfindextension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) 」を参照してください。
+詳細については[、「パス検索拡張機能」](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)を参照してください。
 
-## <a name="findfilename"></a>ATLPath:: FindFileName
+## <a name="atlpathfindfilename"></a><a name="findfilename"></a>ファイル名を検索します。
 
-[Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)用のオーバーロードされたラッパーです。
+この関数は、[パス検索ファイル名](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -320,11 +320,11 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) 」を参照してください。
+詳細については[、パスファイル名](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)を参照してください。
 
-## <a name="getdrivenumber"></a>ATLPath:: GetDriveNumber
+## <a name="atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>アトルパス::ゲットドライブナンバー
 
-この関数は、 [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)のオーバーロードされたラッパーです。
+この関数は、[パス取得ドライブ番号](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -335,11 +335,11 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)を参照してください。
+詳細については、「[パスの取得ドライブ番号」](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)を参照してください。
 
-## <a name="isdirectory"></a>ATLPath:: IsDirectory
+## <a name="atlpathisdirectory"></a><a name="isdirectory"></a>アトルパス::イズディレクトリ
 
-[Pathisdirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)用のオーバーロードされたラッパーです。
+この関数は[、PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)のオーバーロードされたラッパーです。
 
 ```
 inline BOOL IsDirectory(const char* pszPath);
@@ -350,9 +350,9 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 
 詳細については、PathIsDirectory を参照してください。
 
-## <a name="isfilespec"></a>ATLPath:: IsFileSpec
+## <a name="atlpathisfilespec"></a><a name="isfilespec"></a>ファイルスペック
 
-[Pathisfilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)用のオーバーロードされたラッパーです。
+この関数は、[オーバーロードされたラッパーです](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。
 
 ### <a name="syntax"></a>構文
 
@@ -363,11 +363,11 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathisfilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) 」を参照してください。
+詳細については[、パスを参照してください](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。
 
-## <a name="isprefix"></a>ATLPath:: IsPrefix
+## <a name="atlpathisprefix"></a><a name="isprefix"></a>を使用します。
 
-この関数は、 [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)のオーバーロードされたラッパーです。
+この関数は[、PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -378,11 +378,11 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)を参照してください。
+詳細については、[パスのプレフィックス](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)を参照してください。
 
-## <a name="isrelative"></a>ATLPath:: IsRelative
+## <a name="atlpathisrelative"></a><a name="isrelative"></a>ATLパス::イズアブール
 
-[Pathisrelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)用のオーバーロードされたラッパーです。
+この関数は[、PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -393,11 +393,11 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathisrelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) 」を参照してください。
+詳細については[、PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)を参照してください。
 
-## <a name="isroot"></a>ATLPath:: IsRoot
+## <a name="atlpathisroot"></a><a name="isroot"></a>ATLパス::イズルート
 
-この関数は、 [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)のオーバーロードされたラッパーです。
+この関数は[、PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -408,11 +408,11 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)を参照してください。
+詳細については[、PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)を参照してください。
 
-## <a name="issameroot"></a>ATLPath:: IsSameRoot
+## <a name="atlpathissameroot"></a><a name="issameroot"></a>ATLパス::イササミルート
 
-[Pathissameroot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)用のオーバーロードされたラッパーです。
+この関数は[、PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -423,11 +423,11 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathissameroot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) 」を参照してください。
+詳細については[、PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)を参照してください。
 
-## <a name="isunc"></a>ATLPath:: IsUNC
+## <a name="atlpathisunc"></a><a name="isunc"></a>ATLパス::イスUNC
 
-[Pathisunc](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)用のオーバーロードされたラッパーです。
+この関数は[、PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -438,11 +438,11 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [Pathisunc](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)に関する説明を参照してください。
+詳細については[、PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)を参照してください。
 
-## <a name="isuncserver"></a>ATLPath:: Is出ないサーバー
+## <a name="atlpathisuncserver"></a><a name="isuncserver"></a>アトルパス::サーバー
 
-この関数は、 [Pathis出ないサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)用のオーバーロードされたラッパーです。
+この関数は、[パスIsUNCサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -453,11 +453,11 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [Pathisのサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)を参照してください。
+詳細については[、パスリスンサーバー](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)を参照してください。
 
-## <a name="isuncservershare"></a>ATLPath:: Is出 Servershare
+## <a name="atlpathisuncservershare"></a><a name="isuncservershare"></a>を使用します。
 
-[Pathisの Servershare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)用のオーバーロードされたラッパーです。
+この関数は、[パスシスUNCサーバーシェア](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -468,11 +468,11 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [Pathisを](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)参照してください。
+詳細については[、パスリスンサーバーの共有](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)を参照してください。
 
-## <a name="makepretty"></a>ATLPath:: MakePretty
+## <a name="atlpathmakepretty"></a><a name="makepretty"></a>ATLパス::メイクプリティ
 
-この関数は、 [Pathmakepretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)用のオーバーロードされたラッパーです。
+この関数は、[パスメイクプリティ](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -483,11 +483,11 @@ inline BOOL MakePretty(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathmakepretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) 」を参照してください。
+詳細については、「[パスメイクプリティ](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)」を参照してください。
 
-## <a name="matchspec"></a>ATLPath:: MatchSpec
+## <a name="atlpathmatchspec"></a><a name="matchspec"></a>ATLパス:マッチスペック
 
-[Pathmatchspec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)用のオーバーロードされたラッパーです。
+この関数は、[パスマッチペック](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -498,11 +498,11 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathmatchspec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) 」を参照してください。
+詳細については[、パスマッチの仕様](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)を参照してください。
 
-## <a name="quotespaces"></a>ATLPath:: QuoteSpaces
+## <a name="atlpathquotespaces"></a><a name="quotespaces"></a>ATLパス::引用スペース
 
-この関数は、 [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)のオーバーロードされたラッパーです。
+この関数は、[パスクオーテーションスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -513,11 +513,11 @@ inline void QuoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)を参照してください。
+詳細については[、「パスクオートスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)」を参照してください。
 
-## <a name="relativepathto"></a>ATLPath:: RelativePathTo
+## <a name="atlpathrelativepathto"></a><a name="relativepathto"></a>アトルパス::相対パス
 
-この関数は、 [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)のオーバーロードされたラッパーです。
+この関数は、[パス相対パスの](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)オーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -539,11 +539,11 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)を参照してください。
+詳細については、「[パス相対パスを](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)参照してください。
 
-## <a name="removeargs"></a>ATLPath:: RemoveArgs
+## <a name="atlpathremoveargs"></a><a name="removeargs"></a>アトルパス::削除引数
 
-[Pathremoveargs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)用のオーバーロードされたラッパーです。
+この関数は、[オーバーロードされたラッパーです](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)。
 
 ### <a name="syntax"></a>構文
 
@@ -554,11 +554,11 @@ inline void RemoveArgs(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathremoveargs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) 」を参照してください。
+詳細については、「[パスの削除引数](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)」を参照してください。
 
-## <a name="removebackslash"></a>ATLPath:: RemoveBackslash ラッシュ
+## <a name="atlpathremovebackslash"></a><a name="removebackslash"></a>ATLパス::削除バックスラッシュ
 
-[Pathremovebackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)用のオーバーロードされたラッパーです。
+この関数は、[パス削除バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -569,11 +569,11 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [Pathremovebackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)を参照してください。
+詳細については、「[パス削除バックスラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)」を参照してください。
 
-## <a name="removeblanks"></a>ATLPath:: RemoveBlanks
+## <a name="atlpathremoveblanks"></a><a name="removeblanks"></a>ATLパス::ブランクの削除
 
-[Pathremoveblanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)用のオーバーロードされたラッパーです。
+この関数は、[パス除去空白](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -584,11 +584,11 @@ inline void RemoveBlanks(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [Pathremoveblanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)をご覧ください。
+詳細については、「[パス削除ブランク」](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)を参照してください。
 
-## <a name="removeextension"></a>ATLPath:: RemoveExtension
+## <a name="atlpathremoveextension"></a><a name="removeextension"></a>拡張の削除
 
-[Pathremoveextension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)用のオーバーロードされたラッパーです。
+この関数は、オーバーロードされたラッパー[です](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。
 
 ### <a name="syntax"></a>構文
 
@@ -599,11 +599,11 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathremoveextension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) 」を参照してください。
+詳細については[、「パスの削除拡張](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)」を参照してください。
 
-## <a name="removefilespec"></a>ATLPath:: RemoveFileSpec
+## <a name="atlpathremovefilespec"></a><a name="removefilespec"></a>ファイルの削除
 
-[Pathremovefilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)用のオーバーロードされたラッパーです。
+この関数は、オーバーロードされたラッパー[です](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)。
 
 ### <a name="syntax"></a>構文
 
@@ -614,11 +614,11 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathremovefilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) 」を参照してください。
+詳細については、「[パスの削除ファイルの指定」](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)を参照してください。
 
-## <a name="renameextension"></a>ATLPath:: RenameExtension
+## <a name="atlpathrenameextension"></a><a name="renameextension"></a>ATLパス::拡張機能の名前の変更
 
-[Pathrenameextension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)用のオーバーロードされたラッパーです。
+この関数は、[パスの名前を変更拡張機能](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -629,11 +629,11 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathrenameextension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) 」を参照してください。
+詳細については、「[パスの名前変更拡張機能」](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)を参照してください。
 
-## <a name="skiproot"></a>ATLPath:: SkipRoot
+## <a name="atlpathskiproot"></a><a name="skiproot"></a>ATLパス::スキップルート
 
-この関数は、 [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)のオーバーロードされたラッパーです。
+この関数は、[パススキップルート](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -644,11 +644,11 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)を参照してください。
+詳細については[、「パススキップルート」](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)を参照してください。
 
-## <a name="strippath"></a>ATLPath:: ストライプ Ppath
+## <a name="atlpathstrippath"></a><a name="strippath"></a>ATLパス::ストリップパス
 
-[Pathの Ppath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)用のオーバーロードされたラッパーです。
+この関数は、[パスストリップパス](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -659,11 +659,11 @@ inline void StripPath(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [pathの Ppath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) 」を参照してください。
+詳細については、「[パスストリップパス](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)」を参照してください。
 
-## <a name="striptoroot"></a>ATLPath:: トーラス
+## <a name="atlpathstriptoroot"></a><a name="striptoroot"></a>ATLパス::ストリップトルート
 
-[Pathtoroot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)用のオーバーロードされたラッパーです。
+この関数は、[パスストリップルートルート](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -674,11 +674,11 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、「 [Pathtoroot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) 」を参照してください。
+詳細については[、「パスストリップルート」](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)を参照してください。
 
-## <a name="unquotespaces"></a>ATLPath:: UnquoteSpaces
+## <a name="atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::クォートなしスペース
 
-この関数は、 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)のオーバーロードされたラッパーです。
+この関数は、[パスアンクォートスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)のオーバーロードされたラッパーです。
 
 ### <a name="syntax"></a>構文
 
@@ -689,4 +689,4 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>解説
 
-詳細については、 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)を参照してください。
+詳細については[、「パスアンクォートスペース](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)」を参照してください。

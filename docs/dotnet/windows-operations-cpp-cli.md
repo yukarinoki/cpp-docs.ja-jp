@@ -43,22 +43,22 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99fce804ad30e01bdbaa99b1636a5238ff535f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371771"
 ---
 # <a name="windows-operations-ccli"></a>Windows の操作 (C++/CLI)
 
-Windows SDK を使用して Windows に固有のさまざまなタスクを示します。
+Windows SDK を使用して、さまざまな Windows 固有のタスクを示します。
 
-次のトピックでは、Visual C を使用して Windows SDK で実行されるさまざまな Windows の操作を示します。
+次のトピックでは、Visual C++ を使用して Windows SDK で実行されるさまざまな Windows 操作について説明します。
 
-## <a name="determine_shutdown"></a> シャット ダウンが開始されたかどうかの判断します。
+## <a name="determine-if-shutdown-has-started"></a><a name="determine_shutdown"></a>シャットダウンが開始されたかどうかを確認する
 
-次のコード例では、アプリケーションまたは .NET Framework が終了して現在あるかどうかを判断する方法を示します。 これは、ため、シャット ダウン中、これらのコンストラクトは、システムによって完了処理され、確実に使用することはできません、.NET Framework での静的な要素にアクセスするため便利です。 チェックして、<xref:System.Environment.HasShutdownStarted%2A>プロパティ最初に、これらの要素にアクセスするいないと、潜在的な障害を回避できます。
+アプリケーションまたは .NET Framework が現在終了しているかどうかを確認する方法を次のコード例に示します。 これは、シャットダウン中にこれらのコンストラクトがシステムによって確定され、確実に使用できないため、.NET Framework の静的要素にアクセスするのに便利です。 プロパティを最初<xref:System.Environment.HasShutdownStarted%2A>にチェックすることで、これらの要素にアクセスしないことで、潜在的な障害を回避できます。
 
 ### <a name="example"></a>例
 
@@ -76,9 +76,9 @@ int main()
 }
 ```
 
-## <a name="determine_user"></a> ユーザーの対話型の状態を確認します。
+## <a name="determine-the-user-interactive-state"></a><a name="determine_user"></a>ユーザー対話の状態を決定する
 
-次のコード例では、コードがユーザー対話型のコンテキストで実行されているかどうかを判断する方法を示します。 場合<xref:System.Environment.UserInteractive%2A>サービス プロセスとしてコードが実行されているかから、Web アプリケーション内でこの場合しないでユーザーと対話するには、false にします。
+コードがユーザー対話式コンテキストで実行されているかどうかを確認する方法を次のコード例に示します。 false<xref:System.Environment.UserInteractive%2A>の場合、コードはサービス プロセスとして実行されているか、Web アプリケーション内から実行されています。
 
 ### <a name="example"></a>例
 
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-## <a name="read_registry"></a> Windows レジストリからデータを読み取る
+## <a name="read-data-from-the-windows-registry"></a><a name="read_registry"></a>Windows レジストリからデータを読み取る
 
-<xref:Microsoft.Win32.Registry.CurrentUser> キーを使用して、Windows レジストリからデータを読み込む方法を次のコード例に示します。 最初に、サブキー列挙を使用して、<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>メソッドし Identities サブキーを使用してを開くが、<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>メソッド。 ルート キー同様、各サブキーは <xref:Microsoft.Win32.RegistryKey> クラスで表されます。 最後に、新しい <xref:Microsoft.Win32.RegistryKey> オブジェクトを使用してキーと値のペアが一覧表示されます。
+<xref:Microsoft.Win32.Registry.CurrentUser> キーを使用して、Windows レジストリからデータを読み込む方法を次のコード例に示します。 まず、メソッドを使用してサブキーを<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>列挙し、次にメソッドを使用して ID<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>サブキーを開きます。 ルート キー同様、各サブキーは <xref:Microsoft.Win32.RegistryKey> クラスで表されます。 最後に、新しい <xref:Microsoft.Win32.RegistryKey> オブジェクトを使用してキーと値のペアが一覧表示されます。
 
 ### <a name="example"></a>例
 
@@ -140,22 +140,22 @@ int main( )
 }
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 <xref:Microsoft.Win32.Registry> クラスは、<xref:Microsoft.Win32.RegistryKey> の静的インスタンスの単なるコンテナーです。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
-<xref:Microsoft.Win32.Registry> クラスのオブジェクトは、静的オブジェクトであるだけでなく、読み取り専用です。 さらに、レジストリ オブジェクトのコンテンツにアクセスするために作成される <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスも読み取り専用です。 この動作をオーバーライドする方法の例は、次を参照してください。[方法。Windows レジストリにデータを書き込む (C +/cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)します。
+<xref:Microsoft.Win32.Registry> クラスのオブジェクトは、静的オブジェクトであるだけでなく、読み取り専用です。 さらに、レジストリ オブジェクトのコンテンツにアクセスするために作成される <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスも読み取り専用です。 この動作をオーバーライドする方法の例については、「[方法: Windows レジストリ (C++/CLI) にデータを書き込む](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)」を参照してください。
 
-<xref:Microsoft.Win32.Registry> クラスには、さらに <xref:Microsoft.Win32.Registry.DynData> と <xref:Microsoft.Win32.Registry.PerformanceData> の 2 つのオブジェクトがあります。 この 2 つのオブジェクトは両方とも <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスです。 <xref:Microsoft.Win32.Registry.DynData>オブジェクトには、し、Windows 98 および Windows me でのみサポートされている動的レジストリ情報が含まれています。 <xref:Microsoft.Win32.Registry.PerformanceData> オブジェクトを使用すると、Windows パフォーマンス モニター システムを使用するアプリケーションのパフォーマンス カウンター情報にアクセスできます。 <xref:Microsoft.Win32.Registry.PerformanceData>ノードが表す情報をレジストリに実際に格納されていないと、そのため、Regedit.exe を使用すると表示されることはできません。
+<xref:Microsoft.Win32.Registry> クラスには、さらに <xref:Microsoft.Win32.Registry.DynData> と <xref:Microsoft.Win32.Registry.PerformanceData> の 2 つのオブジェクトがあります。 この 2 つのオブジェクトは両方とも <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスです。 この<xref:Microsoft.Win32.Registry.DynData>オブジェクトには、Windows 98 および Windows Me でのみサポートされる動的なレジストリ情報が含まれています。 <xref:Microsoft.Win32.Registry.PerformanceData> オブジェクトを使用すると、Windows パフォーマンス モニター システムを使用するアプリケーションのパフォーマンス カウンター情報にアクセスできます。 ノード<xref:Microsoft.Win32.Registry.PerformanceData>は、実際にはレジストリに格納されていない情報を表すため、Regedit.exe を使用して表示することはできません。
 
-## <a name="read_performance"></a> Windows パフォーマンス カウンターを読み取る
+## <a name="read-windows-performance-counters"></a><a name="read_performance"></a>Windows パフォーマンス カウンターの読み取り
 
-一部のアプリケーションおよび Windows サブシステムは、Windows のパフォーマンス システムのパフォーマンス データを公開します。 これらのカウンターを使用してアクセスできる、<xref:System.Diagnostics.PerformanceCounterCategory>と<xref:System.Diagnostics.PerformanceCounter>内に存在するクラス、<xref:System.Diagnostics?displayProperty=fullName>名前空間。
+一部のアプリケーションおよび Windows サブシステムは、Windows パフォーマンス システムを通じてパフォーマンス データを公開します。 これらのカウンターには、 名前空間に<xref:System.Diagnostics.PerformanceCounterCategory>存在<xref:System.Diagnostics.PerformanceCounter>する クラスと クラス<xref:System.Diagnostics?displayProperty=fullName>を使用してアクセスできます。
 
-次のコード例では、これらのクラスを使用して取得し、プロセッサがビジー時間の割合を示すために Windows によって更新されるカウンターを表示します。
+これらのクラスを使用して、Windows によって更新されたカウンタを取得して表示し、プロセッサがビジー状態の時間の割合を示すコード例を次に示します。
 
 > [!NOTE]
->  この例では、Windows Vista を管理者権限で実行する必要があります。
+> この例では、Windows Vista を管理者権限で実行する必要があります。
 
 ### <a name="example"></a>例
 
@@ -246,9 +246,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_text"></a> クリップボードからテキストを取得します。
+## <a name="retrieve-text-from-the-clipboard"></a><a name="retrieve_text"></a>クリップボードからテキストを取得する
 
-次のコード例では、<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>をへのポインターを返すメンバー関数、<xref:System.Windows.Forms.IDataObject>インターフェイス。 このインターフェイスをデータの形式のクエリを実行し、実際のデータを取得するために使用できます。
+次のコード例では、<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>メンバー関数を使用してインターフェイスへのポインター<xref:System.Windows.Forms.IDataObject>を返します。 このインターフェイスは、データの形式を照会し、実際のデータを取得するために使用できます。
 
 ### <a name="example"></a>例
 
@@ -286,9 +286,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="retrieve_current"></a> 現在のユーザー名を取得します。
+## <a name="retrieve-the-current-username"></a><a name="retrieve_current"></a>現在のユーザー名を取得する
 
-次のコード例では、現在のユーザー名 (Windows にログインしたユーザーの名前) の取得を示します。 名前が格納されている、 <xref:System.Environment.UserName%2A> 、文字列で定義されている、<xref:System.Environment>名前空間。
+現在のユーザー名 (Windows にログインしたユーザーの名前) を取得するコード例を次に示します。 名前は、名前空間で定義<xref:System.Environment.UserName%2A>されている文字列に<xref:System.Environment>格納されます。
 
 ### <a name="example"></a>例
 
@@ -304,9 +304,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_dotnet"></a> .NET Framework のバージョンを取得します。
+## <a name="retrieve-the-net-framework-version"></a><a name="retrieve_dotnet"></a>.NET フレームワーク のバージョンを取得する
 
-次のコード例は、現在インストールされている .NET Framework のバージョンを確認する方法を示します、<xref:System.Environment.Version%2A>ポインターであるプロパティを<xref:System.Version>バージョン情報を含むオブジェクト。
+現在インストールされている .NET Framework のバージョンをプロパティ (<xref:System.Environment.Version%2A>バージョン情報を含むオブジェクトへのポインター) を確認する<xref:System.Version>方法を次のコード例に示します。
 
 ### <a name="example"></a>例
 
@@ -331,9 +331,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_local"></a> ローカル コンピューター名を取得します。
+## <a name="retrieve-the-local-machine-name"></a><a name="retrieve_local"></a>ローカル マシン名の取得
 
-次のコード例は、ローカル コンピューター名の取得を示します (ネットワーク上のコンピューターの名前が表示されます)。 これを実現するには作業を<xref:System.Environment.MachineName%2A>、文字列で定義されている、<xref:System.Environment>名前空間。
+ローカル コンピュータ名 (ネットワーク上に表示されるコンピュータ名) を取得するコード例を次に示します。 これを実現するには、名前空間で<xref:System.Environment.MachineName%2A>定義されている文字列を取得します。 <xref:System.Environment>
 
 ### <a name="example"></a>例
 
@@ -349,9 +349,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_version"></a> Windows のバージョンを取得します。
+## <a name="retrieve-the-windows-version"></a><a name="retrieve_version"></a>Windows バージョンの取得
 
-次のコード例では、現在のオペレーティング システムのプラットフォームとバージョン情報を取得する方法を示します。 この情報が格納されている、<xref:System.Environment.OSVersion%2A?displayProperty=fullName>プロパティ広い意味での Windows のバージョンを表す列挙体で構成されると、<xref:System.Environment.Version%2A>オペレーティング システムの正確なビルドを含むオブジェクト。
+現在のオペレーティング システムのプラットフォームとバージョン情報を取得する方法を次のコード例に示します。 この情報はプロパティに<xref:System.Environment.OSVersion%2A?displayProperty=fullName>格納され、Windows のバージョンを詳しい言葉で記述する列挙体と、オペレーティング<xref:System.Environment.Version%2A>システムの正確なビルドを含むオブジェクトで構成されます。
 
 ### <a name="example"></a>例
 
@@ -391,9 +391,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_time"></a> 開始されてから経過時間を取得
+## <a name="retrieve-time-elapsed-since-startup"></a><a name="retrieve_time"></a>起動してから経過した時間を取得する
 
-次のコード例は、ティック数を確認する方法を示します。 または Windows から経過したミリ秒数が開始します。 この値は、<xref:System.Environment.TickCount%2A?displayProperty=fullName>メンバーと、32 ビット値であるため、ゼロにリセットすべて続けたします。
+次のコード例は、Windows の起動後に経過したティック数または経過時間 (ミリ秒) を確認する方法を示しています。 この値はメンバーに<xref:System.Environment.TickCount%2A?displayProperty=fullName>格納され、32 ビット値であるため、約 24.9 日ごとにゼロにリセットされます。
 
 ### <a name="example"></a>例
 
@@ -420,9 +420,9 @@ int main( )
 }
 ```
 
-## <a name="store_text"></a> クリップボードのテキストを格納します。
+## <a name="store-text-in-the-clipboard"></a><a name="store_text"></a>クリップボードにテキストを保存する
 
-次のコード例では、<xref:System.Windows.Forms.Clipboard>オブジェクトで定義されている、<xref:System.Windows.Forms>文字列を格納する名前空間。 このオブジェクトには 2 つのメンバー関数:<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>と<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>します。 派生したオブジェクトを送信することによってデータがクリップボードに格納されている<xref:System.Object>に<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>します。
+名前空間で定義されているオブジェクトを<xref:System.Windows.Forms.Clipboard>使用して文字列を<xref:System.Windows.Forms>格納するコード例を次に示します。 このオブジェクトには、 と<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>の<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>2 つのメンバー関数が用意されています。 データは、から<xref:System.Object>派生したオブジェクトを に送信することによってクリップボード<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>に格納されます。
 
 ### <a name="example"></a>例
 
@@ -451,9 +451,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="write_data"></a> Windows レジストリにデータを書き込む
+## <a name="write-data-to-the-windows-registry"></a><a name="write_data"></a>Windows レジストリにデータを書き込む
 
-次のコード例では、<xref:Microsoft.Win32.Registry.CurrentUser>の書き込み可能インスタンスを作成するキー、<xref:Microsoft.Win32.RegistryKey>に対応するクラス、**ソフトウェア**キー。 その後、<xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> メソッドを使用して、新しいキーを作成し、キーと値のペアを追加します。
+次のコード例では、<xref:Microsoft.Win32.Registry.CurrentUser>キーを使用して **、Software**キーに対応<xref:Microsoft.Win32.RegistryKey>するクラスの書き込み可能なインスタンスを作成します。 その後、<xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> メソッドを使用して、新しいキーを作成し、キーと値のペアを追加します。
 
 ### <a name="example"></a>例
 
@@ -501,9 +501,9 @@ int main()
 }
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-レジストリにアクセスする .NET Framework を使用することができます、<xref:Microsoft.Win32.Registry>と<xref:Microsoft.Win32.RegistryKey>では、どちらも、クラスが定義されている、<xref:Microsoft.Win32>名前空間。 **レジストリ**クラスは、の静的インスタンスのコンテナー、<xref:Microsoft.Win32.RegistryKey>クラス。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
+NET Framework を使用すると、<xref:Microsoft.Win32.Registry>および<xref:Microsoft.Win32.RegistryKey>クラスを持つレジストリに<xref:Microsoft.Win32>アクセスできます。 **Registry**クラスは、クラスの静的インスタンスのコンテナです<xref:Microsoft.Win32.RegistryKey>。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
 ## <a name="related-sections"></a>関連項目
 
@@ -511,4 +511,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

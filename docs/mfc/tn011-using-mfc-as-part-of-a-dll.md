@@ -1,5 +1,5 @@
 ---
-title: TN011:DLL の構成要素としての MFC
+title: 'テクニカル ノート 11: DLL の構成要素としての MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - _USRDLL symbol
@@ -8,88 +8,88 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 753612fae101708dd4f8294db121980b62af30b3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 0f4d4e2ed76a0fa5f8f775345fc672a1df055a39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610947"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370438"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:DLL の構成要素としての MFC
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>テクニカル ノート 11: DLL の構成要素としての MFC
 
-ここでは、標準 MFC Dll では、Windows ダイナミック リンク ライブラリ (DLL) の一部として、MFC ライブラリを使用することについて説明します。 これは、Windows の Dll とそのビルド方法について理解するいると仮定します。 MFC 拡張 Dll については、作成するために、MFC ライブラリの拡張機能を参照してください[MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)します。
+このノートでは、MFC ライブラリを Windows ダイナミック リンク ライブラリ (DLL) の一部として使用できる、通常の MFC DLL について説明します。 Windows DLL と、そのビルド方法に精通していることを前提としています。 MFC ライブラリの拡張機能を作成できる MFC 拡張 DLL の詳細については[、「MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)」を参照してください。
 
 ## <a name="dll-interfaces"></a>DLL インターフェイス
 
-レギュラー MFC Dll では、アプリケーションと DLL の間のインターフェイスは、C のような関数または明示的にエクスポートされたクラスで指定されるものとします。 MFC クラスのインターフェイスをエクスポートすることはできません。
+通常の MFC DLL は、アプリケーションと DLL の間のインターフェイスが C 型の関数または明示的にエクスポートされたクラスで指定されていることを前提としています。 MFC クラス インターフェイスをエクスポートできません。
 
-DLL とアプリケーションの両方は、MFC を使用する場合、両方がある場合、MFC ライブラリの共有バージョンを使用するか、または、ライブラリのコピーに静的にリンクします。 アプリケーションと DLL 可能性があります両方を使用して、標準のバージョンの MFC ライブラリのいずれか。
+DLL とアプリケーションの両方で MFC を使用する場合は、両方の方法で MFC ライブラリの共有バージョンを使用するか、ライブラリのコピーに静的にリンクするかを選択できます。 アプリケーションと DLL は、どちらも MFC ライブラリの標準バージョンのいずれかを使用できます。
 
-レギュラー MFC Dll には、いくつかの利点があります。
+通常の MFC DLL には、次のような利点があります。
 
-- DLL を使用するアプリケーションでは、MFC を使用する必要はありませんし、Visual C アプリケーションである必要はありません。
+- DLL を使用するアプリケーションは、MFC を使用する必要はありません。
 
-- MFC と静的にリンクされるレギュラー MFC Dll では、DLL のサイズは、使われ、リンクする MFC および C ランタイム ルーチンのみに依存します。
+- MFC に静的にリンクする標準 MFC DLL では、DLL のサイズは、使用およびリンクされている MFC および C ランタイム ルーチンにのみ依存します。
 
-- MFC と動的にリンクされるレギュラー MFC Dll では、MFC の共有バージョンを使用するとメモリを大幅に節約を重要なことがあります。 ただし、共有 Dll で Mfc を配布する必要があります\<*バージョン*> .dll と Msvvcrt\<*バージョン*> .dll、DLL とします。
+- MFC に動的にリンクする通常の MFC DLL を使用すると、共有バージョンの MFC を使用するメモリの節約が大幅に行われる可能性があります。 ただし、\<共有 DLL、Mfc*バージョン*>.dll、および Msvvcrt\<*バージョン*>.dll を DLL と共に配布する必要があります。
 
-- DLL のデザインは、クラスを実装する方法の依存しません。 必要に応じて Api にのみ、DLL の設計をエクスポートします。 その結果、実装が変更された場合、レギュラー MFC Dll が現在も有効です。
+- DLL の設計は、クラスの実装方法とは無関係です。 DLL 設計では、必要な API にのみエクスポートされます。 その結果、実装が変更された場合でも、通常の MFC DLL は有効です。
 
-- Mfc と静的にリンクされるレギュラー MFC Dll で DLL とアプリケーションの両方で MFC を使用する場合は、アプリケーションを別のバージョンの MFC DLL よりも、またはその逆も問題はありません。 MFC ライブラリは、各 DLL または EXE に静的にリンクが、ために、バージョンに関する質問はありません。
+- MFC に静的にリンクする通常の MFC DLL では、DLL とアプリケーションの両方が MFC を使用する場合、アプリケーションで DLL とは異なるバージョンの MFC を使用する場合、またはその逆のバージョンに問題はありません。 MFC ライブラリは各 DLL または EXE に静的にリンクされているため、どのバージョンを使用しているかは問いません。
 
 ## <a name="api-limitations"></a>API の制限事項
 
-一部の MFC 機能は DLL バージョンは、いずれかの技術的な制限は適用されませんので、それらのサービスは、通常、アプリケーションによって提供されますか。 適用可能でない唯一の関数は、現在のバージョンの MFC では、`CWinApp::SetDialogBkColor`します。
+MFC の機能の中には、技術的な制限や、通常はアプリケーションが提供するサービスが原因で、DLL のバージョンに適用されないものがあります。 現在のバージョンの MFC では、適用できない関数は`CWinApp::SetDialogBkColor`.
 
 ## <a name="building-your-dll"></a>DLL のビルド
 
-MFC では、シンボルに静的にリンクされるレギュラー MFC Dll をコンパイルするときに`_USRDLL`と`_WINDLL`定義する必要があります。 DLL のコードは、次のコンパイラ スイッチを使用してコンパイルすることも必要があります。
+MFC に静的にリンクする標準 MFC DLL をコンパイルする`_USRDLL`場合`_WINDLL`は、シンボルを定義する必要があります。 DLL コードは、次のコンパイラ スイッチを使用してコンパイルする必要もあります。
 
-- **/D_WINDLL**コンパイルである dll を示します
+- **/D_WINDLL**は、コンパイルが DLL 用であることを示します。
 
-- **/D_USRDLL**レギュラー MFC DLL をビルドするを指定します。
+- **/D_USRDLL**は、通常の MFC DLL をビルドしていることを指定します
 
-また、これらのシンボルを定義して、MFC と動的にリンクされるレギュラー MFC Dll をコンパイルするときに、これらのコンパイラ スイッチを使用する必要があります。 さらに、シンボル`_AFXDLL`定義する必要があり、DLL のコードをコンパイルする必要があります。
+これらのシンボルを定義し、MFC に動的にリンクする通常の MFC DLL をコンパイルするときに、これらのコンパイラ スイッチを使用する必要もあります。 さらに、シンボル`_AFXDLL`を定義し、DLL コードを次のようにコンパイルする必要があります。
 
-- **/方法**MFC と動的にリンクされるレギュラー MFC DLL を作成することを指定します。
+- **/D_AFXDLL** MFC に動的にリンクする通常の MFC DLL をビルドすることを指定します。
 
-アプリケーションと DLL の間のインターフェイス (Api) を明示的にエクスポートする必要があります。 、低帯域幅を、インターフェイスを定義して、C インターフェイスだけを使うことをお勧めします。 直接的な C インターフェイスより複雑な C++ クラスよりも管理が容易です。
+アプリケーションと DLL 間のインターフェイス (API) は、明示的にエクスポートする必要があります。 インターフェイスを低帯域幅に定義し、可能であれば C インターフェイスのみを使用することをお勧めします。 直接 C インターフェイスは、複雑な C++ クラスよりも保守が容易です。
 
-C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください。[は](../overview/visual-cpp-samples.md)例についてはします。 関数をエクスポートするには、それらを入力、`EXPORTS`モジュール定義ファイルのセクション (します。DEF)、または含める`__declspec(dllexport)`関数の定義にします。 使用`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。
+Api は、C ファイルと C++ ファイルの両方で含めることができる個別のヘッダーに配置します。 例については、MFC の高度な概念サンプル[DLLScreenCap](../overview/visual-cpp-samples.md)のヘッダー ScreenCap.h を参照してください。 関数をエクスポートするには、`EXPORTS`モジュール定義ファイル (.DEF) または`__declspec(dllexport)`関数定義に含める。 これらの`__declspec(dllimport)`関数をクライアント実行可能ファイルにインポートするために使用します。
 
-AFX_MANAGE_STATE マクロは、MFC と動的にリンクされるレギュラー MFC Dll でエクスポートされたすべての関数の先頭に追加する必要があります。 このマクロは、DLL のモジュールの現在の状態を設定します。 このマクロを使用するには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
+MFC に動的にリンクする通常の MFC DLL では、エクスポートされたすべての関数の先頭にAFX_MANAGE_STATE マクロを追加する必要があります。 このマクロは、DLL の現在のモジュールの状態を設定します。 このマクロを使用するには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
 
 `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`
 
-## <a name="winmain---dllmain"></a>WinMain DllMain を -> します。
+## <a name="winmain---dllmain"></a>ウィンメイン -> DllMain
 
-MFC ライブラリ定義の標準の Win32`DllMain`エントリ ポイントを初期化する、 [CWinApp](../mfc/reference/cwinapp-class.md)典型的な MFC アプリケーションのようにオブジェクトを派生します。 配置のすべての DLL に固有の初期化、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)典型的な MFC アプリケーションと同様のメソッド。
+MFC ライブラリは、標準的な MFC`DllMain`アプリケーションのように[CWinApp](../mfc/reference/cwinapp-class.md)派生オブジェクトを初期化する標準 Win32 エントリ ポイントを定義します。 一般的な MFC アプリケーションと同様に、すべての DLL 固有の初期化を[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)メソッドに配置します。
 
-なお、[使わ](../mfc/reference/cwinapp-class.md#run)DLL には、アプリケーションは、メイン メッセージ ポンプを所有しているためのメカニズムは適用されません。 DLL は、モードレス ダイアログ ボックスを表示します。 または、独自のメイン フレーム ウィンドウが、アプリケーションのメイン メッセージ ポンプが呼び出す DLL エクスポートのルーチンを呼び出す必要があります[cwinapp::pretranslatemessage](../mfc/reference/cwinapp-class.md#pretranslatemessage)します。
+[CWinApp::Run](../mfc/reference/cwinapp-class.md#run)メカニズムは、アプリケーションがメイン メッセージ ポンプを所有しているため、DLL には適用されないことに注意してください。 DLL がモードレス ダイアログを表示する場合、または独自のメイン フレーム ウィンドウがある場合、アプリケーションのメイン メッセージ ポンプは[:P、Dll](../mfc/reference/cwinapp-class.md#pretranslatemessage)エクスポートされたルーチンを呼び出す必要があります。
 
-この関数を使用するのサンプルを参照してください。
+この関数の使用については、DLLScreenCap サンプルを参照してください。
 
-`DllMain` MFC には、呼び出す関数、[し](../mfc/reference/cwinapp-class.md#exitinstance)から派生したクラスのメソッド`CWinApp`DLL が読み込まれる前にします。
+MFC`DllMain`が提供する関数は、DLL がアンロードされる`CWinApp`前に派生したクラスの[CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)メソッドを呼び出します。
 
 ## <a name="linking-your-dll"></a>DLL のリンク
 
-MFC と静的にリンクされるレギュラー MFC Dll Nafxcwd.lib または Nafxcw.lib および Libcmt.lib をという名前の C ランタイムのバージョンの DLL をリンクする必要があります。 これらのライブラリは、あらかじめ組み込まれており、Visual C のセットアップを実行するときに指定することによってインストールされます。
+MFC に静的にリンクする通常の MFC DLL では、DLL を Nafxcwd.lib または Nafxcw.lib とリンクし、Libcmt.lib という名前の C ランタイムのバージョンとリンクする必要があります。 これらのライブラリはあらかじめビルドされており、Visual C++ セットアップを実行するときに指定することによってインストールできます。
 
 ## <a name="sample-code"></a>サンプル コード
 
-プログラムの完全なサンプルについては MFC Advanced Concepts サンプルを参照してください。 このサンプルで注目する点は次のとおりです。
+完全なサンプルについては、MFC の詳細概念サンプル プログラム DLLScreenCap を参照してください。 このサンプルで注目すべき点は、次のとおりです。
 
-- コンパイラ フラグは、DLL と、アプリケーションのものは異なります。
+- DLL のコンパイラ フラグとアプリケーションのコンパイラ フラグが異なります。
 
-- リンクの線とします。DEF ファイルは、DLL と、アプリケーションの場合は異なります。
+- リンク行と .DLL の DEF ファイルとアプリケーション用の DEF ファイルは異なります。
 
-- DLL を使用するアプリケーションを C++ である必要はありません。
+- DLL を使用するアプリケーションは、C++ で使用する必要はありません。
 
-- アプリケーションと DLL の間のインターフェイスには、DLLScreenCap.def と API は C または C++ を使用し、エクスポートされるですが。
+- アプリケーションと DLL の間のインターフェイスは、C または C++ で使用できる API であり、DLLScreenCap.def でエクスポートされます。
 
-次の例は、通常は静的にリンクする MFC DLL で定義されている API を示しています。 この例では、宣言で囲まれた、 `extern "C" { }` C++ ユーザーをブロックします。 これは、いくつかの利点があります。 最初に、その DLL Api から使用できるよう C++ 以外のクライアント アプリケーション。 第 2 に、C++ 名前マングルが適用されないためエクスポート名には、DLL のオーバーヘッドが減少します。 最後に、簡単に明示的に追加する、します。DEF は、名前マングルについて心配する必要はありません (序数でエクスポートする) のファイルします。
+MFC に静的にリンクする通常の MFC DLL で定義されている API の例を次に示します。 この例では、宣言は C++`extern "C" { }`ユーザーのブロックで囲まれています。 これにはいくつかの利点があります。 最初に、非 C++ クライアント アプリケーションで DLL API を使用できるようにします。 第 2 に、C++ 名のマングリングはエクスポートされた名前に適用されないため、DLL のオーバーヘッドが削減されます。 最後に、 に明示的に追加する方が簡単になります。DEF ファイル (序数でエクスポート) を使用せずに名前のマングリングを気にする必要はありません。
 
-```
+```cpp
 #ifdef __cplusplus
 extern "C" {
 #endif  /* __cplusplus */
@@ -107,7 +107,7 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
 #endif
 ```
 
-API で使用される構造体は、MFC クラスから派生していないと、API ヘッダーで定義されます。 これは、DLL と、アプリケーション間のインターフェイスの複雑さを軽減し、DLL を C プログラムから使用できるようにします。
+API で使用される構造体は、MFC クラスから派生しておらず、API ヘッダーで定義されます。 これにより、DLL とアプリケーション間のインターフェイスの複雑さが軽減され、C プログラムで DLL を使用できるようになります。
 
 ## <a name="see-also"></a>関連項目
 

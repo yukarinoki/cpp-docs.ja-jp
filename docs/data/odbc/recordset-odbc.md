@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7a55621f4875b24cc33a0fd49a5b8b4c88b34cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368644"
 ---
 # <a name="recordset-odbc"></a>レコードセット (ODBC)
 
@@ -35,9 +35,9 @@ ms.locfileid: "80212824"
 テーブルに基づくレコードセットの例は "all customers" です。これは Customer テーブルにアクセスします。 クエリの例は "all invoices for Joe Smith" です。 ストアド プロシージャ (事前定義クエリと呼ばれることもあります) に基づくレコードセットの例は、"all of the delinquent accounts" です。これは、バックエンド データベースでストアド プロシージャを呼び出します。 レコードセットでデータ ソースを同じくする 2 つ以上のテーブルを結合できますが、データ ソースの異なるテーブルは結合できません。
 
 > [!NOTE]
->  一部の ODBC ドライバーでは、データベースのビューがサポートされます。 この意味でのビューは、SQL `CREATE VIEW` ステートメントでもともと作成されたクエリです。
+> 一部の ODBC ドライバーでは、データベースのビューがサポートされます。 この意味でのビューは、SQL `CREATE VIEW` ステートメントでもともと作成されたクエリです。
 
-##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> レコードセットの機能
+## <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> レコードセットの機能
 
 すべてのレコードセット オブジェクトに次の機能があります。
 
@@ -51,30 +51,30 @@ ms.locfileid: "80212824"
 
 - レコードセットを[パラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)し、実行時のレコードセット選択を修正できます。
 
-##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> スナップショットとダイナセット
+## <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> スナップショットとダイナセット
 
 レコードセットには、[スナップショット](../../data/odbc/snapshot.md)と[ダイナセット](../../data/odbc/dynaset.md)という 2 種類のプリンシパルがあります。 いずれもクラス `CRecordset` でサポートされています。 いずれにもすべてのレコードセットで共通の特性がありますが、さらにそれぞれのレコードセットにおいて独自の特別な方法でその共通機能が拡張されます。 スナップショットではデータが静的に表示され、レポートや、特定の時点でのデータを表示する必要がある他の状況で役に立ちます。 ダイナセットは、他のユーザーが行った更新をレコードセットに表示するときに便利です。レコードセットを再度問い合わせたり、更新したりする必要がありません。 スナップショットとダイナセットは更新可能か読み取り専用にすることができます。 他のユーザーが追加または削除したレコードを反映させるには、[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) を呼び出します。
 
 `CRecordset` では、他にも 2 種類のレコードセット、動的レコードセットと前方スクロール専用レコードセットが許可されます。 動的レコードセットはダイナセットに似ていますが、動的レコードの場合、`CRecordset::Requery` を呼び出さなくても、追加または削除されたあらゆるレコードが反映されます。 そのため、動的レコードセットは DBMS の処理時間に関連し、一般的に高額になります。多くの ODBC ドライバーでサポートされていません。 対照的に、前方スクロール専用レコードセットの場合、更新や後方スクロールを必要としない、最も効率的な方法でレコードセットのデータにアクセスできます。 たとえば、前方スクロール専用レコードセットを使用し、データ ソース間でデータを移行します。前方にデータを動かすだけでこの移行は完了します。 前方スクロール専用レコードセットを使用するには、次の両方を行う必要があります。
 
-- `CRecordset::forwardOnly`Open*メンバー関数の*nOpenType[ パラメーターとしてオプション ](../../mfc/reference/crecordset-class.md#open) を渡します。
+- [Open](../../mfc/reference/crecordset-class.md#open) メンバー関数の *nOpenType* パラメーターとしてオプション `CRecordset::forwardOnly` を渡します。
 
-- `CRecordset::readOnly` の *dwOptions* パラメーターに `Open` を指定します。
+- `Open` の *dwOptions* パラメーターに `CRecordset::readOnly` を指定します。
 
     > [!NOTE]
     >  ダイナセット サポートの ODBC ドライバー要件については、「[ODBC](../../data/odbc/odbc-basics.md)」を参照してください。 Visual C++ のこのバージョンに含まれている ODBC ドライバー一覧、および他のドライバーを取得する方法については、「[ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
-##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> レコード セット
+## <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> レコード セット
 
-アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 (例外はデータベース結合であり、1つのレコードセットが2つ以上のテーブルの列を表します)。レコードセットクラスを派生させる場合は、レコードフィールドエクスチェンジ (RFX) メカニズムまたは bulk レコードフィールドエクスチェンジ (Bulk RFX) メカニズムを有効にします。これは、ダイアログデータエクスチェンジ (DDX) メカニズムに似ています。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md) 」および「レコード[セット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 例外はデータベース結合で、1 つのレコードセットが複数のテーブルの列を表します。レコードセット クラスを派生させる場合は、レコード フィールド エクスチェンジ (RFX) メカニズムまたはバルク レコード フィールド エクスチェンジ (Bulk RFX) メカニズムを有効にします。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「[レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md) 」および[「レコードセット : レコードの一括フェッチ (ODBC)」](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
-レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `CRecordset` や `MoveNext` など、`MovePrev` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセットデータメンバーの詳細については、「[レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
+レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `MoveNext` や `MovePrev` など、`CRecordset` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセット データ メンバーの詳細については、「[レコードセット : アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
 
 次のトピックでは、レコードセット オブジェクトの使用について説明しています。 トピックの一覧は機能的なカテゴリに基づいて表示されており、順を追って読めるよう、自然な閲覧順になっています。
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>レコードセットを開き、読み、閉じるためのメカニズムに関するトピック
 
-- [レコードセット: レコードセットの構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
 - [レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
@@ -118,8 +118,8 @@ ms.locfileid: "80212824"
 
 - [レコードセット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[データベース接続を開く (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)

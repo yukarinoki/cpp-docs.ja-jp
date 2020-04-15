@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizeDialog クラス
+title: クラスをカスタマイズします。
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375202"
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog クラス
+# <a name="cmfcribboncustomizedialog-class"></a>クラスをカスタマイズします。
 
-リボンが表示されます**カスタマイズ**ページ。
+リボンの **[カスタマイズ**] ページを表示します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,22 +31,22 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|`CMFCRibbonCustomizeDialog` オブジェクトを構築します。|
+|[ダイアログボックスをカスタマイズします。](#cmfcribboncustomizedialog)|`CMFCRibbonCustomizeDialog` オブジェクトを構築します。|
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MFC では、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合、またはメッセージ ハンドラーから 0 を返す場合は自動的にこのクラスがインスタンス化します。
+MFC は、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合、またはメッセージ ハンドラーから 0 を返す場合は、このクラスを自動的にインスタンス化します。
 
-アプリケーションで、リボンを表示するこのクラスを使用するかどうか**カスタマイズ** ダイアログ ボックスでのみインスタンス化し、呼び出し、`DoModal`メソッド。
+アプリケーションでこのクラスを使用してリボンの **[カスタマイズ**] ダイアログ ボックスを表示する場合は、インスタンス化`DoModal`してメソッドを呼び出します。
 
-このクラスはから派生しているため[CMFCPropertySheet クラス](../../mfc/reference/cmfcpropertysheet-class.md)を使用してカスタム ページを追加することができます、 `CMFCPropertySheet` API。
+このクラスは[CMFCPropertySheet クラス](../../mfc/reference/cmfcpropertysheet-class.md)から派生しているため、API を使用してカスタム`CMFCPropertySheet`ページを追加できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,13 +60,13 @@ MFC では、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合�
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-[CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
+[ダイアログボックス](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxribboncustomizedialog.h
+**ヘッダー:** afxribbon カスタマイザダイアログ.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>ダイアログボックスをカスタマイズします。
 
 `CMFCRibbonCustomizeDialog` オブジェクトを構築します。
 
@@ -78,23 +78,23 @@ CMFCRibbonCustomizeDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndParent*<br/>
+*親の子*<br/>
 [in]親ウィンドウ (通常はメイン フレーム) へのポインター。
 
-*pRibbon*<br/>
-[in]ポインター、`CMFCRibbonBar`カスタマイズです。
+*pリボン*<br/>
+[in]カスタマイズするを`CMFCRibbonBar`指すポインター。
 
 ### <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCRibbonCustomizeDialog`オブジェクト。
+オブジェクトを構築する方法を次の例`CMFCRibbonCustomizeDialog`に示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクターをインスタンス化、 [CMFCRibbonCustomizePropertyPage クラス](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)オブジェクトし、プロパティ シートのページのコレクションに追加します。
+コンストラクターは[、CMFCRibbonCustomizePropertyPage クラス](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)オブジェクトをインスタンス化し、プロパティ シート ページのコレクションに追加します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

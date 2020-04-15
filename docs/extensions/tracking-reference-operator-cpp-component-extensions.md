@@ -8,16 +8,16 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368235"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>参照演算子の追跡 (C++/CLI および C++/CX)
 
-"*追跡参照*" (`%`) は、通常の C++ 参照 (`&`) のように動作します。ただし、オブジェクトが追跡参照に割り当てられている場合は、オブジェクトの参照カウントがインクリメントされます。
+*追跡参照*(`%`) は、オブジェクトが追跡参照に割`&`り当てられるとオブジェクトの参照カウントがインクリメントされる点を除いて、通常の C++ 参照 ( ) と同様に動作します。
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
@@ -75,7 +75,7 @@ CLR では、ガベージ コレクターが参照先オブジェクトを移動
 
 C++/CLI での追跡参照の詳細については、以下を参照してください。
 
-- [方法: C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [方法 : C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>例
 
