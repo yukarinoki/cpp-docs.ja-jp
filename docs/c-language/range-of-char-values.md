@@ -2,20 +2,20 @@
 title: Range of char Values (char 値の範囲)
 ms.date: 11/04/2016
 ms.assetid: 15ae9781-ec21-4333-bba8-6d2383bbf7f1
-ms.openlocfilehash: c188856ab15c18ccd52aa89235d149366d0b316e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 8cb2609aca910056b5243fddc868710581e576e7
+ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147426"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81480904"
 ---
 # <a name="range-of-char-values"></a>Range of char Values (char 値の範囲)
 
-**ANSI 3.2.1.1** "プレーン" の **char** が、**signed char** または `unsigned char` と同じ値の範囲を持つかどうか
+**ANSI 3.2.1.1**"プレーン"**文字**が**符号付き char**と同じ範囲の値を持つか **、符号なし char**を持つものか
 
 すべての符号付き文字の値は -128 ～ 127 の範囲です。 すべての符号なし文字の値は 0 ～ 255 の範囲です。
 
-/J コンパイラ オプションは、既定値を **signed** から `unsigned` に変更します。
+コンパイラ[`/J`](../build/reference/j-default-char-type-is-unsigned.md)オプションは **、char**の既定の型を**符号付き char**から**符号なし char**に変更します。
 
 ## <a name="see-also"></a>関連項目
 
