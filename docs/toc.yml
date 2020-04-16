@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する'
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: 'チュートリアル: スタティック ライブラリの作成と使用 (C++)'
+    - name: 'チュートリアル: スタティック ライブラリを作成して使用する (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: Visual Studio での C++ DLL のビルド
       expanded: false
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: CRT の初期化
                   href: c-runtime-library/crt-initialization.md
+                - name: CRT でのグローバル状態
+                  href: c-runtime-library/global-state.md
             - name: カテゴリ別ユニバーサル C ランタイム ルーチン
               expanded: false
               items:
