@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320782"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748109"
 ---
 # <a name="ccomcontrolbase-class"></a>クラス
 
@@ -548,7 +548,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>パラメーター
 
-*lcid*<br/>
+*Lcid*<br/>
 プロパティDISPID_AMBIENT_LOCALEID。
 
 ### <a name="return-value"></a>戻り値
@@ -606,7 +606,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 *Dispid*<br/>
 取得するコンテナー プロパティの識別子。
 
-*Var*<br/>
+*var*<br/>
 プロパティを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -794,7 +794,7 @@ BOOL GetDirty();
 
 インプレイス編集用にアクティブ化されたコントロールのズーム係数の分子と分母の x および y 値を取得します。
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ TRUE の場合、キーボード フォーカスを呼び出し元コントロ�
 
 データ メンバ`m_bRequiresSave`を*bDirty*の値に設定します。
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 

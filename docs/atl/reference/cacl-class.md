@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 87bf903220a584798ea59c5f1c701fc35049e901
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321668"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748780"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 
@@ -186,7 +186,7 @@ virtual UINT GetAceCount() const throw() = 0;
 
 オブジェクトからアクセス制御リスト (ACL) エントリを`CAcl`取得します。
 
-```
+```cpp
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
@@ -220,7 +220,7 @@ ACE の種類とフラグの詳細については[、ACE_HEADER](/windows/win32/
 
 アクセス制御リスト (ACL) 内のエントリに関するすべての情報を取得します。
 
-```
+```cpp
 void GetAclEntry(
     UINT nIndex,
     CSid* pSid,
@@ -341,7 +341,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 `CAcl`オブジェクトから特定の ACE (アクセス制御エントリ) を削除します。
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -371,7 +371,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 オブジェクトを`CAcl`空としてマークします。
 
-```
+```cpp
 void SetEmpty() throw();
 ```
 
@@ -383,7 +383,7 @@ void SetEmpty() throw();
 
 オブジェクトを`CAcl`NULL としてマークします。
 
-```
+```cpp
 void SetNull() throw();
 ```
 

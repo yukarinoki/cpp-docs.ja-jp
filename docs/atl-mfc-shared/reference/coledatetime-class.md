@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 610cbec6cb65d4e9616c5e0e0d64e729f39febcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba09430427b6ece8ae5956912cbcc40fb33fcf2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317745"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747158"
 ---
 # <a name="coledatetime-class"></a>クラス
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 型`DATE`は浮動小数点値として実装されます。 1899年12月30日午前0時から日数が測定されます。 次の表に、日付と関連する値を示します。
 
-|Date|[値]|
+|Date|値|
 |----------|-----------|
 |1899年12月29日午前0時|-1.0|
 |1899年12月29日 午前6時|-1.25|
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*日付*<br/>
+*date*<br/>
 比較される `COleDateTime` オブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -296,7 +296,7 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY 解析中に時間の部分を無視します。
 
-*lcid*<br/>
+*Lcid*<br/>
 変換に使用するロケール ID を示します。 言語識別子の詳細については、「[言語識別子](/windows/win32/Intl/language-identifiers)」を参照してください。
 
 *フォーマット*<br/>
@@ -940,7 +940,7 @@ bool ParseDateTime(
 
 - VAR_DATEVALUEONLY 解析中に時間の部分を無視します。
 
-*lcid*<br/>
+*Lcid*<br/>
 変換に使用するロケール ID を示します。
 
 ### <a name="return-value"></a>戻り値
@@ -1014,7 +1014,7 @@ int SetDate(
 
 日付値の例を次に示します。
 
-|*n年*|*nMonth*|*nDay*|[値]|
+|*n年*|*nMonth*|*nDay*|値|
 |-------------|--------------|------------|-----------|
 |2000|2|29|2000年2月29日|
 |1776|7|4|1776年7月4日|
@@ -1089,7 +1089,7 @@ int SetDateTime(
 
 時刻値の例を次に示します。
 
-|*nアワー*|*nMin*|*Nsec*|[値]|
+|*nアワー*|*nMin*|*Nsec*|値|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ int SetDateTime(
 
 日付値の例を次に示します。
 
-|*n年*|*nMonth*|*nDay*|[値]|
+|*n年*|*nMonth*|*nDay*|値|
 |-------------|--------------|------------|-----------|
 |1995|4|15|1995年4月15日|
 |1789|7|14|1789年7月17日|
@@ -1135,7 +1135,7 @@ int SetDateTime(
 
 この`COleDateTime`オブジェクトのステータスを設定します。
 
-```
+```cpp
 void SetStatus(DateTimeStatus status) throw();
 ```
 
@@ -1191,7 +1191,7 @@ int SetTime(
 
 時刻値の例を次に示します。
 
-|*nアワー*|*nMin*|*Nsec*|[値]|
+|*nアワー*|*nMin*|*Nsec*|値|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

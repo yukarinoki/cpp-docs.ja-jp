@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321576"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748794"
 ---
 # <a name="catlarray-class"></a>クラス
 
@@ -162,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 配列オブジェクトが有効であることを確認します。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ CAtlArray() throw();
 
 配列の要素を別の配列にコピーします。
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 配列から空の要素を削除します。
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 配列を別の配列に挿入します。
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 配列オブジェクトに新しい要素 (または要素の複数のコピー) を挿入します。
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 配列オブジェクトからすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ void RemoveAll() throw();
 
 配列から 1 つ以上の要素を削除します。
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 配列オブジェクト内の要素の値を設定します。
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 配列オブジェクト内の要素の値を設定し、必要に応じて配列を展開します。
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

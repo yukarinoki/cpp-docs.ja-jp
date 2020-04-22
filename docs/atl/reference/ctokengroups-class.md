@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 1e9d21c59eb5efabf036fbc938a40de2c4b7a0b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330549"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746381"
 ---
 # <a name="ctokengroups-class"></a>クラス
 
@@ -81,7 +81,7 @@ Windows のアクセス制御モデルの概要については、Windows SDK の
 
 オブジェクトに`CSid`既存`TOKEN_GROUPS`の構造体または`CTokenGroups`既存の構造体を追加します。
 
-```
+```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
@@ -153,7 +153,7 @@ bool Delete(const CSid& rSid) throw();
 
 オブジェクトからすべての`CSid`オブジェクトと関連する属性を`CTokenGroups`削除します。
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -197,7 +197,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 オブジェクトと、`CSid`オブジェクトに属する属性 (オプション) を`CTokenGroups`取得します。
 
-```
+```cpp
 void GetSidsAndAttributes(
     CSid::CSidArray* pSids,
     CAtlArray<DWORD>* pAttributes = NULL) const throw(...);

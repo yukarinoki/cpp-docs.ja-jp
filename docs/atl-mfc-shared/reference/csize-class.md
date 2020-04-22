@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 6d1b82e3f60428e3a778709dc69de983a7f886bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317671"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746974"
 ---
 # <a name="csize-class"></a>CSize クラス
 
@@ -139,7 +139,7 @@ BOOL operator!=(SIZE size) const throw();
 
 この`CSize`サイズを追加します。
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -151,7 +151,7 @@ void operator+=(SIZE size) throw();
 
 この`CSize`サイズからサイズを減算します。
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -179,11 +179,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 - **演算子 +(***ポイント***)**
 
-  この操作は、この`CSize`値によって[POINT](/previous-versions/dd162805\(v=vs.85\)) (または[CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)の値をオフセット (移動) します。 この`cx``CSize`値`cy`の と のメンバーは、 `x` `y`値のデータ・`POINT`メンバーおよびデータ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子 +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)のバージョンに似ています。
+  この操作は、この`CSize`値によって[POINT](/windows/win32/api/windef/ns-windef-point) (または[CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)の値をオフセット (移動) します。 この`cx``CSize`値`cy`の と のメンバーは、 `x` `y`値のデータ・`POINT`メンバーおよびデータ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子 +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)のバージョンに似ています。
 
 - **演算子 +(** *lpRect* **)**
 
-   この操作は、RECT (または[CRect)](../../atl-mfc-shared/reference/crect-class.md)の値をこの`CSize`値でオフセット (移動) します。 [RECT](/previous-versions/dd162897\(v=vs.85\)) この`cx``CSize`値`cy`の および のメンバーは`left`、 `top`、 `right`、`bottom`および 値の`RECT`データ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子 +](../../atl-mfc-shared/reference/crect-class.md#operator_add)のバージョンに似ています。
+   この操作は、RECT (または[CRect)](../../atl-mfc-shared/reference/crect-class.md)の値をこの`CSize`値でオフセット (移動) します。 [RECT](/windows/win32/api/windef/ns-windef-rect) この`cx``CSize`値`cy`の および のメンバーは`left`、 `top`、 `right`、`bottom`および 値の`RECT`データ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子 +](../../atl-mfc-shared/reference/crect-class.md#operator_add)のバージョンに似ています。
 
 ### <a name="example"></a>例
 
@@ -210,11 +210,11 @@ CSize operator-() const throw();
 
 - **演算子 -(***ポイント***)**
 
-  この操作は、この`CSize`値の加算反転によって[POINT](/previous-versions/dd162805\(v=vs.85\))または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)値をオフセット (移動) します。 この`cx``CSize`値`cy`の と の 値は`x`、`y`値の データ`POINT`・メンバーおよびデータ・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)のバージョンに似ています。
+  この操作は、この`CSize`値の加算反転によって[POINT](/windows/win32/api/windef/ns-windef-point)または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)値をオフセット (移動) します。 この`cx``CSize`値`cy`の と の 値は`x`、`y`値の データ`POINT`・メンバーおよびデータ・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)のバージョンに似ています。
 
 - 演算子 *-(lpRect)* **)** **operator -(**
 
-  この操作は、この`CSize`値の加算反転によって RECT または[CRect](../../atl-mfc-shared/reference/crect-class.md)値をオフセット (移動) します。 [RECT](/previous-versions/dd162897\(v=vs.85\)) この`cx``CSize`値`cy`の および のメンバーは、 `left`、 `top` `right`、および`bottom`値のデータ`RECT`・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子](../../atl-mfc-shared/reference/crect-class.md#operator_-)のバージョンに似ています。
+  この操作は、この`CSize`値の加算反転によって RECT または[CRect](../../atl-mfc-shared/reference/crect-class.md)値をオフセット (移動) します。 [RECT](/windows/win32/api/windef/ns-windef-rect) この`cx``CSize`値`cy`の および のメンバーは、 `left`、 `top` `right`、および`bottom`値のデータ`RECT`・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子](../../atl-mfc-shared/reference/crect-class.md#operator_-)のバージョンに似ています。
 
 - **演算子 -()**
 

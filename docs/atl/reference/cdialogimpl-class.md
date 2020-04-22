@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 900a312c97d7b83eac93a372be39a006b3c4344d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327063"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747708"
 ---
 # <a name="cdialogimpl-class"></a>クラス
 
@@ -119,7 +119,7 @@ HWND Create(
 *スーンドペアレント*<br/>
 [in]所有者ウィンドウへのハンドル。
 
-**RECT&** ダイアログのサイズと位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を*rect* .in.
+**RECT&** ダイアログのサイズと位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を*rect* .in.
 
 *ドウィニトパラム*<br/>
 [in]WM_INITDIALOG メッセージの*lParam*パラメータでダイアログ ボックスに渡す値を指定します。

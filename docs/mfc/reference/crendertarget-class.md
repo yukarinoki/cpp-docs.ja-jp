@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368346"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747200"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget クラス
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 
 このレンダー ターゲットで描画を開始します。
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 作図領域を指定した色にクリアします。
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ BOOL CreateCompatibleRenderTarget(
 *目的のフォーマット*<br/>
 新しいレンダー ターゲットの目的のピクセル形式とアルファ モード、または NULL。 ピクセル形式がDXGI_FORMAT_UNKNOWNに設定されている場合、またはこのパラメータが null の場合、新しいレンダー ターゲットは元のレンダー ターゲットと同じピクセル形式を使用します。 アルファ モードがD2D1_ALPHA_MODE_UNKNOWNまたは NULL の場合、新しいレンダー ターゲットのアルファ モードは既定でD2D1_ALPHA_MODE_PREMULTIPLIED。 サポートされるピクセル形式については、「サポートされるピクセル形式とアルファモード」を参照してください。
 
-*オプション*<br/>
+*options*<br/>
 新しいレンダー ターゲットが GDI と互換性を持つ必要があるかどうかを指定する値。
 
 ### <a name="return-value"></a>戻り値
@@ -362,7 +362,7 @@ ID2D1RenderTarget* Detach ();
 
 指定した IDWriteTextLayout オブジェクトによって記述された書式設定されたテキストを描画します。
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ void DrawBitmap(
 
 指定したストローク スタイルを使用して、指定した楕円のアウトラインを描画します。
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ void DrawEllipse(
 
 指定したストローク スタイルを使用して、指定したジオメトリのアウトラインを描画します。
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ void DrawGeometry(
 
 指定したグリフを描画します。
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ void DrawGlyphRun(
 
 指定したストローク スタイルを使用して、指定したポイント間に線を描画します。
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ void DrawLine(
 
 指定した寸法とストローク スタイルを持つ四角形のアウトラインを描画します。
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ void DrawRectangle(
 
 指定したストローク スタイルを使用して、指定した角丸四角形のアウトラインを描画します。
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ void DrawRoundedRectangle(
 
 オブジェクトによって提供される書式情報を使用して、指定されたテキストを描画します。
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ void DrawText(
 *textFormat*<br/>
 フォント、フォント サイズ、フロー方向など、描画するテキストの書式の詳細を記述するオブジェクト。
 
-*オプション*<br/>
+*options*<br/>
 テキストをピクセル境界にスナップするかどうか、およびテキストをレイアウト四角形にクリップするかどうかを示す値。 既定値は D2D1_DRAW_TEXT_OPTIONS_NONE で、テキストをピクセル境界にスナップし、レイアウト四角形にクリップしないことを示します。
 
 *測定モード*<br/>
@@ -586,7 +586,7 @@ void DrawText(
 
 指定した IDWriteTextLayout オブジェクトによって記述された書式設定されたテキストを描画します。
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ textLayout で記述されたテキストの左上隅が描画される、デバ
 *前景*<br/>
 テキスト内のテキストを描画するために使用されるブラシレイアウトに、描画効果として関連付けられているブラシがないレイアウトです (IDWriteTextLayout::SetDrawingEffect メソッドで指定)。
 
-*オプション*<br/>
+*options*<br/>
 テキストをピクセル境界にスナップするかどうか、およびテキストをレイアウト四角形にクリップするかどうかを示す値。 既定値は D2D1_DRAW_TEXT_OPTIONS_NONE で、テキストをピクセル境界にスナップし、レイアウト四角形にクリップしないことを示します。
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>レンダリングターゲット::エンドドロー
@@ -624,7 +624,7 @@ HRESULT EndDraw();
 
 指定した楕円の内部を描画します。
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ void FillEllipse(
 
 指定したジオメトリの内部を描画します。
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ void FillGeometry(
 
 指定したメッシュの内部を描画します。
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ void FillMesh(
 
 指定したビットマップで記述された不透明マスクをブラシに適用し、そのブラシを使用してレンダー ターゲットの領域をペイントします。
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ destinationRectangle で指定されたレンダー ターゲットの領域を�
 
 指定した四角形の内部を描画します。
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ void FillRectangle(
 
 指定した角丸四角形の内部を描画します。
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ void FillRoundedRectangle(
 
 保留中のすべての描画コマンドを実行します。
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ CD2DSizeF GetSize() const;
 
 後続の描画操作のラベルを取得します。
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 レンダー ターゲットの現在のテキスト レンダリング オプションを取得します。
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 
 レンダリング ターゲットの現在の変換を取得します。
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ ID2D1RenderTarget インターフェイスへのポインターまたは NULL �
 
 最後の軸に位置合わせされたクリップをレンダー ターゲットから削除します。 このメソッドが呼び出されると、クリップは以降の描画操作に適用されなくなります。
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 最後の PushLayer 呼び出しで指定されたレイヤーへの描画操作のリダイレクトを停止します。
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 最後の軸に位置合わせされたクリップをレンダー ターゲットから削除します。 このメソッドが呼び出されると、クリップは以降の描画操作に適用されなくなります。
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ void PushAxisAlignedClip(
 
 指定したレイヤーをレンダー ターゲットに追加し、PopLayer が呼び出されるまで以降のすべての描画操作を受け取ります。
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ void PushLayer(
 
 レンダー ターゲットの描画状態を、指定した ID2D1DrawingStateBlock の描画状態に設定します。
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 
 現在の描画状態を指定した ID2D1DrawingStateBlock に保存します。
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 
 レンダー ターゲットのアンチエイリアシング モードを設定します。 アンチエイリアシング モードは、テキストおよびグリフ描画操作を除く、後続のすべての描画操作に適用されます。
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 
 レンダー ターゲットのドット/インチ (DPI) を設定します。
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 
 後続の図面操作のラベルを指定します。
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ void SetTags(
 
 後続のテキストおよびグリフ描画操作に使用するアンチエイリアシング モードを指定します。
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 
 後続のすべてのテキストおよびグリフ描画操作に適用するテキスト レンダリング オプションを指定します。
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 
 指定した変換をレンダー ターゲットに適用し、既存の変換を置き換えます。 それ以降の描画操作はすべて、変換された空間で行われます。
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

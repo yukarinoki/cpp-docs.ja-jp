@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369637"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749608"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>クラス
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Outlook バー ウィンドウのイメージで使用されているリソースを解放します。
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ virtual BOOL EnableContextMenuItems(
 
 Outlook バー ウィンドウのスクロール バーの矢印ボタンをクリックして、ボタンの一覧をページごとに進めるか、ボタンごとに進めるかを指定します。
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ BOOL RemoveButton(UINT iIdCommand);
 
 Outlook バーの背景色を設定します。
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Outlook バーの現在の背景色を設定します。 背景色は、背景�
 
 背景イメージを設定します。
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Outlook バーの背景イメージを設定します。 背景イメージの�
 
 Outlook バー ペインを元のボタンのセットにリセットします。
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ void SetDefaultState();
 
 Outlook バー ペインのボタンの周囲に使用されるパディングのピクセル数を設定します。
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Outlook バー ペインで、標準テキストと強調表示されたテキストの色を設定します。
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Outlook バー ペインの透明色を設定します。
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

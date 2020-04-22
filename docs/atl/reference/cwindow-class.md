@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330320"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746022"
 ---
 # <a name="cwindow-class"></a>Cウィンドウクラス
 
@@ -394,7 +394,7 @@ Windows SDK[のアレンジアイコニックウィンドウ](/windows/win32/api
 
 *hWndNew*で識別されるウィンドウをオブジェクトに`CWindow`アタッチします。
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Windows SDK[のクライアントを](/windows/win32/api/winuser/nf-winuser-clienttoscreen)参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体の座標を変換できます。
+このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
 ## <a name="cwindowcreate"></a><a name="create"></a>ウィンドウ::作成
 
@@ -771,7 +771,7 @@ Windows SDK[の DlgDir 選択コンボボックスを](/windows/win32/api/winuse
 
 ウィンドウがドラッグされたファイルを受け入れるかどうかを登録します。
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Windows SDK[の「ウィンドウの有効化](/windows/win32/api/winuser/nf-win
 
 描画の終了を示します。
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ Windows SDK[の「ウィンドウロングを取得](/windows/win32/api/winuser/
 
 キーボード フォーカスをダイアログ ボックスのコントロールに設定します。
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Windows SDK[の「無効にする」](/windows/win32/api/winuser/nf-winuser-inva
 
 指定した領域内のクライアント領域を無効にします。
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Windows SDK[の「ウィンドウポイント](/windows/win32/api/winuser/nf-winuser-mapwindowpoints)」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体の座標を変換できます。
+このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>ウィンドウ::メッセージボックス
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 トップレベルウィンドウオブジェクトの場合、x と y のパラメータは画面の左上隅を基準にしています。 子ウィンドウ オブジェクトの場合、親ウィンドウのクライアント領域の左上隅を基準にしています。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体を使用して、ウィンドウの新しい位置、幅、および高さを決定します。
+このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを決定します。
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>ウィンドウ::次のDlgCtrl
 
 キーボード フォーカスをダイアログ ボックスの次のコントロールに設定します。
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Windows SDK[の投稿メッセージ](/windows/win32/api/winuser/nf-winuser-post
 
 キーボード フォーカスをダイアログ ボックスの前のコントロールに設定します。
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Windows SDK[のWM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl)を参照し�
 
 指定したデバイス コンテキストで描画することを要求する[ウィンドウにWM_PRINT](/windows/win32/gdi/wm-print)メッセージを送信します。
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 指定したデバイス コンテキストでクライアント領域を描画するように要求するために[、WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)メッセージをウィンドウに送信します。
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Windows SDK[の「スクリーンツークライアント](/windows/win32/api/winuser/nf-winuser-screentoclient)」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体の座標を変換できます。
+このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>ウィンドウ::スクロールウィンドウ
 
@@ -2216,7 +2216,7 @@ Windows SDK[の送信メッセージ](/windows/win32/api/winuser/nf-winuser-send
 
 指定されたメッセージを`CWindow`オブジェクトの直接の子すべてに送信します。
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 [in]送信されるメッセージ。
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ Windows SDK の[「セットフォーカス](/windows/win32/api/winuser/nf-winus
 
 ウィンドウに[WM_SETFONT](/windows/win32/winmsg/wm-setfont)メッセージを送信して、ウィンドウの現在のフォントを変更します。
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Windows SDK の[「セットペアレント](/windows/win32/api/winuser/nf-winus
 
 ウィンドウに[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)メッセージを送信して、再描画フラグを設定またはクリアします。
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Windows SDK[の「ウィンドウポスの設定](/windows/win32/api/winuser/nf-winuser-setwindowpos)」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体を使用して、ウィンドウの新しい位置、幅、および高さを設定します。
+このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを設定します。
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>ウィンドウ::セットウィンドウルグン
 

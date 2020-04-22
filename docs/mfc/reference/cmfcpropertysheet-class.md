@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361805"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750063"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 
@@ -142,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 プロパティ シートにページを追加します。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ void AddPage(CPropertyPage* pPage);
 
 ツリー コントロールに新しいプロパティ ページを追加します。
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ CMFCPropertySheet(
 
 カスタム ヘッダーを描画する領域を各ページの上部に確保します。
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 ツリー コントロールからノードを削除します。
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 
 プロパティ シートからプロパティ ページを削除します。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 プロパティ シートの外観を指定します。
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);
@@ -508,7 +508,7 @@ void SetLook(
 
 次の表は *、look*パラメーターで指定できる列挙値の一覧です。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(デフォルト)各プロパティ ページのタブを表示します。 タブはプロパティ シートの上部に表示され、1 行に収まるよりも多くのタブがある場合は積み重ねられます。|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|ナビゲーション ボタンの一覧を、Outlook バーのスタイルで、プロパティ シートの左側に表示します。 リストの各ボタンは、プロパティ ページに対応しています。 リストの表示領域に収まるボタン数より多くのボタンがある場合、フレームワークはスクロール矢印を表示します。|

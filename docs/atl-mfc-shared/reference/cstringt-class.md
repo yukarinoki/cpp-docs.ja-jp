@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317598"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746714"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -306,7 +306,7 @@ Windows の OLE 割り当て関数の詳細については、Windows SDK の[「
 
 この`CStringT`オブジェクトのすべての文字を、ANSI 文字セットから OEM 文字セットに変換します。
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ _UNICODEが定義されている場合、この関数は使用できません。
 
 既存`CStringT`のオブジェクトに書式付きデータを追加します。
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -696,7 +696,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 書式付きデータを`CStringT`[、sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)が C スタイルの文字配列にデータを書式設定するのと同じ方法で、書式指定されたデータを書き込みます。
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -730,7 +730,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 メッセージ文字列をフォーマットします。
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -763,7 +763,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 可変引数リストを使用してメッセージ文字列をフォーマットします。
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 可変引数リストを使用してメッセージ文字列をフォーマットします。
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -797,7 +797,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
 *フォーマット*<br/>
 書式制御文字列へのポイント。 挿入用にスキャンされ、それに応じてフォーマットされます。 書式指定文字列は、実行時関数`printf`-style 書式指定文字列に似ていますが、パラメーターを任意の順序で挿入できる点が異なります。
 
-*Args*<br/>
+*args*<br/>
 引数のリストへのポインター。
 
 ### <a name="remarks"></a>解説
@@ -1012,7 +1012,7 @@ CStringT Mid(int iFirst) const;
 
 この`CStringT`オブジェクトのすべての文字を OEM 文字セットから ANSI 文字セットに変換します。
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1056,7 +1056,7 @@ CStringT& operator=(const VARIANT& var);
 *BaseType*<br/>
 文字列の基本型。
 
-*Var*<br/>
+*var*<br/>
 この文字列に割り当てるバリアントオブジェクト。
 
 *Ch*<br/>
@@ -1150,7 +1150,7 @@ CStringT& operator+=(const VARIANT& var);
 *BaseType*<br/>
 文字列の基本型。
 
-*Var*<br/>
+*var*<br/>
 この文字列に連結するバリアント オブジェクト。
 
 *Ch*<br/>

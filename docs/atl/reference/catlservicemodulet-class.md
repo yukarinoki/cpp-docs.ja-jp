@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321338"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748595"
 ---
 # <a name="catlservicemodulet-class"></a>クラス
 
@@ -147,7 +147,7 @@ CAtlServiceModuleT() throw();
 
 サービスのハンドラー ルーチン。
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ BOOL IsInstalled() throw();
 
 イベント ログに書き込みます。
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ TCHAR [256] m_szServiceName;
 
 サービスを続行するには、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 サービスを問い取るために、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 サービスを一時停止するには、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 サービスをシャットダウンするには、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 サービスを停止するには、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 サービスに対する不明な要求を処理するには、このメソッドをオーバーライドします。
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 このメソッドは、サービス コントロール マネージャによって呼び出されます。
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ SCM が呼`ServiceMain`び出された後、サービスは SCM にハンドラ�
 
 このメソッドは、サービスの状態を更新します。
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 

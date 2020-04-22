@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318926"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748739"
 ---
 # <a name="catllist-class"></a>クラスを表します。
 
@@ -153,7 +153,7 @@ POSITION AddHead(INARGTYPE element);
 
 リストの先頭に既存のリストを追加します。
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ POSITION AddTail(INARGTYPE element);
 
 このリストの末尾に既存のリストを追加します。
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 リストが有効であることを確認します。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ bool IsEmpty() const throw();
 
 指定した要素をリストの先頭に移動します。
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ void MoveToHead(POSITION pos) throw();
 
 指定した要素をリストの末尾に移動します。
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ void MoveToTail(POSITION pos) throw();
 
 リストからすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll() throw();
 
 リストから 1 つの要素を削除します。
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ head 要素がリストから削除され、メモリが解放されます。 �
 
 値を返さずに、リストの先頭にある要素を削除します。
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ tail 要素がリストから削除され、メモリが解放されます。 �
 
 値を返さずに、リストの末尾にある要素を削除します。
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ tail 要素がリストから削除され、メモリが解放されます。 �
 
 リスト内の指定した位置にある要素の値を設定します。
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 リスト内の要素を交換します。
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331473"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746588"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>パラメーター
 
-*文字列型*<br/>
+*StringType*<br/>
 パスに使用する ATL/MFC 文字列クラス[(CStringT](../../atl-mfc-shared/reference/cstringt-class.md)を参照)。
 
 ## <a name="members"></a>メンバー
@@ -166,7 +166,7 @@ class CPathT
 
 文字列の末尾に円記号を追加して、パスの正しい構文を作成します。 パスに既に末尾の円記号がある場合、バックスラッシュは追加されません。
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ BOOL Append(PCXSTR pszMore);
 
 指定したドライブ番号からルート パスを作成します。
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ void BuildRoot(int iDrive);
 
 パスを正規形式に変換します。
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ void Canonicalize();
 
 ディレクトリ名を表す文字列と、ファイル パス名を表す文字列を 1 つのパスに連結します。
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 パスにスペースが含まれている場合は、このメソッドを呼び出して、パスを引用符で囲みます。
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ BOOL RelativePathTo(
 
 パスからコマンド ライン引数を削除します。
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ void RemoveArgs();
 
 パスから末尾の円記号を削除します。
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ void RemoveBackslash();
 
 パスから先頭と末尾の空白をすべて削除します。
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ void RemoveBlanks();
 
 パスからファイル拡張子を削除します (存在する場合)。
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ int SkipRoot() const;
 
 完全修飾パスとファイル名のパス部分を削除します。
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ BOOL StripToRoot();
 
 パスの先頭と末尾から引用符を削除します。
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

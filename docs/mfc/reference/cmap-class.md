@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370095"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749081"
 ---
 # <a name="cmap-class"></a>CMap クラス
 
@@ -211,7 +211,7 @@ UINT GetHashTableSize() const;
 
 で`rNextPosition`マップ要素を取得し、マップ内`rNextPosition`の次の要素を参照するように更新します。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ POSITION GetStartPosition() const;
 
 ハッシュ テーブルを初期化します。
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -466,7 +466,7 @@ CPair* PLookup(ARG_KEY key);
 
 グローバル ヘルパー関数`DestructElements`を呼び出すことによって、このマップからすべての値を削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -510,7 +510,7 @@ BOOL RemoveKey(ARG_KEY key);
 
 マップに要素を挿入する主な手段。
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 

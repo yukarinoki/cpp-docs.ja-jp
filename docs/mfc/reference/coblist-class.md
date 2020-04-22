@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f24965357e0b71f28ba39b82d045600e7e1a44e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360370"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749685"
 ---
 # <a name="coblist-class"></a>CObList クラス
 
@@ -749,7 +749,7 @@ BOOL IsEmpty() const;
 
 このリストからすべての要素を削除し、関連付けられている`CObList`メモリを解放します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -776,7 +776,7 @@ void RemoveAll();
 
 指定した要素をこのリストから削除します。
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -876,7 +876,7 @@ CObject* RemoveTail();
 
 指定した位置に要素を設定します。
 
-```
+```cpp
 void SetAt(
     POSITION pos,
     CObject* newElement);

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1540c90e3538d763708e161ba6c1a5e459bb2bdf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327152"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747742"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 
@@ -235,7 +235,7 @@ DACL (随意アクセス制御リスト) のみをこの関数に渡す必要が
 
 `CDacl`オブジェクトから特定の ACE (アクセス制御エントリ) を削除します。
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -252,7 +252,7 @@ void RemoveAce(UINT nIndex) throw();
 
 `CDacl`オブジェクトに含まれるすべての ACE (アクセス制御エントリ) を削除します。
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 

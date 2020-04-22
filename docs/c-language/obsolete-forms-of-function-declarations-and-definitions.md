@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148011"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745878"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>関数の宣言と定義の廃止された形式
 
@@ -30,7 +30,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 ANSI C 標準に準拠するために、省略記号を使った旧形式の関数宣言では、/Za オプションでのコンパイル時にエラーが、/Ze オプションでのコンパイル時にはレベル 4 の警告が発生するようになりました。 次に例を示します。
 
-```
+```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
 int a;                 /* an error when compiling with /Za */
 {
@@ -39,7 +39,7 @@ int a;                 /* an error when compiling with /Za */
 
 この宣言は、プロトタイプとして次のように書き直す必要があります。
 
-```
+```cpp
 void funct1( int a, ... )
 {
 }
@@ -51,4 +51,4 @@ void funct1( int a, ... )
 
 ## <a name="see-also"></a>関連項目
 
-[関数の概要](../c-language/overview-of-functions.md)
+[機能の概要](../c-language/overview-of-functions.md)

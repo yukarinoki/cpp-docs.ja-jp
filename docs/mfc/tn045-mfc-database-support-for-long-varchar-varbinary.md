@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365511"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750287"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>テクニカル ノート 45: MFC/データベースの Long Varchar/Varbinary 型のサポート
 
@@ -45,7 +45,7 @@ ODBC **SQL_LONG_VARCHAR**と**SQL_LONGBINARY**データ型 (ここでは長い�
 
 RFX 関数と`CString``CByteArray`、データ列の取得された値を保持するために割り当てられたメモリの既定のサイズを上書きできる追加の引数があります。 次の関数宣言の nMaxLength 引数に注意してください。
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,

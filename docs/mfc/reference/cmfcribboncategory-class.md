@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375273"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749542"
 ---
 # <a name="cmfcribboncategory-class"></a>クラス
 
@@ -260,7 +260,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 カスタマイズ ダイアログ ボックスに表示されるリボン要素の配列に、指定したリボン要素を追加します。
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
 
 リボン カテゴリ内のすべてのリボン要素を取得します。
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ void GetElements(
 
 指定したコマンド ID に関連付けられているすべてのリボン要素を取得します。
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 
 リボン カテゴリに含まれるリボン要素のコマンド ID を取得します。
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ int GetTextTopLine() const;
 
 リボン カテゴリに属するすべての表示可能な要素を取得します。
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 リボン カテゴリのリボン パネルが折りたたまれる順序を定義します。
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 リボン カテゴリに関連付けるユーザー定義データを設定します。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 リボン カテゴリにキーヒントを割り当てます。
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ void SetKeys(LPCTSTR lpszKeys);
 
 リボン カテゴリに名前とキーヒントを割り当てます。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ void SetName(LPCTSTR lpszName);
 
 リボン カテゴリの色を設定します。
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

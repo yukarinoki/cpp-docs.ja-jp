@@ -3,12 +3,12 @@ title: CRT のグローバル状態
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377600"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745346"
 ---
 # <a name="global-state-in-the-crt"></a>CRT のグローバル状態
 
@@ -20,8 +20,8 @@ UCRT のグローバル状態は、アプリケーションと OS 間で共有�
 
 UCRT では、グローバル状態と対話する関数には、プレフィックスが付いた "ツイン"`_o_`関数があります。 次に例を示します。
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`は、アプリ固有のグローバル状態に影響します。
+- `_o_setlocale()`は、すべての OS コンポーネントで共有されるグローバル状態に影響しますが、アプリには影響しません。
 
 これらの "ツイン" 関数の唯一の違いは、グローバル CRT 状態を読み書きするときに、OS 固有のバージョン (つまり`_o_`、で始まるバージョン) が、アプリのグローバル状態のコピーではなく、グローバル状態の OS コピーを使用することです。
 

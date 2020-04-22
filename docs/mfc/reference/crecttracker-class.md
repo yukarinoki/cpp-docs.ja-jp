@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 4d262ab5f88481d56de1c236effb66fcbf6a706a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3600bc5a945c24e91269bc280b4b8e99c54d4c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368374"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750458"
 ---
 # <a name="crecttracker-class"></a>CRectTracker クラス
 
@@ -174,7 +174,7 @@ CRectTracker(
 
 四角形の外側の線と内側の領域を描画します。
 
-```
+```cpp
 void Draw(CDC* pDC) const;
 ```
 
@@ -247,7 +247,7 @@ virtual UINT GetHandleMask() const;
 
 四角形の座標を取得します。
 
-```
+```cpp
 void GetTrueRect(LPRECT lpTrueRect) const;
 ```
 

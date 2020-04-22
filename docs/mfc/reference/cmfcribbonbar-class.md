@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361433"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749756"
 ---
 # <a name="cmfcribbonbar-class"></a>クラス
 
@@ -581,7 +581,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 指定したリボン要素をリボン バーのタブ行に追加します。
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ BOOL CreateEx(
 
 リボン バーのすべてのキーヒント コントロールを閉じます。
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 リボン バーのキーヒント機能を有効または無効にします。
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 **印刷プレビュー**機能を有効または無効にします。
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 リボン バーのツールヒントおよびオプションのツールヒントの説明を有効または無効にします。
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 リボン バーと親ウィンドウのすべての項目のレイアウトを調整し、ウィンドウ全体を再描画します。
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 特定のコマンド ID を持つすべてのリボン要素へのポインターの配列を取得します。
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ DWORD GetHideFlags() const;
 
 リボン バーのリボン要素の指定したコレクションのコマンド ID を取得します。
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 クイック アクセス ツール バーのリボン要素のコマンド ID の一覧を取得します。
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ BOOL HideAllContextCategories();
 
 リボン バーのすべてのキーチップを非表示にします。
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ BOOL OnSysKeyUp(
 
 ツールヒントをビューから削除します。
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ virtual void RecalcLayout();
 
 リボン バーからすべてのリボン カテゴリを削除します。
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ void RemoveAllCategories();
 
 タブ領域からすべてのリボン要素を削除します。
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ BOOL SetActiveCategory(
 
 マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに属するリボン バーのシステム ボタンを、指定した MDI 子ウィンドウに関連付けます。
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 リボン バーにアプリケーション リボン ボタンを割り当てます。
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ BOOL SetElementKeys(
 
 リボン バーに含まれているキーチップをユーザーが押す際に、キーボード ナビゲーション レベルを設定します。
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ void SetKeyboardNavigationLevel(
 
 マルチ ドキュメント インターフェイス (MDI) 子ウィンドウのウィンドウ サイズが最大化状態に入るか、または、状態を残すときに、リボン バーを調整します。
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ void SetMaximizeMode(
 
 クイック アクセス ツール バーに 1 つ以上のリボン要素を追加します。
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,13 +1890,13 @@ void SetQuickAccessCommands(
 
 クイック アクセス ツール バーを既定の状態に設定します。
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 [in]クイック アクセス ツール バーの既定の状態。
 
 ### <a name="remarks"></a>解説
@@ -1913,7 +1913,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 クイック アクセス ツールバーをリボン バーの上または下に配置します。
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 リボン バーのツールヒント固定幅の標準サイズと大きなサイズを設定します。
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ void SetTooltipFixedWidth(
 
 指定されたリボン カテゴリを表示または非表示にします。
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 指定された ID を持つコンテキスト カテゴリを表示または非表示にします。
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 リボン バーに各リボン要素のキーチップを表示します。
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 リボン バーの最小化された状態と最大化された状態を切り替えます。
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 リボンの Windows 7 の外観 (小さい四角形のアプリケーション ボタン) を有効または無効にします。
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327217"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747749"
 ---
 # <a name="ccontainedwindowt-class"></a>クラスを含む
 
@@ -214,7 +214,7 @@ HWND Create(
 [in]親ウィンドウまたはオーナー ウィンドウへのハンドル。
 
 *Rect*<br/>
-[in]ウィンドウの位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 は`RECT`、ポインターまたは参照によって渡すことができます。
+[in]ウィンドウの位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体。 は`RECT`、ポインターまたは参照によって渡すことができます。
 
 *ウィンドウ名*<br/>
 [in]ウィンドウの名前を指定します。 既定値は NULL です。
@@ -390,7 +390,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 含まれているウィンドウのメッセージを処理するために使用されるメッセージ マップを変更します。
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 

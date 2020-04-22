@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370165"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749141"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -584,7 +584,7 @@ BOOL Arrange(UINT nCode);
 
 アイテムテキスト編集操作をキャンセルします。
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルの完全なリストについては、Windows SDK のリスト[ビューウィンドウ](/windows/win32/Controls/list-view-window-styles)スタイルを参照してください。 コントロールに固有の拡張スタイルを設定するには、[次の操作を行います](#setextendedstyle)。
 
 *Rect*<br/>
-リスト コントロールのサイズと位置を指定します。 `CRect`オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のいずれかです。
+リスト コントロールのサイズと位置を指定します。 `CRect`オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のいずれかです。
 
 *pParentWnd*<br/>
 リスト コントロールの親ウィンドウを指定`CDialog`します。 NULL にすることはできません。
@@ -666,7 +666,7 @@ virtual BOOL CreateEx(
 リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルの完全な一覧については、「Windows SDK の[リスト ビュー ウィンドウ スタイル](/windows/win32/Controls/list-view-window-styles)」を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 ドラッグ イメージ リストを作成する項目のインデックスです。
 
 *lpPoint*<br/>
-ビュー座標で、イメージの左上隅の初期位置を受け取る[POINT](/previous-versions/dd162805\(v=vs.85\))構造体のアドレス。
+ビュー座標で、イメージの左上隅の初期位置を受け取る[POINT](/windows/win32/api/windef/ns-windef-point)構造体のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1413,7 +1413,7 @@ public:
 
 グループのメトリックを取得します。
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |パラメーター|説明|
 |---------------|-----------------|
 |*グループId*|[in]グループを指定します。|
-|*Lprect*|[イン、アウト][RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 このメソッドが成功すると、構造体は*iGroupId*で指定されたグループの四角形座標を受け取ります。|
+|*Lprect*|[イン、アウト][RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。 このメソッドが成功すると、構造体は*iGroupId*で指定されたグループの四角形座標を受け取ります。|
 |*アイクアーズ*|[in]取得する四角形の座標を指定します。 次のいずれかの値を使用します。<br /><br /> - LVGGR_GROUP - (デフォルト) 展開されたグループ全体の座標。<br />- LVGGR_HEADER - ヘッダー (折りたたみグループ) のみの座標。<br />- LVGGR_SUBSETLINK - サブセット リンク (マークアップ サブセット) のみの座標。|
 
 ### <a name="return-value"></a>戻り値
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>解説
 
-呼び出し側は *、pRect*パラメーターによって指される[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を割り振る必要があります。
+呼び出し側は *、pRect*パラメーターによって指される[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を割り振る必要があります。
 
 このメソッドは、Windows SDK で説明されている[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)メッセージを送信します。
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*をクリックします。*|[in]サブ項目の親アイテムの[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)構造体へのポインター。<br /><br /> 呼び出し元は[、LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)構造体のメンバーの割り当てと設定を行います。 このパラメーターは NULL にはできません。|
 |*i列*|[in]コントロール内の列の 0 から始まるインデックス。|
 |*レクトタイプ*|[in]外接する四角形が取得されるリスト ビュー サブ項目の一部。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含むサブ項目全体の外接する四角形を返します。<br /><br /> LVIR_ICON - サブ項目のアイコンまたは小さいアイコンの外接する四角形を返します。<br /><br /> LVIR_LABEL - サブ項目テキストの外接する四角形を返します。|
-|*プレック*|[アウト]サブ項目の外接する四角形に関する情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。<br /><br /> 呼び出し側は[、RECT](/previous-versions/dd162897\(v=vs.85\))構造体の割り振りを行います。 このパラメーターは NULL にはできません。|
+|*プレック*|[アウト]サブ項目の外接する四角形に関する情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。<br /><br /> 呼び出し側は[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の割り振りを行います。 このパラメーターは NULL にはできません。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 位置を取得する項目のインデックス。
 
 *lpPoint*<br/>
-ビュー座標で、項目の左上隅の位置を受け取る[POINT](/previous-versions/dd162805\(v=vs.85\))構造体のアドレス。
+ビュー座標で、項目の左上隅の位置を受け取る[POINT](/windows/win32/api/windef/ns-windef-point)構造体のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 位置を取得する項目のインデックス。
 
 *Lprect*<br/>
-外接する四角形を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のアドレス。
+外接する四角形を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレス。
 
 *nコード*<br/>
 外接する四角形を取得するリスト ビュー アイテムの一部。 次のいずれかの値とすることができます。
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-ビューの起点を受け取る[POINT](/previous-versions/dd162805\(v=vs.85\))構造体のアドレス。
+ビューの起点を受け取る[POINT](/windows/win32/api/windef/ns-windef-point)構造体のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *Lprect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のアドレス。
+[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2546,7 +2546,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 リスト ビュー コントロールの現在の作業領域を取得します。
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>パラメーター
 
 *pポイント*<br/>
-リスト コントロールのクライアント領域を基準としたヒット テスト座標を含む[POINT](/previous-versions/dd162805\(v=vs.85\))構造体へのポインター。
+リスト コントロールのクライアント領域を基準としたヒット テスト座標を含む[POINT](/windows/win32/api/windef/ns-windef-point)構造体へのポインター。
 
 *プラヴィム*<br/>
 ポイント パラメータで定義された座標に最も近い挿入点を指定する[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)構造体へのポインタ。
@@ -3008,7 +3008,7 @@ LRESULT MoveGroup(
 
 指定した項目を指定したグループに移動します。
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ BOOL RedrawItems(
 
 リスト ビュー コントロールからすべてのグループを削除します。
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3098,7 +3098,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 水平方向`CSize`と垂直方向のスクロール量をピクセル単位で指定するオブジェクト。 サイズ`y`のメンバー*size*は、リスト ビュー コントロールの行の高さ (ピクセル単位) で割られ、コントロールは結果の行数だけスクロールされます。
 
 ### <a name="return-value"></a>戻り値
@@ -3387,7 +3387,7 @@ int SetGroupInfo(
 
 リスト ビュー コントロールのグループ メトリックを設定します。
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3497,7 +3497,7 @@ X 軸上のアイコン間の距離 (ピクセル単位)。
 *Cy*<br/>
 Y 軸のアイコン間の距離 (ピクセル単位)。
 
-*サイズ*<br/>
+*size*<br/>
 x`CSize`軸と y 軸のアイコン間の距離をピクセル単位で指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -3693,7 +3693,7 @@ Windows SDK で説明されているように、新しい項目の属性を含�
 
 多数の項目を追加するためのリスト ビュー コントロールを準備します。
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 位置を設定する項目のインデックス。
 
 *Pt*<br/>
-項目の左上隅の新しい位置をビュー座標で指定する[POINT](/previous-versions/dd162805\(v=vs.85\))構造体。
+項目の左上隅の新しい位置をビュー座標で指定する[POINT](/windows/win32/api/windef/ns-windef-point)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4156,7 +4156,7 @@ DWORD SetView(int iView);
 
 リスト ビュー コントロールにアイコンを表示できる領域を設定します。
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

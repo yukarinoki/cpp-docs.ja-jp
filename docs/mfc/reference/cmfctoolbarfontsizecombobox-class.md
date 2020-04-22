@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358308"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745320"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>コンボボックス クラス
 
@@ -99,7 +99,7 @@ int GetTwipSize() const;
 
 指定したフォントの有効なすべてのサイズをフォント サイズコンボ ボックスに塗りつぶします。
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ void RebuildFontSizes(const CString& strFontName);
 
 指定したサイズ (twip 単位) をポイント単位で最も近いサイズに丸めた後、コンボ ボックスで選択したサイズをその値に設定します。
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 

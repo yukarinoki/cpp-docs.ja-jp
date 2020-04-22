@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: c59ed587e2c8e51f5c08a026a7ee0b9d0af25168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317716"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747057"
 ---
 # <a name="crect-class"></a>CRect クラス
 
@@ -242,7 +242,7 @@ void CMyDlg::OnPaint()
 
 四角形`lpSrcRect`を`CRect`にコピーします。
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
@@ -291,10 +291,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *L*<br/>
 の左位置を`CRect`指定します。
 
-*T*<br/>
+*t*<br/>
 の先頭を`CRect`指定します。
 
-*R*<br/>
+*r*<br/>
 の右の位置を`CRect`指定します。
 
 *B*<br/>
@@ -309,7 +309,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *ポイント*<br/>
 構築する四角形の原点を指定します。 左上隅に対応します。
 
-*サイズ*<br/>
+*size*<br/>
 構築する四角形の左上隅から右下隅までの距離を指定します。
 
 *topLeft*<br/>
@@ -366,7 +366,7 @@ ASSERT(rect5 == rect4);
 
 `DeflateRect`その中心に`CRect`向かって側面を移動することによって膨張します。
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -375,13 +375,13 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 の左右を収縮させる単位数を`CRect`指定します。
 
 *Y*<br/>
 の上部と下部を収縮させる単位の`CRect`数を指定します。
 
-*サイズ*<br/>
+*size*<br/>
 縮小する単位の数を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)または[CSize](csize-class.md) `CRect`です。 値`cx`は、左右の辺を収縮させる単位の数を指定し、値`cy`は、上部と下部を収縮させる単位の数を指定します。
 
 *Lprect*<br/>
@@ -390,10 +390,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *L*<br/>
 の左側を収縮させる単位数を指定`CRect`します。
 
-*T*<br/>
+*t*<br/>
 の上部を収縮させる単位数を指定`CRect`します。
 
-*R*<br/>
+*r*<br/>
 の右側を収縮させる単位数を指定`CRect`します。
 
 *B*<br/>
@@ -492,7 +492,7 @@ ASSERT(nHt == 40);
 
 `InflateRect`その側面`CRect`をその中心から離れて移動することによって膨張します。
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -501,13 +501,13 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 の左右を膨らませる単位数を`CRect`指定します。
 
 *Y*<br/>
 の上部と下部を拡大する単位数を`CRect`指定します。
 
-*サイズ*<br/>
+*size*<br/>
 膨張`CRect`する単位の数を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)または[CSize](csize-class.md)です。 この`cx`値は、左右の辺を膨らませる単位数を指定し`cy`、値は上部と下部を膨らませる単位数を指定します。
 
 *Lprect*<br/>
@@ -516,10 +516,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *L*<br/>
 の左側を拡大する単位数を指定`CRect`します。
 
-*T*<br/>
+*t*<br/>
 の上部を拡大する単位数を指定`CRect`します。
 
-*R*<br/>
+*r*<br/>
 の右側を拡大する単位数を指定`CRect`します。
 
 *B*<br/>
@@ -647,13 +647,13 @@ ASSERT(!rectNotNull.IsRectNull());
 
 この関数は、x*で指定*された絶対 x 座標に四角形を移動します。
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 四角形の左上隅の絶対 x 座標。
 
 ### <a name="example"></a>例
@@ -670,14 +670,14 @@ ASSERT(rect == CRect(10, 0, 110, 100));
 
 指定した x 座標と y 座標に四角形を移動します。
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 四角形の左上隅の絶対 x 座標。
 
 *Y*<br/>
@@ -699,7 +699,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 
 この関数は、四角形を*y*で指定された絶対 y 座標に移動します。
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
@@ -721,7 +721,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 高さと`CRect`幅の両方が正になるように正規化します。
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
@@ -746,7 +746,7 @@ ASSERT(rect1 == rect2);
 
 指定`CRect`したオフセットを移動します。
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -754,7 +754,7 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 左または右に移動する量を指定します。 左に移動するには負の値にする必要があります。
 
 *Y*<br/>
@@ -763,7 +763,7 @@ void OffsetRect(SIZE size) throw();
 *ポイント*<br/>
 移動の際に使用する両方の寸法を指定する[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](cpoint-class.md)オブジェクトを含みます。
 
-*サイズ*<br/>
+*size*<br/>
 移動の際に使用する両方の寸法を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクトを格納します。
 
 ### <a name="remarks"></a>解説
@@ -810,7 +810,7 @@ operator LPRECT() throw();
 
 に*srcRect* `CRect`を割り当てます。
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
@@ -913,7 +913,7 @@ ASSERT(rect3 != test);
 
 最初の 2 つの`CRect`オーバーロードは、指定されたオフセットによって移動します。
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -924,7 +924,7 @@ void operator+=(LPCRECT lpRect) throw();
 *ポイント*<br/>
 四角形を移動する単位数を指定する[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](cpoint-class.md)オブジェクト。
 
-*サイズ*<br/>
+*size*<br/>
 四角形を移動する単位数を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *Lprect*<br/>
@@ -951,7 +951,7 @@ ASSERT(rect1 == rect2);
 
 最初の 2 つの`CRect`オーバーロードは、指定されたオフセットによって移動します。
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -962,7 +962,7 @@ void operator-=(LPCRECT lpRect) throw();
 *ポイント*<br/>
 四角形を移動する単位数を指定する[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](cpoint-class.md)オブジェクト。
 
-*サイズ*<br/>
+*size*<br/>
 四角形を移動する単位数を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *Lprect*<br/>
@@ -989,7 +989,7 @@ ASSERT(rect1 == rectResult);
 
 と`CRect`の交点と`CRect`等`rect`しい値を設定します。
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
@@ -1013,7 +1013,7 @@ void operator&=(const RECT& rect) throw();
 
 と`CRect`の`CRect`和集合と等`rect`しい値を設定します。
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
@@ -1055,7 +1055,7 @@ CRect operator+(SIZE size) const throw();
 *ポイント*<br/>
 戻り値を移動する単位数を指定する[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](cpoint-class.md)オブジェクト。
 
-*サイズ*<br/>
+*size*<br/>
 戻り値を移動する単位数を指定する[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *Lprect*<br/>
@@ -1098,7 +1098,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 *ポイント*<br/>
 戻[POINT](/windows/win32/api/windef/ns-windef-point)り値を`CPoint`移動する単位数を指定する POINT 構造体またはオブジェクト。
 
-*サイズ*<br/>
+*size*<br/>
 戻[SIZE](/windows/win32/api/windef/ns-windef-size)り値を`CSize`移動する単位数を指定する SIZE 構造体またはオブジェクト。
 
 *Lprect*<br/>
@@ -1255,7 +1255,7 @@ ASSERT(rect.PtInRect(pt));
 
 の寸法`CRect`を指定した座標に設定します。
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
@@ -1285,7 +1285,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 すべての`CRect`座標をゼロに設定して、null の四角形を作成します。
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 

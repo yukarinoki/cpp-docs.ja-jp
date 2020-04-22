@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331036"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746512"
 ---
 # <a name="cregkey-class"></a>クラスを指定します。
 
@@ -137,7 +137,7 @@ class CRegKey
 
 [m_hKey](#m_hkey)メンバ ハンドルを*hKey*`CRegKey`に設定して、HKEY をオブジェクトにアタッチします。
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -414,7 +414,7 @@ LONG NotifyChangeKeyValue(
 *をフィルター処理します。*<br/>
 報告する変更を制御するフラグのセットを指定します。 このパラメーターは、次の値の組み合わせにすることができます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|サブキーが追加または削除された場合に、呼び出し元に通知します。|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|セキュリティ記述子情報など、キーの属性に対する変更を呼び出し元に通知します。|
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *Si*<br/>
 設定するセキュリティ記述子のコンポーネントを指定します。 値は、次の値の組み合わせにすることができます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーにはWRITE_DACアクセス権が必要か、呼び出しプロセスがオブジェクトの所有者である必要があります。|
 |GROUP_SECURITY_INFORMATION|キーのプライマリ グループ セキュリティ識別子 (SID) を設定します。 キーにアクセスWRITE_OWNERが必要か、呼び出しプロセスがオブジェクトの所有者である必要があります。|

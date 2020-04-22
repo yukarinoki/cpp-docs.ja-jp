@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368363"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750507"
 ---
 # <a name="crecordset-class"></a>クラス
 
@@ -331,7 +331,7 @@ BOOL CanBookmark() const;
 
 データ ソースが、進行中の非同期操作または 2 番目のスレッドからのプロセスのいずれかを取り消すように要求します。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ MFC ODBC クラスは非同期処理を使用しなくなります。アサイ�
 
 更新が呼び出される前に、[編集](#edit)または[AddNew](#addnew)操作によって発生した保留中の[更新](#update)をキャンセルします。
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ BOOL FlushResultSet();
 
 現在のレコードのブックマーク値を取得します。
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ SQL ステートメント文字列が必要な場合は、 を呼`GetSQL`び出�
 
 現在のレコードのフィールド データを取得します。
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ short GetODBCFieldCount() const;
 
 レコードセット内のフィールドに関する情報を取得します。
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ WORD GetRowStatus(WORD wRow) const;
 
 レコードセット内の現在のレコードのインデックスと、最後のレコードが見られたかどうかを判断します。
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ virtual void Move(
 
 最初の行セットの最初のレコードをカレント レコードにします。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ void MoveFirst();
 
 最後の完全な行セットの最初のレコードをカレント レコードにします。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ void MoveLast();
 
 次の行セットの最初のレコードをカレント レコードにします。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ void MoveNext();
 
 前の行セットの最初のレコードをカレント レコードにします。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ virtual BOOL Open(
 
 現在の行セットの行のデータと状態を更新します。
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ virtual BOOL Requery();
 
 指定したレコード番号に対応するレコードにレコードセットを配置します。
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ ODBC レコードセットの場合、絶対位置の設定が 1 の場合は、
 
 指定したブックマークを含むレコードにレコードセットを配置します。
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 
 レコードセットのフィールド データ メンバーに、変更済みまたは変更なしのフラグを設定します。
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 レコードセットのフィールド データ メンバーに、Null (特に値がない) または Null 以外のフラグを設定します。
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 ロックモードを「オプティミスティック」ロック(デフォルト)または「悲観的」ロックに設定します。 更新のためにレコードをロックする方法を指定します。
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ void SetLockingMode(UINT nMode);
 
 パラメーターに Null (特に値がない) または Null 以外のフラグを設定します。
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ TRUE (既定値) の場合、パラメーターは Null としてフラグが設
 
 カーソルを現在の行セット内の行に移動します。
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317611"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746840"
 ---
 # <a name="cstringdata-class"></a>CStringData クラス
 
@@ -47,7 +47,7 @@ struct CStringData
 |[IsLocked](#islocked)|関連付けられた文字列オブジェクトのバッファがロックされているかどうかを判断します。|
 |[IsShared](#isshared)|関連付けられた文字列オブジェクトのバッファが現在共有されているかどうかを判断します。|
 |[[Lock] (ロック)](#lock)|関連付けられた文字列オブジェクトのバッファーをロックします。|
-|[Release](#release)|指定した文字列オブジェクトを解放します。|
+|[リリース](#release)|指定した文字列オブジェクトを解放します。|
 |[ロック 解除](#unlock)|関連付けられた文字列オブジェクトのバッファをロック解除します。|
 
 ### <a name="data-members"></a>データ メンバー
@@ -91,7 +91,7 @@ struct CStringData
 
 文字列オブジェクトの参照カウントをインクリメントします。
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ void AddRef() throw();
 
 文字列オブジェクトの文字バッファーへのポインターを返します。
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ bool IsShared() const throw();
 
 関連付けられた文字列オブジェクトの文字バッファーをロックします。
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ IAtlStringMgr* pStringMgr;
 
 文字列データ オブジェクトの参照カウントをデクリメントします。
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ void Release() throw();
 
 関連付けられた文字列オブジェクトの文字バッファーのロックを解除します。
 
-```
+```cpp
 void Unlock() throw();
 ```
 

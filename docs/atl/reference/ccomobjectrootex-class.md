@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327603"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747906"
 ---
 # <a name="ccomobjectrootex-class"></a>クラス
 
@@ -155,7 +155,7 @@ HRESULT FinalConstruct();
 
 派生クラスでこのメソッドをオーバーライドして、オブジェクトに必要なクリーンアップを実行できます。
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ ULONG InternalRelease();
 
 スレッド モデルがマルチスレッドの場合、このメソッドは Win32 API 関数[EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)を呼び出し、スレッドがプライベート データ メンバーを通じて取得したクリティカル セクション オブジェクトの所有権を取得できるまで待機します。
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ ULONG OuterRelease();
 
 スレッド モデルがマルチスレッドの場合、このメソッドは Win32 API 関数[LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)を呼び出し、プライベート データ メンバーを通じて取得したクリティカル セクション オブジェクトの所有権を解放します。
 
-```
+```cpp
 void Unlock();
 ```
 

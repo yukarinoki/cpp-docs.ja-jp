@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330699"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747583"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>クラスをプロパティページインプルします。
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 モーダル プロパティ シートのページ内のデータに対して、回復不可能な変更が行われた後にこの関数を呼び出します。
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ BOOL OnApply();
 
 このメンバー関数は、ユーザーがプロパティ ページの **[ヘルプ**] ボタンをクリックしたときに呼び出されます。
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ BOOL OnQueryCancel();
 
 このメンバー関数は、ユーザーが **[キャンセル]** ボタンをクリックしたときに呼び出されます。
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 プロパティ ページの設定を適切な外部オブジェクトに適用するかどうかを基に **、[Apply Now]** ボタンを有効または無効にするには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

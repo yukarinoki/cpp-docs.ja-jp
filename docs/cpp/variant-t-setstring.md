@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 60ad1c1bd95eb35f2a4f2800f79d0326c68a1176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187558"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745852"
 ---
 # <a name="_variant_tsetstring"></a>_variant_t::SetString
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 この `_variant_t` オブジェクトに文字列を代入します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void SetString(const char* pSrc);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*.Psrc*<br/>
+*pSrc*<br/>
 文字列へのポインター。
 
 ## <a name="remarks"></a>解説
 
 ANSI 文字列を Unicode `BSTR` 文字列に変換し、この `_variant_t` オブジェクトに割り当てます。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_variant_t クラス](../cpp/variant-t-class.md)

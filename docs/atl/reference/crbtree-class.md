@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331244"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746581"
 ---
 # <a name="crbtree-class"></a>クラス
 
@@ -276,7 +276,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 マップに格納されている要素のキーと値を取得し、次の要素に位置を進めます。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 `CRBTree`オブジェクトからすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ void RemoveAll() throw();
 
 `CRBTree`オブジェクト内の指定した位置にある要素を削除します。
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ void RemoveAt(POSITION pos) throw();
 
 `CRBTree`オブジェクト内の指定した位置に格納されている値を変更します。
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857295"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749800"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-COM のエラー処理に使用する既定の関数を置き換えます。 **_set_com_error_handler**は Microsoft 固有です。
+COM のエラー処理に使用する既定の関数を置き換えます。 **_set_com_error_handler**はマイクロソフト固有です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -31,19 +31,19 @@ void __stdcall _set_com_error_handler(
 *pHandler*<br/>
 置換する関数へのポインター。
 
-*hr*<br/>
+*人事*<br/>
 HRESULT 情報。
 
-*perrinfo*<br/>
+*ペラーインフォ*<br/>
 `IErrorInfo` オブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定では、 [_com_raise_error](../cpp/com-raise-error.md)はすべての com エラーを処理します。 この動作を変更するには、 **_set_com_error_handler**を使用して独自のエラー処理関数を呼び出します。
+既定では[、_com_raise_error](../cpp/com-raise-error.md)はすべての COM エラーを処理します。 この動作は **、_set_com_error_handler**を使用して独自のエラー処理関数を呼び出すことで変更できます。
 
 置換関数には `_com_raise_error` のシグネチャと等価のシグニチャが必要です。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // _set_com_error_handler.cpp
@@ -84,12 +84,12 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comdef. h >
+**ヘッダー:** \<comdef.h>
 
-**Lib:** **/Zc: wchar_t**コンパイラオプションが指定されている場合 (既定)、comsuppw または comsuppw を使用します。 **/Zc: wchar_t**コンパイラオプションが指定されている場合は、comsupp .lib を使用します。 IDE でこのオプションを設定する方法など、詳細については、「 [/zc: wchar_t (Wchar_t はネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+**リブ:** wchar_t**コンパイラ**オプションが指定されている場合 (既定) は、comsuppw.lib または comsuppwd.lib を使用します。 コンパイラ オプションを**wchar_t指定**した場合は、comsupp.lib を使用します。 IDE でこのオプションを設定する方法など、詳細については[、「/Zc:wchar_t (ネイティブ型wchar_t)」](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ COM のグローバル関数](../cpp/compiler-com-global-functions.md)

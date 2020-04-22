@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366178"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749019"
 ---
 # <a name="colecontrolcontainer-class"></a>クラス
 
@@ -359,7 +359,7 @@ BOOL CreateControl(
 
 OLE フォントを作成します。
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 コンテナーが、アタッチされたコントロール サイトからのイベントを無視するか、受け入れるかどうかを決定します。
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 
@@ -543,7 +543,7 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 Windows によって提供されるウィンドウ メッセージの識別子。
 
 *wParam*<br/>
@@ -760,7 +760,7 @@ virtual LRESULT SendDlgItemMessage(
 *nID*<br/>
 メッセージを受信するコントロールの識別子を指定します。
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>

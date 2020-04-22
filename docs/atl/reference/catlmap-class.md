@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321438"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748654"
 ---
 # <a name="catlmap-class"></a>カトルマップクラス
 
@@ -159,7 +159,7 @@ class CAtlMap
 
 オブジェクトが無効な場合に ASSERT`CAtlMap`を発生させます。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ class CPair : public __POSITION
 
 `CAtlMap`オブジェクトの自動再ハッシュを無効にします。
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ void DisableAutoRehash() throw();
 
 `CAtlMap`オブジェクトの自動再ハッシュを有効にします。
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ void EnableAutoRehash() throw();
 
 マップ内の指定した位置にある要素を返します。
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -376,7 +376,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 反復処理の次の要素を取得します。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -597,7 +597,7 @@ V& operator[](kinargtype key) throw();
 
 `CAtlMap`オブジェクトを再ハッシュします。
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ void Rehash(UINT nBins = 0);
 
 `CAtlMap`オブジェクトからすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ void RemoveAll() throw();
 
 `CAtlMap`オブジェクト内の指定した位置にある要素を削除します。
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -690,7 +690,7 @@ POSITION SetAt(
 
 `CAtlMap`オブジェクトの最適な負荷を設定します。
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ void SetOptimalLoad(
 
 `CAtlMap`オブジェクト内の指定した位置に格納されている値を変更します。
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);

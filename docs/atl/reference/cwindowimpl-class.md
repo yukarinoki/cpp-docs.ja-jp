@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330294"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745991"
 ---
 # <a name="cwindowimpl-class"></a>クラス
 
@@ -147,7 +147,7 @@ HWND Create(
 [in]親ウィンドウまたはオーナー ウィンドウへのハンドル。
 
 *Rect*<br/>
-[in]ウィンドウの位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 は`RECT`、ポインターまたは参照によって渡すことができます。
+[in]ウィンドウの位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体。 は`RECT`、ポインターまたは参照によって渡すことができます。
 
 *ウィンドウ名*<br/>
 [in]ウィンドウの名前を指定します。 既定値は NULL です。

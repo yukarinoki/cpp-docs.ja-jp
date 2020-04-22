@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317810"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747182"
 ---
 # <a name="cimage-class"></a>Cイメージクラス
 
@@ -258,7 +258,7 @@ BOOL AlphaBlend(
 ソースビットマップとターゲットビットマップのアルファブレンド関数、ソースビットマップ全体に適用されるグローバルアルファ値、およびソースビットマップのフォーマット情報。 ソースとターゲットのブレンド関数は現在、AC_SRC_OVERに制限されています。
 
 *ポイントデスト*<br/>
-移動先の四角形の左上隅を論理単位で識別する[POINT](/previous-versions/dd162805\(v=vs.85\))構造体への参照。
+移動先の四角形の左上隅を論理単位で識別する[POINT](/windows/win32/api/windef/ns-windef-point)構造体への参照。
 
 *幅*<br/>
 コピー先の四角形の幅 (論理単位)。
@@ -279,7 +279,7 @@ BOOL AlphaBlend(
 ソース四角形の高さ (論理単位)。
 
 *レクトデスト*<br/>
-宛先を識別する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+宛先を識別する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *レクトスrc*<br/>
 ソースを識別する`RECT`構造体への参照。
@@ -298,7 +298,7 @@ BOOL AlphaBlend(
 
 オブジェクトに*hBitmap* `CImage`をアタッチします。
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ BOOL BitBlt(
 実行するラスター操作。 ラスターオペレーション コードは、ソース、出力先、および (現在選択されているブラシで定義されている) パターンのビットを組み合わせて、目的地を形成する方法を正確に定義します。 その他のラスター オペレーション コードとその説明については、Windows SDK の[BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt)を参照してください。
 
 *ポイントデスト*<br/>
-移動先の四角形の左上隅を示す[POINT](/previous-versions/dd162805\(v=vs.85\))構造体。
+移動先の四角形の左上隅を示す[POINT](/windows/win32/api/windef/ns-windef-point)構造体。
 
 *幅*<br/>
 コピー先の四角形の幅 (論理単位)。
@@ -383,7 +383,7 @@ BOOL BitBlt(
 ソース四角形の左上隅の論理 y 座標。
 
 *レクトデスト*<br/>
-コピー先の四角形を示す[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
+コピー先の四角形を示す[RECT](/windows/win32/api/windef/ns-windef-rect)構造体。
 
 *ポイントスrc*<br/>
 ソース`POINT`四角形の左上隅を示す構造体。
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDSフォーマットは非圧縮で、カラーテーブルは、各ピクセルの赤、緑、青の各要素をそれぞれ指定する 3 つの DWORD カラーマスクで構成されます。 これは、16 bpp および 32 bpp ビットマップで使用する場合に有効です。
 
 *pdw ビットフィールド*<br/>
-*eCompression*が BI_BITFIELDS に設定されている場合にのみ使用され、それ以外の場合は NULL にする必要があります。 色の赤、緑、青の各要素に使用される各ピクセルのビットを指定する 3 つの DWORD ビットマスクの配列へのポインター。 ビットフィールドの制限については、Windows SDK の[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\))を参照してください。
+*eCompression*が BI_BITFIELDS に設定されている場合にのみ使用され、それ以外の場合は NULL にする必要があります。 色の赤、緑、青の各要素に使用される各ピクセルのビットを指定する 3 つの DWORD ビットマスクの配列へのポインター。 ビットフィールドの制限については、Windows SDK の[BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader)を参照してください。
 
 *dwFlags*<br/>
 ビットマップ オブジェクトにアルファ チャネルがあるかどうかを指定します。 0 個以上の次の値を組み合わせることができます。
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 `CImage`オブジェクトからビットマップをデタッチし、ビットマップを破棄します。
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ BOOL Draw(
 ソース四角形の高さ (論理単位)。
 
 *レクトデスト*<br/>
-宛先を識別する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+宛先を識別する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *レクトスrc*<br/>
 ソースを識別する`RECT`構造体への参照。
 
 *ポイントデスト*<br/>
-移動先の四角形の左上隅を論理単位で識別する[POINT](/previous-versions/dd162805\(v=vs.85\))構造体への参照。
+移動先の四角形の左上隅を論理単位で識別する[POINT](/windows/win32/api/windef/ns-windef-point)構造体への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -617,7 +617,7 @@ BOOL Draw(
 
 ビットマップ内の指定されたピクセルの実際のビット値へのポインターを取得します。
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ int GetBPP() const throw();
 
 この値によって、各ピクセルを定義するビット数とビットマップの最大色数が決まります。
 
-ピクセルあたりのビットは通常 1、4、8、16、24、または 32 です。 この値`biBitCount`の詳細については、Windows SDK の[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\))のメンバーを参照してください。
+ピクセルあたりのビットは通常 1、4、8、16、24、または 32 です。 この値`biBitCount`の詳細については、Windows SDK の[BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader)のメンバーを参照してください。
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>を見る
 
 DIB セクションのパレット内のエントリの範囲から、赤、緑、青 (RGB) の色の値を取得します。
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -909,7 +909,7 @@ COLORREF GetPixel(int x, int y) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 ピクセルの x 座標。
 
 *Y*<br/>
@@ -923,13 +923,13 @@ COLORREF GetPixel(int x, int y) const throw();
 
 ピクセルの正確なアドレスを取得します。
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 ピクセルの x 座標。
 
 *Y*<br/>
@@ -1076,7 +1076,7 @@ HRESULT Load(IStream* pStream) throw();
 
 ビットマップ リソースからイメージを読み込みます。
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ BOOL PlgBlt(
 モノクロ ビットマップの左上隅の y 座標。
 
 *レクトスrc*<br/>
-ソース四角形の座標を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+ソース四角形の座標を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *ポイントマスク*<br/>
-マスク ビットマップの左上隅を示す[POINT](/previous-versions/dd162805\(v=vs.85\))構造体。
+マスク ビットマップの左上隅を示す[POINT](/windows/win32/api/windef/ns-windef-point)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1278,7 +1278,7 @@ BOOL PlgBlt(
 
 デバイス コンテキストを解放します。
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ void ReleaseDC() const throw();
 
 GDI+ によって使用されるリソースを解放します。
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ HRESULT Save(
 
 DIB セクションのパレット内のエントリの範囲に対して、赤、緑、青 (RGB) の色の値を設定します。
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,13 +1372,13 @@ void SetColorTable(
 
 ビットマップ内の指定された位置にあるピクセルの色を設定します。
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 設定するピクセルの水平位置。
 
 *Y*<br/>
@@ -1395,13 +1395,13 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 カラー パレットの*iIndex*にある色にピクセルカラーを設定します。
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 設定するピクセルの水平位置。
 
 *Y*<br/>
@@ -1414,7 +1414,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 *x*および*y*で指定された位置のピクセルを *、r*、 *g*、および*b*で示される色に赤、緑、青 (RGB) のイメージで設定します。
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1425,13 +1425,13 @@ void SetPixelRGB(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 設定するピクセルの水平位置。
 
 *Y*<br/>
 設定するピクセルの垂直方向の位置。
 
-*R*<br/>
+*r*<br/>
 赤の色の強度。
 
 *G*<br/>
@@ -1519,7 +1519,7 @@ BOOL StretchBlt(
 実行するラスター操作。 ラスターオペレーション コードは、ソース、出力先、および (現在選択されているブラシで定義されている) パターンのビットを組み合わせて、目的地を形成する方法を正確に定義します。 その他のラスター オペレーション コードとその説明については、Windows SDK の[BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt)を参照してください。
 
 *レクトデスト*<br/>
-宛先を識別する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+宛先を識別する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *xSrc*<br/>
 ソース四角形の左上隅の x 座標 (論理単位)。
@@ -1602,7 +1602,7 @@ BOOL TransparentBlt(
 透明として扱うソース ビットマップの色。 既定では、CLR_INVALID、現在イメージの透明色として設定されている色を使用する必要があることを示します。
 
 *レクトデスト*<br/>
-宛先を識別する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+宛先を識別する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *xSrc*<br/>
 ソース四角形の左上隅の x 座標 (論理単位)。

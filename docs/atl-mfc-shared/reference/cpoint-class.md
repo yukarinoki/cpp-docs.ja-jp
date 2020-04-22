@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747087"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 のメンバーと`x``y`に値を追加`CPoint`します。
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -156,7 +156,7 @@ void Offset(SIZE size) throw();
 *ポイント*<br/>
 オフセットする量[POINT](/windows/win32/api/windef/ns-windef-point)( `CPoint`POINT または`CPoint`) を指定します。
 
-*サイズ*<br/>
+*size*<br/>
 オフセットする量 ( [SIZE](/windows/win32/api/windef/ns-windef-size)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) を指定します`CPoint`。
 
 ### <a name="example"></a>例
@@ -209,14 +209,14 @@ BOOL operator!=(POINT point) const throw();
 
 最初のオーバーロードは、 にサイズ`CPoint`を追加します。
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
 *ポイント*<br/>
@@ -238,14 +238,14 @@ void operator+=(POINT point) throw();
 
 最初のオーバーロードでは、 からサイズが`CPoint`減算されます。
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
 *ポイント*<br/>
@@ -275,7 +275,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
 *ポイント*<br/>
@@ -314,7 +314,7 @@ CPoint operator-() const throw();
 *ポイント*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
-*サイズ*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 *Lprect*<br/>

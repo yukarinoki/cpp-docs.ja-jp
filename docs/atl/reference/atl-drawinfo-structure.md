@@ -1,5 +1,5 @@
 ---
-title: ATL_DRAWINFO 構造体
+title: ATL_DRAWINFO構造
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fb50f49d387e8620f3d5bbb41263738adbd8b437
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498008"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748806"
 ---
-# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO 構造体
+# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO構造
 
-プリンター、メタファイル、ActiveX コントロールなどのさまざまなターゲットにレンダリングするために使用される情報を格納します。
+プリンタ、メタファイル、ActiveX コントロールなど、さまざまなターゲットへのレンダリングに使用する情報を格納します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,53 +45,53 @@ struct ATL_DRAWINFO {
 構造体のサイズ (バイト単位)。
 
 `dwDrawAspect`<br/>
-ターゲットを表す方法を指定します。 表現には、コンテンツ、アイコン、サムネイル、または印刷ドキュメントを含めることができます。 使用可能な値の一覧については、「 [Dvaspect](/windows/win32/api/wtypes/ne-wtypes-dvaspect)と[DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2)」を参照してください。
+ターゲットの表現方法を指定します。 リプレゼンテーションには、コンテンツ、アイコン、サムネイル、印刷ドキュメントなどがあります。 使用可能な値のリストについては[、DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)および[DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2)を参照してください。
 
 `lindex`<br/>
-描画操作の対象となるターゲットの部分。 その解釈は、 `dwDrawAspect`メンバーの値によって異なります。
+描画操作の対象となるターゲットの一部。 その解釈は`dwDrawAspect`、メンバーの値によって異なります。
 
 `ptd`<br/>
-指定されたアスペクトに応じて描画の最適化を有効にする[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)構造体へのポインター。 最適化された描画インターフェイスをサポートする新しいオブジェクトとコンテナーもこのメンバーをサポートしていることに注意してください。 最適化された描画インターフェイスをサポートしない古いオブジェクトおよびコンテナーは、このメンバーに対して常に NULL を指定します。
+指定されたアスペクトに応じて描画の最適化を可能にする[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)構造体へのポインター。 最適化された描画インターフェイスをサポートする新しいオブジェクトとコンテナーもこのメンバーをサポートしています。 最適化された描画インターフェイスをサポートしない古いオブジェクトとコンテナーでは、常にこのメンバーに NULL が指定されます。
 
 `hicTargetDev`<br/>
-オブジェクトでデバイスメトリックを抽出し、デバイス`ptd`の機能をテストするためにが指すターゲットデバイスの情報コンテキスト。 が`ptd` NULL の場合、オブジェクトは`hicTargetDev`メンバーの値を無視する必要があります。
+オブジェクトがデバイス メトリックを抽出し、`ptd`デバイスの機能をテストできるターゲット デバイスの情報コンテキスト。 NULL`ptd`の場合、オブジェクトはメンバー内の値を`hicTargetDev`無視する必要があります。
 
 `hdcDraw`<br/>
-描画するデバイスコンテキスト。 ウィンドウなしのオブジェクトの場合`hdcDraw` 、メンバーは、 `MM_TEXT`親ウィンドウのクライアント座標と一致する論理座標を持つマッピングモードになります。 また、デバイスコンテキストは、通常、 `WM_PAINT`メッセージによって渡されるものと同じ状態にする必要があります。
+描画するデバイス コンテキスト。 ウィンドウなしのオブジェクトの`hdcDraw`場合、メンバーは`MM_TEXT`、その論理座標が、含むウィンドウのクライアント座標と一致するマッピング モードです。 さらに、デバイス コンテキストは、通常はメッセージによって渡されるコンテキストと同じ状態にする`WM_PAINT`必要があります。
 
 `prcBounds`<br/>
-オブジェクトを描画する必要がある`hdcDraw`との四角形を指定する [RECTL](/previous-versions//dd162907\(v=vs.85\)) 構造体へのポインター。 このメンバーは、オブジェクトの配置と伸縮を制御します。 ウィンドウなしの組み込みのアクティブなオブジェクトを描画するには、このメンバーは NULL である必要があります。 他のすべての状況では、NULL は有効な値ではなく`E_INVALIDARG` 、エラーコードになります。 コンテナーが非ウィンドウオブジェクトに NULL 以外の値を渡した場合、オブジェクトは、要求されたアスペクトを指定されたデバイスコンテキストおよび四角形にレンダリングする必要があります。 コンテナーはこれをウィンドウなしのオブジェクトに要求して、オブジェクトの2番目の非アクティブなビューをレンダリングしたり、オブジェクトを印刷したりできます。
+オブジェクトを描画する必要がある四角形`hdcDraw`を指定する[RECTL](/windows/win32/api/windef/ns-windef-rectl)構造体へのポインター。 このメンバーは、オブジェクトの位置と伸縮を制御します。 ウィンドウなしのインプレイス アクティブ オブジェクトを描画するには、このメンバを NULL にする必要があります。 それ以外の場合、NULL は有効な値ではないので、エラー`E_INVALIDARG`コードが発生する必要があります。 コンテナーがウィンドウなしのオブジェクトに NULL 以外の値を渡す場合、オブジェクトは、要求されたアスペクトを指定されたデバイス コンテキストと四角形にレンダリングする必要があります。 コンテナは、ウィンドウなしのオブジェクトからこれを要求して、オブジェクトの 2 つ目の非アクティブビューをレンダリングしたり、オブジェクトを印刷したりできます。
 
 `prcWBounds`<br/>
-が`hdcDraw`メタファイルデバイスコンテキスト (Windows SDK の「 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 」を参照) である場合、これは`RECTL` 、基になるメタファイル内の外接する四角形を指定する構造体へのポインターです。 四角形の構造体には、ウィンドウエクステントとウィンドウの原点が含まれます。 これらの値は、メタファイルの描画に役立ちます。 によって示さ`prcBounds`れる四角形は、 `prcWBounds`この四角形の内側に入れ子になっています。これらは同じ座標空間にあります。
+メタ`hdcDraw`ファイル デバイス コンテキスト (Windows SDK の[GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps)を参照) の`RECTL`場合、これは、基になるメタファイル内の外接する四角形を指定する構造体へのポインターです。 四角形の構造体には、ウィンドウ範囲とウィンドウの原点が含まれています。 これらの値は、メタファイルを描画する場合に便利です。 で示される`prcBounds`四角形は、この`prcWBounds`四角形の中に入れ子になります。これらは同じ座標空間にあります。
 
 `bOptimize`<br/>
-コントロールの描画を最適化する場合は0以外。それ以外の場合は0。 描画が最適化されている場合、レンダリングが完了すると、デバイスコンテキストの状態が自動的に復元されます。
+コントロールの描画を最適化する場合は 0 以外の値を返します。 描画が最適化されている場合、レンダリングが終了すると、デバイス コンテキストの状態が自動的に復元されます。
 
 `bZoomed`<br/>
-ターゲットにズームファクターがある場合は0以外の場合は0。それ以外の場合は0。 ズームファクターはに`ZoomNum`格納されます。
+ターゲットにズーム率がある場合は 0 以外、それ以外の場合は 0 以外の値を返します。 ズーム倍率は に`ZoomNum`格納されます。
 
 `bRectInHimetric`<br/>
-の次元が HIMETRIC 内`prcBounds`にある場合は0以外。それ以外の場合は0。
+の次元が HIMETRIC`prcBounds`の場合は 0 以外、それ以外の場合は 0 を返します。
 
 `ZoomNum`<br/>
-オブジェクトが描画される四角形の幅と高さ。 ターゲットの x 軸 (オブジェクトの自然サイズの割合) に沿ったズーム係数は、の値で`ZoomNum.cx` `ZoomDen.cx`割った値になります。 Y 軸に沿ったズームファクターは、同様の方法で実現されます。
+オブジェクトの描画先となる四角形の幅と高さ。 ターゲットの x 軸に沿ったズーム率 (オブジェクトの自然サイズの現在の範囲に対する比率) は、値`ZoomNum.cx`を の値で`ZoomDen.cx`割った値です。 y 軸に沿ったズーム倍率は、同様の方法で達成されます。
 
 `ZoomDen`<br/>
 ターゲットの実際の幅と高さ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この構造体の一般的な使用方法は、対象オブジェクトのレンダリング中に情報を取得することです。 たとえば、 [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)のオーバーロード内の ATL_DRAWINFO から値を取得できます。
+この構造体の一般的な使用方法は、ターゲット オブジェクトのレンダリング中に情報を取得することです。 たとえば[、CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)のオーバーロード内ATL_DRAWINFOから値を取得できます。
 
-この構造体には、ターゲットデバイスのオブジェクトの外観を表示するために使用される関連情報が格納されます。 指定された情報は、画面、プリンター、またはメタファイルに描画するときに使用できます。
+この構造体には、ターゲット デバイスのオブジェクトの外観をレンダリングするために使用される関連情報が格納されます。 提供される情報は、画面、プリンタ、またはメタファイルへの描画に使用できます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl. h
+**ヘッダー:** atlctl.h
 
 ## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::D raw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
-[CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
+[IView オブジェクト::Dロー](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[ココムコントロールベース::オンドローアドバンスド](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

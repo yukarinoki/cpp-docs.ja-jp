@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366590"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749435"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>テクニカル ノート 59: MFC の MBCS/Unicode 変換マクロの使用
 
@@ -114,7 +114,7 @@ OLE2T   (LPCOLESTR) -> (LPCSTR)
 
 厳密なループでマクロを使用しないでください。 たとえば、次のようなコードを記述したくない場合があります。
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 上記のコードは、文字列`lpsz`の内容に応じて、スタックにメガバイトのメモリを割り当てることになります! また、ループの反復ごとに文字列を変換するのにも時間がかかります。 代わりに、このような定数変換をループから移動します。
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 文字列が定数でない場合は、メソッド呼び出しを関数にカプセル化します。 これにより、変換バッファは毎回解放されます。 次に例を示します。
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;

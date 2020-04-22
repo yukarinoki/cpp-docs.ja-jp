@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369753"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750178"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController クラス
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 アニメーションがスケジュールされたときにグループをクリーンアップするためにフレームワークによって呼び出されます。
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 アニメーション コントローラからすべてのアニメーション グループを削除します。
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ void RemoveAllAnimationGroups();
 
 指定した ID のアニメーション グループをアニメーション コントローラから削除します。
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 アニメーション コントローラからアニメーション オブジェクトを削除します。
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ void RemoveAnimationObject(
 
 指定したグループに属するアニメーション オブジェクトから遷移を削除します。
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ BOOL ScheduleGroup(
 
 アニメーション コントローラとウィンドウの関係を確立します。
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 
