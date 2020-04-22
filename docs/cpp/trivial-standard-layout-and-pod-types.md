@@ -2,12 +2,12 @@
 title: 単純, 標準レイアウト, POD, およびリテラル型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: b31fefd31b32a5fc4aa3f655b90d39f60a524ca4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
+ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188065"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81664133"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>単純, 標準レイアウト, POD, およびリテラル型
 
@@ -32,17 +32,17 @@ C++ のクラスまたは構造体にコンパイラから提供された、ま�
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-この例では、`Derived` に非静的データ メンバーが含まれないため、`Base` は標準レイアウトです。
+この例では、`Base` に非静的データ メンバーが含まれないため、`Derived` は標準レイアウトです。
 
 ```cpp
 struct Base
@@ -137,15 +137,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };
@@ -183,16 +183,16 @@ int main()
 }
 ```
 
-## <a name="literal-types"></a><a name="literal_types"></a> リテラル型
+## <a name="literal-types"></a><a name="literal_types"></a>リテラル型
 
 リテラル型は、コンパイル時にレイアウトを決定できます。 リテラル型を次に示します。
 
 - void
 - スカラー型
-- 参照
+- references
 - Void の配列、スカラー型または参照
 - 自明なデストラクターを持ち、コンストラクターを移動もコピーもしない 1 つ以上の constexpr コンストラクターを持つクラス。 さらに、すべての非静的データ メンバーと基本クラスは volatile ではなくリテラル型にする必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[基本的な概念](../cpp/basic-concepts-cpp.md)
+[基本概念](../cpp/basic-concepts-cpp.md)
