@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368270"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754434"
 ---
 # <a name="cricheditctrl-class"></a>クラス
 
@@ -377,7 +377,7 @@ int CharFromPos(CPoint pt) const;
 
 リッチ エディット コントロールの現在の選択範囲 (存在する場合) を削除します (クリアします)。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ void Clear();
 
 リッチ エディット コントロールの現在の選択範囲 (存在する場合) をクリップボードにコピーします。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 エディット コントロールのスタイルを指定します。 Windows SDK で説明されている「コントロール スタイルの[作成](#create)と編集」の **「解説」** セクションに記載されているウィンドウ[スタイル](/windows/win32/Controls/edit-control-styles)の組み合わせを適用します。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -525,7 +525,7 @@ CRichEditCtrl();
 
 リッチ エディット コントロールの現在の選択範囲 (存在する場合) を削除 (カット) し、削除されたテキストをクリップボードにコピーします。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 
 リッチ エディット コントロールの元に戻すフラグをリセット (クリア) します。
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Windows SDK で説明されているように、[句読点](/windows/win32/api/r
 
 この`CRichEditCtrl`オブジェクトの書式設定四角形を取得します。
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ UNDONAMEID GetRedoName() const;
 
 この`CRichEditCtrl`オブジェクトの現在の選択範囲の境界を取得します。
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ UINT GetWordWrapMode() const;
 
 選択範囲の表示設定を変更します。
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ void HideSelection(
 
 ユーザーがエディット コントロールに入力できるテキストの長さを制限します。
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ int LineLength(int nLine = -1) const;
 
 複数行のエディット コントロールのテキストをスクロールします。
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ void LineScroll(
 
 クリップボードのデータを、キャレットの位置`CRichEditCtrl`の位置に挿入します。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ void Paste();
 
 特定のクリップボード形式のデータをこの`CRichEditCtrl`オブジェクトに貼り付けます。
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ BOOL Redo();
 
 この`CRichEditCtrl`オブジェクトの現在の選択範囲を指定したテキストで置き換えます。
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ void ReplaceSel(
 
 この`CRichEditCtrl`オブジェクトは、親ウィンドウに通知メッセージEN_REQUESTRESIZE送信するように強制します。
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 
 エディット コントロールの変更フラグを設定またはクリアします。
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 
 この`CRichEditCtrl`オブジェクトのオプションを設定します。
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 この`CRichEditCtrl`オブジェクトの書式設定四角形を設定します。
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ void SetRect(LPCRECT lpRect);
 
 この`CRichEditCtrl`オブジェクト内の選択を設定します。
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 
 コントロールが現在の元に戻す操作に追加の入力操作を収集しないようにします。
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

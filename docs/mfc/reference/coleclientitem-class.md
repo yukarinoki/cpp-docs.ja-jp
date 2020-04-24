@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376282"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753967"
 ---
 # <a name="coleclientitem-class"></a>クラス
 
@@ -310,7 +310,7 @@ OLE アイテムは、埋め込みまたはリンクのいずれかです。 埋
 
 例外がスローされたときに独自の処理を実行できるように[、DoVerb](#doverb)の代わりに指定された動詞を実行します。
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -322,7 +322,7 @@ void Activate(
 *nVerb*<br/>
 実行する動詞を指定します。 次のいずれかを指定できます。
 
-|[値]|意味|Symbol|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |- 0|主動詞|OLEIVERB_PRIMARY|
 |- 1|二次動詞|(なし)|
@@ -380,7 +380,7 @@ virtual BOOL ActivateAs(
 
 OLE アイテムのデータにアクセスするための[COleDataObject](../../mfc/reference/coledataobject-class.md)を初期化します。
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ static BOOL PASCAL CanPasteLink();
 
 OLE アイテムの状態を実行状態から読み込まれた状態に変更します。
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 
 OLE アイテムをクリップボードにコピーします。
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ OLE アイテムの作成時にキャッシュされるクリップボード デ
 
 OLE アイテムを非アクティブ化し、関連付けられているリソースを解放します。
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ void Deactivate();
 
 ユーザーがインプレースでアクティブ化された項目を非アクティブ化するときに、この関数を呼び出します。
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ void DeactivateUI();
 
 コンテナ ドキュメントから OLE アイテムを削除します。
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 実行する動詞を指定します。 次のいずれかを含めることができます。
 
-|[値]|意味|Symbol|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |- 0|主動詞|OLEIVERB_PRIMARY|
 |- 1|二次動詞|(なし)|
@@ -1153,7 +1153,7 @@ BOOL GetCachedExtent(
 
 項目のクラス ID を*pClassID*が指すメモリに返します。
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ void GetClassID(CLSID* pClassID) const;
 
 [CopyToClipboard](#copytoclipboard)メンバー関数`COleDataSource`の呼び出しによってクリップボードに格納されるすべてのデータを格納しているオブジェクトを取得します。
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ OLE_OBJTYPE GetType() const;
 
 OLE アイテムの種類を表すユーザーに表示される文字列 ("Word 文書" など) を取得します。
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ ActivateAs`Reload`の呼び出しによって、項目を別の種類の項目�
 
 この項目に関連付けられているアプリケーションを実行します。
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ DVASPECT 列挙体の値。 このパラメーターには、次のいずれか�
 
 OLE アイテムに使用できる領域の大きな量を指定します。
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 サイズ情報を格納する[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 *アスペクト*<br/>
@@ -2040,7 +2040,7 @@ void SetExtent(
 
 埋め込まれた OLE アイテムのコンテナー アプリケーションの名前とコンテナーの名前を指定します。
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ BOOL SetItemRects(
 
 指定したリンク アイテムのプレゼンテーションにリンク更新オプションを設定します。
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 

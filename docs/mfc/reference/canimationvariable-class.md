@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377044"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755074"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable クラス
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 トランジションを追加します。
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ void AddTransition(CBaseTransition* pTransition);
 
 内部リストからストーリーボードに遷移を追加します。
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 
 トランジションをクリアします。
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ BOOL CreateTransitions(
 
 イベントを有効または無効にします。
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ TRUE - イベントを有効にする、FALSE - イベントを無効にしま�
 
 イベントを有効または無効にします。
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 既定値を設定し、解放 IUI アニメーション変数 COM オブジェクトです。
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 アニメーション変数とアニメーション オブジェクトの関係を設定します。
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

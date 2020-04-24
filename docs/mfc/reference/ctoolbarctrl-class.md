@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365090"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752224"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -523,7 +523,7 @@ int AddStrings(LPCTSTR lpszStrings);
 
 ツール バー コントロール全体のサイズを変更します。
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 ツール バー コントロールのスタイルを指定します。 ツールバーには常にWS_CHILDスタイルが必要です。 また、ツールバースタイルとウィンドウスタイルの任意の組み合わせを指定**することもできます。**
 
 *Rect*<br/>
-オプションで、ツール バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+オプションで、ツール バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 ツール バー コントロールの親ウィンドウを指定します。 NULL にすることはできません。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 ツール バー コントロールのスタイルを指定します。 ツールバーには常にWS_CHILDスタイルが必要です。 また、ツールバースタイルとウィンドウスタイルの任意の組み合わせを[指定できます。](#create) **Remarks**
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -713,7 +713,7 @@ CToolBarCtrl();
 
 [ツールバーのカスタマイズ] ダイアログ ボックスを表示します。
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ CImageList* GetImageList() const;
 
 ツール バーの現在の挿入マークを取得します。
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 情報を取得するボタンの 0 から始まるインデックス。
 
 *Lprect*<br/>
-外接する四角形の座標を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトのアドレス。
+外接する四角形の座標を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1132,7 +1132,7 @@ int GetMaxTextRows() const;
 
 オブジェクトのメトリックを`CToolBarCtrl`取得します。
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 ボタン識別子。
 
 *Lprect*<br/>
-外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+外接する四角形の情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>パラメーター
 
 *Ppt*<br/>
-メンバ内のヒット テストの x 座標と、メンバ内のヒット テストの y 座標を含む POINT`y`構造体へのポインター。 [POINT](/previous-versions/dd162805\(v=vs.85\)) `x` 座標は、ツール バーのクライアント領域を基準にしています。
+メンバ内のヒット テストの x 座標と、メンバ内のヒット テストの y 座標を含む POINT`y`構造体へのポインター。 [POINT](/windows/win32/api/windef/ns-windef-point) `x` 座標は、ツール バーのクライアント領域を基準にしています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>パラメーター
 
 *Ppt*<br/>
-ツール バーのクライアント領域を基準としたヒット テスト座標を含む[POINT](/previous-versions/dd162805\(v=vs.85\))構造体へのポインター。
+ツール バーのクライアント領域を基準としたヒット テスト座標を含む[POINT](/windows/win32/api/windef/ns-windef-point)構造体へのポインター。
 
 *プトビム*<br/>
 挿入マーク情報を受け取る[TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)構造体へのポインター。
@@ -1567,7 +1567,7 @@ BOOL IsButtonPressed(int nID) const;
 
 ビットマップをツール バー コントロールのイメージ リストに読み込みます。
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 パラメーターで指定されたレジストリ内の場所からツール バー コントロールの状態を復元します。
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ void RestoreState(
 
 パラメーターで指定されたレジストリの場所にツール バー コントロールの状態を保存します。
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 ビットマップ イメージの幅と高さ (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 ボタンの幅と高さ (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -1883,7 +1883,7 @@ BOOL SetButtonSize(CSize size);
 
 構造体のサイズを指定`TBBUTTON`します。
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ BOOL SetCmdID(
 
 現在のツール バー コントロールの配色を設定します。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ BOOL SetIndent(int iIndent);
 
 ツール バーの現在の挿入マークを設定します。
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 
 オブジェクトのメトリックを`CToolBarCtrl`設定します。
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 
 ツール バー コントロールの所有者ウィンドウを設定します。
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ CImagelist* SetPressedImageList(
 
 ツール バー コントロールに、要求された行数に合わせてサイズを変更するように要求します。
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ void SetRows(
 ツール バーのサイズを要求された行数に変更できない場合に、使用する行数を増やすか、または少ない行を使用するかを指定します。
 
 *Lprect*<br/>
-ツール バーの新しい外接する四角形を受け取る[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+ツール バーの新しい外接する四角形を受け取る[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -2341,7 +2341,7 @@ BOOL SetState(
 
 ツール バー コントロールのスタイルを設定します。
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ Windows SDK で説明されているように、[ツール バー コントロ�
 
 ツール ヒント コントロールをツール バー コントロールに関連付けます。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 

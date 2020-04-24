@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369016"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754743"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase クラス
 
@@ -315,7 +315,7 @@ virtual void Create(
 
 データベースのプライマリ テーブルの 1 つ以上のフィールドと、外部テーブル (データベース内の別のテーブル) 内の 1 つ以上のフィールドとの間にリレーションシップを確立します。
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 `CDaoDatabase`オブジェクトの QueryDefs コレクションから指定されたクエリ定義 (保存されたクエリ) を削除します。
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 データベース オブジェクトの Relations コレクションから既存のリレーションシップを削除します。
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 オブジェクトの TableDefs コレクションから、指定したテーブルとそのすべてのデータ`CDaoDatabase`を削除します。
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 
 アクション クエリを実行するか、データベースで SQL ステートメントを実行します。
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ short GetQueryDefCount();
 
 データベースで定義されているクエリに関するさまざまな情報を取得します。
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ short GetRelationCount();
 
 データベースの Relations コレクション内の指定されたリレーションシップに関する情報を取得します。
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ short GetTableDefCount();
 
 データベースで定義されているテーブルに関するさまざまな情報を取得します。
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ virtual void Open(
 
 接続されているデータベースでの後続の操作がタイムアウトするまでに許容される既定の秒数をオーバーライドします。
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

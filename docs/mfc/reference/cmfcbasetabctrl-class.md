@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367818"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754901"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -425,7 +425,7 @@ Visual Studio 2015 以降、このクラスはマイクロソフトのアクテ�
 
 保護された`CMap m_mapAddedIcons`メンバーのアイコンの一覧にアイコンを追加します。
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>ウィンドウを破壊する
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ virtual BOOL DetachTab(
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>アクティブアクティブを有効にします。
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 タブを描画するときに、フレームワークで自動背景色を使用するかどうかを制御します。
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ virtual BOOL EnableTabDetach(
 
 マウスを使用してタブ オーダーを変更できます。
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ virtual BOOL EnsureVisible(int iTab);
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>次の値を使用します。
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ virtual void InsertTab(
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>タブを無効にします。
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 [クラス](../../mfc/reference/cmfcbasetabctrl-class.md)のインスタンスのイメージ リストをリセットします。
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 フレームワークが自動カラー モードで使用するタブ コントロールの色を設定します。
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)から派生しているのではない任意のオブジェクトに使用するラッパー クラスを設定します。
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 
 タブ ラベルのプレフィックス文字の処理を有効または無効にします。
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368949"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754702"
 ---
 # <a name="cdaoquerydef-class"></a>クラス
 
@@ -410,7 +410,7 @@ short GetFieldCount();
 
 クエリ定義で定義されているフィールドに関するさまざまな情報を取得します。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ short GetParameterCount();
 
 クエリ定義で定義されているパラメーターに関する情報を取得します。
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 クエリ定義オブジェクトの接続文字列を設定します。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ ODBC データ ソースに対する SQL パススルー クエリを表すク�
 
 一時的でないクエリ定義の名前を変更する場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ void SetName(LPCTSTR lpszName);
 
 クエリが ODBC データ ソースにタイムアウトするまでの時間制限を設定します。
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ virtual void SetParamValue(
 
 外部データベースへの SQL パススルー クエリを設定するプロセスの一環として、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 クエリ定義が実行する SQL ステートメントを設定します。
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

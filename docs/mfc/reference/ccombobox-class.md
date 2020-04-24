@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369508"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754837"
 ---
 # <a name="ccombobox-class"></a>Cコンボボックスクラス
 
@@ -196,7 +196,7 @@ class CComboBox : public CWnd
 
 次の表は、3 つのコンボ ボックス[スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を比較します。
 
-|スタイル|リスト ボックスが表示されている場合|静的コントロールまたは編集コントロール|
+|Style|リスト ボックスが表示されている場合|静的コントロールまたは編集コントロール|
 |-----------|-------------------------------|-----------------------------|
 |シンプル|Always (常に)|[編集]|
 |Drop-down|ドロップダウン時|[編集]|
@@ -308,7 +308,7 @@ CComboBox();
 
 コンボ ボックスのエディット コントロールで現在選択されている場合は、その選択を削除します(クリアします)。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -337,7 +337,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 構造体に記述されている 2 つの項目の相対`COMPAREITEMSTRUCT`位置を示します。 次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |- 1|項目 1 は、項目 2 の前に並べ替えます。|
 |0|項目 1 と項目 2 は同じ並べ替えです。|
@@ -357,7 +357,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 コンボ ボックスのエディット コントロール内の現在の選択範囲を、CF_TEXT形式でクリップボードにコピーします 。(存在する場合)。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 
 コンボ ボックス エディット コントロール内の現在の選択項目がある場合は、その選択範囲を削除 (カット) し、削除したテキストをCF_TEXT形式でクリップボードにコピーします。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 最初のオーバーロードでは、キュー バナー テキストが存在する場合は[CString](../../atl-mfc-shared/using-cstring.md)オブジェクトを格納します。それ以外の`CString`場合は、長さがゼロのオブジェクト。
 
-\- または -
+または
 
 2 番目のオーバーロードでは、このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
@@ -708,7 +708,7 @@ int GetCurSel() const;
 
 ドロップダウン`GetDroppedControlRect`コンボ ボックスの表示されている (ドロップダウンされた) リスト ボックスの画面座標を取得するには、メンバー関数を呼び出します。
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 指定されたコンボ ボックス項目に関連付けられているアプリケーション提供の 32 ビット値をポインター (**void** <strong>\*</strong>) として取得します。
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 クリップボードのデータをコンボ ボックスの現在のカーソル位置のエディット コントロールに挿入します。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ void Paste();
 
 コンボ ボックスのリスト ボックスおよびエディット コントロールからすべての項目を削除します。
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 コンボ ボックスのリスト ボックス部分を水平方向にスクロールできる幅をピクセル単位で設定します。
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ nIndex で指定された項目がリスト ボックスの先頭*nIndex*に表�
 
 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)または[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボ ボックスのリスト ボックスの表示と非表示を切り替えます。
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

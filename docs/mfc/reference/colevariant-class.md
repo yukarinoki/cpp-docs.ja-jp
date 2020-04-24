@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374831"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753712"
 ---
 # <a name="colevariant-class"></a>COleVariant クラス
 
@@ -93,7 +93,7 @@ OLE オートメーションでの`COleVariant`クラスとその使用方法の
 
 指定された[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)オブジェクトを現在`COleVariant`のオブジェクトにアタッチします。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ SCODE の詳細については、Windows SDK[の COM エラー コードの構�
 
 この`COleVariant`オブジェクトのバリアント値の型を変換します。
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 `VARIANT` を消去します。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ VARIANT Detach();
 
 既存のバリアント配列からバイト配列を取得します。
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 文字列を特定の型に設定します。
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: f9f184542aaceb206d3eae110d3a088d5fbc95cf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374950"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753842"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc クラス
 
@@ -181,7 +181,7 @@ OLE システム DLL にドキュメントを登録する名前付きファイ�
 
 ドキュメントが開かなくなったことを OLE システム DLL に通知します。
 
-```
+```cpp
 void Revoke();
 ```
 

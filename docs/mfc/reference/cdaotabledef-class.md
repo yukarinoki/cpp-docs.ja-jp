@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377124"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754691"
 ---
 # <a name="cdaotabledef-class"></a>クラス
 
@@ -300,7 +300,7 @@ tabledef オブジェクトによって表されるテーブルの特性に対�
 
 テーブルにフィールドを追加するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 テーブルにインデックスを追加します。
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ FALSE に設定されている場合、残りのメンバーは無視されま�
 
 フィールドを削除してアクセスできないようにするには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ void DeleteField(int nIndex);
 
 基になるテーブルのインデックスを削除します。
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ short GetFieldCount();
 
 tabledef で定義されたフィールドに関するさまざまな種類の情報を取得します。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ short GetIndexCount();
 
 tabledef で定義されているインデックスに関するさまざまな種類の情報を取得します。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ virtual void Open(LPCTSTR lpszName);
 
 アタッチテーブルの接続情報を更新します。
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ void RefreshLink();
 
 オブジェクトの 1 つ以上の特性を示`CDaoTableDef`す値を設定します。
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ void SetAttributes(long lAttributes);
 
 アタッチされた`CDaoTableDef`テーブルを表すオブジェクトの場合、文字列オブジェクトは 1 つまたは 2 つの部分 (データベース型指定子とデータベースへのパス) で構成されます。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ ODBC またはインストール可能な ISAM ドライバーに渡す追加パ
 
 テーブルのユーザー定義名を設定します。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ void SetName(LPCTSTR lpszName);
 
 アタッチされたテーブルの名前、または`CDaoTableDef`オブジェクトの基になるベース テーブルの名前を、データの元のソースに存在するように指定します。
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 
 テーブル定義の検証規則を設定します。
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 
 Microsoft Jet データベース エンジンでサポートされている基になるベース テーブル`CDaoTableDef`を持つオブジェクトの検証規則の例外テキストを設定します。
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

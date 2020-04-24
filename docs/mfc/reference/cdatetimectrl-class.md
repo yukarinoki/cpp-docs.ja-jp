@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321913"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754616"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 現在の日時指定コントロールを閉じます。
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 日付時刻コントロール スタイルの組み合わせを指定します。 [日付と時刻の選択のスタイル](/windows/win32/Controls/date-and-time-picker-control-styles)の詳細については、Windows SDK の「日付と時刻の選択コントロールのスタイル」を参照してください。
 
 *Rect*<br/>
-日時指定コントロールの位置とサイズである[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+日時指定コントロールの位置とサイズである[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 日付と時刻の選択コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 NULL にすることはできません。
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *アイカラー*<br/>
 月のカレンダー コントロールのどの領域を設定するかを指定する**int**値。 この値は、次のいずれかになります。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |MCSC_BACKGROUND|月の背景色を設定します。|
 |MCSC_MONTHBK|月内に表示される背景色を設定します。|
@@ -474,7 +474,7 @@ COLORREF SetMonthCalColor(
 
 日時指定コントロールの子月間予定表コントロールで使用するフォントを設定します。
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

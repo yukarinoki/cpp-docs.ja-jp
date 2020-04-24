@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752313"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 
@@ -160,7 +160,7 @@ class CTabCtrl : public CWnd
 
 ウィンドウ四角形を指定したタブ コントロールの表示領域を計算するか、指定した表示領域に対応するウィンドウ四角形を計算します。
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 実行する操作を示します。 このパラメーターが TRUE の場合 *、lpRect*は表示用の四角形を指定し、対応するウィンドウ四角形を受け取ります。 このパラメーターが FALSE の場合 *、lpRect*はウィンドウの四角形を指定し、対応する表示四角形を受け取ります。
 
 *Lprect*<br/>
-指定された四角形を指定し、計算された四角形を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+指定された四角形を指定し、計算された四角形を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="example"></a>例
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 タブ コントロールのスタイルを指定します。 Windows SDK で説明されている[タブ コントロール スタイル](/windows/win32/Controls/tab-control-styles)の任意の組み合わせを適用します。 コントロールに適用できるウィンドウ スタイルの一覧については、「**解説」** を参照してください。
 
 *Rect*<br/>
-タブ コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+タブ コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 タブ コントロールの親ウィンドウを指定します`CDialog`。 NULL にすることはできません。
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 タブ コントロールのスタイルを指定します。 Windows SDK で説明されている[タブ コントロール スタイル](/windows/win32/Controls/tab-control-styles)の任意の組み合わせを適用します。 コントロールに適用できるウィンドウ スタイルの一覧については、「[作成](#create)」の**解説**を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -313,7 +313,7 @@ BOOL DeleteItem(int nItem);
 
 タブ コントロール内の項目をリセットし、押された項目をクリアします。
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 タブ項目の 0 から始まるインデックス。
 
 *Lprect*<br/>
-タブの外接する四角形を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。これらの座標は、ビューポートの現在のマッピング モードを使用します。
+タブの外接する四角形を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。これらの座標は、ビューポートの現在のマッピング モードを使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -517,7 +517,7 @@ DWORD GetItemState(
 
 状態情報を受け取る DWORD 値への参照。 次の値のいずれかです。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|タブ コントロール項目が選択されます。|
 |TCIS_HIGHLIGHTED|タブ コントロール項目が強調表示され、タブとテキストが現在の強調表示色で描画されます。 ハイライトカラーを使用する場合、これはディザリングカラーではなく、真の補間になります。|
@@ -682,7 +682,7 @@ LONG InsertItem(
 
 タブ コントロールのイメージ リストから指定したイメージを削除します。
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ void RemoveImage(int nImage);
 
 タブ コントロール内の指定されたタブにフォーカスを設定します。
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 タブ コントロール項目の新しい幅と高さ (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -858,7 +858,7 @@ BOOL SetItemState(
 *dwステート*<br/>
 状態情報を含む DWORD 値への参照。 次の値のいずれかです。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|タブ コントロール項目が選択されます。|
 |TCIS_HIGHLIGHTED|タブ コントロール項目が強調表示され、タブとテキストが現在の強調表示色で描画されます。 ハイライトカラーを使用する場合、これはディザリングカラーではなく、真の補間になります。|
@@ -892,20 +892,20 @@ int SetMinTabWidth(int cx);
 
 タブ コントロール内の各タブのアイコンとラベルの周囲のスペース (パディング) の量を設定します。
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 タブ コントロール内の各タブのアイコンとラベルの周囲のスペース (パディング) の量を設定します。
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CタブCtrl::セットヒント
 
 ツール ヒント コントロールをタブ コントロールに割り当てます。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

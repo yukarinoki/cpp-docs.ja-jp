@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754474"
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 
@@ -219,7 +219,7 @@ INT_PTR Append(const CObArray& src);
 
 指定した配列の要素を、同じ型の別の配列の要素で上書きします。
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
@@ -316,7 +316,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 
 配列の拡大中に割り当てられた余分なメモリを解放します。
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -516,7 +516,7 @@ INT_PTR GetUpperBound() const;
 
 指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -626,7 +626,7 @@ CObject* operator[](int_ptr nindex) const;
 
 この配列からすべてのポインターを削除しますが、実際にはオブジェクトは`CObject`削除しません。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll();
 
 配列内の指定したインデックス位置から開始する 1 つ以上の要素を削除します。
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -707,7 +707,7 @@ RemoveAt example: A CObArray with 1 elements
 
 指定したインデックス位置に配列要素を設定します。
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -756,7 +756,7 @@ SetAt example: A CObArray with 2 elements
 
 指定したインデックス位置に配列要素を設定します。
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -805,7 +805,7 @@ SetAtGrow example: A CObArray with 4 elements
 
 空または既存の配列のサイズを設定します。必要に応じてメモリを割り当てます。
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

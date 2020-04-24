@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752850"
 ---
 # <a name="cmfcvisualmanager-class"></a>クラス
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>をクリック :Dします。
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>ボタンの塗りつぶしを有効にします。
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *ボタン*<br/>
 [in]ツール バー ボタンへのポインター。
 
-*状態*<br/>
+*state*<br/>
 [in]ツール バー ボタンの状態。
 
 ### <a name="return-value"></a>戻り値
@@ -1822,7 +1822,7 @@ virtual BOOL OnDrawBrowseButton(
 *を編集する*<br/>
 [in]エディット コントロールへのポインター。 ビジュアル マネージャーは、この編集コントロールの参照ボタンを描画します。
 
-*状態*<br/>
+*state*<br/>
 [in]ボタンの状態を指定する列挙値。
 
 *clrText*<br/>
@@ -1859,7 +1859,7 @@ virtual void OnDrawButtonBorder(
 *Rect*<br/>
 [in]ツール バー ボタンの境界を指定する四角形。
 
-*状態*<br/>
+*state*<br/>
 [in]ツール バー ボタンの現在の状態を指定する列挙型。
 
 ### <a name="remarks"></a>解説
@@ -4358,7 +4358,7 @@ virtual void OnFillButtonInterior(
 *Rect*<br/>
 [in]ツール バー ボタンの境界を指定する四角形。
 
-*状態*<br/>
+*state*<br/>
 [in]ツール バー ボタンの状態。
 
 ### <a name="remarks"></a>解説
@@ -5011,7 +5011,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 無効なツールバー イメージの浮き出しモードを有効または無効にします。
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 
 メニューまたはツールバー上の非アクティブなイメージの照明効果を有効または無効にします。
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 
 メニュー ボタンをフラットに表示するかどうかを示すフラグを設定します。 それ以外の場合は、3 次元で表示されます。
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 
 メニューシャドウの幅と高さを設定します。
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ void SetMenuShadowDepth(int nDepth);
 
 強調表示されたイメージの影を[表示](../../mfc/reference/cmfcvisualmanager-class.md)するかどうかを示すフラグを設定します。
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

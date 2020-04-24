@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752820"
 ---
 # <a name="cmonthcalctrl-class"></a>クラスを計算します。
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 月間予定表コントロールに適用される Windows スタイルの組み合わせを指定します。 スタイルの詳細については、Windows SDK の[月間予定表コントロール](/windows/win32/Controls/month-calendar-control-styles)スタイルを参照してください。
 
 *Rect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。 月間予定表コントロールの位置とサイズを格納します。
+[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。 月間予定表コントロールの位置とサイズを格納します。
 
 *Pt*<br/>
-月間予定表コントロールの場所を識別する[POINT](/previous-versions/dd162805\(v=vs.85\))構造体への参照。
+月間予定表コントロールの場所を識別する[POINT](/windows/win32/api/windef/ns-windef-point)構造体への参照。
 
 *pParentWnd*<br/>
 月間予定表コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 NULL にすることはできません。
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 現在のビューは、次のいずれかの値で示されます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |MCMV_MONTH|月次ビュー|
 |MCMV_YEAR|年間ビュー|
@@ -448,7 +448,7 @@ BOOL 値へのポインター。 値が 0 以外の場合、コントロール�
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[MCM_GETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-getfirstdayofweek)の動作を実装します。 曜日は、次のように整数で表されます。
 
-|[値]|曜日|
+|値|曜日|
 |-----------|---------------------|
 |0|月曜日|
 |1|Tuesday|
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *プレック*<br/>
-外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 このパラメーターは有効なアドレスである必要があり、NULL にすることはできません。
+外接する四角形の情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。 このパラメーターは有効なアドレスである必要があり、NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -587,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 取得する範囲制限の範囲を指定する値。 この値は、次のいずれかでなければなりません。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |GMR_DAYSTATE|部分的にしか表示されない表示範囲の前月と後ろの月を含めます。|
 |GMR_VISIBLE|完全に表示されている月のみを含めます。|
@@ -634,7 +634,7 @@ DWORD GetRange(
 
 ゼロ (制限は設定されません) の DWORD、または制限情報を指定する次の値の組み合わせ。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |GDTR_MAX|コントロールに対して最大制限が設定されます。*pMaxRange*は有効であり、適用可能な日付情報を含んでいます。|
 |GDTR_MIN|コントロールに対して最小制限が設定されます。*pMinRange*は有効であり、適用可能な日付情報を含んでいます。|
@@ -808,7 +808,7 @@ BOOL IsYearView() const;
 
 現在の月間予定表コントロールの境界線の幅を設定します。
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ void SetCalendarBorder(int cxyBorder);
 
 現在の月間予定表コントロールの境界線の既定の幅を設定します。
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *n地域*<br/>
 設定する月カレンダーの色を指定する整数値。 この値は、次のいずれかになります。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |MCSC_BACKGROUND|月の背景色を表示します。|
 |MCSC_MONTHBK|月内に表示される背景色。|
@@ -1219,7 +1219,7 @@ BOOL SetSelRange(
 
 現在の日のカレンダー コントロールを設定します。
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Lprect*|[in]目的の数のカレンダーを含む四角形を定義する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。|
+|*Lprect*|[in]目的の数のカレンダーを含む四角形を定義する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
-サイズが*lpRect*パラメーターで定義された四角形以下の矩形を定義する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+サイズが*lpRect*パラメーターで定義された四角形以下の矩形を定義する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 

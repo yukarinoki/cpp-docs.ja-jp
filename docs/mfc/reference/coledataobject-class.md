@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366129"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753911"
 ---
 # <a name="coledataobject-class"></a>COleDataObject クラス
 
@@ -92,7 +92,7 @@ class COleDataObject
 
 オブジェクトを OLE データ`COleDataObject`オブジェクトに関連付けます。
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ BOOL AttachClipboard();
 
 アイテムからデータ形式の一覧を取得`GetNextFormat`するための後続の呼び出しを準備します。
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 特定の形式が使用できるかどうか確認するには[、COleDataObject::IsDataAvailable](#isdataavailable)を呼び出します。
 
-詳細については、Windows SDK の[IEnumXXXX::次](/previous-versions//ms695273\(v=vs.85\))を参照してください。
+詳細については、Windows SDK の[IEnumXXXX::次](/previous-versions/ms695273\(v=vs.85\))を参照してください。
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>オブジェクト::IsDataAvailable
 
@@ -328,7 +328,7 @@ BOOL IsDataAvailable(
 
 この関数を呼び出して、オブジェクトに以前に関連付けられていた[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)オブジェクトの所有権を`COleDataObject`解放します。
 
-```
+```cpp
 void Release();
 ```
 

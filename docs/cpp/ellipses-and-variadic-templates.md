@@ -1,15 +1,15 @@
 ---
-title: 楕円および可変値引数テンプレート
+title: 省略記号と可変テンプレート
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366338"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031525"
 ---
-# <a name="ellipses-and-variadic-templates"></a>楕円および可変値引数テンプレート
+# <a name="ellipsis-and-variadic-templates"></a>省略記号と可変テンプレート
 
 ここでは、C++ の可変個引数テンプレートを使用して省略記号 (`...`) を指定する方法を示します。 省略記号は、C および C++ で多くの用途に使用されてきました。 たとえば、関数の可変個引数リストなどです。 C ランタイム ライブラリの `printf()` 関数は、最も一般的な例の 1 つです。
 

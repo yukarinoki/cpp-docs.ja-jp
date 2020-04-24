@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373982"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753222"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ int CharFromPos(CPoint pt) const;
 
 エディット コントロールの現在の選択項目 (存在する場合) を削除 (クリア) します。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ void Clear();
 
 エディット コントロールの現在の選択範囲 (存在する場合) をクリップボードにCF_TEXT形式で貼り付けます。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Windows`Create`が実行されると[、WM_NCCREATE](/windows/win32/winmsg/wm-nc
 
 エディット コントロールの現在の選択項目 (存在する場合) を削除 (切り取る) し、削除されたテキストをCF_TEXT形式でクリップボードにコピーします。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ void Cut();
 
 エディット コントロールの元に戻すフラグをリセット (クリア) します。
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ ES_PASSWORD スタイルを使用してエディット コントロールを作�
 
 エディット コントロールの書式設定四角形を取得します。
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ BOOL HideBalloonTip();
 
 ユーザーがエディット コントロールに入力できるテキストの長さを制限します。
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ TCHAR 型の詳細については[、Windows データ型](/windows/win32/WinPro
 
 複数行エディット コントロールのテキストをスクロールします。
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ void LineScroll(
 
 クリップボード`CEdit`のデータをカーソル位置に挿入します。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 編集コントロール内の現在の選択範囲を *、lpszNewText*で指定されたテキストに置き換えます。
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ TRUE の場合、コントロールにフォーカスがある場合でも、キ
 
 複数行エディット コントロールで使用されるローカル メモリへのハンドルを設定します。
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ void SetHandle(HLOCAL hBuffer);
 
 現在のエディット コントロールに表示されているテキストの範囲を強調表示します。
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ void SetHighlight(
 
 この`CEdit`オブジェクトのテキスト制限を設定します。
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ void SetLimitText(UINT nMax);
 
 このエディット コントロールの左右の余白を設定します。
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ void SetMargins(
 
 エディット コントロールの変更フラグを設定またはクリアします。
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ TRUE の値は、テキストが変更されたことを示し、FALSE の値は
 
 ユーザーがテキストを入力するときに、エディット コントロールに表示されるパスワード文字を設定または削除します。
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 指定した座標を使用して四角形のサイズを設定します。
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ void SetRect(LPCRECT lpRect);
 
 複数行エディット コントロールの書式設定四角形を設定します。
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ void SetRectNP(LPCRECT lpRect);
 
 エディット コントロール内の文字の範囲を選択します。
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ void SetSel(
 
 複数行のエディット コントロールでタブストップを設定します。
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: a0df111edcbad52de0fc9c6d2cb9a838119bf186
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b4c406360158795b9c9554bfd70e7d41875be13
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364155"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753638"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
 
@@ -260,7 +260,7 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 
 ## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a>ウィンドウコンテナー マネージャー::ペインを追加します。
 
-```
+```cpp
 void AddPanesToList(
     CObList* plstControlBars,
     CObList* plstSliders);
@@ -275,7 +275,7 @@ void AddPanesToList(
 
 ## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a>ウィンドウコンテナー マネージャー::ペインを追加します。
 
-```
+```cpp
 void AddPaneToList(CDockablePane* pControlBarToAdd);
 ```
 
@@ -304,7 +304,7 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 
 ## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a>コンテナマネージャー::カルクレクト
 
-```
+```cpp
 void CalcRects(
     CRect& rectOriginal,
     CRect& rectInserted,
@@ -658,7 +658,7 @@ virtual BOOL IsRootPaneContainerVisible() const;
 
 ## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a>ウィンドウコンテナー マネージャー::通知ペインディバイダー
 
-```
+```cpp
 void NotifyPaneDivider();
 ```
 
@@ -727,7 +727,7 @@ virtual CDockablePane* PaneFromPoint(
 
 ## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>コンテナマネージャー::コンテナーの解放
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -735,7 +735,7 @@ void ReleaseEmptyPaneContainers();
 
 ## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a>CPane コンテナマネージャー::すべてのペインとペインディバイダーの削除
 
-```
+```cpp
 void RemoveAllPanesAndPaneDividers();
 ```
 
@@ -743,7 +743,7 @@ void RemoveAllPanesAndPaneDividers();
 
 ## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>ウィンドウコンテナー マネージャー::非有効なペインの削除
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
@@ -818,7 +818,7 @@ virtual void ResizePaneContainers(
 
 ## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a>をシリアル化します。
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -830,7 +830,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a>ペインコンテナマネージャー::デフォルトペインディバイダーフォーペイン
 
-```
+```cpp
 void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ```
 
@@ -842,7 +842,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 
 ## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a>マネージャー::セットペインコンテナRTC
 
-```
+```cpp
 void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ```
 

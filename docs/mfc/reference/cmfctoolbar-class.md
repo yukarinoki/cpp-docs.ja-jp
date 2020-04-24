@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375074"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754039"
 ---
 # <a name="cmfctoolbar-class"></a>クラス
 
@@ -652,7 +652,7 @@ virtual void AdjustLayout();
 
 ツール バーのサイズを再計算します。
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ static void CMFCToolBar::CleanUpImages();
 
 ロックされたツール バー イメージに割り当てられたシステム リソースを解放します。
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ virtual void DrawSeparator(
 
 ツール バーに表示される [カスタマイズ] ボタンを有効または無効にします。
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 ツール バー ボタンの大きいアイコンを有効または無効にします。
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 コマンド リフレクションを有効または無効にします。
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 ツール バー ボタン イメージの下のテキスト ラベルを有効または無効にします。
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 
 指定したインデックス位置にあるボタンのコマンド ID、スタイル、およびイメージ インデックスを返します。
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 
 ツール バー ボタンのコマンド ID、スタイル、およびイメージ ID を設定します。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 
 ツール バーの使用できないボタンを淡色表示にするか、ボタンを使用できないイメージを使用するかを指定します。
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 
 ツール バーの高さを設定します。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ツール バー ボタンをホット トラッキングするかどうかを指定します。
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>テキストを設定します。
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 
 ツール バー上のロックされたボタンとロックされたイメージのサイズを設定します。
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ void SetLockedSizes(
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>コントロール バー::セットマスクモード
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 ツールバーとその兄弟を同じ行に配置します。
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ void SetOneRowWithSibling();
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCツールバー::セットオリッグボタン
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 ユーザーがツール バーを閉じることができるかどうかを指定します。
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ void SetPermament(BOOL bPermament=TRUE);
 
 親フレームまたはオーナーがツールバーにコマンドを送信するかどうかを指定します。
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ static void SetShowTooltips(BOOL bValue);
 
 ツール バーの兄弟を指定します。
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ static void __stdcall SetSizes(
 
 ツール バーのボタンのプロパティを指定します。
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ void SetToolBarBtnText(
 
 ツールバーとその兄弟を別々の行に配置します。
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 指定したボタンの状態を更新します。
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

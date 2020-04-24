@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375683"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753374"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
@@ -348,7 +348,7 @@ virtual BOOL CreateControlSite(
 
 メンバー変数と HTML ページ上の ActiveX コントロールのプロパティ値との間でデータを交換します。
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ ActiveX コントロールの HTML ソース内のオブジェクト タグの I
 *を使用します。*<br/>
 プロパティの名前。
 
-*Var*<br/>
+*var*<br/>
 ActiveX コントロール プロパティと交換される値を保持するバリアント型[、COleVariant](../../mfc/reference/colevariant-class.md)型、または[CComVariant](../../atl/reference/ccomvariant-class.md)型のデータ メンバー。
 
 ### <a name="example"></a>例
@@ -387,7 +387,7 @@ ActiveX コントロール プロパティと交換される値を保持する�
 
 メンバー変数と HTML ページのチェック ボックスの間でデータを交換します。
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ HTML コントロールの ID パラメーターに指定した値。
 
 メンバー変数と HTML ページ上の HTML 要素プロパティとの間でデータを交換します。
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ HTML コントロールの ID パラメーターに指定した値。
 
 メンバー変数と HTML ページのラジオ ボタンの間でデータを交換します。
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ HTML コントロールの ID パラメーターに指定した値。
 
 HTML ページ上のリスト ボックスのインデックスを取得または設定します。
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ HTML コントロールの`id`パラメーターに指定した値。
 
 HTML ページのリスト ボックス エントリの表示テキストを現在のインデックスに基づいて取得または設定します。
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ HTML コントロールの ID パラメーターに指定した値。
 
 HTML ページのリスト ボックス エントリの値を取得または設定します ( 現在のインデックスに基づく ) 。
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ HTML コントロールの ID パラメーターに指定した値。
 
 モードレス ダイアログ ボックスをオブジェクトから`CDHtmlDialog`切り離し、オブジェクトを破棄します。
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ ActiveX コントロールの`IDispatch`ポインター。
 
 現在のドキュメントに関連付けられている統一リソース ロケーター (URL) を取得します。
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 *lpszURL*で指定された URL で識別されるリソースに移動します。
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ E_NOTIMPL を返します。
 
 ActiveX コントロールのプロパティを新しい値に設定します。
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ ActiveX コントロールの`IDispatch`インターフェイスへのポイン�
 
 HTML`innerHTML`要素のプロパティを設定します。
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ HTML`IUnknown`要素のポインター。
 
 HTML 要素のプロパティを設定します。
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ HTML 要素の ID。
 
 HTML`innerText`要素のプロパティを設定します。
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ HTML`IUnknown`要素のポインター。
 
 ホストのインターフェイスを`IDispatch`設定します。
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 ホスト UI フラグを設定します。
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

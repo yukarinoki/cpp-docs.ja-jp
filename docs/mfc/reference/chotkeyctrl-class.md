@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366878"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750803"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 ホット キー コントロールのスタイルを指定します。 コントロール スタイルの任意の組み合わせを適用します。 詳細については、Windows SDK[の「コモン コントロール スタイル](/windows/win32/Controls/common-control-styles)」を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -254,7 +254,7 @@ static CString GetKeyName(
 
 ホット キー コントロールのキーボード ショートカットを設定します。
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ void SetHotKey(
 
 ホット キー コントロールの無効な組み合わせと既定の修飾子の組み合わせを定義します。
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372341"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754965"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl クラス
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 IP アドレスコントロールの内容をクリアします。
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールは子ウィンドウである必要があるため、WS_CHILDスタイルを含める必要があります。 ウィンドウ スタイルの一覧については、Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
 
 *Rect*<br/>
-IP アドレス コントロールのサイズと位置への参照。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+IP アドレス コントロールのサイズと位置への参照。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 IP アドレス コントロールの親ウィンドウへのポインター。 NULL にすることはできません。
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールは子ウィンドウである必要があるため、WS_CHILDスタイルを含める必要があります。 ウィンドウ スタイルの一覧については、Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -248,7 +248,7 @@ IP アドレス制御フィールドがすべて空の場合は 0 以外。そ�
 
 IP アドレスコントロールの 4 つのフィールドすべてにアドレス値を設定します。
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ void SetAddress(DWORD dwAddress);
 
 IP アドレス コントロールの指定されたフィールドにキーボード フォーカスを設定します。
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ void SetFieldFocus(WORD nField);
 
 IP アドレスコントロールの指定されたフィールドの範囲を設定します。
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,

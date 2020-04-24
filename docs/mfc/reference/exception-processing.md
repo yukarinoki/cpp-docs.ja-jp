@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365715"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751616"
 ---
 # <a name="exception-processing"></a>例外処理
 
@@ -45,7 +45,7 @@ Microsoft Foundation クラス ライブラリに含まれるいくつかのマ�
 |[AND_CATCH_ALL](#and_catch_all)|前の**TRY**ブロックでスローされたその他すべての追加の例外の種類をキャッチするコードのブロックを指定します。|
 |[END_CATCH](#end_catch)|最後の**CATCH**またはAND_CATCHコード ブロック**を**終了します。|
 |[END_CATCH_ALL](#end_catch_all)|最後の**CATCH_ALL**コード ブロックを終了します。|
-|[スロー](#throw)|指定した例外をスローします。|
+|[THROW](#throw)|指定した例外をスローします。|
 |[THROW_LAST](#throw_last)|現在処理されている例外を次の外部ハンドラーにスローします。|
 
 ### <a name="exception-throwing-functions"></a>例外スロー関数
@@ -307,7 +307,7 @@ THROW_LAST()
 
 アーカイブ例外をスローします。
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ファイル例外をスローします。
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ void AfxThrowFileException(
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ void AfxThrowInvalidArgException( );
 
 メモリ例外をスローします。
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ void AfxThrowMemoryException();
 
 サポートされていない機能の要求の結果である例外をスローします。
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 リソース例外をスローします。
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ void  AfxThrowResourceException();
 
 エンド ユーザー操作を停止する例外をスローします。
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ void AfxThrowUserException();
 
 この関数を使用して、OLE オートメーション関数内で例外をスローします。
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 型`COleException`のオブジェクトを作成し、例外をスローします。
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 独自のコードから[型 CDaoException](../../mfc/reference/cdaoexception-class.md)の例外をスローします。
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ MFC DAO クラスに関連する例外については、このマニュアルの
 
 独自のコードから型`CDBException`の例外をスローします。
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ ODBC で定義された RETCODE 値の詳細については、Windows SDK の「
 
 MFC によって提供される既定の終了関数。
 
-```
+```cpp
 void  AfxAbort();
 ```
 

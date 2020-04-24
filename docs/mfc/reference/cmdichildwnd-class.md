@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370080"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754580"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 
@@ -207,7 +207,7 @@ MDI 親フレーム ウィンドウへのポインター。
 
 MDI フレーム ウィンドウとは独立して MDI 子ウィンドウをアクティブにします。
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ void MDIActivate();
 
 MDI 子ウィンドウを破棄するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ void MDIDestroy();
 
 MDI 子ウィンドウを最大化するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ void MDIMaximize();
 
 MDI 子ウィンドウを最大化または最小化されたサイズから復元します。
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 メニューリソースとアクセラレータリソースのハンドルを設定します。
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

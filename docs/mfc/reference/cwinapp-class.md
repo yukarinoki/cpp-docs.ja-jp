@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366829"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750671"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -377,7 +377,7 @@ Microsoft Foundation クラスを使用する各アプリケーションには�
 
 アプリケーションが管理する使用可能なドキュメント テンプレートの一覧にドキュメント テンプレートを追加します。
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 このメンバー関数を呼び出して、開いているすべてのドキュメントを閉じてから終了します。
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ D2D サポートが有効になっている場合は TRUE を返します。
 
 アプリケーションのヘルプに HTMLHelp を`CWinApp`使用するには、派生クラスのコンストラクター内からこのメンバー関数を呼び出します。
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 通常は、この関数を`InitInstance`呼び出して、アプリケーションのユーザーが Windows ファイル マネージャー内でファイルをダブルクリックしたときにデータ ファイルを開くようにします。
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ HKEY GetSectionKey(
 
 開いているドキュメントを閉じる前にアプリケーションを非表示にします。
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 [InitInstance](#initinstance)メンバー関数内からこのメンバー関数を呼び出して、最近使用した (MRU) ファイルと最後のプレビュー状態の一覧を有効にして読み込みます。
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ virtual CDocument* OpenDocumentFile(
 
 コマンド ラインを解析し、パラメーターを一度に 1 つずつ[CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)に送信するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 フック コードを指定します。 このメンバー関数は、コードを使用して *、lpMsg*の処理方法を決定します。
 
 *をクリックします。*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Register();
 
 このメンバー関数を呼び出して、アプリケーションのすべてのドキュメントの種類を Windows ファイル マネージャーに登録します。
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ virtual BOOL SaveAllModified();
 
 特定のプリンタを選択し、印刷ダイアログボックスで以前に選択したプリンタを解放します。
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ void SelectPrinter(
 
 アプリケーションのヘルプの種類を設定します。
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 アプリケーション設定を INI ファイルではなくレジストリに格納します。
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ virtual BOOL Unregister();
 
 Windows ファイル マネージャーでアプリケーションのすべてのドキュメントの種類の登録を解除するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ BOOL WriteProfileString(
 
 アプリケーションのアプリケーション ユーザー モデル ID を明示的に設定します。 このメソッドは、ユーザー インターフェイスがユーザーに提示される前に呼び出す必要があります (最適な場所はアプリケーション コンストラクターです)。
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

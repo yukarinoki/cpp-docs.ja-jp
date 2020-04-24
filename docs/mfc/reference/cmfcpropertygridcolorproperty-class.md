@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375326"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751831"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>プロパティプロパティ
 
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 色選択ダイアログ ボックスの*自動*ボタンを有効にします。 (標準の自動ボタンには**自動**と表示されます。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 色選択ダイアログ ボックスの*他*のボタンを有効にします。 (標準の他のボタンには、**その他の色**のラベルが付いています。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ RGB カラー値。
 
 プロパティの新しい色を設定します。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 現在のカラー プロパティ グリッド内の列の数を指定します。
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 

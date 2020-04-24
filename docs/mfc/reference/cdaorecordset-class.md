@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377153"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754684"
 ---
 # <a name="cdaorecordset-class"></a>クラス
 
@@ -626,7 +626,7 @@ virtual void Edit();
 
 レコードセットから指定した数のレコードをキャッシュします。
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1077,7 +1077,7 @@ short GetEditMode();
 
 ### <a name="remarks"></a>解説
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |`dbEditNone`|編集操作は実行中ではありません。|
 |`dbEditInProgress`|`Edit` が呼び出されました。|
@@ -1105,7 +1105,7 @@ short GetFieldCount();
 
 レコードセットのフィールドに関する情報を取得します。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ short GetIndexCount();
 
 このメンバー関数を呼び出して、基になるレコードセットのベース テーブルに定義されているインデックスに関するさまざまな種類の情報を取得します。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ virtual void Move(long lRows);
 
 レコードセット内の最初のレコード (存在する場合) をカレント レコードにする場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ SQL クエリ`MoveLast`またはクエリ定義に基づいてレコードセッ
 
 レコードセットの最後のレコード (存在する場合) をカレント レコードにする場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ SQL クエリ`MoveLast`またはクエリ定義に基づいてレコードセッ
 
 レコードセットの次のレコードをカレント レコードにする場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ void MoveNext();
 
 レコードセットの前のレコードをカレント レコードにする場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ UNICODE レコードセットを作成しない場合、オブジェクトは`CO
 
 レコードセット オブジェクトの現在のレコードの相対レコード番号を設定します。
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ void SetAbsolutePosition(long lPosition);
 
 指定したブックマークを含むレコードにレコードセットを配置します。
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ UNICODE レコードセットを作成しない場合、オブジェクトは`CO
 
 キャッシュするレコードの数を設定します。
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ void SetCacheSize(long lSize);
 
 キャッシュするレコードセットの最初のレコードのブックマークを指定します。
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ UNICODE レコードセットを作成しない場合、オブジェクトは`CO
 
 テーブル タイプのレコードセットにインデックスを設定します。
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 レコードセットのフィールド データ メンバーに変更または変更なしとしてフラグを設定します。
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ void SetFieldDirty(
 
 レコードセットのフィールド データ メンバーに、Null (特に値がない) または Null 以外のフィールド データ メンバーにフラグを設定します。
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ UNICODE レコードセットを作成しない場合は、`SetFieldValue``COleV
 
 フィールドを Null 値に設定します。
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ C++ NULL は NULL と同じではありません。
 
 レコードセットのロックの種類を設定します。
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 クエリ定義の Parameters コレクション内のパラメーターの数値位置。
 
-*Var*<br/>
+*var*<br/>
 設定する値。「解説」を参照してください。
 
 *名前を指定します。*<br/>
@@ -2458,7 +2458,7 @@ virtual void SetParamValue(
 
 パラメーターを Null 値に設定するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL は NULL と同じではありません。
 
 レコードセット内のレコードの割合に基づいて、レコードセット オブジェクト内の現在のレコードのおおよその位置を変更する値を設定します。
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

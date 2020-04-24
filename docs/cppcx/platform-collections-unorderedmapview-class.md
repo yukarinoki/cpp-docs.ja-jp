@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354393"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031486"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>解説
 
-順序付けられていないマップ ビューは[、Windows::Foundation::コレクション::IMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)の具体的な実装であり、アプリケーション バイナリ インターフェイス (ABI) を介して渡されます。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+順序付けられていないマップ ビューは[、Windows::Foundation::コレクション::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2)の具体的な実装であり、アプリケーション バイナリ インターフェイス (ABI) を介して渡されます。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>順序付けされていないマップビュー::最初のメソッド
 
-順序付けられていないマップ内の最初の[Windows::Foundation::コレクション::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)要素を指定する反復子を返します。
+順序付けられていないマップ内の最初の[Windows::Foundation::コレクション::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を指定する反復子を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -129,7 +129,7 @@ UnorderedMapView の要素の検索に使用するキー。 の型`key`は型名
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>順序指定されていないマップビュー::サイズのメソッド
 
-順序指定されていないマップビューの[要素を>する要素\<](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)を返します。
+順序指定されていないマップビューの[要素を>する要素\<](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -242,4 +242,4 @@ UnorderedMapView を初期化するために使用される要素の範囲の後
 ## <a name="see-also"></a>関連項目
 
 [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

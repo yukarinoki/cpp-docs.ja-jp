@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368888"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753547"
 ---
 # <a name="cmfcribbonpanel-class"></a>クラス
 
@@ -432,7 +432,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 リボン パネルに含まれるすべてのリボン要素を取得します。
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 指定したコマンド ID を持つリボン要素を指定した配列に追加します。
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 リボン パネル内のすべてのリボン要素のコマンド ID を取得します。
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ BOOL bDelete = TRUE);
 
 リボン パネルからすべてのリボン要素を削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ CMFCRibbonBaseElement* pElem);
 
 表示四角形内のリボン要素の垂直方向の位置の中心を有効または無効にします。
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 ユーザー定義データをリボン パネルに関連付けます。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 同じ列のリボン要素の幅の調整を有効または無効にします。
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 
 リボン パネルの既定のボタンのキーヒントを設定します。
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 指定したリボン要素にフォーカスを設定します。
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 
 ギャラリーをスクロールして、指定したリボン要素を表示します。
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ BOOL IsWindows7Look() const;
 
 可視要素の配列を取得します。
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365932"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751719"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1576,7 +1576,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 
 タイプ ライブラリでマークされている、呼び出し元オブジェクトの既定の単純バインド プロパティ (エディット コントロールなど) を、データ ソース コントロールの DataSource、UserName、Password、および SQL プロパティで定義された基になるカーソルにバインドします。
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ void BindDefaultProperty(
 
 データ バインド コントロール (グリッド コントロールなど) のカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ void BindProperty(
 
 `CWnd` を重なったウィンドウのスタックの最上位に移動します。
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 
 ウィンドウをその親ウィンドウの中央に揃えます。
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 ボタンを選択 (チェック マークを横に表示) またはクリア (チェック マークを解除) したり、3 ステート ボタンの状態を変更したりします。
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ void CheckDlgButton(
 
 グループ内の特定のラジオ ボタンを選択 (チェック マークを追加) し、そのグループ内の他のすべてのラジオ ボタンを選択解除します (チェック マークを削除します)。
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1818,7 +1818,7 @@ CWnd* ChildWindowFromPoint(
 *Nflags*<br/>
 スキップする子ウィンドウを指定します。 このパラメーターは、次の値の組み合わせにすることができます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |CWP_ALL|子ウィンドウをスキップしない|
 |CWP_SKIPINVISIBLE|非表示の子ウィンドウをスキップする|
@@ -1843,7 +1843,7 @@ CWnd* ChildWindowFromPoint(
 
 ディスプレイ上の指定された点または四角形のクライアント座標を画面座標に変換します。
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ウィンドウを最小化します。
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1966,7 +1966,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 アクティブなアクセシビリティ プロキシによってアクセスされるオブジェクトを識別します。 次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |OBJID_CLIENT|ウィンドウのクライアント領域を参照します。|
 
@@ -1984,7 +1984,7 @@ virtual HRESULT CreateAccessibleProxy(
 
 システム キャレットの新しい図形を作成し、キャレットの所有権を要求します。
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2150,7 +2150,7 @@ virtual BOOL CreateEx(
 *Dwstyle*<br/>
 [ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)のビットごとの組み合わせ (OR) 。それ以外の場合は、既定のウィンドウ スタイルに対して NULL を返します。
 
-*X*<br/>
+*x*<br/>
 画面の左側または親ウィンドウからのウィンドウの初期水平距離。
 
 *Y*<br/>
@@ -2207,7 +2207,7 @@ virtual BOOL CreateEx(
 
 システム キャレットの灰色の四角形を作成し、キャレットの所有権を要求します。
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ void CreateGrayCaret(
 
 システム キャレットの実体矩形を作成し、キャレットの所有権を要求します。
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2316,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 処理する Windows メッセージを指定します。
 
 *wParam*<br/>
@@ -2373,7 +2373,7 @@ virtual BOOL DestroyWindow();
 
 また`DestroyWindow`、メンバー関数は[、CDialog::Create](../../mfc/reference/cdialog-class.md#create)によって作成されたモードレス ダイアログ ボックスも破棄します。
 
-破棄される`CWnd`ウィンドウが子ウィンドウで[、WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)スタイルが設定されていない場合[、WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)メッセージが親ウィンドウに送信されます。
+破棄される`CWnd`ウィンドウが子ウィンドウで[、WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)スタイルが設定されていない場合[、WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)メッセージが親ウィンドウに送信されます。
 
 ### <a name="example"></a>例
 
@@ -2626,7 +2626,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 アプリケーションの`CWnd`[CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)関数でポインターを使用してウィンドウ内からこのメンバー関数を呼び出して、ウィンドウが Windows ファイル マネージャーまたはファイル エクスプローラーからドロップされたファイルを受け入れることを示します。
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 アニメーションの種類を指定します。 IDANI_CAPTION指定すると、ウィンドウキャプションは *、lprcFrom*で指定された位置から*lprcTo*で指定された位置までアニメーション化されます。 ウィンドウを最小化または最大化する効果は、同じです。
 
 *をクリックします。*<br/>
-アイコンまたは最小化されたウィンドウの位置とサイズを指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+アイコンまたは最小化されたウィンドウの位置とサイズを指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 *lprcTo*<br/>
-復元されたウィンドウの位置とサイズを指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター
+復元されたウィンドウの位置とサイズを指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター
 
 ### <a name="return-value"></a>戻り値
 
@@ -2728,7 +2728,7 @@ BOOL DrawCaption(
 
 メニュー バーを再描画します。
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ void DrawMenuBar();
 
 ユーザー定義のアクティブ なアクセシビリティ関数を有効にします。
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ MFC の既定のアクティブ ユーザー補助機能のサポートは、Act
 
 動的レイアウト マネージャーを有効または無効にします。 動的レイアウトが有効な場合は、ユーザーがウィンドウのサイズを変更したときに、子ウィンドウの位置とサイズを動的に調整できます。
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ウィンドウの D2D のサポートを有効または無効にします。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ BOOL EnableScrollBar(
 
 このウィンドウのスクロール バーを有効または無効にします。
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 指定されたウィンドウでの描画の終了をマークします。
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 ツール ヒント メッセージを表示するために、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ int GetCheckedRadioButton(
 
 クライアント領域のクライアント座標を`CWnd` *lpRect*が指す構造体にコピーします。
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -4460,7 +4460,7 @@ CWnd* GetParentOwner() const;
 
 *dwDispID*で指定された ActiveX コントロール プロパティを取得します。
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ int GetScrollPos(int nBar) const;
 
 指定されたスクロール バーの現在の最小および最大スクロール バーの位置を *、lpMinPos*および*lpMaxPos*で指定された位置にコピーします。
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 オブジェクトの外接する四角形の寸法を`CWnd`*、lpRect*が指す構造体にコピーします。
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ int GetWindowTextLength() const;
 
 ディスプレイ画面からキャレットを削除して非表示にします。
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ virtual void HtmlHelp(
 
 ウィンドウの動的レイアウトを初期化するために、フレームワークによって呼び出されます。
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ void InitDynamicLayout();
 
 のクライアント領域全体を無効に`CWnd`します。
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ void Invalidate(BOOL bErase = TRUE);
 
 指定された四角形を更新領域に追加することで、指定した四角形内`CWnd`のクライアント領域を無効にします。
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ void InvalidateRect(
 
 の現在の更新領域に追加することにより、指定した領域内のクライアント領域を無効に`CWnd`します。
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ void InvalidateRgn(
 
 このメンバー関数を呼び出して *、wFlags*で指定されたコンテキストで*dwDispID*で指定された ActiveX コントロール メソッドまたはプロパティを呼び出します。
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ HWND m_hWnd;
 
 複数の点を `CWnd` の座標空間から他のウィンドウの座標空間へ変換 (マップ) します。
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ BOOL ModifyStyleEx(
 
 位置と寸法を変更します。
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5805,7 +5805,7 @@ void MoveWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 の左側の新しい位置を指定します`CWnd`。
 
 *Y*<br/>
@@ -5837,7 +5837,7 @@ void MoveWindow(
 
 定義済みイベントが発生したことをシステムに通知します。 いずれかのクライアント アプリケーションがイベントのフック関数を登録している場合、システムはクライアントのフック関数を呼び出します。
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -6121,7 +6121,7 @@ afx_msg void OnChar(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードが含まれます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0-15|繰り返し回数を指定します。 値は、ユーザーがキーを押し続けながらキーストロークを繰り返した回数です。|
 |16-23|スキャン コードを指定します。 この値は、相手先ブランド供給 (OEM) の製造元によって異なります。|
@@ -6195,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 親ウィンドウに送信される Windows メッセージ番号。
 
 *wParam*<br/>
@@ -6338,7 +6338,7 @@ WM_COMPAREITEM メッセージを送信したコントロールの識別子。
 
 2 つの項目の相対位置を示します。 次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |-1|項目 1 は、項目 2 の前に並べ替えます。|
 |0|項目 1 と項目 2 は同じ並べ替えです。|
@@ -6536,7 +6536,7 @@ afx_msg void OnDeadChar(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |0-7|コードをスキャンします (OEM 依存値)。 上位ワードの低バイト。|
 |8|ファンクション キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1、それ以外の場合は 0)。|
@@ -7380,7 +7380,7 @@ afx_msg void OnKeyDown(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |0-7|コードをスキャンします (OEM 依存値)。|
 |8|ファンクション・キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1)。|
@@ -7425,7 +7425,7 @@ afx_msg void OnKeyUp(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |0-7|コードをスキャンします (OEM 依存値)。 上位ワードの低バイト。|
 |8|ファンクション キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1、それ以外の場合は 0)。|
@@ -7751,7 +7751,7 @@ afx_msg LRESULT OnMenuChar(
 
 戻り値の上位ワードには、次のいずれかのコマンド コードが含まれている必要があります。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |0|ユーザーが押した文字を破棄し、システム スピーカーに短いビープ音を作成するように Windows に指示します。|
 |1|現在のメニューを閉じるように Windows に指示します。|
@@ -7915,7 +7915,7 @@ afx_msg int OnMouseActivate(
 *ヒットテスト*<br/>
 ヒット[テストの市](#onnchittest)外局番を指定します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*メッセージ*<br/>
+*message*<br/>
 マウス メッセージ番号を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -8116,7 +8116,7 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 クライアント領域の左上隅の新しい x 座標位置を指定します。 この新しい場所は、重なり合ったウィンドウとポップアップ ウィンドウの画面座標、および子ウィンドウの親クライアント座標で指定されます。
 
 *Y*<br/>
@@ -8579,7 +8579,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 カーソルがウィンドウの非クライアント領域にあるときに、ユーザーが XBUTTON1 または XBUTTON2 をダブルクリックすると、フレームワークはこのメンバー関数を呼び出します。
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -8849,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 親に通知されるイベントと子ウィンドウの識別子を指定します。 イベントは、*メッセージ*の下位ワードです。 イベントがWM_CREATEまたはWM_DESTROYの場合、*メッセージ*の上位ワードは子ウィンドウの識別子です。それ以外の場合、上位ワードは未定義です。 イベント (*メッセージ*の下位ワード ) には、次のいずれかの値を指定できます。
 
 - WM_CREATE 子ウィンドウが作成されています。
@@ -9219,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 *ヒットテスト*<br/>
 ヒット[テストの市](#onnchittest)外局番を指定します。 ヒット テストは、カーソルの位置を決定します。
 
-*メッセージ*<br/>
+*message*<br/>
 マウス メッセージ番号を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -9518,7 +9518,7 @@ afx_msg void OnSysChar(
 *Nflags*<br/>
 *nFlags*パラメーターには、次の値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0-15|繰り返し回数を指定します。 この値は、ユーザーがキーを押し続けながらキーストロークを繰り返した回数です。|
 |16-23|スキャン コードを指定します。 この値は、相手先ブランド供給 (OEM) の製造元によって異なります。|
@@ -9642,7 +9642,7 @@ afx_msg void OnSysDeadChar(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0-7|コードをスキャンします (OEM 依存値)。 上位ワードの低バイト。|
 |8|ファンクション キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1、それ以外の場合は 0)。|
@@ -9681,7 +9681,7 @@ afx_msg void OnSysKeyDown(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0-7|コードをスキャンします (OEM 依存値)。 上位ワードの低バイト。|
 |8|ファンクション キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1、それ以外の場合は 0)。|
@@ -9728,7 +9728,7 @@ afx_msg void OnSysKeyUp(
 *Nflags*<br/>
 次の一覧に示すように、スキャン コード、キー遷移コード、以前のキー状態、およびコンテキスト コードを指定します。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0-7|コードをスキャンします (OEM 依存値)。 上位ワードの低バイト。|
 |8|ファンクション キーやテンキーのキーなどの拡張キー (拡張キーの場合は 1、それ以外の場合は 0)。|
@@ -10267,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>
@@ -10497,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 投稿するメッセージを指定します。
 
 *wParam*<br/>
@@ -10542,7 +10542,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>パラメーター
 
-*cs*<br/>
+*Cs*<br/>
 [構造体を作成します](/windows/win32/api/winuser/ns-winuser-createstructw)。
 
 ### <a name="return-value"></a>戻り値
@@ -10601,7 +10601,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 プリンターのデバイス コンテキストで最も一般的な、指定したデバイス コンテキストで現在のウィンドウを描画します。
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ void Print(
 
 指定したデバイス コンテキスト (通常はプリンターのデバイス コンテキスト) 内の任意のウィンドウを描画します。
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10773,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 反映するメッセージを指定します。
 
 *wParam*<br/>
@@ -10852,7 +10852,7 @@ int ReleaseDC(CDC* pDC);
 
 ウィンドウのクライアント領域でコントロール バーの位置を変更したり、サイズを変更したりするために呼び出されます。
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 ディスプレイ上の指定された点または四角形の画面座標をクライアント座標に変換します。
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 現在`CWnd`のオブジェクトのクライアント領域の内容をスクロールします。
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11082,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 メッセージを受信するダイアログ コントロールの識別子を指定します。
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>
@@ -11118,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>
@@ -11143,7 +11143,7 @@ LRESULT SendMessage(
 
 指定した Windows メッセージをすべての子孫ウィンドウに送信します。
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11154,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>
@@ -11192,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 送信するメッセージを指定します。
 
 *wParam*<br/>
@@ -11313,7 +11313,7 @@ int SetDlgCtrlID(int nID);
 
 ダイアログ ボックス内の特定のコントロールのテキストを、指定した整数値の文字列形式に設定します。
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ void SetDlgItemInt(
 
 ウィンドウまたはダイアログ ボックスが所有するコントロールのキャプションまたはテキストを設定します。
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ CWnd* SetFocus();
 
 指定したフォントを使用するように、WM_SETFONT メッセージをウィンドウに送信します。
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ BOOL SetMenu(CMenu* pMenu);
 
 現在のウィンドウのオーナーを、指定したウィンドウ オブジェクトに設定します。
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 *dwDispID*で指定された OLE コントロール プロパティを設定します。
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ OLE コントロール コンテナでこのメンバー関数を使用する方
 
 変更を再`SetRedraw`描画したり、変更が再描画されないようにするためのアプリケーション呼び出し。
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ int SetScrollPos(
 
 指定されたスクロール バーの最小位置と最大位置の値を設定します。
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ UINT_PTR SetTimer(
 
 *lpfnTimer*コールバック関数は名前を付`TimerProc`ける必要はありませんが、静的として宣言し、次のように定義する必要があります。
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11840,7 +11840,7 @@ BOOL SetWindowPos(
 
 このパラメーターの使用方法に関する規則については、このトピックの「解説」を参照してください。
 
-*X*<br/>
+*x*<br/>
 ウィンドウの左側の新しい位置を指定します。
 
 *Y*<br/>
@@ -11949,7 +11949,7 @@ TRUE の場合、オペレーティング システムは、領域を設定し�
 
 ウィンドウのタイトルを指定したテキストに設定します。
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 キャレットの現在の位置で、画面上にキャレットを表示します。
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ void ShowCaret();
 
 このウィンドウが所有するすべてのポップアップ ウィンドウの表示と非表示を切り替えます。
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 スクロール バーの表示と非表示を切り替えます。
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 でロックされたウィンドウのロックを解除します`CWnd::LockWindowUpdate`。
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)コールバック機構を使用するダイアログ ボックスまたはウィンドウ内のダイアログ ボタンやその他のコントロールの状態を更新するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ BOOL UpdateLayeredWindow(
 
 更新領域が空でない場合は[、WM_PAINT](/windows/win32/gdi/wm-paint)メッセージを送信して、クライアント領域を更新します。
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ void UpdateWindow();
 
 ウィンドウの更新領域から四角形を削除して、指定された四角形内のクライアント領域を検証します。
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ Windows は、現在の更新領域が検証されるまで、WM_PAINT メッセ
 
 ウィンドウの現在の更新領域から領域を削除することによって、指定した領域内のクライアント領域を検証します。
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 
@@ -12359,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 処理する Windows メッセージを指定します。
 
 *wParam*<br/>

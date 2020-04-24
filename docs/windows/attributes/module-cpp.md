@@ -1,17 +1,17 @@
 ---
-title: module (C++ COM 属性)
+title: モジュール (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9d4f9e23aaf182e28930ba3a4462b07533ba9015
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754384"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -26,54 +26,54 @@ ms.locfileid: "80166693"
 ### <a name="parameters"></a>パラメーター
 
 *type*<br/>
-Optional次のいずれかを指定できます。
+(オプション)次のいずれかを指定できます。
 
-- `dll` は、結果の DLL がインプロセス COM サーバーとして機能することを許可する関数およびクラスを追加します。 これが既定値です。
+- `dll`結果として生成される DLL をインプロセス COM サーバーとして機能させる関数とクラスを追加します。 これが既定値です。
 
-- `exe` は、生成された実行可能ファイルがアウトプロセス COM サーバーとして機能することを許可する関数およびクラスを追加します。
+- `exe`結果として生成される実行可能ファイルをプロセス外の COM サーバーとして機能させる関数とクラスを追加します。
 
-- `service` は、結果の実行可能ファイルが NT サービスとして機能することを許可する関数およびクラスを追加します。
+- `service`結果として生成される実行可能ファイルを NT サービスとして機能させる関数とクラスを追加します。
 
-- `unspecified`、モジュール属性に関連する ATL コードの挿入 (ATL モジュールクラス、グローバルインスタンス _AtlModule とエントリポイント関数の挿入) を無効にします。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
+- `unspecified`モジュール属性に関連する ATL コードの挿入を無効にします: ATL モジュール クラス、グローバル インスタンス_AtlModule、およびエントリ ポイント関数の挿入。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
 
 *name*<br/>
-Optionalライブラリブロックの名前。
+(オプション)ライブラリ ブロックの名前。
 
 *version*<br/>
-Optionalライブラリブロックに割り当てるバージョン番号です。 既定値は 1.0 です。
+(オプション)ライブラリ ブロックに割り当てるバージョン番号。 既定値は 1.0 です。
 
-*uuid*<br/>
-ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 ライブラリブロックの*uuid*を取得する必要がある場合があります。これは、識別子 **__uuidof (** *libraryname* **)** を使用して行うことができます。
+*Uuid*<br/>
+ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 識別子 *__uuidof(* libraryname **)** *を使用して、ライブラリ ブロックの* **uuid**を取得する必要がある場合があります。
 
-*lcid*<br/>
+*Lcid*<br/>
 ローカリゼーション パラメーターです。 詳細については、「 [lcid](/windows/win32/Midl/lcid) 」を参照してください。
 
-*control*<br/>
-Optionalライブラリ内のすべてのコクラスがコントロールであることを指定します。
+*コントロール*<br/>
+(オプション)ライブラリ内のすべてのコクラスがコントロールであることを指定します。
 
 *helpstring*<br/>
 タイプ ライブラリを指定します。
 
-*helpstringdll*<br/>
-Optionalドキュメント文字列検索を実行するために使用する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/win32/Midl/helpstringdll) 」を参照してください。
+*typelib*<br/>
+(オプション)ドキュメント文字列検索の実行に使用する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/win32/Midl/helpstringdll) 」を参照してください。
 
-*helpfile*<br/>
-Optionalタイプライブラリの**ヘルプ**ファイルの名前。
+*Helpfile*<br/>
+(オプション)タイプ ライブラリの**ヘルプ**ファイルの名前。
 
 *helpcontext*<br/>
-Optionalこのタイプライブラリの**ヘルプ ID**です。
+(オプション)このタイプ ライブラリの**ヘルプ ID。**
 
 *helpstringcontext*<br/>
-Optional詳細については、「 [helpstringcontext](helpstringcontext.md) 」を参照してください。
+(オプション)詳細については、[ヘルプ文字列コンテキスト](helpstringcontext.md)を参照してください。
 
-*hidden*<br/>
-Optionalライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
+*隠さ れた*<br/>
+(オプション)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
-*restricted*<br/>
-Optionalライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
+*制限*<br/>
+(オプション)ライブラリのメンバーは任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
-*custom*<br/>
-Optional1つまたは複数の属性。これは、[カスタム](custom-cpp.md)属性に似ています。 *カスタム*の最初のパラメーターは、属性の GUID です。 次に例を示します。
+*カスタム*<br/>
+(オプション)1 つ以上の属性。これは[カスタム](custom-cpp.md)属性に似ています。 *カスタム*の最初のパラメーターは、属性の GUID です。 次に例を示します。
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -93,21 +93,21 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 .idl ファイルでは、1 つのライブラリ ブロックが許可されています。 ソース コードに複数のモジュールのエントリがある場合、実装されている最新のパラメーター値と結合されます。
 
-この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 上記の動作に加えて、属性は、正しい型と追加のサポートコードのグローバルオブジェクト (`_AtlModule`) も挿入します。 属性がスタンドアロンの場合、正しいモジュールの種類から派生したクラスが挿入されます。 属性がクラスに適用された場合、正しいモジュールの種類の基本クラスが追加されます。 正しい型は、*型*パラメーターの値によって決まります。
+この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 上記の動作に加えて、属性は正しい型のグローバル オブジェクト`_AtlModule`(と呼ばれる) と追加のサポート コードを挿入します。 属性がスタンドアロンの場合、正しいモジュールの種類から派生したクラスが挿入されます。 属性がクラスに適用された場合、正しいモジュールの種類の基本クラスが追加されます。 正しい型は *、type*パラメーターの値によって決まります。
 
-- `type` = **dll**
+- `type` = **Dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/win32/Dlls/dllmain)、 [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\))です。
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/win32/Dlls/dllmain)、 [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)です。
 
 - `type` = **exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)として使用されます。
 
-- `type` = **service**
+- `type` = **サービス**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)として使用されます。
 
-- `type` = **unspecified**
+- `type` = **未指定**
 
    モジュール属性と関連する ATL コードの挿入を無効にします。
 
@@ -152,22 +152,22 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 |||
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**再現**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[型定義、列挙型、和集合、および構造体の属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
 [ライブラリ](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
-[helpfile](helpfile.md)<br/>
+[Helpfile](helpfile.md)<br/>
 [version](version-cpp.md)

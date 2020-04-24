@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370056"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754549"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -242,7 +242,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 
 別の MDI 子ウィンドウをアクティブにします。
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ void MDIActivate(CWnd* pWndActivate);
 
 すべての MDI 子ウィンドウをカスケード形式で整列します。
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ BOOL 戻り値へのポインター。 ウィンドウが最大化されてい�
 
 最小化されたすべてのドキュメントの子ウィンドウを整列します。
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ void MDIIconArrange();
 
 指定した MDI 子ウィンドウを最大化します。
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ void MDIMaximize(CWnd* pWnd);
 
 現在アクティブな子ウィンドウのすぐ後ろの子ウィンドウをアクティブにし、現在アクティブな子ウィンドウを他のすべての子ウィンドウの後ろに配置します。
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ void MDINext();
 
 前の子ウィンドウをアクティブにし、現在アクティブな子ウィンドウをそのすぐ後ろに配置します。
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ void MDIPrev();
 
 MDI 子ウィンドウを最大化または最小化されたサイズから復元します。
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ MDI 子ウィンドウを管理するためにフレームワークを使用す�
 
 すべての子ウィンドウを並べて表示します。
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

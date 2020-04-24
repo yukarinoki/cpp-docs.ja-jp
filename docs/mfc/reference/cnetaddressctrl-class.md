@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363309"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752775"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |パラメーター|説明|
 |---------------|-----------------|
 |*Dwstyle*|[in]コントロールに適用するスタイルのビットごとの組み合わせ。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
-|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。|
 |*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの非 null ポインター。|
 |*nID*|[in]コントロールの ID。|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*ドウェエクススタイル*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ (OR)。 詳細については、関数の*dwExStyle*パラメーターを参照[してください](/windows/win32/api/winuser/nf-winuser-createwindowexw)。|
 |*Dwstyle*|[in]コントロールに適用するスタイルのビットごとの組み合わせ (OR)。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
-|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。|
 |*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの非 null ポインター。|
 |*nID*|[in]コントロールの ID。|
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367510"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752364"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl クラス
 
@@ -129,7 +129,7 @@ hr = チャンク。ファイルタイム値(PKEY_ItemDate、ftLastModified)。
 
 チャンク値をクリアします。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 
 このチャンク値を他の値から初期化します。
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ HRESULT SetBoolValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -367,7 +367,7 @@ HRESULT SetChunk(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -411,7 +411,7 @@ HRESULT SetDwordValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -455,7 +455,7 @@ HRESULT SetFileTimeValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -499,7 +499,7 @@ HRESULT SetInt64Value(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -543,7 +543,7 @@ HRESULT SetIntValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -587,7 +587,7 @@ HRESULT SetLongValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -631,7 +631,7 @@ HRESULT SetSystemTimeValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>
@@ -675,7 +675,7 @@ HRESULT SetTextValue(
 *チャンクタイプ*<br/>
 フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
 
 *cwcLen ソース*<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369732"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755140"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint クラス
 
@@ -102,7 +102,7 @@ CAnimationPoint クラスは、2 つの CAnimationVariable オブジェクトを
 
 X 座標と Y 座標の遷移を追加します。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ CPoint としての C アニメーションポイントの現在の値。
 
 c アニメーションポイントに ptSrc を割り当てます。
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ c アニメーションポイントに ptSrc を割り当てます。 アニメ�
 
 既定値を設定します。
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 

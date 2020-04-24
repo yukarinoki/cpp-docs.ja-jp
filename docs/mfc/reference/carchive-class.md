@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377065"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753105"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 
@@ -146,7 +146,7 @@ class CArchive
 
 例外をスローせずにアーカイブを閉じます。
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ CArchive(
 
 バッファーに残っているデータをフラッシュし、アーカイブを閉じ、アーカイブをファイルから切断します。
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ void Close();
 
 アーカイブ バッファに残っているデータを強制的にファイルに書き込みます。
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ BOOL IsStoring() const;
 
 このメンバー関数を呼び出して、実際にはファイルにシリアル化されていないが、サブオブジェクトが参照できるオブジェクトをマップに配置します。
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ BOOL を返すバージョンでは、成功した場合は TRUE。それ以外�
 
 基本クラスのバージョン情報を格納および読み込む場合に、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 
 アーカイブ`SetLoadParams`から多数の`CObject`派生オブジェクトを読み取るときに呼び出します。
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 
 アーカイブ オブジェクトに格納されているオブジェクト スキーマを*nSchema*に設定します。
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ void SetObjectSchema(UINT nSchema);
 
 多数`SetStoreParams`の`CObject`派生オブジェクトをアーカイブに格納する場合に使用します。
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 
 指定したバイト数をアーカイブに書き込みます。
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ void Write(const void* lpBuf, INT nMax);
 
 派生`WriteClass`クラスのシリアル化中に基本クラスのバージョン情報とクラス情報を格納するために使用します。
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 指定した`CObject`アーカイブを格納します。
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ void WriteObject(const CObject* pOb);
 
 このメンバー関数を使用して、バッファーからオブジェクトに関連付けられたファイルに`CArchive`データを書き込みます。
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

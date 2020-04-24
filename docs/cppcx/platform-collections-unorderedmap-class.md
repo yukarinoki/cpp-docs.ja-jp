@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354413"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031499"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-**順序なしマップ**は、基本的には、Windows ランタイム型のストレージをサポートする[std::unordered_map](../standard-library/unordered-map-class.md)のラッパーです。 これは、パブリック Windows ランタイム インターフェイス間で渡される[Windows::Foundation::コレクション::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)型と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)型の具体的な実装です。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更します。
+**順序なしマップ**は、基本的には、Windows ランタイム型のストレージをサポートする[std::unordered_map](../standard-library/unordered-map-class.md)のラッパーです。 これは、パブリック Windows ランタイム インターフェイス間で渡される[Windows::Foundation::コレクション::IMap](/uwp/api/windows.foundation.collections.imap-2)型と[IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)型の具体的な実装です。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)に変更します。
 
 詳細については、[コレクション](../cppcx/collections-c-cx.md) を参照してください。
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>順序指定されていないマップ::最初のメソッド
 
-順序付けられていないマップ内の最初の[Windows::Foundation::コレクション::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)要素を指定する反復子を返します。
+順序付けられていないマップ内の最初の[Windows::Foundation::コレクション::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を指定する反復子を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -126,7 +126,7 @@ First() によって返される反復器を保持する便利な方法は **、
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>順序指定されていないマップ::GetView メソッド
 
-現在の UnorderedMap の読み取り専用ビューを返します。つまり、[プラットフォーム::コレクション::順序指定されていないマップビュー クラス](../cppcx/platform-collections-unorderedmapview-class.md)を実装するクラス [Windows::ファウンデーション:コレクション::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) インターフェイス。
+現在の UnorderedMap の読み取り専用ビューを返します。つまり、[プラットフォーム::コレクション::順序指定されていないマップビュー クラス](../cppcx/platform-collections-unorderedmapview-class.md)を実装する[クラス](/uwp/api/windows.foundation.collections.imapview-2)を実装します。
 
 ### <a name="syntax"></a>構文
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-イベントを発生させたオブジェクトと発生した変更の種類に関する情報を含む>。 [\<](/uwp/api/windows.foundation.collections.mapchangedeventhandler) [「iMapChangedEventArgs\<K>」](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)および「[コレクション変更列挙」](/uwp/api/windows.foundation.collections.collectionchange)も参照してください。
+イベントを発生させたオブジェクトと発生した変更の種類に関する情報を含む>。 [\<](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) [「iMapChangedEventArgs\<K>」](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)および「[コレクション変更列挙」](/uwp/api/windows.foundation.collections.collectionchange)も参照してください。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
@@ -241,7 +241,7 @@ virtual void Remove(
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>順序指定されていないマップ::サイズメソッド
 
-順序指定されていないマップの[要素を>する\<](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)要素を返します。
+順序指定されていないマップの[要素を>する\<](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を返します。
 
 ### <a name="syntax"></a>構文
 

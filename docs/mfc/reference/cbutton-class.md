@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 05ad60855cd03115cf88ab2b51e56e6a26822035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74b07dc8144e853714ea73c8235f1259538a0c12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752757"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON、またはBS_3STATEスタイルで作成されたボタン コントロールからの戻り値は、次のいずれかの値です。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態がオフになっています。|
 |BST_CHECKED|ボタンの状態がチェックされます。|
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 最初のオーバーロードでは、現在のコマンド リンク コントロールに関連付けられているノート テキストを含む[CString](../../atl-mfc-shared/using-cstring.md)オブジェクト。
 
-\- または -
+または
 
 2 番目のオーバーロードでは、このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
@@ -664,7 +664,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 ボタンのスタイルを変更します。
 
-```
+```cpp
 void SetButtonStyle(
     UINT nStyle,
     BOOL bRedraw = TRUE);
@@ -690,7 +690,7 @@ void SetButtonStyle(
 
 ラジオ ボタンまたはチェック ボックスのチェック状態を設定またはリセットします。
 
-```
+```cpp
 void SetCheck(int nCheck);
 ```
 
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nチェック*<br/>
 チェック状態を指定します。 このパラメーターには、次のいずれかを指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態をオフに設定します。|
 |BST_CHECKED|ボタンの状態をチェック済みに設定します。|
@@ -1074,7 +1074,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ボタン コントロールを強調表示するかどうかを設定します。
 
-```
+```cpp
 void SetState(BOOL bHighlight);
 ```
 

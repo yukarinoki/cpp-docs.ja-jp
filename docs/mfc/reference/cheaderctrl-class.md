@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366860"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750920"
 ---
 # <a name="cheaderctrl-class"></a>クラス
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 ヘッダー コントロールのスタイルを指定します。 ヘッダー コントロール スタイルの詳細については、Windows SDK の[ヘッダー コントロール スタイル](/windows/win32/Controls/header-control-styles)を参照してください。
 
 *Rect*<br/>
-ヘッダー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+ヘッダー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 ヘッダー コントロールの親ウィンドウを指定します`CDialog`。 NULL にすることはできません。
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 ヘッダー コントロールのスタイル。 ヘッダー コントロール スタイルの詳細については、Windows SDK の[ヘッダー コントロール スタイル](/windows/win32/Controls/header-control-styles)を参照してください。 追加のスタイルのリストについては、「[作成](#create)」を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |パラメーター|説明|
 |---------------|-----------------|
 |*iItem*|[in]スタイルがHDF_SPLITBUTTONされるヘッダー項目の 0 から始まるインデックス。 詳しくは[、HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) `fmt`構造体のメンバーを参照してください。|
-|*Lprect*|[アウト]外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。|
+|*Lprect*|[アウト]外接する四角形の情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 ヘッダー コントロール項目の 0 から始まるインデックス。
 
 *Lprect*<br/>
-外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のアドレスへのポインター。
+外接する四角形の情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Lprect*|[アウト]外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。|
+|*Lprect*|[アウト]外接する四角形の情報を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 

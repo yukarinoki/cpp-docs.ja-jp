@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369234"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754764"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink クラス
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 パス ジオメトリに 1 つの円弧を追加します。
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 現在の点と指定された終点の間に 3 次ベジエ曲線を作成します。
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 3 次ベジエ曲線のシーケンスを作成し、ジオメトリ シンクに追加します。
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ void AddBeziers(
 
 現在の点と指定した終点の間に線分セグメントを作成し、ジオメトリ シンクに追加します。
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ void AddLine(CD2DPointF point);
 
 指定した点を使用してライン シーケンスを作成し、ジオメトリ シンクに追加します。
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ void AddLines(
 
 現在の点と指定された終点の間に 2 次ベジエ曲線を作成します。
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 2 次ベジェ セグメントのシーケンスを配列として 1 回の呼び出しで追加します。
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ void AddQuadraticBeziers(
 
 指定したポイントで新しい図形を開始します。
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ BOOL Close();
 
 現在の図形を終了します。必要に応じて、閉じます。
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ ID2D1GeometrySink インターフェイスへのポインターまたは NULL �
 
 このジオメトリ シンクで記述されているジオメトリ内にあるポイントと、どのポイントが外側にあるかを決定する方法を指定します。
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 
 ジオメトリ シンクに追加された新しいセグメントに適用するストロークおよび結合オプションを指定します。
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 

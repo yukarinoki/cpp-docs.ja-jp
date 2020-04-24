@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366030"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753037"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 ステータス バー コントロールのスタイルを指定します。 Windows SDK のコモン コントロール スタイルに表示されているステータス バー[コントロール スタイル](/windows/win32/Controls/common-control-styles)の任意の組み合わせを適用します。 このパラメーターには、WS_CHILDスタイルを含める必要があります。 また、WS_VISIBLEスタイルも含める必要があります。
 
 *Rect*<br/>
-ステータス バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+ステータス バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 ステータス バー コントロールの親ウィンドウを指定します`CDialog`。 NULL にすることはできません。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 ステータス バー コントロールのスタイルを指定します。 Windows SDK のコモン コントロール スタイルに表示されているステータス バー[コントロール スタイル](/windows/win32/Controls/common-control-styles)の任意の組み合わせを適用します。 このパラメーターには、WS_CHILDスタイルを含める必要があります。 また、WS_VISIBLEスタイルも含める必要があります。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -344,7 +344,7 @@ BOOL GetRect(
 外接する四角形を取得するパーツの 0 から始まるインデックス。
 
 *Lprect*<br/>
-外接する四角形を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のアドレス。
+外接する四角形を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -530,7 +530,7 @@ BOOL SetIcon(
 
 ステータス バー コントロールの作図領域の最小の高さを設定します。
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ BOOL SetText(
 
 ステータス バーのペインのツールヒント テキストを設定します。
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

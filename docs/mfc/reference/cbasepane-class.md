@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352935"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752993"
 ---
 # <a name="cbasepane-class"></a>Cベースウィンドウクラス
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 ドッキング マネージャーにペインを追加します。
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -726,7 +726,7 @@ virtual BOOL CreateEx(
 
 ライブラリは、ペインに複数の新しいスタイルを追加します。 次の表に、新しいスタイルを示します。
 
-|スタイル|説明|
+|Style|説明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|ペインはフローティング可能です。|
 |AFX_CBRS_AUTOHIDE|このペインは自動非表示モードをサポートしています。|
@@ -774,7 +774,7 @@ virtual BOOL DockPane(
 
 実行時の型情報を使用してペインをドッキングします。
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1011,7 +1011,7 @@ AFX_CBRS_ フラグのビットごとの OR の組み合わせ。
 
 戻り値は、次の値の組み合わせです。
 
-|スタイル|説明|
+|Style|説明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|コントロール バーをフロートします。|
 |AFX_CBRS_AUTOHIDE|自動非表示モードを有効にします。|
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 コントロール バーの現在の配置。 次の表に、使用できる値を示します。
 
-|[値]|Alignment|
+|値|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左揃え。|
 |CBRS_ALIGN_RIGHT|右揃え。|
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 ペインの登録を解除し、ドッキング マネージャーのリストから削除します。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1826,7 +1826,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 *ドウニュースタイル*<br/>
 [in]次の値のビットごとの OR の組み合わせ。
 
-|スタイル|説明|
+|Style|説明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|コントロール バーをフロートします。|
 |AFX_CBRS_AUTOHIDE|自動非表示モードを有効にします。|
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 ペインのドッキング モードを設定します。
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
@@ -1873,7 +1873,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 次の表は *、dwAlignment*の値を示しています。
 
-|[値]|Alignment|
+|値|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左揃え。|
 |CBRS_ALIGN_RIGHT|右揃え。|
@@ -1919,7 +1919,7 @@ virtual HDWP SetWindowPos(
 *後に挿入します。*<br/>
 [in]この`CWnd`オブジェクトの`CWnd`前に来るオブジェクトを Z オーダーで識別します。 詳細については[、「CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)」を参照してください。
 
-*X*<br/>
+*x*<br/>
 [in]ウィンドウの左側の位置を指定します。
 
 *Y*<br/>

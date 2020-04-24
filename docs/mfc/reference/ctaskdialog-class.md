@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366635"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752289"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ Cタスクダイアログのサンプル
 
 新しいコマンド ボタン コントロールを`CTaskDialog`に追加します。
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ void AddCommandControl(
 
 ラジオ ボタンを に`CTaskDialog`追加します。
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ static BOOL IsSupported();
 
 文字列テーブルのデータを使用して、コマンド ボタン コントロールを追加します。
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ void LoadCommandControls(
 
 文字列テーブルのデータを使用して、ラジオ ボタン コントロールを追加します。
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 からすべてのコマンド ボタン コントロールを削除`CTaskDialog`します。
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 からすべてのラジオ ボタンを削除します`CTaskDialog`。
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 のコマンド ボタン コントロールを`CTaskDialog`更新します。
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ void SetCommandControlOptions(
 
 有効にする共通ボタンのサブセットを更新し、UAC の昇格を要求します。
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ void SetCommonButtonOptions(
 
 共通のボタンを`CTaskDialog`に追加します。
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ void SetCommonButtons(
 
 の内容を更新します`CTaskDialog`。
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ void SetContent(const CString& strContent);
 
 既定のコマンド ボタン コントロールを指定します。
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 既定のオプション ボタンを指定します。
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 の幅を調整します`CTaskDialog`。
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ void SetDialogWidth(int nWidth = 0);
 
 の拡張領域を更新します`CTaskDialog`。
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ void SetExpansionArea(
 
 のフッター アイコンを更新`CTaskDialog`します。
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 のフッターのテキストを更新します`CTaskDialog`。
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ void SetFooterText(const CString& strFooterText);
 
 のメイン アイコンを更新`CTaskDialog`します。
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 の主な命令を更新`CTaskDialog`します。
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ void SetMainInstruction(const CString& strInstructions);
 
 のオプションを構成します`CTaskDialog`。
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ void SetOptions(int nOptionFlag);
 
 のマーキー バーを構成`CTaskDialog`し、ダイアログ ボックスに追加します。
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ void SetProgressBarMarquee(
 
 プログレス バーの位置を調整します。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 プログレス バーの範囲を調整します。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ void SetProgressBarRange(
 
 プログレス バーの状態を設定し、`CTaskDialog`に表示します。
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ラジオ ボタンを有効または無効にします。
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ void SetRadioButtonOptions(
 
 検証チェック ボックスのチェック状態を設定します。
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 [検証] チェック ボックスの右側に表示されるテキストを設定します。
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 のタイトルを設定します`CTaskDialog`。
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

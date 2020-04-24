@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81357039"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751482"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
 
@@ -44,7 +44,7 @@ MFC には、ビットマップの背景をディザリングされたパター�
 
 灰色のバージョンのビットマップを描画します。
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -58,7 +58,7 @@ void AFXAPI AfxDrawGrayBitmap(
 *pDC*<br/>
 宛先 DC を示します。
 
-*X*<br/>
+*x*<br/>
 宛先の x 座標。
 
 *Y*<br/>
@@ -88,7 +88,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 灰色のバージョンのビットマップをコピーします。
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -124,7 +124,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 ビットマップを描画し、背景をディザ (チェッカ) パターンに置き換えます。
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -139,7 +139,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 *pDC*<br/>
 宛先 DC を示します。
 
-*X*<br/>
+*x*<br/>
 宛先の x 座標。
 
 *Y*<br/>
@@ -172,7 +172,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ビットマップをコピーし、背景をディザ(チェッカ)パターンに置き換えます。
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,

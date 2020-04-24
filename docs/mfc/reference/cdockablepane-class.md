@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375604"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753334"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -664,7 +664,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 *dwAlignment*には、次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|ペインは、フレーム ウィンドウのクライアント領域の上部にドッキングされています。|
 |CBRS_ALIGN_BOTTOM|ペインは、フレーム ウィンドウのクライアント領域の下部にドッキングされています。|
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment*には、次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|コンテナーは、ウィンドウの上部にドッキングされています。|
 |CBRS_ALIGN_BOTTOM|コンテナーは、ペインの下部にドッキングされています。|
@@ -881,7 +881,7 @@ virtual void DrawCaption(
 
 このペインおよびコンテナ内の他のペインの自動非表示モードを有効または無効にします。
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 ペインがドッキング解除されている場合、フレームワークはこのメソッドを呼び出します。
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ BOOL ReplacePane(
 
 ペインが逆シリアル化されると、フレームワークはこのメソッドを呼び出して、既定のペイン分割を復元します。
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 
 ペインの自動非表示ボタンと自動非表示ツールバーを設定します。
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 ペインがコンテナー内で占めるスペースの割合を設定します。
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ void SetLastPercentInPaneContainer(int n);
 
 復元された既定のペイン分割を設定します。
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 2 つのペインがドッキングされたときに作成されるタブ付きウィンドウのランタイム クラス情報を設定します。
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373811"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754986"
 ---
 # <a name="cfontholder-class"></a>CFontHolder クラス
 
@@ -170,7 +170,7 @@ Font オブジェクトへのハンドル。それ以外の場合は NULL。
 
 オブジェクトを`CFontHolder`初期化します。
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 オブジェクトによって表される物理フォントに関する情報`CFontHolder`を取得します。
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 
 この関数は、`CFontHolder``IFont`オブジェクトをそのインターフェイスから切断します。
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ CFont* Select(
 
 既存のフォントを解放し、`CFontHolder`オブジェクトをインターフェイス`IFont`に接続します。
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 

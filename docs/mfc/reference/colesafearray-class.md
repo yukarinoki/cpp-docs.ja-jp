@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374865"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753762"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray クラス
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 配列データへのポインターを取得します。
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ void AccessData(void** ppvData);
 
 セーフ配列のメモリを割り当てます。
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ void AllocData();
 
 セーフ配列の記述子にメモリを割り当てます。
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ void AllocDescriptor(DWORD dwDims);
 
 オブジェクトに対して既存`VARIANT`の配列のデータを制御`COleSafeArray`します。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ void Attach(VARIANT& varSrc);
 
 セーフ配列をクリアします。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ COleSafeArray(const COleVariant& varSrc);
 
 既存のセーフ配列のコピーを作成します。
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ void Copy(LPSAFEARRAY* ppsa);
 
 配列のデータを割り当てて初期化します。
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ void Create(
 
 新しい 1 次元`COleSafeArray`オブジェクトを作成します。
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ void CreateOneDim(
 
 既存の配列記述子と配列内のすべてのデータを破棄します。
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ void Destroy();
 
 安全な配列内のすべてのデータを破棄します。
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ void DestroyData();
 
 セーフ配列の記述子を破棄します。
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ VARIANT Detach();
 
 セーフ配列の内容を`CByteArray`にコピーします。
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ DWORD GetDim();
 
 セーフ配列の単一の要素を取得します。
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ DWORD GetElemSize();
 
 オブジェクトの任意の次元の下限を`COleSafeArray`返します。
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ DWORD GetOneDimSize();
 
 セーフ配列の任意の次元の上限を返します。
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ void GetUBound(
 
 配列のロックカウントをインクリメントし、配列記述子の配列データへのポインタを配置します。
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 インデックス値で指定された要素へのポインターを返します。
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ void PtrOfIndex(
 
 1 つの要素を配列に割り当てます。
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ void PutElement(
 
 セーフ配列の最下位 (右端) の境界を変更します。
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 1 次元`COleSafeArray`オブジェクトの要素数を変更します。
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ void ResizeOneDim(DWORD dwElements);
 
 配列のロックカウントを減算し、 によって`AccessData`取得されたポインターを無効にします。
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ void UnaccessData();
 
 配列のロックカウントを減算して、配列を解放またはサイズ変更できるようにします。
 
-```
+```cpp
 void Unlock();
 ```
 

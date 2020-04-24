@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366152"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753947"
 ---
 # <a name="colecontrolsite-class"></a>クラス
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb*<br/>
 実行する動詞を指定します。 次のいずれかを含めることができます。
 
-|[値]|意味|Symbol|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |0|主動詞|OLEIVERB_PRIMARY|
 |-1|二次動詞|(なし)|
@@ -454,7 +454,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 コントロール サイトがコントロールから発生したイベントを処理するか無視するかを指定します。
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ void FreezeEvents(BOOL bFreeze);
 
 コントロールのキーボードニーモニックおよびキーボードの動作に関する情報を取得します。
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 ウィンドウの左側の新しい位置。
 
 *Y*<br/>
@@ -1017,7 +1017,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 
 コントロールを既定のボタンとして設定します。
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *後に挿入します。*<br/>
 ウィンドウへのポインター。
 
-*X*<br/>
+*x*<br/>
 ウィンドウの左側の新しい位置。
 
 *Y*<br/>

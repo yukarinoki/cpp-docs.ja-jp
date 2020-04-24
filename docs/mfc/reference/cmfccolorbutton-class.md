@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367731"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752560"
 ---
 # <a name="cmfccolorbutton-class"></a>クラス
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 カラー ピッカー コントロールの [自動] ボタンを有効または無効にし、自動 (既定) の色を設定します。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 通常のカラーボタンの下に表示される「その他」ボタンを有効または無効にします。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 保護されたデータ`m_pPalette`メンバーを、指定されたパレットまたは既定のシステム パレットに初期化します。
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 ボタンの色を指定します。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ static void SetColorName(
 
 ユーザーの色選択プロセス中にユーザーに表示される色のテーブルに表示される列の数を定義します。
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ void SetColumnsNumber(int nColumns);
 
 色のセットとセットの名前を指定します。 色のセットは[、CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクトを使用して表示されます。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ void SetDocumentColors(
 
 ポップアップ カラー バーに表示する標準色を指定します。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 

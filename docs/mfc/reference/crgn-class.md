@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368307"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754478"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 
@@ -699,7 +699,7 @@ int OffsetRgn(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 左または右に移動する単位数を指定します。
 
 *Y*<br/>
@@ -762,7 +762,7 @@ BOOL PtInRegion(POINT point) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 テストする点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -805,7 +805,7 @@ typedef struct tagRECT {
 
 四角形の領域を作成します。
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,

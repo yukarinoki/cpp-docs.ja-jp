@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366193"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753943"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -781,7 +781,7 @@ BOOL AmbientUserMode();
 
 バインドされたプロパティ値が変更されたことを示します。
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ COleControl();
 
 コントロールでサポートされているニーモニックのセットが変更されたときに、この関数を呼び出します。
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ virtual void DisplayError(
 
 コントロール上でのマウス クリック操作をシミュレートします。
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 Windows コントロールからサブクラス化された OLE コントロールを再描画します。
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ void DoSuperclassPaint(
 
 コントロールの外観を更新する必要があるときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ void DrawContent(
 
 メタファイル デバイス コンテキストが使用されているときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 OLE コントロールの単純なフレーム特性を有効にします。
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 コントロールのストック プロパティの状態をシリアル化または初期化します。
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ BOOL ExchangeVersion(
 
 アクティブなコントロール上でマウスがクリックされたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ Click イベントを自動的に起動するには、コントロールのイ�
 
 アクティブなコントロール上でマウスをダブルクリックしたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ DblClick イベントの自動起動を行うには、コントロールのイ�
 
 ストック エラー イベントを発生させます。
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ OLE コントロールの株価エラー イベントの実装では、SCODE 値
 
 任意の数のオプション引数を指定して、コントロールからユーザー定義のイベントを発生させます。
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ void AFX_CDECL FireEvent(
 
 コントロールが UI アクティブのときにキーが押されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ KeyDown イベントを自動的に起動するには、コントロールのイ
 
 カスタム コントロールがコンテナー内で UI Active であるときにキーが押されて解放されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ KeyPress イベントの自動起動を行うには、コントロールのイ�
 
 カスタム コントロールがコンテナー内で UI Active である間にキーが解放されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ KeyUp イベントを自動的に起動するには、コントロールのイ�
 
 アクティブなカスタム コントロール上でマウス ボタンが押されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1319,7 +1319,7 @@ void FireMouseDown(
 
 - ALT_MASKアクション中に Alt キーが押されました。
 
-*X*<br/>
+*x*<br/>
 マウス ボタンが押されたときのカーソルの x 座標。 座標は、コントロール ウィンドウの左上隅を基準にしています。
 
 *Y*<br/>
@@ -1335,7 +1335,7 @@ MouseDown イベントを自動起動するには、コントロールのイベ�
 
 アクティブなカスタム コントロール上でカーソルが移動したときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1363,7 +1363,7 @@ void FireMouseMove(
 
 - ALT_MASKアクション中に Alt キーが押されました。
 
-*X*<br/>
+*x*<br/>
 カーソルの x 座標。 座標は、コントロール ウィンドウの左上隅を基準にしています。
 
 *Y*<br/>
@@ -1379,7 +1379,7 @@ MouseMove イベントを自動的に起動するには、コントロールの�
 
 アクティブなカスタム コントロール上でマウス ボタンが離されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1407,7 +1407,7 @@ void FireMouseUp(
 
 - ALT_MASKアクション中に Alt キーが押されました。
 
-*X*<br/>
+*x*<br/>
 マウス ボタンが離されたときのカーソルの x 座標。 座標は、コントロール ウィンドウの左上隅を基準にしています。
 
 *Y*<br/>
@@ -1423,7 +1423,7 @@ MouseUp イベントを自動起動するには、コントロールのイベン
 
 コントロールの準備状態の現在の値を持つイベントを発生させます。
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ OLE コントロールの`GetControlFlags`最適化およびその他の最適�
 
 OLE コントロール ウィンドウのサイズを取得します。
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ LPFONTDISP GetFont();
 
 コントロールが所有するオブジェクト`CFontHolder`のテキスト メトリックを測定します。
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ virtual void GetMessageString(
 
 ユーザーがコントロールのプロパティ値にアクセスできないようにします。
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 コントロールのストック フォント プロパティのテキスト[メトリックを測定](#selectstockfont)します。
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 コントロールが使用する IID の基本クラスに通知します。
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ const CString& InternalGetText();
 
 コントロールの準備状態を設定します。
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ void InternalSetReadyState(long lNewReadyState);
 
 コントロールを強制的に再描画します。
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ void InvalidateControl(
 
 指定した領域内のコンテナー ウィンドウのクライアント領域を無効にします。
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ virtual BOOL IsSubclassedControl();
 
 非同期的に読み込まれた前のデータをリセットし、コントロールの非同期プロパティの新しい読み込みを開始します。
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 - DVASPECT_TRANSPARENT透明または不規則な部分をカバーする矩形。
 
 *プレック*<br/>
-オブジェクトを描画する四角形を指定する[RECTL](/previous-versions/dd162907\(v=vs.85\))構造体へのポインター。 このパラメータは、オブジェクトの位置と伸縮を制御します。
+オブジェクトを描画する四角形を指定する[RECTL](/windows/win32/api/windef/ns-windef-rectl)構造体へのポインター。 このパラメータは、オブジェクトの位置と伸縮を制御します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2873,7 +2873,7 @@ virtual void OnInactiveMouseMove(
 *lprcBounds*<br/>
 オブジェクトの境界を示す四角形 (格納ウィンドウのクライアント座標)。 WM_MOUSEMOVEメッセージを受信したときの、画面上の正確な位置とサイズをオブジェクトに通知します。
 
-*X*<br/>
+*x*<br/>
 ウィンドウを含むクライアント座標でのマウス位置の x 座標。
 
 *Y*<br/>
@@ -2904,7 +2904,7 @@ virtual BOOL OnInactiveSetCursor(
 *lprcBounds*<br/>
 オブジェクトの境界を示す四角形 (格納ウィンドウのクライアント座標)。 WM_SETCURSORメッセージを受信したときの、画面上の正確な位置とサイズをオブジェクトに通知します。
 
-*X*<br/>
+*x*<br/>
 ウィンドウを含むクライアント座標でのマウス位置の x 座標。
 
 *Y*<br/>
@@ -3513,7 +3513,7 @@ virtual UINT ParentToClient(
 
 モーダル ダイアログ ボックスが閉じられたことをコンテナーに通知します。
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 
 モーダル ダイアログ ボックスが表示されようとしていることをコンテナーに通知します。
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 
 コントロールのウィンドウを破棄し、再作成します。
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ void RecreateControlWindow();
 
 OLE コントロールの再描画を強制します。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ virtual void ReparentControlWindow(
 
 ストック プロパティの状態を`COleControl`既定値に初期化します。
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ void ResetStockProps();
 
 バージョン番号を指定した値に初期化します。
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ウィンドウなしの OLE オブジェクトが、画面上の埋め込み位置にあるアクティブなイメージ内の領域をスクロールできるようにします。
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 コントロールに割り当てられた表示領域の状態をシリアル化または初期化します。
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ void SerializeExtent(CArchive& ar);
 
 `COleControl`外観、バックカラー、境界線スタイル、キャプション、有効、フォント、ForeColor、およびテキストのストック プロパティの状態をシリアル化または初期化します。
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ DWORD SerializeVersion(
 
 コントロールのストック外観プロパティの値を設定します。
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ void SetAppearance (short sAppearance);
 
 コントロールのストック BackColor プロパティ値を設定します。
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 コントロールのストック境界線スタイル プロパティ値を設定します。
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ BOOL SetControlSize(int cx, int cy);
 
 コントロールのストックの有効プロパティ値を設定します。
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ CWnd* SetFocus();
 
 コントロールのストック Font プロパティを設定します。
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ Font ディスパッチ インターフェイスへのポインター。
 
 コントロールのストック ForeColor プロパティ値を設定します。
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ virtual void SetInitialDataFormats();
 
 コンテナに最初に表示されたときの OLE コントロールのサイズを設定します。
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ OLE コントロールの初期の高さ (ピクセル単位)。
 
 コントロールの変更状態を変更します。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 編集要求が失敗したことを示します。
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ void SetNotPermitted();
 
 ユーザーがコントロールのプロパティ値を変更できないようにします。
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 コントロールのストックキャプションまたはテキストプロパティの値を設定します。
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ void SetText(LPCTSTR pszText);
 
 コントロール内のエラーの発生を通知します。
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ void ThrowError(
 
 HIMETRIC 単位とコンテナのネイティブ単位の間の座標値を変換します。
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,
@@ -4190,7 +4190,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 処理する Windows メッセージを指定します。
 
 *wParam*<br/>

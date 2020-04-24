@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374977"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753859"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 
@@ -194,7 +194,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>コレップフレームオンドエクスックス::アドインドックサイト
 
-```
+```cpp
 void AddDockSite();
 ```
 
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>コレクトフレームウンドエクスックス::Dロックペイン
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -302,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>をクリックします。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -471,7 +471,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 フレームワークがユーザー定義のツール バーに割り当てるコントロール ID の範囲を指定します。
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -877,7 +877,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>をクリックします。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -900,13 +900,13 @@ void RemovePaneFromDockManager(
 
 指定したドッキング状態を、フレーム ウィンドウに属するペインに適用します。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 [in]ドッキング状態を指定します。
 
 ### <a name="remarks"></a>解説
@@ -917,7 +917,7 @@ void SetDockState(const CDockState& state);
 
 ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -939,7 +939,7 @@ void SetupToolbarMenu(
 
 ## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>コレップフレームーンデックス::ショーペイン
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,

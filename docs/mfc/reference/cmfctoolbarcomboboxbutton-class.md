@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372186"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754013"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton クラス
 
@@ -285,7 +285,7 @@ virtual int Compare(
 
 文字列間の大文字小文字を区別する辞書の関係を示す値。 可能な値を次の表に示します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |\<0|最初の文字列は 2 番目の文字列より小さいです。|
 |0|最初の文字列は 2 番目の文字列と同じです。|
@@ -1116,7 +1116,7 @@ virtual BOOL OnUpdateToolTip(
 
 リスト ボックスと編集ボックスからすべてのアイテムを削除します。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 
 コンボ ボックス ボタンのショートカット メニュー リソース ID を設定します。
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 ドロップダウンしたときのリスト ボックスの高さを設定します。
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ virtual void SetStyle(UINT nStyle);
 
 コンボ ボックス ボタンのエディット ボックス内のテキストを設定します。
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 

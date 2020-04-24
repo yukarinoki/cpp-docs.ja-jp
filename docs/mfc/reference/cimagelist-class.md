@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752689"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -295,7 +295,7 @@ BOOL Copy(
 *uフラグ*<br/>
 作成するコピー操作の種類を指定するビット フラグ値。 このパラメーターには、次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |ILCF_MOVE|ソース イメージがコピー先イメージのインデックスにコピーされます。 この操作により、特定のイメージの複数のインスタンスが作成されます。 ILCF_MOVEがデフォルトです。|
 |ILCF_SWAP|ソース イメージとターゲット イメージは、イメージ リスト内の位置を交換します。|
@@ -357,7 +357,7 @@ BOOL Create(CImageList* pImageList);
 *Nflags*<br/>
 作成するイメージ リストの種類を指定します。 このパラメーターは、次の値の組み合わせでも使用できますが、値の`ILC_COLOR`1 つだけを含めることができます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |ILC_COLOR|他の ILC_COLOR* フラグが指定されていない場合は、デフォルトの動作を使用します。 通常、デフォルトはILC_COLOR4です。ただし、古いディスプレイ ドライバの場合、デフォルトはILC_COLORDDBです。|
 |ILC_COLOR4|イメージ リストのビットマップとして 4 ビット (16 色) のデバイスに依存しないビットマップ (DIB) セクションを使用します。|
@@ -591,7 +591,7 @@ BOOL Draw(
 *nStyle*<br/>
 図面スタイルを指定するフラグ。 次の値の 1 つ以上を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |ILD_BLEND25、ILD_FOCUS|イメージを描画し、システムのハイライト カラーと 25% をブレンドします。 イメージ リストにマスクが含まれていない場合、この値は無効です。|
 |ILD_BLEND50、ILD_SELECTED、ILD_BLEND|イメージを描画し、システムのハイライト カラーと 50% をブレンドします。 イメージ リストにマスクが含まれていない場合、この値は無効です。|
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 描画されるイメージの 0 から始まるインデックス。
 
 *Pt*<br/>
-イメージが描画される x 座標と y 座標を含む[POINT](/previous-versions/dd162805\(v=vs.85\))構造体。
+イメージが描画される x 座標と y 座標を含む[POINT](/windows/win32/api/windef/ns-windef-point)構造体。
 
 *Sz*<br/>
 描画するイメージのサイズを示す[SIZE](/windows/win32/api/windef/ns-windef-size)構造体。
 
 *ptオリジン*<br/>
-イメージ自体に対して描画操作の左上隅を指定する x 座標と y 座標を含む[POINT](/previous-versions/dd162805\(v=vs.85\))構造体。 x 座標の左側、y 座標より上のイメージのピクセルは描画されません。
+イメージ自体に対して描画操作の左上隅を指定する x 座標と y 座標を含む[POINT](/windows/win32/api/windef/ns-windef-point)構造体。 x 座標の左側、y 座標より上のイメージのピクセルは描画されません。
 
 *fStyle*<br/>
 図面スタイルを指定するフラグと、必要に応じてオーバーレイ イメージを指定します。 オーバーレイ イメージの詳細については、「解説」を参照してください。 MFC の既定の実装ILD_NORMALは、イメージ リストの背景色を使用してイメージを描画します。 背景色がCLR_NONE値の場合、イメージはマスクを使用して透過的に描画されます。
@@ -712,7 +712,7 @@ BOOL DrawIndirect(
 *RGBバック*<br/>
 イメージの背景色 (既定ではCLR_DEFAULT)。 このパラメーターには、アプリケーション定義の RGB 値、または次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |CLR_DEFAULT|既定の背景色。 イメージは、イメージ リストの背景色を使用して描画されます。|
 |CLR_NONE|背景色なし。 画像は透明に描画されます。|
@@ -720,7 +720,7 @@ BOOL DrawIndirect(
 *rgbフォー*<br/>
 イメージの前景色 (既定ではCLR_DEFAULT)。 このパラメーターには、アプリケーション定義の RGB 値、または次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |CLR_DEFAULT|既定の前景色。 イメージは、システムのハイライトカラーを前景色として描画します。|
 |CLR_NONE|ブレンドカラーなし。 イメージは、ターゲット デバイス コンテキストの色とブレンドされます。|
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-現在のドラッグ位置を受け取る[POINT](/previous-versions/dd162805\(v=vs.85\))構造体のアドレス。
+現在のドラッグ位置を受け取る[POINT](/windows/win32/api/windef/ns-windef-point)構造体のアドレス。
 
 *スポット*<br/>
 ドラッグ位置に`POINT`対するドラッグ イメージのオフセットを受け取る構造体のアドレス。

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375372"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751932"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -375,7 +375,7 @@ MENUAREA_TYPE パラメーターには、次のいずれかの値を指定でき
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>メニューを閉じる
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *親の子*<br/>
 [in]の親ウィンドウです`CMFCPopupMenu`。
 
-*X*<br/>
+*x*<br/>
 [in]ポップアップ メニューの位置の水平画面座標
 
 *Y*<br/>
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ポップアップ メニューのロゴを初期化します。
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>メニュー::サイズ変更を有効にする
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>メニュー::スクロールを有効にする
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCポップアップメニュー::有効に反転サイズ変更
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -1089,7 +1089,7 @@ BOOL IsShown() const;
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>メニュー::移動
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ポップアップ メニューからすべての項目をクリアします。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1259,7 +1259,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>メニュー::セットオートデストロイ
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ポップアップ メニューの既定のコマンドを設定します。
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ static void SetForceShadow(BOOL bValue);
 
 ポップアップメニューの最大幅を設定します。
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ void SetMaxWidth(int iMaxWidth);
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>メニュー::メッセージの送信
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>メニュー::セットペアレントリボン要素
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>メニュー::セットクイックカスタマイザタイプ
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>メニュー::セットクイックモード
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 ポップアップ メニューのメニューの配置を設定します。
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 ポップアップ メニューにすべてのコマンドを強制的に表示します。
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ void ShowAllCommands();
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>メニュー::トリガーサイズ変更
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 
 ポップアップ メニューのシャドウを更新します。
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 

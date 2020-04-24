@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367700"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752521"
 ---
 # <a name="cmfccolormenubutton-class"></a>クラス
 
@@ -193,7 +193,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 通常のカラー ボタンの上に配置されている "自動" ボタンを有効または無効にします。 (標準システムの自動ボタンには**自動**とラベルが付いています。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ void EnableAutomaticButton(
 
 システム カラーではなく、ドキュメント固有の色の表示を有効にします。
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ void EnableDocumentColors(
 
 通常のカラー ボタンの下に配置されている "その他" ボタンを有効または無効にします。 (標準システムの「その他」ボタンには、**その他の色**のラベルが付いています。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 カラー ペインを引き裂く機能を有効にします。
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 カラー選択コントロール[(CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)オブジェクト) に表示する列の数を設定します。
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

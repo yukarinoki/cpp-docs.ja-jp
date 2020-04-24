@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376977"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753705"
 ---
 # <a name="cpagerctrl-class"></a>クラス
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |パラメーター|説明|
 |---------------|-----------------|
 |*Dwstyle*|[in]コントロールに適用する[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (OR)。|
-|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。|
 |*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターは NULL にはできません。|
 |*nID*|[in]コントロールの ID。|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*ドウェエクススタイル*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、関数の*dwExStyle*パラメーターを参照[してください](/windows/win32/api/winuser/nf-winuser-createwindowexw)。|
 |*Dwstyle*|[in]コントロールに適用する[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (OR)。|
-|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。|
 |*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターは NULL にはできません。|
 |*nID*|[in]コントロールの ID。|
 
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 
 現在のページャー コントロールに含まれるウィンドウへの[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)メッセージの転送を有効または無効にします。
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 現在のページャー コントロールに、含まれているウィンドウのサイズを再計算します。
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ int SetButtonSize(int iButtonSize);
 
 現在のページャー コントロールのウィンドウを設定します。
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ void SetChild(HWND hwndChild);
 
 現在のページャー コントロールのスクロール位置を設定します。
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

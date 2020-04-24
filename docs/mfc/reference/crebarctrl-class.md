@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750638"
 ---
 # <a name="crebarctrl-class"></a>クラス
 
@@ -223,7 +223,7 @@ Rebar コントロールのサポート:
 
 Windows SDK で説明されているように、Win32 メッセージ[RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)の動作を実装します。
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 コントロールに適用される Rebar コントロール スタイルの組み合わせを指定します。 サポートされているスタイルの一覧については、Windows SDK の[Rebar コントロール](/windows/win32/Controls/rebar-control-styles)スタイルを参照してください。
 
 *Rect*<br/>
-Rebar コントロールの位置とサイズを示す[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+Rebar コントロールの位置とサイズを示す[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 Rebar コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 NULL にすることはできません。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 コントロールに適用される Rebar コントロール スタイルの組み合わせを指定します。 サポートされているスタイルの一覧については、Windows SDK の[「Rebar コントロール スタイル](/windows/win32/Controls/rebar-control-styles)」を参照してください。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -356,7 +356,7 @@ BOOL DeleteBand(UINT uBand);
 
 Windows SDK で説明されているように、Win32 メッセージ[RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove)の動作を実装します。
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 
 Windows SDK で説明されているように、Win32 メッセージ[RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)の動作を実装します。
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Win32 メッセージ[RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders)の動作を実装します。
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 境界を取得するバンドの 0 から始まるインデックス。
 
 *Prc*<br/>
-帯の境界を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインタ。 rebar コントロールにRBS_BANDBORDERSスタイルがある場合、この構造体の各メンバーは、境界を構成するバンドの対応する側のピクセル数を受け取ります。 rebar コントロールにRBS_BANDBORDERSスタイルがない場合、この構造体の左側のメンバーだけが有効な情報を受け取ります。 Rebar コントロールスタイルの詳細については、Windows SDK の[「Rebar コントロールスタイル](/windows/win32/Controls/rebar-control-styles)」を参照してください。
+帯の境界を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインタ。 rebar コントロールにRBS_BANDBORDERSスタイルがある場合、この構造体の各メンバーは、境界を構成するバンドの対応する側のピクセル数を受け取ります。 rebar コントロールにRBS_BANDBORDERSスタイルがない場合、この構造体の左側のメンバーだけが有効な情報を受け取ります。 Rebar コントロールスタイルの詳細については、Windows SDK の[「Rebar コントロールスタイル](/windows/win32/Controls/rebar-control-styles)」を参照してください。
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>を返します。
 
@@ -429,7 +429,7 @@ BOOL GetBandInfo(
 
 バンドの余白を取得します。
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Rebar コントロール内のバンドの 0 から始まるインデックス。
 
 *Prc*<br/>
-REBAR バンドの境界を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+REBAR バンドの境界を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -723,7 +723,7 @@ BOOL InsertBand(
 
 Rebar コントロールのバンドのサイズを最大サイズに変更します。
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Windows SDK で説明されているように、Win32`fIdeal`メッセージ[RB_
 
 Rebar コントロールのバンドのサイズを最小サイズに変更します。
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ BOOL MoveBand(
 
 Windows SDK で説明されているように、Win32 メッセージ[RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)の動作を実装します。
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ void PushChevron(
 
 Rebar コントロールのバンドのサイズを、理想的なサイズに変更します。
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 Rebar コントロールのボタンの配色を設定します。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Rebar コントロールでテキストの色の柔軟性をサポートする�
 
 ツール ヒント コントロールを Rebar コントロールに関連付けます。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

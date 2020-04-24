@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318637"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754457"
 ---
 # <a name="cricheditview-class"></a>クラスを表示します。
 
@@ -218,7 +218,7 @@ MFC アプリケーションでリッチ エディット ビューを使用す�
 
 現在の選択内容が隠されないように、指定されたダイアログ ボックスを移動します。
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 このリッチ エディット ドキュメント/ビューに*dataobj*の OLE アイテムを貼り付けます。
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ long GetTextLengthEx(
 
 リッチ エディット ビューに指定したファイル[(CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)オブジェクトとして) を挿入します。
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ int m_nWordWrap;
 
 現在の選択範囲の文字書式効果を切り替えます。
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 
 選択した段落の段落の配置を変更します。
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 フレームワークは、文字効果コマンドのコマンド UI を更新するには、この関数を呼び出します。
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ void OnUpdateCharEffect(
 
 フレームワークは、この関数を呼び出して、段落効果コマンドのコマンド UI を更新します。
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ HRESULT と`IDataObject`の詳細については、Windows SDK の[COM エラー
 
 この`CRichEditView`オブジェクトの新しいテキストの文字書式属性を設定します。
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ cf の`dwMask`メンバーによって指定された属性*のみがこの関�
 
 このリッチ エディット ビューの印刷余白を設定します。
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ void SetMargins(const CRect& rectMargin);
 
 このリッチ エディット ビューを印刷するための用紙サイズを設定します。
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 この関数を呼び出して[、FindText](#findtext)の呼び出しが失敗した後に[、CRichEditView](../../mfc/reference/cricheditview-class.md)コントロールの内部検索状態をリセットします。
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

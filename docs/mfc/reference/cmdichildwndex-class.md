@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370071"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754559"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx クラス
 
@@ -249,7 +249,7 @@ BOOL AddPane(
 
 タブ付きペインを追加します。
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ virtual BOOL CanShowOnWindowsList();
 
 ペインをドッキングします。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ドッキング マネージャーからペインを削除します。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>ソース:::セット関連タブグループ
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>コマンドウィンドウズエクスックス::ショーペイン
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Windows 7 タスク バー タブに表示するアイコンへのハンドル�
 
 Windows 7 タスク バー タブから MDI 子を削除します。
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 Windows 7 のタスクバー タブのプロパティを設定します。
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ STPFLAG の値の組み合わせ。 詳細については[、「ITaskbarList4::S
 
 Windows 7 のタスク バー タブで指定したウィンドウの前に MDI 子を挿入します。
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 
 対応する Windows 7 タスク バー タブをアクティブにします。
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *ヒットテスト*<br/>
 ヒット テストの市外局番を指定します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*メッセージ*<br/>
+*message*<br/>
 マウス メッセージ番号を指定します。
 
 ### <a name="remarks"></a>解説
@@ -1146,7 +1146,7 @@ Windows 7`CMDITabProxyWnd`のタスク バー タブに登録されているオ�
 
 ウィンドウのクライアント領域の一部を、そのウィンドウのサムネイルとしてタスク バーに表示する自動選択を有効または無効にします。
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

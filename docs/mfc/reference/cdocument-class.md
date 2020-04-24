@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374048"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753247"
 ---
 # <a name="cdocument-class"></a>CDocument クラス
 
@@ -260,7 +260,7 @@ class CDocument : public CCmdTarget
 
 ドキュメントにビューを添付します。
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -734,7 +734,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 
 次の表に *、deEvent*の値と、対応するイベントの一覧を示します。
 
-|[値]|対応するイベント|
+|値|対応するイベント|
 |-----------|-------------------------|
 |`onAfterNewDocument`|新しいドキュメントが作成されました。|
 |`onAfterOpenDocument`|新しいドキュメントが開かれました。|
@@ -765,7 +765,7 @@ virtual void OnDrawThumbnail(
 
 ドキュメントを添付ファイルとして、常駐メール ホスト経由でメッセージを送信します( 存在する場合)。
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 メール サポート (MAPI) が存在する場合は、ID_FILE_SEND_MAIL コマンドを有効にします。
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ virtual void RemoveChunk(
 
 ドキュメントからビューを切り離します。
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 
 ドキュメントが変更された後にこの関数を呼び出します。
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373788"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754980"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 
@@ -384,7 +384,7 @@ CWnd* CreateView(
 
 コントロール バーをフレーム ウィンドウにドッキングします。
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ void DockControlBar(
 
 フレーム ウィンドウでドッキング可能なコントロール バーを有効にします。
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 コントロール バーをフレーム ウィンドウにドッキングしないようにします。
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,13 +570,13 @@ ID に関連付けられているコントロール バーへのポインター�
 
 オブジェクト内の`CDockState`フレーム ウィンドウのコントロール バーに関する状態情報を格納します。
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 フレーム ウィンドウのコントロール バーが返された場合の現在の状態を格納します。
 
 ### <a name="remarks"></a>解説
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 を`IntitialUpdateFrame`使用して新しいフレームを`Create`作成した後に呼び出す。
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 
 フレーム ウィンドウが所有する各コントロール バーの設定を復元します。
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 フレーム ウィンドウが所有する各コントロール バーに関する情報を格納します。
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 
 リッチ プレビューのアクティブ ビューとして指定したビューを指定します。
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ void SetActivePreviewView(CView* pViewNew);
 
 アクティブ なビューを設定するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,13 +1068,13 @@ void SetActiveView(
 
 オブジェクトに格納されている状態情報を`CDockState`フレーム ウィンドウのコントロール バーに適用します。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 保存された状態をフレーム ウィンドウのコントロール バーに適用します。
 
 ### <a name="remarks"></a>解説
@@ -1127,7 +1127,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ID が 0 のステータス バー ペインに文字列を配置します。
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ void SetMessageText(UINT nID);
 
 タスク バーに表示される Windows 7 プログレス バーの現在位置を設定します。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 タスク バーに表示される Windows 7 プログレス バーの範囲を設定します。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ void SetProgressBarRange(
 
 タスク バー ボタンに表示される進行状況インジケーターの種類と状態を設定します。
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ BOOL SetTaskbarOverlayIcon(
 
 ウィンドウ オブジェクトのタイトルを設定します。
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ void SetTitle(LPCTSTR lpszTitle);
 
 コントロール バーの表示と非表示を切り替える場合は、このメンバー関数を呼び出します。
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ TRUE の場合は、コントロール バーの表示を遅らせる。 FALSE �
 
 `CFrameWnd`オブジェクトの子孫であるすべてのウィンドウを表示します。
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

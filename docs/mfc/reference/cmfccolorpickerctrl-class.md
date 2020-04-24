@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367684"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752537"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 
@@ -184,7 +184,7 @@ COLORREF GetColor() const;
 
 ユーザーが選択した色の色相、輝度、彩度の値を取得します。
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ double GetSaturation() const;
 
 現在の色を、指定した RGB カラー コンポーネントまたは指定したセルの六角形で定義された色に設定します。
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [in]青の色のコンポーネント。
 
-*X*<br/>
+*x*<br/>
 [in]セルの六角形を指すカーソルの x 座標。
 
 *Y*<br/>
@@ -292,7 +292,7 @@ BOOL SelectCellHexagon(
 
 現在のカラーを指定した RGB カラー値に設定します。
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 現在の色を指定した HLS カラー値に設定します。
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 現在選択されている色の色相を変更します。
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 現在選択されている色の輝度を変更します。
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 カラー ピッカー コントロールの輝度バーの幅を設定します。
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*W*<br/>
+*w*<br/>
 [in]輝度バーの幅をピクセル単位で指定します。
 
 ### <a name="remarks"></a>解説
@@ -382,7 +382,7 @@ void SetLuminanceBarWidth(int w);
 
 最初に選択した色を設定します。
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ void SetOriginalColor(COLORREF ref);
 
 現在のカラー パレットを設定します。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ void SetPalette(CPalette* pPalette);
 
 現在選択されている色の彩度を変更します。
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 表示するカラー ピッカー コントロールの種類を設定します。
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

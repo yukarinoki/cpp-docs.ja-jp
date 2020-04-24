@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374026"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753241"
 ---
 # <a name="cdrawingmanager-class"></a>クラス
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |パラメーター|説明|
-|*サイズ*|[in]ビットマップのサイズを示す[CSize](../../atl-mfc-shared/reference/csize-class.md)パラメーター。|
+|*size*|[in]ビットマップのサイズを示す[CSize](../../atl-mfc-shared/reference/csize-class.md)パラメーター。|
 |*pビット*|[アウト]DIB のビット値の位置を受け取るデータ ポインターへのポインター。|
 |*ビットマップ*|元のビットマップへのハンドル|
 |*clr透明*|元のビットマップの透明色を指定する RGB 値。|
@@ -174,7 +174,7 @@ DIB ビットマップの作成方法の詳細については、 [CreateDIBSecti
 
 透明または半透明のピクセルを持つビットマップを表示します。
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ void DrawAlpha(
 
 指定された塗りつぶしと境界線の色で楕円を描画します。
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ BOOL DrawGradientRing(
 
 線を描画します。
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ void DrawLineA(
 
 指定された塗りつぶし色と境界線の色で四角形を描画します。
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ BOOL DrawShadow(
 
 四角形の領域を 2 色のグラデーションで塗りつぶします。
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ void Fill4ColorsGradient(
 
 指定した色のグラデーションで四角形の領域を塗りつぶします。
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ void FillGradient(
 
 指定した色のグラデーションで四角形の領域を塗りつぶします。
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ HSV または HSL カラーを RGB 表現に変換するには、次のいずれ
 
 矩形領域を反転します。
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -924,7 +924,7 @@ static void __stdcall SetAlphaPixel(
 *Rect*<br/>
 [in]アプリケーション内の四角形領域。 描画マネージャは、この領域の下と右に影を描画します。
 
-*X*<br/>
+*x*<br/>
 [in]カラーに対するピクセルの水平座標。
 
 *Y*<br/>
@@ -970,7 +970,7 @@ static void __stdcall SetPixel(
 |*pビット*|[in]ビットマップのビット値へのポインター。|
 |*Cx*|[in]ビットマップの幅の合計。|
 |*Cy*|[in]ビットマップの合計の高さ。|
-|*X*|[in]変更するビットマップ内のピクセルの x 座標。|
+|*x*|[in]変更するビットマップ内のピクセルの x 座標。|
 |*Y*|[in]変更するビットマップ内のピクセルの y 座標。|
 |*色*|[in]指定された座標で識別されるピクセルの新しい色。|
 
@@ -992,7 +992,7 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |パラメーター|説明|
-|*カラー1*|[in]最初に混ぜる色。|
+|*color1*|[in]最初に混ぜる色。|
 |*カラー2*|[in]ミックスする 2 番目の色。|
 |*ドブルラム比*|[in]新しい色の明るさの比率。 `SmartMixColors`最終的な色を決定する前に、混合カラーの明度をこの比率で乗算します。|
 |*k1*|[in]最初の色の重み付け比率。|
@@ -1012,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
 
 指定された四角形の内部にあるソース DC コンテンツを 90 度回転します。
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

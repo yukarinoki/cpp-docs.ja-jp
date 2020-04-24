@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365103"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752200"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ class CToolTipCtrl : public CWnd
 
 ツール ヒント コントロールをアクティブまたは非アクティブ化します。
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 ツールのテキストを含む文字列リソースの ID。
 
 *ツール*<br/>
-ツールの外接する四角形の座標を格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 座標は *、pWnd*で識別されるウィンドウのクライアント領域の左上隅を基準にしています。
+ツールの外接する四角形の座標を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。 座標は *、pWnd*で識別されるウィンドウのクライアント領域の左上隅を基準にしています。
 
 *NIDツール*<br/>
 ツールの ID。
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>パラメーター
 
 *Lprc*<br/>
-ツール ヒント ウィンドウの四角形またはテキスト表示の四角形を保持する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+ツール ヒント ウィンドウの四角形またはテキスト表示の四角形を保持する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 *大きく*<br/>
 TRUE の場合 *、lprc*を使用してテキスト表示の四角形を指定し、対応するウィンドウ四角形を受け取ります。 FALSE の場合 *、lprc*を使用してウィンドウの四角形を指定し、対応するテキスト表示四角形を受け取ります。
@@ -289,7 +289,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 *dwStyle*パラメーターは、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせにすることができます。 さらに、ツール ヒント コントロールには、TTS_ALWAYSTIP と TTS_NOPREFIX というクラス固有のスタイルが 2 つ用意されています。
 
-|スタイル|意味|
+|Style|意味|
 |-----------|-------------|
 |TTS_ALWAYSTIP|ツール ヒント コントロールのオーナー ウィンドウがアクティブか非アクティブかにかかわらず、ツール上にカーソルが置かれるときツール ヒントが表示されるように指定します。 このスタイルを使用しない場合、ツールヒントコントロールは、ツールのオーナー ウィンドウがアクティブな場合には表示されますが、非アクティブの場合は表示されません。|
 |TTS_NOPREFIX|このスタイルは、システムがアンパサンド (&) 文字を文字列から取り除くのを防ぎます。 ツール ヒント コントロールにTTS_NOPREFIXスタイルがない場合、システムはアンパサンド文字を自動的に取り除き、アプリケーションがメニュー項目とテキストの両方としてツール ヒント コントロール内の文字列として同じ文字列を使用できるようにします。|
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 ツール ヒント コントロールでサポートされているツールのコレクションから *、pWnd*および*nIDTool*で指定されたツールを削除します。
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ int GetDelayTime(DWORD dwDuration) const;
 
 ツール ヒント ウィンドウに設定されている上余白、左余白、下余白、および右余白を取得します。
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *Lprc*<br/>
-マージン情報を`RECT`受け取る構造体のアドレス。 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体のメンバーは、外接する四角形を定義しません。 このメッセージの目的のために、構造体メンバーは次のように解釈されます。
+マージン情報を`RECT`受け取る構造体のアドレス。 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体のメンバーは、外接する四角形を定義しません。 このメッセージの目的のために、構造体メンバーは次のように解釈されます。
 
 |メンバー|[表記]|
 |------------|--------------------|
@@ -486,7 +486,7 @@ int GetMaxTipWidth() const;
 
 ツール ヒント コントロールがツールに保持するテキストを取得します。
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ COLORREF GetTipTextColor() const;
 
 現在のツールヒント コントロールのタイトルを取得します。
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 表示されたツール ヒント ウィンドウをビューから削除します。
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ void Pop();
 
 現在のツールヒント コントロールを、最後のマウス メッセージの座標で表示します。
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ void Popup();
 
 マウス メッセージをツール ヒント コントロールに渡して処理します。
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ void RelayEvent(LPMSG lpMsg);
 
 ツール ヒント コントロールの遅延時間を設定します。
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ void SetDelayTime(
 
 ツール ヒント ウィンドウの上下左右の余白を設定します。
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ int SetMaxTipWidth(int iWidth);
 
 ツール ヒント ウィンドウの背景色を設定します。
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ void SetTipBkColor(COLORREF clr);
 
 ツール ヒント ウィンドウのテキストの色を設定します。
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Windows SDK の[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の*アイコ
 
 ツールヒントがツールに保持する情報を設定します。
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 ツールの新しい外接する四角形を設定します。
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ void SetToolRect(
 ツールの ID。
 
 *Lprect*<br/>
-新しい外接する四角形を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+新しい外接する四角形を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CツールチップCtrl::セットウィンドウテーマ
 
@@ -894,7 +894,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 現在のツールを強制的に再描画します。
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 このコントロールのツールのツール ヒント テキストを更新します。
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

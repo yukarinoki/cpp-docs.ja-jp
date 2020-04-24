@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354448"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032448"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
-キー/値ペアのコレクションである *マップ*を表します。 XAML[データ バインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援する[Windows::ファウンデーション:コレクション::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)を実装します。
+キー/値ペアのコレクションである *マップ*を表します。 XAML[データ バインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援する[Windows::ファウンデーション:コレクション::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、Windows の C++ 具体的な実装です[::コレクション::IMap<::コレクション::IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)および[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)型は、パブリック Windows ランタイム インターフェイスを介して渡されます。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を[Windows::Foundation::コレクション::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更することで、エラーを修正できます。
+マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、Windows の C++ 具体的な実装です[::コレクション::IMap<::コレクション::IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2)および[IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)型は、パブリック Windows ランタイム インターフェイスを介して渡されます。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を[Windows::Foundation::コレクション::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2)に変更することで、エラーを修正できます。
 
 詳細については、[コレクション](../cppcx/collections-c-cx.md) を参照してください。
 
@@ -136,7 +136,7 @@ First() によって返される反復器を保持する便利な方法は **、
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>マップ::GetView メソッド
 
-現在のマップの読み取り専用ビューを返します。つまり、[プラットフォーム::コレクション::マップビュークラス](../cppcx/platform-collections-mapview-class.md)は、[Windows::ファウンデーション::コレクション::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) インターフェイスを実装します。
+現在のマップの読み取り専用ビューを返します。つまり[、>\<](/uwp/api/windows.foundation.collections.imapview-2) [プラットフォーム::コレクション::マップビュークラス](../cppcx/platform-collections-mapview-class.md)を実装しています。
 
 ### <a name="syntax"></a>構文
 
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-イベントを発生させたオブジェクトと発生した変更の種類に関する情報を含む>。 [\<](/uwp/api/windows.foundation.collections.mapchangedeventhandler) [「iMapChangedEventArgs\<K>」](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)および「[コレクション変更列挙」](/uwp/api/windows.foundation.collections.collectionchange)も参照してください。
+イベントを発生させたオブジェクトと発生した変更の種類に関する情報を含む>。 [\<](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) [「iMapChangedEventArgs\<K>」](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)および「[コレクション変更列挙」](/uwp/api/windows.foundation.collections.collectionchange)も参照してください。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="mapsize-method"></a><a name="size"></a>マップ::サイズの方法
 
-マップ内の[要素を>する要素を\<返](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)します。
+マップ内の[要素を>する要素を\<返](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)します。
 
 ### <a name="syntax"></a>構文
 

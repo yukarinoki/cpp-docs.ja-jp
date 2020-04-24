@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373967"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753199"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 
@@ -259,7 +259,7 @@ CFont* GetPrinterFont() const;
 
 選択`GetSelectedText`したテキストを`CString`オブジェクトにコピーする場合に、選択範囲の先頭の改行文字の前にある文字を呼び出します。
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ UINT PrintInsideRect(
 
 オブジェクト`SerializeRaw`を読み`CArchive`取るか、テキスト ファイルに書`CEditView`き込むオブジェクトを呼び出します。
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ void SerializeRaw(CArchive& ar);
 
 `SetPrinterFont` *pFont*で指定されたフォントにプリンタフォントを設定する呼び出し。
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ void SetPrinterFont(CFont* pFont);
 
 表示と印刷に使用するタブ ストップを設定します。
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ void SetTabStops(int nTabStops);
 
 バッファーのロックを解除するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

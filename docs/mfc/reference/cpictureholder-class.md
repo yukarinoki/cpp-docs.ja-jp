@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 067ea7238c48f2698d7bfe469e9c4be10129c065
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edb93b05c1187d2c78f4c1120ee76282167c9b49
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364051"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753600"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder クラス
 
@@ -267,7 +267,7 @@ short GetType();
 
 画像の種類を示す値。 値とその意味は次のとおりです。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |PICTYPE_UNINITIALIZED|`CPictureHolder`オブジェクトは、ユニット化されます。|
 |PICTYPE_NONE|`CPictureHolder`オブジェクトが空です。|
@@ -287,7 +287,7 @@ LPPICTURE m_pPict;
 
 *rcRender*によって参照される四角形にピクチャをレンダリングします。
 
-```
+```cpp
 void Render(
     CDC* pDC,
     const CRect& rcRender,
@@ -309,7 +309,7 @@ void Render(
 
 オブジェクトを`CPictureHolder`インターフェイスに`IPictureDisp`接続します。
 
-```
+```cpp
 void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```
 

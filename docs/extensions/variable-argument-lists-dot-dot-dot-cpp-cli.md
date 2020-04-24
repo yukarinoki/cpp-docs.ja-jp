@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032305"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 
 この例では、C++/CLI で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示します。
 
 > [!NOTE]
-> これは C++/CLI に関するトピックです。 ISO Standard C++ での `...` の使用については、「[Ellipses and Variadic Templates (省略記号と可変子引数テンプレート)](../cpp/ellipses-and-variadic-templates.md)」と、「[Postfix expressions (後置式)](../cpp/postfix-expressions.md)の「省略記号と既定の引数」を参照してください。
+> これは C++/CLI に関するトピックです。 ISO 標準 C++ での 使用については、`...`[後置式](../cpp/postfix-expressions.md)の[省略記号と可変](../cpp/ellipses-and-variadic-templates.md)テンプレート、省略記号と既定の引数を参照してください。
 
 `...` を使用するパラメーターは、パラメーター リストの最後のパラメーターにする必要があります。
 
@@ -101,6 +101,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [配列](arrays-cpp-component-extensions.md)

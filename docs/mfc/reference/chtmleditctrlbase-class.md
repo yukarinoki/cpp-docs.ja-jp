@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 95de66a66d9c1a6f3abf992c5a9cd64ee1fe91ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352205"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752341"
 ---
 # <a name="chtmleditctrlbase-class"></a>クラス
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM フォント名コマンド ID](/previous-versions/aa769880\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTNAMEコマンド ID](/previous-versions/aa769880\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>次の文字列を設定します。
 
@@ -2100,7 +2100,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 HTML フォント サイズ (1 ~ 7)。 値 0 を指定すると、フォント サイズは 1 に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -2109,7 +2109,7 @@ HTML フォント サイズ (1 ~ 7)。 値 0 を指定すると、フォント �
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM フォントサイズ コマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTSIZEコマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>次の色を設定します。
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FORECOLORコマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>次の手順を実行します。
 
@@ -2155,7 +2155,7 @@ TRUE の場合、すべての貼り付け操作は Internet Explorer 5 と互換
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM IE50_PASTE_MODEコマンド ID](/previous-versions/aa769923\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_IE50_PASTE_MODEコマンド ID](/previous-versions/aa769923\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>を設定します。
 
@@ -2176,7 +2176,7 @@ TRUE の場合、サイズ変更または移動操作中に要素の外観が継
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM LIVERESIZE コマンド ID](/previous-versions/aa769928\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_LIVERESIZEコマンド ID](/previous-versions/aa769928\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>を選択します。
 
@@ -2197,7 +2197,7 @@ TRUE の場合、ユーザーが Shift キーまたは Ctrl キーを押した�
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM の複数選択コマンド ID](/previous-versions/aa769929\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_MULTIPLESELECTIONコマンド ID](/previous-versions/aa769929\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>カーソルを置き換えます。
 
@@ -2218,7 +2218,7 @@ TRUE の場合、WebBrowser はマウス ポインタを変更しません。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM OVERRIDE_CURSORコマンド ID](/previous-versions/aa769932\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769932\(v=vs.85\))コントロールにIDM_OVERRIDE_CURSORコマンド ID を送信します。
 
 ## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>次の値を指定します。
 
@@ -2239,7 +2239,7 @@ TRUE の場合、テキスト入力モードは上書きされます。FALSE の
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM 上書きコマンド ID](/previous-versions/aa770016\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_OVERWRITEコマンド ID](/previous-versions/aa770016\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>デザインの設定
 
@@ -2260,7 +2260,7 @@ TRUE の場合、表示設定が "非表示" または "none" に設定された
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM RESPECTVISIBILITY_INDESIGNコマンド ID](/previous-versions/aa770023\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_RESPECTVISIBILITY_INDESIGNコマンド ID](/previous-versions/aa770023\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>次の項目を配置します。
 
@@ -2281,7 +2281,7 @@ TRUE の場合、プロパティを持つすべての要素の`styleFloat`グリ
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM を](/previous-versions/aa769947\(v=vs.85\))送信します。
+このメソッドは[、IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>をクリックします。
 
@@ -2302,7 +2302,7 @@ TRUE の場合、ドキュメント内のすべてのタグの位置を示すグ
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWALLTAGSコマンド ID](/previous-versions/aa769948\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>ウィンドウタグを表示します。
 
@@ -2323,7 +2323,7 @@ TRUE の場合、すべてのエリア タグのグリフを表示します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、[コントロールに IDM SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWAREATAGSコマンド ID](/previous-versions/aa769949\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>次の項目を使用します。
 
@@ -2344,7 +2344,7 @@ TRUE の場合、すべての br タグのグリフを表示します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWWBRTAGSコマンド ID](/previous-versions/aa769956\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>タグを表示します。
 
@@ -2365,7 +2365,7 @@ TRUE の場合、すべてのコメント タグのグリフを表示します�
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM の SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWCOMMENTTAGSコマンド ID](/previous-versions/aa769950\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>次の項目を使用します。
 
@@ -2386,7 +2386,7 @@ TRUE の場合は、インターネット エクスプローラ 4.0 に表示さ
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM のコマンド ID](/previous-versions/aa769952\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769952\(v=vs.85\))コントロールにIDM_SHOWMISCTAGSコマンド ID を送信します。
 
 ## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>次の要素を使用します。
 
@@ -2407,7 +2407,7 @@ TRUE の場合、すべてのスクリプト タグのグリフを表示しま�
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM のスクリプトタグのコマンド ID](/previous-versions/aa769953\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWSCRIPTTAGSコマンド ID](/previous-versions/aa769953\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>次の項目を使用します。
 
@@ -2428,7 +2428,7 @@ TRUE の場合、すべてのスタイル タグのグリフを表示します�
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWSTYLETAGSコマンド ID](/previous-versions/aa769954\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>タグを表示します。
 
@@ -2449,7 +2449,7 @@ TRUE の場合、すべての不明なタグのグリフを表示します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWUNKNOWNTAGSコマンド ID](/previous-versions/aa769955\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>テキストエリア
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM TEXTAREA コマンド ID](/previous-versions/aa769986\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_TEXTAREAコマンド ID](/previous-versions/aa769986\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>テキストボックス
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM TEXTBOX コマンド ID](/previous-versions/aa769980\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_TEXTBOXコマンド ID](/previous-versions/aa769980\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>をクリックします。
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM アンブックマーク コマンド ID](/previous-versions/aa770034\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNBOOKMARKコマンド ID](/previous-versions/aa770034\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>下線
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM アンダーライン コマンド ID](/previous-versions/aa770035\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa770035\(v=vs.85\))コントロールにIDM_UNDERLINEコマンド ID を送信します。
 
 ## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>リンクを解除します。
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM UNLINK コマンド ID](/previous-versions/aa770037\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNLINKコマンド ID](/previous-versions/aa770037\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>次のリストを並べ替えます。
 
@@ -2560,7 +2560,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、IDM UNORDERLIST コマンド ID](/previous-versions/aa769987\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNORDERLISTコマンド ID](/previous-versions/aa769987\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754668"
 ---
 # <a name="cdaoworkspace-class"></a>CDAOワークスペースクラス
 
@@ -213,7 +213,7 @@ virtual void Append();
 
 トランザクションを開始するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ virtual void Close();
 
 このメンバー関数を呼び出してトランザクションをコミットします — ワークスペース内の 1 つ以上のデータベースに対する編集と更新のグループを保存します。
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ short GetDatabaseCount();
 
 ワークスペースで開いているデータベースに関するさまざまな情報を取得します。
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ short GetWorkspaceCount();
 
 セッションで開いているワークスペースに関するさまざまな情報を取得します。
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 現在のトランザクションを終了し、トランザクションが開始される前にワークスペース内のすべてのデータベースをその状態に復元するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 
 ワークスペースの DAO IsolateODBCTrans プロパティの値を設定するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376985"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753818"
 ---
 # <a name="colepastespecialdialog-class"></a>クラスをクリックします。
 
@@ -105,7 +105,7 @@ OLE 固有のダイアログ ボックスの詳細については[、「OLE](../
 
 この関数を呼び出して、アプリケーションが [形式を選択して貼り付け] 操作でサポートできる形式の一覧に新しい形式を追加します。
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -178,7 +178,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 この関数を呼び出して、アプリケーションが [形式を選択して貼り付け] 操作でサポートできる形式の一覧に、次のクリップボード形式を追加します。
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

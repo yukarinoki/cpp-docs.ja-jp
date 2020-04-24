@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318214"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751277"
 ---
 # <a name="csliderctrl-class"></a>クラス
 
@@ -169,7 +169,7 @@ class CSliderCtrl : public CWnd
 
 スライダー コントロールの現在の選択範囲をクリアします。
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 
 スライダー コントロールから現在の目盛りを削除します。
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 スライダー コントロールのスタイルを指定します。 Windows SDK で説明されている[スライダー コントロール スタイル](/windows/win32/Controls/trackbar-control-styles)の任意の組み合わせをコントロールに適用します。
 
 *Rect*<br/>
-スライダー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+スライダー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 スライダー コントロールの親ウィンドウを指定します`CDialog`。 NULL にすることはできません。
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 スライダー コントロールのスタイルを指定します。 Windows SDK で説明されている[スライダー コントロール スタイル](/windows/win32/Controls/trackbar-control-styles)の任意の組み合わせをコントロールに適用します。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -304,7 +304,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 
 スライダー コントロールのチャネルに外接する四角形のサイズと位置を取得します。
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ int GetPos() const;
 
 スライダー コントロール内のスライダーの最大位置と最小位置を取得します。
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ int GetRangeMin() const;
 
 スライダー コントロール内の現在の選択範囲の開始位置と終了位置を取得します。
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ int GetThumbLength() const;
 
 スライダー コントロールのスライダー (つまみ) に外接する四角形のサイズと位置を取得します。
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ int SetPageSize(int nSize);
 
 スライダー コントロールのスライダーの現在位置を設定します。
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ void SetPos(int nPos);
 
 スライダー コントロールのスライダーの範囲 (最小位置と最大位置) を設定します。
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ void SetRange(
 
 スライダー コントロールのスライダーの最大範囲を設定します。
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ void SetRangeMax(
 
 スライダー コントロールのスライダーの最小範囲を設定します。
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ void SetRangeMin(
 
 スライダー コントロールの現在の選択範囲の開始位置と終了位置を設定します。
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ void SetSelection(
 
 現在のトラックバー コントロールのスライダーの長さを設定します。
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ BOOL SetTic(int nTic);
 
 スライダーで目盛りを表示する頻度を設定します。
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ int SetTipSide(int nLocation);
 
 ツールヒント コントロールをスライダー コントロールに割り当てます。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

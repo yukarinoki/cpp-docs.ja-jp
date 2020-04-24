@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365796"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751645"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -124,7 +124,7 @@ MFC アプリケーションのデバッグ バージョンの実行時に、 �
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ Windows NT およびすべてのバージョンの`afxDump`Windows では、ア�
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 この関数は、渡された SCODE をテストして、それがエラーかどうかを調べます。
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ malloc 関数や Windows 関数など、基になるメモリ アロケーター
 
 デバッグ中にオブジェクトの状態をダンプするには、デバッガーでこの関数を呼び出します。
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ void AfxDump(const CObject* pOb);
 
 このグローバル関数を使用して、現在のスタックのイメージを生成できます。
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ AFXAPI 呼び出し規約は、呼び出し先がスタックからパラメー�
 
 アプリケーションのメモリ空間にあるすべてのシリアル化可能`CObject`な派生クラスの指定された反復関数を呼び出します。
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ AFXAPI AfxDoForAllClasses(
 
 `CObject` **new**で割り当てられたオブジェクトから派生したすべてのオブジェクトに対して、指定された反復関数を実行します。
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

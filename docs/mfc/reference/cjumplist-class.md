@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372334"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754938"
 ---
 # <a name="cjumplist-class"></a>クラスをジャンプします。
 
@@ -99,7 +99,7 @@ class CJumpList;
 
 コミットせずにリスト作成トランザクションを中止します。
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -158,7 +158,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>パラメーター
 
-*カテゴリ*<br/>
+*category*<br/>
 既知のカテゴリの種類を指定します。 KDC_RECENTまたはKDC_KNOWN。
 
 ### <a name="return-value"></a>戻り値
@@ -256,7 +256,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 
 現在のインスタンスに追加されたすべてのタスクと宛先を`CJumpList`削除します。
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ void ClearAll();
 
 これまでに CJumpList の現在のインスタンスに追加されたすべての宛先を削除します。
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ BOOL InitializeList();
 
 ビルドするリストのアプリケーション ユーザー モデル ID を設定します。
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 

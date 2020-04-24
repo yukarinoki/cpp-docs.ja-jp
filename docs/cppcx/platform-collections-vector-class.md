@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354384"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032123"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
-インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションを表します。 XAML[データ バインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援する[Windows::ファウンデーション:コレクション::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)を実装します。
+インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションを表します。 XAML[データ バインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援する[Windows::ファウンデーション:コレクション::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,9 +61,9 @@ Vector オブジェクトに含まれている要素の型。
 
 1. パブリック列挙型クラス
 
-**ベクター**クラスは[、Windows::Foundation::コレクション::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)インターフェイスの C++ 具体的な実装です。
+**ベクター**クラスは[、Windows::Foundation::コレクション::IVector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ 具体的な実装です。
 
-パブリックの戻り値またはパラメーターで**Vector**型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+パブリックの戻り値またはパラメーターで**Vector**型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -96,7 +96,7 @@ Vector オブジェクトに含まれている要素の型。
 |||
 |-|-|
 |名前|説明|
-|イベント[ウィンドウズ::ファウンデーション:コレクション::ベクター\<変更イベントハンドラT>^ ベクトル変更](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector が変更されたときに発生します。|
+|イベント[ウィンドウズ::ファウンデーション:コレクション::ベクター\<変更イベントハンドラT>^ ベクトル変更](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -372,7 +372,7 @@ Vector(std::initializer_list<T> il);
 *N*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの要素数。
 
-*サイズ*<br/>
+*size*<br/>
 ベクターの要素数。
 
 *value*<br/>

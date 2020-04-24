@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367768"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752578"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
 
@@ -380,7 +380,7 @@ CMFCColorBar(
 
 カラー バー コントロールのボタンを含めるために必要な垂直および水平の余白を計算し、それらのボタンの位置を調整します。
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ static BOOL CreatePalette(
 
 自動ボタンの表示/非表示を切り替えます。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ void EnableAutomaticButton(
 
 ユーザーが色を選択できるようにするダイアログ ボックスの表示を有効または無効にします。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 現在選択されている色を設定します。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ static void SetColorName(
 
 カラー バー コントロールの新しいコマンド ID を設定します。
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ void SetCommandID(UINT nCommandID);
 
 現在のドキュメントで使用されている色のリストを設定します。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 左右のカラー セルとクライアント領域の境界との間のスペースである水平マージンを設定します。
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ void SetHorzMargin(int nHorzMargin);
 
 保護された`m_pWndPropList`データ メンバーを、プロパティ グリッド コントロールへの指定されたポインターに設定します。
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 上または下のカラー セルとクライアント領域境界の間のスペースである垂直方向の余白を設定します。
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

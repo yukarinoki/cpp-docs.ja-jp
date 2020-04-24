@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367784"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754877"
 ---
 # <a name="cmfcbutton-class"></a>クラス
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 ツールヒントのテキスト全体を大きなツールヒント ウィンドウに表示するか、小さなツールヒント ウィンドウに切り詰められたテキストを表示するかを指定します。
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 ボタンテキストフォントがアプリケーションメニューのフォントと同じかどうかを指定します。
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 ボタン テキストの配置`CMFCButton::AlignStyle`を指定するには、次のいずれかの列挙値を使用します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |ALIGN_CENTER|(デフォルト)ボタンテキストをボタンの中央に揃えます。|
 |ALIGN_LEFT|ボタンテキストをボタンの左側に揃えます。|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 次の表は、`CMFCButton::m_nFlatStyle`ボタンの外観を指定する列挙値の一覧です。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|(デフォルト)ボタンは高い 3 次元の側面を持っているように見えます。 ボタンをクリックすると、ボタンが深いインデントに押されたように見えます。|
 |BUTTONSTYLE_FLAT|マウスがボタンの上に置かれていない場合、ボタンは 2 次元で、上げられた辺はありません。 マウスボタンの上にマウスが置くと、ボタンの側面が低く、3 次元に表示されます。 ボタンをクリックすると、ボタンが押されて浅いインデントが表示されます。|
@@ -700,7 +700,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ボタンを自動繰り返しモードに設定します。
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 
 チェックボタンのイメージを設定します。
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 ボタンテキストの背景色を設定します。
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ void SetFaceColor(
 
 ボタンのイメージを設定します。
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ void SetImage(
 
 カーソルイメージを設定します。
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 カーソルを手のイメージに設定します。
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ void SetMouseCursorHand();
 
 オブジェクトを`CMenuImages`使用してボタンイメージを設定します。
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [in]`CMenuImage::IMAGES_IDS`列挙体で定義されているボタン イメージ識別子の 1 つ。 イメージ値は、矢印、ピン、ラジオ ボタンなどのイメージを指定します。
 
-*状態*<br/>
+*state*<br/>
 [in]列挙体で定義されているボタン イメージの状態識別子の`CMenuImages::IMAGE_STATE`1 つ。 イメージの状態は、黒、グレー、明るいグレー、白、濃い灰色などのボタンの色を指定します。 既定値は `CMenuImages::ImageBlack` です。
 
 *無効な ID*<br/>
@@ -936,7 +936,7 @@ void SetStdImage(
 
 選択されていないボタンのボタン テキストの色を設定します。
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 選択したボタンのボタン テキストの色を設定します。
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 ツールヒントをボタンに関連付けます。
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

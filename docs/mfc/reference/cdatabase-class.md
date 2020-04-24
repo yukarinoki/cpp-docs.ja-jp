@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376477"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754640"
 ---
 # <a name="cdatabase-class"></a>クラス
 
@@ -186,7 +186,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 データ ソースが、進行中の非同期操作または 2 番目のスレッドからのプロセスのいずれかを取り消すように要求するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ BOOL CommitTrans();
 
 SQL コマンドを直接実行する必要がある場合に、このメンバー関数を呼び出します。
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ BOOL Rollback();
 
 このメンバー関数を呼び出す`OpenEx` `Open` ( または ) を呼び出す前に、データ ソース接続がタイムアウトするまでの既定の秒数を上書きします。
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 
 接続されているデータ ソースでの後続の操作がタイムアウトするまでに許容される既定の秒数をオーバーライドします。
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

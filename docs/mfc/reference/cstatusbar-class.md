@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376257"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753048"
 ---
 # <a name="cstatusbar-class"></a>クラス
 
@@ -271,7 +271,7 @@ UINT GetItemID(int nIndex) const;
 
 *nIndex*で指定されたインジケーターの座標を *、lpRect*が指す構造体にコピーします。
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 四角形の座標を取得するインジケーターのインデックス。
 
 *Lprect*<br/>
-*nIndex*で指定されたインジケーターの座標を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
+*nIndex*で指定されたインジケーターの座標を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -293,7 +293,7 @@ void GetItemRect(
 
 *nID*、 *nStyle*、および*cxWidth*を*nIndex*で指定された位置にあるインジケータ ペインの ID、スタイル、および幅に設定します。
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ ID の配列へのポインター。
 
 指定したインジケーター ペインを新しい ID、スタイル、および幅に設定します。
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ void SetPaneInfo(
 
 ステータス バーのペインのスタイルを設定します。
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

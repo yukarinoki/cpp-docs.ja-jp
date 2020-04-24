@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366077"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753879"
 ---
 # <a name="coledispatchdriver-class"></a>クラスをディスパッチします。
 
@@ -103,7 +103,7 @@ OLE ディスパッチ インターフェイスは、オブジェクトのメソ
 
 `AttachDispatch` メンバー関数を呼び出して、 `IDispatch` ポインターを `COleDispatchDriver` オブジェクトにアタッチします。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ LPDISPATCH 型の詳細については、「Windows SDK[での IDispatch イン�
 
 *dwDispID*で指定されたオブジェクト プロパティを取得します。
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ void GetProperty(
 
 *dwDispID*で指定されたオブジェクト メソッドまたはプロパティを *、wFlags*で指定されたコンテキストで呼び出します。
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,11 +282,11 @@ void AFX_CDECL InvokeHelper(
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**長い**|
+|VT_I4|**long**|
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
-|VT_DATE|**日付**|
+|VT_DATE|**DATE**|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPディスパッチ|
 |VT_ERROR|SCODE|
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 接続を`IDispatch`解放します。 詳細については、[次を参照してください IDispatch インターフェイスの実装](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ void ReleaseDispatch();
 
 *dwDispID*で指定された OLE オブジェクト プロパティを設定します。
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363945"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750974"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -165,7 +165,7 @@ class CPropertySheet : public CWnd
 
 指定されたページをプロパティ シートの右端のタブで追加します。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ void AddPage(CPropertyPage* pPage);
 
 `CPropertySheet` オブジェクトを構築します。
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ virtual INT_PTR DoModal();
 
 プロパティ シートにタブの行をスタックするかどうかを示します。
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 プロパティ シートを終了します。
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ CTabCtrl* GetTabControl() const;
 
 四角形のダイアログ ボックスの単位を画面単位に変換します。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *Lprect*<br/>
-変換するダイアログ ボックス座標を含む[RECT](/previous-versions/dd162897\(v=vs.85\))構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
+変換するダイアログ ボックス座標を含む[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -641,7 +641,7 @@ virtual BOOL OnInitDialog();
 
 プロパティ シートで指定したボタンの選択をシミュレートします。
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Windows SDK プレス ボタン メッセージの詳細については[、「PS
 
 プロパティ シートからページを削除し、関連付けられているウィンドウを破棄します。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 [完了] コマンド ボタンのテキストを設定します。
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 プロパティ シートのキャプション (フレーム ウィンドウのタイトル バーに表示されるテキスト) を指定します。
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ void SetTitle(
 
 ウィザードのプロパティ シートの [戻る]、[次へ]、または [完了] ボタンを有効または無効にします。
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 プロパティ ページをウィザードとして設定します。
 
-```
+```cpp
 void SetWizardMode();
 ```
 

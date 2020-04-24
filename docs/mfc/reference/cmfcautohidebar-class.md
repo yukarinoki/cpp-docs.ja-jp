@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 62750f4fb1261f4f30286297c3a240ab67e6df1c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 05f77dfba442f1ce4a375c8f225908799ece1788
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369897"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751764"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 
@@ -315,7 +315,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ## <a name="cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>状態を設定します。
 
-```
+```cpp
 void SetRecentVisibleState(BOOL bState);
 ```
 
@@ -384,7 +384,7 @@ virtual CSize StretchPane(
 
 自動的に隠すバーのグループの自動非表示モードを無効にします。
 
-```
+```cpp
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 ```
 
@@ -398,7 +398,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 自動的に隠すバーを再描画する必要がある場合に、フレームワークによって呼び出されます。
 
-```
+```cpp
 void UpdateVisibleState();
 ```
 

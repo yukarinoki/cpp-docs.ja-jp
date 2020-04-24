@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373755"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752919"
 ---
 # <a name="cframewndex-class"></a>クラス
 
@@ -316,7 +316,7 @@ class CFrameWndEx : public CFrameWnd
 
 OLE クライアント アイテムとフレームのクライアント領域のレイアウトを調整します。
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 指定したペインをフレーム ウィンドウにドッキングします。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 フルスクリーンモードでメインメニューを表示または非表示にします。
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 フレーム ウィンドウの全画面表示モードを有効にします。
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 ドッキング状態の読み込みを有効または無効にします。
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 ペイン メニューの自動処理を有効または無効にします。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 システム カラーが変更されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ペインの登録を解除し、ドッキング マネージャーから削除します。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,20 +1999,20 @@ void RemovePaneFromDockManager(
 
 ドッキング レイアウトをレジストリに格納されているドッキング状態に戻します。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 ドッキング状態。 このパラメーターは無視されます。
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>フレームウィンドウ付きのウィンドウ::印刷プレビューフレーム
 
 印刷プレビューのフレーム ウィンドウを設定します。
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ユーザー定義コマンドをツール バー メニューに挿入します。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ void SetupToolbarMenu(
 
 メイン フレームを全画面モードと通常モードの間で切り替えます。
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 指定したペインの表示と非表示を切り替えます。
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 ウィンドウ フレーム キャプションを更新するために、フレームワークによって呼び出されます。
 
-```
+```cpp
 void UpdateCaption();
 ```
 

@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: bd6a9ebc58845e88e5e82a4e29f5ccc2a46bebfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e74bacfb23081fea64d514d7085261e3648b05e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160477"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750701"
 ---
 # <a name="_variant_tclear"></a>_variant_t::Clear
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
-カプセル化された `VARIANT` オブジェクトをクリアします。
+カプセル化された`VARIANT`オブジェクトをクリアします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void Clear( );
 ```
 
 ## <a name="remarks"></a>解説
 
-カプセル化された `VARIANT` オブジェクトで `VariantClear` を呼び出します。
+カプセル`VariantClear`化された`VARIANT`オブジェクトを呼び出します。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_variant_t クラス](../cpp/variant-t-class.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751145"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 
@@ -49,7 +49,7 @@ OLE コントロールのプロパティ ページを作成および管理する
 
 プロパティ ページのプロパティ ページの`DoDataExchange`コンボ ボックス内の現在の選択範囲のインデックスと整数プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ void AFXAPI DDP_CBIndex(
 
 プロパティ ページの`DoDataExchange`コンボ ボックスで現在選択されている文字列プロパティの値とを同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ void AFXAPI DDP_CBString(
 
 プロパティ ページのコンボ ボックスで現在`DoDataExchange`の選択項目と完全に一致する文字列プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ void AFXAPI DDP_CBStringExact(
 
 プロパティの値を関連付けられたプロパティ`DoDataExchange`ページのチェック ボックス コントロールと同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ void AFXAPI DDP_Check(
 
 プロパティ ページのリスト ボックス内の`DoDataExchange`現在の選択範囲のインデックスと整数プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ void AFXAPI DDP_LBIndex(
 
 プロパティ ページの`DoDataExchange`リスト ボックスで現在選択されている文字列プロパティの値と同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ void AFXAPI DDP_LBString(
 
 プロパティ ページのリスト ボックスの現在`DoDataExchange`の選択と完全に一致する文字列プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ void AFXAPI DDP_LBStringExact(
 
 プロパティページの`DoDataExchange`関数でこの関数を呼び出して、プロパティ値を保存するときにプロパティ ページからコントロールへのプロパティ値の転送を完了します。
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 コントロールの`DoPropExchange`関数でこの関数を呼び出して、プロパティの値を関連付けられたプロパティ ページのオプション ボタン コントロールと同期させます。
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ void AFXAPI DDP_Radio(
 
 コントロールの`DoDataExchange`関数でこの関数を呼び出して、プロパティの値を関連付けられたプロパティ ページ コントロールと同期させます。
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361926"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754145"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 
@@ -380,7 +380,7 @@ virtual void AdjustLayout();
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>コントロール グリッドCtrl::常に表示ツールヒント
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ virtual BOOL EditItem(
 
 プロパティ グリッド コントロールのプロパティのリストの下に表示される説明領域を有効または無効にします。
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 プロパティ グリッド コントロールの上部にあるヘッダー コントロールを有効または無効にします。
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 
 プロパティ グリッド コントロールをスクロールし、指定したプロパティが表示されるまでプロパティ項目を展開します。
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 すべてのプロパティ グリッド コントロール ノードを展開または折りたたみます。
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 プロパティ グリッド コントロール要素に対して現在定義されているカスタム色を取得します。
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1074,7 +1074,7 @@ CMFCPropertyGridProperty* HitTest(
 
 このメソッドは *、pnArea*パラメーターが指す変数の値を設定します。 次の表に、使用可能な値と対応する領域を示します。
 
-|[値]|領域|
+|値|領域|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|プロパティ展開ボックス コントロール。|
 |`ClickArea::ClickName`|プロパティ名。|
@@ -1225,7 +1225,7 @@ BOOL IsVSDotNetLook() const;
 
 変更されたプロパティの表示方法を指定します。
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 コンボ ボックス コントロールを含むプロパティが選択されたときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 プロパティ グリッド コントロールからすべてのプロパティ オブジェクトを削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 すべてのプロパティの元の値を復元します。
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 アルファベットモードを設定またはリセットします。
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 ブール値ラベルのテキストを指定します。
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 プロパティ グリッド コントロールのプロパティを選択します。
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ void SetCurSel(
 
 プロパティ グリッド コントロールのさまざまな要素のカスタム色を指定します。
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ void SetCustomColors(
 
 現在のプロパティ グリッド コントロールの説明セクションに表示する行数を指定します。
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 現在のプロパティ グリッド コントロールのプロパティ グループのカテゴリ名の全幅を表示するかどうかを指定します。
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ void SetGroupNameFullWidth(
 
 プロパティ値のリストで区切り文字として使用される文字を定義します。
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ void SetListDelimiter(TCHAR c);
 
 ユーザーが列のサイズを変更したときに、フレームワークが現在のプロパティ グリッド コントロールの名前列と値列を再描画するかどうかを指定します。
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 
 プロパティ グリッド コントロールの外観を、Visual Studio .NET で使用されるスタイルに設定します。
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

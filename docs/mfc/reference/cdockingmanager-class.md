@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375580"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753327"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-*info*<br/>
+*情報*<br/>
 [in]ドッキング ペインの配置を含む情報構造への参照。
 
 *をクリックします。*<br/>
@@ -332,7 +332,7 @@ BOOL AddDockSite(
 
 非表示の MDI タブ付きバー ペインのリストにバー ペインへのハンドルを追加します。
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ virtual BOOL AdjustRectToClientArea(
 
 ドッキング ペインのサイズを自動非表示モードで変更し、ドッキング サイトで囲まれたフレームのクライアント領域の幅または高さを取得します。
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 指定した配置を持つドッキングされた棒を上端に移動します。
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 ドッキング ペインとツール バーの名前をメニューに追加します。
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 ドッキングウィンドウの予想される四角形を計算します。
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 レジストリからのドッキング レイアウトの読み込みを有効または無効にします。
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ペインを別のペインまたはフレーム ウィンドウにドッキングします。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ユーザーがマウスの右ボタンをクリックし、ライブラリがWM_CONTEXTMENU メッセージを処理しているときに、アプリケーション のツール バーとドッキング ペインの一覧を含む特別なコンテキスト メニューを表示するようにライブラリに指示します。
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ CRect GetOuterEdgeBounds() const;
 
 ドッキング マネージャーに属するペインの一覧を返します。 これには、すべてのフローティング ペインが含まれます。
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 自動非表示モードのペインを非表示にします。
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-*info*<br/>
+*情報*<br/>
 [in]ドッキング ペインの配置情報を格納する構造体。
 
 *後に挿入する*<br/>
@@ -1221,7 +1221,7 @@ virtual BOOL LoadState(
 
 指定されたウィンドウをロックします。
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ペインの一覧を含むメニューを構築するときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 空のペイン コンテナを解放します。
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 指定した非表示バー ペインを削除します。
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ペインの登録を解除し、ドッキング マネージャーのリストから削除します。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ BOOL ReplacePane(
 
 ミニ フレームのリスト内のフレームをリゾートします。
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ BOOL SendMessageToMiniFrames(
 
 ドッキング マネージャーをアーカイブに書き込みます。
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ void Serialize(CArchive& ar);
 
 コントロール バーと指定したペインのサイズ、幅、および高さを設定します。
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 印刷プレビューに表示されるバーの印刷プレビュー モードを設定します。
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 
 ミニ フレームのウィンドウを表示または非表示にします。
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 スマート ドッキング マネージャーの配置に従って、指定したウィンドウのスマート ドッキングを開始します。
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 スマート ドッキングを停止します。
 
-```
+```cpp
 void StopSDocking();
 ```
 

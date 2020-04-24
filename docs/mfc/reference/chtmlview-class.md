@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752660"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -390,7 +390,7 @@ Windows クラスの名前を示す null で終わる文字列を指します。
 ウィンドウ スタイルの属性を指定します。 既定では、WS_VISIBLEとWS_CHILD Windows スタイルが設定されます。
 
 *Rect*<br/>
-ウィンドウのサイズと位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。 *rectDefault*値を使用すると、ウィンドウは新しいウィンドウのサイズと位置を指定できます。
+ウィンドウのサイズと位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。 *rectDefault*値を使用すると、ウィンドウは新しいウィンドウのサイズと位置を指定できます。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウへのポインター。
@@ -469,7 +469,7 @@ HRESULT ExecFormsCommand(
 
 WebBrowser またはインターネット エクスプローラでコマンドを実行するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ long GetWidth() const;
 
 履歴リスト内の 1 つの項目を逆方向に移動します。
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 履歴リスト内の 1 つの項目を前方に移動します。
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Internet Explorer の [インターネット オプション] ダイアログ ボックス、またはコントロール パネルからアクセスする [インターネットのプロパティ] ダイアログ ボックスで指定した、現在のホーム ページまたはスタート ページに移動します。
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 コントロール パネルからアクセスする Internet Explorer の [インターネット オプション] ダイアログ ボックスまたは [インターネットのプロパティ] ダイアログ ボックスで指定されている、現在の検索ページに移動します。
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 URL で識別されるリソースに移動します。
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 URL で識別されるリソース、または完全パスで識別されるファイルに移動します。
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ virtual void OnVisible(BOOL bVisible);
 
 指定したオブジェクトに関連付けられたプロパティを設定します。
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 Web ブラウザが現在表示している URL またはファイルを再読み込みします。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 現在表示されているファイルを再読み込みします。
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 このメンバー関数を呼び出して、Internet Explorer オブジェクトのアドレス バーの表示と非表示を切り替えます。
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ void SetAddressBar(BOOL bNewValue);
 
 このメンバー関数を呼び出して、Internet Explorer を全画面表示モードまたは通常ウィンドウ モードに設定します。
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ void SetFullScreen(BOOL bNewValue);
 
 このメンバー関数を呼び出して、Internet Explorer のメイン ウィンドウの高さを設定します。
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 Internet Explorer のメイン ウィンドウの水平方向の位置を設定します。
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ void SetLeft(long nNewValue);
 
 このメンバー関数を呼び出して、Internet Explorer のメニュー バーの表示と非表示を切り替えます。
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ void SetMenuBar(BOOL bNewValue);
 
 WebBrowser コントロールが現在オフライン モードで動作しているかどうかを示す値を設定します。
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 WebBrowser コントロールがターゲットの名前解決のトップレベル ブラウザーとして登録されているかどうかを示す値を設定します。
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 WebBrowser コントロールがナビゲーションのドロップ ターゲットとして登録されているかどうかを示す値を設定します。
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 ダイアログ ボックスを表示できるかどうかを示す値を設定します。
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 ステータス バーを表示するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ void SetStatusBar(BOOL bNewValue);
 
 WebBrowser コントロールがシアター モードかどうかを示す値を設定します。
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 このメンバー関数を呼び出して、Internet Explorer のツール バーの表示と非表示を切り替えます。
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ void SetToolBar(int nNewValue);
 
 WebBrowser コントロールの内部の上端とコンテナの上端との間の距離を設定します。
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 WebBrowser コントロールの可視性の状態を設定するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Internet Explorer と WebBrowser に適用されます。
 
 Internet Explorer のメイン ウィンドウの幅を設定します。
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ void SetWidth(long nNewValue);
 
 保留中のナビゲーション操作またはダウンロード操作をキャンセルし、バックグラウンド サウンドやアニメーションなどの動的なページ要素を停止します。
 
-```
+```cpp
 void Stop();
 ```
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375646"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753362"
 ---
 # <a name="cdialog-class"></a>クラス
 
@@ -295,7 +295,7 @@ virtual INT_PTR DoModal();
 
 モーダル ダイアログ ボックスを終了するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ DWORD GetDefID() const;
 
 ダイアログ ボックス内の指定したコントロールにフォーカスを移動します。
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ ActiveX コントロールを含むダイアログ ボックスには、DLGINIT 
 
 四角形のダイアログ ボックスの単位を画面単位に変換する呼び出し。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ Windows`GetDialogBaseUnits`関数はシステム フォントのサイズ情報�
 
 ダイアログ ボックスの次のコントロールにフォーカスを移動します。
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Virtual void OnSetFont(CFont* pFont);
 
 ダイアログ ボックスの前のコントロールにフォーカスを設定します。
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ void PrevDlgCtrl() const;
 
 ダイアログボックスのデフォルトの押ボタンコントロールを変更します。
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ void SetDefID(UINT nID);
 
 ダイアログ ボックスの状況依存のヘルプ ID を設定します。
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

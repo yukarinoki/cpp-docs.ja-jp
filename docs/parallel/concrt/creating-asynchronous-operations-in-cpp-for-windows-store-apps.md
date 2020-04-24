@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353407"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032188"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP アプリ用 C++ での非同期操作の作成
 
@@ -54,13 +54,13 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 非同期アクションを表します。
 
-[ウィンドウズ::ファンデーション::IAsync\<アクションとプログレストプログレス>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[ウィンドウズ::ファンデーション::IAsync\<アクションとプログレストプログレス>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 進行状況を報告する非同期アクションを表します。
 
-[ウィンドウズ::ファウンデーション::IAsync操作\<のTResult>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[ウィンドウズ::ファウンデーション::IAsync操作\<のTResult>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 結果を返す非同期操作を表します。
 
-[ウィンドウズ::ファンデーション::IAsync\<操作と進行のTResult、トプログレス>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[ウィンドウズ::ファンデーション::IAsync\<操作と進行のTResult、トプログレス>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 結果を返し、進行状況を報告する、非同期操作を表します。
 
 *アクション* の概念は、非同期タスクが値を生成しないことを意味します ( `void`を返す関数を考えてみてください)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、タスクの完了を表す Windows ランタイムの非同期アクションまたは操作を作成します。 この`create_async`関数は、作業関数 (通常はラムダ式) を`task`受け取り、内部的にオブジェクトを作成し、そのタスクを 4 つの非同期 Windows ランタイム インターフェイスのいずれかでラップします。
@@ -92,7 +92,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>例: C++ Windows ランタイム コンポーネントを作成し、C から使用する\#
 
-XAML と C# を使用して UI を定義するアプリと、コンピューティング集中型の操作を実行する C++ Windows ランタイム コンポーネントを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイム非同期タスク インターフェイスの違いを示すために、**空白のソリューション**を作成して名前を付けること`Primes`で、Visual Studio で開始します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドは[、Windows::Foundation::コレクション::IVector\<int>オブジェクトを](/uwp/api/Windows.Foundation.Collections.IVector_T_)返します。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
+XAML と C# を使用して UI を定義するアプリと、コンピューティング集中型の操作を実行する C++ Windows ランタイム コンポーネントを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイム非同期タスク インターフェイスの違いを示すために、**空白のソリューション**を作成して名前を付けること`Primes`で、Visual Studio で開始します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドは[、Windows::Foundation::コレクション::IVector\<int>オブジェクトを](/uwp/api/windows.foundation.collections.ivector-1)返します。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

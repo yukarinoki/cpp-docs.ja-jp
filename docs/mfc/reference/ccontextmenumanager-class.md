@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369421"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754804"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
 
@@ -187,7 +187,7 @@ HMENU GetMenuByName(
 
 に追加されたメニュー名の一覧を返[します](../../mfc/reference/ccontextmenumanager-class.md)。
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 新しいポップアップ メニューを表示したときに[、](../../mfc/reference/ccontextmenumanager-class.md)アクティブなポップアップ メニューを閉じるかどうかを制御します。
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -303,7 +303,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *をクリックします。*<br/>
 [in]このメソッドが表示するメニューのリソース ID。
 
-*X*<br/>
+*x*<br/>
 [in]クライアント座標のショートカット メニューの水平オフセット。
 
 *Y*<br/>
@@ -352,7 +352,7 @@ virtual UINT TrackPopupMenu(
 *hmenuポップアップ*<br/>
 [in]このメソッドが表示するショートカット メニューのハンドル。
 
-*X*<br/>
+*x*<br/>
 [in]クライアント座標のショートカット メニューの水平オフセット。
 
 *Y*<br/>

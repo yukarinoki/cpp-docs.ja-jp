@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363679"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752873"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -170,7 +170,7 @@ TRUE はアルファ ブレンディングがサポートされていること�
 
 ブラシ、フォント、DLL など、フレームワークにより割り当てられたリソースを解放します。
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ HTHEME を作成するには[、OpenThemeData](/windows/win32/api/uxtheme/nf-uxt
 
 Microsoft Active Accessibility のサポートを有効または無効にします。
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>パラメーター
 
-*info*<br/>
+*情報*<br/>
 [イン、アウト]最小化されていないウィンドウの非クライアント領域に関連付けられたスケーラブルなメトリックを含む[NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -676,7 +676,7 @@ int  m_nDragFrameThicknessFloat;
 
 デスクトップのメニュー アニメーションとタスクバーの自動非表示機能の現在の状態を検出します。
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ BOOL SetMenuFont(
 
 フレームワークにより使用される論理フォントを再初期化します。
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ void UpdateFonts();
 
 フレームワークで使用される色、色深度、ブラシ、ペン、およびイメージを初期化します。
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ int GetShellAutohideBars();
 
 メソッドを介して取得`GetITaskbarList`した`GetITaskbarList3`インターフェイスを解放します。
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377360"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753403"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>クラスをカスタマイズします。
 
@@ -120,7 +120,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 [**コマンド**] ページのコマンドの一覧にツール バー ボタンを挿入します。
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 指定したメニューのすべての項目を表す**コマンド**ページのコマンドの一覧に項目を追加します。
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ virtual BOOL Create();
 
 [**ユーザー設定**] ダイアログ ボックスを使用して、新しいツールバーの作成を有効または無効にします。
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 指定した`CComboBox`オブジェクトに、[**カスタマイズ**] ダイアログ ボックスの各コマンド カテゴリの名前を設定します。
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ void FillCategoriesComboBox(
 
 指定した`CListBox`オブジェクトに、[**カスタマイズ**] ダイアログ ボックスの各コマンド カテゴリの名前を設定します。
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ BOOL RenameCategory(
 
 **[コマンド**] ページのコマンドのリスト ボックス内のツール バー ボタンを置き換えます。
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

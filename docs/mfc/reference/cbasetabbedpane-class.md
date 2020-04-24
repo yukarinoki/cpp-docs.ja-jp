@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: ce7c48263ed511545757c94d61552e6206e74a00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3ae0d69c385ba89cf75d682ce12c6f1f4e5112f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352857"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752972"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 
@@ -306,7 +306,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 内部タブ オーダーを既定の状態に戻します。
 
-```
+```cpp
 void FillDefaultTabsOrderArray();
 ```
 
@@ -440,7 +440,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [アウト]許可`CSize`される最小サイズで埋め込まれるオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -457,7 +457,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [アウト]許可`CSize`される最小サイズで埋め込まれるオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -601,7 +601,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 タブ付きコントロール バーを自動的に破棄するかどうかを決定します。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

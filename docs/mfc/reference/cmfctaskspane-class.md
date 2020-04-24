@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375883"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753423"
 ---
 # <a name="cmfctaskspane-class"></a>クラス
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>ウィンドウ::すべてのグループを折りたたむ
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ HMENU CreateMenu() const;
 
 タスク グループが展開または折りたたまれたときに発生するアニメーションを有効または無効にします。
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 ユーザーがタスク グループを折りたたむことができるかどうかを指定します。
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 **[次へ**] および [前へ] ナビゲーション ボタンのドロップダウン メニュー**を**有効にします。
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 ナビゲーション ツール バーを有効または無効にします。
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ void EnableNavigationToolbar(
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>ウィンドウ::オフセットカスタム コントロールを有効にします。
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 スクロール バーの代わりにスクロール ボタンを有効にします。
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 ラベル内のテキストのワード ラップを有効または無効にします。
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 タスクのテキストのワード ラップを有効または無効にします。
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ int GetHorzMargin() const;
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>ウィンドウ:次のページを取得します。
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ int GetPagesCount() const;
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>ウィンドウ::前のページを取得します。
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>ウィンドウ::再計算レイアウト
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 指定したページ上のすべてのグループを削除します。
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ void RemoveAllGroups(int nPageIdx = 0);
 
 既定 (最初) のページを除く、すべてのページを作業ウィンドウから削除します。
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 指定したグループからすべてのタスクを削除します。
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 グループを削除します。
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ void RemoveGroup(int nGroup);
 
 指定されたページを作業ウィンドウから削除します。
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 作業ウィンドウ内の指定したページをアクティブにします。
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ void SetActivePage(int nPageIdx);
 
 作業ウィンドウのキャプション名を設定します。
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ void SetCaption(LPCTSTR lpszName);
 
 グループ キャプションの高さを設定します。
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ void SetGroupCaptionHeight(int n = -1);
 
 グループ キャプションの水平方向のオフセットを設定します。
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 グループ キャプションの垂直方向のオフセットを設定します。
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ BOOL SetGroupTextColor(
 
 グループの垂直方向のオフセットを設定します。
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ void SetGroupVertOffset(int n = -1);
 
 水平マージンを設定します。
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 作業ウィンドウ ページのキャプション テキストを設定します。
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ BOOL SetTaskName(
 
 タスクの水平オフセットを設定します。
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ void SetTasksHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>ウィンドウ:::タスクアイコンホルズオフセット
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>ウィンドウ:::タスクアイコンバートオフセット
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ BOOL SetTaskTextColor(
 
 垂直マージンを設定します。
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

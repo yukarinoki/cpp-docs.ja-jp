@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374922"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753832"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter クラス
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 OLE 呼び出し中にメッセージ保留の遅延が切れたときに表示されるビジー ダイアログ ボックスを有効または無効にします ( [SetRetryReply](#setretryreply)を参照 ) 。
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 
 OLE 呼び出し中にキーボードまたはマウス のメッセージが保留状態で、呼び出しがタイムアウトした場合に表示される [応答なし] ダイアログ ボックスを有効または無効にします。
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ BOOL Register();
 
 Register の呼び出しによって実行された以前の[登録](#register)を取り消します。
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ void Revoke();
 
 この関数は、アプリケーションの「ビジー応答」を設定します。
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ COMPOBJ で`SERVERCALL`定義されている列挙型からの値。H。 次の�
 
 呼び出し元のアプリケーションが、呼び出し元のアプリケーションからの応答を待機してから、さらにアクションを実行する時間を決定します。
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 呼び出し元アプリケーションからビジー応答を受信したときの呼び出し元アプリケーションのアクションを決定します。
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

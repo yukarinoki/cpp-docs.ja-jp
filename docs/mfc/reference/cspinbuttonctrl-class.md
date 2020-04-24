@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318123"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753113"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 スピン ボタン コントロールのスタイルを指定します。 スピン ボタン コントロール スタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルについては、Windows SDK[のアップダウン コントロール スタイル](/windows/win32/Controls/up-down-control-styles)で説明します。
 
 *Rect*<br/>
-スピン ボタン コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のいずれかです。
+スピン ボタン コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のいずれかです。
 
 *pParentWnd*<br/>
 スピン ボタン コントロールの親ウィンドウ (通常は`CDialog`. NULL にすることはできません。
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 スピン ボタン コントロールのスタイルを指定します。 スピン ボタン コントロール スタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルについては、Windows SDK[のアップダウン コントロール スタイル](/windows/win32/Controls/up-down-control-styles)で説明します。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -375,7 +375,7 @@ int SetPos32(int nPos);
 
 スピン ボタン コントロールの上限と下限 (範囲) を設定します。
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

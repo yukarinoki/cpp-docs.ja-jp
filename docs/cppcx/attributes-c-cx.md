@@ -2,16 +2,16 @@
 title: 属性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 437432ce32497311a9a91237118d6088881662a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e645de021e8618d1dc15a7d58dbbe5998e6fbc
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032383"
 ---
 # <a name="attributes-ccx"></a>属性 (C++/CX)
 
-属性は、メタデータの作成で特定の動作を指定するために、Windows ランタイムの型とメソッドに角かっこで付加できる特殊な種類の ref クラスです。 いくつかの定義済み属性 (例: [Windows:ファンデーション:メタデータ::WebHostHidden)](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)は、C++/CX コードで一般的に使用されています。 この例では、属性がクラスに適用される方法を示します。
+属性は、メタデータの作成で特定の動作を指定するために、Windows ランタイムの型とメソッドに角かっこで付加できる特殊な種類の ref クラスです。 いくつかの定義済み属性 (例: [Windows:ファンデーション:メタデータ::WebHostHidden)](/uwp/api/windows.foundation.metadata.webhosthiddenattribute)は、C++/CX コードで一般的に使用されています。 この例では、属性がクラスに適用される方法を示します。
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 

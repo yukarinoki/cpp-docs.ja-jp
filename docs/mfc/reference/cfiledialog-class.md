@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373901"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753139"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 
@@ -409,7 +409,7 @@ HRESULT AddMenu(
 
 ユーザーがアイテムを開いたり保存したりできる場所の一覧にフォルダーを追加します。
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ HRESULT AddText(
 
 データ構造体に格納されている値に基づいて[、CFileDialog](../../mfc/reference/cfiledialog-class.md)の現在`m_ofn`の状態を更新します。
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>解説
 
-Windows Vista より前のバージョンの Windows では、メンバ[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))データ構造体が、`CFileDialog`の状態と継続的に同期されていました。 [m_ofn](#m_ofn)メンバー変数に対する変更は、ダイアログ ボックスの状態に直ちに反映されます。 また、ダイアログ ボックスの状態が変更されると、メンバー変数は`m_ofn`直ちに更新されます。
+Windows Vista より前のバージョンの Windows では、メンバ[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)データ構造体が、`CFileDialog`の状態と継続的に同期されていました。 [m_ofn](#m_ofn)メンバー変数に対する変更は、ダイアログ ボックスの状態に直ちに反映されます。 また、ダイアログ ボックスの状態が変更されると、メンバー変数は`m_ofn`直ちに更新されます。
 
 Windows Vista 以降では、`m_ofn`メンバー変数の値との状態`CFileDialog`は同期されません。 この関数は、構造`CFileDialog`に合わせて更新される状態を強制`m_ofn`します。 ウィンドウは[、CFileDialog::DoModal の](#domodal)間に自動的にこの関数を呼び出します。
 
@@ -1029,7 +1029,7 @@ POSITION GetStartPosition() const;
 
 エクスプローラ形式の [開く] または [名前を付けて保存] コモン ダイアログ ボックスで、指定したコントロールを非表示にします。
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ HRESULT SetControlState(
 
 エクスプローラスタイルの **[開く**] または [**名前を付けて保存**] ダイアログ ボックスで、指定したコントロールのテキストを設定します。
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ void SetControlText(
 
 エクスプローラ形式の [開く] または [名前を付けて保存] コモン ダイアログ ボックスの既定のファイル名拡張子を設定します。
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ HRESULT SetSelectedControlItem(
 
 [オブジェクトの](../../mfc/reference/cfiledialog-class.md)ダイアログ ボックス テンプレートを設定します。
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ HRESULT StartVisualGroup(
 
 内部オブジェクト`m_ofn`の現在の状態に基づいて[、CFileDialog](../../mfc/reference/cfiledialog-class.md)のデータ構造を更新します。
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>解説
 
-Windows Vista より前のバージョンの Windows では、メンバ[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))データ構造体が、`CFileDialog`の状態と継続的に同期されていました。 [m_ofn](#m_ofn)メンバー変数に対する変更は、ダイアログ ボックスの状態に直接影響を与えました。 また、ダイアログの状態に対する変更により、m_ofn メンバー変数が直ちに更新されます。
+Windows Vista より前のバージョンの Windows では、メンバ[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)データ構造体が、`CFileDialog`の状態と継続的に同期されていました。 [m_ofn](#m_ofn)メンバー変数に対する変更は、ダイアログ ボックスの状態に直接影響を与えました。 また、ダイアログの状態に対する変更により、m_ofn メンバー変数が直ちに更新されます。
 
 Windows Vista 以降では、`m_ofn`データ構造は自動的には更新されません。 メンバー変数のデータの正確性を`m_ofn`保証するには、データにアクセスする前に`UpdateOFNFromShellDialog`関数を呼び出す必要があります。 この関数は[、IFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)の処理中に自動的に呼び出されます。
 

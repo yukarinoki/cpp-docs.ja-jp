@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366137"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753926"
 ---
 # <a name="colecurrency-class"></a>クラスを変更します。
 
@@ -159,7 +159,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 
 - LOCALE_NOUSEROVERRIDEカスタム ユーザー設定ではなく、システムの既定のロケール設定を使用します。
 
-*lcid*<br/>
+*Lcid*<br/>
 変換に使用するロケール ID を示します。
 
 ### <a name="return-value"></a>戻り値
@@ -469,7 +469,7 @@ throw(COleException*);
 
 - LOCALE_NOUSEROVERRIDEカスタム ユーザー設定ではなく、システムの既定のロケール設定を使用します。
 
-*lcid*<br/>
+*Lcid*<br/>
 変換に使用するロケール ID を示します。
 
 ### <a name="return-value"></a>戻り値
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 このメンバー関数を呼び出して、この`COleCurrency`オブジェクトの単位と小数部を設定します。
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,7 +542,7 @@ void SetCurrency(
 
 このメンバー関数を呼び出して、この`COleCurrency`オブジェクトの状態 (有効性) を設定します。
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 

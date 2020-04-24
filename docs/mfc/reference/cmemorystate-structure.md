@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752616"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 
@@ -79,7 +79,7 @@ struct CMemoryState
 
 メモリのスナップショットの概要を取得し、この`CMemoryState`オブジェクトに格納します。
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ BOOL Difference(
 
 この`CMemoryState`オブジェクト`Dump`に対する最後の[チェックポイント](#checkpoint)呼び出し`CObject`以降に割り当てられた (割り当てられた) クラスから派生した型のすべてのオブジェクトの関数を呼び出します。
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ void DumpAllObjectsSince() const;
 
 Difference メンバー関数によって埋め込まれたオブジェクトから、`CMemoryState`簡潔なメモリ統計レポートを[Difference](#difference)出力します。
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

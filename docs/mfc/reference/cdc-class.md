@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375710"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753431"
 ---
 # <a name="cdc-class"></a>CDCクラス
 
@@ -835,7 +835,7 @@ BOOL AngleArc(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 円の中心の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -1059,7 +1059,7 @@ BOOL BitBlt(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 移動先の四角形の左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -1354,7 +1354,7 @@ Windows デバイス コンテキスト。
 
 この関数は、HIMETRIC サイズを OLE に与え、ピクセルを HIMETRIC に変換するときに使用します。
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 
 デバイス単位を論理単位に変換します。
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ void DPtoLP(LPSIZE lpSize) const;
 
 3 次元の四角形を描画します。
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1428,7 +1428,7 @@ void Draw3dRect(
 *右下*<br/>
 3 次元の四角形の下辺と右側の色を指定します。
 
-*X*<br/>
+*x*<br/>
 3 次元四角形の左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -1452,7 +1452,7 @@ void Draw3dRect(
 
 ドラッグ四角形を再描画するには、このメンバー関数を繰り返し呼び出します。
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *Lprect*<br/>
 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体または四角形の論理座標を指定する[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター (この場合は、再描画される四角形の終了位置)。
 
-*サイズ*<br/>
+*size*<br/>
 外枠の左上隅から四角形の内側の境界線の左上隅 (つまり、境界線の太さ) までの変位を指定します。
 
 *ラプレックラスト*<br/>
@@ -1548,7 +1548,7 @@ int DrawEscape(
 
 四角形にフォーカスがあることを示すために使用するスタイルの四角形を描画します。
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1665,7 +1665,7 @@ BOOL DrawIcon(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 アイコンの左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *Pt*<br/>
 イメージの場所を指定します。
 
-*サイズ*<br/>
+*size*<br/>
 イメージのサイズを指定します。
 
 *hビットマップ*<br/>
@@ -2232,7 +2232,7 @@ BOOL ExtFloodFill(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 塗りつぶしが始まるポイントの論理 x 座標を指定します。
 
 *Y*<br/>
@@ -2287,7 +2287,7 @@ BOOL ExtTextOut(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 指定した文字列の最初の文字の文字セルの論理 x 座標を指定します。
 
 *Y*<br/>
@@ -2345,7 +2345,7 @@ BOOL FillPath();
 
 指定したブラシを使用して指定された四角形を塗りつぶします。
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ BOOL FillRgn(
 
 指定した四角形を指定された純色で塗りつぶします。
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2423,7 +2423,7 @@ void FillSolidRect(
 
 *clr*四角形を塗りつぶすために使用する色を指定します。
 
-*X*<br/>
+*x*<br/>
 四角形の左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -2467,7 +2467,7 @@ BOOL FloodFill(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 塗りつぶしが始まるポイントの論理 x 座標を指定します。
 
 *Y*<br/>
@@ -2492,7 +2492,7 @@ BOOL FloodFill(
 
 *lpRect*で指定された四角形の周囲に境界線を描画します。
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -3177,7 +3177,7 @@ DWORD GetGlyphOutline(
 *nフォーマット*<br/>
 関数が情報を返す形式を指定します。 次のいずれかの値、または 0 を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |GGO_BITMAP|グリフ ビットマップを返します。 関数が戻ると *、lpBuffer*が指すバッファーには、行がダブルワード境界で始まる 1 ビット/ピクセルビットマップが含まれます。|
 |GGO_NATIVE|ラスタライザーのネイティブ形式の曲線データポイントを、デバイス単位を使用して返します。 この値を指定すると *、lpmat2*で指定された変換は無視されます。|
@@ -3559,7 +3559,7 @@ COLORREF GetPixel(POINT point) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 検査する点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -4089,7 +4089,7 @@ virtual BOOL GrayString(
 *nカウント*<br/>
 出力する文字数を指定します。 このパラメーターが 0`GrayString`の場合は、文字列の長さを計算します *(lpData*が文字列へのポインターであると仮定します)。 *nCount*が 1 で *、lpfnOutput*が指す関数が 0 を返す場合、イメージは表示されますが、淡色表示されません。
 
-*X*<br/>
+*x*<br/>
 文字列を囲む四角形の開始位置の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -4123,7 +4123,7 @@ virtual BOOL GrayString(
 
 HIMETRIC サイズを OLE からピクセルに変換する場合に、この関数を使用します。
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 
 HIMETRIC 単位を論理単位に変換します。
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI は、新しい境界内に収まるように、後続のすべての出力�
 
 指定された四角形の内容を反転します。
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4272,7 +4272,7 @@ BOOL LineTo(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 線分の終点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -4297,7 +4297,7 @@ BOOL LineTo(POINT point);
 
 論理単位を装置単位に変換します。
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ void LPtoDP(LPSIZE lpSize) const;
 
 論理単位を HIMETRIC 単位に変換します。
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4390,7 +4390,7 @@ BOOL MaskBlt(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 移動先の四角形の左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -4479,7 +4479,7 @@ CPoint MoveTo(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 新しい位置の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -4510,13 +4510,13 @@ int OffsetClipRgn(SIZE size);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 左または右に移動する論理単位の数を指定します。
 
 *Y*<br/>
 上下に移動する論理単位の数を指定します。
 
-*サイズ*<br/>
+*size*<br/>
 オフセットする量を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4627,7 +4627,7 @@ BOOL PatBlt(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 パターンを受け取る四角形の左上隅の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -5109,7 +5109,7 @@ BOOL PtVisible(POINT point) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -5902,7 +5902,7 @@ CPoint SetBrushOrg(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 新しい原点の x 座標 (デバイス単位) を指定します。 この値は 0 から 7 の範囲にする必要があります。
 
 *Y*<br/>
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dw レイアウト*<br/>
 デバイス コンテキスト レイアウトとビットマップ コントロール フラグ。 以下の値を組み合わせることができます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|[CDC::BitBlt](#bitblt)と[CDC::StretchBlt](#stretchblt)への呼び出しのリフレクションを無効にします。|
 |LAYOUT_RTL|既定の水平レイアウトを右から左に設定します。|
@@ -6170,7 +6170,7 @@ COLORREF SetPixel(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 設定する点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -6209,7 +6209,7 @@ BOOL SetPixelV(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 設定する点の x 座標を論理単位で指定します。
 
 *Y*<br/>
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *ストレッチモード*<br/>
 伸縮モードを指定します。 次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |ブラックンホワイト|削除されたピクセルと既存のピクセルのカラー値を使用して、ブール演算 AND 演算を実行します。 ビットマップがモノクロ ビットマップの場合、このモードでは白いピクセルを犠牲にして黒のピクセルが保持されます。|
 |カラーオンカラー|ピクセルを削除します。 このモードでは、情報を保持せずに、すべてのピクセルの行を削除します。|
@@ -6493,7 +6493,7 @@ CSize SetViewportExt(SIZE size);
 *Cy*<br/>
 ビューポートの Y 範囲を指定します (デバイス単位)。
 
-*サイズ*<br/>
+*size*<br/>
 ビューポートの x 範囲と y 範囲を指定します (デバイス単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -6531,7 +6531,7 @@ CPoint SetViewportOrg(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 ビューポートの原点の x 座標 (デバイス単位) を指定します。 値は、デバイス座標系の範囲内になければなりません。
 
 *Y*<br/>
@@ -6574,7 +6574,7 @@ CSize SetWindowExt(SIZE size);
 *Cy*<br/>
 ウィンドウの y 範囲を論理単位で指定します。
 
-*サイズ*<br/>
+*size*<br/>
 ウィンドウの x および y のエクステントを論理単位で指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -6619,7 +6619,7 @@ CPoint SetWindowOrg(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 ウィンドウの新しい原点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -6744,7 +6744,7 @@ BOOL StretchBlt(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 コピー先の四角形の左上隅を示す X 座標を (論理単位で) 指定します。
 
 *Y*<br/>
@@ -6881,7 +6881,7 @@ CSize TabbedTextOut(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 文字列の開始点の論理 x 座標を指定します。
 
 *Y*<br/>
@@ -6936,7 +6936,7 @@ BOOL TextOut(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 テキストの始点の論理的な X 座標を指定します。
 
 *Y*<br/>
@@ -7029,7 +7029,7 @@ BOOL TransparentBlt(
 
 クライアント領域の現在の色をピクセル単位でシステム パレットに合わせて、デバイス コンテキストのクライアント領域を更新します。
 
-```
+```cpp
 void UpdateColors();
 ```
 

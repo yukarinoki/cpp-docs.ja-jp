@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318486"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754420"
 ---
 # <a name="cscrollview-class"></a>CScrollView クラス
 
@@ -124,7 +124,7 @@ class CScrollView : public CView
 
 スクロール ビューに水平および垂直のバーがあるかどうかを調べます。
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ CScrollView();
 
 スクロール`FillOutsideRect`領域の外側に表示されるビューの領域を埋めるために呼び出します。
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ CPoint GetDeviceScrollPosition() const;
 
 `GetDeviceScrollSizes`現在のマッピング モード、合計サイズ、およびスクロール可能なビューの行とページ サイズを取得します。
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ CSize GetTotalSize() const;
 
 ビュー`ResizeParentToFit`のサイズがフレーム ウィンドウのサイズを決定するように呼び出します。
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 
 ビュー`ScrollToPosition`内の指定したポイントまでスクロールする呼び出し。
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ void ScrollToPosition(POINT pt);
 
 ビューポート`SetScaleToFitSize`のサイズを現在のウィンドウ サイズに自動的にスケールする場合に呼び出します。
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 
 ビュー`SetScrollSizes`が更新されるときに呼び出します。
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373307"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752114"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 ツリー ビュー コントロールのスタイルを指定します。 [「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」で説明されているウィンドウ スタイルと、Windows SDK で説明されているように[、ツリー ビュー コントロール スタイル](/windows/win32/Controls/tree-view-control-window-styles)の任意の組み合わせを適用します。
 
 *Rect*<br/>
-ツリー ビュー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。
+ツリー ビュー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
 ツリー ビュー コントロールの親ウィンドウを指定します`CDialog`。 NULL にすることはできません。
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 ツリー ビュー コントロールのスタイルを指定します。 [「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」で説明されているウィンドウ スタイルと、Windows SDK で説明されているように[、ツリー ビュー コントロール スタイル](/windows/win32/Controls/tree-view-control-window-styles)の任意の組み合わせを適用します。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*Hitem*|[in]ツリー ビュー コントロール項目へのハンドル。|
 |*nパート*|[in]部品の識別子。 TVGIPR_BUTTONに設定する必要があります。|
-|*Lprect*|[アウト][RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 このメソッドが成功すると、構造体は*hItem*と*nPart*で指定されたパーツの四角形座標を受け取ります。|
+|*Lprect*|[アウト][RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。 このメソッドが成功すると、構造体は*hItem*と*nPart*で指定されたパーツの四角形座標を受け取ります。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 ツリー ビュー コントロール項目のハンドル。
 
 *Lprect*<br/>
-外接する四角形を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 座標は、ツリー ビュー コントロールの左上隅を基準にしています。
+外接する四角形を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。 座標は、ツリー ビュー コントロールの左上隅を基準にしています。
 
 *テキストのみ*<br/>
 このパラメーターが 0 以外の場合、外接する四角形には項目のテキストのみが含まれます。 それ以外の場合は、ツリー ビュー コントロールでアイテムが占有する行全体が含まれます。
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|[値]|意味|
+|値|意味|
 |TVHT_ABOVE|クライアント領域の上。|
 |TVHT_BELOW|クライアント領域の下。|
 |TVHT_NOWHERE|クライアント領域で、最後の項目の下に表示されます。|
@@ -1833,7 +1833,7 @@ CImageList* SetImageList(
 
 ツリー ビュー コントロールのインデント幅を設定し、コントロールを再描画して新しい幅を反映します。
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 現在のツリー ビュー コントロール内の指定した項目の情報を表示します。
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

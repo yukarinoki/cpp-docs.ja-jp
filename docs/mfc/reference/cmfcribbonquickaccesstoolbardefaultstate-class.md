@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368874"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753526"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>クラスを既定の状態にします。
 
@@ -69,7 +69,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 クイック アクセス ツールバーの既定の状態にコマンドを追加します。
 
-```
+```cpp
 void AddCommand(
     UINT uiCmd,
     BOOL bIsVisible=TRUE);
@@ -91,7 +91,7 @@ void AddCommand(
 
 クイック アクセス ツールバーのプロパティを別のクイック アクセス ツールバーにコピーします。
 
-```
+```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```
 
@@ -120,7 +120,7 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 
 クイック アクセス ツールバーの既定のコマンドの一覧をクリアします。
 
-```
+```cpp
 void RemoveAll();
 ```
 

@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367362"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753454"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 現在のタブ コントロールの指定されたタブを表示し、そのタブにフォーカスを設定します。
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 タブ コントロールのユーザー インターフェイス要素が変更されたときに、フレームワークがすべてのタブ コントロール ウィンドウのクライアント領域のサイズを変更するかどうかを指定します。
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*スタイル*<br/>
+*style*<br/>
 [in]タブ コントロールのスタイル。 詳細については、「解説」を参照してください。
 
 *Rect*<br/>
@@ -336,7 +336,7 @@ BOOL Create(
 
 次の表に *、style*パラメーターに指定できる値を示します。
 
-|スタイル|説明|
+|Style|説明|
 |-----------|-----------------|
 |STYLE_3D|3D 表示のタブ コントロールを作成します。|
 |STYLE_FLAT|フラット タブを持つタブ コントロールを作成します。|
@@ -381,7 +381,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 アクティブなタブで閉じるボタン ( **X**) の表示と非表示を切り替えます。
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 2 つのボタンを使用してウィンドウタブをスクロールするユーザーインターフェイスと、タブ付きウィンドウのポップアップメニューを表示するインタフェースを切り替えます。
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ STYLE_FLAT_SHARED_HORZ_SCROLL スタイルを使用してタブ コントロー�
 
 タブ コントロールの上部または下部にあるタブ ラベル領域の外接する四角形を取得します。
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 現在のタブ コントロールのクライアント領域の境界を取得します。
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 アクティブ ウィンドウに水平スクロール バーがある場合は非表示にします。
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ void HideActiveWindowHorzScrollBar();
 
 フレームワークが非アクティブなタブ コントロール ウィンドウを表示するかどうかを指定します。
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 表示されているタブがない場合、タブ領域の描画を有効または無効にします。
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>パラメーター
 
-*スタイル*<br/>
+*style*<br/>
 [in]タブ コントロールの外観を指定する列挙値の 1 つ。 詳細については、「解説」の表を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 タブ コントロールの現在のタブを、マルチ ドキュメント インターフェイス タブ グループのアクティブなタブとして設定します。
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 アクティブなタブでの太字フォントの使用を有効または無効にします。
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 埋め込みバーの周囲にフレーム四角形を描画するかどうかを指定します。
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 タブ領域の周りに平面フレームまたは 3D フレームを描画するかどうかを指定します。
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 現在のタブ コントロールのサイズを変更し、コントロールを再表示する方法を指定します。
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 タブ付きウィンドウのタブ幅の最大値を指定します。
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 
 タブ コントロールの現在のサイズ変更操作を終了します。
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

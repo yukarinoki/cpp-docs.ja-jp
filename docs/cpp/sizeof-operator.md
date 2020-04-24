@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365568"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032292"
 ---
 # <a name="sizeof-operator"></a>sizeof 演算子
 
 char**型の**サイズに対するオペランドのサイズを生成します。
 
 > [!NOTE]
-> 演算子の`sizeof ...`詳細については、「[楕円と可変](../cpp/ellipses-and-variadic-templates.md)テンプレート」を参照してください。
+> 演算子の`sizeof ...`詳細については、「[省略記号と可変テンプレート](../cpp/ellipses-and-variadic-templates.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 

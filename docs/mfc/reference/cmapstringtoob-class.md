@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370102"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754584"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb クラス
 
@@ -201,7 +201,7 @@ UINT GetHashTableSize() const;
 
 *で*マップ要素を取得し、マップ内の次の要素を参照するように*rNextPosition*を更新します。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -353,7 +353,7 @@ UINT HashKey(LPCTSTR key) const;
 
 ハッシュ テーブルを初期化します。
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 このマップからすべての要素を削除し、キー オブジェクト`CString`を破棄します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 マップに要素を挿入する主な手段。
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);

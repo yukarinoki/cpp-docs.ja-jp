@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376114"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753745"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem クラス
 
@@ -175,7 +175,7 @@ class COleServerItem : public CDocItem
 
 指定したオブジェクトに OLE アイテムのプレゼンテーション形式と変換形式を配置します`COleDataSource`。
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ COleServerItem(
 
 OLE アイテムをクリップボードにコピーします。
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ DROPEFFECT 列挙体の値。 DROPEFFECT_MOVE場合は、元のデータを削�
 
 この関数を呼び出して、クリップボードにコピーされるすべてのデータを指定した[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトに格納[します](#copytoclipboard)。 [DoDragDrop](#dodragdrop)
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ COleServerDoc* GetDocument() const;
 
 OLE アイテムのCF_EMBEDSOURCEデータを取得します。
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ OLE アイテムのCF_LINKSOURCEデータを受け取る[STGMEDIUM](/windows/win
 
 OLE アイテムのCF_OBJECTDESCRIPTORデータを取得します。
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ CSize m_sizeExtent;
 
 リンクされたアイテムが変更された後に、この関数を呼び出します。
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -509,7 +509,7 @@ virtual void OnDoVerb(LONG iVerb);
 *i動詞*<br/>
 実行する動詞を指定します。 次のいずれかの方法を使用できます。
 
-|[値]|意味|Symbol|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |0|主動詞|OLEIVERB_PRIMARY|
 |1|二次動詞|(なし)|
@@ -903,7 +903,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_DOCPRINTアイテムは、[ファイル] メニューの [印刷] コマンドを使用して印刷されたかのように表示されます。
 
-*サイズ*<br/>
+*size*<br/>
 OLE アイテムの新しいサイズを指定する[CSize](../../atl-mfc-shared/reference/csize-class.md)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -982,7 +982,7 @@ virtual void OnUpdateItems();
 
 この関数は、リンクアイテムを作成して名前を設定するときに呼び出します。
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 

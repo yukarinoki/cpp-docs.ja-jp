@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352380"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752744"
 ---
 # <a name="cchecklistbox-class"></a>クラスを確認する
 
@@ -209,7 +209,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 チェックリスト ボックス項目を有効または無効にします。
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -240,7 +240,7 @@ int GetCheck(int nIndex);
 
 指定されたチェック ボックスの状態。 次の表に、使用できる値を示します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |BST_CHECKED|チェック ボックスはオンです。|
 |BST_UNCHECKED|チェック ボックスはオンになっていません。|
@@ -326,7 +326,7 @@ virtual CRect OnGetCheckPosition(
 
 指定されたチェック ボックスの状態を設定します。
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -344,7 +344,7 @@ void SetCheck(
 
 次の表は *、nCheck*パラメーターの値を示しています。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |BST_CHECKED|指定したチェック ボックスをオンにします。|
 |BST_UNCHECKED|指定したチェック ボックスをオフにします。|
@@ -354,7 +354,7 @@ void SetCheck(
 
 チェックリスト ボックスのチェック ボックスのスタイルを設定します。
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 

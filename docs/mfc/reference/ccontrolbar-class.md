@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369395"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754792"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -293,7 +293,7 @@ virtual void DrawGripper(
 
 コントロール バーをドッキングできるようにします。
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ virtual void OnUpdateCmdUI(
 
 コントロール バーに必要な**CBRS_** スタイルを設定します。
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ void SetBarStyle(DWORD dwStyle);
 
 コントロール バーの境界線のサイズを設定します。
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ void SetBorders(LPCRECT lpRect);
 
 コントロール バーのインプレース所有者を変更します。
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

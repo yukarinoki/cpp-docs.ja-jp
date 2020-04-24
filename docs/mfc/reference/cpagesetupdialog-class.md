@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 218ed24ccf56854622e20936299fcc2e8a3d0fa9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3664149ef0d7476b460ef06cddaf2b8145ade701
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374792"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753690"
 ---
 # <a name="cpagesetupdialog-class"></a>クラスを設定します。
 
@@ -253,7 +253,7 @@ CString GetDriverName() const;
 
 プリンター デバイス ドライバーの余白`DoModal`を取得する呼び出しの後に、この関数を呼び出します。
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;

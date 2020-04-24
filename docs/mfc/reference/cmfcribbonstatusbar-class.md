@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368818"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754057"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar クラス
 
@@ -140,7 +140,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 リボン ステータス バーに動的要素を追加します。
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 
 リボン ステータス バーに新しいリボン要素を追加します。
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 リボン ステータス バーの拡張領域にリボン要素を追加します。
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ void AddExtendedElement(
 
 リボンステータス バーに区切り記号を追加します。
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 リボン ステータス バーからすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ BOOL RemoveElement(UINT uiID);
 
 リボン ステータス バーの情報モードを有効または無効にします。
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 

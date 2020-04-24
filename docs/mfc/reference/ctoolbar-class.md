@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364283"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752207"
 ---
 # <a name="ctoolbar-class"></a>CToolBar クラス
 
@@ -292,7 +292,7 @@ Create[メンバー関数](#create)を呼び出して、ツール バー ウィ�
 
 このメンバー関数は *、nIndex*で指定された位置にあるツール バー ボタンまたは区切り記号のコントロール ID、スタイル、およびイメージ インデックスを取得します。
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 
 ボタンのコマンド ID、スタイル、およびイメージ番号を設定します。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ BOOL SetButtons(
 
 ボタンまたは区切り記号のスタイルを設定したり、ボタンをグループ化したりするために、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ BOOL SetButtonText(
 
 このメンバー関数は、ツール バーの高さを*cyHeight*で指定されたピクセル単位の値に設定します。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ void SetHeight(int cyHeight);
 
 ツール バーのボタンを*sizeButton*で指定されたサイズ (ピクセル単位) に設定します。
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

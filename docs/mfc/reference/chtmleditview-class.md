@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352080"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752324"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 
@@ -106,7 +106,7 @@ Windows クラスの名前を示す null で終わる文字列を指します。
 ウィンドウ スタイルの属性を指定します。 既定では、WS_VISIBLEとWS_CHILD Windows スタイルが設定されます。
 
 *Rect*<br/>
-ウィンドウのサイズと位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。 *rectDefault*値を使用すると、ウィンドウは新しいウィンドウのサイズと位置を指定できます。
+ウィンドウのサイズと位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。 *rectDefault*値を使用すると、ウィンドウは新しいウィンドウのサイズと位置を指定できます。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウへのポインター。

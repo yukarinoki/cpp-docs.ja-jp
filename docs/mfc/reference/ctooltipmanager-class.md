@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365075"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752172"
 ---
 # <a name="ctooltipmanager-class"></a>クラス
 
@@ -97,15 +97,15 @@ static BOOL CreateToolTip(
 |------------------|----------------------|-------------------|
 |AFX_TOOLTIP_TYPE_BUTTON|ボタン。|CMFCButton|
 |AFX_TOOLTIP_TYPE_CAPTIONBAR|キャプション バー。|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|他のカテゴリに適合しないコントロール。|なし。|
+|AFX_TOOLTIP_TYPE_DEFAULT|他のカテゴリに適合しないコントロール。|[なし] :|
 |AFX_TOOLTIP_TYPE_DOCKBAR|ドッキング可能なペイン。|CDockablePane|
-|AFX_TOOLTIP_TYPE_EDIT|テキスト ボックス。|なし。|
+|AFX_TOOLTIP_TYPE_EDIT|テキスト ボックス。|[なし] :|
 |AFX_TOOLTIP_TYPE_MINIFRAME|ミニフレーム。|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|プランナー。|なし。|
+|AFX_TOOLTIP_TYPE_PLANNER|プランナー。|[なし] :|
 |AFX_TOOLTIP_TYPE_RIBBON|リボン バー。|メニュー バー|
 |AFX_TOOLTIP_TYPE_TAB|タブ コントロール。|CMFCTabCtrl|
 |AFX_TOOLTIP_TYPE_TOOLBAR|ツールバー。|メニューバー|
-|AFX_TOOLTIP_TYPE_TOOLBOX|ツールボックス。|なし。|
+|AFX_TOOLTIP_TYPE_TOOLBOX|ツールボックス。|[なし] :|
 
 ## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>ツールヒント:D
 
@@ -128,7 +128,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 指定した Windows コントロールの種類に対するツールヒント コントロールの外観をカスタマイズします。
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,7 +198,7 @@ static void SetTooltipText(
 
 詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
-```
+```cpp
 void UpdateTooltips();
 ```
 

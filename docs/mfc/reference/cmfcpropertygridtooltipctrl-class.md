@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361792"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754120"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>クラス
 
@@ -115,7 +115,7 @@ BOOL Create(CWnd* pWndParent);
 
 ツールヒント コントロールを非アクティブにして非表示にします。
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ void Deactivate();
 
 ツールヒント コントロールの最後の位置の座標を返します。
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 ツールヒント コントロールを非表示にします。
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 ツールヒントテキストとツールチップウィンドウの境界線との間隔を設定します。
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 ツールヒント コントロールを表示します。
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);

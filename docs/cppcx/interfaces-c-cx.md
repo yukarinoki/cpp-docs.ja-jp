@@ -2,12 +2,12 @@
 title: インターフェイス (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366038"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032357"
 ---
 # <a name="interfaces-ccx"></a>インターフェイス (C++/CX)
 
@@ -63,7 +63,7 @@ ref クラスが複数のインターフェイスを実装し、それらのイ�
 
 ## <a name="generic-interfaces"></a>ジェネリック インターフェイス
 
-C++/CX では、`generic`このキーワードは Windows ランタイムのパラメーター化された型を表すために使用されます。 パラメーター化された型は、メタデータに出力され、型パラメーターをサポートする言語で記述されたコードで利用できます。 Windows ランタイムは、いくつかのジェネリック インターフェイス[(Windows::Foundation::コレクション::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)など) を定義していますが、C++/CX でのパブリック ユーザー定義ジェネリック インターフェイスの作成はサポートしていません。 ただし、プライベート ジェネリック インターフェイスは作成できます。
+C++/CX では、`generic`このキーワードは Windows ランタイムのパラメーター化された型を表すために使用されます。 パラメーター化された型は、メタデータに出力され、型パラメーターをサポートする言語で記述されたコードで利用できます。 Windows ランタイムは、いくつかのジェネリック インターフェイス[(Windows::Foundation::コレクション::IVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)など) を定義していますが、C++/CX でのパブリック ユーザー定義ジェネリック インターフェイスの作成はサポートしていません。 ただし、プライベート ジェネリック インターフェイスは作成できます。
 
 Windows ランタイム型を使用してジェネリック インターフェイスを作成する方法を次に示します。
 

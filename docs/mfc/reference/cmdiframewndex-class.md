@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754541"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -296,7 +296,7 @@ MDI アプリケーションの拡張カスタマイズ機能を利用するに�
 
 アクティブなアイテムのレイアウトを再計算します。
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 指定したペインをフレーム ウィンドウにドッキングします。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 メイン メニューを全画面表示モードで表示または非表示にします。
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 フレーム ウィンドウの全画面表示モードを有効にします。
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 ドッキング状態の読み込みを有効または無効にします。
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 フレーム ウィンドウの MDI タブ付きグループ機能を有効または無効にします。
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ MDI タブ付きグループの使用方法の詳細については、「 [MDI �
 
 MDI フレーム ウィンドウの MDI タブ機能を有効または無効にします。 有効にすると、フレーム ウィンドウに各 MDI 子ウィンドウのタブが表示されます。
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *ボタンを閉じる*<br/>
 タブの閉じるボタンを表示するかどうかを指定します。
 
-*スタイル*<br/>
+*style*<br/>
 タブのスタイルを指定します。 通常のタブにSTYLE_3D_SCROLLEDを使用するか、OneNote タブのSTYLE_3D_ONENOTEを使用します。
 
 *カスタムツールチップ*<br/>
@@ -746,7 +746,7 @@ MDI フレーム ウィンドウの MDI タブ機能を有効または無効に�
 
 ユーザーが現在のタブを閉じたときに、最後にアクティブなタブを開くかどうかを指定します。
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 アプリケーション ペインの一覧を表示するポップアップ ウィンドウ メニューの自動作成と管理を有効または無効にします。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ void EnablePaneMenu(
 
 コマンド ID が[[CMFCWindowsManagerDialog]](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ダイアログ ボックスを呼び出すメニュー項目を挿入します。
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ MDI タブとグループの状態、および開いているドキュメント�
 
 アクティブなタブを現在アクティブなタブ付きウィンドウから次のタブ付きグループまたは前のタブ付きグループに移動します。
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ウィンドウが 1 つし、新しいタブ付きグループを作成します。
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ペインの登録を解除し、ドッキング マネージャーから削除します。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ MDI タブとグループの状態、および開いているドキュメント�
 
 印刷プレビューのフレーム ウィンドウを設定します。
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ダミー項目をユーザー定義項目に置き換えて、ツール バー オブジェクトを変更します。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 メイン フレームを通常モードから全画面表示モードに切り替えます。
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 指定したペインの表示と非表示を切り替えます。
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ void ShowPane(
 
 ダイアログ[ボックスを](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)作成し、開きます。
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ウィンドウ フレーム キャプションを更新するために、フレームワークによって呼び出されます。
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 各 MDI タブ付きペインのアイコンを設定します。
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

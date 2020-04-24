@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364009"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751126"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - PBS_SMOOTH 進行状況バー コントロールで、段階的にスムーズに塗りつぶされます。 このフラグを指定しないと、コントロールはブロックで塗りつぶされます。
 
 *Rect*<br/>
-プログレス バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体を指定できます。 コントロールは子ウィンドウである必要があるため、指定された座標は*pParentWnd*のクライアント領域を基準にしています。
+プログレス バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。 コントロールは子ウィンドウである必要があるため、指定された座標は*pParentWnd*のクライアント領域を基準にしています。
 
 *pParentWnd*<br/>
 プログレス バー コントロールの親ウィンドウを指定`CDialog`します。 NULL にすることはできません。
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 プログレス バー コントロールのスタイルを指定します。 Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」で説明されているウィンドウ スタイルの任意の組み合わせを適用します。
 
 *Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -263,7 +263,7 @@ int GetPos();
 
 プログレス バー コントロールの現在の下限と上限 、または範囲を取得します。
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -297,10 +297,10 @@ int GetState() const;
 
 現在の進行状況バー コントロールの状態は、次のいずれかの値です。
 
-|[値]|State|
+|値|State|
 |-----------|-----------|
 |PBST_NORMAL|進行中|
-|PBST_ERROR|エラー|
+|PBST_ERROR|Error|
 |PBST_PAUSED|一時停止|
 
 ### <a name="remarks"></a>解説
@@ -495,7 +495,7 @@ int SetPos(int nPos);
 
 プログレス バー コントロールの範囲の上限と下限を設定し、新しい範囲を反映するようにバーを再描画します。
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

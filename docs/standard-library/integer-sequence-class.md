@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: d0de2e56e1f6b8e68e5989f21ecd89b9646caa1b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076474"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031473"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence クラス
 
@@ -37,7 +37,7 @@ struct integer_sequence
 *T*\
 値の型。整数型である必要があります (bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なしの整数型)。
 
-*Vals*\
+*ヴァルス*\
 整数型 T の値のシーケンスを表す非型パラメーター パック。
 
 ## <a name="members"></a>メンバー
@@ -53,11 +53,11 @@ struct integer_sequence
 
 ## <a name="example"></a>例
 
-次の例は、[N3658](https://wg21.link/n3658) に関する記事を原案としています。 この例では、`integer_sequence` を使用して `std::tuple` から `std::array<T,N>` を作成する方法と、`integer_sequence` を使用してタプルのメンバーにアクセスする方法を示しています。
+次の例は、[N3658](https://wg21.link/n3658) に関する記事を原案としています。 この例では、`integer_sequence` を使用して `std::array<T,N>` から `std::tuple` を作成する方法と、`integer_sequence` を使用してタプルのメンバーにアクセスする方法を示しています。
 
-`a2t` 関数の `index_sequence` は、`integer_sequence` 整数型に基づく `size_t` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
+`a2t` 関数の `index_sequence` は、`size_t` 整数型に基づく `integer_sequence` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
 
-Apply 関数は、 [std:: tuple](../standard-library/tuple-class.md)を受け取り、`tuple_size` ヘルパークラスを使用して `integer_sequence` を生成します。 [Tuple_size](../standard-library/tuple-size-class-tuple.md)で参照型を使用できないため、 [std::d ecay_t](../standard-library/decay-class.md)が必要です。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
+apply 関数は[std::tuple](../standard-library/tuple-class.md)を受け取`integer_sequence`り、ヘルパー`tuple_size`クラスを使用して を生成します。 [std::decay_t](../standard-library/decay-class.md)は[、tuple_size](../standard-library/tuple-size-class-tuple.md)参照型では動作しないため、必要です。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
 
 ```cpp
 #include <stddef.h>
@@ -123,6 +123,6 @@ int main()
 
 名前空間: std
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[省略記号と可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)
+[省略記号と可変テンプレート](../cpp/ellipses-and-variadic-templates.md)

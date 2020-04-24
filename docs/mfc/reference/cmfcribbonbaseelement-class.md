@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375307"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752487"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>クラス
 
@@ -893,7 +893,7 @@ RibbonElementLocation GetLocationInGroup() const;
 
 `RibbonElementLocation` 列挙値。 次の表に、使用できる値を示します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|リボン要素はリボン グループに含まれていません。|
 |`RibbonElementSingleInGroup`|リボン要素は、リボン グループ内の唯一の項目として表示されます。|
@@ -1893,7 +1893,7 @@ virtual void OnShowPopupMenu();
 
 リボン要素のポップアップ メニューを閉じ、親メニューに閉じるメッセージを送信します。
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 データ項目をリボン要素に関連付けます。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 ポップアップ コマンドとして表示するリボン要素を設定します。
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 リボン要素の表示四角形の寸法を設定します。
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 リボン要素の表示設定を設定します。
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 

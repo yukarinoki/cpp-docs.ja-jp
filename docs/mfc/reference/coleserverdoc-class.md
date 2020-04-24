@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376126"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753778"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc クラス
 
@@ -192,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 関連付けられている DocObject ドキュメントをアクティブにします。
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ COleServerItem* GetEmbeddedItem();
 
 メンバー関数`GetItemClipRect`を呼び出して、編集中のアイテムのクリッピング四角形座標を取得します。
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 
 メンバー関数`GetItemPosition`を呼び出して、編集中の項目の座標を取得します。
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ BOOL IsInPlaceActive() const;
 
 ドキュメントにリンクされているすべてのアイテムに、ドキュメントが変更されたことを通知します。
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ void NotifyChanged();
 
 ドキュメントが閉じられたことをコンテナーに通知します。
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ void NotifyClosed();
 
 ユーザーがサーバー ドキュメントの名前を変更した後に、この関数を呼び出します。
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 
 ユーザーがサーバー ドキュメントを保存した後に、この関数を呼び出します。
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -642,7 +642,7 @@ OLECMDEXECOPT_SHOWHELP
 
 成功した場合はS_OKを返します。それ以外の場合は、次のいずれかのエラー コードを示します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |E_UNEXPECTED|予期しないエラーが発生しました|
 |E_FAIL|エラーが発生しました|
@@ -855,7 +855,7 @@ virtual BOOL OnUpdateDocument();
 
 コンテナー アプリケーションで項目の位置を変更するには、このメンバー関数を呼び出します。
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 
 埋め込みオブジェクトを保存するようにコンテナー アプリケーションに指示します。
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 ドキュメントにリンクされているすべてのアイテムに、ドキュメントが変更されたことを通知します。
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753897"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 
@@ -104,7 +104,7 @@ OLE データ ソースは直接作成できます。 または、[クラス](..
 
 データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ void CacheData(
 
 データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ void DelayRenderData(
 
 データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ void DelayRenderFileData(
 
 データ ソースの内容の変更をサポートします。
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ DROPEFFECT DoDragDrop(
 
 データのオブジェクトを空に`COleDataSource`します。
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,7 +482,7 @@ virtual BOOL OnSetData(
 
 次の関数のいずれかを呼び`COleDataSource`出した[後、オブジェクト](#cachedata)に含まれるデータをクリップボードに格納[DelayRenderData](#delayrenderdata)[します](#delayrenderfiledata)。 [CacheGlobalData](#cacheglobaldata)
 
-```
+```cpp
 void SetClipboard();
 ```
 

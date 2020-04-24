@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354437"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032435"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 
@@ -46,7 +46,7 @@ ref class MapView sealed;
 
 ### <a name="remarks"></a>解説
 
-MapView は、アプリケーション バイナリ インターフェイス (ABI) を介して渡される[Windows::Foundation::コレクション::IMapView \<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+MapView は、アプリケーション バイナリ インターフェイス (ABI) を介して渡される[Windows::Foundation::コレクション::IMapView \<K,V>](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -197,7 +197,7 @@ virtual property unsigned int Size;
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,

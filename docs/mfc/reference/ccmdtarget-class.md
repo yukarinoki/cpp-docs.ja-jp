@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352284"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752716"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 
@@ -121,7 +121,7 @@ class CCmdTarget : public CObject
 
 コマンドが実行する時間間隔が顕著になると予想される場合に、カーソルを砂時計として表示します。
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 オブジェクトを保持しているドキュメント ウィンドウのハンドル。
 
 *Lprect*<br/>
-*hwndParent*でオブジェクトの外接する四角形を定義する座標 (ピクセル単位) を含む[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+*hwndParent*でオブジェクトの外接する四角形を定義する座標 (ピクセル単位) を含む[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -183,7 +183,7 @@ TRUE が成功した場合は FALSE、それ以外の場合は FALSE。
 
 オブジェクトの OLE オートメーションを有効にします。
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ void EnableAutomation();
 
 コネクション ポイントを介したイベントの発生を有効にします。
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ void EnableConnections();
 
 オブジェクトのタイプ ライブラリを有効にします。
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ void EnableTypeLib();
 
 砂時計カーソルから前の`BeginWaitCursor`カーソルに戻るメンバー関数を呼び出した後、この関数を呼び出します。
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>パラメーター
 
 *pIID*<br/>
-インターフェイス ID [(GUID](/previous-versions/cc317743(v%3dmsdn.10))) へのポインター。
+インターフェイス ID ([GUID](/ウィンドウ/win32/api/guiddef/ns-guidguid) へのポインタ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -346,11 +346,11 @@ HRESULT GetTypeInfoOfGuid(
 
 ### <a name="parameters"></a>パラメーター
 
-*lcid*<br/>
+*Lcid*<br/>
 ロケール識別子 ( `LCID`)
 
 *guid*<br/>
-型の説明の[GUID。](/previous-versions/cc317743(v%3dmsdn.10))
+[GUID](/ウィンドウズ/win32/api/guiddef/ns-guid-guid型の説明。
 
 *をクリックします。*<br/>
 `ITypeInfo`インターフェイスへのポインターへのポインター。
@@ -371,7 +371,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="parameters"></a>パラメーター
 
-*lcid*<br/>
+*Lcid*<br/>
 ロケール識別子 (LCID)。
 
 *をクリックします。*<br/>
@@ -514,7 +514,7 @@ virtual void OnFinalRelease();
 
 システム カーソルが変更された後 (たとえば、メッセージ ボックスが開いて閉じた後に、長い操作の途中で) 適切な砂時計カーソルを復元します。
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

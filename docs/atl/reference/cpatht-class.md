@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746588"
+ms.locfileid: "82032135"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
@@ -102,8 +102,8 @@ class CPathT
 |[CPathT::正規化](#canonicalize)|パスを正規形式に変換します。|
 |[CPathT::コンバイン](#combine)|ディレクトリ名を表す文字列と、ファイル パス名を表す文字列を 1 つのパスに連結します。|
 |[CPathT::コモンプレフィックス](#commonprefix)|指定したパスが現在のパスと共通のプレフィックスを共有しているかどうかを調べます。|
-|[Cパス::コンパクトパス](#compactpath)|パスコンポーネントを楕円で置き換えることで、指定したピクセル幅に収まるようにファイル パスを切り捨てます。|
-|[CPathT::コンパクトパスエックス](#compactpathex)|パスの構成要素を省略記号で置き換えることによって、指定した文字数に収まるようにファイル パスを切り捨てます。|
+|[Cパス::コンパクトパス](#compactpath)|パス コンポーネントを省略記号で置き換えることによって、指定したピクセル幅に収まるようにファイル パスを切り捨てます。|
+|[CPathT::コンパクトパスエックス](#compactpathex)|パスコンポーネントを省略記号で置き換えることで、指定した文字数に収まるようにファイル パスを切り捨てます。|
 |[CPathT::ファイルは存在します](#fileexists)|このパス名のファイルが存在するかどうかを確認します。|
 |[CPathT::拡張を検索](#findextension)|パス内のファイル拡張子の位置を検索します。|
 |[ファイル名を検索します。](#findfilename)|パス内のファイル名の位置を検索します。|
@@ -288,7 +288,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>Cパス::コンパクトパス
 
-パスコンポーネントを楕円で置き換えることで、指定したピクセル幅に収まるようにファイル パスを切り捨てます。
+パス コンポーネントを省略記号で置き換えることによって、指定したピクセル幅に収まるようにファイル パスを切り捨てます。
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::コンパクトパスエックス
 
-パスの構成要素を省略記号で置き換えることによって、指定した文字数に収まるようにファイル パスを切り捨てます。
+パスコンポーネントを省略記号で置き換えることで、指定した文字数に収まるようにファイル パスを切り捨てます。
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

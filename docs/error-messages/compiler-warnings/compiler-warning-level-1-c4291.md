@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175715"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754857"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>コンパイラの警告 (レベル 1) C4291
 
-' 宣言 ': 一致する演算子の削除が見つかりませんでした。初期化が例外をスローした場合、メモリは解放されません
+'宣言' : 一致する演算子の削除が見つかりません。初期化が例外をスローした場合、メモリは解放されません
 
-配置の[削除](../../cpp/delete-operator-cpp.md)がない場合は、配置の[新しい](../../cpp/new-operator-cpp.md)が使用されます。
+配置削除がない[配置新規](../../cpp/new-operator-cpp.md)が使用[されます。](../../cpp/delete-operator-cpp.md)
 
-Operator **new**を使用してオブジェクトにメモリが割り当てられると、オブジェクトのコンストラクターが呼び出されます。 コンストラクターが例外をスローした場合、そのオブジェクトに割り当てられたメモリの割り当てを解除する必要があります。 Operator **new**と一致する operator **delete**関数が存在しない限り、この操作を行うことはできません。
+演算子**new**を使用してオブジェクトにメモリが割り当てられると、オブジェクトのコンストラクタが呼び出されます。 コンストラクターが例外をスローする場合は、オブジェクトに割り当てられたすべてのメモリを割り当て解除する必要があります。 これは、演算子**new**に一致する演算子**削除**関数が存在しない限り、実行できません。
 
-追加の引数を指定せずに**new**演算子を使用し、 [/gx](../../build/reference/gx-enable-exception-handling.md)、 [/ehs](../../build/reference/eh-exception-handling-model.md)、または/eha オプションでコンパイルして例外処理を有効にすると、コンパイラは、コンストラクターが例外をスローした場合に operator **delete**を呼び出すためのコードを生成します。
+余分な**引数を指定**せずに new 演算子を使用し[、/GX、/EHs、/EHa](../../build/reference/gx-enable-exception-handling.md)オプションを指定してコンパイルして例外処理を有効にすると、コンパイラはコンストラクターが例外をスローした場合に演算子**削除**を呼び出すコードを生成します。 [/EHs](../../build/reference/eh-exception-handling-model.md)
 
-**New**演算子の placement 形式 (割り当てのサイズに加えて引数を持つフォーム) を使用し、オブジェクトのコンストラクターが例外をスローした場合でも、コンパイラは operator **delete**を呼び出すコードを生成します。ただし、これが行われるのは、メモリを割り当てた**new**演算子の配置形式と演算子の**削除**の配置形式が一致する場合だけです。 次に例を示します。
+**new**演算子の配置形式 (割り当てのサイズに加えて引数を持つフォーム) を使用し、オブジェクトのコンストラクタが例外をスローした場合、コンパイラは引き続き演算子**delete**を呼び出すコードを生成します。しかし、この操作は、メモリを割り当てた新**しい**演算子の配置フォームに一致する演算子**delete**の配置フォームが存在する場合にのみ行われます。 次に例を示します。
 
 ```cpp
 // C4291.cpp
@@ -74,9 +74,9 @@ int main(void)
 }
 ```
 
-上の例では、operator **new**の配置形式に一致する operator **delete**の配置形式が定義されていないため、警告 C4291 が生成されます。 この問題を解決するには、 **main**の上に次のコードを挿入します。 オーバーロードされた operator **delete**関数のパラメーターはすべて、最初のパラメーターを除く、オーバーロードされた演算子**new**のパラメーターと一致します。
+上の例では、オペレータ**delete**の配置フォームが定義されておらず、オペレータ**new**の配置形式に一致するものが定義されていないため、警告 C4291 が生成されます。 この問題を解決するには **、main**の上に次のコードを挿入します。 オーバーロードされた演算子**の delete**関数パラメータはすべて、最初のパラメータを除いてオーバーロードされた演算子**new**のパラメータと一致します。
 
-```
+```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)
 {
    free(pMem);

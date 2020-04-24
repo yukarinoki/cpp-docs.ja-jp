@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363803"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032227"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 
@@ -40,7 +40,7 @@ template <typename T, typename E>
 
 ### <a name="remarks"></a>解説
 
-クラス`VectorView`は[、Windows::Foundation::コレクション::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)インターフェイス、および標準テンプレート ライブラリ反復子のサポートを実装します。
+クラス`VectorView`は[、Windows::Foundation::コレクション::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)インターフェイス、および標準テンプレート ライブラリ反復子のサポートを実装します。
 
 ### <a name="members"></a>メンバー
 
@@ -250,7 +250,7 @@ vectorView の初期化に使用される要素を持つ[std::initializer_list�
 *N*<br/>
 現在の VectorView を初期化するために使用されるオブジェクトのコレクションの要素数。
 
-*サイズ*<br/>
+*size*<br/>
 VectorView の要素数。
 
 *value*<br/>

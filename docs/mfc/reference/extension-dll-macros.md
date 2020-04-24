@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365700"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751603"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>DLL を管理するためのマクロと関数
 
@@ -91,7 +91,7 @@ MFC に動的にリンクされている通常の MFC DLL から OLE をサポ�
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ MFC ソケットサポートは、MFC に動的にリンクされている通常
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -193,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 初期化後に MFC 拡張 DLL モジュールの状態を格納する[AFX_EXTENSION_MODULE構造体](afx-extension-module-structure.md)構造体への参照。 状態には、前`DllMain`に実行される通常の静的オブジェクトの構築の一部として MFC 拡張 DLL によって初期化されたランタイム クラス オブジェクトのコピーが含まれます。
 
 *hモジュール*<br/>
@@ -244,7 +244,7 @@ MFC 拡張 DLL は、次の`DllMain`2 つの操作を実行する必要があり
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,13 +279,13 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 MFC 拡張 DLL モジュールの状態を格納する[AFX_EXTENSION_MODULE](afx-extension-module-structure.md)構造体への参照。
 
 *ボール*<br/>

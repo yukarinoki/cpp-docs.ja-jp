@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364163"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753667"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -340,7 +340,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 
 枠線やグリッパーを含む、ペインの内側の四角形を計算します。
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ void CalcInsideRect(
 
 最近ドッキングした四角形を計算します。
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [アウト]許可`CSize`される最小サイズで埋め込まれるオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -890,7 +890,7 @@ virtual void GetPaneName(CString& strName) const;
 
 ペインの*仮想四角形*を取得します。
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS IsChangeState(
 
 次のAFX_CS_STATUS値のいずれか。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |CS_NOTHING|ウィンドウは、ドッキング サイトの近くにありません。 フレームワークはペインをドッキングしません。|
 |CS_DOCK_IMMEDIATELY|ペインがドッキング サイト上にあり、DT_IMMEDIATEスタイルが有効になります。 フレームワークは、ペインを直ちにドッキングします。|
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment*には、次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|ペインをフレーム ウィンドウのクライアント領域の上部にドッキングできるようにします。|
 |CBRS_ALIGN_BOTTOM|ペインをフレーム ウィンドウのクライアント領域の下部にドッキングできるようにします。|
@@ -1381,7 +1381,7 @@ FALSE`CMFCAutoHideButton::m_bOverlappingTabs`の場合、またはペインが�
 
 ペインの境界線の値を設定します。
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ void SetBorders(LPCRECT lpRect);
 
 ペインの*ホット スポット*を設定します。
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 
 ペインに許可される最小サイズを設定します。
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 [in]ペイン`CSize`に許可される最小サイズを含むオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 ペインの*仮想四角形*を設定します。
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ void SetVirtualRect(
 
 既定のミニフレーム ウィンドウのランタイム クラス情報を設定します。
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 仮想四角形を更新します。
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);

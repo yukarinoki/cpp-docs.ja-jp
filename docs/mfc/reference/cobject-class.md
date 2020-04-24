@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: cea4d09a1c1a4680b095a40fa0619287959ff4ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66d76e0062d13b2bd5a16d9b07f99db9e989805a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360424"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753994"
 ---
 # <a name="cobject-class"></a>Cオブジェクトクラス
 
@@ -275,7 +275,7 @@ BOOL IsSerializable() const;
 
 ライブラリのリリース バージョンの場合、演算子**delete**は、演算子**new**によって割り当てられたメモリを解放します。
 
-```
+```cpp
 void PASCAL operator delete(void* p);
 
 void PASCAL operator delete(
@@ -312,7 +312,7 @@ void PASCAL operator delete(
 
 ライブラリのリリース バージョンでは、演算子**new**は、次のような方法で最適なメモリ`malloc`割り当てを実行します。
 
-```
+```cpp
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
 

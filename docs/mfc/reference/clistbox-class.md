@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372224"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753580"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -342,7 +342,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 [構造体で](/windows/win32/api/winuser/ns-winuser-compareitemstruct)記述されている 2 つの項目の相対位置を示します。 次のいずれかの値を指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |-1|項目 1 は、項目 2 の前に並べ替えます。|
 |0|項目 1 と項目 2 は同じ並べ替えです。|
@@ -479,7 +479,7 @@ int Dir(
 *Attr*<br/>
 `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)で説明されている**列挙**値の任意の組み合わせ、または次の値の任意の組み合わせを指定できます。
 
-|[値]|意味|
+|値|意味|
 |-----------|-------------|
 |0x0000|ファイルの読み取りまたは書き込みが可能です。|
 |0x0001|ファイルは読み取り可能ですが、書き込みできません。|
@@ -717,7 +717,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 指定されたリスト ボックス項目に関連付けられているアプリケーション提供の 32 ビット値をポインター (**void** <strong>\*</strong>) として取得します。
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 リスト ボックスからすべての項目を削除します。
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ int SelItemRange(
 
 複数選択リスト ボックスのアンカーを設定して、拡張選択を開始します。
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ int SetCaretIndex(
 
 複数列リスト ボックス[(LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成) 内のすべての列の幅をピクセル単位で設定します。
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ int SetCurSel(int nSelect);
 
 リスト ボックスを水平方向にスクロールできる幅をピクセル単位で設定します。
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ int SetSel(
 
 リスト ボックス内のタブ位置を設定します。
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 
