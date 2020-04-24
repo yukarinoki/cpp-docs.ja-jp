@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365208"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
 > [!NOTE]
-> この開発者向けドキュメントは、Visual Studio 2015 以降に適用されます。 自分の Visual Studio のバージョンと合わせるには、ページの左上にあるバージョン セレクターを使います。
+> この開発者向けドキュメントは、Visual Studio 2015 以降に適用されます。 優先するバージョンの Visual Studio のドキュメントを表示するには、 **[バージョン]** セレクター コントロールを使用します。 このページの目次の一番上にあります。
 >
 > プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](https://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++** 」と入力してください。
 
@@ -26,7 +26,7 @@ Visual Studio 2015、2017、および 2019 は、サイド バイ サイドで�
 ## <a name="whats-new-and-conformance-history"></a>新機能および準拠の履歴
 
 [Visual Studio での C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Visual C++ の新機能を紹介します。
+Visual Studio の新機能を紹介します。
 
 [Visual Studio 2003 から 2015 の C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Visual Studio 2003 から 2015 までの C++ の新機能をバージョンごとに紹介します。
@@ -65,7 +65,7 @@ C++ について説明しながら、最新の C++ の概要を示すととも�
 [Visual C++ に関する詳細情報](../build/vscpp-step-1-create.md)<br/>
 C++ について導入的に説明します。
 
-[Visual C++ のサンプル](visual-cpp-samples.md)<br/>
+[Visual Studio C++ のサンプル](visual-cpp-samples.md)<br/>
 サンプルに関する情報です。
 
 ## <a name="c-development-tools"></a>C++ 開発ツール

@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 9b656d4e13fe241c22a9c555d1c597016c5353d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366819"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -180,7 +180,7 @@ IntelliCode がオプションのコンポーネントとして**C++ による�
 
 ## <a name="incredibuild-integration"></a>IncrediBuild の統合
 
-IncrediBuild がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに含まれるようになりました。 IncrediBuild のビルド モニターは、Visual Studio IDE に完全に統合されています。 詳細については、「[Visualize your build with IncrediBuild’s Build Monitor and Visual Studio 2019 (IncrediBuild のビルド モニターと Visual Studio 2019 を使ってビルドを視覚化する)](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)」をご覧ください。
+IncrediBuild がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに含まれるようになりました。 IncrediBuild のビルド モニターは、Visual Studio IDE に完全に統合されています。 詳細については、「[IncrediBuild のビルド モニターと Visual Studio 2019 を使ってビルドを視覚化する](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)」を参照してください。
 
 ## <a name="debugging"></a>デバッグ
 
@@ -709,7 +709,7 @@ Visual Studio のグラフィックス診断は、Direct3D アプリのレンダ
 
   完全な呼び出し履歴のキャプチャを有効にしてフレームをキャプチャした場合 ( **[グラフィックス診断]** で **[Visual Studio] > [ツール] > [オプション]** の順に選択)、Visual Studio プロジェクト内の各変更イベントのコンテキストを簡単に推測および検査できます。
 
-- **API 統計情報:** フレームでの API の使用の概要を表示します。 行っていることにまったく気付いていない呼び出しまたは多すぎる呼び出しを発見するのに便利です。 このウィンドウは、Visual Studio Graphics Analyzer の **[表示] > [API 統計情報]** から表示できます。
+- **API 統計情報:** フレームでの API の使用の概要を表示します。 自分で行っていることにまったく気付いていない呼び出し、または多すぎる呼び出しを発見するのに便利です。 このウィンドウは、Visual Studio Graphics Analyzer の **[表示] > [API 統計情報]** から表示できます。
 
   ![API 統計情報](media/api-stats.png)
 

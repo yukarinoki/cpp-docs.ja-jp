@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 8a5ffb5b3ab4bc80cb200b41752b19d1c958ece6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 18f8db28fab83f795baced82a346f07d73256716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365238"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -195,7 +195,7 @@ Visual Studio 2017 または Visual Studio 2019 の MSVC の準拠の強化に�
 | &nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2) | VS 2019 16.2 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[P0771R1 std::function の移動コンストラクター用の noexcept](https://wg21.link/P0771R1) | VS 2019 16.2 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[P0487R1 operator>>(basic_istream&, CharT*) の修正](https://wg21.link/P0487R1) | VS 2019 16.3 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[P0616R0 \<<numeric> での move() の使用](https://wg21.link/p0616r0)  | VS 2019 16.3 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[P0616R0 \<<numeric> での move() の使用](https://wg21.link/p0616r0) | VS 2019 16.3 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1) | VS 2019 16.3 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[P0898R3 標準ライブラリの概念](https://wg21.link/P0898R3) | VS 2019 16.3 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[P0919R3 順序なしコンテナーの異種ルックアップ](https://wg21.link/P0919R3) | VS 2019 16.3 <sup>[20](#note_20)</sup> |
@@ -385,33 +385,34 @@ __VS 2019 16.5__ は、Visual Studio 2019 バージョン 16.5 でサポート�
 
 ### <a name="notes"></a>メモ
 
-<a name="note_A"></a>__A__[/std:c++14](../build/reference/std-specify-language-standard-version.md) モードには、動的例外指定は実装されておらず、`throw()` は引き続き `__declspec(nothrow)` のシノニムとして扱われています。 C++ 17 では、1 つの形跡を除き、動的例外指定が P0003R5 でほとんど削除されています。`throw()` は廃止され、`noexcept` のシノニムとして動作する必要があります。 [/std:c++17](../build/reference/std-specify-language-standard-version.md) モードの MSVC は、`throw()` に `noexcept` と同じ動作 (つまり、終了を使った強制) を与えることによって、標準に準拠するようになりました。
+<a name="note_A"></a> __A__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) モードには、動的例外指定は実装されておらず、`throw()` は引き続き `__declspec(nothrow)` のシノニムとして扱われています。 C++ 17 では、1 つの形跡を除き、動的例外指定が P0003R5 でほとんど削除されています。`throw()` は廃止され、`noexcept` のシノニムとして動作する必要があります。 [/std:c++17](../build/reference/std-specify-language-standard-version.md) モードの MSVC は、`throw()` に `noexcept` と同じ動作 (つまり、終了を使った強制) を与えることによって、標準に準拠するようになりました。
 
 コンパイラ オプション [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) は、以前の `__declspec(nothrow)` の動作を要求します。 `throw()` は、C++20 で削除される可能性があります。 標準および実装へ、これらの変更に対応するコードを移行するのを支援するために、[/std:c++17](../build/reference/std-specify-language-standard-version.md) と [/permissive-](../build/reference/permissive-standards-conformance.md) に、例外の指定の問題の新しいコンパイラ警告が追加されました。
 
-<a name="note_B"></a>__B__ Visual Studio 2017 バージョン 15.7 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでサポートされています。 詳細については、「[2 フェーズの名前参照のサポートを MSVC に導入](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)」を参照してください。
+<a name="note_B"></a> __B__ Visual Studio 2017 バージョン 15.7 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでサポートされています。 詳細については、「[2 フェーズの名前参照のサポートを MSVC に導入](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)」を参照してください。
 
-<a name="note_C"></a>__C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 プリプロセッサを徹底的に見直し、Visual Studio 2017 バージョン 15.8 で [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使った変更内容の配布を開始しました。
+<a name="note_C"></a> __C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 プリプロセッサを徹底的に見直し、Visual Studio 2017 バージョン 15.8 で [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使った変更内容の配布を開始しました。
 
-<a name="note_D"></a>__D__[/std:c++14](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md) と共にサポートされています。
+<a name="note_D"></a> __D__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md) と共にサポートされています。
 
-<a name="note_E"></a>__E__ これは、完全に新しい実装であり、以前の `std::experimental` バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい `std::filesystem` と以前の `std::experimental::filesystem` が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。
+<a name="note_E"></a> __E__ これは、完全に新しい実装であり、以前の `std::experimental` バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい `std::filesystem` と以前の `std::experimental::filesystem` が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。
 
-<a name="note_G"></a>__G__ コンパイラ組み込みでサポートされています。
+<a name="note_G"></a> __G__ コンパイラ組み込みでサポートされています。
 
-<a name="note_14"></a>__14__ これらの C++17/20 機能は、[/std:c++14](../build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 その理由は、**/std** オプションを導入する前にこの機能が実装されたため、または条件付きの実装が不必要に複雑だったためです。
+<a name="note_14"></a> __14__ これらの C++17/20 機能は、[/std:c++14](../build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 その理由は、 **/std** オプションを導入する前にこの機能が実装されたため、または条件付きの実装が不必要に複雑だったためです。
 
-<a name="note_17"></a>__17__ これらの機能は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより保護されています。
+<a name="note_17"></a> __17__ これらの機能は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより保護されています。
 
-<a name="note_20"></a>__20__ これらの機能は [/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションにより有効化されています。 C++20 の実装が完了すると、新しい **/std:c++20** コンパイラ オプションが追加され、ここでもこれらの機能が使用可能になります。
+<a name="note_20"></a> __20__ これらの機能は [/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションにより有効化されています。 C++20 の実装が完了すると、新しい **/std:c++20** コンパイラ オプションが追加され、ここでもこれらの機能が使用可能になります。
 
-<a name="note_byte"></a>__byte__ `std::byte` は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
+<a name="note_byte"></a> __byte__ `std::byte` は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
 
-<a name="note_C11"></a>__C11__ ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装しました。C99 `strftime()` E/O 代替変換指定子、C11 `fopen()` 排他モード、C11 `aligned_alloc()` は除きます。 C11 は `aligned_alloc()` を、Microsoft の `free()` の実装と互換性のない方法で指定したため (つまり、その `free()` は高度にアライメントされた割り当てを処理できる必要があるため)、後者が実装される可能性はほとんどありません。
+<a name="note_C11"></a> __C11__ ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装しました。C99 `strftime()` E/O 代替変換指定子、C11 `fopen()` 排他モード、C11 `aligned_alloc()` は除きます。 C11 は `aligned_alloc()` を、Microsoft の `free()` の実装と互換性のない方法で指定したため (つまり、その `free()` は高度にアライメントされた割り当てを処理できる必要があるため)、後者が実装される可能性はほとんどありません。
 
-<a name="note_rem"></a>__rem__ 機能が [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションが指定されたときに削除されます。 次のマクロを使うことで、これらの機能を再び有効化し、新しい言語モードへの移行を容易にすることができます: `_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`、`_HAS_UNEXPECTED`。
+<a name="note_rem"></a> __rem__ 機能が [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションが指定されたときに削除されます。 次のマクロを使うことで、これらの機能を再び有効化し、新しい言語モードへの移行を容易にすることができます: `_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`、`_HAS_UNEXPECTED`。
 
-<a name="note_charconv"></a>__charconv__ `from_chars()` と `to_chars()` は整数に対して使えます。 浮動小数点の `from_chars()` と浮動小数点の `to_chars()` のタイムラインは次のとおりです。
+<a name="note_charconv"></a> __charconv__ の `from_chars()` と `to_chars()` は整数に対して使えます。 浮動小数点の `from_chars()` と浮動小数点の `to_chars()` のタイムラインは次のとおりです。
+
 - VS 2017 15.7:整数の `from_chars()` と `to_chars()`。
 - VS 2017 15.8:浮動小数点の `from_chars()`。
 - VS 2017 15.9:浮動小数点の `to_chars()` により最短の 10 進数がオーバーロードされます。

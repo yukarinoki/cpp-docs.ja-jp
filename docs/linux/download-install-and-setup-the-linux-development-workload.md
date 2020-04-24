@@ -3,12 +3,12 @@ title: Visual Studio で C++ の Linux ワークロードをインストール�
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364339"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -36,7 +36,7 @@ Visual Studio プロジェクトに変換しなくても、CMake を使用する
 
    ![Windows 検索ボックス](media/visual-studio-installer-search.png)
 
-2. **アプリ**の結果でインストーラーを探し、それをダブルクリックします。 インストーラーが開いたら、 **[変更]** を選択して **[ワークロード]** タブをクリックします。 **[Other toolsets]\(その他のツールセット\)** まで下へスクロールして、 **[C++ による Linux 開発]** ワークロードを選択します。
+1. **アプリ**の結果でインストーラーを探し、それをダブルクリックします。 インストーラーが開いたら、 **[変更]** を選択して **[ワークロード]** タブをクリックします。 **[Other toolsets]\(その他のツールセット\)** まで下へスクロールして、 **[C++ による Linux 開発]** ワークロードを選択します。
 
    ![Visual C++ for Linux Development ワークロード](media/linuxworkload.png)
 
@@ -62,6 +62,7 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 - **make**
 - **openssh-server** (リモートの Linux システムのみ) - Visual Studio は、セキュリティで保護された SSH 接続を介してリモートの Linux システムに接続します。
 - **CMake** (CMake プロジェクトのみ) - Microsoft の[静的にリンクされた Linux 用 CMake バイナリ](https://github.com/microsoft/CMake/releases)をインストールできます。
+- **ninja-build** (CMake プロジェクトのみ) - [Ninja](https://ninja-build.org/) は、Visual Studio 2019 バージョン 16.6 以降での Linux および WSL 構成の既定のジェネレーターです。
 
 以下のコマンドでは、clang ではなく g++ を使っていることを前提としています。
 
@@ -84,10 +85,10 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux のセットアップ: WSL 上の Ubuntu
 
-WSL をターゲットにしている場合は、ビルドとデバッグを行うためにリモート接続を追加したり、SSH を構成したりする必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 必要なアプリケーションがまだない場合は、次の手順でインストールできます。
+WSL をターゲットにしている場合は、ビルドとデバッグを行うためにリモート接続を追加したり、SSH を構成したりする必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 必要なアプリケーションがまだない場合は、次の手順でインストールできます。 **ninja-build** は CMake プロジェクトにのみ必要です。
 
 ```bash
-sudo apt-get install g++ gdb make rsync zip
+sudo apt-get install g++ gdb make ninja-build rsync zip
 ```
 
 ::: moniker-end
@@ -96,12 +97,12 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>リモートの Linux システム上の Ubuntu
 
-ターゲットの Linux システムには、**openssh-server**、**g++** 、**gdb**、**make** がインストールされていて、ssh デーモンが実行されている必要があります。 Intellisense サポート対応のローカル コンピューターでリモート ヘッダーを自動同期するには、**zip** と **rsync** が必須です。 これらのアプリケーションがまだない場合は、次の手順でインストールできます。
+ターゲットの Linux システムには **openssh-server**、**g++** 、**gdb**、**ninja-build** (CMake プロジェクトのみ)、および **make** がインストールされ、ssh デーモンが実行されている必要があります。 Intellisense サポート対応のローカル コンピューターでリモート ヘッダーを自動同期するには、**zip** と **rsync** が必須です。 これらのアプリケーションがまだない場合は、次の手順でインストールできます。
 
 1. Linux コンピューターのシェル プロンプトで次のコマンドを実行します。
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb make rsync zip
+   sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
    sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
@@ -120,13 +121,13 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="fedora-on-wsl"></a>WSL 上の Fedora
 
-Fedora は、**dnf** パッケージ インストーラーを使用しています。 **g++** 、**gdb**、**make**、**rsync**、および **zip** をダウンロードするには、次を実行します。
+Fedora は、**dnf** パッケージ インストーラーを使用しています。 **g++** 、**gdb**、**make**、**rsync**、**ninja-build**、および **zip** をダウンロードするには、以下を実行します。
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync make zip
+   sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。
+Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 **ninja-build** は CMake プロジェクトにのみ必要です。
 
 ::: moniker-end
 
@@ -134,12 +135,12 @@ Intellisense のサポートで Linux のヘッダーを Visual Studio と自動
 
 ## <a name="fedora-on-remote-linux-systems"></a>リモートの Linux システム上の Fedora
 
-Fedora を実行しているターゲット マシンで **dnf** パッケージ インストーラーを使用します。 **openssh-server**、**g++** 、**gdb**、**make**、**rsync**、および **zip** をダウンロードし、ssh デーモンを再起動するには、次の手順に従います。
+Fedora を実行しているターゲット マシンで **dnf** パッケージ インストーラーを使用します。 **openssh-server**、**g++** 、**gdb**、**make**、**ninja-build**、**rsync**、および **zip** をダウンロードし、ssh デーモンを再起動するには、次の手順に従います。 **ninja-build** は CMake プロジェクトにのみ必要です。
 
 1. Linux コンピューターのシェル プロンプトで次のコマンドを実行します。
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
+   sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
    sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。

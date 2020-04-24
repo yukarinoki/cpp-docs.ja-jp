@@ -4,12 +4,12 @@ description: vcpkg は、Windows、Linux、および MacOS でのオープン �
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422758"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335406"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -128,7 +128,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Linux 用 Windows サブシステム (WSL) を使用すると、Windows コンピューターから Linux バイナリを生成できます。 指示に従って、[Windows 10 で WSL を設定](/windows/wsl/install-win10)し、[Linux 用の Visual Studio 拡張機能](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)を使って構成します。 Windows と Linux のすべてのビルド済みのライブラリは同じフォルダーに配置できます。 これらは、Windows と WSL の両方からアクセスできます。
 
-## <a name="export_binaries_per_project"></a> コンパイル済みのバイナリとヘッダーをエクスポートする
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> コンパイル済みのバイナリとヘッダーをエクスポートする
 
 チームのすべてのユーザーが同じライブラリをダウンロードしてビルドすることは、効率的ではありません。 1 人のチーム メンバーが **vcpkg export** コマンドを使用して、バイナリとヘッダー、または NuGet パッケージの共用の zip ファイルを作成します。 その後、他のチーム メンバーと共有すると簡単です。
 

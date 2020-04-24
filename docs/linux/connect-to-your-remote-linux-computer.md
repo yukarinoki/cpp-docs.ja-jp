@@ -2,12 +2,12 @@
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは Linux 用 Windows サブシステムに接続する方法です。
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364360"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -150,10 +150,10 @@ Visual Studio 2017 では、リモート Linux マシンに使用するのと同
 
 Visual Studio 2019 バージョン 16.1 では、C++ を [Windows Subsystem for Linux (WSL)](/windows/wsl/about) とともに使用するためのネイティブ サポートが追加されています。 これは、ローカルの WSL インストールで直接ビルドおよびデバッグできることを意味します。 リモート接続を追加したり、SSH を構成したりする必要がなくなりました。 詳細については、こちらの [WSL をインストールする方法](/windows/wsl/install-win10)の説明をご覧ください。
 
-Visual Studio と連携するように WSL インストールを構成するには、次のツールがインストールされている必要があります: gcc または clang、gdb、make、rsync、および zip。 次のコマンドを使うことで、apt が使われるディストリビューションにこれらをインストールできます。これによって g++ コンパイラもインストールされます。
+WSL インストールを Visual Studio で動作するように構成するには、gcc または clang、gdb、make、ninja-build (Visual Studio 2019 バージョン 16.6 以降を使用する CMake プロジェクトにのみ必要)、rsync、および zip をインストールする必要があります。 次のコマンドを使うことで、apt が使われるディストリビューションにこれらをインストールできます。これによって g++ コンパイラもインストールされます。
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 詳細については、「[Linux ワークロードのダウンロード、インストール、セットアップ](download-install-and-setup-the-linux-development-workload.md)」をご覧ください。
