@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CAtlTransactionManager クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlTransactionManager
@@ -25,23 +25,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 5c2814f963ea4814e0d7585e0e4d6dda26c1f04d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321323"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167826"
 ---
-# <a name="catltransactionmanager-class"></a>クラス
+# <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 
-クラスはカーネル トランザクション マネージャー (KTM) 関数のラッパーを提供します。
+CAtlTransactionManager クラスには、カーネルトランザクションマネージャー (KTM) 関数のラッパーが用意されています。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class CAtlTransactionManager;
 ```
 
@@ -51,82 +51,82 @@ class CAtlTransactionManager;
 
 |名前|説明|
 |----------|-----------------|
-|[コトルトランザクションマネージャー](#dtor)|デストラクタ。|
-|[をクリックします。](#catltransactionmanager)|コンストラクター。|
+|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager デストラクター。|
+|[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager コンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[閉じる](#close)|トランザクション ハンドルを閉じます。|
-|[Commit](#commit)|トランザクションのコミットを要求します。|
-|[作成](#create)|トランザクション ハンドルを作成します。|
-|[CreateFile](#createfile)|トランザクション操作としてファイル、ファイル ストリーム、またはディレクトリを作成または開きます。|
+|[閉じる](#close)|1つのトランザクションハンドルを閉じます。|
+|[コミット](#commit)|トランザクションがコミットされることを要求します。|
+|[作成](#create)|トランザクションハンドルを作成します。|
+|[CreateFile](#createfile)|ファイル、ファイルストリーム、またはディレクトリをトランザクション操作として作成または開きます。|
 |[DeleteFile](#deletefile)|トランザクション操作として既存のファイルを削除します。|
-|[ファイルを検索する](#findfirstfile)|トランザクション操作として、ディレクトリでファイルまたはサブディレクトリを検索します。|
-|[ファイル属性を取得します。](#getfileattributes)|指定したファイルまたはディレクトリのファイル システム属性をトランザクション操作として取得します。|
-|[ファイル属性の取得](#getfileattributesex)|指定したファイルまたはディレクトリのファイル システム属性をトランザクション操作として取得します。|
-|[ハンドルを取得します。](#gethandle)|トランザクション ハンドルを返します。|
-|[イスフォールバック](#isfallback)|フォールバック呼び出しが有効かどうかを判断します。|
+|[れる findfirstfile](#findfirstfile)|ファイルまたはサブディレクトリをトランザクション操作として検索します。|
+|[GetFileAttributes](#getfileattributes)|トランザクション操作として、指定したファイルまたはディレクトリのファイルシステム属性を取得します。|
+|[GetFileAttributesEx](#getfileattributesex)|トランザクション操作として、指定したファイルまたはディレクトリのファイルシステム属性を取得します。|
+|[GetHandle](#gethandle)|トランザクションハンドルを返します。|
+|[IsFallback](#isfallback)|フォールバック呼び出しが有効かどうかを判断します。|
 |[MoveFile](#movefile)|既存のファイルまたはディレクトリ (子を含む) をトランザクション操作として移動します。|
-|[キーエックス](#regcreatekeyex)|指定したレジストリ キーを作成し、トランザクションに関連付けます。 キーが既に存在する場合は、そのキーが開きます。|
-|[レジストリキー](#regdeletekey)|トランザクション操作として、指定されたプラットフォーム固有のレジストリ ビューからサブキーとその値を削除します。|
-|[キーエックスを開く](#regopenkeyex)|指定したレジストリ キーを開き、トランザクションに関連付けます。|
-|[ロールバック](#rollback)|トランザクションのロールバックを要求します。|
-|[ファイル属性の設定](#setfileattributes)|ファイルまたはディレクトリの属性をトランザクション操作として設定します。|
+|[RegCreateKeyEx](#regcreatekeyex)|指定されたレジストリキーを作成し、トランザクションに関連付けます。 キーが既に存在する場合は、関数によって開かれます。|
+|[RegDeleteKey](#regdeletekey)|トランザクション操作として、指定したプラットフォーム固有のレジストリビューからサブキーとその値を削除します。|
+|[Regopenkeyex が](#regopenkeyex)|指定されたレジストリキーを開き、それをトランザクションに関連付けます。|
+|[ロールバック](#rollback)|トランザクションがロールバックされることを要求します。|
+|[SetFileAttributes](#setfileattributes)|ファイルまたはディレクトリの属性をトランザクション操作として設定します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|フォールバックがサポートされている場合は TRUE。それ以外の場合は FALSE。|
-|[m_hTransaction](#m_htransaction)|トランザクション ハンドル。|
+|[m_hTransaction](#m_htransaction)|トランザクションハンドル。|
 
 ## <a name="remarks"></a>解説
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[ATL::カトルトランザクションマネージャー](../../atl/reference/catltransactionmanager-class.md)
+[ATL:: CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atltransactionmanager.h
+**ヘッダー:** atltransactionmanager. h
 
-## <a name="catltransactionmanager"></a><a name="dtor"></a>コトルトランザクションマネージャー
+## <a name="catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager
 
-デストラクタ。
+CAtlTransactionManager デストラクター。
 
-```
+```cpp
 virtual ~CAtlTransactionManager();
 ```
 
 ### <a name="remarks"></a>解説
 
-通常の処理では、トランザクションは自動的にコミットされ、クローズされます。 例外アンワインド中にデストラクターが呼び出されると、トランザクションはロールバックされ、閉じられます。
+通常の処理では、トランザクションは自動的にコミットされて閉じられます。 例外のアンワインド中にデストラクターが呼び出されると、トランザクションはロールバックされて閉じられます。
 
-## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>をクリックします。
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
 
-コンストラクター。
+CAtlTransactionManager コンストラクター。
 
-```
+```cpp
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bフォールバック*<br/>
-TRUE は、サポート フォールバックを示します。 トランザクション関数が失敗すると、クラスは自動的に「非トランザクション」関数を呼び出します。 FALSE は「フォールバック」呼び出しがないことを示します。
+*bFallback*<br/>
+TRUE は、サポートフォールバックを示します。 トランザクション関数が失敗した場合、クラスは自動的に "非トランザクション" 関数を呼び出します。 FALSE は、"フォールバック" 呼び出しがないことを示します。
 
-*トランザクションを自動作成します。*<br/>
-TRUE は、トランザクション ハンドラーがコンストラクターで自動的に作成されることを示します。 FALSE は、それがないことを示します。
+*bAutoCreateTransaction*<br/>
+TRUE は、トランザクションハンドラーがコンストラクターに自動的に作成されることを示します。 FALSE は、そうでないことを示します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="close"></a><a name="close"></a>閉じる
+## <a name="close"></a><a name="close"></a>Ok
 
-トランザクション ハンドルを閉じます。
+トランザクションハンドルを閉じます。
 
-```
+```cpp
 inline BOOL Close();
 ```
 
@@ -136,13 +136,13 @@ inline BOOL Close();
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`CloseHandle`を呼び出します。 メソッドはデストラクターで自動的に呼び出されます。
+このラッパーは、 `CloseHandle`関数を呼び出します。 メソッドは、デストラクターで自動的に呼び出されます。
 
-## <a name="commit"></a><a name="commit"></a>コミット
+## <a name="commit"></a><a name="commit"></a>貢献
 
-トランザクションのコミットを要求します。
+トランザクションがコミットされることを要求します。
 
-```
+```cpp
 inline BOOL Commit();
 ```
 
@@ -152,13 +152,13 @@ inline BOOL Commit();
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`CommitTransaction`を呼び出します。 メソッドはデストラクターで自動的に呼び出されます。
+このラッパーは、 `CommitTransaction`関数を呼び出します。 メソッドは、デストラクターで自動的に呼び出されます。
 
-## <a name="create"></a><a name="create"></a>作成
+## <a name="create"></a><a name="create"></a> 作成
 
-トランザクション ハンドルを作成します。
+トランザクションハンドルを作成します。
 
-```
+```cpp
 inline BOOL Create();
 ```
 
@@ -168,13 +168,13 @@ inline BOOL Create();
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`CreateTransaction`を呼び出します。 チェックする
+このラッパーは、 `CreateTransaction`関数を呼び出します。 確認する対象
 
-## <a name="createfile"></a><a name="createfile"></a>Createfile
+## <a name="createfile"></a><a name="createfile"></a>CreateFile
 
-トランザクション操作としてファイル、ファイル ストリーム、またはディレクトリを作成または開きます。
+ファイル、ファイルストリーム、またはディレクトリをトランザクション操作として作成または開きます。
 
-```
+```cpp
 inline HANDLE CreateFile(
     LPCTSTR lpFileName,
     DWORD dwDesiredAccess,
@@ -187,26 +187,26 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*lpFileName*<br/>
 作成または開くオブジェクトの名前。
 
-*アクセスを許可*<br/>
-読み取り、書き込み、両方、またはどちらも (ゼロ) として要約できるオブジェクトへのアクセス。 最もよく使用される値は、GENERIC_READ、GENERIC_WRITE、またはその両方 GENERIC_WRITE &#124; GENERIC_READです。
+*dwDesiredAccess*<br/>
+オブジェクトへのアクセス。読み取り、書き込み、またはその両方 (ゼロ) としてまとめることができます。 最も一般的に使用される値は、GENERIC_READ、GENERIC_WRITE、またはその両方です。 GENERIC_READ &#124; GENERIC_WRITE です。
 
-*を使用します。*<br/>
-オブジェクトの共有モード (読み取り、書き込み、両方、削除、これらすべて、またはなし: 0、FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE。
+*dwShareMode*<br/>
+オブジェクトの共有モード。読み取り、書き込み、両方、削除、または none: 0、FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE のいずれかを指定できます。
 
-*属性*<br/>
-省略可能なセキュリティ記述子を含み、返されたハンドルを子プロセスによって継承できるかどうかを決定するSECURITY_ATTRIBUTES構造体へのポインター。 パラメーターは NULL にすることができます。
+*lpSecurityAttributes*<br/>
+省略可能なセキュリティ記述子を含む SECURITY_ATTRIBUTES 構造体へのポインター。また、返されたハンドルを子プロセスが継承できるかどうかも決定します。 パラメーターには NULL を指定できます。
 
-*dwクリエーションディスポジション*<br/>
-存在するファイルに対して実行するアクション。 このパラメーターは、CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING、またはTRUNCATE_EXISTINGの値のいずれかでなければなりません。
+*Dwの廃棄*<br/>
+存在し、存在しないファイルに対して実行するアクション。 このパラメーターは、CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING、または TRUNCATE_EXISTING を組み合わせることができない、次の値のいずれかである必要があります。
 
-*属性*<br/>
-ファイルの属性とフラグ。 このパラメーターには、使用可能なファイル属性 (FILE_ATTRIBUTE_*) の任意の組み合わせを組み合わせて指定できます。 その他のファイル属性はすべてFILE_ATTRIBUTE_NORMAL上書きされます。 このパラメーターには、バッファリング動作、アクセス モード\*、およびその他の特殊目的フラグを制御するためのフラグ (FILE_FLAG_ ) の組み合わせを含めることもできます。 これらは、FILE_ATTRIBUTE_\*値と組み合わせます。
+*dwFlagsAndAttributes*<br/>
+ファイルの属性とフラグ。 このパラメーターには、使用可能なファイル属性 (FILE_ATTRIBUTE_ *) の任意の組み合わせを含めることができます。 その他のすべてのファイル属性は、FILE_ATTRIBUTE_NORMAL をオーバーライドします。 このパラメーターには、バッファー動作、アクセスモード\*、およびその他の特殊な目的フラグを制御するためのフラグ (FILE_FLAG_) の組み合わせを含めることもできます。 これらは、任意の\* FILE_ATTRIBUTE_ 値と結合されます。
 
-*ファイル*<br/>
-GENERIC_READアクセス権を持つテンプレート ファイルへの有効なハンドル。 テンプレート・ファイルは、作成されるファイルのファイル属性および拡張属性を提供します。 このパラメーターは NULL にすることができます。
+*hTemplateFile*<br/>
+GENERIC_READ アクセス権限を持つテンプレートファイルへの有効なハンドル。 テンプレートファイルには、作成するファイルのファイル属性と拡張属性が用意されています。 このパラメーターには NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -214,30 +214,30 @@ GENERIC_READアクセス権を持つテンプレート ファイルへの有効�
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`CreateFileTransacted`を呼び出します。
+このラッパーは、 `CreateFileTransacted`関数を呼び出します。
 
-## <a name="deletefile"></a><a name="deletefile"></a>ファイルの削除
+## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
 
 トランザクション操作として既存のファイルを削除します。
 
-```
+```cpp
 inline BOOL DeleteFile(LPCTSTR lpFileName);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*lpFileName*<br/>
 削除するファイルの名前。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`DeleteFileTransacted`を呼び出します。
+このラッパーは、 `DeleteFileTransacted`関数を呼び出します。
 
-## <a name="findfirstfile"></a><a name="findfirstfile"></a>ファイルを検索する
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>れる findfirstfile
 
-トランザクション操作として、ディレクトリでファイルまたはサブディレクトリを検索します。
+ファイルまたはサブディレクトリをトランザクション操作として検索します。
 
-```
+```cpp
 inline HANDLE FindFirstFile(
     LPCTSTR lpFileName,
     WIN32_FIND_DATA* pNextInfo);
@@ -245,42 +245,42 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
-検索するディレクトリまたはパス、およびファイル名。 このパラメーターには、アスタリスク (*) や疑問符 ()などのワイルドカード文字を含めることができます。
+*lpFileName*<br/>
+ディレクトリまたはパス、および検索するファイル名。 このパラメーターには、アスタリスク (*) や疑問符 () などのワイルドカード文字を含めることができます。
 
-*次の情報*<br/>
-見つかったファイルまたはサブディレクトリに関する情報を受け取るWIN32_FIND_DATA構造体へのポインタ。
+*pNextInfo*<br/>
+検出されたファイルまたはサブディレクトリに関する情報を受け取る WIN32_FIND_DATA 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は、後続の or の呼び`FindNextFile`出`FindClose`しで使用される検索ハンドルです。 関数が*lpFileName*パラメーターの検索文字列からファイルを検索できない場合、戻り値はINVALID_HANDLE_VALUE。
+関数が成功した場合、戻り値は、または`FindNextFile` `FindClose`への後続の呼び出しで使用される検索ハンドルになります。 関数が失敗するか、 *Lpfilename*パラメーターの検索文字列からファイルを見つけることができない場合、戻り値は INVALID_HANDLE_VALUE です。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`FindFirstFileTransacted`を呼び出します。
+このラッパーは、 `FindFirstFileTransacted`関数を呼び出します。
 
-## <a name="getfileattributes"></a><a name="getfileattributes"></a>ファイル属性を取得します。
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
 
-指定したファイルまたはディレクトリのファイル システム属性をトランザクション操作として取得します。
+トランザクション操作として、指定したファイルまたはディレクトリのファイルシステム属性を取得します。
 
-```
+```cpp
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`GetFileAttributesTransacted`を呼び出します。
+このラッパーは、 `GetFileAttributesTransacted`関数を呼び出します。
 
-## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>ファイル属性の取得
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
 
-指定したファイルまたはディレクトリのファイル システム属性をトランザクション操作として取得します。
+トランザクション操作として、指定したファイルまたはディレクトリのファイルシステム属性を取得します。
 
-```
+```cpp
 inline BOOL GetFileAttributesEx(
     LPCTSTR lpFileName,
     GET_FILEEX_INFO_LEVELS fInfoLevelId,
@@ -289,44 +289,44 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
-*をクリックします。*<br/>
+*Finを*<br/>
 取得する属性情報のレベル。
 
-*ファイル情報*<br/>
-属性情報を受け取るバッファーへのポインター。 このバッファーに格納される属性情報の種類は、 *fInfoLevelId*の値によって決まります。 パラメーター*が*GetFileExInfoStandard の場合、このパラメーターはWIN32_FILE_ATTRIBUTE_DATA構造体を指します。
+*lpFileInformation*<br/>
+属性情報を受け取るバッファーへのポインター。 このバッファーに格納されている属性情報の型は、 *finの*値によって決まります。 *FinGetFileExInfoStandard Ev d*パラメーターが指定されている場合、このパラメーターは WIN32_FILE_ATTRIBUTE_DATA 構造体を指します。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`GetFileAttributesTransacted`を呼び出します。
+このラッパーは、 `GetFileAttributesTransacted`関数を呼び出します。
 
-## <a name="gethandle"></a><a name="gethandle"></a>ハンドルを取得します。
+## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
 
-トランザクション ハンドルを返します。
+トランザクションハンドルを返します。
 
-```
+```cpp
 HANDLE GetHandle() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-クラスのトランザクション ハンドルを返します。 ハンドルに`CAtlTransactionManager`アタッチされていない場合は NULL を返します。
+クラスのトランザクションハンドルを返します。 `CAtlTransactionManager`がハンドルにアタッチされていない場合は NULL を返します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="isfallback"></a><a name="isfallback"></a>イスフォールバック
+## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
 
 フォールバック呼び出しが有効かどうかを判断します。
 
-```
+```cpp
 BOOL IsFallback() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-TRUE を返すクラスは、フォールバック呼び出しをサポートします。 それ以外の場合は FALSE。
+クラスがフォールバック呼び出しをサポートしている場合に TRUE を返します。 それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
@@ -334,7 +334,7 @@ TRUE を返すクラスは、フォールバック呼び出しをサポートし
 
 フォールバックがサポートされている場合は TRUE。それ以外の場合は FALSE。
 
-```
+```cpp
 BOOL m_bFallback;
 ```
 
@@ -342,39 +342,39 @@ BOOL m_bFallback;
 
 ## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
-トランザクション ハンドル。
+トランザクションハンドル。
 
-```
+```cpp
 HANDLE m_hTransaction;
 ```
 
 ### <a name="remarks"></a>解説
 
-## <a name="movefile"></a><a name="movefile"></a>ファイルの移動
+## <a name="movefile"></a><a name="movefile"></a>My.computer.filesystem.movefile
 
 既存のファイルまたはディレクトリ (子を含む) をトランザクション操作として移動します。
 
-```
+```cpp
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名を指定します。*<br/>
-ローカル コンピュータ上の既存のファイルまたはディレクトリの現在の名前。
+*lpOldFileName*<br/>
+ローカルコンピューター上の既存のファイルまたはディレクトリの現在の名前。
 
-*ファイル名を指定します。*<br/>
-ファイルまたはディレクトリの新しい名前。 この名前は既に存在してはなりません。 新しいファイルが別のファイル システムまたはドライブ上にある可能性があります。 新しいディレクトリは同じドライブになければなりません。
+*lpNewFileName*<br/>
+ファイルまたはディレクトリの新しい名前。 この名前は既に存在していてはなりません。 新しいファイルが別のファイルシステムまたはドライブに存在する可能性があります。 新しいディレクトリは、同じドライブ上にある必要があります。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`MoveFileTransacted`を呼び出します。
+このラッパーは、 `MoveFileTransacted`関数を呼び出します。
 
-## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>キーエックス
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
 
-指定したレジストリ キーを作成し、トランザクションに関連付けます。 キーが既に存在する場合は、そのキーが開きます。
+指定されたレジストリキーを作成し、トランザクションに関連付けます。 キーが既に存在する場合は、関数によって開かれます。
 
-```
+```cpp
 inline LSTATUS RegCreateKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -389,46 +389,46 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hkey*<br/>
-開いているレジストリ キーへのハンドル。
+*hKey*<br/>
+開いているレジストリキーを処理するハンドル。
 
-*サブキー*<br/>
-この関数が開く、または作成するサブキーの名前。
+*lpSubKey*<br/>
+この関数が開いたり作成したりするサブキーの名前。
 
-*dw予約済み*<br/>
-このパラメーターは予約済みで、0 である必要があります。
+*dwReserved*<br/>
+このパラメーターは予約されており、ゼロにする必要があります。
 
-*クラス*<br/>
-このキーのユーザー定義クラス。 このパラメータは無視できます。 このパラメーターは NULL にすることができます。
+*lpClass*<br/>
+このキーのユーザー定義クラス。 このパラメーターは無視してもかまいません。 このパラメーターには NULL を指定できます。
 
-*dw オプション*<br/>
-このパラメーターには、REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、またはREG_OPTION_VOLATILEのいずれかの値を指定できます。
+*dwOptions*<br/>
+このパラメーターには、REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、REG_OPTION_VOLATILE のいずれかの値を指定できます。
 
-*サム必要に応じて*<br/>
+*samDesired*<br/>
 キーのアクセス権を指定するマスク。
 
-*属性*<br/>
-SECURITY_ATTRIBUTES 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *場合は、NULL、* ハンドルを継承できません。
+*lpSecurityAttributes*<br/>
+SECURITY_ATTRIBUTES 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *Lpsecurityattributes*が NULL の場合、ハンドルを継承することはできません。
 
-*フク結果*<br/>
-開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリ キーの 1 つでない場合は`RegCloseKey`、ハンドルの使用が完了した後で関数を呼び出します。
+*phkResult*<br/>
+開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリキーのいずれでもない場合は`RegCloseKey` 、ハンドルの使用が終了した後で関数を呼び出します。
 
-*lpdwディスポジション*<br/>
-REG_CREATED_NEW_KEYまたはREG_OPENED_EXISTING_KEYのいずれかの破棄値を受け取る変数へのポインター。
+*lpdwDisposition*<br/>
+REG_CREATED_NEW_KEY または REG_OPENED_EXISTING_KEY のいずれかのディスポジション値を受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
+関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`RegCreateKeyTransacted`を呼び出します。
+このラッパーは、 `RegCreateKeyTransacted`関数を呼び出します。
 
-## <a name="regdeletekey"></a><a name="regdeletekey"></a>レジストリキー
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
 
-トランザクション操作として、指定されたプラットフォーム固有のレジストリ ビューからサブキーとその値を削除します。
+トランザクション操作として、指定したプラットフォーム固有のレジストリビューからサブキーとその値を削除します。
 
-```
+```cpp
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ```
 
@@ -436,22 +436,22 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Hkey*|開いているレジストリ キーへのハンドル。|
-|*サブキー*|削除するキーの名前。|
+|*hKey*|開いているレジストリキーを処理するハンドル。|
+|*lpSubKey*|削除するキーの名前。|
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
+関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`RegDeleteKeyTransacted`を呼び出します。
+このラッパーは、 `RegDeleteKeyTransacted`関数を呼び出します。
 
-## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>キーエックスを開く
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>Regopenkeyex が
 
-指定したレジストリ キーを開き、トランザクションに関連付けます。
+指定されたレジストリキーを開き、それをトランザクションに関連付けます。
 
-```
+```cpp
 inline LSTATUS RegOpenKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -462,34 +462,34 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hkey*<br/>
-開いているレジストリ キーへのハンドル。
+*hKey*<br/>
+開いているレジストリキーを処理するハンドル。
 
-*サブキー*<br/>
-開くレジストリ サブキーの名前。
+*lpSubKey*<br/>
+開くレジストリサブキーの名前。
 
-*ウルオプション*<br/>
-このパラメーターは予約済みで、0 である必要があります。
+*ulOptions*<br/>
+このパラメーターは予約されており、ゼロにする必要があります。
 
-*サム必要に応じて*<br/>
+*samDesired*<br/>
 キーのアクセス権を指定するマスク。
 
-*フク結果*<br/>
-開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリ キーの 1 つでない場合は`RegCloseKey`、ハンドルの使用が完了した後で関数を呼び出します。
+*phkResult*<br/>
+開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリキーのいずれでもない場合は`RegCloseKey` 、ハンドルの使用が終了した後で関数を呼び出します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
+関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されたゼロ以外のエラーコードになります。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`RegOpenKeyTransacted`を呼び出します。
+このラッパーは、 `RegOpenKeyTransacted`関数を呼び出します。
 
 ## <a name="rollback"></a><a name="rollback"></a>ロールバック
 
-トランザクションのロールバックを要求します。
+トランザクションがロールバックされることを要求します。
 
-```
+```cpp
 inline BOOL Rollback();
 ```
 
@@ -499,27 +499,27 @@ inline BOOL Rollback();
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`RollbackTransaction`を呼び出します。
+このラッパーは、 `RollbackTransaction`関数を呼び出します。
 
-## <a name="setfileattributes"></a><a name="setfileattributes"></a>ファイル属性の設定
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes
 
 ファイルまたはディレクトリの属性をトランザクション操作として設定します。
 
-```
+```cpp
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
-*dw属性*<br/>
-ファイルに設定するファイル属性。 詳細については、「[トランスフォームを実行するファイル属性」を参照してください。](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)
+*dwAttributes*<br/>
+ファイルに設定するファイル属性。 詳細については、「 [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-このラッパーは関数`SetFileAttributesTransacted`を呼び出します。
+このラッパーは、 `SetFileAttributesTransacted`関数を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 

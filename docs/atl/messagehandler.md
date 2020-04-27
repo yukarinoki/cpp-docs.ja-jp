@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 65a8ce08e4f8606f168b101aa4daba23ef541051
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492318"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168671"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -18,7 +18,7 @@ ms.locfileid: "69492318"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 LRESULT MessageHandler(
     UINT uMsg,
     WPARAM wParam,
@@ -32,19 +32,19 @@ LRESULT MessageHandler(
 メッセージを指定します。
 
 *wParam*<br/>
-メッセージ固有の追加情報。
+追加のメッセージ固有情報。
 
 *lParam*<br/>
-メッセージ固有の追加情報。
+追加のメッセージ固有情報。
 
 *bHandled*<br/>
-が呼び出される前に`MessageHandler` 、メッセージマップによって*bhandled*が TRUE に設定されます。 が`MessageHandler`メッセージを完全に処理しない場合は、 *bhandled*を FALSE に設定して、メッセージにさらに処理が必要であることを示す必要があります。
+が呼び出される前に`MessageHandler` 、メッセージマップによって*BHANDLED*が TRUE に設定されます。 が`MessageHandler`メッセージを完全に処理しない場合は、 *BHANDLED*を FALSE に設定して、メッセージにさらに処理が必要であることを示す必要があります。
 
 ## <a name="return-value"></a>戻り値
 
 メッセージ処理の結果。 成功した場合は0。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 メッセージマップでこのメッセージハンドラーを使用する例については、「 [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)」を参照してください。
 

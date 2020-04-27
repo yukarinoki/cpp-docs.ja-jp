@@ -1,5 +1,5 @@
 ---
-title: クラスを自動処理します。
+title: CAtlAutoThreadModuleT クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -8,39 +8,39 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: e7b7a327d7c47c4472b43ed58fbe9ad0556a7620
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321539"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168724"
 ---
-# <a name="catlautothreadmodulet-class"></a>クラスを自動処理します。
+# <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT クラス
 
-このクラスは、スレッド プールのアパートメント モデル COM サーバーを実装するためのメソッドを提供します。
+このクラスは、スレッドプールされたアパートメントモデル COM サーバーを実装するためのメソッドを提供します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
 COM サーバーを実装するクラス。
 
-*スレッドアロケーター*<br/>
-スレッドの選択を管理するクラス。 既定値は[、CComSimple スレッドアロケーターです](../../atl/reference/ccomsimplethreadallocator-class.md)。
+*ThreadAllocator*<br/>
+スレッド選択を管理するクラス。 既定値は[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
 
 *dwWait*<br/>
-タイムアウト間隔をミリ秒単位で指定します。 デフォルトは INFINITE で、メソッドのタイムアウト間隔が経過することはありません。
+タイムアウト間隔をミリ秒単位で指定します。 既定値は無限です。これは、メソッドのタイムアウト間隔が経過しないことを意味します。
 
 ## <a name="members"></a>メンバー
 
@@ -48,14 +48,14 @@ COM サーバーを実装するクラス。
 
 |名前|説明|
 |----------|-----------------|
-|[を取得します。](#getdefaultthreads)|この静的関数は、プロセッサの数に基づいて、EXE モジュールのスレッドの最大数を動的に計算して返します。|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|この静的関数は、プロセッサの数に基づいて、実行可能モジュールのスレッドの最大数を動的に計算して返します。|
 
 ## <a name="remarks"></a>解説
 
-クラス[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)は、`CAtlAutoThreadModuleT`スレッド プール、アパートメント モデルの COM サーバーを実装するためにから派生します。 廃止されたクラス[を](../../atl/reference/ccomautothreadmodule-class.md)置き換えます。
+[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)クラスは、スレッド`CAtlAutoThreadModuleT`プールされたアパートメントモデルの COM サーバーを実装するためにから派生します。 互換性のために残されているクラス[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)を置き換えます。
 
 > [!NOTE]
-> 既定の*dwWait*値の INFINITE は DLL がアンロードされたときにデッドロックを発生させるため、このクラスは DLL で使用しないでください。
+> このクラスは DLL では使用しないでください。既定の*Dwwait*値は無限であるため、dll がアンロードされるとデッドロックが発生します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,27 +65,27 @@ COM サーバーを実装するクラス。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>を取得します。
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
 
-この静的関数は、プロセッサの数に基づいて、EXE モジュールのスレッドの最大数を動的に計算して返します。
+この静的関数は、プロセッサの数に基づいて、実行可能モジュールのスレッドの最大数を動的に計算して返します。
 
-```
+```cpp
 static int GetDefaultThreads();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-EXE モジュールで作成されるスレッドの数。
+EXE モジュールに作成されるスレッドの数。
 
 ### <a name="remarks"></a>解説
 
-スレッド数を計算するために別のメソッドを使用する場合は、このメソッドをオーバーライドします。 デフォルトでは、スレッド数はプロセッサ数に基づいて行われます。
+スレッド数を計算するために別のメソッドを使用する場合は、このメソッドをオーバーライドします。 既定では、スレッドの数はプロセッサの数に基づいています。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
-[モジュール クラス](../../atl/atl-module-classes.md)
+[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[モジュールクラス](../../atl/atl-module-classes.md)

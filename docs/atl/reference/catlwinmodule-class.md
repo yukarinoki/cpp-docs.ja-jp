@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CAtlWinModule クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlWinModule
@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: e131ca1b4eb6e320d533ad1292c23add6ffa46e5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748553"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167709"
 ---
-# <a name="catlwinmodule-class"></a>クラス
+# <a name="catlwinmodule-class"></a>CAtlWinModule クラス
 
-このクラスは、ATL ウィンドウ コンポーネントをサポートします。
+このクラスは、ATL ウィンドウコンポーネントをサポートします。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
@@ -36,15 +36,15 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 |名前|説明|
 |----------|-----------------|
-|[カトルウィンモジュール::カトルウィンモジュール](#catlwinmodule)|コンストラクターです。|
-|[CAtlWin モジュール::~CAtlWin モジュール](#dtor)|デストラクターです。|
+|[CAtlWinModule::CAtlWinModule](#catlwinmodule)|コンストラクターです。|
+|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を使用します。](#addcreatewnddata)|データ オブジェクトを追加します。|
-|[を作成します。](#extractcreatewnddata)|ウィンドウ モジュール データ オブジェクトへのポインターを返します。|
+|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|データオブジェクトを追加します。|
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|ウィンドウのモジュールデータオブジェクトへのポインターを返します。|
 
 ## <a name="remarks"></a>解説
 
@@ -58,11 +58,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>を使用します。
+## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-このメソッドは、構造体を初期化`_AtlCreateWndData`して追加します。
+このメソッドは、 `_AtlCreateWndData`構造体を初期化して追加します。
 
 ```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -70,33 +70,33 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdata*<br/>
-初期化および現在`_AtlCreateWndData`のモジュールに追加する構造体へのポインター。
+*pData*<br/>
+初期化さ`_AtlCreateWndData`れ、現在のモジュールに追加される構造体へのポインター。
 
 *pObject*<br/>
-オブジェクトの**この**ポインターへのポインター。
+オブジェクトの**this**ポインターへのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化する[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)を呼び出します。 この構造体は、ウィンドウ プロシージャでクラス インスタンスを取得するために使用される**this**ポインターを格納します。
+このメソッドは、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化する[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)を呼び出します。 この構造体は、ウィンドウプロシージャでクラスインスタンスを取得するために使用される**this**ポインターを格納します。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>カトルウィンモジュール::カトルウィンモジュール
+## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 コンストラクターです。
 
-```
+```cpp
 CAtlWinModule();
 ```
 
 ### <a name="remarks"></a>解説
 
-初期化が失敗すると **、EXCEPTION_NONCONTINUABLE**例外が発生します。
+初期化に失敗した場合は、 **EXCEPTION_NONCONTINUABLE**例外が発生します。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWin モジュール::~CAtlWin モジュール
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule
 
 デストラクターです。
 
-```
+```cpp
 ~CAtlWinModule();
 ```
 
@@ -104,9 +104,9 @@ CAtlWinModule();
 
 割り当てられたすべてのリソースを解放します。
 
-## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>を作成します。
+## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-このメソッドは、構造体へのポインター`_AtlCreateWndData`を返します。
+このメソッドは、 `_AtlCreateWndData`構造体へのポインターを返します。
 
 ```cpp
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>戻り値
 
-以前に`_AtlCreateWndData`[追加](#addcreatewnddata)された構造体へのポインターを返します。
+[CAtlWinModule:: AddCreateWndData](#addcreatewnddata)で`_AtlCreateWndData`以前に追加された構造体へのポインターを返します。使用可能なオブジェクトがない場合は NULL を返します。
 
 ## <a name="see-also"></a>関連項目
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[モジュール クラス](../../atl/atl-module-classes.md)
+[モジュールクラス](../../atl/atl-module-classes.md)

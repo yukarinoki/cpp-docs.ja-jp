@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: d05683383fab64f027f198d49bfbf42aa593d582
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d39cdd281e09cdfe09546627aa630a11d12464e
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260923"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168567"
 ---
-# <a name="atlmodule70-structure"></a>_ATL_MODULE70 構造体
+# <a name="_atl_module70-structure"></a>_ATL_MODULE70 構造体
 
-すべての ATL モジュールによって使用されるデータが含まれています。
+すべての ATL モジュールで使用されるデータを格納します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct _ATL_MODULE70 {
     UINT cbSize;
     LONG m_nLockCnt;
@@ -34,24 +34,24 @@ struct _ATL_MODULE70 {
 ## <a name="members"></a>メンバー
 
 `cbSize`<br/>
-バージョン管理に使用される、構造のサイズ。
+構造体のサイズ。バージョン管理に使用されます。
 
 `m_nLockCnt`<br/>
-どのくらいの期間、モジュールをアライブに維持を決定する、参照がカウントされます。
+モジュールを維持する期間を決定する参照カウント。
 
 `m_pTermFuncs`<br/>
-ATL をシャット ダウン時に呼び出される登録されている関数をトラックします。
+ATL がシャットダウンしたときに呼び出されるように登録されている関数を追跡します。
 
 `m_csStaticDataInitAndTypeInfo`<br/>
-マルチ スレッドの状況での内部データへのアクセスを調整するために使用します。
+マルチスレッドの状況で内部データへのアクセスを調整するために使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)の typedef として定義されて`_ATL_MODULE70`します。
+[_ATL_MODULE](atl-typedefs.md#_atl_module)は、の`_ATL_MODULE70`typedef として定義されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
 ## <a name="see-also"></a>関連項目
 

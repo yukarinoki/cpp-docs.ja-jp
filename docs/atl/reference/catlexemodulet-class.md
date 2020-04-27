@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CAtlExeModuleT クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlExeModuleT
@@ -22,28 +22,28 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 33edd8f2483bc21ea6cf8b68f80a2501c37d1a40
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b678c8a46f56337d76ec192869449797a4f66fb3
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748749"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168795"
 ---
-# <a name="catlexemodulet-class"></a>クラス
+# <a name="catlexemodulet-class"></a>CAtlExeModuleT クラス
 
 このクラスは、アプリケーションのモジュールを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-クラスから派生`CAtlExeModuleT`したクラス。
+から`CAtlExeModuleT`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -51,74 +51,74 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#catlexemodulet)|コンストラクターです。|
-|[をクリックします。](#dtor)|デストラクターです。|
+|[CAtlExeModuleT:: CAtlExeModuleT](#catlexemodulet)|コンストラクターです。|
+|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#initializecom)|COM を初期化します。|
-|[をクリック :Pします。](#parsecommandline)|コマンド ラインを解析し、必要に応じて登録を実行します。|
-|[をクリック :Pします。](#postmessageloop)|このメソッドは、メッセージ ループが終了した直後に呼び出されます。|
-|[を:P](#premessageloop)|このメソッドは、メッセージ ループに入る直前に呼び出されます。|
-|[クラスクラスのオブジェクト](#registerclassobjects)|クラス オブジェクトを登録します。|
-|[クラスオブジェクトを取り消す](#revokeclassobjects)|クラス オブジェクトを取り消します。|
-|[実行](#run)|このメソッドは、EXE モジュール内のコードを実行して、初期化、メッセージ ループの実行、およびクリーンアップを実行します。|
-|[をクリックします。](#runmessageloop)|このメソッドは、メッセージ ループを実行します。|
-|[を初期化しません。](#uninitializecom)|COM の初期化を解除します。|
-|[CAtlExeモジュール::ロック解除](#unlock)|モジュールのロックカウントを減算します。|
-|[をクリックします。](#winmain)|このメソッドは、EXE を実行するために必要なコードを実装します。|
+|[CAtlExeModuleT:: 初期化 Ecom](#initializecom)|COM を初期化します。|
+|[CAtlExeModuleT::P arseCommandLine](#parsecommandline)|コマンドラインを解析し、必要に応じて登録を実行します。|
+|[CAtlExeModuleT::P ostMessageLoop](#postmessageloop)|このメソッドは、メッセージループが終了した直後に呼び出されます。|
+|[CAtlExeModuleT::P 再実行します。](#premessageloop)|このメソッドは、メッセージループを開始する直前に呼び出されます。|
+|[CAtlExeModuleT:: RegisterClassObjects](#registerclassobjects)|クラスオブジェクトを登録します。|
+|[CAtlExeModuleT:: RevokeClassObjects](#revokeclassobjects)|クラスオブジェクトを取り消します。|
+|[CAtlExeModuleT:: Run](#run)|このメソッドは、EXE モジュール内のコードを実行して初期化し、メッセージループを実行して、クリーンアップします。|
+|[CAtlExeModuleT:: RunMessageLoop](#runmessageloop)|このメソッドは、メッセージループを実行します。|
+|[CAtlExeModuleT:: Uninitializer Ecom](#uninitializecom)|初期化前 COM。|
+|[CAtlExeModuleT:: Unlock](#unlock)|モジュールのロックカウントをデクリメントします。|
+|[CAtlExeModuleT:: WinMain](#winmain)|このメソッドは、EXE を実行するために必要なコードを実装します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします m_bDelayShutdown。](#m_bdelayshutdown)|モジュールのシャットダウンが遅れる必要があることを示すフラグ。|
-|[m_dwPause](#m_dwpause)|すべてのオブジェクトがシャットダウン前に解放されるようにするために使用される一時停止値。|
-|[カトルエクセスト::m_dwTimeOut](#m_dwtimeout)|モジュールのアンロードを遅延させるために使用されるタイムアウト値。|
+|[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|モジュールをシャットダウンする遅延があることを示すフラグ。|
+|[CAtlExeModuleT:: m_dwPause](#m_dwpause)|シャットダウン前にすべてのオブジェクトが解放されるようにするために使用される一時停止値。|
+|[CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout)|モジュールのアンロードを遅延させるために使用するタイムアウト値。|
 
 ## <a name="remarks"></a>解説
 
-`CAtlExeModuleT`は、アプリケーション (EXE) のモジュールを表し、EXE の作成、コマンド ラインの処理、クラス オブジェクトの登録、メッセージ ループの実行、終了時のクリーンアップをサポートするコードを含んでいます。
+`CAtlExeModuleT`アプリケーション (EXE) のモジュールを表します。 EXE の作成、コマンドラインの処理、クラスオブジェクトの登録、メッセージループの実行、終了時のクリーンアップをサポートするコードが含まれています。
 
-このクラスは、EXE サーバー内の COM オブジェクトが継続的に作成および破棄される場合のパフォーマンスを向上させるように設計されています。 最後の COM オブジェクトが解放された後、EXE は[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)データ メンバーで指定された期間待機します。 この期間中にアクティビティがない場合 (つまり、COM オブジェクトが作成されていない場合)、シャットダウンプロセスが開始されます。
+このクラスは、EXE サーバーの COM オブジェクトが継続的に作成および破棄されるときのパフォーマンスを向上するように設計されています。 最後の COM オブジェクトが解放されると、EXE は[CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout)データメンバーによって指定された期間待機します。 この期間中にアクティビティがない場合 (つまり、COM オブジェクトが作成されていない場合)、シャットダウンプロセスが開始されます。
 
-[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)データ メンバーは、EXE が上記で定義したメカニズムを使用するかどうかを判断するために使用されるフラグです。 false に設定されている場合、モジュールは直ちに終了します。
+[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)データメンバーは、実行時に定義されたメカニズムを使用するかどうかを判断するために使用されるフラグです。 False に設定されている場合、モジュールは直ちに終了します。
 
-ATL のモジュールの詳細については[、「ATL モジュール クラス](../../atl/atl-module-classes.md)」を参照してください。
+ATL のモジュールの詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[カトルモジュール](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
-[カトルモジュール](../../atl/reference/catlmodulet-class.md)
+[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
 `CAtlExeModuleT`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>をクリックします。
+## <a name="catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>CAtlExeModuleT:: CAtlExeModuleT
 
 コンストラクターです。
 
-```
+```cpp
 CAtlExeModuleT() throw();
 ```
 
 ### <a name="remarks"></a>解説
 
-EXE モジュールを初期化できなかった場合、WinMain は処理を行わずに直ちに戻ります。
+EXE モジュールを初期化できなかった場合、WinMain は、後続の処理を行わずにすぐに制御を戻します。
 
-## <a name="catlexemoduletcatlexemodulet"></a><a name="dtor"></a>をクリックします。
+## <a name="catlexemoduletcatlexemodulet"></a><a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
 
 デストラクターです。
 
-```
+```cpp
 ~CAtlExeModuleT() throw();
 ```
 
@@ -126,177 +126,177 @@ EXE モジュールを初期化できなかった場合、WinMain は処理を�
 
 割り当てられたすべてのリソースを解放します。
 
-## <a name="catlexemoduletinitializecom"></a><a name="initializecom"></a>をクリックします。
+## <a name="catlexemoduletinitializecom"></a><a name="initializecom"></a>CAtlExeModuleT:: 初期化 Ecom
 
 COM を初期化します。
 
-```
+```cpp
 static HRESULT InitializeCom() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドはコンストラクターから呼び出され、既定の実装とは異なる方法で COM を初期化するためにオーバーライドできます。 既定の実装は、`CoInitializeEx(NULL, COINIT_MULTITHREADED)`プロジェクト`CoInitialize(NULL)`構成に応じて呼び出すか、または依存します。
+このメソッドはコンストラクターから呼び出され、既定の実装とは異なる方法で COM を初期化するようにオーバーライドできます。 既定の実装では`CoInitializeEx(NULL, COINIT_MULTITHREADED)` 、 `CoInitialize(NULL)`プロジェクトの構成に応じて、またはが呼び出されます。
 
-通常、このメソッドをオーバーライドするには[、オーバーライド](#uninitializecom)する必要があります。
+通常、このメソッドをオーバーライドするに[は、CAtlExeModuleT:: Un初期化 Ecom](#uninitializecom)をオーバーライドする必要があります。
 
-## <a name="catlexemoduletm_bdelayshutdown"></a><a name="m_bdelayshutdown"></a>をクリックします m_bDelayShutdown。
+## <a name="catlexemoduletm_bdelayshutdown"></a><a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
 
-モジュールのシャットダウンが遅れる必要があることを示すフラグ。
+モジュールをシャットダウンする遅延があることを示すフラグ。
 
-```
+```cpp
 bool m_bDelayShutdown;
 ```
 
 ### <a name="remarks"></a>解説
 
-詳細については[、CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)の概要を参照してください。
+詳細については、「 [CAtlExeModuleT の概要](../../atl/reference/catlexemodulet-class.md)」を参照してください。
 
-## <a name="catlexemoduletm_dwpause"></a><a name="m_dwpause"></a>m_dwPause
+## <a name="catlexemoduletm_dwpause"></a><a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
 
-シャットダウン前にすべてのオブジェクトがなくなることを確認するために使用される一時停止値。
+すべてのオブジェクトがシャットダウン前に失われることを保証するために使用される一時停止値。
 
-```
+```cpp
 DWORD m_dwPause;
 ```
 
 ### <a name="remarks"></a>解説
 
-[CAtlExeModuleT::InitializeCom](#initializecom)を呼び出した後にこの値を変更して、サーバーをシャットダウンするための休止値として使用されるミリ秒数を設定します。 デフォルト値は 1000 ミリ秒です。
+[CAtlExeModuleT:: Initializer Ecom](#initializecom)を呼び出した後にこの値を変更して、サーバーをシャットダウンするための一時停止値として使用されるミリ秒数を設定します。 既定値は1000ミリ秒です。
 
-## <a name="catlexemoduletm_dwtimeout"></a><a name="m_dwtimeout"></a>カトルエクセスト::m_dwTimeOut
+## <a name="catlexemoduletm_dwtimeout"></a><a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
 
-モジュールのアンロードを遅延させるために使用されるタイムアウト値。
+モジュールのアンロードを遅延させるために使用するタイムアウト値。
 
-```
+```cpp
 DWORD m_dwTimeOut;
 ```
 
 ### <a name="remarks"></a>解説
 
-[CAtlExeModuleT::InitializeCom](#initializecom)を呼び出した後にこの値を変更して、サーバーをシャットダウンするためのタイムアウト値として使用されるミリ秒数を定義します。 既定値は 5000 ミリ秒です。 詳細については[、CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)の概要を参照してください。
+[CAtlExeModuleT:: Initializer Ecom](#initializecom)を呼び出した後にこの値を変更して、サーバーをシャットダウンするためのタイムアウト値として使用されるミリ秒数を定義します。 既定値は 5000 ミリ秒です。 詳細については、 [CAtlExeModuleT の概要](../../atl/reference/catlexemodulet-class.md)に関するトピックを参照してください。
 
-## <a name="catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>をクリック :Pします。
+## <a name="catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlExeModuleT::P arseCommandLine
 
-コマンド ラインを解析し、必要に応じて登録を実行します。
+コマンドラインを解析し、必要に応じて登録を実行します。
 
-```
+```cpp
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ライン*<br/>
-アプリケーションに渡されるコマンド ライン。
+*lpCmdLine*<br/>
+アプリケーションに渡されるコマンドライン。
 
-*コード*<br/>
-登録に対応する HRESULT (発生した場合)。
+*pnRetCode*<br/>
+登録に対応する HRESULT (行われた場合)。
 
 ### <a name="return-value"></a>戻り値
 
-アプリケーションの実行を継続する場合は true を返し、それ以外の場合は false を返します。
+アプリケーションの実行を継続する必要がある場合は true を返します。それ以外の場合は false を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、CAtlExeModuleT::WinMain](#winmain)から呼び出され、コマンド ライン スイッチを処理するためにオーバーライドできます。 既定の実装では **、/RegServer**および **/UnRegServer**コマンド ライン引数をチェックし、登録または登録解除を実行します。
+このメソッドは[CAtlExeModuleT:: WinMain](#winmain)から呼び出され、コマンドラインスイッチを処理するようにオーバーライドできます。 既定の実装では、 **/UnRegServer**コマンドライン**引数を確認**し、登録または登録解除を実行します。
 
-## <a name="catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>をクリック :Pします。
+## <a name="catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>CAtlExeModuleT::P ostMessageLoop
 
-このメソッドは、メッセージ ループが終了した直後に呼び出されます。
+このメソッドは、メッセージループが終了した直後に呼び出されます。
 
-```
+```cpp
 HRESULT PostMessageLoop() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-カスタム アプリケーションのクリーンアップを実行するには、このメソッドをオーバーライドします。 既定の実装は[、CAtlExeModuleT::取り消しクラスオブジェクト](#revokeclassobjects)を呼び出します。
+カスタムアプリケーションのクリーンアップを実行するには、このメソッドをオーバーライドします。 既定の実装では、 [CAtlExeModuleT:: RevokeClassObjects](#revokeclassobjects)が呼び出されます。
 
-## <a name="catlexemoduletpremessageloop"></a><a name="premessageloop"></a>を:P
+## <a name="catlexemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlExeModuleT::P 再実行します。
 
-このメソッドは、メッセージ ループに入る直前に呼び出されます。
+このメソッドは、メッセージループを開始する直前に呼び出されます。
 
-```
+```cpp
 HRESULT PreMessageLoop(int nShowCmd) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*を表示します。*<br/>
-WinMain で*nShowCmd*パラメーターとして渡される値。
+*nShowCmd*<br/>
+WinMain の*Nshowcmd*パラメーターとして渡された値。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-アプリケーションのカスタム初期化コードを追加するには、このメソッドをオーバーライドします。 既定の実装では、クラス オブジェクトを登録します。
+アプリケーションのカスタム初期化コードを追加するには、このメソッドをオーバーライドします。 既定の実装では、クラスオブジェクトが登録されます。
 
-## <a name="catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>クラスクラスのオブジェクト
+## <a name="catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>CAtlExeModuleT:: RegisterClassObjects
 
-他のアプリケーションが OLE に接続できるように、クラス オブジェクトを OLE に登録します。
+他のアプリケーションが接続できるように、クラスオブジェクトを OLE に登録します。
 
-```
+```cpp
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテキスト*<br/>
-クラス オブジェクトを実行するコンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER、またはCLSCTX_LOCAL_SERVERです。
+*dwClsContext*<br/>
+クラスオブジェクトを実行するコンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER、または CLSCTX_LOCAL_SERVER です。
 
 *dwFlags*<br/>
-クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、またはREGCLS_MULTI_SEPARATEです。
+クラスオブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE です。
 
 ### <a name="return-value"></a>戻り値
 
-登録するクラスがなかった場合S_FALSE成功時にS_OKを返します。
+成功した場合は S_OK を返し、登録するクラスがない場合は S_FALSE を返します。失敗した場合は、エラー HRESULT を返します。
 
-## <a name="catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>クラスオブジェクトを取り消す
+## <a name="catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>CAtlExeModuleT:: RevokeClassObjects
 
-クラス オブジェクトを削除します。
+クラスオブジェクトを削除します。
 
-```
+```cpp
 HRESULT RevokeClassObjects() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-登録するクラスがなかった場合S_FALSE成功時にS_OKを返します。
+成功した場合は S_OK を返し、登録するクラスがない場合は S_FALSE を返します。失敗した場合は、エラー HRESULT を返します。
 
-## <a name="catlexemoduletrun"></a><a name="run"></a>実行
+## <a name="catlexemoduletrun"></a><a name="run"></a>CAtlExeModuleT:: Run
 
-このメソッドは、EXE モジュール内のコードを実行して、初期化、メッセージ ループの実行、およびクリーンアップを実行します。
+このメソッドは、EXE モジュール内のコードを実行して初期化し、メッセージループを実行して、クリーンアップします。
 
-```
+```cpp
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*を表示します。*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターは[、WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかです。 既定値は SW_HIDE です。
+*nShowCmd*<br/>
+ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。 既定値は SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドはオーバーライドできます。 しかし、実際には[、代わりにCAtlExeModuleT::Pメッセージループ](#premessageloop)[、CAtlExeModuleT::または](#runmessageloop)[CAtlExeModuleT::PostMessageLoop](#postmessageloop)をオーバーライドする方が良いです。
+このメソッドはオーバーライドできます。 ただし、実際には、 [CAtlExeModuleT::P Remessagの op](#premessageloop)、 [CAtlExeModuleT:: runmessag](#runmessageloop)Op、または[CAtlExeModuleT::P ostmessag賢明](#postmessageloop)な操作をオーバーライドすることをお勧めします。
 
-## <a name="catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>をクリックします。
+## <a name="catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>CAtlExeModuleT:: RunMessageLoop
 
-このメソッドは、メッセージ ループを実行します。
+このメソッドは、メッセージループを実行します。
 
 ```cpp
 void RunMessageLoop() throw();
@@ -304,25 +304,25 @@ void RunMessageLoop() throw();
 
 ### <a name="remarks"></a>解説
 
-このメソッドをオーバーライドして、メッセージ ループの動作を変更できます。
+このメソッドをオーバーライドすると、メッセージループの動作を変更できます。
 
-## <a name="catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>を初期化しません。
+## <a name="catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>CAtlExeModuleT:: Uninitializer Ecom
 
-COM の初期化を解除します。
+初期化前 COM。
 
-```
+```cpp
 static void UninitializeCom() throw();
 ```
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは[単に CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)を呼び出し、デストラクターから呼び出されます。 このメソッドをオーバーライドする場合[は、この](#initializecom)メソッドをオーバーライドします。
+既定では、このメソッドは単に[CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)を呼び出し、デストラクターから呼び出されます。 [CAtlExeModuleT:: 初期化 Ecom](#initializecom)をオーバーライドする場合は、このメソッドをオーバーライドします。
 
-## <a name="catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeモジュール::ロック解除
+## <a name="catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeModuleT:: Unlock
 
-モジュールのロックカウントを減算します。
+モジュールのロックカウントをデクリメントします。
 
-```
+```cpp
 LONG Unlock() throw();
 ```
 
@@ -330,18 +330,18 @@ LONG Unlock() throw();
 
 診断またはテストに役立つ値を返します。
 
-## <a name="catlexemoduletwinmain"></a><a name="winmain"></a>をクリックします。
+## <a name="catlexemoduletwinmain"></a><a name="winmain"></a>CAtlExeModuleT:: WinMain
 
 このメソッドは、EXE を実行するために必要なコードを実装します。
 
-```
+```cpp
 int WinMain(int nShowCmd) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*を表示します。*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターは[、WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかです。
+*nShowCmd*<br/>
+ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -349,11 +349,11 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>解説
 
-このメソッドはオーバーライドできます。 オーバーライドする場合[、CAtlExeModuleT::Pメッセージループ](#premessageloop)[、CAtlExeModuleT::PostMessageLoop、](#postmessageloop)または[CAtlExeModuleT::RunMessageLoop](#runmessageloop)は、このメソッドを使用して`WinMain`関数をオーバーライドできます。
+このメソッドはオーバーライドできます。 [:P CAtlExeModuleT](#premessageloop)をオーバーライドする場合、 [CAtlExeModuleT::P ostmessagop](#postmessageloop)Op、または[CAtlExeModuleT:: runmessag](#runmessageloop) op をオーバーライドしても十分な柔軟性が得られない`WinMain`場合は、このメソッドを使用して関数をオーバーライドできます。
 
 ## <a name="see-also"></a>関連項目
 
-[ATLダックサンプル](../../overview/visual-cpp-samples.md)<br/>
-[クラス](../../atl/reference/catlmodulet-class.md)<br/>
-[クラス](../../atl/reference/catldllmodulet-class.md)<br/>
+[ATLDuck のサンプル](../../overview/visual-cpp-samples.md)<br/>
+[CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlDllModuleT クラス](../../atl/reference/catldllmodulet-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,43 +1,51 @@
 ---
-title: /8 (ソースと実行可能文字セットを UTF-8 に設定する)
-ms.date: 11/04/2016
+title: /8 (ソースと実行可能文字セットをにUTF-8設定します)
+ms.date: 04/26/2020
 f1_keywords:
 - /utf-8
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: 1ff0f23ad0758642c73b1b35d6d4dd1be20899cb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+no-loc:
+- UTF
+- UTF-8
+- UTF-16
+ms.openlocfilehash: c98a30b0ec4b36b8bd87fb0956d9382751975cfd
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498182"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168866"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/8 (ソースと実行可能文字セットを UTF-8 に設定する)
+# <a name="utf-8-set-source-and-executable-character-sets-to-opno-locutf-8"></a>`/utf-8`(ソースと実行可能文字セットをUTF-8に設定します)
 
-ソース文字セットと実行文字セットの両方を UTF-8 として指定します。
+ソース文字セットと実行文字セットの両方をとしUTF-8て指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-/utf-8
-```
+> **`/utf-8`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/-8**オプションを使用すると、utf-8 を使用してエンコードされたソースと実行の両方の文字セットを指定できます。 これは、コマンドラインで **/source-charset: utf-8/executioncharset: utf-8**を指定することと同じです。 これらのオプションのいずれでも、既定では、**文字セット**オプションが有効になります。 サポートされているコードページ識別子と文字セット名の一覧については、「[コードページ識別子](/windows/win32/Intl/code-page-identifiers)」を参照してください。
+**`/utf-8`** オプションを使用すると、を使用UTF-8してエンコードされたソースと実行の両方の文字セットを指定できます。 これは、コマンドライン**`/source-charset:utf-8 /execution-charset:utf-8`** でを指定することと同じです。 これらのオプションのいずれでも**`/validate-charset`** 、既定でオプションが有効になります。 サポートされているコードページ識別子と文字セット名の一覧については、「[コードページ識別子](/windows/win32/Intl/code-page-identifiers)」を参照してください。
 
-既定では、Visual Studio は、ソースファイルがエンコードされた Unicode 形式であるかどうかを判断するためにバイト順マークを検出します (UTF-16 や UTF-8 など)。 バイト順マークが見つからない場合は、 **/source-charset**オプションを使用してコードページを指定しない限り、ソースファイルが現在のユーザーコードページを使用してエンコードされているものと見なされます。 Visual Studio では、いくつかC++の文字エンコーディングのいずれかを使用して、ソースコードを保存できます。 ソース文字セットと実行文字セットの詳細については、言語ドキュメントの「[文字セット](../../cpp/character-sets.md)」を参照してください。
+既定でUTF-16は、Visual Studio は、ソースファイルがエンコードされた Unicode 形式 (またはUTF-8など) であるかどうかを判断するために、バイト順マークを検出します。 バイト順マークが見つからない場合、または**`/utf-8`** **`/source-charset`** オプションを使用してコードページを指定していない限り、ソースファイルは現在のユーザーコードページを使用してエンコードされていると見なされます。 Visual Studio では、いくつかの文字エンコーディングのいずれかを使用して C++ ソースコードを保存できます。 ソース文字セットと実行文字セットの詳細については、言語ドキュメントの「[文字セット](../../cpp/character-sets.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+## <a name="set-the-option-in-visual-studio-or-programmatically"></a>Visual Studio またはプログラムでオプションを設定する
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. **[構成プロパティ]** 、 **[CC++/]** 、 **[コマンドライン]** フォルダーの順に展開します。
+1. [**構成プロパティ** > ] [**C/c + +** > **コマンドライン**] プロパティページを選択します。
 
-1. **[追加オプション]** で、使用するエンコードを指定するためのオプションを追加します。
+1. [**追加オプション**] で、 **`/utf-8`** オプションを追加して、優先するエンコードを指定します。
 
-1. **OK** を選択して変更を保存してください。
+1. **[OK]** を選択して変更を保存します。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
