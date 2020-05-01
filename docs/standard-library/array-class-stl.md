@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 90c68d00475a622ec89b81cc86639f63b1190d02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364943"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643644"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -130,41 +130,41 @@ class array;
 |[const_reference](#const_reference)|要素への定数参照の型です。|
 |[const_reverse_iterator](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[difference_type](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[反復 子](#iterator)|被制御シーケンスの反復子の型です。|
+|[反](#iterator)|被制御シーケンスの反復子の型です。|
 |[ポインター (pointer)](#pointer)|要素へのポインターの型です。|
-|[参照](#reference)|要素への参照の型です。|
+|[reference](#reference)|要素への参照の型です。|
 |[reverse_iterator](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
-|[Size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
-|[Value_type](#value_type)|要素の型。|
+|[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
+|[value_type](#value_type)|要素の型。|
 
 |メンバー関数|説明|
 |-|-|
 |[array](#array)|配列オブジェクトを構築します。|
-|[割り当てる](#assign)|(廃止されました。 を`fill`使用します。すべての要素を置き換えます。|
-|[で](#at)|指定した位置にある要素にアクセスします。|
+|[assign](#assign)|公表. を`fill`使用します。)すべての要素を置換します。|
+|[at](#at)|指定した位置にある要素にアクセスします。|
 |[戻る](#back)|最後の要素にアクセスします。|
-|[開始](#begin)|被制御シーケンスの先頭を指定します。|
+|[初め](#begin)|被制御シーケンスの先頭を指定します。|
 |[cbegin](#cbegin)|配列内の最初の要素を示すランダム アクセスの定数反復子を返します。|
-|[クエンド](#cend)|配列の末尾の次の位置を指し示すランダム アクセス定数反復子を返します。|
+|[cend](#cend)|配列の末尾の次の位置を指し示すランダム アクセス定数反復子を返します。|
 |[crbegin](#crbegin)|反転された配列内の最初の要素への定数反復子を返します。|
 |[crend](#crend)|反転された配列内の末尾の要素への定数反復子を返します。|
 |[データ](#data)|最初の要素のアドレスを取得します。|
 |[empty](#empty)|要素が存在するかどうかをテストします。|
 |[end](#end)|被制御シーケンスの末尾を指定します。|
-|[埋める](#fill)|すべての要素を、指定された値に置き換えます。|
-|[フロント](#front)|最初の要素にアクセスします。|
+|[入力](#fill)|すべての要素を、指定された値に置き換えます。|
+|[外側](#front)|最初の要素にアクセスします。|
 |[max_size](#max_size)|要素の数をカウントします。|
 |[rbegin](#rbegin)|反転被制御シーケンスの先頭を指定します。|
 |[rend](#rend)|反転被制御シーケンスの末尾を指定します。|
-|[サイズ](#size)|要素の数をカウントします。|
+|[size](#size)|要素の数をカウントします。|
 |[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 
 |演算子|説明|
 |-|-|
-|[配列::演算子=](#op_eq)|被制御シーケンスを置き換えます。|
-|[配列::演算子\[\]](#op_at)|指定した位置にある要素にアクセスします。|
+|[array:: operator =](#op_eq)|被制御シーケンスを置き換えます。|
+|[array:: operator\[\]](#op_at)|指定した位置にある要素にアクセスします。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 たとえば、次のように入力します。
 
@@ -180,7 +180,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **名前空間:** std
 
-## <a name="arrayarray"></a><a name="array"></a>配列::配列
+## <a name="arrayarray"></a><a name="array"></a>array:: array
 
 配列オブジェクトを構築します。
 
@@ -195,11 +195,11 @@ array(const array& right);
 *そうです*\
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 既定のコンストラクター `array()` は、被制御シーケンスを初期化されない状態 (または既定の初期化された状態) のままにします。 これを使用して、初期化されていない被制御シーケンスを指定します。
 
-コピー コンストラクター`array(const array& right)`は、シーケンス [*right*`.begin()`, *right*`.end()`) で制御シーケンスを初期化します。 これを使用して、配列オブジェクト *right* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+`array(const array& right)`コピーコンストラクターは、シーケンス [*right*`.begin()`, *right*`.end()`) を使用して被制御シーケンスを初期化します。 これを使用して、配列オブジェクト *right* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 ### <a name="example"></a>例
 
@@ -239,11 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>配列::割り当て
+## <a name="arrayassign"></a><a name="assign"></a>array:: assign
 
 C++ 11 では廃止され、[fill](#fill) に置き換えられています。 すべての要素を置換します。
 
-## <a name="arrayat"></a><a name="at"></a>配列::at
+## <a name="arrayat"></a><a name="at"></a>array:: at
 
 指定した位置にある要素にアクセスします。
 
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*\
+*オート*\
 アクセスする要素の位置。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、位置*off*で制御シーケンスの要素への参照を返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
+このメンバー関数は、制御されたシーケンスの要素への参照を*off*の位置に返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
 
 ### <a name="example"></a>例
 
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>配列::バック
+## <a name="arrayback"></a><a name="back"></a>array:: back
 
 最後の要素にアクセスします。
 
@@ -299,7 +299,7 @@ reference back();
 constexpr const_reference back() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。被制御シーケンスを空にすることはできません。
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>配列::開始
+## <a name="arraybegin"></a><a name="begin"></a>array:: begin
 
 被制御シーケンスの先頭を指定します。
 
@@ -343,7 +343,7 @@ iterator begin() noexcept;
 const_iterator begin() const noexcept;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示すランダム アクセス反復子を返します。
 
@@ -379,9 +379,9 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>配列::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>array:: cbegin
 
-範囲内の最初の要素をアドレス指定する**const**反復子を返します。
+範囲内の最初の要素を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の終わりを越えた位置を指す**const**ランダム アクセス反復子 (空の範囲の場合)。 `cbegin() == cend()`
+範囲**const**の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は`cbegin() == cend()`) を指す、const ランダムアクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`Container`および`begin()``cbegin()`をサポートするあらゆる種類の変更可能な (非**const)** コンテナーであると考えてください。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`begin()`する任意の種類の変更可能な (非**定数**) コンテナー `cbegin()`であると見なします。
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,9 +405,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>配列::cend
+## <a name="arraycend"></a><a name="cend"></a>array:: cend
 
-範囲内の最後の要素を超える位置を指定する**const**反復子を返します。
+範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -417,11 +417,11 @@ const_iterator cend() const noexcept;
 
 範囲の末尾の次の位置を指し示すランダム アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`Container`および`end()``cend()`をサポートするあらゆる種類の変更可能な (非**const)** コンテナーであると考えてください。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`end()`する任意の種類の変更可能な (非**定数**) コンテナー `cend()`であると見なします。
 
 ```cpp
 auto i1 = Container.end();
@@ -433,7 +433,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>配列::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array:: const_iterator
 
 被制御シーケンスの定数反復子の型です。
 
@@ -441,7 +441,7 @@ auto i2 = Container.cend();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの定数ランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>配列::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array:: const_pointer
 
 要素への定数ポインターの型です。
 
@@ -489,7 +489,7 @@ it2: 0
 typedef const Ty *const_pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>配列::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>array:: const_reference
 
 要素への定数参照の型です。
 
@@ -533,7 +533,7 @@ int main()
 typedef const Ty& const_reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -569,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>配列::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array:: const_reverse_iterator
 
 被制御シーケンスの定数反転反復子の型です。
 
@@ -577,7 +577,7 @@ int main()
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの定数反転反復子として使用できるオブジェクトを表します。
 
@@ -613,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>配列::クリbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>array:: crbegin
 
 反転された配列内の最初の要素への定数反復子を返します。
 
@@ -625,7 +625,7 @@ const_reverse_iterator crbegin() const;
 
 反転された配列の最初の要素を指すか、反転されていない配列の最後の要素だったものを指す、定数逆順ランダム アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 戻り値が `crbegin` の場合、配列オブジェクトは変更できません。
 
@@ -657,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>配列::クレンド
+## <a name="arraycrend"></a><a name="crend"></a>array:: crend
 
 逆順の配列内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -669,7 +669,7 @@ const_reverse_iterator crend() const noexcept;
 
 逆順の配列内の最後の要素の次の位置 (通常の順序の配列内の最初の要素の前の位置) を指す定数逆順ランダム アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `crend` は、[array::cend](#cend) が配列で使用されるときと同様の方法により、逆順の配列で使用されます。
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>配列::dタタ
+## <a name="arraydata"></a><a name="data"></a>配列: ata:d
 
 最初の要素のアドレスを取得します。
 
@@ -711,7 +711,7 @@ Ty *data();
 const Ty *data() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、被制御シーケンス内の最初の要素のアドレスを返します。
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>配列::difference_型
+## <a name="arraydifference_type"></a><a name="difference_type"></a>配列::d ifference_type
 
 2 つの要素間の距離を表す、符号付きの型です。
 
@@ -755,7 +755,7 @@ int main()
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 これは `std::ptrdiff_t` 型のシノニムです。
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>配列::空
+## <a name="arrayempty"></a><a name="empty"></a>array:: empty
 
 要素が存在しないかどうかをテストします。
 
@@ -799,7 +799,7 @@ int main()
 constexpr bool empty() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `N == 0` の場合にのみ、メンバー関数は true を返します。
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>配列::終了
+## <a name="arrayend"></a><a name="end"></a>array:: end
 
 被制御シーケンスの末尾を指定します。
 
@@ -851,7 +851,7 @@ reference end();
 const_reference end() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、シーケンスの最後を越えたところを示すランダム アクセス反復子を返します。
 
@@ -887,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>配列::フィル
+## <a name="arrayfill"></a><a name="fill"></a>array:: fill
 
 配列を消去し、空の配列に指定された要素をコピーします。
 
@@ -899,9 +899,9 @@ void fill(const Type& val);
 
 |パラメーター|説明|
 |-|-|
-|*ヴァル*|配列に挿入される要素の値。|
+|*val*|配列に挿入される要素の値。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `fill` は、配列の各要素を、指定された値に置き換えます。
 
@@ -925,7 +925,7 @@ int main()
 
     v1.fill(3);
     cout << "v1 = ";
-    for (const auto& it : c0)
+    for (const auto& it : v1)
     {
         std::cout << " " << it;
     }
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>配列::フロント
+## <a name="arrayfront"></a><a name="front"></a>array:: front
 
 最初の要素にアクセスします。
 
@@ -943,7 +943,7 @@ reference front();
 constexpr const_reference front() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最初の要素への参照を返します。被制御シーケンスを空にすることはできません。
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>配列::反復器
+## <a name="arrayiterator"></a><a name="iterator"></a>array:: iterator
 
 被制御シーケンスの反復子の型です。
 
@@ -986,7 +986,7 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスのランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>配列::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>array:: max_size
 
 要素の数をカウントします。
 
@@ -1035,7 +1035,7 @@ it2: 0
 constexpr size_type max_size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`N` を返します。
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>配列::演算子[]
+## <a name="arrayoperator"></a><a name="op_at"></a>array:: operator []
 
 指定した位置にある要素にアクセスします。
 
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*\
+*オート*\
 アクセスする要素の位置。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、位置*off*で制御シーケンスの要素への参照を返します。 その位置が無効な場合、動作は定義されません。
+このメンバー関数は、制御されたシーケンスの要素への参照を*off*の位置に返します。 その位置が無効な場合、動作は定義されません。
 
-**また、配列**の要素への参照を取得するために使用できる非メンバー[の get](array-functions.md#get)関数もあります。
+また、**配列**の要素への参照を取得するために使用できる非メンバーの[get](array-functions.md#get)関数もあります。
 
 ### <a name="example"></a>例
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>配列::演算子=
+## <a name="arrayoperator"></a><a name="op_eq"></a>array:: operator =
 
 被制御シーケンスを置き換えます。
 
@@ -1136,9 +1136,9 @@ array<Value> operator=(array<Value> right);
 *そうです*\
 コピーするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-member 演算子は、制御されたシーケンスの対応する要素に*right*の各要素を`*this`割り当て、次に返します。 これを使用して、制御されたシーケンスを*右側*の制御シーケンスのコピーに置き換えます。
+メンバー演算子は、制御されたシーケンスの対応する要素に*right*の各要素を`*this`代入し、を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>配列::pオインター
+## <a name="arraypointer"></a><a name="pointer"></a>配列::p ointer
 
 要素へのポインターの型です。
 
@@ -1186,7 +1186,7 @@ int main()
 typedef Ty *pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、シーケンスの要素へのポインターとして使用できるオブジェクトを表します。
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>配列::始まり
+## <a name="arrayrbegin"></a><a name="rbegin"></a>array:: rbegin
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1231,7 +1231,7 @@ reverse_iterator rbegin()noexcept;
 const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最後を越えたところを示す反転反復子を返します。 したがって、反転シーケンスの先頭を指定します。
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>配列::参照
+## <a name="arrayreference"></a><a name="reference"></a>array:: reference
 
 要素への参照の型です。
 
@@ -1275,7 +1275,7 @@ int main()
 typedef Ty& reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの要素への参照として使用できるオブジェクトを表します。
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>配列::レンド
+## <a name="arrayrend"></a><a name="rend"></a>array:: rend
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1320,7 +1320,7 @@ reverse_iterator rend()noexcept;
 const_reverse_iterator rend() const noexcept;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す反転反復子を返します。 したがって、反転シーケンスの末尾を指定します。
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>配列::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array:: reverse_iterator
 
 被制御シーケンスの反転反復子の型です。
 
@@ -1364,7 +1364,7 @@ int main()
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの反転反復子として使用できるオブジェクトを表します。
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>配列::サイズ
+## <a name="arraysize"></a><a name="size"></a>array:: size
 
 要素の数をカウントします。
 
@@ -1408,7 +1408,7 @@ int main()
 constexpr size_type size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`N` を返します。
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>配列:size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>array:: size_type
 
 2 つの要素間の距離を表す、符号なしの型です。
 
@@ -1451,7 +1451,7 @@ int main()
 typedef std::size_t size_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 これは `std::size_t` 型のシノニムです。
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>配列::スワップ
+## <a name="arrayswap"></a><a name="swap"></a>array:: swap
 
 この配列の内容を別の配列と交換します。
 
@@ -1500,11 +1500,11 @@ void swap(array& right);
 *そうです*\
 コンテンツを交換する配列。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、 と*の*間`*this`で制御されたシーケンスを入れ替えます。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
+このメンバー関数は、との間`*this`で被制御シーケンスを*交換します*。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
 
-また、2 つの**配列**インスタンスをスワップするために使用できる非メンバー[スワップ](array-functions.md#swap)関数もあります。
+2つの**配列**インスタンスをスワップするために使用できる非メンバー[スワップ](array-functions.md#swap)関数もあります。
 
 ### <a name="example"></a>例
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>配列::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>array:: value_type
 
 要素の型。
 
@@ -1561,7 +1561,7 @@ int main()
 typedef Ty value_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Ty` のシノニムです。
 
@@ -1602,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[\<配列>](../standard-library/array.md)
+[\<配列の>](../standard-library/array.md)
