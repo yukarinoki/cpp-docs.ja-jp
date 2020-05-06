@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232853"
 ---
 # <a name="integer-types"></a>整数型
 
@@ -36,7 +36,7 @@ ms.locfileid: "56146880"
 778866LU
 ```
 
-定数に割り当てる型は、その定数が表す値に依存します。 定数の値は、その型で表現できる値範囲内にあることが条件となります。 式で定数を使用する場合やマイナス符号 (**-**) を適用する場合、定数がどのように変換されるかは、その定数の型によって決定されます。 整数定数の変換規則は次のとおりです。
+定数に割り当てる型は、その定数が表す値に依存します。 定数の値は、その型で表現できる値範囲内にあることが条件となります。 式で定数を使用する場合やマイナス符号 ( **-** ) を適用する場合、定数がどのように変換されるかは、その定数の型によって決定されます。 整数定数の変換規則は次のとおりです。
 
 - サフィックスのない 10 進定数の型は、`int`、**long int**、または**符号なし long int** です。これら 3 つのうち、定数の値を表すことができる最初の型が定数に割り当てられます。
 
