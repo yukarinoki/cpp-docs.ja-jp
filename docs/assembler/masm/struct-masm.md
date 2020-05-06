@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 2524a8ade318bd29ebcd4e4273089598798302db
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f253c95eca6a3d48a4d9a7f3a7a4e97ea41202c8
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825461"
 ---
 # <a name="struct"></a>STRUCT
 
@@ -19,14 +19,15 @@ ms.locfileid: "80078913"
 
 ## <a name="syntax"></a>構文
 
-> *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
+> *name* **STRUCT** ⟦*alignment*⟧⟦__,__ **一意**でない⟧ \
+> *フィールド宣言*\
 > *名前*の**終わり**
 
 ## <a name="remarks"></a>解説
 
 *名前*引数は、開始および終了ステートメントと同じである必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ディレクティブリファレンス](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

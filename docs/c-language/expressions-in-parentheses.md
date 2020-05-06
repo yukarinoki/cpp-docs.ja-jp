@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233749"
 ---
 # <a name="expressions-in-parentheses"></a>かっこで囲んだ式
 
@@ -22,7 +22,7 @@ ms.locfileid: "56149350"
 ( 10 + 5 ) / 5
 ```
 
-`10 + 5` を囲むかっこは、`10 + 5` の値を最初に評価し、それが除算 (**/**) 演算子の左側のオペランドになることを意味します。 `( 10 + 5 ) / 5` の結果は 3 です。 かっこがない場合、`10 + 5 / 5` は 11 に評価されます。
+`10 + 5` を囲むかっこは、`10 + 5` の値を最初に評価し、それが除算 ( **/** ) 演算子の左側のオペランドになることを意味します。 `( 10 + 5 ) / 5` の結果は 3 です。 かっこがない場合、`10 + 5 / 5` は 11 に評価されます。
 
 かっこはオペランドが式内でグループ化される方法に影響を与えますが、すべての場合に特定の評価の順序を保証できません。 たとえば次の式では、かっこによっても、左から右へのグループ化によっても、`i` の値が部分式のどちらに含まれるかは保証されません。
 
