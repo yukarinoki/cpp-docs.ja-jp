@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910168"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -64,30 +64,30 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *offset*<br/>
 *配信元*からのバイト数。
 
-*起源*<br/>
+*発行*<br/>
 最初の位置。
 
 ## <a name="return-value"></a>戻り値
 
-[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)とそれぞれ同じです。
+[Fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)のそれぞれと同じです。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、それぞれ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて[、fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、それぞれ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて、 [fseek](fseek-fseeki64.md)および[_fseeki64](fseek-fseeki64.md)と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
+|**_fseek_nolock**、 **_fseeki64_nolock**|\<stdio.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -96,4 +96,4 @@ int _fseeki64_nolock(
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell、_ftelli64](ftell-ftelli64.md)<br/>
 [_lseek、_lseeki64](lseek-lseeki64.md)<br/>
-[巻き戻し](rewind.md)<br/>
+[巻き](rewind.md)<br/>

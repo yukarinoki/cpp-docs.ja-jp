@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343230"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919738"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -100,15 +100,15 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *c* <= 255 で、対応する **_ismbb**ルーチン (たとえば **、_ismbbalnum**に対応**するルーチン**_ismbcalnum) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>解説
 
@@ -118,18 +118,18 @@ int _ismbcl2_l(
 
 |ルーチン|テスト条件 (コード ページ 932 のみ)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非漢字: 0x8140<=*c*<=0x889E。|
-|**_ismbcl0_l**|JIS 非漢字: 0x8140<=*c*<=0x889E。|
-|**_ismbcl1**|JIS レベル 1: 0x889F<=*c*<=0x9872。|
-|**_ismbcl1_l**|JIS レベル 1: 0x889F<=*c*<=0x9872。|
-|**_ismbcl2**|JIS レベル 2: 0x989F<=*c*<=0xEAA4.|
-|**_ismbcl2_l**|JIS レベル 2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl0**|JIS 非漢字: 0x8140<=*c*<= 0x889E。|
+|**_ismbcl0_l**|JIS 非漢字: 0x8140<=*c*<= 0x889E。|
+|**_ismbcl1**|JIS レベル-1: 0x889F<=*c*<= 0x9872。|
+|**_ismbcl1_l**|JIS レベル-1: 0x889F<=*c*<= 0x9872。|
+|**_ismbcl2**|JIS レベル 2: 0x989F<=*c*<= 0xEAA4。|
+|**_ismbcl2_l**|JIS レベル 2: 0x989F<=*c*<= 0xEAA4。|
 
-関数は、指定された値*c*が上記のテスト条件と一致するかどうかをチェックしますが *、c*が有効なマルチバイト文字であることをチェックしません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) を使用します。
+関数は、指定された値*c*が上で説明したテスト条件に一致することを確認しますが、 *c*が有効なマルチバイト文字であることを確認しません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) を使用します。
 
-**終了コード・ページ 932 固有**
+**終了コードページ932固有**
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

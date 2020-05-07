@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 98726726e14aacec75ed99adfa33016b40affd17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350875"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920265"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -66,12 +66,12 @@ int _waccess(
 *path*<br/>
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*mode*<br/>
 読み取り/書き込み属性。
 
 ## <a name="return-value"></a>戻り値
 
-ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定されたファイルが存在しない場合、または指定されたモードがない場合、この関数は -1 を返します。この場合、`errno`次の表に示すように設定されます。
+ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定されたファイルが存在しない場合、または指定されたモードがない場合、この関数は-1 を返します。この場合、 `errno`は次の表に示すように設定されます。
 
 |||
 |-|-|
@@ -83,7 +83,7 @@ int _waccess(
 
 ## <a name="remarks"></a>解説
 
-ファイルと共に使用すると **、_access**関数は、指定されたファイルまたはディレクトリが存在するかどうか、および*mode*の値で指定された属性を持つかどうかを判別します。 ディレクトリと共に使用すると **、_access**は指定されたディレクトリが存在するかどうかを判断します。Windows 2000 以降のオペレーティング システムでは、すべてのディレクトリに読み取りおよび書き込みアクセス権があります。
+ファイルと共に使用する場合、 **_access**関数は、指定されたファイルまたはディレクトリが存在し、*モード*の値によって指定された属性を持っているかどうかを判断します。 ディレクトリと共に使用する場合、 **_access**は指定したディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |*モード*値|ファイル チェックの目的|
 |------------------|---------------------|
@@ -94,11 +94,11 @@ int _waccess(
 
 この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](/windows/win32/SecAuthZ/access-tokens)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
 
-**_waccess**はワイド文字の **_access**です。**_waccess**への*パス*引数はワイド文字ストリングです。 **_waccess**と **_access**は、そうでなければ同じように動作します。
+**_waccess**は **_access**のワイド文字バージョンです。**_waccess**の*パス*引数は、ワイド文字列です。 **_waccess**と **_access**は同じように動作します。
 
-この関数は、パラメーターを検証します。 *path*が NULL の場合、または*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
+この関数は、パラメーターを検証します。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -115,7 +115,7 @@ int _waccess(
 
 ## <a name="example"></a>例
 
-次の例では **、_access**を使用して、crt_ACCESSという名前のファイルをチェックします。C は、それが存在するかどうか、および書き込みが許可されているかどうかを確認します。
+次の例では、 **_access**を使用して crt_ACCESS という名前のファイルをチェックします。C は、存在するかどうか、書き込みが許可されているかどうかを確認します。
 
 ```C
 // crt_access.c

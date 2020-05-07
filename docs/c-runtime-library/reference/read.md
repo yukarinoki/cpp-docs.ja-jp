@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: db3726b85bb4ba7c8e9a691bef3fb063ec5709c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338131"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919519"
 ---
 # <a name="_read"></a>_read
 
@@ -54,10 +54,10 @@ int _read(
 
 ### <a name="parameters"></a>パラメーター
 
-*Fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
-*バッファー*<br/>
+*格納*<br/>
 データの格納場所。
 
 *buffer_size*<br/>
@@ -65,21 +65,21 @@ int _read(
 
 ## <a name="return-value"></a>戻り値
 
-**_read**は読み込んだバイト数を返しますが、ファイルに残っているバイト数が*buffer_size*未満の場合、またはファイルがテキスト モードで開かれた場合は *、buffer_size*未満になる可能性があります。 テキスト モードでは、各復帰改行のペア`\r\n`は 1 つの改行文字`\n`に置き換えられます。 戻り値には、単一の改行文字のみがカウントされます。 この置き換えは、ファイル ポインターには影響しません。
+**_read**は、読み取ったバイト数を返します。これは、ファイルに残っているバイト数*buffer_size*未満の場合や、ファイルがテキストモードで開かれた場合に*buffer_size*よりも小さくなることがあります。 テキストモードでは、各キャリッジリターンラインフィードの`\r\n`ペアが1つのラインフィード文字`\n`に置き換えられます。 戻り値には、単一行フィード文字だけがカウントされます。 この置き換えは、ファイル ポインターには影響しません。
 
-この関数はファイルの終わりで読み取りをすると、0 を返します。 *fd*が有効でない場合、ファイルが読み取り用に開かれていないか、ファイルがロックされている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明に従って無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は -1 を返し **、errno**を**EBADF**に設定します。
+この関数はファイルの終わりで読み取りをすると、0 を返します。 *Fd*が有効でない場合、ファイルが読み取り用に開かれていない場合、またはファイルがロックされている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EBADF**に設定します。
 
-*buffer*が**NULL**の場合、または*INT_MAXbuffer_size* > **INT_MAX**場合は、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は -1 を返し **、errno**は**EINVAL**に設定されます。
+*バッファー*が**NULL**の場合、または*buffer_size* > **INT_MAX**場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は**EINVAL**に設定されます。
 
 このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_read**関数は *、fd*に関連付けられたファイルから最大*buffer_size*バイトを*バッファー*に読み取ります。 読み取り操作は、指定されたファイルに関連付けられたファイル ポインターの現在の位置で開始されます。 読み取り操作後、ファイル ポインターは、次の未読の文字を指します。
+**_Read**関数は、 *fd*に関連付けられているファイルから、最大*buffer_size*バイトを*バッファー*に読み込みます。 読み取り操作は、指定されたファイルに関連付けられたファイル ポインターの現在の位置で開始されます。 読み取り操作後、ファイル ポインターは、次の未読の文字を指します。
 
-ファイルがテキスト モードで開かれた場合、_readが Ctrl + Z 文字 (ファイル終了標識として扱われる)**を検出すると**、読み取りは終了します。 ファイルの終わりのインジケーターをクリアするには、[_lseek](lseek-lseeki64.md) を使用します。
+ファイルがテキストモードで開かれた場合、 **_read**が CTRL + Z 文字を検出すると、読み取りが終了します。これは、ファイルの終端を示すインジケーターとして扱われます。 ファイルの終わりのインジケーターをクリアするには、[_lseek](lseek-lseeki64.md) を使用します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

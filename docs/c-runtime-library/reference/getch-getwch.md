@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919624"
 ---
 # <a name="_getch-_getwch"></a>_getch、_getwch
 
@@ -62,11 +62,11 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>解説
 
-**_getch**関数と **_getwch**関数は、文字をエコーせずにコンソールから 1 文字を読み取ります。 これらの関数のいずれも Ctrl + C の読み取りに使用することはできません。 ファンクション キーまたは方向キーを読み取るときは、各関数を 2 回呼び出す必要があります。最初の呼び出しは 0 または 0xE0 を返し、2 回目の呼び出しは、実際のキー コードを返します。
+**_Getch**関数と **_getwch**関数は、文字をエコーしないでコンソールから1文字を読み取ります。 これらの関数のいずれも Ctrl + C の読み取りに使用することはできません。 ファンクション キーまたは方向キーを読み取るときは、各関数を 2 回呼び出す必要があります。最初の呼び出しは 0 または 0xE0 を返し、2 回目の呼び出しは、実際のキー コードを返します。
 
 これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

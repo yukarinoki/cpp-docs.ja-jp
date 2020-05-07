@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 5beedd8a5da6848fc8c43ab1a27ee52402fe394e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343849"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918953"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-c*を*テストして *、desc*引数で指定された ctype プロパティを指定します。 *desc*の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
+*Desc*引数で指定された ctype プロパティについて*c*をテストします。 *Desc*の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -82,20 +82,20 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*Desc*<br/>
+*順*<br/>
 テストするプロパティ。 これは通常、ctype または [wctype](wctype.md) を使用して取得されます。
 
-*ロケール*<br/>
+*locale*<br/>
 任意のロケール依存テストで使用されるロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_isctype**し **、c**が現在のロケールで*c**desc*で指定されたプロパティを持つ場合は 0 以外の値を返し、指定されていない場合は 0 を返します。 **_l**サフィックスを持つこれらの関数のバージョンは、ロケール依存の動作に現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールで*desc*によって指定されたプロパティが*c*にある場合、 **_isctype**と**iswctype**は0以外の値を返します。それ以外の場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*c*が EOF でない場合、または 0 から 0xFF の範囲内である場合 **、_isctype**と **_isctype_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され *、c*がこれらの値の 1 つではない場合、関数はアサーションを発生させます。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **_isctype**と **_isctype_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -106,7 +106,7 @@ int _iswctype_l(
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -126,5 +126,5 @@ int _iswctype_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

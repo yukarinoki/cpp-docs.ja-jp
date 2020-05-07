@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 8da69247d090c2067b0efda3c47f92bbeb729e49
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343528"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918637"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint、_ismbbprint_l
 
@@ -59,23 +59,23 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbprint**式の場合は、0 以外の値を返します。
+次の式の場合、 **_ismbbprint**は0以外の値を返します。
 
 `isprint(c) || _ismbbkprint(c)`
 
-*c*の場合は 0 以外の値、それ以外の場合は 0 です。 **_ismbbprint**は、ロケールに依存するすべての動作に対して現在のロケールを使用します。 **_ismbbprint_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*c*の場合は0以外の。それ以外の場合は0。 **_ismbbprint**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -89,4 +89,4 @@ int _ismbbprint_l(
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

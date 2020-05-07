@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: 0ffd779d8c74b64403837bd973b025da7e3fac2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a77d149f367c7f565141fbc3be1db1bfc3f3f362
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345549"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909961"
 ---
 # <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s、_ftime32_s、_ftime64_s
 
@@ -63,34 +63,34 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*<br/>
-**_timeb**、 **__timeb32**、または**構造体へのポインター__timeb64。**
+**_Timeb**、 **__timeb32**、または **__timeb64**構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *timeptr*が**NULL**の場合、戻り値は**EINVAL**になります。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Timeptr*が**NULL**の場合、戻り値は**EINVAL**になります。
 
 ## <a name="remarks"></a>解説
 
-**_ftime_s**関数は、現在のローカル時刻を取得し *、timeptr*が指す構造体に格納します。 **_timeb** **、__timeb32、** および **__timeb64**構造体は、SYS\Timeb.h で定義されます。 これらは、次の表に示す 4 つのフィールドを含んでいます。
+**_Ftime_s**関数は、現在の現地時刻を取得し、 *timeptr*によって示される構造体に格納します。 **_Timeb**、 **__timeb32**、および **__timeb64**構造体は、sysに定義されています。 これらは、次の表に示す 4 つのフィールドを含んでいます。
 
 |フィールド|説明|
 |-|-|
-|**ドフラグ**|ローカルのタイム ゾーンで夏時間が現在有効になっている場合は 0 以外の値です  (夏時間を判断する方法の詳細については、[_tzset](tzset.md) を参照してください)。|
-|**ミリトム**|ミリ秒単位での秒の小数部。|
+|**dstflag**|ローカルのタイム ゾーンで夏時間が現在有効になっている場合は 0 以外の値です  (夏時間を判断する方法の詳細については、[_tzset](tzset.md) を参照してください)。|
+|**millitm**|ミリ秒単位での秒の小数部。|
 |**time**|世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位)。|
-|**タイムゾーン**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 **タイムゾーン**の値は、グローバル変数 **_timezone**の値から設定されます **(_tzset**を参照)。|
+|**部分**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 **タイムゾーン**の値は、グローバル変数 **_timezone**の値から設定されます ( **_tzset**を参照してください)。|
 
-**__timeb64**構造を使用する **_ftime64_s**関数を使用すると、ファイル作成日を 23:59:59、3000、UTC、12 月 31 日まで表すことができます。一方 **、_ftime32_s**は 2038年UTC23:59:59までの日付のみを表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**__Timeb64**構造体を使用する **_ftime64_s**関数を使用すると、ファイル作成日を3000年12月31日23:59:59 までに表すことができます。**_ftime32_s**は、23:59:59 年1月18日から2038日までの日付のみを表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-**_ftime_s**関数は **_ftime64_s**と同等で **、_USE_32BIT_TIME_T**が定義されていない限り **、_timeb**は 64 ビットの時刻を含みます。**_ftime_s**は 32 ビットの時刻を使用し **、_timeb**は 32 ビット時間を含みます。
+**_Ftime_s**関数は **_ftime64_s**と同じです。 **_USE_32BIT_TIME_T**が定義されていない限り、 **_timeb**には64ビットの時刻が含まれます。この場合、以前の動作が有効になります。**_ftime_s**は32ビットの時刻を使用し、 **_timeb**に32ビットの時刻が含まれています。
 
-**_ftime_s**は、パラメーターを検証します。 null ポインタを*timeptr*として渡した場合、関数は無効なパラメータ ハンドラを呼び[出します。](../../c-runtime-library/parameter-validation.md) 実行を続行できる場合、関数は**errno**を**EINVAL**に設定します。
+**_ftime_s**は、そのパラメーターを検証します。 *Timeptr*として null ポインターが渡された場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**_ftime_s**|\<sys/types.h> と \<sys/timeb.h>|
 |**_ftime32_s**|\<sys/types.h> と \<sys/timeb.h>|

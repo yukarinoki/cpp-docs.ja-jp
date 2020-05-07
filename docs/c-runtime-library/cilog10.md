@@ -13,7 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 785b72cd26df85575f9689e5846cce48963084ce
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ba5868892a352f071774a817e375c1f43505ed02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745405"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918023"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
@@ -48,7 +48,7 @@ void __cdecl _CIlog10();
 
 結果の値は、スタックのトップにプッシュされます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

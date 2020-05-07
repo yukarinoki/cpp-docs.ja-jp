@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: aeb9c27fee4d179cc16caa50c6f0aae521402beb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343921"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919785"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -65,20 +65,20 @@ int iswascii(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-**c**が ASCII 文字の特定の表現である場合、これらのルーチンはそれぞれ 0 以外を返します。 **__isascii****は、c**が ASCII 文字 (0x00 から 0x7F の範囲) の場合、ゼロ以外の値を返します。 **c**が ASCII 文字のワイド文字表現である場合 **、iswascii**はゼロ以外の値を戻します。 c がテスト条件を満た**さない場合**、これらのルーチンはそれぞれ 0 を返します。
+これらの各ルーチンは、 **c**が ASCII 文字の特殊表現である場合は0以外の値を返します。 **c**が ASCII 文字 (0X00 から0x7f の範囲内) の場合、 **__isascii**は0以外の値を返します。 **c**が ASCII 文字のワイド文字表現である場合、 **iswascii**は0以外の値を返します。 これらの各ルーチンは、 **c**がテスト条件を満たしていない場合は0を返します。
 
 ## <a name="remarks"></a>解説
 
-**__isascii**と**iswascii**は、プリプロセッサ マクロ _CTYPE_DISABLE_MACROSが定義されていない限り、マクロとして実装されます。
+プリプロセッサマクロ _CTYPE_DISABLE_MACROS が定義されていない場合、 **__isascii**と**iswascii**の両方がマクロとして実装されます。
 
-後方互換性のために **、ISASCII**はマクロとして実装されるのは[、stDC&#95;&#95;が](../../preprocessor/predefined-macros.md)定義されていないか、または 0 として定義されている場合&#95;&#95;だけです。それ以外の場合は未定義です。
+旧バージョンとの互換性のために、 **isascii**はマクロとしてのみ実装されます[&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md)が定義されていないか、0として定義されている場合のみです。それ以外の場合は未定義です。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -90,13 +90,13 @@ int iswascii(
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**isascii** **,__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
+|**isascii**、 **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 |**iswascii**|C: \<wctype.h>、\<ctype.h>、または \<wchar.h><br /><br /> C++: \<cwctype>、\<cctype>、\<wctype.h>、\<ctype.h>、または \<wchar.h>|
 
-**isascii** **、__isascii、** および**iswascii**関数は、マイクロソフト固有のものです。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Isascii**、 **__isascii**および**iswascii**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

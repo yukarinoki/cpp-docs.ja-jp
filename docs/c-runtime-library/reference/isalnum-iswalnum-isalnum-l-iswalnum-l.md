@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: a64cdc28d78a4a8691c74c66e2b4c18e4d0c31b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343967"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919814"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
@@ -65,37 +65,37 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-*c*が英数字の特定の表現である場合、これらのルーチンはそれぞれ 0 以外を返します。 **isalnum**は *、c*の場合**に isalpha**または**isdigit**が 0 以外の場合、つまり*c*が A - Z、a - z、または 0 から 9 の範囲内にある場合に、ゼロ以外の値を返します。 **iswalnum**は *、c*の場合に**iswalpha**または**iswdigit**のいずれかがゼロ以外の場合に、ゼロ以外の値を返します。 c がテスト条件を満た*さない場合*、これらのルーチンはそれぞれ 0 を返します。
+これらの各ルーチンは、 *c*が英数字の特殊表現である場合は0以外の値を返します。 *c の* **isalpha**または**isdigit**が0以外の場合、 **isalnum**は0以外の値を返します。 *c*が a ~ z、a ~ z、または 0-9 の範囲内にある場合は、0以外の値を返します。 *c*では、 **iswalpha**または**iswdigit**のいずれかが0以外の場合、 **iswalnum**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
 
-**_l**サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されるロケール パラメーターが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**isalnum**および **_isalnum_l**の動作は *、c*が EOF でない場合、または 0 から 0xFF の範囲内である場合は未定義です。 デバッグ CRT ライブラリが使用され *、c*がこれらの値の 1 つではない場合、関数はアサーションを発生させます。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isalnum**と **_isalnum_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**イスワルナム**|
+|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
-|**イスワルナム**|\<ctype.h> または \<wchar.h>|
+|**iswalnum**|\<ctype.h> または \<wchar.h>|
 |**_isalnum_l**|\<ctype.h>|
 |**_iswalnum_l**|\<ctype.h> または \<wchar.h>|
 
@@ -104,5 +104,5 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

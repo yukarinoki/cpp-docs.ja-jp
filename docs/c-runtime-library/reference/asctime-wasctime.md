@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bda14f3b6046378ad23148371f354bb910163d3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909423"
 ---
 # <a name="asctime-_wasctime"></a>asctime、_wasctime
 
-**tm**時間構造体を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
+**Tm**時間構造体を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -65,35 +65,35 @@ wchar_t *_wasctime(
 
 ## <a name="return-value"></a>戻り値
 
-**asctime は**文字列の結果へのポインタを返します。**_wasctime**ワイド文字列の結果へのポインターを返します。 エラーの戻り値はありません。
+**asctime**は、文字列の結果へのポインターを返します。**_wasctime**は、ワイド文字列の結果へのポインターを返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>解説
 
 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
 
-**asctime**関数は、構造体として格納された時刻を文字列に変換します。 *timeptr*値は通常、time で定義された**tm**構造体へのポインタを返す**gmtime**または**localtime**への呼び出しから取得されます。H。
+**Asctime**関数は、構造体として格納されている時刻を文字列に変換します。 *Timeptr*値は、通常、 **gmtime**または**localtime**の呼び出しから取得されます。この場合、両方とも、TIME で定義された**tm**構造体へのポインターが返されます。始め.
 
-|timeptr メンバー|[値]|
+|timeptr メンバー|値|
 |--------------------|-----------|
-|**tm_hour**|深夜から経過した時間 (0~23)|
+|**tm_hour**|深夜からの時間 (0-23)|
 |**tm_isdst**|夏時間が有効な場合は正、夏時間が無効な場合は 0、夏時間かどうかが不明な場合は負。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。|
-|**tm_mday**|月の日 (1-31)|
-|**tm_min**|時間経過後の分 (0-59)|
-|**tm_mon**|月 (0-11;1 月 = 0)|
-|**tm_sec**|分の後の秒 (0-59)|
+|**tm_mday**|月の日 (1 から 31)|
+|**tm_min**|分後 (分) (0-59)|
+|**tm_mon**|月 (0-11;1月 = 0)|
+|**tm_sec**|秒後の秒数 (0-59)|
 |**tm_wday**|曜日 (0-6;日曜日 = 0)|
-|**tm_yday**|年の日 (0-365;1月1日 = 0)|
+|**tm_yday**|年の通算日 (0-365;1月1日 = 0)|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time](time-time32-time64.md)、[_ftime](ftime-ftime32-ftime64.md)、および [localtime](localtime-localtime32-localtime64.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-**asctime**によって生成される文字列の結果は、正確に 26`Wed Jan 02 02:03:55 1980\n\0`文字を含み、 形式が . 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 **asctime**は、静的に割り当てられた単一のバッファを使用して、戻り値の文字列を保持します。 この関数を呼び出すたびに、前の呼び出しの結果は破棄されます。
+**Asctime**によって生成される文字列の結果は、26文字`Wed Jan 02 02:03:55 1980\n\0`で、という形式になっています。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 **asctime**は、静的に割り当てられた単一のバッファーを使用して、返される文字列を保持します。 この関数を呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-**_wasctime**は**asctime**のワイドキャラクターバージョンです。 **_wasctime**と**asctime**は、そうでなければ同じように動作します。
+**_wasctime**は**asctime**のワイド文字バージョンです。 それ以外の場合、 **_wasctime**と**asctime**は同じように動作します。
 
-これらの関数では、パラメーターの検証が行われます。 *timeptr*が null ポインターの場合、または値が範囲外の値を含む場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は**NULL を**返し **、errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Timeptr*が null ポインターの場合、または範囲外の値が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -110,7 +110,7 @@ wchar_t *_wasctime(
 
 ## <a name="example"></a>例
 
-このプログラムは、システム時刻を長整数**時計**に入れ、それを構造体**newtime**に変換し **、asctime**関数を使用して、出力用の文字列形式に変換します。
+このプログラムは、システム時刻を長整数の**aclock**に配置し、それを構造体の**newtime**に変換した後、 **asctime**関数を使用して出力用の文字列形式に変換します。
 
 ```C
 // crt_asctime.c

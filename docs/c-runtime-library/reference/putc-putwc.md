@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 8809595c90c48976d9f28ffa659714f5b9d919c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a30302a72d228d709cd16d25d7b62d9ce64a8ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338458"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918909"
 ---
 # <a name="putc-putwc"></a>putc、putwc
 
@@ -61,25 +61,25 @@ wint_t putwc(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 書き込む文字。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字を返します。 エラーまたはファイルの終わりの条件を示すには **、putc**と**putchar**は**EOF**を返します。**プットフ**と**プットチャル**は**WEOFを**返します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 *ストリーム*に null ポインタを渡した場合は、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行を続行できる場合、これらの関数は**EOF**または**WEOF**を返し **、errno**を**EINVAL**に設定します。
+書き込まれた文字を返します。 エラーまたはファイルの終端状態を示すには、 **putc**と**Putchar**は**EOF**を返します。**putwc**と**putwchar**は**WEOF**を返します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 *ストリーム*に null ポインターが渡された場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**または**WEOF**を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**putc**ルーチンは、現在位置にある出力*ストリーム*に単一文字*c*を書き込みます。 任意の整数を**putc**に渡すことができますが、書き込まれるのは下位 8 ビットだけです。 **プットチャル**ルーチンは`putc( c, stdout )`と同じです。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**はそれぞれ**fputc**と **_fputchar**に似ていますが、関数とマクロの両方として実装されています ([関数とマクロの選択を](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)参照)。 **putwc**と**putwchar**はそれぞれ **、パトク**と**プットチャー**のワイド文字バージョンです。 ストリームが ANSI モードで開かれている場合 **、putwc**と**putc**は同じように動作します。 **putc**は現在 UNICODE ストリームへの出力をサポートしていません。
+**Putc**ルーチンは、1文字の*c*を出力*ストリーム*に現在の位置に書き込みます。 任意の整数を**putc**に渡すことができますが、下位8ビットのみが書き込まれます。 **Putchar**ルーチンはと同じ`putc( c, stdout )`です。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**はそれぞれ**fputc**と **_fputchar**に似ていますが、関数とマクロの両方として実装されています (「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください)。 **putwc**と**putwchar**は、それぞれ**putc**と**putchar**のワイド文字バージョンです。 ストリームが ANSI モードで開かれている場合、 **putwc**と**putc**は同じように動作します。 **putc**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「**_putc_nolock、_putwc_nolock**」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,7 +94,7 @@ wint_t putwc(
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールはサポートされていません。 コンソール **、stdin 、stdout**、および**stdout****stderr**に関連付けられている標準ストリーム ハンドルは、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

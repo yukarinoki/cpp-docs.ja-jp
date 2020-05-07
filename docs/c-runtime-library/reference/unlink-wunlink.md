@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ffc1a64c60d41246773d5e262523000355b0de3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361274"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909286"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink、_wunlink
 
@@ -62,20 +62,20 @@ int _wunlink(
 
 ### <a name="parameters"></a>パラメーター
 
-*Filename*<br/>
+*/db*<br/>
 削除するファイルの名前。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、これらの各関数は 0 を返します。 それ以外の場合、関数は -1 を返し **、errno**を**ENOENT****EACCES**に設定します。
+正常に終了した場合、これらの各関数は 0 を返します。 それ以外の場合、この関数は-1 を返し、 **errno**を**EACCES**に設定します。これは、パスが読み取り専用のファイルまたはディレクトリを指定しているか、ファイルまたはパスが見つからないことを示す**ENOENT**に設定されていることを意味します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_unlink**関数は、 *filename*で指定されたファイルを削除します。 **_wunlink**はワイド文字の **_unlink**です。**_wunlink**する*ファイル名*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Unlink**関数は、 *filename*によって指定されたファイルを削除します。 **_wunlink**は **_unlink**のワイド文字バージョンです。**_wunlink**する*filename*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

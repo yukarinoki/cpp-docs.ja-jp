@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 6501fe53e67d0f277fa64c08e0edbff1d7eeb61a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332687"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918224"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb、_scalbf
 
@@ -58,29 +58,29 @@ float _scalbf(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 倍精度浮動小数点値。
 
-*Exp*<br/>
+*期限*<br/>
 長整数型の指数。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は指数値が返されます。 オーバーフロー時 *(x*の符号に応**じて)** _scalbは +/- **HUGE_VAL**を返します。**errno**変数は**ERANGE**に設定されます。
+正常終了した場合は指数値が返されます。 オーバーフロー時 ( *x*の符号によって異なります)、 **_scalb**は +/- **HUGE_VAL**; を返します。**errno**変数は**ERANGE**に設定されます。
 
 このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_scalb**関数は x *x* \* 2<sup>*exp*</sup>の値を計算します。
+**_Scalb**関数は、 *x* \* 2<sup>*exp*</sup>の値を計算します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_scalb**, **_scalbf**|\<float.h>|
+|**_scalb**、 **_scalbf**|\<float.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

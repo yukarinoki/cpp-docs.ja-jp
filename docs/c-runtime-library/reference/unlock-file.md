@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 46d07a8b3645ae0d68276d96271be0a246716f0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361219"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909208"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -51,14 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル*<br/>
+*拡張子*<br/>
 ファイル ハンドルです。
 
 ## <a name="remarks"></a>解説
 
-**_unlock_file**関数は file*で指定*されたファイルのロックを解除します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 この関数は、*ファイル*ポインタで **_lock_file**が以前に呼び出されていない限り、呼び出す必要があります。 ロックされていないファイルに**対して_unlock_file**を呼び出すと、デッドロックが発生する可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
+**_Unlock_file**関数は、 *file*によって指定されたファイルのロックを解除します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 *ファイル*ポインターで **_lock_file**が以前に呼び出されていない限り、この関数を呼び出すことはできません。 ロックされていないファイルに対して **_unlock_file**を呼び出すと、デッドロックが発生する可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
