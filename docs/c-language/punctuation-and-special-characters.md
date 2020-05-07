@@ -9,11 +9,11 @@ helpviewer_keywords:
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
 ms.openlocfilehash: 3594ca0f2dfcc294fa7a3d44268150ac5507e547
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232274"
 ---
 # <a name="punctuation-and-special-characters"></a>区切り記号および特殊文字
 
@@ -23,7 +23,7 @@ C の文字セットに含まれる区切り記号と特殊文字には、プロ
 
 `punctuator`: one of **( )   [ ]   { }   \*   ,   :   =   ;   ... #**
 
-これらの文字は、C では特別な意味を持ちます。この本では、その使用方法について説明します。 シャープ記号 (**#**) は、[プリプロセス ディレクティブ](../preprocessor/preprocessor-directives.md)でのみ提示されます。
+これらの文字は、C では特別な意味を持ちます。この本では、その使用方法について説明します。 シャープ記号 ( **#** ) は、[プリプロセス ディレクティブ](../preprocessor/preprocessor-directives.md)でのみ提示されます。
 
 ## <a name="see-also"></a>関連項目
 
