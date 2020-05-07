@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
 ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290821"
 ---
 # <a name="using-wmain"></a>wmain の使用
 
@@ -23,7 +23,7 @@ Unicode プログラミング モデルでは、**main** 関数のワイド文�
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **wmain** に渡す仮引数は、**main** に渡す際の形式に準拠して宣言します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 次に例を示します。
 

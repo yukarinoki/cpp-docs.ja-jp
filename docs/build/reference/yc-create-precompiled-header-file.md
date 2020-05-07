@@ -15,58 +15,58 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316705"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825757"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (プリコンパイル済みヘッダー ファイルの作成)
 
-コンパイラで特定の時点のコンパイルの状態を表すプリコンパイル済みヘッダー (.pch) ファイルを作成するように指示します。
+特定の時点でのコンパイルの状態を表すプリコンパイル済みヘッダー (.pch) ファイルを作成するようにコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
-> __/Yc__<br/>
-> __/Yc__*filename*
+> __/Yc__\
+> __/Yc__*ファイル名*
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*<br/>
-ヘッダー (.h) ファイルを指定します。 この引数を使用すると、コンパイラは、.h ファイルを含むすべてのコードをコンパイルします。
+*/db*<br/>
+ヘッダー (.h) ファイルを指定します。 この引数を使用すると、コンパイラは .h ファイルまでのすべてのコードをコンパイルします。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ときに **/Yc**なしで指定された引数、またはベースのファイル内のポイントに、ベースのソース ファイルの最後までのすべてのコードをコンパイルしている、 [hdrstop](../../preprocessor/hdrstop.md)ディレクティブに発生します。 使用して別のファイル名を指定しない限り .pch ファイルの結果として得られるが、ベースのソース ファイルと同じ基本名を持つ、 **hdrstop**プラグマまたは **/Fp**オプション。
+引数を指定せずに **/yc**を指定すると、コンパイラは、基本ソースファイルの最後まで、または[hdrstop](../../preprocessor/hdrstop.md)ディレクティブが発生したベースファイル内のポイントまで、すべてのコードをコンパイルします。 **Hdrstop**プラグマまたは **/fp**オプションを使用して別のファイル名を指定しない限り、生成される .pch ファイルの基本名は基本のソースファイルと同じになります。
 
-指定したファイルのベース名から作成された名前のプリコンパイルされたコードをファイルに保存、 **/Yc**オプションと拡張子 .pch をします。 使用することも、 [/Fp (名前です。Pch ファイル)](fp-name-dot-pch-file.md)プリコンパイル済みヘッダー ファイルの名前を指定するオプション。
+プリコンパイル済みコードは、 **/yc**オプションと .pch 拡張子を使用して指定されたファイルの基本名から作成された名前のファイルに保存されます。 /Fp (名前を使用することもでき[ます。Pch ファイル)](fp-name-dot-pch-file.md)オプション。プリコンパイル済みヘッダーファイルの名前を指定します。
 
-使用する場合 __/Yc__*filename*でその後使用するため、指定したファイルを含むすべてのコードをコンパイルして、 [/Yu (プリコンパイル済みヘッダー ファイルの使用)](yu-use-precompiled-header-file.md)オプション。
+__/Yc__*filename*を使用すると、コンパイラは、指定されたファイルまでのすべてのコードをコンパイルし、その後、 [/Yu (プリコンパイル済みヘッダーファイルを使用)](yu-use-precompiled-header-file.md)オプションを使用します。
 
-場合、オプション __/Yc__*filename*と __/Yu__*filename*同じコマンド行で発生し、両方の参照、または、同じファイル名を意味します。__/Yc__*filename*が優先されます。 この機能は、メイクファイルの記述を簡略化します。
+__/Yc__*filename と* __/yu__*filename*オプションが同じコマンドラインで実行され、同じファイル名を指定している場合は、 __/yc__*filename*が優先されます。 この機能により、メイク文書の記述が簡単になります。
 
-プリコンパイル済みヘッダーの詳細についてを参照してください。
+プリコンパイル済みヘッダーの詳細については、以下を参照してください。
 
 - [/Y (プリコンパイル済みヘッダー)](y-precompiled-headers.md)
 
 - [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. .Cpp ファイルを選択します。 .Cpp ファイルである必要があります #include プリコンパイル済みヘッダーの情報を含む .h ファイル。 プロジェクトの **/Yc**ファイル レベルで設定をオーバーライドできます。
+1. .Cpp ファイルを選択します。 .Cpp ファイルは、プリコンパイル済みヘッダー情報が含まれている .h ファイルを #include 必要があります。 プロジェクトの **/yc**設定は、ファイルレベルでオーバーライドできます。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 開く、**構成プロパティ**、 **C/C++**、**プリコンパイル済みヘッダー**プロパティ ページ。
+1. [**構成プロパティ**]、[ **c/c + +**]、[**プリコンパイル済みヘッダー** ] の各プロパティページを開きます。
 
-1. 変更、**プリコンパイル済みヘッダーの**プロパティ。
+1. **プリコンパイル済みヘッダー**プロパティを変更します。
 
-1. ファイル名を設定するには、変更、**プリコンパイル済みヘッダー ファイル**プロパティ。
+1. ファイル名を設定するには、**プリコンパイル済みヘッダーファイル**のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 」および「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>」を参照してください。
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> と <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A> を参照してください。
 
 ## <a name="example"></a>例
 
@@ -81,7 +81,7 @@ ms.locfileid: "62316705"
 // ...
 ```
 
-コマンドを使用してこのコードをコンパイルするときに`CL /YcMYAPP.H PROG.CPP`コンパイラは、AFXWIN.h、RESOURCE.h のすべての前処理を保存し、プリコンパイル済みヘッダー ファイルで MYAPP.h というされます。
+このコードがコマンド`CL /YcMYAPP.H PROG.CPP`でコンパイルされると、コンパイラは、afxwin.h、resource.h、および myapp のすべての前処理を、myapp という名前のプリコンパイル済みヘッダーファイルに保存します。
 
 ## <a name="see-also"></a>関連項目
 
