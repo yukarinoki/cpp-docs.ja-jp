@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361282"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911859"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate、_wstrdate
 
@@ -71,26 +71,26 @@ wchar_t *_wstrdate(
 
 ### <a name="parameters"></a>パラメーター
 
-*日付*<br/>
+*datestr*<br/>
 書式付きデータの文字列を含むバッファーへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、結果の文字列*datestr*へのポインタを返します。
+これらの各関数は、結果として得られた文字列*datestr*へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
 これらの関数のセキュリティを強化したバージョンを使用できます。「[_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)」をご覧ください。 可能な限りセキュリティが強化された関数を使用することをお勧めします。
 
-**_strdate**関数は、現在の**mm**/**dd**/**yy**システム日付を*datestr*で指定されたバッファーにコピー**dd****します。** **yy** たとえば、**文字列 12/05/99**は 1999 年 12 月 5 日を表します。 バッファーは 9 バイト以上の長さである必要があります。
+**_Strdate**関数は、 *datestr*によってポイントされるバッファーに現在のシステム日付をコピーします。形式は**mm**/**dd**/**yy**です。ここで、 **mm**は月を表す2桁、 **dd**は日を表す2桁、 **yy**は年の最後の2桁です。 たとえば、文字列**12/05/99**は1999年12月5日を表します。 バッファーは 9 バイト以上の長さである必要があります。
 
-*datestr*が**NULL**ポインターの場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は -1 を返し **、errno**を**EINVAL**に設定します。
+*Datestr*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
-**_wstrdate**は **、_strdate**のワイド文字バージョンです。**_wstrdate**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrdate**は **_strdate**のワイド文字バージョンです。**_wstrdate**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

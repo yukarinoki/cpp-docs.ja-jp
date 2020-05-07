@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332395"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918992"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s、_wsearchenv_s
 
@@ -87,47 +87,47 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*Filename*<br/>
+*/db*<br/>
 検索するファイルの名前。
 
-*ヴァルネーム*<br/>
+*varname*<br/>
 検索する環境。
 
-*パス*<br/>
+*パス名*<br/>
 完全パスを格納するバッファー。
 
-*要素の数*<br/>
+*numberOfElements*<br/>
 *パス名*バッファーのサイズ。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-*filename*が空の文字列の場合、戻り値は**ENOENT**です。
+*Filename*が空の文字列の場合、戻り値は**ENOENT**です。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*Filename*|*ヴァルネーム*|*パス*|*要素の数*|戻り値|*パス名*の内容|
+|*/db*|*varname*|*パス名*|*numberOfElements*|戻り値|*パス名*の内容|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|any|any|**NULL**|any|**Einval**|該当なし|
-|**NULL**|any|any|any|**Einval**|変更されない|
-|any|any|any|<= 0|**Einval**|変更されない|
+|any|any|**空白**|any|**EINVAL**|該当なし|
+|**空白**|any|any|any|**EINVAL**|変更されない|
+|any|any|any|<= 0|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>解説
 
-**_searchenv_s**ルーチンは、指定されたドメイン内のターゲット・ファイルを検索します。 *varname*変数は **、PATH**、 **LIB**、 **INCLUDE**などのディレクトリ パスのリストを指定する任意の環境変数またはユーザー定義変数です。 **_searchenv_s**では大文字と小文字が区別されるため *、varname*は環境変数の大文字と小文字を区別する必要があります。 *varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、関数はゼロを返し、*パス名*変数は変更されません。
+**_Searchenv_s**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、 **PATH**、 **LIB**、 **INCLUDE**などのディレクトリパスのリストを指定する任意の環境変数またはユーザー定義変数を指定できます。 **_Searchenv_s**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。 *Varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、この関数は0を返し、 *pathname*変数は変更されません。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲット ファイルがそれらのディレクトリの 1 つに含まれる場合、新しく作成されたパスが*pathname*にコピーされます。 *ファイル名*ファイルが見つからない場合、*パス名*には空の null で終わる文字列が含まれます。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
 
-*パス名*バッファーは、構築されたパス名の全長を収容するために、少なくとも **_MAX_PATH**文字でなければなりません。 そうしないと **、_searchenv_s**パス*名*バッファがオーバーランし、予期しない動作が発生する可能性があります。
+作成されたパス名の完全な長さを格納するには、*パス*名バッファーは少なくとも **_MAX_PATH**文字である必要があります。 そうしないと、 **_searchenv_s**によって*パス名*バッファーがオーバーランし、予期しない動作が発生する可能性があります。
 
-**_wsearchenv_s**は **、_searchenv_s**のワイド文字バージョンです。**_wsearchenv_s**する引数はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**は、そうでなければ同じように動作します。
+**_wsearchenv_s**は **_searchenv_s**のワイド文字バージョンです。**_wsearchenv_s**する引数はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**は同じように動作します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

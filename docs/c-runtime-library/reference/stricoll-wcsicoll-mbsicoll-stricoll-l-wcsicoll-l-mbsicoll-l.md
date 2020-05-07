@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +61,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355327"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919989"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
 ロケール固有の情報を使用して文字列を比較します。
 
 > [!IMPORTANT]
-> **_mbsicoll**と **_mbsicoll_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsicoll**と **_mbsicoll_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -109,34 +109,34 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*文字列 1*,*文字列2*<br/>
+*string1*、 *string2*<br/>
 Null で終わる比較対象の文字列。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、次のように *、string1*と*string2*の関係を示す値を返します。
+これらの各関数は、次のように、 *string1*と*string2*の関係を示す値を返します。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*文字列 1 が**文字列 2*より小さい|
-|0|*文字列1*文字列*2*と同一|
-|> 0|*文字列 1 が**文字列 2*より大きい|
+|< 0|*string1*が*string2*未満|
+|0|*string1*と*string2*の同一|
+|> 0|*string1*が*string2*より大きい|
 |**_NLSCMPERROR**|エラーが発生しました。|
 
-これらの関数は、 **_NLSCMPERROR**返されます。 **_NLSCMPERROR**を使用するには、文字列\<.h>または\<mbstring.h>を含めます。 **_wcsicollは***、string1*または*string2*のいずれかに、照合シーケンスのドメイン外のワイド文字コードが含まれている場合、失敗する可能性があります。 エラーが発生した場合 **、_wcsicoll** **errno**が**EINVAL**に設定されることがあります。 **_wcsicoll**の呼び出しでエラーをチェックするには **、errno**を 0 に設定し **、_wcsicoll**を呼び出した後**に errno を**チェックします。
+これらの各関数は **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには\<、string. h> \<または mbstring.h> を追加します。 *string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **_wcsicoll**は失敗する可能性があります。 エラーが発生した場合、 **_wcsicoll**は**errno**を**EINVAL**に設定することがあります。 **_Wcsicoll**の呼び出し時にエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **_wcsicoll**を呼び出した後に**errno**をチェックします。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、現在使用されているコード ページに従って *、文字列 1*と*string2*の大文字と小文字を区別しない比較を実行します。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
+これらの各関数は、現在使用中のコードページに従って、 *string1*と*string2*の大文字と小文字を区別しない比較を実行します。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
 
-**_stricmp**は **_stricoll**とは異なり **、_stricmp**比較は**LC_CTYPE**によって影響を受けますが **、_stricoll**比較はロケールの**LC_CTYPE**と**LC_COLLATE**のカテゴリに従って行われます。 **LC_COLLATE**カテゴリの詳細については、「 [setlocale](setlocale-wsetlocale.md) 」および「[ロケールカテゴリ](../../c-runtime-library/locale-categories.md)」を参照してください。 **_l**サフィックスを持たないこれらの関数のバージョンでは、現在のロケールが使用されます。**_l**サフィックスを持つバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_stricmp**は **_stricoll**とは異なります。 **_stricmp**の比較は**LC_CTYPE**の影響を受けますが、 **_stricoll**の比較は、ロケールの**LC_CTYPE**および**LC_COLLATE**のカテゴリに従っています。 **LC_COLLATE**カテゴリの詳細については、「 [setlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 *string1*または*string2*のいずれかが**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は **_NLSCMPERROR**を返し **、errno**を**EINVAL**に設定します。
+これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -148,17 +148,17 @@ Null で終わる比較対象の文字列。
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_stricoll**, **_stricoll_l**|\<string.h>|
-|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>、\<string.h>|
-|**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**、 **_stricoll_l**|\<string.h>|
+|**_wcsicoll**、 **_wcsicoll_l**|\<wchar.h>、\<string.h>|
+|**_mbsicoll**、 **_mbsicoll_l**|\<mbstring.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[関数](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>

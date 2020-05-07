@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 730458c5027f8f690e8238b29cbdb1056f09ed68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338103"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917799"
 ---
 # <a name="rename-_wrename"></a>rename、_wrename
 
@@ -74,13 +74,13 @@ int _wrename(
 
 ## <a name="return-value"></a>戻り値
 
-名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーの場合、この関数は 0 以外の値を返し **、errno**を次のいずれかの値に設定します。
+名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno**を次の値のいずれかに設定します。
 
 |errno の値|条件|
 |-|-|
-| **エアッケ** | *newname* によって指定されたファイルまたはディレクトリが既に存在するか、(無効なパスのため) 作成できない、または *oldname* がディレクトリであり、*newname* によって異なるパスが指定されています。 |
-| **エノエント** | *oldname* によって指定されたファイルまたはパスが見つかりません。 |
-| **Einval** | 名前に無効な文字が含まれています。 |
+| **EACCES** | *newname* によって指定されたファイルまたはディレクトリが既に存在するか、(無効なパスのため) 作成できない、または *oldname* がディレクトリであり、*newname* によって異なるパスが指定されています。 |
+| **ENOENT** | *oldname* によって指定されたファイルまたはパスが見つかりません。 |
+| **EINVAL** | 名前に無効な文字が含まれています。 |
 
 その他の返される可能性のある戻り値については、「[_doserrno、_errno、syserrlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
@@ -88,9 +88,9 @@ int _wrename(
 
 **rename** 関数は、*oldname* によって指定されたファイルまたはディレクトリの名前を *newname* によって指定された名前に変更します。 古い名前は、既存のファイルまたはディレクトリのパスである必要があります。 新しい名前を既存のファイルまたはディレクトリのパスにすることはできません。 **rename** を使用して、*newname* 引数で別のパスを指定することにより、1 つのディレクトリまたはデバイスから別のディレクトリまたはデバイスにファイルを移動することができます。 ただし、**rename** を使用してディレクトリを移動することはできません。 ディレクトリの名前を変更することはできますが、移動はできません。
 
-**_wrename**はワイド文字の **_rename**です。**_wrename**の引数はワイド文字列です。 **_wrename**と **_rename**は、そうでなければ同じように動作します。
+**_wrename**は **_rename**のワイド文字バージョンです。**_wrename**する引数はワイド文字列です。 **_wrename**と **_rename**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
