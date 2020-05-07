@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404456"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825795"
 ---
 # <a name="for-each-in"></a>for each、in
 
-配列またはコレクションを反復処理します。 この非標準のキーワードは、C++/CLI プロジェクトと C++ ネイティブ プロジェクトの両方で使用できます。 ただし、これを使用することはお勧めしません。 標準的な使用を検討して[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)代わりにします。
+配列またはコレクションを反復処理します。 この非標準のキーワードは、C++/CLI プロジェクトと C++ ネイティブ プロジェクトの両方で使用できます。 ただし、これを使用することはお勧めしません。 代わりに、標準[の範囲ベースの For ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)を使用することを検討してください。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
 ### <a name="syntax"></a>構文
 
-> **各 (** *型* *識別子* **で** *式* **) {**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+> **for each (** *式***の***型**識別子* **) {**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*命令*\
 > **}**
 
 ### <a name="parameters"></a>パラメーター
@@ -35,31 +35,31 @@ ms.locfileid: "62404456"
 `identifier` の型。
 
 *identifier*<br/>
-コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
+コレクション要素を表す繰り返し変数。  が`identifier` [追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)の場合は、要素を変更できます。
 
 *式 (expression)*<br/>
 配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。
 
-*ステートメント*<br/>
+*命令*<br/>
 実行する 1 つ以上のステートメントを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コレクションを反復処理するために、`for each` ステートメントを使用します。 コレクション内の要素を変更することはできますが、要素を追加または削除することはできません。
 
-*ステートメント*配列またはコレクションの各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。
+*ステートメント*は、配列またはコレクション内の各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。
 
-`for each` `in`は[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)します。
+`for each`および`in`は、[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)です。
 
-詳細情報
+詳細:
 
 - [for each を使用した C++ 標準ライブラリ コレクションの反復処理](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [方法: 各配列を反復処理します。](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [方法: for each を使用して配列を反復処理する](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [方法: For each を使用してジェネリック コレクションを反復します。](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [方法: for each を使用してジェネリック コレクションを反復処理する](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [方法: それぞれのユーザー定義のコレクションを反復処理します。](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [方法: for each を使用してユーサー定義のコレクションを反復処理する](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -109,12 +109,12 @@ Testing
 
 **解説**
 
-CLR の構文は同じ、**すべてのランタイム**構文では、次の手順を除きます。
+CLR 構文は、次の場合を除き、**すべてのランタイム**構文と同じです。
 
 *式 (expression)*<br/>
-マネージド配列式またはコレクション。 コンパイラはからに変換できるように、コレクションの要素がある必要があります<xref:System.Object>を*識別子*型。
+マネージド配列式またはコレクション。 コレクション要素は、コンパイラがから<xref:System.Object> *識別子*型に変換できるようにする必要があります。
 
-*式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または型を定義する、`GetEnumerator`実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.
+*式*は、、、または<xref:System.Collections.IEnumerable>を<xref:System.Collections.Generic.IEnumerable%601>実装する型に評価され`GetEnumerator`ます。この型は、で`IEnumerator`定義<xref:System.Collections.IEnumerator>されているすべてのメソッドを実装または宣言する型を返すメソッドを定義します。
 
 ### <a name="requirements"></a>必要条件
 
