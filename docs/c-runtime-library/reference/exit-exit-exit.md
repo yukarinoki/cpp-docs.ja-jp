@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 5bdb5ff5c8309e03a49f9518f65a45d5757e9bfa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1c0eeaa6d66e91b913ce7940d37409fc4f6ac29
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347634"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909675"
 ---
 # <a name="exit-_exit-_exit"></a>終了、_Exit、_exit
 
-呼び出しプロセスを終了します。 **終了**関数は、クリーンアップ後に終了します。**_exit**し、**すぐに終了_Exit。**
+呼び出しプロセスを終了します。 **Exit**関数は、クリーンアップ後に終了します。**_exit** 、 **_Exit**直ちに終了します。
 
 > [!NOTE]
-> テストまたはデバッグのシナリオを除き、ユニバーサル Windows プラットフォーム (UWP) アプリをシャットダウンするには、このメソッドを使用しないでください。 ストア アプリを閉じるプログラムまたは UI の方法は、 [Microsoft Store のポリシー](/legal/windows/agreements/store-policies)に従って許可されていません。 詳細については[、「UWP アプリのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)」を参照してください。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
+> テストシナリオまたはデバッグシナリオを除き、このメソッドを使用してユニバーサル Windows プラットフォーム (UWP) アプリをシャットダウンしないでください。 プログラムまたは UI がストアアプリを閉じる方法は、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)によっては許可されていません。 詳細については、「 [UWP アプリのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)」を参照してください。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -71,22 +71,22 @@ void _exit(
 
 ## <a name="remarks"></a>解説
 
-**exit** **、_Exit、****および_exit**関数は、呼び出しプロセスを終了します。 **exit**関数はスレッド ローカル オブジェクトのデストラクターを呼び出し **、atexit**と **_onexit**によって登録された関数を呼び出し、その後、プロセスを終了する前にすべてのファイル バッファをフラッシュします。 **_Exit**関数と **_exit**関数は、スレッドローカルオブジェクトを破棄したり **、atexit**または **_onexit**関数を処理したり、ストリームバッファをフラッシュしたりすることなく、プロセスを終了します。
+**Exit**、 **_Exit** 、 **_exit**の各関数は、呼び出し元のプロセスを終了します。 **Exit**関数は、スレッドローカルオブジェクトのデストラクターを呼び出し、次に、 **atexit**および **_onexit**によって登録された関数を後入れ先出し (LIFO) の順序で呼び出し、プロセスを終了する前にすべてのファイルバッファーをフラッシュします。 **_Exit**関数と **_exit**関数は、スレッドローカルオブジェクトを破棄せずにプロセスを終了します。また、 **atexit**または **_onexit**関数を処理したり、ストリームバッファーをフラッシュしたりすることはありません。
 
-**exit、_Exit、****exit****および_exit**呼び出しは値を返しませんが、プロセスの終了後に *、状態*の値はホスト環境または待機呼び出しプロセス (存在する場合) に使用可能になります。 通常、呼び出し元は、通常の終了を示すには、またはエラーを示す他の値に *、状況*値を 0 に設定します。 オペレーティング システム バッチ コマンド**ERRORLEVEL**で*状態*値を使用でき、値 0 を表す**EXIT_SUCCESS、** または値 1 を表す**EXIT_FAILURE**の 2 つの定数のいずれかによって表されます。
+**終了**、 **_Exit**および **_exit**呼び出しは値を返しませんが、プロセスが終了した後、ホスト環境で [*状態*] の値を使用できるようになります (存在する場合)。 通常、呼び出し元は*状態*値を0に設定して、通常の終了を示すか、またはエラーを示す他の値に設定します。 *Status*値は、オペレーティングシステムのバッチコマンド**ERRORLEVEL**で使用でき、値0を表す**EXIT_SUCCESS**、または値1を表す**EXIT_FAILURE**の2つの定数のいずれかによって表されます。
 
-**exit**、 **_Exit**、 **_exit**、 **quick_exit**、 **_cexit**、および **_c_exit**関数は、次のように動作します。
+**Exit**、 **_Exit**、 **_exit**、 **quick_exit**、 **_cexit**、および **_c_exit**の各関数は、次のように動作します。
 
-|機能|説明|
+|関数|説明|
 |--------------|-----------------|
-|**終了**|完全な C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
-|**_exit**|最低限の C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
+|**exit**|完全な C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
+|**_Exit**|最低限の C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
 |**_exit**|最低限の C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
 |**quick_exit**|高速な C ライブラリの終了処理を実行してプロセスを終了し、指定されたステータス コードをホスト環境に提供します。|
 |**_cexit**|完全な C ライブラリの終了処理を実行し、呼び出し元に戻ります。 プロセスを終了しません。|
 |**_c_exit**|最低限の C ライブラリの終了処理を実行し、呼び出し元に戻ります。 プロセスを終了しません。|
 
-**exit**関数 **、_Exit**関数、または **_exit**関数を呼び出すとき、呼び出し時に存在する一時オブジェクトまたは自動オブジェクトのデストラクターは呼び出されません。 自動オブジェクトは、関数で定義された非静的ローカルオブジェクトです。 一時オブジェクトは、関数呼び出しによって返される値など、コンパイラによって作成されるオブジェクトです。 **exit、** **_Exit**、または **_exit**を呼び出す前に自動オブジェクトを破棄するには、次のようにオブジェクトのデストラクターを明示的に呼び出します。
+**Exit**、 **_Exit**または **_exit**関数を呼び出すと、呼び出し時に存在する一時オブジェクトまたは自動オブジェクトのデストラクターは呼び出されません。 自動オブジェクトは、関数で定義された非静的ローカルオブジェクトです。 一時オブジェクトは、関数呼び出しによって返される値など、コンパイラによって作成されるオブジェクトです。 **Exit**、 **_Exit**、または **_exit**を呼び出す前に自動オブジェクトを破棄するには、次に示すように、オブジェクトのデストラクターを明示的に呼び出します。
 
 ```cpp
 void last_fn() {}
@@ -97,15 +97,15 @@ void last_fn() {}
 }
 ```
 
-**dllMain**から**終了**を呼び出すために**DLL_PROCESS_ATTACH**を使用しないでください。 **DLLMain**関数を終了するには **、DLL_PROCESS_ATTACH**から**FALSE**を返します。
+**DLL_PROCESS_ATTACH**を使用して、 **DllMain**から**exit**を呼び出さないでください。 **DLLMain**関数を終了するには、 **DLL_PROCESS_ATTACH**から**FALSE**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**終了**, **_Exit**, **_exit**|\<process.h> または \<stdlib.h>|
+|**exit**、 **_Exit**、 **_exit**|\<process.h> または \<stdlib.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -127,7 +127,7 @@ int main( void )
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[中止](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_cexit、_c_exit](cexit-c-exit.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>

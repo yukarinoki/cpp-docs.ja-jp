@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 095a272e1dd85c1b61e1970a1b881737acbb739d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913815"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-ディスク・ドライブに関する情報を使用して **、_diskfree_t**構造を作成します。
+ディスクドライブに関する情報を使用して **_diskfree_t**構造を設定します。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -56,19 +56,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドライブ*<br/>
+*駆動*<br/>
 情報を取得するディスク ドライブを指定します。
 
-*Driveinfo*<br/>
-ドライブに関する情報が入力される **_diskfree_t**構造。
+*driveinfo*<br/>
+ドライブに関する情報が設定される **_diskfree_t**構造体。
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**は、オペレーティング・システムによって戻されるエラーに対して設定されます。 **errno**で示されるエラー条件の詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
+関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**は、オペレーティングシステムによって返されるエラーに対して設定されます。 **Errno**によって示されるエラー条件の詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_diskfree_t**構造は Direct.h で定義されます。
+**_Diskfree_t**構造体は、直接 .h で定義されています。
 
 ```C
 struct _diskfree_t {
@@ -79,9 +79,9 @@ struct _diskfree_t {
 };
 ```
 
-この関数は、パラメーターを検証します。 *driveinfo*ポインタが**NULL**の場合、または*ドライブ*が無効なドライブを指定している場合、この関数は、パラメーター[の検証](../../c-runtime-library/parameter-validation.md)の説明に従って、無効なパラメータ ハンドラを呼び出します。 実行を続行できる場合、関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。 有効なドライブの範囲は、0 から 26 です。 *ドライブ*値 0 は現在のドライブを示します。その後、数字は、1がドライブAを示し、3がドライブCを示すような英語のアルファベットの文字にマップされます。
+この関数は、パラメーターを検証します。 *Driveinfo*ポインターが**NULL**の場合、または*ドライブ*に無効なドライブが指定されている場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。 有効なドライブの範囲は、0 から 26 です。 *ドライブ*値が0の場合は、現在のドライブを指定します。その後、番号は英語のアルファベットの文字にマップされます。1はドライブ A、3はドライブ C を示します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

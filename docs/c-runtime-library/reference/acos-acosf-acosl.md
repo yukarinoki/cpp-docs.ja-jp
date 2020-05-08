@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348970"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916887"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -62,32 +62,32 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
-アークコサイン (逆コサイン) を計算する -1 ~ 1 の間の値。
+*x*<br/>
+アークコサイン (逆余弦) を計算する-1 ~ 1 の範囲の値。
 
 ## <a name="return-value"></a>戻り値
 
-**acos**関数は、0 から π ラジアンの範囲内の*x*のアークコサインを戻します。
+**Acos**関数は、0 ~ πラジアンの範囲の*x*のアークコサインを返します。
 
-デフォルトでは *、x*が -1 より小さいか 1 より大きい場合 **、acos は**無期限を返します。
+既定では、 *x*が-1 より小さいか、または1より大きい場合、 **acos**は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型と**long** **double**型を取得して返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは **、acos は**常に二**重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**アコス**,**アコスフ**,**アコスル**|\<math.h>|\<errno.h>|
+|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 

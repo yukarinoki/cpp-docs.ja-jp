@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338521"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910390"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -53,20 +53,20 @@ FILE *stream
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-_popenへの前の呼び出しからの戻り**値。**
+*一連*<br/>
+前の **_popen**の呼び出しからの戻り値。
 
 ## <a name="return-value"></a>戻り値
 
-終了コマンド プロセッサの終了ステータスを返します。 戻り値の形式は、 **_cwait**の形式と同じですが、下位バイトと上位バイトが入れ替わる点が異なります。 ストリームが**NULL**の場合 **、_pclose**は**errno**を**EINVAL**に設定し、-1 を返します。
+終了コマンドプロセッサの終了ステータスを返します。エラーが発生した場合は-1 を返します。 戻り値の形式は **_cwait**の場合と同じですが、下位バイトと上位バイトが交換される点が異なります。 Stream が**NULL**の場合 **_pclose** 、_pclose **errno**に**EINVAL**を設定し、-1 を返します。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_pclose**関数は、関連付けられた **_popen**呼び出しによって開始されたコマンド プロセッサ (Cmd.exe) のプロセス ID を検索し、新しいコマンド プロセッサで[_cwait](cwait.md)呼び出しを実行し、関連付けられたパイプのストリームを閉じます。
+**_Pclose**関数は、関連付けられた **_popen**呼び出しによって開始されたコマンドプロセッサ (CMD.EXE) のプロセス ID を検索し、新しいコマンドプロセッサに対して[_cwait](cwait.md)の呼び出しを実行し、関連付けられているパイプのストリームを閉じます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

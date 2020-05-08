@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909302"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -84,20 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 プッシュする文字。
 
 ## <a name="return-value"></a>戻り値
 
-両方の関数は成功した場合*に文字 c を*返します。 エラーがある場合 **、_ungetch**は**EOF**の値を返し **、_UNGETWCH**は**WEOF**を返します。
+成功した場合、どちらの関数も文字*c*を返します。 エラーが発生した場合、 **_ungetch**は**EOF**の値を返し、 **_ungetwch**は**WEOF**を返します。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、文字*c*をコンソールに戻し **、_getch**または **_getche** (または **_getwch**または **_getwche)** が読み取る次の文字を*c*にします。 **_ungetch**と **_ungetwch**は、次の読み取り前に複数回呼び出された場合に失敗します。 *c*引数は EOF (**または WEOF)** にすることはできません。 **EOF**
+これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) が読み取る次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -110,8 +110,8 @@ wint_t _ungetwch_nolock(
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
+|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

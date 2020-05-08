@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341811"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911425"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -74,12 +74,12 @@ long double log1pl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点引数。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、自然 ( 底*e*) のログ (*x* + 1 ) を返します。
+成功した場合は、(*x* + 1) の自然 (底*e*) ログを返します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
@@ -91,26 +91,26 @@ long double log1pl(
 |-1|-inf|DIVBYZERO|ERANGE|
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
-|±SNaN|入力と同じ|INVALID||
-|±QNaN、無期限|入力と同じ|||
+|± SNaN|入力と同じ|INVALID||
+|± QNaN、不定|入力と同じ|||
 
-*x* = -1 の場合 **、errno**値は ERANGE に設定されます。 *x*が -1 の場合 **、errno**値は**EDOM**に設定<。
+*X* =-1 の場合、 **ERRNO**値は ERANGE に設定されます。 *X* <-1 の場合、 **Errno**値は**EDOM**に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**log1p**関数は`log(x + 1)`*、x*が 0 に近い場合よりも正確である可能性があります。
+*X*が0に近い場合、 **log1p**関数`log(x + 1)`はを使用するよりも正確な場合があります。
 
-C++ ではオーバーロードが可能なため **、float**型と**長い****ダブル**型を取得および戻す**log1p**のオーバーロードを呼び出すことができます。 C プログラムでは **、log1p**は常に二**重**を受け取って返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**log1p**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log1p**は常に**double**を受け取り、返します。
 
-*x*が自然数の場合、この関数は *、(x* - 1) の階乗の対数を返します。
+*X*が自然数の場合、この関数は (*x* -1) の階乗の対数を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**ログ 1p**,**ログ1pf**,**ログ1pl**|\<math.h>|\<cmath>|
+|**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
