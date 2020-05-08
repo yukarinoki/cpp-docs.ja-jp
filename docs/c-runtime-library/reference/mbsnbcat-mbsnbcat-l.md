@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 7598b20db4698ff8f95fbcefa00864be1b958447
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25df567525fc190be94529fba3b7de131122e6b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340812"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915668"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat、_mbsnbcat_l
 
-マルチバイト文字列の最初の**n**バイトを、別の文字列に追加します。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)」を参照してください。
+1つのマルチバイト文字列の最初の**n**バイトを別の文字列に追加します。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -90,28 +90,28 @@ NULL で終わるマルチバイト文字のコピー先文字列。
 NULL で終わるマルチバイト文字のコピー元文字列。
 
 *count*<br/>
-*src*から*dest*に追加するバイト数。
+*Src*から*dest*に追記するバイト数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbcat**は、変換先文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
+**_mbsnbcat**は、対象の文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbcat**関数は、最大で *、src*の最初の*カウント*バイトを*dest*に追加します。 *dest*の NULL 文字の直前のバイトが先頭バイトの場合 *、src*の最初のバイトはこの先頭バイトを上書きします。 それ以外の場合 *、src*の最初のバイトは*dest*の終端の null 文字を上書きします。 *カウント*バイトが追加される前に*src*に null バイトが出現する場合 **、_mbsnbcat**は*src*から null 文字までのすべてのバイトを追加します。 *count*が*src*の長さより大きい場合は、*カウント*の代わりに*src*の長さが使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**_Mbsnbcat**関数は、 *src*から*dest*への最初*の最大バイト数を*追加します。 *Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の最初のバイトはこの先行バイトを上書きします。 それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes が追加される前に*src*に null バイトが含まれている場合、 **_mbsnbcat**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **関数の_mbsnbcat**バージョンでは、このロケールに依存する動作に現在のロケールが使用されます。**_mbsnbcat_l**バージョンは、代わりに渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 関数の **_mbsnbcat**バージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_mbsnbcat_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **セキュリティに関するメモ** null で終わる文字列を使用してください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-*dest*または*src*が**NULL**の場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター エラーを生成します。 エラーが処理されると、関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
+*Dest*または*src*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターエラーを生成します。 エラーが処理された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

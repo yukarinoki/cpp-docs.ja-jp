@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355488"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913592"
 ---
 # <a name="srand"></a>srand
 
-**rand**関数で使用される擬似乱数ジェネレータの開始シード値を設定します。
+**Rand**関数によって使用される擬似乱数ジェネレーターの開始シード値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,14 +55,14 @@ void srand(
 
 ### <a name="parameters"></a>パラメーター
 
-*種子*<br/>
+*seed*<br/>
 擬似乱数ジェネレーターのシード
 
 ## <a name="remarks"></a>解説
 
-**srand**関数は、現在のスレッドで一連の擬似ランダム整数を生成するための開始点を設定します。 同じ結果シーケンスを作成するためにジェネレータを再初期化するには **、srand**関数を呼び出して、同じ*seed*引数を再度使用します。 *シード*のその他の値は、ジェネレータを擬似ランダムシーケンス内の別の開始点に設定します。 **rand は**、生成される擬似乱数を取得します。 **srand**への呼び出しの前に**rand**を呼び出すと、*シード*が 1 として渡された**srand を**呼び出すのと同じシーケンスが生成されます。
+**Srand**関数は、現在のスレッドで一連の擬似乱数を生成するための開始点を設定します。 ジェネレーターを再初期化して同じ結果シーケンスを作成するには、 **srand**関数を呼び出し、同じ*シード*引数を再度使用します。 *シード*のその他の値は、擬似乱数シーケンスの異なる開始位置にジェネレーターを設定します。 **rand**は、生成される擬似乱数を取得します。 **Srand**の呼び出しの前に**rand**を呼び出すと、*シード*が1として渡された**srand**を呼び出す場合と同じシーケンスが生成されます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

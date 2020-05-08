@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320436"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910472"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,20 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>パラメーター
 
-*Wchar*<br/>
+*wchar*<br/>
 変換される値。
 
 ## <a name="return-value"></a>戻り値
 
-**wctob**がワイド文字を正常に変換した場合、マルチバイト文字が 1 バイトの長さである場合にのみ、そのマルチバイト文字表現を返します。 **wctob**がワイド文字を検出した場合、マルチバイト文字に変換できないか、マルチバイト文字が正確に 1 バイトの長さでない場合は、-1 を返します。
+**Wctob**がワイド文字を正常に変換した場合、マルチバイト文字が1バイト長の場合にのみ、マルチバイト文字表現が返されます。 **Wctob**がマルチバイト文字に変換できないワイド文字を検出した場合、またはマルチバイト文字が1バイト長ではない場合は、-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**wctob**関数は *、wchar*に含まれるワイド文字を、マルチバイト文字が 1 バイトの長さである場合に、戻り**値 int**値によって渡される対応するマルチバイト文字に変換します。
+**Wctob**関数は、マルチバイト文字が1バイト長の場合に、 *wchar*に含まれるワイド文字を、戻り値**int**値で渡される対応するマルチバイト文字に変換します。
 
-**wctob**が失敗し、対応するマルチバイト文字が見つからなかった場合、関数は**errno**を**EILSEQ**に設定し、-1 を戻します。
+**Wctob**が失敗し、対応するマルチバイト文字が検出されなかった場合、関数は**errno**を**EILSEQ**に設定し、-1 を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -74,7 +74,7 @@ int wctob(
 
 ## <a name="example"></a>例
 
-このプログラムは **、wcstombs**関数の動作を示しています。
+このプログラムは、 **wcstombs**関数の動作を示しています。
 
 ```C
 // crt_wctob.c
@@ -109,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

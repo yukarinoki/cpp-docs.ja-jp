@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 4afd1c92930fe622eb03569913b264d6c285dcda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5fcae2a0e403d75383e2998b1ea127dd6f2ef89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341013"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914279"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb、_mbctombb_l
 
@@ -62,25 +62,25 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 変換するマルチバイト文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合 **、_mbctombb**と **_mbctombb_l**は*c*に対応する 1 バイト文字を返します。それ以外の場合は*c*を返します。
+成功した場合、 **_mbctombb**と **_mbctombb_l**は*c*に対応する1バイト文字を返します。それ以外の場合は、 *c*を返します。
 
 ## <a name="remarks"></a>解説
 
-**_mbctombb**関数と **_mbctombb_l**関数は、指定されたマルチバイト文字を対応する 1 バイトのマルチバイト文字に変換します。 文字は、変換する 0x20 から 0x7E または 0xA1 から 0xDF の範囲内の 1 バイト文字に対応している必要があります。
+**_Mbctombb**関数と **_mbctombb_l**関数は、指定されたマルチバイト文字を対応する1バイトのマルチバイト文字に変換します。 文字は、変換対象の範囲 0x20 ~ 0x7E または0xDF 内の1バイト文字に対応する必要があります。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l**サフィックスを持たないこの関数のバージョンでは、このロケール依存の動作に現在のロケールが使用されます。**サフィックスが_l**のバージョンは、代わりに渡された locale パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは **、_mbctombb**は **、ゼントハンと呼ばれます**。 代わりに **_mbctombb**を使用してください。
+以前のバージョンでは、 **_mbctombb**は**zentohan**と呼ばれていました。 代わりに **_mbctombb**を使用してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911369"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -109,32 +109,32 @@ long long int llrintl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 丸める値。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、x*の丸*められた整数値を返します。
+成功した場合は、 *x*の丸められた整数値を返します。
 
 |問題|戻り値|
 |-----------|------------|
-|*x*は戻り値の型の範囲外です<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
+|*x*が戻り値の型の範囲外です。<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型と**長い****ダブル**型を使用する**lint**および**llrint**のオーバーロードを呼び出すことができます。 Cプログラムでは **、rint**と**rrint**は常に**ダブル**を取ります.
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lrint**と**llrint**は常に**double**を受け取ります。
 
-*x*が整数値に相当する浮動小数点を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
+*X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
-**マイクロソフト固有 :** 結果が戻り値の型の範囲外の場合、またはパラメーターが NaN または無限大の場合、戻り値は実装が定義されます。 Microsoft コンパイラは0 の値を返します。
+**Microsoft 固有**: 結果が戻り値の型の範囲外の場合、またはパラメーターが NaN または無限大の場合、戻り値は実装定義になります。 Microsoft コンパイラは0 の値を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**リント**,**リンtf**,**リントル**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

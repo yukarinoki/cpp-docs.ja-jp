@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318669"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909902"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
-双曲線正弦を計算します。
+ハイパーボリックサインを計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -63,31 +63,31 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
-**sinh**関数は*x*の双曲線正弦を返します。 デフォルトでは、結果が大きすぎる場合 **、sinh は** **errno**を**ERANGE**に設定し、 ±**HUGE_VAL**を返します。
+**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh**は**errno**を**ERANGE**に設定し、±**HUGE_VAL**を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|なし|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
+|± QNAN、IND|None|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**または**long** **double**値を受け取って返す**sinh**のオーバーロードを呼び出すことができます。 C プログラムでは **、sinh は**常に二**重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**sinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sinh**は常にを受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**シン**,**シンフ**,**シン**|\<math.h>|\<cmath> または \<math.h>|
+|**sinh**、 **sinhf**、 **sinhf**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

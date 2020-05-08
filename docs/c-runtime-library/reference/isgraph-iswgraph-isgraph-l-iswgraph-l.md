@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343826"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909638"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -74,16 +74,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-*c*がスペース以外の印刷可能文字の特定の表現である場合、これらのルーチンは、それぞれゼロ以外を返します。 *c が*空白以外の印刷可能文字である場合 **、isgraph**は 0 以外の値を返します。 *c*がワイド文字スペース以外の印刷可能ワイド文字である場合 **、iswgraph**はゼロ以外の値を戻します。 c がテスト条件を満た*さない場合*、これらのルーチンはそれぞれ 0 を返します。
+*C*がスペース以外の印刷可能な文字の特殊表現である場合、これらの各ルーチンは0以外の値を返します。 *c*がスペース以外の印刷可能な文字である場合、 **isgraph**は0以外の値を返します。 *c*がワイド文字のスペース以外の印刷可能なワイド文字である場合、 **iswgraph**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
 
-**_l**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作の現在のロケールの代わりに渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*c*が EOF でない場合、または 0 から 0xFF の範囲内である場合 **、isgraph**および **_isgraph_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され *、c*がこれらの値の 1 つではない場合、関数はアサーションを発生させます。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isgraph**と **_isgraph_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,7 +94,7 @@ int _iswgraph_l(
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -110,5 +110,5 @@ int _iswgraph_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

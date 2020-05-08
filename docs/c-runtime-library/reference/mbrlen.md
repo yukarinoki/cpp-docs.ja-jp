@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 7503de22a8310335ddd678335916d3e74dab6e70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340987"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920312"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,35 +49,35 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 マルチバイト文字列内の検査対象となる次のバイトへのポインター。
 
 *count*<br/>
 検査対象の最大バイト数。
 
 *mbstate*<br/>
-*str*の初期バイトの現在のシフト状態へのポインタ。
+*Str*の初期バイトの現在のシフト状態へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-次のいずれかの値:
+次のいずれかの値です。
 
 |||
 |-|-|
-0|次の*カウント*数以下のバイト数は、ワイドヌル文字を表すマルチバイト文字を完了します。
-1 を*カウント*する 、 を含む|次の*カウント*数以下のバイト数で、有効なマルチバイト文字が完成します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。
-(size_t)(-2)|次の*カウント*バイトは、不完全だが有効な可能性のあるマルチバイト文字に影響し、すべての*カウント*バイトが処理されました。
-(size_t)(-1)|エンコーディング エラーが発生しました。 次の*カウント*数以下のバイト数は、完全で有効なマルチバイト文字に影響しません。 この場合 **、errno**は EILSEQ に設定され *、mbstate*の変換状態は指定されません。
+0|次の*数*以下のバイトでは、ワイド null 文字を表すマルチバイト文字が完成します。
+*カウント*(含む)|次の*数*以下のバイトでは、有効なマルチバイト文字が完成します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。
+(size_t)(-2)|次の*カウント*バイトは不完全である可能性があるマルチバイト文字に寄与し、すべての*カウント*バイトが処理されています。
+(size_t)(-1)|エンコーディング エラーが発生しました。 次の*数*以下のバイトは、完全かつ有効なマルチバイト文字に寄与しません。 この場合、 **errno**は EILSEQ に設定され、 *mbstate*の変換状態は指定されていません。
 
 ## <a name="remarks"></a>解説
 
-**mbrlen**関数は *、str*が指すバイトから始まる*最大カウント*バイトを検査し、シフト シーケンスを含む次のマルチバイト文字を完了するために必要なバイト数を決定します。 これは *、mbstate*が`mbrtowc(NULL, str, count, &mbstate)`ユーザー指定の**mbstate_t**オブジェクトであるか、またはライブラリによって提供される静的内部オブジェクトである場合の呼び出しと同じです。
+**Mbrlen**関数は、 *str*が指すバイトで*始まる最大バイト数を*検査して、シフトシーケンスを含め、次のマルチバイト文字を完了するために必要なバイト数を決定します。 Mbstate は、ユーザーが指定`mbrtowc(NULL, str, count, &mbstate)`し*mbstate*た**mbstate_t**オブジェクト、またはライブラリによって提供される静的な内部オブジェクトのいずれかの呼び出しに相当します。
 
-**mbrlen**関数は *、mbstate*パラメーター内の不完全なマルチバイト文字のシフト状態を保存して使用します。 これにより **、mbrlen**は必要に応じてマルチバイト文字の途中で再始動する機能を提供し、最大*カウント*・バイト数を検査します。 *mbstate*が null ポインターの場合 **、mbrlen**は内部の静的**mbstate_t**オブジェクトを使用してシフト状態を格納します。 内部**mbstate_t**オブジェクトはスレッド セーフではないため、常に独自の*mbstate*パラメーターを割り当てて渡すことをお勧めします。
+**Mbrlen**関数は、不完全なマルチバイト文字のシフト状態を*mbstate*パラメーターに保存して使用します。 これにより、必要に応じてマルチバイト文字の途中で再起動する機能が**mbrlen**され、最大バイト*数*を調べることができます。 *Mbstate*が null ポインターの場合、 **mbrlen**は、内部の静的な**mbstate_t**オブジェクトを使用して、シフト状態を格納します。 内部**mbstate_t**オブジェクトはスレッドセーフではないため、常に独自の*mbstate*パラメーターを割り当てて渡すことをお勧めします。
 
-**mbrlen**関数は[、_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)とは、その再起動可能性によって異なります。 シフト状態は、同じ関数または他の再開可能な関数を呼び出す以降の呼び出しの場合は*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、wcstombs の代わりに**wcsrtombs**への後続の呼び出しを使用する場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用**する**必要があります。
+**Mbrlen**関数は、再起動によって[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)とは異なります。 シフト状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**ではなく**wcsrtombs**の後続の呼び出しが使用される場合、アプリケーションでは**wcslen**ではなく**wcsrlen**を使用する必要があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -95,7 +95,7 @@ size_t mbrlen(
 
 ## <a name="example"></a>例
 
-この例では、マルチバイト文字の解釈が現在のコード ページに依存するしくみを示し、 **mbrlen**の再開機能を示します。
+この例は、マルチバイト文字の解釈が現在のコードページにどのように依存しているかを示し、 **mbrlen**の再開機能を示しています。
 
 ```C
 // crt_mbrlen.c
@@ -158,4 +158,4 @@ Character count: 25
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>

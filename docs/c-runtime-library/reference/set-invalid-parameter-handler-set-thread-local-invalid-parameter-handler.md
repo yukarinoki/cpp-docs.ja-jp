@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 0637937d4596d28875c40efec62f79a32f533dcf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337676"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914003"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 
@@ -57,7 +57,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 ### <a name="parameters"></a>パラメーター
 
-*p新しい*<br/>
+*pNew*<br/>
 新しい無効なパラメーター ハンドラーへの関数ポインターです。
 
 ## <a name="return-value"></a>戻り値
@@ -66,7 +66,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 ## <a name="remarks"></a>解説
 
-多くの C ランタイム関数では、渡された引数の有効性を確認しています。 無効な引数が渡された場合、この関数は**errno**エラー番号を設定するか、エラー コードを返します。 このような場合、無効なパラメーター ハンドラーも呼び出されます。 C ランタイムでは、プログラムを終了してランタイム エラー メッセージを表示する、既定のグローバルの無効なパラメーター ハンドラーを提供しています。 **_set_invalid_parameter_handler**を使用して、独自の関数をグローバル無効なパラメーター ハンドラーとして設定できます。 C ランタイムでは、スレッド ローカルの無効なパラメーター ハンドラーもサポートしています。 _set_thread_local_invalid_parameter_handler**を使用**してスレッド内でスレッドローカル パラメータ ハンドラを設定する場合、そのスレッドから呼び出される C ランタイム関数は、グローバル ハンドラの代わりにそのハンドラを使用します。 グローバルの無効な引数ハンドラーとしては、同時に 1 つの関数しか指定できません。 1 つのスレッド内では 1 つの関数しかスレッド ローカルの無効な引数ハンドラーとして指定できませんが、別のスレッドでは別のスレッド ローカルなハンドラーを持つことができます。 これにより、コードの一部で使用するハンドラーを、他のスレッドの動作に影響を与えずに変更できます。
+多くの C ランタイム関数では、渡された引数の有効性を確認しています。 無効な引数が渡された場合、関数は**errno**エラー番号を設定するか、エラーコードを返すことができます。 このような場合、無効なパラメーター ハンドラーも呼び出されます。 C ランタイムでは、プログラムを終了してランタイム エラー メッセージを表示する、既定のグローバルの無効なパラメーター ハンドラーを提供しています。 **_Set_invalid_parameter_handler**を使用して、独自の関数をグローバルの無効なパラメーターハンドラーとして設定できます。 C ランタイムでは、スレッド ローカルの無効なパラメーター ハンドラーもサポートしています。 スレッドローカルパラメーターハンドラーが **_set_thread_local_invalid_parameter_handler**を使用してスレッドで設定されている場合、スレッドから呼び出された C ランタイム関数は、グローバルハンドラーではなく、そのハンドラーを使用します。 グローバルの無効な引数ハンドラーとしては、同時に 1 つの関数しか指定できません。 1 つのスレッド内では 1 つの関数しかスレッド ローカルの無効な引数ハンドラーとして指定できませんが、別のスレッドでは別のスレッド ローカルなハンドラーを持つことができます。 これにより、コードの一部で使用するハンドラーを、他のスレッドの動作に影響を与えずに変更できます。
 
 通常、ランタイムが無効なパラメーター関数を呼び出したということは、回復不可能なエラーが発生したことを意味します。 提供する無効なパラメーター ハンドラー関数は、保存できるデータを保存してから中止処理をしなければなりません。 エラーが回復可能であるという確信を持てない限り、main 関数に制御を返すべきではありません。
 
@@ -82,17 +82,17 @@ void _invalid_parameter(
 );
 ```
 
-*expression*引数は、エラーを発生させた引数式のワイド文字列表現です。 *関数*の引数は、無効な引数を受け取った CRT 関数の名前です。 *file*引数は、関数を含む CRT ソース ファイルの名前です。 *行*引数は、そのファイル内の行番号です。 最後の引数は予約済みです。 CRT ライブラリのデバッグ バージョンを使用しない限り、パラメーターはすべて**NULL 値**になります。
+*Expression*引数は、エラーを発生させた引数式のワイド文字列表現です。 *関数*の引数は、無効な引数を受け取った CRT 関数の名前です。 *File*引数は、関数を含む CRT ソースファイルの名前です。 *Line*引数は、そのファイル内の行番号です。 最後の引数は予約済みです。 CRT ライブラリのデバッグバージョンが使用されていない場合、パラメーターの値はすべて**NULL**になります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> または \<stdlib.h>|
+|**_set_invalid_parameter_handler**、 **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> または \<stdlib.h>|
 
-**_set_invalid_parameter_handler**および **_set_thread_local_invalid_parameter_handler**機能は、マイクロソフト固有のものです。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Set_invalid_parameter_handler**関数と **_set_thread_local_invalid_parameter_handler**関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -143,5 +143,5 @@ Expression: format != nullptr
 ## <a name="see-also"></a>関連項目
 
 [_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
-[CRT 関数のセキュリティ強化バージョン](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
+[CRT 関数のセキュリティが強化されたバージョン](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
 [errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

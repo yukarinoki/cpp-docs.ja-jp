@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347921"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915009"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -94,30 +94,30 @@ long double erfcl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**erf**関数は*x*のガウスエラー関数を返します。 **erfc**関数は x のガウス*関数の相*補的な誤差関数を返します。
+誤差**関数は、** *x*のガウス誤差 error 関数を返します。 **Erfc**関数は、 *x*の相補的なガウス誤差 error 関数を返します。
 
 ## <a name="remarks"></a>解説
 
-**erf**関数は *、次*のように定義されている x のガウス誤差関数を計算します。
+誤差**関数は** *x*のガウス誤差 error 関数を計算します。これは次のように定義されています。
 
 ![x の誤差関数](media/crt_erf_formula.PNG "x の誤差関数")
 
-相補的ガウスエラー関数は、1 - erf(x) として定義されます。 **erf**関数は、-1.0 から 1.0 の範囲の値を返します。 エラーの戻り値はありません。 **erfc**関数は、0 から 2 の範囲の値を返します。 *x*が**erfc**に対して大きすぎる場合 **、errno**変数は**ERANGE**に設定されます。
+相補的なガウス誤差 error 関数は、1-誤差 (x) として定義されています。 -1.0 ~ 1.0 の範囲の値が**返されます**。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲の値を返します。 *X*が**erfc**に対して大きすぎる場合、 **errno**変数は**ERANGE**に設定されます。
 
-C++ ではオーバーロードが可能なため **、float**型と**長****いダブル**型を取得および戻す**erf**および**erfc**のオーバーロードを呼び出すことができます。 C プログラムでは **、erf**と**erfc**は常に**二重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**erfc** **のオーバーロード**を呼び出すことができます。 C プログラムでは、 **erfc**は常に**double**を**受け取り、返し**ます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**エルフ**,**エルフ**,**エルフ**,**エrfc**,**エrfcf**,**エルフ**|\<math.h>|
+|**erf**erfc、 **erff**、 **erff**、 **erfc**、 **erfcf**、 **erff**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

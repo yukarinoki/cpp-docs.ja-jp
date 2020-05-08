@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333335"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915404"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -64,7 +64,7 @@ errno_t wmemcpy_s(
 *dest*<br/>
 コピー先のバッファー。
 
-*デストサイズ*<br/>
+*destSize*<br/>
 コピー先バッファーのサイズ。memcpy_s の場合はバイト単位、wmemcpy_s の場合はワイド文字列 (wchar_t) 単位です。
 
 *src*<br/>
@@ -79,20 +79,20 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*デストサイズ*|*src*|*count*|戻り値|*デスト*の内容|
+|*dest*|*destSize*|*src*|*count*|戻り値|*Dest*の内容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|変更されない|
-|**NULL**|any|any|0 以外|**Einval**|変更されない|
-|any|any|**NULL**|0 以外|**Einval**|*dest*がゼロに設定されている|
-|any|< *カウント*|any|0 以外|**ERANGE**|*dest*がゼロに設定されている|
+|**空白**|any|any|0 以外|**EINVAL**|変更されない|
+|any|any|**空白**|0 以外|**EINVAL**|*dest*はゼロになります|
+|any|< *数*|any|0 以外|**ERANGE**|*dest*はゼロになります|
 
 ## <a name="remarks"></a>解説
 
-**memcpy_s**は *、カウント*バイトを*src*から*dest*にコピーします。**コピーwmemcpy_s**は、ワイド文字 (2 バイト) を*カウント*します。 ソースと宛先が重複している場合 **、memcpy_s**の動作は未定義です。 memmove_s**を使用**して、重複する領域を処理します。
+**memcpy_s**は、 *src*から*dest*へのバイト*数*をコピーします。**wmemcpy_s**コピー*数*はワイド文字 (2 バイト) になります。 コピー元とコピー先が重複している場合、 **memcpy_s**の動作は定義されていません。 **Memmove_s**を使用して、重複する領域を処理します。
 
-これらの関数では、パラメーターの検証が行われます。 *count*が 0 以外*で、dest*または*drc*が null ポインターである場合、または*destSize*が*count*より小さい場合、これらの関数は、パラメーター[の検証](../../c-runtime-library/parameter-validation.md)で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**EINVAL**または**ERANGE**を戻し **、errno**を戻り値に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Count*が0以外で、 *dest*または*src*が null ポインターであるか、または*destsize*が*count*より小さい場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EINVAL**または**ERANGE**を返し、 **errno**を戻り値に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

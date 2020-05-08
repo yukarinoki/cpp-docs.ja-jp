@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337992"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916718"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -67,28 +67,28 @@ long double roundl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**round**関数は *、x*に最も近い整数を表す浮動小数点値を返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Round**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN,IND** **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**値と**long** **double**値を取得して返す**ラウンド**のオーバーロードを呼び出すことができます。 C プログラムでは、**ラウンド**は常に二**重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**ラウンド**のオーバーロードを呼び出すことができます。 C プログラムでは、 **round**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**丸い**,**丸め**,**丸め**|\<math.h>|
+|**round**、 **roundf**、 **roundl**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

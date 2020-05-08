@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,19 +56,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 9fe89fb897a5459b16c49060359b4bb40bc062a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 52c998f14fee080efc1d288abbba012752757632
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365214"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912681"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
 現在のロケールまたは渡されたロケールを使用して、文字列内の次のトークンを検索します。 これらのバージョンの [strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbstok_s**と **_mbstok_s_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbstok_s**と **_mbstok_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -115,47 +115,47 @@ unsigned char* _mbstok_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
-検索するトークンを含む文字列。
+*引数*<br/>
+検索する1つまたは複数のトークンを格納している文字列。
 
 *delimiters*<br/>
 使用する区切り文字のセット。
 
 *context*<br/>
-関数の呼び出し間に位置情報を格納するために使用します。
+関数の呼び出しの間に位置情報を格納するために使用されます。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-*str*で見つかった次のトークンへのポインターを返します。 トークンが見つからない場合は**NULL を**返します。 各呼び出しは、返されたトークンの後に最初に発生する区切り文字に null 文字を代入して*str*を変更します。
+*Str*で見つかった次のトークンへのポインターを返します。 トークンが見つからない場合は**NULL**を返します。 各呼び出しは、返されたトークンの後に出現する最初の区切り記号に null 文字を代入することで*str*を変更します。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*Str*|*delimiters*|*context*|戻り値|**errno**|
+|*引数*|*delimiters*|*context*|戻り値|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|any|null ポインターへのポインター|**NULL**|**Einval**|
-|any|**NULL**|any|**NULL**|**Einval**|
-|any|any|**NULL**|**NULL**|**Einval**|
+|**空白**|any|null ポインターへのポインター|**空白**|**EINVAL**|
+|any|**空白**|any|**空白**|**EINVAL**|
+|any|any|**空白**|**空白**|**EINVAL**|
 
-*str*が**NULL**で *、コンテキスト*が有効なコンテキスト ポインターへのポインターである場合、エラーはありません。
+*Str*が**NULL**でも、*コンテキスト*が有効なコンテキストポインターへのポインターである場合、エラーは発生しません。
 
 ## <a name="remarks"></a>解説
 
-**関数のstrtok_s**ファミリは*str*で次のトークンを検索します。 *区切り文字*の中の文字のセットは、現在の呼び出しの*str*で見つかるトークンの可能な区切り文字を指定します。 **wcstok_s**と **_mbstok_s**は、ワイド文字とマルチバイト文字のstrtok_sのバージョン**です**。 **wcstok_s**と **_wcstok_s_l**の引数と戻り値はワイド文字列です。**_mbstok_s**および **_mbstok_s_l**の文字列は、マルチバイト文字文字列です。 それ以外では、これらの関数の動作は同じです。
+関数の**strtok_s**ファミリは、 *str*内の次のトークンを検索します。 *区切り記号*に含まれる文字セットは、現在の呼び出しの*str*で検索されるトークンの使用可能な区切り記号を指定します。 **wcstok_s**と **_mbstok_s**は**strtok_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcstok_s**と **_wcstok_s_l**の引数と戻り値はワイド文字列です。これらの **_mbstok_s**と **_mbstok_s_l**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-この関数は、パラメーターを検証します。 エラー条件テーブルのようにエラー条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し **、NULL**を返します。
+この関数は、パラメーターを検証します。 [エラー条件] テーブルのようにエラー状態が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **NULL**を返します。
 
-**strtok_s**の最初の呼び出しでは、関数は先頭の区切り文字をスキップし *、str*内の最初のトークンへのポインターを返し、null 文字でトークンを終了します。 **strtok_s**への一連の呼び出しによって *、str*の残りの部分からさらに多くのトークンを分割できます。 **strtok_s**呼び出しのたびに、その呼び出しによって返されるトークンの後に null 文字を挿入することによって*str*が変更されます。 *コンテキスト*ポインターは、読み取られる文字列と、文字列内の次のトークンが読み取られる場所を追跡します。 *str*から次のトークンを読み取る場合は *、str*引数に**null 値**を指定して**strtok_s**を呼び出し、同じ*コンテキスト*パラメーターを渡します。 **NULL** *str*引数を指定すると **、strtok_s変更**された*str*内の次のトークンが検索されます。 *区切り文字*の引数は、区切り文字のセットが異なる可能性があるため、1 つの呼び出しから次の呼び出しまで任意の値を取ることができます。
+**Strtok_s**の最初の呼び出しでは、関数は先頭の区切り記号をスキップし、 *str*の最初のトークンへのポインターを返します。このとき、トークンは null 文字で終了します。 *Str*の残りの部分から、 **strtok_s**の一連の呼び出しによって、より多くのトークンを分割できます。 **Strtok_s**を呼び出すたびに、その呼び出しによって返されたトークンの後に null 文字を挿入することで*str*が変更されます。 *コンテキスト*ポインターは、読み取られている文字列と、次のトークンが読み取られる文字列内の位置を追跡します。 *Str*から次のトークンを読み取るには、 *Str*引数に**NULL**値を指定して**strtok_s**を呼び出し、同じ*コンテキスト*パラメーターを渡します。 **NULL** *str*引数を指定すると、 **strtok_s**によって、変更された*str*の次のトークンが検索されます。 *区切り*記号の引数は、1回の呼び出しから次の呼び出しまでの任意の値を受け取ることができるため、区切り記号のセットが異なる場合があります。
 
-*context*パラメーターは**strtok**および **_strtok_l**で使用される静的バッファーに優先するため、同じスレッドで 2 つの文字列を同時に解析できます。
+*Context*パラメーターは**strtok**および **_strtok_l**で使用される静的バッファーよりも優先されるため、同じスレッドで2つの文字列を同時に解析することができます。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリ設定の設定によって影響されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。
 
-**_l**サフィックスを持たないこれらの関数のバージョンでは、このロケールに依存する動作に現在のスレッド ロケールが使用されます。 **_l**サフィックスを持つバージョンは *、locale*パラメーターで指定されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のスレッドロケールが使用されます。 **_L**サフィックスが付いているバージョンは、 *locale*パラメーターで指定されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -170,7 +170,7 @@ unsigned char* _mbstok_s_l(
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|TCHAR.H のルーチン|\_ユニコード\_& MBCS が定義されていません|\_定義された MBCS|_UNICODE が定義されている場合|
+|TCHAR.H のルーチン|\_UNICODE & \_MBCS が定義されていません|\_定義済みの MBCS|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -244,7 +244,7 @@ tokens
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

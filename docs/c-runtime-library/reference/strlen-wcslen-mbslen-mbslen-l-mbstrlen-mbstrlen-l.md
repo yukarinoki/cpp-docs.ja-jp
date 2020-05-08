@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -57,19 +57,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 0aa7c4f666936bae9602d6b2ab95a2731d9c0413
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355251"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919974"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
 現在のロケールまたは指定されたロケールを使用し、文字列の長さを取得します。 これらの関数についてセキュリティ保護が強化されたバージョンを使用できます。「[strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](strnlen-strnlen-s.md)」をご覧ください
 
 > [!IMPORTANT]
-> **_mbslen**、 **_mbslen_l**、 **_mbstrlen**、および **_mbstrlen_l**は、 Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbslen**、 **_mbslen_l**、 **_mbstrlen**、および **_mbstrlen_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -98,23 +98,23 @@ size_t _mbstrlen_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 NULL で終わる文字列。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は *、str*の文字数を返します。 _mbstrlen**と****_mbstrlen_l**を除いて、エラーを示すために予約された戻り`((size_t)(-1))`値はありません。
+これらの各関数は、端末の null を除く、 *str*内の文字数を返します。 文字列に無効なマルチバイト文字が含まれている場合に **_mbstrlen_l**を返す`((size_t)(-1))` **_mbstrlen**と _mbstrlen_l を除き、エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>解説
 
-**strlen**は文字列を 1 バイト文字として解釈するため、文字列にマルチバイト文字が含まれている場合でも、戻り値は常にバイト数と同じです。 **wcslen**は **、strlen**のワイド文字バージョンです。**wcslen**の引数はワイド文字ストリングで、文字数はワイド (2 バイト) 文字です。 **wcslen**と**strlen**は、それ以外の場合と同様に動作します。
+**strlen**は文字列を1バイト文字列として解釈するため、文字列にマルチバイト文字が含まれている場合でも、戻り値は常にバイト数と等しくなります。 **wcslen**は、 **strlen**のワイド文字バージョンです。**wcslen**の引数はワイド文字列で、文字数はワイド (2 バイト) 文字で指定します。 それ以外では、 **wcslen**と**strlen**は同じように動作します。
 
 **セキュリティに関するメモ** これらの関数は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -124,7 +124,7 @@ NULL で終わる文字列。
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**と **_mbslen_l**は、マルチバイト文字の文字列のマルチバイト文字の数を返しますが、マルチバイト文字の有効性をテストしません。 **_mbstrlen**と **_mbstrlen_l**は、マルチバイト文字の妥当性をテストし、マルチバイト文字シーケンスを認識します。 **_mbstrlen**または **_mbstrlen_l**に渡された文字列にコード ページに対して無効なマルチバイト文字が含まれている場合、関数は -1 を返し **、errno**を**EILSEQ**に設定します。
+**_mbslen**と **_mbslen_l**はマルチバイト文字の文字列のマルチバイト文字数を返しますが、マルチバイト文字の有効性はテストしません。 **_mbstrlen**および **_mbstrlen_l**マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 **_Mbstrlen**または **_mbstrlen_l**に渡された文字列に、コードページの無効なマルチバイト文字が含まれている場合、この関数は-1 を返し、 **errno**を**EILSEQ**に設定します。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -134,8 +134,8 @@ NULL で終わる文字列。
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> または \<wchar.h>|
-|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
-|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
+|**_mbslen**、 **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**、 **_mbstrlen_l**|\<stdlib.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -205,12 +205,12 @@ Bytes in 'ABCァD' : 6
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[関数](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

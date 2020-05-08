@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909519"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum、_ismbbkalnum_l
 
@@ -59,19 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkalnum**は、整数*c*が句読点以外の ASCII 以外のテキスト シンボルの場合は 0 以外の値を返し、非 ASCII の場合は 0 を返します。 **_ismbbkalnum**は、ロケール依存の文字情報に現行ロケールを使用します。 **_ismbbkalnum_l**は、ロケールをパラメーターとして受け取る点を除いて **、_ismbbkalnum**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数*c*が区切り記号以外の非 ASCII テキストの記号の場合、 **_ismbbkalnum**は0以外の値を返します。それ以外の場合は0を返します。 **_ismbbkalnum**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkalnum_l**は、ロケールをパラメーターとして受け取る点を除いて、 **_ismbbkalnum**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -85,4 +85,4 @@ int _ismbbkalnum_l(
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

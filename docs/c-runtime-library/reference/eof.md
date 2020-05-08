@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347932"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915055"
 ---
 # <a name="_eof"></a>_eof
 
@@ -52,22 +52,22 @@ int _eof(
 
 ### <a name="parameters"></a>パラメーター
 
-*Fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**_eof**現在の位置がファイルの終わりである場合は 1 を返し、ファイルが終了していない場合は 0 を返します。 戻り値 -1 はエラーを示します。この場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合 **、errno**は**EBADF**に設定され、無効なファイル記述子を示します。
+現在の位置がファイルの末尾である場合、 **_eof**は1を返します。それ以外の場合は0を返します。 戻り値-1 はエラーを示します。この場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は、無効なファイル記述子を示す**EBADF**に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**_eof**関数は *、fd*に関連付けられたファイルの終わりに達したかどうかを判別します。
+**_Eof**関数は、 *fd*に関連付けられたファイルの末尾に到達したかどうかを判断します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|オプション ヘッダー|
+|関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: eddb68ae6108c8a66966472cebca60a9969b78d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344162"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916318"
 ---
 # <a name="_getw"></a>_getw
 
@@ -49,18 +49,18 @@ int _getw(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**_getw**は、読み取られた整数値を返します。 **EOF**の戻り値は、エラーまたはファイルの終わりを示します。 ただし **、EOF**値は正規の整数値でもあるので **、feof**または**ferror**を使用してファイルの終わりまたはエラー状態を確認してください。 *stream*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合 **、errno**は**EINVAL**に設定され、関数は**EOF**を返します。
+**_getw**は、読み取られた整数値を返します。 **EOF**の戻り値は、エラーまたはファイルの末尾を示します。 ただし、 **EOF**値も正しい整数値であるため、 **feof**または**ferror**を使用して、ファイルの終わりまたはエラーの状態を確認します。 *Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
 
 ## <a name="remarks"></a>解説
 
-**_getw**関数は *、ストリーム*に関連付けられたファイルから**int**型の次のバイナリ値を読み取り、関連付けられたファイル ポインタ (存在する場合) をインクリメントして、次の未読文字を指します。 **_getw**ストリーム内の項目の特別な配置を想定していません。 _getwでの移植の問題は **、int**型のサイズと**int**型内のバイトの順序がシステムによって異**なるため、** 発生する可能性があります。
+**_Getw**関数は、*ストリーム*に関連付けられているファイルから**int**型の次のバイナリ値を読み取り、関連付けられているファイルポインターがある場合はそれをインクリメントして、次の未読文字を指すようにします。 **_getw**は、ストリーム内の項目の特別な配置を想定していません。 **_Getw**では、 **int**型のサイズと**int**型内のバイトの順序がシステム間で異なるため、移植に関する問題が発生する可能性があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

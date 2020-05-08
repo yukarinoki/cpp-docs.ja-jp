@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333114"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916790"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-*x*を*y*の累乗に対して計算します。
+*X*の累乗を*y*で計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,39 +68,39 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 底。
 
-*Y*<br/>
+*前年*<br/>
 指数。
 
 ## <a name="return-value"></a>戻り値
 
-*x*<sup>*y*</sup>の値を返します。 オーバーフローまたはアンダーフロー時に、エラー メッセージは印刷されません。
+*X*<sup>*y*</sup>の値を返します。 オーバーフローまたはアンダーフロー時に、エラー メッセージは印刷されません。
 
 |x の値と y の値|pow の値を返す|
 |-----------------------|-------------------------|
-|*x* != 0.0 と*y* == 0.0|1|
-|*x* == 0.0 と*y* == 0.0|1|
-|*x* == 0.0 と*y* < 0|INF|
+|*x* ! = 0.0 および*y* = = 0.0|1|
+|*x* = = 0.0 および*y* = = 0.0|1|
+|*x* = = 0.0 および*y* < 0|INF|
 
 ## <a name="remarks"></a>解説
 
-**pow**は、2<sup>64</sup>より大きい整数の浮動小数点値を認識しません (例えば、1.0E100)。
+**pow**は、2<sup>64</sup>を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
 
-**pow**にはストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**pow**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能なため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは **、pow**は常に 2 つの**倍精度**値を受け取り、**倍精度**浮動小数点値を返します。
+C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、 **pow**は常に2つの**double**値を受け取り、 **double**値を返します。
 
-`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用すると、コンパイラが[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を出力することがあります。 この問題を回避するには、最初のパラメータを**倍**精度**浮動小数点**型 、または**長倍**に**キャストします。**
+`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを**double**、 **float**、または**long** **double**にキャストします。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**パウ**,**ポウチ**,**パウチ**|\<math.h>|\<math.h> または \<cmath>|
+|**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> または \<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

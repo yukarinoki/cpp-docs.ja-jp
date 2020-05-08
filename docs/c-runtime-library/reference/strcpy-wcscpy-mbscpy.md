@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359188"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915265"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
@@ -91,10 +91,10 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>パラメーター
 
-*strデスティネーション*<br/>
+*strDestination*<br/>
 対象文字列。
 
-*ストソース*<br/>
+*strSource*<br/>
 NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
@@ -103,16 +103,16 @@ NULL で終わる元の文字列。
 
 ## <a name="remarks"></a>解説
 
-**strcpy**関数は *、終端の*null 文字を含む strSource を*strDestination*で指定された場所にコピーします。 **strcpy**の動作は、ソース文字列とコピー先文字列が重複している場合は定義されません。
+**Strcpy**関数は、 *strsource*(終端の null 文字を含む) を*strsource*によって指定された場所にコピーします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy**の動作は未定義です。
 
 > [!IMPORTANT]
-> **strcpy**は*strSource*をコピーする前に*strDestination*に十分な領域があるかどうかをチェックしないため、バッファ オーバーランの原因となる可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
+> **Strcpy**は、 *strdestination*をコピーする前に、 *strdestination*に十分な領域があるかどうかをチェックしないため、バッファーオーバーランの可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
 
-**wcscpy**と **_mbscpy**は、それぞれ **、 strcpy**のワイド文字およびマルチバイト文字バージョンです。 **wcscpy**の引数と戻り値はワイド文字列です。**_mbscpy**の文字列はマルチバイト文字文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscpy**と **_mbscpy**はそれぞれ、 **strcpy**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscpy**の引数と戻り値はワイド文字列です。これらの **_mbscpy**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

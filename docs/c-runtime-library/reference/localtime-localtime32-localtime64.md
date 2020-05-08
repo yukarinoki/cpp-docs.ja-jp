@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 21496b71c354c7bed7b87526dc40bc9b24865da2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342138"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916425"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime、_localtime32、_localtime64
 
@@ -59,59 +59,59 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>パラメーター
 
-*ソースタイム*<br/>
+*sourceTime*<br/>
 格納されている時刻へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-構造体の結果へのポインターを返すか、関数に渡された日付が**NULL の**場合は NULL を返します。
+構造体の結果へのポインターを返すか、関数に渡された日付がの場合は**NULL**を返します。
 
 - 1970 年 1 月 1 日午前 0 時より前。
 
-- 2038年1月19日 03:14:07 以降、UTC **(_time32**と**time32_t**を使用)。
+- 03:14:07 年1月 2038 19 日、UTC ( **_time32**と**time32_t**を使用)。
 
-- 23:59:59、3000 年 12 月 31 日、UTC **(_time64**および **__time64_t**を使用)。
+- 23:59:59 年12月 31 3000 日、UTC ( **_time64**と **__time64_t**を使用)。
 
-**__time64_t**構造を使用する **__time64_t**_localtime64では、日付を 23:59:59、3000 年 12 月 31 日(協定世界時)、_localtime32は 2038 年 1 月 18 日 23:59:59**まで表します**。
+**__time64_t**構造体を使用する **_localtime64**では、23:59:59 年12月31日から3000年12月31日までの日付を表すことができます (utc)。 **_Localtime32**は、2038年1月18日から23:59:59 日までの日付を表します。
 
-**localtime**は _localtime64**と評価**されるインライン関数で **、time_t**は **__time64_t**と同等です。 コンパイラが古い 32 ビット**time_t**として**time_t**を解釈するようにする必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、**ローカルタイム**は **_localtime32**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**localtime**は **_localtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime**が **_localtime32**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-構造体型[tm](../../c-runtime-library/standard-types.md)のフィールドには、次の値が格納され、各フィールドは**int**です。
+Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
 
 |フィールド|説明|
 |-|-|
-|**tm_sec**|分の後の秒 (0 - 59)。|
-|**tm_min**|時間後の分(0 - 59)。|
-|**tm_hour**|真夜中から経過した時間 (0 - 23)。|
-|**tm_mday**|月の日 (1 から 31)。|
-|**tm_mon**|月 (0 - 11;1 月 = 0)。|
+|**tm_sec**|秒後 (0-59)。|
+|**tm_min**|分後 (0-59)。|
+|**tm_hour**|深夜からの時間 (0-23)。|
+|**tm_mday**|月の通算日 (1-31)。|
+|**tm_mon**|月 (0-11;1月 = 0)。|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
-|**tm_wday**|曜日 (0 ~ 6;日曜日 = 0)。|
-|**tm_yday**|年の日 (0 - 365;1月1日 = 0)。|
+|**tm_wday**|曜日 (0-6;日曜日 = 0)。|
+|**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
 |**tm_isdst**|夏時間が有効な場合は正の値、夏時間が無効な場合は 0、夏時間かどうか状態が不明な場合は負の値。|
 
-**TZ**環境変数が設定されている場合、C ランタイム ライブラリは、夏時間 (DST) の計算を実装するために米国に適した規則を想定します。
+**TZ**環境変数が設定されている場合、C ランタイムライブラリは、夏時間 (DST) の計算を実装するために、米国に適した規則を前提としています。
 
 ## <a name="remarks"></a>解説
 
-**localtime**関数は、格納された時刻を[time_t](../../c-runtime-library/standard-types.md)値として変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **長い**値*の sourceTime*は、1970 年 1 月 1 日 (UTC) 午前 0 時 (00:00:00) から経過した秒数を表します。 この値は、通常、[時間](time-time32-time64.md)関数から取得されます。
+**Localtime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **Long** Value *sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
 
-32 ビットバージョンと 64 ビットバージョンの[gmtime、mktime、mkgmtime、](gmtime-gmtime32-gmtime64.md)および**localtime**の両方のバージョンでは、変換にスレッドごとに 1 つの**tm**構造体を使用します。 [mktime](mktime-mktime32-mktime64.md) [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md) これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
+[Gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および**localtime**の32ビットバージョンと64ビットバージョンの両方で、変換にスレッドごとに1つの**tm**構造が使用されます。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-ユーザーが最初にグローバル環境変数**TZ**を設定した場合 **、localtime**はローカルタイムゾーンを修正します。 **TZ**を設定すると、他の 3 つの環境変数 (**_timezone**、 **_daylight**、**および _tzname**) も自動的に設定されます。 **TZ**変数が設定されていない場合 **、localtime**はコントロール パネルの日付/時刻アプリケーションで指定されたタイム ゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**はマイクロソフトの拡張機能であり、**ローカルタイム**の ANSI 標準定義の一部ではありません。
+**localtime**は、ユーザーが最初にグローバル環境変数**TZ**を設定した場合、ローカルタイムゾーンを修正します。 **TZ**が設定されている場合、他の3つの環境変数 (**_timezone**、 **_daylight**、および **_tzname**) も自動的に設定されます。 **TZ**変数が設定されていない場合、 **Localtime**は、コントロールパネルの [日付/時刻] アプリケーションで指定されたタイムゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能であり、 **localtime**の ANSI 標準定義の一部ではありません。
 
 > [!NOTE]
 > 対象の環境によって、夏時間が有効かどうか判断されます。
 
-これらの関数では、パラメーターの検証が行われます。 *sourceTime*が null ポインターの場合、または*sourceTime*値が負の場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、関数は**NULL を**返し **、errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**現地 ,** **_localtime32**, **_localtime64**|\<time.h>|\<ctime>\<または時間.h>|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> また\<は time .h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 4b36cc9f5ed83b68cb15c39be91165ed7aa86d7b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e734a0286ac21ed0883cc10b0cd4ee5857ba448
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917266"
 ---
 # <a name="_controlfp_s"></a>_controlfp_s
 
@@ -54,10 +54,10 @@ errno_t _controlfp_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*現在のコントロール*<br/>
+*currentControl*<br/>
 現在の制御ワードのビット値。
 
-*新しいコントロール*<br/>
+*基準*<br/>
 新しい制御ワードのビット値。
 
 *mask*<br/>
@@ -65,22 +65,22 @@ errno_t _controlfp_s(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は 0、または**errno**値のエラー コード。
+成功した場合は0、または**errno**値エラーコード。
 
 ## <a name="remarks"></a>解説
 
-**_controlfp_s**関数はプラットフォームに依存しない、より安全なバージョンの **_control87**で、浮動小数点コントロールワードを currentControl に格納されているアドレスに取得し *、newControl*を使用して設定します。 *currentControl* この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、および無限大の各モードをプラットフォームに応じて変更できます。 また **、_controlfp_s**を使用して、浮動小数点例外をマスクまたはマスク解除することもできます。
+**_Controlfp_s**関数は、プラットフォームに依存しない、より安全なバージョンの **_control87**であり、浮動小数点制御ワードを*currentcontrol*に格納されているアドレスに取得し、 *newcontrol*を使用して設定します。 この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、および無限大の各モードをプラットフォームに応じて変更できます。 **_Controlfp_s**を使用して、浮動小数点例外のマスクやマスク解除を行うこともできます。
 
-*mask*の値が 0 の場合 **、_controlfp_s**は浮動小数点コントロールワードを取得し、取得した値を*currentControl*に格納します。
+*Mask*の値が0の場合、 **_controlfp_s**は浮動小数点制御ワードを取得し、取得した値を*currentcontrol*に格納します。
 
-*mask*が 0 以外の場合、制御ワードの新しい値が設定されます:*マスク*に設定されている任意のビット (つまり、1 に等しい) の場合 *、new*の対応するビットがコントロールワードの更新に使用されます。 つまり *、fpcntrl* = (fpcntrl & ~*マスク*) &#124; (*新しいコントロール* & *マスク*) *(fpcntrl*は浮動小数点制御語) です。*fpcntrl* このシナリオでは *、currentControl*は変更が完了した後、値に設定されます。これは、古い制御ワードビット値ではありません。
+*Mask*が0以外の場合、制御ワードの新しい値が設定されます。*マスク*で設定されている (つまり1に等しい) 任意のビットに対して、 *new*の対応するビットが制御ワードの更新に使用されます。 言い換えると、 *fpcntrl* = ((*fpcntrl* & ~*mask*) &#124; (*newcontrol* & *mask*)) では、 *fpcntrl*は浮動小数点制御ワードです。 このシナリオでは、変更が完了した後に*Currentcontrol*が値に設定されます。これは、古い制御ワードのビット値ではありません。
 
 > [!NOTE]
 > 既定では、ランタイム ライブラリは、すべての浮動小数点例外をマスクします。
 
-**_controlfp_s**は、インテル (x86) 、x64、および ARM プラットフォームの **_control87**機能とほぼ同じです。 x86、x64、または ARM プラットフォームを対象としている場合は **、_control87**または **_controlfp_s**を使用できます。
+**_controlfp_s**は、Intel (x86)、x64、および ARM プラットフォームの **_control87**関数とほぼ同じです。 X86、x64、または ARM プラットフォームを対象としている場合は、 **_control87**または **_controlfp_s**を使用できます。
 
-**_control87**と **_controlfp_s**の違いは、非正規値の扱い方にあります。 インテル (x86)、x64、および ARM プラットフォームの場合 **、_control87**は DENORMAL オペランド例外マスクを設定およびクリアできます。 **_controlfp_s**は、非正規オペランド例外マスクを変更しません。 次の例に、この違いを示します。
+**_Control87**と **_controlfp_s**の違いは、denormal 値の扱い方です。 Intel (x86)、x64、および ARM プラットフォームの場合、 **_control87**は DENORMAL オペランドの例外マスクを設定およびクリアできます。 **_controlfp_s**では、DENORMAL オペランドの例外マスクは変更されません。 次の例に、この違いを示します。
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -90,9 +90,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-マスク定数 (*マスク*) と新しいコントロール値 (*newControl*) の値を示す 16 進値の表を次に示します。 以下の移植可能な定数 (**_MCW_EM**、 **_EM_INVALID**など ) を、明示的に 16 進値を指定するのではなく、これらの関数の引数として使用します。
+マスク定数 (*mask*) と新しいコントロール値 (*newcontrol*) に使用できる値は、次の16進値の表に示されています。 16進数値を明示的に指定するのではなく、以下に示すような移植性の高い定数 (**_MCW_EM**、 **_EM_INVALID**など) をこれらの関数の引数として使用します。
 
-Intel (x86) から派生したプラットフォームでは、DENORMAL 入出力値がハードウェアでサポートされています。 x86 では DENORMAL 値を保持するように動作します。 ARM プラットフォームと SSE2 サポートを備えた x64 プラットフォームは、DENORMAL オペランドと結果をフラッシュするか、強制的にゼロにすることを可能にします。 **_controlfp_s**、 **_controlfp、** および **_control87**関数は、この動作を変更するためのマスクを提供します。 このマスクの使用例を次に示します。
+Intel (x86) から派生したプラットフォームでは、DENORMAL 入出力値がハードウェアでサポートされています。 x86 では DENORMAL 値を保持するように動作します。 ARM プラットフォームおよび SSE2 をサポートする x64 プラットフォームでは、DENORMAL のオペランドと結果をフラッシュするか、強制的にゼロにすることができます。 **_Controlfp_s**、 **_controlfp**、および **_control87**の各関数は、この動作を変更するマスクを提供します。 このマスクの使用例を次に示します。
 
 ```C
 unsigned int current_word = 0;
@@ -104,27 +104,27 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-ARM プラットフォームでは **、_controlfp_s**機能は FPSCR レジスタに適用されます。 x64 アーキテクチャでは、MXCSR レジスタに格納されている SSE2 制御ワードのみが影響を受けます。 Intel (x86) プラットフォームでは **、_controlfp_s**は x87 と SSE2 の両方の制御ワードに影響を与えます (存在する場合)。 2 つの制御ワードが互いに矛盾している可能性があります (たとえば[、__control87_2](control87-controlfp-control87-2.md)への以前の呼び出しが原因で)。2 つの制御ワードの間に矛盾がある場合 **、_controlfp_s**は*currentControl*に**EM_AMBIGUOUS**フラグを設定します。 これは、返された制御ワードが両方の浮動小数点制御ワードの状態を正確に表していない可能性があるという警告です。
+ARM プラットフォームでは、 **_controlfp_s**関数は、fpscr レジスタに適用されます。 X64 アーキテクチャでは、MXCSR レジスタに格納されている SSE2 制御ワードのみが影響を受けます。 Intel (x86) プラットフォームでは、 **_controlfp_s**は X87 と SSE2 の両方の制御ワードに影響します (存在する場合)。 2つの制御ワードが相互に一貫性を持たない可能性があります (たとえば、 [__control87_2](control87-controlfp-control87-2.md)を以前に呼び出したためです)。2つの制御ワードの間に矛盾がある場合、 **_controlfp_s**は*currentcontrol*で**EM_AMBIGUOUS**フラグを設定します。 これは、返された制御ワードが両方の浮動小数点制御ワードの状態を正確に表していない可能性があるという警告です。
 
-ARM および x64 アーキテクチャでは、無限大モードまたは浮動小数点精度の変更はサポートされていません。 x64 プラットフォームで精度コントロール マスクを使用すると、関数はアサーションを発生させ、無効なパラメータ ハンドラが呼び出されます[。](../../c-runtime-library/parameter-validation.md)
+ARM および x64 アーキテクチャでは、無限大モードまたは浮動小数点の精度の変更はサポートされていません。 有効桁数の制御マスクが x64 プラットフォームで使用されている場合、関数はアサーションを発生させ、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-マスクが正しく設定されていないと、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーターの例外を生成します。 実行を続行できる場合、この関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
+マスクが正しく設定されていないと、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーターの例外を生成します。 実行の継続が許可された場合、この関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-共通言語ランタイム (CLR) では既定の浮動小数点の精度しかサポートしていないため、コンパイルに[/clr (共通言語ランタイム コンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を使用する場合、この関数は無視されます。
+共通言語ランタイム (CLR) は浮動小数点の既定の精度のみをサポートするため、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルすると、この関数は無視されます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="mask-constants-and-values"></a>定数と値をマスクする
 
-**_MCW_EM**マスクの場合、それをクリアすると、例外が設定され、ハードウェア例外が許可されます。この値を設定すると、例外は非表示になります。 **_EM_UNDERFLOW**または **_EM_OVERFLOW**が発生した場合、次の浮動小数点命令が実行されるまで、ハードウェア例外はスローされません。 **_EM_UNDERFLOW**または_EM_OVERFLOW直後にハードウェア例外を生成するには **、FWAIT**MASM 命令を呼び出します。
+**_MCW_EM**マスクの場合、これをオフにすると、ハードウェア例外を許可する例外が設定されます。設定すると、例外が非表示になります。 **_EM_UNDERFLOW**または **_EM_OVERFLOW**が発生した場合、次の浮動小数点命令が実行されるまで、ハードウェア例外はスローされません。 **_EM_UNDERFLOW**または **_EM_OVERFLOW**の直後にハードウェア例外を生成するには、fwait MASM 命令を呼び出します。
 
 |Mask|16 進値|定数|16 進値|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN(** 非正規制御)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_DN** (Denormal コントロール)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
 |**_MCW_EM** (割り込み例外マスク)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** (インフィニティコントロール)<br /><br /> (ARM または x64 プラットフォームではサポートされていません。|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_IC** (無限大制御)<br /><br /> (ARM または x64 プラットフォームではサポートされていません)。|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
 |**_MCW_RC** (丸め制御)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (精密制御)<br /><br /> (ARM または x64 プラットフォームではサポートされていません。|0x00030000|**_PC_24** (24 ビット)<br /><br /> **_PC_53** (53 ビット)<br /><br /> **_PC_64** (64 ビット)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_PC** (精度制御)<br /><br /> (ARM または x64 プラットフォームではサポートされていません)。|0x00030000|**_PC_24** (24 ビット)<br /><br /> **_PC_53** (53 ビット)<br /><br /> **_PC_64** (64 ビット)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>必要条件
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333384"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917038"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -62,26 +62,26 @@ int _wchdir(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dirname*<br/>
+*dirname*<br/>
 新しい作業ディレクトリのパス。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、成功した場合、値 0 を返します。 戻り値 -1 は失敗を示します。 指定されたパスが見つからなかった場合 **、errno**は**ENOENT**に設定されます。 *dirname*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は -1 を戻します。
+これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからなかった場合、 **errno**は**ENOENT**に設定されます。 *Dirname*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**_chdir**関数は、現在の作業ディレクトリを*dirname*で指定されたディレクトリに変更します。 *dirname*パラメーターは、既存のディレクトリーを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 *dirname*に新しいドライブ文字を指定した場合は、デフォルトのドライブ文字も変更されます。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
+**_Chdir**関数は、現在の作業ディレクトリを*dirname*によって指定されたディレクトリに変更します。 *Dirname*パラメーターは既存のディレクトリを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 新しいドライブ文字が*dirname*に指定されている場合は、既定のドライブ文字も同様に変更されます。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
 
 ```C
 _chdir("c:\temp");
 ```
 
-パスで省略可能な円記号 **(&#92;)** を使用する場合は、1 つのバックスラッシュ (**&#92;**) を表す 2 つの円記号 (**&#92;&#92;**) を C 文字列リテラルに配置する必要があります。
+パスに省略可能な円記号 (**&#92;**) を使用する場合は、1つの円記号 (**&#92;**) を表すために、C 文字列リテラルに2つの円記号 (**&#92;&#92;**) を配置する必要があります。
 
-**_wchdir**はワイド文字の **_chdirバージョンです**。**_wchdir**の*dirname*引数はワイド文字列です。 **_wchdir**と **_chdir**は、そうでなければ同じように動作します。
+**_wchdir**は **_chdir**のワイド文字バージョンです。**_wchdir**の*dirname*引数は、ワイド文字列です。 **_wchdir**と **_chdir**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 

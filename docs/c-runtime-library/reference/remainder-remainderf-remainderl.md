@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917846"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -60,29 +60,29 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 分子。
 
-*Y*<br/>
+*前年*<br/>
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-*x* / *y*の浮動小数点の剰余。 *y*の値が 0.0 の場合、**残りは**静止 NaN を返します。 printf ファミリによる静かな NaN の表現については[、「printf、_printf_l、wprintf、_wprintf_l」](printf-printf-l-wprintf-wprintf-l.md)を参照してください。 **printf**
+*X* / *y*の浮動小数点の剰余。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**剰余**関数は*x* /  *x* / *x* / *y*の浮動小数点剰余*r*を計算し *、x* = *n* \* *y* + *r*、n x y &#124; = 1/2 &#124;*n* - 場合でも n が x*y に*最も近い*整数である。* *n**y* *r* = 0 の場合 *、r*は x と同じ符号を*持*つ。
+**剰余**関数*は x* *y* *y* - *x* /  *x* / *y* *x* /  + *r* *r* \* *n* *n* *n**y* *x* = の浮動小数点の剰余 r を計算します。ここで、n は x y の値に最も近い整数、n は &#124; n x y &#124; = 1/2 になるたびに n になります。 *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
 
-C++ ではオーバーロードが可能なため **、float**値または**長倍**精度浮動小数点値を取得して返す**剰余**のオーバーロード**を**呼び出すことができます。 C プログラムでは、**剰余**は常に 2 つの**二重**引数を取り、**倍精度浮動小数点数**を返します。
+C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**剰余**のオーバーロードを呼び出すことができます。 C プログラムでは、**剰余**は常に2つの**double**引数を受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
+|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
-|**剰余**,**剰余 ,****剰余**|\<math.h>|\<cmath> または \<math.h>|
+|**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

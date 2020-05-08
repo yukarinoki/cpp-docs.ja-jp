@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346668"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911637"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -67,30 +67,30 @@ long double floorl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Floor**関数は *、x*以下の最大整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
+**Floor**関数は、 *x*以下の最大の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 
-**フロア**には、ストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**floor**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なので **、float**値と**長い****倍精度**浮動小数点値を取得して返す**フロア**のオーバーロードを呼び出すことができます。 C プログラムでは、**フロア**は常に二**重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**floor**のオーバーロードを呼び出すことができます。 C プログラムでは、 **floor**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**床**,**フロア,****フロア**|\<math.h>|
+|**floor**、 **floorf**、 **floorl**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

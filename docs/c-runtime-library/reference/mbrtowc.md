@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340927"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919189"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -50,8 +50,8 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>パラメーター
 
-*Wchar*<br/>
-変換されたワイド文字列を受け取るワイド文字のアドレス ( **wchar_t**と入力します ) 。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
+*wchar*<br/>
+変換されたワイド文字の文字列を受け取るワイド文字のアドレス (型**wchar_t**)。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
 
 *mbchar*<br/>
 バイト シーケンスのアドレス (マルチバイト文字)。
@@ -60,33 +60,33 @@ size_t mbrtowc(
 チェックするバイト数。
 
 *mbstate*<br/>
-変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフではないため、常に独自の*mbstate*引数を渡すことをお勧めします。
+変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッドセーフではないため、常に独自の*mbstate*引数を渡すことをお勧めします。
 
 ## <a name="return-value"></a>戻り値
 
-次のいずれかの値:
+次のいずれかの値です。
 
-0 次の*カウント*以下のバイト数は *、wchar*に格納されている null ワイド文字を表すマルチバイト文字を完了します *(wchar*が null ポインターでない場合)。
+0次の*数*以下では、 *wchar*が null ポインターではない場合、 *wchar*に格納されている null ワイド文字を表すマルチバイト文字が完成します。
 
-count*に*1 を含む 次の*カウント*以下のバイト数は、有効なマルチバイト文字を完了します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 ワイド文字に相当する値は *、wchar*が null ポインタでない場合は*wchar*に格納されます。
+1が*カウント*されます。次の*カウント*を含むか、有効なマルチバイト文字を入力します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 *Wchar*が null ポインターでない場合、それに相当するワイド文字は*wchar*に格納されます。
 
-(size_t)(-1)エンコード エラーが発生しました。 次の*カウント*数以下のバイト数は、完全で有効なマルチバイト文字に影響しません。 この場合 **、errno**は EILSEQ に設定され、変換シフト状態は*mbstate*で指定されていません。
+(size_t)(-1)エンコードエラーが発生しました。 次の*数*以下のバイトは、完全かつ有効なマルチバイト文字に寄与しません。 この場合、 **errno**は EILSEQ に設定され、 *mbstate*の変換のシフト状態は指定されていません。
 
-(size_t)(-2)次の*カウント*バイトは、不完全だが有効な可能性のあるマルチバイト文字に影響し、すべての*カウント*バイトが処理されています。 *wchar*には値は格納されませんが、関数を再起動するために*mbstate*が更新されます。
+(size_t)(-2)次の*カウント*バイトは不完全である可能性があるマルチバイト文字に寄与し、すべての*カウント*バイトが処理されています。 *Wchar*に値は格納されませんが、 *mbstate*が更新されて関数が再起動されます。
 
 ## <a name="remarks"></a>解説
 
-*mbchar*が null ポインターの場合、関数は呼び出しと等価です。
+*Mbchar*が null ポインターの場合、関数は呼び出しに相当します。
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-この場合、引数*wchar*と*count*の値は無視されます。
+この場合、引数*wchar*および*count*の値は無視されます。
 
-*mbchar*が null ポインタでない場合、関数は*mbchar*からの*カウント*バイトを調べ、次のマルチバイト文字を完了するために必要なバイト数を判別します。 次の文字が有効な場合、対応するマルチバイト文字が null ポインターでない場合は *、wchar*に格納されます。 文字が対応するワイドヌル文字である場合 *、mbstate*の結果の状態は初期変換状態になります。
+*Mbchar*が null ポインターでない場合、関数は、 *mbchar*から*count*バイトを調べて、次のマルチバイト文字を完成させるために必要なバイト数を調べます。 次の文字が有効な場合は、対応するマルチバイト文字が*wchar*に格納されます (null ポインターではない場合)。 文字が対応するワイド null 文字の場合、結果の*mbstate*の状態は初期の変換状態になります。
 
-**mbrtowc**関数は、その再始動可能性によって[_mbtowc_lmbtowc](mbtowc-mbtowc-l.md)とは異なります。 変換状態は、同じ関数または他の再開可能な関数を呼び出す後続の呼び出しの場合は*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、wcstombs の代わりに**wcsrtombs**への後続の呼び出しを使用する場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用**する**必要があります。
+**Mbrtowc**関数は、再起動によって _mbtowc_l ますが[、mbtowc と](mbtowc-mbtowc-l.md)は異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**ではなく**wcsrtombs**の後続の呼び出しが使用される場合、アプリケーションでは**wcslen**ではなく**wcsrlen**を使用する必要があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -216,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344052"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916210"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapchk**は、Malloc.h で定義されている次の整数マニフェスト定数のいずれかを返します。
+**_heapchk**は、Malloc で定義されている次の整数のマニフェスト定数のいずれかを返します。
 
 |戻り値|条件|
 |-|-|
@@ -60,13 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | ヒープが初期化されていません。 |
 | **_HEAPOK** | ヒープは一貫性があると思われます。 |
 
-また、エラーが発生した場合 **、_heapchk**は**errno**を**ENOSYS**に設定します。
+さらに、エラーが発生した場合は、 **_heapchk** **errno**をに設定**します。**
 
 ## <a name="remarks"></a>解説
 
-**_heapchk**関数は、ヒープの最小限の整合性をチェックすることで、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティング システムが **_heapchk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPOK**を返し **、errno**を**ENOSYS**に設定します。
+**_Heapchk**関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、この関数は **_HEAPOK**を返し、 **errno** **をに設定**します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -121,7 +121,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapmin](heapmin.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 0c19fefcf6a766842ee2e25cbe6bdb61bbf48e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333344"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917015"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -53,7 +53,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドライブ*<br/>
+*駆動*<br/>
 現在の作業ドライブを指定する 1 ～ 26 の整数 (1 = A、2 = B など)。
 
 ## <a name="return-value"></a>戻り値
@@ -62,13 +62,13 @@ int _chdrive(
 
 ## <a name="remarks"></a>解説
 
-*ドライブ*が 1 から 26 までの範囲にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明に従って、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合 **、_chdrive**関数は -1 を返し **、errno**は**EACCES**に設定され **、_doserrno**は**ERROR_INVALID_DRIVE**に設定されます。
+*Drive*が 1 ~ 26 の範囲内にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_chdrive**関数は-1 を返し、 **errno**は**EACCES**に設定され、 **_doserrno**は**ERROR_INVALID_DRIVE**に設定されます。
 
-**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、「[を参照してください。](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)
+**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、「 [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)」を参照してください。
 
 **_chdrive** 関数は現在の作業ドライブのみを変更します。**_chdir** は現在の作業ディレクトリを変更します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

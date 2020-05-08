@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345798"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911603"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -70,29 +70,29 @@ long double frexp(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
-*エクスプトル*<br/>
+*すべての ptr*<br/>
 格納された整数の指数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**frexp は**カマシを返します。 *x*が 0 の場合、関数は仮数と指数の両方について 0 を返します。 *expptr*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し、0 を返します。
+**frexp**は仮数を返します。 *X*が0の場合、関数は仮数と指数の両方に対して0を返します。 **値が NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明され*ているよう*に、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
 ## <a name="remarks"></a>解説
 
-**frexp**関数は、浮動小数点値 (*x*) をマンティッサ (*m*) と指数 (*n*) に分解し、 *m*の絶対値が 0.5 以上で 1.0 未満 *、x* = *m* * 2<sup>*n*</sup>になります。 整数指数*n*は*expptr*が指す位置に格納されます。
+**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 未満で*x* = *m* * 2<sup>*n*</sup>よりも大きいことを示します。 整数の指数*n*は、によって示される位置に格納*されます*。
 
-C++ ではオーバーロードが可能なので **、frexp**のオーバーロードを呼び出すことができます。 C プログラムでは **、frexp**は常に**倍精度**浮動小数点型と**int**ポインターを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に**double**と**int**ポインターを受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**フレエクス ,****フラックス**,**フレックスプル**|\<math.h>|
+|**frexp**、 **frexpf**、 **frexpf**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

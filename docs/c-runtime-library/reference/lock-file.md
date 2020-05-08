@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342108"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911536"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-FILE オブジェクトをロックして **、FILE**オブジェクトに同時にアクセスするスレッドの**整合性を確保**します。
+**ファイルオブジェクト**に同時にアクセスするスレッドの一貫性を確保するために、**ファイル**オブジェクトをロックします。
 
 ## <a name="syntax"></a>構文
 
@@ -48,14 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル*<br/>
+*拡張子*<br/>
 ファイル ハンドルです。
 
 ## <a name="remarks"></a>解説
 
-**_lock_file**関数は file*で指定*された**FILE**オブジェクトをロックします。 基になるファイルは **、**_lock_file によってロックされていません。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 **_lock_file**と **_unlock_file**への呼び出しは、スレッド内で一致する必要があります。
+**_Lock_file**関数は、 *file*によって指定された**ファイル**オブジェクトをロックします。 基になるファイルが **_lock_file**によってロックされていません。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 **_Lock_file**と **_unlock_file**の呼び出しは、スレッドで一致している必要があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

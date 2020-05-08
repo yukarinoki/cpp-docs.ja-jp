@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: c20066cddb3f28d31d2964ec720b64ed49836f65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7254df673694bf4d91679f1a41837c10f61d28e2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910605"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s、_wcstombs_s_l
 
@@ -86,64 +86,64 @@ errno_t _wcstombs_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*値を返します。*<br/>
-変換された文字列のサイズ (null 終端文字を含む) です。
+*pReturnValue*<br/>
+Null 終端文字を含む、変換された文字列のサイズ (バイト単位)。
 
 *mbstr*<br/>
 結果として変換されたマルチバイト文字の文字列のバッファーのアドレス。
 
 *sizeInBytes*<br/>
-*mbstr*バッファーのサイズ (バイト単位)。
+*Mbstr*バッファーのサイズ (バイト単位)。
 
-*ウストル*<br/>
+*wcstr*<br/>
 変換するワイド文字の文字列を指します。
 
 *count*<br/>
-*mbstr*バッファーに格納する最大バイト数 (終端の NULL 文字を含まないか[、_TRUNCATE。](../../c-runtime-library/truncate.md)
+*Mbstr*バッファーに格納する最大バイト数。終端の null 文字を含めたり、 [_TRUNCATE](../../c-runtime-library/truncate.md)したりすることはできません。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-|エラー状態|戻り値と**エラーノ**|
+|エラー状態|戻り値と**errno**|
 |---------------------|------------------------------|
-|*mbstr*は**NULL**で *、サイズは 0 >バイト単位*です|**Einval**|
-|*wcstr*は**NULL です**|**Einval**|
-|変換後の文字列を格納するには、変換先のバッファが小さすぎます (*カウント*が **_TRUNCATE**場合を除き、下記の「解説」を参照してください)。|**ERANGE**|
+|*mbstr*が**NULL**で、 *sizeinbytes* > 0|**EINVAL**|
+|*wcstr*が**NULL**です|**EINVAL**|
+|コピー先のバッファーが小さすぎて、変換後の文字列を含めることができません ( *count*が **_TRUNCATE**場合を除きます。次の「解説」を参照してください)。|**ERANGE**|
 
-これらのいずれかの条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行を続行できる場合、関数はエラー コードを返し、テーブルに示されている**とおり errno**を設定します。
+これらのいずれかの条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラーコードを返し、表に示されているように**errno**を設定します。
 
 ## <a name="remarks"></a>解説
 
-**wcstombs_s**関数は *、wcstr*が指すワイド文字の文字列を *、 mbstr*が指すバッファに格納されているマルチバイト文字に変換します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
+**Wcstombs_s**関数は、 *wcstr*が指すワイド文字の文字列を*mbstr*が指すバッファーに格納されているマルチバイト文字に変換します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
 
 - ワイド文字の null が検出されました。
 
 - 変換できないワイド文字が検出されました。
 
-- *mbstr*バッファに格納されているバイト数は*カウント*に等しい。
+- *Mbstr* buffer に格納されているバイト数は*count*と等しくなります。
 
 変換後の文字列は、常に null で終わります (エラーの場合も同様)。
 
-*count*が[特殊値_TRUNCATE](../../c-runtime-library/truncate.md)場合 **、wcstombs_s**は、文字列を宛先バッファに収まる限り変換しますが、null ターミネータの空き容量は残ります。 文字列が切り捨てられると、戻り値は**STRUNCATE**になり、変換は成功したと見なされます。
+*Count*が[_TRUNCATE](../../c-runtime-library/truncate.md)特別な値の場合、 **wcstombs_s**は、null 終端文字用の空きを残したまま、コピー先のバッファーに収まる限りの文字列を変換します。 文字列が切り捨てられた場合、戻り値は**Strate**になり、変換は成功したと見なされます。
 
-**wcstombs_s**がソース文字列を正常に変換した場合、変換された文字列のサイズ (null 終端文字を含む)*を pReturnValue&#42;* *(pReturnValue*が**NULL**でない場合) に格納します。 これは *、mbstr*引数が**NULL**の場合でも発生し、必要なバッファー サイズを決定する方法を提供します。 *mbstr*が**NULL**の場合、*カウント*は無視されます。
+**Wcstombs_s**がソース文字列を正常に変換した場合は、null 終端文字を含む、変換された文字列のサイズを *&#42;preturnvalue*値 (指定された*preturnvalue* **値が null**ではない) に格納します。 これは、 *mbstr*引数が**NULL**の場合にも発生し、必要なバッファーサイズを決定する手段を提供します。 *Mbstr*が**NULL**の場合、 *count*は無視されることに注意してください。
 
-**wcstombs_s**がワイド文字をマルチバイト文字に変換できない場合は *、pReturnValue&#42;* 0 を設定し、宛先バッファを空の文字列に設定し **、errno**を EILSEQ に設定し **、EILSEQ**を返します。 **EILSEQ**
+**Wcstombs_s**がマルチバイト文字に変換できないワイド文字が検出された場合は、 *&#42;preturnvalue*に0を格納し、コピー先バッファーを空の文字列に設定して、 **errno**を**EILSEQ**に設定し、 **EILSEQ**を返します。
 
-*wcstr*と*mbstr*によって指すシーケンスが重なっている場合 **、wcstombs_s**の動作は未定義です。
+*Wcstr*と*mbstr*が指すシーケンスが重なっている場合、 **wcstombs_s**の動作は未定義です。
 
 > [!IMPORTANT]
-> *wcstr*と*mbstr*が重ならないようにし、変換するワイド文字の数*を正しく*反映していることを確認してください。
+> *Wcstr*と*mbstr*が重複しないようにし、その*カウント*に変換するワイド文字の数が正しく反映されていることを確認します。
 
-**wcstombs_s**は、ロケールに依存するすべての動作に現在のロケールを使用します。**_wcstombs_s_l**は、渡されたロケールを代わりに使用することを除けば **、wcstombs**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcstombs_s**は、ロケールに依存する動作に現在のロケールを使用します。**_wcstombs_s_l**は、渡されたロケールを代わりに使用する点を除いて、 **wcstombs**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -155,7 +155,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="example"></a>例
 
-このプログラムは **、wcstombs_s**関数の動作を示します。
+このプログラムは、 **wcstombs_s**関数の動作を示しています。
 
 ```C
 // crt_wcstombs_s.c
@@ -201,7 +201,7 @@ Convert wide-character string:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
