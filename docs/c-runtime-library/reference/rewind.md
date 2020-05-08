@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338093"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917754"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,30 +50,30 @@ void rewind(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="remarks"></a>解説
 
-**rewind**関数は、*ストリーム*に関連付けられたファイル ポインタをファイルの先頭に再配置します。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
+**Rewind**関数は、*ストリーム*に関連付けられたファイルポインターをファイルの先頭に再配置します。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
 
-**(void) fseek(** _ストリーム_**, 0L, SEEK_SET);**
+**(void) fseek (** _stream_**, 0L, SEEK_SET);**
 
-ただし[、fseek](fseek-fseeki64.md)とは異なり、**巻き戻し**はストリームのエラーインジケーターとファイルの終わりインジケーターをクリアします。 また[、fseek](fseek-fseeki64.md)とは異なり、**巻き戻し**はポインタが正常に移動されたかどうかを示す値を返しません。
+ただし、 [fseek](fseek-fseeki64.md)とは異なり、**巻き戻し**はストリームのエラーインジケーターとファイルの終端インジケーターをクリアします。 また、 [fseek](fseek-fseeki64.md)とは異なり、 **rewind**はポインターが正常に移動されたかどうかを示す値を返しません。
 
-キーボード バッファをクリアするには、デフォルトでキーボードに関連付けられているストリーム**stdin**で**巻き戻**しを使用します。
+キーボードバッファーをクリアするには、既定でキーボードに関連付けられているストリーム**stdin**で**rewind**を使用します。
 
-ストリームが**NULL**ポインターの場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は戻り **、errno**は**EINVAL**に設定されます。
+Stream が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数はを返し、 **errno**は**EINVAL**に設定されます。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**巻き戻し**|\<stdio.h>|
+|**巻き**|\<stdio.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

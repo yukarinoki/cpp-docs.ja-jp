@@ -4102,9 +4102,9 @@
                   items:
                     - name: 式の型
                       href: cpp/types-of-expressions.md
-                    - name: 一次式
+                    - name: 基本式
                       href: cpp/primary-expressions.md
-                    - name: 省略記号と可変個引数テンプレート
+                    - name: 省略記号と可変個引数のテンプレート
                       href: cpp/ellipses-and-variadic-templates.md
                     - name: 後置式
                       href: cpp/postfix-expressions.md
@@ -4247,7 +4247,7 @@
                   href: cpp/assignment.md
                 - name: 関数呼び出し
                   href: cpp/function-call-cpp.md
-                - name: 添字演算子
+                - name: '添字演算子 '
                   href: cpp/subscripting.md
                 - name: メンバー アクセス。
                   href: cpp/member-access.md

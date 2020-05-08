@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348165"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914814"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -130,21 +130,21 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
-26 文字を収納できる大きさが必要です。 文字列の結果への**ポインター。**
+*格納*<br/>
+26 文字を収納できる大きさが必要です。 文字列の結果へのポインター、または次の場合は**NULL** 。
 
-- *sourceTime*は、1970 年 1 月 1 日の午前 0 時より前の UTC 日付を表します。
+- *Sourcetime*は、1970年1月1日午前0時 (UTC) の日付を表します。
 
-- **_ctime32_s**または **_wctime32_s**を使用し *、sourceTime*が 2038 年 1 月 18 日 23:59:59 以降の日付を表す場合は UTC です。
+- **_Ctime32_s**または **_wctime32_s**を使用する場合、 *Sourcetime*は2038年1月18日23:59:59 の日付を表します。
 
-- **_ctime64_s**または **_wctime64_s**を使用し *、sourceTime*は 23:59:59、3000、UTC の 12 月 31 日以降の日付を表します。
+- **_Ctime64_s**または **_wctime64_s**を使用する場合、 *Sourcetime*は3000年12月31日23:59:59 の日付を表します。
 
-- **_ctime_s**または **_wctime_s**を使用する場合、これらの関数は前の関数のラッパーです。 「解説」を参照してください。
+- **_Ctime_s**または **_wctime_s**を使用する場合、これらの関数は、前の関数のラッパーです。 「解説」を参照してください。
 
-*要素の数*<br/>
+*numberOfElements*<br/>
 バッファーのサイズ。
 
-*ソースタイム*<br/>
+*sourceTime*<br/>
 格納されている時刻へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -153,33 +153,33 @@ errno_t _wctime64_s(
 
 ## <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*要素の数*|*ソースタイム*|戻り値|*バッファ*内の値|
+|*格納*|*numberOfElements*|*sourceTime*|戻り値|*バッファー*内の値|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|any|any|**Einval**|変更されない|
-|**NULL**でない (有効なメモリを指す)|0|any|**Einval**|変更されない|
-|**NULL**ではありません|0< サイズ < 26|any|**Einval**|空の文字列|
-|**NULL**ではありません|>= 26|NULL|**Einval**|空の文字列|
-|**NULL**ではありません|>= 26|< 0|**Einval**|空の文字列|
+|**空白**|any|any|**EINVAL**|変更されない|
+|Not **NULL** (有効なメモリを指す)|0|any|**EINVAL**|変更されない|
+|**NULL**以外|0< サイズ < 26|any|**EINVAL**|空の文字列|
+|**NULL**以外|>= 26|NULL|**EINVAL**|空の文字列|
+|**NULL**以外|>= 26|< 0|**EINVAL**|空の文字列|
 
 ## <a name="remarks"></a>解説
 
-**ctime_s**関数は[、time_t](../../c-runtime-library/standard-types.md)構造体として格納された時刻値を文字列に変換します。 *sourceTime*値は、通常、午前 0 時 (00:00:00) 1970 年 1 月 1 日の世界協定時刻 (UTC) から経過した秒数を返す[time](time-time32-time64.md)の呼び出しから取得されます。 戻り値には厳密に 26 文字が含まれ、次の形式になります。
+**Ctime_s**関数は、 [time_t](../../c-runtime-library/standard-types.md)構造体として格納されている時刻値を文字列に変換します。 *Sourcetime*値は通常、[時刻](time-time32-time64.md)の呼び出しから取得されます。この場合、午前0時 (00:00:00)、1970 1 月1日午前0時 (UTC) の時間が経過した秒数が返されます。 戻り値には厳密に 26 文字が含まれ、次の形式になります。
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字 ('\n') と null 文字 ('\0') が入ります。
 
-変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 タイム ゾーン環境とグローバル変数の定義については、ローカル時刻の構成と[_tzset](tzset.md)関数の詳細については[、「time](time-time32-time64.md) [、_ftime、](ftime-ftime32-ftime64.md)[およびlocaltime32_s](localtime-s-localtime32-s-localtime64-s.md)関数」を参照してください。
+変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 タイムゾーン環境とグローバル変数を定義する方法の詳細については、[時刻](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)、および[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)関数に関する[_tzset](tzset.md)情報を参照してください。
 
-**_wctime32_s**と **_wctime64_s**は **、_ctime32_s**と **_ctime64_s**のワイド文字バージョンです。ワイド文字列へのポインタを返します。 それ以外 **_ctime64_s、**、 **_wctime32_s**、および **_wctime64_s**は **_ctime32_s**と同じように動作します。
+**_wctime32_s**と **_wctime64_s**は **_ctime32_s**と **_ctime64_s**のワイド文字バージョンです。ワイド文字列へのポインターを返します。 それ以外の場合、 **_ctime64_s**、 **_wctime32_s**、および **_wctime64_s**は **_ctime32_s**と同じように動作します。
 
-**ctime_s**は **、_ctime64_s**に評価され **、time_t**が **__time64_t**と同等のインライン関数です。 コンパイラが古い 32 ビット**time_t**として**time_t**を解釈するようにする必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと **、ctime_s**が **_ctime32_s**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**ctime_s**は **_ctime64_s**に評価されるインライン関数であり、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これにより、 **ctime_s**が **_ctime32_s**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -193,8 +193,8 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> または \<wchar.h>|
+|**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
+|**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> または \<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

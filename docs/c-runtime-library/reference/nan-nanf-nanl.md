@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338642"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914586"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -60,19 +60,19 @@ long double nanl( const char* input );
 
 ## <a name="return-value"></a>戻り値
 
-**nan**関数は、静かな NaN 値を返します。
+**Nan**関数は、簡易な nan 値を返します。
 
 ## <a name="remarks"></a>解説
 
-**nan**関数は、静かな (非シグナルリング) NaN に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+**Nan**関数は、非表示の (非シグナル) nan に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**ナン**,**ナンフ**,**ナンル**|\<math.h>|\<cmath> または \<math.h>|
+|**nan**、 **nanf**、 **nanl**|\<math.h>|\<cmath> または \<math.h>|
 
 ## <a name="see-also"></a>関連項目
 
@@ -80,6 +80,6 @@ long double nanl( const char* input );
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
-[イシンフ](isinf.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

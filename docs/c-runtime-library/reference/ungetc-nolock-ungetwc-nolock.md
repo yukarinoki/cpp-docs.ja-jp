@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: fde5142d4c405fcf2dd61f642abe917d70b59b21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361303"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915995"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock、_ungetwc_nolock
 
@@ -64,23 +64,23 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 プッシュする文字。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数は、文字引数*c*を返します。 *c を*押し戻すことができない場合、または文字が読み取られていない場合、入力ストリームは変更されず **、_ungetc_nolock**は**EOF**を返します。**_UNGETWC_NOLOCK**は**WEOF**を返します。 *ストリーム*が**NULL**の場合は **、EOF**または**WEOF**が返され **、errno**が**EINVAL**に設定されます。
+成功した場合、これらの各関数は、文字引数*c*を返します。 *C*をプッシュバックできない場合、または文字が読み取られなかった場合は、入力ストリームは変更されず、 **_ungetc_nolock**は**EOF**を返します。**_ungetwc_nolock**は**WEOF**を返します。 *Stream*が**NULL**の場合、 **EOF**または**WEOF**が返され、 **errno**が**EINVAL**に設定されます。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は **、unetc**と**ungetwc**の非ロックバージョンです。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、 **ungetc**および**ungetwc**のロックされていないバージョンです。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

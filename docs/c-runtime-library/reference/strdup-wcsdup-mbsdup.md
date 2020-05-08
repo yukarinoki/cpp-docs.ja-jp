@@ -20,7 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 7ad28633844c49ce5b86c8f71f4502c62eba1216
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359689"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914468"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 文字列を複製します。
 
 > [!IMPORTANT]
-> **_mbsdup**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリではサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsdup**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -78,20 +78,20 @@ unsigned char *_mbsdup(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストソース*<br/>
+*strSource*<br/>
 NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、コピーされた文字列の格納場所へのポインターを**返します。**
+これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は**NULL**を返します。
 
 ## <a name="remarks"></a>解説
 
-**_strdup**関数は[、malloc](malloc.md)を呼び出して*strSource*のコピーの格納領域を割り当て、割り当てられた領域に*strSource*をコピーします。
+**_Strdup**関数は、 [malloc](malloc.md)を呼び出して、 *strsource*のコピーにストレージ領域を割り当ててから、 *strsource*を割り当てられた領域にコピーします。
 
-**_wcsdup**と **_mbsdup**は、ワイド文字とマルチバイト文字の _strdup のバージョン**です**。 **_wcsdup**の引数と戻り値はワイド文字列です。**_mbsdup**の文字列はマルチバイト文字です。 それ以外では、これらの関数の動作は同じです。
+**_wcsdup**と **_mbsdup**は **_strdup**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsdup**の引数と戻り値はワイド文字列です。これらの **_mbsdup**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -99,9 +99,9 @@ NULL で終わる元の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-**_strdup**は*strSource*のコピー用に格納領域を割り当てる**malloc**を呼び出すため **、_strdup**の呼び出しによって返されるポインターに対して[free](free.md)ルーチンを呼び出して、常にこのメモリを解放することをお勧めします。
+**_Strdup**は**malloc**を呼び出して*strsource*のコピーにストレージ領域を割り当てます。そのため、 **_strdup**への呼び出しによって返されたポインターに対して[フリー](free.md)ルーチンを呼び出すことによって、常にこのメモリを解放することをお勧めします。
 
-**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合 **、_strdup**と **_wcsdup**は、メモリ割り当てのデバッグを可能にする **_strdup_dbg**および **_wcsdup_dbg**の呼び出しによって置き換えられます。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
+**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_strdup**と **_wcsdup**は、メモリ割り当てのデバッグを可能にするために **_strdup_dbg**と **_wcsdup_dbg**の呼び出しに置き換えられます。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 

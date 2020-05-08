@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917834"
 ---
 # <a name="remove-_wremove"></a>remove、_wremove
 
@@ -65,27 +65,27 @@ int _wremove(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 それ以外の場合は-1 を返し **、errno**を**EACCES**に設定して、パスが読み取り専用ファイルを指定していること、ディレクトリーを指定するか、ファイルがオープン状態であることを示すか、ENOENT に設定してファイル名またはパスが見つからなかったことを示します。 **ENOENT**
+ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 それ以外の場合は、-1 を返し、 **errno**を**EACCES**に設定して、パスが読み取り専用ファイルを指定しているか、ディレクトリを指定しているか、ファイルが開いていることを示します。または、ファイル名またはパスが見つからなかったことを示すために**ENOENT**を設定します。
 
-これらの戻りコードおよびその他の戻りコードの詳細については[、_doserrno、errno、_sys_errlist、および_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)を参照してください。
+これらのリターンコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**はワイド文字の **_remove**です。**_wremove**への*パス*引数はワイド文字ストリングです。 **_wremove**と **_remove**は、そうでなければ同じように動作します。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
+**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**は **_remove**のワイド文字バージョンです。**_wremove**の*パス*引数は、ワイド文字列です。 **_wremove**と **_remove**は同じように動作します。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**削除**|**削除**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**削除**|\<stdio.h> または \<io.h>|
+|**remove**|\<stdio.h> または \<io.h>|
 |**_wremove**|\<stdio.h> または \<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。

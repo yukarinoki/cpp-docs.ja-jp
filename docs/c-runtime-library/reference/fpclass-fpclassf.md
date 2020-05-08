@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346283"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914848"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -60,21 +60,21 @@ int _fpclassf(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 テストする浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**_fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点の分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
+**_Fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|シグナル型 NaN|
 |**_FPCLASS_QNAN**|クワイエット型 NaN|
-|**_FPCLASS_NINF**|負の無限大 ( -INF)|
+|**_FPCLASS_NINF**|負の無限大 (-INF)|
 |**_FPCLASS_NN**|正規化された負の 0 以外の値|
 |**_FPCLASS_ND**|正規化されない負の値|
-|**_FPCLASS_NZ**|負のゼロ ( - 0)|
+|**_FPCLASS_NZ**|負のゼロ (-0)|
 |**_FPCLASS_PZ**|正のゼロ (+0)|
 |**_FPCLASS_PD**|正規化された正の値|
 |**_FPCLASS_PN**|正規化された正の 0 以外の値|
@@ -82,15 +82,15 @@ int _fpclassf(
 
 ## <a name="remarks"></a>解説
 
-**_fpclass**および **_fpclassf**機能は、マイクロソフト固有のものです。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
+**_Fpclass**関数と **_fpclassf**関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
-|**_fpclass**, **_fpclassf**|\<float.h>|
+|**_fpclass**、 **_fpclassf**|\<float.h>|
 
 互換性と適合性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

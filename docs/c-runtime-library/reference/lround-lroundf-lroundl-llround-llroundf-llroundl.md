@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341632"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911360"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -94,28 +94,28 @@ long long llroundl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**lround**関数と**lround**関数は *、x*に最も近い**長整数**または**長整数****long**を返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Lround**関数と**llround**関数では、最も近い**long**型または**long** **型の整数が** *x*に返されます。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN,IND** **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため、**浮動小数点**値と**長倍****double**精度浮動小数点値を取得して返す**lround**または**lround**のオーバーロードを呼び出すことができます。 Cプログラムでは **、lround**と**lroundは**常に**二重**を取り、返します。
+C++ ではオーバーロードが可能であるため、**浮動小数**点と**long** **double**型の値を受け取って返す**lround**または**llround**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lround**と**llround**は常に**double**を取得して返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**ラウンド**,**ラウンドフ**,**ラウンドル**,**ラウンド**, **llroundf**, **llroundl**|\<math.h>|
+|**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,6 +1,6 @@
 ---
 title: getenv_s, _wgetenv_s
-description: Microsoft C ランタイム ライブラリgetenv_sと_wgetenv_s関数について説明します。
+description: Microsoft C ランタイムライブラリgetenv_sと_wgetenv_s関数について説明します。
 ms.date: 4/2/2020
 api_name:
 - getenv_s
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +53,12 @@ no-loc:
 - _tzset
 - _dupenv_s
 - _wdupenv_s
-ms.openlocfilehash: 17c4e001f7f4637f6f66f218c94378368976901f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0713ed5735916c31edaab1a178a5e9b1b7cf5377
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344273"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913680"
 ---
 # <a name="getenv_s-_wgetenv_s"></a>getenv_s、_wgetenv_s
 
@@ -98,16 +98,16 @@ errno_t _wgetenv_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*値を返します。*<br/>
+*pReturnValue*<br/>
 必要なバッファー サイズ。変数が見つからない場合は 0。
 
-*バッファー*<br/>
+*格納*<br/>
 環境変数の値を格納するバッファー。
 
-*要素の数*<br/>
-*バッファ*のサイズ :
+*numberOfElements*<br/>
+*バッファー*のサイズ。
 
-*ヴァルネーム*<br/>
+*varname*<br/>
 環境変数名。
 
 ## <a name="return-value"></a>戻り値
@@ -116,37 +116,37 @@ errno_t _wgetenv_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*値を返します。*|*バッファー*|*要素の数*|*ヴァルネーム*|戻り値|
+|*pReturnValue*|*格納*|*numberOfElements*|*varname*|戻り値|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**NULL**|any|any|any|**Einval**|
-|any|**NULL**|>0|any|**Einval**|
-|any|any|any|**NULL**|**Einval**|
+|**空白**|any|any|any|**EINVAL**|
+|any|**空白**|>0|any|**EINVAL**|
+|any|any|any|**空白**|**EINVAL**|
 
-これらのいずれかのエラー条件の場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」(パラメーターの検証) で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+これらのいずれかのエラー条件の場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」(パラメーターの検証) で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-また、バッファが小さすぎる場合、これらの関数は**ERANGE**を返します。 無効なパラメーター ハンドラーは呼び出されません。 必要なバッファ サイズを*pReturnValue*に書き出し、それによって、より大きなバッファを使用してプログラムが関数を再度呼び出すことを可能にします。
+また、バッファーが小さすぎる場合、これらの関数は**ERANGE**を返します。 無効なパラメーター ハンドラーは呼び出されません。 これらは、必要なバッファーサイズを*Preturnvalue*値として書き込みます。これにより、プログラムはより大きなバッファーを使用して関数を再度呼び出すことができます。
 
 ## <a name="remarks"></a>解説
 
-**getenv_s**関数は環境変数のリストから*varname*を検索します。 **getenv_s**は、Windows オペレーティング システムでは大文字と小文字が区別されません。 **getenv_s**と[_putenv_s](putenv-s-wputenv-s.md)は、環境にアクセスするために、グローバル変数 **_environ**によって指されている環境のコピーを使用します。 **getenv_s**は、ランタイム ライブラリにアクセスできるデータ構造に対してのみ動作し、オペレーティング システムによってプロセス用に作成された環境 "セグメント" では動作しません。 したがって[、main](../../cpp/main-function-command-line-args.md)または[wmain](../../cpp/main-function-command-line-args.md)に対して*envp*引数を使用するプログラムは、無効な情報を取得する可能性があります。
+**Getenv_s**関数は、変数*varname*の環境変数の一覧を検索します。 Windows オペレーティングシステムでは、 **getenv_s**の大文字と小文字は区別されません。 **getenv_s**と[_putenv_s](putenv-s-wputenv-s.md)は、グローバル変数 **_environ**が指す環境のコピーを使用して環境にアクセスします。 **getenv_s**は、ランタイムライブラリからアクセスできるデータ構造体でのみ動作し、オペレーティングシステムによってプロセス用に作成された環境 "セグメント" では動作しません。 そのため、 [main](../../cpp/main-function-command-line-args.md)または[wmain](../../cpp/main-function-command-line-args.md)に対して*envp*引数を使用するプログラムは、無効な情報を取得する可能性があります。
 
-**_wgetenv_s**はワイド文字の**getenv_s**です。_wgetenv_sの引数と戻り**値はワイド**文字列です。 **_wenviron**グローバル変数は、 _environ のワイド文字バージョン**です**。
+**_wgetenv_s**は**getenv_s**のワイド文字バージョンです。**_wgetenv_s**の引数と戻り値はワイド文字列です。 **_Wenviron**グローバル変数は、 **_environ**のワイド文字バージョンです。
 
-MBCS プログラム (例えば、SBCS ASCII プログラム) では、環境がマルチバイト文字ストリングで構成されているため **、_wenviron**は最初は**NULL**です。 次に[、_wputenv](putenv-wputenv.md)への最初の呼び出し、または **_wgetenv_s**への最初の呼び出しで 、(MBCS) 環境が既に存在する場合は、対応するワイド文字ストリング環境が作成され **、_wenviron**が指す。
+MBCS プログラム (SBCS ASCII プログラムなど) では、環境がマルチバイト文字列で構成されているため、 **_wenviron**は最初は**NULL**になります。 次に、 [_wputenv](putenv-wputenv.md)への最初の呼び出しで、または (MBCS) 環境が既に存在する場合 **_wgetenv_s**は、対応するワイド文字の文字列環境が作成され、その後 **_wenviron**によって参照されます。
 
-同様に、Unicode (**_wmain**) プログラムでは、環境がワイド文字ストリングで構成されているため **、_environ**は最初は**NULL**です。 次に[、_putenv](putenv-wputenv.md)への最初の呼び出しで、または (Unicode) 環境が既に存在する場合に**getenv_s**する最初の呼び出しで、対応する MBCS 環境が作成され **、_environ**によってポイントされます。
+同様に、Unicode (**_wmain**) プログラムでは、環境がワイド文字列で構成されているため、 **_environ**は最初は**NULL**になります。 次に、 [_putenv](putenv-wputenv.md)を最初に呼び出すとき、または (Unicode) 環境が既に存在する場合に**getenv_s**を初めて呼び出すときに、対応する MBCS 環境が作成され、その後 **_environ**によって参照されます。
 
-2 つの環境のコピー (MBCS および Unicode) がプログラムに同時に存在する場合、ランタイム システムは、両方のコピーを保持する必要があるため、実行時間が長くなります。 たとえば、 **_putenv**呼び出すと **、_wputenv**の呼び出しも自動的に実行され、2 つの環境文字列が対応します。
+2 つの環境のコピー (MBCS および Unicode) がプログラムに同時に存在する場合、ランタイム システムは、両方のコピーを保持する必要があるため、実行時間が長くなります。 たとえば、 **_putenv**を呼び出すと、2つの環境文字列が対応するように、 **_wputenv**の呼び出しも自動的に実行されます。
 
 > [!CAUTION]
 > まれに、ランタイム システムが Unicode 環境とマルチバイト環境の両方を保持している場合、これら 2 つの環境が正確に対応しないことがあります。 これは、一意のマルチバイト文字列はすべて一意の Unicode 文字列に対応していますが、一意の Unicode 文字列は必ずしも一意のマルチバイト文字列に対応していないために発生します。 詳細については、「[_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)」をご覧ください。
 
 > [!NOTE]
-> **_putenv_s**と **_getenv_s**関数ファミリはスレッドセーフではありません。 **_getenv_s**文字列を変更しているときに文字列ポインタを返 **_putenv_s、** ランダムなエラーを引き起こす可能性があります。 これらの関数の呼び出しが同期されていることを確認する必要があります。
+> 関数の **_putenv_s**および **_getenv_s**ファミリは、スレッドセーフではありません。 **_getenv_s**が文字列を変更して **_putenv_s**いるときに文字列ポインターを返すことがあり、その結果、ランダムにエラーが発生する可能性があります。 これらの関数の呼び出しが同期されていることを確認する必要があります。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -154,7 +154,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-**TZ**環境変数の値を確認または変更するには、必要に応**じて**getenv_s **、_putenv、****および _tzset**を使用します。 **TZ**の詳細については[、「_tzset](tzset.md)と[_daylight、_dstbias、_timezone、および _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)」を参照してください。
+**TZ**環境変数の値を確認または変更するには、必要に応じて**getenv_s**、 **_putenv**、および **_tzset**を使用します。 **TZ**の詳細については、「 [_tzset](tzset.md)と[_daylight、_dstbias、_timezone、および _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
