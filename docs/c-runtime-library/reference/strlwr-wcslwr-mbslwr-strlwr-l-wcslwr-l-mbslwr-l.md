@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -67,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 40bf64af8284d84c6e58bcb3e8591a1ef6fc9f48
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363814"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919943"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 
 文字列を小文字に変換します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
-> **_mbslwr**と **_mbslwr_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbslwr**と **_mbslwr_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -136,10 +136,10 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 小文字に変換する、NULL で終わる文字列。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -148,15 +148,15 @@ unsigned char *_mbslwr_l(
 
 ## <a name="remarks"></a>解説
 
-**_strlwr**関数は、ロケールの**LC_CTYPE**カテゴリ設定で決定される *、str*内の大文字を小文字に変換します。 他の文字は影響を受けません。 **LC_CTYPE**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l**サフィックスを持たないこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールが使用されます。**_l**サフィックスを持つバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Strlwr**関数は、ロケールの**LC_CTYPE**カテゴリの設定によって決定されるように、 *str*内の大文字を小文字に変換します。 他の文字は影響を受けません。 **LC_CTYPE**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**_wcslwr**関数と **_mbslwr**関数は、ワイド文字およびマルチバイト文字の _strlwr のバージョン**です**。 **_wcslwr**の引数と戻り値はワイド文字列です。**_mbslwr**の文字列はマルチバイト文字です。 それ以外では、これらの関数の動作は同じです。
+**_Wcslwr**関数と **_mbslwr**関数は **_strlwr**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcslwr**の引数と戻り値はワイド文字列です。これらの **_mbslwr**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-*str*が**NULL**ポインターの場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は元の文字列を返し **、errno**を**EINVAL**に設定します。
+*Str*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は元の文字列を返し、 **errno**を**EINVAL**に設定します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -169,9 +169,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_strlwr**, **_strlwr_l**|\<string.h>|
-|**_wcslwr**, **_wcslwr_l**|\<string.h> または \<wchar.h>|
-|**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
+|**_strlwr**、 **_strlwr_l**|\<string.h>|
+|**_wcslwr**、 **_wcslwr_l**|\<string.h> または \<wchar.h>|
+|**_mbslwr**、 **_mbslwr_l**|\<mbstring.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -214,5 +214,5 @@ Upper: THE STRING TO END ALL STRINGS!
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

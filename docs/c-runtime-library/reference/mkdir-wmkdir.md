@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919144"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
@@ -64,26 +64,26 @@ int _wmkdir(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dirname*<br/>
+*dirname*<br/>
 新しいディレクトリのパス。
 
 ## <a name="return-value"></a>戻り値
 
-新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーの場合、関数は -1 を返し **、errno**を次のように設定します。
+新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーが発生した場合、この関数は-1 を返し、 **errno**を次のように設定します。
 
 **Eexist***Dirname*が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
 
-**エノエント**パスが見つかりませんでした。
+**ENOENT**パスが見つかりませんでした。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成*します。* **_mkdir**呼び出しごとに新しいディレクトリを 1 つだけ作成できるため *、dirname*の最後のコンポーネントだけが新しいディレクトリに名前を付けることができます。 **_mkdir**はパス区切り文字を変換しません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
+**_Mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成し*ます。* **_mkdir**は呼び出しごとに1つの新しいディレクトリを作成できます。そのため、 *dirname*の最後のコンポーネントのみが新しいディレクトリに名前を指定できます。 **_mkdir**はパス区切り記号を変換しません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
 
-**_wmkdir**は **_mkdir**のワイド文字バージョンです。**_wmkdir**の*dirname*引数はワイド文字列です。 **_wmkdir**と **_mkdir**は同じように動作します。
+**_wmkdir**は **_mkdir**のワイド文字バージョンです。**_wmkdir**の*dirname*引数は、ワイド文字列です。 **_wmkdir**と **_mkdir**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

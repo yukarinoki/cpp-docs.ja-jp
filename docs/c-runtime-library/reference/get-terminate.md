@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344931"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920409"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-**terminate**によって呼び出される終了ルーチンを返します。
+**Terminate**によって呼び出される終了ルーチンを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>戻り値
 
-[set_terminate](set-terminate-crt.md) で登録されている関数へのポインターを返します。 関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は**NULL の**場合があります。
+[set_terminate](set-terminate-crt.md) で登録されている関数へのポインターを返します。 関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は**NULL**でもかまいません。
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -66,7 +66,7 @@ terminate_function _get_terminate( void );
 ## <a name="see-also"></a>関連項目
 
 [例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)<br/>
-[中止](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[終了](terminate-crt.md)<br/>
-[予期 しない](unexpected-crt.md)<br/>
+[解約](terminate-crt.md)<br/>
+[不適切](unexpected-crt.md)<br/>

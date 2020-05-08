@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338534"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919330"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -59,34 +59,34 @@ void _wperror(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*message*<br/>
 印刷する文字列メッセージ。
 
 ## <a name="remarks"></a>解説
 
-**perror**関数は、エラー メッセージを**stderr**に出力します。 **_wperror**はワイド文字の **_perror**です。**_wperror**する*メッセージ*引数はワイド文字ストリングです。 **_wperror**と **_perror**は、そうでなければ同じように動作します。
+エラーメッセージは、 **stderr**関数によって stderr に出力**されます**。 **_wperror**は **_perror**のワイド文字バージョンです。**_wperror**の*メッセージ*引数は、ワイド文字列です。 **_wperror**と **_perror**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror**|**Perror**|**Perror**|**_wperror**|
+|**_tperror**|**perror**|**perror**|**_wperror**|
 
-*メッセージ*は最初に印刷され、次にコロンが続き、エラーを生成した最後のライブラリー呼び出しに対するシステム・エラー・メッセージが続き、最後に改行文字が出力されます。 *message*が null ポインターまたは null 文字列へのポインターの場合 **、perror**はシステム エラー メッセージのみを出力します。
+*メッセージ*は最初に出力され、その後にコロン、次にエラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、最後に改行文字が出力されます。 *Message*が null ポインターまたは null 文字列へのポインターである場合、システムエラーメッセージのみ**が出力さ**れます。
 
-エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **perror は****、errno**値を **_sys_errlist**するインデックスとして使用して、適切なエラー メッセージを出力します。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は **、_sys_errlist**配列内の要素の最大数として定義されます。
+エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 このエラーメッセージは、 **_sys_errlist**のインデックスとして**errno**値を使用し**て出力さ**れます。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は、 **_sys_errlist**配列内の要素の最大数として定義されます。
 
-正確な結果を得るには、ライブラリ ルーチンがエラーで戻った直後に**perror**を呼び出します。 それ以外の場合、後続の呼び出しは**errno**値を上書きできます。
+正確な結果を得るには、ライブラリルーチンからエラーが返された直後に、エラーメッセージ**を呼び出します**。 それ以外の場合、後続の呼び出しで**errno**値が上書きされる可能性があります。
 
-Windows オペレーティング システムでは **、ERRNO**に一覧表示されているエラー値があります。H は未使用です。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティング・システムで使用される errno 値のリストについては[、_doserrno、errno、_sys_errlist、および_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)を参照してください。 **errno** **perror**は、これらのプラットフォームで使用されていない**errno**値の空の文字列を出力します。
+Windows オペレーティングシステムでは **、errno に列挙値が**表示されます。H は使用されていません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティングシステムで使用される**errno**値の一覧については[、「_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。 は、これらのプラットフォームで使用されていない**errno**値に対して空の文字列**を出力し**ます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**Perror**|\<stdio.h> または \<stdlib.h>|
+|**perror**|\<stdio.h> または \<stdlib.h>|
 |**_wperror**|\<stdio.h> または \<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
@@ -148,4 +148,4 @@ _strerror says open failed: No such file or directory
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[str エラー、_strerror、_wcserror、_wcserror \_](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror、_strerror、_wcserror、 \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

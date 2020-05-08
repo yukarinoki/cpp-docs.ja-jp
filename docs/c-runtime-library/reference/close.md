@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348641"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919850"
 ---
 # <a name="_close"></a>_close
 
@@ -49,22 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>パラメーター
 
-*Fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**_close**ファイルが正常に閉じられた場合は 0 を返します。 戻り値 -1 はエラーを示します。
+ファイルが正常に閉じられた場合、 **_close**は0を返します。 戻り値-1 はエラーを示します。
 
 ## <a name="remarks"></a>解説
 
-**_close**関数は *、fd*に関連付けられたファイルを閉じます。
+**_Close**関数は、 *fd*に関連付けられているファイルを閉じます。
 
-ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがって、ファイルが最初に Win32 関数**CreateFile**を使用して開かれ **、_open_osfhandle**を使用してファイル記述子に変換された場合は **、CloseHandle**を呼び出す必要はありません。
+ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがって、ファイルが最初に Win32 関数**CreateFile**を使用して開かれ、 **_open_osfhandle**を使用してファイル記述子に変換された場合、 **CloseHandle**を呼び出す必要はありません。
 
-この関数は、パラメーターを検証します。 *fd*が不正なファイル記述子である場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は -1 を返し **、errno**は**EBADF**に設定されます。
+この関数は、パラメーターを検証します。 *Fd*が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**は**EBADF**に設定されます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -13,7 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 585608b4d3dce723c0ea3a82e1c52325a0f6b7e6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918105"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-*x* / と y がスタックの一番上の値である*x* *y*のアークタンジェントを計算します。 *y*
+*X* / *y*のアークタンジェントを計算します。 *x*と*y*は、スタックの一番上の値です。
 
 ## <a name="syntax"></a>構文
 
@@ -48,7 +48,7 @@ void __cdecl _CIatan2();
 
 結果の値は、スタックのトップにプッシュされます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

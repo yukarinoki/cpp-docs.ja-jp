@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350052"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917209"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -49,20 +49,20 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-**FILE**構造体へのポインター
+*一連*<br/>
+**ファイル**構造へのポインター
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は 0。*ストリーム*が**NULL**の場合は**EINVAL** 。
+成功した場合は0。*Stream*が**NULL**の場合は、 **EINVAL** 。
 
 ## <a name="remarks"></a>解説
 
-**clearerr_s**関数は *、stream*のエラーインジケーターとファイル終了インジケーターをリセットします。 エラー インジケータは自動的にクリアされません。指定されたストリームにエラー インジケータが設定されると、そのストリームに対する操作は **、clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻](rewind.md)しが呼び出されるまで、引き続きエラー値を返します。
+**Clearerr_s**関数は、*ストリーム*のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出されるまでエラー値を返し続けます。
 
-*stream*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+*Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

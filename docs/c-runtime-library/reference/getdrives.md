@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344290"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913748"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -51,11 +51,11 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は、現在使用できるディスク ドライブを表すビットマスクです。 ビット位置 0 (最下位ビット) はドライブ A、ビット位置 1 はドライブ B、ビット位置 2 は C ドライブです (以下同様)。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには **、GetLastError**を呼び出します。
+関数が成功した場合、戻り値は、現在使用できるディスク ドライブを表すビットマスクです。 ビット位置 0 (最下位ビット) はドライブ A、ビット位置 1 はドライブ B、ビット位置 2 は C ドライブです (以下同様)。 関数が失敗した場合は、0 を返します。 エラーの詳細情報を取得するには、 **GetLastError**を呼び出します。
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

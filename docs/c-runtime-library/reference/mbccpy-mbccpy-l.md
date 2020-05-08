@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341261"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919579"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
@@ -76,20 +76,20 @@ void _mbccpy_l(
 *src*<br/>
 コピーするマルチバイト文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="remarks"></a>解説
 
-**_mbccpy**関数は、1 つのマルチバイト文字を*src*から*dest*にコピーします。
+**_Mbccpy**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。
 
-この関数は、パラメーターを検証します。 **_mbccpy** *dest*または*src*に対して null ポインターが渡された場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定されます。
+この関数は、パラメーターを検証します。 **_Mbccpy**に*dest*または*src*の null ポインターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定されます。
 
-**_mbccpy**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**は **_mbccpy**と同じですが **、_mbccpy_l**はロケールに依存する動作に渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbccpy**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**は **_mbccpy**と同じですが、 **_mbccpy_l**はロケールに依存する動作に渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **セキュリティに関するメモ** null で終わる文字列を使用してください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -109,6 +109,6 @@ void _mbccpy_l(
 
 ## <a name="see-also"></a>関連項目
 
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

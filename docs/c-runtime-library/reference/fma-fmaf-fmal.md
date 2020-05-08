@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346567"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914950"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -84,13 +84,13 @@ long double fmal(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 乗算する 1 番目の値。
 
-*Y*<br/>
+*前年*<br/>
 乗算する 2 番目の値。
 
-*Z*<br/>
+*方向*<br/>
 加算する値。
 
 ## <a name="return-value"></a>戻り値
@@ -101,28 +101,28 @@ long double fmal(
 
 |問題|戻り値|
 |-----------|------------|
-|*x* = 無限大 *、y* = 0 または<br /><br /> *x* = 0、 *y* = 無限大|(NaN)|
-|*x*または*y* = 正確な ± INFINITY、 *z* = 反対の符号を持つ INFINITY|(NaN)|
+|*x* = 無限大、 *y* = 0 または<br /><br /> *x* = 0、 *y* = 無限大|(NaN)|
+|*x*または*y* = 正確な±無限大、 *z* = 無限大と逆の符号|(NaN)|
 |*x*または*y* = NaN|(NaN)|
-|ない *(x* = *0、y*= 無期限) および*z* = NaN<br /><br /> ない (*x*= 無期限、 *y*= 0) および*z* = NaN|(NaN)|
-|オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、±HUGE_VALL|
+|not (*x* = 0、 *y*= 不定)、 *z* = NaN<br /><br /> not (*x*= 不定, *y*= 0) および*z* = NaN|(NaN)|
+|オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型と**長い****ダブル**型を受け取り、戻す**fma**のオーバーロードを呼び出すことができます。 C プログラムでは **、fma**は常に二**重**を取り、返します。
+C++ ではオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**fma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fma**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 この関数は、値を無限の精度とするかのように計算し、最終的な結果を丸めます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**,**フマル**|\<math.h>|\<cmath>|
+|**fma**、 **fmaf**、 **fマル**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

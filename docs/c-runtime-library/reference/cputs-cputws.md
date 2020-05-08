@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348379"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917602"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
@@ -63,20 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 出力する文字列。
 
 ## <a name="return-value"></a>戻り値
 
-成功すると **、_cputs**は 0 を返します。 関数が失敗した場合は 0 以外の値を返します。
+成功した場合、 **_cputs**は0を返します。 関数が失敗した場合は 0 以外の値を返します。
 
 ## <a name="remarks"></a>解説
 
-**_cputs**関数は *、str*が指す null で終わる文字列をコンソールに直接書き込みます。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
+**_Cputs**関数は、 *str*が指す null で終わる文字列をコンソールに直接書き込みます。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
 
-この関数は、そのパラメーターを検証します。 *str*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、-1 が戻されます。
+この関数は、そのパラメーターを検証します。 *Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、-1 が返されます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

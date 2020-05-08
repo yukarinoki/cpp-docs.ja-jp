@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: e424ffe3f113e50e318d9198bd5f06aaec96852a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347292"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920149"
 ---
 # <a name="ferror"></a>ferror
 
@@ -49,24 +49,24 @@ int ferror(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-*ストリーム*でエラーが発生しなかった場合は **、ferror は**0 を返します。 それ以外の場合は、0 以外の値を返します。 stream が**NULL**の場合は **、ferror**は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し、0 を返します。
+*ストリーム*でエラーが発生しなかった場合、 **ferror**は0を返します。 それ以外の場合は、0 以外の値を返します。 Stream が**NULL**の場合、 **ferror**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**ferror**ルーチン (関数とマクロの両方として実装) は *、stream*に関連付けられたファイルの読み取りエラーまたは書き込みエラーをテストします。 エラーが発生した場合、ストリームのエラーインジケータは、ストリームが閉じられるか巻き戻されるまで、または**clearerr**が呼び出されるまで設定されたままになります。
+**Ferror**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*に関連付けられているファイルに対して読み取りまたは書き込みエラーが発生したかどうかをテストします。 エラーが発生した場合、ストリームが閉じられるか巻き戻されるか、またはそのストリームに対して**clearerr**が呼び出されるまで、ストリームのエラーインジケーターが設定されたままになります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 

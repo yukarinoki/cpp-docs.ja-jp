@@ -1,6 +1,6 @@
 ---
 title: _popen, _wpopen
-description: Microsoft C ランタイム (CRT) ライブラリ関数_popenと_wpopen.
+description: Microsoft C ランタイム (CRT) ライブラリ関数_popenおよび_wpopenのリファレンスです。
 ms.date: 4/2/2020
 api_name:
 - _popen
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338512"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915287"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -78,35 +78,35 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>パラメーター
 
-*コマンド*\
+*メニュー*\
 実行するコマンド。
 
-*モード*\
+*mode*\
 返されるストリームのモード。
 
 ## <a name="return-value"></a>戻り値
 
-作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 エラーが無効なパラメーターによって発生した場合 **、errno**は**EINVAL**に設定されます。 有効なモードについては、「解説」を参照してください。
+作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 エラーが無効なパラメーターによって発生した場合、 **errno**は**EINVAL**に設定されます。 有効なモードについては、「解説」を参照してください。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_popen**関数は、パイプを作成します。 次に、コマンド プロセッサの生成されたコピーを非同期に実行し、*コマンドをコマンド*ラインとして使用します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
+**_Popen**関数は、パイプを作成します。 次に、コマンドプロセッサの生成されたコピーを非同期に実行し、コマンドラインとして*コマンド*を使用します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
 
 |アクセス モード|説明|
 |-|-|
-|**"r"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準出力を読み取ることができます。|
-|**"w"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準入力に書き込むことができます。|
-|**"b"**|バイナリ モードで開きます。|
-|**"t"**|テキスト モードで開きます。|
+|**\r\n\r\n**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準出力を読み取ることができます。|
+|**リダイレクト**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準入力に書き込むことができます。|
+|**b**|バイナリ モードで開きます。|
+|**\t**|テキスト モードで開きます。|
 
 > [!NOTE]
-> Windows プログラムで使用すると **、_popen**関数は無効なファイル ポインタを返します。 **_popen**は、コンソール アプリケーションで正しく動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するには、Windows SDK で[リダイレクトされた入力と出力を使用した子プロセスの作成](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)を参照してください。
+> Windows プログラムで使用する場合、 **_popen**関数は、プログラムが無期限に応答を停止する無効なファイルポインターを返します。 **_popen**は、コンソールアプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するには、「Windows SDK にリダイレクトされた[入力と出力を持つ子プロセスの作成](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)」を参照してください。
 
-**_wpopen**はワイド文字の **_popen**です。**_wpopen**への*パス*引数はワイド文字ストリングです。 **_wpopen**と **_popen**は同じように動作します。
+**_wpopen**は **_popen**のワイド文字バージョンです。**_wpopen**の*パス*引数は、ワイド文字列です。 **_wpopen**と **_popen**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -171,7 +171,7 @@ int main( void )
 }
 ```
 
-この出力では、現在のディレクトリにファイル名拡張子を持つ`.c`ファイルが 1 つだけ存在することを前提としています。
+この出力では、ファイル名拡張子を`.c`持つファイルが現在のディレクトリに1つだけ存在することを前提としています。
 
 ```Output
 Volume in drive C is CDRIVE

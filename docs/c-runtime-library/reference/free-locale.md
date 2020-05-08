@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346053"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920435"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -52,16 +52,16 @@ void _free_locale(
 
 ### <a name="parameters"></a>パラメーター
 
-*ロケール*<br/>
+*locale*<br/>
 解放するロケール オブジェクト。
 
 ## <a name="remarks"></a>解説
 
-**_free_locale**関数は **、_get_current_locale**または **_create_locale**の呼び出しから取得したロケール オブジェクトを解放するために使用されます。
+**_Free_locale**関数は、 **_get_current_locale**または **_create_locale**の呼び出しから取得したロケールオブジェクトを解放するために使用されます。
 
-この関数の以前の名前**は、__free_locale** (先頭に 2 つのアンダースコアを付けた) は非推奨になりました。
+この関数の以前の名前 (2 つの先頭のアンダースコア) は非推奨となりました。 **__free_locale** 。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

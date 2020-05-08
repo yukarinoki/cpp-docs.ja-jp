@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 1e54d3dbdc837c491f5b39d33a9b8197094ac60b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec21e4967d123c988886fa2e6ab996aad83ef206
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344862"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919666"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
-**_wpgmptr**グローバル変数の現在の値を取得します。
+**_Wpgmptr**グローバル変数の現在の値を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,17 +52,17 @@ errno_t _get_wpgmptr(
 ### <a name="parameters"></a>パラメーター
 
 *pValue*<br/>
-**_wpgmptr**変数の現在の値を格納する文字列へのポインター。
+**_Wpgmptr**変数の現在の値を格納する文字列へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *pValue*が**NULL**の場合は、「パラメータ[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *PValue*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>解説
 
-プログラムに**wmain() や wWinMain()** などの幅の**wWinMain()** 広いエントリポイントがある場合にのみ **、_get_wpgmptr**を呼び出します。 **_wpgmptr**グローバル変数には、ワイド文字ストリングとしてプロセスに関連付けられた実行可能ファイルへの完全パスが含まれます。 詳細については、「[_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)」をご覧ください。
+プログラムに**wmain ()** や**wmain ()** などのワイドエントリポイントがある場合にのみ、 **_get_wpgmptr**を呼び出します。 **_Wpgmptr**グローバル変数には、プロセスに関連付けられている実行可能ファイルへの完全パスがワイド文字列として含まれています。 詳細については、「[_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

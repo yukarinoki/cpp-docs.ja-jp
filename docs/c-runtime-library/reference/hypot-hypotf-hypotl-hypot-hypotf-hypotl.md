@@ -23,7 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919841"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -86,28 +86,28 @@ long double _hypotl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*, *y*<br/>
+*x*、 *y*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、**仮説**は斜辺の長さを返します。オーバーフローの場合、**仮説は**INF (無限大) を返し **、errno**変数は**ERANGE**に設定されます。 **_matherr**を使用して、エラー処理を変更できます。
+成功した場合、 **hypot**は斜辺の長さを返します。オーバーフローの場合、 **hypot**は INF (無限大) を返し、 **Errno**変数は**ERANGE**に設定されます。 **_Matherr**を使用すると、エラー処理を変更できます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
-**この仮説**関数は、2辺のxと*y*の長さ(つまり *、x2* *x*<sup>2</sup> + *y*<sup>y2</sup>の平方根)を与えて、直角三角形の斜辺の長さを計算する。
+**Hypot**関数は、2辺の*x*と*y*の長さ (つまり、 *x*<sup>2</sup> + *y*<sup>2</sup>の平方根) を指定して、直角三角形の斜辺の長さを計算します。
 
 以前の標準との互換性のために、先頭にアンダースコアがある関数のバージョンが用意されています。 これらの動作は、先頭にアンダースコアがないバージョンと同じです。 新しいコードには、先頭にアンダースコアがないバージョンを使用することをお勧めします。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**仮説**,**ハイポトフ ,****ハイポトル**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
