@@ -13,7 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 953f18eb9ba6978c6e97a6b3d1d8fa7a165a27d0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 80acead0f40896db6c27cca8440a3069a18c5332
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745528"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917962"
 ---
 # <a name="_cipow"></a>_CIpow
 
@@ -48,7 +48,7 @@ void __cdecl _CIpow();
 
 結果の値は、スタックのトップにプッシュされます。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

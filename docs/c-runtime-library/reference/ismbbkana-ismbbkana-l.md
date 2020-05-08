@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 288c23ac11104ed994719fae8576cdc3597d7478
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343637"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918944"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana、_ismbbkana_l
 
@@ -59,19 +59,19 @@ int _ismbbkana_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkana**は、整数*c*がカタカナ記号の場合は 0 以外の値を返し、それ以外の場合は 0 を返します。 **_ismbbkana**は、ロケール依存の文字情報に現行ロケールを使用します。 **_ismbbkana_l**は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数*c*がカタカナ記号の場合、 **_ismbbkana**は0以外の値を返し、そうでない場合は0を返します。 **_ismbbkana**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkana_l**は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -85,4 +85,4 @@ int _ismbbkana_l(
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
