@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: d450702ae41f404606cda1bea613f3d99fadd06f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343213"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910705"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
@@ -83,32 +83,32 @@ int _ismbckata_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 テストする文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *c* <= 255 で、対応する **_ismbb**ルーチン (たとえば **、_ismbbalnum**に対応**するルーチン**_ismbcalnum) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>解説
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-**_l**サフィックスを持つこれらの関数のバージョンは、ロケール依存の動作に現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 |ルーチン|テスト条件 (コード ページ 932 のみ)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|2 バイトのひらがな: 0x829F<=*c*<=0x82F1。|
-|**_ismbchira_l**|2 バイトのひらがな: 0x829F<=*c*<=0x82F1。|
-|**_ismbckata**|2 バイトカタカナ: 0x8340<=*c*<=0x8396。|
-|**_ismbckata_l**|2 バイトカタカナ: 0x8340<=*c*<=0x8396。|
+|**_ismbchira**|2バイトのひらがな: 0x829F<=*c*<= 0X829f。|
+|**_ismbchira_l**|2バイトのひらがな: 0x829F<=*c*<= 0X829f。|
+|**_ismbckata**|2バイトカタカナ: 0x8340<=*c*<= 0x8340。|
+|**_ismbckata_l**|2バイトカタカナ: 0x8340<=*c*<= 0x8340。|
 
-**終了コード・ページ 932 固有**
+**終了コードページ932固有**
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -126,5 +126,5 @@ int _ismbckata_l(
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

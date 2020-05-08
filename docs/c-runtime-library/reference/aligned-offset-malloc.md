@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 1f13afbab75d2926d1c642c1430a3ffe5ecbac8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a0dca94ec03286c92b3cbf1a51df59a1ca7af0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350585"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919486"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
@@ -51,7 +51,7 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>パラメーター
 
-*サイズ*<br/>
+*size*<br/>
 要求されたメモリ割り当てのサイズ。
 
 *配置*<br/>
@@ -62,19 +62,19 @@ void * _aligned_offset_malloc(
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックへの**ポインター。**
+割り当てられたメモリブロックへのポインター。操作が失敗した場合は**NULL** 。
 
 ## <a name="remarks"></a>解説
 
-**_aligned_offset_malloc**は、入れ子になった要素に対して配置が必要な場合に便利です。たとえば、入れ子になったクラスで配置が必要な場合です。
+**_aligned_offset_malloc**は、入れ子になった要素にアラインメントが必要な場合に役立ちます。たとえば、入れ子になったクラスでアラインメントが必要な場合です。
 
 **_aligned_offset_malloc**は**malloc**に基づいています。詳細については、「 [malloc](malloc.md)」を参照してください。
 
-**_aligned_offset_malloc**マークが`__declspec(noalias)`付`__declspec(restrict)`き、 と は、関数がグローバル変数を変更しないことが保証されており、返されたポインターが別名として指定されないことを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**_aligned_offset_malloc**はと`__declspec(noalias)` `__declspec(restrict)`マークされます。つまり、関数は、グローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-この関数は、メモリ割り当てが失敗した場合、または要求されたサイズが _HEAP_MAXREQ より大きい場合に**errno**を**ENOMEM** **に**設定します。 **errno**の詳細については、「 [errno 、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また **、_aligned_offset_malloc**はパラメータを検証します。 *アライメント*が 2 の累乗でない場合、または*offset*が*size*および 0 以外の値以上の場合、この関数は無効なパラメーター ハンドラーを呼び[出します](../../c-runtime-library/parameter-validation.md)。 実行を続行できる場合、この関数は**NULL を**返し **、errno**を**EINVAL**に設定します。
+メモリ割り当てが失敗した場合、または要求されたサイズが **_HEAP_MAXREQ**より大きい場合、この関数は**errno**を**ENOMEM**に設定します。 **Errno**の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_offset_malloc**パラメーターを検証します。 *Alignment*が2の累乗でない場合、または*offset*が*size*以上で0以外の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
