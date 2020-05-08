@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: c8a97e99711a2053a26ae850c09c82a4342cda3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919710"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -69,39 +69,39 @@ intptr_t _wspawnvpe(
 
 ### <a name="parameters"></a>パラメーター
 
-*モード*<br/>
+*mode*<br/>
 呼び出しプロセスの実行モード
 
-*Cmdname*<br/>
+*cmdname*<br/>
 実行されるファイルのパス
 
-*Argv*<br/>
-引数へのポインターの配列。 引数*argv*[0] は、通常、リアル モードのパスまたはプロテクト モードのプログラム名へのポインタであり *、argv*[1] から*argv*[**n**] は、新しい引数リストを形成する文字列へのポインタです。 引数*argv*[**n** +1] は、引数リストの末尾を示す**NULL**ポインタでなければなりません。
+*argv*<br/>
+引数へのポインターの配列。 引数*argv*[0] は、通常、リアルモードのパスまたは保護モードのプログラム名へのポインターであり、 *argv*[1] ~ *argv*[**n**] は、新しい引数リストを形成する文字列へのポインターです。 引数*argv*[**n** + 1] は、引数リストの末尾を示す**NULL**ポインターでなければなりません。
 
 *envp*<br/>
 環境設定へのポインターの配列
 
 ## <a name="return-value"></a>戻り値
 
-同期 **_spawnvpe**または **_wspawnvpe** ( *mode*に指定 **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnvpe**または **_wspawnvpe** **(mode***に指定*された_P_NOWAITまたは **_P_NOWAITO)** からの戻り値は、プロセス ハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスがゼロ以外の引数を持つ出口ルーチンを明示的に呼び出す場合は **、終了**状況をゼロ以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値 -1 はエラーを示します (新しいプロセスは開始されません)。 この場合 **、errno**は次のいずれかの値に設定されます。
+同期 **_spawnvpe**または **_wspawnvpe** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnvpe**または **_wspawnvpe** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で**終了**ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno**は次のいずれかの値に設定されます。
 
 |||
 |-|-|
 | **E2BIG** | 引数リストが 1024 バイトを超えています。 |
-| **Einval** | *モード*引数が無効です。 |
-| **エノエント** | ファイルまたはパスが見つかりません。 |
+| **EINVAL** | *モード*引数が無効です。 |
+| **ENOENT** | ファイルまたはパスが見つかりません。 |
 | **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
-| **エノメム** | 新しいプロセスを実行するのに十分なメモリがありません。 |
+| **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、新しいプロセスを作成して実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数は **、PATH**環境変数を使用して、実行するファイルを検索します。
+これらの関数は、新しいプロセスを作成して実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数は、 **PATH**環境変数を使用して、実行するファイルを検索します。
 
-これらの関数では、パラメーターの検証が行われます。 *cmdname*または*argv*のいずれかが null ポインターである場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*argv*が null ポインターの場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -118,7 +118,7 @@ intptr_t _wspawnvpe(
 
 ## <a name="see-also"></a>関連項目
 
-[中止](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [終了、_Exit、_exit](exit-exit-exit.md)<br/>

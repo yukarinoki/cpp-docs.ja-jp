@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350091"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917010"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
@@ -55,33 +55,33 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>パラメーター
 
-*Filename*<br/>
+*/db*<br/>
 既存のファイルの名前。
 
-*Pmode*<br/>
+*pmode*<br/>
 ファイルのアクセス許可の設定。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値 -1 は失敗を示します。 指定されたファイルが見つからなかった場合 **、errno**は**ENOENT**に設定されます。パラメーターが無効な場合 **、errno**は**EINVAL**に設定されます。
+これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからなかった場合、 **errno**は**ENOENT**に設定されます。パラメーターが無効な場合、 **errno**は**EINVAL**に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**_chmod**関数は、 *filename*で指定されたファイルのアクセス権設定を変更します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode*には、SYS\Stat.h で定義されている次のマニフェスト定数のいずれかまたは両方が含まれています。
+**_Chmod**関数は、 *filename*によって指定されたファイルのアクセス許可の設定を変更します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode*には、sysh に定義されている次のマニフェスト定数のいずれかまたは両方が含まれています。
 
-| *Pmode* | 意味 |
+| *pmode* | 説明 |
 |-|-|
 | **\_S\_IREAD** | 読み取りのみが許可されます。 |
 | **\_S\_IWRITE** | 書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。 |
-| **\_S\_IREAD** &#124; ** \_\_S IWRITE** | 読み取りと書き込みが許可されます。 |
+| **\_S\_iread** &#124; ** \_s\_iread** | 読み取りと書き込みが許可されます。 |
 
-両方の定数が指定されると、ビット単位または演算子 ( )**\|** で結合されます。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 したがって、モード **_S_IWRITE**と **_S_IREAD_S_IWRITE**\|**_S_IWRITE**は同等です。
+両方の定数が指定されている場合は、ビットごとの**\|** or 演算子 () と結合されます。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 したがって、 **_S_IWRITE**と **_S_IREAD** \| **_S_IWRITE**のモードは同等です。
 
-**_wchmod**はワイド文字の **_chmod**です。**_wchmod**する*ファイル名*引数はワイド文字列です。 **_wchmod**と **_chmod**は、そうでなければ同じように動作します。
+**_wchmod**は **_chmod**のワイド文字バージョンです。**_wchmod**する*filename*引数は、ワイド文字列です。 **_wchmod**と **_chmod**は同じように動作します。
 
-この関数は、パラメーターを検証します。 *pmode*がマニフェスト定数の組み合わせでない場合、または定数の代替セットが組み込まれていない場合、関数はそれらを無視します。 *filename*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は -1 を戻します。
+この関数は、パラメーターを検証します。 *Pmode*がマニフェスト定数のいずれかの組み合わせではない場合、または別の定数セットを組み込んでいる場合、関数は単にそれらを無視します。 *Filename*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

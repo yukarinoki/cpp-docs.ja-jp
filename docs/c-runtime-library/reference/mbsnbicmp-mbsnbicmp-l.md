@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 80d2708396cdaeb86c25932c3d13129fb318719a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340571"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911826"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp、_mbsnbicmp_l
 
-2 つのマルチバイト文字ストリングの**n**バイトを比較し、大文字小文字を無視します。
+2つのマルチバイト文字列の**n**バイトを比較し、大文字と小文字を区別しません。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -66,7 +66,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>パラメーター
 
-*文字列 1*,*文字列2*<br/>
+*string1*、 *string2*<br/>
 Null で終わる比較対象の文字列。
 
 *count*<br/>
@@ -78,25 +78,25 @@ Null で終わる比較対象の文字列。
 
 |戻り値|説明|
 |------------------|-----------------|
-|< 0|*文字列 1*の部分文字列が*文字列 2*のサブ文字列より小さい。|
-|0|*string2*サブストリングと同一の*ストリング*1 サブストリング。|
-|> 0|*string1*サブストリングが*string2*より大きい。|
+|< 0|*string1* *部分文字列より小さい*string1 部分文字列。|
+|0|*string1*部分文字列は、 *string2*部分文字列と同じです。|
+|> 0|*string1* *部分文字列より大きい*string1 部分文字列。|
 
-エラーが発生すると **、_mbsnbicmp**は String.h および Mbstring.h で定義されている **_NLSCMPERROR**を返します。
+エラーが発生した場合、 **_mbsnbicmp**は **_NLSCMPERROR**を返します。これは、mbstring.h およびで定義されています。
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbicmp**関数は *、string1*と*string2*の最初の*カウント*バイトの序数比較を実行します。 比較は、各文字を小文字に変換することによって実行されます。[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)は **、_mbsnbicmp**の大文字と小文字を区別するバージョンです。 *カウント*文字が比較される前に、いずれかの文字列で終端の NULL 文字に達すると、比較は終了します。 *カウント*文字を比較する前に、いずれかの文字列で終端の NULL 文字に達したときに文字列が等しい場合は、短い文字列が小さくなります。
+**_Mbsnbicmp**関数は、 *string1*と*string2*の先頭の*最大バイト数*の序数比較を実行します。 比較は、各文字を小文字に変換することによって行われます。[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)は、 **_mbsnbicmp**の大文字と小文字を区別するバージョンです。 *カウント*文字を比較する前に、いずれかの文字列で終端の null 文字に到達すると、比較は終了します。 文字列が等しい場合、 *count*文字が比較される前にいずれかの文字列で終端の null 文字に到達すると、短い文字列の方が小さくなります。
 
-**_mbsnbicmp**は[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)に似ていますが、文字列を文字数ではなく*カウント*バイトまで比較する点が異なります。
+**_mbsnbicmp**は[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)に似ていますが、文字単位ではなく*カウント*バイトまで文字列を比較する点が異なります。
 
-ASCII の表の 'Z' と 'a' の間にある文字 ('['、'\\'、']'、'^'、'_'、'\`') を含む 2 つの文字列は、場合に応じて異なる方法で比較します。 たとえば、2 つの文字列 "ABCDE" と "ABCD^" は、比較が小文字 ("abcde" > "abcd^") の場合は一方の方法を比較し、大文字の場合は他の方法 ("ABCDE" < "ABCD^") を比較します。
+ASCII の表の 'Z' と 'a' の間にある文字 ('['、'\\'、']'、'^'、'_'、'\`') を含む 2 つの文字列は、場合に応じて異なる方法で比較します。 たとえば、2つの文字列 "ABCDE...Z" と "ABCD ^" は、比較が小文字 ("abcde...z" > "abcd ^") である場合の1つの方法と、大文字の場合は "ABCDE...Z" < "ABCD ^" のように比較されます。
 
-**_mbsnbicmp**は、現在使用されているマルチ[バイトコードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字シーケンスを認識します。 これは、現在のロケール設定の影響を受けません。
+**_mbsnbicmp**は、現在使用中の[マルチバイトコードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字のシーケンスを認識します。 これは、現在のロケール設定の影響を受けません。
 
-*string1*または*string2*のいずれかが null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように **、_mbsnbicmp**無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、関数は **_NLSCMPERROR**を返し **、errno**を**EINVAL**に設定します。
+*String1*または*string2*が null ポインターの場合、 **_Mbsnbicmp**は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

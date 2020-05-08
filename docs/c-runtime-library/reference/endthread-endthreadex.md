@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: c76f479255080400e07678ef5dbde572b7a9dffc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348037"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915082"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread、_endthreadex
 
-スレッドを終了します。**_endthread**は **、_beginthread**によって作成されたスレッドを終了し **、_beginthreadex****によって作成**されたスレッドを終了_endthreadex。
+スレッドを終了します。**_endthread**は **_beginthread**によって作成されたスレッドを終了し **_endthreadex** **_beginthreadex**によって作成されたスレッドを終了します。
 
 ## <a name="syntax"></a>構文
 
@@ -63,23 +63,23 @@ void _endthreadex(
 
 ## <a name="remarks"></a>解説
 
-**_endthread**呼び出したり **、スレッドを終了_endthreadex**明示的に呼び出したりできます。ただし **、_endthread**または **_endthreadex**は、_beginthreadまたは **_beginthreadex**にパラメータとして渡されたルーチンからスレッドが戻 **_beginthread**ったときに自動的に呼び出されます。 **スレッドを終了**または **_endthreadex**呼び出しで終了すると、スレッドに割り当てられたリソースを適切に回復できます。
+**_Endthread**または **_endthreadex**を明示的に呼び出してスレッドを終了できます。ただし、 **_endthread**または **_endthreadex**は、 **_beginthread**または **_beginthreadex**にパラメーターとして渡されたルーチンからスレッドが戻ったときに、自動的に呼び出されます。 **Endthread**または **_endthreadex**を呼び出すことによってスレッドを終了すると、スレッドに割り当てられたリソースを適切に復旧できます。
 
 > [!NOTE]
-> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **割**り当てられたスレッド リソース**を**_endthreadし、_endthreadexし **、ExitThread**を呼び出します。
+> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**は、割り当てられているスレッドリソースを解放し、 **exitthread**を呼び出します。
 
-**_endthread**は、スレッド ハンドルを自動的に閉じます。 (この動作は、Win32**の終了スレッド**API とは異なります。したがって **、_beginthread**を使用して **_endthread**場合は、Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API を呼び出してスレッド ハンドルを明示的に閉じないでください。
+**_endthread**によって、スレッドハンドルが自動的に閉じられます。 (この動作は、Win32 **Exitthread** API とは異なります)。したがって、 **_beginthread**と **_endthread**を使用する場合は、Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API を呼び出してスレッドハンドルを明示的に終了しないでください。
 
-Win32 **ExitThread** API と同様**に、_endthreadex**はスレッド ハンドルを閉じません。 したがって **、_beginthreadex**を使用して **_endthreadex**場合は、Win32 **CloseHandle** API を呼び出してスレッド ハンドルを閉じる必要があります。
+Win32 **exitthread** API と同様に、 **_endthreadex**はスレッドハンドルを閉じません。 したがって、 **_beginthreadex**と **_endthreadex**を使用する場合は、Win32 **CloseHandle** API を呼び出してスレッドハンドルを閉じる必要があります。
 
 > [!NOTE]
-> **_endthread**と **_endthreadex、** スレッドで保留中の C++ デストラクターが呼び出されない原因となります。
+> **_endthread**と **_endthreadex**により、スレッドで保留中の C++ デストラクターは呼び出されません。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|

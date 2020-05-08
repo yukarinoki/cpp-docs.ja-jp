@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538604"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914910"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s、_wfopen_s
 
@@ -84,9 +84,9 @@ errno_t _wfopen_s(
 
 |*pFile*|*/db*|*mode*|戻り値|*PFile*の内容|
 |-------------|----------------|------------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|変更なし|
-|any|**NULL**|any|**EINVAL**|変更なし|
-|any|any|**NULL**|**EINVAL**|変更なし|
+|**空白**|any|any|**EINVAL**|変更なし|
+|any|**空白**|any|**EINVAL**|変更なし|
+|any|any|**空白**|**EINVAL**|変更なし|
 
 ## <a name="remarks"></a>解説
 
@@ -171,7 +171,7 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 |-|-|
 | **40u-c** | **Fflush**または **_flushall**が呼び出された場合に、ファイルバッファーの内容がディスクに直接書き込まれるように、関連付けられている*ファイル名*のコミットフラグを有効にします。 |
 | **n** | 関連付けられている*ファイル名*のコミットフラグを "コミットなし" にリセットします。 既定値です。 プログラムを COMMODE.OBJ とリンクする場合は、グローバル コミット フラグもオーバーライドします。 プログラムを明示的に COMMODE.OBJ とリンクしない場合、グローバル コミット フラグの既定の設定は "コミットなし" です (「 [Link Options](../../c-runtime-library/link-options.md)」をご覧ください)。 |
-| **N** | ファイルが子プロセスによって継承されないように指定します。 |
+| **非該当** | ファイルが子プロセスによって継承されないように指定します。 |
 | **2$s** | キャッシュがディスクからのシーケンシャル アクセスに最適化されるように指定します。ただし、シーケンシャル アクセスに限定されるわけではありません。 |
 | **R** | キャッシュがディスクからのランダム アクセスに最適化されるように指定します。ただし、ランダム アクセスに限定されるわけではありません。 |
 | **T** | ファイルを一時ファイルとして指定します。 可能な場合、ファイルはディスクにフラッシュされません。 |
@@ -190,8 +190,8 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 |**w +**|**_O_RDWR** (通常は **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**\t**|**_O_TEXT**|
-|**40u-c**|なし|
-|**n**|なし|
+|**40u-c**|None|
+|**n**|None|
 |**2$s**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
@@ -204,7 +204,7 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**fopen_s**|\<stdio.h>|
 |**_wfopen_s**|\<stdio.h> または \<wchar.h>|

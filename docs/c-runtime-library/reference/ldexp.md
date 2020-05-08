@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342244"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916540"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -77,29 +77,29 @@ long double ldexpl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
-*Exp*<br/>
+*期限*<br/>
 整数の指数。
 
 ## <a name="return-value"></a>戻り値
 
-**ldexp**関数は、成功した場合に*x* \* 2<sup>*exp*</sup>の値を返します。 オーバーフロー時に *、x*の符号に応じて**ldexp**は +/- **HUGE_VAL**を返します。**errno**値は**ERANGE**に設定されます。
+**Ldexp**関数は、成功した場合、 *x* \* 2<sup>*exp*</sup>の値を返します。 オーバーフローでは、 *x*の符号によっては、 **ldexp**は +/- **HUGE_VAL**; を返します。**errno**値は**ERANGE**に設定されます。
 
-**errno**および可能なエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+**Errno**および考えられるエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型または**長い****ダブル**型を使用する**ldexp**のオーバーロードを呼び出すことができます。 C プログラムでは **、ldexp**は常に**倍精度浮動小数点数**と**int**を受け取り、**倍精度浮動小数点数**を返します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**ldexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ldexp**は常に**double**と**int**を受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**、 **ldexp**、 **ldexp**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,6 +1,6 @@
 ---
 title: _getcwd、_wgetcwd
-description: C ランタイム ライブラリ関数は、現在の作業ディレクトリを取得_wgetcwd、_getcwd。
+description: C ランタイムライブラリ関数 _getcwd、_wgetcwd 現在の作業ディレクトリを取得します。
 ms.date: 4/2/2020
 api_name:
 - _wgetcwd
@@ -20,7 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: bc19a416ebebeb901e8dbb435971e6d5f33e4067
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344443"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915748"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -66,29 +66,29 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*\
+*格納*\
 パスの格納場所。
 
-*Maxlen*\
-パスの最大長は文字で **、_getcwd**は**文字で****、wchar_t****は_wgetcwd。**
+*maxlen*\
+文字数でのパスの最大長: **_getcwd**の場合は**char** 、 **_wgetcwd**の場合は**wchar_t** 。
 
 ## <a name="return-value"></a>戻り値
 
-*バッファ*へのポインタを返します。 **NULL**戻り値はエラーを示し **、errno**は**ENOMEM**に設定され、メモリが不足して*最大*バイトを割り当てるためのメモリが不足しているか **(NULL**引数が*バッファ*として指定されている場合)、**または ERANGE**に設定され、パスが*maxlen*文字より長いことを示します。 *maxlen*がゼロ以下の場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。
+*バッファー*へのポインターを返します。 **Null**の戻り値はエラーを示し、 **errno**は**ENOMEM**に設定されます。これは、( **NULL**引数が*バッファー*として指定されている場合) *maxlen*バイトを割り当てるのに十分なメモリがないことを示し、 **ERANGE**は、パスが*maxlen*文字より長いことを示します。 *Maxlen*が0以下の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーターハンドラーを呼び出します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_getcwd**関数は、デフォルトのドライブの現在の作業ディレクトリの完全パスを取得し *、buffer*に格納します。 整数引数*maxlen*は、パスの最大長を指定します。 パスの長さ (終端の NULL 文字を含む) が*maxlen*を超えるとエラーが発生します。 *バッファー*引数は**NULL に**できます。少なくともサイズ*の maxlen* (必要な場合だけ) のバッファは、パスを格納するために**malloc**を使用して自動的に割り当てられます。 このバッファーは、後で解放するには **、解放解放**を呼び出し、それを **_getcwd**戻り値 (割り当てられたバッファーへのポインター) を渡します。
+**_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全なパスを取得し、*バッファー*に格納します。 Integer 引数*maxlen*は、パスの最大長を指定します。 パスの長さ (終端の null 文字を含む) が*maxlen*を超えると、エラーが発生します。 *Buffer*引数には**NULL**を指定できます。パスを格納するために、少なくともサイズが*maxlen* (必要な場合にのみ) のバッファーが**malloc**を使用して自動的に割り当てられます。 このバッファーは、後で**free**を呼び出して、 **_getcwd**の戻り値 (割り当てられたバッファーへのポインター) を渡すことによって解放できます。
 
-**_getcwd**は、現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列は円記号 ()`\`で終わります。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
+**_getcwd**は、現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列は円記号 (`\`) で終わります。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
 
-**_wgetcwd**はワイド文字の **_getcwd**バージョンです。*バッファ*引数と **_wgetcwd**の戻り値はワイド文字列です。 **_wgetcwd**と **_getcwd**は同じように動作します。
+**_wgetcwd**は **_getcwd**のワイド文字バージョンです。**_wgetcwd**の*バッファー*引数と戻り値はワイド文字列です。 **_wgetcwd**と **_getcwd**は同じように動作します。
 
-**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合 **、_getcwd**および **_wgetcwd**の呼び出しは **、_getcwd_dbg****への呼**び出しに置き換えられ、_wgetcwd_dbgメモリ割り当てのデバッグが可能になります。 詳細については、「 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」を参照してください。
+**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_getcwd**と **_wgetcwd**への呼び出しは、メモリ割り当てのデバッグを可能にするために **_getcwd_dbg**と **_wgetcwd_dbg**の呼び出しに置き換えられます。 詳細については、「 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -143,6 +143,6 @@ C:\Code
 ## <a name="see-also"></a>関連項目
 
 [ディレクトリコントロール](../../c-runtime-library/directory-control.md)\
-[_chdir,_wchdir](chdir-wchdir.md)\
+[_chdir、_wchdir](chdir-wchdir.md)\
 [_mkdir、_wmkdir](mkdir-wmkdir.md)\
 [_rmdir、_wrmdir](rmdir-wrmdir.md)

@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,12 +70,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: eb76b6ebdbe4b27ce5a7368ad1b8c2dd8f858d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343233"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919758"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
@@ -126,17 +126,17 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 判定対象の文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *c* <= 255 で、対応する **_ismbb**ルーチン (たとえば **、_ismbbalnum**に対応**するルーチン**_ismbcalnum) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
-これらの関数のバージョンは同じですが **、_l**サフィックスを持つ関数は、現在のロケールではなくロケールに依存する動作に渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョンは同じですが、 **_l**サフィックスを持つバージョンは、現在のロケールではなく、ロケールに依存する動作に渡されるロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -144,13 +144,13 @@ int _ismbcspace_l(
 
 |ルーチン|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graphic|*c*が空白文字 ( ) を除く ASCII またはカタカナの印刷可能文字の 1 バイト表記である場合にのみ、ゼロ以外を返します。|
-|**_ismbcprint**|印刷可能|*c*が空白文字を含む ASCII またはカタカナの印刷可能文字の 1 バイト表現である場合にのみ、ゼロ以外を返します ( )。|
-|**_ismbcpunct**|句読点|*c*が ASCII またはカタカナの区切り記号の 1 バイト表記である場合のみ、0 以外を返します。|
-|**_ismbcblank**|空白または水平タブ|*c*がスペースまたは水平タブ*文字である場合*にのみ、ゼロ以外を返します。 *c*|
-|**_ismbcspace**|空白|*c*が空白文字である場合にのみ、ゼロ以外を返します *<* *<。*|
+|**_ismbcgraph**|Graphic|*C*が空白 () を除く ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcprint**|印刷可能|*C*が空白 () を含む ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcpunct**|句読点|*C*が ASCII またはカタカナの区切り文字の1バイト表現である場合に限り、0以外の値を返します。|
+|**_ismbcblank**|空白または水平タブ|*C*がスペースまたは水平タブ文字の場合 (c = 0x20 または*c*= 0x09 の場合のみ)、0以外の値を*返します。*|
+|**_ismbcspace**|空白|*C*が空白文字の場合にのみ、0以外の値を返します。 *c*= 0x20 または 0x09<=*c*<= 0x0D。|
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -176,8 +176,8 @@ int _ismbcspace_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

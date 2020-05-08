@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362910"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919977"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 
 文字列ポインターを 1 文字進めます。
 
 > [!IMPORTANT]
-> **_mbsinc**と **_mbsinc_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsinc**と **_mbsinc_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -85,25 +85,25 @@ unsigned char *_mbsinc_l(
 *現在の*<br/>
 文字ポインター。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、*現在*の 直後の文字へのポインターを戻します。
+これらの各ルーチンは、*現在*の直後に続く文字へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
-**_mbsinc**関数は、*現在*の直後のマルチバイト文字の最初のバイトへのポインタを返します。 **_mbsinc**は、現在使用中のマルチバイト コード ページに従って[マルチバイト](../../c-runtime-library/code-pages.md)文字シーケンスを認識します。**_mbsinc_l**は、渡されたロケール パラメータを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Mbsinc**関数は、*現在*の直後に続くマルチバイト文字の最初のバイトへのポインターを返します。 **_mbsinc**は、現在使用されている[マルチバイトコードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字のシーケンスを認識します。**_mbsinc_l**は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-Tchar.h で定義されている汎用テキスト関数 **_tcsinc**は **、_MBCS**が定義されている場合は **_mbsinc**に **、_UNICODE**が定義されている場合は **_wcsinc**にマップされます。 それ以外**の場合は、_tcsinc_strinc**にマップされます。 **_strinc** **_strinc**と **_wcsinc**は **、_mbsinc**の 1 バイト文字およびワイド文字のバージョンです。 **_strinc**と **_wcsinc**は、このマッピングに対してのみ提供され、それ以外の場合は使用しないでください。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+Tchar.h で定義されている汎用テキスト関数 **_tcsinc**は、 **_MBCS**が定義されている場合は **_mbsinc**に、 **_UNICODE**が定義されている場合は **_wcsinc**にマップされます。 それ以外の場合、 **_tcsinc**は **_strinc**にマップされます。 **_strinc**と **_wcsinc**は **_mbsinc**の1バイト文字とワイド文字バージョンです。 **_strinc**と **_wcsinc**はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-*current*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
+*Current*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**einval**を返し、 **errno**を**einval**に設定します。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

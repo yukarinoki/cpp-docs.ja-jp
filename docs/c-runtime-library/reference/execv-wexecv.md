@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: 638364afa75fa1b04b598370473dee48964c5763
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c92321ebf31cf3dd1e446246674a437919e347b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919692"
 ---
 # <a name="_execv-_wexecv"></a>_execv、_wexecv
 
@@ -62,25 +62,25 @@ intptr_t _wexecv(
 
 ### <a name="parameters"></a>パラメーター
 
-*Cmdname*<br/>
+*cmdname*<br/>
 実行するファイルのパス。
 
-*Argv*<br/>
+*argv*<br/>
 パラメーターへのポインターの配列。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値 -1 はエラーを示し、その場合は**errno**グローバル変数が設定されます。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
 |**E2BIG**|引数と環境設定には、32 KB を超える領域が必要です。|
-|**エアッケ**|指定されたファイルでロック違反または共有違反が発生しています。|
-|**Einval**|無効なパラメーター。|
+|**EACCES**|指定されたファイルでロック違反または共有違反が発生しています。|
+|**EINVAL**|無効なパラメーター。|
 |**EMFILE**|開いているファイルの数が多すぎます (指定されたファイルは、実行可能ファイルであるかどうかを確認するために開く必要があります)。|
-|**エノエント**|ファイルまたはパスが見つかりません。|
+|**ENOENT**|ファイルまたはパスが見つかりません。|
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
-|**エノメム**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (呼び出しプロセスが正しく割り当てられていないことを示します)。|
+|**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (呼び出しプロセスが正しく割り当てられていないことを示します)。|
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
@@ -88,13 +88,13 @@ intptr_t _wexecv(
 
 これらの各関数は新しいプロセスを読み込んで実行し、コマンド ライン引数へのポインターの配列を渡します。
 
-**_execv**関数は、パラメーターを検証します。 *cmdname*が null ポインターの場合、または*argv*が null ポインターの場合、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合 **、_execv**関数は[、パラメーターの検証](../../c-runtime-library/parameter-validation.md)で説明されているように無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
+**_Execv**関数は、パラメーターを検証します。 *Cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合、 **_execv**関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|オプション ヘッダー|
+|関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_execv**|\<process.h>|\<errno.h>|
 |**_wexecv**|\<process.h> または \<wchar.h>|\<errno.h>|
@@ -109,7 +109,7 @@ intptr_t _wexecv(
 
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[中止](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>

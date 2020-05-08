@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349125"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916905"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
@@ -65,7 +65,7 @@ errno_t _waccess_s(
 *path*<br/>
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*mode*<br/>
 アクセス許可の設定。
 
 ## <a name="return-value"></a>戻り値
@@ -82,7 +82,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>解説
 
-ファイルと共に使用すると **、_access_s**関数は、指定されたファイルが存在するかどうか、および*mode*の値で指定されたとおりにアクセスできるかどうかを判別します。 ディレクトリと共に使用 **_access_s、指定**したディレクトリが存在するかどうかを判断します。 Windows 2000 以降のオペレーティング システムでは、すべてのディレクトリに読み取りおよび書き込みアクセス権があります。
+ファイルと共に使用する場合、 **_access_s**関数は、指定されたファイルが存在し、*モード*の値によって指定されたとおりにアクセスできるかどうかを判断します。 ディレクトリと共に使用する場合、 **_access_s**は指定したディレクトリが存在するかどうかのみを判断します。 Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |モード値|ファイル チェックの目的|
 |----------------|---------------------|
@@ -91,13 +91,13 @@ errno_t _waccess_s(
 |04|読み取りアクセス許可|
 |06|読み取りおよび書き込みアクセス許可|
 
-ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、あるファイルが別のプロセスによってロックされている場合 **、_access_s0**を返してもアクセスできない可能性があります。
+ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、 **_access_s**が0を返す場合でも、ファイルにアクセスできない可能性があります。
 
-**_waccess_s**ワイド文字の **_access_s**で **、_waccess_s**への*パス*引数はワイド文字の文字列です。 それ以外**の場合、_waccess_s**と **_access_s**は同じように動作します。
+**_waccess_s**は **_access_s**のワイド文字バージョンであり、 **_waccess_s**の*パス*引数はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**は同じように動作します。
 
-これらの関数では、パラメーターの検証が行われます。 *path*が NULL の場合、または*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、`EINVAL` を返します。
+これらの関数では、パラメーターの検証が行われます。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、`EINVAL` を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -114,7 +114,7 @@ errno_t _waccess_s(
 
 ## <a name="example"></a>例
 
-この例では **、_access_s**を使用して crt_access_s.c という名前のファイルが存在するかどうか、および書き込みが許可されているかどうかを確認します。
+この例では、 **_access_s**を使用して crt_access_s という名前のファイルを確認し、存在するかどうか、書き込みが許可されているかどうかを確認します。
 
 ```C
 // crt_access_s.c

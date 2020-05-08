@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337713"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913055"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-**errno**グローバル変数の値を設定します。
+**Errno**グローバル変数の値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-**errno**の新しい値。
+**Errno**の新しい値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -59,7 +59,7 @@ errno_t _set_errno( int error_value );
 
 使用できる値は Errno.h で定義します。 「[errno Constants](../../c-runtime-library/errno-constants.md)」(errno 定数) もご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="example"></a>例
 

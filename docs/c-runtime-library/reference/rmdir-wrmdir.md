@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338065"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916924"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
@@ -63,28 +63,28 @@ int _wrmdir(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dirname*<br/>
+*dirname*<br/>
 削除されるディレクトリのパス。
 
 ## <a name="return-value"></a>戻り値
 
-ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値 -1 はエラーを示し **、errno**は次のいずれかの値に設定されます。
+ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
 | **ENOTEMPTY** | 指定されたパスがディレクトリではないか、ディレクトリが空でない、またはディレクトリが現在の作業ディレクトリかルート ディレクトリのいずれかです。 |
-| **エノエント** | パスが無効です。 |
-| **エアッケ** | プログラムに、ディレクトリに対して開いているハンドルがあります。 |
+| **ENOENT** | パスが無効です。 |
+| **EACCES** | プログラムに、ディレクトリに対して開いているハンドルがあります。 |
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_rmdir**関数は*dirname*で指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
+**_Rmdir**関数は、 *dirname*によって指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
 
-**_wrmdir**はワイド文字の **_rmdir**です。**_wrmdir**の*dirname*引数はワイド文字列です。 **_wrmdir**と **_rmdir**は、他の方法で同じように動作します。
+**_wrmdir**は **_rmdir**のワイド文字バージョンです。**_wrmdir**の*dirname*引数は、ワイド文字列です。 **_wrmdir**と **_rmdir**は同じように動作します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

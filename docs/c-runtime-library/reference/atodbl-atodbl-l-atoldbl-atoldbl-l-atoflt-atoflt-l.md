@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348961"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920046"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
-文字列を倍精度浮動小数点**型 (_atodbl)** に変換します ( 長い倍精度 (**_atoldbl**) または float (**_atoflt**) 。
+文字列を double (**_atodbl**)、long double (**_atoldbl**)、または float (**_atoflt**) に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -86,31 +86,31 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 文字列を浮動小数点値に変換することで生成される double 型、long double 型、または float 型の値。 これらの値は構造体でラップされます。
 
-*Str*<br/>
+*引数*<br/>
 浮動小数点値に変換するために解析する文字列。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は 0 を返します。 エラー コードとしては **、_UNDERFLOW**または **_OVERFLOW**が、>の\<ヘッダー ファイル math.h で定義されています。
+処理が正常に終了した場合は 0 を返します。 考えられるエラーコードは、 **_UNDERFLOW**または **_OVERFLOW**であり、ヘッダー \<ファイルの math. h> で定義されています。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、文字列を浮動小数点値に変換します。 これらの関数と**atof**ファミリの関数の違いは、これらの関数が浮動小数点コードを生成せず、ハードウェア例外を発生させならない点です。 代わりに、エラー状態がエラー コードとして報告されます。
+これらの関数は、文字列を浮動小数点値に変換します。 これらの関数と**atof**ファミリの関数の違いは、これらの関数は浮動小数点コードを生成せず、ハードウェア例外を発生させないことです。 代わりに、エラー状態がエラー コードとして報告されます。
 
-文字列が浮動小数点値として有効な解釈を持たない場合、*値*はゼロに設定され、戻り値は 0 になります。
+文字列に浮動小数点値として有効な解釈がない場合、*値*は0に設定され、戻り値は0になります。
 
-**_l**サフィックスを持つこれらの関数のバージョンは、サフィックスを持たないバージョンと同じですが、現在のスレッド ロケールの代わりに渡された*ロケール*パラメーターが使用されます。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて、サフィックスが付いていないバージョンと同じです。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l**、 **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>例
 
@@ -172,5 +172,5 @@ Return value: 3
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

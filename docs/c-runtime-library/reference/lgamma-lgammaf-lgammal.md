@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342159"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916441"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -63,7 +63,7 @@ long double lgamma( long double x ); //C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 計算される値です。
 
 ## <a name="return-value"></a>戻り値
@@ -77,23 +77,23 @@ long double lgamma( long double x ); //C++ only
 |*x*= 負の整数|+INFINITY|
 |±無限大|+INFINITY|
 |極エラー|+HUGE_VAL、+HUGE_VALF、または +HUGE_VALL|
-|オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、±HUGE_VALL|
+|オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型と**長倍****double**精度浮動小数点型を取得および戻す**lgamma**のオーバーロードを呼び出すことができます。 C プログラムでは **、lgamma**は常に**二重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**lgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
-x が有理数の場合、この関数は(x - 1)の階乗の対数を返します。
+X が有理数の場合、この関数は (x-1) の階乗の対数を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**lγ**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**lgamma**、 **lgammaf**、 **lgammal**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

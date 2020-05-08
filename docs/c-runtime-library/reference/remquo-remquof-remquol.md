@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332841"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917823"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -60,32 +60,32 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>パラメーター
 
-*数字*<br/>
+*数値*<br/>
 分子。
 
-*デノム*<br/>
+*デ om*<br/>
 分母。
 
-*現状*<br/>
+*従来*<br/>
 符号と商の近似値を持つ値を格納する整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**remquo は** *x* / *y*の浮動小数点の剰余を返します。 *y*の値が 0.0 の場合 **、remquo は**静止 NaN を返します。 printf ファミリによる静かな NaN の表現については[、「printf、_printf_l、wprintf、_wprintf_l」](printf-printf-l-wprintf-wprintf-l.md)を参照してください。 **printf**
+その後、 *x* / *y*の浮動小数点の剰余**を返します**。 *Y*の値が0.0 の場合、 **Remquo** quiet NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**remquo**関数は*f**i*\**y**x* = *x* /  + *y の*浮動小数点剰余*f*を計算し *、i*は整数 *、f*は x と同じ*符号を持*ち *、f*の絶対値は*y*の絶対値より小さい。
+**Remquo** *は x* / *y* \* *y* *f*  + *f* *f* *x* *y* *i* *f* *i* *x* = の浮動小数点の剰余 f を計算します。ここで、i は整数、f は x と同じ符号、f の絶対値は y の絶対値よりも小さくなっています。
 
-C++ ではオーバーロードが可能なので **、float**または**long** **double**値を受け取って返す**remquo**のオーバーロードを呼び出すことができます。 C プログラムでは **、remquo**は常に 2 つの**二重**引数を取り、**倍精度浮動小数点数**を返します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を取得して返すように、 **remquo**オーバーロードを呼び出すことができます。 C プログラムでは、 **remquo**常に2つの**double**引数を受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
+|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
-|**レムクォー**,**レムクォーク** **, レムクォール**|\<math.h>|\<cmath> または \<math.h>|
+|**remquo** **remquof**、 **remquol**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350468"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919619"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -60,28 +60,28 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**asinh**関数は*x*の逆ハイベルボリックサイン (アーク双曲線正弦) を返します。 この関数は浮動小数点ドメインで有効です。 *x*が静かな NaN、無期限、または無限大の場合は、同じ値が返されます。
+**Asinh**関数は、 *x*の逆ハイパーボリックサイン (アークハイパーボリックサイン) を返します。 この関数は浮動小数点ドメインで有効です。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|none|none|
+|± QNAN、IND、INF|なし|なし|
 
 ## <a name="remarks"></a>解説
 
-C++ を使用すると **、float**または**long** **double**値を受け取って返す**asinh**のオーバーロードを呼び出すことができます。 C プログラムでは **、asinh は**常に二**重**を取り、返します。
+C++ を使用すると、 **float 型**または**long** **double**型の値を受け取って返す**asinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **asinh**は常にを受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須の C ヘッダー|必須の C++ ヘッダー|
+|関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|--------------|------------------|
-|**アシン**,**アシンフ**,**アシンル**|\<math.h>|\<cmath>\<または数学.h<|
+|**asinh**、 **asinhf**、 **asinhf**|\<math.h>|\<cmath> また\<は math. h<|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

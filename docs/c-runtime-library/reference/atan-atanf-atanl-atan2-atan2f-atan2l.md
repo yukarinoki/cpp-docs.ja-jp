@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334117"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920073"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-**x** (**atan**、 **atanf**、 **atanl 、 atanl**) のアークタンジェントまたは**y**/**x** ( atan2 、**atan2f**、および**atan2l**) のアークタンジェントを計算します。 **atan2f**
+**X**のアークタンジェント (**atan**、 **atanf**、 **atanl**)、または**y**/**x**のアークタンジェント (**atan2**、 **atan2f**、および**atan2l**) を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -77,34 +77,34 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*, *y*<br/>
+*x*、 *y*<br/>
 任意の数値。
 
 ## <a name="return-value"></a>戻り値
 
-**atan は**、-π/2 から π/2 ラジアンの範囲で*x*のアークタンジェントを返します。 **atan2 は**、-π から π ラジアンまでの範囲の*y*/*x*のアークタンジェントを返します。 *x*が 0 の場合 **、atan は**0 を返します。 **atan2**の両方のパラメーターが 0 の場合、関数は 0 を返します。 すべての結果はラジアンにあります。
+**atan**は、-π/2 ~ π/2 ラジアンの範囲の*x*のアークタンジェントを返します。 **atan2**は、-π ~ πラジアンの範囲で*y*/*x*のアークタンジェントを返します。 *X*が0の場合、 **atan**は0を返します。 **Atan2**の両方のパラメーターが0の場合、この関数は0を返します。 すべての結果はラジアンにあります。
 
-**atan2**は両方のパラメータの符号を使用して、戻り値の象限を決定します。
+**atan2**は、両方のパラメーターの符号を使用して、戻り値のクアドラントを決定します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN,IND** **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
 ## <a name="remarks"></a>解説
 
-**atan**関数は x のアークタンジェント (逆正接関数)*を計算*します。 **atan2**は*y*/*x*のアークタンジェントを計算します *(x*が 0 の場合 *、y*が正の場合は π/2、y が負の場合は -π/2、y が 0 の場合は 0 を返します)。 **atan2** *y* *y*
+**Atan**関数は、 *x*のアークタンジェント (逆タンジェント関数) を計算します。 **atan2**は、 *y*/*x*のアークタンジェントを計算します ( *x*が0の場合、 **atan2**は、 *y*が正の場合はπ/2、y が負*の場合は*-π/2、 *y*が0の場合は 0)。
 
-**atan**には、ストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**atan**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能なため **、float**引数または**長い****二重**引数を受け取る**atan**および**atan2**のオーバーロードを呼び出すことができます。 C プログラムでは **、atan**と**atan2**は常に**二重**引数を取り、**倍精度浮動小数点数**を返します。
+C++ ではオーバーロードが可能であるため、 **float**または**long** **double**引数を受け取る**atan**と**atan2**のオーバーロードを呼び出すことができます。 C プログラムでは、 **atan**と**atan2**は常に**2**つの引数を受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
-|**アタン**,**アタン2**,**アタンフ**, **atan2f**,**アタンル**, **atan2l**|\<math.h>|\<cmath> または \<math.h>|
+|**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> または \<math.h>|
 
 ## <a name="example"></a>例
 

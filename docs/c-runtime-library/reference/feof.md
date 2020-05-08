@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9ee085624be3c5613ac4b5e87965d47324727778
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347372"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920167"
 ---
 # <a name="feof"></a>feof
 
@@ -48,26 +48,26 @@ int feof(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-読み取り操作がファイルの終わりを超えて読み取ろうとした場合 **、feof**関数は 0 以外の値を返します。それ以外の場合は 0 を返します。 ストリーム ポインターが**NULL**の場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合 **、errno**は**EINVAL**に設定され **、feof**は 0 を戻します。
+**Feof**関数は、読み取り操作がファイルの末尾を越えて読み取ろうとした場合、0以外の値を返します。それ以外の場合は0を返します。 ストリームポインターが**NULL**の場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、 **feof**は0を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**feof**ルーチン (関数とマクロの両方として実装) は *、ストリーム*の終わりが渡されたかどうかを決定します。 ファイルの終わりを渡すと、読み取り操作は、ストリームが閉じられるまで、またはストリームに対して[巻き戻し](rewind.md) **、fsetpos** [、fseek、](fseek-fseeki64.md)または**clearerr**が呼び出されるまで、ファイルの終わりインジケーターを返します。
+**Feof**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*の末尾が渡されたかどうかを判断します。 ファイルの終わりが渡されると、読み取り操作は、ストリームが閉じられるか、または[rewind](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**が呼び出されるまで、ファイルの終端のインジケーターを返します。
 
-たとえば、ファイルに 10 バイトが含まれ、ファイルから 10 バイトを読み取った場合、ファイル ポインタがファイルの末尾にあるにもかかわらず、末尾を越えて読み取りを試みていないため **、feof**は 0 を返します。 11 バイト目を読み取って初めて**feof は**0 以外の値を返します。
+たとえば、ファイルに10バイトが含まれていて、ファイルから10バイトを読み取った場合、 **feof**は0を返します。これは、ファイルポインターがファイルの末尾にある場合でも、末尾を越えて読み取ろうとしていないためです。 11番目のバイトを読み取った後にのみ、 **feof**は0以外の値を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 

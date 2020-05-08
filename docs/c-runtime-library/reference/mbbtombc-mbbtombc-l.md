@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341426"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919602"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc、_mbbtombc_l
 
@@ -62,25 +62,25 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*C*<br/>
+*40u-c*<br/>
 変換する 1 バイト文字。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbbtombc**が c を変換すると *、* マルチバイト文字が返されます。それ以外の場合は*c*を返します。
+**_Mbbtombc**が*c*を正常に変換した場合は、マルチバイト文字を返します。それ以外の場合は、 *c*を返します。
 
 ## <a name="remarks"></a>解説
 
-**_mbbtombc**関数は、指定された 1 バイトマルチバイト文字を対応する 2 バイトマルチバイト文字に変換します。 変換する文字は、0x20 から 0x7E または 0xA1 から 0xDF の範囲内になければなりません。
+**_Mbbtombc**関数は、指定された1バイトのマルチバイト文字を対応する2バイトのマルチバイト文字に変換します。 変換する文字は、0x20 ~ 0x7E または 0xA1 ~ 0xDF の範囲内である必要があります。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリ設定の設定によって影響されます。詳細については[、setlocale を参照_wsetlocale。](setlocale-wsetlocale.md) この関数のバージョンは同じですが **、_mbbtombc**は現在のロケールをこのロケールに依存する動作に使用し、代わりに渡されたロケール パラメーターを使用 **_mbbtombc_l**点を除きます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数のバージョンは同じですが、 **_mbbtombc**は、このロケールに依存する動作に現在のロケールを使用し、 **_mbbtombc_l**渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは **、_mbbtombc**は **「半禅**」と名付けられました。 新しいコードの場合は **、_mbbtombc**を使用します。
+以前のバージョンでは、 **_mbbtombc**には**hantozen**という名前が付けられていました。 新しいコードの場合は、 **_mbbtombc**を使用します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: bfd339a38dd5df30ece72059525860603ee10748
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364185"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914209"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
 指定されたカウント内で文字数またはバイト数を返します。
 
 > [!IMPORTANT]
-> **_mbsnbcnt**、 **_mbsnbcnt_l** **、_mbsnccnt**、および **_mbsnccnt_l**は、 Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnbcnt**、 **_mbsnbcnt_l**、 **_mbsnccnt**、および **_mbsnccnt_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -105,32 +105,32 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 調査する文字列。
 
 *count*<br/>
-*str*で調べる文字数またはバイト数。
+*Str*で調べる文字数またはバイト数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbcnt**し **、_mbsnbcnt_l** str のマルチバイト文字の最初の*カウント*で見つかった*バイト数を*返します。 **_mbsnccnt**し **、_mbsnccnt_l** str の最初のバイト*数*で見つかった文字数*を返*します。 *str*の検査が完了する前に NULL 文字が検出された場合、NULL 文字の前に見つかったバイト数または文字数が戻されます。 *str*が*カウント*文字またはバイト数より少ない場合、文字列の文字数またはバイト数を返します。 *カウント*が 0 未満の場合は、0 を返します。 以前のバージョンでは、これらの関数には **、size_t**ではなく **、int**型の戻り値が含まれています。
+**_mbsnbcnt**と **_mbsnbcnt_l**は、 *str*のマルチバイト文字の最初の*カウント*で見つかったバイト数を返します。 **_mbsnccnt**と **_mbsnccnt_l**は、 *str**の最初のバイト数で*見つかった文字数を返します。 *Str*の検査が完了する前に null 文字が検出されると、null 文字の前に見つかったバイト数または文字数が返されます。 *Str*が*カウント*文字またはバイト数未満で構成されている場合は、文字列の文字数またはバイト数を返します。 *Count*が0未満の場合は、0を返します。 以前のバージョンでは、これらの関数には、 **size_t**ではなく**int**型の戻り値がありました。
 
-**_strncnt**は、1 バイト文字列*str*の最初の*カウント*バイトの文字数を返します。 **_wcsncnt**ワイド文字文字列*str*の最初の*カウント*ワイド文字の文字数を返します。
+**_strncnt**は、1バイトの文字列*str*の最初の*count*バイトの文字数を返します。 **_wcsncnt**は、ワイド文字列*str*の最初の文字*数*のワイド文字数を返します。
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbcnt**と **_mbsnbcnt_l**は、 str のマルチバイト文字の最初の*カウント*で見つかったバイト数を*カウント*します。 **_mbsnbcnt**と **_mbsnbcnt_l****はmtob**を置き換え **、mtob**の代わりに使用する必要があります。
+**_mbsnbcnt**と **_mbsnbcnt_l**は、 *str*のマルチバイト文字の最初の*カウント*で見つかったバイト数をカウントします。 **_mbsnbcnt**と **_mbsnbcnt_l**は**mtob**を置き換え、 **mtob**の代わりに使用する必要があります。
 
-**_mbsnccnt**と **_mbsnccnt_l**は、 *str*の最初のバイト*数*で見つかった文字数をカウントします。 **_mbsnccnt_mbsnccnt_l** 2 バイト文字の 2 番目のバイトでヌル文字**が検出されると**、最初のバイトも NULL と見なされ、戻り値には含まれません。 **_mbsnccnt**と **_mbsnccnt_l****はbtom**を置き換え **、btom**の代わりに使用する必要があります。
+**_mbsnccnt**と **_mbsnccnt_l**は、 *str**の最初のバイト数で*見つかった文字数をカウントします。 **_Mbsnccnt**と **_mbsnccnt_l**が2バイト文字の2番目のバイトで null 文字を検出した場合、最初のバイトも null と見なされ、返されたカウント値には含まれません。 **_mbsnccnt**と **_mbsnccnt_l**は**btom**の代わりに使用する必要が**あります**。
 
-*str*が**NULL**ポインターであるか、*カウント数*が 0 の場合、これらの関数は[、「パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラーを呼び出し **、errno**が**EINVAL**に設定され、関数は 0 を返します。
+*Str*が**NULL**ポインターまたは*count*が0の場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 **errno**は**EINVAL**に設定され、関数は0を返します。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

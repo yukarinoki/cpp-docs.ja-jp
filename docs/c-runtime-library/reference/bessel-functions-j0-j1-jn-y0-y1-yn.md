@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348661"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913473"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
@@ -86,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値。
 
 *n*<br/>
@@ -94,31 +94,31 @@ Bessel 系関数の整数順序。
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンは、*それぞれ x*の Bessel 関数を返します。 **_y0**、 **_y1**、または **_yn**関数で*x*が負の値の場合、ルーチンは**errno**を**EDOM**に設定し **、_DOMAIN**エラー メッセージを**stderr**に出力し、 **_HUGE_VAL**を返します。 エラー処理は **、_matherr**を使用して変更できます。
+これらの各ルーチンは、値が*x*のベッセル関数を返します。 **_Y0**、 **_y1**、または **_yn**関数で*x*が負の値に設定されている場合、ルーチンは**errno**を**EDOM**に設定し、 **_DOMAIN**エラーメッセージを**stderr**に出力して **_HUGE_VAL**を返します。 **_Matherr**を使用すると、エラー処理を変更できます。
 
 ## <a name="remarks"></a>解説
 
-**_j0** **、_j1、****および_jn**ルーチンは、最初の種類の Bessel 関数を返します。
+**_J0**、 **_j1**、および **_jn**ルーチンは、最初の種類のベッセル関数 (orders 0、1、n) を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN,IND** **IND**|**無効です**|**_DOMAIN**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
 
-**_y0**、 **_y1**、および **_yn**ルーチンは、2 番目の種類の Bessel 関数を返します。
+**_Y0**、 **_y1**、および **_yn**ルーチンでは、2番目の種類のベッセル関数 (orders 0、1、および n) が返されます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN,IND** **IND**|**無効です**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
+|±0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0.0|**無効です**|**_DOMAIN**|
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

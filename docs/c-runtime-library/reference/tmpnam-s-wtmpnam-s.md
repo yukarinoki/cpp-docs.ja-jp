@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362411"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917487"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s、_wtmpnam_s
 
@@ -70,10 +70,10 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 生成された名前を保持するポインター。
 
-*サイズインチャーズ*<br/>
+*sizeInChars*<br/>
 バッファーのサイズ (文字単位)。
 
 ## <a name="return-value"></a>戻り値
@@ -84,23 +84,23 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*Str*|*サイズインチャーズ*|**戻り値**|**str の内容***str*  |
-|**NULL**|any|**Einval**|変更されない|
-|**NULL**ではない (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
+|*引数*|*sizeInChars*|**戻り値**|*Str* **の内容**  |
+|**空白**|any|**EINVAL**|変更されない|
+|not **NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
-*str*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
+*Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s** [tmpnam_sGetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
+これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**は、 [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
 
-**tmpnam_s**の場合、この生成されたファイル名を*str*に格納できます。 **tmpnam_s**によって返される文字列の最大長は、stdio**で定義L_tmpnam_s。** H。 *str*が**NULL**の場合 **、tmpnam_s**結果は内部静的バッファーに残ります。 したがって後続の呼び出しは、この値を破棄します。 **tmpnam_s**によって生成される名前は、プログラム生成のファイル名と **、tmpnam_s**の最初の呼び出しの後に、STDIO で**TMP_MAX_S**すると、基本 32 (.1-.1vvvvvu) の連続番号のファイル拡張子で構成されます。H は**INT_MAX**です。
+**Tmpnam_s**には、この生成されたファイル名を*str*に格納できます。 **Tmpnam_s**によって返される文字列の最大長は、STDIO で定義された**L_tmpnam_s**です。始め. *Str*が**NULL**の場合、 **tmpnam_s**は結果を内部の静的バッファーに残します。 したがって後続の呼び出しは、この値を破棄します。 **Tmpnam_s**によって生成される名前は、プログラムによって生成されるファイル名で構成され、 **tmpnam_s**の最初の呼び出しの後に、STDIO で**TMP_MAX_S**ときに、ベース 32 (. 1. 1vvvvvu) の連続する番号のファイル拡張子です。H は**INT_MAX**)。
 
-**tmpnam_s**は、オペレーティング システムから取得した OEM コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてマルチバイト文字の文字列引数を自動的に処理します。 **_wtmpnam_s**はワイド文字の**tmpnam_s**です。**_wtmpnam_s**の引数と戻り値はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**は **、_wtmpnam_s**がマルチバイト文字文字列を処理しないことを除いて、同じように動作します。
+は、オペレーティングシステムから取得した OEM コードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **tmpnam_s** **_wtmpnam_s**は**tmpnam_s**のワイド文字バージョンです。**_wtmpnam_s**の引数と戻り値はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**は、 **_wtmpnam_s**がマルチバイト文字列を処理しない点を除き、同じように動作します。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
