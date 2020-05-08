@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: 22b8cebd0154c0dbfc3d21843380ebc9a139059a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fa6ec1f37703ce51e0c9c565d766c56cf164322
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910176"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -49,27 +49,27 @@ int fsetpos(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
-*pos*<br/>
+*po*<br/>
 位置インジケーターのストレージ。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合 **、fsetpos は**0 を返します。 失敗した場合、関数は 0 以外の値を返し **、errno**を次のマニフェスト定数 (ERRNO で定義) のいずれかに設定します。H): **EBADF**は、ファイルがアクセス不能であるか、*ストリーム*が指すオブジェクトが有効なファイル構造ではないことを意味します。または**EINVAL**は *、ストリーム*または*pos*に無効な値が渡されたことを意味します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効パラメーター ハンドラーを呼び出します。
+成功した場合、 **fsetpos**は0を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno**に次のマニフェスト定数のいずれかを設定します (errno に定義されています)。H): **EBADF**。ファイルにアクセスできないこと、または*ストリーム*が指すオブジェクトが有効なファイル構造ではないことを意味します。または**EINVAL**。*ストリーム*または*pos*の無効な値が渡されたことを意味します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効パラメーター ハンドラーを呼び出します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**fsetpos**関数は *、ストリーム*のファイル位置インジケーターを*pos*の**値に設定***します。* この関数は、ファイルの終わりインジケーターをクリアし、*ストリーム*に[対する ungetc](ungetc-ungetwc.md)の影響を元に消します。 **fsetpos**を呼び出した後、*ストリーム*の次の操作は入力または出力のいずれかになります。
+**Fsetpos**関数は *、ストリームの*ファイル位置インジケーターを*pos*の値に設定します。これは、*ストリーム*に対して**fgetpos**を呼び出す前の呼び出しで取得されます。 関数は、ファイルの終端のインジケーターをクリアし、*ストリーム*で[ungetc](ungetc-ungetwc.md)のすべての効果を元に戻します。 **Fsetpos**を呼び出した後、*ストリーム*に対する次の操作は、入力または出力のいずれかになります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**fsetpos**|\<stdio.h>|
 
