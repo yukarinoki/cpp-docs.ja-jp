@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333152"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914092"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -63,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 コピー先のオブジェクト。
 
-*要素の数*<br/>
+*numberOfElements*<br/>
 コピー先のバッファーのサイズ。
 
 *src*<br/>
 コピー元のオブジェクト。
 
 *count*<br/>
-コピーするバイト数 (**memmove_s**) または文字 (**wmemmove_s**) の数。
+コピーするバイト数 (**memmove_s**) または文字 (**wmemmove_s**)。
 
 ## <a name="return-value"></a>戻り値
 
@@ -78,19 +78,19 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*要素の数*|*src*|戻り値|*デスト*の内容|
+|*dest*|*numberOfElements*|*src*|戻り値|*Dest*の内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**Einval**|変更されない|
-|any|any|**NULL**|**Einval**|変更されない|
-|any|< *カウント*|any|**ERANGE**|変更されない|
+|**空白**|any|any|**EINVAL**|変更されない|
+|any|any|**空白**|**EINVAL**|変更されない|
+|any|< *数*|any|**ERANGE**|変更されない|
 
 ## <a name="remarks"></a>解説
 
-文字数*の*バイト数を*src*から*dest*にコピーします。 ソース領域とコピー先の領域の一部が重複している場合 **、memmove_s**は、オーバーラップ領域内の元のソース バイトが上書きされる前にコピーされることを確認します。
+*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複している場合、 **memmove_s**によって、重複する領域の元のソースバイトが上書きされる前にコピーされます。
 
-*dest*または*src*が null ポインターの場合、または変換先文字列が小さすぎる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
+*Dest*または*src*が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

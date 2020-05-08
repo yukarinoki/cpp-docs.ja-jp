@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81339020"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915532"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
-マルチバイト文字ストリングの最初の**n**バイトを、指定した文字に設定します。 これらのバージョンの [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
+マルチバイト文字列の最初の**n**バイトを、指定した文字に設定します。 これらのバージョンの [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -85,19 +85,19 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 変更対象の文字列。
 
-*サイズ*<br/>
+*size*<br/>
 文字列バッファーのサイズ。
 
-*C*<br/>
+*40u-c*<br/>
 1 バイトまたはマルチバイト文字の設定。
 
 *count*<br/>
 設定対象のバイト数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -106,19 +106,19 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbset_s**関数と **_mbsnbset_s_l**関数は、最大で*str*の最初の*カウント*バイトを c に設定*します*。 *count*が*str*の長さより大きい場合は *、count*の代わりに*str*の長さが使用されます。 *c*がマルチバイト文字で *、count*で指定された最後のバイトに完全に設定できない場合、最後のバイトにはブランク文字が埋め込まれます。 **_mbsnbset_s**と **_mbsnbset_s_l**は*str*の末尾に終端の null を置かない。
+**_Mbsnbset_s**関数と **_mbsnbset_s_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合は、最後のバイトに空白文字が埋め込まれます。 **_mbsnbset_s**と **_mbsnbset_s_l**では、 *str*の最後に終端の null を配置しません。
 
-**_mbsnbset_s**と **_mbsnbset_s_l****は、** *c*のカウント*文字ではなく**カウント*バイトを設定する点を除いて、 _mbsnset に似ています。
+**_mbsnbset_s**と **_mbsnbset_s_l**は **_mbsnset**に似*ています*が *、count の文字数*ではなく*count* bytes が設定されている点が異なります。
 
-*str*が**NULL**または*カウント*がゼロの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また *、c*が有効なマルチバイト文字でない場合は **、errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
+*Str*が**NULL**または*count*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また、 *c*が有効なマルチバイト文字でない場合は、 **errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリ設定の設定によって影響されます。詳細については[、setlocale を参照_wsetlocale。](setlocale-wsetlocale.md) この関数の **_mbsnbset_s**バージョンでは、このロケールに依存する動作に現在のロケールが使用されます。**_mbsnbset_s_l**バージョンは、渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbsnbset_s**バージョンは、このロケールに依存する動作に現在のロケールを使用します。**_mbsnbset_s_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

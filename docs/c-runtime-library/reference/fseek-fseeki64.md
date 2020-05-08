@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: e8f6021a0b770f6b435653c190d5968f9ac50a57
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9bfc9a575504d890d0021937713c720c4557441
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345764"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910188"
 ---
 # <a name="fseek-_fseeki64"></a>fseek、_fseeki64
 
@@ -62,50 +62,50 @@ int _fseeki64(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *offset*<br/>
 *配信元*からのバイト数。
 
-*起源*<br/>
+*発行*<br/>
 最初の位置。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合 **、fseek**と **_fseeki64**は 0 を返します。 それ以外の場合は、0 以外の値を返します。 シーク非対応のデバイスでは、戻り値は未定義です。 *stream*が null ポインターの場合、または*origin*が以下で説明する許可値の 1 つでない場合は **、fseek**と **_fseeki64**が無効なパラメーター ハンドラーを呼び[出します](../../c-runtime-library/parameter-validation.md)。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
+成功した場合、 **fseek**と **_fseeki64**は0を返します。 それ以外の場合は、0 以外の値を返します。 シーク非対応のデバイスでは、戻り値は未定義です。 *Stream*が null ポインターの場合、または*origin*が以下で説明する許可値のいずれでもない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **fseek**と **_fseeki64**によって無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**fseek**関数と **_fseeki64**関数は、*ストリーム*に関連付けられているファイル ポインタ (存在する場合) を *、起点*からの*オフセット*バイトの新しい位置に移動します。 ストリームの次の操作は、新しい場所で行われます。 更新用に開かれているストリームでの次の操作は読み取りまたは書き込みのいずれかです。 引数*の起点*は、STDIO で定義されている次のいずれかの定数でなければなりません。H：
+**Fseek**関数と **_fseeki64**関数は、*ストリーム*に関連付けられているファイルポインター (存在する場合) を、*原点*からの*オフセット*バイトである新しい場所に移動します。 ストリームの次の操作は、新しい場所で行われます。 更新用に開かれているストリームでの次の操作は読み取りまたは書き込みのいずれかです。 引数の*origin*は、STDIO で定義されている、次の定数のいずれかである必要があります。始め
 
-|起点値|意味|
+|配信元の値|説明|
 |-|-|
 | **SEEK_CUR** | ファイル ポインターの現在の位置。 |
 | **SEEK_END** | EOF (ファイル終端)。 |
 | **SEEK_SET** | ファイルの先頭。 |
 
-**fseek**と **_fseeki64**を使用すると、ファイル内の任意の場所でポインターを再配置できます。 ポインターは、ファイルの末尾を越えて配置することもできます。 **fseek**と **_fseeki64**はファイルの終わりインジケーターをクリアし、 *stream*に対する以前の[ungetc](ungetc-ungetwc.md)呼び出しの効果を否定します。
+**Fseek**と **_fseeki64**を使用すると、ファイル内の任意の場所にポインターを移動できます。 ポインターは、ファイルの末尾を越えて配置することもできます。 **fseek**と **_fseeki64**は、ファイルの終端のインジケーターをクリアし、*ストリーム*に対する以前の[ungetc](ungetc-ungetwc.md)呼び出しの効果を否定します。
 
 データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 追加のために開かれたファイルで I/O 操作がまだ発生していない場合、ファイルの位置はファイルの先頭です。
 
-テキスト モードで開かれたストリームの場合、復帰改行の変換によって fseek が発生し、**予期**しない結果が_fseeki64されるため **、fseek**と**fseek****_fseeki64**の使用は制限されます。 テキスト モードで開かれたストリームで動作することが保証されている**fseek**および **_fseeki64**操作は、次の場合のみです。
+テキストモードで開かれたストリームについては、 **fseek**と **_fseeki64**では使用が制限されています。これは、キャリッジリターンラインフィードの変換によって、 **fseek**および **_fseeki64**によって予期しない結果が生じる可能性があるためです。 テキストモードで開かれたストリームで動作することが保証される**fseek**操作と **_fseeki64**操作は次のとおりです。
 
 - 元の値のいずれかに対して相対的なオフセット 0 でシークします。
 
-- **fseek**を使用する場合は[ftell](ftell-ftelli64.md)の呼び出しから戻されるオフセット値を持つファイルの先頭からシークし **、_fseeki64**を使用する場合[は_ftelli64。](ftell-ftelli64.md)
+- **Fseek**または[_ftelli64](ftell-ftelli64.md)を使用するときに、 **_fseeki64**を使用するときに、 [ftell](ftell-ftelli64.md)の呼び出しから返されたオフセット値を使用して、ファイルの先頭からシークします。
 
-テキスト モードでも、Ctrl + Z は入力時に EOF (EOF: end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルでは[、fopen](fopen-wfopen.md)と関連するすべてのルーチンがファイルの末尾に Ctrl + Z があるかどうかをチェックし、可能であれば削除します。 これは **、fseek**と[ftell](ftell-ftelli64.md)**または**_fseeki64 と[_ftelli64](ftell-ftelli64.md)の組み合わせを使用して、Ctrl + Z で終わるファイル内を移動すると **、fseek**または **_fseeki64**がファイルの末尾付近で不適切に動作する可能性があるためです。
+テキスト モードでも、Ctrl + Z は入力時に EOF (EOF: end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルでは、 [fopen](fopen-wfopen.md)と関連するすべてのルーチンで、ファイルの末尾に CTRL + Z があるかどうかを確認し、可能であれば削除します。 これは、 **fseek**と[ftell](ftell-ftelli64.md)または **_fseeki64**と[_ftelli64](ftell-ftelli64.md)の組み合わせを使用して、CTRL + Z で終わるファイル内を移動すると、ファイルの末尾付近で**fseek**または **_fseeki64**が正しく動作しなくなる可能性があるためです。
 
-バイト オーダー マーク (BOM) で始まるファイルを CRT で開くときには、ファイル ポインターは BOM の後ろ (つまり、ファイルの実際のコンテンツの開始位置) に配置されます。 ファイルの先頭に**fseek**する必要がある場合は[、ftell](ftell-ftelli64.md)を使用して初期位置を取得し、fseek を使用して 0 を位置に入れるのではなく、ファイルに対して**fseek**を指定します。
+バイト オーダー マーク (BOM) で始まるファイルを CRT で開くときには、ファイル ポインターは BOM の後ろ (つまり、ファイルの実際のコンテンツの開始位置) に配置されます。 ファイルの先頭を**fseek**する必要がある場合は、 [ftell](ftell-ftelli64.md)を使用して最初の位置を取得し、0の位置ではなく**fseek**を使用します。
 
 この関数では、実行中に他のスレッドをロックするので、スレッド セーフです。 ロックしないバージョンについては、「[_fseek_nolock、_fseeki64_nolock](fseek-nolock-fseeki64-nolock.md)」を参照してください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**fseek**|\<stdio.h>|
 |**_fseeki64**|\<stdio.h>|
@@ -158,4 +158,4 @@ This is the file 'fseek.out'.
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [ftell、_ftelli64](ftell-ftelli64.md)<br/>
 [_lseek、_lseeki64](lseek-lseeki64.md)<br/>
-[巻き戻し](rewind.md)<br/>
+[巻き](rewind.md)<br/>

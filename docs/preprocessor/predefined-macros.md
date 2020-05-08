@@ -1,6 +1,6 @@
 ---
 title: 定義済みマクロ
-description: Microsoft C++コンパイラの定義済みプリプロセッサマクロについて説明します。
+description: Microsoft C++ コンパイラの定義済みプリプロセッサ マクロを一覧にして説明します。
 ms.custom: update_every_version
 ms.date: 11/20/2019
 f1_keywords:
@@ -227,22 +227,22 @@ no-loc:
 - __func__
 ms.openlocfilehash: 6da1ecd178c0bbeed3b741fb611571203d79cb76
 ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "79444942"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
-Microsoft C/C++コンパイラ (MSVC) は、言語 (C またはC++)、コンパイルターゲット、および選択されたコンパイラオプションに応じて、特定のプリプロセッサマクロを事前します。
+Microsoft C/C++ コンパイラ (MSVC) では、言語 (C または C++)、コンパイル ターゲット、および選択されたコンパイラ オプションに応じて、特定のプリプロセッサ マクロが事前定義されます。
 
-MSVC は、ANSI/ISO C99 標準および ISO C++ 14 および C++ 17 標準で必要とされる定義済みのプリプロセッサマクロをサポートしています。 実装では、いくつかの Microsoft 固有のプリプロセッサマクロもサポートされています。 一部のマクロは、特定のビルド環境またはコンパイラオプションに対してのみ定義されています。 メモしている場合を除き、マクロは、 **/d**コンパイラオプションの引数として指定されているかのように、翻訳単位全体を通じて定義されます。 定義されている場合、コンパイルの前にプリプロセッサによって、マクロが指定された値に拡張されます。 定義済みマクロは引数を取らず、再定義することはできません。
+MSVC では、ANSI/ISO C99 標準および ISO C++14 と C++17 標準で必要とされる定義済みプリプロセッサ マクロがサポートされています。 実装では、さらにいくつかの Microsoft 固有のプリプロセッサ マクロもサポートされています。 一部のマクロは、特定のビルド環境またはコンパイラ オプションに対してのみ定義されます。 特に明記されていない限り、マクロは **/D** コンパイラ オプションの引数として指定されているかのように、翻訳単位全体で定義されます。 マクロは定義されている場合、プリプロセッサによってコンパイルの前に、指定された値に展開されます。 定義済みマクロは引数を取らず、再定義することはできません。
 
 ## <a name="standard-predefined-identifier"></a>標準の定義済み識別子
 
-コンパイラは、ISO C99 および ISO C++ 11 によって指定された定義済みの識別子をサポートしています。
+コンパイラでは、ISO C99 および ISO C++11 によって指定されているこの定義済み識別子がサポートされています。
 
-- 外側の関数の修飾されていないと非修飾の名前を、 **char**の関数ローカルの**静的な定数**配列として `__func__` します。
+- `__func__` 関数ローカルの **char** の **static const** 配列としての、外側の関数の非修飾かつ非装飾の名前。
 
     ```cpp
     void example(){
@@ -252,47 +252,47 @@ MSVC は、ANSI/ISO C99 標準および ISO C++ 14 および C++ 17 標準で必
 
 ## <a name="standard-predefined-macros"></a>標準の定義済みマクロ
 
-コンパイラは、ISO C99 および ISO C++ 17 標準によって指定されたこれらの定義済みマクロをサポートしています。
+コンパイラでは、ISO C99 および ISO C++17 標準によって指定されているこれらの定義済みマクロがサポートされています。
 
-- 翻訳単位をとC++してコンパイルするときに整数リテラル値として定義さ `__cplusplus`。 それ以外の場合、定義されていません。
+- `__cplusplus` 翻訳単位が C++ としてコンパイルされるときに、整数リテラル値として定義されます。 それ以外の場合は、定義されません。
 
-- 現在のソースファイルのコンパイル日を `__DATE__` します。 日付は、 *Mmm dd yyyy*という形式の定数長の文字列リテラルです。 月の名前*Mmm*は、C ランタイムライブラリ (CRT) の[asctime](../c-runtime-library/reference/asctime-wasctime.md)関数によって生成される月の省略名と同じです。 日付*dd*の最初の文字は、値が10未満の場合は空白になります。 このマクロは常に定義します。
+- `__DATE__` 現在のソース ファイルのコンパイル日付。 日付は *Mmm dd yyyy* 形式の固定長の文字列リテラルです。 月の名前 *Mmm* は、C ランタイム ライブラリ (CRT) [asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数によって生成される省略形の月名と同じものです。 日付 *dd* の最初の文字は、値が 10 未満の場合は空白になります。 このマクロは常に定義されます。
 
-- 現在のソースファイルの名前 `__FILE__` ます。 `__FILE__` 文字列リテラルに展開されます。 ファイルへの完全パスが表示されるようにするには、 [/fc (診断でソースコードファイルの完全パス)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)を使用します。 このマクロは常に定義します。
+- `__FILE__` 現在のソース ファイルの名前。 `__FILE__` は文字の文字列リテラルに展開されます。 ファイルへの完全パスが表示されるようにするには、[/FC (診断時のソース コード ファイルの完全パス)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) を使用します。 このマクロは常に定義されます。
 
-- 現在のソースファイルの整数行番号として定義された `__LINE__` ます。 `__LINE__` マクロの値は、`#line` ディレクティブを使用して変更できます。 このマクロは常に定義します。
+- `__LINE__` 現在のソース ファイルの整数の行番号として定義されます。 `__LINE__` マクロの値は、`#line` ディレクティブを使用して変更できます。 このマクロは常に定義されます。
 
-- `__STDC__` C としてコンパイルされた場合にのみ1として定義され、 [/za](../build/reference/za-ze-disable-language-extensions.md)コンパイラオプションが指定されている場合はです。 それ以外の場合、定義されていません。
+- `__STDC__` C としてコンパイルされるときにのみ、[/Za](../build/reference/za-ze-disable-language-extensions.md) コンパイラ オプションが指定されている場合に 1 として定義されます。 それ以外の場合は、定義されません。
 
-- 実装が、必要な標準ライブラリ全体をサポートするホストされた*実装*である場合、`__STDC_HOSTED__` は1として定義されます。 それ以外の場合は0として定義されます。
+- `__STDC_HOSTED__` 実装が必要な標準ライブラリ全体をサポートする*ホストされた実装*である場合、1 として定義されます。 それ以外の場合は、0 として定義されます。
 
-- プログラムが1つ以上の実行スレッドを持つことができ、としてC++コンパイルできる場合にのみ、1として定義さ `__STDCPP_THREADS__` ます。 それ以外の場合、定義されていません。
+- `__STDCPP_THREADS__` プログラムが複数の実行スレッドを持つことができ、C++ としてコンパイルされる場合にのみ、1 として定義されます。 それ以外の場合は、定義されません。
 
-- 前処理された翻訳単位の変換時間を `__TIME__` します。 時刻は*hh: mm: ss*形式の文字列リテラルで、CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)関数によって返される時刻と同じです。 このマクロは常に定義します。
+- `__TIME__` 前処理された翻訳単位の翻訳時刻。 時刻は *hh: mm: ss* 形式の文字の文字列リテラルで、CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数から返される時刻と同じものです。 このマクロは常に定義されます。
 
 ## <a name="microsoft-specific-predefined-macros"></a>Microsoft 固有の定義済みマクロ
 
-MSVC では、これらの追加の定義済みマクロがサポートされます。
+MSVC では、次の定義済みマクロがサポートされます。
 
-- [/favor: ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__ATOM__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__ATOM__` [/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX](../build/reference/arch-x86.md)、 [/arch: AVX2](../build/reference/arch-x86.md) 、または[/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、`__AVX__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX__` [/arch:AVX](../build/reference/arch-x86.md)、[/arch:AVX2](../build/reference/arch-x86.md)、または [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX2](../build/reference/arch-x86.md)または[/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX2__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX2__` [/arch:AVX2](../build/reference/arch-x86.md) または [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX512BW__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX512BW__` [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX512CD__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX512CD__` [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX512DQ__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX512DQ__` [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX512F__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX512F__` [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定されており、コンパイラターゲットが x86 または x64 の場合、`__AVX512VL__` は1として定義されます。 それ以外の場合、定義されていません。
+- `__AVX512VL__` [/arch:AVX512](../build/reference/arch-x86.md) コンパイラ オプションが設定され、コンパイラ ターゲットが x86 または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- 既定の**char**型が符号なしの場合、`_CHAR_UNSIGNED` は1として定義されます。 この値が定義されているときに、 [/J (既定の char 型の unsigned)](../build/reference/j-default-char-type-is-unsigned.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- `_CHAR_UNSIGNED` 既定の **char** 型が unsigned の場合、1 として定義されます。 この値は、[/J (既定の char 型が unsigned)](../build/reference/j-default-char-type-is-unsigned.md) コンパイラ オプションが設定されている場合に定義されます。 それ以外の場合は、定義されません。
 
-- `__CLR_VER`、アプリのコンパイルに使用される共通言語ランタイム (CLR) のバージョンを表す整数リテラルとして定義されます。 値は`Mmmbbbbb`、と`mm` `M` いう`bbbbb`形式でエンコードされます。ここで、はランタイムのメジャーバージョン、はランタイムのマイナーバージョン、はビルド番号です。 [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションが設定されている場合、`__CLR_VER` が定義されます。 それ以外の場合、定義されていません。
+- `__CLR_VER` アプリのコンパイルに使用される共通言語ランタイム (CLR) のバージョンを表す整数リテラルとして定義されます。 値は `Mmmbbbbb` の形式でエンコードされます。`M` はランタイムのメジャー バージョン、`mm` はランタイムのマイナー バージョン、`bbbbb` はビルド番号です。 `__CLR_VER` は、[/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションが設定されている場合に定義されます。 それ以外の場合は、定義されません。
 
     ```cpp
     // clr_ver.cpp
@@ -303,11 +303,11 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
     }
     ```
 
-- [/ガード: cf (制御フローガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)コンパイラオプションが設定されている場合、`_CONTROL_FLOW_GUARD` は1として定義されます。 それ以外の場合、定義されていません。
+- `_CONTROL_FLOW_GUARD` [/guard:cf (制御フロー ガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `__COUNTER__` は、0から始まる整数リテラルに展開されます。 たびに、ソース ファイルで使用が含まれているソース ファイルのヘッダーまたは 1 で、値が増加します。 プリコンパイル済みヘッダーを使用すると、`__COUNTER__` はその状態を記憶します。 このマクロは常に定義します。
+- `__COUNTER__` 0 から始まる整数リテラルに展開されます。 ソース ファイルで使用されるか、ソース ファイルのヘッダーに追加されるたびに、値が 1 ずつ増えます。 `__COUNTER__` にはプリコンパイル済みヘッダーを使用するときのその状態が記憶されます。 このマクロは常に定義されます。
 
-  この例では、`__COUNTER__` を使用して、同じ型の3つの異なるオブジェクトに一意の識別子を割り当てます。 `exampleClass` コンストラクターは、パラメーターとして整数を受け取ります。 `main`では、アプリケーションは `__COUNTER__` を一意の識別子パラメーターとして使用して、`exampleClass`型の3つのオブジェクトを宣言します。
+  この例では、`__COUNTER__` を使用して、同じ型の 3 つの異なるオブジェクトに一意の識別子を割り当てます。 `exampleClass` コンストラクターは、パラメーターとして整数を受け取ります。 `main` で、アプリケーションは一意の識別子パラメーターとして `__COUNTER__` を使用して、`exampleClass` 型の 3 つのオブジェクトを宣言します。
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -349,7 +349,7 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
     }
     ```
 
-- としてコンパイルされ、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションがC++設定されている場合、`__cplusplus_cli` 整数リテラル値200406として定義されます。 それ以外の場合、定義されていません。 定義した場合、`__cplusplus_cli` は翻訳単位全体を通じて有効になります。
+- `__cplusplus_cli` C++ としてコンパイルされ、[/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションが設定されている場合、整数リテラル値 200406 として定義されます。 それ以外の場合は、定義されません。 `__cplusplus_cli`は定義される場合、翻訳単位全体で有効になります。
 
     ```cpp
     // cplusplus_cli.cpp
@@ -364,27 +364,27 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
     }
     ```
 
-- としてC++コンパイルされ、 [/ZW (Windows ランタイムコンパイル)](../build/reference/zw-windows-runtime-compilation.md)コンパイラオプションが設定されている場合、`__cplusplus_winrt` 整数リテラル値201009として定義されます。 それ以外の場合、定義されていません。
+- `__cplusplus_winrt` C++ としてコンパイルされ、[/ZW (Windows ランタイムのコンパイル)](../build/reference/zw-windows-runtime-compilation.md) コンパイラ オプションが設定されている場合、整数リテラル値 201009 として定義されます。 それ以外の場合は、定義されません。
 
-- [/gr (実行時の型情報の有効化)](../build/reference/gr-enable-run-time-type-information.md)コンパイラオプションが設定されている場合、`_CPPRTTI` は1として定義されます。 それ以外の場合、定義されていません。
+- `_CPPRTTI` [/GR (ランタイム型情報の有効化)](../build/reference/gr-enable-run-time-type-information.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- 1つ以上の[/gx (例外処理の有効化)](../build/reference/gx-enable-exception-handling.md)、 [/Clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)、または[/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラオプションが設定されている場合、`_CPPUNWIND` は1として定義されます。 それ以外の場合、定義されていません。
+- `_CPPUNWIND` [/GX (例外処理の有効化)](../build/reference/gx-enable-exception-handling.md)、[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)、または [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md) コンパイラ オプションが 1 つ以上設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_DEBUG` 1 として定義されている、 [/LDd](../build/reference/md-mt-ld-use-run-time-library.md)、[/MDd](../build/reference/md-mt-ld-use-run-time-library.md)、または [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- `_DEBUG` [/LDd](../build/reference/md-mt-ld-use-run-time-library.md)、[/MDd](../build/reference/md-mt-ld-use-run-time-library.md)、または [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/md](../build/reference/md-mt-ld-use-run-time-library.md)または[/Mdd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド DLL) コンパイラオプションが設定されている場合、`_DLL` は1として定義されます。 それ以外の場合、定義されていません。
+- `_DLL` [/MD](../build/reference/md-mt-ld-use-run-time-library.md) または [/MDd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド DLL) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `__FUNCDNAME__`、外側の関数の[装飾名](../build/reference/decorated-names.md)を格納する文字列リテラルとして定義されます。 マクロは、関数内でのみ定義されます。 [/Ep](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)または[/p](../build/reference/p-preprocess-to-a-file.md)コンパイラオプションを使用する場合、`__FUNCDNAME__` マクロは展開されません。
+- `__FUNCDNAME__` 外側の関数の[装飾名](../build/reference/decorated-names.md)を含む文字列リテラルとして定義されます。 このマクロは関数内でのみ定義されます。 [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) または [/P](../build/reference/p-preprocess-to-a-file.md) コンパイラ オプションを使用する場合、`__FUNCDNAME__` マクロは展開されません。
 
-   この例では、`__FUNCDNAME__`、`__FUNCSIG__`、および `__FUNCTION__` マクロを使用して、関数の情報を表示します。
+   この例では、`__FUNCDNAME__`、`__FUNCSIG__`、および `__FUNCTION__` マクロを使用して関数の情報を表示します。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- `__FUNCSIG__`、外側の関数のシグネチャを格納する文字列リテラルとして定義されます。 マクロは、関数内でのみ定義されます。 [/Ep](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)または[/p](../build/reference/p-preprocess-to-a-file.md)コンパイラオプションを使用する場合、`__FUNCSIG__` マクロは展開されません。 64ビットターゲット用にコンパイルされた場合、呼び出し規約は既定で `__cdecl` ます。 使用状況の例は、次を参照してください、`__FUNCDNAME__`マクロ。
+- `__FUNCSIG__` 外側の関数のシグネチャを含む文字列リテラルとして定義されます。 このマクロは関数内でのみ定義されます。 [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) または [/P](../build/reference/p-preprocess-to-a-file.md) コンパイラ オプションを使用する場合、`__FUNCSIG__` マクロは展開されません。 64 ビット ターゲット用にコンパイルされた場合、既定の呼び出し規則は `__cdecl` です。 使用例については、`__FUNCDNAME__` マクロを参照してください。
 
-- `__FUNCTION__`、外側の関数の非装飾名を含む文字列リテラルとして定義されます。 マクロは、関数内でのみ定義されます。 [/Ep](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)または[/p](../build/reference/p-preprocess-to-a-file.md)コンパイラオプションを使用する場合、`__FUNCTION__` マクロは展開されません。 使用状況の例は、次を参照してください、`__FUNCDNAME__`マクロ。
+- `__FUNCTION__` 外側の関数の非装飾名を含む文字列リテラルとして定義されます。 このマクロは関数内でのみ定義されます。 [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) または [/P](../build/reference/p-preprocess-to-a-file.md) コンパイラ オプションを使用する場合、`__FUNCTION__` マクロは展開されません。 使用例については、`__FUNCDNAME__` マクロを参照してください。
 
-- `_INTEGRAL_MAX_BITS` 整数リテラル値64として定義されます。これは、非ベクター整数型の最大サイズ (ビット単位) です。 このマクロは常に定義します。
+- `_INTEGRAL_MAX_BITS` 整数リテラル値 64 として定義されます。これは、非ベクター整数型の最大サイズ (ビット単位) です。 このマクロは常に定義されます。
 
    ```cpp
    // integral_max_bits.cpp
@@ -394,65 +394,65 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    }
    ```
 
-- IntelliSense コンパイラの実行中に1として定義された `__INTELLISENSE__` Visual Studio IDE に渡されます。 それ以外の場合、定義されていません。 このマクロを使用して、IntelliSense コンパイラで認識されないコードを保護したり、ビルドと IntelliSense のコンパイラを切り替えるために使用したりできます。 詳細については、「 [IntelliSense のパフォーマンス低下のトラブルシューティングのヒント](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)」を参照してください。
+- `__INTELLISENSE__` IntelliSense コンパイラから Visual Studio IDE に渡されるときに、1 として定義されます。 それ以外の場合は、定義されません。 このマクロを使用して、IntelliSense コンパイラで認識されないコードを保護したり、ビルドと IntelliSense コンパイラを切り替えるために使用したりできます。 詳細については、「[Troubleshooting Tips for IntelliSense Slowness](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)」 (IntelliSense のパフォーマンス低下のトラブルシューティングのヒント) を参照してください。
 
-- [/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラオプションが設定されている場合、`_ISO_VOLATILE` は1として定義されます。 それ以外の場合、定義されていません。
+- `_ISO_VOLATILE` [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/kernel (カーネルモードバイナリの作成)](../build/reference/kernel-create-kernel-mode-binary.md)コンパイラオプションが設定されている場合、`_KERNEL_MODE` は1として定義されます。 それ以外の場合、定義されていません。
+- `_KERNEL_MODE` [/kernel (カーネル モード バイナリの作成)](../build/reference/kernel-create-kernel-mode-binary.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_AMD64` x64 プロセッサを対象とするコンパイルの整数リテラル値100として定義されます。 それ以外の場合、定義されていません。
+- `_M_AMD64` x64 プロセッサをターゲットとするコンパイルの場合、整数リテラル値 100 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_ARM` ARM プロセッサを対象とするコンパイルの整数リテラル値7として定義されます。 それ以外の場合、定義されていません。
+- `_M_ARM` ARM プロセッサをターゲットとするコンパイルの場合、整数リテラル値 7 として定義されます。 それ以外の場合は、定義されません。
 
-- [ARMv7VE](../build/reference/arch-arm.md)コンパイラオプションが ARM プロセッサを対象とするコンパイルに対して設定されている場合、`_M_ARM_ARMV7VE` は1として定義されます。 それ以外の場合、定義されていません。
+- `_M_ARM_ARMV7VE` ARM プロセッサをターゲットとするコンパイルに対して [/arch:ARMv7VE](../build/reference/arch-arm.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_ARM_FP` ARM プロセッサターゲットに設定されている[/arch](../build/reference/arch-arm.md)コンパイラオプションを示す整数リテラル値として定義されます。 それ以外の場合、定義されていません。
+- `_M_ARM_FP` ARM プロセッサ ターゲットに対してどの [/arch](../build/reference/arch-arm.md) コンパイラ オプションが設定されたかを示す整数リテラル値として定義されます。 それ以外の場合は、定義されません。
 
-  - `/arch` ARM オプションが指定されていない場合は30-39 の範囲の値。 ARM の既定のアーキテクチャ (`VFPv3`) が設定されていることを示します。
+  - `/arch` ARM オプションが指定されていない場合は 30 から 39 の範囲の値。ARM の既定のアーキテクチャ (`VFPv3`) が設定されていることを示します。
 
-  - `/arch:VFPv4` が設定されている場合は、40-49 の範囲の値。
+  - `/arch:VFPv4` が設定されている場合は、40 から 49 の範囲の値。
 
-  - 詳細については、[/arch (ARM)](../build/reference/arch-arm.md)を参照してください。
+  - 詳細については、「[/arch (ARM)](../build/reference/arch-arm.md)」を参照してください。
 
-- 64ビット ARM プロセッサを対象とするコンパイルの場合は、1として定義さ `_M_ARM64` ます。 それ以外の場合、定義されていません。
+- `_M_ARM64` 64 ビットの ARM プロセッサがターゲットのコンパイルの場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_CEE` [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションが設定されている場合は、001として定義されます。 それ以外の場合、定義されていません。
+- `_M_CEE` [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションのいずれかが設定されている場合、001 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_CEE_PURE` Visual Studio 2015 以降では非推奨とされます。 場合は 001 として定義されている、 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- `_M_CEE_PURE` Visual Studio 2015 以降、非推奨となりました。 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションが設定されている場合、001 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_CEE_SAFE` Visual Studio 2015 以降では非推奨とされます。 場合は 001 として定義されている、 [/clr:safe](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- `_M_CEE_SAFE` Visual Studio 2015 以降、非推奨となりました。 [/clr:safe](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションが設定されている場合、001 として定義されます。 それ以外の場合は、定義されません。
 
-- [/fp: except](../build/reference/fp-specify-floating-point-behavior.md)または[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)コンパイラオプションが設定されている場合、`_M_FP_EXCEPT` は1として定義されます。 それ以外の場合、定義されていません。
+- `_M_FP_EXCEPT` [/fp:except](../build/reference/fp-specify-floating-point-behavior.md) または [/fp:strict](../build/reference/fp-specify-floating-point-behavior.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md)コンパイラオプションが設定されている場合、`_M_FP_FAST` は1として定義されます。 それ以外の場合、定義されていません。
+- `_M_FP_FAST` [/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/fp: 精密](../build/reference/fp-specify-floating-point-behavior.md)コンパイラオプションが設定されている場合、`_M_FP_PRECISE` は1として定義されます。 それ以外の場合、定義されていません。
+- `_M_FP_PRECISE` [//fp:precise](../build/reference/fp-specify-floating-point-behavior.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)コンパイラオプションが設定されている場合、`_M_FP_STRICT` は1として定義されます。 それ以外の場合、定義されていません。
+- `_M_FP_STRICT` [/fp:strict](../build/reference/fp-specify-floating-point-behavior.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_M_IX86`、x86 プロセッサを対象とするコンパイルの整数リテラル値600として定義されます。 このマクロは、x64、または ARM コンパイル ターゲット定義されていません。
+- `_M_IX86` x86 プロセッサをターゲットとするコンパイルの場合、整数リテラル値 600 として定義されます。 このマクロは、x64 または ARM コンパイル ターゲットに対しては定義されません。
 
-- `_M_IX86_FP` 設定されている[/arch](../build/reference/arch-arm.md)コンパイラオプションまたは既定値を示す整数リテラル値として定義されます。 コンパイル ターゲットが x86 の場合このマクロが常に定義されているプロセッサ。 それ以外の場合、定義されていません。 定義されているときに、値には。
+- `_M_IX86_FP` 設定された [/arch](../build/reference/arch-arm.md) コンパイラ オプション、または既定値を示す整数リテラル値として定義されます。 このマクロは、コンパイル ターゲットが x86 プロセッサの場合に常に定義されます。 それ以外の場合は、定義されません。 定義される場合、値は次のとおりです。
 
-  - `/arch:IA32` コンパイラオプションが設定されている場合は0。
+  - `/arch:IA32` コンパイラ オプションが設定されている場合、0。
 
-  - `/arch:SSE` コンパイラオプションが設定されている場合は1。
+  - `/arch:SSE` コンパイラ オプションが設定されている場合、1。
 
-  - `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`、または `/arch:AVX512` コンパイラオプションが設定されている場合は2。 この値は、`/arch` コンパイラオプションが指定されていない場合の既定値です。 `/arch:AVX` が指定されている場合、マクロ `__AVX__` も定義されます。 `/arch:AVX2` が指定されている場合、`__AVX__` と `__AVX2__` の両方も定義されます。 `/arch:AVX512` が指定されている場合、`__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__`、`__AVX512VL__` も定義されます。
+  - `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`、または `/arch:AVX512` コンパイラ オプションが設定されている場合、2。 この値は、`/arch` コンパイラ オプションが指定されていない場合の既定値です。 `/arch:AVX` が指定されている場合、マクロ `__AVX__` も定義されます。 `/arch:AVX2` が指定されている場合、`__AVX__` と `__AVX2__` の両方も定義されます。 `/arch:AVX512` が指定されている場合、`__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__`、`__AVX512VL__` も定義されます。
 
   - 詳細については、「[/arch (x86)](../build/reference/arch-x86.md)」を参照してください。
 
-- `_M_X64` x64 プロセッサを対象とするコンパイルの整数リテラル値100として定義されます。 それ以外の場合、定義されていません。
+- `_M_X64` x64 プロセッサをターゲットとするコンパイルの場合、整数リテラル値 100 として定義されます。 それ以外の場合は、定義されません。
 
-- [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションが設定されている場合、`_MANAGED` は1として定義されます。 それ以外の場合、定義されていません。
+- `_MANAGED` [/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_MSC_BUILD`、コンパイラのバージョン番号のリビジョン番号要素を含む整数リテラルとして定義されます。 リビジョン番号は、ピリオド区切りのバージョン番号の 4 番目の要素です。 たとえば、Microsoft C/C++コンパイラのバージョン番号が15.00.20706.01 ある場合の場合、`_MSC_BUILD` マクロは1と評価されます。 このマクロは常に定義します。
+- `_MSC_BUILD` コンパイラのバージョン番号のリビジョン番号要素を含む整数リテラルとして定義されます。 リビジョン番号は、ピリオド区切りのバージョン番号の 4 番目の要素です。 たとえば、Microsoft C/C++ コンパイラのバージョン番号が 15.00.20706.01 の場合、`_MSC_BUILD` マクロは 1 に評価されます。 このマクロは常に定義されます。
 
-- 既定の[/ze (Enable Language extension)](../build/reference/za-ze-disable-language-extensions.md)コンパイラオプションが設定されている場合、`_MSC_EXTENSIONS` は1として定義されます。 それ以外の場合、定義されていません。
+- `_MSC_EXTENSIONS` 既定でオンの [/Ze (言語拡張機能を有効にする)](../build/reference/za-ze-disable-language-extensions.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- コンパイラのバージョン番号のメジャー、マイナー、およびビルド番号要素をエンコードする整数リテラルとして定義された `_MSC_FULL_VER`。 メジャー番号はピリオド区切りのバージョン番号の最初の要素、マイナー番号が 2 番目の要素、およびビルド番号が 3 番目の要素。 たとえば、Microsoft C/C++コンパイラのバージョン番号が15.00.20706.01 ある場合の場合、`_MSC_FULL_VER` マクロは150020706と評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
+- `_MSC_FULL_VER` コンパイラのバージョン番号のメジャー、マイナー、およびビルド番号要素をエンコードする整数リテラルとして定義されます。 メジャー番号はピリオド区切りのバージョン番号の最初の要素、マイナー番号は 2 番目の要素、ビルド番号は 3 番目の要素です。 たとえば、Microsoft C/C++ コンパイラのバージョン番号が 15.00.20706.01 の場合、`_MSC_FULL_VER` マクロは 150020706 に評価されます。 コマンド ラインで「`cl /?`」と入力すると、コンパイラのバージョン番号が表示されます。 このマクロは常に定義されます。
 
-- コンパイラのバージョン番号のメジャー要素とマイナー番号要素をエンコードする整数リテラルとして定義された `_MSC_VER`。 メジャー番号はピリオド区切りのバージョン番号の最初の要素と、マイナー番号は 2 番目の要素。 たとえば、Microsoft C/C++コンパイラのバージョン番号が17.00.51106.1 の場合、`_MSC_VER` マクロは1700と評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
+- `_MSC_VER` コンパイラのバージョン番号のメジャーおよびマイナー番号要素をエンコードする整数リテラルとして定義されます。 メジャー番号はピリオド区切りのバージョン番号の最初の要素、マイナー番号は 2 番目の要素です。 たとえば、Microsoft C/C++ コンパイラのバージョン番号が 17.00.51106.1 の場合、`_MSC_VER` マクロは 1700 に評価されます。 コマンド ラインで「`cl /?`」と入力すると、コンパイラのバージョン番号が表示されます。 このマクロは常に定義されます。
 
    |Visual Studio のバージョン|`_MSC_VER`|
    |-|-|
@@ -475,12 +475,12 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    |Visual Studio 2019 RTW (16.0)|1920|
    |Visual Studio 2019 バージョン 16.1|1921|
    |Visual Studio 2019 バージョン 16.2|1922|
-   |Visual Studio 2019 バージョン16.3|1923|
-   |Visual Studio 2019 バージョン16.4|1924|
-   |Visual Studio 2019 バージョン16.5|1925|
-   |Visual Studio 2019 バージョン16.6|1926|
+   |Visual Studio 2019 バージョン 16.3|1923|
+   |Visual Studio 2019 バージョン 16.4|1924|
+   |Visual Studio 2019 バージョン 16.5|1925|
+   |Visual Studio 2019 バージョン 16.6|1926|
 
-   特定のバージョンの Visual Studio またはその後に、コンパイラのリリースまたは更新プログラムをテストするには、`>=` 演算子を使用します。 条件付きディレクティブで使用して、その既知のバージョンとの `_MSC_VER` を比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較します。 たとえば、このコードは Visual Studio 2017 以降でリリースされたコンパイラをチェックします。 次に、Visual Studio 2015 以降でリリースされたコンパイラがあるかどうかを確認します。 次に、Visual Studio 2015 より前にリリースされたすべてのコンパイラがあるかどうかを確認します。
+   特定のバージョン以降の Visual Studio でコンパイラのリリースまたは更新プログラムをテストするには、`>=` 演算子を使用します。 条件付きディレクティブで使用して、その既知のバージョンに対して `_MSC_VER` を比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較を行います。 たとえば、このコードでは Visual Studio 2017 以降でリリースされたコンパイラがチェックされます。 次に、Visual Studio 2015 以降でリリースされたコンパイラがチェックされます。 その後、Visual Studio 2015 より前にリリースされたすべてのコンパイラがチェックされます。
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -492,13 +492,13 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    #endif
    ```
 
-   詳細については、Microsoft C++チームブログの「 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) 」を参照してください。
+   詳細については、Microsoft C++ チームのブログ「[Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)」 (Visual C++ コンパイラのバージョン) を参照してください。
 
-- `_MSVC_LANG`、コンパイラが対象とC++する言語標準を指定する整数リテラルとして定義されます。 C++ としてコンパイルされたコードでのみ設定されます。 マクロは、整数リテラル 201402 L を既定では、値とき、または、 [/std:c++14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 場合 201703 L にマクロが設定されて、 [/std:c++17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 高い、指定されていない値に設定されているときに、 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)オプションを指定します。 それ以外の場合、マクロは定義されません。 `_MSVC_LANG` マクロと、 [(言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラオプションは、Visual Studio 2015 Update 3 以降で使用できます。
+- `_MSVC_LANG` コンパイラのターゲットである C++ 言語標準を指定する整数リテラルとして定義されます。 これは、C++ としてコンパイルされたコードでのみ設定されます。 マクロは、既定では、または [/std:c++14](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが指定されている場合は、整数リテラル値 201402L です。 [/std:c++17](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが指定されている場合は、マクロは 201703L に設定されます。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) オプションが指定されている場合は、より大きい、未指定の値に設定されます。 それ以外の場合は、マクロは定義されません。 `_MSVC_LANG` マクロと [/std (言語の標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションは、Visual Studio 2015 Update 3 以降で使用できます。
 
-- [/rtc](../build/reference/rtc-run-time-error-checks.md)コンパイラオプションのいずれかが設定されている場合、`__MSVC_RUNTIME_CHECKS` は1として定義されます。 それ以外の場合、定義されていません。
+- `__MSVC_RUNTIME_CHECKS` [/RTC](../build/reference/rtc-run-time-error-checks.md) コンパイラ オプションのいずれかが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- プリプロセッサ準拠モード[/実験的: プリプロセッサ](../build/reference/experimental-preprocessor.md)コンパイラオプションが設定されている場合、`_MSVC_TRADITIONAL` は0として定義されます。 既定では1として定義されます。または、 [/実験的: プリ](../build/reference/experimental-preprocessor.md)プロセッサコンパイラオプションが設定されている場合は、従来のプリプロセッサが使用されていることを示します。 `_MSVC_TRADITIONAL` マクロと[/実験的: プリプロセッサ (プリプロセッサ準拠モードの有効化)](../build/reference/experimental-preprocessor.md)コンパイラオプションは、Visual Studio 2017 バージョン15.8 以降で使用できます。
+- `_MSVC_TRADITIONAL` プリプロセッサ準拠モード[/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ オプションが設定されている場合、0 として定義されます。 既定では、または [/experimental:preprocessor-](../build/reference/experimental-preprocessor.md) コンパイラ オプションが設定されている場合は、1 として定義されます。これは、従来のプリプロセッサが使用されていることを示します。 `_MSVC_TRADITIONAL` マクロと [/experimental:preprocessor (プリプロセッサ準拠モードの有効化)](../build/reference/experimental-preprocessor.md) コンパイラ オプションは、Visual Studio 2017 バージョン 15.8 以降で使用できます。
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -508,11 +508,11 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    #endif
    ```
 
-- [/md または/mdd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド DLL) または[/Mt または/MTd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド) が指定されている場合、`_MT` は1として定義されます。 それ以外の場合、定義されていません。
+- `_MT` [/MD または /MDd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド DLL)、あるいは [/MT または /MTd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチスレッド) が指定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラオプションが設定されている場合、`_NATIVE_WCHAR_T_DEFINED` は1として定義されます。 それ以外の場合、定義されていません。
+- `_NATIVE_WCHAR_T_DEFINED` [/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- [/openmp (openmp 2.0 のサポートを有効にする)](../build/reference/openmp-enable-openmp-2-0-support.md)コンパイラオプションが設定されている場合、`_OPENMP` は整数リテラル200203として定義されます。 この値は、MSVC によって実装される OpenMP 仕様の日付を表します。 それ以外の場合、定義されていません。
+- `_OPENMP` [/openmp (OpenMP 2.0 サポートの有効化)](../build/reference/openmp-enable-openmp-2-0-support.md) コンパイラ オプションが設定されている場合、整数リテラル 200203 として定義されます。 この値は、MSVC によって実装される OpenMP 仕様の日付を表します。 それ以外の場合は、定義されません。
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -523,28 +523,28 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    }
    ```
 
-- [/analyze](../build/reference/analyze-code-analysis.md)コンパイラオプションが設定されている場合、`_PREFAST_` は1として定義されます。 それ以外の場合、定義されていません。
+- `_PREFAST_` [/analyze](../build/reference/analyze-code-analysis.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `__TIMESTAMP__` は、現在のソースファイルが最後に変更された日時を含む文字列リテラルとして定義されます。これには、`Fri 19 Aug 13:32:58 2016`のように、CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)関数によって返される、省略形の定数長が含まれます。 このマクロは常に定義します。
+- `__TIMESTAMP__` 現在のソース ファイルが最後に変更された日時を格納する文字列リテラルとして定義されます。CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数から返される省略形の固定長の形式です (例: `Fri 19 Aug 13:32:58 2016`)。 このマクロは常に定義されます。
 
-- [/zl (既定のライブラリ名の省略)](../build/reference/zl-omit-default-library-name.md)コンパイラオプションが設定されている場合、`_VC_NODEFAULTLIB` は1と定義されます。 それ以外の場合、定義されていません。
+- `_VC_NODEFAULTLIB` [/Zl (既定のライブラリ名の省略)](../build/reference/zl-omit-default-library-name.md) コンパイラ オプションが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- 既定の[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラオプションが設定されている場合、`_WCHAR_T_DEFINED` は1として定義されます。 `_WCHAR_T_DEFINED` マクロは定義されていますが、`/Zc:wchar_t-` コンパイラオプションが設定されていて**wchar_t**がプロジェクトに含まれるシステムヘッダーファイルで定義されている場合は、値がありません。 それ以外の場合、定義されていません。
+- `_WCHAR_T_DEFINED` 既定の [/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) コンパイラ オプションが設定されている場合、1 として定義されます。 `_WCHAR_T_DEFINED` マクロは定義されますが、`/Zc:wchar_t-` コンパイラ オプションが設定されていて、**wchar_t** がプロジェクトに含まれるシステム ヘッダー ファイルで定義されている場合は、値がありません。 それ以外の場合は、定義されません。
 
-- コンパイルターゲットが 32-bit ARM、64-bit ARM、x86、または x64 の場合、`_WIN32` は1として定義されます。 それ以外の場合、定義されていません。
+- `_WIN32` コンパイル ターゲットが 32 ビットの ARM、64 ビットの ARM、x86、または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- コンパイルターゲットが64ビット ARM または x64 の場合、`_WIN64` は1として定義されます。 それ以外の場合、定義されていません。
+- `_WIN64` コンパイル ターゲットが 64 ビットの ARM または x64 の場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- としてC++コンパイルされ、 [/ZW (Windows ランタイムコンパイル)](../build/reference/zw-windows-runtime-compilation.md)と[/ld または/LDd](../build/reference/md-mt-ld-use-run-time-library.md)コンパイラオプションの両方が設定されている場合、`_WINRT_DLL` は1として定義されます。 それ以外の場合、定義されていません。
+- `_WINRT_DLL` C++ としてコンパイルされ、[/ZW (Windows ランタイム コンパイル)](../build/reference/zw-windows-runtime-compilation.md) および [または](../build/reference/md-mt-ld-use-run-time-library.md) コンパイラ オプションの両方が設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-ATL または MFC ライブラリのバージョンを識別するプリプロセッサマクロは、コンパイラによって事前に定義されていません。 ATL および MFC ライブラリヘッダーは、これらのバージョンマクロを内部で定義します。 必須のヘッダーが含まれる前に作成されたプリプロセッサディレクティブには定義されていません。
+ATL または MFC ライブラリのバージョンを識別するプリプロセッサ マクロは、コンパイラによって事前に定義されません。 ATL および MFC ライブラリ ヘッダーにより、これらのバージョン マクロは内部で定義されます。 必須のヘッダーが含まれる前に作成されたプリプロセッサ ディレクティブには定義されません。
 
-- \<atldef. h > で定義されている `_ATL_VER`、ATL のバージョン番号をエンコードする整数リテラルとしてます。
+- `_ATL_VER` ATL バージョン番号をエンコードする整数リテラルとして、\< で定義されます。
 
-- \<afxver_ > で定義されている `_MFC_VER`、MFC のバージョン番号をエンコードする整数リテラルとして指定します。
+- `_MFC_VER` MFC のバージョン番号をエンコードする整数リテラルとして、\< で定義されます。
 
 ## <a name="see-also"></a>関連項目
 
 [マクロ (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)<br/>
-[プリプロセッサディレクティブ](../preprocessor/preprocessor-directives.md)
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

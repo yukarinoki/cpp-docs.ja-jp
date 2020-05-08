@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912102"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -66,28 +66,28 @@ long double cbrtl(
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 浮動小数点値
 
 ## <a name="return-value"></a>戻り値
 
-**cbrt**関数は *、 x*のキューブルートを返します。
+**Cbrt**関数は、 *x*の cube ルートを返します。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|none|
+|± ∞、QNAN、IND|なし|なし|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なため **、float**型または**長い****ダブル**型を使用する**cbrt**のオーバーロードを呼び出すことができます。 C プログラムでは **、cbrt**は常に二**重**を取り、戻します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**cbrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cbrt**は常にを受け取り、 **double**を返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**、 **cbrtf**、 **cbrtf**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

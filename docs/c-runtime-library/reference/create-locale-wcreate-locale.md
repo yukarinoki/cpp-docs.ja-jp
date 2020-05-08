@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 611eaf342776b9a0f57c4f55c52a841c3fd13fb5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348253"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912089"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale、_wcreate_locale
 
@@ -60,44 +60,44 @@ _locale_t _wcreate_locale(
 
 ### <a name="parameters"></a>パラメーター
 
-*カテゴリ*<br/>
+*category*<br/>
 カテゴリ。
 
-*ロケール*<br/>
+*locale*<br/>
 ロケールの指定子。
 
 ## <a name="return-value"></a>戻り値
 
-有効な*ロケール*と*カテゴリ*が指定されている場合、指定されたロケール設定を **_locale_t**オブジェクトとして返します。 プログラムの現在のロケール設定は変更されません。
+有効な*ロケール*と*カテゴリ*が指定されている場合、は、指定されたロケール設定を **_locale_t**オブジェクトとして返します。 プログラムの現在のロケール設定は変更されません。
 
 ## <a name="remarks"></a>解説
 
-**_create_locale**関数を使用すると、多くの CRT 関数 **(_l**サフィックスを持つ関数) のロケール固有のバージョンで使用するために、特定の地域固有の設定を表すオブジェクトを作成できます。 この動作は**setlocale**に似ていますが、指定したロケール設定を現在の環境に適用する代わりに、設定が返される **_locale_t**構造に保存されます。 **_locale_t**構造は、不要になった[時点で_free_locale](free-locale.md)を使用して解放する必要があります。
+**_Create_locale**関数を使用すると、特定の地域固有の設定を表すオブジェクトを作成できます。これは、多くの CRT 関数のロケール固有のバージョン ( **_l**サフィックスを持つ関数) で使用します。 動作は**setlocale**に似ていますが、指定されたロケール設定を現在の環境に適用するのではなく、設定が返される **_locale_t**構造に保存される点が異なります。 **_Locale_t**構造体は、不要になったときに[_free_locale](free-locale.md)を使用して解放する必要があります。
 
-**_wcreate_locale**はワイド文字の **_create_locale**です。**_wcreate_locale**する*ロケール*引数はワイド文字ストリングです。 **_wcreate_locale**と **_create_locale**は同じように動作します。
+**_wcreate_locale**は **_create_locale**のワイド文字バージョンです。**_wcreate_locale**する*locale*引数は、ワイド文字列です。 **_wcreate_locale**と **_create_locale**は同じように動作します。
 
-*category*引数は、影響を受けるロケール固有の動作の部分を指定します。 *カテゴリ*に使用されるフラグと、それらが影響を与えるプログラムの部分は、次の表に示されています。
+*Category*引数は、影響を受けるロケール固有の動作の部分を指定します。 *Category*に使用されるフラグと、影響を与えるプログラムの部分は、次の表のようになります。
 
 | *カテゴリ*フラグ | 影響 |
 |-----------------|---------|
-| **Lc_all** |次に示すように、すべてのカテゴリです。 |
-| **LC_COLLATE** |**strcoll**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 _strnicoll 、 **_wcsncoll**、 **_wcsnicoll**、 および**wcsxfrm**関数。 **_wcsncoll** |
-| **LC_CTYPE** | 文字処理関数 **(isdigit** **、isxdigit** **、mbstowcs**、**および mbtowc**を除く) |
-| **LC_MONETARY** | **localeconv**関数によって返される通貨フォーマット情報。 |
-| **LC_NUMERIC** | フォーマット済み出力ルーチン **(printf**など) の小数点文字 (データ変換ルーチン、および**localeconv**によって返される非金銭的なフォーマット情報)。 小数点文字に加えて **、LC_NUMERIC**は、桁区切り記号と[localeconv](localeconv.md)によって返されるグループ化制御文字列を設定します。 |
-| **LC_TIME** | **strftime**関数と**wcsftime**関数。 |
+| **LC_ALL** |次に示すように、すべてのカテゴリです。 |
+| **LC_COLLATE** |**Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**の各関数。 |
+| **LC_CTYPE** | 文字処理関数 (影響を受けない**isdigit**、 **isxdigit**、 **mbstowcs**、および**mbtowc**を除く)。 |
+| **LC_MONETARY** | **Localeconv**関数によって返される通貨書式情報。 |
+| **LC_NUMERIC** | 書式設定された出力ルーチン ( **printf**など) の場合は小数点文字、データ変換ルーチンの場合は、 **localeconv**によって返される通貨以外の書式設定情報の場合は。 小数点文字に加えて、 **LC_NUMERIC**桁区切り記号と、 [localeconv](localeconv.md)によって返されるグループ化コントロール文字列を設定します。 |
+| **LC_TIME** | **Strftime**関数と**wcsftime**関数。 |
 
-この関数は、*カテゴリ*と*ロケール*のパラメーターを検証します。 カテゴリ パラメータが前の表で指定された値の 1 つでない場合、または*locale*が**NULL**の場合、関数は**NULL**を返します。
+この関数は、 *category*および*locale*パラメーターを検証します。 Category パラメーターが、前の表に示した値のいずれでもない場合、または*locale*が**null**の場合、関数は**null**を返します。
 
-*ロケール*引数は、ロケールを指定する文字列へのポインターです。 *ロケール*引数の形式については、「[ロケール名、言語、および国/地域の文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。
+*Locale*引数は、ロケールを指定する文字列へのポインターです。 *Locale*引数の形式の詳細については、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。
 
-*locale*引数には、ロケール名、言語文字列、言語文字列と国/地域コード、コード ページ、または言語文字列、国/地域コード、およびコード ページを使用できます。 利用可能なロケール名、言語、国/地域コード、およびコード ページには、Windows NLS API でサポートされるすべてが含まれます。 **_create_locale**でサポートされるロケール名のセットについては、「[ロケール名、言語、および国/地域文字列」を参照してください](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 **_create_locale**でサポートされる言語および国/地域の文字列のセットは、[言語文字列](../../c-runtime-library/language-strings.md)と[国/地域文字列](../../c-runtime-library/country-region-strings.md)に一覧表示されます。
+*Locale*引数は、ロケール名、言語文字列、言語文字列と国/地域コード、コードページ、言語文字列、国/地域コード、およびコードページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコードページのセットには、Windows NLS API でサポートされているものがすべて含まれています。 **_Create_locale**でサポートされているロケール名のセットについては、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 **_Create_locale**でサポートされている言語および国/地域識別文字列は、「[言語識別文字列](../../c-runtime-library/language-strings.md)」および「[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)」に記載されています。
 
 ロケール設定の詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。
 
-この関数の以前の名前**である__create_locale** (2 つの先頭にアンダースコアが付いています) は非推奨になりました。
+この関数の以前の名前 (2 つの先頭のアンダースコア) は非推奨とされています。 **__create_locale** 。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -172,13 +172,13 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 
 ## <a name="see-also"></a>関連項目
 
-[ロケール名、言語、国/地域の文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Language Strings](../../c-runtime-library/language-strings.md)<br/>
 [国/地域別文字列](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
-[Setlocale](../../preprocessor/setlocale.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[setlocale](../../preprocessor/setlocale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
@@ -186,7 +186,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [_setmbcp](setmbcp.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[関数](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>

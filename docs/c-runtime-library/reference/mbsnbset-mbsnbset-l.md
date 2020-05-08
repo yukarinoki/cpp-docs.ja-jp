@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340551"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915545"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset、_mbsnbset_l
 
-マルチバイト文字ストリングの最初の**n**バイトを、指定した文字に設定します。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
+マルチバイト文字列の最初の**n**バイトを、指定した文字に設定します。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -70,35 +70,35 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 変更対象の文字列。
 
-*C*<br/>
+*40u-c*<br/>
 1 バイトまたはマルチバイト文字の設定。
 
 *count*<br/>
 設定対象のバイト数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbset**変更された文字列へのポインターを返します。
+**_mbsnbset**は、変更された文字列へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*カウント*バイトを c に設定*します*。 *count*が*str*の長さより大きい場合は *、count*の代わりに*str*の長さが使用されます。 *c*がマルチバイト文字で *、count*で指定された最後のバイトに完全に設定できない場合、最後のバイトにはブランク文字が埋め込まれます。 **_mbsnbset**と **_mbsnbset_l**は*str*の末尾に終端の null を置かない。
+**_Mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**では、 *str*の最後に終端の null が配置されません。
 
-**_mbsnbset**と **_mbsnbset_l**は、 *c*のカウント文字ではなく*カウント*バイトを*count*設定する点を除いて **、 _mbsnset**に似ています。
+**_mbsnbset**と **_mbsnbset_l**は **_mbsnset**に似*ています*が *、count の文字数*ではなく*カウント*バイトを設定する点が異なります。
 
-*str*が**NULL**または*カウント*がゼロの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また *、c*が有効なマルチバイト文字でない場合は **、errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
+*Str*が**NULL**または*count*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また、 *c*が有効なマルチバイト文字でない場合は、 **errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンでは、このロケールに依存する動作に現在のロケールが使用されます。**_mbsnbset_l**バージョンは、代わりに渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンは、このロケールに依存する動作に現在のロケールを使用します。**_mbsnbset_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

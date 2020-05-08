@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341874"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911477"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -77,32 +77,32 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*X*<br/>
+*x*<br/>
 対数を検索する対象の値。
 
 ## <a name="return-value"></a>戻り値
 
-**ログ**関数は、成功した場合は*x*の自然対数 (底*e)* を返します。 **log10**関数は、底 10 の対数を返します。 *x*が負の場合、デフォルトでは、これらの関数は不定 (IND) を返します。 *x*が 0 の場合、無限大 (INF) を返します。
+成功した場合、 **log**関数は*x*の自然対数 (底*e*) を返します。 **Log10**関数は、10を底とする対数を返します。 *X*が負の場合、これらの関数は既定で不定 (IND) を返します。 *X*が0の場合、無限大 (INF) が返されます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN、IND|なし|_DOMAIN|
+|±0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**ログ**と**log10**には、ストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**log**と**log10**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能なので **、float**または**long double**値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができます。 C プログラムでは **、log**と**log10**は常に**二重**を取り、返します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long double 型**の値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log**と**log10**は常に**double**を受け取り、返します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**ログ**,**ログ ,****ログル**,**ログ10**, **log10f**, **log10l**|\<math.h>|
+|**log**、 **logf**、 **logf**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

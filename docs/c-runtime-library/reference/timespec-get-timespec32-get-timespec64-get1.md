@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: fc6d91b076f2dd2e25c55d9cf7062e81c3fab11a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911817"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -77,25 +77,25 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は*base*の値、それ以外の場合はゼロを返します。
+成功した場合は*base*の値。それ以外の場合は0を返します。
 
 ## <a name="remarks"></a>解説
 
-**timespec_get**関数は *、time_spec*引数が指す構造体の現在の時刻を設定します。 この構造体のすべてのバージョンには **、tv_sec**と**tv_nsec**の 2 つのメンバーがあります。 **tv_sec**値は *、base*で指定されたエポックの開始以来、整数のナノ秒数に**tv_nsec、** システムクロックの解像度に丸められた秒数に設定されます。
+**Timespec_get**関数は、 *time_spec*引数によって示される構造体の現在の時刻を設定します。 この構造体のすべてのバージョンには、 **tv_sec**と**tv_nsec**の2つのメンバーがあります。 **Tv_sec**値は、秒単位の整数に設定され、*ベース*で指定されたエポックの開始以降、システムクロックの解像度に丸められたナノ秒の整数値に**tv_nsec**ます。
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-これらの関数は *、基本*値として**TIME_UTC**のみをサポートします。 これは *、time_spec*値を、エポック開始から秒数とナノ秒に設定します, 午前 0 時, 1月 1, 1970, 世界協定時刻 (UTC). **構造体****_timespec32**では **、tv_sec**は **__time32_t**値です。 **構造体****_timespec64**では **、tv_sec**は **__time64_t**値です。 **構造体****の timespec**では **、tv_sec**は、プリプロセッサ マクロ _USE_32BIT_TIME_Tが定義されているかどうかによって、長さが 32 ビットまたは 64 ビットの**time_t**型です。 **timespec_get**関数は、_USE_32BIT_TIME_Tが定義されている場合に **_timespec32_get**を呼び出すインライン関数です。それ以外の場合は **、_timespec64_get**を呼び出します。
+これらの関数では、*ベース*値として**TIME_UTC**のみがサポートされます。 これにより、 *time_spec*の値が、現地時刻 (UTC) のエポックの開始日午前0時 (UTC) から1970年1月1日深夜0時 (UTC) の秒数およびナノ秒数に設定されます。 **構造体** **_timespec32**では、 **tv_sec**は **__time32_t**値です。 **構造体** **_timespec64**では、 **tv_sec**は **__time64_t**値です。 **構造体**の**timespec**では、 **tv_sec**は**time_t**型です。これは、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されているかどうかに応じて、32ビットまたは64ビットの長さになります。 **Timespec_get**関数は、_USE_32BIT_TIME_T が定義されている場合に **_timespec32_get**を呼び出すインライン関数です。それ以外の場合は、 **_timespec64_get**を呼び出します。
 
-**END Microsoft 固有の仕様**
+**End Microsoft 固有の仕様**
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>、C++: \<ctime> または \<time.h>|
+|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h>、C++: \<ctime> または \<time.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

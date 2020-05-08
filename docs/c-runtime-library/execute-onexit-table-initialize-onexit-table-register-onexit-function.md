@@ -10,7 +10,7 @@ api_name:
 - _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351654"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913829"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -60,7 +60,7 @@ int _execute_onexit_table(
 *テーブル*<br/>
 [in, out] onexit 関数テーブルを指すポインター。
 
-*関数*<br/>
+*function*<br/>
 [in] onexit 関数テーブルに追加する関数を指すポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -69,7 +69,7 @@ int _execute_onexit_table(
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、C ランタイムをサポートするために使用されるインフラストラクチャ実装の詳細であり、ご使用のコードから直接呼び出してはなりません。 C ランタイムは、 、 `at_quick_exit`、および`_onexit`の呼び出しによって登録された関数のシーケンスを表すために *、onexit 関数テーブル*を`atexit`使用します。 onexit 関数テーブルのデータ構造は、C ランタイムの不透明な実装の詳細であり、データ メンバーの順番と意味は変わる場合があります。 それらを外部コードによって確認してはなりません。
+これらの関数は、C ランタイムをサポートするために使用されるインフラストラクチャ実装の詳細であり、ご使用のコードから直接呼び出してはなりません。 C ランタイムは、 *onexit 関数テーブル*を使用して、 `atexit` `at_quick_exit`、、および`_onexit`への呼び出しによって登録される関数のシーケンスを表します。 onexit 関数テーブルのデータ構造は、C ランタイムの不透明な実装の詳細であり、データ メンバーの順番と意味は変わる場合があります。 それらを外部コードによって確認してはなりません。
 
 `_initialize_onexit_table` 関数は、onexit 関数テーブルをその初期値に初期化します。  この関数は、onexit 関数テーブルを `_register_onexit_function` または `_execute_onexit_table` に渡す前に呼び出す必要があります。
 
@@ -77,7 +77,7 @@ int _execute_onexit_table(
 
 `_execute_onexit_table` 関数は、onexit 関数テーブル内のすべての関数を実行し、テーブルをクリアして、制御を返します。 `_execute_onexit_table` の呼び出しの後、このテーブルは無効な状態になります。再度使用するには `_initialize_onexit_table` を呼び出して事前に再初期化しておく必要があります。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -85,7 +85,7 @@ int _execute_onexit_table(
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C、C++: \<process.h>|
 
-`_initialize_onexit_table`、および`_register_onexit_function``_execute_onexit_table`関数は、マイクロソフト固有のものです。 互換性の詳細については、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
+、 `_initialize_onexit_table` `_register_onexit_function`、および`_execute_onexit_table`の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

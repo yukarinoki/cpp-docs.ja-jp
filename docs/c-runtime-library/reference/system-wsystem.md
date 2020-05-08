@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 21ce04d30da80a40a1162dce06ff378150008766
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912387"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -62,31 +62,31 @@ int _wsystem(
 
 ### <a name="parameters"></a>パラメーター
 
-*コマンド*<br/>
+*メニュー*<br/>
 実行するコマンド。
 
 ## <a name="return-value"></a>戻り値
 
-*コマンド*が**NULL で**、コマンド・インタープリターが検出された場合は、ゼロ以外の値を戻します。 コマンド・インタープリターが見つからない場合は、0 を戻し **、errno**を**ENOENT**に設定します。 *command*が**NULL**でない場合、**システム**はコマンド・インタープリターによって戻される値を戻します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値 -1 はエラーを示し **、errno**は次のいずれかの値に設定されます。
+*Command*が**NULL**でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno**を**ENOENT**に設定します。 *Command*が**NULL**でない場合、 **system**はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
 
 |||
 |-|-|
 | **E2BIG** | 引数リスト (システムに依存する) が大きすぎます。 |
-| **エノエント** | コマンド インタープリターが見つかりません。 |
+| **ENOENT** | コマンド インタープリターが見つかりません。 |
 | **ENOEXEC** | 形式が無効なため、コマンド インタープリター ファイルを実行できません。 |
-| **エノメム** | コマンドを実行するために十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (これは、呼び出しを実行しているプロセスが正しく割り当てられなかったことを示します)。 |
+| **ENOMEM** | コマンドを実行するために十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (これは、呼び出しを実行しているプロセスが正しく割り当てられなかったことを示します)。 |
 
 これらのリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
-**システム**関数は、コマンドインタープリタに*コマンド*を渡し、この文字列をオペレーティング システムコマンドとして実行します。 **は****、COMSPEC**環境変数と**PATH**環境変数を使用して、コマンド インタープリタ ファイル CMD.exe を検索します。 *command*が**NULL**の場合、この関数はコマンド インタープリタが存在するかどうかをチェックするだけです。
+**System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム**は、 **COMSPEC**および**PATH**環境変数を使用して、コマンドインタープリターファイル cmd.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
 
-**システム**を呼び出す前に[、fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、またはストリームを閉じる必要があります。
+**システム**を呼び出す前に、 [fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、ストリームを閉じる必要があります。
 
-**_wsystem**は **、システム**のワイド文字バージョンです。**_wsystem**する*コマンド*引数はワイド文字ストリングです。 それ以外では、これらの関数の動作は同じです。
+**_wsystem**は**システム**のワイド文字バージョンです。**_wsystem**の*コマンド*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -105,7 +105,7 @@ int _wsystem(
 
 ## <a name="example"></a>例
 
-この例では **、システム**を使用してテキスト ファイルを TYPE にします。
+この例では、**システム**を使用してテキストファイルを入力します。
 
 ```C
 // crt_system.c

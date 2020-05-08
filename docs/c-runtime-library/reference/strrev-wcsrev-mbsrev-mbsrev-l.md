@@ -22,7 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +53,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 585cdae15572eca565d2779225737a014d5f7837
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0f03f84045d6fc036e6c8111da7b8484f2b8622
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365038"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911154"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 文字列の文字を反転させます。
 
 > [!IMPORTANT]
-> **_mbsrev**と **_mbsrev_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsrev**と **_mbsrev_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -87,10 +87,10 @@ unsigned char *_mbsrev_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*Str*<br/>
+*引数*<br/>
 NULL で終わる反転対象の文字列。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -99,16 +99,16 @@ NULL で終わる反転対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-**_strrev**関数は str の文字の*順序を逆*にします。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**は、ワイド文字とマルチバイト文字の_strrevのバージョン**です**。 **_wcsrev**の引数と戻り値はワイド文字列です。**_mbsrev**の文字列はマルチバイト文字です。 **_mbsrev**の場合 *、str*の各マルチバイト文字のバイトの順序は変更されません。 それ以外では、これらの関数の動作は同じです。
+**_Strrev**関数は、 *str*の文字の順序を逆にします。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**は **_strrev**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsrev**の引数と戻り値はワイド文字列です。これらの **_mbsrev**はマルチバイト文字列です。 **_Mbsrev**の場合、 *str*の各マルチバイト文字のバイトの順序は変更されません。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsrev**パラメーターを検証します。 *string1*または*string2*のいずれかが null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、_mbsrev**は**NULL を**返し **、errno**を**EINVAL**に設定します。 **_strrev**と **_wcsrev**は、パラメーターを検証しません。
+**_mbsrev**は、そのパラメーターを検証します。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsrev**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strrev**と **_wcsrev**では、パラメーターは検証されません。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリ設定の設定によって影響されます。詳細については[、setlocale を参照_wsetlocale。](setlocale-wsetlocale.md) これらの関数のバージョンは同じですが **、_l**サフィックスを持たない関数は現在のロケールを使用し、**代わりに_l**サフィックスを持つ関数は、渡されたロケール パラメータを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -123,7 +123,7 @@ NULL で終わる反転対象の文字列。
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> または \<wchar.h>|
-|**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
+|**_mbsrev**、 **_mbsrev_l**|\<mbstring.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -160,7 +160,7 @@ The string "Able was I ere I saw Elba" is a palindrome
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

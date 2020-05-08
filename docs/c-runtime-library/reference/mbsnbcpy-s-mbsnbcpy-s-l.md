@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: d3c4a07ffb5ed4040a4bb99ee354e01f0d62f42a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340681"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911888"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
-文字列の**n**バイトをコピー先文字列にコピーします。 これらのバージョンの [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
+文字列の**n**バイトをコピー先の文字列にコピーします。 これらのバージョンの [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -85,39 +85,39 @@ errno_t _mbsnbcpy_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*最も多くの人*<br/>
+*strDest*<br/>
 文字列のコピー先。
 
 *sizeInBytes*<br/>
 コピー先のバッファー サイズ。
 
-*ストソース*<br/>
+*strSource*<br/>
 コピーする文字列。
 
 *count*<br/>
 コピー対象のバイト数。
 
-*ロケール*<br/>
+*locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は 0。**EINVAL** (不良なパラメーターが渡された場合)。
+成功した場合は0。無効なパラメーターが渡された場合は、 **EINVAL** 。
 
 ## <a name="remarks"></a>解説
 
-**_mbsnbcpy_s**関数は *、strSource*から*strDest*にカウント バイトをコピーします。 *strSource* *count*が*strDest*のサイズを超えた場合、入力文字列のいずれかが null ポインター*であるか、sizeInBytes*または*count*が 0 の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は**EINVAL**を返します。 ソース文字列と変換先文字列が重複する場合 **、_mbsnbcpy_s**の動作は未定義です。
+**_Mbsnbcpy_s**関数は、 *Strsource*から*strsource*に*カウント*バイトをコピーします。 *Count*が*strdest*のサイズを超える場合、入力文字列のいずれかが null ポインターであるか、または*sizeinbytes*または*count*が0である場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**EINVAL**を返します。 コピー元とコピー先の文字列が重なり合う場合、 **_mbsnbcpy_s**の動作は定義されていません。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!NOTE]
-> この関数の非セキュア バージョンとは異なり **、_mbsnbcpy_s** null 埋め込みは行われず、常に null で文字列が終了します。
+> この関数のセキュリティで保護されていないバージョンとは異なり、 **_mbsnbcpy_s**では null の埋め込みは行われず、常に null が文字列を終了します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
