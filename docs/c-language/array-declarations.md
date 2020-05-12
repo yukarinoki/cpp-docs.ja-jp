@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313546"
 ---
 # <a name="array-declarations"></a>配列の宣言
 
@@ -42,7 +42,7 @@ ms.locfileid: "56147777"
 
 - 2 番目の形式は、別の場所で定義されている変数の宣言です。 この場合、角かっこ内の *constant-expression* 引数を省略しますが、角かっこは必要です。 この形式を使用できるのは、以前に配列を初期化しているか、パラメーターとして宣言している場合、または、プログラム内の他の場所で明示的に定義された配列への参照として宣言している場合だけです。
 
-どちらの形式でも、*direct-declarator* で変数に名前を付け、変数の型を変更できます。 *direct-declarator* の後に続く角かっこ (**[ ]**) により、宣言子が配列型に変更されます。
+どちらの形式でも、*direct-declarator* で変数に名前を付け、変数の型を変更できます。 *direct-declarator* の後に続く角かっこ ( **[ ]** ) により、宣言子が配列型に変更されます。
 
 配列型オブジェクト宣言で型修飾子を使用できますが、修飾子は配列自体にではなく、要素に適用されます。
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
 ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344942"
 ---
 # <a name="type-cast-conversions"></a>型キャスト変換
 
@@ -24,7 +24,7 @@ ms.locfileid: "56151660"
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *type-name*  **)**  *cast-expression*
 
 *type-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
@@ -39,7 +39,7 @@ ms.locfileid: "56151660"
 |浮動小数点数|任意の数値型|
 |オブジェクトへのポインター、または (**void** <strong>\*</strong>)|任意の整数型、(**void** <strong>\*</strong>)、オブジェクトへのポインター、または関数ポインター|
 |関数ポインター|任意の整数型、オブジェクトへのポインター、または関数ポインター|
-|構造体、共用体、または配列|なし|
+|構造体、共用体、または配列|None|
 |void 型|任意の型|
 
 `void` 型には、任意の識別子からキャストできます。 ただし、型キャスト式で指定された型が `void` でない場合、その型にキャストされている識別子を `void` 式にすることはできません。 任意の式を `void` にキャストできますが、`void` 型の式を他の型にキャストすることはできません。 たとえば、戻り値の型が `void` の関数では、戻り値を別の型にキャストすることはできません。

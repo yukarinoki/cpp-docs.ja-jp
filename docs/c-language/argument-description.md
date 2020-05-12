@@ -19,7 +19,7 @@ ms.locfileid: "69492507"
 
 **main** 関数および**wmain** 関数の `argc` パラメーターは、コマンド ラインからプログラムに渡される引数の数を指定する整数です。 プログラム名は引数と見なされるため、`argc` の値は 1 以上です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `argv` パラメーターは、プログラム引数を表す null で終わる文字列へのポインターの配列です。 配列の各要素は、**main** (または **wmain**) に渡された引数の文字列表現を指します (配列については、「[配列の宣言](../c-language/array-declarations.md)」を参照)。`argv` パラメーターは、`char` 型 (`char *argv[]`) へのポインターの配列として、または `char` 型 (`char **argv`) へのポインターへのポインターとして宣言できます。 **wmain** の場合、`argv` パラメーターは `wchar_t` (`wchar_t *argv[]`) 型へのポインターの配列として、または `wchar_t` (`wchar_t **argv`) 型へポインターへのポインターとして宣言できます。
 

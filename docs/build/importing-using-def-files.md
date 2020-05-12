@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
 ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273418"
 ---
 # <a name="importing-using-def-files"></a>DEF ファイルを使ったインポート
 
-使用する場合 **_declspec**と共に、.def ファイルでは、定数の代わりにデータを使用して、コーディングの誤りによってが発生する問題を低減する .def ファイルを変更する必要があります。
+.def ファイルと共に **__declspec(dllimport)** を使用することを選択した場合、間違ったコーディングによって問題が発生する可能性を減らすため、CONSTANT の代わりに DATA を使用するように .def ファイルを変更してください。
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-次の表では、その理由を示します。
+理由を次の表に示します。
 
-|キーワード|インポート ライブラリに出力します。|エクスポート|
+|キーワード|インポート ライブラリの出力|Exports|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`、`_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-使用して **_declspec**し、両方の定数が一覧表示、`imp`バージョンと非装飾名 .lib DLL では、明示的なリンクを許可するために作成、ライブラリをインポートします。 使用して **_declspec**とデータのリストだけ`imp`バージョンの名前。
+**__declspec(dllimport)** と CONSTANT を使用すると、明示的なリンクを可能にする目的で作成される .lib DLL インポート ライブラリに `imp` バージョンと未修飾名の両方が一覧表示されます。 **__declspec(dllimport)** と DATA を使用すると、名前の `imp` バージョンのみが一覧表示されます。
 
-定数を使用する場合、次のコード コンストラクトのいずれかを使用できますにアクセスする`ulDataInDll`:
+CONSTANT を使用した場合、次のコード コンストラクトのいずれかを利用し、`ulDataInDll` にアクセスできます。
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-ただし、.def ファイルにデータを使用する場合、次の定義でコンパイルされたコードのみ変数アクセスできる`ulDataInDll`:
+ただし、.def ファイルで DATA を使用する場合、次の定義でコンパイルされたコードのみ、変数 `ulDataInDll` にアクセスできます。
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,9 +57,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-余分なレベルの間接参照を使用することを忘れてしまった場合は、変数へのインポート アドレス テーブルのポインターを可能性のあるアクセスだったためよりリスクの高いは定数を使用して、変数自体ではありません。 インポート アドレス テーブルは、現在行われるため読み取り専用のコンパイラとリンカーで、この種の問題はアクセス違反としてマニフェスト多くの場合、ことができます。
+CONSTANT の使用は安全度が下がります。間接参照のレベルを上げるのを忘れた場合、変数自体ではなく、インポート アドレス テーブルの変数ポインターにアクセスする可能性があるからです。 この種の問題は多くの場合、アクセス違反として現れます。インポート アドレス テーブルが現在、コンパイラとリンカーによって読み取り専用になるためです。
 
-現在、MSVC リンカーは、このケースに対応する .def ファイル内の定数が見つかる場合に警告を発行します。 定数を使用する唯一の理由がのかどうか、ヘッダー ファイルが一覧表示されませんいくつかのオブジェクト ファイルを再コンパイルすることはできません **_declspec**プロトタイプ。
+このケースを説明する目的で、.def ファイルで CONSTANT が確認されると、現行の MSVC リンカーからは警告が発行されます。 CONSTANT を使用する唯一かつ本当の理由は、ヘッダー ファイルによってプロトタイプに **__declspec(dllimport)** をリストアップされなかった場合、一部のオブジェクト ファイルを再コンパイルできないことにあります。
 
 ## <a name="see-also"></a>関連項目
 

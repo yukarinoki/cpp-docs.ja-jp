@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
 ms.openlocfilehash: f75a95ccca214f437152d13e099fbd9d03eaaee2
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493309"
@@ -22,7 +22,7 @@ side-by-side アセンブリには、共有またはプライベートの 2 種�
 
 ## <a name="manifests-and-search-order"></a>マニフェストと検索順序
 
-分離アプリケーションと side-by-side アセンブリは、いずれも [マニフェスト](/windows/win32/sbscs/manifests)に記述されています。 マニフェストは、XML ドキュメントです。これは、外部 XML ファイルにすることも、アプリケーションまたはアセンブリにリソースとして埋め込むこともできます。 分離アプリケーションのマニフェスト ファイルは、アプリケーションが実行時にバインドする共有 side-by-side アセンブリの名前およびバージョンの管理に使用されます。 side-by-side アセンブリのマニフェストは、side-by-side アセンブリの名前、バージョン、リソース、および依存アセンブリを指定します。 共有 side-by-side アセンブリの場合、マニフェストは %WINDIR%\WinSxS\Manifests\ フォルダーにインストールされます。 プライベート アセンブリの場合は、DLL に ID = 1 のリソースとしてマニフェストを含めることをお勧めします。 プライベート アセンブリの名前は、DLL の名前と同じにできます。 詳細については、「[プライベートアセンブリについ](/windows/win32/SbsCs/about-private-assemblies-)て」を参照してください。
+分離アプリケーションと side-by-side アセンブリは、いずれも [マニフェスト](/windows/win32/sbscs/manifests)に記述されています。 マニフェストは、XML ドキュメントです。これは、外部 XML ファイルにすることも、アプリケーションまたはアセンブリにリソースとして埋め込むこともできます。 分離アプリケーションのマニフェスト ファイルは、アプリケーションが実行時にバインドする共有 side-by-side アセンブリの名前およびバージョンの管理に使用されます。 side-by-side アセンブリのマニフェストは、side-by-side アセンブリの名前、バージョン、リソース、および依存アセンブリを指定します。 共有 side-by-side アセンブリの場合、マニフェストは %WINDIR%\WinSxS\Manifests\ フォルダーにインストールされます。 プライベート アセンブリの場合は、DLL に ID = 1 のリソースとしてマニフェストを含めることをお勧めします。 プライベート アセンブリの名前は、DLL の名前と同じにできます。 詳細については、「[プライベート アセンブリ](/windows/win32/SbsCs/about-private-assemblies-)」を参照してください。
 
 実行時に、Windows は、アプリケーションのマニフェストから取得されるアセンブリ情報を使用して、対応する side-by-side アセンブリの検索および読み込みを行います。 分離アプリケーションがアセンブリの依存関係を指定する場合、オペレーティング システムでは、最初に、%WINDIR%\WinSxS\ フォルダーにあるネイティブなアセンブリ キャッシュの共有アセンブリからそのアセンブリが検索されます。 要求されたアセンブリが見つからない場合、オペレーティング システムでは、次に、アプリケーションのディレクトリ構造のフォルダーにあるプライベート アセンブリが検索されます。 詳細については、「 [Assembly Searching Sequence (アセンブリの検索手順)](/windows/win32/SbsCs/assembly-searching-sequence)」を参照してください。
 
@@ -32,7 +32,7 @@ side-by-side アセンブリには、共有またはプライベートの 2 種�
 
 ## <a name="visual-c-libraries"></a>Visual C++ のライブラリ
 
-Visual Studio 2005 および d Visual Studio 2008 では、ATL、MFC、CRT、標準 C++、OpenMP、MSDIA などの再頒布可能ライブラリが、共有 side-by-side アセンブリとして、ネイティブなアセンブリ キャッシュに配置されていました。 現在のバージョンの再頒布可能ライブラリでは、集中配置が使用されています。 既定では、Visual Studio を使用してビルドされたすべてのアプリケーションは、最終的なバイナリに埋め込まれたマニフェストを使用してビルドされC++ます。マニフェストは、ビジュアルライブラリ上のバイナリの依存関係を記述します。 アプリケーションのC++マニフェスト生成については、「 [C/C++プログラムのマニフェスト生成につい](understanding-manifest-generation-for-c-cpp-programs.md)て」を参照してください。 自身のライブラリに静的にリンクしているアプリケーション、またはローカル配置が使用されているアプリケーションについては、マニフェストは必要ありません。 配置の詳細については、「 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)」を参照してください。
+Visual Studio 2005 および d Visual Studio 2008 では、ATL、MFC、CRT、標準 C++、OpenMP、MSDIA などの再頒布可能ライブラリが、共有 side-by-side アセンブリとして、ネイティブなアセンブリ キャッシュに配置されていました。 現在のバージョンの再頒布可能ライブラリでは、集中配置が使用されています。 既定では、Visual Studio を使用してビルドされるすべてのアプリケーションが、最終的なバイナリ内に埋め込まれたマニフェストと共にビルドされます。マニフェストには、Visual C++ ライブラリに対するバイナリの依存関係が記述されています。 C++ アプリケーションのマニフェスト生成については、「[C/C++ プログラムのマニフェスト生成についての理解](understanding-manifest-generation-for-c-cpp-programs.md)」を参照してください。 自身のライブラリに静的にリンクしているアプリケーション、またはローカル配置が使用されているアプリケーションについては、マニフェストは必要ありません。 配置の詳細については、「 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

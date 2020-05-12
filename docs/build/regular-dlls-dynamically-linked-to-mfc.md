@@ -1,5 +1,5 @@
 ---
-title: MFC と動的にリンクされるレギュラー MFC Dll
+title: MFC と動的にリンクされる標準 MFC DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++], dynamically linked to MFC
@@ -10,90 +10,90 @@ helpviewer_keywords:
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315002"
 ---
-# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされるレギュラー MFC Dll
+# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされる標準 MFC DLL
 
-MFC DLL が MFC と動的にリンクする、通常は内部的には、MFC を使用する DLL および MFC または非 MFC の実行可能ファイル、DLL からエクスポートされた関数を呼び出すことができます。 名前について説明します、MFC (MFC の共有バージョンとも呼ばれます) のダイナミック リンク ライブラリのバージョンを使ってこのような DLL がビルドされます。 通常、関数は、通常、標準の C インターフェイスを使用して MFC DLL からエクスポートします。
+MFC に動的にリンクされる標準 MFC DLL は、MFC を内部で使用する DLL であり、その DLL 内のエクスポートされた関数は、MFC または非 MFC 実行可能ファイルから呼び出すことができます。 名前が示すとおり、この種の DLL は、MFC のダイナミックリンク ライブラリ バージョン (MFC の共有バージョンとも呼ばれます) を使用してビルドされます。 通常、関数は標準の C インターフェイスを使用して標準 MFC DLL からエクスポートされます。
 
-追加する必要があります、 `AFX_MANAGE_STATE` MFC DLL のモジュールの現在の状態を設定すると動的にリンクされるレギュラー MFC Dll でエクスポートされたすべての関数の先頭にします。 これは、DLL からエクスポートされた関数の先頭に次のコード行を追加することで行います。
+MFC に動的にリンクされる標準 MFC Dll 内のエクスポートされたすべての関数の先頭に `AFX_MANAGE_STATE` マクロを追加して、現在のモジュールの状態を DLL の状態に設定する必要があります。 これを行うには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-MFC と動的にリンクされている MFC DLL の場合は、通常は、次の機能があります。
+MFC に動的にリンクされる標準 MFC DLL には、次の特徴があります。
 
-- これは、新しい種類の Visual C 4.0 で導入された DLL です。
+- これは、Visual C++ 4.0 で導入された新しい種類の DLL です。
 
-- クライアント実行可能ファイル (C、C++、Pascal、Visual Basic、および) で; の Dll の使用をサポートする任意の言語で記述できます。これは MFC アプリケーションではありません。
+- クライアント実行可能ファイルは、DLL (C、C++、Pascal、Visual Basic など) の使用をサポートする任意の言語で記述できます。MFC アプリケーションである必要はありません。
 
-- 静的にリンクされるレギュラー MFC DLL とは異なりこの種類の DLL が MFC DLL (共有 MFC DLL とも呼ばれます) に動的にリンクします。
+- 静的にリンクされる標準 MFC DLL とは異なり、この種類の DLL は、MFC DLL (共有 MFC DLL とも呼ばれます) に動的にリンクされます。
 
-- この種類の DLL にリンクされている MFC のインポート ライブラリは、MFC 拡張 Dll または MFC DLL を使用してアプリケーションに使用される 1 つと同じです。(D) MFCxx .lib します。
+- この種類の DLL にリンクされる MFC インポート ライブラリは、MFC 拡張 DLL または MFC DLL を使用するアプリケーションに使用されるもの (MFCxx(D).lib) と同じです。
 
-MFC と動的にリンクされている MFC DLL の場合は、通常は、次の要件があります。
+MFC に動的にリンクされる標準 MFC DLL には、次の要件があります。
 
-- これらの Dll をコンパイルした **_AFXDLL** MFC DLL に動的にリンクされている実行可能ファイルと同様に、定義されています。 **_USRDLL** MFC と静的にリンクされるレギュラー MFC DLL と同じようにも定義します。
+- MFC DLL に動的にリンクされる実行可能ファイルと同様、これらの DLL も、 **_AFXDLL**を定義してコンパイルされます。 ただし、MFC に静的にリンクされる標準 MFC DLL と同様、 **_USRDLL** も定義されます。
 
-- この種類の DLL のインスタンスを作成する必要があります、 `CWinApp`-クラスを派生します。
+- この種類の DLL は、`CWinApp` 派生クラスをインスタンス化する必要があります。
 
-- この種類の DLL は、 `DllMain` MFC によって提供されます。 内のすべての DLL に固有の初期化コードを配置、`InitInstance`メンバー関数と終了のコードで`ExitInstance`標準 MFC アプリケーションのようにします。
+- この種類の DLL では、MFC から提供される `DllMain` を使用します。 通常の MFC アプリケーションと同様、すべての DLL 固有の初期化コードを `InitInstance` メンバー関数内に配置し、終了コードを `ExitInstance` 内に配置します。
 
-この種の DLL は、MFC のダイナミック リンク ライブラリのバージョンを使用しているために、現在のモジュール状態を DLL の明示的に設定する必要があります。 これを行うには、使用、 [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state)マクロのすべての関数の先頭には、DLL からエクスポートします。
+この種類の DLL では、MFC のダイナミックリンク ライブラリ バージョンが使用されるため、現在のモジュールの状態を DLL の状態に明示的に設定する必要があります。 これを行うには、DLL からエクスポートされたすべての関数の先頭に [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) マクロを使用します。
 
-レギュラー MFC Dll が必要、`CWinApp`の MFC アプリケーションのように、クラスとそのアプリケーション クラスの 1 つのオブジェクトを派生します。 ただし、 `CWinApp` DLL のオブジェクトには、メイン メッセージ ポンプがない、`CWinApp`アプリケーションのオブジェクト。
+標準 MFC DLL には、MFC アプリケーションと同様に、`CWinApp` 派生クラスと、そのアプリケーション クラスの 1 つのオブジェクトが必要です。 ただし、DLL の `CWinApp` オブジェクトは、アプリケーションの `CWinApp` オブジェクトとは異なり、メイン メッセージ ポンプはありません。
 
-なお、 `CWinApp::Run` DLL には、アプリケーションは、メイン メッセージ ポンプを所有しているためのメカニズムは適用されません。 アプリケーションのメイン メッセージ ポンプが DLL エクスポートのルーチンを呼び出すを呼び出す必要があります、DLL、モードレス ダイアログ ボックスが表示されますまたは独自のメイン フレーム ウィンドウ、`CWinApp::PreTranslateMessage`します。
+アプリケーションにはメイン メッセージ ポンプがあるため、`CWinApp::Run` メカニズムは DLL に適用されないことに注意してください。 DLL がモードレス ダイアログを開く場合、または独自のメイン フレーム ウィンドウがある場合、アプリケーションのメイン メッセージ ポンプは、DLL によってエクスポートされたルーチンを呼び出し、そのルーチンが `CWinApp::PreTranslateMessage`を呼び出す必要があります。
 
-配置のすべての DLL に固有の初期化、`CWinApp::InitInstance`メンバー関数は通常の MFC アプリケーションのようにします。 `CWinApp::ExitInstance`のメンバー関数、`CWinApp`派生クラスが提供されている MFC から呼び出される`DllMain`DLL が読み込まれる前に機能します。
+通常の MFC アプリケーションと同様、すべての DLL 固有の初期化コードを `CWinApp::InitInstance` メンバー関数内に配置します。 `CWinApp` 派生クラスの `CWinApp::ExitInstance` メンバー関数は、DLL がアンロードされる前に、MFC によって提供される `DllMain` 関数から呼び出されます。
 
-アプリケーションでは、共有 Dll MFCx0.dll と Msvcr*0.dll (、または同様のファイル) を配布する必要があります。
+アプリケーションと共に、共有 DLL の MFCx0.dll と Msvcr*0.dll (または同様のファイル) を配布する必要があります。
 
-MFC と動的にリンクされている DLL は、MFC を静的にリンクできません。 レギュラー MFC Dll へのリンクをアプリケーションと動的にリンク MFC、その他の DLL と同じようにします。
+MFC に動的にリンクされた DLL をさらに静的に MFC にリンクすることはできません。 アプリケーションは、他の DLL と同様に、MFC に動的にリンクされた標準 MFC DLL にリンクします。
 
-通常、シンボルは、通常、標準の C インターフェイスを使用して MFC DLL からエクスポートされます。 レギュラー MFC DLL からエクスポートされた関数の宣言は、次のようになります。
+通常、シンボルは、標準の C インターフェイスを使用して標準 MFC DLL からエクスポートされます。 標準 MFC DLL からエクスポートされた関数の宣言は、次のようになります。
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-レギュラー MFC DLL 内のすべてのメモリ割り当てが DLL 内で維持する必要があります。DLL は必要がありますいないに渡すまたは受信呼び出しの実行可能ファイルから、次のいずれか。
+標準 MFC DLL 内のメモリ割り当てはすべて、その DLL 内に存在する必要があります。つまり、DLL は、呼び出し実行可能ファイルとの間で次のいずれかのポインターを受け渡しすることはできません。
 
 - MFC オブジェクトへのポインター
 
 - MFC によって割り当てられたメモリへのポインター
 
-上記のいずれかを実行する必要がある場合、または呼び出し元の実行可能ファイルと DLL の間で MFC の派生オブジェクトを渡す必要がある場合は、MFC 拡張 DLL をビルドする必要があります。
+上記のいずれかを受け渡す必要がある場合、または呼び出し元の実行可能ファイルと DLL との間で MFC 派生オブジェクトを受け渡す必要がある場合は、MFC 拡張 DLL をビルドする必要があります。
 
-データのコピーを作成する場合にのみ、C ランタイム ライブラリによって、アプリケーションと DLL のポインターを割り当てられたメモリに渡すも安全です。 削除、これらのポインターのサイズを変更またはまたはメモリのコピーを作成せずに使用しない必要があります。
+データのコピーを作成する場合のみ、C ランタイム ライブラリによって割り当てられたメモリへのポインターをアプリケーションと DLL の間で安全に受け渡すことができます。 これらのポインターを削除またはサイズ変更することはできません。また、メモリのコピーを作成せずに使用することもできません。
 
-構築されるレギュラー MFC DLL を動的には、MFC とリンク、ときにマクロを使用する必要があります。 [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) MFC モジュール状態を正しく切り替える。 これは、DLL からエクスポートされた関数の先頭に次のコード行を追加することで行います。
+MFC に動的にリンクする標準 MFC DLL をビルドする場合、[AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) マクロを使用して MFC モジュールの状態を正しく切り替える必要があります。 これを行うには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE**または MFC 拡張 Dll で MFC を静的にリンクされるレギュラー MFC Dll で、マクロを使用しない必要があります。 詳細については、次を参照してください。 [MFC モジュールの状態データを管理する](../mfc/managing-the-state-data-of-mfc-modules.md)します。
+MFC に静的にリンクする MFC DLL 内、または MFC 拡張 DLL 内で **AFX_MANAGE_STATE** マクロを使用することはできません。 詳細については、「[MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)」を参照してください。
 
-作成、ビルド、およびレギュラー MFC DLL を使用する方法の例は、サンプルを参照してください。[は](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)します。 MFC と動的にリンクされるレギュラー MFC Dll の詳細については、サンプルの要約を"変換を動的にリンクを MFC DLL"というセクションを参照してください。
+標準 MFC DLL を記述、ビルド、使用する方法の例については、サンプルの [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap) を参照してください。 MFC に動的にリンクする標準 MFC DLL の詳細については、サンプルの要約にある「Converting DLLScreenCap to Dynamically Link with the MFC DLL」 (MFC DLL に動的にリンクするための DLLScreenCap の変換) というタイトルのセクションを参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [レギュラー MFC Dll を初期化します。](run-time-library-behavior.md#initializing-regular-dlls)
+- [標準 MFC DLL の初期化](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC を動的にリンクされているレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [MFC と動的にリンクされているレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
-- [MFC モジュールの状態データを管理します。](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
 
 - [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [DLL の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+- [DLL の構成要素としての MFC](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
