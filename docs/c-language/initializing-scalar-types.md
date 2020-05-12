@@ -13,15 +13,15 @@ helpviewer_keywords:
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232944"
 ---
 # <a name="initializing-scalar-types"></a>スカラー型の初期化
 
-スカラー型を初期化すると、*assignment-expression* の値が変数に代入されます。 代入の変換規則が適用されます  (変換規則については、「[型変換](../c-language/type-conversions-c.md)」を参照)。
+スカラー型を初期化すると、*assignment-expression* の値が変数に代入されます。 代入の変換規則が適用されます (変換規則については、「[型変換](../c-language/type-conversions-c.md)」を参照)。
 
 ## <a name="syntax"></a>構文
 

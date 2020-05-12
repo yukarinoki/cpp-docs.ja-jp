@@ -1,7 +1,7 @@
 ---
 title: switchステートメント (C++)
-description: 標準 C++switchステートメントへの参照です。
-ms.date: 04/15/2020
+description: Microsoft Visual Studio C++ の標準 C++ ステートメントへの参照 switch 。
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
-ms.translationtype: MT
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480821"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204160"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchステートメント (C++)
+# <a name="switch-statement-c"></a>`switch`ステートメント (C++)
 
 整数式の値に応じてコードの複数のセクション間を切り替えます。
 
 ## <a name="syntax"></a>構文
 
-> **`switch (`**\[[*初期化***`;`**]*式***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***定数式***`:`***ステートメント*\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***明細書*]\
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub><sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
 
-## <a name="remarks"></a>解説
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
 
-*式*は、整数型を持っているか、整数型への明確な変換を持つクラス型である必要があります。 整数の昇格は、[標準変換](standard-conversions.md)で説明されているように行われます。
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
 
-ステートメント**switch** 本体は、一連のラベル**case** とオプション**default** のラベルで構成されます。 総称して、ラベルの後に続くステートメントは*ラベル付きステートメントと*呼ばれます。 ラベル付けされたステートメントは構文上の要件ではありませんが、**switch** ステートメントがなければ意味がありません。 ステートメント内の**case** 2 つの定数式が同じ値に評価されません。 ラベル**default** は一度だけ表示されます。 ステートメント**default** は、通常は最後に配置されますが、**switch** ステートメントの本文のどこにでも記述できます。 または**case****default** ラベルは**switch**、ステートメント内でのみ使用できます。
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-各**case** ラベル*の定数式*は、*式*の型に変換されます。 次に、等価の*式*と比較されます。 定数式が**case***expression*の値と一致するステートメントに制御が渡*されます。* 結果の動作を次の表に示します。
+## <a name="remarks"></a>Remarks
 
-### <a name="switch-statement-behavior"></a>ステートメントの動作の切り替え
+ステートメントを指定すると、 __`switch`__ *`labeled-statement`* の値に応じて、ステートメント本体で制御が1つのステートメントに転送さ *`condition`* れます。
+
+は *`condition`* 整数型であるか、または整数型への明確な変換を持つクラス型である必要があります。 「[標準変換](standard-conversions.md)」で説明されているように、整数の上位変換が行われます。
+
+ステートメントの本体は、 __`switch`__ 一連のラベルとオプションのラベルで構成され __`case`__ __`default`__ ます。 *`labeled-statement`* は、これらのラベルの1つであり、後続のステートメントです。 ラベル付きステートメントは構文要件ではありませんが、ステートメントを使用しても __`switch`__ 意味がありません。 *`constant-expression`* ステートメント内の2つの値 __`case`__ が同じ値に評価されることはありません。 __`default`__ ラベルが1回だけ表示される場合があります。 ステートメントは、 __`default`__ 多くの場合、末尾に配置されますが、ステートメント本体内の任意の場所に記述でき __`switch`__ ます。 __`case`__ または __`default`__ ラベルは、ステートメント内でのみ使用でき __`switch`__ ます。
+
+各ラベルのは、 *`constant-expression`* __`case`__ と同じ型の定数値に変換され *`condition`* ます。 次に、が *`condition`* 等しいかどうかを比較します。 制御は、の値に一致する値の後の最初のステートメントに渡さ __`case`__ *`constant-expression`* *`condition`* れます。 結果の動作を次の表に示します。
+
+### <a name="switch-statement-behavior"></a>`switch`ステートメントの動作
 
 | 条件 | アクション |
 |--|--|
 | 変換後の値は、上位変換された制御式の値と一致します。 | 制御は、そのラベルの次のステートメントに移ります。 |
-| どの定数も**case** ラベルの定数と一致しません。**default** ラベルが存在します。 | コントロールはラベルに転送**default** されます。 |
-| どの定数も**case** ラベルの定数と一致しません。ラベル**default** が存在しません。 | 制御は、ステートメントの後にステートメント**switch** に転送されます。 |
+| どの定数もラベル内の定数と一致しません。 __`case`__ __`default`__ ラベルが存在します。 | コントロールはラベルに転送され __`default`__ ます。 |
+| どの定数もラベル内の定数と一致しません。 __`case`__ __`default`__ ラベルは存在しません。 | 制御は、ステートメントの後のステートメントに転送され __`switch`__ ます。 |
 
-一致する式が見つかった場合は、実行は**case** 後**default** で実行を続けることができます。 この[`break`](../cpp/break-statement-cpp.md)ステートメントは、実行を停止し、ステートメントの後に制御を**switch** 転送するために使用されます。 ステートメントを**break** 指定しない場合、一致した**case** ラベルから の末尾まで**switch** のすべてのステートメントが**default** 実行されます。 次に例を示します。
+一致する式が見つかった場合は、後で実行するか、ラベルを使用して実行を続行でき __`case`__ __`default`__ ます。 ステートメントは、実行を停止し、ステートメントの [`break`](../cpp/break-statement-cpp.md) 後のステートメントに制御を転送するために使用され __`switch`__ ます。 ステートメントを使用しない場合、を __`break`__ 含む、一致するラベルからの末尾までのすべてのステートメント __`case`__ __`switch`__ __`default`__ が実行されます。 次に例を示します。
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-上の例では、`uppercase_A` は `c` が大文字 `'A'` の場合、インクリメントします。 ステートメント**break** 本体の`uppercase_A++`実行を**switch** 終了し、制御がループに渡された後の**while** ステートメント。 ステートメントがないと**break**、実行はラベル付きの次のステートメントに "フォールスルー"`lowercase_a`し`other`、インクリメントされます。 同様の目的は、 の**break**`case 'a'`ステートメントによって提供されます。 小文字`c``'a'`の場合`lowercase_a`は、インクリメントされ、ステートメント**break** はステートメント本体を**switch** 終了します。 `'a'`または`c``'A'`でない場合、ステートメント**default** が実行されます。
+上の例では、`uppercase_A` は `c` が大文字 `'A'` の場合、インクリメントします。 __`break`__ の後のステートメントは、 `uppercase_A++` ステートメント本体の実行を終了 __`switch`__ し、制御をループに渡し __`while`__ ます。 ステートメントを使用しない場合 __`break`__ 、実行は次のラベル付きステートメントに "フォールスルー" されるので、 `lowercase_a` と `other` もインクリメントされます。 同様の目的は、のステートメントによって処理され __`break`__ `case 'a'` ます。 `c`が小文字の場合は `'a'` 、 `lowercase_a` がインクリメントされ、ステートメントによって __`break`__ ステートメント本体が終了し __`switch`__ ます。 が `c` `'a'` またはでない場合は `'A'` 、 __`default`__ ステートメントが実行されます。
 
-**Visual Studio 2017 以降:** [(/std:c++17](../build/reference/std-specify-language-standard-version.md)`[[fallthrough]]`で利用可能) 属性は C++17 標準で指定されています。 ステートメントで**switch** 使用できます。 これは、コンパイラ、またはコードを読み取る人にとっては、フォールスルーの動作が意図的な動作であるというヒントです。 現在、Microsoft C++ コンパイラはフォールスルーの動作に関して警告を表示しないので、この属性はコンパイラの動作に影響しません。 この例では、この属性は、終了していないラベル付きステートメント内の空のステートメントに適用されます。 つまり、セミコロンが必要です。
+**Visual Studio 2017 以降:** ( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能) `[[fallthrough]]` 属性は c++ 17 標準で指定されています。 ステートメントで使用でき __`switch`__ ます。 これは、コンパイラにとってのヒントであり、コードを読み取るユーザーは、フォールスルー動作が意図的であることを示します。 現在、Microsoft C++ コンパイラでは fallthrough 動作について警告されないため、この属性はコンパイラの動作には影響しません。 この例では、未終了のラベルが付けられていないステートメント内の空のステートメントに属性が適用されます。 言い換えると、セミコロンが必要です。
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 バージョン 15.3 以降** [(/std:c++17](../build/reference/std-specify-language-standard-version.md)で利用可能)。 ステートメントswitchには*初期化*句を指定できます。 スコープがswitchステートメントのブロックに限定された変数を導入して初期化します。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能)。 ステートメントには、 __`switch`__ 句を含めることができ *`init-statement`* ます。この句は、セミコロンで終わります。 次のように、スコープがステートメントのブロックに制限されている変数を導入し、初期化し __`switch`__ ます。
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-ステートメントの内部ブロックには、初期化を含む定義を含めることができますが、その定義は、すべての実行可能な実行パスによってバイパスされるわけではありません。 *reachable* **switch** これらの宣言を使用して導入された名前にはローカル スコープがあります。 次に例を示します。
+ステートメントの内部ブロックには、 __`switch`__ *到達*可能である限り、初期化子を持つ定義を含めることができます。つまり、すべての実行パスでバイパスされることはありません。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 次に例を示します。
 
 ```cpp
 // switch_statement2.cpp
@@ -161,15 +173,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-ステートメント**switch** はネストできます。 ネストすると、 または**case****default** ラベルは、それらを囲**switch** む最も近いステートメントに関連付けられます。
+ステートメントは入れ子にする __`switch`__ ことができます。 入れ子になっている場合、 __`case`__ ラベルまたはラベルは、 __`default`__ それを囲む最も近いステートメントに関連付けられ __`switch`__ ます。
 
-### <a name="microsoft-specific-behavior"></a>マイクロソフト固有の動作
+### <a name="microsoft-specific-behavior"></a>Microsoft 固有の動作
 
-Microsoft C では、ステートメントの値**case** の数を**switch** 制限しません。 この数は、使用できるメモリによってのみ制限されます。 ANSI C では、ステートメントで**case** 少なくとも 257 ラベルを**switch** 使用できる必要があります。
-
-マイクロソフトdefaultC のマイクロソフト拡張機能が有効になっているです。 これらの拡張機能を無効にするには[、/Za](../build/reference/za-ze-disable-language-extensions.md)コンパイラ オプションを使用します。
+Microsoft C++ では、ステートメントの値の数は制限されません __`case`__ __`switch`__ 。 この数は、使用できるメモリによってのみ制限されます。
 
 ## <a name="see-also"></a>関連項目
 
 [選択ステートメント](../cpp/selection-statements-cpp.md)<br/>
-[Keywords](../cpp/keywords-cpp.md)
+[キーワード](../cpp/keywords-cpp.md)
