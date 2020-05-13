@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+    - name: Microsoft C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -45,27 +45,27 @@
             - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items: null
+            - name: ATL
+              tocHref: /cpp/atl/
+              topicHref: /cpp/atl/atl-com-desktop-components
+            - name: MFC
+              tocHref: /cpp/mfc/
+              topicHref: /cpp/mfc/mfc-desktop-applications
               items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: 関連項目
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: ATL/MFC 共有クラス
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: 関連項目
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+                - name: 関連項目
+                  tocHref: /cpp/mfc/reference/
+                  topicHref: /cpp/mfc/reference/mfc-classes
+            - name: ATL/MFC 共有クラス
+              tocHref: /cpp/atl-mfc-shared/
+              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+              items:
+                - name: 関連項目
+                  tocHref: /cpp/atl-mfc-shared/reference/
+                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+            - name: C++/CX
+              tocHref: /cpp/cppcx/
+              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
             - name: Linux
               tocHref: /cpp/linux/
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
@@ -99,10 +99,12 @@
                 - name: ビルドのリファレンス
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
-                  items:
-                    - name: コンパイラおよびツールのエラーと警告
-                      tocHref: /cpp/error-messages/
-                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+            - name: ビルドの分析情報
+              tocHref: /cpp/build-insights/
+              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+            - name: エラーと警告
+              tocHref: /cpp/error-messages/
+              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: 移植とアップグレード
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
@@ -112,6 +114,6 @@
             - name: セキュリティ
               tocHref: /cpp/security
               topicHref: /cpp/security/security-best-practices-for-cpp
-            - name: クラウドおよび Web
+            - name: クラウドと Web
               tocHref: /cpp/cloud
               topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
