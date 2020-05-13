@@ -1,0 +1,125 @@
+- name: .NET および UWP 用のコンポーネントの拡張機能
+  href: ../extensions/component-extensions-for-runtime-platforms.md
+- name: 参照演算子の追跡
+  href: ../extensions/tracking-reference-operator-cpp-component-extensions.md
+- name: オブジェクト演算子 (^) へのハンドル
+  href: ../extensions/handle-to-object-operator-hat-cpp-component-extensions.md
+- name: abstract
+  href: ../extensions/abstract-cpp-component-extensions.md
+- name: 配列
+  href: ../extensions/arrays-cpp-component-extensions.md
+- name: ボックス化
+  href: ../extensions/boxing-cpp-component-extensions.md
+- name: クラスと構造体
+  href: ../extensions/classes-and-structs-cpp-component-extensions.md
+- name: プラットフォーム、既定、および cli 名前空間
+  href: ../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md
+- name: 型特性のコンパイラのサポート
+  href: ../extensions/compiler-support-for-type-traits-cpp-component-extensions.md
+- name: 状況依存のキーワード
+  href: ../extensions/context-sensitive-keywords-cpp-component-extensions.md
+- name: delegate
+  href: ../extensions/delegate-cpp-component-extensions.md
+- name: enum クラス
+  href: ../extensions/enum-class-cpp-component-extensions.md
+- name: event
+  href: ../extensions/event-cpp-component-extensions.md
+- name: 例外処理
+  href: ../extensions/exception-handling-cpp-component-extensions.md
+- name: 明示的なオーバーライド
+  href: ../extensions/explicit-overrides-cpp-component-extensions.md
+- name: ref new、gcnew
+  href: ../extensions/ref-new-gcnew-cpp-component-extensions.md
+- name: ジェネリック
+  expanded: false
+  items:
+    - name: ジェネリック
+      href: ../extensions/generics-cpp-component-extensions.md
+    - name: Visual C++ のジェネリックの概要
+      href: ../extensions/overview-of-generics-in-visual-cpp.md
+    - name: ジェネリック関数
+      href: ../extensions/generic-functions-cpp-cli.md
+    - name: ジェネリック クラス
+      href: ../extensions/generic-classes-cpp-cli.md
+    - name: ジェネリック インターフェイス
+      href: ../extensions/generic-interfaces-visual-cpp.md
+    - name: 汎用デリゲート
+      href: ../extensions/generic-delegates-visual-cpp.md
+    - name: ジェネリック型パラメーターの制約
+      href: ../extensions/constraints-on-generic-type-parameters-cpp-cli.md
+    - name: ジェネリックの使用
+      href: ../extensions/consuming-generics-cpp-cli.md
+    - name: ジェネリックとテンプレート
+      href: ../extensions/generics-and-templates-visual-cpp.md
+    - name: '方法: ジェネリックを使用してパフォーマンスを改善する'
+      href: ../extensions/how-to-improve-performance-with-generics-visual-cpp.md
+- name: interface クラス
+  href: ../extensions/interface-class-cpp-component-extensions.md
+- name: リテラル
+  href: ../extensions/literal-cpp-component-extensions.md
+- name: Windows ランタイムおよびマネージド テンプレート
+  href: ../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md
+- name: new (vtable の新しいスロット)
+  href: ../extensions/new-new-slot-in-vtable-cpp-component-extensions.md
+- name: nullptr
+  href: ../extensions/nullptr-cpp-component-extensions.md
+- name: オーバーライド指定子
+  href: ../extensions/override-specifiers-cpp-component-extensions.md
+- name: override
+  href: ../extensions/override-cpp-component-extensions.md
+- name: partial
+  href: ../extensions/partial-cpp-component-extensions.md
+- name: property
+  href: ../extensions/property-cpp-component-extensions.md
+- name: safe_cast
+  href: ../extensions/safe-cast-cpp-component-extensions.md
+- name: String
+  href: ../extensions/string-cpp-component-extensions.md
+- name: sealed
+  href: ../extensions/sealed-cpp-component-extensions.md
+- name: typeid
+  href: ../extensions/typeid-cpp-component-extensions.md
+- name: ユーザー定義の属性
+  expanded: false
+  items:
+    - name: ユーザー定義の属性
+      href: ../extensions/user-defined-attributes-cpp-component-extensions.md
+    - name: 属性パラメーターの型
+      href: ../extensions/attribute-parameter-types-cpp-component-extensions.md
+    - name: 属性の対象
+      href: ../extensions/attribute-targets-cpp-component-extensions.md
+- name: C++/CLI に固有の拡張機能
+  expanded: false
+  items:
+    - name: C++/CLI に固有の拡張機能
+      href: ../extensions/extensions-that-are-specific-to-cpp-cli.md
+    - name: __identifier
+      href: ../extensions/identifier-cpp-cli.md
+    - name: C スタイル キャストと -clr
+      href: ../extensions/c-style-casts-with-clr-cpp-cli.md
+    - name: interior_ptr
+      expanded: false
+      items:
+        - name: interior_ptr
+          href: ../extensions/interior-ptr-cpp-cli.md
+        - name: '方法: 内部ポインターおよびマネージド配列を宣言および使用する'
+          href: ../extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
+        - name: '方法: interior_ptr キーワードを使って値型を宣言する'
+          href: ../extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
+        - name: '方法: 内部ポインターとネイティブ ポインターを使って関数をオーバーロードする'
+          href: ../extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
+        - name: '方法: const キーワードを使って内部ポインターを宣言する'
+          href: ../extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
+    - name: pin_ptr
+      expanded: false
+      items:
+        - name: pin_ptr
+          href: ../extensions/pin-ptr-cpp-cli.md
+        - name: '方法: ポインターと配列を固定する'
+          href: ../extensions/how-to-pin-pointers-and-arrays.md
+        - name: '方法: 固定ポインターと値型を宣言する'
+          href: ../extensions/how-to-declare-pinning-pointers-and-value-types.md
+    - name: 型の転送
+      href: ../extensions/type-forwarding-cpp-cli.md
+    - name: 可変個引数リスト (...)
+      href: ../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md

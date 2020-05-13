@@ -1,0 +1,54 @@
+- name: Microsoft C++ での移植とアップグレードのガイド
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: 以前のバージョンのプロジェクトをアップグレードする
+  items:
+    - name: 以前のバージョンのプロジェクトをアップグレードする
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: アップグレード時の潜在的な問題の概要
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: Universal CRT へのコードのアップグレード
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: WINVER および _WIN32_WINNT の更新
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: ライブラリ内部の依存関係を修正する
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: 浮動小数点の移行に関する問題
+      href: ../porting/floating-point-migration-issues.md
+    - name: Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
+      href: ../porting/use-native-multi-targeting.md
+    - name: Visual Studio 2019 で非推奨となった C++ の機能
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: VCBuild とMSBuild
+      href: ../porting/build-system-changes.md
+    - name: サード パーティ ライブラリの移植
+      href: ../porting/porting-third-party-libraries.md
+    - name: データ アプリケーションを移植する
+      href: ../data/data-access-programming-mfc-atl.md
+- name: C++ コードをアップグレードするための IDE ツール
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: Visual C++ 2003 ～ 2015 の変更履歴
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: Visual Studio 2003 から 2015 の Visual C++ の新機能
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: 2015 と 2019 間の C++ のバイナリの互換性
+  href: ../porting/binary-compat-2015-2017.md
+- name: '移植およびアップグレード: 例とケース スタディ'
+  items:
+    - name: 例とケース スタディ
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: '移植のガイド:MFC Scribble'
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: '移植のガイド:COM Spy'
+      href: ../porting/porting-guide-com-spy.md
+    - name: '移植のガイド:Spy++'
+      href: ../porting/porting-guide-spy-increment.md
+- name: UNIX ユーザー向け Microsoft C++ の概要
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: Windows 上での Linux プログラムの実行
+  href: ../porting/porting-from-unix-to-win32.md
+- name: ユニバーサル Windows プラットフォームへの移植 (C++)
+  items:
+    - name: ユニバーサル Windows プラットフォームへの移植 (C++)
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: '方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する'
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md

@@ -1,0 +1,426 @@
+- name: Windows での C++ でのプログラミングの概要
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: デスクトップ アプリケーション (C++)
+  href: ../windows/desktop-applications-visual-cpp.md
+- name: 'チュートリアル: 標準 C++ プログラムの作成'
+  href: ../windows/walkthrough-creating-a-standard-cpp-program-cpp.md
+- name: 'チュートリアル: Windows デスクトップ アプリケーションの作成'
+  href: ../windows/walkthrough-creating-windows-desktop-applications-cpp.md
+- name: Windows デスクトップ ウィザード
+  href: ../windows/windows-desktop-wizard.md
+- name: Active Template Library (ATL)
+  href: ../atl/
+- name: Microsoft Foundation Classes (MFC)
+  href: ../mfc/
+- name: ATL と MFC の共有クラス
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: テキストと文字列
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: DirectX を使用するゲームを作成するためのリソース
+  href: ../windows/resources-for-creating-a-game-using-directx.md
+- name: '方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用'
+  href: ../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
+- name: リソース ファイルの操作
+  expanded: false
+  items:
+    - name: リソース ファイルの操作
+      href: ../windows/working-with-resource-files.md
+    - name: リソース ファイル
+      expanded: false
+      items:
+        - name: リソース ファイル
+          href: ../windows/resource-files-visual-studio.md
+        - name: '方法: リソースの作成'
+          href: ../windows/how-to-create-a-resource-script-file.md
+        - name: '方法: リソースの管理'
+          href: ../windows/how-to-copy-resources.md
+        - name: '方法: コンパイル時にリソースをインクルードする'
+          href: ../windows/how-to-include-resources-at-compile-time.md
+    - name: リソース識別子 (シンボル)
+      expanded: false
+      items:
+        - name: リソース識別子 (シンボル)
+          href: ../windows/symbols-resource-identifiers.md
+        - name: '方法: シンボルの作成'
+          href: ../windows/creating-new-symbols.md
+        - name: '方法: シンボルの管理'
+          href: ../windows/changing-a-symbol-or-symbol-name-id.md
+        - name: 定義済みのシンボル ID
+          expanded: false
+          items:
+            - name: 定義済みのシンボル ID
+              href: ../windows/predefined-symbol-ids.md
+            - name: ATL の定義済みシンボル
+              href: ../windows/atl-predefined-symbols.md
+            - name: MFC の定義済みシンボル
+              href: ../windows/mfc-predefined-symbols.md
+            - name: Win32 の定義済みシンボル
+              href: ../windows/win32-predefined-symbols.md
+    - name: リソース エディター
+      expanded: false
+      items:
+        - name: リソース エディター
+          href: ../windows/resource-editors.md
+        - name: アクセラレータ エディター
+          expanded: false
+          items:
+            - name: アクセラレータ エディター
+              href: ../windows/accelerator-editor.md
+            - name: アクセラレータ キー
+              href: ../windows/predefined-accelerator-keys.md
+        - name: バイナリ エディター
+          href: ../windows/binary-editor.md
+        - name: ダイアログ エディター
+          expanded: false
+          items:
+            - name: ダイアログ エディター
+              href: ../windows/dialog-editor.md
+            - name: '方法: ダイアログ ボックスを作成する'
+              href: ../windows/creating-a-new-dialog-box.md
+            - name: ダイアログ ボックス コントロール
+              expanded: false
+              items:
+                - name: ダイアログ ボックス コントロール
+                  href: ../windows/controls-in-dialog-boxes.md
+                - name: '方法: コントロールを追加、編集、または削除する'
+                  href: ../windows/adding-editing-or-deleting-controls.md
+                - name: '方法: レイアウト コントロール'
+                  href: ../windows/arrangement-of-controls-on-dialog-boxes.md
+                - name: '方法: コントロールのアクセスおよび値を定義する'
+                  href: ../windows/defining-mnemonics-access-keys.md
+        - name: アイコン用イメージ エディター
+          expanded: false
+          items:
+            - name: アイコン用イメージ エディター
+              href: ../windows/image-editor-for-icons.md
+            - name: '方法: アイコンまたはその他の画像を作成する'
+              href: ../windows/creating-an-icon-or-other-image-image-editor-for-icons.md
+            - name: '方法: 画像を編集する'
+              href: ../windows/selecting-an-area-of-an-image-image-editor-for-icons.md
+            - name: '方法: 描画ツールを使用する'
+              href: ../windows/using-a-drawing-tool-image-editor-for-icons.md
+            - name: '方法: 色の調整'
+              href: ../windows/working-with-color-image-editor-for-icons.md
+            - name: アクセラレータ キー
+              href: ../windows/accelerator-keys-image-editor-for-icons.md
+        - name: メニュー エディター
+          expanded: false
+          items:
+            - name: メニュー エディター
+              href: ../windows/menu-editor.md
+            - name: メニュー コマンド
+              href: ../windows/menu-command-properties.md
+        - name: ストリング エディター
+          href: ../windows/string-editor.md
+        - name: ツール バー エディター
+          href: ../windows/toolbar-editor.md
+        - name: バージョン情報エディター
+          href: ../windows/version-information-editor.md
+- name: ネイティブ デスクトップ アプリケーションの配置
+  expanded: false
+  items:
+    - name: ネイティブ デスクトップ アプリケーションの配置
+      href: ../windows/deploying-native-desktop-applications-visual-cpp.md
+    - name: Visual C++ での配置
+      href: ../windows/deployment-in-visual-cpp.md
+    - name: 配置の概念
+      href: ../windows/deployment-concepts.md
+    - name: Visual C++ アプリケーションの依存関係の理解
+      href: ../windows/understanding-the-dependencies-of-a-visual-cpp-application.md
+    - name: 再配布する DLL の決定
+      href: ../windows/determining-which-dlls-to-redistribute.md
+    - name: 展開方法を選択する
+      href: ../windows/choosing-a-deployment-method.md
+    - name: ユニバーサル CRT の配置
+      href: ../windows/universal-crt-deployment.md
+    - name: Visual C++ ファイルの再配布
+      expanded: false
+      items:
+        - name: Visual C++ ファイルの再配布
+          href: ../windows/redistributing-visual-cpp-files.md
+        - name: マージ モジュールを使用したコンポーネントの再配布
+          href: ../windows/redistributing-components-by-using-merge-modules.md
+        - name: Visual C++ ActiveX コントロールの再配布
+          href: ../windows/redistributing-visual-cpp-activex-controls.md
+        - name: MFC ライブラリの再配布
+          href: ../windows/redistributing-the-mfc-library.md
+        - name: ATL アプリケーションの再配布
+          href: ../windows/redistributing-an-atl-application.md
+    - name: 配置例
+      expanded: false
+      items:
+        - name: 配置例
+          href: ../windows/deployment-examples.md
+        - name: 'チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置'
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md
+        - name: 'チュートリアル: アプリケーションのローカル フォルダーへの Visual C++ アプリケーションの配置'
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md
+        - name: 'チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置'
+          href: ../windows/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md
+        - name: デバッグ実行可能ファイルを実行するテスト用コンピューターの準備
+          href: ../windows/preparing-a-test-machine-to-run-a-debug-executable.md
+    - name: Web クライアント アプリケーションの再配布
+      href: ../windows/redistributing-web-client-applications.md
+    - name: Visual C++ アプリケーションの ClickOnce 配置
+      href: ../windows/clickonce-deployment-for-visual-cpp-applications.md
+    - name: 以前のランタイム バージョンでの C++ -clr アプリケーションの実行
+      href: ../windows/running-a-cpp-clr-application-on-a-previous-runtime-version.md
+- name: COM および .NET 用の C++ の属性
+  href: ../windows/attributes/cpp-attributes-com-net.md
+- name: 属性プログラミングの FAQ
+  href: ../windows/attributes/attribute-programming-faq.md
+- name: グループ別の属性
+  expanded: false
+  items:
+    - name: グループ別の属性
+      href: ../windows/attributes/attributes-by-group.md
+    - name: COM 属性
+      href: ../windows/attributes/com-attributes.md
+    - name: IDL 属性
+      href: ../windows/attributes/idl-attributes.md
+    - name: OLE DB コンシューマー属性
+      href: ../windows/attributes/ole-db-consumer-attributes.md
+    - name: コンパイラ属性
+      href: ../windows/attributes/compiler-attributes.md
+- name: 使用法別の属性
+  expanded: false
+  items:
+    - name: 使用法別の属性
+      href: ../windows/attributes/attributes-by-usage.md
+    - name: モジュール属性
+      href: ../windows/attributes/module-attributes.md
+    - name: インターフェイス属性
+      href: ../windows/attributes/interface-attributes.md
+    - name: クラス属性
+      href: ../windows/attributes/class-attributes.md
+    - name: メソッド属性
+      href: ../windows/attributes/method-attributes.md
+    - name: パラメーター属性
+      href: ../windows/attributes/parameter-attributes.md
+    - name: データ メンバー属性
+      href: ../windows/attributes/data-member-attributes.md
+    - name: Typedef、enum、union、および struct 型の属性
+      href: ../windows/attributes/typedef-enum-union-and-struct-attributes.md
+    - name: 配列属性
+      href: ../windows/attributes/array-attributes.md
+    - name: スタンドアロン属性
+      href: ../windows/attributes/stand-alone-attributes.md
+    - name: カスタム属性
+      href: ../windows/attributes/custom-attributes-cpp.md
+- name: 属性リファレンス (アルファベット順)
+  expanded: false
+  items:
+    - name: 属性リファレンス (アルファベット順)
+      href: ../windows/attributes/attributes-alphabetical-reference.md
+    - name: aggregatable
+      href: ../windows/attributes/aggregatable.md
+    - name: aggregates
+      href: ../windows/attributes/aggregates.md
+    - name: appobject
+      href: ../windows/attributes/appobject.md
+    - name: async_uuid
+      href: ../windows/attributes/async-uuid.md
+    - name: 属性
+      href: ../windows/attributes/attribute.md
+    - name: bindable
+      href: ../windows/attributes/bindable.md
+    - name: call_as
+      href: ../windows/attributes/call-as.md
+    - name: case
+      href: ../windows/attributes/case-cpp.md
+    - name: coclass
+      href: ../windows/attributes/coclass.md
+    - name: com_interface_entry
+      href: ../windows/attributes/com-interface-entry-cpp.md
+    - name: control
+      href: ../windows/attributes/control.md
+    - name: cpp_quote
+      href: ../windows/attributes/cpp-quote.md
+    - name: custom
+      href: ../windows/attributes/custom-cpp.md
+    - name: db_accessor
+      href: ../windows/attributes/db-accessor.md
+    - name: db_column
+      href: ../windows/attributes/db-column.md
+    - name: db_command
+      href: ../windows/attributes/db-command.md
+    - name: db_param
+      href: ../windows/attributes/db-param.md
+    - name: db_source
+      href: ../windows/attributes/db-source.md
+    - name: db_table
+      href: ../windows/attributes/db-table.md
+    - name: default
+      href: ../windows/attributes/default-cpp.md
+    - name: defaultbind
+      href: ../windows/attributes/defaultbind.md
+    - name: defaultcollelem
+      href: ../windows/attributes/defaultcollelem.md
+    - name: defaultvalue
+      href: ../windows/attributes/defaultvalue.md
+    - name: defaultvtable
+      href: ../windows/attributes/defaultvtable.md
+    - name: dispinterface
+      href: ../windows/attributes/dispinterface.md
+    - name: displaybind
+      href: ../windows/attributes/displaybind.md
+    - name: dual
+      href: ../windows/attributes/dual.md
+    - name: emitidl
+      href: ../windows/attributes/emitidl.md
+    - name: entry
+      href: ../windows/attributes/entry.md
+    - name: event_receiver
+      href: ../windows/attributes/event-receiver.md
+    - name: event_source
+      href: ../windows/attributes/event-source.md
+    - name: export
+      href: ../windows/attributes/export.md
+    - name: first_is
+      href: ../windows/attributes/first-is.md
+    - name: helpcontext
+      href: ../windows/attributes/helpcontext.md
+    - name: helpfile
+      href: ../windows/attributes/helpfile.md
+    - name: helpstring
+      href: ../windows/attributes/helpstring.md
+    - name: helpstringcontext
+      href: ../windows/attributes/helpstringcontext.md
+    - name: typelib
+      href: ../windows/attributes/helpstringdll.md
+    - name: hidden
+      href: ../windows/attributes/hidden.md
+    - name: ID
+      href: ../windows/attributes/id.md
+    - name: idl_module
+      href: ../windows/attributes/idl-module.md
+    - name: idl_quote
+      href: ../windows/attributes/idl-quote.md
+    - name: iid_is
+      href: ../windows/attributes/iid-is.md
+    - name: immediatebind
+      href: ../windows/attributes/immediatebind.md
+    - name: 実装
+      href: ../windows/attributes/implements-cpp.md
+    - name: implements_category
+      href: ../windows/attributes/implements-category.md
+    - name: import
+      href: ../windows/attributes/import.md
+    - name: importidl
+      href: ../windows/attributes/importidl.md
+    - name: importlib
+      href: ../windows/attributes/importlib.md
+    - name: in
+      href: ../windows/attributes/in-cpp.md
+    - name: include
+      href: ../windows/attributes/include-cpp.md
+    - name: includelib
+      href: ../windows/attributes/includelib-cpp.md
+    - name: last_is
+      href: ../windows/attributes/last-is.md
+    - name: lcid
+      href: ../windows/attributes/lcid.md
+    - name: length_is
+      href: ../windows/attributes/length-is.md
+    - name: library_block
+      href: ../windows/attributes/library-block.md
+    - name: licensed
+      href: ../windows/attributes/licensed.md
+    - name: local
+      href: ../windows/attributes/local-cpp.md
+    - name: max_is
+      href: ../windows/attributes/max-is.md
+    - name: name
+      href: ../windows/attributes/module-cpp.md
+    - name: ms_union
+      href: ../windows/attributes/ms-union.md
+    - name: no_injected_text
+      href: ../windows/attributes/no-injected-text.md
+    - name: nonbrowsable
+      href: ../windows/attributes/nonbrowsable.md
+    - name: noncreatable
+      href: ../windows/attributes/noncreatable.md
+    - name: nonextensible
+      href: ../windows/attributes/nonextensible.md
+    - name: object
+      href: ../windows/attributes/object-cpp.md
+    - name: odl
+      href: ../windows/attributes/odl.md
+    - name: oleautomation
+      href: ../windows/attributes/oleautomation.md
+    - name: optional
+      href: ../windows/attributes/optional-cpp.md
+    - name: out
+      href: ../windows/attributes/out-cpp.md
+    - name: pointer_default
+      href: ../windows/attributes/pointer-default.md
+    - name: pragma
+      href: ../windows/attributes/pragma.md
+    - name: progid
+      href: ../windows/attributes/progid.md
+    - name: propget
+      href: ../windows/attributes/propget.md
+    - name: propput
+      href: ../windows/attributes/propput.md
+    - name: propputref
+      href: ../windows/attributes/propputref.md
+    - name: ptr
+      href: ../windows/attributes/ptr.md
+    - name: public (C++ 属性)
+      href: ../windows/attributes/public-cpp-attributes.md
+    - name: range
+      href: ../windows/attributes/range-cpp.md
+    - name: rdx
+      href: ../windows/attributes/rdx.md
+    - name: readonly
+      href: ../windows/attributes/readonly-cpp.md
+    - name: ref
+      href: ../windows/attributes/ref-cpp.md
+    - name: registration_script
+      href: ../windows/attributes/registration-script.md
+    - name: requestedit
+      href: ../windows/attributes/requestedit.md
+    - name: requires_category
+      href: ../windows/attributes/requires-category.md
+    - name: restricted
+      href: ../windows/attributes/restricted.md
+    - name: retval
+      href: ../windows/attributes/retval.md
+    - name: satype
+      href: ../windows/attributes/satype.md
+    - name: size_is
+      href: ../windows/attributes/size-is.md
+    - name: ソース
+      href: ../windows/attributes/source-cpp.md
+    - name: string
+      href: ../windows/attributes/string-cpp.md
+    - name: support_error_info
+      href: ../windows/attributes/support-error-info.md
+    - name: switch_is
+      href: ../windows/attributes/switch-is.md
+    - name: switch_type
+      href: ../windows/attributes/switch-type.md
+    - name: synchronize
+      href: ../windows/attributes/synchronize.md
+    - name: threading
+      href: ../windows/attributes/threading-cpp.md
+    - name: transmit_as
+      href: ../windows/attributes/transmit-as.md
+    - name: uidefault
+      href: ../windows/attributes/uidefault.md
+    - name: unique
+      href: ../windows/attributes/unique-cpp.md
+    - name: usesgetlasterror
+      href: ../windows/attributes/usesgetlasterror.md
+    - name: uuid (C++ 属性)
+      href: ../windows/attributes/uuid-cpp-attributes.md
+    - name: v1_enum
+      href: ../windows/attributes/v1-enum.md
+    - name: vararg
+      href: ../windows/attributes/vararg.md
+    - name: version
+      href: ../windows/attributes/version-cpp.md
+    - name: vi_progid
+      href: ../windows/attributes/vi-progid.md
+    - name: wire_marshal
+      href: ../windows/attributes/wire-marshal.md

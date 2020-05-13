@@ -1,0 +1,204 @@
+- name: C/C++ のプリプロセッサ リファレンス
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: プリプロセッサ
+  expanded: false
+  items:
+    - name: プリプロセッサ
+      href: ../preprocessor/preprocessor.md
+    - name: 試験的なプリプロセッサの概要
+      href: ../preprocessor/preprocessor-experimental-overview.md
+    - name: 変換フェーズ
+      href: ../preprocessor/phases-of-translation.md
+    - name: プリプロセッサ ディレクティブ
+      expanded: false
+      items:
+        - name: プリプロセッサ ディレクティブ
+          href: ../preprocessor/preprocessor-directives.md
+        - name: '#define ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-define-directive-c-cpp.md
+        - name: '#error ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-error-directive-c-cpp.md
+        - name: '#if、#elif、#else、および #endif ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md
+        - name: '#ifdef および #ifndef ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
+        - name: '#import ディレクティブ (C++)'
+          href: ../preprocessor/hash-import-directive-cpp.md
+        - name: '#import の属性 (C++)'
+          expanded: false
+          items:
+            - name: '#import の属性 (C++)'
+              href: ../preprocessor/hash-import-attributes-cpp.md
+            - name: auto_rename
+              href: ../preprocessor/auto-rename.md
+            - name: auto_search
+              href: ../preprocessor/auto-search.md
+            - name: embedded_idl
+              href: ../preprocessor/embedded-idl.md
+            - name: 'exclude (#import)'
+              href: ../preprocessor/exclude-hash-import.md
+            - name: high_method_prefix
+              href: ../preprocessor/high-method-prefix.md
+            - name: high_property_prefixes
+              href: ../preprocessor/high-property-prefixes.md
+            - name: implementation_only
+              href: ../preprocessor/implementation-only.md
+            - name: include()
+              href: ../preprocessor/include-parens.md
+            - name: inject_statement
+              href: ../preprocessor/inject-statement.md
+            - name: named_guids
+              href: ../preprocessor/named-guids.md
+            - name: no_auto_exclude
+              href: ../preprocessor/no-auto-exclude.md
+            - name: no_dual_interfaces
+              href: ../preprocessor/no-dual-interfaces.md
+            - name: no_implementation
+              href: ../preprocessor/no-implementation.md
+            - name: no_namespace
+              href: ../preprocessor/no-namespace.md
+            - name: no_registry
+              href: ../preprocessor/no-registry.md
+            - name: no_search_namespace
+              href: ../preprocessor/no-search-namespace.md
+            - name: no_smart_pointers
+              href: ../preprocessor/no-smart-pointers.md
+            - name: raw_dispinterfaces
+              href: ../preprocessor/raw-dispinterfaces.md
+            - name: raw_interfaces_only
+              href: ../preprocessor/raw-interfaces-only.md
+            - name: raw_method_prefix
+              href: ../preprocessor/raw-method-prefix.md
+            - name: raw_native_types
+              href: ../preprocessor/raw-native-types.md
+            - name: raw_property_prefixes
+              href: ../preprocessor/raw-property-prefixes.md
+            - name: '名前の変更 (#import)'
+              href: ../preprocessor/rename-hash-import.md
+            - name: rename_namespace
+              href: ../preprocessor/rename-namespace.md
+            - name: rename_search_namespace
+              href: ../preprocessor/rename-search-namespace.md
+            - name: tlbid
+              href: ../preprocessor/tlbid.md
+        - name: '#include ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-include-directive-c-cpp.md
+        - name: '#line ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-line-directive-c-cpp.md
+        - name: Null ディレクティブ
+          href: ../preprocessor/null-directive.md
+        - name: '#undef ディレクティブ (C/C++)'
+          href: ../preprocessor/hash-undef-directive-c-cpp.md
+        - name: '#using ディレクティブ (C++/CLI)'
+          href: ../preprocessor/hash-using-directive-cpp.md
+    - name: プリプロセッサ演算子
+      expanded: false
+      items:
+        - name: プリプロセッサ演算子
+          href: ../preprocessor/preprocessor-operators.md
+        - name: '文字列化演算子 (#)'
+          href: ../preprocessor/stringizing-operator-hash.md
+        - name: '文字定数化演算子 (#@)'
+          href: ../preprocessor/charizing-operator-hash-at.md
+        - name: 'トークン連結演算子 (##)'
+          href: ../preprocessor/token-pasting-operator-hash-hash.md
+    - name: プリプロセッサ マクロ (C/C++)
+      expanded: false
+      items:
+        - name: プリプロセッサ マクロ (C/C++)
+          href: ../preprocessor/macros-c-cpp.md
+        - name: プリプロセッサ マクロおよび C++
+          href: ../preprocessor/macros-and-cpp.md
+        - name: 可変引数プリプロセッサ マクロ
+          href: ../preprocessor/variadic-macros.md
+        - name: 定義済みプリプロセッサ マクロ
+          href: ../preprocessor/predefined-macros.md
+- name: プリプロセッサの文法の概要 (C/C++)
+  href: ../preprocessor/grammar-summary-c-cpp.md
+- name: プラグマ ディレクティブと __pragma キーワード
+  expanded: false
+  items:
+    - name: プラグマ ディレクティブと __pragma キーワード
+      href: ../preprocessor/pragma-directives-and-the-pragma-keyword.md
+    - name: alloc_text プラグマ
+      href: ../preprocessor/alloc-text.md
+    - name: auto_inline プラグマ
+      href: ../preprocessor/auto-inline.md
+    - name: bss_seg プラグマ
+      href: ../preprocessor/bss-seg.md
+    - name: check_stack プラグマ
+      href: ../preprocessor/check-stack.md
+    - name: code_seg プラグマ
+      href: ../preprocessor/code-seg.md
+    - name: comment プラグマ (C/C++)
+      href: ../preprocessor/comment-c-cpp.md
+    - name: component プラグマ
+      href: ../preprocessor/component.md
+    - name: conform プラグマ
+      href: ../preprocessor/conform.md
+    - name: const_seg プラグマ
+      href: ../preprocessor/const-seg.md
+    - name: data_seg プラグマ
+      href: ../preprocessor/data-seg.md
+    - name: 非推奨のプラグマ (C/C++)
+      href: ../preprocessor/deprecated-c-cpp.md
+    - name: detect_mismatch プラグマ
+      href: ../preprocessor/detect-mismatch.md
+    - name: execution_character_set プラグマ
+      href: ../preprocessor/execution-character-set.md
+    - name: fenv_access プラグマ
+      href: ../preprocessor/fenv-access.md
+    - name: float_control プラグマ
+      href: ../preprocessor/float-control.md
+    - name: fp_contract プラグマ
+      href: ../preprocessor/fp-contract.md
+    - name: function プラグマ (C/C++)
+      href: ../preprocessor/function-c-cpp.md
+    - name: hdrstop プラグマ
+      href: ../preprocessor/hdrstop.md
+    - name: include_alias プラグマ
+      href: ../preprocessor/include-alias.md
+    - name: init_seg プラグマ
+      href: ../preprocessor/init-seg.md
+    - name: inline_depth プラグマ
+      href: ../preprocessor/inline-depth.md
+    - name: inline_recursion プラグマ
+      href: ../preprocessor/inline-recursion.md
+    - name: intrinsic プラグマ
+      href: ../preprocessor/intrinsic.md
+    - name: loop プラグマ
+      href: ../preprocessor/loop.md
+    - name: make_public プラグマ
+      href: ../preprocessor/make-public.md
+    - name: マネージド、アンマネージド プラグマ
+      href: ../preprocessor/managed-unmanaged.md
+    - name: message プラグマ
+      href: ../preprocessor/message.md
+    - name: omp プラグマ
+      href: ../preprocessor/omp.md
+    - name: once プラグマ
+      href: ../preprocessor/once.md
+    - name: optimize プラグマ
+      href: ../preprocessor/optimize.md
+    - name: pack プラグマ
+      href: ../preprocessor/pack.md
+    - name: pointers_to_members プラグマ
+      href: ../preprocessor/pointers-to-members.md
+    - name: pop_macro プラグマ
+      href: ../preprocessor/pop-macro.md
+    - name: push_macro プラグマ
+      href: ../preprocessor/push-macro.md
+    - name: region プラグマ、endregion プラグマ
+      href: ../preprocessor/region-endregion.md
+    - name: runtime_checks プラグマ
+      href: ../preprocessor/runtime-checks.md
+    - name: section プラグマ
+      href: ../preprocessor/section.md
+    - name: setlocale プラグマ
+      href: ../preprocessor/setlocale.md
+    - name: strict_gs_check プラグマ
+      href: ../preprocessor/strict-gs-check.md
+    - name: vtordisp プラグマ
+      href: ../preprocessor/vtordisp.md
+    - name: warning pragma
+      href: ../preprocessor/warning.md
