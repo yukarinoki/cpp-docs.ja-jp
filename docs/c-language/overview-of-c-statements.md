@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
 ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857074"
@@ -33,9 +33,9 @@ C ステートメントは、トークン、式、および他のステートメ
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md) /* Microsoft 固有の \*/
+[try-except-statement](../c-language/try-except-statement-c.md) /* Microsoft 固有の仕様 \*/
 
-[try-finally ステートメント](../c-language/try-finally-statement-c.md) /\* Microsoft 固有の \*/
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Microsoft 固有の仕様 \*/
 
 ステートメント本体が "複合ステートメント" であることはよくあります。 複合ステートメントは、キーワードも含めて、他のステートメントで構成されます。 複合ステートメントは、中かっこ ( **{ }** ) で区切られます。 他の C ステートメントはすべてセミコロン ( **;** ) で終了します。 セミコロンはステートメントの終端記号です。
 
@@ -43,6 +43,6 @@ C ステートメントは、トークン、式、および他のステートメ
 
 どの C ステートメントも、名前とコロンで構成される識別ラベルを先頭に置くことができます。 ステートメント ラベルを認識するのは `goto` ステートメントだけであるため、ステートメント ラベルについては `goto` と一緒に説明しています。 詳細については、「[goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ステートメント](../c-language/statements-c.md)

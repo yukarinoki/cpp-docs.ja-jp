@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
 ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857061"
@@ -21,7 +21,7 @@ ms.locfileid: "74857061"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\**属性-seq*<sub>opt</sub>は Microsoft 固有 */
+/\* *attribute-seq*<sub>opt</sub> は Microsoft 固有の仕様です */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -65,7 +65,7 @@ C で定義されている *storage-class-specifier* 終端要素には、**auto
 
 *type-qualifier* 終端要素は、**const** と `volatile` の 2 つがあります。 これらの修飾子は、関連する型の追加のプロパティを指定します (その型のオブジェクトに左辺値を通じてアクセスする場合のみ)。 **const** および `volatile` の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照してください。 左辺値の定義については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 言語の構文概要](../c-language/c-language-syntax-summary.md)<br/>
 [宣言と型](../c-language/declarations-and-types.md)<br/>

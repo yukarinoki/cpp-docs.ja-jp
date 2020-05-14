@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857152"
@@ -27,13 +27,13 @@ ms.locfileid: "74857152"
 ## <a name="syntax"></a>構文
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *拡張宣言-seq* **)**  /\* Microsoft 固有の \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft 固有の仕様 \*/
 
-*拡張宣言修飾子-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有の \*/<br/>
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 固有の仕様 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*拡張宣言修飾子*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有 \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 固有の仕様 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
@@ -45,6 +45,6 @@ thread、naked、dllimport、および dllexport ストレージ クラス属性
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言と型](../c-language/declarations-and-types.md)

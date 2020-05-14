@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
 ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/16/2020
 ms.locfileid: "76123943"
@@ -38,5 +38,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="see-also"></a>関連項目
 
-[main 関数とコマンドライン引数C++()](../cpp/main-function-command-line-args.md)\
+[main 関数とコマンドライン引数 (C++)](../cpp/main-function-command-line-args.md)\
 [C コマンド ライン引数の解析](../c-language/parsing-c-command-line-arguments.md)

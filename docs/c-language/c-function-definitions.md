@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
 ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857139"
@@ -36,7 +36,7 @@ ms.locfileid: "74857139"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**属性-seq*は Microsoft 固有の \*/
+/\* *attribute-seq* は Microsoft 固有の仕様です \*/
 
 プロトタイプ パラメーターは次のとおりです。
 
@@ -93,6 +93,6 @@ ms.locfileid: "74857139"
 
 「[関数の属性](../c-language/function-attributes.md)」、「[ストレージ クラス](../c-language/storage-class.md)」、「[戻り値の型](../c-language/return-type.md)」、「[パラメーター](../c-language/parameters.md)」、および「[関数本体](../c-language/function-body.md)」の各セクションでは、関数定義のコンポーネントについて詳しく説明します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数](../c-language/functions-c.md)

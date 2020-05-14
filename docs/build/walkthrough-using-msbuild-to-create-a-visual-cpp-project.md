@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
 ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/16/2020
 ms.locfileid: "79422716"
@@ -25,7 +25,7 @@ ms.locfileid: "79422716"
 
 - MSBuild を使用したプロジェクトのカスタマイズ。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを完了するための要件は次のとおりです。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79422716"
 > Visual Studio IDE を使用し後でプロジェクト ファイルを編集する場合は、このアプローチは使用しないでください。 .vcxproj ファイルを手動で作成すると、特にプロジェクトのプロジェクト項目でワイルドカードが使用されている場合、Visual Studio IDE はそれを編集および読み込みできなくなります。
 
 > [!NOTE]
-> 詳細レベルのビルド手順の多くは、VCTargets ディレクトリに定義されている、プロパティ **に格納されている**.targets**および**.props`$(VCTargetsPath)` ファイルに含まれています。 Visual Studio 2019 Enterprise Edition でのこれらのファイルの既定のパスは、C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props です。
+> 詳細レベルのビルド手順の多くは、VCTargets ディレクトリに定義されている、プロパティ `$(VCTargetsPath)` に格納されている **.targets** および **.props** ファイルに含まれています。 Visual Studio 2019 Enterprise Edition でのこれらのファイルの既定のパスは、C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props です。
 
 ## <a name="creating-the-c-source-files"></a>C++ ソース ファイルの作成
 
@@ -86,7 +86,7 @@ MSBuild のプロジェクト ファイルは、プロジェクトのルート�
     </Project>
     ```
 
-1. `<ProjectConfiguration>` 要素に次の 2 個の `<ItemGroup>` 子要素を追加します。 この子要素は、32 ビットの Windows オペレーティング システムのデバッグおよびリリース構成を指定します。
+1. `<ItemGroup>` 要素に次の 2 個の `<ProjectConfiguration>` 子要素を追加します。 この子要素は、32 ビットの Windows オペレーティング システムのデバッグおよびリリース構成を指定します。
 
     ```xml
     <ItemGroup>
@@ -122,7 +122,7 @@ MSBuild のプロジェクト ファイルは、プロジェクトのルート�
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. `<ClCompile>` 要素に次の `<ItemGroup>` 子要素を追加します。 この子要素は、コンパイルする C/C++ ソース ファイルの名前を指定します。
+1. `<ItemGroup>` 要素に次の `<ClCompile>` 子要素を追加します。 この子要素は、コンパイルする C/C++ ソース ファイルの名前を指定します。
 
     ```xml
     <ItemGroup>
@@ -133,7 +133,7 @@ MSBuild のプロジェクト ファイルは、プロジェクトのルート�
    > [!NOTE]
    > `<ClCompile>` は*ビルド ターゲット*であり、**VCTargets** ディレクトリに定義されています。
 
-1. `<ClInclude>` 要素に次の `<ItemGroup>` 子要素を追加します。 この子要素は、C/C++ ソース ファイルに対応するヘッダー ファイルの名前を指定します。
+1. `<ItemGroup>` 要素に次の `<ClInclude>` 子要素を追加します。 この子要素は、C/C++ ソース ファイルに対応するヘッダー ファイルの名前を指定します。
 
     ```xml
     <ItemGroup>
@@ -233,7 +233,7 @@ MSBuild では、定義済みのビルド ターゲットを実行したり、�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>MSBuild と 64 ビットのコンパイラおよびツールの併用
 
-64 ビットの Windows に Visual Studio をインストールした場合、既定で 64 ビットの x64 ネイティブおよびクロス ツールがインストールされます。 MSBuild を構成して `PreferredToolArchitecture` プロパティを設定すると、アプリケーションのビルドに 64 ビットのコンパイラおよびツールを使用できます。 このプロパティは、プロジェクトの構成やプラットフォームのプロパティには影響しません。 既定では、32 ビット版のツールが使用されます。 64ビット版のコンパイラおよびツールを指定するには、`Microsoft.Cpp.default.props` \<Import/> 要素の後に次のプロパティグループ要素を Myproject プロジェクトファイルに追加します。
+64 ビットの Windows に Visual Studio をインストールした場合、既定で 64 ビットの x64 ネイティブおよびクロス ツールがインストールされます。 MSBuild を構成して `PreferredToolArchitecture` プロパティを設定すると、アプリケーションのビルドに 64 ビットのコンパイラおよびツールを使用できます。 このプロパティは、プロジェクトの構成やプラットフォームのプロパティには影響しません。 既定では、32 ビット版のツールが使用されます。 64 ビット版のコンパイラおよびツールを指定するには、Myproject.vcxproj プロジェクト ファイル内の `Microsoft.Cpp.default.props` \<Import /> 要素の後に次のプロパティ グループ要素を追加します。
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ MSBuild では、定義済みのビルド ターゲットを実行したり、�
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>MsBuild での別のツールセットの使用
 
-インストールされている Visual C++ の他バージョンのツールセットおよびライブラリがある場合、MSBuild では、現在の Visual C++ のバージョンまたはインストールされている別のバージョン用のアプリケーションをビルドできます。 たとえば、Visual Studio 2012 がインストールされている場合、Windows XP C++の visual 11.0 ツールセットを指定するには、`Microsoft.Cpp.props` \<Import/> 要素の後に、次のプロパティグループ要素を Myproject プロジェクトファイルに追加します。
+インストールされている Visual C++ の他バージョンのツールセットおよびライブラリがある場合、MSBuild では、現在の Visual C++ のバージョンまたはインストールされている別のバージョン用のアプリケーションをビルドできます。 たとえば Visual Studio 2012 がインストールされている場合に Windows XP 用の Visual C++ 11.0 ツールセットを指定するには、Myproject.vcxproj プロジェクト ファイル内の `Microsoft.Cpp.props` \<Import /> 要素の後に次のプロパティ グループ要素を追加します。
 
 ```xml
 <PropertyGroup>
