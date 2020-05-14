@@ -6,7 +6,7 @@ helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323013"
@@ -15,7 +15,7 @@ ms.locfileid: "81323013"
 
 ::: moniker range="vs-2015"
 
-CMake プロジェクトは、Visual Studio 2017 以降でサポートされています。
+CMake プロジェクトは Visual Studio 2017 以降でサポートされます。
 
 ::: moniker-end
 
@@ -34,7 +34,7 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 - MinGW デバッグ
 - MinGW リリース
 
-構成を選択すると、プロジェクトのルート フォルダーの*CMakeSettings.json*ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「 [CMakeSettings リファレンス 」を参照してください](cmakesettings-reference.md)。
+構成を選択すると、それがプロジェクトのルート フォルダー内の *CMakeSettings.json* ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「[CMakeSettings リファレンス](cmakesettings-reference.md)」を参照してください。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 定義済みビルド構成:
 
@@ -359,25 +359,25 @@ You can use these optional settings for more control:
 CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイルに格納されます。 メイン ツールバーで [ビルド構成] ドロップダウンから **[構成の管理]** を選択すると、Visual Studio で使用できる既定の CMake 構成を示すダイアログが表示されます。
 
 - x86 デバッグ
-- x86 クランデバッグ
+- x86 Clang デバッグ
 - x86 リリース
-- x86 クランリリース
+- x86 Clang リリース
 - x64 デバッグ
 - x64 Clang デバッグ
 - x64 リリース
-- x64 クランリリース
+- x64 Clang リリース
 - Linux デバッグ
 - Linux リリース
-- Linux-クランデバッグ
-- Linux-クランリリース
+- Linux-Clang-Debug
+- Linux-Clang-Release
 - 既存のキャッシュ (リモート)
 - 既存のキャッシュ
 - MinGW デバッグ
 - MinGW リリース
 - WSL デバッグ
 - WSL リリース
-- WSL クラン デバッグ
-- WSL クラン リリース
+- WSL Clang デバッグ
+- WSL Clang リリース
 - Clang
 
 構成を選択すると、それがプロジェクトのルート フォルダー内の CMakeSettings.json ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。
@@ -698,7 +698,7 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 
 ## <a name="see-also"></a>関連項目
 
-[C メイク プロジェクトのビジュアル スタジオ](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>
 [リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)<br/>

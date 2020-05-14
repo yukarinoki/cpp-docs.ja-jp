@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80169826"
@@ -30,9 +30,9 @@ ms.locfileid: "80169826"
 
 出力形式は、次のとおりです。
 
-> {<em>filename</em> **(** <em>行 #</em> \[ **、** <em>列 #</em>] **)** &#124; *toolname*} **:** <em>任意のテキスト</em>を \[] {**エラー** &#124; **警告**}<em>コード + 数値</em> **:** <em>ローカライズ</em>可能な文字列 \[<em>任意のテキスト</em>]
+> {<em>ファイル名</em> **(** <em>行 #</em> \[ **,** <em>列 #</em>] **)** &#124; *ツール名*} **:** \[ <em>任意のテキスト</em> ] {**エラー** &#124; **警告**} <em>コード + 数値</em> **:** <em>ローカライズ可能文字列</em> \[ <em>任意のテキスト</em> ]
 
-各値の説明:
+この場合、
 
 - {*a* &#124; *b*} には、*a* または *b* を選択します。
 
@@ -46,6 +46,6 @@ ms.locfileid: "80169826"
 >
 > LINK : 致命的なエラー LNK1104: '*somelib.lib*' を開くことができません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カスタム ビルド ステップとビルド イベントについて](understanding-custom-build-steps-and-build-events.md)

@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
 ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80078690"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio のプロジェクト - C++
 
-"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブビルドシステムであり、一般に、Windows 固有のプログラムに使用する最適なビルドシステムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォームプロジェクト、またはオープンソースライブラリを使用するプロジェクトでは、visual studio 2017 以降の[Visual studio で Cmake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、 [Microsoft C++の移植とアップグレード](../porting/visual-cpp-porting-and-upgrading-guide.md)に関するガイドを参照してください。
+"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブ ビルド システムであり、通常は Windows 固有のプログラムで使用するための最適なビルド システムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォーム プロジェクト、またはオープンソース ライブラリを使用するプロジェクトでは、Visual Studio 2017 以降で [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、「[Microsoft C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)」を参照してください。
 
-## <a name="create-a-project"></a>プロジェクトの作成
+## <a name="create-a-project"></a>プロジェクトを作成する
 
 ::: moniker range="vs-2019"
 
 C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、 **[言語]** を C++ に設定します。 結果の一覧に表示されるプロジェクト テンプレートのリストは、 **[プラットフォーム]** または **[プロジェクトの種類]** を設定し、検索ボックスにキーワードを入力することで、フィルター処理できます。
 
-   ![Visual Studio 2019 プロジェクトテンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
+   ![Visual Studio 2019 プロジェクト テンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
 
 ::: moniker-end
 
@@ -37,7 +37,7 @@ C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規�
 
 ::: moniker-end
 
-Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法: プロジェクトテンプレートを作成](/visualstudio/ide/how-to-create-project-templates)する」を参照してください。
+Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、[プロジェクト テンプレートを作成する](/visualstudio/ide/how-to-create-project-templates)」をご覧ください。
 
 作成したプロジェクトは、[[ソリューション エクスプローラー]](/visualstudio/ide/solutions-and-projects-in-visual-studio) ウィンドウに表示されます。
 
@@ -45,7 +45,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 新しいプロジェクトを作成すると、ソリューション ファイル (.sln) も作成されます。 **ソリューション エクスプローラー**でソリューションを右クリックして、ソリューションに他のプロジェクトを追加できます。 ソリューション ファイルは、複数の関連プロジェクトがあるときにビルドの依存関係を調整するために使われますが、それ以外のことには使われません。 すべてのコンパイラ オプションは、プロジェクト レベルで設定されます。
 
-## <a name="add-items"></a>[項目の追加]
+## <a name="add-items"></a>項目を追加する
 
 ソース コード ファイル、アイコン、その他の項目をプロジェクトに追加するには、**ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[追加] > [新規]** または **[追加] > [既存]** を選択します。
 
@@ -57,7 +57,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 プロジェクトのビルド設定を構成するには、**ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロパティ]** を選択します。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)」をご覧ください。
 
-## <a name="compile-and-run"></a>コンパイルと実行
+## <a name="compile-and-run"></a>コンパイルして実行する
 
 新しいプロジェクトをコンパイルして実行するには、**F5** キーを押すか、またはメイン ツールバーの緑色の矢印が付いた "*デバッグ ドロップダウン*" をクリックします。 "*構成ドロップダウン*" では、"*デバッグ*" ビルドまたは "*リリース*" ビルド (または他のカスタム構成) を実行するかどうかを選択します。
 
@@ -84,7 +84,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 [既存のコードからプロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 ソース ファイルの緩やかなコレクションから新しい Visual Studio プロジェクトを作成する方法。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロジェクトおよびビルド システム](projects-and-build-systems-cpp.md)<br>
-[Microsoft C++移植およびアップグレードガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Visual C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)

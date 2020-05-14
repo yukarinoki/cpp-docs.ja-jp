@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
 ms.openlocfilehash: 192564d475da121a874b5a40de62b37d7f934ce7
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80169800"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>最適化に影響するプラグマおよびキーワード
 
-C またはC++コードで使用するいくつかのキーワードおよびプラグマは、最適化に影響します。
+C または C++ コードで使用するさまざまなキーワードとプラグマは、最適化に影響します。
 
 - [__asm](../assembler/inline/asm.md)
 
@@ -27,18 +27,18 @@ C またはC++コードで使用するいくつかのキーワードおよびプ
 
 - [#pragma check_stack](../preprocessor/check-stack.md)
 
-- [#pragma 関数](../preprocessor/function-c-cpp.md)
+- [#pragma function](../preprocessor/function-c-cpp.md)
 
 - [#pragma inline_depth](../preprocessor/inline-depth.md)
 
 - [#pragma inline_recursion](../preprocessor/inline-recursion.md)
 
-- [#pragma 組み込み](../preprocessor/intrinsic.md)
+- [#pragma intrinsic](../preprocessor/intrinsic.md)
 
-- [最適化 #pragma](../preprocessor/optimize.md)
+- [#pragma optimize](../preprocessor/optimize.md)
 
 - [register キーワード](../cpp/storage-classes-cpp.md#register)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コードの最適化](optimizing-your-code.md)

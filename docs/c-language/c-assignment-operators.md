@@ -32,7 +32,7 @@ helpviewer_keywords:
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80168800"
@@ -45,14 +45,14 @@ ms.locfileid: "80168800"
 
 *assignment-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*単項式*の代入*演算子*の*代入式*
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: 次のいずれか<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*** **=/=%=** **+=-=** **\<\<** **-=** **=>>=** **&=^=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 C の代入演算子は、1 回の演算で値の変換と値の代入の両方を実行することができます。 C には、次の代入演算子が用意されています。
 
-|[演算子]|実行される演算|
+|演算子|実行される演算|
 |--------------|-------------------------|
 |**=**|単純代入|
 |**&#42;=**|乗算代入|

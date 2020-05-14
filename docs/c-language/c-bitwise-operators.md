@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80168774"
@@ -25,11 +25,11 @@ ms.locfileid: "80168774"
 
 ## <a name="syntax"></a>構文
 
-*And 式*: &nbsp;&nbsp;*等値式*&nbsp;&nbsp;*AND-expression* **&** *等値式*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*排他的 or 式*: &nbsp;&nbsp;*と-* 式 &nbsp;&nbsp;の*排他的 or 式*の **^** *と-式*
+*exclusive-OR-expression*:&nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*包含または*式: *&nbsp;&nbsp;または式の*&nbsp;&nbsp;を*包含* &#124; *または式*として指定します。
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 ビット処理演算子のオペランドは、整数型である必要がありますが、それぞれの型が異なっていてもかまいません。 これらの演算子は、通常の算術変換を実行します。結果の型は変換後のオペランドの型です。
 
@@ -37,11 +37,11 @@ C のビット処理演算子について、以下に説明します。
 
 |演算子|説明|
 |--------------|-----------------|
-|**&**|ビットごとの AND 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。|
-|**^**|ビットごとの排他的 OR 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。|
-|**&#124;**|ビットごとの包括的 OR 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。|
+|**&**|ビットごとの AND 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。|
+|**^**|ビットごとの排他的 OR 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。|
+|**&#124;**|ビットごとの包括的 OR 演算子は、最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 どちらかのビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。|
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 これらの宣言が、次の 3 つの例で使用されています。
 
@@ -78,7 +78,7 @@ n = i ^ j;
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ビット処理 AND 演算子: &](../cpp/bitwise-and-operator-amp.md)<br/>
 [ビット処理排他的 OR 演算子: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>

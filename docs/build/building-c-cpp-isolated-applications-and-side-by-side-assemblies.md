@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
 ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80169878"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド
 
-Visual Studio では、[分離アプリケーション](/windows/win32/SbsCs/isolated-applications)と[side-by-side アセンブリ](/windows/win32/SbsCs/about-side-by-side-assemblies-)の概念に基づいて、Windows クライアントアプリケーションの配置モデルがサポートされています。 既定では、visual Studio は、VisualC++ C++ライブラリへの依存関係を記述するために[マニフェスト](/windows/win32/sbscs/manifests)を使用する分離アプリケーションとして、すべてのネイティブ C/アプリケーションをビルドします。
+Visual Studio では、[分離アプリケーション](/windows/win32/SbsCs/isolated-applications) および [side-by-side アセンブリ](/windows/win32/SbsCs/about-side-by-side-assemblies-)という概念に基づく、Windows クライアント アプリケーションの配置モデルがサポートされます。 Visual Studio では、既定では、すべてのネイティブ C/C++ アプリケーションが、[マニフェスト](/windows/win32/sbscs/manifests)を使用して Visual C++ ライブラリへの依存関係を記述する分離アプリケーションとしてビルドされます。
 
 C/C++ プログラムを分離アプリケーションとしてビルドすることには、さまざまな利点があります。 たとえば、分離アプリケーションは、他の C/C++ アプリケーションによって Visual C++ ライブラリがインストールまたはアンインストールされる場合に影響を受けません。 分離アプリケーションで使用される Visual C++ ライブラリは、アプリケーションのローカル フォルダーに、またはネイティブ アセンブリ キャッシュ (WinSxS) へのインストールによって、再配布される場合もあります。ただし、 [発行者構成ファイル](/windows/win32/SbsCs/publisher-configuration)を使用することによって、既に配置されているアプリケーションの Visual C++ ライブラリのサービス提供を簡略化できます。 分離アプリケーションの配置モデルにより、特定のコンピューターで実行されている C/C++ アプリケーションで最新バージョンの Visual C++ ライブラリが使用されるようにすることが簡単になります。一方で、アプリケーションが依存する DLL に対する明示的なバージョン バインディングは、引き続きシステム管理者およびアプリケーション作成者が制御できます。
 
-このセクションでは、C/C++ アプリケーションを分離アプリケーションとしてビルドし、マニフェストを使用して Visual C++ ライブラリにバインドされるようにする方法について説明します。 このセクションの情報は、主にネイティブC++アプリケーションまたはアンマネージアプリケーションに適用されます。 Visual Studio でビルドさC++れたネイティブアプリケーションの配置の詳細については、「 [visual C++ Files](../windows/redistributing-visual-cpp-files.md)の再配布」を参照してください。
+このセクションでは、C/C++ アプリケーションを分離アプリケーションとしてビルドし、マニフェストを使用して Visual C++ ライブラリにバインドされるようにする方法について説明します。 このセクションの情報は、主にネイティブの (アンマネージド) C++ アプリケーションに適用されます。 Visual Studio でビルドされたネイティブ C++ アプリケーションの配置の詳細については、「[Visual C++ ファイルの再配布](../windows/redistributing-visual-cpp-files.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -32,9 +32,9 @@ C/C++ プログラムを分離アプリケーションとしてビルドする�
 
 [C/C++ side-by-side アセンブリのビルド](building-c-cpp-side-by-side-assemblies.md)
 
-[方法 : 登録を必要としない COM をビルドする](how-to-build-registration-free-com-components.md)
+[方法: 登録を必要としない COM コンポーネントをビルドする](how-to-build-registration-free-com-components.md)
 
-[方法 : COM コンポーネントを使用する分離アプリケーションをビルドする](how-to-build-isolated-applications-to-consume-com-components.md)
+[方法: COM コンポーネントを使用する分離アプリケーションをビルドする](how-to-build-isolated-applications-to-consume-com-components.md)
 
 [C/C++ プログラムのマニフェスト生成についての理解](understanding-manifest-generation-for-c-cpp-programs.md)
 
