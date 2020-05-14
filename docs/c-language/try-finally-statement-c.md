@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
 ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349615"
 ---
 # <a name="try-finally-statement-c"></a>try-finally ステートメント (C)
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
 `try-finally` ステートメントは C 言語に対する Microsoft の拡張機能であり、コードのブロックの実行が中断されたときに、アプリケーションがクリーンアップ コードの実行を保証できるようにします。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 `try-finally` ステートメントは、ルーチンからの不完全な戻りが発生する可能性のあるエラーを複数の場所でチェックするルーチンに特に便利です。
 
@@ -48,7 +48,7 @@ ms.locfileid: "81349615"
 
 [try-except ステートメント](../c-language/try-except-statement-c.md)の動作を確認するには、`try-finally` の例をご覧ください。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

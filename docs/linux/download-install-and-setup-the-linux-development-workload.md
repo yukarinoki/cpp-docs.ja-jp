@@ -1,28 +1,28 @@
 ---
 title: Visual Studio で C++ の Linux ワークロードをインストールする
-description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
-ms.date: 06/11/2019
+description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法。
+ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364339"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765748"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
 ::: moniker range="vs-2015"
 
-Linux プロジェクトは Visual Studio 2017 以降でサポートされます。
+Linux プロジェクトは Visual Studio 2017 以降でサポートされます。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Windows 上の Visual Studio IDE を使って、リモートの Linux システムや、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) 上で実行される C++ プロジェクトの作成、編集、およびデバッグを行うことができます。
+Windows 上の Visual Studio IDE を使って、リモートの Linux システムや、仮想マシン、または [Linux 用 Windows サブシステム](/windows/wsl/about)上で実行される C++ プロジェクトの作成、編集、およびデバッグを行うことができます。
 
-Visual Studio プロジェクトに変換しなくても、CMake を使用する既存のコード ベースで作業できます。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。 たとえば、Windows 上で Visual Studio を使ってコードの編集、ビルド、デバッグを行った後、すぐにそのプロジェクトのターゲットを Linux に変更して Linux 環境内でビルドとデバッグを行うことができます。 Linux 用のヘッダー ファイルがローカル コンピューターに自動的にコピーされます。そこで Visual Studio によってそれらが使用され、IntelliSense の完全なサポート (ステートメント入力候補、定義へ移動など) が提供されます。
+Visual Studio プロジェクトに変換しなくても、CMake を使用する既存のコード ベースで作業できます。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。 たとえば、Visual Studio を使用して、Windows でコードを編集、ビルド、およびデバッグできます。 次に、Linux 用にプロジェクトを簡単に再ターゲットして、Linux 環境でビルドおよびデバッグを行います。 Linux 用のヘッダー ファイルがローカル コンピューターに自動的にコピーされます。 Visual Studio によってそれらが使用され、IntelliSense の完全なサポート (ステートメント入力候補、定義へ移動など) が提供されます。
 
 これらのどのシナリオについても、**C++ による Linux 開発**ワークロードが必要です。
 
@@ -56,8 +56,8 @@ Windows 10 の Windows Subsystem for Linux (WSL) では、お好みの Linux デ
 
 Visual Studio の Linux プロジェクトを使用する場合、リモートの Linux システムまたは WSL に次の依存関係がインストールされている必要があります。
 
-- **コンパイラ** - Visual Studio 2019 では、GCC と [Clang](/cpp/build/clang-support-cmake?view=vs-2019) が最初からサポートされています。
-- **gdb** - Visual Studio によって Linux システム上の gdb が自動的に起動され、Visual Studio デバッガーのフロントエンドを使用した、Linux 上の完全に忠実なデバッグ エクスペリエンスが提供されます。
+- **コンパイラ** - Visual Studio 2019 では、GCC と [Clang](/cpp/build/clang-support-cmake?view=vs-2019) が完全にサポートされています。
+- **gdb** - Visual Studio によって Linux システム上の gdb が自動的に起動され、Visual Studio デバッガーのフロント エンドを使用した、Linux 上の完全に忠実なデバッグ エクスペリエンスが提供されます。
 - **rsync** および **zip** - rsync と zip を含めることにより、IntelliSense で使用するためのヘッダー ファイルを、Visual Studio が Linux システムから Windows ファイルシステムに抽出できるようになります。
 - **make**
 - **openssh-server** (リモートの Linux システムのみ) - Visual Studio は、セキュリティで保護された SSH 接続を介してリモートの Linux システムに接続します。
@@ -72,8 +72,8 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 
 Visual Studio の Linux プロジェクトを使用する場合、リモートの Linux システムまたは WSL に次の依存関係がインストールされている必要があります。
 
-- **gcc** - Visual Studio 2017 では、GCC が最初からサポートされています。
-- **gdb** - Visual Studio によって Linux システム上の gdb が自動的に起動され、Visual Studio デバッガーのフロントエンドを使用した、Linux 上の完全に忠実なデバッグ エクスペリエンスが提供されます。
+- **gcc** - Visual Studio 2017 では、GCC が完全にサポートされています。
+- **gdb** - Visual Studio によって Linux システム上の gdb が自動的に起動され、Visual Studio デバッガーのフロント エンドを使用した、Linux 上の完全に忠実なデバッグ エクスペリエンスが提供されます。
 - **rsync** および **zip** - rsync と zip を含めることにより、IntelliSense で使用するためのヘッダー ファイルを、Visual Studio が Linux システムから Windows ファイルシステムに抽出できるようになります。
 - **make**
 - **openssh-server** - Visual Studio は、セキュリティで保護された SSH 接続を介してリモートの Linux システムに接続します。
@@ -85,7 +85,7 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux のセットアップ: WSL 上の Ubuntu
 
-WSL をターゲットにしている場合は、ビルドとデバッグを行うためにリモート接続を追加したり、SSH を構成したりする必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 必要なアプリケーションがまだない場合は、次の手順でインストールできます。 **ninja-build** は CMake プロジェクトにのみ必要です。
+WSL をターゲットにしている場合は、ビルドとデバッグを行うためにリモート接続を追加したり、SSH を構成したりする必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 **ninja-build** は CMake プロジェクトにのみ必要です。 必要なアプリケーションがまだない場合は、このコマンドを使用してインストールできます。
 
 ```bash
 sudo apt-get install g++ gdb make ninja-build rsync zip
@@ -97,7 +97,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>リモートの Linux システム上の Ubuntu
 
-ターゲットの Linux システムには **openssh-server**、**g++** 、**gdb**、**ninja-build** (CMake プロジェクトのみ)、および **make** がインストールされ、ssh デーモンが実行されている必要があります。 Intellisense サポート対応のローカル コンピューターでリモート ヘッダーを自動同期するには、**zip** と **rsync** が必須です。 これらのアプリケーションがまだない場合は、次の手順でインストールできます。
+ターゲットの Linux システムには、**openssh-server**、**g++** 、**gdb**、**make** がインストールされている必要があります。 **ninja-build** は CMake プロジェクトにのみ必要です。 **ssh** デーモンが実行されている必要があります。 Intellisense サポート対応のローカル コンピューターでリモート ヘッダーを自動同期するには、**zip** と **rsync** が必須です。 これらのアプリケーションがまだない場合は、次の手順でインストールできます。
 
 1. Linux コンピューターのシェル プロンプトで次のコマンドを実行します。
 
@@ -105,7 +105,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
    sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
-   sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
+   sudo コマンドを実行するために、root パスワードの入力を求められる場合があります。 その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
 
 1. 次のコマンドを実行し、Linux コンピューターで ssh サービスを実行します。
 
@@ -143,7 +143,7 @@ Fedora を実行しているターゲット マシンで **dnf** パッケージ
    sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
-   sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
+   sudo コマンドを実行するために、root パスワードの入力を求められる場合があります。 その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
 
 1. 次のコマンドを実行し、Linux コンピューターで ssh サービスを実行します。
 
@@ -153,17 +153,11 @@ Fedora を実行しているターゲット マシンで **dnf** パッケージ
 
    サービスが開始され、バックグラウンドで実行され、接続を受け付けられる状態になります。
 
-::: moniker-end
-
-::: moniker range="vs-2015"
-
-Linux での C++ での開発は Visual Studio 2017 以降でサポートされています。
-
-::: moniker-end
-
 ## <a name="next-steps"></a>次の手順
 
 これで Linux プロジェクトを作成するか開いて、ターゲット システム上で実行できるように構成する準備が整いました。 詳細については次を参照してください:
 
 - [新しい Linux プロジェクトを作成する](create-a-new-linux-project.md)
 - [Linux CMake プロジェクトを構成する](cmake-linux-project.md)
+
+::: moniker-end

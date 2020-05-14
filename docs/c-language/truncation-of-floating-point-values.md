@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 051a6e22-c636-4af8-9ac4-40160f4affca
 ms.openlocfilehash: 3aeb6ab1063d0782a6c5d297e387f3810c2e136a
 ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2020
 ms.locfileid: "81480881"
@@ -19,4 +19,4 @@ ms.locfileid: "81480881"
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点数値演算](../c-language/floating-point-math.md)
+[浮動小数点演算](../c-language/floating-point-math.md)

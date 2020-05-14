@@ -4,7 +4,7 @@ ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
 ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
 ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80078204"
@@ -12,32 +12,32 @@ ms.locfileid: "80078204"
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル
 
 > [!NOTE]
-> 新しい UWP アプリとコンポーネントの場合は、Windows ランタイム api の標準 c++ 17 言語プロジェクションである[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)を使用することをお勧めします。 C++/WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C++/WinRT はヘッダー ファイル、完全に実装されは最新の Windows API にファースト クラスのアクセス提供するために設計されています。
+> 新しい UWP アプリとコンポーネントでは、Windows ランタイム API の標準 C++17 言語投影である [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) を使用することをお勧めします。 C++/WinRT は、Windows 10 SDK のバージョン 1803 以降で使用できます。 C++/WinRT は、全体がヘッダー ファイル内に実装され、最新の Windows API に対する最高級のアクセスを提供するように設計されています。
 
-Microsoft C++コンパイラ (MSVC) は、 C++コンポーネント拡張 (C++/cx) をサポートしています。これには、Windows ランタイムプログラミングモデルを対象とする追加の型と演算子が含まれています。 /Cx を使用C++して、ユニバーサル WINDOWS プラットフォーム (UWP) と Windows デスクトップ用のアプリを構築できます。 詳細については、「[ランタイムプラットフォームの/cx およびコンポーネント拡張機能](../extensions/component-extensions-for-runtime-platforms.md)[のC++](https://msdn.microsoft.com/magazine/dn166929.aspx)概要」を参照してください。
+Microsoft C++ コンパイラ (MSVC) では Visual C++ コンポーネント拡張機能 (C++/CX) がサポートされ、Windows ランタイム プログラミング モデルをターゲットとする型と演算子が追加されています。 C++/CX を使用して、ユニバーサル Windows プラットフォーム (UWP) と Windows デスクトップ用のアプリをビルドできます。 詳細については、「[C++/CX のツアー](https://msdn.microsoft.com/magazine/dn166929.aspx)」と[ランタイム プラットフォーム用のコンポーネント拡張機能](../extensions/component-extensions-for-runtime-platforms.md)に関する記事を参照してください。
 
-このチュートリアルでは、テキスト エディターを使って基本的な C++/CX プログラムを作成し、コマンド ラインでコンパイルします。 (表示されているプログラムをタイプするのではなく、自分の C++/CX プログラムを使用するか、別のヘルプ記事の C++/CX コード サンプルを使用できます。 この手法は、UI 要素のない小さなモジュールをビルドしてテストする場合に便利です)。
+このチュートリアルでは、テキスト エディターを使って基本的な C++/CX プログラムを作成し、コマンド ラインでコンパイルします。 (表示されているプログラムをタイプするのではなく、自分の C++/CX プログラムを使用するか、別のヘルプ記事の C++/CX コード サンプルを使用できます。 この手法は UI 要素が含まれていない小さなモジュールをビルドおよびテストするのに便利です)。
 
 > [!NOTE]
-> Visual Studio IDE を使って C++/CX プログラムをコンパイルすることもできます。 IDE には、コマンドラインでは使用できない設計、デバッグ、エミュレーション、および配置のサポートが含まれているため、IDE を使用してユニバーサル Windows プラットフォーム (UWP) アプリをビルドすることをお勧めします。 詳細については、「 [」のC++「UWP アプリの作成](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)」を参照してください。
+> Visual Studio IDE を使って C++/CX プログラムをコンパイルすることもできます。 IDE には、コマンド ラインでは利用できない、設計、デバッグ、エミュレーション、および配置のサポートが含まれているため、ユニバーサル Windows プラットフォーム (UWP) アプリをビルドする場合は IDE を使用することをお勧めします。 詳細については、[C++ での UWP アプリの作成](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)に関する記事を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-C++言語の基本を理解します。
+C++ 言語の基本を理解していること。
 
 ## <a name="compiling-a-ccx-program"></a>C++/CX プログラムのコンパイル
 
-/Cx のC++コンパイルを有効にするには、 [/ZW](reference/zw-windows-runtime-compilation.md)コンパイラオプションを使用する必要があります。 MSVC コンパイラは、Windows ランタイムを対象とする .exe ファイルを生成し、必要なライブラリへのリンクを作成します。
+C++/CX のコンパイルを有効にするには、[/ZW](reference/zw-windows-runtime-compilation.md) コンパイラ オプションを使用する必要があります。 MSVC コンパイラによって、ターゲットが Windows ランタイムである .exe ファイルと、必要なライブラリへのリンクが生成されます。
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>コマンド ラインで C++/CX アプリケーションをコンパイルするには:
 
-1. **開発者コマンドプロンプト**ウィンドウを開きます。 ( **[スタート]** ウィンドウで、 **[アプリ]** を開きます。 使用している Visual Studio のバージョンの下にある**Visual Studio Tools**フォルダーを開き、**開発者コマンドプロンプト**ショートカットを選択します)。開発者コマンドプロンプトウィンドウを開く方法の詳細については、「[コマンドラインからの MSVC ツールセットの使用](building-on-the-command-line.md)」を参照してください。
+1. **[開発者コマンド プロンプト]** ウィンドウを開きます ( **[スタート]** ウィンドウで、 **[アプリ]** を開きます。 使用している Visual Studio のバージョンの下の **Visual Studio Tools** フォルダーを開き、 **[開発者コマンド プロンプト]** ショートカットを選択します)。開発者コマンド プロンプト ウィンドウを開く方法について詳しくは、「[コマンド ラインから MSVC ツールセットを使用する](building-on-the-command-line.md)」をご覧ください。
 
-   コンピューターのオペレーティング システムと構成によっては、コードを正常にコンパイルするために管理者の資格情報が必要な場合があります。 管理者としてコマンドプロンプトウィンドウを実行するには、**開発者コマンドプロンプト**のショートカットメニューを開き、 **[管理者として実行]** を選択します。
+   コンピューターのオペレーティング システムと構成によっては、コードを正常にコンパイルするために管理者の資格情報が必要な場合があります。 管理者としてコマンド プロンプト ウィンドウを実行するには、 **[開発者コマンド プロンプト]** のショートカット メニューを開いて **[管理者として実行]** を選択します。
 
-1. コマンドプロンプトで、「 **notepad basiccx**と入力します。
+1. コマンド プロンプトで、「**notepad basiccx.cpp**」と入力します。
 
-   ファイルの作成を求めるメッセージが表示されたら、[**はい]** を選択します。
+   ファイルを作成するかどうかを確認するメッセージが表示されたら、 **[はい]** を選択します。
 
 1. メモ帳で、次の行を入力します。
 
@@ -50,13 +50,13 @@ C++言語の基本を理解します。
     }
     ```
 
-1. メニューバーで、[**ファイル** > **保存**] を選択します。
+1. メニュー バーで、 **[ファイル]**  >  **[保存]** を選択します。
 
-   Windows ランタイム[Platform 名前](../cppcx/platform-namespace-c-cx.md)空間C++を使用するソースファイルを作成しました。
+   Windows ランタイム [プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)を使用する C++ ソース ファイルが作成されました。
 
-1. コマンドプロンプトで、「 **cl/EHSC/ZW basiccx. .cpp/LINK/SUBSYSTEM: CONSOLE**」と入力します。 cl.exe コンパイラは、ソース コードを .obj ファイルにコンパイルした後、リンカーを実行して basiccx.exe という名前の実行プログラムを生成します。 ( [/Ehsc](reference/eh-exception-handling-model.md)コンパイラオプションはC++例外処理モデルを指定し、 [/link](reference/link-pass-options-to-linker.md)フラグはコンソールアプリケーションを指定します)。
+1. コマンド プロンプトで、「**cl /EHsc /ZW basiccx.cpp /link /SUBSYSTEM:CONSOLE**」と入力します。 cl.exe コンパイラは、ソース コードを .obj ファイルにコンパイルした後、リンカーを実行して basiccx.exe という名前の実行プログラムを生成します ([/EHsc](reference/eh-exception-handling-model.md) コンパイラ オプションは C++ 例外処理モデルを指定し、[/link](reference/link-pass-options-to-linker.md) フラグはコンソール アプリケーションを指定します)。
 
-1. Basiccx.exe .exe プログラムを実行するには、コマンドプロンプトで「 **basiccx.exe**」と入力します。
+1. basiccx.exe プログラムを実行するには、コマンド プロンプトで「**basiccx**」と入力します。
 
    プログラムは、次のテキストを表示して終了します。
 
@@ -64,7 +64,7 @@ C++言語の基本を理解します。
     This is a C++/CX program.
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロジェクトおよびビルド システム](projects-and-build-systems-cpp.md)<br/>
 [MSVC コンパイラ オプション](reference/compiler-options.md)

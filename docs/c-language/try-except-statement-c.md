@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349736"
 ---
 # <a name="try-except-statement-c"></a>try-except ステートメント (C)
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
 **try-except** ステートメントは、C 言語に対する Microsoft の拡張機能であり、正常に実行を終了するイベントが発生したときに、アプリケーションがプログラムの制御を取得できるようにします。 このようなイベントは例外と呼ばれ、例外を処理する機構は構造化例外処理と呼ばれます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "81349736"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *式*  **)**  *複合ステートメント*
+**__except (**  *expression*  **)**  *compound-statement*
 
 `__try` 句の後の複合ステートメントは、保護されたセクションです。 `__except` 句の後の複合ステートメントは、例外ハンドラーです。 ハンドラーは、保護されたセクションの実行中に例外が発生した場合に行われる一連の操作を指定します。 次のように実行されます。
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

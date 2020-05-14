@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81749192"
 ---
 # <a name="conditional-expression-operator"></a>条件式演算子
 
-C 言語では、三項演算子として条件式演算子 (**? :**) を使用します。
+C 言語では、三項演算子として条件式演算子 ( **? :** ) を使用します。
 
 ## <a name="syntax"></a>構文
 
-*条件式*:<br/>
+*conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *式*  **:**  *条件式*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
 *logical-OR-expression* には、整数型、浮動小数点型、またはポインター型を指定する必要があります。 この式は、0 に等しいかどうかが評価されます。 シーケンス ポイントは *logical-OR-expression* に従います。 オペランドは次のように評価されます。
 
-- *logical-OR-expression* が 0 でない場合、*expression* が評価されます。 この式の評価結果は、非終端の *expression* として与えられます  (つまり、*logical-OR-expression* が true の場合のみ *expression* が評価されます)。
+- *logical-OR-expression* が 0 でない場合、*expression* が評価されます。 この式の評価結果は、非終端の *expression* として与えられます (つまり、*logical-OR-expression* が true の場合のみ *expression* が評価されます)。
 
-- *logical-OR-expression* が 0 の場合、*conditional-expression* が評価されます。 この式の結果は *conditional-expression* の値です  (つまり、*logical-OR-expression* が false の場合のみ *conditional-expression* が評価されます)。
+- *logical-OR-expression* が 0 の場合、*conditional-expression* が評価されます。 この式の結果は *conditional-expression* の値です (つまり、*logical-OR-expression* が false の場合のみ *conditional-expression* が評価されます)。
 
 *expression* または *conditional-expression* のいずれかが評価されます。両方は評価されません。
 
@@ -45,7 +45,7 @@ C 言語では、三項演算子として条件式演算子 (**? :**) を使用�
 
 ポインターの型を比較する際、ポインターが指している型の型修飾子 (**const** または `volatile`) は重要ではありません。ただし、結果の型は、条件式を構成する両方の要素の型修飾子を継承します。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次に、条件演算子の使用例を示します。
 
