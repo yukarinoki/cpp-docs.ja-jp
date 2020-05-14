@@ -20,10 +20,10 @@ no-loc:
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204160"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389702"
 ---
 # <a name="switch-statement-c"></a>`switch`ステートメント (C++)
 
@@ -48,11 +48,11 @@ ms.locfileid: "83204160"
 
 ## <a name="remarks"></a>Remarks
 
-ステートメントを指定すると、 __`switch`__ *`labeled-statement`* の値に応じて、ステートメント本体で制御が1つのステートメントに転送さ *`condition`* れます。
+__`switch`__ ステートメントを指定すると、 *`condition`* の値に応じて、ステートメント本体の 1 つの *`labeled-statement`* にコントロールが転送されます。
 
 は *`condition`* 整数型であるか、または整数型への明確な変換を持つクラス型である必要があります。 「[標準変換](standard-conversions.md)」で説明されているように、整数の上位変換が行われます。
 
-ステートメントの本体は、 __`switch`__ 一連のラベルとオプションのラベルで構成され __`case`__ __`default`__ ます。 *`labeled-statement`* は、これらのラベルの1つであり、後続のステートメントです。 ラベル付きステートメントは構文要件ではありませんが、ステートメントを使用しても __`switch`__ 意味がありません。 *`constant-expression`* ステートメント内の2つの値 __`case`__ が同じ値に評価されることはありません。 __`default`__ ラベルが1回だけ表示される場合があります。 ステートメントは、 __`default`__ 多くの場合、末尾に配置されますが、ステートメント本体内の任意の場所に記述でき __`switch`__ ます。 __`case`__ または __`default`__ ラベルは、ステートメント内でのみ使用でき __`switch`__ ます。
+ステートメントの本体は、 __`switch`__ 一連のラベルとオプションのラベルで構成され __`case`__ __`default`__ ます。 *`labeled-statement`* は、これらのラベルの1つであり、後続のステートメントです。 ラベル付きステートメントは構文要件ではありませんが、ステートメントを使用しても __`switch`__ 意味がありません。 *`constant-expression`* ステートメント内の2つの値 __`case`__ が同じ値に評価されることはありません。 __`default`__ ラベルが1回だけ表示される場合があります。 ステートメントは、 __`default`__ 多くの場合、末尾に配置されますが、ステートメント本体内の任意の場所に記述でき __`switch`__ ます。 __`case`__ または __`default`__ ラベルは、 __`switch`__ ステートメント内でのみ使用できます。
 
 各ラベルのは、 *`constant-expression`* __`case`__ と同じ型の定数値に変換され *`condition`* ます。 次に、が *`condition`* 等しいかどうかを比較します。 制御は、の値に一致する値の後の最初のステートメントに渡さ __`case`__ *`constant-expression`* *`condition`* れます。 結果の動作を次の表に示します。
 
