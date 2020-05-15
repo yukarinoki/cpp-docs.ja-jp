@@ -5,7 +5,7 @@ helpviewer_keywords:
 - project properties [C++], modifying outside project file
 ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328456"

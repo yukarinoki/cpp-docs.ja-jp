@@ -1,18 +1,18 @@
 ---
-title: 参照
+title: CppProperties.json リファレンス
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328719"
 ---
-# <a name="cpppropertiesjson-reference"></a>参照
+# <a name="cpppropertiesjson-reference"></a>CppProperties.json リファレンス
 
-CMake を使用しないフォルダー プロジェクトを開くと、IntelliSense のプロジェクト構成設定を*CppProperties.json*ファイルに格納できます。 (CMake プロジェクトは[CMakeSettings.json](customize-cmake-settings.md)ファイルを使用します。構成は、名前と値のペアで構成され、#includeパス、コンパイラ スイッチ、およびその他のパラメーターを定義します。 フォルダー[を開くプロジェクトで](open-folder-projects-cpp.md)構成を追加する方法の詳細については、「C++ 用のフォルダー プロジェクトを開く」を参照してください。 以下のセクションでは、さまざまな設定について説明します。 スキーマの詳細については *、cppProperties.json*が開いているときにコード エディターの先頭に完全なパスが指定されている*CppProperties_schema.json*に移動します。
+CMake を使用していない "フォルダーを開く" プロジェクトでは、*CppProperties.json* ファイルに IntelliSense のプロジェクト構成設定を格納できます。 (CMake プロジェクトでは [CMakeSettings.json](customize-cmake-settings.md) ファイルを使用します。)構成は名前/値のペアから成り、#include のパス、コンパイラ スイッチ、その他のパラメーターが定義されています。 "フォルダーを開く" プロジェクトに構成を追加する方法の詳細については、[C++ の "フォルダーを開く" プロジェクト](open-folder-projects-cpp.md)に関するページを参照してください。 次のセクションは、さまざまな設定をまとめたものです。 スキーマの詳細な説明については、*CppProperties_schema.json* に移動してください。この完全なパスは、*CppProperties.json* が開いているときにコード エディターの上部に示されます。
 
 ## <a name="configuration-properties"></a>構成プロパティ
 
@@ -21,22 +21,22 @@ CMake を使用しないフォルダー プロジェクトを開くと、Intelli
 |||
 |-|-|
 |`inheritEnvironments`| この構成に適用する環境を指定します。|
-|`name`|C++ 構成ドロップダウンに表示される構成名|
-|`includePath`|インクルード パスで指定する必要があるフォルダーのコンマ区切りリスト (ほとんどのコンパイラでは /I に対応)|
+|`name`|C++ の構成ドロップダウンに表示される構成の名前|
+|`includePath`|インクルード パスで指定する必要があるフォルダーのコンマ区切りのリスト (ほとんどのコンパイラで /I に対応します)|
 |`defines`|定義する必要のあるマクロのリスト (ほとんどのコンパイラで /D に対応します)|
 |`compilerSwitches`|IntelliSense の動作に影響を与えることができる 1 つ以上の追加スイッチ|
 |`forcedInclude`|すべてのコンパイル単位に自動的にインクルードされるヘッダー (MSVC の /FI または clang の -include に対応します)|
 |`undefines`|未定義にするマクロのリスト (MSVC の /U に対応します)|
-|`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc、または Clang に対して、事前定義されたアーキテクチャ固有のバリアントのいずれかを指定できます。|
-|`environments`|コマンド プロンプトで環境変数のように動作し、${env でアクセスされるユーザー定義の変数のセット。\<変数>} マクロ。|
+|`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc、または Clang に対する定義済みのアーキテクチャ固有バリアントの 1 つを指定できます。|
+|`environments`|コマンド プロンプトで環境変数のように動作し、${env.\<VARIABLE>} マクロを使用してアクセスする、ユーザー定義の変数のセット。|
 
-### <a name="intellisensemode-values"></a>値
+### <a name="intellisensemode-values"></a>intelliSenseMode 値
 
-コード エディターには、入力を開始するときに使用可能なオプションが表示されます。
+コード エディターでは、入力を開始すると、使用可能なオプションが次のように表示されます。
 
-![フォルダのインテリセンスを開く](media/open-folder-intellisense-mode.png "フォルダのインテリセンスを開く")
+!["フォルダーを開く" の IntelliSense](media/open-folder-intellisense-mode.png ""フォルダーを開く" の IntelliSense")
 
-サポートされている値は次のとおりです。
+サポートされる値は次のとおりです。
 
 - windows-msvc-x86
 - windows-msvc-x64
@@ -56,13 +56,13 @@ CMake を使用しないフォルダー プロジェクトを開くと、Intelli
 - windows-clang-arm64
 - linux-gcc-x86
 - linux-gcc-x64
-- linux-gccアーム
+- linux-gcc-arm
 
-注: 値`msvc-x86`は`msvc-x64`、従来の理由でのみサポートされます。 代わりに`windows-msvc-*`バリアントを使用してください。
+メモ:値 `msvc-x86` および `msvc-x64` は、レガシの理由でのみサポートされます。 代わりに、`windows-msvc-*` のバリアントを使ってください。
 
-## <a name="pre-defined-environments"></a>事前定義された環境
+## <a name="pre-defined-environments"></a>定義済みの環境
 
-Visual Studio には、対応する開発者コマンド プロンプトにマップする Microsoft C++ 用の次の定義済み環境が用意されています。 これらの環境のいずれかを継承する場合は、次のマクロ構文を持つグローバル プロパティ`env`を使用して、環境変数を参照できます。\<変数>}
+Visual Studio には、対応する開発者コマンド プロンプトにマップされる、Microsoft C++ 向けの次の定義済みの環境が用意されています。 これらの環境のいずれかを継承する場合は、グローバル プロパティ `env` をマクロ構文 ${env.\<VARIABLE>} で使用して、任意の環境変数を参照できます。
 
 |変数名|説明|
 |-----------|-----------------|
@@ -83,13 +83,13 @@ Linux ワークロードがインストールされている場合、Linux お�
 |linux_x64|x64 Linux をリモートでターゲットにします|
 |linux_arm|ARM Linux をリモートでターゲットにします|
 
-## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>ユーザー定義環境
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> ユーザー定義環境
 
-オプションで、このプロパティを`environments`使用して、グローバルまたは構成ごとに *、CppProperties.json*で変数のセットを定義できます。 これらの変数は、フォルダーを開くプロジェクトのコンテキストで環境変数のように動作し、${env でアクセスできます。\<変数>} 構文は、ここで定義された後の*tasks.vs.json*および*launch.vs.json*から取得します。 ただし、Visual Studio が内部的に使用するコマンド プロンプトでは、実際の環境変数として設定されている必要はありません。
+必要に応じて `environments` プロパティを使用して、変数のセットを *CppProperties.json* にグローバルに、または構成単位で定義できます。 これらの変数は、"フォルダーを開く" プロジェクトのコンテキストで環境変数と同じように動作し、ここで定義された後に、*tasks.vs.json* および *launch.vs.json* から ${env.\<VARIABLE>} 構文を使用してアクセスできます。 ただし、これらは、 Visual Studio が内部で使用するコマンド プロンプトで実際の環境変数として設定されるとは限りません。
 
-**Visual Studio 2019 バージョン 16.4 以降:***CppProperties.json*で定義された構成固有の変数は、設定する必要なしにデバッグターゲットとタスクによって自動的`inheritEnvironments`に取り込まれます。 デバッグ ターゲットは *、CppProperties.json*で指定した環境で自動的に起動されます。
+**Visual Studio 2019 バージョン 16.4 以降:** *CppProperties.json* で定義されている構成固有の変数は、`inheritEnvironments` を設定しなくても、デバッグ ターゲットとタスクによって自動的に選択されます。 デバッグ ターゲットは、*CppProperties.json* で指定した環境で自動的に起動されます。
 
-**Visual Studio 2019 バージョン 16.3 以前:** 環境を使用する場合、環境が同じ構成の`inheritsEnvironments`一部として定義されている場合でも、プロパティで指定する必要があります。プロパティ`environment`は、環境の名前を指定します。 次の例は、MSYS2 インストールで GCC の IntelliSense を有効にするための構成例を示しています。 設定が`mingw_64`環境をどのように定義し、継承し、プロパティが変数に`includePath`アクセスできるかを`INCLUDE`確認します。
+**Visual Studio 2019 バージョン 16.3 以前:** 環境を使用する場合は、その環境が同じ構成の一部として定義されている場合でも、それを `inheritsEnvironments` プロパティで指定する必要があります。`environment` プロパティは環境の名前を指定します。 次の例は、MSYS2 インストールで GCC 用の IntelliSense を有効にするためのサンプル構成を示しています。 構成によって `mingw_64` 環境が定義および継承される方法と、`includePath` プロパティが `INCLUDE` 変数にアクセスする方法に注意してください。
 
 ```json
 "configurations": [
@@ -119,21 +119,21 @@ Linux ワークロードがインストールされている場合、Linux お�
   ]
 ```
 
-設定内で**環境**プロパティを定義すると、同じ名前のグローバル変数がオーバーライドされます。
+構成内で **environments** プロパティを定義すると、同じ名前のすべてのグローバル変数がオーバーライドされます。
 
 ## <a name="built-in-macros"></a>組み込みマクロ
 
-*CppProperties.json*内の次の組み込みマクロにアクセスできます。
+*CppProperties.json* 内の次の組み込みマクロにアクセスできます。
 
 |||
 |-|-|
-|`${workspaceRoot}`| ワークスペース フォルダーへの完全パス|
-|`${projectRoot}`| *CppProperties.json*が配置されているフォルダーへの完全パス|
-|`${env.vsInstallDir}`| 実行中の Visual Studio のインスタンスがインストールされているフォルダーへの完全パス|
+|`${workspaceRoot}`| ワークスペース フォルダーへの完全なパスです|
+|`${projectRoot}`| *CppProperties.json* が配置されているフォルダーへの完全なパスです|
+|`${env.vsInstallDir}`| Visual Studio の実行中のインスタンスがインストールされているフォルダーへの完全なパスです|
 
 ### <a name="example"></a>例
 
-プロジェクトにインクルード フォルダーがあり、Windows SDK の*windows.h*やその他の一般的なヘッダーも含まれている場合は *、CppProperties.json*構成ファイルを次の内容で更新できます。
+プロジェクトにインクルード フォルダーがあるだけでなく、*windows.h* および他の共通ヘッダーも Windows SDK からインクルードしている場合、*CppProperties.json* の構成ファイルをこれらのインクルードで更新したい場合があります。
 
 ```json
 {
@@ -160,10 +160,10 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 ## <a name="troubleshoot-intellisense-errors"></a>IntelliSense エラーのトラブルシューティング
 
-期待する IntelliSense が表示されない場合は、[**ツール** > **オプション** > **テキスト エディター** > **C/C++** > **詳細設定**] に進み、[**ログ記録を有効**にする] を**true**に設定してトラブルシューティングを行うことができます。 まず、[**ログ出力レベル]** を 5 に設定し、[**ログ フィルタ] を**8 に設定します。
+予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **[true]** に設定にします。 まずは、 **[ログ記録レベル]** を 5 に設定し、 **[ログ フィルター]** を 8 に設定してみてください。
 
-![診断ログ](media/diagnostic-logging.png)
+![診断ログ記録](media/diagnostic-logging.png)
 
-出力は**出力ウィンドウ**にパイプされ、[出力を表示] メニュー**の [Visual C++ ログ]** をクリックすると表示されます。 出力には、IntelliSense が使用しようとしている実際のインクルード パスの一覧が含まれています。 パスが*CppProperties.json*のパスと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データを含む *.vs*サブフォルダーを削除してみてください。
+出力は**出力ウィンドウ**にパイプ処理され、 **[出力元の表示:Visual C++ ログ]** を選択したときに表示されます。 出力には、特に、IntelliSense が使用しようとしている実際のインクルード パスの一覧が含まれます。 そのパスが *CppProperties.json* のものと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データが含まれている *.vs* サブフォルダーを削除してみてください。
 
-インクルード パスがないことにより発生する IntelliSense のエラーをトラブルシューティングするには、**[エラー一覧]** を開き、出力を "IntelliSense のみ" およびエラー コード E1696 "ソース ファイル ... を開くことができません" でフィルター処理します。
+インクルード パスがないことにより発生する IntelliSense のエラーをトラブルシューティングするには、 **[エラー一覧]** を開き、出力を "IntelliSense のみ" およびエラー コード E1696 "ソース ファイル ... を開くことができません" でフィルター処理します。

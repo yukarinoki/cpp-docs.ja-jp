@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
 ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334445"
@@ -20,11 +20,11 @@ ms.locfileid: "81334445"
 
 型指定子 `int` と `unsigned int` (または単に `unsigned`) は、C 言語の特定の機能 (`enum` 型など) を定義します。 このような場合、特定の実装における `int` と unsigned int の定義が、実際のストレージを決定します。
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-符号付き整数は、2 の補数形式で表されます。 最上位ビットは符号を表し、負の数ならば 1、正の数とゼロならば 0 です。 値の範囲は、Limits から取得した[C および C++ の整数の制限](../c-language/cpp-integer-limits.md)で指定されます。H ヘッダー ファイル。
+符号付き整数は、2 の補数形式で表されます。 最上位ビットにより符号が保持されます。負の場合は 1、正および 0 の場合は 0 です。 値の範囲は、「[C と C++ 整数の制限](../c-language/cpp-integer-limits.md)」に示されており、LIMITS.H ヘッダー ファイルから取得されます。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 > [!NOTE]
 > int 型指定子と unsigned int 型指定子は、コンピューターで最も効率的に整数値を処理できるので、C プログラムで広く使用されます。 ただし、int 型と unsigned int 型のサイズは固定されていないため、特定の int サイズに依存するプログラムは、他のコンピューターに移植できない場合があります。 プログラムの移植可能性を高めるには、ハードコーディングされたデータ サイズではなく、sizeof 演算子 (「[sizeof 演算子](../c-language/sizeof-operator-c.md)」で説明) を式で使用します。
