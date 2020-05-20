@@ -1,24 +1,24 @@
 ---
-title: キーワード (C++)
+title: C++ キーワード
 ms.custom: index-page
 ms.date: 10/10/2018
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: ee43300baf67891ccdc65e70fe04677de71134e3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5841a7ec1989ebac8f18a76bf94fa7a37147159f
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178107"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550824"
 ---
-# <a name="keywords-c"></a>キーワード (C++)
+# <a name="keywords-c"></a>C++ キーワード
 
-キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付き、名前の後にC++(/cli) が付いている名前は Microsoft の拡張機能です。
+キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付いた名前、名前の後に (C++/CLI) がある場合は、Microsoft 拡張機能が使用されます。
 
 |||||
 |-|-|-|-|
-|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__Alignof 演算子](alignof-operator.md) <sup>4</sup>|[__asm](../assembler/inline/asm.md) <sup>4</sup>|[__assume](../intrinsics/assume.md) <sup>4</sup>|
+|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof](alignof-operator.md) <sup>4</sup>|[__asm](../assembler/inline/asm.md) <sup>4</sup>|[__assume](../intrinsics/assume.md) <sup>4</sup>|
 |[__based](based-pointers-cpp.md) <sup>4</sup>|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md) <sup>4</sup>|[__declspec](declspec.md) <sup>4</sup>|
 |[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md) <sup>4</sup>|[__fastcall](fastcall.md) <sup>4</sup>|
 |[__finally](try-finally-statement.md) <sup>4</sup>|[__forceinline](inline-functions-cpp.md) <sup>4</sup>|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
@@ -36,16 +36,16 @@ ms.locfileid: "80178107"
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
-|[既定値](switch-statement-cpp.md)|[delegate](../extensions/delegate-cpp-component-extensions.md)(C++/cli)|[delete](delete-operator-cpp.md)|[非推奨](deprecated-cpp.md) <sup>1</sup>|
+|[default](switch-statement-cpp.md)|[delegate](../extensions/delegate-cpp-component-extensions.md)(C++/cli)|[delete](delete-operator-cpp.md)|[非推奨](deprecated-cpp.md) <sup>1</sup>|
 |[dllexport](dllexport-dllimport.md) <sup>1</sup>|[dllimport](dllexport-dllimport.md) <sup>1</sup>|[do](do-while-statement-cpp.md)|[double](fundamental-types-cpp.md)|
 |[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[enum クラス](../extensions/enum-class-cpp-component-extensions.md)|
 |[enum struct](../extensions/enum-class-cpp-component-extensions.md)|[イベント](../extensions/event-cpp-component-extensions.md)(C++/cli)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
-|[の各の](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/cli)|
+|[の各の](../dotnet/for-each-in.md)|[味方](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/cli)|
 |[ジェネリック](../extensions/generics-cpp-component-extensions.md)(C++/cli)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
-|[インライン](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイスクラス](../extensions/interface-class-cpp-component-extensions.md)(C++/cli)|[インターフェイス構造体](../extensions/interface-class-cpp-component-extensions.md)(C++/cli)|
+|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイスクラス](../extensions/interface-class-cpp-component-extensions.md)(C++/cli)|[インターフェイス構造体](../extensions/interface-class-cpp-component-extensions.md)(C++/cli)|
 |[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/cli)|[literal](../extensions/literal-cpp-component-extensions.md)(C++/cli)|[long](fundamental-types-cpp.md)|[変更可能な](mutable-data-members-cpp.md)|
-|[生](naked-cpp.md)の<sup>1</sup>|[namespace](namespaces-cpp.md)|[新規](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C++/cli)|[新規](new-operator-cpp.md)|
+|[生](naked-cpp.md)の<sup>1</sup>|[namespace](namespaces-cpp.md)|[新規](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C++/cli)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
 |[プロパティ](../extensions/property-cpp-component-extensions.md)(C++/cli)|[プロパティ](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|[public](public-cpp.md)|
@@ -62,7 +62,7 @@ ms.locfileid: "80178107"
 
 <sup>1</sup> **__declspec**キーワードの拡張属性。
 
-<sup>2</sup>のC++マネージ拡張にのみ適用されます。 この構文は現在非推奨とされます。 詳細については、「[ランタイムプラットフォームのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
+<sup>2</sup> Managed Extensions for C++ にのみ適用されます。 この構文は現在非推奨とされます。 詳細については、「[ランタイムプラットフォームのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 <sup>3</sup>イベント処理で使用される組み込み関数。
 
@@ -76,13 +76,13 @@ Microsoft 拡張機能は既定で有効になっています。 完全に移植
 
 Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンとの互換性のために、多くの下線付きキーワードの1つのアンダースコアバージョンがサポートされています。 また、 **__cdecl**は先頭にアンダースコアを付けずに使用できます。
 
-**__Asm**キーワードは `asm` C++構文に置き換えられます。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 **__Asm**を使用します。
+**__Asm**キーワードは、C++ の構文に代わるもの `asm` です。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 **__Asm**を使用します。
 
 **__based** キーワードには、32 ビットおよび 64 ビット ターゲット コンパイルに関する使用制限があります。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[構文規則](../cpp/lexical-conventions.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[字句表記規則](../cpp/lexical-conventions.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
