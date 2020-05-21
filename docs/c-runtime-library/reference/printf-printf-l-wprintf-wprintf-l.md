@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950203"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759239"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -92,7 +92,7 @@ int _wprintf_l(
 
 **Errno**とエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Printf**関数は、一連の文字と値を書式設定し、標準出力ストリームである**stdout**に出力します。 *書式*指定文字列の後に引数を指定する場合、*書式*指定文字列には引数の出力形式を決定する仕様が含まれている必要があります。 **printf**と[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)の動作は同じですが、 **printf**は、型**ファイル**の出力先ではなく**stdout**に出力を書き込みます。
 
@@ -119,7 +119,7 @@ Line one
         Line two
 ```
 
-[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)は必ずパーセント記号 ( **%** ) で始まり、左から右に読み取られます。 **Printf**が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を*書式*の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
+[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)は必ずパーセント記号 () で始まり **%** 、左から右に読み取られます。 **Printf**が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を*書式*の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -135,10 +135,10 @@ Line one
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**printf**、 **printf_l**|\<stdio.h>|
+|**printf**、 **_printf_l**|\<stdio.h>|
 |**wprintf**、 **_wprintf_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -228,12 +228,13 @@ Address as:   0012FF3C
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[書式指定構文: printf 関数と wprintf 関数](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
