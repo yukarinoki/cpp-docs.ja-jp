@@ -1,41 +1,37 @@
 ---
 title: __thiscall
-ms.date: 11/04/2016
+ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
 - __thiscall_cpp
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: 8772159dca71bb7605af5e5919425065423d503d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188156"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854815"
 ---
-# <a name="__thiscall"></a>__thiscall
+# `__thiscall`
 
-**Microsoft 固有の仕様**
+**Microsoft 固有**の **`__thiscall`** 呼び出し規約は、X86 アーキテクチャの C++ クラスメンバー関数で使用されます。 これは、可変個の引数 (functions) を使用しないメンバー関数によって使用される既定の呼び出し規約です `vararg` 。
 
-**__Thiscall**呼び出し規約は、メンバー関数で使用されます。変数引数を使用C++しないメンバー関数によって使用される既定の呼び出し規約です。 **__Thiscall**では、呼び出し先がスタックを消去します。これは `vararg` 関数では不可能です。 引数はスタック上で右から左にプッシュされます。**この**ポインターは、x86 アーキテクチャではスタックではなくレジスタ ECX によって渡されます。
+で **`__thiscall`** は、呼び出し先がスタックを消去します。これは、関数では不可能です `vararg` 。 引数は、右から左にスタックにプッシュされます。 **`this`** ポインターは、スタックではなくレジスタ ECX を介して渡されます。
 
-**__Thiscall**を使用する理由の1つは、既定で `__clrcall` を使用するメンバー関数を持つクラスです。 その場合は **__thiscall**を使用して、ネイティブコードから個々のメンバー関数を呼び出せるようにすることができます。
+ARM、ARM64、および x64 コンピューターで **`__thiscall`** は、はコンパイラによって受け入れられ、無視されます。 これは、既定では、レジスタベースの呼び出し規約を使用するためです。
 
-[/Clr: pure](../build/reference/clr-common-language-runtime-compilation.md)を指定してコンパイルする場合、特に指定しない限り、すべての関数および関数ポインターが `__clrcall` されます。 **/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+使用する理由の1つ **`__thiscall`** は、メンバー関数が既定でを使用するクラスにある **`__clrcall`** ことです。 その場合は、を使用して、 **`__thiscall`** 個々のメンバー関数をネイティブコードから呼び出すことができます。
 
-Visual Studio 2005 より前のリリースでは、 **__thiscall**がキーワードではないため、 **__thiscall**呼び出し規約をプログラムで明示的に指定できませんでした。
+を指定してコンパイルする場合 [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) 、特に指定しない限り、すべての関数および関数ポインターはに **`__clrcall`** なります。 **`/clr:pure`** および **`/clr:safe`** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-`vararg` メンバー関数は、 **__cdecl**呼び出し規約を使用します。 すべての関数の引数はスタックにプッシュされ、**この**ポインターは最後にスタックに配置されます。
+`vararg`メンバー関数は、 **`__cdecl`** 呼び出し規約を使用します。 すべての関数の引数はスタックにプッシュされ、 **`this`** ポインターは最後にスタックに配置されます。
 
-この呼び出し規則は C++ だけに適用されるため、C の名前の装飾スキームはありません。
+この呼び出し規則は C++ にのみ適用されるため、C の名前の装飾スキームはありません。
 
-ARM および x64 コンピューターでは、 **__thiscall**は受け入れられ、コンパイラによって無視されます。
+非静的クラスメンバー関数をアウトオブラインで定義する場合は、宣言内でのみ呼び出し規約修飾子を指定します。 アウトオブライン定義で再度指定する必要はありません。 コンパイラは、定義の時点で、宣言時に指定された呼び出し規約を使用します。
 
-静的でないクラス関数がアウトオブラインで宣言されている場合、アウトオブラインの宣言で呼び出し規約の修飾子を指定する必要はありません。 つまり、クラスの静的でないメンバー メソッドの場合は、宣言時に指定された呼び出し規約が定義の時点で仮定されます。
-
-**Microsoft 固有の仕様はここまで**
-
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)
