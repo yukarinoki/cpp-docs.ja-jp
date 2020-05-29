@@ -1,28 +1,27 @@
+- name: C++ ビルドの洞察
+  href: ../build-insights/index.yml
 - name: C++ Build Insights を使ってみる
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: チュートリアル
-  expanded: false
+  expanded: true
   items:
     - name: vcperf および Windows Performance Analyzer
       href: ../build-insights/tutorials/vcperf-and-wpa.md
     - name: Windows Performance Analyzer の基本
       href: ../build-insights/tutorials/wpa-basics.md
 - name: 関連項目
-  expanded: false
   items:
     - name: vcperf コマンド
       href: ../build-insights/reference/vcperf-commands.md
     - name: Windows Performance Analyzer のビュー
       href: ../build-insights/reference/wpa-views.md
     - name: C++Build Insights SDK
-      expanded: false
       items:
         - name: 概要
           href: ../build-insights/reference/sdk/overview.md
         - name: イベント テーブル
           href: ../build-insights/reference/sdk/event-table.md
         - name: 関数
-          expanded: false
           items:
             - name: 解析
               href: ../build-insights/reference/sdk/functions/analyze.md
@@ -79,7 +78,6 @@
             - name: StopTracingSessionW
               href: ../build-insights/reference/sdk/functions/stop-tracing-session-w.md
         - name: イベント データ型 (C++)
-          expanded: false
           items:
             - name: アクティビティ
               href: ../build-insights/reference/sdk/cpp-event-data-types/activity.md
@@ -174,7 +172,6 @@
             - name: WholeProgramAnalysis
               href: ../build-insights/reference/sdk/cpp-event-data-types/whole-program-analysis.md
         - name: イベント データ型 (C)
-          expanded: false
           items:
             - name: CL_PASS_DATA
               href: ../build-insights/reference/sdk/c-event-data-types/cl-pass-data-struct.md
@@ -213,7 +210,6 @@
             - name: TRANSLATION_UNIT_PASS_CODE
               href: ../build-insights/reference/sdk/c-event-data-types/translation-unit-pass-code-enum.md
         - name: その他の型
-          expanded: false
           items:
             - name: ANALYSIS_CALLBACKS
               href: ../build-insights/reference/sdk/other-types/analysis-callbacks-struct.md

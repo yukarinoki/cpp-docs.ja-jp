@@ -1,36 +1,40 @@
 - name: C++ によるクロスプラットフォーム モバイル開発
+  href: ../cross-platform/index.yml
+- name: 概要
+  href: ../cross-platform/visual-cpp-for-cross-platform-mobile-development.md
+- name: はじめに
+  expanded: true
   items:
-    - name: C++ によるクロスプラットフォーム モバイル開発
-      href: visual-cpp-for-cross-platform-mobile-development.md
     - name: C++ によるクロスプラットフォーム モバイル開発をインストールする
-      items:
-        - name: C++ によるクロスプラットフォーム モバイル開発をインストールする
-          href: install-visual-cpp-for-cross-platform-mobile-development.md
-        - name: iOS を使用してビルドするためのツールのインストールおよび構成
-          href: install-and-configure-tools-to-build-using-ios.md
+      href: ../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md
+    - name: iOS を使用してビルドするためのツールのインストールおよび構成
+      href: ../cross-platform/install-and-configure-tools-to-build-using-ios.md
+- name: チュートリアル
+  expanded: true
+  items:
     - name: Android Native Activity アプリを作成する
-      href: create-an-android-native-activity-app.md
+      href: ../cross-platform/create-an-android-native-activity-app.md
     - name: Android および iOS での OpenGL ES アプリケーションのビルド
-      href: build-an-opengl-es-application-on-android-and-ios.md
+      href: ../cross-platform/build-an-opengl-es-application-on-android-and-ios.md
     - name: Xcode プロジェクトをインポートする
-      href: import-an-xcode-project.md
+      href: ../cross-platform/import-an-xcode-project.md
     - name: Xcode と Visual Studio 間の変更の同期
-      href: sync-changes-between-xcode-and-visual-studio.md
-    - name: クロス プラットフォーム モバイル開発の例
-      href: cross-platform-mobile-development-examples.md
+      href: ../cross-platform/sync-changes-between-xcode-and-visual-studio.md
+- name: 使用例
+  href: ../cross-platform/cross-platform-mobile-development-examples.md
+- name: 関連項目
+  items:
     - name: C++ クロス プラットフォーム プロパティ ページ リファレンス
-      items:
-        - name: C++ クロス プラットフォーム プロパティ ページ リファレンス
-          href: cross-platform-prop-pages.md
-        - name: 一般的なプロジェクト プロパティ (Android C++)
-          href: general-android-prop-page.md
-        - name: Android のデバッガーのプロパティ
-          href: android-debugger-prop-page.md
-        - name: Clang のプロジェクトのプロパティ (Android C++)
-          href: clang-android-prop-page.md
-        - name: 一般的なプロジェクト プロパティ (Android C++ メイクファイル)
-          href: general-makefile-android-prop-page.md
-        - name: Clang のリンカーのプロパティ (Android C++)
-          href: clanglink-prop-page.md
-        - name: NMake のプロパティ (Android C++)
-          href: nmake-android-prop-page.md
+      href: ../cross-platform/cross-platform-prop-pages.md
+    - name: 一般的なプロジェクト プロパティ (Android C++)
+      href: ../cross-platform/general-android-prop-page.md
+    - name: Android のデバッガーのプロパティ
+      href: ../cross-platform/android-debugger-prop-page.md
+    - name: Clang のプロジェクトのプロパティ (Android C++)
+      href: ../cross-platform/clang-android-prop-page.md
+    - name: 一般的なプロジェクト プロパティ (Android C++ メイクファイル)
+      href: ../cross-platform/general-makefile-android-prop-page.md
+    - name: Clang のリンカーのプロパティ (Android C++)
+      href: ../cross-platform/clanglink-prop-page.md
+    - name: NMake のプロパティ (Android C++)
+      href: ../cross-platform/nmake-android-prop-page.md
