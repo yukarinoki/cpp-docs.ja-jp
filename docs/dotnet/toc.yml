@@ -3,7 +3,6 @@
 - name: 'チュートリアル: CLR をターゲットにした C++/CLI プログラムをコンパイルする'
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: C++/CLI タスク
-  expanded: false
   items:
     - name: C++/CLI タスク
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: ADO.NET を使用したデータ アクセス
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: ネイティブと .NET の相互運用性
-  expanded: false
   items:
     - name: ネイティブと .NET の相互運用性
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: 他の .NET 言語との相互運用性
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: 混在 (ネイティブおよびマネージド) アセンブリ
-      expanded: false
       items:
         - name: 混在 (ネイティブおよびマネージド) アセンブリ
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: '方法: CRT ライブラリ DLL との依存関係を削除して部分信頼アプリケーションを作成する'
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: MFC での Windows フォーム ユーザー コントロールの使用
-      expanded: false
       items:
         - name: MFC での Windows フォーム ユーザー コントロールの使用
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Windows フォームと MFC のプログラミング上の違い
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: MFC ダイアログ ボックスでの Windows フォーム ユーザー コントロールのホスト
-          expanded: false
           items:
             - name: MFC ダイアログ ボックスでの Windows フォーム ユーザー コントロールのホスト
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
-          expanded: false
           items:
             - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: マネージド コードからのネイティブ関数の呼び出し
-      expanded: false
       items:
         - name: マネージド コードからのネイティブ関数の呼び出し
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: C++ での明示的な PInvoke (DllImport 属性) の使用方法
-          expanded: false
           items:
             - name: C++ での明示的な PInvoke (DllImport 属性) の使用方法
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: '方法: PInvoke を使用して埋め込みポインターをマーシャリングする'
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: C++ Interop (暗黙の PInvoke) の使用
-          expanded: false
           items:
             - name: C++ Interop (暗黙の PInvoke) の使用
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: '方法: ネイティブ クラスを C# で使用できるようにラップする'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: 純粋なコードと検証可能なコード
-  expanded: false
   items:
     - name: 純粋なコードと検証可能なコード
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: Debug クラス
   href: ../dotnet/debug-class-cpp-cli.md
 - name: STL/CLR ライブラリ リファレンス
-  expanded: false
   items:
     - name: STL/CLR ライブラリ リファレンス
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: C++ のサポート ライブラリ
-  expanded: false
   items:
     - name: C++ のサポート ライブラリ
       href: ../dotnet/cpp-support-library.md
     - name: C++ におけるマーシャリングの概要
-      expanded: false
       items:
         - name: C++ におけるマーシャリングの概要
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: msclr 名前空間
       href: ../dotnet/msclr-namespace.md
     - name: リソース管理クラス
-      expanded: false
       items:
         - name: リソース管理クラス
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: swap 関数 (auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: swap 関数 (auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: 同期 (lock クラス)
-      expanded: false
       items:
         - name: 同期 (lock クラス)
           href: ../dotnet/synchronization-lock-class.md
         - name: lock
-          expanded: false
           items:
             - name: lock
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: lock_when Enum
               href: ../dotnet/lock-when-enum.md
     - name: 特定のアプリケーション ドメイン内での関数の呼び出し
-      expanded: false
       items:
         - name: 特定のアプリケーション ドメイン内での関数の呼び出し
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain 関数
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr class'
           href: ../dotnet/com-ptr-class.md
 - name: C++/CLI の例外
-  expanded: false
   items:
     - name: C++/CLI の例外
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: '方法: グローバル例外ハンドラーを定義およびインストールする'
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: ボックス化
-  expanded: false
   items:
     - name: ボックス化
       href: ../dotnet/boxing-cpp-cli.md
