@@ -2,12 +2,12 @@
 title: ARM64 例外処理
 description: ARM64 版 Windows によって使用される例外処理の規則およびデータについて説明します。
 ms.date: 11/19/2018
-ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
-ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
+ms.openlocfilehash: abc77aa683e73a2740c71ffbd7ddead07f91ff7d
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504484"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854828"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外処理
 
@@ -307,12 +307,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`end`|            11100100: アンワインド コードの終わりです。 エピローグの ret を意味します。 |
 |`end_c`|        11100101: 現在のチェーン スコープのアンワインド コードの終わりです。 |
 |`save_next`|        11100110: 次の非揮発性 Int または FP レジスタ ペアを保存します。 |
-|`arithmetic(add)`|    11100111'000zxxxx: cookie reg(z) を lr に add (加算) (0=x28, 1=sp); `add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111'001zxxxx: cookie reg(z) を lr から sub (減算) (0=x28, 1=sp); `sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111'010zxxxx: cookie reg(z) で lr の eor (排他的論理和) を計算 (0=x28, 1=sp); `eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111'0110xxxx: lr の rol (ビット左回転) を cookie reg (x28) でシミュレーション; xip0 = neg x28; `ror lr, xip0` |
-|`arithmetic(ror)`|    11100111'100zxxxx: lr の ror (ビット右回転) を cookie reg(z) で実行 (0=x28, 1=sp); `ror lr, lr, reg(z)` |
-| |            11100111: xxxz----: ---- 予約済み |
+| |            11100111: 予約済み |
 | |              11101xxx: asm ルーチンでのみ生成される以下のカスタム スタック ケース用に予約 |
 | |              11101000:MSFT_OP_TRAP_FRAME のカスタム スタック |
 | |              11101001:MSFT_OP_MACHINE_FRAME のカスタム スタック |

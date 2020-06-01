@@ -1,124 +1,135 @@
 ---
-title: 'チュートリアル: vcperf と Windows パフォーマンス アナライザ'
-description: C++ ビルド トレースの分析に vcperf および WPA を使用する方法についてのチュートリアルです。
+title: 'チュートリアル: vcperf および Windows パフォーマンス アナライザー'
+description: C++ のビルド トレースを分析するための vcperf および WPA の使用方法に関するチュートリアル。
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c22f3dfddfd346d4f0eee898cb5164fd8923336e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
+ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323423"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865053"
 ---
-# <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>チュートリアル: vcperf と Windows パフォーマンス アナライザ
+# <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>チュートリアル: vcperf および Windows パフォーマンス アナライザー
 
 ::: moniker range="<=vs-2017"
 
-C++ ビルドインサイト ツールは、Visual Studio 2019 で使用できます。 このバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights ツールは、Visual Studio 2019 で使用できます。 このバージョンのドキュメントを表示するには、この記事の Visual Studio の **[バージョン]** セレクター コントロールを Visual Studio 2019 に設定してください。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-このチュートリアルでは、c++ ビルドのトレースを収集する*vcperf.exe*を使用する方法を学習します。 Windows パフォーマンス アナライザでこのトレースを表示する方法についても説明します。
+このチュートリアルでは、*vcperf.exe* を使用して C++ ビルドのトレースを収集する方法について説明します。 また、Windows パフォーマンス アナライザーでこのトレースを表示する方法についても説明します。
 
 ## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>手順 1: Windows パフォーマンス アナライザーをインストールして構成する
 
-WPA は、Windows アセスメントと展開キット (ADK) で使用できるトレース ビューアーです。 これは、Visual Studio インストーラーを使用してインストールできるコンポーネントの一部ではない別のユーティリティです。
+WPA は、Windows アセスメント &amp; デプロイメント キット (ADK) で使用できるトレース ビューアーです。 これは、Visual Studio インストーラーを使用してインストールできるコンポーネントの一部ではない、独立したユーティリティです。
 
-C++ ビルド インサイトをサポートする WPA のバージョンは、現在 Windows ADK インサイダー プレビューでのみ使用できます。 このプレビューにアクセスするには[、Windows Insider プログラム](https://insider.windows.com)にサインアップする必要があります。 Windows ADK プレビューを取得するのに Windows 10 インサイダー プレビュー オペレーティング システムをインストールする必要はありません。 マイクロソフト アカウントを Windows インサイダー プログラムに登録するだけで済みます。
+C++ Build Insights をサポートする WPA のバージョンは、現在 Windows ADK Insider プレビューでのみ使用できます。 このプレビューにアクセスするには、[Windows Insider プログラム](https://insider.windows.com)にサインアップする必要があります。 Windows ADK プレビューを入手するために、Windows 10 Insider Preview オペレーティング システムをインストールする必要はありません。 Microsoft アカウントを Windows Insider プログラムに登録するだけです。
 
 ### <a name="to-download-and-install-wpa"></a>WPA をダウンロードしてインストールするには
 
-注: Windows パフォーマンス アナライザーをインストールするには、Windows 8 以降が必要です。
+注:Windows パフォーマンス アナライザーをインストールするには、Windows 8 以降が必要です。
 
-1. Windows ADK インサイダー プレビュー[のダウンロード ページ](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)を参照します。
+1. Windows ADK の[ダウンロード ページ](https://docs.microsoft.com/windows-hardware/get-started/adk-install)を参照してください。
 
-1. Windows ADK インサイダー プレビューをダウンロードします。 それはディスクイメージです。
+1. Windows ADK の最新バージョンをダウンロードしてインストールします。
 
-1. ディスク イメージを開き *、adksetup.exe*インストーラーを実行します。
+1. インストールする機能の入力を求められたら、 **[Windows Performance Toolkit]** を選択します。 必要に応じて他の機能を選択することもできますが、WPA をインストールする必要はありません。
 
-1. インストールする機能を指定するプロンプトが表示されたら **、Windows パフォーマンス ツールキット**を選択します。 必要に応じて他の機能を選択できますが、WPA のインストールには必要ありません。
+   ![Windows パフォーマンス アナライザー インストーラーの機能の選択画面](media/wpa-installation.png)
 
-   ![Windows パフォーマンス アナライザインストーラの機能選択画面](media/wpa-installation.png)
+### <a name="to-configure-wpa"></a><a name="configuration-steps"></a> WPA を構成するには
 
-### <a name="to-configure-build-insights"></a><a name="configuration-steps"></a>インサイトの構築を構成するには
+WPA で C++ Build Insights トレースを表示するには、特別なアドインが必要です。 次の手順に従ってインストールしてください。
 
-1. WPA を起動します。
+1. 次のコンポーネントのいずれかをダウンロードして、アドインを入手します。 両方を入手する必要はありません。 最も便利なものを選択します。
+    1. [Visual Studio 2019 バージョン 16.6 以降](https://visualstudio.microsoft.com/downloads/)、または
+    1. [C++ Build Insights NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Cpp.BuildInsights/)。
 
-1. **[ウィンドウ**>**選択テーブル (実験)]** を選択します。
+1. `perf_msvcbuildinsights.dll` ファイルを WPA インストール ディレクトリにコピーします。
+    1. Visual Studio 2019 バージョン 16.6 以降では、このファイルは `C:\Program Files (x86)\Microsoft Visual Studio\2019\{Edition}\VC\Tools\MSVC\{Version}\bin\Host{Architecture}\{Architecture}` にあります。
+    1. C++ Build Insights NuGet パッケージでは、このファイルは `wpa\{Architecture}` にあります。
+    1. 上記のパスで、中かっこで囲まれた変数を次のように置き換えます。
+        1. `{Edition}` は、Community、Professional、Enterprise などの Visual Studio 2019 のエディションです。
+        1. `{Version}` は MSVC のバージョンです。 入手できる中で最新のものを選択します。
+        1. `{Architecture}`: 64 ビット バージョンの Windows を使用している場合は、`x64` を選択します。 それ以外の場合は、`x86` を選択します。
+    1. WPA のインストール ディレクトリは、通常は `C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit` です。
 
-1. [**診断**] セクションまでスクロールします。
-
-1. すべての MSVC ビルド インサイト ビューを選択します。
-
-   ![Windows パフォーマンス アナライザのテーブル選択パネル](media/wpa-configuration.png)
+1. WPA のインストール ディレクトリにある `perfcore.ini` ファイルを開き、`perf_msvcbuildinsights.dll` のエントリを追加します。
 
 ## <a name="step-2-trace-your-build-with-vcperfexe"></a>手順 2: vcperf.exe を使用してビルドをトレースする
 
-C++ ビルドインサイトデータを表示するには、まず次の手順に従ってトレース ファイルに収集します。
+C++ Build Insights データを表示するには、まず、次の手順に従ってトレース ファイルに収集します。
 
-1. Visual Studio 2019 のネイティブ ツールまたはクロス ツール開発者コマンド プロンプトを管理者モードで開きます。 ([スタート] メニュー項目を右クリックし、[**管理者として****実行]** > を選択します)。
-
-1. コマンド プロンプト ウィンドウで、次のコマンドを入力します。
-
-   **セッション名を開始します _。_**
-
-   セッション名 に覚えている*セッション名*を選択してください。
-
-1. 通常どおりにプロジェクトをビルドします。 同じコマンド プロンプト ウィンドウを使用してビルドする必要はありません。
+1. 管理者モードで、VS 2019 の **x64** または **x86 Native Tools コマンド プロンプト**を開きます ([スタート] メニュー項目を右クリックして、 **[その他]**  >  **[管理者として実行]** を選択します。)
+    1. 64 ビット版の Windows を使用している場合は **x64** を選択します。 それ以外の場合は **x86** を選択します。
 
 1. コマンド プロンプト ウィンドウで、次のコマンドを入力します。
 
-   **を_クリック__します。_**
+   **vcperf.exe /start _SessionName_**
 
-   前に SessionName で選択したのと同じ*セッション名*を使用します。 *トレースファイル.etl*トレース ファイルの適切な名前を選択します。
+   *SessionName* のセッション名を選択し、覚えておきます。
 
-開発者のコマンド プロンプト ウィンドウでの一般的な*vcperf.exe*コマンド シーケンスは次のようになります。
+1. 通常どおりにプロジェクトをビルドします。 ビルドに同じコマンド プロンプト ウィンドウを使用する必要はありません。
+
+1. コマンド プロンプト ウィンドウで、次のコマンドを入力します。
+
+   **vcperf.exe /stop _SessionName_ _traceFile.etl_**
+
+   以前に *SessionName* に選択したものと同じセッション名を使用します。 *traceFile.etl* トレース ファイルに適切な名前を選択します。
+
+開発者コマンド プロンプト ウィンドウでの一般的な *vcperf.exe* コマンド シーケンスは次のようになります。
 
 ![単純な vcperf.exe の使用シナリオ](media/vcperf-simple-usage.png)
 
 ### <a name="important-notes-about-vcperfexe"></a>vcperf.exe に関する重要な注意事項
 
-- *vcperf.exe*トレースを開始または停止するには、管理者特権が必要です。 **[管理者として実行**] を使用して開いた開発者コマンド プロンプト ウィンドウを使用します。
+- *vcperf.exe* トレースを開始または停止するには、管理者特権が必要です。 **[管理者として実行]** を使用して開いた開発者コマンド プロンプト ウィンドウを使用します。
 
-- 1 つのコンピューターで実行できるのは、一度に 1 つのトレース セッションだけです。
+- マシン上で実行できるトレース セッションは一度に 1 つだけです。
 
-- トレースの開始に使用したセッション名を必ず覚えておいてください。 その名前を知らなくても、実行中のセッションを停止するのは面倒です。
+- トレースの開始に使用したセッション名を忘れないようにしてください。 名前がわからない場合、実行中のセッションを停止することが困難になる場合があります。
 
-- *cl.exe*や*link.exe*と同様に、コマンド ライン ユーティリティ*vcperf.exe*は MSVC のインストールに含まれています。 このコンポーネントを取得するために追加の手順は必要ありません。
+- *cl.exe* と *link.exe* と同様に、コマンドライン ユーティリティ *vcperf.exe* は MSVC インストールに含まれています。 このコンポーネントを取得するために追加の手順は必要ありません。
 
-- *vcperf.exe は*、システム上で実行されているすべての MSVC ツールに関する情報を収集します。 そのため、トレースの収集に使用したのと同じコマンド プロンプトからビルドを開始する必要はありません。 プロジェクトは、別のコマンド プロンプトからビルドすることも、Visual Studio でビルドすることもできます。
+- *vcperf.exe* を使用すると、システムで実行されているすべての MSVC ツールに関する情報を収集できます。 そのため、トレースの収集に使用したものと同じコマンド プロンプトからビルドを開始する必要はありません。 別のコマンド プロンプトから、または Visual Studio からでもプロジェクトをビルドできます。
+
+### <a name="vcperfexe-is-open-source"></a>vcperf.exe はオープンソースです
+
+独自のバージョンの *vcperf.exe* をビルドして実行する場合は、[vcperf GitHub リポジトリ](https://github.com/microsoft/vcperf)から複製しても構いません。
 
 ## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>手順 3: Windows パフォーマンス アナライザーでトレースを表示する
 
-WPA を起動し、収集したトレースを開きます。 WPA は C++ ビルドインサイトトレースとして認識し、左側のグラフエクスプローラパネルに次のビューが表示されます。
+WPA を起動し、先ほど収集したトレースを開きます。 WPA ではこれが C++ Build Insights トレースとして認識され、左側の Graph エクスプローラー パネルに次のビューが表示されます。
 
 - ビルド エクスプローラー
 - ファイル
-- 機能
+- 関数
+- テンプレートのインスタンス化
 
-これらのビューが表示されない場合は、[手順 1](#configuration-steps)の説明に従って WPA が正しく構成されていることを再確認してください。 次に示すように、ビューを右側の空の [分析] ウィンドウにドラッグすると、ビルド データを表示できます。
+これらのビューが表示されない場合は、[手順 1](#configuration-steps) の説明に従って、WPA が正しく構成されていることを再確認します。 次に示すように、ビューを右側の空の分析ウィンドウにドラッグすることで、ビルド データを表示できます。
 
-![Windows パフォーマンス アナライザで C++ ビルドインサイトトレースを表示する](media/wpa-viewing-trace.gif)
+![Windows パフォーマンス アナライザーでの C++ Build Insights トレースの表示](media/wpa-viewing-trace.gif)
 
-その他のビューは、グラフエクスプローラパネルで使用できます。 含まれている情報に関心がある場合は、分析ウィンドウにドラッグします。 有用な 1 つは、ビルド全体の CPU 使用率を示す CPU (サンプル) ビューです。
+その他のビューは、Graph エクスプローラー パネルで使用できます。 表示されている情報に関心がある場合は、それらを [分析] ウィンドウにドラッグします。 便利なものとして、ビルド全体の CPU 使用率を示す CPU (サンプリングされた) ビューがあります。
 
 ## <a name="more-information"></a>詳細情報
 
-[チュートリアル: Windows パフォーマンス アナライザの基本](wpa-basics.md)\
+[チュートリアル: Windows パフォーマンス アナライザーの基本](wpa-basics.md)\
 ビルド トレースの分析に役立つ一般的な WPA 操作について説明します。
 
 [リファレンス: vcperf コマンド](/cpp/build-insights/reference/vcperf-commands)\
-*vcperf.exe*コマンド リファレンスには、使用可能なすべてのコマンド オプションが一覧表示されています。
+*vcperf.exe* コマンド リファレンスには、使用できるすべてのコマンド オプションが掲載されています。
 
-[リファレンス: Windows パフォーマンス アナライザービュー](/cpp/build-insights/reference/wpa-views)\
-WPA の C++ ビルド インサイト ビューの詳細については、この記事を参照してください。
+[リファレンス: Windows パフォーマンス アナライザーのビュー](/cpp/build-insights/reference/wpa-views)\
+WPA の C++ Build Insights ビューの詳細については、この記事を参照してください。
 
-[パフォーマンス アナライザー](/windows-hardware/test/wpt/windows-performance-analyzer)\
-公式の WPA ドキュメント サイト。
+[Windows パフォーマンス アナライザー](/windows-hardware/test/wpt/windows-performance-analyzer)\
+WPA の公式ドキュメント サイト。
 
 ::: moniker-end

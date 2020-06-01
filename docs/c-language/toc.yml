@@ -1,742 +1,692 @@
+- name: C 言語のドキュメント
+  href: ../c-language/index.yml
 - name: 'C# 言語リファレンス'
-  href: ../c-language/c-language-reference.md
-- name: 「C 言語リファレンス」の構成
-  expanded: false
   items:
+    - name: 'C# 言語リファレンス'
+      href: ../c-language/c-language-reference.md
     - name: 「C 言語リファレンス」の構成
-      href: ../c-language/organization-of-the-c-language-reference.md
-    - name: このマニュアルの範囲
-      href: ../c-language/scope-of-this-manual.md
-    - name: ANSI 規格適合性
-      href: ../c-language/ansi-conformance.md
-- name: C の要素
-  expanded: false
-  items:
+      items:
+        - name: 「C 言語リファレンス」の構成
+          href: ../c-language/organization-of-the-c-language-reference.md
+        - name: このマニュアルの範囲
+          href: ../c-language/scope-of-this-manual.md
+        - name: ANSI 規格適合性
+          href: ../c-language/ansi-conformance.md
     - name: C の要素
-      href: ../c-language/elements-of-c.md
-    - name: C のトークン
-      expanded: false
       items:
+        - name: C の要素
+          href: ../c-language/elements-of-c.md
         - name: C のトークン
-          href: ../c-language/c-tokens.md
-        - name: 空白文字
-          href: ../c-language/white-space-characters.md
-        - name: C でのコメント
-          href: ../c-language/c-comments.md
-        - name: トークンの評価
-          href: ../c-language/evaluation-of-tokens.md
-    - name: C のキーワード
-      href: ../c-language/c-keywords.md
-    - name: C の識別子
-      expanded: false
-      items:
+          items:
+            - name: C のトークン
+              href: ../c-language/c-tokens.md
+            - name: 空白文字
+              href: ../c-language/white-space-characters.md
+            - name: C でのコメント
+              href: ../c-language/c-comments.md
+            - name: トークンの評価
+              href: ../c-language/evaluation-of-tokens.md
+        - name: C のキーワード
+          href: ../c-language/c-keywords.md
         - name: C の識別子
-          href: ../c-language/c-identifiers.md
-        - name: マルチバイト文字とワイド文字
-          href: ../c-language/multibyte-and-wide-characters.md
-        - name: トライグラフ
-          href: ../c-language/trigraphs.md
-    - name: C の定数
-      expanded: false
-      items:
+          items:
+            - name: C の識別子
+              href: ../c-language/c-identifiers.md
+            - name: マルチバイト文字とワイド文字
+              href: ../c-language/multibyte-and-wide-characters.md
+            - name: トライグラフ
+              href: ../c-language/trigraphs.md
         - name: C の定数
-          href: ../c-language/c-constants.md
-        - name: C の浮動小数点定数
-          expanded: false
           items:
+            - name: C の定数
+              href: ../c-language/c-constants.md
             - name: C の浮動小数点定数
-              href: ../c-language/c-floating-point-constants.md
-            - name: 浮動小数点定数の制限
-              href: ../c-language/limits-on-floating-point-constants.md
-        - name: C の整数定数
-          expanded: false
-          items:
+              items:
+                - name: C の浮動小数点定数
+                  href: ../c-language/c-floating-point-constants.md
+                - name: 浮動小数点定数の制限
+                  href: ../c-language/limits-on-floating-point-constants.md
             - name: C の整数定数
-              href: ../c-language/c-integer-constants.md
-            - name: 整数型
-              href: ../c-language/integer-types.md
-            - name: C と C++ 整数の制限
-              href: ../c-language/cpp-integer-limits.md
-        - name: C の文字定数
-          expanded: false
-          items:
+              items:
+                - name: C の整数定数
+                  href: ../c-language/c-integer-constants.md
+                - name: 整数型
+                  href: ../c-language/integer-types.md
+                - name: C と C++ 整数の制限
+                  href: ../c-language/cpp-integer-limits.md
             - name: C の文字定数
-              href: ../c-language/c-character-constants.md
-            - name: 文字型
-              href: ../c-language/character-types.md
-            - name: 実行文字セット
-              href: ../c-language/execution-character-set.md
-            - name: エスケープ シーケンス
-              href: ../c-language/escape-sequences.md
-            - name: 8 進文字と 16 進文字の仕様
-              href: ../c-language/octal-and-hexadecimal-character-specifications.md
-    - name: C の文字列リテラル
-      expanded: false
-      items:
+              items:
+                - name: C の文字定数
+                  href: ../c-language/c-character-constants.md
+                - name: 文字型
+                  href: ../c-language/character-types.md
+                - name: 実行文字セット
+                  href: ../c-language/execution-character-set.md
+                - name: エスケープ シーケンス
+                  href: ../c-language/escape-sequences.md
+                - name: 8 進文字と 16 進文字の仕様
+                  href: ../c-language/octal-and-hexadecimal-character-specifications.md
         - name: C の文字列リテラル
-          href: ../c-language/c-string-literals.md
-        - name: 文字列リテラルの型
-          href: ../c-language/type-for-string-literals.md
-        - name: 文字列リテラルの格納
-          href: ../c-language/storage-of-string-literals.md
-        - name: 文字列リテラルの連結
-          href: ../c-language/string-literal-concatenation.md
-        - name: 最大文字列長
-          href: ../c-language/maximum-string-length.md
-    - name: 区切り記号と特殊文字
-      href: ../c-language/punctuation-and-special-characters.md
-- name: プログラムの構造
-  expanded: false
-  items:
+          items:
+            - name: C の文字列リテラル
+              href: ../c-language/c-string-literals.md
+            - name: 文字列リテラルの型
+              href: ../c-language/type-for-string-literals.md
+            - name: 文字列リテラルの格納
+              href: ../c-language/storage-of-string-literals.md
+            - name: 文字列リテラルの連結
+              href: ../c-language/string-literal-concatenation.md
+            - name: 最大文字列長
+              href: ../c-language/maximum-string-length.md
+        - name: 区切り記号と特殊文字
+          href: ../c-language/punctuation-and-special-characters.md
     - name: プログラムの構造
-      href: ../c-language/program-structure.md
-    - name: ソース ファイルとソース プログラム
-      expanded: false
       items:
+        - name: プログラムの構造
+          href: ../c-language/program-structure.md
         - name: ソース ファイルとソース プログラム
-          href: ../c-language/source-files-and-source-programs.md
-        - name: プリプロセッサへのディレクティブ
-          href: ../c-language/directives-to-the-preprocessor.md
-        - name: C のプラグマ
-          href: ../c-language/c-pragmas.md
-        - name: C での宣言と定義
-          href: ../c-language/c-declarations-and-definitions.md
-        - name: 関数の宣言と定義
-          href: ../c-language/function-declarations-and-definitions.md
-        - name: ブロック
-          href: ../c-language/blocks.md
-        - name: サンプル プログラム
-          href: ../c-language/example-program.md
-    - name: main 関数とプログラム実行
-      expanded: false
-      items:
+          items:
+            - name: ソース ファイルとソース プログラム
+              href: ../c-language/source-files-and-source-programs.md
+            - name: プリプロセッサへのディレクティブ
+              href: ../c-language/directives-to-the-preprocessor.md
+            - name: C のプラグマ
+              href: ../c-language/c-pragmas.md
+            - name: C での宣言と定義
+              href: ../c-language/c-declarations-and-definitions.md
+            - name: 関数の宣言と定義
+              href: ../c-language/function-declarations-and-definitions.md
+            - name: ブロック
+              href: ../c-language/blocks.md
+            - name: サンプル プログラム
+              href: ../c-language/example-program.md
         - name: main 関数とプログラム実行
-          href: ../c-language/main-function-and-program-execution.md
-        - name: wmain の使用
-          href: ../c-language/using-wmain.md
-        - name: 引数の説明
-          href: ../c-language/argument-description.md
-        - name: ワイルドカード引数の展開
-          href: ../c-language/expanding-wildcard-arguments.md
-        - name: C のコマンド ライン引数の解析
-          href: ../c-language/parsing-c-command-line-arguments.md
-        - name: C のコマンド ライン処理のカスタマイズ
-          href: ../c-language/customizing-c-command-line-processing.md
-    - name: 有効期間、スコープ、表示、およびリンケージ
-      expanded: false
-      items:
-        - name: 有効期間、スコープ、可視性、およびリンケージ
-          href: ../c-language/lifetime-scope-visibility-and-linkage.md
-        - name: 有効期間
-          href: ../c-language/lifetime.md
-        - name: スコープおよび可視性
-          href: ../c-language/scope-and-visibility.md
-        - name: 有効期間と可視性の概要
-          href: ../c-language/summary-of-lifetime-and-visibility.md
-        - name: リンケージ
-          expanded: false
           items:
+            - name: main 関数とプログラム実行
+              href: ../c-language/main-function-and-program-execution.md
+            - name: wmain の使用
+              href: ../c-language/using-wmain.md
+            - name: 引数の説明
+              href: ../c-language/argument-description.md
+            - name: ワイルドカード引数の展開
+              href: ../c-language/expanding-wildcard-arguments.md
+            - name: C のコマンド ライン引数の解析
+              href: ../c-language/parsing-c-command-line-arguments.md
+            - name: C のコマンド ライン処理のカスタマイズ
+              href: ../c-language/customizing-c-command-line-processing.md
+        - name: 有効期間、スコープ、表示、およびリンケージ
+          items:
+            - name: 有効期間、スコープ、可視性、およびリンケージ
+              href: ../c-language/lifetime-scope-visibility-and-linkage.md
+            - name: 有効期間
+              href: ../c-language/lifetime.md
+            - name: スコープおよび可視性
+              href: ../c-language/scope-and-visibility.md
+            - name: 有効期間と可視性の概要
+              href: ../c-language/summary-of-lifetime-and-visibility.md
             - name: リンケージ
-              href: ../c-language/linkage.md
-            - name: 内部リンケージ
-              href: ../c-language/internal-linkage.md
-            - name: 外部リンケージ
-              href: ../c-language/external-linkage.md
-            - name: リンケージなし
-              href: ../c-language/no-linkage.md
-    - name: 名前空間
-      href: ../c-language/name-spaces.md
-- name: 宣言と型
-  expanded: false
-  items:
+              items:
+                - name: リンケージ
+                  href: ../c-language/linkage.md
+                - name: 内部リンケージ
+                  href: ../c-language/internal-linkage.md
+                - name: 外部リンケージ
+                  href: ../c-language/external-linkage.md
+                - name: リンケージなし
+                  href: ../c-language/no-linkage.md
+        - name: 名前空間
+          href: ../c-language/name-spaces.md
     - name: 宣言と型
-      href: ../c-language/declarations-and-types.md
-    - name: 宣言の概要
-      href: ../c-language/overview-of-declarations.md
-    - name: C のストレージ クラス
-      expanded: false
       items:
-        - name: C のストレージ クラス
-          href: ../c-language/c-storage-classes.md
-        - name: 外部レベル宣言のストレージ クラス指定子
-          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
-        - name: 内部レベル宣言のストレージ クラス指定子
-          expanded: false
-          items:
-            - name: 内部レベル宣言のストレージ クラス指定子
-              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
-            - name: auto ストレージ クラス指定子
-              href: ../c-language/auto-storage-class-specifier.md
-            - name: register ストレージ クラス指定子
-              href: ../c-language/register-storage-class-specifier.md
-            - name: static ストレージ クラス指定子
-              href: ../c-language/static-storage-class-specifier.md
-            - name: extern ストレージ クラス指定子
-              href: ../c-language/extern-storage-class-specifier.md
-        - name: 関数の宣言を持つストレージ クラス指定子
-          href: ../c-language/storage-class-specifiers-with-function-declarations.md
-    - name: C の型指定子
-      expanded: false
-      items:
-        - name: C の型指定子
-          href: ../c-language/c-type-specifiers.md
-        - name: データ型指定子と同等物
-          href: ../c-language/data-type-specifiers-and-equivalents.md
-    - name: 型修飾子
-      href: ../c-language/type-qualifiers.md
-    - name: 宣言子と変数宣言
-      expanded: false
-      items:
-        - name: 宣言子と変数の宣言
-          href: ../c-language/declarators-and-variable-declarations.md
-        - name: 単純変数の宣言
-          href: ../c-language/simple-variable-declarations.md
-        - name: C での列挙体の宣言
-          href: ../c-language/c-enumeration-declarations.md
-        - name: 構造体の宣言
-          expanded: false
-          items:
-            - name: 構造体の宣言
-              href: ../c-language/structure-declarations.md
-            - name: C のビット フィールド
-              href: ../c-language/c-bit-fields.md
-            - name: 構造体の格納とアライメント
-              href: ../c-language/storage-and-alignment-of-structures.md
-        - name: 共用体の宣言
-          expanded: false
-          items:
-            - name: 共用体の宣言
-              href: ../c-language/union-declarations.md
-            - name: 共用体の格納
-              href: ../c-language/storage-of-unions.md
-        - name: 配列の宣言
-          expanded: false
-          items:
-            - name: 配列の宣言
-              href: ../c-language/array-declarations.md
-            - name: 配列の格納
-              href: ../c-language/storage-of-arrays.md
-        - name: ポインター宣言
-          expanded: false
-          items:
-            - name: ポインター宣言
-              href: ../c-language/pointer-declarations.md
-            - name: アドレスの格納
-              href: ../c-language/storage-of-addresses.md
-        - name: ベース ポインター (C)
-          href: ../c-language/based-pointers-c.md
-        - name: C 抽象宣言子
-          href: ../c-language/c-abstract-declarators.md
-    - name: より複雑な宣言子の解釈
-      href: ../c-language/interpreting-more-complex-declarators.md
-    - name: 初期化
-      expanded: false
-      items:
-        - name: 初期化
-          href: ../c-language/initialization.md
-        - name: スカラー型の初期化
-          href: ../c-language/initializing-scalar-types.md
-        - name: 集約型の初期化
-          href: ../c-language/initializing-aggregate-types.md
-        - name: 文字列の初期化
-          href: ../c-language/initializing-strings.md
-    - name: 基本型の格納
-      expanded: false
-      items:
-        - name: 基本型のストレージ
-          href: ../c-language/storage-of-basic-types.md
-        - name: char 型
-          href: ../c-language/type-char.md
-        - name: int 型
-          href: ../c-language/type-int.md
-        - name: C のサイズ設定の整数型
-          href: ../c-language/c-sized-integer-types.md
-        - name: float 型
-          href: ../c-language/type-float.md
-        - name: double 型
-          href: ../c-language/type-double.md
-        - name: long double 型
-          href: ../c-language/type-long-double.md
-    - name: 不完全な型
-      href: ../c-language/incomplete-types.md
-    - name: Typedef の宣言
-      href: ../c-language/typedef-declarations.md
-    - name: C の拡張ストレージ クラス属性
-      expanded: false
-      items:
-        - name: C の拡張ストレージ クラス属性
-          href: ../c-language/c-extended-storage-class-attributes.md
-        - name: DLL のインポートとエクスポート
-          href: ../c-language/dll-import-and-export.md
-        - name: naked (C)
-          href: ../c-language/naked-c.md
-        - name: スレッド ローカル ストレージ
-          href: ../c-language/thread-local-storage.md
-- name: 式と代入
-  expanded: false
-  items:
-    - name: 式と代入
-      href: ../c-language/expressions-and-assignments.md
-    - name: オペランドおよび式
-      expanded: false
-      items:
-        - name: オペランドおよび式
-          href: ../c-language/operands-and-expressions.md
-        - name: C での一次式
-          expanded: false
-          items:
-            - name: C での一次式
-              href: ../c-language/c-primary-expressions.md
-            - name: 一次式の識別子
-              href: ../c-language/identifiers-in-primary-expressions.md
-            - name: 一次式の定数
-              href: ../c-language/constants-in-primary-expressions.md
-            - name: 一次式の文字列リテラル
-              href: ../c-language/string-literals-in-primary-expressions.md
-            - name: かっこで囲んだ式
-              href: ../c-language/expressions-in-parentheses.md
-        - name: 左辺値と右辺値の式
-          href: ../c-language/l-value-and-r-value-expressions.md
-        - name: C 定数式
-          href: ../c-language/c-constant-expressions.md
-        - name: 式の評価 (C)
-          expanded: false
-          items:
-            - name: 式の評価 (C)
-              href: ../c-language/expression-evaluation-c.md
-            - name: 副作用
-              href: ../c-language/side-effects.md
-            - name: C のシーケンス ポイント
-              href: ../c-language/c-sequence-points.md
-    - name: C の演算子
-      expanded: false
-      items:
-        - name: C の演算子
-          href: ../c-language/c-operators.md
-        - name: 優先順位と評価順序
-          href: ../c-language/precedence-and-order-of-evaluation.md
-        - name: 通常の算術変換
-          href: ../c-language/usual-arithmetic-conversions.md
-        - name: 後置演算子
-          expanded: false
-          items:
-            - name: 後置演算子
-              href: ../c-language/postfix-operators.md
-            - name: 1 次元配列
-              href: ../c-language/one-dimensional-arrays.md
-            - name: 多次元配列 (C)
-              href: ../c-language/multidimensional-arrays-c.md
-            - name: 関数呼び出し (C)
-              href: ../c-language/function-call-c.md
-            - name: 構造体と共用体のメンバー
-              href: ../c-language/structure-and-union-members.md
-            - name: C の後置インクリメント演算子と後置デクリメント演算子
-              href: ../c-language/c-postfix-increment-and-decrement-operators.md
-        - name: C の単項演算子
-          expanded: false
-          items:
-            - name: C の単項演算子
-              href: ../c-language/c-unary-operators.md
-            - name: 前置インクリメント演算子と前置デクリメント演算子
-              href: ../c-language/prefix-increment-and-decrement-operators.md
-            - name: 間接演算子とアドレス演算子
-              href: ../c-language/indirection-and-address-of-operators.md
-            - name: 単項算術演算子
-              href: ../c-language/unary-arithmetic-operators.md
-            - name: sizeof 演算子 (C)
-              href: ../c-language/sizeof-operator-c.md
-        - name: キャスト演算子
-          href: ../c-language/cast-operators.md
-        - name: C の乗算演算子
-          href: ../c-language/c-multiplicative-operators.md
-        - name: C の加法演算子
-          expanded: false
-          items:
-            - name: C の加法演算子
-              href: ../c-language/c-additive-operators.md
-            - name: 加算 (+)
-              href: ../c-language/addition-plus.md
-            - name: 減算 (-)
-              href: ../c-language/subtraction-minus.md
-            - name: 加法演算子の使用
-              href: ../c-language/using-the-additive-operators.md
-            - name: ポインター算術
-              href: ../c-language/pointer-arithmetic.md
-        - name: ビット処理シフト演算子
-          href: ../c-language/bitwise-shift-operators.md
-        - name: C の関係演算子と等値演算子
-          href: ../c-language/c-relational-and-equality-operators.md
-        - name: C のビット処理演算子
-          href: ../c-language/c-bitwise-operators.md
-        - name: C 論理演算子
-          href: ../c-language/c-logical-operators.md
-        - name: 条件式演算子
-          href: ../c-language/conditional-expression-operator.md
-        - name: C の代入演算子
-          expanded: false
-          items:
-            - name: C の代入演算子
-              href: ../c-language/c-assignment-operators.md
-            - name: 単純な代入 (C)
-              href: ../c-language/simple-assignment-c.md
-            - name: C での複合代入
-              href: ../c-language/c-compound-assignment.md
-        - name: 順次評価演算子
-          href: ../c-language/sequential-evaluation-operator.md
-    - name: 型変換 (C)
-      expanded: false
-      items:
-        - name: 型変換 (C)
-          href: ../c-language/type-conversions-c.md
-        - name: 代入変換
-          expanded: false
-          items:
-            - name: 代入変換
-              href: ../c-language/assignment-conversions.md
-            - name: 符号付き整数型からの変換
-              href: ../c-language/conversions-from-signed-integral-types.md
-            - name: 符号なし整数型からの変換
-              href: ../c-language/conversions-from-unsigned-integral-types.md
-            - name: 浮動小数点型からの変換
-              href: ../c-language/conversions-from-floating-point-types.md
-            - name: ポインター型との間の変換
-              href: ../c-language/conversions-to-and-from-pointer-types.md
-            - name: 他の型からの変換
-              href: ../c-language/conversions-from-other-types.md
-        - name: 型キャスト変換
-          href: ../c-language/type-cast-conversions.md
-        - name: 関数呼び出しでの変換
-          href: ../c-language/function-call-conversions.md
-- name: ステートメント (C)
-  expanded: false
-  items:
-    - name: ステートメント (C)
-      href: ../c-language/statements-c.md
-    - name: C のステートメントの概要
-      href: ../c-language/overview-of-c-statements.md
-    - name: break ステートメント (C)
-      href: ../c-language/break-statement-c.md
-    - name: 複合ステートメント (C)
-      href: ../c-language/compound-statement-c.md
-    - name: continue ステートメント (C)
-      href: ../c-language/continue-statement-c.md
-    - name: do-while ステートメント (C)
-      href: ../c-language/do-while-statement-c.md
-    - name: 式ステートメント (C)
-      href: ../c-language/expression-statement-c.md
-    - name: for ステートメント (C)
-      href: ../c-language/for-statement-c.md
-    - name: goto ステートメントとラベル付きステートメント (C)
-      href: ../c-language/goto-and-labeled-statements-c.md
-    - name: if ステートメント (C)
-      href: ../c-language/if-statement-c.md
-    - name: Null ステートメント (C)
-      href: ../c-language/null-statement-c.md
-    - name: return ステートメント (C)
-      href: ../c-language/return-statement-c.md
-    - name: switch ステートメント (C)
-      href: ../c-language/switch-statement-c.md
-    - name: try-except ステートメント (C)
-      href: ../c-language/try-except-statement-c.md
-    - name: try-finally ステートメント (C)
-      href: ../c-language/try-finally-statement-c.md
-    - name: while ステートメント (C)
-      href: ../c-language/while-statement-c.md
-- name: 関数 (C)
-  expanded: false
-  items:
-    - name: 関数 (C)
-      href: ../c-language/functions-c.md
-    - name: 関数の概要
-      expanded: false
-      items:
-        - name: 関数の概要
-          href: ../c-language/overview-of-functions.md
-        - name: 古い関数の宣言と定義形式
-          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
-    - name: C での関数の定義
-      expanded: false
-      items:
-        - name: C での関数の定義
-          href: ../c-language/c-function-definitions.md
-        - name: 関数の属性
-          expanded: false
-          items:
-            - name: 関数の属性
-              href: ../c-language/function-attributes.md
-            - name: 呼び出し規則の指定
-              href: ../c-language/specifying-calling-conventions.md
-            - name: インライン関数
-              href: ../c-language/inline-functions.md
-            - name: インライン アセンブラー (C)
-              href: ../c-language/inline-assembler-c.md
-        - name: DLL インポートおよびエクスポート関数
-          expanded: false
-          items:
-            - name: DLL インポートおよびエクスポート関数
-              href: ../c-language/dll-import-and-export-functions.md
-            - name: 定義と宣言 (C)
-              href: ../c-language/definitions-and-declarations-c.md
-            - name: dllexport と dllimport を使用したインライン C 関数の定義
-              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
-            - name: dllimport-dllexport に関する規則と制限
-              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
-        - name: Naked 関数
-          expanded: false
-          items:
-            - name: naked 関数
-              href: ../c-language/naked-functions.md
-            - name: naked 関数の使用に関する規則と制限
-              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
-            - name: プロローグ/エピローグ コードの記述時の考慮事項
-              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
-        - name: ストレージ クラス
-          href: ../c-language/storage-class.md
-        - name: 戻り値の型
-          href: ../c-language/return-type.md
-        - name: パラメーター
-          href: ../c-language/parameters.md
-        - name: 関数本体
-          href: ../c-language/function-body.md
-    - name: 関数プロトタイプ
-      href: ../c-language/function-prototypes.md
-    - name: 関数呼び出し
-      expanded: false
-      items:
-        - name: 関数呼び出し
-          href: ../c-language/function-calls.md
-        - name: 引数
-          href: ../c-language/arguments.md
-        - name: 可変個の引数を使用した呼び出し
-          href: ../c-language/calls-with-a-variable-number-of-arguments.md
-        - name: 再帰関数
-          href: ../c-language/recursive-functions.md
-- name: C 言語の構文概要
-  expanded: false
-  items:
-    - name: C 言語の構文概要
-      href: ../c-language/c-language-syntax-summary.md
-    - name: 定義と規則
-      href: ../c-language/definitions-and-conventions.md
-    - name: 字句文法
-      expanded: false
-      items:
-        - name: 字句文法
-          href: ../c-language/lexical-grammar.md
-        - name: トークンの概要
-          href: ../c-language/summary-of-tokens.md
-        - name: キーワードの概要
-          href: ../c-language/summary-of-keywords.md
-        - name: 識別子の概要
-          href: ../c-language/summary-of-identifiers.md
-        - name: 定数の概要
-          href: ../c-language/summary-of-constants.md
-        - name: 文字列リテラルの概要
-          href: ../c-language/summary-of-string-literals.md
-        - name: 演算子 (C)
-          href: ../c-language/operators-c.md
-        - name: 区切り記号
-          href: ../c-language/punctuators.md
-    - name: 語句構造の文法
-      expanded: false
-      items:
-        - name: 語句構造の文法
-          href: ../c-language/phrase-structure-grammar.md
-        - name: 式の概要
-          href: ../c-language/summary-of-expressions.md
+        - name: 宣言と型
+          href: ../c-language/declarations-and-types.md
         - name: 宣言の概要
-          href: ../c-language/summary-of-declarations.md
-        - name: ステートメントの概要
-          href: ../c-language/summary-of-statements.md
-        - name: 外部定義
-          href: ../c-language/external-definitions.md
-- name: 実装で定義された動作
-  expanded: false
-  items:
+          href: ../c-language/overview-of-declarations.md
+        - name: C のストレージ クラス
+          items:
+            - name: C のストレージ クラス
+              href: ../c-language/c-storage-classes.md
+            - name: 外部レベル宣言のストレージ クラス指定子
+              href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+            - name: 内部レベル宣言のストレージ クラス指定子
+              items:
+                - name: 内部レベル宣言のストレージ クラス指定子
+                  href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+                - name: auto ストレージ クラス指定子
+                  href: ../c-language/auto-storage-class-specifier.md
+                - name: register ストレージ クラス指定子
+                  href: ../c-language/register-storage-class-specifier.md
+                - name: static ストレージ クラス指定子
+                  href: ../c-language/static-storage-class-specifier.md
+                - name: extern ストレージ クラス指定子
+                  href: ../c-language/extern-storage-class-specifier.md
+            - name: 関数の宣言を持つストレージ クラス指定子
+              href: ../c-language/storage-class-specifiers-with-function-declarations.md
+        - name: C の型指定子
+          items:
+            - name: C の型指定子
+              href: ../c-language/c-type-specifiers.md
+            - name: データ型指定子と同等物
+              href: ../c-language/data-type-specifiers-and-equivalents.md
+        - name: 型修飾子
+          href: ../c-language/type-qualifiers.md
+        - name: 宣言子と変数宣言
+          items:
+            - name: 宣言子と変数の宣言
+              href: ../c-language/declarators-and-variable-declarations.md
+            - name: 単純変数の宣言
+              href: ../c-language/simple-variable-declarations.md
+            - name: C での列挙体の宣言
+              href: ../c-language/c-enumeration-declarations.md
+            - name: 構造体の宣言
+              items:
+                - name: 構造体の宣言
+                  href: ../c-language/structure-declarations.md
+                - name: C のビット フィールド
+                  href: ../c-language/c-bit-fields.md
+                - name: 構造体の格納とアライメント
+                  href: ../c-language/storage-and-alignment-of-structures.md
+            - name: 共用体の宣言
+              items:
+                - name: 共用体の宣言
+                  href: ../c-language/union-declarations.md
+                - name: 共用体の格納
+                  href: ../c-language/storage-of-unions.md
+            - name: 配列の宣言
+              items:
+                - name: 配列の宣言
+                  href: ../c-language/array-declarations.md
+                - name: 配列の格納
+                  href: ../c-language/storage-of-arrays.md
+            - name: ポインター宣言
+              items:
+                - name: ポインター宣言
+                  href: ../c-language/pointer-declarations.md
+                - name: アドレスの格納
+                  href: ../c-language/storage-of-addresses.md
+            - name: ベース ポインター (C)
+              href: ../c-language/based-pointers-c.md
+            - name: C 抽象宣言子
+              href: ../c-language/c-abstract-declarators.md
+        - name: より複雑な宣言子の解釈
+          href: ../c-language/interpreting-more-complex-declarators.md
+        - name: 初期化
+          items:
+            - name: 初期化
+              href: ../c-language/initialization.md
+            - name: スカラー型の初期化
+              href: ../c-language/initializing-scalar-types.md
+            - name: 集約型の初期化
+              href: ../c-language/initializing-aggregate-types.md
+            - name: 文字列の初期化
+              href: ../c-language/initializing-strings.md
+        - name: 基本型の格納
+          items:
+            - name: 基本型のストレージ
+              href: ../c-language/storage-of-basic-types.md
+            - name: char 型
+              href: ../c-language/type-char.md
+            - name: int 型
+              href: ../c-language/type-int.md
+            - name: C のサイズ設定の整数型
+              href: ../c-language/c-sized-integer-types.md
+            - name: float 型
+              href: ../c-language/type-float.md
+            - name: double 型
+              href: ../c-language/type-double.md
+            - name: long double 型
+              href: ../c-language/type-long-double.md
+        - name: 不完全な型
+          href: ../c-language/incomplete-types.md
+        - name: Typedef の宣言
+          href: ../c-language/typedef-declarations.md
+        - name: C の拡張ストレージ クラス属性
+          items:
+            - name: C の拡張ストレージ クラス属性
+              href: ../c-language/c-extended-storage-class-attributes.md
+            - name: DLL のインポートとエクスポート
+              href: ../c-language/dll-import-and-export.md
+            - name: naked (C)
+              href: ../c-language/naked-c.md
+            - name: スレッド ローカル ストレージ
+              href: ../c-language/thread-local-storage.md
+    - name: 式と代入
+      items:
+        - name: 式と代入
+          href: ../c-language/expressions-and-assignments.md
+        - name: オペランドおよび式
+          items:
+            - name: オペランドおよび式
+              href: ../c-language/operands-and-expressions.md
+            - name: C での一次式
+              items:
+                - name: C での一次式
+                  href: ../c-language/c-primary-expressions.md
+                - name: 一次式の識別子
+                  href: ../c-language/identifiers-in-primary-expressions.md
+                - name: 一次式の定数
+                  href: ../c-language/constants-in-primary-expressions.md
+                - name: 一次式の文字列リテラル
+                  href: ../c-language/string-literals-in-primary-expressions.md
+                - name: かっこで囲んだ式
+                  href: ../c-language/expressions-in-parentheses.md
+            - name: 左辺値と右辺値の式
+              href: ../c-language/l-value-and-r-value-expressions.md
+            - name: C 定数式
+              href: ../c-language/c-constant-expressions.md
+            - name: 式の評価 (C)
+              items:
+                - name: 式の評価 (C)
+                  href: ../c-language/expression-evaluation-c.md
+                - name: 副作用
+                  href: ../c-language/side-effects.md
+                - name: C のシーケンス ポイント
+                  href: ../c-language/c-sequence-points.md
+        - name: C の演算子
+          items:
+            - name: C の演算子
+              href: ../c-language/c-operators.md
+            - name: 優先順位と評価順序
+              href: ../c-language/precedence-and-order-of-evaluation.md
+            - name: 通常の算術変換
+              href: ../c-language/usual-arithmetic-conversions.md
+            - name: 後置演算子
+              items:
+                - name: 後置演算子
+                  href: ../c-language/postfix-operators.md
+                - name: 1 次元配列
+                  href: ../c-language/one-dimensional-arrays.md
+                - name: 多次元配列 (C)
+                  href: ../c-language/multidimensional-arrays-c.md
+                - name: 関数呼び出し (C)
+                  href: ../c-language/function-call-c.md
+                - name: 構造体と共用体のメンバー
+                  href: ../c-language/structure-and-union-members.md
+                - name: C の後置インクリメント演算子と後置デクリメント演算子
+                  href: ../c-language/c-postfix-increment-and-decrement-operators.md
+            - name: C の単項演算子
+              items:
+                - name: C の単項演算子
+                  href: ../c-language/c-unary-operators.md
+                - name: 前置インクリメント演算子と前置デクリメント演算子
+                  href: ../c-language/prefix-increment-and-decrement-operators.md
+                - name: 間接演算子とアドレス演算子
+                  href: ../c-language/indirection-and-address-of-operators.md
+                - name: 単項算術演算子
+                  href: ../c-language/unary-arithmetic-operators.md
+                - name: sizeof 演算子 (C)
+                  href: ../c-language/sizeof-operator-c.md
+            - name: キャスト演算子
+              href: ../c-language/cast-operators.md
+            - name: C の乗算演算子
+              href: ../c-language/c-multiplicative-operators.md
+            - name: C の加法演算子
+              items:
+                - name: C の加法演算子
+                  href: ../c-language/c-additive-operators.md
+                - name: 加算 (+)
+                  href: ../c-language/addition-plus.md
+                - name: 減算 (-)
+                  href: ../c-language/subtraction-minus.md
+                - name: 加法演算子の使用
+                  href: ../c-language/using-the-additive-operators.md
+                - name: ポインター算術
+                  href: ../c-language/pointer-arithmetic.md
+            - name: ビット処理シフト演算子
+              href: ../c-language/bitwise-shift-operators.md
+            - name: C の関係演算子と等値演算子
+              href: ../c-language/c-relational-and-equality-operators.md
+            - name: C のビット処理演算子
+              href: ../c-language/c-bitwise-operators.md
+            - name: C 論理演算子
+              href: ../c-language/c-logical-operators.md
+            - name: 条件式演算子
+              href: ../c-language/conditional-expression-operator.md
+            - name: C の代入演算子
+              items:
+                - name: C の代入演算子
+                  href: ../c-language/c-assignment-operators.md
+                - name: 単純な代入 (C)
+                  href: ../c-language/simple-assignment-c.md
+                - name: C での複合代入
+                  href: ../c-language/c-compound-assignment.md
+            - name: 順次評価演算子
+              href: ../c-language/sequential-evaluation-operator.md
+        - name: 型変換 (C)
+          items:
+            - name: 型変換 (C)
+              href: ../c-language/type-conversions-c.md
+            - name: 代入変換
+              items:
+                - name: 代入変換
+                  href: ../c-language/assignment-conversions.md
+                - name: 符号付き整数型からの変換
+                  href: ../c-language/conversions-from-signed-integral-types.md
+                - name: 符号なし整数型からの変換
+                  href: ../c-language/conversions-from-unsigned-integral-types.md
+                - name: 浮動小数点型からの変換
+                  href: ../c-language/conversions-from-floating-point-types.md
+                - name: ポインター型との間の変換
+                  href: ../c-language/conversions-to-and-from-pointer-types.md
+                - name: 他の型からの変換
+                  href: ../c-language/conversions-from-other-types.md
+            - name: 型キャスト変換
+              href: ../c-language/type-cast-conversions.md
+            - name: 関数呼び出しでの変換
+              href: ../c-language/function-call-conversions.md
+    - name: ステートメント (C)
+      items:
+        - name: ステートメント (C)
+          href: ../c-language/statements-c.md
+        - name: C のステートメントの概要
+          href: ../c-language/overview-of-c-statements.md
+        - name: break ステートメント (C)
+          href: ../c-language/break-statement-c.md
+        - name: 複合ステートメント (C)
+          href: ../c-language/compound-statement-c.md
+        - name: continue ステートメント (C)
+          href: ../c-language/continue-statement-c.md
+        - name: do-while ステートメント (C)
+          href: ../c-language/do-while-statement-c.md
+        - name: 式ステートメント (C)
+          href: ../c-language/expression-statement-c.md
+        - name: for ステートメント (C)
+          href: ../c-language/for-statement-c.md
+        - name: goto ステートメントとラベル付きステートメント (C)
+          href: ../c-language/goto-and-labeled-statements-c.md
+        - name: if ステートメント (C)
+          href: ../c-language/if-statement-c.md
+        - name: Null ステートメント (C)
+          href: ../c-language/null-statement-c.md
+        - name: return ステートメント (C)
+          href: ../c-language/return-statement-c.md
+        - name: switch ステートメント (C)
+          href: ../c-language/switch-statement-c.md
+        - name: try-except ステートメント (C)
+          href: ../c-language/try-except-statement-c.md
+        - name: try-finally ステートメント (C)
+          href: ../c-language/try-finally-statement-c.md
+        - name: while ステートメント (C)
+          href: ../c-language/while-statement-c.md
+    - name: 関数 (C)
+      items:
+        - name: 関数 (C)
+          href: ../c-language/functions-c.md
+        - name: 関数の概要
+          items:
+            - name: 関数の概要
+              href: ../c-language/overview-of-functions.md
+            - name: 古い関数の宣言と定義形式
+              href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+        - name: C での関数の定義
+          items:
+            - name: C での関数の定義
+              href: ../c-language/c-function-definitions.md
+            - name: 関数の属性
+              items:
+                - name: 関数の属性
+                  href: ../c-language/function-attributes.md
+                - name: 呼び出し規則の指定
+                  href: ../c-language/specifying-calling-conventions.md
+                - name: インライン関数
+                  href: ../c-language/inline-functions.md
+                - name: インライン アセンブラー (C)
+                  href: ../c-language/inline-assembler-c.md
+            - name: DLL インポートおよびエクスポート関数
+              items:
+                - name: DLL インポートおよびエクスポート関数
+                  href: ../c-language/dll-import-and-export-functions.md
+                - name: 定義と宣言 (C)
+                  href: ../c-language/definitions-and-declarations-c.md
+                - name: dllexport と dllimport を使用したインライン C 関数の定義
+                  href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+                - name: dllimport-dllexport に関する規則と制限
+                  href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+            - name: Naked 関数
+              items:
+                - name: naked 関数
+                  href: ../c-language/naked-functions.md
+                - name: naked 関数の使用に関する規則と制限
+                  href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+                - name: プロローグ/エピローグ コードの記述時の考慮事項
+                  href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+            - name: ストレージ クラス
+              href: ../c-language/storage-class.md
+            - name: 戻り値の型
+              href: ../c-language/return-type.md
+            - name: パラメーター
+              href: ../c-language/parameters.md
+            - name: 関数本体
+              href: ../c-language/function-body.md
+        - name: 関数プロトタイプ
+          href: ../c-language/function-prototypes.md
+        - name: 関数呼び出し
+          items:
+            - name: 関数呼び出し
+              href: ../c-language/function-calls.md
+            - name: 引数
+              href: ../c-language/arguments.md
+            - name: 可変個の引数を使用した呼び出し
+              href: ../c-language/calls-with-a-variable-number-of-arguments.md
+            - name: 再帰関数
+              href: ../c-language/recursive-functions.md
+    - name: C 言語の構文概要
+      items:
+        - name: C 言語の構文概要
+          href: ../c-language/c-language-syntax-summary.md
+        - name: 定義と規則
+          href: ../c-language/definitions-and-conventions.md
+        - name: 字句文法
+          items:
+            - name: 字句文法
+              href: ../c-language/lexical-grammar.md
+            - name: トークンの概要
+              href: ../c-language/summary-of-tokens.md
+            - name: キーワードの概要
+              href: ../c-language/summary-of-keywords.md
+            - name: 識別子の概要
+              href: ../c-language/summary-of-identifiers.md
+            - name: 定数の概要
+              href: ../c-language/summary-of-constants.md
+            - name: 文字列リテラルの概要
+              href: ../c-language/summary-of-string-literals.md
+            - name: 演算子 (C)
+              href: ../c-language/operators-c.md
+            - name: 区切り記号
+              href: ../c-language/punctuators.md
+        - name: 語句構造の文法
+          items:
+            - name: 語句構造の文法
+              href: ../c-language/phrase-structure-grammar.md
+            - name: 式の概要
+              href: ../c-language/summary-of-expressions.md
+            - name: 宣言の概要
+              href: ../c-language/summary-of-declarations.md
+            - name: ステートメントの概要
+              href: ../c-language/summary-of-statements.md
+            - name: 外部定義
+              href: ../c-language/external-definitions.md
     - name: 実装で定義された動作
-      href: ../c-language/implementation-defined-behavior.md
-    - name: '変換:診断'
-      href: ../c-language/translation-diagnostics.md
-    - name: 環境
-      expanded: false
       items:
+        - name: 実装で定義された動作
+          href: ../c-language/implementation-defined-behavior.md
+        - name: '変換:診断'
+          href: ../c-language/translation-diagnostics.md
         - name: 環境
-          href: ../c-language/environment.md
-        - name: main の引数
-          href: ../c-language/arguments-to-main.md
-        - name: 対話形式のデバイス
-          href: ../c-language/interactive-devices.md
-    - name: 識別子の動作
-      expanded: false
-      items:
+          items:
+            - name: 環境
+              href: ../c-language/environment.md
+            - name: main の引数
+              href: ../c-language/arguments-to-main.md
+            - name: 対話形式のデバイス
+              href: ../c-language/interactive-devices.md
         - name: 識別子の動作
-          href: ../c-language/behavior-of-identifiers.md
-        - name: 外部リンケージを持たない有意文字
-          href: ../c-language/significant-characters-without-external-linkage.md
-        - name: 外部リンケージを持つ有意文字
-          href: ../c-language/significant-characters-with-external-linkage.md
-        - name: 大文字と小文字
-          href: ../c-language/uppercase-and-lowercase.md
-    - name: 文字
-      expanded: false
-      items:
+          items:
+            - name: 識別子の動作
+              href: ../c-language/behavior-of-identifiers.md
+            - name: 外部リンケージを持たない有意文字
+              href: ../c-language/significant-characters-without-external-linkage.md
+            - name: 外部リンケージを持つ有意文字
+              href: ../c-language/significant-characters-with-external-linkage.md
+            - name: 大文字と小文字
+              href: ../c-language/uppercase-and-lowercase.md
         - name: 文字
-          href: ../c-language/characters.md
-        - name: ASCII 文字セット
-          href: ../c-language/ascii-character-set.md
-        - name: マルチバイト文字
-          href: ../c-language/multibyte-characters.md
-        - name: 文字あたりのビット数
-          href: ../c-language/bits-per-character.md
-        - name: 文字セット 1
-          href: ../c-language/character-sets1.md
-        - name: 表現されない文字定数
-          href: ../c-language/unrepresented-character-constants.md
-        - name: ワイド文字
-          href: ../c-language/wide-characters.md
-        - name: マルチバイト文字の変換
-          href: ../c-language/converting-multibyte-characters.md
-        - name: char 値の範囲
-          href: ../c-language/range-of-char-values.md
-    - name: 整数
-      expanded: false
-      items:
+          items:
+            - name: 文字
+              href: ../c-language/characters.md
+            - name: ASCII 文字セット
+              href: ../c-language/ascii-character-set.md
+            - name: マルチバイト文字
+              href: ../c-language/multibyte-characters.md
+            - name: 文字あたりのビット数
+              href: ../c-language/bits-per-character.md
+            - name: 文字セット 1
+              href: ../c-language/character-sets1.md
+            - name: 表現されない文字定数
+              href: ../c-language/unrepresented-character-constants.md
+            - name: ワイド文字
+              href: ../c-language/wide-characters.md
+            - name: マルチバイト文字の変換
+              href: ../c-language/converting-multibyte-characters.md
+            - name: char 値の範囲
+              href: ../c-language/range-of-char-values.md
         - name: 整数
-          href: ../c-language/integers.md
-        - name: 整数値の範囲
-          href: ../c-language/range-of-integer-values.md
-        - name: 整数の下位変換
-          href: ../c-language/demotion-of-integers.md
-        - name: 符号付きビット処理演算
-          href: ../c-language/signed-bitwise-operations.md
-        - name: Remainders (剰余)
-          href: ../c-language/remainders.md
-        - name: 右シフト
-          href: ../c-language/right-shifts.md
-    - name: 浮動小数点演算
-      expanded: false
-      items:
+          items:
+            - name: 整数
+              href: ../c-language/integers.md
+            - name: 整数値の範囲
+              href: ../c-language/range-of-integer-values.md
+            - name: 整数の下位変換
+              href: ../c-language/demotion-of-integers.md
+            - name: 符号付きビット処理演算
+              href: ../c-language/signed-bitwise-operations.md
+            - name: Remainders (剰余)
+              href: ../c-language/remainders.md
+            - name: 右シフト
+              href: ../c-language/right-shifts.md
         - name: 浮動小数点演算
-          href: ../c-language/floating-point-math.md
-        - name: 値
-          href: ../c-language/values.md
-        - name: 整数の浮動小数点値へのキャスト
-          href: ../c-language/casting-integers-to-floating-point-values.md
-        - name: 浮動小数点値の切り捨て
-          href: ../c-language/truncation-of-floating-point-values.md
-    - name: 配列とポインター
-      expanded: false
-      items:
+          items:
+            - name: 浮動小数点演算
+              href: ../c-language/floating-point-math.md
+            - name: 値
+              href: ../c-language/values.md
+            - name: 整数の浮動小数点値へのキャスト
+              href: ../c-language/casting-integers-to-floating-point-values.md
+            - name: 浮動小数点値の切り捨て
+              href: ../c-language/truncation-of-floating-point-values.md
         - name: 配列とポインター
-          href: ../c-language/arrays-and-pointers.md
-        - name: 最大配列サイズ
-          href: ../c-language/largest-array-size.md
-        - name: ポインターの減算
-          href: ../c-language/pointer-subtraction.md
-    - name: 'レジスタ:レジスタの可用性'
-      href: ../c-language/registers-availability-of-registers.md
-    - name: 構造体、共用体、列挙体、ビット フィールド
-      expanded: false
-      items:
+          items:
+            - name: 配列とポインター
+              href: ../c-language/arrays-and-pointers.md
+            - name: 最大配列サイズ
+              href: ../c-language/largest-array-size.md
+            - name: ポインターの減算
+              href: ../c-language/pointer-subtraction.md
+        - name: 'レジスタ:レジスタの可用性'
+          href: ../c-language/registers-availability-of-registers.md
         - name: 構造体、共用体、列挙体、ビット フィールド
-          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
-        - name: 共用体への不適切なアクセス
-          href: ../c-language/improper-access-to-a-union.md
-        - name: 構造体メンバーの埋め込みと配置
-          href: ../c-language/padding-and-alignment-of-structure-members.md
-        - name: ビット フィールドの符号
-          href: ../c-language/sign-of-bit-fields.md
-        - name: ビット フィールドの格納
-          href: ../c-language/storage-of-bit-fields.md
-        - name: enum 型
-          href: ../c-language/enum-type.md
-    - name: '修飾子:揮発性オブジェクトへのアクセス'
-      href: ../c-language/qualifiers-access-to-volatile-objects.md
-    - name: '宣言子:最大数'
-      href: ../c-language/declarators-maximum-number.md
-    - name: 'ステートメント:switch ステートメントの制限'
-      href: ../c-language/statements-limits-on-switch-statements.md
-    - name: プリプロセス ディレクティブ
-      expanded: false
-      items:
+          items:
+            - name: 構造体、共用体、列挙体、ビット フィールド
+              href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+            - name: 共用体への不適切なアクセス
+              href: ../c-language/improper-access-to-a-union.md
+            - name: 構造体メンバーの埋め込みと配置
+              href: ../c-language/padding-and-alignment-of-structure-members.md
+            - name: ビット フィールドの符号
+              href: ../c-language/sign-of-bit-fields.md
+            - name: ビット フィールドの格納
+              href: ../c-language/storage-of-bit-fields.md
+            - name: enum 型
+              href: ../c-language/enum-type.md
+        - name: '修飾子:揮発性オブジェクトへのアクセス'
+          href: ../c-language/qualifiers-access-to-volatile-objects.md
+        - name: '宣言子:最大数'
+          href: ../c-language/declarators-maximum-number.md
+        - name: 'ステートメント:switch ステートメントの制限'
+          href: ../c-language/statements-limits-on-switch-statements.md
         - name: プリプロセス ディレクティブ
-          href: ../c-language/preprocessing-directives.md
-        - name: 文字定数と条件付きの包含
-          href: ../c-language/character-constants-and-conditional-inclusion.md
-        - name: かっこ付きのファイル名を含める
-          href: ../c-language/including-bracketed-filenames.md
-        - name: 引用符で囲まれたファイル名を含める
-          href: ../c-language/including-quoted-filenames.md
-        - name: 文字シーケンス
-          href: ../c-language/character-sequences.md
-        - name: プラグマ
-          href: ../c-language/pragmas.md
-        - name: 既定の日付と時刻
-          href: ../c-language/default-date-and-time.md
-    - name: ライブラリ関数
-      expanded: false
-      items:
+          items:
+            - name: プリプロセス ディレクティブ
+              href: ../c-language/preprocessing-directives.md
+            - name: 文字定数と条件付きの包含
+              href: ../c-language/character-constants-and-conditional-inclusion.md
+            - name: かっこ付きのファイル名を含める
+              href: ../c-language/including-bracketed-filenames.md
+            - name: 引用符で囲まれたファイル名を含める
+              href: ../c-language/including-quoted-filenames.md
+            - name: 文字シーケンス
+              href: ../c-language/character-sequences.md
+            - name: プラグマ
+              href: ../c-language/pragmas.md
+            - name: 既定の日付と時刻
+              href: ../c-language/default-date-and-time.md
         - name: ライブラリ関数
-          href: ../c-language/library-functions.md
-        - name: NULL マクロ
-          href: ../c-language/null-macro.md
-        - name: assert 関数によって出力される診断
-          href: ../c-language/diagnostic-printed-by-the-assert-function.md
-        - name: 文字テスト
-          href: ../c-language/character-testing.md
-        - name: ドメイン エラー
-          href: ../c-language/domain-errors.md
-        - name: 浮動小数点値のアンダーフロー
-          href: ../c-language/underflow-of-floating-point-values.md
-        - name: fmod 関数
-          href: ../c-language/fmod-function.md
-        - name: signal 関数 (C)
-          href: ../c-language/signal-function-c.md
-        - name: 既定のシグナル
-          href: ../c-language/default-signals.md
-        - name: 改行文字の終了
-          href: ../c-language/terminating-newline-characters.md
-        - name: 空白行
-          href: ../c-language/blank-lines.md
-        - name: Null 文字
-          href: ../c-language/null-characters.md
-        - name: 追加モードのファイル位置
-          href: ../c-language/file-position-in-append-mode.md
-        - name: テキスト ファイルの切り捨て
-          href: ../c-language/truncation-of-text-files.md
-        - name: ファイルのバッファリング
-          href: ../c-language/file-buffering.md
-        - name: 長さゼロのファイル
-          href: ../c-language/zero-length-files.md
-        - name: ファイル名
-          href: ../c-language/filenames.md
-        - name: ファイル アクセス制限
-          href: ../c-language/file-access-limits.md
-        - name: 開いているファイルの削除
-          href: ../c-language/deleting-open-files.md
-        - name: 存在する名前を使用した名前変更
-          href: ../c-language/renaming-with-a-name-that-exists.md
-        - name: ポインター値の読み取り
-          href: ../c-language/reading-pointer-values.md
-        - name: 範囲の読み取り
-          href: ../c-language/reading-ranges.md
-        - name: ファイル位置エラー
-          href: ../c-language/file-position-errors.md
-        - name: perror 関数によって生成されるメッセージ
-          href: ../c-language/messages-generated-by-the-perror-function.md
-        - name: ゼロ メモリの割り当て
-          href: ../c-language/allocating-zero-memory.md
-        - name: abort 関数 (C)
-          href: ../c-language/abort-function-c.md
-        - name: atexit 関数 (C)
-          href: ../c-language/atexit-function-c.md
-        - name: 環境名
-          href: ../c-language/environment-names.md
-        - name: system 関数
-          href: ../c-language/system-function.md
-        - name: strerror 関数
-          href: ../c-language/strerror-function.md
-        - name: タイム ゾーン
-          href: ../c-language/time-zone.md
-        - name: clock 関数 (C)
-          href: ../c-language/clock-function-c.md
+          items:
+            - name: ライブラリ関数
+              href: ../c-language/library-functions.md
+            - name: NULL マクロ
+              href: ../c-language/null-macro.md
+            - name: assert 関数によって出力される診断
+              href: ../c-language/diagnostic-printed-by-the-assert-function.md
+            - name: 文字テスト
+              href: ../c-language/character-testing.md
+            - name: ドメイン エラー
+              href: ../c-language/domain-errors.md
+            - name: 浮動小数点値のアンダーフロー
+              href: ../c-language/underflow-of-floating-point-values.md
+            - name: fmod 関数
+              href: ../c-language/fmod-function.md
+            - name: signal 関数 (C)
+              href: ../c-language/signal-function-c.md
+            - name: 既定のシグナル
+              href: ../c-language/default-signals.md
+            - name: 改行文字の終了
+              href: ../c-language/terminating-newline-characters.md
+            - name: 空白行
+              href: ../c-language/blank-lines.md
+            - name: Null 文字
+              href: ../c-language/null-characters.md
+            - name: 追加モードのファイル位置
+              href: ../c-language/file-position-in-append-mode.md
+            - name: テキスト ファイルの切り捨て
+              href: ../c-language/truncation-of-text-files.md
+            - name: ファイルのバッファリング
+              href: ../c-language/file-buffering.md
+            - name: 長さゼロのファイル
+              href: ../c-language/zero-length-files.md
+            - name: ファイル名
+              href: ../c-language/filenames.md
+            - name: ファイル アクセス制限
+              href: ../c-language/file-access-limits.md
+            - name: 開いているファイルの削除
+              href: ../c-language/deleting-open-files.md
+            - name: 存在する名前を使用した名前変更
+              href: ../c-language/renaming-with-a-name-that-exists.md
+            - name: ポインター値の読み取り
+              href: ../c-language/reading-pointer-values.md
+            - name: 範囲の読み取り
+              href: ../c-language/reading-ranges.md
+            - name: ファイル位置エラー
+              href: ../c-language/file-position-errors.md
+            - name: perror 関数によって生成されるメッセージ
+              href: ../c-language/messages-generated-by-the-perror-function.md
+            - name: ゼロ メモリの割り当て
+              href: ../c-language/allocating-zero-memory.md
+            - name: abort 関数 (C)
+              href: ../c-language/abort-function-c.md
+            - name: atexit 関数 (C)
+              href: ../c-language/atexit-function-c.md
+            - name: 環境名
+              href: ../c-language/environment-names.md
+            - name: system 関数
+              href: ../c-language/system-function.md
+            - name: strerror 関数
+              href: ../c-language/strerror-function.md
+            - name: タイム ゾーン
+              href: ../c-language/time-zone.md
+            - name: clock 関数 (C)
+              href: ../c-language/clock-function-c.md
+- name: C/C++ のプリプロセッサ リファレンス
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: C ランタイム ライブラリ (CRT) リファレンス
+  href: ../c-runtime-library/c-run-time-library-reference.md

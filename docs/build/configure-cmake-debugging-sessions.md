@@ -4,12 +4,12 @@ description: Visual Studio を使用して CMake デバッガー設定を構成�
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 8364e5b3dd3316a4ed7e754a104a14373040aa6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328856"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630532"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -75,7 +75,7 @@ CMake のネイティブ サポートは Visual Studio 2017 以降で利用で�
 
 *launch.vs.json* には、あらゆるデバッグ シナリオをサポートするためのプロパティが多数あります。 次のプロパティは、リモートとローカルの両方において、すべてのデバッグ構成に共通です。
 
-- `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー** または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 この値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致する必要があります。
+- `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー**または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 この値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致する必要があります。
 
 - `env`:次の構文を使用して追加する追加の環境変数。
 
@@ -97,7 +97,7 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
 - `name`: **[スタートアップ アイテム]** ドロップダウンで構成を識別するためのフレンドリ名。
 - `project`:プロジェクト ファイルへの相対パスを指定します。 通常、CMake プロジェクトをデバッグするときに、このパスを変更する必要はありません。
 - `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー**または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 このターゲット値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致している必要があります。
-- `debuggerConfiguration`:使用するデバッグの既定値のセットを指定します。 Visual Studio 2019 バージョン 16.6 では、有効なオプションは `gdb`のみです。 以前のバージョンでは、`gdbserver` もサポートされます。
+- `debuggerConfiguration`:使用するデバッグの既定値のセットを指定します。 Visual Studio 2019 バージョン 16.6 では、有効なオプションは `gdb`のみです。 Visual Studio 2019 バージョン 16.7 以降は `gdbserver` もサポートしています。
 - `args`:スタートアップ時にデバッグ中のプログラムに渡されるコマンド ライン引数。
 - `env`:デバッグ中のプログラムに渡される追加の環境変数。 たとえば、`{"DISPLAY": "0.0"}` のようにします。
 - `processID`:アタッチする Linux プロセス ID。 リモート プロセスにアタッチする場合にのみ使用されます。 詳細については、「[GDB を使用したプロセスへのアタッチのトラブルシューティング](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB)」を参照してください。
@@ -109,6 +109,15 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
 - `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの UNIX パス。 ディレクトリは存在している必要があります。
 - `gdbpath`:既定値は `/usr/bin/gdb` です。 デバッグに使用される `gdb` への完全な UNIX パス。 `gdb` のカスタム バージョンを使用する場合にのみ必須です。
 - `preDebugCommand`:`gdb` を呼び出す直前に実行する Linux コマンド。 このコマンドが完了するまで `gdb` は開始されません。 このオプションを使用すると、`gdb` の実行前にスクリプトを実行できます。
+
+#### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>`gdbserver` 構成で使用できるその他のオプション (16.7 以降)
+
+- `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
+- `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
+- `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの完全な UNIX パス。 ディレクトリは存在している必要があります。
+- `gdbPath`:既定値は `${debugInfo.vsInstalledGdb}` です。 デバッグに使用される `gdb` の完全な Windows パス。 既定値は、C および C++ ワークロードを使用する Linux 開発でインストールされる `gdb` です。
+- `gdbserverPath`:既定値は `usr/bin/gdbserver` です。 デバッグに使用される `gdbserver` への完全な UNIX パス。
+- `preDebugCommand`:`gdbserver` を呼び出す直前に実行する Linux コマンド。 このコマンドが完了するまで `gdbserver` は開始されません。
 
 #### <a name="deployment-options"></a>配置オプション
 

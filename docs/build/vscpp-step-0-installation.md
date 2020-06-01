@@ -1,21 +1,21 @@
 ---
-title: Visual Studio での C++ サポートのインストール
+title: Visual Studio に C および C++ サポートをインストールする
 description: Visual Studio の Visual C++ のためのサポートをインストールします
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335365"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550811"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ サポートのインストール
+# <a name="install-c-and-c-support-in-visual-studio"></a>Visual Studio に C および C++ サポートをインストールする
 
-まだ Visual Studio と Visual C++ ツールをダウンロードしてインストールしていない場合は、ここで説明する方法に従って始めることができます。
+まだ Visual Studio と Microsoft C/C++ ツールをダウンロードしてインストールしていない場合は、ここで説明する方法に従って始めることができます。
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
    ![Visual Studio 2019:ワークロードをインストールする](../get-started/media/vs-installer-workloads.png)
 
-   コア C++ のサポートの場合は、"C++ によるデスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。
+   コア C および C++ のサポートの場合は、"C++ によるデスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。
 
-   追加のワークロードでは、他の種類の C++ 開発がサポートされています。 たとえば、Microsoft Store 用の Windows ランタイムを使用するアプリを作成するには、"ユニバーサル Windows プラットフォーム開発" ワークロードを選択します。 DirectX、Unreal、Cocos2d を使用するゲームを作成するには、"C++ によるゲーム開発" を選択します。 IoT 開発など、Linux プラットフォームを対象とするには、"C++ による Linux 開発" を選択します。
+   追加のワークロードでは、他の種類の開発がサポートされています。 たとえば、Microsoft Store 用の Windows ランタイムを使用するアプリを作成するには、"ユニバーサル Windows プラットフォーム開発" ワークロードを選択します。 DirectX、Unreal、Cocos2d を使用するゲームを作成するには、"C++ によるゲーム開発" を選択します。 IoT 開発など、Linux プラットフォームを対象とするには、"C++ による Linux 開発" を選択します。
 
    **[インストールの詳細]** ペインには、各ワークロードのインストールに含まれるオプションのコンポーネントの一覧が表示されます。 この一覧では、オプション コンポーネントを選択または選択解除できます。 たとえば、Visual Studio 2017 または 2015 のコンパイラ ツールセットを使用して開発をサポートするには、MSVC v141 または MSVC v140 のオプション コンポーネントを選択します。 MFC、実験的なモジュール言語拡張機能、IncrediBuild などのサポートを追加できます。
 
@@ -125,7 +125,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 のインストール
 
@@ -159,7 +159,7 @@ Visual Studio 2017 では、必要な機能だけを簡単に選択してイン�
 
    ![C++ によるデスクトップ開発ワークロード](media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-   C++ の場合は、 **[C++ によるデスクトップ開発]** ワークロードを選択して、 **[インストール]** を選択します。
+   C および C++ の場合は、 **[C++ によるデスクトップ開発]** ワークロードを選択して、 **[インストール]** を選択します。
 
    ![C++ によるデスクトップ開発ワークロードをインストールする](media/vscpp-concierge-choose-workload.gif "C++ によるデスクトップ開発ワークロードをインストールする")
 
@@ -185,9 +185,9 @@ Visual Studio 2017 では、必要な機能だけを簡単に選択してイン�
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 のインストール
 
-Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「**プログラムの追加と削除**」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
+Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C および C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「**プログラムの追加と削除**」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
 
-一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
+一般に、Visual Studio 2015 コンパイラを使用してコードをコンパイルする必要がある場合でも、最新バージョンの Visual Studio を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 
 ::: moniker-end
 
