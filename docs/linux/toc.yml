@@ -3,7 +3,6 @@
 - name: Linux Development ワークロードのダウンロード、インストール、設定
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: リモートの Linux コンピューターに接続する
-  expanded: true
   items:
     - name: リモートの Linux コンピューターに接続する
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager リファレンス
       href: ../linux/connectionmanager-reference.md
-- name: 新しい Linux プロジェクトを作成する
-  href: ../linux/create-a-new-linux-project.md
-- name: Linux プロジェクトを構成する
-  href: ../linux/configure-a-linux-project.md
-- name: Linux CMake プロジェクトの作成と構成
-  href: ../linux/cmake-linux-project.md
+- name: Visual Studio で MSBuild を使用して Linux プロジェクトをビルドする
+  items:
+    - name: 新しい Linux プロジェクトを作成する
+      href: ../linux/create-a-new-linux-project.md
+    - name: Linux プロジェクトを構成する
+      href: ../linux/configure-a-linux-project.md
+    - name: Linux プロジェクトのデプロイ、実行、デバッグ
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Linux プロジェクト プロパティ ページの参照
+      items:
+        - name: Linux プロジェクト プロパティ ページの参照
+          href: ../linux/prop-pages-linux.md
+        - name: 全般プロパティ (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: デバッグ プロパティ (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: VC++ ディレクトリ プロパティ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: ソースのプロパティのコピー (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: C/C++ のプロパティ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: リンカー プロパティ (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: ビルド イベント プロパティ (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: カスタム ビルド ステップのプロパティ (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: メイクファイル プロジェクトのプロパティ (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: リモート アーカイブ プロパティ (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Visual Studio で CMake を使用して Linux プロジェクトをビルドする
+  items:
+    - name: Linux CMake プロジェクトの作成と構成
+      href: ../linux/cmake-linux-project.md
+    - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
+      href: ../build/get-started-linux-cmake.md
 - name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
   href: ../linux/linux-asan-configuration.md
-- name: Linux プロジェクトのデプロイ、実行、デバッグ
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
-  href: ../build/get-started-linux-cmake.md
-- name: Linux プロジェクト プロパティ ページの参照
-  expanded: false
-  items:
-    - name: Linux プロジェクト プロパティ ページの参照
-      href: ../linux/prop-pages-linux.md
-    - name: 全般プロパティ (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: デバッグ プロパティ (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: VC++ ディレクトリ プロパティ (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: ソースのプロパティのコピー (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: C/C++ のプロパティ (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: リンカー プロパティ (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: ビルド イベント プロパティ (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: カスタム ビルド ステップのプロパティ (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: メイクファイル プロジェクトのプロパティ (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: リモート アーカイブ プロパティ (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
