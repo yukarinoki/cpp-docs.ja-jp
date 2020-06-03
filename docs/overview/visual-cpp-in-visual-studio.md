@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
+ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365208"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84108433"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -99,7 +99,7 @@ Windows 向けの従来のネイティブ C++ デスクトップ アプリケー
 [C++/CLI による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 ネイティブの C++ と、C# や Visual Basic などの言語で記述されている .NET プログラムの間の相互運用を可能にする DLL の作成方法について説明します。
 
-[Linux でのプログラミング](../linux/index.md)<br/>
+[Linux でのプログラミング](../linux/index.yml)<br/>
 GCC でコンパイルするためにリモートの Linux マシンにコードを記述し配置するために Visual Studio IDE を使用します。
 
 [Visual Studio での C/C++ Dll の作成](../build/dlls-in-visual-cpp.md)<br/>
