@@ -1,4 +1,4 @@
----
+﻿---
 title: 定義済みマクロ
 description: Microsoft C++ コンパイラの定義済みプリプロセッサ マクロを一覧にして説明します。
 ms.custom: update_every_version

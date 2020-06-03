@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: 例外の安全性を設計する'
 ms.custom: how-to
 ms.date: 11/19/2019

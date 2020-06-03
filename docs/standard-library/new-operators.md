@@ -1,4 +1,4 @@
----
+﻿---
 title: 新しい&gt; 演算子と列挙型の &lt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -201,7 +201,7 @@ void* operator new[](std::size_t count, void* ptr) throw();
 
 3 番目の関数は、`new[]`new **(** args *)* T **[** N **] の形式の配置**  式によって呼び出されます。 ここで、*args* は 1 つのオブジェクトのポインターで構成されます。 `ptr`が返されます。
 
-`operator new[]` によって割り当てられたストレージを解放するには、[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr) を呼び出します。
+`operator new[]` によって割り当てられたストレージを解放するには、[delete 演算子](../standard-library/new-operators.md#op_delete_arr) を呼び出します。
 
 スローする場合またはスローしない場合の動作については、「[new および delete 演算子](../cpp/new-and-delete-operators.md)」を参照してください。
 

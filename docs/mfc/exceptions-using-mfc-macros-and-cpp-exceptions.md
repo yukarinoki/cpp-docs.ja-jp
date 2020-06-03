@@ -1,4 +1,4 @@
----
+﻿---
 title: '例外処理 : MFC マクロと C++ 例外機構の使用'
 ms.date: 11/04/2016
 helpviewer_keywords:

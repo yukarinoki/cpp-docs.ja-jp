@@ -73,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>Remarks
 
-C では、 **fpclassify**マクロは C++ では、 **fpclassify**の引数の型を使用するオーバー ロードされた関数は、 **float**、**二重**、または**長い** **二重**します。 どちらの場合も、返される値は、中間表記ではなく、引数式の有効な型に依存します。 たとえば、通常**二重**または**長い** **二重**値は、無限になる、denormal、またはゼロ値に変換すると、 **float**。
+C では、 **fpclassify**マクロは C++ では、 **fpclassify**の引数の型を使用するオーバー ロードされた関数は、 **float**、**double**、または**long double**します。 どちらの場合も、返される値は、中間表記ではなく、引数式の有効な型に依存します。 たとえば、通常**double**または**long double**値は、無限になる、denormal、またはゼロ値に変換すると、 **float**。
 
 ## <a name="requirements"></a>必要条件
 

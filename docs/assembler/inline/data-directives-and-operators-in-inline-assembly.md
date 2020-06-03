@@ -1,4 +1,4 @@
----
+﻿---
 title: インライン アセンブリでのデータ ディレクティブと演算子
 ms.date: 08/30/2018
 helpviewer_keywords:

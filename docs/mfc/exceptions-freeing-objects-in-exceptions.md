@@ -1,4 +1,4 @@
----
+﻿---
 title: '例外処理 : 例外処理でのオブジェクトの解放'
 ms.date: 11/04/2016
 helpviewer_keywords:

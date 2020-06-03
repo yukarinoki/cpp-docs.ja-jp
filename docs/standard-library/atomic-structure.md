@@ -1,4 +1,4 @@
----
+﻿---
 title: atomic 構造体
 ms.date: 04/20/2018
 f1_keywords:

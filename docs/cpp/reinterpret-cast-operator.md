@@ -1,4 +1,4 @@
----
+﻿---
 title: reinterpret_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: ARM アセンブラー ディレクティブ
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a

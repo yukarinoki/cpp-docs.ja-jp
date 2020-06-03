@@ -1,4 +1,4 @@
----
+﻿---
 title: '例外処理 : 例外のキャッチと削除'
 ms.date: 11/04/2016
 helpviewer_keywords:

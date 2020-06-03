@@ -1,4 +1,4 @@
----
+﻿---
 title: 'レコードセット: 結合 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:

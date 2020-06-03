@@ -1,4 +1,4 @@
----
+﻿---
 title: 型変換とタイプ セーフ
 ms.date: 11/19/2019
 ms.topic: conceptual

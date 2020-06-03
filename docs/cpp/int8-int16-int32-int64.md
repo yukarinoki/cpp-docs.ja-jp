@@ -1,4 +1,4 @@
----
+﻿---
 title: __int8、__int16、__int32、__int64
 ms.date: 10/09/2018
 f1_keywords:

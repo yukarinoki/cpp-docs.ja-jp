@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ でのラムダ式
 ms.date: 05/07/2019
 helpviewer_keywords:

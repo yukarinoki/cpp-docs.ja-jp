@@ -1,4 +1,4 @@
----
+﻿---
 title: try-except ステートメント
 description: __Try および __except の構造化例外処理ステートメントへの Microsoft C++ リファレンス。
 ms.date: 04/03/2020

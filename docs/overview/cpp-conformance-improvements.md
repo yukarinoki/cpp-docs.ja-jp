@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ 準拠の強化
 ms.date: 05/18/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。

@@ -1,4 +1,4 @@
----
+﻿---
 title: '文字列: CString の例外の後処理'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,6 +17,7 @@ ms.locfileid: "62236629"
 MFC の以前のバージョンでクリーンアップすることが重要でした[CString](../atl-mfc-shared/reference/cstringt-class.md)使用後にオブジェクト。 MFC バージョン 3.0 以降では、明示的なクリーンアップは必要ではありません。
 
 C++ 例外処理機構 MFC を今すぐ使用する、例外の後にクリーンアップについて心配する必要はありません。 方法の説明について C++""がスタックをアンワインド例外が発生した後は、「 [try catch、および throw ステートメント](../cpp/try-throw-and-catch-statements-cpp.md)します。 MFC を使用する場合でも**TRY**/**CATCH**マクロは C++ のキーワードではなく**try**と**catch**MFC、C++ を使用して下には、例外処理機構それでもようにする必要はありませんを明示的にクリーンアップします。
+
 
 ## <a name="see-also"></a>関連項目
 

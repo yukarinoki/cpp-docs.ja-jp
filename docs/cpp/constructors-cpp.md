@@ -1,4 +1,4 @@
----
+﻿---
 title: コンストラクター (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
