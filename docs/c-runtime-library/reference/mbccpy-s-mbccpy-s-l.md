@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952634"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920320"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -101,9 +104,9 @@ errno_t _mbccpy_s_l(
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Src*または*dest*が**NULL**の場合、または**buffSizeinBytes**バイト以上が*Dest*にコピーされる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**は**einval**に設定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbccpy_s**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。 [_Ismbblead](ismbblead-ismbblead-l.md)への暗黙の呼び出しによって、 *src*がマルチバイト文字の先行バイトを指していない場合、 *src*が指す1バイトがコピーされます。 *Src*が先行バイトを指していても、次のバイトが0であるため無効である場合、0は*dest*にコピーされ、 **errno**は**EILSEQ**に設定され、関数は**EILSEQ**を返します。
+**_Mbccpy_s**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。 [_Ismbblead](ismbblead-ismbblead-l.md)への暗黙的な呼び出しによって、 *src*がマルチバイト文字の先行バイトを指していない場合、 *src*が指す1バイトがコピーされます。 *Src*が先行バイトを指していても、次のバイトが0であるため無効である場合、0は*dest*にコピーされ、 **errno**は**EILSEQ**に設定され、関数は**EILSEQ**を返します。
 
 **_mbccpy_s**は null 終端文字を追加しません。ただし、 *src*が null 文字を指している場合、その null は*dest*にコピーされます (これは通常の1バイトのコピーにすぎません)。
 
@@ -118,9 +121,11 @@ errno_t _mbccpy_s_l(
 
 2 行目は、単に 1 行目の特殊なケースです。 また、このテーブルでは*buffSizeInBytes* >= *pcopied*が想定されていることに注意してください。
 
-**_mbccpy_s**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**は **_mbccpy_s**と同じですが、ロケールに依存する動作に対して渡されたロケールが **_mbccpy_s_l**で使用される点が異なります。
+**_mbccpy_s**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**は **_mbccpy_s**と同じですが、 **_mbccpy_s_l**はロケールに依存する動作に渡されたロケールを使用する点が異なります。
 
-C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -130,15 +135,15 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

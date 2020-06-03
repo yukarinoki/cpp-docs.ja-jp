@@ -1,22 +1,20 @@
 ---
 title: CObject からクラスを派生するときのオーバーヘッド
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - CObject class [MFC], overhead of derived classes [MFC]
 ms.assetid: 9b92c98b-b3dd-48a7-9d24-c3b8554edf90
-ms.openlocfilehash: de760a2fd2908595314dc09cf5a317da3581e3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f83bf9ee522487761aaa865a8315a174a47302d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186050"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446045"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>CObject からクラスを派生するときのオーバーヘッド
 
-クラスから派生するオーバーヘッド[CObject](../mfc/reference/cobject-class.md)は最小限です。 派生クラスは、4 つだけの仮想関数と、1 つを継承[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクト。
+[CObject](../mfc/reference/cobject-class.md)クラスからの派生のオーバーヘッドは最小限に抑えられます。 派生クラスは、4つの仮想関数と1つの[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクトだけを継承します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[CObject クラス: よく寄せられる質問](../mfc/cobject-class-frequently-asked-questions.md)
+[CObject クラス: Q & A 集](../mfc/cobject-class-frequently-asked-questions.md)

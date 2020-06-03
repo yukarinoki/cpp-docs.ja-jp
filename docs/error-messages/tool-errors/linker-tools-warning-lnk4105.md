@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-ms.openlocfilehash: 880c8519a530f492d0c322575a1386af8a7d0187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 655a6dfde77984cd0c941ec0d8abb0c4d099c80f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183294"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>リンカー ツールの警告 LNK4105
 
-オプション 'option'; で指定された引数がいません。オプションを無視します
+オプション ' option ' で引数が指定されていません。オプションを無視する
 
-のみでこの警告が発生したときに、 [/LIBPATH](../../build/reference/libpath-additional-libpath.md)オプションが設定されています。 このオプションでディレクトリが指定されていない、リンカーは、オプションを無視し、この警告メッセージが生成されます。
+この警告は、 [/libpath](../../build/reference/libpath-additional-libpath.md)オプションが設定されている場合にのみ発生します。 このオプションを使用してディレクトリが指定されていない場合、リンカーはオプションを無視し、この警告メッセージを生成します。
 
-既存の環境のライブラリの設定をオーバーライドする必要がない場合は、リンカーのコマンドラインから/LIBPATH オプションを削除します。 ライブラリの別の検索パスを使用する場合は、/LIBPATH オプションに続く代替パスを指定します。
+既存の環境ライブラリ設定を上書きする必要がない場合は、リンカーコマンドラインから/LIBPATH オプションを削除します。 ライブラリに別の検索パスを使用する場合は、/LIBPATH オプションの後に代替パスを指定します。
 
 ## <a name="example"></a>例
 
@@ -27,4 +27,4 @@ ms.locfileid: "62310930"
 link /libpath:c:\filepath\lib bar.obj
 ```
 
-必要なライブラリを検索するリンカーに指示が`c:\filepath\lib`の既定の場所で検索する前にします。
+は、既定の場所を検索する前に、`c:\filepath\lib` で必要なライブラリを検索するようにリンカーに指示します。

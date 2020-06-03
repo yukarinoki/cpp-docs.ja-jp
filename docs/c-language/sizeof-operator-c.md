@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158126"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 演算子 (C)
 
@@ -24,7 +24,7 @@ sizeof unary-expression
 sizeof ( type-name )
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 オペランドは、*unary-expression* の識別子、または型のキャスト式 (つまり、かっこで囲まれた型指定子) のいずれかです。 *unary-expression* は、ビット フィールド オブジェクト、不完全な型、または関数指定子を表すことはできません。 結果は、符号なしの整数定数です。 標準ヘッダー STDDEF.H は、この型を **size_t** として定義します。
 

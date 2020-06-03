@@ -12,11 +12,11 @@ helpviewer_keywords:
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257594"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422776"
 ---
 # <a name="running-nmake"></a>NMAKE の実行
 
@@ -24,7 +24,7 @@ ms.locfileid: "77257594"
 
 > **NMAKE** [*オプション*...][*マクロ*...][*ターゲット*...][ **\@** _コマンド-ファイル_...]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 NMAKE は、指定された*ターゲット*のみをビルドします。指定されていない場合は、メイクファイル内の最初のターゲットをビルドします。 最初のメイクファイルターゲットは、他のターゲットをビルドする[pseudotarget](description-blocks.md#pseudotargets)にすることができます。 NMAKE は、 **/f**で指定されたメイクファイルを使用します。 **/f**が指定されていない場合は、現在のディレクトリにあるメイクファイルファイルです。 メイクファイルが指定されていない場合は、推論規則を使用してコマンドライン*ターゲット*が作成されます。
 
@@ -41,7 +41,7 @@ NMAKE は、指定された*ターゲット*のみをビルドします。指定
 | **/C** | 致命的でない NMAKE のエラーまたは警告、タイムスタンプ、および NMAKE の著作権メッセージを含む、既定の出力を抑制します。 **/K**によって発行された警告を抑制します。 |
 | **/D** | ターゲットが存在しない場合に、評価対象の各ターゲットおよび依存メッセージのタイムスタンプを表示します。 メイクファイルのデバッグに **/p**を使用すると便利です。 メイクファイルの一部に対して **/d**を設定またはクリアするには、`!CMDSWITCHES` を使用します。 |
 | **/E** | 環境変数によってメイクファイルマクロ定義がオーバーライドされます。 |
-| **/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; QUEUE &#124; **SEND** ] | 非推奨。 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定コントロールレポート。 |
+| **/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** QUEUE &#124; **SEND** ] | 非推奨になりました。 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定コントロールレポート。 |
 | **/F** *ファイル名* | *ファイル名*をメイクファイルとして指定します。 スペースまたはタブは、*ファイル名*の前に配置できます。 各メイクファイルに対して、 **/f**を1回指定します。 標準入力からメイクファイルを指定するには、 *filename*にダッシュ (`-`) を指定し、 **F6**キーまたは**CTRL + Z キーを押し**てキーボード入力を終了します。 |
 | **/G** | `!INCLUDE` ディレクティブに含まれるメイクを表示します。 詳細については、「[メイクファイルのプリプロセスディレクティブ](makefile-preprocessing-directives.md)」を参照してください。 |
 | **/Help**、 **/?** | NMAKE のコマンドライン構文の簡単な概要を表示します。 |

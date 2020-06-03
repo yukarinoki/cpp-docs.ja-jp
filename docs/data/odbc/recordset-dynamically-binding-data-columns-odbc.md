@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: データ列の動的なバインド (ODBC)'
+title: 'レコードセット: データ列を動的に結びつける方法 (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: bde61348bbfb33eef42e36bd75830c23e5b2a5f5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367047"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列の動的なバインド (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -26,12 +26,12 @@ ms.locfileid: "65707930"
 - [実行時に列を動的にバインドする方法](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「[Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」 (レコードセット: レコードの一括フェッチ (ODBC)) を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a> どのようなときに列を動的にバインドするか
+## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> どのようなときに列を動的にバインドするか
 
-> [!NOTE] 
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+> [!NOTE]
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
 設計時には、MFC アプリケーション ウィザードまたは [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (**[クラスの追加]** から) により、データ ソースでわかっているテーブルと列に基づいて、レコードセット クラスが作成されます。 データベースは、設計した時点から、後で実行時にアプリケーションでそれらのテーブルや列が使われるまでの間に、変更されている場合があります。 自分や他のユーザーが、アプリケーションのレコードセットが依存しているテーブルやテーブルの列を、追加または削除する可能性があります。 これはおそらくすべてのデータアクセス アプリケーションに対する問題ではないでしょうが、もし自分がその立場になったら、再設計や再コンパイル以外でデータベース スキーマの変更に対応するには、どうすればよいでしょうか。 このトピックの目的は、その質問に答えることです。
 
@@ -47,13 +47,13 @@ ms.locfileid: "65707930"
 
 このトピックでは、削除されたテーブルや列など、他の動的なバインドの場合については説明しません。 それらのケースについては、さらに直接的に ODBC API の呼び出しを使う必要があります。 詳細については、MSDN ライブラリ CD に収録されている ODBC SDK の*プログラマーズ リファレンス*を参照してください。
 
-##  <a name="_core_how_to_bind_columns_dynamically"></a> 列を動的にバインドする方法
+## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 列を動的にバインドする方法
 
 列を動的にバインドするには、追加する列の名前がわかっている (または特定できる) 必要があります。 また、追加するフィールド データ メンバー用の記憶域を割り当て、それらの名前と型を指定し、追加する列の数を指定する必要もあります。
 
 次の説明では、2 つの異なるレコードセットを取り上げます。 1 つ目は、ターゲット テーブルからレコードを選択するメイン レコードセットです。 2 つ目は、ターゲット テーブル内の列に関する情報を取得するために使われる特殊な列レコードセットです。
 
-###  <a name="_core_the_general_process"></a> 一般的なプロセス
+### <a name="general-process"></a><a name="_core_the_general_process"></a> 一般的なプロセス
 
 最も一般的なレベルでは、次のような手順で行います。
 
@@ -69,7 +69,7 @@ ms.locfileid: "65707930"
 
    レコードセットでレコードが選択され、レコード フィールド エクスチェンジ (RFX) を使って静的な列 (レコードセットのフィールド データ メンバーにマップされるもの) と動的な列 (ユーザーが割り当てた追加記憶域にマップされるもの) の両方がバインドされます。
 
-###  <a name="_core_adding_the_columns"></a> 列の追加
+### <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a> 列の追加
 
 追加された列を実行時に動的にバインドするには、次の手順が必要です。
 
@@ -81,14 +81,14 @@ ms.locfileid: "65707930"
 
    1 つの方法は、動的なリストを 1 つ以上作成することです。1 つ目のリストは新しい列の名前用、2 つ目は結果の値用、3 つ目はデータ型用 (必要な場合) です。 これらのリスト (特に値リスト) で、バインドのための情報と必要な記憶域を提供します。 次の図はリストの作成を示したものです。
 
-   ![動的にバインドする列のリストの作成](../../data/odbc/media/vc37w61.gif "動的にバインドする列のリストの作成")<br/>
+   ![動的にバインドする列のリストの作成](../../data/odbc/media/vc37w61.gif "動的に結びつける列のリストを生成する方法")<br/>
    動的に結び付ける列のリストを生成する方法
 
 1. メイン レコードセットの `DoFieldExchange` 関数で、追加する列ごとに RFX 関数の呼び出しを追加します。 これらの RFX の呼び出しでは、レコードをフェッチし、追加の列を組み込み、レコードセットのデータ メンバーまたは追加列用に動的に提供した記憶域に、列をバインドします。
 
    1 つの方法としては、メイン レコードセットの `DoFieldExchange` 関数にループを追加し、その中で、新しい列のリストをループ処理して、リスト内の各列に対して適切な RFX 関数を呼び出します。 各 RFX の呼び出しでは、列名リストからの列名と、結果値リストの対応するメンバーの記憶域の場所を渡します。
 
-###  <a name="_core_lists_of_columns"></a> 列のリスト
+### <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a> 列のリスト
 
 処理する必要がある 4 つのリストを次の表に示します。
 
@@ -99,7 +99,7 @@ ms.locfileid: "65707930"
 |**Columns-To-Bind-Dynamically**| (図のリスト 3) テーブルにはあるがレコードセットにはない列のリスト。 これらは動的にバインドする列です。|
 |**Dynamic-Column-Values**| (図のリスト 4) 動的にバインドする列から取得された値のための記憶域が含まれるリスト。 このリストの要素は、Columns-to-Bind-Dynamically の要素と一対一に対応します。|
 
-###  <a name="_core_building_your_lists"></a> リストの構築
+### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> リストの構築
 
 一般的な戦略を念頭に置いて、詳細に取りかかることができます。 このトピックの残りの部分では、「[列のリスト](#_core_lists_of_columns)」で示したリストを作成する方法を示します。 以下の手順について説明します。
 
@@ -109,7 +109,7 @@ ms.locfileid: "65707930"
 
 - [新しい列の RFX 呼び出しを動的に追加します](#_core_adding_rfx_calls_to_bind_the_columns)。
 
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> レコードセットに存在しないテーブル列の特定
+### <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> レコードセットに存在しないテーブル列の特定
 
 メイン レコードセットで既にバインドされている列の一覧を含むリスト (Bound-Recordset-Columns、図のリスト 2) を作成します。 次に、データ ソースのテーブルにはあるがメイン レコードセットにはない列名を含むリスト (Columns-to-Bind-Dynamically、Current-Table-Columns と Bound-Recordset-Columns から派生) を作成します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "65707930"
 
    このリストの要素は、新しいレコードセット フィールド データ メンバーの役割を果たします。 それらは、動的な列がバインドされる記憶域の場所です。 リストの説明については、「[列のリスト](#_core_lists_of_columns)」をご覧ください。
 
-###  <a name="_core_providing_storage_for_the_new_columns"></a> 新しい列のための記憶域の提供
+### <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a> 新しい列のための記憶域の提供
 
 次に、動的にバインドする列に対する記憶域の場所を設定します。 考え方としては、各列の値を格納するリスト要素を提供します。 これらの記憶域の場所は、通常にバインドされた列が格納されるレコードセット メンバー変数と並列になっています。
 
@@ -139,16 +139,16 @@ ms.locfileid: "65707930"
 
 1. 各列のデータの値を格納する Dynamic-Column-Values (Columns-to-Bind-Dynamically と並列) を作成します。
 
-   たとえば、図で示されている Dynamic-Column-Values (リスト 4) の 1 つの要素である `CString` オブジェクトには、現在のレコードの実際の電話番号が格納されます: "555-1212"。
+   たとえば、図は、動的列値 (リスト 4) と 1 つの`CString`要素を示しています。
 
    最も一般的なケースでは、Dynamic-Column-Values には `CString` 型の要素が含まれます。 さまざまなデータ型の列を扱っている場合は、さまざまな型の要素を含むことのできるリストが必要です。
 
-上記の手順の結果は、2 つの主なリストです。つまり、列の名前が含まれる Columns-to-Bind-Dynamically と、現在のレコードに対する列の値が含まれる Dynamic-Column-Values です。
+前の手順の結果は、列からバインドへの動的な名前を含む 2 つの主要なリストと、現在のレコードの列の値を含む動的列値です。
 
 > [!TIP]
-> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は、AFXDB.H で定義されています。)列のデータ型を表す方法に基づいて、リストの型を選択します。
+> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は AFXDB で定義されます。H.) 列のデータ型の表現方法に基づいて、リストの種類を選択します。
 
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 列をバインドするための RFX 呼び出しの追加
+### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 列をバインドするための RFX 呼び出しの追加
 
 最後に、`DoFieldExchange` 関数内に新しい列の RFX 呼び出しを配置することによって、動的なバインドが行われるようにします。
 
@@ -174,4 +174,4 @@ RFX 関数の詳細については、"*クラス ライブラリ リファレン
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 大きいデータ項目の処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

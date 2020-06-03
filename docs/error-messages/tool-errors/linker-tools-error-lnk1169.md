@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1169
 ms.assetid: e079d518-f184-48cd-8b38-969bf137af54
-ms.openlocfilehash: f167c82c28834d1de82578735e5557d0e9d6b5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ac8bb8bd28f42b28fb86e64e72f4ea01f01ab1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183996"
 ---
 # <a name="linker-tools-error-lnk1169"></a>リンカ ツール エラー LNK1169
 
-1 つまたは複数の乗算に定義されたシンボルが見つかりました
+1つ以上の定義済みのシンボルが見つかりました
 
-1 つまたは複数のシンボルの複数の定義により、ビルドが失敗しました。 このエラーの前にエラーが発生して[LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)します。
+1つ以上のシンボルが複数定義されているため、ビルドに失敗しました。 このエラーの前には、エラー [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)があります。
 
-[/Force](../../build/reference/force-force-file-output.md)または **/FORCE:MULTIPLE**オプションは、このエラーをオーバーライドします。
+[/Force](../../build/reference/force-force-file-output.md)または **/force: MULTIPLE**オプションは、このエラーをオーバーライドします。

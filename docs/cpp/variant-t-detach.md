@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 8426c80af04b2c0906af150ea3e91304335e9f69
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9737db6b77483fa55e1dad90b9464752cd8537a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187740"
 ---
 # <a name="_variant_tdetach"></a>_variant_t::Detach
 
 **Microsoft 固有の仕様**
 
-`VARIANT` この`_variant_t`オブジェクトからカプセル化されたオブジェクトをデタッチします。
+この `_variant_t` オブジェクトから、カプセル化された `VARIANT` オブジェクトをデタッチします。
 
 ## <a name="syntax"></a>構文
 
@@ -30,14 +30,14 @@ VARIANT Detach( );
 
 ## <a name="return-value"></a>戻り値
 
-カプセル化`VARIANT`された。
+カプセル化された `VARIANT`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-カプセル化`VARIANT`されたを抽出して`_variant_t`返した後、このオブジェクトを破棄せずにクリアします。 このメンバー関数は、 `VARIANT`をカプセル化から削除`VARTYPE`し、 `_variant_t`このオブジェクトのを VT_EMPTY に設定します。 [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) 関数を呼び出すことによって`VARIANT`返されたを解放します。
+カプセル化された `VARIANT`を抽出して返し、この `_variant_t` オブジェクトを破棄せずにクリアします。 このメンバー関数は、カプセル化から `VARIANT` を削除し、この `_variant_t` オブジェクトの `VARTYPE` を VT_EMPTY に設定します。 返された `VARIANT` は、 [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear)関数を呼び出すことによって解放できます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_variant_t クラス](../cpp/variant-t-class.md)

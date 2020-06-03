@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230387"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211719"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults クラス
 
-テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md) 1 つの結果を処理する最適化されたコマンドを作成するには設定します。
+1つの結果セットを処理する最適化されたコマンドを[作成するために、](../../data/oledb/ccommand-class.md)テンプレート引数 (*tmultiple*) として使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,15 +25,15 @@ ms.locfileid: "62230387"
 class CNoMultipleResults
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-複数の結果セットを処理するためのコマンドを実行する場合に、使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)代わりにします。
+コマンドで複数の結果セットを処理する場合は、代わりに[C乗数 Eresults](../../data/oledb/cmultipleresults-class.md)を使用します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

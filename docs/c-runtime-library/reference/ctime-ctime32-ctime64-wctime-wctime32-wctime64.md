@@ -1,6 +1,6 @@
 ---
 title: ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64
 - _wctime32
@@ -8,6 +8,8 @@ api_name:
 - _wctime64
 - _ctime32
 - _wctime
+- _o__wctime32
+- _o__wctime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937755"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914836"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
 
@@ -88,11 +91,11 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 
 - **_Ctime32**または **_wctime32**を使用する場合、 *Sourcetime*は2038年1月18日23:59:59 の日付を表します。
 
-- **_Ctime64**または **_wctime64**を使用する場合、 *Sourcetime*は23:59:59 年12月 3000 31 日の日付 (UTC) を表します。
+- **_Ctime64**または **_wctime64**を使用する場合、 *Sourcetime*は3000年12月31日23:59:59 の日付を表します。
 
-**ctime**は、 **_ctime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **ctime**が **_ctime32**に評価されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**ctime**は **_ctime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **ctime**が **_ctime32**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Ctime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時刻値を文字列に変換します。 *Sourcetime*値は通常、[時刻](time-time32-time64.md)の呼び出しから取得されます。この場合、午前0時 (00:00:00)、1970 1 月1日午前0時 (UTC) の時間が経過した秒数が返されます。 戻り値には厳密に 26 文字が含まれ、次の形式になります。
 
@@ -102,13 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字 ('\n') と null 文字 ('\0') が入ります。
 
-変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 タイムゾーン環境とグローバル変数の定義の詳細につい[ては、](tzset.md) [time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)、および[localtime](localtime-localtime32-localtime64.md)関数に関する情報を参照してください。
+変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 タイムゾーン環境とグローバル変数の定義の詳細については、 [time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)、および[localtime](localtime-localtime32-localtime64.md)の各関数に関する[_tzset](tzset.md)情報を参照してください。
 
 **Ctime**を呼び出すと、 **gmtime**関数と**localtime**関数によって使用される、静的に割り当てられた単一のバッファーが変更されます。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。 **ctime**は、 **asctime**関数を使用して静的バッファーを共有します。 そのため、 **ctime**を呼び出すと、 **asctime**、 **localtime**、または**gmtime**への以前の呼び出しの結果が破棄されます。
 
-**_wctime**と **_wctime64**は、 **ctime**と **_ctime64**のワイド文字バージョンです。ワイド文字列へのポインターを返します。 それ以外の場合、 **_ctime64**、 **_wctime**、および **_wctime64**は**ctime**と同じように動作します。
+**_wctime**と **_wctime64**は、 **ctime**と **_ctime64**のワイド文字バージョンです。ワイド文字列へのポインターを返します。 それ以外の場合、 **_ctime64**、 **_wctime**、および **_wctime64**は、 **ctime**と同じように動作します。
 
 これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,7 +125,7 @@ Wed Jan 02 02:03:55 1980\n\0
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**ctime**|\<time.h>|
 |**_ctime32**|\<time.h>|
@@ -129,7 +134,7 @@ Wed Jan 02 02:03:55 1980\n\0
 |**_wctime32**|\<time.h> または \<wchar.h>|
 |**_wctime64**|\<time.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

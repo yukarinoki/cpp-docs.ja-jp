@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 054a834b7d97ca7df01ab510fde21de22f2acf3d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f253c95eca6a3d48a4d9a7f3a7a4e97ea41202c8
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318424"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825461"
 ---
 # <a name="struct"></a>STRUCT
 
@@ -19,12 +19,13 @@ ms.locfileid: "75318424"
 
 ## <a name="syntax"></a>構文
 
-> *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
+> *name* **STRUCT** ⟦*alignment*⟧⟦__,__ **一意**でない⟧ \
+> *フィールド宣言*\
 > *名前*の**終わり**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-*名前*引数は、開始および終了ステートメントと同じである必要があります。 
+*名前*引数は、開始および終了ステートメントと同じである必要があります。
 
 ## <a name="see-also"></a>関連項目
 

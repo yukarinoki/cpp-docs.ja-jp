@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ODBC drivers, list of
 - drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-ms.openlocfilehash: 479c30717d645d511e06651e36f73bb1188f0d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 619aae452b0657e552baa54445dd38457fa32319
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213123"
 ---
 # <a name="odbc-driver-list"></a>ODBC ドライバーの一覧
 
-Visual C では、次のデータベースの ODBC ドライバーを提供します。
+ビジュアルC++には、次のデータベースの ODBC ドライバーが用意されています。
 
 - SQL Server
 
@@ -31,8 +31,8 @@ Visual C では、次のデータベースの ODBC ドライバーを提供し�
 
 - テキスト ファイル
 
-ODBC ドライバーから Microsoft および他の企業が、ODBC ドライバーのパックを含む使用可能な情報は、マイクロソフト製品サポート サービスにお問い合わせください。
+Microsoft およびその他の企業 (ODBC ドライバーパックを含む) から入手できる ODBC ドライバーの詳細については、マイクロソフト製品サポートサービスにお問い合わせください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

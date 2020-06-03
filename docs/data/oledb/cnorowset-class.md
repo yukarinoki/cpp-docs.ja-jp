@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1e01fd29c74cf1c44081c24bf384704cf2acd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230478"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211473"
 ---
 # <a name="cnorowset-class"></a>CNoRowset クラス
 
-テンプレート引数として使用できます (`TRowset`) の[CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md)します。
+は、 [CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md)のテンプレート引数 (`TRowset`) として使用できます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,33 +31,33 @@ class CNoRowset
 ### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-アクセサー クラス。 既定値は `CAccessorBase` です。
+アクセサークラス。 既定では、 `CAccessorBase`です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用`CNoRowset`コマンドが行セットを返さない場合は、テンプレート引数として。
+コマンドが行セットを返さない場合は、テンプレート引数として `CNoRowset` を使用します。
 
-`CNoRowset` 次のスタブ メソッドは、それぞれのメソッドに対応するその他のアクセサー クラスを実装します。
+`CNoRowset` は、次のスタブメソッドを実装します。これらはそれぞれ、他のアクセサークラスのメソッドに対応します。
 
-- `BindFinished` -バインドが完了したことを示します (返します`S_OK`)。
+- `BindFinished`-バインドが完了したことを示します (`S_OK`を返します)。
 
-- `Close` -行と、現在の IRowset インターフェイスを解放します。
+- `Close`-行と現在の IRowset インターフェイスを解放します。
 
-- `GetIID` -接続ポイントのインターフェイス ID を取得します。
+- `GetIID`-接続ポイントのインターフェイス ID を取得します。
 
-- `GetInterface` -インターフェイスを取得します。
+- `GetInterface`-インターフェイスを取得します。
 
-- `GetInterfacePtr` -カプセル化されたインターフェイス ポインターを取得します。
+- `GetInterfacePtr`-カプセル化されたインターフェイスポインターを取得します。
 
-- `SetAccessor` -アクセサーにポインターを設定します。
+- `SetAccessor`-アクセサーへのポインターを設定します。
 
-- `SetupOptionalRowsetInterfaces` -行セットの省略可能なインターフェイスを設定します。
+- `SetupOptionalRowsetInterfaces`-行セットのオプションのインターフェイスを設定します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

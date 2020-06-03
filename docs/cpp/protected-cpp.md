@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79ca081726c1f26a251763e2533ade730f075e2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244529"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317266"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -24,9 +24,9 @@ protected:
 protected base-class
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**protected**キーワードをクラス メンバーへのアクセスを指定します、*メンバー リスト*まで、次のアクセス指定子 (**public**または**private**) またはクラス定義の末尾。 として宣言されたクラス メンバー**protected**次でのみ使用できます。
+**protected**キーワードは *、次*のアクセス指定子 (**public**または**private**) またはクラス定義の最後までのメンバー リスト内のクラス メンバーへのアクセスを指定します。 **protected**として宣言されたクラス メンバーは、次の場合にのみ使用できます。
 
 - これらのメンバーを最初に宣言したクラスのメンバー関数。
 
@@ -36,20 +36,20 @@ protected base-class
 
 - プロテクト メンバーへのプライベート アクセスもできる、プライベートとして設定した直接派生クラス。
 
-基底クラスの名前、**protected**キーワードは、基底クラスのパブリックおよびプロテクト メンバーがその派生クラスのプロテクト メンバーを指定します。
+基本クラスの名前の前に **、protected**キーワードは、基本クラスのパブリック メンバーとプロテクト メンバーがその派生クラスのプロテクト メンバーであることを指定します。
 
-プロテクト メンバーがほどプライベートでない**private**宣言されているが、としては、パブリックでないクラスのメンバーにのみアクセスできるメンバー**public**でアクセスできるメンバー任意の関数。
+プロテクト メンバーは**プライベート**メンバーほどプライベートではなく、宣言されているクラスのメンバーだけがアクセスできますが、パブリック メンバーほど**パブリック**ではありません。
 
-プロテクト メンバーとしても宣言されている**static**は派生クラスのフレンドまたはメンバー関数にアクセスできます。 プロテクト メンバーとして宣言されていない**static**フレンドおよびメンバー関数へのポインター、参照、または派生クラスのオブジェクトからのみ派生クラス内からアクセスできます。
+**静的**として宣言されたプロテクト メンバーは、派生クラスのフレンド関数またはメンバー関数からもアクセスできます。 **静的**として宣言されていないプロテクト メンバーは、派生クラスのポインター、参照、またはオブジェクトを介してのみ、派生クラス内のフレンドおよびメンバー関数からアクセスできます。
 
-関連情報については、次を参照してください[フレンド](../cpp/friend-cpp.md)、[パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、とでメンバー アクセス テーブル[クラス メンバーへのアクセスの制御](member-access-control-cpp.md).
+関連情報については、「[クラス メンバへのアクセスの制御](member-access-control-cpp.md)」の[フレンド](../cpp/friend-cpp.md)、[パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、およびメンバ アクセスの各表を参照してください。
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子のキーワード (**public**、**private**、および**protected**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
+CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**プロテクト**) は、アセンブリに関する型とメソッドの参照に影響を与える可能性があります。 詳細については、「メンバー[アクセス制御](member-access-control-cpp.md)」を参照してください。
 
 > [!NOTE]
->  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
+> [/LN](../build/reference/ln-create-msil-module.md)を指定してコンパイルされたファイルは、この動作の影響を受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
 
 ## <a name="end-clr-specific"></a>END /clr 固有
 
@@ -90,4 +90,4 @@ int main() {
 ## <a name="see-also"></a>関連項目
 
 [クラス メンバーへのアクセス制御](member-access-control-cpp.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

@@ -1,11 +1,13 @@
 ---
 title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
+- _o__mbsncmp
+- _o__mbsncmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947343"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919316"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
@@ -117,17 +120,19 @@ int _mbsncmp_l(
 |0|*string1* substring は*string2* substring と同じ|
 |> 0|*string1* *部分文字列より大きい*string1 部分文字列|
 
-パラメーターの検証エラーが発生した場合、_mbsncmp と **_mbsncmp_l**は **_NLSCMPERROR**を\<返します。これは\<、および mbstring.h > > で定義されています。
+パラメーターの検証エラーが発生した場合、 **_mbsncmp**と **_mbsncmp_l**は **_NLSCMPERROR**を\<返します。これは\<、mbstring.h> および> で定義されています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strncmp**関数は、 *string1*と*string2*の最初の最大文字*数の*序数比較を実行し、部分文字列間の関係を示す値を返します。 **strncmp**は、大文字と小文字を区別する **_strnicmp**のバージョンです。 **wcsncmp**と **_mbsncmp**は、 **_wcsnicmp**と **_mbsnicmp**の大文字と小文字を区別するバージョンです。
+**Strncmp**関数は、 *string1*と*string2*の最初の最大文字*数の*序数比較を実行し、部分文字列間の関係を示す値を返します。 **strncmp**は **_strnicmp**の大文字と小文字を区別するバージョンです。 **wcsncmp**と **_mbsncmp**は、 **_wcsnicmp**と **_mbsnicmp**の大文字と小文字を区別するバージョンです。
 
-**wcsncmp**と **_mbsncmp**は、 **strncmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncmp**の引数はワイド文字列です。これらの **_mbsncmp**はマルチバイト文字列です。 **_mbsncmp**はマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合は **_NLSCMPERROR**を返します。
+**wcsncmp**と **_mbsncmp**は、 **strncmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncmp**の引数はワイド文字列です。これらの **_mbsncmp**はマルチバイト文字列です。 は、マルチバイトのコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合に **_NLSCMPERROR**を返します。 **_mbsncmp**
 
-また、 **_mbsncmp**と **_mbsncmp_l**はパラメーターを検証します。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsncmp**と **_mbsncmp_l**は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。 **strncmp**と**wcsncmp**では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
+また、 **_mbsncmp**および **_mbsncmp_l**パラメーターを検証します。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsncmp**と **_mbsncmp_l**は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。 **strncmp**と**wcsncmp**では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
 
-**_Mbsncmp**と **_mbsncmp_l**の比較の動作は、ロケールの**LC_CTYPE**カテゴリの設定によって影響を受けます。 これは、マルチバイト文字の先頭および末尾のバイトの検出を制御します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsncmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsncmp_l**関数は、 *locale*パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。 ロケールが1バイトのロケールの場合、これらの関数の動作は**strncmp**と同じになります。
+**_Mbsncmp**と **_mbsncmp_l**の比較動作は、ロケールの**LC_CTYPE**カテゴリの設定によって影響を受けます。 これは、マルチバイト文字の先頭および末尾のバイトの検出を制御します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsncmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsncmp_l**関数は、 *locale*パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。 ロケールが1バイトのロケールの場合、これらの関数の動作は**strncmp**と同じになります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -140,13 +145,13 @@ int _mbsncmp_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> または \<wchar.h>|
 |**_mbsncmp**、 **_mbsncmp_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -200,7 +205,7 @@ Result:      String 1 is equal to string 2
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp、_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>

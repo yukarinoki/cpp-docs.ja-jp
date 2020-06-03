@@ -1,10 +1,12 @@
 ---
 title: localtime、_localtime32、_localtime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _localtime64
 - _localtime32
 - localtime
+- _o__localtime32
+- _o__localtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 7e2f39b3a1b6376e24d8a812d1074840862f398a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916425"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime、_localtime32、_localtime64
 
@@ -65,13 +68,13 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 - 1970 年 1 月 1 日午前 0 時より前。
 
-- 03:14:07 年1月 2038 19 日、UTC ( **_time32**および**time32_t**を使用)。
+- 03:14:07 年1月 2038 19 日、UTC ( **_time32**と**time32_t**を使用)。
 
-- 23:59:59 年12月 31 3000 日の後、 **_time64**と **__time64_t**を使用します。
+- 23:59:59 年12月 31 3000 日、UTC ( **_time64**と **__time64_t**を使用)。
 
-**__time64_t**構造体を使用する **_localtime64**では、23:59:59 年12月31日から3000年12月31日までの日付を表すことができます。一方、 **_Localtime32**は2038年1月18日から23:59:59 までの日付を表します。形式.
+**__time64_t**構造体を使用する **_localtime64**では、23:59:59 年12月31日から3000年12月31日までの日付を表すことができます (utc)。 **_Localtime32**は、2038年1月18日から23:59:59 日までの日付を表します。
 
-**localtime**は、 **_localtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime**が **_localtime32**に評価されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**localtime**は **_localtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime**が **_localtime32**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
 Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
 
@@ -89,26 +92,28 @@ Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールド�
 
 **TZ**環境変数が設定されている場合、C ランタイムライブラリは、夏時間 (DST) の計算を実装するために、米国に適した規則を前提としています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Localtime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **Long** Value *sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
 
 [Gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および**localtime**の32ビットバージョンと64ビットバージョンの両方で、変換にスレッドごとに1つの**tm**構造が使用されます。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-**localtime**は、ユーザーが最初にグローバル環境変数**TZ**を設定した場合、ローカルタイムゾーンを修正します。 **TZ**が設定されている場合、他の3つの環境変数 ((**timezone**、 **_tzname** **、および**) も自動的に設定されます。 **TZ**変数が設定されていない場合、 **Localtime**は、コントロールパネルの [日付/時刻] アプリケーションで指定されたタイムゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能であり、 **localtime**の ANSI 標準定義の一部ではありません。
+**localtime**は、ユーザーが最初にグローバル環境変数**TZ**を設定した場合、ローカルタイムゾーンを修正します。 **TZ**が設定されている場合、他の3つの環境変数 (**_timezone**、 **_daylight**、および **_tzname**) も自動的に設定されます。 **TZ**変数が設定されていない場合、 **Localtime**は、コントロールパネルの [日付/時刻] アプリケーションで指定されたタイムゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能であり、 **localtime**の ANSI 標準定義の一部ではありません。
 
 > [!NOTE]
-> 対象の環境は、夏時間が有効かどうかを判断しようとします。
+> 対象の環境によって、夏時間が有効かどうか判断されます。
 
 これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime > また\<は time .h >|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> また\<は time .h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

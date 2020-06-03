@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime、_mkgmtime32、_mkgmtime64
 description: _Mkgmtime、_mkgmtime32、および _mkgmtime64 C ランタイムライブラリ関数について説明し、それらの使用方法の例を示します。
-ms.date: 12/04/2019
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914648"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
@@ -74,7 +77,7 @@ __time64_t _mkgmtime64(
 
 1970年1月1日午前0時からの経過秒数を世界協定時刻 (UTC) で表した **__time32_t**または **__time64_t**の種類の数量。 日付が範囲外の場合 (「解説」を参照してください)、または入力を有効な時刻として解釈できない場合、戻り値は-1 になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Mkgmtime32**関数と **_mkgmtime64**関数は、utc 時刻を utc 時刻を表す **__time32_t**または **__time64_t**型に変換します。 現地時刻を UTC 時刻に変換するには、代わりに**mktime**、 **_mktime32**、 **_mktime64**を使用します。
 
@@ -86,7 +89,9 @@ __time64_t _mkgmtime64(
 
 **Gmtime**と**localtime**はどちらも、変換に共通の静的バッファーを使用します。 このバッファーを **_mkgmtime**に指定すると、以前の内容は破棄されます。
 
-## <a name="examples"></a>使用例
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
+## <a name="examples"></a>例
 
 ```C
 // crt_mkgmtime.c
@@ -177,7 +182,7 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [時間管理](../../c-runtime-library/time-management.md)\
 [asctime、_wasctime](asctime-wasctime.md)\

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 986555ca91d19dfa838f807665f2cbf9a003bcef
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755110"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler クラス
 
@@ -39,20 +39,20 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|`CAnimationStoryboardEventHandler` オブジェクトを構築します。|
+|[イベントハンドラー::Cアニメーションストーリーボードイベントハンドラ](#canimationstoryboardeventhandler)|`CAnimationStoryboardEventHandler` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|インスタンスを作成します`CAnimationStoryboardEventHandler`コールバック。|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|処理`OnStoryboardStatusChanged`イベントで、ストーリー ボードの状態が変更されたときに発生する (上書き`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`)。|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|処理`OnStoryboardUpdated`イベントで、ストーリー ボードが更新されたときに発生する (上書き`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`)。|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。|
+|[イベントハンドラー::インスタンスの作成](#createinstance)|コールバックのインスタンスを`CAnimationStoryboardEventHandler`作成します。|
+|[イベントハンドラー::オンストーリーボードステータス変更](#onstoryboardstatuschanged)|ストーリー`OnStoryboardStatusChanged`ボードの状態が変化したときに発生するイベントを`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`処理します (オーバーライド.|
+|[イベントハンドラー::ストーリーボード更新](#onstoryboardupdated)|ストーリー`OnStoryboardUpdated`ボードが更新されたときに発生するイベントを`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`処理します (オーバーライド .|
+|[イベントハンドラー::アニメーションコントローラ](#setanimationcontroller)|イベントをルーティングするアニメーション コントローラへのポインターを格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このイベント ハンドラーが作成されに渡される`IUIAnimationStoryboard::SetStoryboardEventHandler`メソッドを呼び出すときに`CAnimationController::EnableStoryboardEventHandler`します。
+このイベント ハンドラは、 を`IUIAnimationStoryboard::SetStoryboardEventHandler`呼び出`CAnimationController::EnableStoryboardEventHandler`すと、メソッドに作成され、メソッドに渡されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -66,17 +66,17 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>イベントハンドラー::Cアニメーションストーリーボードイベントハンドラ
 
-CAnimationStoryboardEventHandler オブジェクトを構築します。
+オブジェクトを構築します。
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>イベントハンドラー::インスタンスの作成
 
-CAnimationStoryboardEventHandler コールバックのインスタンスを作成します。
+コールバックのインスタンスを作成します。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*pAnimationController*<br/>
-イベントを受信するアニメーション コント ローラーへのポインター。
+*を切り取る*<br/>
+イベントを受け取るアニメーション コントローラへのポインター。
 
 *ppHandler*
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>イベントハンドラー::オンストーリーボードステータス変更
 
-ストーリー ボードの状態が変更されたときに発生する OnStoryboardStatusChanged イベントを処理します。
+ストーリーボードの状態が変更されたときに発生する OnStoryboardStatusChanged イベントを処理します。
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -109,21 +109,21 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ### <a name="parameters"></a>パラメーター
 
 *ストーリー ボード*<br/>
-状態が変更されたストーリー ボードへのポインター。
+状態が変更されたストーリーボードへのポインター。
 
 *newStatus*<br/>
-新しいストーリー ボードの状態を指定します。
+新しいストーリーボードの状態を指定します。
 
-*previousStatus*<br/>
-以前のストーリー ボードの状態を指定します。
+*以前のステータス*<br/>
+前のストーリーボードの状態を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は s_ok を返します。それ以外の場合 E_FAIL します。
+メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>イベントハンドラー::ストーリーボード更新
 
-ストーリー ボードが更新されたときに発生する OnStoryboardUpdated イベントを処理します。
+ストーリーボードが更新されたときに発生する OnStoryboard イベントを処理します。
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -132,24 +132,24 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ### <a name="parameters"></a>パラメーター
 
 *ストーリー ボード*<br/>
-更新された、ストーリー ボードへのポインター。
+更新されたストーリーボードへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は s_ok を返します。それ以外の場合 E_FAIL します。
+メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>イベントハンドラー::アニメーションコントローラ
 
-イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。
+イベントをルーティングするアニメーション コントローラへのポインターを格納します。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pAnimationController*<br/>
-イベントを受信するアニメーション コント ローラーへのポインター。
+*を切り取る*<br/>
+イベントを受け取るアニメーション コントローラへのポインター。
 
 ## <a name="see-also"></a>関連項目
 

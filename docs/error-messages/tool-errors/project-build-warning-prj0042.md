@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
-ms.openlocfilehash: c91e40b6ad56d6201fc7d0ba7c9fbf23e620e8b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45de1de889dedbc03c556e4c88dc76f21e1c8c63
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191913"
 ---
 # <a name="project-build-warning-prj0042"></a>プロジェクト ビルドの警告 PRJ0042
 
-> 'Outputs' プロパティ ファイルのカスタム ビルド ステップの'*ファイル*' が設定されていません。 カスタム ビルド ステップはスキップされます。
+> ファイル '*file*' のカスタムビルドステップの ' Outputs ' プロパティが設定されていません。 カスタムビルドステップはスキップされます。
 
-出力が指定されていないために、カスタム ビルド ステップは実行されませんでした。
+出力が指定されていないため、カスタムビルドステップは実行されませんでした。
 
-このエラーを解決するには、次に行ういずれか。
+このエラーを解決するには、次のいずれかの操作を行います。
 
-- カスタム ビルド ステップをビルドから除外します。
+- ビルドからカスタムビルドステップを除外します。
 
 - 出力を追加します。
 
-- カスタム ビルド ステップのコマンドの内容を削除します。
+- カスタムビルドステップのコマンドの内容を削除します。

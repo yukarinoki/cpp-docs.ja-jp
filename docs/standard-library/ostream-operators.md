@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8b6f4e0f0b5bca41f8d895415fff4003231ad1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373604"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 演算子
 
 ||
 |-|
-|[operator&lt;&lt;](#op_lt_lt)|
+|[演算子&lt;&lt;](#op_lt_lt)|
 
-## <a name="op_lt_lt"></a>  演算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>演算子&lt;&lt;
 
 さまざまな型をストリームに書き込みます。
 
@@ -80,31 +80,31 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch (_p)* \
+*_ch*\
 単一の文字。
 
-*Elem (_t)* \
+*_Elem*\
 要素型。
 
 *_Ostr*\
 `basic_ostream` オブジェクト。
 
-*引数*\
+*Str*\
 文字列。
 
-*Tr (_m)* \
+*_Tr*\
 文字の特徴 (traits)。
 
-*val*\
+*ヴァル*\
 型
 
 ### <a name="return-value"></a>戻り値
 
-ストリーム。
+ストリームです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`basic_ostream`クラスもいくつかの挿入演算子を定義します。 詳細については、[basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)をご覧ください。
+`basic_ostream`クラスもいくつかの挿入演算子を定義します。 詳細については[、「basic_ostream::演算子&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)」を参照してください。
 
 下記のテンプレート関数は
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-str で始まるシーケンスの`traits_type::`長さ N`str`=[長さ](../standard-library/char-traits-struct.md#length)() を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [flags](../standard-library/ios-base-class.md#flags) & != [left](../standard-library/ios-functions.md#left)。`adjustfield` それ以外の場合、繰り返しはシーケンスに後続します。 関数は、 *_Ostr*を返します。
+str から始まる`traits_type::`シーケンスの長さ N = *str*[長さ](../standard-library/char-traits-struct.md#length)(`str`) を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 繰り返しは、 (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & フラグ`adjustfield`!=[左](../standard-library/ios-functions.md#left)。 それ以外の場合、繰り返しはシーケンスに後続します。 関数は *_Ostr*を返します。
 
 下記のテンプレート関数は
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-要素 `_Ch`を挿入しています。 1 < `_Ostr.width` である場合、この関数はまた `_Ostr.width` - 1 充填文字の繰り返しを挿入します。 `_Ostr.flags & adjustfield != left` である場合、繰り返しはシーケンスに先行します。 それ以外の場合、繰り返しはシーケンスに後続します。 *_Ostr*が返されます。
+要素 `_Ch`を挿入しています。 1 < `_Ostr.width` である場合、この関数はまた `_Ostr.width` - 1 充填文字の繰り返しを挿入します。 `_Ostr.flags & adjustfield != left` である場合、繰り返しはシーケンスに先行します。 それ以外の場合、繰り返しはシーケンスに後続します。 _Ostr返*します*。
 
 下記のテンプレート関数は
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-ただし、 *str*で始まるシーケンスの*各要素は*、 [put](../standard-library/basic-ostream-class.md#put)`_Ostr.`[(拡張 (](../standard-library/basic-ios-class.md#widen)`_Ch`)) を呼び`Elem`出す`_Ostr.`ことによって、型のオブジェクトに変換されます。
+str*で始*まるシーケンスの*各要素_Ch*は[、put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[widen](../standard-library/basic-ios-class.md#widen))`_Ch``_Ostr.`を呼び出すことによって型`Elem`のオブジェクトに変換されることを除いて。
 
 下記のテンプレート関数は
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-ただし、 ( `Elem` `_Ostr.put` (`_Ch`)) を呼び出すことによって、Ch が型のオブジェクトに変換される点が異なります。 `_Ostr.widen`
+*_Ch*を`Elem`呼び出`_Ostr.put`すことによって型のオブジェクトに変換されることを除`_Ostr.widen`いて`_Ch`( ) 。
 
 下記のテンプレート関数は
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(これを挿入する前に、 *Ch*を広げる必要はありません)。
+(挿入前に *_Ch*を広くする必要はありません。
 
 下記のテンプレート関数は
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-< `_Ostr` < (`const char *` )`str`を返します。
+ << ( `_Ostr` `const char *`)`str`を返します。
 
 下記のテンプレート関数は
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-< `_Ostr` < (`char` )`_Ch`を返します。
+ << ( `_Ostr` `char`)`_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-< `_Ostr` < (`const char *` )`str`を返します。
+ << ( `_Ostr` `const char *`)`str`を返します。
 
 下記のテンプレート関数は
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-< `_Ostr` < (`char` )`_Ch`を返します。
+ << ( `_Ostr` `char`)`_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -269,4 +269,4 @@ basic_ostream<_Elem, _Tr>& operator<<(
 
 ## <a name="see-also"></a>関連項目
 
-[\<ostream>](../standard-library/ostream.md)
+[\<oストリーム>](../standard-library/ostream.md)

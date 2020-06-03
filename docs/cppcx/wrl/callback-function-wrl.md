@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821689"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214137"
 ---
 # <a name="callback-function-wrl"></a>Callback 関数 (WRL)
 
@@ -240,16 +240,16 @@ ComPtr<TDelegateInterface> Callback(
 
 指定されたコールバック メソッドをメンバー関数に持つオブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 デリゲートオブジェクトの基本は、`IInspectable`ではなく `IUnknown`である必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** イベント .h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

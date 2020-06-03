@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92077ecf4670dd5395296327c767ee3c7b848ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338117"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319904"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 クラス
 
-`CMFCVisualManagerVS2005` Microsoft Visual Studio 2005 の外観をアプリケーションに提供します。
+`CMFCVisualManagerVS2005`アプリケーションに、Visual Studio 2005 の外観を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,32 +61,32 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|フレームワークは、ドッキング、タブ付きウィンドウを描画するときに、このメソッドを呼び出します。 (上書き[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize))。|
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|フレームワークは、ウィンドウを描画する前に、MDITabs ウィンドウの境界線のサイズを判断するには、このメソッドを呼び出します。 (上書き[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize))。|
-|[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(上書き[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor))。|
-|[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(上書き[CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors))。|
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|現在のビジュアル マネージャーで自動的に隠すボタンが重複しているかどうかを返します。 (上書き[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons))。|
-|[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(上書き[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder))。|
-|[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|( `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`をオーバーライドします)。|
-|[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(上書き[CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption))。|
-|[CMFCVisualManagerVS2005::OnDrawSeparator](#ondrawseparator)|(上書き[CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator))。|
-|[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(上書き[CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab))。|
-|[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(上書き[CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe))。|
-|[CMFCVisualManagerVS2005::OnEraseTabsArea](#onerasetabsarea)|(上書き[CMFCVisualManagerOffice2003::OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea))。|
-|[CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|(上書き[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground))。|
-|[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(上書き[CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea))。|
-|[CMFCVisualManagerVS2005::OnFillMiniFrameCaption](#onfillminiframecaption)|( `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`をオーバーライドします)。|
-|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(上書き[CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors))。|
+|[をクリックします。](#getdockingtabsborderssize)|フレームワークは、ドッキングされタブ付きのペインを描画するときに、このメソッドを呼び出します。 (オーバーライド[CMFC ビジュアル マネージャー::取得ドッキング タブボーダーズサイズ](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
+|[ウィンドウズマネージャー VS2005::ウィンドウディタブボーダーズサイズ](#getmditabsborderssize)|フレームワークは、ウィンドウを描画する前に MDITabs ウィンドウの境界線のサイズを決定するために、このメソッドを呼び出します。 (オーバーライド[CMFC ビジュアル マネージャー::GetMDI タブボーダーズサイズ](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
+|[をグループ化します。](#getpropertygridgroupcolor)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor)|
+|[をクリックします。](#gettabframecolors)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors)|
+|[を切り替えた自動非表示ボタン](#hasoverlappedautohidebuttons)|現在のビジュアル マネージャーで、自動非表示ボタンが重なっているかどうかを返します。 (オーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)|
+|[をクリックして、自動非表示ボタンボーダーを表示します。](#ondrawautohidebuttonborder)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder)|
+|[ボタンをクリックします。](#ondrawcaptionbutton)|( `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`をオーバーライドします)。|
+|[ウィンドウスマネージャー 2005::オンドローペインキャプション](#ondrawpanecaption)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption)|
+|[を切り取る](#ondrawseparator)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator)|
+|[をクリックします。](#ondrawtab)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab)|
+|[をクリックします。](#ondrawtoolboxframe)|([オーバーライド](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe)します。|
+|[をクリックします。](#onerasetabsarea)|([オーバーライドします。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea)|
+|[をクリックして、自動非表示ボタンの背景を表示します。](#onfillautohidebuttonbackground)|(オーバーライドします[。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground)|
+|[をクリックします。](#onfillhighlightedarea)|(オーバーライド[CMFCビジュアルマネージャーオフィス2003::オンフィルハイライトエリア](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
+|[をクリックします。](#onfillminiframecaption)|( `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`をオーバーライドします)。|
+|[システムカラーのオンアップデート](#onupdatesystemcolors)|([オーバーライドします。](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors)|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-CMFCVisualManagerVS2005 クラスを使用して、Microsoft Visual Studio 2005 のと同じように、アプリケーションの外観を変更します。
+アプリケーションの外観を変更して、アプリケーションの外観を変更するには、CMFCVisualManagerVS2005 クラスを使用します。
 
-このクラスの先祖から派生した仮想関数はすべてこのクラスのメンバーの[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)します。
+このクラスのすべてのメンバーは、このクラスの先祖から派生した仮想関数[です。](../../mfc/reference/cmfcvisualmanager-class.md)
 
 ## <a name="example"></a>例
 
-次の例では、VS 2005 ビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
+ビジュアル マネージャー VS 2005 の使用方法を次の例に示します。 このコード スニペットは[、デスクトップ警告デモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -94,11 +94,11 @@ CMFCVisualManagerVS2005 クラスを使用して、Microsoft Visual Studio 2005 
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[ビジュアル マネージャー](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[オフィスXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 
@@ -106,9 +106,9 @@ CMFCVisualManagerVS2005 クラスを使用して、Microsoft Visual Studio 2005 
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxvisualmanagervs2005.h
+**ヘッダー:** afx ビジュアルマネージャーvs2005.h
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagervs2005getdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>をクリックします。
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -116,9 +116,9 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize
+## <a name="cmfcvisualmanagervs2005getmditabsborderssize"></a><a name="getmditabsborderssize"></a>ウィンドウズマネージャー VS2005::ウィンドウディタブボーダーズサイズ
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -126,9 +126,9 @@ virtual int GetMDITabsBordersSize();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagervs2005getpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>をグループ化します。
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -136,13 +136,13 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *pPropList*<br/>
+[in]*プロップリスト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors
+## <a name="cmfcvisualmanagervs2005gettabframecolors"></a><a name="gettabframecolors"></a>をクリックします。
 
 ```
 virtual void GetTabFrameColors(
@@ -159,19 +159,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pTabWnd*<br/>
-[in]*clrDark*<br/>
-[in]*clrBlack*<br/>
-[in]*clrHighlight*<br/>
+[in]*pタブーンド*<br/>
+[in]*clrダーク*<br/>
+[in]*clrブラック*<br/>
+[in]*clrハイライト*<br/>
 [in]*clrFace*<br/>
-[in] *clrDarkShadow*<br/>
+[in]*ブラックシャドウ*<br/>
 [in]*clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+[in]*pbrFace*<br/>
+[in]*pbrブラック*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagervs2005hasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>を切り替えた自動非表示ボタン
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -179,9 +179,9 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagervs2005ondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>をクリックして、自動非表示ボタンボーダーを表示します。
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -194,13 +194,13 @@ virtual void OnDrawAutoHideButtonBorder(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectBounds*<br/>
-[in] *rectBorderSize*<br/>
-[in]*pButton*<br/>
+[in]*レクトバウンド*<br/>
+[in]*レクトボーダーサイズ*<br/>
+[in]*ボタン*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton
+## <a name="cmfcvisualmanagervs2005ondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>ボタンをクリックします。
 
 ```
 virtual void OnDrawCaptionButton(
@@ -216,16 +216,16 @@ virtual void OnDrawCaptionButton(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*描画*<br/>
-[in] *bHorz*<br/>
-[in]*bMaximized*<br/>
-[in]*bDisabled*<br/>
-[in] *nImageID*<br/>
+[in]*ボタン*<br/>
+[in]*bアクティブ*<br/>
+[in]*bHorz*<br/>
+[in]*b最大化*<br/>
+[in]*b無効*<br/>
+[in]*イメージID*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption
+## <a name="cmfcvisualmanagervs2005ondrawpanecaption"></a><a name="ondrawpanecaption"></a>ウィンドウスマネージャー 2005::オンドローペインキャプション
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -239,16 +239,16 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*描画*<br/>
-[in] *rectCaption*<br/>
-[in]*rectButtons*<br/>
+[in]*pバー*<br/>
+[in]*bアクティブ*<br/>
+[in]*直流キャプション*<br/>
+[in]*レクトボタン*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator
+## <a name="cmfcvisualmanagervs2005ondrawseparator"></a><a name="ondrawseparator"></a>を切り取る
 
 ```
 virtual void OnDrawSeparator(
@@ -261,13 +261,13 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
-[in] *bIsHoriz*<br/>
+[in]*pバー*<br/>
+[in]*レクト*<br/>
+[in]*ビショリス*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab
+## <a name="cmfcvisualmanagervs2005ondrawtab"></a><a name="ondrawtab"></a>をクリックします。
 
 ```
 virtual void OnDrawTab(
@@ -281,14 +281,14 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in] *rectTab*<br/>
-[in]*iTab*<br/>
-[in] *bIsActive*<br/>
-[in]*pTabWnd*<br/>
+[in]*直タブ*<br/>
+[in]*iタブ*<br/>
+[in]*ビイシスアクティブ*<br/>
+[in]*pタブーンド*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagervs2005ondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>をクリックします。
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -299,11 +299,11 @@ virtual void OnDrawToolBoxFrame(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea
+## <a name="cmfcvisualmanagervs2005onerasetabsarea"></a><a name="onerasetabsarea"></a>をクリックします。
 
 ```
 virtual void OnEraseTabsArea(
@@ -315,12 +315,12 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pTabWnd*<br/>
+[in]*レクト*<br/>
+[in]*pタブーンド*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanagervs2005onfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>をクリックして、自動非表示ボタンの背景を表示します。
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -332,12 +332,12 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pButton*<br/>
+[in]*レクト*<br/>
+[in]*ボタン*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea
+## <a name="cmfcvisualmanagervs2005onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>をクリックします。
 
 ```
 virtual void OnFillHighlightedArea(
@@ -350,13 +350,13 @@ virtual void OnFillHighlightedArea(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pBrush*<br/>
-[in]*pButton*<br/>
+[in]*レクト*<br/>
+[in]*pブラシ*<br/>
+[in]*ボタン*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagervs2005onfillminiframecaption"></a><a name="onfillminiframecaption"></a>をクリックします。
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -369,27 +369,27 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in] *rectCaption*<br/>
-[in]*pFrameWnd*<br/>
-[in]*描画*<br/>
+[in]*直流キャプション*<br/>
+[in]*をクリックします。*<br/>
+[in]*bアクティブ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors
+## <a name="cmfcvisualmanagervs2005onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>システムカラーのオンアップデート
 
 ```
 virtual void OnUpdateSystemColors();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[CMFCVisualManagerOfficeXP クラス](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
-[CMFCVisualManagerWindows クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
-[CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
+[クラス](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[クラス](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
+[クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
+[クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

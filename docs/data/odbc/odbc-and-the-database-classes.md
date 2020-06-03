@@ -7,22 +7,22 @@ helpviewer_keywords:
 - ODBC classes [C++], MFC database classes
 - MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-ms.openlocfilehash: 7692a8128e3dac97c9107e986f6698db76c22c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6511aab9bb048882fe9c3398dd17f769eb16220c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320064"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC とデータベース クラス
 
-MFC ODBC データベース クラスが通常行う自分でメンバー関数の ODBC API 関数呼び出しをカプセル化、 [CDatabase](../../mfc/reference/cdatabase-class.md)と[CRecordset](../../mfc/reference/crecordset-class.md)クラス。 たとえば、複雑な odbc 呼び出し、返されるレコードには、記憶域の場所、エラーの状態の処理、およびその他の操作のバインディングによって管理されますがデータベース クラス。 その結果、かなり単純なクラス インターフェイスを使用して、レコード セット オブジェクトを使用してレコードを操作します。
+MFC ODBC データベース クラスは、通常[、CDatabase](../../mfc/reference/cdatabase-class.md)クラスと[CRecordset](../../mfc/reference/crecordset-class.md)クラスのメンバー関数で自分自身を作成する ODBC API 関数呼び出しをカプセル化します。 たとえば、複雑な ODBC 呼び出しシーケンス、返されたレコードのストレージ位置へのバインド、エラー条件の処理、およびその他の操作は、データベース クラスによって管理されます。 その結果、レコードセット オブジェクトを使用してレコードを操作する場合は、かなり単純なクラス インターフェイスを使用します。
 
 > [!NOTE]
->  ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。
+> ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。
 
-データベース クラスには、ODBC の機能がカプセル化が ODBC API 関数の 1 対 1 のマッピングは提供されません。 データベース クラスでは、高いレベルの抽象化、Microsoft Access および Microsoft Visual Basic でのデータ アクセス オブジェクトの検出後にモデル化を提供します。 詳細については、次を参照してください。 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)します。
+データベース クラスは ODBC 機能をカプセル化しますが、ODBC API 関数の 1 対 1 のマッピングは提供しません。 データベース クラスは、Access および Visual Basic で見つかったデータ アクセス オブジェクトをモデル化した、より高度な抽象化レベルを提供します。 詳細については、「 [ODBC および MFC](../../data/odbc/odbc-and-mfc.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ODBC の基礎](../../data/odbc/odbc-basics.md)
+[ODBC の基本](../../data/odbc/odbc-basics.md)

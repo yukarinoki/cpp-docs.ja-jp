@@ -1,8 +1,6 @@
 ---
 title: OLE オートメーション クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - Automation, classes
 - Automation classes [MFC], OLE classes
@@ -10,23 +8,23 @@ helpviewer_keywords:
 - Automation classes [MFC]
 - OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
-ms.openlocfilehash: 08e33e1fce3f792e76e2eec4ecb59601c99d9822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 644a4930eb55636ba6e87b949ed610b725334661
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348719"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447684"
 ---
 # <a name="ole-automation-classes"></a>OLE オートメーション クラス
 
-これらのクラスは、オートメーション クライアント (他のアプリケーションを制御するアプリケーション) をサポートします。 オートメーション サーバー (他のアプリケーションで制御できるアプリケーション) を通じてサポートされます[ディスパッチ マップ](../mfc/reference/dispatch-maps.md)します。
+これらのクラスは、オートメーションクライアント (他のアプリケーションを制御するアプリケーション) をサポートしています。 オートメーションサーバー (他のアプリケーションで制御できるアプリケーション) は、[ディスパッチマップ](../mfc/reference/dispatch-maps.md)を通じてサポートされます。
 
 [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
-オートメーション クライアントからのオートメーション サーバーの呼び出しに使用します。 クラスを追加するときにタイプ ライブラリを提供するオートメーション サーバー用のタイプ セーフなクラスを作成するこのクラスが使用されます。
+オートメーションクライアントからオートメーションサーバーを呼び出すために使用されます。 クラスを追加するときに、このクラスを使用して、タイプライブラリを提供するオートメーションサーバーのタイプセーフなクラスを作成します。
 
 [COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
-OLE オートメーションの中にエラーによる例外。 Automation の例外はオートメーション サーバーによってスローされ、オートメーション クライアントによってキャッチします。
+OLE オートメーション中のエラーによって発生する例外。 オートメーションの例外はオートメーションサーバーによってスローされ、オートメーションクライアントによってキャッチされます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

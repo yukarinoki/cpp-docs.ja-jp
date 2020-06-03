@@ -1,9 +1,11 @@
 ---
 title: mbstowcs、_mbstowcs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbstowcs
 - _mbstowcs_l
+- _o__mbstowcs_l
+- _o_mbstowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952033"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915469"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs、_mbstowcs_l
 
@@ -75,7 +78,7 @@ size_t _mbstowcs_l(
 ワイド文字のシーケンスのアドレス。
 
 *mbstr*<br/>
-null で終了するマルチバイト文字のシーケンスのアドレス。
+NULL で終了するマルチバイト文字のシーケンスのアドレス。
 
 *count*<br/>
 変換するマルチバイト文字の最大数。
@@ -90,7 +93,7 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 > [!IMPORTANT]
 > *Wcstr*と*mbstr*が重複しないようにし、その*カウント*に変換するマルチバイト文字数が正しく反映されていることを確認します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Mbstowcs**関数は、 *mbstr*が指すマルチバイト文字の*最大数を*、現在のロケールによって決定される対応するワイド文字の文字列に変換します。 結果のワイド文字列は、 *wcstr*によって表されるアドレスに格納されます。 結果は、 [mbtowc](mbtowc-mbtowc-l.md)の一連の呼び出しに似ています。 **Mbstowcs**が1バイトの null 文字 (' \ 0 ') を検出する前または*カウント*が発生した場合は、null 文字をワイド文字の null 文字 (L ' \ 0 ') に変換して停止します。 したがって、 *wcstr*のワイド文字文字列は、変換中に null 文字が検出された場合にのみ null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なっている場合、動作は未定義です。
 
@@ -98,18 +101,20 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 *Mbstr*引数が**NULL**の場合、または*count*が**INT_MAX**> 場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、errno は**EINVAL**に設定され、この関数は-1 を返します。
 
-**mbstowcs**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbstowcs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**mbstowcs**は、ロケールに依存する動作に現在のロケールを使用します。**_mbstowcs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -209,7 +214,7 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

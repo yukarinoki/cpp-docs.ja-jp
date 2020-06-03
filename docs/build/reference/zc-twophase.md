@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856957"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438646"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (2 フェーズの名前参照の無効化)
 
@@ -23,9 +22,9 @@ ms.locfileid: "74856957"
 
 ## <a name="syntax"></a>構文
 
-> **/Zc:twoPhase-**
+> **/Zc: twoPhase-**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 Visual Studio 2017 バージョン15.3 以降: [/permissive-](permissive-standards-conformance.md)では、コンパイラはテンプレート名の解決に2フェーズの名前参照を使用します。 また、 **/zc: twoPhase**を指定した場合、コンパイラは、以前の非準拠クラステンプレートと関数テンプレートの名前解決および置換動作に戻ります。 **/Permissive-** が指定されていない場合、非準拠の動作が既定値になります。
 
@@ -51,7 +50,7 @@ Visual Studio 2017 バージョン15.3 以降: [/permissive-](permissive-standar
 
 この動作のもう1つの影響は、オーバーロードの解決です。 非標準動作は、インスタンス化のサイトでトークンストリームが拡張される方法によって発生します。 テンプレート宣言で参照できないシンボルは、インスタンス化の時点で表示される場合があります。 これは、オーバーロードの解決に参加できることを意味します。 テンプレート定義に表示されていないコードに基づいて、テンプレートの動作が変更される場合があります (標準とは異なります)。
 
-たとえば、次のコードについて考えます。
+たとえば、次のコードを検討してみましょう。
 
 ```cpp
 // zctwophase.cpp
@@ -155,7 +154,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2段階に準拠するようにコードを更新する
 
-以前のバージョンのコンパイラでは、キーワード `template` を必要とせC++ず、標準で必要とされるすべての場所で `typename` ます。 これらのキーワードは、参照の最初のフェーズでコンパイラが依存名を解析する方法を明確にするために、いくつかの位置で必要になります。 例:
+以前のバージョンのコンパイラでは、キーワード `template` を必要とせC++ず、標準で必要とされるすべての場所で `typename` ます。 これらのキーワードは、参照の最初のフェーズでコンパイラが依存名を解析する方法を明確にするために、いくつかの位置で必要になります。 例 :
 
 `T::Foo<a || b>(c);`
 
@@ -165,7 +164,7 @@ NS::func(NS::S)
 
 Visual Studio 2017 バージョン15.3 以降のバージョンでは、 **/permissive-** と **/zc: twoPhase**が指定されている場合、コンパイラは `template` キーワードを使用せずにこのコードを許可します。 このコードは、制限された方法でのみテンプレートを解析するため、`a || b`の引数を持つ関数テンプレートへの呼び出しとして解釈されます。 上記のコードは、最初のフェーズでは解析されません。 2番目のフェーズでは、`T::Foo` が変数ではなくテンプレートであることを通知するのに十分なコンテキストがあるため、コンパイラはキーワードを使用しません。
 
-この動作は、関数テンプレート本体、初期化子、既定の引数、および noexcept 引数の名前の前にキーワード `typename` を削除することによっても表示できます。 例:
+この動作は、関数テンプレート本体、初期化子、既定の引数、および noexcept 引数の名前の前にキーワード `typename` を削除することによっても表示できます。 例 :
 
 ```cpp
 template<typename T>
@@ -191,9 +190,9 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 準拠に関する問題の詳細については、「 [ C++ Visual Studio での準拠の強化](../../overview/cpp-conformance-improvements.md)」と「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
 1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 

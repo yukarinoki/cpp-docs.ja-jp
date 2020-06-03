@@ -5,35 +5,35 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169917"
 ---
 # <a name="contents-of-a-makefile"></a>メイクファイルの内容
 
-メイクファイルが含まれます。
+メイクファイルには次のものが含まれます。
 
-- [記述ブロック](description-blocks.md)
+- [説明ブロック](description-blocks.md)
 
-- [[コマンド]](commands-in-a-makefile.md)
+- [コマンド](commands-in-a-makefile.md)
 
-- [[マクロ]](macros-and-nmake.md)
+- [マクロ](macros-and-nmake.md)
 
 - [推論規則](inference-rules.md)
 
-- [ドット ディレクティブ](dot-directives.md)
+- [ドットディレクティブ](dot-directives.md)
 
-- [プリプロセス ディレクティブ](makefile-preprocessing.md)
+- [プリプロセスディレクティブ](makefile-preprocessing.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-メイクファイルで使用できるその他の機能は[ワイルドカード](wildcards-and-nmake.md)、[長いファイル名](long-filenames-in-a-makefile.md)、[コメント](comments-in-a-makefile.md)、および[特殊文字](special-characters-in-a-makefile.md)します。
+メイクファイルで使用できるその他の機能には、[ワイルドカード](wildcards-and-nmake.md)、[長いファイル名](long-filenames-in-a-makefile.md)、[コメント](comments-in-a-makefile.md)、および[特殊文字](special-characters-in-a-makefile.md)があります。
 
-サンプルについては、次を参照してください。[サンプル メイクファイル](sample-makefile.md)します。
+サンプルについては、「[サンプルメイクファイル](sample-makefile.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [NMAKE リファレンス](nmake-reference.md)

@@ -1,6 +1,6 @@
 ---
 title: 分析
-description: C++ BUILD Insights SDK 分析関数リファレンス。
+description: C++ ビルド インサイト SDK 分析関数リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 49161641d1cff1c64261d95bb2caace2f802543a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334434"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324105"
 ---
 # <a name="analyze"></a>分析
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`Analyze` 関数は、ビルドのC++トレース中に MSVC から取得した WINDOWS イベントトレーシング (ETW) トレースを分析するために使用されます。 ETW トレース内のイベントは、呼び出し元によって提供されるアナライザーグループに順次転送されます。 この関数では、イベントストリームを1行に複数回転送できる、複数パスの分析をサポートしています。
+この`Analyze`関数は、C++ ビルドのトレース中に MSVC から取得した Windows イベント トレース (ETW) トレースを分析するために使用されます。 ETW トレース内のイベントは、呼び出し元によって提供されるアナライザー グループに順番に転送されます。 この関数は、イベント ストリームをアナライザ グループに複数回連続して転送できるマルチパス分析をサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -45,20 +45,20 @@ RESULT_CODE Analyze(
 
 ### <a name="parameters"></a>パラメーター
 
-*TAnalyzerGroupMembers*\
-このパラメーターは常に推測されます。
+*グループメンバー*\
+このパラメーターは常に推定されます。
 
-*Inputlogfile*\
-イベントの読み取り元の入力 ETW トレース。
+*入力ログファイル*\
+イベントの読み取りを行う入力 ETW トレース。
 
-*numberofpasses*\
-入力トレースで実行する分析パスの数。 トレースは、分析パスごとに1回、指定されたアナライザーグループを通じて渡されます。
+*パス数*\
+入力トレースで実行する解析パスの数。 トレースは、指定されたアナライザー グループを 1 回、分析パスごとに渡されます。
 
-*analyzerGroup*\
-分析に使用するアナライザーグループ。 [MakeStaticAnalyzerGroup](make-static-analyzer-group.md)を呼び出して、analyzer グループを作成します。 [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md)から取得した動的アナライザーグループを使用するには、まず、そのアドレスを `MakeStaticAnalyzerGroup`に渡すことによって、静的なアナライザーグループ内にカプセル化します。
+*アナライザグループ*\
+分析に使用されるアナライザー グループ。 [アナライザー グループ](make-static-analyzer-group.md)を作成するには、呼び出します。 [から](make-dynamic-analyzer-group.md)取得した動的アナライザー グループを使用するには、まずアドレスをに渡すことによって静的アナライザー グループ内にカプセル`MakeStaticAnalyzerGroup`化します。
 
 ### <a name="return-value"></a>戻り値
 
-[RESULT_CODE](../other-types/result-code-enum.md)列挙型の結果コード。
+[RESULT_CODE](../other-types/result-code-enum.md)列挙型からの結果コード。
 
 ::: moniker-end

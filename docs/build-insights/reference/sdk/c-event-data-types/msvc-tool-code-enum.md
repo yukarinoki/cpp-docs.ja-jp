@@ -1,6 +1,6 @@
 ---
-title: MSVC_TOOL_CODE 列挙型
-description: C++ビルドインサイト SDK MSVC_TOOL_CODE 列挙型参照です。
+title: 列挙MSVC_TOOL_CODE
+description: C++ ビルド インサイト SDK MSVC_TOOL_CODE列挙型参照。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d88a2227808867b04ef3b0557aee9c869beaead1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 96b650b5bce304ad6e487cb100f2b8f85df34eb9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325462"
 ---
-# <a name="msvc_tool_code-enum"></a>MSVC_TOOL_CODE 列挙型
+# <a name="msvc_tool_code-enum"></a>列挙MSVC_TOOL_CODE
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`MSVC_TOOL_CODE` 列挙型。
+列挙`MSVC_TOOL_CODE`型。
 
 ## <a name="members"></a>メンバー
 
-| Name | 値 | Description |
+| 名前 | [値] | 説明 |
 |--|--|--|
-| `MSVC_TOOL_CODE_CL` | 0 (0x00000000) | コンパイラ (cl.exe)。 |
-| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | リンカー (link .exe)。 |
+| `MSVC_TOOL_CODE_CL` | 0 (0x0000000) | コンパイラ (cl.exe)。 |
+| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | リンカー (リンク.exe)。 |
 
 ## <a name="remarks"></a>解説
 
-C SDK 関数によって使用されます。
+C SDK 関数で使用されます。
 
 ::: moniker-end

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151365"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825692"
 ---
 # <a name="structure-and-union-members"></a>構造体と共用体のメンバー
 
 "メンバー選択式" は構造体と共用体のメンバーを参照します。 このような式には、選択したメンバーの値と型が割り当てられます。
 
-> *postfix-expression* **.** *identifier*
+> *postfix-expression* **.** *identifier*\
 > *postfix-expression* **->** *identifier*
 
 ここでは、メンバー選択式の 2 つの形式について説明します。
@@ -33,7 +33,7 @@ ms.locfileid: "56151365"
 
 どちらの形式のメンバー選択式でも同じ結果が得られます。
 
-実際、ピリオド (**.**) を用いた式の左側部分に間接演算子 (<strong>\*</strong>) が適用されている場合、その簡潔バージョンとしてメンバー選択演算子 (**->**) を用いた式を使用できます。 次に例を示します。
+実際、ピリオド ( **.** ) を用いた式の左側部分に間接演算子 (<strong>\*</strong>) が適用されている場合、その簡潔バージョンとしてメンバー選択演算子 ( **->** ) を用いた式を使用できます。 次に例を示します。
 
 ```cpp
 expression->identifier
@@ -72,7 +72,7 @@ item.sp = &item;
 (item.sp)->a = 24;
 ```
 
-この例では、ポインター式 `item.sp` とメンバー選択演算子 (**->**) を使用して、メンバー `a` に値を割り当てています。
+この例では、ポインター式 `item.sp` とメンバー選択演算子 ( **->** ) を使用して、メンバー `a` に値を割り当てています。
 
 ```
 list[8].b = 12;

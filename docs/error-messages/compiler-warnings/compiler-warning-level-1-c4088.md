@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4088
 ms.assetid: 9bab817c-16b2-4324-be5e-f9cbb06b702e
-ms.openlocfilehash: 86069cb9cab1bf8454c9e60053ccfcaeaee5dd6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3deb39656af0de4fcf54ffc9f99c12380c3620
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163964"
 ---
 # <a name="compiler-warning-level-1-c4088"></a>コンパイラの警告 (レベル 1) C4088
 
-'function': 実パラメーター 'number'、仮パラメーター 'number' でポインターが一致しません
+' function ': 実際のパラメーター ' number '、仮パラメーター ' number ' のポインターが一致しません。
 
-対応する仮引数および実パラメーターには、さまざまなレベルの間接参照があります。 実際のパラメーターは、変更せずに渡されます。 呼び出された関数ポインターとしてその値を解釈します。
+対応する仮パラメーターと実パラメーターには、異なるレベルの間接参照があります。 実際のパラメーターは変更なしで渡されます。 呼び出された関数は、その値をポインターとして解釈します。

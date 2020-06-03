@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205310"
 ---
 # <a name="compiler-error-c2441"></a>コンパイラ エラー C2441
 
-> '*variable*' : a symbol declared with __declspec(process) must be const in /clr:pure mode
+> '*variable*': __declspec (process) で宣言されたシンボルは、/clr: pure モードでは const である必要があります
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-既定では、変数は、アプリケーション ドメインごと **/clr: 純粋な**します。 変数がマークされている`__declspec(process)` **/clr: 純粋な**が 1 つのアプリケーション ドメインで変更され、別の読み取りの場合、エラー傾向があります。
+既定では、変数は、 **/clr: pure**の下のアプリケーションドメインごとに設定されます。 **/Clr: pure**の下で `__declspec(process)` とマークされた変数は、あるアプリケーションドメインで変更され、別のアプリケーションドメインで読み取られた場合、エラーが発生しやすくなります。
 
-コンパイラが 1 つの変数をするプロセスはそのため、 `const`  **/clr: 純粋な**、すべてのアプリケーション ドメインでのみそれらの読み取りを行う。
+したがって、コンパイラは、プロセスごとの変数を **/clr: pure**の下で `const` し、すべてのアプリケーションドメインで読み取り専用にします。
 
-詳細については、次を参照してください。[プロセス](../../cpp/process.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、「 [process](../../cpp/process.md) and [/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ## <a name="example"></a>例
 

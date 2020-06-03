@@ -1,117 +1,115 @@
 ---
 title: OLE DB プロバイダー テンプレート リファレンス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.templates.ole
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567d4131229ee25d0d69ff4456398e05af387f0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210042"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB プロバイダー テンプレート リファレンス
 
-クラスと OLE DB プロバイダー テンプレート用のインターフェイスは、次のカテゴリにグループ化できます。 参考資料に関する情報も含まれます、 [OLE DB プロバイダー テンプレート用マクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)します。
+OLE DB プロバイダーテンプレートのクラスとインターフェイスは、次のカテゴリに分類できます。 参照資料には、 [OLE DB プロバイダーテンプレートのマクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)に関する情報も含まれています。
 
-クラスは、次の名前付け規則を使用して、: パターンを持つという名前のクラス`IWidgetImpl`インターフェイスの実装を提供するよう`IWidget`します。
+クラスは、次の名前付け規則を使用します。という名前のクラスは、`IWidgetImpl` パターンを使用して、インターフェイス `IWidget`の実装を提供します。
 
-## <a name="session-classes"></a>セッション クラス
+## <a name="session-classes"></a>セッションクラス
 
 [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)<br/>
-データ ソース オブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。 データ ソース オブジェクトの必須のインターフェイスです。
+データソースオブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。 データソースオブジェクトの必須インターフェイスです。
 
 [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)<br/>
-プロパティ セットのマップによって定義された静的関数を呼び出すことによって、セッションのプロパティを実装します。 セッション クラスでは、プロパティ セットのマップを指定する必要があります。 セッションの必須インターフェイス。
+プロパティセットマップによって定義された静的関数を呼び出すことによって、セッションのプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。 セッションの必須インターフェイス。
 
-## <a name="rowset-classes"></a>行セット クラス
+## <a name="rowset-classes"></a>行セットクラス
 
 [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)
 
-多くの実装インターフェイスの多重継承を必要とせず、標準の OLE DB 行セットの実装を提供します。 唯一のメソッドの実装を提供する必要があります`Execute`します。
+多くの実装インターフェイスを多重継承せずに、標準の OLE DB 行セットの実装を提供します。 実装を提供する必要があるメソッドは `Execute`だけです。
 
 [CSimpleRow](../../data/oledb/csimplerow-class.md)<br/>
-使用されている行ハンドルの既定の実装を提供します、`IRowsetImpl`クラス。 行ハンドルは、論理的に結果の行の一意のタグです。 `IRowsetImpl` 新たに作成`CSimpleRow`で要求されたすべての行の`IRowsetImpl::GetNextRows`します。
+`IRowsetImpl` クラスで使用される行ハンドルの既定の実装を提供します。 行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl` は、`IRowsetImpl::GetNextRows`で要求されたすべての行に対して新しい `CSimpleRow` を作成します。
 
 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)<br/>
-OLE DB プロバイダーを実装するを必要とする`HACCESSOR`、タグの配列には`DBBINDING`構造体。 提供`HACCESSOR`のアドレスを s、`BindType`構造体。 行セットおよびコマンドには必須です。
+OLE DB には、`DBBINDING` 構造体の配列へのタグである `HACCESSOR`を実装するプロバイダーが必要です。 `BindType` 構造体のアドレスである `HACCESSOR`を提供します。 行セットとコマンドでは必須です。
 
 [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)<br/>
-プロバイダーの列マップによって定義される静的関数にデリゲートします。 行セットとコマンドの必須のインターフェイスです。
+プロバイダー列マップによって定義された静的関数にデリゲートします。 行セットとコマンドの必須インターフェイスです。
 
 [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)<br/>
-コマンドまたは行セットでは、型変換の可用性に関する情報を示します。 コマンド、行セット、およびインデックスの行セットでは必須です。 実装、 `IConvertType` OLE DB によって提供される変換オブジェクトへの委任でのインターフェイス。
+コマンドまたは行セットでの型変換の可用性に関する情報を提供します。 コマンド、行セット、およびインデックス行セットでは必須です。 OLE DB によって提供される変換オブジェクトにデリゲートすることによって、`IConvertType` インターフェイスを実装します。
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)<br/>
-実装、`IDBSchemaRowset`インターフェイスと、テンプレート化された作成関数`CreateSchemaRowset`します。
+`IDBSchemaRowset` インターフェイスと、テンプレート化 creator 関数 `CreateSchemaRowset`を実装します。
 
 [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)<br/>
-開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。 セッション オブジェクトの必須のインターフェイスです。
+を開き、1つのベーステーブルまたはインデックスのすべての行を含む行セットを返します。 セッションオブジェクトの必須インターフェイスです。
 
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-OLE DB 実装[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))インターフェイスで、行を削除して、新しい行を挿入する既存の行の列の値の更新が可能です。
+OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))インターフェイスを実装します。これにより、既存の行の列の値を更新したり、行を削除したり、新しい行を挿入したりできます。
 
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
-このクラスから継承[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)と上書き[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。 `IRowsetCreatorImpl` 同じ機能を実行します。`IObjectWithSite`もにより、OLE DB プロパティが`DBPROPCANSCROLLBACKWARDS`と`DBPROPCANFETCHBACKWARDS`します。
+このクラスは、 [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)から継承し、 [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)をオーバーライドします。 `IRowsetCreatorImpl` は `IObjectWithSite` と同じ機能を実行しますが、`DBPROPCANSCROLLBACKWARDS` および `DBPROPCANFETCHBACKWARDS`の OLE DB プロパティも有効にします。
 
 [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)<br/>
-実装、`IRowsetIdentity`インターフェイスで、2 つの行のデータが同一かどうかどうかを比較することができます。
+`IRowsetIdentity` インターフェイスを実装します。これにより、2つのデータ行が同一かどうかを比較できます。
 
 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)<br/>
-実装を提供、`IRowset`インターフェイスで、行セットの基本インターフェイスです。
+基本行セットインターフェイスである `IRowset` インターフェイスの実装を提供します。
 
 [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)<br/>
-プロパティを使用して行セット プロパティの実装では、コマンド クラスで定義されているマップを設定します。 行セットの必須のインターフェイスです。
+コマンドクラスで定義されたプロパティセットマップを使用して、行セットプロパティを実装します。 行セットの必須のインターフェイスです。
 
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-OLE DB 実装[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスで、行セットから任意の行がフェッチされます。 で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。
+行セットから任意の行をフェッチする OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスを実装します。 行セット内の OLE DB ブックマークをサポートするには、行セットがこのクラスから継承されるようにします。
 
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。 通知を処理するコンシューマーの実装[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))そのコネクション ポイントでそれを登録します。
+は、ブロードキャスト関数を実装して、行セットの内容に対する変更の `IID_IRowsetNotify` コネクションポイントでリスナーをアドバイズします。 通知を処理するコンシューマーは、 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))を実装し、その接続ポイントに登録します。
 
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-OLE DB 実装[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))インターフェイスに加えられた変更の送信を遅延するコンシューマー [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))をデータ ソースし、データ転送する前に変更を元に戻します。
+OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))インターフェイスを実装します。これにより、 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))で行われた変更がデータソースに送信されるのをコンシューマーが遅らせ、転送前に変更を元に戻すことができます。
 
-## <a name="command-classes"></a>コマンド クラス
+## <a name="command-classes"></a>コマンドクラス
 
 [ICommandImpl](../../data/oledb/icommandimpl-class.md)<br/>
-`ICommand` インターフェイスの実装を提供します。 このインターフェイスは表示されませんが、によって処理されます`ICommandTextImpl`します。 コマンド オブジェクトの必須インターフェイス。
+`ICommand` インターフェイスの実装を提供します。 このインターフェイスは表示されませんが、`ICommandTextImpl`によって処理されます。 Command オブジェクトの必須のインターフェイスです。
 
 [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)<br/>
-この実装の`ICommandProperties`インターフェイスがによって定義された静的関数によって提供される、`BEGIN_PROPSET_MAP`マクロ。 コマンドでは必須です。
+この `ICommandProperties` インターフェイスの実装は、`BEGIN_PROPSET_MAP` マクロによって定義された静的関数によって提供されます。 コマンドでは必須。
 
 [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)<br/>
-設定、格納、およびコマンド テキストを返します。 コマンドでは必須です。
+コマンドテキストを設定して格納し、返します。 コマンドでは必須。
 
 [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)<br/>
-セッション オブジェクトから、新しいコマンドを作成し、新しく作成されたコマンドに対して要求されたインターフェイスを返します。 セッション オブジェクトの省略可能なインターフェイスです。
+セッションオブジェクトから新しいコマンドを作成し、新しく作成されたコマンドで要求されたインターフェイスを返します。 セッションオブジェクトの省略可能なインターフェイスです。
 
-その他のコマンド クラスは、`IColumnsInfoImpl`と`IAccessorImpl`前の行セット クラスのセクションで説明します。
+その他のコマンドクラスは、上記の「行セットクラス」セクションで説明されている `IColumnsInfoImpl` および `IAccessorImpl`です。
 
-## <a name="data-source-classes"></a>データ ソース クラス
+## <a name="data-source-classes"></a>データソースクラス
 
 [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)<br/>
-作成し、コンシューマーとの接続を削除します。 データ ソース オブジェクトと列挙子の省略可能なインターフェイスで必須のインターフェイスです。
+コンシューマーとの接続を作成および削除します。 列挙子のデータソースオブジェクトおよびオプションのインターフェイスの必須インターフェイス。
 
 [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)<br/>
-`IDBProperties` データ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイスです。 ただし、列挙子を公開する場合`IDBInitialize`、それを公開する必要があります`IDBProperties`(データ ソースのプロパティ)。
+`IDBProperties` は、データソースオブジェクトの必須のインターフェイスであり、列挙子のオプションのインターフェイスです。 ただし、列挙子が `IDBInitialize`を公開する場合は、`IDBProperties` (データソースのプロパティ) を公開する必要があります。
 
 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)<br/>
-データ ソース オブジェクトへのインターフェイス ポインターを取得します。 セッションの必須のインターフェイスです。
+データソースオブジェクトへのインターフェイスポインターを取得します。 セッションの必須インターフェイス。
 
 ## <a name="other-classes"></a>その他のクラス
 
 [CUtlProps](../../data/oledb/cutlprops-class.md)<br/>
-OLE DB プロパティのインターフェイスのさまざまなプロパティを実装する (たとえば、 `IDBProperties`、 `ISessionProperties`、および`IRowsetInfo`)。
+さまざまな OLE DB プロパティインターフェイス (`IDBProperties`、`ISessionProperties`、`IRowsetInfo`など) のプロパティを実装します。
 
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)
 
-OLE DB 実装[IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスにレコードを追加して、データ メンバーからレコードを取得します。
+OLE DB [Ierrorrecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスを実装し、データメンバーにレコードを追加してレコードを取得します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [OLE DB テンプレート](../../data/oledb/ole-db-templates.md)

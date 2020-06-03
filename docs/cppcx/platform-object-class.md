@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8300ec484bdb58919ce8e450b706dd07c275ceee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363687"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 
-Ref クラスと Windows ランタイム アプリで ref 構造体に対して共通の動作を提供します。 ref クラスと ref 構造体のインスタンスは、いずれも Platform::Object^ に暗黙的に変換可能で、仮想の ToString メソッドをオーバーライドできます。
+Windows ランタイム アプリで ref クラスと ref 構造体に対する一般的な動作を提供します。 ref クラスと ref 構造体のインスタンスは、いずれも Platform::Object^ に暗黙的に変換可能で、仮想の ToString メソッドをオーバーライドできます。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +41,7 @@ public ref class Object : Object
 
 |名前|説明|
 |----------|-----------------|
-|[Object::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|
+|[Object::Equals](#equals)|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。|
 |[Object::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|
 |[Object::ReferenceEquals](#referenceequals)|指定された Object インスタンスが同一のインスタンスかどうかを判断します。|
 |[ToString](#tostring)|現在のオブジェクトを表す文字列を返します。 オーバーライドできます。|
@@ -57,11 +57,11 @@ public ref class Object : Object
 
 **ヘッダー:** vccorlib.h
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-## <a name="equals"></a> Object::equals メソッド
+## <a name="objectequals-method"></a><a name="equals"></a>オブジェクト::等しいメソッド
 
-指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。
+指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。
 
 ### <a name="syntax"></a>構文
 
@@ -74,13 +74,13 @@ bool Equals(
 ### <a name="parameters"></a>パラメーター
 
 *obj*<br/>
-比較対象のオブジェクト。
+比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが等しい場合**false**します。
+オブジェクトが等しい場合は**true、** それ以外の場合は**false。**
 
-## <a name="gethashcode"></a>  Object::gethashcode メソッド
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>オブジェクト::メソッドを取得します。
 
 COM オブジェクトの場合は、このインスタンスの `IUnknown`* ID 値を返します。COM オブジェクトでない場合は、計算済みハッシュ値を返します。
 
@@ -94,13 +94,13 @@ public:int GetHashCode();
 
 このオブジェクトを一意に識別する数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-GetHashCode を使用してマップ内のオブジェクトのキーを作成できます。 使用してハッシュ コードを比較できる[object::equals](#equals)します。 コード パスが非常に重要であるときに、`GetHashCode` と `Equals` の実行速度が不十分な場合には、基になる COM レイヤーまで移動して `IUnknown` ネイティブ ポインターの比較を実行できます。
+GetHashCode を使用してマップ内のオブジェクトのキーを作成できます。 ハッシュ コードは[、Object::Equals](#equals)を使用して比較できます。 コード パスが非常に重要であるときに、`GetHashCode` と `Equals` の実行速度が不十分な場合には、基になる COM レイヤーまで移動して `IUnknown` ネイティブ ポインターの比較を実行できます。
 
-## <a name="gettype"></a>  Object::gettype メソッド
+## <a name="objectgettype-method"></a><a name="gettype"></a>オブジェクト::GetType メソッド
 
-返します、 [platform::type](../cppcx/platform-type-class.md)オブジェクトのランタイム型を記述するオブジェクト。
+オブジェクトのランタイム型を記述する[Platform::Type](../cppcx/platform-type-class.md)オブジェクトを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -110,21 +110,21 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-A [platform::type](../cppcx/platform-type-class.md)オブジェクトのランタイム型を記述するオブジェクト。
+オブジェクトのランタイム型を記述する[プラットフォーム::型](../cppcx/platform-type-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用できる、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。
+静的[な型::GetTypeCode](../cppcx/platform-type-class.md#gettypecode)を使用して、現在の型を表す[プラットフォーム::TypeCode 列挙](../cppcx/platform-typecode-enumeration.md)値を取得できます。 これは主に、組み込み型に使用できます。 [プラットフォーム::文字列](../cppcx/platform-string-class.md)はオブジェクト (1) 以外の任意の ref クラスの型コード。
 
-[::Interop::typename](/uwp/api/windows.ui.xaml.interop.typename)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
+[Windows::UI::相互運用::TypeName](/uwp/api/windows.ui.xaml.interop.typename)クラスは、Windows コンポーネントとアプリ間で型情報を渡す言語に依存しない方法として、Windows API で使用されます。 T[プラットフォーム::型クラス](../cppcx/platform-type-class.md)には、 と`Type``TypeName`の間の変換演算子があります。
 
-使用して、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
+たとえば、XAML ページ間を移動`Platform::Type`する場合など、クラス名のオブジェクトを返すには[、typeid](../extensions/typeid-cpp-component-extensions.md)演算子を使用します。
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>  Object::object コンス トラクター
+## <a name="objectobject-constructor"></a><a name="ctor"></a>オブジェクト::オブジェクトコンストラクタ
 
 Object クラスの新しいインスタンスを初期化します。
 
@@ -134,7 +134,7 @@ Object クラスの新しいインスタンスを初期化します。
 public:Object();
 ```
 
-## <a name="referenceequals"></a>  Object::referenceequals メソッド
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>オブジェクト::参照等しいメソッド
 
 指定された Object インスタンスが同一のインスタンスかどうかを判断します。
 
@@ -154,9 +154,9 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **false**します。
+2 つのオブジェクトが同じ場合は**true。** それ以外の場合**は false。**
 
-## <a name="tostring"></a>  Object::tostring メソッド (C++/CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>オブジェクト::ToString メソッド (C++/CX)
 
 現在のオブジェクトを表す文字列を返します。
 
@@ -185,6 +185,6 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[プラットフォーム名前空間](platform-namespace-c-cx.md)<br/>
 [Platform::Type クラス](platform-type-class.md)<br/>
 [型システム](type-system-c-cx.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214176"
 ---
 # <a name="asweak-function"></a>AsWeak 関数
 
@@ -31,24 +31,24 @@ HRESULT AsWeak(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-パラメーターの型へのポインター *p*します。
+パラメーター *p*の型へのポインター。
 
 *p*<br/>
 型のインスタンス。
 
 *pWeak*<br/>
-ときにこの操作が完了すると、パラメーターへの弱い参照へのポインター *p*します。
+この操作が完了したときに、パラメーター *p*への弱い参照へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この操作に成功した場合は S_OK、それ以外の場合、エラーのエラーの原因を示す hresult 値。
+この操作が成功した場合は S_OK。それ以外の場合は、エラーの原因を示すエラー HRESULT。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

@@ -6,11 +6,11 @@ f1_keywords:
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
 ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257781"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427561"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 列挙型
 
@@ -101,7 +101,7 @@ class errc {
 };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="io_errc"></a>io_errc
 
@@ -113,7 +113,7 @@ class io_errc {
 };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) と [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) の両方が、この列挙型に対してオーバーロードされます。
 

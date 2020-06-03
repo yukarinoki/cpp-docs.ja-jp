@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626611"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076943"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild と MSBuild: Visual Studio 2010 でのビルドシステムの変更点
 
@@ -63,7 +63,7 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vc-directories-settings"></a>VC + + ディレクトリの設定
 
-Visual C++ ディレクトリ設定は [[VC++ ディレクトリ プロパティ ページ]](../ide/vcpp-directories-property-page.md) で指定されます。 Visual Studio 2008 以前では、ディレクトリ設定はユーザーごとに適用され、除外されたディレクトリの一覧は*sysincl*ファイルで指定されています。 
+Visual C++ ディレクトリ設定は [[VC++ ディレクトリ プロパティ ページ]](../ide/vcpp-directories-property-page.md) で指定されます。 Visual Studio 2008 以前では、ディレクトリ設定はユーザーごとに適用され、除外されたディレクトリの一覧は*sysincl*ファイルで指定されています。
 
 コマンド ラインで [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) を実行する場合、VC++ ディレクトリ設定を変更できません。 **[ツール]** メニューを開き、 **[設定のインポートとエクスポート]** をクリックし、 **[すべての設定をリセット]** オプションを選択した場合も設定を変更できません。
 
@@ -73,6 +73,6 @@ Visual C++ ディレクトリ設定は [[VC++ ディレクトリ プロパティ
 2. **[選択した環境設定のインポート]** を選択
 3. ウィザードの指示に従います。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コマンド ラインでの MSBuild - C++](../build/msbuild-visual-cpp.md)

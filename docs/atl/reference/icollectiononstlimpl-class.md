@@ -1,5 +1,5 @@
 ---
-title: ICollectionOnSTLImpl クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329903"
 ---
-# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl クラス
+# <a name="icollectiononstlimpl-class"></a>クラス
 
 このクラスは、コレクション クラスで使用されるメソッドを提供します。
 
@@ -32,19 +32,19 @@ class ICollectionOnSTLImpl : public T
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-COM コレクションのインターフェイス。
+COM コレクション インターフェイス。
 
-*CollType*<br/>
+*コルタイプ*<br/>
 C++ 標準ライブラリ コンテナー クラス。
 
-*ItemType*<br/>
-コンテナー インターフェイスによって公開される項目の種類。
+*Itemtype*<br/>
+コンテナー インターフェイスによって公開される項目の型。
 
-*CopyItem*<br/>
-A[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)します。
+*コピーアイテム*<br/>
+[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)。
 
-*EnumType*<br/>
-A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある列挙子クラス。
+*列挙型*<br/>
+[互換性](../../atl/reference/ccomenumonstl-class.md)のある列挙子クラス。
 
 ## <a name="members"></a>メンバー
 
@@ -52,34 +52,34 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある
 
 |名前|説明|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|コレクションの列挙子オブジェクトを返します。|
-|[ICollectionOnSTLImpl::getcount](#get_count)|コレクション内の要素の数を返します。|
-|[ICollectionOnSTLImpl::get_Item](#get_item)|要求された項目をコレクションから返します。|
+|[コレクションオンストルプル::get__NewEnum](#newenum)|コレクションの列挙子オブジェクトを返します。|
+|[コレクションオンストルプル::ゲットカウント](#get_count)|コレクション内の要素の数を返します。|
+|[コレクションオンストルプル::get_Item](#get_item)|コレクションから要求された項目を返します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|コレクション。|
+|[コレクションオンストルプル::m_coll](#m_coll)|コレクションです。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、3 つの方法、コレクション インターフェイスの実装を提供します。 [getcount](#get_count)、 [get_Item](#get_item)、および[get__NewEnum](#newenum)します。
+このクラスは、コレクション インターフェイスの 3 つのメソッド[getcount](#get_count)の実装[get__NewEnum](#newenum)を提供します[get_Item。](#get_item)
 
-このクラスを使用します。
+このクラスを使用するには、次の手順に従います。
 
-- 実装するコレクション インターフェイスを定義 (または借用)。
+- 実装するコレクション インターフェイスを定義 (借用) します。
 
-- 特殊化クラスを派生`ICollectionOnSTLImpl`このコレクションのインターフェイスに基づいています。
+- このコレクション インターフェイスに`ICollectionOnSTLImpl`基づく特殊化からクラスを派生させます。
 
-- 派生クラスを使用してによって処理されないコレクション インターフェイスからすべてのメソッドを実装する`ICollectionOnSTLImpl`します。
+- 派生クラスを使用して、 で`ICollectionOnSTLImpl`処理されないコレクション インターフェイスからメソッドを実装します。
 
 > [!NOTE]
->  コレクション インターフェイスがデュアル インターフェイスの場合は、派生クラスから[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)を渡して、`ICollectionOnSTLImpl`特殊化の実装を提供する場合は、最初のテンプレート パラメーターとして、 `IDispatch`メソッド。
+> コレクション インターフェイスがデュアル インターフェイスの場合は、ATL がメソッドの実装を`ICollectionOnSTLImpl`提供する場合は、最初のテンプレート パラメーターとして特化を渡す`IDispatch`[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)からクラスを派生します。
 
-- 項目の追加、 [m_coll](#m_coll)コレクションを設定するメンバー。
+- コレクションにデータを追加する[m_coll](#m_coll)メンバーに項目を追加します。
 
-詳細と例については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+詳細と例については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -91,9 +91,9 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある
 
 **ヘッダー:** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>コレクションオンストルプル::ゲットカウント
 
-このメソッドは、コレクション内の項目の数を返します。
+このメソッドは、コレクション内の項目数を返します。
 
 ```
 STDMETHOD(getcount)(long* pcount);
@@ -102,15 +102,15 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>パラメーター
 
 *pcount*<br/>
-[out]コレクション内の要素の数。
+[アウト]コレクション内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>コレクションオンストルプル::get_Item
 
-このメソッドは、指定した項目をコレクションから返します。
+このメソッドは、指定された項目をコレクションから返します。
 
 ```
 STDMETHOD(get_Item)(long Index, ItemType* pvar);
@@ -118,21 +118,21 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>パラメーター
 
-*Index*<br/>
+*インデックス*<br/>
 [in]コレクション内の項目の 1 から始まるインデックス。
 
-*pvar*<br/>
-[out]対応する項目*インデックス*します。
+*プバー*<br/>
+[アウト]*インデックス*に対応する項目。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した位置にあるデータをコピーすることによって、アイテムの取得は[m_coll](#m_coll)の copy メソッドを使用して、[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)のテンプレート引数として渡される、`ICollectionOnSTLImpl`特殊化します。
+項目は、特殊化でテンプレート引数として渡された[コピー・ポリシー・クラスのコピー](../../atl/atl-copy-policy-classes.md) ・メソッドを使用して[、m_coll](#m_coll)内の指定された位置にある`ICollectionOnSTLImpl`データをコピーすることによって取得されます。
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>コレクションオンストルプル::get__NewEnum
 
 コレクションの列挙子オブジェクトを返します。
 
@@ -143,17 +143,17 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ### <a name="parameters"></a>パラメーター
 
 *ppUnk*<br/>
-[out]**IUnknown**新しく作成された列挙子オブジェクトのポインター。
+[アウト]新しく作成された列挙子オブジェクトの**IUnknown**ポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-新しく作成された列挙子が元のコレクションの反復子を保持`m_coll`(コピーは作成されません) ため、未処理の列挙子があるときに、コレクションが存続することを確認するコレクション オブジェクトの COM の参照を保持しています。
+新しく作成された列挙子は、元のコレクションの反復子を`m_coll`保持し (コピーは行われず)、コレクション オブジェクトに対する COM 参照を保持して、未処理の列挙子が存在する間もコレクションが保持されるようにします。
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>コレクションオンストルプル::m_coll
 
 このメンバーは、コレクションによって表される項目を保持します。
 
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>関連項目
 
-[ATLCollections サンプル](../../overview/visual-cpp-samples.md)<br/>
+[ATL コレクションのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

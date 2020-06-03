@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214059"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
 
@@ -33,31 +33,31 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ### <a name="parameters"></a>パラメーター
 
 *flags*<br/>
-1 つ以上を組み合わせた[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値。
+1つ以上の[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値の組み合わせ。
 
 *entry*<br/>
-ポインターを[CreatorMap](creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。
+パラメーター *riid*に関する初期化および登録情報を格納する[CreatorMap](creatormap-structure.md)へのポインター。
 
 *riid*<br/>
-インターフェイス ID への参照
+インターフェイス ID への参照。
 
 *ppFactory*<br/>
-この操作は、クラス ファクトリへのポインターでは正常に完了します。 場合、
+この操作が正常に完了した場合は、クラスファクトリへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場合は、アサート エラーが出力テンプレート パラメーター*ファクトリ*インターフェイスから派生していない`IClassFactory`します。
+テンプレートパラメーター*ファクトリ*がインターフェイス `IClassFactory`から派生していない場合、assert エラーが生成されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** resource.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Wrappers::Details 名前空間](microsoft-wrl-wrappers-details-namespace.md)

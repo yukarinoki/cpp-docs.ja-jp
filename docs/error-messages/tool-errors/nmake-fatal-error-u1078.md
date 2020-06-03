@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366889"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193655"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE の致命的なエラー U1078
 
-'expression' で定数のオーバーフロー
+' expression ' で定数のオーバーフローが発生しています。
 
-指定された式には-2,147, 483,648 を 2,147, 483,647 の範囲を超えています。 定数が含まれています。 次の状況のいずれかで、定数が表示されました。
+指定された式には、-2147483648 ~ 2147483647 の範囲を超えた定数が含まれています。 定数は、次のいずれかの状況で表示されます。
 
-- プリプロセッサ ディレクティブで指定された式
+- プリプロセスディレクティブで指定された式
 
-- 使用する、指定したエラー レベル (**-**) コマンド修飾子
+- ダッシュ ( **-** ) コマンド修飾子で指定されたエラーレベル

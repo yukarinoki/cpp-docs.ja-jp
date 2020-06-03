@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188299"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 
@@ -23,9 +23,9 @@ ms.locfileid: "62403439"
 
 - 関数が戻るとき、参照先オブジェクトはスコープ外に出ません。
 
-ラージ オブジェクトを渡す方が効率的であることができますよう*に*参照によって関数を指定することも大きなオブジェクトを返すより効率的な*から*参照によって関数。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。
+大きなオブジェクトを参照によって関数*に*渡す方が効率的な場合があるのと同様に、関数*から*大きなオブジェクトを参照渡しで返す方が効率的な場合もあります。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。
 
-参照戻り値の型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバー ロードされた演算子は、「[オーバー ロードされた演算子](../cpp/operator-overloading.md)します。
+参照戻り値の型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバーロードされた演算子は、オーバーロードされた[演算子](../cpp/operator-overloading.md)で扱われます。
 
 ## <a name="example"></a>例
 
@@ -73,7 +73,7 @@ cout << "x = " << ThePoint.x() << "\n"
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```Output
 x = 7
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-この場合、コンパイラで警告:`warning C4172: returning address of local variable or temporary`します。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。
+コンパイラは、`warning C4172: returning address of local variable or temporary`の場合に警告を発行します。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [参照](../cpp/references-cpp.md)

@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s、_wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942022"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915180"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 変数の値を格納するバッファー。
 
 *numberOfElements*<br/>
@@ -84,9 +87,9 @@ errno_t _wdupenv_s(
 
 これらの関数が十分なメモリを割り当てられない場合、 *buffer*を**NULL**に設定し、 *numberofelements*を0に設定して、 **ENOMEM**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Dupenv_s**関数は、変数*varname*の環境変数の一覧を検索します。 変数が見つかった場合、 **_dupenv_s**はバッファーを割り当て、変数の値をバッファーにコピーします。 バッファーのアドレスと長さは、 *Buffer* *要素と numberofelements*で返されます。 **_Dupenv_s**は、バッファー自体を割り当てることにより、 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)に代わる便利な手段を提供します。
+**_Dupenv_s**関数は、変数*varname*の環境変数の一覧を検索します。 変数が見つかった場合、 **_dupenv_s**はバッファーを割り当て、変数の値をバッファーにコピーします。 バッファーのアドレスと長さは、 *Buffer* *要素と numberofelements*で返されます。 バッファー自体を割り当てることにより、 **_dupenv_s**は[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)に代わる便利な手段となります。
 
 > [!NOTE]
 > [free](free.md) の呼び出しによるメモリの解放は、呼び出し元プログラムが行います。
@@ -95,11 +98,13 @@ errno_t _wdupenv_s(
 
 バッファーのサイズに関心がない場合は、 *Numberofelements*に**NULL**を渡すことができます。
 
-Windows オペレーティングシステムでは、 **_dupenv_s**は大文字と小文字が区別されません。 **_dupenv_s**は、グローバル変数 **_environ**が指す環境のコピーを使用して環境にアクセスします。 **_Environ**の説明については、 [getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)の「解説」を参照してください。
+Windows オペレーティングシステムでは、 **_dupenv_s**の大文字と小文字は区別されません。 **_dupenv_s**は、グローバル変数 **_environ**が指す環境のコピーを使用して環境にアクセスします。 **_Environ**の説明については[_wgetenv_s、Getenv_s](getenv-s-wgetenv-s.md)の「解説」を参照してください。
 
 *Buffer*の値は、環境変数の値のコピーです。これを変更しても、環境には影響しません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
 
-**_wdupenv_s**は、 **_dupenv_s**のワイド文字バージョンです。 **_wdupenv_s**の引数はワイド文字列です。 **_Wenviron**グローバル変数は、 **_environ**のワイド文字バージョンです。 **_Wenviron**の詳細については、 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)の解説を参照してください。
+**_wdupenv_s**は **_dupenv_s**のワイド文字バージョンです。**_wdupenv_s**の引数はワイド文字列です。 **_Wenviron**グローバル変数は、 **_environ**のワイド文字バージョンです。 **_Wenviron**の詳細については[_wgetenv_s、「getenv_s](getenv-s-wgetenv-s.md) 」の「解説」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -109,12 +114,12 @@ Windows オペレーティングシステムでは、 **_dupenv_s**は大文字�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -144,7 +149,7 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [環境定数](../../c-runtime-library/environmental-constants.md)<br/>
 [_dupenv_s_dbg、_wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)<br/>

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1051
 ms.assetid: 87dcbd3b-0952-499a-bd42-64f9e8de2605
-ms.openlocfilehash: afc851cc9e46df0555d3702db982d5c3890d99ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa897d6e7f4d1d5d6bdd06dba33d0eeb1c238049
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204504"
 ---
 # <a name="fatal-error-c1051"></a>致命的なエラー C1051
 
-プログラム データベース ファイル、'pdbfile' が古い形式を削除して再コンパイルしてください。
+プログラムデータベースファイル ' pdbfile ' は古い形式であるため、削除して再コンパイルしてください。
 
-コンパイラは、以前のバージョン番号のあるプログラム データベース ファイルを更新できません。 ファイルを削除し、プログラムを再コンパイル **/Zi**または **/ZI**します。 詳細については、次を参照してください[/Z7、/Zi、/ZI (デバッグ情報の形式)。](../../build/reference/z7-zi-zi-debug-information-format.md)
+コンパイラは、以前のバージョン番号を持つプログラムデータベースファイルを更新できません。 ファイルを削除し、 **/zi**または **/zi**を使用してプログラムを再コンパイルします。 詳細については、「 [/Z7、/zi、/zi (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md) 」を参照してください。

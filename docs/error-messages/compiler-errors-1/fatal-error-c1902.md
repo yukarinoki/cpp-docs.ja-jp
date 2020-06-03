@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1902
 ms.assetid: 2dc066cc-fcb1-4725-8bcb-9f44dd0905b7
-ms.openlocfilehash: c425430a6d08ae8a97c4dcd0f5764f44dee43e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10a411dfc942498a98959d9a23cb42dfb93cf2ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165867"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202827"
 ---
 # <a name="fatal-error-c1902"></a>致命的なエラー C1902
 
-プログラム データベース マネージャーが一致しません。インストールを確認してください。
+プログラムデータベースマネージャーが一致しません。インストールを確認してください
 
-プログラム データベース ファイル (.pdb) は、新しいバージョンの mspdb を使用して作成された*XXX*.dll、システムで、コンパイラが検出されたものです。 このエラーは mspdbsrv.exe または mspdbcore.dll が見つからないか、mspdb は異なるバージョンがあることには、通常を示します*XXX*.dll です。 (、 *XXX* 、mspdb 内のプレース ホルダー*XXX*製品リリースごとに .dll ファイル名の変更。 たとえば、Visual Studio 2015 で、ファイル名は mspdb140.dll。)
+プログラムデータベースファイル (.pdb) は、システムで検出されたものより新しいバージョンの mspdb*XXX*.dll を使用して作成されました。 通常、このエラーは、mspdbsrv または mspdbsrv .dll が不足しているか、または mspdb*XXX*.dll とは異なるバージョンを持っていることを示します。 (Mspdb*xxx*.dll ファイル名の*xxx*プレースホルダーは、各製品リリースで変更されます。 たとえば、Visual Studio 2015 では、ファイル名は mspdb140.dll です)。
 
-Mspdbsrv.exe、mspdbcore.dll、mspdb の一致するバージョンを確認します。*XXX*.dll は、システムにインストールされます。 バージョンが一致しないが、ターゲット プラットフォームのコンパイラとリンク ツールを含むディレクトリにコピーされていないことを確認します。 たとえば、する可能性がありますファイルをコピー、設定がない場合、コマンド プロンプトから、コンパイラまたはリンク ツールを起動できるように、**パス**環境変数それに応じて。
+一致するバージョンの mspdbsrv、mspdbsrv .dll、および mspdb*XXX*.dll がシステムにインストールされていることを確認します。 ターゲットプラットフォームのコンパイラおよびリンクツールが格納されているディレクトリに、一致しないバージョンがコピーされていないことを確認します。 たとえば、ファイルをコピーして、 **PATH**環境変数を適宜設定せずに、コマンドプロンプトからコンパイラまたはリンクツールを呼び出すことができるようにすることができます。

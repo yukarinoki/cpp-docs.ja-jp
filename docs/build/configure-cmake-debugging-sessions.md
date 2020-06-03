@@ -1,47 +1,57 @@
 ---
 title: Visual Studio で CMake デバッグ セッションを構成する
-description: Visual Studio を使用して CMake デバッガーの設定を構成する方法について説明します。
-ms.date: 01/13/2020
+description: Visual Studio を使用して CMake デバッガー設定を構成する方法について説明します。
+ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
-ms.translationtype: MT
+ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031327"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630532"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
 ::: moniker range="vs-2015"
 
-ネイティブ CMake のサポートは、Visual Studio 2017 以降で使用できます。
+CMake のネイティブ サポートは Visual Studio 2017 以降で利用できます。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **バージョン** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-すべての実行可能な CMake ターゲットが、 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 デバッグ セッションを開始するには、1 つを選択してデバッガーを起動するだけです。
+すべての実行可能な CMake ターゲットが、 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 1 つを選択してデバッグ セッションを開始し、デバッガーを起動します。
 
-![CMake スタートアップ項目のドロップダウン](media/cmake-startup-item-dropdown.png "CMake スタートアップ項目のドロップダウン")
+![CMake のスタートアップ アイテム](media/cmake-startup-item-dropdown.png "CMake の [スタートアップ アイテム] ドロップダウン")
 
-ソリューションエクスプローラーからデバッグセッションを開始することもできます。 最初に、 **[ソリューションエクスプローラー]** ウィンドウの [ **Cmake ターゲット] ビュー**に切り替えます。
+ソリューション エクスプローラーからデバッグ セッションを開始することもできます。 まず、 **[ソリューション エクスプローラー]** ウィンドウで **[CMake ターゲット ビュー]** に切り替えます。
 
-![CMake ターゲットビューのボタン](media/cmake-targets-view.png  "CMake ターゲットビューのメニュー項目")
+![[CMake ターゲット ビュー] ボタン](media/cmake-targets-view.png  "[CMake ターゲット ビュー] メニュー項目")
 
-次に、任意の実行可能ファイルを右クリックし、 **[デバッグ]** または **[デバッグと起動の設定]** を選択します。 **デバッグ**は、アクティブな構成に基づいて、選択したターゲットのデバッグを自動的に開始します。 **デバッグと起動の設定**では、*起動した json*ファイルが開き、選択したターゲットの新しいデバッグ構成が追加されます。
+次に、実行可能ファイルを右クリックして **[デバッグ]** を選択します。 このコマンドにより、アクティブな構成に基づいて、選択したターゲットのデバッグが自動的に開始されます。
 
 ## <a name="customize-debugger-settings"></a>デバッガー設定をカスタマイズする
 
-プロジェクト内の任意の実行可能な CMake ターゲットのデバッガー設定は、 *launch*. という名前のファイルでカスタマイズできます。 このファイルには、次の3つのエントリポイントがあります。
+プロジェクト内の任意の実行可能な CMake ターゲットのデバッガー設定をカスタマイズできます。 これらの設定は、プロジェクト ルートの *`.vs`* フォルダー内にある *launch.vs.json* という構成ファイル内にあります。 起動構成ファイルは、デバッグ設定の詳細を構成して保存できるため、ほとんどのデバッグ シナリオで役立ちます。 このファイルには 3 つのエントリ ポイントがあります。
 
-- メインメニューから [デバッグ **> デバッグと起動の設定**] を選択して、アクティブなデバッグターゲットに固有のデバッグ構成を編集します。 アクティブなターゲットを選択していない場合、このオプションはグレー表示されます。
+- **[デバッグ] メニュー:** メイン メニューから **[デバッグ] > [${activeDebugTarget} のデバッグおよび起動の設定]** を選択し、アクティブなデバッグ ターゲットに固有のデバッグ構成をカスタマイズします。 デバッグ ターゲットを選択していない場合、このオプションはグレー表示されます。
 
-- ソリューションエクスプローラーの [**ターゲット] ビュー**に移動します。 次に、デバッグターゲットを右クリックし、 **[デバッグ設定と起動設定]** を選択して、選択したターゲットに固有のデバッグ構成を編集します。
+![[デバッグ] メニュー エントリ ポイント](media/cmake-debug-menu.png "[デバッグ] メニュー エントリ ポイント")
 
-- ルートの CMakeLists を右クリックし、 **[デバッグ設定と起動設定]** を選択して **[デバッガーの選択]** ダイアログボックスを開きます。 このダイアログでは、任意のデバッグ構成を追加できますが、`projectTarget` プロパティを使用して呼び出す CMake ターゲットを手動で指定する必要があります。
+- **ターゲット ビュー:** ソリューション エクスプローラーで**ターゲット ビュー**に移動します。 次に、デバッグ ターゲットを右クリックし、 **[Add Debug Configuration]\(デバッグ構成の追加\)** を選び、選択したターゲットに固有のデバッグ構成をカスタマイズします。
 
-*Cmakesettings. json*ファイル内の任意のキーを参照するには、「 *launch. vs. json*」で `cmake.` を先頭に付けます。 次の例は、現在選択されている構成の*Cmakesettings. json*ファイル内の `remoteCopySources` キーの値を取得する単純な*起動と json*ファイルを示しています。
+![ターゲット ビュー エントリ ポイント](media/cmake-targets-add-debug-configuration.png "ターゲット ビュー エントリ ポイント")
+
+- **ルートの CMakeLists.txt:** ルートの *CMakeLists.txt* を右クリックし、 **[Add Debug Configuration]\(デバッグ構成 の追加\)** を選んで **[デバッガーの選択]** ダイアログ ボックスを開きます。 このダイアログでは、"*すべての*" 種類のデバッグ構成を追加できますが、`projectTarget` プロパティを使用して、呼び出す CMake ターゲットを手動で指定する必要があります。
+
+![[デバッガーの選択] ダイアログ ボックス](media/cmake-select-a-debugger.png "[デバッガーの選択] ダイアログ ボックス")
+
+*launch.vs.json* ファイルを編集して、任意の数の CMake ターゲットに対してデバッグ構成を作成できます。 このファイルを保存すると、Visual Studio によって **[スタートアップ アイテム]** ドロップダウンに新しい構成ごとにエントリが作成されます。
+
+## <a name="reference-keys-in-cmakesettingsjson"></a>CMakeSettings.json のキーを参照する
+
+*CMakeSettings.json* ファイル内の任意のキーを参照するには、*launch.vs.json*内でそのキーの先頭に `cmake.` を追加します。 次に示す簡単な *launch.vs.json* ファイルの例では、現在選択されている構成に対して、*CMakeSettings.json* ファイル内の `remoteCopySources` キーの値を取得しています。
 
 ```json
 {
@@ -59,56 +69,131 @@ ms.locfileid: "76031327"
 }
 ```
 
-Launch ファイルと*json*ファイルを保存すると、Visual Studio によって、 **[スタートアップ項目]** ドロップダウンに新しい名前のエントリが作成されます。 任意の数の CMake ターゲットに対して、複数のデバッグ構成を作成するために、launch ファイルと*json*ファイルを編集することができます。
+また、構文 `${env.VARIABLE_NAME}` を使用して、*CMakeSettings.json* で定義されている**環境変数**を launch.vs.json で使用することもできます。 Visual Studio 2019 バージョン 16.4 以降では、*CMakeSettings.json* で指定した環境を使用して、デバッグ ターゲットが自動的に起動されます。 環境変数は、**null** に設定することで、設定解除できます。
 
-## <a name="launchvsjson-reference"></a>を起動します。と json のリファレンス
+## <a name="launchvsjson-reference"></a>Launch.vs.json の参照
 
-すべてのデバッグシナリオをサポートするために、多くの launch プロパティと*json*プロパティがあります。 次のプロパティは、リモートとローカルの両方で、すべてのデバッグ構成に共通です。
+*launch.vs.json* には、あらゆるデバッグ シナリオをサポートするためのプロパティが多数あります。 次のプロパティは、リモートとローカルの両方において、すべてのデバッグ構成に共通です。
 
-- `projectTarget`: プロジェクトをビルドするときに呼び出す CMake ターゲットを指定します。 このプロパティは、 **$ {activeDebugTarget} またはターゲットビューのデバッグ > デバッグと起動の設定をデバッグ**から*開始*した場合に、Visual Studio によって自動的に設定されます。
+- `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー**または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 この値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致する必要があります。
 
-- `program`: リモートシステム上のプログラム実行可能ファイルへの完全パス。 ここでは、マクロ `${debugInfo.fullTargetPath}` を使用できます。
-
-- `args`: デバッグするプログラムに渡されるコマンドライン引数。
-
-## <a name="launchvsjson-reference-for-remote-linux-projects"></a>リモートの Linux プロジェクトの場合は、「」を参照してください。
-
-次のプロパティは、**リモートデバッグ構成**に固有です。 また、[カスタムの gdb コマンドを実行](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)して、基になるデバッガーにコマンドを直接送信したり、 [miengine のログ記録を有効](https://github.com/microsoft/MIEngine/wiki/Logging)にして、gdb に送信されるコマンド、gdb が返す出力、および各コマンドの実行時間を確認することもできます。
-
-- `cwd`: リモートコンピューター上の依存関係やその他のファイルを検索するための現在の作業ディレクトリ。 マクロ `${debugInfo.defaultWorkingDirectory}` を使用できます。 既定値は、 *Cmakelists*でオーバーライドされない限り、リモートワークスペースのルートになります。 このプロパティは、リモート構成にのみ使用されます。`currentDir` は、ローカルプロジェクトの起動中のアプリの現在のディレクトリを設定するために使用されます。
-
-- `environment`: 次の構文でプログラムの環境に追加する追加の環境変数。
-
-```json
-  "environment": [
-      {
-        "name": "ENV1",
-        "value": "envvalue1"
-      },
-      {
-        "name": "ENV2",
-        "value": "envvalue2"
-      }
-    ]
-```
-
-- `pipeArgs`: 接続を構成するためにパイププログラムに渡されるコマンドライン引数。 パイププログラムは、Visual Studio と gdb の間で標準入力/出力を中継するために使用されます。 コマンド `${debuggerCommand}` は、リモートシステムで gdb を起動し、次のように変更できます。
-
-  - 環境変数の表示の値を Linux システムにエクスポートします。 次の例では、この値は `:1`です。
+- `env`:次の構文を使用して追加する追加の環境変数。
 
   ```json
-  "pipeArgs": [
-      "/s",
-      "${debugInfo.remoteMachineId}",
-      "/p",
-      "${debugInfo.parentProcessId}",
-      "/c",
-      "export DISPLAY=:1;${debuggerCommand}",
-      "--tty=${debugInfo.tty}"
-    ],
+  "env": {
+        "DEBUG_LOGGING_LEVEL": "trace;info",
+        "ENABLE_TRACING": "true"
+      }
   ```
 
-  - Gdb の実行前にスクリプトを実行します。 実行権限がスクリプトに設定されていることを確認します。
+- `args`:デバッグするプログラムに渡されるコマンド ライン引数。
+
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>リモート プロジェクトおよび WSL 用の Launch.vs.json の参照
+
+Visual Studio 2019 バージョン 16.6 では、リモート システムおよび WSL でのデバッグを簡略化するために、新しいデバッグ構成の `type: cppgdb` が追加されました。 古いデバッグ構成の `type: cppdbg` は引き続きサポートされます。
+
+### <a name="configuration-type-cppgdb"></a>構成の種類 `cppgdb`
+
+- `name`: **[スタートアップ アイテム]** ドロップダウンで構成を識別するためのフレンドリ名。
+- `project`:プロジェクト ファイルへの相対パスを指定します。 通常、CMake プロジェクトをデバッグするときに、このパスを変更する必要はありません。
+- `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー**または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 このターゲット値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致している必要があります。
+- `debuggerConfiguration`:使用するデバッグの既定値のセットを指定します。 Visual Studio 2019 バージョン 16.6 では、有効なオプションは `gdb`のみです。 Visual Studio 2019 バージョン 16.7 以降は `gdbserver` もサポートしています。
+- `args`:スタートアップ時にデバッグ中のプログラムに渡されるコマンド ライン引数。
+- `env`:デバッグ中のプログラムに渡される追加の環境変数。 たとえば、`{"DISPLAY": "0.0"}` のようにします。
+- `processID`:アタッチする Linux プロセス ID。 リモート プロセスにアタッチする場合にのみ使用されます。 詳細については、「[GDB を使用したプロセスへのアタッチのトラブルシューティング](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB)」を参照してください。
+
+#### <a name="additional-options-for-the-gdb-configuration"></a>`gdb` 構成の追加オプション
+
+- `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
+- `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
+- `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの UNIX パス。 ディレクトリは存在している必要があります。
+- `gdbpath`:既定値は `/usr/bin/gdb` です。 デバッグに使用される `gdb` への完全な UNIX パス。 `gdb` のカスタム バージョンを使用する場合にのみ必須です。
+- `preDebugCommand`:`gdb` を呼び出す直前に実行する Linux コマンド。 このコマンドが完了するまで `gdb` は開始されません。 このオプションを使用すると、`gdb` の実行前にスクリプトを実行できます。
+
+#### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>`gdbserver` 構成で使用できるその他のオプション (16.7 以降)
+
+- `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
+- `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
+- `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの完全な UNIX パス。 ディレクトリは存在している必要があります。
+- `gdbPath`:既定値は `${debugInfo.vsInstalledGdb}` です。 デバッグに使用される `gdb` の完全な Windows パス。 既定値は、C および C++ ワークロードを使用する Linux 開発でインストールされる `gdb` です。
+- `gdbserverPath`:既定値は `usr/bin/gdbserver` です。 デバッグに使用される `gdbserver` への完全な UNIX パス。
+- `preDebugCommand`:`gdbserver` を呼び出す直前に実行する Linux コマンド。 このコマンドが完了するまで `gdbserver` は開始されません。
+
+#### <a name="deployment-options"></a>配置オプション
+
+次のオプションを使用して、リモート デバッグ マシンからビルド マシン (CMakeSettings.json で定義) を分離します。
+
+- `remoteMachineName`:リモート デバッグ マシン。 ビルド マシンと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
+- `disableDeploy`:既定値は `false` です。 ビルドとデバッグの分離が無効になっているかどうかを示します。 このオプションが `false` の場合、2 つの異なるマシンでビルドとデバッグを実行できます。
+- `deployDirectory`:実行可能ファイルがコピーされる `remoteMachineName` 上のディレクトリへの完全な UNIX パス。
+- `deploy`:配置の詳細設定の配列。 配置プロセスをより細かく制御する場合にのみ、これらの設定を構成する必要があります。 既定では、リモート デバッグ マシンには、デバッグ プロセスに必要なファイルのみが配置されます。
+  - `sourceMachine`:ファイルまたはディレクトリのコピー元のマシン。 **Ctrl + Space** キーを押して、接続マネージャーに格納されているすべてのリモート接続を一覧表示します。 WSL でネイティブにビルドする場合、このオプションは無視されます。
+  - `targetMachine`:ファイルまたはディレクトリのコピー先のマシン。 **Ctrl + Space** キーを押して、接続マネージャーに格納されているすべてのリモート接続を一覧表示します。
+  - `sourcePath`:`sourceMachine` 上のファイルまたはディレクトリの場所。
+  - `targetPath`:`targetMachine` 上のファイルまたはディレクトリの場所。
+  - `deploymentType`:配置の種類の説明。 `LocalRemote` と `RemoteRemote` がサポートされています。 `LocalRemote` は、ローカル システムから、*launch.vs.json* の `remoteMachineName` で指定されたリモート システムへのコピーを意味します。 `RemoteRemote` は、*CMakeSettings.json* に指定されたリモート ビルド システムから、*launch.vs.json* に指定された別のリモート システムへのコピーを意味します。
+  - `executable`:配置されたファイルが実行可能ファイルであるかどうかを示します。
+
+### <a name="execute-custom-gdb-commands"></a>カスタムの `gdb` コマンドを実行する
+
+Visual Studio では、基になるデバッガーを直接操作するカスタムの `gdb` コマンドの実行がサポートされています。 詳細については、「[カスタムの `gdb` lldb コマンドの実行](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)」を参照してください。
+
+### <a name="enable-logging"></a>ログの有効化
+
+`gdb` に送信されるコマンド、`gdb` から返される出力、各コマンドの所要時間を確認するには、MIEngine ログを有効にします。 [詳細を表示](https://github.com/microsoft/MIEngine/wiki/Logging)
+
+### <a name="configuration-type-cppdbg"></a>構成の種類 `cppdbg`
+
+構成の種類 `cppdbg` を使用してリモート システムまたは WSL でデバッグする場合は、次のオプションを使用できます。 Visual Studio 2019 バージョン 16.6 以降では、構成の種類 `cppgdb` をお勧めします。
+
+- `name`: **[スタートアップ アイテム]** ドロップダウンで構成を識別するためのフレンドリ名。
+
+- `project`:プロジェクト ファイルへの相対パスを指定します。 通常、CMake プロジェクトをデバッグするときに、この値を変更する必要はありません。
+
+- `projectTarget`:プロジェクトのビルド時に呼び出す CMake ターゲットを指定します。 **[デバッグ] メニュー**または**ターゲット ビュー**から *launch.vs.json* にアクセスすると、Visual Studio によって、このプロパティが自動的に設定されます。 この値は、 **[スタートアップ アイテム]** ドロップダウンに表示されている既存のデバッグ ターゲットの名前と一致する必要があります。
+
+- `args`:スタートアップ時にデバッグ中のプログラムに渡されるコマンド ライン引数。
+
+- `processID`:アタッチする Linux プロセス ID。 リモート プロセスにアタッチする場合にのみ使用されます。 詳細については、「[GDB を使用したプロセスへのアタッチのトラブルシューティング](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB)」を参照してください。
+
+- `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
+
+- `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
+
+- `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの完全な UNIX パス。 ディレクトリは存在している必要があります。
+
+- `environment`:デバッグ中のプログラムに渡される追加の環境変数。 たとえば、オブジェクトに適用された
+
+  ```json
+    "environment": [
+        {
+          "name": "ENV1",
+          "value": "envvalue1"
+        },
+        {
+          "name": "ENV2",
+          "value": "envvalue2"
+        }
+      ]
+  ```
+
+- `pipeArgs`:接続を構成するためにパイプ プログラムに渡されるコマンド ライン引数の配列。 パイプ プログラムは、Visual Studio と `gdb` の間で標準の入出力をリレーするために使用されます。 この配列の大部分は、CMake プロジェクトをデバッグするときに**カスタマイズする必要はありません**。 リモート システムで`gdb` を起動する `${debuggerCommand}` コマンドは例外です。 これは、次の操作を行うように変更できます。
+
+  - 環境変数 DISPLAY の値を Linux システムにエクスポートします。 次の例では、この値は `:1` です。
+
+    ```json
+    "pipeArgs": [
+        "/s",
+        "${debugInfo.remoteMachineId}",
+        "/p",
+        "${debugInfo.parentProcessId}",
+        "/c",
+        "export DISPLAY=:1;${debuggerCommand}",
+        "--tty=${debugInfo.tty}"
+      ],
+    ```
+
+  - `gdb` の実行前にスクリプトを実行します。 スクリプトに実行権限が設定されていることを確認してください。
 
     ```json
     "pipeArgs": [
@@ -122,65 +207,21 @@ Launch ファイルと*json*ファイルを保存すると、Visual Studio に�
       ],
     ```
 
-- `stopOnEntry`: プロセスが起動されるとすぐに中断するかどうかを指定するブール値です。 既定値は false です。
+- `stopOnEntry`:プロセスの起動時にすぐに中断するかどうかを指定するブール値。 既定値は false です。
 
-- `visualizerFile`: このプロセスをデバッグするときに使用する[natvis ファイル](/visualstudio/debugger/create-custom-views-of-native-objects)。 このオプションは gdb の整形出力と互換性がありません。 また、このプロパティを設定するときに `showDisplayString` も設定します。
+- `visualizerFile`:このプロセスをデバッグするときに使用する [.natvis ファイル](/visualstudio/debugger/create-custom-views-of-native-objects)。 このオプションは `gdb` 再フォーマットと互換性がありません。 このプロパティを設定する場合は `showDisplayString` も設定します。
 
-- `showDisplayString`: `visualizerFile` が指定されている場合に表示文字列を有効にするブール値。 このオプションを `true` に設定すると、デバッグ中にパフォーマンスが低下する可能性があります。
+- `showDisplayString`:`visualizerFile` が指定されている場合に表示文字列を有効にするブール値。 このオプションを `true` に設定すると、デバッグ中にパフォーマンスが低下する可能性があります。
 
-- `setupCommands`: 基になるデバッガーを設定するために実行する1つ以上の gdb コマンド。
+- `setupCommands`:基になるデバッガーを設定するために実行する 1 つ以上の `gdb` コマンド。
 
-- `externalConsole`: デバッグ対象のコンソールを起動するかどうかを指定するブール値。
+- `miDebuggerPath`:`gdb` の完全なパス。 指定しない場合、Visual Studio では、デバッガーのパスを最初に検索します。
 
-- `miDebuggerPath`: gdb への完全なパス。 指定されていない場合、Visual Studio はまず、デバッガーのパスを検索します。
+- 最後に、構成の種類 `cppgdb` に対して定義されたすべての配置オプションは、構成の種類 `cppdbg` でも使用できます。
 
-::: moniker-end
+### <a name="debug-using-gdbserver"></a>`gdbserver` を使用してデバッグする
 
-::: moniker range="vs-2017"
-
-- `remoteMachineName`: gdb とデバッグするプログラムをホストするリモート Linux システム。
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-リモート**デバッグ**システムから**リモートビルドシステム**を分離するには、次のプロパティを使用できます。 詳細については、「[ビルドおよびデバッグ用に別のコンピューターを指定する](../linux/deploy-run-and-debug-your-linux-project.md#cmake-projects)」を参照してください。
-
-- `remoteMachineName`: gdb とデバッグするプログラムをホストするリモート Linux システム。 このエントリは、 *Cmakesettings. json*で指定されたビルドに使用されるリモートの Linux システムと一致する必要はありません。 Ctrl キーを押し**ながら Space**キーを押して、[接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に格納されているすべてのリモート接続の一覧を表示します。
-
-- `disableDeploy`: ビルドとデバッグの分離が無効になっているかどうかを示します。 この機能を有効にすると、ビルドとデバッグが2台の異なるコンピューターで実行されるようになります。
-
-- `deployDirectory`: 実行可能ファイルがコピーされるリモートデバッグコンピューター上のディレクトリ (`remoteMachineName`で指定)。
-
-- `deploy`: 高度な配置設定の配列。 展開プロセスをより細かく制御する必要がある場合にのみ、これらの設定を構成する必要があります。 既定では、リモート デバッグ マシンには、デバッグ プロセスにとって必要なファイルのみが配置されます。
-
-  - `sourceMachine`: ファイルまたはディレクトリのコピー元となるコンピューター。 Ctrl キーを押し**ながら Space**キーを押すと、接続マネージャーに格納されているすべてのリモート接続の一覧が表示されます。
-
-  - `targetMachine`: ファイルまたはディレクトリがコピーされるコンピューター。 Ctrl キーを押し**ながら Space**キーを押すと、接続マネージャーに格納されているすべてのリモート接続の一覧が表示されます。
-
-  - `sourcePath`: `sourceMachine`上のファイルまたはディレクトリの場所。
-
-  - `targetPath`: `targetMachine`上のファイルまたはディレクトリの場所。
-
-  - `deploymentType`: 展開の種類の説明。 `LocalRemote` と `RemoteRemote` がサポートされています。 `LocalRemote` は、ローカルファイルシステムから、launch. と*json*の `remoteMachineName` で指定されたリモートシステムにコピーすることを意味します。 `RemoteRemote` は、 *Cmakesettings. json*で指定されたリモートビルドシステムから、launch. と*json*で指定された別のリモートシステムにコピーすることを意味します。
-
-  - `executable`: 配置されたファイルが実行可能ファイルであるかどうかを示します。
-
-::: moniker-end
-
-::: moniker range=">=vs-2017"
-
-## <a name="attach-to-a-remote-process"></a>リモートプロセスにアタッチする
-
-デバッガーをアタッチするプロセス ID に `processId` を設定することにより、Linux システムで実行されているプロセスにアタッチできます。 詳細については、「 [GDB を使用したプロセスへのアタッチのトラブルシューティング](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB)」を参照してください。
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-## <a name="debug-on-linux-using-gdbserver"></a>Gdbserver を使用して Linux でデバッグする
-
-Visual Studio 2019 バージョン 16.5 Preview 1 以降では、gdbserver を使用した CMake プロジェクトのリモートデバッグがサポートされています。 詳細については、「 [gdbserver を使用した Linux CMake プロジェクトのデバッグ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/)」を参照してください。
+`gdbserver` を使用してデバッグするように、`cppdbg` 構成を構成できます。 詳細情報とサンプルの起動構成については、Microsoft C++ チームのブログ「[`gdbserver` を使用した Linux CMake プロジェクトのデバッグ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/)」を参照してください。
 
 ::: moniker-end
 
@@ -188,11 +229,11 @@ Visual Studio 2019 バージョン 16.5 Preview 1 以降では、gdbserver を�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio での Cmake プロジェクトの](cmake-projects-in-visual-studio.md)\
+[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)\
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)\
-[リモートの Linux コンピューター\ に接続](../linux/connect-to-your-remote-linux-computer.md)します。
-[CMake ビルド設定をカスタマイズ](customize-cmake-settings.md)\
-[CMake デバッグセッションの構成](configure-cmake-debugging-sessions.md)\
+[リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)\
+[CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)\
+[CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)\
 [Linux プロジェクトの配置、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)\
 [CMake 定義済み構成リファレンス](cmake-predefined-configuration-reference.md)
 

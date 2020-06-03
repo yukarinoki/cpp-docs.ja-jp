@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c4103f89f7fc74c5368bafac3c82685ff9b6e03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372699"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 構造体
 
@@ -32,29 +32,29 @@ struct DispatchState;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[DispatchState::D ispatchState](#ctor)|新しい `DispatchState` オブジェクトを構築します。|
+|[ディスパッチステート::Dパッチステート](#ctor)|新しい `DispatchState` オブジェクトを構築します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[DispatchState:: m_dispatchStateSize](#m_dispatchstatesize)|この構造体のサイズ。バージョン管理に使用されます。|
-|[DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|前のコンテキストが非同期的にブロックされているために、このコンテキストが `Dispatch` メソッドに入ったかどうかを示します。 これは、UMS スケジューリングコンテキストでのみ使用され、他のすべての実行コンテキストの `0` 値に設定されます。|
-|[DispatchState:: m_reserved](#m_reserved)|将来の情報を渡すために予約されているビット。|
+|[ディスパッチステート::m_dispatchStateSize](#m_dispatchstatesize)|バージョン管理に使用されるこの構造体のサイズ。|
+|[ディスパッチステート::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|前のコンテキストが非同期にブロック`Dispatch`されたために、このコンテキストがメソッドに入ったかどうかを示します。 これは UMS スケジューリング コンテキストでのみ使用され、その他のすべての実行コンテキスト`0`の値に設定されます。|
+|[ディスパッチステート::m_reserved](#m_reserved)|将来の情報渡し用に予約されたビット。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `DispatchState`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** concrtrm. h
+**ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-## <a name="ctor"></a>DispatchState::D ispatchState コンストラクター
+## <a name="dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>ディスパッチステート::Dシスパッチステートコンストラクタ
 
 新しい `DispatchState` オブジェクトを構築します。
 
@@ -62,30 +62,30 @@ struct DispatchState;
 DispatchState();
 ```
 
-## <a name="m_dispatchstatesize"></a>DispatchState:: m_dispatchStateSize データメンバー
+## <a name="dispatchstatem_dispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>ディスパッチステート::m_dispatchStateSizeデータメンバー
 
-この構造体のサイズ。バージョン管理に使用されます。
+バージョン管理に使用されるこの構造体のサイズ。
 
 ```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-## <a name="m_fispreviouscontextasynchronouslyblocked"></a>DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked データメンバー
+## <a name="dispatchstatem_fispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>ディスパッチステート::m_fIsPreviousContextAsynchronouslyBlockedデータメンバー
 
-前のコンテキストが非同期的にブロックされているために、このコンテキストが `Dispatch` メソッドに入ったかどうかを示します。 これは、UMS スケジューリングコンテキストでのみ使用され、他のすべての実行コンテキストの `0` 値に設定されます。
+前のコンテキストが非同期にブロック`Dispatch`されたために、このコンテキストがメソッドに入ったかどうかを示します。 これは UMS スケジューリング コンテキストでのみ使用され、その他のすべての実行コンテキスト`0`の値に設定されます。
 
 ```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-## <a name="m_reserved"></a>DispatchState:: m_reserved データメンバー
+## <a name="dispatchstatem_reserved-data-member"></a><a name="m_reserved"></a>ディスパッチステート::m_reservedデータメンバー
 
-将来の情報を渡すために予約されているビット。
+将来の情報渡し用に予約されたビット。
 
 ```cpp
 unsigned int m_reserved : 31;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[同時実行名前空間](concurrency-namespace.md)

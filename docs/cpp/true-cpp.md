@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-ms.openlocfilehash: 5cfc99f446499201a0f54c8e5b1dcc2d7152445c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b497c3c9eb1b30074c9b7286c438d0077525e05b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188039"
 ---
 # <a name="true-c"></a>true (C++)
 
@@ -22,9 +22,9 @@ bool-identifier = true ;
 bool-expression logical-operator true ;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このキーワードは、2 つの型の変数値のいずれかの[bool](../cpp/bool-cpp.md)または条件式 (条件式は true ブール式ではようになりました)。 場合`i`の種類は**bool**、then ステートメント`i = true;`割り当てます**true**に`i`します。
+このキーワードは、 [bool](../cpp/bool-cpp.md)型の変数または条件式の2つの値のうちの1つです (条件式は、真のブール式になります)。 `i` が**bool**型の場合、ステートメント `i = true;` `i`に**true**が割り当てられます。
 
 ## <a name="example"></a>例
 
@@ -45,6 +45,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)

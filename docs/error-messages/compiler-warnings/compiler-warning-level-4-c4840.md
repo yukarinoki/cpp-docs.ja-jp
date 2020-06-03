@@ -5,22 +5,22 @@ f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185205"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>コンパイラの警告 (レベル 4) C4840
 
-> クラスの移植性のない使用*型*' 可変個引数関数に引数として
+> 可変個引数関数への引数としてのクラス '*type*' のポータブルでない使用
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスまたは可変個引数関数に渡される構造体は普通にコピー可能である必要があります。 このようなオブジェクトを渡すときには、コンパイラは単にビットごとのコピーを作成し、コンストラクターまたはデストラクターを呼び出しません。
+可変個引数関数に渡されるクラスまたは構造体は、普通にコピー可能である必要があります。 このようなオブジェクトを渡すときには、コンパイラは単にビットごとのコピーを作成し、コンストラクターまたはデストラクターを呼び出しません。
 
-この警告は、Visual Studio 2017 以降を使用できます。
+この警告は、Visual Studio 2017 以降で使用できます。
 
 ## <a name="example"></a>例
 
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-構築および管理を使用して文字列`CStringW`、提供された`operator LPCWSTR()`にキャストするために使用する必要があります、`CStringW`オブジェクトを書式設定文字列によって予期されている C スタイル文字列ポインター。
+`CStringW`を使用して作成および管理された文字列の場合、指定された `operator LPCWSTR()` を使用して、`CStringW` オブジェクトを、書式文字列によって予期される C スタイルの文字列ポインターにキャストする必要があります。
 
 ```cpp
     CStringW str1;

@@ -1,8 +1,7 @@
 ---
-title: CTime クラス
+title: CTimeクラス
 ms.date: 10/18/2018
 f1_keywords:
-- CTime
 - ATLTIME/ATL::CTime
 - ATLTIME/ATL::CTime::CTime
 - ATLTIME/ATL::CTime::Format
@@ -25,14 +24,14 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: daf2a0d884a6b7a74b5edde2ed7db3b6aeea368d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e6e471fe648c5fa370cce750e8569e158eb1ffe4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491575"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317570"
 ---
-# <a name="ctime-class"></a>CTime クラス
+# <a name="ctime-class"></a>CTimeクラス
 
 絶対時刻と日付を表します。
 
@@ -48,63 +47,63 @@ class CTime
 
 |名前|説明|
 |----------|-----------------|
-|[CTime:: CTime](#ctime)|さまざま`CTime`な方法でオブジェクトを構築します。|
+|[タイム::タイム](#ctime)|さまざまな方法`CTime`でオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CTime:: 形式](#format)|ローカルタイム`CTime`ゾーンに基づいて、オブジェクトを書式設定された文字列に変換します。|
-|[CTime:: FormatGmt](#formatgmt)|オブジェクトを`CTime` UTC に基づいて書式設定された文字列に変換します。|
-|[CTime:: GetAsDBTIMESTAMP](#getasdbtimestamp)|`CTime`オブジェクトに格納されている時刻情報を Win32 互換の dbtimestamp 構造体に変換します。|
-|[CTime::GetAsSystemTime](#getassystemtime)|`CTime`オブジェクトに格納されている時刻情報を Win32 互換の[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体に変換します。|
-|[CTime::GetCurrentTime](#getcurrenttime)|現在の`CTime`時刻 (静的メンバー関数) を表すオブジェクトを作成します。|
-|[CTime:: GetDay](#getday)|`CTime`オブジェクトによって表される日を返します。|
-|[CTime:: GetDayOfWeek](#getdayofweek)|`CTime`オブジェクトで表される曜日を返します。|
-|[CTime::GetGmtTm](#getgmttm)|オブジェクトを UTC `CTime`に基づいてコンポーネントに分割します。|
-|[CTime:: Gethour:](#gethour)|`CTime`オブジェクトで表される時間を返します。|
-|[CTime::GetLocalTm](#getlocaltm)|ローカルタイムゾーン`CTime`に基づいて、オブジェクトをコンポーネントに分割します。|
-|[CTime:: GetMinute](#getminute)|`CTime`オブジェクトによって表される分を返します。|
-|[CTime:: GetMonth](#getmonth)|`CTime`オブジェクトで表される月を返します。|
-|[CTime:: GetSecond](#getsecond)|`CTime`オブジェクトによって表される2番目のを返します。|
-|[CTime::GetTime](#gettime)|指定さ `CTime`れたオブジェクトの __time64_t 値を返します。|
-|[CTime:: GetYear](#getyear)|`CTime`オブジェクトによって表される年を返します。|
-|[CTime:: Serialize64](#serialize64)|アーカイブとの間でデータをシリアル化します。|
+|[時間::フォーマット](#format)|ローカル タイム`CTime`ゾーンに基づいて、オブジェクトを書式指定された文字列に変換します。|
+|[タイム::フォーマットGmt](#formatgmt)|オブジェクトを`CTime`UTC に基づいて、書式設定された文字列に変換します。|
+|[タイム::ゲタスデータベースタイムスタンプ](#getasdbtimestamp)|オブジェクトに格納されている時刻情報を`CTime`Win32 互換 DBTIMESTAMP 構造体に変換します。|
+|[タイム::システムタイムを取得します。](#getassystemtime)|オブジェクトに格納されている時刻情報を`CTime`Win32 互換の[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体に変換します。|
+|[時間::ゲットカレントタイム](#getcurrenttime)|現在の`CTime`時刻 (静的メンバー関数) を表すオブジェクトを作成します。|
+|[タイム::ゲットデイ](#getday)|オブジェクトによって表される日を`CTime`返します。|
+|[タイム::ゲットデイオブウィーク](#getdayofweek)|オブジェクトによって表される曜日を`CTime`返します。|
+|[タイム::ゲットGmtTm](#getgmttm)|オブジェクトを`CTime`UTC に基づいてコンポーネントに分解します。|
+|[時間::ゲットアワー](#gethour)|オブジェクトによって表される時間を`CTime`返します。|
+|[タイム::ゲットローカルTm](#getlocaltm)|ローカル タイム`CTime`ゾーンに基づいて、オブジェクトをコンポーネントに分割します。|
+|[タイム::ゲットミニット](#getminute)|オブジェクトによって表される分を`CTime`返します。|
+|[時間::ゲットマン](#getmonth)|オブジェクトによって表される月を`CTime`返します。|
+|[タイム::ゲットセカンド](#getsecond)|オブジェクトによって表される 2`CTime`番目の値を返します。|
+|[タイム::ゲットタイム](#gettime)|指定した **__time64_t**`CTime`オブジェクトの__time64_t値を返します。|
+|[タイム::ゲットイヤー](#getyear)|オブジェクトによって表される年を`CTime`返します。|
+|[CTime::シリアライズ64](#serialize64)|アーカイブとの間でデータをシリアル化します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[演算子 +-](#operator_add_-)|これらの演算子は、 `CTimeSpan`オブジェクト`CTime`とオブジェクトを加算および減算します。|
-|[operator + =、-=](#operator_add_eq_-_eq)|これらの演算子は`CTimeSpan` 、オブジェクトをこの`CTime`オブジェクトとの間で加算および減算します。|
-|[operator=](#operator_eq)|代入演算子。|
-|[operator = =、< など](#ctime_comparison_operators)|比較演算子。|
+|[演算子 + -](#operator_add_-)|これらの演算子は、加算`CTimeSpan`および`CTime`減算およびオブジェクトです。|
+|[演算子 +=、-=](#operator_add_eq_-_eq)|これらの演算子は、このオブジェクト`CTimeSpan`に対してオブジェクトを`CTime`加算したり、オブジェクトからオブジェクトを減算したりします。|
+|[演算子 =](#operator_eq)|代入演算子。|
+|[演算子 ==、< など](#ctime_comparison_operators)|比較演算子。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CTime`に基底クラスがありません。
+`CTime`は基本クラスを持っていません。
 
-`CTime`値は世界協定時刻 (UTC) に基づいています。協定世界時 (グリニッジ標準時) と同等です。 タイムゾーンの決定方法については、「[時間管理](../../c-runtime-library/time-management.md)」を参照してください。
+`CTime`値は協定世界時 (UTC) に基づいており、これは協定世界時 (グリニッジ標準時、GMT) に相当します。 タイム ゾーンの決定方法については、「[時間管理](../../c-runtime-library/time-management.md)」を参照してください。
 
-オブジェクトを`CTime`作成するときに、 `nDST`パラメーターを0に設定して、標準時間が有効であることを示すか、または夏時間が有効であることを示す0より大きい値に設定します。または、C ランタイムライブラリコードコンピューターを使用するには、0未満の値に設定します。標準時間と夏時間のどちらが有効かを示します。 `tm_isdst` は必須フィールドです。 値が設定されていない場合、その値は未定義で、 [mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)からの戻り値は予測できません。 が`timeptr` 、 [asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)、 [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)、または[localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)の前回の呼び出しによって返された tm `tm_isdst`構造体を指している場合、フィールドには正しい値が格納されます。
+オブジェクトを`CTime`作成する場合は、`nDST`標準時間が有効であることを示す場合は 0、夏時間が有効であることを示す場合は 0 より大きい値、C ランタイム ライブラリ コードが標準時間または夏時間のどちらが有効であるかを計算するには 0 未満の値をパラメーターに設定します。 `tm_isdst` は必須フィールドです。 設定されていない場合、その値は未定義であり[、mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)からの戻り値は予測不能です。 asctime_s `timeptr` [、](../../c-runtime-library/reference/asctime-s-wasctime-s.md) [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)、または[localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)に対する以前の呼び出しによって`tm_isdst`返された tm 構造体を指す場合、フィールドには正しい値が含まれます。
 
-コンパニオンクラス[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)は、時間間隔を表します。
+コンパニオン クラス[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)は、時間間隔を表します。
 
-クラス`CTime` と`CTimeSpan`クラスは、派生用には設計されていません。 仮想関数は存在しないため、オブジェクトと`CTime` `CTimeSpan`オブジェクトのサイズは完全に8バイトです。 ほとんどのメンバー関数はインラインです。
-
-> [!NOTE]
->  上限の日付は12/31/3000 です。 下限は 1/1/1970 12:00:00 AM GMT です。
-
-の使用`CTime`方法の詳細については、「ランタイムライブラリリファレンス」の「[日付と時刻](../../atl-mfc-shared/date-and-time.md)」および「[時刻管理](../../c-runtime-library/time-management.md)」を参照してください。
+クラス`CTime`と`CTimeSpan`クラスは派生用に設計されていません。 仮想関数がないため、オブジェクトと`CTime``CTimeSpan`オブジェクトのサイズは正確に 8 バイトです。 ほとんどのメンバー関数はインラインです。
 
 > [!NOTE]
->  構造`CTime`体が mfc 7.1 から mfc 8.0 に変更されました。 Mfc 8.0 以降の`CTime`バージョンで **< < 演算子**を使用して構造体をシリアル化する場合、結果として得られるファイルは、旧バージョンの mfc では読み取ることができません。
+> 上限日の制限は 12/31/3000 です。 下限は1/1/1970 12:00:00 AM GMTです。
+
+の使用方法`CTime`の詳細については、『ランタイム ライブラリ リファレンス』の「[日付と時刻](../../atl-mfc-shared/date-and-time.md)」および「[時間管理](../../c-runtime-library/time-management.md)」を参照してください。
+
+> [!NOTE]
+> 構造体`CTime`が MFC 7.1 から MFC 8.0 に変更されました。 MFC 8.0`CTime`以降のバージョンで**演算子 <<** を使用して構造体をシリアル化する場合、結果のファイルは、古いバージョンの MFC では読み取りできません。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atltime. h
+**ヘッダー:** atltime.h
 
-##  <a name="ctime_comparison_operators"></a>CTime 比較演算子
+## <a name="ctime-comparison-operators"></a><a name="ctime_comparison_operators"></a>CTime 比較演算子
 
 比較演算子。
 
@@ -124,15 +123,15 @@ bool operator>=(CTime time) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-これらの演算子は2つの絶対時刻を比較し、条件が true の場合は TRUE を返します。それ以外の場合は FALSE。
+これらの演算子は 2 つの絶対時間を比較し、条件が真の場合は TRUE を返します。それ以外の場合は FALSE。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]
 
-##  <a name="ctime"></a>CTime:: CTime
+## <a name="ctimectime"></a><a name="ctime"></a>タイム::タイム
 
-指定した`CTime`時間で初期化された新しいオブジェクトを作成します。
+指定した時刻`CTime`で初期化された新しいオブジェクトを作成します。
 
 ```
 CTime() throw();
@@ -147,77 +146,77 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*timeSrc*<br/>
-既に存在するオブジェクトを示します。`CTime`
+*タイムスrc*<br/>
+既に`CTime`存在するオブジェクトを示します。
 
 *time*<br/>
-`__time64_t`時刻値。1970年1月1日以降の秒数です。 これは、現地時刻に調整されることに注意してください。 たとえば、ニューヨークにいて、パラメーター0を渡すこと`CTime`によってオブジェクトを作成した場合、 [CTime:: GetMonth](#getmonth)は12を返します。
+時刻`__time64_t`値は、1970 年 1 月 1 日 (UTC) 以降の秒数です。 これはローカル時刻に合わせて調整されます。 たとえば、ニューヨークで 0 のパラメータを渡して`CTime`オブジェクトを作成すると[、CTime::GetMonth](#getmonth)は 12 を返します。
 
-*Nyear*、 *nyear*、 *nyear*、 *nyear*、 *nyear*、 *nSec*<br/>
-新しい`CTime`オブジェクトにコピーされる日付と時刻の値を示します。
+*年*, *nMonth*, *nDay*, *nHour*, *nMin*, *nSec*<br/>
+新しい`CTime`オブジェクトにコピーする日付と時刻の値を示します。
 
 *nDST*<br/>
-夏時間が有効かどうかを示します。 次の3つの値のいずれかを指定できます。
+夏時間が有効かどうかを示します。 次の 3 つの値のいずれかを指定できます。
 
-- *nDST*を 0standard time に設定すると有効になります。
+- *nDST*が 0 に設定されている標準時刻が有効です。
 
-- *nDST*は、0より大きな値に設定されています。
+- *nDST*が 0 より大きい値に設定された場合、時間節約時間が有効です。
 
-- *NDST*は既定値の0未満の値に設定されます。 標準時間と夏時間のどちらを有効にするかを自動的に計算します。
+- *nDST*は 0 より小さい値に設定されます。 標準時間または夏時間のどちらが有効であるかを自動的に計算します。
 
-*Wdosdate*、 *wDosTime*<br/>
+*を指定*します *。*<br/>
 日付/時刻値に変換され、新しい`CTime`オブジェクトにコピーされる MS-DOS の日付と時刻の値。
 
-*&*<br/>
-日付 /時刻値に変換され、新しい`CTime`オブジェクトにコピーされる [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 構造体。
+*聖*<br/>
+日付/時刻値に変換され、新しい`CTime`オブジェクトにコピーされる[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体。
 
-*cm*<br/>
-日付 /時刻値に変換され、新しい`CTime`オブジェクトにコピーされる [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 構造体。
+*フィート*<br/>
+日付/時刻値に変換され、新しい`CTime`オブジェクトにコピーされる[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体。
 
 *dbts*<br/>
-現在の現地時刻を格納している DBTIMESTAMP 構造体への参照。
+現在のローカル時間を含む DBTIMESTAMP 構造体への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-各コンストラクターについて以下に説明します。
+各コンストラクターについて、以下に説明します。
 
-- `CTime();`初期`CTime`化されていないオブジェクトを構築します。 このコンストラクターを使用すると`CTime` 、オブジェクト配列を定義できます。 を使用する前に、有効な時刻でこのような配列を初期化する必要があります。
+- `CTime();`初期化`CTime`されていないオブジェクトを構築します。 このコンストラクターを使用すると、`CTime`オブジェクト配列を定義できます。 使用する前に、このような配列を有効な時刻で初期化する必要があります。
 
-- `CTime( const CTime& );``CTime` 別`CTime`の値からオブジェクトを構築します。
+- `CTime( const CTime& );`別`CTime`の値`CTime`からオブジェクトを構築します。
 
-- `CTime( __time64_t );`__Time64_t 型`CTime`からオブジェクトを構築します。 このコンストラクターは UTC 時刻を想定し、結果を格納する前に結果を現地時刻に変換します。
+- `CTime( __time64_t );`__time64_t型から`CTime`オブジェクトを構築 **__time64_t**します。 このコンストラクターは、UTC 時刻を想定し、結果を格納する前に結果をローカル時刻に変換します。
 
-- `CTime( int, int, ...);`各コンポーネント`CTime`が次の範囲に制限されているローカルタイムコンポーネントからオブジェクトを構築します。
+- `CTime( int, int, ...);`ローカル時間コンポーネント`CTime`からオブジェクトを構築し、各コンポーネントを次の範囲に拘束します。
 
    |コンポーネント|範囲|
    |---------------|-----------|
-   |*nYear*|1970-3000|
+   |*n年*|1970-3000|
    |*nMonth*|1-12|
    |*nDay*|1-31|
-   |*nHour*|0-23|
-   |*N1 日*|0-59|
-   |*nSec*|0-59|
+   |*nアワー*|0-23|
+   |*nMin*|0-59|
+   |*Nsec*|0-59|
 
-   このコンストラクターは、UTC への適切な変換を行います。 1つ以上の時間コンポーネントが範囲外の場合、Microsoft Foundation Class ライブラリのデバッグバージョンはアサートします。 を呼び出す前に、引数を検証する必要があります。 このコンストラクターには、ローカル時刻が必要です。
+   このコンストラクターは、適切な変換を UTC にします。 1 つ以上の時間コンポーネントが範囲外にある場合、Microsoft Foundation クラス ライブラリのデバッグ バージョンがアサートします。 呼び出す前に引数を検証する必要があります。 このコンストラクターは、ローカル時刻を想定しています。
 
-- `CTime( WORD, WORD );`指定し`CTime`た MS-DOS の日付と時刻の値からオブジェクトを構築します。 このコンストラクターには、ローカル時刻が必要です。
+- `CTime( WORD, WORD );`指定した`CTime`MS-DOS の日付と時刻の値からオブジェクトを構築します。 このコンストラクターは、ローカル時刻を想定しています。
 
-- `CTime( const SYSTEMTIME& );`構造`SYSTEMTIME`体`CTime`からオブジェクトを構築します。 このコンストラクターには、ローカル時刻が必要です。
+- `CTime( const SYSTEMTIME& );`構造体からオブジェクト`CTime`を構築します`SYSTEMTIME`。 このコンストラクターは、ローカル時刻を想定しています。
 
-- `CTime( const FILETIME& );`構造`FILETIME`体`CTime`からオブジェクトを構築します。 通常は、初期化を`CTime FILETIME`直接使用しません。 オブジェクトを`CFile`使用してファイルを操作する場合`CFile::GetStatus` 、は`FILETIME`構造体で初期化された`CTime`オブジェクトを使用してファイルのタイムスタンプを取得します。 このコンストラクターは、UTC に基づく時間を想定しており、結果を格納する前に、値を自動的に現地時刻に変換します。
+- `CTime( const FILETIME& );`構造体からオブジェクト`CTime`を構築します`FILETIME`。 初期化は直接使用`CTime FILETIME`しない可能性が高いです。 オブジェクトを`CFile`使用してファイルを操作する場合は`CFile::GetStatus`、構造体で初期化された`CTime`オブジェクトを通じてファイルのタイムスタンプを`FILETIME`取得します。 このコンストラクターは、UTC に基づく時刻を想定し、結果を格納する前に値を自動的にローカル時刻に変換します。
 
    > [!NOTE]
-   > パラメーターを使用`DBTIMESTAMP`するコンストラクターは、OLEDB が含まれている場合にのみ使用できます。
+   > パラメーターを使用`DBTIMESTAMP`するコンストラクターは、OLEDB.h が含まれている場合にのみ使用できます。
 
-詳細については、Windows SDK の「 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)と[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)の構造」を参照してください。 Windows SDK にある[MS-DOS の日付と時刻](/windows/win32/SysInfo/ms-dos-date-and-time)のエントリも参照してください。
+詳細については、Windows SDK の[システム時刻](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)と[ファイルタイム](/windows/win32/api/minwinbase/ns-minwinbase-filetime)の構造体を参照してください。 また、Windows SDK の[MS-DOS の日付と時刻](/windows/win32/SysInfo/ms-dos-date-and-time)のエントリも参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]
 
-##  <a name="format"></a>CTime:: 形式
+## <a name="ctimeformat"></a><a name="format"></a>時間::フォーマット
 
-日付/時刻値の書式設定された表現を作成するには、このメンバー関数を呼び出します。
+日時値の書式化された表現を作成します。
 
 ```
 CString Format(LPCTSTR pszFormat) const;
@@ -226,29 +225,29 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*<br/>
-書式`printf`設定文字列に類似した書式設定文字列。 書式指定コードの前にパーセント (`%`) 記号を付けると、対応する`CTime`コンポーネントが置き換えられます。 書式設定文字列内のその他の文字は、返された文字列にそのままコピーされます。 書式設定コードの一覧については、「ランタイム関数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 」を参照してください。
+*フォーマット*<br/>
+書式指定文字列に似た`printf`書式指定文字列。 フォーマット コードの前にパーセント記号`%`() が付いた書式コード`CTime`は、対応するコンポーネントに置き換えられます。 書式指定文字列内の他の文字は、変更されずに返された文字列にコピーされます。 フォーマットコードのリストについては、実行時関数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)を参照してください。
 
-*nFormatID*<br/>
+*データを持つ*<br/>
 この形式を識別する文字列の ID。
 
 ### <a name="return-value"></a>戻り値
 
-書式設定された時刻を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
+書式指定された時刻を含む[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この`CTime`オブジェクトの状態が null の場合、戻り値は空の文字列になります。
+この`CTime`オブジェクトの状態が null の場合、戻り値は空の文字列です。
 
-このメソッドは、書式設定する日付/時刻の値が、1970年1月1日午前0時 (UTC) の3000世界協定時刻 (UTC) からの範囲外である場合に、例外をスローします。
+このメソッドは、形式を設定する日時の値が、1970 年 1 月 1 日午前 0 時から 3000 年 12 月 31 日 (UTC) の範囲にない場合に例外をスローします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]
 
-##  <a name="formatgmt"></a>  CTime::FormatGmt
+## <a name="ctimeformatgmt"></a><a name="formatgmt"></a>タイム::フォーマットGmt
 
-この`CTime`オブジェクトに対応する書式設定された文字列を生成します。
+この`CTime`オブジェクトに対応する書式付き文字列を生成します。
 
 ```
 CString FormatGmt(LPCTSTR pszFormat) const;
@@ -257,29 +256,29 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*<br/>
-`printf`書式設定文字列に類似した書式設定文字列を指定します。 詳細については、ランタイム関数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)を参照してください。
+*フォーマット*<br/>
+書式指定文字列に似た書式`printf`指定文字列を指定します。 詳細については、実行時関数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)を参照してください。
 
-*nFormatID*<br/>
+*データを持つ*<br/>
 この形式を識別する文字列の ID。
 
 ### <a name="return-value"></a>戻り値
 
-書式設定された時刻を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
+書式指定された時刻を含む[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-時刻値は変換されないため、UTC が反映されます。
+時刻の値は変換されないため、UTC が反映されます。
 
-このメソッドは、書式設定する日付/時刻の値が、1970年1月1日午前0時 (UTC) の3000世界協定時刻 (UTC) からの範囲外である場合に、例外をスローします。
+このメソッドは、形式を設定する日時の値が、1970 年 1 月 1 日午前 0 時から 3000 年 12 月 31 日 (UTC) の範囲にない場合に例外をスローします。
 
 ### <a name="example"></a>例
 
-[CTime:: Format](#format)の例を参照してください。
+[「CTime::フォーマット](#format)」の例を参照してください。
 
-##  <a name="getasdbtimestamp"></a>CTime:: GetAsDBTIMESTAMP
+## <a name="ctimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>タイム::ゲタスデータベースタイムスタンプ
 
-このメンバー関数を呼び出して、 `CTime`オブジェクトに格納されている時刻情報を Win32 互換の dbtimestamp 構造体に変換します。
+`CTime`オブジェクトに格納されている時刻情報を Win32 互換 DBTIMESTAMP 構造体に変換します。
 
 ```
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
@@ -288,23 +287,23 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *dbts*<br/>
-現在の現地時刻を格納している DBTIMESTAMP 構造体への参照。
+現在のローカル時間を含む DBTIMESTAMP 構造体への参照。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-結果として得られた時間を参照された*dbts*構造体に格納します。 この`DBTIMESTAMP`関数によって初期化されるデータ構造`fraction`体は、メンバーが0に設定されます。
+参照された*dbts*構造体に結果の時刻を格納します。 この`DBTIMESTAMP`関数で初期化されるデータ構造体の`fraction`メンバは 0 に設定されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]
 
-##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
+## <a name="ctimegetassystemtime"></a><a name="getassystemtime"></a>タイム::システムタイムを取得します。
 
-このメンバー関数を呼び出して、 `CTime`オブジェクトに格納されている時刻情報を Win32 互換の[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体に変換します。
+`CTime`オブジェクトに格納されている時刻情報を Win32 互換[の SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体に変換します。
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -312,40 +311,40 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*timeDest*<br/>
-`CTime`オブジェクトの変換された日付/時刻値を保持する[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体への参照。
+*タイムデスト*<br/>
+オブジェクトの変換された日付/時刻値を保持する[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体への`CTime`参照。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`GetAsSystemTime`結果として得られた時間を参照された*Timedest*構造体に格納します。 この`SYSTEMTIME`関数によって初期化されるデータ構造`wMilliseconds`体は、メンバーが0に設定されます。
+`GetAsSystemTime`参照された*timeDest*構造体に結果の時間を格納します。 この`SYSTEMTIME`関数で初期化されるデータ構造体の`wMilliseconds`メンバは 0 に設定されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]
 
-##  <a name="getcurrenttime"></a>  CTime::GetCurrentTime
+## <a name="ctimegetcurrenttime"></a><a name="getcurrenttime"></a>時間::ゲットカレントタイム
 
-現在の時刻を表すオブジェクトを返します。`CTime`
+現在の`CTime`時刻を表すオブジェクトを返します。
 
 ```
 static CTime WINAPI GetCurrentTime() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のシステム日付と時刻を世界協定時刻 (UTC) で返します。
+現在のシステムの日付と時刻を世界協定時刻 (UTC) で返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]
 
-##  <a name="getday"></a>CTime:: GetDay
+## <a name="ctimegetday"></a><a name="getday"></a>タイム::ゲットデイ
 
-`CTime`オブジェクトによって表される日を返します。
+オブジェクトによって表される日を`CTime`返します。
 
 ```
 int GetDay() const throw();
@@ -353,19 +352,19 @@ int GetDay() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-現地時刻に基づいて1から31までの日付を返します。
+1 ~ 31 の範囲で、現地時間に基づいて、月の日を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]
 
-##  <a name="getdayofweek"></a>CTime:: GetDayOfWeek
+## <a name="ctimegetdayofweek"></a><a name="getdayofweek"></a>タイム::ゲットデイオブウィーク
 
-`CTime`オブジェクトで表される曜日を返します。
+オブジェクトによって表される曜日を`CTime`返します。
 
 ```
 int GetDayOfWeek() const throw();
@@ -373,19 +372,19 @@ int GetDayOfWeek() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-現地時刻に基づいて曜日を返します。1 = 日曜日、2 = 月曜日、7 = 土曜日。
+現地時間に基づいて曜日を返します。1 = 日曜日、2 = 月曜日、7 = 土曜日。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#154](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]
 
-##  <a name="getgmttm"></a>  CTime::GetGmtTm
+## <a name="ctimegetgmttm"></a><a name="getgmttm"></a>タイム::ゲットGmtTm
 
-この`CTime`オブジェクトに格納されている時間の分解を格納している**構造体 tm**を取得します。
+この`CTime`オブジェクトに含まれる時間の分解を含む**構造体の tm**を取得します。
 
 ```
 struct tm* GetGmtTm(struct tm* ptm) const;
@@ -393,26 +392,26 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ptm*<br/>
-時刻データを受け取るバッファーを指します。 このポインターが NULL の場合、例外がスローされます。
+*Ptm*<br/>
+時刻データを受け取るバッファーへのポイント。 このポインターが NULL の場合、例外がスローされます。
 
 ### <a name="return-value"></a>戻り値
 
-インクルードファイル時刻に定義されている、埋め込まれた**構造体 tm**へのポインター。始め. 構造のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
+インクルード ファイル TIME で定義されている、入力された**構造体 tm**へのポインター。H。 構造レイアウトについては[、gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`GetGmtTm`UTC を返します。
+`GetGmtTm`は UTC を返します。
 
-*ptm*を NULL にすることはできません。 以前の動作に戻す場合は、 *ptm*に NULL を指定して、静的に割り当てられた内部バッファーを使用する必要があることを示すには、_SECURE_ATL を未定義にします。
+*ptm*を NULL にすることはできません。 ptm が NULL である可能性がある古い*ptm*動作に戻して、内部の静的に割り当てられたバッファを使用することを示す場合は、_SECURE_ATL定義を解除します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#155](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]
 
-##  <a name="gethour"></a>CTime:: Gethour:
+## <a name="ctimegethour"></a><a name="gethour"></a>時間::ゲットアワー
 
-`CTime`オブジェクトで表される時間を返します。
+オブジェクトによって表される時間を`CTime`返します。
 
 ```
 int GetHour() const throw();
@@ -420,19 +419,19 @@ int GetHour() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-0 ~ 23 の範囲の現地時刻に基づいて時間を返します。
+0 ~ 23 の範囲の、現地時間に基づいて時間を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]
 
-##  <a name="getlocaltm"></a>  CTime::GetLocalTm
+## <a name="ctimegetlocaltm"></a><a name="getlocaltm"></a>タイム::ゲットローカルTm
 
-この`CTime`オブジェクトに格納されている時間の分解を格納している**構造体 tm**を取得します。
+この`CTime`オブジェクトに含まれる時間の分解を含む**構造体の tm**を取得します。
 
 ```
 struct tm* GetLocalTm(struct tm* ptm) const;
@@ -440,26 +439,26 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ptm*<br/>
-時刻データを受け取るバッファーを指します。 このポインターが NULL の場合、例外がスローされます。
+*Ptm*<br/>
+時刻データを受け取るバッファーへのポイント。 このポインターが NULL の場合、例外がスローされます。
 
 ### <a name="return-value"></a>戻り値
 
-インクルードファイル時刻に定義されている、埋め込まれた**構造体 tm**へのポインター。始め. 構造のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
+インクルード ファイル TIME で定義されている、入力された**構造体 tm**へのポインター。H。 構造レイアウトについては[、gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`GetLocalTm`現地時刻を返します。
+`GetLocalTm`は、ローカル時刻を返します。
 
-*ptm*を NULL にすることはできません。 以前の動作に戻す場合は、 *ptm*に NULL を指定して、静的に割り当てられた内部バッファーを使用する必要があることを示すには、_SECURE_ATL を未定義にします。
+*ptm*を NULL にすることはできません。 ptm が NULL である可能性がある古い*ptm*動作に戻して、内部の静的に割り当てられたバッファを使用することを示す場合は、_SECURE_ATL定義を解除します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]
 
-##  <a name="getminute"></a>CTime:: GetMinute
+## <a name="ctimegetminute"></a><a name="getminute"></a>タイム::ゲットミニット
 
-`CTime`オブジェクトによって表される分を返します。
+オブジェクトによって表される分を`CTime`返します。
 
 ```
 int GetMinute() const throw();
@@ -467,19 +466,19 @@ int GetMinute() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-0 ~ 59 の範囲の現地時刻に基づいて分を返します。
+0 ~ 59 の範囲で、ローカル時刻に基づいて分を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
-[Gethour:](#gethour)の例を参照してください。
+[GetHour](#gethour)の例を参照してください。
 
-##  <a name="getmonth"></a>  CTime::GetMonth
+## <a name="ctimegetmonth"></a><a name="getmonth"></a>時間::ゲットマン
 
-`CTime`オブジェクトで表される月を返します。
+オブジェクトによって表される月を`CTime`返します。
 
 ```
 int GetMonth() const throw();
@@ -487,19 +486,19 @@ int GetMonth() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-現地時刻に基づいて1から12までの月を返します (1 から1月)。
+1 ~ 12 (1 月) の範囲で、現地時間に基づいて月を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
-[Getday](#getday)の例を参照してください。
+[GetDay](#getday)の例を参照してください。
 
-##  <a name="getsecond"></a>  CTime::GetSecond
+## <a name="ctimegetsecond"></a><a name="getsecond"></a>タイム::ゲットセカンド
 
-`CTime`オブジェクトによって表される2番目のを返します。
+オブジェクトによって表される 2`CTime`番目の値を返します。
 
 ```
 int GetSecond() const throw();
@@ -507,19 +506,19 @@ int GetSecond() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-0 ~ 59 の範囲で、現地時刻に基づいて2番目のを返します。
+0 ~ 59 の範囲で、ローカル時刻に基づいて秒を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
-[Gethour:](#gethour)の例を参照してください。
+[GetHour](#gethour)の例を参照してください。
 
-##  <a name="gettime"></a>  CTime::GetTime
+## <a name="ctimegettime"></a><a name="gettime"></a>タイム::ゲットタイム
 
-指定さ `CTime`れたオブジェクトの __time64_t 値を返します。
+指定した **__time64_t**`CTime`オブジェクトの__time64_t値を返します。
 
 ```
 __time64_t GetTime() const throw();
@@ -527,15 +526,15 @@ __time64_t GetTime() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-`GetTime`は、現在`CTime`のオブジェクトから1970年1月1日までの秒数を返します。
+`GetTime`現在`CTime`のオブジェクトと 1970 年 1 月 1 日の間の秒数を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]
 
-##  <a name="getyear"></a>CTime:: GetYear
+## <a name="ctimegetyear"></a><a name="getyear"></a>タイム::ゲットイヤー
 
-`CTime`オブジェクトによって表される年を返します。
+オブジェクトによって表される年を`CTime`返します。
 
 ```
 int GetYear();
@@ -543,17 +542,17 @@ int GetYear();
 
 ### <a name="return-value"></a>戻り値
 
-1970年1月1日から2038年1月18日までの範囲で、現地時刻に基づいて年を返します。
+1970 年 1 月 1 日から 2038 年 1 月 18 日までの範囲の、ローカル時刻に基づいて年を返します 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は`GetLocalTm`、静的に割り当てられた内部バッファーを使用するを呼び出します。 このバッファー内のデータは、他の`CTime`メンバー関数の呼び出しによって上書きされます。
+この関数は`GetLocalTm`、静的に割り当てられた内部バッファを使用する を呼び出します。 このバッファー内のデータは、他`CTime`のメンバー関数の呼び出しにより上書きされます。
 
 ### <a name="example"></a>例
 
-[Getday](#getday)の例を参照してください。
+[GetDay](#getday)の例を参照してください。
 
-##  <a name="operator_eq"></a>CTime:: operator =
+## <a name="ctimeoperator-"></a><a name="operator_eq"></a>時間::演算子 =
 
 代入演算子。
 
@@ -564,19 +563,19 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="parameters"></a>パラメーター
 
 *time*<br/>
-新しい日付/時刻値。
+新しい日付/時刻の値。
 
 ### <a name="return-value"></a>戻り値
 
-更新さ`CTime`れたオブジェクト。
+更新された`CTime`オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このオーバーロードされた代入演算子は、ソース`CTime`時間をこのオブジェクトにコピーします。 `CTime`オブジェクトの内部時間の格納は、タイムゾーンに依存しません。 タイムゾーンの変換は、割り当て時には必要ありません。
+このオーバーロードされた代入演算子は、ソース時間をこの`CTime`オブジェクトにコピーします。 `CTime`オブジェクト内の内部時間ストレージは、タイム ゾーンとは無関係です。 割り当て時にタイム ゾーン変換は必要ありません。
 
-##  <a name="operator_add_-"></a>CTime:: operator +、-
+## <a name="ctimeoperator---"></a><a name="operator_add_-"></a>時間::演算子 +、 -
 
-これらの演算子は、 `CTimeSpan`オブジェクト`CTime`とオブジェクトを加算および減算します。
+これらの演算子は、加算`CTimeSpan`および`CTime`減算およびオブジェクトです。
 
 ```
 CTime operator+(CTimeSpan timeSpan) const throw();
@@ -586,27 +585,27 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*timeSpan*<br/>
-加算または減算するオブジェクト。`CTimeSpan`
+*Timespan*<br/>
+加算`CTimeSpan`または減算するオブジェクト。
 
 *time*<br/>
-減算されるオブジェクト。 `CTime`
+減`CTime`算するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-操作の`CTimeSpan`結果を表すオブジェクトまたはオブジェクト。`CTime`
+操作`CTime`の`CTimeSpan`結果を表すオブジェクトまたはオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CTime`オブジェクトは絶対時間を`CTimeSpan`表し、オブジェクトは相対時間を表します。 最初の2つの演算子を使用すると`CTimeSpan` 、オブジェクトをオブジェクト`CTime`に追加したり、オブジェクトからオブジェクトを削除したりできます。 3番目の演算子を使用する`CTime`と、あるオブジェクトを別`CTimeSpan`のオブジェクトから減算して、オブジェクトを生成できます。
+`CTime`オブジェクトは絶対時間を`CTimeSpan`表し、オブジェクトは相対時間を表します。 最初の 2 つの演算子を使用すると`CTimeSpan`、オブジェクトのオブジェクト`CTime`の追加とオブジェクトの間でのオブジェクトの減算を行うことができます。 3 番目の演算子を使用すると`CTime`、オブジェクトを別のオブジェクト`CTimeSpan`から減算してオブジェクトを生成できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>CTime:: operator + =、-=
+## <a name="ctimeoperator---"></a><a name="operator_add_eq_-_eq"></a>時間::演算子 +=、-=
 
-これらの演算子は`CTimeSpan` 、オブジェクトをこの`CTime`オブジェクトとの間で加算および減算します。
+これらの演算子は、このオブジェクト`CTimeSpan`に対してオブジェクトを`CTime`加算したり、オブジェクトからオブジェクトを減算したりします。
 
 ```
 CTime& operator+=(CTimeSpan span) throw();
@@ -616,26 +615,26 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="parameters"></a>パラメーター
 
 *スパン*<br/>
-加算または減算するオブジェクト。`CTimeSpan`
+加算`CTimeSpan`または減算するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-更新さ`CTime`れたオブジェクト。
+更新された`CTime`オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これらの演算子を使用すると、オブジェクト`CTimeSpan`をこのオブジェクトに追加`CTime`したり、このオブジェクトからオブジェクトを削除したりできます。
+これらの演算子を使用すると、この`CTimeSpan``CTime`オブジェクトに対してオブジェクトを追加したり、オブジェクトからオブジェクトを減算したりできます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]
 
-##  <a name="serialize64"></a>CTime:: Serialize64
+## <a name="ctimeserialize64"></a><a name="serialize64"></a>CTime::シリアライズ64
 
 > [!NOTE]
 > このメソッドは、MFC プロジェクトでのみ使用できます。
 
-メンバー変数に関連付けられたデータをアーカイブにシリアル化します。
+アーカイブとの間でメンバー変数に関連付けられたデータをシリアル化します。
 
 ```
 CArchive& Serialize64(CArchive& ar);
@@ -643,12 +642,12 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 更新`CArchive`するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-更新さ`CArchive`れたオブジェクト。
+更新された`CArchive`オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 
@@ -658,6 +657,6 @@ CArchive& Serialize64(CArchive& ar);
 [localtime_s、_localtime32_s、_localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
-[CTimeSpan クラス](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

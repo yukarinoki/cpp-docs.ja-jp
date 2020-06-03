@@ -1,6 +1,6 @@
 ---
 title: scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948914"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918189"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -100,7 +107,7 @@ long double scalblnl(
 *x*<br/>
 浮動小数点値。
 
-*exp*<br/>
+*期限*<br/>
 整数の指数。
 
 ## <a name="return-value"></a>戻り値
@@ -109,11 +116,13 @@ long double scalblnl(
 
 **Errno**および考えられるエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**FLT_RADIX**は、native \<浮動小数点基数としてで定義され > ます。バイナリシステムでは、値は2で、 **scalbn**は[ldexp](ldexp.md)と等価です。
+**FLT_RADIX**は、浮動\<小数点のネイティブな基数として> で定義されます。バイナリシステムでは、値は2、 **scalbn**は[ldexp](ldexp.md)に相当します。
 
-でC++はオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取って返す、 **scalbn**の**オーバーロードを呼び**出すことができます。 C プログラムでは、 **scalbn**は常に**double**と**int**を受け取り、 **double**を返します。また、**スケール bln**は常に double と**long** **を受け取り**、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取って返す、 **scalbn**の**オーバーロードを呼び**出すことができます。 C プログラムでは、 **scalbn**は常に**double**と**int**を受け取り、 **double**を返します。また、**スケール bln**は常に double と**long** **を受け取り**、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -121,7 +130,7 @@ long double scalblnl(
 |--------------|--------------|------------------|
 |**scalbn**、 **scalbnf**、 **btree bnl**、**スケール bln**、 **、スケール** **blnl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -141,7 +150,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 6.4 times FLT_RADIX to the power of 3 is 51.2

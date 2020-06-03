@@ -1,5 +1,5 @@
 ---
-title: CSimpleArray クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArray
@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278008"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746474"
 ---
-# <a name="csimplearray-class"></a>CSimpleArray クラス
+# <a name="csimplearray-class"></a>クラス
 
 このクラスは、単純な配列を管理するためのメソッドを提供します。
 
@@ -40,7 +40,7 @@ class CSimpleArray
 配列に格納するデータの型。
 
 *TEqual*<br/>
-型の要素に対して等値テストを定義する、特徴オブジェクト*T*します。
+*T*型の要素の等価性テストを定義する特性オブジェクト。
 
 ## <a name="members"></a>メンバー
 
@@ -48,36 +48,36 @@ class CSimpleArray
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleArray::CSimpleArray](#csimplearray)|単純な配列のコンス トラクター。|
-|[CSimpleArray:: ~ CSimpleArray](#dtor)|単純な配列のデストラクターです。|
+|[::CSimpleアレイ](#csimplearray)|単純な配列のコンストラクター。|
+|[::~シンプルアレイ](#dtor)|単純な配列のデストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleArray::Add](#add)|配列に新しい要素を追加します。|
-|[CSimpleArray::Find](#find)|配列の要素を検索します。|
-|[CSimpleArray::GetData](#getdata)|配列に格納されているデータへのポインターを返します。|
-|[CSimpleArray::GetSize](#getsize)|配列に格納されている要素の数を返します。|
-|[CSimpleArray::Remove](#remove)|配列から指定された要素を削除します。|
-|[CSimpleArray::RemoveAll](#removeall)|配列からすべての要素を削除します。|
-|[CSimpleArray::RemoveAt](#removeat)|配列から指定した要素を削除します。|
-|[CSimpleArray::SetAtIndex](#setatindex)|配列内の指定した要素を設定します。|
+|[を追加します。](#add)|新しい要素を配列に追加します。|
+|[を見る](#find)|配列内の要素を検索します。|
+|[を取得します。](#getdata)|配列に格納されているデータへのポインターを返します。|
+|[次の値を指定します。](#getsize)|配列に格納されている要素の数を返します。|
+|[をクリックします。](#remove)|配列から指定された要素を削除します。|
+|[すべてを削除します。](#removeall)|配列からすべての要素を削除します。|
+|[::削除](#removeat)|指定した要素を配列から削除します。|
+|[::セットアインデックス](#setatindex)|配列内の指定した要素を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|配列から要素を取得します。|
-|[CSimpleArray::operator =](#operator_eq)|代入演算子。|
+|[次の操作を行います。](#operator_eq)|代入演算子。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CSimpleArray` 作成して、指定された型の単純な配列を管理するメソッドを提供`T`します。
+`CSimpleArray`には、任意の型の単純な配列を作成および管理するための`T`メソッドが用意されています。
 
-パラメーター`TEqual`型の 2 つの要素に対して等値関数を定義する手段を提供します`T`します。 ようなクラスを作成して[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)、すべての指定された配列の等値テストの動作を変更することはできます。 たとえば、ポインターの配列を扱う場合、ポインターが参照値に応じてとして等価性を定義すると便利ですがあります。 既定の実装を利用**operator=()** します。
+このパラメーター`TEqual`は、型の 2 つの要素に対して等価関数を`T`定義する手段を提供します。 [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)に似たクラスを作成することで、任意の配列の等価性テストの動作を変更できます。 たとえば、ポインターの配列を扱う場合、ポインターが参照する値に応じて等値を定義すると便利です。 デフォルトの実装では **、operator=()** が使用されます。
 
-両方`CSimpleArray`と[CSimpleMap](../../atl/reference/csimplemap-class.md)要素の数が少ない場合に設計されています。 [CAtlArray](../../atl/reference/catlarray-class.md)と[CAtlMap](../../atl/reference/catlmap-class.md)配列には、多数の要素が含まれている場合に使用する必要があります。
+CSimpleMap と`CSimpleArray`[の](../../atl/reference/csimplemap-class.md)両方が少数の要素用に設計されています。 配列に多数の要素が含まれている場合は[、CAtlArray](../../atl/reference/catlarray-class.md)と[CAtlMap](../../atl/reference/catlmap-class.md)を使用する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -87,9 +87,9 @@ class CSimpleArray
 
 [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]
 
-##  <a name="add"></a>  CSimpleArray::Add
+## <a name="csimplearrayadd"></a><a name="add"></a>を追加します。
 
-配列に新しい要素を追加します。
+新しい要素を配列に追加します。
 
 ```
 BOOL Add(const T& t);
@@ -102,15 +102,15 @@ BOOL Add(const T& t);
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、要素が正常に追加した配列では、FALSE にそれ以外の場合は TRUE を返します。
+要素が配列に正常に追加された場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]
 
-##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="csimplearray"></a>::CSimpleアレイ
 
-配列オブジェクトのコンス トラクターです。
+配列オブジェクトのコンストラクター。
 
 ```
 CSimpleArray(const CSimpleArray<T, TEqual>& src);
@@ -120,13 +120,13 @@ CSimpleArray();
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-既存の `CSimpleArray` オブジェクト。
+既存の `CSimpleArray` オブジェクトです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-新しい空の作成、データ メンバーは初期化`CSimpleArray`オブジェクト、または、既存のコピーを`CSimpleArray`オブジェクト。
+データ メンバーを初期化し、新しい空`CSimpleArray`のオブジェクトまたは既存`CSimpleArray`のオブジェクトのコピーを作成します。
 
-##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="dtor"></a>::~シンプルアレイ
 
 デストラクターです。
 
@@ -134,13 +134,13 @@ CSimpleArray();
 ~CSimpleArray();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放します。
+割り当てられたすべてのリソースを解放します。
 
-##  <a name="find"></a>  CSimpleArray::Find
+## <a name="csimplearrayfind"></a><a name="find"></a>を見る
 
-配列の要素を検索します。
+配列内の要素を検索します。
 
 ```
 int Find(const T& t) const;
@@ -153,13 +153,13 @@ int Find(const T& t) const;
 
 ### <a name="return-value"></a>戻り値
 
-要素が見つからない場合は、見つかった要素のインデックスを返します。
+見つかった要素のインデックスを返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]
 
-##  <a name="getdata"></a>  CSimpleArray::GetData
+## <a name="csimplearraygetdata"></a><a name="getdata"></a>を取得します。
 
 配列に格納されているデータへのポインターを返します。
 
@@ -171,7 +171,7 @@ T* GetData() const;
 
 配列内のデータへのポインターを返します。
 
-##  <a name="getsize"></a>  CSimpleArray::GetSize
+## <a name="csimplearraygetsize"></a><a name="getsize"></a>次の値を指定します。
 
 配列に格納されている要素の数を返します。
 
@@ -183,7 +183,7 @@ int GetSize() const;
 
 配列に格納されている要素の数を返します。
 
-##  <a name="operator_at"></a>  CSimpleArray::operator \[\]
+## <a name="csimplearrayoperator-"></a><a name="operator_at"></a>次の操作を行います。\[\]
 
 配列から要素を取得します。
 
@@ -198,13 +198,13 @@ T& operator[](int nindex);
 
 ### <a name="return-value"></a>戻り値
 
-によって参照される配列の要素を返します*nIndex*します。
+*nIndex*によって参照される配列の要素を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]
 
-##  <a name="operator_eq"></a>  CSimpleArray::operator =
+## <a name="csimplearrayoperator-"></a><a name="operator_eq"></a>次の操作を行います。
 
 代入演算子。
 
@@ -221,17 +221,17 @@ CSimpleArray<T, TEqual>
 
 ### <a name="return-value"></a>戻り値
 
-更新されたポインターを返します`CSimpleArray`オブジェクト。
+更新された`CSimpleArray`オブジェクトへのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべての要素をコピー、`CSimpleArray`によって参照されるオブジェクト*src*現在の配列オブジェクトに既存のすべてのデータを交換します。
+`CSimpleArray` *src*が参照するオブジェクトのすべての要素を現在の配列オブジェクトにコピーし、既存のすべてのデータを置き換えます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]
 
-##  <a name="remove"></a>  CSimpleArray::Remove
+## <a name="csimplearrayremove"></a><a name="remove"></a>をクリックします。
 
 配列から指定された要素を削除します。
 
@@ -246,27 +246,27 @@ BOOL Remove(const T& t);
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、要素が見つかったと削除、それ以外の場合は TRUE を返します。
+要素が見つかり削除された場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要素が削除されると、配列内の残りの要素が空の領域を埋める番号が変更されます。
+要素が削除されると、配列内の残りの要素の番号が再設定され、空の領域が埋められます。
 
-##  <a name="removeall"></a>  CSimpleArray::RemoveAll
+## <a name="csimplearrayremoveall"></a><a name="removeall"></a>すべてを削除します。
 
 配列からすべての要素を削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列に現在格納されているすべての要素を削除します。
+現在配列に格納されているすべての要素を削除します。
 
-##  <a name="removeat"></a>  CSimpleArray::RemoveAt
+## <a name="csimplearrayremoveat"></a><a name="removeat"></a>::削除
 
-配列から指定した要素を削除します。
+指定した要素を配列から削除します。
 
 ```
 BOOL RemoveAtint nIndex);
@@ -275,19 +275,19 @@ BOOL RemoveAtint nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-削除する要素を指すインデックスを作成します。
+削除する要素を指すインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-要素が削除された、インデックスが有効でなかった場合は FALSE のかどうかは TRUE を返します。
+要素が削除された場合は TRUE を返し、インデックスが無効な場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要素が削除されると、配列内の残りの要素が空の領域を埋める番号が変更されます。
+要素が削除されると、配列内の残りの要素の番号が再設定され、空の領域が埋められます。
 
-##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex
+## <a name="csimplearraysetatindex"></a><a name="setatindex"></a>::セットアインデックス
 
-配列内の指定した要素を設定します。
+配列内の指定された要素を設定します。
 
 ```
 BOOL SetAtIndex(
@@ -305,7 +305,7 @@ BOOL SetAtIndex(
 
 ### <a name="return-value"></a>戻り値
 
-TRUE を返します正常に終了したかどうか、インデックスが無効です。
+成功した場合は TRUE を返し、インデックスが有効でない場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

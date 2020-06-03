@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396139"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749712"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
-コピーを`BSTR`に、`BSTR`によってラップされた、 **_** `bstr_t`します。
+`BSTR`でラップされたに`BSTR`a をコピー**します**`bstr_t`。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>パラメーター
 
-*s*<br/>
+*S*<br/>
 `BSTR` でラップされた `BSTR` にコピーする `_bstr_t`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Assign**はバイナリ コピーをつまり、全体の長さ、`BSTR`コンテンツに関係なく、コピーされます。
+**Assign**はバイナリ コピーを行います`BSTR`。
 
 ## <a name="example"></a>例
 
@@ -109,7 +109,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 

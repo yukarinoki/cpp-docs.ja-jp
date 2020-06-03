@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0027
 ms.assetid: 85d73a78-4b9e-4553-9f5d-2d76c48a790a
-ms.openlocfilehash: bc87ec33e78b9d45625432bd379b4ec7aeeecb52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc69f34dd291f2af241edae51bda9f09aeb9916d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192251"
 ---
 # <a name="project-build-error-prj0027"></a>プロジェクト ビルド エラー PRJ0027
 
-Unicode ログ メッセージが 'コンテンツ' には、ユーザーの ANSI コード ページに変換できないコンテンツが含まれています。
+Unicode ログメッセージ ' contents ' に、ユーザーの ANSI コードページに変換できないコンテンツが含まれています。
 
-通常、batch や応答ファイルの作成で発生するエラーと組み合わせてこの警告はのみ表示されます。
+通常、この警告は、バッチまたは応答ファイルの作成時にエラーと共に表示されます。
 
-このエラーの解決には ANSI を使用するか、コンピューターに、コード ページをインストールして、システムの既定値として設定、ビルド ログの内容を更新します。
+このエラーを解決するには、ビルドログの内容を更新して ANSI を使用するか、コンピューターにコードページをインストールして、システムの既定値として設定します。

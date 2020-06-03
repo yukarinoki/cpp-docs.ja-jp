@@ -1,21 +1,21 @@
 ---
-title: デュアル (C++ COM 属性)
+title: dual (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168214"
 ---
 # <a name="dual"></a>dual
 
-.Idl ファイルにデュアル インターフェイスとしてインターフェイスを配置します。
+インターフェイスを .idl ファイルにデュアルインターフェイスとして配置します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,13 +23,13 @@ ms.locfileid: "62409682"
 [dual]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ときに、**デュアル**C++ 属性をインターフェイスの前と、インターフェイス、生成された .idl ファイルのライブラリ ブロック内に配置されます。
+**デュアル** C++属性がインターフェイスの前にあると、インターフェイスは生成された .idl ファイルのライブラリブロック内に配置されます。
 
 ## <a name="example"></a>例
 
-次のコードは、属性ブロックを使用する**デュアル**インターフェイス定義の前に。
+次のコードは、インターフェイス定義の前に**デュアル**を使用する属性ブロックです。
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -66,7 +66,7 @@ __interface IStatic : IDispatch
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [使用法別の属性](attributes-by-usage.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: C とC++整数の制限
+title: C と C++ 整数の制限
 ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
 ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
 ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72778373"
 ---
-# <a name="c-and-c-integer-limits"></a>C とC++整数の制限
+# <a name="c-and-c-integer-limits"></a>C と C++ 整数の制限
 
 **Microsoft 固有の仕様**
 
-次の表に、C とC++での整数型の制限を示します。 これらの制限は、C 標準ヘッダーファイル `<limits.h>` で定義されています。 標準C++ライブラリヘッダー `<limits>` には、`<limits.h>` を含む `<climits>` が含まれています。
+次の表に、C と C++ の整数型の制限を示します。 これらの制限は、C 標準ヘッダー ファイル `<limits.h>` で定義されています。 C++ 標準ライブラリ ヘッダー `<limits>` には `<climits>` が含まれ、これには `<limits.h>` が含まれています。
 
-Microsoft C では、サイズが8ビット、16ビット、32ビット、または64ビットの整数型である、サイズ設定された整数変数の宣言も許可されます。 C のサイズ設定された整数の詳細については、「サイズ設定された[整数型](../c-language/c-sized-integer-types.md)」を参照してください。
+Microsoft C では、サイズ 8 ビット、16 ビット、32 ビット、または 64 ビットの整数型である、サイズ設定された整数変数も宣言できます。 C のサイズが設定された整数の詳細については、「[サイズ設定された整数型](../c-language/c-sized-integer-types.md)」を参照してください。
 
 ## <a name="limits-on-integer-constants"></a>整数定数の制限
 
@@ -41,9 +41,9 @@ Microsoft C では、サイズが8ビット、16ビット、32ビット、また
 |**LONG_MIN**|**long** 型変数の最小値。|-2147483647 - 1|
 |**LONG_MAX**|**long** 型変数の最大値。|2147483647|
 |**ULONG_MAX**|**unsigned long** 型変数の最大値。|4294967295 (0xffffffff)|
-|**LLONG_MIN**|**Long long**型の変数の最小値。|-9223372036854775807-1|
-|**LLONG_MAX**|**Long long**型の変数の最大値。|9,223,372,036,854,775,807|
-|**ULLONG_MAX**|**Unsigned long long**型の変数の最大値。|18446744073709551615 (0xffffffffffffffff)|
+|**LLONG_MIN**|**long long** 型変数の最小値。|-9,223,372,036,854,775,807 - 1|
+|**LLONG_MAX**|**long long** 型変数の最大値。|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|**unsigned long long** 型変数の最大値。|18,446,744,073,709,551,615 (0xffffffffffffffff)|
 
 値が最大の整数表現を超えると、Microsoft コンパイラでエラーが生成されます。
 

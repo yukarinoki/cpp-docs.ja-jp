@@ -13,12 +13,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 7c58ae2e2b6635345a162d11d2b75a9865d37751
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179134"
 ---
 # <a name="raising-software-exceptions"></a>ソフトウェア例外の発生
 
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 例外を簡単に発生させるには、最後の 3 つのパラメーターを 0 に設定します。 最後の 3 つのパラメーターは、追加情報を渡し、ハンドラーの実行を中止するフラグを設定するときに使用します。 詳細については、Windows SDK の「 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)関数」を参照してください。
 
-例外処理フィルターで、定義したコードをテストできます。 例 :
+例外処理フィルターで、定義したコードをテストできます。 次に例を示します。
 
 ```cpp
 __try {

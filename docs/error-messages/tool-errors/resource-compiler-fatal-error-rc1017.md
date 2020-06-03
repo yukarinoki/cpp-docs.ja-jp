@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1017
 ms.assetid: 62ac1356-4481-49a0-8873-36daf42ffdcd
-ms.openlocfilehash: 3523b8124b47218ae820386e5f3772a7da599769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd06e4e3d9181817d82f745f9264687f13919dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173102"
 ---
 # <a name="resource-compiler-fatal-error-rc1017"></a>リソース コンパイラの致命的なエラー RC1017
 
 整数定数式が無効です。
 
-内の式、`#if`ディレクティブが存在していなかったか、定数に評価されません。
+`#if` ディレクティブ内の式が存在しないか、または定数に評価されませんでした。

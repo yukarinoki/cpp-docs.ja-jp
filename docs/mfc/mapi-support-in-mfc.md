@@ -9,56 +9,56 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: e46eaf2bd84d4cebd2215ab2752ce3bb8e1eb9b3
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3024f744407cf33c8dfad8a6f7af736e0f8061ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907677"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81357002"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC での MAPI サポート
 
-MFC では、クラス`CDocument`の Microsoft メッセージングアプリケーションプログラムインターフェイス (MAPI) のサブセットがサポートされています。 具体的に`CDocument`は、には、メールサポートがエンドユーザーのコンピューターに存在するかどうかを判断するメンバー関数があり、その場合は、標準のコマンド ID が ID_FILE_SEND_MAIL であるメール送信コマンドを有効にします。 このコマンドの MFC ハンドラー関数を使用すると、電子メールでドキュメントを送信できます。
+MFC では、クラス`CDocument`の Microsoft メッセージング アプリケーション プログラム インターフェイス (MAPI) のサブセットをサポートしています。 具体的には`CDocument`、エンド ユーザーのマシンにメール サポートがあるかどうかを決定するメンバー関数があり、存在する場合は、標準のコマンド ID がID_FILE_SEND_MAILのメール送信コマンドを有効にします。 このコマンドの MFC ハンドラー関数を使用すると、ユーザーは電子メールでドキュメントを送信できます。
 
 > [!TIP]
->  MFC では MAPI 関数セット全体がカプセル化されませんが、MFC プログラムから直接 Win32 API 関数を呼び出すことができるのと同じように、MAPI 関数を直接呼び出すことができます。
+> MFC では、MAPI 関数セット全体をカプセル化するわけではありませんが、MFC プログラムから直接 Win32 API 関数を呼び出すことができるのと同様に、MAPI 関数を直接呼び出すことができます。
 
-アプリケーションで [メールの送信] コマンドを指定するのは非常に簡単です。 MFC には、ドキュメント ( `CDocument`つまり、から派生したオブジェクト) を添付ファイルとしてパッケージ化し、それをメールとして送信するための実装が用意されています。 この添付ファイルは、ドキュメントの内容を電子メールメッセージに保存 (シリアル化) する、ファイルの保存コマンドに相当します。 この実装では、ユーザーのコンピューター上のメールクライアントでを呼び出して、メールアドレスを指定したり、件名やメッセージのテキストをメールメッセージに追加したりできるようにします。 ユーザーには、使い慣れたメールアプリケーションのユーザーインターフェイスが表示されます。 この機能は`CDocument` `OnFileSendMail` 、と`OnUpdateFileSendMail`の2つのメンバー関数によって提供されます。
+アプリケーションでメール送信コマンドを指定するのは非常に簡単です。 MFC では、ドキュメント (`CDocument`つまり、派生オブジェクト) を添付ファイルとしてパッケージ化し、メールとして送信する実装が提供されます。 この添付ファイルは、ドキュメントの内容をメール メッセージに保存 (シリアル化) する [ファイルの保存] コマンドと同じです。 この実装では、ユーザーのコンピュータ上のメール クライアントに対して、メールのアドレス指定やメール メッセージへの件名とメッセージ テキストの追加を行う機会をユーザーに提供します。 ユーザーには、使い慣れたメール アプリケーションのユーザー インターフェイスが表示されます。 この機能は、`CDocument``OnFileSendMail`と`OnUpdateFileSendMail`の 2 つのメンバー関数によって提供されます。
 
-MAPI は、添付ファイルを送信するためにファイルを読み取る必要があります。 `OnFileSendMail`関数呼び出し中にアプリケーションがデータファイルを開いたままにする場合は、ファイルを共有モードで開いて、複数のプロセスがファイルにアクセスできるようにする必要があります。
+MAPI は、添付ファイルを送信するファイルを読み取る必要があります。 アプリケーションが関数呼び出し中にデータ`OnFileSendMail`・ファイルをオープンしたままにする場合、複数のプロセスがファイルにアクセスできるようにする共有モードでファイルを開く必要があります。
 
 > [!NOTE]
->  For クラス`OnFileSendMail` `COleDocument`のオーバーライドバージョンは、複合ドキュメントを正しく処理します。
+> クラス`OnFileSendMail``COleDocument`のオーバーライド バージョンは、複合ドキュメントを正しく処理します。
 
-#### <a name="to-implement-a-send-mail-command-with-mfc"></a>MFC でメール送信コマンドを実装するには
+#### <a name="to-implement-a-send-mail-command-with-mfc"></a>MFC を使用してメール送信コマンドを実装するには
 
-1. Visual C++ menu editor を使用して、コマンド ID が ID_FILE_SEND_MAIL のメニュー項目を追加します。
+1. Visual C++ メニュー エディターを使用して、コマンド ID がID_FILE_SEND_MAILのメニュー項目を追加します。
 
-   このコマンド ID は、AFXRES.H のフレームワークによって提供されます。始め. コマンドは任意のメニューに追加できますが、通常は **[ファイル]** メニューに追加されます。
+   このコマンド ID は、AFXRES のフレームワークによって提供されます。H。 コマンドは任意のメニューに追加できますが、通常は **[ファイル]** メニューに追加されます。
 
-1. ドキュメントのメッセージマップに次のコードを手動で追加します。
+1. ドキュメントのメッセージ マップに次の項目を手動で追加します。
 
    [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
-    >  このメッセージマップは、または`CDocument` `COleDocument`のいずれかから派生したドキュメントに対して機能します。メッセージマップが派生ドキュメントクラスにある場合でも、どちらの場合も正しい基本クラスを取得します。
+    >  このメッセージ マップは、派生ドキュメント クラス`CDocument`に`COleDocument`メッセージ マップがある場合でも、どちらの場合も正しい基本クラスを取得するか、またはから派生したドキュメントに対して機能します。
 
 1. アプリケーションをビルドします。
 
-メールサポートが利用可能な場合、MFC では、 `OnUpdateFileSendMail`でメニュー項目を有効に`OnFileSendMail`し、その後でコマンドをで処理します。 メールサポートが利用できない場合は、ユーザーがメニュー項目を表示しないように、MFC によって自動的に削除されます。
+メールサポートが利用可能な場合、MFC はメニュー項目`OnUpdateFileSendMail`を を 有効にし`OnFileSendMail`、その後で コマンドを 処理します。 メールサポートが利用できない場合、MFC は自動的にメニュー項目を削除するので、ユーザーには表示されません。
 
 > [!TIP]
->  前に説明したようにメッセージマップエントリを手動で追加するのではなく、クラス[クラスウィザード](reference/mfc-class-wizard.md)を使用して、メッセージを関数にマップできます。 詳細については、「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください。
+> 前述のようにメッセージ マップ エントリを手動で追加する代わりに、[クラス クラス ウィザード](reference/mfc-class-wizard.md)を使用してメッセージを関数にマップできます。 詳細については、「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください。
 
-関連情報については、「 [MAPI](../mfc/mapi.md)の概要」を参照してください。
+関連情報については[、MAPI](../mfc/mapi.md)の概要を参照してください。
 
-MAPI を有効にする`CDocument`メンバー関数の詳細については、以下を参照してください。
+MAPI を有効に`CDocument`するメンバー関数の詳細については、次を参照してください。
 
-- [CDocument:: OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)
+- [Cドキュメント::オンファイル送信メール](../mfc/reference/cdocument-class.md#onfilesendmail)
 
-- [CDocument:: OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)
+- [Cドキュメント::オンアップデートファイル送信メール](../mfc/reference/cdocument-class.md#onupdatefilesendmail)
 
-- [COleDocument:: OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+- [ファイル送信メール](../mfc/reference/coledocument-class.md#onfilesendmail)
 
 ## <a name="see-also"></a>関連項目
 

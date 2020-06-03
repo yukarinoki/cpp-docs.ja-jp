@@ -1,35 +1,33 @@
 ---
 title: CStatusBarCtrl の設定値
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], settings
 - CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
-ms.openlocfilehash: b41997fb9342a651260bc2196d212016dc0deb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd7c68d6721c48f751c04437e43c8770f6ec5736
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365378"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl の設定値
 
-既定の位置を[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)ステータス ウィンドウが、親ウィンドウの下部には、親ウィンドウのクライアント領域の上部に表示されるようにする CCS_TOP スタイルを指定することができます。
+[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)ステータス ウィンドウの既定の位置は親ウィンドウの下部に沿っていますが、CCS_TOPスタイルを指定して、親ウィンドウのクライアント領域の上部に表示されるようにすることができます。
 
-右端にあるサイズ変更グリップを含める SBARS_SIZEGRIP スタイルを指定することができます、`CStatusBarCtrl`ステータス ウィンドウ。 サイズ変更グリップはサイズ変更境界線; に似ていますユーザーがクリックして親ウィンドウのサイズをドラッグ四角形の領域になります。
+ステータス ウィンドウの右端にサイズ変更グリップを含めるSBARS_SIZEGRIP スタイルを`CStatusBarCtrl`指定できます。 サイズ変更グリップは、サイズ変更の境界線に似ています。これは、ユーザーがクリックしてドラッグして親ウィンドウのサイズを変更できる四角形の領域です。
 
 > [!NOTE]
->  CCS_TOP と SBARS_SIZEGRIP スタイルを結合する場合、結果のサイズ変更グリップは場合でも、システムは、ステータス ウィンドウに描画と機能しません。
+> CCS_TOPスタイルとSBARS_SIZEGRIPスタイルを組み合わせると、システムがステータスウィンドウに描画しても、サイズ変更グリップは機能しません。
 
-ステータス ウィンドウのウィンドウ プロシージャは、初期サイズおよびコントロール ウィンドウの位置に自動的に設定します。 幅は、親ウィンドウのクライアント領域の場合と同じです。 高さは、ステータス ウィンドウのデバイス コンテキストに現在選択されているフォントのメトリックでは、ウィンドウの境界線の幅に基づきます。
+ステータス ウィンドウのウィンドウ プロシージャは、コントロール ウィンドウの初期サイズと位置を自動的に設定します。 幅は、親ウィンドウのクライアント領域と同じです。 高さは、ステータスウィンドウのデバイスコンテキストに現在選択されているフォントのメトリックと、ウィンドウの境界の幅に基づいています。
 
-WM_SIZE メッセージを受信するたびに、ウィンドウ プロシージャは、ステータス ウィンドウのサイズを自動調整します。 通常、親ウィンドウのサイズが変更されたときに、親は、ステータス ウィンドウに WM_SIZE メッセージを送信します。
+ウィンドウ プロシージャは、WM_SIZE メッセージを受信するたびに、ステータス ウィンドウのサイズを自動的に調整します。 通常、親ウィンドウのサイズが変更されると、親はWM_SIZEメッセージをステータス ウィンドウに送信します。
 
-ステータス ウィンドウの描画領域の高さの最小値を設定するには呼び出すことによって[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)、最小の高さをピクセル単位で指定します。 描画領域では、ウィンドウの境界線は含まれません。
+ステータス ウィンドウの作図領域の最小の高さを設定するには、最小の高さをピクセル単位で指定する[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)を呼び出します。 作図領域には、ウィンドウの境界線は含まれません。
 
-呼び出すことによってステータス ウィンドウの境界線の幅を取得する[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)します。 このメンバー関数には、水平方向の境界線、垂直方向の境界線の四角形の間の境界線の幅を受信する 3 要素の配列へのポインターが含まれています。
+ステータス ウィンドウの境界線の幅を取得するには、 [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)を呼び出します。 このメンバー関数には、水平境界線、垂直境界線、および四角形の境界線を受け取る 3 要素配列へのポインターが含まれます。
 
 ## <a name="see-also"></a>関連項目
 

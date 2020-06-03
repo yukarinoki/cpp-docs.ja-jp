@@ -1,32 +1,19 @@
 ---
 title: scanf での文字幅指定
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811122"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444709"
 ---
 # <a name="scanf-width-specification"></a>scanf での文字幅指定
 
-この情報は、`scanf_s` など、安全なバージョンを含む `scanf` 関数ファミリの書式指定文字列の解釈に適用されます。 これらの関数は通常、入力ストリームが一連のトークンに分割されていることを前提とします。 トークンは、空白 (スペース、タブ、または改行) で区切られます。数値型の場合は、数値テキストに変換できない最初の文字によって示される数値データ型の自然な終端によって区切られます。 ただし、幅指定を使用すると、トークンの自然な終了の前に入力の解析が停止することがあります。
+この情報は、`scanf` など、安全なバージョンを含む `scanf_s` 関数ファミリの書式指定文字列の解釈に適用されます。 これらの関数は通常、入力ストリームが一連のトークンに分割されていることを前提とします。 トークンは、空白 (スペース、タブ、または改行) で区切られます。数値型の場合は、数値テキストに変換できない最初の文字によって示される数値データ型の自然な終端によって区切られます。 ただし、幅指定を使用すると、トークンの自然な終了の前に入力の解析が停止することがあります。
 
 *width* 指定は、`%` と型フィールド指定子 (*width* フィールドと呼ばれる正の整数を含む) との間の文字、およびフィールドのサイズを示す 1 つ以上の文字で構成されます。後者は、整数型が **short** または **long** のどちらであるかを示すなどの、フィールドの型の修飾子ともみなされます。 このような文字はサイズのプレフィックスと呼ばれます。
 
@@ -106,7 +93,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 理由に関係なく、`scanf` 関数が入力フィールドの読み取りを停止すると、次の入力フィールドは、最初の未読文字から始まるとみなされます。 競合する文字 (存在する場合) は、未読と見なされます。 これは、次の入力フィールドの最初の文字、または入力ストリームに対する後続の読み取り操作の最初の文字です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

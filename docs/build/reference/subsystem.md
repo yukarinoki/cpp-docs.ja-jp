@@ -2,18 +2,18 @@
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
-- /subsystem
+- /subsystem_editbin
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450728"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438864"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -25,14 +25,14 @@ ms.locfileid: "66450728"
         NATIVE|POSIX|WINDOWS|WINDOWSCE}[,major[.minor]]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 このオプションは、イメージを編集して、実行のためにオペレーティング システムから呼び出すサブシステムを指定します。
 
 以下のいずれかのサブシステムを指定できます。
 
 **BOOT_APPLICATION**<br/>
-Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)します。
+Windows のブート環境で実行するアプリケーションです。 ブートアプリケーションの詳細については、「 [BCD WMI プロバイダーについ](/previous-versions/windows/desktop/bcd/about-bcd)て」を参照してください。
 
 **コンソール**<br/>
 Windows キャラクター モード アプリケーション。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。
@@ -43,18 +43,18 @@ Windows キャラクター モード アプリケーション。 オペレーテ
 **EFI_RUNTIME_DRIVER**<br/>
 拡張可能なファームウェア インターフェイス (EFI) イメージ
 
-EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細については、上の仕様を参照してください。、 [Unified EFI Forum](https://www.uefi.org/) web サイト。
+EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細については、[統合 EFI フォーラム](https://www.uefi.org/)web サイトの仕様を参照してください。
 
-**ネイティブ**<br/>
+**な**<br/>
 サブシステム環境なしで実行されるコード、たとえばカーネル モード デバイス ドライバーやネイティブ システム プロセス。 このオプションは、通常、Windows システムの機能のために予約されています。
 
-**POSIX**<br/>
+**ビリ**<br/>
 Windows 上の POSIX サブシステムで実行するアプリケーション。
 
-**WINDOWS**<br/>
-Windows のグラフィカル環境で実行するアプリケーション。 これには、デスクトップ アプリおよびユニバーサル Windows プラットフォーム (UWP) アプリの両方が含まれます。
+**ウィンドウ**<br/>
+Windows のグラフィカル環境で実行するアプリケーション。 これには、デスクトップアプリとユニバーサル Windows プラットフォーム (UWP) アプリの両方が含まれます。
 
-**WINDOWS CE**<br/>
+**WINDOWSCE**<br/>
 WINDOWSCE サブシステムは、アプリケーションが Windows CE カーネルのバージョンがあるデバイスで実行するように設計されたことを示します。 カーネルのバージョンには、PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3、および Windows Embedded Compact 7 があります。
 
 `major` および `minor` 値 (省略可能) で、指定したサブシステムの必要最低バージョンを指定します。
@@ -65,10 +65,10 @@ WINDOWSCE サブシステムは、アプリケーションが Windows CE カー�
 
 - `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
 
-選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
+選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、「 [/entry (エントリポイントシンボル)](entry-entry-point-symbol.md)」、「リンカー/entry:*function*オプション」を参照してください。
 
-詳細については、各サブシステムのメジャーおよびマイナー バージョン番号の最小値と既定値を含む、次を参照してください。、 [/SUBSYSTEM](subsystem-specify-subsystem.md)リンカー オプション。
+各サブシステムのメジャーバージョン番号とマイナーバージョン番号の最小値と既定値を含む詳細については、 [/SUBSYSTEM](subsystem-specify-subsystem.md)リンカーオプションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

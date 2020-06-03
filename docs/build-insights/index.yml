@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: C++ Build Insights | ビルド ツール チェーン分析の自動化
+summary: C++ Build Insight を使用して、リアルタイムの自動化されたビルドの分析と最適化を行います。
+metadata:
+  title: C++ ビルドの洞察
+  description: C++ Build Insights を使用してビルドを分析および最適化する方法について説明します。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: e5a165888026c1485b77bd2784e22b3c9b36684a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153540"
+landingContent:
+- title: ビルドの実行方法を確認する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Build Insights を使ってみる
+      url: get-started-with-cpp-build-insights.md
+  - linkListType: tutorial
+    links:
+    - text: vcperf および Windows Performance Analyzer
+      url: tutorials/vcperf-and-wpa.md
+    - text: Windows Performance Analyzer の基本
+      url: tutorials/wpa-basics.md
+- title: ビルドのパフォーマンスを測定する
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: vcperf コマンド
+      url: reference/vcperf-commands.md
+    - text: Windows Performance Analyzer のビュー
+      url: reference/wpa-views.md
+- title: 独自のビルド パフォーマンス分析を作成する
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: SDK リファレンス
+      url: reference/sdk/overview.md

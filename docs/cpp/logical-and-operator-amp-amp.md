@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179433"
 ---
 # <a name="logical-and-operator-ampamp"></a>論理 AND 演算子: &amp;&amp;
 
@@ -23,9 +23,9 @@ ms.locfileid: "62368657"
 expression && expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-論理 AND 演算子 (**&&**) 両方のオペランドが TRUE の場合は、ブール値 TRUE を返すし、それ以外の場合は FALSE を返します。 オペランドは型に暗黙的に変換**bool**前に、evaluation、および結果の種類では**bool**します。 論理 AND には左から右方向の結合規則があります。
+論理 AND 演算子 ( **&&** ) は、両方のオペランドが true の場合はブール値 true を返し、それ以外の場合は FALSE を返します。 オペランドは、評価の前に**ブール**型に暗黙的に変換され、結果は**bool**型になります。 論理 AND には左から右方向の結合規則があります。
 
 論理 AND 演算子のオペランドが同じ型である必要はありませんが、整数型またはポインター型である必要があります。 オペランドは一般に関係式または等価式です。
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 `pch` が null (0) であれば、式の右側は評価されません。 したがって、null ポインターを使用した代入が発生することはありません。
 
-## <a name="operator-keyword-for-"></a>演算子キーワード (& a) (& a)
+## <a name="operator-keyword-for-"></a>& & の Operator キーワード
 
-**と**演算子と等価のテキストは、  **&&** します。 アクセスする 2 つの方法がある、**と**プログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。
+**And**演算子は **&&** に相当するテキストです。 プログラム内の**and**演算子にアクセスするには、ヘッダーファイル `iso646.h`を含める方法と、 [/za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張機能を無効にする) コンパイラオプションを使用してコンパイルする方法の2つの方法があります。
 
 ## <a name="example"></a>例
 
@@ -67,8 +67,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ の組み込み演算子の優先順位と結合規則](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++組み込み演算子の優先順位と結合規則](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 論理演算子](../c-language/c-logical-operators.md)

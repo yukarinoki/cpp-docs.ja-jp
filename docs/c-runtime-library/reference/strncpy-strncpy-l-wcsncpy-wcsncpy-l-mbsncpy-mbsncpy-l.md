@@ -1,6 +1,6 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncpy
 - _strncpy_l
@@ -8,6 +8,8 @@ api_name:
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
+- _o__mbsncpy
+- _o__mbsncpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,12 +68,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947206"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919281"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -174,7 +177,7 @@ unsigned char *_mbsncpy_l(
 
 *Strdest*を返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strncpy**関数は、 *strsource*の最初の*カウント*文字を*Strsource*にコピーし、 *strsource*を返します。 *Count*が*strsource*の長さ以下の場合、コピーされた文字列に null 文字が自動的に追加されることはありません。 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込ま*れ、* 長さが最大になります。 ソースとコピー先の文字列が重なり合っている場合、 **strncpy**の動作は未定義です。
 
@@ -185,9 +188,11 @@ unsigned char *_mbsncpy_l(
 
 **wcsncpy**と **_mbsncpy**は、 **strncpy**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy**と **_mbsncpy**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -197,11 +202,11 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**と **_wcsncpy_l**は、ロケールに依存しません。これらは **_tcsncpy_l**のためだけに提供されており、直接呼び出すためのものではありません。
+> **_strncpy_l**と **_wcsncpy_l**はロケールに依存しません。これらは **_tcsncpy_l**に対してのみ提供され、直接呼び出すためのものではありません。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> または \<wchar.h>|
@@ -211,7 +216,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="example"></a>例
 
-次の例では、 **strncpy**の使用方法と、プログラムのバグやセキュリティ上の問題を発生させるために使用方法を誤用する方法を示します。 コンパイラは、 **crt_strncpy_x86 (15) のような**strncpy**への呼び出しごとに警告を生成します。警告 C4996: ' strncpy ':この関数または変数は安全でない可能性があります。代わりに strncpy_s の使用を検討してください。使用されなくなったことの警告を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。詳しくは、オンライン ヘルプをご覧ください。**
+次の例では、 **strncpy**の使用方法と、プログラムのバグやセキュリティ上の問題を発生させるために使用方法を誤用する方法を示します。 コンパイラは、次の crt_strncpy_x86 ような**strncpy**への呼び出しごとに警告を生成**します。 c (15): 警告 C4996: ' Strncpy ': この関数または変数は安全でない可能性があります。代わりに strncpy_s の使用を検討してください。廃止を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。詳細については、オンラインヘルプを参照してください。**
 
 ```C
 // crt_strncpy_x86.c
@@ -265,7 +270,7 @@ int main() {
 }
 ```
 
-Output
+出力
 
 ```Output
 ZZ
@@ -281,7 +286,7 @@ Buffer overrun: s = 'ars.' (should be 'test')
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

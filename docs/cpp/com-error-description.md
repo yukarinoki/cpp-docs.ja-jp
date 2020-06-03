@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-ms.openlocfilehash: a517c40e9adfbda2d790ce41a48ccf8658bcd3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2275f096fe2fde96e64cbc3034602a1fde5e88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180772"
 ---
-# <a name="comerrordescription"></a>_com_error::Description
+# <a name="_com_errordescription"></a>_com_error::Description
 
 **Microsoft 固有の仕様**
 
@@ -27,14 +27,14 @@ _bstr_t Description( ) const;
 
 ## <a name="return-value"></a>戻り値
 
-結果を返します`IErrorInfo::GetDescription`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。
+`_com_error` オブジェクト内に記録された `IErrorInfo` オブジェクトの `IErrorInfo::GetDescription` の結果を返します。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 `IErrorInfo` が記録されていない場合は、空の `_bstr_t`を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出し、`IErrorInfo::GetDescription`関数を取得します`IErrorInfo`内に記録された、`_com_error`オブジェクト。 呼び出すときの失敗、`IErrorInfo::GetDescription`メソッドは無視されます。
+`IErrorInfo::GetDescription` 関数を呼び出し、`_com_error` オブジェクト内に記録された `IErrorInfo` を取得します。 `IErrorInfo::GetDescription` メソッドの呼び出し中に発生したエラーは無視されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_error クラス](../cpp/com-error-class.md)

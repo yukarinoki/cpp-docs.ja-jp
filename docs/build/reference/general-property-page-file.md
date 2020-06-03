@@ -5,12 +5,12 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 41366e2eae479c3d00f79cc47da9100b22129d50
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a9281a0ea02bd9b1fd529453cb9a67e54e4ddda7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218190"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168976"
 ---
 # <a name="general-property-page-file"></a>[全般] プロパティ ページ (ファイル)
 
@@ -24,7 +24,7 @@ ms.locfileid: "70218190"
 
    プログラムを使用してこのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>」を参照してください。
 
-- **コンテンツ**(UWP アプリのみに適用されます。)アプリパッケージに含めるコンテンツがファイルに含まれるかどうかを指定します。
+- **コンテンツ**(UWP アプリにのみ適用されます)アプリパッケージに含めるコンテンツがファイルに含まれるかどうかを指定します。
 
 - **項目の種類**
 
@@ -36,34 +36,34 @@ ms.locfileid: "70218190"
 
     次の表に、既定の項目の種類を示します。
 
-    |ファイル拡張子|アイテムの種類|既定のツール|
+    |[ファイル拡張子]|アイテムの種類|既定のツール|
     |-|-|-|
     |.appx|XAML アプリケーション定義|[アプリパッケージャー](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |hlsl、cso|HLSL コンパイラ|[fxc .exe](/windows/win32/direct3dtools/fxc)|
     |.h|C/C++ヘッダー|[C/C++ プロセッサ](../../preprocessor/c-cpp-preprocessor-reference.md)|
-    |N/A|ビルドに参加しません|N/A|
-    |.xml、.xslt、.xsl|Xml|[XML エディター](/visualstudio/xml-tools/xml-editor)|
+    |該当なし|ビルドに参加しません|該当なし|
+    |.xml、.xslt、.xsl|xml|[XML エディター](/visualstudio/xml-tools/xml-editor)|
     |. resw、. resw|PRI リソース (UWP アプリ)|[MakePri .exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||メディア (UWP)|[アプリパッケージャー](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.xsd|XML データジェネレーターツール|[XML スキーマ定義ツール (xsd.exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)(.NET ワークロードが必要です。 MSVC には含まれていません。)|
+    |.xsd|XML データジェネレーターツール|[XML スキーマ定義ツール (xsd.exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (.net ワークロードが必要です。 MSVC には含まれていません。)|
     ||マニフェスト ツール|[mt.exe](/windows/win32/sbscs/mt-exe)|
     |.rc|リソース|[Windows リソースコンパイラ (rc .exe)](/windows/win32/menurc/resource-compiler)|
     |. package.appxmanifest|アプリケーションパッケージマニフェスト|[アプリパッケージャー](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.obj|オブジェクト|[C/C++リンカー (link .exe)](cl-invokes-the-linker.md)|
-    |...|フォント|N/A|
-    |.txt|テキスト|N/A|
-    |N/A|カスタムビルドツール|ユーザー定義|
-    |N/A|ファイルのコピー|N/A|
+    |.obj|Object|[C/C++リンカー (link .exe)](cl-invokes-the-linker.md)|
+    |...|フォント|該当なし|
+    |.txt|Text|該当なし|
+    |該当なし|カスタムビルドツール|ユーザー定義|
+    |該当なし|ファイルのコピー|該当なし|
     |.packagelayout|アプリケーションパッケージのレイアウト|[アプリパッケージャー](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.resx|コンパイラマネージリソース|[Resgen.exe (リソース ファイル ジェネレーター)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
     |. natvis|C++デバッガーの視覚化ファイル|[Natvis framework](/visualstudio/debugger/create-custom-views-of-native-objects)|
-    |.jpg、.bmp、.ico など。|イメージ|アプリケーションの種類に基づくリソースコンパイラ。|
+    |.jpg、.bmp、.ico など。|Image|アプリケーションの種類に基づくリソースコンパイラ。|
     |.cpp|C/C++コンパイラ|cl.exe|
 
    プログラムを使用してこのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>」を参照してください。
 
 **[構成プロパティ]** ノードの下の **[全般]** プロパティページにアクセスする方法の詳細については、「 [Visual Studio でのコンパイラおよびビルドプロパティの設定C++ ](../working-with-project-properties.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)

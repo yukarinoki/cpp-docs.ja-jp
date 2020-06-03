@@ -4,12 +4,12 @@ description: リソースリークを回避するためにC++ 、最新の RAII 
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303376"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078032"
 ---
 # <a name="object-lifetime-and-resource-management-raii"></a>オブジェクトの有効期間とリソースの管理 (RAII)
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 次の例では、`w` がメモリリソースを所有しているため、メモリを削除するには、デストラクターにコードを含める必要があります。
- 
+
 ```cpp
 class widget
 {

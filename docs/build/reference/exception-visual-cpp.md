@@ -1,19 +1,16 @@
 ---
 title: '&lt;例外 > (C++ドキュメントコメント)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988295"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439864"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -32,18 +29,18 @@ ms.locfileid: "74988295"
 
 名前は、一重引用符または二重引用符で囲みます。
 
-ジェネリック型への cref 参照を作成する方法については、[\<see>](see-visual-cpp.md) を参照してください。
+ジェネリック型への cref 参照を作成する方法については、「[\<see>](see-visual-cpp.md)」を参照してください。
 
 *description*<br/>
-説明です。
+説明。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
 MSVC コンパイラは、ドキュメントコメント内の1回のパスで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](seealso-visual-cpp.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_exception_tag.cpp

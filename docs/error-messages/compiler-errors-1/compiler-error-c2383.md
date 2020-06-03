@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2aa922ebeadb374a7eac73a0f452376472b00984
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448007"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206029"
 ---
 # <a name="compiler-error-c2383"></a>コンパイラ エラー C2383
 
-'*シンボル*': 既定の引数はこのシンボルでは許可されていません
+'*symbol*': 既定の引数はこのシンボルでは使用できません
 
-C++ コンパイラ、既定の引数を関数へのポインターにはできません。
+コンパイラC++は、関数へのポインターに対して既定の引数を許可しません。
 
-このコードは、Microsoft によって承認されましたC++、Visual Studio 2005 より前に、のバージョンのコンパイラがエラーになります。 Visual C のすべてのバージョンで動作するコードでは、関数へのポインター引数に既定値は割り当てないでください。
+このコードは、Visual Studio 2005 C++より前のバージョンの Microsoft コンパイラによって受け入れられていましたが、エラーが発生しました。 すべてのバージョンのビジュアルC++で動作するコードの場合、ポインターから関数への引数に既定値を割り当てないでください。
 
 ## <a name="example"></a>例
 
-次の例では、C2383 を生成し、解決策を示しています。
+次の例では、C2383 を生成し、考えられる解決方法を示します。
 
 ```cpp
 // C2383.cpp

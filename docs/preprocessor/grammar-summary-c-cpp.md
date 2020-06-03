@@ -1,23 +1,23 @@
 ---
-title: プリプロセッサの文法の概要C++(C/)
+title: プリプロセッサの文法の概要 (C/C++)
 description: Microsoft C/C++コンパイラ (MSVC) プリプロセッサ文法構文を定義し、説明します。
 ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302186"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076870"
 ---
-# <a name="preprocessor-grammar-summary-cc"></a>プリプロセッサの文法の概要C++(C/)
+# <a name="preprocessor-grammar-summary-cc"></a>プリプロセッサの文法の概要 (C/C++)
 
 この記事では、C およびC++プリプロセッサの正式な文法について説明します。 プリプロセスディレクティブと演算子の構文について説明します。 詳細については、「[プリプロセッサ](../preprocessor/preprocessor.md)[ディレクティブとプラグマディレクティブ」と「__pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
-## <a name="definitions"></a>文法の概要の定義
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>文法の概要の定義
 
 終端は構文定義内のエンドポイントです。 他の解決はありません。 終端には、予約語およびユーザー定義の識別子が含まれます。
 
@@ -29,11 +29,11 @@ ms.locfileid: "75302186"
 
 **{** *expression*<sub>opt</sub> **}**
 
-## <a name="conventions"></a>ドキュメントの表記規則
+## <a name="document-conventions"></a><a name="conventions"></a>ドキュメントの表記規則
 
 構文規則では、構文のコンポーネントごとに異なるフォント属性を使用します。 シンボルとフォントは次のとおりです。
 
-| 属性 | 説明 |
+| Attribute | Description |
 |---------------|-----------------|
 | *nonterminal* | 斜体は、非終端要素を示します。 |
 | **#include** | 太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。 |
@@ -44,7 +44,7 @@ ms.locfileid: "75302186"
 
 コード構文ブロックでは、既定のタイプフェイスのこれらのシンボルには特別な意味があります。
 
-| [記号] | 説明 |
+| Symbol | Description |
 |---|---|
 | \[ ] | 角かっこは、省略可能な要素を囲みます。 |
 | {\|} | 中かっこは、縦棒で区切られた別の要素を囲みます。 |
@@ -52,17 +52,17 @@ ms.locfileid: "75302186"
 
 コード構文ブロック、コンマ (`,`)、ピリオド (`.`)、セミコロン (`;`)、コロン (`:`)、かっこ (`( )`)、二重引用符 (`"`)、および単一引用符 (`'`) はリテラルです。
 
-## <a name="grammar"></a>プリプロセッサの文法
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>プリプロセッサの文法
 
 *制御線*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* *トークン-文字列*<sub>選択</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* **(** *識別子*<sub></sub> **の**選択... **,** *identifier*<sub>opt</sub> **)** *トークン文字列の*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* *のトークン文字列を*<sub>選択</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* **(** *識別子*<sub>opt</sub> **の**選択... **,** *identifier*<sub>opt</sub> **)** *トークン文字列の*<sub>opt</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _パス仕様_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _パス仕様_ **>** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#line** *digit-シーケンス* **"** _filename_ **"** <sub>opt</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#undef** *識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#error** *トークン-文字列*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *トークン文字列*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *トークン文字列*
 
 *定数式*: \
 &nbsp;&nbsp;&nbsp;&nbsp;**定義されている (** *識別子* **)** \
@@ -70,22 +70,22 @@ ms.locfileid: "75302186"
 他の定数式 &nbsp;&nbsp;&nbsp;&nbsp;
 
 *条件*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-部分* *elif-部分*<sub>選択</sub>*else-パート*<sub>選択</sub>*endif-行*
+&nbsp;の &nbsp;&nbsp;&nbsp;*if* *elif-parts*<sub>-パート</sub><sub>opt</sub> - *part*opt *endif-line*
 
 *if-part*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if 行* *テキスト*
+&nbsp;&nbsp;&nbsp;&nbsp;*改行* *テキスト*
 
 *改行*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#if** *定数式*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *識別子*
 
 *elif-parts*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行の* *テキスト*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ* *elif 行* *テキスト*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-パーツ* *の* *テキスト*
 
 *elif 行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *定数式*
 
 *else-パート*: \
 &nbsp;&nbsp;&nbsp;&nbsp;その*他の行の* *テキスト*
@@ -125,7 +125,6 @@ ms.locfileid: "75302186"
 > [!NOTE]
 > 次の非終端要素は、  *C++言語リファレンス*の[構文表記規則](../cpp/lexical-conventions.md)(*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、および*など*) で拡張されています。
 
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C/C++プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

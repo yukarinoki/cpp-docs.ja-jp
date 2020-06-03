@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142715"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424189"
 ---
 # <a name="source_block-class"></a>source_block クラス
 
@@ -61,22 +61,22 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`target_iterator`|接続されたターゲットをウォークする反復子。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[source_block](#ctor)|`source_block` オブジェクトを構築します。|
 |[~ source_block デストラクター](#dtor)|`source_block` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[受入](#accept)|この `source_block` オブジェクトによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。|
 |[acquire_ref](#acquire_ref)|この `source_block` オブジェクトの参照カウントを取得して、削除されないようにします。|
@@ -90,7 +90,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[accept_message](#accept_message)|派生クラスでオーバーライドされると、ソースによって提供されるメッセージを受け入れます。 メッセージブロックは、`_MsgId` を検証してメッセージを返すように、このメソッドをオーバーライドする必要があります。|
 |[async_send](#async_send)|メッセージを非同期にキューに入れ、伝達タスクを開始します (まだ完了していない場合)。|
@@ -119,7 +119,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 `source_block`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 

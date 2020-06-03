@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
 ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195235"
@@ -18,7 +18,7 @@ ms.locfileid: "62195235"
 
 C++ で記述された DLL 内の関数に C 言語のモジュールからアクセスするには、C++ リンケージではなく C リンケージを使って関数を宣言する必要があります。 特に指定しない限り、C++ コンパイラは C++ のタイプ セーフな名前付け規約 (名前の装飾) と C++ の呼び出し規則を使います。C++ の規約を使うと、C からの呼び出しが難しくなります。
 
-C リンケージを指定するには、指定`extern "C"`関数の宣言にします。 例えば:
+C リンケージを指定するには、関数の宣言に `extern "C"` を指定します。 次に例を示します。
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -26,19 +26,19 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
+- [.def ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
+- [__declspec(dllexport) を使用した DLL からのエクスポート](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使用したエクスポートとインポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C または C++ 言語の実行可能ファイルで使用する C 関数のエクスポート](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使い分け](determining-which-exporting-method-to-use.md)
 
 - [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
+- [DLL の初期化](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 

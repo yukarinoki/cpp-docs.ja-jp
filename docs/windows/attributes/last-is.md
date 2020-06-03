@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214813"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514511"
 *式 (expression)*<br/>
 1つ以上の C 言語式。 空の引数スロットが許可されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Last_is** C++属性には、 [last_is](/windows/win32/Midl/last-is) MIDL 属性と同じ機能があります。
 
@@ -42,14 +42,14 @@ ms.locfileid: "69514511"
 
 |||
 |-|-|
-|**対象**|**struct**または**union**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
+|**対象**|**構造体**または**共用体**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

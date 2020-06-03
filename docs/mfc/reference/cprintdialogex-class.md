@@ -1,5 +1,5 @@
 ---
-title: CPrintDialogEx クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CPrintDialogEx
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 52e992cf021a592198daeddf0a4321fcea487f72
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741329"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364042"
 ---
-# <a name="cprintdialogex-class"></a>CPrintDialogEx クラス
+# <a name="cprintdialogex-class"></a>クラス
 
-Windows の [印刷] プロパティシートによって提供されるサービスをカプセル化します。
+Windows 印刷プロパティ シートによって提供されるサービスをカプセル化します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,52 +61,52 @@ class CPrintDialogEx : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|`CPrintDialogEx` オブジェクトを構築します。|
+|[をクリックします。](#cprintdialogex)|`CPrintDialogEx` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|[印刷] ダイアログボックスを表示せずに、プリンターデバイスコンテキストを作成します。|
-|[CPrintDialogEx::DoModal](#domodal)|ダイアログボックスを表示し、ユーザーが選択できるようにします。|
-|[CPrintDialogEx::GetCopies](#getcopies)|要求されたコピーの数を取得します。|
-|[CPrintDialogEx::GetDefaults](#getdefaults)|ダイアログボックスを表示せずに、デバイスの既定値を取得します。|
-|[CPrintDialogEx::GetDeviceName](#getdevicename)|現在選択されているプリンターデバイスの名前を取得します。|
-|[CPrintDialogEx::GetDevMode](#getdevmode)|`DEVMODE`構造体を取得します。|
-|[CPrintDialogEx::GetDriverName](#getdrivername)|システム定義のプリンターデバイスドライバーの名前を取得します。|
-|[CPrintDialogEx::GetPortName](#getportname)|現在選択されているプリンターポートの名前を取得します。|
-|[CPrintDialogEx::GetPrinterDC](#getprinterdc)|プリンターデバイスコンテキストへのハンドルを取得します。|
-|[CPrintDialogEx::PrintAll](#printall)|ドキュメントのすべてのページを印刷するかどうかを決定します。|
-|[CPrintDialogEx::PrintCollate](#printcollate)|照合されたコピーが要求されるかどうかを決定します。|
-|[CPrintDialogEx::PrintCurrentPage](#printcurrentpage)|ドキュメントの現在のページを印刷するかどうかを決定します。|
-|[CPrintDialogEx::PrintRange](#printrange)|指定した範囲のページだけを印刷するかどうかを決定します。|
-|[CPrintDialogEx::PrintSelection](#printselection)|現在選択されている項目だけを印刷するかどうかを決定します。|
+|[次の処理を行います。](#createprinterdc)|[印刷] ダイアログ ボックスを表示せずに、プリンター デバイス コンテキストを作成します。|
+|[:Dモーダル](#domodal)|ダイアログ ボックスを表示し、ユーザーが選択できるようにします。|
+|[を取得します。](#getcopies)|要求されたコピーの数を取得します。|
+|[を取得します。](#getdefaults)|ダイアログ ボックスを表示せずにデバイスの既定値を取得します。|
+|[を使用します。](#getdevicename)|現在選択されているプリンター デバイスの名前を取得します。|
+|[をクリックします。](#getdevmode)|構造体を取得`DEVMODE`します。|
+|[を取得します。](#getdrivername)|システム定義のプリンター デバイス ドライバーの名前を取得します。|
+|[をクリックします。](#getportname)|現在選択されているプリンタ ポートの名前を取得します。|
+|[をクリックします。](#getprinterdc)|プリンターデバイス コンテキストへのハンドルを取得します。|
+|[:Pリントすべて](#printall)|文書のすべてのページを印刷するかどうかを決定します。|
+|[:Pリントコルレート](#printcollate)|照合されたコピーが要求されているかどうかを判断します。|
+|[:Pリントカレントページ](#printcurrentpage)|文書の現在のページを印刷するかどうかを決定します。|
+|[:Pリントレンジ](#printrange)|指定した範囲のページだけを印刷するかどうかを決定します。|
+|[:P](#printselection)|現在選択されている項目だけを印刷するかどうかを決定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CPrintDialogEx::m_pdex](#m_pdex)|オブジェクトを`CPrintDialogEx`カスタマイズするために使用される構造体。|
+|[m_pdex](#m_pdex)|オブジェクトをカスタマイズするために使用する`CPrintDialogEx`構造体。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-フレームワークに依存して、アプリケーションの印刷プロセスの多くの要素を処理できます。 フレームワークを使用して印刷タスクを処理する方法の詳細については、「[印刷](../../mfc/printing.md)」を参照してください。
+アプリケーションの印刷プロセスのさまざまな側面を処理するために、フレームワークに依存できます。 フレームワークを使用して印刷タスクを処理する方法の詳細については、「[印刷](../../mfc/printing.md)」を参照してください。
 
-アプリケーションで、フレームワークの関与なしに印刷を処理する場合は、提供され`CPrintDialogEx`たコンストラクターを使用して "そのまま" クラスを使用するか、から`CPrintDialogEx`独自のダイアログクラスを派生させ、必要に応じてコンストラクターを記述することができます。 どちらの場合も、これらのダイアログボックスはクラス`CCommonDialog`から派生しているので、標準の MFC ダイアログボックスのように動作します。
+フレームワークの関与なしにアプリケーションで印刷を処理する場合は、提供されているコンストラクタで`CPrintDialogEx`クラスを "as" にするか、独自のダイアログ クラスを派生`CPrintDialogEx`させ、必要に応じてコンストラクタを記述します。 どちらの場合も、これらのダイアログ ボックスは class`CCommonDialog`から派生しているため、標準の MFC ダイアログ ボックスのように動作します。
 
-`CPrintDialogEx`オブジェクトを使用するには、最初に`CPrintDialogEx`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pdex](#m_pdex)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[printdlgex です。](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) `m_pdex` この構造の詳細については、Windows SDK を参照してください。
+オブジェクトを`CPrintDialogEx`使用するには、まずコンストラクタを使用してオブジェクト`CPrintDialogEx`を作成します。 ダイアログ ボックスを作成したら[、m_pdex](#m_pdex)構造体の値を設定または変更して、ダイアログ ボックスのコントロールの値を初期化できます。 構造体`m_pdex`の型は[、PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)です。 この構造体の詳細については、Windows SDK を参照してください。
 
-メンバー `m_pdex` `hDevMode`と`GlobalFree`メンバーに対して独自のハンドルを指定しない場合は、ダイアログボックスが終了したときに、これらのハンドルに対して Windows の関数を呼び出す必要があります。 `hDevNames`
+メンバー`m_pdex``hDevMode`に`hDevNames`独自のハンドルを指定しない場合は、ダイアログ ボックスの操作が完了したら、これらの`GlobalFree`ハンドルの Windows 関数を呼び出してください。
 
-ダイアログボックスコントロールを初期化した後、 `DoModal`メンバー関数を呼び出してダイアログボックスを表示し、ユーザーが印刷オプションを選択できるようにします。 から`DoModal`制御が戻ったときに、ユーザーが [OK]、[適用]、または [キャンセル] ボタンを選択したかどうかを確認できます。
+ダイアログ ボックス コントロールを初期化した後、`DoModal`メンバー関数を呼び出してダイアログ ボックスを表示し、ユーザーが印刷オプションを選択できるようにします。 戻`DoModal`り値が返された場合、ユーザーが [OK]、[適用]、または [キャンセル] ボタンを選択したかどうかを確認できます。
 
-ユーザーが [OK] を押した場合`CPrintDialogEx`は、のメンバー関数を使用して、ユーザーが入力した情報を取得できます。
+ユーザーが [OK] をクリック`CPrintDialogEx`した場合は、メンバー関数を使用して、ユーザーが入力した情報を取得できます。
 
-この`CPrintDialogEx::GetDefaults`メンバー関数は、ダイアログボックスを表示せずに現在のプリンターの既定値を取得する場合に便利です。 このメソッドでは、ユーザーの操作は必要ありません。
+`CPrintDialogEx::GetDefaults`このメンバー関数は、ダイアログ ボックスを表示せずに現在のプリンタの既定値を取得する場合に便利です。 このメソッドは、ユーザーの操作を必要としません。
 
-Windows `CommDlgExtendedError`の関数を使用すると、ダイアログボックスの初期化中にエラーが発生したかどうかを判断し、エラーの詳細を確認できます。 この関数の詳細については、Windows SDK を参照してください。
+Windows`CommDlgExtendedError`関数を使用して、ダイアログ ボックスの初期化中にエラーが発生したかどうかを確認し、エラーの詳細を確認できます。 この関数の詳細については、Windows SDK を参照してください。
 
-の使用方法`CPrintDialogEx`の詳細については、「[コモンダイアログクラス](../../mfc/common-dialog-classes.md)」を参照してください。
+の詳細`CPrintDialogEx`については、「 コモン[ダイアログ クラス](../../mfc/common-dialog-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -128,11 +128,11 @@ Windows `CommDlgExtendedError`の関数を使用すると、ダイアログボ�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdlgs
+**ヘッダー:** afxdlgs.h
 
-##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx
+## <a name="cprintdialogexcprintdialogex"></a><a name="cprintdialogex"></a>をクリックします。
 
-Windows 印刷プロパティシートを構築します。
+Windows 印刷プロパティ シートを作成します。
 
 ```
 CPrintDialogEx(
@@ -143,18 +143,18 @@ CPrintDialogEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[Printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体を参照してください。
+ダイアログ ボックスの設定をカスタマイズするために使用できる 1 つ以上のフラグを、ビットごとの OR 演算子を使用して組み合わせます。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲を文書のすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体を参照してください。
 
 *pParentWnd*<br/>
-ダイアログボックスの親またはオーナーウィンドウへのポインター。
+ダイアログ ボックスの親ウィンドウまたはオーナー ウィンドウへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、オブジェクトを構築するだけです。 このダイアログ`DoModal`ボックスを表示するには、メンバー関数を使用します。
+このメンバー関数は、オブジェクトのみを構築します。 このメンバー`DoModal`関数を使用して、ダイアログ ボックスを表示します。
 
-##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
+## <a name="cprintdialogexcreateprinterdc"></a><a name="createprinterdc"></a>次の処理を行います。
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体と[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンター デバイス コンテキスト (DC) を作成します。
 
 ```
 HDC CreatePrinterDC();
@@ -162,17 +162,17 @@ HDC CreatePrinterDC();
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成されたプリンターデバイスコンテキストを処理します。
+新しく作成されたプリンター デバイス コンテキストへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返された DC は、 [m_pdex](#m_pdex)の`hDC`メンバーにも格納されます。
+返された DC も`hDC`[m_pdex](#m_pdex)のメンバーに格納されます。
 
-この DC は現在のプリンタ DC であると想定されており、以前に取得した他のすべてのプリンタ dc を削除する必要があります。 この関数は、[印刷] ダイアログボックスを表示せずに、結果として使用される DC を呼び出すことができます。
+この DC は現在のプリンター DC であると想定され、以前に取得した他のプリンター DC は削除する必要があります。 この関数は、[印刷] ダイアログ ボックスを表示せずに、呼び出し可能で、結果として DC を使用できます。
 
-##  <a name="domodal"></a>CPrintDialogEx::D oModal
+## <a name="cprintdialogexdomodal"></a><a name="domodal"></a>:Dモーダル
 
-この関数を呼び出すと、Windows の印刷プロパティシートが表示され、ユーザーはさまざまな印刷オプション (コピー数、ページ範囲、およびコピーを照合するかどうかなど) を選択できます。
+この関数を呼び出すと、Windows Print プロパティ シートが表示され、ユーザーは部数、ページ範囲、部単位の印刷を行うかどうかなど、さまざまな印刷オプションを選択できます。
 
 ```
 virtual INT_PTR DoModal();
@@ -180,19 +180,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-INT_PTR 戻り値は実際には HRESULT です。 Windows SDK の「 [Printdlgex](/previous-versions/windows/desktop/legacy/ms646942\(v=vs.85\)) 」の「戻り値」セクションを参照してください。
+INT_PTR戻り値は、実際には HRESULT です。 Windows SDK の[PrintDlgEx](/previous-versions/windows/desktop/legacy/ms646942\(v=vs.85\))の戻り値セクションを参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_pdex`構造体のメンバーを設定することによって、さまざまな印刷ダイアログオプションを初期化する場合は、 `DoModal`を呼び出す前に、ダイアログオブジェクトが構築された後にこの操作を行う必要があります。
+構造体のメンバーを設定してさまざまな印刷ダイアログ オプションを`m_pdex`初期化する場合は、 を呼び出す`DoModal`前に、ダイアログ オブジェクトが構築された後に行う必要があります。
 
-を呼び出し`DoModal`た後、他のメンバー関数を呼び出して、ユーザーがダイアログボックスに入力した設定または情報を取得できます。
+を呼`DoModal`び出した後、他のメンバー関数を呼び出して、ユーザーが入力した設定または情報をダイアログ ボックスに取得できます。
 
-を呼び出す`DoModal`ときに PD_RETURNDC フラグが使用されている場合は、 [m_pdex](#m_pdex)の`hDC`メンバーにプリンター DC が返されます。 この DC は、の呼び出し元によって[DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)への`CPrintDialogEx`呼び出しを使用して解放する必要があります。
+PD_RETURNDC フラグが呼び出し`DoModal`時に使用されている場合は、 `hDC` [m_pdex](#m_pdex)のメンバーにプリンター DC が返されます。 この DC は、`CPrintDialogEx`の呼び出し元によって[DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)への呼び出しで解放される必要があります。
 
-##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies
+## <a name="cprintdialogexgetcopies"></a><a name="getcopies"></a>を取得します。
 
-を呼び出し`DoModal`た後に、要求されたコピーの数を取得するために、この関数を呼び出します。
+要求されたコピーの数`DoModal`を取得するために呼び出した後、この関数を呼び出します。
 
 ```
 int GetCopies() const;
@@ -202,9 +202,9 @@ int GetCopies() const;
 
 要求されたコピーの数。
 
-##  <a name="getdefaults"></a>CPrintDialogEx::GetDefaults
+## <a name="cprintdialogexgetdefaults"></a><a name="getdefaults"></a>を取得します。
 
-ダイアログボックスを表示せずに、既定のプリンターのデバイスの既定値を取得するには、この関数を呼び出します。
+ダイアログ ボックスを表示せずに、既定のプリンターのデバイスの既定値を取得します。
 
 ```
 BOOL GetDefaults();
@@ -212,19 +212,19 @@ BOOL GetDefaults();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE、それ以外の場合は FALSE。
+TRUE が成功した場合は FALSE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体と[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンター デバイス コンテキスト (DC) を作成します。
 
-`GetDefaults`[印刷] プロパティシートは表示されません。 代わりに、[m_pdex](#m_pdex) のメンバーの `hDevNames` と `hDevMode` メンバーを、システムの既定のプリンター用に初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 構造体にハンドルするように設定します。 `GetDefaults`と`hDevNames` はどちらもNULLであるか、`hDevMode`失敗します。
+`GetDefaults`では、印刷プロパティ シートは表示されません。 代わりに[、m_pdex](#m_pdex)の`hDevNames`メンバー`hDevMode`と、 および をシステムのデフォルト・プリンター用に初期化される[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体にハンドルするように設定します。 両方`hDevNames`とも`hDevMode`NULL`GetDefaults`にする必要があります。
 
-PD_RETURNDC フラグが設定されている場合、この関数は`hDevNames` `hDevMode` (および`m_pdex.hDevMode`に`m_pdex.hDevNames`あります) を呼び出し元に返すだけではなく、で`m_pdex.hDC`もプリンター DC を返します。 `CPrintDialogEx`オブジェクトの操作が完了したら、プリンター DC を削除して、ハンドルに対して Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)関数を呼び出す必要があります。
+PD_RETURNDC フラグが設定されている場合、この関数は呼び`hDevNames`出`hDevMode`し元に`m_pdex.hDevNames`返`m_pdex.hDevMode`すだけでなく、 ( に指定されている ) を`m_pdex.hDC`呼び出し元に返すだけでなく、 でプリンタ DC も返します。 呼び出し元は、オブジェクトの終了後に、プリンタ DC を削除し、ハンドルの Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)関数を呼び出す必要`CPrintDialogEx`があります。
 
-##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName
+## <a name="cprintdialogexgetdevicename"></a><a name="getdevicename"></a>を使用します。
 
-この関数は、 [DoModal](#domodal)を呼び出して現在選択されているプリンターの名前を取得した後、または[GetDefaults](#getdefaults)を呼び出して既定のプリンターの名前を取得した後に呼び出されます。
+現在選択されているプリンタの名前を取得するために[DoModal](#domodal)を呼び出した後、または[GetDefaults](#getdefaults)を呼び出して既定のプリンタの名前を取得した後、この関数を呼び出します。
 
 ```
 CString GetDeviceName() const;
@@ -232,15 +232,15 @@ CString GetDeviceName() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されているプリンターの名前。
+現在選択されているプリンタの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[CDC:: createdc](../../mfc/reference/cdc-class.md#createdc)への呼び出し`GetDeviceName`で、によっ`lpszDeviceName`て返される`CString`オブジェクトへのポインターを、の値として使用します。
+によって返`CString`される`GetDeviceName`オブジェクトへのポインターを、 `lpszDeviceName` [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)の呼び出しの値として使用します。
 
-##  <a name="getdevmode"></a>  CPrintDialogEx::GetDevMode
+## <a name="cprintdialogexgetdevmode"></a><a name="getdevmode"></a>をクリックします。
 
-[DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後に、この関数を呼び出して、印刷デバイスに関する情報を取得します。
+印刷デバイスに関する情報を取得するには[、DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後にこの関数を呼び出します。
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -248,11 +248,11 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体には、デバイスの初期化とプリンター ドライバーの環境に関する情報が含まれています。 この構造体で使用されるメモリのロックを解除するには、Windows SDK で説明されている Windows[グローバル ロック解除](/windows/win32/api/winbase/nf-winbase-globalunlock)機能を使用する必要があります。
 
-##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName
+## <a name="cprintdialogexgetdrivername"></a><a name="getdrivername"></a>を取得します。
 
-システム定義のプリンターデバイスドライバーの名前を取得するには、 [DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後にこの関数を呼び出します。
+[DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後、この関数を呼び出して、システム定義のプリンター デバイス ドライバーの名前を取得します。
 
 ```
 CString GetDriverName() const;
@@ -260,15 +260,15 @@ CString GetDriverName() const;
 
 ### <a name="return-value"></a>戻り値
 
-システム定義のドライバー名を指定する。`CString`
+システム`CString`定義のドライバー名を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって`GetDriverName`返され`CString`たオブジェクトへのポインターを、 [CDC:: createdc](../../mfc/reference/cdc-class.md#createdc)への呼び出しで*lpszdrivername*の値として使用します。
+`CString`によって返された`GetDriverName`オブジェクトへのポインターを[、CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)の呼び出しで*lpszDriverName*の値として使用します。
 
-##  <a name="getportname"></a>  CPrintDialogEx::GetPortName
+## <a name="cprintdialogexgetportname"></a><a name="getportname"></a>をクリックします。
 
-現在選択されているプリンターポートの名前を取得するために、 [DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後に、この関数を呼び出します。
+[DoModal](#domodal)または[GetDefaults](#getdefaults)を呼び出した後、この関数を呼び出して、現在選択されているプリンター ポートの名前を取得します。
 
 ```
 CString GetPortName() const;
@@ -276,11 +276,11 @@ CString GetPortName() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されているプリンターポートの名前。
+現在選択されているプリンタ ポートの名前。
 
-##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC
+## <a name="cprintdialogexgetprinterdc"></a><a name="getprinterdc"></a>をクリックします。
 
-プリンターデバイスコンテキストへのハンドルを返します。
+プリンターデバイス コンテキストへのハンドルを返します。
 
 ```
 HDC GetPrinterDC() const;
@@ -288,29 +288,29 @@ HDC GetPrinterDC() const;
 
 ### <a name="return-value"></a>戻り値
 
-プリンターデバイスコンテキストを処理するハンドル。
+プリンターデバイス コンテキストへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用が完了したら、Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)関数を呼び出して、デバイスコンテキストを削除する必要があります。
+デバイス コンテキストを使用し終わったら、Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)関数を呼び出して削除する必要があります。
 
-##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
+## <a name="cprintdialogexm_pdex"></a><a name="m_pdex"></a>m_pdex
 
-Dialog オブジェクトの特性を格納するメンバーを持つ PRINTDLGEX 構造体。
+メンバがダイアログ オブジェクトの特性を格納する PRINTDLGEX 構造体。
 
 ```
 PRINTDLGEX m_pdex;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CPrintDialogEx`オブジェクトを構築した後、を`m_pdex`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pdex`構造の詳細については、Windows SDK の「 [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) 」を参照してください。
+オブジェクトを`CPrintDialogEx`作成した後[、DoModal](#domodal) `m_pdex`メンバー関数を呼び出す前に、ダイアログ ボックスのさまざまな側面を設定できます。 構造の詳細については、Windows SDK の`m_pdex`[印刷を](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)参照してください。
 
-`m_pdex`データメンバーを直接変更すると、すべての既定の動作がオーバーライドされます。
+データ メンバーを`m_pdex`直接変更すると、既定の動作がオーバーライドされます。
 
-##  <a name="printall"></a>  CPrintDialogEx::PrintAll
+## <a name="cprintdialogexprintall"></a><a name="printall"></a>:Pリントすべて
 
-を呼び出し`DoModal`た後に、ドキュメント内のすべてのページを印刷するかどうかを判断するために、この関数を呼び出します。
+ドキュメント内のすべてのページを`DoModal`印刷するかどうかを確認するために呼び出した後、この関数を呼び出します。
 
 ```
 BOOL PrintAll() const;
@@ -318,11 +318,11 @@ BOOL PrintAll() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメント内のすべてのページを印刷する場合は TRUE。それ以外の場合は FALSE。
+文書内のすべてのページを印刷する場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="printcollate"></a>  CPrintDialogEx::PrintCollate
+## <a name="cprintdialogexprintcollate"></a><a name="printcollate"></a>:Pリントコルレート
 
-を呼び出し`DoModal`た後に、この関数を呼び出して、プリンターがドキュメントのすべての印刷コピーを照合する必要があるかどうかを判断します。
+この関数を呼び`DoModal`出した後、印刷されたドキュメントのすべてのコピーを印刷するかどうかを確認します。
 
 ```
 BOOL PrintCollate() const;
@@ -330,11 +330,11 @@ BOOL PrintCollate() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーがダイアログボックスの [部単位で印刷] チェックボックスをオンにする場合は TRUE。それ以外の場合は FALSE。
+ユーザーがダイアログ ボックスで [照合] チェック ボックスをオンにした場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage
+## <a name="cprintdialogexprintcurrentpage"></a><a name="printcurrentpage"></a>:Pリントカレントページ
 
-を呼び出し`DoModal`た後に、ドキュメント内の現在のページを印刷するかどうかを判断するために、この関数を呼び出します。
+ドキュメント内の現在の`DoModal`ページを印刷するかどうかを確認するために呼び出した後、この関数を呼び出します。
 
 ```
 BOOL PrintCurrentPage() const;
@@ -342,11 +342,11 @@ BOOL PrintCurrentPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-[印刷] ダイアログボックスで [**現在のページを印刷**する] が選択されている場合は TRUE です。それ以外の場合は FALSE。
+印刷ダイアログで **[現在のページを印刷**] が選択されている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="printrange"></a>  CPrintDialogEx::PrintRange
+## <a name="cprintdialogexprintrange"></a><a name="printrange"></a>:Pリントレンジ
 
-を呼び出し`DoModal`た後に、この関数を呼び出して、文書内のページの範囲だけを印刷するかどうかを決定します。
+ドキュメント内のページ範囲`DoModal`のみを印刷するかどうかを確認するために呼び出した後、この関数を呼び出します。
 
 ```
 BOOL PrintRange() const;
@@ -354,15 +354,15 @@ BOOL PrintRange() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメント内のページの範囲だけを印刷する場合は TRUE。それ以外の場合は FALSE。
+文書内のページ範囲のみを印刷する場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定されたページ範囲は[m_pdex](#m_pdex)から判別でき`nPageRanges`ます`nMaxPageRanges`(Windows SDK `lpPageRanges`の[printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体で、、およびを参照してください)。
+指定されたページ範囲は[、m_pdex](#m_pdex)から決定できます`nPageRanges`(Windows `lpPageRanges` SDK の[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体`nMaxPageRanges`、 、および を参照してください)。
 
-##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
+## <a name="cprintdialogexprintselection"></a><a name="printselection"></a>:P
 
-を呼び出し`DoModal`た後に、現在選択されている項目だけを印刷するかどうかを判断するために、この関数を呼び出します。
+現在選択されている項目だけを`DoModal`印刷するかどうかを確認するために呼び出した後、この関数を呼び出します。
 
 ```
 BOOL PrintSelection() const;
@@ -370,10 +370,10 @@ BOOL PrintSelection() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択した項目のみを印刷する場合は TRUE。それ以外の場合は FALSE。
+選択した項目だけを印刷する場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="see-also"></a>関連項目
 
-[CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/ccommondialog-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CPrintInfo 構造体](../../mfc/reference/cprintinfo-structure.md)

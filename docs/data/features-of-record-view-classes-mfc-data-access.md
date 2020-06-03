@@ -5,26 +5,26 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62597a3eb3f7a7e779ca57c9781565176df568d4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213435"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>レコード ビュー クラスの機能 (MFC データ アクセス)
 
-クラスを使用したフォーム ベースのデータ アクセス プログラミングを行うことができます[CFormView](../mfc/reference/cformview-class.md)が[CRecordView](../mfc/reference/crecordview-class.md)は通常より優れたクラスから派生します。 加え、`CFormView`機能、 `CRecordView`:
+フォームベースのデータアクセスプログラミングは、 [CFormView](../mfc/reference/cformview-class.md)クラスを使用して行う[ことができますが、](../mfc/reference/crecordview-class.md)通常は、から派生することをお勧めします。 `CFormView` の機能に加えて、次の `CRecordView`ます。
 
-- フォーム コントロールと関連付けられているレコード セット オブジェクトの間のダイアログ データ エクス (チェンジ DDX) を提供します。
+- フォームコントロールと関連付けられたレコードセットオブジェクトとの間にダイアログデータエクスチェンジ (DDX) を提供します。
 
-- 関連するレコード セット オブジェクト内のレコード間を移動するための Move First、Move Next、Move Previous、および最後に移動のコマンドを処理します。
+- 関連付けられたレコードセットオブジェクト内のレコード間を移動するために、[最初に移動]、[次に移動]、[前に移動]、および [最後のコマンドを移動] を処理します
 
-- 更新プログラムは、ユーザーが別のレコードに移動したときに、現在のレコードを変更します。
+- ユーザーが別のレコードに移動したときに、現在のレコードの変更を更新します。
 
-ナビゲーションの詳細については、次を参照してください。[レコード ビュー。レコード ビュー内のナビゲーションをサポートしている](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)します。
+ナビゲーションの詳細については、「[レコードビュー: レコードビューでのナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [レコード ビュー (MFC データ アクセス)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC ドライバーの一覧](../data/odbc/odbc-driver-list.md)

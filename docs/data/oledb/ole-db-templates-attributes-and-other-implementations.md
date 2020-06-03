@@ -6,52 +6,52 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722bfdf02dc89e061351fd2a87b5d019db10da6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283890"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209886"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB テンプレート
 
-OLE DB テンプレート、ATL (Active Template Library) の一部である、高性能な OLE DB のデータベース テクノロジを使いやすく、一般的に使用される OLE DB インターフェイスの多くを実装するクラスを提供することで。 このテンプレートと共にライブラリは、OLE DB のスターター アプリケーションを作成するためのウィザード サポートです。
+ATL (Active Template Library) の一部である OLE DB テンプレートを使用すると、一般的に使用される OLE DB インターフェイスの多くを実装するクラスを提供することで、高パフォーマンスの OLE DB データベーステクノロジを簡単に使用できるようになります。 このテンプレートライブラリは、OLE DB starter アプリケーションを作成するためのウィザードをサポートしています。
 
-このテンプレート ライブラリには、2 つの部分が含まれています。
+このテンプレートライブラリには、次の2つの部分が含まれます。
 
-- **OLE DB コンシューマー テンプレート**OLE DB (コンシューマー) のクライアント アプリケーションを実装するために使用します。
+- **コンシューマーテンプレートの OLE DB**OLE DB クライアント (コンシューマー) アプリケーションを実装するために使用します。
 
-- **OLE DB プロバイダー テンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。
+- **OLE DB プロバイダーテンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。
 
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)します。
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、「[プログラマーズリファレンス OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)」を参照してください。
 
-詳細については、次の操作を実行できます。
+詳細については、次の情報を参照してください。
 
-- に関するトピックを参照して、 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)または[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)します。
+- [OLE DB コンシューマーテンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)または[OLE DB プロバイダーテンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)に関するトピックを参照してください。
 
-- 作成、 [OLE DB コンシューマー](../../data/oledb/creating-an-ole-db-consumer.md)または[OLE DB プロバイダー](../../data/oledb/creating-an-ole-db-provider.md)します。
+- [OLE DB コンシューマー](../../data/oledb/creating-an-ole-db-consumer.md)または[OLE DB プロバイダー](../../data/oledb/creating-an-ole-db-provider.md)を作成します。
 
-- 一覧を参照してください。 [OLE DB コンシューマー クラス](../../data/oledb/ole-db-consumer-templates-reference.md)または[OLE DB プロバイダー クラス](../../data/oledb/ole-db-provider-templates-reference.md)します。
+- [OLE DB コンシューマークラス](../../data/oledb/ole-db-consumer-templates-reference.md)または[OLE DB プロバイダークラス](../../data/oledb/ole-db-provider-templates-reference.md)の一覧を参照してください。
 
-- 一覧を参照してください。 [OLE DB テンプレート サンプル](https://github.com/Microsoft/VCSamples)します。
+- [OLE DB テンプレートのサンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB)の一覧を参照してください。
 
-- 参照してください[OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)(、Windows SDK) にします。
+- [OLE DB プログラマーのリファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)(Windows SDK) を参照してください。
 
-## <a name="ole-db-attributes"></a>OLE DB 属性します。
+## <a name="ole-db-attributes"></a>OLE DB 属性
 
-[OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)OLE DB コンシューマーを作成する便利な手段を提供します。 OLE DB 属性に基づくコードの挿入、 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)して OLE DB コンシューマーとプロバイダーを作成します。 属性でサポートされていない機能を指定する必要がある場合は、コードで属性と組み合わせて OLE DB テンプレートを使用することができます。
+[コンシューマー属性 OLE DB](../../windows/ole-db-consumer-attributes.md)は OLE DB コンシューマーを作成するための便利な方法を提供します。 OLE DB 属性は、 [OLE DB コンシューマーテンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)に基づいてコードを挿入して、コンシューマーとプロバイダーの作業 OLE DB を作成します。 属性でサポートされていない機能を指定する必要がある場合は、コード内の属性と共に OLE DB テンプレートを使用できます。
 
-## <a name="mfc-ole-db-classes"></a>MFC の OLE DB クラス
+## <a name="mfc-ole-db-classes"></a>MFC OLE DB クラス
 
-MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)コントロールでのデータベース レコードを表示します。 ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクトし、のフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。 移動するための既定の実装も提供に、最初次、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。 詳細については、「 `COleDBRecordView` 」を参照してください。
+MFC ライブラリには、コントロールにデータベースレコードを表示する、 [Cobf Brecordview](../../mfc/reference/coledbrecordview-class.md)という1つのクラスがあります。 ビューは、`CRowset` オブジェクトに直接接続されたフォームビューで、ダイアログテンプレートのコントロールに `CRowset` オブジェクトのフィールドを表示します。 また、first、next、previous、last の各レコードに移動するための既定の実装と、現在ビューに表示されているレコードを更新するためのインターフェイスも用意されています。 詳細については、`COleDBRecordView` を参照してください。
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK インターフェイス
 
-OLE DB テンプレートが OLE DB の機能をサポートしない場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)Windows SDK に含まれています。
+OLE DB テンプレートで OLE DB 機能がサポートされていない場合は、OLE DB インターフェイスを使用する必要があります。 詳細については、Windows SDK の「[プログラマーズリファレンス OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB プログラミングの概要](../../data/oledb/ole-db-programming-overview.md)

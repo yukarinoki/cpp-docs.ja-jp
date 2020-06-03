@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_searcher クラス
+title: boyer_moore_searcherクラス
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: 3a6741a8ee9988a9842dea691a4ef01254872ed1
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 54e5c4b7c9fe27d6df32f56d57eb1207fa09332c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957144"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366767"
 ---
-# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher クラス
+# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcherクラス
 
-`boyer_moore_searcher`クラスは、オブジェクトのコンストラクターで指定されたシーケンスを検索するためにボイヤー-真人アルゴリズムを使用する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に渡された別のシーケンス内で実行されます。 このクラスは、 [std:: search](algorithm-functions.md#search)のオーバーロードのいずれかにパラメーターとして渡されます。
+クラス`boyer_moore_searcher`は、ボイヤー-ムーア アルゴリズムを使用してオブジェクトのコンストラクターで指定されたシーケンスを検索する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に提供される別のシーケンス内で行われます。 このクラスは、パラメーターとして[std::search](algorithm-functions.md#search)のオーバーロードの 1 つに渡されます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ class boyer_moore_searcher
 
 | | |
 | - | - |
-| **コンストラクター** | |
+| **Constructor** | |
 |[boyer_moore_searcher](#boyer-moore-searcher-constructor)||
-| **演算子** | |
-| [演算子 ()](#operator-call) | |
+| **オペレーター** | |
+| [Operator()](#operator-call) | |
 
-## <a name="boyer-moore-searcher-constructor"></a>boyer_moore_searcher コンストラクター
+## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a>boyer_moore_searcherコンストラクター
 
-検索する`boyer_moore_searcher`シーケンス、ハッシュ関数オブジェクト、および等値述語を使用して、関数オブジェクトを構築します。
+検索するシーケンス`boyer_moore_searcher`、ハッシュ関数オブジェクト、および等価述語を使用して、関数オブジェクトを構築します。
 
 ```cpp
 boyer_moore_searcher(
@@ -62,26 +62,26 @@ boyer_moore_searcher(
 ### <a name="parameters"></a>パラメーター
 
 *pat_first*\
-検索するシーケンスの最初の要素。
+検索するシーケンスの初期要素。
 
 *pat_last*\
 検索するシーケンスの末尾。
 
-*hf*\
-シーケンスの要素をハッシュするために使用される呼び出し可能オブジェクト。
+*Hf*\
+シーケンス要素のハッシュに使用される呼び出し可能オブジェクト。
 
-*pred*\
-Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない`std::equal_to`場合、既定値はになります。
+*Pred*\
+シーケンス要素の省略可能な等価比較述語。 等値比較の種類が指定されていない場合、既定値は`std::equal_to`です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Binarypredicate*、 *Hash*、または*RandomAccessIterator*型のコピーコンストラクター、または*Binarypredicate*または*Hash*の call 演算子によってスローされた例外をスローします。
+*二項述語*、*ハッシュ*、または*RandomAccessIterator*型のコピー コンストラクター、または*BinaryPredicate*または*Hash*の呼び出し演算子によってスローされる例外をスローします。
 
-このクラスは、C++ 17 で新しく追加されたものです。
+このクラスは C++17 で新しく追加されました。
 
-## <a name="operator-call"></a>operator ()
+## <a name="operator"></a><a name="operator-call"></a>Operator()
 
-関数オブジェクトの呼び出し演算子。 引数シーケンス`[first, last)`内で、コンストラクターに指定されたシーケンスを検索します。
+関数オブジェクトの呼び出し演算子。 コンストラクタに指定されたシーケンス`[first, last)`を引数シーケンス内で検索します。
 
 ```cpp
 template <class ForwardIterator2>
@@ -93,20 +93,20 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 ### <a name="parameters"></a>パラメーター
 
 *まずは*\
-検索するシーケンスの最初の要素。
+検索するシーケンスの初期要素。
 
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-検索パターン`[pat_first, pat_last)`が空の場合、は`make_pair(first, first)`を返します。 検索パターンが見つからない場合は、 `make_pair(last, last)`を返します。 それ以外の場合は、述語`[first, last)` *pred*に`[pat_first, pat_last)`従って、に等しいシーケンスの先頭と末尾に反復子のペアを返します。
+検索パターン`[pat_first, pat_last)`が空の場合は、`make_pair(first, first)`を返します。 検索パターンが見つからない場合は、 を`make_pair(last, last)`返します。 それ以外の場合は、述語`[first, last)`*pred*に`[pat_first, pat_last)`従って等しいシーケンスの先頭と末尾に反復子のペアを返します。
 
-このクラスは、C++ 17 で新しく追加されたものです。
+このクラスは C++17 で新しく追加されました。
 
 ## <a name="see-also"></a>関連項目
 
-[\<functional>](functional.md)\
+[\<機能>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\
-[boyer_moore_horspool_searcher クラス](boyer-moore-horspool-searcher-class.md)\
-[std:: search](algorithm-functions.md#search)
+[boyer_moore_horspool_searcherクラス](boyer-moore-horspool-searcher-class.md)\
+[std::検索](algorithm-functions.md#search)

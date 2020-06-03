@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195137"
 ---
 # <a name="linker-tools-error-lnk1200"></a>リンカ ツール エラー LNK1200
 
-プログラム データベース 'filename' を読み取り中にエラー
+プログラムデータベース ' filename ' の読み取り中にエラーが発生した
 
-プログラム データベース (PDB) を読み取ることができませんでした。
+プログラムデータベース (PDB) を読み取れませんでした。
 
-このエラーは、ファイルの破損によって発生することができます。
+このエラーは、ファイルの破損によって発生する可能性があります。
 
-場合`filename`pdb ファイルは、オブジェクトのファイルで、ファイルを使用してオブジェクトを再コンパイル[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)します。
+`filename` がオブジェクトファイルの PDB である場合は、 [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)を使用してオブジェクトファイルを再コンパイルします。
 
-場合`filename`PDB および再リンクの削除、メイン出力ファイルの PDB であり、インクリメンタル リンク中にこのエラーが発生しました。
+`filename` がメイン出力ファイルの PDB であり、インクリメンタルリンク中にこのエラーが発生した場合は、PDB を削除して再リンクします。

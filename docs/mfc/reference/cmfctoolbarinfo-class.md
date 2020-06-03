@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
-ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593d1665751f7322fc2a9cee307620df88d46876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217809"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376193"
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo クラス
 
-さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo` パラメーターとして使用されるヘルパー クラスには、 [cmfctoolbar::loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッド。
+さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo`は、メソッドのパラメーターとして使用されるヘルパー クラス[です](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)。
 
 ## <a name="syntax"></a>構文
 
@@ -45,18 +45,18 @@ class CMFCToolBarInfo
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|(コールド) 標準のツール バー イメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|ツールバーの無効イメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|選択されている (ホット) ツール バー イメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|通常、大規模なツール バー イメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|含む大規模な場合は、ツールバーのビットマップのリソース ID には、ツール バー イメージが無効になります。|
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|ツールバーの大規模で選択したイメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|メニューの無効イメージを含むツールバーのビットマップのリソース ID。|
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|メニュー イメージを含むツールバーのビットマップのリソース ID。|
+|[CMFCツールバーインフォ::m_uiColdResID](#m_uicoldresid)|通常の (コールド) ツール バー イメージを含むツール バー ビットマップのリソース ID。|
+|[ツールバーインフォ::m_uiDisabledResID](#m_uidisabledresid)|無効なツール バー イメージを含むツール バー ビットマップのリソース ID。|
+|[ツール バーインフォ::m_uiHotResID](#m_uihotresid)|選択された (ホットな) ツール バー イメージを含むツール バー ビットマップのリソース ID です。|
+|[ツール バーインフォ::m_uiLargeColdResID](#m_uilargecoldresid)|大きい標準のツール バー イメージを含むツール バー ビットマップのリソース ID。|
+|[ツール バーインフォ::m_uiLargeDisabledResID](#m_uilargedisabledresid)|ツール バー イメージを大きく、無効にした大きいツール バー のビットマップのリソース ID。|
+|[CMFCツールバーインフォ::m_uiLargeHotResID](#m_uilargehotresid)|選択した大きいツール バー イメージを含むツール バー ビットマップのリソース ID。|
+|[CMFCツールバーインフォ::m_uiMenuDisabledResID](#m_uimenudisabledresid)|無効なメニュー イメージを含むツール バー ビットマップのリソース ID です。|
+|[ツールバーインフォ::m_uiMenuResID](#m_uimenuresid)|メニュー イメージを含むツール バー ビットマップのリソース ID。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-完全なツールバーのビットマップは、固定サイズの小さいツール バー イメージ (ボタン) で構成されます。 格納されているそれぞれのリソース ID、`CMFCToolBarInfo`オブジェクトが 1 つの状態 (例では、選択されている、無効な場合、大規模なまたはメニュー イメージ) 用のツール バー イメージの完全なセットを含むビットマップ。
+ツール バーのビットマップは、固定サイズの小さなツール バー イメージ (ボタン) で構成されます。 `CMFCToolBarInfo`オブジェクトに格納される各リソース ID は、1 つの状態 (選択、無効、大きい、メニューイメージなど) のツール バー イメージの完全なセットを含むビットマップです。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -66,65 +66,65 @@ class CMFCToolBarInfo
 
 **ヘッダー:** afxtoolbar.h
 
-##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID
+## <a name="cmfctoolbarinfom_uicoldresid"></a><a name="m_uicoldresid"></a>CMFCツールバーインフォ::m_uiColdResID
 
-ツールバーのすべての標準ボタン イメージのリソース ID を指定します。
+ツール バーのすべての標準ボタン イメージのリソース ID を指定します。
 
 ```
 UINT m_uiColdResID;
 ```
 
-##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID
+## <a name="cmfctoolbarinfom_uidisabledresid"></a><a name="m_uidisabledresid"></a>ツールバーインフォ::m_uiDisabledResID
 
-ツールバーのボタンにアクセスできないイメージのリソース ID を指定します。
+ツール バーのボタンを使用できないイメージのリソース ID を指定します。
 
 ```
 UINT m_uiDisabledResID;
 ```
 
-##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID
+## <a name="cmfctoolbarinfom_uihotresid"></a><a name="m_uihotresid"></a>ツール バーインフォ::m_uiHotResID
 
-ツールバーのボタンが強調表示されているイメージをすべてのリソース ID を指定します。
+ツール バーのすべての強調表示されたボタン イメージのリソース ID を指定します。
 
 ```
 UINT m_uiHotResID
 ```
 
-##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID
+## <a name="cmfctoolbarinfom_uilargecoldresid"></a><a name="m_uilargecoldresid"></a>ツール バーインフォ::m_uiLargeColdResID
 
-ツールバーのすべての大きな標準ボタン イメージのリソース ID を指定します。
+ツール バーのすべての大きい標準ボタン イメージのリソース ID を指定します。
 
 ```
 UINT m_uiLargeColdResID
 ```
 
-##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID
+## <a name="cmfctoolbarinfom_uilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>ツール バーインフォ::m_uiLargeDisabledResID
 
-ツールバーのすべての大きな無効にされたボタン イメージのリソース ID を指定します。
+ツール バーのすべての大きな無効ボタン イメージのリソース ID を指定します。
 
 ```
 UINT m_uiLargeDisabledResID;
 ```
 
-##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID
+## <a name="cmfctoolbarinfom_uilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCツールバーインフォ::m_uiLargeHotResID
 
-ツールバーの大規模な強調表示されているイメージがすべてのリソース ID を指定します。
+ツール バーの大きな強調表示イメージのリソース ID を指定します。
 
 ```
 UINT m_uiLargeHotResID;
 ```
 
-##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID
+## <a name="cmfctoolbarinfom_uimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCツールバーインフォ::m_uiMenuDisabledResID
 
-ツールバーのコマンドにアクセスできないイメージのリソース ID を指定します。
+ツール バーのコマンドを使用できないイメージのリソース ID を指定します。
 
 ```
 UINT m_uiMenuDisabledResID;
 ```
 
-##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID
+## <a name="cmfctoolbarinfom_uimenuresid"></a><a name="m_uimenuresid"></a>ツールバーインフォ::m_uiMenuResID
 
-ツールバーのすべての標準のメニュー項目のイメージのリソース ID を指定します。
+ツール バーのすべての標準メニュー項目イメージのリソース ID を指定します。
 
 ```
 UINT m_uiMenuResID;
@@ -132,6 +132,6 @@ UINT m_uiMenuResID;
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)
+[クラス](../../mfc/reference/cmfctoolbar-class.md)

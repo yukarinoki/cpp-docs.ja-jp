@@ -2,7 +2,6 @@
 title: OLE DB プロバイダー テンプレート用マクロ
 ms.date: 02/11/2019
 f1_keywords:
-- vc.templates.ole
 - BEGIN_PROPERTY_SET
 - BEGIN_PROPERTY_SET_EX
 - BEGIN_PROPSET_MAP
@@ -51,60 +50,60 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: f5cf5e8ebadcc48dbd040225496f0a437b92555c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d29b2548102b056a21ebfccb037af3a766788ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369803"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 
-OLE DB プロバイダー テンプレートのマクロは、次のカテゴリの機能を提供します。
+OLE DB テンプレート プロバイダー マクロは、次のカテゴリの機能を提供します。
 
-## <a name="property-set-map-macros"></a>プロパティ セットのマップに関するマクロ
+## <a name="property-set-map-macros"></a>プロパティ セット マップ マクロ
 
 |||
 |-|-|
-|[BEGIN_PROPERTY_SET](#begin_property_set)|プロパティ セットの先頭をマークします。|
-|[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|プロパティ セットの先頭をマークします。|
-|[BEGIN_PROPSET_MAP](#begin_propset_map)|セットのプロパティの先頭をマークを非表示またはプロバイダーのスコープの外部で定義できます。|
-|[CHAIN_PROPERTY_SET](#chain_property_set)|プロパティ グループを一緒にチェーンします。|
+|[BEGIN_PROPERTY_SET](#begin_property_set)|プロパティ セットの先頭を示します。|
+|[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|プロパティ セットの先頭を示します。|
+|[BEGIN_PROPSET_MAP](#begin_propset_map)|プロバイダーのスコープ外で非表示または定義できるプロパティ セットの先頭をマークします。|
+|[CHAIN_PROPERTY_SET](#chain_property_set)|プロパティ グループを連結します。|
 |[END_PROPERTY_SET](#end_property_set)|プロパティ セットの末尾をマークします。|
-|[END_PROPSET_MAP](#end_propset_map)|プロパティ セットのマップの最後をマークします。|
-|[PROPERTY_INFO_ENTRY](#property_info_entry)|既定値に設定されたプロパティでは、特定のプロパティを設定します。|
-|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|指定した値に設定されたプロパティでは、特定のプロパティを設定します。 フラグやオプションを設定することもできます。|
-|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|指定した値に設定されたプロパティでは、特定のプロパティを設定します。|
+|[END_PROPSET_MAP](#end_propset_map)|プロパティ セット マップの終わりを示します。|
+|[PROPERTY_INFO_ENTRY](#property_info_entry)|プロパティ セットの特定のプロパティを既定値に設定します。|
+|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|プロパティ セットの特定のプロパティを、ユーザーが指定した値に設定します。 また、フラグとオプションを設定することもできます。|
+|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|プロパティ セットの特定のプロパティを、ユーザーが指定した値に設定します。|
 
-## <a name="column-map-macros"></a>列マップに関するマクロ
-
-|||
-|-|-|
-|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|プロバイダーの列のマップ エントリの先頭をマークします。|
-|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|プロバイダーの列のマップ エントリの終了を示します。|
-|[PROVIDER_COLUMN_ENTRY](#provider_column_entry)|プロバイダーでサポートされている特定の列を表します。|
-|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|プロバイダーでサポートされている特定の列を表します。 列のデータ型を指定することができます。|
-|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|プロバイダーでサポートされている特定の列を表します。 列のサイズ、データ型、有効桁数、スケール、およびスキーマ行セット GUID を指定することができます。|
-|[PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)|プロバイダーでサポートされている特定の列を表します。 列のサイズを指定することができます。|
-|[PROVIDER_COLUMN_ENTRY_STR](#provider_column_entry_str)|プロバイダーでサポートされている特定の列を表します。 列の型が文字列と見なします。|
-|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|プロバイダーでサポートされている特定の列を表します。 PROVIDER_COLUMN_ENTRY_LENGTH が列のデータ型やサイズを指定することもできます。|
-|[PROVIDER_COLUMN_ENTRY_WSTR](#provider_column_entry_wstr)|プロバイダーでサポートされている特定の列を表します。 これにより、列の型が Unicode 文字の文字列を前提としています。|
-
-## <a name="schema-rowset-macros"></a>スキーマ行セットのマクロ
+## <a name="column-map-macros"></a>列マップ マクロ
 
 |||
 |-|-|
-|[BEGIN_SCHEMA_MAP](#begin_schema_map)|スキーマ マップの先頭をマークします。|
-|[END_SCHEMA_MAP](#end_schema_map)|スキーマ マップの最後をマークします。|
+|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|プロバイダー列マップのエントリの先頭を示します。|
+|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|プロバイダー列マップのエントリの末尾をマークします。|
+|[PROVIDER_COLUMN_ENTRY](#provider_column_entry)|プロバイダーでサポートされる特定の列を表します。|
+|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|プロバイダーでサポートされる特定の列を表します。 列のデータ型を指定できます。|
+|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|プロバイダーでサポートされる特定の列を表します。 列のサイズ、データ型、有効桁数、スケール、およびスキーマ行セット GUID を指定できます。|
+|[PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)|プロバイダーでサポートされる特定の列を表します。 列サイズを指定できます。|
+|[PROVIDER_COLUMN_ENTRY_STR](#provider_column_entry_str)|プロバイダーでサポートされる特定の列を表します。 列の型は文字列であると見なされます。|
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|プロバイダーでサポートされる特定の列を表します。 PROVIDER_COLUMN_ENTRY_LENGTH同様ですが、列のデータ型とサイズを指定することもできます。|
+|[PROVIDER_COLUMN_ENTRY_WSTR](#provider_column_entry_wstr)|プロバイダーでサポートされる特定の列を表します。 列の型は Unicode 文字ストリングであると見なされます。|
+
+## <a name="schema-rowset-macros"></a>スキーマ行セット マクロ
+
+|||
+|-|-|
+|[BEGIN_SCHEMA_MAP](#begin_schema_map)|スキーマ マップの先頭を示します。|
+|[END_SCHEMA_MAP](#end_schema_map)|スキーマ マップの末尾をマークします。|
 |[SCHEMA_ENTRY](#schema_entry)|GUID をクラスに関連付けます。|
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
-### <a name="begin_property_set"></a> BEGIN_PROPERTY_SET
+### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
 
-プロパティのセットのプロパティの先頭をマークは、マップを設定します。
+プロパティ セット マップ内のプロパティ セットの先頭を示します。
 
 #### <a name="syntax"></a>構文
 
@@ -115,15 +114,15 @@ BEGIN_PROPERTY_SET(guid)
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-[in]プロパティの GUID。
+[in]プロパティ GUID。
 
 #### <a name="example"></a>例
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
+### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
 
-プロパティのセットのプロパティの先頭をマークは、マップを設定します。
+プロパティ セット マップ内のプロパティ セットの先頭を示します。
 
 #### <a name="syntax"></a>構文
 
@@ -134,18 +133,18 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-[in]プロパティの GUID。
+[in]プロパティ GUID。
 
-*flags*<br/>
-[in]すべてのプロパティ セットを公開したくないまたはプロバイダーのスコープ外で定義されたプロパティを公開するプロバイダーの UPROPSET_PASSTHROUGH UPROPSET_HIDDEN します。
+*フラグ*<br/>
+[in]UPROPSET_HIDDEN公開しないプロパティ セット、またはプロバイダのスコープ外で定義されているプロパティを公開するプロバイダのUPROPSET_PASSTHROUGHを行います。
 
 #### <a name="example"></a>例
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
+### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
 
-プロパティのセットのマップ エントリを示します。
+プロパティ セット マップ エントリの先頭を示します。
 
 #### <a name="syntax"></a>構文
 
@@ -155,22 +154,22 @@ BEGIN_PROPSET_MAP(Class)
 
 #### <a name="parameters"></a>パラメーター
 
-*Class*<br/>
-[in]このプロパティが設定されているクラスを指定します。 プロパティ セットは、次の OLE DB オブジェクトで指定できます。
+*クラス*<br/>
+[in]このプロパティ セットが指定されているクラス。 プロパティ セットは、次の OLE DB オブジェクトで指定できます。
 
 - [データ ソース オブジェクト](/previous-versions/windows/desktop/ms721278(v=vs.85))
 
 - [セッション オブジェクト](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [[コマンド]](/previous-versions/windows/desktop/ms724608(v=vs.85))
+- [コマンド](/previous-versions/windows/desktop/ms724608(v=vs.85))
 
 #### <a name="example"></a>例
 
-プロパティ セット マップのコード例を次に示します。
+次に、プロパティ セット マップの例を示します。
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
-### <a name="chain_property_set"></a> CHAIN_PROPERTY_SET
+### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
 
 このマクロは、プロパティ グループを連結します。
 
@@ -182,17 +181,17 @@ CHAIN_PROPERTY_SET(ChainClass)
 
 #### <a name="parameters"></a>パラメーター
 
-*ChainClass*<br/>
-[in]プロパティにチェーンするクラスの名前。 これは、(セッション、コマンド、またはデータ ソース オブジェクト クラス) などのマップが既に含まれている ATL プロジェクト ウィザードによって生成されるクラスです。
+*チェーンクラス*<br/>
+[in]プロパティをチェーンするクラスの名前。 これは、ATL プロジェクト ウィザードによって生成されたクラスで、既にマップ (セッション、コマンド、データ ソース オブジェクト クラスなど) が含まれています。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-独自のクラスを別のクラスからプロパティ セットを連結し、クラスから直接、プロパティにアクセスできます。
+プロパティ セットを別のクラスから独自のクラスに連結し、クラスから直接プロパティにアクセスできます。
 
 > [!CAUTION]
->  このマクロを多用します。 不適切な使用には、コンシューマーが OLE DB 準拠合致テストが失敗する可能性があります。
+> このマクロは控えめに使用してください。 不適切な使用は、コンシューマが OLE DB 準拠テストに失敗する原因となる可能性があります。
 
-### <a name="end_property_set"></a> END_PROPERTY_SET
+### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
 
 プロパティ セットの末尾をマークします。
 
@@ -205,15 +204,15 @@ END_PROPERTY_SET(guid)
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-[in]プロパティの GUID。
+[in]プロパティ GUID。
 
 #### <a name="example"></a>例
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="end_propset_map"></a> END_PROPSET_MAP
+### <a name="end_propset_map"></a><a name="end_propset_map"></a>END_PROPSET_MAP
 
-プロパティの終了セットのマップ エントリを示します。
+プロパティ セット マップ エントリの末尾をマークします。
 
 #### <a name="syntax"></a>構文
 
@@ -225,7 +224,7 @@ END_PROPSET_MAP()
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
+### <a name="property_info_entry"></a><a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
 
 プロパティ セットの特定のプロパティを表します。
 
@@ -240,15 +239,15 @@ PROPERTY_INFO_ENTRY(dwPropID)
 *dwPropID*<br/>
 [入力] プロパティ セット GUID と組み合わせて使用してプロパティを特定する [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 値。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 設定する、`VARTYPE`と[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85))と同時に、プロパティを使用して[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。
+このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 プロパティに`VARTYPE`対して[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85))を同時に設定するには[、PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)を使用します。
 
 #### <a name="example"></a>例
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
+### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
 
 プロパティ セットの特定のプロパティを表します。
 
@@ -264,18 +263,18 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 [入力] プロパティ セット GUID と組み合わせて使用してプロパティを特定する [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 値。
 
 *vt*<br/>
-[入力] このプロパティ エントリの `VARTYPE`。 (Wtypes.h で定義)
+[入力] このプロパティ エントリの `VARTYPE`。 (wtypes.h で定義されています)
 
 *dwFlags*<br/>
 [入力] このプロパティ エントリを記述している [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) 値。
 
-*値*<br/>
+*value*<br/>
 [入力] `DWORD`型のプロパティ値。
 
-*options*<br/>
-DBPROPOPTIONS_REQUIRED または DBPROPOPTIONS_SETIFCHEAP のいずれか。 通常、プロバイダーは、設定する必要はありません*オプション*コンシューマーによって設定されているためです。
+*オプション*<br/>
+DBPROPOPTIONS_REQUIRED または DBPROPOPTIONS_SETIFCHEAP。 通常、プロバイダーはコンシューマーによって設定されるため、*オプション*を設定する必要はありません。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このマクロでは、オプションとフラグだけでなく、 `DWORD` 型のプロパティの値を直接指定できます。 単にプロパティを ATLDB.H に定義されている既定値に設定するには、 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)を使用します。 オプションやフラグを設定せずに任意の値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。
 
@@ -283,7 +282,7 @@ DBPROPOPTIONS_REQUIRED または DBPROPOPTIONS_SETIFCHEAP のいずれか。 通
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
+### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
 
 プロパティ セットの特定のプロパティを表します。
 
@@ -301,17 +300,17 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [入力] `DWORD`型のプロパティ値。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-このマクロでは、型のプロパティ値を直接指定できる`DWORD`します。 既定値にプロパティを設定します。H、使用[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)します。 値、フラグ、およびプロパティのオプションを設定するには、使用[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。
+このマクロを使用すると、 type`DWORD`のプロパティ値を直接指定できます。 ATLDB で定義された既定値にプロパティを設定します。H, [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)を使用します。 プロパティの値、フラグ、およびオプションを設定するには、 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)を使用します。
 
 #### <a name="example"></a>例
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-### <a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
+### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
 
-プロバイダーの列のマップ エントリの先頭をマークします。
+プロバイダー列マップのエントリの先頭を示します。
 
 #### <a name="syntax"></a>構文
 
@@ -326,13 +325,13 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 
 #### <a name="example"></a>例
 
-プロバイダー列マップのコード例を次に示します。
+プロバイダー列マップの例を次に示します。
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
-### <a name="end_provider_column_map"></a> END_PROVIDER_COLUMN_MAP
+### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
 
-プロバイダーの列のマップ エントリの終了を示します。
+プロバイダー列マップのエントリの末尾をマークします。
 
 #### <a name="syntax"></a>構文
 
@@ -342,11 +341,11 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>例
 
-参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)します。
+[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)を参照してください。
 
-### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
+### <a name="provider_column_entry"></a><a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -357,17 +356,17 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*member*<br/>
-[in]メンバー変数`dataClass`列に対応します。
+*メンバー*<br/>
+[in]列に`dataClass`対応するメンバー変数。
 
-### <a name="provider_column_entry_fixed"></a> PROVIDER_COLUMN_ENTRY_FIXED
+### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -378,28 +377,28 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*dbtype*<br/>
-[in]データ型[DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))します。
+*Dbtype*<br/>
+[in][DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))のデータ型。
 
-*member*<br/>
-[in]メンバー変数`dataClass`データを格納します。
+*メンバー*<br/>
+[in]データを格納する`dataClass`メンバー変数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-列のデータ型を指定することができます。
+列のデータ型を指定できます。
 
 #### <a name="example"></a>例
 
-参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)します。
+[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)を参照してください。
 
-### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
+### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -410,36 +409,36 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*flags*<br/>
-[in]データを返す方法を指定します。 参照してください、`dwFlags`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
+*フラグ*<br/>
+[in]データの返し方を指定します。 DBBINDING`dwFlags`構造体 の説明[を](/previous-versions/windows/desktop/ms716845(v=vs.85))参照してください。
 
-*colSize*<br/>
+*コルサイズ*<br/>
 [in]列のサイズ。
 
-*dbtype*<br/>
-[in]値のデータ型を示します。 参照してください、`wType`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
+*Dbtype*<br/>
+[in]値のデータ型を示します。 DBBINDING`wType`構造体 の説明[を](/previous-versions/windows/desktop/ms716845(v=vs.85))参照してください。
 
-*precision*<br/>
-[in]場合は、データを取得するときに使用する桁数を示します*dbType* DBTYPE_NUMERIC または DBTYPE_DECIMAL です。 参照してください、`bPrecision`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
+*精度*<br/>
+[in]*dbType*がDBTYPE_NUMERICまたはDBTYPE_DECIMALの場合に、データを取得するときに使用する精度を示します。 DBBINDING`bPrecision`構造体 の説明[を](/previous-versions/windows/desktop/ms716845(v=vs.85))参照してください。
 
-*scale*<br/>
-[in]DbType が DBTYPE_NUMERIC または DBTYPE_DECIMAL の場合は、データを取得するときに使用する小数点以下桁数を示します。 参照してください、`bScale`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
+*スケール*<br/>
+[in]dbType がDBTYPE_NUMERICまたはDBTYPE_DECIMALの場合にデータを取得するときに使用するスケールを示します。 DBBINDING`bScale`構造体 の説明[を](/previous-versions/windows/desktop/ms716845(v=vs.85))参照してください。
 
 *guid*<br/>
-スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。
+スキーマ行セット GUID。 スキーマ行セットとその GUID の一覧については *、「OLE DB プログラマ リファレンス*」の[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))を参照してください。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-列のサイズ、データ型、有効桁数、スケール、およびスキーマ行セット GUID を指定することができます。
+列のサイズ、データ型、有効桁数、スケール、およびスキーマ行セット GUID を指定できます。
 
-### <a name="provider_column_entry_length"></a> PROVIDER_COLUMN_ENTRY_LENGTH
+### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -450,28 +449,28 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*size*<br/>
+*サイズ*<br/>
 [in]列のサイズ (バイト単位)。
 
-*member*<br/>
-[in]メンバー変数`dataClass`列のデータを格納します。
+*メンバー*<br/>
+[in]列データ`dataClass`を格納するメンバー変数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-列のサイズを指定することができます。
+列サイズを指定できます。
 
 #### <a name="example"></a>例
 
-参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)します。
+[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)を参照してください。
 
-### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
+### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -482,25 +481,25 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*member*<br/>
-[in]データを格納するデータ クラスのメンバー変数です。
+*メンバー*<br/>
+[in]データを格納するデータ クラスのメンバー変数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-このマクロを使用して列のデータがあると見なされますと[DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))します。
+列データが[DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))であると想定される場合に、このマクロを使用します。
 
 #### <a name="example"></a>例
 
-参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)します。
+[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)を参照してください。
 
-### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -511,27 +510,27 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*dbtype*<br/>
-[in]データ型[DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))します。
+*Dbtype*<br/>
+[in][DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))のデータ型。
 
-*size*<br/>
+*サイズ*<br/>
 [in]列のサイズ (バイト単位)。
 
-*member*<br/>
-[in]データを格納するデータ クラスのメンバー変数です。
+*メンバー*<br/>
+[in]データを格納するデータ クラスのメンバー変数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-ような[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)が列のデータ型やサイズを指定することもできます。
+[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)に似ていますが、列のデータ型とサイズを指定することもできます。
 
-### <a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
+### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 
-プロバイダーでサポートされている特定の列を表します。
+プロバイダーでサポートされる特定の列を表します。
 
 #### <a name="syntax"></a>構文
 
@@ -542,19 +541,19 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 #### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-[in]列の名前。
+[in]列名。
 
 *序数*<br/>
-[in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。
+[in]列番号。 列がブックマーク列でない場合、列番号は 0 にすることはできません。
 
-*member*<br/>
-[in]データを格納するデータ クラスのメンバー変数です。
+*メンバー*<br/>
+[in]データを格納するデータ クラスのメンバー変数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-列のデータが null 値が Unicode 文字の文字列を終了するときに、このマクロを使用[DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))します。
+列データが null で終わる Unicode 文字ストリングである場合、このマクロ[DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))使用します。
 
-### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
+### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
 
 スキーマ マップの先頭を示します。
 
@@ -566,16 +565,16 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 #### <a name="parameters"></a>パラメーター
 
-*SchemaClass*<br/>
-マップを含むクラスです。 通常、セッション クラスになります。
+*スキーマクラス*<br/>
+MAP を含むクラス。 通常、これはセッション クラスになります。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))スキーマ行セットの詳細については、Windows SDK に含まれています。
+スキーマ行セットの詳細については、Windows SDK の[IDB スキーマ行](/previous-versions/windows/desktop/ms713686(v=vs.85))セットを参照してください。
 
-### <a name="end_schema_map"></a> END_SCHEMA_MAP
+### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
 
-スキーマ マップの終了を示します。
+スキーマ マップの末尾を示します。
 
 #### <a name="syntax"></a>構文
 
@@ -583,11 +582,11 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 END_SCHEMA_MAP()
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)します。
+詳細については、「[クラス」](../../data/oledb/idbschemarowsetimpl-class.md)を参照してください。
 
-### <a name="schema_entry"></a> SCHEMA_ENTRY
+### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
 
 GUID をクラスに関連付けます。
 
@@ -601,14 +600,14 @@ SCHEMA_ENTRY(guid,
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。
+スキーマ行セット GUID。 スキーマ行セットとその GUID の一覧については *、「OLE DB プログラマ リファレンス*」の[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))を参照してください。
 
-*rowsetClass*<br/>
-このクラスは、スキーマ行セットを表すために作成されます。
+*行セットクラス*<br/>
+スキーマ行セットを表すために作成されるクラス。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)クエリ、Guid の一覧については、マップ、ことができます。 または、GUID が指定された場合、行セットを作成できます。 スキーマ行セット`IDBSchemaRowsetImpl`作成は標準に似ています`CRowsetImpl`-派生クラスを提供する点を除いて、`Execute`を次のシグネチャを持つメソッド。
+[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)は、GUID の一覧をマップに照会するか、GUID が与えられている場合は行セットを作成できます。 スキーマ行セット`IDBSchemaRowsetImpl`の作成は、標準`CRowsetImpl`の派生クラスに似ていますが、次のシグネチャ`Execute`を持つメソッドを提供する必要があります。
 
 ```cpp
 HRESULT Execute (LONG* pcRowsAffected,
@@ -616,7 +615,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-これは、`Execute`関数は、行セットのデータを設定します。 ATL プロジェクト ウィザードを作成する」の説明に従って[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、3 つの必須の OLE DB スキーマの各プロジェクトのスキーマ行セットの初期 3。
+この`Execute`関数は、行セットのデータを設定します。 ATL プロジェクト ウィザードは *、OLE DB プログラマ リファレンス*の[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))で説明されているように、3 つの必須 OLE DB スキーマのそれぞれについてプロジェクト内の 3 つの初期スキーマ行セットを作成します。
 
 - DBSCHEMA_TABLES
 
@@ -624,12 +623,12 @@ HRESULT Execute (LONG* pcRowsAffected,
 
 - DBSCHEMA_PROVIDER_TYPES
 
-ウィザードでは、スキーマ マップに対応する 3 つのエントリも追加されます。 参照してください[OLE DB テンプレート プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)詳細については、ウィザードを使用してプロバイダーを作成します。
+また、ウィザードは、対応する 3 つのエントリをスキーマ マップに追加します。 ウィザード[を使用してプロバイダーを作成](../../data/oledb/creating-an-ole-db-provider.md)する方法の詳細については、「OLE DB テンプレート プロバイダーの作成」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)<br/>
-[OLE DB プロバイダー テンプレート リファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB プロバイダー テンプレート用マクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)
+[OLE DB プロバイダの作成](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[OLE DB プロバイダ テンプレート リファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB プロバイダ テンプレートのマクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)

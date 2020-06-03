@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0038
 - CAN0038
 ms.assetid: 3327dc4e-1726-4924-a519-6ffd766a389c
-ms.openlocfilehash: aa471ef538846e48e40032f976754eda93137981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06105064db9f696784aaaef2d41d978935eac896
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185114"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>式エバリュエーター エラー CXX0038
 
-関数の引数の数や種類が一致しません
+関数の引数の数または型の不一致
 
-指定された関数の呼び出しは、関数のプロトタイプと一致しません。
+指定された関数呼び出しが、関数のプロトタイプと一致しません。
 
-正しい数の引数の呼び出しを再入力します。 必要に応じて、プロトタイプと一致する各引数を型にキャストします。
+正しい数の引数で呼び出しを再入力してください。 必要に応じて、プロトタイプに一致するように各引数をキャストします。
 
-このエラーは、can0038 と同じものと同じです。
+このエラーは CAN0038 と同じです。

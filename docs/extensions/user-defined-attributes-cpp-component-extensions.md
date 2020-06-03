@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171893"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>ユーザー定義属性 (C++/CLI および C++/CX)
 
@@ -21,7 +21,7 @@ C++/CLI とC++/CX では、インターフェイス、クラス、構造体、�
 
 C++/CX 属性は、プロパティに適用できますが、コンストラクターまたはメソッドには適用できません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -31,7 +31,7 @@ C++/CX 属性は、プロパティに適用できますが、コンストラク�
 
 型を定義し、<xref:System.Attribute> をその型の基底クラスにすることで、カスタム属性を定義できます。必要に応じて <xref:System.AttributeUsageAttribute> 属性を適用できます。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [属性の対象](attribute-targets-cpp-component-extensions.md)
 
@@ -39,11 +39,11 @@ C++/CX 属性は、プロパティに適用できますが、コンストラク�
 
 Visual C++ でのアセンブリへの署名については、「[厳密名アセンブリ (アセンブリ署名) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、カスタム属性を定義する方法を示します。
 
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

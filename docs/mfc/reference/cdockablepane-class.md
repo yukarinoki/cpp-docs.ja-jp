@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552319"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753334"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -155,142 +155,142 @@ class CDockablePane : public CPane
 
 |名前|説明|
 |----------|-----------------|
-|[CDockablePane::CDockablePane](#cdockablepane)|`CDockablePane` オブジェクトを構築して初期化します。|
+|[CDockableペイン::チャドック可能なペイン](#cdockablepane)|`CDockablePane` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cdockablepane::attachtotabwnd](#attachtotabwnd)|ペインを別のウィンドウにアタッチします。 これは、タブ付きペインを作成します。|
-|[CDockablePane::CalcFixedLayout](#calcfixedlayout)|ウィンドウの四角形のサイズを返します。|
-|[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|指定ミニフレーム ウィンドウにドッキングできるかどうかを判断します。|
-|[CDockablePane::CanAcceptPane](#canacceptpane)|現在のウィンドウに別のペインをドッキングできるかどうかを判断します。|
-|[CDockablePane::CanAutoHide](#canautohide)|ペインが自動的に隠すモードをサポートするかどうかを判断します。 (上書き[CBasePane::CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide))。|
-|[CDockablePane::CanBeAttached](#canbeattached)|現在のウィンドウを別のウィンドウにドッキングできるかどうかを判断します。|
-|[CDockablePane::ConvertToTabbedDocument](#converttotabbeddocument)|1 つまたは複数のドッキング可能ペインをタブ付き MDI ドキュメントに変換します。|
-|[CDockablePane::CopyState](#copystate)|ドッキング可能ペインの状態をコピーします。|
-|[CDockablePane::Create](#create)|Windows コントロールを作成しにアタッチします、`CDockablePane`オブジェクト。|
-|[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|フレーム ウィンドウにドッキングされているウィンドウの既定の区分線を作成します。|
-|[CDockablePane::CreateEx](#createex)|Windows コントロールを作成しにアタッチします、`CDockablePane`オブジェクト。|
-|[CDockablePane::CreateTabbedPane](#createtabbedpane)|現在のウィンドウからタブ付きペインを作成します。|
-|[CDockablePane::DockPaneContainer](#dockpanecontainer)|ウィンドウに、コンテナーにドッキングします。|
-|[CDockablePane::DockPaneStandard](#dockpanestandard)|アウトライン (標準) のドッキングを使用して、ウィンドウをドッキングします。|
-|`CDockablePane::DockToFrameWindow`|内部的に使用します。 ペインをドッキングするには使用[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)または[CDockablePane::DockToWindow](#docktowindow)します。|
-|[CDockablePane::DockToRecentPos](#docktorecentpos)|その格納されている最新のドッキング位置をウィンドウをドッキングします。|
-|[CDockablePane::DockToWindow](#docktowindow)|別のドッキング ペインには、1 つのドッキング ペインをドッキングします。|
-|[CDockablePane::EnableAutohideAll](#enableautohideall)|有効または、コンテナー内の他のウィンドウと共にこのペインの自動非表示モードを無効にします。|
-|[CDockablePane::EnableGripper](#enablegripper)|キャプション (グリップ) の表示と非表示を切り替えます。|
-|[CDockablePane::GetAHRestoredRect](#getahrestoredrect)|自動非表示モードで表示される場合、ウィンドウの位置を指定します。|
-|[CDockablePane::GetAHSlideMode](#getahslidemode)|ウィンドウの自動非表示スライド モードを取得します。|
-|`CDockablePane::GetAutoHideButton`|内部的に使用します。|
-|`CDockablePane::GetAutoHideToolBar`|内部的に使用します。|
-|[CDockablePane::GetCaptionHeight](#getcaptionheight)|現在のキャプションの高さを返します。|
-|[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)|ウィンドウのコンテナーのウィンドウの既定の区分線を返します。|
-|[CDockablePane::GetDockingStatus](#getdockingstatus)|ドッキング ペインの機能が提供されているポインターの位置に基づいて決定します。|
-|[CDockablePane::GetDragSensitivity](#getdragsensitivity)|ドッキング ウィンドウのドラッグと小文字の区別を返します。|
-|[CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|ウィンドウをそのコンテナー内で占有する領域の割合を取得します。|
-|[CDockablePane::GetTabArea](#gettabarea)|ウィンドウのタブ領域を取得します。|
-|[CDockablePane::GetTabbedPaneRTC](#gettabbedpanertc)|現在のウィンドウを別のペインをドッキングするときに作成されるタブ付きウィンドウに関するランタイム クラス情報を返します。|
-|[CDockablePane::HasAutoHideMode](#hasautohidemode)|ドッキング ウィンドウが自動的に隠すモードに切り替えられるかどうかを指定します。|
-|[CDockablePane::HitTest](#hittest)|ユーザーがマウスをクリックしたウィンドウで、特定の場所を指定します。|
-|`CDockablePane::IsAccessibilityCompatible`|内部的に使用します。|
-|[CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)|ドッキング ウィンドウとコンテナー内の他のすべてのペインを自動的に隠すモードで配置できるかどうかを示します。|
-|[CDockablePane::IsAutoHideMode](#isautohidemode)|ウィンドウが自動的に隠すモードかどうかを判断します。|
-|`CDockablePane::IsChangeState`|内部的に使用します。|
-|[CDockablePane::IsDocked](#isdocked)|現在のウィンドウがドッキングされているかどうかを判断します。|
-|[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)|表示 (または非表示) を呼び出している場合は、自動的に隠すモードになっているウィンドウの動作を決定`ShowPane`します。|
-|[CDockablePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|マルチ フレーム ウィンドウで、ウィンドウは、かどうかを指定します。|
-|[CDockablePane::IsResizable](#isresizable)|ウィンドウがサイズを変更できるかどうかを指定します。|
-|[CDockablePane::IsTabLocationBottom](#istablocationbottom)|タブが上部またはウィンドウの下部にあるかどうかを指定します。|
-|[CDockablePane::IsTracked](#istracked)|ユーザーがペインにドラッグしているかどうかを指定します。|
-|[CDockablePane::IsVisible](#isvisible)|現在のウィンドウが表示されるかどうかを判断します。|
-|[CDockablePane::LoadState](#loadstate)|内部的に使用します。|
-|[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親が変更されたときに、フレームワークによって呼び出されます。 (上書き[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent))。|
-|[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|フレーム ウィンドウのフローティング、ドッキング バーをドッキングすると、フレームワークによって呼び出されます。|
-|[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|ウィンドウの親を変更するときに、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent))。|
-|[CDockablePane::OnBeforeFloat](#onbeforefloat)|ペインが float 型に、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat))。|
-|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|フレームワークは、ペインはドッキング解除されているときに、このメソッドを呼び出します。|
-|[CDockablePane::ReplacePane](#replacepane)|指定したウィンドウのウィンドウで置き換えます。|
-|[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|フレームワークは、ウィンドウがウィンドウの既定の区分線を復元する逆シリアル化と、このメソッドを呼び出します。|
-|`CDockablePane::SaveState`|内部的に使用します。|
-|`CDockablePane::Serialize`|ウィンドウで、シリアル化します。 ( `CBasePane::Serialize`をオーバーライドします)。|
-|[CDockablePane::SetAutoHideMode](#setautohidemode)|ドッキング ペインの表示を切り替えると自動的に隠すモード。|
-|[CDockablePane::SetAutoHideParents](#setautohideparents)|自動的に隠すツールバー、ウィンドウを自動的に隠す ボタンを設定します。|
-|`CDockablePane::SetDefaultPaneDivider`|内部的に使用します。|
-|[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|ウィンドウをそのコンテナー内で占有する領域の割合を設定します。|
-|`CDockablePane::SetResizeMode`|内部的に使用します。|
-|[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|復元された既定の分割線を設定します。|
-|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|2 つのペインがドッキング時に作成されるタブ付きウィンドウのランタイム クラス情報を設定します。|
-|[CDockablePane::ShowPane](#showpane)|ペインの表示と非表示を切り替えます。|
-|[CDockablePane::Slide](#slide)|表示と、ウィンドウが自動的に隠すモードの場合にのみを表示するスライド アニメーションが表示されるウィンドウを非表示します。|
-|[CDockablePane::ToggleAutoHide](#toggleautohide)|自動的に隠すモードの表示を切り替えます。 (上書き[CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) )。|
-|[CDockablePane::UndockPane](#undockpane)|メイン フレーム ウィンドウまたはミニフレーム ウィンドウ コンテナーのいずれかから、ウィンドウのドッキングを解除します。|
-|`CDockablePane::UnSetAutoHideMode`|内部的に使用します。 自動非表示モードを設定する[CDockablePane::SetAutoHideMode](#setautohidemode)|
+|[チャッピング可能なペイン::アタッチトタブウンド](#attachtotabwnd)|ペインを別のペインにアタッチします。 タブ付きペインが作成されます。|
+|[CDockableペイン::計算式レイアウト](#calcfixedlayout)|ペイン四角形のサイズを返します。|
+|[CDockable ペイン::CanAcceptミニフレーム](#canacceptminiframe)|指定したミニフレームをペインにドッキングできるかどうかを判断します。|
+|[CDockable ペイン::缶承認ペイン](#canacceptpane)|別のペインを現在のペインにドッキングできるかどうかを判断します。|
+|[CDockable ペイン::缶自動非表示](#canautohide)|ペインが自動非表示モードをサポートするかどうかを決定します。 (CBase ペインをオーバーライド[します::自動非表示を行](../../mfc/reference/cbasepane-class.md#canautohide)うことができます。|
+|[CDockableペイン::缶詰添付](#canbeattached)|現在のペインを別のペインにドッキングできるかどうかを判断します。|
+|[CDockable ペイン::変換タブードキュメント](#converttotabbeddocument)|1 つ以上のドッキング可能ペインを MDI タブ付きドキュメントに変換します。|
+|[CDockableペイン::コピーステート](#copystate)|ドッキング可能なペインの状態をコピーします。|
+|[CDockableペイン::作成](#create)|Windows コントロールを作成し、オブジェクトに`CDockablePane`アタッチします。|
+|[CDockable ペイン::既定のペインディバイダーの作成](#createdefaultpanedivider)|枠にドッキングされているペインの既定の分割線を作成します。|
+|[CDockableペイン::作成Ex](#createex)|Windows コントロールを作成し、オブジェクトに`CDockablePane`アタッチします。|
+|[CDockable ペイン::タブ付きペインの作成](#createtabbedpane)|現在のペインからタブ付きペインを作成します。|
+|[ウィンドウブルペイン::Dオックペインコンテナ](#dockpanecontainer)|コンテナーをペインにドッキングします。|
+|[CDockableペイン::Dックペインスタンダード](#dockpanestandard)|アウトライン (標準) ドッキングを使用してペインをドッキングします。|
+|`CDockablePane::DockToFrameWindow`|内部使用。 ペインをドッキングするには[、CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)または[CDockablePane::DockToWindow](#docktowindow)を使用します。|
+|[チャッキング可能なペイン::Dソックトコストポス](#docktorecentpos)|ペインを最近保存されたドッキング位置にドッキングします。|
+|[ウィンドウ:D](#docktowindow)|ドッキング ペインを別のドッキング ペインにドッキングします。|
+|[CDockable ペイン::自動非表示を有効にします。](#enableautohideall)|このペインの自動非表示モードを、コンテナー内の他のペインと共に有効または無効にします。|
+|[CDockableペイン::イネーブルグリッパー](#enablegripper)|キャプション(グリッパー)を表示または非表示にします。|
+|[チャッカブルペイン::ゲットアレサートレック](#getahrestoredrect)|自動非表示モードで表示される場合のペインの位置を指定します。|
+|[チャッピング可能なペイン::GetAHスライドモード](#getahslidemode)|ペインの自動非表示スライド モードを取得します。|
+|`CDockablePane::GetAutoHideButton`|内部使用。|
+|`CDockablePane::GetAutoHideToolBar`|内部使用。|
+|[ウィンドウブルペイン::ゲットキャプション高さ](#getcaptionheight)|現在のキャプションの高さを返します。|
+|[ウィンドウブルペイン::デフォルトペインディバイダー](#getdefaultpanedivider)|ペインのコンテナーの既定のペイン区分線を返します。|
+|[CDockable ペイン::取得ドッキングステータス](#getdockingstatus)|指定されたポインターの位置に基づいて、ドッキングするペインの機能を決定します。|
+|[CDockable ペイン::取得ドラッグ感度](#getdragsensitivity)|ドッキング ペインのドラッグ感度を返します。|
+|[ウィンドウズペイン::最後のPercentInペインコンテナ](#getlastpercentinpanecontainer)|ペインがコンテナー内で占める領域の割合を取得します。|
+|[Cドッキング可能なペイン::ゲットタブエリア](#gettabarea)|ペインのタブ領域を取得します。|
+|[チャッピング可能なペイン::ゲットタブベッドペインRTC](#gettabbedpanertc)|別のペインが現在のペインにドッキングされたときに作成されるタブ付きウィンドウに関するランタイム クラス情報を返します。|
+|[CDockable ペイン::ハスオートハイドモード](#hasautohidemode)|ドッキング ペインを自動非表示モードに切り替えられるかどうかを指定します。|
+|[チャッピング可能なペイン::ヒットテスト](#hittest)|ユーザーがマウスをクリックするペイン内の特定の位置を指定します。|
+|`CDockablePane::IsAccessibilityCompatible`|内部使用。|
+|[CDockable ペイン::IsAutohideAllEnabled](#isautohideallenabled)|ドッキング ペインとコンテナー内の他のすべてのペインを自動非表示モードにできるかどうかを示します。|
+|[CDockable ペイン::IsAutoHideMode](#isautohidemode)|ペインが自動非表示モードかどうかを判断します。|
+|`CDockablePane::IsChangeState`|内部使用。|
+|[CDockableペイン::IsDocked](#isdocked)|現在のペインがドッキングされているかどうかを判断します。|
+|[CDockable ペイン::IsHideIn自動ハイドモード](#ishideinautohidemode)|を呼び出`ShowPane`して表示 (または非表示) に設定されているペインの動作を決定します。|
+|[CDockable ペイン::イインフローティングマルチペインフレームオーニング](#isinfloatingmultipaneframewnd)|ペインが複数のペインのフレーム ウィンドウにあるかどうかを指定します。|
+|[チャドック可能なペイン::IsReサイズ可能](#isresizable)|ペインの大きさを変更できるかどうかを指定します。|
+|[CDockable ペイン::IsTabLocationボトム](#istablocationbottom)|タブをペインの上部または下部のどちらに配置するかを指定します。|
+|[チャドック可能なペイン::IsTracked](#istracked)|ユーザーがペインをドラッグするかどうかを指定します。|
+|[CDockableペイン::イズビジブル](#isvisible)|現在のペインを表示するかどうかを決定します。|
+|[CDockable ペイン::ロードステート](#loadstate)|内部使用。|
+|[ウィンドウスペイン::オンアフターチェンジペアレント](#onafterchangeparent)|ペインの親が変更されたときに、フレームワークによって呼び出されます。 (CPane をオーバーライド[します::オンアフターチェンジ親](../../mfc/reference/cpane-class.md#onafterchangeparent).)|
+|[チャドック可能なペイン::オンアフタードックフロミ](#onafterdockfromminiframe)|フローティング ドッキング バーがフレーム ウィンドウにドッキングするときに、フレームワークによって呼び出されます。|
+|[ウィンドウスペイン::オン・オン・チェンジチェンジ・ペアレント](#onbeforechangeparent)|ペインの親が変更されようとしているときに、フレームワークによって呼び出されます。 (CPane をオーバーライド[します::オン事前変更親](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|
+|[CDockableペイン::オン・フォアフロート](#onbeforefloat)|ペインがフロートされるときに、フレームワークによって呼び出されます。 (CPane をオーバーライド[します::オン事前フロート](../../mfc/reference/cpane-class.md#onbeforefloat).)|
+|[クドック可能ペイン::デフォルトペインディバイディアから削除](#removefromdefaultpanedividier)|ペインがドッキング解除されている場合、フレームワークはこのメソッドを呼び出します。|
+|[CDockable ペイン::置換ペイン](#replacepane)|ペインを指定されたペインに置き換えます。|
+|[ウィンドウブルペイン::復元デフォルトペインディバイダー](#restoredefaultpanedivider)|フレームワークは、ペインが既定のペイン分割を復元するために逆シリアル化されると、このメソッドを呼び出します。|
+|`CDockablePane::SaveState`|内部使用。|
+|`CDockablePane::Serialize`|ペインをシリアル化します。 ( `CBasePane::Serialize`をオーバーライドします)。|
+|[CDockable ペイン::自動ハイドモードを設定します。](#setautohidemode)|ドッキング ペインの表示モードと自動非表示モードを切り替えます。|
+|[CDockable ペイン::設定自動ハイド親](#setautohideparents)|ペインの自動非表示ボタンと自動非表示ツールバーを設定します。|
+|`CDockablePane::SetDefaultPaneDivider`|内部使用。|
+|[ウィンドウズペイン::セットラストパーセントインペインコンテナ](#setlastpercentinpanecontainer)|ペインがコンテナー内で占めるスペースの割合を設定します。|
+|`CDockablePane::SetResizeMode`|内部使用。|
+|[CDockable ペイン::セットリストアされたデフォルトペインディバイダー](#setrestoreddefaultpanedivider)|復元された既定のペイン分割を設定します。|
+|[CDockableペイン::セットタブペインRTC](#settabbedpanertc)|2 つのペインがドッキングされたときに作成されるタブ付きウィンドウのランタイム クラス情報を設定します。|
+|[CDockableペイン::ショーペイン](#showpane)|ペインの表示/非表示を切り替えます。|
+|[CDockableペイン::スライド](#slide)|スライドアニメーションを含むペインの表示と非表示を切り替えます。|
+|[CDockable ペイン::トグルオートハイド](#toggleautohide)|自動非表示モードを切り替えます。 (CPane をオーバーライド[::トグルオートハイド](../../mfc/reference/cpane-class.md#toggleautohide).)|
+|[CDockable ペイン::ドッキング解除ペイン](#undockpane)|メイン フレーム ウィンドウまたはミニフレーム ウィンドウ コンテナーからペインをドッキング解除します。|
+|`CDockablePane::UnSetAutoHideMode`|内部使用。 自動非表示モードを設定するには[、CDockablePane を使用します。](#setautohidemode)|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|(自動的に隠すモード) では、ドッキング ウィンドウが非表示かどうかを判断します。|
-|[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|ときに、自動非表示のドッキング ウィンドウがスライディングを停止する必要がありますを決定します。|
-|[CDockablePane::DrawCaption](#drawcaption)|ドッキング ウィンドウのキャプション (グリップ) を描画します。|
-|[CDockablePane::OnPressButtons](#onpressbuttons)|AFX_HTCLOSE と AFX_HTMAXBUTTON ボタン以外のキャプションのボタンを押すと呼び出されます。|
-|[CDockablePane::OnSlide](#onslide)|ウィンドウが表示または非表示にするときに、自動非表示スライド効果を表示するためにフレームワークによって呼び出されます。|
+|[ウィンドウスペイン::チェックオートハイド条件](#checkautohidecondition)|ドッキング ペインが非表示になっているかどうかを判断します (自動非表示モード)。|
+|[CDockableペイン::チェックストップスライド条件](#checkstopslidecondition)|ドッキング ペインの自動非表示をいつスライドを停止するかを決定します。|
+|[ウィンドウブルウィンドウ::Dローキャプション](#drawcaption)|ドッキング ペインのキャプション (グリッパー) を描画します。|
+|[ウィンドウブルペイン::オンプレスボタン](#onpressbuttons)|ユーザーがAFX_HTCLOSEボタンとAFX_HTMAXBUTTON ボタン以外のキャプション ボタンを押したときに呼び出されます。|
+|[CDockableペイン::オンスライド](#onslide)|ペインが表示または非表示のときに、自動非表示のスライド効果をレンダリングするために、フレームワークによって呼び出されます。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|ドッキング可能なウィンドウのアニメーションを自動的に隠すが無効になっているかどうかを指定します。|
-|[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|ウィンドウが自動的に隠すモードの場合は、ウィンドウの動作を決定します。|
-|[CDockablePane::m_nSlideSteps](#m_nslidesteps)|されているときに、ウィンドウのアニメーションの速度を指定するか自動的に隠すモードで非表示します。|
+|[チャドック可能なペイン::m_bDisableAnimation](#m_bdisableanimation)|ドッキング可能ペインのアニメーションを自動的に非表示にするかどうかを指定します。|
+|[チャドック可能なペイン::m_bHideInAutoHideMode](#m_bhideinautohidemode)|ペインが自動非表示モードの場合のペインの動作を決定します。|
+|[チャドック可能なペイン::m_nSlideSteps](#m_nslidesteps)|自動非表示モードで表示または非表示にするときのペインのアニメーション速度を指定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CDockablePane` 次の機能を実装します。
+`CDockablePane`は、次の機能を実装します。
 
-- メイン フレーム ウィンドウに、ウィンドウをドッキングします。
+- メイン フレーム ウィンドウにペインをドッキングする。
 
-- ウィンドウを自動的に隠すモードに切り替えます。
+- ペインを自動非表示モードに切り替えます。
 
-- ペインをタブ付きウィンドウにアタッチします。
+- タブ付きウィンドウにペインをアタッチする。
 
-- ミニフレーム ウィンドウのペインをフローティングします。
+- ミニフレーム ウィンドウにペインをフローティングする。
 
-- フローティング ミニフレーム ウィンドウで別のウィンドウに、ウィンドウをドッキングします。
+- ミニフレーム ウィンドウに浮いている別のペインにペインをドッキングする。
 
-- ウィンドウのサイズを変更します。
+- ペインのサイズを変更する。
 
-- 読み込みと、ドッキング ペインの状態を保存します。
+- ドッキング ペインの状態を読み込み、保存します。
 
     > [!NOTE]
-    >  状態情報は、Windows レジストリに保存されます。
+    >  状態情報は Windows レジストリに保存されます。
 
-- 図表番号の有無、ウィンドウの作成。 キャプション テキスト ラベルを持つことができ、グラデーションの色を設定できます。
+- キャプション付きまたはキャプションなしのペインを作成する。 キャプションにはテキストラベルを付けることができ、グラデーションカラーで塗りつぶすことができます。
 
-- ウィンドウの内容を表示するときに、ウィンドウをドラッグします。
+- ペインの内容を表示しながらペインをドラッグする
 
-- ドラッグ四角形を表示するときに、ウィンドウをドラッグします。
+- ドラッグ矩形を表示しながらペインをドラッグする。
 
-を、アプリケーションでのドッキング ペインを使用するには、からウィンドウ クラスを派生、`CDockablePane`クラス。 メイン フレーム ウィンドウのオブジェクトや、ウィンドウのインスタンスを制御するウィンドウのオブジェクトには、派生オブジェクトを埋め込むか。 呼び出して、 [CDockablePane::Create](#create)メソッドまたは[cdockablepane::createex](#createex)メイン フレーム ウィンドウで WM_CREATE メッセージを処理するメソッド。 呼び出すことによって、ウィンドウ オブジェクトを最後に、セットアップ[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)、 [cbasepane::dockpane](../../mfc/reference/cbasepane-class.md#dockpane)、または[cdockablepane::attachtotabwnd](#attachtotabwnd)します。
+アプリケーションでドッキング ペインを使用するには、クラスから pane クラスを`CDockablePane`派生させます。 派生オブジェクトをメイン フレーム ウィンドウ オブジェクトに埋め込むか、ペインのインスタンスを制御するウィンドウ オブジェクトに埋め込みます。 次に、メイン フレーム ウィンドウでWM_CREATE メッセージを処理するときに[、CDockablePane::Create](#create)メソッドまたは[CDockablePane::CreateEx](#createex)メソッドを呼び出します。 最後に[、CBasePane:::EnableDocking、CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#enabledocking)、または[CDockablePane::アタッチタブーンド](#attachtotabwnd)を呼び出すことによって、ペインオブジェクトを設定します。 [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane)
 
 ## <a name="customization-tips"></a>カスタマイズのヒント
 
-次のヒントを適用`CDockablePane`オブジェクト。
+オブジェクトには、次の`CDockablePane`ヒントが適用されます。
 
-- 呼び出す場合[cdockablepane::attachtotabwnd](#attachtotabwnd)で 2 つのタブ付き以外、ドッキング可能ペインのタブ付きウィンドウへのポインターが返されます、 *ppTabbedControlBar*パラメーター。 このパラメーターを使用してタブ付きウィンドウにタブを追加する続行することができます。
+- 2 つのタブなしのドッキング可能なペインに対して[CDockablePane::AttachToTabWnd](#attachtotabwnd)を呼び出すと、タブ付きウィンドウへのポインターが*ppTabbedControlBar*パラメーターに返されます。 このパラメーターを使用して、タブ付きウィンドウにタブを追加できます。
 
-- によって作成されるタブ付きウィンドウの種類[cdockablepane::attachtotabwnd](#attachtotabwnd)によって決定されます、`CDockablePane`オブジェクト、 *pTabControlBarAttachTo*パラメーター。 呼び出すことができます[:settabbedpanertc](#settabbedpanertc)をタブ付きウィンドウの種類の設定、`CDockablePane`が作成されます。 既定の型によって決定されます、`dwTabbedStyle`の[CDockablePane::Create](#create)作成するとき、`CDockablePane`します。 場合*dwTabbedStyle*は既定の種類は AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)場合*dwTabbedStyle*はAFX_CBRS_REGULAR_TABS既定の種類[CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)します。
+- CDockable ペインによって作成されるタブ付きペインの種類[::アタッチタブンは](#attachtotabwnd)`CDockablePane`*、pTabControlBarAttachTo*パラメーターのオブジェクトによって決定されます。 [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)を呼び出して、作成するタブ付きペイン`CDockablePane`の種類を設定できます。 既定の型は、最初に`dwTabbedStyle`作成するときに[CDockable Pane::Create](#create) `CDockablePane`によって決定されます。 *dwTabbedStyle*がAFX_CBRS_OUTLOOK_TABS既定の型は[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)です。*dwTabbedStyle*がデフォルトのAFX_CBRS_REGULAR_TABSの場合は[、CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)です。
 
-- 別に 1 つのドッキング可能ペインをドッキングする場合は、呼び出し、 [CDockablePane::DockToWindow](#docktowindow)メソッド。 元のウィンドウ ドッキングされていなければなりませんどこかにこのメソッドを呼び出す前にします。
+- ドッキング可能なペインを別のペインにドッキングする場合[は、CDockablePane::DockToWindow](#docktowindow)メソッドを呼び出します。 このメソッドを呼び出す前に、元のペインをどこかにドッキングする必要があります。
 
-- メンバー変数[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)コントロールのドッキング可能ペインを自動でどのように動作する方法を非表示にモードを呼び出すと[CDockablePane::ShowPane](#showpane)します。 このメンバー変数が TRUE に設定されている場合、ドッキング可能ペインと、自動非表示にするボタンは表示されません。 それ以外の場合、それらがやスライド アウトします。
+- メンバー変数[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)は[、CDockablePane::ShowPane](#showpane)を呼び出すときにドッキング可能なペインが自動非表示モードでどのように動作するかを制御します。 このメンバー変数が TRUE に設定されている場合、ドッキング可能なペインと自動非表示ボタンは非表示になります。 それ以外の場合は、スライドインとスライドアウトします。
 
-- 設定して自動的に隠すアニメーションを無効にすることができます、 [CDockablePane::m_bDisableAnimation](#m_bdisableanimation)メンバー変数を TRUE にします。
+- [CDockablePane::m_bDisableAnimation](#m_bdisableanimation)メンバー変数を TRUE に設定すると、アニメーションの自動非表示を無効にすることができます。
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CDockablePane`オブジェクトでさまざまなメソッドを使用して、`CDockablePane`クラス。 例では、自動的に隠すのドッキング可能ペインのすべての機能を有効にする、キャプションまたはグリッパーを有効にする、自動非表示モードを有効にする、ウィンドウを表示および自動非表示モードになっているウィンドウをアニメーション化する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
+クラスのさまざまなメソッドを使用してオブジェクトを構成`CDockablePane`する方法を次の例に`CDockablePane`示します。 この例では、ドッキング可能ペインのすべての機能を自動的に非表示にする方法、キャプションまたはグリッパーを有効にする方法、自動非表示モードを有効にする方法、ペインを表示する方法、および自動非表示モードのペインをアニメーション化する方法を示します。 このコード スニペットは[、Visual Studio のデモ のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -313,9 +313,9 @@ class CDockablePane : public CPane
 
 **ヘッダー:** afxDockablePane.h
 
-##  <a name="attachtotabwnd"></a>  Cdockablepane::attachtotabwnd
+## <a name="cdockablepaneattachtotabwnd"></a><a name="attachtotabwnd"></a>チャッピング可能なペイン::アタッチトタブウンド
 
-タブ付きウィンドウの作成 [ターゲット] ウィンドウには、現在のウィンドウをアタッチします。
+現在のペインをターゲット ペインにアタッチし、タブ付きペインを作成します。
 
 ```
 virtual CDockablePane* AttachToTabWnd(
@@ -327,47 +327,47 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTabControlBarAttachTo*<br/>
-[入力、出力][ターゲット] ウィンドウに現在のウィンドウが接続しているを指定します。 [ターゲット] ウィンドウには、ドッキング可能ペインをする必要があります。
+*コントロール バーアタッチト*<br/>
+[イン、アウト]現在のペインがアタッチされるターゲット ペインを指定します。 ターゲット ペインはドッキング可能なペインである必要があります。
 
-*dockMethod*<br/>
+*ドックメソッド*<br/>
 [in]ドッキング方法を指定します。
 
-*bSetActive*<br/>
-[in]アタッチ操作後に、タブ付きウィンドウをアクティブ化する場合は TRUEそれ以外の場合、FALSE です。
+*アクティブな状態を示します。*<br/>
+[in]接続操作後にタブ付きペインをアクティブにするには TRUE。それ以外の場合は FALSE。
 
-*ppTabbedControlBar*<br/>
-[out]アタッチ操作によって生成されるタブ付きペインが含まれています。
+*コントロールバー*<br/>
+[アウト]アタッチ操作の結果として得られるタブ付きペインが含まれます。
 
 ### <a name="return-value"></a>戻り値
 
-タブ付きペインです。 ない場合、現在のウィンドウへのポインターそれ以外の場合、アタッチ操作に起因するタブ付きペインへのポインター。 現在のウィンドウをアタッチすることはできません、またはエラーが発生した場合、戻り値は NULL です。
+現在のペインがタブ付きペインでない場合は、そのペインへのポインター。それ以外の場合は、アタッチ操作の結果として得られるタブ付きペインへのポインター。 現在のペインをアタッチできない場合、またはエラーが発生した場合は、NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用して別のウィンドウにアタッチする 1 つのドッキング可能ペインと、以下の処理が行われます。
+この方法を使用して、ドッキング可能なペインが別のペインにアタッチされると、次の処理が行われます。
 
-1. Framework チェックかどうか、ターゲット ウィンドウ*pTabControlBarAttachTo*は、通常のドッキング ペインまたはから派生されるかどうか[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)します。
+1. フレームワークは、ターゲット ペイン*pTabControlBarAttachTo*が通常のドッキング ペインであるか[、CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)から派生しているかどうかを確認します。
 
-1. [ターゲット] ウィンドウがタブ付きペインの場合は、フレームワークは、タブとしてを現在のウィンドウを追加します。
+1. ターゲット ペインがタブ付きペインの場合、フレームワークは現在のペインをタブとして追加します。
 
-1. [ターゲット] ウィンドウが標準のドッキング ペインの場合は、フレームワークは、タブ付きペインを作成します。
+1. ターゲット ペインが通常のドッキング ペインの場合、フレームワークはタブ付きペインを作成します。
 
-   - Framework 呼び出し`pTabControlBarAttachTo->CreateTabbedPane`します。 新しいタブ付きウィンドウのスタイルによって異なります、`m_pTabbedControlBarRTC`メンバー。 ランタイム クラスに既定では、このメンバーが設定されて[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)します。 AFX_CBRS_OUTLOOK_TABS スタイルとして渡した場合、 *dwTabbedStyle*パラメーターを[CDockablePane::Create](#create)方法、ランタイム クラスのオブジェクトは、のランタイム クラスに設定されて[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)します。 このメンバーは、新しいウィンドウのスタイルを変更するには、いつでも変更できます。
+   - フレームワークは`pTabControlBarAttachTo->CreateTabbedPane`を呼び出します。 新しいタブ付きペインのスタイルは`m_pTabbedControlBarRTC`、メンバーによって異なります。 既定では、このメンバは[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)のランタイム クラスに設定されます。 AFX_CBRS_OUTLOOK_TABSスタイルを*dwTabbedStyle*パラメーターとして[CDockablePane::Create](#create)メソッドに渡すと、ランタイム クラス オブジェクトは[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)のランタイム クラスに設定されます。 このメンバーは、いつでも変更して、新しいペインのスタイルを変更できます。
 
-   - フレームワークがへのポインターを置換するときに、このメソッドは、タブ付きペインを作成し、 *pTabControlBarAttachTo* (かどうか、ウィンドウはドッキングまたはフローティング マルチ ミニフレーム ウィンドウ) で新しいタブ付きペインへのポインター。
+   - このメソッドがタブ付きペインを作成すると、フレームワークは*pTabControlBarAttachTo*へのポインターを置き換えます (ペインがドッキングされている場合、またはマルチミニフレーム ウィンドウにフローティングされている場合) は、新しいタブ付きペインへのポインターに置き換えられます。
 
-   - フレームワークは、追加、 *pTabControlBarAttachTo*最初のタブとして、タブ付きウィンドウ ペイン。次に、フレームワークは、2 番目のタブとして現在のウィンドウを追加します。
+   - フレームワークは、最初のタブとしてタブ付きペインに*pTabControlBar の接続*ペインを追加します。フレームワークは、現在のペインを 2 番目のタブとして追加します。
 
-1. 現在のウィンドウがから派生している場合`CBaseTabbedPane`、そのタブのすべてに移動*pTabControlBarAttachTo*し、現在のウィンドウが破棄されます。 そのため、このメソッドを呼び出すときにので注意メソッドが戻るときに、現在のウィンドウへのポインターが有効にする可能性があります。
+1. 現在のペインが から`CBaseTabbedPane`派生している場合、そのタブはすべて*pTabControlBarAttachTo*に移動され、現在のペインは破棄されます。 したがって、このメソッドを呼び出すときは、メソッドが返されるときに現在のペインへのポインターが無効になる可能性があるため、注意してください。
 
-ドッキング レイアウトを構築するときに別の 1 つのペインをアタッチする場合は、設定`dockMethod`DM_SHOW にします。
+ドッキング レイアウトを作成するときに別のペインにアタッチする場合は、DM_SHOWに設定`dockMethod`します。
 
-別のペインを添付する前に、最初のウィンドウをドッキングする必要があります。
+最初のペインをドッキングしてから、別のペインを追加してください。
 
-##  <a name="calcfixedlayout"></a>  CDockablePane::CalcFixedLayout
+## <a name="cdockablepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockableペイン::計算式レイアウト
 
-ウィンドウの四角形のサイズを返します。
+ペイン四角形のサイズを返します。
 
 ```
 virtual CSize CalcFixedLayout(
@@ -377,19 +377,19 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*bStretch*<br/>
-[in]使用されません。
+*bストレッチ*<br/>
+[in]使用されていません。
 
 *bHorz*<br/>
-[in]使用されません。
+[in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
 
-A`CSize`ウィンドウ四角形のサイズを格納しているオブジェクト。
+ペイン`CSize`四角形のサイズを格納しているオブジェクト。
 
-##  <a name="canacceptminiframe"></a>  CDockablePane::CanAcceptMiniFrame
+## <a name="cdockablepanecanacceptminiframe"></a><a name="canacceptminiframe"></a>CDockable ペイン::CanAcceptミニフレーム
 
-指定ミニフレーム ウィンドウにドッキングできるかどうかを判断します。
+指定したミニフレームをペインにドッキングできるかどうかを判断します。
 
 ```
 virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
@@ -397,16 +397,16 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pMiniFrame*<br/>
-[in]ポインターを`CPaneFrameWnd`オブジェクト。
+*フレーム*<br/>
+[in]`CPaneFrameWnd`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合*pMiniFrame*を指定できます。 それ以外のウィンドウをドッキング FALSE。
+true*を指定すると、pMiniFrame*をペインにドッキングできます。それ以外の場合は FALSE。
 
-##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane
+## <a name="cdockablepanecanacceptpane"></a><a name="canacceptpane"></a>CDockable ペイン::缶承認ペイン
 
-現在のウィンドウに別のペインをドッキングできるかどうかを判断します。
+別のペインを現在のペインにドッキングできるかどうかを判断します。
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -414,24 +414,24 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-[in]現在のウィンドウにドッキングするウィンドウを指定します。
+*pバー*<br/>
+[in]現在のペインにドッキングするペインを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-このペインには、指定したウィンドウをドッキングできる場合は TRUE。それ以外の場合、FALSE です。
+指定したペインをこのペインにドッキングできる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、現在のペインにペインをドッキングする前に、このメソッドを呼び出します。
+フレームワークは、ペインが現在のペインにドッキングされる前に、このメソッドを呼び出します。
 
-この関数を有効または無効の特定のペインをドッキングする派生クラスでオーバーライドします。
+特定のペインへのドッキングを有効または無効にするには、派生クラスでこの関数をオーバーライドします。
 
-場合、既定では、このメソッドが TRUE を返します*pBar*またはその親の型`CDockablePane`します。
+既定では、このメソッドは *、pBar*またはその親のいずれかが型である場合に`CDockablePane`TRUE を返します。
 
-##  <a name="canautohide"></a>  CDockablePane::CanAutoHide
+## <a name="cdockablepanecanautohide"></a><a name="canautohide"></a>CDockable ペイン::缶自動非表示
 
-かどうか、ウィンドウは自動的に隠すを決定します。
+ペインを自動的に非表示にできるかどうかを判断します。
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -439,21 +439,21 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ウィンドウは自動的に隠す;それ以外の場合、FALSE です。
+ペインが自動的に非表示にできる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CDockablePane::CanAutoHide` 次のような場合に FALSE を返します。
+`CDockablePane::CanAutoHide`次のいずれかの状況で FALSE を返します。
 
-- ウィンドウには、親がありません。
+- ペインに親がありません。
 
-- ドッキング マネージャーには、ウィンドウを自動的に隠すにはできません。
+- ドッキング マネージャーでは、ペインの自動非表示を許可していません。
 
-- ウィンドウがドッキングされていません。
+- ペインはドッキングされていません。
 
-##  <a name="canbeattached"></a>  CDockablePane::CanBeAttached
+## <a name="cdockablepanecanbeattached"></a><a name="canbeattached"></a>CDockableペイン::缶詰添付
 
-現在のウィンドウを別のウィンドウにドッキングできるかどうかを判断します。
+現在のペインを別のペインにドッキングできるかどうかを判断します。
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -461,27 +461,27 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>戻り値
 
-別のウィンドウに、またはメイン フレーム ウィンドウに、ドッキング可能ペインをドッキングできる場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインを別のペインまたはメイン フレーム ウィンドウにドッキングできる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、このメソッドは常に TRUE を返します。 このメソッドを有効または無効呼び出さずにドッキングする派生クラスでオーバーライド[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)します。
+既定では、このメソッドは常に TRUE を返します。 [CBasePane](../../mfc/reference/cbasepane-class.md#enabledocking)を呼び出さずにドッキングを有効または無効にするには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="cdockablepane"></a>  CDockablePane::CDockablePane
+## <a name="cdockablepanecdockablepane"></a><a name="cdockablepane"></a>CDockableペイン::チャドック可能なペイン
 
-構築し、初期化、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。
+[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクトを構築して初期化します。
 
 ```
 CDockablePane();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ウィンドウのドッキング可能なオブジェクトを構築した後で呼び出す[CDockablePane::Create](#create)または[cdockablepane::createex](#createex)を作成します。
+ドッキング可能なペイン オブジェクトを構築した後[、CDockablePane::作成](#create)または[CDockablePane::CreateEx](#createex)を呼び出して作成します。
 
-##  <a name="converttotabbeddocument"></a>  CDockablePane::ConvertToTabbedDocument
+## <a name="cdockablepaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CDockable ペイン::変換タブードキュメント
 
-1 つまたは複数のドッキング可能ペインをタブ付き MDI ドキュメントに変換します。
+1 つ以上のドッキング可能ペインを MDI タブ付きドキュメントに変換します。
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -489,12 +489,12 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bActiveTabOnly*<br/>
-[in]変換する際に、 `CTabbedPane`、アクティブなタブのみを変換する場合は TRUE を指定します。ペイン内のすべてのタブに変換する場合は FALSE を指定します。
+*タブのみ*<br/>
+[in]`CTabbedPane`を変換する場合は、アクティブなタブのみを変換する場合は TRUE を指定します。
 
-##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition
+## <a name="cdockablepanecheckautohidecondition"></a><a name="checkautohidecondition"></a>ウィンドウスペイン::チェックオートハイド条件
 
-ドッキング ウィンドウの (自動的に隠すモードとも呼ばれます) が非表示かどうかを判断します。
+ドッキング ペインを非表示にするかどうかを決定します (自動非表示モードとも呼ばれます)。
 
 ```
 virtual BOOL CheckAutoHideCondition();
@@ -502,17 +502,17 @@ virtual BOOL CheckAutoHideCondition();
 
 ### <a name="return-value"></a>戻り値
 
-非表示にする条件が満たされる; は、TRUE を返します。それ以外の場合、FALSE です。
+非表示条件が満たされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークでは、タイマーを使用して、定期的に自動非表示のドッキング可能ペインを非表示にするかどうかを確認します。 メソッドは、ウィンドウがアクティブでないと、ウィンドウ サイズ変更されませんが、マウスのポインターは ウィンドウの上に TRUE を返します。
+フレームワークは、自動非表示ドッキング可能ペインを非表示にするかどうかを定期的にチェックするためにタイマーを使用します。 このメソッドは、ペインがアクティブでない場合、ペインのサイズが変更されておらず、マウス ポインタがペイン上にない場合に TRUE を返します。
 
-前のすべての条件が満たされた場合、フレームワーク[CDockablePane::Slide](#slide)ウィンドウを非表示にします。
+上記の条件がすべて満たされている場合、フレームワークは[CDockablePane::Slide](#slide)を呼び出してペインを非表示にします。
 
-##  <a name="checkstopslidecondition"></a>  CDockablePane::CheckStopSlideCondition
+## <a name="cdockablepanecheckstopslidecondition"></a><a name="checkstopslidecondition"></a>CDockableペイン::チェックストップスライド条件
 
-ときに、自動非表示のドッキング ウィンドウがスライディングを停止する必要がありますを決定します。
+自動非表示ドッキング ペインがスライドを停止するタイミングを決定します。
 
 ```
 virtual BOOL CheckStopSlideCondition(BOOL bDirection);
@@ -520,22 +520,22 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDirection*<br/>
-[in]ウィンドウが表示されている場合は TRUE。ウィンドウが非表示の場合は FALSE です。
+*b方向*<br/>
+[in]ペインが表示されている場合は TRUE。FALSE の場合、ウィンドウが非表示になります。
 
 ### <a name="return-value"></a>戻り値
 
-停止条件が満たされる; は、TRUE を返します。それ以外の場合、FALSE です。
+停止条件が満たされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキング可能ペインを autohide モードに設定すると、フレームワークは、ウィンドウを非表示スライド効果を使用します。 フレームワークは、ペインがスライドときに、この関数を呼び出します。 `CheckStopSlideCondition` ウィンドウが完全に表示されたら、またはが完全に非表示の場合は、TRUE を返します。
+ドッキング可能なペインが自動非表示モードに設定されている場合、フレームワークはスライド式効果を使用してペインの表示と非表示を切り替えます。 フレームワークは、ペインがスライドしているときにこの関数を呼び出します。 `CheckStopSlideCondition`ウィンドウが完全に表示されている場合、または完全に非表示の場合は TRUE を返します。
 
-カスタムの自動非表示の効果を実装する派生クラスでこのメソッドをオーバーライドします。
+カスタムの自動非表示効果を実装するには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="copystate"></a>  CDockablePane::CopyState
+## <a name="cdockablepanecopystate"></a><a name="copystate"></a>CDockableペイン::コピーステート
 
-ドッキング可能ペインの状態をコピーします。
+ドッキング可能なペインの状態をコピーします。
 
 ```
 virtual void CopyState(CDockablePane* pOrgBar);
@@ -543,26 +543,26 @@ virtual void CopyState(CDockablePane* pOrgBar);
 
 ### <a name="parameters"></a>パラメーター
 
-*pOrgBar*<br/>
-[in]ドッキング可能ペインへのポインター。
+*グループバー*<br/>
+[in]ドッキング可能なペインへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CDockablePane::CopyState` 状態をコピー *pOrgBar*次のメソッドを呼び出して、現在のペインに。
+`CDockablePane::CopyState`次のメソッドを呼び出して *、pOrgBar*の状態を現在のペインにコピーします。
 
-- [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)
+- [C ペイン::コピーステート](../../mfc/reference/cpane-class.md#copystate)
 
-- [CDockablePane::GetAHRestoredRect](#getahrestoredrect)
+- [チャッカブルペイン::ゲットアレサートレック](#getahrestoredrect)
 
-- [CDockablePane::GetAHSlideMode](#getahslidemode)
+- [チャッピング可能なペイン::GetAHスライドモード](#getahslidemode)
 
-- [CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)
+- [ウィンドウズペイン::最後のPercentInペインコンテナ](#getlastpercentinpanecontainer)
 
-- [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)
+- [CDockable ペイン::IsAutohideAllEnabled](#isautohideallenabled)
 
-##  <a name="create"></a>  CDockablePane::Create
+## <a name="cdockablepanecreate"></a><a name="create"></a>CDockableペイン::作成
 
-Windows コントロールを作成しにアタッチします、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。
+コントロールを作成し[、CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -589,54 +589,54 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCaption*<br/>
-[in]ウィンドウの名前を指定します。
+*一方、一時おくもみ*<br/>
+[in]ウィンドウ名を指定します。
 
 *pParentWnd*<br/>
-[入力、出力]親ウィンドウを指定します。
+[イン、アウト]親ウィンドウを指定します。
 
-*rect*<br/>
-[in]クライアント座標で、ウィンドウの位置とサイズを指定します。 *pParentWnd*します。
+*Rect*<br/>
+[in]ウィンドウのサイズと位置を *、pParentWnd*のクライアント座標で指定します。
 
-*bHasGripper*<br/>
-[in]キャプション付きのウィンドウを作成する場合は TRUEそれ以外の場合、FALSE です。
+*bハスグリッパー*<br/>
+[in]キャプション付きのペインを作成する場合は TRUE。それ以外の場合は FALSE。
 
 *nID*<br/>
-[in]子ウィンドウの ID を指定します。 この値は、このドッキング ウィンドウのドッキング状態を保存する場合は、一意である必要があります。
+[in]子ウィンドウの ID を指定します。 このドッキング ペインのドッキング状態を保存する場合は、この値は一意である必要があります。
 
-*dwStyle*<br/>
-[in]ウィンドウのスタイル属性を指定します。
+*Dwstyle*<br/>
+[in]ウィンドウ スタイルの属性を指定します。
 
-*dwTabbedStyle*<br/>
-[in]ユーザーがこのペインのキャプションにペインをドラッグしたときに作成されるタブ付きウィンドウのタブ付きスタイルを指定します。
+*ドウタブードスタイル*<br/>
+[in]ユーザーがこのペインのキャプション上のペインをドラッグしたときに作成されるタブ付きウィンドウのタブ付きスタイルを指定します。
 
-*dwControlBarStyle*<br/>
+*コントロール バースタイル*<br/>
 [in]追加のスタイル属性を指定します。
 
 *pContext*<br/>
-[入力、出力]ウィンドウの作成のコンテキストを指定します。
+[イン、アウト]ウィンドウの作成コンテキストを指定します。
 
-*lpszWindowName*<br/>
-[in]ウィンドウの名前を指定します。
+*名前をクリックします。*<br/>
+[in]ウィンドウ名を指定します。
 
-*sizeDefault*<br/>
+*サイズデフォルト*<br/>
 [in]ウィンドウのサイズを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペインが正常に作成された場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows ウィンドウを作成し、それにアタッチ、`CDockablePane`オブジェクト。
+ウィンドウ ペインを作成し、オブジェクトに`CDockablePane`アタッチします。
 
-場合、 *dwStyle*ウィンドウ スタイルが CBRS_FLOAT_MULTI フラグ、ミニフレーム ウィンドウの他のペインで、ミニフレーム ウィンドウをフローティングできます。 既定では、ドッキング ペインだけで変動する個別にします。
+*dwStyle*ウィンドウ スタイルにCBRS_FLOAT_MULTI フラグがある場合、ミニフレーム ウィンドウはミニフレーム ウィンドウの他のウィンドウと共にフローティングできます。 既定では、ドッキング ペインは個別にフローティングを行うことしかできません。
 
-場合、 *dwTabbedStyle*パラメーター AFX_CBRS_OUTLOOK_TABS フラグが指定されたが、このペインを使用する別のペインがアタッチされている場合、ウィンドウが Outlook スタイルのタブ付きペインを作成、 [cdockablepane::attachtotabwnd](#attachtotabwnd)メソッド。 既定では、ドッキング可能ペインが型の通常のタブ付きペインを作成[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)します。
+*dwTabbedStyle*パラメーターにAFX_CBRS_OUTLOOK_TABSフラグが指定されている場合[、CDockablePane::AttachToTabWnd](#attachtotabwnd)メソッドを使用して別のペインがこのペインにアタッチされている場合、ウィンドウは Outlook スタイルのタブ付きペインを作成します。 既定では、ドッキング可能なペインは[、通常](../../mfc/reference/ctabbedpane-class.md)のタブ付きペインを作成します。
 
-##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider
+## <a name="cdockablepanecreatedefaultpanedivider"></a><a name="createdefaultpanedivider"></a>CDockable ペイン::既定のペインディバイダーの作成
 
-フレーム ウィンドウにドッキングされているウィンドウの既定の区分線を作成します。
+枠にドッキングされているペインの既定の分割線を作成します。
 
 ```
 static CPaneDivider* __stdcall CreateDefaultPaneDivider(
@@ -647,33 +647,33 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwAlignment*<br/>
-[in]ペインをドッキングするメイン フレームの側を指定します。 場合*場合*、CBRS_ALIGN_LEFT または CBRS_ALIGN_RIGHT フラグが含まれています。 このメソッドは、垂直線を作成します (`CPaneDivider::SS_VERT`) 区分線それ以外の場合、このメソッドは、水平方向を作成します。 (`CPaneDivider::SS_HORZ`) 区分線。
+*dw配置*<br/>
+[in]ペインをドッキングするメイン フレームの辺を指定します。 *dwAlignment*にCBRS_ALIGN_LEFTまたはCBRS_ALIGN_RIGHTフラグが含まれている場合、このメソッドは`CPaneDivider::SS_VERT`垂直 ( ) 除算を作成します。それ以外の場合、このメソッドは`CPaneDivider::SS_HORZ`水平 ( ) の分割線を作成します。
 
-*pParent*<br/>
+*親*<br/>
 [in]親フレームへのポインター。
 
-*pSliderRTC*<br/>
-[in]使用されません。
+*をクリックします。*<br/>
+[in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは、区分線の作成が失敗した場合に、新しく作成された区分線、または NULL にポインターを返します。
+このメソッドは、新しく作成された分割線へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*場合*値は次のいずれかを指定できます。
+*dwAlignment*には、次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|ウィンドウ フレーム ウィンドウのクライアント領域の上部にドッキングします。|
-|CBRS_ALIGN_BOTTOM|ウィンドウ フレーム ウィンドウのクライアント領域の下部にドッキングします。|
-|CBRS_ALIGN_LEFT|ウィンドウ フレーム ウィンドウのクライアント領域の左側にドッキングします。|
-|CBRS_ALIGN_RIGHT|ウィンドウ フレーム ウィンドウのクライアント領域の右側にドッキングします。|
+|CBRS_ALIGN_TOP|ペインは、フレーム ウィンドウのクライアント領域の上部にドッキングされています。|
+|CBRS_ALIGN_BOTTOM|ペインは、フレーム ウィンドウのクライアント領域の下部にドッキングされています。|
+|CBRS_ALIGN_LEFT|ペインは、フレーム ウィンドウのクライアント領域の左側にドッキングされています。|
+|CBRS_ALIGN_RIGHT|ペインは、フレーム ウィンドウのクライアント領域の右側にドッキングされています。|
 
-##  <a name="createex"></a>  CDockablePane::CreateEx
+## <a name="cdockablepanecreateex"></a><a name="createex"></a>CDockableペイン::作成Ex
 
-Windows コントロールを作成しにアタッチします、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。
+コントロールを作成し[、CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクトにアタッチします。
 
 ```
 virtual BOOL CreateEx(
@@ -691,51 +691,51 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyleEx*<br/>
+*ドウスタイルエックス*<br/>
 [in]新しいウィンドウの拡張スタイル属性を指定します。
 
-*lpszCaption*<br/>
-[in]ウィンドウの名前を指定します。
+*一方、一時おくもみ*<br/>
+[in]ウィンドウ名を指定します。
 
 *pParentWnd*<br/>
-[入力、出力]親ウィンドウを指定します。
+[イン、アウト]親ウィンドウを指定します。
 
-*rect*<br/>
-[in]クライアント座標で、ウィンドウの位置とサイズを指定します。 *pParentWnd*します。
+*Rect*<br/>
+[in]ウィンドウのサイズと位置を *、pParentWnd*のクライアント座標で指定します。
 
-*bHasGripper*<br/>
-[in]キャプション付きのウィンドウを作成する場合は TRUEそれ以外の場合、FALSE です。
+*bハスグリッパー*<br/>
+[in]キャプション付きのペインを作成する場合は TRUE。それ以外の場合は FALSE。
 
 *nID*<br/>
-[in]子ウィンドウの ID を指定します。 この値は、このドッキング ウィンドウのドッキング状態を保存する場合は、一意である必要があります。
+[in]子ウィンドウの ID を指定します。 このドッキング ペインのドッキング状態を保存する場合は、この値は一意である必要があります。
 
-*dwStyle*<br/>
-[in]ウィンドウのスタイル属性を指定します。
+*Dwstyle*<br/>
+[in]ウィンドウ スタイルの属性を指定します。
 
-*dwTabbedStyle*<br/>
-[in]ユーザーがこのペインのキャプションにペインをドラッグしたときに作成されるタブ付きウィンドウのタブ付きスタイルを指定します。
+*ドウタブードスタイル*<br/>
+[in]ユーザーがこのペインのキャプション上のペインをドラッグしたときに作成されるタブ付きウィンドウのタブ付きスタイルを指定します。
 
-*dwControlBarStyle*<br/>
+*コントロール バースタイル*<br/>
 [in]追加のスタイル属性を指定します。
 
 *pContext*<br/>
-[入力、出力]ウィンドウの作成のコンテキストを指定します。
+[イン、アウト]ウィンドウの作成コンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペインが正常に作成された場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows ウィンドウを作成し、それにアタッチ、`CDockablePane`オブジェクト。
+ウィンドウ ペインを作成し、オブジェクトに`CDockablePane`アタッチします。
 
-場合、 *dwStyle*ウィンドウ スタイルが CBRS_FLOAT_MULTI フラグ、ミニフレーム ウィンドウの他のペインで、ミニフレーム ウィンドウをフローティングできます。 既定では、ドッキング ペインだけで変動する個別にします。
+*dwStyle*ウィンドウ スタイルにCBRS_FLOAT_MULTI フラグがある場合、ミニフレーム ウィンドウはミニフレーム ウィンドウの他のウィンドウと共にフローティングできます。 既定では、ドッキング ペインは個別にフローティングを行うことしかできません。
 
-場合、 *dwTabbedStyle*パラメーター AFX_CBRS_OUTLOOK_TABS フラグが指定されたが、このペインを使用する別のペインがアタッチされている場合、ウィンドウが Outlook スタイルのタブ付きペインを作成、 [cdockablepane::attachtotabwnd](#attachtotabwnd)メソッド。 既定では、ドッキング可能ペインが型の通常のタブ付きペインを作成[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)します。
+*dwTabbedStyle*パラメーターにAFX_CBRS_OUTLOOK_TABSフラグが指定されている場合[、CDockablePane::AttachToTabWnd](#attachtotabwnd)メソッドを使用して別のペインがこのペインにアタッチされている場合、ウィンドウは Outlook スタイルのタブ付きペインを作成します。 既定では、ドッキング可能なペインは[、通常](../../mfc/reference/ctabbedpane-class.md)のタブ付きペインを作成します。
 
-##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane
+## <a name="cdockablepanecreatetabbedpane"></a><a name="createtabbedpane"></a>CDockable ペイン::タブ付きペインの作成
 
-現在のウィンドウからタブ付きペインを作成します。
+現在のペインからタブ付きペインを作成します。
 
 ```
 virtual CTabbedPane* CreateTabbedPane();
@@ -743,19 +743,19 @@ virtual CTabbedPane* CreateTabbedPane();
 
 ### <a name="return-value"></a>戻り値
 
-新しいタブ付きペイン、または作成操作に失敗した場合は NULL です。
+新しいタブ付きペイン、または作成操作が失敗した場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、このペインを置換するタブ付きペインを作成するときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [cdockablepane::attachtotabwnd](#attachtotabwnd)します。
+フレームワークは、このペインを置き換えるタブ付きペインを作成するときに、このメソッドを呼び出します。 詳細については[、「CDockablePane::AttachToTabWnd](#attachtotabwnd)」を参照してください。
 
-タブ付きペインをカスタマイズする派生クラスでこのメソッドが作成され、初期化をオーバーライドします。
+タブ付きペインの作成方法と初期化方法をカスタマイズするには、派生クラスでこのメソッドをオーバーライドします。
 
-格納されているランタイム クラス情報に基づいて、タブ付きウィンドウが作成した、`m_pTabbedControlBarRTC`によって初期化されるメンバー、 [cdockablepane::createex](#createex)メソッド。
+タブ付きペインは`m_pTabbedControlBarRTC`、CDockablePane::CreateEx メソッドによって初期化されるメンバーに格納されているランタイム クラス情報に従[って](#createex)作成されます。
 
-##  <a name="dockpanecontainer"></a>  CDockablePane::DockPaneContainer
+## <a name="cdockablepanedockpanecontainer"></a><a name="dockpanecontainer"></a>ウィンドウブルペイン::Dオックペインコンテナ
 
-ウィンドウに、コンテナーにドッキングします。
+コンテナーをペインにドッキングします。
 
 ```
 virtual BOOL DockPaneContainer(
@@ -766,33 +766,33 @@ virtual BOOL DockPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-*barContainerManager*<br/>
-[in]ドッキング コンテナーのコンテナー マネージャーへの参照。
+*バーコンテナマネージャー*<br/>
+[in]ドッキングされているコンテナーのコンテナー マネージャーへの参照。
 
-*dwAlignment*<br/>
-[in]コンテナーのドッキング ウィンドウの側を指定する DWORD です。
+*dw配置*<br/>
+[in]コンテナーがドッキングされているペインの側を指定する DWORD。
 
-*dockMethod*<br/>
-[in]使用されません。
+*ドックメソッド*<br/>
+[in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーが正常に、ウィンドウにドッキングされている場合は TRUE。それ以外の場合、FALSE です。
+コンテナーがペインに正常にドッキングされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*場合*値は次のいずれかを指定できます。
+*dwAlignment*には、次のいずれかの値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|コンテナーは、ウィンドウの上部にドッキングします。|
-|CBRS_ALIGN_BOTTOM|コンテナーのウィンドウの下部にドッキングします。|
-|CBRS_ALIGN_LEFT|コンテナーのウィンドウの左側にドッキングします。|
-|CBRS_ALIGN_RIGHT|コンテナーは、ウィンドウの右側にドッキングします。|
+|CBRS_ALIGN_TOP|コンテナーは、ウィンドウの上部にドッキングされています。|
+|CBRS_ALIGN_BOTTOM|コンテナーは、ペインの下部にドッキングされています。|
+|CBRS_ALIGN_LEFT|コンテナーは、ペインの左側にドッキングされています。|
+|CBRS_ALIGN_RIGHT|コンテナーは、ペインの右側にドッキングされています。|
 
-##  <a name="dockpanestandard"></a>  CDockablePane::DockPaneStandard
+## <a name="cdockablepanedockpanestandard"></a><a name="dockpanestandard"></a>CDockableペイン::Dックペインスタンダード
 
-アウトライン (標準) のドッキングを使用して、ウィンドウをドッキングします。
+アウトライン (標準) ドッキングを使用してペインをドッキングします。
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -800,16 +800,16 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="parameters"></a>パラメーター
 
-*bWasDocked*<br/>
-[in]メソッドが戻るときにこの値 TRUE を含む場合は、ウィンドウがドッキングされた正常;それ以外の場合、FALSE が含まれています。
+*bワスドッキング*<br/>
+[in]メソッドが返されるときに、ペインが正常にドッキングされた場合、この値は TRUE を格納します。それ以外の場合は、FALSE が含まれます。
 
 ### <a name="return-value"></a>戻り値
 
-タブ付きウィンドウに、ウィンドウがドッキングされた場合、またはタブ付きウィンドウがドッキングの結果として作成された場合は、このメソッドは、タブ付きウィンドウへのポインターを返します。 このメソッドが戻るかどうかは、ウィンドウにはそれを正常にドッキング、**this**ポインター。 ドッキングに失敗した場合、このメソッドは NULL を返します。
+ペインがタブ付きウィンドウにドッキングされている場合、またはドッキングの結果としてタブ付きウィンドウが作成された場合、このメソッドはタブ付きウィンドウへのポインターを返します。 ペインが正常にドッキングされた場合、このメソッドは**this**ポインターを返します。 ドッキングに失敗した場合、このメソッドは NULL を返します。
 
-##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos
+## <a name="cdockablepanedocktorecentpos"></a><a name="docktorecentpos"></a>チャッキング可能なペイン::Dソックトコストポス
 
-ストアドのドッキング位置に、ウィンドウをドッキングします。
+ペインを格納されているドッキング位置にドッキングします。
 
 ```
 BOOL CDockablePane::DockToRecentPos();
@@ -817,15 +817,15 @@ BOOL CDockablePane::DockToRecentPos();
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ウィンドウがドッキングされて正常です。それ以外の場合、FALSE です。
+ペインが正常にドッキングされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキング可能ペインで最新のドッキング情報を格納する、 [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)オブジェクト。
+ドッキング可能なペインは、最近のドッキング情報を[CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)オブジェクトに格納します。
 
-##  <a name="docktowindow"></a>  CDockablePane::DockToWindow
+## <a name="cdockablepanedocktowindow"></a><a name="docktowindow"></a>ウィンドウ:D
 
-別のドッキング ペインには、1 つのドッキング ペインをドッキングします。
+ドッキング ペインを別のドッキング ペインにドッキングします。
 
 ```
 virtual BOOL DockToWindow(
@@ -836,26 +836,26 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTargetWindow*<br/>
-[入力、出力]このペインをドッキング、ドッキング可能なウィンドウを指定します。
+*ウィンドウ*<br/>
+[イン、アウト]このペインをドッキングするドッキング可能ペインを指定します。
 
-*dwAlignment*<br/>
-[in]ウィンドウのドッキング位置を指定します。 CBRS_ALIGN_LEFT、CBRS_ALIGN_TOP、CBRS_ALIGN_RIGHT、CBRS_ALIGN_BOTTOM または CBRS_ALIGN_ANY のいずれかを指定することがあります。 (Afxres.h 内で定義)。
+*dw配置*<br/>
+[in]ペインのドッキングの配置を指定します。 CBRS_ALIGN_LEFT、CBRS_ALIGN_TOP、CBRS_ALIGN_RIGHT、CBRS_ALIGN_BOTTOM、またはCBRS_ALIGN_ANYのいずれかである可能性があります。 (afxres.h で定義されています。
 
-*lpRect*<br/>
-[in]ウィンドウのドッキングの四角形を指定します。
+*Lprect*<br/>
+[in]ペインのドッキング四角形を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウが正常にドッキングされている場合は TRUE。それ以外の場合、FALSE です。
+ペインが正常にドッキングされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって指定された配置と別のペインに 1 つのペインをドッキングするには、このメソッドを呼び出す*場合*します。
+このメソッドを呼び出して、あるペインを*dwAlignment*で指定された配置を使用して別のペインにドッキングします。
 
-##  <a name="drawcaption"></a>  CDockablePane::DrawCaption
+## <a name="cdockablepanedrawcaption"></a><a name="drawcaption"></a>ウィンドウブルウィンドウ::Dローキャプション
 
-ドッキング ウィンドウのキャプション ("グリッパー"とも呼ばれます) を描画します。
+ドッキング ペインのキャプション (グリッパーとも呼ばれます) を描画します。
 
 ```
 virtual void DrawCaption(
@@ -866,39 +866,39 @@ virtual void DrawCaption(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]描画に使用するデバイス コンテキストを表します。
+[in]描画に使用されるデバイス コンテキストを表します。
 
-*rectCaption*<br/>
-[in]ウィンドウのキャプションに外接する四角形を指定します。
+*直流キャプション*<br/>
+[in]ペインのキャプションの外接する四角形を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、ドッキング可能ペインのキャプションを描画するには、このメソッドを呼び出します。
+フレームワークは、ドッキング可能なペインのキャプションを描画するために、このメソッドを呼び出します。
 
-キャプションの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。
+キャプションの外観をカスタマイズするには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="enableautohideall"></a>  CDockablePane::EnableAutohideAll
+## <a name="cdockablepaneenableautohideall"></a><a name="enableautohideall"></a>CDockable ペイン::自動非表示を有効にします。
 
-有効またはこのペイン、およびコンテナー内の他のペインを autohide モードを無効にします。
+このペインおよびコンテナ内の他のペインの自動非表示モードを有効または無効にします。
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-[in]自動非表示のドッキング可能ペイン; のすべての機能を有効にする場合は TRUEそれ以外の場合、FALSE です。
+*b 有効にする*<br/>
+[in]ドッキング可能なペインのすべての機能を自動的に非表示にする場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーが保持している、 **Ctrl**キーおよびペインを autohide モードでは、同じコンテナー内の他のすべてのペインに切り替えるには、[pin のボタンが自動的に隠すモードに切り替えることも] をクリックします。
+ユーザーが**Ctrl**キーを押したままピン ボタンをクリックしてペインを自動非表示モードに切り替えると、同じコンテナー内の他のすべてのペインも自動非表示モードに切り替えられます。
 
-このメソッドを呼び出します*bEnable*の特定のペインには、この機能を無効に FALSE に設定します。
+*bEnable*を FALSE に設定してこのメソッドを呼び出すと、特定のペインに対してこの機能が無効になります。
 
-##  <a name="enablegripper"></a>  CDockablePane::EnableGripper
+## <a name="cdockablepaneenablegripper"></a><a name="enablegripper"></a>CDockableペイン::イネーブルグリッパー
 
-("グリッパー"とも呼ばれます)、キャプションの表示と非表示を切り替えます。
+キャプション (グリッパーとも呼ばれます) を表示または非表示にします。
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -906,18 +906,18 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-[in]キャプションを有効にする場合は TRUEそれ以外の場合、FALSE です。
+*b 有効にする*<br/>
+[in]キャプションを有効にする場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、ドッキング可能ペインを作成するときがない WS_STYLE ウィンドウ スタイルでは、指定した場合でもです。 つまり、ウィンドウのキャプションは、フレームワークによって制御される非クライアント領域はこの領域は、標準のウィンドウ キャプションによって異なります。
+フレームワークがドッキング可能なペインを作成する場合、指定されていても、WS_STYLE ウィンドウ スタイルはありません。 つまり、ペインのキャプションはフレームワークによって制御される非クライアント領域ですが、この領域は標準のウィンドウ キャプションとは異なります。
 
-表示またはキャプションをいつでも非表示にできます。 ミニフレーム ウィンドウで、ウィンドウがフローティング状態になったまたはタブ付きウィンドウにタブとして、ウィンドウが追加されたときにフレームワークがキャプションに非表示になります。
+キャプションはいつでも表示または非表示にすることができます。 ペインがタブ付きウィンドウにタブとして追加されたとき、またはペインがミニフレーム ウィンドウに浮動表示されている場合、フレームワークはキャプションを非表示にします。
 
-##  <a name="getahrestoredrect"></a>  CDockablePane::GetAHRestoredRect
+## <a name="cdockablepanegetahrestoredrect"></a><a name="getahrestoredrect"></a>チャッカブルペイン::ゲットアレサートレック
 
-自動非表示モードのときにウィンドウの位置を指定します。
+自動非表示モードのときのペインの位置を指定します。
 
 ```
 CRect GetAHRestoredRect() const;
@@ -925,11 +925,11 @@ CRect GetAHRestoredRect() const;
 
 ### <a name="return-value"></a>戻り値
 
-A`CRect`自動非表示モードにあるときに、ウィンドウの位置を格納しているオブジェクト。
+自動`CRect`非表示モードの場合のペインの位置を格納するオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getahslidemode"></a>  CDockablePane::GetAHSlideMode
+## <a name="cdockablepanegetahslidemode"></a><a name="getahslidemode"></a>チャッピング可能なペイン::GetAHスライドモード
 
 ウィンドウの自動非表示スライド モードを取得します。
 
@@ -939,13 +939,13 @@ virtual UINT GetAHSlideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウの自動非表示スライド モードを示す UINT します。 戻り値は、AFX_AHSM_MOVE または AFX_AHSM_STRETCH のいずれかを指定できますが、実装がのみ AFX_AHSM_MOVE を使用します。
+ウィンドウの自動非表示スライド モードを指定する UINT。 戻り値はAFX_AHSM_MOVEまたはAFX_AHSM_STRETCHできますが、実装ではAFX_AHSM_MOVEのみを使用します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getcaptionheight"></a>  CDockablePane::GetCaptionHeight
+## <a name="cdockablepanegetcaptionheight"></a><a name="getcaptionheight"></a>ウィンドウブルペイン::ゲットキャプション高さ
 
-(ピクセル単位)、現在のキャプションの高さを返します。
+現在のキャプションの高さをピクセル単位で返します。
 
 ```
 virtual int GetCaptionHeight() const;
@@ -953,15 +953,15 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>戻り値
 
-(ピクセル単位)、キャプションの高さ。
+キャプションの高さ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-キャプションが表示されていない場合、キャプションの高さが 0、 [CDockablePane::EnableGripper](#enablegripper)メソッド、または、ウィンドウに、キャプションがあるない場合。
+キャプションが[CDockablePane::EnableGripper](#enablegripper)メソッドによって非表示であった場合、またはペインにキャプションがない場合は、キャプションの高さは 0 になります。
 
-##  <a name="getdefaultpanedivider"></a>  CDockablePane::GetDefaultPaneDivider
+## <a name="cdockablepanegetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>ウィンドウブルペイン::デフォルトペインディバイダー
 
-ウィンドウのコンテナーのウィンドウの既定の区分線を返します。
+ペインのコンテナーの既定のペイン区分線を返します。
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
@@ -969,15 +969,15 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="return-value"></a>戻り値
 
-有効な[CPaneDivider](../../mfc/reference/cpanedivider-class.md) 、メイン フレーム ウィンドウにドッキング可能なウィンドウがドッキングされている場合は、オブジェクトまたは`NULL`ドッキング可能なウィンドウがドッキングされていない場合、またはそれが固定されていない場合。
+ドッキング可能なペインがメイン フレーム ウィンドウにドッキングされている場合、またはドッキング可能なペインがドッキング`NULL`されていない場合、またはフローティング状態の場合は、有効な[CPaneDivider](../../mfc/reference/cpanedivider-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ウィンドウの分割の詳細については、次を参照してください。 [CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)します。
+ペインディバイダの詳細については[、「CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)」を参照してください。
 
-##  <a name="getdockingstatus"></a>  CDockablePane::GetDockingStatus
+## <a name="cdockablepanegetdockingstatus"></a><a name="getdockingstatus"></a>CDockable ペイン::取得ドッキングステータス
 
-ドッキング ペインの機能が提供されているポインターの位置に基づいて決定します。
+指定されたポインターの位置に基づいて、ドッキングするペインの機能を決定します。
 
 ```
 virtual AFX_CS_STATUS GetDockingStatus(
@@ -987,34 +987,34 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-[in]画面座標でポインターの位置。
+*Pt*<br/>
+[in]画面座標でのポインターの位置。
 
-*nSensitivity*<br/>
-[in]距離 (ピクセル単位) を四角形のエッジから離れた場所ポインターがドッキングを有効にされます。
+*n感度*<br/>
+[in]ドッキングを有効にするためにポインタが四角形の端から離れる距離 (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
-状態値は次のいずれか:
+次のいずれかの状態値。
 
-|AFX_CS_STATUS 値|説明|
+|AFX_CS_STATUS値|意味|
 |---------------------------|-------------|
-|CS_NOTHING|ドッキング サイト上のポインターが。 フレームワークは、ペインをドッキングしていません。|
-|CS_DOCK_IMMEDIATELY|ポインターが上にあるドッキング サイト イミディ エイト モードで (のウィンドウでは、DT_IMMEDIATE ドッキング モードを使用しますです)。 フレームワークは、すぐに、ウィンドウをドッキングします。|
-|CS_DELAY_DOCK|別のドッキング ペインまたはメイン フレームの端は、ドッキング サイト上にポインターが。 フレームワークは、遅延後に、ウィンドウをドッキングします。 この遅延の詳細については、「解説」を参照してください。|
-|CS_DELAY_DOCK_TO_TAB|ポインターは、タブ付きウィンドウにドッキングするウィンドウをドッキング サイト経由で配置されています。 これには、別のドッキング ペインのキャプションまたはタブ付きペインのタブ領域の上にポインターが配置されているときに発生します。|
+|CS_NOTHING|ポインターがドッキング サイト上にありません。 フレームワークはペインをドッキングしません。|
+|CS_DOCK_IMMEDIATELY|ポインターは、即時モードでドッキング サイト上に配置されます (ウィンドウはDT_IMMEDIATEドッキング モードを使用します)。 フレームワークは、ペインを直ちにドッキングします。|
+|CS_DELAY_DOCK|ポインターが、別のドッキング ペインまたはメイン フレームの端であるドッキング サイト上にあります。 フレームワークは、遅延の後にペインをドッキングします。 この遅延の詳細については、「解説」を参照してください。|
+|CS_DELAY_DOCK_TO_TAB|ポインターは、タブ付きウィンドウにペインをドッキングさせるドッキング サイト上にあります。 これは、ポインターが別のドッキング ペインのキャプション上またはタブ付きペインのタブ領域上に配置されている場合に発生します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、フローティング ウィンドウのドッキングを処理するには、このメソッドを呼び出します。
+フレームワークは、フローティング ペインのドッキングを処理するために、このメソッドを呼び出します。
 
-DT_IMMEDIATE ドッキング モードを使用するウィンドウをドッキングまたはフローティング ツールバーの場合は、フレームワークは、ドッキング コマンド ウィンドウをドッキングを実行する前に親フレームのクライアント領域外に移動するユーザーを有効にするを遅延します。 遅延の長さの単位はミリ秒とによって制御されます、 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)データ メンバー. 既定値[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)は 200 です。 この動作は、Microsoft Word 2007 のドッキング動作をエミュレートします。
+ドッキング モードDT_IMMEDIATEを使用するフローティング ツール バーまたはドッキング ペインの場合、ドッキングが発生する前に、ユーザーがウィンドウを親フレームのクライアント領域から移動できるように、ドッキング コマンドが遅延します。 遅延の長さはミリ秒単位で測定され[、CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)データ メンバーによって制御されます。 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)のデフォルト値は200です。 この動作は、Microsoft Word 2007 のドッキング動作をエミュレートします。
 
-遅延ドッキング州 (CS_DELAY_DOCK および CS_DELAY_DOCK_TO_TAB)、フレームワーク、ユーザーがマウス ボタンを解放するまでのドッキングを行いません。 ペイン DT_STANDARD ドッキング モードを使用する場合、フレームワークは、ドッキング場所にある四角形を表示します。 ペイン DT_SMART ドッキング モードを使用する場合、フレームワークはドッキング場所にあるスマート ドッキング マーカーおよび半透明にする四角形を表示します。 ウィンドウのドッキングのモードを指定するには、呼び出し、 [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)メソッド。 スマート ドッキングの詳細については、次を参照してください。 [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)します。
+遅延ドッキング状態 (CS_DELAY_DOCKとCS_DELAY_DOCK_TO_TAB) の場合、ユーザーがマウス ボタンを離すまで、フレームワークはドッキングを実行しません。 ペインがDT_STANDARDドッキング モードを使用している場合、フレームワークは、ドッキング位置に四角形を表示します。 ペインがDT_SMARTドッキング モードを使用している場合、フレームワークは、ドッキング位置が投影された場所にスマート ドッキング マーカーと半透明の四角形を表示します。 ペインのドッキング モードを指定するには[、CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)メソッドを呼び出します。 スマート ドッキングの詳細については[、「CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)」を参照してください。
 
-##  <a name="getdragsensitivity"></a>  CDockablePane::GetDragSensitivity
+## <a name="cdockablepanegetdragsensitivity"></a><a name="getdragsensitivity"></a>CDockable ペイン::取得ドラッグ感度
 
-ドッキング ウィンドウのドラッグと小文字の区別を返します。
+ドッキング ペインのドラッグ感度を返します。
 
 ```
 static const CSize& GetDragSensitivity();
@@ -1022,11 +1022,11 @@ static const CSize& GetDragSensitivity();
 
 ### <a name="return-value"></a>戻り値
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md)幅と高さ (ピクセル)、ドラッグ ポイントの中央に四角形を含むオブジェクト。 ドラッグ操作では、この四角形の外側にマウス ポインターが移動されるまでは開始しません。
+ドラッグ ポイントの中心に配置された四角形の幅と高さをピクセル単位で格納する[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。 ドラッグ操作は、マウス ポインターがこの四角形の外側に移動するまで開始されません。
 
-##  <a name="getlastpercentinpanecontainer"></a>  CDockablePane::GetLastPercentInPaneContainer
+## <a name="cdockablepanegetlastpercentinpanecontainer"></a><a name="getlastpercentinpanecontainer"></a>ウィンドウズペイン::最後のPercentInペインコンテナ
 
-コンテナーの端をウィンドウを占有する領域の割合を取得します ( [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md))。
+ペインがコンテナー ( [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)) 内で占める領域の割合を取得します。
 
 ```
 int GetLastPercentInPaneContainer() const;
@@ -1034,15 +1034,15 @@ int GetLastPercentInPaneContainer() const;
 
 ### <a name="return-value"></a>戻り値
 
-*Int*コンテナー内のウィンドウを占有する領域の割合を指定します。
+ペインがコンテナー内で占める領域の割合を指定する*int。*
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、コンテナーのレイアウトを調整するときに使用されます。
 
-##  <a name="gettabarea"></a>  CDockablePane::GetTabArea
+## <a name="cdockablepanegettabarea"></a><a name="gettabarea"></a>Cドッキング可能なペイン::ゲットタブエリア
 
-ウィンドウのタブ領域を取得します。
+ペインのタブ領域を取得します。
 
 ```
 virtual void GetTabArea(
@@ -1052,19 +1052,19 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>パラメーター
 
-*rectTabAreaTop*<br/>
-[in]`GetTabArea`タブ領域のタブがウィンドウの上部にある場合はこの変数を設定します。 タブがウィンドウの下部にある場合は、この変数は、空の四角形が入力されます。
+*レクトタブエリアトップ*<br/>
+[in]`GetTabArea`タブがペインの上部にある場合は、タブ領域でこの変数を埋めます。 タブがペインの下部にある場合、この変数は空の四角形で塗りつぶされます。
 
-*rectTabAreaBottom*<br/>
-[in]`GetTabArea`タブ領域のタブがウィンドウの下部にある場合はこの変数を設定します。 タブがウィンドウの上部にある場合は、この変数は、空の四角形が入力されます。
+*タブエリア下部*<br/>
+[in]`GetTabArea`タブがペインの下部にある場合は、タブ領域でこの変数を埋めます。 タブがペインの上部にある場合、この変数は空の四角形で塗りつぶされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドはから派生したクラスでのみ使用`CDockablePane`タブがあるとします。 詳細については、次を参照してください。 [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)と[CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)します。
+このメソッドは、タブから`CDockablePane`派生したクラスでだけ使用されます。 詳細については[、「Cタブ付きペイン::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)および[CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)」を参照してください。
 
-##  <a name="gettabbedpanertc"></a>  CDockablePane::GetTabbedPaneRTC
+## <a name="cdockablepanegettabbedpanertc"></a><a name="gettabbedpanertc"></a>チャッピング可能なペイン::ゲットタブベッドペインRTC
 
-現在のウィンドウを別のペインをドッキングするときに作成されるタブ付きウィンドウに関するランタイム クラス情報を返します。
+別のペインが現在のペインにドッキングされたときに作成されるタブ付きウィンドウに関するランタイム クラス情報を返します。
 
 ```
 CRuntimeClass* GetTabbedPaneRTC() const;
@@ -1074,15 +1074,15 @@ CRuntimeClass* GetTabbedPaneRTC() const;
 
 ドッキング可能ペインのランタイム クラス情報。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-動的に作成されるタブ付きペインのランタイム クラス情報を取得するには、このメソッドを呼び出します。 これは、ユーザーが別のペインのキャプションに 1 つのペインをドラッグしたとき、またはを呼び出す場合に発生することができます、 [cdockablepane::attachtotabwnd](#attachtotabwnd)プログラムで 2 つのドッキング可能ペインからタブ付きペインを作成するメソッド。
+動的に作成されたタブ付きペインのランタイム クラス情報を取得します。 これは、ユーザーがペインを別のペインのキャプションにドラッグした場合、または[CDockablePane::AttachToTabWnd](#attachtotabwnd)メソッドを呼び出して、2 つのドッキング可能なペインからプログラムでタブ付きペインを作成した場合に発生します。
 
-ランタイム クラス情報を設定するには呼び出すことによって、 [:settabbedpanertc](#settabbedpanertc)メソッド。
+ランタイム クラス情報を設定するには[、CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)メソッドを呼び出します。
 
-##  <a name="hasautohidemode"></a>  CDockablePane::HasAutoHideMode
+## <a name="cdockablepanehasautohidemode"></a><a name="hasautohidemode"></a>CDockable ペイン::ハスオートハイドモード
 
-ドッキング ペインを autohide モードに切り替えられるかどうかを指定します。
+ドッキング ペインを自動非表示モードに切り替えられるかどうかを指定します。
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -1090,15 +1090,15 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ウィンドウを隠すモードに切り替えることができる場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインを自動非表示モードに切り替えることができる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-特定のドッキング可能ペインを autohide モードを無効にする派生クラスでこのメソッドをオーバーライドします。
+特定のドッキング可能ペインの自動非表示モードを無効にするには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="hittest"></a>  CDockablePane::HitTest
+## <a name="cdockablepanehittest"></a><a name="hittest"></a>チャッピング可能なペイン::ヒットテスト
 
-ユーザーがマウスをクリックしたウィンドウで、場所を指定します。
+ユーザーがマウスをクリックするペイン内の位置を指定します。
 
 ```
 virtual int HitTest(
@@ -1111,26 +1111,26 @@ virtual int HitTest(
 *ポイント*<br/>
 [in]テストする点を指定します。
 
-*bDetectCaption*<br/>
-[in]ポイントがウィンドウのキャプションにある場合、HTCAPTION を返す必要がある場合は TRUE。それ以外の場合、FALSE です。
+*を検出します。*<br/>
+[in]ポイントがペインのキャプションにある場合に HTCAPTION を返す必要がある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-次のいずれかの値です。
+次のいずれかの値:
 
-- HTNOWHERE 場合*ポイント*ドッキング可能ペイン内にないです。
+- ドッキング可能なペインに*ポイント*がない場合は HTNOWHERE。
 
-- HTCLIENT 場合*ポイント*ドッキング可能なウィンドウのクライアント領域にします。
+- ドッキング可能ペインのクライアント領域に*ポイント*がある場合は、HTCLIENT。
 
-- HTCAPTION 場合*ポイント*ドッキング可能ペインのキャプション領域にします。
+- ドッキング可能なペインのキャプション領域に*ポイント*がある場合は、HTCAPTION。
 
-- AFX_HTCLOSE 場合*ポイント*は閉じる ボタンをクリックします。
+- *ポイント*が閉じるボタンにある場合はAFX_HTCLOSEします。
 
-- HTMAXBUTTON 場合*ポイント*がピン留めする ボタンをクリックします。
+- ピンボタン上に*ポイント*がある場合は、HTMAXBUTTON。
 
-##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled
+## <a name="cdockablepaneisautohideallenabled"></a><a name="isautohideallenabled"></a>CDockable ペイン::IsAutohideAllEnabled
 
-ドッキング ウィンドウとコンテナー内の他のすべてのペインを autohide モードに切り替えられるかどうかを示します。
+ドッキング ペインとコンテナー内の他のすべてのペインを自動非表示モードに切り替えられるかどうかを示します。
 
 ```
 virtual BOOL IsAutohideAllEnabled() const;
@@ -1138,17 +1138,17 @@ virtual BOOL IsAutohideAllEnabled() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペイン、およびコンテナー内の他のすべてのペインを autohide モード; に切り替えられる場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインとコンテナー内の他のすべてのペインが自動非表示モードに切り替えられる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーが保持しているときに、ドッキングの暗証番号 (pin) ボタンをクリックして自動的に隠すモードを有効、 **Ctrl**キー
+ユーザーが**Ctrl**キーを押しながらドッキング ピン ボタンをクリックして、自動非表示モードを有効にする
 
-有効またはこの動作を無効にする、呼び出し、 [CDockablePane::EnableAutohideAll](#enableautohideall)メソッド。
+この動作を有効または無効にするには[、CDockablePane::EnableAutohideAll](#enableautohideall)メソッドを呼び出します。
 
-##  <a name="isautohidemode"></a>  CDockablePane::IsAutoHideMode
+## <a name="cdockablepaneisautohidemode"></a><a name="isautohidemode"></a>CDockable ペイン::IsAutoHideMode
 
-ウィンドウが自動的に隠すモードかどうかを判断します。
+ペインが自動非表示モードかどうかを判断します。
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1156,11 +1156,11 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペインが自動的に隠すモードでは、TRUE を返します。それ以外の場合、FALSE です。
+ドッキング可能なペインが自動非表示モードの場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="isdocked"></a>  CDockablePane::IsDocked
+## <a name="cdockablepaneisdocked"></a><a name="isdocked"></a>CDockableペイン::IsDocked
 
-現在のウィンドウがドッキングされているかどうかを判断します。
+現在のペインがドッキングされているかどうかを判断します。
 
 ```
 virtual BOOL IsDocked() const;
@@ -1168,15 +1168,15 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペインがミニフレーム ウィンドウに属していない場合、または別のペインで、ミニフレーム ウィンドウのフローティング状態の場合は TRUE です。 ミニフレーム ウィンドウの子である、ウィンドウと、ミニフレーム ウィンドウに属している他のウィンドウがない場合は FALSE。
+ドッキング可能なペインがミニフレーム ウィンドウに属していない場合、または別のペインとミニフレーム ウィンドウにフローティングされている場合は TRUE。 ペインがミニフレーム ウィンドウの子で、ミニフレーム ウィンドウに属する他のペインがない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メイン フレーム ウィンドウに、ウィンドウがドッキングされているかどうかを確認するのには、呼び出す[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)します。 メソッドが NULL 以外のポインターを返す場合は、メイン フレーム ウィンドウに、ウィンドウがドッキングされています。
+ペインがメイン フレーム ウィンドウにドッキングされているかどうかを確認するには[、CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)を呼び出します。 メソッドが NULL 以外のポインターを返す場合、ペインはメイン フレーム ウィンドウにドッキングされます。
 
-##  <a name="ishideinautohidemode"></a>  CDockablePane::IsHideInAutoHideMode
+## <a name="cdockablepaneishideinautohidemode"></a><a name="ishideinautohidemode"></a>CDockable ペイン::IsHideIn自動ハイドモード
 
-表示 (または非表示) を呼び出している場合、自動非表示モードになっているウィンドウの動作を決定[CDockablePane::ShowPane](#showpane)します。
+[CDockablePane::ShowPane](#showpane)を呼び出して表示 (または非表示) されている場合に、自動非表示モードのペインの動作を決定します。
 
 ```
 virtual BOOL IsHideInAutoHideMode() const;
@@ -1184,19 +1184,19 @@ virtual BOOL IsHideInAutoHideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-自動非表示モードのときに、ドッキング可能ペインを非表示にする場合は TRUE。それ以外の場合、FALSE です。
+自動非表示モードのときにドッキング可能なペインを非表示にする場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキング可能ペインが自動的に隠すモードが異なる動作を呼び出すと`ShowPane`ウィンドウを表示または非表示にします。 この動作が静的メンバーによって制御される[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)します。 このメンバーは TRUE、ドッキング可能ペイン、およびその関連自動的に隠すツールバーまたは自動的に隠す ボタンを非表示または表示を呼び出すと`ShowPane`します。 それ以外の場合、ドッキング可能ペインがアクティブ化または非アクティブ化し、その関連自動的に隠すツールバーまたは自動的に隠す ボタンは常に表示します。
+ドッキング可能なペインが自動非表示モードの場合、ペインの表示/非表示を切り替`ShowPane`える呼び出し時に、ドッキング可能なペインの動作が異なります。 この動作は、静的メンバー [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)によって制御されます。 このメンバーが TRUE の場合、ドッキング可能ペインと関連する自動非表示ツールバーまたは自動非表示ボタンは、 を呼`ShowPane`び出したときに非表示または表示されます。 それ以外の場合、ドッキング可能なペインはアクティブ化または非アクティブ化され、関連する自動非表示ツールバーまたは自動非表示ボタンが常に表示されます。
 
-各ペインの既定の動作を変更する派生クラスでこのメソッドをオーバーライドします。
+個々のペインの既定の動作を変更するには、派生クラスでこのメソッドをオーバーライドします。
 
-既定値`m_bHideInAutoHideMode`は FALSE です。
+デフォルト値`m_bHideInAutoHideMode`は FALSE です。
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CDockablePane::IsInFloatingMultiPaneFrameWnd
+## <a name="cdockablepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CDockable ペイン::イインフローティングマルチペインフレームオーニング
 
-マルチ フレーム ウィンドウで、ウィンドウは、かどうかを指定します ( [CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md))。
+ペインがマルチペイン フレーム ウィンドウ[(CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)) 内にあるかどうかを指定します。
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1204,13 +1204,13 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ペインがマルチ ウィンドウ フレーム ウィンドウにはそれ以外の場合、FALSE です。
+ペインが複数枠のフレーム ウィンドウにある場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isresizable"></a>  CDockablePane::IsResizable
+## <a name="cdockablepaneisresizable"></a><a name="isresizable"></a>チャドック可能なペイン::IsReサイズ可能
 
-ウィンドウがサイズを変更できるかどうかを指定します。
+ペインの大きさを変更できるかどうかを指定します。
 
 ```
 virtual BOOL IsResizable() const;
@@ -1218,17 +1218,17 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウがサイズを変更できる場合は TRUE。それ以外の場合、FALSE です。
+ペインの大きさを変更できる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、ドッキング可能ペインのサイズは変更できます。 サイズ変更を防ぐためには、派生クラスでは、このメソッドをオーバーライドし、FALSE が返されます。 FALSE の値が失敗につながる注**ASSERT**で[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)します。 使用[CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane)代わりに親フレーム内のペインをドッキングします。
+既定では、ドッキング可能なペインはサイズ変更可能です。 サイズ変更を防ぐには、派生クラスでこのメソッドをオーバーライドし、FALSE を返します。 FALSE 値は[、CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)で**失敗したアサート**につながることに注意してください。 代わりに[CDockingManager を使用::ペインを追加](../../mfc/reference/cdockingmanager-class.md#addpane)して、親フレーム内にペインをドッキングします。
 
-ウィンドウ サイズを変更することはできませんをできますも float も自動的に隠すモードを常に親フレームの外側にあります。
+サイズ変更できないペインは、フローティングも自動非表示モードに入ることもできず、常に親フレームの外縁に配置されます。
 
-##  <a name="istablocationbottom"></a>  CDockablePane::IsTabLocationBottom
+## <a name="cdockablepaneistablocationbottom"></a><a name="istablocationbottom"></a>CDockable ペイン::IsTabLocationボトム
 
-タブが上部またはウィンドウの下部にあるかどうかを指定します。
+タブをペインの上部または下部のどちらに配置するかを指定します。
 
 ```
 virtual BOOL IsTabLocationBottom() const;
@@ -1236,15 +1236,15 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブは、ウィンドウの下部に配置されている場合は TRUE。タブがウィンドウの上部に配置されている場合は FALSE。
+タブがペインの下部にある場合は TRUE。タブがペインの上部にある場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)します。
+詳細については[、「CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)」を参照してください。
 
-##  <a name="istracked"></a>  CDockablePane::IsTracked
+## <a name="cdockablepaneistracked"></a><a name="istracked"></a>チャドック可能なペイン::IsTracked
 
-ウィンドウがユーザーによって移動されたかどうかを指定します。
+ユーザーがペインを移動するかどうかを指定します。
 
 ```
 BOOL IsTracked() const;
@@ -1252,11 +1252,11 @@ BOOL IsTracked() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ウィンドウの移動中です。それ以外の場合、FALSE です。
+ペインが移動されている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="isvisible"></a>  CDockablePane::IsVisible
+## <a name="cdockablepaneisvisible"></a><a name="isvisible"></a>CDockableペイン::イズビジブル
 
-現在のウィンドウが表示されるかどうかを判断します。
+現在のペインを表示するかどうかを決定します。
 
 ```
 virtual BOOL IsVisible() const;
@@ -1264,21 +1264,21 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能ペインを表示する場合は TRUE。それ以外の場合、FALSE です。
+ドッキング可能なペインが表示されている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキング可能ペインが表示されるかどうかを判断するには、このメソッドを呼び出します。 このメソッドを呼び出す代わりに使用できます[CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible)または WS_VISIBLE スタイルをテストします。 返される表示状態は、自動非表示モードを有効または無効にするかどうかとの値によって異なります、 [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)プロパティ。
+ドッキング可能なペインが表示されているかどうかを調べます。 [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible)を呼び出すか、WS_VISIBLEスタイルをテストする代わりに、このメソッドを使用できます。 返される可視性の状態は、自動非表示モードが有効か無効か、および[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)プロパティの値によって異なります。
 
-ドッキング可能ペインが自動的に隠すモードの場合と`IsHideInAutoHideMode`FALSE 可視性の状態は常に FALSE を返します。
+ドッキング可能なペインが自動非表示モードで FALSE`IsHideInAutoHideMode`を返す場合、可視性の状態は常に FALSE になります。
 
-ドッキング可能ペインが自動的に隠すモードの場合と`IsHideInAutoHideMode`可視性の状態は、関連自動的に隠すツールバーの可視性の状態によって異なります。 TRUE を返します。
+ドッキング可能なペインが自動非表示モードで TRUE`IsHideInAutoHideMode`を返す場合、表示状態は関連する自動非表示ツールバーの表示状態によって異なります。
 
-可視性の状態の判断基準自動非表示モードでのドッキング可能なウィンドウがない場合、 [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)メソッド。
+ドッキング可能なペインが自動非表示モードでない場合、表示状態は[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)メソッドによって決定されます。
 
-## ##  <a name="loadstate"></a>  CDockablePane::LoadState
+## <a name="---cdockablepaneloadstate"></a>##  <a name="loadstate"></a>CDockable ペイン::ロードステート
 
-内部使用のみ。 詳細については、Visual Studio のインストールの VC\atlmfc\src\mfc フォルダーにあるソース コードを参照してください。
+内部使用専用です。 詳細については、Visual Studio のインストールの VC\atlmfc\src\mfc フォルダーにあるソース コードを参照してください。
 
 ```
 virtual BOOL LoadState(
@@ -1288,45 +1288,45 @@ virtual BOOL LoadState(
 );
 ```
 
-##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation
+## <a name="cdockablepanem_bdisableanimation"></a><a name="m_bdisableanimation"></a>チャドック可能なペイン::m_bDisableAnimation
 
-ドッキング可能なウィンドウのアニメーションを自動的に隠す が無効になっているかどうかを指定します。
+ドッキング可能ペインのアニメーションを自動的に非表示にするかどうかを指定します。
 
 ```
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;
 ```
 
-##  <a name="m_bhideinautohidemode"></a>  CDockablePane::m_bHideInAutoHideMode
+## <a name="cdockablepanem_bhideinautohidemode"></a><a name="m_bhideinautohidemode"></a>チャドック可能なペイン::m_bHideInAutoHideMode
 
-ウィンドウが自動非表示モードの場合は、ウィンドウの動作を決定します。
+ペインが自動非表示モードの場合のペインの動作を決定します。
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は、すべてのドッキング ペインで、アプリケーションに影響します。
+この値は、アプリケーション内のすべてのドッキング ペインに影響します。
 
-場合は TRUE、ドッキング可能なウィンドウにこのメンバーを設定した場合の非表示またはを呼び出すときに、関連する自動的に隠すツールバーとボタンと共に表示[CDockablePane::ShowPane](#showpane)します。
+このメンバを TRUE に設定すると[、CDockablePane::ShowPane](#showpane)を呼び出すと、ドッキング可能なペインが非表示にされるか、関連する自動非表示のツール バーとボタンと共に表示されます。
 
-FALSE、ドッキング可能ペインにこのメンバーを設定する場合をアクティブ化または非アクティブに呼び出すときに[CDockablePane::ShowPane](#showpane)します。
+このメンバを FALSE に設定すると[、CDockablePane::ShowPane](#showpane)を呼び出すと、ドッキング可能なペインがアクティブまたは非アクティブになります。
 
-##  <a name="m_nslidesteps"></a>  CDockablePane::m_nSlideSteps
+## <a name="cdockablepanem_nslidesteps"></a><a name="m_nslidesteps"></a>チャドック可能なペイン::m_nSlideSteps
 
-自動非表示モードである場合に、ウィンドウのアニメーションの速度を指定します。
+自動非表示モードの場合のペインのアニメーション速度を指定します。
 
 ```
 AFX_IMPORT_DATA static int m_nSlideSteps;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-高速なアニメーション効果では、この値を小さきます。 低速のアニメーション効果では、この値を大ききます。
+アニメーション効果を速くするには、この値を小さくします。 アニメーション効果を遅くするには、この値を大きくします。
 
-##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent
+## <a name="cdockablepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>ウィンドウスペイン::オンアフターチェンジペアレント
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1334,25 +1334,25 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *pWndOldParent*<br/>
+[in]*親の子*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onafterdockfromminiframe"></a>  CDockablePane::OnAfterDockFromMiniFrame
+## <a name="cdockablepaneonafterdockfromminiframe"></a><a name="onafterdockfromminiframe"></a>チャドック可能なペイン::オンアフタードックフロミ
 
-フレーム ウィンドウのフローティング、ドッキング バーをドッキングすると、フレームワークによって呼び出されます。
+フローティング ドッキング バーがフレーム ウィンドウにドッキングするときに、フレームワークによって呼び出されます。
 
 ```
 virtual void OnAfterDockFromMiniFrame();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、このメソッドは何もしません。
+既定では、このメソッドは何も実行しません。
 
-##  <a name="onbeforechangeparent"></a>  CDockablePane::OnBeforeChangeParent
+## <a name="cdockablepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>ウィンドウスペイン::オン・オン・チェンジチェンジ・ペアレント
 
-フレームワークは、ウィンドウの親を変更する前に、このメソッドを呼び出します。
+フレームワークは、ペインの親を変更する前に、このメソッドを呼び出します。
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1362,21 +1362,21 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndNewParent*<br/>
+*新しい親*<br/>
 [in]新しい親ウィンドウへのポインター。
 
-*bDelay*<br/>
-[in]ブール値をウィンドウがドッキングされていない場合は、ドッキング レイアウトの再計算を延期するかどうかを指定します。 詳細については、次を参照してください。 [CDockablePane::UndockPane](#undockpane)します。
+*bディレイ*<br/>
+[in]ウィンドウがドッキングされていない場合にドッキング レイアウトの再計算を遅延するかどうかを指定する BOOL。 詳細については[、「CDockablePane::ドッキングウィンドウを解除する](#undockpane)」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ペインをドッキングし、を新しい親がドッキングを許可していない場合、このメソッドには、ウィンドウがドッキング解除します。
+ペインがドッキングされ、新しい親がドッキングを許可していない場合、このメソッドはペインをドッキング解除します。
 
-場合は、ウィンドウはタブ付きドキュメントに変換される、このメソッドは、最近のドッキング位置を格納します。 フレームワークでは、最近のドッキング位置を使用して、ドッキングされた状態に戻すことが変換されるときに、ウィンドウの位置を復元します。
+ペインがタブ付きドキュメントに変換される場合、このメソッドは最近のドッキング位置を格納します。 フレームワークは、ドッキング状態に戻ったときに、ペインの位置を復元するために、最近のドッキング位置を使用します。
 
-##  <a name="onbeforefloat"></a>  CDockablePane::OnBeforeFloat
+## <a name="cdockablepaneonbeforefloat"></a><a name="onbeforefloat"></a>CDockableペイン::オン・フォアフロート
 
-フレームワークは、フローティング状態に遷移のウィンドウで、前にこのメソッドを呼び出します。
+フレームワークは、ペインがフローティング状態に遷移する前に、このメソッドを呼び出します。
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1386,23 +1386,23 @@ virtual BOOL OnBeforeFloat(
 
 ### <a name="parameters"></a>パラメーター
 
-*rectFloat*<br/>
-[in]フローティング状態にあるときに、ウィンドウのサイズと位置を指定します。
+*レクトフロート*<br/>
+[in]フローティング状態の場合のペインの位置とサイズを指定します。
 
-*dockMethod*<br/>
-[in]ドッキング方法を指定します。 参照してください[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)使用可能な値の一覧についてはします。
+*ドックメソッド*<br/>
+[in]ドッキング方法を指定します。 可能な値のリストについては[、「CPane::DockPane」](../../mfc/reference/cpane-class.md#dockpane)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合は、ウィンドウをフローティングすることができます。それ以外の場合、FALSE です。
+ペインをフローティングできる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ペインが float 型に、このメソッドは、フレームワークによって呼び出されます。 ウィンドウをフローティングする前に、処理を実行する場合、派生クラスでこのメソッドをオーバーライドすることができます。
+このメソッドは、ペインがフロートされるときにフレームワークによって呼び出されます。 ペインがフロートされる前に処理を実行する場合は、派生クラスでこのメソッドをオーバーライドできます。
 
-##  <a name="onpressbuttons"></a>  CDockablePane::OnPressButtons
+## <a name="cdockablepaneonpressbuttons"></a><a name="onpressbuttons"></a>ウィンドウブルペイン::オンプレスボタン
 
-AFX_HTCLOSE と AFX_HTMAXBUTTON ボタン以外のキャプションのボタンを押すと呼び出されます。
+ユーザーがAFX_HTCLOSEボタンとAFX_HTMAXBUTTON ボタン以外のキャプション ボタンを押したときに呼び出されます。
 
 ```
 virtual void OnPressButtons(UINT nHit);
@@ -1410,16 +1410,16 @@ virtual void OnPressButtons(UINT nHit);
 
 ### <a name="parameters"></a>パラメーター
 
-*nHit*<br/>
+*nヒット*<br/>
 [in]このパラメーターは使用されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキング可能ペインのキャプションにカスタム ボタンを追加する場合は、ユーザーがボタンを押したときに通知を受信するには、このメソッドをオーバーライドします。
+ドッキング可能なペインのキャプションにカスタム ボタンを追加する場合は、ユーザーがボタンを押したときに通知を受け取るように、このメソッドをオーバーライドします。
 
-##  <a name="onslide"></a>  CDockablePane::OnSlide
+## <a name="cdockablepaneonslide"></a><a name="onslide"></a>CDockableペイン::オンスライド
 
-自動非表示モードにあるときに、ウィンドウをアニメーション化するために、フレームワークによって呼び出されます。
+自動非表示モードのときにペインをアニメーション化するために、フレームワークによって呼び出されます。
 
 ```
 virtual void OnSlide(BOOL bSlideOut);
@@ -1427,28 +1427,28 @@ virtual void OnSlide(BOOL bSlideOut);
 
 ### <a name="parameters"></a>パラメーター
 
-*bSlideOut*<br/>
-[in]ウィンドウを表示する場合は TRUEウィンドウを非表示には FALSE です。
+*ブスライドアウト*<br/>
+[in]ペインを表示する場合は TRUE。FALSE を指定すると、ウィンドウが非表示になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-カスタムの自動非表示の効果を実装する派生クラスでこのメソッドをオーバーライドします。
+カスタムの自動非表示効果を実装するには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
+## <a name="cdockablepaneremovefromdefaultpanedividier"></a><a name="removefromdefaultpanedividier"></a>クドック可能ペイン::デフォルトペインディバイディアから削除
 
-フレームワークは、ペインはドッキング解除されているときに、このメソッドを呼び出します。
+ペインがドッキング解除されている場合、フレームワークはこのメソッドを呼び出します。
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、既定の分割線を NULL に設定し、そのコンテナーから、ウィンドウを削除します。
+このメソッドは、既定のペイン分割線を NULL に設定し、ペインをコンテナーから削除します。
 
-##  <a name="replacepane"></a>  CDockablePane::ReplacePane
+## <a name="cdockablepanereplacepane"></a><a name="replacepane"></a>CDockable ペイン::置換ペイン
 
-指定したウィンドウのウィンドウで置き換えます。
+ペインを指定されたペインに置き換えます。
 
 ```
 BOOL ReplacePane(
@@ -1459,34 +1459,34 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBarToReplaceWith*<br/>
-[in]ドッキング可能ペインへのポインター。
+*置き換える*<br/>
+[in]ドッキング可能なペインへのポインター。
 
-*dockMethod*<br/>
-[in]使用されません。
+*ドックメソッド*<br/>
+[in]使用されていません。
 
-*bRegisterWithFrame*<br/>
-[in]TRUE の場合、新しいウィンドウが、古いウィンドウの親のドッキング マネージャーに登録します。 新しいウィンドウは、古いペイン、ドッキング マネージャーによって管理されているペインの一覧でのインデックスに挿入されます。
+*フレームを使用します。*<br/>
+[in]TRUE の場合、新しいペインは、古いペインの親のドッキング マネージャーに登録されます。 ドッキング マネージャーによって管理されるペインの一覧の古いペインのインデックスに新しいペインが挿入されます。
 
 ### <a name="return-value"></a>戻り値
 
-交換が成功した場合は TRUE。それ以外の場合、FALSE です。
+置換が成功した場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="restoredefaultpanedivider"></a>  CDockablePane::RestoreDefaultPaneDivider
+## <a name="cdockablepanerestoredefaultpanedivider"></a><a name="restoredefaultpanedivider"></a>ウィンドウブルペイン::復元デフォルトペインディバイダー
 
-ペインを逆シリアル化フレームワークは、ウィンドウの既定の区分線を復元するには、このメソッドを呼び出します。
+ペインが逆シリアル化されると、フレームワークはこのメソッドを呼び出して、既定のペイン分割を復元します。
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-復元された既定ペイン分割バーでは、存在する場合、現在の既定ペイン分割バーが置き換えられます。
+復元された既定のペイン分割線は、現在の既定のペイン分割線が存在する場合に置き換えられます。
 
-##  <a name="setautohidemode"></a>  CDockablePane::SetAutoHideMode
+## <a name="cdockablepanesetautohidemode"></a><a name="setautohidemode"></a>CDockable ペイン::自動ハイドモードを設定します。
 
-ドッキング ペインの表示を切り替えると自動的に隠すモード。
+ドッキング ペインの表示モードと自動非表示モードを切り替えます。
 
 ```
 virtual CMFCAutoHideBar* SetAutoHideMode(
@@ -1498,33 +1498,33 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 
 ### <a name="parameters"></a>パラメーター
 
-*bMode*<br/>
-[in]自動非表示モードを有効にする場合は TRUE通常のドッキング モードを有効にする場合は FALSE。
+*bモード*<br/>
+[in]自動非表示モードを有効にするには TRUE。通常のドッキング モードを有効にするには、FALSE を指定します。
 
-*dwAlignment*<br/>
-[in]作成する、自動的に隠すウィンドウの配置を指定します。
+*dw配置*<br/>
+[in]作成する自動非表示ウィンドウの配置を指定します。
 
-*pCurrAutoHideBar*<br/>
-[入力、出力]現在自動的に隠すツールバーへのポインター。 NULL にすることができます。
+*を使用します。*<br/>
+[イン、アウト]現在の自動非表示ツール バーへのポインター。 NULL にすることができます。
 
-*bUseTimer*<br/>
-[in]ユーザーが自動的に隠すモードに、ウィンドウを切り替えるときに、自動非表示の効果を使用するか、すぐに、ウィンドウを非表示にするかどうかを指定します。
+*タイマーを使用します。*<br/>
+[in]ユーザーがペインを自動非表示モードに切り替えたときに自動非表示効果を使用するか、またはペインをすぐに非表示にするかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-自動非表示モード、または NULL への切り替えの結果として作成された、自動的に隠すツールバー。
+自動非表示モードに切り替えた結果として作成された自動非表示ツール バー、または NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、ユーザーが自動非表示モードまたは標準ドッキング モードには、ドッキング可能ペインを切り替えるには、暗証番号 (pin) ボタンをクリックすると、このメソッドを呼び出します。
+ユーザーがピン ボタンをクリックしてドッキング可能ペインを自動非表示モードまたは通常のドッキング モードに切り替えると、フレームワークは、このメソッドを呼び出します。
 
-プログラムでドッキング可能ペインを autohide モードに切り替えるには、このメソッドを呼び出します。 メイン フレーム ウィンドウに、ウィンドウをドッキングする必要があります ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)への有効なポインターを返す必要があります、 [CPaneDivider](../../mfc/reference/cpanedivider-class.md))。
+ドッキング可能ペインをプログラムによって自動非表示モードに切り替えるには、このメソッドを呼び出します。 ペインはメイン フレーム ウィンドウにドッキングする必要があります ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)は[CPaneDivider](../../mfc/reference/cpanedivider-class.md)への有効なポインターを返す必要があります ) 。
 
-##  <a name="setautohideparents"></a>  CDockablePane::SetAutoHideParents
+## <a name="cdockablepanesetautohideparents"></a><a name="setautohideparents"></a>CDockable ペイン::設定自動ハイド親
 
-自動的に隠すツールバー、ウィンドウを自動的に隠す ボタンを設定します。
+ペインの自動非表示ボタンと自動非表示ツールバーを設定します。
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1532,51 +1532,51 @@ void SetAutoHideParents(
 
 ### <a name="parameters"></a>パラメーター
 
-*pToolBar*<br/>
-[in]自動的に隠すツールバーへのポインター。
+*をクリックします。*<br/>
+[in]自動非表示ツール バーへのポインター。
 
 *pBtn*<br/>
-[in]自動的に隠すボタンへのポインター。
+[in]自動非表示ボタンへのポインター。
 
-##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer
+## <a name="cdockablepanesetlastpercentinpanecontainer"></a><a name="setlastpercentinpanecontainer"></a>ウィンドウズペイン::セットラストパーセントインペインコンテナ
 
-コンテナーの端をウィンドウを占有する領域の割合を設定します。
+ペインがコンテナー内で占めるスペースの割合を設定します。
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *n*<br/>
-[in]**Int**コンテナー内のウィンドウを占有する領域の割合を指定します。
+[in]ペインがコンテナー内で占める領域の割合を指定する**int。**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、レイアウトを再計算時に、新しい値を使用するウィンドウを調整します。
+レイアウトが再計算されるときに、新しい値を使用するように、フレームワークはペインを調整します。
 
-##  <a name="setrestoreddefaultpanedivider"></a>  CDockablePane::SetRestoredDefaultPaneDivider
+## <a name="cdockablepanesetrestoreddefaultpanedivider"></a><a name="setrestoreddefaultpanedivider"></a>CDockable ペイン::セットリストアされたデフォルトペインディバイダー
 
-復元された既定の分割線を設定します。
+復元された既定のペイン分割を設定します。
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hRestoredSlider*<br/>
-[in]ペイン分割バー (スライダー) へのハンドル。
+*復元されたスライダー*<br/>
+[in]ペインの区分線 (スライダー) へのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ペインを逆シリアル化、復元された既定のウィンドウの区分線が取得されます。 詳細については、次を参照してください。 [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)します。
+ペインが逆シリアル化されると、復元された既定のペイン分割が取得されます。 詳細については[、「CDockablePane::RestoreDefaultPane ディバイダー](#restoredefaultpanedivider)」を参照してください。
 
-##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
+## <a name="cdockablepanesettabbedpanertc"></a><a name="settabbedpanertc"></a>CDockableペイン::セットタブペインRTC
 
-2 つのペインがドッキング時に作成されるタブ付きウィンドウのランタイム クラス情報を設定します。
+2 つのペインがドッキングされたときに作成されるタブ付きウィンドウのランタイム クラス情報を設定します。
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 
@@ -1585,23 +1585,23 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 *pRTC*<br/>
 [in]タブ付きペインのランタイム クラス情報。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-動的に作成されるタブ付きペインのランタイム クラス情報を設定するには、このメソッドを呼び出します。 これは、ユーザーが別のペインのキャプションに 1 つのペインをドラッグしたとき、またはを呼び出す場合に発生することができます、 [cdockablepane::attachtotabwnd](#attachtotabwnd)プログラムで 2 つのドッキング可能ペインからタブ付きペインを作成するメソッド。
+動的に作成されるタブ付きペインのランタイム クラス情報を設定します。 これは、ユーザーがペインを別のペインのキャプションにドラッグした場合、または[CDockablePane::AttachToTabWnd](#attachtotabwnd)メソッドを呼び出して、2 つのドッキング可能なペインからプログラムでタブ付きペインを作成した場合に発生します。
 
-既定のランタイム クラスの設定に従い、 *dwTabbedStyle*パラメーターの[CDockablePane::Create](#create)と[cdockablepane::createex](#createex)します。 新しいタブ付きペインをカスタマイズするには、クラスを次のいずれかからクラスを派生します。
+既定のランタイム クラスは[、CDockablePane::作成](#create)および[CDockablePane::CreateEx](#createex)の*dwTabbedStyle*パラメーターに従って設定されます。 新しいタブ付きペインをカスタマイズするには、次のいずれかのクラスからクラスを派生させます。
 
 - [CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)
 
 - [CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)
 
-- [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)します。
+- [クラスを使用します](../../mfc/reference/cmfcoutlookbar-class.md)。
 
-次に、そのランタイム クラス情報へのポインターがこのメソッドを呼び出します。
+次に、ランタイム クラス情報へのポインターを使用して、このメソッドを呼び出します。
 
-##  <a name="showpane"></a>  CDockablePane::ShowPane
+## <a name="cdockablepaneshowpane"></a><a name="showpane"></a>CDockableペイン::ショーペイン
 
-ペインの表示と非表示を切り替えます。
+ペインの表示/非表示を切り替えます。
 
 ```
 virtual void ShowPane(
@@ -1612,22 +1612,22 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*bShow*<br/>
-[in]ウィンドウを表示する場合は TRUEウィンドウを非表示には FALSE です。
+*bショー*<br/>
+[in]ペインを表示する場合は TRUE。FALSE を指定すると、ウィンドウが非表示になります。
 
-*bDelay*<br/>
-[in]遅延する場合は True、ドッキング レイアウトを調整します。すぐにドッキング レイアウトを調整する場合は FALSE。
+*bディレイ*<br/>
+[in]ドッキング レイアウトの調整を遅延する場合は TRUE。すぐにドッキングレイアウトを調整するには、FALSE を指定します。
 
-*bActivate*<br/>
-[in]表示されたときにウィンドウをアクティブ化する場合は TRUEそれ以外の場合、FALSE です。
+*bアクティブ化*<br/>
+[in]表示されているときにペインをアクティブにするには TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-代わりに、このメソッドを呼び出して、[また](../../mfc/reference/cwnd-class.md#showwindow)表示のドッキング可能ペインを非表示にするとき。
+ドッキング可能なペインを表示または非表示にするときに[、CWnd::ShowWindow の](../../mfc/reference/cwnd-class.md#showwindow)代わりにこのメソッドを呼び出します。
 
-##  <a name="slide"></a>  CDockablePane::Slide
+## <a name="cdockablepaneslide"></a><a name="slide"></a>CDockableペイン::スライド
 
-自動非表示モードになっているウィンドウをアニメーション化します。
+自動非表示モードのペインをアニメーション化します。
 
 ```
 virtual void Slide(
@@ -1637,33 +1637,33 @@ virtual void Slide(
 
 ### <a name="parameters"></a>パラメーター
 
-*bSlideOut*<br/>
-[in]ウィンドウを表示する場合は TRUEウィンドウを非表示には FALSE です。
+*ブスライドアウト*<br/>
+[in]ペインを表示する場合は TRUE。FALSE を指定すると、ウィンドウが非表示になります。
 
-*bUseTimer*<br/>
-[in]表示または隠す効果でウィンドウを非表示にする場合は TRUEまたは、ウィンドウをすぐに非表示には FALSE です。
+*タイマーを使用します。*<br/>
+[in]自動非表示効果を使用してペインを表示または非表示にするには TRUE を指定します。FALSE を指定すると、すぐにペインの表示と非表示を切り替えます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、自動非表示モードになっているウィンドウをアニメーション化するには、このメソッドを呼び出します。
+フレームワークは、自動非表示モードのペインをアニメーション化するために、このメソッドを呼び出します。
 
-このメソッドを使用して、`CDockablePane::m_nSlideDefaultTimeOut`スライド効果のタイムアウトを決定する値。 タイムアウトの既定値は 1 です。 自動的に隠すアルゴリズムをカスタマイズする場合は、タイムアウトを変更するには、このメンバーを変更します。
+このメソッドは、`CDockablePane::m_nSlideDefaultTimeOut`この値を使用して、スライド効果のタイムアウトを決定します。 タイムアウトの既定値は 1 です。 自動非表示アルゴリズムをカスタマイズする場合は、このメンバーを変更してタイムアウトを変更します。
 
-##  <a name="toggleautohide"></a>  CDockablePane::ToggleAutoHide
+## <a name="cdockablepanetoggleautohide"></a><a name="toggleautohide"></a>CDockable ペイン::トグルオートハイド
 
-表示されている間、常にペインと自動非表示モードを切り替えます。
+ウィンドウの表示モードと自動非表示モードを切り替えます。
 
 ```
 virtual void ToggleAutoHide();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを呼び出すことによってウィンドウの自動非表示モードを切り替えます[CDockablePane::SetAutoHideMode](#setautohidemode)します。
+このメソッドは[、CDockablePane::SetAutoHideMode](#setautohidemode)を呼び出すことによって、ペインの自動非表示モードを切り替えます。
 
-##  <a name="undockpane"></a>  CDockablePane::UndockPane
+## <a name="cdockablepaneundockpane"></a><a name="undockpane"></a>CDockable ペイン::ドッキング解除ペイン
 
-メイン フレーム ウィンドウまたはミニフレーム ウィンドウ コンテナーのいずれかから、ウィンドウのドッキングを解除します。
+メイン フレーム ウィンドウまたはミニフレーム ウィンドウ コンテナーからペインをドッキング解除します。
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1671,19 +1671,19 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDelay*<br/>
-[in]遅延する場合は True、ドッキング レイアウトを計算します。ドッキング レイアウトをすぐに再計算する場合は FALSE。
+*bディレイ*<br/>
+[in]ドッキング レイアウトの計算を遅延する場合は TRUE。直ちにドッキング レイアウトを再計算する場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メイン フレーム ウィンドウまたはマルチ ミニフレーム ウィンドウ コンテナー (で他のウィンドウを持つ単一のミニフレーム ウィンドウがフローティング ウィンドウ) から、ウィンドウのドッキングを解除するには、このメソッドを呼び出します。
+メイン フレーム ウィンドウまたはマルチミニフレーム ウィンドウ コンテナー (他のペインと共に単一のミニフレーム ウィンドウにフローティングされているペイン) からペインのドッキングを解除します。
 
-実行されていない、外部の操作を実行する前に、ペインをドッキング解除する必要があります、 [CDockingManager](../../mfc/reference/cdockingmanager-class.md)します。 たとえばに移動するプログラムで 1 つの場所から別のウィンドウのドッキングを解除する必要があります。
+[CDockingManager](../../mfc/reference/cdockingmanager-class.md)で実行されない外部操作を実行する前に、ペインのドッキングを解除する必要があります。 たとえば、プログラムによって別の場所に移動するには、ペインのドッキングを解除する必要があります。
 
-フレームワークは破棄される前に自動的にウィンドウをドッキング解除します。
+フレームワークは、破棄される前にペインを自動的にドッキング解除します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CPane クラス](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

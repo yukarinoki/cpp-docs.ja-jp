@@ -4,17 +4,16 @@ description: Microsoft C/C++コンパイラ/errorreport コマンドラインオ
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
-- /errorreport
 helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257651"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075078"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (内部コンパイラ エラーの報告)
 
@@ -25,12 +24,11 @@ ms.locfileid: "77257651"
 
 > **/errorreport:** \[**none** \| **prompt** \| **queue** \| **send** ]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 内部コンパイラエラー (ICE) は、コンパイラがソースコードファイルを処理できない場合に発生します。 ICE が発生した場合、コンパイラは出力ファイルを生成しないか、コードの修正に使用できる有用な診断を生成しません。
 
 **/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 レポートが Windows エラー報告によって有効になっている場合、コンパイラは内部エラーのレポートを Microsoft に自動的に送信します。 Windows エラー報告で無効になっている場合、レポートは送信されません。
-
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 

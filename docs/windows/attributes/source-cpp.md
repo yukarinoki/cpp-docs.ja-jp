@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514028"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166225"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "69514028"
 
 ### <a name="parameters"></a>パラメーター
 
-*interfaces*<br/>
+*インターフェイス*<br/>
 ソース属性をクラスに適用するときに指定する1つ以上のインターフェイス。 Source がプロパティまたはメソッドに適用される場合、このパラメーターは使用されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Source** C++属性には、 [source](/windows/win32/Midl/source) MIDL 属性と同じ機能があります。
 
@@ -76,12 +76,12 @@ class NN : public b
 |-|-|
 |**対象**|**クラス**、**構造体**、**インターフェイス**|
 |**反復可能**|いいえ|
-|**必要な属性**|`coclass`(クラスまたは構造体に適用される場合)|
+|**必要な属性**|`coclass` (クラスまたは構造体に適用される場合)|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

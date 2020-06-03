@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282937"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209847"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>動的アクセサーのオーバーライド
 
-など、動的なアクセサーを使用すると`CDynamicAccessor`のコマンドは、`Open`メソッドを自動的に開かれた行セットの列情報を基にアクセサーを作成します。 列の連結方法だけを制御する動的なアクセサーをオーバーライドできます。
+`CDynamicAccessor`などの動的アクセサーを使用すると、コマンド `Open` メソッドによって、開いている行セットの列情報に基づいて、アクセサーが自動的に作成されます。 動的アクセサーをオーバーライドして、列のバインド方法を厳密に制御することができます。
 
-動的アクセサーをオーバーライドするには、渡す**false**最後のパラメーターとして、`CCommand::Open`メソッド。 これにより、`Open`から自動的にアクセサーを作成します。 呼び出して`GetColumnInfo`を呼び出すと`AddBindEntry`列ごとにバインドします。 次のコードでは、これを行う方法を示します。
+動的アクセサーをオーバーライドするには、`CCommand::Open` メソッドに最後のパラメーターとして**false**を渡します。 これにより、`Open` によってアクセサーが自動的に作成されなくなります。 その後、`GetColumnInfo` を呼び出して、バインドする各列に対して `AddBindEntry` を呼び出すことができます。 次のコードは、その方法を示しています。
 
 ```cpp
 USES_CONVERSION;
@@ -69,6 +69,6 @@ while (product.MoveNext() == S_OK)
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [アクセサーの使用](../../data/oledb/using-accessors.md)

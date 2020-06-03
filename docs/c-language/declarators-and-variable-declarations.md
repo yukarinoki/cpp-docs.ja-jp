@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234531"
 ---
 # <a name="declarators-and-variable-declarations"></a>宣言子と変数宣言
 
@@ -49,7 +49,7 @@ __declspec(thread) char *var;
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *declarator*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *declarator*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**
@@ -65,7 +65,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 > *declarator* を参照する構文については、「[宣言の概要](../c-language/overview-of-declarations.md)」または「[C 言語の構文概要](../c-language/c-language-syntax-summary.md)」にある *declaration* の構文を参照してください。
 
-宣言子が修飾されていない識別子で構成される場合、宣言される項目は基本型を持ちます。 アスタリスク (<strong>\*</strong>) が識別子の左側にある場合、型はポインター型に変更されます。 識別子の後ろに角かっこ (**[ ]**) が続く場合、型は配列型に変更されます。 識別子の後ろにかっこが続く場合、型は関数型に変更されます。 宣言内での優先順位の解釈の詳細については、「[Interpreting More Complex Declarators](../c-language/interpreting-more-complex-declarators.md)」 (より複雑な宣言子の解釈) を参照してください。
+宣言子が修飾されていない識別子で構成される場合、宣言される項目は基本型を持ちます。 アスタリスク (<strong>\*</strong>) が識別子の左側にある場合、型はポインター型に変更されます。 識別子の後ろに角かっこ ( **[ ]** ) が続く場合、型は配列型に変更されます。 識別子の後ろにかっこが続く場合、型は関数型に変更されます。 宣言内での優先順位の解釈の詳細については、「[Interpreting More Complex Declarators](../c-language/interpreting-more-complex-declarators.md)」 (より複雑な宣言子の解釈) を参照してください。
 
 各宣言は 1 つ以上の識別子を宣言します。 宣言子で完全な宣言をするには、型指定子を含める必要があります。 型指定子は、配列型の要素の型、ポインター型によってアドレス指定されるオブジェクトの型、または関数の戻り値の型を示します。
 

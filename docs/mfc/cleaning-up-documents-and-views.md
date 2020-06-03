@@ -6,21 +6,21 @@ helpviewer_keywords:
 - documents [MFC], cleaning up
 - documents [MFC], closing
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
-ms.openlocfilehash: 940c768823d26950d9710fb1d1a52e6a1955fead
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06ff60a2cf6245f64e80d899c13a8444558fcf0b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374621"
 ---
 # <a name="cleaning-up-documents-and-views"></a>ドキュメントとビューの後処理
 
-フレームワークが呼び出す最初、ドキュメントが閉じている間、その[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)メンバー関数。 ドキュメントの操作の実行中にヒープにメモリを割り当てた場合`DeleteContents`割り当てを解除することをお勧めします。
+ドキュメントが閉じるときに、フレームワークは最初に[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)メンバー関数を呼び出します。 ドキュメントの操作中にヒープにメモリを割り当てた場合は、`DeleteContents`メモリの割り当てを解除する最適な場所です。
 
 > [!NOTE]
->  ドキュメント データをドキュメントのデストラクターで割り当ては解除する必要があります。 SDI アプリケーションの場合は、ドキュメント オブジェクトを再利用する可能性があります。
+> ドキュメントのデストラクターのドキュメント データの割り当てを解除しないでください。 SDI アプリケーションの場合、ドキュメント オブジェクトが再利用される場合があります。
 
-ヒープに割り当てられたメモリを解放するビューのデストラクターをオーバーライドできます。
+ビューのデストラクタをオーバーライドして、ヒープに割り当てたメモリの割り当てを解除できます。
 
 ## <a name="see-also"></a>関連項目
 

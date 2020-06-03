@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RC1002
 ms.assetid: b43dfece-0dc3-4d0b-9d8f-509699b9ae80
-ms.openlocfilehash: 0804e7db92355c023e4f9f1dbef8d9194caa3718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e6069a9c0901071d366a6deafeab7c064c18efc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173193"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>リソース コンパイラの致命的なエラー RC1002
 
-ヒープ スペースがありません。
+ヒープ領域が不足しています
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>修復の可能性がある解決策
 
-1. Windows のスワップ ファイルの領域を増やします。 スワップ ファイルの領域を増やす方法の詳細については、Windows のヘルプ内の仮想メモリを参照してください。
+1. Windows スワップファイルの領域を増やします。 スワップファイルの領域を増やす方法の詳細については、Windows ヘルプの「仮想メモリ」を参照してください。
 
-1. 小さなファイルに、現在のファイルに分割し、個別にコンパイルします。
+1. 現在のファイルを小さなファイルに分割し、個別にコンパイルします。
 
-1. その他のプログラムまたはシステムで実行されているドライバーを削除します。
+1. システムで実行されている他のプログラムまたはドライバーを削除します。

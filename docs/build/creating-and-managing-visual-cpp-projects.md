@@ -8,26 +8,25 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
-ms.translationtype: MT
+ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624479"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078690"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio のプロジェクト - C++
 
-
-"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブビルドシステムであり、一般に、Windows 固有のプログラムに使用する最適なビルドシステムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォームプロジェクト、またはオープンソースライブラリを使用するプロジェクトでは、Visual Studio 2017 以降の[Visual Studio で CMake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、 [Microsoft C++の移植とアップグレード](../porting/visual-cpp-porting-and-upgrading-guide.md)に関するガイドを参照してください。
+"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブ ビルド システムであり、通常は Windows 固有のプログラムで使用するための最適なビルド システムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォーム プロジェクト、またはオープンソース ライブラリを使用するプロジェクトでは、Visual Studio 2017 以降で [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、「[Microsoft C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)」を参照してください。
 
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
 ::: moniker range="vs-2019"
 
-C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、 **[言語]** を C++ に設定します。 結果の一覧に表示されるプロジェクト テンプレートのリストは、 **[プラットフォーム]** または **[プロジェクトの種類]** を設定し、検索ボックスにキーワードを入力することで、フィルター処理できます。 
+C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、 **[言語]** を C++ に設定します。 結果の一覧に表示されるプロジェクト テンプレートのリストは、 **[プラットフォーム]** または **[プロジェクトの種類]** を設定し、検索ボックスにキーワードを入力することで、フィルター処理できます。
 
-   ![Visual Studio 2019 プロジェクトテンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
+   ![Visual Studio 2019 プロジェクト テンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
 
 ::: moniker-end
 
@@ -35,11 +34,11 @@ C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規�
 
 C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、左側のウィンドウで Visual C++ を選択します。 中央のウィンドウに、プロジェクト テンプレートの一覧が表示されます。
 
-   ![プロジェクトテンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
+   ![プロジェクト テンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
 
 ::: moniker-end
 
-Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法: プロジェクトテンプレートを作成](/visualstudio/ide/how-to-create-project-templates)する」を参照してください。
+Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、[プロジェクト テンプレートを作成する](/visualstudio/ide/how-to-create-project-templates)」をご覧ください。
 
 作成したプロジェクトは、[[ソリューション エクスプローラー]](/visualstudio/ide/solutions-and-projects-in-visual-studio) ウィンドウに表示されます。
 
@@ -53,7 +52,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 ## <a name="add-third-party-libraries"></a>サード パーティ製のライブラリを追加する
 
-サードパーティ製のライブラリを追加するには、[vcpkg](vcpkg.md) パッケージ マネージャーを使います。 Visual Studio プロジェクトからライブラリを参照するときに、Visual Studio 統合手順を実行して、そのライブラリへのパスを設定します。 
+サードパーティ製のライブラリを追加するには、[vcpkg](vcpkg.md) パッケージ マネージャーを使います。 Visual Studio プロジェクトからライブラリを参照するときに、Visual Studio 統合手順を実行して、そのライブラリへのパスを設定します。
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>コンパイラ オプションおよび他のビルド プロパティを設定する
 
@@ -63,7 +62,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 新しいプロジェクトをコンパイルして実行するには、**F5** キーを押すか、またはメイン ツールバーの緑色の矢印が付いた "*デバッグ ドロップダウン*" をクリックします。 "*構成ドロップダウン*" では、"*デバッグ*" ビルドまたは "*リリース*" ビルド (または他のカスタム構成) を実行するかどうかを選択します。
 
-新しいプロジェクトがエラーなしでコンパイルされます。 独自のコードを追加すると、エラーが発生したり、警告がトリガーされたりする場合があります。 エラーがあるとビルドは完了しませんが、警告では完了します。 プロジェクトをビルドするとき、すべてのエラーと警告は出力ウィンドウとエラー一覧の両方に表示されます。 
+新しいプロジェクトがエラーなしでコンパイルされます。 独自のコードを追加すると、エラーが発生したり、警告がトリガーされたりする場合があります。 エラーがあるとビルドは完了しませんが、警告では完了します。 プロジェクトをビルドするとき、すべてのエラーと警告は出力ウィンドウとエラー一覧の両方に表示されます。
 
    ![出力ウィンドウとエラー一覧](../overview/media/vs2017-output-error-list.png)
 
@@ -76,7 +75,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 [ビルド時にライブラリとコンポーネントを参照する](adding-references-in-visual-cpp-projects.md)<br/>
 プロジェクトにライブラリ、DLL、COM、.NET コンポーネントを組み込む方法。
- 
+
 [プロジェクト出力ファイルを編成する](how-to-organize-project-output-files-for-builds.md)<br/>
 ビルド プロセスで作成される実行可能ファイルの場所をカスタマイズする方法。
 
@@ -89,4 +88,4 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 ## <a name="see-also"></a>関連項目
 
 [プロジェクトおよびビルド システム](projects-and-build-systems-cpp.md)<br>
-[Microsoft C++移植およびアップグレードガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Visual C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)

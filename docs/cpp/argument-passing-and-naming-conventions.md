@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e621db339102f1f40030bc7826d383d306a39be8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190769"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 
 **Microsoft 固有の仕様**
 
-MicrosoftC++コンパイラでは、引数を渡すための規則を指定し、関数と呼び出し元の値を返すことができます。 サポートされるすべてのプラットフォームですべての規約がサポートされるわけではありません。また、一部の規約は、プラットフォーム固有の実装を使用します。 ほとんどの場合、特定のプラットフォームでサポートされていない規約を指定するキーワードやコンパイラ スイッチは無視され、プラットフォームの既定の規約が使用されます。
+Microsoft C++コンパイラでは、関数と呼び出し元の間で引数と戻り値を渡すための規則を指定できます。 サポートされるすべてのプラットフォームですべての規約がサポートされるわけではありません。また、一部の規約は、プラットフォーム固有の実装を使用します。 ほとんどの場合、特定のプラットフォームでサポートされていない規約を指定するキーワードやコンパイラ スイッチは無視され、プラットフォームの既定の規約が使用されます。
 
 x86 プラットフォームでは、すべての引数は渡されたときに 32 ビットに拡大変換されます。 EDX:EAX レジスタ ペアに返される 8 バイトの構造体を除き、戻り値も 32 ビットに拡張され、EAX レジスタに返されます。 より大きな構造体は、非表示の戻り値の構造体へのポインターとして EAX レジスタに返されます。 パラメーターは、スタックに右から左へプッシュされます。 POD ではない構造体はレジスタ内では返されません。
 
@@ -33,25 +33,25 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 > [!NOTE]
 > 構造体、共用体、またはクラスが値渡しで関数から戻される場合は、型のすべての定義が同じである必要があります。そうでないと、実行時にプログラムが失敗することがあります。
 
-独自の関数プロローグおよびエピローグ コードを定義する方法については、次を参照してください。 [Naked 関数の呼び出し](../cpp/naked-function-calls.md)します。
+独自の関数プロローグとエピローグコードを定義する方法の詳細については、「[生関数の呼び出し](../cpp/naked-function-calls.md)」を参照してください。
 
-ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、次を参照してください。[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)します。
+X64 プラットフォームを対象とするコードの既定の呼び出し規約の詳細については、「 [X64 呼び出し規則](../build/x64-calling-convention.md)」を参照してください。 ARM プラットフォームを対象とするコードでの呼び出し規約の問題の詳細については、「 [ C++ Visual ARM の移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)」を参照してください。
 
-次の呼び出し規則は Visual C/C++ コンパイラでサポートされます。
+次の呼び出し規約は Visual C/C++ コンパイラでサポートされます。
 
-|キーワード|スタック クリーンアップ|パラメーター渡し|
+|Keyword|スタック クリーンアップ|パラメーター渡し|
 |-------------|-------------------|-----------------------|
 |[__cdecl](../cpp/cdecl.md)|Caller|パラメーターをスタックに逆の順序で (右から左に) プッシュする|
-|[__clrcall](../cpp/clrcall.md)|N/A|CLR 式スタックに順に (左から右に) パラメーターを読み込む|
+|[__clrcall](../cpp/clrcall.md)|該当なし|CLR 式スタックに順に (左から右に) パラメーターを読み込む|
 |[__stdcall](../cpp/stdcall.md)|Callee|パラメーターをスタックに逆の順序で (右から左に) プッシュする|
 |[__fastcall](../cpp/fastcall.md)|Callee|レジスタに格納されてから、スタックにプッシュされる|
-|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**this**ECX に格納されているポインター|
+|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされました。**この**ポインターは ECX に格納されます。|
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|
 
-関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。
+関連情報については、「廃止された[呼び出し規約](../cpp/obsolete-calling-conventions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [呼び出し規約](../cpp/calling-conventions.md)

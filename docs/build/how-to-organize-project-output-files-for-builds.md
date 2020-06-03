@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: MT
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220666"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328524"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>方法: ビルドのプロジェクト出力ファイルを編成する
 
@@ -70,4 +70,4 @@ ms.locfileid: "65220666"
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio での C++ プロジェクトの種類](reference/visual-cpp-project-types.md)
+[Visual Studio の C++ プロジェクトの種類](reference/visual-cpp-project-types.md)

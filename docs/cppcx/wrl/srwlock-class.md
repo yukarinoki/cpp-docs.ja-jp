@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: 079f1abe652d8c1610a084f5e1158cc5798d61c4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e305ad54e30455ce7c25f356c454791da0783591
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498288"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377275"
 ---
 # <a name="srwlock-class"></a>SRWLock クラス
 
-スリムリーダー/ライターロックを表します。
+スリム リーダー/ライター ロックを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,9 +38,9 @@ ms.locfileid: "69498288"
 class SRWLock;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-スリムリーダー/ライターロックは、スレッド間のアクセスをオブジェクトまたはリソースに同期するために使用されます。 詳細については、「[同期関数](/windows/win32/Sync/synchronization-functions)」を参照してください。
+スリム リーダー/ライター ロックは、オブジェクトまたはリソースへのスレッド間のアクセスを同期するために使用されます。 詳細については、「[同期関数](/windows/win32/Sync/synchronization-functions)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -48,30 +48,30 @@ class SRWLock;
 
 名前                | 説明
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | 排他モードで`SRWLock`取得されるオブジェクトのシノニム。
-`SyncLockShared`    | 共有モードで`SRWLock`取得されるオブジェクトのシノニム。
+`SyncLockExclusive` | 排他モード`SRWLock`で取得されたオブジェクトのシノニム。
+`SyncLockShared`    | 共有モードで`SRWLock`取得されたオブジェクトのシノニム。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 名前                                     | 説明
 ---------------------------------------- | --------------------------------------------------
-[SRWLock:: SRWLock](#srwlock-constructor) | `SRWLock` クラスの新しいインスタンスを初期化します。
-[SRWLock:: ~ SRWLock](#tilde-srwlock)      | `SRWLock`クラスのインスタンスを初期化解除します。
+[SRWロック::SRWロック](#srwlock-constructor) | `SRWLock` クラスの新しいインスタンスを初期化します。
+[SRWロック::~SRWロック](#tilde-srwlock)      | クラスのインスタンスを初期化解除します`SRWLock`。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                           | 説明
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
-[SRWLock:: LockExclusive](#lockexclusive)       | 排他モード`SRWLock`でオブジェクトを取得します。
-[SRWLock:: LockShared](#lockshared)             | 共有モード`SRWLock`でオブジェクトを取得します。
-[SRWLock:: TryLockExclusive](#trylockexclusive) | 現在のオブジェクトまた`SRWLock`は指定された`SRWLock`オブジェクトに対して、排他モードでのオブジェクトの取得を試みます。
-[SRWLock:: TryLockShared](#trylockshared)       | 現在のオブジェクトまた`SRWLock`は指定された`SRWLock`オブジェクトについて、共有モードのオブジェクトの取得を試みます。
+[SRWロック::ロックエクスクルーシブ](#lockexclusive)       | 排他モード`SRWLock`でオブジェクトを取得します。
+[SRWロック::ロックシェアード](#lockshared)             | 共有モードで`SRWLock`オブジェクトを取得します。
+[SRWロック::トリロックエクスクルーシブ](#trylockexclusive) | 現在のオブジェクトまたは指定`SRWLock`した`SRWLock`オブジェクトの排他モードでオブジェクトを取得しようとします。
+[SRWロック::トライロックシェア](#trylockshared)       | 現在のオブジェクトまたは指定`SRWLock`した`SRWLock`オブジェクトの共有モードでオブジェクトを取得しようとします。
 
-### <a name="protected-data-member"></a>保護されるデータメンバー
+### <a name="protected-data-member"></a>保護されたデータ メンバー
 
 名前                                      | 説明
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock:: SRWLock_](#srwlock-data-member) | 現在`SRWLock`のオブジェクトの基になるロック変数を格納します。
+[SRWロック::SRWLock_](#srwlock-data-member) | 現在`SRWLock`のオブジェクトの基になるロック変数を格納します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -79,19 +79,19 @@ class SRWLock;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers .h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft:: WRL:: Wrapper
+**名前空間:** マイクロソフト::WRL::ラッパー
 
-## <a name="tilde-srwlock"></a>SRWLock:: ~ SRWLock
+## <a name="srwlocksrwlock"></a><a name="tilde-srwlock"></a>SRWロック::~SRWロック
 
-`SRWLock`クラスのインスタンスを初期化解除します。
+クラスのインスタンスを初期化解除します`SRWLock`。
 
 ```cpp
 ~SRWLock();
 ```
 
-## <a name="lockexclusive"></a>SRWLock:: LockExclusive
+## <a name="srwlocklockexclusive"></a><a name="lockexclusive"></a>SRWロック::ロックエクスクルーシブ
 
 排他モード`SRWLock`でオブジェクトを取得します。
 
@@ -105,16 +105,16 @@ static SyncLockExclusive LockExclusive(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `SRWLock`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-排他モードのオブジェクト。 `SRWLock`
+排`SRWLock`他モードのオブジェクト。
 
-## <a name="lockshared"></a>SRWLock:: LockShared
+## <a name="srwlocklockshared"></a><a name="lockshared"></a>SRWロック::ロックシェアード
 
-共有モード`SRWLock`でオブジェクトを取得します。
+共有モードで`SRWLock`オブジェクトを取得します。
 
 ```cpp
 SyncLockShared LockShared();
@@ -126,14 +126,14 @@ static SyncLockShared LockShared(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `SRWLock`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-共有モードのオブジェクトです。 `SRWLock`
+共有`SRWLock`モードのオブジェクト。
 
-## <a name="srwlock-constructor"></a>SRWLock:: SRWLock
+## <a name="srwlocksrwlock"></a><a name="srwlock-constructor"></a>SRWロック::SRWロック
 
 `SRWLock` クラスの新しいインスタンスを初期化します。
 
@@ -141,7 +141,7 @@ static SyncLockShared LockShared(
 SRWLock();
 ```
 
-## <a name="srwlock-data-member"></a>SRWLock:: SRWLock_
+## <a name="srwlocksrwlock_"></a><a name="srwlock-data-member"></a>SRWロック::SRWLock_
 
 現在`SRWLock`のオブジェクトの基になるロック変数を格納します。
 
@@ -149,9 +149,9 @@ SRWLock();
 SRWLOCK SRWLock_;
 ```
 
-## <a name="trylockexclusive"></a>SRWLock:: TryLockExclusive
+## <a name="srwlocktrylockexclusive"></a><a name="trylockexclusive"></a>SRWロック::トリロックエクスクルーシブ
 
-現在のオブジェクトまた`SRWLock`は指定された`SRWLock`オブジェクトに対して、排他モードでのオブジェクトの取得を試みます。 呼び出しが成功すると、呼び出し元のスレッドはロックの所有権を取得します。
+現在のオブジェクトまたは指定`SRWLock`した`SRWLock`オブジェクトの排他モードでオブジェクトを取得しようとします。 呼び出しが成功すると、呼び出し元のスレッドはロックの所有権を取得します。
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -163,16 +163,16 @@ static SyncLockExclusive TryLockExclusive(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `SRWLock`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合`SRWLock` 、排他モードのオブジェクトと呼び出し元のスレッドは、ロックの所有権を取得します。 それ以外の`SRWLock`場合は、状態が無効であるオブジェクト。
+成功した`SRWLock`場合、排他モードのオブジェクトと呼び出し元スレッドはロックの所有権を取得します。 それ以外の`SRWLock`場合は、状態が無効なオブジェクト。
 
-## <a name="trylockshared"></a>SRWLock:: TryLockShared
+## <a name="srwlocktrylockshared"></a><a name="trylockshared"></a>SRWロック::トライロックシェア
 
-現在のオブジェクトまた`SRWLock`は指定された`SRWLock`オブジェクトについて、共有モードのオブジェクトの取得を試みます。
+現在のオブジェクトまたは指定`SRWLock`した`SRWLock`オブジェクトの共有モードでオブジェクトを取得しようとします。
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -183,9 +183,9 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `SRWLock`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功する`SRWLock`と、共有モードのオブジェクトと呼び出し元のスレッドが、ロックの所有権を取得します。 それ以外の`SRWLock`場合は、状態が無効であるオブジェクト。
+成功した場合、`SRWLock`共有モードのオブジェクトと呼び出し元スレッドがロックの所有権を取得します。 それ以外の`SRWLock`場合は、状態が無効なオブジェクト。

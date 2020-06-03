@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170190"
 ---
 # <a name="__max"></a>__max
 
@@ -50,13 +50,13 @@ ms.locfileid: "70952751"
 
 ## <a name="return-value"></a>戻り値
 
-**__ max**は、その引数の大部分を返します。
+**__max**は、その引数の大部分を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**__ Max**マクロは、2つの値を比較し、大きい方の値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
+**__Max**マクロは、2つの値を比較し、大きい方の値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
 
-返される引数はマクロによって2回評価されます。 このため、引数が評価時に値を変更する式 (など`*p++`) の場合、予期しない結果になる可能性があります。
+返される引数はマクロによって2回評価されます。 このため、引数が評価時に値を変更する式 (`*p++`など) の場合、予期しない結果が発生する可能性があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -68,7 +68,7 @@ ms.locfileid: "70952751"
 
 詳細については、「[__min](min.md)」の例をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

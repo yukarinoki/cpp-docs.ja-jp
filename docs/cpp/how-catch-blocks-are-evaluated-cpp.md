@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 027dc87923a588ea891dbf6dd835e2baba75a1cb
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 11804c48631659b84006abb824837efea3902416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188638"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch ブロックの評価方法 (C++)
 
@@ -39,7 +39,7 @@ C++ では任意の型の例外をスローすることができますが、一�
 
 - スローされたポインター オブジェクトが標準的なポインター変換規則によって変換できるポインターを受け取るハンドラー。
 
-**Catch**ハンドラーが表示される順序は重要です。これは、特定の**try**ブロックのハンドラーが外観の順序で検証されるためです。 たとえば、派生クラスのハンドラーの前に基底クラスのハンドラーを配置するとエラーになります。 一致する**catch**ハンドラーが見つかると、後続のハンドラーは検証されません。 そのため、省略記号の**catch**ハンドラーは**try**ブロックの最後のハンドラーである必要があります。 例 :
+**Catch**ハンドラーが表示される順序は重要です。これは、特定の**try**ブロックのハンドラーが外観の順序で検証されるためです。 たとえば、派生クラスのハンドラーの前に基底クラスのハンドラーを配置するとエラーになります。 一致する**catch**ハンドラーが見つかると、後続のハンドラーは検証されません。 そのため、省略記号の**catch**ハンドラーは**try**ブロックの最後のハンドラーである必要があります。 次に例を示します。
 
 ```cpp
 // ...

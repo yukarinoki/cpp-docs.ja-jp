@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 1831a816d0967c2ca53f941128639ea368c1b727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370938"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory クラス
 
@@ -34,13 +34,13 @@ class SimpleActivationFactory : public ActivationFactory<>;
 ### <a name="parameters"></a>パラメーター
 
 *ベース*<br/>
-基本クラスです。
+基本クラス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-基底クラスには、既定のコンス トラクターを提供する必要があります。
+基本クラスは、既定のコンストラクターを提供する必要があります。
 
-次のコード例で SimpleActivationFactory を使用する方法を示します、 [ActivatableClassWithFactoryEx](activatableclass-macros.md)マクロ。
+次のコード例は、アクティブ化[クラスウィズファクトリーEx](activatableclass-macros.md)マクロで SimpleActivationFactory を使用する方法を示しています。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -51,8 +51,8 @@ class SimpleActivationFactory : public ActivationFactory<>;
 |名前|説明|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance メソッド](#activateinstance)|指定したインターフェイスのインスタンスを作成します。|
-|[SimpleActivationFactory::GetRuntimeClassName メソッド](#getruntimeclassname)|指定されたクラスのインスタンスのランタイム クラス名を取得、*ベース*クラス テンプレート パラメーター。|
-|[SimpleActivationFactory::GetTrustLevel メソッド](#gettrustlevel)|指定されたクラスのインスタンスの信頼レベルを取得、*ベース*クラス テンプレート パラメーター。|
+|[SimpleActivationFactory::GetRuntimeClassName メソッド](#getruntimeclassname)|*Base*クラス テンプレート パラメーターで指定されたクラスのインスタンスのランタイム クラス名を取得します。|
+|[SimpleActivationFactory::GetTrustLevel メソッド](#gettrustlevel)|*Base*クラス テンプレート パラメーターで指定されたクラスのインスタンスの信頼レベルを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,11 +80,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** モジュール.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="activateinstance"></a>Simpleactivationfactory::activateinstance メソッド
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>メソッドをアクティブにします。
 
 指定したインターフェイスのインスタンスを作成します。
 
@@ -96,20 +96,20 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>パラメーター
 
-*ppvObject*<br/>
-ときにこの操作が完了したらで指定されたオブジェクトのインスタンスへのポインター、`Base`クラス テンプレート パラメーター。
+*オブジェクト*<br/>
+この操作が完了すると、クラス テンプレート パラメーターで指定されたオブジェクトの`Base`インスタンスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合`__WRL_STRICT__`が定義されている、アサート エラーが生成クラス テンプレート パラメーターで指定された基本クラスから派生していない場合[RuntimeClass](runtimeclass-class.md)、WinRt または WinRtClassicComMix で構成されていないまたは[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値。
+定義`__WRL_STRICT__`されている場合、クラス テンプレート パラメーターで指定された基本クラスが[RuntimeClass](runtimeclass-class.md)から派生していない場合、または WinRt または WinRtClassicComMix[ランタイムクラスタイプ](runtimeclasstype-enumeration.md)の列挙値で構成されていない場合、アサート エラーが生成されます。
 
-## <a name="getruntimeclassname"></a>Simpleactivationfactory::getruntimeclassname メソッド
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>メソッドを取得します。
 
-指定されたクラスのインスタンスのランタイム クラス名を取得、`Base`クラス テンプレート パラメーター。
+クラス テンプレート パラメーターで指定されたクラスのインスタンスのランタイム`Base`クラス名を取得します。
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -119,20 +119,20 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>パラメーター
 
-*runtimeName*<br/>
-この操作の完了時、ランタイム クラス名。
+*ランタイム名*<br/>
+この操作が完了すると、ランタイム クラス名。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合`__WRL_STRICT__`は、定義されている、assert エラーが発生して、クラスが指定されている場合、`Base`クラス テンプレート パラメーターはありませんから派生した[RuntimeClass](runtimeclass-class.md)、WinRt または WinRtClassicComMixで構成されていないまたは[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値。
+定義`__WRL_STRICT__`されている場合、`Base`クラス テンプレート パラメーターで指定されたクラスが[RuntimeClass](runtimeclass-class.md)から派生していない場合、または WinRt または WinRtClassicComMix[ランタイムクラスタイプ](runtimeclasstype-enumeration.md)の列挙値で構成されていない場合、アサート エラーが生成されます。
 
-## <a name="gettrustlevel"></a>Simpleactivationfactory::gettrustlevel メソッド
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>メソッドを取得します。
 
-指定されたクラスのインスタンスの信頼レベルを取得、`Base`クラス テンプレート パラメーター。
+クラス テンプレート パラメーターで指定されたクラスのインスタンスの信頼`Base`レベルを取得します。
 
 ```cpp
 STDMETHOD(
@@ -142,9 +142,9 @@ STDMETHOD(
 
 #### <a name="parameters"></a>パラメーター
 
-*trustLvl*<br/>
-この操作が完了時は、現在のクラスのオブジェクトの信頼レベル。
+*トラストルヴル*<br/>
+この操作が完了すると、現在のクラス オブジェクトの信頼レベル。
 
 ### <a name="return-value"></a>戻り値
 
-常に s_ok を返します。
+常にS_OK。

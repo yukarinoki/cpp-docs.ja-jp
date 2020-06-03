@@ -1,9 +1,11 @@
 ---
 title: getc、getwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getwc
 - getc
+- _o_getc
+- _o_getwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955492"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919659"
 ---
 # <a name="getc-getwc"></a>getc、getwc
 
@@ -66,9 +69,9 @@ wint_t getwc(
 
 読み取られた文字を返します。 読み取りエラーまたはファイルの終端状態を示すには、 **getc**は**EOF**を返し、 **getwc**は**WEOF**を返します。 **Getc**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。 *Stream*が**NULL**の場合、 **getc**および**getwc**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF** (または**getwc**の**WEOF** ) を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各ルーチンはファイルの現在の位置から 1 文字読み取り、関連付けられたファイル ポインター (定義されている場合) をインクリメントして次の文字を指します。 ファイルは*ストリーム*に関連付けられています。
 
@@ -76,10 +79,12 @@ wint_t getwc(
 
 ルーチン固有の解説は、次のとおりです。
 
-|ルーチン|Remarks|
+|ルーチン|解説|
 |-------------|-------------|
 |**getc**|**Fgetc**と同じですが、関数およびマクロとして実装されています。|
 |**getwc**|**Getc**のワイド文字バージョン。 *ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字またはワイド文字を読み取ります。|
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,12 +94,12 @@ wint_t getwc(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
 |**getwc**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -140,7 +145,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Input was: Line one.

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213630"
 ---
 # <a name="raiseexception-function"></a>RaiseException 関数
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -29,23 +29,23 @@ inline void __declspec(noreturn)   RaiseException(
 ### <a name="parameters"></a>パラメーター
 
 *hr*<br/>
-中に発生します。 例外の例外コード失敗した操作の HRESULT。
+発生している例外の例外コード。つまり、失敗した操作の HRESULT です。
 
 *dwExceptionFlags*<br/>
-継続可能の例外 (フラグの値は 0)、または (フラグの値が 0 以外) noncontinuable の例外を示すフラグ。 既定では、例外は、継続不可能は。
+継続不可能な例外 (フラグ値がゼロ)、または継続不可能な例外 (フラグ値が0以外) を示すフラグ。 既定では、例外は継続不可能です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出し元のスレッドで例外が発生します。
+呼び出し元のスレッドで例外を発生させます。
 
-詳細については、Windows を参照してください。`RaiseException`関数。
+詳細については、「Windows `RaiseException` 関数」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** internal.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

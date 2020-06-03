@@ -1,11 +1,13 @@
 ---
 title: strspn、wcsspn、_mbsspn、_mbsspn_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspn_l
 - wcsspn
 - strspn
 - _mbsspn
+- _o__mbsspn
+- _o__mbsspn_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 8e65e466e95464dbd928ff0d80d975ce23fc180c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911101"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn、wcsspn、_mbsspn、_mbsspn_l
 
@@ -82,7 +85,7 @@ size_t _mbsspn_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる検索対象の文字列。
 
 *strCharSet*<br/>
@@ -95,13 +98,15 @@ NULL で終わる文字セット。
 
 *Strcharset*内のすべての文字で構成される*str*の部分文字列の長さを指定する整数値を返します。 *Str*が*strcharset*にない文字で始まる場合、関数は0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strspn**関数は、 *strspn*の文字セットに属さない*最初の文字*のインデックスを返します。 検索には、終端の NULL 文字は含まれません。
 
-**wcsspn**と **_mbsspn**は、ワイド文字バージョンとマルチバイト文字バージョンの**strspn**です。 **Wcsspn**の引数はワイド文字列です。これらの **_mbsspn**はマルチバイト文字列です。 **_mbsspn**は、そのパラメーターを検証します。 *Str*または*Strcharset*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbspn**は**errno**を**EINVAL**に設定し、0を返します。 **strspn**と**wcsspn**は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+**wcsspn**と **_mbsspn**は、 **strspn**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsspn**の引数はワイド文字列です。これらの **_mbsspn**はマルチバイト文字列です。 **_mbsspn**は、そのパラメーターを検証します。 *Str*または*Strcharset*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbspn** **errno**を**EINVAL**に設定し、0を返します。 **strspn**と**wcsspn**は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -112,13 +117,13 @@ NULL で終わる文字セット。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strspn**|\<string.h>|
 |**wcsspn**|\<string.h> または \<wchar.h>|
 |**_mbsspn**、 **_mbsspn_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -150,7 +155,7 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

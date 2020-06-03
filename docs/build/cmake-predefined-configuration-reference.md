@@ -4,24 +4,25 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
-ms.translationtype: MT
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624748"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323013"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 定義済みビルド構成
 
 ::: moniker range="vs-2015"
 
-CMake プロジェクトは、Visual Studio 2017 以降でサポートされています。
+CMake プロジェクトは Visual Studio 2017 以降でサポートされます。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
 CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイルに格納されます。 メイン ツールバーで [ビルド構成] ドロップダウンから **[構成の管理]** を選択すると、Visual Studio で使用できる既定の CMake 構成を示すダイアログが表示されます。
+
 - x86 デバッグ
 - x86 リリース
 - x64 デバッグ
@@ -33,8 +34,7 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 - MinGW デバッグ
 - MinGW リリース
 
-構成を選択すると、プロジェクトのルートフォルダーにある*Cmakesettings. json*ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「 [Cmakesettings reference](cmakesettings-reference.md)」を参照してください。
-
+構成を選択すると、それがプロジェクトのルート フォルダー内の *CMakeSettings.json* ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「[CMakeSettings リファレンス](cmakesettings-reference.md)」を参照してください。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 定義済みビルド構成:
 
@@ -351,6 +351,7 @@ You can use these optional settings for more control:
   ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -380,7 +381,6 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 - Clang
 
 構成を選択すると、それがプロジェクトのルート フォルダー内の CMakeSettings.json ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。
-
 
 ```json
 {
@@ -695,6 +695,7 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>関連項目
 
 [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>

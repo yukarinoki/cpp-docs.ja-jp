@@ -1,10 +1,11 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957078"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914966"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -77,11 +79,13 @@ long double fmodl(
 
 **fmod**は、 *x* / *y*の浮動小数点の剰余を返します。 *Y*の値が0.0 の場合、 **fmod**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Fmod**関数は x*y* *の* / 浮動小数点の剰余*f*を計算*します (* *x* = *i* \* *y* + *f*)。は整数で、 *f*は*x*と同じ符号を持ち、 *f*の絶対値は*y*の絶対値より小さい値です。
+**Fmod**関数*y*は x + *f**y* \* *x* /  = の浮動小数点の剰余*f* *を計算*します *。ここで*、 *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなります。
 
-C++ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fmod**は常に2つの**double**引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fmod**は常に2つの**double**引数を受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -89,7 +93,7 @@ C++ではオーバーロードが可能であるため、 **float 型**および
 |--------------|---------------------|
 |**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

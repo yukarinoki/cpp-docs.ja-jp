@@ -1,5 +1,5 @@
 ---
-title: CNotSupportedException クラス
+title: クラスをサポートしていません。
 ms.date: 11/04/2016
 f1_keywords:
 - CNotSupportedException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363194"
 ---
-# <a name="cnotsupportedexception-class"></a>CNotSupportedException クラス
+# <a name="cnotsupportedexception-class"></a>クラスをサポートしていません。
 
 サポートされていない機能を要求した結果として起こる例外を表します。
 
@@ -31,13 +31,13 @@ class CNotSupportedException : public CSimpleException
 
 |名前|説明|
 |----------|-----------------|
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|`CNotSupportedException` オブジェクトを構築します。|
+|[をサポートしていない例外::CNotSupported 例外](#cnotsupportedexception)|`CNotSupportedException` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-さらに認定には、必要なまたはことはありません。
+これ以上の資格は必要ありません。
 
-使用しての詳細については`CNotSupportedException`、記事をご覧ください[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+の使用方法`CNotSupportedException`の詳細については、「[例外処理 (MFC) 」](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -53,7 +53,7 @@ class CNotSupportedException : public CSimpleException
 
 **ヘッダー:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>をサポートしていない例外::CNotSupported 例外
 
 `CNotSupportedException` オブジェクトを構築します。
 
@@ -61,11 +61,11 @@ class CNotSupportedException : public CSimpleException
 CNotSupportedException();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このコンス トラクターを直接使用されませんではなく、グローバル関数を呼び出す[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)します。 例外の処理の詳細については、記事を参照してください。[例外処理 (mfc)](../exception-handling-in-mfc.md)します。
+このコンストラクターを直接使用するのではなく、グローバル関数[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)を呼び出してください。 例外処理の詳細については[、「MFC での例外処理」を](../exception-handling-in-mfc.md)参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CException クラス](cexception-class.md)<br/>
-[階層図](../hierarchy-chart.md)
+[クラスの例外](cexception-class.md)<br/>
+[階層グラフ](../hierarchy-chart.md)

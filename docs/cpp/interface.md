@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222081"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178212"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Microsoft 固有の仕様**
 
-MicrosoftC++インターフェイスは、次のように定義できます。
+Microsoft C++インターフェイスは、次のように定義できます。
 
 - 0 個以上の基本インターフェイスから継承できます。
 
@@ -37,9 +37,9 @@ MicrosoftC++インターフェイスは、次のように定義できます。
 modifier __interface interface-name {interface-definition};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-A C++ [クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)これらの規則を実装できますが、 **_ _interface**それらを適用します。
+これらC++の規則で[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)を実装することもできますが、 **__interface**適用されます。
 
 次にインターフェイスの定義例を示します。
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)します。
+マネージインターフェイスの詳細については、「[インターフェイスクラス](../extensions/interface-class-cpp-component-extensions.md)」を参照してください。
 
 `CommitX` 関数と `get_X` 関数が純粋仮想関数であることを明示的に示す必要がないことに注意してください。 最初の関数の同等の宣言は次のとおりです。
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**_ _interface**意味、 [novtable](../cpp/novtable.md) **_ _declspec**修飾子。
+**__interface**は、 [novtable](../cpp/novtable.md) **__declspec**修飾子を意味します。
 
 ## <a name="example"></a>例
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [インターフェイス属性](../windows/attributes/interface-attributes.md)

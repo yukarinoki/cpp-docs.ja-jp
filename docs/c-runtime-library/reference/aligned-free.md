@@ -1,8 +1,9 @@
 ---
 title: _aligned_free
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_free
+- _o__aligned_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 44556d3f044a567f4903ef14a4b2a9b353af02ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d296600da4db2b97479de95cfc1f8c41d0e50708
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943971"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915951"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -50,15 +52,17 @@ void _aligned_free (
 *memblock*<br/>
 `_aligned_malloc` または `_aligned_offset_malloc` 関数に返されたメモリ ブロックへのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_aligned_free**はと`__declspec(noalias)`マークされています。つまり、関数はグローバル変数を変更しないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
 この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 *Memblock*が NULL ポインターの場合、この関数は単にアクションを実行しません。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_free**|\<malloc.h>|
 
@@ -68,4 +72,4 @@ void _aligned_free (
 
 ## <a name="see-also"></a>関連項目
 
-[データの整列](../../c-runtime-library/data-alignment.md)
+[データの配置](../../c-runtime-library/data-alignment.md)

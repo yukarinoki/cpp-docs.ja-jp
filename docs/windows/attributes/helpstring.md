@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166966"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -28,7 +28,7 @@ ms.locfileid: "69490870"
 *string*<br/>
 ヘルプ文字列のテキスト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Helpstring** C++属性には、 [helpstring](/windows/win32/Midl/helpstring) MIDL 属性と同じ機能があります。
 
@@ -49,7 +49,7 @@ ms.locfileid: "69490870"
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

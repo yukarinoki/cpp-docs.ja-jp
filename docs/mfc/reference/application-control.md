@@ -4,35 +4,35 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752858"
 ---
 # <a name="application-control"></a>アプリケーションの制御
 
-OLE には、アプリケーションとそれらのオブジェクトを十分に制御が必要です。 OLE システム Dll を起動し、アプリケーションを自動的にリリースし、運用環境と、オブジェクトの変更を調整、具合できる必要があります。 このトピック内の関数は、その要件を満たしています。 、OLE システム Dll によって呼び出されるだけでなくこれらの関数をアプリケーションにもから呼び出すことがありますする必要があります。
+OLE では、アプリケーションとそのオブジェクトを大幅に制御する必要があります。 OLE システム DLL は、アプリケーションを自動的に起動および解放し、オブジェクトの生成や変更を調整できる必要があります。 このトピックの機能は、これらの要件を満たしています。 OLE システム DLL によって呼び出されるだけでなく、これらの関数もアプリケーションから呼び出す必要があります。
 
 ### <a name="application-control"></a>アプリケーションの制御
 
 |||
 |-|-|
-|[AfxOleCanExitApp](#afxolecanexitapp)|アプリケーションが終了できるかどうかを示します。|
+|[AfxOleCanExitApp](#afxolecanexitapp)|アプリケーションを終了できるかどうかを示します。|
 |[AfxOleGetMessageFilter](#afxolegetmessagefilter)|アプリケーションの現在のメッセージ フィルターを取得します。|
-|[AfxOleGetUserCtrl](#afxolegetuserctrl)|現在のユーザー制御フラグを取得します。|
-|[AfxOleSetUserCtrl](#afxolesetuserctrl)|設定またはユーザー コントロール フラグをクリアします。|
-|[AfxOleLockApp](#afxolelockapp)|アプリケーションのアクティブなオブジェクトの数のフレームワークのグローバルなカウントをインクリメントします。|
+|[AfxOleGetUserCtrl](#afxolegetuserctrl)|現在のユーザー コントロール フラグを取得します。|
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|ユーザー コントロール フラグを設定またはクリアします。|
+|[AfxOleLockApp](#afxolelockapp)|アプリケーション内のアクティブなオブジェクトの数のフレームワークのグローバルカウントをインクリメントします。|
 |[AfxOleLockControl](#afxolelockcontrol)| 指定したコントロールのクラス ファクトリをロックします。 |
-|[AfxOleUnlockApp](#afxoleunlockapp)|デクリメントするアプリケーションのアクティブなオブジェクトの数のフレームワークの数。|
+|[AfxOleUnlockApp](#afxoleunlockapp)|アプリケーション内のアクティブなオブジェクトの数のフレームワークのカウントをデクリメントします。|
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| 指定したコントロールのクラス ファクトリのロックを解除します。 |
-|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE システム レジストリでサーバーを登録します。|
-|[AfxOleSetEditMenu](#afxoleseteditmenu)|ユーザー インターフェイスを実装、 *typename*オブジェクト コマンド。|
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE システム レジストリにサーバーを登録します。|
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|*typename*オブジェクト コマンドのユーザー インターフェイスを実装します。|
 
-##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
+## <a name="afxolecanexitapp"></a><a name="afxolecanexitapp"></a>アプソアスキャンエグジットアプリ
 
-アプリケーションが終了できるかどうかを示します。
+アプリケーションを終了できるかどうかを示します。
 
 ```
 BOOL AFXAPI AfxOleCanExitApp();
@@ -40,11 +40,11 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 ### <a name="return-value"></a>戻り値
 
-以外の場合は、アプリケーションを終了できます。それ以外の場合 0 を返します。
+アプリケーションが終了できる場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションでは、そのオブジェクトに未解決の参照がある場合は終了する必要があります。 グローバル関数`AfxOleLockApp`と`AfxOleUnlockApp`にインクリメントされ、それぞれ、アプリケーションのオブジェクトへの参照カウンターをデクリメントします。 このカウンターは、0 以外の場合、アプリケーションは終了できません。 カウンターが 0 以外の場合は、アプリケーションのメイン ウィンドウが非表示 (破棄されずに) ユーザーが システム メニューまたは ファイル メニューからの終了時から終了します。 フレームワークこの関数を呼び出す`CFrameWnd::OnClose`します。
+アプリケーションのオブジェクトへの未解決の参照がある場合、アプリケーションを終了しないでください。 グローバル関数`AfxOleLockApp`と`AfxOleUnlockApp`インクリメントとデクリメントは、それぞれ、アプリケーションのオブジェクトへの参照のカウンターです。 このカウンタが 0 以外の場合、アプリケーションを終了しないでください。 カウンタが 0 以外の場合、ユーザーがシステム メニューから閉じるか、[ファイル] メニューの [終了] を選択すると、アプリケーションのメイン ウィンドウは非表示になります (破棄されません)。 フレームワークは、この関数を`CFrameWnd::OnClose`で呼び出します。
 
 ### <a name="example"></a>例
 
@@ -54,7 +54,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter
+## <a name="afxolegetmessagefilter"></a><a name="afxolegetmessagefilter"></a>メッセージ フィルター
 
 アプリケーションの現在のメッセージ フィルターを取得します。
 
@@ -66,9 +66,9 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 現在のメッセージ フィルターへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在にアクセスするには、この関数を呼び出す`COleMessageFilter`-呼び出す場合と同じように、オブジェクトを派生`AfxGetApp`現在のアプリケーション オブジェクトにアクセスします。
+現在のアプリケーション オブジェクトにアクセス`COleMessageFilter`するために呼び出す`AfxGetApp`のと同じように、現在の派生オブジェクトにアクセスします。
 
 ### <a name="example"></a>例
 
@@ -80,9 +80,9 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 **ヘッダー**: afxwin.h
 
-##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl
+## <a name="afxolegetuserctrl"></a><a name="afxolegetuserctrl"></a>を取得します。
 
-現在のユーザー制御フラグを取得します。
+現在のユーザー コントロール フラグを取得します。
 
 ```
 BOOL AFXAPI AfxOleGetUserCtrl();
@@ -90,54 +90,54 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 ### <a name="return-value"></a>戻り値
 
-以外の場合は、ユーザーがアプリケーションの管理それ以外の場合 0 を返します。
+ユーザーがアプリケーションを制御する場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーが明示的に開くか、新しいドキュメントを作成すると、ユーザーがアプリケーションの管理です。 ユーザーはコントロールにも、OLE システム Dll によって、アプリケーションを起動しなかった場合、つまり、ユーザーがシステムのシェルを使用してアプリケーションを起動した場合。
+ユーザーが明示的に新しいドキュメントを開いたり作成したりすると、ユーザーはアプリケーションを制御できます。 ユーザーが OLE システム DLL によってアプリケーションを起動しなかった場合、つまり、ユーザーがシステム シェルを使用してアプリケーションを起動した場合、ユーザーは制御することもできます。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl
+## <a name="afxolesetuserctrl"></a><a name="afxolesetuserctrl"></a>アプソールセットユーザーCtrl
 
-設定のリファレンスで説明するユーザー制御フラグをクリアまたは`AfxOleGetUserCtrl`します。
+のリファレンスで説明されているユーザーコントロールフラグを設定またはクリアします`AfxOleGetUserCtrl`。
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bUserCtrl*<br/>
-ユーザー制御フラグを設定またはクリアするかどうかを指定します。
+*をクリックします。*<br/>
+ユーザーコントロールフラグを設定するかクリアするかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークが呼び出しますが、ユーザーを作成またはドキュメントを読み込みますドキュメントが読み込まれたまたは、コンテナーのアプリケーションからの埋め込みオブジェクトの読み込みなどの間接のアクションを使って作成されたときではなく。
+フレームワークは、ユーザーがドキュメントを作成または読み込むときにこの関数を呼び出しますが、ドキュメントが読み込まれたり、コンテナー アプリケーションから埋め込みオブジェクトを読み込むなどの間接的なアクションによって作成されたりした場合は呼び出されません。
 
-この関数を呼び出す場合は、アプリケーションでは、その他のアクションは、アプリケーションのコントロールでユーザーを配置する必要があります。
+アプリケーション内の他のアクションがユーザーをアプリケーションの制御にする必要がある場合は、この関数を呼び出します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>  AfxOleLockApp
+## <a name="afxolelockapp"></a><a name="afxolelockapp"></a>アfxOleロックアプリ
 
-アプリケーションのアクティブなオブジェクトの数のフレームワークのグローバルなカウントをインクリメントします。
+アプリケーション内のアクティブなオブジェクトの数のフレームワークのグローバルカウントをインクリメントします。
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、アプリケーションでアクティブなオブジェクトの数のカウントを保持します。 `AfxOleLockApp`と`AfxOleUnlockApp`関数はそれぞれ、インクリメントし、このカウントをデクリメントします。
+フレームワークは、アプリケーションでアクティブなオブジェクトの数を保持します。 関数`AfxOleLockApp`と`AfxOleUnlockApp`関数は、それぞれ、このカウントをインクリメントおよびデクリメントします。
 
-ユーザーがアクティブなオブジェクトを持つアプリケーションを終了しようとしたときに: アクティブなオブジェクトの数が 0 以外のアプリケーション-フレームワークは、完全にシャット ダウンではなく、ユーザーのビューからアプリケーションを非表示にします。 `AfxOleCanExitApp`関数は、アプリケーションを終了できるかどうかを示します。
+アクティブなオブジェクト (アクティブなオブジェクトの数が 0 以外のアプリケーション) を持つアプリケーションを閉じようとすると、フレームワークはアプリケーションを完全にシャットダウンするのではなく、ユーザーのビューから隠します。 この`AfxOleCanExitApp`関数は、アプリケーションを終了できるかどうかを示します。
 
-呼び出す`AfxOleLockApp`できなくなるクライアント アプリケーションによってまだ使用されているときに破棄するには、そのオブジェクトのことが望ましい場合、OLE インターフェイスを公開する任意のオブジェクトからです。 呼び出すことも`AfxOleUnlockApp`を呼び出す任意のオブジェクトのデストラクターで`AfxOleLockApp`コンス トラクターでします。 既定では、 `COleDocument` (と派生クラス) を自動的にロックして、アプリケーションのロックを解除します。
+OLE`AfxOleLockApp`インターフェイスを公開するオブジェクトから呼び出す場合は、そのオブジェクトがクライアント アプリケーションで使用されている間に破棄される必要がない場合。 また、`AfxOleUnlockApp`コンストラクター内で呼び出すオブジェクトの`AfxOleLockApp`デストラクターも呼び出します。 既定では、(`COleDocument`および派生クラス) は、アプリケーションを自動的にロックおよびロック解除します。
 
 ### <a name="example"></a>例
 
@@ -147,23 +147,23 @@ void AFXAPI AfxOleLockApp();
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp
+## <a name="afxoleunlockapp"></a><a name="afxoleunlockapp"></a>アfxOleロックアプリ
 
-デクリメント、アプリケーションのアクティブなオブジェクトのフレームワークの数。
+アプリケーション内のアクティブなオブジェクトのフレームワークのカウントをデクリメントします。
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照してください`AfxOleLockApp`についてさらにします。
+詳細`AfxOleLockApp`については、「」を参照してください。
 
-アクティブなオブジェクトの数がゼロになるとき`AfxOleOnReleaseAllObjects`が呼び出されます。
+アクティブなオブジェクトの数がゼロになると呼`AfxOleOnReleaseAllObjects`び出されます。
 
 ### <a name="example"></a>例
 
-例をご覧ください[AfxOleLockApp](#afxolelockapp)します。
+[AfxOleLockApp](#afxolelockapp)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -171,7 +171,7 @@ void AFXAPI AfxOleUnlockApp();
 
 ## <a name="afxolelockcontrol"></a>AfxOleLockControl
 
-指定したコントロールのクラス ファクトリをロックするは、コントロールに関連付けられている動的に作成されたデータはメモリに残りますようにします。
+指定したコントロールのクラス ファクトリをロックして、コントロールに関連付けられた動的に作成されたデータがメモリ内に残るようにします。
 
 ### <a name="syntax"></a>構文
 
@@ -182,19 +182,19 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*<br/>
+*Clsid*<br/>
 コントロールの一意のクラス ID。
 
-*lpszProgID*<br/>
+*をクリックします。*<br/>
 コントロールの一意のプログラム ID。
 
 ### <a name="return-value"></a>戻り値
 
-コントロールのクラス ファクトリが正常にロックされている場合は 0 以外それ以外の場合 0 を返します。
+コントロールのクラス ファクトリが正常にロックされた場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コントロールの表示これが大幅に短縮できます。 たとえば、1 回 ダイアログ ボックスのコントロールを作成してコントロールをロック`AfxOleLockControl`を作成し、もう一度ダイアログを表示するか破棄するたびに、強制終了する必要はありません。 場合は、ユーザーは、開くし、繰り返しダイアログ ボックスを閉じ、コントロールをロックできます著しくパフォーマンスが向上します。 コントロールを破棄する準備ができたら、呼び出す`AfxOleUnlockControl`します。
+これにより、コントロールの表示が大幅に高速化されます。 たとえば、ダイアログ ボックスでコントロールを作成し、 で`AfxOleLockControl`コントロールをロックすると、ダイアログが表示または破棄されるたびに、コントロールを作成して終了する必要はありません。 ユーザーがダイアログ ボックスを繰り返し開いて閉じると、コントロールをロックするとパフォーマンスが大幅に向上します。 コントロールを破棄する準備ができたら、 を呼`AfxOleUnlockControl`び出します。
 
 ### <a name="example"></a>例
 
@@ -210,9 +210,9 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **ヘッダー:** afxwin.h
 
-##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
+## <a name="afxoleregisterserverclass"></a><a name="afxoleregisterserverclass"></a>クラス
 
-この関数では、OLE システム レジストリにサーバーを登録できます。
+この関数を使用すると、OLE システム レジストリにサーバーを登録できます。
 
 ```
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -227,64 +227,64 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*<br/>
-サーバーの OLE クラスの ID への参照
+*Clsid*<br/>
+サーバーの OLE クラス ID への参照。
 
-*lpszClassName*<br/>
+*クラス名*<br/>
 サーバーのオブジェクトのクラス名を含む文字列へのポインター。
 
-*lpszShortTypeName*<br/>
-「グラフです」など、サーバーのオブジェクトの種類の短い名前を含む文字列へのポインター
+*名前を指定します。*<br/>
+サーバーのオブジェクトの種類の短い名前を含む文字列へのポインターです 。
 
-*lpszLongTypeName*<br/>
-サーバーのオブジェクトの種類、「Microsoft Excel 5.0 グラフです」などの長い名前を含む文字列へのポインター
+*名前を指定します。*<br/>
+"Excel 5.0 グラフ" など、サーバーのオブジェクトの種類の長い名前を含む文字列へのポインター。
 
-*nAppType*<br/>
-OLE アプリケーションの種類を指定する、OLE_APPTYPE 列挙から取得された値。 使用可能な値以下のとおりです。
+*アプリの種類*<br/>
+OLE アプリケーションの種類を指定して、OLE_APPTYPE列挙体から取得される値。 次の値を指定できます。
 
-- OAT_INPLACE_SERVER Server では、サーバー全体のユーザー インターフェイスがあります。
+- OAT_INPLACE_SERVER サーバーには、サーバーのユーザー インターフェイスが完全に含まれています。
 
-- OAT_SERVER サーバーは、埋め込みのみをサポートします。
+- OAT_SERVER サーバーは埋め込みのみをサポートしています。
 
-- OAT_CONTAINER コンテナーは、埋め込みアイテムへのリンクをサポートします。
+- OAT_CONTAINER コンテナは埋め込みへのリンクをサポートしています。
 
-- OAT_DISPATCH_OBJECT `IDispatch`-対応するオブジェクト。
+- OAT_DISPATCH_OBJECT`IDispatch`可能なオブジェクトです。
 
-*rglpszRegister*<br/>
-キーとキーの既存の値が見つからない場合、OLE システム レジストリに追加する値を表す文字列へのポインターの配列。
+*ルグルプスレジスタ*<br/>
+キーの既存の値が見つからない場合に、OLE システム レジストリに追加するキーと値を表す文字列へのポインターの配列。
 
-*rglpszOverwrite*<br/>
-キーとレジストリに指定されたキーの既存の値が含まれている場合、OLE システム レジストリに追加する値を表す文字列へのポインターの配列。
+*上書き*<br/>
+指定されたキーの既存の値がレジストリに含まれている場合に、OLE システム レジストリに追加するキーと値を表す文字列へのポインターの配列。
 
 ### <a name="return-value"></a>戻り値
 
-サーバー クラスが正常に登録されている場合は 0 以外それ以外の場合 0 を返します。
+サーバー クラスが正常に登録された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ほとんどのアプリケーションが使用できる`COleTemplateServer::Register`アプリケーションのドキュメントの種類を登録します。 アプリケーションのシステム レジストリ形式では、一般的なパターンに適合しない場合は使用できます`AfxOleRegisterServerClass`詳細に制御します。
+ほとんどのアプリケーションは、`COleTemplateServer::Register`アプリケーションのドキュメントタイプを登録するために使用できます。 アプリケーションのシステム レジストリ形式が一般的なパターンに適合しない場合は、より詳細`AfxOleRegisterServerClass`な制御を行うことができます。
 
-レジストリ キーと値のセットで構成されます。 *RglpszRegister*と*rglpszOverwrite*引数が文字列へのポインターの配列、文字列から構成される、キーと値で区切られた、 **NULL**文字 ( `'\0'`). 置き換え可能パラメーターの文字シーケンスで可能な次の各文字列は *%1*を通じて *%5*します。
+レジストリは、キーと値のセットで構成されます。 *rglpszRegister*引数と*rglpszOverwrite*引数は、文字列へのポインターの配列であり、それぞれキーと**NULL**文字 ( )`'\0'`で区切られた値で構成されます。 これらの各文字列には、置換可能なパラメータを持*つことができます。* *%1*
 
-シンボルはように入力されます。
+シンボルは次のように入力されます。
 
-|シンボル|[値]|
+|Symbol|値|
 |------------|-----------|
-|%1|クラス ID を文字列として書式設定|
+|%1|クラス ID (文字列として書式設定)|
 |%2|クラス名|
 |%3|実行可能ファイルへのパス|
 |%4|短い型名|
-|%5|Long 型の名前|
+|%5|ロングタイプ名|
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu
+## <a name="afxoleseteditmenu"></a><a name="afxoleseteditmenu"></a>メニューを編集します。
 
-ユーザー インターフェイスを実装、 *typename*オブジェクト コマンド。
+*typename*オブジェクト コマンドのユーザー インターフェイスを実装します。
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,
@@ -296,29 +296,29 @@ void AFXAPI AfxOleSetEditMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*pClient*<br/>
-クライアントの OLE アイテムへのポインター。
+*クライアント*<br/>
+クライアント OLE アイテムへのポインター。
 
-*pMenu*<br/>
-更新メニュー オブジェクトへのポインター。
+*メニュー*<br/>
+更新するメニュー オブジェクトへのポインター。
 
-*iMenuItem*<br/>
+*メニュー項目*<br/>
 更新するメニュー項目のインデックス。
 
 *nIDVerbMin*<br/>
 主動詞に対応するコマンド ID。
 
-*nIDVerbMax*<br/>
+*最大の時間*<br/>
 最後の動詞に対応するコマンド ID。
 
-*nIDConvert*<br/>
-変換のメニュー項目の ID。
+*変換を行う*<br/>
+[変換] メニュー項目の ID です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-サーバーがプライマリの動詞のみを認識しない場合、メニュー項目は次のようになります。"動詞*typename*オブジェクト"と*nIDVerbMin*コマンドが送信されるのは、ユーザーがコマンドを選択するとします。 かどうかには、いくつかの動詞をサーバーが認識し、メニュー項目が" *typename*オブジェクト"と、ユーザーがコマンドを選択すると、サブメニュー、すべての動詞の一覧が表示されます。 ユーザーが、サブメニューから 動詞*nIDVerbMin*最初の動詞を選択したかどうかは送信*nIDVerbMin* + 1 が 2 つ目の動詞は、選択した場合に送信されます。 既定の`COleDocument`実装は、この機能を自動的に処理します。
+サーバーが主動詞のみを認識する場合、メニュー項目は "動詞*型名*オブジェクト" になり、ユーザーがコマンドを選択すると*nIDVerbMin*コマンドが送信されます。 サーバーが複数の動詞を認識すると、メニュー項目は " *typename* Object " になり、ユーザーがコマンドを選択すると、すべての動詞を一覧表示するサブメニューが表示されます。 ユーザーがサブメニューから動詞を選択すると、最初の動詞が選択されると*nIDVerbMin*が送信され、2 番目の動詞が選択された場合は*nIDVerbMin* + 1 が送信されます。 既定`COleDocument`の実装では、この機能が自動的に処理されます。
 
-クライアントのアプリケーション リソースのスクリプトでは、次のステートメントをいる必要があります (します。RC) のファイル:
+クライアントのアプリケーション リソース スクリプト (.RC) ファイル:
 
 **#include \<afxolecl.rc>**
 
@@ -326,7 +326,7 @@ void AFXAPI AfxOleSetEditMenu(
 
 **ヘッダー**: afxole.h
 
-## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
+## <a name="afxoleunlockcontrol"></a><a name="afxoleunlockcontrol"></a>コントロールをロックします。
 
 指定したコントロールのクラス ファクトリのロックを解除します。
 
@@ -339,19 +339,19 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*<br/>
+*Clsid*<br/>
 コントロールの一意のクラス ID。
 
-*lpszProgID*<br/>
+*をクリックします。*<br/>
 コントロールの一意のプログラム ID。
 
 ### <a name="return-value"></a>戻り値
 
-コントロールのクラス ファクトリが正常にロックできなかった場合、0 以外の場合それ以外の場合 0 を返します。
+コントロールのクラス ファクトリのロックが正常に解除された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コントロールがロックされて`AfxOleLockControl`コントロールに関連付けられている動的に作成されたデータはメモリに残ります。 これが大幅に高速化できますコントロールの表示コントロール必要がありますいない作成および破棄するたびに表示されているためです。 コントロールを破棄する準備ができたら、呼び出す`AfxOleUnlockControl`します。
+コントロールは で`AfxOleLockControl`ロックされるため、コントロールに関連付けられた動的に作成されたデータはメモリ内に残ります。 これにより、コントロールが表示されるたびにコントロールを作成および破棄する必要がないため、コントロールの表示速度が大幅に向上します。 コントロールを破棄する準備ができたら、 を呼`AfxOleUnlockControl`び出します。
 
 ### <a name="example"></a>例
 

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371288"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier クラス
 
-現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、オブジェクトとそのメソッドへのポインター メンバーによって指定されます。
+現在のモジュールの最後のオブジェクトが解放されたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、オブジェクトとそのポインターからメソッドへのメンバーによって指定されます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-メンバー関数は、イベント ハンドラー オブジェクトの型。
+メンバー関数がイベント ハンドラーであるオブジェクトの型。
 
 ## <a name="members"></a>メンバー
 
@@ -44,20 +44,20 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 名前                                                                                                 | 説明
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | `Module::MethodReleaseNotifier` クラスの新しいインスタンスを初期化します。
+[モジュール::メソッドリリースNotifier::メソッドリリースNotifier](#methodreleasenotifier-methodreleasenotifier) | `Module::MethodReleaseNotifier` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                                   | 説明
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | 現在関連付けられているイベント ハンドラーを呼び出す`Module::MethodReleaseNotifier`オブジェクト。
+[モジュール::メソッドリリースNotifier::呼び出し](#methodreleasenotifier-invoke) | 現在`Module::MethodReleaseNotifier`のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                                                                    | 説明
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | 現在のイベント ハンドラーへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+[モジュール::メソッドリリースNotifier::method_](#methodreleasenotifier-method) | 現在`Module::MethodReleaseNotifier`のオブジェクトのイベント ハンドラーへのポインターを保持します。
+[モジュール::メソッドリリースNotifier::object_](#methodreleasenotifier-object) | 現在`Module::MethodReleaseNotifier`のオブジェクトのイベント ハンドラーがメンバー関数であるオブジェクトへのポインターを保持します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -67,27 +67,27 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** モジュール.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::methodreleasenotifier:: 呼び出し
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>モジュール::メソッドリリースNotifier::呼び出し
 
-現在関連付けられているイベント ハンドラーを呼び出す`Module::MethodReleaseNotifier`オブジェクト。
+現在`Module::MethodReleaseNotifier`のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>モジュール::メソッドリリースNotifier::method_
 
-現在のイベント ハンドラーへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+現在`Module::MethodReleaseNotifier`のオブジェクトのイベント ハンドラーへのポインターを保持します。
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>モジュール::メソッドリリースNotifier::メソッドリリースNotifier
 
 `Module::MethodReleaseNotifier` クラスの新しいインスタンスを初期化します。
 
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>パラメーター
 
-*object*<br/>
-メンバー関数は、イベント ハンドラー オブジェクト。
+*オブジェクト*<br/>
+メンバー関数がイベント ハンドラーであるオブジェクト。
 
 *method*<br/>
-パラメーターのメンバー関数は、*オブジェクト*イベント ハンドラーは。
+イベント ハンドラーであるパラメーター*オブジェクト*のメンバー関数。
 
-*release*<br/>
-指定`true`、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)メソッド。 それ以外の場合、指定`false`します。
+*リリース*<br/>
+基`true`になるモジュールの呼び出しを有効にすることを指定します: [:リリースNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)メソッド;それ以外の`false`場合は、 を指定します。
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>モジュール::メソッドリリースNotifier::object_
 
-メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+現在`Module::MethodReleaseNotifier`のオブジェクトのイベント ハンドラーがメンバー関数であるオブジェクトへのポインターを保持します。
 
 ```cpp
 T* object_;

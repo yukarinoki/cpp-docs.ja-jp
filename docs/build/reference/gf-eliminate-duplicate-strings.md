@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e0d23004c7b710f51065db52410fbb15b7cca040
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449545"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320490"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 
-実行中に、プログラム イメージではメモリ内に同一文字列の 1 つのコピーを作成するコンパイラを有効にします。 これは、最適化と呼ばれる*文字列プール*小さいプログラムを作成することができます。
+コンパイラが、実行中にプログラム イメージとメモリ内に同一の文字列のコピーを作成できるようにします。 これは、より小さなプログラムを作成できる*文字列プーリング*と呼ばれる最適化です。
 
 ## <a name="syntax"></a>構文
 
@@ -31,13 +31,13 @@ ms.locfileid: "66449545"
 /GF
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用する場合 **/GF**、オペレーティング システムのメモリの文字列の部分が交換されていないと、文字列は、イメージ ファイルからバックアップを読み取ることができます。
+**/GF**を使用すると、オペレーティング システムはメモリの文字列部分をスワップせず、イメージ ファイルから文字列を読み取ることができます。
 
-**/GF**読み取り専用として文字列をプールします。 文字列を変更しようとする場合 **/GF**、アプリケーション エラーが発生します。
+**/GF**は文字列を読み取り専用としてプールします。 **/GF**で文字列を変更しようとすると、アプリケーション エラーが発生します。
 
-文字列プールにより、何が 1 つのバッファーに複数のポインターにする複数のバッファーに複数のポインターとして対象としています。 次のコードで`s`と`t`同じ文字列で初期化されます。 文字列プールことによってそれらの同じメモリを指すようにします。
+文字列プーリングでは、複数のバッファーへの複数のポインターとして意図されていたものを、単一のバッファーへの複数のポインターにできます。 次のコードでは、`s`同`t`じ文字列で初期化されます。 文字列プーリングによって、これらのオブジェクトは同じメモリを指します。
 
 ```
 char *s = "This is a character buffer";
@@ -45,26 +45,26 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/ZI](z7-zi-zi-debug-information-format.md) 、エディット コンティニュを使用するオプションが自動的に設定、 **/GF**オプション。
+> エディット コンティニュに使用される[/ZI](z7-zi-zi-debug-information-format.md)オプションは **、/GF**オプションを自動的に設定します。
 
 > [!NOTE]
->  **/GF**コンパイラ オプションはそれぞれ一意の文字列のアドレス指定可能なセクションを作成します。 既定では、オブジェクト ファイルには最大で 65,536 個のアドレス指定可能なセクションも含めることができます。 使用して、プログラムが 65,536 を超える文字列が含まれる場合、 [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションを複数のセクションを作成します。
+> **/GF**コンパイラ オプションは、一意の文字列ごとにアドレス指定可能なセクションを作成します。 デフォルトでは、オブジェクトファイルには最大65,536のアドレス可能なセクションを含めることができます。 プログラムに含まれる文字列が 65,536 個を超える場合は[、/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションを使用して、より多くのセクションを作成します。
 
-**/GF**ときは、 [/O1](o1-o2-minimize-size-maximize-speed.md)または[/O2](o1-o2-minimize-size-maximize-speed.md)使用されます。
+**/GF**は[、/O1](o1-o2-minimize-size-maximize-speed.md)または[/O2](o1-o2-minimize-size-maximize-speed.md)が使用されている場合に有効です。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
-1. をクリックして、**コード生成**プロパティ ページ。
+1. [**コード生成**] プロパティ ページをクリックします。
 
-1. 変更、**文字列プールを有効にする**プロパティ。
+1. **[文字列プールを有効にする]** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

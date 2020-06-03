@@ -1,5 +1,5 @@
 ---
-title: 例:メニューコマンドを使用したダイアログボックスの表示
+title: '例 : メニュー コマンドによるダイアログ ボックスの表示'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095919"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078839"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>例:メニューコマンドを使用したダイアログボックスの表示
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>例 : メニュー コマンドによるダイアログ ボックスの表示
 
 このトピックでは、次の手順について説明します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "71095919"
 
 |アイテム|名前または値|
 |----------|-------------------|
-|アプリケーション|DisplayDialog|
+|Application|DisplayDialog|
 |メニューコマンド|[表示] メニューの [テスト] コマンドコマンド ID = ID_VIEW_TEST|
 |ダイアログ ボックス|[テスト] ダイアログボックスクラス = CTestDialog;ヘッダーファイル = TestDialog. h;Variable = testdlg、ptestdlg|
 |コマンドハンドラー|OnViewTest|
@@ -44,7 +44,7 @@ ms.locfileid: "71095919"
 
 1. ダイアログボックスのクラスを追加します。 詳細について[は、「クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。
 
-1. **クラスビュー**で、ドキュメントクラス (cdisplayの doc) を選択します。 **[プロパティ]** ウィンドウで、 **[イベント]** ボタンをクリックします。 メニューコマンドの ID (ID_VIEW_TEST) をダブルクリックします。 次に、下矢印をクリックし、[  **\<Add > onviewtest**] を選択します。
+1. **クラスビュー**で、ドキュメントクラス (cdisplayの doc) を選択します。 **[プロパティ]** ウィンドウで、 **[イベント]** ボタンをクリックします。 メニューコマンドの ID (ID_VIEW_TEST) をダブルクリックします。 次に、下矢印をクリックし、[ **\<追加] > OnViewTest**を選択します。
 
    MDI アプリケーションのメインフレームにメニューコマンドを追加した場合は、代わりにアプリケーションクラス (Cdisplayの App) を選択します。
 
@@ -54,11 +54,11 @@ ms.locfileid: "71095919"
    #include "TestDialog.h"
    ```
 
-1. 関数を実装するに`OnViewTest`は、に次のコードを追加します。
+1. 次のコードを `OnViewTest` に追加して、関数を実装します。
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>モードレスダイアログボックスを表示するには
@@ -99,7 +99,7 @@ ms.locfileid: "71095919"
    delete m_pTestDlg;
    ```
 
-   - 関数を実装するに`OnViewTest`は、に次のコードを追加します。
+   - 次のコードを `OnViewTest` に追加して、関数を実装します。
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ ms.locfileid: "71095919"
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
 [モーダルとモードレスのダイアログ ボックス](../mfc/modal-and-modeless-dialog-boxes.md)

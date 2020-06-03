@@ -5,42 +5,40 @@ f1_keywords:
 - ISessionPropertiesImpl
 - ISessionPropertiesImpl::GetProperties
 - ISessionPropertiesImpl.GetProperties
-- GetProperties
 - ISessionPropertiesImpl.SetProperties
-- SetProperties
 - ISessionPropertiesImpl::SetProperties
 helpviewer_keywords:
 - ISessionPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: ed8b7a271bc6ac234fc9276d6c88d26848da24f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210302"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
 
-実装を提供、 [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))インターフェイス。
+[Isessionproperties](/previous-versions/windows/desktop/ms713721(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`ISessionPropertiesImpl`します。
+`ISessionPropertiesImpl`から派生したクラス。
 
 *PropClass*<br/>
-その既定値はユーザー定義プロパティ クラス*T*します。
+既定で*T*に設定されているユーザー定義可能なプロパティクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -52,16 +50,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|セッションで現在設定されているセッション プロパティ グループ内のプロパティの一覧を返します。|
-|[SetProperties](#setproperties)|セッション プロパティ グループのプロパティを設定します。|
+|[GetProperties](#getproperties)|セッションで現在設定されているセッションプロパティグループのプロパティの一覧を返します。|
+|[SetProperties](#setproperties)|セッションプロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-セッションの必須インターフェイス。 このクラスでは、セッションのプロパティを実装によって定義された静的関数を呼び出すことによって、[プロパティ セットのマップ](../../data/oledb/begin-propset-map.md)します。 セッション クラスでは、プロパティ セットのマップを指定する必要があります。
+セッションの必須のインターフェイスです。 このクラスは、[プロパティセットマップ](../../data/oledb/begin-propset-map.md)によって定義された静的関数を呼び出すことによって、セッションプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。
 
-## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
 
-プロパティの一覧を返します、`DBPROPSET_SESSION`セッションで現在設定されているプロパティ グループ。
+セッションで現在設定されている `DBPROPSET_SESSION` プロパティグループ内のプロパティの一覧を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -74,11 +72,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の[Isessionproperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85))を参照してください。
 
-## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
 
-プロパティを設定、`DBPROPSET_SESSION`プロパティ グループ。
+`DBPROPSET_SESSION` プロパティグループのプロパティを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -89,9 +87,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の[Isessionproperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85))を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

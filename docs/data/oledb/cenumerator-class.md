@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230841"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211797"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
+OLE DB 列挙子オブジェクトを使用します。このオブジェクトは、すべてのデータソースと列挙子を記述する行セットを返す[isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスを公開します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,17 +50,17 @@ class CEnumerator :
 
 |||
 |-|-|
-|[[検索]](#find)|指定した名前のいずれかを探して利用可能なプロバイダー (データ ソース) で検索します。|
-|[GetMoniker](#getmoniker)|取得、`IMoniker`現在のレコードのインターフェイス。|
-|[開く](#open)|列挙子を開きます。|
+|[検索](#find)|使用可能なプロバイダー (データソース) を検索し、指定した名前のプロバイダーを探します。|
+|[GetMoniker](#getmoniker)|現在のレコードの `IMoniker` インターフェイスを取得します。|
+|[[ファイル]](#open)|列挙子を開きます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-取得することができます、`ISourcesRowset`このクラスから間接的にデータ。
+このクラスから間接的に `ISourcesRowset` データを取得できます。
 
-## <a name="find"></a> Cenumerator::find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
 
-使用可能なプロバイダーの間で指定した名前を検索します。
+使用可能なプロバイダー間で指定された名前を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -71,19 +71,19 @@ bool Find(TCHAR* szSearchName) throw();
 #### <a name="parameters"></a>パラメーター
 
 *szSearchName*<br/>
-[in]検索する名前。
+から検索する名前。
 
 ### <a name="return-value"></a>戻り値
 
-**true**名前が見つかった場合します。 それ以外の場合、 **false**します。
+名前が見つかった場合は**true** 。 それ以外の場合は、 **false**です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイス。
+この名前は、 [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスの `SOURCES_NAME` メンバーにマップされます。
 
-## <a name="getmoniker"></a> CEnumerator::GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
-モニカーに変換できる文字列の部分を抽出する表示名を解析します。
+モニカーに変換できる文字列のコンポーネントを抽出するために、表示名を解析します。
 
 ### <a name="syntax"></a>構文
 
@@ -97,18 +97,18 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>パラメーター
 
 *ppMoniker*<br/>
-[out]表示名からモニカーが解析された ([cenumeratoraccessor::m_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 現在の行のできます。
+入出力現在の行の表示名 ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) から解析されたモニカー。
 
 *lpszDisplayName*<br/>
-[in]解析する表示名。
+から解析する表示名。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="open"></a> Cenumerator::open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
 
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))します。
+列挙子のモニカーが指定されている場合は、そのモニカーをバインドしてから、 [isourcesrowset を:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))を呼び出して列挙子の行セットを取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -123,20 +123,20 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 #### <a name="parameters"></a>パラメーター
 
 *pMoniker*<br/>
-[in]列挙子のモニカーへのポインター。
+から列挙子のモニカーを指すポインターです。
 
 *pClsid*<br/>
-[in]ポインター、`CLSID`の列挙子。
+から列挙子の `CLSID` へのポインター。
 
 *enumerator*<br/>
-[in]列挙子への参照。
+から列挙子への参照です。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

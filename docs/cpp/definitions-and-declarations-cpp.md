@@ -2,18 +2,18 @@
 title: 定義と宣言 (C++)
 ms.date: 11/04/2016
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
-ms.openlocfilehash: 987e27bdf35eba7d9380fc546c15b93b3179333b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20683f3d2e12f7ffead573cbac46fdd4e106c383
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189378"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C++)
 
 **Microsoft 固有の仕様**
 
-DLL インターフェイスを指すは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ)つまり、すべての項目として宣言されている**dllimport**または**dllexport**します。 DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
+DLL インターフェイスは、システム内の何らかのプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ) を参照します。つまり、 **dllimport**または**dllexport**として宣言されているすべての項目です。 DLL インターフェイスに含まれるすべての宣言では、 **dllimport**属性または**dllexport**属性を指定する必要があります。 ただし、定義では**dllexport**属性のみを指定する必要があります。 たとえば、次の関数定義はコンパイラ エラーになります。
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -34,7 +34,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
-使用**dllexport** 、定義を意味、 **dllimport**は宣言を意味します。 使用する必要があります、 **extern**キーワード**dllexport** ; 宣言を強制する定義が含まれる場合は、します。 そのため、次の例は正しいコードになります。
+**Dllexport**の使用は定義を意味し、 **dllimport**は宣言を意味します。 宣言を強制するには、 **dllexport**で**extern**キーワードを使用する必要があります。それ以外の場合は、定義が暗黙的に指定されます。 そのため、次の例は正しいコードになります。
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -67,6 +67,6 @@ void func() {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [dllexport、dllimport](../cpp/dllexport-dllimport.md)

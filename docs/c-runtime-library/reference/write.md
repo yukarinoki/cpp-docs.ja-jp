@@ -1,8 +1,9 @@
 ---
 title: _write
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _write
+- _o__write
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821793"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916704"
 ---
 # <a name="_write"></a>_write
 
@@ -49,10 +51,10 @@ int _write(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 データを書き込むファイルのファイル記述子。
 
-*バッファー*<br/>
+*格納*<br/>
 書き込むデータ。
 
 *count*<br/>
@@ -66,23 +68,25 @@ int _write(
 
 ファイルがテキストモードで開かれている場合、各ラインフィード文字は出力のキャリッジリターンラインフィードのペアで置き換えられます。 置換は戻り値には影響しません。
 
-ファイルが Unicode 変換モードで開かれている場合 (たとえば、 **_open**または **_sopen**と、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを使用して*fd*が開かれている場合、または**fopen**を使用して開かれており、かつ、 **ccs = unicode**、 **ccs = 16LE**、または**ccs**を含むモードパラメーター**を使用し**て開かれている場合は、*バッファー*はへのポインターと解釈されます**utf-16**データを含む**wchar_t**の配列。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+ファイルが Unicode 変換モードで開かれている場合 (たとえば、 *fd*が **_open**または **_sopen**を使用して開かれ、 **_O_WTEXT**を含むモードパラメーターを使用して起動された場合)。 **_O_U16TEXT**、または **_O_U8TEXT**。 **fopen**を使用して開かれている場合、または、 **ccs = unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用して開かれている場合、または **_setmode**を使用してモードが unicode 変換モードに変更された場合、*バッファー*は**utf-16**データを含む**wchar_t**の配列へのポインターとし このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Write**関数は、*バッファー*のバイト*数*を*fd*に関連付けられたファイルに書き込みます。 書き込み操作は、指定されたファイルに関連付けられたファイル ポインター (存在する場合) の現在の位置で開始されます。 ファイルが追加用に開かれている場合、操作はファイルの現在の末尾で開始されます。 書き込み操作の後、ファイルポインターは、書き込まれたバイト数だけ増加します。
 
 テキストモードで開かれたファイルに書き込む場合、 **_write**は CTRL + Z 文字をファイルの論理終端として扱います。 デバイスに書き込む場合、 **_write**はバッファー内の CTRL + Z 文字を出力ターミネータとして扱います。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```C
 // crt__write.c

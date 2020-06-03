@@ -18,48 +18,48 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a2584591f6ca22d6767a5c447ffb72bea0a78ea
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825876"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (言語拡張機能の無効化)
 
-**/Za**コンパイラ オプションを無効にし、ANSI C89/ISO C90 と互換性のない C への Microsoft 拡張のエラーを出力します。 非推奨とされる **/Ze**コンパイラ オプションは、Microsoft の拡張機能を使用します。 Microsoft 拡張機能は既定で有効になっています。
+**/Za**コンパイラオプションは、ANSI C89/ISO C90 と互換性がない Microsoft Extensions for C のエラーを無効にして出力します。 非推奨の **/ze**コンパイラオプションは、Microsoft 拡張機能を有効にします。 Microsoft 拡張機能は既定で有効になっています。
 
 ## <a name="syntax"></a>構文
 
-> **/Za**<br/>
+> **/Za**\
 > **/Ze**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!NOTE]
-> 使用 **/Za**コードがコンパイルされると、C++ は推奨されません。 **/Ze**オプションは、その動作は既定で非推奨とされます。 非推奨のコンパイラ オプションの一覧は、次を参照してください。[非推奨と削除されたコンパイラ オプション](compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)します。
+> C++ としてコードをコンパイルするときは、 **/za**を使用しないことをお勧めします。 **/Ze**オプションは、その動作が既定でオンになっているため、非推奨とされます。 非推奨のコンパイラオプションの一覧については、「[非推奨のコンパイラオプションと削除されたコンパイラオプション](compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)」を参照してください。
 
-Microsoft C/C コンパイラでは、2 つの方法で C コードのコンパイルをサポートします。
+Microsoft C/c + + コンパイラは、次の2つの方法で C コードのコンパイルをサポートしています。
 
-- ソース ファイルの場合、コンパイラが既定で C コンパイル モードを使用、 *.c*拡張機能、または、 [/Tc](tc-tp-tc-tp-specify-source-file-type.md)または[/TC](tc-tp-tc-tp-specify-source-file-type.md)オプションを指定します。 C コンパイラは、既定では、C 言語に対する Microsoft 拡張機能を使用する C89/C90 コンパイラです。 特定の拡張機能の詳細については、次を参照してください。 [C および C++ の Microsoft 拡張機能](microsoft-extensions-to-c-and-cpp.md)します。 ときに両方の C のコンパイルと **/Za**オプションが指定されて、C コンパイラは、C89/C90 標準に厳密に準拠しています。 コンパイラは、Microsoft 拡張キーワードを単純な識別子として扱われます、他の Microsoft 拡張機能を無効にし、自動的に定義されます、 [ \_ \_STDC\_ \_ ](../../preprocessor/predefined-macros.md)定義済みC プログラム用のマクロ。
+- コンパイラは、ソースファイルの拡張子が *.c*の場合、または[/Tc](tc-tp-tc-tp-specify-source-file-type.md)または[/tc](tc-tp-tc-tp-specify-source-file-type.md)オプションが指定されている場合に、既定で c コンパイルモードを使用します。 C コンパイラは、既定で C 言語に対する Microsoft 拡張機能を有効にする、C89/C90 コンパイラです。 特定の拡張機能の詳細については、「 [Microsoft extensions For C And C++](microsoft-extensions-to-c-and-cpp.md)」を参照してください。 C コンパイルと **/za**オプションの両方が指定されている場合、c コンパイラは厳密に C89/C90 標準に準拠します。 コンパイラは、microsoft 拡張キーワードを単純な識別子として扱い、他の microsoft 拡張機能を無効にし、C プログラムの[ \_ \_STDC\_ ](../../preprocessor/predefined-macros.md)定義済みマクロを自動的に定義します。
 
-- コンパイラは C++ のコンパイル モードでの C コードをコンパイルできます。 この動作は、既定のソース ファイルがない、 *.c*拡張機能とタイミング、 [/Tp](tc-tp-tc-tp-specify-source-file-type.md)または[/TP](tc-tp-tc-tp-specify-source-file-type.md)オプションを指定します。 C++ のコンパイル モードでは、コンパイラは、C++ 標準に組み込まれていますが、ISO C99、C11 の標準の一部をサポートします。 ほぼすべての C コードは、有効な C++ コードをもできます。 C キーワードとコードの構成要素の数が少ないはいない有効な C++ コード、または C++ では異なる方法で解釈されます。 コンパイラは、このような場合は標準の C++ に従って動作します。 C++ のコンパイル モードで、 **/Za**オプションを選択して予期しない動作がありますはお勧めしません。
+- コンパイラは C++ コンパイルモードで C コードをコンパイルできます。 この動作は、拡張子が *.c*でないソースファイルの既定の動作です。また、 [/tp](tc-tp-tc-tp-specify-source-file-type.md)オプションまたは[/tp](tc-tp-tc-tp-specify-source-file-type.md)オプションが指定されている場合は、この動作が使用されます。 C++ コンパイルモードでは、コンパイラは、C++ 標準に組み込まれている ISO C99 および C11 標準の部分をサポートしています。 ほとんどすべての C コードは、有効な C++ コードでもあります。 いくつかの C キーワードとコードコンストラクターが有効な C++ コードではないか、C++ では異なる解釈がされています。 コンパイラは、このような場合に C++ 標準に従って動作します。 C++ コンパイルモードでは、 **/za**オプションを指定すると、予期しない動作が発生し、推奨されません。
 
-他のコンパイラ オプション、コンパイラにより標準への準拠、方法に影響を与えることができます。 特定の標準 C および C++ の動作設定を指定する方法は、次を参照してください。、 [/Zc](zc-conformance.md)コンパイラ オプション。 C++ 標準準拠の追加の設定を参照してください、 [/permissive -](permissive-standards-conformance.md)と[/std](std-specify-language-standard-version.md)コンパイラ オプション。
+その他のコンパイラオプションは、コンパイラが標準への準拠を保証する方法に影響を与える可能性があります。 標準 C および C++ の特定の動作設定を指定する方法については、「 [/zc](zc-conformance.md)コンパイラオプション」を参照してください。 C++ 標準準拠の設定の詳細については、「 [/permissive-](permissive-standards-conformance.md)コンパイラオプションと[/std](std-specify-language-standard-version.md)コンパイラオプション」を参照してください。
 
-Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
+Visual C++ の準拠に関する問題の詳細については、「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. ナビゲーション ウィンドウで、**構成プロパティ** > **C/C++** > **言語**します。
+1. ナビゲーションウィンドウで、[**構成プロパティ** > ] [**C/c + +** > **言語**] の順に選択します。
 
-1. 変更、**言語拡張機能を無効にする**プロパティ。
+1. [**言語拡張機能の無効化**] プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>
+「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A> 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

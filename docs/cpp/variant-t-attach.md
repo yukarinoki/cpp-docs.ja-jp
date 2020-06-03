@@ -9,35 +9,35 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: 510267c7ab00fe22a93dc01342def5fc262ddb04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166219"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750745"
 ---
-# <a name="varianttattach"></a>_variant_t::Attach
+# <a name="_variant_tattach"></a>_variant_t::Attach
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
-アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。
+_variant_t オブジェクト`VARIANT`にオブジェクトを **_variant_t**アタッチします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-A`VARIANT`オブジェクトにアタッチされる **_variant_t**オブジェクト。
+この`VARIANT`**_variant_t**オブジェクトにアタッチされるオブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-所有権を取得、`VARIANT`によってカプセル化しています。 このメンバー関数は、既存のカプセル化を解放`VARIANT`をコピーし、指定された`VARIANT`、設定とその`VARTYPE`VT_EMPTY を確認するにそのリソースのみ解放できますが、 **_variant_t**デストラクターです。
+の所有権を`VARIANT`カプセル化して取得します。 このメンバー関数は、既存のカプセル`VARIANT`化 を解放してから`VARIANT`、指定された`VARTYPE`をコピーし、_variant_t**デストラクター**によってのみリソースを解放できるように、VT_EMPTY に設定します。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 

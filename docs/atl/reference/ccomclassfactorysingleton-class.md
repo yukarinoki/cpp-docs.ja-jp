@@ -1,5 +1,5 @@
 ---
-title: CComClassFactorySingleton クラス
+title: シングルトンクラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactorySingleton
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 71705d02140f0392a9ce023c64e7b4125c14443f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ec860f7ef59b7d3289bf2e18fea0f0e064a7c8f9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497403"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320826"
 ---
-# <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton クラス
+# <a name="ccomclassfactorysingleton-class"></a>シングルトンクラス
 
-このクラスは、 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md)から派生し、 [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)を使用して1つのオブジェクトを構築します。
+このクラスは[、CCom クラスファクトリー](../../atl/reference/ccomclassfactory-class.md)から派生し、単一のオブジェクトを構築するのに[は、CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)を使用します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -33,9 +33,9 @@ class CComClassFactorySingleton : public CComClassFactory
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-クラス。
+あなたのクラス。
 
-`CComClassFactorySingleton`[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)から派生し、 [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)を使用して1つのオブジェクトを構築します。 メソッドを呼び出す`CreateInstance`たびに、このオブジェクトに対してインターフェイスポインターがクエリされます。
+`CComClassFactorySingleton`から[派生し、](../../atl/reference/ccomclassfactory-class.md)単一のオブジェクトを構築するために[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)を使用します。 メソッドを`CreateInstance`呼び出すたびに、このオブジェクトにインターフェイス ポインターを照会するだけです。
 
 ## <a name="members"></a>メンバー
 
@@ -43,17 +43,17 @@ class CComClassFactorySingleton : public CComClassFactory
 
 |名前|説明|
 |----------|-----------------|
-|[CComClassFactorySingleton:: CreateInstance](#createinstance)|インターフェイス`m_spObj`ポインターを照会します。|
+|[シングルトンを作成します。](#createinstance)|インターフェイス`m_spObj`ポインターのクエリ。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComClassFactorySingleton::m_spObj](#m_spobj)|によって`CComClassFactorySingleton`構築された [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) オブジェクト。|
+|[シングルトン::m_spObj](#m_spobj)|によって[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)構築された`CComClassFactorySingleton`オブジェクトです。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、既定のクラスファクトリ`CComClassFactory`として宣言するマクロ [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) が含まれています。 を使用`CComClassFactorySingleton`するには、オブジェクトのクラス定義で[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)マクロを指定します。 例えば:
+ATL オブジェクトは、通常[、CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラス ファクトリを取得します。 このクラスには、既定[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)のクラス ファクトリ`CComClassFactory`として宣言されるマクロ DECLARE_CLASSFACTORY が含まれます。 を使用`CComClassFactorySingleton`するには、オブジェクトのクラス定義で[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)マクロを指定します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]
 
@@ -61,21 +61,21 @@ ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass
 
 `CComObjectRootBase`
 
-[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+[ココムオブジェクトルート](../../atl/reference/ccomobjectrootex-class.md)
 
 `IClassFactory`
 
-[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)
+[コムクラスファクトリー](../../atl/reference/ccomclassfactory-class.md)
 
 `CComClassFactorySingleton`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance
+## <a name="ccomclassfactorysingletoncreateinstance"></a><a name="createinstance"></a>シングルトンを作成します。
 
-`QueryInterface` [M_spObj](#m_spobj)を通じてインターフェイスポインターを取得します。
+インターフェイス`QueryInterface`ポインターを取得する[m_spObj](#m_spobj)を呼び出します。
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -83,38 +83,38 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkOuter*<br/>
-からオブジェクトが集計の一部として作成されている場合、 *pUnkOuter*は外側の unknown である必要があります。 それ以外の場合、 *pUnkOuter*は NULL である必要があります。
+*プンクアウター*<br/>
+[in]オブジェクトが集約の一部として作成される場合 *、pUnkOuter*は外部不明である必要があります。 それ以外の場合は *、pUnkOuter*は NULL である必要があります。
 
 *riid*<br/>
-から要求されたインターフェイスの IID。 *PUnkOuter*が NULL 以外の場合、 *riid*はで`IID_IUnknown`ある必要があります。
+[in]要求されたインターフェイスの IID。 *pUnkOuter*が NULL 以外の場合は *、riid*を指定する必要があります`IID_IUnknown`。
 
-*ppvObj*<br/>
-入出力*Riid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObj*は NULL に設定されます。
+*Ppvobj*<br/>
+[アウト]*riid*によって識別されるインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObj*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj
+## <a name="ccomclassfactorysingletonm_spobj"></a><a name="m_spobj"></a>シングルトン::m_spObj
 
-によって`CComClassFactorySingleton`構築された [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) オブジェクト。
+によって[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)構築された`CComClassFactorySingleton`オブジェクトです。
 
 ```
 CComPtr<IUnknown> m_spObj;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[CreateInstance](#createinstance)メソッドを呼び出すたびに、このオブジェクトに対してインターフェイスポインターがクエリされます。
+[CreateInstance](#createinstance)メソッドを呼び出すたびに、このオブジェクトにインターフェイス ポインターを照会するだけです。
 
-の現在の`m_spObj`形式は、以前のバージョンの ATL で動作し`CComClassFactorySingleton`ていた互換性に影響する変更点を示しています。 以前のバージョンで`CComClassFactorySingleton`は、サーバーの初期化時に、オブジェクトがクラスファクトリと同時に作成されていました。 Visual C++.net 2003 以降では、最初の要求でオブジェクトが遅延して作成されます。 この変更により、初期初期化に依存するプログラムでエラーが発生する可能性があります。
+現在の形式のの`m_spObj`ATL の以前のバージョンで`CComClassFactorySingleton`動作した方法とは異なった変更点があることに注意してください。 以前のバージョンでは`CComClassFactorySingleton`、オブジェクトは、サーバーの初期化中にクラス ファクトリと同時に作成されました。 Visual C++.NET 2003 以降では、オブジェクトは最初の要求で、遅い方法で作成されます。 この変更により、初期の初期化に依存するプログラムでエラーが発生する可能性があります。
 
 ## <a name="see-also"></a>関連項目
 
 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
-[CComClassFactory2 クラス](../../atl/reference/ccomclassfactory2-class.md)<br/>
-[CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
+[クラス](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[クラスクラス](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[スレッドモデル](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -8,24 +8,24 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168838"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>コンパイラおよびリンカーでの Unicode のサポート
 
-ほとんどの Visual C ビルド ツールでは、Unicode の入力と出力をサポートします。
+ほとんどのC++ Visual ビルドツールは、Unicode 入力と出力をサポートしています。
 
 ## <a name="filenames"></a>ファイル名
 
-コマンドラインまたはコンパイラ ディレクティブで指定されたファイル名 (など`#include`) の Unicode 文字を含めることができます。
+コマンドラインまたはコンパイラディレクティブ (`#include`など) で指定されたファイル名には、Unicode 文字を含めることができます。
 
 ## <a name="source-code-files"></a>ソース コード ファイル
 
-Unicode 文字には、識別子、マクロ、文字列と文字のリテラルやコメントではサポートされています。  ユニバーサル文字名もサポートされます。
+Unicode 文字は、識別子、マクロ、文字列リテラル、文字リテラル、およびコメントでサポートされています。  ユニバーサル文字名もサポートされています。
 
 Unicode は、次のエンコーディングのソース コード ファイルに入力できます。
 
@@ -33,20 +33,20 @@ Unicode は、次のエンコーディングのソース コード ファイル�
 
 - BOM 付き、または BOM なしの UTF-16 ビッグ エンディアン。
 
-- BOM 付きの UTF-8
+- UTF-8 with BOM
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
-コンパイル時に、コンパイラは、utf-16 でコンソールに診断を出力します。  コンソールに表示できる文字は、コンソール ウィンドウのプロパティによって決まります  ファイルにリダイレクトされるコンパイラ出力は、現在の ANSI コンソール コードページになります。
+コンパイラは、コンパイル時に、UTF-16 で診断をコンソールに出力します。  コンソールに表示できる文字は、コンソール ウィンドウのプロパティによって決まります  ファイルにリダイレクトされるコンパイラ出力は、現在の ANSI コンソール コードページになります。
 
 ## <a name="linker-response-files-and-def-files"></a>リンカー応答ファイルおよび .DEF ファイル
 
-応答ファイルおよび DEF ファイルは、utf-16 BOM または ANSI を指定できます。
+応答ファイルと DEF ファイルには、BOM を使用した UTF-16 または ANSI のいずれかを指定できます。
 
 ## <a name="asm-and-cod-dumps"></a>.asm ダンプおよび .cod ダンプ
 
-.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 使用[は/FAu](fa-fa-listing-file.md)を utf-8 を出力します。 指定した場合 **/FAs**、混在したソースが直接は出力したとソース コードが utf-8 と指定しなかった場合の例については、文字が正しくなります **/FAsu**します。
+.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 [/FAu](fa-fa-listing-file.md)を使用して utf-8 を出力します。 **/Fa**を指定した場合、混在ソースは直接印刷されるだけで、ソースコードが utf-8 で、 **/FAsu**を指定していない場合などには、正しく表示されないことに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コマンド ラインから MSVC ツールセットを使用する](../building-on-the-command-line.md)

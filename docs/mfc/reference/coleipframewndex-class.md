@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504140"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753859"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 
 `COleIPFrameWndEx` クラスは、MFC をサポートする OLE コンテナーを実装します。 アプリケーションの埋め込み先フレーム ウィンドウ クラスを、 `COleIPFrameWndEx` COleIPFrameWnd [クラスからではなく、](../../mfc/reference/coleipframewnd-class.md)クラスから派生させる必要があります
-詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -118,55 +118,55 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[COleIPFrameWndEx::AddDockSite](#adddocksite)||
-|[COleIPFrameWndEx:: AddPane](#addpane)||
-|[COleIPFrameWndEx:: AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx::D ockPane](#dockpane)||
-|[COleIPFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|ウィンドウを別のウィンドウの左側にドッキングします。|
-|[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
-|[COleIPFrameWndEx::EnableDocking](#enabledocking)||
-|[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
-|[COleIPFrameWndEx:: GetActivePopup](#getactivepopup)|現在表示されているポップアップ メニューへのポインターを返します。|
-|[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
-|[COleIPFrameWndEx:: GetDefaultResId](#getdefaultresid)|ウィンドウが読み込まれるときに指定した、フレーム ウィンドウのリソース ID を返します。|
-|[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
-|[COleIPFrameWndEx:: Getdoc王国マネージャー](#getdockingmanager)||
-|[COleIPFrameWndEx:: GetMainFrame フレーム](#getmainframe)||
-|[COleIPFrameWndEx:: GetMenuBar](#getmenubar)|フレーム ウィンドウにアタッチされているメニュー バーのオブジェクトへのポインターを返します。|
-|[COleIPFrameWndEx:: GetPane](#getpane)||
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|ティアオフ状態にあるウィンドウ オブジェクトの一覧を返します。|
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|ボタンのツールヒントが表示される前に、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::InsertPane](#insertpane)||
-|[COleIPFrameWndEx:: IsMenuBarAvailable](#ismenubaravailable)|メニュー バーのオブジェクトへのポインターが `NULL`ではないかどうかを判断します。|
-|[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|( `COleIPFrameWnd::LoadFrame`をオーバーライドします)。|
-|[COleIPFrameWndEx:: Onclosedocのウィンドウ](#onclosedockingpane)||
-|[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
-|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST Microsoft を処理するときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|印刷プレビュー モードの内外にアプリケーションのメイン フレーム ウィンドウを設定するには、このメンバー関数を呼び出します。 ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)をオーバーライドします)。|
-|[COleIPFrameWndEx:: OnShowCustomizePane](#onshowcustomizepane)||
-|[COleIPFrameWndEx:: OnShowPanes](#onshowpanes)||
-|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::P aneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`をオーバーライドします)。|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`をオーバーライドします)。|
-|[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
-|[COleIPFrameWndEx::SetDockState](#setdockstate)|フレーム ウィンドウに属しているウィンドウに、指定のドッキング状態を適用します。|
-|[COleIPFrameWndEx:: SetupToolbarMenu](#setuptoolbarmenu)|ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。|
-|[COleIPFrameWndEx:: ShowPane](#showpane)||
-|[COleIPFrameWndEx:: WinHelpA](#winhelpa)|WinHelp アプリケーションまたはコンテキスト ヘルプを起動するために、フレームワークによって呼び出されます。|
+|[コレップフレームオンドエクスックス::アドインドックサイト](#adddocksite)||
+|[を指定します。](#addpane)||
+|[コレリップフレームオードエクスックス::調整ドッキングレイアウト](#adjustdockinglayout)||
+|[コレクトフレームウンドエクスックス::Dロックペイン](#dockpane)||
+|[コレクティブフレームウンデックス::Dオックペイン左](#dockpaneleftof)|ウィンドウを別のウィンドウの左側にドッキングします。|
+|[を有効にする自動非表示ウィンドウ](#enableautohidepanes)||
+|[コレリップフレームオンドエクスックス::有効化ドッキング](#enabledocking)||
+|[をクリックします。](#enablepanemenu)||
+|[コレップフレームウンドエクスックス::ゲットアクティブポップアップ](#getactivepopup)|現在表示されているポップアップ メニューへのポインターを返します。|
+|[を指定します。](#getcontainerframewindow)||
+|[を返します。](#getdefaultresid)|ウィンドウが読み込まれるときに指定した、フレーム ウィンドウのリソース ID を返します。|
+|[をクリックします。](#getdockframe)||
+|[をクリックします。](#getdockingmanager)||
+|[を使用します。](#getmainframe)||
+|[をクリックします。](#getmenubar)|フレーム ウィンドウにアタッチされているメニュー バーのオブジェクトへのポインターを返します。|
+|[コレップフレームウンドエクスックス::ゲットペイン](#getpane)||
+|[コレップフレームオードエクスックス::ゲットティアオフバーズ](#gettearoffbars)|ティアオフ状態にあるウィンドウ オブジェクトの一覧を返します。|
+|[ツールヒントテキスト::ツールボタン](#gettoolbarbuttontooltiptext)|ボタンのツールヒントが表示される前に、フレームワークによって呼び出されます。|
+|[を挿入します。](#insertpane)||
+|[利用可能なメニューバー](#ismenubaravailable)|メニュー バーのオブジェクトへのポインターが `NULL`ではないかどうかを判断します。|
+|[コレクリップフレームオンドエクスックス::イスポイントニアドックサイト](#ispointneardocksite)||
+|[を使用します。](#loadframe)|( `COleIPFrameWnd::LoadFrame`をオーバーライドします)。|
+|[コレクリップフレームオンデックス::オンクローズドッキングペイン](#onclosedockingpane)||
+|[コレクリップフレームオンデックス::オンクローズミニフレーム](#oncloseminiframe)||
+|[をクリックします。](#onclosepopupmenu)|アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。|
+|[を使用します。](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
+|[をクリックします。](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
+|[をクリックします。](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。|
+|[コレップフレームオンドエクスックス::オンメニューボタンツールキットヒットテスト](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST Microsoft を処理するときに、フレームワークによって呼び出されます。|
+|[コレップフレームオンデックス::オンムーブミニフレーム](#onmoveminiframe)||
+|[を設定します。](#onsetpreviewmode)|印刷プレビュー モードの内外にアプリケーションのメイン フレーム ウィンドウを設定するには、このメンバー関数を呼び出します。 ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)をオーバーライドします)。|
+|[ウィンドウのウィンドウを表示します。](#onshowcustomizepane)||
+|[コレップフレームオンドエクスックス::オンショーペイン](#onshowpanes)||
+|[コレクリップフレームオンドエクスックス::オンショーポップアップメニュー](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
+|[コレップフレームオンドエクスックス::オンティアオフメニュー](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
+|[コレップフレームオーネックス::Pアンネ・フロムポイント](#panefrompoint)||
+|[メッセージを再変換:P](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`をオーバーライドします)。|
+|[コレップフレームーンデックス::リカルクレイアウト](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`をオーバーライドします)。|
+|[をクリックします。](#removepanefromdockmanager)||
+|[を設定します。](#setdockstate)|フレーム ウィンドウに属しているウィンドウに、指定のドッキング状態を適用します。|
+|[をクリックします。](#setuptoolbarmenu)|ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。|
+|[コレップフレームーンデックス::ショーペイン](#showpane)||
+|[コレップフレームオーンデックス::ウィンヘルプア](#winhelpa)|WinHelp アプリケーションまたはコンテキスト ヘルプを起動するために、フレームワークによって呼び出されます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|ユーザー定義のツールバーに割り当てられているコントロールの ID の範囲を初期化するようフレームワークに指示します。|
+|[コレップフレームーンデックス::イニトユーザートゥーバーズ](#initusertoobars)|ユーザー定義のツールバーに割り当てられているコントロールの ID の範囲を初期化するようフレームワークに指示します。|
 
 ## <a name="example"></a>例
 
@@ -192,15 +192,15 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 **ヘッダー:** afxoleipframewndex.h
 
-##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
+## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>コレップフレームオンドエクスックス::アドインドックサイト
 
-```
+```cpp
 void AddDockSite();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addpane"></a>COleIPFrameWndEx:: AddPane
+## <a name="coleipframewndexaddpane"></a><a name="addpane"></a>を指定します。
 
 ```
 BOOL AddPane(
@@ -210,14 +210,14 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pControlBar*<br/>
-から*Btail*<br/>
+[in]*コントロールバー*<br/>
+[in]*bTail*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx:: AdjustDockingLayout
+## <a name="coleipframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>コレリップフレームオードエクスックス::調整ドッキングレイアウト
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -225,13 +225,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-から*hdwp*<br/>
+[in]*hdwp*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="dockpane"></a>COleIPFrameWndEx::D ockPane
+## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>コレクトフレームウンドエクスックス::Dロックペイン
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -240,13 +240,13 @@ void DockPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
-から*nDockBarID*<br/>
-から*lpRect*<br/>
+[in]*pバー*<br/>
+[in]*nドックバーID*<br/>
+[in]*lpRect*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="dockpaneleftof"></a>COleIPFrameWndEx::D ockPaneLeftOf
+## <a name="coleipframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>コレクティブフレームウンデックス::Dオックペイン左
 
 ウィンドウを別のウィンドウの左側にドッキングします。
 
@@ -258,21 +258,21 @@ BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-からドッキングするペインへのポインター。
+*pバー*<br/>
+[in]ドッキングするペインへのポインター。
 
-*自分の*<br/>
-からオリジンとして機能するペインへのポインター。
+*の*<br/>
+[in]原点として機能するペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合は TRUE を返します。 それ以外の場合は FALSE を返します。
+操作が成功した場合は TRUE を返します。 それ以外の場合は、FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-複数のペインオブジェクトを事前に定義された順序でドッキングするには、このメソッドを呼び出します。 このメソッドは、 *Pbar*によって指定されたペインを、によって指定されたペインの左側にドッキングします。
+いくつかのペイン オブジェクトを定義済みの順序でドッキングします。 このメソッドは *、pLeftOf*で指定されたペインの左側に*pBar*で指定されたペインをドッキングします。
 
-##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes
+## <a name="coleipframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>を有効にする自動非表示ウィンドウ
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -280,13 +280,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-から*dwDockStyle*<br/>
+[in]*ドウドックスタイル*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enabledocking"></a>  COleIPFrameWndEx::EnableDocking
+## <a name="coleipframewndexenabledocking"></a><a name="enabledocking"></a>コレリップフレームオンドエクスックス::有効化ドッキング
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -294,15 +294,15 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-から*dwDockStyle*<br/>
+[in]*ドウドックスタイル*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enablepanemenu"></a>  COleIPFrameWndEx::EnablePaneMenu
+## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>をクリックします。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -314,18 +314,18 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Benable*<br/>
-から*uiCustomizeCmd*<br/>
-から*strCustomizeLabel*<br/>
-から*Uiviewtoolbarsmenuentryid*<br/>
-から*bContextMenuShowsToolbarsOnly*<br/>
-から*bViewMenuShowsToolbarsOnly*<br/>
+[in]*b 有効にする*<br/>
+[in]*ui カスタマイズCmd*<br/>
+[in]*ラベルをカスタマイズする*<br/>
+[in]*メニュー ID*<br/>
+[in]*メニュー表示ツールバーのみ*<br/>
+[in]*メニュー表示ツールバーのみ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup
+## <a name="coleipframewndexgetactivepopup"></a><a name="getactivepopup"></a>コレップフレームウンドエクスックス::ゲットアクティブポップアップ
 
-現在表示されているポップアップメニューへのポインターを返します。
+現在表示されているポップアップ メニューへのポインターを返します。
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -333,13 +333,13 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなポップアップメニューへのポインター。それ以外の場合は NULL。
+アクティブなポップアップ メニューへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用して、現在表示されている[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトへのポインターを取得します。
+このメソッドは、現在表示されている[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトへのポインターを取得するために使います。
 
-##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow
+## <a name="coleipframewndexgetcontainerframewindow"></a><a name="getcontainerframewindow"></a>を指定します。
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -347,11 +347,11 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdefaultresid"></a>COleIPFrameWndEx:: GetDefaultResId
+## <a name="coleipframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>を返します。
 
-フレームウィンドウがメニューを読み込んだときに指定されたメニューリソース ID を返します。
+フレーム ウィンドウがメニューを読み込んだときに指定されたメニュー リソース ID を返します。
 
 ```
 UINT GetDefaultResId() const;
@@ -359,13 +359,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>戻り値
 
-メニューのリソース ID を返します。フレームウィンドウにメニューバーがない場合は0を返します。
+メニューのリソース ID を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出し`COleIPFrameWndEx::LoadFrame`て、フレームウィンドウがメニューリソースを読み込んだときに指定されたリソース ID を取得するには、この関数を呼び出します。
+この関数を呼び出して、フレーム ウィンドウが を呼び出`COleIPFrameWndEx::LoadFrame`してメニュー リソースを読み込んだときに指定されたリソース ID を取得します。
 
-##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame
+## <a name="coleipframewndexgetdockframe"></a><a name="getdockframe"></a>をクリックします。
 
 ```
 CFrameWnd* GetDockFrame();
@@ -373,9 +373,9 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdockingmanager"></a>COleIPFrameWndEx:: Getdoc王国マネージャー
+## <a name="coleipframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>をクリックします。
 
 ```
 CDockingManager* GetDockingManager();
@@ -383,9 +383,9 @@ CDockingManager* GetDockingManager();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getmainframe"></a>  COleIPFrameWndEx::GetMainFrame
+## <a name="coleipframewndexgetmainframe"></a><a name="getmainframe"></a>を使用します。
 
 ```
 CFrameWnd* GetMainFrame();
@@ -393,9 +393,9 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getmenubar"></a>COleIPFrameWndEx:: GetMenuBar
+## <a name="coleipframewndexgetmenubar"></a><a name="getmenubar"></a>をクリックします。
 
 フレーム ウィンドウにアタッチされているメニュー バーのオブジェクトへのポインターを返します。
 
@@ -405,13 +405,13 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>戻り値
 
-メニューバーオブジェクトへのポインター。
+メニュー バー オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`COleIPFrameWndEx`オブジェクトに属するメニューバーオブジェクトへのポインターを取得するには、この関数を使用します。
+この関数は、オブジェクトに属するメニュー バー オブジェクトへのポインターを`COleIPFrameWndEx`取得するために使います。
 
-##  <a name="getpane"></a>COleIPFrameWndEx:: GetPane
+## <a name="coleipframewndexgetpane"></a><a name="getpane"></a>コレップフレームウンドエクスックス::ゲットペイン
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -419,13 +419,13 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>パラメーター
 
-から*nID*<br/>
+[in]*nID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars
+## <a name="coleipframewndexgettearoffbars"></a><a name="gettearoffbars"></a>コレップフレームオードエクスックス::ゲットティアオフバーズ
 
 ティアオフ状態にあるウィンドウ オブジェクトの一覧を返します。
 
@@ -435,13 +435,13 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CObList` [Cbasepane クラス](../../mfc/reference/cbasepane-class.md)から派生したオブジェクトへのポインターのコレクションを含むオブジェクトへの参照。
+派生`CObList`オブジェクトの[CBasePane クラス](../../mfc/reference/cbasepane-class.md)へのポインターのコレクションを含むオブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクト`COleIPFrameWndEx`は、ティアオフメニューのコレクションを[cbasepane クラス](../../mfc/reference/cbasepane-class.md)派生オブジェクトのリストとして保持します。 このリストへの参照を取得するには、このメソッドを使用します。
+オブジェクト`COleIPFrameWndEx`は[、CBasePane クラス](../../mfc/reference/cbasepane-class.md)派生オブジェクトのリストとして、ティアオフ メニューのコレクションを保持します。 このメソッドは、このリストへの参照を取得するために使います。
 
-##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
+## <a name="coleipframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>ツールヒントテキスト::ツールボタン
 
 ボタンのツールヒントが表示される前に、フレームワークによって呼び出されます。
 
@@ -453,25 +453,25 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="parameters"></a>パラメーター
 
-*pButton*<br/>
-からボタンへのポインター。
+*ボタン*<br/>
+[in]ボタンへのポインター。
 
-*strTTText*<br/>
-からツールヒントテキストへのポインター。
+*文字列*<br/>
+[in]ツールヒント テキストへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では、0が返されます。
+既定の実装では 0 が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ツールバーボタンのツールヒントの表示をカスタマイズするには、この関数をオーバーライドします。
+ツール バー ボタンのツールヒントの表示をカスタマイズするには、この関数をオーバーライドします。
 
-##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars
+## <a name="coleipframewndexinitusertoobars"></a><a name="initusertoobars"></a>コレップフレームーンデックス::イニトユーザートゥーバーズ
 
-フレームワークがユーザー定義のツールバーに割り当てるコントロール Id の範囲を指定します。
+フレームワークがユーザー定義のツール バーに割り当てるコントロール ID の範囲を指定します。
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -480,20 +480,20 @@ void InitUserToolbars(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRegEntry*<br/>
-からライブラリにユーザーツールバーの設定が格納されているレジストリエントリ。
+*をクリックします。*<br/>
+[in]ライブラリがユーザー ツール バー設定を格納するレジストリ エントリ。
 
-*最初に uiUserToolbarFirst 行う*<br/>
-から最初のユーザー定義ツールバーに割り当てられたコントロール ID。
+*最初にユーザーツール バー*<br/>
+[in]最初のユーザー定義ツールバーに割り当てられたコントロール ID。
 
-*uiUserToolbarLast*<br/>
-から最後にユーザーが定義したツールバーに割り当てられたコントロール ID。
+*最後のユーザーツール*<br/>
+[in]最後のユーザー定義ツールバーに割り当てられたコントロール ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーが動的に定義するツールバーに割り当てのために、コントロール Id の範囲を初期化するには、この関数を使用します。 *Uiusertoolbarfirst*および*uiusertoolbarfirst*は、許可されているツールバーコントロール Id の範囲を最後に定義します。 ユーザー定義ツールバーの作成を無効にするには、 *Uiusertoolbarfirst*または*uiusertoolbarfirst* -1 に設定します。
+この関数を使用して、ユーザーが動的に定義するツール バーへの割り当て用に、コントロール ID の範囲を初期化します。 パラメーター *uiUserToolbarFirst*と*uiUserToolbarLast*は、許可されているツール バー コントロール ID の範囲を定義します。 ユーザー定義ツールバーの作成を無効にするには *、uiUserToolbarFirst*または*uiUserToolbarLast*を -1 に設定します。
 
-##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane
+## <a name="coleipframewndexinsertpane"></a><a name="insertpane"></a>を挿入します。
 
 ```
 BOOL InsertPane(
@@ -504,17 +504,17 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pControlBar*<br/>
-から*Ptarget*<br/>
-から*Bafter*<br/>
+[in]*コントロールバー*<br/>
+[in]*pターゲット*<br/>
+[in]*bアフター*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ismenubaravailable"></a>COleIPFrameWndEx:: IsMenuBarAvailable
+## <a name="coleipframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>利用可能なメニューバー
 
-メニューバーオブジェクトへのポインターが NULL でないかどうかを判断します。
+メニュー バー オブジェクトへのポインターが NULL でないかどうかを判断します。
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -522,13 +522,13 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>戻り値
 
-フレームウィンドウにメニューバーがある場合は、0以外の値を返します。それ以外の場合は0を返します。
+フレーム ウィンドウにメニュー バーがある場合は、0 以外の値を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを呼び出して、フレームウィンドウがメニューバーオブジェクトへの NULL 以外のポインターを保持するかどうかを判断します。
+フレーム ウィンドウがメニュー バー オブジェクトへの NULL 以外のポインターを保持しているかどうかを調べます。
 
-##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite
+## <a name="coleipframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>コレクリップフレームオンドエクスックス::イスポイントニアドックサイト
 
 ```
 BOOL IsPointNearDockSite(
@@ -539,15 +539,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-から*ポイント*<br/>
-から*Dwbaralignment*<br/>
-から*Bouteredge*<br/>
+[in]*ポイント*<br/>
+[in]*整列*<br/>
+[in]*ボターエッジ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="loadframe"></a>  COleIPFrameWndEx::LoadFrame
+## <a name="coleipframewndexloadframe"></a><a name="loadframe"></a>を使用します。
 
 ```
 virtual BOOL LoadFrame(
@@ -559,16 +559,16 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>パラメーター
 
-から*nIDResource*<br/>
-から*Dwdefaultstyle*<br/>
-から*pParentWnd*<br/>
-から*pContext*<br/>
+[in]*リソース*<br/>
+[in]*デフォルトスタイル*<br/>
+[in]*親子*<br/>
+[in]*コンテキスト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onclosedockingpane"></a>COleIPFrameWndEx:: Onclosedocのウィンドウ
+## <a name="coleipframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>コレクリップフレームオンデックス::オンクローズドッキングペイン
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -576,13 +576,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>パラメーター
 
-から*CDockablePane&#42;*<br/>
+[in]*&#42;*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="oncloseminiframe"></a>  COleIPFrameWndEx::OnCloseMiniFrame
+## <a name="coleipframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>コレクリップフレームオンデックス::オンクローズミニフレーム
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -590,13 +590,13 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>パラメーター
 
-から*CPaneFrameWnd&#42;*<br/>
+[in]*&#42;*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
+## <a name="coleipframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>をクリックします。
 
 アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。
 
@@ -606,14 +606,14 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenuPopup*<br/>
-からポップアップメニューオブジェクトへのポインター。
+*ポップアップ*<br/>
+[in]ポップアップ メニュー オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-WM_DESTROY メッセージを処理するときに`CMFCPopupMenu` 、オブジェクトから通知を受信するには、このメソッドをオーバーライドします。
+オブジェクトがメッセージを処理するときに、`CMFCPopupMenu`オブジェクトから通知を受信するには、このメソッドWM_DESTROYオーバーライドします。
 
-##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg
+## <a name="coleipframewndexoncmdmsg"></a><a name="oncmdmsg"></a>を使用します。
 
 ```
 virtual BOOL OnCmdMsg(
@@ -625,16 +625,16 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-から*nID*<br/>
-から*nCode*<br/>
-から*Pextra*<br/>
-から*pHandlerInfo*<br/>
+[in]*nID*<br/>
+[in]*nコード*<br/>
+[in]*pエクストラ*<br/>
+[in]*をクリックします。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx:: OnDrawMenuImage
+## <a name="coleipframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>をクリックします。
 
 メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。
 
@@ -648,23 +648,23 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキストへのポインター。
+[in]デバイス コンテキストへのポインター。
 
-*pMenuButton*<br/>
-からメニューボタンへのポインター。
+*ボタン*<br/>
+[in]メニュー ボタンへのポインター。
 
-*rectImage*<br/>
-からメニュー項目に関連付けられているイメージ。
+*レクトイメージ*<br/>
+[in]メニュー項目に関連付けられているイメージ。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では、何も実行されず、0が返されます。
+既定の実装では何も行われなくて、0 が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-の派生オブジェクトによって所有されて`COleIPFrameWndEx`いるメニューバーに属するメニュー項目のイメージ描画をカスタマイズする場合は、このメソッドをオーバーライドします。
+derived オブジェクトが所有するメニュー バーに属するメニュー項目のイメージ描画をカスタマイズする場合は、`COleIPFrameWndEx`このメソッドをオーバーライドします。
 
-##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
+## <a name="coleipframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>をクリックします。
 
 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。
 
@@ -678,21 +678,21 @@ virtual void OnDrawMenuLogo(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキストへのポインター。
+[in]デバイス コンテキストへのポインター。
 
-*pMenu*<br/>
-からポップアップメニューオブジェクトへのポインター。
+*メニュー*<br/>
+[in]ポップアップ メニュー オブジェクトへのポインター。
 
-*rectLogo*<br/>
-から表示するロゴへのポインター。
+*レクトロゴ*<br/>
+[in]表示するロゴへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドをオーバーライドすると、 `COleIPFrameWndEx`から派生したオブジェクトによって所有されているメニューバーに関連付けられたポップアップメニューにロゴが表示されます。 既定の実装では、何も行われません。
+派生オブジェクトが所有するメニュー バーに関連付けられているポップアップ メニューにロゴを表示するには、`COleIPFrameWndEx`このメソッドをオーバーライドします。 既定の実装では、何も行われません。
 
-##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
+## <a name="coleipframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>コレップフレームオンドエクスックス::オンメニューボタンツールキットヒットテスト
 
-[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。
+[オブジェクト](../../mfc/reference/cmfctoolbarbutton-class.md)がWM_NCHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -702,19 +702,19 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-[入力] メニューボタンへの pButton ポインター。
+[in] p ボタンのメニュー ボタンへのポインター。
 
-[out] pTI 構造体へ`TOOLINFO`のポインター。
+`TOOLINFO` [out] 構造体への pTI ポインター。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では、何も実行されず、0が返されます。 *PTI*パラメーターに値が設定されている場合、実装は0以外の値を返す必要があります。
+既定の実装では何も行われなくて、0 が返されます。 *pTI*パラメーターを満たす場合、実装は 0 以外の値を返す必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 特定のメニュー項目に関するツールヒント情報を提供するには、このメソッドをオーバーライドします。
 
-##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame
+## <a name="coleipframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>コレップフレームオンデックス::オンムーブミニフレーム
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -722,13 +722,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pframe*<br/>
+[in]*フレーム*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onsetpreviewmode"></a>  COleIPFrameWndEx::OnSetPreviewMode
+## <a name="coleipframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>を設定します。
 
 ```
 virtual void OnSetPreviewMode(
@@ -738,12 +738,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bpreview*<br/>
-から*Pstate*<br/>
+[in]*bプレビュー*<br/>
+[in]*pステート*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx:: OnShowCustomizePane
+## <a name="coleipframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>ウィンドウのウィンドウを表示します。
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -753,14 +753,14 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pMenuPane*<br/>
-から*Uitoolbarid*<br/>
+[in]*メニューペイン*<br/>
+[in]*uiツールバー ID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onshowpanes"></a>  COleIPFrameWndEx::OnShowPanes
+## <a name="coleipframewndexonshowpanes"></a><a name="onshowpanes"></a>コレップフレームオンドエクスックス::オンショーペイン
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -768,15 +768,15 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>パラメーター
 
-から*bShow*<br/>
+[in]*bショー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onshowpopupmenu"></a>  COleIPFrameWndEx::OnShowPopupMenu
+## <a name="coleipframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>コレクリップフレームオンドエクスックス::オンショーポップアップメニュー
 
-ポップアップメニューが表示されたときにフレームワークによって呼び出されます。
+ポップアップ メニューが表示されるときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -784,20 +784,20 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenuPopup*<br/>
-から表示されるポップアップメニューへのポインター。
+*ポップアップ*<br/>
+[in]表示されるポップアップ メニューへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では、何も実行されず、0以外の値が返されます。 ポップアップメニューを表示できない場合は、実装によって FALSE が返されます。
+既定の実装では何も実行されず、0 以外の値が返されます。 ポップアップ メニューを表示できない場合は、実装で FALSE を返す必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポップアップメニューの表示をカスタマイズするには、このメソッドをオーバーライドします。 たとえば、メニューボタンをカラーメニューボタンに変更したり、ティアオフバーを初期化したりすることができます。
+ポップアップ メニューの表示をカスタマイズするには、このメソッドをオーバーライドします。 たとえば、メニュー ボタンを色のメニュー ボタンに変更したり、ティアオフ バーを初期化したりできます。
 
-##  <a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
+## <a name="coleipframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>コレップフレームオンドエクスックス::オンティアオフメニュー
 
-ティアオフバーのあるメニューをユーザーが選択したときにフレームワークによって呼び出されます。
+ユーザーがティアオフ バーを持つメニューを選択したときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -807,21 +807,21 @@ virtual BOOL OnTearOffMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenuPopup*<br/>
-からユーザーが選択したポップアップメニューへのポインター。
+*ポップアップ*<br/>
+[in]ユーザーが選択したポップアップ メニューへのポインター。
 
-*pBar*<br/>
-からメニューをホストするペインへのポインター。
+*pバー*<br/>
+[in]メニューをホストするペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-フレームワークでポップアップメニューをアクティブにする場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
+フレームワークでポップアップ メニューをアクティブにする場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ティアオフバーの設定をカスタマイズする場合は、この関数をオーバーライドします。
+ティアオフ バーの設定をカスタマイズする場合は、この関数をオーバーライドします。
 
-##  <a name="panefrompoint"></a>COleIPFrameWndEx::P aneFromPoint
+## <a name="coleipframewndexpanefrompoint"></a><a name="panefrompoint"></a>コレップフレームオーネックス::Pアンネ・フロムポイント
 
 ```
 CBasePane* PaneFromPoint(
@@ -839,17 +839,17 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-から*ポイント*<br/>
-から*Nsensitivity*<br/>
-から*bExactBar*<br/>
-から*Prtcbartype*<br/>
-から*dwAlignment*<br/>
+[in]*ポイント*<br/>
+[in]*n感度*<br/>
+[in]*をクリックします。*<br/>
+[in]*タイプを変更します。*<br/>
+[in]*dw配置*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="pretranslatemessage"></a>  COleIPFrameWndEx::PreTranslateMessage
+## <a name="coleipframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>メッセージを再変換:P
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -857,13 +857,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-から*pMsg*<br/>
+[in]*をクリックします。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="recalclayout"></a>  COleIPFrameWndEx::RecalcLayout
+## <a name="coleipframewndexrecalclayout"></a><a name="recalclayout"></a>コレップフレームーンデックス::リカルクレイアウト
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -871,13 +871,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bnotify*<br/>
+[in]*通知する*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removepanefromdockmanager"></a>  COleIPFrameWndEx::RemovePaneFromDockManager
+## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>をクリックします。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -888,36 +888,36 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pControlBar*<br/>
-から*Bdestroy*<br/>
-から*bAdjustLayout*<br/>
-から*Bautohide に隠す*<br/>
-から*Pbarreplacement*<br/>
+[in]*コントロールバー*<br/>
+[in]*bデストロイ*<br/>
+[in]*レイアウトを調整する*<br/>
+[in]*b 自動非表示*<br/>
+[in]*交換用*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setdockstate"></a>COleIPFrameWndEx::SetDockState
+## <a name="coleipframewndexsetdockstate"></a><a name="setdockstate"></a>を設定します。
 
-フレームウィンドウに属するペインに、指定したドッキング状態を適用します。
+指定したドッキング状態を、フレーム ウィンドウに属するペインに適用します。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *state*<br/>
-からドッキング状態を指定します。
+[in]ドッキング状態を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`COleIPFrameWndEx`オブジェクトに属するペインの新しいドッキング状態を指定するには、この関数を使用します。
+この関数を使用して、オブジェクトに属するペインの新しいドッキング状態を`COleIPFrameWndEx`指定します。
 
-##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx:: SetupToolbarMenu
+## <a name="coleipframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>をクリックします。
 
 ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -927,19 +927,19 @@ void SetupToolbarMenu(
 ### <a name="parameters"></a>パラメーター
 
 *メニュー*<br/>
-から変更する[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトへの参照。
+[in]変更する[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトへの参照。
 
-*uiViewUserToolbarCmdFirst*<br/>
-から最初のユーザー定義コマンドを指定します。
+*最初に表示します。*<br/>
+[in]最初のユーザー定義コマンドを指定します。
 
-*uiViewUserToolbarCmdLast*<br/>
-から最後のユーザー定義コマンドを指定します。
+*インターフェイスツールを使用します。*<br/>
+[in]最後のユーザー定義コマンドを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="showpane"></a>COleIPFrameWndEx:: ShowPane
+## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>コレップフレームーンデックス::ショーペイン
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -949,14 +949,14 @@ void ShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
-から*bShow*<br/>
-から*Bdelay*<br/>
-から*Bactivate*<br/>
+[in]*pバー*<br/>
+[in]*bショー*<br/>
+[in]*bディレイ*<br/>
+[in]*bアクティブ化*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="winhelpa"></a>COleIPFrameWndEx:: WinHelpA
+## <a name="coleipframewndexwinhelpa"></a><a name="winhelpa"></a>コレップフレームオーンデックス::ウィンヘルプア
 
 WinHelp アプリケーションまたはコンテキスト ヘルプを起動するために、フレームワークによって呼び出されます。
 
@@ -968,16 +968,16 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] dwData は、 *Ncmd*によって指定されたヘルプの種類に必要なデータを指定します。
+[in] dwData *nCmd*で指定されたヘルプの種類に必要なデータを指定します。
 
 *nCmd*<br/>
-から要求されたヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の「 [WinHelp 関数](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
+[in]要求されたヘルプの種類を指定します。 考えられる値の一覧と *、それらが dwData*パラメーターに与える影響については、Windows SDK の[WinHelp 関数](/windows/win32/api/winuser/nf-winuser-winhelpw)を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)<br/>
-[CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)
+[クラス](../../mfc/reference/cframewndex-class.md)<br/>
+[クラスを作成します。](../../mfc/reference/cmdiframewndex-class.md)

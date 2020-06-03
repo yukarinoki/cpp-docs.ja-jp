@@ -4,45 +4,49 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: e1aea573e78e6f6a9a86bc4e3987ee448815f329
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196169"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168697"
 ---
-# <a name="understanding-parse-trees"></a>パース ツリーについて
+# <a name="understanding-parse-trees"></a>解析ツリーについて
 
-次の形式である各解析ツリー、レジストラー スクリプトでは、1 つまたは複数の解析ツリーを定義できます。
+レジストラースクリプトでは、1つまたは複数の解析ツリーを定義できます。各解析ツリーには次の形式があります。
 
-```
-<root key>{<registry expression>}+
-```
+> \<ルートキー> {\<registry expression>} +
 
-それぞれの文字について以下に説明します。
+ここで、
 
-```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
-    HKEY_LOCAL_MACHINE | HKEY_USERS |
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |
-    HKLM | HKU | HKPD | HKDD | HKCC
-<registry expression> ::= <Add Key> | <Delete Key>
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
-<Delete Key> ::= Delete<Key Name>
-<Key Name> ::= '<AlphaNumeric>+'
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
-<Key Value> ::== <Key Type><Key Name>
-<Key Type> ::= s | d
-<Key Value> ::= '<AlphaNumeric>'
-```
+> \<ルートキー>:: = HKEY_CLASSES_ROOT |HKEY_CURRENT_USER | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE |HKEY_USERS | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA |HKEY_DYN_DATA | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG |HKCR |HKCU | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKLM |HKU |H/D |HKDD |HKCC
+
+> \<レジストリ式>:: = \<キーの追加> |\<キー> の削除
+
+> \<キーの追加>:: =**[ForceRemove** | **noremove** | **val**]\<キー名>\<[キー値>] [\<{追加キー>}]
+
+> \<キーの削除>:: = キー名の**削除**\<>
+
+> \<キー名>:: = **'**\<英数字>+**'**
+
+> \<英数字>:: = *NULL 以外の任意の文字、つまり ASCII 0*
+
+> \<キー値>:: = \<キーの種類\<>キー名>
+
+> \<キーの種類>:: = **s** | **d**
+
+> \<キー値>:: = **'**\<英数字>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT` `HKCR`は同等です。`HKEY_CURRENT_USER`と`HKCU`は同等; で、これをします。
+> `HKEY_CLASSES_ROOT`と`HKCR`は同等です。`HKEY_CURRENT_USER`と`HKCU`は同等です。などなど。
 
-解析ツリーは、複数のキーとサブキーを追加できます、\<ルート キー >。 そのため、そのサブキーのハンドルを開いたままパーサーのすべてのサブキーの解析が完了するまで。 このアプローチは、次の例に示すように、一度に 1 つのキーで動作しているよりも効率的です。
+解析ツリーでは、 \<ルートキー> に複数のキーとサブキーを追加できます。 その場合、サブキーのハンドルは、パーサーがすべてのサブキーの解析を完了するまで開いたままになります。 この方法は、次の例に示すように、一度に1つのキーを操作するよりも効率的です。
 
-```
+```rgs
 HKEY_CLASSES_ROOT
 {
     'MyVeryOwnKey'
@@ -55,8 +59,8 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-レジストラーが最初に開くここでは、(作成)`HKEY_CLASSES_ROOT\MyVeryOwnKey`します。 認識し、`MyVeryOwnKey`サブキーがあります。 キーを閉じるのではなく`MyVeryOwnKey`、レジストラーが、ハンドルを保持し、開きます (作成)`HasASubKey`この親ハンドルを使用します。 (システム レジストリできます低速親ハンドルが開いていない場合) です。ため、開いて`HKEY_CLASSES_ROOT\MyVeryOwnKey`を開くと`HasASubKey`で`MyVeryOwnKey`親は開始よりも高速`MyVeryOwnKey`終了、 `MyVeryOwnKey`、して開く`MyVeryOwnKey\HasASubKey`します。
+ここでは、最初にレジストラーが開き`HKEY_CLASSES_ROOT\MyVeryOwnKey`ます (作成します)。 次に、サブ`MyVeryOwnKey`キーがあることを確認します。 に対し`MyVeryOwnKey`てキーを閉じるのではなく、レジストラーはハンドルを保持し`HasASubKey` 、この親ハンドルを使用してを開きます (作成します)。 (親ハンドルが開いていない場合は、システムレジストリの速度が低下する可能性があります)。このため、 `HKEY_CLASSES_ROOT\MyVeryOwnKey`を開いて`HasASubKey` 、 `MyVeryOwnKey`を親として開くと`MyVeryOwnKey`、を`MyVeryOwnKey`開く、閉じる、 `MyVeryOwnKey\HasASubKey`および開くよりも高速です。
 
 ## <a name="see-also"></a>関連項目
 
-[レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193878"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>リンカー ツールの警告 LNK4206
 
-> プリコンパイル済みの型情報が見つかりませんでした。'*filename*' いないリンクまたは上書きはありませんデバッグ情報オブジェクトをリンク。
+> プリコンパイル済みの型情報が見つかりません。'*filename*' はリンクされていないか、上書きされています。デバッグ情報がない場合と同様にオブジェクトをリンクしています
 
-*Filename*を使用してコンパイルされたオブジェクト ファイルは、 [/Yc](../../build/reference/yc-create-precompiled-header-file.md)、LINK コマンドで指定されなかったか、または上書きされました。
+[/Yc](../../build/reference/yc-create-precompiled-header-file.md)を使用してコンパイルされた*filename*オブジェクトファイルが LINK コマンドで指定されていないか、上書きされました。
 
-この警告の一般的なシナリオは、コードからその .obj にシンボル参照がないと/Yc でコンパイルされた .obj ファイルが、ライブラリの場合は。  その場合は、リンカーはいないを使用して (またはも参照してください)、.obj ファイル。  このような状況でコードを再コンパイルして使用する必要があります[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)を使用してコンパイルされたオブジェクトの[/Yu](../../build/reference/yu-use-precompiled-header-file.md)します。
+この警告の一般的なシナリオは、/Yc を使用してコンパイルされた .obj がライブラリ内にあり、コードからその .obj へのシンボル参照がない場合です。  その場合、リンカーは .obj ファイルを使用しない (または参照する) ことができません。  このような場合は、コードを再コンパイルし、 [/yu](../../build/reference/yu-use-precompiled-header-file.md)を使用してコンパイルされたオブジェクトに[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)を使用する必要があります。

@@ -1,22 +1,22 @@
 ---
-title: コンパイラ エラー C2654
+title: コンパイラエラー C2654
 ms.date: 11/04/2016
 f1_keywords:
 - C2654
 helpviewer_keywords:
 - C2654
 ms.assetid: ca7de1bd-576b-40bf-96fc-a91984827d20
-ms.openlocfilehash: 31bd7cb3d6566b7a0cb1d7f264a2f88f9811ef46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1a3bc8c87a4c4e0d8237d8c7a283f34a6053b7a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177197"
 ---
-# <a name="compiler-error-c2654"></a>コンパイラ エラー C2654
+# <a name="compiler-error-c2654"></a>コンパイラエラー C2654
 
-'identifier': メンバー関数の外でメンバーがアクセスしようとしました
+' identifier ': メンバー関数の外にあるメンバーにアクセスしようとしました
 
-宣言内でのメンバーにアクセスします。 メンバー データは、メンバー関数でのみアクセスできます。
+メンバーには、宣言内でアクセスします。 メンバーデータには、メンバー関数でのみアクセスできます。
 
-このエラーは、宣言内で変数を初期化しようとするときに発生することができます。 この目的のコンス トラクターを使用します。
+このエラーは、宣言で変数を初期化しようとしたときに発生する可能性があります。 このためには、コンストラクターを使用します。

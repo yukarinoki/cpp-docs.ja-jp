@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257963"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423967"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 演算子
 
@@ -57,7 +57,7 @@ bool operator!=(
 
 数値が等しくない場合は **true**、数値が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複素数が等しいのは、その実数部が等しく、かつその虚数部も等しい場合だけです。 それ以外の場合は等しくありません。
 
@@ -196,7 +196,7 @@ complex<Type> operator*(
 
 値と型がパラメーター入力で指定された 2 つの数値を乗算した結果の複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -296,7 +296,7 @@ complex<Type> operator+(const complex<Type>& left);
 
 値と型がパラメーター入力で指定された 2 つの数値を加算した結果の複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。 単項演算子は*left*を返します。
 
@@ -436,7 +436,7 @@ complex<Type> operator-(const complex<Type>& left);
 
 *左*から*右*を減算した結果の複素数。値がパラメーター入力によって指定されている2つの数値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -575,7 +575,7 @@ complex<Type> operator*(
 
 パラメーター入力で指定された値の分母で分子を除算した結果の複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -685,7 +685,7 @@ basic_ostream<Elem, Traits>& operator<<(
 
 指定した複素数の値を、デカルト形式 (*実数部、虚数部*) で*ostr*に書き込みます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 出力ストリームはオーバーロードされるため、どの形式の複素数も受け入れられ、その既定の出力形式はデカルト形式となります。
 
@@ -757,7 +757,7 @@ bool operator==(
 
 数値が等しい場合は **true**、数値が等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複素数が等しいのは、その実数部が等しく、かつその虚数部も等しい場合だけです。 それ以外の場合は等しくありません。
 
@@ -886,7 +886,7 @@ basic_istream<Elem, Traits>& operator>>(
 
 指定した複素数の値を*Istr*から読み取り、*右*に戻します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 有効な入力形式は次のとおりです。
 

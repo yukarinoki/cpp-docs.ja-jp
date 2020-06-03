@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: 6955d755897d326479d2b3789edb02ff66806175
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177982"
 ---
 # <a name="member-function-templates"></a>メンバー関数テンプレート
 
@@ -85,7 +85,7 @@ int main()
 
 メンバー テンプレート関数は、仮想関数にできません。また、基底クラスの仮想関数と同じ名前で宣言されている場合に、基底クラスから仮想関数をオーバーライドできません。
 
-次の例では、テンプレート化されたユーザー定義の変換を示しています。
+次の例は、テンプレート化されたユーザー定義の変換を示しています。
 
 ```cpp
 // templated_user_defined_conversions.cpp
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数テンプレート](../cpp/function-templates.md)

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187571"
 ---
-# <a name="variantt-relational-operators"></a>_variant_t 関係演算子
+# <a name="_variant_t-relational-operators"></a>_variant_t 関係演算子
 
 **Microsoft 固有の仕様**
 
@@ -44,21 +44,21 @@ bool operator!=(
 #### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-A`VARIANT`と比較される、`_variant_t`オブジェクト。
+`_variant_t` オブジェクトと比較する `VARIANT`。
 
-*pSrc*<br/>
-ポインター、`VARIANT`と比較される、`_variant_t`オブジェクト。
+*.Psrc*<br/>
+`_variant_t` オブジェクトと比較する `VARIANT` へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-返します**true**比較が保持している場合**false**かどうか。
+比較が保持される場合は**true** 、それ以外の場合は**false**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-比較、`_variant_t`オブジェクトを`VARIANT`等しいかどうかをテストします。
+`_variant_t` オブジェクトと `VARIANT`を比較し、等しいかどうかをテストします。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_variant_t クラス](../cpp/variant-t-class.md)

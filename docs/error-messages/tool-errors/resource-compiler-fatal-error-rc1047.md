@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1047
 ms.assetid: cd794a87-2634-4d25-9fd3-8c934e3c4d1e
-ms.openlocfilehash: c15105efca9cf134c157f850c6af5d63c2aefa10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c1612076b934ece7e8990277a282a0f81dd79c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182605"
 ---
 # <a name="resource-compiler-fatal-error-rc1047"></a>リソース コンパイラの致命的なエラー RC1047
 
-「が多すぎるオプション オプション、'string'」
+"オプションのオプション ' string ' が多すぎます。
 
-特定のオプションは、所定の回数を指定されました。 指定した文字列は、エラーが発生したオプションに引数です。
+指定されたオプションが指定されている回数が多すぎます。 指定された文字列は、エラーの原因となったオプションの引数です。

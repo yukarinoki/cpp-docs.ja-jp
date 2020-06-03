@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811143"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913387"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,43 +54,43 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*レジストリ*\
 検索するキーへのポインター。
 
-*base*\
+*常用*\
 検索データのベースへのポインター。
 
-*数値*\
+*少数*\
 要素の数。
 
 *幅*\
 要素の幅。
 
-\ の*比較*
+*対照*\
 2 つの要素を比較するコールバック関数。 最初の引数は*コンテキスト*ポインターです。 2番目の引数は、検索用の*キー*へのポインターです。 3番目の引数は、*キー*と比較する配列要素へのポインターです。
 
-*コンテキスト*\
+*関連*\
 比較関数内でアクセスできるオブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 **bsearch_s**は、 *base*が指す配列内の*キー*の出現箇所へのポインターを返します。 *Key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-無効なパラメーターが関数に渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+無効なパラメーターが関数に渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ### <a name="error-conditions"></a>エラー条件
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*少数*|*width*|**番号**|
-|**NULL**|任意|任意|任意|任意|**EINVAL**|
-|任意|**NULL**|任意|!= 0|任意|**EINVAL**|
-|任意|任意|任意|任意|= 0|**EINVAL**|
-|任意|任意|**NULL**|1 つ|任意|**EINVAL**|
+|*key*|*base*|*対照*|*number*|*width*|**errno**|
+|**空白**|any|any|any|any|**EINVAL**|
+|any|**空白**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**空白**|1 つ|any|**EINVAL**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Bsearch_s**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これらの要素のサイズは、それぞれ*幅*バイトです。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、ユーザーが指定したルーチンへのポインターであり、要求されたキーを配列要素と比較し、次のいずれかの値を返します。
+**Bsearch_s**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これにはサイズの*幅*バイトが含まれます。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、ユーザーが指定したルーチンへのポインターであり、要求されたキーを配列要素と比較し、次のいずれかの値を返します。
 
 |*比較*ルーチンによって返される値|説明|
 |-----------------------------------------|-----------------|
@@ -96,19 +98,21 @@ void *bsearch_s(
 |0|キーは配列要素と等しい。|
 |> 0|キーは配列要素より大きい。|
 
-*コンテキスト*ポインターは、検索対象のデータ構造体がオブジェクトの一部であり、compare 関数がオブジェクトのメンバーにアクセスする必要がある場合に便利です。 *Compare*関数は、void ポインターを適切なオブジェクト型にキャストし、そのオブジェクトのメンバーにアクセスすることができます。 *Context*パラメーターを追加することにより、 **bsearch_s**のセキュリティが強化されます。これは、*比較*関数でデータを使用できるようにするために静的変数を使用する場合に関連する再入バグを回避するために、コンテキストを追加するためです。
+*コンテキスト*ポインターは、検索対象のデータ構造体がオブジェクトの一部であり、compare 関数がオブジェクトのメンバーにアクセスする必要がある場合に便利です。 *Compare*関数は、void ポインターを適切なオブジェクト型にキャストし、そのオブジェクトのメンバーにアクセスすることができます。 *コンテキスト*パラメーターを追加することにより、 **bsearch_s**のセキュリティが強化されます。これは、*比較*関数でデータを使用できるようにするために静的変数を使用する場合に関連する再入バグを回避するために、追加のコンテキストが使用されるためです。
 
-## <a name="requirements"></a>［要件］
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**bsearch_s**|\<stdlib.h> および \<search.h>|
+|**bsearch_s**|\<stdlib.h > と \<search.h >|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-このプログラムでは、 [qsort_s](qsort-s.md)で文字列の配列を並べ替え、bsearch_s を使用して "cat" という単語を検索します。
+このプログラムでは、[qsort_s](qsort-s.md) で文字列の配列を並べ替え、bsearch_s を使用して "cat" という単語を検索します。
 
 ```cpp
 // crt_bsearch_s.cpp

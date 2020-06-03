@@ -1,106 +1,106 @@
 ---
-title: C++ 標準ライブラリに基づくコレクションを実装します。
+title: C++ 標準ライブラリ ベースのコレクションの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e80ce5e7bbc6b9c6be1615dad1ea43c18e03eb55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319437"
 ---
-# <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
+# <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリ ベースのコレクションの実装
 
-ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクションの C++ 標準ライブラリに基づくインターフェイスを実装することを有効にするインターフェイス。 このクラスの動作を理解するのには、オートメーション クライアントを目的とした、読み取り専用コレクションを実装するこのクラスを使用する簡単な例 (下記) を使用します。
+ATL は`ICollectionOnSTLImpl`、オブジェクトに C++ 標準ライブラリ ベースのコレクション インターフェイスを迅速に実装できるようにするインターフェイスを提供します。 このクラスの動作を理解するために、このクラスを使用してオートメーション クライアントを対象とした読み取り専用コレクションを実装する簡単な例 (以下) を使用します。
 
-サンプルのコードは、 [ATLCollections サンプル](../overview/visual-cpp-samples.md)します。
+サンプル コードは[、ATLCollections サンプルから取得されています](../overview/visual-cpp-samples.md)。
 
-この手順を完了するには、ことができます。
+この手順を完了するには、次の手順を実行します。
 
-- [新しい単純なオブジェクトを生成](#vccongenerating_an_object)します。
+- [新しい簡易オブジェクトを生成します](#vccongenerating_an_object)。
 
-- [IDL ファイルを編集](#vcconedit_the_idl)生成されるインターフェイス。
+- 生成[されたインターフェイスの IDL ファイルを編集](#vcconedit_the_idl)します。
 
-- [5 つの typedef を作成する](#vcconstorage_and_exposure_typedefs)コレクション アイテムの格納方法と、COM インターフェイスを使用してクライアントの公開方法について説明します。
+- コレクション項目の格納方法と、COM インターフェイスを介してコレクション項目をクライアントに公開する方法を説明する[5 つの typedef](#vcconstorage_and_exposure_typedefs)を作成します。
 
-- [ポリシー クラスを作成するには、コピー用の 2 つの typedef](#vcconcopy_classes)します。
+- [コピー ポリシー クラス用に 2 つの typedef を作成](#vcconcopy_classes)する :
 
-- [作成、列挙子とコレクションの実装の typedef](#vcconenumeration_and_collection)します。
+- [列挙子およびコレクションの実装の typedef を作成する](#vcconenumeration_and_collection)。
 
-- [コレクションの typedef を使用するウィザードで生成された C++ コードを編集](#vcconedit_the_generated_code)します。
+- [ウィザードで生成された C++ コードを編集して、コレクション typedef を使用](#vcconedit_the_generated_code)します。
 
-- [コレクションを設定するコードを追加](#vcconpopulate_the_collection)します。
+- [コレクションにデータを追加するコードを追加](#vcconpopulate_the_collection)します。
 
-##  <a name="vccongenerating_an_object"></a> 新しい単純なオブジェクトを生成します。
+## <a name="generating-a-new-simple-object"></a><a name="vccongenerating_an_object"></a>新しいシンプルオブジェクトの生成
 
-アプリケーション設定 属性 ボックスがオフになっていることを確認、新しいプロジェクトを作成します。 クラスの追加 ダイアログ ボックスを使用して、単純なオブジェクトを生成するシンプル オブジェクト ウィザードの追加と呼ばれる`Words`します。 デュアル インターフェイスと呼ばれることを確認`IWords`が生成されます。 生成されたクラスのオブジェクトは、単語 (つまり、文字列) のコレクションを表すため使用されます。
+新しいプロジェクトを作成し、[アプリケーション設定] の [属性] ボックスがクリアされていることを確認します。 ATL の [クラスの追加] ダイアログ ボックスと [シンプル`Words`オブジェクトの追加ウィザード] を使用して、 という単純オブジェクトを生成します。 呼び出される`IWords`デュアル インターフェイスが生成されていることを確認します。 生成されたクラスのオブジェクトは、単語のコレクション (文字列) を表すために使用されます。
 
-##  <a name="vcconedit_the_idl"></a> IDL ファイルの編集
+## <a name="editing-the-idl-file"></a><a name="vcconedit_the_idl"></a>IDL ファイルの編集
 
-次に、IDL ファイルを開くし、有効にするために必要な 3 つのプロパティを追加`IWords`を読み取り専用コレクション インターフェイスは、次に示すようにします。
+次に、IDL ファイルを開き、次に示すように`IWords`、読み取り専用のコレクション インターフェイスに変換するために必要な 3 つのプロパティを追加します。
 
 [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]
 
-これは、オートメーション クライアントを念頭に設計された読み取り専用コレクション インターフェイスの標準形式です。 このインターフェイスの定義内の番号付きコメントは、次のコメントに対応しています。
+これは、オートメーション クライアントを念頭に置いて設計された読み取り専用コレクション インターフェイスの標準形式です。 このインターフェイス定義の番号付きコメントは、以下のコメントに対応しています。
 
-1. オートメーション クライアントにアクセスするため、コレクション インターフェイスがデュアル、通常は、`_NewEnum`プロパティを使用して`IDispatch::Invoke`します。 ただし、オートメーション クライアントは、デュアル インターフェイスがディスパッチ インターフェイスに適していますので、vtable を使用して残りのメソッドをアクセスできます。
+1. オートメーション クライアントは を介して`_NewEnum``IDispatch::Invoke`プロパティにアクセスするため、コレクション インターフェイスは通常デュアルです。 ただし、オートメーション クライアントは vtable を介して残りのメソッドにアクセスできるため、インターフェイスを isp する場合はデュアル インターフェイスが推奨されます。
 
-1. 実行時にインターフェイスをデュアルまたはディスパッチ インターフェイスを拡張するがいない場合 (つまり、追加のメソッドまたはを使用してプロパティを提供しません`IDispatch::Invoke`)、適用する必要があります、 **nonextensible**属性の定義にします。 この属性には、コンパイル時に完全なコードの検証を実行するオートメーション クライアントが使用できます。 この場合は、インターフェイスを拡張しません。
+1. デュアル インターフェイスまたは disp インターフェイスが実行時に拡張されない場合 (つまり、追加のメソッドやプロパティを提供`IDispatch::Invoke`しない場合は、定義に**nonextenensible 属性**を適用する必要があります)。 この属性により、オートメーション クライアントはコンパイル時にコードの完全な検証を実行できます。 この場合、インターフェイスを拡張しないでください。
 
-1. DISPID を正しくは、このプロパティを使用できるオートメーション クライアントの場合に重要です。 (なに 1 つだけのアンダー スコアがあることに注意してください)。
+1. オートメーション クライアントがこのプロパティを使用できるようにする場合は、正しい DISPID が重要です。 (DISPID_NEWENUMにはアンダースコアが1つしか存在しません。
 
-1. DISPID として任意の値を指定することができます、`Item`プロパティ。 ただし、`Item`通常 DISPID_VALUE をコレクションの既定のプロパティを使用します。 これにより、オートメーション クライアントを明示的に名前を指定せず、プロパティを参照してください。
+1. プロパティの DISPID として任意の値を`Item`指定できます。 ただし、`Item`通常はDISPID_VALUEを使用してコレクションの既定のプロパティにします。 これにより、オートメーション クライアントは、明示的に名前を付けずにプロパティを参照できます。
 
-1. 戻り値を使用するデータ型、`Item`プロパティが COM クライアントにとってはできる限り、コレクションに格納されている項目の種類。 インターフェイスは、ので、標準の COM 文字列型、BSTR を使用する必要があります、文字列を返します。 できますデータ保存する別の形式で内部的にすぐにわかります。
+1. プロパティの戻り値に使用される`Item`データ型は、COM クライアントに関する限り、コレクションに格納されている項目の型です。 インターフェイスは文字列を返すため、標準の COM 文字列型 BSTR を使用する必要があります。 すぐにわかるように、データを内部で別の形式で保存できます。
 
-1. ように DISPID を使用する値、`Count`プロパティは、まったく任意です。 このプロパティの DISPID を標準はありません。
+1. プロパティの DISPID に使用される`Count`値は、完全に任意です。 このプロパティに対する標準の DISPID はありません。
 
-##  <a name="vcconstorage_and_exposure_typedefs"></a> 記憶域と露出の Typedef を作成します。
+## <a name="creating-typedefs-for-storage-and-exposure"></a><a name="vcconstorage_and_exposure_typedefs"></a>ストレージと露出用のタイプ定義の作成
 
-コレクション インターフェイスが定義されているデータを格納する方法と、列挙子を使用して、データを公開する方法を決定する必要があります。
+コレクション インターフェイスを定義したら、データの格納方法と、列挙子を介してデータを公開する方法を決定する必要があります。
 
-これらの質問に対する回答は、新しく作成されたクラスのヘッダー ファイルの先頭付近にある追加することができますの typedef の数値の形式で指定できます。
+これらの質問に対する回答は、いくつかの typedefs の形式で提供できます。
 
 [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/cpp/implementing-an-stl-based-collection_2.h)]
 
-この場合、としてデータを格納する、 **std::vector**の**std::string**秒。 **std::vector**はマネージ配列のように動作する C++ 標準ライブラリ コンテナー クラスです。 **std::string**は、C++ 標準ライブラリの文字列クラスです。 これらのクラスを簡単に文字列のコレクションを使用します。
+この場合、データを**std::string** s の**std::vector**として格納します。 **std::vector**は、C++ 標準ライブラリのコンテナー クラスで、マネージ配列のように動作します。 **std::文字列**は C++ 標準ライブラリの文字列クラスです。 これらのクラスを使用すると、文字列のコレクションを簡単に操作できます。
 
-列挙子がによって返される Visual Basic のサポートは、このインターフェイスの成功に不可欠であるため、`_NewEnum`プロパティをサポートする必要があります、`IEnumVARIANT`インターフェイス。 これは、Visual Basic で認識される唯一の列挙子インターフェイスです。
+Visual Basic のサポートは、このインターフェイスの成功に不可欠であるため、プロパティによって`_NewEnum`返される列挙子`IEnumVARIANT`は、インターフェイスをサポートする必要があります。 これは、Visual Basic で理解されている唯一の列挙子インターフェイスです。
 
-##  <a name="vcconcopy_classes"></a> コピー ポリシー クラスの Typedef を作成します。
+## <a name="creating-typedefs-for-copy-policy-classes"></a><a name="vcconcopy_classes"></a>コピー ポリシー クラスの Typedef の作成
 
-これまでに作成した typedef は、さらに、列挙子とコレクションで使用されるコピー クラスの typedef を作成する必要があるすべての情報を提供します。
+これまでに作成した typedef は、列挙子とコレクションで使用されるコピー クラスの追加の typedef を作成するために必要なすべての情報を提供します。
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、次を参照してください。 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)します。
+この例では[、atLCollections](../overview/visual-cpp-samples.md) `GenericCopy`サンプルから VCUE_Copy.h および VCUE_CopyString.h で定義されたカスタム クラスを使用できます。 このクラスは他のコードでも使用できますが、独自の`GenericCopy`コレクションで使用されるデータ型をサポートするために、さらに特殊化を定義する必要があります。 詳細については、「 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)」を参照してください。
 
-##  <a name="vcconenumeration_and_collection"></a> 列挙とコレクションの Typedef を作成します。
+## <a name="creating-typedefs-for-enumeration-and-collection"></a><a name="vcconenumeration_and_collection"></a>列挙とコレクションの Typedef の作成
 
-これでテンプレートに必要なパラメーターに特殊な`CComEnumOnSTL`と`ICollectionOnSTLImpl`typedef の形式でこのような状況のクラスが用意されています。 特化された型の使用を簡素化するには、次に示す 2 つの typedef を作成します。
+これで、`CComEnumOnSTL`と`ICollectionOnSTLImpl`クラスを特化するために必要なすべてのテンプレート パラメーターが typedef の形式で提供されました。 特殊化の使用を簡略化するには、次に示すように、2 つの typedef を作成します。
 
 [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]
 
-今すぐ`CollectionType`の特殊化のシノニムです`ICollectionOnSTLImpl`を実装する、`IWords`インターフェイスは、以前に定義されをサポートする列挙子を提供`IEnumVARIANT`します。
+ここでは`CollectionType`、前に定義`ICollectionOnSTLImpl`した`IWords`インターフェイスを実装し、 をサポート`IEnumVARIANT`する列挙子を提供する特殊化のシノニムです。
 
-##  <a name="vcconedit_the_generated_code"></a> ウィザードで生成されたコードの編集
+## <a name="editing-the-wizard-generated-code"></a><a name="vcconedit_the_generated_code"></a>ウィザードによって生成されたコードの編集
 
-派生する必要がありますので`CWords`によって表されるインターフェイスの実装から、 `CollectionType` typedef なく`IWords`以下に示すように。
+ここで、次に`CWords`示すように、typedef ではなく`CollectionType``IWords`typedef で表されるインターフェイス実装から派生する必要があります。
 
 [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]
 
-##  <a name="vcconpopulate_the_collection"></a> コレクションを設定するコードを追加します。
+## <a name="adding-code-to-populate-the-collection"></a><a name="vcconpopulate_the_collection"></a>コレクションにデータを設定するコードの追加
 
-残っていることだけは、データを持つベクトルを設定します。 この簡単な例では、クラスのコンス トラクター内のコレクションにいくつかの単語を追加できます。
+残っている唯一のことは、ベクトルにデータを入力することです。 この簡単な例では、クラスのコンストラクターでコレクションにいくつかの単語を追加できます。
 
 [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]
 
-ここで、任意のクライアントで、コードをテストできます。
+これで、選択したクライアントでコードをテストできます。
 
 ## <a name="see-also"></a>関連項目
 
 [コレクションと列挙子](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections サンプル](../overview/visual-cpp-samples.md)<br/>
+[ATL コレクションのサンプル](../overview/visual-cpp-samples.md)<br/>
 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)

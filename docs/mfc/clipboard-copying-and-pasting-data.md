@@ -1,71 +1,71 @@
 ---
-title: クリップボード:コピーと貼り付けデータ
+title: 'クリップボード : データのコピーと貼り付け'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74348dd3e790cceada9aafd718464694997316ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374566"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>クリップボード:コピーと貼り付けデータ
+# <a name="clipboard-copying-and-pasting-data"></a>クリップボード : データのコピーと貼り付け
 
-このトピックにコピーし、OLE アプリケーションでクリップボードから貼り付けを実装するために必要な最低限の作業について説明します。 確認することをお勧め、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)トピックを続行する前にします。
+ここでは、OLE アプリケーションでクリップボードにコピーして貼り付ける場合に必要な最小限の作業について説明します。 先に進む前に、[データ オブジェクトとデータ ソース (OLE) の](../mfc/data-objects-and-data-sources-ole.md)トピックを読むことをお勧めします。
 
-コピーまたは貼り付けを実装することができます、前に、[編集] メニュー、コピー、切り取り、および貼り付けのオプションを処理する関数を指定してください。
+コピーまたは貼り付けを実装する前に、まず [編集] メニューの [コピー]、[切り取り]、および [貼り付け] オプションを処理する関数を用意する必要があります。
 
-##  <a name="_core_copying_or_cutting_data"></a> コピーまたは切り取りデータ
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>データのコピーまたは切削
 
-#### <a name="to-copy-data-to-the-clipboard"></a>データをクリップボードにコピーするには
+#### <a name="to-copy-data-to-the-clipboard"></a>クリップボードにデータをコピーするには
 
-1. データをコピーする、ネイティブ データまたは埋め込みまたはリンクされた項目かどうかを決定します。
+1. コピーするデータがネイティブ データであるか、埋め込みアイテムかリンク アイテムかを決定します。
 
-   - データが埋め込まれたかリンクされている場合へのポインターを取得、`COleClientItem`が選択されているオブジェクト。
+   - データが埋め込みまたはリンクされている場合は、選択`COleClientItem`されているオブジェクトへのポインターを取得します。
 
-   - 作成から派生した新しいオブジェクトの場合は、データがネイティブ アプリケーションが、サーバー、`COleServerItem`選択したデータを格納しています。 それ以外の場合、作成、`COleDataSource`データ オブジェクト。
+   - データがネイティブで、アプリケーションがサーバーである場合は、選択したデータを含む`COleServerItem`オブジェクトから派生した新しいオブジェクトを作成します。 それ以外の場合`COleDataSource`は、データのオブジェクトを作成します。
 
-1. 選択した項目を呼び出す`CopyToClipboard`メンバー関数。
+1. 選択した項目のメンバー関数`CopyToClipboard`を呼び出します。
 
-1. 場合は、ユーザーがコピー操作ではなく切り取り操作を選択してアプリケーションから、選択したデータを削除します。
+1. ユーザーがコピー操作ではなく切り取り操作を選択した場合は、選択したデータをアプリケーションから削除します。
 
-このシーケンスの例を参照してください、`OnEditCut`と`OnEditCopy`関数で、MFC OLE サンプル プログラム[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。 手順 1 は既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを保持することに注意してください。
+このシーケンスの例については、MFC OLE`OnEditCut`サンプル`OnEditCopy`プログラム[OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)の関数と関数を参照してください。 これらのサンプルは現在選択されているデータへのポインタを保持するので、手順 1 は既に完了しています。
 
-##  <a name="_core_pasting_data"></a> データの貼り付け
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a>データの貼り付け
 
-データの貼り付けは、アプリケーションに、データの貼り付けで使用する形式を選択する必要があるため、コピーするより複雑です。
+データをアプリケーションに貼り付ける際に使用する形式を選択する必要があるため、データの貼り付けはコピーよりも複雑です。
 
-#### <a name="to-paste-data-from-the-clipboard"></a>クリップボードからデータを貼り付ける
+#### <a name="to-paste-data-from-the-clipboard"></a>クリップボードからデータを貼り付けるには
 
-1. ビュー クラスで実装`OnEditPaste`の編集 メニューから、貼り付け オプションを選択するユーザーを処理します。
+1. ビュー クラスで、[編集`OnEditPaste`] メニューの [貼り付け] オプションを選択するユーザーを処理するように実装します。
 
-1. `OnEditPaste`関数を作成、`COleDataObject`オブジェクトと呼び出しの`AttachClipboard`クリップボードのデータにこのオブジェクトをリンクするメンバー関数。
+1. 関数で`OnEditPaste`オブジェクトを`COleDataObject`作成し、そのメンバー関数`AttachClipboard`を呼び出して、このオブジェクトをクリップボード上のデータにリンクします。
 
-1. 呼び出す`COleDataObject::IsDataAvailable`を特定の形式が使用できるかどうかを確認します。
+1. 特定`COleDataObject::IsDataAvailable`の形式が使用可能かどうかを確認する呼び出し。
 
-   また、使用することができます`COleDataObject::BeginEnumFormats`アプリケーションに最適なものが見つかるまでその他の形式を検索します。
+   または、アプリケーション`COleDataObject::BeginEnumFormats`に最も適したものが見つかるまで、他の形式を探すこともできます。
 
-1. 形式の貼り付けを実行します。
+1. 形式の貼り付けを行います。
 
-この動作の例では、実装を参照してください、 `OnEditPaste` MFC OLE サンプル プログラムで定義されているビュー クラスのメンバー関数[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。
+この動作の例については、MFC OLE サンプル プログラム`OnEditPaste` [OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)で定義されているビュー クラスのメンバー関数の実装を参照してください。
 
 > [!TIP]
->  貼り付け操作を独自の関数を分離することの主な利点は、ドラッグ アンド ドロップ操作中に、アプリケーションでデータが削除されるときに、同じコードで貼り付けを使用できることです。 OCLIENT および HIERSVR のように、`OnDrop`関数を呼び出すことも`DoPasteItem`、貼り付けの操作を実装するために記述されたコードを再利用します。
+> 貼り付け操作を独自の関数に分割する主な利点は、ドラッグ アンド ドロップ操作中にアプリケーションでデータがドロップされたときに、同じ貼り付けコードを使用できることです。 OCLIENT や HIERSVR のように`OnDrop`、関数は`DoPasteItem`Paste 操作を実装するために記述されたコードを再利用して を呼び出すこともできます。
 
-[編集] メニューの貼り付け コマンドを処理するには、トピックを参照してください。 [OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)です。
+[編集] メニューの [形式を選択して貼り付け] オプションを使用するには[、「OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)」を参照してください。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
-- [その他のデータ形式の追加](../mfc/clipboard-adding-other-formats.md)
+- [他のフォーマットの追加](../mfc/clipboard-adding-other-formats.md)
 
-- [OLE データ オブジェクトとデータ ソースと統一されたデータの転送します。](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE データ オブジェクトとデータ ソースと統一されたデータ転送](../mfc/data-objects-and-data-sources-ole.md)
 
-- [OLE ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
+- [OLE のドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE●ole○](../mfc/ole-background.md)
 
 ## <a name="see-also"></a>関連項目
 

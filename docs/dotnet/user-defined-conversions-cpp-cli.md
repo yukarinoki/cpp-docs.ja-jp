@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384531"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545133"
 ---
 # <a name="user-defined-conversions-ccli"></a>ユーザー定義変換 (C++/CLI)
 
-このセクションでは参照または値型または参照型のインスタンスを変換の種類のいずれかがユーザー定義の変換 (UDC) について説明します。
+このセクションでは、変換の型の1つが値型または参照型の参照またはインスタンスである場合の、ユーザー定義変換 (UDC) について説明します。
 
-## <a name="implicit-and-explicit-conversions"></a>明示的および暗黙的な変換
+## <a name="implicit-and-explicit-conversions"></a>暗黙的な変換と明示的な変換
 
-ユーザー定義変換を暗黙的または明示的な指定できます。  UDC 暗黙の変換が情報の損失にならない場合があります。 それ以外の場合、明示的な UDC を定義する必要があります。
+ユーザー定義の変換は、暗黙的または明示的に行うことができます。  変換によって情報が失われることがない場合は、UDC を暗黙的に指定する必要があります。 それ以外の場合は、明示的な UDC を定義する必要があります。
 
-ネイティブ クラスに参照または値の型を変換するネイティブ クラスのコンス トラクターを使用できます。
+ネイティブクラスのコンストラクターを使用して、参照型または値型をネイティブクラスに変換できます。
 
-変換の詳細については、次を参照してください。[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)します。
+変換の詳細については、「[ボックス](../extensions/boxing-cpp-component-extensions.md)化と[標準変換](../cpp/standard-conversions.md)」を参照してください。
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -78,25 +78,25 @@ in N::N
 
 ## <a name="convert-from-operators"></a>変換元演算子
 
-変換元演算子は、他のクラスのオブジェクトから、演算子が定義されているクラスのオブジェクトを作成します。
+変換元演算子は、他のクラスのオブジェクトから演算子が定義されているクラスのオブジェクトを作成します。
 
-標準の C++ では、変換元演算子; をサポートしていません標準 C++ では、この目的のコンス トラクターを使用します。 ただし、CLR 型を使用する場合、Visual C は、変換元演算子を呼び出すことの構文のサポートを提供します。
+標準C++では、変換元演算子はサポートされていません。標準C++では、この目的のためにコンストラクターを使用します。 ただし、CLR 型を使用する場合C++ 、Visual は、変換元演算子を呼び出すための構文サポートを提供します。
 
-他の CLS 準拠の言語とも相互運用、対応する変換元演算子で特定のクラスの各単項のユーザー定義のコンス トラクターをラップします。
+他の CLS 準拠の言語と相互運用するには、対応する変換元演算子を使用して、特定のクラスのユーザー定義の単項コンストラクターをラップすることが必要になる場合があります。
 
 変換元演算子:
 
-- 静的関数として定義されます。
+- は、静的な関数として定義する必要があります。
 
-- できます (int、short としてなどの有効桁数が失われない変換) の暗黙的または明示的な場合、精度の損失がある可能性があります。
+- は、有効桁数が失われる可能性がある場合に、暗黙的 (short から int などの有効桁数を失う変換の場合) または明示的な場合があります。
 
-- クラスを含むオブジェクトを返します。
+- は、含んでいるクラスのオブジェクトを返します。
 
-- 唯一のパラメーターの種類として「から」型です。
+- は、唯一のパラメーター型として "from" 型を持つ必要があります。
 
-次の例では、明示的および暗黙的な「変換元」、ユーザー定義変換 (UDC) 演算子を示します。
+次のサンプルは、暗黙的および明示的な "変換元" のユーザー定義変換 (UDC) 演算子を示しています。
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -142,11 +142,11 @@ in constructor
 1
 ```
 
-## <a name="convert-to-operators"></a>変換先演算子
+## <a name="convert-to-operators"></a>変換先の演算子
 
-変換先演算子は、オペレーターがその他のオブジェクトに定義されているクラスのオブジェクトを変換します。 次の例を暗黙的な変換先、ユーザー定義変換演算子を示しています。
+変換先演算子は、演算子が定義されているクラスのオブジェクトを他のオブジェクトに変換します。 次のサンプルは、暗黙的な変換先のユーザー定義変換演算子を示しています。
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -174,9 +174,9 @@ int main() {
 10
 ```
 
-明示的なユーザー定義変換先の変換演算子は、何らかの方法でデータを失う可能性がある変換に適した。 明示的な変換先演算子を呼び出すには、キャストを使用する必要があります。
+明示的なユーザー定義変換変換演算子は、何らかの方法でデータが失われる可能性のある変換に適しています。 明示的な変換先演算子を呼び出すには、キャストを使用する必要があります。
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -204,11 +204,11 @@ int main() {
 10
 ```
 
-## <a name="to-convert-generic-classes"></a>ジェネリック クラスを変換するには
+## <a name="to-convert-generic-classes"></a>ジェネリッククラスを変換するには
 
-ジェネリック クラスを T に変換することができます。
+ジェネリッククラスを T に変換できます。
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -238,9 +238,9 @@ int main() {
 True
 ```
 
-変換コンス トラクターは、型を受け取り、オブジェクトの作成に使用します。  直接の初期化のみで、変換コンス トラクターが呼び出されますキャストでは、変換コンス トラクターは呼び出されません。 既定では、変換コンス トラクターは、CLR 型の明示的なは。
+変換コンストラクターは、型を受け取り、それを使用してオブジェクトを作成します。  変換コンストラクターは、直接初期化のみで呼び出されます。キャストは、変換コンストラクターを呼び出しません。 既定では、変換コンストラクターは CLR 型に対して明示的に使用されます。
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -274,7 +274,7 @@ int main() {
 R
 ```
 
-このコード サンプル、暗黙的な静的変換関数は、明示的な変換コンス トラクターと同じ処理を行います。
+このコードサンプルでは、暗黙的な静的変換関数は、明示的な変換コンストラクターと同じ処理を行います。
 
 ```
 public value struct V {
@@ -319,6 +319,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

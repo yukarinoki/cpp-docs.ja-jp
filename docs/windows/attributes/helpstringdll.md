@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168123"
 ---
 # <a name="helpstringdll"></a>typelib
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501475"
 *string*<br/>
 ドキュメント文字列検索を実行するために使用する DLL。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Helpstringdll** C++属性には、 [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 属性と同じ機能があります。
 
@@ -60,7 +60,7 @@ __interface IMyI
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

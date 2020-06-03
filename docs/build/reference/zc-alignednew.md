@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 041f62bbbf5f7a2750960d21d1534cf6daf4b874
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335692"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (C++17 のオーバーアライン割り当て)
 
@@ -20,19 +20,19 @@ ms.locfileid: "65934191"
 
 ## <a name="syntax"></a>構文
 
-> **/Zc:alignedNew**\[-]
+> **/Zc:整列新しい**\[-]
 
 ## <a name="remarks"></a>解説
 
-MSVC コンパイラとライブラリは、C++17 の標準オーバーアライン動的メモリ割り当てをサポートします。 **/Zc:alignedNew** オプションが指定されていると、どの基本型でも必要とされる最大の配置である `max_align_t` を超えていても、`new Example;` のような動的割り当てで*例*の配置が考慮されます。 割り当てられた型の配置が事前定義のマクロ **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_** の値として使用できる元の演算子 **new** で保証される配置を超えない場合、C++14 と同様、ステートメント `new Example;` によって `::operator new(size_t)` の呼び出しが発生します。 配置が **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_** よりも大きい場合、実装時に代わりに `::operator new(size_t, align_val_t)` を使用してメモリが取得されます。 同様に、オーバーアラインされた型の削除によって `::operator delete(void*, align_val_t)` またはサイズ設定された delete のシグネチャ `::operator delete(void*, size_t, align_val_t)` が呼び出されます。
+MSVC コンパイラとライブラリは、C++17 の標準オーバーアライン動的メモリ割り当てをサポートします。 **/Zc:alignedNew**オプションを指定すると、たとえば、基本型に`new Example;`必要な最大の配置である`max_align_t`場合でも *、Example*の配置を考慮するなどの動的割り当てが行われます。 割`new Example;`り当てられた型の配置が、定義済みのマクロ`::operator new(size_t)`**\_\_STDCPP\_\_DEFAULT NEW\_ALIGNMENT\_** の値として使用可能な元の演算子**new**によって保証された配置以下の場合、ステートメントは C++14 で行ったように呼び出されます。 配置が**\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_** より大きい場合、実装は代わりに を使用`::operator new(size_t, align_val_t)`してメモリを取得します。 同様に、オーバーアラインされた型の削除によって `::operator delete(void*, align_val_t)` またはサイズ設定された delete のシグネチャ `::operator delete(void*, size_t, align_val_t)` が呼び出されます。
 
-**/Zc:alignedNew** オプションは、[/std:c++17](std-specify-language-standard-version.md) または [/std:c++latest](std-specify-language-standard-version.md) が有効な場合にのみ使用できます。 **/std:c++17** または **/std:c++latest** では、ISO の C++17 標準に準拠するために既定で **/Zc:alignedNew** が有効になっています。 オーバーアラインされた割り当てをサポートするためだけに **new** と **delete** の演算子を実装している場合、このコードは C++17 モードでは不要になる場合があります。 このオプションをオフにし、 **/std:c++17** または **/std:c++latest** を使用したときの **new** と **delete** の動作を C++14 のものに戻すには、 **/Zc:alignedNew-** を指定します。 **new** と **delete** の演算子を実装したものの、`align_val_t` パラメーターを持つオーバーアラインされた演算子 **new** と **delete** のオーバーロードを実装する準備ができていない場合は、 **/Zc:alignedNew-** オプションを使用してコンパイラと標準ライブラリがオーバーアラインされたオーバーロードに対して呼び出しを行わないようにします。 [/permissive-](permissive-standards-conformance.md) オプションでは、 **/Zc:alignedNew** の既定の設定は変更されません。
+**/Zc:alignedNew** オプションは、[/std:c++17](std-specify-language-standard-version.md) または [/std:c++latest](std-specify-language-standard-version.md) が有効な場合にのみ使用できます。 **/std:c++17** または **/std:c++latest** では、ISO の C++17 標準に準拠するために既定で **/Zc:alignedNew** が有効になっています。 オーバーアラインされた割り当てをサポートするためだけに **new** と **delete** の演算子を実装している場合、このコードは C++17 モードでは不要になる場合があります。 このオプションをオフにし、**/std:c++17** または **/std:c++latest** を使用したときの **new** と **delete** の動作を C++14 のものに戻すには、**/Zc:alignedNew-** を指定します。 **new** と **delete** の演算子を実装したものの、`align_val_t` パラメーターを持つオーバーアラインされた演算子 **new** と **delete** のオーバーロードを実装する準備ができていない場合は、**/Zc:alignedNew-** オプションを使用してコンパイラと標準ライブラリがオーバーアラインされたオーバーロードに対して呼び出しを行わないようにします。 [/permissive-](permissive-standards-conformance.md) オプションでは、**/Zc:alignedNew** の既定の設定は変更されません。
 
 **/Zc:alignedNew** のサポートは、Visual Studio 2017 バージョン 15.5 から開始します。
 
 ## <a name="example"></a>例
 
-このサンプルは、 **/Zc:alignedNew** オプションが設定されているときの演算子 **new** と演算子 **delete** の動作を示しています。
+このサンプルは、**/Zc:alignedNew** オプションが設定されているときの演算子 **new** と演算子 **delete** の動作を示しています。
 
 ```cpp
 // alignedNew.cpp
@@ -99,11 +99,11 @@ Visual C++ の準拠に関する問題について詳しくは、「[非標準�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
+1. **[構成プロパティ** > **C/C++** > **コマンド ライン**] プロパティ ページを選択します。
 
-1. **/Zc:alignedNew** または **/Zc:alignedNew-** が含まれるように **[追加オプション]** プロパティを変更し、 **[OK]** をクリックします。
+1. **/Zc:alignedNew** または **/Zc:alignedNew-** が含まれるように **[追加オプション]** プロパティを変更し、**[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

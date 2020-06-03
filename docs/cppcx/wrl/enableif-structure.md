@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214033"
 ---
 # <a name="enableif-structure"></a>EnableIf 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -34,19 +34,19 @@ struct EnableIf<true, T>;
 型。
 
 *b*<br/>
-ブール式。
+ブール式です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-最初のテンプレート パラメーターが評価された場合は、2 番目のテンプレート パラメーターで指定された型のデータ メンバーを定義**true**します。
+最初のテンプレートパラメーターが**true**と評価された場合に、2番目のテンプレートパラメーターによって指定された型のデータメンバーを定義します。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`type`|場合テンプレート パラメーター *b*に評価される**true**、部分的特殊化は、データ メンバーを定義します。`type`型`T`します。|
+|`type`|テンプレートパラメーター *b*が**true**と評価された場合、部分的特殊化は `T`型である `type` データメンバーを定義します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,10 +54,10 @@ struct EnableIf<true, T>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** internal.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

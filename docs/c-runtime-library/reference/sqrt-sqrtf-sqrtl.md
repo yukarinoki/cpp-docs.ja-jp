@@ -1,10 +1,11 @@
 ﻿---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958109"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913913"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -70,9 +72,11 @@ long double sqrtl(
 *x*<br/>
 負でない浮動小数点値
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**long** **double**型。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**sqrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
@@ -80,9 +84,9 @@ long double sqrtl(
 
 |入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x<0|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
+|- ∞|なし|_DOMAIN|
+|x<0|なし|_DOMAIN|
 
 ## <a name="requirements"></a>必要条件
 
@@ -90,7 +94,7 @@ long double sqrtl(
 |--------------|--------------|------------------|
 |**sqrt**、 **sqrtf**、 **sqrtf**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

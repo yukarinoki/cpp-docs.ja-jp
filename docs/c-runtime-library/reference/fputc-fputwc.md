@@ -1,9 +1,11 @@
 ---
 title: fputc、fputwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputc
 - fputwc
+- _o_fputc
+- _o_fputwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956964"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910201"
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 
@@ -57,7 +60,7 @@ wint_t fputwc(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 書き込む文字。
 
 *一連*<br/>
@@ -67,9 +70,9 @@ wint_t fputwc(
 
 これらの各関数は、書き込まれた文字を返します。 **Fputc**の場合、 **EOF**の戻り値はエラーを示します。 **Fputwc**の場合、 **WEOF**の戻り値はエラーを示します。 *Stream*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの各関数は、関連付けられたファイルの位置インジケーター (定義されている場合) によって示される位置にあるファイルに1文字*c*を書き込み、必要に応じてインジケーターを進めます。 **Fputc**と**fputwc**の場合、ファイルは*stream*に関連付けられています。 ファイルが配置要求をサポートできない場合、または追加モードでファイルが開かれた場合、文字はストリームの末尾に追加されます。
 
@@ -79,10 +82,12 @@ wint_t fputwc(
 
 ルーチン固有の解説は、次のとおりです。
 
-|ルーチン|Remarks|
+|ルーチン|解説|
 |-------------|-------------|
 |**fputc**|**Putc**と同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。|
 |**fputwc**|**Fputc**のワイド文字バージョン。 *ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに従って、 *c*をマルチバイト文字またはワイド文字として書き込みます。|
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,7 +102,7 @@ wint_t fputwc(
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

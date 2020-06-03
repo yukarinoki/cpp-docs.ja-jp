@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-ms.openlocfilehash: 264753ece6cbabded21df8e6b9dbb463f811e8a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86cf8f6d894d6efaa1b49977634956dc1979a98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375159"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175430"
 ---
 # <a name="compiler-warning-level-1-c4683"></a>コンパイラの警告 (レベル 1) C4683
 
-> '*関数*': イベント ソースが 'out' のパラメーターは複数のイベント ハンドラーをフックするときに注意
+> '*function*': イベントソースに ' out' パラメーターが指定されています。複数のイベントハンドラーをフックする場合は注意が必要です
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-1 つ以上のイベント シンクが COM イベント ソースをリッスンしている、out パラメーターの値が無視される場合があります。
+複数のイベントシンクが COM イベントソースをリッスンしている場合は、out パラメーターの値が無視されることがあります。
 
-次の状況で、メモリ リークが発生する注意。
+次の状況では、メモリリークが発生することに注意してください。
 
-1. メソッドに内部的に割り当てられている、たとえば BSTR out パラメーターがあるかどうかは * です。
+1. メソッドに内部で割り当てられた out パラメーター (BSTR * など) がある場合。
 
-2. イベントには、複数のハンドラー (はマルチキャスト イベント)。
+2. イベントに複数のハンドラー (がマルチキャストイベント) がある場合。
 
-メモリ リークの理由は、out パラメーターは 1 つ以上のハンドラーによって設定されますが、最後のハンドラーによってのみ、呼び出しサイトに返されることです。
+このリークの理由は、out パラメーターは複数のハンドラーによって設定されますが、呼び出しサイトに返されるのは最後のハンドラーだけです。
 
 ## <a name="example"></a>例
 

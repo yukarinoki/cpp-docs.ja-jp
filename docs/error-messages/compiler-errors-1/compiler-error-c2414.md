@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2414
 ms.assetid: bbe94e03-862e-4990-b15e-544ae464727d
-ms.openlocfilehash: 84fa715c8bd567770f361552e203a37c44ffdde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbe627a57e5defc499a4bc5d463e0bf33494acba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205661"
 ---
 # <a name="compiler-error-c2414"></a>コンパイラ エラー C2414
 
@@ -21,4 +21,4 @@ ms.locfileid: "62402984"
 
 1. オペコードに使われているオペランドの数が正しくありません。 アセンブリ言語のリファレンス マニュアルで、正しいオペランド数を調べてください。
 
-1. 最近のプロセッサでは、オペランド数が異なる命令もサポートされます。 調整、 [/arch (最小限の CPU アーキテクチャ)](../../build/reference/arch-minimum-cpu-architecture.md)それ以降のプロセッサを使用するオプション。
+1. 最近のプロセッサでは、オペランド数が異なる命令もサポートされます。 新しいプロセッサを使用するように、 [/arch (CPU の最小アーキテクチャ)](../../build/reference/arch-minimum-cpu-architecture.md)オプションを調整します。

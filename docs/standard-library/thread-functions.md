@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375838"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[スワップ](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 現在の実行スレッドを一意に識別します。
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 現在の実行のスレッドを一意に識別する [thread::id](../standard-library/thread-class.md) 型のオブジェクト。
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 呼び出し元のスレッドをブロックします。
 
@@ -55,11 +55,11 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 期間を指定する [duration](../standard-library/duration-class.md) オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、 *Rel_time*によって指定された時間以上、呼び出し元スレッドをブロックします。 この関数では、例外がスローされません。
+この関数は、呼び出しスレッドを少なくとも*Rel_time*で指定された時間ブロックします。 この関数では、例外がスローされません。
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 少なくとも指定された時間まで、呼び出し元スレッドをブロックします。
 
@@ -75,13 +75,13 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 特定の時点を表します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>スワップ
 
-2つの**スレッド**オブジェクトの状態を交換します。
+2 つの**スレッド**オブジェクトの状態を入れ替えます。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-左**スレッド**オブジェクト。
+*左*\
+左**のスレッド**オブジェクト。
 
 *そうです*\
-右側の**スレッド**オブジェクト。
+右の**スレッド**オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 関数は `Left.swap(Right)` を呼び出します。
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>収量
 
 現在のスレッドが通常引き続き実行される場合であっても、他のスレッドを実行するようオペレーティング システムに通知します。
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>関連項目
 
-[\<thread>](../standard-library/thread.md)
+[\<スレッド>](../standard-library/thread.md)

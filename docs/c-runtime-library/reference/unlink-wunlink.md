@@ -1,9 +1,11 @@
 ---
 title: _unlink、_wunlink
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlink
 - _wunlink
+- _o__unlink
+- _o__wunlink
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957392"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909286"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink、_wunlink
 
@@ -59,33 +62,35 @@ int _wunlink(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*/db*<br/>
 削除するファイルの名前。
 
 ## <a name="return-value"></a>戻り値
 
 正常に終了した場合、これらの各関数は 0 を返します。 それ以外の場合、この関数は-1 を返し、 **errno**を**EACCES**に設定します。これは、パスが読み取り専用のファイルまたはディレクトリを指定しているか、ファイルまたはパスが見つからないことを示す**ENOENT**に設定されていることを意味します。
 
-リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Unlink**関数は、 *filename*によって指定されたファイルを削除します。 **_wunlink**のワイド文字バージョン**です。** **_wunlink**の*filename*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Unlink**関数は、 *filename*によって指定されたファイルを削除します。 **_wunlink**は **_unlink**のワイド文字バージョンです。**_wunlink**する*filename*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tunlink (_c)**|**_unlink**|**_unlink**|**_wunlink**|
+|**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_unlink**|\<io.h> および \<stdio.h>|
 |**_wunlink**|\<io.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="code-example"></a>コード例
 
@@ -111,7 +116,7 @@ int main( void )
 This file will be deleted.
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Deleted 'CRT_UNLINK.TXT'

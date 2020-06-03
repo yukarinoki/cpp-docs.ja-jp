@@ -1,17 +1,15 @@
 ---
 title: DWORD
 ms.date: 12/17/2019
-f1_keywords:
-- DWORD
 helpviewer_keywords:
 - DWORD directive
 ms.assetid: 20efd7c6-1ee6-45a1-9feb-86ce7978142a
-ms.openlocfilehash: 173700a73e311a1256db8dc4b28c77497dc74384
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 430a8ed36ab581b7e1476812875a7d9258ea8455
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318177"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440928"
 ---
 # <a name="dword"></a>DWORD
 
@@ -25,9 +23,9 @@ ms.locfileid: "75318177"
 
 型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブリファレンス](directives-reference.md)\
-[SDWORD](sdword.md)\
+[Sdword](sdword.md)\
 [DD](dd.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243788"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150681"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 関数
 
-これらの関数は c++ 11 で非推奨とし、c++ 17 では削除します。
+これらの関数は C++ 11 で非推奨とされ、C++ 17 では削除されています。
 
 ||||
 |-|-|-|
 |[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
 |[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
 
-これらの関数は、c++ 17 で非推奨とされます。
+これらの関数は C++ 17 では非推奨とされます。
 
 |||
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a> バインド
+## <a name="bind"></a><a name="bind"></a>束縛
 
 呼び出し可能オブジェクトに引数をバインドします。
 
@@ -74,32 +74,32 @@ N 番目の引数の型。
 *fn*\
 呼び出すオブジェクト。
 
-*TN*\
+*tN*\
 N 番目の呼び出しの引数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-種類`FT, T1, T2, ..., TN`コピー構築する必要がありますと`INVOKE(fn, t1, ..., tN)`いくつかの値の有効な式を指定する必要があります`w1, w2, ..., wN`します。
+`FT, T1, T2, ..., TN` 型は、コピーによって構築可能である必要があります。また、`INVOKE(fn, t1, ..., tN)` は `w1, w2, ..., wN`の値に対して有効な式である必要があります。
 
-1 つ目のテンプレート関数は、転送呼び出しラッパー `g` と弱い結果型を返します。 効果`g(u1, u2, ..., uM)`は`INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`ここで、`cv`の cv 修飾子は、`g`値と、バインドされる引数の型`v1, v2, ..., vN`決定されます以下に指定します。 引数を呼び出し可能なオブジェクトにバインドしてカスタマイズされた引数リストを使用する呼び出し可能なオブジェクトを作成するためにそれを使用します。
+1 つ目のテンプレート関数は、転送呼び出しラッパー `g` と弱い結果型を返します。 `g(u1, u2, ..., uM)` の効果は`<FT cv (V1, V2, ..., VN)>::type)`[invoke_result](../standard-library/invoke-result-class.md) `INVOKE(f, v1, v2, ..., vN,` ます。ここで `cv` は `g` の cv 修飾子であり、バインドされた引数の値と型は以下のように決定されます。`v1, v2, ..., vN` 引数を呼び出し可能なオブジェクトにバインドしてカスタマイズされた引数リストを使用する呼び出し可能なオブジェクトを作成するためにそれを使用します。
 
 2 つ目のテンプレート関数は、転送呼び出しラッパー `g` と入れ子になった型 `result_type` を返します。これは `RTy` のシノニムです。 `g(u1, u2, ..., uM)` の効果は `INVOKE(f, v1, v2, ..., vN, RTy)` です。`cv` は、`g` の cv 修飾子であり、バインドされる引数 `v1, v2, ..., vN` の値と型は以下のように決定されます。 引数を呼び出し可能なオブジェクトにバインドしてカスタマイズされた引数リストと指定された戻り値の型を使用する呼び出し可能なオブジェクトを作成しするためにそれを使用します。
 
-バインドされている引数 `v1, v2, ..., vN` の値およびそれらの対応する型 `V1, V2, ..., VN` は、次のように、`bind` の呼び出しの型 `Ti` の対応する引数 `ti`、および呼び出しラッパー `g` の cv 修飾子 `cv` に依存します。
+バインドされている引数 `v1, v2, ..., vN` の値およびそれらの対応する型 `V1, V2, ..., VN` は、次のように、`ti` の呼び出しの型 `Ti` の対応する引数 `bind`、および呼び出しラッパー `cv` の cv 修飾子 `g` に依存します。
 
 `ti` が型 `reference_wrapper<T>` である場合、引数 `vi` は `ti.get()` であり、型 `Vi` は `T&` です。
 
-場合の値`std::is_bind_expression<Ti>::value`は**true**引数`vi`は`ti(u1, u2, ..., uM)`とその型`Vi`は`result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
+`std::is_bind_expression<Ti>::value` の値が**true**の場合、引数 `vi` は `ti(u1, u2, ..., uM)`、その型 `Vi` は `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`です。
 
-場合、値`j`の`std::is_placeholder<Ti>::value`0 引数のない`vi`は`uj`とその型`Vi`は`Uj&`;
+`std::is_placeholder<Ti>::value` の `j` 値がゼロでない場合、引数 `vi` は `uj`、型 `Vi` は `Uj&`です。
 
-それ以外の場合、引数 `vi` は `ti` であり、型 `Vi` は `Ti` `cv` `&` です。
+それ以外の場合は、引数 `vi` が `ti`、その型 `Vi` が `cv` `&`に `Ti` ます。
 
-たとえば、関数 `f(int, int)` を指定した場合、式 `bind(f, _1, 0)` は、`cw(x)` が `f(x, 0)` を呼び出すように、転送呼び出しラッパー `cw` を返します。 式 `bind(f, 0, _1)` は、`cw(x)` が `f(0, x)` を呼び出すように、転送呼び出しラッパー `cw` を返します。
+たとえば、関数 `f(int, int)` を指定した場合、式 `bind(f, _1, 0)` は、`cw` が `cw(x)` を呼び出すように、転送呼び出しラッパー `f(x, 0)` を返します。 式 `bind(f, 0, _1)` は、`cw` が `cw(x)` を呼び出すように、転送呼び出しラッパー `f(0, x)` を返します。
 
-呼び出しの引数の数`bind`と引数`fn`呼び出し可能オブジェクトを渡すことができる引数の数と等しくする必要があります`fn`します。 たとえば、`bind(cos, 1.0)`が正しいこと、および`bind(cos)`と`bind(cos, _1, 0.0)`が正しくありません。
+`bind` の呼び出しの引数の数と `fn` の引数は、呼び出し可能オブジェクト `fn`に渡すことができる引数の数と同じである必要があります。 たとえば、`bind(cos, 1.0)` が正しく、`bind(cos)` と `bind(cos, _1, 0.0)` の両方が正しくありません。
 
-`bind` によって返される呼出ラッパーに対する関数呼び出し内の引数の数は、`bind` に対する呼び出し内のすべてのプレースホルダー引数の `is_placeholder<PH>::value` の最高の数値以上になっている必要があります。 たとえば、`bind(cos, _2)(0.0, 1.0)`が正しい (を返します`cos(1.0)`)、および`bind(cos, _2)(0.0)`が正しくありません。
+`bind` によって返される呼出ラッパーに対する関数呼び出し内の引数の数は、`is_placeholder<PH>::value` に対する呼び出し内のすべてのプレースホルダー引数の `bind` の最高の数値以上になっている必要があります。 たとえば、`bind(cos, _2)(0.0, 1.0)` が正しく (`cos(1.0)`を返します)、`bind(cos, _2)(0.0)` が正しくありません。
 
 ### <a name="example"></a>例
 
@@ -152,9 +152,9 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a> bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
-二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパー テンプレート関数。 指定された値に二項関数の最初の引数をバインドします。 C++ 11、c++ 17 では削除では、非推奨とされます。
+二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパーテンプレート関数。 このメソッドは、二項関数の最初の引数を指定された値にバインドします。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ```cpp
 template <class Operation, class Type>
@@ -163,7 +163,7 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*\
+*func*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
 *左*\
@@ -171,13 +171,13 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>戻り値
 
-単項関数オブジェクト、値に二項関数オブジェクトの最初の引数をバインドに起因する*左*します。
+二項関数オブジェクトの最初の引数を*左*の値にバインドした結果として生成される単項関数オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すためはできる使用特定の種類の関数合成でより複雑で強力な式を作成します。
+関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
-場合*func*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( func, c )`と同じです、 [binder1st](../standard-library/binder1st-class.md)クラスのコンス トラクター`binder1st<Operation>(func, c)`より簡単には使用します。
+*Func*が `Operation` 型のオブジェクトで `c` が定数である場合、`bind1st( func, c )` は[binder1st](../standard-library/binder1st-class.md)クラス `binder1st<Operation>(func, c)`コンストラクターと同じであり、を使用する方が便利です。
 
 ### <a name="example"></a>例
 
@@ -246,9 +246,9 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a> bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
-二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパー テンプレート関数。 指定された値に二項関数の 2 番目の引数をバインドします。 C++ 11、c++ 17 では削除では、非推奨とされます。
+二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパーテンプレート関数。 二項関数の2番目の引数を指定された値にバインドします。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ```cpp
 template <class Operation, class Type>
@@ -257,21 +257,21 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*\
+*func*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*そうです*\
+*右*\
 二項関数オブジェクトの 2 つ目の引数がバインドされている値。
 
 ### <a name="return-value"></a>戻り値
 
-単項関数オブジェクトの結果に二項関数オブジェクトの 2 番目の引数のバインドの*右*します。
+二項関数オブジェクトの2番目の引数を*right*にバインドした単項関数オブジェクトの結果。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すためはできる使用特定の種類の関数合成でより複雑で強力な式を作成します。
+関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
-場合*func*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind2nd(func, c)`と同じです、 [binder2nd](../standard-library/binder2nd-class.md)クラスのコンス トラクター `binder2nd<Operation>(func, c)`、および使用する方が便利です。
+*Func*が `Operation` 型のオブジェクトで `c` が定数である場合、`bind2nd(func, c)` は[binder2nd](../standard-library/binder2nd-class.md)クラス `binder2nd<Operation>(func, c)`コンストラクターと同じであり、を使用すると便利です。
 
 ### <a name="example"></a>例
 
@@ -340,9 +340,9 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a> bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
-ビットごとの AND 演算を定義済みの関数オブジェクト (バイナリ`operator&`) 引数に対して。
+引数に対してビットごとの AND 演算 (バイナリ `operator&`) を実行する定義済みの関数オブジェクト。
 
 ```cpp
 template <class Type = void>
@@ -368,22 +368,22 @@ struct bit_and<void>
 指定または推論された型のオペランドを受け取る `operator&` をサポートする任意の型。
 
 *左*\
-ビットごとの AND 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+ビットごとの AND 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
 
-*そうです*\
-ビットごとの AND 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*\
+ビットごとの AND 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
 `Left & Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator&` によって返された型が含まれます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `bit_and` ファンクターは、基本データ型の整数型、または二項 `operator&` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_not"></a> bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
-ビットごとの補数 (NOT) 演算を定義済みの関数オブジェクト (単項`operator~`) の引数にします。 C++ 14 で追加されます。
+引数に対してビットごとの補数 (NOT) 演算 (単項 `operator~`) を実行する定義済みの関数オブジェクト。 C++ 14 で追加されました。
 
 ```cpp
 template <class Type = void>
@@ -403,23 +403,23 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
+*[種類]* \
 単項 `operator~` をサポートする型。
 
-*そうです*\
-ビットごとの補数演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートに完全推論された型の左辺値または右辺値参照引数の転送を行います*型*します。
+*右*\
+ビットごとの補数演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の*型*の左辺値または右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
 `~ Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator~` によって返された型が含まれます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `bit_not` ファンクターは、基本データ型の整数型、または二項 `operator~` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_or"></a> bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
-ビットごとの OR 演算を定義済みの関数オブジェクト (`operator|`) 引数に対して。
+引数に対してビットごとの OR 演算 (`operator|`) を実行する定義済みの関数オブジェクト。
 
 ```cpp
 template <class Type = void>
@@ -445,22 +445,22 @@ struct bit_or<void>
 指定または推論された型のオペランドを受け取る `operator|` をサポートする任意の型。
 
 *左*\
-ビットごとの OR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+ビットごとの OR 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
 
-*そうです*\
-ビットごとの OR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*\
+ビットごとの OR 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
 `Left | Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator|` によって返された型が含まれます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `bit_or` ファンクターは、基本データ型の整数型、または `operator|` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_xor"></a> bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
-ビットごとの XOR 演算を定義済みの関数オブジェクト (バイナリ`operator^`) 引数に対して。
+引数に対してビットごとの XOR 演算 (バイナリ `operator^`) を実行する定義済みの関数オブジェクト。
 
 ```cpp
 template <class Type = void>
@@ -486,20 +486,20 @@ struct bit_xor<void>
 指定または推論された型のオペランドを受け取る `operator^` をサポートする任意の型。
 
 *左*\
-ビットごとの XOR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+ビットごとの XOR 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
 
-*そうです*\
-ビットごとの XOR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*\
+ビットごとの XOR 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
 `Left ^ Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator^` によって返された型が含まれます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `bit_xor` ファンクターは、基本データ型の整数型、または二項 `operator^` を実装しているユーザー定義型に制限されます。
 
-## <a name="cref"></a> cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 引数から const の `reference_wrapper` を構築します。
 
@@ -519,7 +519,7 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 *arg*\
 ラップする引数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 最初の関数は `reference_wrapper<const Ty>(arg.get())` を返します。 定数参照をラップするために使用します。 2 番目の関数は `reference_wrapper<const Ty>(arg)` を返します。 ラップされた参照を定数参照として再ラップするために使用します。
 
@@ -555,9 +555,9 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a> 呼び出す
+## <a name="invoke"></a><a name="invoke"></a>スタンド
 
-引数を指定して、呼び出し可能オブジェクトを呼び出します。 C++ 17 で追加されます。
+指定された引数を使用して、呼び出し可能なオブジェクトを呼び出します。 C++ 17 で追加されました。
 
 ```cpp
 template <class Callable, class... Args>
@@ -567,40 +567,40 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し可能*\
+*呼び出し*可能\
 呼び出すオブジェクトの型。
 
-*引数*\
-呼び出しの引数の型。
+*Args*\
+呼び出し引数の型。
 
 *fn*\
 呼び出すオブジェクト。
 
-*引数*\
+*args*\
 呼び出しの引数。
 
 *仕様*\
-**Noexcept**仕様`std::is_nothrow_invocable_v<Callable, Args>)`します。
+**Noexcept**指定 `std::is_nothrow_invocable_v<Callable, Args>)`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-呼び出し可能オブジェクトを呼び出す*fn*パラメーターを使用して*args*します。 実際には、`INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`ここで、擬似関数`INVOKE(f, t1, t2, ..., tN)`次のいずれかを意味します。
+パラメーター*引数*を使用して、呼び出し可能オブジェクト*fn*を呼び出します。 実際には `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`、擬似関数 `INVOKE(f, t1, t2, ..., tN)` は次のいずれかを意味します。
 
-- `(t1.*f)(t2, ..., tN)`。`f` がクラス `T` のメンバー関数へのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。 つまり、`std::is_base_of<T, std::decay_t<decltype(t1)>>::value`は true。
+- `(t1.*f)(t2, ..., tN)`。`f` がクラス `T` のメンバー関数へのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。 つまり、`std::is_base_of<T, std::decay_t<decltype(t1)>>::value` が true の場合。
 
-- `(t1.get().*f)(t2, ..., tN)` ときに`f`クラスのメンバー関数へのポインターは、`T`と`std::decay_t<decltype(t1)>`特殊化した`std::reference_wrapper`します。
+- `f` がクラス `T` のメンバー関数へのポインターであり、`std::decay_t<decltype(t1)>` が `std::reference_wrapper`の特殊化である場合に `(t1.get().*f)(t2, ..., tN)` します。
 
-- `((*t1).*f)(t2, ..., tN)` ときに`f`クラスのメンバー関数へのポインターは、`T`と`t1`前の型の 1 つはありません。
+- `f` がクラス `T` のメンバー関数へのポインターであり、`t1` が以前の型の1つではない場合に `((*t1).*f)(t2, ..., tN)` します。
 
-- `t1.*f`。N == 1 で、`f` がクラス `T` のメンバー データへのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。  つまり、`std::is_base_of<T, std::decay_t<decltype(t1)>>::value`は true。
+- `t1.*f`。N == 1 で、`f` がクラス `T` のメンバー データへのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。  つまり、`std::is_base_of<T, std::decay_t<decltype(t1)>>::value` が true の場合。
 
-- `t1.get().*f` ときに N 1 = = と`f`クラスのメンバー データへのポインターは、`T`と`std::decay_t<decltype(t1)>`特殊化した`std::reference_wrapper`します。
+- `t1.get().*f` N = = 1、`f` が `T` クラスのメンバーデータへのポインターであり、`std::decay_t<decltype(t1)>` が `std::reference_wrapper`の特殊化です。
 
-- `(*t1).*f` ときに N 1 = = と`f`クラスのメンバー データへのポインターは、`T`と`t1`前の型の 1 つはありません。
+- `(*t1).*f` N = = 1、`f` が `T` クラスのメンバーデータへのポインターであり、`t1` が以前の型のいずれでもありません。
 
 - `f(t1, t2, ..., tN)`。上記のいずれのケースにも該当しない場合。
 
-呼び出し可能オブジェクトの結果の型については、次を参照してください。 [invoke_result](invoke-result-class.md)します。 呼び出し可能型の述語は、次を参照してください。 [is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス](is-invocable-classes.md)します。
+呼び出し可能オブジェクトの結果の型の詳細については、「 [invoke_result](invoke-result-class.md)」を参照してください。 呼び出し可能な型の述語については、「 [is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス](is-invocable-classes.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a> mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 単純な呼び出しラッパーを生成します。
 
@@ -687,19 +687,19 @@ unspecified mem_fn(RTy Ty::*pm);
 
 ### <a name="parameters"></a>パラメーター
 
-*RTy*\
+*Rty*\
 ラップされた関数の戻り値の型。
 
 *Ty*\
 メンバー関数ポインターの型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-テンプレート関数は、単純な呼び出しラッパーを返します`cw`、弱い結果型を持つように式`cw(t, a2, ..., aN)`と同じ`INVOKE(pm, t, a2, ..., aN)`します。 すべての例外をスローしません。
+このテンプレート関数は、単純な呼び出しラッパー `cw`を返します。これは、`cw(t, a2, ..., aN)` 式が `INVOKE(pm, t, a2, ..., aN)`と同じであるためです。 例外はスローされません。
 
-返された呼び出しラッパーは派生`std::unary_function<cv Ty*, RTy>`(入れ子にされた型の定義と`result_type`のシノニムとして*RTy*と入れ子にされた型`argument_type`のシノニムとして`cv Ty*`) 場合にのみ、型*Ty* cv 修飾子を持つメンバー関数へのポインターは、`cv`する引数を受け取りません。
+返された呼び出しラッパーは `std::unary_function<cv Ty*, RTy>` から派生し、入れ子にされた型 `result_type` を*Rty*のシノニムとして定義し、`argument_type` 入れ子にされた型を `cv Ty*`のシノニムとして定義します。これは、型*Ty*が、引数を受け取らない cv 修飾子 `cv` を持つメンバー関数へのポインターである場合のみです。
 
-返された呼び出しラッパーは派生`std::binary_function<cv Ty*, T2, RTy>`(入れ子にされた型を定義して`result_type`のシノニムとして*RTy*、入れ子にされた型`first argument_type`のシノニムとして`cv Ty*`、入れ子にされた型と`second argument_type`シノニムとして`T2`) 場合にのみ、型*Ty* cv 修飾子を持つメンバー関数へのポインターは、`cv`型の 1 つの引数を受け取る`T2`します。
+返された呼び出しラッパーは、`std::binary_function<cv Ty*, T2, RTy>` から派生します。入れ子 `first argument_type` にされた型 `result_type` は、`cv Ty*`のシノニムと*して、* 入れ子にされた型はのシノニムとして、入れ子にされた型は `second argument_type` のシノニムとして定義されていますが、型*Ty*が `T2`型の1つの引数をとるメンバー関数への`cv``T2`
 
 ### <a name="example"></a>例
 
@@ -739,9 +739,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a> mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
-ポインター引数による初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 で非推奨と[mem_fn](#mem_fn)と[バインド](#bind)、c++ 17 で削除します。
+ポインター引数による初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 で[mem_fn](#mem_fn)および[バインド](#bind)用に非推奨となり、c++ 17 で削除されました。
 
 ```cpp
 template <class Result, class Type>
@@ -764,7 +764,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 
 ### <a name="return-value"></a>戻り値
 
-型 `mem_fun_t` または `mem_fun1_t` の **const** または **non_const** 関数オブジェクト。
+型 **または** の **const** または `mem_fun_t`non_const`mem_fun1_t` 関数オブジェクト。
 
 ### <a name="example"></a>例
 
@@ -826,9 +826,9 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a> mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
-参照引数を使用して初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11、c++ 17 では削除では、非推奨とされます。
+参照引数を使用して初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ```cpp
 template <class Result, class Type>
@@ -851,7 +851,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 
 ### <a name="return-value"></a>戻り値
 
-A **const**または`non_const`型の関数オブジェクト`mem_fun_ref_t`または`mem_fun1_ref_t`します。
+`mem_fun_ref_t` または `mem_fun1_ref_t`型の**const**または `non_const` 関数オブジェクト。
 
 ### <a name="example"></a>例
 
@@ -931,9 +931,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a> not1
+## <a name="not1"></a><a name="not1"></a>not1
 
-単項述語の補数を返します。 非推奨の項目[not_fn](#not_fn) c++ 17 でします。
+単項述語の補数を返します。 C++ 17 の[not_fn](#not_fn)では非推奨とされます。
 
 ```cpp
 template <class UnaryPredicate>
@@ -949,9 +949,9 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 変更される単項述語の否定である単項述語。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-場合、`unary_negate`単項述語から構築される`predicate(x)`が返されます`!predicate(x)`します。
+`unary_negate` が単項述語 `predicate(x)`から構築されている場合は、`!predicate(x)`が返されます。
 
 ### <a name="example"></a>例
 
@@ -1003,9 +1003,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a> not2
+## <a name="not2"></a><a name="not2"></a>not2
 
-二項述語の補数を返します。 非推奨の項目[not_fn](#not_fn) c++ 17 でします。
+二項述語の補数を返します。 C++ 17 の[not_fn](#not_fn)では非推奨とされます。
 
 ```cpp
 template <class BinaryPredicate>
@@ -1014,16 +1014,16 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*\
+*func*\
 符号が反転される二項述語。
 
 ### <a name="return-value"></a>戻り値
 
 変更される二項述語の否定である二項述語。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-場合、`binary_negate`二項述語から構築される`binary_predicate(x, y)`が返されます`!binary_predicate(x, y)`します。
+`binary_negate` が `binary_predicate(x, y)`バイナリ述語から構築されている場合は、`!binary_predicate(x, y)`が返されます。
 
 ### <a name="example"></a>例
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a> not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
-`not_fn`関数テンプレート呼び出し可能オブジェクトを受け取り、呼び出し可能オブジェクトを返します。 返される呼び出し可能オブジェクトが後で呼び出されるいくつかの引数と、元の呼び出し可能オブジェクトに渡しての結果を論理的に否定します。 ラップされた呼び出し可能オブジェクトの const 修飾子と値のカテゴリの動作が維持されます。 `not_fn` c++ 17 の新機能であり、非推奨の置換`std::not1`、 `std::not2`、 `std::unary_negate`、および`std::binary_negate`します。
+`not_fn` 関数テンプレートは、呼び出し可能オブジェクトを受け取り、呼び出し可能オブジェクトを返します。 返された呼び出し可能オブジェクトは、後でいくつかの引数を使用して呼び出されると、元の呼び出し可能オブジェクトに渡され、結果は論理的に否定されます。 このメソッドは、ラップされた呼び出し可能オブジェクトの const 修飾子と値カテゴリの動作を保持します。 `not_fn` は C++ 17 で新しく追加されたもので、非推奨の `std::not1`、`std::not2`、`std::unary_negate`、および `std::binary_negate`を置き換えます。
 
 ```cpp
 template <class Callable>
@@ -1090,12 +1090,12 @@ template <class Callable>
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*\
-転送呼び出しの構築に使用される呼び出し可能オブジェクト ラッパー。
+*func*\
+転送呼び出しラッパーを構築するために使用される呼び出し可能オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-テンプレート関数のような呼び出しラッパーを返します`return call_wrapper(std::forward<Callable>(func))`この説明をわかりやすく専用のクラスに基づきます。
+このテンプレート関数は、この exposition のみのクラスに基づいて、`return call_wrapper(std::forward<Callable>(func))`のような呼び出しラッパーを返します。
 
 ```cpp
 class call_wrapper
@@ -1124,9 +1124,9 @@ private:
 };
 ```
 
-呼び出し可能オブジェクトの明示的なコンス トラクター *func*型が必要です`std::decay_t<Callable>`の要件を満たす`MoveConstructible`、および`is_constructible_v<FD, Callable>`true である必要があります。 ラップされた呼び出し可能オブジェクトを初期化した`fd`から`std::forward<Callable>(func)`の構築によってスローされた例外をスローします`fd`します。
+呼び出し可能オブジェクトの*func*の明示的なコンストラクターでは、`MoveConstructible`の要件を満たすために型 `std::decay_t<Callable>` が必要であり、`is_constructible_v<FD, Callable>` は true である必要があります。 このメソッドは、`std::forward<Callable>(func)`からラップされた呼び出し可能 `fd` オブジェクトを初期化し、`fd`の構築によってスローされた例外をスローします。
 
-ラッパーには、次に示すように左辺値または右辺値参照のカテゴリと const 修飾子によって識別呼び出し演算子が公開しています。
+ラッパーは、次に示すように、左辺値または右辺値参照カテゴリおよび const 修飾子によって識別される呼び出し演算子を公開します。
 
 ```cpp
 template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
@@ -1135,7 +1135,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-最初の 2 つと同じ`return !std::invoke(fd, std::forward<Args>(args)...)`します。 2 つ目の 2 つと同じ`return !std::invoke(std::move(fd), std::forward<Args>(args)...)`します。
+最初の2つは `return !std::invoke(fd, std::forward<Args>(args)...)`と同じです。 2番目の2つは `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`と同じです。
 
 ### <a name="example"></a>例
 
@@ -1179,9 +1179,9 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a> ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
-単項関数ポインターと二項関数ポインターをそれぞれ適応性のある単項関数および二項関数に変換するために使用されるヘルパー テンプレート関数。 C++ 11、c++ 17 では削除では、非推奨とされます。
+単項関数ポインターと二項関数ポインターをそれぞれ適応性のある単項関数および二項関数に変換するために使用されるヘルパー テンプレート関数。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ```cpp
 template <class Arg, class Result>
@@ -1198,19 +1198,19 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="return-value"></a>戻り値
 
-最初のテンプレート関数は、単項関数を返します[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`、**結果**> (\* `pfunc`)。
+1つ目のテンプレート関数は、単項関数[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`、**結果**> (\* `pfunc`) を返します。
 
-2 番目のテンプレート関数は、二項関数を返します[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**、 **Arg2**、**結果**> (\* `pfunc`)。
+2番目のテンプレート関数は、\<**Arg1**、 **Arg2**、 **Result**> (\* `pfunc`) [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)二項関数を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-関数ポインターは、関数オブジェクトです。 それが、パラメーターとしての関数が必要とする任意のアルゴリズムに渡されるが、適応性はありません。 その入れ子にされた型に関する情報が必要なは、たとえば、アダプターで使用する、値をバインドする、またはそれを否定します。 `ptr_fun` ヘルパー関数による単項関数ポインターと二項関数ポインターの変換では、関数アダプターと共に単項関数ポインターおよび二項関数ポインターを使用できます。
+関数ポインターは関数オブジェクトです。 パラメーターとして関数を想定している任意のアルゴリズムに渡すことができますが、適応性はありません。 その入れ子になった型に関する情報は、アダプターと共に使用するために必要です。たとえば、値をバインドしたり、それを否定したりすることができます。 `ptr_fun` ヘルパー関数による単項関数ポインターと二項関数ポインターの変換では、関数アダプターと共に単項関数ポインターおよび二項関数ポインターを使用できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a> ref
+## <a name="ref"></a><a name="ref"></a>リファレンス
 
 引数から `reference_wrapper` を構築します。
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a><a name="swap"></a>フォト
 
 2 つの `function` オブジェクトを交換します。
 
@@ -1316,15 +1316,15 @@ template <class FT>
 *FT*\
 関数オブジェクトによって制御される型。
 
-*F1*\
+*f1*\
 最初の関数オブジェクト。
 
-*F2*\
+*f2*\
 2 番目の関数オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`f1.swap(f2)` が返されます。
+`f1.swap(f2)`が返されます。
 
 ### <a name="example"></a>例
 

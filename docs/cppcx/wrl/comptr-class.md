@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 89c09ede972f5bdd5da1dde810cad31733bdf338
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372641"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 
@@ -75,16 +75,16 @@ friend class ComPtr;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-が`ComPtr`表すインターフェイス。
+表す`ComPtr`インターフェイス。
 
 *U*<br/>
-現在`ComPtr`のがフレンドであるクラス。 (このパラメーターを使用するテンプレートは保護されています)。
+現在`ComPtr`のクラスがフレンドであるクラス。 (このパラメーターを使用するテンプレートは保護されています)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`ComPtr<>`基になるインターフェイスポインターを表す型を宣言します。 を`ComPtr<>`使用して変数を宣言し、矢印のメンバーアクセス演算子 (`->`) を使用してインターフェイスメンバー関数にアクセスします。
+`ComPtr<>`基になるインターフェイス ポインターを表す型を宣言します。 変数`ComPtr<>`を宣言し、矢印メンバアクセス演算子 (`->`) を使用してインターフェイス メンバ関数にアクセスします。
 
-スマートポインターの詳細については、MSDN ライブラリの[Com コーディング方法](/windows/win32/LearnWin32/com-coding-practices)に関するトピックの「Com スマートポインター」サブセクションを参照してください。
+スマート ポインターの詳細については、MSDN ライブラリの「COM[コーディングの方法](/windows/win32/LearnWin32/com-coding-practices)」のトピックの「COM スマート ポインター」のサブセクションを参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -92,54 +92,54 @@ friend class ComPtr;
 
 名前            | 説明
 --------------- | ---------------------------------------------------------------
-`InterfaceType` | *T*テンプレートパラメーターによって指定された型のシノニム。
+`InterfaceType` | *T*テンプレート パラメーターで指定された型のシノニム。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 名前                             | 説明
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr:: ComPtr](#comptr)        | `ComPtr` クラスの新しいインスタンスを初期化します。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。
-[ComPtr:: ~ ComPtr](#tilde-comptr) | の`ComPtr`インスタンスを初期化解除します。
+[コムプター::コムプター](#comptr)        | `ComPtr` クラスの新しいインスタンスを初期化します。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。
+[コンプター::~コムプター](#tilde-comptr) | のインスタンスを初期化解除`ComPtr`します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                      | 説明
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr:: As](#as)                                         | 指定されたテンプレートパラメーターで識別されるインターフェイスを表すオブジェクトを返します。`ComPtr`
-[ComPtr:: AsIID](#asiid)                                   | 指定したインターフェイス ID によって識別されるインターフェイスを表すオブジェクトを返します。`ComPtr`
-[ComPtr:: AsWeak](#asweak)                                 | 現在のオブジェクトへの弱い参照を取得します。
-[ComPtr:: Attach](#attach)                                 | この`ComPtr`を、現在のテンプレート型パラメーターで指定されたインターフェイス型に関連付けます。
-[ComPtr:: CopyTo](#copyto)                                 | この`ComPtr`に関連付けられている現在のまたは指定されたインターフェイスを、指定した出力ポインターにコピーします。
-[Comptr::D etcomp](#detach)                                 | この`ComPtr`と、それが表すインターフェイスとの関連付けを解除します。
-[ComPtr:: Get](#get)                                       | この`ComPtr`に関連付けられているインターフェイスへのポインターを取得します。
-[ComPtr:: GetAddressOf](#getaddressof)                     | この`ComPtr`によって表されるインターフェイスへのポインターを含む[ptr_](#ptr)データメンバーのアドレスを取得します。
-[ComPtr:: ReleaseAndGetAddressOf](#releaseandgetaddressof) | このに関連付けられ`ComPtr`ているインターフェイスを解放し、 [ptr_](#ptr)データメンバーのアドレスを取得します。このアドレスには、解放されたインターフェイスへのポインターが含まれています。
+[コムプター::As](#as)                                         | 指定した`ComPtr`テンプレート パラメーターによって識別されるインターフェイスを表すオブジェクトを返します。
+[コンプター::AsIID](#asiid)                                   | 指定した`ComPtr`インターフェイス ID によって識別されるインターフェイスを表すオブジェクトを返します。
+[コンプター::アスマイア](#asweak)                                 | 現在のオブジェクトへの弱い参照を取得します。
+[コンプター::アタッチ](#attach)                                 | これを`ComPtr`、現在のテンプレート型パラメーターで指定されたインターフェイスの型に関連付けます。
+[コンプター::コピート](#copyto)                                 | 指定した出力ポインターに、この`ComPtr`関連付けに関連付けられている現在のインターフェイスまたは指定されたインターフェイスをコピーします。
+[コンプトル::Dエタッハ](#detach)                                 | これを`ComPtr`、それが表すインターフェイスとの関連付けを解除します。
+[コンプター::ゲット](#get)                                       | に`ComPtr`関連付けられているインターフェイスへのポインターを取得します。
+[を見る](#getaddressof)                     | ptr_`ComPtr`[データ](#ptr)メンバのアドレスを取得します。
+[をクリックします。](#releaseandgetaddressof) | これに`ComPtr`関連付けられているインターフェイスを解放し、解放されたインターフェイスへのポインターを含む[ptr_](#ptr)データ メンバーのアドレスを取得します。
 [ComPtr::Reset](#reset)                                   | この`ComPtr`に関連付けられているインターフェイスへのポインターのすべての参照を解放します。
-[ComPtr:: Swap](#swap)                                     | 現在`ComPtr`のによって管理されているインターフェイスと、指定`ComPtr`したによって管理されるインターフェイスを交換します。
+[コンプター::スワップ](#swap)                                     | 現在`ComPtr`管理するインターフェイスを、指定した`ComPtr`によって管理されるインターフェイスと交換します。
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 名前                                        | 説明
 ------------------------------------------- | --------------------------------------------------------------------------------
-[ComPtr::InternalAddRef](#internaladdref)   | この`ComPtr`に関連付けられているインターフェイスの参照カウントをインクリメントします。
-[ComPtr:: InternalRelease](#internalrelease) | この`ComPtr`に関連付けられているインターフェイスに対して COM 解放操作を実行します。
+[コンプター::内部AddRef](#internaladdref)   | この`ComPtr`に関連付けられているインターフェイスの参照カウントをインクリメントします。
+[コンプター::内部リリース](#internalrelease) | この`ComPtr`に関連付けられたインターフェイスに対して COM リリース操作を実行します。
 
 ### <a name="public-operators"></a>パブリック演算子
 
 名前                                                                                           | 説明
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
-[ComPtr:: operator &](#operator-ampersand)                                                       | 現在`ComPtr`ののアドレスを取得します。
-[ComPtr:: operator->](#operator-arrow)                                                          | 現在のテンプレート パラメーターで指定された型へのポインターを取得します。
-[ComPtr:: operator =](#operator-assign)                                                          | 現在`ComPtr`のに値を割り当てます。
-[ComPtr:: operator = =](#operator-equality)                                                       | 2 つの `ComPtr` オブジェクトが等しいかどうかを示します。
-[ComPtr:: operator! =](#operator-inequality)                                                     | 2 つの `ComPtr` オブジェクトが等しくないかどうかを示します。
-[ComPtr:: operator Microsoft:: WRL::D etails:: ブール型](#operator-microsoft-wrl-details-booltype) | `ComPtr`がインターフェイスのオブジェクトの有効期間を管理しているかどうかを示します。
+[コムプター::演算子&](#operator-ampersand)                                                       | 現在`ComPtr`の アドレスを取得します。
+[コンプター::オペレーター>](#operator-arrow)                                                          | 現在のテンプレート パラメーターで指定された型へのポインターを取得します。
+[コンプター::演算子=](#operator-assign)                                                          | 現在`ComPtr`の に値を代入します。
+[コンプター::演算子==](#operator-equality)                                                       | 2 つの `ComPtr` オブジェクトが等しいかどうかを示します。
+[コンプター::演算子!](#operator-inequality)                                                     | 2 つの `ComPtr` オブジェクトが等しくないかどうかを示します。
+[コムプター::オペレーターマイクロソフト:WRL::Dテール::ブールタイプ](#operator-microsoft-wrl-details-booltype) | インターフェイスのオブジェクトの有効期間`ComPtr`を管理するかどうかを示します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                 | 説明
 -------------------- | ------------------------------------------------------------------------------------------
-[ComPtr::p tr_](#ptr) | このに関連付けられ、この`ComPtr`によって管理されるインターフェイスへのポインターを格納します。
+[コンプター::ptr_](#ptr) | に関連付けられており、このによって管理されるインターフェイスへのポインターを`ComPtr`格納します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -149,19 +149,19 @@ friend class ComPtr;
 
 **ヘッダー:** client.h
 
-**名前空間:** Microsoft:: WRL
+**名前空間:** Microsoft::WRL
 
-## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
+## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>コンプター::~コムプター
 
-の`ComPtr`インスタンスを初期化解除します。
+のインスタンスを初期化解除`ComPtr`します。
 
 ```cpp
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr:: As
+## <a name="comptras"></a><a name="as"></a>コムプター::As
 
-指定されたテンプレートパラメーターで識別されるインターフェイスを表すオブジェクトを返します。`ComPtr`
+指定した`ComPtr`テンプレート パラメーターによって識別されるインターフェイスを表すオブジェクトを返します。
 
 ```cpp
 template<typename U>
@@ -178,12 +178,12 @@ HRESULT As(
 ### <a name="parameters"></a>パラメーター
 
 *U*<br/>
-パラメーター *p*で表されるインターフェイス。
+パラメータ*p*で表されるインタフェース。
 
-*p*<br/>
-パラメーター *U*によって指定されたインターフェイスを表すオブジェクト。`ComPtr`パラメーター *p*で現在`ComPtr`のオブジェクトを参照することはできません。
+*P*<br/>
+U`ComPtr`パラメータで指定されたインタフェースを表*U*すオブジェクト。パラメーター *p*は、現行`ComPtr`オブジェクトを参照してはなりません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレートは、 [auto](../../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。
 
@@ -191,9 +191,9 @@ HRESULT As(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="asiid"></a>ComPtr:: AsIID
+## <a name="comptrasiid"></a><a name="asiid"></a>コンプター::AsIID
 
-指定したインターフェイス ID によって識別されるインターフェイスを表すオブジェクトを返します。`ComPtr`
+指定した`ComPtr`インターフェイス ID によって識別されるインターフェイスを表すオブジェクトを返します。
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -207,14 +207,14 @@ WRL_NOTHROW HRESULT AsIID(
 *riid*<br/>
 インターフェイス ID。
 
-*p*<br/>
-オブジェクトに ID が*riid*であるインターフェイスがある場合は、 *riid*パラメーターによって指定されたインターフェイスへの二重間接ポインターです。それ以外の場合は`IUnknown`、へのポインター。
+*P*<br/>
+オブジェクトに、ID が*riid*に等しいインターフェイスがある場合は *、riid*パラメータで指定されたインターフェイスへの二重間接ポインタ。それ以外の場合は`IUnknown`、 へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="asweak"></a>ComPtr:: AsWeak
+## <a name="comptrasweak"></a><a name="asweak"></a>コンプター::アスマイア
 
 現在のオブジェクトへの弱い参照を取得します。
 
@@ -226,16 +226,16 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWeakRef*<br/>
-この操作が完了したときに、弱い参照オブジェクトへのポインター。
+*を見る*<br/>
+この操作が完了すると、弱参照オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="attach"></a>ComPtr:: Attach
+## <a name="comptrattach"></a><a name="attach"></a>コンプター::アタッチ
 
-この`ComPtr`を、現在のテンプレート型パラメーターで指定されたインターフェイス型に関連付けます。
+これを`ComPtr`、現在のテンプレート型パラメーターで指定されたインターフェイスの型に関連付けます。
 
 ```cpp
 void Attach(
@@ -245,10 +245,10 @@ void Attach(
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 インターフェイス型。
 
-## <a name="comptr"></a>ComPtr:: ComPtr
+## <a name="comptrcomptr"></a><a name="comptr"></a>コムプター::コムプター
 
 `ComPtr` クラスの新しいインスタンスを初期化します。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。
 
@@ -287,26 +287,26 @@ WRL_NOTHROW ComPtr(
 ### <a name="parameters"></a>パラメーター
 
 *U*<br/>
-*もう一方*のパラメーターの型。
+*他*のパラメーターの型。
 
-*other*<br/>
+*他*<br/>
 *U*型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のコンストラクターは既定のコンストラクターで、暗黙的は空のオブジェクトを作成します。 2番目のコンストラクターは、空のオブジェクトを明示的に作成する[__ nullptr](../../extensions/nullptr-cpp-component-extensions.md)を指定します。
+最初のコンストラクターは既定のコンストラクターで、空のオブジェクトが作成されます。 2 番目のコンストラクターは[、空の](../../extensions/nullptr-cpp-component-extensions.md)オブジェクトを明示的に作成する __nullptr を指定します。
 
-3番目のコンストラクターは、ポインターによって指定されたオブジェクトからオブジェクトを作成します。 ComPtr は、ポイントされたメモリを所有し、それに対する参照カウントを保持するようになりました。
+3 番目のコンストラクターは、ポインターで指定されたオブジェクトからオブジェクトを作成します。 ComPtr は、現在、指し込み先メモリを所有し、それに対する参照カウントを維持します。
 
-4番目と5番目のコンストラクターは、コピーコンストラクターです。 5番目のコンストラクターは、現在の型に変換できる場合にオブジェクトをコピーします。
+4 番目と 5 番目のコンストラクターはコピー コンストラクターです。 5 番目のコンストラクターは、現在の型に変換できる場合は、オブジェクトをコピーします。
 
-6番目と7番目のコンストラクターは移動コンストラクターです。 7番目のコンストラクターは、現在の型に変換できる場合にオブジェクトを移動します。
+6 番目と 7 番目のコンストラクターは移動コンストラクターです。 7 番目のコンストラクターは、現在の型に変換可能な場合は、オブジェクトを移動します。
 
-## <a name="copyto"></a>ComPtr:: CopyTo
+## <a name="comptrcopyto"></a><a name="copyto"></a>コンプター::コピート
 
-この`ComPtr`に関連付けられている現在のまたは指定されたインターフェイスを、指定したポインターにコピーします。
+指定したポインターに、この`ComPtr`関連付けに関連付けられている現在のインターフェイスまたは指定されたインターフェイスをコピーします。
 
 ```cpp
 HRESULT CopyTo(
@@ -329,27 +329,27 @@ HRESULT CopyTo(
 *U*<br/>
 型の名前。
 
-*ptr*<br/>
-この操作が完了したときに、要求されたインターフェイスへのポインター。
+*Ptr*<br/>
+この操作が完了すると、要求されたインターフェイスへのポインター。
 
 *riid*<br/>
 インターフェイス ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK。それ以外の場合は、暗黙的`QueryInterface`な操作が失敗した理由を示す HRESULT。
+成功した場合はS_OK。それ以外の場合は、暗黙的`QueryInterface`な操作が失敗した理由を示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の関数は、この`ComPtr`に関連付けられているインターフェイスへのポインターのコピーを返します。 この関数は常に S_OK を返します。
+最初の関数は、この`ComPtr`に関連付けられたインターフェイスへのポインタのコピーを返します。 この関数は常にS_OK返します。
 
-2番目の関数`QueryInterface`は、この`ComPtr`に関連付けられているインターフェイスに対して、 *riid*パラメーターによって指定されたインターフェイスに対して操作を実行します。
+2 番目の関数`QueryInterface`は *、riid*パラメーターで`ComPtr`指定されたインターフェイスに対して、これに関連付けられたインターフェイスに対して操作を実行します。
 
-3番目の関数`QueryInterface`は、この`ComPtr`に関連付けられているインターフェイスに対して、 *U*パラメーターの基になるインターフェイスに対して操作を実行します。
+3 番目の関数`QueryInterface`は *、U*パラメーターの基`ComPtr`になるインターフェイスに対して、これに関連付けられたインターフェイスに対して操作を実行します。
 
-## <a name="detach"></a>Comptr::D etcomp
+## <a name="comptrdetach"></a><a name="detach"></a>コンプトル::Dエタッハ
 
-この`ComPtr`オブジェクトと、それが表すインターフェイスとの関連付けを解除します。
+このオブジェクトと、それが`ComPtr`表すインターフェイスとの関連付けを解除します。
 
 ```cpp
 T* Detach();
@@ -357,11 +357,11 @@ T* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-この`ComPtr`オブジェクトによって表されるインターフェイスへのポインター。
+この`ComPtr`オブジェクトによって表されたインターフェイスへのポインター。
 
-## <a name="get"></a>ComPtr:: Get
+## <a name="comptrget"></a><a name="get"></a>コンプター::ゲット
 
-この`ComPtr`に関連付けられているインターフェイスへのポインターを取得します。
+に`ComPtr`関連付けられているインターフェイスへのポインターを取得します。
 
 ```cpp
 T* Get() const;
@@ -371,9 +371,9 @@ T* Get() const;
 
 この`ComPtr`に関連付けられているインターフェイスへのポインター。
 
-## <a name="getaddressof"></a>ComPtr:: GetAddressOf
+## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>を見る
 
-この`ComPtr`によって表されるインターフェイスへのポインターを含む[ptr_](#ptr)データメンバーのアドレスを取得します。
+ptr_`ComPtr`[データ](#ptr)メンバのアドレスを取得します。
 
 ```cpp
 T* const* GetAddressOf() const;
@@ -384,7 +384,7 @@ T** GetAddressOf();
 
 変数のアドレス。
 
-## <a name="internaladdref"></a>ComPtr:: InternalAddRef
+## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>コンプター::内部AddRef
 
 この`ComPtr`に関連付けられているインターフェイスの参照カウントをインクリメントします。
 
@@ -392,25 +392,25 @@ T** GetAddressOf();
 void InternalAddRef() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは保護されています。
 
-## <a name="internalrelease"></a>ComPtr:: InternalRelease
+## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>コンプター::内部リリース
 
-この`ComPtr`に関連付けられているインターフェイスに対して COM 解放操作を実行します。
+この`ComPtr`に関連付けられたインターフェイスに対して COM リリース操作を実行します。
 
 ```cpp
 void InternalRelease();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは保護されています。
 
-## <a name="operator-ampersand"></a>ComPtr:: operator&amp;
+## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>コンプター::オペレーター&amp;
 
-この`ComPtr`オブジェクトに関連付けられているインターフェイスを解放し、 `ComPtr`オブジェクトのアドレスを取得します。
+この`ComPtr`オブジェクトに関連付けられているインターフェイスを解放し、オブジェクトのアドレスを`ComPtr`取得します。
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -420,13 +420,13 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 ### <a name="return-value"></a>戻り値
 
-現在`ComPtr`のへの弱い参照。
+現在`ComPtr`の .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、インターフェイスポインターへの参照を解放するという点で、 [Comptr:: GetAddressOf](#getaddressof)とは異なります。 インターフェイス`ComPtr::GetAddressOf`ポインターのアドレスが必要であるものの、そのインターフェイスを解放しない場合は、を使用します。
+このメソッドは、このメソッドがインターフェイス ポインターへの参照を解放するという点で[ComPtr::GetAddressOf](#getaddressof)とは異なります。 インターフェイス`ComPtr::GetAddressOf`ポインタのアドレスが必要で、そのインターフェイスを解放したくない場合に使用します。
 
-## <a name="operator-arrow"></a>ComPtr:: operator-&gt;
+## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>コンプター::オペレーター-&gt;
 
 現在のテンプレート パラメーターで指定された型へのポインターを取得します。
 
@@ -436,15 +436,15 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="return-value"></a>戻り値
 
-現在のテンプレートの型名によって指定された型へのポインター。
+現在のテンプレート型名で指定された型へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このヘルパー関数は、STDMETHOD マクロを使用することによって生じる不要なオーバーヘッドを除去します。 この関数`IUnknown`は、では`virtual`なく型`private`を作成します。
+このヘルパー関数は、STDMETHOD マクロを使用して生じる不要なオーバーヘッドを除去します。 この関数は`IUnknown`、`private`の`virtual`代わりに型を作成します。
 
-## <a name="operator-assign"></a>ComPtr:: operator =
+## <a name="comptroperator"></a><a name="operator-assign"></a>コンプター::演算子=
 
-現在`ComPtr`のに値を割り当てます。
+現在`ComPtr`の に値を代入します。
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -478,30 +478,30 @@ WRL_NOTHROW ComPtr& operator=(
 *U*<br/>
 クラス。
 
-*other*<br/>
-型または別`ComPtr`の型へのポインター、参照、または右辺値参照。
+*他*<br/>
+型または別`ComPtr`の 型へのポインター、参照、または右辺値の参照。
 
 ### <a name="return-value"></a>戻り値
 
-現在`ComPtr`のへの参照。
+現在`ComPtr`の .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子の最初のバージョンでは、現在`ComPtr`のに空の値が割り当てられます。
+この演算子の最初のバージョンでは、現在`ComPtr`の に空の値を割り当てます。
 
-2番目のバージョンでは、割り当てインターフェイスポインターが現在`ComPtr`のインターフェイスポインターと同じでない場合、2番目のインターフェイスポインターが現在`ComPtr`のに割り当てられます。
+2 番目のバージョンでは、割り当てインターフェイス ポインターが現在`ComPtr`のインターフェイス ポインターと同じでない場合、2 番目の`ComPtr`インターフェイス ポインターが現在の .
 
-3番目のバージョンでは、割り当てインターフェイスポインターが現在`ComPtr`のに割り当てられます。
+3 番目のバージョンでは、割り当てインターフェイス ポインタが`ComPtr`現在の .
 
-4番目のバージョンでは、割り当て値のインターフェイスポインターが現在`ComPtr`のインターフェイスポインターと同じでない場合、2番目のインターフェイスポインターが現在`ComPtr`のに割り当てられます。
+4 番目のバージョンでは、代入する値のインターフェイス ポインターが現在`ComPtr`のインターフェイス ポインターと同じでない場合、2 番目のインターフェイス ポインター`ComPtr`が現在の .
 
-5番目のバージョンは、コピー演算子です。へ`ComPtr`の参照が現在`ComPtr`のに割り当てられています。
+5 番目のバージョンはコピー演算子です。への参照が現在`ComPtr``ComPtr`の に割り当てられます。
 
-6番目のバージョンは、移動セマンティクスを使用するコピー演算子です。任意の型が静的`ComPtr`キャストであり、現在`ComPtr`のに割り当てられている場合は、への右辺値参照。
+6 番目のバージョンは、移動セマンティクスを使用するコピー演算子です。いずれかの型が静的キャストされ`ComPtr`、現在`ComPtr`の .
 
-7番目のバージョンは、移動セマンティクスを使用するコピー演算子です。`ComPtr` *U*型のへの右辺値参照は、静的キャストであり、現在`ComPtr`のに割り当てられています。
+7 番目のバージョンは、移動セマンティクスを使用するコピー演算子です。`ComPtr` *U*型への右辺値参照は静的キャストされ、現在`ComPtr`の に割り当てられます。
 
-## <a name="operator-equality"></a>ComPtr:: operator = =
+## <a name="comptroperator"></a><a name="operator-equality"></a>コンプター::演算子==
 
 2 つの `ComPtr` オブジェクトが等しいかどうかを示します。
 
@@ -524,19 +524,19 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-`ComPtr` オブジェクトへの参照。
+*A*<br/>
+`ComPtr` オブジェクトへの参照です。
 
-*b*<br/>
+*B*<br/>
 別`ComPtr`のオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は`true` 、オブジェクト*a*がオブジェクト*b*と等しい場合はを`false`生成します。それ以外の場合はを返します。
+最初の演算子は`true`、オブジェクト*a*がオブジェクト*b*と等しい場合に生成されます。それ以外`false`の場合は、 .
 
-2番目と3番`true`目の演算子は、オブジェクト`nullptr` *a*がと`false`等しい場合はを、それ以外の場合はを生成します。
+2 番目と 3`true`番目の演算子は、`nullptr`オブジェクト*a*が 次の値に等しい場合に返します。それ以外`false`の場合は、 .
 
-## <a name="operator-inequality"></a>ComPtr:: operator! =
+## <a name="comptroperator"></a><a name="operator-inequality"></a>コンプター::演算子!
 
 2 つの `ComPtr` オブジェクトが等しくないかどうかを示します。
 
@@ -559,21 +559,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-`ComPtr` オブジェクトへの参照。
+*A*<br/>
+`ComPtr` オブジェクトへの参照です。
 
-*b*<br/>
+*B*<br/>
 別`ComPtr`のオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は`true` 、オブジェクト*a*がオブジェクト*b*と等しくない場合はを`false`、それ以外の場合はを生成します。
+最初の演算子は`true`、オブジェクト*a*がオブジェクト*b*と等しくない場合に生成されます。それ以外`false`の場合は、 .
 
-2番目と3番`true`目の演算子は、オブジェクト*a* `nullptr`がと等しく`false`ない場合はを、それ以外の場合はを生成します。
+2 番目と 3`true`番目の演算子は、オブジェクト`nullptr` *a*が等しくない場合に返します。それ以外`false`の場合は、 .
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: ブール型
+## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>コムプター::オペレーターマイクロソフト:WRL::Dテール::ブールタイプ
 
-`ComPtr`がインターフェイスのオブジェクトの有効期間を管理しているかどうかを示します。
+インターフェイスのオブジェクトの有効期間`ComPtr`を管理するかどうかを示します。
 
 ```cpp
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
@@ -581,23 +581,23 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスがこの`ComPtr`に関連付けられている場合は、 [bool struct:: Member](boolstruct-structure.md#member)データメンバーのアドレス`nullptr`。それ以外の場合は。
+インターフェイスがこれに`ComPtr`関連付けられている場合は[、BoolStruct::メンバー](boolstruct-structure.md#member)データ メンバーのアドレス。それ以外`nullptr`の場合は、 .
 
-## <a name="ptr"></a>ComPtr::p tr_
+## <a name="comptrptr_"></a><a name="ptr"></a>コンプター::ptr_
 
-このに関連付けられ、この`ComPtr`によって管理されるインターフェイスへのポインターを格納します。
+に関連付けられており、このによって管理されるインターフェイスへのポインターを`ComPtr`格納します。
 
 ```cpp
 InterfaceType *ptr_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ptr_`は、保護された内部のデータメンバーです。
+`ptr_`は、内部の保護されたデータ メンバーです。
 
-## <a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf
+## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>をクリックします。
 
-このに関連付けられ`ComPtr`ているインターフェイスを解放し、 [ptr_](#ptr)データメンバーのアドレスを取得します。このアドレスには、解放されたインターフェイスへのポインターが含まれています。
+これに`ComPtr`関連付けられているインターフェイスを解放し、解放されたインターフェイスへのポインターを含む[ptr_](#ptr)データ メンバーのアドレスを取得します。
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -605,9 +605,9 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>戻り値
 
-この`ComPtr`の[ptr_](#ptr)データメンバーのアドレス。
+この`ComPtr`の[ptr_](#ptr)データ メンバのアドレス。
 
-## <a name="reset"></a>ComPtr:: Reset
+## <a name="comptrreset"></a><a name="reset"></a>コンプター::リセット
 
 この`ComPtr`に関連付けられているインターフェイスへのポインターのすべての参照を解放します。
 
@@ -619,9 +619,9 @@ unsigned long Reset();
 
 解放された参照の数 (存在する場合)。
 
-## <a name="swap"></a>ComPtr:: Swap
+## <a name="comptrswap"></a><a name="swap"></a>コンプター::スワップ
 
-現在`ComPtr`のによって管理されているインターフェイスと、指定`ComPtr`したによって管理されるインターフェイスを交換します。
+現在`ComPtr`管理するインターフェイスを、指定した`ComPtr`によって管理されるインターフェイスと交換します。
 
 ```cpp
 void Swap(
@@ -635,6 +635,5 @@ void Swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*r*<br/>
-`ComPtr`。
-
+*R*<br/>
+`ComPtr` です。

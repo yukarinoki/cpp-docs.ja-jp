@@ -8,16 +8,16 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 609d576c6ab3eddca569ed4f19a4024b47b6a1d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183675"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374152"
 ---
-# <a name="ifexists-statement"></a>__if_exists ステートメント
+# <a name="__if_exists-statement"></a>__if_exists ステートメント
 
-**_ _If_exists**ステートメントは、指定した識別子が存在するかどうかをテストします。 ID が存在する場合、指定されたステートメント ブロックが実行されます。
+**__if_exists**ステートメントは、指定された識別子が存在するかどうかをテストします。 ID が存在する場合、指定されたステートメント ブロックが実行されます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,23 +31,23 @@ statements
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*identifier*|存在をテストしたい識別子。|
-|*ステートメント*|1 つ以上の場合に実行されるステートメント*識別子*存在します。|
+|*識別子*|存在をテストしたい識別子。|
+|*ステートメント*|*識別子*が存在する場合に実行する 1 つ以上のステートメント。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!CAUTION]
->  最も信頼性の高い結果を実現するために使用して、 **_ _if_exists**次の制約の下のステートメント。
+> 最も信頼性の高い結果を得るには、次の制約の下で **__if_exists**ステートメントを使用します。
 
-- 適用、 **_ _if_exists**テンプレートではなく、唯一の単純型のステートメント。
+- **__if_exists**ステートメントは、テンプレートではなく単純型にのみ適用します。
 
-- 適用、 **_ _if_exists**ステートメントの内部または外部クラスの識別子。 適用されません、 **_ _if_exists**ローカル変数にステートメント。
+- クラスの内部または外部の識別子に **__if_exists**ステートメントを適用します。 ローカル変数に **__if_exists**ステートメントを適用しないでください。
 
-- 使用して、 **_ _if_exists**関数の本体でのみステートメント。 関数の本文の外側、 **_ _if_exists**ステートメントは、型を完全に定義のみをテストできます。
+- **__if_exists**ステートメントは、関数の本体でのみ使用してください。 関数の本体の外側では **、__if_exists**ステートメントは完全に定義された型のみをテストできます。
 
 - オーバーロードされた関数をテストする場合、特定の形式のオーバーロードはテストできません。
 
-補完する、 **_ _if_exists**ステートメントは、 [_ _if_not_exists](../cpp/if-not-exists-statement.md)ステートメント。
+**__if_exists**ステートメントの補数は[、__if_not_exists](../cpp/if-not-exists-statement.md)ステートメントです。
 
 ## <a name="example"></a>例
 
@@ -124,5 +124,5 @@ C::f exists
 ## <a name="see-also"></a>関連項目
 
 [選択ステートメント](../cpp/selection-statements-cpp.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
-[__if_not_exists ステートメント](../cpp/if-not-exists-statement.md)
+[Keywords](../cpp/keywords-cpp.md)<br/>
+[__if_not_existsステートメント](../cpp/if-not-exists-statement.md)

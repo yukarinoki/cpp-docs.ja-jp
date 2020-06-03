@@ -1,5 +1,5 @@
 ---
-title: Windows ソケット:ブロック
+title: 'Windows ソケット : ブロッキング'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87d4f0eb57f9e26dbf73da06b5d7ca6d61d6c174
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371965"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359993"
 ---
-# <a name="windows-sockets-blocking"></a>Windows ソケット:ブロック
+# <a name="windows-sockets-blocking"></a>Windows ソケット : ブロッキング
 
-この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、ブロックについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
+この資料と 2 つの関連資料では、Windows ソケットプログラミングのいくつかの問題について説明します。 この記事では、ブロッキングについて説明します。 その他の問題については[、「Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)」の記事で説明します。
 
-使用するか、またはクラスから派生させる場合[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、これらの問題を自分で管理する必要があります。 使用するか、またはクラスから派生させる場合[CSocket](../mfc/reference/csocket-class.md)MFC を管理します。
+クラス[CAsyncSocket](../mfc/reference/casyncsocket-class.md)を使用するか、クラスから派生する場合は、これらの問題を自分で管理する必要があります。 CSocket クラスを使用するか[CSocket](../mfc/reference/csocket-class.md)、クラスから派生する場合、MFC によってそれらのクラスが管理されます。
 
-## <a name="blocking"></a>ブロック
+## <a name="blocking"></a>ブロッキング
 
-ソケットが「ブロッキング モード」または「非ブロッキング モード」であることができます。 それらのアクションを完了するまで、ブロックしている (または同期) モードで、ソケットの関数は返されません。 関数が呼び出されたソケットは何もできないため、ブロックと呼ばれますがブロックされている: 呼び出しが戻るまで。 呼び出し、`Receive`メンバー関数はなどを送信する送信元アプリケーションの待機中に完了する任意の長さの時間をかかる場合があります (これを使用するかどうかは、 `CSocket`、またはを使用して`CAsyncSocket`ブロックと)。 場合、`CAsyncSocket`オブジェクトが (オペレーティング非同期的に) 非ブロッキング モードで、呼び出しは直ちに返りますおよび使用して取得できます現在エラー コード、 [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror)メンバー関数は**WSAEWOULDBLOCK**、モードのためすぐに返されませんが、呼び出しがブロックがあることを示す必要があります。 (`CSocket`値が戻りません。 **WSAEWOULDBLOCK**します。 クラスは、管理するをブロックします。)
+ソケットは「ブロッキングモード」または「非ブロッキングモード」にすることができます。 ブロッキング (または同期) モードのソケットの関数は、アクションを完了するまで戻りません。 これは、関数が呼び出されたソケットが呼び出しを戻すまでブロックされないため、ブロッキングと呼ばれます。 たとえば、メンバー関数`Receive`の呼び出しは、送信側アプリケーションの送信を待機する間、任意に長い時間を要することがあります (これは、を使用している場合、`CSocket`またはブロッキングを`CAsyncSocket`使用している場合です)。 `CAsyncSocket`オブジェクトが (非同期に動作する) 非ブロック モードの場合、呼び出しはすぐに返され、現在のエラー コードは[、GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror)メンバー関数で取得可能な**WSAEWOULDBLOCK**です。 (`CSocket` **WSAEWOULDBLOCK を**返すことはありません 。 クラスは、ブロッキングを管理します。
 
-ソケットの動作は 32 ビットおよび 64 ビット オペレーティング システム (Windows 95、Windows 98 など) と 16 ビットのオペレーティング システム (Windows 3.1) などで異なります。 16 ビットのオペレーティング システムとは異なり、32 ビットおよび 64 ビット オペレーティング システムがプリエンプティブなマルチタスクを使用し、マルチ スレッドを提供します。 32 ビットおよび 64 ビットのオペレーティング システムでは、個別のワーカー スレッドで、ソケットを収容できます。 アプリケーションの他のアクティビティを妨げることがなく、ブロッキングをコンピューティング時間をかけることがなくスレッドのソケットをブロックできます。 マルチ スレッド プログラミングについては、この記事を参照してください。[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
+ソケットの動作は、32 ビットおよび 64 ビット オペレーティング システム (Windows 95 や Windows 98 など) では、16 ビット オペレーティング システム (Windows 3.1 など) の場合とは異なります。 16 ビットのオペレーティング システムとは異なり、32 ビットおよび 64 ビットオペレーティング システムではプリエンプティブ マルチタスキングが使用され、マルチスレッドが提供されます。 32 ビットおよび 64 ビットのオペレーティング システムでは、ソケットを別々のワーカー スレッドに配置できます。 スレッド内のソケットは、アプリケーション内の他のアクティビティーに干渉することなく、ブロックにコンピューティング時間を費やすことなくブロックできます。 マルチスレッド プログラミングの詳細については、[マルチスレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)の記事を参照してください。
 
 > [!NOTE]
->  ブロックの性質を使用するマルチ スレッド アプリケーションで`CSocket`をユーザー インターフェイスの応答性に影響を与えずに、プログラムの設計を簡略化します。 メイン スレッドでのユーザー操作を処理することによって、`CSocket`別のスレッドで処理して、これらの論理操作を分離できます。 アプリケーションがマルチ スレッドでは、これら 2 つのアクティビティを結合して、通常は意味を使用して 1 つのスレッドとして処理する必要があります`CAsyncSocket`オンデマンド、またはオーバーライドする通信要求を処理できるように`CSocket::OnMessagePending`ユーザーの操作を処理するには時間のかかる同期アクティビティです。
+> マルチスレッド アプリケーションでは、ブロックの性質`CSocket`を使用して、ユーザー インターフェイスの応答性に影響を与えることなく、プログラムの設計を簡略化できます。 メイン スレッドでのユーザー操作を処理し、`CSocket`代替スレッドで処理することで、これらの論理操作を分離できます。 マルチスレッドではないアプリケーションでは、これらの 2 つのアクティビティーを単一スレッド`CAsyncSocket``CSocket::OnMessagePending`として組み合わせて処理する必要があります。
 
-この説明の残りの部分は、16 ビットのオペレーティング システムを対象とするプログラマにとっては。
+この説明の残りの部分は、16 ビット オペレーティング システムを対象とするプログラマ向けです。
 
-通常、使用する場合`CAsyncSocket`、ブロック操作を使用しないようにし、代わりに非同期的に動作する必要があります。 受信するポイントからの非同期操作で、 **WSAEWOULDBLOCK**呼び出した後のエラー コード`Receive`、まで待機するなど、`OnReceive`に読み取ることができますを通知するメンバー関数が呼び出されますもう一度です。 非同期呼び出しがソケットの適切なコールバック通知関数をなど、呼び出すことで行われた[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)します。
+通常、 を使用`CAsyncSocket`している場合は、ブロッキング操作を使用せずに、代わりに非同期に操作する必要があります。 非同期操作では、呼び出し`Receive`後に**WSAEWOULDBLOCK**エラー・コードを受け取る時点から、例`OnReceive`えば、メンバー関数が呼び出されるまで待って、再び読み取ることができることを通知します。 非同期呼び出しは、ソケットの適切なコールバック通知関数[(OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)など) を呼び戻すことによって行われます。
 
-Windows では、下のブロッキング呼び出しが不適切な手法と見なされます。 既定では、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)非同期呼び出しをサポートしていますとするコールバック通知を使用して自分でブロックを管理する必要があります。 クラス[CSocket](../mfc/reference/csocket-class.md)、一方では同期されます。 Windows メッセージをポンプし、管理するをブロックします。
+Windows では、ブロッキング呼び出しは不適切な方法と見なされます。 既定では[、CAsyncSocket](../mfc/reference/casyncsocket-class.md)は非同期呼び出しをサポートしており、コールバック通知を使用してブロッキングを自分で管理する必要があります。 一方、クラス[CSocket](../mfc/reference/csocket-class.md)は同期です。 Windows メッセージを送り込み、ブロックを管理します。
 
-ブロッキングの詳細については、Windows ソケット仕様を参照してください。 "On"関数の詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../mfc/windows-sockets-socket-notifications.md)と[Windows ソケット。ソケット クラスから派生する](../mfc/windows-sockets-deriving-from-socket-classes.md)します。
+ブロックの詳細については、Windows ソケットの仕様を参照してください。 "オン" 関数の詳細については、「 [Windows ソケット : ソケット通知](../mfc/windows-sockets-socket-notifications.md)と[Windows ソケット : ソケット クラスからの派生](../mfc/windows-sockets-deriving-from-socket-classes.md)」を参照してください。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
+- [Windows ソケット : 予備知識](../mfc/windows-sockets-background.md)
 
-- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット : ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット : データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
-[CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
+[同期ソケット::オンセンド](../mfc/reference/casyncsocket-class.md#onsend)

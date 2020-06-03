@@ -1,5 +1,5 @@
----
-title: レコード セット:レコードのフィルター処理 (ODBC)
+﻿---
+title: 'レコードセット: レコードのフィルター処理 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 56b8c4f52ec294f58a760e1309d32aa81286ddec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397862"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367012"
 ---
-# <a name="recordset-filtering-records-odbc"></a>レコード セット:レコードのフィルター処理 (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>レコードセット: レコードのフィルター処理 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-このトピックでは、使用可能なレコードの特定のサブセットのみを選択するように、レコード セットをフィルター処理する方法について説明します。 たとえば、MATH101 などの特定のコースのクラスのセクションのみを選択します。 フィルターは、SQL の内容で定義された検索条件**WHERE**句。 フレームワークは、レコード セットの SQL ステートメントを追加するとき、**WHERE**句は、選択範囲を制限します。
+ここでは、レコードセットをフィルタ処理して、使用可能なレコードの特定のサブセットのみを選択する方法について説明します。 たとえば、MATH101 など、特定のコースのクラス セクションのみを選択できます。 フィルタは、SQL **WHERE**句の内容によって定義される検索条件です。 フレームワークがレコードセットの SQL ステートメントに追加すると **、WHERE**句は選択を制約します。
 
-呼び出す前に、オブジェクトを構築した後は、レコード セット オブジェクトのフィルターを確立する必要があります、`Open`メンバー関数 (または呼び出す前に、`Requery`メンバー関数の既存のレコード セット オブジェクト`Open`メンバー関数には、既に呼び出されています)。
+オブジェクトを構築した後、その`Open`メンバー関数を呼び出す前に (または、以前にメンバー関数が`Requery``Open`呼び出された既存のレコードセット オブジェクトのメンバー関数を呼び出す前に) レコードセット オブジェクトのフィルタを確立する必要があります。
 
-#### <a name="to-specify-a-filter-for-a-recordset-object"></a>レコード セット オブジェクトのフィルターを指定するには
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>レコードセット オブジェクトのフィルタを指定するには
 
-1. 新しいレコード セット オブジェクトを作成する (またはを呼び出す準備`Requery`既存のオブジェクト)。
+1. 新しいレコードセット オブジェクトを構築します`Requery`(または既存のオブジェクトを呼び出す準備をします)。
 
-1. オブジェクトの値を設定[か](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバー。
+1. オブジェクトの[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバーの値を設定します。
 
-   フィルターは、SQL の**WHERE**句の内容を含み、キーワードの**WHERE**を含まない、NULL で終わる文字列です。 たとえば、次のように使用します。
+   フィルタは、SQL **WHERE**句の内容を含む NULL で終わる文字列ですが、キーワード**WHERE**は含まれません。 たとえば、次のようなサービスを使います。
 
     ```
     m_pSet->m_strFilter = "CourseID = 'MATH101'";
@@ -42,19 +42,19 @@ ms.locfileid: "62397862"
     ```
 
     > [!NOTE]
-    >  上記の 1 つの引用符リテラル文字列"MATH101"が表示されます。 ODBC の仕様では、単一引用符は、文字の文字列リテラルを表すために使用されます。 このような状況で、DBMS の引用符の要件については、ODBC ドライバーのマニュアルを確認します。 この構文は説明もさらに、このトピックの最後の方です。
+    >  リテラル文字列 "MATH101" は、上記の単一引用符で示されています。 ODBC SQL 仕様では、文字ストリング・リテラルを表すために単一引用符が使用されます。 この状況での DBMS の見積もり要件については、ODBC ドライバーのマニュアルを参照してください。 この構文についても、このトピックの最後の近くで詳しく説明します。
 
-1. 並べ替え順序、ロックのモード、またはパラメーターなどの必要なその他のオプションを設定します。 パラメーターを指定すると、特に便利です。 フィルターをパラメーター化の詳細については、次を参照してください。[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
+1. 並べ替え順序、ロック モード、パラメーターなど、必要なその他のオプションを設定します。 パラメータを指定すると特に便利です。 フィルタのパラメータ化については、「[レコードセット: レコードセットのパラメータ化 (ODBC)」](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。
 
-1. 呼び出す`Open`に新しいオブジェクト (または`Requery`既に開かれているオブジェクト)。
-
-> [!TIP]
->  パラメーターを使用して、フィルターでは、レコードを取得するための最も効率的な方法があります。
+1. 新`Open`しいオブジェクト (または`Requery`以前に開いたオブジェクト) を呼び出します。
 
 > [!TIP]
->  レコード セットのフィルター[への参加](../../data/odbc/recordset-performing-a-join-odbc.md)テーブルを使用するため、[パラメーター](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)情報を取得または実行時に計算に基づいて。
+> フィルターでパラメーターを使用することは、レコードを取得する最も効率的な方法である可能性があります。
 
-レコード セットは、指定した検索条件を満たすレコードだけを選択します。 たとえば、コースのフィルターを指定する前に説明した (変数と仮定すると`strCourseID`現在に設定されて、たとえば、"MATH101")、次の操作を行います。
+> [!TIP]
+> レコードセット フィルタは、テーブルを[結合](../../data/odbc/recordset-performing-a-join-odbc.md)したり、実行時に取得または計算された情報に基づいて[パラメータ](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を使用する場合に便利です。
+
+レコードセットは、指定した検索条件に一致するレコードのみを選択します。 たとえば、上で説明したコースフィルタを指定するには(例えば`strCourseID`、変数が「MATH101」に設定されている変数を想定)、次の操作を行います。
 
 ```
 // Using the recordset pointed to by m_pSet
@@ -68,29 +68,29 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset
 ```
 
-レコード セットには、MATH101 のクラスのセクションではすべてのレコードが含まれています。
+レコードセットには、MATH101 のすべてのクラス セクションのレコードが含まれています。
 
-フィルター文字列を文字列変数を使用して、上記の例で設定した方法に注意してください。 これは、一般的な使用方法です。 コース ID のリテラル値 100 を指定するとしますが、 次のコードでは、リテラル値で正しくフィルター文字列を設定する方法を示します。
+上記の例では、文字列変数を使用してフィルター文字列がどのように設定されているのか確認してください。 これは一般的な使用方法です。 ただし、コース ID にリテラル値 100 を指定するとします。 次のコードは、リテラル値を使用してフィルター文字列を正しく設定する方法を示しています。
 
 ```
 m_strFilter = "StudentID = '100'";   // correct
 ```
 
-単一引用符文字の使用に注意してください。フィルター文字列を直接設定する場合、フィルター文字列は**いない**:
+単一引用符の使用に注意してください。フィルター文字列を直接設定した場合、フィルター文字列は次**の値ではありません**。
 
 ```
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-上記の引用符、ODBC 仕様に準拠していますが、一部の Dbms が他の引用符文字を必要があります。 詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+上記の引用は ODBC 仕様に準拠していますが、一部の DBMS では他の引用符が必要な場合があります。 詳細については、「 [SQL : レコードセットの SQL ステートメントのカスタマイズ (ODBC)」](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)を参照してください。
 
 > [!NOTE]
->  独自の SQL 文字列を渡すことによって、レコード セットの既定の SQL 文字列を上書きする場合`Open`、カスタム文字列がある場合にフィルターを設定しないでください、**WHERE**句。 既定の SQL をオーバーライドする方法についての詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+> 独自の SQL 文字列を に渡してレコードセットの既定の SQL`Open`文字列をオーバーライドする場合は、カスタム文字列に**WHERE**句がある場合はフィルタを設定しないでください。 既定の SQL のオーバーライドの詳細については、「 [SQL : レコードセットの SQL ステートメントのカスタマイズ (ODBC)」](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [レコードセット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[レコードセット: レコードセットでのレコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[レコードセット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143135"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424285"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector クラス
 
@@ -63,9 +63,9 @@ private details::_Concurrent_vector_base_v4;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`allocator_type`|同時実行ベクターのアロケータークラスを表す型。|
 |`const_iterator`|同時実行ベクター内の `const` 要素を読み取ることができるランダムアクセス反復子を提供する型。|
@@ -82,20 +82,20 @@ private details::_Concurrent_vector_base_v4;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|オーバーロードされます。 同時実行ベクターを構築します。|
 |[~ concurrent_vector デストラクター](#dtor)|すべての要素を消去し、この同時実行ベクターを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[assign](#assign)|オーバーロードされます。 同時実行ベクターの要素を消去し、`_Item`のコピー `_N`、または反復子の範囲 [`_Begin`、`_End`) で指定された値のいずれかに代入します。 このメソッドはコンカレンシー セーフではありません。|
 |[at](#at)|オーバーロードされます。 同時実行ベクター内の指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、読み取り操作の場合は同時実行セーフです。また、`_Index` 値が同時実行ベクターのサイズよりも小さいことを確認した場合に限り、ベクターを拡大しています。|
 |[back](#back)|オーバーロードされます。 同時実行ベクター内の最後の要素への参照または `const` 参照を返します。 同時実行ベクターが空の場合、戻り値は未定義になります。 このメソッドはコンカレンシー セーフです。|
 |[begin](#begin)|オーバーロードされます。 同時実行ベクターの先頭に `iterator` または `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
-|[capacity](#capacity)|より多くのメモリを割り当てることなく、同時実行ベクターを拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。|
+|[容量](#capacity)|より多くのメモリを割り当てることなく、同時実行ベクターを拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。|
 |[cbegin](#cbegin)|同時実行ベクターの先頭に `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
 |[cend](#cend)|同時実行ベクターの末尾に `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
 |[オフ](#clear)|同時実行ベクター内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。|
@@ -115,11 +115,11 @@ private details::_Concurrent_vector_base_v4;
 |[resize](#resize)|オーバーロードされます。 必要に応じて、同時実行ベクターのサイズを要求されたサイズに変更し、要素を削除または追加します。 このメソッドはコンカレンシー セーフではありません。|
 |[shrink_to_fit](#shrink_to_fit)|断片化を軽減し、メモリ使用量を最適化するために、同時実行ベクターの内部表現を圧縮します。 このメソッドはコンカレンシー セーフではありません。|
 |[size](#size)|同時実行ベクター内の要素の数を返します。 このメソッドはコンカレンシー セーフです。|
-|[swap](#swap)|2つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
+|[スワップ](#swap)|2つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[operator\[\]](#operator_at)|オーバーロードされます。 同時実行ベクター内の指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、読み取り操作の場合は同時実行セーフです。また、`_Index` 値が同時実行ベクターのサイズよりも小さいことを確認した場合に限り、ベクターを拡大しながらも、同時実行セーフです。|
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
@@ -136,7 +136,7 @@ private details::_Concurrent_vector_base_v4;
 
 `concurrent_vector`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concurrent_vector
 

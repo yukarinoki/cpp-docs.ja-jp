@@ -1,36 +1,34 @@
 ---
 title: OLE 関連クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc07b3fbd0c5badce8e397f4d52bc7d8d3028c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378298"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447603"
 ---
 # <a name="ole-related-classes"></a>OLE 関連クラス
 
-これらのクラスは、さまざまな例外からの入力と出力をファイルに至るまで、さまざまなサービスを提供します。
+これらのクラスは、例外からファイルの入力と出力まで、さまざまなサービスを提供します。
 
 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)<br/>
-他のコンテナーから要求されたときに項目を作成するために使用します。 このクラスはファクトリなどの特定の種類の基本クラスとして機能`COleTemplateServer`します。
+他のコンテナーから要求されたときに項目を作成するために使用されます。 このクラスは、`COleTemplateServer`を含む、より具体的な種類のファクトリの基底クラスとして機能します。
 
 [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)<br/>
-同時実行と OLE ライトウェイト リモート プロシージャ コール (LRPC) を管理するために使用します。
+OLE ライトウェイトリモートプロシージャ呼び出し (LRPC) を使用して同時実行を管理するために使用します。
 
 [COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
-COM を使用して`IStream`インターフェイスを提供する`CFile`複合ファイルにアクセスします。 このクラス (から派生した`CFile`) OLE 構造化ストレージを使用する MFC のシリアル化を有効します。
+は COM `IStream` インターフェイスを使用して、複合ファイルへの `CFile` アクセスを提供します。 このクラス (`CFile`から派生) を使用すると、MFC のシリアル化で OLE 構造化ストレージを使用できます。
 
 [CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-移動、サイズ変更、およびインプレース項目の方向を許可するために使用します。
+インプレース項目の移動、サイズ変更、および再配置を可能にするために使用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

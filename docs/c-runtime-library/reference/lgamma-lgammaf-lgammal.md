@@ -1,10 +1,13 @@
 ---
 title: lgamma、lgammaf、lgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lgamma
 - lgammaf
 - lgammal
+- _o_lgamma
+- _o_lgammaf
+- _o_lgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953372"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916441"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -66,9 +70,9 @@ long double lgamma( long double x ); //C++ only
 
 成功した場合は、 *x*のガンマ関数の絶対値の自然対数を返します。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = NaN|(NaN)|
 |*x* = ±0|+INFINITY|
 |*x*= 負の整数|+INFINITY|
 |±無限大|+INFINITY|
@@ -77,11 +81,13 @@ long double lgamma( long double x ); //C++ only
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**lgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**lgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 X が有理数の場合、この関数は (x-1) の階乗の対数を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -89,7 +95,7 @@ X が有理数の場合、この関数は (x-1) の階乗の対数を返しま�
 |--------------|--------------|------------------|
 |**lgamma**、 **lgammaf**、 **lgammal**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,17 +1,18 @@
 ---
 title: ユーザー定義リテラル (C++)
-ms.date: 12/10/2019
+description: 標準C++でのユーザー定義リテラルの目的と使用方法について説明します。
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301302"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090562"
 ---
 # <a name="user-defined-literals"></a>ユーザー定義リテラル
 
-のリテラルにC++は、整数、文字、浮動小数点、文字列、ブール値、およびポインターの5つの主なカテゴリがあります。  C++ 11 以降、これらのカテゴリに基づいて独自のリテラルを定義して、一般的な表現形式に構文のショートカットを提供したり、タイプ セーフを向上させたりすることができます。 たとえば、Distance クラスがあるとします。 キロメートルのリテラルとマイルのリテラルを定義して、auto d = 42.0_km or auto d = 42.0_mi と記述するだけで、ユーザーに測定単位を明示するよう求めることができます。 ユーザー定義リテラルには、パフォーマンス上の利点または欠点はありません。主に利便性やコンパイル時の型推論のためです。 標準ライブラリには、std: string 用のユーザー定義リテラル、std:: complex、\<chrono > ヘッダーの時間単位および期間操作の単位があります。
+のリテラルにC++は、整数、文字、浮動小数点、文字列、ブール値、およびポインターの6つの主なカテゴリがあります。 11以降C++では、これらのカテゴリに基づいて独自のリテラルを定義することで、一般的な表現の構文ショートカットを提供し、タイプセーフを向上させることができます。 たとえば、`Distance` クラスがあるとします。 たとえば、キロメートルの場合はリテラルを、マイルの場合は別のリテラルを定義し、`auto d = 42.0_km` または `auto d = 42.0_mi`を記述することで、測定単位を明示的に指定することができます。 ユーザー定義リテラルには、パフォーマンス上の利点や欠点はありません。これらは主に、便宜上、またはコンパイル時の型推論に使用されます。 標準ライブラリには、`std::string`、`std::complex`、および \<chrono > ヘッダーの時間および期間操作の単位に対するユーザー定義リテラルがあります。
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -44,70 +45,81 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 ## <a name="cooked-literals"></a>cooked リテラル
 
-ソースコードでは、リテラルは、ユーザー定義であるかどうかに関わりなく、基本的に `101`、`54.7`、`"hello"`、`true` など、英数字のシーケンスです。 コンパイラは、シーケンスを整数、float、const char\* 文字列などとして解釈します。 リテラル値に割り当てられている型を入力として受け入れるユーザー定義リテラルは、"調理済み"*リテラル*として非公式に知られています。 上記の `_r` と `_t` を除く演算子は、すべて cooked リテラルです。 たとえば、リテラル `42.0_km` は _b に似たシグネチャを持つ _km という名前の演算子にバインドされ、リテラル `42_km` は _a に似たシグネチャを持つ演算子にバインドされます。
+ソースコードでは、ユーザー定義かどうかにかかわらず、リテラルは、基本的に `101`、`54.7`、`"hello"` または `true`などの英数字のシーケンスです。 コンパイラは、シーケンスを整数、float、const char\* 文字列などとして解釈します。 リテラル値に割り当てられている型を入力として受け入れるユーザー定義リテラルは、"調理済み"*リテラル*として非公式に知られています。 上記の `_r` と `_t` を除く演算子は、すべて cooked リテラルです。 たとえば、リテラル `42.0_km` は _b に似たシグネチャを持つ _km という名前の演算子にバインドされ、リテラル `42_km` は _a に似たシグネチャを持つ演算子にバインドされます。
 
-次の例では、ユーザー定義リテラルが呼び出し元に入力を明記するよう求める方法を示しています。 `Distance` を構築するために、ユーザーは適切なユーザー定義リテラルを使用して、キロメートルまたはマイルを明示的に指定する必要があります。 言うまでもなく、他の方法でも同じ結果を実現できますが、ユーザー定義リテラルは、その他の方法よりも簡潔です。
+次の例では、ユーザー定義リテラルが呼び出し元に入力を明記するよう求める方法を示しています。 `Distance` を構築するために、ユーザーは適切なユーザー定義リテラルを使用して、キロメートルまたはマイルを明示的に指定する必要があります。 他の方法でも同じ結果を得ることができますが、ユーザー定義のリテラルの方が、代替手段よりも詳細なものではありません。
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-リテラルの数値は 10 進数を使用する必要があります。そうでないと、数値が整数として解釈され、型が演算子と互換性がなくなります。 また、浮動小数点の入力では、型は**long double**である必要があり、整数型の場合は**長すぎる必要**があることに注意してください。
+リテラル値には10進数を使用する必要があります。 それ以外の場合、数値は整数として解釈され、型は演算子と互換性がなくなります。 浮動小数点入力の場合、型は**long double**である必要があり、整数型の場合は長い**長さ**である必要があります。
 
 ## <a name="raw-literals"></a>未加工リテラル
 
-未加工のユーザー定義リテラルでは、ユーザーが定義する演算子は、リテラルを char 値のシーケンスとして受け取り、そのシーケンスを数値や文字列などの型として解釈することはユーザーの責任です。 このページで前述した演算子の一覧では、`_r` と `_t` を使用して未加工リテラルを定義することができます。
+未加工のユーザー定義リテラルでは、定義する演算子は、リテラルを char 値のシーケンスとして受け入れます。 このシーケンスは、数値や文字列などの型として解釈することができます。 このページで前述した演算子の一覧では、`_r` と `_t` を使用して未加工リテラルを定義することができます。
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-未加工リテラルを使用して、入力シーケンスについて、コンパイラが実行するものとは異なるカスタムの解釈を提供できます。 たとえば、シーケンス `4.75987` を、IEEE 754 浮動小数点型ではなく、カスタム 10 進数型に変換するリテラルを定義できます。 また、cooked リテラルと同様、未加工リテラルは、入力シーケンスのコンパイル時の検証を実行するために使用することもできます。
+未加工リテラルを使用して、コンパイラの通常の動作とは異なる入力シーケンスのカスタムの解釈を指定できます。 たとえば、シーケンス `4.75987` を、IEEE 754 浮動小数点型ではなく、カスタム 10 進数型に変換するリテラルを定義できます。 加工されたリテラルなどの未加工リテラルは、入力シーケンスのコンパイル時検証にも使用できます。
 
 ### <a name="example-limitations-of-raw-literals"></a>例: 未加工リテラルの制限事項
 

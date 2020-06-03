@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: d45fe7c6d794f216da93ffbd95dbb7058d3336f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b4124ba3c60fdcb53fc29c7b791c0f73a49579
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403192"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376228"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 
-指定したインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。
+指定したインターフェイスを継承し、指定された Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。
 
-このクラスの実装を提供する、WinRT と COM クラスの定型実装を提供`QueryInterface`、 `AddRef`、`Release`など、モジュールの参照カウントを管理しのクラス ファクトリを提供するためのサポートアクティブ化可能なオブジェクト。
+このクラスは、WinRT クラスと COM クラスの定型的な`QueryInterface`実装`AddRef`を`Release`提供し、モジュールの参照カウントを管理し、アクティブ化可能なオブジェクトのクラス ファクトリを提供するためのサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,59 +51,59 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>パラメーター
 
-*classFlags*<br/>
-省略可能なパラメーターです。 1 つ以上を組み合わせた[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合、RuntimeClass インスタンスは既定でアジャイルです。 定義されていないときに、RuntimeClass インスタンスは、既定でアジャイルです。 あいまいさを避けるために指定常に、`Microsoft::WRL::FtmBase`で`TInterfaces`または`RuntimeClassType::InhibitFtmBase`します。 InhibitFtmBase と FtmBase はどちらもオブジェクトを使用している場合は、アジャイルになります。
+*クラスフラグ*<br/>
+省略可能なパラメーター。 1 つ以上の[ランタイムクラスタイプ](runtimeclasstype-enumeration.md)列挙値の組み合わせ。 マクロ`__WRL_CONFIGURATION_LEGACY__`を定義して、プロジェクト内のすべてのランタイム クラスの classFlags の既定値を変更できます。 定義されている場合、既定では、RuntimeClass インスタンスは非アジャイルです。 定義されていない場合、既定では、RuntimeClass インスタンスはアジャイルです。 あいまいさを避けるために、常に in `Microsoft::WRL::FtmBase` `TInterfaces`または`RuntimeClassType::InhibitFtmBase`を指定します。 ただし、両方を使用すると、オブジェクトはアジャイルになります。
 
-*TInterfaces*<br/>
-インターフェイスの一覧を超えるオブジェクトが実装されて`IUnknown`、`IInspectable`または他のインターフェイスによって制御される[RuntimeClassType](runtimeclasstype-enumeration.md)します。 特にから派生するその他のクラス リストが`Microsoft::WRL::FtmBase`アジャイル オブジェクトを作成して実装するために、`IMarshal`します。
+*T インターフェイス*<br/>
+オブジェクトが実装するインターフェイスのリストは、 `IUnknown``IInspectable`を超えて実装されるか、[または RuntimeClassType](runtimeclasstype-enumeration.md)によって制御されるその他のインターフェイスです。 また、派生する他のクラスを列挙し、特に`Microsoft::WRL::FtmBase`オブジェクトをアジャイルにして実装`IMarshal`させる場合もあります。
 
 ## <a name="members"></a>メンバー
 
 `RuntimeClassInitialize`<br/>
-場合、オブジェクトを初期化する関数、`MakeAndInitialize`テンプレート関数は、オブジェクトを構築するために使用します。 初期化に失敗した場合、オブジェクトが正常に初期化すると場合は、S_OK または COM エラー コードを返します。 戻り値として COM エラー コードが伝達される`MakeAndInitialize`します。 なお、`RuntimeClassInitialize`場合、メソッドは呼び出されません、`Make`テンプレート関数は、オブジェクトを構築するために使用します。
+テンプレート関数を使用してオブジェクトを構築する`MakeAndInitialize`場合にオブジェクトを初期化する関数。 オブジェクトが正常に初期化された場合はS_OK、初期化に失敗した場合は COM エラー コードを返します。 COM エラー コードは、`MakeAndInitialize`の戻り値として伝達されます。 テンプレート関数を`RuntimeClassInitialize`使用してオブジェクトを構築する`Make`場合、メソッドは呼び出されません。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 | 名前                                               | 説明                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
-| [RuntimeClass::RuntimeClass](#runtimeclass)        | 現在のインスタンスを初期化します、`RuntimeClass`クラス。   |
-| [RuntimeClass::~RuntimeClass](#tilde-runtimeclass) | 現在のインスタンスの初期化を解除、`RuntimeClass`クラス。 |
+| [クラス::ランタイムクラス](#runtimeclass)        | クラスの現在のインスタンスを初期化`RuntimeClass`します。   |
+| [ランタイムクラス:~ランタイムクラス](#tilde-runtimeclass) | クラスの現在のインスタンスを初期化解除`RuntimeClass`します。 |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 | 名前                                                      | 説明                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [RuntimeClass::AddRef](#addref)                           | 現在の参照カウントをインクリメント`RuntimeClass`オブジェクト。                              |
-| [RuntimeClass::DecrementReference](#decrementreference)   | 参照が現在のカウントをデクリメント`RuntimeClass`オブジェクト。                              |
-| [Runtimeclass::getiids](#getiids)                         | インターフェイス Id を現在の実装を含むことのできる配列を取得します`RuntimeClass`オブジェクト。 |
-| [RuntimeClass::GetRuntimeClassName](#getruntimeclassname) | 現在のランタイム クラス名を取得`RuntimeClass`オブジェクト。                                  |
-| [Runtimeclass::gettrustlevel](#gettrustlevel)             | 現在の信頼レベルを取得`RuntimeClass`オブジェクト。                                         |
-| [Runtimeclass::getweakreference](#getweakreference)       | 現在の弱い参照オブジェクトにポインターを取得します。`RuntimeClass`オブジェクト。                 |
-| [RuntimeClass::InternalAddRef](#internaladdref)           | 現在の参照カウントをインクリメント`RuntimeClass`オブジェクト。                               |
-| [RuntimeClass::QueryInterface](#queryinterface)           | 指定したインターフェイス ID へのポインターを取得します。                                                 |
-| [RuntimeClass::Release](#release)                         | 現在の COM 解放操作を実行します。`RuntimeClass`オブジェクト。                             |
+| [ランタイムクラス::AddRef](#addref)                           | 現在`RuntimeClass`のオブジェクトの参照カウントをインクリメントします。                              |
+| [クラス::Dクレメントリファレンス](#decrementreference)   | 現在`RuntimeClass`のオブジェクトの参照カウントを減算します。                              |
+| [ランタイムクラス::取得Ids](#getiids)                         | 現在`RuntimeClass`のオブジェクトによって実装されるインターフェイス ID を格納できる配列を取得します。 |
+| [クラスクラス::取得ランタイムクラス名](#getruntimeclassname) | 現在`RuntimeClass`のオブジェクトのランタイム クラス名を取得します。                                  |
+| [クラス::ゲットトラストレベル](#gettrustlevel)             | 現在`RuntimeClass`のオブジェクトの信頼レベルを取得します。                                         |
+| [ランタイムクラス::ゲットウィークリファレンス](#getweakreference)       | 現在`RuntimeClass`のオブジェクトの弱参照オブジェクトへのポインターを取得します。                 |
+| [クラス::内部追加Ref](#internaladdref)           | 現在`RuntimeClass`のオブジェクトへの参照カウントをインクリメントします。                               |
+| [クラス::クエリインターフェイス](#queryinterface)           | 指定したインターフェイス ID へのポインターを取得します。                                                 |
+| [ランタイムクラス::リリース](#release)                         | 現在`RuntimeClass`のオブジェクトに対して COM 解放操作を実行します。                             |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-これは、実装の詳細です。
+これは実装の詳細になります。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**ヘッダー:** 実装.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="tilde-runtimeclass"></a>ランタイムクラス:~ランタイムクラス
 
-現在のインスタンスの初期化を解除、`RuntimeClass`クラス。
+クラスの現在のインスタンスを初期化解除`RuntimeClass`します。
 
 ```cpp
 virtual ~RuntimeClass();
 ```
 
-## <a name="addref"></a>RuntimeClass::AddRef
+## <a name="runtimeclassaddref"></a><a name="addref"></a>ランタイムクラス::AddRef
 
-現在の参照カウントをインクリメント`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトの参照カウントをインクリメントします。
 
 ```cpp
 STDMETHOD_(
@@ -116,9 +116,9 @@ STDMETHOD_(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="decrementreference"></a>RuntimeClass::DecrementReference
+## <a name="runtimeclassdecrementreference"></a><a name="decrementreference"></a>クラス::Dクレメントリファレンス
 
-参照が現在のカウントをデクリメント`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトの参照カウントを減算します。
 
 ```cpp
 ULONG DecrementReference();
@@ -128,9 +128,9 @@ ULONG DecrementReference();
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="getiids"></a>RuntimeClass::GetIids
+## <a name="runtimeclassgetiids"></a><a name="getiids"></a>ランタイムクラス::取得Ids
 
-インターフェイス Id を現在の実装を含むことのできる配列を取得します`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトによって実装されるインターフェイス ID を格納できる配列を取得します。
 
 ```cpp
 STDMETHOD(
@@ -142,19 +142,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*iidCount*<br/>
-ときにこの操作が完了すると、配列内の要素の合計数*iid*します。
+*iidカウント*<br/>
+この操作が完了すると、配列*iids*内の要素の合計数。
 
-*iid*<br/>
-この操作が完了時は、インターフェイス Id の配列へのポインター。
+*Iid*<br/>
+この操作が完了すると、インターフェイス ID の配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_OUTOFMEMORY します。
+成功した場合はS_OK。それ以外の場合は、E_OUTOFMEMORY。
 
-## <a name="getruntimeclassname"></a>RuntimeClass::GetRuntimeClassName
+## <a name="runtimeclassgetruntimeclassname"></a><a name="getruntimeclassname"></a>クラスクラス::取得ランタイムクラス名
 
-現在のランタイム クラス名を取得`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトのランタイム クラス名を取得します。
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -164,20 +164,20 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>パラメーター
 
-*runtimeName*<br/>
-この操作の完了時、ランタイム クラス名。
+*ランタイム名*<br/>
+この操作が完了すると、ランタイム クラス名。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、アサート エラーが出力`__WRL_STRICT__`または`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`が定義されていません。
+定義されていない場合`__WRL_STRICT__`、アサート`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`エラーが発生します。
 
-## <a name="gettrustlevel"></a>Runtimeclass::gettrustlevel
+## <a name="runtimeclassgettrustlevel"></a><a name="gettrustlevel"></a>クラス::ゲットトラストレベル
 
-現在の信頼レベルを取得`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトの信頼レベルを取得します。
 
 ```cpp
 STDMETHOD(GetTrustLevel)(
@@ -187,20 +187,20 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>パラメーター
 
-*trustLvl*<br/>
-ときにこの操作が完了すると、現在の信頼レベル`RuntimeClass`オブジェクト。
+*トラストルヴル*<br/>
+この操作が完了すると、現在`RuntimeClass`のオブジェクトの信頼レベル。
 
 ### <a name="return-value"></a>戻り値
 
-常に s_ok を返します。
+常にS_OK。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、アサート エラーが出力`__WRL_STRICT__`または`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`が定義されていません。
+定義されていない場合`__WRL_STRICT__`、アサート`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`エラーが発生します。
 
-## <a name="getweakreference"></a>RuntimeClass::GetWeakReference
+## <a name="runtimeclassgetweakreference"></a><a name="getweakreference"></a>ランタイムクラス::ゲットウィークリファレンス
 
-現在の弱い参照オブジェクトにポインターを取得します。`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトの弱参照オブジェクトへのポインターを取得します。
 
 ```cpp
 STDMETHOD(
@@ -210,16 +210,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*weakReference*<br/>
-この操作が完了時は、弱い参照オブジェクトへのポインター。
+*Weakreference*<br/>
+この操作が完了すると、弱参照オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-常に s_ok を返します。
+常にS_OK。
 
-## <a name="internaladdref"></a>RuntimeClass::InternalAddRef
+## <a name="runtimeclassinternaladdref"></a><a name="internaladdref"></a>クラス::内部追加Ref
 
-現在の参照カウントをインクリメント`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトへの参照カウントをインクリメントします。
 
 ```cpp
 ULONG InternalAddRef();
@@ -227,9 +227,9 @@ ULONG InternalAddRef();
 
 ### <a name="return-value"></a>戻り値
 
-結果として得られる、参照カウントします。
+結果の参照カウント。
 
-## <a name="queryinterface"></a>RuntimeClass::QueryInterface
+## <a name="runtimeclassqueryinterface"></a><a name="queryinterface"></a>クラス::クエリインターフェイス
 
 指定したインターフェイス ID へのポインターを取得します。
 
@@ -246,16 +246,16 @@ STDMETHOD(
 *riid*<br/>
 インターフェイス ID。
 
-*ppvObject*<br/>
-この opereation 完了時で指定されたインターフェイスへのポインター、 *riid*パラメーター。
+*オブジェクト*<br/>
+このオペレーションが完了すると *、riid*パラメーターで指定されたインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="release"></a>RuntimeClass::Release
+## <a name="runtimeclassrelease"></a><a name="release"></a>ランタイムクラス::リリース
 
-現在の COM 解放操作を実行します。`RuntimeClass`オブジェクト。
+現在`RuntimeClass`のオブジェクトに対して COM 解放操作を実行します。
 
 ```cpp
 STDMETHOD_(
@@ -268,13 +268,13 @@ STDMETHOD_(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照カウントが 0 になった場合、`RuntimeClass`オブジェクトを削除します。
+参照カウントがゼロになると、`RuntimeClass`オブジェクトは削除されます。
 
-## <a name="runtimeclass"></a>RuntimeClass::RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="runtimeclass"></a>クラス::ランタイムクラス
 
-現在のインスタンスを初期化します、`RuntimeClass`クラス。
+クラスの現在のインスタンスを初期化`RuntimeClass`します。
 
 ```cpp
 RuntimeClass();

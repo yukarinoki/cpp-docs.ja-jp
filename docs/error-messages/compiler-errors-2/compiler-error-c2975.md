@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344701"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201566"
 ---
 # <a name="compiler-error-c2975"></a>コンパイラ エラー C2975
 
-> '*引数*': 無効なテンプレート引数'*型*'、コンパイル時定数式が必要です
+> '*argument*': '*type*' の無効なテンプレート引数です。コンパイル時の定数式が必要です
 
-テンプレート引数は、テンプレート宣言; と一致しません定数式は、山かっこ内に表示する必要があります。 変数は、実際のテンプレート引数としては許可されません。 テンプレートの定義を調べて正しい型が指定されていることをご確認ください。
+テンプレート引数がテンプレート宣言と一致しません。山かっこ内に定数式が表示されます。 テンプレートの実際の引数として変数を使用することはできません。 テンプレートの定義を調べて正しい型が指定されていることをご確認ください。
 
 ## <a name="example"></a>例
 
-次の例では、C2975 を生成し、また正しい使用法を示します。
+次の例では、C2975 を生成し、正しい使用法も示しています。
 
 ```cpp
 // C2975.cpp
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 は、使用する場合にも発生します。 &#95;&#95;行&#95;&#95;コンパイル時定数として[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)します。 1 つのソリューションを使用してコンパイルすること[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)の代わりに **/ZI**します。
+C2975 は、 [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)を使用&#95; &#95;し&#95; &#95;てコンパイル時の定数として行を使用する場合にも発生します。 1つの解決策は、 **/zi**ではなく[/zi](../../build/reference/z7-zi-zi-debug-information-format.md)を使用してコンパイルすることです。
 
 ```cpp
 // C2975b.cpp

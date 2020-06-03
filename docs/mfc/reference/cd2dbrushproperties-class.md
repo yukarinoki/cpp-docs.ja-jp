@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253733"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754185"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties クラス
 
@@ -33,13 +33,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|オーバーロードされます。 作成、`CD2D_BRUSH_PROPERTIES`構造体|
+|[プロパティ::CD2Dブラシプロパティ](#cd2dbrushproperties)|オーバーロードされます。 構造体を`CD2D_BRUSH_PROPERTIES`作成します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|オブジェクトを初期化します|
+|[プロパティ::コモンイニト](#commoninit)|オブジェクトを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,9 +51,9 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>プロパティ::CD2Dブラシプロパティ
 
-CD2D_BRUSH_PROPERTIES 構造を作成します。
+CD2D_BRUSH_PROPERTIES構造を作成します。
 
 ```
 CD2DBrushProperties();
@@ -67,16 +67,16 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>パラメーター
 
 *_opacity*<br/>
-ブラシの基本の不透明度。 既定値は 1.0 です。
+ブラシの基本不透明度。 既定値は 1.0 です。
 
 *_transform*<br/>
-ブラシに適用される変換
+ブラシに適用する変換
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>プロパティ::コモンイニト
 
-オブジェクトを初期化します
+オブジェクトを初期化します。
 
-```
+```cpp
 void CommonInit();
 ```
 

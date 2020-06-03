@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337522"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -24,7 +24,7 @@ ms.locfileid: "68448075"
 class istrstream : public istream
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このオブジェクトは、クラス `strstreambuf` のオブジェクトを格納します。
 
@@ -33,7 +33,7 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[istrstream](#istrstream)|`istrstream` 型のオブジェクトを構築します。|
 
@@ -42,7 +42,7 @@ class istrstream : public istream
 |メンバー関数|説明|
 |-|-|
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
-|[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
+|[Str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -50,7 +50,7 @@ class istrstream : public istream
 
 **名前空間:** std
 
-## <a name="istrstream"></a>  istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>イズトルストリーム::イズトルストリーム
 
 `istrstream` 型のオブジェクトを構築します。
 
@@ -72,17 +72,17 @@ istrstream(
 
 ### <a name="parameters"></a>パラメーター
 
-*数*\
-バッファーの長さ (*ptr*)。
+*カウント*\
+バッファの長さ (*ptr*)
 
-*ポインター*\
+*Ptr*\
 バッファーが初期化されているコンテンツ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべてのコンストラクターは、 [istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことによっ`sb`て基底クラスを初期化します。ここで、は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初の2つのコンストラクター `sb`は、 `strstreambuf`(( **const** `char` \*) `ptr`, 0) を呼び出すことによって初期化します。 残りの 2 つのコンストラクターは、代わりに `strstreambuf`( ( **const**`char` *) `ptr`, `count` ) を呼び出します。
+すべてのコンストラクタは、 クラス[strstreambuf](../standard-library/strstreambuf-class.md)の格納されたオブジェクト`sb`である[istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことによって基本クラスを初期化します。 最初の 2 つのコンストラクター`sb`も、 `strstreambuf`( ( `ptr` **const** `char` \*) 、 0 を呼び出して初期化します。 残りの 2 つのコンストラクター`strstreambuf`は、 ( **const** `char` *) `ptr`, を`count`呼び出します。
 
-## <a name="rdbuf"></a>  istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>イズトルストリーム::rdbuf
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインターを返します。
 
@@ -94,15 +94,15 @@ strstreambuf *rdbuf() const
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、ポインター型の格納されたストリーム バッファーのアドレスを [strstreambuf](../standard-library/strstreambuf-class.md) に返します。
 
 ### <a name="example"></a>例
 
-`rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) を参照してください。
+`rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="str"></a>  istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>イズトルストリーム::str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。
 
@@ -114,17 +114,17 @@ char *str();
 
 被制御シーケンスの先頭へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str) を返します。
+メンバ関数は[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)を返します。
 
 ### <a name="example"></a>例
 
-を使用`str`するサンプルについては、「 [strstream:: str](../standard-library/strstreambuf-class.md#str) 」を参照してください。
+を使用するサンプルについては、 [strstream::str](../standard-library/strstreambuf-class.md#str)を参照`str`してください。
 
 ## <a name="see-also"></a>関連項目
 
-[istream](../standard-library/istream-typedefs.md#istream)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Istream](../standard-library/istream-typedefs.md#istream)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[iostreams の規則](../standard-library/iostreams-conventions.md)
+[ioストリームの規約](../standard-library/iostreams-conventions.md)

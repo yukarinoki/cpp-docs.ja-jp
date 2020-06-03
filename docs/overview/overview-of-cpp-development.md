@@ -7,10 +7,10 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77415713"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio での C++ 開発の概要
@@ -25,7 +25,7 @@ Visual Studio IDE の共有ツールに加えて、MSVC には、ネイティブ
 
 Visual Studio では、使用するすべてのプロジェクト システムやカスタム ビルド ツールがサポートされ、IntelliSense、参照、デバッグなどが完全にサポートされます。
 
-- **MSBuild** は、Visual Studio 用のネイティブ プロジェクト システムです。 メイン メニューから **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択すると、さまざまな種類の MSBuild *プロジェクト テンプレート*が表示されます。これを利用すると、さまざまな種類の C++ アプリケーションの開発を簡単に始められます。
+- **MSBuild** は、Visual Studio 用のネイティブ プロジェクト システムです。 メイン メニューから **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択すると、さまざまな種類の MSBuild *プロジェクト テンプレート*が表示されます。これを利用すると、さまざまな種類の C++ アプリケーションの開発を簡単に始められます。
 
    ::: moniker range="vs-2019"
 

@@ -1,44 +1,44 @@
 ---
-title: テクニカル ノート 70:MFC ウィンドウのクラス名
+title: 'テクニカル ノート 70: MFC のウィンドウ クラス名'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 1d9b5de07bcc2545df6294557d1ac9f9d29e856c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ad43f5af5d2e90cb5fc2bc90f0909c2b495b4a4c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513356"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373486"
 ---
-# <a name="tn070-mfc-window-class-names"></a>テクニカル ノート 70:MFC ウィンドウのクラス名
+# <a name="tn070-mfc-window-class-names"></a>テクニカル ノート 70: MFC のウィンドウ クラス名
 
 > [!NOTE]
->  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
+> 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-MFC ウィンドウは、ウィンドウの機能を反映する動的に作成されたクラス名を使用します。 MFC は、アプリケーションによって生成されるフレームウィンドウ、ビュー、およびポップアップウィンドウに対して動的にクラス名を生成します。 MFC アプリケーションによって生成されるダイアログボックスとコントロールには、対象となるウィンドウのクラスに対して、Windows によって指定された名前が使用されます。
+MFC ウィンドウでは、ウィンドウの機能を反映する動的に作成されたクラス名が使用されます。 MFC は、アプリケーションによって生成されるフレーム ウィンドウ、ビュー、およびポップアップ ウィンドウに対して、クラス名を動的に生成します。 MFC アプリケーションによって生成されるダイアログ ボックスとコントロールには、対象のウィンドウのクラスの Windows が指定した名前が付いています。
 
-独自のウィンドウクラスを登録し、それを[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)のオーバーライドで使用することによって、動的に指定されたクラス名を置き換えることができます。 MFC に用意されているクラス名は、次の2つの形式のいずれかになります。
+動的に指定されたクラス名を置き換えるには、独自のウィンドウ クラスを登録し[、PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)のオーバーライドで使用します。 MFC で提供されるクラス名は、次の 2 つの形式のいずれかに適合します。
 
 ```
 Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-`%x`文字を置換する16進数字は、 [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体のデータから入力されます。 MFC では、同じ**WNDCLASS**構造C++を必要とする複数のクラスが同じ登録済みウィンドウクラスを共有できるように、この手法を使用します。 ほとんどの単純な Win32 アプリケーションとは異なり、MFC アプリケーションには**WNDPROC**が1つしかないため、 **WNDCLASS**構造体を簡単に共有して時間とメモリを節約できます。 上に示した`%x`文字の置き換え可能な値は次のとおりです。
+`%x`文字を置き換える 16 進数の数字は[、WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体のデータから入力されます。 MFC では、同一の**WNDCLASS**構造体を必要とする複数の C++ クラスが同じ登録済みウィンドウ クラスを共有できるように、この手法を使用します。 ほとんどの単純な Win32 アプリケーションとは異なり、MFC アプリケーションには**WNDPROC**が 1 つしかないので、時間とメモリを節約するために簡単に**WNDCLASS**構造体を共有できます。 上記の文字の`%x`置き換え可能な値は次のとおりです。
 
-- **WNDCLASS hInstance**
+- **インスタンス**
 
-- **WNDCLASS**
+- **スタイル**
 
-- **WNDCLASS**
+- **カーソルを使用します。**
 
-- **WNDCLASS hbrBackground**
+- **バックグラウンド**
 
-- **WNDCLASS**
+- **アイコン**
 
-最初の形式 (`Afx:%x:%x`) は、 **hcursor**、 **hbrBackground**、および**hIcon**がすべて**NULL**の場合に使用されます。
+最初のフォーム`Afx:%x:%x`( ) は **、hCursor**、 **hbrBackground**、および**hIcon**がすべて NULL の場合に使用**されます**。
 
 ## <a name="see-also"></a>関連項目
 

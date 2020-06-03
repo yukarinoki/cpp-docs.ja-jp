@@ -2,20 +2,20 @@
 title: データ バッファーへのポインターの取得 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162324"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032370"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>データ バッファーへのポインターの取得 (C++/CX)
 
 Windows ランタイム内の [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) インターフェイスは、言語に依存せずに、データ バッファーにアクセスするストリーム ベースの方法を提供します。 C++ では、robuffer.h 内で定義されている Windows ランタイム ライブラリの IBufferByteAccess インターフェイスを使用して、基になるバイト配列への生のポインターを取得できます。 この方法により、データの不要なコピーを作成せずに、バイト配列をその場で変更できます。
 
-次の図では、ソースが [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap)である XAML イメージ要素を示します。 どの言語で作成されたクライアント アプリケーションも、 `WriteableBitmap` への参照を C++ コードに渡すことができ、その後、C++ はその参照を使用して基になるバッファーでデータを取得できます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでは、Windows ランタイム コンポーネントにパッケージ化することがなくソース コード内で直接次の例では、関数を使用できます。
+次の図では、ソースが [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap)である XAML イメージ要素を示します。 どの言語で作成されたクライアント アプリケーションも、 `WriteableBitmap` への参照を C++ コードに渡すことができ、その後、C++ はその参照を使用して基になるバッファーでデータを取得できます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでは、次の例の関数を直接ソース コードで使用できます。
 
-![C&#43; &#43;ピクセル データに直接アクセスするコード](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43;ピクセル データに直接アクセスするコード")
+![ピクセルデータに直接アクセスするC&#43;&#43; コード](../cppcx/media/ibufferbyteaccessdiagram.png "ピクセルデータに直接アクセスするC&#43;&#43; コード")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
@@ -49,13 +49,13 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 }
 ```
 
-## <a name="complete-example"></a>コード例全体
+## <a name="complete-example"></a>完全なサンプル コード
 
-次の手順は、渡される c# ユニバーサル Windows プラットフォーム アプリを作成する方法を示して、 `WriteableBitmap` C++ Windows ランタイム コンポーネント DLL にします。 C++ コードでは、ピクセル バッファーへのポインターを取得し、イメージに対してその場で簡単な変更を実行します。 別の方法として、C# の代わりに、Visual Basic、JavaScript、または C++ のクライアント アプリケーションを作成することもできます。 C++ を使用する場合、コンポーネント DLL は必要ありません。それらのメソッドを MainPage クラスまたは定義した他のクラスに直接追加できます。
+次の手順では、C++ Windows ランタイム コンポーネント DLL に`WriteableBitmap`a を渡す C# ユニバーサル Windows プラットフォーム アプリを作成する方法を示します。 C++ コードでは、ピクセル バッファーへのポインターを取得し、イメージに対してその場で簡単な変更を実行します。 別の方法として、C# の代わりに、Visual Basic、JavaScript、または C++ のクライアント アプリケーションを作成することもできます。 C++ を使用する場合、コンポーネント DLL は必要ありません。それらのメソッドを MainPage クラスまたは定義した他のクラスに直接追加できます。
 
-#### <a name="create-the-client"></a>クライアントの作成
+#### <a name="create-the-client"></a>クライアントを作成する
 
-1. C# ユニバーサル Windows プラットフォーム アプリを作成するのにには、空のアプリのプロジェクト テンプレートを使用します。
+1. 空のアプリ プロジェクト テンプレートを使用して、C# ユニバーサル Windows プラットフォーム アプリを作成します。
 
 1. MainPage.xaml 内で、次の手順に従います。
 
@@ -129,7 +129,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 #### <a name="create-the-c-component"></a>C++ コンポーネントの作成
 
-1. 新しい C++ Windows ランタイム コンポーネントを既存のソリューションに追加し、名前`ImageManipCPP`します。 C# プロジェクト内でそのコンポーネントへの参照を追加するために、 **ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[追加]**、 **[参照]** を選択します。
+1. 新しい C++ Windows ランタイム コンポーネントを既存のソリューションに`ImageManipCPP`追加し、名前を付けます。 C# プロジェクト内でそのコンポーネントへの参照を追加するために、 **ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[追加]**、 **[参照]** を選択します。
 
 1. Class1.h 内で、次の手順に従います。
 

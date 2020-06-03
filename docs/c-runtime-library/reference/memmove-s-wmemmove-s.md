@@ -1,9 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951791"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914092"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -78,24 +80,26 @@ errno_t wmemmove_s(
 
 |*dest*|*numberOfElements*|*src*|戻り値|*Dest*の内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|変更されない|
-|任意|< *数*|任意|**ERANGE**|変更されない|
+|**空白**|any|any|**EINVAL**|変更されない|
+|any|any|**空白**|**EINVAL**|変更されない|
+|any|< *数*|any|**ERANGE**|変更されない|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複する場合、 **memmove_s**は、重複する領域の元のソースバイトが上書きされる前にコピーされることを保証します。
+*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複している場合、 **memmove_s**によって、重複する領域の元のソースバイトが上書きされる前にコピーされます。
 
 *Dest*または*src*が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: 0123456789

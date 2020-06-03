@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205986"
 ---
 # <a name="compiler-error-c2393"></a>コンパイラ エラー C2393
 
-> '*シンボル*': appdomain ごとのシンボルをセグメントに割り当てることができない'*セグメント*'
+> '*symbol*': appdomain ごとのシンボルをセグメント '*segment*' に割り当てることはできません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-使用[appdomain](../../cpp/appdomain.md)変数を使ってコンパイルすることを意味する **/clr: 純粋な**または **/clr:safe**、safe または純粋なイメージは、データ セグメントを含めることはできません。
+[Appdomain](../../cpp/appdomain.md)変数を使用することは、 **/clr: pure**または **/clr: safe**を使用してコンパイルすることを意味します。また、safe または純粋なイメージにデータセグメントを含めることはできません。
 
-参照してください[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
+詳細については、「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md) 」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、C2393 が生成されます。 この問題を解決するには、データ セグメントを作成しないでください。
+次の例では、C2393 が生成されます。 この問題を解決するには、データセグメントを作成しないでください。
 
 ```cpp
 // C2393.cpp

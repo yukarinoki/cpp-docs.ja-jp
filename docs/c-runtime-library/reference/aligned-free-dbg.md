@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 18c1a23d666070afaf1eff687c7d33b0240f0ac3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171282"
 ---
 # <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
@@ -49,11 +49,11 @@ void _aligned_free_dbg(
 *memblock*<br/>
 [_Aligned_malloc](aligned-malloc.md)または[_aligned_offset_malloc](aligned-offset-malloc.md)関数に返されたメモリブロックへのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Aligned_free_dbg**関数は、 [_aligned_free](aligned-free.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_free_dbg**の各呼び出しはの`_aligned_free`呼び出しに限定されます。 と`_aligned_free` **_aligned_free_dbg**はどちらもベースヒープ内のメモリブロックを解放しますが、 **_aligned_free_dbg**はデバッグ機能に対応しています。これは、解放されたブロックをヒープのリンクリストに保持してメモリ不足の状態をシミュレートする機能です。
+**_Aligned_free_dbg**関数は、 [_aligned_free](aligned-free.md)関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_free_dbg**の各呼び出しは `_aligned_free`への呼び出しに限定されます。 `_aligned_free` と **_aligned_free_dbg**は、ベースヒープ内のメモリブロックを解放しますが、 **_aligned_free_dbg**はデバッグ機能に対応しています。解放されたブロックをヒープのリンクリストに保持してメモリ不足の状態をシミュレートする機能です。
 
-**_aligned_free_dbg**は、無料操作を実行する前に、指定されたすべてのファイルとブロックの場所に対して有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 [_CrtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグの _CRTDBG_DELAY_FREE_MEM_DF ビットフィールドが設定されている場合、解放されたブロックは値0xdd を格納し、_FREE_BLOCK ブロック型が割り当てられ、ヒープのメモリブロックのリンクリストに保持されます。
+**_aligned_free_dbg**は、空き操作を実行する前に、指定されたすべてのファイルとブロックの場所に対して有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 [_CrtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグの _CRTDBG_DELAY_FREE_MEM_DF ビットフィールドが設定されている場合、解放されたブロックは値0xdd を格納し、_FREE_BLOCK ブロック型が割り当てられ、ヒープのメモリブロックのリンクリストに保持されます。
 
 メモリの解放でエラーが発生すると、エラーの性質に関するオペレーティング システムからの情報が `errno` に設定されます。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
@@ -67,6 +67,6 @@ void _aligned_free_dbg(
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [デバッグ ルーチン](../../c-runtime-library/debug-routines.md)

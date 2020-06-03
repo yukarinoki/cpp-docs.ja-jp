@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownFrame クラス
+title: クラスをドロップダウンする
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownFrame
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869065"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752432"
 ---
-# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame クラス
+# <a name="cmfcdropdownframe-class"></a>クラスをドロップダウンする
 
-ドロップダウンツールバーとドロップダウンツールバーボタンにドロップダウンのフレームウィンドウ機能を提供します。
+ドロップダウン ツール バーおよびドロップダウン ツール バー ボタンにドロップダウン フレーム ウィンドウ機能を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,7 +39,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Name|Description|
+|名前|説明|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|既定のコンストラクターです。|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|デストラクターです。|
 
@@ -47,24 +47,24 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Name|Description|
-|[CMFCDropDownFrame:: Create](#create)|`CMFCDropDownFrame` オブジェクトを作成します。|
+|名前|説明|
+|[CMFCドロップダウンフレーム::作成](#create)|`CMFCDropDownFrame` オブジェクトを作成します。|
 |`CMFCDropDownFrame::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|[CMFCDropDownFrame:: GetParentMenuBar](#getparentmenubar)|ドロップダウンフレームの親メニューバーを取得します。|
-|[CMFCDropDownFrame:: GetParentPopupMenu](#getparentpopupmenu)|ドロップダウンフレームの親ポップアップメニューを取得します。|
+|[CMFCドロップダウンフレーム::取得親メニューバー](#getparentmenubar)|ドロップダウン フレームの親メニュー バーを取得します。|
+|[メニューメニューを取得します。](#getparentpopupmenu)|ドロップダウン フレームの親ポップアップ メニューを取得します。|
 |`CMFCDropDownFrame::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
-|[CMFCDropDownFrame:: RecalcLayout](#recalclayout)|ドロップダウンフレームを移動します。|
-|[CMFCDropDownFrame:: SetAutoDestroy](#setautodestroy)|子のドロップダウンツールバーウィンドウを自動的に破棄するかどうかを設定します。|
+|[CMFCドロップダウンフレーム::リカルクレイアウト](#recalclayout)|ドロップダウン フレームを再配置します。|
+|[CMFCドロップダウンフレーム::セットオートデストロイ](#setautodestroy)|子ドロップダウン ツール バー ウィンドウを自動的に破棄するかどうかを設定します。|
 
 ### <a name="remarks"></a>解説
 
 このクラスは、コードで直接使用するためのものではありません。
 
-フレームワークは、このクラスを使用して、`CMFCDropDownToolbar` クラスと `CMFCDropDownToolbarButton` クラスにフレーム動作を提供します。 これらのクラスの詳細については、「 [Cmfcdropdowntoolbar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)および[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)」を参照してください。
+フレームワークは、このクラスを使用して`CMFCDropDownToolbar`、 クラスと`CMFCDropDownToolbarButton`クラスにフレーム動作を提供します。 これらのクラスの詳細については、「クラス」および[「CMFCDropDown](../../mfc/reference/cmfcdropdowntoolbar-class.md) [ツールバー クラス」](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)を参照してください。
 
 ## <a name="example"></a>例
 
-次の例は、`CFrameWnd` クラスから `CMFCDropDownFrame` オブジェクトへのポインターを取得する方法と、子のドロップダウンツールバーウィンドウを自動的に破棄するように設定する方法を示しています。
+`CFrameWnd`クラスから`CMFCDropDownFrame`オブジェクトへのポインターを取得する方法と、子ドロップダウン ツール バー ウィンドウを自動的に破棄する設定方法を次の例に示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]
 
@@ -74,19 +74,19 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[から派生しているのではない](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
+[ダウンフレーム](../../mfc/reference/cmfcdropdownframe-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdropdowntoolbar.h
 
-##  <a name="create"></a>CMFCDropDownFrame:: Create
+## <a name="cmfcdropdownframecreate"></a><a name="create"></a>CMFCドロップダウンフレーム::作成
 
 `CMFCDropDownFrame` オブジェクトを作成します。
 
@@ -102,25 +102,25 @@ virtual BOOL Create(
 
 |||
 |-|-|
-|パラメーター|Description|
-|*pWndParent*|からドロップダウンフレームの親ウィンドウ。|
-|*x*|からダウンフレームの位置を表示する水平方向の画面座標。|
-|*y*|から下方向のフレームの位置を表示する垂直方向の画面座標。|
-|*pWndOriginToolbar*|からこのメソッドが新しいドロップダウンフレームオブジェクトを設定するために使用するドロップダウンボタンを持つツールバー。|
+|パラメーター|説明|
+|*親の子*|[in]ドロップダウン フレームの親ウィンドウ。|
+|*x*|[in]下向きフレームの位置を示す水平画面座標。|
+|*Y*|[in]下向きフレームの位置を示す垂直画面座標。|
+|*ツール バー*|[in]このメソッドが新しいドロップダウン フレーム オブジェクトを設定するために使用するドロップダウン ボタンがあるツール バー。|
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウンフレームが正常に作成された場合は TRUE。それ以外の場合は FALSE。
+ドロップダウン フレームが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、base [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)メソッドを呼び出して、WS_POPUP スタイルのドロップダウンフレームウィンドウを作成します。 ドロップダウンフレームウィンドウは、指定した画面座標で表示されます。 [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)メソッドが FALSE を返す場合、このメソッドは失敗します。
+このメソッドは、基本[CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)メソッドを呼び出して、WS_POPUP スタイルのドロップダウン フレーム ウィンドウを作成します。 ドロップダウン フレーム ウィンドウが、指定した画面座標に表示されます。 このメソッドは[、CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)メソッドが FALSE を返す場合に失敗します。
 
-`CMFCDropDownFrame` クラスは、指定された `CMFCDropDownToolBar` パラメーターのコピーを作成します。 このメソッドは、ボタンのイメージとボタンの状態を `pWndOriginToolbar` パラメーターから `m_pWndOriginToolbar` データメンバーにコピーします。
+クラス`CMFCDropDownFrame`は、指定された`CMFCDropDownToolBar`パラメーターのコピーを作成します。 このメソッドは、ボタン イメージとボタンの状態`pWndOriginToolbar`をパラメーターから`m_pWndOriginToolbar`データ メンバーにコピーします。
 
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame:: GetParentMenuBar
+## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCドロップダウンフレーム::取得親メニューバー
 
-ドロップダウンフレームの親メニューバーを取得します。
+ドロップダウン フレームの親メニュー バーを取得します。
 
 ```
 CMFCMenuBar* GetParentMenuBar() const;
@@ -128,15 +128,15 @@ CMFCMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウンフレームの親メニューバーへのポインター。フレームに親がない場合は NULL。
+ドロップダウン フレームの親メニュー バーへのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、親のメニューバーを親ボタンから取得します。 このメソッドは、ドロップダウンフレームに親ボタンがない場合、または親ボタンに親メニューバーがない場合に NULL を返します。
+このメソッドは、親ボタンから親メニュー バーを取得します。 ドロップダウン フレームに親ボタンがない場合、または親ボタンに親メニュー バーがない場合、このメソッドは NULL を返します。
 
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame:: GetParentPopupMenu
+## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>メニューメニューを取得します。
 
-ドロップダウンフレームの親ポップアップメニューを取得します。
+ドロップダウン フレームの親ポップアップ メニューを取得します。
 
 ```
 CMFCDropDownFrame* GetParentPopupMenu() const;
@@ -144,15 +144,15 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウンフレームの親ドロップダウンメニューへのポインター。フレームに親がない場合は NULL。
+ドロップダウン フレームの親ドロップダウン メニューへのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、親メニューを親ボタンから取得します。 ドロップダウンフレームに親ボタンがない場合、または親ボタンに親メニューがない場合、このメソッドは NULL を返します。
+このメソッドは、親ボタンから親メニューを取得します。 ドロップダウン フレームに親ボタンがない場合、または親ボタンに親メニューがない場合、このメソッドは NULL を返します。
 
-##  <a name="recalclayout"></a>CMFCDropDownFrame:: RecalcLayout
+## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCドロップダウンフレーム::リカルクレイアウト
 
-ドロップダウンフレームを移動します。
+ドロップダウン フレームを再配置します。
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -162,33 +162,33 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 |||
 |-|-|
-|パラメーター|Description|
-|*bNotify*|から未使用.|
+|パラメーター|説明|
+|*通知する*|[in]未使用。|
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ドロップダウンフレームが作成されたとき、または親ウィンドウのサイズが変更されたときに、フレームワークによって呼び出されます。 このメソッドは、親ウィンドウの位置とサイズを使用して、ドロップダウンフレームの位置とサイズを計算します。
+フレームワークは、ドロップダウン フレームが作成されたとき、または親ウィンドウのサイズが変更されたときに、このメソッドを呼び出します。 このメソッドは、親ウィンドウの位置とサイズを使用して、ドロップダウン フレームの位置とサイズを計算します。
 
-##  <a name="setautodestroy"></a>CMFCDropDownFrame:: SetAutoDestroy
+## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCドロップダウンフレーム::セットオートデストロイ
 
-子のドロップダウンツールバーウィンドウを自動的に破棄するかどうかを設定します。
+子ドロップダウン ツール バー ウィンドウを自動的に破棄するかどうかを設定します。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bAutoDestroy*<br/>
-から関連付けられているドロップダウンツールバーウィンドウを自動的に破棄する場合は TRUE。それ以外の場合は FALSE。
+*b自動破壊*<br/>
+[in]関連付けられたドロップダウン ツール バー ウィンドウを自動的に破棄する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*Bautodestroy*が TRUE の場合、`CMFCDropDownFrame` デストラクターは、関連付けられているドロップダウンツールバーウィンドウを破棄します。 既定値は TRUE です。
+*bAutoDestroy*が TRUE の`CMFCDropDownFrame`場合、デストラクタは関連付けられたドロップダウン ツール バー ウィンドウを破棄します。 既定値は TRUE です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+[クラスをドロップダウンメニューバー](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
+[クラスをドロップダウンダウンツール バーボタン](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)

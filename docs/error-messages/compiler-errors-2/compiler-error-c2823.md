@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406965"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201956"
 ---
 # <a name="compiler-error-c2823"></a>コンパイラ エラー C2823
 
-> typedef のテンプレートは無効です。
+> typedef テンプレートが正しくありません
 
-テンプレートはでは許可されていない`typedef`定義します。
+テンプレートは `typedef` 定義では許可されていません。
 
 ## <a name="example"></a>例
 
-次の例では、C2823 を生成し、その修正方法を示しています。
+次の例では、C2823 を生成し、その修正方法の1つを示しています。
 
 ```cpp
 // C2823.cpp

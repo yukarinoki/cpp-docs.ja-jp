@@ -11,7 +11,6 @@ f1_keywords:
 - CBookmark::CBookmark
 - ATL.CBookmark.CBookmark
 - CBookmark.CBookmark
-- CBookmark
 - ATL::CBookmark<0>::CBookmark<0>
 - ATL.CBookmark<0>.CBookmark<0>
 - CBookmark<0>::CBookmark<0>
@@ -67,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359330"
 ---
 # <a name="cbookmark-class"></a>CBookmark クラス
 
-バッファーには、ブックマークの値を保持します。
+バッファー内のブックマーク値を保持します。
 
 ## <a name="syntax"></a>構文
 
@@ -90,8 +89,8 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>パラメーター
 
-*nSize*<br/>
-ブックマーク バッファーのバイト単位のサイズ。 ときに*nSize* 0 の場合は、実行時に、ブックマークのバッファーを動的に作成されます。
+*Nsize*<br/>
+ブックマーク バッファーのサイズ (バイト単位)。 *nSize*が 0 の場合、ブックマーク バッファーは実行時に動的に作成されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -103,22 +102,22 @@ class CBookmark< 0 > : public CBookmarkBase
 
 |||
 |-|-|
-|[CBookmark](#cbookmark)|コンス トラクター|
+|[ブックマーク](#cbookmark)|コンストラクタ|
 |[GetBuffer](#getbuffer)|バッファーへのポインターを取得します。|
-|[GetSize](#getsize)|バッファーのバイト単位のサイズを取得します。|
-|[SetBookmark](#setbookmark)|ブックマークの値を設定します。|
+|[GetSize](#getsize)|バッファーのサイズをバイト単位で取得します。|
+|[Setbookmark](#setbookmark)|ブックマークの値を設定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#operator)|1 つ割り当てます`CBookmark`を別のクラス。|
+|[演算子 =](#operator)|ある`CBookmark`クラスを別のクラスに割り当てます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CBookmark<0>` テンプレート特殊化した`CBookmark`; 実行時に、バッファーが動的に作成します。
+`CBookmark<0>`は のテンプレートの特殊`CBookmark`化です。バッファは実行時に動的に作成されます。
 
-## <a name="cbookmark"></a> Cbookmark::cbookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>ブックマーク::C ブックマーク
 
 コンストラクターです。
 
@@ -131,17 +130,17 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>パラメーター
 
-*nSize*<br/>
-[in]ブックマーク バッファーのバイト単位のサイズ。
+*Nsize*<br/>
+[in]ブックマーク バッファーのサイズ (バイト単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の関数では、バッファーを NULL とバッファー サイズを 0 に設定します。 2 番目の関数では、バッファー サイズを設定*nSize*、およびバッファーのバイト配列を*nSize*バイト。
+最初の関数は、バッファーを NULL に、バッファー サイズを 0 に設定します。 2 番目の関数は、バッファー サイズを*nSize*に設定し、バッファーを*nSize*バイトのバイト配列に設定します。
 
 > [!NOTE]
->  この関数はのみ`CBookmark<0>`します。
+> この関数は`CBookmark<0>`、 でのみ使用できます。
 
-## <a name="getbuffer"></a> Cbookmark::getbuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>をクリックします。
 
 ブックマーク バッファーへのポインターを取得します。
 
@@ -155,9 +154,9 @@ virtual BYTE* GetBuffer() const throw();
 
 ブックマーク バッファーへのポインター。
 
-## <a name="getsize"></a> Cbookmark::getsize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>次の値を設定します。
 
-ブックマークのバッファーのサイズを取得します。
+ブックマーク バッファーのサイズを取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -169,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 バッファーのサイズ (バイト単位)。
 
-## <a name="setbookmark"></a> Cbookmark::setbookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>ブックマーク:設定ブックマーク
 
-によって参照されるブックマークの値をコピー *pBuffer*を`CBookmark`バッファーおよびバッファー サイズを設定します*nSize*します。
+*pBuffer*によって参照されるブックマーク値を`CBookmark`バッファーにコピーし、バッファー サイズを*nSize*に設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -181,23 +180,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*nSize*<br/>
-[in]ブックマークのバッファーのサイズ。
+*Nsize*<br/>
+[in]ブックマーク バッファーのサイズ。
 
 *pBuffer*<br/>
-[in]ブックマークの値を格納するバイト配列へのポインター。
+[in]ブックマーク値を含むバイト配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。
+標準の HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数はのみ`CBookmark<0>`します。
+この関数は`CBookmark<0>`、 でのみ使用できます。
 
-## <a name="operator"></a> Cbookmark::operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>Cブックマーク::演算子 =
 
-割り当てます、`CBookmark`を別のオブジェクト。
+オブジェクトを別`CBookmark`のオブジェクトに割り当てます。
 
 ### <a name="syntax"></a>構文
 
@@ -205,9 +204,9 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 CBookmark& operator =(const CBookmark& bookmark) throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子はのみに必要な`CBookmark<0>`します。
+この演算子は`CBookmark<0>`でだけ必要です。
 
 ## <a name="see-also"></a>関連項目
 

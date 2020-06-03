@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e01f75877169225d0e6c20b8a36ce55e3c15c4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203373"
 ---
 # <a name="fatal-error-c1211"></a>致命的なエラー C1211
 
@@ -23,4 +23,4 @@ C1211 は、コンパイラが現在のリリースであり、共通言語ラ�
 
 C1211 を解決するには、使用しているコンパイラに同梱されている共通言語ランタイムをインストールします。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、「[型C++の転送 (/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。

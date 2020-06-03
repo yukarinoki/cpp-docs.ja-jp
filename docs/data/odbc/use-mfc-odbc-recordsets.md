@@ -5,77 +5,77 @@ helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42316b5411637e16480abbde196dc15fc6c256c3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212545"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>MFC ODBC レコードセットの使用
 
-これらのトピックでは、を通じて MFC ODBC レコード セットを操作する方法について説明します。
+これらのトピックでは、MFC を使用して ODBC レコードセットを操作する方法について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-### <a name="general-recordset-tasks"></a>レコード セットの一般的なタスク
+### <a name="general-recordset-tasks"></a>一般的なレコードセットタスク
 
-- [ODBC レコード セットの種類を選択します。](../../data/odbc/recordset-odbc.md)
+- [ODBC レコードセットの種類の選択](../../data/odbc/recordset-odbc.md)
 
-- [レコード セットのクエリを再実行します。](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコードセットの再クエリ](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-- [テーブルのレコード セット クラスを宣言します。](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [テーブルのレコードセットクラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [定義済みのクエリのレコード セット クラスを宣言します。](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [定義済みクエリのレコードセットクラスを宣言する](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-### <a name="recordset-design-and-implementation"></a>レコード セットの設計と実装
+### <a name="recordset-design-and-implementation"></a>レコードセットのデザインと実装
 
-- [レコード フィールド エクス (チェンジ RFX) について説明します](../../data/odbc/record-field-exchange-rfx.md)
+- [レコードフィールドエクスチェンジ (RFX) について](../../data/odbc/record-field-exchange-rfx.md)
 
-- [データベースとレコード セット オブジェクトの間の Exchange データ](../../data/odbc/record-field-exchange-using-rfx.md)
+- [データベースとレコードセットオブジェクトの間でデータを交換する](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [ウィザードによって生成されたレコード セットのコードをカスタマイズします。](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
+- [ウィザードによって生成されたレコードセットコードをカスタマイズする](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
 
-- [レコード フィールド エクス (チェンジ RFX) 関数を使用してください。](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [レコードフィールドエクスチェンジ (RFX) 関数の使用](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-### <a name="recordset-performance-and-convenience"></a>レコード セットのパフォーマンスと利便性
+### <a name="recordset-performance-and-convenience"></a>レコードセットのパフォーマンスと利便性
 
-- [レコード セットを一括でレコードを追加します。](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [レコードセットを使用してレコードを一括で追加する](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
-- [レコード セットのレコードをフィルター処理します。](../../data/odbc/recordset-filtering-records-odbc.md)
+- [レコードセットのレコードをフィルター処理する](../../data/odbc/recordset-filtering-records-odbc.md)
 
-### <a name="recordset-operations"></a>レコード セットの操作
+### <a name="recordset-operations"></a>レコードセット操作
 
-- [レコード セットを一括でレコードを追加します。](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [レコードセットを使用してレコードを一括で追加する](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
-- [レコード セットのクエリを再実行します。](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコードセットの再クエリ](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-- [レコード セットのレコードをフィルター処理します。](../../data/odbc/recordset-filtering-records-odbc.md)
+- [レコードセットのレコードをフィルター処理する](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [レコード セットのレコードを並べ替える](../../data/odbc/recordset-sorting-records-odbc.md)
+- [レコードセット内のレコードの並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [レコード セットをパラメーター化します。](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [レコードセットのパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- [実行時にレコード セットにパラメーター値を渡す](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [実行時にパラメーター値をレコードセットに渡す](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- [レコード セットの結合を実行します。](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [レコードセットを使用した結合の実行](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [レコード セット内のレコードのロック](../../data/odbc/recordset-locking-records-odbc.md)
+- [レコードセットのレコードをロックする](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [レコード セット内の大規模なデータ項目を操作します。](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [レコードセット内の大きなデータ項目を操作する](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [合計、およびレコード セット内の他の集計結果を取得します。](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [レコードセットの合計とその他の集計結果を取得する](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
-### <a name="recordset-selection-and-sql"></a>レコード セットの選択と SQL
+### <a name="recordset-selection-and-sql"></a>レコードセットの選択と SQL
 
-- [ODBC データ ソースからレコードを選択します。](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [ODBC データソースからレコードを選択する](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [レコード セットを SQL 文字列をカスタマイズします。](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [レコードセットの SQL 文字列をカスタマイズする](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-### <a name="dynamic-binding-of-recordsets"></a>レコード セットの動的バインド
+### <a name="dynamic-binding-of-recordsets"></a>レコードセットの動的バインド
 
-- [実行時に動的にレコード セット内のデータ列をバインドします。](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [実行時にレコードセットのデータ列を動的にバインドする](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

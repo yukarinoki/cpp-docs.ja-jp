@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299118"
@@ -26,10 +26,10 @@ ms.locfileid: "75299118"
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***識別子* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別子* **:** *ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
 
 ステートメント ラベルは `goto` ステートメントに対してのみ意味を持ちます。他のコンテキストでは、ラベル付きステートメントはラベルに関係なく実行されます。
 

@@ -1,21 +1,18 @@
 ---
-title: アラインメント
+title: Alignment
 description: 最新C++のでデータの配置を指定する方法。
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301666"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076122"
 ---
-# <a name="alignment"></a>アラインメント
+# <a name="alignment"></a>Alignment
 
-C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラは、クラスと構造体のメンバーのサイズ値 (`bool` と `char` を1バイト境界に配置し、2バイト境界、`int`、`long`、4バイトの境界に `short` し、`float`、`long long`、および8バイトの境界に `double`します。 
+C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラは、クラスと構造体のメンバーのサイズ値 (`bool` と `char` を1バイト境界に配置し、2バイト境界、`int`、`long`、4バイトの境界に `short` し、`float`、`long long`、および8バイトの境界に `double`します。`long double`
 
 ほとんどのシナリオでは、既定の配置が既に最適化されているため、配置について心配する必要はありません。 ただし、場合によっては、データ構造にカスタム配置を指定することで、パフォーマンスを大幅に向上させたり、メモリを節約したりすることができます。 Visual Studio 2015 より前では、Microsoft 固有のキーワード `__alignof` と `declspec(alignas)` を使用して、既定値よりも大きいアラインメントを指定できました。 Visual Studio 2015 以降では、コードの移植性を最大にするために、C++ 11 標準のキーワード**alignof**と位置指定**nas**を使用する必要があります。 新しいキーワードは、内部的には Microsoft 固有の拡張機能と同じように動作します。 これらの拡張機能のドキュメントは、新しいキーワードにも適用されます。 詳細については、「 [__Alignof 演算子](../cpp/alignof-operator.md)と[align](../cpp/align-cpp.md)」を参照してください。 標準C++では、ターゲットプラットフォームのコンパイラの既定値よりも小さい境界に対してパッキング動作が指定されていないため、その場合も Microsoft #pragma[パック](../preprocessor/pack.md)を使用する必要があります。
 
@@ -101,9 +98,9 @@ adr offset   element
 
 ## <a name="alignof-and-alignas"></a>alignof と alignas
 
-**alignas**型指定子は変数およびユーザー定義型のカスタムの配置を指定する移植可能で、C++ の標準的な方法です。 **alignof**演算子は、指定した型または変数の配置を取得する標準的な移植可能な方法でも同様にします。
+Alignment **nas**型指定子は、変数およびC++ユーザー定義型のカスタムアラインメントを指定するための移植可能な標準の方法です。 **Alignof**演算子は同様に、指定された型または変数のアラインメントを取得するための、標準の移植可能な方法です。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 整列**nas**は、クラス、構造体、共用体、または個々のメンバーに対して使用できます。 複数の整列**nas**指定子が検出されると、コンパイラは最も厳格なもの (最も大きな値を持つもの) を選択します。
 
@@ -126,6 +123,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ構造の配置](https://en.wikipedia.org/wiki/Data_structure_alignment)

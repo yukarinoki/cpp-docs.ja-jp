@@ -1,5 +1,5 @@
 ---
-title: コネクション ポイントに関するグローバル関数
+title: 接続ポイントのグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6474297f8b9adf04541f7d232fb88d5e52d4e88c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331528"
 ---
-# <a name="connection-point-global-functions"></a>コネクション ポイントに関するグローバル関数
+# <a name="connection-point-global-functions"></a>接続ポイントのグローバル関数
 
-これらの関数は、コネクション ポイントのサポートを提供し、シンク マップ。
+これらの関数は、コネクション ポイントとシンク マップをサポートします。
 
 > [!IMPORTANT]
->  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+> 次の表に示す関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 |||
 |-|-|
 |[AtlAdvise](#atladvise)|オブジェクトのコネクション ポイントとクライアントのシンクとの間に接続を確立します。|
-|[AtlUnadvise](#atlunadvise)|を通じて確立された接続を終了します`AtlAdvise`します。|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|アドバイズするか、イベント シンク マップ内のエントリ。|
+|[AtlUnadvise](#atlunadvise)|を使用して確立された接続`AtlAdvise`を終了します。|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|イベント シンク マップのエントリをアドバイスまたはアンアアドバイスします。|
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
-##  <a name="atladvise"></a>  AtlAdvise
+## <a name="atladvise"></a><a name="atladvise"></a>アトルアアドバイス
 
 オブジェクトのコネクション ポイントとクライアントのシンクとの間に接続を確立します。
 
 > [!IMPORTANT]
->  この関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
+> この関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ```
 HRESULT    AtlAdvise(
@@ -49,36 +49,36 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkCP*<br/>
-[in]ポインター、`IUnknown`オブジェクトのクライアントが使用して接続します。
+*pウンクCP*<br/>
+[in]クライアントが接続する`IUnknown`オブジェクトへのポインター。
 
-*pUnk*<br/>
-[in]クライアントへのポインター`IUnknown`します。
+*パンク*<br/>
+[in]クライアント`IUnknown`の .
 
-*iid*<br/>
-[in]接続ポイントの GUID です。 通常、これは、接続ポイントによって管理するアウトゴーイング インターフェイスと同じです。
+*Iid*<br/>
+[in]接続ポイントの GUID。 通常、これはコネクション ポイントによって管理される発信インターフェイスと同じです。
 
-*pdw*<br/>
-[out]接続を一意に識別するクッキーへのポインター。
+*Pdw*<br/>
+[アウト]接続を一意に識別する Cookie へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-シンク接続ポイントでサポートされているアウトゴーイング インターフェイスを実装します。 クライアントを使用して、 *pdw*に渡すことによって、接続を削除するクッキー [AtlUnadvise](#atlunadvise)します。
+シンクは、コネクション ポイントでサポートされる発信インターフェイスを実装します。 クライアントは*pdw*クッキーを使用して[、AtlUnadvise](#atlunadvise)に渡すことによって接続を削除します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-##  <a name="atlunadvise"></a>  AtlUnadvise
+## <a name="atlunadvise"></a><a name="atlunadvise"></a>アトルアンアアドバイス
 
-を通じて確立された接続を終了します[AtlAdvise](#atladvise)します。
+[AtlAdvise](#atladvise)を介して確立された接続を終了します。
 
 > [!IMPORTANT]
->  この関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
+> この関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ```
 HRESULT    AtlUnadvise(
@@ -89,14 +89,14 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkCP*<br/>
-[in]ポインター、`IUnknown`オブジェクトで、クライアントが接続されているのです。
+*pウンクCP*<br/>
+[in]クライアントが接続している`IUnknown`オブジェクトへのポインター。
 
-*iid*<br/>
-[in]接続ポイントの GUID です。 通常、これは、接続ポイントによって管理するアウトゴーイング インターフェイスと同じです。
+*Iid*<br/>
+[in]接続ポイントの GUID。 通常、これはコネクション ポイントによって管理される発信インターフェイスと同じです。
 
 *dw*<br/>
-[in]接続を一意に識別するクッキー。
+[in]接続を一意に識別する Cookie。
 
 ### <a name="return-value"></a>戻り値
 
@@ -106,12 +106,12 @@ HRESULT    AtlUnadvise(
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap
+## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a>アトルアアドバイスシンクマップ
 
 オブジェクトのシンク イベント マップのすべてのエントリをアドバイズするか、アドバイズを中止します。
 
 > [!IMPORTANT]
->  この関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
+> この関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -119,11 +119,11 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*<br/>
-[in]シンクのマップを格納するオブジェクトへのポインター。
+*Pt*<br/>
+[in]シンク マップを含むオブジェクトへのポインター。
 
-*bAdvise*<br/>
-[in]TRUE の場合、シンクのすべてのエントリがあることをお勧めします。すべてのシンクのエントリがアドバイズを中止する場合は FALSE です。
+*アドバイス*<br/>
+[in]すべてのシンク エントリに対して推奨される場合は TRUE。すべてのシンク エントリが未確認の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -136,4 +136,4 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ## <a name="see-also"></a>関連項目
 
 [関数](../../atl/reference/atl-functions.md)<br/>
-[接続ポイントに関するマクロ](../../atl/reference/connection-point-macros.md)
+[接続ポイント マクロ](../../atl/reference/connection-point-macros.md)

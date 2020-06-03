@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196067"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>式エバリュエーター エラー CXX0015
 
-式が複雑すぎます (スタック オーバーフロー)
+式が複雑すぎます (スタックオーバーフロー)
 
-入力された式は複雑すぎるか、C の式エバリュエーターを使用可能なストレージ量レベルが深すぎます入れ子になったでした。
+入力した式が複雑すぎるか、C 式エバリュエーターで使用できるストレージの量に対して深すぎます。
 
-通常、オーバーフローは、保留中の多数の計算のために発生します。
+オーバーフローは通常、保留中の計算の数が多すぎることが原因で発生します。
 
-他の部分式を計算するを待機する必要がなくが見つかると、式の各コンポーネントを評価できるように、式のレイアウトを変更します。
+式の他の部分が計算されるまで待機するのではなく、式の各要素が検出されたときに評価できるように、式を再配置します。
 
-複数のコマンド、式に分割します。
+式を複数のコマンドに分割します。
 
-このエラーは、can0015 と同じものと同じです。
+このエラーは CAN0015 と同じです。

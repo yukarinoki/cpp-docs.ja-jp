@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0058
 - CAN0058
 ms.assetid: b6246c6e-5845-4ad5-ac2a-e6c4faf8f3f9
-ms.openlocfilehash: 9727c4cbbef0594e30d19f816eb855a61f0b2e92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 032d3447cdf569c107cdb8f7a92f1fd02df35f40
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184633"
 ---
 # <a name="expression-evaluator-error-cxx0058"></a>式エバリュエーター エラー CXX0058
 
-オーバー ロードされた演算子が見つかりません
+オーバーロードされた演算子が見つかりません
 
-クラス型は、式の左辺のオペランドとして指定されましたが、クラスのオーバー ロードされた演算子が定義されていません。
+クラス型が式の左オペランドとして指定されましたが、オーバーロードされた演算子がクラスに対して定義されていませんでした。
 
-このエラーは、can0058 と同じものと同じです。
+このエラーは CAN0058 と同じです。

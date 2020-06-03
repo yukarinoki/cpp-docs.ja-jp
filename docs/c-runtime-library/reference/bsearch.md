@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811091"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913380"
 ---
 # <a name="bsearch"></a>bsearch
 
-並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「 [bsearch_s](bsearch-s.md)」を参照してください。
+並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「[bsearch_s](bsearch-s.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -51,26 +53,26 @@ void *bsearch(
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*レジストリ*\
 検索するキーへのポインター。
 
-*base*\
+*常用*\
 検索データのベースへのポインター。
 
-*数値*\
+*少数*\
 要素の数。
 
 *幅*\
 要素の幅。
 
-\ の*比較*
+*対照*\
 2 つの要素を比較するコールバック関数。 1つ目は検索対象のキーへのポインターであり、2つ目はキーと比較する配列要素へのポインターです。
 
 ## <a name="return-value"></a>戻り値
 
 **bsearch**は、 *base*が指す配列内の*キー*の出現箇所へのポインターを返します。 *Key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Bsearch**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これらの要素のサイズは、それぞれ*幅*バイトです。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、要求されたキーを配列要素と比較するユーザー指定のルーチンへのポインターです。 リレーションシップを指定する次のいずれかの値が返されます。
 
@@ -80,13 +82,15 @@ void *bsearch(
 |0|キーは配列要素と等しい。|
 |> 0|キーは配列要素より大きい。|
 
-この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0の場合は、「パラメーター」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**が `EINVAL` に設定され、関数は**NULL**を返します。
+この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可され**errno**た場合、errno `EINVAL`はに設定され、関数は**NULL**を返します。
 
-## <a name="requirements"></a>［要件］
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**bsearch**|\<stdlib.h> および \<search.h>|
+|**bsearch**|\<stdlib.h > と \<search.h >|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

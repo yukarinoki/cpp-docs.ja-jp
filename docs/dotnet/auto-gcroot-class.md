@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87e6703f759888b36ed89daed10df937701c6dbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372550"
 ---
-# <a name="autogcroot-class"></a>auto_gcroot クラス
+# <a name="auto_gcroot-class"></a>auto_gcroot クラス
 
-自動リソース管理 (など[auto_ptr クラス](../standard-library/auto-ptr-class.md)) ネイティブ型に仮想のハンドルを埋め込むために使用できます。
+仮想ハンドルをネイティブ型に埋め込むために使用できる自動リソース管理[(auto_ptr Class](../standard-library/auto-ptr-class.md)など)。
 
 ## <a name="syntax"></a>構文
 
@@ -37,48 +37,47 @@ class auto_gcroot;
 ### <a name="parameters"></a>パラメーター
 
 *_element_type*<br/>
-埋め込みのマネージ型。
+埋め込まれるマネージ型。
 
 ## <a name="members"></a>メンバー
- 
-### <a name="public-constructors"></a>パブリック コンストラクター 
- 
-|名前|説明| 
-|---------|-----------| 
-|[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot`コンス トラクター。| 
-|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot`デストラクター。
-| 
 
-### <a name="public-methods"></a>パブリック メソッド 
+### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明| 
-|---------|-----------| 
-|[auto_gcroot::attach](#attach)|アタッチ`auto_gcroot`オブジェクトにします。| 
-|[auto_gcroot::get](#get)|含まれるオブジェクトを取得します。| 
-|[auto_gcroot::release](#release)|オブジェクトを解放`auto_gcroot`管理します。|
-|[auto_gcroot::reset](#reset)|現在所有されているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有しているを実行します。|
-|[auto_gcroot::swap](#swap)|別のオブジェクトを交換`auto_gcroot`します。| 
-
- 
-### <a name="public-operators"></a>パブリック演算子
- 
-|名前|説明| 
+|名前|説明|
 |---------|-----------|
-|[auto_gcroot::operator-&gt;](#operator-arrow)|メンバー アクセス演算子。|  
+|[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot`コンストラクター。|
+|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|デス`auto_gcroot`トラクター。
+|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|---------|-----------|
+|[auto_gcroot::attach](#attach)|オブジェクト`auto_gcroot`にアタッチします。|
+|[auto_gcroot::get](#get)|格納されているオブジェクトを取得します。|
+|[auto_gcroot::release](#release)|オブジェクトを管理から`auto_gcroot`解放します。|
+|[auto_gcroot::reset](#reset)|現在所有しているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有します。|
+|[auto_gcroot::swap](#swap)|オブジェクトを別`auto_gcroot`の .|
+
+### <a name="public-operators"></a>公共事業者
+
+|名前|説明|
+|---------|-----------|
+|[auto_gcroot::演算子-&gt;](#operator-arrow)|メンバー アクセス演算子。|  
 |[auto_gcroot::operator=](#operator-assign)|代入演算子。|
-|[auto_gcroot::operator&nbsp;auto_gcroot](#operator-auto-gcroot)|型キャスト演算子間`auto_gcroot`と互換性のある型。| 
-|[auto_gcroot::operator&nbsp;bool](#operator-bool)|使用するための演算子`auto_gcroot`条件式。|  
-|[auto_gcroot::operator!](#operator-logical-not)|使用するための演算子`auto_gcroot`条件式。| 
+|[auto_gcroot::演算子&nbsp;auto_gcroot](#operator-auto-gcroot)|互換性のある型との`auto_gcroot`間の型キャスト演算子。|
+|[auto_gcroot::オペレーター&nbsp;ブール](#operator-bool)|条件式で`auto_gcroot`使用する演算子。|  
+|[auto_gcroot::オペレーター!](#operator-logical-not)|条件式で`auto_gcroot`使用する演算子。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー ファイル** \<msclr\auto_gcroot.h >
+**ヘッダー ファイル**\<msclr\auto_gcroot.h>
 
-**Namespace** msclr
+**名前空間**msclr
 
-## <a name="auto-gcroot"></a>auto_gcroot::auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot::auto_gcroot
 
-`auto_gcroot`コンス トラクター。
+`auto_gcroot`コンストラクター。
 
 ```cpp
 auto_gcroot(
@@ -101,9 +100,9 @@ auto_gcroot(
 *_right*<br/>
 既存の `auto_gcroot`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構築するときに、`auto_gcroot`既存の`auto_gcroot`、既存の`auto_gcroot`を新しいオブジェクトの所有権を譲渡する前に、そのオブジェクトを解放`auto_gcroot`します。
+既存`auto_gcroot`の から を構築`auto_gcroot`する場合、`auto_gcroot`既存の オブジェクトは、オブジェクトの所有権を新しい`auto_gcroot`に転送する前に解放されます。
 
 ### <a name="example"></a>例
 
@@ -192,18 +191,17 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="tilde-auto-gcroot"></a>auto_gcroot::~auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot::~auto_gcroot
 
-`auto_gcroot`デストラクター。
-
+デス`auto_gcroot`トラクター。
 
 ```cpp
 ~auto_gcroot();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-また、デストラクターは、所有されているオブジェクトを破棄します。
+デストラクターも所有オブジェクトを破棄します。
 
 ### <a name="example"></a>例
 
@@ -240,9 +238,9 @@ ClassA destructor
 done
 ```
 
-## <a name="attach"></a>auto_gcroot::attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot::アタッチ
 
-アタッチ`auto_gcroot`オブジェクトにします。
+オブジェクト`auto_gcroot`にアタッチします。
 
 ```cpp
 auto_gcroot<_element_type> & attach(
@@ -260,15 +258,15 @@ auto_gcroot<_element_type> & attach(
 ### <a name="parameters"></a>パラメーター
 
 *_right*<br/>
-添付するには、オブジェクトまたは`auto_gcroot`アタッチするオブジェクトを格納しています。
+アタッチするオブジェクト、またはアタッチする`auto_gcroot`オブジェクトを含むオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 現在の `auto_gcroot` です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合`_right`は、 `auto_gcroot`、現在のオブジェクトをアタッチする前に、そのオブジェクトの所有権を解放した`auto_gcroot`します。
+が`_right`場合`auto_gcroot`、オブジェクトが現在`auto_gcroot`の にアタッチされる前に、そのオブジェクトの所有権を解放します。
 
 ### <a name="example"></a>例
 
@@ -335,9 +333,9 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="get"></a>auto_gcroot::get
+## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot::取得
 
-含まれるオブジェクトを取得します。
+格納されているオブジェクトを取得します。
 
 ```cpp
 _element_type get() const;
@@ -345,7 +343,7 @@ _element_type get() const;
 
 ### <a name="return-value"></a>戻り値
 
-含まれるオブジェクト。
+格納されるオブジェクトです。
 
 ### <a name="example"></a>例
 
@@ -395,9 +393,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="release"></a>auto_gcroot::release
+## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot::リリース
 
-オブジェクトを解放`auto_gcroot`管理します。
+オブジェクトを管理から`auto_gcroot`解放します。
 
 ```cpp
 _element_type release();
@@ -405,7 +403,7 @@ _element_type release();
 
 ### <a name="return-value"></a>戻り値
 
-解放されたオブジェクト。
+リリースされたオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -458,9 +456,9 @@ Hello from first A!
 done
 ```
 
-## <a name="reset"></a>auto_gcroot::reset
+## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot::リセット
 
-現在所有されているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有しているを実行します。
+現在所有しているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有します。
 
 ```cpp
 void reset(
@@ -471,7 +469,7 @@ void reset(
 ### <a name="parameters"></a>パラメーター
 
 *_new_ptr*<br/>
-(省略可能)新しいオブジェクト。
+(オプション)新しいオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -523,9 +521,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="swap"></a>auto_gcroot::swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot::スワップ
 
-別のオブジェクトを交換`auto_gcroot`します。
+オブジェクトを別`auto_gcroot`の .
 
 ```cpp
 void swap(
@@ -536,7 +534,7 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *_right*<br/>
-`auto_gcroot`交換先のオブジェクトします。
+オブジェクト`auto_gcroot`を交換する対象。
 
 ### <a name="example"></a>例
 
@@ -565,7 +563,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="operator-arrow"></a>auto_gcroot::operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot::演算子-&gt;
 
 メンバー アクセス演算子。
 
@@ -575,7 +573,7 @@ _element_type operator->() const;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトによってラップされている`auto_gcroot`します。
+で`auto_gcroot`ラップされるオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -614,7 +612,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="operator-assign"></a>auto_gcroot::operator=
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot::演算子=
 
 代入演算子。
 
@@ -634,11 +632,11 @@ auto_gcroot<_element_type> & operator=(
 ### <a name="parameters"></a>パラメーター
 
 *_right*<br/>
-オブジェクトまたは`auto_gcroot`現在に割り当てられる`auto_gcroot`します。
+または`auto_gcroot`現在`auto_gcroot`の に割り当てられるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-現在`auto_gcroot`、所有しているようになりました`_right`します。
+現在`auto_gcroot`の 、 を`_right`所有しています。
 
 ### <a name="example"></a>例
 
@@ -706,9 +704,9 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="operator-auto-gcroot"></a>auto_gcroot::operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot::オペレーターauto_gcroot
 
-型キャスト演算子間`auto_gcroot`と互換性のある型。
+互換性のある型との`auto_gcroot`間の型キャスト演算子。
 
 ```cpp
 template<typename _other_type>
@@ -717,7 +715,7 @@ operator auto_gcroot<_other_type>();
 
 ### <a name="return-value"></a>戻り値
 
-現在`auto_gcroot`にキャスト`auto_gcroot<_other_type>`します。
+現在`auto_gcroot`のキャストは`auto_gcroot<_other_type>`にキャストされます。
 
 ### <a name="example"></a>例
 
@@ -761,9 +759,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="operator-bool"></a>auto_gcroot::operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot::オペレーターブール
 
-使用するための演算子`auto_gcroot`条件式。
+条件式で`auto_gcroot`使用する演算子。
 
 ```cpp
 operator bool() const;
@@ -771,11 +769,11 @@ operator bool() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ラップされたオブジェクトが無効である場合`false`それ以外の場合。
+`true`ラップされたオブジェクトが有効な場合。`false`それ以外の場合。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-実際にこの演算子の変換`_detail_class::_safe_bool`よりも安全である`bool`整数型に変換できないためです。
+この演算子は、整数型`_detail_class::_safe_bool`に変換できないため、より`bool`安全なに変換されます。
 
 ### <a name="example"></a>例
 
@@ -806,9 +804,9 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="operator-logical-not"></a>auto_gcroot::operator!
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot::オペレーター!
 
-使用するための演算子`auto_gcroot`条件式。
+条件式で`auto_gcroot`使用する演算子。
 
 ```cpp
 bool operator!() const;
@@ -816,7 +814,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ラップされたオブジェクトが無効である場合`false`それ以外の場合。
+`true`ラップされたオブジェクトが無効な場合。`false`それ以外の場合。
 
 ### <a name="example"></a>例
 

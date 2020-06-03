@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162388"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>コンパイラの警告 (レベル 1) C4436
 
@@ -29,7 +29,7 @@ ms.locfileid: "74810610"
 
 警告は、部分的に構築されたオブジェクトで動作している場合に、`dynamic_cast` が正しく実行されない可能性があることを示します。  これは、派生コンストラクターまたはデストラクターが、さらに派生したオブジェクトのサブオブジェクト上で動作している場合に発生します。  警告で指定された派生クラスがそれ以上派生していない場合は、警告を無視できます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C4436 を生成し、不足している `vtordisp` フィールドから発生するコード生成の問題を示します。
 

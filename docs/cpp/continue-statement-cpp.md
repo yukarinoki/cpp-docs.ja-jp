@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154634"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180278"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C++)
 
-外側にある最小の制御式を強制的にコントロールの転送[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、または[中](../cpp/while-statement-cpp.md)ループします。
+制御を、外側の最小の[do](../cpp/do-while-statement-cpp.md)、 [for](../cpp/for-statement-cpp.md)、または[while](../cpp/while-statement-cpp.md)ループの制御式に強制的に転送します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,15 +23,15 @@ ms.locfileid: "62154634"
 continue;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。
 
-- **for**または**while**、ループの制御式を再評価によって次の反復処理が開始されます、**for**または**while**ステートメント。
+- **Do**または**while**ループでは、次のイテレーションは**do**または**while**ステートメントの制御式を再評価することによって開始されます。
 
-- **for**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
+- **For**ループで (構文 `for`(`init-expr`; `cond-expr`; `loop-expr`)) を使用すると、`loop-expr` 句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
 
-次の例は、**continue**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。
+次の例では、 **continue**ステートメントを使用して、コードのセクションをバイパスし、ループの次の反復処理を開始する方法を示します。
 
 ## <a name="example"></a>例
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ジャンプ ステートメント](../cpp/jump-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

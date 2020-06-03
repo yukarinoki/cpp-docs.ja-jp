@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408538"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163025"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>コンパイラの警告 (レベル 1) C4325
 
-> 標準のセクションの属性 '*セクション*' は無視されます
+> 標準セクション '*section*' の属性は無視されました
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-標準のセクションの属性は変更できません。 例:
+標準セクションの属性を変更することはできません。 次に例を示します。
 
 ```cpp
 #pragma section(".sdata", long)
 ```
 
-これは、上書きは、`.sdata`標準のセクションを使用して、**short**データ型を**long**データ型。
+これにより、 **long**データ型の**short**データ型を使用する `.sdata` の標準セクションが上書きされます。
 
-標準のセクションでは変わらないことがある属性を含めるには、
+変更できない属性を持つ標準セクションには、次のようなものがあります。
 
-- .data
+- . データ
 
 - .sdata
 
-- .bss
+- bss
 
-- .sbss
+- . .sbss
 
 - .text
 
-- .const
+- . const
 
-- .sconst
+- 。 sconst
 
-- .rdata
+- . .rdata
 
-- .srdata
+- srdata
 
-追加のセクションは、後で追加できます。
+後で追加のセクションを追加することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [section](../../preprocessor/section.md)

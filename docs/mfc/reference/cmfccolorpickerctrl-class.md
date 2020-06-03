@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403795"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752537"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 
-`CMFCColorPickerCtrl`クラスには、色の選択に使用するための機能が用意されています。
+この`CMFCColorPickerCtrl`クラスは、色の選択に使用されるコントロールの機能を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -63,55 +63,55 @@ class CMFCColorPickerCtrl : public CButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|`CMFCColorPickerCtrl` オブジェクトを構築します。|
+|[コントロール](#cmfccolorpickerctrl)|`CMFCColorPickerCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::GetColor](#getcolor)|ユーザーが選択した色を取得します。|
-|[CMFCColorPickerCtrl::GetHLS](#gethls)|ユーザーが選択した色の色合い、明るさ、および鮮やかさの値を取得します。|
-|[CMFCColorPickerCtrl::GetHue](#gethue)|ユーザーが選択した色の色合いを取得します。|
-|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|ユーザーが選択した色の輝度コンポーネントを取得します。|
-|[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|ユーザーが選択した色の彩度 コンポーネントを取得します。|
-|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|現在の色を RGB 色の指定された要素または指定したセルの六角形で定義された色に設定します。|
-|[CMFCColorPickerCtrl::SetColor](#setcolor)|RGB 色の値を指定するには、現在の色を設定します。|
-|[CMFCColorPickerCtrl::SetHLS](#sethls)|現在の色を指定した HLS 色の値に設定します。|
-|[CMFCColorPickerCtrl::SetHue](#sethue)|現在選択されている色の色合いを変更します。|
-|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|現在選択されている色の輝度コンポーネントを変更します。|
-|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|カラー ピッカー コントロールでは、輝度バーの幅を設定します。|
-|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|選択した初期の色を設定します。|
-|[CMFCColorPickerCtrl::SetPalette](#setpalette)|現在のカラー パレットを設定します。|
-|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|現在選択されている色の彩度を変更します。|
-|[CMFCColorPickerCtrl::SetType](#settype)|表示するカラー ピッカー コントロールの種類を設定します。|
+|[をクリックします。](#getcolor)|ユーザーが選択した色を取得します。|
+|[をクリックします。](#gethls)|ユーザーが選択した色の色相、輝度、彩度の値を取得します。|
+|[をクリックします。](#gethue)|ユーザーが選択した色の色相のコンポーネントを取得します。|
+|[をクリックします。](#getluminance)|ユーザーが選択した色の輝度コンポーネントを取得します。|
+|[彩度を取得します。](#getsaturation)|ユーザーが選択した色の彩度コンポーネントを取得します。|
+|[セル六角形を選択します。](#selectcellhexagon)|現在の色を、指定した RGB カラー コンポーネントまたは指定したセルの六角形で定義された色に設定します。|
+|[をクリックします。](#setcolor)|現在のカラーを指定した RGB カラー値に設定します。|
+|[をクリックします。](#sethls)|現在の色を指定した HLS カラー値に設定します。|
+|[をクリックします。](#sethue)|現在選択されている色の色相の部分を変更します。|
+|[輝度を設定します。](#setluminance)|現在選択されている色の輝度コンポーネントを変更します。|
+|[コントロール::ルミナンスバー幅の設定](#setluminancebarwidth)|カラー ピッカー コントロールの輝度バーの幅を設定します。|
+|[カラーリングコントロール::オリジナルカラーを設定](#setoriginalcolor)|最初に選択した色を設定します。|
+|[をクリックします。](#setpalette)|現在のカラー パレットを設定します。|
+|[コントロール::設定飽和](#setsaturation)|現在選択されている色の彩度成分を変更します。|
+|[をクリックします。](#settype)|表示するカラー ピッカー コントロールの種類を設定します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|選択した色をポイントするカーソルが表示される前に、フレームワークによって呼び出されます。|
+|[を:D](#drawcursor)|選択した色を指すカーソルが表示される前に、フレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-標準色が、六角形カラー パレットから選択されており、輝度バーからカスタムの色が選択されている色が赤/緑/青表記または色合い/satuaration/輝度表記を使用して指定された場所。
+標準色は六角形のカラーパレットから選択され、色が赤/緑/青表記または色/収率/輝度表記を使用して指定される輝度バーから選択されます。
 
-次の図はいくつか`CMFCColorPickerCtrl`オブジェクト。
+次の図は、いくつかの`CMFCColorPickerCtrl`オブジェクトを示しています。
 
 ![CMFCColorPickerCtrl ダイアログ ボックス](../../mfc/reference/media/colorpicker.png "CMFCColorPickerCtrl ダイアログ ボックス")
 
-`CMFCColorPickerCtrl`スタイルの 2 つのペアをサポートします。 16 進数と HEX_GREYSCALE スタイルは、標準の色の選択に適しています。 ピッカーと輝度のスタイルは、カスタムの色の選択に適しています。
+では`CMFCColorPickerCtrl`、2 組のスタイルをサポートします。 HEX スタイルと HEX_GREYSCALE スタイルは、標準の色選択に適しています。 ピッカーと輝度のスタイルは、カスタムカラーの選択に適しています。
 
-組み込むことは、次の手順を実行、`CMFCColorPickerCtrl`ダイアログ ボックスにコントロール。
+ダイアログ ボックスにコントロールを組`CMFCColorPickerCtrl`み込むには、次の手順を実行します。
 
-1. 使用する場合、 **ClassWizard**、ダイアログ ボックスのテンプレートに新しいボタン コントロールを挿入 (ため、`CMFCColorPickerCtrl`クラスが継承、`CButton`クラス)。
+1. **ClassWizard**を使用する場合は、ダイアログ ボックス テンプレートに新しいボタン コントロール`CMFCColorPickerCtrl`を`CButton`挿入します (クラスはクラスから継承されるため)。
 
-1. ダイアログ ボックス クラスに新しいボタン コントロールに関連付けられているメンバー変数を挿入します。 変数の型を変更し、`CButton`に`CMFCColorPickerCtrl`します。
+1. 新しいボタン コントロールに関連付けられているメンバー変数をダイアログ ボックス クラスに挿入します。 次に、変数の型`CButton`を`CMFCColorPickerCtrl`から に変更します。
 
-1. 挿入、 `WM_INITDIALOG`  ダイアログ ボックスのクラスのメッセージ ハンドラー。 ハンドラーで、種類、パレット、およびの初期の選択した色を設定、`CMFCColorPickerCtrl`コントロール。
+1. ダイアログ`WM_INITDIALOG`ボックス クラスのメッセージ ハンドラーを挿入します。 ハンドラーで、コントロールの型、パレット、および最初に選択した色を`CMFCColorPickerCtrl`設定します。
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCColorPickerCtrl`オブジェクトでさまざまなメソッドを使用して、`CMFCColorPickerCtrl`クラス。 例では、その色、色合い、明るさ、および彩度を設定する方法と、選択コントロールの種類を設定する方法を示します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
+クラスのさまざまなメソッドを使用してオブジェクトを構成`CMFCColorPickerCtrl`する方法を次の例に`CMFCColorPickerCtrl`示します。 この例では、ピッカー コントロールの種類を設定する方法と、色、色、輝度、および彩度を設定する方法を示します。 この例は、[新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]
@@ -132,7 +132,7 @@ class CMFCColorPickerCtrl : public CButton
 
 **ヘッダー:** afxcolorpickerctrl.h
 
-##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl
+## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>コントロール
 
 `CMFCColorPickerCtrl` オブジェクトを構築します。
 
@@ -142,11 +142,11 @@ CMFCColorPickerCtrl();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor
+## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>を:D
 
-選択した色をポイントするカーソルが表示される前に、フレームワークによって呼び出されます。
+選択した色を指すカーソルが表示される前に、フレームワークによって呼び出されます。
 
 ```
 virtual void DrawCursor(
@@ -159,14 +159,14 @@ virtual void DrawCursor(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*rect*<br/>
-[in]選択した色の周りの四角形の領域を指定します。
+*Rect*<br/>
+[in]選択した色の周囲の四角形の領域を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-選択した色をポイントするカーソルの形状を変更する必要がある場合は、このメソッドをオーバーライドします。
+選択した色を指すカーソルの形状を変更する必要がある場合は、このメソッドをオーバーライドします。
 
-##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor
+## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>をクリックします。
 
 ユーザーが選択した色を取得します。
 
@@ -176,15 +176,15 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された色の RGB 値。
+選択した色の RGB 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS
+## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a>をクリックします。
 
-ユーザーが選択した色の色合い、明るさ、および鮮やかさの値を取得します。
+ユーザーが選択した色の色相、輝度、彩度の値を取得します。
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -193,20 +193,20 @@ void GetHLS(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hue*<br/>
-[out]Hue の情報を受け取る double 型の変数へのポインター。
+*色相*<br/>
+[アウト]色相情報を受け取る倍精度浮動小数点型の変数へのポインター。
 
 *輝度*<br/>
-[out]輝度情報を受け取る double 型の変数へのポインター。
+[アウト]輝度情報を受け取る倍精度浮動小数点型の変数へのポインター。
 
-*saturation*<br/>
-[out]鮮やかさの情報を受け取る double 型の変数へのポインター。
+*彩度*<br/>
+[アウト]飽和情報を受け取る double 型の変数へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gethue"></a>  CMFCColorPickerCtrl::GetHue
+## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a>をクリックします。
 
-ユーザーが選択した色の色合いを取得します。
+ユーザーが選択した色の色相のコンポーネントを取得します。
 
 ```
 double GetHue() const;
@@ -214,11 +214,11 @@ double GetHue() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された色の色合いコンポーネント。
+選択した色の色相成分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance
+## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>をクリックします。
 
 ユーザーが選択した色の輝度コンポーネントを取得します。
 
@@ -228,13 +228,13 @@ double GetLuminance() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された色の輝度コンポーネント。
+選択した色の輝度コンポーネント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getsaturation"></a>  CMFCColorPickerCtrl::GetSaturation
+## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>彩度を取得します。
 
-ユーザーが選択した色の鮮やかさの値を取得します。
+ユーザーが選択した色の彩度値を取得します。
 
 ```
 double GetSaturation() const;
@@ -242,15 +242,15 @@ double GetSaturation() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された色の彩度。
+選択した色の彩度成分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon
+## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>セル六角形を選択します。
 
-現在の色を RGB 色の指定された要素または指定したセルの六角形で定義された色に設定します。
+現在の色を、指定した RGB カラー コンポーネントまたは指定したセルの六角形で定義された色に設定します。
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -264,50 +264,50 @@ BOOL SelectCellHexagon(
 ### <a name="parameters"></a>パラメーター
 
 *R*<br/>
-[in]赤のカラー コンポーネント。
+[in]赤の色コンポーネント。
 
 *G*<br/>
-[in]緑のカラー コンポーネント。
+[in]緑色のコンポーネント。
 
 *B*<br/>
-[in]青のコンポーネント。
+[in]青の色のコンポーネント。
 
 *x*<br/>
-[in]セルの六角形を指すと、カーソルの x 座標。
+[in]セルの六角形を指すカーソルの x 座標。
 
-*y*<br/>
-[in]セルの六角形を指すと、カーソルの y 座標。
+*Y*<br/>
+[in]セルの六角形を指すカーソルの y 座標。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドの 2 番目のオーバー ロードは、常に FALSE を返します。
+このメソッドの 2 番目のオーバーロードは常に FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在の色を色の選択コントロールに対応する色にこのメソッドのセットの最初のオーバー ロードには、赤、緑、および青の色要素の指定しました。
+このメソッドの最初のオーバーロードでは、現在の色を、色選択コントロールの指定した赤、緑、青の各色のコンポーネントに対応する色に設定します。
 
-このメソッドの 2 番目のオーバー ロードは、指定したカーソル位置によってポイントされているセルの六角形の色に、現在の色を設定します。
+このメソッドの 2 番目のオーバーロードは、現在の色を、指定されたカーソル位置が指すセルの六角形の色に設定します。
 
-##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor
+## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>をクリックします。
 
-RGB 色の値を指定するには、現在の色を設定します。
+現在のカラーを指定した RGB カラー値に設定します。
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]RGB 色の値。
+*Color*<br/>
+[in]RGB カラー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS
+## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a>をクリックします。
 
-現在の色を指定した HLS 色の値に設定します。
+現在の色を指定した HLS カラー値に設定します。
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -317,40 +317,40 @@ void SetHLS(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hue*<br/>
-[in]色合いの値。
+*色相*<br/>
+[in]色相の値。
 
 *輝度*<br/>
 [in]輝度値。
 
-*saturation*<br/>
-[in]鮮やかさの値。
+*彩度*<br/>
+[in]飽和値。
 
-*bInvalidate*<br/>
-[in]ウィンドウが強制的にすぐに新しい色を更新する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。
+*b検証*<br/>
+[in]ウィンドウを新しい色にすぐに更新する場合は TRUE。それ以外の場合は FALSE。 デフォルトは TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue
+## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a>をクリックします。
 
-現在選択されている色の色合いを変更します。
+現在選択されている色の色相を変更します。
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *Hue*<br/>
-[in]色合いの値。
+[in]色相の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance
+## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>輝度を設定します。
 
-現在選択されている色の明るさを変更します。
+現在選択されている色の輝度を変更します。
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -359,95 +359,95 @@ void SetLuminance(double Luminance);
 *輝度*<br/>
 [in]輝度値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth
+## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>コントロール::ルミナンスバー幅の設定
 
-カラー ピッカー コントロールでは、輝度バーの幅を設定します。
+カラー ピッカー コントロールの輝度バーの幅を設定します。
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *w*<br/>
-[in]輝度バーの幅はピクセル単位で測定されます。
+[in]輝度バーの幅をピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これには輝度バーのサイズを変更するには、このメソッドを使用して、**カスタム**カラー ピッカー コントロールのタブ。 *W*輝度バーの新しい幅を指定します。 幅の値には、クライアント領域の幅の 4 分の 3 を超えている場合は無視されます。
+このメソッドは、カラー ピッカー コントロールの **[カスタム**] タブにある輝度バーのサイズを変更するために使います。 *w*パラメータは、輝度バーの新しい幅を指定します。 width 値は、クライアント領域の幅の 4 分の 3 を超える場合は無視されます。
 
-##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor
+## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>カラーリングコントロール::オリジナルカラーを設定
 
-選択した初期の色を設定します。
+最初に選択した色を設定します。
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *ref*<br/>
-[in]RGB 色の値。
+[in]RGB カラー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 カラー ピッカー コントロールが初期化されるときに、このメソッドを呼び出します。
 
-##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette
+## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>をクリックします。
 
 現在のカラー パレットを設定します。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pPalette*<br/>
-[in]カラー パレットを指すポインター。
+*をクリックします。*<br/>
+[in]カラー パレットへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-色パレットは、カラー ピッカー コントロールで表示される色の配列を定義します。
+カラー パレットは、カラー ピッカー コントロールに表示される色の配列を定義します。
 
-##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation
+## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>コントロール::設定飽和
 
 現在選択されている色の彩度を変更します。
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*彩度*<br/>
-[in]鮮やかさの値。
+*[鮮やかさ]*<br/>
+[in]飽和値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="settype"></a>  CMFCColorPickerCtrl::SetType
+## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a>をクリックします。
 
 表示するカラー ピッカー コントロールの種類を設定します。
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*colorType*<br/>
+*カラータイプ*<br/>
 [in]カラー ピッカー コントロールの種類。
 
-によって、型が定義されている、`CMFCColorPickerCtrl::COLORTYPE`列挙体。 輝度、ピッカー、16 進数および HEX_GREYSCALE のタイプがあります。 既定の種類は、選択します。
+型は`CMFCColorPickerCtrl::COLORTYPE`列挙体によって定義されます。 可能なタイプは、輝度、ピッカー、16 進数、HEX_GREYSCALEです。 既定の型はピッカーです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-カラー ピッカー コントロールの種類を指定するには、Windows コントロールを作成する前に、このメソッドを呼び出します。
+カラー ピッカー コントロールの種類を指定するには、Windows コントロールを作成する前にこのメソッドを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6111
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
-ms.openlocfilehash: 44f406881d64d13e23ca2c0911ee278c864a2c11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8abedf6a326a826d0c8ac513b15037c8bf89bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393409"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173692"
 ---
 # <a name="math-error-m6111"></a>数値演算エラー M6111
 
-スタックのアンダー フロー
+スタックアンダーフロー
 
-浮動小数点演算では、8087/287/387 コプロセッサまたはエミュレーター スタック アンダー フローが発生しました。
+浮動小数点演算の結果、8087/287/387 コプロセッサまたはエミュレーターでスタックアンダーフローが発生しました。
 
-呼び出しによってこのエラーが原因となった多くの場合、`long double`値を返さない関数。 たとえば、次このエラーを生成コンパイルと実行。
+このエラーは、値を返さない `long double` 関数の呼び出しによって発生することがよくあります。 たとえば、次の例では、コンパイルして実行すると、このエラーが生成されます。
 
 ```
 long double ld() {};
@@ -29,4 +29,4 @@ main ()
 }
 ```
 
-終了コード 139 でプログラムを終了します。
+プログラムは終了コード139で終了します。

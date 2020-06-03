@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123969"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423742"
 ---
 # <a name="initializers"></a>初期化子
 
@@ -183,7 +183,7 @@ int main() {
 
 - 匿名の一時オブジェクトが空の丸かっこまたは中かっこを使用して初期化される。
 
-- **new**キーワードと空のかっこまたは中かっこを使用してオブジェクトが初期化されます。
+- **新しい**キーワードと空のかっこまたは中かっこを使用してオブジェクトが初期化されます。
 
 値の初期化では次の処理が実行されます。
 
@@ -274,7 +274,7 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 変数が空でない中かっこまたは丸かっこを使用して初期化される。
 
-- **new**キーワードと空でない中かっこまたはかっこを使用して変数が初期化されています
+- **新しい**キーワードと空でない中かっこまたはかっこを使用して変数が初期化されています
 
 - 変数が**static_cast**で初期化されています
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-以下の出力が表示されます。
+次の出力が表示されます。
 
 ```Output
 agg1: c: 1
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>参照の初期化
 
-参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 例:
+参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 次に例を示します。
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ reference-type 変数の初期化と reference-type 変数の代入は、構文�
 
 Reference-type 変数は、以下の場合にのみ初期化子なしで宣言できます。
 
-- 関数宣言 (プロトタイプ)。 例:
+- 関数宣言 (プロトタイプ)。 次に例を示します。
 
     ```cpp
     int func( int& );
     ```
 
-- Function-return 型宣言。 例:
+- Function-return 型宣言。 次に例を示します。
 
     ```cpp
     int& func( int& );
     ```
 
-- reference-type クラス メンバーの宣言。 例:
+- reference-type クラス メンバーの宣言。 次に例を示します。
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- **Extern**として明示的に指定された変数の宣言。 例:
+- **Extern**として明示的に指定された変数の宣言。 次に例を示します。
 
     ```cpp
     extern int& iVal;

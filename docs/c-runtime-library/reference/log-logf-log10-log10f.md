@@ -1,6 +1,6 @@
 ---
-title: log、logf、logf、log10、log10f、log10l
-ms.date: 04/05/2018
+title: log、logf、logl、log10、log10f、log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953224"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911477"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logf、log10、log10f、log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
 対数を計算します。
 
@@ -83,23 +86,25 @@ long double log10( long double x );  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN、IND|なし|_DOMAIN|
+|±0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
 **log**と**log10**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ではオーバーロードが可能であるため、 **float**または**long double**値を受け取って返す**log**および**log10**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log**と**log10**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long double 型**の値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log**と**log10**は常に**double**を受け取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**log**、 **logf**、 **logf**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

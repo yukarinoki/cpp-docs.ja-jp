@@ -1,6 +1,7 @@
 ﻿---
-title: switch ステートメント (C++)
-ms.date: 05/06/2019
+title: switchステートメント (C++)
+description: Microsoft Visual Studio C++ の標準 C++ ステートメントへの参照 switch 。
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -9,76 +10,94 @@ helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
+no-loc:
+- switch
+- case
+- default
+- break
+- while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221936"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389702"
 ---
-# <a name="switch-statement-c"></a>switch ステートメント (C++)
+# <a name="switch-statement-c"></a>`switch`ステートメント (C++)
 
 整数式の値に応じてコードの複数のセクション間を切り替えます。
 
 ## <a name="syntax"></a>構文
 
-```
-   switch ( init; expression )
-   case constant-expression : statement
-   [default  : statement]
-```
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub><sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Remarks
 
-*式*または整数型への明確な変換がある対象のクラス型の整数型にする必要があります。 」の説明に従って、整数の上位変換が実行される[標準変換](standard-conversions.md)します。
+__`switch`__ ステートメントを指定すると、 *`condition`* の値に応じて、ステートメント本体の 1 つの *`labeled-statement`* にコントロールが転送されます。
 
-**switch**ステートメント本体内から成る、一連の**case**ラベルと省略可能な**default**ラベル。 2 つの定数式で**case**ステートメントが同じ値に評価されることができません。 **default**ラベルは 1 回だけ出現できます。 ラベル付きステートメントは構文上の要件ではありませんが、**switch**ステートメントはせずに意味がありません。   default ステートメントを最後に記述する必要はありません。switch ステートメントの本体内の任意の場所で使用できます。 case ラベルまたは default ラベルは、switch ステートメント内でのみ使用できます。
+は *`condition`* 整数型であるか、または整数型への明確な変換を持つクラス型である必要があります。 「[標準変換](standard-conversions.md)」で説明されているように、整数の上位変換が行われます。
 
-*定数式*各**case**ラベルがの型に変換された*式*と比較*式*の等しいかどうか。 コントロールがあるステートメントに移ります**case** *定数式* の値と一致する *式* します。 結果の動作を次の表に示します。
+ステートメントの本体は、 __`switch`__ 一連のラベルとオプションのラベルで構成され __`case`__ __`default`__ ます。 *`labeled-statement`* は、これらのラベルの1つであり、後続のステートメントです。 ラベル付きステートメントは構文要件ではありませんが、ステートメントを使用しても __`switch`__ 意味がありません。 *`constant-expression`* ステートメント内の2つの値 __`case`__ が同じ値に評価されることはありません。 __`default`__ ラベルが1回だけ表示される場合があります。 ステートメントは、 __`default`__ 多くの場合、末尾に配置されますが、ステートメント本体内の任意の場所に記述でき __`switch`__ ます。 __`case`__ または __`default`__ ラベルは、 __`switch`__ ステートメント内でのみ使用できます。
 
-### <a name="switch-statement-behavior"></a>switch ステートメントの動作
+各ラベルのは、 *`constant-expression`* __`case`__ と同じ型の定数値に変換され *`condition`* ます。 次に、が *`condition`* 等しいかどうかを比較します。 制御は、の値に一致する値の後の最初のステートメントに渡さ __`case`__ *`constant-expression`* *`condition`* れます。 結果の動作を次の表に示します。
 
-|条件|アクション|
-|---------------|------------|
-|変換後の値は、上位変換された制御式の値と一致します。|制御は、そのラベルの次のステートメントに移ります。|
-|含まれている定数に一致、定数のいずれも、**case**ラベル、**default**ラベルが存在します。|制御が移ります、**default**ラベル。|
-|含まれている定数に一致、定数のいずれも、**case**ラベル。**default**ラベルが存在しません。|後のステートメントに制御が移ります、**switch**ステートメント。|
+### <a name="switch-statement-behavior"></a>`switch`ステートメントの動作
 
-コントロールがそれ以降によって妨げられるいない一致する式が見つかった場合**case**または**default**ラベル。 [break](../cpp/break-statement-cpp.md)ステートメントが実行を停止し、後のステートメントに制御を転送するために使用、**switch**ステートメント。 なし、 **break**ステートメントでは、すべてのステートメントから、一致する**case**の末尾にラベル、**switch**など、**default**は実行されます。 例:
+| 条件 | アクション |
+|--|--|
+| 変換後の値は、上位変換された制御式の値と一致します。 | 制御は、そのラベルの次のステートメントに移ります。 |
+| どの定数もラベル内の定数と一致しません。 __`case`__ __`default`__ ラベルが存在します。 | コントロールはラベルに転送され __`default`__ ます。 |
+| どの定数もラベル内の定数と一致しません。 __`case`__ __`default`__ ラベルは存在しません。 | 制御は、ステートメントの後のステートメントに転送され __`switch`__ ます。 |
+
+一致する式が見つかった場合は、後で実行するか、ラベルを使用して実行を続行でき __`case`__ __`default`__ ます。 ステートメントは、実行を停止し、ステートメントの [`break`](../cpp/break-statement-cpp.md) 後のステートメントに制御を転送するために使用され __`switch`__ ます。 ステートメントを使用しない場合、を __`break`__ 含む、一致するラベルからの末尾までのすべてのステートメント __`case`__ __`switch`__ __`default`__ が実行されます。 次に例を示します。
 
 ```cpp
 // switch_statement1.cpp
 #include <stdio.h>
 
 int main() {
-   char *buffer = "Any character stream";
-   int capa, lettera, nota;
+   const char *buffer = "Any character stream";
+   int uppercase_A, lowercase_a, other;
    char c;
-   capa = lettera = nota = 0;
+   uppercase_A = lowercase_a = other = 0;
 
    while ( c = *buffer++ )   // Walks buffer until NULL
    {
       switch ( c )
       {
          case 'A':
-            capa++;
+            uppercase_A++;
             break;
          case 'a':
-            lettera++;
+            lowercase_a++;
             break;
          default:
-            nota++;
+            other++;
       }
    }
-   printf_s( "\nUppercase a: %d\nLowercase a: %d\nTotal: %d\n",
-      capa, lettera, (capa + lettera + nota) );
+   printf_s( "\nUppercase A: %d\nLowercase a: %d\nTotal: %d\n",
+      uppercase_A, lowercase_a, (uppercase_A + lowercase_a + other) );
 }
 ```
 
-上の例では、`capa` は `c` が大文字 `A` の場合、インクリメントします。 **break**後のステートメント`capa++`の実行を終了、**switch**をステートメント本体と制御を渡します、**while**ループします。 なし、 **break**ステートメントでは、実行は「フォール スルー」[次へ] のラベル付きステートメントにように`lettera`と`nota`もインクリメントされます。 目的は同じですが、によって処理される、 **break**ステートメント`case 'a'`。 場合`c`が小文字`a`、`lettera`がインクリメントされます、 **break**ステートメントが終了、**switch**ステートメント本体。 場合`c`でない、`a`または`A`、**default**ステートメントが実行されます。
+上の例では、`uppercase_A` は `c` が大文字 `'A'` の場合、インクリメントします。 __`break`__ の後のステートメントは、 `uppercase_A++` ステートメント本体の実行を終了 __`switch`__ し、制御をループに渡し __`while`__ ます。 ステートメントを使用しない場合 __`break`__ 、実行は次のラベル付きステートメントに "フォールスルー" されるので、 `lowercase_a` と `other` もインクリメントされます。 同様の目的は、のステートメントによって処理され __`break`__ `case 'a'` ます。 `c`が小文字の場合は `'a'` 、 `lowercase_a` がインクリメントされ、ステートメントによって __`break`__ ステートメント本体が終了し __`switch`__ ます。 が `c` `'a'` またはでない場合は `'A'` 、 __`default`__ ステートメントが実行されます。
 
-**Visual Studio 2017 以降:** (で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`標準の c++ 17 で属性を指定します。 使用できます、**switch**ステートメントは、フォールスルー動作を意図 (または、コードを読むすべてのユーザーに) コンパイラにヒントとして。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性はコンパイラの動作に影響を与えません。 属性をラベル付きステートメント内で空のステートメントに適用されるに注意してください。つまり、セミコロンは必要があります。
+**Visual Studio 2017 以降:** ( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能) `[[fallthrough]]` 属性は c++ 17 標準で指定されています。 ステートメントで使用でき __`switch`__ ます。 これは、コンパイラにとってのヒントであり、コードを読み取るユーザーは、フォールスルー動作が意図的であることを示します。 現在、Microsoft C++ コンパイラでは fallthrough 動作について警告されないため、この属性はコンパイラの動作には影響しません。 この例では、未終了のラベルが付けられていないステートメント内の空のステートメントに属性が適用されます。 言い換えると、セミコロンが必要です。
 
 ```cpp
 int main()
@@ -106,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。Switch ステートメントは、紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化することがあります。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能)。 ステートメントには、 __`switch`__ 句を含めることができ *`init-statement`* ます。この句は、セミコロンで終わります。 次のように、スコープがステートメントのブロックに制限されている変数を導入し、初期化し __`switch`__ ます。
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +138,7 @@ int main()
     };
 ```
 
-内側のブロックを**switch**が到達可能な限り、ステートメントで初期化の定義を含めることができます: ないは、すべての実行可能なパスではバイパスされます。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 例:
+ステートメントの内部ブロックには、 __`switch`__ *到達*可能である限り、初期化子を持つ定義を含めることができます。つまり、すべての実行パスでバイパスされることはありません。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 次に例を示します。
 
 ```cpp
 // switch_statement2.cpp
@@ -154,15 +173,11 @@ int main(int argc, char *argv[])
 }
 ```
 
-**switch**ステートメントは入れ子にできます。 このような場合、**case**または**default**ラベルは、最も近いと関連付ける**switch**そのすぐ外側のステートメント。
+ステートメントは入れ子にする __`switch`__ ことができます。 入れ子になっている場合、 __`case`__ ラベルまたはラベルは、 __`default`__ それを囲む最も近いステートメントに関連付けられ __`switch`__ ます。
 
-**Microsoft 固有の仕様**
+### <a name="microsoft-specific-behavior"></a>Microsoft 固有の動作
 
-Microsoft C では、case 値の数は制限されませんが、**switch**ステートメント。 この数は、使用できるメモリによってのみ制限されます。 ANSI C には、少なくとも 257 が必要がありますの case ラベルを使用できる、**switch**ステートメント。
-
-Microsoft C の既定では、Microsoft 拡張機能が有効になっています。 使用して、 [/Za](../build/reference/za-ze-disable-language-extensions.md)コンパイラ オプションは、これらの拡張機能を無効にします。
-
-**Microsoft 固有の仕様はここまで**
+Microsoft C++ では、ステートメントの値の数は制限されません __`case`__ __`switch`__ 。 この数は、使用できるメモリによってのみ制限されます。
 
 ## <a name="see-also"></a>関連項目
 

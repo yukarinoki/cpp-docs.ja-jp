@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e78e4ad87338528aa654f5ecaa08b45315846
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260754"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168554"
 ---
-# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 構造体
+# <a name="_atl_win_module70-structure"></a>_ATL_WIN_MODULE70 構造体
 
-ATL でウィンドウ作成コードで使用されます。
+ATL のウィンドウコードによって使用されます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize;
     CRITICAL_SECTION m_csWindowCreate;
@@ -34,24 +34,24 @@ struct _ATL_WIN_MODULE70 {
 ## <a name="members"></a>メンバー
 
 `cbSize`<br/>
-バージョン管理に使用される、構造のサイズ。
+構造体のサイズ。バージョン管理に使用されます。
 
 `m_csWindowCreate`<br/>
-ウィンドウの登録コードへのアクセスをシリアル化するために使用します。 ATL で内部的に使用
+ウィンドウ登録コードへのアクセスをシリアル化するために使用されます。 ATL によって内部的に使用されます。
 
 `m_pCreateWndList`<br/>
-Windows をそれらのオブジェクトにバインドするために使用します。 ATL で内部的に使用
+ウィンドウをオブジェクトにバインドするために使用します。 ATL によって内部的に使用されます。
 
 `m_rgWindowClassAtoms`<br/>
-終了時に正しく登録それらができるように、ウィンドウ クラスの登録を追跡するために使用します。 ATL で内部的に使用
+終了時に適切に登録解除できるように、ウィンドウクラスの登録を追跡するために使用されます。 ATL によって内部的に使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)の typedef として定義されて`_ATL_WIN_MODULE70`します。
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)は、の`_ATL_WIN_MODULE70`typedef として定義されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
 ## <a name="see-also"></a>関連項目
 

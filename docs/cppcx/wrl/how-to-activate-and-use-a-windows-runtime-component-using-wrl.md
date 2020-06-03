@@ -1,36 +1,36 @@
 ---
-title: '方法: WRL を使用して Windows ランタイムコンポーネントをアクティブ化して使用する'
+title: '方法: WRL を使用して Windows ランタイム コンポーネントをアクティブ化し使用する'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 7f49c1362bea12576df6039b9e9f0b455cb4fae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213955"
 ---
-# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: WRL を使用して Windows ランタイムコンポーネントをアクティブ化して使用する
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: WRL を使用して Windows ランタイム コンポーネントをアクティブ化し使用する
 
 このドキュメントでは、Windows ランタイムC++テンプレートライブラリ (wrl) を使用して Windows ランタイムを初期化する方法と、Windows ランタイムコンポーネントをアクティブ化して使用する方法について説明します。
 
 コンポーネントを使用するには、コンポーネントによって実装されている型へのインターフェイス ポインターを取得する必要があります。 また、Windows ランタイムの基になるテクノロジはコンポーネントオブジェクトモデル (COM) であるため、型のインスタンスを維持するには、COM の規則に従う必要があります。 たとえば、型がいつメモリから削除されるかを決定する*参照カウント*を維持する必要があります。
 
-Windows ランタイムの使用を簡単にするためにC++ 、Windows ランタイムテンプレートライブラリには、参照カウントを自動的に実行するスマートポインターテンプレート[comptr\<T >](comptr-class.md)が用意されています。 変数を宣言するときは、 `ComPtr<`*インターフェイス名*`>`の*識別子*を指定します。 インターフェイスのメンバーにアクセスするには、識別子に矢印のメンバー アクセス演算子 (`->`) を適用します。
+Windows ランタイムの使用を簡単にするためにC++ 、Windows ランタイムテンプレートライブラリには、参照カウントを自動的に実行するスマートポインターテンプレート[Comptr\<t >](comptr-class.md)が用意されています。 変数を宣言するときは、`ComPtr<`*インターフェイス名*`>`*識別子*を指定します。 インターフェイスのメンバーにアクセスするには、識別子に矢印のメンバー アクセス演算子 (`->`) を適用します。
 
 > [!IMPORTANT]
 > インターフェイス関数を呼び出す場合は、常に HRESULT の戻り値をテストします。
 
 ## <a name="activating-and-using-a-windows-runtime-component"></a>Windows ランタイム コンポーネントのアクティブ化と使用
 
-次の手順では`Windows::Foundation::IUriRuntimeClass` 、インターフェイスを使用して、Windows ランタイムコンポーネントのアクティベーションファクトリを作成し、そのコンポーネントのインスタンスを作成して、プロパティ値を取得する方法を示します。 また、Windows ランタイムを初期化する方法についても説明します。 完全な例を次に示します。
+次の手順では、`Windows::Foundation::IUriRuntimeClass` インターフェイスを使用して、Windows ランタイムコンポーネントのアクティベーションファクトリを作成し、そのコンポーネントのインスタンスを作成して、プロパティ値を取得する方法を示します。 また、Windows ランタイムを初期化する方法についても説明します。 完全な例を次に示します。
 
 > [!IMPORTANT]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP C++ ) アプリで Windows ランタイムテンプレートライブラリを使用しますが、この例ではコンソールアプリを使用して説明します。 などの関数は、UWP アプリからは使用できません。 `wprintf_s` UWP アプリで使用できる型と関数の詳細については、「[ユニバーサル Windows プラットフォームアプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」および「 [Uwp アプリの Win32 および COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)」を参照してください。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP C++ ) アプリで Windows ランタイムテンプレートライブラリを使用しますが、この例ではコンソールアプリを使用して説明します。 `wprintf_s` などの関数は、UWP アプリからは使用できません。 UWP アプリで使用できる型と関数の詳細については、「[ユニバーサル Windows プラットフォームアプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」および「 [Uwp アプリの Win32 および COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)」を参照してください。
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Windows ランタイム コンポーネントをアクティブ化して使用するには
 
-1. 必須の Windows ランタイム、Windows ランタイムC++テンプレートライブラリ、またはC++標準ライブラリヘッダーを含めます。`#include`
+1. 必要な Windows ランタイム、Windows ランタイムC++テンプレートライブラリ、またはC++標準ライブラリのヘッダーを含めます (`#include`)。
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
@@ -40,15 +40,15 @@ Windows ランタイムの使用を簡単にするためにC++ 、Windows ラン
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
-   2番目のステートメントでは、 [roinitializewrapper:: HRESULT](roinitializewrapper-class.md#hresult)演算子`HRESULT`は、の呼び出し`Windows::Foundation::Initialize`からを返します。
+   2番目のステートメントでは、 [Roinitializewrapper:: HRESULT](roinitializewrapper-class.md#hresult)演算子は、`Windows::Foundation::Initialize`への呼び出しから `HRESULT` を返します。
 
-3. `ABI::Windows::Foundation::IUriRuntimeClassFactory`インターフェイスの*アクティベーションファクトリ*を作成します。
+3. `ABI::Windows::Foundation::IUriRuntimeClassFactory` インターフェイスの*アクティベーションファクトリ*を作成します。
 
    [!code-cpp[wrl-consume-component#4](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]
 
-   Windows ランタイムは、完全修飾名を使用して型を識別します。 `RuntimeClass_Windows_Foundation_Uri`パラメーターは、Windows ランタイムによって提供される文字列であり、必要なランタイムクラス名が含まれています。
+   Windows ランタイムは、完全修飾名を使用して型を識別します。 `RuntimeClass_Windows_Foundation_Uri` パラメーターは、Windows ランタイムによって提供される文字列であり、必要なランタイムクラス名が含まれています。
 
-4. URI`"https://www.microsoft.com"`を表す[Microsoft:: Wrl:: Wrapper:: hstring](hstring-class.md)変数を初期化します。
+4. URI `"https://www.microsoft.com"`を表す[Microsoft:: WRL:: wrapper:: HString](hstring-class.md)変数を初期化します。
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 
@@ -74,10 +74,10 @@ Windows ランタイムの使用を簡単にするためにC++ 、Windows ラン
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするには、コードをコピーし、visual studio プロジェクトに貼り付けるか、という名前`wrl-consume-component.cpp`のファイルに貼り付けてから、visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`wrl-consume-component.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 `cl.exe wrl-consume-component.cpp runtimeobject.lib`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)

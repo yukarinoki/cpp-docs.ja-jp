@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
 - ATL.CManualAccessor.AddBindEntry
 - CManualAccessor::AddBindEntry
-- AddBindEntry
 - CManualAccessor.AddBindEntry
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -16,7 +15,6 @@ f1_keywords:
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
 - ATL::CManualAccessor::CreateAccessor
-- CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211849"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
-高度な使用するために設計されたアクセサーの型を表します。
+高度な使用を目的として設計されたアクセサー型を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -59,18 +57,18 @@ class CManualAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|出力列にバインド エントリを追加します。|
-|[AddParameterEntry](#addparameterentry)|パラメーターのアクセサーにパラメーターの入力を追加します。|
-|[CreateAccessor](#createaccessor)|列バインド構造体のメモリを割り当て、列のデータ メンバーを初期化します。|
-|[CreateParameterAccessor](#createparameteraccessor)|パラメーター バインド構造体のメモリを割り当て、パラメーターのデータ メンバーを初期化します。|
+|[AddBindEntry](#addbindentry)|出力列にバインドエントリを追加します。|
+|[AddParameterEntry](#addparameterentry)|パラメーターアクセサーにパラメーターエントリを追加します。|
+|[CreateAccessor](#createaccessor)|列バインド構造にメモリを割り当て、列データメンバーを初期化します。|
+|[CreateParameterAccessor](#createparameteraccessor)|パラメーターバインド構造体にメモリを割り当て、パラメーターデータメンバーを初期化します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用して`CManualAccessor`実行時の関数呼び出しによって出力列のバインドと、パラメーターを指定できます。
+`CManualAccessor`を使用すると、実行時の関数呼び出しによってパラメーターと出力列のバインドを指定できます。
 
-## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
 
-出力列にバインド エントリを追加します。
+出力列にバインドエントリを追加します。
 
 ### <a name="syntax"></a>構文
 
@@ -84,33 +82,33 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
-[in]列番号。
+から列番号。
 
 *wType*<br/>
-[in]データを入力します。
+からデータ型。
 
 *nColumnSize*<br/>
-[in]列のサイズ (バイト単位)。
+から列のサイズ (バイト単位)。
 
 *pData*<br/>
-[in]バッファーに格納されている列のデータへのポインター。
+からバッファーに格納されている列データへのポインター。
 
 *pLength*<br/>
-[in]必要な場合は、フィールドの長さへのポインター。
+から必要に応じて、フィールド長へのポインター。
 
 *pStatus*<br/>
-[in]必要な場合は、列の状態にバインドする変数へのポインター。
+から必要に応じて、列の状態にバインドする変数へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を使用するには、まず[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)します。 指定された列の数よりも多くのエントリを追加することはできません`CreateAccessor`します。
+この関数を使用するには、最初に[Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)を呼び出す必要があります。 `CreateAccessor`で指定された列数よりも多くのエントリを追加することはできません。
 
-## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
 
-パラメーターのエントリの構造体には、パラメーターの入力を追加します。
+パラメーターエントリをパラメーターエントリ構造体に追加します。
 
 ### <a name="syntax"></a>構文
 
@@ -125,36 +123,36 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
-[in]パラメーターの数。
+からパラメーター番号。
 
 *wType*<br/>
-[in]データを入力します。
+からデータ型。
 
 *nColumnSize*<br/>
-[in]列のサイズ (バイト単位)。
+から列のサイズ (バイト単位)。
 
 *pData*<br/>
-[in]バッファーに格納されている列のデータへのポインター。
+からバッファーに格納されている列データへのポインター。
 
 *pLength*<br/>
-[in]必要な場合は、フィールドの長さへのポインター。
+から必要に応じて、フィールド長へのポインター。
 
 *pStatus*<br/>
-[in]必要な場合は、列の状態にバインドする変数へのポインター。
+から必要に応じて、列の状態にバインドする変数へのポインター。
 
 *eParamIO*<br/>
-[in]バインディングが関連付けられているパラメーターが、入力、入力/出力、または出力パラメーターであるかどうかを指定します。
+からバインドが関連付けられているパラメーターが入力、入力、出力、または出力パラメーターであるかどうかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を使用するには、まず[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)します。
+この関数を使用するには、最初に[Createparameteraccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)を呼び出す必要があります。
 
-## <a name="createaccessor"></a> Cmanualaccessor::createaccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: CreateAccessor
 
-列バインド構造体のメモリを割り当て、列のデータ メンバーを初期化します。
+列バインド構造にメモリを割り当て、列データメンバーを初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -167,25 +165,25 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>パラメーター
 
 *nBindEntries*<br/>
-[in]列の数。 この数はへの呼び出しの数に一致する必要があります、 [cmanualaccessor::addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)関数。
+から列の数。 この数値は、 [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)関数の呼び出し回数と一致している必要があります。
 
 *pBuffer*<br/>
-[in]出力列が格納されているバッファーへのポインター。
+から出力列が格納されるバッファーへのポインター。
 
 *nBufferSize*<br/>
-[in]バッファーのバイト単位のサイズ。
+からバッファーのサイズ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す前に、この関数を呼び出し、`CManualAccessor::AddBindEntry`関数。
+`CManualAccessor::AddBindEntry` 関数を呼び出す前に、この関数を呼び出します。
 
-## <a name="createparameteraccessor"></a> Cmanualaccessor::createparameteraccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
 
-パラメーター バインド構造体のメモリを割り当て、パラメーターのデータ メンバーを初期化します。
+パラメーターバインド構造体にメモリを割り当て、パラメーターデータメンバーを初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -198,26 +196,26 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 #### <a name="parameters"></a>パラメーター
 
 *nBindEntries*<br/>
-[in]列の数。
+から列の数。
 
 *pBuffer*<br/>
-[in]入力列が格納されているバッファーへのポインター。
+から入力列が格納されるバッファーへのポインター。
 
 *nBufferSize*<br/>
-[in]バッファーのバイト単位のサイズ。
+からバッファーのサイズ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す前に呼び出す必要があります[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)します。
+[Addparameterentry](../../data/oledb/cmanualaccessor-addparameterentry.md)を呼び出す前に、この関数を呼び出す必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)<br/>

@@ -1,31 +1,29 @@
 ---
 title: CReBarCtrl の使い方
 ms.date: 11/19/2018
-f1_keywords:
-- CReBarCtrl
 helpviewer_keywords:
 - child windows [MFC], rebar controls
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411909"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441961"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl の使い方
 
-Rebar コントロールは、子ウィンドウのコンテナーとして機能します。 Rebar コントロール バンドには、これらの子ウィンドウ、多くの場合、他のコントロールが割り当てられます。 Rebar コントロールのグリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを 1 つまたは複数のバンドを含めることができます。 ただし、バンドは、1 つ以上の子ウィンドウを含めることはできません。
+Rebar コントロールは、子ウィンドウのコンテナーとして機能します。 これらの子ウィンドウ (多くの場合、他のコントロール) は rebar コントロールバンドに割り当てられます。 Rebar コントロールには、1つまたは複数のバンドを含めることができます。各バンドには、グリップバー、ビットマップ、テキストラベル、および子ウィンドウが任意に組み合わされています。 ただし、バンドには複数の子ウィンドウを含めることはできません。
 
-次の図は、2 つのバンドを持つ rebar コントロールを示します。 グリッパー バー、テキスト ラベル ("Address")、およびコンボ ボックスの子ウィンドウが含まれています。 その他のバンドには、グリッパー バー、テキスト ラベル、およびフラット ツールバー (子ウィンドウで実装) が含まれています。
+次の図は、2つのバンドを持つ rebar コントロールを示しています。 1つには、グリップバー、テキストラベル ("Address")、およびコンボボックスの子ウィンドウが含まれています。 もう一方のバンドには、グリップバー、テキストラベル、およびフラットなツールバー (子ウィンドウと共に実装) が含まれています。
 
-![2 つのバンドを持つ rebar コントロール](../mfc/media/vc4ruz1.gif "を 2 つのバンドを持つ Rebar コントロール")
+![2つのバンドを持つ Rebar コントロール](../mfc/media/vc4ruz1.gif "2 つのバンドを持つ Rebar コントロール")
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [CReBar とCReBarCtrl の比較](../mfc/crebar-vs-crebarctrl.md)
+- [CReBar と CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
 
 - [Rebar コントロールの作成](../mfc/creating-a-rebar-control.md)
 
@@ -37,6 +35,6 @@ Rebar コントロールは、子ウィンドウのコンテナーとして機�
 
 - [Rebar コントロールでの通知メッセージの処理](../mfc/processing-notification-messages-in-a-rebar-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

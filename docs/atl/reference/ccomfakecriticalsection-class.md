@@ -1,5 +1,5 @@
 ---
-title: CComFakeCriticalSection クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259158"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327854"
 ---
-# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection クラス
+# <a name="ccomfakecriticalsection-class"></a>クラス
 
-このクラスと同じメソッドを提供する[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)クリティカル セクションは提供されません。
+このクラスは[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)と同じメソッドを提供しますが、クリティカル セクションは提供しません。
 
 ## <a name="syntax"></a>構文
 
@@ -34,24 +34,24 @@ class CComFakeCriticalSection
 
 |名前|説明|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|クリティカル セクションがないためには何も行いません。|
-|[CComFakeCriticalSection::Lock](#lock)|クリティカル セクションがないためには何も行いません。|
-|[CComFakeCriticalSection::Term](#term)|クリティカル セクションがないためには何も行いません。|
-|[CComFakeCriticalSection::Unlock](#unlock)|クリティカル セクションがないためには何も行いません。|
+|[ココムフェイククリティカルセクション::イニト](#init)|クリティカルセクションがないので何もしません。|
+|[CComフェイククリティカルセクション::ロック](#lock)|クリティカルセクションがないので何もしません。|
+|[CComフェイククリティカルセクション::用語](#term)|クリティカルセクションがないので何もしません。|
+|[CComフェイククリティカルセクション::ロック解除](#unlock)|クリティカルセクションがないので何もしません。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComFakeCriticalSection` 内のメソッドをミラー化[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)します。 ただし、`CComFakeCriticalSection`に重要なセクションは示しません。 そのため、そのメソッドが何もしません。
+`CComFakeCriticalSection`[は、CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)で見つかったメソッドをミラー化します。 ただし、`CComFakeCriticalSection`クリティカル セクションは提供されません。したがって、そのメソッドは何もしません。
 
-通常、使用して`CComFakeCriticalSection`を通じて、`typedef`名か、`AutoCriticalSection`または`CriticalSection`します。 使用する場合[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)、これらの両方の`typedef`名前参照`CComFakeCriticalSection`します。 使用する場合[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)を参照する[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)と`CComCriticalSection`、それぞれします。
+通常`CComFakeCriticalSection`は、`typedef`名前`AutoCriticalSection`または を使用`CriticalSection`します。 [CCom シングルスレッドモデル](../../atl/reference/ccomsinglethreadmodel-class.md)または[CCom マルチスレッドモデルNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)を使用`typedef`する場合`CComFakeCriticalSection`、これらの名前の両方が参照されます。 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)を使用する場合、それぞれ[CCom オートクリティカルセクション](../../atl/reference/ccomautocriticalsection-class.md)と`CComCriticalSection`を参照します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>ココムフェイククリティカルセクション::イニト
 
-クリティカル セクションがないためには何も行いません。
+クリティカルセクションがないので何もしません。
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>戻り値
 
-S_OK を返します。
+S_OKを返します。
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComフェイククリティカルセクション::ロック
 
-クリティカル セクションがないためには何も行いません。
+クリティカルセクションがないので何もしません。
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-S_OK を返します。
+S_OKを返します。
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComフェイククリティカルセクション::用語
 
-クリティカル セクションがないためには何も行いません。
+クリティカルセクションがないので何もしません。
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>戻り値
 
-S_OK を返します。
+S_OKを返します。
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComフェイククリティカルセクション::ロック解除
 
-クリティカル セクションがないためには何も行いません。
+クリティカルセクションがないので何もしません。
 
 ```
 HRESULT Unlock() throw();
@@ -95,7 +95,7 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-S_OK を返します。
+S_OKを返します。
 
 ## <a name="see-also"></a>関連項目
 

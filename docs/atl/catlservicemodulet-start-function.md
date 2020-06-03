@@ -1,26 +1,26 @@
 ---
-title: 'CAtlServiceModuleT:: Start 関数'
+title: 関数の開始
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: e6de15f40e89bfffba504db04ee7a16b2a68cac9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 50054bbb34bcc31a1d11dd8bfab797f98e4e82f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491666"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317276"
 ---
-# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT:: Start 関数
+# <a name="catlservicemoduletstart-function"></a>関数の開始
 
-サービスが実行されると`_tWinMain` 、 `CAtlServiceModuleT::WinMain`はを呼び出し、は`CAtlServiceModuleT::Start`を呼び出します。
+サービスが実行されると、`_tWinMain`が`CAtlServiceModuleT::WinMain`呼び出され、`CAtlServiceModuleT::Start`が呼び出されます。
 
-`CAtlServiceModuleT::Start`各サービスをスタートアップ関数`SERVICE_TABLE_ENTRY`にマップする構造体の配列を設定します。 この配列は、Win32 API 関数[startservicectrldispatcher に](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw)に渡されます。 理論的には、1つの EXE が複数のサービスを処理でき`SERVICE_TABLE_ENTRY` 、配列に複数の構造体が含まれる可能性があります。 ただし、ATL によって生成されるサービスでは、実行可能ファイルごとに1つのサービスのみがサポートされます。 したがって、配列には、サービス名と`_ServiceMain`スタートアップ関数の1つのエントリがあります。 `_ServiceMain`は、静的でないメンバー `CAtlServiceModuleT`関数を`ServiceMain`呼び出すの静的メンバー関数です。
+`CAtlServiceModuleT::Start`では、各サービスを`SERVICE_TABLE_ENTRY`起動関数にマップする構造体の配列を設定します。 この配列は、Win32 API 関数の[開始サービスCtrlディスパッチャーに渡されます](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw)。 理論的には、1つのEXEが複数のサービスを処理することができ、配列`SERVICE_TABLE_ENTRY`は複数の構造を持つことができます。 しかし、現在、ATL によって生成されたサービスは、EXE ごとに 1 つのサービスのみをサポートしています。 したがって、この配列には、サービス名と`_ServiceMain`スタートアップ関数を含む単一のエントリがあります。 `_ServiceMain`は、非静的メンバー関数`CAtlServiceModuleT`を呼び出す静的メンバー関数です`ServiceMain`。
 
 > [!NOTE]
->  `StartServiceCtrlDispatcher`サービスコントロールマネージャー (SCM) に接続できなかった場合は、プログラムがサービスとして実行されていないことを意味します。 この場合、プログラムは直接を`CAtlServiceModuleT::Run`呼び出して、プログラムをローカルサーバーとして実行できるようにします。 ローカルサーバーとしてプログラムを実行する方法の詳細については、「[デバッグのヒント](../atl/debugging-tips.md)」を参照してください。
+> `StartServiceCtrlDispatcher`サービス コントロール マネージャー (SCM) に接続できない場合は、プログラムがサービスとして実行されていない可能性があります。 この場合、プログラムは直接呼`CAtlServiceModuleT::Run`び出して、プログラムをローカル サーバーとして実行できるようにします。 プログラムをローカル サーバーとして実行する方法の詳細については、「[デバッグのヒント](../atl/debugging-tips.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Services](../atl/atl-services.md)<br/>
-[CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)
+[サービス](../atl/atl-services.md)<br/>
+[開始](../atl/reference/catlservicemodulet-class.md#start)

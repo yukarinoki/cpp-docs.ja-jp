@@ -1,25 +1,25 @@
 ---
-title: '方法: イベントを使用して、c++/cli CLI'
+title: '方法: C++/CLI でイベントを使用する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387176"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545175"
 ---
-# <a name="how-to-use-events-in-ccli"></a>方法: イベントを使用して、c++/cli CLI
+# <a name="how-to-use-events-in-ccli"></a>方法: C++/CLI でイベントを使用する
 
-この記事では、イベントと、そのイベントを起動する関数を宣言するインターフェイスとインターフェイスを実装するクラスとイベント ハンドラーを使用する方法を示します。
+この記事では、イベントを宣言するインターフェイスとそのイベントを呼び出す関数、およびインターフェイスを実装するクラスとイベントハンドラーを使用する方法について説明します。
 
-## <a name="interface-events"></a>インターフェイスのイベント
+## <a name="interface-events"></a>インターフェイスイベント
 
-次のコード例は、イベント ハンドラーを追加、イベントを呼び出します: これにより、その名前をコンソールに書き込むイベントのハンドラー: し、イベント ハンドラーを削除します。
+次のコード例では、イベントハンドラーを追加してイベントを呼び出します。これにより、イベントハンドラーによって名前がコンソールに書き込まれ、イベントハンドラーが削除されます。
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,11 +71,11 @@ int main () {
 EventReceiver::Handler
 ```
 
-## <a name="custom-accessor-methods"></a>カスタムのアクセサー メソッド
+## <a name="custom-accessor-methods"></a>カスタムアクセサーメソッド
 
-次の例では、ハンドラーが追加または削除されると、イベントが発生したときに、イベントの動作を定義する方法を示します。
+次のサンプルは、ハンドラーが追加または削除されたときや、イベントが発生したときにイベントの動作を定義する方法を示しています。
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>既定のアクセスをオーバーライドを追加、削除、およびアクセサーを発生させる
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>アクセサーの追加、削除、および発生時に既定のアクセスをオーバーライドする
 
-このサンプルでは、add、remove、および raise の各イベント メソッドの既定のアクセスをオーバーライドする方法を示します。
+このサンプルでは、add、remove、および raise の各メソッドの既定のアクセスをオーバーライドする方法を示します。
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -221,11 +221,11 @@ int main() {
 17
 ```
 
-## <a name="multiple-event-handlers"></a>複数のイベント ハンドラー
+## <a name="multiple-event-handlers"></a>複数のイベントハンドラー
 
-イベント レシーバー、またはその他のクライアント コードは、イベントを 1 つまたは複数のハンドラーを追加できます。
+イベントレシーバー (またはその他のクライアントコード) は、イベントに1つ以上のハンドラーを追加できます。
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>静的イベント
 
-次の例では、定義および静的イベントを使用する方法を示します。
+次の例では、静的イベントを定義して使用する方法を示します。
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>仮想イベント
 
-このサンプルでは、インターフェイスとクラスに仮想マシン、マネージ イベントを実装します。
+このサンプルでは、インターフェイスとクラスに仮想マネージイベントを実装します。
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-オーバーライドまたは基底クラスのイベントを非表示には、単純なイベントを指定できません。  すべてのイベントのアクセサー関数を定義し、指定する必要があります、`new`または`override`各アクセサー関数のキーワード。
+単純なイベントを指定して、基底クラスのイベントをオーバーライドまたは非表示にすることはできません。  イベントのすべてのアクセサー関数を定義してから、各アクセサー関数で `new` または `override` キーワードを指定する必要があります。
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -510,9 +510,9 @@ ref struct C : B {
 
 ## <a name="abstract-events"></a>抽象イベント
 
-次の例では、抽象イベントを実装する方法を示します。
+次のサンプルは、抽象イベントを実装する方法を示しています。
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -593,11 +593,11 @@ hi
 hello from Event2
 ```
 
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>別のアセンブリで定義されているイベントを発生させる
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>別のアセンブリで定義されているイベントの発生
 
-イベントおよびイベント ハンドラーを 1 つのアセンブリで定義されているし、別のアセンブリで使用します。
+イベントとイベントハンドラーは、1つのアセンブリで定義し、別のアセンブリによって使用できます。
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-このクライアント コードでは、イベントを使用します。
+このクライアントコードは、次のイベントを使用します。
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [event](../extensions/event-cpp-component-extensions.md)

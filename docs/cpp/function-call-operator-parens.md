@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179771"
 ---
 # <a name="function-call-operator-"></a>関数呼び出し演算子: ()
 
@@ -28,7 +28,7 @@ postfix-expression
 ( [argument-expression-list ] )
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 関数呼び出し演算子への引数は、コンマで区切ったゼロ個以上の式 (関数への実引数) です。
 
@@ -61,7 +61,7 @@ postfix-expression
     (Object.*pmf)();
     ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、3 個の引数を持つ標準ライブラリ関数 `strcat_s` を呼び出しています。
 
@@ -176,8 +176,8 @@ int main() {
 
 関数は再帰的に呼び出すことができます。 関数宣言の詳細については、「[関数](functions-cpp.md)」を参照してください。 関連資料は[、翻訳単位およびリンケージ](../cpp/program-and-linkage-cpp.md)に含まれています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [後置式](../cpp/postfix-expressions.md)<br/>
-[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [関数呼び出し](../c-language/function-call-c.md)

@@ -1,9 +1,11 @@
 ---
 title: _access_s、_waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939899"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916905"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
@@ -62,7 +65,7 @@ errno_t _waccess_s(
 *path*<br/>
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*mode*<br/>
 アクセス許可の設定。
 
 ## <a name="return-value"></a>戻り値
@@ -75,11 +78,11 @@ errno_t _waccess_s(
 `ENOENT`|ファイル名またはパスが見つかりません。
 `EINVAL`|無効なパラメーター。
 
-詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ファイルと共に使用する場合、 **_access_s**関数は、指定されたファイルが存在し、*モード*の値によって指定されたとおりにアクセスできるかどうかを判断します。 ディレクトリと共に使用すると、 **_access_s**は指定されたディレクトリが存在するかどうかのみを判断します。 Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
+ファイルと共に使用する場合、 **_access_s**関数は、指定されたファイルが存在し、*モード*の値によって指定されたとおりにアクセスできるかどうかを判断します。 ディレクトリと共に使用する場合、 **_access_s**は指定したディレクトリが存在するかどうかのみを判断します。 Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |モード値|ファイル チェックの目的|
 |----------------|---------------------|
@@ -88,11 +91,13 @@ errno_t _waccess_s(
 |04|読み取りアクセス許可|
 |06|読み取りおよび書き込みアクセス許可|
 
-ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、 **_access_s**から0が返されても、ファイルにアクセスできない可能性があります。
+ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、 **_access_s**が0を返す場合でも、ファイルにアクセスできない可能性があります。
 
-**_waccess_s**は、 **_access_s**のワイド文字バージョンです。 **_waccess_s**への*パス*引数はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**は同じように動作します。
+**_waccess_s**は **_access_s**のワイド文字バージョンであり、 **_waccess_s**の*パス*引数はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**は同じように動作します。
 
 これらの関数では、パラメーターの検証が行われます。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、`EINVAL` を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -102,7 +107,7 @@ errno_t _waccess_s(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> または \<io.h>|\<errno.h>|

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2308
 ms.assetid: d1eaf101-077d-4c43-97ac-410efd5b6fc9
-ms.openlocfilehash: f5744509f89337d2fe22af785b9af6a48446997c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d586a04fd132f412dd6fb3750982cdf4c6a82a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206267"
 ---
 # <a name="compiler-error-c2308"></a>コンパイラ エラー C2308
 
-一致しない文字列を連結します。
+一致しない文字列の連結
 
-連結の両方の幅と非ワイド文字の文字列が指定されました。 ワイド文字の文字列と非ワイド文字の文字列を連結することはできません。
+ワイド文字列とワイド文字列の両方が連結用に指定されました。 ワイド文字列とワイド文字列以外の文字列を連結することはできません。

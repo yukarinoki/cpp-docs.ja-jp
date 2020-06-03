@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190691"
 ---
 # <a name="resource-compiler-error-rw2002"></a>リソース コンパイラ エラー RW2002
 
-解析エラー
+解析エラー。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
@@ -69,7 +69,7 @@ ms.locfileid: "71230407"
 
 1. **コントロールクラス名が必要です。**
 
-   **DIALOG ステートメント**内の**CONTROL**ステートメントのフィールドは、次のいずれかの型である必要があります。`class`BUTTON、COMBOBOX、EDIT、LISTBOX、SCROLLBAR、STATIC、または user defined。 クラスのスペルが正しいことを確認します。
+   **DIALOG**ステートメント内の**CONTROL**ステートメントの `class` フィールドは、BUTTON、COMBOBOX、EDIT、LISTBOX、SCROLLBAR、STATIC、または user defined のいずれかの型である必要があります。 クラスのスペルが正しいことを確認します。
 
 1. **フォントフェイス名が必要です**
 
@@ -85,7 +85,7 @@ ms.locfileid: "71230407"
 
 1. **数値のコマンド値が必要です**
 
-   リソースコンパイラは、**アクセラレータ**ステートメントで数値*idvalue*フィールドを予期していました。 定数を`#define`使用して値を指定していることと、定数のスペルが正しいことを確認してください。
+   リソースコンパイラは、**アクセラレータ**ステートメントで数値*idvalue*フィールドを予期していました。 値を指定するために `#define` 定数が使用されていることと、定数のスペルが正しいことを確認してください。
 
 1. **文字列テーブルに数値定数が必要です**
 
@@ -109,7 +109,7 @@ ms.locfileid: "71230407"
 
 1. **ID には数値が必要です**
 
-   DIALOG ステートメント内の control `id`ステートメントのフィールドには数値が必要です。 コントロール ID の数値または`#define`ステートメントがあることを確認してください。
+   **DIALOG**ステートメント内の control ステートメントの `id` フィールドには数値が必要です。 コントロール ID に対して、数字または `#define` ステートメントがあることを確認します。
 
 1. **Dialog クラスに引用符で囲まれた文字列が必要です**
 
@@ -141,7 +141,7 @@ ms.locfileid: "71230407"
 
 1. **コントロールの種類が無効です**
 
-   **DIALOG**ステートメント内の各 control ステートメントは、次のいずれかである必要があります。CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、、GROUPBOX、ICON、LISTBOX、LTEXT、の各オプションボタン、RTEXT、SCROLLBAR。 これらのコントロールステートメントのスペルが正しいことを確認します。
+   **DIALOG**ステートメント内の各 control ステートメントは、次のいずれかである必要があります: CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、、GROUPBOX、ICON、LISTBOX、LTEXT、プッシュボタン、オプション、RTEXT、SCROLLBAR。 これらのコントロールステートメントのスペルが正しいことを確認します。
 
 1. **無効な型**
 

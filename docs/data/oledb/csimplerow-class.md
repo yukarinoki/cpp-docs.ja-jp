@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390933"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211121"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
-使用されている行ハンドルの既定の実装を提供します、 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)クラス。
+[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)クラスで使用される行ハンドルの既定の実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -62,8 +61,8 @@ class CSimpleRow
 
 |||
 |-|-|
-|[AddRefRow](#addrefrow)|既存の行ハンドルには、参照カウントを追加します。|
-|[Compare](#compare)|同じ行インスタンスを参照しているかを確認する 2 つの行を比較します。|
+|[AddRefRow](#addrefrow)|既存の行ハンドルの参照カウントをインクリメントします。|
+|[比較](#compare)|2つの行を比較して、同じ行インスタンスを参照しているかどうかを確認します。|
 |[CSimpleRow](#csimplerow)|コンストラクターです。|
 |[ReleaseRow](#releaserow)|行を解放します。|
 
@@ -71,16 +70,16 @@ class CSimpleRow
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|既存の行ハンドルの参照カウント。|
-|[m_iRowset](#irowset)|カーソルを表す行セットのインデックスです。|
+|[m_dwRef](#dwref)|既存の行ハンドルに対する参照カウント。|
+|[m_iRowset](#irowset)|カーソルを表す行セットへのインデックス。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-行ハンドルは、論理的に結果の行の一意のタグです。 `IRowsetImpl` 新たに作成`CSimpleRow`で要求されたすべての行の[irowsetimpl::getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)します。 `CSimpleRow` 既定のテンプレート引数にも、行ハンドルの独自の実装に置き換えることが`IRowsetImpl`します。 このクラスを置換する唯一の要件は、型の 1 つのパラメーターを受け取るコンス トラクターを提供する置換クラスを用意する**long**します。
+行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl` は、 [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)で要求されたすべての行に対して新しい `CSimpleRow` を作成します。 `CSimpleRow` は、`IRowsetImpl`の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもできます。 このクラスを置き換える唯一の要件は、置換クラスに**LONG**型の1つのパラメーターを受け取るコンストラクターを提供させることです。
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
-既存の行ハンドルをスレッド セーフ方式で参照カウントを追加します。
+スレッドセーフな方法で、既存の行ハンドルに参照カウントを追加します。
 
 ### <a name="syntax"></a>構文
 
@@ -88,9 +87,9 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: Compare
 
-同じ行インスタンスを参照しているかを確認する 2 つの行を比較します。
+2つの行を比較して、同じ行インスタンスを参照しているかどうかを確認します。
 
 ### <a name="syntax"></a>構文
 
@@ -101,13 +100,13 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>パラメーター
 
 *pRow*<br/>
-`CSimpleRow` オブジェクトへのポインター。
+`CSimpleRow` オブジェクトを指すポインターです。
 
 ### <a name="return-value"></a>戻り値
 
-HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。
+2つの行が同じ行インスタンスであるか S_FALSE であることを示す HRESULT 値 (通常は S_OK)。2つの行が異なることを示します。 その他の可能性のある戻り値については、 *OLE DB プログラマーリファレンス*の「 [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 」を参照してください。
 
-## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 コンストラクターです。
 
@@ -120,15 +119,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>パラメーター
 
 *iRowsetCur*<br/>
-[in]現在の行セットのインデックスです。
+から現在の行セットへのインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-セット[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)に*iRowsetCur*します。
+[M_iRowset](../../data/oledb/csimplerow-m-irowset.md)を*iRowsetCur*に設定します。
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
-スレッド セーフ方式で行を解放します。
+スレッドセーフな方法で行を解放します。
 
 ### <a name="syntax"></a>構文
 
@@ -136,9 +135,9 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
 
-既存の行ハンドルの参照カウント。
+既存の行ハンドルに対する参照カウント。
 
 ### <a name="syntax"></a>構文
 
@@ -146,9 +145,9 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
 
-カーソルを表す行セットのインデックスです。
+カーソルを表す行セットへのインデックス。
 
 ### <a name="syntax"></a>構文
 
@@ -156,8 +155,8 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl クラス](../../data/oledb/irowsetimpl-class.md)

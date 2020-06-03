@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375718"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -31,12 +31,12 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>パラメーター
 
-*RuntimeClassTypeT*<br/>
-1 つまたは複数を指定するフラグのフィールド[RuntimeClassType](runtimeclasstype-enumeration.md)列挙子。
+*クラスタイプT*<br/>
+1 つ以上の[ランタイムクラスタイプ](runtimeclasstype-enumeration.md)列挙子を指定するフラグのフィールド。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ヘルパー メソッドを提供します`QueryInterface`操作とのインターフェイス Id を取得します。
+操作とインターフェイス`QueryInterface`ID を取得するためのヘルパー メソッドを提供します。
 
 ## <a name="members"></a>メンバー
 
@@ -44,8 +44,8 @@ friend struct Details::RuntimeClassBaseT;
 
 名前                                                         | 説明
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | 指定したインターフェイス ID へのポインターを取得します。
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | インターフェイスの指定された型で実装されている Id の配列を取得します。
+[クラスベース::AsIID](#asiid)                           | 指定したインターフェイス ID へのポインターを取得します。
+[クラスベース::取得実装IIDS](#getimplementediids) | 指定した型によって実装されるインターフェイス ID の配列を取得します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -53,13 +53,13 @@ friend struct Details::RuntimeClassBaseT;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**ヘッダー:** 実装.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** マイクロソフト::WRL::Dのテール
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>クラスベース::AsIID
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 template<typename T>
@@ -73,28 +73,28 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-パラメーターで指定されたインターフェイス ID を実装する型*riid*します。
+パラメータ*riid*で指定されたインターフェイス ID を実装する型。
 
-*implements*<br/>
-テンプレート パラメーターで指定された型の変数*T*します。
+*実装*<br/>
+テンプレート パラメータ*T*で指定された型の変数。
 
 *riid*<br/>
 取得するインターフェイス ID。
 
-*ppvObject*<br/>
-ポインター-に-、- へのポインター、インターフェイスがパラメーターで指定されたこの操作が成功した場合は、 *riid*します。
+*オブジェクト*<br/>
+この操作が成功した場合は、パラメータ*riid*で指定されたインターフェイスへのポインタを指します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。
+成功した場合はS_OK。それ以外の場合は、エラーを説明する HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 指定したインターフェイス ID へのポインターを取得します。
 
-## <a name="getimplementediids"></a>Runtimeclassbaset::getimplementediids
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>クラスベース::取得実装IIDS
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 template<typename T>
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-種類、*実装*パラメーター。
+*実装*パラメーターの型。
 
-*implements*<br/>
-パラメーターで指定された型へのポインター *T*します。
+*実装*<br/>
+パラメーター *T*で指定された型へのポインター。
 
-*iidCount*<br/>
-取得するインターフェイス Id の最大数。
+*iidカウント*<br/>
+取得するインターフェイス ID の最大数。
 
-*iid*<br/>
-この操作があるインターフェイスの型によって実装された Id の配列では正常に完了する場合*T*します。
+*Iid*<br/>
+この操作が正常に完了すると、型 T によって実装されたインターフェイス ID の配列が*表示*されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。
+成功した場合はS_OK。それ以外の場合は、エラーを説明する HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-インターフェイスの指定された型で実装されている Id の配列を取得します。
+指定した型によって実装されるインターフェイス ID の配列を取得します。

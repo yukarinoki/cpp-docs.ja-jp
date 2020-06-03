@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ef22711884dabb83efa8c7ebfdb7648316c12ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205414"
 ---
 # <a name="compiler-error-c2435"></a>コンパイラ エラー C2435
 
-> '*var*': 動的な初期化はマネージド CRT が必要です、/clr:safe でコンパイルできません。
+> '*var*': 動的な初期化にはマネージ CRT が必要です。/clr: safe を使用してコンパイルすることはできません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-アプリケーションごとのドメインのグローバル変数の初期化には、CRT を使用してコンパイルが必要です。 `/clr:pure`、これは検証可能なイメージを生成しません。
+グローバルなアプリケーションごとのドメイン変数を初期化するには、`/clr:pure`でコンパイルされた CRT が必要です。これは検証可能なイメージを生成しません。
 
 詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「 [process](../../cpp/process.md)」を参照してください。
 

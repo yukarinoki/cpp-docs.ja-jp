@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516587"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172387"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI および C++/CX)
 
@@ -53,7 +53,7 @@ modifiereventdelegate^ event_name
 イベントのアクセサー メソッドの戻り値。  検証可能にするために、戻り値の型は **void** にする必要があります。
 
 *parameters*<br/>
-(省略可能) *delegate* パラメーターのシグネチャと一致する、`raise` メソッドのパラメーター。
+(省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
 
 ### <a name="remarks"></a>解説
 
@@ -75,11 +75,11 @@ modifiereventdelegate^ event_name
 
 ### <a name="remarks"></a>解説
 
-詳細については、「[イベント (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx)」を参照してください。
+詳細については、「[イベント (C++/CX)](../cppcx/events-c-cx.md)」を参照してください。
 
 イベント ハンドラーを追加した後で削除する場合は、追加操作で返される EventRegistrationToken 構造体を保存する必要があります。 その後の削除操作で、削除するイベント ハンドラーを識別するために、保存しておいた EventRegistrationToken 構造体を使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -117,7 +117,7 @@ modifiereventdelegate^ event_name
 イベントのアクセサー メソッドの戻り値。  検証可能にするために、戻り値の型は **void** にする必要があります。
 
 *parameters*<br/>
-(省略可能) *delegate* パラメーターのシグネチャと一致する、`raise` メソッドのパラメーター。
+(省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
 
 ### <a name="remarks"></a>解説
 
@@ -165,11 +165,11 @@ C++/CLI イベントの詳細については、次を参照してください。
 
 - [インターフェイス内のイベント](../dotnet/how-to-use-events-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、デリゲート、イベント、およびイベント ハンドラーのペアを宣言します。次に、イベント ハンドラーをサブスクライブ (追加) し、そのイベント ハンドラーを呼び出した後、サブスクライブ解除 (削除) します。
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-次のコード例では、単純なイベントの `raise` メソッドを生成するために使用されるロジックを示します。イベントに 1 つまたは複数のサブスクライバーが含まれている場合は、`raise` メソッドを呼び出すと、デリゲートが暗黙的または明示的に呼び出されます。 デリゲートの戻り値の型が **void** ではなく、なおかつイベント サブスクライバーが存在しない場合、`raise` メソッドはデリゲート型の既定値を返します。 イベント サブスクライバーが存在しない場合に `raise` メソッドを呼び出すと、単純に返されるだけで、例外は発生しません。 デリゲートの戻り値の型が **void** 以外の場合、デリゲート型が返されます。
+次のコード例では、単純なイベントの `raise` メソッドを生成するために使用するロジックを示しています。イベントに 1 つ以上のサブスクライバーがある場合、`raise` メソッドを呼び出すと、暗黙的または明示的にデリゲートが呼び出されます。 デリゲートの戻り値の型が **void** ではなく、なおかつイベント サブスクライバーが存在しない場合、`raise` メソッドはデリゲート型の既定値を返します。 イベント サブスクライバーが存在しない場合に `raise` メソッドを呼び出すと、単純に返されるだけで、例外は発生しません。 デリゲートの戻り値の型が **void** 以外の場合、デリゲート型が返されます。
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

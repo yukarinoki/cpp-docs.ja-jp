@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385064"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749704"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 `_bstr_t` ラッパーを `BSTR` にリンクします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -29,18 +29,18 @@ void Attach(
 
 #### <a name="parameters"></a>パラメーター
 
-*s*<br/>
+*S*<br/>
 `BSTR` 変数に関連付けられる、または割り当てられる `_bstr_t`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `_bstr_t` が以前別の `BSTR` にアタッチされている場合、`_bstr_t` は、`BSTR` の他の変数が `_bstr_t` を使用していない場合 `BSTR` リソースをクリーンアップします。
 
 ## <a name="example"></a>例
 
-参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例について**アタッチ**します。
+**添付**を使用した例については[、_bstr_t::割り当て](../cpp/bstr-t-assign.md)を参照してください。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 

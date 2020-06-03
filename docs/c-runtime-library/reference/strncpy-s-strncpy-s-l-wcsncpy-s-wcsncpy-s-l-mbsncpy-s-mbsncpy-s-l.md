@@ -1,6 +1,6 @@
 ---
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -8,6 +8,10 @@ api_name:
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
+- _o__mbsncpy_s
+- _o__mbsncpy_s_l
+- _o_strncpy_s
+- _o_wcsncpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626147"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919290"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -171,27 +176,27 @@ errno_t _mbsncpy_s_l(
 
 |*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest*の内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*Strdest*[0] を0に設定します。|
-|任意|0|任意|**EINVAL**|変更されない|
-|**NULL**以外|小さすぎる|任意|**ERANGE**|*Strdest*[0] を0に設定します。|
+|**空白**|any|any|**EINVAL**|変更されない|
+|any|any|**空白**|**EINVAL**|*Strdest*[0] を0に設定します。|
+|any|0|any|**EINVAL**|変更されない|
+|**NULL**以外|小さすぎる|any|**ERANGE**|*Strdest*[0] を0に設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの関数は、 *Strsource*の最初の*D*文字を*strsource*にコピーしようとします。ここで、 *d*は、 *count*の小さい方、および*strsource*の長さです。 これらの*D*文字が*strdest* (サイズが*numberofelements*として指定されている) 内に収まり、null 終端文字のための空き領域が残っている場合は、それらの文字がコピーされ、終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-これには例外があります。 *Count*が**TRUNCATE**の場合、 *Strsource*に適合する*strsource*の大半がコピーされ、常に追加される終端の null 用の空き領域が残ります。
+これには例外があります。 *Count*が **_TRUNCATE**場合は、常に追加される終端の null 用の空きを残したまま、 *strsource*に収まる範囲の*strsource*がコピーされます。
 
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 
 ```C
 char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-は、5文字をバッファーに5バイト長としてコピーするように**strncpy_s**に要求していることを意味します。この場合、null 終端文字にはスペースが残されないため、 **strncpy_s**は文字列をゼロにして、無効なパラメーターハンドラーを呼び出します。
+は、5文字をバッファーに5バイト長コピーする**strncpy_s**を要求していることを意味します。この場合、null 終端文字にはスペースが残されないため、文字列をゼロに**strncpy_s**し、無効なパラメーターハンドラーを呼び出します。
 
-切り捨て動作が必要な場合は、 **TRUNCATE**または (*size* -1) を使用します。
+切り捨て動作が必要な場合は、 **_TRUNCATE**または (*size* -1) を使用します。
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
@@ -200,17 +205,19 @@ strncpy_s(dst, 5, "a long string", 4);
 
 **Strncpy**とは異なり、 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれていないことに*注意してください。*
 
-コピー元とコピー先の文字列が重なり合っている場合、 **strncpy_s**の動作は未定義です。
+コピー元とコピー先の文字列が重なり合っている場合、 **strncpy_s**の動作は定義されていません。
 
 *Strdest*または*Strdest*が**NULL**の場合、または*numberofelements*が0の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-**wcsncpy_s**と **_mbsncpy_s**は、 **strncpy_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**wcsncpy_s**と **_mbsncpy_s**は**strncpy_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -220,11 +227,11 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**、 **_wcsncpy_s_l** 、および **_mbsncpy_s_l**は、ロケールに依存せず、 **_tcsncpy_s_l**のためだけに提供されており、直接呼び出すためのものではありません。
+> **_strncpy_s_l**、 **_wcsncpy_s_l**および **_mbsncpy_s_l**にはロケールに依存せず、 **_tcsncpy_s_l**のためだけに提供されており、直接呼び出すためのものではありません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strncpy_s**、 **_strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
@@ -406,7 +413,7 @@ After strncpy_s (with null-termination):
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

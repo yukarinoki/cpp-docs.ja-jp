@@ -5,12 +5,12 @@ f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c7bddd5fcf9008b958854fd4d7b72ea2e94cba47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126176"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214956"
 ---
 # <a name="hashltstring_viewgt-specialization"></a>ハッシュ&lt;string_view&gt; 特殊化
 
@@ -27,7 +27,8 @@ struct hash<basic_string_view<CharType, Traits>>
         noexcept;
 };
 ```
-### <a name="remarks"></a>コメント
+
+### <a name="remarks"></a>解説
 
 String_view のハッシュは、基になる文字列オブジェクトのハッシュに相当します。
 

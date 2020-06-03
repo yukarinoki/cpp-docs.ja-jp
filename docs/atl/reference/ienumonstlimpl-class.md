@@ -1,5 +1,5 @@
 ---
-title: IEnumOnSTLImpl クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IEnumOnSTLImpl
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 7cf777f3ff0d298f224157735a06bf57a2c10cf5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2fbe6ccfbea2836c42a054da7ea9ebeac4e1555d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495858"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329705"
 ---
-# <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl クラス
+# <a name="ienumonstlimpl-class"></a>クラス
 
-このクラスは、 C++標準ライブラリコレクションに基づいて列挙子インターフェイスを定義します。
+このクラスは、C++ 標準ライブラリ コレクションに基づいて列挙子インターフェイスを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,20 +36,20 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*常用*<br/>
-COM 列挙子。 例については、「 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 」を参照してください。
+*ベース*<br/>
+COM 列挙子。 例については[、IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring)を参照してください。
 
-*piid*<br/>
+*ピッド*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
 *T*<br/>
 列挙子インターフェイスによって公開される項目の型。
 
 *コピー*<br/>
-[コピーポリシークラス](../../atl/atl-copy-policy-classes.md)。
+[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)。
 
-*文字の種類*<br/>
-C++標準ライブラリコンテナークラス。
+*コルタイプ*<br/>
+C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="members"></a>メンバー
 
@@ -57,30 +57,30 @@ C++標準ライブラリコンテナークラス。
 
 |名前|説明|
 |----------|-----------------|
-|[IEnumOnSTLImpl:: Clone](#clone)|**複製**の実装。|
-|[IEnumOnSTLImpl::Init](#init)|列挙子を初期化します。|
-|[IEnumOnSTLImpl:: 次へ](#next)|**Next**の実装。|
-|[IEnumOnSTLImpl::Reset](#reset)|**Reset**の実装。|
-|[IEnumOnSTLImpl:: Skip](#skip)|**Skip**の実装。|
+|[イエヌオンストルプル::クローン](#clone)|**クローン**の実装。|
+|[イエヌオンストルプル::イニト](#init)|列挙子を初期化します。|
+|[イエヌオンストルプル::次へ](#next)|**Next**の実装。|
+|[イエヌオンストルプル::リセット](#reset)|**リセット**の実装。|
+|[イエヌオンストルプル::スキップ](#skip)|**スキップ**の実装。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[IEnumOnSTLImpl::m_iter](#m_iter)|コレクション内の列挙子の現在位置を表す反復子。|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|列挙される項目C++を保持する標準ライブラリコンテナーへのポインター。|
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|コレクションを提供するオブジェクトのポインター。`IUnknown`|
+|[イエヌオンストルプル::m_iter](#m_iter)|コレクション内での列挙子の現在の位置を表す反復子。|
+|[イエヌオンストルプル::m_pcollection](#m_pcollection)|列挙する項目を保持する C++ 標準ライブラリ コンテナーへのポインター。|
+|[イエヌオンストルプル::m_spUnk](#m_spunk)|コレクション`IUnknown`を提供するオブジェクトのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`IEnumOnSTLImpl`列挙される項目がC++標準ライブラリと互換性のあるコンテナーに格納される、COM 列挙子インターフェイスの実装を提供します。 このクラスは、配列に基づく列挙子インターフェイスの実装を提供する[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)クラスに似ています。
+`IEnumOnSTLImpl`は、列挙される項目が C++ 標準ライブラリ互換コンテナーに格納される COM 列挙子インターフェイスの実装を提供します。 このクラスは、配列に基づく列挙子インターフェイスの実装を提供する[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)クラスに似ています。
 
 > [!NOTE]
->  `CComEnumImpl`との違いの詳細については、 `IEnumOnSTLImpl`「 [CComEnumImpl:: Init](../../atl/reference/ccomenumimpl-class.md#init) 」を参照してください。
+> と の`CComEnumImpl``IEnumOnSTLImpl`違いの詳細については[、CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)を参照してください。
 
-通常、このインターフェイスの実装から派生することで、独自の列挙子クラスを作成する必要はあり*ません*。 C++標準ライブラリコンテナーに基づいて ATL で提供される列挙子を使用する場合は、 [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)のインスタンスを作成するか、[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md) から派生することによって列挙子を返すコレクションクラスを作成するのが一般的です。
+通常、このインターフェイスの実装から派生して独自の列挙子クラスを作成する必要*はありません*。 C++ 標準ライブラリ コンテナーに基づいて ATL 提供の列挙子を使用する場合は[、CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)のインスタンスを作成するか[、ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)から派生して列挙子を返すコレクション クラスを作成する方が一般的です。
 
-ただし、カスタム列挙子を提供する必要がある場合 (列挙子インターフェイスに加えてインターフェイスを公開するものなど)、このクラスから派生させることができます。 このような状況では、独自の実装を提供するために[Clone](#clone)メソッドをオーバーライドする必要があります。
+ただし、カスタム列挙子 (たとえば、列挙子インターフェイスに加えてインターフェイスを公開する列挙子) を指定する必要がある場合は、このクラスから派生できます。 このような状況では、独自の実装を提供するために[Clone](#clone)メソッドをオーバーライドする必要があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -90,9 +90,9 @@ C++標準ライブラリコンテナークラス。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="init"></a>IEnumOnSTLImpl:: Init
+## <a name="ienumonstlimplinit"></a><a name="init"></a>イエヌオンストルプル::イニト
 
 列挙子を初期化します。
 
@@ -104,25 +104,25 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkForRelease*<br/>
-から列挙子の有効期間中に保持する必要があるオブジェクトのポインター。`IUnknown` そのようなオブジェクトが存在しない場合は、NULL を渡します。
+*リリースを確認する*<br/>
+[in]列挙`IUnknown`子の有効期間中に保持する必要があるオブジェクトのポインター。 そのようなオブジェクトが存在しない場合は NULL を渡します。
 
-*collection*<br/>
-列挙される項目C++を保持する標準ライブラリコンテナーへの参照。
+*コレクション*<br/>
+列挙する項目を保持する C++ 標準ライブラリ コンテナーへの参照。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-別のオブジェクト`Init`に保持されているコレクションへの参照を渡す場合は、 *pUnkForRelease*パラメーターを使用して、列挙子が必要とする限り、オブジェクトとそのオブジェクトが保持しているコレクションを確実に使用できます。
+別のオブジェクト`Init`に保持されているコレクションへの参照を渡す場合は *、pUnkForRelease*パラメーターを使用して、列挙子が必要な限り、オブジェクトとオブジェクトが保持するコレクションを使用できるようにします。
 
-列挙子インターフェイスへのポインターを任意のクライアントに渡す前に、このメソッドを呼び出す必要があります。
+列挙子インターフェイスへのポインターをクライアントに返す前に、このメソッドを呼び出す必要があります。
 
-##  <a name="clone"></a>IEnumOnSTLImpl:: Clone
+## <a name="ienumonstlimplclone"></a><a name="clone"></a>イエヌオンストルプル::クローン
 
-このメソッドは、型`CComEnumOnSTL`のオブジェクトを作成し、現在のオブジェクトによって使用される同じコレクションと反復子を使用して初期化し、新しく作成されたオブジェクトのインターフェイスを返すことによって、 **Clone**メソッドの実装を提供します。
+このメソッドは、型`CComEnumOnSTL`のオブジェクトを作成し、現在のオブジェクトで使用されるのと同じコレクションと反復器で初期化し、新しく作成されたオブジェクトのインターフェイスを返すことによって **、Clone**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -131,37 +131,37 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>パラメーター
 
 *ppEnum*<br/>
-入出力現在の列挙子から複製された、新しく作成されたオブジェクトの列挙子インターフェイス。
+[アウト]現在の列挙子から複製された新しく作成されたオブジェクトの列挙子インターフェイス。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk
+## <a name="ienumonstlimplm_spunk"></a><a name="m_spunk"></a>イエヌオンストルプル::m_spUnk
 
-コレクションを提供するオブジェクトのポインター。`IUnknown`
+コレクション`IUnknown`を提供するオブジェクトのポインター。
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このスマートポインターは、 [IEnumOnSTLImpl:: Init](#init)に渡されたオブジェクトへの参照を保持し、列挙子の有効期間中もそのままの状態を維持します。
+このスマート ポインターは、列挙子の有効期間中も保持することを保証する[IEnumOnSTLImpl::Init](#init)に渡されるオブジェクトの参照を保持します。
 
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection
+## <a name="ienumonstlimplm_pcollection"></a><a name="m_pcollection"></a>イエヌオンストルプル::m_pcollection
 
-このメンバーは、列挙子インターフェイスの実装を推進するデータを提供するコレクションを指します。
+このメンバーは、列挙子インターフェイスの実装を促進するデータを提供するコレクションを指します。
 
 ```
 CollType* m_pcollection;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバーは、 [IEnumOnSTLImpl:: Init](#init)への呼び出しによって初期化されます。
+このメンバーは、呼び出しによって初期化[されます](#init)。
 
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter
+## <a name="ienumonstlimplm_iter"></a><a name="m_iter"></a>イエヌオンストルプル::m_iter
 
 このメンバーは、コレクション内の現在位置をマークし、後続の要素に移動するために使用される反復子を保持します。
 
@@ -169,9 +169,9 @@ CollType* m_pcollection;
 CollType::iterator m_iter;
 ```
 
-##  <a name="next"></a>IEnumOnSTLImpl:: 次へ
+## <a name="ienumonstlimplnext"></a><a name="next"></a>イエヌオンストルプル::次へ
 
-このメソッドは、**次**のメソッドの実装を提供します。
+このメソッドは **、Next**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Next)(
@@ -182,22 +182,22 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
-から要求された要素の数。
+*celt*<br/>
+[in]要求された要素の数。
 
-*rgelt*<br/>
-入出力要素を格納する配列。
+*ルゲルト*<br/>
+[アウト]要素を格納する配列。
 
-*フェッチされる pcelt*<br/>
-入出力*Rgelt*で実際に返される要素の数。 リストに保持されて*いる要素数が2未満*の場合は、この値を*2 未満に*することができます。
+*pceltFetched*<br/>
+[アウト]実際に*rgelt*で返される要素の数。 リストに残っている*celt*要素よりも少ない場合、これは*celt*より小さくなる可能性があります。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="reset"></a>  IEnumOnSTLImpl::Reset
+## <a name="ienumonstlimplreset"></a><a name="reset"></a>イエヌオンストルプル::リセット
 
-このメソッドは、 **Reset**メソッドの実装を提供します。
+このメソッドは **、Reset**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Reset)(void);
@@ -207,9 +207,9 @@ STDMETHOD(Reset)(void);
 
 標準の HRESULT 値。
 
-##  <a name="skip"></a>IEnumOnSTLImpl:: Skip
+## <a name="ienumonstlimplskip"></a><a name="skip"></a>イエヌオンストルプル::スキップ
 
-このメソッドは、 **Skip**メソッドの実装を提供します。
+このメソッドは **、Skip**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -217,8 +217,8 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
-からスキップする要素の数。
+*celt*<br/>
+[in]スキップする要素の数。
 
 ### <a name="return-value"></a>戻り値
 

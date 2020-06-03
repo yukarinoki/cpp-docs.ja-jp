@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: c6361fc5374ed732cd9ccbfbbd1d3d1c2fc8f1f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e9e3d6695a7fbbcc87c489edf2e96fcdffb835
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261040"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168632"
 ---
-# <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 構造体
+# <a name="_atl_com_module70-structure"></a>_ATL_COM_MODULE70 構造体
 
-ATL で COM に関連するコードで使用されます。
+ATL の COM 関連コードによって使用されます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInstTypeLib;
@@ -35,27 +35,27 @@ struct _ATL_COM_MODULE70 {
 ## <a name="members"></a>メンバー
 
 `cbSize`<br/>
-バージョン管理に使用される、構造のサイズ。
+構造体のサイズ。バージョン管理に使用されます。
 
 `m_hInstTypeLib`<br/>
-このモジュールのタイプ ライブラリへのハンドルのインスタンス。
+このモジュールのタイプライブラリへのハンドルインスタンス。
 
 `m_ppAutoObjMapFirst`<br/>
-このモジュールのオブジェクトのマップ エントリの先頭を示す、配列要素のアドレス。
+このモジュールのオブジェクトマップエントリの先頭を示す配列要素のアドレス。
 
 `m_ppAutoObjMapLast`<br/>
-このモジュールのオブジェクトのマップ エントリの終了を示す、配列要素のアドレス。
+このモジュールのオブジェクトマップエントリの末尾を示す配列要素のアドレス。
 
 `m_csObjMap`<br/>
-オブジェクトのマップ エントリへのアクセスをシリアル化するクリティカル セクション。 ATL で内部的に使用
+オブジェクトマップエントリへのアクセスをシリアル化するためのクリティカルセクション。 ATL によって内部的に使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) _ATL_COM_MODULE70 の typedef として定義されます。
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)は _ATL_COM_MODULE70 の typedef として定義されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
 ## <a name="see-also"></a>関連項目
 

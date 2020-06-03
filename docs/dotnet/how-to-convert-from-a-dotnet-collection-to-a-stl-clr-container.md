@@ -1,40 +1,40 @@
 ---
-title: '方法: .NET コレクションを STL/CLR コンテナーに変換します。'
+title: '方法: .NET コレクションを STL/CLR コンテナーに変換する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387553"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545049"
 ---
-# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>方法: .NET コレクションを STL/CLR コンテナーに変換します。
+# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>方法: .NET コレクションを STL/CLR コンテナーに変換する
 
-このトピックでは、同等の STL/CLR コンテナーを .NET コレクションに変換する方法を示します。 例として、.NET に変換する方法を説明します<xref:System.Collections.Generic.List%601>、STL/CLR に[ベクター](../dotnet/vector-stl-clr.md) .NET に変換する方法および<xref:System.Collections.Generic.Dictionary%602>、STL/CLR に[マップ](../dotnet/map-stl-clr.md)手順はすべてのコレクションとコンテナーに似ていますが、.
+このトピックでは、.NET コレクションを同等の STL/CLR コンテナーに変換する方法について説明します。 例として、.NET <xref:System.Collections.Generic.List%601> を STL/CLR[ベクター](../dotnet/vector-stl-clr.md)に変換する方法と、.net <xref:System.Collections.Generic.Dictionary%602> を STL/clr[マップ](../dotnet/map-stl-clr.md)に変換する方法について説明しますが、この手順はすべてのコレクションとコンテナーに似ています。
 
-### <a name="to-create-a-container-from-a-collection"></a>コレクションから、コンテナーを作成するには
+### <a name="to-create-a-container-from-a-collection"></a>コレクションからコンテナーを作成するには
 
-1. コレクション全体を変換するには、STL/CLR コンテナーを作成し、コレクションをコンス トラクターに渡します。
+1. コレクション全体を変換するには、STL/CLR コンテナーを作成し、そのコレクションをコンストラクターに渡します。
 
    最初の例では、この手順を示します。
 
-または
+\- または -
 
-1. 作成して汎用 STL/CLR コンテナーを作成、 [collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクト。 .NET コレクション インターフェイスは、このテンプレート クラスは、引数として受け取ります。 どのインターフェイスがサポートされていることを確認するには、次を参照してください。 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)します。
+1. [Collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクトを作成して、ジェネリック STL/CLR コンテナーを作成します。 このテンプレートクラスは、引数として .NET コレクションインターフェイスを受け取ります。 サポートされているインターフェイスを確認するには、「 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)」を参照してください。
 
-1. コンテナーを .NET コレクションの内容をコピーします。 これを行う、STL/CLR を使用して[アルゴリズム](../dotnet/algorithm-stl-clr.md)、またはによって .NET コレクションを反復処理して、各要素のコピーを STL/CLR コンテナーに挿入します。
+1. .NET コレクションの内容をコンテナーにコピーします。 これは、STL/CLR[アルゴリズム](../dotnet/algorithm-stl-clr.md)を使用するか、.net コレクションを反復処理し、各要素のコピーを STL/clr コンテナーに挿入することによって行うことができます。
 
-   2 番目の例では、この手順を示します。
+   2番目の例では、この手順を示します。
 
 ## <a name="example"></a>例
 
-この例では、ジェネリック型を作成します<xref:System.Collections.Generic.List%601>を 5 つの要素を追加します。 次に、作成、`vector`を受け取るコンス トラクターを使用して、<xref:System.Collections.Generic.IEnumerable%601>を引数として。
+この例では、汎用 <xref:System.Collections.Generic.List%601> を作成し、そこに5つの要素を追加します。 次に、引数として <xref:System.Collections.Generic.IEnumerable%601> を受け取るコンストラクターを使用して、`vector` を作成します。
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>例
 
-この例では、ジェネリック型を作成します<xref:System.Collections.Generic.Dictionary%602>を 5 つの要素を追加します。 次に、作成、`collection_adapter`をラップする、<xref:System.Collections.Generic.Dictionary%602>単純な STL/CLR コンテナーとして。 最後に、作成、`map`の内容をコピーし、<xref:System.Collections.Generic.Dictionary%602>を`map`を反復処理して、`collection_adapter`します。 このプロセス中を使用して、新しいペアを作成、`make_pair`関数とに直接新しいペアを挿入、`map`します。
+この例では、汎用 <xref:System.Collections.Generic.Dictionary%602> を作成し、そこに5つの要素を追加します。 次に、<xref:System.Collections.Generic.Dictionary%602> を単純な STL/CLR コンテナーとしてラップするための `collection_adapter` を作成します。 最後に、`collection_adapter`を反復処理することで、`map` を作成し、<xref:System.Collections.Generic.Dictionary%602> の内容を `map` にコピーします。 このプロセスでは、`make_pair` 関数を使用して新しいペアを作成し、`map`に新しいペアを直接挿入します。
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 
@@ -128,7 +128,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

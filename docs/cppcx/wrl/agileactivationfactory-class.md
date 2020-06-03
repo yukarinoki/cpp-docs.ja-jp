@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303836"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214202"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory クラス
 
-実装するアパートメント対応のアクティベーション ファクトリを表す[FtmBase](ftmbase-class.md)します。
+[Ftmbase](ftmbase-class.md)を実装するアパートメントに対応するアクティベーションファクトリを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,11 +36,11 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** resource.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)<br/>
 [ActivationFactory クラス](activationfactory-class.md)

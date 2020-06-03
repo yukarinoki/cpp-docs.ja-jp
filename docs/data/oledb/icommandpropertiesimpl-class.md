@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210809"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
 
-実装を提供、 [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))インターフェイス。
+[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,10 +36,10 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生クラス。
+クラス (から派生)
 
 *PropClass*<br/>
-プロパティ クラス。
+プロパティクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -53,16 +51,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|行セットの現在要求されている行セット プロパティ グループ内のプロパティの一覧を返します。|
-|[SetProperties](#setproperties)|行セット プロパティ グループのプロパティを設定します。|
+|[GetProperties](#getproperties)|行セットに現在要求されている、行セットプロパティグループ内のプロパティの一覧を返します。|
+|[SetProperties](#setproperties)|行セットプロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これは、コマンドでは必須です。 によって定義された静的関数によって提供される、実装、 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)マクロ。
+これは、コマンドでは必須です。 実装は、 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)マクロによって定義される静的関数によって提供されます。
 
-## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
-コマンドのプロパティのマップを使用してすべての要求されたプロパティ セットが返されます。
+コマンドのプロパティマップを使用して、要求されたすべてのプロパティセットを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -75,15 +73,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
 
-コマンド オブジェクトのプロパティを設定します。
+Command オブジェクトのプロパティを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

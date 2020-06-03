@@ -1,12 +1,16 @@
 ---
 title: strerror、_strerror、_wcserror、__wcserror
 description: Microsoft C ランタイムライブラリ (CRT) 関数の strerror、_strerror、_wcserror、および __wcserror について説明します。
-ms.date: 01/07/2020
+ms.date: 4/2/2020
 api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
+- _o___wcserror
+- _o__strerror
+- _o__wcserror
+- _o_strerror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,16 +52,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 8c9c6850d6620407897b2a3a1dbf32e61f6719c0
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 30885974b9c9fbf0fdca0e52808fb8bd1dfbaffe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755047"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920033"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror、_strerror、_wcserror、__wcserror
 
-システムエラーメッセージ文字列 (**strerror**、 **_wcserror**) を取得するか、ユーザーが指定したエラーメッセージ文字列 ( **_strerror**、 **__wcserror**) を書式設定します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)」をご覧ください。
+システムエラーメッセージ文字列 (**strerror**、 **_wcserror**) を取得するか、ユーザーが指定したエラーメッセージ文字列 (**_strerror**、 **__wcserror**) を書式設定します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -86,7 +91,7 @@ wchar_t * __wcserror(
 
 これらの関数はすべて、ランタイムが所有するスレッドローカルストレージバッファー内のエラーメッセージ文字列へのポインターを返します。 後で同じスレッドでを呼び出すと、この文字列が上書きされる可能性があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strerror**関数は、 *errnum*をエラーメッセージ文字列にマップし、文字列へのポインターを返します。 **Strerror**関数と **_strerror**関数は、実際にはメッセージを出力しません。 印刷するには、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)などの出力関数を呼び出します。
 
@@ -95,7 +100,7 @@ if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-*StrErrMsg*が**NULL**として渡された場合、 **_strerror**は文字列へのポインターを返します。 これには、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージが含まれます。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**でない場合、文字列には、 *strErrMsg*文字列、コロン、スペース、システムエラーメッセージ、および改行文字が順に含まれます。 文字列メッセージの長さは、最大で94文字で、ナロー ( **_strerror**) またはワイド ( **__wcserror**) のいずれかの文字にすることができます。
+*StrErrMsg*が**NULL**として渡された場合、 **_strerror**は文字列へのポインターを返します。 これには、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージが含まれます。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**でない場合、文字列には、 *strErrMsg*文字列、コロン、スペース、システムエラーメッセージ、および改行文字が順に含まれます。 文字列メッセージの長さは、最大で94文字で、ナロー (**_strerror**) またはワイド (**__wcserror**) のいずれかの文字にすることができます。
 
 **_Strerror**の実際のエラー番号は、変数[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に格納されます。 正確な結果を生成するには、ライブラリルーチンからエラーが返された直後に **_strerror**を呼び出します。 それ以外の場合、後でライブラリルーチンを呼び出すと、 **errno**値が上書きされる可能性があります。
 
@@ -105,15 +110,17 @@ if (( _access( "datafile", 2 )) == -1 )
 
 エラー文字列を取得するには、非推奨のマクロ[_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)と[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 、および非推奨の内部関数 **__sys_errlist**および **__sys_nerr**ではなく、 **strerror**または **_wcserror**をお勧めします。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ### <a name="generic-text-routine-mappings"></a>汎用テキストルーチンのマッピング
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strerror**|\<string.h>|
 |**_strerror**|\<string.h>|
@@ -121,7 +128,7 @@ if (( _access( "datafile", 2 )) == -1 )
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 「[perror](perror-wperror.md)」の例をご覧ください。
 

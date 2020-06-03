@@ -1,15 +1,15 @@
 ---
 title: 単純なコンシューマーの実装
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707529"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544706"
 ---
 # <a name="implementing-a-simple-consumer"></a>単純なコンシューマーの実装
 
@@ -33,7 +33,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 > [!NOTE]
 > コンシューマー アプリケーションを構築して `MyProv` (「[単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)」で説明されているサンプル プロバイダー) をテストするには、「[コンシューマーへのブックマーク サポートの追加](#bookmark)」の説明に従ってブックマーク サポートを含める必要があります。
 
-## <a name="retrieve" ></a> コンシューマーによるデータの取得
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> コンシューマーによるデータの取得
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>OLE DB コンシューマーを使用するようコンソール アプリケーションを変更するには
 
@@ -42,7 +42,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,7 +64,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
     }
     ```
 
-## <a name="bookmark" ></a> コンシューマーへのブックマーク サポートの追加
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> コンシューマーへのブックマーク サポートの追加
 
 ブックマークは、テーブル内の行を一意に識別する列です。 通常はキー列ですが、プロバイダーによってはそうでない場合もあります。 このセクションでは、ブックマーク サポートを追加する方法を説明します。 これを行うには、ユーザー レコード クラスで次の手順を実行する必要があります。
 
@@ -205,6 +205,6 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

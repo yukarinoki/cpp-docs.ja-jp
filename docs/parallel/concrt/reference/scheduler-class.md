@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142007"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427351"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
@@ -42,25 +42,25 @@ class Scheduler;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[Scheduler](#ctor)|`Scheduler` クラスのオブジェクトは、ファクトリメソッドを使用して、または暗黙的に作成することができます。|
 |[~ Scheduler デストラクター](#dtor)|`Scheduler` クラスのオブジェクトは、すべての外部参照が存在しなくなると、暗黙的に破棄されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
-|[Attach](#attach)|スケジューラを呼び出し元のコンテキストにアタッチします。 このメソッドから制御が戻った後、呼び出し元のコンテキストはスケジューラによって管理され、スケジューラは現在のスケジューラになります。|
+|[[アタッチ]](#attach)|スケジューラを呼び出し元のコンテキストにアタッチします。 このメソッドから制御が戻った後、呼び出し元のコンテキストはスケジューラによって管理され、スケジューラは現在のスケジューラになります。|
 |[作成](#create)|`_Policy` パラメーターによって記述された動作を持つ新しいスケジューラを作成し、スケジューラに初期参照を配置し、そのスケジューラへのポインターを返します。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 スケジューラ内に新しいスケジュールグループを作成します。 パラメーター `_Placement` を受け取るバージョンを使用すると、新しく作成されたスケジュールグループ内のタスクが、そのパラメーターで指定された場所で実行されるようにバイアスされます。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|スケジューラの現在の仮想プロセッサ数を返します。|
 |[GetPolicy](#getpolicy)|スケジューラが作成されたポリシーのコピーを返します。|
-|[ID](#id)|スケジューラの一意の識別子を返します。|
+|[Id](#id)|スケジューラの一意の識別子を返します。|
 |[IsAvailableLocation](#isavailablelocation)|指定された場所がスケジューラで使用できるかどうかを判断します。|
 |[リファレンス](#reference)|スケジューラの参照カウントをインクリメントします。|
 |[RegisterShutdownEvent](#registershutdownevent)|スケジューラがシャットダウンして自身を破棄するときに、`_Event` パラメーターで渡された Windows イベントハンドルをシグナル状態にします。 イベントがシグナル状態になると、スケジューラに対してスケジュールされていたすべての作業が完了します。 この方法では、複数のシャットダウンイベントを登録できます。|
-|[Release](#release)|スケジューラの参照カウントをデクリメントします。|
+|[リリース](#release)|スケジューラの参照カウントをデクリメントします。|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|既定のスケジューラポリシーをランタイムの既定値にリセットします。 次に既定のスケジューラが作成されるときに、ランタイムの既定のポリシー設定が使用されます。|
 |[ScheduleTask](#scheduletask)|オーバーロードされます。 スケジューラ内の軽量タスクをスケジュールします。 軽量タスクは、ランタイムによって決定されるスケジュールグループに配置されます。 パラメーター `_Placement` を受け取るバージョンでは、指定された位置でタスクの実行がバイアスされます。|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|既定のスケジューラを作成するためにユーザー定義のポリシーを使用できるようにします。 このメソッドは、プロセス内に既定のスケジューラが存在しない場合にのみ呼び出すことができます。 既定のポリシーが設定されると、`SetDefaultSchedulerPolicy` または[Resetdefaultスケジューラポリシー](#resetdefaultschedulerpolicy)メソッドへの次の有効な呼び出しまで有効になります。|
@@ -75,7 +75,7 @@ class Scheduler;
 
 `Scheduler`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 

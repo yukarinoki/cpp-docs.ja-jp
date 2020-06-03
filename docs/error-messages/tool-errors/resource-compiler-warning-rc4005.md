@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC4005
 ms.assetid: 71f03b4a-c9a9-415d-920f-bf2e58507f93
-ms.openlocfilehash: 571c4ac285e9477b017dbc21cf9ff733539759d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c428fefa90cceed6a8bc9b7f6e4b95ec2db5e039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182410"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>リソース コンパイラの警告 RC4005
 
-'identifier': 再定義はマクロ
+' identifier ': マクロの再定義
 
-識別子は、2 回定義されます。 コンパイラは、2 つ目のマクロ定義を使用します。
+識別子は2回定義されます。 コンパイラは2番目のマクロ定義を使用しました。
 
-この警告は、コマンドラインで、コードで、マクロの定義によって発生すること、`#define`ディレクティブ。 それも可能性がありますインクルード ファイルからインポートされたマクロで。
+この警告は、コマンドラインでマクロを定義し、コードに `#define` ディレクティブを指定することによって発生することがあります。 また、インクルードファイルからインポートされたマクロによっても発生する可能性があります。
 
-警告を排除するために、定義の 1 つを削除またはのいずれかを使用して、`#undef`ディレクティブを 2 番目の定義。
+警告を除去するには、定義の1つを削除するか、2番目の定義の前に `#undef` ディレクティブを使用します。

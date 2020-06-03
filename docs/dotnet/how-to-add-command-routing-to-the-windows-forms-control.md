@@ -1,33 +1,33 @@
 ---
-title: '方法: コマンドの追加フォーム コントロールを Windows へのルーティング'
+title: '方法: Windows フォーム コントロールにコマンド ルーティングを追加する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad64a12051c22a0cfca99d3ec9c5abef579902f4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365171"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>方法: コマンドの追加フォーム コントロールを Windows へのルーティング
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>方法: Windows フォーム コントロールにコマンド ルーティングを追加する
 
-[CWinFormsView](../mfc/reference/cwinformsview-class.md)を MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにするユーザー コントロールにコマンドおよび更新コマンド UI メッセージをルーティングします。
+[CWinFormsView](../mfc/reference/cwinformsview-class.md)は、コマンドと更新コマンド UI メッセージをユーザー コントロールにルーティングして、MFC コマンド (フレーム メニュー項目やツール バー ボタンなど) を処理できるようにします。
 
-ユーザー コントロールを使用して[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)コマンド ソース オブジェクトへの参照を格納する`m_CmdSrc`次の例のようにします。 `ICommandTarget` を使用するには、mfcmifc80.dll への参照を追加する必要があります。
+ユーザー コントロールは、次の例に示すように[、ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)を`m_CmdSrc`使用して、コマンド ソース オブジェクトへの参照を 格納します。 `ICommandTarget` を使用するには、mfcmifc80.dll への参照を追加する必要があります。
 
-`CWinFormsView` は、共通の MFC ビューの通知をマネージ ユーザー コントロールに転送することによって処理します。 これらの通知が含まれる、 [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)、 [OnUpdate](../mfc/reference/iview-interface.md#onupdate)と[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)メソッド。
+`CWinFormsView` は、共通の MFC ビューの通知をマネージド ユーザー コントロールに転送することによって処理します。 これらの通知には、[オンイニシャルアップデート](../mfc/reference/iview-interface.md#oninitialupdate)、[オンアップデート](../mfc/reference/iview-interface.md#onupdate)、および[OnActivateViewメソッドが](../mfc/reference/iview-interface.md#onactivateview)含まれます。
 
-このトピックでは、完了していた前提としています。[方法。ユーザー コントロールおよびホストを作成 ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)と[方法。ユーザー コントロールおよびホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)します。
+このトピックでは、以前に完了しているユーザーを前提としています[: [方法] ダイアログ ボックスでユーザー コントロールとホストを作成](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)[するおよび方法 : ユーザー コントロールとホスト MDI ビューを作成](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)する 。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 
-1. 作成した Windows フォーム コントロール ライブラリを開く[方法。ユーザー コントロールおよびホストを作成 ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)します。
+1. 「[方法 : ダイアログ ボックスでユーザー コントロールとホストを作成する](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)」で作成した Windows フォーム コントロール ライブラリを開きます。
 
-1. プロジェクト ノードを右クリックして行うことができますが、mfcmifc80.dll への参照を追加**ソリューション エクスプ ローラー**選択**追加**、**参照**を参照しながら、Microsoft Visual Studio 10.0\VC\atlmfc\lib します。
+1. **mfcmifc80.dll**への参照を追加します。 **Add** **Reference**
 
 1. UserControl1.Designer.cs を開いて、次の using ステートメントを追加します。
 
@@ -41,7 +41,7 @@ ms.locfileid: "62222911"
     partial class UserControl1
     ```
 
-   変更後は次のようになります。
+   これを、次のように変更します。
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -70,26 +70,26 @@ ms.locfileid: "62222911"
     }
     ```
 
-1. 作成した MFC アプリケーションを開く[方法。ユーザー コントロールおよびホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)します。
+1. 「方法 : ユーザー[コントロールとホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)」で作成した MFC アプリケーションを開きます。
 
 1. `singleMenuHandler` を呼び出すメニュー オプションを追加します。
 
-   移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびダブルクリック**IDR_MFC02TYPE**します。 これにより、メニュー エディターが表示されます。
+   リソース**ビュー** (Ctrl + Shift + E) に移動し、[**メニュー]** フォルダを展開して **、[IDR_MFC02TYPE]** をダブルクリックします。 これにより、メニュー エディターが表示されます。
 
-   下部のメニュー オプションを追加、**ビュー**メニュー。 メニュー オプションの ID に注意してください、**プロパティ**ウィンドウ。 ファイルを保存します。
+   **[表示**] メニューの下部にメニュー オプションを追加します。 **[プロパティ]** ウィンドウのメニュー オプションの ID を確認します。 ファイルを保存します。
 
-   **ソリューション エクスプ ローラー**、Resource.h ファイルを開き、追加したメニュー オプションの ID 値をコピーおよび最初のパラメーターとしてその値を貼り付けます、 `m_CmdSrc.AddCommandHandler` c# プロジェクトの呼び出す`Initialize`(置換メソッド`32771`必要な場合)。
+   **ソリューション エクスプローラー**で Resource.h ファイルを開き、追加したメニュー オプションの ID 値をコピーし、その値を C# プロジェクトのメソッド`m_CmdSrc.AddCommandHandler`の呼び`Initialize`出しに`32771`最初のパラメーターとして貼り付けます (必要に応じて置換)。
 
-9. プロジェクトをビルドして実行します。
+1. プロジェクトをビルドして実行します。
 
    **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   [**デバッグ**] メニューの [**デバッグなしで開始**] をクリックします。
 
    追加したメニュー オプションを選択します。 .dll 内のメソッドが呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC ビューとしての Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
-[ICommandSource インターフェイス](../mfc/reference/icommandsource-interface.md)<br/>
-[ICommandTarget インターフェイス](../mfc/reference/icommandtarget-interface.md)
+[インターフェイス](../mfc/reference/icommandsource-interface.md)<br/>
+[インターフェイス](../mfc/reference/icommandtarget-interface.md)

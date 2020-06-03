@@ -1,5 +1,5 @@
 ---
-title: CDefaultCharTraits クラス
+title: クラスのデフォルトチャートレイト
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultCharTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-ms.openlocfilehash: fe599ee0e84c393bed656b7304fd13d55ce95a50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c4d107d05e6d7b610e7c46be920d91d8fe6086
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258742"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327094"
 ---
-# <a name="cdefaultchartraits-class"></a>CDefaultCharTraits クラス
+# <a name="cdefaultchartraits-class"></a>クラスのデフォルトチャートレイト
 
-このクラスは、大文字と小文字を変換するための 2 つの静的関数を提供します。
+このクラスには、大文字と小文字の間で文字を変換するための 2 つの静的関数が用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -38,20 +38,20 @@ class CDefaultCharTraits
 
 |名前|説明|
 |----------|-----------------|
-|[CDefaultCharTraits::CharToLower](#chartolower)|(静的)文字を大文字に変換するには、この関数を呼び出します。|
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|(静的)文字を小文字に変換するには、この関数を呼び出します。|
+|[C デフォルトのチャルトレイト::シャルトローワー](#chartolower)|(静的)文字を大文字に変換します。|
+|[Cデフォルトのチャルトレイト::シャルトアッパー](#chartoupper)|(静的)文字を小文字に変換します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスには、クラスによって使用されている関数[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)します。
+このクラスは、クラス[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)によって使用される関数を提供します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower
+## <a name="cdefaultchartraitschartolower"></a><a name="chartolower"></a>C デフォルトのチャルトレイト::シャルトローワー
 
-文字を小文字に変換するには、この関数を呼び出します。
+文字を小文字に変換します。
 
 ```
 static wchar_t CharToLower(wchar_t x);
@@ -60,16 +60,16 @@ static char CharToLower(char x);
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 小文字に変換する文字。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]
 
-##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper
+## <a name="cdefaultchartraitschartoupper"></a><a name="chartoupper"></a>Cデフォルトのチャルトレイト::シャルトアッパー
 
-文字を大文字に変換するには、この関数を呼び出します。
+文字を大文字に変換します。
 
 ```
 static wchar_t CharToUpper(wchar_t x);
@@ -78,7 +78,7 @@ static char CharToUpper(char x);
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 大文字に変換する文字。
 
 ## <a name="see-also"></a>関連項目

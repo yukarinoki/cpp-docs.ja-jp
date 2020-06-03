@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC2165
 ms.assetid: bf7d4630-9355-47e3-87fa-6693fcf0ef0d
-ms.openlocfilehash: dee1e3539a734ccb59a7e13218ea47b94287ffd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c8686a83bcdffc39b6573cbeb97e4da04fbab39
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190977"
 ---
 # <a name="resource-compiler-error-rc2165"></a>リソース コンパイラ エラー RC2165
 
-文字列 DLGINCLUDE ステートメントでは見つかりませんでした。
+DLGINCLUDE ステートメントに文字列が見つかりません
 
-ステートメントでは、有効なインクルード ファイルが指定されませんでした。
+ステートメントで、有効なインクルードファイルが指定されていませんでした。
 
-**DLGINCLUDE**ステートメントは、次の構文を使用する必要があります。
+**Dlginclude**ステートメントでは、次の構文を使用する必要があります。
 
-**DLGINCLUDE"**<em>filename</em>**.h"**
+**Dlginclude**<em>filename</em> **. h "をインクルードします。**

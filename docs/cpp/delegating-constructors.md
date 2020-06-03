@@ -1,13 +1,13 @@
 ---
-title: デリゲートコンストラクター (C++)
-description: のデリゲートコンストラクター C++を使用して、他のコンストラクターを呼び出し、コードの繰り返しを減らします。
+title: コンストラクターの委任 (C++)
+description: C++ で委任コンストラクターを使用して、他のコンストラクターを呼び出し、コードの繰り返しを減らします。
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316672"
 ---
 # <a name="delegating-constructors"></a>コンストラクターのデリゲート
 

@@ -1,8 +1,9 @@
 ---
 title: _findclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _findclose
+- _o__findclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957320"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911808"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -47,12 +49,16 @@ int _findclose(
 
 ### <a name="parameters"></a>パラメーター
 
-*handle*<br/>
-前回の呼び出しによって返された検索ハンドル **(_s)** 。
+*扱え*<br/>
+**_Findfirst**の前回の呼び出しによって返された検索ハンドル。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **findclose**は0を返します。 それ以外の場合は、-1 を返し、 **errno**を**ENOENT**に設定して、これ以上一致するファイルが見つからないことを示します。
+成功した場合、 **_findclose**は0を返します。 それ以外の場合は、-1 を返し、 **errno**を**ENOENT**に設定して、これ以上一致するファイルが見つからないことを示します。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -60,7 +66,7 @@ int _findclose(
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

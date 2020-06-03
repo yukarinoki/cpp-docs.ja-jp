@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168030"
 ---
-# <a name="idlquote"></a>idl_quote
+# <a name="idl_quote"></a>idl_quote
 
-Visual C の現在のバージョンでサポートされていない IDL コンストラクトを使用することができ、生成された .idl ファイルに渡すことがあります。
+現在のバージョンのビジュアルC++でサポートされていない idl 構造体を使用して、生成された .idl ファイルに渡すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,16 +25,16 @@ Visual C の現在のバージョンでサポートされていない IDL コン
 
 ### <a name="parameters"></a>パラメーター
 
-*テキスト*<br/>
-Microsoft をする属性名C++コンパイラはコンパイラ エラーを返さずに生成された .idl ファイルにパススルーします。
+*text*<br/>
+コンパイラエラーを返さずに、生成C++された .idl ファイルに渡す Microsoft コンパイラの属性名。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場合、 **idl_quote** C++属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。
+**Idl_quote** C++属性がスタンドアロン属性として使用されている場合 (右角かっこの後にセミコロンがあります)、*テキスト*はそのままの状態でマージされた .idl ファイルに配置されます。 シンボルに対して**idl_quote**が使用されている場合、*テキスト*はそのシンボルの属性ブロック内に配置されます。
 
 ## <a name="example"></a>例
 
-次のコードは、サポートされていない属性を指定する方法を示します (を使用して**で**、サポートされる) と定義して、未定義の .idl コンストラクトを使用する方法。
+次のコードは、サポートされていない属性を指定する方法を示しています (**で**はを使用します)。また、undefined コンストラクトを定義して使用する方法を示します。
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,7 +69,7 @@ __interface IStatic{
 };
 ```
 
-このコードにより、`MYFLOT`と`MYDUB`と*テキスト*エントリが生成された .idl ファイルに配置されます。 *名前*パラメーターを使い*テキスト*を参照する前に配置する*名前*で生成された .idl ファイル。 *依存関係*パラメーターを強制的にする前に配置する依存関係のリスト定義*テキスト*で生成された .idl ファイル。
+このコードにより、`MYFLOT` と `MYDUB` と、生成された .idl ファイルに*テキスト*エントリが配置されます。 *Name*パラメーターは、生成された .idl ファイル内の*名前*を参照するすべてのものより前に*テキスト*を強制的に配置します。 *Dependencies*パラメーターを指定すると、生成された .idl ファイル内の*テキスト*の前に依存関係リストの定義が強制的に配置されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -84,7 +84,7 @@ __interface IStatic{
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)

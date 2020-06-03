@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7e53befcc46319d0ecf2287ab96a19a73a0b0b85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314147"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076274"
 ---
 # <a name="code"></a>.CODE
 
@@ -28,9 +28,8 @@ ms.locfileid: "75314147"
 *名前*\
 コードセグメントの名前を指定する省略可能なパラメーターです。 既定の名前は、小さい、小さい、コンパクト、およびフラット[モデル](dot-model.md)の場合に **_TEXT**ます。 既定の名前は、他のモデルの場合は*modulename*_TEXT です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブリファレンス](directives-reference.md)\
 [.データ](dot-data.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)
-

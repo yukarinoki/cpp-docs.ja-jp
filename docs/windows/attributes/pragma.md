@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166485"
 ---
 # <a name="pragma"></a>pragma
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514280"
 *pragma_statement*<br/>
 生成された .idl ファイルに含めるプラグマ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **プラグマ** C++属性には、 [pragma](/windows/win32/Midl/pragma) MIDL 属性と同じ機能があります。
 
@@ -61,7 +61,7 @@ __interface A
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>

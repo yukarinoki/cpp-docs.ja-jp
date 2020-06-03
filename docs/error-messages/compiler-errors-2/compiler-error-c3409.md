@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200865"
 ---
 # <a name="compiler-error-c3409"></a>コンパイラ エラー C3409
 
-> 属性ブロックを空にすることはできません。
+> 空の属性ブロックは使用できません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-角かっこ、コンパイラによってとして解釈されていましたが[属性](../../windows/attributes-alphabetical-reference.md)どの属性も、ブロックが見つかりました。
+角かっこは、コンパイラによって[属性](../../windows/attributes-alphabetical-reference.md)ブロックとして解釈されましたが、属性が見つかりませんでした。
 
-ラムダ式の定義の一部としての角かっこを使用すると、コンパイラはこのエラーを生成可能性があります。 このエラーは、コンパイラは角かっこまたは属性ブロック、ラムダ式の定義の一部であるかどうかを判断できないときに発生します。 ラムダ式について詳しくは、「[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」をご覧ください。
+ラムダ式の定義の一部として角かっこを使用すると、コンパイラはこのエラーを生成することがあります。 このエラーは、コンパイラが、角かっこがラムダ式または属性ブロックの定義の一部であるかどうかを判断できない場合に発生します。 ラムダ式について詳しくは、「[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」をご覧ください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. 角かっこが属性ブロックの一部である場合。
+1. 角かっこが属性ブロックの一部である場合は、次のようになります。
 
-   1. 属性ブロック内の 1 つまたは複数の属性を提供します。
+   1. 属性ブロックに1つまたは複数の属性を指定します。
 
    1. 属性ブロックを削除します。
 
-1. 角かっこがラムダ式の一部である場合は、ラムダ式が有効な構文規則に従うことを確認します。
+1. 角かっこがラムダ式の一部である場合は、ラムダ式が有効な構文規則に従っていることを確認してください。
 
-   ラムダ式の構文の詳細については、次を参照してください。[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。
+   ラムダ式の構文の詳細については、「[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、C3409 を生成します。
+次の例では、C3409 が生成されます。
 
 ```cpp
 // C3409.cpp
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>例
 
-ラムダ式を使用するために次の例が c3409、`mutable`仕様では、パラメーター リストは提供されません。 コンパイラは、角かっこまたは属性ブロック、ラムダ式の定義の一部であるかどうかを判断できません。
+次の例では、ラムダ式が `mutable` 仕様を使用していますが、パラメーターリストが指定されていないため、C3409 が生成されます。 コンパイラは、角かっこがラムダ式または属性ブロックの定義の一部であるかどうかを判断できません。
 
 ```cpp
 // C3409b.cpp
@@ -67,7 +67,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)<br/>

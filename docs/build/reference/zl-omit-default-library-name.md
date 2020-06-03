@@ -2,7 +2,7 @@
 title: /Zl (既定のライブラリ名の省略)
 ms.date: 11/04/2016
 f1_keywords:
-- /zi
+- /zl
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
 helpviewer_keywords:
 - -Zl compiler option [C++]
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c72377314abf755469075c7a4b431f4b8a64ee7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988554"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438625"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (既定のライブラリ名の省略)
 
@@ -28,7 +28,7 @@ ms.locfileid: "74988554"
 /Zl
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 既定のライブラリの詳細については、「[ランタイムライブラリの使用](md-mt-ld-use-run-time-library.md)」を参照してください。
 
@@ -40,7 +40,7 @@ ms.locfileid: "74988554"
 
 詳しくは、「[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」をご覧ください。
 
-**/Zl**を使用してコンパイルすると、`_VC_NODEFAULTLIB` が定義されます。  例:
+**/Zl**を使用してコンパイルすると、`_VC_NODEFAULTLIB` が定義されます。  例 :
 
 ```cpp
 // vc_nodefaultlib.cpp
@@ -54,9 +54,9 @@ void Test() {
 }
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -66,7 +66,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>
+- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>) をご覧ください。
 
 ## <a name="see-also"></a>参照
 

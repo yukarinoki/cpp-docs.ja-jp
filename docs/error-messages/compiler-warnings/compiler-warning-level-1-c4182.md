@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4182
 ms.assetid: 8970f3c6-e2dd-407e-b2ec-964360eb8b43
-ms.openlocfilehash: 49e3e2f62b4be50d14cb8da3d776b4640be7160c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a438373b7fda04a6e8d1f76e2ef38208c3e557a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391635"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175949"
 ---
 # <a name="compiler-warning-level-1-c4182"></a>コンパイラの警告 (レベル 1) C4182
 
-\#入れ子のレベルは 'number'。無限再帰の可能性
+入れ子のレベルを含める \#は ' number ' ディープです。無限再帰の可能性があります
 
 コンパイラがヒープ上の領域を使い切りました。入れ子になっているインクルード ファイルの数が原因です。 インクルード ファイルは、別のインクルード ファイルに含められると入れ子になります。
 

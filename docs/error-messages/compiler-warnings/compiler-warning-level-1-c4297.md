@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4297
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
-ms.openlocfilehash: 48ae909b9484fd0581f4691059272c5a488ea5fe
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 31deba2f421b461ba56d13810b5064b353a0e602
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175676"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>コンパイラの警告 (レベル 1) C4297
 
@@ -23,7 +23,7 @@ ms.locfileid: "73626617"
 
 例外の指定の詳細については、「[例外の指定 (throw)](../../cpp/exception-specifications-throw-cpp.md)」を参照してください。 また、コンパイル時に例外処理の動作を変更する方法の詳細については、「 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md) 」を参照してください。
 
-この警告は、extern "C" とマークされている __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) 関数に対しC++ても生成されます。関数であっても同様です。
+この警告は、extern "C" とマークされた __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) 関数に対してC++も生成されます。関数であっても同様です。
 
 次の例では C4297 が生成されます。
 

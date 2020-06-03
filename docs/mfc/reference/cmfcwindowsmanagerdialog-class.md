@@ -1,5 +1,5 @@
 ---
-title: CMFCWindowsManagerDialog クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCWindowsManagerDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-ms.openlocfilehash: 5089decc7a118cd867aa14df51f5d7e269221108
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3928c0d3ae4f607dceb99c0762277e8ea9ddbde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373662"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319824"
 ---
-# <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog クラス
+# <a name="cmfcwindowsmanagerdialog-class"></a>クラス
 
-`CMFCWindowsManagerDialog`オブジェクトは、MDI アプリケーションでの MDI 子ウィンドウを管理するユーザーを使用できます。
+この`CMFCWindowsManagerDialog`オブジェクトを使用すると、ユーザーは MDI アプリケーションの MDI 子ウィンドウを管理できます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,17 +31,17 @@ class CMFCWindowsManagerDialog : public CDialog
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|`CMFCWindowsManagerDialog` オブジェクトを構築します。|
+|[ダイアログ ボックス::CMFC マネージャー ダイアログ](#cmfcwindowsmanagerdialog)|`CMFCWindowsManagerDialog` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CMFCWindowsManagerDialog`アプリケーションで現在開いている MDI 子ウィンドウの一覧が含まれています。 このダイアログ ボックスを使用して、MDI 子ウィンドウの状態を手動で制御できます。
+`CMFCWindowsManagerDialog`には、現在アプリケーションで開いている MDI 子ウィンドウの一覧が含まれます。 このダイアログ ボックスを使用して、MDI 子ウィンドウの状態を手動で制御できます。
 
-`CMFCWindowsManagerDialog` 埋め込まれています、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)します。 `CMFCWindowsManagerDialog`手動で作成する必要がありますクラスではありません。 代わりに、関数を呼び出す[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)と作成が表示され、`CMFCWindowsManagerDialog`オブジェクト。
+`CMFCWindowsManagerDialog`は[、クラス](../../mfc/reference/cmdiframewndex-class.md)内に埋め込まれています。 `CMFCWindowsManagerDialog`は、手動で作成する必要のあるクラスではありません。 代わりに、関数を呼び出[します。](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog) `CMFCWindowsManagerDialog`
 
 ## <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCWindowsManagerDialog`オブジェクトを呼び出すことによって`CMDIFrameWndEx::ShowWindowsDialog`します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
+を呼び出`CMFCWindowsManagerDialog``CMDIFrameWndEx::ShowWindowsDialog`してオブジェクトを構築する方法を次の例に示します。 このコード スニペットは[、Visual Studio のデモ のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]
 
@@ -59,11 +59,11 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxWindowsManagerDialog.h
+**ヘッダー:** afxWindows マネージャーダイアログ.h
 
-##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog
+## <a name="cmfcwindowsmanagerdialogcmfcwindowsmanagerdialog"></a><a name="cmfcwindowsmanagerdialog"></a>ダイアログ ボックス::CMFC マネージャー ダイアログ
 
-構築、 [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)構築します。
 
 ```
 CMFCWindowsManagerDialog(
@@ -73,18 +73,18 @@ CMFCWindowsManagerDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*pMDIFrame*<br/>
-[in]親またはオーナー ウィンドウへのポインター。
+*フレーム*<br/>
+[in]親ウィンドウまたはオーナー ウィンドウへのポインター。
 
-*bHelpButton*<br/>
-[in]フレームワークを表示するかどうかを指定するブール型パラメーター、**ヘルプ**ボタンをクリックします。
+*ヘルプボタン*<br/>
+[in]フレームワークに **[ヘルプ**] ボタンを表示するかどうかを指定するブール値パラメーター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ビジュアル マネージャーの詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)します。
+ビジュアル マネージャーの詳細については、「[ビジュアル化](../../mfc/visualization-manager.md)マネージャー 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)
+[クラスを作成します。](../../mfc/reference/cmdiframewndex-class.md)

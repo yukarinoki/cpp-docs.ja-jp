@@ -6,21 +6,21 @@ helpviewer_keywords:
 - addresses [C++]
 - addresses [C++], based
 ms.assetid: e80527b0-2303-4755-a52e-3e07e17232da
-ms.openlocfilehash: daea4a30a15163fa80de800673a0deaeddfb22c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2eb478fdb3767d5dcff1cf52da5722daa96d5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181422"
 ---
 # <a name="based-addressing"></a>ベース アドレス指定
 
-ここでは、次のトピックについて説明します。
+このセクションには、次のトピックが含まれます。
 
 - [__based 文法](../cpp/based-grammar.md)
 
 - [Based ポインター](../cpp/based-pointers-cpp.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)

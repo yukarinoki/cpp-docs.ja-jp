@@ -1,5 +1,5 @@
 ---
-title: CComQIPtrElementTraits クラス
+title: クラスをクラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtrElementTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327407"
 ---
-# <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits クラス
+# <a name="ccomqiptrelementtraits-class"></a>クラスをクラス
 
-このクラスは、COM インターフェイス ポインターのコレクションを作成するときに、メソッド、静的関数、および便利な typedef を提供します。
+このクラスは、COM インターフェイス ポインターのコレクションを作成するときに便利なメソッド、静的関数、および型定義を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,11 +29,11 @@ class CComQIPtrElementTraits :
 
 #### <a name="parameters"></a>パラメーター
 
-*I*<br/>
-COM インターフェイスを格納するポインターの種類を指定します。
+*私*<br/>
+格納するポインターの型を指定する COM インターフェイス。
 
-*piid*<br/>
-ポインターの IID を*は*します。
+*ピッド*<br/>
+I の IID への*ポインタ。*
 
 ## <a name="members"></a>メンバー
 
@@ -41,23 +41,23 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 |名前|説明|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。|
+|[要素トレイト::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、メソッドを派生しのコレクション クラスを作成するときに、便利な typedef を提供します[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインター オブジェクト。 このクラスは、両方によって使用されて、 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md)と[CInterfaceList](../../atl/reference/cinterfacelist-class.md)クラス。
+このクラスは、メソッドを派生し[、CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインター オブジェクトのコレクション クラスを作成するときに便利な型定義を提供します。 このクラスは[、CInterfaceArray](../../atl/reference/cinterfacearray-class.md)クラスと[CInterfaceList](../../atl/reference/cinterfacelist-class.md)クラスの両方で使用されます。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[クセプチュ設定の比較](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[既定のハッシュトレイト](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Cエレメントトレイツベース](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[要素の状態](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
@@ -65,9 +65,9 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>要素トレイト::イナルグタイプ
 
-コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。
+コレクション クラス オブジェクトに要素を追加するために使用するデータ型。
 
 ```
 typedef I* INARGTYPE;
@@ -75,5 +75,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[クラスの既定値](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

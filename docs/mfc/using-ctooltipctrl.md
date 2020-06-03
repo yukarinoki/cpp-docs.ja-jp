@@ -1,24 +1,22 @@
 ---
 title: CToolTipCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411625"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442202"
 ---
 # <a name="using-ctooltipctrl"></a>CToolTipCtrl の使い方
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)クラスは、単一のアプリケーションでのツールの目的を説明するテキストを表示する小さなポップアップ ウィンドウのツール ヒント コントロールの機能をカプセル化します。 ツール ヒントには、ほとんどの場合、表示され場合にのみ、ユーザー ツールの上にカーソルを置きます約半分のままに 2 つ目は表示されません。 ツール ヒントは、カーソルの近くに表示し、ユーザーがマウス ボタンをクリックしてまたはツールからカーソルを移動するときは表示されなくなります。
+[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)クラスは、ツールヒントコントロールの機能をカプセル化しています。これは、アプリケーションのツールの目的を説明する1行のテキストを表示する小さなポップアップウィンドウです。 ツールヒントは、ほとんどの場合は非表示になります。ユーザーがカーソルをツールに置いて、約1分の1秒間に移動した場合にのみ表示されます。 ツールヒントはカーソルの近くに表示され、ユーザーがマウスボタンをクリックするか、ツールからカーソルを移動すると消えます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [ツール ヒントの作成方法](../mfc/methods-of-creating-tool-tips.md)
 
@@ -28,7 +26,7 @@ ms.locfileid: "62411625"
 
 - [ツール ヒント コントロールの操作](../mfc/manipulating-the-tool-tip-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

@@ -1,10 +1,12 @@
 ---
 title: _create_locale、_wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473829"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912089"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale、_wcreate_locale
 
@@ -67,11 +70,11 @@ _locale_t _wcreate_locale(
 
 有効な*ロケール*と*カテゴリ*が指定されている場合、は、指定されたロケール設定を **_locale_t**オブジェクトとして返します。 プログラムの現在のロケール設定は変更されません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **_Create_locale**関数を使用すると、特定の地域固有の設定を表すオブジェクトを作成できます。これは、多くの CRT 関数のロケール固有のバージョン ( **_l**サフィックスを持つ関数) で使用します。 動作は**setlocale**に似ていますが、指定されたロケール設定を現在の環境に適用するのではなく、設定が返される **_locale_t**構造に保存される点が異なります。 **_Locale_t**構造体は、不要になったときに[_free_locale](free-locale.md)を使用して解放する必要があります。
 
-**_wcreate_locale**は **_create_locale**のワイド文字バージョンです。 **_wcreate_locale**する*locale*引数は、ワイド文字列です。 **_wcreate_locale**と **_create_locale**は同じように動作します。
+**_wcreate_locale**は **_create_locale**のワイド文字バージョンです。**_wcreate_locale**する*locale*引数は、ワイド文字列です。 **_wcreate_locale**と **_create_locale**は同じように動作します。
 
 *Category*引数は、影響を受けるロケール固有の動作の部分を指定します。 *Category*に使用されるフラグと、影響を与えるプログラムの部分は、次の表のようになります。
 
@@ -94,14 +97,16 @@ _locale_t _wcreate_locale(
 
 この関数の以前の名前 (2 つの先頭のアンダースコア) は非推奨とされています。 **__create_locale** 。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -165,15 +170,15 @@ In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'
 In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[言語識別文字列](../../c-runtime-library/language-strings.md)<br/>
-[Country/Region Strings](../../c-runtime-library/country-region-strings.md)<br/>
+[Language Strings](../../c-runtime-library/language-strings.md)<br/>
+[国/地域別文字列](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>

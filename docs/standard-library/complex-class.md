@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257976"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423943"
 ---
 # <a name="complex-class"></a>complex クラス
 
@@ -28,7 +28,7 @@ template <class Type>
 class complex
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 クラス `Type`のオブジェクト。
 
@@ -63,7 +63,7 @@ class complex
 |[imag](#imag)|複素数の虚数部を抽出します。|
 |[real](#real)|複素数の実数部を抽出します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -98,7 +98,7 @@ constexpr complex(
 *Complexnum*\
 構築される複素数の初期化に、その実数部と虚数部の値が使用される複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のコンストラクターは、格納されている実数部を *\_RealVal*に、格納された虚数部を *\_imagval*に初期化します。 2番目のコンストラクターは、格納されている実数部を `complexNum.real()` に初期化し、格納されている虚数部を `complexNum.imag()`に初期化します。
 
@@ -176,7 +176,7 @@ T imag(const T& right);
 
 複素数の虚数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複素数*a + bi*の場合、虚数部またはコンポーネントは*Im (a + bi) = b*です。
 
@@ -233,7 +233,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 パラメーターとして指定された数値で乗算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -318,7 +318,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 パラメーターとして指定された数値が加算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -424,7 +424,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 パラメーターとして指定された数値が減算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -532,7 +532,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 パラメーターとして指定された数値で除算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -631,7 +631,7 @@ complex<Type>& operator=(const Type& right);
 
 パラメーターとして指定された数値が割り当てられた複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -708,7 +708,7 @@ T real(const T& right);
 
 複素数の実数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複素数*a + bi*の場合、実数部またはコンポーネントは*Re (a + bi) = a*です。
 
@@ -751,7 +751,7 @@ The imaginary part of c1 is c1.imag() = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `value_type` は、class complex `Type` template パラメーターのシノニムです。
 

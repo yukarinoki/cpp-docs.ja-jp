@@ -1,9 +1,11 @@
 ---
 title: _mbbtype、_mbbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtype
 - _mbbtype_l
+- _o__mbbtype
+- _o__mbbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: ba4311921a0924d3f447feb1929a81ae1d816604
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952723"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919587"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype、_mbbtype_l
 
@@ -61,7 +64,7 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テスト対象の文字。
 
 *type*<br/>
@@ -74,32 +77,34 @@ int _mbbtype_l(
 
 **_mbbtype**は、文字列内のバイトの型を返します。 この決定は、コントロールのテスト条件を提供する*型*の値によって指定された、状況に依存します。 *type*は、文字列内の前のバイトの型です。 次の表のマニフェスト定数は、Mbctype.h で定義されています。
 
-|*型*の値|**_mbbtype**のテスト|戻り値|*c*|
+|*型*の値|テストの **_mbbtype**|戻り値|*40u-c*|
 |---------------------|--------------------------|------------------|---------|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_SINGLE**0|1バイト (0x20-0x7E、0xA1-0xDF)|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_LEAD**スナップショット|マルチバイト文字の先頭バイト (0x81-0x9F、0xE0-0xFC)|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
-|1|有効な末尾バイト|**_MBC_TRAIL**3|マルチバイト文字の末尾バイト (0x40-0x7E、0x80-0xFC)|
-|1|有効な末尾バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_SINGLE** (0)|1バイト (0x20-0x7E、0xA1-0xDF)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_LEAD** (1)|マルチバイト文字の先頭バイト (0x81-0x9F、0xE0-0xFC)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_ILLEGAL**<br /><br /> (-1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
+|1|有効な末尾バイト|**_MBC_TRAIL** (2)|マルチバイト文字の末尾バイト (0x40-0x7E、0x80-0xFC)|
+|1|有効な末尾バイト|**_MBC_ILLEGAL**<br /><br /> (-1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbbtype**関数は、マルチバイト文字のバイトの種類を決定します。 *Type*の値が1以外の任意の値の場合、 **_mbbtype**は、有効な1バイト文字、またはマルチバイト文字の先頭バイトをテストします。 *Type*の値が1の場合、 **_mbbtype**はマルチバイト文字の有効な末尾バイトをテストします。
+**_Mbbtype**関数は、マルチバイト文字のバイトの型を決定します。 *Type*の値が1以外の任意の値の場合、 **_mbbtype**は、有効な1バイト文字か、マルチバイト文字の先頭バイトかをテストします。 *型*の値が1の場合、 **_mbbtype**は、マルチバイト文字の有効な末尾バイトをテストします。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbbtype**バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbbtype_l**バージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbbtype**バージョンは、このロケールに依存する動作に現在のロケールを使用します。**_mbbtype_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbbtype**には**chkctype**という名前が付けられていました。 新しいコードの場合は、代わりに **_mbbtype**を使用してください。
+以前のバージョンでは、 **_mbbtype**には**chkctype**という名前が付けられていました。 新しいコードの場合は、代わりに **_mbbtype**を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
 |**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
 
 \* 戻り値として使用されるマニフェスト定数の定義。
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

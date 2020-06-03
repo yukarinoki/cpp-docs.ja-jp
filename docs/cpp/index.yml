@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: C++ 言語のドキュメント
+summary: C++ および C++ 標準ライブラリの使用方法について説明します。
+metadata:
+  title: C++ 関連のドキュメント - はじめに、チュートリアル、リファレンス。
+  description: Microsoft C++ および Visual Studio のユーザー向け C++ プログラミング リファレンス。
+  ms.topic: landing-page
+  ms.date: 05/08/2020
+  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108622"
+landingContent:
+- title: Visual Studio での C++ について
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Visual Studio for Windows をダウンロードする
+      url: https://visualstudio.microsoft.com/downloads
+    - text: Visual Studio での C/C++ サポートのインストール
+      url: ../build/vscpp-step-0-installation.md
+    - text: コマンドライン ビルド ツールのみをダウンロードする
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: get-started
+    links:
+    - text: Visual Studio で C++ を使用した Hello World
+      url: ../build/vscpp-step-1-create.md
+    - text: C++ で電卓を作成する
+      url: ../get-started/tutorial-console-cpp.md
+  - linkListType: video
+    links:
+    - text: C++ について - 汎用言語およびライブラリ
+      url: https://channel9.msdn.com/Series/cplusplus-language-library
+  - linkListType: learn
+    links:
+    - text: C++ へようこそ - Modern C++
+      url: ../cpp/welcome-back-to-cpp-modern-cpp.md
+    - text: サンプルとサンプル アーカイブ
+      url: ../overview/visual-cpp-samples.md
+- title: Visual Studio での C++ の新機能
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio での C++ の新機能
+      url: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - text: C++ 準拠の強化
+      url: ../overview/cpp-conformance-improvements.md
+  - linkListType: overview
+    links:
+    - text: Visual Studio での C++ 開発の概要
+      url: ../overview/overview-of-cpp-development.md
+    - text: サポート対象のターゲット プラットフォーム
+      url: ../overview/supported-platforms-visual-cpp.md
+    - text: ヘルプとコミュニティのリソース
+      url: ../overview/visual-cpp-help-and-community.md
+    - text: 問題の報告または提案の送信
+      url: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- title: コンパイラとツールを使用する
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C/C++ ビルドのリファレンス
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: プロジェクトおよびビルド システム
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: コンパイラのリファレンス
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: リンカーのリファレンス
+      url: ../build/reference/linking.md
+    - text: その他のビルド ツール
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: エラーと警告
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: C++ 言語
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 言語リファレンス
+      url: ../cpp/cpp-language-reference.md
+    - text: C++ のキーワード
+      url: ../cpp/keywords-cpp.md
+    - text: C++ の演算子
+      url: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+    - text: C/C++ のプリプロセッサ リファレンス
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: C++ 標準ライブラリ (STL)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 標準ライブラリの概要
+      url: ../standard-library/cpp-standard-library-overview.md
+    - text: ヘッダーによる C++ 標準ライブラリ リファレンス
+      url: ../standard-library/cpp-standard-library-header-files.md
+    - text: C++ 標準ライブラリのコンテナー
+      url: ../standard-library/stl-containers.md
+    - text: Iterators
+      url: ../standard-library/iterators.md
+    - text: アルゴリズム
+      url: ../standard-library/algorithms.md
+    - text: アロケーター
+      url: ../standard-library/allocators.md
+    - text: 関数オブジェクト
+      url: ../standard-library/function-objects-in-the-stl.md
+    - text: iostream プログラミング
+      url: ../standard-library/iostream-programming.md
+    - text: 正規表現
+      url: ../standard-library/regular-expressions-cpp.md
+    - text: ファイル システムのナビゲーション
+      url: ../standard-library/file-system-navigation.md

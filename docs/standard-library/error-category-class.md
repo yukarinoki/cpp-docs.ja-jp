@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 308fa1a2309ddfda1a02fe6a687360185c1e7c6e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245855"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076608"
 ---
-# <a name="errorcategory-class"></a>error_category クラス
+# <a name="error_category-class"></a>error_category クラス
 
 エラー コードのカテゴリを表すオブジェクトの抽象的な共通基底を表します。
 
@@ -37,13 +37,13 @@ virtual ~error_category();
 error_category(const error_category&) = delete
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-定義済みの 2 つのオブジェクト [generic_category](../standard-library/system-error-functions.md#generic_category) および [system_category](../standard-library/system-error-functions.md#system_category) によって `error_category` が実装されます。
+定義済みの 2 つのオブジェクト `error_category`generic_category[ および ](../standard-library/system-error-functions.md#generic_category)system_category[ によって ](../standard-library/system-error-functions.md#system_category) が実装されます。
 
 ## <a name="members"></a>メンバー
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -60,7 +60,7 @@ error_category(const error_category&) = delete
 |[name](#name)|カテゴリの名前を返します。|
 |[system_category](#system)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -69,7 +69,7 @@ error_category(const error_category&) = delete
 |[operator!=](#op_neq)|`error_category` オブジェクト間の不等性をテストします。|
 |[operator<](#op_lt)|[error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。|
 
-## <a name="default_error_condition"></a> default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
 エラー条件オブジェクトのエラー コード値を格納します。
 
@@ -84,11 +84,11 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="return-value"></a>戻り値
 
-`error_condition(_Errval, *this)` を返します。
+`error_condition(_Errval, *this)` が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-### <a name="equivalent"></a> 等価
+### <a name="equivalent"></a><a name="equivalent"></a>表現
 
 エラー オブジェクトが同等であるかどうかを示す値を返します。
 
@@ -108,26 +108,26 @@ virtual bool equivalent(const error_code& _Code,
 *_Cond*\
 比較する [error_condition](../standard-library/error-condition-class.md) オブジェクト。
 
-*(_C)* \
+*_Code*\
 比較する [error_code](../standard-library/error-code-class.md) オブジェクト。
 
 #### <a name="return-value"></a>戻り値
 
-**true**カテゴリと値が、それ以外の場合は**false**します。
+カテゴリと値が等しい場合は**true** 。それ以外の場合は**false**。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 最初のメンバー関数は `*this == _Cond.category() && _Cond.value() == _Errval` を返します。
 
 2 番目のメンバー関数は `*this == _Code.category() && _Code.value() == _Errval` を返します。
 
-### <a name="generic"></a> generic_category
+### <a name="generic_category"></a><a name="generic"></a>generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a> メッセージ
+### <a name="message"></a><a name="message"></a>メッセージ
 
 指定したエラー コードの名前を返します。
 
@@ -142,11 +142,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="return-value"></a>戻り値
 
-エラー コードのわかりやすい名前を返します*val*のカテゴリ。
+カテゴリのエラーコード*val*のわかりやすい名前を返します。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-### <a name="name"></a> 名
+### <a name="name"></a><a name="name"></a>指定
 
 カテゴリの名前を返します。
 
@@ -158,14 +158,13 @@ virtual const char *name() const = 0;
 
 カテゴリの名前を、null 終端バイト文字列として返します。
 
-### <a name="op_as"></a> 演算子 =
+### <a name="operator"></a><a name="op_as"></a>operator =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-
-### <a name="op_eq_eq"></a> 演算子 = =
+### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 `error_category` オブジェクト間の同等性をテストします。
 
@@ -175,18 +174,18 @@ bool operator==(const error_category& right) const;
 
 #### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 等しいかどうかをテストするオブジェクト。
 
 #### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、`this == &right` を返します。
 
-### <a name="op_neq"></a> operator!=
+### <a name="operator"></a><a name="op_neq"></a>operator! =
 
 `error_category` オブジェクト間の不等性をテストします。
 
@@ -196,18 +195,18 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 不等性をテストするオブジェクト。
 
 #### <a name="return-value"></a>戻り値
 
-**true**場合、`error_category`オブジェクトが等しく、`error_category`で渡されるオブジェクト*右*。 そうしないと**false**します。
+`error_category` オブジェクトが、渡された `error_category` オブジェクトと等しくない*場合は* **true** 。それ以外の場合は**false**。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、 `(!*this == right)`を返します。
 
-### <a name="op_lt"></a> 演算子&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> 演算子&lt;
 
 [error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。
 
@@ -217,24 +216,24 @@ bool operator<(const error_category& right) const;
 
 #### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 比較される `error_category` オブジェクト。
 
 #### <a name="return-value"></a>戻り値
 
-`error_category` オブジェクトが、比較対象として渡された `error_category` より小さい場合は **true**。それ以外の場合は **false**。
+**オブジェクトが、比較対象として渡された** より小さい場合は `error_category`true`error_category`。それ以外の場合は **false**。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、 `this < &right`を返します。
 
-### <a name="system"></a> system_category
+### <a name="system_category"></a><a name="system"></a>system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
 格納されたエラー コード値を表す型。
 
@@ -242,6 +241,6 @@ const error_category& system_category();
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-この型定義のシノニムは、 **int**します。
+この型定義は、 **int**のシノニムです。

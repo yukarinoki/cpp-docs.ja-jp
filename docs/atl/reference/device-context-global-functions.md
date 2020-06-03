@@ -1,27 +1,27 @@
 ---
-title: デバイスコンテキストのグローバル関数
+title: デバイス コンテキストのグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e640f310a1976c29a39f0ab7c2575dfd1073c889
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330153"
 ---
-# <a name="device-context-global-functions"></a>デバイスコンテキストのグローバル関数
+# <a name="device-context-global-functions"></a>デバイス コンテキストのグローバル関数
 
-この関数は、特定のデバイスのデバイスコンテキストを作成します。
+この関数は、指定されたデバイスのデバイス コンテキストを作成します。
 
 |||
 |-|-|
-|[AtlCreateTargetDC](#atlcreatetargetdc)|デバイスコンテキストを作成します。|
+|[AtlCreateTargetDC](#atlcreatetargetdc)|デバイス コンテキストを作成します。|
 
-##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
+## <a name="atlcreatetargetdc"></a><a name="atlcreatetargetdc"></a>アトル・ア・ラ・リスト・ア・ラ・ト
 
-[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)構造体で指定されたデバイスのデバイスコンテキストを作成します。
+[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)構造体で指定されたデバイスのデバイス コンテキストを作成します。
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -29,25 +29,25 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hdc*<br/>
-からデバイスコンテキストの既存のハンドル、または NULL。
+*Hdc*<br/>
+[in]デバイス コンテキストの既存のハンドル、または NULL。
 
-*ptd*<br/>
-からターゲットデバイスに関する`DVTARGETDEVICE`情報を格納している構造体へのポインター。
+*Ptd*<br/>
+[in]ターゲット デバイスに`DVTARGETDEVICE`関する情報を格納する構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-で指定されたデバイスのデバイスコンテキストを示すハンドルを`DVTARGETDEVICE`返します。 デバイスが指定されていない場合は、既定の表示デバイスへのハンドルを返します。
+で指定されたデバイスのデバイス コンテキストへのハンドルを返します`DVTARGETDEVICE`。 デバイスが指定されていない場合は、既定の表示デバイスへのハンドルを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構造体が NULL で、 *hdc*が null の場合、は既定の表示デバイスのデバイスコンテキストを作成します。
+構造体が NULL で *、hdc*が NULL の場合、既定の表示デバイスのデバイス コンテキストを作成します。
 
-*Hdc*が null でなく、 *ptd*が null の場合、関数は既存の*hdc*を返します。
+*hdc*が NULL で *、ptd*が NULL の場合、この関数は既存の*hdc*を返します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin. h
+**ヘッダー:** atlwin.h
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d005fccc5920aea61698a65edf9284d56366a1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377076"
 ---
 # <a name="compiler-warning-level-1-c4274"></a>コンパイラの警告 (レベル 1) C4274
 
-\#ident ignored; see documentation for #pragma comment(exestr, 'string')
+\#ident は無視されます。コメントのドキュメント#pragma参照してください(exestr、 'string')
 
-`#ident`ディレクティブで、ユーザー指定の文字列を挿入すると、オブジェクトまたは実行可能ファイルで、これが非推奨とされます。 その結果、コンパイラでは、ディレクティブは無視されます。
+オブジェクト`#ident`または実行可能ファイルにユーザー指定の文字列を挿入するディレクティブは推奨されません。 したがって、コンパイラはディレクティブを無視します。
 
 > [!CAUTION]
->  警告 C4274 では、使用するように勧める、 [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md)ディレクティブ。 ただし、このアドバイスは非推奨し、コンパイラの将来のリリースで変更されます。 使用する場合、`#pragma`ディレクティブ、リンカー ツール (LINK.exe) ディレクティブによって生成された、このコメント レコードを無視し、警告[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)します。 代わりに、`#ident`ディレクティブ、お勧め、アプリケーションでは、ファイル バージョン リソース文字列を使用することです。
+> 警告 C4274 は[、#pragma コメント (exestr、 'string')](../../preprocessor/comment-c-cpp.md)ディレクティブを使用するように助言します。 ただし、このアドバイスは非推奨であり、コンパイラの今後のリリースで改訂される予定です。 ディレクティブを`#pragma`使用すると、リンカー ツール (LINK.exe) は、ディレクティブによって生成されたコメント レコードを無視し、警告[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)を発行します。 ディレクティブの`#ident`代わりに、アプリケーションでファイル バージョンのリソース文字列を使用することをお勧めします。
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- 削除、 `#ident "`*文字列*`"`ディレクティブ。
+- `#ident "`*string*文字列`"`ディレクティブを削除します。
 
 ## <a name="see-also"></a>関連項目
 
 [コメント (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
-[リンカー ツールの警告 LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
+[リンカーツール警告 LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
 [リソース ファイルの操作](../../windows/working-with-resource-files.md)

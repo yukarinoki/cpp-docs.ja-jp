@@ -1,32 +1,32 @@
 ---
-title: トランザクション:レコード セット (ODBC) でトランザクションを実行します。
+title: 'トランザクション: レコードセットからのトランザクション実行 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358096"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>トランザクション:レコード セット (ODBC) でトランザクションを実行します。
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>トランザクション: レコードセットからのトランザクション実行 (ODBC)
 
-このトピックでは、レコード セットのトランザクションを実行する方法について説明します。
+このトピックでは、レコードセットでトランザクションを実行する方法について説明します。
 
 > [!NOTE]
->  トランザクションの 1 つだけのレベルがサポートされています。トランザクションを入れ子にすることはできません。
+> 1 レベルのトランザクションのみがサポートされます。トランザクションをネストすることはできません。
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>レコード セットのトランザクションを実行するには
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>レコードセットでトランザクションを実行するには
 
-1. 呼び出す、`CDatabase`オブジェクトの`BeginTrans`メンバー関数。
+1. オブジェクトの`CDatabase`メンバー関数を`BeginTrans`呼び出します。
 
-1. バルク行フェッチを実装しない場合、 `AddNew/Update`、 `Edit/Update`、および`Delete`必要な回数と同じデータベースの 1 つまたは複数のレコード セット オブジェクトのメンバー関数。 詳細については、次を参照してください。[レコード セット。追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)します。 バルク行フェッチを実装している場合は、データ ソースを更新する、独自の関数を記述する必要があります。
+1. バルク行フェッチを実装していない場合は、同じデータベースの`AddNew/Update` `Edit/Update`1`Delete`つ以上のレコードセット オブジェクトの 、、および メンバー関数を必要な回数だけ呼び出します。 詳細については、「[レコードセット : レコードの追加、更新、および削除 (ODBC)」](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)を参照してください。 バルク行フェッチを実装している場合は、データ ソースを更新する独自の関数を記述する必要があります。
 
-1. 最後に、呼び出し、`CDatabase`オブジェクトの`CommitTrans`メンバー関数。 呼び出す場合、更新プログラムのいずれかでエラーが発生したまたは変更をキャンセルする場合、その`Rollback`メンバー関数。
+1. 最後に、オブジェクト`CDatabase`のメンバー関数`CommitTrans`を呼び出します。 いずれかの更新でエラーが発生した場合、または変更を取り消す場合は、その`Rollback`メンバー関数を呼び出します。
 
-次の例では、2 つのレコード セットを使用して、生徒が登録されているすべてのクラスから受講者を削除する、学校の登録情報データベースから学生の登録を削除します。 `Delete`両方のレコード セットでの呼び出しが成功する必要があります、トランザクションが必要です。 例では、ことを想定の`m_dbStudentReg`、型のメンバー変数`CDatabase`、データ ソースとレコード セット クラスに既に接続されている`CEnrollmentSet`と`CStudentSet`します。 `strStudentID`変数には、ユーザーから取得した値が含まれています。
+次の例では、2 つのレコードセットを使用して、学校登録データベースから学生の登録を削除し、学生が登録されているすべてのクラスから生徒を削除します。 両方の`Delete`レコードセットの呼び出しは成功する必要があるため、トランザクションが必要です。 `m_dbStudentReg`この例では、データ ソースに既に接続されている`CDatabase`型のメンバー変数、およびレコードセット クラス`CEnrollmentSet`と`CStudentSet`が存在することを前提としています。 変数`strStudentID`には、ユーザーから取得した値が含まれます。
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,11 +79,11 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  呼び出す`BeginTrans`呼び出さずにもう一度`CommitTrans`または`Rollback`エラーが発生します。
+> 呼`BeginTrans`び出し`CommitTrans`を`Rollback`行わずに再度呼び出すか、またはエラーです。
 
 ## <a name="see-also"></a>関連項目
 
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [トランザクション: トランザクションが更新処理に与える影響 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
-[CDatabase クラス](../../mfc/reference/cdatabase-class.md)<br/>
-[CRecordset クラス](../../mfc/reference/crecordset-class.md)
+[クラス](../../mfc/reference/cdatabase-class.md)<br/>
+[クラス](../../mfc/reference/crecordset-class.md)

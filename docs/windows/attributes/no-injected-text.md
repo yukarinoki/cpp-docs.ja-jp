@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409292"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166615"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-コンパイラがコードの属性を使用した結果として挿入するを防ぎます。
+属性の使用によってコードが挿入されないようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409292"
 ### <a name="parameters"></a>パラメーター
 
 *boolean*<br/>
-(省略可能)**true** 、挿入されたコードが必要ない場合**false**挿入するコードを許可します。 **true**既定値です。
+Optionalコードを挿入しない場合は**true** 、コードを挿入できるようにする場合は**false** 。 既定値は**true**です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-最も一般的な用途、 **no_injected_text** C++属性は、 [/Fx](../../build/reference/fx-merge-injected-code.md)コンパイラ オプションは、挿入、 **no_injected_text**属性が .mrg ファイルにします。
+**No_injected_text** C++属性の最も一般的な用途は、 [/fx](../../build/reference/fx-merge-injected-code.md)コンパイラオプションによって**no_injected_text**属性が .mrg ファイルに挿入されることです。
 
 ## <a name="requirements"></a>必要条件
 
@@ -45,6 +45,6 @@ ms.locfileid: "62409292"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ属性](compiler-attributes.md)

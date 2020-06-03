@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,24 +452,24 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180148"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446282"
 ---
 # <a name="reference-concurrency-runtime"></a>参照 (コンカレンシー ランタイム)
 
-このセクションには、同時実行ランタイムに関するリファレンス情報が含まれています。
+ここでは、同時実行ランタイムの参照情報について説明します。
 
 > [!Note]
-> C++言語の標準ライブラリなどの実装のアンダー スコア (_) 文字で始まる識別子の使用を予約します。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 これらの理由から、このようなコード要素は、同時実行ランタイムのドキュメントから除外されます。
+> 言語C++標準では、ライブラリなどの実装のために、アンダースコア (_) 文字で始まる識別子の使用が予約されています。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 このような理由から、このようなコード要素は同時実行ランタイムのドキュメントから除外されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
-Concurrency 名前空間のクラスを提供して、同時実行ランタイム、C++ の同時実行のプログラミング フレームワークへのアクセスを提供する関数。 詳細については、「[コンカレンシー ランタイム](../concurrency-runtime.md)」を参照してください。
+Concurrency 名前空間には、のC++同時実行プログラミングフレームワークである同時実行ランタイムにアクセスできるクラスと関数が用意されています。 詳細については、「[コンカレンシー ランタイム](../concurrency-runtime.md)」を参照してください。
 
 [std 名前空間](std-namespace.md)
 

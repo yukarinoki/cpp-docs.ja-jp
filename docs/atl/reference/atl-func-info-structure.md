@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: f6cf32bab86d741f3b0750c150c7bbc647b27ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1c740cf1a1ed344dbceb028bd1f39a87fc09363
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248694"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168593"
 ---
-# <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
+# <a name="_atl_func_info-structure"></a>_ATL_FUNC_INFO 構造体
 
-ディスパッチ インターフェイスでメソッドまたはプロパティを記述するために使用する型情報が含まれています。
+ディスパッチインターフェイスのメソッドまたはプロパティを記述するために使用される型情報を格納します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct _ATL_FUNC_INFO {
     CALLCONV cc;
     VARTYPE vtReturn;
@@ -34,28 +34,28 @@ struct _ATL_FUNC_INFO {
 ## <a name="members"></a>メンバー
 
 `cc`<br/>
-呼び出し規則 この構造体を使用する場合、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスでは、このメンバーは CC_STDCALL である必要があります。 `CC_CDECL` Windows CE でサポートされている唯一のオプションは、`CALLCONV`のフィールド、`_ATL_FUNC_INFO`構造体。 その他の値はサポートされていませんので、動作が定義されていません。
+呼び出し規則 この構造体を[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスで使用する場合は、このメンバーを CC_STDCALL する必要があります。 `CC_CDECL`は、 `CALLCONV` `_ATL_FUNC_INFO`構造体のフィールドの Windows CE でサポートされている唯一のオプションです。 その他の値はサポートされていないため、動作は定義されていません。
 
 `vtReturn`<br/>
-関数のバリアント型は、値を返します。
+関数の戻り値のバリアント型。
 
 `nParams`<br/>
-関数のパラメーターの数。
+関数パラメーターの数。
 
 `pVarTypes`<br/>
-関数のパラメーターのバリアント型の配列。
+関数パラメーターのバリアント型の配列。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-内部的には、ATL は、タイプ ライブラリから取得した情報を保持するためにこの構造体を使用します。 型情報を使用するイベント ハンドラーを指定する場合は、この構造体を直接操作する必要があります、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスと[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)マクロ。
+内部的には、ATL は、この構造体を使用して、タイプライブラリから取得された情報を保持します。 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスおよび[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)マクロで使用されるイベントハンドラーの型情報を指定する場合は、この構造体を直接操作する必要があります。
 
 ## <a name="example"></a>例
 
-IDL で定義されたディスパッチ インターフェイス メソッドを指定します。
+IDL で定義されているディスパッチインターフェイスメソッドがあるとします。
 
 [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]
 
-定義して、`_ATL_FUNC_INFO`構造体。
+構造体は次`_ATL_FUNC_INFO`のように定義します。
 
 [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
 

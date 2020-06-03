@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173388"
 ---
 # <a name="nmake-fatal-error-u1033"></a>NMAKE の致命的なエラー U1033
 
-構文エラー: 予期しない ' string'
+構文エラー: 予期しない ' string ' です
 
-メイクファイルの有効な構文の一部でない文字列。
+この文字列は、メイクファイルの有効な構文の一部ではありません。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. 山かっこの終了を設定する場合 (**<<**) のインライン ファイル行の先頭には、次のエラーが発生します。
+1. インラインファイルの山かっこ ( **<<** ) の終わりのセットが行の先頭にない場合、次のエラーが発生します。
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. メイクファイルのマクロ定義に等号 (=) が含まれているかどうか (**=**)、次のエラーが発生した先行名または名前が定義されている場合は nothing に展開されるマクロ、なし。
+1. メイクファイル内のマクロ定義に等号 ( **=** ) が前の名前で含まれていない場合、または定義されている名前が何も展開しないマクロの場合、次のエラーが発生します。
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. 場合、セミコロン (**;**) ツール内のコメント行にします。INI は、行の先頭に次のエラーが発生します。
+1. [ツール] のコメント行にセミコロン ( **;** ) がある場合。INI が行の先頭にない場合、次のエラーが発生します。
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. ワード プロセッサでメイクファイルが書式設定されている場合、次のエラーが発生します。
+1. メイクファイルがワードプロセッサによってフォーマットされている場合、次のエラーが発生する可能性があります。
 
     ```
     syntax error : ':' unexpected

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516497"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172036"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 "*固定ポインター*" を宣言します。これは共通言語ランタイムでのみ使用されます。
 
@@ -89,13 +89,13 @@ ms.locfileid: "65516497"
 
 内部ポインターの詳細については、「[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)」を参照してください。
 
-固定ポインターの詳細については、[方法: ポインターと配列を固定する](how-to-pin-pointers-and-arrays.md)」と「[方法: 固定ポインターと値型を宣言する](how-to-declare-pinning-pointers-and-value-types.md)」を参照してください。
+ポインターの固定の詳細については、「[方法: ポインターと配列を固定](how-to-pin-pointers-and-arrays.md)する」および「[方法: 固定ポインターと値型を宣言する](how-to-declare-pinning-pointers-and-value-types.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、**pin_ptr** を使用して、配列の最初の要素の位置を制限します。
 

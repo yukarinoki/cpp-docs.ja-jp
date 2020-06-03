@@ -1,5 +1,5 @@
 ---
-title: IThreadPoolConfig インターフェイス
+title: インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
 - IThreadPoolConfig
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: b3757f0e90479962273a8295e055c91fb02260f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4b90534fa89ef2aeffe4cd682d92efc16452487
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326357"
 ---
-# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig インターフェイス
+# <a name="ithreadpoolconfig-interface"></a>インターフェイス
 
-このインターフェイスは、スレッド プールを構成するためのメソッドを提供します。
+このインターフェイスには、スレッド プールを構成するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -38,22 +38,22 @@ __interface
 
 |||
 |-|-|
-|[GetSize](#getsize)|プールのスレッドの数を取得するには、このメソッドを呼び出します。|
-|[GetTimeout](#gettimeout)|スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時刻を取得するには、このメソッドを呼び出します。|
-|[SetSize](#setsize)|プールのスレッドの数を設定するには、このメソッドを呼び出します。|
-|[SetTimeout](#settimeout)|スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時間を設定するには、このメソッドを呼び出します。|
+|[GetSize](#getsize)|プール内のスレッドの数を取得します。|
+|[タイムアウトを取得します。](#gettimeout)|スレッド プールがスレッドのシャットダウンを待機する最大時間 (ミリ秒単位) を取得します。|
+|[セットサイズ](#setsize)|プール内のスレッドの数を設定します。|
+|[Settimeout](#settimeout)|スレッド プールがスレッドのシャットダウンを待機する最大時間をミリ秒単位で設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このインターフェイスによって実装されます[CThreadPool](../../atl/reference/cthreadpool-class.md)します。
+このインターフェイスは[、CThreadPool](../../atl/reference/cthreadpool-class.md)によって実装されます。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+## <a name="ithreadpoolconfiggetsize"></a><a name="getsize"></a>を設定します。
 
-プールのスレッドの数を取得するには、このメソッドを呼び出します。
+プール内のスレッドの数を取得します。
 
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
@@ -61,20 +61,20 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnNumThreads*<br/>
-[out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。
+*スレッド*<br/>
+[アウト]成功時にプール内のスレッド数を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
 
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+## <a name="ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>を設定します。
 
-スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時刻を取得するには、このメソッドを呼び出します。
+スレッド プールがスレッドのシャットダウンを待機する最大時間 (ミリ秒単位) を取得します。
 
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -82,20 +82,20 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwMaxWait*<br/>
-[out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。
+*を待つ*<br/>
+[アウト]成功時にスレッド プールがスレッドのシャットダウンを待機する最大時間 (ミリ秒単位) を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="example"></a>例
 
-参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+を参照してください[。](#getsize)
 
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+## <a name="ithreadpoolconfigsetsize"></a><a name="setsize"></a>を設定します。
 
-プールのスレッドの数を設定するには、このメソッドを呼び出します。
+プール内のスレッドの数を設定します。
 
 ```
 STDMETHOD(SetSize)int nNumThreads);
@@ -103,24 +103,24 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*nNumThreads*<br/>
-要求されたプール内のスレッド数。
+*nNumスレッド*<br/>
+プール内の要求されたスレッド数。
 
-場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
+*nNumThreads*が負の値の場合、その絶対値は、スレッドの合計数を取得するコンピューター内のプロセッサの数を乗算します。
 
-場合*nNumThreads*ゼロ、ATLS_DEFAULT_THREADSPERPROC はスレッドの合計数を取得するマシンのプロセッサ数が乗算されます。
+*nNumThreads*が 0 の場合、ATLS_DEFAULT_THREADSPERPROCは、スレッドの合計数を取得するコンピューター内のプロセッサの数を乗算されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="example"></a>例
 
-参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+を参照してください[。](#getsize)
 
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+## <a name="ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>を設定します。
 
-スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時間を設定するには、このメソッドを呼び出します。
+スレッド プールがスレッドのシャットダウンを待機する最大時間をミリ秒単位で設定します。
 
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -128,18 +128,18 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMaxWait*<br/>
-スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。
+*を待つ*<br/>
+スレッド プールがスレッドのシャットダウンを待機する要求された最大時間 (ミリ秒単位)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="example"></a>例
 
-参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+を参照してください[。](#getsize)
 
 ## <a name="see-also"></a>関連項目
 
 [クラス](../../atl/reference/atl-classes.md)<br/>
-[CThreadPool クラス](../../atl/reference/cthreadpool-class.md)
+[クラス](../../atl/reference/cthreadpool-class.md)

@@ -4,50 +4,50 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
-ms.translationtype: MT
+ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320961"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio での C++ ビルド システムの [フォルダーを開く] のサポート
 
 ::: moniker range="vs-2015"
 
-フォルダーを開く機能は、Visual Studio 2017 以降で使用できます。
+フォルダーを開く機能は Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Visual Studio 2017 以降で "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 この機能を使用すると、任意のサードパーティ製ビルドシステムを Visual Studio に統合できます。 [フォルダーを開く] に関する詳細については、「[プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions)」を参照してください。
+Visual Studio 2017 以降で "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 この機能を使用すると、任意のサードパーティのビルド システムを Visual Studio に統合できます。 [フォルダーを開く] に関する詳細については、「[プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions)」を参照してください。
 
 ## <a name="cmake-and-qt"></a>CMake と Qt
 
-CMake は、 C++デスクトップワークロードのコンポーネントとして VISUAL Studio IDE に統合されています。 CMake のワークフローは、この記事で説明されているワークフローと同一ではありません。 CMake を使用している場合は、「 [Visual Studio での cmake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。 CMake を使用して Qt プロジェクトをビルドすることもできます。または、visual Studio 2015 または Visual Studio 2017 用に[Qt Visual Studio 拡張機能](https://download.qt.io/development_releases/vsaddin/)を使用することもできます。
+CMake は、C++ デスクトップ ワークロードのコンポーネントとして Visual Studio IDE に統合されています。 CMake のワークフローは、この記事で説明されているワークフローと同一ではありません。 CMake を使用する場合は、「[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)」をご覧ください。 CMake を使用して Qt プロジェクトをビルドすることもできます。また、Visual Studio 2015 または Visual Studio 2017 で [Qt Visual Studio 拡張機能](https://download.qt.io/development_releases/vsaddin/)を使用できます。
 
-## <a name="other-build-systems"></a>その他のビルドシステム
+## <a name="other-build-systems"></a>その他のビルド システム
 
-メインメニューから直接サポートされていないビルドシステムまたはコンパイラツールセットを使用して Visual Studio IDE を使用するには、[ファイル |] を選択します。 **を開く |フォルダー**または**Ctrl + Shift + Alt + O**キーを押します。ソースコードファイルが格納されているフォルダーに移動します。 プロジェクトをビルドし、IntelliSense を構成し、デバッグパラメーターを設定するには、次の3つの JSON ファイルを追加します。
+メイン メニューから直接サポートされないビルド システムまたはコンパイラ ツールセットを使用して Visual Studio IDE を使用するには、 **[ファイル] > [開く] > [フォルダー]** を選択するか、**Ctrl + Shift + Alt + O** を押します。ソース コード ファイルが格納されているフォルダーに移動します。 プロジェクトをビルドし、IntelliSense を構成し、デバッグ パラメーターを設定するために、3 つの JSON ファイルを追加します。
 
 | | |
 |-|-|
 |CppProperties.json|参照のためのカスタム構成情報を指定します。 必要な場合は、ルート プロジェクト フォルダーにこのファイルを作成します。 (CMake プロジェクトで使用されません。)|
-|tasks.vs.json|カスタムビルドコマンドを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|
+|tasks.vs.json|カスタム ビルド コマンドを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|
 |launch.vs.json|デバッガーのコマンド ライン引数を指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[デバッグ設定と起動設定]** を使用します。|
 
-## <a name="configure-code-navigation-with-cpppropertiesjson"></a>CppProperties を使用したコードナビゲーションの構成
+## <a name="configure-code-navigation-with-cpppropertiesjson"></a>CppProperties.json を使用してコードのナビゲーションを構成する
 
-IntelliSense と参照の動作 ( **[定義へ移動**] など) を正しく動作させるには、Visual Studio で、使用しているコンパイラ、システムヘッダー、および追加のインクルードファイルが開かれているフォルダー (ワークスペースフォルダー) に直接存在しない場所を確認する必要があります。 構成を指定するには、メインツールバーのドロップダウンから **[構成の管理]** を選択します。
+IntelliSense と、 **[定義へ移動]** などの参照の動作を正しく動作させるために、Visual Studio は、使用しているコンパイラ、システム ヘッダーの場所、および開いているフォルダーに追加のインクルード ファイルが直接含まれていない場合のそれらのインクルード ファイルの場所 (ワークスペース フォルダー) を認識している必要があります。 構成を指定するには、メイン ツールバーのドロップダウンから **[構成の管理]** を選択できます。
 
-![構成の管理ドロップダウン](media/manage-configurations-dropdown.png)
+![[構成の管理] ドロップダウン](media/manage-configurations-dropdown.png)
 
 Visual Studio には、次の既定の構成が用意されています。
 
 ![既定の構成](media/default-configurations.png)
 
-たとえば、 **[x64-デバッグ]** を選択すると、Visual Studio によって、ルートプロジェクトフォルダーに*cppproperties. json*というファイルが作成されます。
+たとえば **[x64-Debug]** を選択すると、Visual Studio によって *CppProperties.json* という名前のファイルがルート プロジェクト フォルダーに作成されます。
 
 ```json
 {
@@ -73,14 +73,14 @@ Visual Studio には、次の既定の構成が用意されています。
 }
 ```
 
-この構成は、Visual Studio [x64 開発者コマンドプロンプト](building-on-the-command-line.md)の環境変数を継承します。 これらの変数の1つは `INCLUDE`、`${env.INCLUDE}` マクロを使用してここで参照できます。 `includePath` プロパティは、IntelliSense に必要なすべてのソースを検索する場所を Visual Studio に指示します。 この場合、"INCLUDE 環境変数で指定されたすべてのディレクトリと、現在の作業フォルダーツリー内のすべてのディレクトリを検索" と表示されます。 `name` プロパティは、ドロップダウンに表示される名前で、任意の名前を指定できます。 `defines` プロパティは、条件付きコンパイルブロックが検出されたときに IntelliSense にヒントを提供します。 `intelliSenseMode` プロパティは、コンパイラの種類に基づいていくつかの追加のヒントを提供します。 MSVC、GCC、Clang では、いくつかのオプションを使用できます。
+この構成では、Visual Studio の [x64 開発者コマンド プロンプト](building-on-the-command-line.md)の環境変数が継承されます。 これらの変数の 1 つが `INCLUDE` であり、`${env.INCLUDE}` マクロを使用してここでそれを参照できます。 `includePath` プロパティは、IntelliSense のために必要なすべてのソースを検索する場所を Visual Studio に通知します。 この場合、"INCLUDE 環境変数によって指定されたすべてのディレクトリと、現在の作業フォルダー ツリー内のすべてのディレクトリを検索" するように通知します。 `name` プロパティはドロップダウンに表示される名前であり、任意の名前を指定できます。 `defines` プロパティは、条件付きコンパイル ブロックが検出されたときに IntelliSense にヒントを提供します。 `intelliSenseMode` プロパティは、コンパイラの種類に基づいていくつかの追加のヒントを提供します。 MSVC、GCC、Clang 用のさまざまなオプションを使用できます。
 
 > [!NOTE]
-> Visual Studio が*Cppproperties. json*の設定を無視しているように思われる場合は、次のような例外を追加してみ*てください:* `!/CppProperties.json`。
+> Visual Studio で *CppProperties.json* の設定が無視されているように思われる場合は、次のように *.gitignore* ファイルに例外を追加してみてください: `!/CppProperties.json`
 
-## <a name="default-configuration-for-mingw-w64"></a>MinGW の既定の構成-mingw-w64
+## <a name="default-configuration-for-mingw-w64"></a>MinGW-w64 の既定の構成
 
-MinGW Mingw-w64 構成を追加すると、JSON は次のようになります。
+MinGW-W64 構成を追加すると、JSON は次のようになります。
 
 ```json
 {
@@ -109,21 +109,21 @@ MinGW Mingw-w64 構成を追加すると、JSON は次のようになります�
 }
 ```
 
-`environments` ブロックに注意してください。 環境変数と同様に動作するプロパティを定義します。このプロパティは、 *Cppproperties. json*ファイルだけでなく、その他の構成ファイルで*あるという* *タスク*でも使用できます。 `Mingw64` 構成は `mingw_w64` 環境を継承し、その `INCLUDE` プロパティを使用して `includePath`の値を指定します。 必要に応じて、この配列プロパティに他のパスを追加することができます。
+`environments` ブロックに注意してください。 これにより、環境変数と同様に動作するプロパティが定義され、それらを *CppProperties.json* ファイルだけでなく、他の構成ファイル(*task.vs.json* と *launch.vs.json*) でも使用できます。 `Mingw64` 構成では `mingw_w64` 環境が継承され、その `INCLUDE` プロパティを使用して `includePath` の値が指定されます。 必要に応じて、この配列プロパティに他のパスを追加できます。
 
-`intelliSenseMode` プロパティは、GCC に適した値に設定されます。 これらすべてのプロパティの詳細については、「 [Cppproperties スキーマリファレンス](cppproperties-schema-reference.md)」を参照してください。
+`intelliSenseMode` プロパティには、GCC に適した値が設定されます。 これらすべてのプロパティの詳細については、「[CppProperties スキーマ リファレンス](cppproperties-schema-reference.md)」を参照してください。
 
-すべてが正常に動作している場合は、型にマウスポインターを合わせると、GCC ヘッダーから IntelliSense が表示されます。
+すべてが正常に動作している場合は、型にマウス ポインターを合わせると、GCC ヘッダーから IntelliSense が表示されます。
 
 ![GCC IntelliSense](media/gcc-intellisense.png)
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense 診断を有効にする
 
-IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  > [オプション > **テキストエディター** ] > [ **C++ C/**  > 詳細設定] に移動し、ログを **[有効]** にする を **[** **true** **]** に設定します。 最初に、**ログ記録レベル**を5に設定し、フィルターを8に**ログ記録**するようにします。
+期待した IntelliSense が表示されない場合は、トラブルシューティングを実行できます。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **[true]** に設定にします。 最初は、 **[ログ記録レベル]** を [5] に設定し、 **[ログ フィルター]** を [8] に設定します。
 
 ![診断ログ記録](media/diagnostic-logging.png)
 
-出力は**出力ウィンドウ**にパイプ処理され、[*出力元C++の表示]* を選択すると表示されます。 出力には、IntelliSense が使用しようとしている実際のインクルードパスの一覧が含まれます。 パスが*Cppproperties. json*のパスと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データを含む*vs*サブフォルダーを削除してみてください。
+出力は **[出力] ウィンドウ**にパイプ処理され、 *[出力元の表示: Visual C++ ログ]* を選択したときに表示されます。 出力には、IntelliSense が使おうとしている実際のインクルード パスの一覧が含まれます。 パスが *CppProperties.json* のパスと一致していない場合は、フォルダーを閉じ、キャッシュされた参照データが含まれている *.vs* サブフォルダーを削除してみてください。
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>tasks.vs.json でビルド タスクを定義する
 
@@ -131,7 +131,7 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
 
 !["フォルダーを開く" のタスクの構成](media/configure-tasks.png)
 
-これにより、Visual Studio によってルートプロジェクトフォルダー内に作成される vs フォルダーに、*タスクと json*ファイルが作成されます (または開きます)。 このファイルで任意のタスクを定義し、**ソリューション エクスプローラー**のコンテキスト メニューから呼び出すことができます。 GCC の例を続行するために、次のスニペットは、 *g + + .exe*を呼び出してプロジェクトをビルドする単一のタスクとしての完全な*タスクと json*ファイルを示しています。 プロジェクトに*hello*という名前のファイルが1つ含まれているとします。
+これにより、Visual Studio によってルート プロジェクト フォルダー内に作成される .vs フォルダーに *tasks.vs.json* ファイルが作成されます (またはファイルが開きます)。 このファイルで任意のタスクを定義し、**ソリューション エクスプローラー**のコンテキスト メニューから呼び出すことができます。 GCC の例を進めるために、次のスニペット に完全な *tasks.vs.json* ファイルを示します。これには、*g++.exe* を呼び出してプロジェクトをビルドする単一のタスクが含まれています。 プロジェクトには *hello.cpp* という名前の単一のファイルが含まれているとします。
 
 ```json
 {
@@ -154,9 +154,9 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
 
 ```
 
-JSON ファイルは、 *vs*サブフォルダーに配置されます。 このフォルダーを表示するには、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** ボタンをクリックします。 このタスクを実行するには**ソリューションエクスプローラー**のルートノードを右クリックし、**ビルド** hello の順に選択します。 タスクが完了すると、**ソリューションエクスプローラー**に新しいファイルが表示さ*れます。*
+この JSON ファイルは、 *.vs* サブフォルダーに配置されます。 このフォルダーを表示するには、**ソリューション エクスプローラー**の上部にある **[すべてのファイルを表示]** ボタンをクリックします。 **ソリューション エクスプローラー**でルート ノードを右クリックし、 **[build hello]\(hello のビルド\)** を選択することで、このタスクを実行できます。 タスクが完了すると、**ソリューション エクスプローラー**に新しいファイル (*hello.exe*) が表示されます。
 
-さまざまな種類のタスクを定義できます。 次の例は、1つのタスクを定義する*tasks と json ファイル*を示しています。 `taskLabel` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 `command` プロパティは、COMSPEC 環境変数を参照します。これは、コンソールのパス (Windows の場合は*cmd.exe* ) を識別します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
+さまざまな種類のタスクを定義できます。 単一のタスクを定義する *tasks.vs.json ファイル*の例を次に示します。 `taskLabel` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 `command` プロパティは、コンソール (Windows では *cmd.exe*) のパスを示す COMSPEC 環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
 
 ```json
 {
@@ -173,13 +173,13 @@ JSON ファイルは、 *vs*サブフォルダーに配置されます。 この
 }
 ```
 
-*タスク*を保存した後、フォルダー内の *.cpp*ファイルを右クリックし、コンテキストメニューから **[Echo filename]** を選択すると、出力ウィンドウに表示されるファイル名を確認できます。
+*tasks.vs.json* を保存した後、フォルダー内の任意の *.cpp* ファイルを右クリックし、コンテキスト メニューから **[Echo filename]** を選んで、[出力] ウィンドウにファイル名が表示されることを確認します。
 
 詳細については、「[Tasks.vs.json schema reference](tasks-vs-json-schema-reference-cpp.md)」 (Tasks.vs.json スキーマ リファレンス) を参照してください。
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>launch.vs.json でデバッグ パラメーターを構成する
 
-プログラムのコマンドライン引数とデバッグ手順をカスタマイズするには、**ソリューションエクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグと起動の設定]** を選択します。 これにより、既存の*起動と json*ファイルが開きます。存在しない場合は、最小の起動設定のセットを含む新しいファイルが作成されます。 まず、どの種類のデバッグセッションを構成するかを選択します。 MinGw mingw-w64 プロジェクトをデバッグする場合は、 **MinGw/cygwin (gdb) に対して C/C++ Launch**を選択します。 これにより、 *gdb*を使用して既定値についての何らかの推測を行うための起動構成が作成されます。 これらの既定値の1つは `MINGW_PREFIX`です。 次に示すようにリテラルパスを置き換えることも、 *Cppproperties. json*で `MINGW_PREFIX` プロパティを定義することもできます。
+プログラムのコマンド ライン引数とデバッグ手順をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選びます。 これにより、既存の *launch.vs.json* ファイルが開きます。存在しない場合は、最小限の一連の起動設定を使用して新しいファイルが作成されます。 最初に、どの種類のデバッグ セッションを構成するかを選択します。 MinGw-w64 プロジェクトをデバッグする場合は、 **[C/C++ Launch for MinGW/Cygwin (gdb)]\(MinGW/Cygwin に対する C/C++ の起動 (gdb)\)** を選択します。 これにより、*gdb.exe* を使用するための、経験に基づく推測による既定値が設定された起動構成が作成されます。 これらの既定値の 1 つは `MINGW_PREFIX` です。 次に示すようにリテラル パスを置き換えることも、*CppProperties.json* に `MINGW_PREFIX` プロパティを定義することもできます。
 
 ```json
 {
@@ -205,13 +205,13 @@ JSON ファイルは、 *vs*サブフォルダーに配置されます。 この
 
 ![デバッガーを起動する](media/launch-debugger-gdb.png)
 
-**[初期化デバッガー]** ダイアログボックスが表示され、その後、プログラムを実行している外部コンソールウィンドウが表示されます。
+**[デバッガーの初期化]** ダイアログが表示された後、プログラムを実行している外部コンソール ウィンドウが表示されます。
 
-詳細については、「 [launch. json スキーマリファレンス](launch-vs-schema-reference-cpp.md)」を参照してください。
+詳細については、「[launch.vs.json スキーマ リファレンス](launch-vs-schema-reference-cpp.md)」を参照してください。
 
-## <a name="launching-other-executables"></a>その他の実行可能ファイルの起動
+## <a name="launching-other-executables"></a>他の実行可能ファイルの起動
 
-コンピューター上の実行可能ファイルの起動設定を定義できます。 次の例では、 *7za*を起動し、追加の引数を指定します。そのためには `args` JSON 配列に追加します。
+コンピューター上の任意の実行可能ファイルの起動設定を定義できます。 次の例では *7za* を起動し、追加の引数を `args` JSON 配列に追加することでそれらを指定しています。
 
 ```json
 {

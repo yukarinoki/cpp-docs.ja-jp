@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182020"
 ---
 # <a name="generic-interfaces-ccli"></a>ジェネリック インターフェイス (C++/CLI)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516367"
 
 ## <a name="remarks"></a>解説
 
-*属性*<br/>
+*attributes*<br/>
 (省略可能) 追加の宣言情報。 属性と属性クラスについては、「**属性**」を参照してください。
 
 *class-key*<br/>
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>例
 
-この例では、ジェネリック インターフェイス `IMyGenIface` と、`IMyGenIface` を特殊化する 2 つの非ジェネリック インターフェイス (`IMySpecializedInt` と `ImySpecializedString`) を宣言します。 次に、2 つの特殊化されたインターフェイスが、2 つのクラス (`MyIntClass` と `MyStringClass`) で実装されます。 この例では、ジェネリック インターフェイスを特殊化し、ジェネリック インターフェイスと非ジェネリック インターフェイスをインスタンス化し、インターフェイスの明示的に実装されたメンバーを呼び出します。
+この例では、ジェネリック インターフェイス `IMyGenIface` と、`IMySpecializedInt` を特殊化する 2 つの非ジェネリック インターフェイス (`ImySpecializedString` と `IMyGenIface`) を宣言します。 次に、2 つの特殊化されたインターフェイスが、2 つのクラス (`MyIntClass` と `MyStringClass`) で実装されます。 この例では、ジェネリック インターフェイスを特殊化し、ジェネリック インターフェイスと非ジェネリック インターフェイスをインスタンス化し、インターフェイスの明示的に実装されたメンバーを呼び出します。
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ジェネリック](generics-cpp-component-extensions.md)

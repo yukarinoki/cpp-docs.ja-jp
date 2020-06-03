@@ -2,12 +2,12 @@
 title: '移植のガイド: MFC Scribble'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627210"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076963"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植のガイド: MFC Scribble
 
@@ -19,11 +19,11 @@ ms.locfileid: "73627210"
 
 MFC Scribble は、多くの異なるリリースの Visual C++ に含まれている、よく知られているサンプルです。 これは、MFC の基本的な機能の一部を示す、簡単な描画アプリケーションです。 様々なバージョンを利用でき、マネージド コードとネイティブ コードの両方のバージョンがあります。 この例では、Scribble の旧バージョンが Visual Studio 2005 からのネイティブ コードで見つかり、Visual Studio 2017 で開いています。
 
-アップグレードを試みる前に、Windows デスクトップ ワークロードがインストールされていることを確認します。 Visual Studio インストーラー (vs_installer.exe) を開きます。 インストーラーを開くには、 **[ファイル]** 、 **[新しいプロジェクト]** の順に選択し、 **[Visual Studio インストーラーを開く]** が表示されるまで、インストールされたテンプレートを下方にスクロールするという方法があります。 インストーラーを開くと、使用可能なすべてのワークロードが表示されます。 **Windows デスクトップ** ワークロードに対するボックスが選択されていない場合は、それを選択し、ウィンドウの下部にある **[変更]** ボタンをクリックします。
+アップグレードを試みる前に、Windows デスクトップ ワークロードがインストールされていることを確認します。 Visual Studio インストーラー (vs_installer.exe) を開きます。 インストーラーを開くには、 **[ファイル]** 、 > [新しいプロジェクト] **の順に選択し、** [Visual Studio インストーラーを開く]** が表示されるまで、インストールされたテンプレートを下方にスクロールするという方法があります。 インストーラーを開くと、使用可能なすべてのワークロードが表示されます。 **Windows デスクトップ** ワークロードに対するボックスが選択されていない場合は、それを選択し、ウィンドウの下部にある **[変更]** ボタンをクリックします。
 
 次に、ソリューション全体と、その内容をすべてバックアップします。
 
-最後に、最新バージョンの Visual Studio でソリューションを開き、ウィザードでプロジェクトを変換できるようにします。 
+最後に、最新バージョンの Visual Studio でソリューションを開き、ウィザードでプロジェクトを変換できるようにします。
 
 また、ウィザードを使用してプロジェクトをアップグレードする代わりに、コマンドラインで `/Upgrade` オプションを使用して devenv を実行できることに注意してください。 「[/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)」を参照してください。 これは、多数のプロジェクトのアップグレード プロセスを自動化するのに役に立ちます。
 
@@ -73,7 +73,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 このマクロで指定する Windows のバージョンで利用できない Windows API のパーツをコードが使用している場合には、コンパイラ エラーとして表示されます。 Scribble コードの場合は、エラーはありません。
 
-### <a name="step-3-testing-and-debugging"></a>手順 3. テストおよびデバッグを行う
+### <a name="step-3-testing-and-debugging"></a>手順 3. テストとデバッグ
 
 テスト スイートはないため、アプリを起動して、UI から手動で機能をテストしました。 問題は検出されませんでした。
 
@@ -85,7 +85,7 @@ Visual Studio 2017 に移行したので、C++ の新機能を活用するため
 
 Scribble は小規模で単純な Windows デスクトップ アプリケーションであり、変換は難しくありません。 多くの小規模で単純なアプリケーションは、新しいバージョンに簡単に変換できます。  コードの行数が多く、エンジニアリングの最新の標準になっていない可能性がある古いレガシー コードや、複数のプロジェクトとライブラリ、カスタム ビルド アプリを持つ複雑なアプリケーションや、複雑なスクリプトを作成して自動化されていビルドでは、アップグレードにもう少し時間がかかります。 [次の例](../porting/porting-guide-com-spy.md)の COM Spy と呼ばれる ATL/COM アプリケーションに進みます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: COM Spy](../porting/porting-guide-com-spy.md)

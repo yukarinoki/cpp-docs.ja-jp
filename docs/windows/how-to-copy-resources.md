@@ -1,5 +1,5 @@
 ---
-title: '方法: リソースの管理C++()'
+title: '方法: リソースを管理するC++()'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215216"
 ---
-# <a name="how-to-manage-resources-c"></a>方法: リソースの管理C++()
+# <a name="how-to-manage-resources-c"></a>方法: リソースを管理するC++()
 
 ## <a name="copy-and-edit-resources"></a>リソースのコピーと編集
 
@@ -46,7 +46,7 @@ ms.locfileid: "70740662"
 既存のリソースまたは実行可能ファイルから現在のリソースファイルにリソースを簡単にコピーできます。 リソースをコピーするには、リソースが含まれている両方のファイルを同時に開き、1つのファイルから別のファイルに項目をドラッグします。2つのファイルをコピーして貼り付けることもできます。 このメソッドは、リソーススクリプト (.rc) ファイルとリソーステンプレート (.rct) ファイル、および実行可能 (.exe) ファイルとして機能します。
 
 > [!NOTE]
-> ビジュアルC++には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については[、「クリップアート:共通リソース](https://github.com/Microsoft/VCSamples)。
+> ビジュアルC++には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については、「[クリップアート: 共通リソース](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)」を参照してください。
 
 プロジェクト (**リソースビュー**) 内のリソースファイルと、ドキュメントウィンドウでスタンドアロンの .rc ファイルの間でドラッグアンドドロップ、コピー、切り取り、貼り付けを行うことはできません。 これは、以前のバージョンの製品で行うことができます。 プロジェクトの外部で開かれている .rc ファイル間でドラッグアンドドロップのメソッドのみを使用します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "70740662"
 
 - リソースの条件とは、リソースの特定のコピーが使用される条件を識別する定義済みのシンボルです。
 
-リソースの言語と条件は、**ワークスペース**ウィンドウのリソース名の後にかっこで囲まれて表示されます。 ここで、と`IDD_AboutBox`いう名前`Finnish`のリソースは言語として`XX33`を使用し、その条件は次のようになります。
+リソースの言語と条件は、**ワークスペース**ウィンドウのリソース名の後にかっこで囲まれて表示されます。 ここで、`IDD_AboutBox` という名前のリソースは言語として `Finnish` を使用し、その条件は `XX33`ます。
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -126,8 +126,8 @@ IDD_AboutBox (Finnish - XX33)
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[方法: リソースの作成](../windows/how-to-create-a-resource-script-file.md)<br/>
-[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[方法: リソースを作成する](../windows/how-to-create-a-resource-script-file.md)<br/>
+[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)

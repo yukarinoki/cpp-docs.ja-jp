@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326288"
 ---
 # <a name="c-comments"></a>C コメント
 
@@ -61,13 +61,13 @@ printf( "Hello\n" );  /* Comments can go here */
 
 **Microsoft 固有の仕様**
 
-Microsoft コンパイラは、2 つのスラッシュ (__//__) で始まる 1 行コメントもサポートします。 /Za (ANSI 規格) を使用してコンパイルすると、このコメントでエラーが発生します。 このコメントは次の行に続けることはできません。
+Microsoft コンパイラは、2 つのスラッシュ ( __//__ ) で始まる 1 行コメントもサポートします。 /Za (ANSI 規格) を使用してコンパイルすると、このコメントでエラーが発生します。 このコメントは次の行に続けることはできません。
 
 ```C
 // This is a valid comment
 ```
 
-2 つのスラッシュ (__//__) で始まるコメントは、エスケープ文字が前に付いていない次の改行文字で終了します。 次の例では、改行文字の前にバックスラッシュ (**\\**) が付いて、"エスケープ シーケンス" が作成されています。 このエスケープ シーケンスによって、コンパイラは次の行を前の行の一部として処理します  (詳細については、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください)。
+2 つのスラッシュ ( __//__ ) で始まるコメントは、エスケープ文字が前に付いていない次の改行文字で終了します。 次の例では、改行文字の前にバックスラッシュ ( **\\** ) が付いて、"エスケープ シーケンス" が作成されています。 このエスケープ シーケンスによって、コンパイラは次の行を前の行の一部として処理します  (詳細については、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください)。
 
 ```C
 // my comment \

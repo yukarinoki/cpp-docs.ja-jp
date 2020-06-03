@@ -1,11 +1,14 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __wcserror_s
 - _strerror_s
 - _wcserror_s
 - strerror_s
+- _o__strerror_s
+- _o__wcserror_s
+- _o_strerror_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +21,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,16 +46,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625809"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918395"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
-システムエラーメッセージ (**strerror_s**、 **_wcserror_s**) を取得するか、ユーザーが指定したエラーメッセージ ( **_strerror_s**、 **__wcserror_s**) を出力します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) です。
+システムエラーメッセージ (**strerror_s**、 **_wcserror_s**) を取得するか、ユーザーが指定したエラーメッセージ (**_strerror_s**、 **__wcserror_s**) を出力します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -100,7 +104,7 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 エラー文字列を格納するバッファー。
 
 *numberOfElements*<br/>
@@ -118,14 +122,14 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*strErrMsg*|*バッファー*の内容|
+|*格納*|*numberOfElements*|*strErrMsg*|*バッファー*の内容|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|任意|任意|N/A|
-|任意|0|任意|変更されない|
+|**空白**|any|any|該当なし|
+|any|0|any|変更されない|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s**はエラー番号を受け取りません。**errno**の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**も実際にはメッセージを出力しません。そのため、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)のような出力関数を呼び出す必要があります。
+**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s**はエラー番号を受け取りません。**errno**の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**でも、実際にはメッセージを出力しません。そのため、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)などの出力関数を呼び出す必要があります。
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -135,7 +139,7 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-*StrErrMsg*が**NULL**の場合、 **_strerror_s**は、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージを含む文字列を*buffer*に返します。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**でない場合、 **_strerror_s**は、文字列メッセージ、コロン、空白、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、および改行を含む*バッファー*内の文字列を返します。記号. 文字列のメッセージの長さは、最大で 94 文字です。
+*StrErrMsg*が**NULL**の場合、 **_strerror_s**は、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージを含む*バッファー*内の文字列を返します。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**でない場合、 **_strerror_s**は、文字列メッセージ、コロン、空白、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、および改行文字を含む*バッファー*内の文字列を返します。 文字列のメッセージの長さは、最大で 94 文字です。
 
 これらの関数は、長さが*Numberofelements* -1 を超えた場合にエラーメッセージを切り捨てます。 *バッファー*内の結果の文字列は、常に null で終わります。
 
@@ -145,11 +149,13 @@ if (( _access( "datafile",2 )) == -1 )
 
 これらの関数では、パラメーターの検証が行われます。 Buffer が**NULL**の場合、または size パラメーターが0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-**_strerror_s**、 **_wcserror_s**、および **__wcserror_s**は、ANSI 定義の一部ではなく、Microsoft による拡張機能です。 移植性が必要な場合は使用しないでください。ANSI 互換の場合は、代わりに**strerror_s**を使用してください。
+**_strerror_s**、 **_wcserror_s**、および **__wcserror_s**は、ANSI 定義の一部ではありませんが、Microsoft の拡張機能です。 移植性が必要な場合は使用しないでください。ANSI 互換の場合は、代わりに**strerror_s**を使用します。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -157,9 +163,9 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strerror_s**、 **_strerror_s**|\<string.h>|
 |**_wcserror_s**、 **__wcserror_s**|\<string.h> または \<wchar.h>|

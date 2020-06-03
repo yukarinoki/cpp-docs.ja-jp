@@ -1,6 +1,6 @@
 ---
-title: コンパイルするには c++/cli プログラムを CLR を対象とします。
-description: 使用して、MicrosoftC++ネイティブ プログラムと接続できるライブラリを作成するC++コードや .NET プログラムです。
+title: CLR をターゲットにした C++/CLI プログラムをコンパイルする
+description: Microsoft C++ を使用して、ネイティブ C++ コードと .NET プログラムを接続できるプログラムとライブラリを作成します。
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0d661d9e77211a0e49f8695ad713b607377a236a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371809"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: コンパイルするには c++/cli プログラムを Visual Studio で CLR を対象とします。
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: Visual Studio で CLR を対象とする C++/CLI プログラムをコンパイルする
 
-使用してC++/作成できる CLIC++ネイティブと .NET クラスを使用するプログラムC++型。 C++/CLI ネイティブをラップする Dll およびコンソール アプリケーションで使用されるC++コードし、.NET プログラムからアクセスできるようにします。 .NET ベースの Windows ユーザー インターフェイスを作成するには、使用C#または Visual Basic です。 
+C++/CLI を使用すると、ネイティブ C++ 型だけでなく.NET クラスを使用する C++ プログラムも作成できます。 C++/CLI は、コンソール アプリケーションおよびネイティブ C++ コードをラップし、.NET プログラムからアクセスできるようにする DLL で使用することを目的としています。 NET に基づいて Windows ユーザー インターフェイスを作成するには、C# または Visual Basic を使用します。
 
-この手順では、C++ プログラムを入力するか、サンプル プログラムのいずれかを使用します。 この手順で使用するサンプル プログラムでは、textfile.txt という名前のテキスト ファイルを作成し、プロジェクト ディレクトリに保存します。
+この手順では、独自の C++ プログラムを入力するか、サンプル プログラムのいずれかを使用します。 この手順で使用するサンプル プログラムでは、textfile.txt という名前のテキスト ファイルを作成し、プロジェクト ディレクトリに保存します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - C++ 言語の基本の理解。
-- Visual Studio 2017 以降では、 C++CLI のサポートは、オプションのコンポーネント/。 これをインストールするには、開く、 **Visual Studio インストーラー** Windows [スタート] メニューから。 確認します、**によるデスクトップ開発C++** タイルがチェックされ、し、 **(省略可能)** コンポーネント セクションもチェック **C++CLI サポート**します。
+- Visual Studio 2017 以降では、C++/CLI のサポートはオプションのコンポーネントです。 インストールするには、Windows の [スタート] メニューから**Visual Studio インストーラー**を開きます。 **[C++ を使用したデスクトップ開発**] タイルがオンになっていることを確認し、[**オプション**コンポーネント] セクションで **[C++/CLI サポート**] もオンにします。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
 
-次の手順は、使用して Visual Studio のバージョンによって異なります。 左上隅の [バージョン] セレクターのこのページが正しく設定することを確認します。
+次の手順は、使っている Visual Studio のバージョンによって異なります。 Visual Studio の優先バージョンのドキュメントを表示するには、**バージョン**セレクター コントロールを使用します。 このページの目次の上部に表示されます。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2019
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>C++/CLI プロジェクトを作成するには、Visual Studio 2019
 
-1. **ソリューション エクスプ ローラー**、開く上部を右クリックし、**新しいプロジェクトを作成** ダイアログ ボックス。
+1. **ソリューション エクスプローラー**で、上部を右クリックして [**新しいプロジェクトの作成**] ダイアログ ボックスを開きます。
 
-1. ダイアログ ボックスの上部にある次のように入力します。 **CLR** 、検索ボックスをクリック**CLR 空プロジェクト**結果リストから。 
+1. ダイアログの上部で、検索ボックスに **「CLR」** と入力し、結果リストから **[CLR 空のプロジェクト**] を選択します。
 
-1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2017
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>C++/CLI プロジェクトを作成するには、Visual Studio 2017
 
 1. 新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
@@ -58,7 +58,7 @@ ms.locfileid: "65221805"
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2015
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Visual Studio 2015 で C++/CLI プロジェクトを作成するには
 
 1. 新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
@@ -70,27 +70,27 @@ ms.locfileid: "65221805"
 
 ::: moniker-end
 
-## <a name="add-a-source-file"></a>ソース ファイルを追加します。
+## <a name="add-a-source-file"></a>ソース ファイルを追加する
 
 1. **ソリューション エクスプローラー**が表示されていない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。
 
 1. プロジェクトに新しいソース ファイルを追加します。
 
-   - **ソリューション エクスプローラー**で、**[ソース ファイル]** フォルダーを右クリックし、**[追加]** をポイントして、**[新しい項目]** をクリックします。
+   - **ソリューション エクスプローラ**で [**ソース ファイル]** フォルダを右クリックし、[**追加**] をポイントして、[**新しい項目**] をクリックします。
 
    - **[C++ ファイル (.cpp)]** をクリックしてファイル名を入力し、**[追加]** をクリックします。
 
-   **ソリューション エクスプローラー**の**ソース ファイル** フォルダーに **.cpp** ファイルが表示されます。また、タブ付きウィンドウが表示され、ここでそのファイル内に含めるコードを入力します。
+   **.cpp**ファイルは**ソリューション エクスプローラー**の **[ソース ファイル]** フォルダーに表示され、そのファイルに必要なコードを入力するタブ付きウィンドウが表示されます。
 
 1. Visual Studio で新しく作成されたタブをクリックして、有効な Visual C++ プログラムを入力するか、サンプル プログラムのいずれかをコピーして貼り付けます。
 
-   たとえば、[テキスト ファイルを作成する方法 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md)のサンプル プログラム (プログラミング ガイドの「**ファイル処理と I/O**」ノード内) を使用できます。
+   たとえば、(プログラミング ガイドの**ファイル処理と I/O** ノード内の) 「[方法: テキスト ファイルを記述する (C++/CLI)](how-to-write-a-text-file-cpp-cli.md)」サンプル プログラムを使用できます。
 
    サンプル プログラムを使用する場合は、.NET オブジェクトを作成するときに、`new` の代わりに `gcnew`キーワードを使用することと、`gcnew` がポインター (`*`) ではなくハンドル (`^`) を返すことに注意してください。
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   詳細についてはC++/CLI 構文を参照してください[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)します。
+   C++/CLI 構文の詳細については、「[ランタイム プラットフォーム用のコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 

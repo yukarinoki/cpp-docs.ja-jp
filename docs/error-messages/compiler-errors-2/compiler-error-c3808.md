@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e854764dc3f8d3ede79965302b62055b91df0a4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165627"
 ---
 # <a name="compiler-error-c3808"></a>コンパイラ エラー C3808
 
-> '*型*': ComImport 属性を持つクラス メンバーを定義できません'*メンバー*'、のみを抽象化または dllimport 関数が許可されています。
+> '*type*': comimport 属性を持つクラスはメンバー '*member*' を定義できません。 abstract 関数または dllimport 関数のみを使用できます
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-派生した型<xref:System.Runtime.InteropServices.ComImportAttribute>は定義できません*メンバー*します。
+<xref:System.Runtime.InteropServices.ComImportAttribute> から派生した型で*メンバー*を定義することはできません。
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 ## <a name="example"></a>例
 

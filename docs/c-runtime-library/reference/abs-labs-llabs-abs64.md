@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171412"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -76,13 +76,13 @@ float abs( float n );   // C++ only
 
 **Abs**、 **labs**、 **llabs** 、および **_abs64**関数は、パラメーター *n*の絶対値を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 でC++はオーバーロードが可能であるため、 **long** **、long** **long**、 **float**、 **double**、および**long** **double**値を取得して返す**abs**のオーバーロードを呼び出すことができます。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムでは、 **abs**は常に**int**を受け取り、返します。
 
 **Microsoft 固有**: 任意の整数型を使用して表すことができる負の整数の範囲は、その型を使用して表すことができる正の整数の範囲より大きいため、変換できないこれらの関数に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数は引数の値を変更せずに返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 これは、 **abs**関数を使用して正の値を保証することができないことを意味します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|-----------------------|---------------------------|
@@ -91,7 +91,7 @@ float abs( float n );   // C++ only
 
 のC++オーバーロードされたバージョンの**abs**を使用するには、\<cmath > ヘッダーを含める必要があります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次のプログラムでは、複数の数値の絶対値を計算して表示します。
 

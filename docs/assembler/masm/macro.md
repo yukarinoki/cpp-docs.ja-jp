@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 23c6b0aefae856da449da574669e8475122c7556
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 8eb0afdf73270c3e741f43b2e1fba02fe965846c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312951"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076148"
 ---
 # <a name="macro"></a>MACRO
 
@@ -25,14 +25,13 @@ ms.locfileid: "75312951"
 > ⟦**Exitm**⟧ \
 > **Endm** ⟦*value*⟧
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 マクロ関数は、呼び出し元のステートメントに*値*を返します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブリファレンス](directives-reference.md)\
 [GOTO (MASM)](goto-masm.md)\
 [Endm](endm.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)
-

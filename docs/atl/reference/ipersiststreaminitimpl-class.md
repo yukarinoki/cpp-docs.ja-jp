@@ -1,5 +1,5 @@
 ---
-title: IPersistStreamInitImpl クラス
+title: クラスを提供します。
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStreamInitImpl
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: 7a350a4349cb825795a18dd860a2482952b04dcb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0d6ac4639ac0cfb97416ca80b7a2ec3903d7b8e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496150"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326460"
 ---
-# <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl クラス
+# <a name="ipersiststreaminitimpl-class"></a>クラスを提供します。
 
-このクラスは`IUnknown`を実装し、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスの既定の実装を提供します。
+このクラスは、`IUnknown`[インターフェイス](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)の既定の実装を実装し、提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`IPersistStreamInitImpl`派生したクラス。
+から派生したクラス`IPersistStreamInitImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -48,18 +48,18 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IPersistStreamInitImpl:: GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|
-|[IPersistStreamInitImpl:: GetSizeMax](#getsizemax)|オブジェクトのデータを保存するために必要なストリームのサイズを取得します。 ATL 実装は E_NOTIMPL を返します。|
-|[IPersistStreamInitImpl:: InitNew](#initnew)|新しく作成されたオブジェクトを初期化します。|
-|[IPersistStreamInitImpl:: IsDirty](#isdirty)|オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。|
-|[IPersistStreamInitImpl::Load](#load)|指定したストリームからオブジェクトのプロパティを読み込みます。|
-|[IPersistStreamInitImpl:: Save](#save)|オブジェクトのプロパティを指定したストリームに保存します。|
+|[イタシンストリームイニトインプラクティプル::GetクラスID](#getclassid)|オブジェクトの CLSID を取得します。|
+|[イティプルストリームイニトインプラクティプル::ゲットサイズマックス](#getsizemax)|オブジェクトのデータを保存するために必要なストリームのサイズを取得します。 ATL の実装はE_NOTIMPL返します。|
+|[イティシンティストリームイニトインプラクティプル::イニトニュー](#initnew)|新しく作成されたオブジェクトを初期化します。|
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|オブジェクトのデータが最後に保存されてから変更されたかどうかをチェックします。|
+|[IPersistStreamInitImpl::ロード](#load)|指定したストリームからオブジェクトのプロパティを読み込みます。|
+|[IPersistStreamInitImpl::保存](#save)|オブジェクトのプロパティを指定したストリームに保存します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスを使用すると、クライアントは、オブジェクトがその永続データを読み込んで1つのストリームに保存するように要求できます。 クラス`IPersistStreamInitImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
+[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスを使用すると、クライアントは、オブジェクトを読み込んで、その永続的なデータを単一のストリームに保存するように要求できます。 Class`IPersistStreamInitImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグ ビルドでダンプ デバイスに情報を送信することによって実装します。
 
-**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,9 +69,9 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStreamInitImpl:: GetClassID
+## <a name="ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>イタシンストリームイニトインプラクティプル::GetクラスID
 
 オブジェクトの CLSID を取得します。
 
@@ -79,11 +79,11 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 STDMETHOD(GetClassID)(CLSID* pClassID);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 」を参照してください。
+「Windows SDK[の IPersist::GetClassID」](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid)を参照してください。
 
-##  <a name="getsizemax"></a>IPersistStreamInitImpl:: GetSizeMax
+## <a name="ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>イティプルストリームイニトインプラクティプル::ゲットサイズマックス
 
 オブジェクトのデータを保存するために必要なストリームのサイズを取得します。
 
@@ -95,11 +95,11 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 
 E_NOTIMPL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IPersistStreamInit:: GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) 」を参照してください。
+Windows SDK の[「IPersistStreamInit::GetSizeMax」](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax)を参照してください。
 
-##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
+## <a name="ipersiststreaminitimplinitnew"></a><a name="initnew"></a>イティシンティストリームイニトインプラクティプル::イニトニュー
 
 新しく作成されたオブジェクトを初期化します。
 
@@ -107,23 +107,23 @@ Windows SDK の「 [IPersistStreamInit:: GetSizeMax](/windows/win32/api/ocidl/nf
 STDMETHOD(InitNew)();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) 」を参照してください。
+Windows SDK の[「IPersistStreamInit::InitNew」](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew)を参照してください。
 
-##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
+## <a name="ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty
 
-オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。
+オブジェクトのデータが最後に保存されてから変更されたかどうかをチェックします。
 
 ```
 STDMETHOD(IsDirty)();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IPersistStreamInit:: IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) 」を参照してください。
+Windows SDK の[「IPersistStreamInit::IsDirty」](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty)を参照してください。
 
-##  <a name="load"></a>  IPersistStreamInitImpl::Load
+## <a name="ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::ロード
 
 指定したストリームからオブジェクトのプロパティを読み込みます。
 
@@ -131,13 +131,13 @@ Windows SDK の「 [IPersistStreamInit:: IsDirty](/windows/win32/api/ocidl/nf-oc
 STDMETHOD(Load)(LPSTREAM pStm);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ATL では、オブジェクトのプロパティマップを使用してこの情報を取得します。
+ATL は、オブジェクトのプロパティ マップを使用して、この情報を取得します。
 
-Windows SDK の「 [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) 」を参照してください。
+「Windows SDK で[の IPersistStreamInit::読み込み」](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load)を参照してください。
 
-##  <a name="save"></a>IPersistStreamInitImpl:: Save
+## <a name="ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::保存
 
 オブジェクトのプロパティを指定したストリームに保存します。
 
@@ -145,11 +145,11 @@ Windows SDK の「 [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ATL では、オブジェクトのプロパティマップを使用してこの情報を格納します。
+ATL は、オブジェクトのプロパティ マップを使用してこの情報を格納します。
 
-Windows SDK の「 [IPersistStreamInit:: Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) 」を参照してください。
+「Windows SDK で[の保存](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

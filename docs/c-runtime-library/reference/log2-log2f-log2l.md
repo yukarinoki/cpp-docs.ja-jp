@@ -1,10 +1,13 @@
 ---
 title: log2、log2f、log2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log2
 - log2l
 - log2f
+- _o_log2
+- _o_log2f
+- _o_log2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,17 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953169"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911415"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -68,21 +72,23 @@ long double log2l(
 
 それ以外の場合は、次の値のいずれかを返します。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
-|*x* < 0|NaN|
+|*x* < 0|(NaN)|
 |*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
-|NaN|NaN|
-|ドメイン エラー|NaN|
+|(NaN)|(NaN)|
+|ドメイン エラー|(NaN)|
 |極エラー|-HUGE_VAL、-HUGE_VALF、または -HUGE_VALL|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 X が整数の場合、この関数は基本的に、 *x*の最上位1ビットの0から始まるインデックスを返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -90,7 +96,7 @@ X が整数の場合、この関数は基本的に、 *x*の最上位1ビット�
 |--------------|--------------|------------------|
 |**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

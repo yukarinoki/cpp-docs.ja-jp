@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457593"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376923"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 列挙型
 
-## <a name="memory_order_enum"></a>  memory_order 列挙型
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>列挙型memory_order
 
 メモリ位置に対する同期操作のシンボル名を提供します。 これらの操作は、1 つのスレッドの割り当てが別のスレッドにおいて表示される方法に影響します。
 
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>関連項目
 
-[\<atomic>](../standard-library/atomic.md)
+[\<原子>](../standard-library/atomic.md)

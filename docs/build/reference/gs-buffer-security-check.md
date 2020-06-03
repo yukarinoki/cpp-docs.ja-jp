@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
-- /GS
 helpviewer_keywords:
 - buffers [C++], buffer overruns
 - buffer overruns, compiler /GS switch
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292173"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439569"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (バッファーのセキュリティ チェック)
 
@@ -31,23 +30,23 @@ ms.locfileid: "62292173"
 /GS[-]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**/GS**が既定でオンです。 アプリケーションにセキュリティを損なうがない場合を使用して、 **/GS-** します。 バッファー オーバーランの検出を抑制する詳細については、次を参照してください。 [safebuffers](../../cpp/safebuffers.md)します。
+**/Gs**は既定でオンになっています。 アプリケーションにセキュリティ上の危険が生じることが予想される場合は、 **/GS-** を使用します。 バッファーオーバーランの検出を抑制する方法の詳細については、「 [safebuffers](../../cpp/safebuffers.md)」を参照してください。
 
 ## <a name="security-checks"></a>セキュリティ チェック
 
-バッファー オーバーランの問題を起こしやすいとコンパイラが判断した関数には、スタックのリターン アドレスの前に記憶領域が割り当てられます。 関数のエントリを割り当てられた領域が読み込まれて、*セキュリティ クッキー*モジュールの読み込み時に 1 回計算するがします。 関数の実行の終了時に、および 64 ビット オペレーティング システムでのフレームのアンワインド時に、ヘルパー関数が呼び出されてクッキーの値が変更されていないかどうかが確認されます。 異なる値は、スタックの上書きが発生した可能性があることを示します。 異なる値が検出された場合、プロセスは終了します。
+バッファー オーバーランの問題を起こしやすいとコンパイラが判断した関数には、スタックのリターン アドレスの前に記憶領域が割り当てられます。 関数の入力時に、割り当てられた領域には、モジュールの読み込み時に1回計算された*セキュリティクッキー*が読み込まれます。 関数の実行の終了時に、および 64 ビット オペレーティング システムでのフレームのアンワインド時に、ヘルパー関数が呼び出されてクッキーの値が変更されていないかどうかが確認されます。 異なる値は、スタックの上書きが発生した可能性があることを示します。 異なる値が検出された場合、プロセスは終了します。
 
 ## <a name="gs-buffers"></a>GS バッファー
 
-バッファー オーバーラン セキュリティ チェックが実行される、 *GS バッファー*します。 GS バッファーは、次のいずれかを使用できます。
+バッファーオーバーランのセキュリティチェックは*GS バッファー*で実行されます。 GS バッファーは、次のいずれかを使用できます。
 
 - 4 バイトを超える配列で、3 つ以上の要素を持ち、要素型がポインター型ではない配列。
 
 - サイズが 8 バイトを超え、ポインターを含まないデータ構造体。
 
-- 使用して割り当てられたバッファー、 [_alloca](../../c-runtime-library/reference/alloca.md)関数。
+- [_Alloca](../../c-runtime-library/reference/alloca.md)関数を使用して割り当てられたバッファー。
 
 - GS バッファーを含むクラスまたは構造体。
 
@@ -72,11 +71,11 @@ struct { int a; int b; };
 
 ## <a name="initialize-the-security-cookie"></a>セキュリティ クッキーの初期化
 
-**/GS**コンパイラ オプションは、cookie を使用する任意の関数の実行前に、セキュリティ クッキーが初期化されることが必要です。 セキュリティ クッキーは、EXE または DLL にエントリをすぐに初期化する必要があります。 既定の VCRuntime エントリ ポイントを使用する場合に自動的にこれは、: mainCRTStartup、wmainCRTStartup、WinMainCRTStartup、wWinMainCRTStartup、または _DllMainCRTStartup します。 呼び出して、セキュリティ クッキーを手動で初期化する必要があります、別のエントリ ポイントを使用する場合 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) です。
+**/Gs**コンパイラオプションでは、cookie を使用する関数が実行される前に、セキュリティクッキーを初期化する必要があります。 セキュリティクッキーは、EXE または DLL のエントリですぐに初期化する必要があります。 これは、既定の VCRuntime エントリポイント mainCRTStartup、wmainCRTStartup、WinMainCRTStartup、wWinMainCRTStartup、または _DllMainCRTStartup を使用した場合に自動的に実行されます。 別のエントリポイントを使用する場合は、 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)を呼び出すことによって、セキュリティ cookie を手動で初期化する必要があります。
 
 ## <a name="what-is-protected"></a>保護される対象
 
-**/GS**コンパイラ オプションは、次の項目を保護します。
+**/Gs**コンパイラオプションは、次の項目を保護します。
 
 - 関数呼び出しの戻りアドレス。
 
@@ -84,11 +83,11 @@ struct { int a; int b; };
 
 - Vulnerable 関数パラメーター。
 
-すべてのプラットフォームで **/GS**リターン アドレスへのバッファー オーバーランの検出を試みます。 バッファー オーバーランは、関数呼び出しのリターン アドレスをスタックに格納する呼び出し規則を使用する、x86、x64 などのプラットフォームでの方が簡単に攻撃されます。
+すべてのプラットフォームで、 **/gs**は、リターンアドレスへのバッファーオーバーランの検出を試みます。 バッファー オーバーランは、関数呼び出しのリターン アドレスをスタックに格納する呼び出し規則を使用する、x86、x64 などのプラットフォームでの方が簡単に攻撃されます。
 
 x86 で、関数が例外ハンドラーを使用する場合、コンパイラはセキュリティ クッキーを挿入して、例外ハンドラーのアドレスを保護します。 このクッキーは、フレームのアンワインド時にチェックされます。
 
-**/GS**保護*脆弱なパラメーター*関数に渡すことです。 脆弱なパラメーターとは、ポインター、C++ 参照、内部にポインターを含む C 構造体 (C++ POD 型)、または GS バッファーです。
+**/Gs**は、関数に渡される*脆弱なパラメーター*を保護します。 脆弱なパラメーターとは、ポインター、C++ 参照、内部にポインターを含む C 構造体 (C++ POD 型)、または GS バッファーです。
 
 脆弱なパラメーターは、クッキーおよびローカル変数より前に割り当てられます。 バッファー オーバーランによって、これらのパラメーターが上書きされることがあります。 また、これらのパラメーターを使用する関数のコードでは、関数から制御が戻る前、およびセキュリティ チェックが実行される前に、攻撃を受ける可能性があります。 この危険を最小化するために、コンパイラは、関数プロローグで、脆弱なパラメーターのコピーを作成し、任意のバッファーのストレージ領域の下に配置します。
 
@@ -96,11 +95,11 @@ x86 で、関数が例外ハンドラーを使用する場合、コンパイラ�
 
 - GS バッファーを含まない関数の場合。
 
-- 最適化 ([/O オプション](o-options-optimize-code.md)) 有効ではありません。
+- 最適化 ([/o オプション](o-options-optimize-code.md)) が有効になっていません。
 
 - 可変個引数リスト (...) を持つ関数の場合。
 
-- マークされている関数[naked](../../cpp/naked-cpp.md)します。
+- "[生](../../cpp/naked-cpp.md)" とマークされている関数。
 
 - 最初のステートメントにインライン アセンブラー コードを含む関数の場合。
 
@@ -108,25 +107,25 @@ x86 で、関数が例外ハンドラーを使用する場合、コンパイラ�
 
 ## <a name="what-is-not-protected"></a>保護されない対象
 
-**/GS**コンパイラ オプションはすべてのバッファー オーバーラン セキュリティ攻撃から保護されません。 たとえば、バッファーと vtable が同じオブジェクトにある場合、バッファー オーバーランによって vtable が破損する可能性があります。
+**/Gs**コンパイラオプションでは、すべてのバッファーオーバーランセキュリティ攻撃を防ぐことはできません。 たとえば、バッファーと vtable が同じオブジェクトにある場合、バッファー オーバーランによって vtable が破損する可能性があります。
 
-使用する場合でも **/GS**、常にバッファー オーバーランがない、セキュリティで保護されたコードを記述してください。
+**/Gs**を使用する場合でも、バッファーオーバーランのない安全なコードを作成するようにしてください。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。
+1. **ソリューションエクスプローラー**で、プロジェクトを右クリックし、 **[プロパティ]** をクリックします。
 
-   詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+   詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. **プロパティ ページ**ダイアログ ボックスで、をクリックして、 **C/C++** フォルダー。
+1. **[プロパティページ]** ダイアログボックスで、 **[C/C++ ]** フォルダー をクリックします。
 
-1. をクリックして、**コード生成**プロパティ ページ。
+1. **[コード生成]** プロパティページをクリックします。
 
-1. 変更、**バッファー セキュリティ チェック**プロパティ。
+1. **バッファーセキュリティチェック**プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>
+- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>) をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -155,7 +154,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

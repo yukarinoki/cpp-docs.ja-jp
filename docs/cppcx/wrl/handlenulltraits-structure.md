@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371472"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 構造体
 
-初期化されていないハンドルの一般的な特性を定義します。
+初期化されていないハンドルの共通の特性を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +34,14 @@ struct HANDLENullTraits;
 
 名前   | 説明
 ------ | ---------------------
-`Type` | ハンドルのシノニムです。
+`Type` | ハンドルの同義語。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                  | 説明
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | 指定したハンドルを閉じます。
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | 無効なハンドルを表します。
+[ハンドルヌルトレイツ::閉じる](#close)                     | 指定したハンドルを閉じます。
+[ハンドルヌルトレイト::無効な値を取得します。](#getinvalidvalue) | 無効なハンドルを表します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,11 +49,11 @@ struct HANDLENullTraits;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::HandleTraits
+**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>ハンドルヌルトレイツ::閉じる
 
 指定したハンドルを閉じます。
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
-ハンドルを閉じます。
+*H*<br/>
+閉じるハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合処理*h*正常。 それ以外の終了**false**します。
+ハンドル*h が*正常に終了した場合**は true。** それ以外の場合**は false。**
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>ハンドルヌルトレイト::無効な値を取得します。
 
 無効なハンドルを表します。
 

@@ -1,8 +1,9 @@
 ---
 title: _gcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt_s
+- _o__gcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919426"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -62,7 +64,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 変換の結果を格納するバッファー。
 
 *sizeInBytes*<br/>
@@ -71,7 +73,7 @@ errno_t _gcvt_s(
 *value*<br/>
 変換する値。
 
-*digits*<br/>
+*数値*<br/>
 格納されている有効桁数。
 
 ## <a name="return-value"></a>戻り値
@@ -80,17 +82,17 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*sizeInBytes*|*value*|*digits*|Return|*バッファー*内の値|
+|*格納*|*sizeInBytes*|*value*|*数値*|戻り値|*バッファー*内の値|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|任意|任意|任意|**EINVAL**|変更されません。|
-|Not **NULL** (有効なメモリを指す)|ゼロ|任意|任意|**EINVAL**|変更されません。|
-|Not **NULL** (有効なメモリを指す)|任意|任意|>= *Sizeinbytes*|**EINVAL**|変更されません。|
+|**空白**|any|any|any|**EINVAL**|変更されません。|
+|Not **NULL** (有効なメモリを指す)|ゼロ|any|any|**EINVAL**|変更されません。|
+|Not **NULL** (有効なメモリを指す)|any|any|>= *sizeInBytes*|**EINVAL**|変更されません。|
 
-**セキュリティ上の問題**
+**セキュリティの問題**
 
-*バッファー*が有効なメモリを指しておらず、かつが**NULL**でない場合、 **_gcvt_s**はアクセス違反を生成する可能性があります。
+*バッファー*が有効なメモリを指しておらず、が**NULL**でない場合、 **_gcvt_s**はアクセス違反を生成する可能性があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Gcvt_s**関数は、浮動小数点*値*を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー*に文字列を格納します。 *バッファー*は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさである必要があります。 長さ **_CVTBUFSIZE**のバッファーは、任意の浮動小数点値に対して十分です。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きしないため、この操作に十分なバッファーを指定してください。 **_gcvt_s**は、10進数形式で*桁*を生成しようとします。 そうでない場合は、指数形式*で数字が生成さ*れます。 後続のゼロは、変換時に非表示にできます。
 
@@ -98,13 +100,15 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 この関数のデバッグバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-## <a name="requirements"></a>［要件］
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

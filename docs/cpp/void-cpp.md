@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 8a2c74e9ace77e38587209a0ad6fdc03b07cc3ad
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2de019f908942a58b232877fcd9eebc4689d8e22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187480"
 ---
 # <a name="void-c"></a>void (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "75301757"
 
 **Void**型の変数を宣言することはできません。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // void.cpp
@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [組み込みの型](../cpp/fundamental-types-cpp.md)

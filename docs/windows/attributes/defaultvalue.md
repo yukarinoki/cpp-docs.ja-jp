@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214846"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -28,7 +28,7 @@ ms.locfileid: "69490930"
 *value*<br/>
 パラメーターの既定値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Defaultvalue** C++属性には、 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 属性と同じ機能があります。
 
@@ -67,7 +67,7 @@ __interface IFireTabCtrl : IDispatch {
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>

@@ -5,20 +5,20 @@ f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: 504de780a5db70def61fb47c7805b32e7de780b4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b099b7856d9ff5409311faed641c1d70eb6e4b2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126896"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376364"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency::graphics 名前空間列挙型
 
 |||
 |-|-|
-|[_mode 列挙型](#address_mode)|[filter_mode 列挙型](#filter_mode)|
+|[列挙_mode](#address_mode)|[filter_mode 列挙型](#filter_mode)|
 
-## <a name="address_mode"></a>address_mode 列挙型
+## <a name="address_mode-enumeration"></a><a name="address_mode"></a>address_mode列挙
 
 テクスチャ サンプリングに対してサポートされているアドレス モードを示すために使用する列挙型です。
 
@@ -26,7 +26,7 @@ ms.locfileid: "77126896"
 enum address_mode;
 ```
 
-## <a name="filter_mode"></a>filter_mode 列挙型
+## <a name="filter_mode-enumeration"></a><a name="filter_mode"></a>filter_mode列挙
 
 テクスチャ サンプリングをサポートするフィルター モードを示すために使用する列挙型。
 
@@ -34,10 +34,10 @@ enum address_mode;
 enum filter_mode;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** Amp_graphics**名前空間:** Concurrency:: graphics
+**ヘッダー:** amp_graphics.h**名前空間:** 同時実行::グラフィックス
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

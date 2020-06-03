@@ -1,5 +1,5 @@
 ﻿---
-title: CException クラス
+title: クラスの例外
 ms.date: 11/04/2016
 f1_keywords:
 - CException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 93901f6f92ee79bd893b2ec0d1e341e77749d951
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450367"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753180"
 ---
-# <a name="cexception-class"></a>CException クラス
+# <a name="cexception-class"></a>クラスの例外
 
 MFC (Microsoft Foundation Class) ライブラリ内のすべての例外に関する基底クラスです。
 
@@ -35,44 +35,44 @@ class AFX_NOVTABLE CException : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CException::CException](#cexception)|`CException` オブジェクトを構築します。|
+|[::C例外](#cexception)|`CException` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CException::Delete](#delete)|削除、`CException`オブジェクト。|
-|[CException::ReportError](#reporterror)|ユーザーにメッセージ ボックスに、エラー メッセージを報告します。|
+|[例外::Dエレテ](#delete)|オブジェクトを`CException`削除します。|
+|[例外::レポートエラー](#reporterror)|ユーザーにメッセージ ボックスにエラー メッセージを報告します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CException`抽象基本クラスを作成することはできませんが、`CException`オブジェクトは直接の派生クラスのオブジェクトを作成する必要があります。 独自に作成する必要がある場合`CException`-クラスのスタイル設定、モデルとして上記の派生クラスのいずれかを使用します。 派生クラスにも使用`IMPLEMENT_DYNAMIC`します。
+抽象`CException`基本クラスであるため、オブジェクトを直接作成`CException`することはできません。派生クラスのオブジェクトを作成する必要があります。 独自`CException`の -style クラスを作成する必要がある場合は、モデルとして上記の派生クラスのいずれかを使用します。 派生クラスでも を使用`IMPLEMENT_DYNAMIC`していることを確認します。
 
-派生クラスとその説明を次に示します。
+派生クラスとその説明を以下に示します。
 
 |||
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|リソース クリティカルな MFC 例外の基本クラス|
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|無効な引数の例外条件|
+|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|無効な引数例外条件|
 |[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|メモリ不足の例外|
 |[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|サポートされていない操作の要求|
 |[CArchiveException](../../mfc/reference/carchiveexception-class.md)|アーカイブ固有の例外|
-|[CFileException](../../mfc/reference/cfileexception-class.md)|特定のファイルの例外|
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|見つからないか、またはできない Windows リソース|
+|[CFileException](../../mfc/reference/cfileexception-class.md)|ファイル固有の例外|
+|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows リソースが見つからないか、または作成可能でない|
 |[COleException](../../mfc/reference/coleexception-class.md)|OLE 例外|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|データベースの例外 (つまり、Open Database Connectivity に基づいて MFC データベース クラスの例外条件)|
+|[CDBException](../../mfc/reference/cdbexception-class.md)|データベース例外 (オープン データベース接続に基づく MFC データベース クラスに発生する例外条件)|
 |[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE ディスパッチ (オートメーション) 例外|
-|[CUserException](../../mfc/reference/cuserexception-class.md)|リソースが検出できなかったことを示す例外|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|データ アクセス オブジェクトの例外 (つまり、DAO クラスの例外条件)|
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|インターネットの例外 (つまり、インターネット クラスの発生した例外条件)。|
+|[CUserException](../../mfc/reference/cuserexception-class.md)|リソースが見つからなかったことを示す例外|
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|データ アクセス オブジェクト例外 (DAO クラスに対して発生する例外条件)|
+|[CInternetException](../../mfc/reference/cinternetexception-class.md)|インターネット例外 (つまり、インターネット クラスに発生する例外条件)。|
 
-これらの例外を使用するものでは、[THROW](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、[try](exception-processing.md#try)、[catch](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロ。 例外の詳細については、[例外の処理](exception-processing.md)」または「[例外処理 (MFC)](../exception-handling-in-mfc.md)を参照してください。
+これらの例外は、 [THROW](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、 [try](exception-processing.md#try)、[キャッチ](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロで使用することを目的としています。 例外の詳細については、「[例外処理](exception-processing.md)」を参照[してください。](../exception-handling-in-mfc.md)
 
-特定の例外をキャッチするには、適切な派生クラスを使用します。 すべての種類の例外を使用して`CException`、しを使用して[使うため](cobject-class.md#iskindof)を区別する`CException`-クラスを派生します。 なお`CObject::IsKindOf`で宣言されたクラスに対してのみ機能、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)マクロは、動的な型チェックを活用するためにします。 すべて`CException`-作成する派生クラスを使用する必要があります、`IMPLEMENT_DYNAMIC`マクロ、すぎます。
+特定の例外をキャッチするには、適切な派生クラスを使用します。 すべての種類の例外をキャッチするには、`CException`を使用し[、CObject::IsKindOf](cobject-class.md#iskindof)を使用`CException`して派生クラスを区別します。 動的型`CObject::IsKindOf`チェックを利用するために[、IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)マクロで宣言されたクラスに対してのみ機能することに注意してください。 作成`CException`する派生クラスは、マクロも使用する`IMPLEMENT_DYNAMIC`必要があります。
 
-呼び出すことによって、ユーザーに例外に関する詳細をレポートできます[GetErrorMessage](cfileexception-class.md#geterrormessage)または[ReportError](#reporterror)、2 つのメンバー関数のいずれかで使用できる`CException`のクラスを派生します。
+任意の派生クラスを処理する 2 つのメンバー関数[を呼び](cfileexception-class.md#geterrormessage)出[すことによって、例外](#reporterror)の詳細を`CException`ユーザーに報告できます。
 
-マクロのいずれかで例外がキャッチされた場合、`CException`オブジェクトが自動的に削除されます。 削除しないでください、自分でします。 使用して、例外がキャッチされた場合、**catch**キーワードは自動的に削除されません。 記事をご覧ください[例外処理 (MFC)](../exception-handling-in-mfc.md)例外オブジェクトを削除するタイミングの詳細についてはします。
+いずれかのマクロによって例外がキャッチされた場合、`CException`オブジェクトは自動的に削除されます。自分で削除しないでください。 **catch**キーワードを使用して例外がキャッチされた場合、自動的に削除されません。 例外オブジェクトを削除するタイミングの詳細については、「[例外処理 (MFC)」](../exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -84,9 +84,9 @@ class AFX_NOVTABLE CException : public CObject
 
 **ヘッダー:** afx.h
 
-##  <a name="cexception"></a>  CException::CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a>::C例外
 
-このメンバー関数を作成、`CException`オブジェクト。
+このメンバー関数は、オブジェクト`CException`を構築します。
 
 ```
 explicit CException(BOOL bAutoDelete);
@@ -95,27 +95,27 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="parameters"></a>パラメーター
 
 *b_AutoDelete*<br/>
-場合は TRUE を指定のメモリ、`CException`オブジェクトがヒープに割り当てられています。 これにより、`CException`ときに削除するオブジェクト、`Delete`例外を削除するメンバー関数が呼び出されます。 場合は FALSE を指定、`CException`オブジェクトがスタック上にまたはグローバル オブジェクトです。 ここで、`CException`オブジェクトができない場合に削除されます、`Delete`メンバー関数が呼び出されます。
+オブジェクトのメモリがヒープに`CException`割り当てられている場合は、TRUE を指定します。 これにより、メンバー関数`CException`が呼び出されたときに、例外`Delete`を削除するオブジェクトが削除されます。 オブジェクトがスタック上`CException`にある場合、またはグローバルオブジェクトである場合は、FALSE を指定します。 この場合、`Delete`メンバー関数`CException`が呼び出されたときにオブジェクトは削除されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローする関数のインスタンスを作成する必要があります、 `CException`-クラスを派生し、コンス トラクターまたはそれを呼び出す必要があります、MFC のいずれかを使用してスロー関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。 このドキュメントは、完全を期すためにのみ提供されます。
+通常、このコンストラクターを直接呼び出す必要はありません。 例外をスローする関数は`CException`、派生クラスのインスタンスを作成してそのコンストラクターを呼び出すか、または MFC の throw 関数[(AfxThrowFileException](exception-processing.md#afxthrowfileexception)など) のいずれかを使用して定義済みの型をスローする必要があります。 このドキュメントは、完全性を目的として提供されています。
 
-##  <a name="delete"></a>  CException::Delete
+## <a name="cexceptiondelete"></a><a name="delete"></a>例外::Dエレテ
 
-この関数をかどうかを確認します、 `CException` 、ヒープのオブジェクトが作成され、呼び出す場合は、**delete**演算子をオブジェクトにします。
+この関数は、オブジェクトが`CException`ヒープ上で作成されているかどうかを確認し、作成されている場合は、オブジェクトの**delete**演算子を呼び出します。
 
-```
+```cpp
 void Delete();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-削除するときに、`CException`オブジェクトを使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**delete**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトがありますまたはスタック上に作成されています。
+オブジェクトを`CException`削除する場合は、メンバー`Delete`関数を使用して例外を削除します。 オブジェクトがグローバル オブジェクトである可能性があるため、またはスタック上に作成されているため、delete 演算子を直接使用しないでください。 **delete** `CException`
 
-オブジェクトが作成されるときに、オブジェクトを削除するかどうかを指定することができます。 詳細については、次を参照してください。 [CException::CException](#cexception)します。
+オブジェクトの作成時にオブジェクトを削除するかどうかを指定できます。 詳細については[、「CException::CException」](#cexception)を参照してください。
 
-のみを呼び出す必要があります`Delete`、C++ を使用している場合**try**- **catch**メカニズム。 MFC マクロを使用している場合**TRY**と**CATCH**、これらのマクロはこの関数を自動的に呼び出します。
+C++ **try**-  `Delete` **catch**メカニズムを使用している場合にのみ呼び出す必要があります。 MFC マクロ**TRY**と**CATCH**を使用している場合、これらのマクロは自動的にこの関数を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -168,9 +168,9 @@ if (pFile != NULL)
 }
 ```
 
-##  <a name="reporterror"></a>  CException::ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a>例外::レポートエラー
 
-ユーザーにメッセージ ボックスに、レポートのエラー テキストには、このメンバー関数を呼び出します。
+メッセージ ボックスのエラー テキストをユーザーに報告します。
 
 ```
 virtual int ReportError(
@@ -181,18 +181,18 @@ virtual int ReportError(
 ### <a name="parameters"></a>パラメーター
 
 *nType*<br/>
-メッセージ ボックスのスタイルを指定します。 任意の組み合わせを適用、[メッセージ ボックス スタイル](styles-used-by-mfc.md#message-box-styles)します。 このパラメーターを指定しない場合、既定値は MB_OK は。
+メッセージ ボックスのスタイルを指定します。 [メッセージ ボックスのスタイル](styles-used-by-mfc.md#message-box-styles)を任意に組み合わせてボックスに適用します。 このパラメーターを指定しない場合、デフォルトはMB_OKです。
 
-*nMessageID*<br/>
-例外オブジェクトには、エラー メッセージがない場合に表示するメッセージのリソース ID (文字列のテーブルのエントリ) を指定します。 0 の場合、メッセージ「エラー メッセージはありません」が表示されます。
+*メッセージ ID*<br/>
+例外オブジェクトにエラー メッセージがない場合に表示するメッセージのリソース ID (文字列テーブル エントリ) を指定します。 0 の場合は、「エラー メッセージがありません」というメッセージが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-`AfxMessageBox`値はメッセージ ボックスを表示するための十分なメモリがない場合は 0。 参照してください[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)の戻り値。
+値`AfxMessageBox`。メモリ不足の場合は、メッセージ ボックスを表示できません。 可能な戻り値については[、AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)を参照してください。
 
 ### <a name="example"></a>例
 
-使用例を次に示します`CException::ReportError`します。 別の例の例を参照してください。[キャッチ](exception-processing.md#catch)します。
+の使用例を次に`CException::ReportError`示します。 別の例については[、CATCH](exception-processing.md#catch)の例を参照してください。
 
 ```cpp
 CFile fileInput;
@@ -228,7 +228,7 @@ else
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス](cobject-class.md)<br/>
-[階層図](../hierarchy-chart.md)<br/>
+[Cオブジェクトクラス](cobject-class.md)<br/>
+[階層グラフ](../hierarchy-chart.md)<br/>
 [例外処理](exception-processing.md)<br/>
-[How Do i:独自のカスタム例外クラスを作成します。](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[方法 : 独自のカスタム例外クラスを作成する](https://go.microsoft.com/fwlink/p/?linkid=128045)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140064"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368145"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 構造体
 
@@ -30,28 +30,28 @@ struct ITopologyExecutionResource;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[ITopologyExecutionResource:: GetId](#getid)|この実行リソースのリソースマネージャーの一意の識別子を返します。|
-|[ITopologyExecutionResource:: GetNext](#getnext)|列挙の順序で次の実行リソースへのインターフェイスを返します。|
+|[リソースを実行します。](#getid)|この実行リソースのリソース マネージャーの一意の識別子を返します。|
+|[次のリソースを取得します。](#getnext)|次の実行リソースへのインターフェイスを列挙順に返します。|
 
 ## <a name="remarks"></a>解説
 
-このインターフェイスは、通常、リソースマネージャーによって監視されるシステムのトポロジを調べるために使用されます。
+このインターフェイスは、通常、リソース マネージャーによって監視されるシステムのトポロジをウォークするために使用されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ITopologyExecutionResource`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** concrtrm. h
+**ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-## <a name="getid"></a>ITopologyExecutionResource:: GetId メソッド
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>メソッドを実行します。
 
-この実行リソースのリソースマネージャーの一意の識別子を返します。
+この実行リソースのリソース マネージャーの一意の識別子を返します。
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -59,11 +59,11 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>戻り値
 
-この実行リソースのリソースマネージャーの一意の識別子。
+この実行リソースのリソース マネージャーの一意の識別子。
 
-## <a name="getnext"></a>ITopologyExecutionResource:: GetNext メソッド
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>次のメソッドを取得します。
 
-列挙の順序で次の実行リソースへのインターフェイスを返します。
+次の実行リソースへのインターフェイスを列挙順に返します。
 
 ```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
@@ -71,8 +71,8 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 ### <a name="return-value"></a>戻り値
 
-列挙順序での次の実行リソースへのインターフェイス。 この実行リソースが属しているノードの列挙順序にノードがそれ以上ない場合、このメソッドは `NULL`値を返します。
+列挙順で、次の実行リソースへのインターフェイス。 この実行リソースが属するノードの列挙順にノードが存在しない場合、このメソッドは値`NULL`を返します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[同時実行名前空間](concurrency-namespace.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516017"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368235"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>参照演算子の追跡 (C++/CLI および C++/CX)
 
-"*追跡参照*" (`%`) は、通常の C++ 参照 (`&`) のように動作します。ただし、オブジェクトが追跡参照に割り当てられている場合は、オブジェクトの参照カウントがインクリメントされます。
+*追跡参照*(`%`) は、オブジェクトが追跡参照に割`&`り当てられるとオブジェクトの参照カウントがインクリメントされる点を除いて、通常の C++ 参照 ( ) と同様に動作します。
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
@@ -29,7 +29,7 @@ ms.locfileid: "65516017"
 
 - ドット (`.`) メンバー アクセス演算子は、オブジェクトのメンバーにアクセスするために使用されます。
 
-- 追跡参照は、値型とハンドルに対して有効です (例: `String^`)。
+- 追跡参照は、値型およびハンドル (たとえば `String^`) に対して有効です。
 
 - 追跡参照に null 値または **nullptr** 値を割り当てることはできません。 追跡参照は、必要に応じて何度でも、別の有効なオブジェクトに再割り当てされる場合があります。
 
@@ -75,9 +75,9 @@ CLR では、ガベージ コレクターが参照先オブジェクトを移動
 
 C++/CLI での追跡参照の詳細については、以下を参照してください。
 
-- [方法: C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [方法 : C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の C++/CLI の例では、ネイティブ型およびマネージド型で追跡参照を使用する方法を示します。
 

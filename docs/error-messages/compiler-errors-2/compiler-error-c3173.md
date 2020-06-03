@@ -1,22 +1,22 @@
 ---
-title: コンパイラ エラー C3173
+title: コンパイラエラー C3173
 ms.date: 11/04/2016
 f1_keywords:
 - C3173
 helpviewer_keywords:
 - C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
-ms.openlocfilehash: aeec64f8e724b92262d322b83de07ccfe57ac2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b9b1b74bb8b4484026873f5c6052b5624c4f69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176469"
 ---
-# <a name="compiler-error-c3173"></a>コンパイラ エラー C3173
+# <a name="compiler-error-c3173"></a>コンパイラエラー C3173
 
-idl マージでバージョンが一致しません
+idl マージのバージョンが一致しません
 
-このエラーは、オブジェクト ファイルには、以前のバージョンのコンパイラで生成された埋め込み idl が含まれている場合に発生します。 コンパイラでは、.obj ファイルに埋め込まれている idl のコンテンツ生成に使用される同じコンパイラが埋め込み idl をマージするために使用する同じコンパイラでもあることを確認するバージョン番号をエンコードします。
+このエラーは、以前のバージョンのコンパイラで生成された埋め込み idl がオブジェクトファイルに含まれている場合に発生します。 コンパイラはバージョン番号をエンコードして、.obj ファイルに埋め込まれている idl コンテンツの生成に使用されるものと同じコンパイラが、埋め込み idl のマージに使用されるコンパイラと同じであることを確認します。
 
-Visual C インストールを更新するは、すべてのツールは最新のリリース バージョンようにします。
+すべてのツールC++がリリースされた最新のバージョンであるように、ビジュアルインストールを更新します。

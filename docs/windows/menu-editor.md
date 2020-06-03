@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214449"
 ---
 # <a name="menu-editor-c"></a>メニューエディター (C++)
 
@@ -53,13 +53,13 @@ ms.locfileid: "72444989"
 > [!TIP]
 > **メニューエディター**を使用しているときに、多くの場合、右クリックすると、頻繁に使用するコマンドのポップアップメニューを表示できます。 使用できるコマンドは、ポインターの位置によって異なります。
 
-## <a name="how-to"></a>方法
+## <a name="how-to"></a>操作方法
 
 **メニューエディター**では、次のことが可能です。
 
 ### <a name="to-create-a-standard-menu"></a>標準メニューを作成するには
 
-1. メニュー**ビュー** > **つの他のウィンドウ** > **リソースビュー**にアクセスし、**メニュー**見出しを右クリックします。 **[リソースの追加]** 、[**メニュー]** の順に選択します。
+1. [メニューの**表示**] をクリックして > **その他のウィンドウ** > **リソースビュー**し、**メニュー**見出しを右クリックします。 **[リソースの追加]** 、[**メニュー]** の順に選択します。
 
 1. メニューバーで、 **[新しい項目]** ボックス (*ここでは型*を含む四角形) を選択します。
 
@@ -190,11 +190,11 @@ ms.locfileid: "72444989"
 > [!TIP]
 > メニューバービューに戻るには、もう一度 **[ポップアップとして表示]** を選択します。 この操作により、チェックマークが削除され、メニューバービューが返されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース エディター](../windows/resource-editors.md)<br/>
 [メニュー コマンド](../windows/menu-command-properties.md)<br/>

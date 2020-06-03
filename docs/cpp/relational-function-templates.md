@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
-ms.openlocfilehash: 1c47627baa270c3b5eb58127590aefc6d06c9df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db5091ca8fd29235ea1a0f70410a05ffcb9d7a65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188182"
 ---
 # <a name="relational-function-templates"></a>リレーショナル関数テンプレート
 
@@ -82,12 +82,12 @@ template<typename _Interface,
 *p*<br/>
 スマート ポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの関数テンプレートを使用すると、比較演算子の右側のスマート ポインターとの比較を実行できます。 これらは `_com_ptr_t` のメンバー関数ではありません。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

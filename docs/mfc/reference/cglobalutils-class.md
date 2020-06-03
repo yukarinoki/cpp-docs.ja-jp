@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils クラス
+title: クラス
 ms.date: 10/18/2018
 f1_keywords:
 - CGlobalUtils
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbac56ea7efca98218133b23657f8508ea6bac28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182017"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752908"
 ---
-# <a name="cglobalutils-class"></a>CGlobalUtils クラス
+# <a name="cglobalutils-class"></a>クラス
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -78,7 +78,7 @@ class CGlobalUtils
 |[CGlobalUtils::StringFromCy](#stringfromcy)||
 |[CGlobalUtils::StringFromDecimal](#stringfromdecimal)||
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -88,9 +88,9 @@ class CGlobalUtils
 
 **ヘッダー:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>クリオルティバ::アジャストレックワークエリア
 
-```
+```cpp
 void AdjustRectToworkArea(
     CRect& rect,
     CRect* pRectDelta = NULL);
@@ -98,14 +98,14 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>パラメーター
 
-[入力、出力]*rect*<br/>
-[in] *pRectDelta*<br/>
+[イン、アウト]*レクト*<br/>
+[in]*デルタ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>を切り出す
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CPaneContainerManager& barContainerManager,
     CWnd* pWndTodock,
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*barContainerManager*<br/>
+[in]*バーコンテナマネージャー*<br/>
 
-[in]*pWndTodock*<br/>
+[in]*pWndトドック*<br/>
 
-[in]*ptMouse*<br/>
+[in]*ptマウス*<br/>
 
-[out] *rectResult*<br/>
+[アウト]*レクト結果*<br/>
 
-[out] *bDrawTab*<br/>
+[アウト]*タブを描く*<br/>
 
-[out] *ppTargetBar*<br/>
+[アウト]*ターゲットバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>コブ・エ・シブ
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+[in]*pWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>::缶パネベフローティングマルチペインフレームオーンド
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+[in]*pWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>を選択します。
 
 ```
 BOOL CheckAlignment(
@@ -177,25 +177,25 @@ BOOL CheckAlignment(
 
 [in]*ポイント*<br/>
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
-[in]*nSensitivity*<br/>
+[in]*n感度*<br/>
 
-[in]*pDockManager*<br/>
+[in]*をクリックします。*<br/>
 
-[in] *bOuterEdge*<br/>
+[in]*ボターエッジ*<br/>
 
-[out] *dwAlignment*<br/>
+[アウト]*dw配置*<br/>
 
-[in]*dwEnabledDockBars*<br/>
+[in]*ドウイネーブルドックバー*<br/>
 
-[in]*lpRectBounds*<br/>
+[in]*を指定します。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>文字列を使用します。
 
 ```
 BOOL CyFromString(
@@ -205,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*cy*<br/>
+[アウト]*サイ*<br/>
 
-[in] *psz*<br/>
+[in]*psz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>文字列から:D
 
 ```
 BOOL DecimalFromString(
@@ -223,17 +223,17 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*10 進数*<br/>
+[アウト]*10 進数*<br/>
 
-[in] *psz*<br/>
+[in]*psz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>クリオレクト
 
-```
+```cpp
 void FlipRect(
     CRect& rect,
     int nDegrees);
@@ -241,14 +241,14 @@ void FlipRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[入力、出力]*rect*<br/>
-[in]*nDegrees*<br/>
+[イン、アウト]*レクト*<br/>
+[in]*n度*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>を調整する
 
-```
+```cpp
 void ForceAdjustLayout(
     CDockingManager* pDockManager,
     BOOL bForce = FALSE,
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-[入力、出力]*pDockManager*<br/>
+[イン、アウト]*をクリックします。*<br/>
 
-[in]*bForce*<br/>
+[in]*bフォース*<br/>
 
-[in] *bForceInvisible*<br/>
+[in]*bフォースインビジブル*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>を使用します。
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+[in]*pWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>コリオシティ::ゲット・アノメント・アライメント
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *dwAlign*<br/>
+[in]*dwAlign*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>ポイントを取得します。
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,23 +307,23 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*barContainerManager*<br/>
+[in]*バーコンテナマネージャー*<br/>
 
 [in]*pt*<br/>
 
-[out] *ppTargetControlBar*<br/>
+[アウト]*コントロール バー*<br/>
 
-[out] *dwAlignment*<br/>
+[アウト]*dw配置*<br/>
 
-[out] *bTabArea*<br/>
+[アウト]*タブエリア*<br/>
 
-[out]*bCaption*<br/>
+[アウト]*bキャプション*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>を見る
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,15 +331,15 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+[in]*pWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>を切り離します。
 
-```
+```cpp
 void SetNewParent(
     CObList& lstControlBars,
     CWnd* pNewParent,
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *lstControlBars*<br/>
+[in]*コントロールバー*<br/>
 
-[in] *pNewParent*<br/>
+[in]*親の親会社*<br/>
 
-[in]*bCheckVisibility*<br/>
+[in]*可視性を確認する*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>文字列から
 
 ```
 BOOL StringFromCy(
@@ -366,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>パラメーター
 
-[out] *str*<br/>
+[アウト]*str*<br/>
 
-[in]*cy*<br/>
+[in]*サイ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>10 進数から文字列を取得します。
 
 ```
 BOOL StringFromDecimal(
@@ -384,15 +384,15 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>パラメーター
 
-[out] *str*<br/>
+[アウト]*str*<br/>
 
 [in]*10 進数*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

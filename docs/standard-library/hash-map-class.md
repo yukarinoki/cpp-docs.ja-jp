@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e8c0da199d8a1e9ba388b960fe07ab6ad6fcf4bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687981"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375467"
 ---
 # <a name="hash_map-class"></a>hash_map クラス
 
@@ -114,19 +114,19 @@ class hash_map
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 hash_map に格納されるキーのデータ型。
 
 *型*\
 hash_map に格納される要素のデータ型。
 
 *特徴*\
-2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、hash_compare < `Key`、より少ない < `Key` > > が既定値です。
+2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、<`Key`hash_compare `Key` 、> ><が既定値です。
 
-*アロケーター* \
-メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
+*アロケーター*\
+メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は const\< `Key`<アロケーター`Type`ペア>>。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 hash_map の特徴を次に示します。
 
@@ -140,7 +140,7 @@ hash_map の特徴を次に示します。
 
 - ペアを保持する連想コンテナーです。これは、要素のデータ値とキー値が分かれているためです。
 
-- クラステンプレート。提供される機能はジェネリックであり、要素またはキーとして含まれる特定のデータ型には依存しません。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
+- クラス テンプレートは、提供される機能はジェネリックであり、要素またはキーとして含まれるデータの特定の型とは無関係であるためです。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
 
 並べ替えでのハッシュの主な利点は、効率に優れていることです。コンテナー内にある要素を並べ替えるとき、その時間は要素の数の対数に比例しますが、適切なハッシュを実行すると、挿入、削除、検索にかかる平均時間は一定しています。 hash_map の要素の値 (関連するキー値ではありません) は、直接変更される場合があります。 この場合、変更前の要素に関連付けられていたキー値を削除し、新しい要素に関連付けられる新しいキー値を挿入する必要があります。
 
@@ -148,9 +148,9 @@ hash_map の特徴を次に示します。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_map は最適な連想コンテナーとなっている必要があります。 この種類の構造体のモデルとなるのは、一意に発生するキーワードおよび関連する文字列値 (キーワードの定義を指定) が順番に格納されたリストです。 ただし、キーワードには正しい定義が複数あり、そのためにキーが一意ではなくなる場合は、hash_multimap が適切なコンテナーとなります。 また、キーワードのリストだけが格納される場合は、hash_set が適切なコンテナーとなります。 キーワードを複数設定できる場合は、hash_multiset が適切なコンテナー構造体となります。
 
-Hash_map は、 [value_compare](../standard-library/value-compare-class.md)クラスの格納されたハッシュ*特性*オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、[hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> クラスのオブジェクトと同様に動作する必要があります。 具体的には、 *key*型のすべての値*キー*に対して `Traits` (`Key`) を呼び出すと、`size_t` 型の値の分布が生成されます。
+hash_mapは、クラス[value_compare](../standard-library/value-compare-class.md)の格納されたハッシュ*Traits*オブジェクトを呼び出すことによって、制御するシーケンスを順序付けます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、[hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> クラスのオブジェクトと同様に動作する必要があります。 具体的には、すべての値の*Key*型の*キー*型 ( ) の場合`Traits`、`size_t``Key`型の値の分布が生成されます。
 
-通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 f (x y) は、2つの引数オブジェクト `x` および `y` と、戻り値 ( **true**または**false**) を持つ関数オブジェクトです。 hash_map に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つオブジェクト (x と y) が、f(x, y) と f(y, x) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
+通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 f(x y) は、2 つの`x`引数`y`オブジェクトと戻り値が**true**または false を持つ関数オブジェクト**です**。 hash_map に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つオブジェクト (x と y) が、f(x, y) と f(y, x) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
 被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、順序関数、コンテナー オブジェクトに格納されるハッシュ テーブルの現在のサイズによって異なります。 ハッシュ テーブルの現在のサイズは特定できないため、通常は、被制御シーケンス内の要素の順序を予測することはできません。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を具体的に指す反復子だけが無効化されます。
 
@@ -158,39 +158,39 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[hash_map](#hash_map)|空の `hash_map`、または他の `hash_map` の全体または一部のコピーである hash_multiset を構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `hash_map` クラスを表す型。|
 |[const_iterator](#const_iterator)|`const` 内の 1 つの `hash_map` 要素を読み取ることができる双方向反復子を提供する型。|
-|[const_pointer](#const_pointer)|@No__t_1 内の**const**要素へのポインターを提供する型。|
-|[const_reference](#const_reference)|読み取りと**const**操作の実行のために `hash_map` に格納されている**const**要素への参照を提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|@No__t_1 内の任意の**const**要素を読み取ることができる双方向反復子を提供する型。|
+|[const_pointer](#const_pointer)|内の**const**要素へのポインターを提供する型`hash_map`。|
+|[const_reference](#const_reference)|に格納されている**const**要素への参照を提供`hash_map`する型。 **const**|
+|[const_reverse_iterator](#const_reverse_iterator)|内の任意の**const**要素を読み取ることができる双方向反復子を提供する`hash_map`型。|
 |[difference_type](#difference_type)|`hash_map` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
-|[Iterator](#iterator)|`hash_map` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
+|[反復 子](#iterator)|`hash_map` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_map` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|`hash_map` の各要素の一部である並べ替えキー オブジェクトを表す型。|
 |[mapped_type](#mapped_type)|`hash_map` に格納されているデータ型を表す型。|
-|[pointer](#pointer)|`hash_map` 内の要素へのポインターを提供する型。|
-|[reference](#reference)|`hash_map` に格納されている要素への参照を提供する型。|
+|[ポインター (pointer)](#pointer)|`hash_map` 内の要素へのポインターを提供する型。|
+|[参照](#reference)|`hash_map` に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|反転された `hash_map` 内の 1 つの要素を読み取り、または変更できる双方向反復子を提供する型。|
-|[size_type](#size_type)|`hash_map` 内の要素の数を表すことができる符号なし整数型。|
-|[value_type](#value_type)|2 つの要素を並べ替えキーとして比較して、`hash_map` 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
+|[Size_type](#size_type)|`hash_map` 内の要素の数を表すことができる符号なし整数型。|
+|[Value_type](#value_type)|2 つの要素を並べ替えキーとして比較して、`hash_map` 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[at](#at)|指定したキー値を持つ、`hash_map` 内の要素を検索します。|
-|[begin](#begin)|`hash_map` 内の最初の要素を指す反復子を返します。|
+|[で](#at)|指定したキー値を持つ、`hash_map` 内の要素を検索します。|
+|[開始](#begin)|`hash_map` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`hash_map` 内の最初の要素を指す定数反復子を返します。|
-|[cend](#cend)|`hash_map` 内の最後の要素の次の位置を指す定数反復子を返します。|
-|[clear](#clear)|`hash_map` のすべての要素を消去します。|
+|[クエンド](#cend)|`hash_map` 内の最後の要素の次の位置を指す定数反復子を返します。|
+|[クリア](#clear)|`hash_map` のすべての要素を消去します。|
 |[count](#count)|パラメーター指定したキーに一致するキーを持つ、`hash_map` 内の要素の数を返します。|
 |[crbegin](#crbegin)|反転された `hash_map` 内の最初の要素を指す定数反復子を返します。|
 |[crend](#crend)|反転された `hash_map` 内の最後の要素の次の位置を指す定数反復子を返します。|
@@ -202,31 +202,31 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 |[erase](#erase)|指定した位置から `hash_map` 内の要素または要素範囲を削除します。|
 |[find](#find)|指定したキーと同じキーを持つ、`hash_map` 内の要素の位置を指す反復子を返します。|
 |[get_allocator](#get_allocator)|`allocator` の構築に使用される `hash_map` オブジェクトのコピーを返します。|
-|[insert](#insert)|`hash_map` に要素または要素範囲を挿入します。|
+|[挿入](#insert)|`hash_map` に要素または要素範囲を挿入します。|
 |[key_comp](#key_comp)|指定したキー以上のキー値を持つ、`hash_map` 内の最初の要素を指す反復子を返します。|
 |[lower_bound](#lower_bound)|指定したキー以上のキー値を持つ、`hash_map` 内の最初の要素を指す反復子を返します。|
 |[max_size](#max_size)|`hash_map` の最大長を返します。|
 |[rbegin](#rbegin)|反転された `hash_map` 内の最初の要素を指す反復子を返します。|
 |[rend](#rend)|反転された `hash_map` 内の最後の要素の次の位置を指す反復子を返します。|
-|[size](#size)|`hash_map` 内の要素数を返します。|
-|[swap](#swap)|2 つの `hash_map` の要素を交換します。|
+|[サイズ](#size)|`hash_map` 内の要素数を返します。|
+|[スワップ](#swap)|2 つの `hash_map` の要素を交換します。|
 |[upper_bound](#upper_bound)|指定したキーよりも大きいキー値を持つ、`hash_map` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|`hash_map` 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
 |[operator&#91;&#93;](#op_at)|`hash_map` に、指定したキー値を持つ要素を挿入します。|
-|[hash_map::operator=](#op_eq)|別の `hash_map` のコピーで `hash_map` の要素を置き換えます。|
+|[hash_map::演算子=](#op_eq)|別の `hash_map` のコピーで `hash_map` の要素を置き換えます。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_map>
 
 **名前空間:** stdext
 
-## <a name="allocator_type"></a>  hash_map::allocator_type
+## <a name="hash_mapallocator_type"></a><a name="allocator_type"></a>hash_map::allocator_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -241,7 +241,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="at"></a>  hash_map::at
+## <a name="hash_mapat"></a><a name="at"></a>hash_map::at
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -264,7 +264,7 @@ const Type& at(const Key& key) const;
 
 見つかった要素のデータ値への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引数のキー値が見つからない場合、この関数は、[out_of_range クラス](../standard-library/out-of-range-class.md) のオブジェクトをスローします。
 
@@ -295,7 +295,7 @@ int main( )
 }
 ```
 
-## <a name="begin"></a>  hash_map::begin
+## <a name="hash_mapbegin"></a><a name="begin"></a>hash_map::開始
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -356,7 +356,7 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="cbegin"></a>  hash_map::cbegin
+## <a name="hash_mapcbegin"></a><a name="cbegin"></a>hash_map::cbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -400,7 +400,7 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="cend"></a>  hash_map::cend
+## <a name="hash_mapcend"></a><a name="cend"></a>hash_map::cend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -415,7 +415,7 @@ const_iterator cend() const;
 
 [hash_map](../standard-library/hash-map-class.md) 内の最後の要素の次の位置を指す定数双方向反復子。 `hash_map` が空の場合は、`hash_map::cend == hash_map::begin`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `cend` は、反復子が `hash_map` の末尾に達したかどうかをテストするために使用します。
 
@@ -451,7 +451,7 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="clear"></a>  hash_map::clear
+## <a name="hash_mapclear"></a><a name="clear"></a>hash_map::クリア
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -462,7 +462,7 @@ hash_map のすべての要素を消去します。
 void clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -501,7 +501,7 @@ The size of the hash_map is initially 2.
 The size of the hash_map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  hash_map::const_iterator
+## <a name="hash_mapconst_iterator"></a><a name="const_iterator"></a>hash_map::const_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -512,21 +512,21 @@ hash_map 内の 1 つの **const** 要素を読み取ることができる双方
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-Hash_map によって定義される `const_iterator` は、 [value_type](#value_type)のオブジェクトである要素を指します。これは、最初のメンバーが要素のキーであり、2番目 `pair< const Key, Type >` のメンバーが要素に保持されているマップされた datum であることを示します。
+hash_map`const_iterator`で定義される要素[は、](#value_type)value_typeのオブジェクトであり、その要素`pair< const Key, Type >`のキーである最初のメンバーが要素のキーであり、2 番目のメンバーが要素によって保持されているマップされたデータムです。
 
-Hash_map 内の要素を指す `const_iterator` `cIter` を逆参照するには、`->` 演算子を使用します。
+hash_map内の`const_iterator``cIter`要素を指し示すポインターを逆参照するには`->`、演算子を使用します。
 
-要素のキーの値にアクセスするには、`cIter->first` を使用します。これは `(*cIter).first` と同じです。 要素のマップされた datum の値にアクセスするには、`cIter->second` を使用します。これは `(*cIter).second` と同じです。
+要素のキーの値にアクセスするには、 と同等`cIter->first`の を使用`(*cIter).first`します。 要素のマップされたデータムの値にアクセスするには、 と同等の`cIter->second`を使用`(*cIter).second`します。
 
 ### <a name="example"></a>例
 
 `const_iterator` の使用例については、[begin](#begin) の例をご覧ください。
 
-## <a name="const_pointer"></a>  hash_map::const_pointer
+## <a name="hash_mapconst_pointer"></a><a name="const_pointer"></a>hash_map::const_pointer
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -537,13 +537,13 @@ hash_map 内の **const** 要素へのポインターを提供する型。
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `const_pointer` 型で要素の値を変更することはできません。
 
 ほとんどの場合、hash_map オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="const_reference"></a>  hash_map::const_reference
+## <a name="hash_mapconst_reference"></a><a name="const_reference"></a>hash_map::const_reference
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -554,7 +554,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -599,7 +599,7 @@ The key of the first element in the hash_map is 1.
 The data value of the first element in the hash_map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  hash_map::const_reverse_iterator
+## <a name="hash_mapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_map::const_reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -610,21 +610,21 @@ hash_map の 任意の **const** 要素を読み取ることができる双方�
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse)iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で hash_map を反復処理するために使用します。
 
 hash_map によって定義される `const_reverse_iterator` は、[value_type](#value_type) のオブジェクトである要素を指します。これは`pair`\< **const Key, Type**> 型で、その最初のメンバーは要素へのキーであり、2 番目のメンバーは要素が保持するマップされたデータです。
 
-Hash_map 内の要素を指す `const_reverse_iterator` `crIter` を逆参照するには、 **->** 演算子を使用します。
+hash_map 内の要素を指す `const_reverse_iterator` `crIter` を逆参照するには、**->** 演算子を使用します。
 
-要素のキーの値にアクセスするには `crIter` -> **first** を使用しますが、これは (\* `crIter`) **.first** と同等です。 要素のマップされた datum の値にアクセスするには、`crIter`  -> **second**を使用します。これは、(\* `crIter`) に相当します。 **最初**に。
+要素のキーの値にアクセスするには `crIter` -> **first** を使用しますが、これは (\* `crIter`) **.first** と同等です。 要素のマップされたデータムの値にアクセスするには、 ( `crIter`  ->  **second**\* `crIter`) と等価の 2 番目の を使用します。 **最初**の .
 
 ### <a name="example"></a>例
 
-`const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例をご覧ください。
+`const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例を参照してください。
 
-## <a name="count"></a>  hash_map::count
+## <a name="hash_mapcount"></a><a name="count"></a>hash_map::カウント
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -637,18 +637,18 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 hash_map と照合する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
 hash_map に、並べ替えキーがパラメーター キーと一致する要素が含まれている場合は 1。hash_map に、キーが一致する要素が含まれていない場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
-\[ lower_bound (*キー*)、upper_bound (*キー*))
+\[lower_bound(*)* upper_bound (*キー*)
 
 一意の連想コンテナーである hash_map の場合、これは 0 または 1 です。
 
@@ -696,7 +696,7 @@ The number of elements in hm1 with a sort key of 2 is: 1.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  hash_map::crbegin
+## <a name="hash_mapcrbegin"></a><a name="crbegin"></a>hash_map::クリbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -711,7 +711,7 @@ const_reverse_iterator crbegin() const;
 
 反転された [hash_map](../standard-library/hash-map-class.md) 内の最初の要素を示す、または反転されていない `hash_map` 内の最後の要素だったものを示す定数逆順双方向反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `crbegin` は、[begin](#begin) が `hash_map` で使用されるのと同様に、反転された hash_map で使用されます。
 
@@ -748,7 +748,7 @@ int main( )
 The first element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="crend"></a>  hash_map::crend
+## <a name="hash_mapcrend"></a><a name="crend"></a>hash_map::クレンド
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -763,7 +763,7 @@ const_reverse_iterator crend() const;
 
 反転された [hash_map](../standard-library/hash-map-class.md) 内の最後の要素の次の場所 (反転されていない `hash_map` 内の最初の要素の前の場所) を指す定数逆順双方向反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `crend` は、 [hash_map::end](#end) が `hash_map` で使用されるのと同様に、反転された `hash_map` で使用されます。
 
@@ -803,7 +803,7 @@ int main( )
 The last element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="difference_type"></a>  hash_map::difference_type
+## <a name="hash_mapdifference_type"></a><a name="difference_type"></a>hash_map::difference_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -873,7 +873,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 20.
 ```
 
-## <a name="emplace"></a>  hash_map::emplace
+## <a name="hash_mapemplace"></a><a name="emplace"></a>hash_map::emplace
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -891,17 +891,17 @@ emplace(
 
 |パラメーター|説明|
 |-|-|
-|*val*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が `hash_map` にまだ含まれていない場合に、[hash_map](../standard-library/hash-map-class.md) に挿入される要素の移動コンストラクトに使用する値。|
+|*ヴァル*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が `hash_map` にまだ含まれていない場合に、[hash_map](../standard-library/hash-map-class.md) に挿入される要素の移動コンストラクトに使用する値。|
 
 ### <a name="return-value"></a>戻り値
 
 `emplace` メンバー関数はペアを返しますが、その bool コンポーネントは、挿入が行われた場合は true を返し、`hash_map` に既に順序の値が等しいキーの要素が含まれている場合は、false を返します。また、その反復子コンポーネントは、新しい要素が挿入されたか要素が既に存在しているアドレスを返します。
 
-このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返される `pr` ペアの**bool**要素にアクセスするには、`pr.second` を使用し、逆参照するには `*(pr.second)` を使用します。
+このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返されるペア`pr`の**bool**コンポーネントにアクセスするには`pr.second`、 を使用し、それを逆`*(pr.second)`参照するには、 を使用します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要素の [hash_map::value_type](#value_type) はペアです。最初のコンポーネントがキー値と等しく、2 番目のコンポーネントが要素のデータ値と等しくなるよう、要素の値が順序付けされたペアになります。
+要素の [hash_map::value_type](#value_type) はペアです。最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになるような、要素の値が順序付けされたペアになります。
 
 ### <a name="example"></a>例
 
@@ -932,7 +932,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="emplace_hint"></a>  hash_map::emplace_hint
+## <a name="hash_mapemplace_hint"></a><a name="emplace_hint"></a>hash_map::emplace_hint
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -950,18 +950,18 @@ iterator emplace_hint(
 
 |パラメーター|説明|
 |-|-|
-|*val*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が `hash_map` にまだ含まれていない場合に、[hash_map](../standard-library/hash-map-class.md) に挿入される要素の移動コンストラクトに使用する値。|
-|*場所 (_s)*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
+|*ヴァル*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が `hash_map` にまだ含まれていない場合に、[hash_map](../standard-library/hash-map-class.md) に挿入される要素の移動コンストラクトに使用する値。|
+|*_where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
 
 ### <a name="return-value"></a>戻り値
 
 [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) メンバー関数は、`hash_map` に新しい要素が挿入された位置、または、同等の順序での既存の要素が存在する位置を指す反復子を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要素の [hash_map::value_type](#value_type) はペアです。最初のコンポーネントがキー値と等しく、2 番目のコンポーネントが要素のデータ値と等しくなるよう、要素の値が順序付けされたペアになります。
+要素の [hash_map::value_type](#value_type) はペアです。最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになるような、要素の値が順序付けされたペアになります。
 
-挿入ポイントが *(Where)* の直後にある場合、挿入は対数時間ではなく、償却定数時間で実行できます。
+挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で発生する可能性があります。
 
 ### <a name="example"></a>例
 
@@ -992,7 +992,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="empty"></a>  hash_map::empty
+## <a name="hash_mapempty"></a><a name="empty"></a>hash_map::空
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1007,7 +1007,7 @@ bool empty() const;
 
 hash_map が空の場合は **true**、hash_map が空ではない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1043,7 +1043,7 @@ The hash_map hm1 is not empty.
 The hash_map hm2 is empty.
 ```
 
-## <a name="end"></a>  hash_map::end
+## <a name="hash_mapend"></a><a name="end"></a>hash_map::終了
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1060,9 +1060,9 @@ iterator end();
 
 hash_map 内の最後の要素の次の位置を指す双方向反復子。 hash_map が空の場合、hash_map::end == hash_map::begin です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`end` は、反復子が hash_map の末尾に達したかどうかをテストするために使用されます。
+`end`は、反復器がhash_mapの終わりに達したかどうかをテストするために使用されます。
 
 `end` によって返された値は逆参照しないでください。
 
@@ -1114,7 +1114,7 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="equal_range"></a>  hash_map::equal_range
+## <a name="hash_mapequal_range"></a><a name="equal_range"></a>hash_map::equal_range
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1129,16 +1129,16 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
 1 番目がそのキーの [lower_bound](#lower_bound)、2 番目がそのキーの [upper_bound](#upper_bound) である、反復子のペア。
 
-メンバー関数によって返されるペア `pr` 最初の反復子にアクセスするには、`pr` を使用します。 **最初**に、下限の反復子を逆参照するには、\* (`pr` を使用します。 **最初**)。 メンバー関数によって返さ `pr` ペアの2番目の反復子にアクセスするには、`pr` を使用します。 **次**に、上限の反復子を逆参照するには、\* (`pr` を使用します。 **2 番目**)。
+メンバー関数によって返されるペア`pr`の最初の反復器にアクセスするには、 を使用`pr`します。 **まず**、下限の反復器を逆参照するには、 \*( `pr`. **最初**に). メンバー関数によって返されるペア`pr`の 2 番目の反復器にアクセスするには、`pr`を使用します。 **2 番目**に、上限の反復器を逆参照するには、 \* `pr`( . **2 番目**)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1201,7 +1201,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>  hash_map::erase
+## <a name="hash_maperase"></a><a name="erase"></a>hash_map::消去
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1218,16 +1218,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-@No__t_1 の*場所 (_c)*
+*_where*\
 hash_map から削除する要素の位置。
 
-*最初*の \
+*まずは*\
 hash_map から削除する最初の要素の位置。
 
-*最後*の \
+*前の*\
 hash_map から削除する最後の要素の次の位置。
 
-*キー* \
+*キー*\
 hash_map から削除する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1236,7 +1236,7 @@ hash_map から削除する要素のキー値。
 
 3 番目のメンバー関数の場合は、hash_map から削除された要素の数を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数が例外をスローすることはありません。
 
@@ -1325,7 +1325,7 @@ After another element with a key equal to that
 of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ```
 
-## <a name="find"></a>  hash_map::find
+## <a name="hash_mapfind"></a><a name="find"></a>hash_map::検索
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1340,18 +1340,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 検索対象の hash_map 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
 指定したキーを持つ要素の位置を指す反復子。キーの一致が検出されない場合は、hash_map 内の最後の要素の次の位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`find` は、小なり比較関係に基づいて順序を誘発する二項述語の下で、並べ替えキーが引数キーと等価である hash_map 内の要素をアドレス指定する反復子を返します。
+`find`は、並べ替えキーが、比較可能度より小さい関係に基づいて順序付けを誘導する二項述語の下の引数キーと等価であるhash_map内の要素をアドレス指定する反復子を返します。
 
-@No__t_0 の戻り値が[const_iterator](#const_iterator)に割り当てられている場合、hash_map オブジェクトを変更することはできません。 @No__t_0 の戻り値が[反復子](#iterator)に割り当てられている場合は、hash_map オブジェクトを変更できます。
+の戻り値`find`が[const_iterator](#const_iterator)に代入されている場合、hash_map オブジェクトは変更できません。 の戻り値`find`が[イテレータ](#iterator)に割り当てられている場合、hash_mapオブジェクトは変更できます。
 
 ### <a name="example"></a>例
 
@@ -1404,7 +1404,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="get_allocator"></a>  hash_map::get_allocator
+## <a name="hash_mapget_allocator"></a><a name="get_allocator"></a>hash_map::get_allocator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1419,7 +1419,7 @@ Allocator get_allocator() const;
 
 hash_map で使用されるアロケーター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 hash_map クラスのアロケーターは、クラスがどのようにストレージを管理するかを指定します。 C++ 標準ライブラリ コンテナー クラスで提供される既定のアロケーターは、ほとんどのプログラミング要件に対応しています。 独自のアロケーター クラスを作成して使用することは、C++ における高度な作業の 1 つです。
 
@@ -1480,7 +1480,7 @@ int main( )
 }
 ```
 
-## <a name="hash_map"></a>  hash_map::hash_map
+## <a name="hash_maphash_map"></a><a name="hash_map"></a>hash_map::hash_map
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1535,14 +1535,14 @@ hash_map(
 
 |パラメーター|説明|
 |-|-|
-|*ウムアルクラ*|この hash_map オブジェクトに使用するストレージアロケータークラス。既定では `Allocator` になります。|
-|*コンペティション*|hash_map 内の要素の並べ替えに使用される、型 const `Traits` の比較関数。既定では `hash_compare` です。|
-|*右*|構築されたマップがコピーになる元の hash_map。|
+|*アル*|このhash_map オブジェクトに使用されるストレージ アロケータ クラスです`Allocator`。|
+|*作曲*|hash_map 内の要素の並べ替えに使用される、型 const `Traits` の比較関数。既定では `hash_compare` です。|
+|*そうです*|構築されたマップがコピーになる元の hash_map。|
 |*まずは*|コピーする要素範囲内の最初の要素の位置。|
 |*前の*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|initializer_list|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 すべてのコンストラクターは、アロケーター オブジェクトの型を格納します。このオブジェクトは hash_map のメモリ ストレージを管理し、後で [get_allocator](#get_allocator) を呼び出して取得することができます。 代替アロケーターの代わりに使用されるクラス宣言やプリプロセス マクロでは、アロケーターのパラメーターが省略される場合があります。
 
@@ -1550,15 +1550,15 @@ hash_map(
 
 すべてのコンストラクターは、`Traits` 型の関数オブジェクトを格納します。このオブジェクトは hash_map のキーの順序を確立するために使用され、後で [key_comp](#key_comp) を呼び出して取得することができます。
 
-最初の3つのコンストラクターは、空の初期 hash_map を指定します。さらに、2番目のコンストラクターは要素の順序を確立するために使用する比較関数 (*Comp*) の種類を指定し、3番目のコンストラクターはアロケーターの型 (Al) を明示的に指定します。) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
+最初の 3 つのコンストラクターは空の初期hash_mapを指定し、さらに 2 番目のコンストラクターは、要素の順序を確立するときに使用する比較関数 (*Comp*) の型を指定し、3 つ目のコンストラクターは使用するアロケーターの型 (*Al*) を明示的に指定します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4番目のコンストラクターは、hash_map*権限*のコピーを指定します。
+4 番目のコンストラクターは、hash_map *Right*のコピーを指定します。
 
 次の 3 つのコンストラクターは、hash_map の範囲 `[First, Last)` をコピーします。下のコンストラクターになるほど、より明確に比較関数の型のクラス `Traits` とアロケーターの型を指定します。
 
-最後のコンストラクターは、hash_map*権限*を移動します。
+最後のコンストラクタは*right*hash_mapを移動します。
 
-## <a name="insert"></a>  hash_map::insert
+## <a name="hash_mapinsert"></a><a name="insert"></a>hash_map::挿入
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1593,26 +1593,26 @@ iterator insert(
 
 |パラメーター|説明|
 |-|-|
-|*val*|挿入される要素が hash_map にまだ含まれていない場合 (一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合) に、hash_map に挿入される要素の値。|
-|*場所 (_s)*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
-|*まずは*|hash_map からコピーされる最初の要素の位置。|
-|*前の*|hash_map からコピーされる最後の要素の次の位置。|
+|*ヴァル*|挿入される要素が hash_map にまだ含まれていない場合 (一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合) に、hash_map に挿入される要素の値。|
+|*_where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
+|*first*|hash_map からコピーされる最初の要素の位置。|
+|*last*|hash_map からコピーされる最後の要素の次の位置。|
 
 ### <a name="return-value"></a>戻り値
 
-最初の `insert` メンバー関数は、挿入が行われた場合に true を返すブール値のペアを返します。また、順序の値が同じキーを持つ要素が hash_map に既に含まれていて、その反復子コンポーネントがアドレスを返した場合は false を返します。新しい要素が挿入された場所、または要素が既に存在していた場所。
+最初`insert`のメンバー関数は、挿入が行われた場合は bool コンポーネントが true を返し、キーに同等の値を持つ要素が既に含まれて hash_mapいて、反復子コンポーネントが新しい要素が挿入されたアドレスまたは要素が既に配置されている場所を返す場合は false を返します。
 
-このメンバー関数によって返されるペア `pr` の反復子コンポーネントにアクセスするには、`pr` を使用します。 **まず**、\* (`pr` を使用します。 **最初**)。 このメンバー関数によって返されるペア `pr` の**bool**コンポーネントにアクセスするには、`pr` を使用します。 **次**に、\* (`pr` を使用します。 **2 番目**)。
+このメンバー関数によって返されるペア`pr`の反復コンポーネントにアクセスするには、 を使用`pr`します。 **まず**、 を使用し、それを逆\*参照`pr`するには、 ( を使用します。 **最初**に). このメンバー関数によって返されるペア`pr`の**bool**コンポーネントにアクセスするには`pr`、 を使用します。 **2 番目**に、それを逆参照するには\*、 `pr`( を使用します。 **2 番目**)。
 
-2番目の `insert` メンバー関数 (ヒントバージョン) は、新しい要素が hash_map に挿入された位置を指す反復子を返します。
+2`insert`番目のメンバー関数、ヒントのバージョンは、新しい要素がhash_mapに挿入された位置を指す反復子を返します。
 
-最後の2つの `insert` メンバー関数は、最初の2つのメンバー関数と同じように動作しますが、挿入された値がコンストラクトによって移動される点が異なります。
+最後の`insert`2 つのメンバー関数は、挿入された値を構成する移動を除いて、最初の 2 つの関数と同じように動作します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 要素の [value_type](../standard-library/map-class.md#value_type) はペアです。最初のコンポーネントがキー値と等しく、2 番目のコンポーネントが要素のデータ値と等しくなるよう、要素の値が順序付けされたペアになります。
 
-挿入ポイント*が位置の*直後にある場合は、挿入ポイントが対数時間ではなく insert のヒントバージョンに対して、償却定数時間で挿入されることがあります。
+挿入ポイントが *_Where*の直後にある場合、挿入のヒント バージョンではなく、挿入のヒント バージョンの固定定数時間で挿入が発生する可能性があります。
 
 3 番目のメンバー関数は、指定したセットの範囲 *[First, Last)* の反復子が指す各要素に対応する hash_map に要素値のシーケンスを挿入します。
 
@@ -1724,7 +1724,7 @@ After the move insertion, hm4 contains:
 2 => b
 ```
 
-## <a name="iterator"></a>  hash_map::iterator
+## <a name="hash_mapiterator"></a><a name="iterator"></a>hash_map::反復器
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1735,21 +1735,21 @@ hash_map 内の任意の要素の読み取りまたは変更ができる双方�
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Hash_map によって定義される `iterator` は、 [value_type](#value_type)のオブジェクトである要素を指します。これは、最初 \<const のメンバーが要素のキーであり、2番目のメンバーが要素によって保持されているマップされた datum である、**型 >** です。
+hash_map`iterator`定義は、[要素](#value_type)のキー **、> 型のペア\<** であるvalue_typeのオブジェクトである要素を指し、その最初のメンバーが要素のキーであり、2 番目のメンバーが要素によって保持されているマップされたデータムです。
 
-Multimap 内の要素を指す**反復子**`Iter` を逆参照するには、`->` 演算子を使用します。
+マルチマップ内の要素を指す**反復子**`Iter`を逆参照するには、演算子を使用します`->`。
 
-要素のキーの値にアクセスするには、**最初**に  ->  `Iter` を使用します。これは、(\* `Iter`) に相当します。 **最初**に。 要素のマップされた datum の値にアクセスするには、`Iter`  -> **second**を使用します。これは、(\* `Iter`) に相当します。 **second** に初期化します。
+要素のキーの値にアクセスするには、 ( `Iter`  ->  **first**\* `Iter`) と同等の値を最初に使用します。 **最初**の . 要素のマップされたデータムの値にアクセスするには、 ( `Iter`  ->  **second**\* `Iter`) と等価の 2 番目の を使用します。 **第二**に.
 
-@No__t_0 型を使用して、要素の値を変更できます。
+型`iterator`を使用して、要素の値を変更できます。
 
 ### <a name="example"></a>例
 
-@No__t_1 の宣言方法や使用方法の例については、 [begin](#begin)の例を参照してください。
+の宣言方法と使用方法の例については、例の[begin](#begin) `iterator`を参照してください。
 
-## <a name="key_comp"></a>  hash_map::key_comp
+## <a name="hash_mapkey_comp"></a><a name="key_comp"></a>hash_map::key_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1764,11 +1764,11 @@ key_compare key_comp() const;
 
 hash_map が要素の並べ替えに使用する関数オブジェクトを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&** `left` **, const Key&** `right`);
+**bool演算子****(constキー&** `left` **、constキー&);** `right`
 
 これは、並べ替え順で `left` が `right` に先行しかつ等しくない場合に **true** を返します。
 
@@ -1825,7 +1825,7 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>  hash_map::key_compare
+## <a name="hash_mapkey_compare"></a><a name="key_compare"></a>hash_map::key_compare
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1836,7 +1836,7 @@ int main( )
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `key_compare` はテンプレート パラメーター `Traits` のシノニムです。
 
@@ -1846,7 +1846,7 @@ typedef Traits key_compare;
 
 `key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例をご覧ください。
 
-## <a name="key_type"></a>  hash_map::key_type
+## <a name="hash_mapkey_type"></a><a name="key_type"></a>hash_map::key_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1857,7 +1857,7 @@ hash_map の各要素の一部である並べ替えキー オブジェクトを�
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `key_type` はテンプレート パラメーター `Key` のシノニムです。
 
@@ -1867,7 +1867,7 @@ typedef Key key_type;
 
 `key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="lower_bound"></a>  hash_map::lower_bound
+## <a name="hash_maplower_bound"></a><a name="lower_bound"></a>hash_map::lower_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1882,16 +1882,16 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
 引数キー以上のキーを持つ hash_map 内の要素の位置を指す、または、キーの一致が検出されない場合は hash_map 内の最後の要素の次の位置を指す、[反復子](#iterator)または [const_iterator](#const_iterator)。
 
-`lower_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_map オブジェクトは変更できません。 @No__t_0 の戻り値が `iterator` に割り当てられている場合は、hash_map オブジェクトを変更できます。
+`lower_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_map オブジェクトは変更できません。 の戻り値`lower_bound`が`iterator`に代入されている場合、hash_mapオブジェクトを変更できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1944,7 +1944,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="mapped_type"></a>  hash_map::mapped_type
+## <a name="hash_mapmapped_type"></a><a name="mapped_type"></a>hash_map::mapped_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1955,7 +1955,7 @@ hash_map 内に格納されているデータ型を表す型。
 typedef Type mapped_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `mapped_type` 型は、テンプレート パラメーター `Type` のシノニムです。
 
@@ -1965,7 +1965,7 @@ typedef Type mapped_type;
 
 `key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="max_size"></a>  hash_map::max_size
+## <a name="hash_mapmax_size"></a><a name="max_size"></a>hash_map::max_size
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1980,7 +1980,7 @@ size_type max_size() const;
 
 hash_map の可能な最大長。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2004,7 +2004,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>  hash_map::operator[]
+## <a name="hash_mapoperator"></a><a name="op_at"></a>hash_map::演算子[]
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2027,7 +2027,7 @@ Type& operator[](Key&& key);
 
 挿入される要素のデータ値への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
@@ -2035,7 +2035,7 @@ Type& operator[](Key&& key);
 
 `m[ key] = DataValue`;
 
-ここで、DataValue は key のキー値を持つ要素の `mapped_type` の値*です。*
+ここで、DataValue は key`mapped_type`のキー値を持つ要素の値*です*。
 
 `operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更されるのか、または新しい要素が作成されるのかは、示されません。 メンバー関数 [find](../standard-library/map-class.md#find) および [insert](../standard-library/map-class.md#insert) を使用して、挿入前に指定のキーを持つ要素が既に存在するかどうかを確認することができます。
 
@@ -2101,7 +2101,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_map::operator=
+## <a name="hash_mapoperator"></a><a name="op_eq"></a>hash_map::演算子=
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2118,11 +2118,11 @@ hash_map& operator=(hash_map&& right);
 
 |パラメーター|説明|
 |-|-|
-|*right*|`hash_map` にコピーされる [hash_map クラス](../standard-library/hash-map-class.md)。|
+|*そうです*|`hash_map` にコピーされる [hash_map クラス](../standard-library/hash-map-class.md)。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-@No__t_0 内の既存の要素を消去した後、 *`operator=` の内容*を `hash_map` にコピーまたは移動します。
+の既存の要素を削除した後、`hash_map``operator=`*右*の要素を コピーするか、または の`hash_map`内容を に移動します。
 
 ### <a name="example"></a>例
 
@@ -2162,7 +2162,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  hash_map::pointer
+## <a name="hash_mappointer"></a><a name="pointer"></a>hash_map::pオインター
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2173,13 +2173,13 @@ hash_map 内の要素へのポインターを提供する型。
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-@No__t_0 型を使用して、要素の値を変更できます。
+型`pointer`を使用して、要素の値を変更できます。
 
 ほとんどの場合、hash_map オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="rbegin"></a>  hash_map::rbegin
+## <a name="hash_maprbegin"></a><a name="rbegin"></a>hash_map::始まり
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2196,7 +2196,7 @@ reverse_iterator rbegin();
 
 反転された hash_map 内の最初の要素を示す、または反転されていない hash_map 内の最後の要素だったものを示す、逆順双方向反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `rbegin` は、[begin](#begin) が hash_map で使用されるのと同様に、反転された hash_map で使用されます。
 
@@ -2263,7 +2263,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the first element in the reversed hash_map is 2.
 ```
 
-## <a name="reference"></a>  hash_map::reference
+## <a name="hash_mapreference"></a><a name="reference"></a>hash_map::参照
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2274,7 +2274,7 @@ hash_map に格納されている要素への参照を提供する型。
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2326,7 +2326,7 @@ The data value of first element in the hash_map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  hash_map::rend
+## <a name="hash_maprend"></a><a name="rend"></a>hash_map::レンド
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2343,7 +2343,7 @@ reverse_iterator rend();
 
 反転された hash_map 内の最後の要素の次の場所 (反転されていない hash_map 内の最初の要素の前の場所) を指す逆順双方向反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `rend` は、[end](#end) が hash_map で使用されるのと同様に、反転された hash_map で使用されます。
 
@@ -2416,7 +2416,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the last element in the reversed hash_map is 2.
 ```
 
-## <a name="reverse_iterator"></a>  hash_map::reverse_iterator
+## <a name="hash_mapreverse_iterator"></a><a name="reverse_iterator"></a>hash_map::reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2427,21 +2427,21 @@ After the erasure, the last element in the reversed hash_map is 2.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `reverse_iterator` 型は要素の値を変更できず、逆の順序で hash_map を反復処理するために使用します。
 
 hash_map によって定義される `reverse_iterator` は [value_type](#value_type) のオブジェクトである要素を指します。これは **pair\<const Key, Type>** 型で、その最初のメンバーは要素へのキーであり、2 番目のメンバーは要素が保持するマップされたデータです。
 
-Hash_map 内の要素を指す `reverse_iterator` `rIter` を逆参照するには、-> 演算子を使用します。
+hash_map 内の要素を指す `reverse_iterator` `rIter` を逆参照するには、-> 演算子を使用します。
 
-要素のキーの値にアクセスするには、**最初**に  ->  `rIter` を使用します。これは、(\* `rIter`) に相当します。 **最初**に。 要素のマップされた datum の値にアクセスするには、`rIter`  -> **second**を使用します。これは、(\* `rIter`) に相当します。 **最初**に。
+要素のキーの値にアクセスするには、 ( `rIter`  ->  **first**\* `rIter`) と同等の値を最初に使用します。 **最初**の . 要素のマップされたデータムの値にアクセスするには、 ( `rIter`  ->  **second**\* `rIter`) と等価の 2 番目の を使用します。 **最初**の .
 
 ### <a name="example"></a>例
 
 `reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
 
-## <a name="size"></a>  hash_map::size
+## <a name="hash_mapsize"></a><a name="size"></a>hash_map:サイズ
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2456,7 +2456,7 @@ size_type size() const;
 
 hash_map の現在の長さ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2491,7 +2491,7 @@ The hash_map length is 1.
 The hash_map length is now 2.
 ```
 
-## <a name="size_type"></a>  hash_map::size_type
+## <a name="hash_mapsize_type"></a><a name="size_type"></a>hash_map::size_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2502,13 +2502,13 @@ hash_map 内の要素の数を表すことができる符号なし整数型。
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
 `size_type` の宣言方法や使用方法の例については、[size](#size) の例をご覧ください。
 
-## <a name="swap"></a>  hash_map::swap
+## <a name="hash_mapswap"></a><a name="swap"></a>hash_map::スワップ
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2521,10 +2521,10 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 ターゲットの hash_map と交換する要素を提供する引数の hash_map。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数は、要素を交換する 2 つの hash_map において要素を指定している参照、ポインター、反復子を無効化することはありません。
 
@@ -2582,7 +2582,7 @@ After swapping with hm2, hash_map hm1 is: 100 200.
 After swapping with hm3, hash_map hm1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  hash_map::upper_bound
+## <a name="hash_mapupper_bound"></a><a name="upper_bound"></a>hash_map::upper_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2597,16 +2597,16 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 検索対象の hash_map 内の要素の並べ替えキー値と比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
 [反復子](#iterator)または [const_iterator](#const_iterator)。引数キーより大きいキーを持つ hash_map 内の要素の位置を指します。または、キーが一致しない場合は hash_map 内の最後の要素の次の位置を指します。
 
-戻り値が `const_iterator` に割り当てられている場合、hash_map オブジェクトは変更できません。 戻り値が `iterator` に割り当てられている場合は、hash_map オブジェクトを変更できます。
+戻り値が `const_iterator` に割り当てられている場合、hash_map オブジェクトは変更できません。 戻り値が`iterator`に代入されている場合、hash_map オブジェクトを変更できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2660,7 +2660,7 @@ The 1st element of hm1 with a key greater than that
 of the initial element of hm1 is: 20.
 ```
 
-## <a name="value_comp"></a>  hash_map::value_comp
+## <a name="hash_mapvalue_comp"></a><a name="value_comp"></a>hash_map::value_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2675,9 +2675,9 @@ value_compare value_comp() const;
 
 hash_map が要素の並べ替えに使用する比較関数オブジェクトを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Hash_map *m*の場合、2つの*要素 e1* (*k1*, *d1*) と*e2* (*k2*, *d2*) が[value_type](#value_type)型のオブジェクトである場合、 *k1*と*k2*は[key_type](#key_type)と d1 型のキーです。および*d2*は[mapped_type](#mapped_type)型のデータであり、4 は 5 に相当します。 格納されているオブジェクトは以下のメンバー関数を定義します。
+hash_map *m*の場合 *、e1* (*k1*、 *d1*) と*e2* (*k2*、 *d2*) の 2 つの要素が[value_type](#value_type)型のオブジェクトである場合 *、k1*と`m.value_comp()(e1, e2)`k2`m.key_comp()(k1, k2)`は[key_type](#key_type)型のキーであり *、d2*は[mapped_type](#mapped_type)型のデータです。 *k2* *d2* 格納されているオブジェクトは以下のメンバー関数を定義します。
 
 `bool operator(value_type& left, value_type& right);`
 
@@ -2728,7 +2728,7 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>  hash_map::value_type
+## <a name="hash_mapvalue_type"></a><a name="value_type"></a>hash_map::value_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -2739,9 +2739,9 @@ hash_map 内に格納されているオブジェクトの型を表す型。
 typedef pair<const Key, Type> value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`value_type` は `pair<const key_type, mapped_type>` するように宣言されています。また、非定数 iterator または reference を使用して連想コンテナーのキーが変更されない可能性があるため、`pair<key_type, mapped_type>` ません。
+`value_type`は`pair<const key_type, mapped_type>`、連想コンテナーの`pair<key_type, mapped_type>`キーが非定数反復器または参照を使用して変更されない可能性があるため、宣言されていません。
 
 ### <a name="example"></a>例
 
@@ -2805,5 +2805,5 @@ The values of the mapped elements are: 10 20 30.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 540daa5bafa28b1d56c55daf33f0b5f5461c8ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320235"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 乱数生成の機能を定義し、一様に分布した乱数を作成できるようにします。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー**: \<random >
+**ヘッダ** \<: ランダム>
 
 **名前空間:** std
 
 > [!NOTE]
-> @No__t_0random > ライブラリでは、' #include < initializer_list > ' ステートメントが使用されます。
+> ランダム\<> ライブラリでは、'#include <initializer_list>' ステートメントを使用します。
 
 ## <a name="summary"></a>まとめ
 
-*乱数ジェネレーター*は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたクラステンプレートは、このクラスに特定の共通の特徴がある場合は、*エンジン*と呼ばれます。これについては、この記事の後半で説明します。 URNG を*分布*の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
+*乱数ジェネレーター*は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたクラス テンプレートは、そのクラスに特定の共通の特徴がある場合は*エンジン*と呼ばれます。 URNG を*分布*の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
 
 次のリンクを使用すると、この記事の主なセクションに移動します。
 
 - [例](#code)
 
-- [分類別一覧](#listing)
+- [分類されたリスト](#listing)
 
 - [エンジンと分布](#engdist)
 
-- [コメント](#comments)
+- [解説](#comments)
 
 ### <a name="quick-tips"></a>簡単なヒント
 
-@No__t_0random > を使用する場合に留意すべきヒントを次に示します。
+ランダム>を使用\<する際に留意する必要のあるヒントを次に示します。
 
 - ほとんどの場合、URNG は分布で成形される必要がある生のビットを生成します (主な例外は、[std::shuffle()](../standard-library/algorithm-functions.md#shuffle) で、理由は URNG を直接使用するからです)。
 
@@ -52,9 +52,9 @@ ms.locfileid: "72689104"
 
 - 大部分のアプリケーションに対して最も役立つ組み合わせは、`mt19937` エンジンと `uniform_int_distribution` の組み合わせです (この記事の後の方にある[コード例](#code)に示されています)。
 
-@No__t_0random > ヘッダーから選択できるオプションは多数あります。これらのオプションのいずれかは、古い C ランタイム関数 `rand()` よりも適しています。 @No__t_0 にどのような問題があるか、また \<random > でこれらの欠点を解決する方法の詳細については、こちらの[ビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)を参照してください。
+\<ランダム> ヘッダーには多くのオプションを選択できます。 `rand()` 何が問題で`rand()`、ランダム>がこれらの欠点に\<対処するかについては、[このビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)を参照してください。
 
-## <a name="code"></a> 例
+## <a name="examples"></a><a name="code"></a>例
 
 次のコード例では、非確定的なシードを使用して作成されたジェネレーターを使用して 5 つの乱数を生成する方法を示します。
 
@@ -209,9 +209,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 このコードは、テスト テンプレート関数を使用した 2 つの異なるランダム化 (整数のベクターのランダム化と、インデックス付きデータの配列のシャッフル) を示しています。 最初のテスト関数の呼び出しでは、暗号的に安全で非確定的な、シード設定不可および繰り返し不可の URNG `random_device` を使用しています。 2 回目のテスト実行では、確定的な 32 ビットの定数シードを指定し、`mersenne_twister_engine` を URNG として使用しています。これは、結果が繰り返し可能であることを意味します。 3 回目のテスト実行は、`mersenne_twister_engine` からの 32 ビットの非確定的な結果を使用して `random_device` にシードを設定しています。 4 回目のテスト実行では、`random_device` の結果で埋められた[シード シーケンス](../standard-library/seed-seq-class.md)を使用することで、3 回目のテスト実行を拡張しています。これによって、32 ビット以上の非確定的なランダム性が効果的に得られます (それでもまだ暗号的に安全ではありません)。 詳細については、この続きを参照してください。
 
-## <a name="listing"></a> 分類別一覧
+## <a name="categorized-listing"></a><a name="listing"></a> 分類別一覧
 
-###  <a name="urngs"></a>Uniform Random Number ジェネレーター
+### <a name="uniform-random-number-generators"></a><a name="urngs"></a>均一乱数ジェネレータ
 
 URNG は、次の特性においてよく説明されます。
 
@@ -221,15 +221,15 @@ URNG は、次の特性においてよく説明されます。
 
 3. **品質**: 生成されたシーケンスがどれほど真の乱数に近いか。 これは通常 "*ランダム性*" と呼ばれます。
 
-次のセクションでは、\<random > ヘッダーに用意されている uniform random number generator (Urng) について説明します。
+以下のセクションでは、\<ランダム>ヘッダーに用意されている一様乱数ジェネレータ(URNg)をリストします。
 
-####  <a name="rd"></a> 非確定的なジェネレーター
+#### <a name="non-deterministic-generator"></a><a name="rd"></a> 非確定的なジェネレーター
 
 |||
 |-|-|
-|[random_device クラス](../standard-library/random-device-class.md)|外部デバイスを使用して、非確定的で暗号的に安全なランダム シーケンスを生成します。 通常、エンジンにシードを設定するために使用されます。 パフォーマンスは低いですが、品質は非常に高いです。 詳細については、「[解説](#comments)」をご覧ください。|
+|[random_device クラス](../standard-library/random-device-class.md)|外部デバイスを使用して、非確定的で暗号的に安全なランダム シーケンスを生成します。 通常、エンジンにシードを設定するために使用されます。 パフォーマンスは低いですが、品質は非常に高いです。 詳細については、「解説」を参照[してください](#comments)。|
 
-####  <a name="typedefs"></a> 定義済みのパラメーターを持つエンジンの Typedef
+#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> 定義済みのパラメーターを持つエンジンの Typedef
 
 エンジンとエンジン アダプターのインスタンス化用。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
@@ -287,7 +287,7 @@ URNG は、次の特性においてよく説明されます。
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
     ```
 
-- `ranlux24_base` `ranlux24` のベースとして使用されます。
+- `ranlux24_base``ranlux24` のベースとして使用されます。
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
@@ -299,13 +299,13 @@ URNG は、次の特性においてよく説明されます。
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
     ```
 
-- `ranlux48_base` `ranlux48` のベースとして使用されます。
+- `ranlux48_base``ranlux48` のベースとして使用されます。
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
     ```
 
-####  <a name="eng"></a> エンジン テンプレート
+#### <a name="engine-templates"></a><a name="eng"></a> エンジン テンプレート
 
 エンジン テンプレートは、スタンドアロンの URNG または[エンジン アダプター](#engadapt)に渡されるベース エンジンとして使用されます。 通常、これらは[定義済みのエンジンの typedef](#typedefs) でインスタンス化され、[分布](#distributions)に渡されます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
@@ -313,9 +313,9 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[linear_congruential_engine クラス](../standard-library/linear-congruential-engine-class.md)|線形合同法アルゴリズムでランダム シーケンスを生成します。 最も単純で、最も低品質です。|
 |[mersenne_twister_engine クラス](../standard-library/mersenne-twister-engine-class.md)|メルセンヌ ツイスタ アルゴリズムでランダム シーケンスを生成します。 最も複雑で、random_device クラスを除いて最も高品質です。 パフォーマンスは非常に高速です。|
-|[subtract_with_carry_engine クラス](../standard-library/subtract-with-carry-engine-class.md)|キャリー付き減算アルゴリズムでランダム シーケンスを生成します。 `linear_congruential_engine` の改善版ですが、`mersenne_twister_engine` より品質もパフォーマンスもかなり低いです。|
+|[subtract_with_carry_engineクラス](../standard-library/subtract-with-carry-engine-class.md)|キャリー付き減算アルゴリズムでランダム シーケンスを生成します。 `linear_congruential_engine` の改善版ですが、`mersenne_twister_engine` より品質もパフォーマンスもかなり低いです。|
 
-####  <a name="engadapt"></a> エンジン アダプター テンプレート
+#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a> エンジン アダプター テンプレート
 
 エンジン アダプターは他の (ベース) エンジンを適応させるテンプレートです。 通常、これらは[定義済みのエンジンの typedef](#typedefs) でインスタンス化され、[分布](#distributions)に渡されます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
@@ -325,18 +325,18 @@ URNG は、次の特性においてよく説明されます。
 |[independent_bits_engine クラス](../standard-library/independent-bits-engine-class.md)|ベースのエンジンから返された値のビットを再パックすることで、指定したビット数でランダム シーケンスを生成します。|
 |[shuffle_order_engine クラス](../standard-library/shuffle-order-engine-class.md)|ベースのエンジンから返された値を並べ替えることで、ランダム シーケンスを生成します。|
 
-[[エンジン テンプレート](#eng)]
+[[エンジンテンプレート](#eng)]
 
-###  <a name="distributions"></a> 乱数分布
+### <a name="random-number-distributions"></a><a name="distributions"></a> 乱数分布
 
-次のセクションでは、\<random > ヘッダーで提供されているディストリビューションについて説明します。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
+次のセクションでは、ランダムな> ヘッダー\<で提供される分布を示します。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
 #### <a name="uniform-distributions"></a>一様分布
 
 |||
 |-|-|
 |[uniform_int_distribution クラス](../standard-library/uniform-int-distribution-class.md)|閉区間 \[a, b] (包含的-包含的) 内の範囲にわたる一様の整数値分布を作成します。|
-|[uniform_real_distribution クラス](../standard-library/uniform-real-distribution-class.md)|半開区間 [a, b) (包含的-排他的) 内の範囲にわたる一様の実数 (浮動小数点) 値分布を作成します。|
+|[uniform_real_distributionクラス](../standard-library/uniform-real-distribution-class.md)|半開区間 [a, b) (包含的-排他的) 内の範囲にわたる一様の実数 (浮動小数点) 値分布を作成します。|
 |[generate_canonical](../standard-library/random-functions.md#generate_canonical)|[0, 1) (包含的-排他的) にわたる特定の精度の実数 (浮動小数点) 値の均等分布を作成します。|
 
 [[乱数分布](#distributions)]
@@ -345,9 +345,9 @@ URNG は、次の特性においてよく説明されます。
 
 |||
 |-|-|
-|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|**Bool**値のベルヌーイ分布を生成します。|
+|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|**ブール**値のベルヌーイ分布を生成します。|
 |[binomial_distribution クラス](../standard-library/binomial-distribution-class.md)|整数値の二項分布を作成します。|
-|[geometric_distribution クラス](../standard-library/geometric-distribution-class.md)|整数値の幾何分布を作成します。|
+|[geometric_distributionクラス](../standard-library/geometric-distribution-class.md)|整数値の幾何分布を作成します。|
 |[negative_binomial_distribution クラス](../standard-library/negative-binomial-distribution-class.md)|整数値の負の二項分布を作成します。|
 
 [[乱数分布](#distributions)]
@@ -358,10 +358,10 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[cauchy_distribution クラス](../standard-library/cauchy-distribution-class.md)|実数 (浮動小数点) 値のコーシー分布を作成します。|
 |[chi_squared_distribution クラス](../standard-library/chi-squared-distribution-class.md)|実数 (浮動小数点) 値のカイ 2 乗分布を作成します。|
-|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) 値の F 分布 (スネデカー分布の F 分布またはスネデカー分布分布とも呼ばれます) を生成します。|
+|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) の F 分布 (スネデケールの F 分布またはフィッシャー-スネデケーション分布とも呼ばれます) を生成します。|
 |[lognormal_distribution クラス](../standard-library/lognormal-distribution-class.md)|実数 (浮動小数点) 値の対数正規分布を作成します。|
-|[normal_distribution クラス](../standard-library/normal-distribution-class.md)|実数 (浮動小数点) 値の正規 (ガウス) 分布を作成します。|
-|[student_t_distribution クラス](../standard-library/student-t-distribution-class.md)|実数 (浮動小数点) 値のスチューデントの *t* 分布を作成します。|
+|[normal_distributionクラス](../standard-library/normal-distribution-class.md)|実数 (浮動小数点) 値の正規 (ガウス) 分布を作成します。|
+|[student_t_distributionクラス](../standard-library/student-t-distribution-class.md)|実数 (浮動小数点) 値のスチューデントの *t* 分布を作成します。|
 
 [[乱数分布](#distributions)]
 
@@ -372,7 +372,7 @@ URNG は、次の特性においてよく説明されます。
 |[exponential_distribution クラス](../standard-library/exponential-distribution-class.md)|実数 (浮動小数点) 値の指数分布を作成します。|
 |[extreme_value_distribution クラス](../standard-library/extreme-value-distribution-class.md)|実数 (浮動小数点) 値の極値分布を作成します。|
 |[gamma_distribution クラス](../standard-library/gamma-distribution-class.md)|実数 (浮動小数点) 値のガンマ分布を作成します。|
-|[poisson_distribution クラス](../standard-library/poisson-distribution-class.md)|整数値のポワソン分布を作成します。|
+|[poisson_distributionクラス](../standard-library/poisson-distribution-class.md)|整数値のポワソン分布を作成します。|
 |[weibull_distribution クラス](../standard-library/weibull-distribution-class.md)|実数 (浮動小数点) 値のワイブル分布を作成します。|
 
 [[乱数分布](#distributions)]
@@ -382,22 +382,22 @@ URNG は、次の特性においてよく説明されます。
 |||
 |-|-|
 |[discrete_distribution クラス](../standard-library/discrete-distribution-class.md)|整数の離散分布を作成します。|
-|[piecewise_constant_distribution クラス](../standard-library/piecewise-constant-distribution-class.md)|実数 (浮動小数点) 値の区分定数分布を作成します。|
-|[piecewise_linear_distribution クラス](../standard-library/piecewise-linear-distribution-class.md)|実数 (浮動小数点) 値の区分線形分布を作成します。|
+|[piecewise_constant_distributionクラス](../standard-library/piecewise-constant-distribution-class.md)|実数 (浮動小数点) 値の区分定数分布を作成します。|
+|[piecewise_linear_distributionクラス](../standard-library/piecewise-linear-distribution-class.md)|実数 (浮動小数点) 値の区分線形分布を作成します。|
 
 [[乱数分布](#distributions)]
 
 ### <a name="utility-functions"></a>ユーティリティ関数
 
-このセクションでは、\<random > ヘッダーで提供される一般的なユーティリティ関数の一覧を示します。
+このセクションでは、ランダムな>ヘッダーで提供\<される一般的なユーティリティ関数を示します。
 
 |||
 |-|-|
 |[seed_seq クラス](../standard-library/seed-seq-class.md)|バイアスのかかっていないスクランブルされたシード シーケンスを生成します。 ランダムな変量ストリームのレプリケーションを避けるために使用されます。 エンジンから多数の URNG がインスタンス化される場合に役立ちます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-このセクションでは、\<random > ヘッダーで提供される演算子の一覧を示します。
+このセクションでは、ランダムな>ヘッダー\<で提供される演算子を示します。
 
 |||
 |-|-|
@@ -406,25 +406,25 @@ URNG は、次の特性においてよく説明されます。
 |`operator<<`|ステータス情報をストリームに書き込みます。|
 |`operator>>`|ステータス情報をストリームから抽出します。|
 
-## <a name="engdist"></a> エンジンと分布
+## <a name="engines-and-distributions"></a><a name="engdist"></a>エンジンとディストリビューション
 
-@No__t_0random > で定義されているこれらのクラステンプレートカテゴリの詳細については、次のセクションを参照してください。 これらのクラステンプレートカテゴリはいずれも引数として型を受け取り、共有テンプレートパラメーター名を使用して、実際の引数の型として許可されている型のプロパティを次のように記述します。
+ランダム>で定義されたクラス テンプレート カテゴリの詳細については、以下\<のセクションを参照してください。 これらのクラス テンプレート カテゴリはどちらも、引数として型を受け取り、共有テンプレート パラメータ名を使用して、実際の引数型として許可される型のプロパティを次のように記述します。
 
-- `IntType` は、 **short**、 **int**、 **long**、 **long long**、 **unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
+- `IntType`**は、短い****、** 整数 、 長い 、**長い**長**い**、**符号なしの短い**、**符号なし int**、**符号なし長**、 または**符号なし長の長い**。
 
-- `UIntType` は、 **unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
+- `UIntType`**は、符号なしの短い**、**符号なし int**、**符号なし長**、または**符号なし長を**示します。
 
-- `RealType` は、 **float**、 **double**、または**long double**を示します。
+- `RealType`**は、フロート**、**倍**精度浮動小数点型 、 または**長倍精度浮動小数点型**( ) を示します。
 
 ### <a name="engines"></a>エンジン
 
 [エンジン テンプレート](#eng)と[エンジン アダプター テンプレート](#engadapt)は、作成されるジェネレーターをそのパラメーターでカスタマイズするテンプレートです。
 
-*エンジン*は、最小値と最大値の間に一様に分布した乱数のソースとして機能するインスタンス (ジェネレーター) を持つクラスまたはクラステンプレートです。 *エンジン アダプター*は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
+*エンジン*は、インスタンス (ジェネレータ) が最小値と最大値の間で均一に分布する乱数のソースとして機能するクラスまたはクラス テンプレートです。 *エンジン アダプター*は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
 
 すべてのエンジンとエンジン アダプターには、次のメンバーが存在します。
 
-- `typedef` `numeric-type` `result_type` : ジェネレーターの `operator()` から返される型です。 `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
+- `typedef`は、ジェネレーターの によって返される型です`operator()` `numeric-type` `result_type` `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
 
 - `result_type operator()` : `min()` と `max()` の範囲内で一様に分布した値を返します。
 
@@ -434,13 +434,13 @@ URNG は、次の特性においてよく説明されます。
 
 - `void seed(result_type s)`: シード値 `s` を使用してジェネレーターにシードを設定します。 エンジンの場合、シグネチャは `void seed(result_type s = default_seed)` で、既定のパラメーターがサポートされます (エンジン アダプターでは、別個の `void seed()` が定義されています。次のサブセクションを参照してください)。
 
-- `template <class Seq> void seed(Seq& q)`: [seed_seq](../standard-library/seed-seq-class.md)`Seq` を使用して、ジェネレーターにシードを設定します。
+- `template <class Seq> void seed(Seq& q)`[seed_seq](../standard-library/seed-seq-class.md)`Seq`を使用してジェネレータをシードします。
 
 - 引数 `result_type x` を持つ明示的なコンストラクター。作成されるジェネレーターには、`seed(x)` を呼び出した場合と同じようにシード値が設定されます。
 
 - 引数 `seed_seq& seq` を持つ明示的なコンストラクター。作成されるジェネレーターには、`seed(seq)` を呼び出した場合と同じようにシード値が設定されます。
 
-- `void discard(unsigned long long count)`: `operator()` を `count` 回効果的に呼び出し、それぞれの値を破棄します。
+- `void discard(unsigned long long count)`効果的に`operator()``count`時間を呼び出し、各値を破棄します。
 
 **エンジン アダプター**では、さらに次のメンバーがサポートされます (`Engine` はエンジン アダプターの最初のテンプレート パラメーターで、ベース エンジンの型を指定します)。
 
@@ -456,17 +456,17 @@ URNG は、次の特性においてよく説明されます。
 
 すべてのエンジンで、後続の `operator()` への呼び出しで生成される値のシーケンスを決定する*状態*が保守されます。 同じ型のエンジンからインスタンス化された 2 つのジェネレーターの状態は、`operator==` および `operator!=` を使って比較できます。 2 つの状態を比較した結果、等しければ、それらからは同じ値のシーケンスが生成されます。 オブジェクトの状態は、そのジェネレーターの `operator<<` を使用することにより、符号なし 32 ビット値のシーケンスとしてストリームに保存できます。 保存することによって状態が変化することはありません。 保存された状態は、`operator>>` を使用すれば、同じ型のエンジンからインスタンス化されたジェネレーターに読み込むことができます。
 
-### <a name="distributions"></a>分布
+### <a name="distributions"></a>ディストリビューション
 
-[乱数分布](#distributions)は、エンジンから取得された一様分布の乱数ストリームを、特定の分布を持つ乱数ストリームに変換するインスタンスを持つクラステンプレートまたはクラステンプレートです。 すべての分布には、次のメンバーが存在します。
+[乱数分布](#distributions)は、エンジンから取得した乱数のストリームを、特定の分布を持つ乱数のストリームに変換するクラスまたはクラス テンプレートです。 すべての分布には、次のメンバーが存在します。
 
-- `typedef` `numeric-type` `result_type`: 分布の `operator()` から返される型です。 `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
+- `typedef`は、ディストリビューションの によって返される型です`operator()` `numeric-type` `result_type` `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
 
 - `template <class URNG> result_type operator()(URNG& gen)`: 一様に分布する乱数値のソースとして `gen` を使い、格納されている*分布のパラメーター*を使用して、分布の定義に従って分布された値を返します。
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)`: 一様に分布する乱数値のソースとして `gen` を使い、パラメーター構造体 `p` を使用して、分布の定義に従って分布した値を返します。
 
-- `typedef` `unspecified-type` `param_type`: オプションとして `operator()` に渡されるパラメーターのパッケージで、格納されているパラメーターの代わりに使用して戻り値を生成します。
+- `typedef`は、オプションで渡されるパラメータのパッケージ`operator()`であり、格納されたパラメータの代わりに使用されて戻り値を生成します。 `unspecified-type` `param_type`
 
 - `const param&` コンストラクター: 格納されているパラメーターを、その引数から初期化します。
 
@@ -480,9 +480,9 @@ URNG は、次の特性においてよく説明されます。
 
 - `void reset()`: 次回 `operator()` を呼び出したときに、その結果が、その前にエンジンから取得された値に左右されないようにするため、キャッシュされている値をすべて破棄します。
 
-パラメーター構造体は、分布に必要なすべてのパラメーターを格納するオブジェクトです。 これには、次のメンバーが含まれます。
+パラメーター構造体は、分布に必要なすべてのパラメーターを格納するオブジェクトです。 その構成要素を次に示します。
 
-- `typedef` `distribution-type` `distribution_type`: 分布の型です。
+- `typedef``distribution-type`は、その分布のタイプ`distribution_type`です。
 
 - 分布のコンストラクターと同じパラメーター リストを受け取る 1 つ以上のコンストラクター。
 
@@ -492,18 +492,18 @@ URNG は、次の特性においてよく説明されます。
 
 詳細については、この下にある参照サブトピックを参照してください (この記事で既にリンクされています)。
 
-## <a name="comments"></a> 解説
+## <a name="remarks"></a><a name="comments"></a> 解説
 
 次の比較表に示すように、Visual Studio には 2 つの非常に有用な URNG (`mt19937` と `random_device`) があります。
 
-|URNG|Fast|暗号的に安全|シード設定可能|Deterministic|
+|URNG|Fast|暗号的に安全|シード設定可能|決定的|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|[はい]|Ｘ|[はい]|はい<sup>*</sup>|
-|`random_device`|Ｘ|[はい]|Ｘ|Ｘ|
+|`mt19937`|はい|いいえ|はい|はい<sup>*</sup>|
+|`random_device`|いいえ|はい|いいえ|いいえ|
 
 <sup>* 既知のシードが提供される場合。</sup>
 
-ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、Wikipedia の記事「[暗号安全な擬似乱数ジェネレーター](https://go.microsoft.com/fwlink/p/?linkid=398017)」を参照してください。)ISO C++標準ではこれは必要ないため、他のプラットフォームでは、(暗号的に安全ではなく) 単純な擬似乱数ジェネレーターとして `random_device` を実装し、別のジェネレーターのシードソースとしてのみ適している可能性があります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
+ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、ウィキペディアの記事「[暗号で安全な擬似乱数ジェネレータ](https://go.microsoft.com/fwlink/p/?linkid=398017)」を参照してください。ISO C++ 標準ではこれを必要としないため、他のプラットフォーム`random_device`は単純な擬似乱数ジェネレーター (暗号的に安全ではない) として実装でき、別のジェネレーターのシード ソースとしてのみ適している場合があります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
 
 定義上、`random_device` の結果は再現可能でなく、また、副作用として、他の URNG よりも実行がかなり遅い場合があります。 暗号的に安全であることが要求されない大部分のアプリケーションでは `mt19937` または類似のエンジンを使用しますが、[コード例](#code)に示すように、`random_device` の呼び出しでシードを設定することもできます。
 

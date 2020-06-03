@@ -4,17 +4,17 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544550"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
 
 > [!NOTE]
-> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
+> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」を参照してください。
 
 OLE DB アプリケーションを起動する前に、次の問題を検討してください。
 
@@ -36,11 +36,11 @@ Microsoft では、このタスクを実行するためのライブラリとし�
 
 さまざまなテクノロジを組み合わせることができますが (たとえば、ADO コンポーネントと OLE DB コンポーネントを併用したり、ODBC コードを OLE DB に移行したりできます)、Visual C++ ドキュメントの範囲では、すべての状況を説明することはできません。 しかしながら、さまざまなシナリオを含む多くの記事が次の Microsoft Web サイトで公開されています。
 
-- [Microsoft ヘルプおよびサポート](https://support.microsoft.com/)
+- [Microsoft ヘルプとサポート](https://support.microsoft.com/)
 
-- [Microsoft Data Access Technical Articles Overview (Microsoft データ アクセス技術に関する記事の概要)](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Microsoft Data Access Technical Articles Overview (Microsoft データ アクセス技術に関する記事の概要)](/previous-versions/ms810811(v=msdn.10))
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB プログラミングの概要](../../data/oledb/ole-db-programming-overview.md)

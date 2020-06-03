@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168150"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501491"
 *contextID*<br/>
 **ヘルプ**ファイル内の32ビットのヘルプコンテキスト識別子。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Helpstringcontext** C++属性には、 [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 属性と同じ機能があります。
 
@@ -61,10 +61,10 @@ __interface IMyI
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[module](module-cpp.md)
+[name](module-cpp.md)

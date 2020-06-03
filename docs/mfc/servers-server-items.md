@@ -1,5 +1,5 @@
 ---
-title: サーバー:サーバー項目
+title: 'サーバー : サーバー アイテム'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: abee619aa921b3e036a2bbeb1b4f5ae08d83f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ae24104a30a0b44e92b889006907911124310f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355112"
 ---
-# <a name="servers-server-items"></a>サーバー:サーバー項目
+# <a name="servers-server-items"></a>サーバー : サーバー アイテム
 
-サーバー アプリケーションをコンテナーでは、ユーザーは埋め込みまたはリンクされている OLE 項目を編集できるように、サーバーが起動したらと、「サーバー項目」を作成します 派生したクラスのオブジェクトではサーバー項目`COleServerItem`サーバーのドキュメントとコンテナー アプリケーション間のインターフェイスを提供します。
+コンテナーがサーバーを起動して、ユーザーが埋め込み OLE アイテムまたはリンク OLE アイテムを編集できるようにすると、サーバー アプリケーションは "サーバー アイテム" を作成します。 から派生`COleServerItem`したクラスのオブジェクトであるサーバー項目は、サーバードキュメントとコンテナアプリケーションの間のインタフェースを提供します。
 
-`COleServerItem`クラスは、コンテナーからの要求に対する応答として、通常、OLE、によって呼び出されるいくつかのオーバーライド可能なメンバー関数を定義します。 サーバーのアイテムには、サーバーのドキュメントまたはドキュメント全体の一部を表すことができます。 OLE アイテムは、コンテナー ドキュメントに埋め込まれた、サーバーのアイテムは、サーバー全体のドキュメントを表します。 OLE 項目がリンクされている場合、サーバー項目はサーバーのドキュメントまたはリンクが一部または全体がかどうかに応じて、ドキュメント全体の一部を表すことができます。
+この`COleServerItem`クラスは、通常はコンテナーからの要求に応答して、OLE によって呼び出されるオーバーライド可能なメンバー関数をいくつか定義します。 サーバーアイテムは、サーバードキュメントの一部またはドキュメント全体を表すことができます。 OLE アイテムがコンテナー ドキュメントに埋め込まれている場合、サーバー アイテムはサーバー ドキュメント全体を表します。 OLE アイテムがリンクされている場合、サーバー アイテムは、リンクが部分に対してあるか、全体に対してリンクされているかに応じて、サーバー ドキュメントの一部または全体を表すことができます。
 
-[HIERSVR](../overview/visual-cpp-samples.md)サーバー アイテムのクラス、たとえば、サンプル`CServerItem`、クラスのオブジェクトへのポインターであるメンバーを持つ`CServerNode`します。 `CServerNode`オブジェクトがツリーの HIERSVR アプリケーションのドキュメント内のノード。 ときに、`CServerNode`オブジェクトは、ルート ノード、`CServerItem`オブジェクトはドキュメント全体を表します。 ときに、`CServerNode`オブジェクトが子ノード、`CServerItem`オブジェクトは、ドキュメントの一部を表します。 MFC OLE サンプルを参照して[HIERSVR](../overview/visual-cpp-samples.md)この相互作用の例についてはします。
+[HIERSVR](../overview/visual-cpp-samples.md)サンプルでは、たとえば、サーバー項目クラス の メンバー`CServerItem`がクラスのオブジェクトへのポインターです`CServerNode`。 オブジェクト`CServerNode`は、HIERSVR アプリケーションのドキュメント内のノードであり、ツリーです。 オブジェクトが`CServerNode`ルート ノードの場合、オブジェクト`CServerItem`はドキュメント全体を表します。 オブジェクトが`CServerNode`子ノードの場合、オブジェクトは`CServerItem`ドキュメントの一部を表します。 この操作の例については、MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)を参照してください。
 
-##  <a name="_core_implementing_server_items"></a> サーバーのアイテムを実装します。
+## <a name="implementing-server-items"></a><a name="_core_implementing_server_items"></a>サーバー項目の実装
 
-アプリケーションの"starter"コードを生成するために、アプリケーション ウィザードを使用する場合は、OLE オプション ページからサーバー オプションのいずれかを選択する初期コードでのサーバーのアイテムをするために必要なです。 既存のアプリケーション サーバーのアイテムを追加する場合、次の手順に従います。
+アプリケーション ウィザードを使用してアプリケーションの "スタート" コードを生成する場合は、サーバー項目をスタート コードに含める必要がある点は、[OLE オプション] ページからサーバー オプションのいずれかを選択することだけです。 既存のアプリケーションにサーバーアイテムを追加する場合は、次の手順を実行します。
 
-#### <a name="to-implement-a-server-item"></a>サーバーのアイテムを実装するには
+#### <a name="to-implement-a-server-item"></a>サーバー項目を実装するには
 
 1. `COleServerItem` の派生クラスを作成します。
 
-1. 派生クラスでオーバーライド、`OnDraw`メンバー関数。
+1. 派生クラスで、メンバー関数を`OnDraw`オーバーライドします。
 
-   Framework 呼び出し`OnDraw`メタファイルに OLE 項目を表示するためにします。 コンテナー アプリケーションでは、項目を表示するためにこのメタファイルを使用します。 アプリケーションのビューのクラスがあります、`OnDraw`メンバー関数は、サーバー アプリケーションがアクティブなときに、項目を表示するために使用します。
+   フレームワークは、OLE アイテムをメタファイルにレンダリングする呼び出しを行`OnDraw`います。 コンテナー アプリケーションは、このメタファイルを使用してアイテムをレンダリングします。 アプリケーションのビュー クラスには、サーバー`OnDraw`アプリケーションがアクティブな場合にアイテムを表示するために使用されるメンバー関数もあります。
 
-1. 実装のオーバーライドを`OnGetEmbeddedItem`サーバー ドキュメント クラス。 詳細については、この記事を参照してください。[サーバー。サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)と MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)します。
+1. サーバー ドキュメント`OnGetEmbeddedItem`クラスの オーバーライドを実装します。 詳細については、「[サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)」および MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)を参照してください。
 
-1. サーバー項目クラスの実装`OnGetExtent`メンバー関数。 フレームワークは、アイテムのサイズを取得するには、この関数を呼び出します。 既定の実装では、何も行われません。
+1. サーバー項目クラスのメンバー関数を`OnGetExtent`実装します。 フレームワークは、この関数を呼び出して、項目のサイズを取得します。 既定の実装では、何も行われません。
 
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> サーバー アイテムのアーキテクチャのヒント
+## <a name="a-tip-for-server-item-architecture"></a><a name="_core_a_tip_for_server.2d.item_architecture"></a>サーバーアイテムアーキテクチャのヒント
 
-説明したとおり[サーバー アイテムの実装](#_core_implementing_server_items)、サーバー アプリケーションは、サーバーの表示とコンテナー アプリケーションで使用される、メタファイル、アイテムを表示できる必要があります。 Microsoft Foundation Class ライブラリのアプリケーション アーキテクチャでビュー クラスの`OnDraw`メンバー関数は、編集するときに、項目を表示します (を参照してください[詳細](../mfc/reference/cview-class.md#ondraw)で、*クラス ライブラリ リファレンス*). サーバー項目の`OnDraw`メタファイルそれ以外の場合に、項目を表示します (を参照してください[:ondraw](../mfc/reference/coleserveritem-class.md#ondraw))。
+[サーバー項目の実装](#_core_implementing_server_items)で説明したように、サーバー アプリケーションは、サーバーのビューとコンテナー アプリケーションで使用されるメタファイルの両方でアイテムをレンダリングできる必要があります。 Microsoft Foundation クラス ライブラリのアプリケーション アーキテクチャでは、ビュー クラス`OnDraw`のメンバー関数は、編集中にアイテムをレンダリングします (*クラス ライブラリ リファレンス*の[CView::OnDraw](../mfc/reference/cview-class.md#ondraw)を参照)。 サーバー アイテムは、`OnDraw`その他のすべての場合にアイテムをメタファイルにレンダリング[します (COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)を参照)。
 
-サーバー ドキュメント クラスにヘルパー関数を記述してからそれらを呼び出すコードの重複を回避できます、`OnDraw`クラス ビューとサーバー項目クラスの関数。 MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)では、この方法: 関数は、`CServerView::OnDraw`と`CServerItem::OnDraw`両方呼び出す`CServerDoc::DrawTree`項目のレンダリングにします。
+サーバー ドキュメント クラスにヘルパー関数を記述し、ビュークラスやサーバー項目クラスの`OnDraw`関数から呼び出すことで、コードの重複を回避できます。 MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)では、この`CServerView::OnDraw`方法`CServerItem::OnDraw`を使用`CServerDoc::DrawTree`して、関数と両方の呼び出しを使用してアイテムをレンダリングします。
 
-ビューと項目の両方がある`OnDraw`メンバー関数のさまざまな条件で描画するためです。 ビューは、ズーム、選択範囲のサイズと範囲、クリッピング、およびスクロール バーなどのユーザー インターフェイス要素としてなどの条件を考慮する必要があります。 OLE オブジェクト全体を描画常に、その一方で、サーバーのアイテム、しています。
+ビューと項目は、異なる`OnDraw`条件で描画されるため、両方のメンバー関数を持ちます。 ビューでは、ズーム、選択範囲のサイズと範囲、クリッピング、スクロール バーなどのユーザー インターフェイス要素などの要素を考慮する必要があります。 一方、サーバーアイテムは常に OLE オブジェクト全体を描画します。
 
-詳細については、次を参照してください[詳細](../mfc/reference/cview-class.md#ondraw)、 [COleServerItem](../mfc/reference/coleserveritem-class.md)、 [:ondraw](../mfc/reference/coleserveritem-class.md#ondraw)、および[COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)。で、*クラス ライブラリ リファレンス*します。
+詳細については、「クラス ライブラリ リファレンスの[CView::オンドロー](../mfc/reference/cview-class.md#ondraw) [、COleServerItem、COleServerItem::](../mfc/reference/coleserveritem-class.md)[オンドロー](../mfc/reference/coleserveritem-class.md#ondraw)、および[COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) 」を*参照してください*。
 
 ## <a name="see-also"></a>関連項目
 

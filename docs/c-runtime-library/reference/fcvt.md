@@ -1,8 +1,9 @@
 ---
 title: _fcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt
+- _o__fcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: a90f8510e734c8459867d323eccccc75e94983d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ca8a7fcd58e91ffa8982f30117b09af587d96cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920192"
 ---
 # <a name="_fcvt"></a>_fcvt
 
@@ -58,29 +60,31 @@ char *_fcvt(
 *count*<br/>
 小数点以下の桁数。
 
-*dec*<br/>
+*alpha*<br/>
 格納された小数点位置を指すポインター。
 
-*sign*<br/>
+*シャープ*<br/>
 格納された符号インジケーターを指すポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**fcvt**は、数字の文字列へのポインターを返します (エラーの場合は**NULL** )。
+**_fcvt**は、数字の文字列へのポインターを返し、エラーの場合は**NULL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**(_C)** 関数は、浮動小数点数を null で終わる文字列に変換します。 *値*パラメーターは、変換される浮動小数点数です。 *値*の数字を文字列として格納し、null 文字 (' \ 0 ') を追加します ( **_c** )。 *Count*パラメーターは、小数点の後に格納する桁数を指定します。 余分な数字は、*カウント*するために丸められます。 有効桁数が*カウント*よりも小さい場合は、文字列に0が埋め込まれます。
+**_Fcvt**関数は、浮動小数点数を null で終わる文字列に変換します。 *値*パラメーターは、変換される浮動小数点数です。 **_fcvt**は、*値*の数字を文字列として格納し、null 文字 (' \ 0 ') を追加します。 *Count*パラメーターは、小数点の後に格納する桁数を指定します。 余分な数字は、*カウント*するために丸められます。 有効桁数が*カウント*よりも小さい場合は、文字列に0が埋め込まれます。
 
-**Fcvt**によって返される合計桁数は、 **_CVTBUFSIZE**を超えることはありません。
+**_Fcvt**によって返された合計桁数が **_CVTBUFSIZE**を超えてはなりません。
 
 文字列には数字だけが格納されます。 小数点の位置と*値*の符号は*dec*から取得でき、呼び出しの後に符号を付けます。 *Dec*パラメーターは整数値を指します。この整数値は、文字列の先頭に対する小数点の位置を示します。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター *sign*は、*値*の符号を示す整数を指します。 Value が正で、*値*が負の場合は0以外の値に設定されて*いる場合、* 整数は0に設定されます。
 
-この場合、 **ecvt**と**fcvt**の違いは、 *count*パラメーターの解釈です。 **ecvt**は、出力文字列の合計桁数として*count*を解釈します **。一方、** *count*は、小数点の後の桁数として解釈されます。
+**_Ecvt**と **_fcvt**の違いは、 *count*パラメーターの解釈です。 **_ecvt**は、*カウント*を出力文字列の合計桁数として解釈しますが、 **_fcvt**は小数点の後の桁数*として解釈し*ます。
 
-この変換には、静的に割り当てられた単一のバッファー**を使用し**ます **(_c** )。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
+**_ecvt**と **_fcvt**は、静的に割り当てられた1つのバッファーを使用して変換を行います。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
 この関数は、パラメーターを検証します。 *Dec*または*sign*が**NULL**の場合、または*count*が0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、 **NULL**が返されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -88,7 +92,7 @@ char *_fcvt(
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

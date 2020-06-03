@@ -1,6 +1,6 @@
 ---
-title: MatchEventInMemberFunction
-description: C++ビルドインサイト SDK MatchEventInMemberFunction 関数リファレンス。
+title: 関数を指定します。
+description: 関数リファレンスを構築します。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eabbb8a91609b1447ebcc19af32df2ffed347c24
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 522630da16e3f4a1294316d88140f4bc25dca2c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334380"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323899"
 ---
-# <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
+# <a name="matcheventinmemberfunction"></a>関数を指定します。
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`MatchEventInMemberFunction` 関数は、メンバー関数の最初のパラメーターで記述される型に対してイベントを照合するために使用されます。 一致するイベントは、後続の処理のためにメンバー関数に転送されます。
+この`MatchEventInMemberFunction`関数は、メンバー関数の最初のパラメーターで記述されている型とイベントを照合するために使用されます。 一致したイベントは、さらに処理するためにメンバー関数に転送されます。
 
 ## <a name="syntax"></a>構文
 
@@ -45,40 +45,40 @@ bool MatchEventInMemberFunction(
 
 ### <a name="parameters"></a>パラメーター
 
-*Tinterface*\
-メンバー関数を格納している型。
+*インターフェイス*\
+メンバー関数を含む型。
 
-*Treturn*\
+*Tリターン*\
 メンバー関数の戻り値の型。
 
-*Tevent*\
-照合するイベントの型。
+*イベント*\
+一致させるイベントの型。
 
-*TExtraParams*\
-一致するイベントの種類と共に、メンバー関数によって受け入れられる追加パラメーターの型。
+*Tエクストラパラム*\
+メンバー関数で受け入れられる追加のパラメーターの型と、一致するイベントの種類。
 
-*TExtraArgs*\
-`MatchEventInMemberFunction`に渡された余分な引数の型。
+*Tエクストラアルグ*\
+に渡された追加の引数の`MatchEventInMemberFunction`型。
 
-*event*\
-*Tevent*によって記述されるイベントの種類と照合するイベント。
+*イベント*\
+*TEvent*で記述されているイベントの種類と一致するイベント。
 
-*Objectptr*\
-*Memberfunc*が呼び出されるオブジェクトへのポインター。
+*オブジェクトPtr*\
+*メンバーFunc*が呼び出されるオブジェクトへのポインター。
 
-*Memberfunc*\
-照合するイベントの種類を記述するメンバー関数。
+*メンバーファンク*\
+一致するイベントの種類を記述するメンバー関数。
 
-*extraArgs*\
-イベントの種類のパラメーターと共に*Memberfunc*に完全に転送される引数。
+*エクストラ引数*\
+イベント型パラメーターと共に*メンバーFunc*に完全に転送される引数。
 
 ### <a name="return-value"></a>戻り値
 
-一致が成功した場合は**true** 、それ以外の場合は**false**の**ブール**値。
+一致が成功した場合は**true、** それ以外の場合は**false**の**ブール**値。
 
 ## <a name="remarks"></a>解説
 
-*Tevent*パラメーターに使用するイベントの種類は、*キャプチャクラス*の一覧から選択できます。 イベントとそれらを照合するために使用できるキャプチャクラスの一覧については、「 [event table](../event-table.md)」を参照してください。
+*TEvent*パラメータに使用するイベントタイプは *、キャプチャクラス*のリストから選択できます。 イベントの一覧と、イベントの照合に使用できるキャプチャ クラスについては、[イベント テーブル](../event-table.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -7,25 +7,25 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243663"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425413"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 関数
 
-## <a name="get_new_handler"></a> get_new_handler
+## <a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在を返して`new_handler`します。
+現在の `new_handler`を返します。
 
-## <a name="launder"></a> launder
+## <a name="launder"></a>launder
 
 ```cpp
 template <class T>
@@ -35,17 +35,17 @@ template <class T>
 ### <a name="parameters"></a>パラメーター
 
 *ptr*\
-型を持つオブジェクトを保持するメモリのバイトのアドレスと似ています*T*します。
+*T*に似た型のオブジェクトを保持する、メモリ内のバイトのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-型の値*T\**  X を指します。
+X を指す*T\** 型の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポインターの最適化のバリアとも呼ばれます。
+ポインターの最適化バリアとも呼ばれます。
 
-引数の値定数式で使用できる定数式として使用されます。 ストレージのバイトがオブジェクトのようなポインターを使用して、別のオブジェクトによって占有されているストレージ内でオブジェクトを指しているポインター値を使用してアクセスします。
+引数の値が定数式で使用される場合に、定数式として使用されます。 別のオブジェクトによって占有されているストレージ内、つまり類似したポインターを持つオブジェクトを指すポインター値によって、ストレージのバイトに到達できます。
 
 ### <a name="example"></a>例
 
@@ -59,25 +59,25 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a> nothrow
+## <a name="nothrow"></a>nothrow
 
-引数として使用するオブジェクトを提供します、 **nothrow**のバージョンの**新しい**と**削除**します。
+**Nothrow**バージョンの**new**および**delete**の引数として使用されるオブジェクトを提供します。
 
 ```cpp
 extern const std::nothrow_t nothrow;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 オブジェクトは、パラメーターの型 [std::nothrow_t](../standard-library/nothrow-t-structure.md) に一致する関数の引数として使用されます。
 
 ### <a name="example"></a>例
 
-`std::nothrow_t` を関数パラメーターとして使用する方法の例については、[operator new](../standard-library/new-operators.md#op_new) および [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) に関する記事をご覧ください。
+[ を関数パラメーターとして使用する方法の例については、「](../standard-library/new-operators.md#op_new)operator new[」および「](../standard-library/new-operators.md#op_new_arr)operator new&#91;&#93;`std::nothrow_t`」を参照してください。
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-インストールするときに呼び出されるユーザー関数**new 演算子**メモリの割り当ての試行に失敗します。
+メモリを割り当てようとしたときに**operator new**が失敗したときに呼び出されるユーザー関数をインストールします。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -86,15 +86,15 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>パラメーター
 
 *Pnew*\
-`new_handler`をインストールします。
+インストールする `new_handler`。
 
 ### <a name="return-value"></a>戻り値
 
 最初の呼び出しの場合は 0、それ以降の呼び出しの場合は以前の `new_handler`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は*Pnew*静的な[新しいハンドラー](../standard-library/new-typedefs.md#new_handler)ポインターが保持するポインターに以前に格納されている値が返されます。 新しいハンドラーを使って[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)。
+関数は、保持する静的[新しいハンドラー](../standard-library/new-typedefs.md#new_handler)ポインターに*pnew*を格納し、ポインターに以前に格納されていた値を返します。 新しいハンドラーは、 [operator new](../standard-library/new-operators.md#op_new)(**size_t**) によって使用されます。
 
 ### <a name="example"></a>例
 

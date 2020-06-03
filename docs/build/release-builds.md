@@ -1,21 +1,21 @@
 ---
-title: C++ のリリース ビルド - Visual Studio
+title: C++ リリース ビルド - Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: MT
+ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168825"
 ---
 # <a name="release-builds"></a>リリース ビルド
 
-リリース ビルドでは、最適化を使用します。 リリース ビルドを作成する最適化を使用すると、コンパイラでは、シンボリック デバッグ情報は生成されません。 トレースとアサートのコードが生成されないことのファクトと共に、シンボリック デバッグ情報の休暇を呼び出すと、実行可能ファイルのサイズが軽減され、高速化ができるためことを意味します。
+リリース ビルドでは、最適化が使用されます。 最適化を使用してリリース ビルドを作成すると、コンパイラによるシンボリック デバッグ情報の生成は行われません。 シンボリック デバッグ情報の欠如は、TRACE 呼び出しと ASSERT 呼び出し用のコードが生成されないという事実と共に、実行可能ファイルのサイズが縮小され、それによって高速になることを意味します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

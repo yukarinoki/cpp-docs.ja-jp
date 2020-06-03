@@ -1,31 +1,31 @@
 ---
-title: '方法: 出力を指定するパラメーター'
+title: '方法: out パラメーターを指定する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387221"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545445"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>方法: 出力を指定するパラメーター
+# <a name="how-to-specify-an-out-parameter"></a>方法: out パラメーターを指定する
 
-このサンプルでは、関数のパラメーターを out パラメーターに指定する方法と、c# プログラムからその関数を呼び出す方法を示します。
+このサンプルでは、関数パラメーターが `out` パラメーターであることを指定する方法と、その関数をC#プログラムから呼び出す方法を示します。
 
-Visual C で out パラメーターが指定された<xref:System.Runtime.InteropServices.OutAttribute>します。
+でC++は、<xref:System.Runtime.InteropServices.OutAttribute> を使用して `out` パラメーターを指定しています。
 
 ## <a name="example"></a>例
 
-このサンプルの最初の部分では、out パラメーターを持つ関数を含む型での Visual C DLL です。
+このサンプルの最初の部分ではC++ 、DLL を作成します。 `out` パラメーターを持つ関数を含む型を定義します。
 
-```
+```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>例
+このソースファイルは、 C#前の例でC++作成したコンポーネントを使用するクライアントです。
 
-これは、前の例で作成した Visual C コンポーネントを使用する c# クライアントです。
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;
@@ -55,6 +53,6 @@ class TestClass {
 a string
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

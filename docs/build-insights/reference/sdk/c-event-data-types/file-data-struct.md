@@ -1,6 +1,6 @@
 ---
-title: FILE_DATA 構造体
-description: C++ BUILD Insights SDK FILE_DATA 構造体リファレンス。
+title: FILE_DATA構造
+description: C++ ビルド インサイト SDK FILE_DATA構造参照。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335196"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325587"
 ---
-# <a name="file_data-structure"></a>FILE_DATA 構造体
+# <a name="file_data-structure"></a>FILE_DATA構造
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FILE_DATA` 構造体は、ファイルの入力または出力を記述します。
+この`FILE_DATA`構造体は、ファイルの入出力を記述します。
 
 ## <a name="syntax"></a>構文
 

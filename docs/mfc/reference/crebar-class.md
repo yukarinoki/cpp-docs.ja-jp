@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c1379d1ef8effea0df564da1b43769bb9a11435d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502796"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363931"
 ---
 # <a name="crebar-class"></a>CReBar クラス
 
@@ -35,24 +35,24 @@ class CReBar : public CControlBar
 
 |名前|説明|
 |----------|-----------------|
-|[CReBar:: AddBar](#addbar)|バンドを rebar に追加します。|
-|[CReBar:: Create](#create)|Rebar コントロールを作成し、 `CReBar`オブジェクトにアタッチします。|
-|[CReBar:: GetReBarCtrl](#getrebarctrl)|基になるコモンコントロールに直接アクセスできるようにします。|
+|[クレバー::追加バー](#addbar)|帯をリバーに追加します。|
+|[CReBar::作成](#create)|Rebar コントロールを作成し、オブジェクトに`CReBar`アタッチします。|
+|[クレバー::ゲットバーCtrl](#getrebarctrl)|基になるコモン コントロールに直接アクセスできるようにします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Rebar オブジェクトには、さまざまな子ウィンドウを含めることができます。通常は、エディットボックス、ツールバー、リストボックスなどの他のコントロールが含まれます。 Rebar オブジェクトは、指定されたビットマップ上に子ウィンドウを表示できます。 アプリケーションで rebar のサイズを自動的に変更したり、ユーザーがグリップバーをクリックまたはドラッグして rebar のサイズを手動で変更したりできます。
+Rebar オブジェクトには、編集ボックス、ツールバー、リスト ボックスなど、さまざまな子ウィンドウ (通常は他のコントロール) を含めることができます。 Rebar オブジェクトは、指定されたビットマップ上に子ウィンドウを表示できます。 アプリケーションで Rebar のサイズを自動的に変更したり、ユーザーがグリップ バーをクリックまたはドラッグして、手動で Rebar のサイズを変更したりできます。
 
 ![RebarMenu の例](../../mfc/reference/media/vc4sc61.gif "RebarMenu の例")
 
-## <a name="rebar-control"></a>Rebar コントロール
+## <a name="rebar-control"></a>リバー コントロール
 
-Rebar オブジェクトは、toolbar オブジェクトと同様に動作します。 Rebar は、クリックアンドドラッグでバンドのサイズを変更します。 Rebar コントロールには、1つまたは複数のバンドを含めることができます。各バンドには、グリップバー、ビットマップ、テキストラベル、および子ウィンドウが任意に組み合わされています。 ただし、バンドには複数の子ウィンドウを含めることはできません。
+rebar オブジェクトは、ツールバー オブジェクトと同様に動作します。 Rebar は、クリック アンド ドラッグ機構を使用してバンドのサイズを変更します。 Rebar コントロールには 1 つまたは複数のバンドを含めることができ、各バンドはグリッパー バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを持ちます。 ただし、バンドに複数の子ウィンドウを含めることはできません。
 
-`CReBar`は、 [Crebarctrl](../../mfc/reference/crebarctrl-class.md)クラスを使用して実装を提供します。 [GetReBarCtrl](#getrebarctrl)を使用して rebar コントロールにアクセスし、コントロールのカスタマイズオプションを利用することができます。 Rebar コントロールの詳細については`CReBarCtrl`、「」を参照してください。 Rebar コントロールの使用方法の詳細については、「 [CReBarCtrl の使用](../../mfc/using-crebarctrl.md)」を参照してください。
+`CReBar`は、その実装を提供するために[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)クラスを使用します。 コントロールのカスタマイズ オプションを利用するには[、GetReBarCtrl](#getrebarctrl)を使用して Rebar コントロールにアクセスできます。 Rebar コントロールの詳細については、を`CReBarCtrl`参照してください。 RebarCtrl の使用の詳細については[、「ReBarCtrl](../../mfc/using-crebarctrl.md)の使用」を参照してください。
 
 > [!CAUTION]
->  Rebar および rebar コントロールオブジェクトは、MFC コントロールバーのドッキングをサポートしていません。 `CRebar::EnableDocking`が呼び出されると、アプリケーションはをアサートします。
+> Rebar コントロール オブジェクトと Rebar コントロール オブジェクトは、MFC コントロール バーのドッキングをサポートしていません。 呼`CRebar::EnableDocking`び出された場合、アプリケーションはアサートします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,7 +62,7 @@ Rebar オブジェクトは、toolbar オブジェクトと同様に動作しま
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[コントロールバー](../../mfc/reference/ccontrolbar-class.md)
 
 `CReBar`
 
@@ -70,9 +70,9 @@ Rebar オブジェクトは、toolbar オブジェクトと同様に動作しま
 
 **ヘッダー:** afxext.h
 
-##  <a name="addbar"></a>CReBar:: AddBar
+## <a name="crebaraddbar"></a><a name="addbar"></a>クレバー::追加バー
 
-バンドを rebar に追加するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、帯を Rebar に追加します。
 
 ```
 BOOL AddBar(
@@ -91,23 +91,23 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBar*<br/>
-Rebar に挿入さ`CWnd`れる子ウィンドウであるオブジェクトへのポインター。 参照されるオブジェクトには WS_CHILD が必要です。
+*pバー*<br/>
+Rebar に`CWnd`挿入される子ウィンドウであるオブジェクトへのポインター。 参照されるオブジェクトには、WS_CHILDが必要です。
 
 *lpszText*<br/>
-Rebar に表示されるテキストを含む文字列へのポインター。 既定では NULL です。 *LpszText*に含まれるテキストは、子ウィンドウの一部ではありません。これは rebar 自体にあります。
+Rebar に表示するテキストを含む文字列へのポインター。 既定では NULL です。 *lpszText*に含まれるテキストは子ウィンドウの一部ではありません。それは、筋の上にあります。
 
-*.pbmp*<br/>
-Rebar の背景に`CBitmap`表示されるオブジェクトへのポインター。 既定では NULL です。
+*pbmp*<br/>
+Rebar の`CBitmap`背景に表示されるオブジェクトへのポインター。 既定では NULL です。
 
-*dwStyle*<br/>
-Rebar に適用するスタイルを含む DWORD です。 バンドスタイルの完全な一覧については、Win32 構造体の関数の説明 [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) を参照して`fStyle`ください。
+*Dwstyle*<br/>
+Rebar に適用するスタイルを含む DWORD。 バンド`fStyle`スタイルの完全なリストについては、Win32 構造体[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)の関数の説明を参照してください。
 
 *clrFore*<br/>
-Rebar の前景色を表す COLORREF 値。
+REBAR の前景色を表す COLORREF 値。
 
-*clrBack*<br/>
-Rebar の背景色を表す COLORREF 値。
+*clrバック*<br/>
+REBAR の背景色を表す COLORREF 値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -117,9 +117,9 @@ Rebar の背景色を表す COLORREF 値。
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-##  <a name="create"></a>CReBar:: Create
+## <a name="crebarcreate"></a><a name="create"></a>CReBar::作成
 
-Rebar を作成するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、Rebar を作成します。
 
 ```
 virtual BOOL Create(
@@ -132,16 +132,16 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-Windows ウィンドウが`CWnd`ステータスバーの親であるオブジェクトへのポインター。 通常はフレームウィンドウです。
+ウィンドウがステータス`CWnd`バーの親であるオブジェクトへのポインター。 通常、フレーム ウィンドウ。
 
-*dwCtrlStyle*<br/>
-Rebar コントロールスタイル。 既定では、RBS_BANDBORDERS は、rebar コントロール内の隣接するバンドを分離するための細い線を表示します。 スタイルの一覧については、「Windows SDK の[Rebar コントロールスタイル](/windows/win32/Controls/rebar-control-styles)」を参照してください。
+*スタイル*<br/>
+Rebar コントロールのスタイル。 既定では、RBS_BANDBORDERSは、Rebar コントロール内の隣接するバンドを分離するために狭い線を表示します。 スタイルの一覧については、Windows SDK の[「Rebar コントロール](/windows/win32/Controls/rebar-control-styles)スタイル」を参照してください。
 
-*dwStyle*<br/>
+*Dwstyle*<br/>
 Rebar ウィンドウスタイル。
 
 *nID*<br/>
-Rebar の子ウィンドウ ID。
+rebar の子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -149,11 +149,11 @@ Rebar の子ウィンドウ ID。
 
 ### <a name="example"></a>例
 
-  [CReBar:: AddBar](#addbar)の例を参照してください。
+  [「CReBar::AddBar」](#addbar)の例を参照してください。
 
-##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
+## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a>クレバー::ゲットバーCtrl
 
-このメンバー関数は、基になるコモンコントロールに直接アクセスできるようにします。
+このメンバー関数は、基になるコモン コントロールに直接アクセスできます。
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,13 +161,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>戻り値
 
-[Crebarctrl](../../mfc/reference/crebarctrl-class.md)オブジェクトへの参照。
+[オブジェクト](../../mfc/reference/crebarctrl-class.md)への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数を呼び出して、rebar をカスタマイズするときの Windows rebar コモンコントロールの機能を利用します。 を呼び出す`GetReBarCtrl`と、 `CReBarCtrl`オブジェクトへの参照オブジェクトが返されます。これにより、いずれかのメンバー関数を使用できるようになります。
+Rebar のカスタマイズ時に Windows rebar コモン コントロールの機能を利用するには、このメンバー関数を呼び出します。 を呼び`GetReBarCtrl`出すと、オブジェクトに参照オブジェクトが`CReBarCtrl`返されるため、いずれかのメンバー関数を使用できます。
 
-を使用`CReBarCtrl`した rebar のカスタマイズの詳細については、「 [crebarctrl の使用](../../mfc/using-crebarctrl.md)」を参照してください。
+Rebar をカスタマイズ`CReBarCtrl`する方法の詳細については、「 [CReBarCtrl](../../mfc/using-crebarctrl.md)の使用 」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -177,4 +177,4 @@ CReBarCtrl& GetReBarCtrl() const;
 
 [MFC サンプル MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

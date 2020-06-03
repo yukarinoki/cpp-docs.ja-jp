@@ -1,44 +1,44 @@
 ---
-title: 例外:独自の関数からの例外のスロー
+title: '例外処理 : 独自関数からの例外のスロー'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6484594df7636fd52ac46ab1cc212c8e2ec0278e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359278"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外:独自の関数からの例外のスロー
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外処理 : 独自関数からの例外のスロー
 
-MFC やその他のライブラリ内の関数によってスローされた例外をキャッチするためだけに MFC 例外処理のパラダイムを使用することになります。 ライブラリ コードによってスローされた例外をキャッチするだけでなく例外的な状況が発生することができます関数を記述する場合、独自のコードから例外をスローすることができます。
+MFC 例外処理パラダイムを使用して、MFC やその他のライブラリの関数によってスローされた例外をキャッチするためだけに使用できます。 例外が発生する可能性がある関数を作成する場合は、ライブラリ コードによってスローされた例外をキャッチするだけでなく、独自のコードから例外をスローすることもできます。
 
-現在の関数の実行が停止しに直接ジャンプ、例外がスローされたときに、**キャッチ**最も内側の例外フレームのブロック。 例外処理機構は、関数からの正常終了のパスをバイパスします。 そのため、通常の終了時に削除されるメモリ ブロックを削除することを確認する必要があります。
+例外がスローされると、現在の関数の実行が停止され、最も内側の例外フレームの**catch**ブロックに直接ジャンプします。 例外メカニズムは、関数からの通常の出口パスをバイパスします。 したがって、通常の出口で削除されるメモリ ブロックは必ず削除する必要があります。
 
 #### <a name="to-throw-an-exception"></a>例外をスローするには
 
-1. MFC のヘルパー関数のいずれかのような使用`AfxThrowMemoryException`します。 これらの関数は、適切な型の事前割り当て済みの例外オブジェクトをスローします。
+1. などの`AfxThrowMemoryException`MFC ヘルパー関数の 1 つを使用します。 これらの関数は、適切な型の事前割り当て例外オブジェクトをスローします。
 
-   次の例では、関数は、2 つのメモリ ブロックの割り当てが試行され、いずれかの割り当てに失敗した場合に例外をスローします。
+   次の例では、関数は 2 つのメモリ ブロックを割り当てようとし、いずれかの割り当てが失敗した場合に例外をスローします。
 
    [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-   最初の割り当てに失敗した場合、メモリの例外をスローすることができます。 最初の割り当てが成功したが、2 つ目ができない場合は、例外をスローする前に、最初の割り当てブロックを解放する必要があります。 両方の割り当てが成功した場合は、通常どおり続行して、関数の終了時にブロックを解放します。
+   最初の割り当てが失敗した場合は、メモリ例外をスローするだけです。 最初の割り当てが成功しても、2 番目の割り当てが失敗した場合は、例外をスローする前に最初の割り当てブロックを解放する必要があります。 両方の割り当てが成功した場合は、正常に処理を続行し、関数を終了するときにブロックを解放できます。
 
-     - または
+     - - または -
 
-1. ユーザー定義の例外を使用して、問題の状況を示します。 でも、クラス全体は、あらゆる種類の項目は、例外としてスローできます。
+1. ユーザー定義の例外を使用して、問題の状態を示します。 例外として、クラス全体を含め、任意の型の項目をスローできます。
 
-   次の例では、wave デバイスを介してサウンドを再生しようとしていますし、障害が発生した場合に例外をスローします。
+   次の例では、Wave デバイスを介してサウンドを再生しようとし、障害が発生した場合に例外をスローします。
 
    [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
->  MFC の例外の既定の処理がへのポインターにのみ適用されます`CException`オブジェクト (とオブジェクトの`CException`-派生クラス)。 上記の例では、MFC の例外処理機構がバイパスされます。
+> MFC の既定の例外処理は、オブジェクト (および -derived クラスの`CException``CException`オブジェクト) へのポインターにのみ適用されます。 上記の例では、MFC の例外メカニズムをバイパスします。
 
 ## <a name="see-also"></a>関連項目
 

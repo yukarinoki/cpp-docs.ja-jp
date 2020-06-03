@@ -1,6 +1,6 @@
 ---
-title: OnRelogEventFunc typedef
-description: C++ BUILD Insights SDK OnRelogEventFunc typedef リファレンス。
+title: イベントのイベントを処理する
+description: C++ ビルド インサイト SDK OnRelogEventFunc タイプ定義のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329074"
 ---
-# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
+# <a name="onrelogeventfunc-typedef"></a>イベントのイベントを処理する
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnRelogEventFunc` typedef は、 [RELOG_CALLBACKS](relog-callbacks-struct.md)構造体で使用される関数シグネチャの1つです。
+typedef は`OnRelogEventFunc`[、RELOG_CALLBACKS](relog-callbacks-struct.md)構造体で使用される関数シグネチャの 1 つです。
 
 ## <a name="syntax"></a>構文
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>パラメーター
 
-*Eventstack*\
-現在のイベントのイベントスタック。 イベントスタックの詳細については、「 [Events](../event-table.md)」を参照してください。
+*イベントスタック*\
+現在のイベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
 
-*Relogsession*\
-[InjectEvent](../functions/inject-event.md)を呼び出すときに使用する再ログセッションポインター。
+*セッションを再ログします。*\
+[InjectEvent](../functions/inject-event.md)を呼び出すときに使用する再ロギング セッション ポインター。
 
-*\ の*テキスト
-[RELOG_DESCRIPTOR](analysis-descriptor-struct.md)でこのコールバックに対して設定されたコンテキスト値。
+*コールバックコンテキスト*\
+このコールバックに設定されたコンテキスト値[は RELOG_DESCRIPTOR。](analysis-descriptor-struct.md)
 
 ### <a name="return-value"></a>戻り値
 
-次に発生する内容を制御する[CALLBACK_CODE](callback-code-enum.md)値。
+次に起こる処理を制御する[CALLBACK_CODE](callback-code-enum.md)値。
 
 ::: moniker-end

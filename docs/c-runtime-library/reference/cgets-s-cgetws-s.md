@@ -1,9 +1,11 @@
 ---
 title: _cgets_s、_cgetws_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cgetws_s
 - _cgets_s
+- _o__cgets_s
+- _o__cgetws_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624777"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917095"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
@@ -74,7 +77,7 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 データの格納場所。
 
 *numberOfElements*<br/>
@@ -89,15 +92,15 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*pSizeRead*|Return|*バッファー*の内容|
+|*格納*|*numberOfElements*|*pSizeRead*|戻り値|*バッファー*の内容|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|任意|任意|**EINVAL**|N/A|
-|**NULL**以外|ゼロ|任意|**EINVAL**|変更されない|
-|**NULL**以外|任意|**NULL**|**EINVAL**|長さゼロの文字列|
+|**空白**|any|any|**EINVAL**|該当なし|
+|**NULL**以外|ゼロ|any|**EINVAL**|変更されない|
+|**NULL**以外|any|**空白**|**EINVAL**|長さゼロの文字列|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_cgets_s**と **_cgetws_s**は、コンソールから文字列を読み取り、(null 終端文字を含む) 文字列を*バッファー*にコピーします。 **_cgetws_s**は、関数のワイド文字バージョンです。文字のサイズ以外は、これらの2つの関数の動作は同じです。 読み取る文字列の最大サイズは、 *Numberofelements*パラメーターとして渡されます。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数は*pSizeRead*に配置されます。
+**_cgets_s**と **_cgetws_s**コンソールから文字列を読み取り、(null 終端文字を含む) 文字列を*バッファー*にコピーします。 **_cgetws_s**は、関数のワイド文字バージョンです。文字のサイズ以外は、これらの2つの関数の動作は同じです。 読み取る文字列の最大サイズは、 *Numberofelements*パラメーターとして渡されます。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数は*pSizeRead*に配置されます。
 
 操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、 **einval**が返されます。
 
@@ -105,20 +108,22 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cgetts_s**|**_cgets_s**|**_cgets_s**|**_cgetws_s**|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> または \<wchar.h>|
 
-互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

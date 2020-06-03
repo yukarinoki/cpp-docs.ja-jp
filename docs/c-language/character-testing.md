@@ -11,7 +11,7 @@ ms.locfileid: "70740096"
 ---
 # <a name="character-testing"></a>文字テスト
 
-**ANSI 4.3.1** `isalnum`、`isalpha`、`iscntrl`、`islower`、`isprint`、`isupper` 関数がテストする文字セット
+**ANSI 4.3.1**`isalnum`、`isalpha`、`iscntrl`、`islower`、`isprint`、`isupper` 関数がテストする文字セット
 
 次の一覧は、Microsoft C コンパイラによって実装された、これらの関数について説明します。
 

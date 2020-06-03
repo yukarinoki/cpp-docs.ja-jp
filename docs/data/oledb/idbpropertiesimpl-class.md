@@ -9,12 +9,10 @@ f1_keywords:
 - ATL::IDBPropertiesImpl
 - IDBPropertiesImpl::GetProperties
 - IDBPropertiesImpl.GetProperties
-- GetProperties
 - IDBPropertiesImpl::GetPropertyInfo
 - IDBPropertiesImpl.GetPropertyInfo
 - GetPropertyInfo
 - IDBPropertiesImpl.SetProperties
-- SetProperties
 - IDBPropertiesImpl::SetProperties
 helpviewer_keywords:
 - IDBPropertiesImpl class
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210705"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl クラス
 
-実装を提供、`IDBProperties`インターフェイス。
+`IDBProperties` インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +42,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IDBPropertiesImpl`します。
+`IDBPropertiesImpl`から派生したクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -56,17 +54,17 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|現在、データ ソース オブジェクトまたは現在に設定されている初期化プロパティ グループ内のプロパティの値に設定されているデータ ソース、データ ソースの情報、および初期化プロパティ グループ内のプロパティの値を返します、列挙子。|
+|[GetProperties](#getproperties)|データソースオブジェクトに対して現在設定されているデータソース、データソース情報、および初期化プロパティグループのプロパティの値、または現在に設定されている初期化プロパティグループのプロパティの値を返します。子.|
 |[GetPropertyInfo](#getpropertyinfo)|プロバイダーでサポートされているすべてのプロパティに関する情報を返します。|
-|[SetProperties](#setproperties)|列挙子のデータ ソースと初期化プロパティ グループのデータ ソース オブジェクト、または、初期化プロパティ グループのプロパティを設定します。|
+|[SetProperties](#setproperties)|データソースオブジェクト、または初期化プロパティグループの列挙子について、データソースおよび初期化プロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85))はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイス。 ただし、列挙子を公開する場合[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))、それを公開する必要があります`IDBProperties`します。 `IDBPropertiesImpl` 実装`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)します。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85))は、データソースオブジェクトの必須のインターフェイスであり、列挙子のオプションのインターフェイスです。 ただし、列挙子が[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))を公開する場合は、`IDBProperties`を公開する必要があります。 `IDBPropertiesImpl` は[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)で定義された静的関数を使用して `IDBProperties` を実装します。
 
-## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
 
-現在、データ ソース オブジェクトまたは現在に設定されている初期化プロパティ グループ内のプロパティの値に設定されているデータ ソース、データ ソースの情報、および初期化プロパティ グループ内のプロパティの値を返します、列挙子。
+データソースオブジェクトに対して現在設定されているデータソース、データソース情報、および初期化プロパティグループのプロパティの値、または現在に設定されている初期化プロパティグループのプロパティの値を返します。子.
 
 ### <a name="syntax"></a>構文
 
@@ -79,24 +77,24 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) 」を参照してください。
 
-いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetProperties`:
+一部のパラメーターは、`IDBProperties::GetProperties`で説明されているさまざまな名前の*プログラマの参照パラメーター OLE DB*に対応しています。
 
-|OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|
+|テンプレートパラメーターの OLE DB|*OLE DB プログラマーの参照*パラメーター|
 |--------------------------------|------------------------------------------------|
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
 |*pcProperties*|*pcPropertySets*|
 |*prgProperties*|*prgPropertySets*|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドがされた DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO でのプロパティの値を返します、プロバイダーが初期化されている場合、データ ソース オブジェクトに現在設定されている DBPROPSET_DBINIT プロパティ グループ。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみを返します。
+プロバイダーが初期化されている場合、このメソッドは、データソースオブジェクトに現在設定されている DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO、DBPROPSET_DBINIT プロパティグループのプロパティの値を返します。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみが返されます。
 
-## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
 
-データ ソースでサポートされるプロパティの情報を返します。
+データソースでサポートされているプロパティ情報を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -110,22 +108,22 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::getpropertyinfo](/previous-versions/windows/desktop/ms718175(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) 」を参照してください。
 
-いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetPropertyInfo`:
+一部のパラメーターは、`IDBProperties::GetPropertyInfo`で説明されているさまざまな名前の*プログラマの参照パラメーター OLE DB*に対応しています。
 
-|OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|
+|テンプレートパラメーターの OLE DB|*OLE DB プログラマーの参照*パラメーター|
 |--------------------------------|------------------------------------------------|
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用して[idbinitializeimpl::m_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)この機能を実装します。
+では、 [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)を使用してこの機能を実装します。
 
-## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl:: SetProperties
 
-列挙子のデータ ソースと初期化プロパティ グループのデータ ソース オブジェクト、または、初期化プロパティ グループのプロパティを設定します。
+データソースオブジェクト、または初期化プロパティグループの列挙子について、データソースおよび初期化プロパティグループのプロパティを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -136,13 +134,13 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::setproperties](/previous-versions/windows/desktop/ms723049(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドがされた DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO、のプロパティの値を設定する場合は、プロバイダーを初期化すると、データ ソース オブジェクトの DBPROPSET_DBINIT プロパティ グループ。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみを設定します。
+プロバイダーが初期化されている場合、このメソッドは、データソースオブジェクトの DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO、DBPROPSET_DBINIT プロパティグループのプロパティの値を設定します。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみが設定されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

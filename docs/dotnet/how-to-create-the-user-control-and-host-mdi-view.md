@@ -1,52 +1,52 @@
 ---
-title: '方法: ユーザー コントロールおよびホスト MDI ビューを作成します。'
+title: '方法: ユーザー コントロールを作成し、MDI ビューをホストする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72501ba32d3b8b9a5c5fd8dd0c56f0628642b147
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387436"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374465"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールおよびホスト MDI ビューを作成します。
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールを作成し、MDI ビューをホストする
 
-次の手順では、.NET Framework ユーザー コントロールを作成し、そのユーザー コントロールをコントロール クラス ライブラリ (特に Windows コントロール ライブラリ プロジェクト) に作成し、プロジェクトをアセンブリにコンパイルする方法について説明します。 コントロールから派生したクラスを使用する MFC アプリケーションから使用できます[CView クラス](../mfc/reference/cview-class.md)と[CWinFormsView クラス](../mfc/reference/cwinformsview-class.md)します。
+次の手順では、.NET Framework ユーザー コントロールを作成し、そのユーザー コントロールをコントロール クラス ライブラリ (特に Windows コントロール ライブラリ プロジェクト) に作成し、プロジェクトをアセンブリにコンパイルする方法について説明します。 このコントロールは[、CView クラスおよび CWinFormsView クラス](../mfc/reference/cview-class.md)から派生した[CWinFormsView Class](../mfc/reference/cwinformsview-class.md)クラスを使用する MFC アプリケーションから使用できます。
 
-Windows フォーム ユーザー コントロールを作成およびコントロール クラス ライブラリを作成する方法については、次を参照してください。[方法。ユーザー コントロールを作成](/dotnet/framework/winforms/controls/how-to-author-composite-controls)です。
+Windows フォーム ユーザー コントロールを作成し、コントロール クラス ライブラリを作成する方法については、「[方法 : ユーザー コントロールを作成する](/dotnet/framework/winforms/controls/how-to-author-composite-controls)」を参照してください。
 
 > [!NOTE]
->  サードパーティのグリッド コントロールなどの Windows フォーム コントロールは、MFC アプリケーションでホストした場合に適切に動作しないことがあります。 この問題の推奨回避策は、Windows フォーム ユーザー コントロールを MFC アプリケーションに配置し、サードパーティのグリッド コントロールをユーザー コントロールの内部に配置することです。
+> サードパーティのグリッド コントロールなどの Windows フォーム コントロールは、MFC アプリケーションでホストした場合に適切に動作しないことがあります。 この問題の推奨回避策は、Windows フォーム ユーザー コントロールを MFC アプリケーションに配置し、サードパーティのグリッド コントロールをユーザー コントロールの内部に配置することです。
 
-この手順の手順に従って、WindowsFormsControlLibrary1 をという名前の Windows フォーム コントロール ライブラリ プロジェクトを作成することを前提と[方法。ユーザー コントロールおよびホストを作成 ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)します。
+この手順では、「[方法 : ダイアログ ボックスでユーザー コントロールとホストを作成する](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)」の手順に従って、WindowsFormsControlLibrary1 という名前の Windows フォーム コントロール ライブラリ プロジェクトを作成したことを前提としています。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 
 1. MFC アプリケーション プロジェクトを作成します。
 
-   **ファイル**メニューの [**新規**、] をクリックし、**プロジェクト**します。 **Visual C**フォルダーで、 **MFC アプリケーション**します。
+   [**ファイル**] メニューの **[新規作成**] をクリックし、[**プロジェクト**] をクリックします。 Visual **C++** フォルダで **、[MFC アプリケーション**] を選択します。
 
-   **名前**ボックスに、入力`MFC02`を変更して、**ソリューション**設定**ソリューションに追加**。 **[OK]** をクリックします。
+   [**名前]** ボックスに`MFC02`、[ソリューションの設定] を [**ソリューションに追加]** に入力し、変更します。 **Solution** **[OK]** をクリックします。
 
-   **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**します。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。
+   MFC**アプリケーション ウィザード**で、すべての既定値をそのまま使用し、[**完了**] をクリックします。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。
 
 1. 共通言語ランタイム (CLR: Common Language Runtime) に対するサポートをプロジェクトに構成します。
 
-   **ソリューション エクスプ ローラー**を右クリックし、`MFC01`プロジェクト ノード、および選択**プロパティ**コンテキスト メニュー。 **プロパティ ページ** ダイアログ ボックスが表示されます。
+   **ソリューション エクスプローラー**で、プロジェクト ノード`MFC01`を右クリックし、コンテキスト メニューから **[プロパティ]** を選択します。 [**プロパティ ページ]** ダイアログ ボックスが表示されます。
 
-   **構成プロパティ**を選択します**全般**します。 下、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** します。
+   [**構成のプロパティ]** で、[**全般**] を選択します。 [**プロジェクトの既定値]** セクションで、[**共通言語ランタイム のサポート**] を **[共通言語ランタイム サポート ] (/clr)** に設定します。
 
-   [**構成プロパティ**、展開**C/C++** ] をクリックし、**全般**ノード。 設定**デバッグ情報の形式**に**プログラム データベース (/Zi)** します。
+   [**構成プロパティ]** で **、[C/C++]** を展開し、[**全般**] ノードをクリックします。 **デバッグ情報の形式**を**プログラム データベース (/Zi)** に設定します。
 
-   をクリックして、**コード生成**ノード。 設定**最小リビルドを有効にする**に**いいえ (/Gm-)** します。 設定**基本ランタイム チェック**に**既定**します。
+   [**コード生成**] ノードをクリックします。 **[最小再構築を有効**にする] を **[いいえ (/Gm-)]** に設定します。 また、[**基本ランタイム チェック]** を **[既定]** に設定します。
 
-   クリックして**OK**変更を適用します。
+   **[OK] を**クリックして変更を適用します。
 
-1. stdafx.h に、次の行を追加します。
+1. *pch.h* (2017 年以前のバージョンでは*stdafx.h)* に次の行を追加します。
 
     ```
     #using <System.Windows.Forms.dll>
@@ -54,7 +54,7 @@ Windows フォーム ユーザー コントロールを作成およびコント�
 
 1. .NET コントロールへの参照を追加します。
 
-   **ソリューション エクスプ ローラー**を右クリックし、`MFC02`プロジェクト ノードと選択**追加**、**参照**します。 **プロパティ ページ**、 をクリックして**新しい参照の追加**、windowsformscontrollibrary1 (下、**プロジェクト** タブ)、 をクリック**OK**. 形式での参照が追加されます、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラ オプションは、プログラムをコンパイルするため; に WindowsFormsControlLibrary1.dll がコピーも、`MFC02`プログラムを実行するためのプロジェクト ディレクトリ。
+   **ソリューション エクスプローラ**で、プロジェクト ノード`MFC02`を右クリックし、[**追加**]、[**参照**] の順に選択します。 [**プロパティ ページ**] で 、[**新しい参照の追加**] をクリックし、[**プロジェクト**] タブの [WindowsFormsControlLibrary1] を選択**して、[OK]** をクリックします。 これにより[、/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラ オプションの形式で参照が追加され、プログラムがコンパイルされます。また、プログラムが実行されるように、`MFC02`プロジェクト ディレクトリに WindowsFormsControlLibrary1.dll をコピーします。
 
 1. stdafx.h で次の行を見つけます。
 
@@ -68,9 +68,9 @@ Windows フォーム ユーザー コントロールを作成およびコント�
     #include <afxwinforms.h>   // MFC Windows Forms support
     ```
 
-1. 継承するようにビュー クラスを変更[CWinFormsView](../mfc/reference/cwinformsview-class.md)します。
+1. ビュー クラスを変更して[、CWinFormsView](../mfc/reference/cwinformsview-class.md)から継承するようにします。
 
-   MFC02View.h、置き換えます[CView](../mfc/reference/cview-class.md)で[CWinFormsView](../mfc/reference/cwinformsview-class.md)コードは次のように表示されるように。
+   MFC02View.h では、コードが次のように表示されるように[CView](../mfc/reference/cview-class.md)を[CWinFormsView](../mfc/reference/cwinformsview-class.md)に置き換えます。
 
     ```
     class CMFC02View : public CWinFormsView
@@ -78,7 +78,7 @@ Windows フォーム ユーザー コントロールを作成およびコント�
     };
     ```
 
-   呼び出す必要があります、MDI アプリケーションに追加のビューを追加する場合は、[とき](../mfc/reference/cwinapp-class.md#adddoctemplate)のそれぞれのビューを作成します。
+   MDI アプリケーションにビューを追加する場合は、作成する各ビューに対して[CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)を呼び出す必要があります。
 
 1. MFC02View.cpp ファイルを変更して、IMPLEMENT_DYNCREATE マクロとメッセージ マップで CView を CWinFormsView に変更し、既存の空のコンストラクターを次に示すコンストラクターに置き換えます。
 
@@ -95,11 +95,11 @@ Windows フォーム ユーザー コントロールを作成およびコント�
 
 1. プロジェクトをビルドして実行します。
 
-   **ソリューション エクスプ ローラー**MFC02 を右クリックし、選択、**スタートアップ プロジェクトとして設定**します。
+   **ソリューション エクスプローラ**で MFC02 を右クリックし、[**スタートアップ プロジェクトに設定]** を選択します。
 
    **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   [**デバッグ**] メニューの [**デバッグなしで開始**] をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

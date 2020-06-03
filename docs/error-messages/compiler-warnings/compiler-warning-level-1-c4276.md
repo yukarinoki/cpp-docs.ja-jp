@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4276
 ms.assetid: 9d738c2d-29e5-408a-b9ff-be1a850b2238
-ms.openlocfilehash: 87f13f7da12a3f7e40aaad180e2a3bc83e121771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1de07cd65bbc9f02a979ceebe31be4143af70ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175819"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>コンパイラの警告 (レベル 1) C4276
 
-'function': プロトタイプがありません。パラメーターがないと仮定します。
+' function ': プロトタイプが指定されていません。パラメーターを想定しない
 
-持つ関数のアドレスを取得するときに、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約を付ける必要があります、プロトタイプ、コンパイラは関数の装飾名を作成できるようにします。 *関数*装飾名を作成するときに、コンパイラのプロトタイプがありません、この関数はパラメーターを持たない前提としています。
+[__Stdcall](../../cpp/stdcall.md)呼び出し規約を使用して関数のアドレスを取得する場合は、コンパイラが関数の装飾名を作成できるように、プロトタイプを指定する必要があります。 *関数*にはプロトタイプがないため、装飾名を作成するときのコンパイラは、関数にパラメーターがないことを前提としています。

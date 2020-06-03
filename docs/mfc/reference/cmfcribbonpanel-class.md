@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonPanel クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonPanel
@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389555"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753547"
 ---
-# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
+# <a name="cmfcribbonpanel-class"></a>クラス
 
 一連のリボン要素を含むパネルを実装します。 このパネルが描画されると、そのパネルに指定されたサイズに対して可能な限り多くの要素が表示されます。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -139,75 +139,75 @@ class CMFCRibbonPanel : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|`CMFCRibbonPanel` オブジェクトを構築して初期化します。|
+|[::CMFCリボンパネル](#cmfcribbonpanel)|`CMFCRibbonPanel` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonPanel::Add](#add)|パネルには、リボン要素を追加します。|
-|[CMFCRibbonPanel::AddSeparator](#addseparator)|リボン パネルには、区切り記号を追加します。|
-|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|リボン パネルには、ツールバーを追加します。|
-|[CMFCRibbonPanel::FindByData](#findbydata)||
-|[CMFCRibbonPanel::FindByID](#findbyid)|指定したコマンド ID によって識別された要素を返します|
-|[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||
-|[CMFCRibbonPanel::GetCount](#getcount)|リボン パネルに要素の数を返します。|
-|[CMFCRibbonPanel::GetData](#getdata)|パネルに関連付けられているユーザー定義データを返します。|
-|[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||
-|[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||
-|[CMFCRibbonPanel::GetElement](#getelement)|指定したインデックス位置にあるリボン要素を返します。|
-|[CMFCRibbonPanel::GetElements](#getelements)|リボン パネルに含まれているすべての要素を取得します。|
-|[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||
-|[CMFCRibbonPanel::GetFocused](#getfocused)|フォーカスされた要素を返します。|
-|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|ギャラリー要素の外接する四角形を返します。|
-|[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||
-|[CMFCRibbonPanel::GetIndex](#getindex)||
-|[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||
-|[CMFCRibbonPanel::GetName](#getname)||
-|[CMFCRibbonPanel::GetParentButton](#getparentbutton)||
-|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|リボン パネルの親カテゴリを返します。|
-|[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||
-|[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||
-|[CMFCRibbonPanel::GetPressed](#getpressed)||
-|[CMFCRibbonPanel::GetRect](#getrect)||
-|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|表示される要素の配列を取得します。|
-|[CMFCRibbonPanel::HasElement](#haselement)||
-|[CMFCRibbonPanel::HitTest](#hittest)||
-|[CMFCRibbonPanel::HitTestEx](#hittestex)||
-|[CMFCRibbonPanel::Insert](#insert)|指定した位置にあるリボン要素を挿入します。|
-|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|指定された位置に、区切り記号を挿入します。|
-|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|列かどうかすべてのパネル要素中央揃えにする (配置)、垂直方向を指定します。|
-|[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||
-|[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||
-|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|パネルのすべての列の幅が同じかどうかを指定します。|
-|[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||
-|[CMFCRibbonPanel::IsMenuMode](#ismenumode)||
-|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|指定されたリボン要素を表示するギャラリーをスクロールします。|
-|[CMFCRibbonPanel::OnKey](#onkey)||
-|[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||
-|[CMFCRibbonPanel::Remove](#remove)|削除し、必要に応じて指定したインデックス位置にある要素を削除します。|
-|[CMFCRibbonPanel::RemoveAll](#removeall)|リボン パネルからすべての要素を削除します。|
-|[CMFCRibbonPanel::Replace](#replace)|対応するインデックス値に基づく別の 1 つの要素を置き換えます。|
-|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|指定したコマンド ID に基づいて別の 1 つの要素を置き換えます|
-|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|列で要素を垂直方向に配置するパネルを並べ替えます。|
-|[CMFCRibbonPanel::SetData](#setdata)|ユーザー定義データをリボン パネルに関連付けます。|
-|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|指定されたコマンド ID を持つ要素をポップアップ メニューを割り当てます|
-|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|リボン パネルに指定されたランタイム クラス情報で指定されたリボン要素を追加します。|
-|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|リボン パネルに指定されたランタイム クラス情報で指定されたリボン要素を追加します。|
-|[CMFCRibbonPanel::SetFocused](#setfocused)|指定されたリボン要素にフォーカスを設定します。|
-|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|有効または列の位置合わせを無効にします。|
-|[CMFCRibbonPanel::SetKeys](#setkeys)|リボン パネルを表示するキーボード ショートカットを設定します。|
-|[CMFCRibbonPanel::ShowPopup](#showpopup)||
+|[リボンパネル::追加](#add)|パネルにリボン要素を追加します。|
+|[CMFCリボンパネル::セパレータの追加](#addseparator)|リボン パネルに区分線を追加します。|
+|[コントロール バーの追加](#addtoolbar)|リボン パネルにツールバーを追加します。|
+|[次のデータを検索します。](#findbydata)||
+|[リボンパネル::検索バイID](#findbyid)|指定したコマンド ID で識別される要素を返します。|
+|[コントロールの一面をクリックします。](#getcaptionheight)||
+|[をクリックします。](#getcount)|リボン パネル内の要素の数を返します。|
+|[をクリックします。](#getdata)|パネルに関連付けられたユーザー定義データを返します。|
+|[コントロール パネル::既定のボタンを取得します。](#getdefaultbutton)||
+|[CMFCリボンパネル::ゲットドロップダウン](#getdroppeddown)||
+|[をクリックします。](#getelement)|指定したインデックス位置にあるリボン要素を返します。|
+|[要素を取得します。](#getelements)|リボン パネルに含まれるすべての要素を取得します。|
+|[をクリックします。](#getelementsbyid)||
+|[CMFCリボンパネル::ゲットフォーカス](#getfocused)|フォーカスされた要素を返します。|
+|[CMFCリボンパネル::ゲットギャラリーレック](#getgalleryrect)|ギャラリー要素の外接する四角形を返します。|
+|[CMFCリボンパネル::ハイライトされた取得](#gethighlighted)||
+|[をクリックします。](#getindex)||
+|[リストを取得します。](#getitemidslist)||
+|[リボンパネル::ゲットネーム](#getname)||
+|[コントロール パネル::親ボタンを取得します。](#getparentbutton)||
+|[次の項目を取得します。](#getparentcategory)|リボン パネルの親カテゴリを返します。|
+|[コントロール バーを表示します。](#getparentmenubar)||
+|[コントロールメニューの場所](#getpreferedmenulocation)||
+|[リボンパネル::ゲットプレス](#getpressed)||
+|[リボンパネル::ゲットレック](#getrect)||
+|[次の要素を取得します。](#getvisibleelements)|可視要素の配列を取得します。|
+|[をクリックします。](#haselement)||
+|[ヒットテストパネル::ヒットテスト](#hittest)||
+|[CMFCリボンパネル::ヒットテスト](#hittestex)||
+|[リボンパネル::挿入](#insert)|指定した位置にリボン要素を挿入します。|
+|[をクリックします。](#insertseparator)|指定した位置に区切り記号を挿入します。|
+|[CMFCリボンパネル::イセンタカラムバート](#iscentercolumnvert)|すべてのパネル要素を縦方向に、縦方向に、列ごとに中央揃え (配置) するかどうかを指定します。|
+|[リボンパネル::折りたたまれた](#iscollapsed)||
+|[CMFCリボンパネル::ハイライト](#ishighlighted)||
+|[列を評価します。](#isjustifycolumns)|すべてのパネル列の幅が同じかどうかを指定します。|
+|[リボンパネル::イズメインパネル](#ismainpanel)||
+|[メニューモード](#ismenumode)||
+|[を見る](#makegalleryitemvisible)|ギャラリーをスクロールして、指定したリボン要素を表示します。|
+|[リボンパネル::オンキー](#onkey)||
+|[CMFCリボンパネル::再計算幅](#recalcwidths)||
+|[リボンパネル::削除](#remove)|指定したインデックス位置にある要素を削除し、必要に応じて削除します。|
+|[すべて削除します。](#removeall)|リボン パネルからすべての要素を削除します。|
+|[置き換え](#replace)|各インデックス値に基づいて、要素を別の要素に置き換えます。|
+|[を変更します。](#replacebyid)|指定したコマンド ID に基づいて、1 つの要素を別の要素に置き換えます。|
+|[CMFCリボンパネル::セットセンターカラムバート](#setcentercolumnvert)|パネルに要素を縦に並べ替え、列ごとに整列させます。|
+|[を設定します。](#setdata)|ユーザー定義データをリボン パネルに関連付けます。|
+|[メニューメニュー](#setelementmenu)|指定されたコマンド ID を持つ要素にポップアップ メニューを割り当てます。|
+|[リボンパネル::セットエレメントRTC](#setelementrtc)|指定されたランタイム クラス情報で指定されたリボン要素をリボン パネルに追加します。|
+|[をクリックします。](#setelementrtcbyid)|指定されたランタイム クラス情報で指定されたリボン要素をリボン パネルに追加します。|
+|[CMFCリボンパネル::セットフォーカス](#setfocused)|指定したリボン要素にフォーカスを設定します。|
+|[列を設定します。](#setjustifycolumns)|列の位置合わせを有効または無効にします。|
+|[セットキーパネル::セットキー](#setkeys)|リボン パネルを表示するキーボード ショートカットを設定します。|
+|[CMFCリボンパネル::ショーポップアップ](#showpopup)||
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-リボン パネルは、リボンのカテゴリ内に作成した関連のタスクの論理的なグループです。 リボンの変更のサイズと、パネルのレイアウトは、できるだけ多くの要素を表示する自動調整します。
+リボン パネルは、リボン カテゴリ内に作成する関連タスクの論理的なグループです。 リボンのサイズが変更されると、パネル レイアウトは、できるだけ多くの要素を表示するように自動的に調整されます。
 
-呼び出してリボン カテゴリに含まれるパネル、リボンを表示できます、 [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel)メソッド。
+[CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel)メソッドを呼び出すことによって、リボン カテゴリに含まれるリボン パネルを取得できます。
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCRibbonPanel`オブジェクトでさまざまなメソッドを使用して、`CMFCRibbonPanel`クラス。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、列で、パネル内の要素を垂直方向に配置して、列の位置合わせを有効にする方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
+クラスのさまざまなメソッドを使用してオブジェクトを構成`CMFCRibbonPanel`する方法を次の例に`CMFCRibbonPanel`示します。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、パネル内の要素を列ごとに垂直に整列し、列の位置合わせを有効にする方法を示します。 このコード スニペットは、 [MS Office 2007 デモ サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -221,9 +221,9 @@ class CMFCRibbonPanel : public CObject
 
 **ヘッダー:** afxRibbonPanel.h
 
-##  <a name="add"></a>  CMFCRibbonPanel::Add
+## <a name="cmfcribbonpaneladd"></a><a name="add"></a>リボンパネル::追加
 
-リボン パネルに含まれるリボン要素の配列に指定されたリボン要素を追加します。
+リボン パネルに含まれるリボン要素の配列に、指定したリボン要素を追加します。
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -231,26 +231,26 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pElem*<br/>
-[入力、出力]リボン要素へのポインター。
+*ペレム*<br/>
+[イン、アウト]リボン要素へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator
+## <a name="cmfcribbonpaneladdseparator"></a><a name="addseparator"></a>CMFCリボンパネル::セパレータの追加
 
-リボン パネルには、区切り記号を追加します。
+リボン パネルに区分線を追加します。
 
 ```
 virtual void AddSeparator();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルに、区切り記号を追加するには、このメソッドを呼び出します。 以前の呼び出しによって追加されたリボン要素の横にある、区切り記号が追加されます[cmfcribbonpanel::add](#add)します。 指定した位置にある、区切り記号を挿入するには、呼び出す[CMFCRibbonPanel::InsertSeparator](#insertseparator)します。
+リボン パネルに区切り記号を追加します。 区切り記号は[、CMFCRibbonPanel::Add](#add)への以前の呼び出しによって追加されたリボン要素の横に追加されます。 指定した位置に区切り記号を挿入するには[、CMFCRibbonPanel::InsertSeparator](#insertseparator)を呼び出します。
 
-##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar
+## <a name="cmfcribbonpaneladdtoolbar"></a><a name="addtoolbar"></a>コントロール バーの追加
 
-リボン パネルには、ツールバーを追加します。
+リボン パネルにツールバーを追加します。
 
 ```
 CMFCRibbonButtonsGroup* AddToolBar(
@@ -262,29 +262,29 @@ UINT uiDisabledResID = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiToolbarResID*<br/>
-[in]追加するツールバーのリソース ID を指定します。
+*インターフェイスの一次 ID*<br/>
+[in]追加するツール バーのリソース ID を指定します。
 
-*uiColdResID*<br/>
-[in]ツールバーのコールド イメージのリソース ID を指定します。
+*をクリックします。*<br/>
+[in]ツール バーのコールド イメージのリソース ID を指定します。
 
-*uiHotResID*<br/>
-[in]ツールバーのホット イメージのリソース ID を指定します。
+*をクリックします。*<br/>
+[in]ツール バーのホット イメージのリソース ID を指定します。
 
-*uiDisabledResID*<br/>
-[in]ツールバーの無効なイメージのリソース ID を指定します。
+*を無効にします。*<br/>
+[in]ツール バーの無効なイメージのリソース ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルにツールバーを追加するには、このメソッドを呼び出します。 以前の呼び出しによって追加されたリボン要素の横にあるツールバーが追加されます[cmfcribbonpanel::add](#add)します。
+リボン パネルにツール バーを追加します。 ツール バーは[、CMFCRibbonPanel::Add](#add)への前の呼び出しによって追加されたリボン要素の横に追加されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ツールバー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、次を参照してください。 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。
+ツール バー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、「 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)」を参照してください。
 
-##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel
+## <a name="cmfcribbonpanelcmfcribbonpanel"></a><a name="cmfcribbonpanel"></a>::CMFCリボンパネル
 
-構築し、初期化、 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/cmfcribbonpanel-class.md)構築して初期化します。
 
 ```
 CMFCRibbonPanel(
@@ -296,18 +296,18 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*<br/>
+*名前を指定します。*<br/>
 [in]リボン パネルの名前。
 
-*hIcon*<br/>
-[in]リボン パネルの既定のボタンのアイコンへのハンドルします。
+*Hicon*<br/>
+[in]リボン パネルの既定のボタンのアイコンへのハンドル。
 
-*pPaletteButton*<br/>
-[in]リボン パネルをリボン ギャラリーへのポインター。
+*ボタン*<br/>
+[in]リボン パネルのリボン ギャラリーへのポインター。
 
-##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData
+## <a name="cmfcribbonpanelfindbydata"></a><a name="findbydata"></a>次のデータを検索します。
 
-指定されたデータに関連付けられているリボン要素を取得します。
+指定したデータに関連付けられているリボン要素を取得します。
 
 ```
 CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
@@ -315,18 +315,18 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*dwData*<br/>
-[in]リボン要素に関連付けられたデータ。
+*dw データ*<br/>
+[in]リボン要素に関連付けられているデータ。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、リボン要素へのポインターそれ以外の場合は NULL です。
+メソッドが成功した場合はリボン要素へのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID
+## <a name="cmfcribbonpanelfindbyid"></a><a name="findbyid"></a>リボンパネル::検索バイID
 
-指定したコマンド ID によって識別されるリボン要素を取得します。
+指定したコマンド ID で識別されるリボン要素を取得します。
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
@@ -334,14 +334,14 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
+*UICmdID*<br/>
 [in]リボン要素のコマンド ID。
 
 ### <a name="return-value"></a>戻り値
 
-指定したコマンド ID で識別されるリボン要素指定したコマンド ID を持つリボン要素が指定されていない場合は NULL それ以外の場合
+指定したコマンド ID によって識別されるリボン要素。指定したコマンド ID でリボン要素が識別されない場合は NULL。
 
-##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight
+## <a name="cmfcribbonpanelgetcaptionheight"></a><a name="getcaptionheight"></a>コントロールの一面をクリックします。
 
 リボン パネルのキャプションの高さを取得します。
 
@@ -351,11 +351,11 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルのキャプションのピクセル単位の高さ。
+リボン パネルのキャプションの高さ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount
+## <a name="cmfcribbonpanelgetcount"></a><a name="getcount"></a>をクリックします。
 
 リボン パネルに含まれるリボン要素の数を取得します。
 
@@ -367,9 +367,9 @@ int GetCount() const;
 
 リボン パネルに含まれるリボン要素の数。
 
-##  <a name="getdata"></a>  CMFCRibbonPanel::GetData
+## <a name="cmfcribbonpanelgetdata"></a><a name="getdata"></a>をクリックします。
 
-パネルに関連付けられているユーザー定義データを返します。
+パネルに関連付けられたユーザー定義データを返します。
 
 ```
 DWORD_PTR GetData() const;
@@ -379,7 +379,7 @@ DWORD_PTR GetData() const;
 
 パネルに関連付けられているユーザー定義データ。
 
-##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton
+## <a name="cmfcribbonpanelgetdefaultbutton"></a><a name="getdefaultbutton"></a>コントロール パネル::既定のボタンを取得します。
 
 リボン パネルの既定のボタンを取得します。
 
@@ -391,13 +391,13 @@ CMFCRibbonButton& GetDefaultButton();
 
 リボン パネルの既定のボタン。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルがあるリボン要素を表示する領域が不足している場合は、既定のボタンが表示されます。
+既定のボタンは、リボン パネルのリボン要素を表示するための十分なスペースがない場合に表示されます。
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown
+## <a name="cmfcribbonpanelgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCリボンパネル::ゲットドロップダウン
 
-のポップアップ メニューが削除された場合は、リボン要素へのポインターを取得します。
+ポップアップ メニューがドロップダウンされている場合、リボン要素へのポインターを取得します。
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown() const;
@@ -405,13 +405,13 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューがダウンすると、削除されているリボン要素へのポインターリボン要素にドロップダウン ポップアップ メニューがあるない場合は NULL それ以外の場合。
+ポップアップ メニューがドロップダウンされているリボン要素へのポインター。それ以外の場合は NULL、リボン要素は、そのポップアップ メニューがドロップ ダウンします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルに含まれるリボン要素のみがテストされます。
+リボン パネルに含まれているリボン要素のみがテストされます。
 
-##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement
+## <a name="cmfcribbonpanelgetelement"></a><a name="getelement"></a>をクリックします。
 
 指定したインデックス位置にあるリボン要素を返します。
 
@@ -426,28 +426,28 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-基本のリボン要素への有効なポインターが位置にある*nIndex*リボン パネル、または指定したインデックス位置に要素が存在しない場合は NULL です。
+リボン パネルの*nIndex*位置にある基本リボン要素への有効なポインター。
 
-##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements
+## <a name="cmfcribbonpanelgetelements"></a><a name="getelements"></a>要素を取得します。
 
-リボン パネルに含まれているすべてのリボン要素を取得します。
+リボン パネルに含まれるすべてのリボン要素を取得します。
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*arElements*<br/>
-[out]リボン パネルに含まれているすべてのリボン要素を格納する配列。
+*アルエレメンツ*<br/>
+[アウト]リボン パネルに含まれるすべてのリボン要素を塗りつぶす配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID
+## <a name="cmfcribbonpanelgetelementsbyid"></a><a name="getelementsbyid"></a>をクリックします。
 
-指定した配列に指定されたコマンド ID を持つリボン要素を追加します。
+指定したコマンド ID を持つリボン要素を指定した配列に追加します。
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -455,19 +455,19 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
+*UICmdID*<br/>
 [in]リボン要素のコマンド ID。
 
-*arElements*<br/>
+*アルエレメンツ*<br/>
 [in]リボン要素の配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルに含まれるリボン要素のみがテストされます。
+リボン パネルに含まれているリボン要素のみがテストされます。
 
-##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted
+## <a name="cmfcribbonpanelgethighlighted"></a><a name="gethighlighted"></a>CMFCリボンパネル::ハイライトされた取得
 
-リボン パネルに強調表示されているリボン要素を取得します。
+リボン パネルで強調表示されているリボン要素を取得します。
 
 ```
 CMFCRibbonBaseElement* GetHighlighted() const;
@@ -475,13 +475,13 @@ CMFCRibbonBaseElement* GetHighlighted() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルに強調表示されているリボン要素へのポインター。
+リボン パネルで強調表示されているリボン要素へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex
+## <a name="cmfcribbonpanelgetindex"></a><a name="getindex"></a>をクリックします。
 
-リボン パネルに含まれるリボン要素の配列から指定されたリボン要素の 0 から始まるインデックスを取得します。
+リボン パネルに含まれるリボン要素の配列から、指定したリボン要素の 0 から始まるインデックスを取得します。
 
 ```
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
@@ -489,31 +489,31 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pElem*<br/>
+*ペレム*<br/>
 [in]リボン要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、指定されたリボン要素の 0 から始まるインデックスそれ以外の場合は-1。
+メソッドが成功した場合は、指定されたリボン要素の 0 から始まるインデックス。それ以外の場合は -1。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList
+## <a name="cmfcribbonpanelgetitemidslist"></a><a name="getitemidslist"></a>リストを取得します。
 
-リボン パネル内のすべてのリボン要素のコマンド Id を取得します。
+リボン パネル内のすべてのリボン要素のコマンド ID を取得します。
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lstItems*<br/>
-[out]リボン パネルに含まれるリボン要素のコマンド Id の一覧。
+*アイテム*<br/>
+[アウト]リボン パネルに含まれるリボン要素のコマンド ID のリスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getname"></a>  CMFCRibbonPanel::GetName
+## <a name="cmfcribbonpanelgetname"></a><a name="getname"></a>リボンパネル::ゲットネーム
 
 リボン パネルの名前を取得します。
 
@@ -525,9 +525,9 @@ LPCTSTR GetName() const;
 
 リボン パネルの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
+## <a name="cmfcribbonpanelgetparentbutton"></a><a name="getparentbutton"></a>コントロール パネル::親ボタンを取得します。
 
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
@@ -535,9 +535,9 @@ CMFCRibbonBaseElement* GetParentButton() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory
+## <a name="cmfcribbonpanelgetparentcategory"></a><a name="getparentcategory"></a>次の項目を取得します。
 
 リボン パネルの親カテゴリを返します。
 
@@ -549,7 +549,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 このリボン パネルを含むリボン カテゴリへのポインター。
 
-##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
+## <a name="cmfcribbonpanelgetparentmenubar"></a><a name="getparentmenubar"></a>コントロール バーを表示します。
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -557,11 +557,11 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation
+## <a name="cmfcribbonpanelgetpreferedmenulocation"></a><a name="getpreferedmenulocation"></a>コントロールメニューの場所
 
-リボン パネルのポップアップ メニューを表示する適切な四角形を取得します。
+リボン パネルのポップアップ メニューの表示用四角形を取得します。
 
 ```
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
@@ -569,20 +569,20 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
-[out]このパラメーターは使用されません。
+*Rect*<br/>
+[アウト]このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
 常に FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、常に FALSE を返します。 リボン パネルのポップアップ メニューを表示する適切な四角形を取得するには、このメソッドをオーバーライドします。
+このメソッドは常に FALSE を返します。 リボン パネルのポップアップ メニューの表示四角形を取得するには、このメソッドをオーバーライドします。
 
-##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed
+## <a name="cmfcribbonpanelgetpressed"></a><a name="getpressed"></a>リボンパネル::ゲットプレス
 
-ユーザーが現在押した場合は、リボン パネルにリボン要素へのポインターを取得します。
+ユーザーがリボン パネルを現在押している場合は、リボン パネル上のリボン要素へのポインターを取得します。
 
 ```
 CMFCRibbonBaseElement* GetPressed() const;
@@ -590,13 +590,13 @@ CMFCRibbonBaseElement* GetPressed() const;
 
 ### <a name="return-value"></a>戻り値
 
-それは、ユーザーが現在押した場合は、リボン要素へのポインターそれ以外の場合は NULL です。
+ユーザーが現在リボン要素を押している場合は、リボン要素へのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect
+## <a name="cmfcribbonpanelgetrect"></a><a name="getrect"></a>リボンパネル::ゲットレック
 
-リボン パネルを表示する四角形を取得します。
+リボン パネルの表示四角形を取得します。
 
 ```
 const CRect& GetRect() const;
@@ -604,13 +604,13 @@ const CRect& GetRect() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルを表示する四角形。
+リボン パネルの表示四角形。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement
+## <a name="cmfcribbonpanelhaselement"></a><a name="haselement"></a>をクリックします。
 
-リボン パネルに指定されたリボン要素が含まれるかどうかを示します。
+リボン パネルに指定されたリボン要素が含まれているかどうかを示します。
 
 ```
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
@@ -618,18 +618,18 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pElem*<br/>
+*ペレム*<br/>
 [in]リボン要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルには、指定されたリボン要素が含まれている場合は TRUE。それ以外の場合は FALSE です。
+リボン パネルに指定されたリボン要素が含まれている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight
+## <a name="cmfcribbonpanelhighlight"></a><a name="highlight"></a>ハイライトパネル::ハイライト
 
-選択されたリボン パネルと、ポイントで指定されたリボン要素の強調表示色を設定します。
+選択したリボン パネルと、点で指定されたリボン要素のハイライト色を設定します。
 
 ```
 virtual void Highlight(
@@ -639,17 +639,17 @@ CPoint point);
 
 ### <a name="parameters"></a>パラメーター
 
-*bHighlight*<br/>
-[in]リボン パネルを強調表示する場合は TRUEリボン パネルの表示を解除する場合は FALSE。
+*bハイライト*<br/>
+[in]リボン パネルを強調表示する場合は TRUE。リボン パネルの強調表示を解除するには、FALSE を指定します。
 
 *ポイント*<br/>
-[in]ウィンドウの左上隅に対して相対的で、ポインターの x と y を調整します。
+[in]ウィンドウの左上隅を基準としたポインターの x 座標と y 座標。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest
+## <a name="cmfcribbonpanelhittest"></a><a name="hittest"></a>ヒットテストパネル::ヒットテスト
 
-これで、指定した点がある場合は、リボン要素を取得します。
+指定したポイントがリボン要素内にある場合は、その要素を取得します。
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -660,22 +660,22 @@ BOOL bCheckPanelCaption = FALSE);
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-[in]ウィンドウの左上隅に対して相対的で、ポインターの x と y を調整します。
+[in]ウィンドウの左上隅を基準としたポインターの x 座標と y 座標。
 
-*bCheckPanelCaption*<br/>
-[in]リボン パネルのキャプションをテストする場合は TRUEそれ以外の場合は FALSE です。
+*キャプション*<br/>
+[in]リボン パネルキャプションをテストする場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-指定したポイントがそれにある場合は、リボン要素へのポインターそれ以外の場合は NULL です。
+指定したポイントがリボン要素内にある場合は、リボン要素へのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルに含まれるリボン要素のみがテストされます。
+リボン パネルに含まれているリボン要素のみがテストされます。
 
-##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx
+## <a name="cmfcribbonpanelhittestex"></a><a name="hittestex"></a>CMFCリボンパネル::ヒットテスト
 
-含まれている指定したポイントを持つリボン要素の 0 から始まるインデックスを取得します。
+指定した点が存在するリボン要素の 0 から始まるインデックスを取得します。
 
 ```
 virtual int HitTestEx(CPoint point) const;
@@ -684,19 +684,19 @@ virtual int HitTestEx(CPoint point) const;
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-[in]ウィンドウの左上隅に対して相対的で、ポインターの x と y を調整します。
+[in]ウィンドウの左上隅を基準としたポインターの x 座標と y 座標。
 
 ### <a name="return-value"></a>戻り値
 
-含まれている; 指定したポイントを持つリボン要素の 0 から始まるインデックスそれ以外の場合は-1。
+指定した点が配置されているリボン要素の 0 から始まるインデックス。それ以外の場合は -1。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルに含まれるリボン要素のみがテストされます。
+リボン パネルに含まれているリボン要素のみがテストされます。
 
-##  <a name="insert"></a>  CMFCRibbonPanel::Insert
+## <a name="cmfcribbonpanelinsert"></a><a name="insert"></a>リボンパネル::挿入
 
-リボン パネルに含まれるリボン要素の配列の指定位置にある指定されたリボン要素を挿入します。
+リボン パネルに含まれるリボン要素の配列内の指定した位置に、指定したリボン要素を挿入します。
 
 ```
 virtual BOOL Insert(
@@ -706,23 +706,23 @@ int nIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*pElem*<br/>
-[入力、出力]リボン要素へのポインター。
+*ペレム*<br/>
+[イン、アウト]リボン要素へのポインター。
 
 *nIndex*<br/>
-[in]0 から始まる値は、-1 から配列に格納されているリボン要素の数までの範囲します。
+[in]-1 から配列に含まれるリボン要素の数までの 0 から始まる値。
 
 ### <a name="return-value"></a>戻り値
 
-リボン要素が正常に挿入された場合は TRUE。それ以外の場合は FALSE です。
+リボン要素が正常に挿入された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合の値*nIndex* -1 で、または*nIndex*配列内のリボン要素の数に等しい、指定されたリボン要素配列の末尾に追加されます。 場合の値*nIndex*が範囲外のメソッドは失敗します。
+*nIndex*の値が -1 の場合、または*nIndex*が配列内のリボン要素の数と等しい場合、指定されたリボン要素が配列の末尾に追加されます。 *nIndex*の値が範囲外の場合、メソッドは失敗します。
 
-##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator
+## <a name="cmfcribbonpanelinsertseparator"></a><a name="insertseparator"></a>をクリックします。
 
-指定された位置に、区切り記号を挿入します。
+指定した位置に区切り記号を挿入します。
 
 ```
 virtual BOOL InsertSeparator(int nIndex);
@@ -731,19 +731,19 @@ virtual BOOL InsertSeparator(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]区切り記号を挿入する位置の 0 から始まるインデックスを指定します。
+[in]区切り記号が挿入される 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-区切り記号が正常に挿入されている場合は TRUE。それ以外の場合、FALSE です。
+区切り記号が正常に挿入された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された位置にある、区切り記号を挿入するには、このメソッドを呼び出す*nIndex*します。 最近追加されたリボン要素の横にある区切り記号を挿入するには、呼び出す[CMFCRibbonPanel::AddSeparator](#addseparator)します。
+*nIndex*で指定された位置に区切り記号を挿入します。 最後に追加されたリボン要素の横に区切り記号を挿入するには[、CMFCRibbonPanel::AddSeparator](#addseparator)を呼び出します。
 
-##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert
+## <a name="cmfcribbonpaneliscentercolumnvert"></a><a name="iscentercolumnvert"></a>CMFCリボンパネル::イセンタカラムバート
 
-リボン要素の垂直方向の位置は、表示する四角形の中央に配置するかどうかを示します。
+リボン要素の垂直位置を表示四角形の中央に配置するかどうかを示します。
 
 ```
 BOOL IsCenterColumnVert() const;
@@ -751,11 +751,11 @@ BOOL IsCenterColumnVert() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン要素の垂直方向の位置は、表示領域の四角形の中央に配置する場合は TRUE。それ以外の場合は FALSE です。
+リボン要素の垂直位置が表示四角形の中央に配置されている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed
+## <a name="cmfcribbonpaneliscollapsed"></a><a name="iscollapsed"></a>リボンパネル::折りたたまれた
 
-水平方向で、リボン パネルの表示サイズが最小化されたかどうかを示します。
+リボン パネルの表示サイズを水平方向に最小化するかどうかを示します。
 
 ```
 BOOL IsCollapsed() const;
@@ -763,13 +763,13 @@ BOOL IsCollapsed() const;
 
 ### <a name="return-value"></a>戻り値
 
-水平方向で、リボン パネルの表示サイズが最小化された場合は TRUE。それ以外の場合は FALSE です。
+リボン パネルの表示サイズが水平方向に最小化されている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルが折りたたまれている場合、既定のボタン、名、および下矢印がのみ表示します。
+リボン パネルを折りたたむ場合、既定のボタン、名前、およびドロップダウン矢印のみが表示されます。
 
-##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted
+## <a name="cmfcribbonpanelishighlighted"></a><a name="ishighlighted"></a>CMFCリボンパネル::ハイライト
 
 リボン パネルの表示が強調表示されているかどうかを示します。
 
@@ -779,15 +779,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合は、リボン パネルの表示が強調表示されます。それ以外の場合は FALSE です。
+リボン パネルの表示が強調表示されている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルの表示は、ポインターが上にあるときに強調表示されます。
+リボン パネルの表示は、ポインタが上にあるときにハイライト表示されます。
 
-##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns
+## <a name="cmfcribbonpanelisjustifycolumns"></a><a name="isjustifycolumns"></a>列を評価します。
 
-リボン パネルに同じ列にあるリボン要素の表示サイズが同じ幅に設定するかどうかを示します。
+リボン パネルの同じ列にあるリボン要素の表示寸法を同じ幅に設定するかどうかを示します。
 
 ```
 BOOL IsJustifyColumns() const;
@@ -795,11 +795,11 @@ BOOL IsJustifyColumns() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン パネルに同じ列にあるリボン要素の表示サイズが同じ幅に設定されている場合は TRUE。それ以外の場合は FALSE です。
+リボン パネルの同じ列にあるリボン要素の表示寸法が同じ幅に設定されている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel
+## <a name="cmfcribbonpanelismainpanel"></a><a name="ismainpanel"></a>リボンパネル::イズメインパネル
 
-リボン パネルがメイン リボン パネルであるかどうかを示します。
+リボン パネルがメイン リボン パネルかどうかを示します。
 
 ```
 virtual BOOL IsMainPanel() const;
@@ -809,13 +809,13 @@ virtual BOOL IsMainPanel() const;
 
 常に FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、常に FALSE を返します。 リボン パネルがメイン リボン パネルであるかどうかを示すためには、このメソッドをオーバーライドします。
+このメソッドは常に FALSE を返します。 リボン パネルがメイン リボン パネルかどうかを示すには、このメソッドをオーバーライドします。
 
-ユーザーがアプリケーション ボタンを選択すると、メイン リボン パネルが表示されます。
+メイン リボン パネルは、ユーザーがアプリケーション ボタンを選択したときに表示されます。
 
-##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
+## <a name="cmfcribbonpanelismenumode"></a><a name="ismenumode"></a>メニューモード
 
 ```
 BOOL IsMenuMode() const;
@@ -823,9 +823,9 @@ BOOL IsMenuMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
+## <a name="cmfcribbonpanelonkey"></a><a name="onkey"></a>リボンパネル::オンキー
 
 ```
 virtual BOOL OnKey(UINT nChar);
@@ -837,11 +837,11 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths
+## <a name="cmfcribbonpanelrecalcwidths"></a><a name="recalcwidths"></a>CMFCリボンパネル::再計算幅
 
-リボン パネルの表示レイアウト構成の幅を再計算します。
+リボン パネルの各表示レイアウト構成の幅を再計算します。
 
 ```
 virtual void RecalcWidths(
@@ -852,18 +852,18 @@ int nHeight);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]リボン パネル用のデバイス コンテキストへのポインター。
+[in]リボン パネルのデバイス コンテキストへのポインター。
 
 *nHeight*<br/>
 [in]リボン パネルの高さ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 リボン パネルは、使用可能な幅が変更されると、レイアウトの構成を変更します。
 
-##  <a name="remove"></a>  CMFCRibbonPanel::Remove
+## <a name="cmfcribbonpanelremove"></a><a name="remove"></a>リボンパネル::削除
 
-削除し、必要に応じて指定したインデックス位置にある要素を削除します。
+指定したインデックス位置にある要素を削除し、必要に応じて削除します。
 
 ```
 BOOL Remove(
@@ -876,32 +876,32 @@ BOOL bDelete = TRUE);
 *nIndex*<br/>
 [in]リボン パネルから削除される要素の 0 から始まるインデックスを指定します。
 
-*bDelete*<br/>
-[in]削除される要素を削除する場合は TRUEそれ以外の場合、FALSE です。
+*b削除*<br/>
+[in]削除する要素を削除する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-要素を削除し、削除された場合は TRUE (場合*bDelete*は TRUE です)。要素が削除されなかったかのリボン要素が存在しない場合がある場合は FALSE *nIndex*します。
+要素が削除され、削除された場合は TRUE *(bDelete*が TRUE の場合)。要素が削除されなかった場合、または*nIndex*にリボン要素がない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルから要素を削除するには、このメソッドを呼び出します。
+リボン パネルから要素を削除します。
 
-##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll
+## <a name="cmfcribbonpanelremoveall"></a><a name="removeall"></a>すべて削除します。
 
 リボン パネルからすべてのリボン要素を削除します。
 
-```
+```cpp
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべてのリボン要素は、リボン パネルから削除され、破棄されます。
+すべてのリボン要素がリボン パネルから削除され、破棄されます。
 
-##  <a name="replace"></a>  CMFCRibbonPanel::Replace
+## <a name="cmfcribbonpanelreplace"></a><a name="replace"></a>置き換え
 
-他のインデックス値に基づいて 1 つの要素を置き換えます。
+インデックス値に基づいて、要素を別の要素に置き換えます。
 
 ```
 BOOL Replace(
@@ -912,22 +912,22 @@ CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]置換する要素の 0 から始まるインデックスを指定します。
+[in]置き換える要素の 0 から始まるインデックスを指定します。
 
-*pElem*<br/>
-[入力、出力]元の要素を置換する要素に有効なポインター。
+*ペレム*<br/>
+[イン、アウト]元の要素を置き換える要素への有効なポインター。
 
 ### <a name="return-value"></a>戻り値
 
-元のリボン要素が、新しいリボン要素が正常に置き換えられた場合は TRUE。リボン要素が置き換えられない場合、または指定したインデックス位置に要素が存在しない場合は FALSE です。
+元のリボン要素が新しいリボン要素で正常に置き換えられた場合は TRUE。リボン要素が置き換えられなかった場合、または指定されたインデックスに要素がない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン要素をコマンド ID に置き換えに呼び出す[CMFCRibbonPanel::ReplaceByID](#replacebyid)します。
+リボン要素をコマンド ID で置き換えるには[、CMFCRibbonPanel::ReplaceByID](#replacebyid)を呼び出します。
 
-##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID
+## <a name="cmfcribbonpanelreplacebyid"></a><a name="replacebyid"></a>を変更します。
 
-指定したコマンド ID に基づいて別の 1 つの要素を置き換えます
+指定したコマンド ID に基づいて、1 つの要素を別の要素に置き換えます。
 
 ```
 BOOL ReplaceByID(
@@ -937,55 +937,55 @@ CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
-[in]置換する要素のコマンド ID を指定します。
+*UICmdID*<br/>
+[in]置き換える要素のコマンド ID を指定します。
 
-*pElem*<br/>
-[入力、出力]元の要素を交換する要素に有効なポインター。
+*ペレム*<br/>
+[イン、アウト]元の要素を置き換える要素への有効なポインター。
 
 ### <a name="return-value"></a>戻り値
 
-元のリボン要素が、新しいリボン要素が正常に置き換えられた場合は TRUE。リボン要素が置き換えられない場合、または指定されたコマンドに要素がない場合は FALSE です。 ID が実際に存在します。
+元のリボン要素が新しいリボン要素で正常に置き換えられた場合は TRUE。リボン要素が置き換えられなかった場合、または指定されたコマンド ID を持つ要素が実際に存在しない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-位置に基づいてリボン要素を交換するには、呼び出す[CMFCRibbonPanel::Replace](#replace)します。
+位置に基づいてリボン要素を置き換えるには[、CMFCRibbonPanel::置換](#replace)を呼び出します。
 
-##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert
+## <a name="cmfcribbonpanelsetcentercolumnvert"></a><a name="setcentercolumnvert"></a>CMFCリボンパネル::セットセンターカラムバート
 
-有効または、表示する四角形内のリボン要素の垂直方向の位置の中心の位置を無効にします。
+表示四角形内のリボン要素の垂直方向の位置の中心を有効または無効にします。
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bSet*<br/>
-[in]中央の表示の四角形内のリボン要素の垂直位置する場合は TRUEこの機能を無効にする場合は FALSE。
+*bセット*<br/>
+[in]表示四角形内のリボン要素の垂直方向の位置を中央揃えする場合は TRUE。この機能を無効にする場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setdata"></a>  CMFCRibbonPanel::SetData
+## <a name="cmfcribbonpanelsetdata"></a><a name="setdata"></a>を設定します。
 
 ユーザー定義データをリボン パネルに関連付けます。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dwData*<br/>
+*dw データ*<br/>
 [in]設定するユーザー定義データを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 リボン パネルにユーザー定義データを関連付けるには、このメソッドを呼び出します。
 
-##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu
+## <a name="cmfcribbonpanelsetelementmenu"></a><a name="setelementmenu"></a>メニューメニュー
 
-指定されたコマンド ID を持つ要素をポップアップ メニューを割り当てます
+指定されたコマンド ID を持つ要素にポップアップ メニューを割り当てます。
 
 ```
 BOOL SetElementMenu(
@@ -1003,32 +1003,32 @@ BOOL bRightAlign = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
-[in]リボン要素がメニューが追加のコマンド ID を指定します。
+*UICmdID*<br/>
+[in]メニューが追加されるリボン要素のコマンド ID を指定します。
 
-*hMenu*<br/>
-[in]リボン パネルに追加する Windows メニューへのハンドルを指定します。
+*Hmenu*<br/>
+[in]リボン パネルに追加する Windows メニューのハンドルを指定します。
 
-*bIsDefautCommand*<br/>
-[in]リボン要素をクリックすると、リボン要素に関連付けられたコマンドを実行するように指定する場合は TRUE。 この場合、ユーザーがリボン要素の横の矢印をクリックしたときにメニューが開いたのみです。 リボン要素がクリックされた場合はリボン要素に関連付けられたコマンドを実行しないように指定する場合は FALSE。 この場合、ユーザーが、要素をクリックする場所に関係なく、ポップアップ メニューが表示されます。
+*ビスデフトコマンド*<br/>
+[in]リボン要素がクリックされた場合に、リボン要素に関連付けられたコマンドを実行するように指定する場合は TRUE。 この場合、メニューは、ユーザーがリボン要素の横にある矢印をクリックしたときにのみ開きます。 リボン要素がクリックされた場合に、リボン要素に関連付けられたコマンドを実行しないように指定する場合は FALSE。 この場合、ユーザーが要素をクリックした場所に関係なく、ポップアップ メニューが表示されます。
 
-*bRightAlign*<br/>
-[in]ポップアップ メニューが右揃えが指定する場合は TRUEそれ以外の場合、FALSE です。
+*右揃え*<br/>
+[in]ポップアップ メニューが右揃えであることを指定する場合は TRUE。それ以外の場合は FALSE。
 
-*uiMenuResID*<br/>
+*をクリックします。*<br/>
 [in]リボン パネルに追加するメニューのリソース ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-メニューがリボン要素に割り当てられている場合は TRUE。それ以外の場合、FALSE です。
+メニューがリボン要素に割り当てられている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポップアップ メニューを指定したコマンド ID を持つリボン要素に代入するには、このメソッドを呼び出す
+指定したコマンド ID を持つリボン要素にポップアップ メニューを割り当てます。
 
-##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC
+## <a name="cmfcribbonpanelsetelementrtc"></a><a name="setelementrtc"></a>リボンパネル::セットエレメントRTC
 
-リボン パネルに指定されたランタイム クラス情報で指定されているリボン要素を追加します。
+指定されたランタイム クラス情報で指定されたリボン要素をリボン パネルに追加します。
 
 ```
 CMFCRibbonBaseElement* SetElementRTC(
@@ -1042,19 +1042,19 @@ CRuntimeClass* pRTC);
 [in]追加するリボン要素の 0 から始まるインデックスを指定します。
 
 *pRTC*<br/>
-[入力、出力]リボン パネルに追加されるリボン要素のランタイム クラス情報へのポインター。
+[イン、アウト]リボン パネルに追加されるリボン要素のランタイム クラス情報へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたランタイム クラス情報を使用して作成されたリボン要素。
+指定したランタイム クラス情報を使用して作成されたリボン要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルにカスタム要素 (たとえば、色のボタン) を追加する場合は、カスタム要素のランタイム クラス情報を指定する必要があります。 リボンはこの情報を格納、カスタム要素を作成し、(で識別される) が配置されている既存の要素を置き換える、指定したコマンド ID リボンは、新しく作成された要素にポインターを返します。
+リボン パネルにカスタム要素 (カラー ボタンなど) を追加する場合は、カスタム要素のランタイム クラス情報を指定する必要があります。 リボンは、この情報を格納し、カスタム要素を作成し、指定されたコマンド ID で識別されている既存の要素を置き換えます。 リボンは、新しく作成された要素へのポインターを返します。
 
-##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID
+## <a name="cmfcribbonpanelsetelementrtcbyid"></a><a name="setelementrtcbyid"></a>をクリックします。
 
-リボン パネルに指定されたランタイム クラス情報で指定されているリボン要素を追加します。
+指定されたランタイム クラス情報で指定されたリボン要素をリボン パネルに追加します。
 
 ```
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -1064,23 +1064,23 @@ CRuntimeClass* pRTC);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
+*UICmdID*<br/>
 [in]追加するリボン要素のコマンド ID を指定します。
 
 *pRTC*<br/>
-[入力、出力]リボン パネルに追加されるリボン要素に関連付けられたランタイム クラス情報へのポインター。
+[イン、アウト]リボン パネルに追加されるリボン要素に関連付けられているランタイム クラス情報へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたランタイム クラス情報を使用して作成されたリボン要素。
+指定したランタイム クラス情報を使用して作成されたリボン要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルにカスタム要素 (たとえば、色のボタン) を追加する場合は、カスタム要素のランタイム クラス情報を指定する必要があります。 リボンはこの情報を格納、カスタム要素を作成し、指定したコマンド ID である既存の要素を置き換えます 新しく作成された要素にポインターを返します。
+リボン パネルにカスタム要素 (カラー ボタンなど) を追加する場合は、カスタム要素のランタイム クラス情報を指定する必要があります。 リボンはこの情報を格納し、カスタム要素を作成し、指定したコマンド ID で配置された既存の要素を置き換えます。 次に、新しく作成された要素へのポインターを返します。
 
 ### <a name="example"></a>例
 
-次の例は、使用する方法を示します、`SetElementRTCByID`メソッド。
+次の例は、このメソッドの`SetElementRTCByID`使用方法を示しています。
 
 ```
 
@@ -1104,43 +1104,43 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));
 ```
 
-##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns
+## <a name="cmfcribbonpanelsetjustifycolumns"></a><a name="setjustifycolumns"></a>列を設定します。
 
-有効または同じ列内のリボン要素の幅の調整を無効にします。
+同じ列のリボン要素の幅の調整を有効または無効にします。
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bSet*<br/>
-[in]列内の最大のリボン要素の幅に同じ列内のリボン要素の幅を調整する場合は TRUEこの幅の調整を無効にする場合は FALSE。
+*bセット*<br/>
+[in]同じ列のリボン要素の幅を列内の最大のリボン要素の幅に合わせて調整する場合は TRUE。この幅調整を無効にする場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルでこの機能が有効の場合、同じ列内の最大のリボン要素の幅に同じ列内のリボン要素の幅が調整されます。
+リボン パネルでこの機能を有効にすると、同じ列のリボン要素の幅が、同じ列の最大のリボン要素の幅に調整されます。
 
-##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys
+## <a name="cmfcribbonpanelsetkeys"></a><a name="setkeys"></a>セットキーパネル::セットキー
 
-リボン パネルの既定のボタンの keytip を設定します。
+リボン パネルの既定のボタンのキーヒントを設定します。
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszKeys*<br/>
-[in]リボン パネルの既定のボタンの keytip します。
+*キーを設定します。*<br/>
+[in]リボン パネルの既定のボタンのキーチップ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルがあるリボン要素を表示する領域が不足している場合は、既定のボタンが表示されます。
+既定のボタンは、リボン パネルのリボン要素を表示するための十分なスペースがない場合に表示されます。
 
-##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup
+## <a name="cmfcribbonpanelshowpopup"></a><a name="showpopup"></a>CMFCリボンパネル::ショーポップアップ
 
-作成し、リボン パネルのポップアップ メニューを表示します。
+リボン パネルのポップアップ メニューを作成して表示します。
 
 ```
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
@@ -1148,50 +1148,50 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*pButton*<br/>
-[in]既定のボタンをリボン パネルへのポインター。
+*ボタン*<br/>
+[in]リボン パネルの既定のボタンへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、リボン パネルのポップアップ メニューへのポインターそれ以外の場合は NULL です。
+メソッドが正常に実行された場合は、リボン パネルのポップアップ メニューへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボン パネルのポップアップ メニューを使用できるは、リボン パネルの表示が折りたたまれている場合だけです。
+リボン パネルのポップアップ メニューは、リボン パネルの表示が折りたたまれている場合にのみ使用できます。
 
-##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused
+## <a name="cmfcribbonpanelsetfocused"></a><a name="setfocused"></a>CMFCリボンパネル::セットフォーカス
 
-指定されたリボン要素にフォーカスを設定します。
+指定したリボン要素にフォーカスを設定します。
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pNewFocus*<br/>
+*をクリックします。*<br/>
 フォーカスを受け取るリボン要素へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible
+## <a name="cmfcribbonpanelmakegalleryitemvisible"></a><a name="makegalleryitemvisible"></a>を見る
 
-指定されたリボン要素を表示するギャラリーをスクロールします。
+ギャラリーをスクロールして、指定したリボン要素を表示します。
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pItem*<br/>
+*Pitem*<br/>
 表示するリボン要素へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look
+## <a name="cmfcribbonpaneliswindows7look"></a><a name="iswindows7look"></a>CMFCリボンパネル::IsWindows7ルック
 
-親リボンが Windows 7 の検索 (小さな四角形のアプリケーション ボタン) を持つかどうかを示します。
+親リボンに Windows 7 の外観 (小さい四角形のアプリケーション ボタン) があるかどうかを示します。
 
 ```
 BOOL IsWindows7Look() const;
@@ -1199,15 +1199,15 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、親のリボンになります。 Windows 7それ以外の場合は FALSE です。
+親リボンに Windows 7 の外観がある場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements
+## <a name="cmfcribbonpanelgetvisibleelements"></a><a name="getvisibleelements"></a>次の要素を取得します。
 
-表示される要素の配列を取得します。
+可視要素の配列を取得します。
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1215,12 +1215,12 @@ CMFCRibbonBaseElement*>& arElements);
 
 ### <a name="parameters"></a>パラメーター
 
-*arElements*<br/>
-関数から制御が戻るときに、このパラメーターには、表示される要素の配列が含まれています。
+*アルエレメンツ*<br/>
+関数が返されるときに、このパラメーターには可視要素の配列が含まれます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect
+## <a name="cmfcribbonpanelgetgalleryrect"></a><a name="getgalleryrect"></a>CMFCリボンパネル::ゲットギャラリーレック
 
 ギャラリー要素の外接する四角形を返します。
 
@@ -1230,11 +1230,11 @@ CRect GetGalleryRect();
 
 ### <a name="return-value"></a>戻り値
 
-サイズと、このパネル内のギャラリー要素の位置。
+このパネル内のギャラリー要素のサイズと位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused
+## <a name="cmfcribbonpanelgetfocused"></a><a name="getfocused"></a>CMFCリボンパネル::ゲットフォーカス
 
 フォーカスされた要素を返します。
 
@@ -1244,14 +1244,14 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="return-value"></a>戻り値
 
-フォーカスがある要素または NULL へのポインター。
+フォーカスのある要素へのポインターまたは NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-[CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)

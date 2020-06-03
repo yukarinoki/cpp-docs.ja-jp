@@ -1,11 +1,15 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909118"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -81,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 変換対象の文字列。
 
 *locale*<br/>
@@ -93,7 +98,7 @@ double _wtof_l(
 
 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの関数は文字列を倍精度浮動小数点値に変換します。
 
@@ -101,13 +106,15 @@ double _wtof_l(
 
 **Atof**と **_wtof**の*str*引数の形式は次のとおりです。
 
-[*whitespace*] [*sign*] [*digits*] [ __.__ *digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
+[*空白*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e** } [*sign*]*数字*]
 
 *空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の10進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の先頭文字 (**e**または**e**) と、必要に応じて符号付き10進整数で構成されます。
 
 これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
 **_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,12 +127,12 @@ double _wtof_l(
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
-|**atof**、 **_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
+|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
 |**_wtof**、 **_wtof_l**|C: \<stdlib.h > または \<wchar.h > C++: \<cstdlib >、\<stdlib.h > または \<wchar.h >|
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atof**関数と **_b**関数を使用して、文字列として格納されている数値を数値に変換する方法を示します。
+このプログラムは、 **atof**関数と **_atof_l**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atof.c
@@ -178,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

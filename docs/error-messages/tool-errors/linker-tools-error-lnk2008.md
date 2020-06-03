@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2008
 ms.assetid: bbcd83c5-c8ae-439e-a033-63643a5bb373
-ms.openlocfilehash: 97bb2be18da5d166d1d5fba42e4ec8ce1f0439fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7794d09f7eeb9dceba7098ca7af90ccf2eeccad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194825"
 ---
 # <a name="linker-tools-error-lnk2008"></a>リンカ ツール エラー LNK2008
 
-Fixup ターゲットは、アラインされた 'symbol_name' ではありません。
+Fixup のターゲットが ' symbol_name ' にアラインされていません
 
-リンクでは、配置が正しくがないオブジェクト ファイルの fixup ターゲットが見つかりません。
+リンクは、適切にアラインされていないオブジェクトファイル内の修正ターゲットを見つけました。
 
-このエラーは、カスタム セクション配置によって発生することができます (たとえば、#pragma[パック](../../preprocessor/pack.md))、 [align](../../cpp/align-cpp.md)修飾子は、またはセクション配置を変更するアセンブリ言語コードを使用しています。
+このエラーが発生する原因としては、カスタムの secton アラインメント (たとえば、#pragma[パック](../../preprocessor/pack.md))、[アラ](../../cpp/align-cpp.md)イン修飾子、または secton アラインメントを変更するアセンブリ言語コードを使用することが考えられます。
 
-コードが、上記のいずれにも使わない場合はこれ、コンパイラによって発生する可能性があります。
+コードで上記のいずれも使用されていない場合は、コンパイラによって発生する可能性があります。

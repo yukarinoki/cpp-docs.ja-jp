@@ -1,48 +1,46 @@
 ---
 title: ODBC クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.data
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4cfa0d7afa197de7b65b6a0bd6b881a09534ef6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237776"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447699"
 ---
 # <a name="odbc-classes"></a>ODBC クラス
 
-これらのクラスのさまざまなオープン データベース コネクティビティ (ODBC) ドライバーは使用可能なデータベースを簡単にアクセスを付与するその他のアプリケーション フレームワーク クラスを使用します。
+これらのクラスは、他のアプリケーションフレームワーククラスと連携して、Open Database Connectivity (ODBC) ドライバーが使用可能なさまざまなデータベースに簡単にアクセスできるようにします。
 
-ODBC データベースを使用するプログラムになりますが、少なくとも`CDatabase`オブジェクトと`CRecordset`オブジェクト。
+ODBC データベースを使用するプログラムには、少なくとも `CDatabase` オブジェクトと `CRecordset` オブジェクトが必要です。
 
 [CDatabase](../mfc/reference/cdatabase-class.md)<br/>
-それを通じてデータ ソースを操作することができます、データ ソースへの接続をカプセル化します。
+データソースへの接続をカプセル化します。これにより、データソースを操作できます。
 
 [CRecordset](../mfc/reference/crecordset-class.md)<br/>
-データ ソースから選択されたレコードのセットをカプセル化します。 レコード セットを有効にする (追加、編集、およびレコードの削除) のレコードを更新、フィルターを使用した選択範囲を限定レコード間をスクロール、選択範囲の並べ替えと、取得した情報で選択をパラメーター化、または実行時に計算します。
+データソースから選択された一連のレコードをカプセル化します。 レコードのスクロール、レコードの更新 (レコードの追加、編集、削除)、フィルターによる選択範囲の限定、選択範囲の並べ替え、実行時に取得または計算された情報を使用した選択のパラメーター化を行うことができます。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-フォーム ビューのレコード セット オブジェクトに直接接続します。 ダイアログ データ エクス チェンジ (DDX) メカニズムの交換データ レコード セットとレコード ビューのコントロールの間。 などのすべてのフォーム ビューでは、レコード ビューは、ダイアログ テンプレート リソースに基づいています。 レコード ビューは、レコード セットのレコード間を移動、レコードを更新およびレコード ビューを閉じるときに、関連するレコード セットを閉じてもサポートします。
+レコードセットオブジェクトに直接接続されたフォームビューを提供します。 ダイアログデータエクスチェンジ (DDX) メカニズムは、レコードセットとレコードビューのコントロールとの間でデータを交換します。 すべてのフォームビューと同様に、レコードビューはダイアログテンプレートリソースに基づいています。 レコードビューでは、レコードビューを閉じるときに、レコードからレコードセットへの移動、レコードの更新、関連付けられたレコードセットの終了もサポートされます。
 
 [CDBException](../mfc/reference/cdbexception-class.md)<br/>
-データ アクセスでの障害からの結果を処理する例外。 このクラスは、他の例外クラスと同じ目的をクラス ライブラリの例外処理メカニズムで機能します。
+データアクセス処理の失敗に起因する例外。 このクラスは、クラスライブラリの例外処理機構における他の例外クラスと同じ目的を果たします。
 
 [CFieldExchange](../mfc/reference/cfieldexchange-class.md)<br/>
-レコード フィールド エクス チェンジ (RFX)、フィールド データ メンバーと、レコード セット オブジェクトとデータ ソースに対応するテーブル列のパラメーターのデータ メンバーの間でデータの交換をサポートするためにコンテキスト情報を提供します。 クラスに似ています[CDataExchange](../mfc/reference/cdataexchange-class.md)、ダイアログ データ エクス (チェンジ DDX) に同様に使用されます。
+レコードフィールドエクスチェンジ (RFX) をサポートするためのコンテキスト情報を提供します。 RFX は、レコードセットオブジェクトのフィールドデータメンバーとパラメーターデータメンバーと、データソースの対応するテーブル列との間でデータを交換します。 ダイアログデータエクスチェンジ (DDX) と同様に使用される[CDataExchange](../mfc/reference/cdataexchange-class.md)クラスに似ています。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-ビットマップなどのバイナリ ラージ オブジェクト (BLOB) ストレージを識別するハンドルをカプセル化します。 `CLongBinary` オブジェクトは、データベース テーブルに格納されている大規模なデータ オブジェクトの管理に使用されます。
+ビットマップなどのバイナリラージオブジェクト (BLOB) のストレージへのハンドルをカプセル化します。 `CLongBinary` オブジェクトは、データベーステーブルに格納されている大規模なデータオブジェクトを管理するために使用されます。
 
 [CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
-値のデータ型について悩むことがなく値を格納することができます。 `CDBVariant` 共用体に格納されている現在の値のデータ型を追跡します。
+値のデータ型を気にせずに値を格納できます。 `CDBVariant` は、共用体に格納されている現在の値のデータ型を追跡します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

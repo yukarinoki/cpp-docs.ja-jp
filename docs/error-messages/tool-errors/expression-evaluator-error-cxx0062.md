@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0062
 - CGopherFile class, operations
 ms.assetid: 8e4165c4-7753-4f45-90e9-4542cbb9fc7a
-ms.openlocfilehash: 7f18ac438dd6411dbc86c8ac4c380c8ad2b59079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9efb3347b6afecad79dd063bc3c897704416479c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299466"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184490"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>式エバリュエーター エラー CXX0062
 
-コンス トラクターの呼び出しがサポートされていません
+コンストラクター呼び出しはサポートされていません
 
-式には、コンス トラクターの呼び出しが行われます。 式は、明示的なコンス トラクター呼び出しを行うか、コンス トラクターの呼び出しを必要とされる変換を行うことはできません。
+コンストラクターを呼び出した式。 式では、コンストラクターへの明示的な呼び出しや、コンストラクターの呼び出しを必要とする変換を行うことはできません。
 
-このエラーは、can0062 と同じものと同じです。
+このエラーは CAN0062 と同じです。

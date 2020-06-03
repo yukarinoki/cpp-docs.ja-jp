@@ -5,34 +5,33 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630764"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078301"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
 
-Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC++ ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
+Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC + + ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
 
 ## <a name="example"></a>例
 
 ::: moniker range=">=vs-2019"
 
-次のサンプル .vcxproj ファイルは、[**新しいプロジェクト**] ダイアログボックスの [ **Windows デスクトップウィザード**] を選択して生成されたものです。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
+次のサンプル .vcxproj ファイルは、 **[新しいプロジェクト]** ダイアログボックスの **[Windows デスクトップウィザード]** を選択して生成されたものです。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (このサンプルは、必要なソースファイルとヘッダーファイルが指定されていないため、処理できません。)プロジェクトファイル内の XML 要素の詳細については、「[プロジェクトファイルスキーマリファレンス](/visualstudio/msbuild/msbuild-project-file-schema-reference)」を参照してください。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-次のサンプルの .vcxproj ファイルは、**[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
+次のサンプルの .vcxproj ファイルは、 **[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (このサンプルは、必要なソースファイルとヘッダーファイルが指定されていないため、処理できません。)プロジェクトファイル内の XML 要素の詳細については、「[プロジェクトファイルスキーマリファレンス](/visualstudio/msbuild/msbuild-project-file-schema-reference)」を参照してください。
 
 ::: moniker-end
 
-
 >[!NOTE]
-> Visual Studio 2017 以前のプロジェクトでは、を`pch.h`に`stdafx.h` 、 `pch.cpp`を`stdafx.cpp`に変更します。
+> Visual Studio 2017 以前のプロジェクトでは、`pch.h` を `stdafx.h` に変更し、`stdafx.cpp`に `pch.cpp` します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +131,7 @@ Visual C++ Studio のプロジェクトファイルは XML ベースのファイ
 </Project>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio プロジェクト - C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)

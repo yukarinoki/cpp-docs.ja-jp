@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4502
 ms.assetid: d8d43153-a40c-4b96-bc11-64028a144d70
-ms.openlocfilehash: 2aa436ffc7a74392d71fe854c93f8bd5ff5e0563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afec782b72f9b779430ab7cb30f22fbadda90d73
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186583"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>コンパイラの警告 (レベル 1) C4502
 
-'リンケージ指定子' が 'extern' キーワードを使用する必要があり。、その他のすべての指定子の前にする必要があります。
+' リンケージ指定 ' にはキーワード ' extern ' を使用する必要があります。他のすべての指定子の前に指定しなければなりません。
 
-せず、リンケージが指定されて、`extern`キーワード。 リンケージが extern 以外の種類に関連するではありません。
+`extern` キーワードを指定せずにリンケージが指定されました。 リンケージは、非 extern 型には関係ありません。
 
-コンパイラと見なされます、`extern`キーワード。
+コンパイラでは、`extern` キーワードが想定されています。

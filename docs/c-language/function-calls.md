@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334574"
 ---
 # <a name="function-calls"></a>関数呼び出し
 
@@ -25,7 +25,7 @@ ms.locfileid: "56148206"
 関数呼び出しの前に宣言が存在していて、パラメーターに関する情報が何もない場合は、宣言されていない引数に対して単純に通常の算術変換が実行されます。
 
 > [!NOTE]
->  関数の引数リストの式は、任意の順序で評価できるため、別の引数の副作用によって値が変化する可能性のある引数は値が未定義になります。 関数呼び出し演算子で定義されたシーケンス ポイントは、呼び出された関数に制御が渡される前に引数リストのすべての副作用が評価されることだけを保証します  (引数をスタックにプッシュする順序は別の問題です)。詳細については、「[シーケンス ポイント](../c-language/c-sequence-points.md)」を参照してください。
+> 関数の引数リストの式は、任意の順序で評価できるため、別の引数の副作用によって値が変化する可能性のある引数は値が未定義になります。 関数呼び出し演算子で定義されたシーケンス ポイントは、呼び出された関数に制御が渡される前に引数リストのすべての副作用が評価されることだけを保証します  (引数をスタックにプッシュする順序は別の問題です)。詳細については、「[シーケンス ポイント](../c-language/c-sequence-points.md)」を参照してください。
 
 関数呼び出しの唯一の要件は、かっこの前の式を評価すると関数アドレスになることです。 これは、関数を任意の関数ポインター式を使用して呼び出せることを意味します。
 

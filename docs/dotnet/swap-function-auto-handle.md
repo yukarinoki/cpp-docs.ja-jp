@@ -2,22 +2,19 @@
 title: swap 関数 (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384557"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545943"
 ---
-# <a name="swap-function-autohandle"></a>swap 関数 (auto_handle)
+# <a name="swap-function-auto_handle"></a>swap 関数 (auto_handle)
 
-1 つの間でオブジェクトを交換`auto_handle`別とします。
+オブジェクトを1つの `auto_handle` 間で交換します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,11 +32,11 @@ void swap(
 `auto_handle`。
 
 *_right*<br/>
-もう 1 つ`auto_handle`します。
+別の `auto_handle`。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -64,13 +61,13 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー ファイル** \<msclr\auto_handle.h >
+**ヘッダーファイル**\<msclr \ auto_handle >
 
-**Namespace** msclr
+**名前空間**msclr
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

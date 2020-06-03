@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow インターフェイス
+title: インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329993"
 ---
-# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow インターフェイス
+# <a name="iaxwinhostwindow-interface"></a>インターフェイス
 
 このインターフェイスは、コントロールとそのホスト オブジェクトを操作するためのメソッドを提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -39,29 +39,29 @@ interface IAxWinHostWindow : IUnknown
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|ホスト オブジェクトを既存のコントロールをアタッチします。|
-|[CreateControl](#createcontrol)|コントロールを作成し、そのホスト オブジェクトにアタッチします。|
-|[CreateControlEx](#createcontrolex)|コントロールを作成し、ホスト オブジェクトにアタッチします必要に応じて、イベント ハンドラーを設定します。|
-|[QueryControl](#querycontrol)|ホストされるコントロールにインターフェイス ポインターを返します。|
-|[SetExternalDispatch](#setexternaldispatch)|外部の設定`IDispatch`インターフェイス。|
-|[SetExternalUIHandler](#setexternaluihandler)|外部の設定`IDocHostUIHandlerDispatch`インターフェイス。|
+|[コントロールのアタッチ](#attachcontrol)|既存のコントロールをホスト オブジェクトにアタッチします。|
+|[CreateControl](#createcontrol)|コントロールを作成し、ホスト オブジェクトにアタッチします。|
+|[コントロールエックスを作成する](#createcontrolex)|コントロールを作成し、ホスト オブジェクトに接続し、必要に応じてイベント ハンドラーを設定します。|
+|[クエリコントロール](#querycontrol)|ホストされたコントロールへのインターフェイス ポインターを返します。|
+|[外部ディスパッチを設定します。](#setexternaldispatch)|外部`IDispatch`インターフェイスを設定します。|
+|[外部UIハンドラを設定します。](#setexternaluihandler)|外部`IDocHostUIHandlerDispatch`インターフェイスを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このインターフェイスは、オブジェクトのホスト、ATL の ActiveX コントロールによって公開されます。 作成や、ホストされるコントロールからインターフェイスを取得または Web ブラウザーをホストする場合は、外部のディスパッチ インターフェイスまたは使用するための UI ハンドラーを設定する、ホスト オブジェクトへのコントロールをアタッチするには、このインターフェイスでメソッドを呼び出します。
+このインターフェイスは、ATL の ActiveX コントロールホスト オブジェクトによって公開されます。 ホスト オブジェクトにコントロールを作成またはアタッチしたり、ホストされたコントロールからインターフェイスを取得したり、Web ブラウザーをホストするときに使用する外部の dispinterface または UI ハンドラーを設定したりするには、このインターフェイスのメソッドを呼び出します。
 
 ## <a name="requirements"></a>必要条件
 
-このインターフェイスの定義は、次に示すように IDL または C++ では、使用可能です。
+このインターフェイスの定義は、次に示すように、IDL または C++ として使用できます。
 
-|定義の種類|ファイル|
+|[定義の種類]|ファイル|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
+|Idl|アトリフェイス.idl|
 |C++|ATLIFace.h (ATLBase.h にも含まれています)|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>ウィンドウ::コントロールをアタッチします。
 
-識別されるウィンドウを使用して、そのホスト オブジェクトを既存の (および前に初期化された) コントロールをアタッチします*hWnd*します。
+*hWnd*で識別されるウィンドウを使用して、既存の (および以前に初期化された) コントロールをホスト オブジェクトにアタッチします。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -69,19 +69,19 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkControl*<br/>
-[in]ポインター、`IUnknown`ホスト オブジェクトにアタッチされるコントロールのインターフェイス。
+*コントロールを確認する*<br/>
+[in]ホスト オブジェクトに`IUnknown`アタッチされるコントロールのインターフェイスへのポインター。
 
 *hWnd*<br/>
-[in]ホストするために使用するウィンドウへのハンドル。
+[in]ホストに使用するウィンドウへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>ウィンドウ::コントロールの作成
 
-コントロールを作成し、初期化して、識別されるウィンドウでホスト*hWnd*します。
+コントロールを作成し、初期化し *、hWnd*で識別されるウィンドウでホストします。
 
 ```
 STDMETHOD(CreateControl)(
@@ -92,30 +92,30 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*<br/>
-[in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
+*データ*<br/>
+[in]作成するコントロールを識別する文字列。 CLSID (中かっこを含める必要があります)、ProgID、URL、または生の HTML **(MSHTML:** の接頭辞) を指定できます。
 
 *hWnd*<br/>
-[in]ホストするために使用するウィンドウへのハンドル。
+[in]ホストに使用するウィンドウへのハンドル。
 
-*pStream*<br/>
+*pストリーム*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このウィンドウは、メッセージをコントロールに反映されることができ、その他のコンテナーの機能は動作できるように、このインターフェイスを公開するホスト オブジェクトをサブクラス化されます。
+このウィンドウは、メッセージをコントロールに反映できるように、このインターフェイスを公開するホスト オブジェクトによってサブクラス化され、他のコンテナー機能が機能します。
 
-このメソッドを呼び出すには、[詳細](#createcontrolex)します。
+このメソッドを呼び出すことは、呼び出す[の](#createcontrolex)と同じです。
 
-ライセンスされた ActiveX コントロールを作成するを参照してください。 [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)します。
+ライセンスを取得した ActiveX コントロールを作成するには[、「IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)」を参照してください。
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>ウィンドウ::コントロールエクスを作成します。
 
-ActiveX コントロールを作成、初期化、および指定したウィンドウでホスト[については](#createcontrol)します。
+ActiveX コントロールを作成し、初期化し、指定したウィンドウで[ホストします。](#createcontrol)
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -129,37 +129,37 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*<br/>
-[in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
+*データ*<br/>
+[in]作成するコントロールを識別する文字列。 CLSID (中かっこを含める必要があります)、ProgID、URL、または生の HTML (プレフィックスは**MSHTML:**) です。
 
 *hWnd*<br/>
-[in]ホストするために使用するウィンドウへのハンドル。
+[in]ホストに使用するウィンドウへのハンドル。
 
-*pStream*<br/>
+*pストリーム*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
 *ppUnk*<br/>
-[out]受信するポインターのアドレス、`IUnknown`作成されたコントロールのインターフェイス。 NULL にすることができます。
+[アウト]作成されたコントロールのインターフェイスを`IUnknown`受け取るポインターのアドレス。 NULL にすることができます。
 
-*riidAdvise*<br/>
-[in]送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。 Iid_ をすることができます。
+*リドアドバイス*<br/>
+[in]含まれているオブジェクトの発信インターフェイスのインターフェイス識別子。 IID_NULLすることができます。
 
-*punkAdvise*<br/>
-[in]ポインター、`IUnknown`で指定された、含まれるオブジェクトの接続ポイントに接続されているシンク オブジェクトのインターフェイス`iidSink`します。
+*パンクアドバイス*<br/>
+[in]で`iidSink`指定された格納`IUnknown`されているオブジェクトの接続ポイントに接続されるシンク オブジェクトのインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-異なり、`CreateControl`メソッド、`CreateControlEx`新しく作成されたコントロールへのインターフェイス ポインターを受け取るし、コントロールによって発生したイベントを受信するために、イベント シンクをセットアップすることもできます。
+`CreateControl`メソッドとは異`CreateControlEx`なり、新しく作成されたコントロールへのインターフェイス ポインターを受け取り、コントロールによって発生したイベントを受信するイベント シンクを設定することもできます。
 
-ライセンスされた ActiveX コントロールを作成するを参照してください。[呼び出し](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)します。
+ライセンスを取得した ActiveX コントロールを作成するには[、「IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)」を参照してください。
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>ウィンドウ::クエリコントロール
 
-ホストされるコントロールによって提供される指定されたインターフェイス ポインターを返します。
+ホストされたコントロールによって提供される指定されたインターフェイス ポインターを返します。
 
 ```
 STDMETHOD(QueryControl)(
@@ -172,16 +172,16 @@ STDMETHOD(QueryControl)(
 *riid*<br/>
 [in]要求されているコントロールのインターフェイスの ID。
 
-*ppvObject*<br/>
-[out]作成されたコントロールの指定したインターフェイスを受信するポインターのアドレス。
+*オブジェクト*<br/>
+[アウト]作成されたコントロールの指定されたインターフェイスを受け取るポインターのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>ウィンドウ::外部ディスパッチを設定します。
 
-格納されているコントロールを使用できる外部のディスパッチ インターフェイスの設定、 [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md)メソッド。
+メソッドを通じて含まれるコントロールに使用できる外部ディスパッチ インターフェイス[を](../../atl/reference/idochostuihandlerdispatch-interface.md)設定します。
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -190,15 +190,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>パラメーター
 
 *pDisp*<br/>
-[in]ポインター、`IDispatch`インターフェイス。
+[in]`IDispatch`インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>ウィンドウ::外部UIハンドラを設定します。
 
-外部を設定するには、この関数を呼び出す[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)のためのインターフェイス、`CAxWindow`オブジェクト。
+オブジェクトの外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)インターフェイスを設定するには、`CAxWindow`この関数を呼び出します。
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -207,18 +207,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>パラメーター
 
 *pDisp*<br/>
-[in]ポインター、`IDocHostUIHandlerDispatch`インターフェイス。
+[in]`IDocHostUIHandlerDispatch`インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、ホストのサイト (Web ブラウザー コントロール) などのコントロールで使用、`IDocHostUIHandlerDispatch`インターフェイス。
+この関数は、ホストのサイトにインターフェイスを照会するコントロール (Web ブラウザー コントロールなど)`IDocHostUIHandlerDispatch`によって使用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[IAxWinAmbientDispatch インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[ウィンドウ::クエリホスト](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

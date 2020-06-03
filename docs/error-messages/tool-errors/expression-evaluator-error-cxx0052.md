@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CXX0052
 - CAN0052
 ms.assetid: 5060d479-d0a4-4682-b858-c8b9a4f324e6
-ms.openlocfilehash: 12b4aff2c07e81a77b1a822fa15beb972a7e1e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9596313a80cb555f7daf4b65eda54a1d23a1ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184802"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>式エバリュエーター エラー CXX0052
 
-メンバー関数は存在しません
+メンバー関数が存在しません
 
-メンバー関数は、ブレークポイントとして指定されましたが、見つかりませんでした。 インライン展開されている関数にブレークポイントを設定と、このエラーが発生することができます。
+メンバー関数がブレークポイントとして指定されましたが、見つかりませんでした。 インライン化された関数にブレークポイントを設定すると、このエラーが発生する可能性があります。
 
-使用してファイルを再コンパイル インライン展開を強制的に切断 (/Ob0) この関数にブレークポイントを設定します。
+インライン展開を使用してファイルを再コンパイルして、この関数にブレークポイントを設定します。
 
-式には、定義されていない関数が呼び出されます。
+定義されていない関数と呼ばれる式。
 
-このエラーは、can0052 と同じものと同じです。
+このエラーは CAN0052 と同じです。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214527"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -30,7 +30,7 @@ type
 *type*<br/>
 スイッチの種類には、整数、文字、ブール値、または列挙型を指定できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Switch_type** C++属性には、 [switch_type](/windows/win32/Midl/switch-type) MIDL 属性と同じ機能があります。
 
@@ -70,7 +70,7 @@ struct SizedValue2 {
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

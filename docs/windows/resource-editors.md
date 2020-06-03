@@ -21,16 +21,16 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167889"
 ---
 # <a name="resource-editors-c"></a>リソースエディター (C++)
 
-リソースエディターは、Visual Studio プロジェクトに含まれるリソースを作成または変更するための特殊な環境です。 Visual Studio のリソース エディターでは、アプリケーションのリソースをすばやく簡単に作成して変更できるようにする技術とインターフェイスを共有します。 リソースエディターを使用すると、適切なエディターでリソースを表示および編集したり、リソースをプレビューしたりできます。
+リソースエディターは、Visual Studio プロジェクトに含まれるリソースを作成または変更するための特殊な環境です。 Visual Studio のリソース エディターでは、アプリケーションのリソースをすばやく簡単に作成して変更できるようにする技術とインターフェイスを共有します。 リソース エディターを使用すると、リソースを適切なエディターで表示して編集でき、リソースをプレビューすることができます。
 
 リソースを作成したり開いたりすると、適切なエディターが自動的に開きます。
 
@@ -42,12 +42,12 @@ ms.locfileid: "72444993"
 |[アクセラレータ エディター](../windows/accelerator-editor.md)|Visual Studio C++プロジェクトのアクセラレータテーブル。|
 |[Binary Editor](binary-editor.md)|Visual C++、Visual Basic、または Visual C# プロジェクトのバイナリ データの情報およびカスタム リソース。|
 |[ダイアログ エディター](../windows/dialog-editor.md)|Visual Studio C++プロジェクトのダイアログボックス。|
-|[Image Editor](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic、または Visual C# プロジェクトのビットマップ、アイコン、カーソル、およびその他のイメージ ファイル。|
+|[イメージ エディター](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic、または Visual C# プロジェクトのビットマップ、アイコン、カーソル、およびその他のイメージ ファイル。|
 |[メニュー エディター](../windows/menu-editor.md)|Visual Studio C++プロジェクトのメニューリソース。|
 |[Ribbon エディター](../mfc/ribbon-designer-mfc.md)|MFC プロジェクトのリボン リソース。|
 |[ストリング エディター](../windows/string-editor.md)|Visual Studio C++プロジェクトの文字列テーブル。|
 |[ツール バー エディター](../windows/toolbar-editor.md)|Visual Studio C++プロジェクトのツールバーリソース。 **ツールバーエディター**は、**イメージエディター**の一部です。|
-|[バージョン情報エディター](../windows/version-information-editor.md)|Visual Studio C++プロジェクトのバージョン情報。|
+|[バージョン エディター](../windows/version-information-editor.md)|Visual Studio C++プロジェクトのバージョン情報。|
 
 > [!NOTE]
 > プロジェクトに .rc ファイルがまだ含まれていない場合は、「[方法: リソースを作成する](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
@@ -73,13 +73,13 @@ Win32 リソースには、[[リソースビュー](how-to-create-a-resource-scr
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>リソースエディターで Win32 リソースを表示するには
 
-1. メニュー**ビュー** > **つの他の Windows** > **リソースビュー**にジャンプします。
+1. メニュー**ビュー**にアクセスして、**他の Windows** > **リソースビュー** > ます。
 
 1. **リソースビュー**ウィンドウが一番上のウィンドウではない場合は、 **[リソースビュー]** タブを選択して一番上に移動します。
 
 1. **リソースビュー**から、表示するリソースが含まれているプロジェクトのフォルダーを展開します。 たとえば、ダイアログリソースを表示する場合は、**ダイアログ**フォルダーを展開します。
 
-1. リソース (たとえば、 **IDD_ABOUTBOX**) をダブルクリックします。
+1. リソース ( **IDD_ABOUTBOX**など) をダブルクリックします。
 
    リソースが適切なエディターで開きます。 たとえば、ダイアログリソースの場合は、**ダイアログエディター**内でリソースが開きます。
 
@@ -118,15 +118,15 @@ Win32 リソースには、[[リソースビュー](how-to-create-a-resource-scr
 1. [プロパティウィンドウ](/visualstudio/ide/reference/properties-window)で、 **[プロパティページ]** ボタンを選択します。
 
    > [!TIP]
-   > ショートカットを使用して、メニュー**ビュー** > **プロパティページ**にアクセスします。
+   > ショートカットを使用し、メニュー**ビュー** > **プロパティページ**にアクセスします。
 
    リソースの**プロパティ**ページが開き、そのリソースのプレビューが表示されます。 **上**方向キーと**下**方向キーを使用して、**リソースビュー**またはドキュメントウィンドウのツリーコントロールを移動できます。 **プロパティ**ページは開いたままになり、フォーカスがあり、プレビューできるリソースが表示されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-None
+なし
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>

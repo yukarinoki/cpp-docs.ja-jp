@@ -1,9 +1,10 @@
 ---
 title: perror、_wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951028"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919330"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -60,9 +62,11 @@ void _wperror(
 *message*<br/>
 印刷する文字列メッセージ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-エラーメッセージは、 **stderr**関数によって stderr に出力**されます**。 **_wperror**のワイド文字バージョン**です。** **_wperror**への*メッセージ*引数は、ワイド文字列です。 それ以外**では**、 **_wperror**との動作は同じです。
+エラーメッセージは、 **stderr**関数によって stderr に出力**されます**。 **_wperror**は **_perror**のワイド文字バージョンです。**_wperror**の*メッセージ*引数は、ワイド文字列です。 **_wperror**と **_perror**は同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -72,20 +76,20 @@ void _wperror(
 
 *メッセージ*は最初に出力され、その後にコロン、次にエラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、最後に改行文字が出力されます。 *Message*が null ポインターまたは null 文字列へのポインターである場合、システムエラーメッセージのみ**が出力さ**れます。
 
-エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **_sys_errlist**のインデックスとして**errno**値を使用して、適切なエラーメッセージ**を出力し**ます。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は、 **_sys_errlist**配列内の要素の最大数として定義されます。
+エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 このエラーメッセージは、 **_sys_errlist**のインデックスとして**errno**値を使用し**て出力さ**れます。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は、 **_sys_errlist**配列内の要素の最大数として定義されます。
 
 正確な結果を得るには、ライブラリルーチンからエラーが返された直後に、エラーメッセージ**を呼び出します**。 それ以外の場合、後続の呼び出しで**errno**値が上書きされる可能性があります。
 
-Windows オペレーティングシステムでは **、errno に列挙値が**表示されます。H は使用されていません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティングシステムで使用される**errno**値の一覧については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。 は、これらのプラットフォームで使用されていない**errno**値に対して空の文字列**を出力し**ます。
+Windows オペレーティングシステムでは **、errno に列挙値が**表示されます。H は使用されていません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティングシステムで使用される**errno**値の一覧については[、「_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。 は、これらのプラットフォームで使用されていない**errno**値に対して空の文字列**を出力し**ます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**perror**|\<stdio.h> または \<stdlib.h>|
 |**_wperror**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -141,7 +145,7 @@ _strerror says open failed: No such file or directory
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror、_strerror、_wcserror、 \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

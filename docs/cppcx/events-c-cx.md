@@ -3,12 +3,12 @@ title: イベント (C++/CX)
 description: /Cx を使用C++して、Windows ランタイムでイベントハンドラーを作成および使用する方法について説明します。
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972197"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509372"
 ---
 # <a name="events-ccx"></a>イベント (C++/CX)
 
@@ -28,7 +28,7 @@ ref クラスまたはインターフェイスでイベントを宣言できま�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>使用状況
+### <a name="usage"></a>使用法
 
 次の例では、サブスクライブ側のクラスが `+=` 演算子を使用してイベントにサブスクライブし、イベントが発生したときに呼び出されるイベント ハンドラーを指定する方法を示します。 指定された関数が、 `EventTest` 名前空間でパブリッシャー側で定義されたデリゲートの署名と一致していることに注目してください。
 
@@ -59,7 +59,7 @@ ref クラスまたはインターフェイスでイベントを宣言できま�
 
 イベント ソースがイベント レシーバーのイベント ハンドラーを呼び出す順序は保証されず、呼び出しごとに異なる可能性があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
 [デリゲート](../cppcx/delegates-c-cx.md)<br/>

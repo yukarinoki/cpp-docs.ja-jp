@@ -1,25 +1,25 @@
 ---
-title: '方法: System::string を標準文字列に変換します。'
+title: '方法: System::String を標準文字列に変換する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379117"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545301"
 ---
-# <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::string を標準文字列に変換します。
+# <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::String を標準文字列に変換する
 
 Vcclr.h の <xref:System.String> を使用せずに、`std::string` を `std::wstring` または `PtrToStringChars` に変換できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // convert_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -63,6 +63,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

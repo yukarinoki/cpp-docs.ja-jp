@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 6f41b56995e1a5a7d7f4267cb1def5370f953d5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171672"
 ---
 # <a name="compiler-intrinsics"></a>コンパイラの組み込み
 
 ほとんどの関数はライブラリに含まれますが、関数によっては、コンパイラに組み込まれているものもあります。 これらは、組み込み関数または組み込みと呼ばれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 関数が組み込みの場合、その関数のコードは通常、インラインで挿入されます。これにより、関数呼び出しのオーバーヘッドを回避し、その関数の非常に効率的なマシン語命令が生成されるようにします。 組み込みは通常、同等のインライン アセンブリよりも高速です。これは、オプティマイザーに組み込み関数の動作数に関する組み込まれた知識があるため、インライン アセンブリが使用できない最適化を使用できるためです。 また、オプティマイザーは、組み込みの展開、バッファーの配置、その他の調節を、呼び出しのコンテキストと引数に応じて行うことができます。
 
@@ -46,7 +46,7 @@ ms.locfileid: "74163488"
 
 - [組み込み関数のアルファベット順の一覧](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ARM アセンブラーリファレンス](../assembler/arm/arm-assembler-reference.md)<br/>
 [Microsoft マクロアセンブラーリファレンス](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501879"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168500"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -32,13 +32,13 @@ ms.locfileid: "69501879"
 集約可能オブジェクトの CLSID を指定します。
 
 *variable_name*<br/>
-挿入する変数の名前。 この変数には`IUnknown` 、集計されるオブジェクトのが含まれます。
+挿入する変数の名前。 この変数には、集計されるオブジェクトの `IUnknown` が含まれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 オブジェクトに適用すると、 **aggregates** C++ 属性は ( `clsid`によって指定された) 集約対象オブジェクトのアウター ラッパーを実装します。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が`vi_progid`適用`progid`されている`coclass`場合、とも適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、`progid` が適用されている場合、`vi_progid` と `coclass` も適用されます。
 
 ### <a name="atl-projects"></a>ATL プロジェクト
 
@@ -85,12 +85,12 @@ struct CObject : IObject
 |-|-|
 |**対象**|**クラス**、**構造体**|
 |**反復可能**|はい|
-|**必要な属性**|、、または`coclass` `progid` `vi_progid`が1つ以上あります。|
+|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

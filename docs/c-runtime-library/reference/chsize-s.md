@@ -1,8 +1,9 @@
 ---
 title: _chsize_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chsize_s
+- _o__chsize_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: 7250f0b570ae9a4b2478bad09ee7b0044068d972
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: faed95bfeb6fad88f502101e166ec6124b6e591d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939175"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910411"
 ---
 # <a name="_chsize_s"></a>_chsize_s
 
@@ -49,7 +51,7 @@ errno_t _chsize_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 *size*<br/>
@@ -57,11 +59,11 @@ errno_t _chsize_s(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルサイズが正常に変更された場合、 **_chsize_s**は値0を返します。 0以外の戻り値は、エラーを示します。指定したファイルがアクセスに対してロックされている場合、戻り値は**EACCES** 、指定されたファイルが読み取り専用**であるか**、または記述子が無効である場合は ENOSPC、デバイス **に領域が残っていない場合はになります。** Size が0未満の場合は EINVAL。 **errno**が同じ値に設定されています。
+ファイルサイズが正常に変更された場合、 **_chsize_s**は値0を返します。 0以外の戻り値は、エラーを示します。指定されたファイルがアクセスに対してロックされている場合、 **EACCES**は、指定されたファイルが読み取り専用である場合、または、記述子が無効な場合は ENOSPC **、デバイス**に領域がない場合は**ENOSPC** 、サイズが0未満の場合は**EINVAL**を返します。 **errno**が同じ値に設定されています。
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Chsize_s**関数は、 *fd*に関連付けられているファイルを*size*によって指定された長さに拡張または切り捨てます。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
@@ -69,13 +71,15 @@ errno_t _chsize_s(
 
 この関数は、パラメーターを検証します。 *Fd*が有効なファイル記述子でないか、またはサイズが0未満の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize_s**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

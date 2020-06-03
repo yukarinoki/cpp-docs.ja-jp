@@ -1,10 +1,11 @@
 ---
 title: strcpy、wcscpy、_mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +43,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958260"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915265"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
@@ -99,16 +101,18 @@ NULL で終わる元の文字列。
 
 これらの関数は、コピー先文字列を返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strcpy**関数は、 *strsource*(終端の null 文字を含む) を*strsource*によって指定された場所にコピーします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy**の動作は未定義です。
 
 > [!IMPORTANT]
 > **Strcpy**は、 *strdestination*をコピーする前に、 *strdestination*に十分な領域があるかどうかをチェックしないため、バッファーオーバーランの可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
 
-**wcscpy**と **_mbscpy**は、それぞれワイド文字バージョンとマルチバイト文字バージョンの**strcpy**です。 **Wcscpy**の引数と戻り値はワイド文字列です。これらの **_mbscpy**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscpy**と **_mbscpy**はそれぞれ、 **strcpy**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscpy**の引数と戻り値はワイド文字列です。これらの **_mbscpy**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -118,13 +122,13 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> または \<wchar.h>|
 |**_mbscpy**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

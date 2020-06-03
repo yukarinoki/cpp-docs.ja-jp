@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
 ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326795"
 ---
 # <a name="c-keywords"></a>C キーワード
 
@@ -46,13 +46,13 @@ ANSI C 規格では、先頭にアンダースコアを 2 つ持つ識別子は�
 
 <sup>1</sup> **__based** キーワードには、32 ビットおよび 64 ビット ターゲット コンパイルに関する使用制限があります。
 
-<sup>2</sup> これらは、**__declspec** で使用するときは特殊な識別子です。他のコンテキストでの使用は制限されていません。
+<sup>2</sup> これらは、 **__declspec** で使用するときは特殊な識別子です。他のコンテキストでの使用は制限されていません。
 
 <sup>3</sup> 以前のバージョンとの互換性のため、これらのキーワードは先頭に 2 本のアンダースコアが付いている場合でも、Microsoft の拡張機能を有効にしているときは 1 本のアンダースコアが付いている場合でも、どちらでも使用できます。
 
 Microsoft 拡張機能は既定で有効になっています。 完全に移植性のあるプログラムにするには、コンパイル時に [/Za \( 言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md) オプション を指定することで、Microsoft 拡張機能を無効にできます。 これにより、Microsoft 固有のキーワードの一部が無効になります。
 
-Microsoft 拡張機能を有効にするときは、先に示したキーワードをプログラム内で使用できます。 ANSI 準拠の場合、これらのキーワードのほとんどは二重アンダースコアで始まります。 4 つの例外、**dllexport**、**dllimport**、**naked**、および **thread** は、**__declspec** のみで使用されます。したがって、先頭に二重アンダースコアは必要ありません。 残りのキーワードについては、下位互換性のために、アンダースコア 1 文字のバージョンがサポートされます。
+Microsoft 拡張機能を有効にするときは、先に示したキーワードをプログラム内で使用できます。 ANSI 準拠の場合、これらのキーワードのほとんどは二重アンダースコアで始まります。 4 つの例外、**dllexport**、**dllimport**、**naked**、および **thread** は、 **__declspec** のみで使用されます。したがって、先頭に二重アンダースコアは必要ありません。 残りのキーワードについては、下位互換性のために、アンダースコア 1 文字のバージョンがサポートされます。
 
 **Microsoft 固有の仕様はここまで**
 

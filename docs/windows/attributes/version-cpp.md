@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165991"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -27,9 +27,9 @@ ms.locfileid: "69514878"
 ### <a name="parameters"></a>パラメーター
 
 *version*<br/>
-のバージョン番号`coclass`。 指定しない場合、1.0 は .idl ファイルに配置されます。
+`coclass` のバージョン番号。 指定しない場合、1.0 は .idl ファイルに配置されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Version** C++属性には[バージョン](/windows/win32/Midl/version)MIDL 属性と同じ機能があり、生成された .idl ファイルに渡されます。
 
@@ -50,7 +50,7 @@ ms.locfileid: "69514878"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [クラス属性](class-attributes.md)

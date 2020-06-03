@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 652aee03bfb5504a51d74efb326cc7a3d7c28649
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956219"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171204"
 ---
 # <a name="fwide"></a>fwide
 
@@ -48,20 +48,20 @@ int fwide(
 *一連*<br/>
 **ファイル**構造へのポインター (無視)。
 
-*モード*<br/>
+*mode*<br/>
 ストリームの新しい幅: ワイド文字の場合は正、バイトの場合は負、変更しない場合は 0 にします (この値は無視されます)。
 
 ## <a name="return-value"></a>戻り値
 
 現在、この関数は、*モード*を返すだけです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数の現在のバージョンは、標準に準拠していません。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|Function|必須ヘッダー|
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 

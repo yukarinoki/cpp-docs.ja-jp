@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316623"
+---
 # <a name="contributing"></a>コントリビューション
 
 Visual C++ ドキュメントへの貢献に関心をお寄せいただきありがとうございます。
@@ -6,11 +14,11 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 このトピックの内容:
 
-* [投稿のプロセス](#process-for-contributing)
-* [注意事項](#dos-and-donts)
-* [ドキュメントの構築](#building-the-docs)
-* [サンプルへの投稿](#contributing-to-samples)
-* [共同作成者ライセンス条項](#contributor-license-agreement)
+- [投稿のプロセス](#process-for-contributing)
+- [注意事項](#dos-and-donts)
+- [ドキュメントの構築](#building-the-docs)
+- [サンプルへの投稿](#contributing-to-samples)
+- [共同作成者ライセンス条項](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>投稿のプロセス
 
@@ -36,13 +44,15 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 ### <a name="example-structure"></a>構造の例
 
-    docs
-        /standard-library
-            wstring-convert-class.md
-            /media
-                wstring-conversion.png
+```
+docs
+    /standard-library
+        wstring-convert-class.md
+        /media
+            wstring-conversion.png
+```
 
-**手順 5:**  ご自分のブランチから `MicrosoftDocs/cpp-docs/master` にプル要求 (PR) を送信します。
+**手順 5:** ご自分のブランチから `MicrosoftDocs/cpp-docs/master` に Pull Request (PR) を送信します。
 
 PR が既存の問題に対処している場合は、コミット メッセージまたは PR の説明に `Fixes #Issue_Number` キーワードを追加すると、PR がマージされたときに問題が自動的に閉じられます。 詳細については、[コミット メッセージによって問題を閉じる](https://help.github.com/articles/closing-issues-via-commit-messages/)方法についての記事を参照してください。
 
@@ -58,7 +68,7 @@ Visual Studio チームが PR を確認し、変更が適切であるか、ま�
 
 .NET ドキュメントに投稿する際に注意する必要があるガイド ルールの簡単な一覧を次に示します。
 
-- 突然に、巨大なプル要求を送信**しないでください**。 代わりに、問題を提出し、ディスカッションを開始して、大量の時間を費やす前に方向について同意が得られるようにしてください。
+- 突然に、巨大な pull requests を送信**しないでください**。 代わりに、問題を提出し、ディスカッションを開始して、大量の時間を費やす前に方向について同意が得られるようにしてください。
 - [スタイル ガイド](./styleguide/template.md)と[スタイルとトーン](./styleguide/voice-tone.md)のガイドラインを**お読みください**。
 - [テンプレート](./styleguide/template.md) ファイルを作業の開始点として**使用してください**。
 - 記事に取り掛かる前に、フォークに個別のブランチを**作成してください**。

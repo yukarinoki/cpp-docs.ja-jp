@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168774"
 ---
 # <a name="c-bitwise-operators"></a>C ビット処理演算子
 
-ビット処理演算子は、ビットごとの AND (**&**)、ビットごとの排他的 OR (**^**)、およびビットごとの包括的 OR (**&#124;**) 演算を行います。
+ビット処理演算子は、ビットごとの AND ( **&** )、ビットごとの排他的 OR ( **^** )、およびビットごとの包括的 OR ( **&#124;** ) 演算を行います。
 
 ## <a name="syntax"></a>構文
 
 *AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*:&nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
 *inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 

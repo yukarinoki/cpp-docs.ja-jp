@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2865db023425fa301ad5440a0dc8ed491213f33f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447662"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368056"
 ---
-# <a name="insertiterator-class"></a>insert_iterator クラス
+# <a name="insert_iterator-class"></a>insert_iterator クラス
 
 出力反復子の要件を満たす反復子アダプターについて説明します。 シーケンスに要素を上書きではなく、挿入し、C++ のシーケンスと連想コンテナーの反復子が提供する上書きセマンティクスとは異なるセマンティクスを提供します。 `insert_iterator` クラスは、適合させるコンテナーの型でテンプレート化されます。
 
@@ -33,38 +33,38 @@ class insert_iterator;
 *コンテナー*\
 要素が `insert_iterator` によって挿入されるコンテナーの型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型`Container`のコンテナーは、可変サイズのコンテナーの要件を満たし、2つの引数を持つ insert メンバー関数を持つ必要があります`Container::iterator` 。これらのパラメーターの型`Container::iterator`はと`Container::value_type`で、型を返します。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
+型`Container`のコンテナーは、可変サイズのコンテナーの要件を満たし、パラメーターが型で、型`Container::iterator``Container::value_type``Container::iterator`を返す 2 つの引数の挿入メンバー関数を持っている必要があります。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[insert_iterator](#insert_iterator)|コンテナーの指定された位置に要素を挿入する `insert_iterator` を構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[container_type](#container_type)|一般的な挿入の対象となるコンテナーを表す型。|
-|[reference](#reference)|関連するコンテナーによって制御されるシーケンスの要素への参照を提供する型。|
+|[参照](#reference)|関連するコンテナーによって制御されるシーケンスの要素への参照を提供する型。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
-|[operator++](#op_add_add)|値を格納できる次の位置に `insert_iterator` をインクリメントします。|
-|[operator=](#op_eq)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
+|[演算子*](#op_star)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
+|[演算子++](#op_add_add)|値を格納できる次の位置に `insert_iterator` をインクリメントします。|
+|[演算子=](#op_eq)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**: \<iterator>
+**ヘッダー** \<: 反復>
 
 **名前空間:** std
 
-## <a name="container_type"></a>  insert_iterator::container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator::container_type
 
 一般的な挿入の対象となるコンテナーを表す型。
 
@@ -72,7 +72,7 @@ class insert_iterator;
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター *Container* のシノニムです。
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>  insert_iterator::insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator::insert_iterator
 
 コンテナーの指定された位置に要素を挿入する `insert_iterator` を構築します。
 
@@ -116,13 +116,13 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*\
+*_Cont*\
 `insert_iterator` によって要素が挿入されるコンテナ―です。
 
-*It (_c)* \
+*_It*\
 挿入の位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 すべてのコンテナーには、`insert_iterator`によって呼び出される insert メンバー関数があります。 連想コンテナーについては、位置パラメーターは参考にすぎません。 Inserter 関数は、値を挿入する便利な手段となります。
 
@@ -172,7 +172,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  insert_iterator::operator*
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator::演算子*
 
 アドレス指定された要素を返す挿入反復子を逆参照します。
 
@@ -184,9 +184,9 @@ insert_iterator<Container>& operator*();
 
 このメンバー関数は、アドレス指定された要素の値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 が`Iter`シーケンス内の要素をアドレス指定する反復子である場合 =   **\*、Iter** **value**はその要素を値に置き換え、シーケンス内の要素の合計数を変更しません。
+出力反復式の**\*反復式の Iter** = **値**を実装するために使用します。 シーケンス`Iter`内の要素をアドレス指定する反復子の場合 = **value****\*、その**要素を Iter 値で置き換え、シーケンス内の要素の総数を変更しません。
 
 ### <a name="example"></a>例
 
@@ -232,7 +232,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  insert_iterator::operator++
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator:演算子++
 
 値を格納できる次の位置に `insert_iterator` をインクリメントします。
 
@@ -246,7 +246,7 @@ insert_iterator<Container> operator++(int);
 
 値を格納できる次の位置をアドレス指定する `insert_iterator`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 preincrementation と postincrementation の演算子は、どちらも同じ結果を返します。
 
@@ -296,7 +296,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="op_eq"></a>  insert_iterator::operator=
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator::演算子=
 
 コンテナーに値を挿入し、新しい要素を指すように更新された反復子を返します。
 
@@ -310,14 +310,14 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*val*\
+*ヴァル*\
 コンテナーに割り当てられる値。
 
 ### <a name="return-value"></a>戻り値
 
 コンテナーに挿入される要素への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つ目のメンバー演算子は次の評価をします。
 
@@ -333,7 +333,7 @@ insert_iterator<Container>& operator=(
 
 `++Iter;`
 
-そして `*this`を返します。
+その後、`*this` を返します。
 
 ### <a name="example"></a>例
 
@@ -379,7 +379,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="reference"></a>  insert_iterator::reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator::参照
 
 関連するコンテナーによって制御されるシーケンスの要素への参照を提供する型。
 
@@ -387,7 +387,7 @@ After the insertions, the list L is:
 typedef typename Container::reference reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、関連するコンテナーによって制御されるシーケンスの要素への参照を示します。
 
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<反復器>](../standard-library/iterator.md)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

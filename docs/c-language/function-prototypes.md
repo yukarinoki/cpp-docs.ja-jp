@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857087"
@@ -24,7 +24,7 @@ ms.locfileid: "74857087"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\**属性-seq*<sub>opt</sub>は Microsoft 固有の \*/
+/\* *attribute-seq*<sub>opt</sub> は Microsoft 固有の仕様です \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -50,7 +50,7 @@ ms.locfileid: "74857087"
 
 関数プロトタイプには次の重要な用途があります。
 
-- これらは、 **int**以外の型を返す関数の戻り値の型を設定します。**Int**値を返す関数にはプロトタイプは必要ありませんが、プロトタイプをお勧めします。
+- これらは **int** 以外の型を返す関数の戻り値の型を設定します。**int** の値を返す関数の場合、プロトタイプは必須ではありませんが、プロトタイプの使用をお勧めします。
 
 - 完全なプロトタイプがない場合は標準変換が行われますが、型または引数の数とパラメーターの数は照合されません。
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 **/Ze** では、タグは引き続きグローバル スコープで入力されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数](../c-language/functions-c.md)

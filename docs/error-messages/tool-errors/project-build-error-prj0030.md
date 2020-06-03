@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0030
 ms.assetid: c48b3727-e166-46e7-bcd7-3e5b2ac5c1d4
-ms.openlocfilehash: aa1c8539247287f7644742857c3cb7de321a20a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3675c3796ae37df848e458aa2db665d8c4aa7766
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192511"
 ---
 # <a name="project-build-error-prj0030"></a>プロジェクト ビルド エラー PRJ0030
 
-マクロ拡張エラーです。 $ (マクロ) を超えました再帰 32 レベルを評価します。
+マクロの展開エラーです。 評価の再帰は、$ (マクロ) の32レベルを超えています。
 
-このエラーは、マクロ内の再帰によって発生します。 たとえば、設定した場合、**中間ディレクトリ**プロパティ (を参照してください[[全般] プロパティ ページ (プロジェクト)](../../build/reference/general-property-page-project.md)) に $(IntDir)、再帰が。
+このエラーは、マクロの再帰によって発生します。 たとえば、**中間ディレクトリ**プロパティ ( [[全般] プロパティページ (プロジェクト)](../../build/reference/general-property-page-project.md)を参照) を $ (intdir) に設定した場合は、再帰が発生します。
 
-このエラーを解決するのには、マクロまたはマクロの定義に使用するプロパティ定義されません。
+このエラーを解決するには、定義に使用するマクロの観点からマクロまたはプロパティを定義しないでください。

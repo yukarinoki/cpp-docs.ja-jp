@@ -41,15 +41,15 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246687"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427609"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 関数
 
-## <a name="abs"></a> abs
+## <a name="abs"></a>絶対
 
 入力 valarray の要素を演算し、入力 valarray の要素の絶対値と等しい要素を持つ valarray を返します。
 
@@ -104,7 +104,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```
 
-## <a name="acos"></a> acos
+## <a name="acos"></a>acos
 
 入力 valarray の要素を演算し、入力 valarray の要素のアークコサインと等しい要素を持つ valarray を返します。
 
@@ -122,7 +122,7 @@ valarray<Type> acos(const valarray<Type>& left);
 
 入力 valarray の要素のアークコサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 返される要素の単位はラジアンです。
 
@@ -177,7 +177,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees
 ```
 
-## <a name="asin"></a> asin
+## <a name="asin"></a>サイン
 
 入力 valarray の要素を演算し、入力 valarray の要素のアークサインと等しい要素を持つ valarray を返します。
 
@@ -195,11 +195,11 @@ valarray<Type> asin(const valarray<Type>& left);
 
 入力 valarray の要素のアークサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 返される要素の単位はラジアンです。
 
-戻り値は、プリンシパル間の値 + pi/2 から π/2 サインで一貫性のある値の入力。
+戻り値は、正弦値の入力と一致する + pi/2 と-pi/2 の間のプリンシパル値です。
 
 ### <a name="example"></a>例
 
@@ -250,7 +250,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees
 ```
 
-## <a name="atan"></a> atan
+## <a name="atan"></a>atan
 
 入力 valarray の要素を演算し、入力 valarray の要素のアークタンジェントの主値と等しい要素を持つ valarray を返します。
 
@@ -268,11 +268,11 @@ valarray<Type> atan(const valarray<Type>& left);
 
 入力 valarray の要素のアークタンジェントと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 返される要素の単位はラジアンです。
 
-戻り値は、プリンシパル間の値 + pi/2 から π/2 のタンジェントと整合性がある値の入力。
+戻り値は、タンジェント値の入力と一致する + pi/2 と-pi/2 の間のプリンシパル値です。
 
 ### <a name="example"></a>例
 
@@ -326,7 +326,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees
 ```
 
-## <a name="atan2"></a> atan2
+## <a name="atan2"></a>atan2
 
 valarray の定数と要素の組み合わせによって指定されたデカルト成分のアークタンジェントと等しい要素を持つ valarray を返します。
 
@@ -346,7 +346,7 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 *左*\
 定数の数値データ型、またはアークタンジェント引数の y 座標の値を提供する要素から成る入力 valarray。
 
-*そうです*\
+*右*\
 定数の数値データ型、またはアークタンジェント引数の x 座標の値を提供する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -359,13 +359,13 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 - 3 番目のテンプレート関数の場合は、`left` / `right` [ *I* ]。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 返される要素の単位はラジアンです。
 
-この関数は、コンポーネントが標準のタンジェント関数によって失われることを指定する引数の符号に関する情報を保持し、作業領域のこの知識により、戻り値の間の一意の角度を割り当てられる + pi し、-π をします。
+この関数は、標準のタンジェント関数によって失われる引数のコンポーネントの符号に関する情報を保持します。また、このクアドラントの知識により、戻り値には + pi から-pi までの一意の角度を割り当てることができます。
 
-場合*左*と*右*さまざまな要素数が、結果は未定義です。
+*Left*と*right*の要素数が異なる場合、結果は未定義になります。
 
 ### <a name="example"></a>例
 
@@ -420,14 +420,14 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees
 ```
 
-## <a name="begin"></a> 開始
+## <a name="begin"></a>初め
 
 ```cpp
 template <class T> unspecified 1 begin(valarray<T>& v);
 template <class T> unspecified 2 begin(const valarray<T>& v);
 ```
 
-## <a name="cos"></a> cos
+## <a name="cos"></a>cos
 
 入力 valarray の要素を演算し、入力 valarray の要素のコサインと等しい要素を持つ valarray を返します。
 
@@ -504,7 +504,7 @@ The cosine of the initial valarray is:
 -1
 ```
 
-## <a name="cosh"></a> cosh
+## <a name="cosh"></a>cosh
 
 入力 valarray の要素を演算し、入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray を返します。
 
@@ -522,7 +522,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 指数関数によってハイパーボリック コサインを定義する恒等式:
 
@@ -587,14 +587,14 @@ The hyperbolic cosine of the initial valarray is:
 11.592
 ```
 
-## <a name="end"></a> 終わり
+## <a name="end"></a>終わり
 
 ```cpp
 template <class T> unspecified 1 end(valarray<T>& v);
 template <class T> unspecified 2 end(const valarray<T>& v);
 ```
 
-## <a name="exp"></a> exp 関数
+## <a name="exp"></a>期限
 
 入力 valarray の要素を演算し、入力 valarray の要素の自然指数と等しい要素を持つ valarray を返します。
 
@@ -657,7 +657,7 @@ The natural exponential of the initial valarray is:
 22026.5
 ```
 
-## <a name="log"></a> ログ
+## <a name="log"></a>出力
 
 入力 valarray の要素を演算し、入力 valarray の要素の自然対数と等しい要素を持つ valarray を返します。
 
@@ -720,7 +720,7 @@ The natural logarithm of the initial valarray is:
 4.38203
 ```
 
-## <a name="log10"></a> log10
+## <a name="log10"></a>log10
 
 入力 valarray の要素を演算し、入力 valarray の要素の常用対数 (底が 10 の対数) と等しい要素を持つ valarray を返します。
 
@@ -785,7 +785,7 @@ The common logarithm of the initial valarray is:
 2
 ```
 
-## <a name="pow"></a> えい
+## <a name="pow"></a>えい
 
 入力 valarray と定数の要素を演算し、入力 valarray の要素によって指定されている底と等しい要素を持つ valarray か、入力 valarray か定数の要素で指定された値だけ定数を指数乗したものと等しい要素を持つ valarray を返します。
 
@@ -814,7 +814,7 @@ pow(
 *左*\
 各要素を累乗する底を指定する要素から成る入力 valarray。
 
-*そうです*\
+*右*\
 各要素を累乗する指数を指定する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -827,9 +827,9 @@ pow(
 
 - 3 番目のテンプレート関数の場合、`left` の `right` [ *I* ] 乗。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合*左*と*右*さまざまな要素数が、結果は未定義です。
+*Left*と*right*の要素数が異なる場合、結果は未定義になります。
 
 ### <a name="example"></a>例
 
@@ -882,7 +882,7 @@ n = 4   gives 256
 n = 5   gives 1024
 ```
 
-## <a name="sin"></a> sin 関数
+## <a name="sin"></a>サイン
 
 入力 valarray の要素を演算し、入力 valarray の要素のサインと等しい要素を持つ valarray を返します。
 
@@ -959,7 +959,7 @@ The sine of the initial valarray is:
 -2.06823e-013
 ```
 
-## <a name="sinh"></a> sinh
+## <a name="sinh"></a>sinh
 
 入力 valarray の要素を演算し、入力 valarray の要素のハイパーボリック サインと等しい要素を持つ valarray を返します。
 
@@ -977,11 +977,11 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 入力 valarray の要素のハイパーボリック サインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 指数関数によってハイパーボリック サインを定義する恒等式:
 
-sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
+sinh ( *z* ) = (exp ( *z* )-exp (- *z* ))/2
 
 ### <a name="example"></a>例
 
@@ -1042,7 +1042,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487
 ```
 
-## <a name="sqrt"></a> sqrt
+## <a name="sqrt"></a>sqrt
 
 入力 valarray の要素を演算し、入力 valarray の要素の平方根と等しい要素を持つ valarray を返します。
 
@@ -1096,7 +1096,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
 2 つの valarray の要素を交換します。
 
@@ -1110,12 +1110,12 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`valarray` 型のオブジェクト。
+`valarray` 型オブジェクト。
 
-*そうです*\
-`valarray` 型のオブジェクト。
+*右*\
+`valarray` 型オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`left.swap(right)` を実行します。
 
@@ -1196,7 +1196,7 @@ The tangent of the initial valarray is:
 -9.6701e+012
 ```
 
-## <a name="tanh"></a> tanh
+## <a name="tanh"></a>tanh
 
 入力 valarray の要素を演算し、入力 valarray の要素のハイパーボリック タンジェントと等しい要素を持つ valarray を返します。
 
@@ -1214,11 +1214,11 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 指数関数によってハイパーボリック タンジェントを定義する恒等式:
 
-tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
+tanh ( *z* ) = sinh ( *z* )/cosh ( *z* ) = (exp ( *z* )-exp (- *z* ))/(exp ( *z* ) + exp (- *z* ))
 
 ### <a name="example"></a>例
 

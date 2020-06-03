@@ -6,16 +6,16 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294708"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169748"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼び出し規則、パラメーター、および戻り値の型
 
-ヘルパー ルーチンのプロトタイプ: 
+ヘルパー ルーチンのプロトタイプ:
 
 ```
 FARPROC WINAPI __delayLoadHelper2(
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>パラメーター
 
 *pidd*<br/>
-A`const`へのポインター、`ImgDelayDescr`インポートに関連するさまざまなデータ、バインドについては、タイムスタンプ、および記述子コンテンツに関する情報を提供する属性のセットのオフセットを格納しています。 現時点では、1 つだけの属性は`dlattrRva`記述子のアドレスの相対仮想アドレスであることを示します。 詳細については、内の宣言を参照してください。 *delayimp.h*します。
+さまざまなインポート関連データのオフセット、バインディング情報のタイムスタンプ、記述子コンテンツに関する詳細情報を提供する一連の属性を格納している `ImgDelayDescr` への `const` ポインター。 現時点では、属性が1つだけ存在します。 `dlattrRva`は、記述子内のアドレスが相対仮想アドレスであることを示します。 詳細については、「 *delayimp. h*」の宣言を参照してください。
 
-定義については、`PCImgDelayDescr`構造体は、「[構造体と定数定義](structure-and-constant-definitions.md)します。
+`PCImgDelayDescr` 構造体の定義については、「[構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
 *ppfnIATEntry*<br/>
-遅延読み込みインポート アドレス テーブル (IAT) インポートされた関数のアドレスで更新したスロットへのポインター。 ヘルパー ルーチンは、この場所に返されるのと同じ値を格納する必要があります。
+遅延読み込みインポートアドレステーブル (IAT) のスロットへのポインター。インポートされた関数のアドレスで更新されます。 ヘルパールーチンは、この場所に返されるのと同じ値を格納する必要があります。
 
 ## <a name="expected-return-values"></a>予想戻り値
 
@@ -46,11 +46,11 @@ A`const`へのポインター、`ImgDelayDescr`インポートに関連するさ
 
 - `GetProcAddress` の失敗。
 
-これらの例外を処理するために必要になります。
+これらの例外を処理するのはお客様の責任です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ヘルパー関数の呼び出し規則は `__stdcall` です。 戻り値の型は、FARPROC が使用されますので、関連はありません。 この機能には C リンケージがあります。
+ヘルパー関数の呼び出し規則は `__stdcall` です。 戻り値の型は関係ありません。したがって、FARPROC が使用されます。 この機能には C リンケージがあります。
 
 遅延読み込みヘルパーの戻り値は、ヘルパー ルーチンを通知フックとして使用するつもりでない限り、渡された関数ポインターの場所に保存する必要があります。 その場合、戻すべき適切な関数ポインターを探すコードが必要です。 リンカーが生成するサンク コードは、その戻り値をインポートの実際のターゲットとして扱い、そこに直接ジャンプします。
 
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘルパー関数について](understanding-the-helper-function.md)

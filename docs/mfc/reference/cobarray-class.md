@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 78d736b53a2febe4f4a026e3aaf9db14dd7f9c0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392493"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754474"
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 
@@ -65,59 +65,59 @@ class CObArray : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CObArray::CObArray](#cobarray)|空の配列を構築`CObject`ポインター。|
+|[コブアレイ::コブアレイ](#cobarray)|ポインターの空の配列を`CObject`構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CObArray::Add](#add)|配列の末尾に要素を追加します。必要に応じて、配列を大きくします。|
-|[CObArray::Append](#append)|配列に別の配列を追加します。必要に応じて、配列を大きくします。|
-|[CObArray::Copy](#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
-|[CObArray::ElementAt](#elementat)|配列内の要素ポインターへの一時的な参照を返します。|
-|[CObArray::FreeExtra](#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|
-|[CObArray::GetAt](#getat)|指定されたインデックス位置にある値を返します。|
-|[CObArray::GetCount](#getcount)|この配列内の要素の数を取得します。|
-|[CObArray::GetData](#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
-|[CObArray::GetSize](#getsize)|この配列内の要素の数を取得します。|
-|[CObArray::GetUpperBound](#getupperbound)|有効な最大のインデックスを返します。|
-|[CObArray::InsertAt](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
-|[CObArray::IsEmpty](#isempty)|配列が空かどうかを判別します。|
-|[CObArray::RemoveAll](#removeall)|この配列からすべての要素を削除します。|
-|[CObArray::RemoveAt](#removeat)|特定のインデックス位置にある要素を削除します。|
-|[CObArray::SetAt](#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
-|[CObArray::SetAtGrow](#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
-|[CObArray::SetSize](#setsize)|この配列に含まれる要素の数を設定します。|
+|[コブアレイ::追加](#add)|配列の末尾に要素を追加します。必要に応じて、配列を大きくします。|
+|[次の要素を追加します。](#append)|配列に別の配列を追加します。必要に応じて、配列を大きくします。|
+|[コブアレイ::コピー](#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
+|[コブアレイ::エレメントアット](#elementat)|配列内の要素ポインターへの一時的な参照を返します。|
+|[コブアレイ::フリーエクストラ](#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|
+|[コブアレイ::ゲットアット](#getat)|指定されたインデックス位置にある値を返します。|
+|[コブアレイ::ゲットカウント](#getcount)|この配列内の要素の数を取得します。|
+|[を取得します。](#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
+|[コブアレイ::ゲットサイズ](#getsize)|この配列内の要素の数を取得します。|
+|[コブアレイ::ゲットアッパーバウンド](#getupperbound)|有効な最大のインデックスを返します。|
+|[コブアレイ::挿入](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
+|[コブアレイ::IsEmpty](#isempty)|配列が空かどうかを判別します。|
+|[すべてを削除します。](#removeall)|この配列からすべての要素を削除します。|
+|[コブアレイ::削除アット](#removeat)|特定のインデックス位置にある要素を削除します。|
+|[コブアレイ::セットアット](#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
+|[コブアレイ::セットアックグロー](#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
+|[::セットサイズ](#setsize)|この配列に含まれる要素の数を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CObArray::operator \[ \]](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[コブアレイ::演算子\[\]](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらのオブジェクトの配列は c 言語の配列に似ていますが、動的に縮小し、必要に応じて大きくなります。
+これらのオブジェクト配列は C 配列に似ていますが、必要に応じて動的に縮小および拡張できます。
 
-配列のインデックスは、常に、位置 0 から開始します。 上限の境界を修正するか、過去の現在のバインド要素を追加するときに展開先の配列を許可するかどうかを決定できます。 メモリでは、いくつかの要素が null の場合でも、上限が連続的に割り当てられます。
+配列インデックスは常に位置 0 から始まります。 現在の境界を超えて要素を追加するときに、上限を固定するか、配列を展開するかを決定できます。 一部の要素が null であっても、メモリは上限に連続して割り当てられます。
 
-Win32 でのサイズ、`CObArray`オブジェクトが使用可能なメモリのみに制限されています。
+Win32 では、`CObArray`オブジェクトのサイズは使用可能なメモリのみに制限されます。
 
-C 言語の配列では、アクセスする時間と同様、`CObArray`が定数であり、配列のサイズに依存しないインデックス付けされた要素。
+C 配列と同様に、`CObArray`インデックス付き要素のアクセス時間は一定であり、配列のサイズとは無関係です。
 
-`CObArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 配列の場合`CObject`ポインターがオーバー ロードされた挿入演算子を使用するかでアーカイブに格納されている、`Serialize`メンバー関数は、各`CObject`要素は、その配列のインデックスと共に、シリアル化します。
+`CObArray`IMPLEMENT_SERIAL マクロを組み込んで、シリアル化と要素のダンプをサポートします。 ポインターの`CObject`配列が、オーバーロードされた挿入演算子または`Serialize`メンバー関数を使用してアーカイブに格納されている場合、各`CObject`要素は配列インデックスと共にシリアル化されます。
 
-個別にダンプする必要がある場合`CObject`配列内の要素の深さを設定する必要があります、`CDumpContext`を 1 以上のオブジェクト。
+配列内の個々`CObject`の要素のダンプが必要な場合は、`CDumpContext`オブジェクトの深さを 1 以上に設定する必要があります。
 
-ときに、`CObArray`オブジェクトを削除すると、またはときにその要素は削除のみ、`CObject`ポインターを削除すると、参照するオブジェクトではありません。
-
-> [!NOTE]
->  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
-
-配列クラスの派生は、リストの派生に似ています。 詳細については、特殊なリスト クラスの派生は、記事を参照してください。[コレクション](../../mfc/collections.md)します。
+オブジェクトが`CObArray`削除されたとき、またはその要素が削除されると、`CObject`ポインターだけが削除され、オブジェクトは削除されません。
 
 > [!NOTE]
->  配列をシリアル化する場合は、派生クラスの実装で IMPLEMENT_SERIAL マクロを使用する必要があります。
+> 配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+
+配列クラスの派生は、リストの派生に似ています。 特殊目的リスト クラスの派生の詳細については、[記事のコレクションを](../../mfc/collections.md)参照してください。
+
+> [!NOTE]
+> 配列をシリアル化する場合は、派生クラスの実装で IMPLEMENT_SERIAL マクロを使用する必要があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -129,9 +129,9 @@ C 言語の配列では、アクセスする時間と同様、`CObArray`が定�
 
 **ヘッダー:** afxcoll.h
 
-##  <a name="add"></a>  CObArray::Add
+## <a name="cobarrayadd"></a><a name="add"></a>コブアレイ::追加
 
-配列を 1 つの拡張、配列の末尾に新しい要素を追加します。
+配列の末尾に新しい要素を追加し、配列を 1 ずつ増やします。
 
 ```
 INT_PTR Add(CObject* newElement);
@@ -139,35 +139,35 @@ INT_PTR Add(CObject* newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*newElement*<br/>
-`CObject`この配列に追加するポインター。
+*新しい要素*<br/>
+この`CObject`配列に追加するポインター。
 
 ### <a name="return-value"></a>戻り値
 
 追加された要素のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合[SetSize](#setsize)で使用されている、 *nGrowBy* 1、余分なメモリより大きい値を割り当てることができます。 ただし、上限は、1 つだけ高くなります。
+1 より大きい*nGrowBy*値を使用して[SetSize](#setsize)を使用している場合は、余分なメモリが割り当てられる可能性があります。 ただし、上限は 1 だけ増加します。
 
-次の表はその他のメンバー関数に似ている`CObArray::Add`します。
+次の表に、 に似たその他`CObArray::Add`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Add( BYTE** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Add( DWORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Add( void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Add( LPCTSTR** `newElement` **); throw( CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Add( UINT** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Add( WORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR追加 ( バイト**`newElement` **) ;**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR追加( DWORD** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR追加(ボイド**<strong>\*</strong>`newElement`**);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR追加( LPCTSTR** `newElement` **); スロー\* ( C メモリ例外 );**<br /><br /> **INT_PTR追加(定数 C 文字列**`newElement`**&);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR追加( UINT** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR追加( WORD** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+  すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]
 
-このプログラムからの結果は次のとおりです。
+このプログラムの結果は次のとおりです。
 
 ```Output
 Add example: A CObArray with 2 elements
@@ -175,9 +175,9 @@ Add example: A CObArray with 2 elements
 [1] = a CAge at $4468 40
 ```
 
-##  <a name="append"></a>  CObArray::Append
+## <a name="cobarrayappend"></a><a name="append"></a>次の要素を追加します。
 
-指定された配列の末尾に別の配列の内容を追加するには、このメンバー関数を呼び出します。
+指定した配列の末尾に別の配列の内容を追加します。
 
 ```
 INT_PTR Append(const CObArray& src);
@@ -186,97 +186,97 @@ INT_PTR Append(const CObArray& src);
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-配列に追加する要素のソースです。
+配列に追加する要素のソース。
 
 ### <a name="return-value"></a>戻り値
 
 追加された最初の要素のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列は同じ型でなければなりません。
+配列は同じ型である必要があります。
 
-必要に応じて、`Append`配列に追加された要素に対応するために余分なメモリを割り当てることができます。
+必要に応`Append`じて、配列に追加された要素を格納するために余分なメモリを割り当てることができます。
 
-次の表はその他のメンバー関数に似ている`CObArray::Append`します。
+次の表に、 に似たその他`CObArray::Append`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Append( const CByteArray&** *src* **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Append( const CDWordArray&** *src* **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Append( const CPtrArray&** *src* **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Append( const CStringArray&** *src* **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Append( const CUIntArray&** *src* **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Append( const CWordArray&** *src* **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR追加( コンスト CByteArray&** *src* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR追加(コンストCDワードアレイ***&src);* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR追加( const CPtrArray&** *src);* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR追加( src )&コンスト CStringArray;** *src* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR追加(const CUIntArray&** *src);* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR追加(コンストCWordArray&src);** *src* **);**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]
 
-##  <a name="copy"></a>  CObArray::Copy
+## <a name="cobarraycopy"></a><a name="copy"></a>コブアレイ::コピー
 
-同じ型の別の配列の要素で指定された配列の要素を上書きするには、このメンバー関数を呼び出します。
+指定した配列の要素を、同じ型の別の配列の要素で上書きします。
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-配列にコピーする要素のソースです。
+配列にコピーする要素のソース。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Copy` メモリを解放しませんただし、必要に応じて`Copy`配列にコピーされた要素に対応するために余分なメモリを割り当てることができます。
+`Copy`メモリを解放しません。ただし、必要に応`Copy`じて、配列にコピーされた要素を格納するために余分なメモリを割り当てる場合があります。
 
-次の表はその他のメンバー関数に似ている`CObArray::Copy`します。
+次の表に、 に似たその他`CObArray::Copy`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void Copy( const CByteArray&** *src* **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void Copy( const CDWordArray&** *src* **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Copy( const CPtrArray&** *src* **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void Copy( const CStringArray&** *src* **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void Copy( const CUIntArray&** *src* **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void Copy( const CWordArray&** *src* **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**ボイドコピー(コンストCバイトアレイ***&src);* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**ボイドコピー(コンストCDワードアレイ***&src);* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**ボイドコピー(コンストCPtrアレイ***&src);* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**ボイドコピー(const CStringArray&** *src);* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**ボイドコピー(const CUIntArray&** *src);* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ボイドコピー(const CWordArray&** *src);* **);**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]
 
-##  <a name="cobarray"></a>  CObArray::CObArray
+## <a name="cobarraycobarray"></a><a name="cobarray"></a>コブアレイ::コブアレイ
 
-空の構築`CObject`ポインターの配列。
+空`CObject`のポインター配列を構築します。
 
 ```
 CObArray();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列は、一度に 1 つの要素を拡張します。
+配列は一度に 1 つの要素を増やします。
 
-次の表に、他のコンス トラクターに似ている`CObArray::CObArray`します。
+次の表に、 に似た他の`CObArray::CObArray`コンストラクターを示します。
 
-|クラス|コンストラクター|
+|クラス|Constructor|
 |-----------|-----------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**CByteArray( );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CDWordArray( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrArray( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CStringArray( );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray( );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray( );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Cバイトアレイ( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CD-1;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrアレイ( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**C文字列配列( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**クイントアレイ( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Cワードアレイ( );**|
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]
 
-##  <a name="elementat"></a>  CObArray::ElementAt
+## <a name="cobarrayelementat"></a><a name="elementat"></a>コブアレイ::エレメントアット
 
 配列内の要素ポインターへの一時的な参照を返します。
 
@@ -287,59 +287,59 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`GetUpperBound`します。
+0 以上、および によって返される`GetUpperBound`値以下の整数インデックス。
 
 ### <a name="return-value"></a>戻り値
 
-参照を`CObject`ポインター。
+`CObject`ポインターへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列の左側の代入演算子を実装するために使用されます。 これは、特殊な配列の演算子を実装するためだけに使用する必要があります高度な関数であることに注意してください。
+配列の左辺代入演算子を実装するために使用されます。 これは、特殊な配列演算子を実装する場合にのみ使用する高度な関数であることに注意してください。
 
-次の表はその他のメンバー関数に似ている`CObArray::ElementAt`します。
+次の表に、 に似たその他`CObArray::ElementAt`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE& ElementAt( INT_PTR** `nIndex` **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD& ElementAt( INT_PTR** `nIndex` **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt( INT_PTR** `nIndex` **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& ElementAt( INT_PTR** `nIndex` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& ElementAt( INT_PTR** `nIndex` **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD& ElementAt( INT_PTR** `nIndex` **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**バイト&要素アット(INT_PTR)** `nIndex` **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD&要素( INT_PTR** `nIndex` **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**ボイド\*&要素アット(INT_PTR);** `nIndex` **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**C弦&要素アット(INT_PTR);** `nIndex` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT&要素アット(INT_PTR);** `nIndex` **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ワード&要素アット(INT_PTR);** `nIndex` **);**|
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CObArray::GetSize](#getsize)します。
+  [次](#getsize)の例を参照してください。
 
-##  <a name="freeextra"></a>  CObArray::FreeExtra
+## <a name="cobarrayfreeextra"></a><a name="freeextra"></a>コブアレイ::フリーエクストラ
 
-配列が拡張されたときに割り当てられたすべての余分なメモリを解放します。
+配列の拡大中に割り当てられた余分なメモリを解放します。
 
-```
+```cpp
 void FreeExtra();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、サイズまたは配列の上限に影響を与えません。
+この関数は、配列のサイズや上限には影響しません。
 
-次の表はその他のメンバー関数に似ている`CObArray::FreeExtra`します。
+次の表に、 に似たその他`CObArray::FreeExtra`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void FreeExtra( );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void FreeExtra( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void FreeExtra( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void FreeExtra( );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra( );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra( );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**ボイドフリーエクストラ( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**ボイドフリーエクストラ( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**ボイドフリーエクストラ( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**ボイドフリーエクストラ( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**ボイドフリーエクストラ( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ボイドフリーエクストラ( );**|
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CObArray::GetData](#getdata)します。
+  [の](#getdata)例を参照してください。
 
-##  <a name="getat"></a>  CObArray::GetAt
+## <a name="cobarraygetat"></a><a name="getat"></a>コブアレイ::ゲットアット
 
 指定したインデックス位置にある配列要素を返します。
 
@@ -350,35 +350,35 @@ CObject* GetAt(INT_PTR nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`GetUpperBound`します。
+0 以上、および によって返される`GetUpperBound`値以下の整数インデックス。
 
 ### <a name="return-value"></a>戻り値
 
-`CObject`ポインターの要素を指定したインデックス位置。
+現在`CObject`このインデックスにあるポインター要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
->  によって返される値より大きい負の値または値を渡す`GetUpperBound`アサーションは失敗になります。
+> 負の値または返された値より大きい値を渡`GetUpperBound`すと、アサーションが失敗します。
 
-次の表はその他のメンバー関数に似ている`CObArray::GetAt`します。
+次の表に、 に似たその他`CObArray::GetAt`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE GetAt( INT_PTR** `nIndex` **) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt( INT_PTR** `nIndex` **) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt( INT_PTR** `nIndex` **) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt( INT_PTR** `nIndex` **) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt( INT_PTR** `nIndex` **) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt( INT_PTR** `nIndex` **) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**バイト GetAt( INT_PTR** `nIndex` **) の定数。**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt( INT_PTR** `nIndex` **) コンスト;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**無効\*な GetAt( INT_PTR** `nIndex` **) 定数。**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**定数を INT_PTR取得**`nIndex`します **。**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt( INT_PTR** `nIndex` **) コンスト;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**を INT_PTR**`nIndex`使用**します。**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]
 
-##  <a name="getcount"></a>  CObArray::GetCount
+## <a name="cobarraygetcount"></a><a name="getcount"></a>コブアレイ::ゲットカウント
 
 配列要素の数を返します。
 
@@ -390,30 +390,30 @@ INT_PTR GetCount() const;
 
 配列内の項目の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列内の要素の数を取得するには、このメソッドを呼び出します。 インデックスが 0 から始まるので、サイズは、インデックスの最大値より大きい 1 になります。
+配列内の要素の数を取得します。 インデックスは 0 から始まるので、サイズは最大のインデックスより 1 大きくなります。
 
-次の表はその他のメンバー関数に似ている`CObArray::GetCount`します。
+次の表に、 に似たその他`CObArray::GetCount`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount( ) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount( ) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount( ) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount( ) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount( ) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTRカウント( ) 定数。**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTRカウント( ) 定数。**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTRカウント( ) 定数。**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTRカウント( ) 定数。**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTRカウント( ) 定数。**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTRカウント( ) 定数。**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]
 
-##  <a name="getdata"></a>  CObArray::GetData
+## <a name="cobarraygetdata"></a><a name="getdata"></a>を取得します。
 
-配列内の要素に直接アクセスするのにには、このメンバー関数を使用します。
+このメンバー関数を使用して、配列内の要素に直接アクセスします。
 
 ```
 const CObject** GetData() const;
@@ -423,32 +423,32 @@ CObject** GetData();
 
 ### <a name="return-value"></a>戻り値
 
-配列へのポインター`CObject`ポインター。
+`CObject`ポインターの配列へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要素がない場合、 `GetData` null 値を返します。
+使用できる要素がない場合は`GetData`、null 値を返します。
 
-呼び出すときに注意を使用して、配列の要素への直接アクセスより早く作業する際に役立つ、 `GetData`; 直接行ったすべてのエラーが、配列の要素に影響します。
+配列の要素に直接アクセスすると作業の速度が向上しますが、呼び出す際`GetData`は注意が必要です。エラーが発生すると、配列の要素に直接影響します。
 
-次の表はその他のメンバー関数に似ている`CObArray::GetData`します。
+次の表に、 に似たその他`CObArray::GetData`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**const バイト\*const; GetData)バイト\*GetData ();**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData( ) const;DWORD\* GetData( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\*\* GetData( ) const;void\*\* GetData( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* const; GetData)CString\* GetData ();**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* const; GetData)UINT\* GetData ();**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**const WORD\* const; GetData)WORD\* GetData ();**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**定数バイト\*取得データ( ) 定数;バイト\*取得データ( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**を取得します\*\*。**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**を無効\*\*にします。\* \***|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**定数 C\*文字列取得データ( ) 定数。C文字列\*取得データ( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**定数 UINT\* GetData( ) 定数。\*取得データの取得(**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**定数\*WORD 取得データ( ) 定数。ワード\*取得データ( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]
 
-##  <a name="getsize"></a>  CObArray::GetSize
+## <a name="cobarraygetsize"></a><a name="getsize"></a>コブアレイ::ゲットサイズ
 
 配列のサイズを返します。
 
@@ -456,28 +456,28 @@ CObject** GetData();
 INT_PTR GetSize() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-インデックスが 0 から始まるために、サイズは、インデックスの最大値より大きい 1 になります。
+インデックスは 0 から始まるので、サイズは最大のインデックスより 1 大きくなります。
 
-次の表はその他のメンバー関数に似ている`CObArray::GetSize`します。
+次の表に、 に似たその他`CObArray::GetSize`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetSize( ) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetSize( ) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetSize( ) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetSize( ) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetSize( ) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetSize( ) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTRします。**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTRします。**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTRします。**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTRします。**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTRします。**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTRします。**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]
 
-##  <a name="getupperbound"></a>  CObArray::GetUpperBound
+## <a name="cobarraygetupperbound"></a><a name="getupperbound"></a>コブアレイ::ゲットアッパーバウンド
 
 この配列の現在の上限を返します。
 
@@ -487,36 +487,36 @@ INT_PTR GetUpperBound() const;
 
 ### <a name="return-value"></a>戻り値
 
-上限 (0 から始まる) インデックス。
+上限 (0 から始まる) のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列のインデックスが 0 から始まるので、この関数は値 1 を返しますより小さい`GetSize`します。
+配列インデックスは 0 から始まるので、この関数は 1`GetSize`より小さい値を返します。
 
-条件`GetUpperBound( )`=-1 は、配列に要素が含まれていないことを示します。
+条件`GetUpperBound( )`= -1 は、配列に要素が含まれていることを示します。
 
-次の表はその他のメンバー関数に似ている`CObArray::GetUpperBound`します。
+次の表に、 に似たその他`CObArray::GetUpperBound`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound( ) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR大文字の行きとくれ( ) 定数。**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]
 
-##  <a name="insertat"></a>  CObArray::InsertAt
+## <a name="cobarrayinsertat"></a><a name="insertat"></a>コブアレイ::挿入
 
 指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -530,46 +530,46 @@ void InsertAt(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`します。
+によって返される値より大きい場合がある整数インデックス`GetUpperBound`。
 
-*newElement*<br/>
-`CObject`この配列に配置するへのポインター。 A *newElement*値の NULL は許可されます。
+*新しい要素*<br/>
+この`CObject`配列に配置されるポインター。 値 NULL の*新しい要素*が許可されます。
 
-*nCount*<br/>
-(既定値は 1) を挿入する回数がこの要素にする必要があります。
+*nカウント*<br/>
+この要素を挿入する回数 (既定値は 1)。
 
-*nStartIndex*<br/>
-によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`します。
+*インデックスを作成します。*<br/>
+によって返される値より大きい場合がある整数インデックス`GetUpperBound`。
 
-*pNewArray*<br/>
+*をクリックします。*<br/>
 この配列に追加する要素を含む別の配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のバージョンの`InsertAt`配列内の指定したインデックス位置にある 1 つの要素 (または要素の複数のコピー) を挿入します。 移動、処理で、上のすべての要素をシフトして、このインデックスにある既存の要素 (増分することで、インデックス)。
+の最初のバージョン`InsertAt`では、配列内の指定したインデックスに 1 つの要素 (または要素の複数のコピー) が挿入されます。 このプロセスでは、このインデックスの既存の要素を (インデックスをインクリメントして) 上に移動し、その上にあるすべての要素を上に移動します。
 
-2 番目のバージョンから別のすべての要素の挿入`CObArray`開始位置として、コレクション、 *nStartIndex*位置。
+2 番目のバージョンでは`CObArray`*、nStartIndex*の位置から、別のコレクションからすべての要素を挿入します。
 
-`SetAt`関数、これに対し、1 つの指定した配列の要素し、すべての要素を移動しません。
+これに`SetAt`対し、この関数は指定された配列要素を置き換え、要素をシフトしません。
 
-次の表はその他のメンバー関数に似ている`CObArray::InsertAt`します。
+次の表に、 に似たその他`CObArray::InsertAt`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CStringArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CUIntArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, バイト**`newElement` **, int** `nCount` = **1);**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **void 挿入アット( INT_PTR** `nStartIndex` **, Cバイト配列**<strong>\*</strong>`pNewArray`**);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void 挿入( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **空INSERTAt(INT_PTR** `nStartIndex` **、CDワードアレイ**<strong>\*</strong>`pNewArray`**);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1);**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **空INSERTAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void 挿入(INT_PTR** `nIndex` **、 LPCTSTR** `newElement` **、int** `nCount` = **1);**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **空INSERTAt(INT_PTR、C**`nStartIndex`**弦配列**<strong>\*</strong>`pNewArray`**);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` , **int** `nCount` **= 1);**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **void 挿入アット( INT_PTR** `nStartIndex` **, CUIntArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void 挿入(INT_PTR** `nIndex` **、 WORD** `newElement` **、 int** `nCount` **= 1 );**<br /><br /> **スロー( C\*メモリ例外 );**<br /><br /> **無効挿入(INT_PTR** `nStartIndex` **、CWordArray);** <strong>\*</strong> `pNewArray` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+  すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]
 
-このプログラムからの結果は次のとおりです。
+このプログラムの結果は次のとおりです。
 
 ```Output
 InsertAt example: A CObArray with 3 elements
@@ -578,7 +578,7 @@ InsertAt example: A CObArray with 3 elements
 [2] = a CAge at $4606 40
 ```
 
-##  <a name="isempty"></a>  CObArray::IsEmpty
+## <a name="cobarrayisempty"></a><a name="isempty"></a>コブアレイ::IsEmpty
 
 配列が空かどうかを判別します。
 
@@ -588,76 +588,76 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>戻り値
 
-配列が空である場合、0 以外の場合それ以外の場合 0 を返します。
+配列が空の場合は 0 以外。それ以外の場合は 0。
 
-##  <a name="operator_at"></a>  CObArray::operator [ ]
+## <a name="cobarrayoperator--"></a><a name="operator_at"></a>コブアレイ::演算子 [ ]
 
-これらの添字演算子は便利な代替、`SetAt`と`GetAt`関数。
+これらの添字演算子は、`SetAt`と`GetAt`関数の代わりに便利です。
 
 ```
 CObject*& operator[](int_ptr nindex);
 CObject* operator[](int_ptr nindex) const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-示されていない配列の最初の演算子と呼ばれる**const**右 (右辺値) または代入ステートメントの左側 (左辺値) のいずれかで使用可能性があります。 2 つ目と呼ばれる**const**配列は、右側でのみ使用可能性があります。
+**const**でない配列に対して呼び出される最初の演算子は、代入ステートメントの右 (r 値) または左 (左辺値) で使用できます。 **2**番目の定数配列は、右側でのみ使用できます。
 
-ライブラリのデバッグ バージョンはアサート添字 (またはいずれかで、左、代入ステートメントの右側にある) が範囲外です。
+ライブラリのデバッグ バージョンは、下付き文字 (代入ステートメントの左側または右側) が範囲外にある場合にアサートします。
 
-次の表に、その他の演算子に類似した`CObArray::operator []`します。
+次の表に、 に似た他`CObArray::operator []`の演算子を示します。
 
 |クラス|演算子|
 |-----------|--------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE& operator [](int_ptr** `nindex` **\);**<br /><br /> **Byte[] 演算子 (int_ptr** `nindex`  **\) const です。**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD& operator [](int_ptr** `nindex` **\);**<br /><br /> **DWORD operator [](int_ptr** `nindex` **\) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* operator [](int_ptr** `nindex` **\) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& operator [](int_ptr** `nindex` **\);**<br /><br /> **CString 演算子 (int_ptr** `nindex`  **\) const です。**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & 演算子 (int_ptr** `nindex`  **\);**<br /><br /> **UINT 演算子 (int_ptr** `nindex`  **\) const です。**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD& operator [](int_ptr** `nindex` **\);**<br /><br /> **WORD operator [](int_ptr** `nindex` **\) const;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **BYTE 演算子 [](int_ptr**`nindex`**\)定数;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **DWORD 演算子 [](int_ptr** `nindex` ** \) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**無効\*&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **void\*演算子 [](int_ptr** `nindex` ** \) const;**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**C文字列&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **C文字列演算子 [](int_ptr**`nindex`**\)定数;**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **UINT 演算子 [](int_ptr**`nindex`**\)定数;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ワード&演算子 [](int_ptr;** `nindex` ** \)**<br /><br /> **WORD 演算子 [](int_ptr**`nindex`**\)定数;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]
 
-##  <a name="removeall"></a>  CObArray::RemoveAll
+## <a name="cobarrayremoveall"></a><a name="removeall"></a>すべてを削除します。
 
-この配列からすべてのポインターを削除しますが、実際には削除されません、`CObject`オブジェクト。
+この配列からすべてのポインターを削除しますが、実際にはオブジェクトは`CObject`削除しません。
 
-```
+```cpp
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列が空で既に場合に、関数が機能します。
+配列が既に空の場合でも、関数は動作します。
 
-`RemoveAll`関数ポインターの記憶域に使用されるすべてのメモリを解放します。
+この`RemoveAll`関数は、ポインターの記憶に使用されるすべてのメモリを解放します。
 
-次の表はその他のメンバー関数に似ている`CObArray::RemoveAll`します。
+次の表に、 に似たその他`CObArray::RemoveAll`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll( );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll( );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll( );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**無効すべてを削除します( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**無効すべてを削除します( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**無効すべてを削除します( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**無効すべてを削除します( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**無効すべてを削除します( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**無効すべてを削除します( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]
 
-##  <a name="removeat"></a>  CObArray::RemoveAt
+## <a name="cobarrayremoveat"></a><a name="removeat"></a>コブアレイ::削除アット
 
-配列内の指定したインデックスから始まる 1 つまたは複数の要素を削除します。
+配列内の指定したインデックス位置から開始する 1 つ以上の要素を削除します。
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -666,48 +666,48 @@ void RemoveAt(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`GetUpperBound`します。
+0 以上、および によって返される`GetUpperBound`値以下の整数インデックス。
 
-*nCount*<br/>
+*nカウント*<br/>
 削除する要素の数を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロセスで、削除された要素の上のすべての要素に移動します。 これをデクリメント上にあるが、配列のバインドしますが、メモリを解放しません。
+プロセスでは、削除された要素の上にあるすべての要素をシフトダウンします。 配列の上限を減らしますが、メモリは解放されません。
 
-削除のポイントの上、配列内に含まれているより多くの要素を削除しようとすると、ライブラリのデバッグ バージョンがアサートします。
+削除ポイントの上の配列に含まれている要素よりも多くの要素を削除しようとすると、ライブラリのデバッグ バージョンがアサートされます。
 
-`RemoveAt`関数の削除、`CObject`オブジェクト自体は削除されませんが、配列からポインター。
+この`RemoveAt`関数は、ポインター`CObject`を配列から削除しますが、オブジェクト自体は削除しません。
 
-次の表はその他のメンバー関数に似ている`CObArray::RemoveAt`します。
+次の表に、 に似たその他`CObArray::RemoveAt`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1 );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**ボイド除去(INT_PTR、INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**ボイド除去(INT_PTR、INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**ボイド除去(INT_PTR、INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**ボイド除去(INT_PTR、INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**ボイド除去(INT_PTR、INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void 削除( INT_PTR** `nIndex` **) INT_PTR** *nCount* **= 1);**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+  すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]
 
-このプログラムからの結果は次のとおりです。
+このプログラムの結果は次のとおりです。
 
 ```Output
 RemoveAt example: A CObArray with 1 elements
 [0] = a CAge at $4606 40
 ```
 
-##  <a name="setat"></a>  CObArray::SetAt
+## <a name="cobarraysetat"></a><a name="setat"></a>コブアレイ::セットアット
 
-指定したインデックス位置にある配列要素を設定します。
+指定したインデックス位置に配列要素を設定します。
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -716,35 +716,35 @@ void SetAt(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`GetUpperBound`します。
+0 以上、および によって返される`GetUpperBound`値以下の整数インデックス。
 
-*newElement*<br/>
-この配列に挿入するオブジェクトのポインター。 NULL 値が許可されているとします。
+*新しい要素*<br/>
+この配列に挿入されるオブジェクト ポインター。 NULL 値を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`SetAt` 拡張先の配列は発生しません。 使用`SetAtGrow`する場合は自動的に拡張する配列。
+`SetAt`配列が大きくなるわけではありません。 配列`SetAtGrow`を自動的に拡張する場合に使用します。
 
-インデックスの値が配列内の有効な位置を表すことを確認する必要があります。 範囲外の場合は、ライブラリのデバッグ バージョンはアサートします。
+インデックス値が配列内の有効な位置を表していることを確認する必要があります。 範囲外の場合は、ライブラリのデバッグ バージョンがアサートします。
 
-次の表はその他のメンバー関数に似ている`CObArray::SetAt`します。
+次の表に、 に似たその他`CObArray::SetAt`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt( INT_PTR** `nIndex` **, BYTE** `newElement` **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, DWORD** `newElement` **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, UINT** `newElement` **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, WORD** `newElement` **);**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**無効なセットアット( INT_PTR** `nIndex` **, バイト**`newElement`**);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**ボイドセットアット(INT_PTR、DWORD);** `nIndex` **, DWORD** `newElement` **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**無効セットアット(INT_PTR、**`nIndex`**ボイド**<strong>\*</strong>`newElement`**);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**ボイドセットアット(INT_PTR** `nIndex` **、LPCTSTR);** `newElement` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**ボイドセットアット(INT_PTR** `nIndex` **、UINT);** `newElement` **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ボイドセットアット(INT_PTR、WORD);** `nIndex` **, WORD** `newElement` **);**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+  すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]
 
-このプログラムからの結果は次のとおりです。
+このプログラムの結果は次のとおりです。
 
 ```Output
 SetAt example: A CObArray with 2 elements
@@ -752,11 +752,11 @@ SetAt example: A CObArray with 2 elements
 [1] = a CAge at $47A0 40
 ```
 
-##  <a name="setatgrow"></a>  CObArray::SetAtGrow
+## <a name="cobarraysetatgrow"></a><a name="setatgrow"></a>コブアレイ::セットアックグロー
 
-指定したインデックス位置にある配列要素を設定します。
+指定したインデックス位置に配列要素を設定します。
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -765,33 +765,33 @@ void SetAtGrow(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数のインデックス。
+0 以上の整数インデックス。
 
-*newElement*<br/>
-この配列に追加するオブジェクトのポインター。 NULL 値が許可されているとします。
+*新しい要素*<br/>
+この配列に追加するオブジェクト ポインター。 NULL 値を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-必要な場合に、配列が自動的に大きくなる (つまりで上限は、新しい要素を対応するために調整されます)。
+必要に応じて配列が自動的に拡張されます (つまり、新しい要素に対応するように上限が調整されます)。
 
-次の表はその他のメンバー関数に似ている`CObArray::SetAtGrow`します。
+次の表に、 に似たその他`CObArray::SetAtGrow`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**無効なセットアズグロー( INT_PTR** `nIndex` **, バイト**`newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**ボイドセットアズグロー(INT_PTR、DWORD);** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**ボイドセットアズグロー(INT_PTR、**`nIndex`**ボイド**<strong>\*</strong>`newElement`**);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**ボイドセットアットグロー(INT_PTR** `nIndex` **、LPCTSTR);** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**ボイドセタットグロー(INT_PTR** `nIndex` **、UINT);** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**ボイドセットアズグロー(INT_PTR、WORD);** `nIndex` **, WORD** `newElement` **);**<br /><br /> **スロー( C\*メモリ例外 );**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。
+  すべてのコレクションの例で使用されるクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]
 
-このプログラムからの結果は次のとおりです。
+このプログラムの結果は次のとおりです。
 
 ```Output
 SetAtGrow example: A CObArray with 4 elements
@@ -801,11 +801,11 @@ SetAtGrow example: A CObArray with 4 elements
 [3] = a CAge at $4840 65
 ```
 
-##  <a name="setsize"></a>  CObArray::SetSize
+## <a name="cobarraysetsize"></a><a name="setsize"></a>::セットサイズ
 
-は空または既存の配列のサイズを設定します必要な場合は、メモリを割り当てます。
+空または既存の配列のサイズを設定します。必要に応じてメモリを割り当てます。
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);
@@ -813,41 +813,41 @@ void SetSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*nNewSize*<br/>
-新しい配列のサイズ (要素の数)。 0 以上である必要があります。
+*nNewサイズ*<br/>
+新しい配列サイズ (要素数)。 0 以上である必要があります。
 
-*nGrowBy*<br/>
-サイズの増加が必要な場合に割り当てる要素のスロットの最小数。
+*nグローバイ*<br/>
+サイズの増加が必要な場合に割り当てる要素スロットの最小数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-新しいサイズが元のサイズより小さい場合は、配列が切り捨てられるし、すべての未使用メモリは解放されます。 効率を高めるため、呼び出す`SetSize`を使用する前に、配列のサイズを設定します。 これにより、割り当てし、アイテムが追加されるたびに、配列をコピーする必要があります。
+新しいサイズが古いサイズより小さい場合、配列は切り捨てられ、未使用のメモリはすべて解放されます。 効率を高めるために、`SetSize`配列を使用する前に配列のサイズを設定する呼び出し。 これにより、項目が追加されるたびに配列を再割り当てしてコピーする必要がなくなります。
 
-*NGrowBy*パラメーターは、配列が増加しているときに内部メモリの割り当てに影響します。 使用には影響せず、配列のサイズによって報告された`GetSize`と`GetUpperBound`します。
+*nGrowBy*パラメーターは、配列が拡張している間、内部メモリ割り当てに影響します。 この値の使用は、 と で`GetSize`報告`GetUpperBound`される配列サイズには影響しません。
 
-配列のサイズが大きくなった場合、すべての新しく割り当てられた**CObject** <strong>\*</strong>ポインターが NULL に設定されます。
+配列のサイズが大きくなると、新しく割り当てられた**すべての CObject**<strong>\*</strong>ポインターは NULL に設定されます。
 
-次の表はその他のメンバー関数に似ている`CObArray::SetSize`します。
+次の表に、 に似たその他`CObArray::SetSize`のメンバー関数を示します。
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw( CMemoryException\* );**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**無効な SetSize ( INT_PTR** `nNewSize` **、 int** `nGrowBy` **= -1 );**<br /><br /> **スロー( C\*メモリ例外 );**|
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CObArray::GetData](#getdata)します。
+  [の](#getdata)例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CStringArray クラス](../../mfc/reference/cstringarray-class.md)<br/>
 [CPtrArray クラス](../../mfc/reference/cptrarray-class.md)<br/>
 [CByteArray クラス](../../mfc/reference/cbytearray-class.md)<br/>
-[CWordArray クラス](../../mfc/reference/cwordarray-class.md)<br/>
+[クラス](../../mfc/reference/cwordarray-class.md)<br/>
 [CDWordArray クラス](../../mfc/reference/cdwordarray-class.md)

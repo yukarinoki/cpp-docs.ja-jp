@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515637"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172115"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI および C++/CX)
 
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>例
 
-次のコード例に、`/clr` を使用してコンパイルするときに、**nullptr** をネイティブ ポインターに割り当てられることを示します。
+次のコード例に、 **を使用してコンパイルするときに、** nullptr`/clr` をネイティブ ポインターに割り当てられることを示します。
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -219,11 +219,11 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-コンパイラ オプション:(必須ではありません。`/ZW` と `/clr` を含むすべてのコード生成オプションでサポートされています)
+コンパイラオプション: (必須ではありません。 `/ZW` や `/clr`など、すべてのコード生成オプションでサポートされています)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

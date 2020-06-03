@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148453"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343418"
 ---
 # <a name="null-statement-c"></a>Null ステートメント (C)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56148453"
 
 > **;**
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **do**、**for**、**if**、`while` などのステートメントでは、ステートメント本体に実行可能なステートメントを記述する必要があります。 null ステートメントは、実質的なステートメント本体が不要な場合にこの構文の要件を満たします。
 

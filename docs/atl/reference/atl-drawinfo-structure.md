@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 00d93b3dd8b060a21b6ff4083bb9880d8d836a19
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498008"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168619"
 ---
 # <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO 構造体
 
@@ -21,7 +21,7 @@ ms.locfileid: "69498008"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct ATL_DRAWINFO {
     UINT cbSize;
     DWORD dwDrawAspect;
@@ -60,7 +60,7 @@ struct ATL_DRAWINFO {
 描画するデバイスコンテキスト。 ウィンドウなしのオブジェクトの場合`hdcDraw` 、メンバーは、 `MM_TEXT`親ウィンドウのクライアント座標と一致する論理座標を持つマッピングモードになります。 また、デバイスコンテキストは、通常、 `WM_PAINT`メッセージによって渡されるものと同じ状態にする必要があります。
 
 `prcBounds`<br/>
-オブジェクトを描画する必要がある`hdcDraw`との四角形を指定する [RECTL](/previous-versions//dd162907\(v=vs.85\)) 構造体へのポインター。 このメンバーは、オブジェクトの配置と伸縮を制御します。 ウィンドウなしの組み込みのアクティブなオブジェクトを描画するには、このメンバーは NULL である必要があります。 他のすべての状況では、NULL は有効な値ではなく`E_INVALIDARG` 、エラーコードになります。 コンテナーが非ウィンドウオブジェクトに NULL 以外の値を渡した場合、オブジェクトは、要求されたアスペクトを指定されたデバイスコンテキストおよび四角形にレンダリングする必要があります。 コンテナーはこれをウィンドウなしのオブジェクトに要求して、オブジェクトの2番目の非アクティブなビューをレンダリングしたり、オブジェクトを印刷したりできます。
+オブジェクトを描画[RECTL](/windows/win32/api/windef/ns-windef-rectl)する必要がある`hdcDraw`との四角形を指定する RECTL 構造体へのポインター。 このメンバーは、オブジェクトの配置と伸縮を制御します。 ウィンドウなしの組み込みのアクティブなオブジェクトを描画するには、このメンバーは NULL である必要があります。 他のすべての状況では、NULL は有効な値ではなく`E_INVALIDARG` 、エラーコードになります。 コンテナーが非ウィンドウオブジェクトに NULL 以外の値を渡した場合、オブジェクトは、要求されたアスペクトを指定されたデバイスコンテキストおよび四角形にレンダリングする必要があります。 コンテナーはこれをウィンドウなしのオブジェクトに要求して、オブジェクトの2番目の非アクティブなビューをレンダリングしたり、オブジェクトを印刷したりできます。
 
 `prcWBounds`<br/>
 が`hdcDraw`メタファイルデバイスコンテキスト (Windows SDK の「 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 」を参照) である場合、これは`RECTL` 、基になるメタファイル内の外接する四角形を指定する構造体へのポインターです。 四角形の構造体には、ウィンドウエクステントとウィンドウの原点が含まれます。 これらの値は、メタファイルの描画に役立ちます。 によって示さ`prcBounds`れる四角形は、 `prcWBounds`この四角形の内側に入れ子になっています。これらは同じ座標空間にあります。
@@ -75,12 +75,12 @@ struct ATL_DRAWINFO {
 の次元が HIMETRIC 内`prcBounds`にある場合は0以外。それ以外の場合は0。
 
 `ZoomNum`<br/>
-オブジェクトが描画される四角形の幅と高さ。 ターゲットの x 軸 (オブジェクトの自然サイズの割合) に沿ったズーム係数は、の値で`ZoomNum.cx` `ZoomDen.cx`割った値になります。 Y 軸に沿ったズームファクターは、同様の方法で実現されます。
+オブジェクトが描画される四角形の幅と高さ。 ターゲットの x 軸 (オブジェクトの自然サイズの割合) に沿ったズーム係数は、の値で`ZoomNum.cx`割った値になり`ZoomDen.cx`ます。 Y 軸に沿ったズームファクターは、同様の方法で実現されます。
 
 `ZoomDen`<br/>
 ターゲットの実際の幅と高さ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この構造体の一般的な使用方法は、対象オブジェクトのレンダリング中に情報を取得することです。 たとえば、 [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)のオーバーロード内の ATL_DRAWINFO から値を取得できます。
 

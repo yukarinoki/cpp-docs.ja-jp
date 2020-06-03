@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-ms.openlocfilehash: af567fd333854519df4543ad24084e52cda4d96e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dc43d4b9c16145ed7a5abe03cddb598c59b1e94
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374301"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 構造体
 
-一般的な特性について説明します、`SRWLock`共有ロック モードでのクラス。
+共有ロック モードでの`SRWLock`クラスの一般的な特性について説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +34,14 @@ struct SRWLockSharedTraits;
 
 名前   | 説明
 ------ | --------------------------------------------------------------------------
-`Type` | ポインターのシノニム、 [SRWLOCK](srwlock-class.md)クラス。
+`Type` | [SRWLOCK](srwlock-class.md)クラスへのポインターの同義語。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                     | 説明
 -------------------------------------------------------- | -----------------------------------------------------------------
-[SRWLockSharedTraits::GetInvalidValue](#getinvalidvalue) | 取得、`SRWLockSharedTraits`オブジェクトは常に有効です。
-[Srwlocksharedtraits::unlock](#unlock)                   | 指定したの排他的制御を解放`SRWLock`オブジェクト。
+[ストリューロック共有トレイト::無効な値を取得します。](#getinvalidvalue) | 常に無効`SRWLockSharedTraits`なオブジェクトを取得します。
+[SRWロックシェアードトレイツ::ロック解除](#unlock)                   | 指定した`SRWLock`オブジェクトの排他制御を解放します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,13 +49,13 @@ struct SRWLockSharedTraits;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::HandleTraits
+**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
 
-## <a name="getinvalidvalue"></a>SRWLockSharedTraits::GetInvalidValue
+## <a name="srwlocksharedtraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>ストリューロック共有トレイト::無効な値を取得します。
 
-取得、`SRWLockSharedTraits`オブジェクトは常に有効です。
+常に無効`SRWLockSharedTraits`なオブジェクトを取得します。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,11 +63,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>戻り値
 
-識別するハンドルを`SRWLockSharedTraits`オブジェクト。
+`SRWLockSharedTraits`オブジェクトへのハンドル。
 
-## <a name="unlock"></a>Srwlocksharedtraits::unlock
+## <a name="srwlocksharedtraitsunlock"></a><a name="unlock"></a>SRWロックシェアードトレイツ::ロック解除
 
-指定したの排他的制御を解放`SRWLock`オブジェクト。
+指定した`SRWLock`オブジェクトの排他制御を解放します。
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +77,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*srwlock*<br/>
-識別するハンドルを`SRWLock`オブジェクト。
+*スヴロック*<br/>
+`SRWLock`オブジェクトへのハンドル。

@@ -1,8 +1,9 @@
 ---
 title: _set_new_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_handler
+- _o__set_new_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913967"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -54,9 +56,9 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 前の関数を後で復元できるように、 **_set_new_handler**によって登録された前の例外処理関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値には**NULL**を指定できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ **_Set_new_handler**関数は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **新しい**エラーが発生した場合は、 **_set_new_handler**に引数として渡された例外処理関数がランタイムシステムによって自動的に呼び出されます。 New .h で定義された**Pnh**は、型**int**を返す関数へのポインターであり、 **size_t**型の引数を受け取ります。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
+C++ の **_set_new_handler**関数は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **新しい**エラーが発生した場合、ランタイムシステムは、引数として渡された例外処理関数を **_set_new_handler**に自動的に呼び出します。 新しい .h で定義されている **_PNH**は、型**int**を返し、型**size_t**の引数を受け取る関数へのポインターです。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
 
 既定のハンドラーはありません。
 
@@ -66,6 +68,8 @@ C++ **_Set_new_handler**関数は、 **new**演算子がメモリの割り当て
 
 ```cpp
 // set_new_handler1.cpp
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <new.h>
 
 int handle_program_memory_depletion( size_t )
@@ -80,7 +84,7 @@ int main( void )
 }
 ```
 
-最後に **_set_new_handler**関数に渡された関数のアドレスを保存し、後で再開することができます。
+**_Set_new_handler**関数に最後に渡された関数のアドレスを保存し、後で再開することができます。
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -91,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に、 **malloc**が、 **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -103,15 +107,15 @@ _set_new_mode(1);
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
-動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler**ハンドラーがあります。 **_set_new_handler**を呼び出す場合でも、ハンドラーは別のハンドラーに置き換えられるか、または別の DLL または実行可能ファイルで設定されたハンドラーを置き換えることができます。
+動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler**ハンドラーがあります。を呼び出す場合でも、ハンドラーを別の DLL または実行可能ファイルによって設定されたハンドラーの代わりに置き換えることが **_set_new_handler**ます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -165,7 +169,7 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[空け](free.md)<br/>
 [realloc](realloc.md)<br/>

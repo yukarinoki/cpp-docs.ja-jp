@@ -11,58 +11,58 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 57e481c131a6e4a1111b1ed88217b891d6fc96a8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689654"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317191"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedefs
 
 ||||
 |-|-|-|
-|[filebuf](#filebuf)|[fstream](#fstream)|[ifstream](#ifstream)|
+|[filebuf](#filebuf)|[フストリーム](#fstream)|[ifstream](#ifstream)|
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
-|[wifstream](#wifstream)|[wofstream](#wofstream)|
+|[ウィフストリーム](#wifstream)|[wofstream](#wofstream)|
 
-## <a name="filebuf"></a>  filebuf
+## <a name="filebuf"></a><a name="filebuf"></a>ファイルブフ
 
-**Char**テンプレートパラメーターに特化された型 `basic_filebuf`。
+char`basic_filebuf`テンプレートパラメーターに**char**特化した型。
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_filebuf](../standard-library/basic-filebuf-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ**char**型の要素に特化したクラス テンプレート[basic_filebuf](../standard-library/basic-filebuf-class.md)のシノニムです。
 
-## <a name="fstream">fstream</a>
+## <a name="fstream"></a><a name="fstream"></a>フストリーム
 
-**Char**テンプレートパラメーターに特化された型 `basic_fstream`。
+char`basic_fstream`テンプレートパラメーターに**char**特化した型。
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_fstream](../standard-library/basic-fstream-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
+型はクラス テンプレート[basic_fstream](../standard-library/basic-fstream-class.md)のシノニムであり、既定の文字特性を持つ**char**型の要素に特化しています。
 
-## <a name="ifstream"></a>  ifstream
+## <a name="ifstream"></a><a name="ifstream"></a>ifstream
 
-ファイルから 1 バイト文字のデータを順番に読み取るために使用するストリームを定義します。 `ifstream` は、 **char**のクラステンプレート `basic_ifstream` を特殊化する typedef です。
+ファイルから 1 バイト文字のデータを順番に読み取るために使用するストリームを定義します。 `ifstream`は、 `basic_ifstream` **char**のクラス テンプレートを特化した typedef です。
 
-また、`basic_ifstream` を特殊化して**wchar_t** double 文字を読み取ることを専門とする typedef `wifstream` もあります。 詳細については、「[wifstream](../standard-library/fstream-typedefs.md#wifstream)」を参照してください。
+また`wifstream`**、ダブルワイド**文字の読み取`basic_ifstream`りを専門wchar_ttypedefもあります。 詳細については、「[wifstream](../standard-library/fstream-typedefs.md#wifstream)」を参照してください。
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_ifstream](../standard-library/basic-ifstream-class.md)のシノニムで、既定の文字の特性を持つ char 型の要素に対して特殊化されています。 次に例を示します。
+型はクラス テンプレート[basic_ifstream](../standard-library/basic-ifstream-class.md)のシノニムで、既定の文字特性を持つ char 型の要素に特化しています。 次に例を示します。
 
 ```cpp
 using namespace std;
@@ -76,66 +76,66 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a>  ofstream
+## <a name="ofstream"></a><a name="ofstream"></a>の流れ
 
-**Char**テンプレートパラメーターに特化された型 `basic_ofstream`。
+char`basic_ofstream`テンプレートパラメーターに**char**特化した型。
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_ofstream](../standard-library/basic-ofstream-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ**char**型の要素に特化したクラス テンプレート[basic_ofstream](../standard-library/basic-ofstream-class.md)のシノニムです。
 
-## <a name="wfstream"></a>  wfstream
+## <a name="wfstream"></a><a name="wfstream"></a>wfstream
 
-**Wchar_t**テンプレートパラメーターに特殊化された型 `basic_fstream`。
+テンプレート`basic_fstream`パラメーターに特化した型**wchar_t。**
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_fstream](../standard-library/basic-fstream-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ型**wchar_t**要素に特化したクラス テンプレート[basic_fstream](../standard-library/basic-fstream-class.md)のシノニムです。
 
-## <a name="wifstream"></a>  wifstream
+## <a name="wifstream"></a><a name="wifstream"></a>ウィフストリーム
 
-**Wchar_t**テンプレートパラメーターに特殊化された型 `basic_ifstream`。
+テンプレート`basic_ifstream`パラメーターに特化した型**wchar_t。**
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_ifstream](../standard-library/basic-ifstream-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ型**wchar_t**要素に特化したクラス テンプレート[basic_ifstream](../standard-library/basic-ifstream-class.md)のシノニムです。
 
-## <a name="wofstream"></a>  wofstream
+## <a name="wofstream"></a><a name="wofstream"></a>ウォフストリーム
 
-**Wchar_t**テンプレートパラメーターに特殊化された型 `basic_ofstream`。
+テンプレート`basic_ofstream`パラメーターに特化した型**wchar_t。**
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_ofstream](../standard-library/basic-ofstream-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+型は、クラス テンプレート[basic_ofstream](../standard-library/basic-ofstream-class.md)のシノニムであり、既定の文字特性を持つ型**wchar_t**要素に特化しています。
 
-## <a name="wfilebuf"></a>  wfilebuf
+## <a name="wfilebuf"></a><a name="wfilebuf"></a>wfilebuf
 
-**Wchar_t**テンプレートパラメーターに特殊化された型 `basic_filebuf`。
+テンプレート`basic_filebuf`パラメーターに特化した型**wchar_t。**
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型はクラステンプレート[basic_filebuf](../standard-library/basic-filebuf-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ型**wchar_t**要素に特化したクラス テンプレート[basic_filebuf](../standard-library/basic-filebuf-class.md)のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 
-[\<fstream >](../standard-library/fstream.md)
+[\<フストリーム>](../standard-library/fstream.md)

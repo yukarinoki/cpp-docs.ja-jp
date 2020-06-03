@@ -23,23 +23,23 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944496"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745395"
 ---
 # <a name="_lock"></a>_lock
 
 マルチスレッドのロックを取得します。
 
 > [!IMPORTANT]
->  これは古い関数です。 Visual Studio 2015 以降、CRT で使用できません。
+> この関数は、現在使用されていません。 Visual Studio 2015 以降では、CRT で使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _lock
    int locknum
 );

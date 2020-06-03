@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b18a15f8bfd98396acae0558d121b32bc4127c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403660"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367626"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton クラス
 
-デスクトップ通知ダイアログ ボックスに追加するボタンを使用します。
+デスクトップ通知ダイアログボックスにボタンを追加できます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,26 +42,26 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |||
 |-|-|
 |名前|説明|
-|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|警告のダイアログ ボックスのキャプション領域に、ボタンが表示されるかどうかを判断します。|
-|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|ボタンが警告のダイアログ ボックスを閉じるかどうかを判断します。|
+|[ボタン::イスキャプションボタン](#iscaptionbutton)|通知ダイアログ ボックスのキャプション領域にボタンを表示するかどうかを指定します。|
+|[ボタン::IsCloseボタン](#isclosebutton)|ボタンが警告ダイアログ ボックスを閉じるかどうかを決定します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |||
 |-|-|
 |名前|説明|
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|警告のダイアログ ボックスのキャプション領域に、ボタンが表示されるかどうかを指定するブール値。|
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|ボタンが警告のダイアログ ボックスを閉じるかどうかを指定するブール値。|
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|通知ダイアログ ボックスのキャプション領域にボタンを表示するかどうかを指定するブール値。|
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|ボタンが警告ダイアログ ボックスを閉じるかどうかを指定するブール値。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクターは既定では、設定、`m_bIsCaptionButton`と`m_bIsCloseButton`データ メンバーを FALSE にします。 親`CMFCDesktopAlertDialog`オブジェクト セット`m_bIsCaptionButton`警告のダイアログ ボックスのキャプション領域で、ボタンが配置されている場合は TRUE にします。 `CMFCDesktopAlertDialog`クラスを作成、`CMFCDesktopAlertWndButton`アラート ダイアログを閉じるボタンとして機能のボックスを設定するオブジェクト`m_bIsCloseButton`を TRUE にします。
+既定では、コンストラクターは、`m_bIsCaptionButton`および`m_bIsCloseButton`データ メンバーを FALSE に設定します。 ボタンが`CMFCDesktopAlertDialog`警告ダイアログ`m_bIsCaptionButton`ボックスのキャプション領域に配置されている場合、親オブジェクトは TRUE に設定されます。 この`CMFCDesktopAlertDialog`クラスは、`CMFCDesktopAlertWndButton`警告ダイアログ ボックスを閉じ、TRUE に設定`m_bIsCloseButton`するボタンとして機能するオブジェクトを作成します。
 
-追加`CMFCDesktopAlertWndButton`オブジェクトを`CMFCDesktopAlertDialog`オブジェクトのいずれかのボタンを追加する場合とします。 詳細については`CMFCDesktopAlertDialog`を参照してください[CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)します。
+ボタン`CMFCDesktopAlertWndButton`を`CMFCDesktopAlertDialog`追加する場合と同じように、オブジェクトにオブジェクトを追加します。 の詳細`CMFCDesktopAlertDialog`については、「[クラスを表示](../../mfc/reference/cmfcdesktopalertdialog-class.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、使用する方法、`SetImage`メソッドで、`CMFCDesktopAlertWndButton`クラス。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
+クラスでメソッドを使用する方法を`SetImage`次の例に`CMFCDesktopAlertWndButton`示します。 このコード スニペットは[、デスクトップ警告デモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]
@@ -78,15 +78,15 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 [CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
+[ボタン](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdesktopalertwnd.h
 
-##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton
+## <a name="cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>ボタン::イスキャプションボタン
 
-警告のダイアログ ボックスのキャプション領域に、ボタンが表示されるかどうかを判断します。
+通知ダイアログ ボックスのキャプション領域にボタンを表示するかどうかを指定します。
 
 ```
 BOOL IsCaptionButton() const;
@@ -94,11 +94,11 @@ BOOL IsCaptionButton() const;
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の場合、警告ダイアログ ボックスのキャプション領域で、ボタンが表示されている場合それ以外の場合、0 を返します。
+ボタンが警告ダイアログ ボックスのキャプション領域に表示される場合は 0 以外の値を返します。それ以外の場合は 0。
 
-##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton
+## <a name="cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>ボタン::IsCloseボタン
 
-ボタンが警告のダイアログ ボックスを閉じるかどうかを判断します。
+ボタンが警告ダイアログ ボックスを閉じるかどうかを決定します。
 
 ```
 BOOL IsCloseButton() const;
@@ -106,10 +106,10 @@ BOOL IsCloseButton() const;
 
 ### <a name="return-value"></a>戻り値
 
-ボタンは、警告ダイアログ ボックスを閉じる場合は 0 以外それ以外の場合、0 を返します。
+ボタンが警告ダイアログ ボックスを閉じる場合は 0 以外の値を返します。それ以外の場合は 0。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)

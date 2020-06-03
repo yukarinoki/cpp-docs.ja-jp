@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0201e53114b71c02877762f89cc65fc46d17700c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370525"
 ---
 # <a name="graphic-objects"></a>グラフィック オブジェクト
 
 Windows には、さまざまなデバイス コンテキストで使用する描画ツールが用意されています。 たとえば、線を描画するためのペン、内部を塗りつぶすためのブラシ、テキストを描画するためのフォントがあります。 MFC には、Windows の描画ツールと同等のグラフィック オブジェクト クラスが用意されています。 使用可能なクラスと、それに対応する Windows グラフィックス デバイス インターフェイス (GDI) ハンドル型を次の表に示します。
 
 > [!NOTE]
->  詳細については、 [Gdi + SDK のドキュメント](/windows/win32/gdiplus/-gdiplus-gdi-start)を参照してください。
+> 詳細については[、GDI+ SDK のドキュメントを参照してください](/windows/win32/gdiplus/-gdiplus-gdi-start)。
 
 この記事では、これらのグラフィック オブジェクト クラスの使用方法について説明します。
 
@@ -69,11 +69,11 @@ Windows には、さまざまなデバイス コンテキストで使用する�
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  [CImage](../atl-mfc-shared/reference/cimage-class.md)クラスでは、拡張ビットマップがサポートされています。
+> クラス[CImage](../atl-mfc-shared/reference/cimage-class.md)は、拡張されたビットマップサポートを提供します。
 
 クラス ライブラリに含まれる各グラフィック オブジェクト クラスには、そのクラスのグラフィック オブジェクトを作成するためのコンストラクターがあります。グラフィック オブジェクトは、`CreatePen` などの適切な関数を使用して初期化する必要があります。
 
-クラス ライブラリに含まれる各グラフィック オブジェクト クラスには、MFC オブジェクトを関連付けられた Windows ハンドルにキャストするキャスト演算子があります。 結果として得られるハンドルは、関連付けられたオブジェクトによってデタッチされるまで有効です。 ハンドルをデタッチする`Detach`には、オブジェクトのメンバー関数を使用します。
+クラス ライブラリに含まれる各グラフィック オブジェクト クラスには、MFC オブジェクトを関連付けられた Windows ハンドルにキャストするキャスト演算子があります。 結果として得られるハンドルは、関連付けられたオブジェクトによってデタッチされるまで有効です。 オブジェクトの`Detach`メンバー関数を使用してハンドルをデタッチします。
 
 次のコードは、`CPen` オブジェクトを Windows ハンドルにキャストしています。
 
@@ -81,27 +81,27 @@ Windows には、さまざまなデバイス コンテキストで使用する�
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>デバイス コンテキストでグラフィック オブジェクトを作成するには
 
-1. スタック フレーム上でグラフィック オブジェクトを定義します。 型に固有の作成関数 (たとえば、`CreatePen`) を使用して、オブジェクトを初期化します。 または、コンストラクター内でオブジェクトを初期化します。 コード例については、 [1 段階と2段階の作成](../mfc/one-stage-and-two-stage-construction-of-objects.md)に関する説明を参照してください。
+1. スタック フレーム上でグラフィック オブジェクトを定義します。 型に固有の作成関数 (たとえば、`CreatePen`) を使用して、オブジェクトを初期化します。 または、コンストラクター内でオブジェクトを初期化します。 コード例を示す[1 段階と 2 段階の作成](../mfc/one-stage-and-two-stage-construction-of-objects.md)の説明を参照してください。
 
-1. [オブジェクトを現在のデバイスコンテキストで選択](../mfc/selecting-a-graphic-object-into-a-device-context.md)し、前に選択した古いグラフィックオブジェクトを保存します。
+1. [以前に選択](../mfc/selecting-a-graphic-object-into-a-device-context.md)した古いグラフィック オブジェクトを保存する、現在のデバイス コンテキストにオブジェクトを選択します。
 
 1. 現在のグラフィック オブジェクトの操作が完了したら、古いグラフィック オブジェクトをデバイス コンテキストに選択してその状態を復元します。
 
 1. スコープが終了したときにフレームによって割り当てられたグラフィック オブジェクトが自動的に削除されるように設定します。
 
 > [!NOTE]
->  グラフィック オブジェクトを繰り返し使用する場合は、1 回割り当てておけば、後で必要になったときに各デバイス コンテキストに選択できます。 これらのオブジェクトが不要になったときは必ず削除してください。
+> グラフィック オブジェクトを繰り返し使用する場合は、1 回割り当てておけば、後で必要になったときに各デバイス コンテキストに選択できます。 これらのオブジェクトが不要になったときは必ず削除してください。
 
-### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
+### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
-- [1ステージと2段階のグラフィックオブジェクトの構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [1 段階でのグラフィック オブジェクトの構築と 2 段階でのグラフィック オブジェクトの構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
-- [1つのステージと2つのステージでペンを構築する例](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [1 段階および 2 段階でペンを作成する例](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [グラフィック オブジェクトをデバイス コンテキストに選択する](../mfc/selecting-a-graphic-object-into-a-device-context.md)
 
-- [デバイスコンテキスト](../mfc/device-contexts.md)
+- [デバイス コンテキスト](../mfc/device-contexts.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Window オブジェクト](../mfc/window-objects.md)
+[ウィンドウ オブジェクト](../mfc/window-objects.md)

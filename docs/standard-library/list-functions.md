@@ -1,20 +1,20 @@
 ---
-title: '&lt;リスト&gt;関数 |Microsoft Docs'
+title: '&lt;list&gt; functions |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - list/std::swap
 ms.openlocfilehash: 04f00a9274018432cd03917ae5485f2d395649e4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269024"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425605"
 ---
-# <a name="ltlistgt-functions"></a>&lt;リスト&gt;関数
+# <a name="ltlistgt-functions"></a>&lt;list&gt; 関数
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
 2 つのリストの要素を交換します。
 
@@ -26,11 +26,11 @@ template <class T, class Allocator>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`left.swap(right)` を実行します。

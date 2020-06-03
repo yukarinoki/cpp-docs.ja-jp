@@ -10,74 +10,74 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153504"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370535"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject コレクションの全オブジェクトの削除
 
-この記事では、(コレクション オブジェクト自体を削除する) ことがなく、コレクション内のすべてのオブジェクトを削除する方法について説明します。
+この資料では、コレクション内のすべてのオブジェクトを削除する方法について説明します (コレクション オブジェクト自体を削除せずに)。
 
-コレクション内のすべてのオブジェクトを削除する`CObject`s (またはから派生したオブジェクトの`CObject`)、この記事で説明されているイテレーション手法の 1 つを使用する[すべてのメンバーのコレクションにアクセスする](../mfc/accessing-all-members-of-a-collection.md)内の各オブジェクトを削除するには有効にします。
+s (または派生`CObject``CObject`したオブジェクト) のコレクション内のすべてのオブジェクトを削除するには、「コレクションのすべての[メンバーにアクセスする](../mfc/accessing-all-members-of-a-collection.md)」で説明されている反復テクニックのいずれかを使用して各オブジェクトを削除します。
 
 > [!CAUTION]
->  コレクション内のオブジェクトを共有することができます。 つまり、コレクション、オブジェクトへのポインターを保持するが、プログラムの他の部分は、同じオブジェクトへのポインターにもあります。 オブジェクトを使用して、すべての部分が完了するまで共有されているオブジェクトを削除しないように注意する必要があります。
+> コレクション内のオブジェクトは共有できます。 つまり、コレクションはオブジェクトへのポインターを保持しますが、プログラムの他の部分も同じオブジェクトへのポインターを持つ場合があります。 すべてのパーツがオブジェクトの使用を終了するまで、共有されているオブジェクトを削除しないように注意する必要があります。
 
-この記事では、オブジェクトを削除する方法を示します。
+この記事では、次のオブジェクトを削除する方法について説明します。
 
-- [一覧](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
+- [リスト](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
 
 - [配列](#_core_to_delete_all_elements_in_an_array)
 
-- [マップ](#_core_to_delete_all_elements_in_a_map)
+- [地図](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  CObject へのポインターのリスト内のすべてのオブジェクトを削除するには
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>CObject へのポインタのリスト内のすべてのオブジェクトを削除するには
 
-1. 使用`GetHeadPosition`と`GetNext`リストを反復処理します。
+1. を`GetHeadPosition`使用`GetNext`して、リストを反復処理します。
 
-1. 使用して、**削除**のイテレーションで検出された各オブジェクトを削除する演算子。
+1. **delete**演算子を使用して、反復処理で検出された各オブジェクトを削除します。
 
-1. 呼び出す、`RemoveAll`それらの要素に関連付けられているオブジェクトを削除した後、一覧からすべての要素を削除する関数。
+1. この関数`RemoveAll`を呼び出して、その要素に関連付けられたオブジェクトが削除された後で、リストからすべての要素を削除します。
 
-次の例の一覧からすべてのオブジェクトを削除する方法を示しています。`CPerson`オブジェクト。 リスト内の各オブジェクトはへのポインター、`CPerson`最初に、ヒープに割り当てられたオブジェクト。
+オブジェクトのリストからすべてのオブジェクトを削除する方法を次の`CPerson`例に示します。 リスト内の各オブジェクトは、最初に`CPerson`ヒープに割り当てられたオブジェクトへのポインターです。
 
 [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
 
-最後の関数呼び出し`RemoveAll`は、リストからすべての要素を削除します。 リストのメンバー関数。 メンバー関数は、 `RemoveAt` 1 つの要素を削除します。
+最後の関数呼び`RemoveAll`出しは、リストからすべての要素を削除するリスト メンバー関数です。 メンバー関数`RemoveAt`は、1 つの要素を削除します。
 
-要素のオブジェクトを削除して、要素自体を削除する違いに注意してください。 リストから要素を削除すると、単なるオブジェクトへのリストの参照を削除します。 オブジェクトは、メモリに引き続き存在します。 オブジェクトを削除して消滅するので、メモリが再利用します。 したがって、存在しなくなったオブジェクトにアクセスする一覧が掲載されるよう、要素のオブジェクトが削除された後すぐに要素を削除する重要なは。
+要素のオブジェクトを削除することと、要素自体を削除する場合の違いに注意してください。 リストから要素を削除すると、リストのオブジェクトへの参照が削除されるだけです。 オブジェクトはメモリに存在します。 オブジェクトを削除すると、そのオブジェクトは存在しなくなり、そのメモリは再利用されます。 したがって、要素のオブジェクトが削除された直後に要素を削除し、リストが存在しないオブジェクトにアクセスしないようにすることが重要です。
 
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  配列内のすべての要素を削除するには
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>配列内のすべての要素を削除するには
 
-1. 使用`GetSize`と整数のインデックス値、配列を反復処理します。
+1. 配列`GetSize`を反復処理するには、整数のインデックス値を使用します。
 
-1. 使用して、**削除**のイテレーションで検出された各要素を削除する演算子。
+1. **delete**演算子を使用して、反復処理で検出された各要素を削除します。
 
-1. 呼び出す、`RemoveAll`が削除された後、配列からすべての要素を削除する関数。
+1. 要素を`RemoveAll`削除した後、配列からすべての要素を削除するには、関数を呼び出します。
 
-   配列のすべての要素を削除するためのコードは次のとおりです。
+   配列のすべての要素を削除するコードは次のとおりです。
 
    [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
-上記リストの例でを呼び出すことができますと`RemoveAll`配列内のすべての要素を削除するまたは`RemoveAt`個々 の要素を削除します。
+上記のリスト例と同様に、配列内`RemoveAll`のすべての要素を削除したり、個々の`RemoveAt`要素を削除したりするために呼び出すことができます。
 
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> Map 内のすべての要素を削除するには
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>マップ内のすべての要素を削除するには
 
-1. 使用`GetStartPosition`と`GetNextAssoc`配列を反復処理します。
+1. 配列`GetStartPosition`を`GetNextAssoc`反復処理するには、 と を使用します。
 
-1. 使用して、**削除**のイテレーションで検出された、キーや各マップ要素の値を削除する演算子。
+1. **delete**演算子を使用して、各マップ要素のキーや値を、反復処理で検出されたとおりに削除します。
 
-1. 呼び出す、`RemoveAll`が削除された後、マップからすべての要素を削除する関数。
+1. 要素が`RemoveAll`削除された後に、マップからすべての要素を削除するには、関数を呼び出します。
 
-   すべての要素を削除するためのコードを`CMap`コレクションは、次のようにします。 マップ内の各要素が文字列をキーとして、`CPerson`オブジェクト (から派生した`CObject`) 値として。
+   `CMap`コレクションのすべての要素を削除するコードは次のとおりです。 マップ内の各要素には、キーとして文字列が、`CPerson`値としてオブジェクト (`CObject`から派生) があります。
 
    [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
-呼び出すことができます`RemoveAll`マップ内のすべての要素を削除するまたは`RemoveKey`指定のキーを持つ個々 の要素を削除します。
+マップ内のすべての`RemoveAll`要素を削除したり、指定したキー`RemoveKey`を持つ個々の要素を削除したりするために呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 
-[コレクションの全メンバーへのアクセス](../mfc/accessing-all-members-of-a-collection.md)
+[コレクションのすべてのメンバーへのアクセス](../mfc/accessing-all-members-of-a-collection.md)

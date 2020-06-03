@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752207"
 ---
 # <a name="ctoolbar-class"></a>CToolBar クラス
 
@@ -67,81 +67,81 @@ class CToolBar : public CControlBar
 
 |名前|説明|
 |----------|-----------------|
-|[CToolBar:: CToolBar](#ctoolbar)|`CToolBar` オブジェクトを構築します。|
+|[Cツールバー::Cツールバー](#ctoolbar)|`CToolBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CToolBar::CommandToIndex](#commandtoindex)|指定されたコマンド ID を持つボタンのインデックスを返します。|
-|[CToolBar:: Create](#create)|Windows ツールバーを作成し、 `CToolBar`オブジェクトにアタッチします。|
-|[CToolBar::CreateEx](#createex)|埋め込み`CToolBar` `CToolBarCtrl`オブジェクトに対して追加のスタイルを使用してオブジェクトを作成します。|
-|[CToolBar:: GetButtonInfo](#getbuttoninfo)|ボタンの ID、スタイル、およびイメージ番号を取得します。|
-|[CToolBar:: GetButtonStyle](#getbuttonstyle)|ボタンのスタイルを取得します。|
-|[CToolBar:: GetButtonText](#getbuttontext)|ボタンに表示されるテキストを取得します。|
-|[CToolBar:: GetItemID](#getitemid)|指定されたインデックス位置にあるボタンまたは区切り記号のコマンド ID を返します。|
-|[CToolBar:: GetItemRect](#getitemrect)|指定したインデックス位置にある項目の表示四角形を取得します。|
-|[CToolBar:: GetToolBarCtrl](#gettoolbarctrl)|基になるコモンコントロールに直接アクセスできるようにします。|
-|[CToolBar:: LoadBitmap](#loadbitmap)|ビットマップボタンイメージを格納しているビットマップを読み込みます。|
-|[CToolBar:: LoadToolBar](#loadtoolbar)|リソースエディターを使用して作成されたツールバーリソースを読み込みます。|
-|[CToolBar:: SetBitmap](#setbitmap)|ビットマップイメージを設定します。|
-|[CToolBar:: SetButtonInfo](#setbuttoninfo)|ボタンの ID、スタイル、およびイメージ番号を設定します。|
-|[CToolBar:: SetButtons](#setbuttons)|ビットマップ内のボタンのスタイルとボタンイメージのインデックスを設定します。|
-|[CToolBar:: SetButtonStyle](#setbuttonstyle)|ボタンのスタイルを設定します。|
-|[CToolBar:: SetButtonText](#setbuttontext)|ボタンに表示されるテキストを設定します。|
-|[CToolBar:: SetHeight](#setheight)|ツールバーの高さを設定します。|
-|[CToolBar:: SetSizes](#setsizes)|ボタンとそのビットマップのサイズを設定します。|
+|[Cツールバー::コマンドインデックス](#commandtoindex)|指定されたコマンド ID を持つボタンのインデックスを返します。|
+|[Cツールバー::作成](#create)|Windows ツール バーを作成し、オブジェクト`CToolBar`にアタッチします。|
+|[Cツールバー::作成します。](#createex)|埋め`CToolBar`込み`CToolBarCtrl`オブジェクトの追加スタイルを持つオブジェクトを作成します。|
+|[コントロールバー::ゲットボタン情報](#getbuttoninfo)|ボタンの ID、スタイル、およびイメージ番号を取得します。|
+|[Cツールバー::ゲットボタンスタイル](#getbuttonstyle)|ボタンのスタイルを取得します。|
+|[コントロール バー::ボタンテキストを取得します。](#getbuttontext)|ボタンに表示されるテキストを取得します。|
+|[をクリックします。](#getitemid)|指定されたインデックス位置にあるボタンまたは区切り記号のコマンド ID を返します。|
+|[Cツールバー::ゲットアイテムレクト](#getitemrect)|指定したインデックス位置にある項目の表示四角形を取得します。|
+|[Cツールバー::ツールバーCtrlを取得します。](#gettoolbarctrl)|基になるコモン コントロールに直接アクセスできるようにします。|
+|[を使用します。](#loadbitmap)|ビットマップ ボタン イメージを含むビットマップを読み込みます。|
+|[Cツールバー::ロードツールバー](#loadtoolbar)|リソース エディターで作成されたツール バー リソースを読み込みます。|
+|[をクリックします。](#setbitmap)|ビットマップ イメージを設定します。|
+|[コントロールバー::ボタンの設定](#setbuttoninfo)|ボタンの ID、スタイル、およびイメージ番号を設定します。|
+|[コントロールバー::ボタンの設定](#setbuttons)|ボタンスタイルとビットマップ内のボタンイメージのインデックスを設定します。|
+|[Cツールバー::セットボタンスタイル](#setbuttonstyle)|ボタンのスタイルを設定します。|
+|[コントロールバー::ボタンテキストの設定](#setbuttontext)|ボタンに表示するテキストを設定します。|
+|[Cツールバー::セットハイト](#setheight)|ツール バーの高さを設定します。|
+|[Cツールバー::セットサイズ](#setsizes)|ボタンとそのビットマップのサイズを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ボタンは、プッシュボタン、チェックボックスボタン、オプションボタンのように動作します。 `CToolBar`オブジェクトは、通常、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)クラスから派生したフレームウィンドウオブジェクトの埋め込みメンバーです。
+ボタンは、押ボタン、チェックボックスボタン、ラジオボタンのように動作します。 `CToolBar`オブジェクトは、通常[、CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)クラスから派生したフレーム ウィンドウ オブジェクトの埋め込みメンバーです。
 
-[CToolBar:: GetToolBarCtrl](#gettoolbarctrl)(MFC 4.0 に新しく追加されたメンバー関数) を使用すると、Windows コモンコントロールによるツールバーのカスタマイズと追加機能のサポートを利用できます。 `CToolBar`メンバー関数は、Windows コモンコントロールのほとんどの機能を提供します。ただし、を呼び出す`GetToolBarCtrl`と、Windows 95/98 のツールバーの特性をさらに多くのツールバーに与えることができます。 を呼び出す`GetToolBarCtrl`と、 `CToolBarCtrl`オブジェクトへの参照が返されます。 Windows コモンコントロールを使用したツールバーのデザインの詳細については、「 [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) 」を参照してください。 一般的なコントロールの全般的な情報については、「Windows SDK の[コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+MFC 4.0 の新しいメンバー関数である[CToolBar:GetToolBarCtrl](#gettoolbarctrl)を使用すると、ツール バーのカスタマイズと追加機能に対する Windows コモン コントロールのサポートを利用できます。 `CToolBar`メンバー関数は、Windows コモン コントロールのほとんどの機能を提供します。ただし、 を呼`GetToolBarCtrl`び出すと、Windows 95/98 のツール バーの特性をさらに多くツール バーに提供できます。 を呼び`GetToolBarCtrl`出すと、オブジェクトへの参照が`CToolBarCtrl`返されます。 Windows コモン コントロールを使用したツール バーのデザインの詳細については[、「CToolBarCtrl」](../../mfc/reference/ctoolbarctrl-class.md)を参照してください。 コモン コントロールの一般的な情報については、Windows SDK の[「コモン コントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
 
-ビジュアルC++には、ツールバーを作成する2つの方法が用意されています。 リソースエディターを使用してツールバーリソースを作成するには、次の手順を実行します。
+Visual C++ には、ツール バーを作成するための 2 つのメソッドが用意されています。 リソース エディターを使用してツール バー リソースを作成するには、次の手順を実行します。
 
-1. ツールバーリソースを作成します。
-
-1. オブジェクトを`CToolBar`構築します。
-
-1. [Create](#create) (または[CreateEx](#createex)) 関数を呼び出して、Windows ツールバーを作成し、 `CToolBar`オブジェクトにアタッチします。
-
-1. [Loadtoolbar](#loadtoolbar)を呼び出して、ツールバーリソースを読み込みます。
-
-それ以外の場合は、次の手順を実行します。
+1. ツール バー リソースを作成します。
 
 1. オブジェクトを`CToolBar`構築します。
 
-1. [Create](#create) (または[CreateEx](#createex)) 関数を呼び出して、Windows ツールバーを作成し、 `CToolBar`オブジェクトにアタッチします。
+1. [作成](#create)(または[CreateEx)](#createex)関数を呼び出して、Windows ツール`CToolBar`バーを作成し、オブジェクトにアタッチします。
 
-1. [Loadbitmap](#loadbitmap)を呼び出して、ツールバーボタンイメージを含むビットマップを読み込みます。
+1. ツール バー リソースを読み込むには[、LoadToolBar](#loadtoolbar)を呼び出します。
 
-1. [Setbuttons](#setbuttons)を呼び出してボタンのスタイルを設定し、各ボタンをビットマップ内のイメージに関連付けます。
+それ以外の場合は、次の手順に従います。
 
-ツールバーのすべてのボタンイメージは、1つのビットマップから取得されます。このビットマップには、ボタンごとに1つのイメージが含まれている必要があります。 すべてのイメージのサイズは同じである必要があります。既定値は幅16ピクセル、高さ15ピクセルです。 ビットマップでは、イメージが横に並んでいる必要があります。
+1. オブジェクトを`CToolBar`構築します。
 
-関数`SetButtons`は、コントロール id の配列へのポインターと、配列内の要素の数を指定する整数を受け取ります。 関数は、各ボタンの ID を配列の対応する要素の値に設定し、各ボタンにイメージインデックスを割り当てます。これにより、ビットマップ内のボタンのイメージの位置が指定されます。 配列要素の値が ID_SEPARATOR の場合、イメージインデックスは割り当てられません。
+1. [作成](#create)(または[CreateEx)](#createex)関数を呼び出して、Windows ツール`CToolBar`バーを作成し、オブジェクトにアタッチします。
 
-ビットマップ内のイメージの順序は、通常、画面上に描画される順序ですが、 [SetButtonInfo](#setbuttoninfo)関数を使用すると、イメージの順序と描画順序の関係を変更できます。
+1. [LoadBitmap](#loadbitmap)を呼び出して、ツール バー ボタン イメージを含むビットマップを読み込みます。
 
-ツールバーのすべてのボタンは同じサイズです。 既定値は、*ソフトウェア設計の Windows インターフェイスガイドライン*に従って、24 x 22 ピクセルです。 画像とボタンの大きさの間に追加のスペースを使用して、画像の周りに境界線を作成します。
+1. [SetButtons](#setbuttons)を呼び出してボタンのスタイルを設定し、各ボタンをビットマップ内のイメージに関連付けます。
 
-各ボタンには1つのイメージがあります。 ボタンのさまざまな状態とスタイル (押されている、上、下、無効、無効、停止、不確定) は、その1つのイメージから生成されます。 ビットマップは任意の色にすることができますが、黒と灰色の網掛けで最適な結果を得ることができます。
+ツールバーのすべてのボタン イメージは、1 つのビットマップから取得され、ボタンごとに 1 つのイメージが含まれている必要があります。 すべてのイメージは同じサイズでなければなりません。デフォルトは、幅 16 ピクセル、高さ 15 ピクセルです。 ビットマップ内でイメージを並べて表示する必要があります。
+
+この`SetButtons`関数は、コントロール ID の配列へのポインターと、配列内の要素数を指定する整数を受け取ります。 この関数は、各ボタンの ID を配列の対応する要素の値に設定し、各ボタンにイメージ インデックスを割り当てます。 配列要素に値ID_SEPARATORがある場合、イメージインデックスは割り当てられません。
+
+ビットマップ内のイメージの順序は、通常、画面上に描画される順序ですが[、SetButtonInfo](#setbuttoninfo)関数を使用して、イメージの順序と描画順序の関係を変更できます。
+
+ツールバーのすべてのボタンは同じサイズです。 デフォルトは、*ソフトウェア設計に関*する Windows インターフェイス ガイドラインに従って、24 x 22 ピクセルです。 画像とボタンの寸法の間にスペースを追加すると、画像の周囲に境界線が形成されます。
+
+各ボタンには 1 つのイメージがあります。 ボタンの状態とスタイル(押された、上へ、下へ、無効、無効、不確定)は、その 1 つのイメージから生成されます。 ビットマップは任意の色にできますが、黒のイメージとグレーの陰影で最適な結果を得ることができます。
 
 > [!WARNING]
-> `CToolBar`最大16色のビットマップをサポートします。 ツールバーエディターに画像を読み込むと、必要に応じて自動的に画像が16色のビットマップに変換され、画像が変換された場合は警告メッセージが表示されます。 (外部エディターを使用してイメージを編集して) 16 色以上のイメージを使用すると、アプリケーションが予期せず動作する可能性があります。
+> `CToolBar`は、最大 16 色のビットマップをサポートします。 イメージをツール バー エディターに読み込むと、Visual Studio は必要に応じてイメージを 16 色のビットマップに自動的に変換し、イメージが変換された場合は警告メッセージを表示します。 16 色を超えるイメージを使用する場合 (外部エディタを使用してイメージを編集する)、アプリケーションが予期しない動作をすることがあります。
 
-既定では、ツールバーボタンは、プッシュボタンを模倣します。 ただし、ツールバーのボタンには、チェックボックスボタンやラジオボタンを模倣することもできます。 チェックボックスボタンには、オン、オフ、不確定の3つの状態があります。 オプションボタンの状態は [オン] と [オフ] の2つだけです。
+ツールバーボタンは、デフォルトで押ボタンを模倣します。 ただし、ツールバーのボタンは、チェック ボックス ボタンやラジオ ボタンを模倣することもできます。 チェック ボックス ボタンには、チェック マーク、クリア、および不確定の 3 つの状態があります。 ラジオボタンには、オンとオフの2つの状態しかありません。
 
-配列をポイントせずに個々のボタンまたは区分線のスタイルを設定するには、 [GetButtonStyle](#getbuttonstyle)を呼び出してスタイルを`SetButtons`取得し、ではなく [SetButtonStyle](#setbuttonstyle) を呼び出します。 `SetButtonStyle`は、実行時にボタンのスタイルを変更する場合に最も役立ちます。
+配列を指さずに個々のボタンまたは区切りスタイルを設定するには[、GetButtonStyle](#getbuttonstyle)を呼び出してスタイルを取得し、代`SetButtons`わりに[SetButtonStyle](#setbuttonstyle)を呼び出します。 `SetButtonStyle`は、実行時にボタンのスタイルを変更する場合に最も便利です。
 
-ボタンに表示されるテキストを割り当てるには、 [Getbuttontext](#getbuttontext)を呼び出して、ボタンに表示されるテキストを取得し、 [SetButtonText](#setbuttontext)を呼び出してテキストを設定します。
+ボタンに表示するテキストを割り当てるには[、GetButtonText](#getbuttontext)を呼び出してボタンに表示するテキストを取得し[、SetButtonText](#setbuttontext)を呼び出してテキストを設定します。
 
-チェックボックスボタンを作成するには、そのボタンにスタイル TBBS_CHECKBOX を割り当てる`CCmdUI`か、 `SetCheck` ON_UPDATE_COMMAND_UI ハンドラーでオブジェクトのメンバー関数を使用します。 を`SetCheck`呼び出すと、プッシュボタンがチェックボックスボタンに変わります。 オフ`SetCheck`の場合は0、checked の場合は1、不確定の場合は2を渡します。
+チェック ボックス ボタンを作成するには、スタイル TBBS_CHECKBOXを割り当`CCmdUI`てるか、ON_UPDATE_COMMAND_UI ハンドラーでオブジェクトの`SetCheck`メンバー関数を使用します。 呼`SetCheck`び出しは、押ボタンをチェックボックスボタンに変えます。 チェック`SetCheck`されていない場合は 0、チェックされている場合は 1、不確定の場合は 2 の引数を渡します。
 
-オプションボタンを作成するには、ON_UPDATE_COMMAND_UI ハンドラーから[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトの[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)メンバー関数を呼び出します。 Checked `SetRadio`の場合は0、チェックされない場合は0の引数を渡します。 無線グループの相互排他的な動作を提供するには、グループ内のすべてのボタンに対して ON_UPDATE_COMMAND_UI ハンドラーが必要です。
+ラジオ ボタンを作成するには、ON_UPDATE_COMMAND_UI ハンドラーから[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトの[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)メンバー関数を呼び出します。 チェック`SetRadio`されていない場合は 0、チェックされていない場合は 0 以外の引数を渡します。 ラジオ グループの相互排他的な動作を提供するには、グループ内のすべてのボタンに対してON_UPDATE_COMMAND_UIハンドラーが必要です。
 
-の使用方法`CToolBar`の詳細については、 [MFC ツールバーの実装](../../mfc/mfc-toolbar-implementation.md)と[テクニカルノート31を参照してください。コントロールバー](../../mfc/tn031-control-bars.md)。
+の使用方法`CToolBar`の詳細については[、「MFC ツール バーの実装](../../mfc/mfc-toolbar-implementation.md)」および「[テクニカル ノート 31: コントロール バー](../../mfc/tn031-control-bars.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -151,7 +151,7 @@ class CToolBar : public CControlBar
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[コントロールバー](../../mfc/reference/ccontrolbar-class.md)
 
 `CToolBar`
 
@@ -159,9 +159,9 @@ class CToolBar : public CControlBar
 
 **ヘッダー:** afxext.h
 
-##  <a name="commandtoindex"></a>CToolBar:: CommandToIndex
+## <a name="ctoolbarcommandtoindex"></a><a name="commandtoindex"></a>Cツールバー::コマンドインデックス
 
-このメンバー関数は、コマンド ID が一致する`nIDFind`最初のツールバーボタンのインデックスを返します。この位置は0から始まります。
+このメンバー関数は、コマンド ID が一致`nIDFind`する位置 0 から始まる、最初のツール バー ボタンのインデックスを返します。
 
 ```
 int CommandToIndex(UINT nIDFind) const;
@@ -169,16 +169,16 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDFind*<br/>
-ツールバーボタンのコマンド ID。
+*nID検索*<br/>
+ツール バー ボタンのコマンド ID。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンのインデックス。または、指定されたコマンド ID を持つボタンがない場合は-1。
+ボタンのインデックス、またはボタンが指定されたコマンド ID を持たない場合は -1。
 
-##  <a name="create"></a>  CToolBar::Create
+## <a name="ctoolbarcreate"></a><a name="create"></a>Cツールバー::作成
 
-このメンバー関数は、Windows ツールバー (子ウィンドウ) を作成し、 `CToolBar`オブジェクトに関連付けます。
+このメンバー関数は、Windows ツール バー (子ウィンドウ) を作成`CToolBar`し、それをオブジェクトに関連付けます。
 
 ```
 virtual BOOL Create(
@@ -190,37 +190,37 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-ツールバーの親であるウィンドウへのポインター。
+ツール バーの親であるウィンドウへのポインター。
 
-*dwStyle*<br/>
-ツールバーのスタイル。 サポートされている追加のツールバースタイルは次のとおりです。
+*Dwstyle*<br/>
+ツール バーのスタイル。 サポートされる追加のツールバー スタイルは次のとおりです。
 
-- CBRS_TOP コントロールバーは、フレームウィンドウの上部にあります。
+- CBRS_TOP コントロール バーは、フレーム ウィンドウの上部にあります。
 
-- CBRS_BOTTOM コントロールバーは、フレームウィンドウの下部に表示されます。
+- CBRS_BOTTOMコントロール バーは、フレーム ウィンドウの下部にあります。
 
-- 親のサイズを変更しても、CBRS_NOALIGN コントロールバーは再配置されません。
+- CBRS_NOALIGNコントロールバーは、親のサイズを変更しても再配置されません。
 
-- CBRS_TOOLTIPS コントロールバーにツールヒントが表示されます。
+- CBRS_TOOLTIPSコントロールバーにツールヒントが表示されます。
 
-- CBRS_SIZE_DYNAMIC コントロールバーは動的です。
+- CBRS_SIZE_DYNAMICコントロールバーは動的です。
 
-- CBRS_SIZE_FIXED コントロールバーは固定されています。
+- CBRS_SIZE_FIXEDコントロールバーが固定されています。
 
-- CBRS_FLOATING コントロールバーはフローティングです。
+- CBRS_FLOATINGコントロールバーが浮いている。
 
-- CBRS_FLYBY ステータスバーには、ボタンに関する情報が表示されます。
+- CBRS_FLYBYステータス バーには、ボタンに関する情報が表示されます。
 
-- CBRS_HIDE_INPLACE コントロールバーがユーザーに表示されません。
+- CBRS_HIDE_INPLACEコントロールバーはユーザーに表示されません。
 
 *nID*<br/>
-ツールバーの子ウィンドウ ID。
+ツール バーの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 また、ツールバーの高さを既定値に設定します。
 
@@ -228,9 +228,9 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]
 
-##  <a name="createex"></a>  CToolBar::CreateEx
+## <a name="ctoolbarcreateex"></a><a name="createex"></a>Cツールバー::作成します。
 
-この関数を呼び出して、Windows ツールバー (子ウィンドウ) を作成し、 `CToolBar`オブジェクトに関連付けます。
+Windows のツール バー (子ウィンドウ) を作成し、`CToolBar`それをオブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -248,51 +248,51 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-ツールバーの親であるウィンドウへのポインター。
+ツール バーの親であるウィンドウへのポインター。
 
-*dwCtrlStyle*<br/>
-埋め込み[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)オブジェクトを作成するための追加のスタイル。 既定では、この値は TBSTYLE_FLAT に設定されます。 ツールバーのスタイルの完全な一覧については、「 *dwStyle*」を参照してください。
+*スタイル*<br/>
+埋め込まれた[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)オブジェクトを作成するための追加のスタイル。 既定では、この値はTBSTYLE_FLATに設定されています。 ツール バー スタイルの詳細な一覧については、「 *dwStyle*」を参照してください。
 
-*dwStyle*<br/>
-ツールバーのスタイル。 適切なスタイルの一覧については、「Windows SDK の[ツールバーコントロールとボタンスタイル](/windows/win32/Controls/toolbar-control-and-button-styles)」を参照してください。
+*Dwstyle*<br/>
+ツール バーのスタイル。 適切なスタイルの一覧については、Windows SDK の[ツールバー コントロールとボタン スタイル](/windows/win32/Controls/toolbar-control-and-button-styles)を参照してください。
 
-*rcBorders*<br/>
-ツールバーウィンドウの境界線の幅を定義する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 既定では、これらの罫線は0、0、0、0に設定されます。その結果、境界線のないツールバーウィンドウになります。
+*rcボーダー*<br/>
+ツール バー ウィンドウの境界線の幅を定義する[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 これらの境界線は既定で 0,0,0,0 に設定されるため、ツールバー ウィンドウに枠線は表示されません。
 
 *nID*<br/>
-ツールバーの子ウィンドウ ID。
+ツール バーの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 また、ツールバーの高さを既定値に設定します。
 
-埋め`CreateEx`込みのツールバーコントロールの作成中に特定のスタイルが存在する必要がある場合は、 [Create](#create)ではなくを使用します。 たとえば、Internet Explorer 4 のツール&#124;バーに似たツールバーを作成するには、dwCtrlStyle を TBSTYLE_FLAT TBSTYLE_TRANSPARENT に設定します。
+埋`CreateEx`め込まれたツール バー[コントロールの作成時](#create)に特定のスタイルを必要とする場合は、 の代わりに Create を使用します。 たとえば、&#124; TBSTYLE_TRANSPARENTに*dwCtrlStyle*を TBSTYLE_FLAT設定して、Internet Explorer 4 のツールバーのようなツールバーを作成します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]
 
-##  <a name="ctoolbar"></a>CToolBar:: CToolBar
+## <a name="ctoolbarctoolbar"></a><a name="ctoolbar"></a>Cツールバー::Cツールバー
 
-このメンバー関数は、 `CToolBar`オブジェクトを構築し、既定のサイズを設定します。
+このメンバー関数は、オブジェクト`CToolBar`を構築し、既定のサイズを設定します。
 
 ```
 CToolBar();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[Create](#create) member 関数を呼び出して、ツールバーウィンドウを作成します。
+Create[メンバー関数](#create)を呼び出して、ツール バー ウィンドウを作成します。
 
-##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo
+## <a name="ctoolbargetbuttoninfo"></a><a name="getbuttoninfo"></a>コントロールバー::ゲットボタン情報
 
-このメンバー関数は、NIndex によって指定された場所にあるツールバーボタンまたは区切り記号のコントロール ID、スタイル、およびイメージインデックスを取得し*ます。*
+このメンバー関数は *、nIndex*で指定された位置にあるツール バー ボタンまたは区切り記号のコントロール ID、スタイル、およびイメージ インデックスを取得します。
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -303,7 +303,7 @@ void GetButtonInfo(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-情報を取得するツールバーボタンまたは区切り記号のインデックス。
+情報を取得するツール バー ボタンまたは区切り記号のインデックス。
 
 *nID*<br/>
 ボタンのコマンド ID に設定されている UINT への参照。
@@ -311,18 +311,18 @@ void GetButtonInfo(
 *nStyle*<br/>
 ボタンのスタイルに設定されている UINT への参照。
 
-*iImage*<br/>
-ビットマップ内のボタンのイメージのインデックスに設定されている整数への参照。
+*iイメージ*<br/>
+ビットマップ内のボタンのイメージのインデックスに設定される整数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これらの値は、 *nID*、 *nstyle*、および*iImage*によって参照される変数に割り当てられます。 イメージインデックスは、すべてのツールバーボタンの画像を含むビットマップ内の画像の位置です。 最初のイメージは0の位置にあります。
+これらの値は、 *nID*、 *nStyle*、および*iImage*によって参照される変数に割り当てられます。 イメージインデックスは、すべてのツール バー ボタンのイメージを含むビットマップ内のイメージの位置です。 最初のイメージは位置 0 です。
 
-*NIndex*で区切り記号を指定した場合、 *iImage*はピクセル単位で区切り記号の幅に設定されます。
+*nIndex で*区切り文字を指定した場合 *、iImage*は区切り文字の幅をピクセル単位で設定します。
 
-##  <a name="getbuttonstyle"></a>CToolBar:: GetButtonStyle
+## <a name="ctoolbargetbuttonstyle"></a><a name="getbuttonstyle"></a>Cツールバー::ゲットボタンスタイル
 
-このメンバー関数を呼び出して、ツールバーのボタンまたは区切り記号のスタイルを取得します。
+ツール バーのボタンまたは区切り記号のスタイルを取得します。
 
 ```
 UINT GetButtonStyle(int nIndex) const;
@@ -331,19 +331,19 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-取得するツールバーボタンまたは区分線スタイルのインデックス。
+取得するツール バー ボタンまたは区切りスタイルのインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*NIndex*によって指定されたボタンまたは区切り記号のスタイル。
+*nIndex*で指定されたボタンまたは区切り記号のスタイル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ボタンのスタイルによって、ボタンの表示方法と、ユーザー入力に対する応答方法が決まります。 ボタンスタイルの例については、「 [SetButtonStyle](#setbuttonstyle) 」を参照してください。
+ボタンのスタイルによって、ボタンの表示方法とユーザー入力への応答方法が決まります。 ボタン[スタイルの](#setbuttonstyle)例については、「ボタンスタイルの設定」を参照してください。
 
-##  <a name="getbuttontext"></a>  CToolBar::GetButtonText
+## <a name="ctoolbargetbuttontext"></a><a name="getbuttontext"></a>コントロール バー::ボタンテキストを取得します。
 
-ボタンに表示されるテキストを取得するには、このメンバー関数を呼び出します。
+ボタンに表示されるテキストを取得します。
 
 ```
 CString GetButtonText(int nIndex) const;
@@ -358,20 +358,20 @@ void GetButtonText(
 *nIndex*<br/>
 取得するテキストのインデックス。
 
-*rString*<br/>
+*文字列*<br/>
 取得するテキストを格納する[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンテキストを格納しているオブジェクト。`CString`
+ボタン`CString`テキストを含むオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数の2番目の形式`CString`は、文字列テキストをオブジェクトに入力します。
+このメンバー関数の 2 番目の形式`CString`では、文字列テキストをオブジェクトに入力します。
 
-##  <a name="getitemid"></a>CToolBar:: GetItemID
+## <a name="ctoolbargetitemid"></a><a name="getitemid"></a>をクリックします。
 
-このメンバー関数は、 *nIndex*によって指定されたボタンまたは区切り記号のコマンド ID を返します。
+このメンバー関数は *、nIndex*で指定されたボタンまたは区切り記号のコマンド ID を返します。
 
 ```
 UINT GetItemID(int nIndex) const;
@@ -380,19 +380,19 @@ UINT GetItemID(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-ID を取得する項目のインデックス。
+取得する ID を持つアイテムのインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*NIndex*によって指定されたボタンまたは区切り記号のコマンド ID。
+*nIndex*で指定されたボタンまたは区切り記号のコマンド ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-区切り記号は ID_SEPARATOR を返します。
+区切り記号はID_SEPARATORを返します。
 
-##  <a name="getitemrect"></a>  CToolBar::GetItemRect
+## <a name="ctoolbargetitemrect"></a><a name="getitemrect"></a>Cツールバー::ゲットアイテムレクト
 
-このメンバー関数は、 `RECT` *lpRect*に含まれるアドレスが、 *nIndex*によって指定されたボタンまたは区切り記号の座標を持つ構造体を塗りつぶします。
+このメンバー関数は、アドレス`RECT`が*lpRect*に含まれている構造体に *、nIndex*で指定されたボタンまたは区切り記号の座標を埋めます。
 
 ```
 virtual void GetItemRect(
@@ -405,22 +405,22 @@ virtual void GetItemRect(
 *nIndex*<br/>
 四角形の座標を取得する項目 (ボタンまたは区切り記号) のインデックス。
 
-*lpRect*<br/>
+*Lprect*<br/>
 項目の座標を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-座標は、ツールバーの左上隅を基準とした相対的なピクセル数です。
+座標は、ツール バーの左上隅を基準にしたピクセル単位です。
 
-コンボ`GetItemRect`ボックスまたは他のコントロールで置き換える区切り記号の座標を取得するには、を使用します。
+コンボ`GetItemRect`ボックスまたはその他のコントロールで置き換える区切り記号の座標を取得するときに使用します。
 
 ### <a name="example"></a>例
 
-  「 [CToolBar:: SetSizes](#setsizes)」の例を参照してください。
+  [CToolBar::SetSizes](#setsizes)の例を参照してください。
 
-##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl
+## <a name="ctoolbargettoolbarctrl"></a><a name="gettoolbarctrl"></a>Cツールバー::ツールバーCtrlを取得します。
 
-このメンバー関数は、基になるコモンコントロールに直接アクセスできるようにします。
+このメンバー関数は、基になるコモン コントロールに直接アクセスできます。
 
 ```
 CToolBarCtrl& GetToolBarCtrl() const;
@@ -428,21 +428,21 @@ CToolBarCtrl& GetToolBarCtrl() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CToolBarCtrl` オブジェクトへの参照。
+`CToolBarCtrl` オブジェクトへの参照です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`GetToolBarCtrl`使用すると、Windows ツールバーコモンコントロールの機能を活用し、ツールバーのカスタマイズに[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)が提供するサポートを利用できます。
+Windows`GetToolBarCtrl`ツール バー コモン コントロールの機能を利用し[、CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)のサポートを利用してツール バーをカスタマイズするために使用します。
 
-コモンコントロールの使用方法の詳細については、Windows SDK の「[コントロール](../../mfc/controls-mfc.md)と[コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+コモン コントロールの使用の詳細については、Windows SDK の[「コントロール](../../mfc/controls-mfc.md)と[コモン コントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]
 
-##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap
+## <a name="ctoolbarloadbitmap"></a><a name="loadbitmap"></a>を使用します。
 
-またはで`lpszResourceName`指定されたビットマップを読み込むに`nIDResource`は、このメンバー関数を呼び出します。
+またはで`lpszResourceName`指定されたビットマップを読み込みます`nIDResource`。
 
 ```
 BOOL LoadBitmap(LPCTSTR lpszResourceName);
@@ -451,26 +451,26 @@ BOOL LoadBitmap(UINT nIDResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*<br/>
+*リソース名*<br/>
 読み込むビットマップのリソース名へのポインター。
 
-*nIDResource*<br/>
+*リソース*<br/>
 読み込むビットマップのリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ビットマップには、ツールバーボタンごとに1つのイメージが含まれている必要があります。 画像のサイズが標準サイズ (幅16ピクセル、高さ15ピクセル) でない場合は、 [setsizes](#setsizes)を呼び出して、ボタンのサイズと画像を設定します。
+ビットマップには、ツール バー ボタンごとに 1 つのイメージを含める必要があります。 画像が標準サイズ (幅 16 ピクセル、高さ 15 ピクセル) でない場合は[、SetSizes](#setsizes)を呼び出してボタンのサイズとそのイメージを設定します。
 
 > [!WARNING]
-> `CToolBar`最大16色のビットマップをサポートします。 ツールバーエディターに画像を読み込むと、必要に応じて自動的に画像が16色のビットマップに変換され、画像が変換された場合は警告メッセージが表示されます。 (外部エディターを使用してイメージを編集して) 16 色以上のイメージを使用すると、アプリケーションが予期せず動作する可能性があります。
+> `CToolBar`は、最大 16 色のビットマップをサポートします。 イメージをツール バー エディターに読み込むと、Visual Studio は必要に応じてイメージを 16 色のビットマップに自動的に変換し、イメージが変換された場合は警告メッセージを表示します。 16 色を超えるイメージを使用する場合 (外部エディタを使用してイメージを編集する)、アプリケーションが予期しない動作をすることがあります。
 
-##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar
+## <a name="ctoolbarloadtoolbar"></a><a name="loadtoolbar"></a>Cツールバー::ロードツールバー
 
-このメンバー関数を呼び出して、 *lpszresourcename* *nIDResource*によって指定されたツールバーを読み込みます。
+このメンバー関数を呼び出して *、lpszResourceName*または*nIDResource*で指定されたツール バーを読み込みます。
 
 ```
 BOOL LoadToolBar(LPCTSTR lpszResourceName);
@@ -479,27 +479,27 @@ BOOL LoadToolBar(UINT nIDResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*<br/>
-読み込むツールバーのリソース名へのポインター。
+*リソース名*<br/>
+読み込むツール バーのリソース名へのポインター。
 
-*nIDResource*<br/>
-読み込むツールバーのリソース ID。
+*リソース*<br/>
+読み込むツール バーのリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ツールバーリソースの作成の詳細については、「」の[ツールバーエディター](../../windows/toolbar-editor.md)を参照してください。
+ツールバー リソースの作成の詳細については、 のツールバー[エディタ](../../windows/toolbar-editor.md)を参照してください。
 
 ### <a name="example"></a>例
 
-  「 [CToolBar:: CreateEx](#createex)」の例を参照してください。
+  [CToolBar::CreateEx](#createex)の例を参照してください。
 
-##  <a name="setbitmap"></a>  CToolBar::SetBitmap
+## <a name="ctoolbarsetbitmap"></a><a name="setbitmap"></a>をクリックします。
 
-ツールバーのビットマップイメージを設定するには、このメンバー関数を呼び出します。
+ツール バーのビットマップ イメージを設定します。
 
 ```
 BOOL SetBitmap(HBITMAP hbmImageWell);
@@ -507,22 +507,22 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 
 ### <a name="parameters"></a>パラメーター
 
-*hbmImageWell*<br/>
-ツールバーに関連付けられているビットマップイメージのハンドル。
+*を使用します。*<br/>
+ツール バーに関連付けられているビットマップ イメージのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-たとえば、ユーザーが`SetBitmap`ボタンのアクションを変更するドキュメントに対して操作を実行した後に、を呼び出してビットマップイメージを変更します。
+たとえば、ユーザーが`SetBitmap`ドキュメントでボタンのアクションを変更した後に、ビットマップ イメージを変更する呼び出しです。
 
-##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo
+## <a name="ctoolbarsetbuttoninfo"></a><a name="setbuttoninfo"></a>コントロールバー::ボタンの設定
 
-このメンバー関数を呼び出して、ボタンのコマンド ID、スタイル、およびイメージ番号を設定します。
+ボタンのコマンド ID、スタイル、およびイメージ番号を設定します。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -533,45 +533,45 @@ void SetButtonInfo(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-情報を設定するボタンまたは区切り記号の0から始まるインデックス。
+情報を設定するボタンまたは区切り記号の 0 から始まるインデックス。
 
 *nID*<br/>
 ボタンのコマンド ID が設定される値。
 
 *nStyle*<br/>
-新しいボタンスタイル。 次のボタンスタイルがサポートされています。
+新しいボタンスタイル。 次のボタン スタイルがサポートされています。
 
-- TBBS_BUTTON 標準のプッシュボタン (既定)
+- TBBS_BUTTON 標準押ボタン (デフォルト)
 
-- TBBS_SEPARATOR 区切り記号
+- TBBS_SEPARATOR区切り記号
 
-- TBBS_CHECKBOX 自動チェックボックスボタン
+- TBBS_CHECKBOX自動チェックボックスボタン
 
-- TBBS_GROUP は、ボタンのグループの開始をマークします
+- TBBS_GROUP ボタンのグループの開始位置を示します。
 
-- TBBS_CHECKGROUP は、チェックボックスボタンのグループの開始をマークします
+- TBBS_CHECKGROUP チェック ボックス ボタンのグループの先頭をマークします。
 
-- TBBS_DROPDOWN ドロップダウンリストボタンを作成します。
+- TBBS_DROPDOWN ドロップダウン リスト ボタンを作成します。
 
 - TBBS_AUTOSIZE ボタンの幅は、イメージのサイズではなく、ボタンのテキストに基づいて計算されます。
 
-- TBBS_NOPREFIX ボタンテキストには、アクセラレータプレフィックスが関連付けられていません。
+- TBBS_NOPREFIX ボタンテキストにはアクセラレータのプレフィックスが関連付けされません。
 
-*iImage*<br/>
+*iイメージ*<br/>
 ビットマップ内のボタンのイメージの新しいインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スタイルが TBBS_SEPARATOR の区切り記号の場合、この関数は、 *iImage*に格納されている値に区切り記号の幅 (ピクセル単位) を設定します。
+スタイル TBBS_SEPARATORを持つ区切り文字の場合、この関数は、区切り文字の幅を*iImage*に格納されている値にピクセル単位で設定します。
 
 > [!NOTE]
->  また、 *Nstyle*パラメーターを使用してボタンの状態を設定することもできます。ただし、ボタンの状態は[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーによって制御されるため、を`SetButtonInfo`使用して設定した状態は、次のアイドル処理時に失われます。 [「[ユーザーインターフェイスオブジェクトとテクニカルノート31を更新する方法](../../mfc/how-to-update-user-interface-objects.md)」を参照してください。詳細に](../../mfc/tn031-control-bars.md)ついては、コントロールバーを参照してください。
+> *nStyle*パラメーターを使用してボタンの状態を設定することもできます。ただし、ボタンの状態は[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーによって制御されるため、使用する状態`SetButtonInfo`は次のアイドル処理中に失われます。 詳細については、「[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)」および[「TN031: コントロール バー](../../mfc/tn031-control-bars.md) 」を参照してください。
 
-ビットマップイメージとボタンの詳細については、「 [ctoolbar](../../mfc/reference/ctoolbar-class.md)の概要」と「 [Ctoolbar:: loadbitmap](#loadbitmap)」を参照してください。
+ビットマップ イメージとボタンの詳細については[、「CToolBar](../../mfc/reference/ctoolbar-class.md)の概要」および[「CToolBar::LoadBitmap](#loadbitmap)」を参照してください。
 
-##  <a name="setbuttons"></a>  CToolBar::SetButtons
+## <a name="ctoolbarsetbuttons"></a><a name="setbuttons"></a>コントロールバー::ボタンの設定
 
-このメンバー関数は、各ツールバーボタンのコマンド ID を、配列の*Lpidarray*の対応する要素によって指定された値に設定します。
+このメンバー関数は、各ツール バー ボタンのコマンド ID を配列*lpIDArray*の対応する要素で指定された値に設定します。
 
 ```
 BOOL SetButtons(
@@ -581,29 +581,29 @@ BOOL SetButtons(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpIDArray*<br/>
-コマンド Id の配列へのポインター。 空のボタンを割り当てるには NULL を指定できます。
+*を指定します。*<br/>
+コマンド ID の配列へのポインター。 空のボタンを割り当てるには NULL を指定できます。
 
-*nIDCount*<br/>
-*Lpidarray*が指す配列内の要素の数。
+*NIDカウント*<br/>
+によって指される配列内の要素の数*です*。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-配列の要素の値が ID_SEPARATOR の場合は、ツールバーの対応する位置に区切り記号が作成されます。 また、この関数は、各ボタンのスタイルを TBBS_BUTTON に設定し、各区切り記号のスタイルを TBBS_SEPARATOR に設定し、イメージのインデックスを各ボタンに割り当てます。 イメージインデックスは、ビットマップ内のボタンのイメージの位置を指定します。
+配列の要素がID_SEPARATOR値を持つ場合は、ツールバーの対応する位置に区切り記号が作成されます。 また、この関数は、各ボタンのスタイルをTBBS_BUTTONに設定し、各セパレータのスタイルをTBBS_SEPARATORに設定し、各ボタンにイメージインデックスを割り当てます。 イメージインデックスは、ビットマップ内のボタンのイメージの位置を指定します。
 
-この関数では区切り記号にイメージインデックスが割り当てられないため、ビットマップの区切り記号を考慮する必要はありません。 ツールバーの位置が0、1、3で、区切り記号が2の場合、ビットマップ内の位置が0、1、および2の画像はそれぞれ、0、1、3の位置にあるボタンに割り当てられます。
+この関数は、区切り記号のイメージ インデックスを割り当てないので、ビットマップ内の区切り文字を考慮する必要はありません。 ツール バーの位置が 0、1、3 の位置に、位置 2 に区切り記号がある場合、ビットマップの位置 0、1、および 2 のイメージは、それぞれ位置 0、1、3 のボタンに割り当てられます。
 
-*Lpidarray*が NULL の場合、この関数は、 *nIDCount*によって指定された項目の数に領域を割り当てます。 各項目の属性を設定するには、 [SetButtonInfo](#setbuttoninfo)を使用します。
+*lpIDArray*が NULL の場合、この関数は*nIDCount*で指定された項目数の領域を割り当てます。 各項目の属性を設定するには[、SetButtonInfo](#setbuttoninfo)を使用します。
 
-##  <a name="setbuttonstyle"></a>CToolBar:: SetButtonStyle
+## <a name="ctoolbarsetbuttonstyle"></a><a name="setbuttonstyle"></a>Cツールバー::セットボタンスタイル
 
-このメンバー関数を呼び出して、ボタンまたは区切り記号のスタイル、またはグループボタンを設定します。
+ボタンまたは区切り記号のスタイルを設定したり、ボタンをグループ化したりするために、このメンバー関数を呼び出します。
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -615,36 +615,36 @@ void SetButtonStyle(
 情報を設定するボタンまたは区切り記号のインデックス。
 
 *nStyle*<br/>
-ボタンのスタイル。 次のボタンスタイルがサポートされています。
+ボタンのスタイル。 次のボタン スタイルがサポートされています。
 
-- TBBS_BUTTON 標準のプッシュボタン (既定)
+- TBBS_BUTTON 標準押ボタン (デフォルト)
 
-- TBBS_SEPARATOR 区切り記号
+- TBBS_SEPARATOR区切り記号
 
-- TBBS_CHECKBOX 自動チェックボックスボタン
+- TBBS_CHECKBOX自動チェックボックスボタン
 
-- TBBS_GROUP は、ボタンのグループの開始をマークします
+- TBBS_GROUP ボタンのグループの開始位置を示します。
 
-- TBBS_CHECKGROUP は、チェックボックスボタンのグループの開始をマークします
+- TBBS_CHECKGROUP チェック ボックス ボタンのグループの先頭をマークします。
 
-- TBBS_DROPDOWN ドロップダウンリストボタンを作成します
+- TBBS_DROPDOWN ドロップダウン リスト ボタンを作成します。
 
-- TBBS_AUTOSIZE ボタンの幅は、イメージのサイズではなく、ボタンのテキストに基づいて計算されます。
+- TBBS_AUTOSIZE ボタンの幅は、画像のサイズではなく、ボタンのテキストに基づいて計算されます。
 
-- TBBS_NOPREFIX ボタンテキストにアクセラレータプレフィックスが関連付けられていない
+- TBBS_NOPREFIX ボタンテキストにはアクセラレータの接頭辞が関連付けされません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ボタンのスタイルによって、ボタンの表示方法と、ユーザー入力に対する応答方法が決まります。
+ボタンのスタイルによって、ボタンの表示方法とユーザー入力への応答方法が決まります。
 
-を呼び出す`SetButtonStyle`前に、 [getbuttonstyle](#getbuttonstyle)メンバー関数を呼び出して、ボタンまたは区切り記号のスタイルを取得します。
+を呼`SetButtonStyle`び出す前に[、GetButtonStyle](#getbuttonstyle)メンバー関数を呼び出して、ボタンまたは区切りスタイルを取得します。
 
 > [!NOTE]
->  また、 *Nstyle*パラメーターを使用してボタンの状態を設定することもできます。ただし、ボタンの状態は[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーによって制御されるため、を`SetButtonStyle`使用して設定した状態は、次のアイドル処理時に失われます。 [「[ユーザーインターフェイスオブジェクトとテクニカルノート31を更新する方法](../../mfc/how-to-update-user-interface-objects.md)」を参照してください。詳細に](../../mfc/tn031-control-bars.md)ついては、コントロールバーを参照してください。
+> *nStyle*パラメーターを使用してボタンの状態を設定することもできます。ただし、ボタンの状態は[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーによって制御されるため、使用する状態`SetButtonStyle`は次のアイドル処理中に失われます。 詳細については、「[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)」および[「TN031: コントロール バー](../../mfc/tn031-control-bars.md) 」を参照してください。
 
-##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
+## <a name="ctoolbarsetbuttontext"></a><a name="setbuttontext"></a>コントロールバー::ボタンテキストの設定
 
-ボタンのテキストを設定するには、この関数を呼び出します。
+ボタンのテキストを設定します。
 
 ```
 BOOL SetButtonText(
@@ -655,10 +655,10 @@ BOOL SetButtonText(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-テキストを設定するボタンのインデックス。
+テキストを設定するボタンのインデックスです。
 
 *lpszText*<br/>
-ボタンに設定するテキストを指します。
+ボタンに設定するテキストへのポイント。
 
 ### <a name="return-value"></a>戻り値
 
@@ -666,32 +666,32 @@ BOOL SetButtonText(
 
 ### <a name="example"></a>例
 
-  「 [CToolBar:: GetToolBarCtrl](#gettoolbarctrl)」の例を参照してください。
+  [の](#gettoolbarctrl)例を参照してください。
 
-##  <a name="setheight"></a>CToolBar:: SetHeight
+## <a name="ctoolbarsetheight"></a><a name="setheight"></a>Cツールバー::セットハイト
 
-このメンバー関数は、ツールバーの高さを、 *cyheight*で指定されたピクセル単位の値に設定します。
+このメンバー関数は、ツール バーの高さを*cyHeight*で指定されたピクセル単位の値に設定します。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*cyHeight*<br/>
-ツールバーの高さ (ピクセル単位)。
+*サイハイト*<br/>
+ツール バーの高さ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[Setsizes](#setsizes)を呼び出した後、このメンバー関数を使用して、標準のツールバーの高さをオーバーライドします。 高さが小さすぎる場合、ボタンは下部にクリップされます。
+[SetSizes](#setsizes)を呼び出した後、このメンバー関数を使用して、標準のツール バーの高さをオーバーライドします。 高さが小さすぎる場合は、ボタンが下部に切り取られる。
 
-この関数が呼び出されていない場合、フレームワークはボタンのサイズを使用して、ツールバーの高さを決定します。
+この関数が呼び出されない場合、フレームワークはボタンのサイズを使用してツール バーの高さを決定します。
 
-##  <a name="setsizes"></a>CToolBar:: SetSizes
+## <a name="ctoolbarsetsizes"></a><a name="setsizes"></a>Cツールバー::セットサイズ
 
-このメンバー関数を呼び出して、ツールバーのボタンをサイズ (ピクセル*単位) に*設定します。
+ツール バーのボタンを*sizeButton*で指定されたサイズ (ピクセル単位) に設定します。
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);
@@ -699,17 +699,17 @@ void SetSizes(
 
 ### <a name="parameters"></a>パラメーター
 
-*sizeButton*<br/>
+*サイズボタン*<br/>
 各ボタンのサイズ (ピクセル単位)。
 
-*sizeImage*<br/>
-各イメージのサイズ (ピクセル単位)。
+*サイズイメージ*<br/>
+各画像のサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Sizeimage*パラメーターには、ツールバーのビットマップ内のイメージのサイズ (ピクセル単位) が含まれている必要があります。 *Sizebutton*の大きさは、イメージを保持するのに十分であり、幅と高さが6ピクセルである必要があります。 また、この関数は、ボタンに応じてツールバーの高さを設定します。
+*sizeImage*パラメーターには、ツール バーのビットマップ内のイメージのサイズ (ピクセル単位) を含める必要があります。 サイズのサイズ*ボタン*は、画像に幅7ピクセル、高さ6ピクセルを加えた値を保持するのに十分でなければなりません。 この関数は、ボタンに合わせてツールバーの高さを設定します。
 
-このメンバー関数は、ボタンおよびイメージサイズのソフトウェア設計の推奨事項*について、Windows インターフェイスのガイドライン*に従っていないツールバーに対してのみ呼び出します。
+このメンバー関数は、Windows*インターフェイス の*ガイドラインに従わないツール バーのボタンとイメージのサイズに関する推奨値を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -717,10 +717,10 @@ void SetSizes(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[MFC のサンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
-[MFC のサンプル DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル CTRL バー](../../overview/visual-cpp-samples.md)<br/>
+[サンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル ドッキングツール](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl クラス](../../mfc/reference/ctoolbarctrl-class.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)

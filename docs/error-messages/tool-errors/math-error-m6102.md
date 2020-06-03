@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173765"
 ---
 # <a name="math-error-m6102"></a>数値演算エラー M6102
 
-非正規化します。
+denormal
 
-操作が無効である非常に小さい浮動小数点数を生成する有効桁の損失。 非正規化浮動小数点例外は通常はマスクされ、それらをトラップして操作します。
+操作によって非常に小さい浮動小数点数が生成されました。これは、有意性が失われたことが原因で無効です。 Denormal 浮動小数点例外は通常マスクされるため、トラップおよび操作されます。
 
-プログラムは、130 の終了コードで終了します。
+プログラムは終了コード130で終了します。

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370821"
 ---
 # <a name="automation"></a>オートメーション
 
@@ -37,7 +37,7 @@ ms.locfileid: "62374156"
 
 - オートメーション (ローカル)。
 
-- (分散 COM、DCOM を使用したネットワーク) 経由でリモート オートメーションです。
+- リモート オートメーション (分散 COM (DCOM) を使用したネットワーク経由)。
 
 アプリケーションが他のアプリケーションでも役に立つ機能を備えている場合は、オブジェクトを公開することは有益です。 たとえば、ActiveX コントロールは一種のオートメーション サーバーで、ActiveX コントロールをホストするアプリケーションは ActiveX コントロールのオートメーション クライアントです。
 
@@ -45,11 +45,11 @@ ms.locfileid: "62374156"
 
 さらに重要なのは、オートメーションがユーザーやソリューション プロバイダーに提供するサポートです。 標準的な仕様のインターフェイスを介してアプリケーションの機能を公開すると、さまざまなアプリケーション固有のマクロ言語ではなく、Microsoft Visual Basic などの単一の汎用プログラミング言語で広範なソリューションを構築できます。
 
-Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケーションでは、その機能の大部分を自動化できます。 たとえば、Visual C でビルドを自動化する VBScript のマクロ、コード編集、またはタスクのデバッグの側面を記述できます。
+Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケーションでは、その機能の大部分を自動化できます。 たとえば、Visual C++ では、 VBScript のマクロを記述することで、ビルド、コード編集、デバッグ作業などを自動化できます。
 
-##  <a name="_core_passing_parameters_in_automation"></a> オートメーションにおけるパラメーターの受け渡し
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> オートメーションにおけるパラメーターの受け渡し
 
-オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **バリアント**型は、多くの標準的なデータ型をサポートしています。2 と 4 バイトの整数、4 および 8 バイト浮動小数点数、文字列、およびブール値。 さらに、サポート、 **HRESULT** (OLE エラー コード)、**通貨**(固定小数点数値型)、および**日付**へのポインターと、(絶対日付と時刻)の型`IUnknown`と`IDispatch`インターフェイス。
+オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに **、HRESULT** (OLE エラー コード)、CURRENCY (固定小数点数値型)、**および DATE** (絶対日付と時刻) 型、およびポインターと`IUnknown``IDispatch`インターフェイスもサポートしています。 **CURRENCY**
 
 **VARIANT** 型は、 [COleVariant](../mfc/reference/colevariant-class.md) クラスにカプセル化されています。 サポートしている **CURRENCY** クラスと **DATE** クラスは、 [COleCurrency](../mfc/reference/colecurrency-class.md) クラスと [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) クラスにカプセル化されています。
 
@@ -67,13 +67,13 @@ Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケー�
 
 - [MFCCALC](../overview/visual-cpp-samples.md) オートメーション クライアント アプリケーションの例を示します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
 - [オートメーション クライアント](../mfc/automation-clients.md)
 
 - [オートメーション サーバー](../mfc/automation-servers.md)
 
-- [OLE](../mfc/ole-in-mfc.md)
+- [OLE●ole○](../mfc/ole-in-mfc.md)
 
 - [Active テクノロジ](../mfc/mfc-com.md)
 

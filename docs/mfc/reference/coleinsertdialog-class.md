@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b5de4ff5daa80e1d8727444a4cfd275597e18c08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374970"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog クラス
 
@@ -47,36 +47,36 @@ class COleInsertDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|`COleInsertDialog` オブジェクトを構築します。|
+|[ダイアログボックス::コレクル挿入ダイアログ](#coleinsertdialog)|`COleInsertDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleInsertDialog:: CreateItem](#createitem)|ダイアログボックスで選択した項目を作成します。|
-|[COleInsertDialog::D oModal](#domodal)|[OLE オブジェクトの挿入] ダイアログボックスを表示します。|
-|[COleInsertDialog:: GetClassID](#getclassid)|選択した項目に関連付けられている CLSID を取得します。|
-|[COleInsertDialog:: GetDrawAspect](#getdrawaspect)|項目をアイコンとして描画するかどうかを示します。|
-|[COleInsertDialog:: Geが Onicmetafile](#geticonicmetafile)|この項目のアイコン化形式に関連付けられているメタファイルへのハンドルを取得します。|
-|[COleInsertDialog::GetPathName](#getpathname)|ダイアログボックスで選択されたファイルへの完全パスを取得します。|
-|[COleInsertDialog:: GetSelectionType](#getselectiontype)|選択されたオブジェクトの型を取得します。|
+|[ダイアログボックス::アイテムの作成](#createitem)|ダイアログ ボックスで選択した項目を作成します。|
+|[ダイアログ ボックスを:Do モーダル](#domodal)|[OLE オブジェクトの挿入] ダイアログ ボックスを表示します。|
+|[ダイアログボックス::クラスIDを取得します。](#getclassid)|選択した項目に関連付けられている CLSID を取得します。|
+|[ダイアログ::取得ドローアスペクト](#getdrawaspect)|アイテムをアイコンとして描画するかどうかを指定します。|
+|[ダイアログボックス::取得アイコンメタファイル](#geticonicmetafile)|このアイテムのアイコン形式に関連付けられているメタファイルへのハンドルを取得します。|
+|[ダイアログボックス::パス名を取得します。](#getpathname)|ダイアログ ボックスで選択したファイルへの完全パスを取得します。|
+|[ダイアログボックス::選択タイプを取得します。](#getselectiontype)|選択されたオブジェクトの種類を取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleInsertDialog::m_io](#m_io)|ダイアログボックスの動作を制御する OLEUIINSERTOBJECT 型の構造体。|
+|[ダイアログ::m_io](#m_io)|ダイアログ ボックスの動作を制御する OLEUIINSERT オブジェクト型の構造体。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このダイアログボックスを呼び`COleInsertDialog`出す必要がある場合は、クラスのオブジェクトを作成します。 オブジェクトが構築されたら、[m_io](#m_io) 構造体を使用して、ダイアログボックス内のコントロールの値または状態を初期化できます。`COleInsertDialog` `m_io`構造体の型は OLEUIINSERTOBJECT です。 このダイアログクラスの使用方法の詳細については、「 [DoModal](#domodal)メンバー関数」を参照してください。
+このダイアログ ボックスを`COleInsertDialog`呼び出す場合は、クラスのオブジェクトを作成します。 オブジェクトを`COleInsertDialog`構築した後[、m_io](#m_io)構造を使用して、ダイアログ ボックス内のコントロールの値または状態を初期化できます。 構造体`m_io`の型は OLEUIINSERT オブジェクトです。 このダイアログ クラスの使用方法の詳細については[、DoModal](#domodal)メンバー関数を参照してください。
 
 > [!NOTE]
->  アプリケーションウィザードで生成されたコンテナーコードは、このクラスを使用します。
+> アプリケーション ウィザードで生成されたコンテナー コードでは、このクラスを使用します。
 
-詳細については、Windows SDK の[OLEUIINSERTOBJECT](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)構造体を参照してください。
+詳細については、Windows SDK の[「OLEUIINSERT オブジェクト](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)」構造を参照してください。
 
-OLE 固有のダイアログボックスの詳細については、 [ole の記事のダイアログボックス](../../mfc/dialog-boxes-in-ole.md)を参照してください。
+OLE 固有のダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -96,11 +96,11 @@ OLE 固有のダイアログボックスの詳細については、 [ole の記�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxodlgs
+**ヘッダー:** afxodlgs.h
 
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog
+## <a name="coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>ダイアログボックス::コレクル挿入ダイアログ
 
-この関数は、オブジェクト`COleInsertDialog`のみを構築します。
+この関数は`COleInsertDialog`オブジェクトのみを構築します。
 
 ```
 COleInsertDialog (
@@ -111,32 +111,32 @@ COleInsertDialog (
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-ビットごとの OR 演算子を使用して結合する次の値の任意の数を含む作成フラグ。
+ビットごとの OR 演算子を使用して結合される次の値の任意の数を含む作成フラグ。
 
-- IOF_SHOWHELP を指定すると、ダイアログボックスが呼び出されたときに [ヘルプ] ボタンが表示されます。
+- IOF_SHOWHELP ダイアログ ボックスが呼び出されたときに [ヘルプ] ボタンが表示されるように指定します。
 
-- IOF_SELECTCREATENEW ダイアログボックスを呼び出すと、最初に [新規作成] オプションボタンが選択されることを指定します。 これは既定値であり、IOF_SELECTCREATEFROMFILE では使用できません。
+- IOF_SELECTCREATENEW ダイアログ ボックスが呼び出されたときに、[新規作成] ラジオ ボタンが最初に選択されるように指定します。 これはデフォルトであり、IOF_SELECTCREATEFROMFILEと一緒に使用することはできません。
 
-- IOF_SELECTCREATEFROMFILE ダイアログボックスが呼び出されたときに、最初に [ファイルから作成] オプションボタンが選択されることを指定します。 IOF_SELECTCREATENEW と共に使用することはできません。
+- IOF_SELECTCREATEFROMFILE ダイアログ ボックスが呼び出されたときに、[ファイルから作成] オプション ボタンが最初に選択されるように指定します。 IOF_SELECTCREATENEWと併用することはできません。
 
-- IOF_CHECKLINK ダイアログボックスが呼び出されたときに、最初にリンクのチェックボックスがオンになるように指定します。
+- IOF_CHECKLINK ダイアログ ボックスが呼び出されたときに、[リンク] チェック ボックスが最初にオンになることを指定します。
 
-- IOF_DISABLELINK ダイアログボックスが呼び出されたときに、リンクのチェックボックスが無効になることを指定します。
+- IOF_DISABLELINK ダイアログ ボックスが呼び出されたときに[リンク]チェック ボックスが無効になります。
 
-- IOF_CHECKDISPLAYASICON は、[アイコンとして表示] チェックボックスが最初にオンになり、現在のアイコンが表示され、ダイアログボックスが呼び出されると [アイコンの変更] ボタンが有効になることを指定します。
+- IOF_CHECKDISPLAYASICON アイコンとして表示チェックボックスを最初にオンにし、現在のアイコンが表示され、ダイアログ ボックスが呼び出されたときに [アイコンの変更] ボタンが有効になります。
 
-- IOF_VERIFYSERVERSEXIST ダイアログボックスが表示される前に、登録データベースに指定されているサーバーが存在することを確認して、ダイアログボックスがリストボックスに追加するクラスを検証することを指定します。 このフラグを設定すると、パフォーマンスが大幅に低下する可能性があります。
+- IOF_VERIFYSERVERSEXIST登録データベースに指定されたサーバーがダイアログ ボックスを表示する前に存在することを確認して、ダイアログ ボックスに追加するクラスをリスト ボックスに検証するように指定します。 このフラグを設定すると、パフォーマンスが大幅に低下する可能性があります。
 
 *pParentWnd*<br/>
-ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( `CWnd`型) を指します。 NULL の場合は、ダイアログオブジェクトの親ウィンドウがメインアプリケーションウィンドウに設定されます。
+ダイアログ オブジェクトが属する (型`CWnd`) の親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクトへのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ダイアログボックスを表示するには、 [DoModal](#domodal)関数を呼び出します。
+ダイアログ ボックスを表示するには[、DoModal](#domodal)関数を呼び出します。
 
-##  <a name="createitem"></a>COleInsertDialog:: CreateItem
+## <a name="coleinsertdialogcreateitem"></a><a name="createitem"></a>ダイアログボックス::アイテムの作成
 
-[DoModal](#domodal)が IDOK を返す場合にのみ、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)型のオブジェクトを作成するには、この関数を呼び出します。
+この関数を呼び出して、型[の](../../mfc/reference/coleclientitem-class.md)オブジェクトを作成する場合に限り[、操作は](#domodal)IDOK を返します。
 
 ```
 BOOL CreateItem(COleClientItem* pItem);
@@ -144,20 +144,20 @@ BOOL CreateItem(COleClientItem* pItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pItem*<br/>
-作成する項目をポイントします。
+*Pitem*<br/>
+作成するアイテムへのポイント。
 
 ### <a name="return-value"></a>戻り値
 
-項目が作成された場合は0以外の。それ以外の場合は0です。
+項目が作成された場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す`COleClientItem`前に、オブジェクトを割り当てる必要があります。
+この関数を呼`COleClientItem`び出す前に、オブジェクトを割り当てる必要があります。
 
-##  <a name="domodal"></a>COleInsertDialog::D oModal
+## <a name="coleinsertdialogdomodal"></a><a name="domodal"></a>ダイアログ ボックスを:Do モーダル
 
-[OLE 挿入オブジェクト] ダイアログボックスを表示するには、この関数を呼び出します。
+OLE オブジェクトの挿入] ダイアログ ボックスを表示します。
 
 ```
 virtual INT_PTR
@@ -170,33 +170,33 @@ INT_PTR
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-次のいずれかの値です。
+次のいずれかの値:
 
-`COleInsertDialog::DocObjectsOnly`DocObjects のみを挿入します。
+`COleInsertDialog::DocObjectsOnly`は、Doc オブジェクトのみを挿入します。
 
-`COleInsertDialog::ControlsOnly`ActiveX コントロールのみを挿入します。
+`COleInsertDialog::ControlsOnly`は ActiveX コントロールのみを挿入します。
 
-0の場合、DocObject も ActiveX コントロールも挿入されません。 この値は、上記の最初のプロトタイプと同じ実装になります。
+ゼロは、DocObject コントロールも ActiveX コントロールも挿入されません。 この値は、上記の最初のプロトタイプと同じ実装になります。
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログボックスの完了ステータス。 次のいずれかの値です。
+ダイアログ ボックスの完了ステータス。 次のいずれかの値:
 
-- IDOK ダイアログボックスが正常に表示された場合は。
+- ダイアログ ボックスが正常に表示された場合は IDOK。
 
-- ユーザーがダイアログボックスをキャンセルした場合は IDCANCEL。
+- ユーザーがダイアログ ボックスをキャンセルした場合は、IDCANCEL を指定します。
 
-- エラーが発生した場合は IDABORT。 IDABORT が返された場合は、 [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の「 [OleUIInsertObject](/windows/win32/api/oledlg/nf-oledlg-oleuiinsertobjectw)関数」を参照してください。
+- エラーが発生した場合は、IDABORT を実行します。 IDABORT が返された場合は、発生したエラーの種類に関する詳細情報を取得するのには[、COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出します。 考えられるエラーの一覧については、Windows SDK の[「OleUIInsertObject](/windows/win32/api/oledlg/nf-oledlg-oleuiinsertobjectw)関数」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[M_io](#m_io)構造体のメンバーを設定してさまざまなダイアログボックスコントロールを初期化する場合は、を呼び出す`DoModal`前に、ダイアログオブジェクトが構築された後に、この操作を行う必要があります。
+[m_io](#m_io)構造体のメンバを設定してさまざまなダイアログ ボックス コントロールを初期化する場合は、ダイアログ オブジェクトを作成`DoModal`した後で呼び出す前に、この操作を行う必要があります。
 
-が`DoModal` IDOK を返す場合は、他のメンバー関数を呼び出して、ユーザーがダイアログボックス内の設定または情報入力を取得できます。
+IDOK が返された場合`DoModal`は、他のメンバー関数を呼び出して、ユーザーがダイアログ ボックスに入力した設定または情報を取得できます。
 
-##  <a name="getclassid"></a>COleInsertDialog:: GetClassID
+## <a name="coleinsertdialoggetclassid"></a><a name="getclassid"></a>ダイアログボックス::クラスIDを取得します。
 
-この関数を呼び出して、選択した項目に関連付けられている CLSID を取得します`COleInsertDialog::createNewItem`。これは、[DoModal](#domodal) が IDOK を返し、選択の型がである場合に限ります。
+[DoModal](#domodal)が IDOK を返し、選択タイプが`COleInsertDialog::createNewItem`の場合にのみ、選択した項目に関連付けられた CLSID を取得します。
 
 ```
 REFCLSID GetClassID() const;
@@ -204,15 +204,15 @@ REFCLSID GetClassID() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された項目に関連付けられている CLSID を返します。
+選択した項目に関連付けられている CLSID を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、Windows SDK の「 [CLSID キー](/windows/win32/com/clsid-key-hklm) 」を参照してください。
+詳細については、Windows SDK[の CLSID キー](/windows/win32/com/clsid-key-hklm)を参照してください。
 
-##  <a name="getdrawaspect"></a>COleInsertDialog:: GetDrawAspect
+## <a name="coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>ダイアログ::取得ドローアスペクト
 
-ユーザーが選択した項目をアイコンとして表示することを選択したかどうかを判断するには、この関数を呼び出します。
+選択した項目をアイコンとして表示するかどうかを調べます。
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -220,21 +220,21 @@ DVASPECT GetDrawAspect() const;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトを表示するために必要なメソッド。
+オブジェクトのレンダリングに必要なメソッド。
 
-- [アイコンとして表示] チェックボックスがオンになっていない場合、DVASPECT_CONTENT が返されます。
+- DVASPECT_CONTENT アイコンとして表示] チェック ボックスがオフの場合は返されます。
 
-- [アイコンとして表示] チェックボックスがオンになっている場合、DVASPECT_ICON が返されます。
+- DVASPECT_ICON アイコンとして表示 チェックボックスがオンの場合に返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[DoModal](#domodal)が IDOK を返す場合にのみ、この関数を呼び出します。
+この関数は[、DoModal](#domodal)が IDOK を返す場合にのみ呼び出されます。
 
-アスペクトの描画の詳細については、Windows SDK の「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) data structure」を参照してください。
+描画の側面の詳細については、Windows SDK[の FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)データ構造を参照してください。
 
-##  <a name="geticonicmetafile"></a>COleInsertDialog:: Geが Onicmetafile
+## <a name="coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>ダイアログボックス::取得アイコンメタファイル
 
-選択した項目のアイコンの側面を含むメタファイルへのハンドルを取得するには、この関数を呼び出します。
+選択した項目のアイコン的な側面を含むメタファイルへのハンドルを取得します。
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -242,11 +242,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>戻り値
 
-**[OK**] をクリックしてダイアログを閉じたときに [アイコンとして表示] チェックボックスがオンになっていた場合に、選択した項目のアイコンの側面を含むメタファイルへのハンドル。それ以外の場合は NULL。
+ダイアログボックスが閉じられたときに [アイコンで表示] チェック ボックスがオンの場合は **、[OK]** をクリックして、選択した項目のアイコンを含むメタファイルへのハンドル。それ以外の場合は NULL。
 
-##  <a name="getpathname"></a>  COleInsertDialog::GetPathName
+## <a name="coleinsertdialoggetpathname"></a><a name="getpathname"></a>ダイアログボックス::パス名を取得します。
 
-この関数を呼び出して、 [DoModal](#domodal)が IDOK を返し、選択の型がでない`COleInsertDialog::createNewItem`場合にのみ、選択したファイルの完全パスを取得します。
+[DoModal](#domodal)が IDOK を返し、選択タイプがでない`COleInsertDialog::createNewItem`場合にのみ、選択したファイルの完全なパスを取得します。
 
 ```
 CString GetPathName() const;
@@ -254,11 +254,11 @@ CString GetPathName() const;
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログボックスで選択されたファイルへの完全パスです。 選択型がの場合`createNewItem`、この関数は、リリース`CString`モードでは無意味であるか、またはデバッグモードでアサーションを発生させます。
+ダイアログ ボックスで選択したファイルへの完全パス。 選択の種類が`createNewItem`の場合、この関数はリリース`CString`モードでは無意味を返すか、デバッグ モードでアサーションを発生させます。
 
-##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType
+## <a name="coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>ダイアログボックス::選択タイプを取得します。
 
-[オブジェクトの挿入] ダイアログボックスが閉じられたときに選択した選択の種類を取得するには、この関数を呼び出します。 **[OK]** をクリックします。
+**[OK]** をクリックして [オブジェクトの挿入] ダイアログ ボックスが閉じられたときに選択した種類を取得します。
 
 ```
 UINT GetSelectionType() const;
@@ -266,11 +266,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された種類。
+選択の種類です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値の型の値は、 `Selection` `COleInsertDialog`クラスで宣言された列挙型によって指定されます。
+戻り値の型の値は`Selection`、クラスで宣言された`COleInsertDialog`列挙型によって指定されます。
 
 ```
 enum Selection {
@@ -280,31 +280,31 @@ enum Selection {
     };
 ```
 
-これらの値の簡単な説明を次に示します。
+これらの値の簡単な説明は次のとおりです。
 
-- `COleInsertDialog::createNewItem`[新規作成] ラジオボタンが選択されました。
+- `COleInsertDialog::createNewItem`[新規作成] ラジオ ボタンが選択されました。
 
-- `COleInsertDialog::insertFromFile`[ファイルから作成] オプションボタンが選択されており、[リンク] チェックボックスがオンになっていませんでした。
+- `COleInsertDialog::insertFromFile`[ファイルから作成] オプション ボタンが選択され、[リンク] チェック ボックスがオフになっていません。
 
-- `COleInsertDialog::linkToFile`[ファイルから作成] オプションボタンが選択され、[リンク] チェックボックスがオンになりました。
+- `COleInsertDialog::linkToFile`[ファイルから作成] ラジオ ボタンが選択され、[リンク] チェック ボックスがオンになっています。
 
-##  <a name="m_io"></a>  COleInsertDialog::m_io
+## <a name="coleinsertdialogm_io"></a><a name="m_io"></a>ダイアログ::m_io
 
-[オブジェクトの挿入] ダイアログボックスの動作を制御するために使用される OLEUIINSERTOBJECT 型の構造。
+オブジェクトの挿入ダイアログ ボックスの動作を制御するために使用される OLEUIINSERT オブジェクト型の構造体。
 
 ```
 OLEUIINSERTOBJECT m_io;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。
+この構造体のメンバーは、直接またはメンバー関数を通じて変更できます。
 
-詳細については、Windows SDK の[OLEUIINSERTOBJECT](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)構造体を参照してください。
+詳細については、Windows SDK の[「OLEUIINSERT オブジェクト](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw)」構造を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[サンプル O クライアント](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)

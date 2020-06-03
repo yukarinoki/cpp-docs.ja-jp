@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-ms.openlocfilehash: 97f6f0a08c8ef292d81471cb5d0d94e359466933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a2d72b429f762e476286093c7f273a9a546cb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393494"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174675"
 ---
 # <a name="compiler-warning-level-1-c4917"></a>コンパイラの警告 (レベル 1) C4917
 
-'declarator': GUID はクラス、インターフェイスまたは名前空間に関連付けできます。
+' 宣言子 ': GUID はクラス、インターフェイス、または名前空間にのみ関連付けることができます
 
-ユーザー定義構造体以外の[クラス](../../cpp/class-cpp.md)、[インターフェイス](../../cpp/interface.md)、または[名前空間](../../cpp/namespaces-cpp.md)GUID を含めることはできません。
+[クラス](../../cpp/class-cpp.md)、[インターフェイス](../../cpp/interface.md)、または[名前空間](../../cpp/namespaces-cpp.md)以外のユーザー定義構造体に GUID を指定することはできません。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 ## <a name="example"></a>例
 
-次のコード サンプルでは、C4917 が生成されます。
+次のコード例では、C4917 が生成されます。
 
 ```cpp
 // C4917.cpp

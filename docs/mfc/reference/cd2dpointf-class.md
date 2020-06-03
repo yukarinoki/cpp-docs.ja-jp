@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: b8fe808c3147fa52c5041e2988822ace0ba60896
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d66c31289f9e17df99df4681cff1d5cf6a0ec86
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396341"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369160"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF クラス
 
@@ -31,13 +31,13 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|オーバーロードされます。 構築、`CD2DPointF`オブジェクトから`D2D1_POINT_2F`オブジェクト。|
+|[CD2Dポイントフ::CD2Dポイントフ](#cd2dpointf)|オーバーロードされます。 オブジェクトから`D2D1_POINT_2F`オブジェクト`CD2DPointF`を構築します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPointF::operator CPoint](#operator_cpoint)|変換`CD2DPointF`に`CPoint`オブジェクト。|
+|[CD2DPointF::オペレーターCポイント](#operator_cpoint)|オブジェクトに`CD2DPointF``CPoint`変換します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,7 +49,7 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF
+## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2Dポイントフ::CD2Dポイントフ
 
 CPoint オブジェクトから CD2DPointF オブジェクトを構築します。
 
@@ -62,18 +62,18 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
+*Pt*<br/>
 ソース ポイント
 
-*fX*<br/>
+*Fx*<br/>
 ソース X
 
-*fY*<br/>
+*年度*<br/>
 ソース Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint
+## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::オペレーターCポイント
 
-CD2DPointF CPoint オブジェクトに変換します。
+CD2DPointF を CPoint オブジェクトに変換します。
 
 ```
 operator CPoint();
@@ -81,7 +81,7 @@ operator CPoint();
 
 ### <a name="return-value"></a>戻り値
 
-D2D ポイントの現在の値。
+D2D 点の現在の値。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4213
 ms.assetid: 59fc3f61-ebd2-499e-99d7-f57bec11eda1
-ms.openlocfilehash: 318b228a1af17543062943a336ccccd06bc6ae46
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: e462fcc2d0283d2519796127612123f7d792d00e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541806"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161296"
 ---
 # <a name="compiler-warning-level-4-c4213"></a>コンパイラの警告 (レベル 4) C4213
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541806"
 
 既定の Microsoft 拡張機能 (/Ze) では、代入ステートメントの左側でキャストを使用できます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // C4213.c

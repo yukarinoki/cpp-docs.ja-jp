@@ -1,9 +1,11 @@
 ---
 title: _endthread、_endthreadex
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _endthread
 - _endthreadex
+- _o__endthread
+- _o__endthreadex
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: c9dd4a49e534e8fa3e0f5ac735faccb4b0f65af5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915082"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread、_endthreadex
 
-スレッドを終了します。 **_endthread**は、 **_beginthread**によって作成されたスレッドを終了し、 **_endthreadex**は **_beginthreadex**によって作成されたスレッドを終了します。
+スレッドを終了します。**_endthread**は **_beginthread**によって作成されたスレッドを終了し **_endthreadex** **_beginthreadex**によって作成されたスレッドを終了します。
 
 ## <a name="syntax"></a>構文
 
@@ -58,19 +61,21 @@ void _endthreadex(
 *retval*<br/>
 スレッド終了コード。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Endthread**または **_endthreadex**を明示的に呼び出してスレッドを終了できます。ただし、 **_endthread**または **_endthreadex**は、 **_beginthread**または **_beginthreadex**にパラメーターとして渡されたルーチンからスレッドが戻ったときに、自動的に呼び出されます。 **Endthread**または **_endthreadex**を呼び出してスレッドを終了すると、スレッドに割り当てられたリソースを適切に回復することができます。
+**_Endthread**または **_endthreadex**を明示的に呼び出してスレッドを終了できます。ただし、 **_endthread**または **_endthreadex**は、 **_beginthread**または **_beginthreadex**にパラメーターとして渡されたルーチンからスレッドが戻ったときに、自動的に呼び出されます。 **Endthread**または **_endthreadex**を呼び出すことによってスレッドを終了すると、スレッドに割り当てられたリソースを適切に復旧できます。
 
 > [!NOTE]
-> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**は、割り当てられたスレッドリソースを解放し、 **exitthread**を呼び出します。
+> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**は、割り当てられているスレッドリソースを解放し、 **exitthread**を呼び出します。
 
-**_endthread**は、スレッドハンドルを自動的に閉じます。 (この動作は、Win32 **Exitthread** API とは異なります)。したがって、 **_beginthread**と **_endthread**を使用する場合は、Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API を呼び出してスレッドハンドルを明示的に閉じないでください。
+**_endthread**によって、スレッドハンドルが自動的に閉じられます。 (この動作は、Win32 **Exitthread** API とは異なります)。したがって、 **_beginthread**と **_endthread**を使用する場合は、Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API を呼び出してスレッドハンドルを明示的に終了しないでください。
 
 Win32 **exitthread** API と同様に、 **_endthreadex**はスレッドハンドルを閉じません。 したがって、 **_beginthreadex**と **_endthreadex**を使用する場合は、Win32 **CloseHandle** API を呼び出してスレッドハンドルを閉じる必要があります。
 
 > [!NOTE]
-> **_endthread**と **_endthreadex**はC++ 、スレッドで保留中のデストラクターが呼び出されない原因になります。
+> **_endthread**と **_endthreadex**により、スレッドで保留中の C++ デストラクターは呼び出されません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -79,7 +84,7 @@ Win32 **exitthread** API と同様に、 **_endthreadex**はスレッドハン�
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -91,5 +96,5 @@ Win32 **exitthread** API と同様に、 **_endthreadex**はスレッドハン�
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_beginthread、_beginthreadex](beginthread-beginthreadex.md)<br/>

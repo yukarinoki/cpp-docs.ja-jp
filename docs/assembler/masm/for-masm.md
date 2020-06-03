@@ -1,17 +1,15 @@
 ---
 title: FOR (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- for
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: c92e909b62331a630a9a09be6193f400ad32dc30
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 3572abbf35024ce56435b66640886c03093bfc14
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318081"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440853"
 ---
 # <a name="for"></a>FOR
 
@@ -19,7 +17,7 @@ ms.locfileid: "75318081"
 
 ## <a name="syntax"></a>構文
 
-> *パラメーター* ⟦ **: REQ** |  __: =__ *default*⟧ **、\<** _引数_⟦ __、__ *argument* ...⟧ **>** \
+> **FOR** *パラメーター* ⟦ **: REQ** |  __: =__ *default*⟧ **、\<** _引数_⟦ __、__ *argument* ...⟧ **>** \
 > *ステートメント*の\
 > **ENDM**
 
@@ -27,7 +25,7 @@ ms.locfileid: "75318081"
 
 [IRP](irp.md)と同じです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブリファレンス](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorPaletteBar クラス
+title: クラスをイメージします。
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImageEditorPaletteBar
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33d4bc0c72718d028031ac11bc67da6aec5e4907
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374428"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar クラス
+# <a name="cmfcimageeditorpalettebar-class"></a>クラスをイメージします。
 
-イメージ エディター ダイアログ ボックスにパレット バー機能を提供します。
+イメージ エディターダイアログ ボックスにパレット バー機能を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +34,14 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |||
 |-|-|
 |名前|説明|
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|ツール バー ボタンの高さを返します。 (上書き[CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight))。|
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|罫線を拡張するボタンがツールバーに表示できるかどうかを判断します。 (上書き[CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable))。|
+|[パレットバー::ゲットローハイト](#getrowheight)|ツール バー ボタンの高さを返します。 (CMFC ツールバーをオーバーライド[します。::ゲットローハイト](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
+|[パレットバー::ボタンエクストラサイズ利用可能](#isbuttonextrasizeavailable)|ツール バーに、拡張枠線を持つボタンを表示できるかどうかを指定します。 (CMFC ツールバーをオーバーライド[します。)](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラスは、コードから直接使用するものではありません。
+このクラスは、コードで直接使用するためのものではありません。
 
-フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスでパレット バーを表示します。 イメージ エディターのダイアログ ボックスの詳細については、次を参照してください。 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
+フレームワークは、このクラスを使用して、イメージ エディター ダイアログ ボックスにパレット バーを表示します。 イメージ エディター ダイアログ ボックスの詳細については[、「CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,17 +55,17 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCBaseToolBa](../../mfc/reference/cmfcbasetoolbar-class.md)
+[ツールバ](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
+[パレットバー](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afximageeditordialog.h
+**ヘッダー:** afximage エディターダイアログ.h
 
-##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight
+## <a name="cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>パレットバー::ゲットローハイト
 
 ツール バー ボタンの高さを返します。
 
@@ -75,11 +75,11 @@ virtual int GetRowHeight() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールバーの各ボタンの高さ。
+ツール バーの各ボタンの高さ。
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
+## <a name="cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>パレットバー::ボタンエクストラサイズ利用可能
 
-罫線を拡張するボタンがツールバーに表示できるかどうかを判断します。
+ツール バーに、拡張枠線を持つボタンを表示できるかどうかを指定します。
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -87,10 +87,10 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは、FALSE を返します。
+このメソッドは FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)
+[クラスをイメージします。](../../mfc/reference/cmfcimageeditordialog-class.md)

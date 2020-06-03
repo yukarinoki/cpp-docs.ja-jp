@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1313
 ms.assetid: 6c7631c8-6fd7-476a-9303-564717fda0f9
-ms.openlocfilehash: 825edb8487b045e39335e4eaea5cc9c725e70896
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64921221a146221319ec80202353f95d950b15b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203191"
 ---
 # <a name="fatal-error-c1313"></a>致命的なエラー C1313
 
-コンパイラの制限: 型のブロックがない深く入れ子にするレベル数よりも
+コンパイラの制限: 型ブロックは、数値レベルよりも深く入れ子にすることはできません
 
-例外処理 (または構造化例外処理) ブロックの入れ子が深すぎます。  コードを簡略化します。
+例外処理 (または構造化例外処理) ブロックの入れ子のレベルが深すぎます。  コードを簡略化します。

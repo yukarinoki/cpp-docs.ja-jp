@@ -1,5 +1,5 @@
 ---
-title: IAtlAutoThreadModule クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: f65ce43f3e88e1bbff0d2fc012b4ca75d77efc80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330071"
 ---
-# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule クラス
+# <a name="iatlautothreadmodule-class"></a>クラス
 
-このクラスへのインターフェイスを表す、`CreateInstance`メソッド。
+このクラスは、メソッドへのインターフェイス`CreateInstance`を表します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -27,9 +27,9 @@ ms.locfileid: "62276368"
 __interface IAtlAutoThreadModule
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスは、 [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)から派生した`IAtlAutoThreadModule`オブジェクトを作成すると、インターフェイス ポインターを取得するコードを提供するために使用します。
+クラス[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)は`IAtlAutoThreadModule`、オブジェクトを作成し、インターフェイス ポインターを取得するためのコードを提供するために、このクラスを使用してから派生します。
 
 ## <a name="requirements"></a>必要条件
 

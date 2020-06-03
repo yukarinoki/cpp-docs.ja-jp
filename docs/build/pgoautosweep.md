@@ -7,14 +7,14 @@ f1_keywords:
 - PogoAutoSweepW
 ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
 ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/03/2019
 ms.locfileid: "67552244"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` ファイルにプロファイルの現在のカウンター情報を保存し、カウンターをリセットします。 トレーニングを実行中のプログラムからすべてのプロファイル データを書き込むために、プロファイル ガイド付き最適化の中に関数を使用して、`.pgc`ファイル最適化のビルドの後で使用します。
+`PgoAutoSweep` では、現在のプロファイル カウンター情報がファイルに保存され、その後、カウンターがリセットされます。 ガイド付き最適化のプロファイル トレーニング中にこの関数を使用すると、最適化ビルドで後で使用するため、実行中のプログラムから `.pgc` ファイルにすべてのプロファイル データが書き込まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,19 +26,19 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-保存済みの識別文字列`.pgc`ファイル。
+保存済み `.pgc` ファイルを識別する文字列。
 
 ## <a name="remarks"></a>Remarks
 
-呼び出すことができます`PgoAutoSweep`から、アプリケーションを保存し、アプリケーションの実行中に任意の時点で、プロファイル データをリセットします。 インストルメントされたビルドで`PgoAutoSweep`は現在のプロファイル データをキャプチャ、ファイルに保存、およびプロファイル カウンターをリセットします。 呼び出し元のと同じ、 [pgosweep](pgosweep.md)特定の時点で、実行可能ファイル コマンド。 最適化されたビルドでは、`PgoAutoSweep`は行いません。
+アプリケーションから `PgoAutoSweep` を呼び出し、アプリケーション実行中、任意の時点でプロファイル データを保存し、リセットできます。 インストルメント化されたビルドでは、`PgoAutoSweep` によって現在のプロファイル データがキャプチャされ、それがファイルに保存され、プロファイル カウンターがリセットされます。 実行可能ファイルの特定の位置で [pgosweep](pgosweep.md) コマンドを呼び出すことと同じです。 最適化されたビルドでは、`PgoAutoSweep` は操作なしです。
 
-カウンター データを保存されたプロファイルがという名前のファイルに配置*base_name*-*名前*!*値*.pgc、場所*base_name*は、実行可能ファイルの基本名*名前*に渡されたパラメーター `PgoAutoSweep`、および*値*一意の値、ファイル名の競合を防ぐために、通常は連番です。
+保存されたプロファイル カウンター データは *base_name*-*name*!*value*.pgc という名前のファイルに保存されます。*base_name* は実行可能ファイルの基礎名です。*name* は `PgoAutoSweep` に渡されたパラメーターです。*value* は一意の値であり、ファイル名の競合を回避するため、通常は単調に数値を上げます。
 
-`.pgc`によって作成されたファイル`PgoAutoSweep`にマージする必要があります、`.pgd`最適化された実行可能ファイルの作成に使用するファイル。 使用することができます、 [pgomgr](pgomgr.md)マージを実行するコマンド。
+`PgoAutoSweep` によって作成された `.pgc` ファイルは、最適化された実行可能ファイルを作成するため、`.pgd` ファイルに結合する必要があります。 [pgomgr](pgomgr.md) コマンドを使用し、結合できます。
 
-マージされた名前を渡すことができます`.pgd`ファイルを使用して、最適化のビルド時にリンカーを**PGD =** _filename_への引数、 [/USEPROFILE](reference/useprofile.md)リンカーオプション、または非推奨を使用して **/PGD**リンカー オプション。 マージする場合、`.pgc`という名前のファイルにファイルを*base_name*.pgd、する必要はありません、コマンドラインで、ファイル名を指定するため、リンカーが既定でこのファイル名を取得します。
+[/USEPROFILE](reference/useprofile.md) リンカー オプションに **PGD=** _filename_ 引数を使用するか、非推奨の **/PGD** リンカー オプションを使用することで、最適化ビルド中、結合した `.pgd` ファイルの名前をリンカーに渡すことができます。 *base_name*.pgd という名前のファイルに `.pgc` ファイルを結合した場合、リンカーによって既定でこのファイル名が選択されるため、コマンド ラインにファイル名を指定する必要がありません。
 
-`PgoAutoSweep`機能は、スレッド セーフの設定は、インストルメント化されたビルドを作成するときに指定します。 既定の設定を使用するか、指定した場合、 **noexact は、** への引数、 [/GENPROFILE または/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)リンカー オプション、呼び出し`PgoAutoSweep`スレッド セーフではありません。 **EXACT**引数作成スレッド セーフでありより正確なが低速でインストルメント化された実行可能ファイルです。
+`PgoAutoSweep` 関数は、インストルメント化されたビルドの作成時に指定されたスレッドセーフの設定を保持します。 既定の設定を使用するか、[/GENPROFILE または /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) リンカー オプションに **NOEXACT** 引数を指定する場合、`PgoAutoSweep` の呼び出しはスレッドセーフではありません。 **EXACT** 引数により、インストルメント化された実行可能ファイルはスレッドセーフになり、精度が上がり、速度が下がります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -46,11 +46,11 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 |-------------|---------------------|
 |`PgoAutoSweep`|\<pgobootrun.h>|
 
-実行可能ファイルは、リンクされたライブラリに pgobootrun.lib ファイルを含める必要があります。 このファイルは、サポートされている各アーキテクチャの VC ライブラリ ディレクトリに、Visual Studio のインストールに含まれます。
+実行可能ファイルでは、リンクされているライブラリに pgobootrun.lib ファイルを含める必要があります。 このファイルは、Visual Studio インストールの、サポートされているアーキテクチャ別の VC ライブラリ ディレクトリに含まれます。
 
 ## <a name="example"></a>例
 
-使用して次の例`PgoAutoSweep`2 つ作成する`.pgc`ファイルの実行中にさまざまな時点。 最初にまでのランタイム動作を説明するデータが含まれています`count`が 3、2 番目にアプリケーションの終了直前までこのポイントの後に収集されたデータが含まれています。
+次の例では、`PgoAutoSweep` を使用し、実行中、異なる時点で 2 つの `.pgc` ファイルが作成されます。 最初のファイルには、`count` が 3 に等しくなるまでのランタイム動作を説明するデータが含まれます。2 つ目のファイルには、この時点の後、アプリケーションの終了直前までに収集されたデータが含まれます。
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-開発者コマンド プロンプトで、このコマンドを使用してオブジェクト ファイルにコードをコンパイルします。
+開発者コマンド プロンプトでは、このコマンドを利用し、コードをオブジェクト ファイルにコンパイルします。
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-このコマンドを使用してトレーニング用にインストルメントされたビルドを生成します。
+次に、このコマンドを利用し、トレーニング用にインストルメント化されたビルドが生成されます。
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-トレーニング データをキャプチャするインストルメント化された実行可能ファイルを実行します。 データの出力への呼び出しによって`PgoAutoSweep`pgoautosweep func1 という名前のファイルに保存されます。 1.pgc と pgoautosweep func2! 1.pgc。 実行時にこのようプログラムの出力になります。
+インストルメント化された実行可能ファイルを実行し、トレーニング データをキャプチャします。 `PgoAutoSweep` の呼び出しで出力されたデータは、pgoautosweep-func1!1.pgc という名前のファイルと pgoautosweep-func2!1.pgc という名前のファイルに保存されます。 プログラムを実行すると、その出力は次のようになります。
 
 ```Output
 hello from func1 9
@@ -120,11 +120,11 @@ hello from func2 1
 hello from func2 0
 ```
 
-実行して、プロファイルのトレーニング データベースに保存されたデータをマージ、 **pgomgr**コマンド。
+**pgomgr** コマンドを実行し、プロファイル トレーニング データベースに保存済みデータを結合します。
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
-このコマンドの出力は、次のようになります。
+このコマンドの出力は次のようになります。
 
 ```Output
 Microsoft (R) Profile Guided Optimization Manager 14.13.26128.0
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-今すぐこのトレーニング データを使用して、最適化されたビルドを生成することができます。 このコマンドを使用して、最適化された実行可能ファイルを作成します。
+これで、このトレーニング データを使用し、最適化されたビルドを生成できるようになりました。 このコマンドを使用し、最適化された実行可能ファイルをビルドします。
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 

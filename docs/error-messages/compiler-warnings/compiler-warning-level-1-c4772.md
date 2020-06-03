@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175133"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>コンパイラの警告 (レベル 1) C4772
 
-> \#インポートが不足しているタイプ ライブラリ; から型を参照'*不足している型*' プレース ホルダーとして使用
+> \#インポートで、欠落しているタイプライブラリから型が参照されています。'*missing-type*' がプレースホルダーとして使用されています
 
-タイプ ライブラリが参照された、 [#import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブ。 ただし、タイプ ライブラリがで参照されていませんでしたが、別のタイプ ライブラリへの参照に含まれる`#import`します。 コンパイラによってこの他の .tlb ファイルが見つかりませんでした。
+[#Import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブを使用して、タイプライブラリが参照されました。 ただし、タイプライブラリには、`#import`で参照されていない別のタイプライブラリへの参照が含まれていました。 この他の .tlb ファイルは、コンパイラによって検出されませんでした。
 
-コンパイラが見つけられなかったことタイプ ライブラリで別のディレクトリを使用する場合に注意してください、 [/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md)コンパイラ オプションは、これらのディレクトリを指定します。 コンパイラにタイプ ライブラリを別のディレクトリで検索する場合は、これらのディレクトリを PATH 環境変数に追加します。
+[/I (追加のインクルードディレクトリ)](../../build/reference/i-additional-include-directories.md)コンパイラオプションを使用してこれらのディレクトリを指定した場合、コンパイラは異なるディレクトリにタイプライブラリを見つけることができないことに注意してください。 コンパイラで異なるディレクトリのタイプライブラリを検索する場合は、これらのディレクトリを PATH 環境変数に追加します。
 
-既定では、この警告はエラーとして発行されます。 /W0 で C4772 を抑制することはできません。
+既定では、この警告はエラーとして発行されます。 /W0. では C4772 を抑制できません
 
 ## <a name="example"></a>例
 
-これは、最初のタイプ ライブラリを C4772 を再現するために必要です。
+これは、C4772 を再現するために必要な最初のタイプライブラリです。
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-これは、2 つ目のタイプ ライブラリが C4772 を再現するために必要です。
+これは、C4772 を再現するために必要な2番目のタイプライブラリです。
 
 ```IDL
 // c4772b.idl

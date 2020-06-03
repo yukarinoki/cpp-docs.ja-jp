@@ -13,61 +13,61 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-ms.openlocfilehash: 4582b03844e1be3d4cf70bcc3fff1c3b66119ae3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1762931b75734801659fd6271377260bd0473614
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373457"
 ---
 # <a name="toolbar-tool-tips"></a>ツール バーのツール ヒント
 
-ツール ヒントは、一定期間、ボタンの上でマウスを配置するときに、ツール バー ボタンの目的の簡単な説明を表示する小さなポップアップ ウィンドウです。 アプリケーション ウィザードは、ツールバーがありますアプリケーションを作成するときにツール ヒントのサポートが提供されます。 この記事では、アプリケーションのウィザードとツール ヒントのサポートをアプリケーションに追加する方法によって作成された、両方のツール ヒント サポートについて説明します。
+ツール ヒントは、一定期間ボタンの上にマウスを置いたときに、ツール バー ボタンの目的の短い説明を示す小さなポップアップ ウィンドウです。 ツールバーを備えたアプリケーション ウィザードを使用してアプリケーションを作成する場合、ツール ヒントのサポートが提供されます。 この資料では、アプリケーション ウィザードで作成されたツール ヒントのサポートと、アプリケーションにツール ヒント サポートを追加する方法の両方について説明します。
 
-この記事では次の内容について説明します。
+この記事には、次の内容が含まれます。
 
-- [ツール ヒントをアクティブ化します。](#_core_activating_tool_tips)
+- [ツール ヒントのアクティブ化](#_core_activating_tool_tips)
 
-- [ステータス バーのフライ バイ更新](#_core_fly_by_status_bar_updates)
+- [フライバイステータスバーの更新](#_core_fly_by_status_bar_updates)
 
-##  <a name="_core_activating_tool_tips"></a> ツール ヒントをアクティブ化します。
+## <a name="activating-tool-tips"></a><a name="_core_activating_tool_tips"></a>ツール ヒントのアクティブ化
 
-アプリケーションでのツール ヒントを有効にするには、2 つの処理を行う必要があります。
+アプリケーションでツール ヒントをアクティブにするには、次の 2 つの操作を行う必要があります。
 
-- その他のスタイルに CBRS_TOOLTIPS スタイルを追加 (WS_CHILD、WS_VISIBLE、およびその他など**cbrs _** スタイル) として渡される、 *dwStyle*パラメーターを[用意されて](../mfc/reference/ctoolbar-class.md#create)関数または[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)します。
+- *dwStyle*パラメーターとして渡された他のスタイル (WS_CHILD、WS_VISIBLE、その他の**CBRS_** スタイルなど) にCBRS_TOOLTIPSスタイルを[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)[追加します。](../mfc/reference/ccontrolbar-class.md#setbarstyle)
 
-- 次の手順のように、ツールバーのコマンドのコマンド ライン プロンプトを含む文字列リソースを改行文字 ('\n') で区切られた、ツールバーのヒント テキストを追加します。 文字列リソースは、ツールバーのボタンの ID を共有します。
+- 次の手順で説明するように、ツールバーのヒントテキストを改行文字 ('\n') で区切って、ツールバー コマンドのコマンド ライン プロンプトを含む文字列リソースに追加します。 文字列リソースは、ツール バー ボタンの ID を共有します。
 
-#### <a name="to-add-the-tool-tip-text"></a>ツール ヒントのテキストを追加するには
+#### <a name="to-add-the-tool-tip-text"></a>ツール ヒント テキストを追加するには
 
-1. ツール バー エディターのツールバーを編集するときに開く、**ツール バー ボタン プロパティ**指定したボタンのウィンドウ。
+1. ツールバーエディタでツールバーを編集しているときに、指定された**ボタンのツールバーボタンのプロパティ**ウィンドウを開きます。
 
-1. **プロンプト**ボックスで、そのボタンのツールヒントに表示するテキストを指定します。
+1. [**プロンプト**] ボックスで、ボタンのツール ヒントに表示するテキストを指定します。
 
 > [!NOTE]
->  ツールバー エディターでボタン プロパティには、これまでの手順では、する必要があるが置き換えられますとテキストの設定を開くし、文字列リソースを編集します。
+> ツールバー エディタでテキストをボタン プロパティとして設定すると、文字列リソースを開いて編集する必要があった前のプロシージャが置き換えられます。
 
-ツール ヒントが有効になっているコントロール バーに配置される子コントロールがある場合は、コントロール バーは、次の条件を満たす限り、そのコントロール バー上のすべての子コントロールのツールヒントに表示されます。
+ツール ヒントが有効になっているコントロール バーに子コントロールが配置されている場合、コントロール バーには、次の条件を満たす限り、コントロール バー上のすべての子コントロールのツール ヒントが表示されます。
 
-- コントロールの ID が 1 ではないのです。
+- コントロールの ID は - 1 ではありません。
 
-- リソース ファイル内の子コントロールと同じ ID を持つストリング テーブル エントリには、ツール ヒントの文字列があります。
+- リソース ファイル内の子コントロールと同じ ID を持つ文字列テーブル エントリには、ツール ヒント文字列があります。
 
-##  <a name="_core_fly_by_status_bar_updates"></a> ステータス バーのフライ バイ更新
+## <a name="flyby-status-bar-updates"></a><a name="_core_fly_by_status_bar_updates"></a>フライバイ ステータス バーの更新
 
-ツール ヒントに関連する機能は、「フライ バイ」ステータス バーの更新です。 既定では、ステータス バーにメッセージは、ボタンがアクティブになったときにのみ、特定のツールバーのボタンについて説明します。 渡されるスタイルの一覧に CBRS_FLYBY を含めることにより`CToolBar::Create`、マウス カーソルが実際には、ボタンをアクティブ化しないまま、ツールバー上に置いたときに更新されたこれらのメッセージがあることができます。
+ツールヒントに関連する機能は、ステータスバーの更新「フライバイ」です。 既定では、ステータス バーのメッセージは、ボタンがアクティブになったときに特定のツール バー ボタンのみを示します。 に渡すスタイルのリストにCBRS_FLYBYを`CToolBar::Create`含めることで、マウス カーソルがツール バー上を通過したときに、ボタンを実際にアクティブにすることなく、これらのメッセージを更新できます。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
-- [MFC ツールバーの実装 (ツールバーに概要情報)](../mfc/mfc-toolbar-implementation.md)
+- [MFC ツール バーの実装 (ツール バーの概要情報)](../mfc/mfc-toolbar-implementation.md)
 
-- [ドッキングとフローティング ツールバー](../mfc/docking-and-floating-toolbars.md)
+- [ツール バーのフローティングとドッキング](../mfc/docking-and-floating-toolbars.md)
 
-- [CToolBar](../mfc/reference/ctoolbar-class.md)と[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)クラス
+- [クラス](../mfc/reference/ctoolbar-class.md)[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
-- [ツール バー コントロールの操作](../mfc/working-with-the-toolbar-control.md)
+- [ToolBar コントロールの操作](../mfc/working-with-the-toolbar-control.md)
 
-- [古い形式のツールバーを使用します。](../mfc/using-your-old-toolbars.md)
+- [古い形式のツール バーの使用](../mfc/using-your-old-toolbars.md)
 
 ## <a name="see-also"></a>関連項目
 

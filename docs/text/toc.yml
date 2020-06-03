@@ -1,0 +1,61 @@
+- name: MSVC のテキストと文字列
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode と MBCS
+  expanded: false
+  items:
+    - name: Unicode と MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: 国際化対応の有効化
+      href: ../text/international-enabling.md
+    - name: 国際対応戦略
+      href: ../text/internationalization-strategies.md
+    - name: ロケールとコード ページ
+      href: ../text/locales-and-code-pages.md
+    - name: 文字セットの移植性の利点
+      href: ../text/benefits-of-character-set-portability.md
+- name: Unicode のサポート
+  expanded: false
+  items:
+    - name: Unicode のサポート
+      href: ../text/support-for-unicode.md
+    - name: wmain の使用のサポート
+      href: ../text/support-for-using-wmain.md
+    - name: Unicode でのプログラミングの概要
+      href: ../text/unicode-programming-summary.md
+- name: マルチバイト文字セット (MBCS) のサポート
+  expanded: false
+  items:
+    - name: マルチバイト文字セット (MBCS) のサポート
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: MSVC での MBCS のサポート
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: MBCS のプログラミングのヒント
+      expanded: false
+      items:
+        - name: MBCS のプログラミングのヒント
+          href: ../text/mbcs-programming-tips.md
+        - name: MBCS プログラミングにおける一般的なアドバイス
+          href: ../text/general-mbcs-programming-advice.md
+        - name: ポインターのインクリメントとデクリメント
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: バイト インデックス
+          href: ../text/byte-indices.md
+        - name: 文字列の最後の文字
+          href: ../text/last-character-in-a-string.md
+        - name: 文字の代入
+          href: ../text/character-assignment.md
+        - name: 文字の比較
+          href: ../text/character-comparison.md
+        - name: バッファー オーバーフロー
+          href: ../text/buffer-overflow.md
+- name: ANSI のサポート
+  href: ../text/support-for-ansi.md
+- name: tchar.h における汎用テキストのマッピング
+  expanded: false
+  items:
+    - name: tchar.h における汎用テキストのマッピング
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: _MBCS コードでの TCHAR.H データ型の使用
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: '方法: さまざまな文字列型間で変換する'
+  href: ../text/how-to-convert-between-various-string-types.md

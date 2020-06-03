@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301601"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170606"
 ---
 # <a name="c-bit-fields"></a>C++ ビット フィールド
 
@@ -19,9 +19,9 @@ ms.locfileid: "75301601"
 
 ## <a name="syntax"></a>構文
 
-*declarator* **:** *constant-expression*
+*宣言子* **:** *定数式*
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 (省略可能)*宣言子*は、プログラム内でメンバーにアクセスするときに使用する名前です。 整数型 (列挙型を含む) である必要があります。 *定数式*は、メンバーが構造体で占有するビット数を指定します。 匿名ビット フィールド (つまり、識別子のないビット フィールド メンバー) はパディング用に使用できます。
 
@@ -46,13 +46,13 @@ struct Date {
 ![日付オブジェクトのメモリレイアウト](../cpp/media/vc38uq1.png "データ オブジェクトのメモリ レイアウト") <br/>
 データ オブジェクトのメモリ レイアウト
 
-なお`nYear`8 ビット長であり、宣言型のワード境界をオーバーフローする**unsigned** **short**します。 そのため、新しいの先頭で開始されます**unsigned** **short**します。 すべてのビット フィールドが基になる型の 1 つのオブジェクトに収まる必要はありません。宣言で要求されたビット数に従って、ストレージの新しい単位が割り当てられます。
+`nYear` は8ビットの長さであり、宣言された型のワード境界 ( **unsigned** **short**) をオーバーフローする可能性があることに注意してください。 そのため、新しい**unsigned** **short**の先頭から開始されます。 すべてのビット フィールドが基になる型の 1 つのオブジェクトに収まる必要はありません。宣言で要求されたビット数に従って、ストレージの新しい単位が割り当てられます。
 
 **Microsoft 固有の仕様**
 
 ビット フィールドとして宣言されたデータの順序は、上の図に示すように、下位から上位のビットへ向います。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 構造体の宣言に、次の例のように、名前の付いていない長さが 0 のフィールドが含まれている場合、
 
@@ -85,6 +85,6 @@ struct Date {
 
 - ビットフィールドを使用した非**定数**参照の初期化。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

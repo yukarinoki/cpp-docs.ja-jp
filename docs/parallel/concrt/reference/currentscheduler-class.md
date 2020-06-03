@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143078"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427411"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 
@@ -38,15 +38,15 @@ class CurrentScheduler;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[作成](#create)|`_Policy` パラメーターによって記述された動作を持つ新しいスケジューラを作成し、呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラは、呼び出し元のコンテキストの現在のスケジューラになります。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられているスケジューラ内に新しいスケジュールグループを作成します。 パラメーター `_Placement` を受け取るバージョンを使用すると、新しく作成されたスケジュールグループ内のタスクが、そのパラメーターで指定された場所で実行されるようにバイアスされます。|
-|[デタッチ](#detach)|現在のスケジューラを呼び出し元のコンテキストからデタッチし、以前にアタッチされたスケジューラを現在のスケジューラとして復元します (存在する場合)。 このメソッドから制御が戻った後、呼び出し元のコンテキストは、前に `CurrentScheduler::Create` または `Scheduler::Attach` のいずれかのメソッドを使用してコンテキストにアタッチされたスケジューラによって管理されます。|
+|[[デタッチ]](#detach)|現在のスケジューラを呼び出し元のコンテキストからデタッチし、以前にアタッチされたスケジューラを現在のスケジューラとして復元します (存在する場合)。 このメソッドから制御が戻った後、呼び出し元のコンテキストは、前に `CurrentScheduler::Create` または `Scheduler::Attach` のいずれかのメソッドを使用してコンテキストにアタッチされたスケジューラによって管理されます。|
 |[Get](#get)|呼び出し元のコンテキストに関連付けられているスケジューラへのポインターを返します。これは、現在のスケジューラとも呼ばれます。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|呼び出し元のコンテキストに関連付けられているスケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|現在のスケジューラが作成されたポリシーのコピーを返します。|
-|[ID](#id)|現在のスケジューラの一意の識別子を返します。|
+|[Id](#id)|現在のスケジューラの一意の識別子を返します。|
 |[IsAvailableLocation](#isavailablelocation)|指定された場所が現在のスケジューラで使用できるかどうかを判断します。|
 |[RegisterShutdownEvent](#registershutdownevent)|現在のコンテキストに関連付けられているスケジューラがシャットダウンして自身を破棄するときに、`_ShutdownEvent` パラメーターで渡された Windows イベントハンドルをシグナル状態にします。 イベントがシグナル状態になると、スケジューラに対してスケジュールされていたすべての作業が完了します。 この方法では、複数のシャットダウンイベントを登録できます。|
 |[ScheduleTask](#scheduletask)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられているスケジューラ内の軽量タスクをスケジュールします。 軽量タスクは、ランタイムによって決定されるスケジュールグループに配置されます。 パラメーター `_Placement` を受け取るバージョンでは、指定された位置でタスクの実行がバイアスされます。|
@@ -59,7 +59,7 @@ class CurrentScheduler;
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 

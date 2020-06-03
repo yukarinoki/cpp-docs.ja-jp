@@ -1,9 +1,11 @@
 ---
 title: fputs、fputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputs
 - fputws
+- _o_fputs
+- _o_fputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956911"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912734"
 ---
 # <a name="fputs-fputws"></a>fputs、fputws
 
@@ -57,7 +60,7 @@ int fputws(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 出力する文字列。
 
 *一連*<br/>
@@ -67,13 +70,15 @@ int fputws(
 
 これらの関数は、正常に終了した場合に 0 以上の値を返します。 エラーが発生した場合、 **fputs**と**fputws**は**EOF**を返します。 *Str*または*stream*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **fputs**は**EOF**を返し、 **fputws**は**WEOF**を返します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの各関数は、 *str*を現在の位置の出力*ストリーム*にコピーします。 **fputws**は、ワイド文字の引数*str*を、*ストリームがテキスト*モードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字列またはワイド文字列として*ストリーム*にコピーします。 どちらの関数も、終端の null 文字をコピーしません。
 
 ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputs**は、現在 UNICODE ストリームへの出力をサポートしていません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -88,7 +93,7 @@ int fputws(
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -113,5 +118,5 @@ Hello world from fputs.
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](fgets-fgetws.md)<br/>
-[gets、_getws](../../c-runtime-library/gets-getws.md)<br/>
+[を取得し、_getws します。](../../c-runtime-library/gets-getws.md)<br/>
 [puts、_putws](puts-putws.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: プロローグ/エピローグコードの記述に関する考慮事項
+title: プロローグ/エピローグ コードの記述に関する考慮事項
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: a598ddbdd1b5f91c97e32905202e264b444c05d0
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cda6a6c82efcf30a916aced121024095d7ce8138
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337112"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>プロローグ コードとエピローグ コードを記述する際の考慮事項
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
-独自のプロローグとエピローグのコードシーケンスを記述する前に、スタックフレームがどのようにレイアウトされているかを理解することが重要です。また、`__LOCAL_SIZE` 記号の使用方法についても理解しておくと便利です。
+独自のプロローグおよびエピローグ のコード シーケンスを記述する前に、スタック フレームがどのようにレイアウトされているかを理解することが重要です。`__LOCAL_SIZE`シンボルの使い方を知るのも便利です。
 
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>スタックフレームのレイアウト
+## <a name="stack-frame-layout"></a><a name="_pluslang_c.2b2b_.stack_frame_layout"></a>スタック フレーム レイアウト
 
 この例は、32 ビット関数で使用される標準プロローグ コードを示しています。
 
@@ -43,18 +43,18 @@ ret                       ; Return from function
 
 スタックは、常に下に (上位メモリ アドレスから下位メモリ アドレスに) 向かって大きくなります。 基本ポインター (`ebp`) は、プッシュされた `ebp` の値を指します。 ローカル領域は `ebp-4` で始まります。 ローカル変数にアクセスするには、`ebp` からのオフセットを計算します。そのためには、`ebp` から適切な値を減算します。
 
-##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE
+## <a name="__local_size"></a><a name="_pluslang___local_size"></a>__LOCAL_SIZE
 
-コンパイラは、関数プロローグコードのインラインアセンブラーブロックで使用するシンボル `__LOCAL_SIZE`を提供します。 カスタム プロローグ コードで、スタック フレームにローカル変数の領域を割り当てるときに、このシンボルを使用します。
+コンパイラは、`__LOCAL_SIZE`関数プロローグ コードのインライン アセンブラー ブロックで使用する記号を提供します。 カスタム プロローグ コードで、スタック フレームにローカル変数の領域を割り当てるときに、このシンボルを使用します。
 
-`__LOCAL_SIZE`の値はコンパイラによって決定されます。 その値は、すべてのユーザー定義のローカル変数とコンパイラにより生成された一時変数の合計バイト数です。 `__LOCAL_SIZE` は、直接のオペランドとしてのみ使用できます。式では使用できません。 このシンボルの値は、変更することも再定義することもできません。 例:
+コンパイラは の値を`__LOCAL_SIZE`決定します。 その値は、すべてのユーザー定義のローカル変数とコンパイラにより生成された一時変数の合計バイト数です。 `__LOCAL_SIZE`直接オペランドとしてのみ使用できます。式では使用できません。 このシンボルの値は、変更することも再定義することもできません。 次に例を示します。
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-次の例では、カスタムのプロローグとエピローグシーケンスを含む生の関数の例では、プロローグシーケンスで `__LOCAL_SIZE` シンボルを使用しています。
+カスタムプロローグシーケンスとエピローグ シーケンスを含む naked 関数の`__LOCAL_SIZE`次の例では、プロローグ シーケンス内のシンボルを使用します。
 
 ```cpp
 // the__local_size_symbol.cpp
@@ -78,8 +78,8 @@ __declspec ( naked ) int main() {
 }
 ```
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [naked 関数呼び出し](../cpp/naked-function-calls.md)

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299092"
@@ -43,7 +43,7 @@ Microsoft C スタートアップ コードは、オペレーティング シス
 |`a\\\"b c d`|`a\"b`|`c`|`d`|
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ### <a name="code"></a>コード
 
@@ -95,7 +95,7 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

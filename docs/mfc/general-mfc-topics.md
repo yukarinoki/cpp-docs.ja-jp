@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169986"
 ---
 # <a name="general-mfc-topics"></a>MFC の一般的なトピック
 
@@ -23,7 +23,7 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-`MFC Samples`( [Visual C++サンプル](../overview/visual-cpp-samples.md)で提供)
+[MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)
 
 [MFC ソース ファイルの利用](../mfc/using-the-mfc-source-files.md)
 
@@ -55,6 +55,6 @@ MFC リファレンスドキュメントの概要については、「 [Microsof
 
 ATL の詳細については、「 [Active Template Library リファレンス](../atl/atl-class-overview.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)

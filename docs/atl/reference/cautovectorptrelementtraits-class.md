@@ -1,5 +1,5 @@
 ---
-title: CAutoVectorPtrElementTraits クラス
+title: クラスを示します。
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956fe39c4d3ba89bb9def2f996dca59905753edb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318756"
 ---
-# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits クラス
+# <a name="cautovectorptrelementtraits-class"></a>クラスを示します。
 
-メソッド、静的関数、および typedef と delete 演算子を新しいベクトルを使用してスマート ポインターのコレクションを作成するときに便利です。 このクラスを提供します。
+このクラスは、メソッド、静的関数、および typedef を提供し、ベクトル new 演算子と delete 演算子を使用してスマート ポインターのコレクションを作成するときに便利です。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -42,22 +42,22 @@ class CAutoVectorPtrElementTraits :
 
 |名前|説明|
 |----------|-----------------|
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。|
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。|
+|[要素トレイト::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
+|[要素の特性::アウトバーグタイプ](#outargtype)|コレクション クラス オブジェクトから要素を取得するために使用するデータ型。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、スマート ポインターを格納しているコレクション クラスのオブジェクトを作成するときに役立つ方法、静的関数、および typedef を提供します。 異なり[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)、このクラスは新しいベクターおよび delete 演算子。
+このクラスは、スマート ポインターを含むコレクション クラス オブジェクトの作成を支援するためのメソッド、静的関数、および typedef を提供します。 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)とは異なり、このクラスはベクトルの新しい演算子と削除演算子を使用します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[クセプチュ設定の比較](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[既定のハッシュトレイト](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Cエレメントトレイツベース](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[要素の状態](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoVectorPtrElementTraits`
 
@@ -65,17 +65,17 @@ class CAutoVectorPtrElementTraits :
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>要素トレイト::イナルグタイプ
 
-コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。
+コレクション クラス オブジェクトに要素を追加するために使用するデータ型。
 
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>要素の特性::アウトバーグタイプ
 
-コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。
+コレクション クラス オブジェクトから要素を取得するために使用するデータ型。
 
 ```
 typedef T*& OUTARGTYPE;
@@ -83,6 +83,6 @@ typedef T*& OUTARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[CAutoVectorPtr クラス](../../atl/reference/cautovectorptr-class.md)<br/>
+[クラスの既定値](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[クラス](../../atl/reference/cautovectorptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

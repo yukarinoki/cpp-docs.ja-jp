@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2ec4e90c8f0c1009cc47e9022a09b3b8f7dbb284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190002"
 ---
 # <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
 **Microsoft 固有の仕様**
 
-または`CLSID` `ProgID`を指定して、オブジェクトの新しいインスタンスを作成します。
+`CLSID` または `ProgID`を指定して、オブジェクトの新しいインスタンスを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ HRESULT CreateInstance(
 #### <a name="parameters"></a>パラメーター
 
 *rclsid*<br/>
-オブジェクト`CLSID`の。
+オブジェクトの `CLSID`。
 
 *clsidString*<br/>
-`CLSID` (" **{** `ProgID`" で始まる) またはを保持する Unicode 文字列。
+`CLSID` (" **{** " で始まる) または `ProgID`のいずれかを保持する Unicode 文字列。
 
 *clsidStringA*<br/>
-`CLSID` (" **{** `ProgID`" で始まる) またはを保持する、ANSI コードページを使用するマルチバイト文字列。
+ANSI コードページを使用するマルチバイト文字列。 `CLSID` (" **{** " で始まる) または `ProgID`を保持します。
 
 *dwClsContext*<br/>
 実行可能コードを実行するコンテキスト。
@@ -56,18 +56,18 @@ HRESULT CreateInstance(
 *pOuter*<br/>
 [集計](../atl/aggregation.md)の不明な外部。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらのメンバー関数は、`CoCreateInstance` を呼び出して新しい COM オブジェクトを作成し、このスマート ポインターのインターフェイス型を照会します。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 `Release`は、以前にカプセル化されたポインターの参照カウントをデクリメントするために呼び出されます。 このルーチンは、成功または失敗を示す HRESULT を返します。
+これらのメンバー関数は、`CoCreateInstance` を呼び出して新しい COM オブジェクトを作成し、このスマート ポインターのインターフェイス型を照会します。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 `Release` は、以前にカプセル化されたポインターの参照カウントをデクリメントするために呼び出されます。 このルーチンは、成功または失敗を示す HRESULT を返します。
 
-- **CreateInstance (** *rclsid* **、** *dwClsContext* **)** を指定したオブジェクトの実行中の新しいインスタンスを作成します`CLSID`。
+- **CreateInstance (** *rclsid* **、** *dwclscontext* **)** `CLSID`を指定して、オブジェクトの新しい実行中のインスタンスを作成します。
 
-- **CreateInstance (** *clsidString* **、** *dwClsContext* **)** 指定したオブジェクトの実行中の新しいインスタンスを作成します。保持する Unicode 文字列、 `CLSID` (以降では" **{** ") または`ProgID`します。
+- **CreateInstance (** *clsidstring* **、** *dwclscontext* **)** `CLSID` (" **{** " で始まる) または `ProgID`のいずれかを保持する Unicode 文字列を指定して、オブジェクトの新しい実行インスタンスを作成します。
 
-- **CreateInstance (** *clsidStringA* **、** *dwClsContext* **)** 指定したオブジェクトの実行中の新しいインスタンスを作成します。いずれかを保持するマルチバイト文字の文字列を`CLSID`(以降では" **{** ") または`ProgID`します。 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)を呼び出します。これは、文字列が OEM コードページではなく ANSI コードページに含まれていることを前提としています。
+- **CreateInstance (** *clsidstringa* **、** *dwclscontext* **)** `CLSID` (" **{** " で始まる) または `ProgID`のいずれかを保持するマルチバイト文字列を指定して、オブジェクトの実行中の新しいインスタンスを作成します。 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)を呼び出します。これは、文字列が OEM コードページではなく ANSI コードページに含まれていることを前提としています。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - smart pointers, definition
 - smart pointers
 ms.assetid: 8c7b2c43-eb92-4d42-9a8e-61aa37d71333
-ms.openlocfilehash: 34527f818b135fd5af629ebb69feaffd03b715fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12ea612625e21a8a13021b75e92f3752b0b5ce80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301631"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179420"
 ---
 # <a name="member-access"></a>メンバー アクセス
 
-メンバー アクセス演算子をオーバー ロードによって、クラス メンバーへのアクセスを制御できます (**->**)。 この演算子は、この使用方法では単項演算子と見なされ、オーバーロードされる演算子関数は、クラス メンバー関数である必要があります。 したがって、このような関数の宣言は次のとおりです。
+クラスメンバーアクセスは、メンバーアクセス演算子 ( **->** ) をオーバーロードすることによって制御できます。 この演算子は、この使用方法では単項演算子と見なされ、オーバーロードされる演算子関数は、クラス メンバー関数である必要があります。 したがって、このような関数の宣言は次のとおりです。
 
 ## <a name="syntax"></a>構文
 
@@ -26,14 +26,14 @@ ms.locfileid: "62301631"
 class-type *operator->()
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場所*クラス型*このオペレーターが所属するクラスの名前を指定します。 メンバー アクセス演算子関数は、非静的メンバー関数である必要があります。
+ここで、*クラス型*は、この演算子が属するクラスの名前です。 メンバー アクセス演算子関数は、非静的メンバー関数である必要があります。
 
 この演算子は、逆参照やカウントの使用の前にポインターを検証する "スマート ポインター" を実装するために使用されます (多くの場合はポインターの逆参照演算子と共に)。
 
-**.** メンバー アクセス演算子をオーバー ロードすることはできません。
+**.** メンバーアクセス演算子をオーバーロードすることはできません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [演算子のオーバーロード](../cpp/operator-overloading.md)

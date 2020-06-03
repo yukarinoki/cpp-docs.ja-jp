@@ -1,6 +1,6 @@
 ---
-title: CodeGeneration クラス
-description: C++ビルドインサイト SDK codegeneration クラス参照。
+title: コードジェネレーション クラス
+description: C++ ビルド インサイト SDK コードジェネレーション クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1bc56794a197b9ae7bf116757581fb5a49699462
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 27149d60cc6970843ef2ecccbaf25472f002e35f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334962"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325067"
 ---
-# <a name="codegeneration-class"></a>CodeGeneration クラス
+# <a name="codegeneration-class"></a>コードジェネレーション クラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`CodeGeneration` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 [CODE_GENERATION](../event-table.md#code-generation)イベントと一致させるには、これを使用します。
+クラス`CodeGeneration`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [CODE_GENERATION](../event-table.md#code-generation)イベントに一致させるために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[アクティビティ](activity.md)基本クラスから継承されたメンバーと共に、`CodeGeneration` クラスには次のメンバーが含まれます。
+クラスには、[その Activity](activity.md)基本クラスから継承された`CodeGeneration`メンバーと共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[CodeGeneration](#code-generation)
+[コードジェネレーション](#code-generation)
 
-## <a name="code-generation"></a>CodeGeneration
+## <a name="codegeneration"></a><a name="code-generation"></a>コードジェネレーション
 
 ```cpp
 CodeGeneration(const RawEvent& event);
@@ -53,7 +53,7 @@ CodeGeneration(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*event*\
-[CODE_GENERATION](../event-table.md#code-generation)イベントです。
+*イベント*\
+[CODE_GENERATION](../event-table.md#code-generation)イベント。
 
 ::: moniker-end

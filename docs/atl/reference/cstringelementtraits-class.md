@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraits クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraits
@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078cfd5ff93bfcd8acc747904ea05e6a2e762bc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277449"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330620"
 ---
-# <a name="cstringelementtraits-class"></a>CStringElementTraits クラス
+# <a name="cstringelementtraits-class"></a>クラス
 
-このクラスを格納するコレクション クラスで使用される静的関数を提供する`CString`オブジェクト。
+このクラスは、オブジェクトを格納するコレクション`CString`クラスで使用される静的関数を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,32 +43,32 @@ class CStringElementTraits
 
 |名前|説明|
 |----------|-----------------|
-|[CStringElementTraits::INARGTYPE](#inargtype)|コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。|
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。|
+|[要素トレイト::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
+|[要素トレイト::アウトアルプタイプ](#outargtype)|コレクション クラス オブジェクトから要素を取得するために使用するデータ型。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CStringElementTraits::CompareElements](#compareelements)|(静的)2 つの文字列要素が等しいかどうかを比較するには、この関数を呼び出します。|
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(静的)2 つの文字列要素を比較するには、この関数を呼び出します。|
-|[CStringElementTraits::CopyElements](#copyelements)|(静的)コピーするには、この関数を呼び出す`CString`コレクション クラスのオブジェクトに格納されている要素。|
-|[CStringElementTraits::Hash](#hash)|(静的)指定した文字列の要素のハッシュ値を計算するには、この関数を呼び出します。|
-|[CStringElementTraits::RelocateElements](#relocateelements)|(静的)再配置するには、この関数を呼び出す`CString`コレクション クラスのオブジェクトに格納されている要素。|
+|[要素の比較](#compareelements)|(静的)2 つの文字列要素が等しいかどうかを比較します。|
+|[並べ替え要素数::比較要素順序](#compareelementsordered)|(静的)2 つの文字列要素を比較します。|
+|[要素のコピー::要素のコピー](#copyelements)|(静的)コレクション クラス オブジェクト`CString`に格納されている要素をコピーします。|
+|[を見る要素::ハッシュ](#hash)|(静的)指定した文字列要素のハッシュ値を計算します。|
+|[要素の再配置](#relocateelements)|(静的)コレクション クラス オブジェクトに`CString`格納されている要素を再配置します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、コピー、移動、および文字列を比較して、ハッシュ値を作成するための静的関数を提供します。 これらの関数は、文字列ベースのデータを格納するコレクション クラスを使用する場合に便利です。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)小文字の比較が必要な場合。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)文字列オブジェクトの参照として処理する場合。
+このクラスは、文字列のコピー、移動、および比較、およびハッシュ値の作成のための静的関数を提供します。 これらの関数は、コレクション クラスを使用して文字列ベースのデータを格納する場合に便利です。 大文字と小文字を区別しない比較が必要な場合は[、CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)を使用します。 文字列オブジェクトを参照として扱う場合は[、CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)を使用します。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="cstringelementtraitscompareelements"></a><a name="compareelements"></a>要素の比較
 
-2 つの文字列要素が等しいかどうかを比較する、この静的関数を呼び出します。
+2 つの文字列要素が等しいかどうかを比較するには、この静的関数を呼び出します。
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
@@ -77,18 +77,18 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-最初の要素を文字列します。
+最初の文字列要素。
 
 *str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
 
-要素が false でそれ以外の場合、等しい場合は true を返します。
+要素が等しい場合は true、そうでない場合は false を返します。
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>並べ替え要素数::比較要素順序
 
-2 つの文字列要素を比較する、この静的関数を呼び出します。
+2 つの文字列要素を比較するには、この静的関数を呼び出します。
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
@@ -97,18 +97,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-最初の要素を文字列します。
+最初の文字列要素。
 
 *str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
 
-< 0、0 の文字列が一致している場合場合*str1*がより小さい*str2*、または > 0 場合*str1*がより大きい*str2*します。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)メソッドは、比較を実行するために使用します。
+文字列が同じ場合は*0、str1*が*str2*より小さい場合は < *0、str1*が*str2*より大きい場合は 0 を>。 比較を実行するには[、CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)メソッドを使用します。
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="cstringelementtraitscopyelements"></a><a name="copyelements"></a>要素のコピー::要素のコピー
 
-この静的関数をコピーする`CString`コレクション クラスのオブジェクトに格納されている要素。
+コレクション クラス オブジェクトに`CString`格納されている要素をコピーするには、この静的関数を呼び出します。
 
 ```
 static void CopyElements(
@@ -120,21 +120,21 @@ static void CopyElements(
 ### <a name="parameters"></a>パラメーター
 
 *pDest*<br/>
-コピー元のデータを受信する最初の要素へのポインター。
+コピーされたデータを受け取る最初の要素へのポインター。
 
 *pSrc*<br/>
 コピーする最初の要素へのポインター。
 
-*nElements*<br/>
+*n要素*<br/>
 コピーする要素の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ソースと変換先の要素は重複できません。
+ソース要素とコピー先要素は重複しないようにします。
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="cstringelementtraitshash"></a><a name="hash"></a>を見る要素::ハッシュ
 
-指定した文字列の要素のハッシュ値を計算する、この静的関数を呼び出します。
+指定した文字列要素のハッシュ値を計算します。
 
 ```
 static ULONG Hash(INARGTYPE str);
@@ -142,32 +142,32 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
-文字列の要素。
+*Str*<br/>
+文字列要素。
 
 ### <a name="return-value"></a>戻り値
 
 文字列の内容を使用して計算されたハッシュ値を返します。
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="cstringelementtraitsinargtype"></a><a name="inargtype"></a>要素トレイト::イナルグタイプ
 
-コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。
+コレクション クラス オブジェクトに要素を追加するために使用するデータ型。
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="cstringelementtraitsoutargtype"></a><a name="outargtype"></a>要素トレイト::アウトアルプタイプ
 
-コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。
+コレクション クラス オブジェクトから要素を取得するために使用するデータ型。
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>要素の再配置
 
-配置する場合に、この静的関数を呼び出す`CString`コレクション クラスのオブジェクトに格納されている要素。
+コレクション クラス オブジェクトに格納`CString`されている要素を再配置するには、この静的関数を呼び出します。
 
 ```
 static void RelocateElements(
@@ -179,20 +179,20 @@ static void RelocateElements(
 ### <a name="parameters"></a>パラメーター
 
 *pDest*<br/>
-再配置されたデータを受信する最初の要素へのポインター。
+再配置されたデータを受け取る最初の要素へのポインター。
 
 *pSrc*<br/>
-配置する場合に、最初の要素へのポインター。
+再配置する最初の要素へのポインター。
 
-*nElements*<br/>
-配置する場合に要素の数。
+*n要素*<br/>
+再配置する要素の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この静的関数を呼び出す[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)、これは、ほとんどのデータ型。 オブジェクトの移動中に、独自のメンバーへのポインターが含まれている場合は、この静的関数をオーバーライドする必要があります。
+この静的関数は、ほとんどのデータ型に対して十分な[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)を呼び出します。 移動するオブジェクトに自身のメンバーへのポインターが含まれている場合、この静的関数をオーバーライドする必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[CElementTraitsBase クラス](../../atl/reference/celementtraitsbase-class.md)<br/>
-[CStringElementTraitsI クラス](../../atl/reference/cstringelementtraitsi-class.md)<br/>
+[クラス](../../atl/reference/celementtraitsbase-class.md)<br/>
+[クラス](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

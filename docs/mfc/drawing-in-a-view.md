@@ -11,39 +11,39 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227c4614bad42706893301c69882c3f40af12e2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214345"
 ---
 # <a name="drawing-in-a-view"></a>ビューの描画
 
-ビューは、アプリケーションのほぼすべての描画`OnDraw`メンバー関数は、ビュー クラスでオーバーライドする必要があります。 (例外は、描画、マウス[を解釈するユーザー入力ビューを使用した](../mfc/interpreting-user-input-through-a-view.md))。`OnDraw`をオーバーライドします。
+アプリケーションでのほとんどすべての描画はビューの `OnDraw` メンバー関数で発生し、ビュークラスでオーバーライドする必要があります。 (例外は、「[ビューを使用したユーザー入力の解釈](../mfc/interpreting-user-input-through-a-view.md)」で説明されているように、マウス描画です)。`OnDraw` のオーバーライド:
 
-1. ドキュメントの指定したメンバー関数を呼び出すことによって、データを取得します。
+1. 指定したドキュメントメンバー関数を呼び出すことによって、データを取得します。
 
-1. フレームワークからに渡されるデバイス コンテキスト オブジェクトのメンバー関数を呼び出すことによって、データを表示します。`OnDraw`します。
+1. フレームワークが `OnDraw`に渡すデバイスコンテキストオブジェクトのメンバー関数を呼び出すことによって、データを表示します。
 
-ドキュメントのデータが何らかの方法で変更、ビューは、変更を反映するように再描画する必要があります。 通常、ユーザーがドキュメントのビューでの変更を行ったときにこれが発生します。 この場合、ビューがドキュメントを呼び出す[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)メンバー関数は同一のドキュメントを更新するようにすべてのビューに通知します。 `UpdateAllViews` それぞれのビューを呼び出す[OnUpdate](../mfc/reference/cview-class.md#onupdate)メンバー関数。 既定の実装`OnUpdate`ビューのクライアント領域全体を無効になります。 ドキュメントの変更後の部分に割り当てられたクライアント領域の領域のみを無効にする上書きすることができます。
+ドキュメントのデータが何らかの方法で変更された場合、その変更を反映するためにビューを再描画する必要があります。 通常、これは、ユーザーがドキュメントのビューを通じて変更を行ったときに発生します。 この場合、ビューはドキュメントの[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)メンバー関数を呼び出し、同じドキュメントのすべてのビューに対して自身の更新を通知します。 `UpdateAllViews` は、各ビューの[OnUpdate](../mfc/reference/cview-class.md#onupdate)メンバー関数を呼び出します。 `OnUpdate` の既定の実装では、ビューのクライアント領域全体が無効になります。 これをオーバーライドして、ドキュメントの変更部分にマップされているクライアント領域の領域のみを無効にすることができます。
 
-`UpdateAllViews`クラスのメンバー関数`CDocument`と`OnUpdate`クラスのメンバー関数`CView`変更されたドキュメントのどの部分を記述する情報を渡すようにします。 この「ヒント」メカニズムでは、ビューの再描画する領域を制限できます。 `OnUpdate` 「ヒント」の 2 つの引数を受け取ります。 まず、 *lHint*、型の**LPARAM**の 2 番目のように、データの受け渡しすることができます*pHint*、型の`CObject`*、派生したオブジェクトにポインターを渡すことができます`CObject`します。
+クラス `CDocument` の `UpdateAllViews` メンバー関数と、クラス `CView` の `OnUpdate` メンバー関数を使用すると、ドキュメントのどの部分が変更されたかを説明する情報を渡すことができます。 この "ヒント" 機構を使用すると、ビューが再描画する必要がある領域を制限できます。 `OnUpdate` は、2つの "ヒント" 引数を受け取ります。 **LPARAM**型の最初の*lhint*は、任意のデータを渡すことができます。一方、型 `CObject`* の2番目の*phint*は、`CObject`から派生した任意のオブジェクトへのポインターを渡すことができます。
 
-ビューが無効になると、Windows 送信、 **WM_PAINT**メッセージ。 ビューの[OnPaint](../mfc/reference/cwnd-class.md#onpaint)ハンドラー関数がクラスのデバイス コンテキスト オブジェクトを作成して、メッセージに応答[CPaintDC](../mfc/reference/cpaintdc-class.md)呼び出しビューのおよび`OnDraw`メンバー関数。 書き込むをオーバーライドする通常必要は`OnPaint`ハンドラー関数。
+ビューが無効になると、Windows によって**WM_PAINT**メッセージが送信されます。 ビューの[OnPaint](../mfc/reference/cwnd-class.md#onpaint)ハンドラー関数は、 [CPaintDC](../mfc/reference/cpaintdc-class.md)クラスのデバイスコンテキストオブジェクトを作成することによってメッセージに応答し、ビューの `OnDraw` メンバー関数を呼び出します。 通常は、オーバーライドする `OnPaint` ハンドラー関数を記述する必要はありません。
 
-A[デバイス コンテキスト](../mfc/device-contexts.md)ディスプレイやプリンターなどのデバイスの描画属性に関する情報を格納する Windows のデータ構造です。 すべての描画呼び出しは、デバイス コンテキスト オブジェクトを介して行われます。 画面に描画するため`OnDraw`が渡される、`CPaintDC`オブジェクト。 プリンターでの描画に渡される、 [CDC](../mfc/reference/cdc-class.md)オブジェクトの現在のプリンターを設定します。
+[デバイスコンテキスト](../mfc/device-contexts.md)は、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows データ構造です。 すべての描画呼び出しは、デバイスコンテキストオブジェクトを使用して行われます。 画面上に描画する場合、`OnDraw` には `CPaintDC` オブジェクトが渡されます。 プリンターで描画する場合は、現在のプリンター用に設定されている[CDC](../mfc/reference/cdc-class.md)オブジェクトが渡されます。
 
-ビューを描画するため、コードはまず、ドキュメントへのポインターを取得し、デバイス コンテキストから描画呼び出しを実行します。 以下の単純な`OnDraw`の例は、プロセスを示しています。
+ビューに描画するコードでは、まずドキュメントへのポインターを取得し、次にデバイスコンテキストを使用して描画を呼び出します。 次の簡単な `OnDraw` の例は、このプロセスを示しています。
 
 [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]
 
-この例で定義して、`GetData`ドキュメントの派生クラスのメンバーとして機能します。
+この例では、派生ドキュメントクラスのメンバーとして `GetData` 関数を定義します。
 
-例では、ビューの中央に、ドキュメントから取得した文字列を出力します。 場合、`OnDraw`画面の描画の呼び出しは、`CDC`で渡されるオブジェクト*pDC*は、`CPaintDC`コンス トラクターは既に呼び出されて`BeginPaint`します。 関数の描画呼び出しは、デバイス コンテキスト ポインターを通じて行われます。 デバイス コンテキストおよび描画呼び出しについては、クラスを参照してください。 [CDC](../mfc/reference/cdc-class.md)で、 *MFC リファレンス*と[ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)します。
+この例では、ドキュメントから取得した任意の文字列を、ビューの中央に印刷します。 `OnDraw` 呼び出しが画面描画を行う場合、 *pDC*で渡される `CDC` オブジェクトは、そのコンストラクターが既に `BeginPaint`を呼び出した `CPaintDC` です。 描画関数の呼び出しは、デバイスコンテキストポインターを使用して行われます。 デバイスコンテキストと描画呼び出しの詳細については、「 *MFC リファレンス*」の「クラス[CDC](../mfc/reference/cdc-class.md) 」および「[ウィンドウオブジェクトの操作](../mfc/working-with-window-objects.md)」を参照してください。
 
-記述する方法の例について`OnDraw`を参照してください、 [MFC サンプル](../overview/visual-cpp-samples.md)します。
+`OnDraw`の記述方法のその他の例については、 [MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ビューの使い方](../mfc/using-views.md)

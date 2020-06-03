@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-ms.openlocfilehash: 9fe0ac7d3637cad3a5571c4631345dac1a0021bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f0544815804e9827631be81bf9735a95bd1a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176703"
 ---
 # <a name="compiler-error-c3012"></a>コンパイラ エラー C3012
 
-> '*組み込み*': 組み込み関数は、並行領域内で直接許可されていません
+> '*組み込み*': 組み込み関数は、並列領域内で直接使用することはできません
 
- [コンパイラ組み込み関数](../../intrinsics/compiler-intrinsics.md) は、 `omp parallel` 領域では使用できません。 この問題を修正するには、組み込み関数をリージョンの外に移動または非組み込みと同等に置き換えます。
+[コンパイラ組み込み関数](../../intrinsics/compiler-intrinsics.md) は、 `omp parallel` 領域では使用できません。 この問題を解決するには、組み込みをリージョン外に移動するか、組み込みの同等ではないものに置き換えます。
 
 ## <a name="example"></a>例
 
-次の例では、C3012 を生成し、その修正方法を示しています。
+次の例では、C3012 を生成し、その修正方法の1つを示しています。
 
 ```cpp
 // C3012.cpp

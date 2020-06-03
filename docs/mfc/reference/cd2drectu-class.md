@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244400"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369107"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU クラス
 
@@ -33,19 +33,19 @@ class CD2DRectU : public D2D1_RECT_U;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|オーバーロードされます。 構築、`CD2DRectU`オブジェクトから`D2D1_RECT_U`オブジェクト。|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|オーバーロードされます。 オブジェクトから`D2D1_RECT_U`オブジェクト`CD2DRectU`を構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|
+|[CD2DRectU::IsNull](#isnull)|式に有効なデータ (NULL) が含まれているかどうかを示す**ブール**値を返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|変換`CD2DRectU`に`CRect`オブジェクト。|
+|[CD2DRectU::演算子 CRect](#operator_crect)|オブジェクトに`CD2DRectU``CRect`変換します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,7 +57,7 @@ class CD2DRectU : public D2D1_RECT_U;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU
 
 CRect オブジェクトから CD2DRectU オブジェクトを構築します。
 
@@ -75,24 +75,24 @@ CD2DRectU(
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
-元の四角形
+*Rect*<br/>
+ソース矩形
 
-*uLeft*<br/>
-ソースの左座標
+*左から*<br/>
+ソース左座標
 
-*uTop*<br/>
-ソースの上座標
+*ユートップ*<br/>
+ソースの上の座標
 
-*uRight*<br/>
-右側の座標のソース
+*右*<br/>
+ソース右座標
 
-*uBottom*<br/>
-ソースの下端の座標
+*uボトム*<br/>
+ソース底の座標
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::IsNull
 
-式に有効なデータ (Null) がないかどうかを示すブール値を返します。
+式に有効なデータが含まれているかどうかを示すブール値を返します (Null)。
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>戻り値
 
-四角形の上、左、下、および適切な値が 0 に等しい場合は TRUE。それ以外の場合は FALSE です。
+四角形の上、左、下、および右の値がすべて 0 の場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::演算子 CRect
 
-CD2DRectU CRect オブジェクトに変換します。
+CD2DRectU を CRect オブジェクトに変換します。
 
 ```
 operator CRect();
@@ -112,7 +112,7 @@ operator CRect();
 
 ### <a name="return-value"></a>戻り値
 
-D2D の四角形の現在の値。
+D2D 四角形の現在の値。
 
 ## <a name="see-also"></a>関連項目
 

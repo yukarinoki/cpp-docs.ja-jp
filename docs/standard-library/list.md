@@ -1,20 +1,19 @@
 ---
-title: '&lt;リスト&gt;'
+title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <list>
-- std::<list>
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b67434d36146de87a124fc02f49971425943dc5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689424"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447284"
 ---
-# <a name="ltlistgt"></a>&lt;リスト&gt;
+# <a name="ltlistgt"></a>&lt;list&gt;
 
 コンテナークラステンプレートリストといくつかのサポートテンプレートを定義します。
 
@@ -25,7 +24,7 @@ ms.locfileid: "72689424"
 ```
 
 > [!NOTE]
-> @No__t_0list > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
+> \<リスト > ライブラリは `#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -44,7 +43,7 @@ ms.locfileid: "72689424"
 
 |||
 |-|-|
-|[swap](../standard-library/list-functions.md#swap)|2 つのリストの要素を交換します。|
+|[スワップ](../standard-library/list-functions.md#swap)|2 つのリストの要素を交換します。|
 
 ### <a name="classes"></a>クラス
 
@@ -52,7 +51,7 @@ ms.locfileid: "72689424"
 |-|-|
 |[list クラス](../standard-library/list-class.md)|シーケンスコンテナーのクラステンプレート。要素を線形の配置に維持し、シーケンス内の任意の場所での効率的な挿入と削除を可能にします。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

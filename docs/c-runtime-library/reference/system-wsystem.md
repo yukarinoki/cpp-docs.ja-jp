@@ -1,9 +1,11 @@
 ---
 title: system、_wsystem
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - system
 - _wsystem
+- _o__wsystem
+- _o_system
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957676"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912387"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -59,7 +62,7 @@ int _wsystem(
 
 ### <a name="parameters"></a>パラメーター
 
-*command*<br/>
+*メニュー*<br/>
 実行するコマンド。
 
 ## <a name="return-value"></a>戻り値
@@ -75,28 +78,30 @@ int _wsystem(
 
 これらのリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム**は、 **COMSPEC**および**PATH**環境変数を使用して、コマンドインタープリターファイル cmd.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
 
-[Fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、または**システム**を呼び出す前にストリームを閉じる必要があります。
+**システム**を呼び出す前に、 [fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、ストリームを閉じる必要があります。
 
-**_wsystem**は、**システム**のワイド文字バージョンです。 **_wsystem**の*コマンド*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wsystem**は**システム**のワイド文字バージョンです。**_wsystem**の*コマンド*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**システム**|**システム**|**_wsystem**|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**system**|\<process.h> または \<stdlib.h>|
+|**システム**|\<process.h> または \<stdlib.h>|
 |**_wsystem**|\<process.h> または \<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -120,7 +125,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Line one.
@@ -129,8 +134,8 @@ Line two.
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167005"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -25,10 +25,10 @@ ms.locfileid: "69490912"
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-ヘルプトピックのコンテキスト ID。 HTML [ヘルプを参照してください。コンテキスト id の詳細について](../../mfc/html-help-context-sensitive-help-for-your-programs.md)は、プログラムの状況依存のヘルプを参照してください。
+*id*<br/>
+ヘルプトピックのコンテキスト ID。 コンテキスト Id の詳細については[、「HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Helpcontext** C++属性には、 [helpcontext](/windows/win32/Midl/helpcontext) MIDL 属性と同じ機能があります。
 
@@ -49,7 +49,7 @@ ms.locfileid: "69490912"
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

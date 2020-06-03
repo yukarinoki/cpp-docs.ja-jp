@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 17f7fb415303ab74f588a2205bc9430127091e96
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825897"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 
@@ -33,26 +33,26 @@ ms.locfileid: "74246300"
 
 次の構文では、 **try finally**ステートメントについて説明します。
 
-> **\_\_試してみる**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;//保護されたコード<br/>
-> }<br/>
-> **\_\_最後**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;//終了コード<br/>
+> **\_\_やり直し**<br/>
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;保護されたコード \
+> }\
+> **\_\_最終的に**\
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;終了コード \
 > }
 
 ## <a name="grammar"></a>文法
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *複合ステートメント* **\_\_finally** *複合ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;複合ステートメント*compound-statement* *compound-statement* ** \_ \_の finally**複合ステートメントを試す** \_ \_**
 
-**Try-catch**ステートメントは、コードのブロックの実行が中断されC++た場合に、対象アプリケーションがクリーンアップコードの実行を保証できるようにする、C および言語に対する Microsoft の拡張機能です。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **Try-catch**ステートメントは、ルーチンからの予期しない戻りが発生する可能性があるエラーに対してチェックが行われる複数の場所を持つルーチンで特に便利です。
+**Try-catch**ステートメントは、C および C++ 言語に対する Microsoft の拡張機能であり、コードのブロックの実行が中断された場合に、対象アプリケーションがクリーンアップコードの実行を保証できるようにします。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **Try-catch**ステートメントは、ルーチンからの予期しない戻りが発生する可能性があるエラーに対してチェックが行われる複数の場所を持つルーチンで特に便利です。
 
-関連情報とコードサンプルについては、「 [try-Except ステートメント](../cpp/try-except-statement.md)」を参照してください。 構造化例外処理全般の詳細については、「[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)」を参照してください。 /Cli を使用したC++マネージアプリケーションでの例外処理の詳細については、「 [/Clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)」を参照してください。
+関連情報とコードサンプルについては、「 [try-Except ステートメント](../cpp/try-except-statement.md)」を参照してください。 構造化例外処理全般の詳細については、「[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)」を参照してください。 C++/CLI を使用したマネージアプリケーションでの例外処理の詳細については、「 [/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)」を参照してください。
 
 > [!NOTE]
-> 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 プログラムC++については、 C++例外処理機構 ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント) を使用することをお勧めします。
+> 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 C++ プログラムでは、C++ 例外処理機構 ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント) を使用することをお勧めします。
 
 **__Try**句の後の複合ステートメントは、保護されたセクションです。 **__Finally**句の後の複合ステートメントは、終了ハンドラーです。 ハンドラーは、保護されたセクションが例外によって終了 (異常終了) したか、標準的なフォール スルー (正常終了) で終了したかにかかわらず、保護されたセクションが終了したときに実行する一連の操作を指定します。
 
@@ -68,13 +68,13 @@ ms.locfileid: "74246300"
 
 たとえば、次の図に示すように、一連の関数呼び出しで、関数 A を関数 D にリンクするとします。 各関数には、1 つの終了ハンドラーがあります。 関数 D で例外が発生し、A で処理されると、スタックがアンワインドされるときに、終了ハンドラーは D、C、B の順に呼び出されます。
 
-![終了&#45;ハンドラーの実行順序](../cpp/media/vc38cx1.gif "終了&#45;ハンドラーの実行順序") <br/>
+![終了&#45;ハンドラー実行の順序](../cpp/media/vc38cx1.gif "終了&#45;ハンドラー実行の順序") <br/>
 終了順序 - ハンドラーの実行
 
 > [!NOTE]
-> Try-finally の動作は、など、 **finally**の使用をサポートする他の言語とC#は異なります。  1つの **__try**には、 **__finally**と **__except**の両方ではなく、両方を含めることができます。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
+> Try-finally の動作は、C# など、 **finally**の使用をサポートする他の言語とは異なります。  1つの **__try**には、 **__finally**と **__except**の両方ではなく、両方を含めることができます。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
 
-以前のバージョンとの互換性を維持するために、 **_try**、 **_finally**、および **_leave**は、コンパイラオプション[/Za __finally 言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない限り、 **__try**、 **__leave**、および **\(** のシノニムです。
+以前のバージョンとの互換性を保つために、 **_try**、 **_finally**、および **_leave**は、コンパイラオプションである [[言語\(拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、 **__try**、 **__finally**、および **__leave**のシノニムです。
 
 ## <a name="the-leave-keyword"></a>__leave キーワード
 
@@ -92,9 +92,9 @@ ms.locfileid: "74246300"
 
 **END Microsoft 固有の仕様**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [終了ハンドラーの構文](/windows/win32/Debug/termination-handler-syntax)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193967"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>リンカー ツールの警告 LNK4104
 
-シンボル 'symbol' のエクスポートがプライベートにする必要があります。
+シンボル ' symbol ' のエクスポートはプライベートでなければなりません
 
-`symbol`次のいずれかを指定できます。
+`symbol` には、次のいずれかを指定できます。
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ ms.locfileid: "62298543"
 
 - `RasCustomEntryDlg`
 
-この警告は、dll インポート ライブラリを構築するときに生成され、モジュール定義ファイル内のプライベートとして指定せずに、上記の関数のいずれかをエクスポートします。 一般に、これらの関数は、OLE でのみ使用するためエクスポートされます。 リンクされているライブラリを正しくプログラムがそれらへの呼び出しを行うと、インポート ライブラリに配置するは異常な動作につながります。 PRIVATE キーワードの詳細については、次を参照してください。[エクスポート](../../build/reference/exports.md)します。
+この警告は、DLL のインポートライブラリを作成し、上記の関数のいずれかをモジュール定義ファイルで PRIVATE として指定せずにエクスポートしたときに生成されます。 一般に、これらの関数は OLE でのみ使用するためにエクスポートされます。 これらのファイルをインポートライブラリに配置すると、ライブラリにリンクしているプログラムが誤って呼び出しを行った場合に、異常な動作が発生する可能性があります。 PRIVATE キーワードの詳細については、「[エクスポート](../../build/reference/exports.md)」を参照してください。

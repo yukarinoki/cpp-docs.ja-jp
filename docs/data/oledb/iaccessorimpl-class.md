@@ -7,7 +7,6 @@ f1_keywords:
 - ATL::IAccessorImpl::IAccessorImpl
 - IAccessorImpl::IAccessorImpl
 - IAccessorImpl.IAccessorImpl
-- IAccessorImpl
 - ATL::IAccessorImpl::AddRefAccessor
 - AddRefAccessor
 - IAccessorImpl::AddRefAccessor
@@ -37,16 +36,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210864"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl クラス
 
-実装を提供、 [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))インターフェイス。
+[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -60,13 +59,13 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-行セットまたはコマンドのオブジェクト クラス。
+行セットまたはコマンドオブジェクトクラス。
 
 *BindType*<br/>
-バインド情報のストレージ ユニット。 既定値は、`ATLBINDINGS`構造 (atldb.h を参照してください)。
+バインド情報のストレージユニット。 既定値は `ATLBINDINGS` の構造です (「atldb.h」を参照してください)。
 
 *BindingVector*<br/>
-列情報のストレージ ユニット。 既定値は[CAtlMap](../../atl/reference/catlmap-class.md) 、重要な要素は HACCESSOR 値を値要素へのポインター、`BindType`構造体。
+列情報の格納単位。 既定値は、キー要素が HACCESSOR 値、value 要素が `BindType` 構造体へのポインターである、 [CAtlMap](../../atl/reference/catlmap-class.md)です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -84,16 +83,16 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 |||
 |-|-|
-|[AddRefAccessor](#addrefaccessor)|既存のアクセサーには、参照カウントを追加します。|
-|[CreateAccessor](#createaccessor)|バインドのセットからアクセサーを作成します。|
+|[AddRefAccessor](#addrefaccessor)|既存のアクセサーの参照カウントをインクリメントします。|
+|[CreateAccessor](#createaccessor)|バインディングのセットからアクセサーを作成します。|
 |[GetBindings](#getbindings)|アクセサーのバインディングを返します。|
 |[ReleaseAccessor](#releaseaccessor)|アクセサーを解放します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これは、機能は、行セットおよびコマンドに必須です。 OLE DB、HACCESSOR を実装するプロバイダーを必要とタグの配列をある[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))構造体。 によって提供される HACCESSORs`IAccessorImpl`のアドレス、`BindType`構造体。 既定では、`BindType`として定義されている場合は、`ATLBINDINGS`で`IAccessorImpl`のテンプレートの定義。 `BindType` 使用されるメカニズムを提供します。`IAccessorImpl`内の要素の数を追跡するためにその`DBBINDING`参照カウントおよびアクセサーのフラグと配列。
+これは、行セットとコマンドに対して必須です。 OLE DB には、 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))構造体の配列へのタグである haccessor を実装するプロバイダーが必要です。 `IAccessorImpl` によって提供される HACCESSORs は、`BindType` 構造体のアドレスです。 既定では、`BindType` は `IAccessorImpl`のテンプレート定義で `ATLBINDINGS` として定義されます。 `BindType` は、`IAccessorImpl` が `DBBINDING` 配列内の要素の数と参照カウントおよびアクセサーフラグを追跡するために使用する機構を提供します。
 
-## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl:: IAccessorImpl
 
 コンストラクターです。
 
@@ -103,9 +102,9 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl:: AddRefAccessor
 
-既存のアクセサーには、参照カウントを追加します。
+既存のアクセサーの参照カウントをインクリメントします。
 
 ### <a name="syntax"></a>構文
 
@@ -116,11 +115,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IAccessor:: addrefaccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) 」を参照してください。
 
-## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl:: CreateAccessor
 
-バインドのセットからアクセサーを作成します。
+バインディングのセットからアクセサーを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -135,11 +134,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[iaccessor::createaccessor](/previous-versions/windows/desktop/ms720969(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IAccessor:: createaccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) 」を参照してください。
 
-## <a name="getbindings"></a> IAccessorImpl::GetBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl:: GetBindings
 
-アクセサーのコンシューマーからの列の基本的なバインディングを返します。
+アクセサーのコンシューマーからの基本的な列バインドを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -152,9 +151,9 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IAccessor:: getbindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) 」を参照してください。
 
-## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl:: ReleaseAccessor
 
 アクセサーを解放します。
 
@@ -167,9 +166,9 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[iaccessor::releaseaccessor](/previous-versions/windows/desktop/ms719717(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IAccessor:: releaseaccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301497"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188613"
 ---
 # <a name="built-in-types-c"></a>組み込み型 (C++)
 
@@ -66,19 +69,19 @@ ms.locfileid: "75301497"
 
 ### <a name="built-in-type-size-restrictions"></a>組み込みの型サイズの制限
 
-|[カテゴリ]|の型|目次|
+|カテゴリ|種類|内容|
 |--------------|----------|--------------|
 |整数型|**char**|型**char**は、通常、基本実行文字セットのメンバーを含む整数型です。既定では、これは Microsoft C++では ASCII です。<br /><br /> コンパイラC++は、 **char**、 **signed char**、 **unsigned char**型の変数を異なる型を持つものとして扱います。 **Char**型の変数は、/j コンパイルオプションが使用されていない限り、既定では**signed char**型であるかのように**int**に昇格されます。 この場合、これらは**unsigned char**型として扱われ、符号拡張なしで**int**に昇格されます。|
 ||**bool**|型**bool**は、 **true**または**false**の2つの値のいずれかを持つことができる整数型です。 そのサイズは、指定されていません。|
-||**short**|型**short int** (または単に**short**) 型のサイズ以上である整数型は、 **char**、および型のサイズ以下**int**します。<br /><br /> 型のオブジェクト**short**として宣言できます**signed**または**unsigned short**します。 **signed short**は**short**のシノニムです。|
-||**int**|型**int**型のサイズ以上である整数型は、 **short int**、およびよりもより短い、または型のサイズと等しく**long**します。<br /><br /> **Int**型のオブジェクトは、 **signed int**または**unsigned int**として宣言できます。**Signed int**は**int**のシノニムです。|
+||**short**|型**short int** (または単に**short**) は、 **char**型のサイズ以下の整数型であり、 **int**型のサイズ以下になります。<br /><br /> **Short**型のオブジェクトは、 **signed** short または**unsigned short**として宣言できます。 **Signed short**は**short**のシノニムです。|
+||**int**|型の**int**は、 **short**型のサイズ以下の整数型で、 **long**型のサイズ以下の値になりません。<br /><br /> **Int**型のオブジェクトは、 **signed int**または**unsigned int**として宣言できます。**Signed int**は**int**のシノニムです。|
 ||**__int8**、 **__int16**、 **__int32**、 **__int64**|サイズが設定された整数 `__int n`( `n` は整数変数のビット単位のサイズ) **__int8**、 **__int16**、 **__int32** 、および **__int64**は、Microsoft 固有のキーワードです。 すべての型がすべてのアーキテクチャで使用できるわけではありません。 ( **__int128**はサポートされていません)。|
-||**long**|**Long**型 (または**long int**) は、 **int**型のサイズ以上の整数型です。(Windows では**long**は**int**と同じサイズです)。<br /><br /> 型のオブジェクト**long**として宣言できます**signed long**または**unsigned long**します。 **signed long**のシノニムです**long**します。|
-||**long long**|符号なしのよりも大きい**long**します。<br /><br /> 型のオブジェクト**long**として宣言できます**signed long long**または**unsigned long long**します。 **signed long long**のシノニムです**long**します。|
+||**long**|**Long**型 (または**long int**) は、 **int**型のサイズ以上の整数型です。(Windows では**long**は**int**と同じサイズです)。<br /><br /> **Long**型のオブジェクトは、 **signed** long または**unsigned long**として宣言できます。 **Signed long**は、 **long 型**のシノニムです。|
+||**long long**|符号なし**long**より大きい。<br /><br /> **Long long**型のオブジェクトは、 **signed** long long または**unsigned long long**として宣言できます。 **signed** long long は long **long**のシノニムです。|
 ||**wchar_t**、 **__wchar_t**|**Wchar_t**型の変数はワイド文字またはマルチバイト文字型を指定します。 既定では、 **wchar_t**はネイティブ型ですが、 [/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)を使用して、 **unsigned short**の typedef **wchar_t**することができます。 **__Wchar_t**型は、ネイティブ**Wchar_t**型の Microsoft 固有のシノニムです。<br /><br /> ワイド文字型を指定するには、文字や文字列リテラルの前に L のプレフィックスを使用します。|
 |浮動小数点数|**float**|型**float**は、最小の浮動小数点型です。|
 ||**double**|型**double**は**float**型以上の浮動小数点型であり、 **long double**型のサイズ以下です (double 型)。<br /><br /> Microsoft 固有: **long double**と**double**の表現は同じです。 ただし、 **long double**と**double**は別個の型です。|
-||**long double**|型**long double**が浮動小数点型よりも大きいですまたは型に等しい**double**します。|
+||**long double**|**Long double**型は**double**型以上の浮動小数点型です。|
 
 **Microsoft 固有の仕様**
 
@@ -86,19 +89,19 @@ ms.locfileid: "75301497"
 
 ### <a name="sizes-of-built-in-types"></a>組み込み型のサイズ
 
-|の型|サイズ|
+|種類|Size|
 |----------|----------|
-|**bool**、 **char**、 **unsigned char**、 **signed char**、 **_ _int8**|1 バイト|
-|**_ _int16**、**short*、 **unsigned short**、 **wchar_t**、 **_ _wchar_t**|2 バイト|
+|**bool**、 **char**、 **unsigned char**、 **signed char**、 **__int8**|1 バイト|
+|**__int16**、 **short**、 **unsigned short**、 **wchar_t**、 **__wchar_t**|2 バイト|
 |**float**、 **__int32**、 **int**、 **unsigned int**、 **long**、 **unsigned long**|4 バイト|
-|**double**、 **_ _int64**、 **long double**、 **long**|8 バイト|
+|**double**、 **__int64**、long **double**、 **long long**|8 バイト|
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 型ごとの値の範囲の概要については、「 [データ型の範囲](data-type-ranges.md) 」を参照してください。
 
 型変換の詳細については、「 [標準変換](standard-conversions.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ型の範囲](data-type-ranges.md)

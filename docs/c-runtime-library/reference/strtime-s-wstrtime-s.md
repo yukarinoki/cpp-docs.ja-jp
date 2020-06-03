@@ -1,9 +1,11 @@
 ---
 title: _strtime_s、_wstrtime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime_s
 - _strtime_s
+- _o__strtime_s
+- _o__wstrtime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625915"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910936"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
@@ -67,7 +70,7 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 バッファーの長さは少なくとも 10 バイトで、時刻が書き込まれます。
 
 *numberOfElements*<br/>
@@ -81,28 +84,30 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|Return|*バッファー*の内容|
+|*格納*|*numberOfElements*|戻り値|*バッファー*の内容|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(任意)|**EINVAL**|変更されない|
+|**空白**|(任意)|**EINVAL**|変更されない|
 |Not **NULL** (有効なバッファーを指す)|0|**EINVAL**|変更されない|
 |Not **NULL** (有効なバッファーを指す)|0 < サイズ < 9|**EINVAL**|空の文字列|
 |Not **NULL** (有効なバッファーを指す)|サイズ > 9|0|コメントで指定されている書式設定の、現在の時刻|
 
-## <a name="security-issues"></a>セキュリティ上の問題
+## <a name="security-issues"></a>セキュリティの問題
 
 無効な**NULL**以外の値をバッファーに渡すと、 *numberofelements*パラメーターが9よりも大きい場合、アクセス違反が発生します。
 
 *Numberofelements*の値をバッファーの実際のサイズより大きい値に渡すと、バッファーオーバーランが発生します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、より安全なバージョンの[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)を提供します。 **_Strtime_s**関数は、 *timestr*が指すバッファーに現在の現地時刻をコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
+これらの関数は、より安全なバージョンの[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)を提供します。 **_Strtime_s**関数は、現在の現地時刻を*timestr*が指すバッファーにコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
 
-**_wstrtime**は、 **_strtime**のワイド文字バージョンです。 **_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrtime**は **_strtime**のワイド文字バージョンです。**_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -110,9 +115,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> または \<wchar.h>|

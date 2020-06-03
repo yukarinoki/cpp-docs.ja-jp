@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243768"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424765"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 演算子
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 呼び出し可能オブジェクトが空かどうかをテストします。
 
@@ -39,7 +39,7 @@ template <class Fty>
 *npc*\
 null ポインター
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 どちらの演算子も、`function` オブジェクトへの参照である引数と null ポインター定数である引数を受け取ります。 `function` オブジェクトが空の場合にのみ、両方とも true を返します。
 
@@ -75,7 +75,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 呼び出し可能オブジェクトが空かどうかをテストします。
 
@@ -98,7 +98,7 @@ template <class Fty>
 *npc*\
 null ポインター
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 どちらの演算子も、`function` オブジェクトへの参照である引数と null ポインター定数である引数を受け取ります。 `function` オブジェクトが空ではない場合にのみ、両方とも true を返します。
 

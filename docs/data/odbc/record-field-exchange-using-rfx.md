@@ -1,49 +1,48 @@
 ---
-title: レコード フィールド エクス チェンジ:RFX の使い方
+title: 'レコード フィールド エクスチェンジ: RFX の使い方'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0cdcee758f4842b0738068a8a11c4e2e404155
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395652"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367144"
 ---
-# <a name="record-field-exchange-using-rfx"></a>レコード フィールド エクス チェンジ:RFX の使い方
+# <a name="record-field-exchange-using-rfx"></a>レコード フィールド エクスチェンジ: RFX の使い方
 
-このトピックでは、RFX の使い方とは、フレームワークには、何について説明します。
+このトピックでは、フレームワークの動作に関連して RFX を使用する方法について説明します。
 
 > [!NOTE]
->  このトピックの対象から派生したクラス[CRecordset](../../mfc/reference/crecordset-class.md)バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+> このトピックは、バルク行フェッチが実装されていない[CRecordset](../../mfc/reference/crecordset-class.md)から派生したクラスに適用されます。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクスチェンジ (Bulk RFX) が実装されます。 Bulk RFX は、RFX に似ています。 この違いについては、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-次のトピックでは、関連情報を含めます。
+以下のトピックには、関連情報が含まれています。
 
-- [レコード フィールド エクスチェンジ: ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)RFX の主要なコンポーネントを紹介し、コードについて説明する MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 書き込みRFX とウィザード コードを変更する方法をサポートします。
+- [レコード フィールド エクスチェンジ: ウィザード コードの操作](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)では、RFX の主要なコンポーネントを紹介し、MFC アプリケーション ウィザードと**クラスの追加**(MFC [ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を参照) が RFX をサポートするために記述するコードと、ウィザード コードの変更方法について説明します。
 
-- [レコード フィールド エクスチェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)で RFX 関数への書き込み呼び出しについて説明します、`DoFieldExchange`をオーバーライドします。
+- [レコード フィールド エクスチェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)、上書き`DoFieldExchange`の RFX 関数への呼び出しを記述する方法について説明します。
 
-次の表では、関連するは、フレームワーク、ロールを示します。
+次の表は、フレームワークがあなたのために行う役割を示しています。
 
-### <a name="using-rfx-you-and-the-framework"></a>RFX の使い方フレームワーク
+### <a name="using-rfx-you-and-the-framework"></a>RFX の使用: あなたとフレームワーク
 
-|プログラマの役割|フレームワークの役割|
+|あなたが|フレームワークの役割|
 |---------|-------------------|
-|ウィザードを使用して、レコード セット クラスを宣言します。 フィールド データ メンバーの名前とデータ型を指定します。|ウィザードの派生を`CRecordset`クラスと書き込みを[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)をオーバーライドするなど、RFX 関数の各フィールド データ メンバーの呼び出し。|
-|(省略可能)クラスに必要なパラメーターのデータ メンバーを手動で追加します。 RFX 関数の呼び出しを手動で追加`DoFieldExchange`、各パラメーターのデータ メンバーへの呼び出しを追加[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)、パラメーターのグループのパラメーターの合計数を指定し、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). 参照してください[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。||
-|(省略可能)手動で追加の列をフィールド データ メンバーにバインドします。 手動でインクリメント[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)します。 参照してください[レコード セット。動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。||
-|レコード セット クラスのオブジェクトを構築します。 オブジェクトを使用する前に存在する場合、パラメーターの値をデータ メンバーを設定します。|効率を高めるため、フレームワークは、ODBC を使用して、パラメーターを prebinds します。 パラメーターの値を渡すと、フレームワークはそれらをデータ ソースに渡します。 並べ替えやフィルター文字列を変更しない限り、クエリでのパラメーターの値のみが送信されます。|
-|使用してレコード セット オブジェクトを開く[:open](../../mfc/reference/crecordset-class.md#open)します。|レコード セットのクエリを実行する、レコード セットと呼び出しのフィールド データ メンバーへの列をバインド`DoFieldExchange`を選択した最初のレコードとレコード セットのフィールド データ メンバーの間でデータを交換します。|
-|使用して、レコード セット内をスクロール[CRecordset::Move](../../mfc/reference/crecordset-class.md#move)またはメニューまたはツールバーのコマンド。|呼び出し`DoFieldExchange`フィールド データ メンバーを新しい現在のレコードからデータを転送します。|
-|追加、更新、およびレコードを削除します。|呼び出し`DoFieldExchange`データ ソースにデータを転送します。|
+|ウィザードを使用してレコードセット クラスを宣言します。 フィールド データ メンバーの名前とデータ型を指定します。|ウィザードはクラスを`CRecordset`派生させ、各フィールド データ メンバーの RFX 関数呼び出しを含む[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)オーバーライドを書き込みます。|
+|(オプション)必要なパラメーター データ メンバーをクラスに手動で追加します。 パラメーター データ メンバーごとに RFX 関数呼び出しを`DoFieldExchange`手動で追加し、パラメーターのグループに対して[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)への呼び出しを追加し[、m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)でパラメーターの合計数を指定します。 [「レコードセット: レコードセットのパラメータ化 (ODBC)」](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。||
+|(オプション)フィールド データ メンバーに追加の列を手動でバインドします。 m_nFields手動[でインク](../../mfc/reference/crecordset-class.md#m_nfields)リメントします。 [「レコードセット: データ列の動的連結 (ODBC)」](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)を参照してください。||
+|レコードセット クラスのオブジェクトを構築します。 オブジェクトを使用する前に、パラメーター データ メンバーの値を設定します (存在する場合)。|効率を高めるには、フレームワークは ODBC を使用してパラメーターを事前にバインドします。 パラメーター値を渡すと、フレームワークはデータ ソースに渡します。 並べ替え文字列やフィルタ文字列が変更されていない限り、再クエリの場合はパラメータ値のみが送信されます。|
+|レコードセット オブジェクトを[開くには、次の操作を行います](../../mfc/reference/crecordset-class.md#open)。|レコードセットのクエリを実行し、列をレコードセットのフィールド データ メンバにバインド`DoFieldExchange`し、最初に選択したレコードとレコードセットのフィールド データ メンバとの間でデータを交換する呼び出しを行います。|
+|レコードセットをスクロールするには[、CRecordset::移動](../../mfc/reference/crecordset-class.md#move)またはメニューまたはツールバーコマンドを使用します。|新`DoFieldExchange`しいカレント レコードからフィールド データ メンバーにデータを転送する呼び出し。|
+|レコードの追加、更新、および削除を行います。|データ`DoFieldExchange`をデータ ソースに転送するための呼び出し。|
 
 ## <a name="see-also"></a>関連項目
 
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [レコード フィールド エクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[レコードセット: 合計とその他の集計結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
-[CRecordset クラス](../../mfc/reference/crecordset-class.md)<br/>
-[CFieldExchange クラス](../../mfc/reference/cfieldexchange-class.md)<br/>
+[レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[クラス](../../mfc/reference/crecordset-class.md)<br/>
+[クラス](../../mfc/reference/cfieldexchange-class.md)<br/>
 [マクロ、グローバル関数、およびグローバル変数](../../mfc/reference/mfc-macros-and-globals.md)
-

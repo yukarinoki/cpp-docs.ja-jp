@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501625"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168240"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501625"
 [dispinterface]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **dispinterface** C++ 属性がインターフェイスの前にあると、インターフェイスは生成される .idl ファイルのライブラリ ブロック内に配置されます。
 
@@ -51,11 +51,11 @@ dispinterface helloPro
 |**対象**|**interface**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
-|**無効な属性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
+|**無効な属性**|`dual`、`object`、`oleautomation`、`local`、`ms_union`|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [使用法別の属性](attributes-by-usage.md)<br/>

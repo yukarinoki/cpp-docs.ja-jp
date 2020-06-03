@@ -1,0 +1,658 @@
+- name: MSVC での並列プログラミング
+  href: ../parallel/parallel-programming-in-visual-cpp.md
+- name: 自動並行化と自動ベクター化
+  href: ../parallel/auto-parallelization-and-auto-vectorization.md
+- name: C++ Accelerated Massive Parallelism (AMP)
+  expanded: false
+  items:
+    - name: C++ AMP (C++ Accelerated Massive Parallelism)
+      href: ../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md
+    - name: C++ AMP の概要
+      href: ../parallel/amp/cpp-amp-overview.md
+    - name: タイルの使用
+      href: ../parallel/amp/using-tiles.md
+    - name: UWP アプリでの C++ AMP の使用
+      href: ../parallel/amp/using-cpp-amp-in-windows-store-apps.md
+    - name: 'チュートリアル: 行列乗算'
+      href: ../parallel/amp/walkthrough-matrix-multiplication.md
+    - name: 'チュートリアル: C++ AMP アプリケーションのデバッグ'
+      href: ../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md
+    - name: ラムダ、関数オブジェクト、および制限関数の使用
+      href: ../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md
+    - name: グラフィックス (C++ AMP)
+      href: ../parallel/amp/graphics-cpp-amp.md
+    - name: アクセラレータおよび accelerator_view オブジェクトの使用
+      href: ../parallel/amp/using-accelerator-and-accelerator-view-objects.md
+    - name: リファレンス (C++ AMP)
+      expanded: false
+      items:
+        - name: リファレンス (C++ AMP)
+          href: ../parallel/amp/reference/reference-cpp-amp.md
+        - name: コンカレンシー名前空間 (C++ AMP)
+          expanded: false
+          items:
+            - name: コンカレンシー名前空間 (C++ AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-cpp-amp.md
+            - name: コンカレンシー名前空間関数 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-functions-amp.md
+            - name: コンカレンシー名前空間列挙型 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-enums-amp.md
+            - name: コンカレンシー名前空間演算子 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-operators-amp.md
+            - name: コンカレンシー名前空間定数 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-constants-amp.md
+            - name: accelerator クラス
+              href: ../parallel/amp/reference/accelerator-class.md
+            - name: accelerator_view クラス
+              href: ../parallel/amp/reference/accelerator-view-class.md
+            - name: accelerator_view_removed クラス
+              href: ../parallel/amp/reference/accelerator-view-removed-class.md
+            - name: array クラス
+              href: ../parallel/amp/reference/array-class.md
+            - name: array_view クラス
+              href: ../parallel/amp/reference/array-view-class.md
+            - name: completion_future クラス
+              href: ../parallel/amp/reference/completion-future-class.md
+            - name: extent クラス (C++ AMP)
+              href: ../parallel/amp/reference/extent-class.md
+            - name: index クラス
+              href: ../parallel/amp/reference/index-class.md
+            - name: invalid_compute_domain クラス
+              href: ../parallel/amp/reference/invalid-compute-domain-class.md
+            - name: out_of_memory クラス
+              href: ../parallel/amp/reference/out-of-memory-class.md
+            - name: runtime_exception クラス
+              href: ../parallel/amp/reference/runtime-exception-class.md
+            - name: tile_barrier クラス
+              href: ../parallel/amp/reference/tile-barrier-class.md
+            - name: tiled_extent クラス
+              href: ../parallel/amp/reference/tiled-extent-class.md
+            - name: tiled_index クラス
+              href: ../parallel/amp/reference/tiled-index-class.md
+            - name: uninitialized_object クラス
+              href: ../parallel/amp/reference/uninitialized-object-class.md
+            - name: unsupported_feature クラス
+              href: ../parallel/amp/reference/unsupported-feature-class.md
+        - name: 'Concurrency::direct3d 名前空間'
+          expanded: false
+          items:
+            - name: 'Concurrency::direct3d 名前空間'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace.md
+            - name: 'Concurrency::direct3d 名前空間関数 (AMP)'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace-functions-amp.md
+            - name: adopt_d3d_access_lock_t 構造体
+              href: ../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md
+            - name: scoped_d3d_access_lock クラス
+              href: ../parallel/amp/reference/scoped-d3d-access-lock-class.md
+        - name: 'Concurrency::fast_math 名前空間'
+          expanded: false
+          items:
+            - name: 'Concurrency::fast_math 名前空間'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace.md
+            - name: 'Concurrency::fast_math 名前空間関数'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace-functions.md
+        - name: 'Concurrency::graphics 名前空間'
+          expanded: false
+          items:
+            - name: 'Concurrency::graphics 名前空間'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace.md
+            - name: 'Concurrency::graphics::direct3d 名前空間'
+              expanded: false
+              items:
+                - name: 'Concurrency::graphics::direct3d 名前空間'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md
+                - name: 'Concurrency::graphics::direct3d 名前空間関数'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace-functions.md
+            - name: 'Concurrency::graphics 名前空間関数'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-functions.md
+            - name: 'Concurrency::graphics 名前空間列挙型'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-enums.md
+            - name: double_2 クラス
+              href: ../parallel/amp/reference/double-2-class.md
+            - name: double_3 クラス
+              href: ../parallel/amp/reference/double-3-class.md
+            - name: double_4 クラス
+              href: ../parallel/amp/reference/double-4-class.md
+            - name: float_2 クラス
+              href: ../parallel/amp/reference/float-2-class.md
+            - name: float_3 クラス
+              href: ../parallel/amp/reference/float-3-class.md
+            - name: float_4 クラス
+              href: ../parallel/amp/reference/float-4-class.md
+            - name: int_2 クラス
+              href: ../parallel/amp/reference/int-2-class.md
+            - name: int_3 クラス
+              href: ../parallel/amp/reference/int-3-class.md
+            - name: int_4 クラス
+              href: ../parallel/amp/reference/int-4-class.md
+            - name: norm クラス
+              href: ../parallel/amp/reference/norm-class.md
+            - name: norm_2 クラス
+              href: ../parallel/amp/reference/norm-2-class.md
+            - name: norm_3 クラス
+              href: ../parallel/amp/reference/norm-3-class.md
+            - name: norm_4 クラス
+              href: ../parallel/amp/reference/norm-4-class.md
+            - name: sampler クラス
+              href: ../parallel/amp/reference/sampler-class.md
+            - name: short_vector 構造体
+              href: ../parallel/amp/reference/short-vector-structure.md
+            - name: short_vector_traits 構造体
+              href: ../parallel/amp/reference/short-vector-traits-structure.md
+            - name: texture クラス
+              href: ../parallel/amp/reference/texture-class.md
+            - name: texture_view クラス
+              href: ../parallel/amp/reference/texture-view-class.md
+            - name: writeonly_texture_view クラス
+              href: ../parallel/amp/reference/writeonly-texture-view-class.md
+            - name: uint_2 クラス
+              href: ../parallel/amp/reference/uint-2-class.md
+            - name: uint_3 クラス
+              href: ../parallel/amp/reference/uint-3-class.md
+            - name: uint_4 クラス
+              href: ../parallel/amp/reference/uint-4-class.md
+            - name: unorm クラス
+              href: ../parallel/amp/reference/unorm-class.md
+            - name: unorm_2 クラス
+              href: ../parallel/amp/reference/unorm-2-class.md
+            - name: unorm_3 クラス
+              href: ../parallel/amp/reference/unorm-3-class.md
+            - name: unorm_4 クラス
+              href: ../parallel/amp/reference/unorm-4-class.md
+        - name: 'Concurrency::precise_math 名前空間'
+          expanded: false
+          items:
+            - name: 'Concurrency::precise_math 名前空間'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace.md
+            - name: 'Concurrency::precise_math 名前空間関数'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace-functions.md
+- name: 同時実行ランタイム (ConCRT)
+  expanded: false
+  items:
+    - name: コンカレンシー ランタイム
+      href: ../parallel/concrt/concurrency-runtime.md
+    - name: コンカレンシー ランタイムの概要
+      href: ../parallel/concrt/overview-of-the-concurrency-runtime.md
+    - name: 同時実行ランタイムでの例外処理
+      href: ../parallel/concrt/exception-handling-in-the-concurrency-runtime.md
+    - name: 並列診断ツール (同時実行ランタイム)
+      href: ../parallel/concrt/parallel-diagnostic-tools-concurrency-runtime.md
+    - name: C++ における UWP アプリ用の非同期操作の作成
+      href: ../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md
+    - name: 同時実行ランタイムとその他の同時実行モデルの比較
+      expanded: false
+      items:
+        - name: 同時実行ランタイムとその他の同時実行モデルの比較
+          href: ../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md
+        - name: OpenMP からコンカレンシー ランタイムへの移行
+          expanded: false
+          items:
+            - name: OpenMP からコンカレンシー ランタイムへの移行
+              href: ../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
+            - name: '方法: OpenMP の parallel for ループを変換し、同時実行ランタイムを使用する'
+              href: ../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
+            - name: '方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
+            - name: '方法: 例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
+            - name: '方法: 減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
+    - name: 並列パターン ライブラリ (PPL)
+      expanded: false
+      items:
+        - name: 並列パターン ライブラリ (PPL)
+          href: ../parallel/concrt/parallel-patterns-library-ppl.md
+        - name: タスクの並列化 (同時実行ランタイム)
+          expanded: false
+          items:
+            - name: タスクの並列化 (同時実行ランタイム)
+              href: ../parallel/concrt/task-parallelism-concurrency-runtime.md
+            - name: '方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する'
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
+            - name: '方法: parallel_invoke を使用して並列操作を実行する'
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: '方法: 遅延後に完了するタスクを作成する'
+              href: ../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
+        - name: 並列アルゴリズム
+          expanded: false
+          items:
+            - name: 並列アルゴリズム
+              href: ../parallel/concrt/parallel-algorithms.md
+            - name: '方法: parallel_for ループを記述する'
+              href: ../parallel/concrt/how-to-write-a-parallel-for-loop.md
+            - name: '方法: parallel_for_each ループを記述する'
+              href: ../parallel/concrt/how-to-write-a-parallel-for-each-loop.md
+            - name: '方法: マップ操作と縮小操作を並列実行する'
+              href: ../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
+        - name: 並列コンテナーと並列オブジェクト
+          expanded: false
+          items:
+            - name: 並列コンテナーと並列オブジェクト
+              href: ../parallel/concrt/parallel-containers-and-objects.md
+            - name: '方法: 並列コンテナーを使用して効率を向上させる'
+              href: ../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
+            - name: '方法: combinable を使用してパフォーマンスを向上させる'
+              href: ../parallel/concrt/how-to-use-combinable-to-improve-performance.md
+            - name: '方法: combinable を使用して集合を結合する'
+              href: ../parallel/concrt/how-to-use-combinable-to-combine-sets.md
+        - name: PPL における取り消し処理
+          expanded: false
+          items:
+            - name: PPL における取り消し処理
+              href: ../parallel/concrt/cancellation-in-the-ppl.md
+            - name: '方法: キャンセル処理を使用して並列ループを中断する'
+              href: ../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
+            - name: '方法: 例外処理を使用して並列ループを中断する'
+              href: ../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
+    - name: 非同期エージェント ライブラリ
+      expanded: false
+      items:
+        - name: 非同期エージェント ライブラリ
+          href: ../parallel/concrt/asynchronous-agents-library.md
+        - name: 非同期エージェント
+          href: ../parallel/concrt/asynchronous-agents.md
+        - name: 非同期メッセージ ブロック
+          href: ../parallel/concrt/asynchronous-message-blocks.md
+        - name: メッセージ パッシング関数
+          href: ../parallel/concrt/message-passing-functions.md
+        - name: '方法: さまざまなプロデューサー/コンシューマー パターンを実装する'
+          href: ../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
+        - name: '方法: call クラスおよび transformer クラスに処理関数を提供する'
+          href: ../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
+        - name: '方法: データ パイプラインでトランスフォーマーを使用する'
+          href: ../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
+        - name: '方法: 完了したタスクから選択する'
+          href: ../parallel/concrt/how-to-select-among-completed-tasks.md
+        - name: '方法: メッセージを定期的に送信する'
+          href: ../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
+        - name: '方法: メッセージ ブロック フィルターを使用する'
+          href: ../parallel/concrt/how-to-use-a-message-block-filter.md
+    - name: 同期データ構造
+      expanded: false
+      items:
+        - name: 同期データ構造
+          href: ../parallel/concrt/synchronization-data-structures.md
+        - name: 同期データ構造と Windows API の比較
+          href: ../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md
+    - name: タスク スケジューラ (同時実行ランタイム)
+      expanded: false
+      items:
+        - name: タスク スケジューラ (同時実行ランタイム)
+          href: ../parallel/concrt/task-scheduler-concurrency-runtime.md
+        - name: スケジューラ インスタンス
+          expanded: false
+          items:
+            - name: スケジューラ インスタンス
+              href: ../parallel/concrt/scheduler-instances.md
+            - name: '方法: スケジューラ インスタンスを管理する'
+              href: ../parallel/concrt/how-to-manage-a-scheduler-instance.md
+        - name: スケジューラ ポリシー
+          expanded: false
+          items:
+            - name: スケジューラ ポリシー
+              href: ../parallel/concrt/scheduler-policies.md
+            - name: '方法: 特定のスケジューラ ポリシーを指定する'
+              href: ../parallel/concrt/how-to-specify-specific-scheduler-policies.md
+            - name: '方法: 特定のスケジューラ ポリシーを使用するエージェントを作成する'
+              href: ../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
+        - name: スケジュール グループ
+          expanded: false
+          items:
+            - name: スケジュール グループ
+              href: ../parallel/concrt/schedule-groups.md
+            - name: '方法: スケジュール グループを使用して実行順序に影響を与える'
+              href: ../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
+        - name: 軽量タスク
+          href: ../parallel/concrt/lightweight-tasks.md
+        - name: コンテキスト
+          expanded: false
+          items:
+            - name: コンテキスト
+              href: ../parallel/concrt/contexts.md
+            - name: '方法: Context クラスを使用して協調セマフォを実装する'
+              href: ../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
+            - name: '方法: オーバーサブスクリプションを使用して待機時間を短縮する'
+              href: ../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
+        - name: メモリ管理関数
+          expanded: false
+          items:
+            - name: メモリ管理関数
+              href: ../parallel/concrt/memory-management-functions.md
+            - name: '方法: Alloc および Free を使用してメモリ パフォーマンスを改善する'
+              href: ../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
+    - name: 同時実行ランタイムのチュートリアル
+      expanded: false
+      items:
+        - name: 同時実行ランタイムのチュートリアル
+          href: ../parallel/concrt/concurrency-runtime-walkthroughs.md
+        - name: 'チュートリアル: タスクおよび XML HTTP 要求を使用した接続'
+          href: ../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
+        - name: 'チュートリアル: エージェント ベースのアプリケーションの作成'
+          href: ../parallel/concrt/walkthrough-creating-an-agent-based-application.md
+        - name: 'チュートリアル: データフロー エージェントの作成'
+          href: ../parallel/concrt/walkthrough-creating-a-dataflow-agent.md
+        - name: 'チュートリアル: イメージ処理ネットワークの作成'
+          href: ../parallel/concrt/walkthrough-creating-an-image-processing-network.md
+        - name: 'チュートリアル: フューチャの実装'
+          href: ../parallel/concrt/walkthrough-implementing-futures.md
+        - name: 'チュートリアル: join を使用したデッドロックの防止'
+          href: ../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
+        - name: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去'
+          href: ../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
+        - name: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用'
+          href: ../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
+        - name: 'チュートリアル: 既存のコードを改変して軽量タスクを使用する'
+          href: ../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
+        - name: 'チュートリアル: カスタム メッセージ ブロックの作成'
+          href: ../parallel/concrt/walkthrough-creating-a-custom-message-block.md
+    - name: 同時実行ランタイムのベスト プラクティス
+      expanded: false
+      items:
+        - name: 同時実行ランタイムのベスト プラクティス
+          href: ../parallel/concrt/concurrency-runtime-best-practices.md
+        - name: 並列パターン ライブラリのベスト プラクティス
+          href: ../parallel/concrt/best-practices-in-the-parallel-patterns-library.md
+        - name: 非同期エージェント ライブラリのベスト プラクティス
+          href: ../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
+        - name: 同時実行ランタイムの一般的なベスト プラクティス
+          href: ../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
+    - name: 関連項目
+      expanded: false
+      items:
+        - name: 参照 (コンカレンシー ランタイム)
+          href: ../parallel/concrt/reference/reference-concurrency-runtime.md
+        - name: コンカレンシー名前空間
+          expanded: false
+          items:
+            - name: コンカレンシー名前空間
+              href: ../parallel/concrt/reference/concurrency-namespace.md
+            - name: コンカレンシー名前空間の関数
+              href: ../parallel/concrt/reference/concurrency-namespace-functions.md
+            - name: コンカレンシー名前空間演算子
+              href: ../parallel/concrt/reference/concurrency-namespace-operators.md
+            - name: コンカレンシー名前空間定数 1
+              href: ../parallel/concrt/reference/concurrency-namespace-constants1.md
+            - name: コンカレンシー名前空間を持つ列挙型
+              href: ../parallel/concrt/reference/concurrency-namespace-enums.md
+            - name: affinity_partitioner クラス
+              href: ../parallel/concrt/reference/affinity-partitioner-class.md
+            - name: agent クラス
+              href: ../parallel/concrt/reference/agent-class.md
+            - name: auto_partitioner クラス
+              href: ../parallel/concrt/reference/auto-partitioner-class.md
+            - name: bad_target クラス
+              href: ../parallel/concrt/reference/bad-target-class.md
+            - name: call クラス
+              href: ../parallel/concrt/reference/call-class.md
+            - name: cancellation_token クラス
+              href: ../parallel/concrt/reference/cancellation-token-class.md
+            - name: cancellation_token_registration クラス
+              href: ../parallel/concrt/reference/cancellation-token-registration-class.md
+            - name: cancellation_token_source クラス
+              href: ../parallel/concrt/reference/cancellation-token-source-class.md
+            - name: choice クラス
+              href: ../parallel/concrt/reference/choice-class.md
+            - name: combinable クラス
+              href: ../parallel/concrt/reference/combinable-class.md
+            - name: concurrent_priority_queue クラス
+              href: ../parallel/concrt/reference/concurrent-priority-queue-class.md
+            - name: concurrent_queue クラス
+              href: ../parallel/concrt/reference/concurrent-queue-class.md
+            - name: concurrent_unordered_map クラス
+              href: ../parallel/concrt/reference/concurrent-unordered-map-class.md
+            - name: concurrent_unordered_multimap クラス
+              href: ../parallel/concrt/reference/concurrent-unordered-multimap-class.md
+            - name: concurrent_unordered_multiset クラス
+              href: ../parallel/concrt/reference/concurrent-unordered-multiset-class.md
+            - name: concurrent_unordered_set クラス
+              href: ../parallel/concrt/reference/concurrent-unordered-set-class.md
+            - name: concurrent_vector クラス
+              href: ../parallel/concrt/reference/concurrent-vector-class.md
+            - name: Context クラス
+              href: ../parallel/concrt/reference/context-class.md
+            - name: context_self_unblock クラス
+              href: ../parallel/concrt/reference/context-self-unblock-class.md
+            - name: context_unblock_unbalanced クラス
+              href: ../parallel/concrt/reference/context-unblock-unbalanced-class.md
+            - name: critical_section クラス
+              href: ../parallel/concrt/reference/critical-section-class.md
+            - name: CurrentScheduler クラス
+              href: ../parallel/concrt/reference/currentscheduler-class.md
+            - name: default_scheduler_exists クラス
+              href: ../parallel/concrt/reference/default-scheduler-exists-class.md
+            - name: DispatchState 構造体
+              href: ../parallel/concrt/reference/dispatchstate-structure.md
+            - name: event クラス
+              href: ../parallel/concrt/reference/event-class.md
+            - name: IExecutionContext 構造体
+              href: ../parallel/concrt/reference/iexecutioncontext-structure.md
+            - name: IExecutionResource 構造体
+              href: ../parallel/concrt/reference/iexecutionresource-structure.md
+            - name: improper_lock クラス
+              href: ../parallel/concrt/reference/improper-lock-class.md
+            - name: improper_scheduler_attach クラス
+              href: ../parallel/concrt/reference/improper-scheduler-attach-class.md
+            - name: improper_scheduler_detach クラス
+              href: ../parallel/concrt/reference/improper-scheduler-detach-class.md
+            - name: improper_scheduler_reference クラス
+              href: ../parallel/concrt/reference/improper-scheduler-reference-class.md
+            - name: invalid_link_target クラス
+              href: ../parallel/concrt/reference/invalid-link-target-class.md
+            - name: invalid_multiple_scheduling クラス
+              href: ../parallel/concrt/reference/invalid-multiple-scheduling-class.md
+            - name: invalid_operation クラス
+              href: ../parallel/concrt/reference/invalid-operation-class.md
+            - name: invalid_oversubscribe_operation クラス
+              href: ../parallel/concrt/reference/invalid-oversubscribe-operation-class.md
+            - name: invalid_scheduler_policy_key クラス
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-key-class.md
+            - name: invalid_scheduler_policy_thread_specification クラス
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-thread-specification-class.md
+            - name: invalid_scheduler_policy_value クラス
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-value-class.md
+            - name: IResourceManager 構造体
+              href: ../parallel/concrt/reference/iresourcemanager-structure.md
+            - name: IScheduler 構造体
+              href: ../parallel/concrt/reference/ischeduler-structure.md
+            - name: ISchedulerProxy 構造体
+              href: ../parallel/concrt/reference/ischedulerproxy-structure.md
+            - name: ISource クラス
+              href: ../parallel/concrt/reference/isource-class.md
+            - name: ITarget クラス
+              href: ../parallel/concrt/reference/itarget-class.md
+            - name: IThreadProxy 構造体
+              href: ../parallel/concrt/reference/ithreadproxy-structure.md
+            - name: ITopologyExecutionResource 構造体
+              href: ../parallel/concrt/reference/itopologyexecutionresource-structure.md
+            - name: ITopologyNode 構造体
+              href: ../parallel/concrt/reference/itopologynode-structure.md
+            - name: IUMSCompletionList 構造体
+              href: ../parallel/concrt/reference/iumscompletionlist-structure.md
+            - name: IUMSScheduler 構造体
+              href: ../parallel/concrt/reference/iumsscheduler-structure.md
+            - name: IUMSThreadProxy 構造体
+              href: ../parallel/concrt/reference/iumsthreadproxy-structure.md
+            - name: IUMSUnblockNotification 構造体
+              href: ../parallel/concrt/reference/iumsunblocknotification-structure.md
+            - name: IVirtualProcessorRoot 構造体
+              href: ../parallel/concrt/reference/ivirtualprocessorroot-structure.md
+            - name: join クラス
+              href: ../parallel/concrt/reference/join-class.md
+            - name: location クラス
+              href: ../parallel/concrt/reference/location-class.md
+            - name: message クラス
+              href: ../parallel/concrt/reference/message-class.md
+            - name: message_not_found クラス
+              href: ../parallel/concrt/reference/message-not-found-class.md
+            - name: message_processor クラス
+              href: ../parallel/concrt/reference/message-processor-class.md
+            - name: missing_wait クラス
+              href: ../parallel/concrt/reference/missing-wait-class.md
+            - name: multi_link_registry クラス
+              href: ../parallel/concrt/reference/multi-link-registry-class.md
+            - name: multitype_join クラス
+              href: ../parallel/concrt/reference/multitype-join-class.md
+            - name: nested_scheduler_missing_detach クラス
+              href: ../parallel/concrt/reference/nested-scheduler-missing-detach-class.md
+            - name: network_link_registry クラス
+              href: ../parallel/concrt/reference/network-link-registry-class.md
+            - name: operation_timed_out クラス
+              href: ../parallel/concrt/reference/operation-timed-out-class.md
+            - name: ordered_message_processor クラス
+              href: ../parallel/concrt/reference/ordered-message-processor-class.md
+            - name: overwrite_buffer クラス
+              href: ../parallel/concrt/reference/overwrite-buffer-class.md
+            - name: progress_reporter クラス
+              href: ../parallel/concrt/reference/progress-reporter-class.md
+            - name: propagator_block クラス
+              href: ../parallel/concrt/reference/propagator-block-class.md
+            - name: reader_writer_lock クラス
+              href: ../parallel/concrt/reference/reader-writer-lock-class.md
+            - name: ScheduleGroup クラス
+              href: ../parallel/concrt/reference/schedulegroup-class.md
+            - name: Scheduler クラス
+              href: ../parallel/concrt/reference/scheduler-class.md
+            - name: scheduler_interface 構造体
+              href: ../parallel/concrt/reference/scheduler-interface-structure.md
+            - name: scheduler_not_attached クラス
+              href: ../parallel/concrt/reference/scheduler-not-attached-class.md
+            - name: scheduler_ptr 構造体 (同時実行ランタイム)
+              href: ../parallel/concrt/reference/scheduler-ptr-structure-concurrency-runtime.md
+            - name: scheduler_resource_allocation_error クラス
+              href: ../parallel/concrt/reference/scheduler-resource-allocation-error-class.md
+            - name: scheduler_worker_creation_error クラス
+              href: ../parallel/concrt/reference/scheduler-worker-creation-error-class.md
+            - name: SchedulerPolicy クラス
+              href: ../parallel/concrt/reference/schedulerpolicy-class.md
+            - name: simple_partitioner クラス
+              href: ../parallel/concrt/reference/simple-partitioner-class.md
+            - name: single_assignment クラス
+              href: ../parallel/concrt/reference/single-assignment-class.md
+            - name: single_link_registry クラス
+              href: ../parallel/concrt/reference/single-link-registry-class.md
+            - name: source_block クラス
+              href: ../parallel/concrt/reference/source-block-class.md
+            - name: source_link_manager クラス
+              href: ../parallel/concrt/reference/source-link-manager-class.md
+            - name: static_partitioner クラス
+              href: ../parallel/concrt/reference/static-partitioner-class.md
+            - name: structured_task_group クラス
+              href: ../parallel/concrt/reference/structured-task-group-class.md
+            - name: target_block クラス
+              href: ../parallel/concrt/reference/target-block-class.md
+            - name: task クラス (同時実行ランタイム)
+              href: ../parallel/concrt/reference/task-class.md
+            - name: task_canceled クラス
+              href: ../parallel/concrt/reference/task-canceled-class.md
+            - name: task_completion_event クラス
+              href: ../parallel/concrt/reference/task-completion-event-class.md
+            - name: task_continuation_context クラス
+              href: ../parallel/concrt/reference/task-continuation-context-class.md
+            - name: task_group クラス
+              href: ../parallel/concrt/reference/task-group-class.md
+            - name: task_handle クラス
+              href: ../parallel/concrt/reference/task-handle-class.md
+            - name: task_options クラス (同時実行ランタイム)
+              href: ../parallel/concrt/reference/task-options-class-concurrency-runtime.md
+            - name: timer クラス
+              href: ../parallel/concrt/reference/timer-class.md
+            - name: transformer クラス
+              href: ../parallel/concrt/reference/transformer-class.md
+            - name: unbounded_buffer クラス
+              href: ../parallel/concrt/reference/unbounded-buffer-class.md
+            - name: unsupported_os クラス
+              href: ../parallel/concrt/reference/unsupported-os-class.md
+        - name: std 名前空間
+          expanded: false
+          items:
+            - name: std 名前空間
+              href: ../parallel/concrt/reference/std-namespace.md
+            - name: make_exception_ptr 関数
+              href: ../parallel/concrt/reference/make-exception-ptr-function.md
+        - name: stdx 名前空間
+          expanded: false
+          items:
+            - name: stdx 名前空間
+              href: ../parallel/concrt/reference/stdx-namespace.md
+            - name: declval 関数
+              href: ../parallel/concrt/reference/declval-function.md
+- name: OpenMP
+  expanded: false
+  items:
+    - name: MSVC での OpenMP
+      href: ../parallel/openmp/openmp-in-visual-cpp.md
+    - name: SIMD 拡張命令
+      href: ../parallel/openmp/openmp-simd.md
+    - name: OpenMP C および C++ アプリケーション プログラミング インターフェイス
+      expanded: false
+      items:
+        - name: OpenMP C および C++ アプリケーション プログラミング インターフェイス
+          href: ../parallel/openmp/openmp-c-and-cpp-application-program-interface.md
+        - name: はじめに
+          href: ../parallel/openmp/1-introduction.md
+        - name: ディレクティブ
+          href: ../parallel/openmp/2-directives.md
+        - name: ランタイム ライブラリの関数
+          href: ../parallel/openmp/3-run-time-library-functions.md
+        - name: 環境変数
+          href: ../parallel/openmp/4-environment-variables.md
+        - name: 付録
+          items:
+            - name: 使用例
+              href: ../parallel/openmp/a-examples.md
+            - name: ランタイム ライブラリ関数のスタブ
+              href: ../parallel/openmp/b-stubs-for-run-time-library-functions.md
+            - name: OpenMP C と C++ の文法
+              href: ../parallel/openmp/c-openmp-c-and-cpp-grammar.md
+            - name: schedule 句
+              href: ../parallel/openmp/d-using-the-schedule-clause.md
+            - name: OpenMP C/C++ の実装で定義されている動作
+              href: ../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md
+            - name: Version 2.0 の新機能と説明
+              href: ../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md
+    - name: OpenMP ライブラリ リファレンス
+      expanded: false
+      items:
+        - name: OpenMP ライブラリ リファレンス
+          href: ../parallel/openmp/reference/openmp-library-reference.md
+        - name: ディレクティブ
+          href: ../parallel/openmp/reference/openmp-directives.md
+        - name: 句
+          href: ../parallel/openmp/reference/openmp-clauses.md
+        - name: 関数
+          href: ../parallel/openmp/reference/openmp-functions.md
+        - name: 環境変数
+          href: ../parallel/openmp/reference/openmp-environment-variables.md
+- name: 旧形式のコードのためのマルチスレッド サポート (C++)
+  expanded: false
+  items:
+    - name: 旧形式のコードのためのマルチスレッド サポート (C++)
+      href: ../parallel/multithreading-support-for-older-code-visual-cpp.md
+    - name: C と Win32 を使用するマルチスレッド
+      expanded: false
+      items:
+        - name: C と Win32 を使用するマルチスレッド
+          href: ../parallel/multithreading-with-c-and-win32.md
+        - name: マルチスレッドの C サンプル プログラム
+          href: ../parallel/sample-multithread-c-program.md
+        - name: 'スレッド ローカル ストレージ (TLS: Thread Local Storage)'
+          href: ../parallel/thread-local-storage-tls.md
+    - name: C++ と MFC を使用するマルチスレッド
+      expanded: false
+      items:
+        - name: C++ と MFC を使用するマルチスレッド
+          href: ../parallel/multithreading-with-cpp-and-mfc.md
+        - name: 'マルチスレッド:ユーザー インターフェイス スレッドの生成'
+          href: ../parallel/multithreading-creating-user-interface-threads.md
+        - name: 'マルチスレッド:ワーカー スレッドの作成'
+          href: ../parallel/multithreading-creating-worker-threads.md
+        - name: 'マルチスレッド:同期クラスの使い分け'
+          href: ../parallel/multithreading-when-to-use-the-synchronization-classes.md
+        - name: 'マルチスレッド:同期クラスの使用法'
+          href: ../parallel/multithreading-how-to-use-the-synchronization-classes.md
+        - name: 'マルチスレッド:スレッドの終了'
+          href: ../parallel/multithreading-terminating-threads.md
+        - name: 'マルチスレッド:プログラミングのヒント'
+          href: ../parallel/multithreading-programming-tips.md
+    - name: マルチスレッドとロケール
+      href: ../parallel/multithreading-and-locales.md

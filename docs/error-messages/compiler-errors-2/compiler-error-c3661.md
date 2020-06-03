@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3661
 ms.assetid: 50793fd1-1829-4b29-ad0d-094ef2068b43
-ms.openlocfilehash: e171914bcfd6c59d45a21ca2c005cd41f9a071a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5edda7eaf50dc4fca60f47128dc97de5d3a1a395
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200378"
 ---
 # <a name="compiler-error-c3661"></a>コンパイラ エラー C3661
 
-明示的なオーバーライド リストをオーバーライドするメソッドが見つかりませんでした。
+明示的なオーバーライドリストにオーバーライドするメソッドが見つかりませんでした
 
-明示的なオーバーライドでは、1 つまたは複数の型名を指定します。  ただし、オーバーライドする関数のシグネチャに一致する型に必要なシグネチャを持つ関数がありませんでした。  オーバーライドすると型名に基づいて場合がある 1 つまたは複数の仮想関数オーバーライド関数のシグネチャに一致する指定した型に。
+明示的なオーバーライドで、1つまたは複数の型名が指定されました。  ただし、オーバーライドする関数のシグネチャと一致する型には、必要なシグネチャを持つ関数がありませんでした。  型名に基づいてをオーバーライドしようとする場合、指定された型には、オーバーライドする側の関数のシグネチャに一致する1つ以上の仮想関数が必要です。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。

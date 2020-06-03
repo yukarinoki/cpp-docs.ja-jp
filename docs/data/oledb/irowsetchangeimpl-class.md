@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4ceea53ec91cc3f9593dd3789fcf61e0702274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390764"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376945"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 
-OLE DB テンプレートの実装、 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 仕様のインターフェイス。
+OLE DB 仕様の[IRowset インターフェイス](/previous-versions/windows/desktop/ms715790(v=vs.85))の実装。
 
 ## <a name="syntax"></a>構文
 
@@ -58,19 +57,19 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス`IRowsetChangeImpl`します。
+から`IRowsetChangeImpl`派生したクラス。
 
-*ストレージ*<br/>
+*Storage*<br/>
 ユーザー レコード。
 
-*BaseInterface*<br/>
-基底クラス、インターフェイスでなど`IRowsetChange`します。
+*ベースインターフェイス*<br/>
+インターフェイスの基本クラス ( など`IRowsetChange`) 。
 
-*RowClass*<br/>
-行ハンドルの記憶域ユニット。
+*行クラス*<br/>
+行ハンドルの記憶装置。
 
-*MapClass*<br/>
-プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。
+*マップクラス*<br/>
+プロバイダが保持するすべての行ハンドルの記憶装置。
 
 ## <a name="requirements"></a>必要条件
 
@@ -78,38 +77,38 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ## <a name="members"></a>メンバー
 
-### <a name="interface-methods-used-with-irowsetchange"></a>インターフェイスのメソッド (IRowsetChange で使用)
+### <a name="interface-methods-used-with-irowsetchange"></a>インターフェイス メソッド (IRowsetChange で使用)
 
 |||
 |-|-|
-|[DeleteRows](#deleterows)|行セットから行を削除します。|
-|[InsertRow](#insertrow)|行セットには、行を挿入します。|
-|[SetData](#setdata)|1 つまたは複数の列のデータ値を設定します。|
+|[行の削除](#deleterows)|行セットから行を削除します。|
+|[InsertRow](#insertrow)|行セットに行を挿入します。|
+|[Setdata](#setdata)|1 つ以上の列にデータ値を設定します。|
 
 ### <a name="implementation-method-callback"></a>実装メソッド (コールバック)
 
 |||
 |-|-|
-|[FlushData](#flushdata)|データをそのストアにコミットするためのプロバイダーでオーバーライドします。|
+|[フラッシュデータ](#flushdata)|データをストアにコミットするプロバイダーによってオーバーライドされます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このインターフェイスは、データ ストアへの即時の書き込み操作を担当します。 「直近」の意味がエンドユーザー (コンシューマーを使用するユーザー) がすべての変更を行うと、それらの変更はすぐに送信されること、データは格納 (および、元に戻すことはできません)。
+このインターフェイスは、データ ストアへの即時書き込み操作を行います。 "即時" とは、エンド ユーザー (コンシューマを使用するユーザー) が変更を行うと、その変更がデータ ストアに直ちに転送され、元に戻すことができないことを意味します。
 
-`IRowsetChangeImpl` OLE DB 実装`IRowsetChange`インターフェイスで、行を削除して、新しい行を挿入する既存の行の列の値の更新が可能です。
+`IRowsetChangeImpl`OLE DB`IRowsetChange`インターフェイスを実装し、既存の行の列の値の更新、行の削除、および新しい行の挿入を可能にします。
 
-OLE DB テンプレートの実装には、すべての基本メソッドがサポートしています (`SetData`、 `InsertRow`、および`DeleteRows`)。
+OLE DB テンプレートの実装では、すべての基本`SetData`メソッド`InsertRow`( `DeleteRows`、 、、および ) がサポートされます。
 
 > [!IMPORTANT]
->  プロバイダーを実装する前に、次のドキュメントを確認することを強くお勧めします。
+> プロバイダーの実装を試みる前に、次のドキュメントを読むことを強くお勧めします。
 
 - [更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)
 
-- 第 6 章、 *OLE DB プログラマーズ リファレンス*
+- OLE DB*プログラマーズ リファレンス*の第 6 章
 
-- 参照してください、`RUpdateRowset`クラスが使用されて、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプル。
+- また、クラスが`RUpdateRowset` [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルでどのように使用されているかも確認してください。
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>イローセットチェンジルプル::Dエレテロウ
 
 行セットから行を削除します。
 
@@ -124,11 +123,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+OLE DB プログラマ リファレンスの[「IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))を*参照してください*。
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>イロウセットチェンジインプラ
 
-作成し、行セット内の新しい行を初期化します。
+行セット内の新しい行を作成して初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -141,11 +140,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::insertrow](/previous-versions/windows/desktop/ms716921(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーズ リファレンス*の[「IRowsetChange::InsertRow」](/previous-versions/windows/desktop/ms716921(v=vs.85))を参照してください。
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowset変更Impl::データセット
 
-1 つまたは複数の列のデータ値を設定します。
+1 つ以上の列にデータ値を設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -157,11 +156,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::setdata](/previous-versions/windows/desktop/ms721232(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーズ リファレンス*の[「IRowsetChange::SetData」](/previous-versions/windows/desktop/ms721232(v=vs.85))を参照してください。
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowset変更Impl::フラッシュデータ
 
-データをそのストアにコミットするためのプロバイダーでオーバーライドします。
+データをストアにコミットするプロバイダーによってオーバーライドされます。
 
 ### <a name="syntax"></a>構文
 
@@ -172,17 +171,17 @@ HRESULT FlushData(HROW hRowToFlush,
 
 #### <a name="parameters"></a>パラメーター
 
-*hRowToFlush*<br/>
-[in]データの行へのハンドルします。 この行の型から判断されます、 *RowClass*のテンプレート引数、`IRowsetImpl`クラス (`CSimpleRow`既定)。
+*フロウトフラッシュ*<br/>
+[in]データの行へのハンドル。 この行の型は、`IRowsetImpl`クラスの*RowClass*テンプレート引数 (`CSimpleRow`既定) から決定されます。
 
-*hAccessorToFlush*<br/>
-[in]バインド情報とで型情報が含まれた、アクセサーへのハンドル、 `PROVIDER_MAP` (を参照してください[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md))。
+*フラッシュ*<br/>
+[in]バインディング情報と型情報を含むアクセサーへの`PROVIDER_MAP`ハンドル ( [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)を参照してください ) 。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。
+標準の HRESULT。
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

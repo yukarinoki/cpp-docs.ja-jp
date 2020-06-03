@@ -9,35 +9,35 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Import および export 宣言を使用して、指定したモジュールで定義されている型と関数にアクセスし、発行します。
-ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+description: 指定したモジュールで定義されている型と関数にアクセスし、公開するには、インポート宣言とエクスポート宣言を使用します。
+ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518284"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374109"
 ---
 # <a name="module-import-export"></a>モジュール、インポート、エクスポート
 
-**モジュール**、**インポート**、および**エクスポート**の宣言は c++ 20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std: c++ latest](../build/reference/std-specify-language-standard-version.md)を必要とします。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
+**モジュール**、**インポート**、および**エクスポート**の各宣言は C++20 で使用でき[、/実験:モジュール](../build/reference/experimental-module.md)コンパイラ スイッチと[/std:c++ の最新](../build/reference/std-specify-language-standard-version.md)のスイッチが必要です。 詳細については、「 [C++ モジュールの概要](modules-cpp.md)」を参照してください。
 
 ## <a name="module"></a>name
 
-モジュールの実装ファイルの先頭に**モジュール**宣言を配置し、ファイルの内容が名前付きモジュールに属していることを指定します。
+モジュール実装ファイルの先頭に**モジュール**宣言を配置して、ファイルの内容が名前付きモジュールに属することを指定します。
 
 ```cpp
 module ModuleA;
 ```
 
-## <a name="export"></a>export
+## <a name="export"></a>エクスポート
 
-モジュールのプライマリインターフェイスファイルに**エクスポートモジュール**宣言を使用します。このファイルには拡張子を付ける必要があり**ます。 ixx**:
+モジュールのプライマリ インターフェイス ファイルには **、拡張子** **.ixx**を持つエクスポート モジュール宣言を使用します。
 
 ```cpp
 export module ModuleA;
 ```
 
-インターフェイスファイルでは、パブリックインターフェイスの一部として意図されている名前に対して**export**修飾子を使用します。
+インターフェイス ファイルで、パブリック インターフェイスの一部として使用する名前に対して**export**修飾子を使用します。
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-エクスポートされていない名前は、モジュールをインポートするコードからは参照できません。
+エクスポートされていない名前は、モジュールをインポートするコードには表示されません。
 
 ```cpp
 //MyProgram.cpp
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-**Export**キーワードは、モジュール実装ファイルには記述できません。 名前空間の名前に**export**を適用すると、名前空間内のすべての名前がエクスポートされます。
+モジュール実装ファイルに**export**キーワードが含まれていない場合があります。 名前空間名に**エクスポート**を適用すると、名前空間内のすべての名前がエクスポートされます。
 
-## <a name="import"></a>取り込み
+## <a name="import"></a>import
 
-**インポート**宣言を使用して、モジュールの名前がプログラムに表示されるようにします。 インポート宣言は、モジュール宣言の後、任意の #include ディレクティブの後、ファイル内の宣言の前に記述する必要があります。
+**インポート**宣言を使用して、モジュールの名前をプログラム内で表示できます。 import 宣言は、モジュール宣言の後、および#includeディレクティブの後、ファイル内の宣言の前に記述する必要があります。
 
 ```cpp
 module ModuleA;
@@ -86,9 +86,9 @@ class Baz
 {...};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**インポート**と**モジュール**は、論理行の先頭に出現する場合にのみキーワードとして扱われます。
+**インポート**と**モジュール**の両方がキーワードとして扱われるのは、論理行の先頭に表示される場合のみです。
 
 ```cpp
 
@@ -110,11 +110,11 @@ export import module-name
 int i; module ;
 ```
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
-Microsoft C++では、トークンの**インポート**と**モジュール**は常に識別子であり、マクロの引数として使用される場合はキーワードではありません。
+Microsoft C++ では、トークンの**インポート**と**モジュール**は常に識別子であり、マクロの引数として使用される場合はキーワードは使用しません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 #define foo(…) __VA_ARGS__
@@ -127,4 +127,4 @@ import // Always an identifier, never a keyword
 
 ## <a name="see-also"></a>参照
 
-[のモジュールの概要C++](modules-cpp.md)
+[C++ のモジュールの概要](modules-cpp.md)

@@ -3,12 +3,12 @@ title: Visual Studio で C++ Linux プロジェクトを配置、実行、デバ
 description: Visual Studio の Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042763"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80077839"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux プロジェクトのデプロイ、実行、デバッグ
 
@@ -30,12 +30,12 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
 - ブレークポイント、ウォッチ ウィンドウ、変数をポイントするなど、従来の Visual Studio 機能でデバッグします。 これらの方法を利用し、他の種類のプロジェクトに通常するようにデバッグできます。
 
-- Linux コンソール ウィンドウで対象のコンピューターからの出力を確認します。 このコンソールを利用し、ターゲット コンピューターに入力を送信することもできます。
+- Linux コンソール ウィンドウでターゲットコンピューターからの出力を確認します。 このコンソールを利用し、ターゲット コンピューターに入力を送信することもできます。
 
 ## <a name="debug-your-linux-project"></a>Linux プロジェクトをデバッグする
 
 1. **[デバッグ]** プロパティ ページでデバッグ モードを選びます。
-   
+
    ::: moniker range="vs-2019"
 
    Linux で実行されているアプリケーションのデバッグには、GDB を使います。 (WSL ではない) リモート システムでデバッグを行う場合、GDB を 2 種類のモードで実行できます。これは、プロジェクトの **[デバッグ]** プロパティ ページの **[デバッグ モード]** オプションで選ぶことができます。
@@ -51,7 +51,6 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
    ![GDB のオプション](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - **gdbserver** モードでは、GDB はローカルに実行され、リモート システム上の gdbserver に接続します。  Linux コンソール ウィンドウはこのモードだけをサポートすることに注意してください。
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> ビルド用とデバッグ用に異なるコンピューターを指定する
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> ビルド用とデバッグ用に異なるコンピューターを指定する
 
 Visual Studio 2019 バージョン 16.1 では、MSBuild ベースの Linux プロジェクトとリモート Linux マシンをターゲットとする CMake プロジェクトの両方で、リモート ビルド マシンとリモート デバッグ マシンを分離できます。 たとえば、IoT シナリオをターゲットにするときに、.x64 でクロスコンパイルを行い、ARM デバイスに配置できます。
 
@@ -191,6 +190,7 @@ IntelliSense では、確立済みのすべてのリモート接続の一覧が�
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>次の手順

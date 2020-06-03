@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182226"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754804"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
 
-`CContextMenuManager`オブジェクト管理ショートカット メニュー、コンテキスト メニューとも呼ばれます。
+オブジェクト`CContextMenuManager`はショートカット メニュー (コンテキスト メニューとも呼ばれます) を管理します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,37 +51,37 @@ class CContextMenuManager : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|`CContextMenuManager` オブジェクトを構築します。|
+|[メニューマネージャー::Cコンテキストメニューマネージャー](#ccontextmenumanager)|`CContextMenuManager` オブジェクトを構築します。|
 |`CContextMenuManager::~CContextMenuManager`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CContextMenuManager::AddMenu](#addmenu)|新しいショートカット メニューを追加します。|
-|[CContextMenuManager::GetMenuById](#getmenubyid)|指定されたリソース ID に関連付けられたメニューへのハンドルを返します|
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|指定されたメニュー名に一致するメニューにハンドルを返します。|
-|[CContextMenuManager::GetMenuNames](#getmenunames)|メニュー名の一覧を返します。|
-|[CContextMenuManager::LoadState](#loadstate)|Windows レジストリに格納されているショートカット メニューを読み込みます。|
-|[CContextMenuManager::ResetState](#resetstate)|コンテキスト メニュー マネージャーからショートカット メニューをクリアします。|
-|[CContextMenuManager::SaveState](#savestate)|ショートカット メニューを Windows レジストリに保存します。|
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|コントロールかどうか、`CContextMenuManager`新しいショートカット メニューを表示するときに、active のショートカット メニューを閉じます。|
-|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|指定したショートカット メニューを表示します。|
-|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|指定したショートカット メニューを表示します。 選択されたメニュー コマンドのインデックスを返します。|
+|[メニューマネージャー:メニューの追加](#addmenu)|新しいショートカット メニューを追加します。|
+|[メニューマネージャー::メニューバイId](#getmenubyid)|指定されたリソース ID に関連付けられたメニューへのハンドルを返します。|
+|[メニューマネージャー::メニューの名前を取得します。](#getmenubyname)|指定されたメニュー名と一致するメニューへのハンドルを返します。|
+|[メニューマネージャー::メニュー名を取得します。](#getmenunames)|メニュー名の一覧を返します。|
+|[メニューマネージャー::ロードステート](#loadstate)|Windows レジストリに格納されているショートカット メニューを読み込みます。|
+|[メニューマネージャー::リセットステート](#resetstate)|ショートカット メニューをショートカット メニュー マネージャから消去します。|
+|[メニューマネージャー::セーブステート](#savestate)|ショートカット メニューを Windows レジストリに保存します。|
+|[メニューメニュー::セットドントクローズアクティブメニュー](#setdontcloseactivemenu)|新しいショートカット`CContextMenuManager`メニューを表示したときに、アクティブなショートカット メニューを閉じるかどうかを制御します。|
+|[メニューメニュー::メニューを表示します。](#showpopupmenu)|指定したショートカット メニューを表示します。|
+|[メニューメニュー::トラックポップアップメニュー](#trackpopupmenu)|指定したショートカット メニューを表示します。 選択したメニュー コマンドのインデックスを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CContextMenuManager` ショートカット メニューを管理、一貫した外観であることを確認します。
+`CContextMenuManager`は、ショートカット メニューを管理し、一貫性のある外観を持つことを確認します。
 
-作成しないようにする、`CContextMenuManager`手動でのオブジェクトします。 アプリケーションのフレームワークを作成、`CContextMenuManager`オブジェクト。 ただし、呼び出す必要があります[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)アプリケーションが初期化されます。 コンテキスト マネージャーを初期化した後、メソッドを使用して、 [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)アプリケーションのコンテキスト マネージャーへのポインターを取得します。
+オブジェクトは手動で`CContextMenuManager`作成しないでください。 アプリケーションのフレームワークによってオブジェクトが作成`CContextMenuManager`されます。 ただし、アプリケーションが初期化されるときに[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)を呼び出す必要があります。 コンテキスト マネージャーを初期化した後、メソッド[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)を使用して、アプリケーションのコンテキスト マネージャーへのポインターを取得します。
 
-実行時のショートカット メニューを作成するには呼び出すことによって`AddMenu`します。 最初の受信側のユーザー入力なしのメニューを表示する場合は、呼び出す`ShowPopupMenu`します。 `TrackPopupMenu` メニューを作成し、ユーザー入力を待機する場合に使用されます。 `TrackPopupMenu` ユーザーが何も選択せずに終了した場合は、選択したコマンドまたは 0 のインデックスを返します。
+ショートカット メニューは、実行時に を`AddMenu`呼び出して作成できます。 ユーザー入力を受け取らずにメニューを表示する場合は`ShowPopupMenu`、 を呼び出します。 `TrackPopupMenu`は、メニューを作成してユーザー入力を待つ場合に使用します。 `TrackPopupMenu`は、選択したコマンドのインデックスを返します。
 
-`CContextMenuManager`も保存して、Windows レジストリにその状態を読み込むことができます。
+また`CContextMenuManager`、その状態を保存して Windows レジストリに読み込むこともできます。
 
 ## <a name="example"></a>例
 
-次の例では、メニューを追加する方法、`CContextMenuManager`オブジェクト、およびアクティブなポップアップ メニューを閉じる方法と、`CContextMenuManager`オブジェクトには、新しいポップアップ メニューが表示されます。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
+次の例は、`CContextMenuManager`オブジェクトにメニューを追加する方法と、オブジェクトに新しいポップアップ メニューが表示されたときにアクティブなポップアップ`CContextMenuManager`メニューを閉じないようにする方法を示しています。 このコード スニペットは、[カスタム ページのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -95,9 +95,9 @@ class CContextMenuManager : public CObject
 
 **ヘッダー:** afxcontextmenumanager.h
 
-##  <a name="addmenu"></a>  CContextMenuManager::AddMenu
+## <a name="ccontextmenumanageraddmenu"></a><a name="addmenu"></a>メニューマネージャー:メニューの追加
 
-新しいショートカット メニューを追加、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)します。
+新しいショートカット メニューを[追加](../../mfc/reference/ccontextmenumanager-class.md)します。
 
 ```
 BOOL AddMenu(
@@ -111,38 +111,38 @@ BOOL AddMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiMenuNameResId*<br/>
+*をクリックします。*<br/>
 [in]新しいメニューの名前を含む文字列のリソース ID。
 
-*uiMenuResId*<br/>
-[in]メニューのリソース id です。
+*をクリックします。*<br/>
+[in]メニュー リソース ID。
 
-*lpszName*<br/>
+*名前を指定します。*<br/>
 [in]新しいメニューの名前を含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合メソッドが失敗した場合は 0。
+メソッドが成功した場合は 0 以外の値を返します。メソッドが失敗した場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは失敗*uiMenuResId*が無効か、同じ名前の別のメニューに既に存在するかどうか、`CContextMenuManager`します。
+*uiMenuResId*が無効な場合、または同じ名前の別のメニューが既に`CContextMenuManager`.
 
-##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager
+## <a name="ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a>メニューマネージャー::Cコンテキストメニューマネージャー
 
-構築、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/ccontextmenumanager-class.md)構築します。
 
 ```
 CContextMenuManager();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ほとんどの場合、作成しないようにする、`CContextMenuManager`手動でします。 アプリケーションのフレームワークを作成、`CContextMenuManager`オブジェクト。 呼び出す必要があります[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)アプリケーションの初期化中にします。 コンテキスト マネージャーへのポインターを取得する[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)します。
+ほとんどの場合、手動で`CContextMenuManager`作成しないでください。 アプリケーションのフレームワークによってオブジェクトが作成`CContextMenuManager`されます。 アプリケーションの初期化中に[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)を呼び出す必要があります。 コンテキスト マネージャーへのポインターを取得するには[、CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)を呼び出します。
 
-##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById
+## <a name="ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a>メニューマネージャー::メニューバイId
 
-特定のリソース ID に関連付けられたメニューへのハンドルを返します
+指定されたリソース ID に関連付けられたメニューへのハンドルを返します。
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -150,16 +150,16 @@ HMENU GetMenuById(UINT nMenuResId) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nMenuResId*<br/>
+*をクリックします。*<br/>
 [in]メニューのリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられているメニューへのハンドルまたは`NULL`メニューが見つからない場合。
+関連付けられたメニューへのハンドル、`NULL`またはメニューが見つからない場合。
 
-##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName
+## <a name="ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a>メニューマネージャー::メニューの名前を取得します。
 
-特定のメニューのハンドルを返します。
+特定のメニューへのハンドルを返します。
 
 ```
 HMENU GetMenuByName(
@@ -169,36 +169,36 @@ HMENU GetMenuByName(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*<br/>
+*名前を指定します。*<br/>
 [in]取得するメニューの名前を含む文字列。
 
-*puiOrigResID*<br/>
-[out]UINT へのポインター。 このパラメーターには、指定されたメニューのリソース ID が含まれる場合が見つかりました。
+*プイオリグレスID*<br/>
+[アウト]UINT へのポインター。 このパラメーターには、指定されたメニューのリソース ID (見つかった場合) が入ります。
 
 ### <a name="return-value"></a>戻り値
 
-指定した名前に一致するメニューへのハンドルを*lpszName*します。 というメニューがない場合は NULL *lpszName*します。
+*lpszName*で指定された名前と一致するメニューへのハンドル。 *lpszName*という名前のメニューがない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドに一致するメニューが検出されると*lpszName*、`GetMenuByName`パラメーターでメニュー リソース ID が格納されます*puiOrigResID*します。
+このメソッドが*lpszName*に一致する`GetMenuByName`メニューを見つけた場合は、メニュー リソース ID をパラメーター *puiOrigResID*に格納します。
 
-##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames
+## <a name="ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a>メニューマネージャー::メニュー名を取得します。
 
-追加されたメニュー名の一覧を返します、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)します。
+に追加されたメニュー名の一覧を返[します](../../mfc/reference/ccontextmenumanager-class.md)。
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*listOfNames*<br/>
-[out]参照を[CStringList](../../mfc/reference/cstringlist-class.md)パラメーター。 このメソッドは、このパラメーターにメニュー名のリストを書き込みます。
+*名前の一覧*<br/>
+[アウト][パラメーターへの](../../mfc/reference/cstringlist-class.md)参照。 このメソッドは、メニュー名のリストをこのパラメーターに書き込みます。
 
-##  <a name="loadstate"></a>  CContextMenuManager::LoadState
+## <a name="ccontextmenumanagerloadstate"></a><a name="loadstate"></a>メニューマネージャー::ロードステート
 
-関連付けられている情報を読み込み、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)Windows レジストリから。
+クラス[に関連](../../mfc/reference/ccontextmenumanager-class.md)付けられている情報を Windows レジストリから読み込みます。
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -206,22 +206,22 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
+*名前を指定します。*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszProfileName*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)と[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)と[CWinAppEx::SetRegistryBase を](../../mfc/reference/cwinappex-class.md#setregistrybase)使用します。
 
-メソッドを使用して[CContextMenuManager::SaveState](#savestate)ショートカット メニューをレジストリに保存します。
+ショートカット メニューをレジストリに保存するには、メソッド[CContextMenuManager::SaveState](#savestate)を使用します。
 
-##  <a name="resetstate"></a>  CContextMenuManager::ResetState
+## <a name="ccontextmenumanagerresetstate"></a><a name="resetstate"></a>メニューマネージャー::リセットステート
 
-すべての項目に関連付けられているショートカット メニューから消去、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)します。
+[CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)に関連付けられているショートカット メニューからすべての項目をクリアします。
 
 ```
 virtual BOOL ResetState();
@@ -229,15 +229,15 @@ virtual BOOL ResetState();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は TRUE。障害が発生した場合は FALSE。
+メソッドが成功した場合は TRUE。失敗が発生した場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ポップアップ メニューをクリアし、削除してから、`CContextMenuManager`します。
+このメソッドは、ポップアップ メニューをクリアし、 から削除します`CContextMenuManager`。
 
-##  <a name="savestate"></a>  CContextMenuManager::SaveState
+## <a name="ccontextmenumanagersavestate"></a><a name="savestate"></a>メニューマネージャー::セーブステート
 
-関連付けられている情報を保存、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)Windows レジストリにします。
+[クラス](../../mfc/reference/ccontextmenumanager-class.md)に関連付けられている情報を Windows レジストリに保存します。
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -245,37 +245,37 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
+*名前を指定します。*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszProfileName*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)と[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)と[CWinAppEx::SetRegistryBase を](../../mfc/reference/cwinappex-class.md#setregistrybase)使用します。
 
-メソッドを使用して[CContextMenuManager::LoadState](#loadstate)ショートカット メニューをレジストリから読み込めません。
+レジストリからショートカット メニューを読み込むには、メソッド[CContextMenuManager::LoadState](#loadstate)を使用します。
 
-##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu
+## <a name="ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a>メニューメニュー::セットドントクローズアクティブメニュー
 
-コントロールかどうか、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)新しいポップアップ メニューを表示するときに、アクティブなポップアップ メニューを閉じます。
+新しいポップアップ メニューを表示したときに[、](../../mfc/reference/ccontextmenumanager-class.md)アクティブなポップアップ メニューを閉じるかどうかを制御します。
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bSet*<br/>
-[in]アクティブなポップアップ メニューを閉じるかどうかを制御するブール型パラメーター。 TRUE の値は、アクティブなポップアップ メニューが閉じられていないことを示します。 FALSE は、アクティブなポップアップ メニューが閉じられたことを示します。
+*bセット*<br/>
+[in]アクティブなポップアップ メニューを閉じるかどうかを制御するブール値パラメーター。 TRUE の値は、アクティブなポップアップ メニューが閉じられていない状態であることを示します。 FALSE は、アクティブなポップアップ メニューが閉じられていることを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定で、`CContextMenuManager`アクティブなポップアップ メニューを閉じます。
+デフォルトでは、アクティブ`CContextMenuManager`なポップアップメニューが閉じます。
 
-##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu
+## <a name="ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a>メニューメニュー::メニューを表示します。
 
 指定したショートカット メニューを表示します。
 
@@ -300,43 +300,43 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiMenuResId*<br/>
-[in]このメソッドが表示されるメニューのリソース ID。
+*をクリックします。*<br/>
+[in]このメソッドが表示するメニューのリソース ID。
 
 *x*<br/>
-[in]水平方向のショートカット メニューのクライアント座標でのオフセットします。
+[in]クライアント座標のショートカット メニューの水平オフセット。
 
-*y*<br/>
-[in]ショートカット メニューのクライアント座標の垂直方向のオフセット
+*Y*<br/>
+[in]クライアント座標のショートカット メニューの垂直オフセット
 
-*pWndOwner*<br/>
+*オーナー*<br/>
 [in]ショートカット メニューの親ウィンドウへのポインター。
 
-*bOwnMessage*<br/>
-[in]メッセージのルーティング方法を示すブール値パラメーター。 場合*bOwnMessage* FALSE、標準の MFC は、ルーティングが使用されます。 それ以外の場合、 *pWndOwner*メッセージを受信します。
+*メッセージを見る*<br/>
+[in]メッセージのルーティング方法を示すブール値パラメーター。 *bOwnMessage が*FALSE の場合は、標準の MFC ルーティングが使用されます。 それ以外の場合*は、pWndOwner が*メッセージを受信します。
 
-*hmenuPopup*<br/>
-[in]このメソッドが表示されるメニューのハンドル。
+*hmenuポップアップ*<br/>
+[in]このメソッドが表示するメニューのハンドル。
 
-*bAutoDestroy*<br/>
+*b自動破壊*<br/>
 [in]メニューが自動的に破棄されるかどうかを示すブール値パラメーター。
 
-*bRightAlign*<br/>
-[in]メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。
+*右揃え*<br/>
+[in]メニュー項目の配置方法を示すブール値パラメーター。 *bRightAlign*が TRUE の場合、右から左への読み取り順序に合わせてメニューが右揃えになります。
 
 ### <a name="return-value"></a>戻り値
 
-最初のメソッドのオーバー ロードは、メソッドが正常にメニューを表示する場合は 0 以外を返しますそれ以外の場合 0 を返します。 2 番目のメソッドのオーバー ロードへのポインターを返します[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)ショートカット メニューを表示は正しくそれ以外の場合は NULL です。
+最初のメソッドオーバーロードは、メソッドがメニューを正常に表示した場合は 0 以外を返します。それ以外の場合は 0。 2 番目のメソッド オーバーロードは、ショートカット メニューが正しく表示された場合は[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)へのポインターを返します。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドがメソッドに似ています[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)ことで、両方の方法は、ショートカット メニューを表示します。 ただし、`TrackPopupMenu`選択されたメニュー コマンドのインデックスを返します。
+このメソッドは、両方のメソッドがショートカット メニューを表示するという意味で、メソッド[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)に似ています。 ただし、`TrackPopupMenu`選択したメニュー コマンドのインデックスを返します。
 
-場合、パラメーター *bAutoDestroy* false で、手動で呼び出す必要があります、継承された`DestroyMenu`メモリ リソースを解放します。 既定の実装`ShowPopupMenu`パラメーターを使用しない*bAutoDestroy*します。 派生したカスタム クラスの将来使用するために提供されている、`CContextMenuManager`クラス。
+パラメーター *bAutoDestroy*が FALSE の場合は、手動`DestroyMenu`でメモリ リソースを解放する継承されたメソッドを呼び出す必要があります。 のデフォルトの`ShowPopupMenu`実装では、 *bAutoDestroy*パラメータは使用されません。 これは、将来使用するために、またはクラスから派生したカスタム`CContextMenuManager`クラスのために提供されます。
 
-##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu
+## <a name="ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a>メニューメニュー::トラックポップアップメニュー
 
-指定したショートカット メニューを表示し、選択したショートカット メニューのコマンドのインデックスを返します。
+指定したショートカット メニューを表示し、選択したショートカット メニュー コマンドのインデックスを返します。
 
 ```
 virtual UINT TrackPopupMenu(
@@ -349,31 +349,31 @@ virtual UINT TrackPopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*hmenuPopup*<br/>
-[in]このメソッドは、表示されるショートカット メニューのハンドル。
+*hmenuポップアップ*<br/>
+[in]このメソッドが表示するショートカット メニューのハンドル。
 
 *x*<br/>
-[in]水平方向のショートカット メニューのクライアント座標でのオフセットします。
+[in]クライアント座標のショートカット メニューの水平オフセット。
 
-*y*<br/>
-[in]縦方向のショートカット メニューのクライアント座標のオフセットします。
+*Y*<br/>
+[in]クライアント座標のショートカット メニューの垂直オフセット。
 
-*pWndOwner*<br/>
+*オーナー*<br/>
 [in]ショートカット メニューの親ウィンドウへのポインター。
 
-*bRightAlign*<br/>
-[in]メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。 場合*bRightAlign* false で、メニューが左から右の読み取り順序の左側に配置します。
+*右揃え*<br/>
+[in]メニュー項目の配置方法を示すブール値パラメーター。 *bRightAlign*が TRUE の場合、右から左への読み取り順序に合わせてメニューが右揃えになります。 *bRightAlign*が FALSE の場合、メニューは左から右への読み取り順序で左揃えになります。
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが選択したコマンドのメニュー コマンド IDユーザーがメニュー コマンドを選択することがなく、ショートカット メニューを閉じる場合は 0。
+ユーザーが選択するコマンドのメニュー コマンド ID。ユーザーがメニュー コマンドを選択せずにショートカット メニューを閉じる場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ショートカット メニューを表示するモーダル呼び出しとして機能します。 アプリケーションは、ユーザーは、ショートカット メニューを閉じるか、コマンドを選択したまでコード内の次の行には続行されません。 ショートカット メニューを表示する際、別のメソッドは[CContextMenuManager::ShowPopupMenu](#showpopupmenu)します。 メソッドは、モーダルの呼び出しではありませんし、選択したコマンドの ID は返されません。
+このメソッドは、ショートカット メニューを表示するモーダル呼び出しとして機能します。 ユーザーがショートカット メニューを閉じるか、コマンドを選択するまで、アプリケーションはコード内で次の行に進み続けます。 ショートカット メニューを表示する場合に使用できる別の方法は[、CContextMenuManager::ShowPopupMenu です](#showpopupmenu)。 このメソッドはモーダル呼び出しではなく、選択したコマンドの ID を返しません。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)

@@ -2,12 +2,12 @@
 title: 宣言と定義 (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301549"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077215"
 ---
 # <a name="declarations-and-definitions-c"></a>宣言と定義 (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-5行目では、`main` 関数が宣言されています。 7行目では、`pi` という名前の**const**変数が宣言および*初期化*されます。 8行目では、整数 `i` が宣言され、関数 `f`によって生成される値で初期化されます。 `f` 名前は、3行目の*事前宣言*によってコンパイラから参照できます。 
+5行目では、`main` 関数が宣言されています。 7行目では、`pi` という名前の**const**変数が宣言および*初期化*されます。 8行目では、整数 `i` が宣言され、関数 `f`によって生成される値で初期化されます。 `f` 名前は、3行目の*事前宣言*によってコンパイラから参照できます。
 
-9行目では、`C` 型の `obj` という名前の変数が宣言されています。 ただし、`C` はプログラムの後半まで宣言されておらず、前方宣言されていないため、この宣言ではエラーが発生します。 このエラーを解決するには、`main` する前に `C` の*定義*全体を移動するか、事前宣言を追加します。 この動作は、などC#の他の言語とは異なります。この場合、関数とクラスは、ソースファイル内の宣言の時点よりも前に使用できます。 
+9行目では、`C` 型の `obj` という名前の変数が宣言されています。 ただし、`C` はプログラムの後半まで宣言されておらず、前方宣言されていないため、この宣言ではエラーが発生します。 このエラーを解決するには、`main` する前に `C` の*定義*全体を移動するか、事前宣言を追加します。 この動作は、などC#の他の言語とは異なります。この場合、関数とクラスは、ソースファイル内の宣言の時点よりも前に使用できます。
 
 10行目では、`std::string` 型の `str` という名前の変数が宣言されています。 `std::string` 名前は、行1のソースファイルにマージされる `string`[ヘッダーファイル](header-files-cpp.md)に導入されるため、表示されます。 `std` は、`string` クラスが宣言されている名前空間です。
 
@@ -107,6 +107,6 @@ char *strchr( const char *Str, const char Target );
 [decltype](decltype-cpp.md)<br/>
 [属性C++](attributes.md)<br/>
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [基本的な概念](../cpp/basic-concepts-cpp.md)<br/>

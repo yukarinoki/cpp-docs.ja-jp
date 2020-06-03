@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707002"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076209"
 ---
 # <a name="options-atl-property-page-wizard"></a>オプション、ATL プロパティ ページ ウィザード
-
 
 ::: moniker range="vs-2019"
 
@@ -32,24 +31,24 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
    詳細については、「[プロジェクトのスレッド モデルの指定 (ATL)](../../atl/specifying-the-threading-model-for-a-project-atl.md)」を参照してください。
 
-   |オプション|説明|
+   |オプション|Description|
    |------------|-----------------|
    |**Single**|プロパティ ページは、プライマリ COM スレッドでのみ実行されます。|
-   |**Apartment**|任意の単一のスレッド アパートメントにプロパティ ページを作成できます。 これが既定値です。|
+   |**Apartment**|任意の単一のスレッド アパートメントにプロパティ ページを作成できます。 既定値です。|
 
 - **集計**
 
    作成するプロパティ ページに集計サポートを追加します。 詳細については、「[集計](../../atl/aggregation.md)」を参照してください。
 
-   |オプション|説明|
+   |オプション|Description|
    |------------|-----------------|
    |**はい**|集計可能なプロパティ ページを作成します。|
-   |**No**|集計が不可能なプロパティ ページを作成します。|
+   |**いいえ**|集計が不可能なプロパティ ページを作成します。|
    |**Only**|集計経由でのみインスタンス化できるプロパティ ページを作成します。|
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md)<br/>
 [文字列、ATL プロパティ ページ ウィザード](../../atl/reference/strings-atl-property-page-wizard.md)

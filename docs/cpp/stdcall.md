@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178541"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -21,9 +21,9 @@ ms.locfileid: "74857282"
 
 ## <a name="syntax"></a>構文
 
-> *return-type* **\_\_stdcall** *function-name*[ **(** *argument-list* **)** ]
+> *戻り値の型* **\_\_stdcall** *[* **(** *引数リスト* **)** ]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 次の一覧は、この呼び出し規約の実装例を示しています。
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857282"
 |引数渡し規約|ポインターまたは参照型が渡されない場合は、値渡し。|
 |スタック メンテナンスの役割|呼び出された関数が、自分の引数をスタックからポップします。|
 |名前装飾規約|アンダースコア (_) は、名前の前に付けられます。 名前の後に、アットマーク (@) と、引数リストのバイト数 (10 進数) が続きます。 したがって、`int func( int a, double b )` として宣言された関数は次のように修飾されます: `_func@12`|
-|大文字と小文字の変換規約|[なし]|
+|大文字と小文字の変換規約|なし|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラオプションは、異なる呼び出し規約で明示的に宣言されていないすべての関数に **__stdcall**を指定します。
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+(
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -63,7 +63,7 @@ void CMyClass::mymethod() { return; }
 void __stdcall CMyClass::mymethod() { return; }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、 **__stdcall**を使用すると、すべての `WINAPI` 関数型が標準呼び出しとして処理されます。
 

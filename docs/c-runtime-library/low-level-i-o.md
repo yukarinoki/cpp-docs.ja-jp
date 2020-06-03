@@ -1,8 +1,6 @@
 ---
 title: 下位入出力
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740143"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443105"
 ---
 # <a name="low-level-io"></a>下位入出力
 
@@ -33,11 +31,11 @@ ms.locfileid: "57740143"
 
 ## <a name="low-level-io-functions"></a>低レベル入出力関数
 
-|関数|使用|
+|関数|用途|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|ファイルを閉じる|
 |[_commit](../c-runtime-library/reference/commit.md)|ファイルをディスクにフラッシュする|
-|[_creat、_wcreat](../c-runtime-library/reference/creat-wcreat.md)|ファイルを作成する|
+|[_creat、_wcreat](../c-runtime-library/reference/creat-wcreat.md)|[ファイルの作成]|
 |[_dup](../c-runtime-library/reference/dup-dup2.md)|指定されたファイルに対して次に使用できるファイル記述子を返す|
 |[_dup2](../c-runtime-library/reference/dup-dup2.md)|指定されたファイルに対して 2 つ目の記述子を作成する|
 |[_eof](../c-runtime-library/reference/eof.md)|ファイルの終端をテストする|
@@ -51,7 +49,7 @@ ms.locfileid: "57740143"
 
 **_dup** と **_dup2** は通常、事前定義済みのファイル記述子を別のファイルと関連付けるために使用します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

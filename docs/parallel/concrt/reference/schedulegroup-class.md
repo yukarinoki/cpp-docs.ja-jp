@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143267"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424231"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup クラス
 
@@ -32,13 +32,13 @@ class ScheduleGroup;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[~ ScheduleGroup デストラクター](#dtor)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[Id](#id)|スケジュール グループが属するスケジューラ内で一意のスケジュール グループの識別子を返します。|
 |[リファレンス](#reference)|スケジュール グループの参照カウントをインクリメントします。|
@@ -49,7 +49,7 @@ class ScheduleGroup;
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
@@ -99,7 +99,7 @@ virtual unsigned int Reference() = 0;
 
 新しくインクリメントされた参照カウント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは通常、構成のスケジュールグループの有効期間を管理するために使用されます。 スケジュールグループの参照カウントがゼロになると、スケジュールグループはランタイムによって削除されます。 [Currentscheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup)メソッドまたは[Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup)メソッドを使用して作成されたスケジュールグループは、参照カウントを1つとして開始します。
 
@@ -115,7 +115,7 @@ virtual unsigned int Release() = 0;
 
 新しくデクリメントされた参照カウント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは通常、構成のスケジュールグループの有効期間を管理するために使用されます。 スケジュールグループの参照カウントがゼロになると、スケジュールグループはランタイムによって削除されます。 `Release` メソッドを特定の回数だけ呼び出して、作成参照カウントと、`Reference` メソッドを使用して追加されたその他の参照を削除した後は、スケジュールグループをさらに利用することはできません。 これを行うと、未定義の動作が発生します。
 
@@ -145,7 +145,7 @@ virtual void ScheduleTask(
 *_Data*<br/>
 タスクの本体にパラメーターとして渡されるデータへの void ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `ScheduleTask` メソッドを呼び出すと、スケジュールグループに参照カウントが暗黙的に配置されます。これは、タスクの実行後にランタイムによって適切なタイミングで削除されます。
 

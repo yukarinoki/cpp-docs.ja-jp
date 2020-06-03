@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153238"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544833"
 ---
-# <a name="lockwhen-enum"></a>lock_when Enum
+# <a name="lock_when-enum"></a>lock_when Enum
 
-遅延のロックを指定します。
+遅延ロックを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,15 +28,15 @@ enum lock_when {
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-渡される[lock::lock](../dotnet/lock-lock.md)、`lock_later`ロックが今すぐ実行するには、しないことを指定します。
+Lock [:: lock](../dotnet/lock-lock.md)に渡されると、`lock_later` はロックを取得しないように指定します。
 
 ## <a name="example"></a>例
 
-この例では、複数のスレッド クラスの 1 つのインスタンスを使用します。  クラスでは、その内部データへのアクセスがスレッドごとに一貫性のあることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、すべてのワーカー スレッドがまだ存在していて、そのタスクが完了するまでのすべてのワーカー スレッドの終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。
+この例では、クラスの1つのインスタンスを複数のスレッドにわたって使用します。  クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。  メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックし、すべてのワーカースレッドがそのタスクを完了するまで、終了を待機します。
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -122,12 +122,12 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー ファイル** \<msclr\lock.h >
+**ヘッダーファイル**\<msclr\ >
 
-**Namespace** msclr
+**名前空間**msclr
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [lock](../dotnet/lock.md)

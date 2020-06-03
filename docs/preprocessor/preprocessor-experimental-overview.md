@@ -1,25 +1,35 @@
 ---
-title: MSVC 試験的なプリプロセッサの概要
-description: MSVC プリプロセッサは、C/C++標準に準拠するよう更新されています。
-ms.date: 11/06/2019
+title: MSVC の実験プリプロセッサの概要
+description: MSVC プリプロセッサは、C/C++ 標準に準拠するために更新されています。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: 446603b34d9309c256afba9abd7234ae2ab16f5c
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 00c34ef75270e505d3781cf7eedf4d8aba95ee6e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73797188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337483"
 ---
-# <a name="msvc-experimental-preprocessor-overview"></a>MSVC 試験的なプリプロセッサの概要
+# <a name="msvc-experimental-preprocessor-overview"></a>MSVC の実験プリプロセッサの概要
 
-Microsoft C++プリプロセッサは、標準への準拠を改善し、長期的なバグを修正し、正式に定義されていないいくつかの動作を変更するために現在更新されています。 さらに、マクロ定義にエラーが発生した場合に警告する新しい診断が追加されました。
+::: moniker range="vs-2015"
 
-現在の状態でのこれらの変更は、Visual Studio 2017 または Visual Studio 2019 で、 [/実験的: プリプロセッサ](../build/reference/experimental-preprocessor.md)コンパイラスイッチを使用して利用できます。 既定のプリプロセッサ動作は、以前のバージョンと同じです。
+Visual Studio 2015 では、標準 C++ に準拠していない従来のプリプロセッサが使用されます。 実験用プリプロセッサは[、/実験:プリプロセッサ](../build/reference/experimental-preprocessor.md)コンパイラ スイッチを使用して、Visual Studio 2017 と Visual Studio 2019 で使用できます。 Visual Studio 2017 および Visual Studio 2019 での新しいプリプロセッサの使用に関する詳細については、次の参照先を参照してください。 Visual Studio の優先バージョンのドキュメントを表示するには、**バージョン**セレクター コントロールを使用します。 このページの目次の上部に表示されます。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Microsoft C++ プリプロセッサを更新して、標準の準拠性を向上させ、長年にわたるバグを修正し、公式に定義されていない動作を変更します。 また、マクロ定義のエラーを警告する新しい診断も追加されました。
+
+これらの変更は、Visual Studio 2017 または Visual Studio 2019 で[/実験:プリプロセッサ](../build/reference/experimental-preprocessor.md)コンパイラ スイッチを使用して利用できます。 デフォルトのプリプロセッサの動作は、以前のバージョンと同じです。
+
+Visual Studio 2019 バージョン 16.5 以降、C++20 標準の実験的プリプロセッサ サポートは機能を完全に提供します。
 
 ## <a name="new-predefined-macro"></a>新しい定義済みマクロ
 
-コンパイル時に使用中のプリプロセッサを検出できます。 従来のプリプロセッサが使用されているかどうかを判断するために、定義済みマクロ[\_MSVC\_従来](predefined-macros.md)の値を確認します。 このマクロは、呼び出されたプリプロセッサに関係なく、それをサポートするバージョンのコンパイラによって無条件に設定されます。 この値は、従来のプリプロセッサの場合は1です。 準拠している試験的なプリプロセッサの場合は0です。
+コンパイル時に使用中のプリプロセッサを検出できます。 事前定義されたマクロ[\_MSVC\_トラディショナル](predefined-macros.md)の値を調べて、従来のプリプロセッサーが使用中かどうかを調べるようにしてください。 このマクロは、どのプリプロセッサが呼び出されるのとは無関係に、それをサポートするコンパイラのバージョンによって無条件に設定されます。 この値は、従来のプリプロセッサでは 1 です。 適合プリプロセッサの場合は 0 です。
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -29,21 +39,13 @@ Microsoft C++プリプロセッサは、標準への準拠を改善し、長期�
 #endif
 ```
 
-```cpp
-#if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
-// Logic using the traditional preprocessor
-#else
-// Logic using cross-platform compatible preprocessor
-#endif
-```
+## <a name="behavior-changes-in-the-experimental-preprocessor"></a>実験プリプロセッサでの動作の変化
 
-## <a name="behavior-changes-in-the-experimental-preprocessor"></a>実験用プリプロセッサでの動作の変更
-
-実験用プリプロセッサでの初期作業は、従来の動作によって現在ブロックされているライブラリで MSVC コンパイラを使用できるようにするために、すべてのマクロ拡張を適合させることに重点を置いています。 次に、実際のプロジェクトで更新されたプリプロセッサをテストする際に実行された、一般的な重大な変更の一部を示します。
+実験プリプロセッサの最初の作業は、すべてのマクロ拡張を標準に準拠させることに焦点を当ててきました。 この機能を使用すると、従来の動作によって現在ブロックされているライブラリで MSVC コンパイラを使用できます。 実際のプロジェクトで更新されたプリプロセッサをテストしました。 見つかった一般的な変更点のいくつかを次に示します。
 
 ### <a name="macro-comments"></a>マクロコメント
 
-従来のプリプロセッサは、プリプロセッサトークンではなく、文字バッファーに基づいています。 これにより、準拠プリプロセッサでは動作しない次のプリプロセッサコメントトリックなどの異常な動作が可能になります。
+従来のプリプロセッサは、プリプロセッサ トークンではなく文字バッファに基づいています。 これは、次のような異常な動作を可能にする、次のプリプロセッサのコメントトリックは、準拠プリプロセッサでは動作しません。
 
 ```cpp
 #if DISAPPEAR
@@ -56,7 +58,7 @@ Microsoft C++プリプロセッサは、標準への準拠を改善し、長期�
 DISAPPEARING_TYPE myVal;
 ```
 
-標準に準拠する修正は、適切な `#ifdef/#endif` ディレクティブ内で `int myVal` を宣言することです。
+標準に準拠した修正は、適切な`int myVal``#ifdef/#endif`ディレクティブの内部で宣言することです。
 
 ```cpp
 #define MYVAL 1
@@ -66,9 +68,9 @@ int myVal;
 #endif
 ```
 
-### <a name="lval"></a>L # val
+### <a name="lval"></a>L#ヴァル
 
-従来のプリプロセッサでは、文字列のプレフィックスが文字列化[演算子 (#)](stringizing-operator-hash.md)演算子の結果と誤って結合されています。
+従来のプリプロセッサでは、文字列のプレフィックスを[文字列化演算子 (#)](stringizing-operator-hash.md)演算子の結果に正しく結合しません。
 
 ```cpp
  #define DEBUG_INFO(val) L"debug prefix:" L#val
@@ -78,7 +80,7 @@ int myVal;
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-この場合、隣接する文字列リテラルはマクロの展開後に結合されるため、`L` プレフィックスは不要です。 下位互換性のある修正は、次のように定義を変更することです。
+この場合、隣接する`L`文字列リテラルはマクロ展開後に結合されるため、プレフィックスは不要です。 下位互換性のある修正プログラムは、定義を変更することです。
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -86,37 +88,37 @@ const wchar_t *info = DEBUG_INFO(hello world);
 //                                       no prefix
 ```
 
-この同じ問題は、次のように、引数をワイド文字列リテラルに "stringize" 表現する便利なマクロにもあります。
+同じ問題は、広い文字列リテラルに引数を「文字列化」する便利なマクロにも見られます。
 
 ```cpp
  // The traditional preprocessor creates a single wide string literal token
 #define STRING(str) L#str
 ```
 
-次のようなさまざまな方法で問題を解決できます。
+さまざまな方法で問題を解決できます。
 
-- プレフィックスを追加するには、`L""` と `#str` の文字列連結を使用します。 これは、隣接する文字列リテラルがマクロの展開後に結合されるために機能します。
+- 文字列の連結`L""`を使用し、`#str`プレフィックスを追加します。 隣接する文字列リテラルは、マクロ展開後に結合されます。
 
    ```cpp
    #define STRING1(str) L""#str
    ```
 
-- 追加のマクロ展開を使用して `#str` に文字列を追加した後にプレフィックスを追加する
+- 追加のマクロ展開`#str`で文字列化された後にプレフィックスを追加します。
 
    ```cpp
    #define WIDE(str) L##str
    #define STRING2(str) WIDE(#str)
    ```
 
-- トークンを結合するには、`##` 連結演算子を使用します。 `##` と `#` の操作の順序は指定されていませんが、この場合 `##` 前に、すべてのコンパイラが `#` 演算子を評価しているようです。
+- 連結演算子`##`を使用して、トークンを結合します。 `##`この場合`#`、すべてのコンパイラが`#`演算子`##`を評価するように見えますが、演算の順序は指定されていません。
 
    ```cpp
    #define STRING3(str) L## #str
    ```
 
-### <a name="warning-on-invalid-"></a>無効な \#\# に対する警告
+### <a name="warning-on-invalid-"></a>無効な場合の警告\#\#
 
-[トークン連結演算子 (# #)](token-pasting-operator-hash-hash.md)によって1つの有効なプリプロセストークンが生成されない場合、動作は未定義になります。 従来のプリプロセッサでは、トークンの結合が自動的に失敗します。 新しいプリプロセッサは、他のほとんどのコンパイラの動作と一致し、診断を生成します。
+[トークン貼り付け演算子 (##) が](token-pasting-operator-hash-hash.md)1 つの有効な前処理トークンを返さない場合、動作は未定義です。 従来のプリプロセッサは、トークンを結合できないままです。 新しいプリプロセッサは、他のほとんどのコンパイラの動作と一致し、診断を出力します。
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -125,9 +127,9 @@ const wchar_t *info = DEBUG_INFO(hello world);
 ADD_STD(string) s;
 ```
 
-### <a name="comma-elision-in-variadic-macros"></a>可変個引数マクロでのコンマ省略
+### <a name="comma-elision-in-variadic-macros"></a>可変個変数マクロにおけるコンマの省略
 
-従来の MSVC プリプロセッサでは、空の `__VA_ARGS__` 置換の前に、常にコンマが削除されます。 実験的なプリプロセッサは、他の一般的なクロスプラットフォームコンパイラの動作により厳密に準拠しています。 コンマを削除するには、可変個引数引数が不足している (空ではない) 必要があります。また、`##` 演算子でマークされている必要があります。 次に例を示します。
+従来の MSVC プリプロセッサは、空`__VA_ARGS__`の置換の前に常にコンマを削除します。 実験用プリプロセッサは、他の一般的なクロスプラットフォームコンパイラの動作に密接に従います。 コンマを削除するには、可変個引数が欠落している必要があり (空の場合だけでなく) 演算子でマークする`##`必要があります。 次の例を確認してください。
 
 ```cpp
 void func(int, int = 2, int = 3);
@@ -135,16 +137,19 @@ void func(int, int = 2, int = 3);
 #define FUNC(a, ...) func(a, __VA_ARGS__)
 int main()
 {
-    // In the traditional preprocessor, the following macro is replaced with:
+    // In the traditional preprocessor, the
+    // following macro is replaced with:
     // func(10,20,30)
     FUNC(10, 20, 30);
 
-    // A conforming preprocessor will replace the following macro with: func(1, ), which will result in a syntax error.
+    // A conforming preprocessor replaces the
+    // following macro with: func(1, ), which
+    // results in a syntax error.
     FUNC(1, );
 }
 ```
 
-次の例では、の `FUNC2(1)` 呼び出しで、可変個引数引数が残るのマクロにありません。 の呼び出しで `FUNC2(1, )` 可変個引数引数は空ですが、不足していません (引数リストのコンマに注意してください)。
+次の例では、呼び出される`FUNC2(1)`マクロで可変引数の呼び出しがありません。 可変個引数`FUNC2(1, )`の呼び出しでは空ですが、欠落していません (引数リストのコンマに注意してください)。
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -158,11 +163,26 @@ int main()
 }
 ```
 
-今後の C + + 2a 標準では、この問題はまだ実装されていない `__VA_OPT__`を追加することによって対処されています。
+今後の C++ 20 標準では、この問題は を追加`__VA_OPT__`することで解決されています。 Visual Studio 2019 バージョン 16.5 以降で、実験的なプリプロセッサ のサポート`__VA_OPT__`が利用可能です。
 
-### <a name="macro-arguments-are-unpacked"></a>マクロの引数は "アンパック" されます
+### <a name="c20-variadic-macro-extension"></a>C++20 可変個変数マクロ拡張
 
-従来のプリプロセッサでは、マクロが引数の1つを別の依存マクロに転送した場合、引数が置換されるときに "アンパック" されることはありません。 通常、この最適化は気付かれませんが、異常な動作につながる可能性があります。
+実験プリプロセッサは、C++20 可変量マクロ引数の明知をサポートしています。
+
+```cpp
+#define FUNC(a, ...) __VA_ARGS__ + a
+int main()
+  {
+  int ret = FUNC(0);
+  return ret;
+  }
+```
+
+このコードは C++20 標準より前に準拠していません。 MSVC では、実験プリプロセッサは、この C++20 動作を低言語**`/std:c++14`** 標準**`/std:c++17`** モード ( 、 ) に拡張します。 この拡張機能は、他の主要なクロスプラットフォーム C++ コンパイラの動作と一致します。
+
+### <a name="macro-arguments-are-unpacked"></a>マクロ引数は"アンパック" されます。
+
+従来のプリプロセッサでは、マクロが引数の 1 つを別の従属マクロに転送した場合、その引数は挿入時に "アンパック" されません。 通常、この最適化は気付かれませんが、異常な動作につながる可能性があります。
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -170,18 +190,18 @@ int main()
 #define A( ... ) TWO_STRINGS(__VA_ARGS__)
 const char* c[2] = { A(1, 2) };
 
-// Conformant preprocessor results:
+// Conforming preprocessor results:
 // const char c[2] = { "1", "2" };
 
 // Traditional preprocessor results, all arguments are in the first string:
 // const char c[2] = { "1, 2", };
 ```
 
-`A()`を展開する場合、従来のプリプロセッサは、`__VA_ARGS__` にパッケージ化されたすべての引数を TWO_STRINGS の最初の引数に転送します。これにより、`TWO_STRINGS` の可変個引数引数は空のままになります。 これにより、`#first` の結果が単に "1" ではなく "1, 2" になります。 詳細に従う場合は、従来のプリプロセッサ展開での `#__VA_ARGS__` の結果について疑問に思うかもしれません。可変個引数パラメーターが空の場合は、空の文字列リテラル `""`になります。 別の問題のため、空の文字列リテラルトークンは生成されませんでした。
+`A()`を拡張すると、従来のプリプロセッサは、パッケージ化されたすべての引数`__VA_ARGS__`を TWO_STRINGS の最初の引数に転送します`TWO_STRINGS`。 その結果、結果は`#first`単なる "1" ではなく "1, 2" になります。 あなたが密接に従っているなら、伝統的なプリプロセッサ拡張の`#__VA_ARGS__`結果に何が起こったのか疑問に思うかもしれません: variadic パラメータが空の場合は空の文字列リテラル`""`になります。 別の問題により、空の文字列リテラル トークンが生成されないという問題が発生しました。
 
-### <a name="rescanning-replacement-list-for-macros"></a>マクロの置換リストの再スキャン
+### <a name="rescanning-replacement-list-for-macros"></a>マクロの置換リストを再スキャンする
 
-マクロが置換された後、置換する必要がある追加のマクロ識別子について、結果のトークンが再スキャンされます。 前のプリプロセッサで再スキャンを実行するために使用されるアルゴリズムは、実際のコードに基づく次の例に示すように、準拠していません。
+マクロを置き換えた後、結果のトークンは、置換する追加のマクロ識別子のために再スキャンされます。 この例では、実際のコードに基づいて、再スキャンを実行するために従来のプリプロセッサで使用されるアルゴリズムが準拠していません。
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -196,20 +216,20 @@ DO_THING(1, "World");
 
 // Traditional preprocessor:
 // do_thing_one( "Hello", "World");
-// Conformant preprocessor:
+// Conforming preprocessor:
 // IMPL1 ( "Hello","World");
 ```
 
-この例は少し不自然に見えますが、実際のコードで発生していることがわかりました。 どのような処理が行われているかを確認するには、`DO_THING`で始まる展開を分割します。
+この例は少し工夫されているように見えるかもしれませんが、実際のコードで見てきました。 何が起こっているのかを確認するには、次の項目から`DO_THING`拡張を分解します。
 
-1. `DO_THING(1, "World")` が `CAT(IMPL, 1) ECHO(("Hello", "World"))` に展開されます
-1. `CAT(IMPL, 1)` は、展開先の `IMPL ## 1` に展開され `IMPL1`
-1. これで、トークンは次の状態になります。 `IMPL1 ECHO(("Hello", "World"))`
-1. プリプロセッサは `IMPL1`関数に似たマクロ識別子を検索しますが、その後に `(`がないため、関数のようなマクロの呼び出しとは見なされません。 
-1. 次のトークンに移動し、関数に似たマクロ `ECHO` 呼び出されます。 `ECHO(("Hello", "World"))`は、に展開され `("Hello", "World")`
-1. `IMPL1` は拡張のためにもう一度考慮されないため、展開の完全な結果は次のようになり `IMPL1("Hello", "World");` ます。
+1. `DO_THING(1, "World")`に拡大`CAT(IMPL, 1) ECHO(("Hello", "World"))`
+1. `CAT(IMPL, 1)`に`IMPL ## 1`拡張され、`IMPL1`
+1. これで、トークンはこの状態になります。`IMPL1 ECHO(("Hello", "World"))`
+1. プリプロセッサは関数のようなマクロ識別子`IMPL1`を検索します。 に続くわけではないので、`(`関数のようなマクロ呼び出しとは見なされません。
+1. プリプロセッサは次のトークンに移動します。 関数に似たマクロ`ECHO`が呼び出されます: `ECHO(("Hello", "World"))``("Hello", "World")`
+1. `IMPL1`展開のために再び考慮されることはないので、拡張の完全な結果は次のようになります。`IMPL1("Hello", "World");`
 
-このマクロは、別の間接レイヤーにを追加することで、実験的なプリプロセッサと従来のプリプロセッサで同じように動作するように変更できます。
+実験プリプロセッサと従来のプリプロセッサの両方で同じように動作するようにマクロを変更するには、間接別のレイヤーを追加します。
 
 ```cpp
 #define CAT(a,b) a##b
@@ -227,8 +247,10 @@ DO_THING_FIXED(1, "World");
 
 ## <a name="incomplete-features"></a>不完全な機能
 
-実験的なプリプロセッサはほとんど完了しますが、プリプロセッサディレクティブロジックによっては依然として従来の動作にフォールバックします。 不完全な機能の一部を次に示します。
+Visual Studio 2019 バージョン 16.5 以降、C++20 の機能は、実験用プリプロセッサが完全です。 以前のバージョンの Visual Studio では、実験用プリプロセッサはほとんど完了していますが、一部のプリプロセッサ ディレクティブ ロジックは従来の動作に戻ります。 16.5 より前の Visual Studio バージョンの不完全な機能の一部を次に示します。
 
 - `_Pragma` のサポート
-- C++ 20 の機能
-- ブロッキングバグのブースト: プリプロセッサ定数式の論理演算子は、新しいプリプロセッサで完全には実装されていません。 一部の `#if` ディレクティブでは、新しいプリプロセッサは従来のプリプロセッサにフォールバックできます。 この効果は、従来のプリプロセッサと互換性のないマクロが拡張された場合にのみ顕著になります。これは、プロセッサスロットをブーストする場合に発生する可能性があります。
+- C++20の機能
+- ブロックのバグを高める: プリプロセッサ定数式の論理演算子は、バージョン 16.5 より前の新しいプリプロセッサで完全には実装されていません。 ディレクティブによっては`#if`、新しいプリプロセッサが従来のプリプロセッサにフォールバックする場合があります。 この効果は、従来のプリプロセッサと互換性のないマクロが展開された場合にのみ顕著です。 これは、Boost プリプロセッサ スロットを構築するときに発生する可能性があります。
+
+::: moniker-end

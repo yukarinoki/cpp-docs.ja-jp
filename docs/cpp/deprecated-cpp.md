@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189482"
 ---
 # <a name="deprecated-c"></a>非推奨 (C++)
 
-このトピックでは、Microsoft 固有について declspec 宣言を非推奨とされます。 C++ 14 について`[[deprecated]]`属性、および Microsoft 固有の declspec またはプラグマとその属性を使用するタイミングに関するガイダンスを参照してください。 [C++ の標準属性](attributes.md)します。
+このトピックでは、Microsoft 固有の非推奨の declspec 宣言について説明します。 C++ 14 `[[deprecated]]` 属性、およびその属性を Microsoft 固有の declspec またはプラグマと共に使用する場合のガイダンスについては、「 [ C++標準属性](attributes.md)」を参照してください。
 
-例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。
+次に示す例外を使用して、**非**推奨の宣言は、[非推奨](../preprocessor/deprecated-c-cpp.md)のプラグマと同じ機能を提供します。
 
-- **非推奨とされます**宣言により、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式はすべてのオーバー ロードされた関数名に適用されます。
+- **非推奨**の宣言を使用すると、関数オーバーロードの特定の形式を非推奨として指定できます。一方、プラグマフォームは、関数名のすべてのオーバーロードされた形式に適用されます。
 
-- **非推奨とされます**宣言では、コンパイル時に表示されるメッセージを指定することができます。 このメッセージのテキストをマクロから取り込むことができます。
+- **非推奨**の宣言を使用すると、コンパイル時に表示されるメッセージを指定できます。 このメッセージのテキストをマクロから取り込むことができます。
 
-- マクロは非推奨とされたとしてマークされているのみ、**非推奨とされます**プラグマ。
+- マクロは、**非**推奨のプラグマでのみ非推奨としてマークできます。
 
-コンパイラが非推奨の識別子または標準の使用を検出するかどうかは[ `[[deprecated]]` ](attributes.md)属性、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。
+コンパイラが非推奨の識別子または標準の[`[[deprecated]]`](attributes.md)属性の使用を検出すると、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

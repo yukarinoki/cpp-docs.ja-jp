@@ -5,21 +5,39 @@ metadata:
   title: C/C++ コード アナライザー
   description: Visual Studio を使用して C および C++ コードの品質を分析する方法を説明します。
   ms.topic: landing-page
-  ms.date: 02/12/2020
-  ms.openlocfilehash: 62416d462cc6da3bf28da2a7a825b6702c512385
-  ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/17/2020
-  ms.locfileid: "77429487"
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108409"
 landingContent:
 - title: C および C++ コードの分析
   linkLists:
   - linkListType: overview
     links:
-    - text: C および C++ コードの分析
+    - text: C/C++ のコード分析の概要
       url: code-analysis-for-c-cpp-overview.md
+  - linkListType: quickstart
+    links:
+    - text: 'クイック スタート: C/C++ のコード分析'
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: tutorial
+    links:
+    - text: 'チュートリアル: C/C++ コード分析による障害の検出'
+      url: walkthrough-analyzing-c-cpp-code-for-defects.md
+    - text: SAL 注釈を使って C/C++ のコード障害を減らす
+      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
+- title: コード分析リファレンス
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Core Guidelines
+      url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
   - linkListType: reference
     links:
+    - text: C++ Core Guidelines の警告
+      url: code-analysis-for-cpp-corecheck.md
     - text: C++ のコード分析の警告
       url: code-analysis-for-c-cpp-warnings.md

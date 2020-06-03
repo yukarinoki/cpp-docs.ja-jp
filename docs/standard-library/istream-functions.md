@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363078"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 関数
 
 |||
 |-|-|
-|[スワップ](#istream_swap)|[ws](#ws)|
+|[スワップ](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>スワップ
 
 2 つのストリーム オブジェクトの要素を交換します。
 
@@ -39,10 +39,10 @@ void swap(
 *左*\
 ストリーム。
 
-*右*\
+*そうです*\
 ストリーム。
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 ストリーム内の空白をスキップします。
 
@@ -61,14 +61,14 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは、 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)) `ch` すべての要素を抽出して破棄します。 **is**( **ctype**\< **Elem**>:: **space**, **ch**) が true です。
+マニピュ`ch`レータは **、ctype** **ctype** \< Elem> >( [getloc](../standard-library/ios-base-class.md#getloc)) [use_facet](../standard-library/basic-filebuf-class.md#open)< 要素を抽出して破棄します。 **は** **(ctype** \< **Elem**>::**スペース** **、ch**) が真です。
 
-この関数は、要素の抽出中にファイルの終わりに達した場合 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。 *_Istr*が返されます。
+この関数は、要素の抽出中にファイルの終わりに達した場合 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。 _Istr返*します*。
 
 ### <a name="example"></a>例
 
-[ の使用例については ](../standard-library/istream-operators.md#op_gt_gt)operator>>`ws` に関する記事をご覧ください。
+`ws` の使用例については [operator>>](../standard-library/istream-operators.md#op_gt_gt) に関する記事をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<istream>](../standard-library/istream.md)
+[\<i流>](../standard-library/istream.md)

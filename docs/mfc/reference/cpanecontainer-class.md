@@ -120,18 +120,18 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a37230b4889b32c42d48525f10a3164da33b63
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373116"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753652"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer クラス
 
-`CPaneContainer`クラスは、MFC によって実装されるドッキング モデルの基本的なコンポーネントです。 このクラスのオブジェクトは、2 つのドッキング ペイン、または `CPaneContainer.` の 2 つのインスタンスへのポインターを格納します。また、ペイン (またはコンテナー) を分割している区分線へのポインターも格納します。 コンテナー内にコンテナーを入れ子にすると、フレームワークは複雑なドッキング レイアウトを表すバイナリ ツリーを構築します。 バイナリ ツリーのルートが格納されている、 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)オブジェクト。
+クラス`CPaneContainer`は、MFC によって実装されるドッキング モデルの基本的なコンポーネントです。 このクラスのオブジェクトは、2 つのドッキング ペイン、または `CPaneContainer.` の 2 つのインスタンスへのポインターを格納します。また、ペイン (またはコンテナー) を分割している区分線へのポインターも格納します。 コンテナー内にコンテナーを入れ子にすると、フレームワークは複雑なドッキング レイアウトを表すバイナリ ツリーを構築します。 バイナリ ツリーのルートは[、CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)オブジェクトに格納されます。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -145,76 +145,76 @@ class CPaneContainer : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|既定のコンストラクターです。|
+|[Cペインコンテナ::Cペインコンテナ](#cpanecontainer)|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneContainer::AddPane](#addpane)||
-|[CPaneContainer::AddRef](#addref)||
-|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||
-|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||
-|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||
-|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||
-|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||
-|[CPaneContainer::Copy](#copy)||
-|[CPaneContainer::DeletePane](#deletepane)||
-|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||
-|[CPaneContainer::FindTabbedPane](#findtabbedpane)||
-|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||
-|[CPaneContainer::GetLeftPane](#getleftpane)||
-|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||
-|[CPaneContainer::GetMinSize](#getminsize)||
-|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||
-|[CPaneContainer::GetMinSizeRight](#getminsizeright)||
-|[CPaneContainer::GetNodeCount](#getnodecount)||
-|[CPaneContainer::GetPaneDivider](#getpanedivider)||
-|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||
-|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||
-|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||
-|[CPaneContainer::GetRecentPercent](#getrecentpercent)||
-|[CPaneContainer::GetRefCount](#getrefcount)||
-|[CPaneContainer::GetResizeStep](#getresizestep)||
-|[CPaneContainer::GetRightPane](#getrightpane)||
-|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||
-|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||
-|[CPaneContainer::GetWindowRect](#getwindowrect)||
-|[CPaneContainer::IsDisposed](#isdisposed)||
-|[CPaneContainer::IsEmpty](#isempty)||
-|[CPaneContainer::IsLeftPane](#isleftpane)||
-|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||
-|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||
-|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||
-|[CPaneContainer::IsVisible](#isvisible)||
-|[CPaneContainer::Move](#move)||
-|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||
-|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||
-|[CPaneContainer::OnShowPane](#onshowpane)||
-|[CPaneContainer::Release](#release)||
-|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||
-|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||
-|[CPaneContainer::RemovePane](#removepane)||
-|[CPaneContainer::Resize](#resize)||
-|[CPaneContainer::ResizePane](#resizepane)||
-|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||
-|[CPaneContainer::Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
-|[CPaneContainer::SetPane](#setpane)||
-|[CPaneContainer::SetPaneContainer](#setpanecontainer)||
-|[CPaneContainer::SetPaneDivider](#setpanedivider)||
-|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||
-|[CPaneContainer::SetRecentPercent](#setrecentpercent)||
-|[CPaneContainer::SetUpByID](#setupbyid)||
-|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
-|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||
+|[CPane コンテナ::ペインの追加](#addpane)||
+|[コンテナ::追加参照](#addref)||
+|[コンテナ::サブペインコンテナの追加](#addsubpanecontainer)||
+|[ウィンドウコンテナ::カルコ利用可能なペインスペース](#calcavailablepanespace)||
+|[コンテナ::カルコ利用可能スペース](#calcavailablespace)||
+|[ウィンドウコンテナ::最近のサイズを計算します。](#calculaterecentsize)||
+|[CPane コンテナ::チェックペインディバイダービリティ](#checkpanedividervisibility)||
+|[CPane コンテナ::コピー](#copy)||
+|[Cペインコンテナ::Dエレテパネ](#deletepane)||
+|[コンテナ::Findサブペインコンテナ](#findsubpanecontainer)||
+|[ウィンドウコンテナ::タブ付きペインを検索します。](#findtabbedpane)||
+|[CPane コンテナ::取得関連付けられた兄弟ペインID](#getassociatedsiblingpaneids)||
+|[ウィンドウコンテナ::左ペインを取得します。](#getleftpane)||
+|[コンテナ::左ペインコンテナ](#getleftpanecontainer)||
+|[コンテナ::ゲットミンサイズ](#getminsize)||
+|[コンテナ::ゲットミンサイズ左](#getminsizeleft)||
+|[コンテナ::ゲットミンサイズライト](#getminsizeright)||
+|[コンテナ::ノード数を取得します。](#getnodecount)||
+|[コンテナ::ゲパネディバイダー](#getpanedivider)||
+|[コンテナ::親ウィンドウコンテナを取得します。](#getparentpanecontainer)||
+|[ウィンドウコンテナー::最近のペインディバイドレクト](#getrecentpanedividerrect)||
+|[ウィンドウコンテナ::ゲットレコリストペインディバイダースタイル](#getrecentpanedividerstyle)||
+|[ウィンドウコンテナ::最近のパーセントを取得します。](#getrecentpercent)||
+|[コンテナ::ゲットレプカウント](#getrefcount)||
+|[ウィンドウコンテナ::リサイズステップ](#getresizestep)||
+|[コンテナ::右ペインを取得します。](#getrightpane)||
+|[コンテナ::右ペインコンテナ](#getrightpanecontainer)||
+|[をクリックします。](#gettotalreferencecount)||
+|[ウィンドウコンテナ::ゲットウィンドウレック](#getwindowrect)||
+|[コンテナ::イズ処分](#isdisposed)||
+|[コンテナ::空です](#isempty)||
+|[コンテナ::イスレフトペイン](#isleftpane)||
+|[コンテナ::イスレフトペインコンテナ](#isleftpanecontainer)||
+|[コンテナ::IsLeftPartEmpty](#isleftpartempty)||
+|[コンテナ::IsRightPartEmpty](#isrightpartempty)||
+|[コンテナ::イズビジブル](#isvisible)||
+|[CPane コンテナ::移動](#move)||
+|[ウィンドウコンテナー::オン削除非表示ペイン](#ondeletehidepane)||
+|[CPane コンテナ::オンムーブ内部ペインディバイダー](#onmoveinternalpanedivider)||
+|[ウィンドウコンテナー::オンショーウィンドウ](#onshowpane)||
+|[CPane コンテナ::リリース](#release)||
+|[コンテナ::リリース空のペインコンテナ](#releaseemptypanecontainer)||
+|[ウィンドウコンテナー::非有効なペインの削除](#removenonvalidpanes)||
+|[コンテナ::ペインの削除](#removepane)||
+|[CPane コンテナ::サイズ変更](#resize)||
+|[ウィンドウコンテナ::サイズ変更ペイン](#resizepane)||
+|[ウィンドウコンテナ::ペインコンテナのサイズを変更します。](#resizepartofpanecontainer)||
+|[コンテナ::シリアル化](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
+|[コンテナ::セットペイン](#setpane)||
+|[コンテナ::セットペインコンテナ](#setpanecontainer)||
+|[コンテナ::セパネディバイダー](#setpanedivider)||
+|[コンテナ::セットペアレントペインコンテナ](#setparentpanecontainer)||
+|[ウィンドウコンテナ::最近のパーセントを設定します](#setrecentpercent)||
+|[ウィンドウコンテナ::セットアップバイID](#setupbyid)||
+|[ウィンドウコンテナ::ストア最近ドックサイト情報](#storerecentdocksiteinfo)||
+|[ウィンドウコンテナ::ストレッチペインコンテナ](#stretchpanecontainer)||
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CPaneContainer` オブジェクトは、フレームワークによって自動的に作成されます。
+`CPaneContainer`オブジェクトはフレームワークによって自動的に作成されます。
 
 ## <a name="example"></a>例
 
-次の例では、インスタンスを構築する方法、`CPaneContainer`クラス。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../overview/visual-cpp-samples.md)します。
+クラスのインスタンスを構築する方法を次の例に`CPaneContainer`示します。 このコード スニペットは、ペイン サイズの[設定のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
@@ -227,9 +227,9 @@ class CPaneContainer : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxpanecontainer.h
+**ヘッダー:** afxpane コンテナ.h
 
-##  <a name="addpane"></a>  CPaneContainer::AddPane
+## <a name="cpanecontaineraddpane"></a><a name="addpane"></a>CPane コンテナ::ペインの追加
 
 ```
 CDockablePane* AddPane(CDockablePane* pBar);
@@ -237,21 +237,21 @@ CDockablePane* AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addref"></a>  CPaneContainer::AddRef
+## <a name="cpanecontaineraddref"></a><a name="addref"></a>コンテナ::追加参照
 
-```
+```cpp
 void AddRef();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer
+## <a name="cpanecontaineraddsubpanecontainer"></a><a name="addsubpanecontainer"></a>コンテナ::サブペインコンテナの追加
 
 ```
 BOOL AddSubPaneContainer(
@@ -261,14 +261,14 @@ BOOL AddSubPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pContainer*<br/>
-[in]*bRightNodeNew*<br/>
+[in]*コンテナ*<br/>
+[in]*新しいノード*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace
+## <a name="cpanecontainercalcavailablepanespace"></a><a name="calcavailablepanespace"></a>ウィンドウコンテナ::カルコ利用可能なペインスペース
 
 ```
 virtual int CalcAvailablePaneSpace(
@@ -280,16 +280,16 @@ virtual int CalcAvailablePaneSpace(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRequiredOffset*<br/>
-[in]*pBar*<br/>
-[in]*pContainer*<br/>
-[in] *bLeftBar*<br/>
+[in]*n必須オフセット*<br/>
+[in]*pバー*<br/>
+[in]*コンテナ*<br/>
+[in]*バー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace
+## <a name="cpanecontainercalcavailablespace"></a><a name="calcavailablespace"></a>コンテナ::カルコ利用可能スペース
 
 ```
 virtual CSize CalcAvailableSpace(
@@ -299,30 +299,30 @@ virtual CSize CalcAvailableSpace(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *sizeStretch*<br/>
-[in] *bLeftBar*<br/>
+[in]*サイズストレッチ*<br/>
+[in]*バー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize
+## <a name="cpanecontainercalculaterecentsize"></a><a name="calculaterecentsize"></a>ウィンドウコンテナ::最近のサイズを計算します。
 
-```
+```cpp
 void CalculateRecentSize();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility
+## <a name="cpanecontainercheckpanedividervisibility"></a><a name="checkpanedividervisibility"></a>CPane コンテナ::チェックペインディバイダービリティ
 
-```
+```cpp
 void CheckPaneDividerVisibility();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="copy"></a>  CPaneContainer::Copy
+## <a name="cpanecontainercopy"></a><a name="copy"></a>CPane コンテナ::コピー
 
 ```
 virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
@@ -330,13 +330,13 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *pParentContainer*<br/>
+[in]*コンテナ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer
+## <a name="cpanecontainercpanecontainer"></a><a name="cpanecontainer"></a>Cペインコンテナ::Cペインコンテナ
 
 ```
 CPaneContainer(
@@ -348,14 +348,14 @@ CPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pManager*<br/>
-[in] *pLeftBar*<br/>
-[in]*pRightBar*<br/>
-[in]*pSlider*<br/>
+[in]*をクリックします。*<br/>
+[in]*をクリックします。*<br/>
+[in]*ライトバー*<br/>
+[in]*スライダー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="deletepane"></a>  CPaneContainer::DeletePane
+## <a name="cpanecontainerdeletepane"></a><a name="deletepane"></a>Cペインコンテナ::Dエレテパネ
 
 ```
 virtual void DeletePane(
@@ -365,12 +365,12 @@ virtual void DeletePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
-[in] *barType*<br/>
+[in]*pバー*<br/>
+[in]*バータイプ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer
+## <a name="cpanecontainerfindsubpanecontainer"></a><a name="findsubpanecontainer"></a>コンテナ::Findサブペインコンテナ
 
 ```
 CPaneContainer* FindSubPaneContainer(
@@ -380,14 +380,14 @@ CPaneContainer* FindSubPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pObject*<br/>
-[in] *findCriteria*<br/>
+[in]*オブジェクト*<br/>
+[in]*検索条件を確認する*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane
+## <a name="cpanecontainerfindtabbedpane"></a><a name="findtabbedpane"></a>ウィンドウコンテナ::タブ付きペインを検索します。
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -399,9 +399,9 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs
+## <a name="cpanecontainergetassociatedsiblingpaneids"></a><a name="getassociatedsiblingpaneids"></a>CPane コンテナ::取得関連付けられた兄弟ペインID
 
 ```
 CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
@@ -409,13 +409,13 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane
+## <a name="cpanecontainergetleftpane"></a><a name="getleftpane"></a>ウィンドウコンテナ::左ペインを取得します。
 
 ```
 const CDockablePane* GetLeftPane() const;
@@ -423,9 +423,9 @@ const CDockablePane* GetLeftPane() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer
+## <a name="cpanecontainergetleftpanecontainer"></a><a name="getleftpanecontainer"></a>コンテナ::左ペインコンテナ
 
 ```
 const CPaneContainer* GetLeftPaneContainer() const;
@@ -433,9 +433,9 @@ const CPaneContainer* GetLeftPaneContainer() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getminsize"></a>  CPaneContainer::GetMinSize
+## <a name="cpanecontainergetminsize"></a><a name="getminsize"></a>コンテナ::ゲットミンサイズ
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -445,9 +445,9 @@ virtual void GetMinSize(CSize& size) const;
 
 [in]*サイズ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft
+## <a name="cpanecontainergetminsizeleft"></a><a name="getminsizeleft"></a>コンテナ::ゲットミンサイズ左
 
 ```
 virtual void GetMinSizeLeft(CSize& size) const;
@@ -457,9 +457,9 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 [in]*サイズ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight
+## <a name="cpanecontainergetminsizeright"></a><a name="getminsizeright"></a>コンテナ::ゲットミンサイズライト
 
 ```
 virtual void GetMinSizeRight(CSize& size) const;
@@ -469,9 +469,9 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 [in]*サイズ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount
+## <a name="cpanecontainergetnodecount"></a><a name="getnodecount"></a>コンテナ::ノード数を取得します。
 
 ```
 int GetNodeCount() const;
@@ -479,9 +479,9 @@ int GetNodeCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider
+## <a name="cpanecontainergetpanedivider"></a><a name="getpanedivider"></a>コンテナ::ゲパネディバイダー
 
 ```
 const CPaneDivider* GetPaneDivider() const;
@@ -489,9 +489,9 @@ const CPaneDivider* GetPaneDivider() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer
+## <a name="cpanecontainergetparentpanecontainer"></a><a name="getparentpanecontainer"></a>コンテナ::親ウィンドウコンテナを取得します。
 
 ```
 CPaneContainer* GetParentPaneContainer() const;
@@ -499,9 +499,9 @@ CPaneContainer* GetParentPaneContainer() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect
+## <a name="cpanecontainergetrecentpanedividerrect"></a><a name="getrecentpanedividerrect"></a>ウィンドウコンテナー::最近のペインディバイドレクト
 
 ```
 CRect GetRecentPaneDividerRect() const;
@@ -509,9 +509,9 @@ CRect GetRecentPaneDividerRect() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle
+## <a name="cpanecontainergetrecentpanedividerstyle"></a><a name="getrecentpanedividerstyle"></a>ウィンドウコンテナ::ゲットレコリストペインディバイダースタイル
 
 ```
 DWORD GetRecentPaneDividerStyle() const;
@@ -519,9 +519,9 @@ DWORD GetRecentPaneDividerStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent
+## <a name="cpanecontainergetrecentpercent"></a><a name="getrecentpercent"></a>ウィンドウコンテナ::最近のパーセントを取得します。
 
 ```
 int GetRecentPercent();
@@ -529,9 +529,9 @@ int GetRecentPercent();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount
+## <a name="cpanecontainergetrefcount"></a><a name="getrefcount"></a>コンテナ::ゲットレプカウント
 
 ```
 LONG GetRefCount();
@@ -539,9 +539,9 @@ LONG GetRefCount();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep
+## <a name="cpanecontainergetresizestep"></a><a name="getresizestep"></a>ウィンドウコンテナ::リサイズステップ
 
 ```
 virtual int GetResizeStep() const;
@@ -549,9 +549,9 @@ virtual int GetResizeStep() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane
+## <a name="cpanecontainergetrightpane"></a><a name="getrightpane"></a>コンテナ::右ペインを取得します。
 
 ```
 const CDockablePane* GetRightPane() const;
@@ -559,9 +559,9 @@ const CDockablePane* GetRightPane() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer
+## <a name="cpanecontainergetrightpanecontainer"></a><a name="getrightpanecontainer"></a>コンテナ::右ペインコンテナ
 
 ```
 const CPaneContainer* GetRightPaneContainer() const;
@@ -569,9 +569,9 @@ const CPaneContainer* GetRightPaneContainer() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount
+## <a name="cpanecontainergettotalreferencecount"></a><a name="gettotalreferencecount"></a>をクリックします。
 
 ```
 int GetTotalReferenceCount() const;
@@ -579,9 +579,9 @@ int GetTotalReferenceCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect
+## <a name="cpanecontainergetwindowrect"></a><a name="getwindowrect"></a>ウィンドウコンテナ::ゲットウィンドウレック
 
 ```
 virtual void GetWindowRect(
@@ -591,12 +591,12 @@ virtual void GetWindowRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
-[in]*bIgnoreVisibility*<br/>
+[in]*レクト*<br/>
+[in]*可視性を無視する*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed
+## <a name="cpanecontainerisdisposed"></a><a name="isdisposed"></a>コンテナ::イズ処分
 
 ```
 BOOL IsDisposed() const;
@@ -604,9 +604,9 @@ BOOL IsDisposed() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isempty"></a>  CPaneContainer::IsEmpty
+## <a name="cpanecontainerisempty"></a><a name="isempty"></a>コンテナ::空です
 
 ```
 BOOL IsEmpty() const;
@@ -614,9 +614,9 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane
+## <a name="cpanecontainerisleftpane"></a><a name="isleftpane"></a>コンテナ::イスレフトペイン
 
 ```
 BOOL IsLeftPane(CDockablePane* pBar) const;
@@ -624,13 +624,13 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer
+## <a name="cpanecontainerisleftpanecontainer"></a><a name="isleftpanecontainer"></a>コンテナ::イスレフトペインコンテナ
 
 ```
 BOOL IsLeftPaneContainer() const;
@@ -638,9 +638,9 @@ BOOL IsLeftPaneContainer() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty
+## <a name="cpanecontainerisleftpartempty"></a><a name="isleftpartempty"></a>コンテナ::IsLeftPartEmpty
 
 ```
 BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -648,13 +648,13 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bCheckVisibility*<br/>
+[in]*可視性を確認する*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty
+## <a name="cpanecontainerisrightpartempty"></a><a name="isrightpartempty"></a>コンテナ::IsRightPartEmpty
 
 ```
 BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -662,13 +662,13 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bCheckVisibility*<br/>
+[in]*可視性を確認する*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isvisible"></a>  CPaneContainer::IsVisible
+## <a name="cpanecontainerisvisible"></a><a name="isvisible"></a>コンテナ::イズビジブル
 
 ```
 BOOL IsVisible() const;
@@ -676,9 +676,9 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="move"></a>  CPaneContainer::Move
+## <a name="cpanecontainermove"></a><a name="move"></a>CPane コンテナ::移動
 
 ```
 virtual void Move(CPoint ptNewLeftTop);
@@ -686,13 +686,13 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *ptNewLeftTop*<br/>
+[in]*プニューレフトトップ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane
+## <a name="cpanecontainerondeletehidepane"></a><a name="ondeletehidepane"></a>ウィンドウコンテナー::オン削除非表示ペイン
 
-```
+```cpp
 void OnDeleteHidePane(
     CDockablePane* pBar,
     BOOL bHide);
@@ -700,12 +700,12 @@ void OnDeleteHidePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 [in]*bHide*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider
+## <a name="cpanecontaineronmoveinternalpanedivider"></a><a name="onmoveinternalpanedivider"></a>CPane コンテナ::オンムーブ内部ペインディバイダー
 
 ```
 virtual int OnMoveInternalPaneDivider(
@@ -715,14 +715,14 @@ virtual int OnMoveInternalPaneDivider(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
-[in] *hdwp*<br/>
+[in]*オフセット*<br/>
+[in]*hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane
+## <a name="cpanecontaineronshowpane"></a><a name="onshowpane"></a>ウィンドウコンテナー::オンショーウィンドウ
 
 ```
 virtual void OnShowPane(
@@ -732,12 +732,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
-[in]*bShow*<br/>
+[in]*pバー*<br/>
+[in]*bショー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="release"></a>  CPaneContainer::Release
+## <a name="cpanecontainerrelease"></a><a name="release"></a>CPane コンテナ::リリース
 
 ```
 DWORD Release();
@@ -745,25 +745,25 @@ DWORD Release();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer
+## <a name="cpanecontainerreleaseemptypanecontainer"></a><a name="releaseemptypanecontainer"></a>コンテナ::リリース空のペインコンテナ
 
-```
+```cpp
 void ReleaseEmptyPaneContainer();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes
+## <a name="cpanecontainerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>ウィンドウコンテナー::非有効なペインの削除
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removepane"></a>  CPaneContainer::RemovePane
+## <a name="cpanecontainerremovepane"></a><a name="removepane"></a>コンテナ::ペインの削除
 
 ```
 virtual void RemovePane(CDockablePane* pBar);
@@ -771,11 +771,11 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resize"></a>  CPaneContainer::Resize
+## <a name="cpanecontainerresize"></a><a name="resize"></a>CPane コンテナ::サイズ変更
 
 ```
 virtual void Resize(
@@ -786,13 +786,13 @@ virtual void Resize(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
-[in] *hdwp*<br/>
-[in]*bRedraw*<br/>
+[in]*レクト*<br/>
+[in]*hdwp*<br/>
+[in]*引き出し*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resizepane"></a>  CPaneContainer::ResizePane
+## <a name="cpanecontainerresizepane"></a><a name="resizepane"></a>ウィンドウコンテナ::サイズ変更ペイン
 
 ```
 virtual void ResizePane(
@@ -806,16 +806,16 @@ virtual void ResizePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
-[in]*pBar*<br/>
-[in]*pContainer*<br/>
-[in] *bHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *hdwp*<br/>
+[in]*オフセット*<br/>
+[in]*pバー*<br/>
+[in]*コンテナ*<br/>
+[in]*bHorz*<br/>
+[in]*バー*<br/>
+[in]*hdwp*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer
+## <a name="cpanecontainerresizepartofpanecontainer"></a><a name="resizepartofpanecontainer"></a>ウィンドウコンテナ::ペインコンテナのサイズを変更します。
 
 ```
 virtual void ResizePartOfPaneContainer(
@@ -826,15 +826,15 @@ virtual void ResizePartOfPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
-[in] *bLeftPart*<br/>
-[in] *hdwp*<br/>
+[in]*オフセット*<br/>
+[in]*一部*<br/>
+[in]*hdwp*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="serialize"></a>  CPaneContainer::Serialize
+## <a name="cpanecontainerserialize"></a><a name="serialize"></a>コンテナ::シリアル化
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -842,11 +842,11 @@ void Serialize(CArchive& ar);
 
 [in]*ar*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setpane"></a>  CPaneContainer::SetPane
+## <a name="cpanecontainersetpane"></a><a name="setpane"></a>コンテナ::セットペイン
 
-```
+```cpp
 void SetPane(
     CDockablePane* pBar,
     BOOL bLeft);
@@ -854,14 +854,14 @@ void SetPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
-[in] *bLeft*<br/>
+[in]*pバー*<br/>
+[in]*b左*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer
+## <a name="cpanecontainersetpanecontainer"></a><a name="setpanecontainer"></a>コンテナ::セットペインコンテナ
 
-```
+```cpp
 void SetPaneContainer(
     CPaneContainer* pContainer,
     BOOL bLeft);
@@ -869,26 +869,26 @@ void SetPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pContainer*<br/>
-[in] *bLeft*<br/>
+[in]*コンテナ*<br/>
+[in]*b左*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider
+## <a name="cpanecontainersetpanedivider"></a><a name="setpanedivider"></a>コンテナ::セパネディバイダー
 
-```
+```cpp
 void SetPaneDivider(CPaneDivider* pSlider);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pSlider*<br/>
+[in]*スライダー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer
+## <a name="cpanecontainersetparentpanecontainer"></a><a name="setparentpanecontainer"></a>コンテナ::セットペアレントペインコンテナ
 
-```
+```cpp
 void SetParentPaneContainer(CPaneContainer* p);
 ```
 
@@ -896,21 +896,21 @@ void SetParentPaneContainer(CPaneContainer* p);
 
 [in]*p*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent
+## <a name="cpanecontainersetrecentpercent"></a><a name="setrecentpercent"></a>ウィンドウコンテナ::最近のパーセントを設定します
 
-```
+```cpp
 void SetRecentPercent(int nRecentPercent);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRecentPercent*<br/>
+[in]*値上げパーセント*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID
+## <a name="cpanecontainersetupbyid"></a><a name="setupbyid"></a>ウィンドウコンテナ::セットアップバイID
 
 ```
 BOOL SetUpByID(
@@ -921,13 +921,13 @@ BOOL SetUpByID(
 ### <a name="parameters"></a>パラメーター
 
 [in]*nID*<br/>
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo
+## <a name="cpanecontainerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>ウィンドウコンテナ::ストア最近ドックサイト情報
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -935,11 +935,11 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer
+## <a name="cpanecontainerstretchpanecontainer"></a><a name="stretchpanecontainer"></a>ウィンドウコンテナ::ストレッチペインコンテナ
 
 ```
 virtual int StretchPaneContainer(
@@ -952,19 +952,19 @@ virtual int StretchPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
-[in] *bStretchHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *bMoveSlider*<br/>
-[in] *hdwp*<br/>
+[in]*オフセット*<br/>
+[in]*bストレッチホルツ*<br/>
+[in]*バー*<br/>
+[in]*ビガメスライダー*<br/>
+[in]*hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)

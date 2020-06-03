@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0034
 ms.assetid: 1da4a55b-231b-4476-8545-6997628fbc00
-ms.openlocfilehash: 7c078a3d2aef24df9151cb10f81c1b7423809e68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb7e22d6a09e3435eb2236532101a1836c08a03
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192192"
 ---
 # <a name="project-build-error-prj0034"></a>プロジェクト ビルド エラー PRJ0034
 
-プロジェクト レベルのカスタムの追加の依存関係 ' プロパティはビルドに含まれる手順 'macro' と 'macro_expansion' を評価します。
+プロジェクトレベルのカスタムビルドステップの [追加の依存関係] プロパティには、' macro_expansion ' に評価される ' macro ' が含まれていました。
 
-プロジェクトでカスタム ビルド ステップには、おそらくマクロ評価の問題により、追加の依存関係のエラーが含まれています。 このエラーにあるパス形式が正しくない、文字またはファイル パスでは無効な文字の組み合わせを含むもします。
+マクロ評価の問題により、プロジェクトのカスタムビルドステップに追加の依存関係にエラーが含まれていました。 このエラーは、パスの形式が正しくないことを意味する場合もあります。これは、ファイルパスで無効な文字または文字の組み合わせが含まれていることを意味します。
 
-このエラーを解決するのには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。
+このエラーを解決するには、マクロを修正するか、パスの指定を修正します。 評価されたパスは、プロジェクトディレクトリからの絶対パスです。

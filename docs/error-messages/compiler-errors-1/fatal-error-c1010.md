@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204790"
 ---
 # <a name="fatal-error-c1010"></a>致命的なエラー C1010
 
 > プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 ソースに ' #include *name*' を追加してもよろしいですか?
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [/Yu](../../build/reference/yu-use-precompiled-header-file.md)によって指定されたインクルードファイルがソースファイルに一覧表示されません。 このオプションは、多くの Visual Studio C++プロジェクトの種類で既定で有効になっています。 このオプションで指定された既定のインクルードファイルは、Visual Studio 2017 以前の *.pch*または*stdafx.h*です。
 
@@ -37,16 +37,16 @@ Visual Studio 環境で、次のいずれかの方法を使用して、このエ
 
 1. **[構成]** ドロップダウンで、 **[すべての構成]** を選択します。
 
-1. **構成プロパティ** > の [**C/C++**  > **プリコンパイル済みヘッダー** ] プロパティページを選択します。
+1. **[構成プロパティ]**  > [ **CC++ /**  > **プリコンパイル済みヘッダー** ] プロパティページを選択します。
 
-1. [プロパティ] ボックスの一覧で、**プリコンパイル済みヘッダー**プロパティのドロップダウンを選択し、 **[プリコンパイル済みヘッダーを使用しない]** を選択します。 **OK** を選択して変更を保存してください。
+1. [プロパティ] ボックスの一覧で、**プリコンパイル済みヘッダー**プロパティのドロップダウンを選択し、 **[プリコンパイル済みヘッダーを使用しない]** を選択します。 **[OK]** を選択して変更を保存します。
 
 1. **[ソリューションエクスプローラー]** ウィンドウで、プロジェクト内の*pch*ソースファイルを右クリックします。 (以前のプロジェクトでは、ファイルは*stdafx.h*という名前にすることができます)。 **[プロジェクトから除外]** をクリックして、ビルドから削除します。
 
-1. ビルドする各構成に対して [**ソリューションのクリーン** **ビルド** > ] メニューコマンドを使用して、中間ビルドディレクトリ内の*project_name*ファイルを削除します。
+1. ビルドする構成ごとに**ビルド** > **クリーンソリューション**メニューコマンドを使用して、中間ビルドディレクトリ内の*project_name .pch*ファイルを削除します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[プリコンパイル済みヘッダーファイル](../../build/creating-precompiled-header-files.md)\
+[プリコンパイル済みヘッダーファイル](../../build/creating-precompiled-header-files.md)の\
 [/Yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)\
 [/Yu (プリコンパイル済みヘッダーファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)

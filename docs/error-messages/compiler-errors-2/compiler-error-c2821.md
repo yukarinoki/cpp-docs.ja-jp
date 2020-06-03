@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2821
 ms.assetid: e8d71988-a968-4484-94db-e8c3bad74a4a
-ms.openlocfilehash: 5c725d9648a7800c68a2fbff20e594a400c296c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d099c4a0f6e1ea77a25213e3873b8a0814e28dcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208192"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201996"
 ---
 # <a name="compiler-error-c2821"></a>コンパイラ エラー C2821
 
-最初の仮パラメーター 'operator new' は 'unsigned int' である必要があります。
+' operator new ' の最初の仮パラメーターは ' unsigned int ' でなければなりません
 
-最初の仮パラメーター、[演算子 new](../../standard-library/new-operators.md#op_new) unsigned にする必要があります`int`します。
+[New 演算子](../../standard-library/new-operators.md#op_new)の最初の仮パラメーターは、符号なしの `int`である必要があります。
 
 ## <a name="example"></a>例
 

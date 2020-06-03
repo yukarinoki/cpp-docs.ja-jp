@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142888"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427477"
 ---
 # <a name="agent-class"></a>agent クラス
 
@@ -38,14 +38,14 @@ class agent;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[・](#ctor)|オーバーロードされます。 エージェントを構築します。|
 |[~ エージェントデストラクター](#dtor)|エージェントを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[cancel](#cancel)|エージェントを `agent_created` または `agent_runnable` の状態から `agent_canceled` 状態に移動します。|
 |[start](#start)|エージェントを `agent_created` 状態から `agent_runnable` 状態に移動し、実行のスケジュールをスケジュールします。|
@@ -57,7 +57,7 @@ class agent;
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[完成です](#done)|エージェントを `agent_done` 状態に移動し、エージェントが完了したことを示します。|
 |[run](#run)|エージェントのメインタスクを表します。 `run` は、派生クラスでオーバーライドする必要があり、エージェントが開始された後に実行する必要があるものを指定します。|
@@ -70,7 +70,7 @@ class agent;
 
 `agent`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
 ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233299"
 ---
 # <a name="function-call-c"></a>関数呼び出し (C)
 
@@ -28,7 +28,7 @@ ms.locfileid: "56147413"
 
 *postfix-expression* は、関数アドレス (たとえば、関数の識別子または関数ポインターの値) に評価される必要があります。*argument-expression-list* は、式の (コンマ区切りの) リストで、各式の値 ("引数") が関数に渡されます。 *argument-expression-list* 引数は空の場合もあります。
 
-関数呼び出しの式は、関数の戻り値の値と型を持ちます。 関数は配列型のオブジェクトを返すことができません。 関数の戻り値の型が `void` (つまり、値を返さない関数であると宣言されている) の場合、関数呼び出し式も `void` 型になります  (詳細については、「[関数呼び出し](../c-language/function-calls.md)」を参照してください)。
+関数呼び出しの式は、関数の戻り値の値と型を持ちます。 関数は配列型のオブジェクトを返すことができません。 関数の戻り値の型が `void` (つまり、値を返さない関数であると宣言されている) の場合、関数呼び出し式も `void` 型になります (詳細については、「[関数呼び出し](../c-language/function-calls.md)」を参照してください)。
 
 ## <a name="see-also"></a>関連項目
 

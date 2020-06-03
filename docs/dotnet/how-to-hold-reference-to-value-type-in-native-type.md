@@ -1,25 +1,25 @@
 ---
-title: '方法: ネイティブ型で型の値への参照を保持します。'
+title: '方法: 値型への参照をネイティブ型で保持する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b71701c771f6f49bae172284e23dd9eba2aeded
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324962"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545259"
 ---
-# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>方法: ネイティブ型で型の値への参照を保持します。
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>方法: 値型への参照をネイティブ型で保持する
 
-使用`gcroot`ネイティブ型で値型への参照を保持するためにボックス化された型にします。
+ボックス化された型の `gcroot` を使用して、ネイティブ型の値型への参照を保持します。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // reference_to_value_in_native.cpp
 // compile with: /clr
 #using <mscorlib.dll>
@@ -49,6 +49,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

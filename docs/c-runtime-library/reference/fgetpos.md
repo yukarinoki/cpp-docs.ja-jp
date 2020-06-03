@@ -1,8 +1,9 @@
 ---
 title: fgetpos
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fgetpos
+- _o_fgetpos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920363"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -55,11 +57,13 @@ int fgetpos(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **fgetpos**は0を返します。 エラーが発生した場合、0以外の値を返し、 **errno**に次のマニフェスト定数のいずれかを設定します (STDIO で定義されています)。H):**EBADF**。指定されたストリームが有効なファイルポインターではない、アクセスできない、または**EINVAL**であることを意味します。これは、*ストリーム*値または*pos*の値が無効であることを意味します (いずれかが null ポインターの場合など)。 *Stream*または*pos*が**NULL**ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。
+成功した場合、 **fgetpos**は0を返します。 エラーが発生した場合、0以外の値を返し、 **errno**に次のマニフェスト定数のいずれかを設定します (STDIO で定義されています)。H): **EBADF**。指定されたストリームが有効なファイルポインターではない、アクセスできない、または**EINVAL**であることを意味します。これは、どちらかが null ポインターの場合などに、*ストリーム*値または*pos*の値が無効であることを意味します。 *Stream*または*pos*が**NULL**ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Fgetpos**関数は、*ストリーム*引数のファイル位置インジケーターの現在の値を取得し、 *pos*が指すオブジェクトに格納します。**Fsetpos**関数は、後で*pos*に格納されている情報を使用して、 **fgetpos**が呼び出された時点の*ストリーム*引数のポインターをその位置にリセットできます。 *Pos*値は内部形式で格納され、 **fgetpos**と**fsetpos**でのみ使用されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

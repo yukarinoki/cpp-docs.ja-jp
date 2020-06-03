@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: e55202274c5ec3982f784ad6cdf074a5a99e922f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d30dad6f8ad146ff467eb4eaf32b21dd6950d25f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194643"
 ---
 # <a name="linker-tools-error-lnk2022"></a>リンカ ツール エラー LNK2022
 
 > メタデータ操作に失敗しました (*HRESULT*): *error_message*
 
-リンカーでは、メタデータのマージ中にエラーが検出されました。 正常にリンクするメタデータのエラーを解決する必要があります。
+メタデータのマージ中にリンカーでエラーが検出されました。 リンクに成功するには、メタデータエラーを解決する必要があります。
 
-この問題を診断する方法の 1 つは、実行することです。 **ildasm-トークン**トークンに記載のある種類を検索するオブジェクト ファイル`error_message`、しの相違点を探します。  メタデータ、LayoutType の属性が異なる場合でも同じ名前の 2 つのさまざまな種類が有効でありません。
+この問題を診断する方法の1つとして、オブジェクトファイルに対して**ildasm.exe**を実行し、`error_message`にトークンが記載されている型を検索し、相違点を確認する方法があります。  メタデータでは、LayoutType 属性が異なる場合でも、同じ名前の2つの異なる型は無効です。
 
-LNK2022 (構造体) などの型が、同じ名前が競合する定義は、複数のコンパイル単位に存在する場合と指定してコンパイルしたときに理由の 1 つ[/clr](../../build/reference/clr-common-language-runtime-compilation.md)します。  この場合、型が、すべてのコンパイル単位で同一の定義を持つことを確認します。  型名が表示されて`error_message`します。
+LNK2022 の1つの理由は、型 (構造体など) が同じ名前の複数の compilands に存在し、競合する定義がある場合、および[/clr](../../build/reference/clr-common-language-runtime-compilation.md)でコンパイルする場合です。  この場合は、すべての compilands で、型の定義が同一であることを確認してください。  型名は `error_message`に一覧表示されます。
 
-LNK2022 のもう 1 つの考えられる原因は、リンカーがコンパイラに指定された以外に、別の場所にメタデータ ファイルを検出したとき (で[#using](../../preprocessor/hash-using-directive-cpp.md) )。 コンパイラに渡された時と、リンカーに渡されるときに、同じ場所にメタデータ ファイル (.dll または .netmodule) は、ことを確認します。
+LNK2022 のもう1つの原因としては、リンカーが、コンパイラに対して指定されたものとは異なる場所にあるメタデータファイルを検索する場合があります ( [#using](../../preprocessor/hash-using-directive-cpp.md) )。 リンカーに渡されたときと同じ場所にメタデータファイル (.dll または .netmodule) があることを確認します。これは、コンパイラに渡されたときと同じです。
 
-マクロの使用、ATL アプリケーションのビルド時に`_ATL_MIXED`で少なくとも 1 つ使用されている場合は、すべてのコンパイル単位が必要です。
+ATL アプリケーションをビルドするときは、すべての compilands でマクロ `_ATL_MIXED` を使用する必要があります (少なくとも1つので使用されている場合)。
 
 ## <a name="example"></a>例
 
-次の例では、空の型を定義します。
+次の例では、空の型を定義しています。
 
 ```cpp
 // LNK2022_a.cpp
@@ -39,7 +39,7 @@ public ref class Test {};
 
 ## <a name="example"></a>例
 
-このサンプルでは、名前が同じで別の定義の型が含まれる 2 つのソース コード ファイルをリンクすることはできませんを示します。
+このサンプルでは、同じ名前で定義が異なる2つのソースコードファイルをリンクすることはできないことを示しています。
 
 次の例では、LNK2022 が生成されます。
 

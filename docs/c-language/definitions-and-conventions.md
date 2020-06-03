@@ -5,11 +5,11 @@ helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
 ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234437"
 ---
 # <a name="definitions-and-conventions"></a>定義と規則
 
@@ -32,7 +32,7 @@ ms.locfileid: "56152470"
 |<sub>opt</sub>|後ろに <sub>opt</sub> が続く非終端要素は、常に省略可能です。|
 |既定のタイプフェイス|このタイプフェイスで記述されているか、示されているセット内の文字は、C ステートメント内で終端要素として使用できます。|
 
-非終端要素に続くコロン (**:**) は、定義の説明を示します。 単語 "one of" で始まる場合を除き、代替定義は個別の行に表示されます。
+非終端要素に続くコロン ( **:** ) は、定義の説明を示します。 単語 "one of" で始まる場合を除き、代替定義は個別の行に表示されます。
 
 ## <a name="see-also"></a>関連項目
 

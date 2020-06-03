@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957314"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360919"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 書式付き I/O 関数で使用する出力形式をカスタマイズします。
 
 > [!IMPORTANT]
->  これは古い関数です。 Visual Studio 2015 以降、CRT で使用できません。
+> この関数は、現在使用されていません。 Visual Studio 2015 以降では、CRT で使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>パラメーター
 
-*format*<br/>
+*形式*<br/>
 [in] 使用する書式を表す値。
 
 ## <a name="return-value"></a>戻り値
@@ -66,7 +66,7 @@ unsigned int _set_output_format(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 

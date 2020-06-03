@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: cdfc278225ce4ab418dfaaf41fb413d088ad77df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970800968733a285929c3bfa42594360203e573a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188409"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545169"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 
-**initonly**はその変数の代入を示す状況依存のキーワードは、同じクラスの静的コンス トラクターまたは宣言の一部としてのみ発生することができます。
+**initonly**は、変数の代入が宣言の一部として、または同じクラスの静的コンストラクターでのみ発生することを示す、状況依存のキーワードです。
 
 `initionly` を使用する方法を次の例に示します。
 
-```
+```cpp
 // mcpp_initonly.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -36,6 +36,6 @@ ref struct Y1 {
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

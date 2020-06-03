@@ -1,6 +1,6 @@
 ---
-title: ForceInlinee クラス
-description: C++ BUILD Insights SDK ForceInlinee クラスリファレンス。
+title: フォースインリネクラス
+description: C++ ビルド インサイト SDK ForceInlinee クラス リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7d3cce13601a0b3edbcd2b57664b2d0d94a7d3df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c6a1af0384197a0a3b6062ad9ef30537c348190d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324780"
 ---
-# <a name="forceinlinee-class"></a>ForceInlinee クラス
+# <a name="forceinlinee-class"></a>フォースインリネクラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`ForceInlinee` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 [FORCE_INLINEE](../event-table.md#force-inlinee)イベントと一致させるには、これを使用します。
+クラス`ForceInlinee`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [FORCE_INLINEE](../event-table.md#force-inlinee)イベントに一致させるために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[Simpleevent](simple-event.md)基本クラスから継承されたメンバーと共に、`ForceInlinee` クラスには次のメンバーが含まれます。
+[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`ForceInlinee`共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[ForceInlinee](#force-inlinee)
+[フォースインリネ](#force-inlinee)
 
 ### <a name="functions"></a>関数
 
-[名前](#name)
+[名前の](#name)
 [サイズ](#size)
 
-## <a name="force-inlinee"></a>ForceInlinee
+## <a name="forceinlinee"></a><a name="force-inlinee"></a>フォースインリネ
 
 ```cpp
 ForceInlinee(const RawEvent& event);
@@ -61,10 +61,10 @@ ForceInlinee(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*event*\
-[FORCE_INLINEE](../event-table.md#force-inlinee)イベントです。
+*イベント*\
+[FORCE_INLINEE](../event-table.md#force-inlinee)イベント。
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>名前
 
 ```cpp
 const char* Name() const;
@@ -72,9 +72,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>戻り値
 
-UTF-8 でエンコードされた強制インライン関数の名前。
+強制インライン化関数の名前で、UTF-8 でエンコードされます。
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> サイズ
 
 ```cpp
 const unsigned short& Size() const;
@@ -82,6 +82,6 @@ const unsigned short& Size() const;
 
 ### <a name="return-value"></a>戻り値
 
-中間命令カウントとしての強制インライン関数のサイズ。
+強制インライン化関数のサイズを中間命令数として指定します。
 
 ::: moniker-end

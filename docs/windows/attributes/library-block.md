@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214774"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-IDL ライブラリ ブロック内の構造を配置します。
+コンストラクターを IDL ライブラリブロック内に配置します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,13 +23,13 @@ IDL ライブラリ ブロック内の構造を配置します。
 [library_block]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ライブラリ ブロック内の構造を配置するときに参照されているかどうかに関係なく、タイプ ライブラリに渡されることを確認します。 既定では、唯一の構造の変更によって、[コクラス](coclass.md)、 [dispinterface](dispinterface.md)、および[idl_module](idl-module.md)属性は、ライブラリ ブロックに配置されます。
+構造体をライブラリブロック内に配置すると、参照されているかどうかに関係なく、そのコンストラクトがタイプライブラリに渡されます。 既定では、[コクラス](coclass.md)、[ディスパッチインターフェイス](dispinterface.md)、および[idl_module](idl-module.md)属性によって変更されたコンストラクトのみがライブラリブロックに配置されます。
 
 ## <a name="example"></a>例
 
-次のコードでは、カスタム インターフェイスはライブラリ ブロック内に配置します。
+次のコードでは、カスタムインターフェイスがライブラリブロック内に配置されています。
 
 ```cpp
 // cpp_attr_ref_library_block.cpp
@@ -55,7 +55,7 @@ __interface IMyInterface {
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)

@@ -1,6 +1,6 @@
 ---
-title: InvocationGroup クラス
-description: C++ BUILD Insights SDK InvocationGroup クラスリファレンス。
+title: クラスを呼び出します。
+description: C++ ビルド インサイト SDK 呼び出しグループ クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b9a2bbcd2b7649b9b5703adc08ed41b272e10276
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ff5a73d5304a21c314c0fc5ce442e0ffc23b28fd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334752"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324690"
 ---
-# <a name="invocationgroup-class"></a>InvocationGroup クラス
+# <a name="invocationgroup-class"></a>クラスを呼び出します。
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`InvocationGroup` クラスは、 [Matcheventstack](../functions/match-event-stack.md)関数および[Matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 これを使用して、[コンパイラ](../event-table.md#compiler)イベントと[リンカー](../event-table.md#linker)イベントの組み合わせを含むグループを照合します。
+クラス`InvocationGroup`は、[関数と一致イベント スタック](../functions/match-event-stack.md)と一致イベント[スタックInメンバー関数](../functions/match-event-stack-in-member-function.md)で使用されます。 このキーワードを使用して[、COMPILER](../event-table.md#compiler)イベントと[LINKER](../event-table.md#linker)イベントの組み合わせを含むグループを照合します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-`InvocationGroup` クラスには、 [Eventgroup\<呼び出し\>](event-group.md)基底クラスから継承されたメンバーと共に、次のメンバーが含まれています。
+[クラスには、EventGroup\<呼び出し\>](event-group.md)基本クラスから継承`InvocationGroup`されたメンバーと共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[InvocationGroup](#invocation-group)
+[呼び出しグループ](#invocation-group)
 
-## <a name="invocation-group"></a>InvocationGroup
+## <a name="invocationgroup"></a><a name="invocation-group"></a>呼び出しグループ
 
 ```cpp
 InvocationGroup(std::deque<Invocation>&& group);

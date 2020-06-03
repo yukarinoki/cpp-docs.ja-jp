@@ -1,32 +1,30 @@
 ---
 title: Windows Sockets クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.net
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 4abdd8f8fbfc115b5014ffd0b3a37df357852b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f1b7b2b6674b4a5f8c8f7bff6c5fa239715f459
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371803"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445988"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets クラス
 
-Windows ソケットは、2 台のコンピューター間で通信するネットワーク プロトコルに依存しない方法を提供します。 これらのソケットを同期することができます (プログラムは、通信が完了するまで待機する) または非同期 (プログラムの継続での通信が行われている)。
+Windows ソケットは、ネットワークプロトコルに依存しない2台のコンピューター間の通信方法を提供します。 これらのソケットは同期 (プログラムは通信が完了するまで待機します) または非同期 (通信が行われている間はプログラムが実行を継続します) のいずれかになります。
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
-シン ラッパーで Windows ソケット API をカプセル化します。
+Windows Sockets API をシンラッパーでカプセル化します。
 
 [CSocket](../mfc/reference/csocket-class.md)<br/>
-高いレベルの抽象化から派生した`CAsyncSocket`します。 同期的に動作します。
+`CAsyncSocket`から派生した高いレベルの抽象化。 同期的に動作します。
 
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
-提供、 `CFile` Windows ソケット インターフェイス。
+Windows ソケットへの `CFile` インターフェイスを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

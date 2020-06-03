@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386019"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371354"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -38,11 +38,11 @@ struct IsBaseOfStrict<Base, Base>;
 *派生*<br/>
 派生型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 一方の型がもう一方の型の基本クラスであるかどうかをテストします。
 
-最初のテンプレートが生じる場合の基本型から派生する型かどうかをテストする**true**または**false**します。 2 番目のテンプレートはから派生した型自体には、常に生成するかどうかをテストする**false**します。
+最初のテンプレートは、型が基本型から派生しているかどうかを**テストします。** **true** 2 番目のテンプレートは、型がそれ自体から派生しているかどうかをテスト**します。**
 
 ## <a name="members"></a>メンバー
 
@@ -50,7 +50,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 名前                            | 説明
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | 1 つの型が別のベースであるかどうかを示します。
+[ストベースオブストリクスト::値](#value) | ある型が別の型のベースであるかどうかを示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,20 +58,20 @@ struct IsBaseOfStrict<Base, Base>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** internal.h
+**ヘッダー:** 内部.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** マイクロソフト::WRL::Dのテール
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>ストベースオブストリクスト::値
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-1 つの型が別のベースであるかどうかを示します。
+ある型が別の型のベースであるかどうかを示します。
 
-`value` **true**場合型`Base`型の基本クラスは、 `Derived`、それ以外の場合は**false**します。
+`value`型`Base`が型`Derived`の基本クラスの場合は**true、** それ以外の場合は**false**です。

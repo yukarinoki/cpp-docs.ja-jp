@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e2c7a8d79ebf5e6483a06354b280e474d7b8e61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503167"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374838"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog クラス
 
@@ -33,17 +33,17 @@ class COleUpdateDialog : public COleLinksDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|`COleUpdateDialog` オブジェクトを構築します。|
+|[ダイアログ::コレク更新ダイアログ](#coleupdatedialog)|`COleUpdateDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleUpdateDialog::D oModal](#domodal)|更新モードで **[リンクの編集]** ダイアログボックスを表示します。|
+|[ダイアログ ボックス::Do モーダル](#domodal)|更新モードで **[リンクの編集**] ダイアログ ボックスを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-OLE 固有のダイアログボックスの詳細については、 [ole の記事のダイアログボックス](../../mfc/dialog-boxes-in-ole.md)を参照してください。
+OLE 固有のダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ OLE 固有のダイアログボックスの詳細については、 [ole の記�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxodlgs
+**ヘッダー:** afxodlgs.h
 
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
+## <a name="coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>ダイアログ::コレク更新ダイアログ
 
 `COleUpdateDialog` オブジェクトを構築します。
 
@@ -82,24 +82,24 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>パラメーター
 
 *pDoc*<br/>
-更新が必要な可能性のあるリンクを含むドキュメントを指します。
+更新が必要なリンクを含むドキュメントへのポイント。
 
-*bUpdateLinks*<br/>
-リンクオブジェクトを更新するかどうかを示すフラグです。
+*をクリックします。*<br/>
+リンク オブジェクトを更新するかどうかを決定するフラグ。
 
-*bUpdateEmbeddings 込み*<br/>
+*b更新埋め込み*<br/>
 埋め込みオブジェクトを更新するかどうかを決定するフラグ。
 
 *pParentWnd*<br/>
-ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( `CWnd`型) を指します。 NULL の場合は、ダイアログボックスの親ウィンドウがメインアプリケーションウィンドウに設定されます。
+ダイアログ オブジェクトが属する (型`CWnd`) の親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクトへのポインター。 NULL の場合、ダイアログ ボックスの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、オブジェクト`COleUpdateDialog`のみを構築します。 ダイアログボックスを表示するには、 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)を呼び出します。 このクラスは、既存のリンク`COleLinksDialog`または埋め込まれた項目のみを更新する場合に、の代わりに使用する必要があります。
+この関数は`COleUpdateDialog`オブジェクトのみを構築します。 ダイアログ ボックスを表示するには[、DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)を呼び出します。 既存のリンクアイテムまたは埋め`COleLinksDialog`込みアイテムのみを更新する場合ではなく、このクラスを使用する必要があります。
 
-##  <a name="domodal"></a>COleUpdateDialog::D oModal
+## <a name="coleupdatedialogdomodal"></a><a name="domodal"></a>ダイアログ ボックス::Do モーダル
 
-更新モードで [リンクの編集] ダイアログボックスを表示します。
+更新モードで [リンクの編集] ダイアログ ボックスを表示します。
 
 ```
 virtual INT_PTR DoModal();
@@ -107,21 +107,21 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログボックスの完了ステータス。 次のいずれかの値です。
+ダイアログ ボックスの完了ステータス。 次のいずれかの値:
 
-- IDOK ダイアログボックスが正常に返された場合はです。
+- ダイアログ ボックスが正常に返された場合は IDOK。
 
-- 現在のドキュメント内のリンクされた項目または埋め込み項目が更新を必要としない場合は IDCANCEL。
+- 現在のドキュメント内のリンクアイテムまたは埋め込みアイテムのどれも更新する必要がない場合は、IDCANCEL を指定します。
 
-- エラーが発生した場合は IDABORT。 IDABORT が返された場合は、 [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の[Oleuieditlinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)関数に関するページを参照してください。
+- エラーが発生した場合は、IDABORT を実行します。 IDABORT が返された場合は、発生したエラーの種類に関する詳細情報を取得するのには[、COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出します。 考えられるエラーの一覧については、Windows SDK の[「OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)関数」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ユーザーが [キャンセル] ボタンを選択しない限り、すべてのリンクや埋め込みが更新されます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[サンプル O クライアント](../../overview/visual-cpp-samples.md)<br/>
 [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)

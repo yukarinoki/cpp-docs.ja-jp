@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38a625c73a17ecae4d8adc61e8c56bc4bdda67f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395873"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320080"
 ---
 # <a name="odbc-and-mfc"></a>ODBC と MFC
 
 > [!NOTE]
->  MFC データベース クラスを使用するには、データ ソースの適切な ODBC ドライバーが必要です。 最新の Microsoft ODBC driver for SQL Server は[Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)します。 ほとんどのデータベース ベンダーは、Windows の ODBC ドライバーを提供します。
+> MFC データベース クラスを使用するには、データ ソースに適した ODBC ドライバが必要です。 SQL サーバーの最後の ODBC[ドライバーは、SQL Server 用の ODBC ドライバー 13 です](https://www.microsoft.com/download/details.aspx?id=50420)。 ほとんどのデータベース ベンダーは、Windows 用の ODBC ドライバーを提供します。
 
-このトピックでは、Microsoft Foundation Classes (MFC) ライブラリの ODBC ベースのデータベース クラスの主な概念を説明し、クラスの機能の概要を説明します。 ODBC と MFC の詳細については、次のトピックを参照してください。
+ここでは、MFC (MFC) ライブラリの ODBC ベースのデータベース クラスの主要な概念を紹介し、クラスの連携の概要を説明します。 ODBC および MFC の詳細については、次のトピックを参照してください。
 
 - [データ ソースへの接続](connecting-to-a-data-source.md)
 
@@ -36,8 +36,8 @@ ms.locfileid: "62395873"
 
 - [MFC ODBC クラスに関する詳細情報](further-reading-about-the-mfc-odbc-classes.md)
 
-ODBC に基づいて MFC データベース クラスは、ODBC ドライバーの使用可能な任意のデータベースにアクセスできるように設計されています。 クラスは、ODBC を使用するため、アプリケーションは多くのさまざまなデータ形式と異なるローカル/リモート構成内のデータにアクセスできます。 別のデータベース管理システム (Dbms) を処理するために特殊なコードを記述する必要はありません。 ユーザーにアクセスするデータの適切な ODBC ドライバーがある限り、プログラムを使用して格納されているテーブル内のデータを操作することができます。
+ODBC に基づく MFC データベース クラスは、ODBC ドライバが使用できる任意のデータベースにアクセスできるように設計されています。 クラスは ODBC を使用するため、アプリケーションはさまざまなデータ形式と異なるローカル/リモート構成のデータにアクセスできます。 異なるデータベース管理システム (DBMS) を処理するために、特殊なコードを記述する必要はありません。 ユーザーがアクセスするデータに適した ODBC ドライバーを使用している限り、ユーザーはプログラムを使用して、そこに格納されているテーブルのデータを操作できます。
 
 ## <a name="see-also"></a>関連項目
 
-[ODBC (Open Database Connectivity)](open-database-connectivity-odbc.md)
+[データベース接続を開く (ODBC)](open-database-connectivity-odbc.md)

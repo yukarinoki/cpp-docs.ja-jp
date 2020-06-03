@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e2a892525afbbad6d5b42d0b836fee096a70c297
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690004"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376820"
 ---
 # <a name="basic_iostream-class"></a>basic_iostream クラス
 
@@ -33,13 +33,13 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、基本クラスの[basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`、`Tr` >、および抽出を、基本クラスの[basic_istream](../standard-library/basic-istream-class.md) <  `Elem`、`Tr` > を介して、挿入を制御するオブジェクトを表します。 2 つのオブジェクトは、仮想基底クラス [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`> を共有しています。 また、これらは共通のストリーム バッファーを管理します。このストリーム バッファーには、`Elem` 型の要素が含まれ、その文字特性は `Tr` クラスによって決定されます。 コンストラクターは `basic_istream`( **strbuf**) および `basic_ostream`( **strbuf**) を使用して基底クラスを初期化します。
+クラス テンプレートは、基本クラス[basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`、>、`Tr`および抽出を通じて、その基本クラス[basic_istream](../standard-library/basic-istream-class.md)< `Elem`> を通じて`Tr`挿入を制御するオブジェクトを記述します。 2 つのオブジェクトは、共通の仮想[basic_ios](../standard-library/basic-ios-class.md)< `Elem`基本クラス`Tr`basic_ios を共有>。 また、これらは共通のストリーム バッファーを管理します。このストリーム バッファーには、`Elem` 型の要素が含まれ、その文字特性は `Tr` クラスによって決定されます。 コンストラクターは `basic_istream`( **strbuf**) および `basic_ostream`( **strbuf**) を使用して基底クラスを初期化します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[basic_iostream](#basic_iostream)|`basic_iostream` オブジェクトを作成します。|
 
@@ -47,21 +47,21 @@ public:
 
 |メンバー関数|説明|
 |-|-|
-|[swap](#swap)|指定された `basic_iostream` オブジェクトの内容を、このオブジェクトの内容と交換します。|
+|[スワップ](#swap)|指定された `basic_iostream` オブジェクトの内容を、このオブジェクトの内容と交換します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[operator=](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
+|[演算子=](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<istream>
 
 **名前空間:** std
 
-## <a name="basic_iostream"></a>  basic_iostream::basic_iostream
+## <a name="basic_iostreambasic_iostream"></a><a name="basic_iostream"></a>basic_iostream::basic_iostream
 
 `basic_iostream` オブジェクトを作成します。
 
@@ -75,19 +75,19 @@ basic_iostream();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf* \
-既存の `basic_streambuf` オブジェクト。
+*ストルブフ*\
+既存の `basic_streambuf` オブジェクトです。
 
-*右*\
+*そうです*\
 新しい `basic_iostream` の構築に使用される既存の `basic_iostream` オブジェクト
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初のコンストラクターが `basic_istream(strbuf)` および `basic_ostream(strbuf)` を使用してベース オブジェクトを初期化します。
 
-2番目のコンストラクターは、`move(right)` を呼び出すことによって、ベースオブジェクトを初期化します。
+2 番目のコンストラクターは、 を呼`move(right)`び出して基本オブジェクトを初期化します。
 
-## <a name="op_eq"></a>  basic_iostream::operator=
+## <a name="basic_iostreamoperator"></a><a name="op_eq"></a>basic_iostream::演算子=
 
 このオブジェクトに、指定された `basic_iostream` オブジェクトの値を割り当てます。 これは、右辺値が関係する移動代入で、コピーを残しません。
 
@@ -97,14 +97,14 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 割り当て元の `basic_iostream` オブジェクトへの `rvalue` 参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー演算子は `swap(right)` を呼び出します。
+メンバ オペレータは`swap(right)`を呼び出します。
 
-## <a name="swap"></a>  basic_iostream::swap
+## <a name="basic_iostreamswap"></a><a name="swap"></a>basic_iostream::スワップ
 
 指定された `basic_iostream` オブジェクトの内容を、このオブジェクトの内容と交換します。
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 交換する `basic_iostream` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、`swap(right)` を呼び出します。
+メンバー関数が呼`swap(right)`び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[iostreams の規則](../standard-library/iostreams-conventions.md)
+[ioストリームの規約](../standard-library/iostreams-conventions.md)

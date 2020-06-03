@@ -1,10 +1,12 @@
 ---
 title: _strdup、_wcsdup、_mbsdup
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
+- _o__strdup
+- _o__wcsdup
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958180"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914468"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
@@ -82,11 +85,13 @@ NULL で終わる元の文字列。
 
 これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は**NULL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strdup**関数は、 [malloc](malloc.md)を呼び出して、 *strsource*のコピーにストレージ領域を割り当て、割り当てられた領域に*strsource*をコピーします。
+**_Strdup**関数は、 [malloc](malloc.md)を呼び出して、 *strsource*のコピーにストレージ領域を割り当ててから、 *strsource*を割り当てられた領域にコピーします。
 
-**_wcsdup**と **_mbsdup**は、 **_strdup**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsdup**の引数と戻り値はワイド文字列です。これらの **_mbsdup**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsdup**と **_mbsdup**は **_strdup**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsdup**の引数と戻り値はワイド文字列です。これらの **_mbsdup**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,19 +99,19 @@ NULL で終わる元の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-**_Strdup**は、 *strsource*のコピー用のストレージ領域を割り当てるために**malloc**を呼び出します。そのため、 **_strdup**への呼び出しによって返されたポインターに対して[フリー](free.md)ルーチンを呼び出すことによって、常にこのメモリを解放することをお勧めします。
+**_Strdup**は**malloc**を呼び出して*strsource*のコピーにストレージ領域を割り当てます。そのため、 **_strdup**への呼び出しによって返されたポインターに対して[フリー](free.md)ルーチンを呼び出すことによって、常にこのメモリを解放することをお勧めします。
 
-**_Debug**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_strdup**と **_wcsdup**は **_strdup_dbg**および **_wcsdup_dbg**の呼び出しに置き換えられ、メモリ割り当てをデバッグできるようになります。 詳細については、「 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」を参照してください。
+**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_strdup**と **_wcsdup**は、メモリ割り当てのデバッグを可能にするために **_strdup_dbg**と **_wcsdup_dbg**の呼び出しに置き換えられます。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> または \<wchar.h>|
 |**_mbsdup**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497854"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168437"
 ---
 # <a name="category-macros"></a>カテゴリマクロ
 
@@ -29,11 +29,11 @@ ms.locfileid: "69497854"
 
 **ヘッダー:** atlcom. h
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 カテゴリマップの先頭をマークします。
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
@@ -42,16 +42,16 @@ BEGIN_CATEGORY_MAP(theClass)
 *クラス*<br/>
 からカテゴリマップを格納しているクラスの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 Category マップは、COM クラスが実装するコンポーネントカテゴリと、そのコンテナーから必要なカテゴリを指定するために使用されます。
 
-COM クラスによって実装されている各カテゴリのマップに[IMPLEMENTED_CATEGORY](#implemented_category)エントリを追加します。 クラスがクライアントを実装する必要がある各カテゴリのマップに[REQUIRED_CATEGORY](#required_category)エントリを追加します。 マップの末尾に[END_CATEGORY_MAP](#end_category_map)マクロを設定します。
+COM クラスによって実装されている各カテゴリのマップに[IMPLEMENTED_CATEGORY](#implemented_category)エントリを追加します。 クラスがクライアントを実装する必要がある各カテゴリの[REQUIRED_CATEGORY](#required_category)エントリをマップに追加します。 マップの末尾に[END_CATEGORY_MAP](#end_category_map)マクロを設定します。
 
-クラスに[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)が関連付けられている場合、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)がある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 > [!NOTE]
->  ATL では、標準のコンポーネントカテゴリマネージャーを使用して、コンポーネントカテゴリを登録します。 モジュールが登録されているときに、マネージャーがシステムに存在しない場合、登録は成功しますが、そのクラスにはコンポーネントカテゴリが登録されません。
+> ATL では、標準のコンポーネントカテゴリマネージャーを使用して、コンポーネントカテゴリを登録します。 モジュールが登録されているときに、マネージャーがシステムに存在しない場合、登録は成功しますが、そのクラスにはコンポーネントカテゴリが登録されません。
 
 コンポーネントカテゴリの詳細については、「[コンポーネントカテゴリとは」および](/windows/win32/com/component-categories-and-how-they-work)「Windows SDK での動作のしくみ」を参照してください。
 
@@ -59,11 +59,11 @@ COM クラスによって実装されている各カテゴリのマップに[IMP
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
 
 カテゴリマップの終了をマークします。
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -71,11 +71,11 @@ END_CATEGORY_MAP()
 
 [BEGIN_CATEGORY_MAP](#begin_category_map)の例を参照してください。
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 コンポーネントの[カテゴリマップ](#begin_category_map)に IMPLEMENTED_CATEGORY マクロを追加して、 *catID*パラメーターで識別されるカテゴリの実装として登録する必要があることを指定します。
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
@@ -84,9 +84,9 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
-|説明|シンボル|レジストリ GUID|
+|説明|Symbol|レジストリ GUID|
 |-----------------|------------|-------------------|
 |スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -108,11 +108,11 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
 
 コンポーネントの[カテゴリマップ](#begin_category_map)に REQUIRED_CATEGORY マクロを追加して、 *catID*パラメーターで識別されるカテゴリを要求するように登録する必要があることを指定します。
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 
@@ -121,9 +121,9 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。 たとえば、コントロールでは、コンテナーがデータバインディングをサポートしている必要があります。 コンテナーは、そのコントロールが必要とするカテゴリのカテゴリマネージャーに対してクエリを実行することで、コントロールをホストするために必要な機能があるかどうかを確認できます。 コンテナーが必要な機能をサポートしていない場合、COM オブジェクトのホストを拒否することができます。
 
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
-|説明|シンボル|レジストリ GUID|
+|説明|Symbol|レジストリ GUID|
 |-----------------|------------|-------------------|
 |スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -147,4 +147,4 @@ REQUIRED_CATEGORY( catID )
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: リリース ビルドをデバッグします。'
+title: '方法: リリース ビルドをデバッグする'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -7,34 +7,34 @@ helpviewer_keywords:
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
 ms.openlocfilehash: 6d93fac4e980085c322acb55e6f8758e6cea0a00
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188965"
 ---
-# <a name="how-to-debug-a-release-build"></a>方法: リリース ビルドをデバッグします。
+# <a name="how-to-debug-a-release-build"></a>方法: リリース ビルドをデバッグする
 
-アプリケーションのリリース ビルドをデバッグすることができます。
+アプリケーションのリリース ビルドをデバッグできます。
 
 ### <a name="to-debug-a-release-build"></a>リリース ビルドをデバッグするには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、 **C/C++** ノード。 設定**デバッグ情報の形式**に[C7 互換 (/Z7)](reference/z7-zi-zi-debug-information-format.md)または**プログラム データベース (/Zi)** します。
+1. **[C/C++]** ノードをクリックします。 **[デバッグ情報の形式]** を [[C7 互換 (/Z7)]](reference/z7-zi-zi-debug-information-format.md) または **[プログラム データベース (/Zi)]** に設定します。
 
-1. 展開**リンカー**  をクリックし、**全般**ノード。 設定**インクリメンタル リンクを有効にする**に[いいえ (//INCREMENTAL:NO)](reference/incremental-link-incrementally.md)します。
+1. **[リンカー]** を展開し、 **[全般]** ノードをクリックします。 **[インクリメンタル リンクを有効にする]** を [[いいえ (/INCREMENTAL:NO)]](reference/incremental-link-incrementally.md) に変更します。
 
-1. 選択、**デバッグ**ノード。 設定**デバッグ情報の生成**に[はい (/debug)](reference/debug-generate-debug-info.md)します。
+1. **[デバッグ]** ノードを選択します。 **[デバッグ情報を作成]** を [[はい (/DEBUG)]](reference/debug-generate-debug-info.md) に設定します。
 
-1. 選択、**最適化**ノード。 設定**参照**に[/OPT:REF](reference/opt-optimizations.md)と**COMDAT の圧縮を有効にする**に[/OPT:ICF](reference/opt-optimizations.md)します。
+1. **[最適化]** ノードを選択します。 **[参照]** を [[/OPT:REF]](reference/opt-optimizations.md) に設定し、 **[COMDAT の圧縮]** を [[/OPT:ICF]](reference/opt-optimizations.md) に設定します。
 
-1. リリース ビルドのアプリケーションをデバッグできます。 障害が発生すると表示されるまでのステップ実行、コード (またはジャスト イン タイムを使用してデバッグ)、問題を検索し、正しくないパラメーターまたはコードを確認します。
+1. これでリリース ビルド アプリケーションをデバッグできます。 問題を見つけるには、失敗の発生箇所が見つかるまでコードをステップ実行し (あるいは、Just-In-Time デバッグを使用し)、間違ったパラメーターまたはコードを判断します。
 
-   アプリケーションは、デバッグ ビルドでは動作が、リリース ビルドでできない場合、ソース コードの欠陥を公開コンパイラの最適化の 1 つに可能性があります。 問題を特定するには、ファイルと、問題の原因となっている最適化が見つかるまで、各ソース コード ファイルの選択の最適化を無効にします。 (プロセスの時間を短縮するには、ファイルを 2 つのグループに分割、1 つのグループでの最適化を無効にするコンティニュできますグループに問題が見つかったときに問題のファイルが特定されるまでに分割します。)
+   あるアプリケーションがデバッグ ビルドで動作するが、リリース ビルドで失敗する場合、コンパイラ最適化の 1 つがソース コードで欠陥をさらしている可能性があります。 問題を分離するため、問題を引き起こしているファイルと最適化が見つかるまで、ソース コード ファイルごとに選択した最適化を無効にします。 (このプロセスを早めるには、ファイルを 2 つのグループに分割し、1 つのグループで最適化を無効にし、グループ内で問題が見つかったら、問題のあるファイルが分離されるまで、分割を続けます)
 
-   使用することができます[/RTC](reference/rtc-run-time-error-checks.md)デバッグ ビルドでは、このようなバグを公開しようとします。
+   [/RTC](reference/rtc-run-time-error-checks.md) を使用し、デバッグ ビルドでこのようなバグを見つけてみてください。
 
-   詳細については、次を参照してください。[コードの最適化](optimizing-your-code.md)します。
+   詳しくは、「[コードの最適化](optimizing-your-code.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -14,17 +14,17 @@ ms.locfileid: "65220919"
 ---
 # <a name="automation-in-a-dll"></a>DLL でのオートメーション
 
-MFC DLL ウィザード [オートメーション] オプションを選択すると、ウィザードは次のように提供します。
+MFC DLL ウィザードで [オートメーション] オプションを選択すると、ウィザードでは次が提供されます。
 
-- 初期のオブジェクト記述言語 (します。ODL) ファイル
+- 初心者向けのオブジェクト記述言語 (.ODL) ファイル
 
-- Afxole.h の STDAFX.h ファイルに include ディレクティブ
+- Afxole.h 用の STDAFX.h ファイルの include ディレクティブ
 
-- 実装、`DllGetClassObject`を呼び出す関数、 **AfxDllGetClassObject**関数
+- **AfxDllGetClassObject** 関数を呼び出す、`DllGetClassObject` 関数の実装
 
-- 実装、`DllCanUnloadNow`を呼び出す関数、 **AfxDllCanUnloadNow**関数
+- **AfxDllCanUnloadNow** 関数を呼び出す、`DllCanUnloadNow` 関数の実装
 
-- 実装、`DllRegisterServer`を呼び出す関数、[されます](../mfc/reference/coleobjectfactory-class.md#updateregistryall)関数
+- [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) 関数を呼び出す、`DllRegisterServer` 関数の実装
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
@@ -32,4 +32,4 @@ MFC DLL ウィザード [オートメーション] オプションを選択す�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)
+[Visual Studio での C/C++ Dll の作成](dlls-in-visual-cpp.md)

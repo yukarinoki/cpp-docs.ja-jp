@@ -1,8 +1,7 @@
 ---
-title: '方法: コントロールの追加、編集、またはC++削除 ()'
+title: '方法: コントロールを追加、編集、または削除C++する ()'
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,23 +42,23 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491167"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167525"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>方法: コントロールの追加、編集、またはC++削除 ()
+# <a name="how-to-add-edit-or-delete-controls-c"></a>方法: コントロールを追加、編集、または削除C++する ()
 
 ダイアログ**エディター**を使用すると、ダイアログボックス内のコントロールの追加、サイズ変更、編集、および削除を行うことができます。 また、ID などのコントロールのプロパティや、実行時に最初に表示されるかどうかを編集することもできます。
 
-ダイアログエディターで作業している場合は、[[ツールボックス](/visualstudio/ide/reference/toolbox)] ウィンドウに **[ダイアログエディター]** タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「[ツールボックスの使用](/visualstudio/ide/using-the-toolbox)」および「[ツールボックスウィンドウの表示と非表示](showing-or-hiding-the-dialog-editor-toolbar.md)を切り替える」を参照してください。
+ダイアログ**エディターで**作業している場合は、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)に **[ダイアログエディター]** タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「[ツールボックスの使用](/visualstudio/ide/using-the-toolbox)」および「[ツールボックスウィンドウの表示と非表示](showing-or-hiding-the-dialog-editor-toolbar.md)を切り替える」を参照してください。
 
 > [!TIP]
 > **ダイアログエディター**を使用する場合、多くの場合、マウスの右ボタンを選択すると、頻繁に使用するコマンドのショートカットメニューを表示できます。
 
-## <a name="add-controls"></a>コントロールの追加
+## <a name="add-controls"></a>コントロールを追加する
 
 ### <a name="to-add-a-control"></a>コントロールを追加するには
 
@@ -99,7 +98,7 @@ ms.locfileid: "69491167"
 
 ### <a name="to-add-a-custom-control"></a>カスタム コントロールを追加するには
 
-ダイアログボックスにカスタムコントロールを追加できます。 **ツールボックス**の **[カスタムコントロール]** アイコンを選択し、ダイアログボックスにドラッグします。 `Syslink`コントロールを追加するには、カスタムコントロールを追加し、コントロールの **[クラス]** `Syslink`プロパティをに変更します。 この操作により、プロパティが更新され、 `Syslink`コントロールのプロパティが表示されます。 MFC ラッパークラスの詳細については、「 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)」を参照してください。
+ダイアログボックスにカスタムコントロールを追加できます。 **ツールボックス**の **[カスタムコントロール]** アイコンを選択し、ダイアログボックスにドラッグします。 `Syslink` コントロールを追加するには、カスタムコントロールを追加し、コントロールの**クラス**プロパティを `Syslink`に変更します。 この操作により、プロパティが更新され、`Syslink` コントロールのプロパティが表示されます。 MFC ラッパークラスの詳細については、「 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)」を参照してください。
 
 ## <a name="edit-controls"></a>コントロールの編集
 
@@ -119,7 +118,7 @@ ms.locfileid: "69491167"
 
 1. **ダイアログエディター**でコントロールにフォーカスがあることを確認します。
 
-1. メニューにアクセスして、 **[元に戻す]** を**編集** > します。 フォーカスがコントロールにない場合、 **[元に戻す]** コマンドは使用できません。
+1. メニューにジャンプ >  **[元に戻す]** を**編集**します。 フォーカスがコントロールにない場合、 **[元に戻す]** コマンドは使用できません。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>ボタン以外のダイアログ ボックス コントロールのメンバー変数を定義するには
 
@@ -143,13 +142,13 @@ ms.locfileid: "69491167"
 
 ## <a name="delete-controls"></a>コントロールの削除
 
-ダイアログボックスで、コントロールを選択し、 **del**キーを押すか、[メニューの**編集** > ] **[削除]** の順にクリックします。
+ダイアログボックスで、コントロールを選択し、 **del**キーを押すか、メニューの [**編集** > **削除**] をクリックします。
 
 ## <a name="other-issues"></a>その他の問題
 
 ### <a name="troubleshooting"></a>トラブルシューティング
 
-コモンコントロールまたはリッチエディットコントロールをダイアログボックスに追加した後は、ダイアログボックスをテストしても表示されません。 または、ダイアログ自体も表示されません。 例えば:
+コモンコントロールまたはリッチエディットコントロールをダイアログボックスに追加した後は、ダイアログボックスをテストしても表示されません。 または、ダイアログ自体も表示されません。 次に例を示します。
 
 1. Win32 プロジェクトを作成し、アプリケーションの設定を変更して (コンソールアプリケーションではなく) Windows アプリケーションを作成します。
 
@@ -175,14 +174,14 @@ ms.locfileid: "69491167"
 |ホットキー|リッチエディットコントロール|拡張コンボボックス|
 |リストコントロール|リッチエディット2.0 コントロール|カスタム コントロール|
 
-ダイアログボックスでコモンコントロールを使用するには`AFXInitCommonControls` 、ダイアログボックスを作成する前に、 [initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)を呼び出す必要があります。
+ダイアログボックスでコモンコントロールを使用するには、ダイアログボックスを作成する前に、 [Initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)または `AFXInitCommonControls` を呼び出す必要があります。
 
-RichEdit コントロールを使用するには、 `LoadLibrary`を呼び出す必要があります。 詳細については、「Windows SDK の[リッチエディットコントロールについて](/windows/win32/Controls/about-rich-edit-controls)」および「[リッチエディットコントロールの概要](../mfc/overview-of-the-rich-edit-control.md)」を参照してください。
+RichEdit コントロールを使用するには、`LoadLibrary`を呼び出す必要があります。 詳細については、「Windows SDK の[リッチエディットコントロールについて](/windows/win32/Controls/about-rich-edit-controls)」および「[リッチエディットコントロールの概要](../mfc/overview-of-the-rich-edit-control.md)」を参照してください。
 
 > [!NOTE]
 > MFC で RichEdit コントロールを使用するには、まず[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)を呼び出して、Richedit 2.0 コントロール (riched20.dll) を読み込む必要があります。DLL) を呼び出すか、 [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)を呼び出して古い RichEdit 1.0 コントロール (RICHED32) を読み込みます。DLL)。
 >
-> 古い richedit 1.0 コントロール`CRichEditCtrl`で現在の[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラスを使用できますが、は richedit 2.0 コントロールをサポートするように設計されています。 RichEdit 1.0 と RichEdit 2.0 は似ているため、ほとんどのメソッドは動作します。 ただし、1.0 と2.0 のコントロールにはいくつかの違いがあるため、一部のメソッドが正しく機能しないか、まったく動作しない可能性があります。
+> 古い RichEdit 1.0 コントロールで現在の[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラスを使用することもできますが、`CRichEditCtrl` は、richedit 2.0 コントロールをサポートするように設計されています。 RichEdit 1.0 と RichEdit 2.0 は似ているため、ほとんどのメソッドは動作します。 ただし、1.0 と2.0 のコントロールにはいくつかの違いがあるため、一部のメソッドが正しく機能しないか、まったく動作しない可能性があります。
 
 ### <a name="activex-controls"></a>ActiveX コントロール
 
@@ -193,7 +192,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 |プロパティ|説明|
 |---|---|
 |**ActiveX コントロール**|ActiveX コントロールの一覧を表示します。<br/><br/>このダイアログボックスからコントロールを挿入しても、ラッパークラスは生成されません。 ラッパークラスが必要な場合は、[クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)を使用して作成します。「[クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。<br/><br/>ActiveX コントロールがこのダイアログボックスに表示されない場合は、ベンダーの指示に従ってコントロールをインストールしてみてください。|
-|**パス**|ActiveX コントロールが検出されたファイルを表示します。|
+|**[パス]**|ActiveX コントロールが検出されたファイルを表示します。|
 
 > [!CAUTION]
 > システム上の ActiveX コントロールの中には、配布が法的に許可されていないものもあります。 コントロールをインストールしたソフトウェアの使用許諾契約書を参照するか、ソフトウェア会社に問い合わせてください。
@@ -217,7 +216,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 
 独立系ベンダーによって提供される ActiveX コントロールには、独自のプロパティと特性が用意されている場合があります。 これらのプロパティは、 **[プロパティ]** ウィンドウに表示されます。 ActiveX コントロールのライターによって作成されたプロパティページは、 **[プロパティページ]** ダイアログボックスに表示されます。 (特定の ActiveX コントロールの**プロパティページ**を表示するには、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)の **[プロパティページ]** ボタンを選択します)。
 
-- **ActiveX**コントロールを選択し、メニュー**ビュー** > の**プロパティページ**にアクセスして、プロパティを表示します。 必要に応じて、プロパティページで変更を行います。
+- **ActiveX**コントロールを選択し、メニュー**ビュー** > **プロパティページ**にアクセスして、プロパティを表示します。 必要に応じて、プロパティページで変更を行います。
 
    Activex コントロールの一部として表示されるプロパティシートに応じて、ActiveX コントロールのプロパティページにはさまざまなタブが表示されます。
 
@@ -228,11 +227,11 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ダイアログボックスコントロールの管理](controls-in-dialog-boxes.md)<br/>
-[方法: レイアウト コントロール](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[方法: コントロールのアクセスおよび値を定義する](defining-mnemonics-access-keys.md)
+[方法: コントロールをレイアウトする](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[方法: 制御アクセスと値を定義する](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

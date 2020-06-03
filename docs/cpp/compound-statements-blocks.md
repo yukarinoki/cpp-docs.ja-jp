@@ -8,16 +8,16 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: 6aef2a0b5716ab501fabe80f0dda15080abe3ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7e88c5ccccac5a1d967a91c8a82dd954d9afc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337339"
 ---
 # <a name="compound-statements-blocks"></a>複合ステートメント (ブロック)
 
-複合ステートメントは、中かっこで囲まれた 0 個以上のステートメントで構成されています ( **{}** )。 複合ステートメントは、ステートメントが想定される場所で使用できます。 複合ステートメントは一般に "ブロック" と呼ばれます。
+複合文は、中括弧 (**{ }**) で囲まれた 0 個以上のステートメントで構成されます。 複合ステートメントは、ステートメントが想定される場所で使用できます。 複合ステートメントは一般に "ブロック" と呼ばれます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,9 +25,9 @@ ms.locfileid: "62154865"
 { [ statement-list ] }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-次の例として複合ステートメントを使用して、*ステートメント*の一部、**if**文 (を参照してください[if 文](../cpp/if-else-statement-cpp.md)構文の詳細について)。
+次の例では、構文の詳細については **、if**ステートメントの*ステートメント*部分としてコンパウンド[ステートメント](../cpp/if-else-statement-cpp.md)を使用しています。
 
 ```cpp
 if( Amount > 100 )
@@ -42,7 +42,7 @@ else
 ```
 
 > [!NOTE]
->  宣言が内のステートメントのいずれかを指定できます、宣言ステートメントであるため、*ステートメント リスト*します。 その結果、複合ステートメント内で宣言されているが、明示的に静的として宣言されていない名前には、ローカルなスコープと (オブジェクトの場合) 有効期間があります。 参照してください[スコープ](../cpp/scope-visual-cpp.md)詳細については、ローカル スコープの名前を処理します。
+> 宣言はステートメントであるため、宣言は*ステートメント リスト*内のステートメントの 1 つになります。 その結果、複合ステートメント内で宣言されているが、明示的に静的として宣言されていない名前には、ローカルなスコープと (オブジェクトの場合) 有効期間があります。 ローカル[スコープを使用した](../cpp/scope-visual-cpp.md)名前の処理の詳細については、「スコープ」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

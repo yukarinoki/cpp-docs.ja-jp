@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
 ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493248"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Dll に明示的にリンクしているプロセスは、DLL 内のエクスポートされた関数のアドレスを取得するために[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出します。 返された関数ポインターを使って、DLL 関数を呼び出します。 **GetProcAddress**は、DLL モジュールハンドル ( **LoadLibrary**、 `AfxLoadLibrary`、または**GetModuleHandle**のいずれかによって返される) のパラメーターとしてを受け取り、呼び出す関数の名前または関数のエクスポート序数を受け取ります。
+プロセスに DLL を明示的にリンクする場合は、[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) を呼び出して、DLL 内のエクスポート関数のアドレスを取得します。 返された関数ポインターを使って、DLL 関数を呼び出します。 **GetProcAddress** のパラメーターには、**LoadLibrary**、`AfxLoadLibrary`、または **GetModuleHandle** のいずかによって返された DLL モジュール ハンドルと、呼び出す関数の名前またはエクスポート序数を渡します。
 
-DLL 関数の呼び出しにはポインターが使われ、コンパイル時にデータ型はチェックされないため、関数へ渡すパラメーターが正しいことを確認してください。パラメーターが不正な場合、スタック上に割り当てられたメモリ域をオーバーしたり、アクセス違反を起こしたりすることがあります。 型をタイプセーフにする 1 つの方法は、エクスポート関数の関数プロトタイプを見て、関数ポインター用に対応する typedef を作成することです。 例えば:
+DLL 関数の呼び出しにはポインターが使われ、コンパイル時にデータ型はチェックされないため、関数へ渡すパラメーターが正しいことを確認してください。パラメーターが不正な場合、スタック上に割り当てられたメモリ域をオーバーしたり、アクセス違反を起こしたりすることがあります。 型をタイプセーフにする 1 つの方法は、エクスポート関数の関数プロトタイプを見て、関数ポインター用に対応する typedef を作成することです。 次に例を示します。
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,9 +49,9 @@ if (hDLL != NULL)
 }
 ```
 
-**GetProcAddress**を呼び出すときに必要な関数を指定する方法は、DLL のビルド方法によって異なります。
+**GetProcAddress** の呼び出し時に関数を指定する方法は、ビルドされた DLL の種類によって異なります。
 
-リンク先の DLL がモジュール定義 (.def) ファイルでビルドされている場合、および DLL の .def ファイルの**export**セクションの関数と共に序数が列挙されている場合にのみ、エクスポート序数を取得できます。 関数名ではなく、エクスポート序数を使用して**GetProcAddress**を呼び出すと、エクスポート序数が dll のエクスポートテーブルへのインデックスとして機能するため、dll にエクスポートされた関数が多数ある場合は、少し高速になります。 エクスポート序数では、 **GetProcAddress**は、指定された名前を DLL の export テーブル内の関数名と比較するのではなく、関数を直接検索できます。 ただし、.def ファイル内のエクスポートされた関数に序数を割り当てることを制御できる場合にのみ、エクスポート序数を指定して**GetProcAddress**を呼び出す必要があります。
+エクスポート序数を使用できるのは、リンクする DLL がモジュール定義ファイル (.def) を使ってビルドされたものであり、その DLL の .def ファイルの **EXPORTS** セクション内の関数に序数が付けられている場合だけです。 関数名ではなくエクスポート序数を使って **GetProcAddress** を呼び出すと、DLL にエクスポート関数が多数含まれる場合は、少し高速になります。エクスポート序数が DLL のエクスポート テーブルの索引の役割を果たすからです。 指定された名前を DLL のエクスポート テーブル内の関数名と比較するのではなく、エクスポート序数を使うと、**GetProcAddress** ではその関数をすぐに発見できます。 ただし、エクスポート序数を使って **GetProcAddress** を呼び出すには、.def ファイル内でエクスポート関数に対して割り当てられている序数を知っている必要があります。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 

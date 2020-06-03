@@ -1,66 +1,66 @@
 ---
-title: 'チュートリアル: Windows パフォーマンスアナライザーの基本'
-description: Windows Performance Analyzer で基本的な操作を実行する方法についてのチュートリアルです。
+title: 'チュートリアル: Windows パフォーマンス アナライザの基本'
+description: Windows パフォーマンス アナライザーで基本的な操作を完了する方法についてのチュートリアルです。
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f197e7dfd852cd66039f7279f90e42b0cf75fd86
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ae1050b9389527a12f5bdbea6d695c0f20510127
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333888"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323399"
 ---
-# <a name="tutorial-windows-performance-analyzer-basics"></a>チュートリアル: Windows パフォーマンスアナライザーの基本
+# <a name="tutorial-windows-performance-analyzer-basics"></a>チュートリアル: Windows パフォーマンス アナライザの基本
 
 ::: moniker range="<=vs-2017"
 
-Visual C++ Studio 2019 では、Build Insights ツールを使用できます。 そのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2019 に設定します。
+C++ ビルドインサイト ツールは、Visual Studio 2019 で使用できます。 このバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-ビルドC++インサイトを効果的に使用するには、Windows Performance ANALYZER (WPA) に関する知識が必要です。 この記事は、一般的な WPA 操作を理解するのに役立ちます。 WPA の使用方法の詳細については、 [Windows パフォーマンスアナライザー](/windows-hardware/test/wpt/windows-performance-analyzer)のドキュメントを参照してください。
+C++ ビルドインサイトを効果的に使用するには、Windows パフォーマンス アナライザー (WPA) に関する知識が必要です。 この記事は、一般的な WPA 操作について理解するのに役立ちます。 WPA の使用方法の詳細については[、Windows パフォーマンス アナライザ](/windows-hardware/test/wpt/windows-performance-analyzer)のドキュメントを参照してください。
 
 ## <a name="change-the-view-mode"></a>表示モードを変更する
 
-WPA には、トレースを調べるための2つの基本的な表示モードが用意されています。
+WPA には、トレースを探索するための基本的なビュー モードが 2 つ用意されています。
 
 - グラフモード、および
 - テーブルモード。
 
-ビューペインの上部にある [表示モード] アイコンを使用して、それらを切り替えることができます。
+ビュー ペインの上部にあるビュー モード アイコンを使用して、これらのアイコンを切り替えることができます。
 
-![グラフモードとテーブルモードの切り替え。](media/wpa-switching-view-mode.gif)
+![グラフモードとテーブルモードを切り替える。](media/wpa-switching-view-mode.gif)
 
-## <a name="select-presets"></a>プリセットの選択
+## <a name="select-presets"></a>プリセットを選択する
 
-ほとんどC++の BUILD Insights WPA ビューには、選択できる複数のプリセットがあります。 ビューペインの上部にあるドロップダウンメニューを使用して、必要なプリセットを選択できます。
+ほとんどの C++ ビルドインサイト WPA ビューには、複数のプリセットから選択できます。 ビュー ペインの上部にあるドロップダウン メニューを使用して、必要なプリセットを選択できます。
 
-![プリセットを選択します。](media/wpa-presets.png)
+![プリセットを選択する。](media/wpa-presets.png)
 
-## <a name="zoom-in-and-out"></a>拡大と縮小
+## <a name="zoom-in-and-out"></a>ズームインとズームアウト
 
-ビルドトレースによっては、詳細を作成するのが困難な場合があります。 興味のある領域を拡大するには、グラフを右クリックし、 **[ズーム]** を選択します。 **[ズームの取り消し]** を選択すると、いつでも前の設定に戻すことができます。 次の図は、グラフのセクションをズームインするために選択と**ズーム**コマンドを使用する例を示しています。
+一部のビルド トレースは非常に大きいので、詳細を確認するのは難しいです。 関心のある領域を拡大するには、グラフを右クリックして [**ズーム**] を選択します。 [元に戻**すズーム**] を選択すると、いつでも前の設定に戻ることができます。 次の図は、選択項目と**ズーム**コマンドを使用してグラフのセクションを拡大表示する例を示しています。
 
-![グラフをズームインします。](media/wpa-zooming.gif)
+![グラフを拡大します。](media/wpa-zooming.gif)
 
-## <a name="group-by-different-columns"></a>別の列でグループ化
+## <a name="group-by-different-columns"></a>異なる列でグループ化
 
-トレースの表示方法をカスタマイズできます。 ビューペインの上部にある歯車アイコンをクリックし、ビルドエクスプローラービューエディターで列を再配置します。 このダイアログの黄色の行の上にある列は、データ行がグループ化されたものです。 黄色の線の上にある列は特殊なものです。グラフビューでは、色付きのバーに表示されます。
+トレースの表示方法をカスタマイズできます。 ビュー ペインの上部にある歯車アイコンをクリックし、ビルド エクスプローラ ビュー エディタで列を並べ替えます。 このダイアログボックスで黄色の線の上にある列は、データ行がグループ化されている列です。 黄色い線の真上の列は特別です:グラフビューでは、色付きのバーに表示されます。
 
-次の図は、リンク呼び出しの棒グラフの例を示しています。 歯車アイコンを使用して、[ビルドエクスプローラービューエディター] ダイアログを開きます。 次に、コンポーネントと名前の列エントリを黄色の行の上にドラッグします。 詳細レベルを上げるように構成を変更し、リンカー内で実際に発生した内容を確認します。
+このイメージは、リンクの呼び出しの棒グラフの例を示しています。 歯車アイコンを使用して、[ビルド エクスプローラ ビュー エディター] ダイアログを開きます。 次に、コンポーネントと名前の列のエントリを黄色の線の上にドラッグします。 詳細レベルを上げ、リンカー内部で実際に何が起こったかを確認するために、設定が変更されます。
 
-![グラフをズームインします。](media/wpa-grouping.gif)
+![グラフを拡大します。](media/wpa-grouping.gif)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[チュートリアル: vcperf および Windows パフォーマンスアナライザーの](vcperf-and-wpa.md)\
+[チュートリアル: vcperf と Windows パフォーマンス アナライザ](vcperf-and-wpa.md)\
 [リファレンス: vcperf コマンド](/cpp/build-insights/reference/vcperf-commands)\
-[リファレンス: Windows パフォーマンスアナライザーのビュー](/cpp/build-insights/reference/wpa-views)\
+[リファレンス: Windows パフォーマンス アナライザービュー](/cpp/build-insights/reference/wpa-views)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

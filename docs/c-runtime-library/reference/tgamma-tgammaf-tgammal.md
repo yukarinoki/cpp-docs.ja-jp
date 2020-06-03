@@ -1,10 +1,13 @@
 ﻿---
 title: tgamma、tgammaf、tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912227"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -77,27 +81,29 @@ long double tgammal(
 
 成功した場合は、 *x*のガンマを返します。
 
-*X*の大きさがデータ型に対して大きすぎるか小さすぎる場合、範囲エラーが発生することがあります。 *X* < = 0 の場合は、ドメインエラーまたは範囲エラーが発生する可能性があります。
+*X*の大きさがデータ型に対して大きすぎるか小さすぎる場合、範囲エラーが発生することがあります。 *X* <= 0 の場合は、ドメインエラーまたは範囲エラーが発生する可能性があります。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
 |x = ±0|±無限大|
-|x = 負の整数|NaN|
-|x =-無限大|NaN|
+|x = 負の整数|(NaN)|
+|x =-無限大|(NaN)|
 |x = +INFINITY|+INFINITY|
-|x = NaN|NaN|
-|ドメイン エラー|NaN|
+|x = NaN|(NaN)|
+|ドメイン エラー|(NaN)|
 |極エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **tgamma**は常に**double**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**tgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -105,7 +111,7 @@ x が自然数の場合、この関数は (x-1) の階乗を返します。
 |--------------|--------------|------------------|
 |**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

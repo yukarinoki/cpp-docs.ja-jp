@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188130"
 ---
-# <a name="tilestatic-keyword"></a>tile_static キーワード
+# <a name="tile_static-keyword"></a>tile_static キーワード
 
-**Tile_static**スレッドのタイルのすべてのスレッドによってアクセスできる変数を宣言するキーワードを使用します。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルの使用に関する詳細については、次を参照してください。[を使用してタイル](../parallel/amp/using-tiles.md)します。
+**Tile_static**キーワードは、スレッドのタイル内のすべてのスレッドからアクセスできる変数を宣言するために使用されます。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルの使用方法の詳細については、「[タイルの使用](../parallel/amp/using-tiles.md)」を参照してください。
 
-**Tile_static**キーワードには、次の制限事項。
+**Tile_static**キーワードには次の制限があります。
 
 - `restrict(amp)` 修飾子を持つ関数内の変数でのみ使用できます。
 
 - ポインターまたは参照型の変数では使用できません。
 
-- A **tile_static**変数は初期化子を含めることはできません。 既定のコンストラクターおよびデストラクターは自動的に呼び出されません。
+- **Tile_static**変数に初期化子を含めることはできません。 既定のコンストラクターおよびデストラクターは自動的に呼び出されません。
 
-- 初期化されていない値**tile_static**変数が定義されていません。
+- 初期化されていない**tile_static**変数の値は未定義です。
 
-- 場合、 **tile_static**非タイル呼び出しによってルートと呼び出し先で変数が宣言されている`parallel_for_each`警告が生成され、変数の動作は未定義です。
+- **Tile_static**変数が、`parallel_for_each`のタイル化されていない呼び出しで始まる呼び出しグラフで宣言されている場合、警告が生成され、変数の動作は未定義になります。
 
 ## <a name="example"></a>例
 
-次の例はどのように、 **tile_static**タイル内の複数のスレッド間でデータを蓄積する変数を使用できます。
+次の例では、 **tile_static**変数を使用して、タイル内の複数のスレッド間でデータを蓄積する方法を示します。
 
 ```cpp
 // Sample data:
@@ -144,7 +144,7 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)<br/>
 [C++ AMP の概要](../parallel/amp/cpp-amp-overview.md)<br/>

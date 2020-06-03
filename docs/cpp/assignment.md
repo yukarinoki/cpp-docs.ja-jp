@@ -1,24 +1,24 @@
 ---
-title: 代入
+title: 割り当て
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: 1e6d715011cfaab7e250e23a9a31bb3f0c83f36a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184340"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190704"
 ---
-# <a name="assignment"></a>代入
+# <a name="assignment"></a>割り当て
 
-代入演算子 (**=**) は、厳密に言えば、二項演算子。 この宣言は他の二項演算子と同じですが、次の例外があります。
+代入演算子 ( **=** ) は、厳密に言えば二項演算子です。 この宣言は他の二項演算子と同じですが、次の例外があります。
 
-- 非静的メンバー関数である必要があります。 いいえ**演算子 =** 非メンバー関数として宣言することができます。
+- 非静的メンバー関数である必要があります。 **Operator =** を非メンバー関数として宣言することはできません。
 - 派生クラスにより継承されません。
-- 既定の**演算子 =** が存在しない場合は、クラス型の場合、コンパイラによって関数を生成できます。
+- クラス型の場合は、コンパイラによって既定の**operator =** 関数が生成されます (存在しない場合)。
 
 次の例では、代入演算子を宣言する方法を示しています。
 
@@ -49,13 +49,13 @@ int main()
 }
 ```
 
-指定された引数が、式の右側にあります。 演算子は、代入の完了後に左側の値を返す代入演算子の動作を保持するオブジェクトを返します。 など、割り当ての組み合わせが可能です。
+指定された引数は式の右辺です。 演算子は、代入の完了後に左側の値を返す代入演算子の動作を保持するオブジェクトを返します。 これにより、次のような割り当てを連鎖させることができます。
 
 ```cpp
 pt1 = pt2 = pt3;
 ```
 
-コピー代入演算子では、コピー コンス トラクターと混同しないようにします。 後者と呼ばれる新しいオブジェクトの構築時に、既存のものから。
+コピー代入演算子は、コピーコンストラクターと混同しないようにしてください。 後者は、既存のオブジェクトから新しいオブジェクトを構築するときに呼び出されます。
 
 ```cpp
 // Copy constructor is called--not overloaded copy assignment operator!
@@ -66,9 +66,9 @@ Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]
-> 従うことをお勧め、 [3 つのルール](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming))コピー代入演算子を定義するクラスでは、コピー コンス トラクターを明示的にも定義する必要があります、こと、デストラクターと、c++ 11 以降に移動コンス トラクターと移動代入演算子。
+> コピー代入演算子を定義するクラスでは、C++ 11、移動コンストラクター、移動代入演算子で始まるコピーコンストラクター、デストラクター、およびを明示的に定義する必要があるという[3 つの規則](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming))に従うことをお勧めします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [演算子のオーバーロード](../cpp/operator-overloading.md)
 - [コピー コンストラクターとコピー代入演算子 (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

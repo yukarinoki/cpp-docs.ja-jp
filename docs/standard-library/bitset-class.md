@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 ms.openlocfilehash: a4771e9c2c48bfe9c4c09629278533b031d60979
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258238"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427213"
 ---
 # <a name="bitset-class"></a>bitset クラス
 
@@ -57,7 +57,7 @@ class bitset
 *N*\
 `size_t` 型の0以外の整数を持つビットセットオブジェクト内のビット数を指定します。これはコンパイル時に認識される必要があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 よく似ている [vector\<bool> クラス](../standard-library/vector-bool-class.md)とは異なり、bitset クラスには反復子がなく、C++ 標準ライブラリのコンテナーでもありません。 また、\<bitset*N* **が宣言されている場合、テンプレート パラメーター \<N\> で指定したサイズに従い、コンパイル時のサイズが特定の値に固定されている点でも vector**bool> とは異なっています。
 
@@ -100,7 +100,7 @@ class bitset
 |-|-|
 |[reference](#reference)|`bitset` クラスの `operator[]` 用ヘルパー クラスとして、個々のビットへのアクセスと操作に使用される `bitset` に含まれるビットへの参照を提供するプロキシ クラス。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -251,7 +251,7 @@ explicit bitset(
 *_One*\
 1 を表すために使用される文字。 既定値は '1' です。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 3 つのコンストラクターを利用し、クラス `bitset\<N>` のオブジェクトを構築できます。
 
@@ -470,7 +470,7 @@ bitset\<N>& flip(size_t _Pos);
 
 メンバー関数が呼び出された変更後ビットセットのコピー。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 2番目のメンバー関数は、パラメーターとして指定された位置が、ビットが反転されたビット**セット\<** *n* **>** のサイズ*n*を超える場合に、 [out_of_range](../standard-library/out-of-range-class.md)例外をスローします。
 
@@ -606,7 +606,7 @@ bool operator!=(const bitset\<N>& right) const;
 
 ビットセットが異なる場合は **true** を、同じ場合は **false** を返します。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 メンバー演算子関数で不等性をテストするとき、ビットセットは同じサイズにする必要があります。
 
@@ -668,7 +668,7 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ビットセットをパラメーターとして指定してビットごとの `AND` 操作を実行した結果として得られる、変更されたターゲットビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 `AND` 演算子によって結合された2つのビットは、各ビットが true の場合に**true**を返します。それ以外の場合、これらの組み合わせは**false**を返します。
 
@@ -735,7 +735,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 必要な位置数だけビットを左にシフトした変更後ビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 メンバー演算子関数は **bitset**( **\*this**) **<<= pos** を返します。[<<=](#op_lshift_eq) は、指定された位置数だけビットセット内のビットを左側にシフトし、結果をターゲット ビットセットに返します。
 
@@ -787,7 +787,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 必要な位置数だけビットを左側にシフトした変更後ターゲット ビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 その位置までシフトする要素がない場合、この関数はビットを消去し、値 0 にします。
 
@@ -834,7 +834,7 @@ bool operator==(const bitset\<N>& right) const;
 
 ビットセットが同じ場合は **true** を、異なる場合は **false** を返します。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 メンバー演算子関数で等しいかどうかをテストするとき、ビットセットは同じサイズにする必要があります。
 
@@ -948,7 +948,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 必要な位置数だけビットを右側にシフトした変更後ターゲット ビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 その位置までシフトする要素がない場合、この関数はビットを消去し、値 0 にします。
 
@@ -993,7 +993,7 @@ reference operator[](size_t _Pos);
 *_Pos*\
 ビットセット内のビットの位置。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 ビルドで [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) を 1 か 2 に定義すると、ビットセットの境界の外にある要素にアクセスしようとすると、実行可能ファイルでランタイム エラーが発生します。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -1040,7 +1040,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 パラメーターとして指定されたビットセットとビット単位で排他的 `OR` 演算された結果として生成される変更後ターゲット ビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 排他的 **OR** 演算子で結合された 2 つのビットは、両方ではなくいずれかが **true** の場合に **true** を返し、そうでない場合に **false** を返します。
 
@@ -1106,7 +1106,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 パラメーターとして指定されたビットセットとビット単位で両立的 `OR` 演算された結果として生成される変更後ターゲット ビットセット。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 両立的 `OR` 演算子で結合された 2 つのビットは、いずれかが **true** の場合に **true** を返し、両方とも **false** の場合に **false** を返します。
 
@@ -1229,11 +1229,11 @@ public:
 
 クラス参照の第 1、第 2、第 5 メンバー関数に対して引数位置により指定されるビットセットのビット参照。そして、**true** または **false**。これは、クラス参照の第 3 と第 4 メンバー関数に対してビットセットの変更後ビットの値を反映します。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 クラス `reference` は、ビットセット `operator[]` のヘルパー クラスとしてのみ存在します。 このメンバー クラスは、ビットセット内の個別ビットにアクセスできるオブジェクトを表します。 *B*は、型が**bool**、 *x* 、 *y*で、**ビットセット\<** *N* **>** のオブジェクト、およびそのようなオブジェクト内の*i*と*j*の有効な位置です。 表記 *x [i]* は、ビットセット *x* の位置 *i* のビットを指します。 クラス `reference` のメンバー関数は、次の演算を順に与えます。
 
-|操作|Definition|
+|操作|定義|
 |---------------|----------------|
 |*x*[*i*] = *b*|**ブール**値*b*をビットセット*x*のビット位置*i*に格納します。|
 |*x*[*i*] = *y*[*j*]|ビットセット *x* のビット位置 *i* にビット *y*[ *j*] の値を保存します。|
@@ -1341,7 +1341,7 @@ bitset\<N>& reset(size_t _Pos);
 
 メンバー関数が呼び出されたビットセットのコピー。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 2 番目のメンバー関数は、指定された位置がビットセットのサイズより大きい場合、[out_of_range](../standard-library/out-of-range-class.md) 例外をスローします。
 
@@ -1407,7 +1407,7 @@ bitset\<N>& set(
 
 メンバー関数が呼び出されたビットセットのコピー。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 2 番目のメンバー関数は、指定された位置がビットセットのサイズより大きい場合、[out_of_range](../standard-library/out-of-range-class.md) 例外をスローします。
 
@@ -1508,7 +1508,7 @@ bool test(size_t _Pos) const;
 
 引数位置により指定されたビットが 1 に設定されている場合は **true** を、それ以外の場合は **false** を返します。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このメンバー関数は [out_of_range](../standard-library/out-of-range-class.md) をスローします。
 
@@ -1576,7 +1576,7 @@ unsigned long long to_ullong() const;
 
 ビットシーケンス内のいずれかのビットに、 **unsigned long long**型の値として表現できないビット値がある場合、 [overflow_error](overflow-error-class.md)オブジェクトをスローします。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 ビットシーケンス内の**符号なし long long 型**のビット値の合計を返します。
 
@@ -1592,7 +1592,7 @@ unsigned long to_ulong( ) const;
 
 ビットセットの初期化で使用される場合にビットセットのビットを生成する整数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このメンバー関数を適用すると、ビットセットに含まれるビットのシーケンスと同じ1桁と0の数字を持つ整数が返されます。
 

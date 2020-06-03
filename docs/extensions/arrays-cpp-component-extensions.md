@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182241"
 ---
 # <a name="arrays-ccli-and-ccx"></a>配列 (C++/CLI および C++/CX)
 
@@ -53,7 +53,7 @@ C++/CX の `Platform::Array<T>` 型、または C++/CLI の **array** キーワ�
 ```
 
 *qualifiers*<br/>
-(省略可能) 1 つ以上の次のストレージ クラス指定子: [mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/using-extern-to-specify-linkage.md)、[static](../cpp/static-members-cpp.md)。
+(省略可能) 次のストレージ クラス指定子 (1 つ以上): [mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/using-extern-to-specify-linkage.md)、[static](../cpp/static-members-cpp.md)。
 
 *array-type*<br/>
 配列変数の型。 有効な型は、Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体、およびネイティブ ポインター (`type*`) です。
@@ -74,11 +74,11 @@ C++/CX の `Platform::Array<T>` 型、または C++/CLI の **array** キーワ�
 
 コンパイル時に、型が `__is_ref_array(type)` の参照カウント配列かどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、100 個の要素がある 1 次元配列を作成します。
 
@@ -145,11 +145,11 @@ int main() {
 
 コンパイル時に、型が `__is_ref_array(type)` の共通言語ランタイム (CLR) 配列かどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、100 個の要素を持つ 1 次元配列と、最初の次元に 3 つの要素、2 番目の次元に 5 つの要素、および 3 番目の次元に 6 つの要素を持つ 3 次元配列を作成します。
 
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

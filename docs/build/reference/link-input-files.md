@@ -1,8 +1,6 @@
 ---
 title: LINK の入力ファイル
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,27 +12,27 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aec71d4622821618f377953d36a9676e2233eefc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291510"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328197"
 ---
 # <a name="link-input-files"></a>LINK の入力ファイル
 
-リンカーは、オブジェクト、インポートと標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力が含まれているファイルに指定します。 リンクは、ファイルの内容に関する判断を行うファイルの拡張機能を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。
+リンカーには、オブジェクト、インポートライブラリ、標準ライブラリ、リソース、モジュール定義、およびコマンド入力を含むファイルを指定します。 LINK では、ファイルの内容を前提としてファイル拡張子を使用することはありません。 代わりに、LINK は各入力ファイルを調べて、ファイルの種類を判別します。
 
-コマンドラインでのオブジェクト ファイルは、コマンドラインで表示される順序で処理されます。 ライブラリは、次の注意点がありますも、コマンドラインの順序で検索されます。シンボルは未解決のときライブラリからのオブジェクト ファイルで検索のライブラリで最初に、され、コマンドラインから次のライブラリと[/DEFAULTLIB (既定のライブラリの指定)](defaultlib-specify-default-library.md)ディレクティブ、し、コマンドラインの先頭のすべてのライブラリを
+コマンド ライン上のオブジェクト ファイルは、コマンド ラインに表示される順序で処理されます。 ライブラリはコマンド ラインの順序でも検索され、次の注意事項があります: ライブラリからオブジェクト ファイルを取り込むときに未解決のシンボルは、最初にそのライブラリで検索され、次にコマンド ラインと[/DEFAULTLIB (既定のライブラリの指定)](defaultlib-specify-default-library.md)ディレクティブから次のライブラリを検索し、次にコマンド ラインの先頭にある任意のライブラリに検索します。
 
 > [!NOTE]
->  リンクでは、応答ファイルおよびファイルの順序でのコメントの始まりとしてセミコロン (またはその他の任意の文字) を不要になった受け取ります。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの始まりとしてのみ認識されます。
+> LINK は、応答ファイルおよび注文ファイルのコメントの先頭としてセミコロン (またはその他の文字) を受け入れなくなりました。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの開始としてのみ認識されます。
 
-リンクは、次の種類の入力ファイルを使用します。
+LINK では、次のタイプの入力ファイルを使用します。
 
 - [.obj ファイル](dot-obj-files-as-linker-input.md)
 
-- [.netmodule ファイル](netmodule-files-as-linker-input.md)
+- [.net モジュール ファイル](netmodule-files-as-linker-input.md)
 
 - [.lib ファイル](dot-lib-files-as-linker-input.md)
 

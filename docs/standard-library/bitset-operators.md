@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
 ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257989"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423961"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 演算子
 
@@ -93,7 +93,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 `ostr`内のビットシーケンスのテキスト表現。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `operator<<`をオーバーロードします。これにより、最初に文字列に変換せずにビットセットを書き出すことができます。 このテンプレート関数は、実質的に次の内容を実行します。
 
@@ -153,7 +153,7 @@ basic_istream<CharType, Traits>& operator>> (
 
 このテンプレート関数は、文字列*i_str*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`operator>>` をオーバーロードして、*ビットセット内*の値 `bitset(str)`を格納します。 `str` は、 *`< CharType, Traits, allocator< CharType > >&`* から抽出された[basic_string](basic-string-class.md)型のオブジェクトです。
 

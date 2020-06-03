@@ -1,20 +1,18 @@
 ---
 title: 時間管理
 ms.date: 11/04/2016
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446786"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444588"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -24,7 +22,7 @@ ms.locfileid: "65446786"
 
 ### <a name="time-routines"></a>時間のルーチン
 
-|関数|使用|
+|関数|用途|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|時刻を **struct tm** 型から文字列に変換します。 これらの関数のうち、 **_s** サフィックスの付いているバージョンがより安全です。|
 |[clock](../c-runtime-library/reference/clock.md)|プロセスの実際の経過時間を返します。|
@@ -47,8 +45,8 @@ ms.locfileid: "65446786"
 > Microsoft C/C++ バージョン 7.0 を除くすべてのバージョンの Microsoft C/C++ と、すべてのバージョンの Visual C++ で、時刻の関数は、現在の時刻を 1970 年 1 月 1 日の午前 0 時から経過した秒数として返します。 Microsoft C/C++ バージョン 7.0 では、**time** は、現在の時刻を 1899 年 12 月 31 日の午前 0 時から経過した秒数として返していました。
 
 > [!NOTE]
-> Visual Studio 2005 より前の Visual C++ および Microsoft C/C++ のバージョンでは、**time_t** は **long** **int** (32 ビット) であったため、2038 年 1 月 19 日 3 時 14 分 07 秒 (UTC) を超えた日付には使用できませんでした。 現在、既定で **time_t** は **__time64_t** と同じです。ただし、 **_USE_32BIT_TIME_T** を定義すると、**time_t** は **__time32_t** に変更され、多くの時刻関数は強制的に 32 ビットの **time_t** を取得するバージョンを呼び出すことになります。 詳細については、「[基本データ型](../c-runtime-library/standard-types.md)」のほか、それぞれの時刻関数に関するドキュメントのコメントを参照してください。
+> Visual Studio 2005 よりC++前の visual StudioC++および Microsoft C/のバージョンでは、 **time_t**は**長い** **int** (32 ビット) であるため、年1月 2038 19 日を3:14:07 超えた日付には使用できませんでした。 現在、既定で **time_t** は **__time64_t** と同じです。ただし、 **_USE_32BIT_TIME_T** を定義すると、**time_t** は **__time32_t** に変更され、多くの時刻関数は強制的に 32 ビットの **time_t** を取得するバージョンを呼び出すことになります。 詳細については、「[基本データ型](../c-runtime-library/standard-types.md)」のほか、それぞれの時刻関数に関するドキュメントのコメントを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

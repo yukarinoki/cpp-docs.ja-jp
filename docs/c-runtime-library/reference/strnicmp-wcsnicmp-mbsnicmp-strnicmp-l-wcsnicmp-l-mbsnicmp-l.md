@@ -1,6 +1,6 @@
 ---
 title: _strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsnicmp
 - _strnicmp_l
@@ -8,6 +8,12 @@ api_name:
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
+- _o__mbsnicmp
+- _o__mbsnicmp_l
+- _o__strnicmp
+- _o__strnicmp_l
+- _o__wcsnicmp
+- _o__wcsnicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,12 +76,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947133"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920081"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
 
@@ -142,17 +149,19 @@ Null で終わる比較対象の文字列。
 |0|*string1*部分文字列は、 *string2*部分文字列と同じです。|
 |> 0|*string1* substring が*string2* substring を超えています。|
 
-パラメーターの検証エラーが発生すると、これらの関数は **_NLSCMPERROR**と\< \<> mbstring.h > で定義されているを返します。
+パラメーターの検証エラーが発生した場合 **_NLSCMPERROR**、これらの関数は _NLSCMPERROR \<を返します。これ\<は、.h> と mbstring.h> で定義されています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strnicmp**関数は、 *string1*と*string2*の最初の文字*数*のうち、最も多くを比較します。 比較は、各文字を小文字に変換することで、大文字小文字に関係なく行われます。 **_strnicmp**は、大文字と小文字を区別しない**strncmp**のバージョンです。 *カウント*文字を比較する前に、いずれかの文字列で終端の null 文字に到達すると、比較は終了します。 文字列が等しい場合、 *count*文字が比較される前にいずれかの文字列で終端の null 文字に到達すると、短い文字列の方が小さくなります。
+**_Strnicmp**関数は、 *string1*と*string2*の最初の最大文字*数*を比較します。 比較は、各文字を小文字に変換することで、大文字小文字に関係なく行われます。 **_strnicmp**は、 **strncmp**の大文字と小文字を区別しないバージョンです。 *カウント*文字を比較する前に、いずれかの文字列で終端の null 文字に到達すると、比較は終了します。 文字列が等しい場合、 *count*文字が比較される前にいずれかの文字列で終端の null 文字に到達すると、短い文字列の方が小さくなります。
 
 ASCII 表の 91 から 96 の文字 ('['、'\\'、']'、'^'、'_'、および '\`') は、アルファベット文字より小さいものとして評価されます。 この順序は、 **stricmp**の順序と同じです。
 
-**_wcsnicmp**と **_mbsnicmp**は、 **_strnicmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnicmp**の引数はワイド文字列です。これらの **_mbsnicmp**はマルチバイト文字列です。 **_mbsnicmp**は、現在のマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合は **_NLSCMPERROR**を返します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 それ以外では、これらの関数の動作は同じです。 これらの関数はロケール設定の影響を受けます。 **_l**サフィックスが付いていないバージョンは、ロケールに依存する動作に現在のロケールを使用します。 **_l**サフィックスが付いているバージョンでは、渡された*ロケール*が代わりに使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_wcsnicmp**と **_mbsnicmp**は **_strnicmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnicmp**の引数はワイド文字列です。これらの **_mbsnicmp**はマルチバイト文字列です。 **_mbsnicmp**は、現在のマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合に **_NLSCMPERROR**を返します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」を参照してください。 それ以外では、これらの関数の動作は同じです。 これらの関数はロケール設定の影響を受けます。 **_l**サフィックスが付いていないバージョンは、ロケールに依存する動作に現在のロケールを使用します。代わりに、 **_l**サフィックスが付いているバージョンは、渡された*ロケール*を使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -164,13 +173,13 @@ ASCII 表の 91 から 96 の文字 ('['、'\\'、']'、'^'、'_'、および '\
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strnicmp**、 **_strnicmp_l**|\<string.h>|
 |**_wcsnicmp**、 **_wcsnicmp_l**|\<string.h> または \<wchar.h>|
 |**_mbsnicmp**、 **_mbsnicmp_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

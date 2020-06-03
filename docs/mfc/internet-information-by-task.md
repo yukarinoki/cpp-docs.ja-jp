@@ -4,49 +4,49 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: 94bc17f59e0d0a7ed5627d0ed20d31e471c22fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ba99658dcef92ee36e60d52982dcd9ffc577d03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152803"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353082"
 ---
 # <a name="internet-information-by-task"></a>タスク別のインターネット情報
 
-このトピックのタスクは実行するタスクに基づいて並べ替えられます。
+このトピックに示すタスクは、実行するタスクに基づいて並べ替えられます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
-次のタスクのカテゴリは、このトピックのとおりです。
+このトピックでは、次のタスクのカテゴリを示します。
 
-- [ActiveX コントロール、ドキュメント、およびタスクの非同期モニカー](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)
+- [ActiveX コントロール、ドキュメント、および非同期モニカータスク](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)
 
-- [WinInet のタスク](#_core_wininet_tasks)
+- [ウィニネットタスク](#_core_wininet_tasks)
 
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか
 
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX コントロール、ドキュメント、およびタスクの非同期モニカー
+### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>ActiveX コントロール、ドキュメント、および非同期モニカータスク
 
-- [非同期モニカーについて説明します](../mfc/asynchronous-monikers-on-the-internet.md)
+- [非同期モニカーについて](../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [インターネットのコンテキストでの ActiveX コントロールの概要について説明します](../mfc/activex-controls-on-the-internet.md)
+- [インターネット コンテキストでの ActiveX コントロールの詳細](../mfc/activex-controls-on-the-internet.md)
 
-- [ActiveX コントロールを最適化します。](../mfc/mfc-activex-controls-optimization.md)
+- [ActiveX コントロールを最適化する](../mfc/mfc-activex-controls-optimization.md)
 
-###  <a name="_core_wininet_tasks"></a> WinInet のタスク
+### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a>ウィニネットタスク
 
-- [WinInet、インターネット アクセス用の Win32 API 関数について説明します](../mfc/wininet-basics.md)
+- [インターネットアクセス用の WinInet API 関数を参照する](../mfc/wininet-basics.md)
 
-- [WinInet に関係するものを確認するプログラミング](../mfc/win32-internet-extensions-wininet.md)
+- [WinInet プログラミングに関する内容を確認する](../mfc/win32-internet-extensions-wininet.md)
 
-- [MFC WinInet クラスを使用して、インターネット クライアント アプリケーションを作成します。](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+- [MFC WinInet クラスを使用してインターネット クライアント アプリケーションを作成する](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
 
-- [FTP クライアント アプリケーションを作成します。](../mfc/steps-in-a-typical-ftp-client-application.md)
+- [FTP クライアント アプリケーションを作成する](../mfc/steps-in-a-typical-ftp-client-application.md)
 
-- [HTTP クライアント アプリケーションを作成します。](../mfc/steps-in-a-typical-http-client-application.md)
+- [HTTP クライアント アプリケーションを作成する](../mfc/steps-in-a-typical-http-client-application.md)
 
-- [Gopher クライアント アプリケーションを作成します。](../mfc/steps-in-a-typical-gopher-client-application.md)
+- [Gopher クライアント アプリケーションを作成する](../mfc/steps-in-a-typical-gopher-client-application.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: 59ada8a7e098e57cca5641a439365851bbae2485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180707"
 ---
-# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
+# <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
 **Microsoft 固有の仕様**
 
@@ -29,12 +29,12 @@ IErrorInfo * ErrorInfo( ) const throw( );
 
 コンストラクターに渡された未処理の `IErrorInfo` 項目。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-カプセル化された取得`IErrorInfo`内の項目を`_com_error`オブジェクト、または、ない場合は NULL`IErrorInfo`項目が記録されます。 呼び出し元が呼び出す必要があります`Release`完了すると、返されたオブジェクトを使用します。
+`_com_error` オブジェクト内のカプセル化された `IErrorInfo` 項目を取得します。 `IErrorInfo` 項目が記録されていない場合は NULL を取得します。 呼び出し元は、使用が終了したときに、返されたオブジェクトの `Release` を呼び出す必要があります。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_error クラス](../cpp/com-error-class.md)

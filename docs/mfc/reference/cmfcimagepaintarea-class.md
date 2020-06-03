@@ -1,5 +1,5 @@
 ---
-title: CMFCImagePaintArea クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImagePaintArea
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374182"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754272"
 ---
-# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea クラス
+# <a name="cmfcimagepaintarea-class"></a>クラス
 
-イメージ エディター ダイアログ ボックスでイメージを変更するために使用するピクチャの領域を提供します。
+イメージ エディターダイアログ ボックスでイメージを変更するために使用する画像領域を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ class CMFCImagePaintArea : public CButton
 |||
 |-|-|
 |名前|説明|
-|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|`CMFCImagePaintArea` オブジェクトを構築します。|
+|[次の値を指定します。](#cmfcimagepaintarea)|`CMFCImagePaintArea` オブジェクトを構築します。|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -48,20 +48,20 @@ class CMFCImagePaintArea : public CButton
 |||
 |-|-|
 |名前|説明|
-|[CMFCImagePaintArea::GetMode](#getmode)|現在の描画モードを取得します。|
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|ピクチャの領域のビットマップ イメージを設定します。|
-|[CMFCImagePaintArea::SetColor](#setcolor)|現在の描画の色を設定します。|
-|[CMFCImagePaintArea::SetMode](#setmode)|現在の描画モードを設定します。|
+|[ペインエリア::取得モード](#getmode)|現在の描画モードを取得します。|
+|[を指定します。](#setbitmap)|ピクチャ領域のビットマップ イメージを設定します。|
+|[カラーを設定します。](#setcolor)|現在の描画色を設定します。|
+|[ペインエリア::セットモード](#setmode)|現在の描画モードを設定します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラスは、コードから直接使用するものではありません。
+このクラスは、コードで直接使用するためのものではありません。
 
-フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスで、ピクチャの領域を表示します。 イメージ エディターのダイアログ ボックスの詳細については、次を参照してください。 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
+フレームワークは、このクラスを使用して、画像領域をイメージ エディター ダイアログ ボックスに表示します。 イメージ エディター ダイアログ ボックスの詳細については[、「CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCImagePaintArea`を現在の色を描画するには、現在の描画モードを設定し、ビットマップ画像画像領域の設定を設定します。
+次の例は、`CMFCImagePaintArea`クラスのオブジェクトの作成方法、現在の描画色の設定方法、現在の描画モードの設定方法、およびピクチャ領域のビットマップ イメージの設定方法を示しています。
 
 [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]
 
@@ -75,13 +75,13 @@ class CMFCImagePaintArea : public CButton
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
+[ペイン](../../mfc/reference/cmfcimagepaintarea-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afximagepaintarea.h
 
-##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea
+## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>次の値を指定します。
 
 `CMFCImagePaintArea` オブジェクトを構築します。
 
@@ -94,9 +94,9 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||
 |-|-|
 |パラメーター|説明|
-|*pParentDlg*|[in]イメージ エディターの親であるダイアログ ボックスへのポインター。|
+|*親の人*|[in]イメージ エディターの親であるダイアログ ボックスへのポインター。|
 
-##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode
+## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a>ペインエリア::取得モード
 
 現在の描画モードを取得します。
 
@@ -106,13 +106,13 @@ IMAGE_EDIT_MODE GetMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)現在の描画モードを指定する値。
+現在の描画モードを指定する[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)値。
 
-##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap
+## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>を指定します。
 
-ピクチャの領域のビットマップ イメージを設定します。
+ピクチャ領域のビットマップ イメージを設定します。
 
-```
+```cpp
 void SetBitmap(CBitmap* pBitmap);
 ```
 
@@ -121,17 +121,17 @@ void SetBitmap(CBitmap* pBitmap);
 |||
 |-|-|
 |パラメーター|説明|
-|*pBitmap*|[in]表示する新しいビットマップ イメージ。|
+|*ビットマップ*|[in]表示する新しいビットマップ イメージ。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合*pBitmap*が null の場合、このメソッドは、0 に変更可能な描画領域のサイズを設定します。 それ以外の場合、指定されたビットマップ イメージのサイズ変更可能な描画領域のサイズに設定します。
+*pBitmap*が NULL の場合、このメソッドは、変更可能な描画領域のサイズを 0 に設定します。 それ以外の場合は、指定されたビットマップ イメージのサイズに変更可能なペイント領域のサイズを設定します。
 
-##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor
+## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>カラーを設定します。
 
-現在の描画の色を設定します。
+現在の描画色を設定します。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -140,19 +140,19 @@ void SetColor(COLORREF color);
 |||
 |-|-|
 |パラメーター|説明|
-|*色*|[in]新しい描画の色。|
+|*color*|[in]新しい描画色。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ときに、イメージ エディター パレット バーから色を選択またはカラー ピッカー、フレームワークは、現在の描画の色を更新するには、このメソッドを呼び出します。 初期の描画の色は黒 (0 の COLORREF 値)。
+イメージ エディターのパレット バーまたはカラー ピッカーから色を選択すると、フレームワークは現在の描画色を更新するためにこのメソッドを呼び出します。 初期描画色は黒 (COLORREF 値 0) です。
 
-描画の色は、IMAGE_EDIT_MODE_COLOR を除くすべての描画モードのイメージ エディターのダイアログ ボックスで使用されます。 描画モードの詳細については、次を参照してください。 [cmfcimagepaintarea::image_edit_mode 列挙体](cmfcimagepaintarea-image-edit-mode-enumeration.md)します。
+描画色は、イメージ エディターダイアログ ボックスで、IMAGE_EDIT_MODE_COLORを除くすべての描画モードで使用されます。 描画モードの詳細については、「列挙体を[IMAGE_EDIT_MODE表示](cmfcimagepaintarea-image-edit-mode-enumeration.md)します。
 
-##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode
+## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a>ペインエリア::セットモード
 
 現在の描画モードを設定します。
 
-```
+```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
@@ -161,10 +161,10 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||
 |-|-|
 |パラメーター|説明|
-|*モード*|[in][IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)現在の描画モードを指定する値。|
+|*モード*|[in]現在の描画モードを指定する[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)値。|
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)
+[クラスをイメージします。](../../mfc/reference/cmfcimageeditordialog-class.md)

@@ -1,22 +1,22 @@
 ---
-title: コンパイラ エラー C3180
+title: コンパイラエラー C3180
 ms.date: 11/04/2016
 f1_keywords:
 - C3180
 helpviewer_keywords:
 - C3180
 ms.assetid: 5281f583-7df7-418a-8507-d4da67ed6572
-ms.openlocfilehash: bfe2699ce448aa879f0c93aa431a17dbc1334274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c94019bf7a58492fcbb27c4f092a6e5f7e36ca25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176456"
 ---
-# <a name="compiler-error-c3180"></a>コンパイラ エラー C3180
+# <a name="compiler-error-c3180"></a>コンパイラエラー C3180
 
-'type name': 名前がメタデータ制限の 'limit' 文字を超えています
+' type name ': 名前がメタデータの上限である ' limit ' 文字を超えています
 
-コンパイラでは、メタデータ内のマネージ型の名前が切り捨てられます。 切り捨てによりは、型を使用できない、`#using`ディレクティブ (または別の言語と同等)。
+コンパイラにより、メタデータ内のマネージ型の名前が切り捨てられました。 切り捨てにより、`#using` ディレクティブ (または別の言語の同等のもの) で型を使用できなくなります。
 
-型名の制限には、任意の名前空間の修飾が含まれています。
+型名の制限には、任意の名前空間の要件が含まれます。

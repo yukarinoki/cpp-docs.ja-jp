@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408915"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210718"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
 
-実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))インターフェイス。
+[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,10 +33,10 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-セッション オブジェクトから派生した`IDBCreateCommandImpl`します。
+`IDBCreateCommandImpl`から派生したセッションオブジェクト。
 
 *CommandClass*<br/>
-コマンド クラス。
+コマンドクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -51,11 +50,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |-|-|
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-新しいコマンドを取得するセッション オブジェクトの省略可能なインターフェイスです。
+新しいコマンドを取得するための、セッションオブジェクトのオプションのインターフェイス。
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
 
 新しいコマンドを作成し、要求されたインターフェイスを返します。
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IDBCreateCommand:: createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 」を参照してください。
 
-いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:
+一部のパラメーターは、`IDBCreateCommand::CreateCommand`で説明されているさまざまな名前の*プログラマの参照パラメーター OLE DB*に対応しています。
 
-|OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|
+|テンプレートパラメーターの OLE DB|*OLE DB プログラマーの参照*パラメーター|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

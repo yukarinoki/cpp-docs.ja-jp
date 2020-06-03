@@ -1,9 +1,11 @@
 ---
 title: _fgetchar、_fgetwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetchar
 - _fgetwchar
+- _o__fgetchar
+- _o__fgetwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912763"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
@@ -55,15 +58,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>戻り値
 
-fgetchar は、読み取り文字を**int**として`EOF`返すか、エラーまたはファイルの末尾を示すを返します。  **\_** fgetwchar は、読み取られた文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返す`WEOF`か、エラーまたはファイルの末尾を示すを返します。  **\_** どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
+fgetchar は、読み取り文字を**int**として`EOF`返すか、エラーまたはファイルの末尾を示すを返します。 ** \_** fgetwchar は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返すか`WEOF` 、エラーまたはファイルの末尾を示すを返します。 ** \_** どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの関数は、 **stdin**から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**_fgetchar**はと同じ`fgetc( stdin )`です。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は、 **_fgetchar**のワイド文字バージョンです。
+**_fgetchar**はと同じ`fgetc( stdin )`です。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は **_fgetchar**のワイド文字バージョンです。
 
 これらの関数は ANSI 規格と互換性がありません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -78,7 +83,7 @@ fgetchar は、読み取り文字を**int**として`EOF`返すか、エラー�
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

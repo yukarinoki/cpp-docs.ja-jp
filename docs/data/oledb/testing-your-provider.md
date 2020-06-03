@@ -6,23 +6,23 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209504"
 ---
 # <a name="testing-your-provider"></a>プロバイダーのテスト
 
-プロバイダーをリリースする前に示されている順序で、次のテストを行う必要があります。 これらのテストでは、ほとんどの潜在的なユーザー用に正しくプロバイダー関数を表示します。
+プロバイダーをリリースする前に、次のテストを示された順序で実行する必要があります。 これらのテストは、プロバイダーがほとんどのユーザーに対して適切に機能していることを示しています。
 
-1. 使用してプロバイダーをテストする[コンシューマー](../../data/oledb/creating-an-ole-db-consumer.md) OLE DB コンシューマー テンプレートで記述されたアプリケーション。 テストのコンシューマーは必要があります (変更または追加したすべてのコード) は、プロバイダーのすべての機能領域をについて説明します。
+1. OLE DB コンシューマーテンプレートで記述された[コンシューマー](../../data/oledb/creating-an-ole-db-consumer.md)アプリケーションを使用して、プロバイダーをテストします。 テストコンシューマーは、プロバイダーのすべての機能領域 (追加または変更したすべてのコード) をカバーする必要があります。
 
-1. ADO で作成したコンシューマー アプリケーションを使用してプロバイダーをテストします。 ほとんどの開発者 (特に Microsoft Visual Basic や Microsoft c# 開発者) は、コンシューマー アプリケーションの ADO または ADO.NET を使用します。 テスト コンシューマーは、プロバイダーのすべての機能領域をカバーする必要があります。 ADO のコンシューマー アプリケーションの例は、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx)します。
+1. ADO で記述されたコンシューマーアプリケーションを使用して、プロバイダーをテストします。 ほとんどの開発者 (特に Microsoft C# Visual Basic および microsoft 開発者) は、コンシューマーアプリケーションに ADO または ADO.NET を使用します。 テストコンシューマーは、プロバイダーのすべての機能領域をカバーする必要があります。 ADO コンシューマーアプリケーションの例については、「 [Microsoft Visual Basic の Ado コード例](/previous-versions/ms807514(v=msdn.10))」を参照してください。
 
-1. OLE DB プロバイダーのプロバイダーが、レベル 0 の標準を満たしていることを表示するには、OLE DB 準拠合致テスト (ADO 準拠テストを含む) を実行します。 (レベル 0 の詳細については、検索**OLE DB レベル 0 の準拠テスト**で[OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)します。 これらのテストと関連付けられているドキュメントは、Data Access SDK の Visual C に含まれています。 これらのテストは、プロバイダーが他の統合されたときに実行する表示にも役立ちます[サービス プロバイダー](../../data/oledb/ole-db-resource-pooling-and-services.md)し、変更、またはプロパティを追加する場合は特に便利です。 準拠合致テストの詳細については、Visual Studio Cd のいずれかの上にある Data Access SDK の Readme ファイルを参照してください。
+1. OLE DB 準拠テスト (ADO 準拠テストを含む) を実行して、プロバイダーが OLE DB プロバイダーのレベル0の標準を満たしていることを示します。 (レベル0の説明については、 [OLE DB プログラマーガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)で**OLE DB レベル0の準拠テスト**を検索してください。 これらのテストと関連ドキュメントは、データC++アクセス SDK のビジュアルに含まれています。 また、これらのテストは、他の[サービスプロバイダー](../../data/oledb/ole-db-resource-pooling-and-services.md)によって集計された場合にプロバイダーが良好に動作することを示すのにも役立ちます。また、プロパティを変更または追加する場合に特に便利です。 準拠テストの詳細については、Visual Studio のいずれかの Cd にある Data Access SDK の Readme ファイルを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

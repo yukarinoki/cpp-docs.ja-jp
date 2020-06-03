@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 06a5fa9a2d7e645c46b90ace957d31251baed81c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 50222015e6b365dc161fd4334067c26c7f288337
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127804"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365159"
 ---
 # <a name="index-class"></a>index クラス
 
-*N*次元のインデックスベクターを定義します。
+*N*次元インデックス ベクトルを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,29 +35,29 @@ class index;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[インデックスコンストラクター](#index_ctor)|`index` クラスの新しいインスタンスを初期化します。|
+|[インデックス コンストラクタ](#index_ctor)|`index` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator--](#operator--)|`index` オブジェクトの各要素をデクリメントします。|
-|[operator%=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
-|[operator*=](#operator_star_eq)|`index` オブジェクトの各要素をある数で乗算します。|
-|[operator/=](#operator_div_eq)|`index` オブジェクトの各要素をある数で除算します。|
-|[index:: operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
-|[operator++](#operator_add_add)|`index` オブジェクトの各要素をインクリメントします。|
-|[operator+=](#operator_add_eq)|指定した数を `index` オブジェクトの各要素に加算します。|
-|[operator=](#operator_eq)|指定された `index` オブジェクトの内容をこのオブジェクトにコピーします。|
-|[operator-=](#operator_-_eq)|指定した数を `index` オブジェクトの各要素から減算します。|
+|[演算子 --](#operator--)|`index` オブジェクトの各要素をデクリメントします。|
+|[演算子%=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
+|[演算子*=](#operator_star_eq)|`index` オブジェクトの各要素をある数で乗算します。|
+|[演算子/=](#operator_div_eq)|`index` オブジェクトの各要素をある数で除算します。|
+|[インデックス::演算子\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
+|[演算子++](#operator_add_add)|`index` オブジェクトの各要素をインクリメントします。|
+|[演算子 +=](#operator_add_eq)|指定した数を `index` オブジェクトの各要素に加算します。|
+|[演算子=](#operator_eq)|指定された `index` オブジェクトの内容をこのオブジェクトにコピーします。|
+|[演算子-=](#operator_-_eq)|指定した数を `index` オブジェクトの各要素から減算します。|
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|`index` オブジェクトのランクを格納します。|
+|[ランク定数](#rank)|`index` オブジェクトのランクを格納します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,15 +65,15 @@ class index;
 
 ## <a name="remarks"></a>解説
 
-`index` 構造体は、 *n*次元空間内の一意の位置を指定する*n 個*の整数の座標ベクトルを表します。 ベクターの値は最上位から最下位へ順に並べ替えられます。 [Operator =](#operator_eq)を使用して、コンポーネントの値を取得できます。
+この`index`構造体は *、N*次元空間内の一意の位置を指定する*N*個の整数の座標ベクトルを表します。 ベクターの値は最上位から最下位へ順に並べ替えられます。 [operator=](#operator_eq)を使用して、コンポーネントの値を取得できます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
 **名前空間:** Concurrency
 
-## <a name="index_ctor"></a>インデックスコンストラクター
+## <a name="index-constructor"></a><a name="index_ctor"></a>インデックス コンストラクタ
 
 index クラスの新しいインスタンスを初期化します。
 
@@ -122,9 +122,9 @@ explicit index(
 最下位の次元の長さ。
 
 *_Other*<br/>
-新しいインデックスオブジェクトの基になる index オブジェクト。
+新しいインデックス オブジェクトの基になるインデックス オブジェクト。
 
-## <a name="operator--"></a>operator--
+## <a name="operator--"></a><a name="operator--"></a>演算子 --
 
 index オブジェクトの各要素をデクリメントします。
 
@@ -138,11 +138,11 @@ index operator--(
 
 ### <a name="return-values"></a>戻り値
 
-前置演算子の場合は、index オブジェクト (* this) です。 サフィックス演算子の場合は、新しいインデックスオブジェクト。
+接頭語演算子の場合、インデックスオブジェクト (*this)。 サフィックス演算子の場合は、新しいインデックス オブジェクト。
 
-## <a name="operator_mod_eq"></a>% = 演算子
+## <a name="operator"></a><a name="operator_mod_eq"></a>演算子%=
 
-要素が指定した数値で除算されたときに、インデックスオブジェクト内の各要素の剰余 (剰余) を計算します。
+指定した数値で要素を除算した場合に、インデックス オブジェクト内の各要素の剰余を計算します。
 
 ```cpp
 index<_Rank>& operator%=(
@@ -153,13 +153,13 @@ index<_Rank>& operator%=(
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
-剰余を求めるために除算する数値。
+係数を見つけるために除算する数値。
 
 ## <a name="return-value"></a>戻り値
 
-インデックスオブジェクトです。
+インデックス オブジェクト。
 
-## <a name="operator_star_eq"></a>operator * =
+## <a name="operator"></a><a name="operator_star_eq"></a>演算子*=
 
 index オブジェクトの各要素を指定した数で乗算します。
 
@@ -174,7 +174,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 乗算対象の数です。
 
-## <a name="operator_div_eq"></a>operator/=
+## <a name="operator"></a><a name="operator_div_eq"></a>演算子/=
 
 指定された数で index オブジェクトの各要素を除算します。
 
@@ -189,7 +189,7 @@ index<_Rank>& operator/=(
 *_Rhs*<br/>
 除数。
 
-## <a name="operator_at"></a>  演算子\[\]
+## <a name="operator"></a><a name="operator_at"></a>演算子\[\]
 
 指定した位置にあるインデックスのコンポーネントを返します。
 
@@ -224,7 +224,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>+ + 演算子
+## <a name="operator"></a><a name="operator_add_add"></a>演算子++
 
 index オブジェクトの各要素をインクリメントします。
 
@@ -238,9 +238,9 @@ index<_Rank> operator++(
 
 ### <a name="return-value"></a>戻り値
 
-前置演算子の場合は、index オブジェクト (* this) です。 サフィックス演算子の場合は、新しいインデックスオブジェクト。
+接頭語演算子の場合、インデックスオブジェクト (*this)。 サフィックス演算子の場合は、新しいインデックス オブジェクト。
 
-## <a name="operator_add_eq"></a>演算子 + =
+## <a name="operator"></a><a name="operator_add_eq"></a>演算子 +=
 
 指定した数を index オブジェクトの各要素に加算します。
 
@@ -261,9 +261,9 @@ index<_Rank>& operator+=(
 
 ### <a name="return-value"></a>戻り値
 
-インデックスオブジェクトです。
+インデックス オブジェクト。
 
-## <a name="operator_eq"></a>  operator=
+## <a name="operator"></a><a name="operator_eq"></a>演算子=
 
 指定された index オブジェクトの内容をこのオブジェクトにコピーします。
 
@@ -276,13 +276,13 @@ index<_Rank>& operator=(
 ### <a name="parameters"></a>パラメーター
 
 *_Other*<br/>
-コピー元のインデックスオブジェクト。
+コピー元のインデックス オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-このインデックスオブジェクトへの参照。
+このインデックス オブジェクトへの参照。
 
-## <a name="operator_-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator_-_eq"></a>演算子-=
 
 指定した数を index オブジェクトの各要素から減算します。
 
@@ -303,16 +303,16 @@ index<_Rank>& operator-=(
 
 ### <a name="return-value"></a>戻り値
 
-インデックスオブジェクトです。
+インデックス オブジェクト。
 
-## <a name="rank"></a>ランク
+## <a name="rank"></a><a name="rank"></a>ランク
 
-インデックスオブジェクトのランクを取得します。
+インデックス オブジェクトのランクを取得します。
 
 ```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[同時実行名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

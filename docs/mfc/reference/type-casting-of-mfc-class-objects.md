@@ -8,29 +8,29 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 953acc32c3510b31c265f2d64d0a013f6dee06cc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611651"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372889"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC クラス オブジェクトの型キャスト
 
-型キャストのマクロは、指定されたポインター、キャストが正しくことのチェックの有無の特定のクラスのオブジェクトを指すポインターをキャストする方法を提供します。
+型キャスト マクロは、特定のクラスのオブジェクトを指すポインターへのポインターを、キャストが有効であることを確認する場合と、または無効にする方法を提供します。
 
-次の表では、MFC の型のキャスト マクロを示します。
+次の表は、MFC 型キャスト マクロの一覧です。
 
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>MFC クラス オブジェクトへのポインターのキャスト マクロ
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>MFC クラス オブジェクトへのポインターをキャストするマクロ
 
 |||
 |-|-|
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|キャストが有効かどうかを確認中に、クラスのオブジェクトへのポインターへのポインターにキャストします。|
-|[STATIC_DOWNCAST](#static_downcast)|ポインターに関連する型の 1 つのクラスからオブジェクトへのポインターにキャストします。 デバッグ ビルドでは、assert、オブジェクトがない場合、対象の型「の種類」です。|
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|キャストが有効かどうかをチェックしながら、クラス オブジェクトへのポインターへのポインターをキャストします。|
+|[STATIC_DOWNCAST](#static_downcast)|1 つのクラスから関連する型のポインターへのポインターをキャストします。 デバッグ ビルドでは、オブジェクトがターゲット型の "種類" でない場合に ASSERT が発生します。|
 
-##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST
+## <a name="dynamic_downcast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST
 
-キャストが有効かどうかを確認中に、クラスのオブジェクトへのポインターへのポインターをキャストする便利な方法を提供します。
+キャストが有効かどうかを確認しながら、クラス オブジェクトへのポインターへのポインターをキャストする便利な方法を提供します。
 
 ```
 DYNAMIC_DOWNCAST(class, pointer)
@@ -41,18 +41,18 @@ DYNAMIC_DOWNCAST(class, pointer)
 *class*<br/>
 クラスの名前。
 
-*pointer*<br/>
-型のオブジェクトへのポインターにキャストへのポインター*クラス*します。
+*ポインター (pointer)*<br/>
+*class*型のオブジェクトへのポインターにキャストするポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-マクロはキャスト、*ポインター*パラメーターのオブジェクトへのポインターを*クラス*パラメーターの型。
+マクロは、*クラス*パラメーターの型のオブジェクトへのポインターに*ポインター*パラメーターをキャストします。
 
-マウス ポインターによって参照されるオブジェクトがある場合、特定のクラス「の種類」マクロは、適切なポインターを返します。 有効なキャストされていない場合、マクロは、NULL を返します。
+ポインターによって参照されるオブジェクトが、識別されたクラスの種類である場合、マクロは適切なポインターを返します。 有効なキャストでない場合、マクロは NULL を返します。
 
-##  <a name="static_downcast"></a>  STATIC_DOWNCAST
+## <a name="static_downcast"></a><a name="static_downcast"></a>STATIC_DOWNCAST
 
-キャスト*pobject*へのポインターを*class_name*オブジェクト。
+*pobject*を*class_name*オブジェクトへのポインターにキャストします。
 
 ```
 STATIC_DOWNCAST(class_name, pobject)
@@ -61,22 +61,22 @@ STATIC_DOWNCAST(class_name, pobject)
 ### <a name="parameters"></a>パラメーター
 
 *class_name*<br/>
-キャストされているクラスの名前。
+キャストされるクラスの名前。
 
-*pobject*<br/>
-ポインターにキャストへのポインターを*class_name*オブジェクト。
+*pオブジェクト*<br/>
+*class_name*オブジェクトへのポインターにキャストするポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*pobject*する必要がありますか、null の場合、またはオブジェクトの直接派生するクラスまたはから間接的に指す*class_name*します。 _DEBUG プリプロセッサ シンボルを定義、アプリケーションのビルドで、マクロはアサート場合*pobject*が NULL でないでないオブジェクトを指している場合やで指定されたクラス「の種類」、 *class_name*パラメーター (を参照してください[使うため](../../mfc/reference/cobject-class.md#iskindof))。 以外で **_DEBUG**ビルドでは、マクロが型チェックを行わず、キャストを実行します。
+*pobject*は NULL であるか、直接または間接に派生したクラスのオブジェクトを指*class_name。* _DEBUGプリプロセッサシンボルが定義されたアプリケーションのビルドでは *、pobject*が NULL でない場合、または*class_name*パラメータで指定されたクラスの種類ではないオブジェクトを指している場合、マクロは ASSERT を実行します[(CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)を参照)。 **_DEBUG以外**のビルドでは、マクロは型チェックを行わずにキャストを実行します。
 
-指定したクラス、 *class_name*パラメーターから派生する必要があります`CObject`DECLARE_DYNAMIC と IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE とする場合、または DECLARE_SERIAL と IMPLEMENT_ を使用する必要がありますこの記事で説明されているシリアル マクロとして[CObject クラス。CObject からクラスを派生する](../../mfc/deriving-a-class-from-cobject.md)します。
+*class_name*パラメータで指定するクラスは、DECLARE_DYNAMICと`CObject`IMPLEMENT_DYNAMIC、DECLARE_DYNCREATEとIMPLEMENT_DYNCREATE、または[記事 CObject クラス: CObject からクラスを派生する](../../mfc/deriving-a-class-from-cobject.md)」で説明されているDECLARE_SERIALとIMPLEMENT_SERIALマクロから派生し、使用する必要があります。
 
-たとえばへのポインターをキャストする場合があります`CMyDoc`という`pMyDoc`へのポインターに`CDocument`この式を使用して。
+たとえば、 にポインターを`CMyDoc`キャストすると、 という`pMyDoc`名前のポインターが、`CDocument`次の式を使用するポインターにキャストできます。
 
 [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]
 
-場合`pMyDoc`から直接または間接的に派生したオブジェクトを指していない`CDocument`マクロがアサートされます。
+から`pMyDoc`直接または間接的`CDocument`に派生したオブジェクトを指していない場合、マクロは ASSERT を実行します。
 
 ## <a name="see-also"></a>関連項目
 

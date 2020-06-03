@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166162"
 ---
 # <a name="string-c"></a>string (C++)
 
-1次元の**char**、 **wchar_t**、 `byte` (またはそれと同等) の配列、またはこのような配列へのポインターを文字列として扱う必要があることを示します。
+1次元の**char**、 **wchar_t**、`byte` (またはそれと同等) の配列、またはこのような配列へのポインターを文字列として扱う必要があることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514009"
 [string]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **文字列** C++属性には、[文字列](/windows/win32/Midl/string)MIDL 属性と同じ機能があります。
 
@@ -57,7 +57,7 @@ __interface IFireTabCtrl
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [配列属性](array-attributes.md)<br/>

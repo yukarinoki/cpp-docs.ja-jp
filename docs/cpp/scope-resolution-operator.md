@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267394"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178887"
 ---
 # <a name="scope-resolution-operator-"></a>スコープ解決演算子: ::
 
-スコープ解決演算子 **::** 特定し、さまざまなスコープで使用される識別子のあいまいさを解消するために使用します。 スコープの詳細については、次を参照してください。[スコープ](../cpp/scope-visual-cpp.md)します。
+スコープ解決演算子 **::** は、さまざまなスコープで使用される識別子を識別し、あいまいさを解消するために使用されます。 スコープの詳細については、「[スコープ](../cpp/scope-visual-cpp.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ enum class :: identifier
 enum struct :: identifier
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `identifier` は変数、関数、または列挙値になることがあります。
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>スコープを持つ列挙型の使用
 
-スコープ列挙の値を持つ、スコープ解決演算子を使用しても[列挙体の宣言](../cpp/enumerations-cpp.md)、次の例。
+スコープ解決演算子は、次の例に示すように、スコープ列挙[列挙型の宣言](../cpp/enumerations-cpp.md)の値と共にも使用されます。
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [名前空間](../cpp/namespaces-cpp.md)

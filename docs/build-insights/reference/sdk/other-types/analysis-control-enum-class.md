@@ -1,6 +1,6 @@
 ---
-title: AnalysisControl enum クラス
-description: ビルドC++インサイト SDK AnalysisControl 列挙型の参照。
+title: コントロール列挙型クラス
+description: C++ ビルド インサイト SDK 分析コントロール列挙型の参照。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: cf162c11e0a7109b8d733dab79df80782398e14d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323640"
 ---
-# <a name="analysiscontrol-enum-class"></a>AnalysisControl enum クラス
+# <a name="analysiscontrol-enum-class"></a>コントロール列挙型クラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`AnalysisControl` 列挙型クラスは、分析または再ログセッションのフローを制御するために使用されます。 [Ianalyzer](ianalyzer-class.md)メンバー関数または[irelogger](irelogger-class.md)メンバー関数から `AnalysisControl` コードを返して、次に何が行われるかを制御します。
+enum`AnalysisControl`クラスは、分析セッションまたは再ロギング セッションのフローを制御するために使用されます。 IAnalyzer`AnalysisControl`または[IAnalyzer](ianalyzer-class.md)[IRelogger](irelogger-class.md)メンバー関数からコードを返して、次に何が起こるかを制御します。
 
 ## <a name="members"></a>メンバー
 
 |  |  |
 |--|--|
-| `BLOCK` | 現在のイベントが analyzer または relogger グループにさらに反映されないようにします。 |
-| `CANCEL` | 現在の分析をキャンセルするか、セッションを再ログに記録します。 |
-| `CONTINUE` | 現在の分析を続行するか、セッションを再ログに記録します。 現在のイベントを次のアナライザーまたは relogger グループメンバーに伝達します。 |
-| `FAILURE` | 現在の分析をキャンセルするか、セッションを再ログに記録して、エラーを通知します。 |
+| `BLOCK` | 現在のイベントがアナライザまたはリロガー グループでさらに伝播しないようにします。 |
+| `CANCEL` | 現在の分析セッションまたは再ロギング セッションをキャンセルします。 |
+| `CONTINUE` | 現在の分析セッションまたは再ロギング セッションを通常どおり続行します。 現在のイベントを次のアナライザまたはリロガー グループ メンバーに伝播します。 |
+| `FAILURE` | 現在の分析または再ロギング セッションをキャンセルし、エラーを通知します。 |
 
 ::: moniker-end

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-ms.openlocfilehash: 465dd5fffa7b9cadf6f0daf97c4f540cf90a11ec
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: dc3296b8d15c2a516eaf3d3995b66c2917d432d4
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314121"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825346"
 ---
 # <a name="const-32-bit-masm"></a>.CONST (32 ビット MASM)
 
@@ -19,9 +19,10 @@ ms.locfileid: "75314121"
 
 ## <a name="syntax"></a>構文
 
-> **.CONST** ⟦ *segmentItem* ⟧...
+> **.CONST**\
+> ⟦ *segmentItem* ⟧...
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このセグメントには読み取り専用の属性があります。
 
