@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630803"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988042"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>リンカー ツールの警告 LNK4221
 
@@ -19,12 +19,12 @@ ms.locfileid: "69630803"
 
 次の2つのコードスニペットについて考えてみます。
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -39,13 +39,13 @@ int function()
 
 ::: moniker range=">=vs-2019"
 
-このエラーの一般的な原因は、2つのソースファイルでオプション[/yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)を指定し、[**プリコンパイル済み**ヘッダー] フィールドで指定したヘッダーファイル名が同じである場合です。 この問題の一般的な原因は、pch を扱うことです。既定では、.pch には .pch が含まれており、新しいシンボルは追加されません。 別のソースファイルに **/yc と/yc**が含まれていて、関連付けられた .obj ファイルが pch の前に処理された場合、リンカーは LNK4221 をスローします。
+このエラーの一般的な原因は、2つのソースファイルでオプション[/yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)を指定し、[**プリコンパイル済み**ヘッダー] フィールドで指定したヘッダーファイル名が同じである場合です。 この問題の一般的な原因は、 *pch を*扱うことです。既定では、.pch に*は .pch* *が含まれ*ており、新しいシンボルは追加されません。 別のソースファイルに **/yc と/yc** *が含まれ*ていて、関連付けられた .obj ファイルが pch の前に処理された場合、リンカーは LNK4221 をスローします。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-このエラーの一般的な原因は、2つのソースファイルでオプション[/yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)を指定し、[**プリコンパイル済み**ヘッダー] フィールドで指定したヘッダーファイル名が同じである場合です。 この問題の一般的な原因は、既定では stdafx.h に*stdafx.h*が含まれており、新しいシンボルは追加されないためです。 別のソースファイルに*stdafx.h*と **/yc**が含まれていて、関連付けられた .obj ファイルが stdafx.h の前に処理された場合、リンカーは LNK4221 をスローします。
+このエラーの一般的な原因は、2つのソースファイルでオプション[/yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)を指定し、[**プリコンパイル済み**ヘッダー] フィールドで指定したヘッダーファイル名が同じである場合です。 この問題の一般的な原因は、既定では stdafx.h に*stdafx.h* *が含まれ*ており、新しいシンボルは追加され*ないためです*。 別のソースファイルに*stdafx.h*と **/yc**が含まれていて、関連付けられた .obj ファイルが stdafx.h の前に処理された場合、リンカーは LNK4221 をスローします。
 
 ::: moniker-end
 

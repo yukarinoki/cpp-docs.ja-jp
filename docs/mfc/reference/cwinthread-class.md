@@ -1,5 +1,5 @@
 ---
-title: CWinThread クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CWinThread
@@ -50,14 +50,14 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 4d3582493489faf44afece9338b1491620ca798a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: f2e95dd3ba8be31633590e37d95dedc8749ebdd8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504652"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367420"
 ---
-# <a name="cwinthread-class"></a>CWinThread クラス
+# <a name="cwinthread-class"></a>クラス
 
 アプリケーション内の実行中のスレッドを表します。
 
@@ -73,60 +73,60 @@ class CWinThread : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[CWinThread::CWinThread](#cwinthread)|`CWinThread` オブジェクトを構築します。|
+|[::CWinスレッド](#cwinthread)|`CWinThread` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CWinThread::CreateThread](#createthread)|実行を開始、`CWinThread`オブジェクト。|
-|[CWinThread::ExitInstance](#exitinstance)|スレッドの終了時にクリーンアップをオーバーライドします。|
-|[CWinThread::GetMainWnd](#getmainwnd)|スレッドのメイン ウィンドウへのポインターを取得します。|
-|[CWinThread::GetThreadPriority](#getthreadpriority)|現在のスレッドの優先順位を取得します。|
-|[CWinThread::InitInstance](#initinstance)|オーバーライドすると、実行スレッドのインスタンスを初期化します。|
-|[CWinThread::IsIdleMessage](#isidlemessage)|特別なメッセージを確認します。|
-|[CWinThread::OnIdle](#onidle)|オーバーライドすると、スレッド固有のアイドル時間の処理を実行します。|
-|[CWinThread::PostThreadMessage](#postthreadmessage)|別のメッセージを投稿`CWinThread`オブジェクト。|
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)します。|
-|[CWinThread::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到達する前に、特定のメッセージを受け取ります。|
-|[CWinThread::ProcessWndProcException](#processwndprocexception)|スレッドのメッセージとコマンド ハンドラーによってスローされたすべてのハンドルされない例外を受け取ります。|
-|[CWinThread::PumpMessage](#pumpmessage)|スレッドのメッセージ ループが含まれています。|
-|[CWinThread::ResumeThread](#resumethread)|スレッドのデクリメントは、カウントを中断します。|
-|[CWinThread::Run](#run)|スレッドのメッセージ ポンプの制御関数。 既定のメッセージ ループのカスタマイズをオーバーライドします。|
-|[CWinThread::SetThreadPriority](#setthreadpriority)|現在のスレッドの優先順位を設定します。|
-|[CWinThread::SuspendThread](#suspendthread)|スレッドの増分数を中断します。|
+|[::スレッドの作成](#createthread)|オブジェクトの実行を`CWinThread`開始します。|
+|[を使用します。](#exitinstance)|スレッドが終了したときにクリーンアップするようにオーバーライドします。|
+|[::ゲットメインウンド](#getmainwnd)|スレッドのメイン ウィンドウへのポインターを取得します。|
+|[スレッドの優先順位を取得します。](#getthreadpriority)|現在のスレッドの優先順位を取得します。|
+|[::イニトインスタンス](#initinstance)|スレッド インスタンスの初期化を実行する場合にオーバーライドします。|
+|[メッセージを見る](#isidlemessage)|特別なメッセージをチェックします。|
+|[::オンアイドル](#onidle)|スレッド固有のアイドル時間処理を実行するためにオーバーライドします。|
+|[:Pソストスレッドメッセージ](#postthreadmessage)|メッセージを別`CWinThread`のオブジェクトに投稿します。|
+|[メッセージを再変換:P](#pretranslatemessage)|メッセージが Windows[関数に](/windows/win32/api/winuser/nf-winuser-translatemessage)ディスパッチされる前にフィルター処理されます[。](/windows/win32/api/winuser/nf-winuser-dispatchmessage)|
+|[:Pロセスメッセージフィルタ](#processmessagefilter)|特定のメッセージがアプリケーションに到達する前にインターセプトします。|
+|[:Pロセスウンドプロセス例外](#processwndprocexception)|スレッドのメッセージおよびコマンド ハンドラーによってスローされた、未処理の例外をすべてインターセプトします。|
+|[:Pウンプメッセージ](#pumpmessage)|スレッドのメッセージ ループを格納します。|
+|[スレッドを再開します。](#resumethread)|スレッドの中断カウントを減らします。|
+|[実行](#run)|メッセージ ポンプを使用したスレッドの制御機能。 既定のメッセージ ループをカスタマイズする場合にオーバーライドします。|
+|[スレッドの優先順位を設定します。](#setthreadpriority)|現在のスレッドの優先順位を設定します。|
+|[スレッドを中断します。](#suspendthread)|スレッドの中断カウントをインクリメントします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CWinThread::operator ハンドル](#operator_handle)|ハンドルを取得、`CWinThread`オブジェクト。|
+|[ハンドルを操作します。](#operator_handle)|オブジェクトのハンドルを`CWinThread`取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CWinThread::m_bAutoDelete](#m_bautodelete)|スレッドの終了時のオブジェクトを破棄するかどうかを指定します。|
-|[CWinThread::m_hThread](#m_hthread)|現在のスレッドへのハンドルします。|
-|[CWinThread::m_nThreadID](#m_nthreadid)|現在のスレッドの ID。|
-|[CWinThread::m_pActiveWnd](#m_pactivewnd)|OLE サーバーがアクティブである場合は、コンテナー アプリケーションのメイン ウィンドウへのポインター。|
-|[CWinThread::m_pMainWnd](#m_pmainwnd)|アプリケーションのメイン ウィンドウへのポインターを保持します。|
+|[CWinThread::m_bAutoDelete](#m_bautodelete)|スレッド終了時にオブジェクトを破棄するかどうかを指定します。|
+|[スウィンスレッド::m_hThread](#m_hthread)|現在のスレッドへのハンドル。|
+|[スウィンスレッド::m_nThreadID](#m_nthreadid)|現在のスレッドの ID。|
+|[スウィンスレッド::m_pActiveWnd](#m_pactivewnd)|OLE サーバーが埋め込み場所でアクティブな場合のコンテナー アプリケーションのメイン ウィンドウへのポインター。|
+|[次のスレッド::m_pMainWnd](#m_pmainwnd)|アプリケーションのメイン ウィンドウへのポインターを保持します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-実行のメイン スレッドがから派生したオブジェクトによって提供される通常`CWinApp`;`CWinApp`から派生`CWinThread`します。 追加`CWinThread`オブジェクトは、特定のアプリケーション内で複数のスレッドを使用します。
+実行のメイン スレッドは通常、 から`CWinApp`派生したオブジェクトによって提供されます。`CWinApp`は から`CWinThread`派生します。 追加`CWinThread`のオブジェクトは、特定のアプリケーション内で複数のスレッドを許可します。
 
-スレッドの 2 つの一般的な種類がありますを`CWinThread`をサポートしています: ワーカー スレッドとユーザー インターフェイス スレッド。 ワーカー スレッドがメッセージ ポンプあるありません: たとえば、スプレッドシート アプリケーションでバック グラウンド計算を実行するスレッド。 ユーザー インターフェイス スレッドでは、メッセージ ポンプし、システムから受信したメッセージを処理します。 [CWinApp](../../mfc/reference/cwinapp-class.md)およびそれから派生したクラスは、ユーザー インターフェイス スレッドの例を示します。 他のユーザー インターフェイス スレッドから直接派生させることも`CWinThread`します。
+`CWinThread`サポートするスレッドには、ワーカー スレッドとユーザー インターフェイス スレッドの 2 種類があります。 ワーカー スレッドにはメッセージ ポンプがありません。 ユーザー インターフェイス スレッドには、メッセージ ポンプがあり、システムから受信したメッセージを処理します。 [CWinApp](../../mfc/reference/cwinapp-class.md)とそこから派生したクラスは、ユーザー インターフェイス スレッドの例です。 その他のユーザー インターフェイス スレッドも`CWinThread`から直接派生できます。
 
-クラスのオブジェクト`CWinThread`通常のスレッドの期間存続します。 この動作を変更する場合は、設定[m_bAutoDelete](#m_bautodelete)を FALSE にします。
+クラス`CWinThread`のオブジェクトは、通常、スレッドの存続期間中に存在します。 この動作を変更する場合は[、m_bAutoDelete](#m_bautodelete)を FALSE に設定します。
 
-`CWinThread`クラスはスレッド セーフなコードと MFC を実現するために必要です。 スレッド固有の情報を維持するためにフレームワークによって使用されるスレッド ローカル データが自主`CWinThread`オブジェクト。 この依存のため`CWinThread`MFC でスレッド ローカル データを処理するために MFC を使用する任意のスレッドを作成する必要があります。 実行時の関数によって作成されたスレッドなど[_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) MFC の Api を使用することはできません。
+この`CWinThread`クラスは、コードと MFC を完全にスレッド セーフにするために必要です。 スレッド固有の情報を維持するためにフレームワークで使用されるスレッドローカルデータは、オブジェクト`CWinThread`によって管理されます。 スレッド ローカル データ`CWinThread`を処理するにはこの依存性があるため、MFC を使用するスレッドは MFC で作成する必要があります。 たとえば、ランタイム関数によって作成されたスレッド[_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)は、任意の MFC API を使用できません。
 
-スレッドを作成するには[AfxBeginThread](application-information-and-management.md#afxbeginthread)します。 ワーカー ロールまたはユーザー インターフェイス スレッドをするかどうかに応じて、2 つの形式があります。 ユーザー インターフェイス スレッドにする場合は、渡す`AfxBeginThread`へのポインター、`CRuntimeClass`の`CWinThread`-クラスを派生します。 ワーカー スレッドを作成する場合に渡す`AfxBeginThread`制御関数とパラメーターを制御する関数へのポインター。 ワーカー スレッドとユーザー インターフェイス スレッドの両方で、優先度、スタックのサイズ、作成フラグ、およびセキュリティ属性を変更する省略可能なパラメーターを指定できます。 `AfxBeginThread` 新しいへのポインターを返しますが`CWinThread`オブジェクト。
+スレッドを作成するには[、AfxBeginThread](application-information-and-management.md#afxbeginthread)を呼び出します。 ワーカー スレッドとユーザー インターフェイス スレッドのどちらを使用するかによって、2 つの形式があります。 ユーザー インターフェイス スレッドが必要な場合は、`AfxBeginThread``CRuntimeClass``CWinThread`派生クラスの へのポインターを渡します。 ワーカー スレッドを作成する場合は、制御関数`AfxBeginThread`へのポインターと、制御関数へのパラメーターに渡します。 ワーカー スレッドとユーザー インターフェイス スレッドの両方に対して、優先順位、スタック サイズ、作成フラグ、およびセキュリティ属性を変更するオプションのパラメーターを指定できます。 `AfxBeginThread`新しい`CWinThread`オブジェクトへのポインタを返します。
 
-呼び出す代わりに`AfxBeginThread`、構築することができます、 `CWinThread`- オブジェクトを派生`CreateThread`します。 この 2 段階の構築方法を再利用する場合に便利ですが、`CWinThread`連続の作成とスレッド実行の終了間のオブジェクト。
+を呼び`AfxBeginThread`出す代わりに、-derived オブジェクトを`CWinThread`構築`CreateThread`してから を呼び出すことができます。 この 2 段階の構築方法は、連続したスレッド実行の`CWinThread`作成と終了の間にオブジェクトを再利用する場合に便利です。
 
-詳細については`CWinThread`、記事を参照して[C++ と MFC を使用するマルチ スレッド](../../parallel/multithreading-with-cpp-and-mfc.md)、[マルチ スレッド。ユーザー インターフェイス スレッドを作成する](../../parallel/multithreading-creating-user-interface-threads.md)、[マルチ スレッド。ワーカー スレッドを作成する](../../parallel/multithreading-creating-worker-threads.md)、および[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+`CWinThread`詳細については、「 [C++ および MFC を使用したマルチスレッド](../../parallel/multithreading-with-cpp-and-mfc.md)化[、マルチスレッド : ユーザー インターフェイス スレッドの作成](../../parallel/multithreading-creating-user-interface-threads.md)、[マルチスレッド : ワーカー スレッドの作成](../../parallel/multithreading-creating-worker-threads.md)、[マルチスレッド : 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -140,9 +140,9 @@ class CWinThread : public CCmdTarget
 
 **ヘッダー:** afxwin.h
 
-##  <a name="createthread"></a>  CWinThread::CreateThread
+## <a name="cwinthreadcreatethread"></a><a name="createthread"></a>::スレッドの作成
 
-呼び出し元のプロセスのアドレス空間内で実行するスレッドを作成します。
+呼び出し元プロセスのアドレス空間内で実行するスレッドを作成します。
 
 ```
 BOOL CreateThread(
@@ -153,28 +153,28 @@ BOOL CreateThread(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwCreateFlags*<br/>
+*フラグを作成します。*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 使用して、初期化が完了すると、 [cwinthread::resumethread](#resumethread)を実行しているスレッドを開始します。   `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED 中断カウント 1 でスレッドを開始します。 m_bAutoDeleteや派生クラスのメンバーなど、`CWinThread`オブジェクトのメンバー データを初期化する[m_bAutoDelete](#m_bautodelete)場合は、CREATE_SUSPENDEDを使用して、スレッドの実行を開始します。 初期化が完了したら[、CWinThread::ResumeThread](#resumethread)を使用してスレッドの実行を開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
 - **0**作成後すぐにスレッドを開始します。
 
-*nStackSize*<br/>
-新しいスレッドへのスタックのバイト サイズを指定します。 場合**0**プロセスのプライマリ スレッドの場合と同じサイズに既定のスタック サイズ。
+*スタックサイズ*<br/>
+新しいスレッドへのスタックのバイト サイズを指定します。 **0**の場合、スタック サイズは、プロセスのプライマリ スレッドと同じサイズになります。
 
-*lpSecurityAttrs*<br/>
-指す、 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))スレッドのセキュリティ属性を指定する構造体。
+*セキュリティアトルス*<br/>
+スレッドのセキュリティ属性を指定する[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体へのポイント。
 
 ### <a name="return-value"></a>戻り値
 
-スレッドが正常に作成された場合、0 以外の場合それ以外の場合 0 を返します。
+スレッドが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用`AfxBeginThread`スレッド オブジェクトを作成し、1 つの手順で実行します。 使用`CreateThread`作成とスレッド実行の終了の間でスレッド オブジェクトを再利用する場合。
+スレッド`AfxBeginThread`オブジェクトを作成し、1 ステップで実行するために使用します。 スレッド`CreateThread`の実行の連続的な作成と終了の間にスレッド オブジェクトを再利用する場合に使用します。
 
-##  <a name="cwinthread"></a>  CWinThread::CWinThread
+## <a name="cwinthreadcwinthread"></a><a name="cwinthread"></a>::CWinスレッド
 
 `CWinThread` オブジェクトを構築します。
 
@@ -182,13 +182,13 @@ BOOL CreateThread(
 CWinThread();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スレッドの実行を開始する、 [CreateThread](#createthread)メンバー関数。 呼び出してスレッドを作成することは、通常は[AfxBeginThread](application-information-and-management.md#afxbeginthread)は、このコンス トラクターを呼び出します`CreateThread`します。
+スレッドの実行を開始するには[、CreateThread](#createthread)メンバー関数を呼び出します。 通常は、このコンストラクターと を呼び出す[AfxBeginThread](application-information-and-management.md#afxbeginthread)`CreateThread`を呼び出してスレッドを作成します。
 
-##  <a name="exitinstance"></a>  CWinThread::ExitInstance
+## <a name="cwinthreadexitinstance"></a><a name="exitinstance"></a>を使用します。
 
-ほとんどオーバーライド内からフレームワークによって呼び出されます[実行](#run)、スレッドのこのインスタンスを終了するメンバー関数への呼び出しまたは[InitInstance](#initinstance)が失敗しました。
+スレッドのこのインスタンスを終了する場合、または[InitInstance](#initinstance)の呼び出しが失敗した場合に、めったにオーバーライドされない[Run](#run)メンバー関数内からフレームワークによって呼び出されます。
 
 ```
 virtual int ExitInstance();
@@ -196,17 +196,17 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>戻り値
 
-スレッドの終了コード。0 は、エラーを 、エラーを示す 0 より大きい値です。 この値は、呼び出すことによって取得できる[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)します。
+スレッドの終了コード。0 はエラーがないことを示し、0 より大きい値はエラーを示します。 この値は、[呼](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)び出すことによって取得できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数から呼び出さないで任意の場所内では、`Run`メンバー関数。 このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。
+このメンバー関数は、`Run`メンバー関数以外の場所から呼び出す必要があります。 このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。
 
-この関数の既定の実装を削除、`CWinThread`オブジェクトの場合[m_bAutoDelete](#m_bautodelete)は TRUE です。 スレッドの終了時に、追加のクリーンアップを実行する場合は、この関数をオーバーライドします。 実装`ExitInstance`コードが実行された後に、基本クラスのバージョンを呼び出す必要があります。
+この関数の既定の実装では`CWinThread`[、m_bAutoDelete](#m_bautodelete)が TRUE の場合、オブジェクトが削除されます。 スレッドが終了したときに追加のクリーンアップを実行する場合は、この関数をオーバーライドします。 コードの実行`ExitInstance`後に、 の実装で基本クラスのバージョンを呼び出す必要があります。
 
-##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd
+## <a name="cwinthreadgetmainwnd"></a><a name="getmainwnd"></a>::ゲットメインウンド
 
-アプリケーションが OLE サーバーである場合は、直接参照するのではなく、アプリケーションのアクティブなメイン ウィンドウへのポインターを取得するには、この関数を呼び出し、`m_pMainWnd`アプリケーション オブジェクトのメンバー。
+アプリケーションが OLE サーバーの場合は、アプリケーション オブジェクトの`m_pMainWnd`メンバーを直接参照するのではなく、アプリケーションのアクティブなメイン ウィンドウへのポインターを取得するには、この関数を呼び出します。
 
 ```
 virtual CWnd* GetMainWnd();
@@ -214,21 +214,21 @@ virtual CWnd* GetMainWnd();
 
 ### <a name="return-value"></a>戻り値
 
-この関数は、windows の 2 種類のいずれかにポインターを返します。 かどうか、スレッドが OLE サーバーの一部であるし、作業中のコンテナー内で、インプレース アクティブであるオブジェクトが、この関数を返します、[先](../../mfc/reference/cwinapp-class.md#m_pactivewnd)のデータ メンバー、`CWinThread`オブジェクト。
+この関数は、2 種類のウィンドウのうち 1 つを指すポインターを返します。 スレッドが OLE サーバーの一部であり、アクティブなコンテナー内でインプレース アクティブなオブジェクトを持つ場合、この関数は、オブジェクトの[CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd)データ メンバーを`CWinThread`返します。
 
-この関数が返すかどうかは、コンテナー内の場所で有効になっているオブジェクトがないか、アプリケーションが OLE サーバーではない、 [m_pMainWnd](#m_pmainwnd)スレッド オブジェクトのデータ メンバー。
+コンテナー内で埋め込みオブジェクトがアクティブでない場合、またはアプリケーションが OLE サーバーでない場合、この関数はスレッド オブジェクトの[m_pMainWnd](#m_pmainwnd)データ メンバーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザー インターフェイス スレッドでは、これを直接参照するのと同じですが、`m_pActiveWnd`アプリケーション オブジェクトのメンバー。
+ユーザー インターフェイス スレッドの場合、これはアプリケーション オブジェクトのメンバー`m_pActiveWnd`を直接参照することと同じです。
 
 開発中のアプリケーションが OLE サーバーではない場合は、この関数を呼び出すことは、アプリケーション オブジェクトの `m_pMainWnd` メンバーを直接参照することと同じです。
 
 既定の動作を変更するには、この関数をオーバーライドします。
 
-##  <a name="getthreadpriority"></a>  CWinThread::GetThreadPriority
+## <a name="cwinthreadgetthreadpriority"></a><a name="getthreadpriority"></a>スレッドの優先順位を取得します。
 
-このスレッドの現在のスレッド優先度レベルを取得します。
+このスレッドの現在のスレッドの優先順位レベルを取得します。
 
 ```
 int GetThreadPriority();
@@ -236,7 +236,7 @@ int GetThreadPriority();
 
 ### <a name="return-value"></a>戻り値
 
-優先度クラス内で現在のスレッド優先度レベル。 返される値は、次のいずれかを指定が優先度の高い順に一覧表示。
+その優先順位クラス内の現在のスレッドの優先順位レベル。 返される値は、優先順位が最も高いものから最低にリストされている次のいずれかになります。
 
 - THREAD_PRIORITY_TIME_CRITICAL
 
@@ -252,11 +252,11 @@ int GetThreadPriority();
 
 - THREAD_PRIORITY_IDLE
 
-これらの優先順位の詳細については、次を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK に含まれています。
+これらの優先順位の詳細については、Windows SDK[の「SetThreadPriority」](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)を参照してください。
 
-##  <a name="initinstance"></a>  CWinThread::InitInstance
+## <a name="cwinthreadinitinstance"></a><a name="initinstance"></a>::イニトインスタンス
 
-`InitInstance` ユーザー インターフェイス スレッドの新しいインスタンスを初期化するためにオーバーライドする必要があります。
+`InitInstance`ユーザー インターフェイス スレッドの新しいインスタンスを初期化するには、オーバーライドする必要があります。
 
 ```
 virtual BOOL InitInstance();
@@ -264,17 +264,17 @@ virtual BOOL InitInstance();
 
 ### <a name="return-value"></a>戻り値
 
-初期化が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+初期化が成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-通常、オーバーライドする`InitInstance`スレッドが最初に作成したときに完了する必要がありますのあるタスクを実行します。
+通常、スレッドが`InitInstance`最初に作成されたときに完了する必要があるタスクを実行するためにオーバーライドします。
 
-このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。 制御関数に渡されるでワーカー スレッドの初期化を実行[AfxBeginThread](application-information-and-management.md#afxbeginthread)します。
+このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。 [AfxBeginThread](application-information-and-management.md#afxbeginthread)に渡された制御関数で、ワーカー スレッドの初期化を実行します。
 
-##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage
+## <a name="cwinthreadisidlemessage"></a><a name="isidlemessage"></a>メッセージを見る
 
-保持するには、この関数をオーバーライド`OnIdle`特定のメッセージが生成された後に呼び出されるからです。
+特定のメッセージが生成`OnIdle`された後に呼び出されないようにするには、この関数をオーバーライドします。
 
 ```
 virtual BOOL IsIdleMessage(MSG* pMsg);
@@ -282,24 +282,24 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*<br/>
-処理されている現在のメッセージを指します。
+*Pmsg*<br/>
+処理中の現在のメッセージを指します。
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の値`OnIdle`処理後に呼び出す必要があるメッセージ。 それ以外の場合、0。
+メッセージの処理`OnIdle`後に呼び出す必要がある場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の実装は呼び出しません`OnIdle`冗長なマウス メッセージとメッセージのキャレットの点滅によって生成された後にします。
+デフォルトの実装では、カ`OnIdle`レットの点滅によって生成された冗長なマウス メッセージおよびメッセージの後には呼び出されません。
 
-アプリケーションが短い時間のタイマーを作成した場合`OnIdle`が呼び出される多くの場合、パフォーマンスの問題が発生します。 このようなアプリケーションのパフォーマンスを向上させるのには、オーバーライド`IsIdleMessage`アプリケーションの`CWinApp`-WM_TIMER メッセージを次のようにチェックするクラスを派生します。
+アプリケーションが短いタイマーを作成した場合`OnIdle`、頻繁に呼び出され、パフォーマンスの問題が発生します。 このようなアプリケーションのパフォーマンスを向上させるには、アプリケーションの`IsIdleMessage``CWinApp`派生クラスでオーバーライドして、次のようにWM_TIMERメッセージをチェックします。
 
 [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]
 
-この方法で WM_TIMER を処理すると、短いタイマーを使用するアプリケーションのパフォーマンスが向上します。
+この方法でWM_TIMERを処理すると、短いタイマーを使用するアプリケーションのパフォーマンスが向上します。
 
-##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete
+## <a name="cwinthreadm_bautodelete"></a><a name="m_bautodelete"></a>CWinThread::m_bAutoDelete
 
 スレッドの終了時に `CWinThread` オブジェクトを自動的に削除するかどうかを指定します。
 
@@ -307,74 +307,74 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
 BOOL m_bAutoDelete;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_bAutoDelete`データ メンバーは、BOOL 型のパブリック変数です。
+データ`m_bAutoDelete`メンバーは、BOOL 型のパブリック変数です。
 
-値`m_bAutoDelete`基になるスレッド ハンドルが閉じている方法には影響しません、ハンドルを閉じるタイミングは、影響が。 スレッド ハンドルは、`CWinThread` オブジェクトが破棄されるときに必ず閉じられます。
+の値は`m_bAutoDelete`、基になるスレッド ハンドルの閉じ方には影響しませんが、ハンドルを閉じるタイミングには影響を与えます。 スレッド ハンドルは、`CWinThread` オブジェクトが破棄されるときに必ず閉じられます。
 
-##  <a name="m_hthread"></a>  CWinThread::m_hThread
+## <a name="cwinthreadm_hthread"></a><a name="m_hthread"></a>スウィンスレッド::m_hThread
 
-これに接続されているスレッドへのハンドル`CWinThread`します。
+この`CWinThread`にアタッチされたスレッドへのハンドル。
 
 ```
 HANDLE m_hThread;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_hThread`データ メンバーが型ハンドルのパブリック変数です。 基になるカーネル スレッド オブジェクトが現在存在して、まだ閉じられていないハンドルがある場合にのみ有効です。
+データ`m_hThread`メンバーは、HANDLE 型のパブリック変数です。 この値は、基になるカーネル スレッド オブジェクトが現在存在し、ハンドルがまだ閉じていない場合にのみ有効です。
 
-CWinThread デストラクターは、CloseHandle で`m_hThread`します。 場合[m_bAutoDelete](#m_bautodelete)はスレッドが終了する場合に TRUE を、CWinThread オブジェクトが破棄される CWinThread オブジェクトとそのメンバー変数へのポインターが無効になります。 必要に応じて、`m_hThread`メンバーまたはシグナルを待機するスレッドの終了値を確認します。 CWinThread オブジェクトを保持してその`m_hThread`メンバー スレッドの実行の終了後も、および設定`m_bAutoDelete`を続行するスレッドの実行を許可する前に FALSE にします。 それ以外の場合、スレッドが終了、CWinThread オブジェクトを破棄し、それを使用する前に、ハンドルを終了します。 この手法を使用する場合は CWinThread オブジェクトの削除を担当します。
+CWinThread デストラクターは、 を`m_hThread`呼び出します。 スレッドが終了したときに[m_bAutoDelete](#m_bautodelete)が TRUE の場合、CWinThread オブジェクトは破棄され、CWinThread オブジェクトとそのメンバー変数へのポインターは無効になります。 メンバーは、スレッド`m_hThread`終了値をチェックするか、シグナルを待機する必要があります。 CWinThread オブジェクトとその`m_hThread`メンバーをスレッドの実行中および終了後に保持するには、スレッドの`m_bAutoDelete`実行を続行する前に FALSE に設定します。 そうしないと、スレッドが終了し、CWinThread オブジェクトを破棄し、ハンドルを閉じてから使用を試みることができます。 この方法を使用する場合は、CWinThread オブジェクトの削除を担当します。
 
-##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
+## <a name="cwinthreadm_nthreadid"></a><a name="m_nthreadid"></a>スウィンスレッド::m_nThreadID
 
-スレッドの ID は、これに接続されている`CWinThread`します。
+この`CWinThread`にアタッチされたスレッドの ID。
 
 ```
 DWORD m_nThreadID;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_nThreadID`データ メンバーは DWORD 型のパブリック変数です。 基になるカーネル スレッド オブジェクトが現在存在する場合にのみ有効です。
-詳細についても解説を参照してください[で](#m_hthread)有効期間。
+データ`m_nThreadID`メンバーは、DWORD 型のパブリック変数です。 基になるカーネル スレッド オブジェクトが現在存在する場合にのみ有効です。
+m_hThread[の有効期間](#m_hthread)に関する解説も参照してください。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[AfxGetThread](application-information-and-management.md#afxgetthread)します。
+  [AfxGetThread](application-information-and-management.md#afxgetthread)の例を参照してください。
 
-##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd
+## <a name="cwinthreadm_pactivewnd"></a><a name="m_pactivewnd"></a>スウィンスレッド::m_pActiveWnd
 
-このデータ メンバーを使用すると、スレッドのアクティブなウィンドウのオブジェクトへのポインターを格納できます。
+このデータ メンバーを使用して、スレッドのアクティブ ウィンドウ オブジェクトへのポインターを格納します。
 
 ```
 CWnd* m_pActiveWnd;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Microsoft Foundation Class ライブラリは自動的に終了スレッドによって参照されるウィンドウと`m_pActiveWnd`が閉じられました。 このスレッドは、アプリケーションのプライマリ スレッドは、アプリケーションも終了します。 このデータ メンバーが null の場合、アプリケーションのアクティブなウィンドウの場合`CWinApp`オブジェクトは継承されます。 `m_pActiveWnd` 型のパブリック変数`CWnd*`します。
+参照先のウィンドウが閉じられると、Microsoft Foundation クラス ライブラリ`m_pActiveWnd`は自動的にスレッドを終了します。 このスレッドがアプリケーションのプライマリ スレッドである場合、アプリケーションも終了します。 このデータ メンバーが NULL の場合、アプリケーションのオブジェクトの`CWinApp`アクティブ ウィンドウが継承されます。 `m_pActiveWnd`型のパブリック変数です`CWnd*`。
 
-オーバーライドする場合にこのメンバー変数を設定する通常、`InitInstance`します。 ワーカー スレッドでは、このデータ メンバーの値は親スレッドから継承されます。
+通常、このメンバー変数は、 をオーバーライド`InitInstance`するときに設定します。 ワーカー スレッドでは、このデータ メンバーの値は親スレッドから継承されます。
 
-##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd
+## <a name="cwinthreadm_pmainwnd"></a><a name="m_pmainwnd"></a>次のスレッド::m_pMainWnd
 
-このデータ メンバーを使用すると、スレッドのメイン ウィンドウのオブジェクトへのポインターを格納できます。
+このデータ メンバーを使用して、スレッドのメイン ウィンドウ オブジェクトへのポインターを格納します。
 
 ```
 CWnd* m_pMainWnd;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Microsoft Foundation Class ライブラリは自動的に終了スレッドによって参照されるウィンドウと`m_pMainWnd`が閉じられました。 このスレッドは、アプリケーションのプライマリ スレッドは、アプリケーションも終了します。 このデータ メンバーが null の場合、アプリケーションのメイン ウィンドウの場合`CWinApp`オブジェクトは、スレッドを終了するタイミングを決定するために使用されます。 `m_pMainWnd` 型のパブリック変数`CWnd*`します。
+参照先のウィンドウが閉じられると、Microsoft Foundation クラス ライブラリ`m_pMainWnd`は自動的にスレッドを終了します。 このスレッドがアプリケーションのプライマリ スレッドである場合、アプリケーションも終了します。 このデータ メンバーが NULL の場合、アプリケーションのオブジェクトの`CWinApp`メイン ウィンドウを使用して、スレッドを終了するタイミングが決定されます。 `m_pMainWnd`型のパブリック変数です`CWnd*`。
 
-オーバーライドする場合にこのメンバー変数を設定する通常、`InitInstance`します。 ワーカー スレッドでは、このデータ メンバーの値は親スレッドから継承されます。
+通常、このメンバー変数は、 をオーバーライド`InitInstance`するときに設定します。 ワーカー スレッドでは、このデータ メンバーの値は親スレッドから継承されます。
 
-##  <a name="onidle"></a>  CWinThread::OnIdle
+## <a name="cwinthreadonidle"></a><a name="onidle"></a>::オンアイドル
 
-アイドル状態時の処理を実行するには、このメンバー関数をオーバーライドします。
+アイドル時間処理を実行するには、このメンバー関数をオーバーライドします。
 
 ```
 virtual BOOL OnIdle(LONG lCount);
@@ -382,28 +382,28 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>パラメーター
 
-*lCount*<br/>
-カウンターは毎回増加`OnIdle`スレッドのメッセージ キューが空のときに呼び出されます。 この数は、新しいメッセージが処理されるたびに 0 にリセットされます。 使用することができます、 *lCount*相対スレッドがアイドル状態メッセージを処理することがなく時間の長さを決定するパラメーター。
+*Lcount*<br/>
+スレッドのメッセージ キューが`OnIdle`空の場合は、毎回インクリメントされたカウンタが呼び出されます。 このカウントは、新しいメッセージが処理されるたびに 0 にリセットされます。 *lCount*パラメーターを使用して、メッセージを処理せずにスレッドがアイドル状態になった時間の相対的な長さを決定できます。
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の場合よりアイドル処理時間を受信するにはこれ以上アイドル状態の処理時間が必要な場合は 0 を返します。
+より多くのアイドル処理時間を受け取る場合は 0 以外の値を指定します。アイドル処理時間がこれ以上必要ない場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnIdle` スレッドのメッセージ キューが空の場合、既定のメッセージ ループで呼びます。 オーバーライドを使用して、独自の背景のアイドル処理を呼び出します。
+`OnIdle`は、スレッドのメッセージ キューが空の場合に、既定のメッセージ ループで呼び出されます。 オーバーライドを使用して、独自のバックグラウンド アイドル ハンドラ タスクを呼び出します。
 
-`OnIdle` アイドル状態の追加の処理時間が必要ないことを示すために 0 を返す必要があります。 *LCount*パラメーターはたびに増分`OnIdle`メッセージ キューが空で、新しいメッセージが処理されるたびに 0 にリセットするときに呼び出されます。 この数に基づく、別のアイドル処理ルーチンを呼び出すことができます。
+`OnIdle`追加のアイドル処理時間が必要な場合は 0 を返す必要があります。 *lCount*パラメーターは、メッセージ`OnIdle`・キューが空のときに呼び出されるたびにインクリメントされ、新しいメッセージが処理されるたびに 0 にリセットされます。 このカウントに基づいて、さまざまなアイドル ルーチンを呼び出すことができます。
 
-このメンバー関数の既定の実装では、一時オブジェクトとメモリから未使用のダイナミック リンク ライブラリを解放します。
+このメンバー関数の既定の実装では、一時オブジェクトと未使用のダイナミック リンク ライブラリがメモリから解放されます。
 
 このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。
 
-までのメッセージを処理できないため、`OnIdle`戻り値は、この関数で時間のかかるタスクは行いません。
+アプリケーションは戻るまで`OnIdle`メッセージを処理できないため、この関数では時間のかかるタスクを実行しないでください。
 
-##  <a name="operator_handle"></a>  CWinThread::operator HANDLE
+## <a name="cwinthreadoperator-handle"></a><a name="operator_handle"></a>ハンドルを操作します。
 
-ハンドルを取得、`CWinThread`オブジェクト。
+オブジェクトのハンドルを`CWinThread`取得します。
 
 ```
 operator HANDLE() const;
@@ -411,15 +411,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、スレッド オブジェクトのハンドルそれ以外の場合は NULL です。
+成功した場合は、スレッド オブジェクトのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows Api を直接呼び出すには、ハンドルを使用します。
+ハンドルを使用して、Windows API を直接呼び出します。
 
-##  <a name="postthreadmessage"></a>  CWinThread::PostThreadMessage
+## <a name="cwinthreadpostthreadmessage"></a><a name="postthreadmessage"></a>:Pソストスレッドメッセージ
 
-別のユーザー定義メッセージを投稿すると呼ばれる`CWinThread`オブジェクト。
+ユーザー定義メッセージを別`CWinThread`のオブジェクトにポストするために呼び出されます。
 
 ```
 BOOL PostThreadMessage(
@@ -430,11 +430,11 @@ BOOL PostThreadMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*<br/>
+*メッセージ*<br/>
 ユーザー定義メッセージの ID。
 
 *wParam*<br/>
-最初のメッセージ パラメーター。
+最初のメッセージ パラメータ。
 
 *lParam*<br/>
 2 番目のメッセージ パラメーター。
@@ -443,16 +443,16 @@ BOOL PostThreadMessage(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-投稿されたメッセージは、メッセージ マップ マクロによって、適切なメッセージ ハンドラーにマップされます。
+ポストされたメッセージは、メッセージ マップ マクロ ON_THREAD_MESSAGEによって適切なメッセージ ハンドラーにマップされます。
 
 > [!NOTE]
-> 呼び出すと[次](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)メッセージは、スレッドのメッセージ キューに格納されます。 ただし、この方法が記載されたメッセージは、ウィンドウに関連付けられていないため、MFC はディスパッチにメッセージまたはコマンドのハンドラーにします。 これらのメッセージを処理するためにオーバーライド、 `PreTranslateMessage()` CWinApp から派生したは、関数クラスし、手動でメッセージを処理します。
+> [を](/windows/win32/api/winuser/nf-winuser-postthreadmessagew)呼び出すと、メッセージはスレッドのメッセージ キューに配置されます。 ただし、この方法でポストされたメッセージはウィンドウに関連付けられていないため、MFC はメッセージやコマンド ハンドラーにディスパッチしません。 これらのメッセージを処理するには、CWinApp`PreTranslateMessage()`派生クラスの関数をオーバーライドし、メッセージを手動で処理します。
 
-##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
+## <a name="cwinthreadpretranslatemessage"></a><a name="pretranslatemessage"></a>メッセージを再変換:P
 
-Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)します。
+ウィンドウ メッセージが Windows 関数にディスパッチされる前に、ウィンドウ[メッセージ](/windows/win32/api/winuser/nf-winuser-translatemessage)をフィルター[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)処理するには、この関数をオーバーライドします。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -460,20 +460,20 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*<br/>
-指す、 [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを格納しています。
+*Pmsg*<br/>
+処理するメッセージを含む[MSG 構造体](/windows/win32/api/winuser/ns-winuser-msg)へのポイント。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージで完全に処理された場合は 0 以外`PreTranslateMessage`さらに処理する必要があります。 通常の方法で、メッセージを処理する必要がありますがある場合は 0 します。
+メッセージが完全に`PreTranslateMessage`処理され、それ以上処理されない場合は、0 以外の値を指定します。 メッセージを通常の方法で処理する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。
 
-##  <a name="processmessagefilter"></a>  CWinThread::ProcessMessageFilter
+## <a name="cwinthreadprocessmessagefilter"></a><a name="processmessagefilter"></a>:Pロセスメッセージフィルタ
 
-フレームワークのフック関数は、特定の Windows メッセージに応答をフィルター処理には、このメンバー関数を呼び出します。
+フレームワークのフック関数は、特定の Windows メッセージをフィルター処理して応答するために、このメンバー関数を呼び出します。
 
 ```
 virtual BOOL ProcessMessageFilter(
@@ -483,25 +483,25 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>パラメーター
 
-*code*<br/>
-フック コードを指定します。 このメンバー関数では、コードを使用して、処理する方法を決定*lpMsg します。*
+*コード*<br/>
+フック コードを指定します。 このメンバー関数は、コードを使用して *、lpMsg*の処理方法を決定します。
 
-*lpMsg*<br/>
-Windows へのポインター [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)します。
+*をクリックします。*<br/>
+Windows [MSG 構造体](/windows/win32/api/winuser/ns-winuser-msg)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが処理された場合は 0 以外それ以外の場合 0 を返します。
+メッセージが処理される場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションの通常のメッセージを送信する前に、イベントを処理するフック関数を処理します。
+フック関数は、イベントをアプリケーションの通常のメッセージ処理に送信する前に処理します。
 
-この高度な機能をオーバーライドする場合は、フレームワークを維持するために基本クラスのバージョンを呼び出すことを確認する処理をフックします。
+この高度な機能をオーバーライドする場合は、フレームワークのフック処理を維持するために、必ず基本クラスバージョンを呼び出してください。
 
-##  <a name="processwndprocexception"></a>  CWinThread::ProcessWndProcException
+## <a name="cwinthreadprocesswndprocexception"></a><a name="processwndprocexception"></a>:Pロセスウンドプロセス例外
 
-フレームワークは、ハンドラーは、スレッドのメッセージまたはコマンド ハンドラーのいずれかでスローされる例外をキャッチしませんたびに、このメンバー関数を呼び出します。
+スレッドのメッセージまたはコマンド ハンドラーのいずれかでスローされた例外をハンドラーがキャッチしない場合は、フレームワークがこのメンバー関数を呼び出します。
 
 ```
 virtual LRESULT ProcessWndProcException(
@@ -511,48 +511,48 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>パラメーター
 
-*e*<br/>
-未処理の例外を指します。
+*E*<br/>
+ハンドルされない例外へのポイント。
 
-*pMsg*<br/>
-指す、 [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)フレームワークが例外をスローする原因となった windows メッセージに関する情報を格納します。
+*Pmsg*<br/>
+フレームワークが例外をスローする原因となったウィンドウ メッセージに関する情報を含む[MSG 構造体](/windows/win32/api/winuser/ns-winuser-msg)へのポイント。
 
 ### <a name="return-value"></a>戻り値
 
-WM_CREATE 例外が生成される場合は-1それ以外の場合 0 を返します。
+WM_CREATE例外が生成された場合は -1。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数を直接呼び出さないでください。
 
-このメンバー関数の既定の実装では、次のメッセージから生成される例外のみを処理します。
+このメンバー関数の既定の実装では、次のメッセージから生成された例外のみを処理します。
 
-|コマンド|アクション|
+|command|アクション|
 |-------------|------------|
-|WM_CREATE|失敗します。|
-|WM_PAINT|別の WM_PAINT メッセージから生成されるように、影響を受けるウィンドウを検証します。|
+|Wm_create|失敗。|
+|Wm_paint|影響を受けるウィンドウを検証し、別のWM_PAINTメッセージが生成されないようにします。|
 
-グローバルに、例外の処理を提供するには、このメンバー関数をオーバーライドします。 既定の動作を表示しようとする場合にのみ、基本機能を呼び出します。
+例外のグローバル処理を提供するには、このメンバー関数をオーバーライドします。 既定の動作を表示する場合にのみ、基本機能を呼び出します。
 
-このメンバー関数は、メッセージ ポンプ スレッドでのみ使用されます。
+このメンバー関数は、メッセージ ポンプを持つスレッドでのみ使用されます。
 
-##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
+## <a name="cwinthreadpumpmessage"></a><a name="pumpmessage"></a>:Pウンプメッセージ
 
-スレッドのメッセージ ループが含まれています。
+スレッドのメッセージ ループを格納します。
 
 ```
 virtual BOOL PumpMessage();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`PumpMessage` スレッドのメッセージ ループが含まれています。 `PumpMessage` によって呼び出される`CWinThread`スレッドのメッセージをポンプします。 呼び出すことができます`PumpMessage`強制的に処理されるメッセージを上書きするか直接`PumpMessage`をその既定の動作を変更します。
+`PumpMessage`にはスレッドのメッセージ ループが含まれています。 `PumpMessage`は、スレッド`CWinThread`のメッセージを送り出すために呼び出されます。 メッセージを強制的`PumpMessage`に処理するために直接呼び出すか、またはオーバーライド`PumpMessage`してデフォルトの動作を変更できます。
 
-呼び出す`PumpMessage`直接あり高度なユーザーのみ、既定の動作のオーバーライドはお勧めします。
+直接`PumpMessage`呼び出しを行い、既定の動作をオーバーライドすることは、上級ユーザーにのみ推奨されます。
 
-##  <a name="resumethread"></a>  CWinThread::ResumeThread
+## <a name="cwinthreadresumethread"></a><a name="resumethread"></a>スレッドを再開します。
 
-によって中断されたスレッドの実行を再開すると呼ばれる、 [SuspendThread](#suspendthread)メンバー関数、または CREATE_SUSPENDED フラグで作成されたスレッド。
+[SuspendThread](#suspendthread)メンバー関数によって中断されたスレッド、またはCREATE_SUSPENDED フラグで作成されたスレッドの実行を再開するために呼び出されます。
 
 ```
 DWORD ResumeThread();
@@ -560,13 +560,13 @@ DWORD ResumeThread();
 
 ### <a name="return-value"></a>戻り値
 
-スレッドが前のカウントが成功した場合の中断`0xFFFFFFFF`それ以外の場合。 戻り値が 0 の場合、現在のスレッドが中断されません。 戻り値が 1 つの場合は、スレッドが中断されたが再起動されます。 戻り値より大きい値を 1 つは、スレッドが中断しています。
+成功した場合はスレッドの以前の中断カウント。`0xFFFFFFFF`それ以外の場合。 戻り値が 0 の場合、現在のスレッドは中断されていません。 戻り値が 1 の場合、スレッドは中断されましたが、現在は再開されます。 1 より大きい戻り値は、スレッドが中断されたままであることを意味します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のスレッドの中断カウントが 1 つ減少します。 中断カウントが短縮された場合、スレッドを対 0 の場合に、実行を再開しますそれ以外の場合、スレッドが中断しています。
+現在のスレッドの中断カウントは 1 つ減らされます。 中断カウントがゼロに減少した場合、スレッドは実行を再開します。それ以外の場合、スレッドは中断されたままです。
 
-##  <a name="run"></a>  CWinThread::Run
+## <a name="cwinthreadrun"></a><a name="run"></a>実行
 
 ユーザー インターフェイス スレッドの既定のメッセージ ループを提供します。
 
@@ -576,19 +576,19 @@ virtual int Run();
 
 ### <a name="return-value"></a>戻り値
 
-**Int**スレッドによって返される値。 この値は、呼び出すことによって取得できる[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)します。
+スレッドによって返される**int**値。 この値は、[呼](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)び出すことによって取得できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Run` 取得し、アプリケーションが受信するまで、Windows メッセージをディスパッチする[WM_QUIT](/windows/desktop/winmsg/wm-quit)メッセージ。 スレッドのメッセージ キューにメッセージがない場合`Run`呼び出し`OnIdle`アイドル処理を実行します。 受信メッセージに移動、 [PreTranslateMessage](#pretranslatemessage)メンバー関数の特別な処理と、Windows 関数に[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)標準キーボード変換をします。 最後に、 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数が呼び出されます。
+`Run`アプリケーションが[WM_QUIT](/windows/win32/winmsg/wm-quit)メッセージを受信するまで、Windows メッセージを取得してディスパッチします。 スレッドのメッセージ キューに現在メッセージが含まれている場合`Run`は`OnIdle`、アイドル時間処理を実行する呼び出し。 受信メッセージは、特別な処理のために[PreTranslateMessage](#pretranslatemessage)メンバー関数に移動し、標準のキーボード変換の Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)に移動します。 最後に、[ディスパッチ メッセージ](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数が呼び出されます。
 
-`Run` オーバーライドされることはほとんどありませんが、特別な動作を実装するためにオーバーライドできます。
+`Run`めったにオーバーライドされませんが、特別な動作を実装するためにオーバーライドできます。
 
 このメンバー関数は、ユーザー インターフェイス スレッドでのみ使用されます。
 
-##  <a name="setthreadpriority"></a>  CWinThread::SetThreadPriority
+## <a name="cwinthreadsetthreadpriority"></a><a name="setthreadpriority"></a>スレッドの優先順位を設定します。
 
-この関数は、現在のスレッドの優先度クラス内での優先度レベルを設定します。
+この関数は、その優先順位クラス内の現在のスレッドの優先順位を設定します。
 
 ```
 BOOL SetThreadPriority(int nPriority);
@@ -596,8 +596,8 @@ BOOL SetThreadPriority(int nPriority);
 
 ### <a name="parameters"></a>パラメーター
 
-*nPriority*<br/>
-優先度クラス内で新しいスレッドの優先順位を指定します。 このパラメーターは、最も高い優先順位の降順で表示される、次の値のいずれかを指定する必要があります。
+*n優先順位*<br/>
+その優先順位クラス内の新しいスレッドの優先順位レベルを指定します。 このパラメーターは、優先順位が最も高いものから最低の値にリストされている次のいずれかの値である必要があります。
 
 - THREAD_PRIORITY_TIME_CRITICAL
 
@@ -613,19 +613,19 @@ BOOL SetThreadPriority(int nPriority);
 
 - THREAD_PRIORITY_IDLE
 
-これらの優先順位の詳細については、次を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK に含まれています。
+これらの優先順位の詳細については、Windows SDK[の「SetThreadPriority」](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+関数が正常に終了した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-後にのみ呼び出すことができます[CreateThread](#createthread)が正常に終了します。
+このメソッドは[、CreateThread](#createthread)が正常に戻った後にのみ呼び出すことができます。
 
-##  <a name="suspendthread"></a>  CWinThread::SuspendThread
+## <a name="cwinthreadsuspendthread"></a><a name="suspendthread"></a>スレッドを中断します。
 
-インクリメントの現在のスレッドの数を一時停止します。
+現在のスレッドの中断カウントをインクリメントします。
 
 ```
 DWORD SuspendThread();
@@ -633,15 +633,15 @@ DWORD SuspendThread();
 
 ### <a name="return-value"></a>戻り値
 
-スレッドが前のカウントが成功した場合の中断`0xFFFFFFFF`それ以外の場合。
+成功した場合はスレッドの以前の中断カウント。`0xFFFFFFFF`それ以外の場合。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-任意のスレッドにゼロよりも中断カウントがある場合は、そのスレッドは実行されません。 スレッドを再開することができます、 [ResumeThread](#resumethread)メンバー関数。
+いずれかのスレッドの中断カウントがゼロより大きい場合、そのスレッドは実行されません。 スレッドは[、ResumeThread](#resumethread)メンバー関数を呼び出すことによって再開できます。
 
 ## <a name="see-also"></a>関連項目
 
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)

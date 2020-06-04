@@ -8,18 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182202"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ
 
-Microsoft を使用するC++コンパイラ オプション[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を設定する、[自動並行化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)出力の推論コードとそのアクティビティに関する情報メッセージ。 この記事では、理由コードとメッセージについて説明します。
+Microsoft C++コンパイラオプションの[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を使用して、[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)を設定して、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
 
-## <a name="BKMK_InformationalMessages"></a> 情報メッセージ
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>情報メッセージ
 
 指定したレポート レベルに応じて、次のいずれかの情報メッセージがループごとに表示されます。
 
@@ -33,15 +33,15 @@ Microsoft を使用するC++コンパイラ オプション[/Qpar-report](../../
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-次のセクションでは、並列化とベクター化の考えられる理由コードを一覧表示します。
+次のセクションでは、並行化とベクター化の考えられる理由コードを示します。
 
-## <a name="BKMK_ReasonCode50x"></a> 5 xx 理由コード
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>5xx 理由コード
 
-5 つ*xx*理由コードは並列化とベクター化の両方に適用されます。
+5*xx*の理由コードは、並行化とベクター化の両方に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
-|500|いくつかのケースをカバーする、一般的なメッセージ-たとえば、ループ内に複数の exit またはループ ヘッダーが誘導変数をインクリメントして終了しません。|
+|500|複数のケースを対象とする汎用メッセージ。たとえば、ループに複数の終了が含まれている場合や、ループヘッダーが誘導変数をインクリメントして終了しない場合などです。|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> 10 xx 系理由コード
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>10xx 理由コード
 
-10*xx*理由コードは、並列化に適用されます。
+10*xx*の理由コードが並行化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> 11xx 理由コード
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>11xx 理由コード
 
-11*xx*はベクター化に理由コードが適用されます。
+11*xx*の理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> 12xx 理由コード
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>12 xx 理由コード
 
-12*xx*はベクター化に理由コードが適用されます。
+12*xx*理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> 13xx 理由コード
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>13xx 理由コード
 
-13*xx*はベクター化に理由コードが適用されます。
+13*xx*の理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> 14xx 理由コード
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>14xx 理由コード
 
-14*xx*理由コードがベクター化と互換性がない一部のオプションを指定した場合に発生します。
+14*xx*理由コードは、ベクター化と互換性のないオプションが指定されている場合に発生します。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -834,7 +834,7 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> 15xx 理由コード
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>15xx 理由コード
 
 15*xx*理由コードはエイリアスに適用されます。 メモリ内の同じ位置に 2 つの異なる名前でアクセスできるときにエイリアスが使用されます。
 
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
-[自動並行化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[自動ベクター化では、Visual Studio 2012 – 概要](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-report (自動並行化レポート作成レベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Visual Studio 2012 の自動ベクター化–概要](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma ループ ()](../../preprocessor/loop.md) \
+[/Q オプション (低レベルの操作)](../../build/reference/q-options-low-level-operations.md) \
+[/Qpar-report (自動並行化レポートレベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (自動ベクター化レポート作成レベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

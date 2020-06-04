@@ -1,5 +1,5 @@
 ---
-title: CComCachedTearOffObject クラス
+title: クラスをキャッシュします。
 ms.date: 11/04/2016
 f1_keywords:
 - CComCachedTearOffObject
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 019b90c932de144d05fbf05f3ca339f4e5d6edd1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259678"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748105"
 ---
-# <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject クラス
+# <a name="ccomcachedtearoffobject-class"></a>クラスをキャッシュします。
 
-このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)ティアオフ インターフェイス。
+このクラスは、ティアオフ インターフェイスの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,8 +39,8 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>パラメーター
 
-*含まれています。*<br/>
-ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。
+*含ま れる*<br/>
+ティアオフ クラスの派生`CComTearOffObjectBase`クラスと、ティアオフ オブジェクトでサポートするインターフェイス。
 
 ## <a name="members"></a>メンバー
 
@@ -48,38 +48,38 @@ public CComObjectRootEx<contained
 
 |名前|説明|
 |----------|-----------------|
-|[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|コンストラクターです。|
-|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|デストラクターです。|
+|[オブジェクト::CComキャッシュティアオフオブジェクト](#ccomcachedtearoffobject)|コンストラクターです。|
+|[オブジェクト::~CComキャッシュティアオフオブジェクト](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComCachedTearOffObject::AddRef](#addref)|参照カウントをインクリメントする`CComCachedTearOffObject`オブジェクト。|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|呼び出し、 `m_contained::FinalConstruct` (ティアオフ クラスのメソッド)。|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|呼び出し、 `m_contained::FinalRelease` (ティアオフ クラスのメソッド)。|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|ポインターを返します、`IUnknown`の`CComCachedTearOffObject`オブジェクト、または、ティアオフ クラスで要求されたインターフェイス (クラス`contained`)。|
-|[CComCachedTearOffObject::Release](#release)|参照カウントをデクリメントを`CComCachedTearOffObject`オブジェクトし、参照カウントが 0 の場合は、破棄されます。|
+|[オブジェクトをキャッシュします。](#addref)|オブジェクトの参照カウントを`CComCachedTearOffObject`インクリメントします。|
+|[オブジェクト::ファイナルコンストラクト](#finalconstruct)|を呼`m_contained::FinalConstruct`び出します (ティアオフ クラスのメソッド)。|
+|[オブジェクト::最終リリース](#finalrelease)|を呼`m_contained::FinalRelease`び出します (ティアオフ クラスのメソッド)。|
+|[オブジェクト::クエリインターフェイス](#queryinterface)|オブジェクトの を`IUnknown`指すポインター、またはティアオフ クラス (クラス`contained`) の要求されたインターフェイスへのポインターを返します。 `CComCachedTearOffObject`|
+|[オブジェクト::リリース](#release)|`CComCachedTearOffObject`オブジェクトの参照カウントを減算し、参照カウントが 0 の場合は破棄します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|A`CComContainedObject`ティアオフ クラスから派生したオブジェクト (クラス`contained`)。|
+|[オブジェクト::m_contained](#m_contained)|ティア`CComContainedObject`オフ クラス (クラス`contained`) から派生したオブジェクト。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComCachedTearOffObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)ティアオフ インターフェイス。 このクラスとは異なります`CComTearOffObject`で`CComCachedTearOffObject`独自`IUnknown`所有者オブジェクトの別、 `IUnknown` (所有者は、ティアオフが作成される対象のオブジェクト)。 `CComCachedTearOffObject` 独自に維持で参照カウントの`IUnknown`し、参照カウントがゼロ自体を削除します。 ただし、そのティアオフのいずれかを照会する場合は、インターフェイス、所有者オブジェクトの参照カウント`IUnknown`が増分されます。
+`CComCachedTearOffObject`ティアオフ インターフェイスの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。 `CComTearOffObject`このクラス`CComCachedTearOffObject`は、所有者オブジェクトとは別に`IUnknown`独自の`IUnknown`のクラス (所有者はティアオフを作成するオブジェクト) を持つクラスとは異なります。 `CComCachedTearOffObject`は、その参照カウントを保持`IUnknown`し、参照カウントがゼロになると、それ自体を削除します。 ただし、そのティアオフ インターフェイスのいずれかを照会すると、所有者オブジェクトの参照カウント`IUnknown`がインクリメントされます。
 
-場合、`CComCachedTearOffObject`オブジェクト、ティアオフを実装することを既にインスタンス化、およびティアオフ インターフェイスは、ここでも、同じクエリ`CComCachedTearOffObject`オブジェクトが再利用します。 これに対して、ティアオフ インターフェイスによって実装を`CComTearOffObject`、所有者オブジェクトを通じてをもう一度照会別`CComTearOffObject`がインスタンス化されます。
+ティアオフ`CComCachedTearOffObject`を実装するオブジェクトが既にインスタンス化されている場合、ティアオフ インターフェイスが再び照会されると、同じ`CComCachedTearOffObject`オブジェクトが再利用されます。 これに対し、a によって実装されたティアオフ インターフェイス`CComTearOffObject`が、所有者オブジェクトを通じて再びクエリを`CComTearOffObject`実行した場合、別のインターフェイスがインスタンス化されます。
 
-所有者クラスを実装する必要があります`FinalRelease`と呼び出し`Release`でキャッシュされた`IUnknown`の`CComCachedTearOffObject`、参照カウントがデクリメントされます。 これにより、`CComCachedTearOffObject`の`FinalRelease`に呼び出され、ティアオフを削除します。
+owner クラスは、`FinalRelease`その参照`Release`カウントを`IUnknown`減らすキャッシュされた`CComCachedTearOffObject`を実装して呼び出す必要があります。 これにより`CComCachedTearOffObject`、's`FinalRelease`が呼び出され、ティアオフが削除されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CComObjectRootBase`
 
-[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+[ココムオブジェクトルート](../../atl/reference/ccomobjectrootex-class.md)
 
 `IUnknown`
 
@@ -89,9 +89,9 @@ public CComObjectRootEx<contained
 
 **ヘッダー:** atlcom.h
 
-##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
+## <a name="ccomcachedtearoffobjectaddref"></a><a name="addref"></a>オブジェクトをキャッシュします。
 
-参照カウントをインクリメント、`CComCachedTearOffObject`を 1 つのオブジェクト。
+オブジェクトの参照カウントを`CComCachedTearOffObject`1 ずつインクリメントします。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,9 +99,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-診断に役立ちますし、テスト可能性のある値。
+診断とテストに役立つ値。
 
-##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>オブジェクト::CComキャッシュティアオフオブジェクト
 
 コンストラクターです。
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>パラメーター
 
-*現在価値*<br/>
-[in]ポインター、`IUnknown`の`CComCachedTearOffObject`します。
+*pv*<br/>
+[in]の への`IUnknown`ポインター `CComCachedTearOffObject`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-初期化します、`CComContainedObject`メンバー、[で呼び出され](#m_contained)します。
+メンバを`CComContainedObject`初期化[m_containedします](#m_contained)。
 
-##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>オブジェクト::~CComキャッシュティアオフオブジェクト
 
 デストラクターです。
 
@@ -126,13 +126,13 @@ CComCachedTearOffObject(void* pv);
 ~CComCachedTearOffObject();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放[FinalRelease](#finalrelease)します。
+割り当てられたすべてのリソースを解放し[、FinalRelease](#finalrelease)を呼び出します。
 
-##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
+## <a name="ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>オブジェクト::ファイナルコンストラクト
 
-呼び出し`m_contained::FinalConstruct`を作成する`m_contained`、 `CComContainedObject` <  `contained`> ティアオフ クラスによって実装されるインターフェイスへのアクセスに使用されるオブジェクト。
+を`m_contained::FinalConstruct`作成`m_contained`する呼び`CComContainedObject`< `contained`出し、ティアオフ クラスによって実装されるインターフェイスにアクセスするために使用される> オブジェクト。
 
 ```
 HRESULT FinalConstruct();
@@ -142,17 +142,17 @@ HRESULT FinalConstruct();
 
 標準の HRESULT 値。
 
-##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
+## <a name="ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>オブジェクト::最終リリース
 
-呼び出し`m_contained::FinalRelease`を解放する`m_contained`、 `CComContainedObject` <  `contained`> オブジェクト。
+free`m_contained::FinalRelease``m_contained`を呼び`CComContainedObject`< `contained`出して、>オブジェクトを呼び出します。
 
-```
+```cpp
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
+## <a name="ccomcachedtearoffobjectm_contained"></a><a name="m_contained"></a>オブジェクト::m_contained
 
-A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)ティアオフ クラスから派生したオブジェクト。
+ティアオフ クラスから派生した[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)オブジェクト。
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,14 +160,14 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>パラメーター
 
-*含まれています。*<br/>
-[in]ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。
+*含ま れる*<br/>
+[in]ティアオフ クラスの派生`CComTearOffObjectBase`クラスと、ティアオフ オブジェクトでサポートするインターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メソッド`m_contained`継承ではキャッシュされたティアオフ オブジェクトのティアオフ クラスで、ティアオフ インターフェイスにアクセスするため`QueryInterface`、 `FinalConstruct`、および`FinalRelease`します。
+メソッド`m_contained`の継承は、キャッシュされたティアオフ オブジェクト 、 `QueryInterface`、、`FinalConstruct`および`FinalRelease`を通じて、ティアオフ クラスのティアオフ インターフェイスにアクセスするために使用されます。
 
-##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
+## <a name="ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>オブジェクト::クエリインターフェイス
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -177,23 +177,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*<br/>
-[in]要求されているインターフェイスの GUID です。
+*Iid*<br/>
+[in]要求されているインターフェイスの GUID。
 
-*ppvObject*<br/>
-[out]によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
+*オブジェクト*<br/>
+[アウト]*iid*で識別されるインターフェイス ポインタへのポインタ、 またはインターフェイスが見つからない場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-要求されたインターフェイスがある場合`IUnknown`へのポインターを返します、`CComCachedTearOffObject`の独自`IUnknown`し、参照カウントをインクリメントします。 それ以外の場合、ティアオフ クラスを使用してインターフェイスを照会、 [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)から継承されたメソッド`CComObjectRootEx`します。
+要求されたインターフェイスが`IUnknown`の場合は、自身`IUnknown`の`CComCachedTearOffObject`ポインタを返し、参照カウントをインクリメントします。 それ以外の場合は、から継承された[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)メソッドを使用して、ティアオフ`CComObjectRootEx`クラスのインターフェイスのクエリを実行します。
 
-##  <a name="release"></a>  CComCachedTearOffObject::Release
+## <a name="ccomcachedtearoffobjectrelease"></a><a name="release"></a>オブジェクト::リリース
 
-参照カウントを 1 デクリメントし、参照カウントが 0 の場合は、削除、`CComCachedTearOffObject`オブジェクト。
+参照カウントを 1 減算し、参照カウントが 0 の場合はオブジェクトを`CComCachedTearOffObject`削除します。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,10 +201,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-非デバッグ ビルドで常に 0 を返します。 デバッグ ビルドでは、テストや診断に使用する値を返します。
+非デバッグ ビルドでは、常に 0 を返します。 デバッグ ビルドでは、診断やテストに役立つ値を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComTearOffObject クラス](../../atl/reference/ccomtearoffobject-class.md)<br/>
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[クラス](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

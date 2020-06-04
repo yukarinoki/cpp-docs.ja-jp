@@ -7,8 +7,6 @@ f1_keywords:
 - memory/std::hash
 - string/std::hash
 - system_error/std::hash
-- thread/std::hash
-- typeindex/std::hash
 - vector/std::hash
 - XSTDDEF/std::hash
 - xstring/std::hash
@@ -23,12 +21,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aa51e56197ba79afbe2bd2597596c52b23a4f65b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448821"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446585"
 ---
 # <a name="hash-class"></a>hash クラス
 
@@ -43,9 +41,9 @@ struct hash {
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-この関数オブジェクトは、*Ty* 型の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。 メンバー `operator()` は、テンプレート クラス `unordered_map`、`unordered_multimap`、`unordered_set`、および `unordered_multiset` での使用に適している *val* のハッシュ コードを返します。 標準ライブラリでは、基本型の特殊化が提供されています。*Ty*は、ポインター型や列挙型など、任意のスカラー型にすることができます。 また、ライブラリ型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant`、および `vector<bool>` の特殊化があります。
+この関数オブジェクトは、*Ty* 型の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。 メンバー `operator()` は、クラステンプレート `unordered_map`、`unordered_multimap`、`unordered_set`、および `unordered_multiset`で使用するのに適した、 *val*のハッシュコードを返します。 標準ライブラリには、基本型の特殊化が用意されています。*Ty* は、ポインター型や列挙型など、任意のスカラー型にすることができます。 また、ライブラリ型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant`、および `vector<bool>` の特殊化があります。
 
 ## <a name="example"></a>例
 
@@ -70,13 +68,13 @@ int main()
 3
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<functional>
+**ヘッダー:** \<機能 >
 
 **名前空間:** std
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [unordered_multimap クラス](../standard-library/unordered-multimap-class.md)\

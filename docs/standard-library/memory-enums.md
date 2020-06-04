@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: b2f5b50dc1344b95e88742d346e32fc55f821336
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 78cdb0fe6c0d9487500804d21fe4ad4870fcad0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243849"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425533"
 ---
 # <a name="ltmemorygt-enums"></a>&lt;memory&gt; 列挙型
 
-## <a name="pointer_safety"></a> pointer_safety 列挙型
+## <a name="pointer_safety"></a>pointer_safety 列挙型
 
 `get_pointer_safety` によって返される可能性がある値の列挙型です。
 
-```
+```cpp
 class pointer_safety {
    relaxed,
    preferred,
@@ -25,9 +25,9 @@ class pointer_safety {
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スコープを持つ**enum**によって返される値を定義します`get_pointer_safety()`:
+スコープを持つ**列挙型**は、`get_pointer_safety()`によって返される値を定義します。
 
 `relaxed` -- 安全に派生していないポインター (明らかに、宣言されたオブジェクトまたは割り当てられたオブジェクトへのポインター) が、安全に派生したポインターと同じように扱われます。
 

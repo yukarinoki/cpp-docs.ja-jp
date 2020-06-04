@@ -1,57 +1,57 @@
 ---
-title: メソッドの属性 (C++ COM)
+title: メソッド属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9823869be96f53a3c4fbc36c7b56e1bea0a1303
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409176"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166771"
 ---
 # <a name="method-attributes"></a>メソッド属性
 
-次の属性は、クラス、コクラスまたはインターフェイスのメソッドに適用されます。
+クラス、コクラス、またはインターフェイスのメソッドには、次の属性が適用されます。
 
-|属性|説明|
+|Attribute|説明|
 |---------------|-----------------|
 |[bindable](bindable.md)|プロパティがデータ バインディングをサポートすることを示します。|
-|[call_as](call-as.md)|リモート関数にマップするリモート処理不可能関数を使用できます。|
-|[custom](custom-cpp.md)|独自の属性を定義できます。|
-|[db_column](db-column.md)|行セットに指定された列をバインドします。|
+|[call_as](call-as.md)|リモート処理不可能関数をリモート関数にマップできるようにします。|
+|[custom](custom-cpp.md)|では、独自の属性を定義できます。|
+|[db_column](db-column.md)|指定された列を行セットにバインドします。|
 |[db_command](db-command.md)|OLE DB コマンドを作成します。|
-|[db_param](db-param.md)|入力または出力パラメーターを使用して、指定したメンバー変数を関連付けるし、変数を区切ります。|
-|[db_source](db-source.md)|データ ソースへの接続を作成します。|
-|[db_table](db-table.md)|OLE DB、テーブルを開きます。|
-|[defaultbind](defaultbind.md)|オブジェクトを最もよく表す単一のバインド可能なプロパティを示します。|
-|[defaultcollelem](defaultcollelem.md)|Visual Basic コードの最適化に使用されます。|
-|[displaybind](displaybind.md)|バインド可能なユーザーに表示されるプロパティを示します。|
-|[helpcontext](helpcontext.md)|ユーザーには、この要素に関する情報を表示できるようにコンテキスト ID を指定します、**ヘルプ**ファイル。|
-|[helpfile](helpfile.md)|名前を設定、**ヘルプ**タイプ ライブラリ ファイル。|
+|[db_param](db-param.md)|指定されたメンバー変数を入力パラメーターまたは出力パラメーターに関連付けて、その変数を区切ります。|
+|[db_source](db-source.md)|データソースへの接続を作成します。|
+|[db_table](db-table.md)|OLE DB テーブルを開きます。|
+|[defaultbind](defaultbind.md)|オブジェクトを最もよく表す、1つのバインド可能なプロパティを示します。|
+|[defaultcollelem](defaultcollelem.md)|Visual Basic コードの最適化に使用します。|
+|[displaybind](displaybind.md)|バインド可能としてユーザーに表示される必要があるプロパティを示します。|
+|[helpcontext](helpcontext.md)|**ヘルプ**ファイル内のこの要素に関する情報をユーザーが表示できるようにするコンテキスト ID を指定します。|
+|[helpfile](helpfile.md)|タイプライブラリの**ヘルプ**ファイルの名前を設定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
-|[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
-|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
-|[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
-|[ID](id.md)|メンバー関数 (プロパティまたはメソッド、インターフェイスまたは dispinterface) のように DISPID を指定します。|
-|[immediatebind](immediatebind.md)|データ バインド オブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。|
-|[in](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
-|[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
-|[nonbrowsable](nonbrowsable.md)|インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。|
-|[propget](propget.md)|プロパティのアクセサー関数を指定します。|
+|[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルのヘルプトピックの ID を指定します。|
+|[helpstringdll](helpstringdll.md)|ドキュメント文字列参照 (ローカライズ) を実行するために使用する DLL の名前を指定します。|
+|[hidden](hidden.md)|項目が存在するが、ユーザー指向のブラウザーに表示されないことを示します。|
+|[id](id.md)|メンバー関数 (インターフェイスまたはディスパッチインターフェイスのプロパティまたはメソッド) の DISPID を指定します。|
+|[immediatebind](immediatebind.md)|データバインドオブジェクトのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。|
+|[in](in-cpp.md)|呼び出し元プロシージャから呼び出されたプロシージャにパラメーターが渡されることを示します。|
+|[local](local-cpp.md)|インターフェイスヘッダーで使用するときに、MIDL コンパイラをヘッダージェネレーターとして使用できるようにします。 個々の関数で使用する場合は、スタブが生成されないローカルプロシージャを指定します。|
+|[nonbrowsable](nonbrowsable.md)|インターフェイスメンバーをプロパティブラウザーに表示しないことを示します。|
+|[propget](propget.md)|プロパティアクセサー関数を指定します。|
 |[propput](propput.md)|プロパティ設定関数を指定します。|
-|[propputref](propputref.md)|値の代わりに参照を使用するプロパティ設定関数を指定します。|
-|[ptr](ptr.md)|完全なポインターとしてのポインターを指定します。|
-|[range](range-cpp.md)|引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。|
+|[propputref](propputref.md)|値ではなく参照を使用するプロパティ設定関数を指定します。|
+|[ptr](ptr.md)|ポインターをフルポインターとして指定します。|
+|[range](range-cpp.md)|実行時に値が設定される引数またはフィールドに使用できる値の範囲を指定します。|
 |[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
-|[restricted](restricted.md)|モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことはできませんを指定します。|
-|[satype](satype.md)|データ型を指定します、`SAFEARRAY`構造体。|
-|[source](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性では、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。|
-|[synchronize](synchronize.md)|ターゲット メソッドへのアクセスを同期します。|
-|[vararg](vararg.md)|関数が可変個の引数を実行することを指定します。|
+|[restricted](restricted.md)|モジュール、インターフェイス、またはディスパッチインターフェイスのメンバーを任意に呼び出すことができないことを指定します。|
+|[satype](satype.md)|`SAFEARRAY` 構造体のデータ型を指定します。|
+|[source](source-cpp.md)|クラスの接続ポイントのコントロールのソースインターフェイスを指定します。 プロパティまたはメソッドでは、`source` 属性は、メンバーがイベントのソースであるオブジェクトまたはバリアントを返すことを示します。|
+|[synchronize](synchronize.md)|ターゲットメソッドへのアクセスを同期します。|
+|[vararg](vararg.md)|関数が可変個の引数を受け取ることを指定します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [使用法別の属性](attributes-by-usage.md)

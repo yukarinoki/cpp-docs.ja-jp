@@ -24,17 +24,17 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167876"
 ---
 # <a name="resource-files-c"></a>リソース ファイル (C++)
 
 > [!NOTE]
-> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージエディター](../windows/image-editor-for-icons.md)と[バイナリエディター](binary-editor.md)を使用して、マネージプロジェクトのリソースファイルを操作します。
+> 。.NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージエディター](../windows/image-editor-for-icons.md)と[バイナリエディター](binary-editor.md)を使用して、マネージプロジェクトのリソースファイルを操作します。
 >
 > 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
 
@@ -46,11 +46,11 @@ ms.locfileid: "69513660"
 
 - スタンドアロンファイルとして存在する個々のリソース。 この型には、.rc ファイルから参照されるビットマップ、アイコン、またはカーソルファイルが含まれています。
 
-- 開発環境によって生成されるヘッダーファイル。 この型に`Resource.h`は、.rc ファイルから参照されているが含まれます。
+- 開発環境によって生成されるヘッダーファイル。 この型には、.rc ファイルから参照される `Resource.h`が含まれます。
 
 .Exe、.dll、.res ファイルなど、他のファイルの種類で見つかったリソースは、*リソース*と呼ばれます。
 
-*リソースファイル*とリソースは、プロジェクト内から操作できます。 また、現在のプロジェクトの一部ではないものや、Visual Studio の開発環境の外部で作成されたものを使用することもできます。 たとえば、次のように操作できます。
+*リソースファイル*とリソースは、プロジェクト*内から操作*できます。 また、現在のプロジェクトの一部ではないものや、Visual Studio の開発環境の外部で作成されたものを使用することもできます。 たとえば、次のように操作できます。
 
 - 入れ子になっていて、条件付きでインクルードされるリソース ファイルの操作。
 
@@ -108,7 +108,7 @@ ms.locfileid: "69513660"
 </dependency>
 ```
 
-Windows XP または Windows Vista アプリケーションの場合、マニフェストリソースは、アプリケーションで使用する Windows コモンコントロールの最新バージョンを指定する必要があります。 上記の例では`6.0.0.0`、 [syslink コントロール](/windows/win32/Controls/syslink-overview)をサポートするバージョンが使用されています。
+Windows XP または Windows Vista アプリケーションの場合、マニフェストリソースは、アプリケーションで使用する Windows コモンコントロールの最新バージョンを指定する必要があります。 上記の例では、 [Syslink コントロール](/windows/win32/Controls/syslink-overview)をサポートするバージョン `6.0.0.0`を使用します。
 
 > [!NOTE]
 > 使用できるマニフェスト リソースは 1 つのモジュールにつき 1 つだけです。
@@ -129,7 +129,7 @@ Windows XP または Windows Vista アプリケーションの場合、マニフ
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>

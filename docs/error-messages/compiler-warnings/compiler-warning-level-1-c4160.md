@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176170"
 ---
 # <a name="compiler-warning-level-1-c4160"></a>コンパイラの警告 (レベル 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop、...): 以前にプッシュされた識別子が見つかりませんでした '*識別子*'
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...): 以前にプッシュされた識別子 '*identifier*' が見つかりませんでした
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ソース コードのプラグマ ステートメントで、プッシュされていない識別子のポップを試みています。 この警告を回避するには、ポップされている識別子が正しくプッシュされていることを確認してください。
 

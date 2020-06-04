@@ -1,15 +1,17 @@
 ---
 title: コンパイラの警告 (レベル 4) C4985
 ms.date: 11/04/2016
+f1_keywords:
+- C4985
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82adb80310fb43c848c253f9bf5e436c8c379f35
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280192"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198096"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>コンパイラの警告 (レベル 4) C4985
 
@@ -25,6 +27,6 @@ SAL はユーザーが使用できる注釈のセットを提供して、関数�
 
 1. メソッドの定義と、そのすべての宣言で、同じ SAL 注釈を使用します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [SAL 注釈](../../c-runtime-library/sal-annotations.md)

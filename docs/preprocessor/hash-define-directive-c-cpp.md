@@ -23,8 +23,8 @@ ms.locfileid: "70216281"
 
 ## <a name="syntax"></a>構文
 
-> **#define***識別子* *トークン-文字列*<sub>選択</sub>\
-> **#define***識別子* **(** *識別子*<sub></sub>**の**選択... **,** *識別子*<sub>選択</sub> **)** *トークン文字列の*<sub>選択</sub>
+> **#define** *識別子* *トークン-文字列*<sub>選択</sub>\
+> **#define** *識別子* **(** *識別子*<sub></sub>**の**選択... **,** *識別子*<sub>選択</sub> **)** *トークン文字列の*<sub>選択</sub>
 
 ## <a name="remarks"></a>Remarks
 

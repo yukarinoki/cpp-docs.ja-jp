@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 7b798312c9660e51338d51a97a052ad4e5bdca6b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: be417052ffab19c1bc2d2ba6f35094f98e315812
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512183"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141850"
 ---
 # <a name="lightweight-tasks"></a>軽量タスク
 
-このドキュメントでは、同時実行ランタイムの軽量タスクの役割について説明します。 *軽量タスク*は、オブジェクト`concurrency::Scheduler`または`concurrency::ScheduleGroup`オブジェクトから直接スケジュールするタスクです。 軽量タスクは、Windows API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数に提供する関数に似ています。 そのため、同時実行ランタイムのスケジュール機能を使用するように既存のコードを調整する場合は、軽量のタスクが役立ちます。 同時実行ランタイム自体は、軽量タスクを使用して非同期エージェントをスケジュールし、非同期メッセージブロック間でメッセージを送信します。
+このドキュメントでは、同時実行ランタイムの軽量タスクの役割について説明します。 *軽量タスク*は、`concurrency::Scheduler` または `concurrency::ScheduleGroup` オブジェクトから直接スケジュールするタスクです。 軽量タスクは、Windows API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数に提供する関数に似ています。 そのため、同時実行ランタイムのスケジュール機能を使用するように既存のコードを調整する場合は、軽量のタスクが役立ちます。 同時実行ランタイム自体は、軽量タスクを使用して非同期エージェントをスケジュールし、非同期メッセージブロック間でメッセージを送信します。
 
 > [!TIP]
->  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
+> コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
 
 軽量タスクは、非同期エージェントやタスクグループよりもオーバーヘッドが少なくなります。 たとえば、ランタイムは、軽量タスクが終了したときに通知しません。 また、ランタイムは、軽量タスクからスローされた例外をキャッチまたは処理しません。 例外処理と軽量タスクの詳細については、「[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)」を参照してください。
 
@@ -26,9 +26,9 @@ ms.locfileid: "69512183"
 
 ## <a name="example"></a>例
 
-軽量タスクを使用するために既存のコードを調整する方法を示す例[については、「チュートリアル:軽量タスク](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)を使用するように既存のコードを適合させる。
+軽量タスクを使用するために既存のコードを調整する方法を示す例については、「[チュートリアル: 既存のコードを適合](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)させて軽量タスクを使用する」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [チュートリアル: 既存のコードを改変して軽量タスクを使用する](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)

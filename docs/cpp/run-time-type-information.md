@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178939"
 ---
 # <a name="run-time-type-information"></a>ランタイム型情報
 
@@ -34,8 +34,8 @@ C++ 言語には、実行時型情報を扱う 3 つの主要要素がありま�
 
 - [Type_info](../cpp/type-info-class.md)クラス。
 
-   によって返される型情報を保持するために使用される、 **typeid**演算子。
+   **Typeid**演算子によって返される型情報を保持するために使用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キャスト](../cpp/casting.md)

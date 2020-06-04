@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 5faf55eebecf473f45074f862ef64929df6f4374
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 31854834c418c6d563a0306bd2cde404b3254a23
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452982"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687843"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
 反復子のプリミティブ、定義済みの反復子とストリーム反復子、およびサポート テンプレートをいくつか定義します。 定義済み反復子には、挿入アダプターとリバース アダプターが含まれます。 挿入反復子アダプターのクラスには、フロント、バック、汎用の 3 つがあります。 これには、コンテナーのメンバー関数の反復子が提供する上書きセマンティクスではなく、挿入セマンティクスが用意されています。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<iterator>
 
@@ -40,7 +40,7 @@ ms.locfileid: "68452982"
 
 より多くの要件を持ち、より強力に要素にアクセスできる反復子が、要件の少ない反復子の代わりに使用される場合があります。 たとえば、前方反復子が呼び出された場合は、ランダム アクセス反復子が代わりに使用される可能性があります。
 
-Visual Studio では、C++ 標準ライブラリの反復子に、チェックを行う反復子とチェックを行わない反復子のさまざまなデバッグ モードの状況をサポートする拡張機能が追加されました。 詳細については[、「安全なライブラリ:C++標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)。
+Visual Studio では、C++ 標準ライブラリの反復子に、チェックを行う反復子とチェックを行わない反復子のさまざまなデバッグ モードの状況をサポートする拡張機能が追加されました。 詳細については、「[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)」をご覧ください。
 
 ## <a name="members"></a>メンバー
 
@@ -87,23 +87,23 @@ Visual Studio では、C++ 標準ライブラリの反復子に、チェック�
 
 |||
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|このテンプレート クラスは、出力反復子オブジェクトを表します。 このメソッドは、要素を型`Container`のコンテナーに挿入します。このコンテナーは、コンテナーと呼ばれる保護され`pointer`たオブジェクトを介してアクセスします。|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|双方向反復子を表す`iterator_category`関数の戻り値の型を提供するクラス。|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 @No__t_0 型のコンテナーに要素を挿入します。このコンテナーは、コンテナーと呼ばれる保護された `pointer` オブジェクトを介してアクセスします。|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|双方向反復子を表す `iterator_category` 関数の戻り値の型を提供するクラス。|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|チェックを行うランダム アクセス反復子を使用して配列にアクセスするクラス。 **注:** このクラスは、標準 C++ ライブラリの Microsoft 拡張機能です。 この関数を使用して実装されるコードは、Microsoft 拡張機能をサポートしない C++ 標準ビルド環境には移植できません。|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|前方反復子を表す`iterator_category`関数の戻り値の型を提供するクラス。|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|このテンプレート クラスは、出力反復子オブジェクトを表します。 このメソッドは、要素を型`Container`のコンテナーに挿入します。このコンテナーは、コンテナーと呼ばれる保護され`pointer`たオブジェクトを介してアクセスします。|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|入力反復子を表す`iterator_category`関数の戻り値の型を提供するクラス。|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|このテンプレート クラスは、出力反復子オブジェクトを表します。 このメソッドは、要素を型`Container`のコンテナーに挿入します。このコンテナーは、コンテナーと呼ばれる保護され`pointer`たオブジェクトを介してアクセスします。 また、という`iterator` `Container::iterator` `iter`クラスの保護されたオブジェクトも格納します。|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|このテンプレート クラスは、入力反復子オブジェクトを表します。 このクラスは、入力`Ty`ストリームからクラスのオブジェクトを抽出します。これには、 **Elem**, **Tr**> `basic_istream`へ\<の pointer 型の、格納されているオブジェクトを介してアクセスします。|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|このテンプレート クラスは、入力反復子オブジェクトを表します。 このクラスは、出力`Elem`ストリームバッファーにクラスの要素を挿入します。このバッファーは、型`pointer`から**Elem**、 **Tr**> に`basic_streambuf` \<格納されている、格納されているオブジェクトを介してアクセスします。|
-|[Iterator](../standard-library/iterator-struct.md)|このテンプレート クラスは、すべての反復子の基本型として使用されます。|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|前方反復子を表す `iterator_category` 関数の戻り値の型を提供するクラス。|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 @No__t_0 型のコンテナーに要素を挿入します。このコンテナーは、コンテナーと呼ばれる保護された `pointer` オブジェクトを介してアクセスします。|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|入力反復子を表す `iterator_category` 関数の戻り値の型を提供するクラス。|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 @No__t_0 型のコンテナーに要素を挿入します。このコンテナーは、コンテナーと呼ばれる保護された `pointer` オブジェクトを介してアクセスします。 また、保護された `iterator` オブジェクトを、`iter` と呼ばれるクラス `Container::iterator` に格納します。|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|クラステンプレートは、入力反復子オブジェクトを表します。 このメソッドは、入力ストリームからクラス `Ty` のオブジェクトを抽出します。このストリームは、格納されているオブジェクトを介してアクセスします。これには、`basic_istream` \<**Elem**, **Tr**> への型ポインターが格納されます。|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|クラステンプレートは、入力反復子オブジェクトを表します。 クラス `Elem` の要素を出力ストリームバッファーに挿入します。出力ストリームバッファーは、格納されているオブジェクトを介してアクセスします。このバッファーは、\<**Elem**, **Tr**> を `basic_streambuf` するために `pointer` 型のを格納します。|
+|[Iterator](../standard-library/iterator-struct.md)|クラステンプレートは、すべての反復子の基本型として使用されます。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|同じ方法で参照できるように、別の反復子の型に関連付けられているクリティカルな型を指定するテンプレート ヘルパー クラス。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` オブジェクトには、型 `RandomIterator` のランダム アクセス反復子が格納されています。 これは、逆参照された場合を除いて、ランダム アクセス反復子と同じように動作します。 `operator*` の結果は `value_type&&:` に暗黙的にキャストされ、`rvalue reference` が作成されます。|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|このテンプレート クラスは、出力反復子オブジェクトを表します。 `Type`クラスのオブジェクトを出力ストリームに挿入します。このストリームは、格納されているオブジェクト`pointer`を介してアクセスします。このストリームは、型から**Elem**、 **Tr**> に`basic_ostream` \<変換されます。|
-|[ostreambuf_iterator クラス](../standard-library/ostreambuf-iterator-class.md)|このテンプレート クラスは、出力反復子オブジェクトを表します。 このクラスは、出力`Elem`ストリームバッファーにクラスの要素を挿入します。これには、 **Elem**, **Tr**> `basic_streambuf`へ\<の pointer 型の、格納されているオブジェクトを介してアクセスします。|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|出力反復子を表す関数の`iterator_category`戻り値の型を提供するクラス。|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|ランダムアクセス反復子を表す関数の`iterator_category`戻り値の型を提供するクラス。|
-|[reverse_iterator](../standard-library/reverse-iterator-class.md)|このテンプレート クラスは、逆方向でのみランダム アクセス反復子のように動作するオブジェクトを表します。|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 クラス `Type` のオブジェクトを出力ストリームに挿入します。出力ストリームは、格納されているオブジェクトを介してアクセスします。これには、`basic_ostream` \<**Elem**, **Tr**> の型 `pointer` が格納されます。|
+|[ostreambuf_iterator クラス](../standard-library/ostreambuf-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 このメソッドは、出力ストリームバッファーにクラス `Elem` の要素を挿入します。このバッファーは、格納されているオブジェクトを介してアクセスします。これには、`basic_streambuf` \<**Elem**, **Tr**> への型ポインターが格納されます。|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|出力反復子を表す `iterator_category` 関数の戻り値の型を提供するクラス。|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|ランダムアクセス反復子を表す `iterator_category` 関数の戻り値の型を提供するクラス。|
+|[reverse_iterator](../standard-library/reverse-iterator-class.md)|クラステンプレートは、逆方向でのみランダムアクセス反復子のように動作するオブジェクトを表します。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|チェックを行わないランダム アクセス反復子を使用して配列にアクセスするクラス。 **注:** このクラスは、標準 C++ ライブラリの Microsoft 拡張機能です。 この関数を使用して実装されるコードは、Microsoft 拡張機能をサポートしない C++ 標準ビルド環境には移植できません。|
 
 ## <a name="see-also"></a>関連項目

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4230
 ms.assetid: a4be8729-74b6-44df-a5ea-e3f45aad0f8f
-ms.openlocfilehash: c8d223a286b8d42ca404fbfe7cbc51b67b3dd497
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be402eed4474dd736ab237cfb5c7986741338eec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163272"
 ---
 # <a name="compiler-warning-level-1-c4230"></a>コンパイラの警告 (レベル 1) C4230
 
-旧形式に使用されています: 修飾子/混在;修飾子は無視されます。
+旧形式: 修飾子/修飾子が混在しています。修飾子が無視されました
 
-Microsoft の修飾子の前に、修飾子を使用して`__cdecl`旧式の手段です。
+`__cdecl` などの Microsoft 修飾子の前に修飾子を使用することは、古い方法です。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4230.cpp
 // compile with: /W1 /LD
 int __cdecl const function1();   // C4230 const ignored

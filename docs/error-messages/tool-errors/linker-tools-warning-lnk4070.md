@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194006"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>リンカー ツールの警告 LNK4070
 
-/OUT:filename ディレクティブ。Exp 関数は、出力ファイル名 'filename'; によって異なります。ディレクティブは無視されます。
+での/OUT: filename ディレクティブ。EXP が出力ファイル名 ' filename ' と異なります。ディレクティブの無視
 
-`filename`で指定されている、[名前](../../build/reference/name-c-cpp.md)または[ライブラリ](../../build/reference/library.md).exp ファイルが作成されたときにステートメントと、出力は異なります`filename`が既定で使用されますか、で指定されました。[/Out](../../build/reference/out-output-file-name.md)オプション。
+.Exp ファイルの作成時に[NAME](../../build/reference/name-c-cpp.md)または[LIBRARY](../../build/reference/library.md)ステートメントで指定された `filename` は、既定で使用されるか、 [/out](../../build/reference/out-output-file-name.md)オプションで指定された出力 `filename` とは異なります。
 
-開発環境で、プロジェクトの .def ファイルが更新されたしない出力ファイルの名前を変更する場合、この警告が表示されます。 この警告を解決するのには、.def ファイルを手動で更新します。
+開発環境で出力ファイルの名前を変更し、プロジェクトの .def ファイルが更新されていない場合は、この警告が表示されます。 この警告を解決するには、.def ファイルを手動で更新してください。
 
-結果の DLL を使用するクライアント プログラムには、問題が発生します。
+結果の DLL を使用するクライアントプログラムで問題が発生する可能性があります。

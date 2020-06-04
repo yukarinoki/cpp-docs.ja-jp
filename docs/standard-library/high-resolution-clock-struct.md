@@ -1,4 +1,4 @@
----
+﻿---
 title: high_resolution_clock 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68269124"
 ---
-# <a name="steadyclock-struct"></a>steady_clock 構造体
+# <a name="steady_clock-struct"></a>steady_clock 構造体
 
 表す、 *high_resolution*クロック。
 
@@ -37,7 +37,7 @@ class high_resolution_clock
 |----------|-----------------|
 |`duration`|シノニム`nanoseconds`で定義された\<chrono >。|
 |`period`|シノニム`nano`で定義された\<ratio >。|
-|`rep`|シノニム**長い** **長い**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
+|`rep`|シノニム**long** **long**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
 |`time_point`|`chrono::time_point<high_resolution_clock>` と同義。|
 
 ## <a name="functions"></a>関数

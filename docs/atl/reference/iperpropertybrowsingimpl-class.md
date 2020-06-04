@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsingImpl クラス
+title: クラスを参照しています。
 ms.date: 11/04/2016
 f1_keywords:
 - IPerPropertyBrowsingImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-ms.openlocfilehash: 263f6826ac921d864dee646ef063c8b456b00af1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f8fb80cc38e775b9b26afa033647faac694e968a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326516"
 ---
-# <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl クラス
+# <a name="iperpropertybrowsingimpl-class"></a>クラスを参照しています。
 
-このクラスは`IUnknown`を実装し、クライアントがオブジェクトのプロパティページ内の情報にアクセスできるようにします。
+このクラスは、`IUnknown`クライアントがオブジェクトのプロパティ ページの情報を実装し、アクセスできるようにします。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`IPerPropertyBrowsingImpl`派生したクラス。
+から派生したクラス`IPerPropertyBrowsingImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -47,19 +47,19 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 |名前|説明|
 |----------|-----------------|
-|[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|指定されたプロパティを記述する文字列を取得します。|
-|[IPerPropertyBrowsingImpl:: Getpre未定義の文字列](#getpredefinedstrings)|指定したプロパティが受け入れることができる値に対応する文字列の配列を取得します。|
-|[IPerPropertyBrowsingImpl:: Getpresettings 値](#getpredefinedvalue)|指定した DISPID によって識別されるプロパティの値を格納しているバリアント型を取得します。 DISPID は、から`GetPredefinedStrings`取得した文字列名に関連付けられています。 ATL 実装は E_NOTIMPL を返します。|
-|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|指定したプロパティに関連付けられているプロパティページの CLSID を取得します。|
+|[プロパティブラウジングインプル::GetDisplay文字列](#getdisplaystring)|指定されたプロパティを記述する文字列を取得します。|
+|[インプリスプロパティブラウジングインプル::定義済み文字列を取得します。](#getpredefinedstrings)|指定したプロパティが受け取ることができる値に対応する文字列の配列を取得します。|
+|[プロパティブラウジングインプル::取得定義済みの値](#getpredefinedvalue)|指定された DISPID によって識別されるプロパティの値を含む VARIANT を取得します。 DISPID は、 から`GetPredefinedStrings`取得した文字列名に関連付けられます。 ATL の実装はE_NOTIMPL返します。|
+|[プロパティの参照インプル:::マッププロパティをページへ移動します。](#mappropertytopage)|指定したプロパティに関連付けられているプロパティ ページの CLSID を取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[Iperpropertybrowsing](/windows/win32/api/ocidl/nn-ocidl-iperpropertybrowsing)インターフェイスを使用すると、クライアントは、オブジェクトのプロパティページ内の情報にアクセスできます。 クラス`IPerPropertyBrowsingImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
+[インターフェイス](/windows/win32/api/ocidl/nn-ocidl-iperpropertybrowsing)を使用すると、クライアントはオブジェクトのプロパティ ページの情報にアクセスできます。 Class`IPerPropertyBrowsingImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグ ビルドでダンプ デバイスに情報を送信することによって実装します。
 
 > [!NOTE]
->  コンテナーアプリケーションとして Microsoft Access を使用している場合は、から`IPerPropertyBrowsingImpl`クラスを派生させる必要があります。 それ以外の場合、アクセスはコントロールを読み込みません。
+> コンテナ アプリケーションとして Access を使用している場合は、 から`IPerPropertyBrowsingImpl`クラスを派生させる必要があります。 そうしないと、コントロールが読み込まれません。
 
-**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,9 +69,9 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl. h
+**ヘッダー:** atlctl.h
 
-##  <a name="getdisplaystring"></a>  IPerPropertyBrowsingImpl::GetDisplayString
+## <a name="iperpropertybrowsingimplgetdisplaystring"></a><a name="getdisplaystring"></a>プロパティブラウジングインプル::GetDisplay文字列
 
 指定されたプロパティを記述する文字列を取得します。
 
@@ -81,13 +81,13 @@ STDMETHOD(GetDisplayString)(
     BSTR* pBstr);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iperpropertybrowsing:: GetDisplayString](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) 」を参照してください。
+Windows SDK[の「IPerProperty ブラウズ::GetDisplay 文字列](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring)」を参照してください。
 
-##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl:: Getpre未定義の文字列
+## <a name="iperpropertybrowsingimplgetpredefinedstrings"></a><a name="getpredefinedstrings"></a>インプリスプロパティブラウジングインプル::定義済み文字列を取得します。
 
-各配列に項目0を格納します。
+各配列をゼロの項目で埋めます。
 
 ```
 STDMETHOD(GetPredefinedStrings)(
@@ -98,15 +98,15 @@ STDMETHOD(GetPredefinedStrings)(
 
 ### <a name="return-value"></a>戻り値
 
-ATL の[Getpre持つ値](#getpredefinedvalue)の実装では、E_NOTIMPL が返されます。
+ATL の[実装は、E_NOTIMPL](#getpredefinedvalue)返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iperpropertybrowsing:: Getpreの文字列](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings)」を参照してください。
+Windows SDK[の「IPerProperty ブラウズ::定義済み文字列を取得](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings)する」を参照してください。
 
-##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl:: Getpresettings 値
+## <a name="iperpropertybrowsingimplgetpredefinedvalue"></a><a name="getpredefinedvalue"></a>プロパティブラウジングインプル::取得定義済みの値
 
-指定した DISPID によって識別されるプロパティの値を格納しているバリアント型を取得します。 DISPID は、から`GetPredefinedStrings`取得した文字列名に関連付けられています。
+指定された DISPID によって識別されるプロパティの値を含む VARIANT を取得します。 DISPID は、 から`GetPredefinedStrings`取得した文字列名に関連付けられます。
 
 ```
 STDMETHOD(GetPredefinedValue)(
@@ -119,15 +119,15 @@ STDMETHOD(GetPredefinedValue)(
 
 E_NOTIMPL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ATL による[Getprestrings](#getpredefinedstrings)の実装では、対応する文字列は取得されません。
+ATL の実装[は、](#getpredefinedstrings)対応する文字列を取得しません。
 
-Windows SDK の「 [Iperpropertybrowsing:: Getpreの値](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue)」を参照してください。
+Windows SDK[の「IPerProperty ブラウジング::定義済みの値を取得](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue)する」を参照してください。
 
-##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage
+## <a name="iperpropertybrowsingimplmappropertytopage"></a><a name="mappropertytopage"></a>プロパティの参照インプル:::マッププロパティをページへ移動します。
 
-指定したプロパティに関連付けられているプロパティページの CLSID を取得します。
+指定したプロパティに関連付けられているプロパティ ページの CLSID を取得します。
 
 ```
 STDMETHOD(MapPropertyToPage)(
@@ -135,14 +135,14 @@ STDMETHOD(MapPropertyToPage)(
     CLSID* pClsid);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ATL では、オブジェクトのプロパティマップを使用してこの情報を取得します。
+ATL は、オブジェクトのプロパティ マップを使用してこの情報を取得します。
 
-Windows SDK の「 [Iperpropertybrowsing:: MapPropertyToPage](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) 」を参照してください。
+Windows SDK[の「プロパティの参照::マッププロパティ」を](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage)参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[IPropertyPageImpl クラス](../../atl/reference/ipropertypageimpl-class.md)<br/>
-[ISpecifyPropertyPagesImpl クラス](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
+[クラスをプロパティページインビ](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[クラスを指定します。](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

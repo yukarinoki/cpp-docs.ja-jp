@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a15b3552e6b67fb0347a14c48414741edf31ac93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168267"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -28,7 +28,7 @@ COM オブジェクトの既定の vtable インターフェイスとしてイ�
 *interface*<br/>
 COM オブジェクトの既定の vtable を持つ、指定されたインターフェイス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Defaultvtable** C++属性には、 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 属性と同じ機能があります。
 
@@ -75,7 +75,7 @@ class CMyC3 : public IMyI3 {};
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)

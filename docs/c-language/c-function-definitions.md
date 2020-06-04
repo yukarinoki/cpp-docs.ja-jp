@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147686"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857139"
 ---
 # <a name="c-function-definitions"></a>C 関数定義
 
@@ -36,7 +36,7 @@ ms.locfileid: "56147686"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* は Microsoft 固有の仕様 \*/
+/\* *attribute-seq* は Microsoft 固有の仕様です \*/
 
 プロトタイプ パラメーターは次のとおりです。
 
@@ -53,8 +53,8 @@ ms.locfileid: "56147686"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 関数宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* 新しい形式の宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 古い形式の宣言子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新しい形式の宣言子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 古い形式の宣言子 \*/
 
 定義のパラメーター リストは、この構文を使用します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "56147686"
 関数本体の構文は次のとおりです。
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 関数宣言を変更できるストレージ クラスの指定子は **extern** と **static** のみです。 **extern** 指定子は、関数が他のファイルから参照できること、つまり、関数名がリンカーにエクスポートされることを指定します。 **static** 指定子は、関数が他のファイルから参照できないこと、つまり、名前がリンカーによってエクスポートされないことを示します。 関数定義にストレージ クラスが現れない場合、**extern** と見なされます。 いずれの場合も、関数は定義位置からファイルの末尾まで常に参照可能です。
 

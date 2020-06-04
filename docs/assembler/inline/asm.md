@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169632"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Microsoft 固有の仕様**
 
@@ -27,31 +27,31 @@ ms.locfileid: "65445908"
 
 ## <a name="grammar"></a>文法
 
-*asm ブロック*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*asm-ブロック*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *アセンブリ命令***です。** <sub>選択</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *assembly-list* **}** **;** <sub>選択</sub>
 
-*アセンブリの命令リスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*アセンブリ命令リスト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令***です。** <sub>選択</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **、** *アセンブリ命令リスト* **、** <sub>選択</sub>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 中かっこを付けないで使用する場合、`__asm` キーワードは、行の残りの部分がアセンブリ言語のステートメントであることを意味します。 中かっこを付けて使用する場合、中かっこの間の各行がアセンブリ言語のステートメントであることを意味します。 以前のバージョンとの互換性を維持するため、`_asm` は `__asm` のシノニムとなっています。
 
 `__asm` キーワードはステートメント区切り文字であるため、アセンブリ命令も同じ行に記述できます。
 
-Visual Studio 2005 で命令する前に
+Visual Studio 2005 より前の手順
 
 ```cpp
 __asm int 3
 ```
 
-ネイティブでコンパイルした場合に生成されるコードが発生しなかった **/clr**; コンパイラが CLR break 命令を命令を変換します。
+**/clr**を指定してコンパイルした場合、ネイティブコードが生成されませんでした。コンパイラは命令を CLR break 命令に変換しました。
 
-`__asm int 3` により現在は、関数のネイティブ コードが生成されるようになりました。 場合は、コードでブレークポイントが発生してする場合は、MSIL にコンパイルされた関数を使用する関数[_ _debugbreak](../../intrinsics/debugbreak.md)します。
+`__asm int 3` により現在は、関数のネイティブ コードが生成されるようになりました。 関数によってコード内のブレークポイントが発生するようにし、その関数を MSIL にコンパイルする場合は、 [__debugbreak](../../intrinsics/debugbreak.md)を使用します。
 
-以前のバージョンとの互換性のため **_asm**のシノニムです **_ _asm**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../../build/reference/za-ze-disable-language-extensions.md)を指定します。
+以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_asm**は **__asm**のシノニムになります。
 
 ## <a name="example"></a>例
 
@@ -85,7 +85,7 @@ C および C++ での中かっこと異なり、`__asm` ブロックを囲む�
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../../cpp/keywords-cpp.md)<br/>
 [インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

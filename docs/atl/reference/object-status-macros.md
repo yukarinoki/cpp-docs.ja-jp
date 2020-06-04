@@ -1,17 +1,17 @@
 ---
-title: オブジェクトの状態マクロ
+title: オブジェクトステータスマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: dc50825d6b6e74dc263a097e86d8ea0d42989825
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5617ce7fb972c98775072f72244f91052d41ece3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495314"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326175"
 ---
-# <a name="object-status-macros"></a>オブジェクトの状態マクロ
+# <a name="object-status-macros"></a>オブジェクトステータスマクロ
 
 このマクロは、ActiveX コントロールに属するフラグを設定します。
 
@@ -21,9 +21,9 @@ ms.locfileid: "69495314"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
+## <a name="declare_olemisc_status"></a><a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
 
 OLEMISC フラグを設定するために ATL ActiveX コントロールで使用されます。
 
@@ -33,12 +33,12 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>パラメーター
 
-*間違った状態*<br/>
-すべての該当する OLEMISC フラグ。
+*その他の状況*<br/>
+適用可能なすべての OLEMISC フラグ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このマクロは、ActiveX コントロールの OLEMISC フラグを設定するために使用されます。 詳細については、 [IOleObject:: Get誤 Cstatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)を参照してください。
+このマクロは、ActiveX コントロールの OLEMISC フラグを設定するために使用します。 詳細については[、IOleObject::GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -46,4 +46,4 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

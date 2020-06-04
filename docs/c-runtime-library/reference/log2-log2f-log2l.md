@@ -1,11 +1,14 @@
 ---
 title: log2、log2f、log2l
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+- _o_log2
+- _o_log2f
+- _o_log2l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,14 +20,18 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285940"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911415"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -61,25 +68,27 @@ long double log2l(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、戻り値が返さ log2 *x*します。
+成功した場合、は return log2 *x*を返します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
-|懸案事項|Return|
+|問題|戻り値|
 |-----------|------------|
-|*x* < 0|NaN|
+|*x* < 0|(NaN)|
 |*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
-|NaN|NaN|
-|ドメイン エラー|NaN|
+|(NaN)|(NaN)|
+|ドメイン エラー|(NaN)|
 |極エラー|-HUGE_VAL、-HUGE_VALF、または -HUGE_VALL|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は基本的の最上位 1 ビットの 0 から始まるインデックスを返します x が整数である場合は、 *x*します。
+X が整数の場合、この関数は基本的に、 *x*の最上位1ビットの0から始まるインデックスを返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -87,7 +96,7 @@ long double log2l(
 |--------------|--------------|------------------|
 |**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

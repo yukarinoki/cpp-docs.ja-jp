@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4117
 ms.assetid: c45aa281-4cc1-4dfd-bd32-bd7a60ddd577
-ms.openlocfilehash: 657963dd0199c1474f0cef566e5a177a16247521
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2474645a555748b559b1661a2b5327ca1b83e534
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299804"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176379"
 ---
 # <a name="compiler-warning-level-1-c4117"></a>コンパイラの警告 (レベル 1) C4117
 
@@ -25,7 +25,7 @@ ms.locfileid: "62299804"
 
 次の例では C4117 が生成されます。
 
-```
+```cpp
 // C4117.cpp
 // compile with: /W1
 #define __FILE__ test         // C4117. __FILE__ is a predefined macro

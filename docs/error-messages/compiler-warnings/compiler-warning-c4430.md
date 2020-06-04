@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 091d988a5af277e78a2954eb5b0b95bc64c56069
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165263"
 ---
 # <a name="compiler-warning-c4430"></a>コンパイラの警告 C4430
 
-型指定子がありません - int と仮定しました。 メモ:C++ は int を既定値をサポートしていません
+型指定子がありません - int と仮定しました。 注: C++では、既定の-int はサポートされていません。
 
-このエラーは、Visual Studio 2005 で行ったコンパイラ準拠作業の結果として生成されることができますすべての宣言は、型を明示的に指定する必要があります。int が想定されなくなります。
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。すべての宣言で型を明示的に指定する必要があります。int は想定されなくなりました。
 
-C4430 がエラーとして常に発行されます。  この警告をオフにすることができます、`#pragma warning`または **/wd**; を参照してください[警告](../../preprocessor/warning.md)または[/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、//we、/wo、/Wv、/WX (警告レベル)](../../build/reference/compiler-option-warning-level.md)詳細についてはします。
+C4430 は常にエラーとして発行されます。  この警告は、`#pragma warning` または **/wd**で無効にすることができます。詳細については、「 [warning](../../preprocessor/warning.md)または[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、](../../build/reference/compiler-option-warning-level.md) /W3、/W4、/Wall、/wd、/we、/WO、/Wv、/wx (警告レベル)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4430 が生成されます。
 
-```
+```cpp
 // C4430.cpp
 // compile with: /c
 struct CMyClass {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4377
 ms.assetid: a1c797b8-cd5e-4a56-b430-d07932e811cf
-ms.openlocfilehash: d8c89967e0dc900e098ca03d22932451f26a6a0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b75b6bee88d0b72e77b32e58ae2f4634a9c30fa0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410426"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186999"
 ---
 # <a name="compiler-warning-level-1-c4377"></a>コンパイラの警告 (レベル 1) C4377
 
-ネイティブ型は既定ではプライベート-d1PrivateNativeTypes が非推奨とされます
+ネイティブ型は、既定ではプライベートです。-d1PrivateNativeTypes は非推奨です
 
-以前のリリースではアセンブリのネイティブ型がパブリックでは、既定値、および内部のドキュメントに未記載のコンパイラ オプション (**/d1PrivateNativeTypes**) それらをプライベートにするために使用されました。
+以前のリリースでは、アセンブリ内のネイティブ型は既定でパブリックになっており、非公開にするためにドキュメントに記載されていないコンパイラオプション ( **/d1PrivateNativeTypes**) が使用されていました。
 
-すべての型をネイティブと、CLR アセンブリでは、既定でプライベートになったため、 **/d1PrivateNativeTypes**が不要になった。
+ネイティブと CLR のすべての型は、アセンブリで既定でプライベートになったため、 **/d1PrivateNativeTypes**は不要になりました。
 
 ## <a name="example"></a>例
 
 次の例では、C4377 が生成されます。
 
-```
+```cpp
 // C4377.cpp
 // compile with: /clr /d1PrivateNativeTypes /W1
 // C4377 warning expected

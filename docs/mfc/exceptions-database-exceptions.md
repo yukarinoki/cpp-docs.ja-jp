@@ -1,6 +1,6 @@
 ---
-title: 例外:データベース例外
-ms.date: 11/04/2016
+title: '例外処理 : データベースの例外'
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - exceptions [MFC], database
@@ -11,68 +11,68 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 894960338a7e8c293054ade00e0cdf3295648bb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405899"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366622"
 ---
-# <a name="exceptions-database-exceptions"></a>例外:データベース例外
+# <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 
-この記事では、データベースの例外を処理する方法について説明します。 この記事の内容のほとんどには、使用する MFC クラスの Open Database Connectivity (ODBC) または MFC クラスのデータ アクセス オブジェクト (DAO) かどうかが適用されます。 いずれかまたはその他のモデルに固有のマテリアルが明示的にマークします。 ここでは、次の内容について説明します。
+この資料では、データベースの例外を処理する方法について説明します。 この資料の大部分は、オープン データベース接続 (ODBC) の MFC クラスを使用する場合と、データ アクセス オブジェクト (DAO) の MFC クラスを使用する場合に適用されます。 どちらか一方のモデルに固有の材料は明示的にマークされます。 取り上げるトピックは次のとおりです。
 
-- [例外処理](#_core_approaches_to_exception_handling)
+- [例外処理へのアプローチ](#_core_approaches_to_exception_handling)
 
 - [データベース例外処理の例](#_core_a_database_exception.2d.handling_example)
 
-##  <a name="_core_approaches_to_exception_handling"></a> 例外処理
+## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>例外処理へのアプローチ
 
-アプローチは、DAO または ODBC を使用しているかどうかは同じです。
+この方法は、DAO (廃止) と ODBC のどちらを使用している場合でも同じです。
 
-常に、例外的な条件を処理する例外ハンドラーを記述する必要があります。
+例外を処理する例外ハンドラーを常に記述する必要があります。
 
-データベースの例外をキャッチする最も実用的なアプローチでは、例外のシナリオを使用してアプリケーションをテストします。 可能性の高い例外をコード内の操作が発生して、強制的に、例外が発生する可能性がありますを決定します。 どのような例外がスローされると、トレース出力を確認し、またはデバッガーで返されたエラー情報を確認します。 これにより、どのリターン コードを使用している例外状況が表示されますかがわかります。
+データベースの例外をキャッチする最も実用的なアプローチは、例外シナリオを使用してアプリケーションをテストすることです。 コード内の操作で発生する可能性のある例外を特定し、例外を強制的に発生させます。 次に、トレース出力を調べて、スローされる例外を確認するか、デバッガーで返されたエラー情報を調べます。 これにより、使用している例外シナリオに対して表示されるリターン コードがわかります。
 
-### <a name="error-codes-used-for-odbc-exceptions"></a>ODBC 例外に対して使用されるエラー コード
+### <a name="error-codes-used-for-odbc-exceptions"></a>ODBC 例外に使用されるエラー コード
 
-リターン コード、フレームワークによって定義されているだけでなく、フォームの名前である**AFX_SQL_ERROR_XXX**、いくつか[CDBExceptions](../mfc/reference/cdbexception-class.md)に基づいて[ODBC](../data/odbc/odbc-basics.md)リターン コード。 このような例外のリターン コードは、フォームの名前を持つ**SQL_ERROR_XXX**します。
+フレームワークによって定義された戻りコードに加えて **、AFX_SQL_ERROR_XXX**形式の名前を持つ[CDBException](../mfc/reference/cdbexception-class.md)の一部は[ODBC](../data/odbc/odbc-basics.md)リターン コードに基づいています。 このような例外の戻りコードには、 **SQL_ERROR_XXX**形式の名前が付きます。
 
-リターン コード: フレームワークで定義されたとしていると、ODBC で定義された、ドキュメントを参照しているかをデータベース クラスが返すことができます、 [m_nRetCode](../mfc/reference/cdbexception-class.md#m_nretcode)クラスのデータ メンバー`CDBException`します。 ODBC で定義されたリターン コードの詳細については、ODBC SDK で使用できる*プログラマーズ リファレンス*MSDN ライブラリ。
+データベース クラスが返すことのできるリターン コード (フレームワーク定義と ODBC 定義の両方)[m_nRetCode](../mfc/reference/cdbexception-class.md#m_nretcode)は、 class`CDBException`の m_nRetCode データ メンバの下に記述されています。 ODBC で定義されているリターン コードに関する追加情報については、MSDN ライブラリの ODBC SDK*プログラマ リファレンスを参照*してください。
 
-### <a name="error-codes-used-for-dao-exceptions"></a>DAO 例外に対して使用されるエラー コード
+### <a name="error-codes-used-for-dao-exceptions"></a>DAO 例外に使用されるエラー コード
 
-DAO の例外の詳細については、通常使用できます。 エラー情報をアクセスするには、キャッチの 3 つのデータ メンバーを[CDaoException](../mfc/reference/cdaoexception-class.md)オブジェクト。
+DAO の例外の場合、通常は詳細情報が表示されます。 捕捉された[CDaoException](../mfc/reference/cdaoexception-class.md)オブジェクトの 3 つのデータ メンバーを通じてエラー情報にアクセスできます。
 
-- [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)へのポインターが含まれています、 [CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)データベースに関連付けられたエラー オブジェクトの DAO のコレクション内のエラー情報をカプセル化するオブジェクト。
+- [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)は、データベースに関連付けられている DAO のエラー オブジェクトのコレクションにエラー情報をカプセル化する[CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)オブジェクトへのポインターを含んでいます。
 
-- [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) MFC DAO クラスから拡張エラー コードが含まれています。 フォームの名前を持つこれらのエラー コード**AFX_DAO_ERROR_XXX**でのデータ メンバーの下に記載されています`CDaoException`します。
+- [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) MFC DAO クラスの拡張エラー コードが含まれています。 これらのエラー コードは、**のデータ**メンバーの下に AFX_DAO_ERROR_XXX フォームの`CDaoException`名前を持つドキュメントです。
 
-- [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) OLE を含む**SCODE**から DAO、該当する場合。 ただしこのエラー コードを使用する必要がありますめったにありません。 通常、詳細については、他の 2 つのデータ メンバーで使用できます。 に関する詳細については、データ メンバーを参照してください**SCODE**値。
+- [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)に DAO からの OLE **SCODE**が含まれています (該当する場合)。 ただし、このエラー コードを使用する必要はめったにありません。 通常、他の 2 つのデータ メンバーでは、より多くの情報を使用できます。 **SCODE**値の詳細については、データ メンバーを参照してください。
 
-DAO エラー、DAO エラー オブジェクトの種類、および DAO Errors コレクションに関する追加情報は、クラスで使用可能な[CDaoException](../mfc/reference/cdaoexception-class.md)します。
+DAO エラー、DAO エラー オブジェクトの種類、および DAO エラー コレクションに関する追加情報は、[クラス CDaoException](../mfc/reference/cdaoexception-class.md)の下にあります。
 
-##  <a name="_core_a_database_exception.2d.handling_example"></a> データベース例外処理の例
+## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>データベース例外処理の例
 
-次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生でヒープのオブジェクト、**new** 演算子、および (ODBC データ ソース) のレコード セットを開きます。 DAO クラスの同様の例は、「DAO 例外次の例」を参照してください。
+次の使用例は、**新しい**演算子を使用してヒープ上に[CRecordset](../mfc/reference/crecordset-class.md)派生オブジェクトを構築し、(ODBC データ ソースの) レコードセットを開きます。 DAO クラスの同様の例については、以下の「DAO 例外の例」を参照してください。
 
 ### <a name="odbc-exception-example"></a>ODBC 例外の例
 
-[オープン](../mfc/reference/crecordset-class.md#open)メンバー関数が例外をスロー (型の[CDBException](../mfc/reference/cdbexception-class.md) ODBC クラス)、そのためこの角かっこをコード、`Open`呼び出しが、**try** ブロック。 それに続く**catch** ブロックがキャッチ、`CDBException`します。 呼ばれる自体には、例外オブジェクトを調べることができます`e`にはここで、レコード セットを作成する試みが失敗したことを知る十分です。 **catch** ブロックがメッセージ ボックスを表示し、レコード セット オブジェクトを削除して、クリーンアップします。
+[Open](../mfc/reference/crecordset-class.md#open)メンバー関数は、(ODBC クラスの[CDBException](../mfc/reference/cdbexception-class.md)型の) 例外をスローする可能性`Open`があるため、このコードは**try**ブロックを使用して呼び出しをかっこで囲みます。 後続の**catch**ブロックは`CDBException`. 例外オブジェクト自体`e`を調べることも可能ですが、この場合、レコードセットの作成に失敗したことを知る必要があります。 **catch**ブロックは、メッセージ ボックスを表示し、レコードセット オブジェクトを削除してクリーンアップします。
 
 [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 
 ### <a name="dao-exception-example"></a>DAO 例外の例
 
-DAO の例は、ODBC の例に似ていますが、通常多くの種類の情報を取得することができます。 次のコードも、レコード セットを開こうとします。 その試行は、例外をスローする場合は、エラー情報の例外オブジェクトのデータ メンバーを調べることができます。 ODBC の前の例ではおそらく、レコード セットを作成する試みが失敗したことを確認するには不十分です。
+DAO の例は ODBC の例に似ていますが、通常は、より多くの種類の情報を取得できます。 次のコードは、レコードセットを開こうともします。 その試行で例外がスローされた場合は、例外オブジェクトのデータ メンバーでエラー情報を調べることができます。 前の ODBC の例と同様に、レコードセットの作成に失敗したことを知る必要があります。
 
 [!code-cpp[NVC_MFCDatabase#37](../mfc/codesnippet/cpp/exceptions-database-exceptions_2.cpp)]
 
-このコードからのエラー メッセージ文字列を取得する、 [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)例外オブジェクトのメンバー。 MFC は、このメンバーの例外をスローします。
+このコードは、例外オブジェクトの[m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo)メンバーからエラー メッセージ文字列を取得します。 MFC は、例外をスローするときに、このメンバーを埋めます。
 
-によって返されるエラー情報の詳細については、`CDaoException`オブジェクト、クラスを参照してください。 [CDaoException](../mfc/reference/cdaoexception-class.md)と[CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)します。
+オブジェクトによって返されるエラー情報の詳細については、クラス CDaoException と[CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md)を参照してください。 [CDaoException](../mfc/reference/cdaoexception-class.md) `CDaoException`
 
-Microsoft Jet (.mdb) データベース、およびほとんどの場合は、ODBC を使用するときに作業は、1 つだけのエラー オブジェクトがあります。 まれなケースで、ODBC データ ソースを使用しているし、複数のエラーがあるときにループ処理できます DAO のエラーのコレクションから返されるエラーの数に基づく[もあります](../mfc/reference/cdaoexception-class.md#geterrorcount)します。 ループで毎回呼び出す[CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo)を補充する、`m_pErrorInfo`データ メンバー。
+Jet (.mdb) データベースを使用していて、ほとんどの場合 ODBC を使用する場合は、エラー オブジェクトは 1 つだけです。 まれに、ODBC データ ソースを使用していて、複数のエラーがある場合は[、CDaoException::GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount)によって返されるエラーの数に基づいて DAO の Errors コレクションをループできます。 ループを通過するたびに[、CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo)を呼び出して`m_pErrorInfo`データ メンバーを再入力します。
 
 ## <a name="see-also"></a>関連項目
 

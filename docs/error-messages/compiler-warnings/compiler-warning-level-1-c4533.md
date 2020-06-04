@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 8ac7f00ad3401e88224c0150324822ce71e95018
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20637dc23e13031b4199298a3374825062ce40da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186427"
 ---
 # <a name="compiler-warning-level-1-c4533"></a>コンパイラの警告 (レベル 1) C4533
 
-'命令' によって 'variable' の初期化はスキップされます。
+' variable ' の初期化が ' 命令 ' によってスキップされました
 
-プログラムに指示する命令では、変数を初期化する命令が実行されませんでしたが、制御フローが変更されました。 次の例では、C4533 が生成されます。
+プログラムの命令によって制御フローが変更されました。たとえば、変数を初期化した命令は実行されませんでした。 次の例では、C4533 が生成されます。
 
-```
+```cpp
 // C4533.cpp
 // compile with: /W1
 #include <stdio.h>

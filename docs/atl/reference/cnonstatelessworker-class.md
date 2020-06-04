@@ -1,5 +1,5 @@
 ---
-title: CNonStatelessWorker Class
+title: CNonStatelessワーカークラス
 ms.date: 11/04/2016
 f1_keywords:
 - CNonStatelessWorker
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245531"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747670"
 ---
-# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker Class
+# <a name="cnonstatelessworker-class"></a>CNonStatelessワーカークラス
 
-スレッド プールからの要求を受信し、要求ごとに作成および破棄される worker オブジェクトに渡されます。
+スレッド プールから要求を受信し、要求ごとに作成および破棄されるワーカー オブジェクトに渡します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class CNonStatelessWorker
 #### <a name="parameters"></a>パラメーター
 
 *ワーカー*<br/>
-準拠しているワーカー スレッドのクラス、[ワーカーのアーキタイプ](../../atl/reference/worker-archetype.md)のキューに要求を処理するのに適した[CThreadPool](../../atl/reference/cthreadpool-class.md)します。
+ワーカー の[アーキタイプ](../../atl/reference/worker-archetype.md)に準拠するワーカー スレッド クラスで[、CThreadPool](../../atl/reference/cthreadpool-class.md)にキューに置かれた要求を処理するのに適しています。
 
 ## <a name="members"></a>メンバー
 
@@ -43,44 +43,44 @@ class CNonStatelessWorker
 
 |名前|説明|
 |----------|-----------------|
-|[CNonStatelessWorker::RequestType](#requesttype)|実装[WorkerArchetype::RequestType](worker-archetype.md#requesttype)します。|
+|[ステートレスワーカー::要求タイプ](#requesttype)|[ワーカーアーキッシュタイプの実装::要求タイプ](worker-archetype.md#requesttype)。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CNonStatelessWorker::Execute](#execute)|実装[WorkerArchetype::Execute](worker-archetype.md#execute)します。|
-|[CNonStatelessWorker::Initialize](#initialize)|実装[WorkerArchetype::Initialize](worker-archetype.md#initialize)します。|
-|[CNonStatelessWorker::Terminate](#terminate)|実装[WorkerArchetype::Terminate](worker-archetype.md#terminate)します。|
+|[非ステートレスワーカー::実行](#execute)|[ワーカーアーキタイプの実装::実行](worker-archetype.md#execute).|
+|[C非ステートレスワーカー::初期化](#initialize)|[ワーカーアーキッシュタイプの実装::初期化](worker-archetype.md#initialize).|
+|[CNonStatelessワーカー::終了](#terminate)|[ワーカーアーキタイプの実装::終了](worker-archetype.md#terminate).|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスで使用するための単純なワーカー スレッドは、 [CThreadPool](../../atl/reference/cthreadpool-class.md)します。 このクラスは、独自の任意の要求処理機能を提供しません。 代わりに、1 つのインスタンスをインスタンス化*ワーカー* 1 回の要求し、そのインスタンスにそのメソッドの実装にデリゲートします。
+このクラスは[、CThreadPool](../../atl/reference/cthreadpool-class.md)で使用する単純なワーカー スレッドです。 このクラスは、独自の要求処理機能を提供しません。 代わりに、要求ごとに*ワーカー*のインスタンスを 1 つインスタンス化し、そのインスタンスにメソッドの実装をデリゲートします。
 
-このクラスの利点は、既存のワーカー スレッド クラスの状態モデルを変更する便利な手段を提供します。 `CThreadPool` スレッドの有効期間にわたって 1 つのワーカーが作成されますので、worker クラスには、状態が保持している場合は、複数の要求間で保持、これは。 単にそのクラスをラップすることによって、`CNonStatelessWorker`テンプレートで使用する前に`CThreadPool`、作業者と 1 つの要求に制限されていますが、保持している状態の有効期間。
+このクラスの利点は、既存のワーカー スレッド クラスの状態モデルを変更する便利な方法を提供することです。 `CThreadPool`スレッドの有効期間に対して 1 つのワーカーを作成するので、ワーカー クラスが状態を保持している場合は、複数の要求にまたがって保持されます。 で使用する前に、その`CNonStatelessWorker`クラスをテンプレートにラップ`CThreadPool`するだけで、ワーカーの有効期間と保持している状態は 1 つの要求に制限されます。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 
-##  <a name="execute"></a>  CNonStatelessWorker::Execute
+## <a name="cnonstatelessworkerexecute"></a><a name="execute"></a>非ステートレスワーカー::実行
 
-実装[WorkerArchetype::Execute](worker-archetype.md#execute)します。
+[ワーカーアーキタイプの実装::実行](worker-archetype.md#execute).
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドのインスタンスを作成、*ワーカー*で呼び出し、stack クラス[初期化](worker-archetype.md#initialize)そのオブジェクト。 初期化が成功した場合、このメソッドも呼び出します[Execute](worker-archetype.md#execute)と[Terminate](worker-archetype.md#terminate)同一のオブジェクト。
+このメソッドは、スタック上に*ワーカー*クラスのインスタンスを作成し、そのオブジェクトに対して[Initialize](worker-archetype.md#initialize)を呼び出します。 初期化が成功した場合、このメソッドは同じオブジェクトに対して[Execute](worker-archetype.md#execute)と[Terminate](worker-archetype.md#terminate)も呼び出します。
 
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+## <a name="cnonstatelessworkerinitialize"></a><a name="initialize"></a>C非ステートレスワーカー::初期化
 
-実装[WorkerArchetype::Initialize](worker-archetype.md#initialize)します。
+[ワーカーアーキッシュタイプの実装::初期化](worker-archetype.md#initialize).
 
 ```
 BOOL Initialize(void* /* pvParam */) throw();
@@ -90,36 +90,36 @@ BOOL Initialize(void* /* pvParam */) throw();
 
 常に TRUE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラスすべての初期化を実行しません`Initialize`します。
+このクラスは、 で`Initialize`初期化を行いません。
 
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+## <a name="cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>ステートレスワーカー::要求タイプ
 
-実装[WorkerArchetype::RequestType](worker-archetype.md#requesttype)します。
+[ワーカーアーキッシュタイプの実装::要求タイプ](worker-archetype.md#requesttype)。
 
 ```
 typedef Worker::RequestType RequestType;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラスは処理に使用されるクラスと同じ種類の作業項目の*ワーカー*テンプレート パラメーター。 参照してください[CNonStatelessWorker 概要](../../atl/reference/cnonstatelessworker-class.md)詳細についてはします。
+このクラスは *、Worker*テンプレート パラメーターに使用されるクラスと同じ種類の作業項目を処理します。 詳細については[、「CNonStateless ワーカーの概要](../../atl/reference/cnonstatelessworker-class.md)」を参照してください。
 
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+## <a name="cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessワーカー::終了
 
-実装[WorkerArchetype::Terminate](worker-archetype.md#terminate)します。
+[ワーカーアーキタイプの実装::終了](worker-archetype.md#terminate).
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラス、クリーンアップを実行しません`Terminate`します。
+このクラスは、 でのクリーンアップ`Terminate`を行いません。
 
 ## <a name="see-also"></a>関連項目
 
-[CThreadPool クラス](../../atl/reference/cthreadpool-class.md)<br/>
-[ワーカーのアーキタイプ](../../atl/reference/worker-archetype.md)<br/>
+[クラス](../../atl/reference/cthreadpool-class.md)<br/>
+[労働者の原型](../../atl/reference/worker-archetype.md)<br/>
 [クラス](../../atl/reference/atl-classes.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b0a6d000309a709c528822870f910521f51100df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68821113"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208307"
 ---
 > [!IMPORTANT]
 > Visual Studio コンパイラおよびビルドツールは、さまざまな種類のエラーや警告を報告できます。 エラーまたは警告が検出されると、ビルドツールがコードの目的を想定して続行を試行し、さらに多くの問題を同時に報告できるようになります。 ツールによるこの仮定が誤っていると、それ以降のエラーや警告がプロジェクトに適用されない場合があります。 プロジェクト内の問題を解決するときは、必ず、報告された最初のエラーまたは警告から開始し、多くの場合はリビルドしてください。 1つの修正によって、多くのエラーが解消される場合があります。

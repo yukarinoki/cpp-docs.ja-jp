@@ -1,10 +1,12 @@
 ---
 title: _mbsnbcmp、_mbsnbcmp_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
-apilocation:
+- _o__mbsnbcmp
+- _o__mbsnbcmp_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcmp
 - tcsnbmp
@@ -31,16 +37,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285307"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911976"
 ---
-# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp、_mbsnbcmp_l
+# <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp、_mbsnbcmp_l
 
-最初の比較**n** 2 つのマルチバイト文字の文字列のバイト数。
+2つのマルチバイト文字列の最初の**n**バイトを比較します。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -63,7 +69,7 @@ int _mbsnbcmp_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*string1*, *string2*<br/>
+*string1*、 *string2*<br/>
 比較対象の文字列。
 
 *count*<br/>
@@ -74,25 +80,27 @@ int _mbsnbcmp_l(
 
 ## <a name="return-value"></a>戻り値
 
-戻り値の部分文字列の序数の関係を示す*string1*と*string2*します。
+戻り値は、 *string1*と*string2*の部分文字列間の序数関係を示します。
 
 |戻り値|説明|
 |------------------|-----------------|
-|< 0|*string1*部分文字列より小さい*string2*部分文字列。|
-|0|*string1*部分文字列が同じ*string2*部分文字列。|
-|> 0|*string1*部分文字列がより大きい*string2*部分文字列。|
+|< 0|*string1* substring は*string2* substring より小さい値です。|
+|0|*string1*部分文字列は、 *string2*部分文字列と同じです。|
+|> 0|*string1* substring が*string2* substring を超えています。|
 
-パラメーター検証エラー、 **_mbsnbcmp**と **_mbsnbcmp_l**返す**すると**、定義されている\<string.h > と\<mbstring.h >。
+パラメーターの検証エラーが発生した場合、 **_mbsnbcmp**と **_mbsnbcmp_l**は **_NLSCMPERROR**を\<返します。これは\<、mbstring.h> および> で定義されています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbsnbcmp**関数の最初の比較で最も*カウント*バイト*string1*と*string2*を示す値を返すと、これらの部分文字列間のリレーションシップ。 **_mbsnbcmp**の大文字バージョン **_mbsnbicmp**します。 異なり **_mbsnbcoll**、 **_mbsnbcmp**ロケールの照合順序の影響を受けません。 **_mbsnbcmp** 、現在のマルチバイトに従ってマルチバイト文字シーケンスを認識[コード ページ](../../c-runtime-library/code-pages.md)します。
+**_Mbsnbcmp**関数は、 *string1*と*string2*の最初の*count*バイトを比較し、部分文字列間の関係を示す値を返します。 **_mbsnbcmp**は、 **_mbsnbicmp**の大文字と小文字を区別するバージョンです。 **_Mbsnbcoll**とは異なり、 **_mbsnbcmp**はロケールの照合順序の影響を受けません。 **_mbsnbcmp**は、現在のマルチバイト[コードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字のシーケンスを認識します。
 
-**_mbsnbcmp**よう **_mbsncmp**ことを除いて、 **_mbsncmp**バイトではなく文字で文字列を比較します。
+**_mbsnbcmp**は **_mbsncmp**に似ていますが、 **_mbsncmp**では、文字列がバイトではなく文字で比較される点が異なります。
 
-出力値を受ける、 **LC_CTYPE**先行バイトを指定すると、ロケールの設定と末尾のバイトのマルチバイト文字のカテゴリ。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsnbcmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsnbcmp_l**関数を使用する点を除いて同一です、*ロケール*パラメーター代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。これは、マルチバイト文字の先頭バイトと末尾バイトを指定します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsnbcmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsnbcmp_l**関数は、 *locale*パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-いずれか*string1*または*string2* null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、**すると**と**errno**に設定されている**EINVAL**します。
+*String1*または*string2*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **_NLSCMPERROR**を返し、 **errno**は**EINVAL**に設定されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -103,12 +111,12 @@ int _mbsnbcmp_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -168,5 +176,5 @@ Result:   String 1 is equal to string 2
 [_mbsnbicmp、_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

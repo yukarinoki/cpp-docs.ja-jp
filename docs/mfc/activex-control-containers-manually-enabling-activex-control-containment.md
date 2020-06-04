@@ -1,41 +1,41 @@
 ---
-title: ActiveX コントロール コンテナー:ActiveX コントロール サポートを手動で有効にします。
+title: 'ActiveX コントロール コンテナー : ActiveX コントロール サポートの手動による有効化'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - AfxEnableControlContainer method [MFC]
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-ms.openlocfilehash: 80ca25192f3dbda711b0398917cfa68571cd2c55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ad6e8356b5dab54ae97dbdd90812039d1425c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394937"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322059"
 ---
-# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX コントロール コンテナー:ActiveX コントロール サポートを手動で有効にします。
+# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX コントロール コンテナー : ActiveX コントロール サポートの手動による有効化
 
-場合は、MFC アプリケーション ウィザードを使用してアプリケーションを作成すると ActiveX コントロールのサポートを有効にしなかった、手動でこのサポートを追加する必要があります。 この記事では、既存の OLE コンテナー アプリケーションを手動で ActiveX コントロールのサポートを追加するためのプロセスについて説明します。 事前に、OLE コンテナーで ActiveX コントロールのサポートをすることがわかっている場合、情報の記事を参照してください。 [MFC ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。
+MFC アプリケーション ウィザードを使用してアプリケーションを生成したときに ActiveX コントロール サポートを有効にしなかった場合は、このサポートを手動で追加する必要があります。 この資料では、既存の OLE コンテナー アプリケーションに ActiveX コントロールコンテインメントを手動で追加するプロセスについて説明します。 OLE コンテナで ActiveX コントロールをサポートする必要がある場合は[、「MFC ActiveX コントロール コンテナの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)」を参照してください。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
 > [!NOTE]
->  この記事では、ダイアログ ベース ActiveX コントロール コンテナーという名前のプロジェクト コンテナーと円をという名前のプロシージャとコードの例として、埋め込みのコントロールを使用します。
+> この記事では、プロシージャとコードの例として、Container という名前のダイアログ ベースの ActiveX コントロール コンテナー プロジェクトと Circ という名前の埋め込みコントロールを使用します。
 
-ActiveX コントロールをサポートするには、2 つのプロジェクトのファイルを 1 行のコードを追加する必要があります。
+ActiveX コントロールをサポートするには、プロジェクトの 2 つのファイルに 1 行のコードを追加する必要があります。
 
-- 変更のメイン ダイアログ ボックスの`InitInstance`関数 (コンテナーが見つかりませんでした。CPP) への呼び出しの MFC アプリケーション ウィザードで[AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer)、次の例。
+- メインダイアログの`InitInstance`機能を変更します (CONTAINER にあります。次の例に示すように、MFC アプリケーション ウィザードによって[AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer)を呼び出します。
 
    [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
 
-- インクルードには、次を追加します。H ヘッダー ファイル:
+- プロジェクトの STDAFX に次の項目を追加します。H ヘッダー ファイル:
 
    [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
 
-次の手順を完了すると後、をクリックして、プロジェクトをリビルド**ビルド**上、**ビルド**メニュー。
+これらの手順を完了したら、[**ビルド**] メニューの [**ビルド**] をクリックしてプロジェクトを再構築します。
 
 ## <a name="see-also"></a>関連項目
 
-[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
+[ActiveX コントロール コンテナ](../mfc/activex-control-containers.md)

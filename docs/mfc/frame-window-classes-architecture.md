@@ -1,38 +1,36 @@
 ---
 title: フレーム ウィンドウ クラス (アーキテクチャ)
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.frame
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: affa217f481cc6d9e125d526f1b97be9120e0990
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae432c1adc881a5c67d6a6c292dc1f6a583ab3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392844"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441253"
 ---
 # <a name="frame-window-classes-architecture"></a>フレーム ウィンドウ クラス (アーキテクチャ)
 
-ドキュメント/ビュー アーキテクチャでは、フレーム ウィンドウは、ビュー ウィンドウを持つウィンドウです。 サポート コントロールに割り当てられているバー。
+ドキュメント/ビューアーキテクチャでは、フレームウィンドウはビューウィンドウを含むウィンドウです。 また、コントロールバーが接続されていることもサポートしています。
 
-マルチ ドキュメント インターフェイス (MDI) アプリケーションのメイン ウィンドウがから派生`CMDIFrameWnd`します。 直接はドキュメントのフレームは、含まれる、`CMDIChildWnd`オブジェクト。 `CMDIChildWnd`オブジェクト、さらに、ドキュメントのビューが含まれています。
+マルチドキュメントインターフェイス (MDI) アプリケーションでは、メインウィンドウは `CMDIFrameWnd`から派生します。 オブジェクト `CMDIChildWnd` であるドキュメントのフレームが間接的に含まれています。 `CMDIChildWnd` オブジェクトには、ドキュメントのビューが含まれます。
 
-派生したメイン ウィンドウで、シングル ドキュメント インターフェイス (SDI) アプリケーションで`CFrameWnd`、現在のドキュメントのビューが含まれています。
+シングルドキュメントインターフェイス (SDI) アプリケーションでは、`CFrameWnd`から派生したメインウィンドウには、現在のドキュメントのビューが含まれています。
 
 [CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-SDI アプリケーションのメイン フレーム ウィンドウの基本クラス。 またの基本クラスの他のすべてのフレーム ウィンドウ クラス。
+SDI アプリケーションのメインフレームウィンドウの基本クラス。 他のすべてのフレームウィンドウクラスの基本クラスでもあります。
 
 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
-MDI アプリケーションのメイン フレーム ウィンドウの基本クラス。
+MDI アプリケーションのメインフレームウィンドウの基本クラス。
 
 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-MDI アプリケーションのドキュメント フレーム ウィンドウの基本クラスです。
+MDI アプリケーションのドキュメントフレームウィンドウの基本クラス。
 
 [クラスからではなく、](../mfc/reference/coleipframewnd-class.md)<br/>
-インプレース サーバー ドキュメントを編集するときに、フレーム ウィンドウ ビューを提供します。
+サーバードキュメントをその場で編集しているときに、ビューのフレームウィンドウを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

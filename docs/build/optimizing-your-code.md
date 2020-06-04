@@ -8,35 +8,35 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: MT
+ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220183"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078490"
 ---
 # <a name="optimizing-your-code"></a>コードの最適化
 
-実行可能ファイルを最適化することによって、高速に実行速度とサイズの小さなコード間のバランスを実現できます。 このトピックでは、コードを最適化するために Visual Studio が提供されているメカニズムについて説明します。
+実行可能ファイルを最適化することで、実行の高速化とコード サイズの縮小の間でバランスを取ることができます。 このトピックでは、コードを最適化するために Visual Studio に用意されているいくつかのメカニズムについて説明します。
 
 ## <a name="language-features"></a>言語機能
 
-次のトピックでは、C と C++ 言語の最適化機能の一部について説明します。
+次のトピックでは、C/C++ 言語のいくつかの最適化機能について説明します。
 
-[最適化のプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
-一連のキーワードとプラグマのパフォーマンスを向上させるために、コードで使用できます。
+[最適化に影響するプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
+パフォーマンスを向上させるためにコードで使用できるキーワードとプラグマの一覧。
 
-[コンパイラ オプションのカテゴリ別一覧](reference/compiler-options-listed-by-category.md) \
-一連の **/O**コンパイラ オプションが具体的には実行の速度やコードのサイズに影響します。
+[カテゴリ別のコンパイラ オプション](reference/compiler-options-listed-by-category.md) \
+実行速度またはコード サイズに特に影響を与える **/O** コンパイラ オプションの一覧。
 
-[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
-右辺値参照の実装をサポートする*移動セマンティクス*します。 移動セマンティクスをテンプレート ライブラリでは、これらのテンプレートを使用するアプリケーションのパフォーマンスを実装するために使用が大幅に向上させることができます。 場合、
+[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
+右辺値参照では、*移動セマンティクス*の実装がサポートされます。 移動セマンティクスを使用してテンプレート ライブラリを実装すると、これらのテンプレートを使用するアプリケーションのパフォーマンスが大幅に向上する可能性があります。
 
-### <a name="the-optimize-pragma"></a>Optimize プラグマ
+### <a name="the-optimize-pragma"></a>optimize プラグマ
 
-コードの最適化のセクションでは、エラーやパフォーマンスが低下が発生する場合は使用できます、[最適化](../preprocessor/optimize.md)プラグマに、そのセクションの最適化をオフにします。
+コードの最適化されたセクションによってエラーまたは遅延が発生する場合は、[optimize](../preprocessor/optimize.md) プラグマを使用して、そのセクションの最適化をオフにすることができます。
 
-次に示すように、2 つのプラグマ コードを囲みます。
+次に示すように、2 つのプラグマでコードを囲みます。
 
 ```cpp
 #pragma optimize("", off)
@@ -44,25 +44,25 @@ ms.locfileid: "65220183"
 #pragma optimize("", on)
 ```
 
-## <a name="programming-practices"></a>プログラミング手法
+## <a name="programming-practices"></a>プログラミング プラクティス
 
-最適化したコードをコンパイルするときに、追加の警告メッセージがわかります。 いくつかの警告が最適化されたコードにのみ関連しているために、この動作が必要です。 これらの警告の注意を払わない場合は、多くの最適化問題を回避できます。
+最適化を使用してコードをコンパイルしたときに、追加の警告メッセージが表示されることがあります。 いくつかの警告は最適化されたコードのみに関係しているため、これは想定されている動作です。 これらの警告に従うと、多くの最適化の問題を回避できます。
 
-皮肉にも、速度のためのプログラムを最適化することにより、実行速度が低下するためのコード。 これは、最適化の方法によっては、コードのサイズを増やすためです。 たとえば、関数をインライン展開関数呼び出しのオーバーヘッドがなくなります。 ただし、インライン コードが多すぎることは、プログラム非常に大きいため、仮想メモリのページの数が増加をフォールトします。 そのため、関数呼び出しを排除することから得られた速度は、メモリ スワップ失わ可能性があります。
+逆説的ですが、プログラムの速度を最適化すると、コードの実行速度が低下する可能性があります。 これは、速度の最適化の中には、コード サイズを増加させるものがあるためです。 たとえば、関数のインライン化によって、関数呼び出しのオーバーヘッドが除外されます。 ただし、多数のコードをインライン化するとプログラムが大きくなり、仮想メモリのページ フォールトの数が増加する可能性があります。 そのため、関数呼び出しの除外によって得られる速度が、メモリ スワップによって失われる可能性があります。
 
-次のトピックでは、適切なプログラミング方法について説明します。
+次のトピックでは、適切なプログラミング ラクティスについて説明します。
 
-[タイム クリティカル コードを改善するためのヒント](tips-for-improving-time-critical-code.md) \
-適切なコーディング テクニックと、パフォーマンスを向上できます。 このトピックでは、コーディング、コードの時間が重要な部分が満足することを確認するのに役立つ手法を提案します。
+[タイムクリティカルなコードを高速化するためのヒント](tips-for-improving-time-critical-code.md) \
+コーディング技法が優れていると、パフォーマンスが向上します。 このトピックでは、タイムクリティカルなコード部分が問題なく実行されるようにするためのコーディング技法について説明します。
 
 [最適化のベスト プラクティス](optimization-best-practices.md) \
-アプリケーションを最適化する最善の方法に関する一般的なガイドラインを提供します。
+アプリケーションを最適化するための最善の方法に関する一般的なガイドラインを示します。
 
 ## <a name="debugging-optimized-code"></a>最適化されたコードのデバッグ
 
-最適化は、コンパイラによって作成されたコードに変わる可能性がある、アプリケーションをデバッグして、パフォーマンスの測定をコードを最適化し、お勧めします。
+コンパイラによって作成されたコードが最適化によって変更される可能性があるため、アプリケーションをデバッグし、パフォーマンスを測定した後、コードを最適化することをお勧めします。
 
-次のトピックでは、ビルドのリリースをデバッグする方法についての情報を提供します。
+以下のトピックでは、リリース ビルドのデバッグに関する情報を提供します。
 
 - [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)
 
@@ -70,8 +70,7 @@ ms.locfileid: "65220183"
 
 - [浮動小数点数の精度の低下](why-floating-point-numbers-may-lose-precision.md)
 
-
-次のトピックでは、構築、読み込み、およびコードの実行を最適化する方法に関する情報を提供します。
+以下のトピックでは、コードのビルド、読み込み、および実行を最適化する方法についての情報を提供します。
 
 - [コンパイラのスループットの向上](improving-compiler-throughput.md)
 
@@ -81,21 +80,20 @@ ms.locfileid: "65220183"
 
 - [ATL プロジェクトのコンパイラ最適化の指定](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [どのような最適化手法を読み込むときに、クライアント アプリケーションのパフォーマンスを向上させるために使用する必要がありますか。](../build/dll-frequently-asked-questions.md#mfc_optimization)
-
+- [読み込み時にクライアント アプリケーションのパフォーマンスを向上するための最適化技法](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[最適化のプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
+[最適化に影響するプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
 [コンパイラのスループットの向上](improving-compiler-throughput.md) \
-[なぜ浮動小数点数が有効桁数を失う可能性があります。](why-floating-point-numbers-may-lose-precision.md) \
+[浮動小数点数の精度が低下する理由](why-floating-point-numbers-may-lose-precision.md) \
 [IEEE 浮動小数点表現](ieee-floating-point-representation.md) \
-[タイム クリティカル コードを改善するためのヒント](tips-for-improving-time-critical-code.md) \
-[() のない関数名を使用してコードを生成します。](using-function-name-without-parens-produces-no-code.md) \
+[タイムクリティカルなコードを高速化するためのヒント](tips-for-improving-time-critical-code.md) \
+["()" のない関数名とコードの生成](using-function-name-without-parens-produces-no-code.md) \
 [最適化のベスト プラクティス](optimization-best-practices.md) \
-[プロファイル ガイド付き最適化](profile-guided-optimizations.md) \
-[プロファイル ガイド付き最適化のための環境変数](environment-variables-for-profile-guided-optimizations.md) \
-[しています](pgoautosweep.md) \
+[プロファイルに基づく最適化](profile-guided-optimizations.md) \
+[プロファイルに基づく最適化の環境変数](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
 [方法: 複数の PGO プロファイルを単一のプロファイルにマージする](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)

@@ -1,5 +1,5 @@
 ---
-title: CHeapPtr クラス
+title: Cヒーププタークラス
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtr
@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a512aa974cb57072915f887f0c2a20ed1263ffa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258677"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326913"
 ---
-# <a name="cheapptr-class"></a>CHeapPtr クラス
+# <a name="cheapptr-class"></a>Cヒーププタークラス
 
-ヒープのポインターを管理するためのスマート ポインター クラス。
+ヒープ ポインターを管理するためのスマート ポインター クラス。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -34,10 +34,10 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-ヒープに格納されるオブジェクトの種類。
+ヒープに格納されるオブジェクト型。
 
 *アロケーター*<br/>
-メモリの割り当ては、使用するクラス。
+使用するメモリ割り当てクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -45,28 +45,28 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtr::CHeapPtr](#cheapptr)|コンストラクターです。|
+|[Cヒーププター::Cヒーププター](#cheapptr)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtr::Allocate](#allocate)|オブジェクトを格納するヒープにメモリを割り当てるには、このメソッドを呼び出します。|
-|[CHeapPtr::Reallocate](#reallocate)|ヒープにメモリを再割り当てするには、このメソッドを呼び出します。|
+|[Cヒーププター::割り当て](#allocate)|オブジェクトを格納するヒープにメモリを割り当てます。|
+|[Cヒーププター::再割り当て](#reallocate)|ヒープ上のメモリを再割り当てします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtr::operator =](#operator_eq)|代入演算子です。|
+|[Cヒーププター::演算子 =](#operator_eq)|代入演算子。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CHeapPtr` 派生[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) 、既定では、CRT ルーチン (で[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) を割り当てたり、メモリを解放します。 クラスは、 [CHeapPtrList](../../atl/reference/cheapptrlist-class.md)にヒープのポインターのリストを構築することができます。 参照してください[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)、COM メモリ割り当てルーチンが使用されます。
+`CHeapPtr`は[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)から派生し、デフォルトでは CRT ルーチン[(CCRTAllocator)](../../atl/reference/ccrtallocator-class.md)を使用して、メモリの割り当てと解放を行います。 [CHeapPtrList](../../atl/reference/cheapptrlist-class.md)クラスを使用して、ヒープ ポインターのリストを作成できます。 COM メモリ割り当てルーチンを使用する[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)も参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
+[ヒーププターベース](../../atl/reference/cheapptrbase-class.md)
 
 `CHeapPtr`
 
@@ -74,9 +74,9 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 **ヘッダー:** atlcore.h
 
-##  <a name="allocate"></a>  CHeapPtr::Allocate
+## <a name="cheapptrallocate"></a><a name="allocate"></a>Cヒーププター::割り当て
 
-オブジェクトを格納するヒープにメモリを割り当てるには、このメソッドを呼び出します。
+オブジェクトを格納するヒープにメモリを割り当てます。
 
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -84,22 +84,22 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nElements*<br/>
-割り当てるメモリの量を計算するために使用する要素の数。 既定値は 1 です。
+*n要素*<br/>
+割り当てるメモリの量を計算するために使用される要素の数。 既定値は 1 です。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合に、メモリが正常である場合は true を返しますが割り当てられます。
+メモリが正常に割り当てられた場合は true、失敗した場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アロケーターのルーチンは、ヒープを格納するための十分なメモリを予約するために使用*nElement*コンス トラクターで定義された型のオブジェクト。
+アロケーター ルーチンは、コンストラクターで定義された型の*nElement*オブジェクトを格納するためにヒープに十分なメモリを予約するために使用されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a>Cヒーププター::Cヒーププター
 
 コンストラクターです。
 
@@ -111,18 +111,18 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
-既存のヒープ ポインターまたは`CHeapPtr`します。
+*P*<br/>
+既存のヒープ ポインタ`CHeapPtr`または .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既存のポインターを使用して、ヒープのポインターを作成することができます必要に応じて、`CHeapPtr`オブジェクト。 そうである場合、新しい`CHeapPtr`オブジェクトを新しいポインターとリソースを管理する責任を前提としています。
+ヒープ ポインターは、既存のポインターまたはオブジェクトを使用して、オプション`CHeapPtr`で作成できます。 その場合、新しい`CHeapPtr`オブジェクトは、新しいポインターとリソースを管理する責任を負います。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-##  <a name="operator_eq"></a>  CHeapPtr::operator =
+## <a name="cheapptroperator-"></a><a name="operator_eq"></a>Cヒーププター::演算子 =
 
 代入演算子。
 
@@ -133,20 +133,20 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
-既存の `CHeapPtr` オブジェクト。
+*P*<br/>
+既存の `CHeapPtr` オブジェクトです。
 
 ### <a name="return-value"></a>戻り値
 
-更新されたへの参照を返します`CHeapPtr`します。
+更新された`CHeapPtr`への参照を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+## <a name="cheapptrreallocate"></a><a name="reallocate"></a>Cヒーププター::再割り当て
 
-ヒープにメモリを再割り当てするには、このメソッドを呼び出します。
+ヒープ上のメモリを再割り当てします。
 
 ```
 bool Reallocate(size_t nElements) throw();
@@ -154,12 +154,12 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nElements*<br/>
-新しいに割り当てるメモリの量を計算するための要素数。
+*n要素*<br/>
+割り当てるメモリの量を計算するために使用される新しい要素数。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合に、メモリが正常である場合は true を返しますが割り当てられます。
+メモリが正常に割り当てられた場合は true、失敗した場合は false を返します。
 
 ### <a name="example"></a>例
 
@@ -167,6 +167,6 @@ bool Reallocate(size_t nElements) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)<br/>
-[CCRTAllocator クラス](../../atl/reference/ccrtallocator-class.md)<br/>
+[クラス](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTアロケータークラス](../../atl/reference/ccrtallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

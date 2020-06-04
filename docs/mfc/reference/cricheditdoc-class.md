@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 587cf65543e24e586fb8b2336481d6e841473134
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502676"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368259"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc クラス
 
-[CRichEditView](../../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)を使用すると、は、MFC のドキュメントビューアーキテクチャのコンテキスト内で、リッチエディットコントロールの機能を提供します。
+[では](../../mfc/reference/cricheditview-class.md)、MFC のドキュメント[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)ビュー アーキテクチャのコンテキスト内でリッチ エディット コントロールの機能を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,25 +37,25 @@ class CRichEditDoc : public COleServerDoc
 
 |名前|説明|
 |----------|-----------------|
-|[CRichEditDoc::CreateClientItem](#createclientitem)|ドキュメントのクリーンアップを実行するために呼び出されます。|
-|[CRichEditDoc:: GetStreamFormat](#getstreamformat)|ストリームの入力と出力に書式設定情報を含めるかどうかを示します。|
-|[CRichEditDoc:: GetView](#getview)|[CRichEditView](../../mfc/reference/cricheditview-class.md) オブジェクトを取得します。|
+|[次の項目を作成します。](#createclientitem)|ドキュメントのクリーンアップを実行するために呼び出されます。|
+|[クリッチエディットドク::ゲットストリームフォーマット](#getstreamformat)|ストリームの入力と出力に書式情報を含めるかどうかを示します。|
+|[クリッチエディットドック::ゲットビュー](#getview)|関連付けされた[CRichEditView](../../mfc/reference/cricheditview-class.md)オブジェクトを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CRichEditDoc:: m_bRTF](#m_brtf)|ストリーム入出力に書式を含めるかどうかを示します。|
+|[クリッチエディットドック::m_bRTF](#m_brtf)|ストリーム I/O に書式設定を含めるかどうかを示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-"リッチエディットコントロール" は、ユーザーがテキストを入力して編集できるウィンドウです。 テキストには、文字や段落の書式を割り当てることができ、埋め込み OLE オブジェクトを含めることができます。 リッチエディットコントロールは、テキストを書式設定するためのプログラミングインターフェイスを提供します。 ただし、アプリケーションは、ユーザーが書式設定操作を使用できるようにするために必要なユーザーインターフェイスコンポーネントを実装する必要があります。
+"リッチ エディット コントロール" とは、ユーザーがテキストを入力および編集できるウィンドウです。 テキストには、文字および段落の書式を割り当てることができ、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールは、テキストを書式設定するためのプログラミング インターフェイスを提供します。 ただし、アプリケーションは、ユーザーが書式設定操作を使用できるようにするために必要なユーザー インターフェイス コンポーネントを実装する必要があります。
 
-`CRichEditView`テキストのテキストと書式設定の特性を維持します。 `CRichEditDoc`ビュー内のクライアントアイテムの一覧を保持します。 `CRichEditCntrItem`OLE クライアントアイテムへのコンテナー側のアクセスを提供します。
+`CRichEditView`は、テキストのテキストと書式設定の特性を維持します。 `CRichEditDoc`は、ビュー内にあるクライアントアイテムのリストを保持します。 `CRichEditCntrItem`は、OLE クライアントアイテムへのコンテナ側アクセスを提供します。
 
-この Windows コモンコントロール (および[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は、windows 95/98 および windows NT バージョン3.51 以降で実行されているプログラムに対してのみ使用できます。
+この Windows コモン コントロール (および[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)と関連クラス) は、Windows 95/98 および Windows NT バージョン 3.51 以降で実行されているプログラムでのみ使用できます。
 
-MFC アプリケーションでリッチエディットドキュメントを使用する例については、「[ワードパッド](../../overview/visual-cpp-samples.md)サンプルアプリケーション」を参照してください。
+MFC アプリケーションでリッチ エディット ドキュメントを使用する例については[、WORDPAD](../../overview/visual-cpp-samples.md)サンプル アプリケーションを参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -75,11 +75,11 @@ MFC アプリケーションでリッチエディットドキュメントを使�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxrich
+**ヘッダー:** afxrich.h
 
-##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem
+## <a name="cricheditdoccreateclientitem"></a><a name="createclientitem"></a>次の項目を作成します。
 
-オブジェクトを作成し、この`CRichEditCntrItem`ドキュメントに追加するには、この関数を呼び出します。
+`CRichEditCntrItem`オブジェクトを作成し、このドキュメントに追加します。
 
 ```
 virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
@@ -87,22 +87,22 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*preo*<br/>
-OLE 項目を記述する[Reobject](/windows/win32/api/richole/ns-richole-reobject)構造体へのポインター。 新しい`CRichEditCntrItem`オブジェクトは、この OLE 項目を中心に構築されます。 *Preo*が NULL の場合、新しいクライアント項目は空になります。
+*プレオ*<br/>
+OLE アイテムを記述する[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)構造体へのポインター。 この`CRichEditCntrItem`OLE アイテムを中心に新しいオブジェクトが作成されます。 *preo*が NULL の場合、新しいクライアント項目は空です。
 
 ### <a name="return-value"></a>戻り値
 
 このドキュメントに追加された新しい[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数では、OLE の初期化は実行されません。
+この関数は、OLE 初期化を実行しません。
 
-詳細については、Windows SDK の「 [Reobject](/windows/win32/api/richole/ns-richole-reobject)構造体」を参照してください。
+詳細については、Windows SDK の[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)構造体を参照してください。
 
-##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
+## <a name="cricheditdocgetstreamformat"></a><a name="getstreamformat"></a>クリッチエディットドク::ゲットストリームフォーマット
 
-リッチエディットの内容をストリーミングするためのテキスト形式を決定するには、この関数を呼び出します。
+リッチ エディットの内容をストリーミングするためのテキスト形式を決定します。
 
 ```
 int GetStreamFormat() const;
@@ -110,19 +110,19 @@ int GetStreamFormat() const;
 
 ### <a name="return-value"></a>戻り値
 
-次のフラグのいずれかになります。
+次のいずれかのフラグ。
 
-- SF_TEXT は、リッチエディットコントロールが書式設定情報を保持しないことを示します。
+- SF_TEXTリッチ エディット コントロールが書式設定情報を保持しないことを示します。
 
-- SF_RTF は、リッチエディットコントロールが書式設定情報を保持することを示します。
+- SF_RTF リッチ エディット コントロールが書式情報を保持することを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値は、 [m_bRTF](#m_brtf)データメンバーに基づいています。 が TRUE の場合、 `m_bRTF`この関数は SF_RTF を返します。それ以外の場合は SF_TEXT を返します。
+戻り値は[、m_bRTF](#m_brtf)データ メンバーに基づいています。 この関数は、true`m_bRTF`の場合SF_RTF返します。それ以外の場合は、SF_TEXT。
 
-##  <a name="getview"></a>CRichEditDoc:: GetView
+## <a name="cricheditdocgetview"></a><a name="getview"></a>クリッチエディットドック::ゲットビュー
 
-この`CRichEditDoc`オブジェクトに関連付けられている[CRichEditView](../../mfc/reference/cricheditview-class.md)オブジェクトにアクセスするには、この関数を呼び出します。
+この`CRichEditDoc`オブジェクトに関連付けられている[CRichEditView](../../mfc/reference/cricheditview-class.md)オブジェクトにアクセスします。
 
 ```
 virtual CRichEditView* GetView() const;
@@ -130,15 +130,15 @@ virtual CRichEditView* GetView() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントに関連`CRichEditView`付けられているオブジェクトへのポインター。
+ドキュメントに`CRichEditView`関連付けられているオブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テキストおよび書式設定の情報は、 `CRichEditView`オブジェクト内に含まれています。 オブジェクト`CRichEditDoc`は、シリアル化用の OLE 項目を保持します。 `CRichEditView` それぞれ`CRichEditDoc`に1つだけ存在する必要があります。
+テキストと書式設定の情報は、オブジェクト内`CRichEditView`に含まれます。 オブジェクト`CRichEditDoc`は、シリアル化用の OLE アイテムを保持します。 1 つにつき`CRichEditView``CRichEditDoc`1 つだけの必要があります。
 
-##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
+## <a name="cricheditdocm_brtf"></a><a name="m_brtf"></a>クリッチエディットドック::m_bRTF
 
-TRUE の場合、 [CRichEditCtrl:: StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)と[CRichEditCtrl:: streamin](../../mfc/reference/cricheditctrl-class.md#streamout)は段落と文字の書式設定の特性を格納する必要があることを示します。
+TRUE の場合は、[段落](../../mfc/reference/cricheditctrl-class.md#streamin)[と文字](../../mfc/reference/cricheditctrl-class.md#streamout)書式の特性を格納する必要があることを示します。
 
 ```
 BOOL m_bRTF;
@@ -146,10 +146,10 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプルワードパッド](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル ワードパッド](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditView クラス](../../mfc/reference/cricheditview-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラスを表示します。](../../mfc/reference/cricheditview-class.md)<br/>
 [CRichEditCntrItem クラス](../../mfc/reference/cricheditcntritem-class.md)<br/>
 [COleDocument クラス](../../mfc/reference/coledocument-class.md)<br/>
-[CRichEditCtrl クラス](../../mfc/reference/cricheditctrl-class.md)
+[クラス](../../mfc/reference/cricheditctrl-class.md)

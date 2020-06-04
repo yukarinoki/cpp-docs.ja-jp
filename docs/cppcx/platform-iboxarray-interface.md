@@ -3,17 +3,17 @@ title: Platform::IBoxArray インターフェイス
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392077"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444161"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray インターフェイス
 
@@ -31,19 +31,19 @@ interface class IBoxArray
 *T*<br/>
 各配列要素のボックス化された値の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`IBoxArray` c++/cli の CX 名前`Windows::Foundation::IReferenceArray`します。
+`IBoxArray` は `Windows::Foundation::IReferenceArray`C++の/cx 名です。
 
 ### <a name="members"></a>メンバー
 
 `IBoxArray` インターフェイスは `IValueType` インターフェイスを継承します。 `IBoxArray` にも、次に示すメンバーがあります。
 
-|メソッド|説明|
+|方法|説明|
 |------------|-----------------|
-|[値](#value)|以前にこの `IBoxArray` インスタンスに格納されていたことがあり、ボックス化が解除されている配列を返します。|
+|[Value](#value)|以前にこの `IBoxArray` インスタンスに格納されていたことがあり、ボックス化が解除されている配列を返します。|
 
-## <a name="value"></a> Iboxarray::value プロパティ
+## <a name="value"></a>IBoxArray:: Value プロパティ
 
 このオブジェクトに元から格納されていた値を返します。
 
@@ -62,10 +62,10 @@ property T Value {T get();}
 
 このオブジェクトに元から格納されていた値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+例については、「[ボックス](../cppcx/boxing-c-cx.md)化」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

@@ -1,10 +1,12 @@
 ---
 title: _fdopen、_wfdopen
-ms.date: 12/12/2017
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fdopen
 - _wfdopen
-apilocation:
+- _o__fdopen
+- _o__wfdopen
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tfdopen
 - _fdopen
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227f9e31c689b0259c429e2ffd9fce074903bd71
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334776"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920176"
 ---
-# <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
+# <a name="_fdopen-_wfdopen"></a>_fdopen、_wfdopen
 
 ストリームを前回下位入出力で開いたファイルに関連付けます。
 
@@ -59,70 +65,72 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 開いているファイルのファイル記述子。
 
-*モード*<br/>
+*mode*<br/>
 ファイル アクセスの種類。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、開いているストリームへのポインターを返します。 エラーが発生すると、NULL のポインター値を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**設定されて**EBADF**、不適切なファイル記述子を示すまたは**EINVAL**、ことを示します*モード*が null ポインター。
+これらの各関数は、開いているストリームへのポインターを返します。 エラーが発生すると、NULL のポインター値を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は無効なファイル記述子を示す**EBADF**に設定されるか、または*モード*が null ポインターであることを示す**EINVAL**に設定されます。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Fdopen**関数が関連付けで識別されるファイルの I/O ストリーム*fd*、できるので、下位入出力バッファーおよびフォーマットが開かれているファイル。 **_wfdopen**のワイド文字バージョンです **_fdopen**、*モード*引数 **_wfdopen**はワイド文字列です。 **_wfdopen**と **_fdopen**それ以外の場合の動作は同じです。
+**_Fdopen**関数は、 *fd*によって識別されるファイルに i/o ストリームを関連付けます。これにより、低レベル i/o 用に開かれたファイルをバッファーおよびフォーマットできるようになります。 **_wfdopen**は **_fdopen**のワイド文字バージョンです。**_wfdopen**の*モード*引数は、ワイド文字列です。 **_wfdopen**と **_fdopen**は同じように動作します。
 
-ファイル記述子に渡される **_fdopen**所有している、返されたによって**ファイル&#42;** ストリーム。 場合 **_fdopen**が成功すると、呼び出さないでください[\_閉じます](close.md)ファイル記述子。 呼び出す[fclose](fclose-fcloseall.md)返された**ファイル&#42;** もファイル記述子を閉じます。
+**_Fdopen**に渡されるファイル記述子は、返される**ファイル &#42;** ストリームによって所有されます。 **_Fdopen**が成功した場合は、ファイル記述子に対して[ \_close](close.md)を呼び出さないでください。 返された**ファイル &#42;** で[fclose](fclose-fcloseall.md)を呼び出すと、ファイル記述子も閉じられます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|Tchar.h のルーチン|\_UNICODE と\_MBCS が未定義|\_MBCS の定義|\_UNICODE が定義されています。|
+|Tchar.h のルーチン|\_UNICODE および\_MBCS が定義されていません|\_定義済みの MBCS|\_UNICODE 定義|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-*モード*文字の文字列をファイルに要求されるファイル アクセスの種類を指定します。
+*モード*文字列は、ファイルに対して要求されるファイルアクセスの種類を指定します。
 
-| *モード* | アクセス |
+| *mode* | アクセス |
 |--------|--------|
-| **"r"** | 読み取り用に開きます。 ファイルが存在しないか見つからない場合、 **fopen**呼び出しは失敗します。 |
-| **"w"** | 書き込み用に空のファイルを開きます。 指定したファイルが既に存在すると、そのファイルの内容は破棄されます。 |
-| **"a"** | (追加モード) ファイルの末尾に書き込みが開きます。 ファイルが存在しない場合は、作成します。 |
-| **"r+"** | 読み取りと書き込みの両方のモードで開きます。 ファイルが存在している必要があります。 |
-| **"w+"** | 読み取りと書き込みの両方のモードで空のファイルを開きます。 そのファイルが既に存在すると、そのファイルの内容は破棄されます。 |
-| **"a+"** | 読み取りと追加の両方のモードでファイルを開きます。 ファイルが存在しない場合は、作成します。 |
+| **\r\n\r\n** | 読み取り用に開きます。 ファイルが存在しないか見つからない場合、 **fopen**呼び出しは失敗します。 |
+| **リダイレクト** | 書き込み用に空のファイルを開きます。 指定したファイルが既に存在すると、そのファイルの内容は破棄されます。 |
+| **ある** | ファイルの末尾に書き込みを行うために開きます (追加)。 ファイルが存在しない場合は、作成します。 |
+| **"r +"** | 読み取りと書き込みの両方のモードで開きます。 ファイルが存在している必要があります。 |
+| **"w +"** | 読み取りと書き込みの両方のモードで空のファイルを開きます。 そのファイルが既に存在すると、そのファイルの内容は破棄されます。 |
+| **"a +"** | 読み取りと追加の両方のモードでファイルを開きます。 ファイルが存在しない場合は、作成します。 |
 
-ファイルを開くと、 **"a"** または **「a +」** アクセスの種類、すべての書き込み操作、ファイルの末尾から行われます。 使用して、ファイル ポインターの位置を変更できる[fseek](fseek-fseeki64.md)または[巻き戻し](rewind.md)には常に戻さファイルの末尾には、書き込み操作の前にします。したがって、既存のデータは上書きされません。 ときに、 **「r +」**、 **「w +」**、または **「a +」** アクセスの種類を指定すると、読み取りと書き込みの両方が許可されている (ファイルが開かれると言います"update")。 ただし、読み取りと書き込みの間で切り替えると、必要があります、介在する[fflush](fflush.md)、 [fsetpos](fsetpos.md)、 [fseek](fseek-fseeki64.md)、または[巻き戻し](rewind.md)操作です。 現在の位置を指定することができます、 [fsetpos](fsetpos.md)または[fseek](fseek-fseeki64.md)したい場合は、操作します。
+**"A"** または **"a +"** アクセスの種類を使用してファイルを開くと、すべての書き込み操作がファイルの末尾で行われます。 ファイルポインターは、 [fseek](fseek-fseeki64.md)または[rewind](rewind.md)を使用して移動できますが、書き込み操作が実行される前に、常にファイルの末尾に戻されます。したがって、既存のデータを上書きすることはできません。 **"R +"**、 **"w +"**、または **"a +"** のアクセスの種類が指定されている場合は、読み取りと書き込みの両方が許可されます (ファイルは "更新" 用に開かれていると言います)。 ただし、読み取りと書き込みを切り替える場合は、複数の[fflush](fflush.md)、 [fsetpos](fsetpos.md)、 [fseek](fseek-fseeki64.md)、または[rewind](rewind.md)操作が必要です。 必要に応じて、 [fsetpos](fsetpos.md)または[fseek](fseek-fseeki64.md)操作の現在位置を指定できます。
 
-上記の値だけでなく、次の文字含めることもできますで*モード*改行文字の変換モードを指定します。
+上記の値に加えて、次の文字を*モード*で使用して、改行文字の変換モードを指定することもできます。
 
 | *モード*修飾子 | 動作 |
 |-----------------|----------|
-| **t** | ファイルをテキスト (変換) モードで開きます。 このモードでは、復帰と改行 (CR-LF) の組み合わせは入力時に 1 つの改行 (LF) 文字に変換され、LF 文字は出力時に CR-LF の組み合わせに変換されます。 また、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 |
-| **b** | バイナリ (無変換) モードで開きます。 すべての翻訳**t**モードが抑制されます。 |
-| **c** | 関連付けられているコミット フラグを有効にする*filename*ファイル バッファーの内容がいずれかのディスクに直接書き込まれるように**fflush**または **_flushall**が呼び出されます。 |
-| **n** | 関連付けられているコミット フラグをリセット*filename* 「コミットなし」。 既定値です。 プログラムを Commode.obj とリンクする場合は、グローバル コミット フラグもオーバーライドします。プログラムを明示的に Commode.obj とリンクしない場合、グローバル コミット フラグの既定の設定は "コミットなし" です。 |
+| **\t** | ファイルをテキスト (変換) モードで開きます。 このモードでは、復帰と改行 (CR-LF) の組み合わせは入力時に 1 つの改行 (LF) 文字に変換され、LF 文字は出力時に CR-LF の組み合わせに変換されます。 また、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 |
+| **b** | バイナリ (無変換) モードで開きます。 **T**モードからの変換は抑制されます。 |
+| **40u-c** | **Fflush**または **_flushall**が呼び出された場合に、ファイルバッファーの内容がディスクに直接書き込まれるように、関連付けられている*ファイル名*のコミットフラグを有効にします。 |
+| **n** | 関連付けられている*ファイル名*のコミットフラグを "コミットなし" にリセットします。 既定値です。 また、プログラムを Commode .obj にリンクする場合は、グローバルコミットフラグもオーバーライドします。プログラムを Commode .obj に明示的にリンクしていない場合、グローバルコミットフラグの既定値は "コミットなし" です。 |
 
-**T**、 **c**、および**n** *モード*オプション用の Microsoft 拡張機能は、 **fopen**と **_fdopen**します。 ANSI の移植性を維持する場合には使用しないでください。
+**T**、 **c**、および**n** *モード*オプションは、Microsoft extensions for **fopen**および **_fdopen**です。 ANSI の移植性を維持する場合には使用しないでください。
 
-場合**t**または**b**には、指定しない*モード*、グローバル変数によって既定の変換モードが定義されている[ \_fmode](../../c-runtime-library/fmode.md)します。 場合**t**または**b**は引数の先頭に、関数が失敗して、NULL が返されます。 テキスト モードと binary モードの詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」を参照してください。
+**T**または**b**を*モード*で指定しない場合、既定の変換モードはグローバル変数[ \_fmode](../../c-runtime-library/fmode.md)によって定義されます。 **T**または**b**が引数の前に付加されている場合、関数は失敗し、NULL を返します。 テキスト モードとバイナリ モードの詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」を参照してください。
 
-有効な文字は、*モード*で使用される文字列**fopen**と **_fdopen**に対応して*oflag*で使用される引数[\_開く](open-wopen.md)と[ \_sopen](sopen-wsopen.md)の次の表に示しますように。
+次の表に示すように、 **fopen**と **_fdopen**で使用される*モード*文字列に有効な文字は、 [ \_open](open-wopen.md)および[ \_sopen](sopen-wsopen.md)で使用される*oflag*引数に対応しています。
 
-|文字*モード*文字列|等価*oflag*値 **_open**と **_sopen**|
+|*Mode*文字列の文字|**_Open**と **_sopen**に相当する*oflag*値|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (通常は **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_APPEND**)|
-|**+**|**\_O\_RDWR &#124; \_O\_APPEND** (usually **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_CREAT** )|
+|**ある**|**\_O\_wronly &#124; \_o\_append** (通常** \_は\_o wronly \_&#124;\_o &#124; \_o\_append**)|
+|**+**|**\_O\_RDWR &#124; \_o\_append** (通常** \_は\_o RDWR \_&#124;\_o append \_&#124;\_o** )|
 |**r**|**\_O\_RDONLY**|
-|**r+**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (通常は **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (通常は **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_wronly** (通常** \_は\_o wronly \_&#124;\_o &#124; \_o\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (通常** \_は\_o RDWR \_&#124;\_o &#124; \_o\_TRUNC**)|
 |**b**|**\_O\_バイナリ**|
-|**t**|**\_O\_TEXT**|
-|**c**|なし|
-|**n**|なし|
+|**\t**|**\_O\_テキスト**|
+|**40u-c**|None|
+|**n**|None|
 
 ## <a name="requirements"></a>必要条件
 
@@ -131,7 +139,7 @@ FILE *_wfdopen(
 |**_fdopen**|\<stdio.h>|
 |**_wfdopen**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -170,7 +178,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfdopentxt"></a>入力: crt_fdopen.txt
+### <a name="input-crt_fdopentxt"></a>入力: crt_fdopen.txt
 
 ```Input
 Line one
@@ -188,6 +196,6 @@ Lines in file: 2
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [\_dup、 \_dup2](dup-dup2.md)<br/>
 [fclose、 \_fcloseall](fclose-fcloseall.md)<br/>
-[fopen、 \_wfopen](fopen-wfopen.md)<br/>
+[fopen、 \_すべてのファイルを開く](fopen-wfopen.md)<br/>
 [freopen、 \_wfreopen](freopen-wfreopen.md)<br/>
-[\_open, \_wopen](open-wopen.md)<br/>
+[\_開く、 \_wopen](open-wopen.md)<br/>

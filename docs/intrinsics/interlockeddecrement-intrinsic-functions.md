@@ -1,5 +1,5 @@
 ---
-title: _InterlockedDecrement 組み込み関数
+title: 組み込み関数の _InterlockedDecrement
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217679"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857919"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 組み込み関数
+# <a name="_interlockeddecrement-intrinsic-functions"></a>組み込み関数の _InterlockedDecrement
 
 **Microsoft 固有の仕様**
 
@@ -100,22 +100,22 @@ __int64 _InterlockedDecrement64_nf(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpAddend*\
+*Lpaddend*\
 [入力、出力]デクリメントする変数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 戻り値は、デクリメントして生成された値です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
+|`_InterlockedDecrement`、 `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
 |`_InterlockedDecrement64`|ARM、x64、ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM、ARM64|
 
-**ヘッダーファイル**\<>
+**ヘッダーファイル**\<に存在します。 h >
 
 ## <a name="remarks"></a>Remarks
 
@@ -123,13 +123,13 @@ __int64 _InterlockedDecrement64_nf(
 
 `_InterlockedDecrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedDecrement16` は 16 ビット整数値および `_InterlockedDecrement64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みは、メモリバリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ組み込みは、メモリバリアとしては機能しません。
 
 `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // compiler_intrinsics_interlocked.cpp
@@ -197,7 +197,9 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>参照
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [キーワード](../cpp/keywords-cpp.md)\

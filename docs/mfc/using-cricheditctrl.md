@@ -1,24 +1,22 @@
 ---
 title: CRichEditCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CRichEditCtrl
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411735"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441799"
 ---
 # <a name="using-cricheditctrl"></a>CRichEditCtrl の使い方
 
-リッチ エディット コントロールでは、ウィンドウで、ユーザーは入力し、テキストの編集します。 テキストは、文字および段落の書式設定に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールは、MFC では、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラス。
+リッチエディットコントロールは、ユーザーがテキストを入力して編集できるウィンドウです。 テキストには、文字や段落の書式を割り当てることができ、埋め込み OLE オブジェクトを含めることができます。 リッチエディットコントロールは、MFC で[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラスによって表されます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)
 
@@ -32,7 +30,7 @@ ms.locfileid: "62411735"
 
 - [リッチ エディット コントロールでの現在の選択項目](../mfc/current-selection-in-a-rich-edit-control.md)
 
-- [リッチ エディット コントロールでのワード区切り](../mfc/word-breaks-in-rich-edit-controls.md)
+- [リッチエディットコントロールでの単語区切り](../mfc/word-breaks-in-rich-edit-controls.md)
 
 - [リッチ エディット コントロールでのクリップボード操作](../mfc/clipboard-operations-in-rich-edit-controls.md)
 
@@ -44,6 +42,6 @@ ms.locfileid: "62411735"
 
 - [リッチ エディット コントロールからの通知メッセージ](../mfc/notifications-from-a-rich-edit-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

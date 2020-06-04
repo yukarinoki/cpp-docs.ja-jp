@@ -1,34 +1,34 @@
 ---
 title: IFIDN、IFIDNI
-ms.date: 05/23/2019
+ms.date: 12/17/2019
 f1_keywords:
-- IFIDN[[I]]
 - IFIDN
 - IFIDNI
 helpviewer_keywords:
-- IFIDN[[I]] directive
 - IFIDN directive
 - IFIDNI directive
 ms.assetid: 957893b1-1a30-4ffd-96f2-6663604a5058
-ms.openlocfilehash: 9dab7771e96848fd77aec7e601b9da2f1bc8610d
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 086198b377defbaa7ff336fa5a565a2b44af25e2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197669"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317228"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN、IFIDNI
 
-テキスト項目が同一の場合は、アセンブリを行います。
+テキスト項目が同一である場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IFIDN**\[**I**] *textitem1* __,__ *textitem2*
+> **Ifidn** *textitem1* __、__ *textitem2*\
+> **Ifidni** *textitem1* __、__ *textitem2*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-場合**IFIDNI**は、比較では大文字小文字を区別します。 参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+**Ifidni**が指定されている場合、比較では大文字と小文字が区別されません。 完全な構文について[は](if-masm.md)、「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

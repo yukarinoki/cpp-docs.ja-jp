@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: d1fc675b1014ab9a099e8310b52b7458f2bff65f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916193"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754949"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase クラス
 
@@ -49,25 +49,25 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 |名前|説明|
 |----------|-----------------|
-|[CInterpolatorBase:: CInterpolatorBase](#cinterpolatorbase)|オブジェクトを`CInterpolatorBase`構築します。|
+|[インターポレーターベース::インターポレーターベース](#cinterpolatorbase)|オブジェクトを`CInterpolatorBase`構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CInterpolatorBase::CreateInstance](#createinstance)|のインスタンスを作成`CInterpolatorBase`し、カスタム interpolator へのポインターを格納します。これは、イベントを処理します。|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|Interpolator の依存関係を取得します。 ( `CUIAnimationInterpolatorBase::GetDependencies`をオーバーライドします)。|
-|[CInterpolatorBase:: GetDuration](#getduration)|Interpolator の継続時間を取得します。 ( `CUIAnimationInterpolatorBase::GetDuration`をオーバーライドします)。|
-|[CInterpolatorBase:: GetFinalValue](#getfinalvalue)|Interpolator が潜在顧客の最終的な値を取得します。 ( `CUIAnimationInterpolatorBase::GetFinalValue`をオーバーライドします)。|
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|指定されたオフセットで値を補`CUIAnimationInterpolatorBase::InterpolateValue`間します (をオーバーライドします)。|
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|指定されたオフセットで速度を補`CUIAnimationInterpolatorBase::InterpolateVelocity`間します (オーバーライドします)。|
-|[CInterpolatorBase:: SetCustomInterpolator](#setcustominterpolator)|イベントを処理するカスタム interpolator へのポインターを格納します。|
-|[CInterpolatorBase:: SetDuration](#setduration)|Interpolator の継続時間 (オーバーライド`CUIAnimationInterpolatorBase::SetDuration`) を設定します。|
-|[CInterpolatorBase:: SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator の初期値とベロシティを設定します。 ( `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`をオーバーライドします)。|
+|[インターポレーターベース::インスタンスの作成](#createinstance)|イベントを処理する`CInterpolatorBase`カスタム補間ツールへのポインターを作成し、格納します。|
+|[インターポレーターベース::取得依存関係](#getdependencies)|インターポレーターの依存関係を取得します。 ( `CUIAnimationInterpolatorBase::GetDependencies`をオーバーライドします)。|
+|[インターポレーターベース::ゲットデュレーション](#getduration)|インターポレーターの継続時間を取得します。 ( `CUIAnimationInterpolatorBase::GetDuration`をオーバーライドします)。|
+|[インターポレーターベース::ゲットファイナルバリュー](#getfinalvalue)|インターポレーターがリードする最終値を取得します。 ( `CUIAnimationInterpolatorBase::GetFinalValue`をオーバーライドします)。|
+|[インターポレーターベース:補間値](#interpolatevalue)|指定したオフセットの値を補間`CUIAnimationInterpolatorBase::InterpolateValue`します (オーバーライド .|
+|[インターポレーターベース::インターポレート速度](#interpolatevelocity)|指定されたオフセットでの速度を補間`CUIAnimationInterpolatorBase::InterpolateVelocity`します (オーバーライド.|
+|[インターポレーターベース::カスタム補間器の設定](#setcustominterpolator)|イベントを処理するカスタム補間ツールへのポインターを格納します。|
+|[インターポレーターベース::設定期間](#setduration)|インターポレーターの継続時間を設定`CUIAnimationInterpolatorBase::SetDuration`します (オーバーライドします)。|
+|[インターポレーターベース::セット初期値と速度](#setinitialvalueandvelocity)|インターポレーターの初期値と速度を設定します。 ( `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`をオーバーライドします)。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このハンドラーは、 `IUIAnimationTransitionFactory::CreateTransition` `CCustomTransition`オブジェクトがアニメーション初期化プロセスの一部として作成されるときに、によって`CAnimationController::AnimateGroup`作成され、に渡されます (から開始)。 通常、このクラスを直接使用する必要はありません。すべてのイベントを`CCustomInterpolator`派生クラスにルーティングするだけで、そのポインターは`CCustomTransition`のコンストラクターに渡されます。
+このハンドラは、`IUIAnimationTransitionFactory::CreateTransition``CCustomTransition`オブジェクトがアニメーション初期化プロセスの一部として作成されるときに作成され、渡されます (`CAnimationController::AnimateGroup`によって開始されます)。 通常、このクラスを直接`CCustomInterpolator``CCustomTransition`使用する必要はありません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -81,7 +81,7 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase:: CInterpolatorBase
+## <a name="cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>インターポレーターベース::インターポレーターベース
 
 CInterpolatorBase オブジェクトを構築します。
 
@@ -89,9 +89,9 @@ CInterpolatorBase オブジェクトを構築します。
 CInterpolatorBase();
 ```
 
-##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance
+## <a name="cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>インターポレーターベース::インスタンスの作成
 
-CInterpolatorBase のインスタンスを作成し、カスタム interpolator へのポインターを格納します。これは、イベントを処理します。
+CInterpolatorBase のインスタンスを作成し、イベントを処理するカスタム補間機能へのポインターを格納します。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -101,17 +101,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*pInterpolator*<br/>
-カスタム interpolator へのポインター。
+*pインターポレーター*<br/>
+カスタム補間器へのポインター。
 
 *ppHandler*<br/>
-Output. 関数がを返したときの CInterpolatorBase のインスタンスへのポインターを格納します。
+出力。 関数が返されるときに CInterpolatorBase のインスタンスへのポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies
+## <a name="cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>インターポレーターベース::取得依存関係
 
-Interpolator の依存関係を取得します。
+インターポレーターの依存関係を取得します。
 
 ```
 IFACEMETHOD(GetDependencies)(
@@ -122,22 +122,22 @@ IFACEMETHOD(GetDependencies)(
 
 ### <a name="parameters"></a>パラメーター
 
-*initialValueDependencies*<br/>
-Output. SetInitialValueAndVelocity に渡される初期値に依存する interpolator の側面。
+*初期値依存関係*<br/>
+出力。 初期値に基づいて行う補間の側面を設定します。
 
-*initialVelocityDependencies*<br/>
-Output. SetInitialValueAndVelocity に渡される初期速度に依存する interpolator の側面。
+*初期速度依存*<br/>
+出力。 初期速度に依存する補間の側面を設定初期値と速度に渡します。
 
-*durationDependencies*<br/>
-Output. SetDuration に渡された期間に依存する interpolator の側面。
+*期間依存関係*<br/>
+出力。 SetDuration に渡される期間に依存する補間器の特徴。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetDependencies メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetDependencies メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="getduration"></a>CInterpolatorBase:: GetDuration
+## <a name="cinterpolatorbasegetduration"></a><a name="getduration"></a>インターポレーターベース::ゲットデュレーション
 
-Interpolator の継続時間を取得します。
+インターポレーターの継続時間を取得します。
 
 ```
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
@@ -146,15 +146,15 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>パラメーター
 
 *duration*<br/>
-Output. 遷移の期間 (秒単位)。
+出力。 遷移の継続時間 (秒単位)。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetDuration メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetDuration メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue
+## <a name="cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>インターポレーターベース::ゲットファイナルバリュー
 
-Interpolator が潜在顧客の最終的な値を取得します。
+インターポレーターがリードする最終値を取得します。
 
 ```
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
@@ -163,15 +163,15 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-Output. 遷移の終了時の変数の最終的な値。
+出力。 遷移の終了時の変数の最終値。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetFinalValue メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が GetFinalValue メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue
+## <a name="cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>インターポレーターベース:補間値
 
-指定されたオフセットで値を補間します。
+指定したオフセットの値を補間します。
 
 ```
 IFACEMETHOD(InterpolateValue)(
@@ -181,19 +181,19 @@ IFACEMETHOD(InterpolateValue)(
 
 ### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-遷移の開始からのオフセット。 オフセットは、常に0以上、移行の継続時間よりも短くなります。 遷移の継続時間が0の場合、このメソッドは呼び出されません。
+*offset*<br/>
+トランジションの開始からのオフセット。 オフセットは、常にゼロ以上であり、トランジションの継続時間より小さい値です。 トランジションの継続時間が 0 の場合、このメソッドは呼び出されません。
 
 *value*<br/>
-Output. 補間値。
+出力。 補間された値。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が InterpolateValue メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装がインターポレート値メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity
+## <a name="cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>インターポレーターベース::インターポレート速度
 
-指定されたオフセットで速度を補間します。
+指定したオフセットの速度を補間します。
 
 ```
 IFACEMETHOD(InterpolateVelocity)(
@@ -203,32 +203,32 @@ IFACEMETHOD(InterpolateVelocity)(
 
 ### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-遷移の開始からのオフセット。 オフセットは、常に0以上、移行の期間以下であることを示します。 遷移の継続時間が0の場合、このメソッドは呼び出されません。
+*offset*<br/>
+トランジションの開始からのオフセット。 オフセットは、常に 0 以上、遷移の継続時間以下になります。 トランジションの継続時間が 0 の場合、このメソッドは呼び出されません。
 
-*報酬*<br/>
-Output. オフセット位置の変数の速度。
+*velocity*<br/>
+出力。 オフセットでの変数の速度。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が InterpolateVelocity メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装がインターポレート速度メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator
+## <a name="cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>インターポレーターベース::カスタム補間器の設定
 
-イベントを処理するカスタム interpolator へのポインターを格納します。
+イベントを処理するカスタム補間ツールへのポインターを格納します。
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pInterpolator*<br/>
-カスタム interpolator へのポインター。
+*pインターポレーター*<br/>
+カスタム補間器へのポインター。
 
-##  <a name="setduration"></a>CInterpolatorBase:: SetDuration
+## <a name="cinterpolatorbasesetduration"></a><a name="setduration"></a>インターポレーターベース::設定期間
 
-Interpolator の継続時間を設定します。
+インターポレーターの継続時間を設定します。
 
 ```
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
@@ -237,15 +237,15 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="parameters"></a>パラメーター
 
 *duration*<br/>
-遷移の継続時間。
+トランジションの期間。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が SetDuration メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が SetDuration メソッドから FALSE を返す場合は、E_FAILを返します。
 
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase:: SetInitialValueAndVelocity
+## <a name="cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>インターポレーターベース::セット初期値と速度
 
-Interpolator の初期値とベロシティを設定します。
+インターポレーターの初期値と速度を設定します。
 
 ```
 IFACEMETHOD(SetInitialValueAndVelocity)(
@@ -255,7 +255,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="parameters"></a>パラメーター
 
-*initialValue*<br/>
+*初期値*<br/>
 遷移の開始時の変数の値。
 
 *初期速度*<br/>
@@ -263,7 +263,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が SetInitialValueAndVelocity メソッドから FALSE を返す場合は、E_FAIL を返します。
+メソッドが成功した場合は、S_OK を返します。 CCustomInterpolator が設定されていない場合、またはカスタム実装が SetInitialValueAndVelocity メソッドから FALSE を返す場合は、E_FAILを返します。
 
 ## <a name="see-also"></a>関連項目
 

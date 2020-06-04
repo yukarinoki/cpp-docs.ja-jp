@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridColorProperty クラス
+title: プロパティプロパティ
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 95dcbbc2b445e2ff67979b90816daed0fb0c0fba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403608"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751831"
 ---
-# <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty クラス
+# <a name="cmfcpropertygridcolorproperty-class"></a>プロパティプロパティ
 
 `CMFCPropertyGridColorProperty` クラスは、色の選択用のダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートします。
 
@@ -50,26 +50,26 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|により、*自動*色の選択 ダイアログ ボックスのボタンをクリックします。 (標準の自動ボタンのラベルは**自動**)。|
-|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|により、*他*色の選択 ダイアログ ボックスのボタン。 (標準の他のボタンのラベルは**その他の色**)。|
-|`CMFCPropertyGridColorProperty::FormatProperty`|プロパティ値のテキスト表現の書式を設定します  (上書き[cmfcpropertygridproperty::formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty))。|
+|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|色選択ダイアログ ボックスの*自動*ボタンを有効にします。 (標準の自動ボタンには**自動**と表示されます。|
+|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|色選択ダイアログ ボックスの*他*のボタンを有効にします。 (標準の他のボタンには、**その他の色**のラベルが付いています。|
+|`CMFCPropertyGridColorProperty::FormatProperty`|プロパティ値のテキスト表現の書式を設定します  (プロパティ[プロパティをオーバーライドします](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty)。|
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|プロパティの現在の色を取得します。|
-|`CMFCPropertyGridColorProperty::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
-|`CMFCPropertyGridColorProperty::OnClickButton`|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます  (上書き[cmfcpropertygridproperty::onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton))。|
-|`CMFCPropertyGridColorProperty::OnDrawValue`|プロパティ値を表示するためにフレームワークによって呼び出されます  (上書き[cmfcpropertygridproperty::ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue))。|
-|`CMFCPropertyGridColorProperty::OnEdit`|ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます  (上書き[cmfcpropertygridproperty::onedit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit))。|
-|`CMFCPropertyGridColorProperty::OnUpdateValue`|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます  (上書き[cmfcpropertygridproperty::onupdatevalue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue))。|
+|`CMFCPropertyGridColorProperty::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|`CMFCPropertyGridColorProperty::OnClickButton`|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます  ([プロパティプロパティをオーバーライドします。](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)|
+|`CMFCPropertyGridColorProperty::OnDrawValue`|プロパティ値を表示するためにフレームワークによって呼び出されます  ([プロパティプロパティ](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)をオーバーライドします。|
+|`CMFCPropertyGridColorProperty::OnEdit`|ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます  (プロパティ[プロパティ](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit)をオーバーライドします。|
+|`CMFCPropertyGridColorProperty::OnUpdateValue`|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます  ([プロパティプロパティをオーバーライドします。](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue)|
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|プロパティの新しい色を設定します。|
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|現在のカラー プロパティ グリッド内の列の数を指定します。|
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|編集可能なプロパティの元の値を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、次を参照してください。、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)します。
+`CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、「[クラス」を](../../mfc/reference/cmfcpropertygridctrl-class.md)参照してください。
 
 ## <a name="example"></a>例
 
-`CMFCPropertyGridColorProperty` クラスのオブジェクトを構築する方法、および `CMFCPropertyGridColorProperty` クラスの各種メソッドを使用してこのオブジェクトを構成する方法を次の例に示します。 このコードでは、自動ボタンとその他ボタンを有効にする方法、および色と列番号を設定する方法を示しています。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
+`CMFCPropertyGridColorProperty` クラスのオブジェクトを構築する方法、および `CMFCPropertyGridColorProperty` クラスの各種メソッドを使用してこのオブジェクトを構成する方法を次の例に示します。 このコードでは、自動ボタンとその他ボタンを有効にする方法、および色と列番号を設定する方法を示しています。 この例は、[新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 
@@ -85,7 +85,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 **ヘッダー:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+## <a name="cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>プロパティプロパティ::プロパティ グリッド プロパティ
 
 `CMFCPropertyGridColorProperty` オブジェクトを構築します。
 
@@ -104,22 +104,22 @@ CMFCPropertyGridColorProperty(
 [in]プロパティの名前。
 
 *色*<br/>
-[in]プロパティの色の値。
+[in]プロパティのカラー値。
 
-*pPalette*<br/>
-[in]色のパレットへのポインター。 既定値は、NULL です。
+*をクリックします。*<br/>
+[in]色のパレットへのポインター。 既定値は NULL です。
 
 *lpszDescr*<br/>
-[in]プロパティの説明。 既定値は、NULL です。
+[in]プロパティの説明。 既定値は NULL です。
 
-*dwData*<br/>
-[in]整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。
+*dw データ*<br/>
+[in]整数やプロパティに関連付けられている他のデータへのポインターなど、アプリケーション固有のデータ。 既定値は 0 です。
 
-##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton
+## <a name="cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>プロパティ::自動ボタンを有効にします。
 
-により、*自動*色の選択 ダイアログ ボックスのボタンをクリックします。 (標準の自動ボタンのラベルは**自動**)。
+色選択ダイアログ ボックスの*自動*ボタンを有効にします。 (標準の自動ボタンには**自動**と表示されます。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -128,22 +128,22 @@ void EnableAutomaticButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszLabel*<br/>
+*ラベル*<br/>
 [in]自動ボタンのラベル テキスト。
 
-*colorAutomatic*<br/>
-[in]自動 (既定値) の色の RGB カラー値。
+*カラー自動*<br/>
+[in]自動 (既定) 色の RGB カラー値。
 
-*bEnable*<br/>
-[in]自動ボタンを有効にする場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。
+*b 有効にする*<br/>
+[in]自動ボタンを有効にする場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton
+## <a name="cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>プロパティ::その他のボタンを有効にします。
 
-により、*他*色の選択 ダイアログ ボックスのボタン。 (標準の他のボタンのラベルは**その他の色**)。
+色選択ダイアログ ボックスの*他*のボタンを有効にします。 (標準の他のボタンには、**その他の色**のラベルが付いています。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -152,18 +152,18 @@ void EnableOtherButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszLabel*<br/>
-[in]その他のボタンのラベル テキスト。
+*ラベル*<br/>
+[in]もう一方のボタンのラベル テキスト。
 
-*bAltColorDlg*<br/>
-[in]表示する場合は True、 `CMFCColorDialog` ; ダイアログ ボックス標準の色の選択 ダイアログ ボックスを表示する場合は FALSE。 既定値は TRUE です。
+*アルトカラードグルグ*<br/>
+[in]ダイアログ ボックスを`CMFCColorDialog`表示する場合は TRUE。FALSE を指定すると、標準の色選択ダイアログ ボックスが表示されます。 既定値は TRUE です。
 
-*bEnable*<br/>
-[in]その他のボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  既定値は TRUE です。
+*b 有効にする*<br/>
+[in]もう一方のボタンを表示する場合は TRUE。それ以外の場合は FALSE。  既定値は TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor
+## <a name="cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>プロパティ::取得色
 
 プロパティの現在の色を取得します。
 
@@ -173,43 +173,43 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-RGB 色の値。
+RGB カラー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor
+## <a name="cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>プロパティ::セットカラー
 
 プロパティの新しい色を設定します。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *色*<br/>
-[in]RGB 色の値。
+[in]RGB カラー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber
+## <a name="cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>プロパティ::列番号
 
 現在のカラー プロパティ グリッド内の列の数を指定します。
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nColumnsNumber*<br/>
-[in]推奨される色のプロパティ グリッドで列数。
+*数列番号*<br/>
+[in]色プロパティ グリッド内の推奨される列数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドの値を設定、`m_nColumnsNumber`データ メンバーを保護します。
+このメソッドは、保護されたデータ`m_nColumnsNumber`メンバーの値を設定します。
 
-##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue
+## <a name="cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>プロパティ::元の値を設定します。
 
 編集可能なプロパティの元の値を設定します。
 
@@ -219,16 +219,16 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*varValue*<br/>
+*値*<br/>
 [in]値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用して、 [cmfcpropertygridproperty::resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)編集済みのプロパティの元の値をリセットするメソッド。
+編集された[プロパティ](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)の元の値をリセットするには、メソッドを使用します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)<br/>
-[CMFCPropertyGridProperty クラス](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[プロパティプロパティ](../../mfc/reference/cmfcpropertygridproperty-class.md)

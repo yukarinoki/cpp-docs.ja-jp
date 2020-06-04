@@ -1,25 +1,25 @@
 ---
-title: '方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)'
+title: '方法: interface 静的コンストラクターを定義する (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378980"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544971"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: interface 静的コンストラクターを定義する (C++/CLI)
 
-インターフェイス静的コンス トラクター、静的データ メンバーを初期化するために使用することができます。  静的コンス トラクターは、最大で 1 回呼び出されが初めての静的なインターフェイス メンバーにアクセスする前に呼び出されます。
+インターフェイスは静的コンストラクターを持つことができ、これを使用して静的データメンバーを初期化できます。  静的コンストラクターは最大で1回呼び出され、静的インターフェイスメンバーに初めてアクセスするときに呼び出されます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;
@@ -54,6 +54,6 @@ in MyInterface static constructor
 99
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [interface クラス](../extensions/interface-class-cpp-component-extensions.md)

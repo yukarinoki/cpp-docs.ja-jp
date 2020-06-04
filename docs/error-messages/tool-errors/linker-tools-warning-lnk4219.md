@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4219
 ms.assetid: 363fedf4-b10c-4985-811a-55a9fba688d6
-ms.openlocfilehash: 7407537b55525bf622fc11cdbdb8e00244e51c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4488539a4f7282180048f1e3530e62e35c3b339e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183099"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>リンカー ツールの警告 LNK4219
 
-フィックス アップ名前 fixup オーバーフロー。 ターゲット 'ターゲット symbol name' がサンクを挿入する範囲外です。
+fixup の名前 fixup がオーバーフローしています。 ターゲット ' target シンボル名 ' が範囲を超えています。サンクを挿入しています
 
-リンカーでは、場所、アドレスまたはオフセットできなかったターゲット シンボルが命令の位置から離れすぎているために、指定された命令に収まるように状況にサンクが挿入されます。
+リンカーは、指定された命令にアドレスまたはオフセットが収まりきらない状況で、ターゲットシンボルが命令の場所から離れすぎているため、サンクを挿入しました。
 
-イメージの順序を変更することがあります (を使用して、 [/order](../../build/reference/order-put-functions-in-order.md)オプション、たとえば) 余分なレベルの間接参照を回避するためにします。
+(たとえば、 [/order](../../build/reference/order-put-functions-in-order.md)オプションを使用して) イメージの順序を変更して、追加レベルの間接参照を回避することができます。

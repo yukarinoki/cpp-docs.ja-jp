@@ -1,9 +1,10 @@
 ---
 title: _CIsqrt
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIsqrt
-apilocation:
+- _o__CIsqrt
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIsqrt
 - CIsqrt
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: 5042be822df7789d30d2b4ea2d5be6cf8a081ef9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: baedb0541e16c28d18d0062fa5498fb8e2c8dea8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749387"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918350"
 ---
-# <a name="cisqrt"></a>_CIsqrt
+# <a name="_cisqrt"></a>_CIsqrt
 
 スタックのトップ値の平方根を計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIsqrt();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIsqrt();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

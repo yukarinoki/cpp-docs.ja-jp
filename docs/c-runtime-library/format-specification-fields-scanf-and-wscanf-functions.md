@@ -1,17 +1,6 @@
 ---
 title: scanf 関数と wscanf 関数の書式指定フィールド
 ms.date: 11/04/2016
-apilocation:
-- msvcr80.dll
-- msvcr110.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-apitype: DLLExport
-f1_keywords:
-- wscanf
-- scanf
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -21,12 +10,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 5b45de9af3642825f1fddf3a1560b2fc1dbc4ffc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 025d4c164d3afe1ca6b05c1c8e76441109cbc4ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748464"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438366"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>scanf 関数と wscanf 関数の書式指定フィールド
 
@@ -58,7 +47,7 @@ ms.locfileid: "57748464"
 
 `_s` 系の関数で `scanf` サフィックスが付いているセキュリティが強化されたバージョンでは、型が `c`、`C`、`s`、`S`、または `[` であるすべてのパラメーターに続けてバッファー サイズのパラメーターを渡す必要があります。 `scanf` 系の関数のセキュリティが強化されたバージョンの詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [scanf 関数の文字幅指定](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf 関数の型フィールド文字](../c-runtime-library/scanf-type-field-characters.md)<br/>

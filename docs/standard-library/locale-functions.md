@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6ebb1b1c80d5c2da19610a15e628fcbab5220719
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351725"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 関数
 
@@ -48,10 +48,10 @@ ms.locfileid: "68453563"
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
 |[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
 |[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+|[はスペースです](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
+|[トローワー](#tolower)|[Toupper](#toupper)|[use_facet](#use_facet)|
 
-## <a name="has_facet"></a>  has_facet
+## <a name="has_facet"></a><a name="has_facet"></a>has_facet
 
 特定のファセットが指定されたロケールに格納されているかどうかをテストします。
 
@@ -69,7 +69,7 @@ bool has_facet(const locale& Loc);
 
 ロケールにテスト対象のファセットがある場合は **true**、ない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`use_facet` を呼び出す前に必須ではないファセットがロケール内にリストされているかどうかを確認し、なかった場合に例外がスローされるのを回避するために役立ちます。
 
@@ -94,7 +94,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum
+## <a name="isalnum"></a><a name="isalnum"></a>イザルナム
 
 ロケールの要素が英字または数字であるかどうかをテストします。
 
@@ -105,7 +105,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする英数字要素。
 
 *Loc*\
@@ -161,7 +161,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha
+## <a name="isalpha"></a><a name="isalpha"></a>アイアルファ
 
 ロケールの要素が英字であるかどうかをテストします。
 
@@ -172,7 +172,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -182,9 +182,9 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 テストされた要素が英字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**アルファ**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:**アルファ**, `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -226,7 +226,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a>イスクヴェル
 
 ロケールの要素が制御文字であるかどうかをテストします。
 
@@ -237,7 +237,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -247,9 +247,9 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 テストされた要素が制御文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **cntrl**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>: `Ch` **cntrl**, ) です。
 
 ### <a name="example"></a>例
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  isdigit
+## <a name="isdigit"></a><a name="isdigit"></a>イストディジット
 
 ロケールの要素が数字であるかどうかをテストします。
 
@@ -302,7 +302,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -312,9 +312,9 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 テストされた要素が数字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**桁**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **c 型**\< **CharType** `Ch`>::**数字**, ) です。
 
 ### <a name="example"></a>例
 
@@ -356,7 +356,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph
+## <a name="isgraph"></a><a name="isgraph"></a>イスグラフ
 
 ロケールの要素が英字または句読点であるかどうかをテストします。
 
@@ -367,7 +367,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -377,9 +377,9 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 テストされた要素が英字または句読点である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**グラフ**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**グラフ**, `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower
+## <a name="islower"></a><a name="islower"></a>より低い
 
 ロケールの要素が小文字であるかどうかをテストします。
 
@@ -432,7 +432,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -442,9 +442,9 @@ bool islower(CharType Ch, const locale& Loc)
 
 テストされた要素が小文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**低い**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:**下**, `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -486,7 +486,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint
+## <a name="isprint"></a><a name="isprint"></a>イズプリント
 
 ロケールの要素が印刷可能な文字であるかどうかをテストします。
 
@@ -497,7 +497,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -507,9 +507,9 @@ bool isprint(CharType Ch, const locale& Loc)
 
 テストされた要素が印刷可能である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**印刷**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:**印刷**、 `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -550,7 +550,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct
+## <a name="ispunct"></a><a name="ispunct"></a>ispunct
 
 ロケールの要素が句読点であるかどうかをテストします。
 
@@ -561,7 +561,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -571,9 +571,9 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 テストされた要素が句読点である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)`<`返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>: `Ch` **punct**, ) です。
 
 ### <a name="example"></a>例
 
@@ -615,7 +615,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace
+## <a name="isspace"></a><a name="isspace"></a>はスペースです
 
 ロケールの要素が空白文字であるかどうかをテストします。
 
@@ -626,7 +626,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -636,9 +636,9 @@ bool isspace(CharType Ch, const locale& Loc)
 
 テストされた要素が余白である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**領域**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**スペース**, `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -680,7 +680,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper
+## <a name="isupper"></a><a name="isupper"></a>イズパーペール
 
 ロケールの要素が大文字であるかどうかをテストします。
 
@@ -691,7 +691,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -701,9 +701,9 @@ bool isupper(CharType Ch, const locale& Loc)
 
 テストされた要素が大文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**上限**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:**上部**, `Ch`) です。
 
 ### <a name="example"></a>例
 
@@ -745,7 +745,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a>イステックスディジット
 
 ロケールの要素が 16 進数を表すために使用される文字であるかどうかをテストします。
 
@@ -756,7 +756,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 テストする要素。
 
 *Loc*\
@@ -766,9 +766,9 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 テストする要素が 16 進数を表すために使用される文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [は](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**、 `Ch`)。
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [は](../standard-library/ctype-class.md#is)( **c 型**\< **CharType**>: **xdigit**, `Ch`) です。
 
 16 進数字は、0 から 9 までの数字と A から F までの文字 (大文字と小文字を区別しない) を使用して 0 から 15 までの 10 進数字を表す 16 進数を使用します。
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a>  tolower
+## <a name="tolower"></a><a name="tolower"></a>トローワー
 
 文字を小文字に変換します。
 
@@ -823,7 +823,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 小文字に変換される文字。
 
 *Loc*\
@@ -833,9 +833,9 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 小文字に変換された文字。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [より低い](../standard-library/ctype-class.md#tolower)( ) `Ch`
 
 ### <a name="example"></a>例
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a>  toupper
+## <a name="toupper"></a><a name="toupper"></a>Toupper
 
 文字を大文字に変換します。
 
@@ -872,7 +872,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch*\
 大文字に変換される文字。
 
 *Loc*\
@@ -882,9 +882,9 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 大文字に変換された文字。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **chartype**> > `Loc`() を返します。 [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
+テンプレート関数は[、ctype](../standard-library/ctype-class.md) \< **CharType**> >( `Loc`) [use_facet](../standard-library/locale-functions.md#use_facet)< 返します。 [トッパー](../standard-library/ctype-class.md#toupper) `Ch`( ).
 
 ### <a name="example"></a>例
 
@@ -910,7 +910,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a>  use_facet
+## <a name="use_facet"></a><a name="use_facet"></a>use_facet
 
 ロケールに格納されている指定された型のファセットへの参照を返します。
 
@@ -928,7 +928,7 @@ const Facet& use_facet(const locale& Loc);
 
 引数のロケールに含まれるクラス `Facet` のファセットへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数によって返されるファセットへの参照は、含んでいるロケールのコピーが存在する限り有効です。 このようなクラス `Facet` のファセット オブジェクトが引数のロケールにリストされていない場合、この関数は `bad_cast` 例外をスローします。
 
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)
+[\<ロケール>](../standard-library/locale.md)

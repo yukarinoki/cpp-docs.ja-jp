@@ -1,14 +1,16 @@
 ---
 title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+- _o__mbsncat
+- _o__mbsncat_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +24,11 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +64,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918149"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
@@ -141,18 +147,20 @@ NULL で終わる元の文字列。
 
 コピー先文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strncat**関数は、 *strsource*の先頭から*strsource*までの最大文字*数*を追加します。 *Strsource*の最初の文字は、 *strsource*の終端の null 文字を上書きします。 *カウント*文字を追加する前に*strsource*に null 文字が含まれている場合、 **strncat**は、 *strsource*から null 文字までのすべての文字を追加します。 *Count*が*strsource*の長さよりも大きい場合、 *strsource*の長さは*count*の代わりに使用されます。 結果の文字列はすべて、null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> **strncat**では、 *strdest*に十分な領域があるかどうかは確認されません。そのため、バッファーオーバーランの可能性があります。 *カウント*は追加される文字数を制限することに注意してください。*Strdest*のサイズに制限はありません。 下記の例を参照してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> **strncat**では、 *strdest*に十分な領域があるかどうかは確認されません。そのため、バッファーオーバーランの可能性があります。 *カウント*は追加される文字数を制限することに注意してください。*Strdest*のサイズに制限はありません。 次の例を見てください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 **wcsncat**と **_mbsncat**は、 **strncat**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncat**の文字列引数と戻り値はワイド文字列です。これらの **_mbsncat**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -162,18 +170,18 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**と **_wcsncat_l**はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_tcsncat_l**による内部使用のために用意されています。
+> **_strncat_l**と **_wcsncat_l**はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_tcsncat_l**によって内部で使用するために用意されています。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
 |**wcsncat**|\<string.h> または \<wchar.h>|
 |**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -214,7 +222,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 string can hold up to 39 characters
@@ -237,5 +245,5 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

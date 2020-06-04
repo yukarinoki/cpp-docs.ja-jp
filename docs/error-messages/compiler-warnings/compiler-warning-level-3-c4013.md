@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C4013
 ms.assetid: 9f9afc71-6e78-463d-9d66-3012d6a3cd5d
-ms.openlocfilehash: 2ec76fa5d83721137a5142d435f9c598527382f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aa35b7ebf918bfdc6413df17582ebb747058e52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402399"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161712"
 ---
 # <a name="compiler-warning-level-3-c4013"></a>コンパイラの警告 (レベル 3) C4013
 
-' function' が定義されていません。extern int を返すと仮定した場合
+' function ' が定義されていません。extern を返す (int を) と仮定します。
 
-未定義の関数の呼び出しが見つかりました。
+コンパイラで、未定義の関数の呼び出しが検出されました。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. 関数名のスペルの誤り
+1. 関数名のスペルが正しくありません
 
-1. 外部関数にプロトタイプ宣言されていません `extern`
+1. 外部関数は `extern` としてプロトタイプ宣言されていません

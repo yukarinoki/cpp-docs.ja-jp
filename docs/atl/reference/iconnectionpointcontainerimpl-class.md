@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl クラス
+title: クラスをコンテナーします。
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 278ca6b1b9aac9539680d90b6fa0b18df22fc2f0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f6009a1341d6715d6d2f170d3ff2aa1aa4ffcb96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329863"
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl クラス
+# <a name="iconnectionpointcontainerimpl-class"></a>クラスをコンテナーします。
 
-このクラスは、 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)オブジェクトのコレクションを管理するための接続ポイントコンテナーを実装します。
+このクラスは[、IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)オブジェクトのコレクションを管理するためのコネクション ポイント コンテナーを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`IConnectionPointContainerImpl`派生したクラス。
+から派生したクラス`IConnectionPointContainerImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -41,18 +41,18 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|接続可能オブジェクトでサポートされているコネクションポイントを反復処理する列挙子を作成します。|
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|指定した IID をサポートするコネクションポイントへのインターフェイスポインターを取得します。|
+|[をクリックします。](#enumconnectionpoints)|接続可能オブジェクトでサポートされているコネクション ポイントを反復処理する列挙子を作成します。|
+|[をクリックします。](#findconnectionpoint)|指定された IID をサポートするコネクション ポイントへのインターフェイス ポインターを取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`IConnectionPointContainerImpl`[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)オブジェクトのコレクションを管理するための接続ポイントコンテナーを実装します。 `IConnectionPointContainerImpl`クライアントが接続可能なオブジェクトに関する詳細情報を取得するために呼び出すことができる2つのメソッドを提供します。
+`IConnectionPointContainerImpl`オブジェクトのコレクションを管理するためのコネクション ポイント コンテナー[を](../../atl/reference/iconnectionpointimpl-class.md)実装します。 `IConnectionPointContainerImpl`には、接続可能オブジェクトに関する詳細情報を取得するためにクライアントが呼び出すことができる 2 つのメソッドがあります。
 
-- `EnumConnectionPoints`オブジェクトがサポートする送信インターフェイスをクライアントが判断できるようにします。
+- `EnumConnectionPoints`クライアントは、オブジェクトがサポートする発信インターフェイスを決定できます。
 
-- `FindConnectionPoint`オブジェクトが特定の送信インターフェイスをサポートしているかどうかをクライアントが判断できるようにします。
+- `FindConnectionPoint`クライアントは、オブジェクトが特定の発信インターフェイスをサポートしているかどうかを判断できます。
 
-ATL での接続ポイントの使用の詳細については、「[接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
+ATL でのコネクション ポイントの使用については、記事「[接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,33 +62,33 @@ ATL での接続ポイントの使用の詳細については、「[接続ポイ
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints
+## <a name="iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>をクリックします。
 
-接続可能オブジェクトでサポートされているコネクションポイントを反復処理する列挙子を作成します。
+接続可能オブジェクトでサポートされているコネクション ポイントを反復処理する列挙子を作成します。
 
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IConnectionPointContainer:: EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) 」を参照してください。
+「Windows SDK の I[接続ポイントコンテナ::列挙接続ポイント](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints)」を参照してください。
 
-##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint
+## <a name="iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>をクリックします。
 
-指定した IID をサポートするコネクションポイントへのインターフェイスポインターを取得します。
+指定された IID をサポートするコネクション ポイントへのインターフェイス ポインターを取得します。
 
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) 」を参照してください。
+次[を](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[コンテナ](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

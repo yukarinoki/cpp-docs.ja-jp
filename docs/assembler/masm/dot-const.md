@@ -1,30 +1,32 @@
 ---
 title: .CONST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .CONST
 helpviewer_keywords:
 - .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-ms.openlocfilehash: 4b3cf5a4b65c0c51655ea8eaa56400b346f7b09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc3296b8d15c2a516eaf3d3995b66c2917d432d4
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185408"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825346"
 ---
-# <a name="const"></a>.CONST
+# <a name="const-32-bit-masm"></a>.CONST (32 ビット MASM)
 
-使用すると[します。モデル](../../assembler/masm/dot-model.md)、定数データ セグメントの開始 (セグメント名定数)。
+と共に使用[します。モデル](dot-model.md)は、(セグメント名が**CONST**の) 定数データセグメントを開始します。
 
 ## <a name="syntax"></a>構文
 
-> .CONST
+> **.CONST**\
+> ⟦ *segmentItem* ⟧...
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このセグメントには、読み取り専用の属性があります。
+このセグメントには読み取り専用の属性があります。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

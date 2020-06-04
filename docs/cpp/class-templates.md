@@ -6,18 +6,18 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180915"
 ---
 # <a name="class-templates"></a>クラス テンプレート
 
-このトピックでは、C++ クラス テンプレートに固有の規則を説明します。
+このトピックでは、クラステンプレートにC++固有の規則について説明します。
 
-## <a name="member-functions-of-class-templates"></a>クラス テンプレートのメンバー関数
+## <a name="member-functions-of-class-templates"></a>クラステンプレートのメンバー関数
 
 メンバー関数はクラス テンプレートの内側でも外側でも定義できます。 クラス テンプレートの外側で定義されている場合は、関数テンプレートと同様に定義されます。
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>入れ子になったクラス テンプレート
+## <a name="nested-class-templates"></a>入れ子になったクラステンプレート
 
-テンプレートはクラスまたはクラス テンプレート内で定義できます。その場合、メンバー テンプレートと呼ばれます。 クラスであるメンバー テンプレートは、入れ子になったクラス テンプレートと呼ばれます。 関数であるメンバー テンプレートは、後ほど[メンバー関数テンプレート](../cpp/member-function-templates.md)します。
+テンプレートはクラスまたはクラス テンプレート内で定義できます。その場合、メンバー テンプレートと呼ばれます。 クラスであるメンバー テンプレートは、入れ子になったクラス テンプレートと呼ばれます。 関数であるメンバーテンプレートについては、「[メンバー関数テンプレート](../cpp/member-function-templates.md)」で説明されています。
 
 入れ子になったクラス テンプレートは、外部クラスのスコープ内のクラス テンプレートとして宣言されます。 外側のクラス内外で定義できます。
 
@@ -195,7 +195,7 @@ X<T>::Y<U>::~Y()
 
 ## <a name="template-friends"></a>テンプレートのフレンド
 
-クラス テンプレートを持つことができます[友人](friend-cpp.md)します。 クラスまたはクラス テンプレート、関数または関数テンプレートは、テンプレート クラスへのフレンドにできます。 フレンドは、クラス テンプレートまたは関数テンプレートの特殊化でもかまいませんが、部分的特殊化は許されません。
+クラステンプレートには、[友人](friend-cpp.md)を含めることができます。 クラスまたはクラス テンプレート、関数または関数テンプレートは、テンプレート クラスへのフレンドにできます。 フレンドは、クラス テンプレートまたは関数テンプレートの特殊化でもかまいませんが、部分的特殊化は許されません。
 
 次の例では、フレンド関数は、クラス テンプレート内の関数テンプレートとして定義されます。 このコードは、テンプレートのすべてのインスタンス化のフレンド関数版を生成します。 この構成は、フレンド関数がクラスと同じテンプレート パラメーターに依存している場合に便利です。
 
@@ -438,6 +438,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [テンプレート](../cpp/templates-cpp.md)

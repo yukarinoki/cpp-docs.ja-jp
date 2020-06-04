@@ -6,41 +6,41 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8002c16d1cdf5e0683b642001409b6da9c260660
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411540"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366469"
 ---
 # <a name="using-image-lists-with-header-controls"></a>ヘッダー コントロールでのイメージ リストの使い方
 
-ヘッダー項目には、ヘッダー項目内のイメージを表示する機能があります。 このイメージは、関連付けられているイメージ リストに格納されている 16 x 16 ピクセルは、リスト ビュー コントロールで使用されるアイコンのイメージとして同じ特性を持ちます。 この動作を正常に実装するために最初に作成しイメージ リストの初期化、ヘッダー コントロール、リストを関連付けるしてイメージを表示するヘッダー項目の属性を変更します。
+ヘッダー項目には、ヘッダー項目内に画像を表示する機能があります。 関連付けられたイメージ リストに格納されているこのイメージは、16 x 16 ピクセルで、リスト ビュー コントロールで使用されるアイコン イメージと同じ特性を持ちます。 この動作を正常に実装するには、まずイメージ リストを作成して初期化し、リストをヘッダー コントロールに関連付け、次にイメージを表示するヘッダー項目の属性を変更する必要があります。
 
-次の手順は、ヘッダー コントロールへのポインターを使用して、詳細を示しています (`m_pHdrCtrl`) とイメージ リストへのポインター (`m_pHdrImages`)。
+ヘッダー コントロール ( ) へのポインターとイメージ リスト (`m_pHdrCtrl``m_pHdrImages`) へのポインターを使用した詳細を次の手順に示します。
 
 ### <a name="to-display-an-image-in-a-header-item"></a>ヘッダー項目にイメージを表示するには
 
-1. 新しいイメージ リストの構築 (または既存のイメージ リスト オブジェクトを使用) を使用して、 [CImageList](../mfc/reference/cimagelist-class.md)コンス トラクター、結果のポインターを格納します。
+1. [CImageList](../mfc/reference/cimagelist-class.md)コンストラクターを使用して、新しいイメージ リストを構築します (または既存のイメージ リスト オブジェクトを使用して、結果のポインターを格納します)。
 
-1. 新しいイメージ リスト オブジェクトを呼び出すことによって初期化[CImageList::Create](../mfc/reference/cimagelist-class.md#create)します。 次のコードは、この呼び出しの 1 つの例です。
+1. を呼び出すことによって、新しいイメージ リスト オブジェクト[を初期化します](../mfc/reference/cimagelist-class.md#create)。 次のコードは、この呼び出しの一例です。
 
    [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
-1. 各ヘッダー項目のイメージを追加します。 次のコードは、2 つの定義済みのイメージを追加します。
+1. 各ヘッダー項目のイメージを追加します。 次のコードは、2 つの定義済みイメージを追加します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
-1. イメージ リストへの呼び出しでヘッダー コントロールに関連付けられる[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)します。
+1. イメージ リストをヘッダー コントロールに関連付け、呼び出しを使用して[CHeaderCtrl::SetImageList を呼び出します](../mfc/reference/cheaderctrl-class.md#setimagelist)。
 
-1. 関連付けられているイメージ リストからイメージを表示するヘッダー アイテムを変更します。 次の例では、最初のイメージを割り当ててから`m_phdrImages`、最初のヘッダー項目に`m_pHdrCtrl`します。
+1. ヘッダー項目を変更して、関連付けられたイメージ リストのイメージを表示します。 次の例では、最初のイメージ`m_phdrImages`を から最初のヘッダー項目に代入`m_pHdrCtrl`します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
-使用されるパラメーター値の詳細については、参照、関連する[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)します。
+使用されるパラメーター値の詳細については、 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)を参照してください。
 
 > [!NOTE]
->  同じイメージのリストを使用して複数のコントロールを含めることは可能になります。 たとえば、標準的なリスト ビュー コントロールでは、可能性があります (16 x 16 ピクセルの画像) のリスト ビュー コントロールの小さいアイコン ビューとリスト ビュー コントロールのヘッダー項目で使用されるイメージ リスト。
+> 同じイメージ リストを使用して複数のコントロールを使用できます。 たとえば、標準のリスト ビュー コントロールでは、リスト ビュー コントロールの小さなアイコン ビューとリスト ビュー コントロールのヘッダー項目の両方で使用されるイメージ リスト (16 x 16 ピクセルのイメージ) が存在する可能性があります。
 
 ## <a name="see-also"></a>関連項目
 

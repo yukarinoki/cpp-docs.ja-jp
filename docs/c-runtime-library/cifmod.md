@@ -1,9 +1,10 @@
 ---
 title: _CIfmod
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIfmod
-apilocation:
+- _o__CIfmod
+api_location:
 - msvcrt.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr120.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIfmod
 - CIfmod
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: bcfbabd260e17ac788ca3a3b83301b5f35be07eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746839"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917451"
 ---
-# <a name="cifmod"></a>_CIfmod
+# <a name="_cifmod"></a>_CIfmod
 
 スタックの 2 つのトップ値の浮動小数点の剰余を計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIfmod();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIfmod();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

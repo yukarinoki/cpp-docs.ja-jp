@@ -1,9 +1,10 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getdrive
-apilocation:
+- _o__getdrive
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdrive
 - getdrive
@@ -25,14 +30,14 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913766"
 ---
-# <a name="getdrive"></a>_getdrive
+# <a name="_getdrive"></a>_getdrive
 
 現在のディスク ドライブを取得します。
 
@@ -47,15 +52,19 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>戻り値
 
-現在の (既定の) ドライブ (1=A、2=B など) を返します。 エラーの戻り値はありません。
+現在の (既定の) ドライブ (1=A、2=B など) を返します。 戻り値が0の場合は、現在のパスの先頭が文字のドライブ名ではないことを意味します (UNC パスなど)。 または、内部バッファーの割り当てに失敗したことを意味します。 内部割り当てが失敗した`errno`場合、は ENOMEM に設定されます。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

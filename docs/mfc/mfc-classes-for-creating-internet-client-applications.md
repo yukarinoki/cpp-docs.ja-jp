@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 9201859c6a5d9fe2b31c3fc4348a42ff9566fc8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578fd5b72e6c04610aa862f1a6631895a32a9bfe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358214"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>インターネット クライアント アプリケーションの作成用の MFC クラス
 
-MFC には、インターネット クライアント アプリケーションを記述するための次のクラスおよびグローバル関数が用意されています。 インデントは、上にインデントされていないクラスから派生したクラスは、ことを示します。 `CGopherFile` `CHttpFile`から派生`CInternetFile`など。 これらのクラスとグローバル関数は、AFXINET で宣言されます。H、除く`CFileFind`AFX に宣言されています。H.
+MFC には、インターネット クライアント アプリケーションを作成するための次のクラスとグローバル関数が用意されています。 インデントは、クラスが、その上のインデントされていないクラスから派生したことを示します。 `CGopherFile`など`CHttpFile`から派生`CInternetFile`します。 これらのクラスとグローバル関数は AFXINET で宣言されています。AFX`CFileFind`で宣言されているを除く H。H。
 
 ## <a name="classes"></a>クラス
 
@@ -25,23 +25,23 @@ MFC には、インターネット クライアント アプリケーション�
 
 - [CInternetConnection](../mfc/reference/cinternetconnection-class.md)
 
-   - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
+  - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
 
-   - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
+  - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
 
-   - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
+  - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
 
 - [CInternetFile](../mfc/reference/cinternetfile-class.md)
 
-   - [CGopherFile](../mfc/reference/cgopherfile-class.md)
+  - [CGopherFile](../mfc/reference/cgopherfile-class.md)
 
-   - [CHttpFile](../mfc/reference/chttpfile-class.md)
+  - [CHttpFile](../mfc/reference/chttpfile-class.md)
 
 - [CFileFind](../mfc/reference/cfilefind-class.md)
 
-   - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+  - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
 
-   - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
+  - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
 
 - [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
 

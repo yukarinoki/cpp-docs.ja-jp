@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299773"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166759"
 ---
 # <a name="general-property-page-project"></a>[全般] プロパティ ページ (プロジェクト)
 
 ::: moniker range=">=vs-2019"
 
-このトピックは、Windows の Visual Studio プロジェクトに適用されます。 Linux プロジェクトについては、 [linux C++のプロパティページのリファレンス](../../linux/prop-pages-linux.md)を参照してください。 CMake プロジェクトについては、「 [Visual Studio での Cmake プロジェクト](../cmake-projects-in-visual-studio.md)」を参照してください。
+このトピックは、Windows の Visual Studio プロジェクトに適用されます。 Linux プロジェクトについては、 [linux C++のプロパティページのリファレンス](../../linux/prop-pages-linux.md)を参照してください。 CMake プロジェクトについては、「 [Visual Studio での Cmake プロジェクト](../cmake-projects-in-visual-studio.md)」を参照してください。 Android プロジェクトについては、「[一般的なC++プロジェクトのプロパティ (android)](/cpp/cross-platform/general-android-prop-page)」を参照してください。 Android メイクファイルプロジェクトについては、「[一般的C++なプロジェクトのプロパティ (android メイクファイル)](/cpp/cross-platform/general-makefile-android-prop-page) 」を参照してください。
 
 ソリューションエクスプローラーでプロジェクトノードを右クリックし、 **[プロパティ]** を選択すると、左側のウィンドウの **[構成プロパティ]** ノードの下の **[全般]** プロパティページに、次のプロパティが表示されます。
 
@@ -56,7 +56,7 @@ ms.locfileid: "68299773"
 
    このプロジェクトで生成されるファイル名を指定します。 既定では、このプロパティはマクロ $(ProjectName) によって指定されるファイル名です。
 
-- **構成の種類**
+- **[構成の種類]**
 
   選択できる構成ファイルの種類は以下のとおりです。
 
@@ -76,7 +76,7 @@ ms.locfileid: "68299773"
 
      ライブラリアンのツールセット (リンカーの代わりにライブラリアンを使用し、XML Web サービス プロキシ ジェネレーターがないこと以外はリンカーのツールセットと同じ) を表示します。
 
-  - **ユーティリティ**
+  - **Utility**
 
      ユーティリティのツールセット (MIDL、カスタム ビルド、ビルド前のイベント、ビルド後のイベント) を表示します。
 
@@ -88,21 +88,21 @@ ms.locfileid: "68299773"
 
    Windows 7 または Windows Vista を対象とするには、値 **8.1** を使用します。Windows SDK 8.1 はこれらのプラットフォームと下位互換性があるためです。 さらに、targetver.h に **_WIN32_WINNT** の適切な値を定義する必要があります。 Windows 7 では、これは 0x0601 になります。 「[WINVER および _WIN32_WINNT の変更](../../porting/modifying-winver-and-win32-winnt.md)」を参照してください。
 
-   Visual Studio に含まれている Windows XP プラットフォーム ツールセットをインストールすれば、ライブラリの現在のバージョンを使用して Windows XP および Windows 2003 Server のプロジェクトをビルドできます。 このプラットフォーム ツールセットを入手して使用する方法については、「[Windows XP 用プログラムの構成](../configuring-programs-for-windows-xp.md)」を参照してください。 プラットフォーム ツールセットの変更に関する詳細は、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   Visual Studio に含まれている Windows XP プラットフォーム ツールセットをインストールすれば、ライブラリの現在のバージョンを使用して Windows XP および Windows 2003 Server のプロジェクトをビルドできます。 このプラットフォーム ツールセットを入手して使用する方法については、「[Windows XP 用プログラムの構成](../configuring-programs-for-windows-xp.md)」を参照してください。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - **プラットフォームのツールセット**
 
-   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual studio C++プロジェクトでは、visual studio によってインストールされた既定のツールセット、または以前のバージョンの visual studio によってインストールされたツールセット (WINDOWX XP で実行可能な実行可能ファイルを作成するツールセットを含む) のいずれかを対象にすることができます。 プラットフォームツールセットの変更については[、「方法:ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual Studio C++プロジェクトは、visual studio によってインストールされた既定のツールセット、または以前のバージョンの visual studio によってインストールされたツールセット (Windows XP で実行可能な実行可能ファイルを作成するツールセットを含む) のいずれかをターゲットにすることができます。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - **C++言語標準**
 
-   使用する言語標準を指定します。 既定値は、/std: c++ 14 です。 C++ 17 の機能を使用するには、/std: c++ 17 を指定します。または、c++ 20 またはその他の試験的な機能を使用するには、/std: c++ + latest を指定します。 詳細については、「 [/std (言語の標準バージョンの指定)](std-specify-language-standard-version.md) 」を参照してください。
+   使用する言語標準を指定します。 既定値は、/std:c++14 です。 C++17 の機能を使用するには、/std:c++17 を指定します。または、C++20 またはその他の試験的な機能を使用するには、/std:c++latest を指定します。 詳細については、「 [/std (言語の標準バージョンの指定)](std-specify-language-standard-version.md) 」を参照してください。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio 2015 および Visual Studio 2017 で**ソリューションエクスプローラー**でプロジェクトノードを右クリックし、 **[プロパティ]** を選択すると、左側のウィンドウの **[構成プロパティ]** ノードの下の **[全般]** プロパティページが表示されます。プロパティの2つのセクション:
+Visual Studio 2015 および Visual Studio 2017 で、**ソリューションエクスプローラー**でプロジェクトノードを右クリックし、 **[プロパティ]** を選択すると、左側のウィンドウの **[構成プロパティ]** ノードの下の **[全般]** プロパティページに、次の2つのプロパティセクションが表示されます。
 
 - 全般
 
@@ -126,7 +126,7 @@ Visual Studio 2015 および Visual Studio 2017 で**ソリューションエク
 
    Windows 7 または Windows Vista を対象とするには、値 **8.1** を使用します。Windows SDK 8.1 はこれらのプラットフォームと下位互換性があるためです。 さらに、targetver.h に **_WIN32_WINNT** の適切な値を定義する必要があります。 Windows 7 では、これは 0x0601 になります。 「[WINVER および _WIN32_WINNT の変更](../../porting/modifying-winver-and-win32-winnt.md)」を参照してください。
 
-   Visual Studio に含まれている Windows XP プラットフォーム ツールセットをインストールすれば、ライブラリの現在のバージョンを使用して Windows XP および Windows 2003 Server のプロジェクトをビルドできます。 このプラットフォーム ツールセットを入手して使用する方法については、「[Windows XP 用プログラムの構成](../configuring-programs-for-windows-xp.md)」を参照してください。 プラットフォーム ツールセットの変更に関する詳細は、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   Visual Studio に含まれている Windows XP プラットフォーム ツールセットをインストールすれば、ライブラリの現在のバージョンを使用して Windows XP および Windows 2003 Server のプロジェクトをビルドできます。 このプラットフォーム ツールセットを入手して使用する方法については、「[Windows XP 用プログラムの構成](../configuring-programs-for-windows-xp.md)」を参照してください。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - **出力ディレクトリ**
 
@@ -162,17 +162,17 @@ Visual Studio 2015 および Visual Studio 2017 で**ソリューションエク
 
 - **プラットフォームのツールセット**
 
-   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual studio C++プロジェクトでは、visual studio によってインストールされた既定のツールセット、または以前のバージョンの visual studio によってインストールされたツールセット (WINDOWX XP で実行可能な実行可能ファイルを作成するツールセットを含む) のいずれかを対象にすることができます。 プラットフォームツールセットの変更については[、「方法:ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual Studio C++プロジェクトは、visual studio によってインストールされた既定のツールセット、または以前のバージョンの visual studio によってインストールされたツールセット (Windows XP で実行可能な実行可能ファイルを作成するツールセットを含む) のいずれかをターゲットにすることができます。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - **マネージド インクリメンタル ビルドを有効にする**
 
    マネージド プロジェクトの場合、これによりアセンブリの生成時に、外部からの可視性の検出が可能になります。 マネージド プロジェクトへの変更が他のプロジェクトから見えない場合、依存プロジェクトはリビルドされません。 これにより、マネージド プロジェクトを含むソリューションのビルド時間を大幅に短縮できます。
 
 ## <a name="project-defaults"></a>[プロジェクトの既定値]
- 
+
 [プロジェクトの既定値] セクションのプロパティは、変更できる既定のプロパティを表します。 これらのプロパティの定義は、*インストール ディレクトリ* (\VC\VCProjectDefaults) の .props ファイル内にあります。
 
-- **構成の種類**
+- **[構成の種類]**
 
   選択できる構成ファイルの種類は以下のとおりです。
 
@@ -192,7 +192,7 @@ Visual Studio 2015 および Visual Studio 2017 で**ソリューションエク
 
      ライブラリアンのツールセット (リンカーの代わりにライブラリアンを使用し、XML Web サービス プロキシ ジェネレーターがないこと以外はリンカーのツールセットと同じ) を表示します。
 
-  - **ユーティリティ**
+  - **Utility**
 
      ユーティリティのツールセット (MIDL、カスタム ビルド、ビルド前のイベント、ビルド後のイベント) を表示します。
 
@@ -230,6 +230,6 @@ Visual Studio 2015 および Visual Studio 2017 で**ソリューションエク
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)

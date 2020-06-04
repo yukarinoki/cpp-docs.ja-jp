@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7722acbd1d2a7d9582dbf3e42d544ec3bd0d418c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408382"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187116"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>コンパイラの警告 (レベル 1) C4358
 
-'operator': 戻り値の複合デリゲートの型が 'void';返される値が定義されていません
+' operator ': 結合されたデリゲートの戻り値の型が ' void ' ではありません。戻り値は定義されていません
 
-2 つのデリゲートを結合されましたが、戻り値は void ではありません。 非 void の戻り値を持つ 2 つのデリゲートを組み合わせると場合、コンパイラは、デリゲートの戻り値が使用されている場合、適切な割り当てを実行できません。
+2つのデリゲートが結合され、戻り値が void ではありません。 Void 以外の戻り値を持つ2つのデリゲートを組み合わせると、デリゲートの戻り値が使用されている場合、コンパイラは適切な割り当てを行うことができません。
 
 次の例では、C4358 が生成されます。
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

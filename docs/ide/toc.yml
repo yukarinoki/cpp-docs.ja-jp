@@ -1,0 +1,73 @@
+- name: Visual Studio での C++ コードの読み取りと書き込み
+  expanded: true
+  items:
+    - name: C++ コードの読み取りと理解
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: C++ コードの編集とリファクター
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: C++ コード間の移動
+      href: ../ide/navigate-code-cpp.md
+    - name: C++ コーディングの基本設定を設定する
+      href: ../ide/how-to-set-preferences.md
+    - name: Live Share for C++ を使用しての共同作業
+      href: ../ide/live-share-cpp.md
+    - name: シグネチャの変更
+      href: ../ide/refactoring/change-signature.md
+    - name: 生文字列に変換
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: 宣言/定義の作成
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: 関数を抽出する
+      href: ../ide/refactoring/extract-function.md
+    - name: 純粋仮想の実装
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: Move 関数の定義
+      href: ../ide/refactoring/move-definition-location.md
+    - name: 名前の変更
+      href: ../ide/refactoring/rename.md
+- name: C++ デスクトップ開発のための Visual Studio IDE の使用
+  expanded: true
+  items:
+    - name: C++ デスクトップ開発のための Visual Studio IDE の使用
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: 'チュートリアル: プロジェクトとソリューションの使用 (C++)'
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 'チュートリアル: プロジェクトの構築 (C++)'
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 'チュートリアル: プロジェクトのテスト (C++)'
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 'チュートリアル: プロジェクトのデバッグ (C++)'
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 'チュートリアル: プロジェクトの配置 (C++)'
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: コード ウィザードを使用した機能の追加
+  expanded: true
+  items:
+    - name: コード ウィザードを使用した機能の追加
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: クラスを追加する
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: ActiveX コントロールからクラスを追加する
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: 一般 C++ クラスを追加する
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: メンバー関数を追加する
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: メンバー変数を追加する
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: メソッドを追加する
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: プロパティを追加する
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: イベントを追加する
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: イベント ハンドラーを追加する
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: COM インターフェイスを作成する
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: コネクション ポイントを実装する
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: インターフェイスの実装
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: 仮想関数をオーバーライドする
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

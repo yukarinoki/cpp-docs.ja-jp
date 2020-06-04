@@ -1,9 +1,10 @@
 ---
 title: _CIatan
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIatan
-apilocation:
+- _o__CIatan
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcrt.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIatan
 - CIatan
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 81448d976a38d45de821fc66ea87dcf431ebd228
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c24e01fbb3ab2f8a78cb9cc3d1336476c29ffe1c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749981"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918129"
 ---
-# <a name="ciatan"></a>_CIatan
+# <a name="_ciatan"></a>_CIatan
 
 スタックのトップ値のアークタンジェントを計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIatan();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIatan();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

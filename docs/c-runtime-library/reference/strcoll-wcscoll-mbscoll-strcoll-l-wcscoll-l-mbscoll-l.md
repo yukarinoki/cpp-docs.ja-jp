@@ -1,6 +1,6 @@
 ---
 title: strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcscoll
 - _mbscoll
@@ -8,6 +8,12 @@ api_name:
 - strcoll
 - _strcoll_l
 - _wcscoll_l
+- _o__mbscoll
+- _o__mbscoll_l
+- _o__strcoll_l
+- _o__wcscoll_l
+- _o_strcoll
+- _o_wcscoll
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +53,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f75bf4bb28a2dc34a233374314e6bc170793d77e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957888"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920365"
 ---
 # <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
@@ -110,15 +117,17 @@ Null で終わる比較対象の文字列。
 |0|*string1*と*string2*の同一|
 |> 0|*string1*が*string2*より大きい|
 
-これらの各関数は、エラーが発生したときに **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには、いずれかの文字列を指定します。H または MBSTRING.H。始め. *string1*または*string2*が**NULL**の場合、または照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **wcscoll**は失敗する可能性があります。 エラーが発生すると、 **wcscoll**は**errno**を**EINVAL**に設定することがあります。 **Wcscoll**の呼び出しでエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **wcscoll**を呼び出した後に**errno**を確認します。
+これらの各関数は、エラー発生時に **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには、いずれかの文字列を指定します。H または MBSTRING.H。始め. *string1*または*string2*が**NULL**の場合、または照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **wcscoll**は失敗する可能性があります。 エラーが発生すると、 **wcscoll**は**errno**を**EINVAL**に設定することがあります。 **Wcscoll**の呼び出しでエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **wcscoll**を呼び出した後に**errno**を確認します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの各関数は、現在使用中のコードページに従って、 *string1*と*string2*の大文字と小文字を区別した比較を実行します。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
 
 これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が null ポインターの場合、または*count*が**INT_MAX**より大きい場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
 
-各ロケールには文字を並べ替えるための異なる規則があるため、2 つの文字列の比較は、ロケールに依存する操作となります。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のスレッドのロケールを使用します。 **_l**サフィックスが付いているバージョンは、現在のロケールの代わりにパラメーターとして渡されたロケールを使用することを除いて、サフィックスが付いていない対応する関数と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+各ロケールには文字を並べ替えるための異なる規則があるため、2 つの文字列の比較は、ロケールに依存する操作となります。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のスレッドのロケールを使用します。**_l**サフィックスが付いているバージョンは、現在のロケールの代わりにパラメーターとして渡されたロケールを使用することを除いて、サフィックスが付いていない対応する関数と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -128,7 +137,7 @@ Null で終わる比較対象の文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strcoll**|\<string.h>|
 |**wcscoll**|\<wchar.h>、\<string.h>|
@@ -136,11 +145,11 @@ Null で終わる比較対象の文字列。
 |**_strcoll_l**|\<string.h>|
 |**_wcscoll_l**|\<wchar.h>、\<string.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

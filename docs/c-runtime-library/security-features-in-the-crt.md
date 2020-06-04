@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361009"
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
 
@@ -52,7 +52,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` を 1 として定義すると、`strcpy` の呼び出しが、バッファー オーバーランを防ぐ `strcpy_s` の呼び出しに変更され、警告は除去されます。 詳細については、「 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)」を参照してください。
+`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` を 1 として定義すると、`strcpy` の呼び出しが、バッファー オーバーランを防ぐ `strcpy_s` の呼び出しに変更され、警告は除去されます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 セキュリティで保護されたテンプレート オーバーロードのない、非推奨の関数の場合、セキュリティで保護されたバージョンを使用するように手動でコードを更新することを強くお勧めします。
 
@@ -62,32 +62,32 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 一部のセキュリティ機能を次に示します。
 
-- `Parameter Validation`。 セキュリティで保護された関数、および多くの以前から存在するバージョンの関数の両方で、CRT 関数に渡されるパラメーターが検証されます。 次のような検証が行われます。
+- `Parameter Validation`. セキュリティで保護された関数、および多くの以前から存在するバージョンの関数の両方で、CRT 関数に渡されるパラメーターが検証されます。 次のような検証が行われます。
 
-   - 関数に渡された **NULL** 値のチェック。
+  - 関数に渡された **NULL** 値のチェック。
 
-   - 列挙値が有効であるかどうかのチェック。
+  - 列挙値が有効であるかどうかのチェック。
 
-   - 整数値が有効な範囲にあるかどうかのチェック。
+  - 整数値が有効な範囲にあるかどうかのチェック。
 
 - 詳細については、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」を参照してください。
 
 - 開発者も無効なパラメーターのハンドラーを利用できるようになりました。 無効なパラメーターが検出された場合に、アプリケーションをアサートしたり終了したりすることなく、[_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 関数でこれらの問題をチェックできます。
 
-- `Sized Buffers`。 セキュリティで保護された関数では、バッファーへの書き込みを行うすべての関数に対してバッファー サイズが渡される必要があります。 セキュリティで保護されたバージョンでは、書き込み前にバッファーのサイズを確認するため、悪意のあるコードが実行される余地を与える危険なバッファー オーバーラン エラーを回避するために役立ちます。 通常、これらの関数は、`errno` 型のエラー コードを返し、バッファーのサイズが小さすぎる場合、無効なパラメーター ハンドラーを呼び出します。 `gets` など、入力バッファーからの読み込みを行う関数のセキュリティで保護されたバージョンでは、最大サイズを指定する必要があります。
+- `Sized Buffers`. セキュリティで保護された関数では、バッファーへの書き込みを行うすべての関数に対してバッファー サイズが渡される必要があります。 セキュリティで保護されたバージョンでは、書き込み前にバッファーのサイズを確認するため、悪意のあるコードが実行される余地を与える危険なバッファー オーバーラン エラーを回避するために役立ちます。 通常、これらの関数は、`errno` 型のエラー コードを返し、バッファーのサイズが小さすぎる場合、無効なパラメーター ハンドラーを呼び出します。 `gets` など、入力バッファーからの読み込みを行う関数のセキュリティで保護されたバージョンでは、最大サイズを指定する必要があります。
 
-- `Null termination`。 文字列に終端文字を設定しない可能性がある一部の関数には、確実に文字列を null で終わらせる、セキュリティで保護されたバージョンがあります。
+- `Null termination`. 文字列に終端文字を設定しない可能性がある一部の関数には、確実に文字列を null で終わらせる、セキュリティで保護されたバージョンがあります。
 
-- `Enhanced error reporting`。 セキュリティで保護された関数では、以前から存在する関数より詳細なエラー情報を含むエラー コードが返されます。 現在、セキュリティで保護された関数と多くの以前から存在する関数は、`errno` を設定するため、より詳細なエラー情報を提供する `errno` コード型も返すことが多いです。
+- `Enhanced error reporting`. セキュリティで保護された関数では、以前から存在する関数より詳細なエラー情報を含むエラー コードが返されます。 現在、セキュリティで保護された関数と多くの以前から存在する関数は、`errno` を設定するため、より詳細なエラー情報を提供する `errno` コード型も返すことが多いです。
 
-- `Filesystem security`。 セキュリティで保護されたファイル I/O API では、既定のケースで安全なファイル アクセスをサポートします。
+- `Filesystem security`. セキュリティで保護されたファイル I/O API では、既定のケースで安全なファイル アクセスをサポートします。
 
-- `Windows security`。 セキュリティで保護されたプロセス API では、セキュリティ ポリシーが適用され、ACL を指定できます。
+- `Windows security`. セキュリティで保護されたプロセス API では、セキュリティ ポリシーが適用され、ACL を指定できます。
 
-- `Format string syntax checking`。 無効な文字列が検出されます。たとえば、`printf` 書式指定文字列の不正な型フィールド文字を使用した場合です。
+- `Format string syntax checking`. 無効な文字列が検出されます。たとえば、`printf` 書式指定文字列の不正な型フィールド文字を使用した場合です。
 
 ## <a name="see-also"></a>関連項目
 
 [パラメーターの検証](../c-runtime-library/parameter-validation.md)<br/>
-[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)<br/>
+[セキュリティで保護されたテンプレートのオーバーロード](../c-runtime-library/secure-template-overloads.md)<br/>
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

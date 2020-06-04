@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346184"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352175"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc クラス
 
-[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。
+[では](../../mfc/reference/chtmleditview-class.md)、MFC ドキュメント ビュー アーキテクチャのコンテキスト内で WebBrowser 編集プラットフォームの機能を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,15 +37,15 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|`CHtmlEditDoc` オブジェクトを構築します。|
+|[ドキュドク::CHtmlエディットドック](#chtmleditdoc)|`CHtmlEditDoc` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditDoc::GetView](#getview)|取得、`CHtmlEditView`オブジェクトはこのドキュメントにアタッチします。|
-|[CHtmlEditDoc::IsModified](#ismodified)|関連するビューの WebBrowser コントロールがユーザーによって変更されたドキュメントを含むかどうかを返します。|
-|[CHtmlEditDoc::OpenURL](#openurl)|URL が開きます。|
+|[次の項目を取得します。](#getview)|このドキュメントに`CHtmlEditView`添付されているオブジェクトを取得します。|
+|[編集](#ismodified)|関連付けられたビューの WebBrowser コントロールに、ユーザーによって変更されたドキュメントが含まれているかどうかを返します。|
+|[ド・ド・ド・ス・ド・ス・ド・ス・ド・ス・ド・ス・ド・](#openurl)|URL を開きます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -61,7 +61,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 **ヘッダー:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>ドキュドク::CHtmlエディットドック
 
 `CHtmlEditDoc` オブジェクトを構築します。
 
@@ -69,9 +69,9 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>次の項目を取得します。
 
-取得、 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)オブジェクトはこのドキュメントにアタッチします。
+このドキュメントに添付されている[オブジェクト](../../mfc/reference/chtmleditview-class.md)を取得します。
 
 ```
 virtual CHtmlEditView* GetView() const;
@@ -79,19 +79,19 @@ virtual CHtmlEditView* GetView() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントへのポインターを返します`CHtmlEditView`オブジェクト。
+ドキュメントのオブジェクトへのポインターを`CHtmlEditView`返します。
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>編集
 
-関連するビューの WebBrowser コントロールがユーザーによって変更されたドキュメントを含むかどうかを返します。
+関連付けられたビューの WebBrowser コントロールに、ユーザーによって変更されたドキュメントが含まれているかどうかを返します。
 
 ```
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>ド・ド・ド・ス・ド・ス・ド・ス・ド・ス・ド・ス・ド・
 
-URL が開きます。
+URL を開きます。
 
 ```
 virtual BOOL OpenURL(LPCTSTR lpszURL);
@@ -99,14 +99,14 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszURL*<br/>
-開くための URL。
+*を指定します。*<br/>
+開く URL。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE を返し、失敗した場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[HTML 編集のサンプル](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)

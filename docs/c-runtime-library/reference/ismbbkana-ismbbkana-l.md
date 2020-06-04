@@ -1,10 +1,12 @@
 ---
 title: _ismbbkana、_ismbbkana_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+- _o__ismbbkana
+- _o__ismbbkana_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918944"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana、_ismbbkana_l
 
 カタカナ シンボルのテスト。コード ページ 932 固有のテストです。
 
@@ -53,7 +59,7 @@ int _ismbbkana_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -61,18 +67,22 @@ int _ismbbkana_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkana**場合は、0 以外の値を返します、整数*c*でない場合は 0 またはカタカナ シンボルのです。 **_ismbbkana**ロケールに依存する文字については、現在のロケールを使用します。 **_ismbbkana_l**で渡されたロケール オブジェクトを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数*c*がカタカナ記号の場合、 **_ismbbkana**は0以外の値を返し、そうでない場合は0を返します。 **_ismbbkana**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkana_l**は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkana**|\<mbctype.h>|
 |**_ismbbkana_l**|\<mbctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

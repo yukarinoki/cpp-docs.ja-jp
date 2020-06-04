@@ -1,14 +1,17 @@
 ---
 title: _strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wcsset
 - _mbsset
 - _strset_l
 - _strset
 - _wcsset_l
 - _mbsset_l
-apilocation:
+- _o__mbsset
+- _o__mbsset_l
+- _o__wcsset
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +25,11 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsset
 - _strset_l
@@ -60,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911112"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -108,10 +115,10 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる、設定される文字列。
 
-*c*<br/>
+*40u-c*<br/>
 文字設定。
 
 *locale*<br/>
@@ -121,16 +128,18 @@ NULL で終わる、設定される文字列。
 
 変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strset**関数は、 **char**型に変換された*str*のすべての文字 (終端の null 文字を除く) を*c*に設定します。 **_wcsset**と **_mbsset_l**は、 **_strset**のワイド文字バージョンとマルチバイト文字バージョンであり、それに応じて引数と戻り値のデータ型が異なります。 それ以外では、これらの関数の動作は同じです。
+**_Strset**関数は、 **char**型に変換された*str*のすべての文字 (終端の null 文字を除く) を*c*に設定します。 **_wcsset**と **_mbsset_l**は **_strset**のワイド文字バージョンとマルチバイト文字バージョンであり、引数と戻り値のデータ型はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
 **_mbsset**は、そのパラメーターを検証します。 *Str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsset**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strset**と **_wcsset**では、パラメーターは検証されません。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものが渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -141,7 +150,7 @@ NULL で終わる、設定される文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strset**|\<string.h>|
 |**_strset_l**|\<tchar.h>|
@@ -149,7 +158,7 @@ NULL で終わる、設定される文字列。
 |**_wcsset_l**|\<tchar.h>|
 |**_mbsset**、 **_mbsset_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -178,7 +187,7 @@ After:  *******************************
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

@@ -1,9 +1,10 @@
 ---
 title: _locking
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _locking
-apilocation:
+- _o__locking
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +30,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157464"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911549"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 ファイルのバイトをロックまたはロック解除します。
 
@@ -48,10 +53,10 @@ int _locking(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 ファイル記述子。
 
-*モード*<br/>
+*mode*<br/>
 実行するロック アクション。
 
 *nbytes*<br/>
@@ -59,40 +64,42 @@ int _locking(
 
 ## <a name="return-value"></a>戻り値
 
-**_locking**成功した場合は 0 を返します。 戻り値-1 はエラーを示します後者[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)値は次のいずれかに設定されます。
+成功した場合、 **_locking**は0を返します。 戻り値-1 はエラーを示します。この場合、 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
 | **EACCES** | ロック違反 (ファイルはすでにロックされている場合もロック解除されている場合もある)。 |
 | **EBADF** | 無効なファイル記述子。 |
-| **EDEADLOCK** | ロック違反。 ときに返される、 **_LK_LOCK**または **_LK_RLCK**フラグが指定されており、10 回試行した後、ファイルをロックできません。 |
-| **EINVAL** | 無効な引数が指定された **_locking**します。 |
+| **EDEADLOCK** | ロック違反。 **_LK_LOCK**または **_LK_RLCK**フラグが指定され、10回試行した後にファイルをロックできない場合に返されます。 |
+| **EINVAL** | **_Locking**に無効な引数が指定されました。 |
 
 エラーの原因が無効なファイル記述子などの無効なパラメーターである場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Locking**関数は、ロックまたはロック解除*nbytes*バイトで指定されたファイルの*fd*します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
+**_Locking**関数は、 *fd*によって指定されたファイルの*nbytes*バイトをロックまたはロック解除します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
 
 *mode* は、Locking.h で定義されている、次のマニフェスト定数のいずれかである必要があります。
 
-|*モード*値|効果|
+|*モード*値|結果|
 |-|-|
 | **_LK_LOCK** | 指定したバイトをロックします。 バイトをロックできない場合、プログラムによって 1 秒後に直ちに再試行されます。 10 回試行した後、バイトをロックできなかった場合、定数はエラーを返します。 |
 | **_LK_NBLCK** | 指定したバイトをロックします。 バイトをロックできない場合、定数はエラーを返します。 |
-| **_LK_NBRLCK** | 同じ **_LK_NBLCK**します。 |
-| **_LK_RLCK** | 同じ **_LK_LOCK**します。 |
+| **_LK_NBRLCK** | **_LK_NBLCK**と同じです。 |
+| **_LK_RLCK** | **_LK_LOCK**と同じです。 |
 | **_LK_UNLCK** | 指定したバイトのロックを解除します。バイトは既にロックされている必要があります。 |
 
-重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**隣接する領域をマージしないのは、2 つのロックされた領域が隣接している場合は、各リージョンする必要がありますロックを解除するとは別にします。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**は隣接する領域を結合しません。2つのロックされた領域が隣接している場合は、各領域を個別にロック解除する必要があります。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> と \<sys/locking.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -149,13 +156,13 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>入力: crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>入力: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 ```Output
 No one can change these bytes while I'm reading them

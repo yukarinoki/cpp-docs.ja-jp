@@ -1,21 +1,21 @@
 ---
-title: CCreateContext 構造体
+title: コンテキスト構造の作成
 ms.date: 11/04/2016
 f1_keywords:
 - CCreateContext
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29fc6210b9888b6a5ba5aaf15b66242c29c15dc8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347143"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369377"
 ---
-# <a name="ccreatecontext-structure"></a>CCreateContext 構造体
+# <a name="ccreatecontext-structure"></a>コンテキスト構造の作成
 
-フレームワークを使用して、`CCreateContext`フレーム ウィンドウとドキュメントに関連付けられているビューの作成時に構造体します。
+フレームワークは、ドキュメント`CCreateContext`に関連付けられたフレーム ウィンドウとビューを作成するときに、この構造を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,40 +23,40 @@ ms.locfileid: "62347143"
 struct CCreateContext
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CCreateContext` 構造体であり、基底クラスではありません。
+`CCreateContext`は構造体であり、基本クラスを持っていません。
 
-ウィンドウを作成するときに、この構造体の値は、そのデータのビューに、ドキュメントのコンポーネントを接続するための情報を提供します。 使用しなければ`CCreateContext`作成プロセスの一部をオーバーライドする場合。
+ウィンドウを作成すると、この構造体の値によって、ドキュメントのコンポーネントをデータのビューに接続するために使用される情報が提供されます。 作成プロセスの一部`CCreateContext`をオーバーライドする場合にのみ使用する必要があります。
 
-A`CCreateContext`構造体には、ドキュメント、フレーム ウィンドウ、ビュー、およびドキュメント テンプレートへのポインターが含まれています。 ポインターも含まれています、`CRuntimeClass`を作成するビューの種類を識別します。 ランタイム クラス情報と現在のドキュメントのポインターは、新しいビューを動的に作成に使用されます。 次の表に、推奨方法とタイミング各`CCreateContext`メンバーを使用する場合があります。
+構造体`CCreateContext`には、ドキュメント、フレーム ウィンドウ、ビュー、およびドキュメント テンプレートへのポインタが含まれます。 また、作成するビューの種類`CRuntimeClass`を識別する を指すポインターも含まれています。 ランタイム クラス情報と現在のドキュメント ポインターを使用して、新しいビューを動的に作成します。 次の表は、各`CCreateContext`メンバーの使用方法と使用方法を示しています。
 
-|メンバー|型|何が|
+|メンバー|Type|それは何のためにありますか?|
 |------------|----------|--------------------|
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` 新しいビューを作成します。|
-|`m_pCurrentDoc`|`CDocument*`|新しいビューに関連する既存のドキュメント。|
-|`m_pNewDocTemplate`|`CDocTemplate*`|新しい MDI フレーム ウィンドウの作成に関連するドキュメント テンプレート。|
-|`m_pLastView`|`CView*`|元のビューでは、する追加のビューは、モデル化、分割ウィンドウのビューの作成や、ドキュメント上の 2 つ目のビューの作成のようにします。|
-|`m_pCurrentFrame`|`CFrameWnd*`|フレーム ウィンドウを追加のフレーム ウィンドウは、モデル化、2 つ目のフレーム ウィンドウにドキュメントの作成のようにします。|
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`をクリックして新しいビューを作成します。|
+|`m_pCurrentDoc`|`CDocument*`|新しいビューに関連付ける既存のドキュメント。|
+|`m_pNewDocTemplate`|`CDocTemplate*`|新しい MDI フレーム ウィンドウの作成に関連付けられているドキュメント テンプレート。|
+|`m_pLastView`|`CView*`|分割ウィンドウ ビューの作成やドキュメントの 2 番目のビューの作成のように、追加ビューをモデル化する元のビュー。|
+|`m_pCurrentFrame`|`CFrameWnd*`|ドキュメントに 2 番目のフレーム ウィンドウを作成する場合と同様に、追加のフレーム ウィンドウをモデル化するフレーム ウィンドウ。|
 
-格納された情報を検証するドキュメント テンプレートでは、ドキュメントとその関連コンポーネントを作成するとき、`CCreateContext`構造体。 たとえば、存在しないドキュメントのビューを作成できません必要があります。
+ドキュメント テンプレートは、ドキュメントとその関連コンポーネントを作成するときに、構造に格納されている情報を`CCreateContext`検証します。 たとえば、存在しないドキュメントに対してビューを作成しないでください。
 
 > [!NOTE]
->  すべてのポインターの`CCreateContext`はオプションであり、`NULL`指定されていないか不明な場合。
+> すべてのポインター`CCreateContext`はオプションであり、未指定または不明の`NULL`場合に使用できます。
 
-`CCreateContext` 下に表示するメンバー関数によって使用される「も参照してください」。 これらをオーバーライドする場合に、特定の情報をこれらの関数の説明についてを参照してください。
+`CCreateContext`は、「関連項目」にリストされているメンバー関数によって使用されます。 これらの関数をオーバーライドする場合は、特定の情報については、これらの関数の説明を参照してください。
 
-次に、いくつかの一般的なガイドラインを示します。
+一般的なガイドラインを次に示します。
 
-- ウィンドウの作成の引数として渡されるときに`CWnd::Create`、 `CFrameWnd::Create`、および`CFrameWnd::LoadFrame`作成のコンテキストでは、どのような新しいウィンドウへの接続を指定します。 ほとんどの windows では、全体の構造は省略可能、`NULL`ポインターを渡すことができます。
+- で、ウィンドウ作成の引数として渡される場合、 `CWnd::Create` `CFrameWnd::Create`、`CFrameWnd::LoadFrame`作成コンテキストは、新しいウィンドウの接続先を指定します。 ほとんどのウィンドウでは、構造体全体が省略可能で、`NULL`ポインターを渡すことができます。
 
-- オーバーライド可能なメンバー関数の場合など、 `CFrameWnd::OnCreateClient`、`CCreateContext`引数は省略可能です。
+- などの`CFrameWnd::OnCreateClient`オーバーライド可能なメンバー関数の`CCreateContext`場合、引数は省略可能です。
 
-- メンバー関数の関連するビューでの作成、入力してください、ビューを作成するのに十分な情報。 たとえば、分割ウィンドウで最初に表示に、クラスの情報を表示し、現在のドキュメントを指定する必要があります。
+- ビューの作成に関係するメンバー関数の場合、ビューを作成するための十分な情報を提供する必要があります。 たとえば、分割ウィンドウの最初のビューでは、ビュー クラス情報と現在のドキュメントを指定する必要があります。
 
-一般に、フレームワークの既定値を使用する場合は無視できます`CCreateContext`します。 高度な変更、Microsoft Foundation Class ライブラリのソース コードまたは VIEWEX など、サンプル プログラムを試行する場合は、するでは説明します。 必要なパラメーターを忘れると、フレームワークのアサーションされ、何を忘れた場合が示されます。
+一般に、フレームワークのデフォルトを使用する場合は、`CCreateContext`を無視できます。 高度な変更を試みると、Microsoft Foundation クラス ライブラリのソース コードまたは VIEWEX などのサンプル プログラムが案内されます。 必要なパラメータを忘れると、フレームワーク アサーションによって忘れてしまったものがわかります。
 
-詳細については`CCreateContext`、MFC のサンプルを参照して[VIEWEX](../../overview/visual-cpp-samples.md)します。
+詳細については、MFC`CCreateContext`サンプルの[VIEWEX](../../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -64,10 +64,10 @@ A`CCreateContext`構造体には、ドキュメント、フレーム ウィン�
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)<br/>
-[CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)<br/>
-[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)<br/>
-[CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)<br/>
-[CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[フレームウンド::作成](../../mfc/reference/cframewnd-class.md#create)<br/>
+[フレーム化::ロードフレーム](../../mfc/reference/cframewnd-class.md#loadframe)<br/>
+[フレームオンド::オンCreateクライアント](../../mfc/reference/cframewnd-class.md#oncreateclient)<br/>
+[スプリッタウンド::作成](../../mfc/reference/csplitterwnd-class.md#create)<br/>
+[スプリッタウンド::ビューの作成](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)

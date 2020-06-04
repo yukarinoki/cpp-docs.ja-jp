@@ -1,39 +1,39 @@
 ---
-title: 含まれている Windows を使用します。
+title: 包含ウィンドウの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-ms.openlocfilehash: 2b9a36c6aac80a7c77cde102d6da93c51788e4e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da765eae28d411c98e79af5b9173f48ea66ef8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198604"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329301"
 ---
-# <a name="using-contained-windows"></a>含まれている Windows を使用します。
+# <a name="using-contained-windows"></a>包含ウィンドウの使用
 
-ATL に含まれているウィンドウを実装する[CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)します。 コンテナー内のウィンドウでは、そのメッセージを独自のクラスで処理することではなく、コンテナー オブジェクトをデリゲートするウィンドウを表します。
+ATL は、含まれているウィンドウを[実装します](../atl/reference/ccontainedwindowt-class.md)。 包含ウィンドウは、メッセージをコンテナー オブジェクトにデリゲートするウィンドウを表し、独自のクラスで処理する代わりにコンテナー オブジェクトにメッセージをデリゲートします。
 
 > [!NOTE]
->  クラスを派生する必要はありません`CContainedWindowT`含まれているウィンドウを使用するためにします。
+> 包含ウィンドウを使用するためにクラス`CContainedWindowT`を派生させる必要はありません。
 
-含まれているウィンドウは、既存の Windows クラスまたは既存のウィンドウをサブクラス化に、いずれかのスーパークラスをできます。 ウィンドウをスーパークラス化する既存の Windows を作成するクラスで、最初のコンス トラクターで、既存のクラス名を指定、`CContainedWindowT`オブジェクト。 呼び出して`CContainedWindowT::Create`します。 既存のウィンドウをサブクラス化は、Windows のクラス名 (コンス トラクターに渡す NULL) を指定する必要はありません。 呼び出すだけで、`CContainedWindowT::SubclassWindow`サブクラス化されているウィンドウを識別するハンドルを持つメソッド。
+包含ウィンドウでは、既存の Windows クラスをスーパークラス化することも、既存のウィンドウをサブクラス化することもできます。 既存の Windows クラスをスーパークラス化するウィンドウを作成するには、まず、オブジェクトのコンストラクターで既存`CContainedWindowT`のクラス名を指定します。 次に`CContainedWindowT::Create`、 を呼び出します。 既存のウィンドウをサブクラス化するために、Windows クラス名を指定する必要はありません (コンストラクターに NULL を渡します)。 サブクラス化`CContainedWindowT::SubclassWindow`されるウィンドウへのハンドルを使用してメソッドを呼び出すだけです。
 
-通常、コンテナー クラスのデータ メンバーとして含まれているウィンドウを使用します。 コンテナーはウィンドウ以外である必要はありません。ただしから派生させる必要があります[CMessageMap](../atl/reference/cmessagemap-class.md)します。
+通常、コンテナー クラスのデータ メンバーとして、含まれているウィンドウを使用します。 コンテナはウィンドウである必要はありません。ただし[、CMessageMap](../atl/reference/cmessagemap-class.md)から派生する必要があります。
 
-コンテナー内のウィンドウでは、そのメッセージを処理するのに別のメッセージ マップを使用できます。 を 1 つ以上含まれているウィンドウがある場合は、いくつかの別のコンテナー内のウィンドウに対応するそれぞれのメッセージ マップを宣言する必要があります。
+包含ウィンドウは、代替メッセージ・マップを使用して、そのメッセージを処理できます。 複数のウィンドウが含まれている場合は、複数の代替メッセージ マップを宣言し、それぞれに別のウィンドウが含まれているウィンドウに対応するようにします。
 
 ## <a name="example"></a>例
 
-2 つ含まれているウィンドウを持つコンテナー クラスの例を次に示します。
+次に、2 つのウィンドウが含まれているコンテナー クラスの例を示します。
 
 [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]
 
-含まれているウィンドウの詳細については、次を参照してください。、 [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)サンプル。
+含まれているウィンドウの詳細については[、SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)サンプルを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ クラス](../atl/atl-window-classes.md)
+[ウィンドウクラス](../atl/atl-window-classes.md)

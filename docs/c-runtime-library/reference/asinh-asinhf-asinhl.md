@@ -1,11 +1,14 @@
 ---
 title: asinh、asinhf、asinhl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341783"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919619"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -58,23 +65,25 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Asinh**関数の逆ハイパーボリック サイン (アーク ハイパーボリック サイン) を返す*x*します。 この関数は浮動小数点ドメインで有効です。 場合*x*は簡易な NaN、不定値、または無限大の場合、同じ値が返されます。
+**Asinh**関数は、 *x*の逆ハイパーボリックサイン (アークハイパーボリックサイン) を返します。 この関数は浮動小数点ドメインで有効です。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|none|none|
+|± QNAN、IND、INF|なし|なし|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ を使用する場合のオーバー ロードを呼び出すことができます**asinh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**asinh**は**二重**します。
+C++ を使用すると、 **float 型**または**long** **double**型の値を受け取って返す**asinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **asinh**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<cmath > または\<math.h <|
+|**asinh**、 **asinhf**、 **asinhf**|\<math.h>|\<cmath> また\<は math. h<|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

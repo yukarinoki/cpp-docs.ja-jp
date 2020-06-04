@@ -1,21 +1,25 @@
 ---
 title: コンパイラの警告 (レベル 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8021b6e4650a03b16c96711b8afe4f5fa57d2f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391479"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185348"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>コンパイラの警告 (レベル 4) C4435
 
-'class1' :/Vd2 下のオブジェクトのレイアウトは仮想ベース 'class2' により変更されます。
+'class1': /vd2 下のオブジェクトのレイアウトは仮想ベース 'class2' により変更されます。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-コンパイル/vd1 のオプションを既定値で、派生クラスがない、`vtordisp`示された仮想ベースのフィールド。  場合/vd2 または`#pragma vtordisp(2)`は実際には、`vtordisp`フィールドが存在する場合、オブジェクトのレイアウトの変更になります。  別の相互作用するモジュールがコンパイルされている場合のバイナリの互換性の問題に可能性`vtordisp`設定します。
+/Vd1 の既定のコンパイルオプションでは、派生クラスには、指定された仮想ベースの `vtordisp` フィールドがありません。  /Vd2 または `#pragma vtordisp(2)` が有効になっている場合は、`vtordisp` のフィールドが表示され、オブジェクトのレイアウトが変更されます。  これにより、相互作用モジュールが異なる `vtordisp` 設定でコンパイルされると、バイナリ互換性の問題が発生する可能性があります。
 
 ## <a name="example"></a>例
 
@@ -35,7 +39,7 @@ class B : public virtual A  // C4435
 {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
 [/vd (ディスプレイスメントの無効化)](../../build/reference/vd-disable-construction-displacements.md)

@@ -118,18 +118,19 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b630a588d6c7ec81a22a9665deb0fa7517f90dc8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750649"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx クラス
 
-`CWinAppEx` アプリケーション状態の処理、レジストリに状態を保存、レジストリから状態を読み込みます、アプリケーション マネージャーの初期化および同じアプリケーション マネージャーへのリンクを提供します。
+`CWinAppEx`アプリケーションの状態を処理し、レジストリに状態を保存し、レジストリから状態を読み込み、アプリケーション マネージャを初期化し、同じアプリケーション マネージャへのリンクを提供します。
 
-   詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+
 ## <a name="syntax"></a>構文
 
 ```
@@ -148,81 +149,81 @@ class CWinAppEx : public CWinApp
 
 |名前|説明|
 |----------|-----------------|
-|[CWinAppEx::CleanState](#cleanstate)|Windows レジストリからアプリケーションに関する情報を削除します。|
-|[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|アプリケーションは、レジストリからメイン フレーム ウィンドウの場所と初期サイズを読み込むかどうかを指定します。|
-|[CWinAppEx::EnableTearOffMenus](#enabletearoffmenus)|アプリケーションのメニュー ティアオフできます。|
-|[CWinAppEx::EnableUserTools](#enableusertools)|アプリケーションのカスタム メニュー コマンドを作成するユーザーを有効にします。|
-|[CWinAppEx::ExitInstance](#exitinstance)|内から、フレームワークによって呼び出されます、`Run`メンバー関数は、アプリケーションのこのインスタンスを終了します。 (上書き[し](../../mfc/reference/cwinapp-class.md#exitinstance))。|
-|[CWinAppEx::GetBinary](#getbinary)|指定されたレジストリ値に関連付けられているバイナリ データを読み取ります。|
-|[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)|グローバルのポインターを返します[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクト。|
-|[CWinAppEx::GetDataVersion](#getdataversion)||
-|[CWinAppEx::GetDataVersionMajor](#getdataversionmajor)|Windows レジストリに保存されているアプリケーションのメジャー バージョンを返します。|
-|[CWinAppEx::GetDataVersionMinor](#getdataversionminor)|Windows レジストリに保存されているアプリケーションのマイナー バージョンを返します。|
-|[CWinAppEx::GetInt](#getint)|レジストリから指定された値に関連付けられている数値のデータを読み取ります。|
-|[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)|グローバルのポインターを返します[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)オブジェクト。|
-|[CWinAppEx::GetMouseManager](#getmousemanager)|グローバルのポインターを返します[CMouseManager](../../mfc/reference/cmousemanager-class.md)オブジェクト。|
-|[CWinAppEx::GetObject](#getobject)|読み取り`CObject`-レジストリから指定された値に関連付けられているデータを派生します。|
-|[CWinAppEx::GetRegSectionPath](#getregsectionpath)|レジストリ キーのパスを表す文字列を返します。 このパスは、アプリケーションのパスで指定された相対パスを連結します。|
-|[CWinAppEx::GetRegistryBase](#getregistrybase)|アプリケーションのレジストリ パスを返します。|
-|[CWinAppEx::GetSectionBinary](#getsectionbinary)|指定したキーとレジストリからの値に関連付けられているバイナリ データを読み取ります。|
-|[CWinAppEx::GetSectionInt](#getsectionint)|数値データを指定したキーと値に関連付けられているレジストリから読み取ります。|
-|[CWinAppEx::GetSectionObject](#getsectionobject)|読み取り`CObject`指定したキーとレジストリからの値に関連付けられているデータ。|
-|[CWinAppEx::GetSectionString](#getsectionstring)|指定したキーとレジストリからの値に関連付けられている文字列データを読み取ります。|
-|[CWinAppEx::GetShellManager](#getshellmanager)|グローバルのポインターを返します[CShellManager](../../mfc/reference/cshellmanager-class.md)オブジェクト。|
-|[CWinAppEx::GetString](#getstring)|レジストリから指定された値に関連付けられている文字列データを読み取ります。|
-|[CWinAppEx::GetTooltipManager](#gettooltipmanager)|グローバルのポインターを返します[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)オブジェクト。|
-|[CWinAppEx::GetUserToolsManager](#getusertoolsmanager)|グローバルのポインターを返します[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)オブジェクト。|
-|[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)|`CContextMenuManager` オブジェクトを初期化します。|
-|[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|`CKeyboardManager` オブジェクトを初期化します。|
-|[CWinAppEx::InitMouseManager](#initmousemanager)|`CMouseManager` オブジェクトを初期化します。|
-|[CWinAppEx::InitShellManager](#initshellmanager)|初期化します、`CShellManager`クラス|
-|[:Inittooltipmanager](#inittooltipmanager)|初期化します、`CTooltipManager`クラス。|
-|[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
-|[CWinAppEx::IsStateExists](#isstateexists)|指定したキーがレジストリかどうかを示します。|
-|[CWinAppEx::LoadState](#loadstate)|レジストリから、アプリケーションの状態を読み込みます。|
-|[CWinAppEx::OnAppContextHelp](#onappcontexthelp)|ユーザーのコンテキスト ヘルプを要求するときに、フレームワークによって呼び出されます、**カスタマイズ** ダイアログ ボックス。|
-|[CWinAppEx::OnViewDoubleClick](#onviewdoubleclick)|ユーザーがアプリケーションの任意の場所をダブルクリックしたときに、ユーザー定義のコマンドを呼び出します。|
-|[CWinAppEx::OnWorkspaceIdle](#onworkspaceidle)||
-|[CWinAppEx::SaveState](#savestate)|アプリケーション フレームワークの状態を Windows レジストリに書き込みます。|
-|[CWinAppEx::SetRegistryBase](#setregistrybase)|既定のレジストリ キーのパスを設定します。 このキーは、レジストリの後続のすべての呼び出しのルートとして使用されます。|
-|[CWinAppEx::ShowPopupMenu](#showpopupmenu)|ポップアップ メニューが表示されます。|
-|[CWinAppEx::WriteBinary](#writebinary)|指定されたレジストリ値には、バイナリ データを書き込みます。|
-|[CWinAppEx::WriteInt](#writeint)|指定されたレジストリ値を数値データを書き込みます。|
-|[CWinAppEx::WriteObject](#writeobject)|派生したデータを書き込む、 [CObject クラス](../../mfc/reference/cobject-class.md)指定されたレジストリ値にします。|
-|[CWinAppEx::WriteSectionBinary](#writesectionbinary)|指定されたレジストリ キーの値には、バイナリ データを書き込みます。|
-|[CWinAppEx::WriteSectionInt](#writesectionint)|指定されたレジストリ キーの値に数値データを書き込みます。|
-|[CWinAppEx::WriteSectionObject](#writesectionobject)|派生したデータを書き込み、`CObject`指定されたレジストリ キーの値にクラス。|
-|[CWinAppEx::WriteSectionString](#writesectionstring)|指定されたレジストリ キーの値には、文字列データを書き込みます。|
-|[CWinAppEx::WriteString](#writestring)|指定されたレジストリ値を文字列データを書き込みます。|
+|[クウィナップス::クリーンステート](#cleanstate)|アプリケーションに関する情報を Windows レジストリから削除します。|
+|[::ロードウィンドウ配置を有効にします。](#enableloadwindowplacement)|アプリケーションがメイン フレーム ウィンドウの初期サイズと場所をレジストリから読み込むかどうかを指定します。|
+|[CWinAppEx::イネーブルティアオフメニュー](#enabletearoffmenus)|アプリケーションのティアオフ メニューを有効にします。|
+|[::ユーザーツールを有効にする](#enableusertools)|ユーザーがアプリケーションでカスタム メニュー コマンドを作成できるようにします。|
+|[::出口インスタンス](#exitinstance)|アプリケーションのこのインスタンスを終了するために`Run`、メンバー関数内からフレームワークによって呼び出されます。 (CWinApp をオーバーライド[します。::インスタンスを終了](../../mfc/reference/cwinapp-class.md#exitinstance)します。|
+|[::ゲットバイナリ](#getbinary)|指定したレジストリ値に関連付けられているバイナリ データを読み取ります。|
+|[::コンテキストメニューマネージャー](#getcontextmenumanager)|グローバル[な CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクトへのポインターを返します。|
+|[次のバージョンを取得します。](#getdataversion)||
+|[CWinAppEx::取得データバージョンメジャー](#getdataversionmajor)|Windows レジストリに保存されているアプリケーションのメジャー バージョンを返します。|
+|[CWinAppEx::データバージョンマイナー](#getdataversionminor)|Windows レジストリに保存されているアプリケーションのマイナー バージョンを返します。|
+|[CWinAppEx::ゲットイント](#getint)|指定した値に関連付けられている数値データをレジストリから読み取ります。|
+|[::ゲッキーキーボードマネージャー](#getkeyboardmanager)|グローバル[CKeyboard マネージャー](../../mfc/reference/ckeyboardmanager-class.md)オブジェクトへのポインターを返します。|
+|[::ゲットマウスマネージャー](#getmousemanager)|グローバル[CMouseManager](../../mfc/reference/cmousemanager-class.md)オブジェクトへのポインターを返します。|
+|[::オブジェクトを取得します。](#getobject)|指定`CObject`した値に関連付けられている派生データをレジストリから読み取ります。|
+|[::ゲットレグセクションパス](#getregsectionpath)|レジストリ キーのパスを示す文字列を返します。 このパスは、指定された相対パスとアプリケーションパスを連結します。|
+|[::レジストリベースを取得します。](#getregistrybase)|アプリケーションのレジストリ パスを返します。|
+|[::ゲットセクションバイナリ](#getsectionbinary)|指定したキーと値に関連付けられているバイナリ データをレジストリから読み取ります。|
+|[CWinAppEx::ゲットセクションイント](#getsectionint)|指定したキーと値に関連付けられているレジストリから数値データを読み取ります。|
+|[::オブジェクトを取得します。](#getsectionobject)|指定`CObject`したキーと値に関連付けられているデータをレジストリから読み取ります。|
+|[::ゲットセクション文字列](#getsectionstring)|指定したキーと値に関連付けられている文字列データをレジストリから読み取ります。|
+|[::ゲットシェルマネージャー](#getshellmanager)|グローバル[CShellManager](../../mfc/reference/cshellmanager-class.md)オブジェクトへのポインターを返します。|
+|[::ゲットストリング](#getstring)|指定した値に関連付けられている文字列データをレジストリから読み取ります。|
+|[::ツールチップマネージャー](#gettooltipmanager)|グローバル[CTooltip マネージャー](../../mfc/reference/ctooltipmanager-class.md)オブジェクトへのポインターを返します。|
+|[::ユーザーツールマネージャー](#getusertoolsmanager)|グローバルな[CUserTools マネージャー](../../mfc/reference/cusertoolsmanager-class.md)オブジェクトへのポインターを返します。|
+|[::イニトコンテキストメニューマネージャー](#initcontextmenumanager)|`CContextMenuManager` オブジェクトを初期化します。|
+|[::イニトキーボードマネージャー](#initkeyboardmanager)|`CKeyboardManager` オブジェクトを初期化します。|
+|[CWinAppEx::イニトマウスマネージャー](#initmousemanager)|`CMouseManager` オブジェクトを初期化します。|
+|[::イニトシェルマネージャー](#initshellmanager)|クラスを初期化`CShellManager`します。|
+|[::イニトツールチップマネージャー](#inittooltipmanager)|`CTooltipManager` クラスを初期化します。|
+|[を更新します。](#isresourcesmartupdate)||
+|[CWinAppEx::IsState は存在します。](#isstateexists)|指定したキーがレジストリ内にあるかどうかを示します。|
+|[を使用します。](#loadstate)|レジストリからアプリケーションの状態を読み込みます。|
+|[をクリックしてください。](#onappcontexthelp)|ユーザーが **[カスタマイズ]** ダイアログ ボックスのコンテキスト ヘルプを要求したときに、フレームワークによって呼び出されます。|
+|[CWinAppEx::オンビューダブルクリック](#onviewdoubleclick)|ユーザーがアプリケーション内の任意の場所をダブルクリックしたときに、ユーザー定義コマンドを呼び出します。|
+|[::オンワークスペースアイドル](#onworkspaceidle)||
+|[CWinAppEx::セーブステート](#savestate)|アプリケーション フレームワークの状態を Windows レジストリに書き込みます。|
+|[::セットレジストリベース](#setregistrybase)|既定のレジストリ キーのパスを設定します。 このキーは、後続のすべてのレジストリ呼び出しのルートとして機能します。|
+|[::ポップアップメニュー](#showpopupmenu)|ポップアップ メニューを表示します。|
+|[::書き込みバイナリ](#writebinary)|バイナリ データを指定したレジストリ値に書き込みます。|
+|[CWinAppEx::書き込みイント](#writeint)|指定したレジストリ値に数値データを書き込みます。|
+|[オブジェクトを書き込む](#writeobject)|[CObject クラス](../../mfc/reference/cobject-class.md)から派生したデータを、指定されたレジストリ値に書き込みます。|
+|[::書き込みセクションバイナリ](#writesectionbinary)|バイナリ データを指定されたレジストリ キーの値に書き込みます。|
+|[CWinAppEx::書き込みセクションイント](#writesectionint)|数値データを指定されたレジストリ キーの値に書き込みます。|
+|[オブジェクトを書き込みます。](#writesectionobject)|クラスから派生したデータ`CObject`を、指定したレジストリ キーの値に書き込みます。|
+|[::セクション文字列を書き込みます](#writesectionstring)|指定したレジストリ キーの値に文字列データを書き込みます。|
+|[::書き込み文字列](#writestring)|指定したレジストリ値に文字列データを書き込みます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CWinAppEx::LoadCustomState](#loadcustomstate)|アプリケーションの状態が読み込まれたときに、フレームワークによって呼び出されます。|
-|[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|レジストリから、アプリケーションの場所とサイズを読み込むときに、フレームワークによって呼び出されます。 読み込まれたデータには、アプリケーションが最後に閉じられた時にメイン フレームの位置とサイズが含まれます。|
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|メイン フレーム ウィンドウが WM_CLOSE を処理するときに、フレームワークによって呼び出されます。|
-|[CWinAppEx::PreLoadState](#preloadstate)|直前に、フレームワークによって呼び出されます、アプリケーションの状態が読み込まれます。|
-|[CWinAppEx::PreSaveState](#presavestate)|アプリケーションの状態を保存する直前に、フレームワークによって呼び出されます。|
-|[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|指定されたレジストリからウィンドウの位置とサイズを再読み込み|
-|[CWinAppEx::SaveCustomState](#savecustomstate)|アプリケーションの状態をレジストリに保存した後に、フレームワークによって呼び出されます。|
-|[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|メイン フレームの位置とサイズをレジストリに書き込むために、フレームワークによって呼び出されます。|
+|[を使用します。](#loadcustomstate)|アプリケーションの状態が読み込まれたときに、フレームワークによって呼び出されます。|
+|[::ロードウィンドウ配置](#loadwindowplacement)|アプリケーションのサイズと場所をレジストリから読み込むときに、フレームワークによって呼び出されます。 読み込まれたデータには、アプリケーションが最後に閉じた時点でのメイン フレームのサイズと位置が含まれます。|
+|[CWinAppEx::オンクロージングメインフレーム](#onclosingmainframe)|メイン フレーム ウィンドウがWM_CLOSEを処理しているときに、フレームワークによって呼び出されます。|
+|[CWinAppEx::P読み込み状態](#preloadstate)|アプリケーションの状態が読み込まれる直前に、フレームワークによって呼び出されます。|
+|[CWinAppEx::Pセーブステート](#presavestate)|アプリケーションの状態が保存される直前に、フレームワークによって呼び出されます。|
+|[::リロードウィンドウ配置](#reloadwindowplacement)|指定されたウィンドウのサイズと場所をレジストリから再読み込みします。|
+|[::カスタム状態を保存します。](#savecustomstate)|アプリケーションの状態をレジストリに書き込んだ後、フレームワークによって呼び出されます。|
+|[::ストアウィンドウ配置](#storewindowplacement)|メイン フレームのサイズと場所をレジストリに書き込むために、フレームワークによって呼び出されます。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|ツールバーを含むフレーム ウィンドウが読み込まれるときに、フレームワークがすべてのツール バー イメージをリセットするかどうかを指定します。|
+|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|ツール バーを含むフレーム ウィンドウが読み込まれたときに、フレームワークがすべてのツール バー イメージをリセットするかどうかを指定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MFC フレームワークによって提供される機能の多くによって異なります、`CWinAppEx`クラス。 組み込むことができます、`CWinAppEx`を 2 つの方法のいずれかでアプリケーションにクラス。
+MFC フレームワークによって提供される機能の多くは、クラス`CWinAppEx`に依存します。 次の 2`CWinAppEx`つの方法のいずれかで、クラスをアプリケーションに組み込むことができます。
 
-- 構築、`CWinAppEx`メイン スレッドでのクラス。
+- メイン`CWinAppEx`スレッドでクラスを構築します。
 
-- アプリケーションのメイン クラスを派生`CWinAppEx`します。
+- からメイン アプリケーション クラス`CWinAppEx`を派生します。
 
-組み込む`CWinAppEx`をアプリケーションには、アプリケーション マネージャーのいずれかを初期化できます。 アプリケーション マネージャーを使用する前に、適切な初期化メソッドを呼び出すことで初期化する必要があります。 特定のマネージャーへのポインターを取得するには、関連付けられている get メソッドを呼び出します。 `CWinAppEx`クラスは、次のアプリケーション マネージャーを管理します。[CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)、 [CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)、および[CMenuTearOffManager クラス](../../mfc/reference/cmenutearoffmanager-class.md)します。
+アプリケーションに組`CWinAppEx`み込んだ後、アプリケーション マネージャのいずれかを初期化できます。 アプリケーション マネージャーを使用する前に、適切な initialize メソッドを呼び出してアプリケーション マネージャーを初期化する必要があります。 特定のマネージャーへのポインターを取得するには、関連付けられている get メソッドを呼び出します。 クラス`CWinAppEx`は、次のアプリケーション マネージャーを管理します: [CMouse マネージャー クラス](../../mfc/reference/cmousemanager-class.md)[、CContextMenu マネージャー クラス](../../mfc/reference/ccontextmenumanager-class.md)[、C キーボード マネージャー クラス](../../mfc/reference/ckeyboardmanager-class.md) [、CUserTools マネージャー クラス](../../mfc/reference/cusertoolsmanager-class.md)、および[CMenuTearOffManager クラス](../../mfc/reference/cmenutearoffmanager-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -232,7 +233,7 @@ MFC フレームワークによって提供される機能の多くによって�
 
 [CWinThread](../../mfc/reference/cwinthread-class.md)
 
-[CWinApp](../../mfc/reference/cwinapp-class.md)
+[Cwinapp](../../mfc/reference/cwinapp-class.md)
 
 [CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
@@ -240,9 +241,9 @@ MFC フレームワークによって提供される機能の多くによって�
 
 **ヘッダー:** afxwinappex.h
 
-##  <a name="cleanstate"></a>  CWinAppEx::CleanState
+## <a name="cwinappexcleanstate"></a><a name="cleanstate"></a>クウィナップス::クリーンステート
 
-Windows レジストリからアプリケーションに関するすべての情報を削除します。
+アプリケーションに関するすべての情報を Windows レジストリから削除します。
 
 ```
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
@@ -250,18 +251,18 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSectionName*<br/>
+*名前*<br/>
 [in]レジストリ キーのパスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリの特定のセクションからアプリケーション データをクリアします。 パラメーターを使用してクリアするセクションを指定する*lpszSectionName*します。 場合*lpszSectionName*が null の場合、このメソッドに格納されている既定のレジストリ パスを使用して、`CWinAppEx`オブジェクト。 既定のレジストリ パスを取得する[CWinAppEx::GetRegistryBase](#getregistrybase)します。
+このメソッドは、レジストリの特定のセクションからアプリケーション データを消去します。 クリアするセクションを指定するには、 *lpszSectionName*パラメーターを使用します。 *lpszSectionName*が NULL の場合、このメソッドはオブジェクトに格納されている`CWinAppEx`既定のレジストリ パスを使用します。 既定のレジストリ パスを取得するには[、CWinAppEx::GetRegistryBase](#getregistrybase)を使用します。
 
-##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx
+## <a name="cwinappexcwinappex"></a><a name="cwinappex"></a>CWinAppEx::CWinAppEx
 
 `CWinAppEx` オブジェクトを構築します。
 
@@ -271,33 +272,33 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bResourceSmartUpdate*<br/>
-[in]ワークスペースのオブジェクトが検出され、リソースの更新を処理するかどうかを指定するブール型パラメーター。
+*を更新します。*<br/>
+[in]ワークスペース オブジェクトがリソースの更新を検出して処理するかどうかを指定するブール値パラメーター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CWinAppEx`クラスの初期化メソッドが、機能の保存と読み込みをレジストリにアプリケーションの情報を提供します、およびアプリケーションのグローバル設定を制御します。 グローバル管理者を使用することもできます、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)と[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。 各アプリケーション インスタンス 1 つだけでは、`CWinAppEx`クラス。
+この`CWinAppEx`クラスには初期化メソッドがあり、アプリケーション情報をレジストリに保存および読み込む機能を提供し、グローバル アプリケーション設定を制御します。 また[、CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)や[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)クラスなどのグローバル マネージャを使用することもできます。 各アプリケーションは、クラスのインスタンスを`CWinAppEx`1 つだけ持つことができます。
 
-##  <a name="enableloadwindowplacement"></a>  CWinAppEx::EnableLoadWindowPlacement
+## <a name="cwinappexenableloadwindowplacement"></a><a name="enableloadwindowplacement"></a>::ロードウィンドウ配置を有効にします。
 
-アプリケーションは、レジストリからメイン フレーム ウィンドウの場所と初期サイズを読み込むかどうかを指定します。
+アプリケーションがメイン フレーム ウィンドウの初期サイズと場所をレジストリから読み込むかどうかを指定します。
 
-```
+```cpp
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-[in]アプリケーションがレジストリから、メイン フレーム ウィンドウの場所と初期サイズをロードするかどうかを指定します。
+*b 有効にする*<br/>
+[in]アプリケーションがメイン フレーム ウィンドウの初期サイズと場所をレジストリから読み込むかどうかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、メイン フレームの位置とサイズが、他のアプリケーション設定とレジストリから読み込まれます。 中に発生したこの[CWinAppEx::LoadState](#loadstate)します。 レジストリからウィンドウの初期配置をロードしない場合に、このメソッドを呼び出す*bEnable*を FALSE に設定します。
+既定では、メイン フレームのサイズと場所は、他のアプリケーション設定と共にレジストリから読み込まれます。 これは[、CWinAppEx::ロードステート中](#loadstate)に発生します。 レジストリから初期ウィンドウの配置を読み込まない場合は *、bEnable*を FALSE に設定してこのメソッドを呼び出します。
 
-##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus
+## <a name="cwinappexenabletearoffmenus"></a><a name="enabletearoffmenus"></a>CWinAppEx::イネーブルティアオフメニュー
 
-作成し、初期化、 [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/cmenutearoffmanager-class.md)作成して初期化します。
 
 ```
 BOOL EnableTearOffMenus(
@@ -308,26 +309,26 @@ BOOL EnableTearOffMenus(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRegEntry*<br/>
-[in]レジストリ キーのパスを含む文字列。 アプリケーションでは、このレジストリ キーを使用して、ティアオフ メニューの情報を格納します。
+*をクリックします。*<br/>
+[in]レジストリ キーのパスを含む文字列。 アプリケーションは、このレジストリ キーを使用して、ティアオフ メニューの情報を格納します。
 
-*uiCmdFirst*<br/>
-[in]最初にティアオフ メニュー id。
+*最初にコマンドを実行します。*<br/>
+[in]最初のティアオフメニュー ID。
 
-*uiCmdLast*<br/>
-[in]最後にティアオフ メニュー id。
+*をクリックします。*<br/>
+[in]最後のティアオフメニュー ID。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、`CMenuTearOffManager`が作成され、初期化に成功しました。FALSE エラーが発生した場合や、`CMenuTearOffManager`既に存在します。
+が正常に`CMenuTearOffManager`作成され、初期化された場合は TRUE。エラーが発生した場合、または既に`CMenuTearOffManager`存在する場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションでは、ティアオフ メニューを有効にするのにには、この関数を使用します。 この関数を呼び出す必要があります`InitInstance`します。
+この関数を使用して、アプリケーションでティアオフ メニューを有効にします。 この関数は から呼`InitInstance`び出す必要があります。
 
-##  <a name="enableusertools"></a>  CWinAppEx::EnableUserTools
+## <a name="cwinappexenableusertools"></a><a name="enableusertools"></a>::ユーザーツールを有効にする
 
-アプリケーションにキーストロークを減らすカスタム メニュー コマンドを作成するユーザーを有効にします。 このメソッドを作成、 [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)オブジェクト。
+ユーザーがアプリケーションのキーストロークを減らすカスタム メニュー コマンドを作成できるようにします。 このメソッドは、[オブジェクトを](../../mfc/reference/cusertoolsmanager-class.md)作成します。
 
 ```
 BOOL EnableUserTools(
@@ -341,37 +342,37 @@ BOOL EnableUserTools(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdToolsDummy*<br/>
-[in]ユーザーの [ツール] メニューのコマンド ID プレース ホルダーとして、フレームワークを使用して符号なし整数。
+*uiCmdツールダミー*<br/>
+[in]フレームワークがユーザー ツール メニューのコマンド ID のプレースホルダーとして使用する符号なし整数。
 
-*uiCmdFirst*<br/>
-[in]最初のユーザー ツールのコマンドのコマンド ID。
+*最初にコマンドを実行します。*<br/>
+[in]最初のユーザー ツール コマンドのコマンド ID。
 
-*uiCmdLast*<br/>
-[in]最後のユーザー ツールのコマンドのコマンド ID。
+*をクリックします。*<br/>
+[in]最後のユーザー ツール コマンドのコマンド ID。
 
-*pToolRTC*<br/>
-[in]クラスを`CUserToolsManager`オブジェクトを使用して新しいユーザー ツールを作成します。
+*をクリックします。*<br/>
+[in]オブジェクトが新しい`CUserToolsManager`ユーザー ツールを作成するために使用するクラス。
 
-*uArgMenuID*<br/>
-[in]引数のメニューの id。
+*をクリックします。*<br/>
+[in]引数メニュー ID。
 
-*uInitDirMenuID*<br/>
-[in]初期のツール ディレクトリのメニューの ID。
+*ユーイニトディルメニューID*<br/>
+[in]初期ツール ディレクトリのメニュー ID。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドを作成し、初期化する場合は TRUE、`CUserToolsManager`オブジェクト。FALSE、メソッドが失敗した場合、または場合、`CUserToolsManager`オブジェクトは既に存在します。
+メソッドがオブジェクトを作成して初期化する場合`CUserToolsManager`は TRUE。メソッドが失敗した場合、またはオブジェクト`CUserToolsManager`が既に存在する場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザー定義のツールを有効にすると、フレームワークは自動的に動的メニューをカスタマイズするときに拡張できるをサポートします。 フレームワークは、外部のコマンドを使用して新しい各項目を関連付けます。 フレームワークは、ユーザーから適切な項目を選択すると、これらのコマンドを呼び出す、**ツール**メニュー。
+ユーザー定義ツールを有効にすると、フレームワークはカスタマイズ時に拡張できる動的メニューを自動的にサポートします。 フレームワークは、新しい各項目を外部コマンドに関連付けます。 ユーザーが **[ツール]** メニューから適切な項目を選択すると、フレームワークはこれらのコマンドを呼び出します。
 
-ユーザーは、新しい項目を追加するたびに、フレームワークは、新しいオブジェクトを作成します。 新しいオブジェクトのクラス型によって定義されます*pToolRTC*します。 *PToolRTC*クラス型から派生する必要があります、 [CUserTool クラス](../../mfc/reference/cusertool-class.md)します。
+ユーザーが新しい項目を追加するたびに、フレームワークは新しいオブジェクトを作成します。 新しいオブジェクトのクラス型は*pToolRTC*によって定義されます。 *クラス型は*[、CUserTool クラス](../../mfc/reference/cusertool-class.md)から派生する必要があります。
 
-ユーザー ツールとアプリケーションに組み込む方法の詳細については、次を参照してください。[ユーザー定義のツール](../../mfc/user-defined-tools.md)します。
+ユーザー ツールの詳細と、ユーザー ツールをアプリケーションに組み込む方法については、「[ユーザー定義ツール](../../mfc/user-defined-tools.md)」を参照してください。
 
-##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
+## <a name="cwinappexexitinstance"></a><a name="exitinstance"></a>::出口インスタンス
 
 ```
 virtual int ExitInstance();
@@ -379,11 +380,11 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getbinary"></a>  CWinAppEx::GetBinary
+## <a name="cwinappexgetbinary"></a><a name="getbinary"></a>::ゲットバイナリ
 
-指定されたレジストリ キーからバイナリ データを読み取ります。
+指定したレジストリ キーからバイナリ データを読み取ります。
 
 ```
 BOOL GetBinary(
@@ -394,28 +395,28 @@ BOOL GetBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*ppData*<br/>
-[out]メソッドがバイナリ データを格納するバッファーへのポインター。
+*Ppdata*<br/>
+[アウト]メソッドがバイナリ データで埋めるバッファーへのポインター。
 
-*ペタバイト*<br/>
-[out]メソッドを使用して、読み取ったバイト数を記述する符号なし整数へのポインター。
+*バイト数*<br/>
+[アウト]読み取ったバイト数を書き込むためにメソッドが使用する符号なし整数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE。FALSE それ以外の場合。
+成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリに書き込まれたバイナリ データを読み込みます。 レジストリにデータを記述するメソッドを使用して、 [CWinAppEx::WriteBinary](#writebinary)と[CWinAppEx::WriteSectionBinary](#writesectionbinary)します。
+このメソッドは、レジストリに書き込まれたバイナリ データを読み取ります。 レジストリにデータを書き込むには、メソッド[CWinAppEx::書き込みバイナリ](#writebinary)と[CWinAppEx:::WriteSectionBinary](#writesectionbinary)を使用します。
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager
+## <a name="cwinappexgetcontextmenumanager"></a><a name="getcontextmenumanager"></a>::コンテキストメニューマネージャー
 
-グローバルのポインターを返します[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクト。
+グローバル[な CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CContextMenuManager* GetContextMenuManager();
@@ -423,13 +424,13 @@ CContextMenuManager* GetContextMenuManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CContextMenuManager`オブジェクト。
+グローバル`CContextMenuManager`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す CContextMenuManager オブジェクトが初期化されていない場合[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)ポインターを返す前にします。
+オブジェクトが初期化されていない場合、この関数はポインターを返す前に[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)を呼び出します。
 
-##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion
+## <a name="cwinappexgetdataversion"></a><a name="getdataversion"></a>次のバージョンを取得します。
 
 ```
 int GetDataVersion() const;
@@ -437,11 +438,11 @@ int GetDataVersion() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdataversionmajor"></a>  CWinAppEx::GetDataVersionMajor
+## <a name="cwinappexgetdataversionmajor"></a><a name="getdataversionmajor"></a>CWinAppEx::取得データバージョンメジャー
 
-呼び出すときに、Windows レジストリに保存されているアプリケーションのメジャー バージョンを返します[CWinAppEx::SaveState](#savestate)します。
+[CWinAppEx::SaveState](#savestate)を呼び出すときに、Windows レジストリに保存されているアプリケーションのメジャー バージョンを返します。
 
 ```
 int GetDataVersionMajor() const;
@@ -449,11 +450,11 @@ int GetDataVersionMajor() const;
 
 ### <a name="return-value"></a>戻り値
 
-メジャー バージョン番号を含む整数値。
+メジャー バージョン番号を格納する整数値。
 
-##  <a name="getdataversionminor"></a>  CWinAppEx::GetDataVersionMinor
+## <a name="cwinappexgetdataversionminor"></a><a name="getdataversionminor"></a>CWinAppEx::データバージョンマイナー
 
-呼び出すときに、Windows レジストリに保存されているアプリケーションのマイナー バージョンを返します[CWinAppEx::SaveState](#savestate)します。
+[CWinAppEx::SaveState](#savestate)を呼び出すときに、Windows レジストリに保存されているアプリケーションのマイナー バージョンを返します。
 
 ```
 int GetDataVersionMinor() const;
@@ -463,9 +464,9 @@ int GetDataVersionMinor() const;
 
 マイナー バージョン番号を含む整数値。
 
-##  <a name="getint"></a>  CWinAppEx::GetInt
+## <a name="cwinappexgetint"></a><a name="getint"></a>CWinAppEx::ゲットイント
 
-指定されたレジストリ キーから整数型のデータを読み取ります。
+指定したレジストリ キーから整数データを読み取ります。
 
 ```
 int GetInt(
@@ -475,25 +476,25 @@ int GetInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ エントリの名前を含む文字列。
 
-*nDefault*<br/>
-[in]指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。
+*nデフォルト*<br/>
+[in]指定したレジストリ エントリが存在しない場合にメソッドが返す既定値。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、レジストリ データそれ以外の場合*見つからなかった*します。
+メソッドが成功した場合はレジストリ データ。それ以外*の場合は、nDefault を使用します*。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリから整数型のデータを読み取ります。 によって示されるレジストリ キーに関連付けられた整数データがないかどうかは*lpszEntry*、このメソッドが戻る*見つからなかった*します。 レジストリにデータを記述するメソッドを使用して、 [CWinAppEx::WriteSectionInt](#writesectionint)と[CWinAppEx::WriteInt](#writeint)します。
+このメソッドは、レジストリから整数データを読み取ります。 *lpszEntry*で示されるレジストリ キーに関連付けられている整数データがない場合、このメソッドは*nDefault*を返します。 レジストリにデータを書き込むには、メソッド[CWinAppEx::WriteSectionInt](#writesectionint)と[CWinAppEx::WriteInt](#writeint)を使用します。
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager
+## <a name="cwinappexgetkeyboardmanager"></a><a name="getkeyboardmanager"></a>::ゲッキーキーボードマネージャー
 
-グローバルのポインターを返します[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)オブジェクト。
+グローバル[CKeyboard マネージャー](../../mfc/reference/ckeyboardmanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CKeyboardManager* GetKeyboardManager();
@@ -501,15 +502,15 @@ CKeyboardManager* GetKeyboardManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CKeyboardManager`オブジェクト。
+グローバル`CKeyboardManager`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出すキーボード マネージャーが初期化されていない場合[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)ポインターを返す前にします。
+キーボード マネージャーが初期化されていない場合、この関数は、ポインターを返す前に[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)を呼び出します。
 
-##  <a name="getmousemanager"></a>  CWinAppEx::GetMouseManager
+## <a name="cwinappexgetmousemanager"></a><a name="getmousemanager"></a>::ゲットマウスマネージャー
 
-グローバルのポインターを返します[CMouseManager](../../mfc/reference/cmousemanager-class.md)オブジェクト。
+グローバル[CMouseManager](../../mfc/reference/cmousemanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CMouseManager* GetMouseManager();
@@ -517,15 +518,15 @@ CMouseManager* GetMouseManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CMouseManager`オブジェクト。
+グローバル`CMouseManager`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す場合は、マウスのマネージャーが初期化されていません、および[CWinAppEx::InitMouseManager](#initmousemanager)ポインターを返す前にします。
+マウス マネージャーが初期化されていない場合、この関数は、ポインターを返す前に[CWinAppEx::InitMouseManager](#initmousemanager)を呼び出します。
 
-##  <a name="getobject"></a>  CWinAppEx::GetObject
+## <a name="cwinappexgetobject"></a><a name="getobject"></a>::オブジェクトを取得します。
 
-読み取り[CObject](../../mfc/reference/cobject-class.md)レジストリからデータを派生されたものです。
+[CObject](../../mfc/reference/cobject-class.md)-dervied データをレジストリから読み取ります。
 
 ```
 BOOL GetObject(
@@ -535,23 +536,23 @@ BOOL GetObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ エントリの相対パスを含む文字列。
 
 *obj*<br/>
-[out]参照、`CObject`します。 メソッドは、レジストリ データを格納するのに、この参照を使用します。
+[アウト]への参照。 `CObject` このメソッドは、この参照を使用してレジストリ データを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドから派生したレジストリからデータを読み取る`CObject`します。 書き込む`CObject`いずれかを使用するデータ、レジストリを[CWinAppEx::WriteObject](#writeobject)または[CWinAppEx::WriteSectionObject](#writesectionobject)します。
+このメソッドは、 から`CObject`派生したレジストリからデータを読み取ります。 レジストリに`CObject`データを書き込むには[、CWinAppEx::WriteObject](#writeobject)または[CWinAppEx::WriteSectionObject](#writesectionobject)を使用します。
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase
+## <a name="cwinappexgetregistrybase"></a><a name="getregistrybase"></a>::レジストリベースを取得します。
 
 アプリケーションの既定のレジストリ パスを取得します。
 
@@ -563,13 +564,13 @@ LPCTSTR GetRegistryBase();
 
 既定のレジストリの場所のパスを含む文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべてのメソッド、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)既定の場所にレジストリの開始にアクセスします。 既定のレジストリの場所のパスを取得するのにには、このメソッドを使用します。 使用[CWinAppEx::SetRegistryBase](#setregistrybase)レジストリの既定の場所を変更します。
+レジストリにアクセスする[CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)のすべてのメソッドは、既定の場所で開始します。 このメソッドは、既定のレジストリの場所のパスを取得するために使います。 既定[のレジストリの場所を変更するには、CWinAppEx::SetRegistryBase](#setregistrybase)を使用します。
 
-##  <a name="getregsectionpath"></a>  CWinAppEx::GetRegSectionPath
+## <a name="cwinappexgetregsectionpath"></a><a name="getregsectionpath"></a>::ゲットレグセクションパス
 
-作成してレジストリ キーの絶対パスを返します。
+レジストリ キーの絶対パスを作成して返します。
 
 ```
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
@@ -577,18 +578,18 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 
 ### <a name="parameters"></a>パラメーター
 
-*szSectionAdd*<br/>
+*セクションの追加*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-A`CString`レジストリ キーの絶対パスを格納しています。
+レジストリ`CString`キーの絶対パスを含む A。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドに相対パスを追加して、レジストリ キーの絶対パスを定義します*szSectionAdd*アプリケーションの既定のレジストリの場所にします。 既定のレジストリ キーを取得するメソッドを使用して[CWinAppEx::GetRegistryBase](#getregistrybase)します。
+このメソッドは *、szSectionAdd*の相対パスをアプリケーションの既定のレジストリの場所に追加することによって、レジストリ キーの絶対パスを定義します。 既定のレジストリ キーを取得するには、メソッド[CWinAppEx::GetRegistryBase](#getregistrybase)を使用します。
 
-##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary
+## <a name="cwinappexgetsectionbinary"></a><a name="getsectionbinary"></a>::ゲットセクションバイナリ
 
 レジストリからバイナリ データを読み取ります。
 
@@ -602,31 +603,31 @@ BOOL GetSectionBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]読み取る値を含む文字列。
 
-*ppData*<br/>
-[out]メソッドがデータを格納するバッファーへのポインター。
+*Ppdata*<br/>
+[アウト]メソッドがデータを格納するバッファーへのポインター。
 
-*ペタバイト*<br/>
-[out]符号なし整数へのポインター。 サイズを書き込む*ppData*このパラメーターにします。
+*バイト数*<br/>
+[アウト]符号なし整数へのポインター。 このメソッドは *、ppData*のサイズをこのパラメーターに書き込みます。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、メソッドを使用してレジストリに書き込まれたバイナリ データを読み取ります[CWinAppEx::WriteBinary](#writebinary)と[CWinAppEx::WriteSectionBinary](#writesectionbinary)します。
+このメソッドは[、CWinAppEx::WriteBinary](#writebinary)および[CWinAppEx::WriteSectionBinary](#writesectionbinary)メソッドを使用してレジストリに書き込まれるバイナリ データを読み取ります。
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt
+## <a name="cwinappexgetsectionint"></a><a name="getsectionint"></a>CWinAppEx::ゲットセクションイント
 
-レジストリから整数型のデータを読み取ります。
+レジストリから整数データを読み取ります。
 
 ```
 int GetSectionInt(
@@ -637,28 +638,28 @@ int GetSectionInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]読み取る値を含む文字列。
 
-*nDefault*<br/>
-[in]指定した値が存在しないかどうかに返す既定値。
+*nデフォルト*<br/>
+[in]指定した値が存在しない場合に返す既定値。
 
 ### <a name="return-value"></a>戻り値
 
-指定したレジストリの値で格納されている整数データ*見つからなかった*データが存在しない場合。
+指定したレジストリ値に格納される整数データ。*nデータ*が存在しない場合はデフォルトです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メソッドを使用して[CWinAppEx::WriteInt](#writeint)と[CWinAppEx::WriteSectionInt](#writesectionint)整数データ、レジストリに書き込めません。
+整数データをレジストリに書き込むには[、CWinAppEx::WriteInt](#writeint)と[CWinAppEx::WriteSectionInt](#writesectionint)メソッドを使用します。
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject
+## <a name="cwinappexgetsectionobject"></a><a name="getsectionobject"></a>::オブジェクトを取得します。
 
-読み取り[CObject](../../mfc/reference/cobject-class.md)レジストリからレジストリ データ。
+[CObject](../../mfc/reference/cobject-class.md)レジストリ データをレジストリから読み取ります。
 
 ```
 BOOL GetSectionObject(
@@ -669,28 +670,28 @@ BOOL GetSectionObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]読み取る値を含む文字列。
 
 *obj*<br/>
-[out]参照、`CObject`します。 メソッドがこれを使用して`CObject`レジストリ データを格納します。
+[アウト]への参照。 `CObject` このメソッドは、`CObject`これを使用してレジストリ データを格納します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリからデータを読み取ります。 データの読み取りが`CObject`データ、またはデータから派生したクラスの`CObject`します。 書き込む`CObject`いずれかを使用するデータ、レジストリを[CWinAppEx::WriteObject](#writeobject)または[CWinAppEx::WriteSectionObject](#writesectionobject)します。
+このメソッドは、レジストリからデータを読み取ります。 読み取られる`CObject`データは、データ、または から`CObject`派生したクラスのデータです。 レジストリに`CObject`データを書き込むには[、CWinAppEx::WriteObject](#writeobject)または[CWinAppEx::WriteSectionObject](#writesectionobject)を使用します。
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString
+## <a name="cwinappexgetsectionstring"></a><a name="getsectionstring"></a>::ゲットセクション文字列
 
-文字列のレジストリからデータを読み取ります。
+レジストリから文字列データを読み取ります。
 
 ```
 CString GetSectionString(
@@ -701,28 +702,28 @@ CString GetSectionString(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]読み取る値を含む文字列。
 
-*から*<br/>
-[in]指定した値が存在しないかどうかに返す既定値。
+*デフォルト*<br/>
+[in]指定した値が存在しない場合に返す既定値。
 
 ### <a name="return-value"></a>戻り値
 
-データが存在する場合は、指定されたレジストリ値に格納されている文字列データそれ以外の場合*から*します。
+データが存在する場合は、指定したレジストリ値に格納されている文字列データ。それ以外*の場合は、デフォルトを lpsz*します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリに書き込まれる文字列データを読み込みます。 使用[CWinAppEx::WriteString](#writestring)と[CWinAppEx::WriteSectionString](#writesectionstring)には文字列データをレジストリに書き込めません。
+このメソッドは、レジストリに書き込まれた文字列データを読み取ります。 文字列データをレジストリに書き込むには[、CWinAppEx::書き込み](#writestring)文字列と[CWinAppEx::WriteSectionString](#writesectionstring)を使用します。
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager
+## <a name="cwinappexgetshellmanager"></a><a name="getshellmanager"></a>::ゲットシェルマネージャー
 
-グローバルのポインターを返します[CShellManager](../../mfc/reference/cshellmanager-class.md)オブジェクト。
+グローバル[CShellManager](../../mfc/reference/cshellmanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CShellManager* GetShellManager();
@@ -730,15 +731,15 @@ CShellManager* GetShellManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CShellManager`オブジェクト。
+グローバル`CShellManager`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合、`CShellManager`オブジェクトが初期化されていません、この関数を呼び出す[CWinAppEx::InitShellManager](#initshellmanager)ポインターを返す前にします。
+オブジェクトが`CShellManager`初期化されていない場合、この関数はポインターを返す前に[CWinAppEx::InitShellManager](#initshellmanager)を呼び出します。
 
-##  <a name="getstring"></a>  CWinAppEx::GetString
+## <a name="cwinappexgetstring"></a><a name="getstring"></a>::ゲットストリング
 
-文字列の指定したレジストリ キーからのデータを読み取ります。
+指定したレジストリ キーから文字列データを読み取ります。
 
 ```
 CString GetString(
@@ -748,25 +749,25 @@ CString GetString(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ キーの名前を含む文字列
 
-*lpzDefault*<br/>
-[in]指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。
+*デフォルト*<br/>
+[in]指定したレジストリ エントリが存在しない場合にメソッドが返す既定値。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、レジストリに格納された文字列データ*から*それ以外の場合。
+正常終了した場合は、レジストリに格納されている文字列データ。*それ以外の場合はデフォルトです*。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、レジストリに書き込まれる文字列データを読み込みます。 レジストリにデータを記述するメソッドを使用して、 [CWinAppEx::WriteString](#writestring)または[CWinAppEx::WriteSectionString](#writesectionstring)します。
+このメソッドは、レジストリに書き込まれた文字列データを読み取ります。 レジストリにデータを書き込むには、メソッド[CWinAppEx::書き込み文字列](#writestring)または[CWinAppEx::WriteSectionString](#writesectionstring)を使用します。
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager
+## <a name="cwinappexgettooltipmanager"></a><a name="gettooltipmanager"></a>::ツールチップマネージャー
 
-グローバルのポインターを返します[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)オブジェクト。
+グローバル[CTooltip マネージャー](../../mfc/reference/ctooltipmanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CTooltipManager* GetTooltipManager();
@@ -774,15 +775,15 @@ CTooltipManager* GetTooltipManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CTooltipManager`オブジェクト。
+グローバル`CTooltipManager`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合、`CTooltipManager`オブジェクトが初期化されていません、この関数を呼び出す[:inittooltipmanager](#inittooltipmanager)ポインターを返す前にします。
+オブジェクトが`CTooltipManager`初期化されていない場合、この関数はポインターを返す前に[CWinAppEx::InitTooltipManager](#inittooltipmanager)を呼び出します。
 
-##  <a name="getusertoolsmanager"></a>  CWinAppEx::GetUserToolsManager
+## <a name="cwinappexgetusertoolsmanager"></a><a name="getusertoolsmanager"></a>::ユーザーツールマネージャー
 
-グローバルのポインターを返します[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)オブジェクト。
+グローバルな[CUserTools マネージャー](../../mfc/reference/cusertoolsmanager-class.md)オブジェクトへのポインターを返します。
 
 ```
 CUserToolsManager* GetUserToolsManager();
@@ -790,15 +791,15 @@ CUserToolsManager* GetUserToolsManager();
 
 ### <a name="return-value"></a>戻り値
 
-グローバルへのポインター`CUserToolsManager`オブジェクト。アプリケーションのユーザー管理のツールの場合は NULL が有効になっていません。
+グローバル`CUserToolsManager`オブジェクトへのポインター。ユーザー ツール管理がアプリケーションに対して有効になっていない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポインターを取得する前に、`CUserToolsManager`オブジェクトを呼び出すことにより、マネージャーを初期化する必要があります[CWinAppEx::EnableUserTools](#enableusertools)します。
+オブジェクトへのポインターを取得する前`CUserToolsManager`に[、CWinAppEx::EnableUserTools](#enableusertools)を呼び出してマネージャーを初期化する必要があります。
 
-##  <a name="initcontextmenumanager"></a>  CWinAppEx::InitContextMenuManager
+## <a name="cwinappexinitcontextmenumanager"></a><a name="initcontextmenumanager"></a>::イニトコンテキストメニューマネージャー
 
-初期化します、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/ccontextmenumanager-class.md)初期化します。
 
 ```
 BOOL InitContextMenuManager();
@@ -806,17 +807,17 @@ BOOL InitContextMenuManager();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドは、CContextMenuManager オブジェクトを作成する場合、0 以外の場合0 の場合、`CContextMenuManager`オブジェクトは既に存在します。
+メソッドが CContextMenuManager オブジェクトを作成する場合は 0 以外の値を返します。オブジェクトが既`CContextMenuManager`に存在する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す場合[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)、そのメソッドの既定の実装を呼び出す`InitContextMenuManager`します。
+呼び出すと[、](#getcontextmenumanager)そのメソッドの既定の実装が呼び出`InitContextMenuManager`されます。
 
-既にアプリケーションがコンテキスト メニューのマネージャーを呼び出す場合`InitContextMenuManager`、アプリケーションがある、 [ASSERT](diagnostic-services.md#assert)エラー。 そのため、呼び出す必要はありません`InitContextMenuManager`を作成する場合、`CContextMenuManager`オブジェクトに直接します。 カスタムを使用していない場合`CContextMenuManager`、使用する必要があります`GetContextMenuManager`を作成する、`CContextMenuManager`オブジェクト。
+アプリケーションに既にコンテキスト メニュー マネージャが存在し`InitContextMenuManager`、 を呼び出すと、アプリケーションで[ASSERT](diagnostic-services.md#assert)エラーが発生します。 したがって、オブジェクトを直接作成`InitContextMenuManager`する場合は`CContextMenuManager`呼び出さないでください。 カスタム`CContextMenuManager`を使用していない場合は、 を使用`GetContextMenuManager`してオブジェクトを`CContextMenuManager`作成する必要があります。
 
-##  <a name="initkeyboardmanager"></a>  CWinAppEx::InitKeyboardManager
+## <a name="cwinappexinitkeyboardmanager"></a><a name="initkeyboardmanager"></a>::イニトキーボードマネージャー
 
-初期化します、 [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/ckeyboardmanager-class.md)初期化します。
 
 ```
 BOOL InitKeyboardManager();
@@ -824,17 +825,17 @@ BOOL InitKeyboardManager();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドを作成する場合、0 以外の場合、`CKeyboardManager`オブジェクト。 0 の場合、`CKeyboardManager`オブジェクトは既に存在します。
+メソッドがオブジェクトを作成する場合`CKeyboardManager`は 0 以外の値を返します。オブジェクトが既`CKeyboardManager`に存在する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す場合[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)、そのメソッドの既定の実装を呼び出す`InitKeyboardManager`します。
+[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)を呼び出すと、そのメソッドの既定`InitKeyboardManager`の実装が呼び出されます。
 
-アプリケーションで既にがキーボードのマネージャーを呼び出す場合`InitKeyboardManager`、アプリケーションがある、 [ASSERT](diagnostic-services.md#assert)失敗します。 そのため、呼び出す必要はありません`InitKeyboardManager`を作成する場合、`CKeyboardManager`オブジェクトに直接します。 カスタムを使用していない場合`CKeyboardManager`、使用する必要があります`GetKeyboardManager`を作成する、`CKeyboardManager`オブジェクト。
+アプリケーションに既にキーボード マネージャーが存在し、`InitKeyboardManager`を呼び出すと、アプリケーションで[ASSERT](diagnostic-services.md#assert)エラーが発生します。 したがって、オブジェクトを直接作成`InitKeyboardManager`する場合は`CKeyboardManager`呼び出さないでください。 カスタム`CKeyboardManager`を使用していない場合は、 を使用`GetKeyboardManager`してオブジェクトを`CKeyboardManager`作成する必要があります。
 
-##  <a name="initmousemanager"></a>  CWinAppEx::InitMouseManager
+## <a name="cwinappexinitmousemanager"></a><a name="initmousemanager"></a>CWinAppEx::イニトマウスマネージャー
 
-初期化します、 [CMouseManager](../../mfc/reference/cmousemanager-class.md)オブジェクト。
+[オブジェクト](../../mfc/reference/cmousemanager-class.md)を初期化します。
 
 ```
 BOOL InitMouseManager();
@@ -842,17 +843,17 @@ BOOL InitMouseManager();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドを作成する場合、0 以外の場合、`CMouseManager`オブジェクト。 0 の場合、`CMouseManager`オブジェクトは既に存在します。
+メソッドがオブジェクトを作成する場合`CMouseManager`は 0 以外の値を返します。オブジェクトが既`CMouseManager`に存在する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す場合[CWinAppEx::GetMouseManager](#getmousemanager)、そのメソッドの既定の実装を呼び出す`InitMouseManager`します。
+[CWinAppEx::GetMouseManager](#getmousemanager)を呼び出すと、そのメソッドの既定`InitMouseManager`の実装が呼び出されます。
 
-アプリケーションで既にがマウスのマネージャーを呼び出す場合`InitMouseManager`、アプリケーションがある、 [ASSERT](diagnostic-services.md#assert)失敗します。 呼び出さないでくださいしたがって`InitMouseManager`を作成する場合、`CMouseManager`オブジェクトに直接します。 カスタムを使用していない場合`CMouseManager`、使用する必要があります`GetMouseManager`を作成する、`CMouseManager`オブジェクト。
+アプリケーションに既にマウス マネージャーが存在し、`InitMouseManager`を呼び出すと、アプリケーションで[ASSERT](diagnostic-services.md#assert)エラーが発生します。 したがって、オブジェクトを直接`InitMouseManager`作成する場合は`CMouseManager`呼び出さないでください。 カスタム`CMouseManager`を使用していない場合は、 を使用`GetMouseManager`してオブジェクトを`CMouseManager`作成する必要があります。
 
-##  <a name="initshellmanager"></a>  CWinAppEx::InitShellManager
+## <a name="cwinappexinitshellmanager"></a><a name="initshellmanager"></a>::イニトシェルマネージャー
 
-初期化します、 [CShellManager](../../mfc/reference/cshellmanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/cshellmanager-class.md)初期化します。
 
 ```
 BOOL InitShellManager();
@@ -860,17 +861,17 @@ BOOL InitShellManager();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドを作成する場合、0 以外の場合、`CShellManager`オブジェクト。 0 の場合、`CShellManager`オブジェクトは既に存在します。
+メソッドがオブジェクトを作成する場合`CShellManager`は 0 以外の値を返します。オブジェクトが既`CShellManager`に存在する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す場合[CWinAppEx::GetShellManager](#getshellmanager)、そのメソッドの既定の実装を呼び出す`InitShellManager`します。
+[CWinAppEx::GetShellManager](#getshellmanager)を呼び出すと、そのメソッドの既定`InitShellManager`の実装が呼び出されます。
 
-既にアプリケーションにシェル マネージャーを呼び出す場合`InitShellManager`、アプリケーションが、 [ASSERT](diagnostic-services.md#assert)失敗します。 そのため、呼び出さないでください`InitShellManager`を作成する場合、`CShellManager`オブジェクトに直接します。 カスタムを使用していない場合`CShellManager`を使用して、`GetShellManager`を作成する、`CShellManager`オブジェクト。
+アプリケーションにシェル マネージャが既に存在し、`InitShellManager`を呼び出すと、アプリケーションは[ASSERT](diagnostic-services.md#assert)エラーを発生させます。 したがって、オブジェクトを直接`InitShellManager`作成する場合は`CShellManager`呼び出さないでください。 カスタム`CShellManager`を使用していない場合は、`GetShellManager`を使用して`CShellManager`オブジェクトを作成します。
 
-##  <a name="inittooltipmanager"></a>  :Inittooltipmanager
+## <a name="cwinappexinittooltipmanager"></a><a name="inittooltipmanager"></a>::イニトツールチップマネージャー
 
-初期化します、 [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/ctooltipmanager-class.md)初期化します。
 
 ```
 BOOL InitTooltipManager();
@@ -878,15 +879,15 @@ BOOL InitTooltipManager();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドを作成する場合、0 以外の場合、`CTooltipManager`オブジェクト。 0 の場合、`CTooltipManager`オブジェクトは既に存在します。
+メソッドがオブジェクトを作成する場合`CTooltipManager`は 0 以外の値を返します。オブジェクトが既`CTooltipManager`に存在する場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す場合[CWinAppEx::GetTooltipManager](#gettooltipmanager)、そのメソッドの既定の実装を呼び出す`InitTooltipManager`します。
+呼び出すと[、](#gettooltipmanager)そのメソッドの既定の実装が呼び出`InitTooltipManager`されます。
 
-アプリケーションで既にがツールヒント マネージャーを呼び出す場合`InitTooltipManager`、アプリケーションがある、 [ASSERT](diagnostic-services.md#assert)失敗します。 そのため、呼び出す必要はありません`InitTooltipManager`を作成する場合、`CTooltipManager`オブジェクトに直接します。 カスタムを使用していない場合`CTooltipManager`、使用する必要があります`GetTooltipManager`を作成する、`CTooltipManager`オブジェクト。
+アプリケーションに既にツールヒント マネージャーが存在し`InitTooltipManager`、 を呼び出すと、アプリケーションで[ASSERT](diagnostic-services.md#assert)エラーが発生します。 したがって、オブジェクトを直接作成`InitTooltipManager`する場合は`CTooltipManager`呼び出さないでください。 カスタム`CTooltipManager`を使用していない場合は、 を使用`GetTooltipManager`してオブジェクトを`CTooltipManager`作成する必要があります。
 
-##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate
+## <a name="cwinappexisresourcesmartupdate"></a><a name="isresourcesmartupdate"></a>を更新します。
 
 ```
 BOOL IsResourceSmartUpdate() const;
@@ -894,11 +895,11 @@ BOOL IsResourceSmartUpdate() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isstateexists"></a>  CWinAppEx::IsStateExists
+## <a name="cwinappexisstateexists"></a><a name="isstateexists"></a>CWinAppEx::IsState は存在します。
 
-指定したキーがレジストリかどうかを示します。
+指定したキーがレジストリ内にあるかどうかを示します。
 
 ```
 BOOL IsStateExists(LPCTSTR lpszSectionName);
@@ -906,30 +907,30 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSectionName*<br/>
+*名前*<br/>
 [in]レジストリ キーのパスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
-キーがレジストリにある場合、0 以外の場合それ以外の場合 0 を返します。
+キーがレジストリにある場合は 0 以外の値を返します。それ以外の場合は 0。
 
-##  <a name="loadcustomstate"></a>  CWinAppEx::LoadCustomState
+## <a name="cwinappexloadcustomstate"></a><a name="loadcustomstate"></a>を使用します。
 
-フレームワークは、レジストリから、アプリケーションの状態を読み込んだ後に、このメソッドを呼び出します。
+フレームワークは、レジストリからアプリケーションの状態を読み込んだ後、このメソッドを呼び出します。
 
 ```
 virtual void LoadCustomState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションがレジストリから状態を読み込んだ後に処理を実行する場合は、このメソッドをオーバーライドします。 既定では、このメソッドは何もしません。
+アプリケーションがレジストリから状態を読み込んだ後に処理を行う場合は、このメソッドをオーバーライドします。 既定では、このメソッドは何も実行しません。
 
-レジストリからカスタム状態情報を読み込むためには、情報する必要がありますまず保存を使用して[CWinAppEx::SaveCustomState](#savecustomstate)します。
+レジストリからカスタム状態情報を読み込むには、まず[CWinAppEx::SaveCustomState](#savecustomstate)を使用して情報を保存する必要があります。
 
-##  <a name="loadstate"></a>  CWinAppEx::LoadState
+## <a name="cwinappexloadstate"></a><a name="loadstate"></a>を使用します。
 
-Windows レジストリから、アプリケーションの状態を読み取ります。
+Windows レジストリからアプリケーションの状態を読み取ります。
 
 ```
 BOOL LoadState(
@@ -951,30 +952,30 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-*pFrame*<br/>
-[in]フレーム ウィンドウ オブジェクトへのポインター。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。
+*フレーム*<br/>
+[in]フレーム ウィンドウ オブジェクトへのポインター。 このメソッドは、レジストリ内の状態情報をこのフレーム ウィンドウに適用します。
 
-*lpszSectionName*<br/>
+*名前*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*pFrameImpl*<br/>
-[in]ポインターを`CFrameImpl`オブジェクト。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。
+*スプフレームインプル*<br/>
+[in]`CFrameImpl`オブジェクトへのポインター。 このメソッドは、レジストリ内の状態情報をこのフレーム ウィンドウに適用します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、0 以外の場合それ以外の場合は 0 です。
+成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーションとフレーム ウィンドウの状態情報の状態を読み込みます。 フレーム ウィンドウに読み込まれた情報は、指定したフレーム ウィンドウに適用されます。 フレーム ウィンドウを指定しない場合は、アプリケーションの状態情報のみが読み込まれます。 アプリケーション情報には状態が含まれています、 [CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)、および[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。
+このメソッドは、アプリケーションの状態とフレーム ウィンドウの状態情報を読み込みます。 フレーム ウィンドウに読み込まれた情報が、指定されたフレーム ウィンドウに適用されます。 フレーム ウィンドウを指定しない場合は、アプリケーションの状態情報のみが読み込まれます。 アプリケーション情報には[、CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)[、CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)[、CKeyboard マネージャ クラス](../../mfc/reference/ckeyboardmanager-class.md)、および[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)の状態が含まれます。
 
-既定の実装`CFrameImpl::OnLoadFrame`呼び出し`LoadState`します。
+呼び出し`CFrameImpl::OnLoadFrame``LoadState`の既定の実装。
 
-*LpszSectionName*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*は、レジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement
+## <a name="cwinappexloadwindowplacement"></a><a name="loadwindowplacement"></a>::ロードウィンドウ配置
 
-メイン フレーム ウィンドウの位置とサイズをレジストリから読み込むときに、フレームワークによって呼び出されます。
+メイン フレーム ウィンドウのサイズと場所をレジストリから読み込むときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL LoadWindowPlacement(
@@ -985,40 +986,40 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="parameters"></a>パラメーター
 
-*rectNormalPosition*<br/>
-[out]復元された位置にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。
+*直流垂直位置*<br/>
+[アウト]復元された位置にあるメイン フレーム ウィンドウの座標を含む四角形。
 
-*nFlags*<br/>
-[out]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。
+*Nflags*<br/>
+[アウト]最小化されたウィンドウの位置を制御するフラグ、およびオペレーティング システムが最小化されたウィンドウと復元されたウィンドウの間で切り替える方法を制御するフラグ。
 
-*nShowCmd*<br/>
-[out]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。
+*を表示します。*<br/>
+[アウト]ウィンドウの表示状態を指定する整数。 指定できる値の詳細については[、「CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、0 以外の場合それ以外の場合は 0 です。
+成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、MFC 自動的に読み込まれます直前の位置と、メイン フレーム ウィンドウの状態、アプリケーションの起動時にします。 この情報をレジストリに格納する方法の詳細については、次を参照してください。 [CWinAppEx::StoreWindowPlacement](#storewindowplacement)します。
+既定では、MFC は、アプリケーションの起動時に、メイン フレーム ウィンドウの前の位置と状態を自動的に読み込みます。 この情報がレジストリに格納される方法の詳細については[、「CWinAppEx::ストア ウィンドウ配置」を参照してください](#storewindowplacement)。
 
-メイン フレーム ウィンドウに関する追加情報をロードする場合は、このメソッドをオーバーライドします。
+メイン フレーム ウィンドウに関する追加情報を読み込む場合は、このメソッドをオーバーライドします。
 
-##  <a name="m_bforceimagereset"></a>  CWinAppEx::m_bForceImageReset
+## <a name="cwinappexm_bforceimagereset"></a><a name="m_bforceimagereset"></a>CWinAppEx::m_bForceImageReset
 
-ツールバーを含むフレーム ウィンドウを再読み込み時に、フレームワークがすべてのツール バー イメージをリセットするかどうかを指定します。
+フレームワークがツール バーを含むフレーム ウィンドウを再読み込みするときに、すべてのツール バー イメージをリセットするかどうかを指定します。
 
 ```
 BOOL m_bForceImageReset;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_bForceImageReset`データ メンバーは保護されている変数。
+データ`m_bForceImageReset`メンバーは、保護された変数です。
 
-##  <a name="onappcontexthelp"></a>  CWinAppEx::OnAppContextHelp
+## <a name="cwinappexonappcontexthelp"></a><a name="onappcontexthelp"></a>をクリックしてください。
 
-ユーザーのコンテキスト ヘルプを要求するために、フレームワークはこのメソッドを呼び出して、**カスタマイズ** ダイアログ ボックス。
+フレームワークは、ユーザーが **[カスタマイズ]** ダイアログ ボックスのコンテキスト ヘルプを要求したときに、このメソッドを呼び出します。
 
 ```
 virtual void OnAppContextHelp(
@@ -1028,19 +1029,19 @@ virtual void OnAppContextHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndControl*<br/>
+*コントロール*<br/>
 [in]ユーザーがコンテキスト ヘルプを呼び出したウィンドウ オブジェクトへのポインター。
 
-*dwHelpIDArray[]*<br/>
-[in]予約済みの値。
+*を行います。*<br/>
+[in]予約値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、将来使用するため予約されています。 既定の実装は何し、フレームワークがないというは現在。
+このメソッドは、現在、将来使用するために予約されています。 既定の実装では何も行われ、現在はフレームワークによって呼び出されません。
 
-##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame
+## <a name="cwinappexonclosingmainframe"></a><a name="onclosingmainframe"></a>CWinAppEx::オンクロージングメインフレーム
 
-フレームワークは、フレーム ウィンドウが WM_CLOSE を処理するときに、このメソッドを呼び出します。
+フレームワークは、フレーム ウィンドウがWM_CLOSEを処理しているときにこのメソッドを呼び出します。
 
 ```
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
@@ -1048,16 +1049,16 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFrameImpl*<br/>
-[in]ポインターを`CFrameImpl`オブジェクト。
+*スプフレームインプル*<br/>
+[in]`CFrameImpl`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドの既定の実装の状態を保存する*pFrameImpl*します。
+このメソッドの既定の実装では *、pFrameImpl*の状態を保存します。
 
-##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick
+## <a name="cwinappexonviewdoubleclick"></a><a name="onviewdoubleclick"></a>CWinAppEx::オンビューダブルクリック
 
-ユーザーがそのビュー内の任意の場所をダブルクリックすると、ビューに関連付けられているユーザー定義のコマンドを呼び出します。
+ユーザーがそのビュー内の任意の場所をダブルクリックしたときに、ビューに関連付けられているユーザー定義コマンドを呼び出します。
 
 ```
 virtual BOOL OnViewDoubleClick(
@@ -1067,21 +1068,21 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]派生したオブジェクトへのポインター、 [CView クラス](../../mfc/reference/cview-class.md)します。
+*Pwnd*<br/>
+[in][CView クラス](../../mfc/reference/cview-class.md)から派生したオブジェクトへのポインター。
 
-*iViewId*<br/>
-[in]ビューの id。
+*をクリックします。*<br/>
+[in]ビュー ID。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、フレームワークは、コマンドを検索します。それ以外の場合は FALSE です。
+フレームワークがコマンドを見つける場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-カスタムのマウスの動作をサポートするためにしたメッセージを処理すると、この関数を呼び出す必要があります。 このメソッドでは、によって提供されるビューの ID に関連付けられているコマンドを実行します。 *iViewId*します。 カスタムのマウスの動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)します。
+カスタム マウス動作をサポートするには、WM_LBUTTONDBLCLK メッセージを処理するときにこの関数を呼び出す必要があります。 このメソッドは *、iViewId*によって提供されるビュー ID に関連付けられたコマンドを実行します。 カスタム マウスの動作の詳細については、「[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)」を参照してください。
 
-##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
+## <a name="cwinappexonworkspaceidle"></a><a name="onworkspaceidle"></a>::オンワークスペースアイドル
 
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
@@ -1089,39 +1090,39 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CWnd&#38;*<br/>
+[in]*クウンド・&#38;*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="preloadstate"></a>  CWinAppEx::PreLoadState
+## <a name="cwinappexpreloadstate"></a><a name="preloadstate"></a>CWinAppEx::P読み込み状態
 
-フレームワークは、レジストリから、アプリケーションの状態を読み込む前にすぐに、このメソッドを呼び出します。
+フレームワークは、レジストリからアプリケーションの状態を読み込む直前に、このメソッドを呼び出します。
 
 ```
 virtual void PreLoadState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、アプリケーションの状態を読み込みますにすぐに処理を実行する場合は、このメソッドをオーバーライドします。
+フレームワークがアプリケーション状態を読み込む直前に処理を実行する場合は、このメソッドをオーバーライドします。
 
-##  <a name="presavestate"></a>  CWinAppEx::PreSaveState
+## <a name="cwinappexpresavestate"></a><a name="presavestate"></a>CWinAppEx::Pセーブステート
 
-フレームワークは、アプリケーションの状態を保存する直前に、このメソッドを呼び出します。
+フレームワークは、アプリケーションの状態を保存する直前にこのメソッドを呼び出します。
 
 ```
 virtual void PreSaveState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、アプリケーションの状態を保存する直前に処理を実行する場合は、このメソッドをオーバーライドします。
+フレームワークがアプリケーションの状態を保存する直前に処理を実行する場合は、このメソッドをオーバーライドします。
 
-##  <a name="reloadwindowplacement"></a>  CWinAppEx::ReloadWindowPlacement
+## <a name="cwinappexreloadwindowplacement"></a><a name="reloadwindowplacement"></a>::リロードウィンドウ配置
 
-レジストリからウィンドウの位置とサイズを再読み込みします。
+ウィンドウのサイズと場所をレジストリから再読み込みします。
 
 ```
 virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
@@ -1129,30 +1130,30 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFrame*<br/>
+*フレーム*<br/>
 [in]フレーム ウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合失敗した場合または負荷に読み込むデータがない場合は 0。
+メソッドが成功した場合は 0 以外の値を返します。ロードに失敗した場合、またはロードするデータがない場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数を使用して[CWinAppEx::StoreWindowPlacement](#storewindowplacement)には、ウィンドウの位置とサイズ、レジストリに書き込めません。
+関数[CWinAppEx::StoreWindowPlacement](#storewindowplacement)を使用して、ウィンドウのサイズと場所をレジストリに書き込みます。
 
-##  <a name="savecustomstate"></a>  CWinAppEx::SaveCustomState
+## <a name="cwinappexsavecustomstate"></a><a name="savecustomstate"></a>::カスタム状態を保存します。
 
-フレームワークは、レジストリにアプリケーションの状態を保存した後に、このメソッドを呼び出します。
+フレームワークは、アプリケーションの状態をレジストリに保存した後に、このメソッドを呼び出します。
 
 ```
 virtual void SaveCustomState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションがレジストリに状態を保存した後に処理を実行する場合は、このメソッドをオーバーライドします。 既定では、このメソッドは何もしません。
+アプリケーションが状態をレジストリに保存した後に処理を行う場合は、このメソッドをオーバーライドします。 既定では、このメソッドは何も実行しません。
 
-##  <a name="savestate"></a>  CWinAppEx::SaveState
+## <a name="cwinappexsavestate"></a><a name="savestate"></a>CWinAppEx::セーブステート
 
 アプリケーションの状態を Windows レジストリに書き込みます。
 
@@ -1176,26 +1177,26 @@ BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSectionName*<br/>
+*名前*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*pFrameImpl*<br/>
-[in]ポインターを`CFrameImpl`オブジェクト。 このフレームは、Windows レジストリに保存されます。
+*スプフレームインプル*<br/>
+[in]`CFrameImpl`オブジェクトへのポインター。 このフレームは Windows レジストリに保存されます。
 
-*pFrame*<br/>
-[in]フレーム ウィンドウ オブジェクトへのポインター。 このフレームは、Windows レジストリに保存されます。
+*フレーム*<br/>
+[in]フレーム ウィンドウ オブジェクトへのポインター。 このフレームは Windows レジストリに保存されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE。FALSE それ以外の場合。
+成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーションと、指定されたフレーム ウィンドウの状態情報の状態を保存します。 フレーム ウィンドウを指定しない場合、メソッドはのみ、アプリケーションの状態を保存します。 アプリケーション情報には状態が含まれています、 [CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)、および[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。
+このメソッドは、アプリケーションの状態と、指定されたフレーム ウィンドウの状態情報を保存します。 フレーム ウィンドウを指定しない場合、メソッドはアプリケーションの状態のみを保存します。 アプリケーション情報には[、CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)[、CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)[、CKeyboard マネージャ クラス](../../mfc/reference/ckeyboardmanager-class.md)、および[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)の状態が含まれます。
 
-*LpszSectionName*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*は、レジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase
+## <a name="cwinappexsetregistrybase"></a><a name="setregistrybase"></a>::セットレジストリベース
 
 アプリケーションの既定のレジストリ パスを設定します。
 
@@ -1205,20 +1206,20 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSectionName*<br/>
+*名前*<br/>
 [in]レジストリ キーのパスを含む文字列。
 
 ### <a name="return-value"></a>戻り値
 
 既定のレジストリの場所のパスを含む文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべてのメソッド、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)既定の場所にレジストリの開始にアクセスします。 このメソッドを使用すると、その既定のレジストリの場所を変更できます。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)既定レジストリの場所を取得します。
+レジストリにアクセスする[CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)のすべてのメソッドは、既定の場所で開始します。 このメソッドは、既定のレジストリの場所を変更するために使います。 [既定のレジストリの場所を取得するには、CWinAppEx::GetRegistryBase](#getregistrybase)を使用します。
 
-##  <a name="showpopupmenu"></a>  CWinAppEx::ShowPopupMenu
+## <a name="cwinappexshowpopupmenu"></a><a name="showpopupmenu"></a>::ポップアップメニュー
 
-ポップアップ メニューが表示されます。
+ポップアップ メニューを表示します。
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -1229,28 +1230,28 @@ virtual BOOL ShowPopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiMenuResId*<br/>
-[in]メニュー リソースの id。
+*をクリックします。*<br/>
+[in]メニュー リソース ID。
 
 *ポイント*<br/>
-[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)画面座標で、メニューの位置を指定します。
+[in]メニューの位置を画面座標で指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)です。
 
-*我が物*<br/>
-[in]ポップアップ メニューを所有しているウィンドウへのポインター。
+*Pwnd*<br/>
+[in]ポップアップ メニューを所有するウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューが正常に表示されている場合、0 以外の場合それ以外の場合は 0 です。
+ポップアップ メニューが正常に表示された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドに関連付けられているメニューを表示*uiMenuResId*します。
+このメソッドは *、uiMenuResId*に関連付けられているメニューを表示します。
 
-ポップアップ メニューをサポートするが必要、 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクト。 初期化していない場合、`CContextMenuManager`オブジェクト、`ShowPopupMenu`は失敗します。
+ポップアップ メニューをサポートするには[、CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)オブジェクトが必要です。 `CContextMenuManager`オブジェクトを初期化していない場合は、`ShowPopupMenu`失敗します。
 
-##  <a name="storewindowplacement"></a>  CWinAppEx::StoreWindowPlacement
+## <a name="cwinappexstorewindowplacement"></a><a name="storewindowplacement"></a>::ストアウィンドウ配置
 
-メイン フレーム ウィンドウの位置とサイズをレジストリに書き込むために、フレームワークによって呼び出されます。
+メイン フレーム ウィンドウのサイズと場所をレジストリに書き込むために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL StoreWindowPlacement(
@@ -1261,26 +1262,26 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*<br/>
-[in]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。
+*Nflags*<br/>
+[in]最小化されたウィンドウの位置を制御するフラグ、およびオペレーティング システムが最小化されたウィンドウと復元されたウィンドウの間で切り替える方法を制御するフラグ。
 
-*nShowCmd*<br/>
-[in]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。
+*を表示します。*<br/>
+[in]ウィンドウの表示状態を指定する整数。 指定できる値の詳細については[、「CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)」を参照してください。
 
-*rectNormalPosition*<br/>
-[in]復元された状態にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。
+*直流垂直位置*<br/>
+[in]復元された状態のメイン フレーム ウィンドウの座標を含む四角形。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、0 以外の場合それ以外の場合は 0 です。
+成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-MFC では、既定では、位置と、アプリケーションが終了する前に、メイン フレーム ウィンドウの状態が自動的に保存します。 この情報は、アプリケーションの既定のレジストリの場所に WindowPlacement キーの下の Windows レジストリに格納されます。 アプリケーションの既定のレジストリの場所の詳細については、次を参照してください。 [CWinAppEx::GetRegistryBase](#getregistrybase)します。
+既定では、MFC は、アプリケーションが終了する前に、メイン フレーム ウィンドウの位置と状態を自動的に保存します。 この情報は、アプリケーションの既定のレジストリの場所にある WindowPlacement キーの下の Windows レジストリに格納されます。 アプリケーションの既定のレジストリの場所の詳細については[、「CWinAppEx::GetRegistryBase](#getregistrybase)」を参照してください。
 
 メイン フレーム ウィンドウに関する追加情報を格納する場合は、このメソッドをオーバーライドします。
 
-##  <a name="writebinary"></a>  CWinAppEx::WriteBinary
+## <a name="cwinappexwritebinary"></a><a name="writebinary"></a>::書き込みバイナリ
 
 バイナリ データをレジストリに書き込みます。
 
@@ -1293,26 +1294,26 @@ BOOL WriteBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*pData*<br/>
+*Pdata*<br/>
 [in]格納するデータ。
 
-*nBytes*<br/>
-[in]サイズ*pData* (バイト単位)。
+*Nbytes*<br/>
+[in]*pData*のサイズ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-キーを指定して場合*lpszEntry*が存在しないこのメソッドが作成されます。
+*lpszEntry*で指定されたキーが存在しない場合、このメソッドはそれを作成します。
 
-##  <a name="writeint"></a>  CWinAppEx::WriteInt
+## <a name="cwinappexwriteint"></a><a name="writeint"></a>CWinAppEx::書き込みイント
 
 数値データをレジストリに書き込みます。
 
@@ -1324,25 +1325,25 @@ BOOL WriteInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*nValue*<br/>
+*n値*<br/>
 [in]格納するデータ。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-キーを指定して場合*lpszEntry*が存在しないこのメソッドが作成されます。
+*lpszEntry*で指定されたキーが存在しない場合、このメソッドはそれを作成します。
 
-##  <a name="writeobject"></a>  CWinAppEx::WriteObject
+## <a name="cwinappexwriteobject"></a><a name="writeobject"></a>オブジェクトを書き込む
 
-派生したデータを書き込み、 [CObject クラス](../../mfc/reference/cobject-class.md)をレジストリにします。
+[CObject クラス](../../mfc/reference/cobject-class.md)から派生したデータをレジストリに書き込みます。
 
 ```
 BOOL WriteObject(
@@ -1352,23 +1353,23 @@ BOOL WriteObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]設定する値を含む文字列。
 
 *obj*<br/>
-[in]参照を`CObject`メソッドを格納するデータ。
+[in]メソッドが格納`CObject`するデータへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは書き込みます、 *obj*既定のレジストリ キーで指定された値のデータ。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)を現在のレジストリ キーを確認します。
+このメソッドは、*既定*のレジストリ キーの下の指定された値に obj データを書き込みます。 現在のレジストリ キーを決定するには[、CWinAppEx::GetRegistryBase](#getregistrybase)を使用します。
 
-##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary
+## <a name="cwinappexwritesectionbinary"></a><a name="writesectionbinary"></a>::書き込みセクションバイナリ
 
-バイナリ データ、レジストリの値を書き込みます。
+バイナリ データをレジストリの値に書き込みます。
 
 ```
 BOOL WriteSectionBinary(
@@ -1380,29 +1381,29 @@ BOOL WriteSectionBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの名前を含む文字列
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]設定する値を含む文字列。
 
-*pData*<br/>
+*Pdata*<br/>
 [in]レジストリに書き込むデータ。
 
-*nBytes*<br/>
-[in]サイズ*pData* (バイト単位)。
+*Nbytes*<br/>
+[in]*pData*のサイズ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*は、レジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-キーを指定して場合*lpszEntry*が存在しないこのメソッドが作成されます。
+*lpszEntry*で指定されたキーが存在しない場合、このメソッドはそれを作成します。
 
-##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt
+## <a name="cwinappexwritesectionint"></a><a name="writesectionint"></a>CWinAppEx::書き込みセクションイント
 
 数値データをレジストリに書き込みます。
 
@@ -1415,28 +1416,28 @@ BOOL WriteSectionInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの相対パスを含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]設定する値を含む文字列。
 
-*nValue*<br/>
+*n値*<br/>
 [in]レジストリに書き込むデータ。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーに追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーに追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-キーを指定して場合*lpszEntry*が存在しないこのメソッドが作成されます。
+*lpszEntry*で指定されたキーが存在しない場合、このメソッドはそれを作成します。
 
-##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject
+## <a name="cwinappexwritesectionobject"></a><a name="writesectionobject"></a>オブジェクトを書き込みます。
 
-派生したデータを書き込み、 [CObject クラス](../../mfc/reference/cobject-class.md)特定のレジストリ値にします。
+[CObject クラス](../../mfc/reference/cobject-class.md)から派生したデータを特定のレジストリ値に書き込みます。
 
 ```
 BOOL WriteSectionObject(
@@ -1447,10 +1448,10 @@ BOOL WriteSectionObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]設定する値の名前を含む文字列。
 
 *obj*<br/>
@@ -1458,17 +1459,17 @@ BOOL WriteSectionObject(
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)、それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)を使用します。
 
-場合は、値を指定して*lpszEntry*で指定されたレジストリ キーが存在しない*lpszSubSection*、このメソッドはその値を作成します。
+指定された値が*lpszSubSection*で指定されたレジストリ キーの*lpszSubSection*下に存在しない場合、このメソッドはその値を作成します。
 
-##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString
+## <a name="cwinappexwritesectionstring"></a><a name="writesectionstring"></a>::セクション文字列を書き込みます
 
-レジストリの値を文字列データを書き込みます。
+文字列データをレジストリの値に書き込みます。
 
 ```
 BOOL WriteSectionString(
@@ -1479,28 +1480,28 @@ BOOL WriteSectionString(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubSection*<br/>
+*セクション*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]設定する値を含む文字列。
 
-*lpszValue*<br/>
+*値*<br/>
 [in]レジストリに書き込む文字列データ。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszSubSection*パラメーターは、レジストリ エントリの絶対パスではありません。 アプリケーションの既定のレジストリ キーの末尾に追加する相対パスです。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)、それぞれします。
+*パラメーター*はレジストリ エントリの絶対パスではありません。 これは、アプリケーションの既定のレジストリ キーの末尾に追加される相対パスです。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)を使用します。
 
-場合は、値を指定して*lpszEntry*が存在しない*lpszSubSection*、このメソッドが作成されます。
+*lpszEntry*で指定された値が*lpszSubSection*の下に存在しない場合、このメソッドはそれを作成します。
 
-##  <a name="writestring"></a>  CWinAppEx::WriteString
+## <a name="cwinappexwritestring"></a><a name="writestring"></a>::書き込み文字列
 
-文字列をレジストリにデータを書き込みます。
+文字列データをレジストリに書き込みます。
 
 ```
 BOOL WriteString(
@@ -1510,28 +1511,28 @@ BOOL WriteString(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszEntry*<br/>
+*をクリックします。*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*lpszValue*<br/>
+*値*<br/>
 [in]格納するデータ。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 取得または設定の既定のレジストリ キー、メソッドを使用して、 [CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase](#setregistrybase)それぞれします。
+*lpszEntry*パラメーターは、アプリケーションの既定のレジストリ キーの下にあるレジストリ エントリの名前です。 既定のレジストリ キーを取得または設定するには、それぞれメソッド[CWinAppEx::GetRegistryBase](#getregistrybase)と[CWinAppEx::SetRegistryBase を](#setregistrybase)使用します。
 
-キーを指定して場合*lspzEntry*が存在しないこのメソッドが作成されます。
+*lspzEntry*で指定されたキーが存在しない場合、このメソッドはそれを作成します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)<br/>
-[CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)<br/>
+[クラス](../../mfc/reference/cmousemanager-class.md)<br/>
 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)<br/>
-[CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)<br/>
-[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)
+[クラス](../../mfc/reference/ckeyboardmanager-class.md)<br/>
+[クラス](../../mfc/reference/cusertoolsmanager-class.md)

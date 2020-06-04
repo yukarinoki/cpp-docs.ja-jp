@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187324"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C++)
 
-実行*ステートメント*まで繰り返し*式*0 に評価します。
+*Expression*が0に評価されるまで、*ステートメント*を繰り返し実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,13 +25,13 @@ while ( expression )
    statement
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-テスト*式*ループの各実行前に、の処理を行うのため、**中に**ループは 0 回以上を実行します。 *式*の整数型、ポインター型、または整数への明確な変換を持つクラス型またはポインター型である必要があります。
+*式*のテストは、ループの各実行の前に行われます。したがって、 **while**ループは0回以上実行されます。 *式*は整数型、ポインター型、または整数型またはポインター型への明確な変換を持つクラス型である必要があります。
 
-A**中に**ループがときに終了することできますも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[を返す](../cpp/return-statement-cpp.md)ステートメント本体が実行されます。 使用[続行](../cpp/continue-statement-cpp.md)を終了する前に、現在のイテレーションを終了する、**中**ループします。 **引き続き**の次のイテレーションに制御を渡します、**中**ループします。
+**While**ループは、ステートメント本体内で[break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[return](../cpp/return-statement-cpp.md)が実行されたときにも終了できます。 **While**ループを終了せずに現在のイテレーションを終了するには、 [continue](../cpp/continue-statement-cpp.md)を使用します。 **continue**は、 **while**ループの次の反復処理に制御を渡します。
 
-次のコードでは、**中**文字列から末尾をトリミングするループがアンダー スコアします。
+次のコードでは、 **while**ループを使用して文字列から末尾のアンダースコアを削除しています。
 
 ```cpp
 // while_statement.cpp
@@ -62,7 +62,7 @@ int main()
 
 終了条件はループの先頭で評価されます。 末尾のアンダースコアがない場合、ループは実行されません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [繰り返しステートメント](../cpp/iteration-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>

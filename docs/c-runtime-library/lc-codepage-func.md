@@ -1,9 +1,10 @@
 ---
 title: ___lc_codepage_func
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ___lc_codepage_func
-apilocation:
+- _o____lc_codepage_func
+api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
@@ -11,21 +12,25 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lc_codepage_func
 - ___lc_codepage_func
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: aebd978839cc59c94c01e9c24432b69add72c4dc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751342"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914135"
 ---
-# <a name="lccodepagefunc"></a>___lc_codepage_func
+# <a name="___lc_codepage_func"></a>___lc_codepage_func
 
 内部 CRT 関数。 スレッドの現在のコード ページを取得します。
 
@@ -43,13 +48,15 @@ UINT ___lc_codepage_func(void);
 
 `___lc_codepage_func` は、CRT データのスレッド ローカル ストレージから現在のコード ページを取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数を使用して取得することもできます。
 
-*コード ページ*は、個別の文字への 1 バイト コードまたは 2 バイト コードのマッピングです。 異なるコード ページには異なる特殊文字が含まれ、それらは通常は 1 つの言語または言語グループ用にカスタマイズされています。 コード ページの詳細については、「 [Code Pages](../c-runtime-library/code-pages.md)」を参照してください。
+*コード ページ*は、個別の文字への 1 バイト コードまたは 2 バイト コードのマッピングです。 異なるコード ページには異なる特殊文字が含まれ、それらは通常は 1 つの言語または言語グループ用にカスタマイズされています。 コード ページの詳細については、「[コード ページ](../c-runtime-library/code-pages.md)」を参照してください。
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`___lc_codepage_func`|crt\src\setlocal.h|
 

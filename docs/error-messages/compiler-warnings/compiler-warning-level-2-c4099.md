@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-ms.openlocfilehash: 09ea9e2963735c1e011e25b42b04ad6d67d084a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ead14dc9771dc02ad722843ec9fe1a8056e3f6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349816"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174285"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>コンパイラの警告 (レベル 2) C4099
 
-'identifier': 型名が 'objecttype1' '%objecttype2' を使用して認識を使用して最初の表示
+' identifier ': ' objecttype1 ' を使用して最初に検出された型名は ' objecttype2 ' を使用して表示されるようになりました
 
-クラスと構造体として宣言されたオブジェクトが定義されているか、クラスとして宣言されたオブジェクトが構造体として定義されています。 コンパイラは、定義で指定された型を使用します。
+構造体として宣言されたオブジェクトは、クラスとして定義されます。また、クラスとして宣言されたオブジェクトは、構造体として定義されます。 コンパイラは、定義で指定された型を使用します。
 
 ## <a name="example"></a>例
 
 次の例では、C4099 が生成されます。
 
-```
+```cpp
 // C4099.cpp
 // compile with: /W2 /c
 struct A;

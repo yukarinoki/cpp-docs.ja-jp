@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0612a4b365b928d3c9be6d76168a76b4ee1caa85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318256"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange クラス
 
@@ -43,43 +43,43 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|移行のオブジェクトを構築します。|
+|[Cシヌイダルトランジションから範囲::Cシヌイダルトランジションから範囲](#csinusoidaltransitionfromrange)|遷移オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|
+|[Cシヌイダルトランジションから範囲::作成](#create)|カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。 [(CBase トランジションをオーバーライドします。:作成](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|正弦波のピーク時にアニメーション変数の値。|
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|正弦波の谷のアニメーション変数の値。|
-|[CSinusoidalTransitionFromRange::m_duration](#m_duration)|移行の期間です。|
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|正弦波の振動を秒単位の期間。|
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|移行の開始時の傾きです。|
+|[Cシヌオイドアルトランジションから範囲::m_dblMaximumValue](#m_dblmaximumvalue)|正弦波のピークにおけるアニメーション変数の値。|
+|[Cシヌイダルトランジションから範囲::m_dblMinimumValue](#m_dblminimumvalue)|正弦波の谷におけるアニメーション変数の値。|
+|[Cシヌイダルトランジションから範囲::m_duration](#m_duration)|トランジションの期間。|
+|[Cシヌイダルトランジションから範囲::m_period](#m_period)|正弦波の振動の秒単位の周期。|
+|[Cシヌイダルトランジションから範囲::m_slope](#m_slope)|遷移の開始時の傾斜。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-アニメーション変数の値は、正弦波範囲遷移の期間全体にわたって指定した最小値と最大値の間で変動します。 傾きパラメーターは、その他のパラメーターで指定された 2 つの可能な正弦波間を明確に使用されます。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。
+アニメーション変数の値は、指定された最小値と最大値の間で、指定された終弦波範囲遷移の全期間にわたって変動します。 勾配パラメータは、他のパラメータで指定された 2 つの正音波の間であいまいさを解消するために使用されます。 すべてのトランジションは自動的にクリアされるため、演算子 new を使用して割り当てることをお勧めします。 カプセル化された IUIAnimationTransition COM オブジェクトは、それまでは NULL になるまで CAnimationController::AnimateGroup によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても、何も影響しません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[Cベーストランジション](../../mfc/reference/cbasetransition-class.md)
 
-[CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
+[シヌイオダルトランジションフロルレンジ](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create
+## <a name="csinusoidaltransitionfromrangecreate"></a><a name="create"></a>Cシヌイダルトランジションから範囲::作成
 
-カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。
 
 ```
 virtual BOOL Create(
@@ -89,16 +89,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pLibrary*<br/>
-標準的な遷移の作成を担当する遷移ライブラリへのポインター。
+*pライブラリ*<br/>
+標準遷移の作成を担当する遷移ライブラリへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。
+遷移が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+## <a name="csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>Cシヌイダルトランジションから範囲::Cシヌイダルトランジションから範囲
 
-移行のオブジェクトを構築します。
+遷移オブジェクトを構築します。
 
 ```
 CSinusoidalTransitionFromRange(
@@ -111,56 +111,56 @@ CSinusoidalTransitionFromRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-移行の期間です。
+*期間*<br/>
+トランジションの期間。
 
-*dblMinimumValue*<br/>
-正弦波の谷のアニメーション変数の値。
+*最小値*<br/>
+正弦波の谷におけるアニメーション変数の値。
 
-*dblMaximumValue*<br/>
-正弦波のピーク時にアニメーション変数の値。
+*最大値*<br/>
+正弦波のピークにおけるアニメーション変数の値。
 
 *期間*<br/>
-正弦波の振動を秒単位の期間。
+正弦波の振動の秒単位の周期。
 
-*slope*<br/>
-移行の開始時の傾きです。
+*斜面*<br/>
+遷移の開始時の傾斜。
 
-##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue
+## <a name="csinusoidaltransitionfromrangem_dblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>Cシヌオイドアルトランジションから範囲::m_dblMaximumValue
 
-正弦波のピーク時にアニメーション変数の値。
+正弦波のピークにおけるアニメーション変数の値。
 
 ```
 DOUBLE m_dblMaximumValue;
 ```
 
-##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue
+## <a name="csinusoidaltransitionfromrangem_dblminimumvalue"></a><a name="m_dblminimumvalue"></a>Cシヌイダルトランジションから範囲::m_dblMinimumValue
 
-正弦波の谷のアニメーション変数の値。
+正弦波の谷におけるアニメーション変数の値。
 
 ```
 DOUBLE m_dblMinimumValue;
 ```
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration
+## <a name="csinusoidaltransitionfromrangem_duration"></a><a name="m_duration"></a>Cシヌイダルトランジションから範囲::m_duration
 
-移行の期間です。
+トランジションの期間。
 
 ```
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period
+## <a name="csinusoidaltransitionfromrangem_period"></a><a name="m_period"></a>Cシヌイダルトランジションから範囲::m_period
 
-正弦波の振動を秒単位の期間。
+正弦波の振動の秒単位の周期。
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope
+## <a name="csinusoidaltransitionfromrangem_slope"></a><a name="m_slope"></a>Cシヌイダルトランジションから範囲::m_slope
 
-移行の開始時の傾きです。
+遷移の開始時の傾斜。
 
 ```
 UI_ANIMATION_SLOPE m_slope;

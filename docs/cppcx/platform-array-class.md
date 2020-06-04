@@ -3,18 +3,17 @@ title: Platform::Array クラス
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Array Constructors
-- VCCORLIB/Namespace not found::Platform::Array::Value
+- VCCORLIB/Platform::Array
+- VCCORLIB/Platform::Array::Value
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318656"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -31,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>メンバー
 
-Platform::array からすべてのメソッドを継承する[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)を実装して、`Value`のプロパティ、 [platform::iboxarray インターフェイス](../cppcx/platform-iboxarray-interface.md)します。
+プラットフォーム::配列は、プラットフォームからすべてのメソッドを継承します[:WriteOnlyArrayクラス](../cppcx/platform-writeonlyarray-class.md)とのプロパティ`Value`を実装します[Platform::IBoxArray Interface](../cppcx/platform-iboxarray-interface.md)。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[Array コンストラクター](#ctor)|クラス テンプレート パラメーターで指定された型の変更可能な 1 次元配列を初期化します*T*します。|
+|[Array コンストラクター](#ctor)|クラス テンプレート パラメーター *T*で指定された型の 1 次元の変更可能な配列を初期化します。|
 
 ### <a name="methods"></a>メソッド
 
-参照してください[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)します。
+[「プラットフォーム::WriteOnlyArray クラス](../cppcx/platform-writeonlyarray-class.md)」を参照してください。
 
 ### <a name="properties"></a>プロパティ
 
 |||
 |-|-|
-|[Array::value](#value)|現在の配列へのハンドルを取得します。|
+|[配列::値](#value)|現在の配列へのハンドルを取得します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この Array クラスはシール クラスであり、継承できません。
 
-Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
+Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、IVector<プラットフォーム::配列\<T>> を戻り値またはメソッド パラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
-Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+プラットフォームを使用するタイミングと方法の詳細については、「[配列と WriteOnlyArray」](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
 
-このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、方法は、platform.winmd で定義されているパブリック型ではないため、IntelliSense が含まれないオブジェクト ブラウザーに表示されます。
+このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、platform.winmd で定義されたパブリック型ではないため、IntelliSense では表示されますが、オブジェクト ブラウザーでは表示されません。
 
 ### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/ZW**
 
-## <a name="ctor"></a>  Array コンス トラクター
+## <a name="array-constructors"></a><a name="ctor"></a>配列コンストラクタ
 
-クラス テンプレート パラメーターで指定された型の変更可能な 1 次元配列を初期化します*T*します。
+クラス テンプレート パラメーター *T*で指定された型の 1 次元の変更可能な配列を初期化します。
 
 ## <a name="syntax"></a>構文
 
@@ -79,17 +78,17 @@ Array(T* data, unsigned int size);
 *T*<br/>
 クラス テンプレート パラメーター。
 
-*size*<br/>
+*サイズ*<br/>
 配列の要素数。
 
-*data*<br/>
+*データ*<br/>
 この Array オブジェクトを初期化するために使用する型 `T` のデータ配列へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Platform::array のインスタンスを作成する方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+プラットフォームのインスタンスを作成する方法の詳細については、「[配列と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 
-## <a name="get"></a>  Array::get メソッド
+## <a name="arrayget-method"></a><a name="get"></a>配列::メソッドを取得します。
 
 指定されたインデックス位置にある配列要素への参照を取得します。
 
@@ -102,14 +101,13 @@ T& get(unsigned int index)  const;
 #### <a name="parameters"></a>パラメーター
 
 *index*<br/>
-配列の要素を識別する 0 から始まるインデックス。 最小のインデックスは 0 と最大のインデックスがで指定された値、`size`パラメーター、[配列コンス トラクター](#ctor)します。
+配列の要素を識別する 0 から始まるインデックス。 最小インデックスは 0 で、最大インデックスは Array コンストラクタ`size`のパラメータで指定された値[です](#ctor)。
 
 ### <a name="return-value"></a>戻り値
 
+`index` パラメーターで指定された配列要素。
 
-  `index` パラメーターで指定された配列要素。
-
-## <a name="value"></a>  Array::value プロパティ
+## <a name="arrayvalue-property"></a><a name="value"></a>配列::値プロパティ
 
 現在の配列へのハンドルを取得します。
 

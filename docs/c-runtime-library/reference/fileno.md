@@ -1,9 +1,10 @@
 ---
 title: _fileno
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fileno
-apilocation:
+- _o__fileno
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fileno
 helpviewer_keywords:
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333769"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919473"
 ---
-# <a name="fileno"></a>_fileno
+# <a name="_fileno"></a>_fileno
 
 ストリームに関連付けられているファイル記述子を取得します。
 
@@ -45,21 +50,23 @@ int _fileno(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**_fileno**ファイル記述子を返します。 エラーの戻り値はありません。 場合、結果は定義されません*ストリーム*開いているファイルを指定しません。 ストリームが場合**NULL**、 **_fileno**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**に**EINVAL**します。
+**_fileno**は、ファイル記述子を返します。 エラーの戻り値はありません。 *ストリーム*が開いているファイルを指定していない場合、結果は未定義になります。 Stream が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_fileno**によって無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 > [!NOTE]
-> 場合**stdout**または**stderr**が関連付けられていない (たとえば、コンソール ウィンドウがない Windows アプリケーション) での出力ストリームに返されるファイル記述子は-2 です。 以前のバージョンでは、返されるファイル記述子は -1 でした。 この変更で、アプリケーションはこの条件をエラーと区別できるようになりました。
+> **Stdout**または**stderr**が出力ストリームに関連付けられていない場合 (たとえば、コンソールウィンドウがない Windows アプリケーションで)、返されるファイル記述子は-2 です。 以前のバージョンでは、返されるファイル記述子は -1 でした。 この変更で、アプリケーションはこの条件をエラーと区別できるようになりました。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Fileno**ルーチンに関連付けられているファイル記述子を返します*ストリーム*します。 このルーチンは、関数とマクロの両方として実装されています。 実装の使い分けについては、「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください。
+**_Fileno**ルーチンは、現在*ストリーム*に関連付けられているファイル記述子を返します。 このルーチンは、関数とマクロの両方として実装されています。 実装の使い分けについては、「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -67,7 +74,7 @@ int _fileno(
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

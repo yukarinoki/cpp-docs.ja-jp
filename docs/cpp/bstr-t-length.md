@@ -7,14 +7,14 @@ helpviewer_keywords:
 - length method [C++]
 - BSTR object [C++], length
 ms.assetid: 4f2e2c76-8894-4ef9-833f-4c6e796d0654
-ms.openlocfilehash: c4f02192f89fa64b0816a6cde83cab30e8056a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4370be6f4f381d550e6b940a48232581987d2a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181162"
 ---
-# <a name="bstrtlength"></a>_bstr_t::length
+# <a name="_bstr_tlength"></a>_bstr_t::length
 
 **Microsoft 固有の仕様**
 
@@ -26,10 +26,10 @@ ms.locfileid: "62284653"
 unsigned int length ( ) const throw( );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)

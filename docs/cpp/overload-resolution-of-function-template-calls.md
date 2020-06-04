@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379130"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188442"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>関数テンプレート呼び出しのオーバーロード解決
 
-関数テンプレートは同じ名前の非テンプレート関数をオーバーロードできます。 このシナリオでは、一意の特殊化により関数テンプレートをインスタンス化するため、関数呼び出しは、最初にテンプレート引数の推論を使用して解決されます。 テンプレート引数の推論が失敗した場合、他の関数オーバーロードが呼び出しを解決すると見なされます。 これらのオーバーロード (候補の集合とも呼ばれます) には、非テンプレート関数、およびその他のインスタンス化された関数テンプレートが含まれています。 テンプレート引数の推論に成功すると、オーバーロード解決の規則に従って最適な一致項目を決定するために、生成された関数は他の関数と比較されます。 詳細については、次を参照してください。[関数のオーバー ロード](function-overloading.md)します。
+関数テンプレートは同じ名前の非テンプレート関数をオーバーロードできます。 このシナリオでは、一意の特殊化により関数テンプレートをインスタンス化するため、関数呼び出しは、最初にテンプレート引数の推論を使用して解決されます。 テンプレート引数の推論が失敗した場合、他の関数オーバーロードが呼び出しを解決すると見なされます。 これらのオーバーロード (候補の集合とも呼ばれます) には、非テンプレート関数、およびその他のインスタンス化された関数テンプレートが含まれています。 テンプレート引数の推論に成功すると、オーバーロード解決の規則に従って最適な一致項目を決定するために、生成された関数は他の関数と比較されます。 詳細については、「[関数のオーバーロード](function-overloading.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -80,7 +80,7 @@ int main()
 void f(T1, T2)
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [名前解決](../cpp/templates-and-name-resolution.md)<br/>
 [typename](../cpp/typename.md)

@@ -21,7 +21,7 @@ ms.locfileid: "70220590"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma omp***ディレクティブ*
+> **#pragma omp** *ディレクティブ*
 
 ## <a name="remarks"></a>Remarks
 

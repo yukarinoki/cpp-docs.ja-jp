@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376560"
 ---
-# <a name="syncpercontainer-class"></a>sync_per_container クラス
+# <a name="sync_per_container-class"></a>sync_per_container クラス
 
 アロケーター オブジェクトごとに個別のキャッシュ オブジェクトを提供する[同期フィルター](../standard-library/allocators-header.md)を記述します。
 
@@ -30,7 +30,7 @@ class sync_per_container
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+|*Cache*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **名前空間:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::等しい
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -56,15 +56,15 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
+|*Cache*|同期フィルターのキャッシュ オブジェクト。|
 |*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は常に**false**を返します。
+メンバー関数は常に**false**を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<アロケーター>](../standard-library/allocators-header.md)

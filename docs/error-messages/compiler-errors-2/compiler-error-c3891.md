@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5ef8b837033a149455c040f748f479aa3f424d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281561"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736400"
 ---
 # <a name="compiler-error-c3891"></a>コンパイラ エラー C3891
 
-'var': リテラル データ メンバーは左辺値として使用できません
+' var ': リテラルデータメンバーを左辺値として使用することはできません。
 
-A[リテラル](../../extensions/literal-cpp-component-extensions.md)は const です。 変数と宣言で初期化された後、その値を変更できません。
+[リテラル](../../extensions/literal-cpp-component-extensions.md)変数は定数であり、宣言で初期化された後に値を変更することはできません。
 
 次の例では、C3891 が生成されます。
 
-```
+```cpp
 // C3891.cpp
 // compile with: /clr
 ref struct Y1 {

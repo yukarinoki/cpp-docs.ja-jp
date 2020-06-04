@@ -1,20 +1,18 @@
 ---
 title: カテゴリ別ユニバーサル C ランタイム ルーチン
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499582"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444811"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>カテゴリ別ユニバーサル C ランタイム ルーチン
 
@@ -39,6 +37,6 @@ UCRT ライブラリ ルーチンの主なカテゴリは次のとおりです�
 |[検索と並べ替え](../c-runtime-library/searching-and-sorting.md)|[文字列操作](../c-runtime-library/string-manipulation-crt.md)|
 |[システム コール](../c-runtime-library/system-calls.md)|[時間管理](../c-runtime-library/time-management.md)|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>

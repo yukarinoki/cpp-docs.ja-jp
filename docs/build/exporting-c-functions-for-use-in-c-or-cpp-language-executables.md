@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273574"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>C/C++ 言語の実行形式で使う C 関数のエクスポート
 
-DLL 内の関数がある場合に C 言語からアクセスする C で記述されたまたはC++言語のモジュールを使用する必要がある、 **_ _cplusplus**言語を判断するプリプロセッサ マクロがコンパイルされると、これらを宣言使用されている場合は、C リンケージを持つ関数をC++言語モジュール。 この手法を使用して DLL のヘッダー ファイルを提供する場合、変更なしでの C および C++ のユーザーがこれらの関数を使用できます。
+C で記述された DLL の関数に C 言語または C++ 言語モジュールからアクセスする場合、 **__cplusplus** プリプロセッサ マクロを使用してコンパイル中の言語を判断し、C++ 言語モジュールから使用されている場合、C リンケージでそれらの関数を宣言してください。 この手法を使用し、DLL のヘッダー ファイルを指定する場合、C と C++ のユーザーはこれらの関数を変更せずに使用できます。
 
-次のコードでは、C および C++ のクライアント アプリケーションで使用できるヘッダー ファイルを示します。
+次のコードでは、C と C++ クライアント アプリケーションで使用できるヘッダー ファイルを確認できます。
 
 ```h
 // MyCFuncs.h
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-関数宣言のヘッダー ファイルでは、C++ ソース ファイルでは、前述の手法が未使用 C 関数を C++ 実行可能ファイルにリンクする必要がある場合、コンパイラが C の関数名を修飾するを防ぐために、次を行います。
+C 関数を C++ 実行可能ファイルにリンクする必要があるとき、関数宣言ヘッダー ファイルで上記の手法が使用されていない場合、C++ ソース ファイルで、次を行い、コンパイラが C 関数名を修飾するのを禁止します。
 
 ```cpp
 extern "C" {
@@ -46,17 +46,17 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
+- [.def ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
+- [__declspec(dllexport) を使用した DLL からのエクスポート](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使用したエクスポートとインポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使い分け](determining-which-exporting-method-to-use.md)
 
 - [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
+- [DLL の初期化](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 

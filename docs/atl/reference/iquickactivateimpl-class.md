@@ -1,5 +1,5 @@
 ---
-title: IQuickActivateImpl クラス
+title: クラスをクイックアクティブ化
 ms.date: 11/04/2016
 f1_keywords:
 - IQuickActivateImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 2a2b11746249b6ee4f6ddd578717aacc374d53bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e1984249caf66e2986341f9c9f7a939d7039125
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198150"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329550"
 ---
-# <a name="iquickactivateimpl-class"></a>IQuickActivateImpl クラス
+# <a name="iquickactivateimpl-class"></a>クラスをクイックアクティブ化
 
-このクラスは、1 つの呼び出しにコンテナーのコントロールの初期化を結合します。
+このクラスは、コンテナーのコントロール初期化を 1 つの呼び出しに結合します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IQuickActivateImpl`します。
+から派生したクラス`IQuickActivateImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -45,15 +45,15 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 
 |名前|説明|
 |----------|-----------------|
-|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|実行中のコントロールの現在の表示サイズを取得します。|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|読み込む対象のコントロールの初期化を迅速に実行します。|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|コンテナーに割り当てられている表示領域の量のコントロールに通知します。|
+|[I クイックアクティブインプル::取得コンテンツエクステント](#getcontentextent)|実行中のコントロールの現在の表示サイズを取得します。|
+|[Iクイックアクティブインプル::クイックアクティブ化](#quickactivate)|読み込まれるコントロールの迅速な初期化を実行します。|
+|[I クイックアクティブインプル::セットコンテンツエクステント](#setcontentextent)|コンテナが割り当てた表示スペースの量をコントロールに通知します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate)インターフェイス コンテナーは 1 回の呼び出しで初期化を組み合わせることでコントロールを読み込むときに遅延を避けるために役立ちます。 `QuickActivate`メソッドにより、コンテナーへのポインターを渡す、 [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer)構造、コントロールにすべてのインターフェイス ポインターを保持する必要があります。 返された場合、制御が渡されるバックアップへのポインターを[戻り値](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)コンテナーで使用される、独自のインターフェイス ポインターを保持する構造体。 クラス`IQuickActivateImpl`の既定の実装を提供します。`IQuickActivate`実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[IQuickActivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate)インターフェイスを使用すると、1 回の呼び出しで初期化を組み合わせることによって、コントロールを読み込むときの遅延を避けるためのコンテナーを使用できます。 この`QuickActivate`メソッドを使用すると、コンテナーは、コントロールに必要なすべてのインターフェイスへのポインターを保持する[QACONTAINER](/windows/win32/api/ocidl/ns-ocidl-qacontainer)構造体へのポインターを渡すことができます。 戻り値を返す際、コントロールは、コンテナーが使用する独自のインターフェイスへのポインターを保持する[QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol)構造体へのポインターを戻します。 クラス`IQuickActivateImpl`は、デバッグ ビルド`IQuickActivate`でダンプ`IUnknown`デバイスに情報を送信することにより、既定の実装と実装を提供します。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,7 +65,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 
 **ヘッダー:** atlctl.h
 
-##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
+## <a name="iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>I クイックアクティブインプル::取得コンテンツエクステント
 
 実行中のコントロールの現在の表示サイズを取得します。
 
@@ -73,15 +73,15 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-サイズは、コントロールの完全なレンダリングは、HIMETRIC 単位で指定されます。
+サイズはコントロールの完全なレンダリング用で、HIMETRIC 単位で指定されます。
 
-参照してください[IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) Windows SDK にします。
+Windows SDK[の「I クイックアクティベート::コンテンツエクステント](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent)」を参照してください。
 
-##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
+## <a name="iquickactivateimplquickactivate"></a><a name="quickactivate"></a>Iクイックアクティブインプル::クイックアクティブ化
 
-読み込む対象のコントロールの初期化を迅速に実行します。
+読み込まれるコントロールの迅速な初期化を実行します。
 
 ```
 STDMETHOD(QuickActivate)(
@@ -89,27 +89,27 @@ STDMETHOD(QuickActivate)(
     QACONTROL* pQACtrl);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構造体には、コントロールと一部のアンビエント プロパティの値で必要なインターフェイスへのポインターが含まれています。 戻り時に、コントロールがへのポインターを渡す、[戻り値](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)コンテナーが必要とする独自のインターフェイスと追加の状態情報へのポインターを含む構造体。
+構造体には、コントロールが必要とするインターフェイスへのポインターと、いくつかのアンビエント プロパティの値が含まれています。 制御は、戻るときに、コンテナーが必要とする独自のインターフェースへのポインターと追加の状況情報を含む[QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol)構造体へのポインターを渡します。
 
-参照してください[IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) Windows SDK にします。
+「Windows SDK[で I クイックアクティブ化::クイックアクティブ化](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate)」を参照してください。
 
-##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
+## <a name="iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>I クイックアクティブインプル::セットコンテンツエクステント
 
-コンテナーに割り当てられている表示領域の量のコントロールに通知します。
+コンテナが割り当てた表示スペースの量をコントロールに通知します。
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-サイズは、HIMETRIC 単位で指定されます。
+サイズは HIMETRIC 単位で指定されます。
 
-参照してください[IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) Windows SDK にします。
+Windows SDK の[「I クイックアクティブ化::コンテンツエクステント](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
+[CCom コントロール クラス](../../atl/reference/ccomcontrol-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

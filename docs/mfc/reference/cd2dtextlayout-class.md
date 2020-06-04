@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: ca89d12c6aeed33be740aa9f999e7c11d6c32056
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9be4c1134e2f82ceb3af31cbeb1a7d55f4071777
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369026"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout クラス
 
-IDWriteTextLayout のラッパーです。
+IDWriteText レイアウトのラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -51,48 +51,48 @@ class CD2DTextLayout : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|CD2DTextLayout オブジェクトを構築します。|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#_dtorcd2dtextlayout)|デストラクターです。 D2D テキスト レイアウト オブジェクトが破棄されるときに呼び出されます。|
+|[テキストレイアウト::CD2D テキストレイアウト](#cd2dtextlayout)|オブジェクトを作成します。|
+|[テキストレイアウト::~CD2D テキストレイアウト](#_dtorcd2dtextlayout)|デストラクターです。 D2D テキスト レイアウト オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextLayout::Create](#create)|CD2DTextLayout を作成します。 (上書き[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create))。|
-|[CD2DTextLayout::Destroy](#destroy)|CD2DTextLayout オブジェクトを破棄します。 (上書き[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy))。|
-|[CD2DTextLayout::Get](#get)|返します IDWriteTextLayout インターフェイス|
-|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|指定した位置にあるテキストのフォント ファミリ名をコピーします。|
-|[CD2DTextLayout::GetLocaleName](#getlocalename)|指定した位置にあるテキストのロケール名を取得します。|
-|[CD2DTextLayout::IsValid](#isvalid)|リソースの有効性を確認します (上書き[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid))。|
-|[CD2DTextLayout::ReCreate](#recreate)|CD2DTextLayout を再作成します。 (上書き[CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate))。|
-|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|指定したテキスト範囲内のテキスト セットの null で終わるフォント ファミリ名|
-|[CD2DTextLayout::SetLocaleName](#setlocalename)|指定したテキスト範囲内のテキストのロケール名を設定します。|
+|[CD2D テキストレイアウト::作成](#create)|を作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2Dテキストレイアウト::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2D リソース::Dエストロイ](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。|
+|[テキストレイアウト::取得します。](#get)|インターフェイスを返します。|
+|[テキストレイアウト::フォントファミリ名](#getfontfamilyname)|指定した位置にあるテキストのフォント ファミリ名をコピーします。|
+|[テキストレイアウト::ロケール名を取得します。](#getlocalename)|指定した位置にあるテキストのロケール名を取得します。|
+|[テキストレイアウト::IsValid](#isvalid)|リソースの妥当性を確認します[(CD2D リソースをオーバーライドします::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2D テキストレイアウト::再作成](#recreate)|CD2D テキストレイアウトを再作成します。 [(CD2D リソースをオーバーライドします::再作成](../../mfc/reference/cd2dresource-class.md#recreate).)|
+|[テキストレイアウト::フォントファミリ名](#setfontfamilyname)|指定したテキスト範囲内のテキストに対して、NULL で終わるフォント ファミリ名を設定します。|
+|[テキストレイアウト::セットロケール名](#setlocalename)|指定したテキスト範囲内のテキストのロケール名を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|返します IDWriteTextLayout インターフェイス|
+|[テキストレイアウト::演算子 ID 書き込みテキストレイアウト*](#operator_idwritetextlayout_star)|インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|IDWriteTextLayout へのポインター。|
+|[CD2D テキストレイアウト::m_pTextLayout](#m_ptextlayout)|を指すポインターを配置します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[リソース](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)
+[テキストレイアウト](../../mfc/reference/cd2dtextlayout-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout
+## <a name="cd2dtextlayoutcd2dtextlayout"></a><a name="_dtorcd2dtextlayout"></a>テキストレイアウト::~CD2D テキストレイアウト
 
 デストラクターです。 D2D テキスト レイアウト オブジェクトが破棄されるときに呼び出されます。
 
@@ -100,9 +100,9 @@ class CD2DTextLayout : public CD2DResource;
 virtual ~CD2DTextLayout();
 ```
 
-##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout
+## <a name="cd2dtextlayoutcd2dtextlayout"></a><a name="cd2dtextlayout"></a>テキストレイアウト::CD2D テキストレイアウト
 
-CD2DTextLayout オブジェクトを構築します。
+オブジェクトを作成します。
 
 ```
 CD2DTextLayout(
@@ -115,24 +115,24 @@ CD2DTextLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParentTarget*<br/>
+*ターゲット*<br/>
 レンダー ターゲットへのポインター。
 
-*strText*<br/>
+*str テキスト*<br/>
 新しい CD2DTextLayout オブジェクトを作成する文字列を含む CString オブジェクト。
 
 *textFormat*<br/>
-文字列に適用する書式を含む CString オブジェクトを指定します。
+文字列に適用する書式を含む CString オブジェクト。
 
-*sizeMax*<br/>
-[レイアウト] ボックスのサイズ。
+*サイズマックス*<br/>
+レイアウト ボックスのサイズ。
 
-*bAutoDestroy*<br/>
-所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。
+*b自動破壊*<br/>
+オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-##  <a name="create"></a>  CD2DTextLayout::Create
+## <a name="cd2dtextlayoutcreate"></a><a name="create"></a>CD2D テキストレイアウト::作成
 
-CD2DTextLayout を作成します。
+を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* */);
@@ -140,19 +140,19 @@ virtual HRESULT Create(CRenderTarget* */);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="destroy"></a>  CD2DTextLayout::Destroy
+## <a name="cd2dtextlayoutdestroy"></a><a name="destroy"></a>CD2Dテキストレイアウト::Dエストロイ
 
-CD2DTextLayout オブジェクトを破棄します。
+オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="get"></a>  CD2DTextLayout::Get
+## <a name="cd2dtextlayoutget"></a><a name="get"></a>テキストレイアウト::取得します。
 
-返します IDWriteTextLayout インターフェイス
+インターフェイスを返します。
 
 ```
 IDWriteTextLayout* Get();
@@ -160,9 +160,9 @@ IDWriteTextLayout* Get();
 
 ### <a name="return-value"></a>戻り値
 
-IDWriteTextLayout インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+オブジェクトがまだ初期化されていない場合は、IDWriteTextLayout インターフェイスへのポインターまたは NULL。
 
-##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName
+## <a name="cd2dtextlayoutgetfontfamilyname"></a><a name="getfontfamilyname"></a>テキストレイアウト::フォントファミリ名
 
 指定した位置にあるテキストのフォント ファミリ名をコピーします。
 
@@ -174,17 +174,17 @@ CString GetFontFamilyName(
 
 ### <a name="parameters"></a>パラメーター
 
-*currentPosition*<br/>
-確認するテキストの位置。
+*現在の位置*<br/>
+検査するテキストの位置。
 
-*textRange*<br/>
-同じテキストの範囲は、currentPosition で指定された位置にあるテキストとして書式設定します。 つまり、実行には、フォント ファミリ名など、指定された位置として、正確な書式設定します。
+*Textrange*<br/>
+currentPosition で指定された位置にあるテキストと同じ書式を持つテキストの範囲。 つまり、実行は、フォント ファミリ名を含むがこれらに限定されない、指定された位置と完全に書式が設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 現在のフォント ファミリ名を含む CString オブジェクト。
 
-##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName
+## <a name="cd2dtextlayoutgetlocalename"></a><a name="getlocalename"></a>テキストレイアウト::ロケール名を取得します。
 
 指定した位置にあるテキストのロケール名を取得します。
 
@@ -196,19 +196,19 @@ CString GetLocaleName(
 
 ### <a name="parameters"></a>パラメーター
 
-*currentPosition*<br/>
+*現在の位置*<br/>
 検査するテキストの位置。
 
-*textRange*<br/>
-同じテキストの範囲は、currentPosition で指定された位置にあるテキストとして書式設定します。 つまり、実行には、ロケール名などの位置指定すると、正確な書式設定します。
+*Textrange*<br/>
+currentPosition で指定された位置にあるテキストと同じ書式を持つテキストの範囲。 つまり、実行は、ロケール名を含むがこれらに限定されない、指定された位置と完全に書式が設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 現在のロケール名を含む CString オブジェクト。
 
-##  <a name="isvalid"></a>  CD2DTextLayout::IsValid
+## <a name="cd2dtextlayoutisvalid"></a><a name="isvalid"></a>テキストレイアウト::IsValid
 
-リソースの有効性のチェック
+リソースの有効性を確認します
 
 ```
 virtual BOOL IsValid() const;
@@ -216,19 +216,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-リソースが有効な場合は TRUE。それ以外の場合は FALSE です。
+リソースが有効な場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout
+## <a name="cd2dtextlayoutm_ptextlayout"></a><a name="m_ptextlayout"></a>CD2D テキストレイアウト::m_pTextLayout
 
-IDWriteTextLayout へのポインター。
+を指すポインターを配置します。
 
 ```
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
+## <a name="cd2dtextlayoutoperator-idwritetextlayout"></a><a name="operator_idwritetextlayout_star"></a>テキストレイアウト::演算子 ID 書き込みテキストレイアウト*
 
-返します IDWriteTextLayout インターフェイス
+インターフェイスを返します。
 
 ```
 operator IDWriteTextLayout*();
@@ -236,11 +236,11 @@ operator IDWriteTextLayout*();
 
 ### <a name="return-value"></a>戻り値
 
-IDWriteTextLayout インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+オブジェクトがまだ初期化されていない場合は、IDWriteTextLayout インターフェイスへのポインターまたは NULL。
 
-##  <a name="recreate"></a>  CD2DTextLayout::ReCreate
+## <a name="cd2dtextlayoutrecreate"></a><a name="recreate"></a>CD2D テキストレイアウト::再作成
 
-CD2DTextLayout を再作成します。
+CD2D テキストレイアウトを再作成します。
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* */);
@@ -248,11 +248,11 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName
+## <a name="cd2dtextlayoutsetfontfamilyname"></a><a name="setfontfamilyname"></a>テキストレイアウト::フォントファミリ名
 
-指定したテキスト範囲内のテキスト セットの null で終わるフォント ファミリ名
+指定したテキスト範囲内のテキストに対して、NULL で終わるフォント ファミリ名を設定します。
 
 ```
 BOOL SetFontFamilyName(
@@ -262,17 +262,17 @@ BOOL SetFontFamilyName(
 
 ### <a name="parameters"></a>パラメーター
 
-*pwzFontFamilyName*<br/>
-TextRange で指定された範囲内で文字列全体に適用されるフォント ファミリ名
+*家族名*<br/>
+textRange で指定された範囲内のテキスト文字列全体に適用されるフォント ファミリ名
 
-*textRange*<br/>
-この変更を適用するテキスト範囲
+*Textrange*<br/>
+この変更が適用されるテキスト範囲
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE が返されます
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
-##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName
+## <a name="cd2dtextlayoutsetlocalename"></a><a name="setlocalename"></a>テキストレイアウト::セットロケール名
 
 指定したテキスト範囲内のテキストのロケール名を設定します。
 
@@ -284,15 +284,15 @@ BOOL SetLocaleName(
 
 ### <a name="parameters"></a>パラメーター
 
-*pwzLocaleName*<br/>
-Null で終わるロケール名の文字列
+*名前*<br/>
+NULL で終わるロケール名文字列
 
-*textRange*<br/>
-この変更を適用するテキスト範囲
+*Textrange*<br/>
+この変更が適用されるテキスト範囲
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE が返されます
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

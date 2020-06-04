@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157794"
 ---
 # <a name="string-literal-concatenation"></a>文字列リテラルの連結
 
@@ -29,7 +29,7 @@ ken into two or more pieces."
 
 文字列の連結は、円記号に続けて改行文字を使用することでどこでも使用でき、これによって 1 行より長い文字列を入力できます。
 
-文字列リテラル内で改行を強制するには、文字列内の改行位置で、改行エスケープ シーケンス (**\n**) を次のように入力します。
+文字列リテラル内で改行を強制するには、文字列内の改行位置で、改行エスケープ シーケンス ( **\n**) を次のように入力します。
 
 ```
 "Enter a number between 1 and 100\nOr press Return"

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 095f0ad2ecc1e1a870077899d61a3c594f8cc95f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492220"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321739"
 ---
 # <a name="reference-counting"></a>参照カウント
 
-COM 自体は、オブジェクトが使用されなくなったと判断された場合に、メモリからオブジェクトを自動的に削除しようとしません。 代わりに、オブジェクトプログラマは、使用されていないオブジェクトを削除する必要があります。 プログラマは、参照カウントに基づいてオブジェクトを削除できるかどうかを判断します。
+COM 自体は、オブジェクトが使用されていないと思われる場合、自動的にメモリからオブジェクトを削除しようとしません。 代わりに、オブジェクト プログラマは未使用のオブジェクトを削除する必要があります。 プログラマは、参照カウントに基づいてオブジェクトを削除できるかどうかを判断します。
 
-COM では`IUnknown` 、 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)メソッドを使用して、オブジェクトのインターフェイスの参照カウントを管理します。 これらのメソッドを呼び出すための一般的な規則は次のとおりです。
+COM は`IUnknown`、メソッド[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)を使用して、オブジェクトのインターフェイスの参照カウントを管理します。 これらのメソッドを呼び出す一般的な規則は次のとおりです。
 
-- クライアントは、インターフェイスポインターを受け取るたび`AddRef`に、インターフェイスでを呼び出す必要があります。
+- クライアントがインターフェイス ポインタを受け取`AddRef`る場合は、そのインターフェイスで呼び出す必要があります。
 
-- クライアントがインターフェイスポインターの使用を終了するたびに、を`Release`呼び出す必要があります。
+- クライアントがインターフェイス ポインターを使用し終えた場合は、`Release`常に を呼び出す必要があります。
 
-単純な実装では、 `AddRef`各呼び出しがインクリメント`Release`され、各呼び出しがオブジェクト内のカウンター変数をデクリメントします。 カウントが0に戻ると、インターフェイスにはユーザーが含まれなくなり、メモリから自由に削除できます。
+単純な実装では、各`AddRef`呼び出しが`Release`インクリメントされ、各呼び出しはオブジェクト内のカウンター変数を減分します。 カウントがゼロに戻ると、インターフェイスにはユーザーがなくなり、メモリから解放されます。
 
-参照カウントは、(個々のインターフェイスではなく) オブジェクトへの各参照がカウントされるように実装することもできます。 この場合、各`AddRef`および`Release`は、オブジェクトの中心の実装にデリゲートし、参照`Release`カウントが0になるとオブジェクト全体を解放します。
+参照カウントは、オブジェクトへの各参照 (個別のインターフェイスではなく) がカウントされるように実装することもできます。 この場合、各オブジェクト`AddRef`の`Release`中央実装に対して各デリゲートを呼び出`Release`し、参照カウントが 0 に達するとオブジェクト全体を解放します。
 
 > [!NOTE]
->  派生オブジェクトが new 演算子を使用して構築された場合、参照カウントは0になります。 `CComObject` したがって、の呼び出し`AddRef`は、が派生したオブジェクト`CComObject`を正常に作成した後に行う必要があります。
+> new`CComObject`演算子を使用して派生オブジェクトを**new**構築する場合、参照カウントは 0 です。 したがって、派生オブジェクトの`AddRef`作成が正常に完了した後に`CComObject`、 に呼び出しを行う必要があります。
 
 ## <a name="see-also"></a>関連項目
 

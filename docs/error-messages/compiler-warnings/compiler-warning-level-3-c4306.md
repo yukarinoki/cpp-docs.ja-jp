@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198888"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>コンパイラの警告 (レベル 3) C4306
 
-> '*識別子*': から変換'*type1*'to'*type2*' より大きいサイズの
+> '*identifier*': ' type1 ' からより大きいサイズ*の '* *type1*' への変換です。
 
-識別子の型は、大きいサイズのポインターにキャストします。 新しい種類の塗りつぶされていない上位ビットはゼロで埋められますになります。
+この識別子は、より大きなポインターにキャストされた型です。 新しい型の最上位ビットはゼロで埋められます。
 
-この警告は、不要な変換である可能性があります。 結果のポインターは有効でない可能性があります。
+この警告は、望ましくない変換を示している可能性があります。 結果のポインターが有効でない可能性があります。

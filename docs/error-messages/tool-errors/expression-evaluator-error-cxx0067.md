@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0067
 - CAN0067
 ms.assetid: 9a3e642b-4746-41ac-b665-bd98a6fa0cb3
-ms.openlocfilehash: 61178f1a0c89306bdc0318c12b2c347aa6a3255f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf9ddc1474ba32ecaee35ba9003bf76a424e4a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299193"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184321"
 ---
 # <a name="expression-evaluator-error-cxx0067"></a>式エバリュエーター エラー CXX0067
 
 関数の評価はサポートされていません
 
-式には、関数呼び出しが含まれています。 式エバリュエーターは、関数呼び出しをサポートしていません。
+式に関数呼び出しが含まれています。 一部の式エバリュエーターでは、関数呼び出しはサポートされていません。
 
-このエラーは、can0067 と同じものと同じです。
+このエラーは CAN0067 と同じです。

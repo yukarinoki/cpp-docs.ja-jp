@@ -1,5 +1,5 @@
 ---
-title: CDefaultHashTraits クラス
+title: クラスの既定値
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultHashTraits
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43932092621d44cfc8b07270df92e2765665f23f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327084"
 ---
-# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
+# <a name="cdefaulthashtraits-class"></a>クラスの既定値
 
 このクラスは、ハッシュ値を計算するための静的関数を提供します。
 
@@ -37,21 +37,21 @@ class CDefaultHashTraits
 
 |名前|説明|
 |----------|-----------------|
-|[CDefaultHashTraits::Hash](#hash)|(静的)指定された要素のハッシュ値を計算するには、この関数を呼び出します。|
+|[ハッシュの既定値](#hash)|(静的)指定した要素のハッシュ値を計算します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスには、指定された要素のハッシュ値を返す 1 つの静的関数が含まれています。 このクラスは、によって使用されて、 [CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)します。
+このクラスには、指定された要素のハッシュ値を返す 1 つの静的関数が含まれています。 このクラスは、[クラスによって使用されます](../../atl/reference/cdefaultelementtraits-class.md)。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="hash"></a>  CDefaultHashTraits::Hash
+## <a name="cdefaulthashtraitshash"></a><a name="hash"></a>ハッシュの既定値
 
-指定された要素のハッシュ値を計算するには、この関数を呼び出します。
+指定した要素のハッシュ値を計算します。
 
 ```
 static ULONG Hash(const T& element) throw();
@@ -66,9 +66,9 @@ static ULONG Hash(const T& element) throw();
 
 ハッシュ値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定のハッシュ アルゴリズムは非常に単純: 戻り値は、要素数。 複雑なアルゴリズムが必要な場合は、この関数をオーバーライドします。
+デフォルトのハッシュアルゴリズムは非常に単純です: 戻り値は要素番号です。 より複雑なアルゴリズムが必要な場合は、この関数をオーバーライドします。
 
 ## <a name="see-also"></a>関連項目
 

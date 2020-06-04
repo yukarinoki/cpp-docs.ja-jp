@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160828"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Microsoft 固有の仕様**
 
@@ -25,15 +25,15 @@ ms.locfileid: "62330532"
 __super::member_function();
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 オーバーロード解決フェーズ時にすべてのアクセス可能な基底クラス メソッドが考慮され、最優先の一致を示す関数が呼び出されます。
 
-**_ _super**メンバー関数の本体でのみ表示できます。
+**__super**は、メンバー関数の本体内でのみ使用できます。
 
-**_ _super**を使用してでは使用できません宣言します。 参照してください[宣言を使用して](../cpp/using-declaration.md)詳細についてはします。
+**__super**は、using 宣言では使用できません。 詳細については、「 [Using 宣言」を](../cpp/using-declaration.md)参照してください。
 
-導入に伴い[属性](../windows/attributes/attributes-alphabetical-reference.md)コードを挿入する、コードには、名前がわからないに呼び出すメソッドを含む 1 つまたは複数の基底クラスが含まれます。
+コードを挿入する[属性](../windows/attributes/attributes-alphabetical-reference.md)の導入により、コードには既知の名前ではないが、呼び出すメソッドを含む1つ以上の基底クラスが含まれている場合があります。
 
 ## <a name="example"></a>例
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)

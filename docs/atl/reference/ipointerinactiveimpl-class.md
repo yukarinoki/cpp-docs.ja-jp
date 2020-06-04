@@ -1,5 +1,5 @@
 ---
-title: IPointerInactiveImpl クラス
+title: イポインター非アクティブImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IPointerInactiveImpl
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-ms.openlocfilehash: 6fb5d9f2bcbdeda61f32947bf339d134c4924b72
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 229b8c6803aa7b3817cb3d95474bde0502829f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326442"
 ---
-# <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl クラス
+# <a name="ipointerinactiveimpl-class"></a>イポインター非アクティブImpl クラス
 
-このクラスは`IUnknown` 、および[iポインター非アクティブ](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)インターフェイスメソッドを実装します。
+このクラスは、`IUnknown`実装し[、IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)インターフェイス メソッドです。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ class IPointerInactiveImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`IPointerInactiveImpl`派生したクラス。
+から派生したクラス`IPointerInactiveImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -44,19 +44,19 @@ class IPointerInactiveImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|オブジェクトの現在のアクティブ化ポリシーを取得します。 ATL 実装は E_NOTIMPL を返します。|
-|[IPointerInactiveImpl:: OnInactiveMouseMove](#oninactivemousemove)|マウスポインターがその上に移動したことをオブジェクトに通知し、オブジェクトがマウスイベントを発生させることができることを示します。 ATL 実装は E_NOTIMPL を返します。|
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|非アクティブなオブジェクトのマウスポインターを設定します。 ATL 実装は E_NOTIMPL を返します。|
+|[イポインター非アクティブなImpl::取得アクティブ化ポリシー](#getactivationpolicy)|オブジェクトの現在のアクティブ化ポリシーを取得します。 ATL の実装はE_NOTIMPL返します。|
+|[イポインター非アクティブインプラブ::オンイアクティブマウスムーブ](#oninactivemousemove)|マウス ポインターがマウス ポインターの上に移動したことをオブジェクトに通知します。 ATL の実装はE_NOTIMPL返します。|
+|[イポインター非アクティブなImpl::アクティブなセットカーソル](#oninactivesetcursor)|アクティブでないオブジェクトのマウス ポインタを設定します。 ATL の実装はE_NOTIMPL返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-非アクティブなオブジェクトとは、単に読み込まれるか、または実行されるオブジェクトのことです。 アクティブなオブジェクトとは異なり、非アクティブなオブジェクトは Windows のマウスおよびキーボードメッセージを受け取ることができません。 したがって、非アクティブなオブジェクトは使用するリソースが減り、通常はより効率的です。
+非アクティブなオブジェクトは、単にロードまたは実行されるオブジェクトです。 アクティブなオブジェクトとは異なり、アクティブでないオブジェクトは Windows のマウスメッセージやキーボード メッセージを受信できません。 したがって、非アクティブなオブジェクトはリソースを少なくし、通常はより効率的です。
 
-[Iポインタ inactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)インターフェイスを使用すると、オブジェクトは最小限のマウス操作をサポートしながら、非アクティブな状態を維持できます。 この機能は、特にコントロールに役立ちます。
+[IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)インターフェイスを使用すると、オブジェクトは、アクティブでない状態でマウス操作の最小レベルをサポートできます。 この機能は、コントロールに特に便利です。
 
-クラス`IPointerInactiveImpl`は、 `IPointerInactive` E_NOTIMPL を返すだけでメソッドを実装します。 ただし、デバッグビルド`IUnknown`のダンプデバイスに情報を送信することによってが実装されます。
+クラス`IPointerInactiveImpl`は、E_NOTIMPL`IPointerInactive`返すだけでメソッドを実装します。 ただし、デバッグ ビルド`IUnknown`でダンプ デバイスに情報を送信することで実装します。
 
-**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -66,9 +66,9 @@ class IPointerInactiveImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl. h
+**ヘッダー:** atlctl.h
 
-##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy
+## <a name="ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>イポインター非アクティブなImpl::取得アクティブ化ポリシー
 
 オブジェクトの現在のアクティブ化ポリシーを取得します。
 
@@ -80,13 +80,13 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 
 E_NOTIMPL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iポインター inactive:: GetActivationPolicy](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) 」を参照してください。
+Windows SDK[の「IPointer 非アクティブ::ライセンス認証ポリシー](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) 」を参照してください。
 
-##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove
+## <a name="ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>イポインター非アクティブインプラブ::オンイアクティブマウスムーブ
 
-マウスポインターがその上に移動したことをオブジェクトに通知し、オブジェクトがマウスイベントを発生させることができることを示します。
+マウス ポインターがマウス ポインターの上に移動したことをオブジェクトに通知します。
 
 ```
 HRESULT OnInactiveMouseMove(
@@ -100,13 +100,13 @@ HRESULT OnInactiveMouseMove(
 
 E_NOTIMPL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iポインター inactive:: OnInactiveMouseMove](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) 」を参照してください。
+Windows SDK[の「IPointer 非アクティブ::OnInactiveマウス移動](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove)」を参照してください。
 
-##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor
+## <a name="ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>イポインター非アクティブなImpl::アクティブなセットカーソル
 
-非アクティブなオブジェクトのマウスポインターを設定します。
+アクティブでないオブジェクトのマウス ポインタを設定します。
 
 ```
 HRESULT OnInactiveSetCursor(
@@ -121,9 +121,9 @@ HRESULT OnInactiveSetCursor(
 
 E_NOTIMPL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iポインター inactive:: OnInactiveSetCursor](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) 」を参照してください。
+Windows SDK[の「IPointer 非アクティブ::アクティブなセットカーソル](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-ms.openlocfilehash: 007c0a9e9a0f51740b1d6b668905fa20d7ef2964
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e65881159176ba0d144a8abc5f395ce1b96402f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196652"
 ---
 # <a name="command-line-warning-d9028"></a>コマンド ラインの警告 D9028
 
-> 簡易リビルド時、通常のビルドに戻しています
+> 最小リビルドエラー、通常のビルドへの復帰
 
-プロジェクトの .idb ファイルが壊れています。 ファイルを削除して再構築します。
+プロジェクトの .idb ファイルが破損しています。 ファイルを削除してリビルドします。
 
-リビルドと .idb ファイルの詳細については、表示、非推奨[/Gm コンパイラ オプション](../../build/reference/gm-enable-minimal-rebuild.md)します。
+最小リビルドおよび .idb ファイルの詳細については、「非推奨の[/Gm コンパイラオプション](../../build/reference/gm-enable-minimal-rebuild.md)」を参照してください。

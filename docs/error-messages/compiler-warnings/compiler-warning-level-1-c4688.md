@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7aebfa3ae602aa45c02897711cd94520a876cca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175403"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>コンパイラの警告 (レベル 1) C4688
 
@@ -23,7 +23,7 @@ ms.locfileid: "62375094"
 
 次の例では C4688 警告が生成されます。
 
-```
+```cpp
 // C4688.cpp
 // compile with: /clr /c /W1
 ref struct A {};   // private type

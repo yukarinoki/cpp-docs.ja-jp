@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252959"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367340"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 構造体
 
-この構造体は、ユーザーが配置されている MDI タブの情報を提供します。
+この構造体は、ユーザーがマウスを移動している MDI タブに関する情報を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,17 +29,17 @@ struct CMFCTabToolTipInfo
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|タブ コントロールのインデックスを指定します。|
-|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|タブ コントロールへのポインター。|
-|[CMFCTabToolTipInfo::m_strText](#m_strtext)|ツールヒントのテキスト。|
+|[ヒント::m_nTabIndex](#m_ntabindex)|タブ コントロールのインデックスを指定します。|
+|[ヒント::m_pTabWnd](#m_ptabwnd)|タブ コントロールへのポインター。|
+|[ヒント::m_strText](#m_strtext)|ツールヒントのテキスト。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ポインターを`CMFCTabToolTipInfo`AFX_WM_ON_GET_TAB_TOOLTIP メッセージのパラメーターとして構造体が渡されます。 MDI タブが有効になっているし、ユーザーがタブ コントロールを置いたときに、このメッセージが生成されます。
+`CMFCTabToolTipInfo`構造体へのポインターは、AFX_WM_ON_GET_TAB_TOOLTIP メッセージのパラメーターとして渡されます。 このメッセージは、MDI タブが有効で、ユーザーがタブ コントロールの上にマウス を移動すると生成されます。
 
 ## <a name="example"></a>例
 
-次の例はどのように`CMFCTabToolTipInfo`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
+次の例は`CMFCTabToolTipInfo`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -51,7 +51,7 @@ struct CMFCTabToolTipInfo
 
 **ヘッダー:** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>ヒント::m_nTabIndex
 
 タブ コントロールのインデックスを指定します。
 
@@ -59,17 +59,17 @@ struct CMFCTabToolTipInfo
 int m_nTabIndex;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-どのユーザーがポインターを合わせると、タブのインデックス。
+ユーザーがホバーしているタブのインデックス。
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_nTabIndex`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
+次の例は`m_nTabIndex`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>ヒント::m_pTabWnd
 
 タブ コントロールへのポインター。
 
@@ -79,11 +79,11 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_pTabWnd`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
+次の例は`m_pTabWnd`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>ヒント::m_strText
 
 ツールヒントのテキスト。
 
@@ -91,17 +91,17 @@ CMFCBaseTabCtrl* m_pTabWnd;
 CString m_strText;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 文字列が空の場合、ツールヒントは表示されません。
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_strText`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
+次の例は`m_strText`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

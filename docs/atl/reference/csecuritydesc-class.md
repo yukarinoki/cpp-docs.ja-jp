@@ -1,5 +1,5 @@
 ---
-title: CSecurityDesc クラス
+title: クラスをセキュリティします。
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityDesc
@@ -34,19 +34,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 926e4e0a795982479188d90ed866bf5e2584c187
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496486"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330971"
 ---
-# <a name="csecuritydesc-class"></a>CSecurityDesc クラス
+# <a name="csecuritydesc-class"></a>クラスをセキュリティします。
 
-このクラスは、 `SECURITY_DESCRIPTOR`構造体のラッパーです。
+このクラスは構造体のラッパー`SECURITY_DESCRIPTOR`です。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -60,60 +60,60 @@ class CSecurityDesc
 
 |名前|説明|
 |----------|-----------------|
-|[CSecurityDesc::CSecurityDesc](#csecuritydesc)|コンストラクターです。|
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|デストラクターです。|
+|[セキュリティデスク::セキュリティデスク](#csecuritydesc)|コンストラクターです。|
+|[セキュリティデスク::~セキュリティーデック](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSecurityDesc::FromString](#fromstring)|文字列形式のセキュリティ記述子を、有効な機能セキュリティ記述子に変換します。|
-|[CSecurityDesc::GetControl](#getcontrol)|セキュリティ記述子からコントロール情報を取得します。|
-|[CSecurityDesc::GetDacl](#getdacl)|セキュリティ記述子から随意アクセス制御リスト (DACL) 情報を取得します。|
-|[CSecurityDesc::GetGroup](#getgroup)|セキュリティ記述子からプライマリグループ情報を取得します。|
-|[CSecurityDesc::GetOwner](#getowner)|セキュリティ記述子から所有者についを取得します。|
-|[CSecurityDesc::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|構造体への`SECURITY_DESCRIPTOR`ポインターを返します。|
-|[CSecurityDesc::GetSacl](#getsacl)|セキュリティ記述子からシステムアクセス制御リスト (SACL: system access control list) 情報を取得します。|
-|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|DACL が自動伝達をサポートするように構成されているかどうかを判断します。|
-|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|セキュリティ記述子が既定の DACL で構成されているかどうかを判断します。|
-|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|セキュリティ記述子に DACL が含まれているかどうかを判断します。|
-|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|DACL が変更を防止するように構成されているかどうかを判断します。|
-|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|セキュリティ記述子のグループセキュリティ識別子 (SID) が既定で設定されているかどうかを判断します。|
-|[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|セキュリティ記述子の所有者 SID が既定で設定されているかどうかを判断します。|
-|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|SACL が自動伝達をサポートするように構成されているかどうかを判断します。|
-|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|セキュリティ記述子が既定の SACL で構成されているかどうかを判断します。|
-|[CSecurityDesc::IsSaclPresent](#issaclpresent)|セキュリティ記述子に SACL が含まれているかどうかを判断します。|
-|[CSecurityDesc::IsSaclProtected](#issaclprotected)|SACL が変更を防止するように構成されているかどうかを判断します。|
-|[CSecurityDesc::IsSelfRelative](#isselfrelative)|セキュリティ記述子が自己相対形式であるかどうかを判断します。|
-|[CSecurityDesc::MakeAbsolute](#makeabsolute)|セキュリティ記述子を絶対形式に変換するには、このメソッドを呼び出します。|
-|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|セキュリティ記述子を自己相対形式に変換するには、このメソッドを呼び出します。|
-|[CSecurityDesc::SetControl](#setcontrol)|セキュリティ記述子の制御ビットを設定します。|
-|[CSecurityDesc::SetDacl](#setdacl)|DACL の情報を設定します。 セキュリティ記述子に DACL が既に存在する場合は、その DACL が置き換えられます。|
-|[CSecurityDesc::SetGroup](#setgroup)|絶対形式のセキュリティ記述子のプライマリグループ情報を設定します。これは、既に存在しているプライマリグループ情報を置き換えたものです。|
-|[CSecurityDesc::SetOwner](#setowner)|絶対形式のセキュリティ記述子の所有者情報を設定し、既に存在する所有者情報を置き換えます。|
-|[CSecurityDesc::SetSacl](#setsacl)|SACL の情報を設定します。 SACL がセキュリティ記述子に既に存在する場合は、置き換えられます。|
-|[CSecurityDesc::ToString](#tostring)|セキュリティ記述子を文字列形式に変換します。|
+|[セキュリティデスク::文字列から](#fromstring)|文字列形式のセキュリティ記述子を有効な機能セキュリティ記述子に変換します。|
+|[セキュリティデック::ゲットコントロール](#getcontrol)|セキュリティ記述子からコントロール情報を取得します。|
+|[セキュリティデスク::ゲットダクル](#getdacl)|セキュリティ記述子から随意アクセス制御リスト (DACL) 情報を取得します。|
+|[セキュリティデスク::ゲットグループ](#getgroup)|セキュリティ記述子からプライマリ グループ情報を取得します。|
+|[セキュリティデスク::取得所有者](#getowner)|セキュリティ記述子から所有者の情報を取得します。|
+|[セキュリティデスク::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|構造体へのポインターを`SECURITY_DESCRIPTOR`返します。|
+|[セキュリティデスク::ゲットサクル](#getsacl)|セキュリティ記述子からシステム アクセス制御リスト (SACL) 情報を取得します。|
+|[Cセキュリティデスク::IsDaclオートコント継承](#isdaclautoinherited)|DACL が自動伝達をサポートするように構成されているかどうかを判断します。|
+|[セキュリティディスク::IsDaclデフォルト](#isdacldefaulted)|セキュリティ記述子が既定の DACL で構成されているかどうかを判断します。|
+|[セキュリティデスク::IsDaclプレゼント](#isdaclpresent)|セキュリティ記述子に DACL が含まれているかどうかを判断します。|
+|[セキュリティディスク::IsDaclProtected](#isdaclprotected)|DACL が変更を防ぐために構成されているかどうかを判断します。|
+|[セキュリティディスク::IsGroupデフォルト](#isgroupdefaulted)|セキュリティ記述子のグループ セキュリティ識別子 (SID) が既定で設定されているかどうかを判断します。|
+|[セキュリティディスク::IsOwner デフォルト](#isownerdefaulted)|セキュリティ記述子の所有者 SID が既定で設定されているかどうかを確認します。|
+|[Cセキュリティデスク::IsSaclオートコント継承](#issaclautoinherited)|SACL が自動伝達をサポートするように構成されているかどうかを判断します。|
+|[セキュリティディスク::イサクルデフォルト](#issacldefaulted)|セキュリティ記述子が既定の SACL で構成されているかどうかを判断します。|
+|[セキュリティデスク::イサクルプレゼント](#issaclpresent)|セキュリティ記述子に SACL が含まれているかどうかを判断します。|
+|[セキュリティディスク::イサクラフド](#issaclprotected)|変更を防ぐために SACL が構成されているかどうかを判断します。|
+|[セキュリティディスク::イズセルフアカレント](#isselfrelative)|セキュリティ記述子が自己相対形式かどうかを判断します。|
+|[セキュリティデスク::メイクアブソリュート](#makeabsolute)|セキュリティ記述子を絶対形式に変換します。|
+|[セキュリティデスク::自己相対性](#makeselfrelative)|セキュリティ記述子を自己相対形式に変換します。|
+|[セキュリティデスク::セットコントロール](#setcontrol)|セキュリティ記述子の制御ビットを設定します。|
+|[セキュリティデスク::セットダクル](#setdacl)|DACL に情報を設定します。 DACL がセキュリティ記述子に既に存在する場合は、置き換えられます。|
+|[セキュリティデスク::セットグループ](#setgroup)|絶対形式セキュリティ記述子のプライマリ グループ情報を設定し、既に存在しているプライマリ グループ情報を置き換えます。|
+|[セキュリティデスク::セットオーナー](#setowner)|既に存在する所有者情報を置き換えて、絶対形式のセキュリティ記述子の所有者情報を設定します。|
+|[セキュリティデスク::セットサクル](#setsacl)|SACL に情報を設定します。 SACL がセキュリティ記述子に既に存在する場合は、置き換えられます。|
+|[セキュリティデスク::トストリング](#tostring)|セキュリティ記述子を文字列形式に変換します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CSecurityDesc:: operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|構造体への`SECURITY_DESCRIPTOR`ポインターを返します。|
-|[CSecurityDesc::operator =](#operator_eq)|代入演算子。|
+|[cSecurityDesc::演算子の定数SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|構造体へのポインターを`SECURITY_DESCRIPTOR`返します。|
+|[セキュリティデスク::演算子 =](#operator_eq)|代入演算子。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-構造`SECURITY_DESCRIPTOR`体には、オブジェクトに関連付けられているセキュリティ情報が含まれます。 アプリケーションは、この構造を使用して、オブジェクトのセキュリティステータスを設定および照会します。 「 [Atlgetsecuritydescriptor](security-global-functions.md#atlgetsecuritydescriptor)」も参照してください。
+構造体`SECURITY_DESCRIPTOR`には、オブジェクトに関連付けられたセキュリティ情報が含まれます。 アプリケーションは、この構造を使用して、オブジェクトのセキュリティステータスを設定し、照会します。 「[セキュリティ記述子」](security-global-functions.md#atlgetsecuritydescriptor)も参照してください。
 
-アプリケーションでは`SECURITY_DESCRIPTOR`構造を直接変更しないでください。代わりに、提供されているクラスメソッドを使用する必要があります。
+アプリケーションは、構造体を`SECURITY_DESCRIPTOR`直接変更するのではなく、提供されたクラス メソッドを使用する必要があります。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の[アクセス制御](/windows/win32/SecAuthZ/access-control)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity .h
+**ヘッダー:** atlsecurity.h
 
-##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="csecuritydesc"></a>セキュリティデスク::セキュリティデスク
 
 コンストラクターです。
 
@@ -126,13 +126,13 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-`SECURITY_DESCRIPTOR`新しい`CSecurityDesc` オブジェクトに`CSecurityDesc`割り当てるオブジェクトまたは構造体。
+新`CSecurityDesc`しい`CSecurityDesc`オブジェクト`SECURITY_DESCRIPTOR`に割り当てるオブジェクトまたは構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクト`CSecurityDesc`は、必要に応じ`SECURITY_DESCRIPTOR`て、構造体または以前`CSecurityDesc`に定義したオブジェクトを使用して作成できます。
+オブジェクト`CSecurityDesc`は、必要に応じて、構造体`SECURITY_DESCRIPTOR`または定義済みの`CSecurityDesc`オブジェクトを使用して作成できます。
 
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="dtor"></a>セキュリティデスク::~セキュリティーデック
 
 デストラクターです。
 
@@ -140,13 +140,13 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 virtual ~CSecurityDesc() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デストラクターは、割り当てられたすべてのリソースを解放します。
+デストラクタは、割り当てられたすべてのリソースを解放します。
 
-##  <a name="fromstring"></a>  CSecurityDesc::FromString
+## <a name="csecuritydescfromstring"></a><a name="fromstring"></a>セキュリティデスク::文字列から
 
-文字列形式のセキュリティ記述子を、有効な機能セキュリティ記述子に変換します。
+文字列形式のセキュリティ記述子を有効な機能セキュリティ記述子に変換します。
 
 ```
 bool FromString(LPCTSTR pstr) throw(...);
@@ -154,20 +154,20 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pstr*<br/>
-変換する[文字列形式のセキュリティ記述子](/windows/win32/SecAuthZ/security-descriptor-string-format)を含む、null で終わる文字列へのポインター。
+*プストル*<br/>
+変換する[文字列形式のセキュリティ記述子](/windows/win32/SecAuthZ/security-descriptor-string-format)を含む null で終わる文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は true を返します。 エラー発生時に例外をスローします。
+成功時に true を返します。 失敗時に例外をスローします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この文字列は、 [Csecuritydesc:: ToString](#tostring)を使用して作成できます。 セキュリティ記述子を文字列に変換すると、格納と送信が容易になります。
+文字列は[、CSecurityDesc::ToString](#tostring)を使用して作成できます。 セキュリティ記述子を文字列に変換すると、格納と転送が容易になります。
 
-このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)を呼び出します。
+このメソッドは、記述子を呼び出[します。](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)
 
-##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
+## <a name="csecuritydescgetcontrol"></a><a name="getcontrol"></a>セキュリティデック::ゲットコントロール
 
 セキュリティ記述子からコントロール情報を取得します。
 
@@ -178,17 +178,17 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *psdc*<br/>
-セキュリティ記述子の`SECURITY_DESCRIPTOR_CONTROL`制御情報を受け取る構造体へのポインター。
+セキュリティ記述子の`SECURITY_DESCRIPTOR_CONTROL`コントロール情報を受け取る構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、失敗した場合は false を返します。
+メソッドが成功した場合は true を返し、失敗した場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [Getsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)を呼び出します。
+このメソッド[は、を](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)呼び出します。
 
-##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
+## <a name="csecuritydescgetdacl"></a><a name="getdacl"></a>セキュリティデスク::ゲットダクル
 
 セキュリティ記述子から随意アクセス制御リスト (DACL) 情報を取得します。
 
@@ -202,21 +202,21 @@ bool GetDacl(
 ### <a name="parameters"></a>パラメーター
 
 *pDacl*<br/>
-セキュリティ記述子の`CDacl` DACL のコピーを格納する構造体へのポインター。 随意 ACL が存在する場合、メソッドは、 *pdacl*をセキュリティ記述子の随意 acl のアドレスに設定します。 随意 ACL が存在しない場合、値は保存されません。
+セキュリティ記述子の`CDacl`DACL のコピーを格納する構造体へのポインター。 随意 ACL が存在する場合、メソッドは *、pDacl*をセキュリティ記述子の随意 ACL のアドレスに設定します。 任意の ACL が存在しない場合、値は保存されません。
 
-*pbPresent*<br/>
-指定されたセキュリティ記述子に随意 ACL が存在するかどうかを示す値へのポインター。 セキュリティ記述子に随意 ACL が含まれている場合、このパラメーターは true に設定されます。 セキュリティ記述子に随意 ACL が含まれていない場合、このパラメーターは false に設定されます。
+*pbプレゼント*<br/>
+指定されたセキュリティ記述子に随意 ACL が存在することを示す値へのポインター。 セキュリティ記述子に随意 ACL が含まれている場合、このパラメーターは true に設定されます。 セキュリティ記述子に随意 ACL が含まれていない場合、このパラメーターは false に設定されます。
 
-*pbDefaulted 既定値*<br/>
-セキュリティ記述子に随意 ACL が存在する場合、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_DACL_DEFAULTED フラグの値に設定されたフラグへのポインター。 このフラグが true の場合、随意 ACL は既定のメカニズムによって取得されます。false の場合、ユーザーによって随意 ACL が明示的に指定されています。
+*pbデフォルト*<br/>
+セキュリティ記述子に対して任意の ACL が存在する場合`SECURITY_DESCRIPTOR_CONTROL`、構造体のSE_DACL_DEFAULTED フラグの値に設定されたフラグへのポインター。 このフラグが true の場合、随意 ACL はデフォルトのメカニズムによって取得されました。false の場合、任意の ACL はユーザーによって明示的に指定されました。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、失敗した場合は false を返します。
+メソッドが成功した場合は true を返し、失敗した場合は false を返します。
 
-##  <a name="getgroup"></a>  CSecurityDesc::GetGroup
+## <a name="csecuritydescgetgroup"></a><a name="getgroup"></a>セキュリティデスク::ゲットグループ
 
-セキュリティ記述子からプライマリグループ情報を取得します。
+セキュリティ記述子からプライマリ グループ情報を取得します。
 
 ```
 bool GetGroup(
@@ -227,18 +227,18 @@ bool GetGroup(
 ### <a name="parameters"></a>パラメーター
 
 *pSid*<br/>
-CDacl に格納されているグループのコピーを受け取る[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子) へのポインター。
+CDacl に格納されているグループのコピーを受け取る[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子) へのポインタ。
 
-*pbDefaulted 既定値*<br/>
-メソッドから制御が戻ったときに、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_GROUP_DEFAULTED フラグの値に設定されたフラグへのポインター。
+*pbデフォルト*<br/>
+メソッドが返されるときに構造体のSE_GROUP_DEFAULTED フラグの値に設定された`SECURITY_DESCRIPTOR_CONTROL`フラグへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、失敗した場合は false を返します。
+メソッドが成功した場合は true を返し、失敗した場合は false を返します。
 
-##  <a name="getowner"></a>  CSecurityDesc::GetOwner
+## <a name="csecuritydescgetowner"></a><a name="getowner"></a>セキュリティデスク::取得所有者
 
-セキュリティ記述子から所有者についを取得します。
+セキュリティ記述子から所有者の情報を取得します。
 
 ```
 bool GetOwner(
@@ -249,18 +249,18 @@ bool GetOwner(
 ### <a name="parameters"></a>パラメーター
 
 *pSid*<br/>
-CDacl に格納されているグループのコピーを受け取る[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子) へのポインター。
+CDacl に格納されているグループのコピーを受け取る[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子) へのポインタ。
 
-*pbDefaulted 既定値*<br/>
-メソッドから制御が戻ったときに、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_OWNER_DEFAULTED フラグの値に設定されたフラグへのポインター。
+*pbデフォルト*<br/>
+メソッドが返されるときに、構造体のSE_OWNER_DEFAULTED フラグの値に`SECURITY_DESCRIPTOR_CONTROL`設定されたフラグへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、失敗した場合は false を返します。
+メソッドが成功した場合は true を返し、失敗した場合は false を返します。
 
-##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR
+## <a name="csecuritydescgetpsecurity_descriptor"></a><a name="getpsecurity_descriptor"></a>セキュリティデスク::GetPSECURITY_DESCRIPTOR
 
-構造体への`SECURITY_DESCRIPTOR`ポインターを返します。
+構造体へのポインターを`SECURITY_DESCRIPTOR`返します。
 
 ```
 const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
@@ -270,9 +270,9 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)構造体へのポインターを返します。
 
-##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
+## <a name="csecuritydescgetsacl"></a><a name="getsacl"></a>セキュリティデスク::ゲットサクル
 
-セキュリティ記述子からシステムアクセス制御リスト (SACL: system access control list) 情報を取得します。
+セキュリティ記述子からシステム アクセス制御リスト (SACL) 情報を取得します。
 
 ```
 bool GetSacl(
@@ -284,21 +284,21 @@ bool GetSacl(
 ### <a name="parameters"></a>パラメーター
 
 *pSacl*<br/>
-セキュリティ記述子の`CSacl` SACL のコピーを格納する構造体へのポインター。 システム ACL が存在する場合、メソッドは*Psacl*をセキュリティ記述子のシステム acl のアドレスに設定します。 システム ACL が存在しない場合、値は保存されません。
+セキュリティ記述子の`CSacl`SACL のコピーを格納する構造体へのポインター。 システム ACL が存在する場合、メソッドは *、pSacl*をセキュリティ記述子のシステム ACL のアドレスに設定します。 システム ACL が存在しない場合、値は保存されません。
 
-*pbPresent*<br/>
-指定したセキュリティ記述子にシステム ACL が存在することを示すために、メソッドによって設定されるフラグへのポインター。 セキュリティ記述子にシステム ACL が含まれている場合、このパラメーターは true に設定されます。 セキュリティ記述子にシステム ACL が含まれていない場合、このパラメーターは false に設定されます。
+*pbプレゼント*<br/>
+指定されたセキュリティ記述子にシステム ACL が存在することを示すために、メソッドセットのフラグへのポインター。 セキュリティ記述子にシステム ACL が含まれている場合、このパラメーターは true に設定されます。 セキュリティ記述子にシステム ACL が含まれていない場合、このパラメータは false に設定されます。
 
-*pbDefaulted 既定値*<br/>
-セキュリティ記述子にシステム ACL が存在する場合、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_SACL_DEFAULTED フラグの値に設定されたフラグへのポインター。
+*pbデフォルト*<br/>
+セキュリティ記述子に対してシステム ACL が存在する場合、`SECURITY_DESCRIPTOR_CONTROL`構造体のSE_SACL_DEFAULTED フラグの値に設定されたフラグへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、失敗した場合は false を返します。
+メソッドが成功した場合は true を返し、失敗した場合は false を返します。
 
-##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited
+## <a name="csecuritydescisdaclautoinherited"></a><a name="isdaclautoinherited"></a>Cセキュリティデスク::IsDaclオートコント継承
 
-随意アクセス制御リスト (DACL) が自動伝達をサポートするように構成されているかどうかを判断します。
+自動伝播をサポートするように随意アクセス制御リスト (DACL) が構成されているかどうかを判断します。
 
 ```
 bool IsDaclAutoInherited() const throw();
@@ -306,15 +306,15 @@ bool IsDaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-既存の子オブジェクトに対して、継承可能なアクセス制御エントリ (Ace) の自動伝達をサポートするために設定されている DACL がセキュリティ記述子に含まれている場合に true を返します。 それ以外の場合は、false を返します。
+既存の子オブジェクトへの継承可能なアクセス制御エントリ (ACE) の自動伝達をサポートするように設定された DACL がセキュリティ記述子に含まれている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 システムは、オブジェクトとその既存の子オブジェクトに対して自動継承アルゴリズムを実行するときに、このビットを設定します。
 
-##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted
+## <a name="csecuritydescisdacldefaulted"></a><a name="isdacldefaulted"></a>セキュリティディスク::IsDaclデフォルト
 
-セキュリティ記述子が既定の随意アクセス制御リスト (DACL) を使用して構成されているかどうかを判断します。
+セキュリティ記述子が既定の随意アクセス制御リスト (DACL) で構成されているかどうかを判断します。
 
 ```
 bool IsDaclDefaulted() const throw();
@@ -322,19 +322,19 @@ bool IsDaclDefaulted() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子に既定の DACL が含まれている場合は true、それ以外の場合は false を返します。
+セキュリティ記述子に既定の DACL が含まれている場合は true を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグは、アクセス制御エントリ (ACE: access control entry) の継承に関して、システムが DACL をどのように扱うかに影響する可能性があります。 たとえば、オブジェクトの作成者が DACL を指定していない場合、オブジェクトは作成者のアクセストークンから既定の DACL を受け取ります。 SE_DACL_PRESENT フラグが設定されていない場合、システムはこのフラグを無視します。
+このフラグは、アクセス制御エントリ (ACE) 継承に関して、システムが DACL を処理する方法に影響を与える可能性があります。 たとえば、オブジェクトの作成者が DACL を指定しない場合、オブジェクトは作成者のアクセス トークンから既定の DACL を受け取ります。 SE_DACL_PRESENT フラグが設定されていない場合、システムはこのフラグを無視します。
 
-このフラグは、オブジェクトの最終的な DACL がどのように計算されるかを決定するために使用され、セキュリティ保護可能なオブジェクトのセキュリティ記述子コントロールに物理的に格納されることはありません。
+このフラグは、オブジェクトの最終的な DACL を計算する方法を決定するために使用され、セキュリティ保護可能なオブジェクトのセキュリティ記述子コントロールに物理的に格納されません。
 
-このフラグを設定するには、 [Csecuritydesc:: SetDacl](#setdacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetDacl](#setdacl)メソッドを使用します。
 
-##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent
+## <a name="csecuritydescisdaclpresent"></a><a name="isdaclpresent"></a>セキュリティデスク::IsDaclプレゼント
 
-セキュリティ記述子に随意アクセス制御リスト (DACL) が格納されているかどうかを判断します。
+セキュリティ記述子に随意アクセス制御リスト (DACL) が含まれているかどうかを判断します。
 
 ```
 bool IsDaclPresent() const throw();
@@ -342,19 +342,19 @@ bool IsDaclPresent() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子に DACL が含まれている場合は true、それ以外の場合は false を返します。
+セキュリティ記述子に DACL が含まれている場合は true を返し、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグが設定されていない場合、またはこのフラグが設定され、DACL が NULL の場合、セキュリティ記述子はすべてのユーザーにフルアクセスを許可します。
+このフラグが設定されていない場合、またはこのフラグが設定され、DACL が NULL の場合、セキュリティ記述子は、すべてのユーザーにフル アクセスを許可します。
 
-このフラグは、セキュリティ記述子がセキュリティ保護可能なオブジェクトに関連付けられるまで、呼び出し元によって指定されたセキュリティ情報を保持するために使用されます。 セキュリティ記述子がセキュリティ保護可能なオブジェクトに関連付けられると、SE_DACL_PRESENT フラグは常にセキュリティ記述子コントロールで設定されます。
+このフラグは、セキュリティ記述子がセキュリティ保護可能なオブジェクトに関連付けられるまで、呼び出し元によって指定されたセキュリティ情報を保持するために使用されます。 セキュリティ記述子がセキュリティ保護可能なオブジェクトに関連付けられると、SE_DACL_PRESENT フラグは常にセキュリティ記述子コントロールに設定されます。
 
-このフラグを設定するには、 [Csecuritydesc:: SetDacl](#setdacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetDacl](#setdacl)メソッドを使用します。
 
-##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected
+## <a name="csecuritydescisdaclprotected"></a><a name="isdaclprotected"></a>セキュリティディスク::IsDaclProtected
 
-随意アクセス制御リスト (DACL) が変更を防止するように構成されているかどうかを判断します。
+随意アクセス制御リスト (DACL) が変更を防ぐように構成されているかどうかを判断します。
 
 ```
 bool IsDaclProtected() const throw();
@@ -362,17 +362,17 @@ bool IsDaclProtected() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-DACL が、継承可能なアクセス制御エントリ (Ace) によってセキュリティ記述子が変更されないように構成されている場合、true を返します。 それ以外の場合は、false を返します。
+DACL が、継承可能なアクセス制御エントリ (ACE) によってセキュリティ記述子が変更されないように構成されている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグを設定するには、 [Csecuritydesc:: SetDacl](#setdacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetDacl](#setdacl)メソッドを使用します。
 
-このメソッドは、継承可能な Ace の自動伝達をサポートします。
+この方法は、継承可能な ACE の自動伝播をサポートします。
 
-##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted
+## <a name="csecuritydescisgroupdefaulted"></a><a name="isgroupdefaulted"></a>セキュリティディスク::IsGroupデフォルト
 
-セキュリティ記述子のグループセキュリティ識別子 (SID) が既定で設定されているかどうかを判断します。
+セキュリティ記述子のグループ セキュリティ識別子 (SID) が既定で設定されているかどうかを判断します。
 
 ```
 bool IsGroupDefaulted() const throw();
@@ -380,13 +380,13 @@ bool IsGroupDefaulted() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子の元のプロバイダーではなく、既定の機構でセキュリティ記述子のグループ SID が指定されている場合、true を返します。 それ以外の場合は、false を返します。
+セキュリティ記述子のグループ SID が指定された既定の機構 (セキュリティ記述子の元のプロバイダーではなく) が指定されている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグを設定するには、 [Csecuritydesc:: SetGroup](#setgroup)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetGroup](#setgroup)メソッドを使用します。
 
-##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted
+## <a name="csecuritydescisownerdefaulted"></a><a name="isownerdefaulted"></a>セキュリティディスク::IsOwner デフォルト
 
 セキュリティ記述子の所有者セキュリティ識別子 (SID) が既定で設定されているかどうかを判断します。
 
@@ -396,15 +396,15 @@ bool IsOwnerDefaulted() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子の元のプロバイダーではなく、既定の機構がセキュリティ記述子の所有者 SID を指定した場合に true を返します。 それ以外の場合は、false を返します。
+セキュリティ記述子の所有者 SID が指定された既定の機構 (セキュリティ記述子の元のプロバイダーではなく) が指定されている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグを設定するには、 [Csecuritydesc:: SetOwner](#setowner)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetOwner](#setowner)メソッドを使用します。
 
-##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited
+## <a name="csecuritydescissaclautoinherited"></a><a name="issaclautoinherited"></a>Cセキュリティデスク::IsSaclオートコント継承
 
-システムアクセス制御リスト (SACL) が自動伝達をサポートするように構成されているかどうかを判断します。
+システム アクセス制御リスト (SACL) が自動伝播をサポートするように構成されているかどうかを判断します。
 
 ```
 bool IsSaclAutoInherited() const throw();
@@ -412,15 +412,15 @@ bool IsSaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-既存の子オブジェクトに対して、継承可能なアクセス制御エントリ (Ace) の自動伝達をサポートするために設定されている SACL がセキュリティ記述子に含まれている場合に true を返します。 それ以外の場合は、false を返します。
+既存の子オブジェクトへの継承可能なアクセス制御エントリ (ACE) の自動伝達をサポートするように設定された SACL がセキュリティ記述子に含まれている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 システムは、オブジェクトとその既存の子オブジェクトに対して自動継承アルゴリズムを実行するときに、このビットを設定します。
 
-##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted
+## <a name="csecuritydescissacldefaulted"></a><a name="issacldefaulted"></a>セキュリティディスク::イサクルデフォルト
 
-セキュリティ記述子が既定のシステムアクセス制御リスト (SACL) を使用して構成されているかどうかを判断します。
+セキュリティ記述子が既定のシステム アクセス制御リスト (SACL) で構成されているかどうかを判断します。
 
 ```
 bool IsSaclDefaulted() const throw();
@@ -428,17 +428,17 @@ bool IsSaclDefaulted() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子に既定の SACL が含まれている場合は true、それ以外の場合は false を返します。
+セキュリティ記述子に既定の SACL が含まれている場合は true を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグは、アクセス制御エントリ (ACE: access control entry) の継承に関して、システムが SACL をどのように処理するかに影響する可能性があります。 SE_SACL_PRESENT フラグが設定されていない場合、システムはこのフラグを無視します。
+このフラグは、アクセス制御エントリ (ACE) 継承に関して、システムが SACL を処理する方法に影響を与える可能性があります。 SE_SACL_PRESENTフラグが設定されていない場合、システムはこのフラグを無視します。
 
-このフラグを設定するには、 [Csecuritydesc:: SetSacl](#setsacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetSacl](#setsacl)メソッドを使用します。
 
-##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent
+## <a name="csecuritydescissaclpresent"></a><a name="issaclpresent"></a>セキュリティデスク::イサクルプレゼント
 
-セキュリティ記述子にシステムアクセス制御リスト (SACL) が含まれているかどうかを判断します。
+セキュリティ記述子にシステム アクセス制御リスト (SACL) が含まれているかどうかを判断します。
 
 ```
 bool IsSaclPresent() const throw();
@@ -446,15 +446,15 @@ bool IsSaclPresent() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子に SACL が含まれている場合は true、それ以外の場合は false を返します。
+セキュリティ記述子に SACL が含まれている場合は true を返し、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグを設定するには、 [Csecuritydesc:: SetSacl](#setsacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetSacl](#setsacl)メソッドを使用します。
 
-##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected
+## <a name="csecuritydescissaclprotected"></a><a name="issaclprotected"></a>セキュリティディスク::イサクラフド
 
-システムアクセス制御リスト (SACL) が変更を防止するように構成されているかどうかを判断します。
+システム アクセス制御リスト (SACL) が変更されないように構成されているかどうかを判断します。
 
 ```
 bool IsSaclProtected() const throw();
@@ -462,17 +462,17 @@ bool IsSaclProtected() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-継承可能なアクセス制御エントリ (Ace) によってセキュリティ記述子が変更されないように SACL が構成されている場合、true を返します。 それ以外の場合は、false を返します。
+セキュリティ記述子が継承可能なアクセス制御エントリ (ACE) によって変更されないように SACL が構成されている場合は true を返します。 それ以外の場合は、false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このフラグを設定するには、 [Csecuritydesc:: SetSacl](#setsacl)メソッドを使用します。
+このフラグを設定するには[、CSecurityDesc::SetSacl](#setsacl)メソッドを使用します。
 
-このメソッドは、継承可能な Ace の自動伝達をサポートします。
+この方法は、継承可能な ACE の自動伝播をサポートします。
 
-##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative
+## <a name="csecuritydescisselfrelative"></a><a name="isselfrelative"></a>セキュリティディスク::イズセルフアカレント
 
-セキュリティ記述子が自己相対形式であるかどうかを判断します。
+セキュリティ記述子が自己相対形式かどうかを判断します。
 
 ```
 bool IsSelfRelative() const throw();
@@ -480,11 +480,11 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子が、連続するメモリブロック内のすべてのセキュリティ情報と共に自己相対形式である場合は true を返します。 セキュリティ記述子が絶対形式の場合は false を返します。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+セキュリティ記述子が自己相対形式で、連続するすべてのセキュリティ情報が連続したメモリ ブロックにある場合は true を返します。 セキュリティ記述子が絶対形式の場合は false を返します。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
-##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
+## <a name="csecuritydescmakeabsolute"></a><a name="makeabsolute"></a>セキュリティデスク::メイクアブソリュート
 
-セキュリティ記述子を絶対形式に変換するには、このメソッドを呼び出します。
+セキュリティ記述子を絶対形式に変換します。
 
 ```
 bool MakeAbsolute() throw(...);
@@ -492,15 +492,15 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、それ以外の場合は false を返します。
+メソッドが成功した場合は true を返し、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-絶対形式のセキュリティ記述子には、情報自体ではなく、含まれている情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、自己相対セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+絶対形式のセキュリティ記述子には、情報自体ではなく、含まれている情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリ ブロック内の情報が含まれています。 自己相対セキュリティ記述子では、`SECURITY_DESCRIPTOR`構造体は常に情報を開始しますが、セキュリティ記述子の他のコンポーネントは、任意の順序で構造体に従うことができます。 自己相対セキュリティ記述子のコンポーネントは、メモリ アドレスを使用する代わりに、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納する必要がある場合や、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
-##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
+## <a name="csecuritydescmakeselfrelative"></a><a name="makeselfrelative"></a>セキュリティデスク::自己相対性
 
-セキュリティ記述子を自己相対形式に変換するには、このメソッドを呼び出します。
+セキュリティ記述子を自己相対形式に変換します。
 
 ```
 bool MakeSelfRelative() throw(...);
@@ -508,13 +508,13 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は true、それ以外の場合は false を返します。
+メソッドが成功した場合は true を返し、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-絶対形式のセキュリティ記述子には、情報自体を格納するのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+絶対形式のセキュリティ記述子には、情報自体を含むのではなく、含まれている情報へのポインターが含まれます。 自己相対形式のセキュリティ記述子には、連続したメモリ ブロック内の情報が含まれています。 自己相対セキュリティ記述子では、`SECURITY_DESCRIPTOR`構造体は常に情報を開始しますが、セキュリティ記述子の他のコンポーネントは、任意の順序で構造体に従うことができます。 メモリ アドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納する必要がある場合や、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
-##  <a name="operator_eq"></a>  CSecurityDesc::operator =
+## <a name="csecuritydescoperator-"></a><a name="operator_eq"></a>セキュリティデスク::演算子 =
 
 代入演算子。
 
@@ -526,21 +526,21 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-`CSecurityDesc` `CSecurityDesc` `SECURITY_DESCRIPTOR`オブジェクトに割り当てる構造体またはオブジェクト。
+オブジェクトに割`CSecurityDesc`り当てる構造体またはオブジェクト。 `SECURITY_DESCRIPTOR` `CSecurityDesc`
 
 ### <a name="return-value"></a>戻り値
 
-更新さ`CSecurityDesc`れたオブジェクトを返します。
+更新された`CSecurityDesc`オブジェクトを返します。
 
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc:: operator const SECURITY_DESCRIPTOR *
+## <a name="csecuritydescoperator-const-security_descriptor-"></a><a name="operator_const_security_descriptor__star"></a>cSecurityDesc::演算子の定数SECURITY_DESCRIPTOR *
 
-`SECURITY_DESCRIPTOR`構造体へのポインターに値をキャストします。
+構造体へのポインターに値をキャストします`SECURITY_DESCRIPTOR`。
 
 ```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
-##  <a name="setcontrol"></a>  CSecurityDesc::SetControl
+## <a name="csecuritydescsetcontrol"></a><a name="setcontrol"></a>セキュリティデスク::セットコントロール
 
 セキュリティ記述子の制御ビットを設定します。
 
@@ -552,23 +552,23 @@ bool SetControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL mask。 設定できるフラグの一覧については、「 [Setsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)」を参照してください。
+*興味を持つ*<br/>
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧については、「[セキュリティ記述子コントロールの設定](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)」を参照してください。
 
-*ControlBitsToSet*<br/>
-*ControlBitsOfInterest* mask によって指定されたコントロールビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL mask。 このパラメーターには、 *ControlBitsOfInterest*パラメーターに指定されているフラグの組み合わせを使用できます。
+*セット*<br/>
+*controlBitsOfinterest*マスクで指定されたコントロール ビットの新しい値を示すSECURITY_DESCRIPTOR_CONTROLマスク。 このパラメーターは、*パラメーター*に示されているフラグの組み合わせにすることができます。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [Setsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)を呼び出します。
+このメソッド[は、コントロールを](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)呼び出します。
 
-##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
+## <a name="csecuritydescsetdacl"></a><a name="setdacl"></a>セキュリティデスク::セットダクル
 
-随意アクセス制御リスト (DACL) に情報を設定します。 セキュリティ記述子に DACL が既に存在する場合は、その DACL が置き換えられます。
+随意アクセス制御リスト (DACL) の情報を設定します。 DACL がセキュリティ記述子に既に存在する場合は、置き換えられます。
 
 ```
 inline void SetDacl(
@@ -583,25 +583,25 @@ inline void SetDacl(
 ### <a name="parameters"></a>パラメーター
 
 *Dacl*<br/>
-セキュリティ記述子の`CDacl` DACL を指定するオブジェクトへの参照。 このパラメーターを NULL にすることはできません。 セキュリティ記述子に NULL の DACL を設定するには、メソッドの最初の形式を*Bpresent*を false に設定して使用する必要があります。
+セキュリティ記述子の`CDacl`DACL を指定するオブジェクトへの参照。 このパラメーターは NULL にすることはできません。 セキュリティ記述子に NULL DACL を設定するには、メソッドの最初の形式を使用して *、bPresent*を false に設定します。
 
-*bPresent*<br/>
-セキュリティ記述子に DACL が存在することを示すフラグを指定します。 このパラメーターが true の場合、メソッドは`SECURITY_DESCRIPTOR_CONTROL`構造体の SE_DACL_PRESENT フラグを設定し、 *DACL*と*bdefaulted*値のパラメーターの値を使用します。 False の場合、メソッドは SE_DACL_PRESENT フラグをクリアし、 *Bdefaulted 既定*値は無視されます。
+*bプレゼント*<br/>
+セキュリティ記述子に DACL が存在するフラグを指定します。 このパラメーターが true の場合、メソッドは構造体にSE_DACL_PRESENT`SECURITY_DESCRIPTOR_CONTROL`フラグを設定し *、Dacl*および*bDefaulted*パラメーターの値を使用します。 false の場合、メソッドはSE_DACL_PRESENT フラグをクリアし *、bDefaulted*は無視されます。
 
-*bDefaulted 値*<br/>
-DACL のソースを示すフラグを指定します。 このフラグが true の場合、DACL は既定のメカニズムによって取得されています。 False の場合、DACL はユーザーによって明示的に指定されています。 メソッドは、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_DACL_DEFAULTED フラグにこの値を格納します。 このパラメーターが指定されていない場合、SE_DACL_DEFAULTED フラグはクリアされます。
+*bデフォルト*<br/>
+DACL のソースを示すフラグを指定します。 このフラグが true の場合、DACL は既定のメカニズムによって取得されています。 false の場合、DACL はユーザーによって明示的に指定されています。 このメソッドは、この値を構造体のSE_DACL_DEFAULTED`SECURITY_DESCRIPTOR_CONTROL`フラグに格納します。 このパラメーターを指定しない場合、SE_DACL_DEFAULTED フラグはクリアされます。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-空の DACL と存在しない DACL には、重要な違いがあります。 DACL が空の場合は、アクセス制御エントリが含まれておらず、明示的に付与されたアクセス権はありません。 その結果、オブジェクトへのアクセスは暗黙的に拒否されます。 一方、オブジェクトに DACL がない場合、オブジェクトには保護が割り当てられず、すべてのアクセス要求が許可されます。
+空の DACL と存在しない DACL には重要な違いがあります。 DACL が空の場合、アクセス制御エントリは含まれず、アクセス権は明示的に付与されていません。 その結果、オブジェクトへのアクセスは暗黙的に拒否されます。 一方、オブジェクトに DACL がない場合は、オブジェクトに保護が割り当てられていないし、アクセス要求も許可されます。
 
-##  <a name="setgroup"></a>  CSecurityDesc::SetGroup
+## <a name="csecuritydescsetgroup"></a><a name="setgroup"></a>セキュリティデスク::セットグループ
 
-絶対形式のセキュリティ記述子のプライマリグループ情報を設定します。これは、既に存在しているプライマリグループ情報を置き換えたものです。
+絶対形式セキュリティ記述子のプライマリ グループ情報を設定し、既に存在しているプライマリ グループ情報を置き換えます。
 
 ```
 bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -610,18 +610,18 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *Sid*<br/>
-セキュリティ記述子の新しいプライマリグループの[CSid](../../atl/reference/csid-class.md)オブジェクトへの参照。 このパラメーターを NULL にすることはできません。 セキュリティ記述子は、DACL または SACL を持たないようにマークすることができますが、グループと所有者を持つ必要があります。これは、これらが NULL SID (特別な意味を持つ組み込み SID) であっても同様です。
+セキュリティ記述子の新しいプライマリ グループの[CSid](../../atl/reference/csid-class.md)オブジェクトへの参照。 このパラメーターは NULL にすることはできません。 セキュリティ記述子は、DACL または SACL を持たないとマークできますが、グループと所有者が必要です。
 
-*bDefaulted 値*<br/>
-プライマリグループの情報が既定のメカニズムから派生したものかどうかを示します。 この値が true の場合、これは既定の情報です。メソッドは、この値を`SECURITY_DESCRIPTOR_CONTROL`構造体の SE_GROUP_DEFAULTED フラグとして格納します。 このパラメーターが0の場合、SE_GROUP_DEFAULTED フラグはクリアされます。
+*bデフォルト*<br/>
+プライマリ グループ情報が既定のメカニズムから派生したかどうかを示します。 この値が true の場合、この情報は既定の情報であり、メソッドはこの値をSE_GROUP_DEFAULTEDフラグ`SECURITY_DESCRIPTOR_CONTROL`として構造体に格納します。 このパラメーターがゼロの場合、SE_GROUP_DEFAULTED フラグはクリアされます。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-##  <a name="setowner"></a>  CSecurityDesc::SetOwner
+## <a name="csecuritydescsetowner"></a><a name="setowner"></a>セキュリティデスク::セットオーナー
 
-絶対形式のセキュリティ記述子の所有者情報を設定します。 これは、既に存在する所有者情報を置き換えます。
+絶対形式セキュリティ記述子の所有者情報を設定します。 既に存在している所有者情報は置き換えられます。
 
 ```
 bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -630,18 +630,18 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *Sid*<br/>
-セキュリティ記述子の新しいプライマリ所有者の[CSid](../../atl/reference/csid-class.md)オブジェクト。 このパラメーターを NULL にすることはできません。
+セキュリティ記述子の新しいプライマリ所有者の[CSid](../../atl/reference/csid-class.md)オブジェクト。 このパラメーターは NULL にすることはできません。
 
-*bDefaulted 値*<br/>
-所有者情報が既定のメカニズムから派生したものかどうかを示します。 この値が true の場合は、既定の情報です。 メソッドは、この値を SE_OWNER_DEFAULTED フラグとして`SECURITY_DESCRIPTOR_CONTROL`構造体に格納します。 このパラメーターが0の場合、SE_OWNER_DEFAULTED フラグはクリアされます。
+*bデフォルト*<br/>
+所有者情報が既定の機構から派生するかどうかを示します。 この値が true の場合は、デフォルト情報になります。 このメソッドは、この値を構造体のSE_OWNER_DEFAULTEDフラグ`SECURITY_DESCRIPTOR_CONTROL`として格納します。 このパラメーターがゼロの場合、SE_OWNER_DEFAULTED フラグはクリアされます。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-##  <a name="setsacl"></a>  CSecurityDesc::SetSacl
+## <a name="csecuritydescsetsacl"></a><a name="setsacl"></a>セキュリティデスク::セットサクル
 
-システムアクセス制御リスト (SACL: system access control list) の情報を設定します。 SACL がセキュリティ記述子に既に存在する場合は、置き換えられます。
+システム アクセス制御リスト (SACL) の情報を設定します。 SACL がセキュリティ記述子に既に存在する場合は、置き換えられます。
 
 ```
 bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
@@ -650,16 +650,16 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *Sacl*<br/>
-セキュリティ記述子の`CSacl` SACL を指定するオブジェクトへのポインター。 このパラメーターを NULL にすることはできません。 CSacl オブジェクトである必要があります。 Dacl とは異なり、SACL オブジェクトはアクセス権を指定せず、監査情報のみを指定するため、NULL と空の SACL に違いはありません。
+セキュリティ記述子の`CSacl`SACL を指定するオブジェクトへのポインター。 このパラメーターは NULL であってはならず、CSacl オブジェクトでなければなりません。 DACL とは異なり、SACL オブジェクトはアクセス権を指定せず、監査情報のみを指定するので、NULL と空の SACL の間に違いはありません。
 
-*bDefaulted 値*<br/>
-SACL のソースを示すフラグを指定します。 このフラグが true の場合、いくつかの既定の機構によって SACL が取得されています。 False の場合、SACL はユーザーによって明示的に指定されています。 メソッドは、 `SECURITY_DESCRIPTOR_CONTROL`構造体の SE_SACL_DEFAULTED フラグにこの値を格納します。 このパラメーターが指定されていない場合、SE_SACL_DEFAULTED フラグはクリアされます。
+*bデフォルト*<br/>
+SACL のソースを示すフラグを指定します。 このフラグが true の場合、SACL は既定のメカニズムによって取得されています。 false の場合、SACL はユーザーによって明示的に指定されています。 このメソッドは、構造体のSE_SACL_DEFAULTED フラグにこの`SECURITY_DESCRIPTOR_CONTROL`値を格納します。 このパラメーターを指定しない場合は、SE_SACL_DEFAULTED フラグがクリアされます。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-##  <a name="tostring"></a>  CSecurityDesc::ToString
+## <a name="csecuritydesctostring"></a><a name="tostring"></a>セキュリティデスク::トストリング
 
 セキュリティ記述子を文字列形式に変換します。
 
@@ -672,38 +672,38 @@ bool ToString(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstr*<br/>
+*プストル*<br/>
 [文字列形式のセキュリティ記述子](/windows/win32/SecAuthZ/security-descriptor-string-format)を受け取る null で終わる文字列へのポインター。
 
-*si*<br/>
-出力文字列に含めるセキュリティ記述子のコンポーネントを示す、SECURITY_INFORMATION ビットフラグの組み合わせを指定します。
+*Si*<br/>
+出力文字列に含めるセキュリティ記述子のコンポーネントを示すビット フラグSECURITY_INFORMATION組み合わせて指定します。
 
 ### <a name="return-value"></a>戻り値
 
 正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-セキュリティ記述子を文字列形式にすると、より簡単に格納または転送できます。 文字列を`CSecurityDesc::FromString`セキュリティ記述子に変換するには、メソッドを使用します。
+セキュリティ記述子を文字列形式にすると、より簡単に格納または転送できます。 このメソッド`CSecurityDesc::FromString`を使用して、文字列をセキュリティ記述子に変換します。
 
-*Si*パラメーターには、次の SECURITY_INFORMATION フラグを含めることができます。
+*si*パラメーターには、次のSECURITY_INFORMATIONフラグを含めることができます。
 
-|[値]|説明|
+|[値]|意味|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|所有者を含めます。|
-|GROUP_SECURITY_INFORMATION|プライマリグループを含めます。|
+|GROUP_SECURITY_INFORMATION|プライマリ グループを含めます。|
 |DACL_SECURITY_INFORMATION|DACL を含めます。|
 |SACL_SECURITY_INFORMATION|SACL を含めます。|
 
-DACL が NULL で、入力セキュリティ記述子に SE_DACL_PRESENT 制御ビットが設定されている場合、メソッドは失敗します。
+DACL が NULL で、SE_DACL_PRESENTコントロール ビットが入力セキュリティ記述子に設定されている場合、メソッドは失敗します。
 
-DACL が NULL で、入力セキュリティ記述子で SE_DACL_PRESENT 制御ビットが設定されていない場合、結果として得られるセキュリティ記述子の文字列には D: コンポーネントがありません。 詳細については、「[セキュリティ記述子文字列の形式](/windows/win32/SecAuthZ/security-descriptor-string-format)」を参照してください。
+DACL が NULL で、SE_DACL_PRESENTコントロール ビットが入力セキュリティ記述子に設定されていない場合、結果のセキュリティ記述子文字列には D: コンポーネントがありません。 詳細については、「[セキュリティ記述子の文字列形式](/windows/win32/SecAuthZ/security-descriptor-string-format)」を参照してください。
 
-このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)を呼び出します。
+このメソッドは、記述子を呼び出[します。](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
+[セキュリティサンプル](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)
+[セキュリティグローバル関数](../../atl/reference/security-global-functions.md)

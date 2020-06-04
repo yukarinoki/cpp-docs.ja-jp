@@ -1,10 +1,12 @@
 ---
 title: _getc_nolock、_getwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+- _o__getc_nolock
+- _o__getwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,14 +41,14 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287509"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919645"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock、_getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock、_getwc_nolock
 
 ストリームから文字を読み取ります。
 
@@ -59,16 +65,18 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 入力ストリーム。
 
 ## <a name="return-value"></a>戻り値
 
 「[getc、getwc](getc-getwc.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数と同じ**getc**と**getwc**する点を除いて、呼び出し元のスレッドをロックしないでください。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、呼び出し元のスレッドをロックしない点を除いて、 **getc**および**getwc**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -78,12 +86,12 @@ wint_t _getwc_nolock(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -121,7 +129,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>入力: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>入力: crt_getc_nolock.txt
 
 ```Input
 Line the first.

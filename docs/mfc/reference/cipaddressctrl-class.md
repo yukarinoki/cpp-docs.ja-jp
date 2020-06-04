@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392597"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754965"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl クラス
 
@@ -47,28 +47,28 @@ class CIPAddressCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|`CIPAddressCtrl` オブジェクトを構築します。|
+|[クリックキー::CIPアドレスCtrl](#cipaddressctrl)|`CIPAddressCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|IP アドレス コントロールの内容を消去します。|
-|[CIPAddressCtrl::Create](#create)|IP アドレス コントロールを作成しにアタッチします、`CIPAddressCtrl`オブジェクト。|
-|[CIPAddressCtrl::CreateEx](#createex)|指定した Windows の拡張スタイルを使用して、IP アドレス コントロールを作成しにアタッチします、`CIPAddressCtrl`オブジェクト。|
-|[CIPAddressCtrl::GetAddress](#getaddress)|4 つすべての IP アドレスのコントロール フィールドのアドレス値を取得します。|
-|[CIPAddressCtrl::IsBlank](#isblank)|IP アドレス コントロールのすべてのフィールドが空かを判断します。|
-|[CIPAddressCtrl::SetAddress](#setaddress)|IP アドレス コントロールの 4 つすべてのフィールドのアドレス値を設定します。|
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|IP アドレスのコントロールで指定されたフィールドにキーボード フォーカスを設定します。|
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|IP アドレス コントロール内の指定したフィールドに範囲を設定します。|
+|[住所をクリアします。](#clearaddress)|IP アドレスコントロールの内容をクリアします。|
+|[クリックキー::作成](#create)|IP アドレス コントロールを作成し、オブジェクトに`CIPAddressCtrl`アタッチします。|
+|[クリックキー::作成します。](#createex)|指定した Windows 拡張スタイルを使用して IP アドレス コントロールを`CIPAddressCtrl`作成し、オブジェクトにアタッチします。|
+|[住所を取得します。](#getaddress)|IP アドレス コントロール内の 4 つのフィールドすべてのアドレス値を取得します。|
+|[クリックキー::イブランク](#isblank)|IP アドレスコントロールのすべてのフィールドが空かどうかを判断します。|
+|[を設定します。](#setaddress)|IP アドレスコントロールの 4 つのフィールドすべてにアドレス値を設定します。|
+|[をクリックします。](#setfieldfocus)|IP アドレス コントロールの指定されたフィールドにキーボード フォーカスを設定します。|
+|[をクリックします。](#setfieldrange)|IP アドレスコントロールの指定されたフィールドの範囲を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-IP アドレスのコントロールのエディット コントロールのようなコントロールを入力し、インターネット プロトコル (IP) の形式で数値のアドレスを操作することができます。
+IP アドレス コントロールは、編集コントロールに似たコントロールで、IP (インターネット プロトコル) 形式の数値アドレスを入力および操作できます。
 
-このコントロール (つまり、`CIPAddressCtrl`クラス) は Microsoft Internet Explorer 4.0 以降を実行中のプログラムでのみ使用できます。 Windows および Windows NT の将来のバージョンで使用可能なもされます。
+このコントロール (および`CIPAddressCtrl`クラス) は、Internet Explorer 4.0 以降で実行されているプログラムでのみ使用できます。 また、将来のバージョンの Windows および Windows NT でも使用できるようになります。
 
-IP アドレスの管理の概要については、次を参照してください。 [IP アドレス コントロール](/windows/desktop/Controls/ip-address-controls)Windows SDK に含まれています。
+IP アドレスコントロールの一般的な情報については、Windows SDK の[「IP アドレスコントロール](/windows/win32/Controls/ip-address-controls)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -84,7 +84,7 @@ IP アドレスの管理の概要については、次を参照してくださ�
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl
+## <a name="cipaddressctrlcipaddressctrl"></a><a name="cipaddressctrl"></a>クリックキー::CIPアドレスCtrl
 
 `CIPAddressCtrl` オブジェクトを作成します。
 
@@ -92,21 +92,21 @@ IP アドレスの管理の概要については、次を参照してくださ�
 CIPAddressCtrl();
 ```
 
-##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress
+## <a name="cipaddressctrlclearaddress"></a><a name="clearaddress"></a>住所をクリアします。
 
-IP アドレス コントロールの内容を消去します。
+IP アドレスコントロールの内容をクリアします。
 
-```
+```cpp
 void ClearAddress();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_CLEARADDRESS](/windows/win32/Controls/ipm-clearaddress)の動作を実装します。
 
-##  <a name="create"></a>  CIPAddressCtrl::Create
+## <a name="cipaddressctrlcreate"></a><a name="create"></a>クリックキー::作成
 
-IP アドレス コントロールを作成しにアタッチします、`CIPAddressCtrl`オブジェクト。
+IP アドレス コントロールを作成し、オブジェクトに`CIPAddressCtrl`アタッチします。
 
 ```
 virtual BOOL Create(
@@ -118,35 +118,35 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*<br/>
-IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) windows スタイルの一覧については、Windows SDK に含まれています。
+*Dwstyle*<br/>
+IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールは子ウィンドウである必要があるため、WS_CHILDスタイルを含める必要があります。 ウィンドウ スタイルの一覧については、Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
 
-*rect*<br/>
-IP アドレス コントロールのサイズと位置への参照。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
+*Rect*<br/>
+IP アドレス コントロールのサイズと位置への参照。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。
 
 *pParentWnd*<br/>
-IP アドレス コントロールの親ウィンドウへのポインター。 NULL は指定できません。
+IP アドレス コントロールの親ウィンドウへのポインター。 NULL にすることはできません。
 
 *nID*<br/>
-IP アドレス コントロールの id。
+IP アドレス コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-初期化が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+初期化が成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構築する、 `CIPAddressCtrl` 2 つのステップ内のオブジェクト。
+オブジェクトは`CIPAddressCtrl`2 つの手順で作成します。
 
-1. 作成するコンス トラクターを呼び出す、`CIPAddressCtrl`オブジェクト。
+1. オブジェクトを作成するコンストラクターを`CIPAddressCtrl`呼び出します。
 
-1. 呼び出す`Create`、IP アドレスのコントロールを作成します。
+1. 呼`Create`び出しは、IP アドレスコントロールを作成します。
 
-コントロールで拡張ウィンドウ スタイルを使用する場合は、呼び出す[CreateEx](#createex)の代わりに`Create`します。
+コントロールで拡張ウィンドウ スタイルを使用する場合は、 ではなく[CreateEx](#createex)を`Create`呼び出します。
 
-##  <a name="createex"></a>  CIPAddressCtrl::CreateEx
+## <a name="cipaddressctrlcreateex"></a><a name="createex"></a>クリックキー::作成します。
 
-コントロール (子ウィンドウ) を作成し、それをするには、この関数を呼び出して、`CIPAddressCtrl`オブジェクト。
+コントロール (子ウィンドウ) を作成し、`CIPAddressCtrl`オブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -159,32 +159,32 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*<br/>
-作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
+*ドウェエクススタイル*<br/>
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の*DwExStyle*パラメーター[を](/windows/win32/api/winuser/nf-winuser-createwindowexw)参照してください。
 
-*dwStyle*<br/>
-IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) windows スタイルの一覧については、Windows SDK に含まれています。
+*Dwstyle*<br/>
+IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールは子ウィンドウである必要があるため、WS_CHILDスタイルを含める必要があります。 ウィンドウ スタイルの一覧については、Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
 
-*rect*<br/>
-参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+*Rect*<br/>
+作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
 
 *nID*<br/>
-コントロールの子ウィンドウ ID
+コントロールの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。
+[`CreateEx`[作成]](#create)の代わりに、Windows 拡張スタイルの序文で指定された拡張 Windows スタイル**を適用WS_EX_。**
 
-##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress
+## <a name="cipaddressctrlgetaddress"></a><a name="getaddress"></a>住所を取得します。
 
-4 つすべての IP アドレスのコントロール フィールドのアドレス値を取得します。
+IP アドレス コントロール内の 4 つのフィールドすべてのアドレス値を取得します。
 
 ```
 int GetAddress(
@@ -198,39 +198,39 @@ int GetAddress(DWORD& dwAddress);
 
 ### <a name="parameters"></a>パラメーター
 
-*nField0*<br/>
-パックされた IP アドレスからフィールド 0 の値への参照。
+*nフィールド0*<br/>
+パックされた IP アドレスからのフィールド 0 値への参照。
 
-*nField1*<br/>
-パックされた IP アドレスからフィールド 1 の値への参照。
+*nフィールド1*<br/>
+パックされた IP アドレスからのフィールド 1 の値への参照。
 
-*nField2*<br/>
-パックされた IP アドレスからフィールド 2 の値への参照。
+*nフィールド2*<br/>
+パックされた IP アドレスからのフィールド 2 値への参照。
 
-*nField3*<br/>
-パックされた IP アドレスからフィールド 3 の値への参照。
+*nフィールド3*<br/>
+パックされた IP アドレスからのフィールド 3 値への参照。
 
-*dwAddress*<br/>
-IP アドレスを受け取る DWORD 値のアドレスへの参照。 参照してください**解説**を示すテーブルをどのように*dwAddress*が入力されます。
+*dw アドレス*<br/>
+IP アドレスを受け取る DWORD 値のアドレスへの参照。 *dwAddress*の塗りつぶし方法を示す表については、「**解説」** を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-IP アドレス コントロール内の空白でないフィールドの数。
+IP アドレスコントロールの空白以外のフィールドの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress)の動作を実装します。 上記の最初のプロトタイプでは、コントロールのフィールド 0 ~ 3 の数値をそれぞれ左から右に読み取り、4 つのパラメーターを設定します。 上の 2 番目のプロトタイプでは *、dwAddress*は次のように設定されます。
 
-|フィールド|ビット フィールドの値を格納しています。|
+|フィールド|フィールド値を含むビット|
 |-----------|-------------------------------------|
-|0|24 ~ 31|
-|1|16 ~ 23|
-|2|8 ~ 15|
-|3|0 ~ 7|
+|0|24 から 31|
+|1|16から23まで|
+|2|8から15まで|
+|3|0 から 7|
 
-##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank
+## <a name="cipaddressctrlisblank"></a><a name="isblank"></a>クリックキー::イブランク
 
-IP アドレス コントロールのすべてのフィールドが空かを判断します。
+IP アドレスコントロールのすべてのフィールドが空かどうかを判断します。
 
 ```
 BOOL IsBlank() const;
@@ -238,17 +238,17 @@ BOOL IsBlank() const;
 
 ### <a name="return-value"></a>戻り値
 
-すべての IP アドレス コントロール フィールドが空以外の場合、0 以外の場合それ以外の場合 0 を返します。
+IP アドレス制御フィールドがすべて空の場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_ISBLANK](/windows/win32/Controls/ipm-isblank)の動作を実装します。
 
-##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress
+## <a name="cipaddressctrlsetaddress"></a><a name="setaddress"></a>を設定します。
 
-IP アドレス コントロールの 4 つすべてのフィールドのアドレス値を設定します。
+IP アドレスコントロールの 4 つのフィールドすべてにアドレス値を設定します。
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -260,54 +260,54 @@ void SetAddress(DWORD dwAddress);
 
 ### <a name="parameters"></a>パラメーター
 
-*nField0*<br/>
-フィールド 0 の値は、パックされた IP アドレス。
+*nフィールド0*<br/>
+パックされた IP アドレスからのフィールド 0 の値。
 
-*nField1*<br/>
-パックされた IP アドレスから 1 フィールドの値。
+*nフィールド1*<br/>
+パックされた IP アドレスからのフィールド 1 の値。
 
-*nField2*<br/>
-パックされた IP アドレスから 2 フィールドの値。
+*nフィールド2*<br/>
+パックされた IP アドレスからのフィールド 2 の値。
 
-*nField3*<br/>
-パックされた IP アドレスから 3 のフィールドの値。
+*nフィールド3*<br/>
+パックされた IP アドレスからのフィールド 3 の値。
 
-*dwAddress*<br/>
-新しい IP アドレスを含む DWORD 値を指定します。 参照してください**解説**の表に、DWORD 値を格納する方法を示します。
+*dw アドレス*<br/>
+新しい IP アドレスを含む DWORD 値。 DWORD 値の入力方法を示す表については、「**解説」** を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress)の動作を実装します。 上記の最初のプロトタイプでは、コントロールのフィールド 0 ~ 3 の数値をそれぞれ左から右に読み取り、4 つのパラメーターを設定します。 上の 2 番目のプロトタイプでは *、dwAddress*は次のように設定されます。
 
-|フィールド|ビット フィールドの値を格納しています。|
+|フィールド|フィールド値を含むビット|
 |-----------|-------------------------------------|
-|0|24 ~ 31|
-|1|16 ~ 23|
-|2|8 ~ 15|
-|3|0 ~ 7|
+|0|24 から 31|
+|1|16から23まで|
+|2|8から15まで|
+|3|0 から 7|
 
-##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus
+## <a name="cipaddressctrlsetfieldfocus"></a><a name="setfieldfocus"></a>をクリックします。
 
-IP アドレスのコントロールで指定されたフィールドにキーボード フォーカスを設定します。
+IP アドレス コントロールの指定されたフィールドにキーボード フォーカスを設定します。
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nField*<br/>
-0 から始まるフィールド インデックスがフォーカスを設定する必要があります。 この値がフィールドの数より大きい場合は、最初の空フィールドにフォーカスが設定されます。 すべてのフィールドが空白以外の場合は、最初のフィールドにフォーカスが設定されます。
+*nフィールド*<br/>
+フォーカスを設定する必要がある、0 から始まるフィールド インデックス。 この値がフィールド数より大きい場合、フォーカスは最初の空白フィールドに設定されます。 すべてのフィールドが空白以外の場合、フォーカスは最初のフィールドに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_SETFOCUS](/windows/win32/Controls/ipm-setfocus)の動作を実装します。
 
-##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange
+## <a name="cipaddressctrlsetfieldrange"></a><a name="setfieldrange"></a>をクリックします。
 
-IP アドレス コントロール内の指定したフィールドに範囲を設定します。
+IP アドレスコントロールの指定されたフィールドの範囲を設定します。
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,
@@ -316,20 +316,20 @@ void SetFieldRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*nField*<br/>
-範囲の適用先となる 0 から始まるフィールド インデックス。
+*nフィールド*<br/>
+範囲が適用される、0 から始まるフィールド インデックス。
 
-*nLower*<br/>
-この IP アドレス コントロールで指定されたフィールドの下限値を受け取る整数への参照。
+*nローワー*<br/>
+この IP アドレス制御で指定されたフィールドの下限を受け取る整数への参照。
 
-*nUpper*<br/>
-この IP アドレス コントロールで指定されたフィールドの上限値を受け取る整数への参照。
+*nアッパー*<br/>
+この IP アドレス制御で指定されたフィールドの上限を受け取る整数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange)」の説明に従って、Windows SDK。 2 つのパラメーターを使用して、*上限値*と*下限*の代わりに、フィールドの上限と下限の制限を示すために、 *wRange* Win32 メッセージで使用されるパラメーター。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[IPM_SETRANGE](/windows/win32/Controls/ipm-setrange)の動作を実装します。 Win32 メッセージで使用される*wRange*パラメーターの代わりに、フィールドの下限と上限を示すには *、nLower*と*nUpper*の 2 つのパラメーターを使用します。
 
 ## <a name="see-also"></a>関連項目
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

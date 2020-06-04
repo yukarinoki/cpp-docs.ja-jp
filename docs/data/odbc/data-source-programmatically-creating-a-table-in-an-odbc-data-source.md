@@ -1,5 +1,5 @@
 ---
-title: プログラムで、ODBC データ ソースにテーブルを作成します。
+title: ODBC データ ソースでのテーブルのプログラム作成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - programmatically creating ODBC tables [C++]
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cf26cad7fe39f374daf371902525087b446658c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358839"
 ---
-# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>データ ソース:データ ソース : プログラムにおける ODBC データ ソースのテーブルの作成
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>データ ソース: プログラムにおける ODBC データ ソースのテーブルの作成
 
-このトピックでは、データのテーブルを作成する方法を説明しますを使用して、ソース、`ExecuteSQL`クラスのメンバー関数`CDatabase`、関数を含む文字列を渡して、 **CREATE TABLE** SQL ステートメント。
+このトピックでは、CREATE **TABLE** SQL ステートメントを含む文字列`ExecuteSQL`を関数に渡`CDatabase`すクラスのメンバー関数を使用して、データ ソースのテーブルを作成する方法について説明します。
 
-MFC での ODBC データ ソースの詳細については、次を参照してください。[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)します。 トピック[データ ソース。ODBC データ ソースをプログラムで構成](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)データ ソースの作成について説明します。
+MFC の ODBC データ ソースの一般情報については、「[データ ソース (ODBC) 」](../../data/odbc/data-source-odbc.md)を参照してください。 「[データ ソース: プログラムによる ODBC データ ソースの設定](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)」では、データ ソースの作成について説明します。
 
-確立されているデータ ソースの場合を使用してテーブルを簡単に作成することができます、`ExecuteSQL`メンバー関数および**CREATE TABLE** SQL ステートメント。 ある場合など、`CDatabase`と呼ばれるオブジェクト`myDB`テーブルを作成する次の MFC コードを使用できます。
+データ ソースを確立すると、メンバー関数と**CREATE TABLE** `ExecuteSQL` SQL ステートメントを使用してテーブルを簡単に作成できます。 たとえば、`CDatabase``myDB`というオブジェクトがある場合は、次の MFC コードを使用してテーブルを作成できます。
 
 ```
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
                          OfficeName TEXT(10))");
 ```
 
-このコード例は、によって管理される Microsoft Access データ ソース接続で「オフィス」をという名前のテーブルを作成します。 `myDB`; テーブルには、2 つのフィールド"OfficeID"と"OfficeName。"が含まれています。
+このコード例では、Access データ ソース接続に "OFFICES" というテーブルを`myDB`作成します。テーブルには、"OfficeID" と "Office 名" の 2 つのフィールドが含まれています。
 
 > [!NOTE]
->  指定されたフィールドの種類、 **CREATE TABLE** SQL ステートメントが使用している ODBC ドライバーによって異なる場合があります。 (C++ 1.5 で視覚的に分散) の Microsoft Query プログラムは、データ ソースに使用できるフィールドの型を検出する方法の 1 つです。 Microsoft のクエリで次のようにクリックします。**ファイル**、 をクリック**Table_Definition**、データ ソースからテーブルを選択し、に表示される種類を見て、**型**コンボ ボックス。 SQL 構文は、インデックスの作成にも存在します。
+> **CREATE TABLE** SQL ステートメントで指定されるフィールド・タイプは、使用している ODBC ドライバーによって異なる場合があります。 Visual C++ 1.5 で配布される Microsoft クエリ プログラムは、データ ソースで使用できるフィールドの種類を検出する方法の 1 つです。 Microsoft Query で、[**ファイル**] をクリックし **、[Table_Definition]** をクリックします。 **Type** インデックスを作成するための SQL 構文も存在します。
 
 ## <a name="see-also"></a>関連項目
 

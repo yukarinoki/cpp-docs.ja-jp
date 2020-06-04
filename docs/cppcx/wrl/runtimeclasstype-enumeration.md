@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213578"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 列挙型
 
-型を指定[RuntimeClass](runtimeclass-class.md)サポートされているインスタンス。
+サポートされている[RuntimeClass](runtimeclass-class.md)インスタンスの種類を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,21 +28,21 @@ enum RuntimeClassType;
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`ClassicCom`|クラシック COM ランタイム クラスです。|
-|`Delegate`|これは、`ClassicCom` に相当します。|
-|`InhibitFtmBase`|無効にします`FtmBase`する際にサポート`__WRL_CONFIGURATION_LEGACY__`が定義されていません。|
+|`ClassicCom`|従来の COM ランタイムクラス。|
+|`Delegate`|`ClassicCom` と同等です。|
+|`InhibitFtmBase`|`__WRL_CONFIGURATION_LEGACY__` が定義されていない場合に `FtmBase` サポートを無効にします。|
 |`InhibitWeakReference`|弱い参照のサポートを無効にします。|
-|`WinRt`|Windows ランタイム クラスです。|
+|`WinRt`|Windows ランタイムクラス。|
 |`WinRtClassicComMix`|`WinRt` と `ClassicCom` の組み合わせです。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

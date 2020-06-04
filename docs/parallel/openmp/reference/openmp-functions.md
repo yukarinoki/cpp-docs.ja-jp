@@ -50,66 +50,66 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0475a83ba259ed00bbcb9ddaba99a1556b35f613
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317134"
 ---
 # <a name="openmp-functions"></a>OpenMP の関数
 
-OpenMP API で使用される関数へのリンクを提供します。
+OpenMP API で使用される関数へのリンクを示します。
 
-ビジュアルC++OpenMP 標準の実装には、次の関数とデータ型が含まれています。
+OpenMP 標準の Visual C++ 実装には、次の関数とデータ型が含まれています。
 
-環境の実行。
+環境の実行:
 
-|関数|説明|
+|機能|説明|
 |--------|-----------|
-|[omp_set_num_threads](#omp-set-num-threads)|によってオーバーライドされない限り、今後の並列領域でスレッドの数を設定、 [num_threads](openmp-clauses.md#num-threads)句。|
-|[omp_get_num_threads](#omp-get-num-threads)|並列領域でスレッドの数を返します。|
-|[omp_get_max_threads](#omp-get-max-threads)|並行領域なし場合、で利用できるスレッドの数を示す整数を返します[num_threads](openmp-clauses.md#num-threads)コードでその時点で定義されています。|
-|[omp_get_thread_num](#omp-get-thread-num)|そのスレッド チーム内で実行するスレッドのスレッド数を返します。|
-|[omp_get_num_procs](#omp-get-num-procs)|関数を呼び出すときに使用できるプロセッサの数を返します。|
-|[omp_in_parallel](#omp-in-parallel)|並列領域内から呼び出された場合、0 以外の値を返します。|
-|[omp_set_dynamic](#omp-set-dynamic)|今後の並列領域で使用できるスレッドの数を実行時に調整できることを示します。|
-|[omp_get_dynamic](#omp-get-dynamic)|今後の並列領域で使用できるスレッドの数を実行時に調整できるかどうかを示す値を返します。|
-|[omp_set_nested](#omp-set-nested)|入れ子になった並列処理を有効にします。|
+|[omp_set_num_threads](#omp-set-num-threads)|[num_threads](openmp-clauses.md#num-threads)節でオーバーライドされない限り、今後の並列領域内のスレッド数を設定します。|
+|[omp_get_num_threads](#omp-get-num-threads)|並列領域のスレッド数を返します。|
+|[omp_get_max_threads](#omp-get-max-threads)|コードのその時点で[、num_threads](openmp-clauses.md#num-threads)のない並列領域が定義されている場合に使用できるスレッド数以上の整数を返します。|
+|[omp_get_thread_num](#omp-get-thread-num)|スレッド チーム内で実行されているスレッドのスレッド番号を返します。|
+|[omp_get_num_procs](#omp-get-num-procs)|関数が呼び出されたときに使用可能なプロセッサの数を返します。|
+|[omp_in_parallel](#omp-in-parallel)|並列領域内から呼び出された場合は、0 以外を返します。|
+|[omp_set_dynamic](#omp-set-dynamic)|今後の並列領域で使用可能なスレッド数を実行時に調整できることを示します。|
+|[omp_get_dynamic](#omp-get-dynamic)|今後の並列領域で使用可能なスレッド数を実行時に調整できるかどうかを示す値を返します。|
+|[omp_set_nested](#omp-set-nested)|ネストされた並列処理を有効にします。|
 |[omp_get_nested](#omp-get-nested)|入れ子になった並列処理が有効かどうかを示す値を返します。|
 
-ロック。
+ロックの場合:
 
-|関数|説明|
+|機能|説明|
 |--------|-----------|
 |[omp_init_lock](#omp-init-lock)|単純なロックを初期化します。|
 |[omp_init_nest_lock](#omp-init-nest-lock)|ロックを初期化します。|
-|[omp_destroy_lock](#omp-destroy-lock)|ロックは初期化されません。|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|入れ子にできるロックの初期化を解除します。|
-|[omp_set_lock](#omp-set-lock)|ロックが利用可能になるまで、スレッドの実行をブロックします。|
-|[omp_set_nest_lock](#omp-set-nest-lock)|ロックが利用可能になるまで、スレッドの実行をブロックします。|
-|[omp_unset_lock](#omp-unset-lock)|ロックを解放します。|
-|[omp_unset_nest_lock](#omp-unset-nest-lock)|入れ子にできるロックを解放します。|
-|[omp_test_lock](#omp-test-lock)|ロックを設定しようとしていますが、スレッドの実行をブロックしません。|
-|[omp_test_nest_lock](#omp-test-nest-lock)|入れ子にできるロックを設定しようとしていますが、スレッドの実行をブロックしません。|
+|[omp_destroy_lock](#omp-destroy-lock)|ロックを初期化解除します。|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|入れ子にできるロックを初期化解除します。|
+|[omp_set_lock](#omp-set-lock)|ロックが使用可能になるまでスレッドの実行をブロックします。|
+|[omp_set_nest_lock](#omp-set-nest-lock)|ロックが使用可能になるまでスレッドの実行をブロックします。|
+|[omp_unset_lock](#omp-unset-lock)|ロックを解除します。|
+|[omp_unset_nest_lock](#omp-unset-nest-lock)|ネスト可能ロックを解放します。|
+|[omp_test_lock](#omp-test-lock)|ロックを設定しようとしますが、スレッドの実行をブロックしません。|
+|[omp_test_nest_lock](#omp-test-nest-lock)|入れ子にできるロックを設定しようとしますが、スレッドの実行をブロックしません。|
 
-|データの種類|説明|
+|データ型|説明|
 |---------|-----------|
-|`omp_lock_t`|ロック、ロックが使用できるかどうか、またはスレッドがロックを所有しているかどうかの状態を保持する型。|
-|`omp_nest_lock_t`|ロックに関する情報の次の情報の 1 つを保持する型: ロックが使用可能なかどうかと、ロックと入れ子のカウントを所有するスレッドの id。|
+|`omp_lock_t`|ロックの状態を保持する型。ロックが使用可能かどうか、またはスレッドがロックを所有しているかどうか。|
+|`omp_nest_lock_t`|ロックに関する情報の 1 つを保持する型: ロックが使用可能かどうか、およびロックを所有するスレッドの ID と入れ子のカウント。|
 
-タイミング ルーチン。
+タイミング ルーチンの場合:
 
-|関数|説明|
+|機能|説明|
 |--------|-----------|
-|[omp_get_wtime](#omp-get-wtime)|ある時点から経過した時間の秒の値を返します。|
-|[omp_get_wtick](#omp-get-wtick)|プロセッサのクロックのティック間の秒数を返します。|
+|[omp_get_wtime](#omp-get-wtime)|ある時点から経過した時間の秒数を返します。|
+|[omp_get_wtick](#omp-get-wtick)|プロセッサクロック刻み間隔の秒数を返します。|
 
-## <a name="omp-destroy-lock"></a>omp_destroy_lock
+## <a name="omp_destroy_lock"></a><a name="omp-destroy-lock"></a>omp_destroy_lock
 
-ロックは初期化されません。
+ロックを初期化解除します。
 
-```
+```cpp
 void omp_destroy_lock(
    omp_lock_t *lock
 );
@@ -117,22 +117,22 @@ void omp_destroy_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_lock_t`で初期化された[omp_init_lock 関数](#omp-init-lock)します。
+*ロック*<br/>
+omp_init_lock で初期化`omp_lock_t`された型の変数[omp_init_lock](#omp-init-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)します。
+詳細については[、「3.2.2 omp_destroy_lockとomp_destroy_nest_lock関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_init_lock 関数](#omp-init-lock)の使用例については`omp_destroy_lock`します。
+の使用例については[、「omp_init_lock」](#omp-init-lock)を`omp_destroy_lock`参照してください。
 
-## <a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
+## <a name="omp_destroy_nest_lock"></a><a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
 
-入れ子にできるロックの初期化を解除します。
+入れ子にできるロックを初期化解除します。
 
-```
+```cpp
 void omp_destroy_nest_lock(
    omp_nest_lock_t *lock
 );
@@ -140,50 +140,50 @@ void omp_destroy_nest_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_nest_lock_t`で初期化された[omp_init_nest_lock](#omp-init-nest-lock)します。
+*ロック*<br/>
+omp_init_nest_lock で初期化`omp_nest_lock_t`された型の変数[omp_init_nest_lock](#omp-init-nest-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)します。
+詳細については[、「3.2.2 omp_destroy_lockとomp_destroy_nest_lock関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_init_nest_lock](#omp-init-nest-lock)の使用例については`omp_destroy_nest_lock`します。
+の使用例`omp_destroy_nest_lock`については[、「omp_init_nest_lock」](#omp-init-nest-lock)を参照してください。
 
-## <a name="omp-get-dynamic"></a>omp_get_dynamic
+## <a name="omp_get_dynamic"></a><a name="omp-get-dynamic"></a>omp_get_dynamic
 
-今後の並列領域で使用できるスレッドの数を実行時に調整できるかどうかを示す値を返します。
+今後の並列領域で使用可能なスレッド数を実行時に調整できるかどうかを示す値を返します。
 
-```
+```cpp
 int omp_get_dynamic();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の値は、スレッドが動的に調整を意味します。
+ゼロ以外の値は、スレッドが動的に調整されることを意味します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スレッドの動的な調整を指定した[omp_set_dynamic](#omp-set-dynamic)と[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)します。
+スレッドの動的調整は、 [omp_set_dynamic](#omp-set-dynamic)と[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)で指定します。
 
-詳細については、次を参照してください。 [3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)します。
+詳細については[、3.1.7 omp_set_dynamic機能](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_set_dynamic](#omp-set-dynamic)の使用例については`omp_get_dynamic`します。
+の使用例については[、「omp_set_dynamic」](#omp-set-dynamic)を`omp_get_dynamic`参照してください。
 
-## <a name="omp-get-max-threads"></a>omp_get_max_threads
+## <a name="omp_get_max_threads"></a><a name="omp-get-max-threads"></a>omp_get_max_threads
 
-並行領域なし場合、で利用できるスレッドの数を示す整数を返します[num_threads](openmp-clauses.md#num-threads)コードでその時点で定義されています。
+コードのその時点で[、num_threads](openmp-clauses.md#num-threads)のない並列領域が定義されている場合に使用できるスレッド数以上の整数を返します。
 
-```
+```cpp
 int omp_get_max_threads( )
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.3 omp_get_max_threads 関数](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)します。
+詳細については[、3.1.3 omp_get_max_threads機能](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -223,39 +223,39 @@ int main( )
 8
 ```
 
-## <a name="omp-get-nested"></a>omp_get_nested
+## <a name="omp_get_nested"></a><a name="omp-get-nested"></a>omp_get_nested
 
 入れ子になった並列処理が有効かどうかを示す値を返します。
 
-```
+```cpp
 int omp_get_nested( );
 ```
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の値では、入れ子になった並列処理が有効になっていることを意味します。
+ゼロ以外の値は、ネストされた並列処理が有効であることを意味します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-入れ子になった並列処理を指定した[omp_set_nested](#omp-set-nested)と[OMP_NESTED](openmp-environment-variables.md#omp-nested)します。
+ネストされた並列処理は、 [omp_set_nested](#omp-set-nested)と[OMP_NESTED](openmp-environment-variables.md#omp-nested)で指定します。
 
-詳細については、次を参照してください。 [3.1.10 omp_get_nested 関数](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)します。
+詳細については[、「3.1.10 omp_get_nested関数](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_set_nested](#omp-set-nested)の使用例については`omp_get_nested`します。
+の使用例については[、「omp_set_nested」](#omp-set-nested)を`omp_get_nested`参照してください。
 
-## <a name="omp-get-num-procs"></a>omp_get_num_procs
+## <a name="omp_get_num_procs"></a><a name="omp-get-num-procs"></a>omp_get_num_procs
 
-関数を呼び出すときに使用できるプロセッサの数を返します。
+関数が呼び出されたときに使用可能なプロセッサの数を返します。
 
-```
+```cpp
 int omp_get_num_procs();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.5 omp_get_num_procs 関数](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)します。
+詳細については[、3.1.5 omp_get_num_procs関数](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -282,17 +282,17 @@ int main( )
 2
 ```
 
-## <a name="omp-get-num-threads"></a>omp_get_num_threads
+## <a name="omp_get_num_threads"></a><a name="omp-get-num-threads"></a>omp_get_num_threads
 
-並列領域でスレッドの数を返します。
+並列領域のスレッド数を返します。
 
-```
+```cpp
 int omp_get_num_threads( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.2 omp_get_num_threads 関数](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)します。
+詳細については[、3.1.2 omp_get_num_threads機能](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -332,55 +332,55 @@ int main()
 1
 ```
 
-## <a name="omp-get-thread-num"></a>omp_get_thread_num
+## <a name="omp_get_thread_num"></a><a name="omp-get-thread-num"></a>omp_get_thread_num
 
-そのスレッド チーム内で実行するスレッドのスレッド数を返します。
+スレッド チーム内で実行されているスレッドのスレッド番号を返します。
 
-```
+```cpp
 int omp_get_thread_num( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.4 omp_get_thread_num 関数](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)します。
+詳細については[、3.1.4 omp_get_thread_num機能](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[並列](openmp-directives.md#parallel)の使用例については`omp_get_thread_num`します。
+の使用例については、[パラレル](openmp-directives.md#parallel)を`omp_get_thread_num`参照してください。
 
-## <a name="omp-get-wtick"></a>omp_get_wtick
+## <a name="omp_get_wtick"></a><a name="omp-get-wtick"></a>omp_get_wtick
 
-プロセッサのクロックのティック間の秒数を返します。
+プロセッサクロック刻み間隔の秒数を返します。
 
-```
+```cpp
 double omp_get_wtick( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.3.2 omp_get_wtick 関数](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)します。
+詳細については[、3.3.2 omp_get_wtick機能](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_get_wtime](#omp-get-wtime)の使用例については`omp_get_wtick`します。
+の使用例`omp_get_wtick`については[、omp_get_wtime](#omp-get-wtime)を参照してください。
 
-## <a name="omp-get-wtime"></a>omp_get_wtime
+## <a name="omp_get_wtime"></a><a name="omp-get-wtime"></a>omp_get_wtime
 
-ある時点から経過した時間の秒の値を返します。
+ある時点から経過した時間の秒数を返します。
 
-```
+```cpp
 double omp_get_wtime( );
 ```
 
 ### <a name="return-value"></a>戻り値
 
-いくつか任意が一貫性のあるポイントからの経過時間の秒数値を返します。
+任意の一貫性のあるポイントから経過した時間の秒数を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-そのポイントは、今後の比較ができるようにするプログラムの実行中に一貫性のある残ります。
+その点はプログラムの実行中も一貫して維持され、今後の比較が可能になります。
 
-詳細については、次を参照してください。 [3.3.1 omp_get_wtime 関数](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)します。
+詳細については[、3.3.1 omp_get_wtime関数](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -413,17 +413,17 @@ wtick = 2.793651148400146e-007
 1/wtick = 3579545
 ```
 
-## <a name="omp-in-parallel"></a>omp_in_parallel
+## <a name="omp_in_parallel"></a><a name="omp-in-parallel"></a>omp_in_parallel
 
-並列領域内から呼び出された場合、0 以外の値を返します。
+並列領域内から呼び出された場合は、0 以外を返します。
 
-```
+```cpp
 int omp_in_parallel( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.6 omp_in_parallel 関数](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)します。
+詳細については[、3.1.6 omp_in_parallel機能](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -451,11 +451,11 @@ int main( )
 1
 ```
 
-## <a name="omp-init-lock"></a>omp_init_lock
+## <a name="omp_init_lock"></a><a name="omp-init-lock"></a>omp_init_lock
 
 単純なロックを初期化します。
 
-```
+```cpp
 void omp_init_lock(
    omp_lock_t *lock
 );
@@ -463,12 +463,12 @@ void omp_init_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)します。
+詳細については[、「3.2.1 omp_init_lock関数とomp_init_nest_lock関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -543,11 +543,11 @@ Thread 3 - starting locked region
 Thread 3 - ending locked region
 ```
 
-## <a name="omp-init-nest-lock"></a>omp_init_nest_lock
+## <a name="omp_init_nest_lock"></a><a name="omp-init-nest-lock"></a>omp_init_nest_lock
 
 ロックを初期化します。
 
-```
+```cpp
 void omp_init_nest_lock(
    omp_nest_lock_t *lock
 );
@@ -555,14 +555,14 @@ void omp_init_nest_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
+*ロック*<br/>
 `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-入れ子の最初の数には 0 です。
+初期ネスト数はゼロです。
 
-詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)します。
+詳細については[、「3.2.1 omp_init_lock関数とomp_init_nest_lock関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -628,11 +628,11 @@ Thread 0 - starting nested locked region
 Thread 0 - ending nested locked region
 ```
 
-## <a name="omp-set-dynamic"></a>omp_set_dynamic
+## <a name="omp_set_dynamic"></a><a name="omp-set-dynamic"></a>omp_set_dynamic
 
-今後の並列領域で使用できるスレッドの数を実行時に調整できることを示します。
+今後の並列領域で使用可能なスレッド数を実行時に調整できることを示します。
 
-```
+```cpp
 void omp_set_dynamic(
    int val
 );
@@ -640,18 +640,18 @@ void omp_set_dynamic(
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
-今後の並列領域で使用できるスレッドの数をランタイムに調整できるかどうかを示す値。 0 以外の場合、ランタイムは、スレッドの数を調整できます 0 の場合、ランタイムはスレッドの数を動的に調整されません。
+*ヴァル*<br/>
+今後の並列領域で使用可能なスレッド数をランタイムで調整できるかどうかを示す値。 0 以外の場合、ランタイムはスレッド数を調整できます (0 の場合、ランタイムはスレッド数を動的に調整しません)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スレッドの数はによって設定された値を超えることはありません[omp_set_num_threads](#omp-set-num-threads)または[OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads)します。
+スレッドの数が[、omp_set_num_threads](#omp-set-num-threads)または[OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads)によって設定された値を超えることはありません。
 
-使用[omp_get_dynamic](#omp-get-dynamic)の現在の設定を表示する`omp_set_dynamic`します。
+[omp_get_dynamic](#omp-get-dynamic)を使用して、 の現在`omp_set_dynamic`の設定を表示します。
 
-設定`omp_set_dynamic`の設定を上書き、 [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)環境変数。
+の設定`omp_set_dynamic`は[、OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)環境変数の設定をオーバーライドします。
 
-詳細については、次を参照してください。 [3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)します。
+詳細については[、3.1.7 omp_set_dynamic機能](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -679,11 +679,11 @@ int main()
 1
 ```
 
-## <a name="omp-set-lock"></a>omp_set_lock
+## <a name="omp_set_lock"></a><a name="omp-set-lock"></a>omp_set_lock
 
-ロックが利用可能になるまで、スレッドの実行をブロックします。
+ロックが使用可能になるまでスレッドの実行をブロックします。
 
-```
+```cpp
 void omp_set_lock(
    omp_lock_t *lock
 );
@@ -691,22 +691,22 @@ void omp_set_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_lock_t`で初期化された[omp_init_lock 関数](#omp-init-lock)します。
+*ロック*<br/>
+omp_init_lock で初期化`omp_lock_t`された型の変数[omp_init_lock](#omp-init-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)します。
+詳細については[、「3.2.3 omp_set_lockとomp_set_nest_lock関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)」を参照してください。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
-参照してください[omp_init_lock 関数](#omp-init-lock)の使用例については`omp_set_lock`します。
+の使用例については[、「omp_init_lock」](#omp-init-lock)を`omp_set_lock`参照してください。
 
-## <a name="omp-set-nest-lock"></a>omp_set_nest_lock
+## <a name="omp_set_nest_lock"></a><a name="omp-set-nest-lock"></a>omp_set_nest_lock
 
-ロックが利用可能になるまで、スレッドの実行をブロックします。
+ロックが使用可能になるまでスレッドの実行をブロックします。
 
-```
+```cpp
 void omp_set_nest_lock(
    omp_nest_lock_t *lock
 );
@@ -714,22 +714,22 @@ void omp_set_nest_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_nest_lock_t`で初期化された[omp_init_nest_lock](#omp-init-nest-lock)します。
+*ロック*<br/>
+omp_init_nest_lock で初期化`omp_nest_lock_t`された型の変数[omp_init_nest_lock](#omp-init-nest-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)します。
+詳細については[、「3.2.3 omp_set_lockとomp_set_nest_lock関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)」を参照してください。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
-参照してください[omp_init_nest_lock](#omp-init-nest-lock)の使用例については`omp_set_nest_lock`します。
+の使用例`omp_set_nest_lock`については[、「omp_init_nest_lock」](#omp-init-nest-lock)を参照してください。
 
-## <a name="omp-set-nested"></a>omp_set_nested
+## <a name="omp_set_nested"></a><a name="omp-set-nested"></a>omp_set_nested
 
-入れ子になった並列処理を有効にします。
+ネストされた並列処理を有効にします。
 
-```
+```cpp
 void omp_set_nested(
    int val
 );
@@ -737,20 +737,20 @@ void omp_set_nested(
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
-0 以外の値は 0 が入れ子になった並列処理を無効に、入れ子になった並列処理を利用できます。
+*ヴァル*<br/>
+ゼロ以外の値はネストされた並列処理を可能にし、ゼロはネストされた並列処理を無効にします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-入れ子になった OMP 並列処理をオンに`omp_set_nested`、かを設定して、 [OMP_NESTED](openmp-environment-variables.md#omp-nested)環境変数。
+OMP ネストされた並列処理は、 を`omp_set_nested`使用してオンにするか[、OMP_NESTED](openmp-environment-variables.md#omp-nested)環境変数を設定することによって有効にすることができます。
 
-設定`omp_set_nested`の設定を上書き、`OMP_NESTED`環境変数。
+の設定`omp_set_nested`は環境変数の設定を`OMP_NESTED`オーバーライドします。
 
-環境変数を有効にすると、並行領域を入れ子にする場合にスレッドの数が指数関数的に増えるため、それ以外の場合に運用上のプログラムを中断できます。 たとえば、4 に設定する OMP スレッドの数を 6 回の再帰の回数を関数には、4,096 (4 の 6 乗) が必要です。 スレッド。 除く O バインドのアプリケーションとアプリケーションのパフォーマンス一般的に低下プロセッサよりも多くのスレッドがある場合。
+並列領域を入れ子にするときにスレッドの数が指数関数的に増加するため、環境変数を有効にすると、それ以外の操作プログラムが中断される可能性があります。 たとえば、OMP スレッドの数を 4 に設定して 6 回再帰する関数には、4,096 (6 の累乗の 4) スレッドが必要です。 I/O バインド アプリケーションを除き、プロセッサよりもスレッド数が多い場合、アプリケーションのパフォーマンスは一般的に低下します。
 
-使用[omp_get_nested](#omp-get-nested)の現在の設定を表示する`omp_set_nested`します。
+[omp_get_nested](#omp-get-nested)を使用して、 の現在`omp_set_nested`の設定を表示します。
 
-詳細については、次を参照してください。 [3.1.9 omp_set_nested 関数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)します。
+詳細については[、3.1.9 omp_set_nested関数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -778,11 +778,11 @@ int main( )
 1
 ```
 
-## <a name="omp-set-num-threads"></a>omp_set_num_threads
+## <a name="omp_set_num_threads"></a><a name="omp-set-num-threads"></a>omp_set_num_threads
 
-によってオーバーライドされない限り、今後の並列領域でスレッドの数を設定、 [num_threads](openmp-clauses.md#num-threads)句。
+[num_threads](openmp-clauses.md#num-threads)節でオーバーライドされない限り、今後の並列領域内のスレッド数を設定します。
 
-```
+```cpp
 void omp_set_num_threads(
    int num_threads
 );
@@ -791,21 +791,21 @@ void omp_set_num_threads(
 ### <a name="parameters"></a>パラメーター
 
 *num_threads*<br/>
-並列領域でスレッドの数。
+並列領域内のスレッドの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.1.1 omp_set_num_threads 関数](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)します。
+詳細については[、3.1.1 omp_set_num_threads関数](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_get_num_threads](#omp-get-num-threads)の使用例については`omp_set_num_threads`します。
+の[omp_get_num_threads](#omp-get-num-threads)使用例`omp_set_num_threads`についてはomp_get_num_threadsを参照してください。
 
-## <a name="omp-test-lock"></a>omp_test_lock
+## <a name="omp_test_lock"></a><a name="omp-test-lock"></a>omp_test_lock
 
-ロックを設定しようとしていますが、スレッドの実行をブロックしません。
+ロックを設定しようとしますが、スレッドの実行をブロックしません。
 
-```
+```cpp
 int omp_test_lock(
    omp_lock_t *lock
 );
@@ -813,12 +813,12 @@ int omp_test_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_lock_t`で初期化された[omp_init_lock 関数](#omp-init-lock)します。
+*ロック*<br/>
+omp_init_lock で初期化`omp_lock_t`された型の変数[omp_init_lock](#omp-init-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)します。
+詳細については[、「3.2.5 omp_test_lockとomp_test_nest_lock関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -874,11 +874,11 @@ Thread 3 - acquired simple_lock
 Thread 3 - released simple_lock
 ```
 
-## <a name="omp-test-nest-lock"></a>omp_test_nest_lock
+## <a name="omp_test_nest_lock"></a><a name="omp-test-nest-lock"></a>omp_test_nest_lock
 
-入れ子にできるロックを設定しようとしていますが、スレッドの実行をブロックしません。
+入れ子にできるロックを設定しようとしますが、スレッドの実行をブロックしません。
 
-```
+```cpp
 int omp_test_nest_lock(
    omp_nest_lock_t *lock
 );
@@ -886,12 +886,12 @@ int omp_test_nest_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_nest_lock_t`で初期化された[omp_init_nest_lock](#omp-init-nest-lock)します。
+*ロック*<br/>
+omp_init_nest_lock で初期化`omp_nest_lock_t`された型の変数[omp_init_nest_lock](#omp-init-nest-lock)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)します。
+詳細については[、「3.2.5 omp_test_lockとomp_test_nest_lock関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -965,11 +965,11 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock
 ```
 
-## <a name="omp-unset-lock"></a>omp_unset_lock
+## <a name="omp_unset_lock"></a><a name="omp-unset-lock"></a>omp_unset_lock
 
-ロックを解放します。
+ロックを解除します。
 
-```
+```cpp
 void omp_unset_lock(
    omp_lock_t *lock
 );
@@ -977,22 +977,22 @@ void omp_unset_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_lock_t`で初期化された[omp_init_lock 関数](#omp-init-lock)スレッドによって所有されている、および関数で実行します。
+*ロック*<br/>
+omp_init_lockで初期化された`omp_lock_t`型の変数は[omp_init_lock](#omp-init-lock)、スレッドによって所有され、関数で実行されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。
+詳細については[、3.2.4 omp_unset_lockおよびomp_unset_nest_lock関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_init_lock 関数](#omp-init-lock)の使用例については`omp_unset_lock`します。
+の使用例については[、「omp_init_lock」](#omp-init-lock)を`omp_unset_lock`参照してください。
 
-## <a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
+## <a name="omp_unset_nest_lock"></a><a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
 
-入れ子にできるロックを解放します。
+ネスト可能ロックを解放します。
 
-```
+```cpp
 void omp_unset_nest_lock(
    omp_nest_lock_t *lock
 );
@@ -1000,13 +1000,13 @@ void omp_unset_nest_lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*lock*<br/>
-型の変数`omp_nest_lock_t`で初期化された[omp_init_nest_lock](#omp-init-nest-lock)スレッドによって所有されている、および関数で実行します。
+*ロック*<br/>
+omp_init_nest_lock で初期化`omp_nest_lock_t`された型の変数[omp_init_nest_lock](#omp-init-nest-lock)が、スレッドによって所有され、関数で実行されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。
+詳細については[、3.2.4 omp_unset_lockおよびomp_unset_nest_lock関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[omp_init_nest_lock](#omp-init-nest-lock)の使用例については`omp_unset_nest_lock`します。
+の使用例`omp_unset_nest_lock`については[、「omp_init_nest_lock」](#omp-init-nest-lock)を参照してください。

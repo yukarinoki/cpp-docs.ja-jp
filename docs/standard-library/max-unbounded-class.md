@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fbc4351297ab8a3cc90a2a77fa31c3b134f10eab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370993"
 ---
-# <a name="maxunbounded-class"></a>max_unbounded クラス
+# <a name="max_unbounded-class"></a>max_unbounded クラス
 
 [freelist](../standard-library/freelist-class.md) オブジェクトの最長値を制限しない[最大クラス](../standard-library/allocators-header.md) オブジェクトを記述します。
 
@@ -38,9 +38,9 @@ class max_unbounded
 |メンバー関数|説明|
 |-|-|
 |[allocated](#allocated)|割り当てられたメモリ ブロックの数を増やします。|
-|[deallocated](#deallocated)|割り当てられたメモリ ブロックの数を減らします。|
-|[full](#full)|フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。|
-|[released](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
+|[解放](#deallocated)|割り当てられたメモリ ブロックの数を減らします。|
+|[完全](#full)|フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。|
+|[リリース](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
 |[saved](#saved)|フリー リスト上のメモリ ブロックの数を減らします。|
 
 ## <a name="requirements"></a>必要条件
@@ -49,7 +49,7 @@ class max_unbounded
 
 **名前空間:** stdext
 
-## <a name="allocated"></a>  max_unbounded::allocated
+## <a name="max_unboundedallocated"></a><a name="allocated"></a>max_unbounded::割り当て済み
 
 割り当てられたメモリ ブロックの数を増やします。
 
@@ -61,13 +61,13 @@ void allocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Nx (_s)*|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は何も処理を行いません。 これは、operator `cache_freelist::allocate` **new**によるの呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
+このメンバー関数は何も処理を行いません。 これは、オペレータ`cache_freelist::allocate`**new**への呼び出しが成功するたびに呼び出されます。 引数 *_Nx*は、演算子**new**によって割り当てられたチャンク内のメモリ ブロックの数です。
 
-## <a name="deallocated"></a>  max_unbounded::deallocated
+## <a name="max_unboundeddeallocated"></a><a name="deallocated"></a>max_unbounded::d割り当て済み
 
 割り当てられたメモリ ブロックの数を減らします。
 
@@ -79,13 +79,13 @@ void deallocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Nx (_s)*|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、が operator **delete**に`cache_freelist::deallocate`対してを呼び出すたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、オペレーター delete`cache_freelist::deallocate`を呼び出すたびに呼び出**されます**。 引数 *_Nx*は、演算子 delete によって割り当て解除されたチャンク内のメモリ ブロックの数**です**。
 
-## <a name="full"></a>  max_unbounded::full
+## <a name="max_unboundedfull"></a><a name="full"></a>max_unbounded::フル
 
 フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。
 
@@ -95,13 +95,13 @@ bool full();
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は常に**false**を返します。
+メンバー関数は常に**false**を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しで**true**が返され`deallocate`た場合、はメモリブロックをフリーリストに格納します。 `deallocate` false が返された場合は、operator **delete**を呼び出してブロックの割り当てを解除します。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出し**true**が`deallocate`true を返す場合は、メモリ ブロックを空きリストに配置します。false を返す`deallocate`場合は、演算子**delete**を呼び出してブロックの割り当てを解除します。
 
-## <a name="released"></a>  max_unbounded::released
+## <a name="max_unboundedreleased"></a><a name="released"></a>max_unbounded::リリース済み
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -109,11 +109,11 @@ bool full();
 void released();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は何も処理を行いません。 現在の最大クラスの `released` メンバー関数は、`cache_freelist::allocate` によって、フリー リストからメモリ ブロックが削除されるたびに、呼び出されます。
 
-## <a name="saved"></a>  max_unbounded::saved
+## <a name="max_unboundedsaved"></a><a name="saved"></a>max_unbounded::保存済み
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -121,10 +121,10 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は何も処理を行いません。 `cache_freelist::deallocate` によって、フリー リストにメモリ ブロックが置かれるたびに、呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<アロケーター>](../standard-library/allocators-header.md)

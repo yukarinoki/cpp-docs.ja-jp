@@ -1,5 +1,5 @@
 ---
-title: Tchar.h における汎用テキスト マッピング
+title: tchar.h における汎用テキストのマッピング
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361344"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキスト マッピング
+# <a name="generic-text-mappings-in-tcharh"></a>tchar.h における汎用テキストのマッピング
 
-国際対応のコードの転送を簡略化するのには、Microsoft ランタイム ライブラリは、多くのデータ型、ルーチン、およびその他のオブジェクトの Microsoft 固有の汎用テキスト マッピングを提供します。 1 バイト、マルチバイト、コンパイルできるジェネリック コードを記述する、tchar.h で定義されているこれらのマッピングを使用するかを使用して定義するマニフェスト定数に応じて、Unicode 文字のセットを`#define`ステートメント。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
+国際化用コードの転送を簡素化するために、Microsoft ランタイム ライブラリには、多くのデータ型、ルーチン、およびその他のオブジェクトに対応する Microsoft 固有の汎用テキスト マッピングが用意されています。 ステートメントを使用して定義するマニフェスト定数に応じて、tchar.h で定義されているこれらのマッピングを使用して、1 バイト、マルチバイト、または Unicode 文字セット用にコンパイルできる汎用コードを`#define`記述できます。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
 
-Tchar.h を使用すると、1 バイト、マルチバイト文字のセット (MBCS) と同じソースから Unicode アプリケーションを構築できます。 Tchar.h マクロを定義します (これには、プレフィックスが付いて`_tcs`) にマップされると、正しいプリプロセッサ定義`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。
+tchar.h を使用すると、同じソースからシングルバイト、マルチバイト文字セット (MBCS)、および Unicode アプリケーションを構築できます。 tchar.h は、適切なプリプロセッサ`_tcs`定義を使用して、 、`str``_mbs`または`wcs`関数に対応付けるマクロ ( 接頭部を持つ ) を定義します。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、`_UNICODE`記号 を定義します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。
 
-`_TCHAR`データ型は、tchar.h で条件付きで定義されます。 場合、シンボル`_UNICODE`、ビルドが定義されている`_TCHAR`として定義されます**wchar_t**。 そうしないと、1 バイト、MBCS のビルドとして定義されて**char**します。 (**wchar_t**、基本の Unicode ワイド文字データ型を 8 ビット符号付き 16 ビット版は、 **char**)。国際対応のアプリケーションでは、バイトではなく `_tcs` を扱う `_TCHAR` ファミリの関数を使う必要があります。 たとえば、`_tcsncpy`コピー `n` `_TCHARs`ではなく、`n`バイト。
+データ`_TCHAR`型は、tchar.h で条件付きで定義されます。 シンボル`_UNICODE`がビルドに定義されている場合は`_TCHAR`**、wchar_t**として定義されます。それ以外の場合は、シングルバイトビルドおよび MBCS ビルドの場合は char**として定義**されます。 (**wchar_t**は、Unicode ワイド文字の基本データ型で、8 ビット符号**付き char**に対応する 16 ビットのデータ型です)。国際化アプリケーションの場合は`_tcs`、バイトではなく単位で動作する`_TCHAR`関数ファミリを使用します。 たとえば、`_tcsncpy`バイトではなく`n``_TCHARs``n`コピーをコピーします。
 
 1 バイト文字セット (SBCS: Single Byte Character Set) の文字列処理関数の中には、符号付きの `char*` パラメーターを受け取るものがあります。このため、`_MBCS` を定義すると、型の不一致を知らせるコンパイラの警告が生成される場合があります。 この警告を回避する方法は 3 つあります。
 
-1. Tchar.h のタイプ セーフなインライン関数のサンクを使用します。 これが既定の動作です。
+1. タイプ セーフなインライン関数サンクは、tchar.h で使用します。 これは既定の動作です。
 
-1. Tchar.h の直接マクロを定義して使用`_MB_MAP_DIRECT`コマンド行にします。 この場合は、型を手作業で一致させる必要があります。 これは一番速い方法ですが、タイプ セーフではありません。
+1. コマンド行で定義して、tchar.h`_MB_MAP_DIRECT`の直接マクロを使用します。 この場合は、型を手作業で一致させる必要があります。 これは一番速い方法ですが、タイプ セーフではありません。
 
-1. Tchar.h のタイプ セーフな静的リンク ライブラリ関数のサンクを使用します。 この場合は、コマンド ラインで定数 `_NO_INLINING` を定義します。 これは、一番時間がかかりますが、一番タイプ セーフな方法です。
+1. タイプ セーフな静的にリンクされたライブラリ関数を tchar.h で使用します。 この場合は、コマンド ラインで定数 `_NO_INLINING` を定義します。 これは、一番時間がかかりますが、一番タイプ セーフな方法です。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>汎用テキスト マッピング用のプリプロセッサ ディレクティブ
 
@@ -41,23 +41,23 @@ Tchar.h を使用すると、1 バイト、マルチバイト文字のセット 
 |`_MBCS`|マルチバイト文字|`_tcsrev` は `_mbsrev` に割り当てられます。|
 |なし (既定では `_UNICODE` も `_MBCS` も未定義)|SBCS (ASCII)|`_tcsrev` は `strrev` に割り当てられます。|
 
-たとえば、汎用テキスト関数`_tcsrev`、マップ、tchar.h で定義されている`_mbsrev`定義した場合`_MBCS`プログラムでは、または`_wcsrev`定義した場合`_UNICODE`します。 それ以外の場合、`_tcsrev` は `strrev` に割り当てられます。 その他のデータ型のマッピングはプログラミングの便宜上、tchar.h に用意されてが`_TCHAR`は、最も役立ちます。
+たとえば、 tchar.h`_tcsrev`で定義されている汎用テキスト関数は、 プログラムで定義`_mbsrev``_MBCS`した場合、または 定義されている場合に`_wcsrev`マップされます`_UNICODE`。 それ以外の場合、`_tcsrev` は `strrev` に割り当てられます。 その他のデータ型のマッピングは、プログラミングの便宜のために tchar.h で提供されていますが`_TCHAR`、最も便利です。
 
 ### <a name="generic-text-data-type-mappings"></a>汎用テキストのデータ型のマップ
 
-|汎用テキスト<br /> データ型名|_UNICODE (&AMP; A)<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
+|汎用テキスト<br /> データ型名|_UNICODE &<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
 |`_TSCHAR`|**signed char**|**signed char**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (次の文字または文字列を対応する Unicode に変換)|
+|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L`(次の文字または文字列を対応する Unicode に変換します)|
 
-ルーチン、変数、およびその他のオブジェクトの汎用テキスト マッピングの一覧は、次を参照してください。[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)ランタイム ライブラリのリファレンス。
+ルーチン、変数、およびその他のオブジェクトの汎用テキストマッピングのリストについては、『ランタイム・ライブラリー [・リファレンス』の「汎用テキスト・マッピング](../c-runtime-library/generic-text-mappings.md)」を参照してください。
 
 > [!NOTE]
->  Unicode の文字列には NULL バイトが含まれている可能性があるため、この文字列と一緒に `str` ファミリの関数を使用しないでください。 同様に、MBCS (または SBCS) 文字列には `wcs` ファミリの関数を使用しないでください。
+> Unicode の文字列には NULL バイトが含まれている可能性があるため、この文字列と一緒に `str` ファミリの関数を使用しないでください。 同様に、MBCS (または SBCS) 文字列には `wcs` ファミリの関数を使用しないでください。
 
 MBCS、Unicode、および SBCS の各モデルにマッピングするために、`_TCHAR` と `_tcsrev` を使用するコード例を次に示します。
 
@@ -80,7 +80,7 @@ wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-どちらの場合`_MBCS`も`_UNICODE`されている、定義されている、プリプロセッサによってマップされます、フラグメント 1 バイトの ASCII コードに次のようにします。
+定義`_MBCS``_UNICODE`されていない場合、プリプロセッサはフラグメントを 1 バイト ASCII コードにマップします。
 
 ```cpp
 char *RetVal, *szString;

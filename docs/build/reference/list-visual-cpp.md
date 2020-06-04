@@ -1,21 +1,20 @@
 ---
-title: '&lt;リスト > (ドキュメント コメントの C++)'
+title: '&lt;リスト > (C++ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305269"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439303"
 ---
-# <a name="ltlistgt"></a>&lt;リスト&gt;
+# <a name="ltlistgt"></a>&lt;list&gt;
 
 \< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。
 
@@ -42,7 +41,7 @@ ms.locfileid: "62305269"
 *description*<br/>
 行頭文字または番号付きリストの項目、または `term` の定義です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 リスト内の各項目は、\<item> ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。
 
@@ -69,6 +68,6 @@ ms.locfileid: "62305269"
 class MyClass {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

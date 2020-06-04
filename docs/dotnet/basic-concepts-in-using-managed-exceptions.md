@@ -10,36 +10,36 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6bc1e9c6d40599ae9a821179dcf56dbb7e21bf10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372528"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>マネージド例外の使用についての基本概念
 
-このトピックでは、マネージ アプリケーションでの例外処理について説明します。 つまり、アプリケーションでコンパイルされる、 **/clr**コンパイラ オプション。
+このトピックでは、マネージ アプリケーションでの例外処理について説明します。 つまり **、/clr**コンパイラ オプションを使用してコンパイルされるアプリケーションです。
 
 ## <a name="in-this-topic"></a>このトピックの内容
 
-- [/Clr での例外をスローします。](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [/clr の下で例外をスローする](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [CLR の拡張機能の Try/catch ブロック](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [CLR 拡張機能のブロックを試す/キャッチする](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-コンパイルする場合、 **/clr**オプション、標準と CLR の例外を処理できる<xref:System.Exception>クラスは、CLR の例外を処理するための多くの便利なメソッドを提供し、ユーザー定義の例外の基底クラスとしてはお勧めしますクラス。
+**/clr**オプションを使用してコンパイルする場合は、CLR 例外を処理できるだけでなく<xref:System.Exception>、標準クラスは CLR 例外を処理するための便利なメソッドを多数提供し、ユーザー定義の例外クラスの基本クラスとして推奨されます。
 
-インターフェイスから派生した例外の種類のキャッチはサポートされていません **/clr**します。 また、共通言語ランタイムは許可されていません。 スタック オーバーフローの例外をキャッチするにはスタック オーバーフロー例外は、プロセスを終了します。
+インターフェイスから派生した例外型をキャッチする場合は **、/clr**ではサポートされていません。 また、共通言語ランタイムでは、スタック オーバーフロー例外をキャッチすることはできません。スタック オーバーフロー例外はプロセスを終了します。
 
-マネージ コードとアンマネージ アプリケーションでの例外処理の相違点の詳細については、次を参照してください。[例外処理動作のマネージ拡張で C++ の相違](../dotnet/differences-in-exception-handling-behavior-under-clr.md)します。
+マネージ アプリケーションとアンマネージ アプリケーションでの例外処理の違いの詳細については、「 [C++ マネージ拡張での例外処理動作の違い](../dotnet/differences-in-exception-handling-behavior-under-clr.md)」を参照してください。
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> /Clr での例外をスローします。
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>/clr の下で例外をスローする
 
-CLR 型を識別するハンドルをスローする、C++ throw 式が拡張されます。 次の例では、カスタム例外型を作成し、し、その型のインスタンスがスローされます。
+C++ スロー式は CLR 型へのハンドルをスローするように拡張されます。 次の例では、カスタム例外の種類を作成し、その型のインスタンスをスローします。
 
-```
+```cpp
 // clr_exception_handling.cpp
 // compile with: /clr /c
 ref struct MyStruct: public System::Exception {
@@ -53,9 +53,9 @@ void GlobalFunction() {
 }
 ```
 
-値の型は、スローされる前にボックス化する必要があります。
+値型はスローする前にボックス化する必要があります。
 
-```
+```cpp
 // clr_exception_handling_2.cpp
 // compile with: /clr /c
 value struct MyValueStruct {
@@ -68,11 +68,11 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> CLR の拡張機能の Try/Catch ブロック
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 拡張機能のブロックを試す/キャッチする
 
-同じ**try**/**catch**ブロック構造を使用して、CLR とネイティブの両方の例外をキャッチできます。
+同じ**try**/**catch**ブロック構造を使用して、CLR 例外とネイティブ例外の両方をキャッチできます。
 
-```
+```cpp
 // clr_exception_handling_3.cpp
 // compile with: /clr
 using namespace System;
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```
 In 'catch(CMyClass& catchC)'
@@ -128,23 +128,23 @@ In 'catch(MyStruct^ catchException)'
 
 ### <a name="order-of-unwinding-for-c-objects"></a>C++ オブジェクトのアンワインドの順序
 
-スロー関数と処理関数の間、ランタイム スタックで可能性のあるデストラクターに C++ オブジェクトのアンワインドが発生します。 CLR 型がヒープに割り当てられている、ため、アンワインドはそれらに適用されません。
+アンワインドは、スローする関数と処理関数の間のランタイム スタックに存在する可能性のあるデストラクターを持つ C++ オブジェクトに対して発生します。 CLR 型はヒープに割り当てられるため、アンワインドは適用されません。
 
 スローされた例外のイベントの順序は次のとおりです。
 
-1. ランタイムが検索または seh を使う場合、適切な catch 句のスタックを走査、フィルター、例外をキャッチする、SEH を除く。 Catch 句構文の順序で最初に検索し、下へ動的に呼び出し履歴。
+1. ランタイムは、適切な catch 句を探すスタックを走査します。 catch 句は最初に構文順に検索され、次に呼び出し履歴を動的に下にして検索されます。
 
-1. 適切なハンドラーが見つかったら、スタックがそのポイントにアンワインドされます。 スタック上の各関数呼び出しについては、そのローカルのオブジェクトが破棄され、ブロックが実行される __finally、ほとんどの外側に入れ子になった。
+1. 正しいハンドラが見つかると、スタックはその時点まで巻き戻されます。 スタック上の各関数呼び出しに対して、そのローカルオブジェクトは破壊され、__finallyブロックがネストされた外側から実行されます。
 
-1. スタックがアンワインドされると、catch 句が実行されます。
+1. スタックが巻き戻されると、catch 句が実行されます。
 
-### <a name="catching-unmanaged-types"></a>アンマネージ型をキャッチします。
+### <a name="catching-unmanaged-types"></a>アンマネージ型のキャッチ
 
-非管理対象のオブジェクトの種類がスローされたときに、型の例外でラップ<xref:System.Runtime.InteropServices.SEHException>します。 適切な検索するときに**catch**句では、2 つの可能性があります。
+アンマネージ オブジェクト型がスローされると、型を除いてラップされます<xref:System.Runtime.InteropServices.SEHException>。 適切な**catch**句を検索する場合、2 つの可能性があります。
 
-- ネイティブ C++ の型が発生した場合、例外がラップ解除され、検出された型と比較します。 この比較により、通常の方法でキャッチするネイティブ C++ の型。
+- ネイティブ C++ 型が検出されると、例外はラップ解除され、検出された型と比較されます。 この比較により、ネイティブ C++ 型を通常の方法でキャッチできます。
 
-- ただし場合、**catch**型の句**SEHException**またはその基本クラスのいずれかが最初に調べられ、句は、例外をインターセプトします。 そのため、いずれかの catch 句の CLR 型の前に、まずネイティブ C++ の型をキャッチするすべての catch 句を配置する必要があります。
+- ただし、**型 SEHException**またはその基底クラスのいずれかの**catch**句が最初に調べものとなれば、その句は例外をインターセプトします。 したがって、ネイティブ C++ 型をキャッチするすべての catch 句は、CLR 型の catch 句の前に最初に配置する必要があります。
 
 次の点に注意してください。
 
@@ -152,17 +152,17 @@ In 'catch(MyStruct^ catchException)'
 catch(Object^)
 ```
 
-と、呼び出し
+and
 
 ```
 catch(...)
 ```
 
-両方の SEH 例外を含む任意のスローされた型をキャッチします。
+SEH 例外を含むスローされた型を両方ともキャッチします。
 
-アンマネージ型は catch(Object^) によってキャッチされました、放り投げたオブジェクトは破棄されません。
+アンマネージ型が catch(Object^) によってキャッチされた場合、スローされたオブジェクトは破棄されません。
 
-使用することをお勧めスローおよびキャッチする例外をアンマネージ、時に、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプションの代わりに **/EHs**または **/EHa**します。
+アンマネージ例外をスローまたはキャッチする場合は **、/EHs**または **/EHa**の代わりに[/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプションを使用することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

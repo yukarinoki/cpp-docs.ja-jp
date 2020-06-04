@@ -9,30 +9,30 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384674"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545163"
 ---
 # <a name="serialization-ccli"></a>シリアル化 (C++/CLI)
 
-シリアル化 (オブジェクトまたはメンバーを永続的なメディアの状態を保存するプロセス) の管理対象のクラス (個々 のフィールドまたはプロパティを含む) でサポートされて、<xref:System.SerializableAttribute>と<xref:System.NonSerializedAttribute>クラス。
+マネージクラス (個々のフィールドまたはプロパティを含む) のシリアル化 (オブジェクトまたはメンバーの状態を保存するプロセス) は、<xref:System.SerializableAttribute> クラスと <xref:System.NonSerializedAttribute> クラスでサポートされています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-適用、 **SerializableAttribute**クラス全体をシリアル化またはだけに特定のフィールドやマネージ クラスの部分をシリアル化するプロパティを適用するマネージ クラスのカスタム属性。 使用して、 **NonSerializedAttribute**シリアル化の対象から除外フィールドやマネージ クラスのプロパティにカスタム属性。
+**SerializableAttribute**カスタム属性をマネージクラスに適用して、クラス全体をシリアル化するか、特定のフィールドまたはプロパティのみを適用してマネージクラスの一部をシリアル化します。 **NonSerializedAttribute**カスタム属性を使用して、マネージクラスのフィールドまたはプロパティをシリアル化から除外します。
 
 ## <a name="example"></a>例
 
 ### <a name="description"></a>説明
 
-次の例では、クラスで`MyClass`(およびプロパティ`m_nCount`) シリアル化可能としてマークされます。 ただし、`m_nData`で示されているプロパティはシリアル化されません、 **NonSerialized**カスタム属性。
+次の例では、クラス `MyClass` (およびプロパティ `m_nCount`) は serializable としてマークされています。 ただし、`m_nData` プロパティはシリアル化されていない**カスタム属性**で示されているようにシリアル化されません。
 
 ### <a name="code"></a>コード
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -49,8 +49,8 @@ private:
 
 ### <a name="comments"></a>コメント
 
-"Short name"を使用して、両方の属性を参照できることに注意してください (**Serializable**と**NonSerialized**)。 詳細についてはこの[属性の適用](/dotnet/standard/attributes/applying-attributes)します。
+どちらの属性も、"短い名前" (**Serializable**およびシリアル化され**てい**ない) を使用して参照できます。 これについては、「[属性の適用](/dotnet/standard/attributes/applying-attributes)」で詳しく説明します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

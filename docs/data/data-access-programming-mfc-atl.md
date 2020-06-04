@@ -17,7 +17,7 @@ ms.locfileid: "65221845"
 ---
 # <a name="data-access-programming-mfcatl"></a>データ アクセス プログラミング (MFC/ATL)
 
-長年にわたって、Visual C ++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年には、Microsoft は、ネイティブ コードから SQL Server の製品にアクセスするための推奨されるテクノロジとしてで開いているデータベースの接続 (ODBC) を揃えることが発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。
+長年にわたって、Visual C++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年には、Microsoft は、ネイティブ コードから SQL Server の製品にアクセスするための推奨されるテクノロジとしてで開いているデータベースの接続 (ODBC) を揃えることが発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。
 
 OLE DB は、COM 仕様に基づく低レベルで高パフォーマンスの API であり、Windows でのみサポートされます。 プログラムで[リンク サーバー](/sql/relational-databases/linked-servers/linked-servers-database-engine)にアクセスする場合は、OLE DB を使用します。 ATL には OLE DB テンプレートが用意されており、カスタム OLE DB プロバイダーとコンシューマーを容易に作成できます。 ドキュメントには、Microsoft SQL Server の最新のプロバイダーを参照して、 [OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)します。
 

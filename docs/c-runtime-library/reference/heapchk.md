@@ -1,9 +1,10 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _heapchk
-apilocation:
+- _o__heapchk
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331715"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916210"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 ヒープに対して整合性チェックを実行します。
 
@@ -45,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapchk** Malloc.h に定義されている次の整数マニフェスト定数のいずれかを返します。
+**_heapchk**は、Malloc で定義されている次の整数のマニフェスト定数のいずれかを返します。
 
 |戻り値|条件|
 |-|-|
@@ -55,19 +60,21 @@ int _heapchk( void );
 | **_HEAPEMPTY** | ヒープが初期化されていません。 |
 | **_HEAPOK** | ヒープは一貫性があると思われます。 |
 
-さらに、エラーが発生する場合に **_heapchk**設定**errno**に**返る**します。
+さらに、エラーが発生した場合は、 **_heapchk** **errno**をに設定**します。**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Heapchk**関数により、ヒープの最小限の一貫性をチェックしてヒープ関連の問題をデバッグします。 オペレーティング システムがサポートされていない場合 **_heapchk**関数を返します (たとえば、Windows 98) **_HEAPOK**設定と**errno**に**返る**.
+**_Heapchk**関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、この関数は **_HEAPOK**を返し、 **errno** **をに設定**します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -114,7 +121,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapmin](heapmin.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

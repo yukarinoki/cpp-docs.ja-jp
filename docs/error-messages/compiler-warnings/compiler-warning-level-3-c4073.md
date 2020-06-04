@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-ms.openlocfilehash: db39f76f9bfdd46c300ea6e3738a63b636fe0a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b43f5fc5af23d84fe43727b75d041e39405ade
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402334"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199111"
 ---
 # <a name="compiler-warning-level-3-c4073"></a>コンパイラの警告 (レベル 3) C4073
 
-初期化子がライブラリ初期化領域
+初期化子がライブラリ初期化領域に配置される
 
-サード パーティ製のライブラリの開発者がライブラリ初期化領域で指定されたを使用する必要がありますのみ[#pragma init_seg](../../preprocessor/init-seg.md)します。 次の例では、C4073 が生成されます。
+サードパーティのライブラリの開発者のみが、 [#pragma init_seg](../../preprocessor/init-seg.md)で指定されたライブラリ初期化領域を使用する必要があります。 次の例では、C4073 が生成されます。
 
-```
+```cpp
 // C4073.cpp
 // compile with: /W3
 #pragma init_seg(lib)   // C4073

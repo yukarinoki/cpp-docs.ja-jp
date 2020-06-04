@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr 構造体
+title: scheduler_ptr構造
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_ptr
@@ -8,20 +8,20 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d71a26e5dffcadfb900ef15c26a6d9dc6d6f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358770"
 ---
-# <a name="schedulerptr-structure"></a>scheduler_ptr 構造体
+# <a name="scheduler_ptr-structure"></a>scheduler_ptr構造
 
-スケジューラへのポインターを表します。 このクラスは、生のポインターを使用して、shared_ptr またはプレーンな参照だけを使用して共有有効期間の指定を許可する存在します。
+スケジューラへのポインターを表します。 このクラスは、shared_ptrまたは生のポインターを使用して単純な参照を使用して共有有効期間を指定できるようにするために存在します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct scheduler_ptr;
 ```
 
@@ -37,14 +37,14 @@ struct scheduler_ptr;
 
 |名前|説明|
 |----------|-----------------|
-|[scheduler_ptr::get](#get)|スケジューラへの生のポインターを返します。|
+|[scheduler_ptr::取得](#get)|スケジューラへの生のポインターを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[scheduler_ptr::operator bool](#operator_bool)|スケジューラ ポインターが null 以外であるかどうかをテストします。|
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|ポインターのように動作します。|
+|[scheduler_ptr::オペレーターブール](#operator_bool)|スケジューラ ポインターが null 以外であるかどうかをテストします。|
+|[scheduler_ptr::演算子-&gt;](#operator_ptr)|ポインターのように動作します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,53 +54,53 @@ struct scheduler_ptr;
 
 **ヘッダー:** pplinterface.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="get"></a>  scheduler_ptr::get メソッド
+## <a name="scheduler_ptrget-method"></a><a name="get"></a>scheduler_ptr::メソッドを取得
 
-スケジューラには、生のポインターを返します。
+スケジューラへの生のポインターを返します。
 
-```
+```cpp
 scheduler_interface* get() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
+## <a name="scheduler_ptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr::オペレーターブール
 
 スケジューラ ポインターが null 以外であるかどうかをテストします。
 
-```
+```cpp
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+## <a name="scheduler_ptroperator-gt"></a><a name="operator_ptr"></a>scheduler_ptr::演算子-&gt;
 
-ポインターのように動作します。
+ポインタのように動作します。
 
-```
+```cpp
 scheduler_interface* operator->() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr コンス トラクター
+## <a name="scheduler_ptrscheduler_ptr-constructor"></a><a name="ctor"></a>scheduler_ptr::scheduler_ptrコンストラクタ
 
-Shared_ptr からスケジューラにスケジューラ ポインターを作成します。
+スケジューラへのshared_ptrからスケジューラへのポインターを作成します。
 
-```
+```cpp
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*scheduler*<br/>
-変換するスケジューラー。
+*スケジューラ*<br/>
+変換するスケジューラ。
 
-*pScheduler*<br/>
+*スケジューラー*<br/>
 変換するスケジューラ ポインター。
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[同時実行名前空間](concurrency-namespace.md)

@@ -1,21 +1,21 @@
 ---
-title: ケース (C++ COM 属性)
+title: case (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167339"
 ---
 # <a name="case-c"></a>case (C++)
 
-使用される、 [switch_type](switch-type.md)属性、**共用体**します。
+**共用体**の[switch_type](switch-type.md)属性と共に使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,7 +26,7 @@ ms.locfileid: "62148446"
 #### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-入力の処理を提供する値。 型**値**次の種類のいずれかを指定できます。
+処理を提供する必要がある入力値。 **値**の型は、次のいずれかの型になります。
 
 - `int`
 
@@ -36,15 +36,15 @@ ms.locfileid: "62148446"
 
 - `enum`
 
-または、このような種類の識別子。
+または、このような型の識別子。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**ケース**C++ 属性と同じ機能を持つ、**ケース**MIDL 属性。 この属性でのみ使用、 [switch_type](switch-type.md)属性。
+**Case** C++属性には、 **case** MIDL 属性と同じ機能があります。 この属性は、 [switch_type](switch-type.md)属性でのみ使用されます。
 
 ## <a name="example"></a>例
 
-次のコードの使い方を示しています、**ケース**属性。
+次のコードは、 **case**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -69,14 +69,14 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**対象**|メンバー、**クラス**または**構造体**|
+|**対象**|**クラス**または**構造体**のメンバー|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

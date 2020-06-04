@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: 10357bb1cd46a33a8d4090c1ccc30050584d1816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359354"
 ---
 # <a name="semaphore-class"></a>Semaphore クラス
 
-ユーザーの数に制限をサポートできる共有リソースを制御する同期オブジェクトを表します。
+限られた数のユーザーをサポートできる共有リソースを制御する同期オブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,25 +36,25 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 名前       | 説明
 ---------- | ------------------------------------------------------
-`SyncLock` | 同期ロックをサポートするクラスのシノニムです。
+`SyncLock` | 同期ロックをサポートするクラスのシノニム。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 名前                               | 説明
 ---------------------------------- | ----------------------------------------------------
-[Semaphore::semaphore](#semaphore) | `Semaphore` クラスの新しいインスタンスを初期化します。
+[セマフォ::セマフォ](#semaphore) | `Semaphore` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                     | 説明
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Semaphore::Lock](#lock) | シグナルの状態にある現在のオブジェクトまたは指定したハンドルに関連付けられたオブジェクトまでの待機、または指定されたタイムアウト期間が経過しました。
+[セマフォ::ロック](#lock) | 現在のオブジェクト、または指定したハンドルに関連付けられたオブジェクトがシグナル状態になるまで待機するか、指定されたタイムアウト間隔が経過するまで待機します。
 
 ### <a name="public-operators"></a>パブリック演算子
 
 名前                                     | 説明
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[Semaphore::operator=](#operator-assign) | 指定したハンドルの移動、`Semaphore`現在オブジェクト`Semaphore`オブジェクト。
+[セマフォ::演算子=](#operator-assign) | 指定したハンドルをオブジェクトから`Semaphore`現在`Semaphore`のオブジェクトに移動します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,13 +62,13 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers
+**名前空間:** マイクロソフト::WRL::ラッパー
 
-## <a name="lock"></a>Semaphore::Lock
+## <a name="semaphorelock"></a><a name="lock"></a>セマフォ::ロック
 
-現在のオブジェクトまでの待機、または`Semaphore`オブジェクトに関連付けられている指定したハンドルがシグナル状態で、または指定されたタイムアウト期間が経過しました。
+現在のオブジェクト、または指定したハンドル`Semaphore`に関連付けられたオブジェクトがシグナル状態になるまで待機するか、指定されたタイムアウト間隔が経過するまで待機します。
 
 ```cpp
 SyncLock Lock(
@@ -83,19 +83,19 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*(ミリ秒)*<br/>
-タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。
+*ミリ秒*<br/>
+タイムアウト間隔 (ミリ秒単位)。 デフォルト値は無限で、無期限に待機します。
 
-*h*<br/>
-識別するハンドルを`Semaphore`オブジェクト。
+*H*<br/>
+`Semaphore`オブジェクトへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`。
+`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>` 変数
 
-## <a name="operator-assign"></a>Semaphore::operator=
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a>セマフォ::演算子=
 
-指定したハンドルの移動、`Semaphore`現在オブジェクト`Semaphore`オブジェクト。
+指定したハンドルをオブジェクトから`Semaphore`現在`Semaphore`のオブジェクトに移動します。
 
 ```cpp
 Semaphore& operator=(
@@ -105,14 +105,14 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
-右辺値参照を`Semaphore`オブジェクト。
+*H*<br/>
+`Semaphore`オブジェクトへの右辺値参照。
 
 ### <a name="return-value"></a>戻り値
 
-現在への参照を`Semaphore`オブジェクト。
+現在`Semaphore`のオブジェクトへの参照。
 
-## <a name="semaphore"></a>Semaphore::semaphore
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a>セマフォ::セマフォ
 
 `Semaphore` クラスの新しいインスタンスを初期化します。
 
@@ -128,5 +128,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
-ハンドルまたはへの右辺値参照を`Semaphore`オブジェクト。
+*H*<br/>
+`Semaphore`オブジェクトへのハンドルまたは右辺値参照。

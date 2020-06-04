@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158237"
 ---
 # <a name="simple-variable-declarations"></a>単純変数の宣言
 
@@ -33,7 +33,7 @@ ms.locfileid: "56149987"
 
 演算型、構造体型、共用体型、列挙型、void 型、および `typedef` の名前によって表される型については、型指定子がすべての型情報を提供するため、単純な宣言子を宣言で使用できます。 ポインター型、配列型、および関数型では、より複雑な宣言子が必要です。
 
-同じ宣言で複数の変数を指定するために、コンマ (**,**) で区切られた識別子のリストを使用できます。 宣言で定義されているすべての変数に、同じ基本型があります。 次に例を示します。
+同じ宣言で複数の変数を指定するために、コンマ ( **,** ) で区切られた識別子のリストを使用できます。 宣言で定義されているすべての変数に、同じ基本型があります。 次に例を示します。
 
 ```C
 int x, y;        /* Declares two simple variables of type int */

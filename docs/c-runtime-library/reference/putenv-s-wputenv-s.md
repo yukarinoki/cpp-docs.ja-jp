@@ -1,10 +1,12 @@
 ---
 title: _putenv_s、_wputenv_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wputenv_s
 - _putenv_s
-apilocation:
+- _o__putenv_s
+- _o__wputenv_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putenv_s
 - wputenv_s
@@ -31,14 +37,14 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade4fe613a2fd57df67f58c496b62d7192354654
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918873"
 ---
-# <a name="putenvs-wputenvs"></a>_putenv_s、_wputenv_s
+# <a name="_putenv_s-_wputenv_s"></a>_putenv_s、_wputenv_s
 
 環境変数を作成、変更、または削除します。 これらのバージョンの [_putenv、_wputenv](putenv-wputenv.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンです。
 
@@ -74,14 +80,16 @@ errno_t _wputenv_s(
 
 |*varname*|*value_string*|戻り値|
 |------------|-------------|------------------|
-|**NULL**|任意|**EINVAL**|
-|任意|**NULL**|**EINVAL**|
+|**空白**|any|**EINVAL**|
+|any|**空白**|**EINVAL**|
 
-いずれかのエラー条件が発生すると、これら関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
+いずれかのエラー条件が発生すると、これら関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Putenv_s**関数は、新しい環境変数を追加します。 または、既存の環境変数の値を変更します。 環境変数は、プロセス (たとえば、プログラムにリンクされるライブラリの既定の検索パス) が実行される環境を定義します。 **_wputenv_s**のワイド文字バージョンです **_putenv_s**、 *envstring*引数 **_wputenv_s**はワイド文字列です。
+**_Putenv_s**関数は、新しい環境変数を追加するか、既存の環境変数の値を変更します。 環境変数は、プロセス (たとえば、プログラムにリンクされるライブラリの既定の検索パス) が実行される環境を定義します。 **_wputenv_s**は **_putenv_s**のワイド文字バージョンです。**_wputenv_s**の*envstring*引数は、ワイド文字列です。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,32 +97,32 @@ errno_t _wputenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*varname*を追加または変更する環境変数の名前を指定し、 *value_string*は変数の値です。 場合*varname* 、環境の一部では既にその値が置き換え*value_string*そうしないと、新しい*varname*変数とその*value_string。* 環境に追加されます。 空の文字列を指定することで、環境から変数を削除できます (つまり、"") の*value_string*します。
+*varname*は、追加または変更する環境変数の名前です。 *value_string*変数の値です。 *Varname*が既に環境の一部である場合、その値は*value_string*; に置き換えられます。それ以外の場合は、新しい*varname*変数とその*value_string*が環境に追加されます。 環境から変数を削除するには、 *value_string*に空の文字列 ("") を指定します。
 
-**_putenv_s**と **_wputenv_s**現在のプロセスに対してローカルの環境のみに影響は、それらを使用して、コマンド レベルの環境を変更することはできません。 これらの関数は、ランタイム ライブラリからアクセスできるデータ構造体でのみ動作し、プロセス用にオペレーティング システムが作成する環境 "セグメント" では動作しません。 現在のプロセスが終了すると、環境は、呼び出し元プロセスのレベルに戻ります。これはほとんどの場合、オペレーティング システムのレベルです。 ただし、によって作成された新しいプロセスに変更された環境を渡すことができます **_spawn**、 **_exec**、または**システム**、し、これらの新しいプロセスである新しい項目を取得します。によって追加された **_putenv_s**と **_wputenv_s**します。
+**_putenv_s**と **_wputenv_s**は、現在のプロセスに対してローカルな環境にのみ影響します。これらのコマンドを使用して、コマンドレベルの環境を変更することはできません。 これらの関数は、ランタイム ライブラリからアクセスできるデータ構造体でのみ動作し、プロセス用にオペレーティング システムが作成する環境 "セグメント" では動作しません。 現在のプロセスが終了すると、環境は、呼び出し元プロセスのレベルに戻ります。これはほとんどの場合、オペレーティング システムのレベルです。 ただし、変更された環境は **_spawn**、 **_exec**、または**システム**によって作成された新しいプロセスに渡すことができ、これらの新しいプロセスは **_putenv_s**および **_wputenv_s**によって追加された新しい項目を取得します。
 
-環境のエントリを直接変更しないでください。代わりに、 **_putenv_s**または **_wputenv_s**を変更します。 要素を具体的には、直接解放、 **_environ:operator[]** グローバル配列に対応する無効なメモリが発生する可能性があります。
+環境エントリを直接変更しないでください。代わりに、 **_putenv_s**または **_wputenv_s**を使用して変更してください。 特に、 **_environ []** グローバル配列の要素を直接解放すると、無効なメモリアドレスが発生する可能性があります。
 
-**getenv**と **_putenv_s**グローバル変数を使用して **_environ** ; して環境テーブルにアクセスするには **_wgetenv**と **_wputenv_s**使用 **_wenviron**します。 **_putenv_s**と **_wputenv_s**の値を変更することがあります **_environ**と **_wenviron**、それによってが無効になると、 *envp*引数**メイン**と **_wenvp**引数**wmain**します。 そのため、使用しても安全は **_environ**または **_wenviron**環境情報にアクセスします。 関係の詳細については **_putenv_s**と **_wputenv_s**グローバル変数を参照してください。 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)します。
+**getenv**と **_putenv_s**は、グローバル変数 **_environ**を使用して環境テーブルにアクセスします。**_wgetenv**と **_wputenv_s** **_wenviron**を使用します。 **_putenv_s**と **_wputenv_s**によって **_environ**および **_wenviron**の値が変更される可能性があります。これにより、 **main**の*envp*引数と**wmain**への **_wenvp**引数が無効になります。 そのため、 **_environ**または **_wenviron**を使用して環境情報にアクセスする方が安全です。 **_Putenv_s**と **_wputenv_s**とグローバル変数との関係の詳細については、「 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)」を参照してください。
 
 > [!NOTE]
-> **_Putenv_s**と **_getenv_s**系関数はスレッド セーフではされません。 **_getenv_s**中に文字列ポインターを返すことができます **_putenv_s**は、文字列を変更し、ランダムにエラーの原因になります。 これらの関数の呼び出しが同期されていることを確認する必要があります。
+> 関数の **_putenv_s**および **_getenv_s**ファミリは、スレッドセーフではありません。 **_getenv_s**が文字列を変更して **_putenv_s**いるときに文字列ポインターを返すことがあり、その結果、ランダムにエラーが発生する可能性があります。 これらの関数の呼び出しが同期されていることを確認する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putenv_s**|\<stdlib.h>|
 |**_wputenv_s**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-使用する方法を示すサンプル **_putenv_s**を参照してください[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)します。
+**_Putenv_s**の使用方法を示すサンプルについては、「 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [getenv、 _wgetenv](getenv-wgetenv.md)<br/>
 [_searchenv、_wsearchenv](searchenv-wsearchenv.md)<br/>

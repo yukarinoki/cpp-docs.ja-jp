@@ -14,19 +14,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: a286833d96e913a66240d25798e1cc230adf58b0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458726"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215268"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
 
-**operator<** をオーバーロードしてテンプレート クラス [Container](../standard-library/sample-container-class.md) の 2 つのオブジェクトを比較します。
+Overloads**演算子 <** クラステンプレート[コンテナー](../standard-library/sample-container-class.md)の2つのオブジェクトを比較します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,10 +39,10 @@ bool operator<(
 
 ## <a name="return-value"></a>戻り値
 
-`lexicographical_compare(left.begin, left.end, right.begin, right.end)` を返します。
+`lexicographical_compare(left.begin, left.end, right.begin, right.end)` が返されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<sample container>](../standard-library/sample-container.md)\
-[初め](../standard-library/container-class-begin.md)\
+[開始](../standard-library/container-class-begin.md)\
 [end](../standard-library/container-class-end.md)

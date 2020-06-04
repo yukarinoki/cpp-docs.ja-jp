@@ -1,10 +1,12 @@
 ---
 title: _mbsnbset、_mbsnbset_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+- _o__mbsnbset
+- _o__mbsnbset_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +38,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499789"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915545"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset、_mbsnbset_l
 
@@ -64,10 +70,10 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 変更対象の文字列。
 
-*c*<br/>
+*40u-c*<br/>
 1 バイトまたはマルチバイト文字の設定。
 
 *count*<br/>
@@ -80,17 +86,19 @@ unsigned char *_mbsnbset_l(
 
 **_mbsnbset**は、変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**は、 *str*の最後に終端の null を配置しません。
+**_Mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**では、 *str*の最後に終端の null が配置されません。
 
-**_mbsnbset**と **_mbsnbset_l**は **_mbsnset**に似ていますが、count 文字*c*の代わりに*count* bytes を設定する点が異なります。
+**_mbsnbset**と **_mbsnbset_l**は **_mbsnset**に似*ています*が *、count の文字数*ではなく*カウント*バイトを設定する点が異なります。
 
 *Str*が**NULL**または*count*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また、 *c*が有効なマルチバイト文字でない場合は、 **errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbsnbset_l**バージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンは、このロケールに依存する動作に現在のロケールを使用します。**_mbsnbset_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -101,12 +109,12 @@ unsigned char *_mbsnbset_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -127,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: This is a test

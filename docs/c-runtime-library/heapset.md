@@ -1,9 +1,9 @@
 ---
 title: _heapset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapset
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapset
 - heapset
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351268"
 ---
-# <a name="heapset"></a>_heapset
+# <a name="_heapset"></a>_heapset
 
 ヒープの最小限の一貫性をチェックし、空きエントリを指定した値に設定します。
 
 > [!IMPORTANT]
->  これは古い関数です。 Visual Studio 2015 以降、CRT で使用できません。
+> この関数は、現在使用されていません。 Visual Studio 2015 以降では、CRT で使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +49,7 @@ int _heapset(
 
 #### <a name="parameters"></a>パラメーター
 
-*fill*<br/>
+*埋める*<br/>
 充填文字。
 
 ## <a name="return-value"></a>戻り値
@@ -66,19 +69,19 @@ int _heapset(
 
 `_heapset` 関数は、誤って上書きされた空きメモリの場所またはノードを示します。
 
-`_heapset` は、ヒープの最小限の一貫性をチェックし、ヒープの空きエントリの各バイトに `fill` 値を設定します。 この既知の値は、空きノードがあるヒープのメモリ位置を示すとともに、解放されたメモリに誤って書き込まれたデータを含むのはどれかを示します。 オペレーティング システムで `_heapset` がサポートされていない場合 (Windows 98 など)、この関数は `_HEAPOK` を返し、`errno` を `ENOSYS` に設定します。
+`_heapset` は、ヒープの最小限の一貫性をチェックし、ヒープの空きエントリの各バイトに `fill` 値を設定します。 この既知の値は、空きノードがあるヒープのメモリ位置を示すとともに、解放されたメモリに誤って書き込まれたデータを含むのはどれかを示します。 オペレーティング システムで `_heapset` がサポートされていない場合 (Windows 98 など)、この関数は `_HEAPOK` を返し、`errno` を `ENOSYS` に設定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-互換性について詳しくは、概要の「[互換性](../c-runtime-library/compatibility.md)」をご覧ください。
+互換性の詳細については、「C ランタイム ライブラリ」の「 [互換性](../c-runtime-library/compatibility.md) 」を参照してください。
 
 ## <a name="example"></a>例
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.

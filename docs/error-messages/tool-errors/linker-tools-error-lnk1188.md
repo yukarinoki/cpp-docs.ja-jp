@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: 69ac20522aebb7391319c0de210e06b305f3fd0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226479"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195176"
 ---
 # <a name="linker-tools-error-lnk1188"></a>リンカ ツール エラー LNK1188
 
-BADFIXUPSECTION:: 無効な fixup ターゲット 'symbol';可能なセクションの長さは 0
+BADFIXUPSECTION:: 無効な fixup ターゲット ' symbol ';使用可能な長さゼロのセクション
 
-VxD リンク中に再配置のターゲットは、セクションがありませんでした。 Link386 (以前のバージョン)、0 長セクションには、0 以外の長さがもう 1 つのセクションを結合に (グループの MASM ディレクティブによって生成される)、OMF グループ レコードが使用されている可能性があります。 COFF 形式は、長さ 0 のセクションでは、グループ ディレクティブをサポートしていません。 リンクは、COFF に自動的にこの種類の OMF オブジェクトを変換、このエラーが発生する可能性があります。
+VxD リンク中に、再配置のターゲットにセクションがありませんでした。 LINK386 (古いバージョン) では、(MASM グループディレクティブによって生成される) OMF グループレコードを使用して、ゼロの長さのセクションと0以外の長さのセクションを結合することができます。 COFF 形式では、GROUP ディレクティブと長さ0のセクションはサポートされません。 LINK がこの種類の OMF オブジェクトを COFF に自動的に変換する場合、このエラーが発生することがあります。

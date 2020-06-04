@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151950"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299118"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto ステートメントとラベル付きステートメント (C)
 
@@ -39,7 +39,7 @@ ms.locfileid: "56151950"
 
 `goto` ステートメントの例を次に示します。
 
-```
+```c
 // goto.c
 #include <stdio.h>
 

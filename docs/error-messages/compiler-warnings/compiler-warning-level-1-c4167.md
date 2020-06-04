@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4167
 ms.assetid: 74a420bd-9371-4167-b1ee-74dd8680f97b
-ms.openlocfilehash: 8155fabacef4c9c9acc97b315f7267c23d032f12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99d60bc08a077ae1637b80eac6775c8fa2571a1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391713"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163599"
 ---
 # <a name="compiler-warning-level-1-c4167"></a>コンパイラの警告 (レベル 1) C4167
 
@@ -23,7 +23,7 @@ function : 組み込み関数としてのみ使用可能です
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4167.cpp
 // compile with: /W1
 #include <malloc.h>

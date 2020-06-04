@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1ae94948e1143a5bac17985423c4bd1bfbaf65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374028"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox クラス
 
-Windows は、リスト ボックスの機能を提供するだけでなく、`CDragListBox`クラスは、リスト ボックス内でファイル名など、リスト ボックス アイテムを移動するユーザーを使用できます。
+この`CDragListBox`クラスでは、Windows リスト ボックスの機能を提供するだけでなく、ユーザーがリスト ボックス内でファイル名などのリスト ボックス項目を移動できます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,28 +43,28 @@ class CDragListBox : public CListBox
 
 |名前|説明|
 |----------|-----------------|
-|[CDragListBox::CDragListBox](#cdraglistbox)|`CDragListBox` オブジェクトを構築します。|
+|[Cドラグリストボックス::Cドラリストボックス](#cdraglistbox)|`CDragListBox` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDragListBox::BeginDrag](#begindrag)|ドラッグ操作を開始するときに、フレームワークによって呼び出されます。|
-|[CDragListBox::CancelDrag](#canceldrag)|ドラッグ操作が取り消されたときに、フレームワークによって呼び出されます。|
-|[CDragListBox::Dragging](#dragging)|ドラッグ操作中に、フレームワークによって呼び出されます。|
-|[CDragListBox::DrawInsert](#drawinsert)|ドラッグ リスト ボックスの挿入ガイドを描画します。|
-|[CDragListBox::Dropped](#dropped)|項目がドロップされた後に、フレームワークによって呼び出されます。|
-|[CDragListBox::ItemFromPt](#itemfrompt)|ドラッグされている項目の座標を返します。|
+|[CDragリストボックス::開始ドラッグ](#begindrag)|ドラッグ操作の開始時にフレームワークによって呼び出されます。|
+|[Cドラグリストボックス::キャンセルドラッグ](#canceldrag)|ドラッグ操作がキャンセルされたときに、フレームワークによって呼び出されます。|
+|[CDragリストボックス::Dラギング](#dragging)|ドラッグ操作中にフレームワークによって呼び出されます。|
+|[:Dロー挿入ボックス](#drawinsert)|ドラッグ リスト ボックスの挿入ガイドを描画します。|
+|[CDragリストボックス::Dロップ](#dropped)|項目が削除された後にフレームワークによって呼び出されます。|
+|[次の項目を使用します。](#itemfrompt)|ドラッグされている項目の座標を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この機能を持つリスト ボックスには、任意の方法が最も役に立つことで、一覧内の項目の並べ替えにユーザーができるようにします。 既定では、リスト ボックスは、リスト内の新しい場所に、項目を移動することにします。 ただし、`CDragListBox`に移動する代わりに項目をコピーするオブジェクトをカスタマイズできます。
+この機能を備えたリスト ボックスを使用すると、ユーザーは最も便利な方法でリスト内のアイテムを並べ替えられます。 既定では、リスト ボックスは、リスト内の新しい場所に項目を移動します。 ただし、`CDragListBox`オブジェクトをカスタマイズして、アイテムを移動する代わりにコピーできます。
 
-リスト ボックス コントロールに関連付けられている、`CDragListBox`な LBS_SORT または LBS_MULTIPLESELECT スタイル クラスが必要ありません。 リスト ボックスのスタイルの説明は、次を参照してください。[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)します。
+`CDragListBox`クラスに関連付けられているリスト ボックス コントロールに、LBS_SORTまたはLBS_MULTIPLESELECTスタイルを含む必要があります。 リスト ボックススタイルの詳細については、「[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)」を参照してください。
 
-アプリケーションの既存のダイアログ ボックスでのドラッグ リスト ボックスを使用するダイアログ エディターを使用して、ダイアログ テンプレートをリスト ボックス コントロールを追加し、メンバー変数を割り当てる (カテゴリの`Control`変数型と`CDragListBox`)、リスト ボックスに対応します。ダイアログ テンプレートを制御します。
+アプリケーションの既存のダイアログ ボックスでドラッグ リスト ボックスを使用するには、ダイアログ エディターを使用してダイアログ テンプレートにリスト ボックス コントロールを追加し、ダイアログ`Control`テンプレートの`CDragListBox`リスト ボックス コントロールに対応するメンバー変数 ([カテゴリ] および [変数の種類]) を割り当てます。
 
-コントロールをメンバー変数に割り当てる方法に関する詳細については、次を参照してください。[ダイアログ コントロールのメンバー変数を定義するためのショートカット](../../windows/defining-member-variables-for-dialog-controls.md)します。
+メンバ変数へのコントロールの割り当ての詳細については、「[ダイアログ コントロールのメンバ変数を定義するためのショートカット](../../windows/defining-member-variables-for-dialog-controls.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -82,9 +82,9 @@ class CDragListBox : public CListBox
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragリストボックス::開始ドラッグ
 
-メソッドを呼び出して、イベントが発生したときに、フレームワークがマウスの左ボタンを押すなどのドラッグ操作を開始します。
+マウスの左ボタンを押すなどのドラッグ操作を開始する可能性のあるイベントが発生したときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL BeginDrag(CPoint pt);
@@ -92,20 +92,20 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)ドラッグされている項目の座標を格納しているオブジェクト。
+*Pt*<br/>
+ドラッグされる項目の座標を格納する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-ドラッグすることができる場合、それ以外の場合 0 0 以外の値。
+ドラッグが許可されている場合は 0 以外の値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドラッグ操作が開始されるときの動作を制御する場合は、この関数をオーバーライドします。 既定の実装では、マウスをキャプチャし、ユーザーがマウスの左または右ボタンをクリックしてまたはドラッグ操作が取り消された時点で、esc キーを押すまでドラッグ モードのままです。
+ドラッグ操作の開始時に何が起こるかを制御する場合は、この関数をオーバーライドします。 既定の実装では、マウスをキャプチャし、ユーザーがマウスの左または右ボタンをクリックするか、または Esc キーを押すまでドラッグ モードで、ドラッグ操作がキャンセルされるまでは、そのままです。
 
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a>Cドラグリストボックス::キャンセルドラッグ
 
-ドラッグ操作が取り消されたときに、フレームワークによって呼び出されます。
+ドラッグ操作がキャンセルされたときに、フレームワークによって呼び出されます。
 
 ```
 virtual void CancelDrag(CPoint pt);
@@ -113,14 +113,14 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)ドラッグされている項目の座標を格納しているオブジェクト。
+*Pt*<br/>
+ドラッグされる項目の座標を格納する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数をリスト ボックス コントロールの特別な処理をオーバーライドします。
+リスト ボックス コントロールの特別な処理を処理するには、この関数をオーバーライドします。
 
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>Cドラグリストボックス::Cドラリストボックス
 
 `CDragListBox` オブジェクトを構築します。
 
@@ -128,9 +128,9 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)ドラッグされて�
 CDragListBox();
 ```
 
-##  <a name="dragging"></a>  CDragListBox::Dragging
+## <a name="cdraglistboxdragging"></a><a name="dragging"></a>CDragリストボックス::Dラギング
 
-内でリスト ボックスの項目がドラッグされているときに、フレームワークによって呼び出されます、`CDragListBox`オブジェクト。
+リスト ボックス項目がオブジェクト内でドラッグされているときに、フレームワークによって`CDragListBox`呼び出されます。
 
 ```
 virtual UINT Dragging(CPoint pt);
@@ -138,26 +138,26 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト x と y を含む画面、カーソルの座標。
+*Pt*<br/>
+カーソルの x および y 画面座標を含む[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-表示されるカーソルのリソース ID。 次の値が考えられます。
+表示されるカーソルのリソース ID。 可能な値は次のとおりです。
 
-- DL_COPYCURSOR では、項目がコピーされることを示します。
+- DL_COPYCURSOR アイテムがコピーされることを示します。
 
-- は、項目が移動されることを示します。
+- DL_MOVECURSOR アイテムが移動されることを示します。
 
-- DL_STOPCURSOR では、現在のドロップ ターゲットが許容されないことを示します。
+- DL_STOPCURSOR現在のドロップ ターゲットが許容されないことを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の動作でを返します。 追加機能を提供する場合は、この関数をオーバーライドします。
+既定の動作はDL_MOVECURSORを返します。 追加機能を提供する場合は、この関数をオーバーライドします。
 
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a>:Dロー挿入ボックス
 
-指定されたインデックスで項目の前に挿入ガイドを描画するためにフレームワークによって呼び出されます。
+指定されたインデックスを持つ項目の前に挿入ガイドを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual void DrawInsert(int nItem);
@@ -165,16 +165,16 @@ virtual void DrawInsert(int nItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
-カーソル位置の 0 から始まるインデックス。
+*Nitem*<br/>
+挿入ポイントの 0 から始まるインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値 - 1 は、挿入ガイドをクリアします。 表示または挿入ガイドの動作を変更するには、この関数をオーバーライドします。
+値が - 1 の場合、挿入ガイドがクリアされます。 挿入ガイドの外観または動作を変更するには、この関数をオーバーライドします。
 
-##  <a name="dropped"></a>  CDragListBox::Dropped
+## <a name="cdraglistboxdropped"></a><a name="dropped"></a>CDragリストボックス::Dロップ
 
-内の項目が削除されるときに、フレームワークによって呼び出されます、`CDragListBox`オブジェクト。
+`CDragListBox`オブジェクト内で項目がドロップされたときに、フレームワークによって呼び出されます。
 
 ```
 virtual void Dropped(
@@ -184,19 +184,19 @@ virtual void Dropped(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcIndex*<br/>
-削除された文字列の 0 から始まるインデックスを指定します。
+*インデックス*<br/>
+ドロップされた文字列の 0 から始まるインデックスを指定します。
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)ドロップ サイトの座標を格納しているオブジェクト。
+*Pt*<br/>
+ドロップ サイトの座標を格納する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の動作は、リスト ボックスの項目とそのデータを新しい場所にコピーし、元の項目を削除します。 リスト内の他の場所にドラッグするリスト ボックス項目のコピーを有効にするなど、既定の動作をカスタマイズするには、この関数をオーバーライドします。
+既定の動作では、リスト ボックスの項目とそのデータが新しい場所にコピーされ、元のアイテムが削除されます。 リスト ボックスの項目のコピーをリスト内の他の場所にドラッグできるようにするなどの既定の動作をカスタマイズするには、この関数をオーバーライドします。
 
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>次の項目を使用します。
 
-リスト ボックス項目の 0 から始まるインデックスを取得するには、この関数がある呼び出し*pt*します。
+*pt*にあるリスト ボックス項目の 0 から始まるインデックスを取得します。
 
 ```
 int ItemFromPt(
@@ -206,11 +206,11 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)リスト ボックス内のポイントの座標を格納しているオブジェクト。
+*Pt*<br/>
+リスト ボックス内のポイントの座標を含む[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
-*bAutoScroll*<br/>
-スクロールが許可された場合、それ以外の場合 0 0 以外の値。
+*b自動スクロール*<br/>
+スクロールが許可されている場合は 0 以外の値を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -220,5 +220,5 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)リスト ボックス
 
 [MFC サンプル TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4109
 ms.assetid: 9e8d95c6-e05d-47e0-bd87-78974b3cc06c
-ms.openlocfilehash: 1156bbfbed7aed9524b24b046b9ce9acdbdc8b8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04252f6100f0cabcd6bca0ff4145b55cfcadd234
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200123"
 ---
 # <a name="compiler-warning-level-1-c4109"></a>コンパイラの警告 (レベル 1) C4109
 
@@ -21,7 +21,7 @@ ms.locfileid: "62300207"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4109.cpp
 // compile with: /W1 /LD
 #pragma init_seg( abc ) // C4109

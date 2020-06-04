@@ -1,9 +1,11 @@
 ---
 title: _mktemp、_wmktemp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmktemp
 - _mktemp
+- _o__mktemp
+- _o__wmktemp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 536a63841c6e29fa003eb8b99c896f6d1cf5519f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951576"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919103"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
@@ -75,9 +78,11 @@ wchar_t *_wmktemp(
 
 これらの各関数は、変更された nameTemplate へのポインターを返します。 *Nametemplate*の形式が正しくない場合、または指定された nametemplate から一意の名前を作成できない場合、関数は**NULL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mktemp**関数は、 *nametemplate*引数を変更することによって、一意のファイル名を作成します。 **_mktemp**は、現在ランタイムシステムによって使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wmktemp**は、 **_mktemp**のワイド文字バージョンです。 **_wmktemp**の引数と戻り値はワイド文字列です。 **_wmktemp**と **_mktemp**は、 **_wmktemp**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
+**_Mktemp**関数は、 *nametemplate*引数を変更することによって、一意のファイル名を作成します。 は、ランタイムシステムが現在使用しているマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_mktemp** **_wmktemp**は **_mktemp**のワイド文字バージョンです。**_wmktemp**の引数と戻り値はワイド文字列です。 **_wmktemp**と **_mktemp**は、 **_wmktemp**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -85,13 +90,13 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*Nametemplate*引数の形式は*base*XXXXXX です。ここで、 *base*は指定する新しいファイル名の一部で、各 X は **_mktemp**によって提供される文字のプレースホルダーです。 *Nametemplate*内の各プレースホルダー文字は、 **_mktemp** *を保持し、先頭*の x を英字で置き換える必要があります。 **_mktemp**は、次の末尾の X を5桁の値に置き換えます。この値は、呼び出し元のプロセスを識別する一意の番号、またはマルチスレッドプログラムでの呼び出し元のスレッドを示します。
+*Nametemplate*引数の形式は*base*XXXXXX です。ここで、 *base*は指定する新しいファイル名の一部で、各 X は **_mktemp**によって提供される文字のプレースホルダーです。 *Nametemplate*内の各プレースホルダー文字は、大文字の x である必要があります。 **_mktemp**は*base*を保持し、最初の末尾の x をアルファベット文字に置き換えます。 **_mktemp**は、次の末尾の X を5桁の値に置き換えます。この値は、呼び出し元のプロセスを識別する一意の番号、またはマルチスレッドプログラムでの呼び出し元のスレッドを示します。
 
-**_Mktemp**への呼び出しが成功するたびに、 *nametemplate*が変更されます。 同じ*Nametemplate*引数を持つ同じプロセスまたはスレッドからの後続の呼び出しでは、 **_mktemp**は、前の呼び出しで **_mktemp**によって返された名前と一致するファイル名を確認します。 指定された名前のファイルが存在しない場合、 **_mktemp**はその名前を返します。 以前に返されたすべての名前のファイルが存在する場合、 **_mktemp**は、以前に返された名前で使用されていた英字を ' a ' ~ ' z ' の順に使用可能な次の小文字で置き換えることによって、新しい名前を作成します。 たとえば、 *base*がの場合は次のようになります。
+**_Mktemp**の呼び出しが成功するたびに、 *nametemplate*が変更されます。 同じ*Nametemplate*引数を持つ同じプロセスまたはスレッドからの後続の呼び出しでは、 **_mktemp**は、前の呼び出しで **_mktemp**によって返された名前と一致するファイル名を確認します。 指定された名前のファイルが存在しない場合、 **_mktemp**はその名前を返します。 以前に返されたすべての名前のファイルが存在する場合、 **_mktemp**は、以前に返された名前で使用されていた英字を ' a ' から ' z ' の順に使用可能な次の小文字で置き換えることによって、新しい名前を作成します。 たとえば、 *base*がの場合は次のようになります。
 
 > **1億**
 
-**_mktemp**によって指定された5桁の値は12345で、最初に返される名前は次のようになります。
+**_mktemp**によって指定された5桁の値は12345であり、最初に返される名前は次のとおりです。
 
 > **fna12345**
 
@@ -103,20 +108,20 @@ FNA12345 が存在しない場合、次に返される名前はもう一度次�
 
 > **fna12345**
 
-**_mktemp**では、 *Base*と*nametemplate*の値の任意の組み合わせに対して一意のファイル名を最大26個作成できます。 したがって、FNZ12345 は、この例で使用される*base*および*nametemplate*の値に対して **_mktemp**が作成できる最後の一意のファイル名です。
+**_mktemp**は、 *Base*と*nametemplate*の値の任意の組み合わせに対して最大26個の一意のファイル名を作成できます。 したがって、FNZ12345 は、この例で使用される*base*および*nametemplate*の値に対して作成できる **_mktemp**最後の一意のファイル名です。
 
-エラーが発生すると、 **errno**が設定されます。 *Nametemplate*の形式が無効な場合 (たとえば、6 X 未満)、 **errno**は**EINVAL**に設定されます。 使用可能なすべてのファイル名が既に存在するために **_mktemp**が一意の名前を作成できない場合は、 **_mktemp**が空の文字列に設定され、 **eexist**が返されます。
+エラーが発生すると、 **errno**が設定されます。 *Nametemplate*の形式が無効な場合 (たとえば、6 X 未満)、 **errno**は**EINVAL**に設定されます。 使用可能なすべてのファイル名が既に存在するため **_mktemp**が一意の名前を作成できない場合は、nametemplate を空の文字列に設定して、 **eexist**を返す **_mktemp**ます。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

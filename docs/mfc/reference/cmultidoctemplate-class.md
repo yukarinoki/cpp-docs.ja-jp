@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b3f239b05b1cf7661929333e2d616acce6bedb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319742"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate クラス
 
@@ -31,27 +31,27 @@ class CMultiDocTemplate : public CDocTemplate
 
 |名前|説明|
 |----------|-----------------|
-|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|`CMultiDocTemplate` オブジェクトを構築します。|
+|[テンプレート::C マルチドックテンプレート](#cmultidoctemplate)|`CMultiDocTemplate` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MDI アプリケーションでは、ドキュメントを表示、ユーザーが 0 個以上のドキュメント フレーム ウィンドウを開くことができますワークスペースとしてメイン フレーム ウィンドウを使用します。 MDI の詳細については、次を参照してください。*ソフトウェア設計の Windows のインターフェイス ガイドライン*します。
+MDI アプリケーションでは、メイン フレーム ウィンドウをワークスペースとして使用し、ユーザーは 0 個以上のドキュメント フレーム ウィンドウを開くことができます。 MDI の詳細については、「*ソフトウェア設計に関する Windows インターフェイスガイドライン*」を参照してください。
 
-ドキュメント テンプレートでは、3 種類のクラス間のリレーションシップを定義します。
+ドキュメント テンプレートは、次の 3 種類のクラス間の関係を定義します。
 
-- ドキュメント クラスから派生した[CDocument](../../mfc/reference/cdocument-class.md)します。
+- ドキュメント クラスを[CDocument](../../mfc/reference/cdocument-class.md)から派生します。
 
-- ビュー クラスの上に表示されるドキュメント クラスからのデータが表示されます。 このクラスから派生できます[CView](../../mfc/reference/cview-class.md)、 `CScrollView`、 `CFormView`、または`CEditView`します。 (使用することも`CEditView`直接)。
+- 上記のドキュメント クラスのデータを表示するビュー クラス。 このクラスは、 [CView](../../mfc/reference/cview-class.md)、 `CScrollView` `CFormView`、 `CEditView`、 、または から派生させることができます。 (直接使用`CEditView`することもできます。
 
-- ビューを含むフレーム ウィンドウ クラス。 MDI ドキュメント テンプレートからこのクラスを派生できます`CMDIChildWnd`、または、使用する場合は、ドキュメント フレーム ウィンドウの動作をカスタマイズする必要はありませんが[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)独自のクラスを派生させることがなく直接します。
+- ビューを含むフレーム ウィンドウ クラス。 MDI ドキュメント テンプレートの場合は、このクラスを`CMDIChildWnd`から派生させることができます。 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)
 
-MDI アプリケーションは、ドキュメントの 1 つ以上の型をサポートできるし、同時にさまざまな種類のドキュメントを開くことができます。 アプリケーションでは、サポートされる各ドキュメントの種類の 1 つのドキュメント テンプレートを持ちます。 たとえば、MDI アプリケーションでは、スプレッドシートやテキスト ドキュメントの両方をサポートする場合、アプリケーションが 2 つあります`CMultiDocTemplate`オブジェクト。
+MDI アプリケーションは、複数の種類のドキュメントをサポートでき、異なる種類のドキュメントを同時に開くことができます。 アプリケーションでは、サポートするドキュメントの種類ごとに 1 つのドキュメント テンプレートがあります。 たとえば、MDI アプリケーションがスプレッドシートとテキスト ドキュメントの両方をサポートしている場合、アプリケーション`CMultiDocTemplate`には 2 つのオブジェクトがあります。
 
-アプリケーションは、ユーザーが新しいドキュメントを作成するときに、ドキュメント テンプレートを使用します。 アプリケーションでは、ドキュメントの 1 つ以上の型をサポートするフレームワークはドキュメント テンプレートからサポートされているドキュメントの種類の名前を取得し、新しいファイル ダイアログ ボックスの一覧に表示されます。 ユーザーがドキュメントの種類を選択すると、アプリケーションはドキュメント クラスのオブジェクト、フレーム ウィンドウ オブジェクト、およびビューのオブジェクトを作成し、それらを相互に接続します。
+ユーザーが新しいドキュメントを作成するときに、アプリケーションはドキュメント テンプレートを使用します。 アプリケーションが複数の種類のドキュメントをサポートしている場合、フレームワークはドキュメント テンプレートからサポートされているドキュメント タイプの名前を取得し、[新規作成] ダイアログ ボックスの一覧に表示します。 ユーザーがドキュメントタイプを選択すると、アプリケーションはドキュメントクラスオブジェクト、フレームウィンドウオブジェクト、およびビューオブジェクトを作成し、互いに関連付けます。
 
-すべてのメンバーの関数を呼び出す必要はありません`CMultiDocTemplate`コンス トラクターを除きます。 Framework ハンドル`CMultiDocTemplate`オブジェクトを内部的にします。
+コンストラクター以外の`CMultiDocTemplate`メンバー関数を呼び出す必要はありません。 フレームワークはオブジェクト`CMultiDocTemplate`を内部的に処理します。
 
-詳細については`CMultiDocTemplate`を参照してください[ドキュメント テンプレートとドキュメント/ビューの作成手順](../../mfc/document-templates-and-the-document-view-creation-process.md)します。
+の詳細については、「[ドキュメント テンプレートとドキュメント/ビュー作成プロセス](../../mfc/document-templates-and-the-document-view-creation-process.md)」を参照してください。 `CMultiDocTemplate`
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -67,7 +67,7 @@ MDI アプリケーションは、ドキュメントの 1 つ以上の型をサ�
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>テンプレート::C マルチドックテンプレート
 
 `CMultiDocTemplate` オブジェクトを構築します。
 
@@ -81,10 +81,10 @@ CMultiDocTemplate(
 
 ### <a name="parameters"></a>パラメーター
 
-*可能*<br/>
-ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。
+*リソース*<br/>
+ドキュメントタイプで使用されるリソースの ID を指定します。 これには、メニュー、アイコン、アクセラレータ テーブル、および文字列リソースが含まれます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれない場合 '\n' 文字はプレース ホルダーとして必要です。 ただし、末尾の '\n' 文字は必要ありません)。これらの部分文字列には、ドキュメントの種類について説明します。 これらの部分文字列については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
+文字列リソースは、'\n' 文字で区切られた最大 7 個の部分文字列で構成されます (部分文字列が含まれていない場合は、"\n" 文字がプレースホルダとして必要になりますが、末尾の '\n' 文字は必要ありません)。これらの部分文字列はドキュメントタイプを記述します。 サブストリングの詳細については[、「CDoc テンプレート::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)」を参照してください。 この文字列リソースは、アプリケーションのリソース ファイルにあります。 次に例を示します。
 
 ```RC
 // MYCALC.RC
@@ -94,22 +94,22 @@ BEGIN
 END
 ```
 
-文字列が、'\n' 文字で始まることに注意してください。これは、最初の部分文字列が MDI アプリケーションは使用されません、これが含まれていないためです。 ストリング エディターを使用してこの文字列を編集できます。文字列全体は、7 つの個別のエントリとしてではなく文字列エディターで、1 つのエントリとして表示されます。
+文字列は '\n' 文字で始まることに注意してください。これは、最初の部分文字列が MDI アプリケーションで使用されないため、含まれていないためです。 この文字列は、文字列エディタを使用して編集できます。文字列全体が、7 つの個別のエントリではなく、文字列エディタ内の単一のエントリとして表示されます。
 
-これらのリソースの種類の詳細については、次を参照してください。[リソース エディター](../../windows/resource-editors.md)します。
+これらのリソースの種類の詳細については、「[リソース エディタ](../../windows/resource-editors.md)」を参照してください。
 
-*pDocClass*<br/>
-指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 `CDocument`-ドキュメントを表すために定義するクラスを派生します。
+*クラス*<br/>
+ドキュメント クラス`CRuntimeClass`のオブジェクトへのポイント。 このクラスは、`CDocument`ドキュメントを表すために定義する派生クラスです。
 
-*pFrameClass*<br/>
-指す、`CRuntimeClass`フレーム ウィンドウ クラスのオブジェクト。 このクラスにすることができます、 `CMDIChildWnd`-クラスを派生することもできます`CMDIChildWnd`自体、ドキュメント フレーム ウィンドウの既定の動作をする場合。
+*クラス*<br/>
+フレーム ウィンドウ`CRuntimeClass`クラスのオブジェクトへのポイント。 このクラスは`CMDIChildWnd`、-derived クラスにすることも、ドキュメント`CMDIChildWnd`フレーム ウィンドウの既定の動作を行う場合は、それ自体にすることもできます。
 
-*pViewClass*<br/>
-指す、`CRuntimeClass`ビュー クラスのオブジェクト。 このクラスは、 `CView`-ドキュメントの表示を定義するクラスを派生します。
+*クラスを表示します。*<br/>
+ビュー クラス`CRuntimeClass`のオブジェクトへのポイント。 このクラスは、`CView`ドキュメントを表示するために定義する派生クラスです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-いずれかを動的に割り当てる`CMultiDocTemplate`オブジェクトの各ドキュメントの種類をアプリケーションがサポートし、それぞれを渡す`CWinApp::AddDocTemplate`から、`InitInstance`アプリケーション クラスのメンバー関数。
+アプリケーションがサポートする`CMultiDocTemplate`ドキュメントの種類ごとに 1 つのオブジェクトを動的に割り`CWinApp::AddDocTemplate`当て`InitInstance`、アプリケーション クラスのメンバー関数から各オブジェクトを渡します。
 
 ### <a name="example"></a>例
 
@@ -121,8 +121,8 @@ END
 
 ## <a name="see-also"></a>関連項目
 
-[CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
+[クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CSingleDocTemplate クラス](../../mfc/reference/csingledoctemplate-class.md)<br/>
 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)

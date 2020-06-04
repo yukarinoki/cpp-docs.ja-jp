@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5c9127db4714575cdf037147cc97601a4523e93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154309"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360846"
 ---
 # <a name="expressions-with-binary-operators"></a>二項演算子を含む式
 
@@ -19,75 +19,75 @@ ms.locfileid: "62154309"
 
 - [乗算演算子](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
-   - 乗算 (*)
+  - 乗算 (*)
 
-   - 除算 (/)
+  - 除算 (/)
 
-   - 剰余 (%)
+  - 剰余 (%)
 
 - [加法演算子](../cpp/additive-operators-plus-and.md)
 
-   - 加算 (+)
+  - 加算 (+)
 
-   - 減算 (-)
+  - 減算 (-)
 
 - [シフト演算子](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - 右シフト (>>)
+  - 右シフト (>>)
 
-   - 左シフト (<<)
+  - 左シフト (<<)
 
-- [関係演算子と等値演算子](../cpp/relational-operators-equal-and-equal.md)
+- [関係演算子と等価演算子](../cpp/relational-operators-equal-and-equal.md)
 
-   - より小さい (\<)
+  - より小さい (\<)
 
-   - 大なり (>)
+  - より大きい (>)
 
-   - 等しいまたはそれよりも小さい (\<=)
+  - 以下\<(=)
 
-   - 以上 (> =)
+  - 以上 (>=)
 
-   - 等しい (==)
+  - 等しい (==)
 
-   - 等しくない (!=)
+  - 等しくない (!=)
 
-- ビット処理演算子
+- ビットごとの演算子
 
-   - [ビットごとの AND (&)](../cpp/bitwise-and-operator-amp.md)
+  - [ビット単位の AND (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [ビットごとの排他的 OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+  - [ビットごとの排他 OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [ビット演算包含的 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+  - [ビットごとの包含 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - 論理演算子
 
-   - [論理 AND (& &)](../cpp/logical-and-operator-amp-amp.md)
+  - [論理 AND (&&)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [論理 OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+  - [論理 OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [代入演算子](../cpp/assignment-operators.md)
 
-   - 代入 (=)
+  - 代入 (=)
 
-   - 加算代入 (+=)
+  - 加算代入 (+=)
 
-   - 減算代入 (-)
+  - 減算代入 (-=)
 
-   - 乗算代入 (*=)
+  - 乗算代入 (*=)
 
-   - 除算代入 (/=)
+  - 除算代入 (/=)
 
-   - 剰余代入 (%=)
+  - 剰余代入 (%=)
 
-   - 左シフト代入 (<\<=)
+  - 左シフトの割り\<当て (<= )
 
-   - 右シフト代入 (>> =)
+  - 右シフトの割り当て (>>= )
 
-   - ビットごとの AND 代入 (& =)
+  - ビット単位の AND 割り当て (&=)
 
-   - ビットごとの排他的 OR 代入 (^=)
+  - ビットごとの排他的 OR 代入 (^=)
 
-   - ビット処理包括的 OR 代入 (&#124;=)
+  - ビットごとの包含 OR 割り当て (&#124;=)
 
 - [コンマ演算子](../cpp/comma-operator.md)(,)
 

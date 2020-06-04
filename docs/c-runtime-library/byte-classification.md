@@ -8,16 +8,16 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 9c00d0c0165bdae15ba5fc413d00a99bf4601b21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171568"
 ---
 # <a name="byte-classification"></a>バイト分類
 
-これらの各ルーチンは、マルチバイト文字の指定されたバイトが条件を満たすかどうかをテストします。 特に指定がない場合、出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳しくは、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
+これらの各ルーチンは、マルチバイト文字の指定されたバイトが条件を満たすかどうかをテストします。 特に指定がない場合、出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳しくは、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
 > [!NOTE]
 > 定義上、0 から 127 の間の ASCII 文字は、すべてのマルチバイト文字セットのサブセットと考えることができます。 たとえば、日本語のカタカナ文字セットには ASCII 文字と非 ASCII 文字が含まれています。
@@ -31,10 +31,10 @@ ms.locfileid: "50632402"
 |[isleadbyte、_isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|先行バイト: テスト結果は、現在のロケールの **LC_CTYPE** カテゴリの設定に依存します|
 |[_ismbbalnum、_ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|**isalnum** &#124;&#124; **_ismbbkalnum**|
 |[_ismbbalpha、_ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|**isalpha** &#124;&#124; **_ismbbkalnum**|
-|[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|**_ismbbgraph** は、**_ismbbprint** と同じですが、空白文字 (0x20) は含みません|
+|[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|**_ismbbgraph** は、 **_ismbbprint** と同じですが、空白文字 (0x20) は含みません|
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|区切り記号以外の非 ASCII テキストの記号。 たとえば、コード ページ 932 でのみ **_ismbbkalnum** は、カタカナ英数字をテストします|
 |[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|カタカナ (0xA1 - 0xDF)、コード ページ 932 のみ|
-|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII テキストまたは ASCII 以外の区切り記号。 たとえば、コード ページ 932 でのみ、**_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。|
+|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII テキストまたは ASCII 以外の区切り記号。 たとえば、コード ページ 932 でのみ、 **_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。|
 |[_ismbbkpunct、_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|ASCII 以外の区切り記号。 たとえば、コード ページ 932 でのみ **_ismbbkpunct** は、カタカナ区切り文字をテストします。|
 |[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|マルチバイト文字の最初のバイト。 たとえば、コード ページ 932 でのみ、有効な範囲は 0x81 - 0x9F、0xE0 - 0xFC です。|
 |[_ismbbprint、_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|**isprint** &#124;&#124; **_ismbbkprint**. **ismbbprint** には、空白文字 (0x20) が含まれます|
@@ -46,8 +46,8 @@ ms.locfileid: "50632402"
 |[_mbsbtype、_mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|文字列内のバイトの種類を返します|
 |[mbsinit](../c-runtime-library/reference/mbsinit.md)|マルチバイト文字の変換状態を追跡します。|
 
-\<limits.h> で定義されている **MB_LEN_MAX** マクロは、マルチバイト文字が保持できる最大長のバイト数に拡大します。 \<stdlib.h> で定義されている **MB_CUR_MAX** は、現在のロケールのマルチバイト文字の最大長のバイト数に拡大します。
+**limits.h> で定義されている** MB_LEN_MAX\< マクロは、マルチバイト文字が保持できる最大長のバイト数に拡大します。 **stdlib.h> で定義されている** MB_CUR_MAX\< は、現在のロケールのマルチバイト文字の最大長のバイト数に拡大します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)

@@ -8,30 +8,30 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395795"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213214"
 ---
 # <a name="odbc-basics"></a>ODBC の基礎
 
 このトピックでは、ODBC (Open Database Connectivity) の基礎について説明します。
 
-- [ODBC のしくみとデータベース クラス](../../data/odbc/odbc-and-the-database-classes.md)
+- [ODBC とデータベースクラスの連携](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [ダイナセットを使う場合の ODBC ドライバーのしくみ](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [ODBC ドライバーとダイナセットの連携](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [どのような ODBC コンポーネントをアプリケーションで再配布する必要があります。](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [アプリケーションと共に再配布する必要がある ODBC コンポーネント](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-関連トピックを参照することも[ODBC:ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)します。
+また、関連トピック「 [odbc: Odbc Cursor Library](../../data/odbc/odbc-the-odbc-cursor-library.md)」も参照してください。
 
 > [!NOTE]
 > ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。
 
 > [!NOTE]
-> MFC ODBC クラスは、Unicode とマルチスレッドをサポートしています。 マルチ スレッドのサポートの詳細については、次を参照してください[ODBC クラスおよびスレッド。](../../data/odbc/odbc-classes-and-threads.md)
+> MFC ODBC クラスは、Unicode とマルチスレッドをサポートしています。 マルチスレッドのサポートの詳細については、「 [ODBC のクラスとスレッド](../../data/odbc/odbc-classes-and-threads.md)」を参照してください。
 
 ODBC は、データベース内のデータにアクセスするための呼び出しレベルのインターフェイスであり、ODBC ドライバーがあるデータベースならば、どのデータベースにでもアクセスできます。 ODBC を使って作成したアプリケーションからはどのデータベースにでもアクセスできますが、アプリケーションのユーザーがそのデータベースに対応した ODBC ドライバーを持っている必要があります。 ODBC が提供する API を使うと、アプリケーションをデータベース管理システム (DBMS) から独立できます。
 
@@ -41,7 +41,7 @@ ODBC の構成要素は、次のとおりです。
 
 - ODBC API
 
-   関数のライブラリを呼び出すと、一連の標準的なエラー コード、 [SQL](../../data/odbc/sql.md) Dbms のデータにアクセスするための構文。
+   関数呼び出しのライブラリ、一連のエラーコード、および Dbms のデータにアクセスするための標準的な[SQL](../../data/odbc/sql.md)構文。
 
 - ODBC ドライバー マネージャー
 
@@ -49,7 +49,7 @@ ODBC の構成要素は、次のとおりです。
 
 - ODBC データベース ドライバー
 
-   ODBC の関数の呼び出しを処理する DLL です。DBMS ごとにあります。 指定されたドライバーの一覧は、次を参照してください。 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)します。
+   ODBC の関数の呼び出しを処理する DLL です。DBMS ごとにあります。 提供されているドライバーの一覧については、「 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
 - [ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
@@ -63,8 +63,8 @@ DBMS に直接アクセスせずに、各 DBMS 用の ODBC ドライバーを通
 
 データベース クラスは、ODBC ドライバーを持つデータ ソースをサポートします。 たとえば、リレーショナル データベース、ISAM (Indexed Sequential Access Method) データベース、Excel のスプレッドシート、テキスト ファイルなどを扱えます。 データ ソースへの接続は ODBC ドライバーが行い、SQL を使ってデータベースからレコードを選択します。
 
-このバージョンの Visual C に含まれる ODBC ドライバーの一覧については、および追加のドライバーの入手方法については、「 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)します。
+Visual C++ のこのバージョンに含まれている ODBC ドライバー一覧、および他のドライバーを取得する方法については、「[ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,32 +1,48 @@
 ---
 title: コマンド マクロとオプション マクロ
-ms.date: 11/04/2016
+description: ビルドツールとそのオプションの定義済み NMAKE マクロについて説明します。
+ms.date: 11/20/2019
 helpviewer_keywords:
 - options macros
 - command macros in NMAKE
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: c6dad7b50d265a1460a98747665d48051078163a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- AS
+- AFLAGS
+- CC
+- CFLAGS
+- CPP
+- CPPFLAGS
+- CXX
+- CXXFLAGS
+- RC
+- RFLAGS
+- ias
+- ml
+- ml64
+- cl
+- rc
+ms.openlocfilehash: d5c4477fd97e2a6c48dbac4d0ce83f7fd5f12ad6
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272439"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303179"
 ---
 # <a name="command-macros-and-options-macros"></a>コマンド マクロとオプション マクロ
 
-コマンド マクロは Microsoft 製品の定義済みです。 オプション マクロは、これらの製品にオプションを表し、既定で未定義です。 両方定義済みの推論規則で使用され、記述ブロックまたはユーザー定義の推論規則で使用できます。 コマンド マクロは、オプションを含むコマンドラインの一部またはすべてを表す再定義できます。 オプション マクロは、未定義のままの場合、null 文字列を生成します。
+コマンドマクロは、Microsoft 製品用に事前定義されています。 オプションマクロは、これらの製品のオプションを表し、既定では定義されていません。 どちらも定義済みの推論規則で使用され、記述ブロックまたはユーザー定義の推論規則で使用できます。 コマンドマクロを再定義して、オプションを含むコマンドラインの一部またはすべてを表すことができます。 オプションマクロが未定義の場合は、null 文字列が生成されます。
 
-|Microsoft の製品|コマンド マクロ|として定義されています|オプション マクロ|
+|Microsoft 製品|コマンドマクロ|定義|Options マクロ|
 |-----------------------|-------------------|----------------|-------------------|
-|マクロ アセンブラー|**AS**|ml|**AFLAGS**|
-|基本的なコンパイラ|**ビジネス継続性**|ビジネス継続性|**BFLAGS**|
-|C コンパイラ|**Cc**|cl|**CFLAGS**|
+|マクロアセンブラー|**AS**|ml、ias、または ml64|**AFLAGS**|
+|C コンパイラ|**CC**|cl|**CFLAGS**|
 |C++ コンパイラ|**CPP**|cl|**CPPFLAGS**|
-|C++ コンパイラ|**CXX**|cl|**ように**|
-|Resource Compiler|**RC**|rc|**RFLAGS**|
+|C++ コンパイラ|**CXX**|cl|**CXXFLAGS**|
+|Resource Compiler|**RC**|リターン|**RFLAGS**|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [NMAKE の特殊マクロ](special-nmake-macros.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514399"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214683"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-実装に`IDispatch` 、インターフェイスの説明に示されているプロパティとメソッドのみが含まれ、実行時に追加のメンバーで拡張できないことを指定します。
+`IDispatch` の実装に、インターフェイスの説明に示されているプロパティとメソッドのみが含まれ、実行時に追加のメンバーで拡張できないことを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514399"
 [nonextensible]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **非拡張** C++属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
 
@@ -56,12 +56,12 @@ __interface IFireTabCtrl
 |-|-|
 |**対象**|**interface**|
 |**反復可能**|いいえ|
-|**必要な属性**|`dual`and `oleautomation`、or`dispinterface`|
+|**必要な属性**|`dual` と `oleautomation`、または `dispinterface`|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)

@@ -1,31 +1,28 @@
 ---
-title: CTreeCtrl とCTreeView
+title: CTreeCtrl と CTreeView の比較
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
-- CTreeView
 helpviewer_keywords:
 - tree view controls
 - CTreeCtrl class [MFC], vs. CTreeView class [MFC]
 - CTreeView class [MFC], vs. CTreeCtrl class [MFC]
 - tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
-ms.openlocfilehash: 29349e169e5ad8475001235d9b355da52156d683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c78dfa9920c913fdbedb009c5a6f275a3e3e273
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241970"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445221"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl とCTreeView
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl と CTreeView の比較
 
-MFC には、ツリーのコントロールをカプセル化する 2 つのクラスが用意されています。[CTreeCtrl](../mfc/reference/ctreectrl-class.md)と[CTreeView](../mfc/reference/ctreeview-class.md)します。 各クラスは、さまざまな状況で役立ちます。
+MFC には、ツリーコントロールをカプセル化する2つのクラス ( [CTreeCtrl](../mfc/reference/ctreectrl-class.md)と[CTreeView](../mfc/reference/ctreeview-class.md)) が用意されています。 各クラスは、状況に応じて役に立ちます。
 
-使用`CTreeCtrl`プレーンな子ウィンドウ コントロールである必要がある場合、ダイアログ ボックスで、します。 使用することが特に`CTreeCtrl`他の子コントロールが一般的なダイアログ ボックスのように、ウィンドウ内にある場合。
+`CTreeCtrl` は、プレーンな子ウィンドウコントロールが必要な場合に使用します。たとえば、ダイアログボックスを使用します。 一般的なダイアログボックスのように、ウィンドウに他の子コントロールが存在する場合は、`CTreeCtrl` を使用することをお勧めします。
 
-使用`CTreeView`ドキュメント/ビュー アーキテクチャでビュー ウィンドウと同様に動作するツリー コントロールとツリー コントロールたい場合。 A`CTreeView`のフレーム ウィンドウまたはスプリッター ウィンドウ全体のクライアント領域を占有します。 自動的にサイズを調整する親ウィンドウのサイズを変更し、メニューのアクセラレータ キー、およびツールバーからコマンド メッセージを処理するときにします。 ツリー コントロールにツリーを表示するために必要なデータが格納されているため、対応するドキュメント オブジェクトを複雑になるにはありません-使用することもできます[CDocument](../mfc/reference/cdocument-class.md)ドキュメント テンプレートにドキュメントの種類として。
+`CTreeView` を使用すると、ツリーコントロールを、ドキュメント/ビューアーキテクチャのビューウィンドウのように、またはツリーコントロールとして動作させることができます。 `CTreeView` は、フレームウィンドウまたは分割ウィンドウのクライアント領域全体を占有します。 親ウィンドウのサイズが変更されると、自動的にサイズが変更されます。また、メニュー、アクセラレータキー、およびツールバーからコマンドメッセージを処理することもできます。 ツリーコントロールには、ツリーを表示するために必要なデータが含まれているため、対応するドキュメントオブジェクトは複雑である必要はありません。ドキュメントテンプレートでは、ドキュメントの種類として[CDocument](../mfc/reference/cdocument-class.md)を使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

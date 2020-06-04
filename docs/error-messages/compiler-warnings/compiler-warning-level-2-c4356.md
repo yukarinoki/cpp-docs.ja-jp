@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffcf0098799b893f83e331b3b4cc602e1b538b1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402464"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161829"
 ---
 # <a name="compiler-warning-level-2-c4356"></a>コンパイラの警告 (レベル 2) C4356
 
-'member': 静的データ メンバーは派生クラスを使って初期化できません
+' member ': 静的データメンバーを派生クラスで初期化することはできません
 
-静的データ メンバーの初期化が正しくありません。 コンパイラでは、初期化が受け入れられます。 警告を回避するには、基本クラスを使用してメンバーを初期化します。
+静的データメンバーの初期化の形式が正しくありません。 コンパイラで初期化が受け入れられました。 警告を回避するには、基底クラスを使用してメンバーを初期化します。
 
-使用して、[警告](../../preprocessor/warning.md)この警告を抑制するプラグマ。
+この警告を非表示にするには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
 次の例では、C4356 が生成されます。
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

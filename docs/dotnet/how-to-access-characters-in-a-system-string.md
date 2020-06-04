@@ -1,5 +1,5 @@
 ---
-title: '方法: System::string の文字をアクセス'
+title: '方法: System::String の文字にアクセスする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222937"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545343"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::string の文字をアクセス
+# <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 
-文字にアクセスすることができます、<xref:System.String>オブジェクトの高パフォーマンスの呼び出しをアンマネージ関数を受け取る`wchar_t*`文字列。 メソッド生成の最初の文字への内部ポインター、<xref:System.String>オブジェクト。 このポインターの直接操作またはピン留めし、通常、関数に渡すことができますが`wchar_t`文字列。
+<xref:System.String> オブジェクトの文字にアクセスして、`wchar_t*` 文字列を受け取るアンマネージ関数に対する高パフォーマンスの呼び出しを行うことができます。 メソッドは、<xref:System.String> オブジェクトの最初の文字への内部ポインターを生成します。 このポインターは、直接操作したり固定したりすることができ、通常の `wchar_t` 文字列を必要とする関数に渡すことができます。
 
 ## <a name="example"></a>例
 
-`PtrToStringChars` 返します、 <xref:System.Char>、内部ポインターである (とも呼ばれる、 `byref`)。 そのため、ガベージ コレクションの対象になります。 ネイティブ関数に渡すしようとしている場合を除き、このポインターをピン留めする必要はありません。
+`PtrToStringChars` は、内部ポインター (`byref`とも呼ばれます) である <xref:System.Char>を返します。 そのため、ガベージコレクションの対象になります。 ネイティブ関数に渡す場合を除き、このポインターを固定する必要はありません。
 
-次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`、内部ポインターであり、ガベージ コレクターは、文字列の指すを移動する場合は更新も`ppchar`します。 なし、 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)、コードを実行およびが潜在的なパフォーマンスの影響によるものをピン留めします。
+次のコードについて考えてみましょう。  `ppchar` が内部ポインターであるため、固定は必要ありません。ガベージコレクターが指す文字列を移動すると、`ppchar`も更新されます。 [Pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md)を使用しない場合、コードは機能しますが、ピン留めによってパフォーマンスが低下する可能性はありません。
 
-渡した場合`ppchar`、ネイティブ関数にする必要があります固定ポインター。 ガベージ コレクターがアンマネージ スタック フレーム上のポインターを更新することができません。
+`ppchar` をネイティブ関数に渡す場合は、固定ポインターである必要があります。ガベージコレクターは、アンマネージスタックフレーム上のポインターを更新できません。
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>例
 
-この例は、ピン留めが必要な場所を示します。
+この例では、ピン留めが必要な場所を示します。
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>例
 
-内部ポインターには、ネイティブ C++ ポインターのすべてのプロパティがあります。 たとえば、リンクされているデータ構造を確認し、挿入と削除が 1 つだけのポインターを使用して使用できます。
+内部ポインターには、ネイティブC++ポインターのすべてのプロパティが含まれています。 たとえば、このメソッドを使用して、リンクされたデータ構造を調べ、1つのポインターだけを使用して挿入と削除を行うことができます。
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

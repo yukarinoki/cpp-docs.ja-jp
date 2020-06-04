@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4538
 ms.assetid: 747e3d51-b6d0-41c1-a726-7af3253b59d7
-ms.openlocfilehash: e0f20c7b1d9f840bc272cd3b9d43f4872ac3f71d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c68bcbfe035f12f1a2a16bbcaffbaf4db080388f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401840"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992033"
 ---
 # <a name="compiler-warning-level-3-c4538"></a>コンパイラの警告 (レベル 3) C4538
 
-'type': この型での const/volatile 修飾子はサポートされていません
+' type ': この型の const/volatile 修飾子はサポートされていません
 
-修飾子キーワード正しく適用されませんでしたを配列にします。 詳細については、「 [配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。
+修飾子キーワードが配列に正しく適用されませんでした。 詳細については、「 [配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C4538 が生成されます。
 
-```
+```cpp
 // C4538.cpp
 // compile with: /clr /W3 /LD
 const array<int> ^f1();   // C4538

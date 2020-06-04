@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c4b75a65fcfb34a4988b176ffcb5b2afcb7ea13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514807"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377374"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ での配置
 
@@ -26,7 +26,7 @@ Visual C++ ライブラリを集中配置する場合、インストールする
 
 - *再頒布可能パッケージ* ファイル: 圧縮形式ですべての Visual C++ 再頒布可能ライブラリが含まれるスタンドアロンのコマンド ライン実行可能ファイルです。
 
-- *再頒布可能マージ モジュール* (.msm ファイル): 特定のライブラリを配置する際に使用でき、アプリケーションの Windows インストーラー (.msi) ファイルに含めることができます。
+- *再頒布可能マージ モジュール*(.msm ファイル) は、特定のライブラリを配置するために使用でき、アプリケーションの Windows インストーラー (.msi) ファイルに含めることができます。
 
 再頒布可能パッケージ ファイルにより、特定のシステム アーキテクチャの Visual C++ ライブラリがすべてインストールされます。 たとえば、アプリケーションが x64 用にビルドされている場合、vcredist_x64.exe 再頒布可能パッケージを使って、アプリケーションで使用される Visual C++ ライブラリをすべてインストールできます。 アプリケーションをインストールする前に必須コンポーネントとして再頒布可能パッケージを実行するように、アプリケーション インストーラーをプログラミングできます。
 
@@ -53,4 +53,4 @@ Visual C++ ライブラリの読み込み順序はシステムに依存します
 ## <a name="see-also"></a>関連項目
 
 - [デスクトップ アプリケーションの配置](deploying-native-desktop-applications-visual-cpp.md)
-- [ユニバーサル CRT の配置](universal-crt-deployment.md)
+- [ユニバーサル CRT 展開](universal-crt-deployment.md)

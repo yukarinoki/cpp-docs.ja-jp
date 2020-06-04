@@ -22,23 +22,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: d6a7a61d1886a264f8575e8d7325d6639d21338d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3d0be66bf0b5a6c07a72c8ae6cc9c90e176728f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497713"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167891"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile クラス
 
 このクラスには、一時ファイルを作成して使用するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class CAtlTemporaryFile
 ```
 
@@ -56,17 +56,17 @@ class CAtlTemporaryFile
 |名前|説明|
 |----------|-----------------|
 |[CAtlTemporaryFile:: Close](#close)|一時ファイルを閉じ、その内容を削除するか、指定したファイル名で格納します。|
-|[CAtlTemporaryFile::Create](#create)|一時ファイルを作成するには、このメソッドを呼び出します。|
+|[CAtlTemporaryFile:: Create](#create)|一時ファイルを作成するには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: Flush](#flush)|ファイルバッファーに残っているデータを一時ファイルに強制的に書き込むには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile::GetPosition](#getposition)|現在のファイルポインターの位置を取得するには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: GetSize](#getsize)|このメソッドを呼び出して、一時ファイルのサイズ (バイト単位) を取得します。|
 |[CAtlTemporaryFile::HandsOff](#handsoff)|`CAtlTemporaryFile`オブジェクトからファイルの関連付けを解除するには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: ハンドラー Son](#handson)|このメソッドを呼び出して、既存の一時ファイルを開き、ポインターをファイルの末尾に配置します。|
 |[CAtlTemporaryFile::LockRange](#lockrange)|他のプロセスがアクセスできないように、ファイル内の領域をロックするには、このメソッドを呼び出します。|
-|[CAtlTemporaryFile::Read](#read)|ファイルポインターによって示される位置から開始して、一時ファイルからデータを読み取るには、このメソッドを呼び出します。|
+|[CAtlTemporaryFile:: Read](#read)|ファイルポインターによって示される位置から開始して、一時ファイルからデータを読み取るには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: Seek](#seek)|一時ファイルのファイルポインターを移動するには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: SetSize](#setsize)|一時ファイルのサイズを設定するには、このメソッドを呼び出します。|
-|[CAtlTemporaryFile::TempFileName](#tempfilename)|一時ファイルの名前を返すには、このメソッドを呼び出します。|
+|[CAtlTemporaryFile:: TempFileName](#tempfilename)|一時ファイルの名前を返すには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile::UnlockRange](#unlockrange)|一時ファイルの領域をロック解除するには、このメソッドを呼び出します。|
 |[CAtlTemporaryFile:: Write](#write)|ファイルポインターによって示される位置から開始して、一時ファイルにデータを書き込むには、このメソッドを呼び出します。|
 
@@ -76,7 +76,7 @@ class CAtlTemporaryFile
 |----------|-----------------|
 |[CAtlTemporaryFile:: operator ハンドル](#operator_handle)|一時ファイルへのハンドルを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `CAtlTemporaryFile`では、一時ファイルの作成と使用が簡単になります。 ファイルは、自動的に名前が付けられ、開いて閉じられ、削除されます。 ファイルが閉じられた後にファイルの内容が必要な場合は、指定した名前の新しいファイルに保存できます。
 
@@ -88,15 +88,15 @@ class CAtlTemporaryFile
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile
+## <a name="catltemporaryfilecatltemporaryfile"></a><a name="catltemporaryfile"></a>CAtlTemporaryFile::CAtlTemporaryFile
 
 コンストラクターです。
 
-```
+```cpp
 CAtlTemporaryFile() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlTemporaryFile:: Create](#create)が呼び出されるまで、ファイルは実際には開かれません。
 
@@ -104,23 +104,23 @@ CAtlTemporaryFile() throw();
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile
+## <a name="catltemporaryfilecatltemporaryfile"></a><a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile
 
 デストラクターです。
 
-```
+```cpp
 ~CAtlTemporaryFile() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 デストラクターは[CAtlTemporaryFile:: Close](#close)を呼び出します。
 
-##  <a name="close"></a>  CAtlTemporaryFile::Close
+## <a name="catltemporaryfileclose"></a><a name="close"></a>CAtlTemporaryFile:: Close
 
 一時ファイルを閉じ、その内容を削除するか、指定したファイル名で格納します。
 
-```
+```cpp
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
 ```
 
@@ -131,17 +131,17 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="example"></a>例
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="create"></a>  CAtlTemporaryFile::Create
+## <a name="catltemporaryfilecreate"></a><a name="create"></a>CAtlTemporaryFile:: Create
 
 一時ファイルを作成するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
 ```
 
@@ -155,25 +155,25 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="example"></a>例
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="flush"></a>CAtlTemporaryFile:: Flush
+## <a name="catltemporaryfileflush"></a><a name="flush"></a>CAtlTemporaryFile:: Flush
 
 ファイルバッファーに残っているデータを一時ファイルに強制的に書き込むには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT Flush() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlTemporaryFile:: HandsOff](#handsoff)に似ていますが、ファイルが閉じられていない点が異なります。
 
@@ -181,11 +181,11 @@ HRESULT Flush() throw();
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition
+## <a name="catltemporaryfilegetposition"></a><a name="getposition"></a>CAtlTemporaryFile::GetPosition
 
 現在のファイルポインターの位置を取得するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```
 
@@ -196,17 +196,17 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ファイルポインターの位置を変更するには、 [CAtlTemporaryFile:: Seek](#seek)を使用します。
 
-##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize
+## <a name="catltemporaryfilegetsize"></a><a name="getsize"></a>CAtlTemporaryFile:: GetSize
 
 このメソッドを呼び出して、一時ファイルのサイズ (バイト単位) を取得します。
 
-```
+```cpp
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```
 
@@ -217,45 +217,45 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-##  <a name="handsoff"></a>CAtlTemporaryFile::HandsOff
+## <a name="catltemporaryfilehandsoff"></a><a name="handsoff"></a>CAtlTemporaryFile::HandsOff
 
 `CAtlTemporaryFile`オブジェクトからファイルの関連付けを解除するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT HandsOff() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `HandsOff`また、 [CAtlTemporaryFile::](#handson)の場合、オブジェクトからファイルの関連付けを解除し、必要に応じて再アタッチするために使用されます。 `HandsOff`は、ファイルバッファーに残っているすべてのデータを一時ファイルに強制的に書き込み、ファイルを閉じます。 ファイルを完全に閉じて削除する場合、または指定した名前のファイルの内容を閉じて保持する場合は、 [CAtlTemporaryFile:: close](#close)を使用します。
 
-##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn
+## <a name="catltemporaryfilehandson"></a><a name="handson"></a>CAtlTemporaryFile:: ハンドラー Son
 
 このメソッドを呼び出して、既存の一時ファイルを開き、ポインターをファイルの末尾に配置します。
 
-```
+```cpp
 HRESULT HandsOn() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlTemporaryFile:: HandsOff](#handsoff)および`HandsOn`は、オブジェクトからのファイルの関連付けを解除するために使用され、必要に応じて再アタッチします。
 
-##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange
+## <a name="catltemporaryfilelockrange"></a><a name="lockrange"></a>CAtlTemporaryFile::LockRange
 
 他のプロセスがアクセスできないように、一時ファイル内の領域をロックするには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -269,25 +269,25 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの複数の領域をロックすることはできますが、重複する領域は許可されません。 領域のロックを正常に解除するには、 [CAtlTemporaryFile:: UnlockRange](#unlockrange)を使用します。これにより、バイト範囲が以前にロックされていた領域と完全に一致することが保証されます。 `LockRange`隣接する領域をマージしません。2つのロックされた領域が隣接している場合は、それぞれを個別にロック解除する必要があります。
 
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator HANDLE
+## <a name="catltemporaryfileoperator-handle"></a><a name="operator_handle"></a>CAtlTemporaryFile:: operator ハンドル
 
 一時ファイルへのハンドルを返します。
 
-```
+```cpp
 operator HANDLE() throw();
 ```
 
-##  <a name="read"></a>  CAtlTemporaryFile::Read
+## <a name="catltemporaryfileread"></a><a name="read"></a>CAtlTemporaryFile:: Read
 
 ファイルポインターによって示される位置から開始して、一時ファイルからデータを読み取るには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT Read(
     LPVOID pBuffer,
     DWORD nBufSize,
@@ -303,13 +303,13 @@ HRESULT Read(
 バイト単位のバッファー サイズ。
 
 *nBytesRead*<br/>
-読み取られたバイト数。
+読み取るバイト数。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlFile:: Read](../../atl/reference/catlfile-class.md#read)を呼び出します。 ファイルポインターの位置を変更するには、 [CAtlTemporaryFile:: Seek](#seek)を呼び出します。
 
@@ -317,11 +317,11 @@ HRESULT Read(
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="seek"></a>  CAtlTemporaryFile::Seek
+## <a name="catltemporaryfileseek"></a><a name="seek"></a>CAtlTemporaryFile:: Seek
 
 一時ファイルのファイルポインターを移動するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ```
 
@@ -335,9 +335,9 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlFile:: Seek](../../atl/reference/catlfile-class.md#seek)を呼び出します。 現在のファイルポインターの位置を取得するには、 [CAtlTemporaryFile:: GetPosition](#getposition)を呼び出します。
 
@@ -345,11 +345,11 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)の例を参照してください。
 
-##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize
+## <a name="catltemporaryfilesetsize"></a><a name="setsize"></a>CAtlTemporaryFile:: SetSize
 
 一時ファイルのサイズを設定するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```
 
@@ -360,17 +360,17 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlFile:: SetSize](../../atl/reference/catlfile-class.md#setsize)を呼び出します。 返されると、ファイルポインターがファイルの末尾に配置されます。
 
-##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName
+## <a name="catltemporaryfiletempfilename"></a><a name="tempfilename"></a>CAtlTemporaryFile:: TempFileName
 
 一時ファイルの名前を返すには、このメソッドを呼び出します。
 
-```
+```cpp
 LPCTSTR TempFileName() throw();
 ```
 
@@ -378,15 +378,15 @@ LPCTSTR TempFileName() throw();
 
 ファイル名を指す LPCTSTR を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ファイル名は、 [GetTempFile](/windows/win32/api/fileapi/nf-fileapi-gettempfilenamew)Windows SDK 関数の呼び出しで[CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)に生成されます。 ファイル拡張子は常に、一時ファイルの "TFR" になります。
 
-##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange
+## <a name="catltemporaryfileunlockrange"></a><a name="unlockrange"></a>CAtlTemporaryFile::UnlockRange
 
 一時ファイルの領域をロック解除するには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -400,17 +400,17 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlFile:: UnlockRange](../../atl/reference/catlfile-class.md#unlockrange)を呼び出します。
 
-##  <a name="write"></a>  CAtlTemporaryFile::Write
+## <a name="catltemporaryfilewrite"></a><a name="write"></a>CAtlTemporaryFile:: Write
 
 ファイルポインターによって示される位置から開始して、一時ファイルにデータを書き込むには、このメソッドを呼び出します。
 
-```
+```cpp
 HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
@@ -425,14 +425,14 @@ HRESULT Write(
 *nBufSize*<br/>
 バッファーから転送されるバイト数。
 
-*pnBytesWritten*<br/>
-書き込むバイト数。
+*書き込まれた pnbytes*<br/>
+書き込まれたバイト数。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CAtlFile:: Write](../../atl/reference/catlfile-class.md#write)を呼び出します。
 

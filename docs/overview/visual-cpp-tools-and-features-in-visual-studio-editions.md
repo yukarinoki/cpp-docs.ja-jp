@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366794"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの C++ ツールと機能
 
-
 ::: moniker range=">=vs-2019"
-
 
 次の C++ 機能を Visual Studio 2019 で使用できます。 特に示されていない限り、すべての機能をすべてのエディションで使用できます。Visual Studio Community、Visual Studio Professional、Visual Studio Enterprise。 一部の機能には、特定のワークロードまたはオプション コンポーネントが必要です。これは、Visual Studio インストーラーを使ってインストールできます。
 
@@ -35,7 +33,7 @@ ms.locfileid: "67400639"
 - Clang/LLVM
   - Windows 上の x86 または x64 を対象とする Clang/LLVM 7.0 (CMake サポートのみ)。 その他の Clang バージョンは機能しますが、公式にはサポートされません。
   - Linux 上で配布によってサポートされる任意の Clang/LLVM インストール。
- 
+
 ## <a name="c-workloads"></a>C++ ワークロード
 
 Visual Studio には C++ 開発に対して次のワークロードが含まれます。 .NET デスクトップ開発、Python 開発、Azure の開発、Visual Studio 拡張機能の開発など、その他のワークロードと共に、これらの一部またはすべてをインストールできます。
@@ -43,9 +41,11 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 ### <a name="desktop-development-with-c"></a>C++ によるデスクトップ開発
 
 対象:
+
 - C++ コア デスクトップ機能
 
 オプション コンポーネント:
+
 - MSVC v142 - VS 2019 C++ x64/x86 ビルド ツール (v14.21)
 - Windows 10 SDK (10.0.17763.0)
 - Just-In-Time デバッガー
@@ -70,17 +70,20 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 ### <a name="linux-development-with-c"></a>C++ による Linux 開発
 
 対象:
+
 - C++ コア機能
 - Windows ユニバーサル C ランタイム
 - Linux 開発用 C++
 
 オプション コンポーネント:
+
 - Linux 用の C++ CMake ツール
 - 埋め込み開発ツールと IoT 開発ツール
 
 ### <a name="universal-windows-platform-development"></a>ユニバーサル Windows プラットフォーム開発
 
 対象:
+
 - Blend for Visual Studio
 - .NET ネイティブと .NET Standard
 - NuGet パッケージ マネージャー
@@ -88,6 +91,7 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 - Windows 10 SDK (10.0.17763.0)
 
 オプション コンポーネント:
+
 - IntelliCode
 - IntelliTrace (Enterprise のみ)
 - USB デバイスの接続
@@ -102,12 +106,14 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 ### <a name="c-game-development"></a>C++ ゲーム開発
 
 対象:
+
 - C++ コア機能
 - Windows ユニバーサル C ランタイム
 - C++ 2019 再頒布可能パッケージの更新プログラム
 - MSVC v142 - VS 2019 C++ x64/x86 ビルド ツール (v14.21)
 
 オプション コンポーネント:
+
 - C++ のプロファイル ツール
 - Windows 10 SDK (10.0.17763.0)
 - IntelliCode
@@ -122,10 +128,12 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 ### <a name="mobile-development-with-c"></a>C++ でのモバイル開発
 
 対象:
+
 - C++ コア機能
 - Android SDK セットアップ (API レベル 25) (C++ を使用したモバイル開発のためにローカルにインストール)
 
 オプション コンポーネント:
+
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
 - C++ Android 開発ツール
@@ -135,7 +143,6 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 - Android NDK (R16B) (32 ビット)
 - C++ iOS 開発ツール
 - IncrediBuild - ビルド アクセラレーション
-
 
 ## <a name="individual-components"></a>個々のコンポーネント
 
@@ -175,6 +182,7 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 次のプロジェクト テンプレートは、インストールしたワークロードによって利用できるものが異なります。
 
 Windows デスクトップ:
+
 - 空のプロジェクト
 - コンソール アプリ
 - Windows デスクトップ ウィザード
@@ -195,17 +203,19 @@ Windows デスクトップ:
 - Google Test
 
 ユニバーサル Windows プラットフォーム (C++/CX):
+
 - 空のアプリケーション
 - DirectX 11 および XAML アプリ
 - DirectX 11 アプリ
-- DirectX 12 アプリ 
-- 単体テスト アプリ 
-- [DLL] 
-- Windows ランタイム コンポーネント 
-- スタティック ライブラリ 
+- DirectX 12 アプリ
+- 単体テスト アプリ
+- [DLL]
+- Windows ランタイム コンポーネント
+- スタティック ライブラリ
 - Windows アプリケーション パッケージ プロジェクト
 
 Linux の場合:
+
 - コンソール アプリ (Linux)
 - 空のプロジェクト (Linux)
 - Raspberry Pi Blink

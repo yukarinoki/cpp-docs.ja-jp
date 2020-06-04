@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4273
 ms.assetid: cc18611d-9454-40a4-ad73-69823d5888fb
-ms.openlocfilehash: 4d00ed0113f9954e7400da24f37b51b9fdd247bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fcecc268d4d271bcb43b7094baa58a2d654d22e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207221"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199754"
 ---
 # <a name="compiler-warning-level-1-c4273"></a>コンパイラの警告 (レベル 1) C4273
 
-'function': DLL リンクの一貫性がありません
+' function ': DLL リンケージが一致しません
 
-使用方法が異なる 2 つの定義ファイルで[dllimport](../../cpp/dllexport-dllimport.md)します。
+ファイル内の2つの定義は、 [dllimport](../../cpp/dllexport-dllimport.md)の使用方法が異なります。
 
 ## <a name="example"></a>例
 
 次の例では、C4273 が生成されます。
 
-```
+```cpp
 // C4273.cpp
 // compile with: /W1 /c
 char __declspec(dllimport) c;
@@ -34,7 +34,7 @@ char c;   // C4273, delete this line or the line above to resolve
 
 次の例では、C4273 が生成されます。
 
-```
+```cpp
 // C4273_b.cpp
 // compile with: /W1 /clr /c
 #include <stdio.h>

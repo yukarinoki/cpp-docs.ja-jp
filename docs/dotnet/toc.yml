@@ -1,0 +1,344 @@
+- name: C++/CLI による .NET プログラミング
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 'チュートリアル: CLR をターゲットにした C++/CLI プログラムをコンパイルする'
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: C++/CLI タスク
+  items:
+    - name: C++/CLI タスク
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: '方法: 空の CLR プロジェクトを作成する'
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: '方法: CLR コンソール アプリケーションを作成する'
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: '方法: C++/CLI で追跡参照を使用する'
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: '方法: C++/CLI で配列を使用する'
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: '方法: クラスと構造体を定義および使用する'
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: 参照型の C++ スタック セマンティクス
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: ユーザー定義の演算子
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: ユーザー定義の変換
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: '方法: デリゲートを定義および使用する'
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: '方法: C++/CLI で列挙型を定義および使用する'
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: '方法: C++/CLI でイベントを使用する'
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: '方法: インターフェイス静的コンストラクターを定義する'
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: '方法: ネイティブ コンパイルでオーバーライド指定子を宣言する'
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: '方法: C++/CLI でプロパティを使用する'
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: '方法: C++/CLI で safe_cast を使用する'
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: 正規表現
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: ファイル処理と I/O
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: グラフィック操作
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Windows の操作
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: ADO.NET を使用したデータ アクセス
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: ネイティブと .NET の相互運用性
+  items:
+    - name: ネイティブと .NET の相互運用性
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: 他の .NET 言語との相互運用性
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: 混在 (ネイティブおよびマネージド) アセンブリ
+      items:
+        - name: 混在 (ネイティブおよびマネージド) アセンブリ
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: '方法: -clr に移行する'
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: '方法: -clr を使用して MFC および ATL コードをコンパイルする'
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: 混在アセンブリの初期化
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: 混在アセンブリのためのライブラリ サポート
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Interop のパフォーマンスに関する考慮事項 (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: アプリケーション ドメインと Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: ダブル サンキング (C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: '-clr で構築された COM オブジェクト使用時における CLR シャットダウンの例外の回避'
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: '方法: CRT ライブラリ DLL との依存関係を削除して部分信頼アプリケーションを作成する'
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: MFC での Windows フォーム ユーザー コントロールの使用
+      items:
+        - name: MFC での Windows フォーム ユーザー コントロールの使用
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Windows フォームと MFC のプログラミング上の違い
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: MFC ダイアログ ボックスでの Windows フォーム ユーザー コントロールのホスト
+          items:
+            - name: MFC ダイアログ ボックスでの Windows フォーム ユーザー コントロールのホスト
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: '方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する'
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: '方法: Windows フォームで DDX-DDV データ バインディングを実行する'
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
+          items:
+            - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: '方法: ユーザー コントロールを作成し、MDI ビューをホストする'
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: '方法: Windows フォーム コントロールにコマンド ルーティングを追加する'
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: '方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す'
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: マネージド コードからのネイティブ関数の呼び出し
+      items:
+        - name: マネージド コードからのネイティブ関数の呼び出し
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: C++ での明示的な PInvoke (DllImport 属性) の使用方法
+          items:
+            - name: C++ での明示的な PInvoke (DllImport 属性) の使用方法
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: '方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す'
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: '方法: PInvoke を使用して文字列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: '方法: PInvoke を使用して構造体をマーシャリングする'
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: '方法: PInvoke を使用して配列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: '方法: PInvoke を使用して関数ポインターをマーシャリングする'
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: '方法: PInvoke を使用して埋め込みポインターをマーシャリングする'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: C++ Interop (暗黙の PInvoke) の使用
+          items:
+            - name: C++ Interop (暗黙の PInvoke) の使用
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: '方法: C++ Interop を使用して ANSI 文字列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用して Unicode 文字列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用して COM 文字列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用して構造体をマーシャリングする'
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用して配列をマーシャリングする'
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用してコールバックおよびデリゲートをマーシャリングする'
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: '方法: C++ Interop を使用して埋め込みポインターをマーシャリングする'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: '方法: マーシャリング ライブラリを拡張する'
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: '方法: System::String の文字にアクセスする'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: '方法: char * 文字列を System::Byte 配列に変換する'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: '方法: System::String を wchar_t* または char* に変換する'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: '方法: System::String を標準文字列に変換する'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: '方法: 標準文字列を System::String に変換する'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: '方法: バイト配列へのポインターを取得する'
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: '方法: アンマネージ リソースをバイト配列に読み込む'
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: '方法: ネイティブ関数の参照クラスを変更する'
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: '方法: イメージがネイティブであるか CLR であるかを確認する'
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: '方法: ネイティブ DLL をグローバル アセンブリ キャッシュに追加する'
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: '方法: 値型への参照をネイティブ型で保持する'
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: '方法: アンマネージ メモリ内にオブジェクト参照を保持する'
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: '方法: -clr コンパイルを検出する'
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: '方法: System::Guid と _GUID の間で変換を行う'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: '方法: out パラメーターを指定する'
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: '方法: -clr コンパイルでネイティブ型を使用する'
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: '方法: ネイティブ型のハンドルを宣言する'
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: '方法: ネイティブ クラスを C# で使用できるようにラップする'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: 純粋なコードと検証可能なコード
+  items:
+    - name: 純粋なコードと検証可能なコード
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: '方法: 確認可能な C++ プロジェクトを作成する'
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: SQL Server での確認可能なアセンブリの使用
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: 混合モードから純粋な中間言語へのプロジェクトの変換
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: シリアル化
+  href: ../dotnet/serialization-cpp-cli.md
+- name: フレンド アセンブリ (C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: マネージド型
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: リフレクション
+  href: ../dotnet/reflection-cpp-cli.md
+- name: 厳密な名前のアセンブリ (アセンブリの署名)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: Debug クラス
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: STL/CLR ライブラリ リファレンス
+  items:
+    - name: STL/CLR ライブラリ リファレンス
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: cliext 名前空間
+      href: ../dotnet/cliext-namespace.md
+    - name: STL/CLR コンテナー
+      href: ../dotnet/stl-clr-containers.md
+    - name: STL/CLR コンテナー要素の要件
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: '方法: .NET コレクションを STL/CLR コンテナーに変換する'
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: '方法: STL/CLR コンテナーを .NET コレクションに変換する'
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: '方法: アセンブリから STL/CLR コンテナーを公開する'
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: for each、in
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: 数値 (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: C++ のサポート ライブラリ
+  items:
+    - name: C++ のサポート ライブラリ
+      href: ../dotnet/cpp-support-library.md
+    - name: C++ におけるマーシャリングの概要
+      items:
+        - name: C++ におけるマーシャリングの概要
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: marshal_context クラス
+          href: ../dotnet/marshal-context-class.md
+    - name: msclr 名前空間
+      href: ../dotnet/msclr-namespace.md
+    - name: リソース管理クラス
+      items:
+        - name: リソース管理クラス
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: auto_gcroot クラス
+              href: ../dotnet/auto-gcroot-class.md
+            - name: swap 関数 (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: auto_handle クラス
+              href: ../dotnet/auto-handle-class.md
+            - name: swap 関数 (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: 同期 (lock クラス)
+      items:
+        - name: 同期 (lock クラス)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: lock
+          items:
+            - name: lock
+              href: ../dotnet/lock.md
+            - name: lock クラス
+              href: ../dotnet/lock-class.md
+            - name: lock_when Enum
+              href: ../dotnet/lock-when-enum.md
+    - name: 特定のアプリケーション ドメイン内での関数の呼び出し
+      items:
+        - name: 特定のアプリケーション ドメイン内での関数の呼び出し
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: call_in_appdomain 関数
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'com::ptr class'
+          href: ../dotnet/com-ptr-class.md
+- name: C++/CLI の例外
+  items:
+    - name: C++/CLI の例外
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: マネージド例外の使用についての基本概念
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: '-clr における例外処理動作の相違点'
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: '方法: MSIL からスローされるネイティブ コードの例外をキャッチする'
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: '方法: グローバル例外ハンドラーを定義およびインストールする'
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: ボックス化
+  items:
+    - name: ボックス化
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: '方法: 明示的にボックス化を要求する'
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: '方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する'
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: '方法: ボックス化を解除する'
+      href: ../dotnet/how-to-unbox.md
+    - name: 標準変換と暗黙のボックス化
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

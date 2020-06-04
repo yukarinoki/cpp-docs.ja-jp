@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205245"
 ---
 # <a name="compiler-error-c2457"></a>コンパイラ エラー C2457
 
-> '*マクロ*': 定義済みマクロが関数本体の外部で表示できません。
+> '*macro*': 定義済みマクロは関数本体の外側には記述できません
 
-定義済みのマクロを使用しようとしています。 [ &#95;&#95;関数&#95;&#95;](../../preprocessor/predefined-macros.md)、グローバル空間内。
+関数などの定義済みマクロ[&#95; &#95;をグローバル空間で使用しようとしまし&#95;](../../preprocessor/predefined-macros.md)た。
 
 ## <a name="example"></a>例
 
-次の例では、C2457 を生成し、また正しい使用法を示します。
+次の例では、C2457 を生成し、正しい使用法も示しています。
 
 ```cpp
 // C2457.cpp

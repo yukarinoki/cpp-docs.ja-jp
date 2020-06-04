@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161816"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>コンパイラの警告 (レベル 2) C4396
 
@@ -27,7 +27,7 @@ ms.locfileid: "62402451"
 
 次のコード例では、 `inline` 指定子のある無効なフレンド関数の宣言を示します。
 
-```
+```cpp
 // C4396.cpp
 // compile with: /W2 /c
 

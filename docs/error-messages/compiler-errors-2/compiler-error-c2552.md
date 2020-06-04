@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: ddd3755a4fcabf8c097c359f31c9cc189b36f79a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374190"
 ---
 # <a name="compiler-error-c2552"></a>コンパイラ エラー C2552
 
@@ -19,19 +19,19 @@ ms.locfileid: "62353132"
 
 集約識別子は正しく初期化されませんでした。
 
-[集計](../../c-language/initializing-aggregate-types.md)として定義されます。
+[集計は](../../c-language/initializing-aggregate-types.md)次のように定義されます。
 
 - 配列
 
 - 次のものがないクラス、構造体、共用体:
 
-   - コンストラクター
+  - コンストラクター
 
-   - プライベートまたはプロテクト メンバー
+  - プライベートまたはプロテクト メンバー
 
-   - 基底クラス
+  - 基底クラス
 
-   - 仮想関数
+  - 仮想関数
 
 さらに、Visual C++ は、コンストラクターを含む集約のデータ型を許可しません。
 
@@ -51,7 +51,7 @@ ms.locfileid: "62353132"
 
 次の例では警告 C2552 が生成されます。
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

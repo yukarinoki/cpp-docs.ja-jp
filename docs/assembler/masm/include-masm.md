@@ -1,30 +1,29 @@
 ---
 title: INCLUDE (MASM)
-ms.date: 08/30/2018
-f1_keywords:
-- include
+ms.date: 12/17/2019
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: e63d7cb85ad5379adcc1beea3c3c96eff0d91339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86c47ba2878158cd78b58cb128a5b2147f9dda3d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184542"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440759"
 ---
-# <a name="include-masm"></a>INCLUDE (MASM)
+# <a name="include"></a>INCLUDE
 
-挿入のソースで指定されたソース ファイルからコード*filename*アセンブリ中に現在のソース ファイルにします。
+*Filename*によって指定されたソースファイルから、アセンブリ中の現在のソースファイルにソースコードを挿入します。
 
 ## <a name="syntax"></a>構文
 
-> ファイル名を含める
+> **INCLUDE** *ファイル名*を含める
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-*Filename*セミコロンが大きい、円記号が含まれている場合、山かっこで囲む必要があります-記号、小さいよりも-シンボル、単一引用符または二重引用符よりもします。
+*ファイル名*は、円記号、セミコロン、大なり記号、小なり記号、単一引用符、または二重引用符が含まれている場合、山かっこで囲む必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

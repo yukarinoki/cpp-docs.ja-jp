@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201397"
 ---
 # <a name="compiler-error-c3286"></a>コンパイラ エラー C3286
 
-> '*指定子*': 繰り返し変数は、ストレージ クラス指定子を含めることはできません
+> '*指定子*': 反復変数は、ストレージクラスの指定子を持つことはできません
 
-ストレージ クラスは、繰り返し変数を指定できません。 詳細については、次を参照してください。[ストレージ クラス (C++)](../../cpp/storage-classes-cpp.md)と[ごとに、で](../../dotnet/for-each-in.md)します。
+ストレージクラスを繰り返し変数に指定することはできません。 詳細については、「 [」](../../dotnet/for-each-in.md)の「[ストレージクラス」 (C++)](../../cpp/storage-classes-cpp.md)および「」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、C3286 を生成しも正しい使用法を示しています。
+次の例では、C3286 を生成し、正しい使用法も示しています。
 
 ```cpp
 // C3286.cpp

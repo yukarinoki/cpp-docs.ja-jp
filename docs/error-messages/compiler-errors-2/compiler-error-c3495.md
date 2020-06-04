@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 3e387fe77c521a4f25ba67205f1fbd552397e272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381040"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075009"
 ---
 # <a name="compiler-error-c3495"></a>コンパイラ エラー C3495
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381040"
 
 次の例では、 `static` 変数 `n` がラムダ式のキャプチャ リストにあるため、C3495 が生成されます。
 
-```
+```cpp
 // C3495.cpp
 
 int main()
@@ -37,7 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)
-

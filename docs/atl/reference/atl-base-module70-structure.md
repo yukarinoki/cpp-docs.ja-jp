@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260988"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168645"
 ---
-# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 構造体
+# <a name="_atl_base_module70-structure"></a>_ATL_BASE_MODULE70 構造体
 
 ATL を使用するすべてのプロジェクトで使用されます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInst;
@@ -38,36 +38,36 @@ struct _ATL_BASE_MODULE70 {
 ## <a name="members"></a>メンバー
 
 `cbSize`<br/>
-バージョン管理に使用される、構造のサイズ。
+構造体のサイズ。バージョン管理に使用されます。
 
 `m_hInst`<br/>
-`hInstance` (Exe または dll) は、このモジュールにします。
+この`hInstance`モジュールの (exe または dll のいずれか)。
 
 `m_hInstResource`<br/>
-既定のインスタンスのリソース ハンドル。
+既定のインスタンスリソースハンドル。
 
 `m_bNT5orWin98`<br/>
-オペレーティング システムのバージョン情報。 ATL で内部的に使用
+オペレーティングシステムのバージョン情報。 ATL によって内部的に使用されます。
 
 `dwAtlBuildVer`<br/>
-ATL のバージョンが格納されます。 Currently 0x0700.
+ATL のバージョンを格納します。 現在、0x0700 です。
 
 `pguidVer`<br/>
-ATL の内部の GUID です。
+ATL の内部 GUID。
 
 `m_csResource`<br/>
-アクセスを同期するため、`m_rgResourceInstance`配列。 ATL で内部的に使用
+配列への`m_rgResourceInstance`アクセスを同期するために使用します。 ATL によって内部的に使用されます。
 
 `m_rgResourceInstance`<br/>
-ATL が対応であるすべてのリソース インスタンス内のリソースの検索に使用する配列。 ATL で内部的に使用
+ATL が認識しているすべてのリソースインスタンス内のリソースを検索するために使用される配列。 ATL によって内部的に使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) _ATL_BASE_MODULE70 の typedef として定義されます。
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)は _ATL_BASE_MODULE70 の typedef として定義されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcore.h
+**ヘッダー:** atlcore .h
 
 ## <a name="see-also"></a>関連項目
 

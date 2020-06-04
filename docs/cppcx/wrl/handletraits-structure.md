@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 4dd2cde62d36c46926e703e6fb649e2ae4ef7811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371445"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 構造体
 
-ハンドルの一般的な特性を定義します。
+ハンドルの共通の特性を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +34,14 @@ struct HANDLETraits;
 
 名前   | 説明
 ------ | ---------------------
-`Type` | ハンドルのシノニムです。
+`Type` | ハンドルの同義語。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                              | 説明
 ------------------------------------------------- | -----------------------------
-[Handletraits::close](#close)                     | 指定したハンドルを閉じます。
-[Handletraits::getinvalidvalue](#getinvalidvalue) | 無効なハンドルを表します。
+[ハンドルトレイツ::閉じる](#close)                     | 指定したハンドルを閉じます。
+[ハンドルトレイト::無効な値を取得します。](#getinvalidvalue) | 無効なハンドルを表します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,11 +49,11 @@ struct HANDLETraits;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::HandleTraits
+**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
 
-## <a name="close"></a>Handletraits::close
+## <a name="handletraitsclose"></a><a name="close"></a>ハンドルトレイツ::閉じる
 
 指定したハンドルを閉じます。
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
-ハンドルを閉じます。
+*H*<br/>
+閉じるハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合処理*h*正常。 それ以外の終了**false**します。
+ハンドル*h が*正常に終了した場合**は true。** それ以外の場合**は false。**
 
-## <a name="getinvalidvalue"></a>Handletraits::getinvalidvalue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>ハンドルトレイト::無効な値を取得します。
 
 無効なハンドルを表します。
 
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>戻り値
 
-INVALID_HANDLE_VALUE を常に返します。 (INVALID_HANDLE_VALUE は Windows によって定義されます)。
+常にINVALID_HANDLE_VALUEを返します。 (INVALID_HANDLE_VALUEは Windows によって定義されます。

@@ -1,9 +1,10 @@
 ---
 title: malloc
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - malloc
-apilocation:
+- _o_malloc
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +16,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e699920f37139be40542ba91b3740cd9edef148
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157179"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917510"
 ---
 # <a name="malloc"></a>malloc
 
@@ -48,42 +53,44 @@ void *malloc(
 
 ## <a name="return-value"></a>戻り値
 
-**malloc**割り当て済みの領域に void ポインターを返しますまたは**NULL**が不足しているメモリが使用可能な場合。 以外の型へのポインターを返す**void**型、戻り値のキャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C は、基本的なアラインメントは配置のために必要な**二重**、または 8 バイト。 64 ビット プラットフォームを対象としたコードでは 16 バイトです)。使用[_aligned_malloc](aligned-malloc.md)大規模な配置要件を持つオブジェクトの記憶域を割り当てる — たとえば、SSE 型[_ _m128](../../cpp/m128.md)と **__m256**、および種類が使用して宣言`__declspec(align( n ))`場所**n**が 8 より大きい。 場合*サイズ*は 0 です。 **malloc**長さ 0 のアイテムをヒープに割り当て、そのアイテムに有効なポインターを返します。 戻り値は常にチェック**malloc**要求されたメモリの量が少ない場合でも、します。
+**malloc**は、割り当てられた領域への void ポインターを返します。または、使用可能なメモリが不足している場合は**NULL**を返します。 **Void**以外の型へのポインターを返すには、戻り値に型キャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C++ では、基本的なアラインメントは、 **double**または8バイトに必要なアラインメントです。 64ビットプラットフォームを対象とするコードでは、16バイトです)。アラインメントの要件が大きいオブジェクト (たとえば、SSE 型[__m128](../../cpp/m128.md)や **__m256**など) にストレージを割り当てるには[_aligned_malloc](aligned-malloc.md)を使用し、 **n**が8より`__declspec(align( n ))`大きい場合はを使用して宣言された型を割り当てます。 *Size*が0の場合、 **malloc**はヒープに長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。 要求されたメモリの量が少ない場合でも、 **malloc**からの戻り値を常に確認してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Malloc**関数以上のメモリ ブロックを割り当てます*サイズ*バイト。 ブロックはより大きくすることがあります*サイズ*アラインメントと保守情報に必要な領域 (バイト)。
+**Malloc**関数は、*サイズ*が少なくともバイトのメモリブロックを割り当てます。 アラインメントとメンテナンスの情報に必要な領域により、ブロックの*サイズ*がバイトを超えている可能性があります。
 
-**malloc**設定**errno**に**ENOMEM**メモリ割り当てが失敗した場合、または、要求されたメモリ量を超える場合 **_HEAP_MAXREQ**します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ**を超えた場合、 **malloc**は**errno**を**ENOMEM**に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-スタートアップ コードを使用して**malloc**ストレージを割り当て、 **_environ**、 *envp*、および*argv*変数。 次の関数と対応するワイド文字の呼び出しも**malloc**します。
+スタートアップコードは**malloc**を使用して、 **_environ**、 *envp*、および*argv*変数のストレージを割り当てます。 次の関数とそれに対応するワイド文字も**malloc**を呼び出します。
 
 |||||
 |-|-|-|-|
 |[calloc](calloc.md)|[fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
 |[_exec 関数](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[_spawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)|
 |[fgetc](fgetc-fgetwc.md)|[fsetpos](fsetpos.md)|[printf](printf-printf-l-wprintf-wprintf-l.md)|[_strdup](strdup-wcsdup-mbsdup.md)|
-|[_fgetchar](fgetc-fgetwc.md)|[_fullpath](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[system](system-wsystem.md)|
+|[_fgetchar](fgetc-fgetwc.md)|[_fullpath](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[システム](system-wsystem.md)|
 |[fgets](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](getc-getwc.md)|[_putenv](putenv-wputenv.md)|[ungetc](ungetc-ungetwc.md)|
 |[fputc](fputc-fputwc.md)|[getchar](getc-getwc.md)|[puts](puts-putws.md)|[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
 |[_fputchar](fputc-fputwc.md)|[_getcwd](getcwd-wgetcwd.md)|[_putw](putw.md)|[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)|
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
-|[fread](fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
+|[fread](fread.md)|[値](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、**malloc** 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **malloc** 、メモリの割り当てに失敗した**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗しました。 既定値を上書きするには、呼び出す`_set_new_mode(1)`に、プログラム、NEWMODE にリンクします。OBJ (を参照してください[リンク オプション](../../c-runtime-library/link-options.md))。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、**malloc** 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定値をオーバーライドするに`_set_new_mode(1)`は、プログラムの早い段階でを呼び出すか、newmode を使用してリンクします。OBJ (「[リンクオプション](../../c-runtime-library/link-options.md)」を参照)。
 
-アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合**malloc**に解決される[_malloc_dbg](malloc-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **malloc**は[_malloc_dbg](malloc-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**malloc**がマークされている`__declspec(noalias)`と`__declspec(restrict)`; これは、関数は、グローバル変数を変更しないように保証を返されるポインターがエイリアス化されないことを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**malloc**はと`__declspec(noalias)`マーク`__declspec(restrict)`されています。これは、関数がグローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証することを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**malloc**|\<stdlib.h> と \<malloc.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -128,8 +135,8 @@ Memory freed
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[空け](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_aligned_malloc](aligned-malloc.md)<br/>

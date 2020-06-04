@@ -1,18 +1,16 @@
 ---
 title: バッファー操作
 ms.date: 04/04/2018
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590503"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443589"
 ---
 # <a name="buffer-manipulation"></a>バッファー操作
 
@@ -20,7 +18,7 @@ ms.locfileid: "50590503"
 
 ## <a name="buffer-manipulation-routines"></a>バッファー操作ルーチン
 
-|ルーチンによって返される値|使用|
+|ルーチン|用途|
 |-------------|---------|
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|指定した文字または指定した数の文字がコピーされるまで、1 つのバッファーから別のバッファーに文字をコピーします|
 |[memchr、wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|バッファーで指定された文字が、指定した数の文字内で最初に発生した場所にポインターを返します|
@@ -33,6 +31,6 @@ ms.locfileid: "50590503"
 
 ソースとターゲットの領域が重複している場合、**memmove** のみが完全なソースを正しくコピーすることを保証します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)

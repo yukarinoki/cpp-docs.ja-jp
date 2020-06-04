@@ -6,16 +6,16 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154673"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170580"
 ---
 # <a name="c-constant-expressions"></a>C++ 定数式
 
-A*定数*値は変更されません。 C++ には、あるオブジェクトを変更しないという意思表示をして、その意志を行使するための 2 つのキーワードが用意されています。
+*定数*値は、変更されないものです。 C++ には、あるオブジェクトを変更しないという意思表示をして、その意志を行使するための 2 つのキーワードが用意されています。
 
 C++ では、次の宣言に定数式 (定数に評価される式) が必要です。
 
@@ -44,10 +44,10 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-整数型への明示的な変換は定数式; で有効です。その他のすべての型と派生型は、特定へのオペランドとして使用する場合を除き、 **sizeof**演算子。
+定数式では、整数型への明示的な変換は有効です。**sizeof**演算子のオペランドとして使用されている場合を除き、他のすべての型と派生型は無効です。
 
 コンマ演算子および代入演算子は定数式では使用できません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [式の型](../cpp/types-of-expressions.md)

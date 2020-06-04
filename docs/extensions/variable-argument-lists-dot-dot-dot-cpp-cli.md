@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515957"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032305"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 
 この例では、C++/CLI で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示します。
 
 > [!NOTE]
-> これは C++/CLI に関するトピックです。 ISO Standard C++ での `...` の使用については、「[Ellipses and Variadic Templates (省略記号と可変子引数テンプレート)](../cpp/ellipses-and-variadic-templates.md)」と、「[Postfix expressions (後置式)](../cpp/postfix-expressions.md)の「省略記号と既定の引数」を参照してください。
+> これは C++/CLI に関するトピックです。 ISO 標準 C++ での 使用については、`...`[後置式](../cpp/postfix-expressions.md)の[省略記号と可変](../cpp/ellipses-and-variadic-templates.md)テンプレート、省略記号と既定の引数を参照してください。
 
 `...` を使用するパラメーターは、パラメーター リストの最後のパラメーターにする必要があります。
 
@@ -68,7 +68,7 @@ public:
 
 C# では、`ParamArray` パラメーターに渡される引数は、可変個の引数で呼び出すことができます。 C# でのコード例を次に示します。
 
-```cs
+```csharp
 // mcppv2_paramarray3.cs
 // compile with: /r:mcppv2_paramarray2.dll
 // a C# program

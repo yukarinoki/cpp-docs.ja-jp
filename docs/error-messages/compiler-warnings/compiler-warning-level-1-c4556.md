@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501d79a8a86fcd3e2d8ba08dc2f03488f9abb827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162310"
 ---
 # <a name="compiler-warning-level-1-c4556"></a>コンパイラの警告 (レベル 1) C4556
 
-> 組み込みイミディ エイト引数の値 '*値*'が範囲外です'*lowerbound* - *upperbound*'
+> 組み込みのイミディエイト引数 '*value*' の値が * - '* *上限*' の範囲外です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込み関数では、ハードウェア命令と一致します。 ハードウェアの命令では、固定数の定数をエンコードするビットがあります。 場合*値*が範囲外には正常にエンコードされません。 コンパイラでは、余分なビットが切り捨てられます。
+組み込みは、ハードウェア命令に一致します。 ハードウェア命令には、定数をエンコードするためのビット数が固定されています。 *値*が範囲外の場合は、適切にエンコードされません。 コンパイラは、余分なビットを切り捨てます。
 
 ## <a name="example"></a>例
 

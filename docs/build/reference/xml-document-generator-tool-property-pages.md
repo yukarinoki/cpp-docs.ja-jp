@@ -8,21 +8,21 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335767"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>[XML ドキュメント ジェネレーター] プロパティ ページ
 
 [XML ドキュメント ジェネレーター] プロパティ ページでは、xdcmake.exe の機能が公開されます。 xdcmake.exe は、ソース コードにドキュメントのコメントが含まれていて、[/doc (ドキュメント コメントの処理) (C/C++)](doc-process-documentation-comments-c-cpp.md) が指定されている場合に、.xdc ファイルを .xml ファイルにマージします。 ドキュメントのコメントをソース コードに追加する詳細については、「[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments-visual-cpp.md)」を参照してください。
 
 > [!NOTE]
->  開発環境 (プロパティ ページ) の xdcmake.exe オプションは、コマンド ラインで xdcmake.exe を使用する場合のオプションとは異なります。 コマンド ラインで xdcmake.exe を使用する詳細については、「[XDCMake リファレンス](xdcmake-reference.md)」を参照してください。
+> 開発環境 (プロパティ ページ) の xdcmake.exe オプションは、コマンド ラインで xdcmake.exe を使用する場合のオプションとは異なります。 コマンド ラインで xdcmake.exe を使用する詳細については、「[XDCMake リファレンス](xdcmake-reference.md)」を参照してください。
 
-## <a name="uielement-list"></a>UIElement の一覧
+## <a name="uielement-list"></a>UI 要素の一覧
 
 - **著作権情報の非表示**
 
@@ -34,7 +34,7 @@ ms.locfileid: "62316159"
 
 - **出力ドキュメント ファイル**
 
-   .xml 出力ファイルの名前とディレクトリの場所。 参照してください[用マクロの一般的なコマンドとプロパティのビルド](common-macros-for-build-commands-and-properties.md)マクロを使用してディレクトリの場所を指定する方法について。
+   .xml 出力ファイルの名前とディレクトリの場所。 マクロを使用してディレクトリの場所を指定する方法については、[ビルド コマンドとプロパティの共通](common-macros-for-build-commands-and-properties.md)マクロを参照してください。
 
 - **ドキュメント ライブラリの依存関係**
 
@@ -42,4 +42,4 @@ ms.locfileid: "62316159"
 
 ## <a name="see-also"></a>関連項目
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)
+[C++ プロジェクトのプロパティ ページのリファレンス](property-pages-visual-cpp.md)

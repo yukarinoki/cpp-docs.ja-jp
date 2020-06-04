@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166134"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-この関数を呼び出したときにエラーが発生した場合に、呼び出し元がを呼び出し`GetLastError`てエラーコードを取得できることを呼び出し元に通知します。
+この関数を呼び出したときにエラーが発生した場合に、呼び出し元が `GetLastError` を呼び出してエラーコードを取得できることを呼び出し元に通知します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "69513885"
 [usesgetlasterror]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Has **getlasterror** C++属性に[は、すべて](/windows/win32/Midl/usesgetlasterror)の機能と同じ機能があります。
 
@@ -44,6 +44,6 @@ Has **getlasterror** C++属性に[は、すべて](/windows/win32/Midl/usesgetla
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)

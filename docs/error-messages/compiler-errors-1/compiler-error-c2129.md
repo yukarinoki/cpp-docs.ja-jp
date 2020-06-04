@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: e55107419235420d272c738e9d8ef7cf277c11c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397628"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207286"
 ---
 # <a name="compiler-error-c2129"></a>コンパイラ エラー C2129
 
-静的関数 'function' が宣言されていますが、定義されていません
+静的関数 ' function ' が宣言されましたが、定義されていません。
 
-前方参照される、`static`定義されていない関数です。
+定義されていない `static` 関数に前方参照が行われています。
 
-A`static`ファイルのスコープ内で関数を定義する必要があります。 宣言する必要があります、関数は、別のファイルで定義されているが場合、`extern`します。
+`static` 関数は、ファイルスコープ内で定義する必要があります。 関数が別のファイルで定義されている場合は、`extern`として宣言する必要があります。

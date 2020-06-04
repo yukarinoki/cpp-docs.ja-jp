@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79e37d8c464a009e4a5196aeacc8d4a718e355b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370962"
 ---
-# <a name="maxvariablesize-class"></a>max_variable_size クラス
+# <a name="max_variable_size-class"></a>max_variable_size クラス
 
 割り当てたメモリ ブロックの数にほぼ比例した最長値までに [freelist](../standard-library/freelist-class.md) オブジェクトを制御する、[最大クラス](../standard-library/allocators-header.md) オブジェクトを記述します。
 
@@ -35,7 +35,7 @@ class max_variable_size
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[max_variable_size](#max_variable_size)|`max_variable_size` 型のオブジェクトを構築します。|
 
@@ -44,9 +44,9 @@ class max_variable_size
 |メンバー関数|説明|
 |-|-|
 |[allocated](#allocated)|割り当てられたメモリ ブロックの数を増やします。|
-|[deallocated](#deallocated)|割り当てられたメモリ ブロックの数を減らします。|
-|[full](#full)|フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。|
-|[released](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
+|[解放](#deallocated)|割り当てられたメモリ ブロックの数を減らします。|
+|[完全](#full)|フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。|
+|[リリース](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
 |[saved](#saved)|フリー リスト上のメモリ ブロックの数を減らします。|
 
 ## <a name="requirements"></a>必要条件
@@ -55,7 +55,7 @@ class max_variable_size
 
 **名前空間:** stdext
 
-## <a name="allocated"></a>  max_variable_size::allocated
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size::割り当て済み
 
 割り当てられたメモリ ブロックの数を増やします。
 
@@ -67,13 +67,13 @@ void allocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Nx (_s)*|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は 、格納されている`_Nallocs`値に Nx を追加します。 このメンバー関数は、operator `cache_freelist::allocate` **new**によるの呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
+このメンバー関数は *_Nx*、格納されている値`_Nallocs`に_Nxを追加します。 このメンバー関数は、オペレーター **new**を`cache_freelist::allocate`呼び出した後に呼び出されます。 引数 *_Nx*は、演算子**new**によって割り当てられたチャンク内のメモリ ブロックの数です。
 
-## <a name="deallocated"></a>  max_variable_size::deallocated
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::d割り当て済み
 
 割り当てられたメモリ ブロックの数を減らします。
 
@@ -85,13 +85,13 @@ void deallocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*Nx (_s)*|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は 、格納されている`_Nallocs`値から Nx を減算します。 このメンバー関数は、が operator **delete**に`cache_freelist::deallocate`対してを呼び出すたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
+メンバー関数は、格納 *_Nx*された値`_Nallocs`から_Nxを減算します。 このメンバー関数は、オペレーター delete`cache_freelist::deallocate`を呼び出すたびに呼び出**されます**。 引数 *_Nx*は、演算子 delete によって割り当て解除されたチャンク内のメモリ ブロックの数**です**。
 
-## <a name="full"></a>  max_variable_size::full
+## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size::フル
 
 フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。
 
@@ -101,13 +101,13 @@ bool full();
 
 ### <a name="return-value"></a>戻り値
 
-の場合`_Nallocs / 16 + 16 <= _Nblocks`は true。
+**true** `_Nallocs / 16 + 16 <= _Nblocks`の場合は、
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しで**true**が返され`deallocate`た場合、はメモリブロックをフリーリストに格納します。 `deallocate` false が返された場合は、operator **delete**を呼び出してブロックの割り当てを解除します。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出し**true**が`deallocate`true を返す場合は、メモリ ブロックを空きリストに配置します。false を返す`deallocate`場合は、演算子**delete**を呼び出してブロックの割り当てを解除します。
 
-## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size::max_variable_size
 
 `max_variable_size` 型のオブジェクトを構築します。
 
@@ -115,11 +115,11 @@ bool full();
 max_variable_size();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このコンストラクターは、格納された値 `_Nblocks` および `_Nallocs` をゼロに初期化します。
 
-## <a name="released"></a>  max_variable_size::released
+## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size::リリース済み
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -127,11 +127,11 @@ max_variable_size();
 void released();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納された値 `_Nblocks` を減らします。 現在の最大クラスの `released` メンバー関数は、`cache_freelist::allocate` によって、フリー リストからメモリ ブロックが削除されるたびに、呼び出されます。
 
-## <a name="saved"></a>  max_variable_size::saved
+## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size::保存済み
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -139,10 +139,10 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納された値 `_Nblocks` を増やします。 このメンバー関数は、`cache_freelist::deallocate` によって、フリー リストにメモリ ブロックが置かれるたびに、呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<アロケーター>](../standard-library/allocators-header.md)

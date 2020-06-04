@@ -9,21 +9,21 @@ helpviewer_keywords:
 - data [MFC]
 - data [MFC], displaying in a form
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
-ms.openlocfilehash: e50c433e701fbae2e607d79d7abb34efe8eba5b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b663fabd0c87d9a2773e6f5a2796bcc8f57ce29
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213253"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>フォームでのデータの表示と操作
 
-多くのデータ アクセス アプリケーションでは、データを選択し、フォームのフィールドに表示します。 Database クラス[CRecordView](../../mfc/reference/crecordview-class.md)できます、 [CFormView](../../mfc/reference/cformview-class.md)レコード セット オブジェクトに直接接続されているオブジェクト。 レコード ビューを使用して[ダイアログ データ エクス (チェンジ DDX)](../../mfc/dialog-data-exchange-and-validation.md)レコード セットから、フォーム上のコントロールに現在のレコードのフィールドの値を移動して、更新情報は、レコード セットに移動します。 レコード セットは、データ ソースのフィールド データ メンバーと、テーブル内の対応する列の間でデータを移動、レコード フィールド エクス (チェンジ RFX) を使用します。
+多くのデータアクセスアプリケーションでは、データが選択され、フォームのフィールドに表示されます。 データベースクラス[CRecordView](../../mfc/reference/crecordview-class.md)は、レコードセットオブジェクトに直接接続された[CFormView](../../mfc/reference/cformview-class.md)オブジェクトを提供します。 レコードビューは、[ダイアログデータエクスチェンジ (DDX)](../../mfc/dialog-data-exchange-and-validation.md)を使用して、現在のレコードのフィールドの値をレコードセットからフォーム上のコントロールに移動し、更新された情報をレコードセットに戻します。 レコードセットは、レコードフィールドエクスチェンジ (RFX) を使用して、フィールドデータメンバーと、データソース上のテーブル内の対応する列との間でデータを移動します。
 
-MFC アプリケーション ウィザードを使用するまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) を組み合わせてビュー クラスとその関連するレコード セット クラスを作成します。
+MFC アプリケーションウィザードを使用するか、「 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」で説明されているように**クラスを追加**すると、ビュークラスとそれに関連するレコードセットクラスを組み合わせて作成できます。
 
-レコード ビューとそのレコード セットは、ドキュメントを閉じるときに破棄されます。 レコード ビューの詳細については、次を参照してください。[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 RFX の詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)します。
+レコードビューとそのレコードセットは、ドキュメントを閉じると破棄されます。 レコードビューの詳細については、「[レコードビュー](../../data/record-views-mfc-data-access.md)」を参照してください。 RFX の詳細については、「[レコードフィールドエクスチェンジ (rfx)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)

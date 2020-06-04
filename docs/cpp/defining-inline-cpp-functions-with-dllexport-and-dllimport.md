@@ -7,18 +7,18 @@ helpviewer_keywords:
 - dllimport attribute [C++], inline functions
 - dllexport attribute [C++], inline functions
 ms.assetid: 3b48678b-e7b8-4eda-bb46-b5d34dcf7817
-ms.openlocfilehash: 39c1787321a37601cd8777ddb6c8296936eb89e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9620706e6ac477246ce323a7fc3624291bb1dd6b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180200"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>dllexport と dllimport を使用したインライン C++ 関数の定義
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
-関数をインラインとして定義できます、 **dllexport**属性。 この場合、関数は、プログラムのモジュールがその関数を参照しているかどうかにかかわらず、常にインスタンス化され、エクスポートされます。 関数は、他のプログラムによってインポートされることを前提としています。
+**Dllexport**属性を使用して、関数をインラインで定義できます。 この場合、関数は、プログラムのモジュールがその関数を参照しているかどうかにかかわらず、常にインスタンス化され、エクスポートされます。 関数は、他のプログラムによってインポートされることを前提としています。
 
 また、**dllimport** 属性付きで宣言された関数をインラインで定義することもできます。 この場合、関数は、(/Ob の指定に応じて) 展開はできても、インスタンス化はできません。 特に、インラインでインポートされた関数のアドレスが使用される場合、DLL 内の関数のアドレスが返されます。 この動作は、インポートされた非インライン関数のアドレスを受け取ることと同じです。
 
@@ -28,6 +28,6 @@ ms.locfileid: "62399006"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [dllexport、dllimport](../cpp/dllexport-dllimport.md)

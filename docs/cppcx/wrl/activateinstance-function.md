@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303975"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214228"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 関数
 
-登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。
+指定したクラス ID で定義されている、指定した型のインスタンスを登録して取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,21 +35,21 @@ inline HRESULT ActivateInstance(
 アクティブにする型。
 
 *activatableClassId*<br/>
-パラメーターを定義するクラスの ID の名前*T*します。
+パラメーター *T*を定義するクラス ID の名前。
 
-*instance*<br/>
-ときにこの操作が完了したらのインスタンスへの参照を*T*します。
+*インスタンス (instance)*<br/>
+この操作が完了したときに、 *T*のインスタンスへの参照。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、エラーのエラーの原因を示す hresult 値。
+成功した場合は S_OK。それ以外の場合は、エラーの原因を示すエラー HRESULT。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 
-**名前空間:** Windows::Foundation
+**名前空間:** Windows:: Foundation
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Windows::Foundation 名前空間](windows-foundation-namespace.md)

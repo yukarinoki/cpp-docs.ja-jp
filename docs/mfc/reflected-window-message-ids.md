@@ -46,22 +46,22 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6be7d29a4b43ac10980601708f5bcc666a48dd58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754395"
 ---
 # <a name="reflected-window-message-ids"></a>返送されたウィンドウ メッセージの ID
 
-ActiveX コントロールやその他の特殊なコントロールを簡単に作成する方法は、ウィンドウをサブクラス化することです。 詳細については[、「MFC ActiveX コントロール:Windows コントロール](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)のサブクラス化。
+ActiveX コントロールやその他の特殊なコントロールを簡単に作成するには、ウィンドウをサブクラス化します。 詳細については、「 [MFC ActiveX コントロール : Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)」を参照してください。
 
-サブクラス化された Windows コントロールによって送信されたウィンドウメッセージをコントロールのコンテナーが受信しないようにするために、"リフレクター" ウィンドウを作成して、[特定のウィンドウ](../mfc/reference/colecontrol-class.md)メッセージをインターセプトし、コントロールに送り返します。 その後、ウィンドウプロシージャ内のコントロールは、ActiveX コントロールに適切なアクションを実行することで、これらのリフレクションメッセージを処理できます。
+コントロールのコンテナーがサブクラス化された Windows コントロールから送信されたウィンドウ メッセージを受信しないように[、COleControl](../mfc/reference/colecontrol-class.md)は、特定のウィンドウ メッセージをインターセプトし、コントロールに返す"リフレクタ" ウィンドウを作成します。 そのウィンドウ プロシージャ内のコントロールは、ActiveX コントロールに適したアクションを実行することによって、これらの反映されたメッセージを処理できます。
 
-次の表は、インターセプトされるメッセージと、リフレクタウィンドウが送信する対応メッセージを示しています。
+次の表は、インターセプトされるメッセージと、リフレクタ ウィンドウが送信する対応するメッセージを示しています。
 
-|コントロールによって送信されたメッセージ|コントロールに反映されたメッセージ|
+|コントロールによって送信されたメッセージ|コントロールに反映されるメッセージ|
 |---------------------------------|--------------------------------------|
 |[WM_COMMAND](/windows/win32/menurc/wm-command)|OCM_COMMAND|
 |[WM_CTLCOLORBTN](/windows/win32/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
@@ -70,7 +70,7 @@ ActiveX コントロールやその他の特殊なコントロールを簡単に
 |[WM_CTLCOLORLISTBOX](/windows/win32/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
 |[WM_CTLCOLORSCROLLBAR](/windows/win32/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
 |[WM_CTLCOLORSTATIC](/windows/win32/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
-|[WM_DRAWITEM](/windows/win32/Controls/wm-drawitem)|OCM_DRAWITEM|
+|[Wm_drawitem](/windows/win32/Controls/wm-drawitem)|OCM_DRAWITEM|
 |[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)|OCM_MEASUREITEM|
 |[WM_DELETEITEM](/windows/win32/Controls/wm-deleteitem)|OCM_DELETEITEM|
 |[WM_VKEYTOITEM](/windows/win32/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
@@ -78,13 +78,13 @@ ActiveX コントロールやその他の特殊なコントロールを簡単に
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
-|[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
+|[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[Wm_notify](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
->  コントロールが Win32 システム上で実行されている場合は、いくつ\*かの種類の WM_CTLCOLOR メッセージを受け取ることができます。 詳細については、「WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR、WM_CTLCOLORSTATIC」を参照してください。
+> コントロールが Win32 システムで実行されている場合、受信する可能性のある\*WM_CTLCOLOR メッセージには複数の種類があります。 詳細については、「WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR、WM_CTLCOLORSTATIC」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール: Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)
+[テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)](../mfc/tn062-message-reflection-for-windows-controls.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b31fd22c917b2c0f505ca189425f8160f62f748
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374574"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175546"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>コンパイラの警告 (レベル 1) C4677
 
-'function': 公開されたメンバーのシグネチャにはアセンブリ プライベート型 'private_type' が含まれています
+' function ': プライベートでないメンバーのシグネチャには、アセンブリプライベート型 ' private_type ' が含まれています
 
-アセンブリの外部パブリック アクセシビリティを持つ型では、アセンブリの外部の秘密アクセス権を持つ型を使用します。 パブリック アセンブリの型を参照するコンポーネントはアセンブリ プライベート型を参照するメンバーまたは型のメンバーを使用できません。
+アセンブリの外部でパブリックアクセシビリティを持つ型は、アセンブリ外部のプライベートアクセスを持つ型を使用します。 パブリックアセンブリ型を参照するコンポーネントは、アセンブリプライベート型を参照する型メンバーまたはメンバーを使用できません。
 
 ## <a name="example"></a>例
 
 次の例では、C4677 が生成されます。
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

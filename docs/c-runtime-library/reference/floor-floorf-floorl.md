@@ -1,11 +1,12 @@
 ---
 title: floor、floorf、floorl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+- _o_floor
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333587"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911637"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -67,17 +72,19 @@ long double floorl(
 
 ## <a name="return-value"></a>戻り値
 
-**Floor**関数に等しいまたはそれより小さい最大整数を表す浮動小数点値を返す*x*します。 エラーの戻り値はありません。
+**Floor**関数は、 *x*以下の最大の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 
-**floor**ストリーミング SIMD 拡張命令 2 (SSE2) を使用して実装されています。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**floor**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**floor**を受け取って返す**float**と**長い****二重**値。 C プログラムで**floor**は、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**floor**のオーバーロードを呼び出すことができます。 C プログラムでは、 **floor**は常に**倍精度浮動小数点数**を取得し、double を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -85,7 +92,7 @@ C++ では、オーバー ロードのオーバー ロードを呼び出すこ�
 |--------------|---------------------|
 |**floor**、 **floorf**、 **floorl**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

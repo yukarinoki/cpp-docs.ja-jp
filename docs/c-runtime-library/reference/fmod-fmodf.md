@@ -1,11 +1,12 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+- _o_fmod
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333353"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914966"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -72,13 +77,15 @@ long double fmodl(
 
 ## <a name="return-value"></a>戻り値
 
-**fmod**の浮動小数点の剰余を返します*x* / *y*します。 場合の値*y* 0.0、 **fmod**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf](printf-printf-l-wprintf-wprintf-l.md)します。
+**fmod**は、 *x* / *y*の浮動小数点の剰余を返します。 *Y*の値が0.0 の場合、 **fmod**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Fmod**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x* = *は* \* *y* + *f*ここで、*は*整数*f*と同じ符号*x*との絶対値*f*がの絶対値より小さい*y*します。
+**Fmod**関数*y*は x + *f**y* \* *x* /  = の浮動小数点の剰余*f* *を計算*します *。ここで*、 *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなります。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fmod**を受け取って返す**float**と**長い** **二重**値。 C プログラムで**fmod**常に 2 つ受け取る**二重**引数を返す、**二重**。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fmod**は常に2つの**double**引数を受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -86,7 +93,7 @@ C++ では、オーバー ロードのオーバー ロードを呼び出すこ�
 |--------------|---------------------|
 |**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

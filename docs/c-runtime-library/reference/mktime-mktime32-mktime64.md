@@ -1,11 +1,13 @@
 ---
 title: mktime、_mktime32、_mktime64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mktime32
 - mktime
 - _mktime64
-apilocation:
+- _o__mktime32
+- _o__mktime64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktime
 - _mktime64
@@ -31,12 +37,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 48d1104d9680fe8ab88f0f73bfc179f3e4cf45a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501005"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919069"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -63,19 +69,19 @@ __time64_t _mktime64(
 
 ## <a name="return-value"></a>戻り値
 
-**_mktime32**型の値としてエンコード[された](../../c-runtime-library/standard-types.md)、指定したカレンダー時間を返します。 *Timeptr*が1970年1月1日午前0時より前の日付を参照する場合、またはカレンダー時間を表すことができない場合、 **_mktime32**は、型**time_t**にキャストされた-1 を返します。 **_Mktime32**を使用していて、 *Timeptr*が23:59:59 年1月 2038 18 日 (UTC) のより後の日付を参照する場合、型**time_t**にキャストされた-1 が返されます。
+**_mktime32**は、 [time_t](../../c-runtime-library/standard-types.md)型の値としてエンコードされた指定のカレンダー時間を返します。 *Timeptr*が1970年1月1日午前0時より前の日付を参照している場合、またはカレンダー時間を表すことができない場合は、 **_mktime32**型**time_t**にキャストして-1 を返します。 **_Mktime32**を使用するときに、 *Timeptr*が23:59:59 年1月 2038 18 日のより後の日付 (世界協定時刻 (UTC)) を参照している場合、型**time_t**にキャストされた-1 を返します。
 
-*timeptr*が23:59:59 年12月 31 3000 日より後の日付を参照する場合、 **_mktime64**は **__time64_t**型にキャストを返します。
+*timeptr*は、23:59:59 年12月 31 3000 日の日付を参照している場合、 **_mktime64**は型 **__time64_t**にキャストする-1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Mktime**、 **_mktime32** 、および **_mktime64**の各関数は、 *timeptr*によって指された指定の時間構造体を、正規化された値を持つ完全に定義された構造体に変換し、それを time_t に変換します。カレンダーの時刻の値。 変換された時間のエンコーディングは、[time](time-time32-time64.md) 関数によって返される値と同じエンコーディングになります。 *Timeptr*構造体の**tm_wday**コンポーネントと**tm_yday**コンポーネントの元の値は無視され、他のコンポーネントの元の値は通常の範囲に限定されません。
+**Mktime**、 **_mktime32** 、および **_mktime64**の各関数は、 *timeptr*によって指された指定された時間構造体を、正規化された値を持つ完全に定義された構造体に変換し、それを**time_t**カレンダーの時刻値に変換します。 変換された時間のエンコーディングは、[time](time-time32-time64.md) 関数によって返される値と同じエンコーディングになります。 *Timeptr*構造体の**tm_wday**コンポーネントと**tm_yday**コンポーネントの元の値は無視され、他のコンポーネントの元の値は通常の範囲に限定されません。
 
-**mktime**は、 **_mktime64**と同等のインライン関数です。 **_USE_32BIT_TIME_T**が定義されている場合は、 **_mktime32**と同等です。
+**mktime**は、 **_USE_32BIT_TIME_T**が定義されている場合を除き、 **_mktime64**と同等のインライン関数です。この場合、 **_mktime32**に相当します。
 
-UTC を調整した後、 **_mktime32**は1970年1月1日午前0時から23:59:59 年1月 2038 18 日 (utc) までの日付を処理します。 **_mktime64**は、23:59:59 1970 年1月1日午前0時から3000年12月31日までの日付を処理します。 この調整によって、指定した日付が範囲内にある場合でも、これらの関数が-1 ( **time_t**、 **__time32_t** 、または **__time64_t**にキャスト) を返すことがあります。 たとえば、エジプトのカイロにいる場合は、UTC より 2 時間進んでいるので、*timeptr* で指定した日付から最初に 2 時間が差し引かれます。そのため、日付が範囲外になる可能性があります。
+UTC を調整した後、 **_mktime32**は1970年1月1日午前0時から23:59:59 年1月 2038 18 日 (utc) の日付を処理します。 **_mktime64**は、23:59:59 1970 年1月1日午前0時から3000年12月31日までの日付を処理します。 この調整によって、指定した日付が範囲内にある場合でも、これらの関数が-1 ( **time_t**、 **__time32_t**または **__time64_t**にキャスト) を返すことがあります。 たとえば、エジプトのカイロにいる場合は、UTC より 2 時間進んでいるので、*timeptr* で指定した日付から最初に 2 時間が差し引かれます。そのため、日付が範囲外になる可能性があります。
 
-これらの関数は、tm 構造体の検証と値の設定に使用されることがあります。 成功した場合、これらの関数は**tm_wday**と**tm_yday**の値を適切に設定し、指定されたカレンダー時間を表すように他のコンポーネントを設定します。ただし、これらの値は通常の範囲に強制的に適用されます。 **Tm_mday**の最終的な値は、 **tm_mon**と**tm_year**が決定されるまでは設定されません。 **Tm**構造体時間を指定する場合は、 **tm_isdst**フィールドを次のように設定します。
+これらの関数は、tm 構造体の検証と値の設定に使用されることがあります。 正常に実行された場合、これらの関数は**tm_wday**と**tm_yday**の値を適切に設定し、指定したカレンダーの時間を表すように他のコンポーネントを設定します。ただし、値は通常の範囲に強制的に適用されます。 **Tm_mday**の最終的な値は、 **tm_mon**と**tm_year**が決定されるまで設定されません。 **Tm**構造時間を指定する場合は、 **tm_isdst**フィールドを次のように設定します。
 
 - 標準時間が有効であることを示す場合はゼロ (0)。
 
@@ -83,21 +89,23 @@ UTC を調整した後、 **_mktime32**は1970年1月1日午前0時から23:59:5
 
 - 標準時間と夏時間のどちらが有効であるかを C ランタイム ライブラリ コードで計算する場合は 0 より小さい値。
 
-C ランタイム ライブラリは、[TZ](tzset.md) 環境変数から夏時間の状態を判断します。 **TZ**が設定されていない場合は、オペレーティングシステムから夏時間の情報を取得するために、Win32 API 呼び出し[GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)が使用されます。 これが失敗すると、ライブラリは、夏時間の計算の実装にアメリカ合衆国の規則が使用されると見なします。 **tm_isdst**は必須フィールドです。 設定しないと、その値は未定義になり、これらの関数からは予想外の値が返されます。 *Timeptr*が、 [asctime](asctime-wasctime.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、または[localtime](localtime-localtime32-localtime64.md) (またはこれらの関数のバリアント) の以前の呼び出しによって返された**tm**構造体を指している場合、 **tm_isdst**フィールドには正しい値が含まれます。
+C ランタイム ライブラリは、[TZ](tzset.md) 環境変数から夏時間の状態を判断します。 **TZ**が設定されていない場合は、オペレーティングシステムから夏時間の情報を取得するために、Win32 API 呼び出し[GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)が使用されます。 これが失敗すると、ライブラリは、夏時間の計算の実装にアメリカ合衆国の規則が使用されると見なします。 **tm_isdst**は必須フィールドです。 設定しないと、その値は未定義になり、これらの関数からは予想外の値が返されます。 *Timeptr*が、 [asctime](asctime-wasctime.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、または[localtime](localtime-localtime32-localtime64.md) (またはこれらの関数の variant) の以前の呼び出しによって返された**tm**構造体を指している場合、 **tm_isdst**フィールドには正しい値が含まれます。
 
-**Gmtime**と**localtime** (および **_gmtime32**、 **_gmtime64**、 **_localtime32**、および **_localtime64**) は、変換のためにスレッドごとに1つのバッファーを使用することに注意してください。 このバッファーを**mktime**、 **_mktime32** 、または **_mktime64**に指定すると、以前の内容は破棄されます。
+**Gmtime**と**localtime** (および **_gmtime32**、 **_gmtime64**、 **_localtime32**、および **_localtime64**) は、変換にスレッドごとに1つのバッファーを使用することに注意してください。 このバッファーを**mktime**、 **_mktime32**または **_mktime64**に指定すると、以前の内容は破棄されます。
 
 これらの関数では、パラメーターの検証が行われます。 *timeptr* が null ポインターである場合は、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**mktime**|\<time.h>|
 |**_mktime32**|\<time.h>|
 |**_mktime64**|\<time.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -136,7 +144,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Current time is Fri Apr 25 13:34:07 2003

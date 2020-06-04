@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213890"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -24,11 +24,11 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 struct ImplementsBase;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-テンプレート パラメーターの型の検証に使用される[Implements 構造体](implements-structure.md)します。
+[Implements 構造体](implements-structure.md)でテンプレートパラメーターの型を検証するために使用されます。
 
-**ImplementsBase**構造が設計によっては空です。
+**実装 Sbase**構造体は、設計上、空です。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -36,10 +36,10 @@ struct ImplementsBase;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

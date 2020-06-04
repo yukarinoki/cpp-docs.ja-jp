@@ -7,27 +7,27 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: 1d78e8f5116eabf9073205b938156197bf1001a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a30840aa0556a7324ba24c0f2aaec57dea88d082
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367865"
 ---
 # <a name="noreturn"></a>noreturn
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**マイクロソフト固有**
 
-これは、 **_ _declspec**属性は、関数が返されないことをコンパイラに指示します。 その結果、コンパイラで認識されるへの呼び出しの後のコードを **__declspec(noreturn)** 関数に到達できません。
+この **__declspec**属性は、関数が返さないことをコンパイラに通知します。 結果として、コンパイラは **、__declspec(noreturn)** 関数の呼び出し後のコードに到達できないことが認識されます。
 
-コンパイラで値を返さないコントロール パスの関数が検出されると、警告 (C4715) またはエラー メッセージ (C2202) が生成されます。 関数を返さないためコントロール パスに到達できない場合は使用できます **__declspec(noreturn)** この警告またはエラーを防ぐためです。
+コンパイラで値を返さないコントロール パスの関数が検出されると、警告 (C4715) またはエラー メッセージ (C2202) が生成されます。 制御パスが戻らない関数が原因で到達できない場合は **、__declspec(noreturn) を**使用してこの警告またはエラーを回避できます。
 
 > [!NOTE]
->  追加 **__declspec(noreturn)** を返すと予想される関数の未定義の動作に 。
+> 返される関数に **__declspec(noreturn)を**追加すると、未定義の動作が発生する可能性があります。
 
 ## <a name="example"></a>例
 
-次のサンプルでは、**他**句に return ステートメントが含まれていません。  宣言する`fatal`として **__declspec(noreturn)** エラーまたは警告メッセージを回避できます。
+次のサンプルでは **、else**句に return ステートメントは含まれていません。  `fatal` **__declspec(noreturn)** として宣言すると、エラーまたは警告メッセージが表示されなくなります。
 
 ```cpp
 // noreturn2.cpp
@@ -43,7 +43,9 @@ int main() {
 }
 ```
 
+**エンド マイクロソフト 固有**
+
 ## <a name="see-also"></a>関連項目
 
 [__declspec](../cpp/declspec.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

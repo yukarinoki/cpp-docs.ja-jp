@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-ms.openlocfilehash: 8c49df5a8c7f214b574b4f6118d182b63fec5dca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 532247ca1776452ad32476d2bcdfafcee3481058
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358802"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 構造体
 
@@ -25,7 +25,7 @@ ms.locfileid: "62262464"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IExecutionContext;
 ```
 
@@ -35,15 +35,15 @@ struct IExecutionContext;
 
 |名前|説明|
 |----------|-----------------|
-|[IExecutionContext::Dispatch](#dispatch)|スレッド プロキシが特定の実行コンテキストの実行を開始するときに呼び出されるメソッド。 スケジューラのワーカーのメイン ルーチンがあります。|
-|[IExecutionContext::GetId](#getid)|実行コンテキストの一意の識別子を返します。|
-|[IExecutionContext::GetProxy](#getproxy)|このコンテキストを実行しているスレッド プロキシへのインターフェイスを返します。|
-|[IExecutionContext::GetScheduler](#getscheduler)|この実行コンテキストが属するスケジューラへのインターフェイスを返します。|
-|[IExecutionContext::SetProxy](#setproxy)|この実行コンテキストには、スレッド プロキシを関連付けます。 関連付けられたスレッド プロキシが、コンテキストの実行を開始する前に、このメソッドの権限を呼び出す`Dispatch`メソッド。|
+|[IExecutionコンテキスト::Dパッチ](#dispatch)|スレッド プロキシが特定の実行コンテキストの実行を開始するときに呼び出されるメソッド。 これは、スケジューラのメインワーカールーチンである必要があります。|
+|[を実行コンテキスト::取得Id](#getid)|実行コンテキストの一意の識別子を返します。|
+|[を実行コンテキスト::プロキシを取得します。](#getproxy)|このコンテキストを実行しているスレッド プロキシへのインターフェイスを返します。|
+|[を実行コンテキスト::スケジューラを取得します。](#getscheduler)|この実行コンテキストが属するスケジューラへのインターフェイスを返します。|
+|[を実行コンテキスト::セットプロキシ](#setproxy)|スレッド プロキシをこの実行コンテキストに関連付けます。 関連付けられたスレッド プロキシは、コンテキストのメソッドの実行を開始する直前に`Dispatch`このメソッドを呼び出します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-カスタム スケジューラを同時実行ランタイムの Resource Manager でのインターフェイスを実装する場合は、実装する必要があります。、`IExecutionContext`インターフェイス。 Resource Manager によって作成されたスレッドが実行することによって、スケジューラに代わって処理を実行、`IExecutionContext::Dispatch`メソッド。
+同時実行ランタイムのリソース マネージャーとインターフェイスするカスタム スケジューラを実装する場合は、`IExecutionContext`インターフェイスを実装する必要があります。 リソース マネージャーによって作成されたスレッドは、メソッドを実行することによってスケジューラの代わりに処理`IExecutionContext::Dispatch`を実行します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -53,26 +53,26 @@ struct IExecutionContext;
 
 **ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="dispatch"></a>  Iexecutioncontext::dispatch メソッド
+## <a name="iexecutioncontextdispatch-method"></a><a name="dispatch"></a>メソッド:D実行コンテキスト
 
-スレッド プロキシが特定の実行コンテキストの実行を開始するときに呼び出されるメソッド。 スケジューラのワーカーのメイン ルーチンがあります。
+スレッド プロキシが特定の実行コンテキストの実行を開始するときに呼び出されるメソッド。 これは、スケジューラのメインワーカールーチンである必要があります。
 
-```
+```cpp
 virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pDispatchState*<br/>
-この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチの状態の詳細については、次を参照してください。 [DispatchState](dispatchstate-structure.md)します。
+*状態をディスパッチします。*<br/>
+この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチ状態の詳細については、「 [DispatchState](dispatchstate-structure.md)」を参照してください。
 
-##  <a name="getid"></a>  Iexecutioncontext::getid メソッド
+## <a name="iexecutioncontextgetid-method"></a><a name="getid"></a>メソッドを取得します。
 
 実行コンテキストの一意の識別子を返します。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
@@ -80,63 +80,63 @@ virtual unsigned int GetId() const = 0;
 
 一意の整数識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メソッドを使用する必要があります`GetExecutionContextId`を実装するオブジェクトの一意の識別子を取得する、`IExecutionContext`インターフェイス、メソッドのパラメーターとしてインターフェイスを使用する前に、リソース マネージャーでを指定します。 同じ識別子を返す予想されるときに、`GetId`関数が呼び出されます。
+インターフェイスを Resource `GetExecutionContextId` Manager によって提供されるメソッドのパラメーターとして使用する前`IExecutionContext`に、このメソッドを使用して、インターフェイスを実装するオブジェクトの一意の識別子を取得する必要があります。 関数が呼び出されたときに、同じ識別子`GetId`を返す必要があります。
 
-別のソースから取得した識別子は、未定義の動作になる可能性があります。
+別のソースから取得した識別子は、未定義の動作を生じる可能性があります。
 
-##  <a name="getproxy"></a>  Iexecutioncontext::getproxy メソッド
+## <a name="iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>メソッドを取得します。
 
 このコンテキストを実行しているスレッド プロキシへのインターフェイスを返します。
 
-```
+```cpp
 virtual IThreadProxy* GetProxy() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-`IThreadProxy` インターフェイス。 呼び出して、実行コンテキストのスレッド プロキシが初期化されていない場合`SetProxy`、関数が返す必要があります`NULL`します。
+`IThreadProxy` インターフェイスです。 実行コンテキストのスレッド プロキシが 呼`SetProxy`び出しで初期化されていない場合、関数は を`NULL`返す必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Resource Manager を呼び出す、`SetProxy`実行コンテキストのメソッドで、`IThreadProxy`インターフェイスを入力する前に、パラメーターとして、`Dispatch`メソッドをコンテキストに。 この引数を格納およびへの呼び出しで返すことが求められます`GetProxy()`します。
+リソース マネージャーは、コンテキスト`SetProxy`でメソッドを入力する前に、`IThreadProxy`パラメーターとしてインターフェイスを使用して、実行コンテキストで`Dispatch`メソッドを呼び出します。 この引数を格納し、 への呼び出しで`GetProxy()`返す必要があります。
 
-##  <a name="getscheduler"></a>  Iexecutioncontext::getscheduler メソッド
+## <a name="iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>メソッドを取得します。
 
 この実行コンテキストが属するスケジューラへのインターフェイスを返します。
 
-```
+```cpp
 virtual IScheduler* GetScheduler() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-`IScheduler` インターフェイス。
+`IScheduler` インターフェイスです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-有効な実行コンテキストを初期化するために必要な`IScheduler`インターフェイス メソッドのパラメーターとして使用する前に、リソース マネージャーでを指定します。
+実行コンテキストを有効な`IScheduler`インターフェイスで初期化してから、リソース マネージャーによって提供されるメソッドのパラメーターとして使用する必要があります。
 
-##  <a name="setproxy"></a>  Iexecutioncontext::setproxy メソッド
+## <a name="iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>メソッドを設定します。
 
-この実行コンテキストには、スレッド プロキシを関連付けます。 関連付けられたスレッド プロキシが、コンテキストの実行を開始する前に、このメソッドの権限を呼び出す`Dispatch`メソッド。
+スレッド プロキシをこの実行コンテキストに関連付けます。 関連付けられたスレッド プロキシは、コンテキストのメソッドの実行を開始する直前に`Dispatch`このメソッドを呼び出します。
 
-```
+```cpp
 virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pThreadProxy*<br/>
-入力されるスレッド プロキシへのインターフェイス、`Dispatch`メソッドをこの実行コンテキスト。
+*プロキシ*<br/>
+この実行コンテキストで`Dispatch`メソッドを入力しようとしているスレッド プロキシへのインターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-パラメーターを保存することが求め`pThreadProxy`への呼び出しで返すことと、`GetProxy`メソッド。 Resource Manager では、スレッド プロキシが実行中に、実行コンテキストに関連付けられたスレッド プロキシが変更されないことが保証されます、`Dispatch`メソッド。
+パラメーター`pThreadProxy`を保存し、`GetProxy`メソッドの呼び出しで返す必要があります。 リソース マネージャーは、スレッド プロキシがメソッドを実行している間、実行コンテキストに関連付けられているスレッド プロキシが`Dispatch`変更されないことを保証します。
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[同時実行名前空間](concurrency-namespace.md)<br/>
 [IScheduler 構造体](ischeduler-structure.md)<br/>
 [IThreadProxy 構造体](ithreadproxy-structure.md)

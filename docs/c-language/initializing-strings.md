@@ -7,11 +7,11 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326002"
 ---
 # <a name="initializing-strings"></a>文字列の初期化
 

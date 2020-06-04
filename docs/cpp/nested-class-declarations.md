@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367900"
 ---
 # <a name="nested-class-declarations"></a>入れ子にされたクラス宣言
 
@@ -54,16 +54,16 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` `BufferedIO::BufferedOutput`内で宣言された`BufferedIO`します。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
+`BufferedIO::BufferedInput`で`BufferedIO::BufferedOutput`宣言され、`BufferedIO`内で宣言されます。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
 
 入れ子になったクラスは、外側のクラスからのみ、名前、型名、静的メンバー名、および列挙子を直接使用できます。 他のクラス メンバーの名前を使用するには、ポインター、参照、またはオブジェクト名を使用する必要があります。
 
 前の `BufferedIO` 例では、列挙体 `IOError` には、入れ子になったクラス `BufferedIO::BufferedInput` または `BufferedIO::BufferedOutput` のメンバー関数によって直接アクセスできます (`good` 関数を参照)。
 
 > [!NOTE]
->  入れ子のクラスは、クラス スコープ内の型のみ宣言します。 入れ子のクラスに含まれるオブジェクトは作成されません。 前の例では、入れ子になった 2 つのクラスを宣言していますが、これらのクラス型のオブジェクトは宣言していません。
+> 入れ子のクラスは、クラス スコープ内の型のみ宣言します。 入れ子のクラスに含まれるオブジェクトは作成されません。 前の例では、入れ子になった 2 つのクラスを宣言していますが、これらのクラス型のオブジェクトは宣言していません。
 
-入れ子になったクラス宣言のスコープの参照可能範囲の例外は、型名が事前宣言と共に宣言されている場合です。  この場合、事前宣言によって宣言されたクラス名は、それを囲んでいるクラス (そのスコープは、最も小さく囲んでいる非クラス スコープと定義される) の外部から参照可能です。  例:
+入れ子になったクラス宣言のスコープの参照可能範囲の例外は、型名が事前宣言と共に宣言されている場合です。  この場合、事前宣言によって宣言されたクラス名は、それを囲んでいるクラス (そのスコープは、最も小さく囲んでいる非クラス スコープと定義される) の外部から参照可能です。  次に例を示します。
 
 ```cpp
 // nested_class_declarations_2.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-上記の例では、*修飾型名*関数名を宣言する構文を使用します。 宣言:
+前の例では、*修飾型名*構文を使用して関数名を宣言しています。 宣言:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言を使用するため、*修飾型名*構文の次の形式の構造が考えられます。
+"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言では*修飾型名*構文が使用されるため、次の形式の構文を使用できます。
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-前の宣言は、1 つ前と同じですが、使用、 **typedef**クラス名の代わりに名前。
+前の宣言は前の宣言と同じですが、クラス名の代わりに**typedef**名を使用します。
 
 ## <a name="friend-functions-in-nested-classes"></a>入れ子にされたクラスのフレンド関数
 

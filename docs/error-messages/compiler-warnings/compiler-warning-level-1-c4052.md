@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4052
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: c7d2a603b7ec97889b075c7a67e5b8439ad487af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dcb6163a87a92f33e875dac8b200f414bb36be6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388645"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164132"
 ---
 # <a name="compiler-warning-level-1-c4052"></a>コンパイラの警告 (レベル 1) C4052
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388645"
 
 次の例では C4052 が生成されます。
 
-```
+```c
 // C4052.c
 // compile with: /W4 /c
 int f();

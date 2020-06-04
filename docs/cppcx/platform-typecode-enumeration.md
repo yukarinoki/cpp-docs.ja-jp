@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183043"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214279"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode 列挙型
 
@@ -28,11 +28,11 @@ enum class TypeCode {};
 
 |型コード|説明|
 |---------------|-----------------|
-|ブール型|Platform::Boolean 型。|
+|Boolean|Platform::Boolean 型。|
 |Char16|default::char16 型。|
 |DateTime|DateTime 型です。|
-|Decimal (10 進数型)|数値型。|
-|倍精度浮動小数点型|default::float64 型。|
+|Decimal|数値型。|
+|Double|default::float64 型。|
 |Empty|Void|
 |Int16|default::int16 型。|
 |Int32|default::int32 型。|
@@ -48,10 +48,10 @@ enum class TypeCode {};
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
 **メタデータ:** platform.winmd

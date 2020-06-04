@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fd1464c099d6f666b53387326c1dd863048defdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372047"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution クラス
+# <a name="poisson_distribution-class"></a>poisson_distribution クラス
 
 ポワソン分布を生成します。
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*\
-整数の結果型、既定値は**int**です。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Int タイプ*\
+整数の結果の型は、既定**では int**になります。可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレート クラスは、ポワソン分布を使用してユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラス テンプレートは、ポアソン分布を持つユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
 
 ポワソン分布の詳細については、Wolfram MathWorld の記事「[ポワソン分布](https://go.microsoft.com/fwlink/p/?linkid=401112)」をご覧ください。
 
@@ -196,7 +196,7 @@ Distribution for 100 samples:
 
 **名前空間:** std
 
-## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::pオイソン_ディストリビューション
 
 分布を作成します。
 
@@ -207,21 +207,21 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*?* \
+*意味*\
 `mean` 分布パラメーター。
 
-*parm*\
+*Parm*\
 分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < mean`
+**前提条件:**`0.0 < mean`
 
 1 つ目のコンストラクターは、格納されている `mean` の値が *mean* の値を保持するオブジェクトを作成します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="param_type"></a>  poisson_distribution::param_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::pアラム_タイプ
 
 分布のパラメーターを格納します。
 
@@ -240,12 +240,12 @@ struct param_type {
 
 [poisson_distribution](#poisson_distribution) のコンストラクター パラメーターをご覧ください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < mean`
+**前提条件:**`0.0 < mean`
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

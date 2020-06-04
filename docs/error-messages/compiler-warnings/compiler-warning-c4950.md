@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164990"
 ---
 # <a name="compiler-warning-c4950"></a>コンパイラの警告 C4950
 
-'type_or_member': 廃止としてマークされています
+'type_or_member': obsolete としてマークされています
 
-メンバーまたは型がで obsolete としてマークされた、<xref:System.ObsoleteAttribute>属性。
+メンバーまたは型が、<xref:System.ObsoleteAttribute> 属性で obsolete とマークされました。
 
-C4950 は、常にエラーとして表示されます。 使用してこの警告をオフにすることができます、[警告](../../preprocessor/warning.md)プラグマ ディレクティブまたは[/wd](../../build/reference/compiler-option-warning-level.md)コンパイラ オプション。
+C4950 は、常にエラーとして表示されます。 この警告は、 [warning](../../preprocessor/warning.md)プラグマディレクティブまたは[/wd](../../build/reference/compiler-option-warning-level.md)コンパイラオプションを使用して無効にすることができます。
 
 ## <a name="example"></a>例
 

@@ -1,5 +1,5 @@
 ---
-title: COleResizeBar クラス
+title: クラスを変更します。
 ms.date: 11/04/2016
 f1_keywords:
 - COleResizeBar
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224411"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376155"
 ---
-# <a name="coleresizebar-class"></a>COleResizeBar クラス
+# <a name="coleresizebar-class"></a>クラスを変更します。
 
 OLE の埋め込み先アイテムのサイズ変更をサポートするコントロール バーの一種です。
 
@@ -33,21 +33,21 @@ class COleResizeBar : public CControlBar
 
 |名前|説明|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|`COleResizeBar` オブジェクトを構築します。|
+|[コントロール サイズ変更バー::COle サイズ変更バー](#coleresizebar)|`COleResizeBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|作成および Windows 子ウィンドウを初期化します、それを関連付ける、`COleResizeBar`オブジェクト。|
+|[コントロール バー::作成](#create)|Windows の子ウィンドウを作成して初期化し、オブジェクトに`COleResizeBar`関連付けます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`COleResizeBar` オブジェクトとして表示されます、 [CRectTracker](../../mfc/reference/crecttracker-class.md)破線の境界線と外部のハンドルのサイズを変更します。
+`COleResizeBar`オブジェクトは、ハッチングされた境界線と外側のサイズ変更ハンドルを持つ[CRectTracker](../../mfc/reference/crecttracker-class.md)として表示されます。
 
-`COleResizeBar` オブジェクトから派生したフレーム ウィンドウ オブジェクトの埋め込みは、通常のメンバーである、 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)クラス。
+`COleResizeBar`オブジェクトは、通常[、COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)クラスから派生したフレーム ウィンドウ オブジェクトの埋め込みメンバーです。
 
-詳細については、この記事を参照してください。[アクティベーション](../../mfc/activation-cpp.md)します。
+詳細については、記事「[アクティベーション](../../mfc/activation-cpp.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,7 +57,7 @@ class COleResizeBar : public CControlBar
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[コントロールバー](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
@@ -65,7 +65,7 @@ class COleResizeBar : public CControlBar
 
 **ヘッダー:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>コントロール サイズ変更バー::COle サイズ変更バー
 
 `COleResizeBar` オブジェクトを構築します。
 
@@ -73,13 +73,13 @@ class COleResizeBar : public CControlBar
 COleResizeBar();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す`Create`バーのサイズ変更オブジェクトを作成します。
+サイズ`Create`変更バー オブジェクトを作成する呼び出し。
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>コントロール バー::作成
 
-子ウィンドウを作成しに関連付けます、`COleResizeBar`オブジェクト。
+子ウィンドウを作成し、`COleResizeBar`オブジェクトに関連付けます。
 
 ```
 virtual BOOL Create(
@@ -91,21 +91,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-サイズ変更のバーの親ウィンドウへのポインター。
+サイズ変更バーの親ウィンドウへのポインター。
 
-*dwStyle*<br/>
-指定します、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。
+*Dwstyle*<br/>
+ウィンドウ[スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の属性を指定します。
 
 *nID*<br/>
-子ウィンドウのサイズ変更のバーの id。
+サイズ変更バーの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
-サイズ変更のバーが作成された場合は 0 以外それ以外の場合 0 を返します。
+サイズ変更バーが作成された場合は 0 以外の値を返します。それ以外の場合は 0。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル スーパーパッド](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)

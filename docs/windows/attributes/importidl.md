@@ -1,21 +1,21 @@
 ---
-title: importidl (C++ COM 属性)
+title: ///(C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166823"
 ---
 # <a name="importidl"></a>importidl
 
-生成された .idl ファイルには、指定された .idl ファイルを挿入します。
+生成された .idl ファイルに、指定した .idl ファイルを挿入します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,13 +26,13 @@ ms.locfileid: "62409435"
 ### <a name="parameters"></a>パラメーター
 
 *idl_file*<br/>
-アプリケーション用に生成される .idl ファイルにマージする .idl ファイルの名前を示します。
+アプリケーションに対して生成される .idl ファイルとマージする .idl ファイルの名前を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Importidl** C++属性ライブラリ ブロックの外側でセクションの配置 (で*idl_file*)、プログラムの生成された .idl ファイルとライブラリ セクションに (で*idl_file*)ライブラリには、プログラムのセクションには、.idl ファイルが生成されます。
+C++この**属性を使用すると**、ライブラリブロックの外側 ( *idl_file*) のセクションが、プログラムによって生成された .idl ファイルのライブラリセクションに、プログラムによって生成される .idl ファイルとライブラリセクション ( *idl_file*) に格納されます。
 
-使用することがあります**importidl**、たとえば、生成された .idl ファイルを手動でコーディングの .idl ファイルを使用する場合。
+たとえば、生成された .idl ファイルでハンドコードされた .idl ファイルを使用する場合は **、使用する**ことができます。
 
 ## <a name="example"></a>例
 
@@ -56,7 +56,7 @@ ms.locfileid: "62409435"
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>

@@ -1,14 +1,18 @@
 ---
 title: _strset_s、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wcsset_s
 - _wcsset_s_l
 - _strset_s
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
-apilocation:
+- _o__mbsset_s
+- _o__mbsset_s_l
+- _o__strset_s
+- _o__wcsset_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +26,11 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsset_s_l
 - strset_s
@@ -58,19 +66,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 031678f75dacd8112ac897053066216e7b3b2450
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368799"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911137"
 ---
-# <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
+# <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
 
 文字列の文字をある文字に設定します。 これらのバージョンの [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsset_s**と **_mbsset_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsset_s**と **_mbsset_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -112,13 +120,13 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる、設定される文字列。
 
 *numberOfElements*<br/>
-サイズ、 *str*バッファー。
+*Str*バッファーのサイズ。
 
-*c*<br/>
+*40u-c*<br/>
 文字設定。
 
 *locale*<br/>
@@ -128,15 +136,17 @@ NULL で終わる、設定される文字列。
 
 正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。
 
-これらの関数は、引数を検証します。 場合*str*が null ポインターの場合、または*numberOfElements*引数が 0 未満または渡されたブロックが null で終わるされませんしで説明されているとおり、無効なパラメーターハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
+これらの関数は、引数を検証します。 *Str*が null ポインターの場合、または*numberofelements*引数が0以下の場合、または渡されたブロックが null で終了していない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strset_s**関数のすべての文字を設定する*str*に*c* (に変換**char**)、終端の null 文字を除きます。 **_wcsset_s**と **_mbsset_s**のワイド文字とマルチバイト文字バージョン **_strset_s**します。 引数と戻り値のデータ型がそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**_Strset_s**関数は、終端の null 文字を除く、 *str*のすべての文字を*c* ( **char**型に変換) に設定します。 **_wcsset_s**と **_mbsset_s**は **_strset_s**のワイド文字バージョンとマルチバイト文字バージョンです。 引数と戻り値のデータ型がそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -147,15 +157,15 @@ NULL で終わる、設定される文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strset_s**|\<string.h>|
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> または \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s**、 **_mbsset_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -182,7 +192,7 @@ After:  *******************************
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

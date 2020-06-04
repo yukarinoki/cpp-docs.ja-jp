@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456291"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687776"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-コンテナーのテンプレート クラス map と multimap およびサポート テンプレートを定義します。
+コンテナークラステンプレート map および multimap とそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<map>
 
 **名前空間:** std
 
 > [!NOTE]
-> Map > library では、 `#include <initializer_list>`ステートメントも使用されます。 \<
+> @No__t_0map > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

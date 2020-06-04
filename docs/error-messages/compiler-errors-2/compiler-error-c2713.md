@@ -1,20 +1,20 @@
 ---
-title: コンパイラ エラー C2713
+title: コンパイラエラー C2713
 ms.date: 11/04/2016
 f1_keywords:
 - C2713
 helpviewer_keywords:
 - C2713
 ms.assetid: bae9bee3-b4b8-4be5-b6a5-02df587a7278
-ms.openlocfilehash: 97ab1a7652c6f2736b7b5efe9bfa7d35be64e310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37bc147a08e1c369c3a6d19dbc2758abadd1dab4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202294"
 ---
-# <a name="compiler-error-c2713"></a>コンパイラ エラー C2713
+# <a name="compiler-error-c2713"></a>コンパイラエラー C2713
 
-1 つだけの形式の関数ごとに許可する例外処理
+関数ごとに許可されている例外処理の形式は1つだけです
 
-構造化例外処理を使用することはできません (`__try`/`__except`) と C++ 例外処理 (`try`/`catch`) は同じ関数にします。
+同じ関数で構造化例外処理 (`__try`/`__except`) とC++例外処理 (`try`/`catch`) を使用することはできません。

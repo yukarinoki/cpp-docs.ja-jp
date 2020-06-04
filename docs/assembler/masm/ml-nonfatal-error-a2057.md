@@ -1,25 +1,25 @@
 ---
 title: ML の致命的でないエラー A2057
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2057
 helpviewer_keywords:
 - A2057
 ms.assetid: 13c47848-3f4d-4145-a00c-5418ff176ba3
-ms.openlocfilehash: 56a5fc255ba95ece1df7ff00f5494053de5a262e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05316fad7915e46571755910bae2b6de5e799e23
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202896"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316942"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>ML の致命的でないエラー A2057
 
-**エラーを強制します空の文字列。**
+**強制エラー: 文字列が空白です。**
 
-条件付きエラー ディレクティブ[します。ERRB](../../assembler/masm/dot-errb.md)このエラーを生成するために使用されました。
+条件付きエラーディレクティブ[。](dot-errb.md)このエラーを生成するために ERRB が使用されました。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

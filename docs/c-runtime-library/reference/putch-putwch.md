@@ -1,10 +1,12 @@
 ---
 title: _putch、_putwch
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _putwch
 - _putch
-apilocation:
+- _o__putch
+- _o__putwch
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +35,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358158"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916187"
 ---
-# <a name="putch-putwch"></a>_putch、_putwch
+# <a name="_putch-_putwch"></a>_putch、_putwch
 
 コンソールに文字を書き込みます。
 
@@ -57,18 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 出力する文字。
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は、*c* を返します。 場合 **_putch**失敗すると、返す**EOF**場合 **_putwch**失敗すると、それを返します**WEOF**します。
+処理が正常に終了した場合は、*c* を返します。 **_Putch**が失敗した場合は**EOF**を返します。**_putwch**が失敗した場合は、 **WEOF**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、文字を書き込む*c*コンソールには、バッファーなしで直接、します。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
+これらの関数は、バッファーを使用せずに文字*c*をコンソールに直接書き込みます。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
 
-**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、次を参照してください。 **_putch_nolock**、 **_putwch_nolock**します。
+**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「 **_putch_nolock**、 **_putwch_nolock**」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -78,12 +86,12 @@ wint_t _putwch(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746974"
 ---
 # <a name="csize-class"></a>CSize クラス
 
-Windows の [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) 構造体と同様に、相対座標や位置を実装します。
+Windows の [SIZE](/windows/win32/api/windef/ns-windef-size) 構造体と同様に、相対座標や位置を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,27 +34,27 @@ class CSize : public tagSIZE
 
 |名前|説明|
 |----------|-----------------|
-|[CSize::CSize](#csize)|`CSize` オブジェクトを構築します。|
+|[サイズ::Cサイズ](#csize)|`CSize` オブジェクトを構築します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CSize::operator-](#operator_-)|2 つのサイズを減算します。|
-|[CSize::operator! =](#operator_neq)|間の不等性を確認します`CSize`とサイズ。|
-|[CSize::operator +](#operator_add)|2 つのサイズを追加します。|
-|[CSize::operator + =](#operator_add_eq)|サイズを追加します`CSize`します。|
-|[CSize::operator =](#operator_-_eq)|サイズを減算`CSize`します。|
-|[CSize::operator ==](#operator_eq_eq)|等しいかどうかを確認します`CSize`とサイズ。|
+|[Cサイズ::演算子 -](#operator_-)|2 つのサイズを減算します。|
+|[Cサイズ::演算子!=](#operator_neq)|サイズとの間`CSize`の不等値をチェックします。|
+|[Cサイズ::演算子 +](#operator_add)|2 つのサイズを追加します。|
+|[Cサイズ::演算子 +=](#operator_add_eq)|にサイズを追加`CSize`します。|
+|[Cサイズ::演算子 -=](#operator_-_eq)|からサイズを減算`CSize`します。|
+|[Cサイズ::演算子 ==](#operator_eq_eq)|サイズとの間`CSize`の等値をチェックします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスから派生、`SIZE`構造体。 つまり、渡すことができます、`CSize`を呼び出して取得するパラメーターで、`SIZE`とのデータ メンバー、`SIZE`構造体のアクセス可能なデータ メンバーである`CSize`します。
+このクラスは、構造体から`SIZE`派生します。 つまり`CSize`、 を呼び出`SIZE`すパラメーターで、`SIZE`構造体のデータ メンバーが アクセス可能なデータ メンバーであることを`CSize`示します。
 
-`cx`と`cy`のメンバー `SIZE` (と`CSize`) は public です。 さらに、`CSize`を操作するメンバー関数の実装、`SIZE`構造体。
+`cx`と`cy`の`SIZE`メンバーと`CSize`のメンバーは公開されています。 さらに、`CSize`構造体を操作するメンバー関数を実装`SIZE`します。
 
 > [!NOTE]
-> 詳細については、共有ユーティリティ クラス (など`CSize`) を参照してください[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)します。
+> 共有ユーティリティ クラスの詳細については、「`CSize`[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -66,7 +66,7 @@ class CSize : public tagSIZE
 
 **ヘッダー:** atltypes.h
 
-##  <a name="csize"></a>  CSize::CSize
+## <a name="csizecsize"></a><a name="csize"></a>サイズ::Cサイズ
 
 `CSize` オブジェクトを構築します。
 
@@ -80,66 +80,66 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*initCX*<br/>
-セット、`cx`のメンバー、`CSize`します。
+*イニトCX*<br/>
+の`cx`メンバーを設定します`CSize`。
 
-*initCY*<br/>
-セット、`cy`のメンバー、`CSize`します。
+*イニシティ*<br/>
+の`cy`メンバーを設定します`CSize`。
 
-*initSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または`CSize`オブジェクトの初期化に使用される`CSize`します。
+*イニトサイズ*<br/>
+[SIZE](/windows/win32/api/windef/ns-windef-size)の`CSize`構造体またはオブジェクトを`CSize`初期化するために使用します。
 
-*initPt*<br/>
-[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。
+*イニトプト*<br/>
+[初期化](/windows/win32/api/windef/ns-windef-point)に使用`CPoint`される POINT`CSize`構造体またはオブジェクト。
 
-*dwSize*<br/>
-DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx`メンバーと、上位の単語は、`cy`メンバー。
+*Dwsize*<br/>
+初期化に使用される`CSize`DWORD 下位ワードは`cx`メンバーで、上位ワードは`cy`メンバーです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-引数を指定しない場合`cx`と`cy`ゼロに初期化されます。
+引数が指定されていない場合`cx``cy`は、ゼロに初期化されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CSize::operator ==
+## <a name="csizeoperator-"></a><a name="operator_eq_eq"></a>Cサイズ::演算子 ==
 
-2 つのサイズに等しいかどうかを確認します。
+2 つのサイズ間の等しいかどうかをチェックします。
 
 ```
 BOOL operator==(SIZE size) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-0 は、サイズが等しい場合は 0 以外を返します。
+サイズが等しい場合は 0 以外を返し、0 を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]
 
-##  <a name="operator_neq"></a>  CSize::operator! =
+## <a name="csizeoperator-"></a><a name="operator_neq"></a>Cサイズ::演算子!=
 
-2 つのサイズ間の不等性を確認します。
+2 つのサイズの間の不等式をチェックします。
 
 ```
 BOOL operator!=(SIZE size) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-サイズが等しくない場合、0 以外の値を返しますそれ以外の場合に 0 です。
+サイズが等しくない場合は 0 以外を返し、それ以外の場合は 0 を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>  CSize::operator + =
+## <a name="csizeoperator-"></a><a name="operator_add_eq"></a>Cサイズ::演算子 +=
 
-このサイズを追加します。`CSize`します。
+この`CSize`サイズを追加します。
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -147,11 +147,11 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CSize::operator =
+## <a name="csizeoperator--"></a><a name="operator_-_eq"></a>Cサイズ::演算子 -=
 
-これからサイズを減算`CSize`します。
+この`CSize`サイズからサイズを減算します。
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -159,9 +159,9 @@ void operator-=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]
 
-##  <a name="operator_add"></a>  CSize::operator +
+## <a name="csizeoperator-"></a><a name="operator_add"></a>Cサイズ::演算子 +
 
-これらの演算子は、これを追加`CSize`値パラメーターの値にします。
+これらの演算子は、`CSize`パラメーターの値にこの値を追加します。
 
 ```
 CSize operator+(SIZE size) const throw();
@@ -169,29 +169,29 @@ CPoint operator+(POINT point) const throw();
 CRect operator+(const RECT* lpRect) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-次の各演算子の説明を参照してください。
+個々の演算子の説明は次のとおりです。
 
-- **operator +(** *size* **)**
+- **演算子 +(***サイズ***)**
 
-  この操作では、2 つ追加します`CSize`値。
+  この操作では、2 つの値が`CSize`追加されます。
 
-- **operator +(** *point* **)**
+- **演算子 +(***ポイント***)**
 
-  この操作のオフセット (移動)、[ポイント](/previous-versions/dd162805\(v=vs.85\))(または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作は、この`CSize`値によって[POINT](/windows/win32/api/windef/ns-windef-point) (または[CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)の値をオフセット (移動) します。 この`cx``CSize`値`cy`の と のメンバーは、 `x` `y`値のデータ・`POINT`メンバーおよびデータ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子 +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)のバージョンに似ています。
 
-- **operator +(** *lpRect* **)**
+- **演算子 +(** *lpRect* **)**
 
-   この操作のオフセット (移動)、 [RECT](/previous-versions/dd162897\(v=vs.85\)) (または[CRect](../../atl-mfc-shared/reference/crect-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+   この操作は、RECT (または[CRect)](../../atl-mfc-shared/reference/crect-class.md)の値をこの`CSize`値でオフセット (移動) します。 [RECT](/windows/win32/api/windef/ns-windef-rect) この`cx``CSize`値`cy`の および のメンバーは`left`、 `top`、 `right`、`bottom`および 値の`RECT`データ・メンバーに追加されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子 +](../../atl-mfc-shared/reference/crect-class.md#operator_add)のバージョンに似ています。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CSize::operator -
+## <a name="csizeoperator--"></a><a name="operator_-"></a>Cサイズ::演算子 -
 
-この最初の 3 つの演算子が減算`CSize`値パラメーターの値にします。
+これらの演算子のうち最初の 3`CSize`つの演算子は、この値をパラメータの値に減算します。
 
 ```
 CSize operator-(SIZE size) const throw();
@@ -200,25 +200,25 @@ CRect operator-(const RECT* lpRect) const throw();
 CSize operator-() const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-4 番目の演算子では、単項マイナス、変更の符号、`CSize`値。 次の各演算子の説明を参照してください。
+4 番目の演算子である単項マイナスは、値の符号`CSize`を変更します。 個々の演算子の説明は次のとおりです。
 
-- **演算子-(** *サイズ* **)**
+- **演算子 -(** *サイズ* **)**
 
-  この操作では、2 つを減算`CSize`値。
+  この操作では、2`CSize`つの値が減算されます。
 
-- **演算子-(** *ポイント* **)**
+- **演算子 -(***ポイント***)**
 
-  この操作のオフセット (移動)、[ポイント](/previous-versions/dd162805\(v=vs.85\))または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`この`CSize`から値が減算されて、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作は、この`CSize`値の加算反転によって[POINT](/windows/win32/api/windef/ns-windef-point)または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)値をオフセット (移動) します。 この`cx``CSize`値`cy`の と の 値は`x`、`y`値の データ`POINT`・メンバーおよびデータ・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CPoint::演算子](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)のバージョンに似ています。
 
-- **operator -(** *lpRect* **)**
+- 演算子 *-(lpRect)* **)** **operator -(**
 
-  この操作のオフセット (移動)、 [RECT](/previous-versions/dd162897\(v=vs.85\))または[CRect](../../atl-mfc-shared/reference/crect-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`this のメンバー`CSize`から値が減算されて、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作は、この`CSize`値の加算反転によって RECT または[CRect](../../atl-mfc-shared/reference/crect-class.md)値をオフセット (移動) します。 [RECT](/windows/win32/api/windef/ns-windef-rect) この`cx``CSize`値`cy`の および のメンバーは、 `left`、 `top` `right`、および`bottom`値のデータ`RECT`・メンバーから減算されます。 [これは、SIZE](/windows/win32/api/windef/ns-windef-size)パラメータを受け取る[CRect::演算子](../../atl-mfc-shared/reference/crect-class.md#operator_-)のバージョンに似ています。
 
-- **operator -()**
+- **演算子 -()**
 
-  この操作はこれの加法逆元を返します`CSize`値。
+  この操作は、この`CSize`値の加算逆を返します。
 
 ### <a name="example"></a>例
 
@@ -226,7 +226,7 @@ CSize operator-() const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[MDI のサンプル](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint クラス](../../atl-mfc-shared/reference/cpoint-class.md)

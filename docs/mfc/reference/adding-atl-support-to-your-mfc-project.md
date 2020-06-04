@@ -7,27 +7,27 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 05c4e8ba54d9a573b422f136c9e8cf69e48d1c9a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371684"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC プロジェクトへの ATL サポートの追加
 
-MFC ベースのアプリケーションを既に作成している場合は、IDE を使用して Active Template Library (ATL) のサポートを簡単に追加できます。
+MFC ベースのアプリケーションを既に作成している場合は、IDE を使用して、アクティブ テンプレート ライブラリ (ATL) のサポートを簡単に追加できます。
 
 > [!NOTE]
->  このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加された単純な COM オブジェクトにのみ適用されます。 他の COM オブジェクト (ActiveX コントロールを含む) を MFC プロジェクトに追加することはできますが、オブジェクトが想定どおりに動作しない可能性があります。
+> このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加された単純な COM オブジェクトにのみ適用されます。 他の COM オブジェクト (ActiveX コントロールを含む) を MFC プロジェクトに追加できますが、オブジェクトが期待どおりに動作しない可能性があります。
 
 ::: moniker range=">=vs-2019"
 
-1. ソリューションエクスプローラーで、プロジェクトノードを右クリックします。
+1. ソリューション エクスプローラーで、プロジェクト ノードを右クリックします。
 
-1. ショートカット メニューの **[追加]** 、 **[新しい項目]** を順にクリックします。
+1. ショートカット メニューの **[追加]**、**[新しい項目]** を順にクリックします。
 
-1. 左ペインで **[atl]** を選択し、中央のペインで **[atl サポート]** を選択します。
+1. 左ペインで **[ATL]** を選択し、中央のウィンドウで **[ATL サポート**] を選択します。
 
 ::: moniker-end
 
@@ -35,15 +35,15 @@ MFC ベースのアプリケーションを既に作成している場合は、I
 
 ### <a name="to-add-atl-support-to-your-mfc-project"></a>MFC プロジェクトに ATL サポートを追加するには
 
-1. ソリューションエクスプローラーで、プロジェクトノードを右クリックします。
+1. ソリューション エクスプローラーで、プロジェクト ノードを右クリックします。
 
-1. ショートカット メニューの **[追加]** 、 **[クラスの追加]** を順にクリックします。
+1. ショートカット メニューの [**追加**] をクリックし、[**クラスの追加**] をクリックします。
 
-1. 左ペインで **[atl]** を選択し、中央のペインで **[MFC プロジェクトに Atl サポートを追加]** を選択します。
+1. 左ペインで **[ATL]** を選択し、中央のペインで **[ATL サポートを MFC プロジェクトに追加**] を選択します。
 
 ::: moniker-end
 
-ATL サポートを追加して MFC プロジェクトのコードを変更する方法の詳細については、「atl[ウィザードによって追加された Atl サポートの詳細](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)」を参照してください。
+ATL サポートの追加によって MFC プロジェクトのコードがどのように変更されるかについては[、「ATL ウィザードによって追加された ATL サポートの詳細」を](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)参照してください。
 
 ## <a name="see-also"></a>関連項目
 

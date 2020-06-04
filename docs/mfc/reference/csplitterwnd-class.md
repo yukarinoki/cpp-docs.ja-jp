@@ -1,5 +1,5 @@
 ---
-title: CSplitterWnd クラス
+title: クラスを分割する
 ms.date: 11/04/2016
 f1_keywords:
 - CSplitterWnd
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323818"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753066"
 ---
-# <a name="csplitterwnd-class"></a>CSplitterWnd クラス
+# <a name="csplitterwnd-class"></a>クラスを分割する
 
 分割ウィンドウの機能が用意されています。分割ウィンドウとは複数のペインを持つウィンドウです。
 
@@ -95,89 +95,89 @@ class CSplitterWnd : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CSplitterWnd::CSplitterWnd](#csplitterwnd)|構築への呼び出しを`CSplitterWnd`オブジェクト。|
+|[Cスプリットターウンド::Cスプリットターウンド](#csplitterwnd)|オブジェクトを構築するための`CSplitterWnd`呼び出し。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSplitterWnd::ActivateNext](#activatenext)|次のペインまたは前のペインのコマンドを実行します。|
-|[CSplitterWnd::CanActivateNext](#canactivatenext)|次のペインまたは前のペイン コマンドが現在可能かどうかを確認します。|
-|[CSplitterWnd::Create](#create)|動的分割ウィンドウを作成し、アタッチ先への呼び出し、`CSplitterWnd`オブジェクト。|
-|[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|共有のスクロール バー コントロールを作成します。|
-|[CSplitterWnd::CreateStatic](#createstatic)|静的分割ウィンドウを作成し、アタッチ先への呼び出し、`CSplitterWnd`オブジェクト。|
-|[CSplitterWnd::CreateView](#createview)|分割ウィンドウのウィンドウの作成を呼び出します。|
-|[CSplitterWnd::DeleteColumn](#deletecolumn)|スプリッター ウィンドウから列を削除します。|
-|[CSplitterWnd::DeleteRow](#deleterow)|スプリッター ウィンドウから行を削除します。|
-|[CSplitterWnd::DeleteView](#deleteview)|スプリッター ウィンドウからビューを削除します。|
-|[あると](#dokeyboardsplit)|キーボード分割コマンドでは、通常は「ウィンドウの分割します。」を実行します。|
-|[CSplitterWnd::DoScroll](#doscroll)|分割ウィンドウの同期スクロールを実行します。|
-|[CSplitterWnd::DoScrollBy](#doscrollby)|指定されたピクセル数で、分割ウィンドウをスクロールします。|
-|[CSplitterWnd::GetActivePane](#getactivepane)|フォーカスまたはアクティブなビュー、フレーム内のアクティブなペインを決定します。|
-|[CSplitterWnd::GetColumnCount](#getcolumncount)|現在のウィンドウの列数を返します。|
-|[CSplitterWnd::GetColumnInfo](#getcolumninfo)|指定した列に情報を返します。|
-|[CSplitterWnd::GetPane](#getpane)|指定した行および列にあるペインを返します。|
-|[CSplitterWnd::GetRowCount](#getrowcount)|現在のウィンドウの行の数を返します。|
-|[CSplitterWnd::GetRowInfo](#getrowinfo)|指定された行情報を返します。|
-|[CSplitterWnd::GetScrollStyle](#getscrollstyle)|共有のスクロール バー スタイルを返します。|
-|[CSplitterWnd::IdFromRowCol](#idfromrowcol)|指定した行および列にあるウィンドウのウィンドウ ID の子を返します。|
-|[CSplitterWnd::IsChildPane](#ischildpane)|ウィンドウが、現在このスプリッター ウィンドウの子ウィンドウかどうかを判断する呼び出しです。|
-|[CSplitterWnd::IsTracking](#istracking)|分割バーは現在移動中かを決定します。|
-|[CSplitterWnd::RecalcLayout](#recalclayout)|スプリッター ウィンドウを表示し、行または列のサイズを調整した後の呼び出しです。|
-|[CSplitterWnd::SetActivePane](#setactivepane)|フレームのアクティブ状態であるペインを設定します。|
-|[CSplitterWnd::SetColumnInfo](#setcolumninfo)|指定した列の情報を設定する呼び出し。|
-|[CSplitterWnd::SetRowInfo](#setrowinfo)|指定した行の情報を設定する呼び出し。|
-|[CSplitterWnd::SetScrollStyle](#setscrollstyle)|スクロール バーのサポートを共有の分割ウィンドウで、新しいスクロール バー スタイルを指定します。|
-|[CSplitterWnd::SplitColumn](#splitcolumn)|フレーム ウィンドウが垂直方向に分割される場所を示します。|
-|[CSplitterWnd::SplitRow](#splitrow)|フレーム ウィンドウを水平方向に分割する位置を示します。|
+|[次の手順をアクティブにします。](#activatenext)|[次のペイン] または [前のウィンドウ] コマンドを実行します。|
+|[次にスプリッターウンド::カンアクティベート](#canactivatenext)|[次のウィンドウ] コマンドまたは [前のウィンドウ] コマンドが現在使用可能かどうかを確認します。|
+|[スプリッタウンド::作成](#create)|動的分割ウィンドウを作成し、`CSplitterWnd`オブジェクトにアタッチする呼び出し。|
+|[分割された分割::作成スクロールバーネク](#createscrollbarctrl)|共有スクロール バー コントロールを作成します。|
+|[スプリッタンド::作成静的](#createstatic)|静的分割ウィンドウを作成し、`CSplitterWnd`オブジェクトにアタッチする呼び出し。|
+|[スプリッタウンド::ビューの作成](#createview)|分割ウィンドウにペインを作成する呼び出し。|
+|[スプリッターウンド::Dエレテカラム](#deletecolumn)|分割ウィンドウから列を削除します。|
+|[CSplitterWnd::Dエレテロウ](#deleterow)|分割ウィンドウから行を削除します。|
+|[スプリッターウンド::Dエレテビュー](#deleteview)|分割ウィンドウからビューを削除します。|
+|[スプリッターウンド::Doキーボードスプリット](#dokeyboardsplit)|キーボード分割コマンド (通常はウィンドウ分割) を実行します。|
+|[:Dスクロール](#doscroll)|分割ウィンドウの同期スクロールを実行します。|
+|[スプリッターウンド::Doスクロールバイ](#doscrollby)|指定したピクセル数だけ分割ウィンドウをスクロールします。|
+|[スプリッタウンド::Getアクティブペイン](#getactivepane)|フレーム内のフォーカスまたはアクティブなビューからアクティブなペインを決定します。|
+|[スプリッタウンド::ゲットカラムカウント](#getcolumncount)|現在のペインの列数を返します。|
+|[スプリッタンド::ゲットカラムインフォ](#getcolumninfo)|指定した列の情報を返します。|
+|[スプリッタウンド::ゲットペイン](#getpane)|指定した行と列のペインを返します。|
+|[スプリッターウンド::ゲットローカウント](#getrowcount)|現在のペインの行数を返します。|
+|[スプリッターウンド::ゲットロウインフォ](#getrowinfo)|指定した行の情報を返します。|
+|[スプリッターウンド:::ゲットスクロールスタイル](#getscrollstyle)|共有スクロール バーのスタイルを返します。|
+|[スプリッターウンド::IdFromRowCol](#idfromrowcol)|指定した行と列のペインの子ウィンドウ ID を返します。|
+|[スプリッタンド::イスプリットペイン](#ischildpane)|ウィンドウが現在この分割ウィンドウの子ウィンドウかどうかを確認する呼び出し。|
+|[スプリッターウンド::イズトラッキング](#istracking)|分割バーが現在移動中かどうかを判断します。|
+|[CSplitterWnd::再計算レイアウト](#recalclayout)|行または列のサイズを調整した後に、分割ウィンドウを再表示する呼び出し。|
+|[スプリッタウンド::セットアクティブペイン](#setactivepane)|枠内のアクティブなペインに設定します。|
+|[分割された項目::列の設定](#setcolumninfo)|指定した列情報を設定する呼び出し。|
+|[スプリッターウンド::セットローインフォ](#setrowinfo)|指定された行情報を設定する呼び出し。|
+|[スプリッタウンド::セットスクロールスタイル](#setscrollstyle)|分割ウィンドウの共有スクロール バーのサポートに対する新しいスクロール バー スタイルを指定します。|
+|[分割列::分割列](#splitcolumn)|フレーム ウィンドウが垂直方向に分割される位置を示します。|
+|[スプリッタローンド::スプリットロー](#splitrow)|フレーム ウィンドウが水平方向に分割される位置を示します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSplitterWnd::OnDraw](#ondraw)|スプリッター ウィンドウを描画するためにフレームワークによって呼び出されます。|
-|[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|分割ウィンドウのイメージをレンダリングします。|
-|[CSplitterWnd::OnInvertTracker](#oninverttracker)|同じのサイズと形状、フレーム ウィンドウを分割ウィンドウのイメージをレンダリングします。|
+|[スプリッタウンド::オンドロー](#ondraw)|分割ウィンドウを描画するためにフレームワークによって呼び出されます。|
+|[スプリッタ分割::オンドロースプリッター](#ondrawsplitter)|分割ウィンドウのイメージをレンダリングします。|
+|[Cスプリッターウンド::オンインバートトラッカー](#oninverttracker)|分割ウィンドウのイメージをフレーム ウィンドウと同じサイズおよびシェイプにレンダリングします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ペインは、通常、アプリケーション固有のオブジェクトから派生した[CView](../../mfc/reference/cview-class.md)、いずれかのことができますが、 [CWnd](../../mfc/reference/cwnd-class.md)適切な子ウィンドウ ID を持つオブジェクト
+ペインは通常[CView](../../mfc/reference/cview-class.md)から派生したアプリケーション固有のオブジェクトですが、適切な子ウィンドウ ID を持つ[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトを指定できます。
 
-A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)オブジェクト。 作成、`CSplitterWnd`オブジェクト、次の手順を使用して。
+`CSplitterWnd`オブジェクトは通常、親[CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)オブジェクトに埋め込まれます。 次の`CSplitterWnd`手順でオブジェクトを作成します。
 
-1. 埋め込みを`CSplitterWnd`親フレーム内のメンバー変数。
+1. 親フレーム`CSplitterWnd`にメンバー変数を埋め込みます。
 
-2. 親フレームの[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数。
+2. 親フレームの[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数をオーバーライドします。
 
-3. 内でオーバーライドされた`OnCreateClient`を呼び出し、[作成](#create)または[CreateStatic](#createstatic)のメンバー関数`CSplitterWnd`します。
+3. `OnCreateClient`オーバーライドされた 内から、 の[作成](#create)または[静的な作成](#createstatic)のメンバー`CSplitterWnd`関数を呼び出します。
 
-呼び出す、`Create`動的分割ウィンドウを作成します。 動的分割ウィンドウは通常、多数の個別のウィンドウまたはビューは、同じドキュメントのスクロールを作成して使用されます。 フレームワークは、スプリッターの最初のウィンドウを自動的に作成されます。フレームワークは作成、サイズを変更して、分割ウィンドウのコントロールの操作とその他のウィンドウを破棄します。
+`Create`動的分割ウィンドウを作成するには、メンバー関数を呼び出します。 動的分割ウィンドウは、通常、同じドキュメントの複数の個別のペイン (ビュー) を作成およびスクロールするために使用されます。 フレームワークは、スプリッターの初期ペインを自動的に作成します。次に、ユーザーが分割ウィンドウのコントロールを操作すると、フレームワークは追加のペインを作成、サイズ変更、および破棄します。
 
-呼び出すと`Create`ウィンドウが完全に表示するのには小さすぎる場合を決定する行の最小の高さと列幅を指定します。 呼び出した後`Create`、呼び出すことによって、最小値を調整することができます、[ため](#setcolumninfo)と[小さ](#setrowinfo)メンバー関数。
+呼び出`Create`しを行う場合は、行の高さと列の幅の最小値を指定します。 呼び出`Create`し後は、[メンバー](#setcolumninfo)関数を呼び出すことによってこれらの[最小値を調整](#setrowinfo)できます。
 
-使用しても、`SetColumnInfo`と`SetRowInfo`「最適」列の幅と行の高さが「理想的な」を設定するメンバー関数。 フレームワークには、分割ウィンドウが表示されたら、親フレーム、分割ウィンドウでは、最初に表示されます。 スプリッター ウィンドウのクライアント領域の右下隅を左上隅から作業、その最適な大きさに基づいて列と行のペイン、フレームワークを配置します。
+また、`SetColumnInfo`および`SetRowInfo`メンバー関数を使用して、列の 「理想的な」 幅と行の 「理想的な」高さを設定します。 フレームワークが分割ウィンドウを表示すると、最初に親フレームが表示され、次に分割ウィンドウが表示されます。 フレームワークは、最適なサイズに応じて、ペインを列と行に配置し、スプリッタ ウィンドウのクライアント領域の左上から右下隅まで作業します。
 
-同じクラスの動的分割ウィンドウのすべてのペインがあります。 動的分割ウィンドウをサポートするよく知られたアプリケーションには、Microsoft Word および Microsoft Excel が含まれます。
+動的分割ウィンドウ内のすべてのペインは、同じクラスである必要があります。 動的分割ウィンドウをサポートする使い慣れたアプリケーションには、Word と Excel があります。
 
-使用して、`CreateStatic`メンバー関数は静的分割ウィンドウを作成します。 ユーザーは、静的分割ウィンドウ、しない、番号や注文のペインのサイズのみを変更できます。
+メンバー関数`CreateStatic`を使用して、静的分割ウィンドウを作成します。 ユーザーは、静的分割ウィンドウ内のペインのサイズのみを変更でき、その数や順序は変更できません。
 
-静的分割ウィンドウを作成するときに具体的にはすべて、静的分割ウィンドウのウィンドウを作成する必要があります。 親フレームの前にすべてのウィンドウを作成するかどうかを確認`OnCreateClient`メンバー関数の戻り値、またはフレームワークは、ウィンドウを正しく表示されません。
+静的分割線を作成するときは、静的分割線のすべてのペインを具体的に作成する必要があります。 親フレームの`OnCreateClient`メンバー関数が返される前に、すべてのペインを作成するか、フレームワークがウィンドウを正しく表示しないようにしてください。
 
-`CreateStatic`メンバー関数は自動的に 0 の行の最小の高さと列幅で静的な分割を初期化します。 呼び出した後`Create`、呼び出すことによって、最小値を調整、[ため](#setcolumninfo)と[小さ](#setrowinfo)メンバー関数。 使用しても`SetColumnInfo`と`SetRowInfo`を呼び出した後`CreateStatic`を示すために最適なウィンドウ サイズを必要な。
+この`CreateStatic`メンバー関数は、行の高さと列幅が 0 の最小値を使用して静的分割線を自動的に初期化します。 を呼び`Create`出した後、これらの最小値を調整するには、[メンバー](#setcolumninfo)関数[SetRowInfo](#setrowinfo)を呼び出します。 また、`SetColumnInfo`希望`SetRowInfo`する理想的な`CreateStatic`ペインの寸法を示すために、呼び出した後も使用します。
 
-静的分割ウィンドウの各ペインは、多くの場合、さまざまなクラスに属しています。 静的分割ウィンドウの例については、グラフィックス エディターと Windows ファイル マネージャーを参照してください。
+静的分割線の個々のペインは、多くの場合、異なるクラスに属します。 静的分割ウィンドウの例については、グラフィックス エディターと Windows ファイル マネージャーを参照してください。
 
-分割ウィンドウは、(スクロール バー ペインが持っている) とは別の特殊なスクロール バーをサポートします。 これらのスクロール バーの子である、`CSplitterWnd`オブジェクトし、ウィンドウと共有されます。
+分割ウィンドウでは、(ペインに表示されるスクロール バーを除く) 特別なスクロール バーがサポートされます。 これらのスクロール バーはオブジェクトの`CSplitterWnd`子であり、ペインと共有されます。
 
-スプリッター ウィンドウを作成するときに、これらの特殊なスクロール バーを作成します。 たとえば、`CSplitterWnd`を持つ 1 つの行、2 つの列と WS_VSCROLL スタイル、2 つのペインで共有される垂直スクロール バーが表示されます。 ユーザーがスクロール バーを移動すると、WM_VSCROLL メッセージは、両方のウィンドウに送信されます。 ペインには、スクロール バーの位置が設定されている場合は、共有のスクロール バーが設定されます。
+分割ウィンドウを作成するときに、これらの特別なスクロール バーを作成します。 たとえば、 1`CSplitterWnd`行、2 列、および WS_VSCROLL スタイルを持つ a には、2 つのペインで共有される垂直スクロール バーが表示されます。 ユーザーがスクロール バーを移動すると、WM_VSCROLLメッセージが両方のペインに送信されます。 ペインがスクロール バーの位置を設定すると、共有スクロール バーが設定されます。
 
-分割ウィンドウについては、次を参照してください。[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)します。
+スプリッタ ウィンドウの詳細については、[テクニカル ノート 29](../../mfc/tn029-splitter-windows.md)を参照してください。
 
-動的分割ウィンドウを作成する方法の詳細についてを参照してください。
+動的分割ウィンドウの作成方法の詳細については、以下を参照してください。
 
-- MFC サンプル[Scribble](../../overview/visual-cpp-samples.md)
+- MFC サンプル[落書き](../../overview/visual-cpp-samples.md)
 
-- MFC サンプル[VIEWEX](../../overview/visual-cpp-samples.md)します。
+- MFC サンプル[のビューエックス](../../overview/visual-cpp-samples.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -193,9 +193,9 @@ A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](..
 
 **ヘッダー:** afxext.h
 
-##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext
+## <a name="csplitterwndactivatenext"></a><a name="activatenext"></a>次の手順をアクティブにします。
 
-次のペインまたは前のペインのコマンドを実行するためにフレームワークによって呼び出されます。
+[次のウィンドウ] または [前のウィンドウ] コマンドを実行するために、フレームワークによって呼び出されます。
 
 ```
 virtual void ActivateNext(BOOL bPrev = FALSE);
@@ -203,16 +203,16 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bPrev*<br/>
-どのウィンドウをアクティブ化することを示します。 **TRUE**の前。**FALSE** next でします。
+*bプレフ*<br/>
+アクティブにするウィンドウを示します。 **前の場合は TRUE。** 次の**場合は FALSE。**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、高レベルのコマンドで使用される、 [CView](../../mfc/reference/cview-class.md)に委任するクラス、`CSplitterWnd`実装します。
+このメンバー関数は[、CView](../../mfc/reference/cview-class.md)クラスが実装にデリゲートするために使用する高レベルのコマンド`CSplitterWnd`です。
 
-##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext
+## <a name="csplitterwndcanactivatenext"></a><a name="canactivatenext"></a>次にスプリッターウンド::カンアクティベート
 
-次のペインまたは前のペイン コマンドが現在可能かどうかを確認するためにフレームワークによって呼び出されます。
+[次のウィンドウ] コマンドまたは [前のウィンドウ] コマンドが現在可能かどうかを確認するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
@@ -220,20 +220,20 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bPrev*<br/>
-どのウィンドウをアクティブ化することを示します。 **TRUE**の前。**FALSE** next でします。
+*bプレフ*<br/>
+アクティブにするウィンドウを示します。 **前の場合は TRUE。** 次の**場合は FALSE。**
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、高レベルのコマンドで使用される、 [CView](../../mfc/reference/cview-class.md)に委任するクラス、`CSplitterWnd`実装します。
+このメンバー関数は[、CView](../../mfc/reference/cview-class.md)クラスが実装にデリゲートするために使用する高レベルのコマンド`CSplitterWnd`です。
 
-##  <a name="create"></a>  CSplitterWnd::Create
+## <a name="csplitterwndcreate"></a><a name="create"></a>スプリッタウンド::作成
 
-動的分割ウィンドウを作成するには、`Create`メンバー関数。
+動的分割ウィンドウを作成するには、メンバー関数を`Create`呼び出します。
 
 ```
 virtual BOOL Create(
@@ -249,53 +249,53 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-スプリッター ウィンドウの親フレーム ウィンドウ。
+分割ウィンドウの親フレーム ウィンドウ。
 
-*nMaxRows*<br/>
-スプリッター ウィンドウ内の行の最大数。 この値は、2 を超えることはできません。
+*数列数*<br/>
+分割ウィンドウの最大行数。 この値は 2 を超えることはできません。
 
-*nMaxCols*<br/>
-スプリッター ウィンドウ内の列の最大数。 この値は、2 を超えることはできません。
+*nマックスコルズ*<br/>
+分割ウィンドウの列の最大数。 この値は 2 を超えることはできません。
 
-*sizeMin*<br/>
-ペインが表示される最小サイズを指定します。
+*サイズミン*<br/>
+ペインを表示できる最小サイズを指定します。
 
 *pContext*<br/>
-ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)構造体。 ほとんどの場合、これはことができます、 *pContext*親フレーム ウィンドウに渡されます。
+[構造体](../../mfc/reference/ccreatecontext-structure.md)へのポインター。 ほとんどの場合、親フレーム ウィンドウに渡される*pContext*を指定できます。
 
-*dwStyle*<br/>
+*Dwstyle*<br/>
 ウィンドウ スタイルを指定します。
 
 *nID*<br/>
-ウィンドウの子ウィンドウ ID。 ID は、分割ウィンドウがもう 1 つの分割ウィンドウ内に入れ子にしない限り、AFX_IDW_PANE_FIRST にすることができます。
+ウィンドウの子ウィンドウ ID。 分割ウィンドウが別の分割ウィンドウ内にネストされていない限り、ID をAFX_IDW_PANE_FIRSTできます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-埋め込むことができます、 `CSplitterWnd` 、親[CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)次の手順を実行してオブジェクト。
+親`CSplitterWnd`[CFrameWnd](../../mfc/reference/cframewnd-class.md)オブジェクトまたは[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)オブジェクトに埋め込むには、次の手順を実行します。
 
-1. 埋め込みを`CSplitterWnd`親フレーム内のメンバー変数。
+1. 親フレーム`CSplitterWnd`にメンバー変数を埋め込みます。
 
-1. 親フレームの[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数。
+1. 親フレームの[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数をオーバーライドします。
 
-1. 呼び出す、`Create`からのメンバー関数内でオーバーライドされた`OnCreateClient`します。
+1. オーバーライドされた`Create``OnCreateClient`内からメンバー関数を呼び出します。
 
-親フレーム内のスプリッター ウィンドウを作成するときに渡す親フレームの*pContext*スプリッター ウィンドウへのパラメーター。 それ以外の場合、このパラメーターは NULL にすることができます。
+親フレーム内から分割ウィンドウを作成する場合は、親フレームの*pContext*パラメーターを分割ウィンドウに渡します。 それ以外の場合、このパラメーターは NULL にすることができます。
 
-動的分割ウィンドウの最初の行の最小の高さと列の幅が定めた、 *sizeMin*パラメーター。 これらの最小値は、ウィンドウが小さすぎて全体を表示するかどうかを判断で変更できます、[小さ](#setrowinfo)と[ため](#setcolumninfo)メンバー関数。
+動的分割ウィンドウの行の高さと列の幅の初期の最小幅は *、sizeMin*パラメーターによって設定されます。 ペインが小さすぎて全体を表示できないかどうかを決定するこれらの最小値は[、SetRowInfo](#setrowinfo)および[SetColumnInfo](#setcolumninfo)メンバー関数を使用して変更できます。
 
-動的分割ウィンドウについての記事では"分割 Windows"を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)、[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)、および`CSplitterWnd`クラスの概要。
+動的分割ウィンドウの詳細については、[記事「複数のドキュメントの種類、ビュー、およびフレーム ウィンドウ](../../mfc/multiple-document-types-views-and-frame-windows.md)」の「スプリッタ ウィンドウ」、テクニカル ノート`CSplitterWnd` [29、](../../mfc/tn029-splitter-windows.md)およびクラスの概要を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]
 
-##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl
+## <a name="csplitterwndcreatescrollbarctrl"></a><a name="createscrollbarctrl"></a>分割された分割::作成スクロールバーネク
 
-共有のスクロール バー コントロールを作成するためにフレームワークによって呼び出されます。
+共有スクロール バー コントロールを作成するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL CreateScrollBarCtrl(
@@ -305,23 +305,23 @@ virtual BOOL CreateScrollBarCtrl(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*<br/>
+*Dwstyle*<br/>
 ウィンドウ スタイルを指定します。
 
 *nID*<br/>
-ウィンドウの子ウィンドウ ID。 ID は、分割ウィンドウがもう 1 つの分割ウィンドウ内に入れ子にしない限り、AFX_IDW_PANE_FIRST にすることができます。
+ウィンドウの子ウィンドウ ID。 分割ウィンドウが別の分割ウィンドウ内にネストされていない限り、ID をAFX_IDW_PANE_FIRSTできます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オーバーライド`CreateScrollBarCtrl`スクロール バーの横にある余分なコントロールを追加します。 既定の動作では、通常の Windows のスクロール バー コントロールを作成します。
+スクロール`CreateScrollBarCtrl`バーの横にコントロールを追加する場合は、オーバーライドします。 既定の動作では、通常の Windows スクロール バー コントロールが作成されます。
 
-##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic
+## <a name="csplitterwndcreatestatic"></a><a name="createstatic"></a>スプリッタンド::作成静的
 
-静的分割ウィンドウを作成するには、`CreateStatic`メンバー関数。
+静的分割ウィンドウを作成するには、メンバー関数を`CreateStatic`呼び出します。
 
 ```
 virtual BOOL CreateStatic(
@@ -335,45 +335,45 @@ virtual BOOL CreateStatic(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-スプリッター ウィンドウの親フレーム ウィンドウ。
+分割ウィンドウの親フレーム ウィンドウ。
 
 *nRows*<br/>
-行の番号。 この値は 16 を超えることはできません。
+行数です。 この値は 16 を超えてはなりません。
 
-*nCols*<br/>
-列の番号。 この値は 16 を超えることはできません。
+*nコル*<br/>
+列数です。 この値は 16 を超えてはなりません。
 
-*dwStyle*<br/>
+*Dwstyle*<br/>
 ウィンドウ スタイルを指定します。
 
 *nID*<br/>
-ウィンドウの子ウィンドウ ID。 ID は、分割ウィンドウがもう 1 つの分割ウィンドウ内に入れ子にしない限り、AFX_IDW_PANE_FIRST にすることができます。
+ウィンドウの子ウィンドウ ID。 分割ウィンドウが別の分割ウィンドウ内にネストされていない限り、ID をAFX_IDW_PANE_FIRSTできます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-A`CSplitterWnd`は通常、親に埋め込まれて`CFrameWnd`または[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)次の手順を実行してオブジェクト。
+A`CSplitterWnd`は通常、次の`CFrameWnd`手順を実行して、親オブジェクトまたは[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)オブジェクトに埋め込まれます。
 
-1. 埋め込みを`CSplitterWnd`親フレーム内のメンバー変数。
+1. 親フレーム`CSplitterWnd`にメンバー変数を埋め込みます。
 
-1. 親フレームの`OnCreateClient`メンバー関数。
+1. 親フレームのメンバー関数を`OnCreateClient`オーバーライドします。
 
-1. 呼び出す、`CreateStatic`からのメンバー関数内でオーバーライドされた[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)します。
+1. オーバーライドされた`CreateStatic` [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)内からメンバー関数を呼び出します。
 
-静的分割ウィンドウには、さまざまなクラスから多くの場合、ペインの固定の数が含まれています。
+静的分割ウィンドウには、多くの場合、異なるクラスの一定の数のペインが含まれています。
 
-静的分割ウィンドウを作成するときに作成する必要がある同時にすべてのペインです。 [CreateView](#createview)メンバー関数は通常、この目的の使用も、他の nonview クラスを作成することができます。
+静的分割ウィンドウを作成する場合は、同時にすべてのウィンドウを作成する必要があります。 [通常、CreateView](#createview)メンバー関数は、この目的のために使用されますが、他の非ビュー クラスも作成できます。
 
-静的分割ウィンドウの最初の行の最小の高さと列の幅は 0 です。 これらの最小値は、調べるには、ウィンドウが小さすぎて全体を表示するときで変更できます、[小さ](#setrowinfo)と[ため](#setcolumninfo)メンバー関数。
+静的分割ウィンドウの行の高さと列の最初の最小幅は 0 です。 ペインが小さすぎて全体を表示できない場合に、これらの最小値を[指定するには、SetRowInfo](#setrowinfo)と[SetColumnInfo](#setcolumninfo)メンバー関数を使用します。
 
-に静的分割ウィンドウをスクロール バーを追加する追加 WS_HSCROLL と WS_VSCROLL スタイル*dwStyle*します。
+静的な分割ウィンドウにスクロール バーを追加するには、WS_HSCROLLとWS_VSCROLLスタイルを*dwStyle*に追加します。
 
-"分割 Windows"、情報の記事を参照してください[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)、[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)、および`CSplitterWnd`の詳細については、静的分割ウィンドウ クラスの概要。
+静的分割ウィンドウの詳細については、「複数の[ドキュメントの種類、ビュー、およびフレーム ウィンドウ](../../mfc/multiple-document-types-views-and-frame-windows.md)」の「スプリッタ`CSplitterWnd`ウィンドウ」、テクニカル ノート[29、](../../mfc/tn029-splitter-windows.md)およびクラスの概要を参照してください。
 
-##  <a name="createview"></a>  CSplitterWnd::CreateView
+## <a name="csplitterwndcreateview"></a><a name="createview"></a>スプリッタウンド::ビューの作成
 
 静的分割ウィンドウのペインを作成します。
 
@@ -389,49 +389,49 @@ virtual BOOL CreateView(
 ### <a name="parameters"></a>パラメーター
 
 *行*<br/>
-新しいビューを配置するための分割ウィンドウの行を指定します。
+新しいビューを配置する分割ウィンドウの行を指定します。
 
 *col*<br/>
-新しいビューを配置するための分割ウィンドウの列を指定します。
+新しいビューを配置する分割ウィンドウの列を指定します。
 
-*pViewClass*<br/>
-指定します、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)の新しいビュー。
+*クラスを表示します。*<br/>
+新しいビューの[C ランタイム クラス](../../mfc/reference/cruntimeclass-structure.md)を指定します。
 
-*sizeInit*<br/>
+*サイズイニト*<br/>
 新しいビューの初期サイズを指定します。
 
 *pContext*<br/>
-ビューを作成するために使用作成コンテキストへのポインター (通常、 *pContext*オーバーライドされた親のフレームに渡される[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)スプリッター ウィンドウのメンバー関数作成されます)。
+ビューの作成に使用される作成コンテキストへのポインター (通常、スプリッター ウィンドウが作成される親フレームのオーバーライドされた[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数に渡される*pContext)。*
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、分割線を表示する前に、静的分割ウィンドウのすべてのウィンドウを作成する必要があります。
+静的分割ウィンドウのすべてのウィンドウは、フレームワークが分割ウィンドウを表示する前に作成する必要があります。
 
-フレームワークでは、動的分割ウィンドウのユーザーがウィンドウで、行、または列を分割時に、新しいウィンドウを作成するには、このメンバー関数も呼び出します。
+また、動的分割ウィンドウのユーザーがペイン、行、または列を分割したときに、フレームワークは、このメンバー関数を呼び出して新しいペインを作成します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]
 
-##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd
+## <a name="csplitterwndcsplitterwnd"></a><a name="csplitterwnd"></a>Cスプリットターウンド::Cスプリットターウンド
 
-構築への呼び出しを`CSplitterWnd`オブジェクト。
+オブジェクトを構築するための`CSplitterWnd`呼び出し。
 
 ```
 CSplitterWnd();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構築、 `CSplitterWnd` 2 つのステップ内のオブジェクト。 最初に、作成するコンス トラクターを呼び出し、`CSplitterWnd`オブジェクトを呼び出して、[作成](#create)メンバー関数は、分割ウィンドウを作成しにアタッチします、`CSplitterWnd`オブジェクト。
+2`CSplitterWnd`つの手順でオブジェクトを作成します。 まず、オブジェクトを作成するコンストラクターを`CSplitterWnd`呼び出し、次に[Create](#create)メンバー関数を`CSplitterWnd`呼び出します。
 
-##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn
+## <a name="csplitterwnddeletecolumn"></a><a name="deletecolumn"></a>スプリッターウンド::Dエレテカラム
 
-スプリッター ウィンドウから列を削除します。
+分割ウィンドウから列を削除します。
 
 ```
 virtual void DeleteColumn(int colDelete);
@@ -439,16 +439,16 @@ virtual void DeleteColumn(int colDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*colDelete*<br/>
+*コル削除*<br/>
 削除する列を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
+このメンバー関数は、フレームワークによって動的分割ウィンドウのロジックを実装するために呼び出されます (つまり、分割ウィンドウにSPLS_DYNAMIC_SPLITスタイルがある場合)。 仮想関数[CreateView](#createview)と共にカスタマイズして、より高度な動的スプリッタを実装できます。
 
-##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow
+## <a name="csplitterwnddeleterow"></a><a name="deleterow"></a>CSplitterWnd::Dエレテロウ
 
-スプリッター ウィンドウから行を削除します。
+分割ウィンドウから行を削除します。
 
 ```
 virtual void DeleteRow(int rowDelete);
@@ -456,16 +456,16 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*rowDelete*<br/>
+*行削除*<br/>
 削除する行を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
+このメンバー関数は、フレームワークによって動的分割ウィンドウのロジックを実装するために呼び出されます (つまり、分割ウィンドウにSPLS_DYNAMIC_SPLITスタイルがある場合)。 仮想関数[CreateView](#createview)と共にカスタマイズして、より高度な動的スプリッタを実装できます。
 
-##  <a name="deleteview"></a>  CSplitterWnd::DeleteView
+## <a name="csplitterwnddeleteview"></a><a name="deleteview"></a>スプリッターウンド::Dエレテビュー
 
-スプリッター ウィンドウからビューを削除します。
+分割ウィンドウからビューを削除します。
 
 ```
 virtual void DeleteView(
@@ -476,20 +476,20 @@ virtual void DeleteView(
 ### <a name="parameters"></a>パラメーター
 
 *行*<br/>
-分割ウィンドウの行ビューを削除する位置を指定します。
+ビューを削除する分割ウィンドウ行を指定します。
 
 *col*<br/>
-分割ウィンドウの列のビューを削除する位置を指定します。
+ビューを削除する分割ウィンドウの列を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アクティブなビューが削除されている場合、次のビューがアクティブになります。 既定の実装は、ビューが自動的に前提としています。 削除[PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy)します。
+アクティブなビューが削除されている場合、次のビューがアクティブになります。 既定の実装では、ビューが[PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy)で自動的に削除されることを前提としています。
 
-このメンバー関数は (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
+このメンバー関数は、フレームワークによって動的分割ウィンドウのロジックを実装するために呼び出されます (つまり、分割ウィンドウにSPLS_DYNAMIC_SPLITスタイルがある場合)。 仮想関数[CreateView](#createview)と共にカスタマイズして、より高度な動的スプリッタを実装できます。
 
-##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit
+## <a name="csplitterwnddokeyboardsplit"></a><a name="dokeyboardsplit"></a>スプリッターウンド::Doキーボードスプリット
 
-キーボード分割コマンドでは、通常は「ウィンドウの分割します。」を実行します。
+キーボード分割コマンド (通常はウィンドウ分割) を実行します。
 
 ```
 virtual BOOL DoKeyboardSplit();
@@ -499,11 +499,11 @@ virtual BOOL DoKeyboardSplit();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、高レベルのコマンドで使用される、 [CView](../../mfc/reference/cview-class.md)に委任するクラス、`CSplitterWnd`実装します。
+このメンバー関数は[、CView](../../mfc/reference/cview-class.md)クラスが実装にデリゲートするために使用する高レベルのコマンド`CSplitterWnd`です。
 
-##  <a name="doscroll"></a>  CSplitterWnd::DoScroll
+## <a name="csplitterwnddoscroll"></a><a name="doscroll"></a>:Dスクロール
 
 分割ウィンドウの同期スクロールを実行します。
 
@@ -516,38 +516,38 @@ virtual BOOL DoScroll(
 
 ### <a name="parameters"></a>パラメーター
 
-*pViewFrom*<br/>
-スクロールのメッセージの発生元となるビューへのポインター。
+*から見る*<br/>
+スクロール メッセージの発生元のビューへのポインター。
 
-*nScrollCode*<br/>
-スクロール バーのコードをユーザーを示すには、要求のスクロールします。 このパラメーターは 2 つの部分で構成されます。 下位バイト、水平方向にスクロール発生の種類を決定すると、上位バイト、垂直方向にスクロール発生の種類を決定します。
+*スクロールコード*<br/>
+ユーザーのスクロール要求を示すスクロール バー コード。 このパラメーターは、水平に行われるスクロールのタイプを決定する下位バイトと、垂直に発生するスクロールのタイプを決定する高次バイトの 2 つの部分で構成されます。
 
-    - SB_BOTTOM まで下にスクロールします。
+- SB_BOTTOM 下にスクロールします。
 
-    - 1 行下 SB_LINEDOWN までスクロールします。
+- SB_LINEDOWN 1 行下にスクロールします。
 
-    - 1 行上に SB_LINEUP までスクロールします。
+- SB_LINEUP 1 行上にスクロールします。
 
-    - 1 つ page down SB_PAGEDOWN までスクロールします。
+- SB_PAGEDOWN 1 ページ下にスクロールします。
 
-    - 1 つ page up SB_PAGEUP までスクロールします。
+- SB_PAGEUP 1 ページ上にスクロールします。
 
-    - ページのトップへ SB_TOP にスクロールします。
+- SB_TOP上にスクロールします。
 
-*bDoScroll*<br/>
-指定したスクロール動作が発生したかどうかを判断します。 場合*bDoScroll*は場合は TRUE (子ウィンドウが存在する場合は、およびスクロールの範囲であれば、分割ウィンドウなど)、指定したスクロール アクションが実行できますその後*bDoScroll*場合は、FALSE (つまり、子ウィンドウ。存在する場合、または分割ビューでスクロールの範囲がない)、スクロールは発生しません。
+*スクロール*<br/>
+指定されたスクロール操作が発生するかどうかを判断します。 *bDoScroll*が TRUE の場合 (つまり、子ウィンドウが存在し、分割ウィンドウにスクロール範囲がある場合)、指定されたスクロールアクションが実行されます。*bDoScroll*が FALSE の場合 (つまり、子ウィンドウが存在しない場合、または分割ビューにスクロール範囲がない場合)、スクロールは行われません。
 
 ### <a name="return-value"></a>戻り値
 
-同期スクロールが発生した場合、0 以外の場合それ以外の場合 0 を返します。
+同期スクロールが発生した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、ビューがスクロール メッセージを受信すると、分割ウィンドウの同期スクロールを実行するためにフレームワークによって呼び出されます。 同期スクロールを許可する前に、ユーザーが操作を要求するオーバーライドです。
+このメンバー関数は、ビューがスクロール メッセージを受信したときに分割ウィンドウの同期スクロールを実行するために、フレームワークによって呼び出されます。 同期スクロールが許可される前にユーザーによる操作を要求する場合は、オーバーライドします。
 
-##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy
+## <a name="csplitterwnddoscrollby"></a><a name="doscrollby"></a>スプリッターウンド::Doスクロールバイ
 
-指定されたピクセル数で、分割ウィンドウをスクロールします。
+指定したピクセル数だけ分割ウィンドウをスクロールします。
 
 ```
 virtual BOOL DoScrollBy(
@@ -558,28 +558,28 @@ virtual BOOL DoScrollBy(
 
 ### <a name="parameters"></a>パラメーター
 
-*pViewFrom*<br/>
-スクロールのメッセージの発生元となるビューへのポインター。
+*から見る*<br/>
+スクロール メッセージの発生元のビューへのポインター。
 
-*sizeScroll*<br/>
-水平および垂直にスクロールするピクセルの数。
+*サイズスクロール*<br/>
+水平方向および垂直方向にスクロールするピクセル数です。
 
-*bDoScroll*<br/>
-指定したスクロール動作が発生したかどうかを判断します。 場合*bDoScroll*は場合は TRUE (子ウィンドウが存在する場合は、およびスクロールの範囲であれば、分割ウィンドウなど)、指定したスクロール アクションが実行できますその後*bDoScroll*場合は、FALSE (つまり、子ウィンドウ。存在する場合、または分割ビューでスクロールの範囲がない)、スクロールは発生しません。
+*スクロール*<br/>
+指定されたスクロール操作が発生するかどうかを判断します。 *bDoScroll*が TRUE の場合 (つまり、子ウィンドウが存在し、分割ウィンドウにスクロール範囲がある場合)、指定されたスクロールアクションが実行されます。*bDoScroll*が FALSE の場合 (つまり、子ウィンドウが存在しない場合、または分割ビューにスクロール範囲がない場合)、スクロールは行われません。
 
 ### <a name="return-value"></a>戻り値
 
-同期スクロールが発生した場合、0 以外の場合それ以外の場合 0 を返します。
+同期スクロールが発生した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スクロール メッセージへの応答として、フレームワークによって呼び出されます、同期を実行するにはピクセル単位で示される量で、分割ウィンドウのスクロール*sizeScroll*します。 正の値が右にスクロール ダウンを示します負の値を示すを左へスクロールします。
+このメンバー関数は、スクロール メッセージに応答してフレームワークによって呼び出され、*サイズによって*示されるピクセル単位の分割ウィンドウの同期スクロールを実行します。 正の値は、スクロールダウンと右を示します。負の値は、左にスクロールすることを示します。
 
-スクロールを許可する前に、ユーザーが操作を要求するオーバーライドです。
+スクロールを許可する前にユーザーによる操作を要求する場合は、オーバーライドします。
 
-##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane
+## <a name="csplitterwndgetactivepane"></a><a name="getactivepane"></a>スプリッタウンド::Getアクティブペイン
 
-フォーカスまたはアクティブなビュー、フレーム内のアクティブなペインを決定します。
+フレーム内のフォーカスまたはアクティブなビューからアクティブなペインを決定します。
 
 ```
 virtual CWnd* GetActivePane(
@@ -590,22 +590,22 @@ virtual CWnd* GetActivePane(
 ### <a name="parameters"></a>パラメーター
 
 *pRow*<br/>
-ポインター、 **int**アクティブなペインの行番号を取得します。
+アクティブなペインの行番号を取得する**int**へのポインター。
 
 *pCol*<br/>
-ポインター、 **int**アクティブなペインの列番号を取得します。
+アクティブなペインの列番号を取得する**int**へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなペインへのポインター。 アクティブなペインが存在しない場合は NULL です。
+アクティブなペインへのポインター。 アクティブなペインが存在しない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、分割ウィンドウのアクティブなペインを確認するためにフレームワークによって呼び出されます。 アクティブなペインを取得する前に、ユーザーが操作を要求するオーバーライドです。
+このメンバー関数は、分割ウィンドウのアクティブなペインを決定するために、フレームワークによって呼び出されます。 アクティブなペインを取得する前にユーザーが操作を要求する場合は、オーバーライドします。
 
-##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount
+## <a name="csplitterwndgetcolumncount"></a><a name="getcolumncount"></a>スプリッタウンド::ゲットカラムカウント
 
-現在のウィンドウの列数を返します。
+現在のペインの列数を返します。
 
 ```
 int GetColumnCount() const;
@@ -613,13 +613,13 @@ int GetColumnCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-分割ウィンドウの現在の列数を返します。 静的分割ウィンドウで、これもは列の最大数です。
+分割線の現在の列数を返します。 静的分割線の場合、これは列の最大数でもあります。
 
-##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo
+## <a name="csplitterwndgetcolumninfo"></a><a name="getcolumninfo"></a>スプリッタンド::ゲットカラムインフォ
 
-指定した列に情報を返します。
+指定した列の情報を返します。
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -632,14 +632,14 @@ void GetColumnInfo(
 列を指定します。
 
 *cxCur*<br/>
-参照、 **int**列の現在の幅に設定されます。
+列の現在の幅に設定する**int**への参照。
 
 *cxMin*<br/>
-参照、 **int**列の現在の最小の幅に設定されます。
+列の現在の最小幅に設定する**int**への参照。
 
-##  <a name="getpane"></a>  CSplitterWnd::GetPane
+## <a name="csplitterwndgetpane"></a><a name="getpane"></a>スプリッタウンド::ゲットペイン
 
-指定した行および列にあるペインを返します。
+指定した行と列のペインを返します。
 
 ```
 CWnd* GetPane(
@@ -657,11 +657,11 @@ CWnd* GetPane(
 
 ### <a name="return-value"></a>戻り値
 
-指定した行および列にあるペインを返します。 返されるペインは、通常、 [CView](../../mfc/reference/cview-class.md)-クラスを派生します。
+指定した行と列のペインを返します。 返されるペインは、通常[、CView](../../mfc/reference/cview-class.md)派生クラスです。
 
-##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount
+## <a name="csplitterwndgetrowcount"></a><a name="getrowcount"></a>スプリッターウンド::ゲットローカウント
 
-現在のウィンドウの行の数を返します。
+現在のペインの行数を返します。
 
 ```
 int GetRowCount() const;
@@ -669,13 +669,13 @@ int GetRowCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-分割ウィンドウの行の現在の数を返します。 静的分割ウィンドウで、これもは行の最大数です。
+分割ウィンドウの現在の行数を返します。 静的分割ウィンドウの場合、これは行の最大数でもあります。
 
-##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo
+## <a name="csplitterwndgetrowinfo"></a><a name="getrowinfo"></a>スプリッターウンド::ゲットロウインフォ
 
-指定された行情報を返します。
+指定した行の情報を返します。
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -687,19 +687,19 @@ void GetRowInfo(
 *行*<br/>
 行を指定します。
 
-*cyCur*<br/>
-参照**int**ピクセル単位で行の現在の高さに設定されます。
+*シクル*<br/>
+行の現在の高さをピクセル単位で設定する**int**への参照。
 
-*cyMin*<br/>
-参照**int**ピクセル単位で行の現在の最小の高さに設定されます。
+*サイミン*<br/>
+行の現在の最小の高さをピクセル単位で設定する**int**への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した行に関する情報を取得するには、このメンバー関数を呼び出します。 *CyCur*パラメーターが指定された行の現在の高さ入力と*cyMin*行の高さの最小値が格納されます。
+指定した行に関する情報を取得します。 *cyCur*パラメータは指定された行の現在の高さで塗られ *、cyMin*は行の最小の高さで塗りつぶされます。
 
-##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle
+## <a name="csplitterwndgetscrollstyle"></a><a name="getscrollstyle"></a>スプリッターウンド:::ゲットスクロールスタイル
 
-分割ウィンドウで、共有のスクロール バー スタイルを返します。
+分割ウィンドウの共有スクロール バー スタイルを返します。
 
 ```
 DWORD GetScrollStyle() const;
@@ -707,17 +707,17 @@ DWORD GetScrollStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は 1 つ以上の次の windows スタイルのフラグをします。
+成功した場合は、次のウィンドウ スタイル フラグの 1 つ以上。
 
-    - WS_HSCROLL スプリッターが現在が管理する場合は、水平スクロール バーを共有します。
+- WS_HSCROLL分割線が現在共有水平スクロール バーを管理している場合。
 
-    - WS_VSCROLL スプリッターが現在が管理する場合は、垂直スクロール バーを共有します。
+- WS_VSCROLL分割線が現在、共有垂直スクロール バーを管理している場合。
 
-0 の場合、分割ウィンドウは、共有のスクロール バーを現在管理しません。
+0 の場合、分割ウィンドウは現在、共有スクロール バーを管理しません。
 
-##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol
+## <a name="csplitterwndidfromrowcol"></a><a name="idfromrowcol"></a>スプリッターウンド::IdFromRowCol
 
-指定した行および列にあるウィンドウのウィンドウ ID、子を取得します。
+指定した行と列のペインの子ウィンドウ ID を取得します。
 
 ```
 int IdFromRowCol(
@@ -735,19 +735,19 @@ int IdFromRowCol(
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウの子ウィンドウ ID。
+ペインの子ウィンドウ ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、ビューでないペインを作成するため使用され、ウィンドウが存在する前に呼び出すことができます。
+このメンバー関数は、ペインとしてビュー以外を作成するために使用され、ペインが存在する前に呼び出される場合があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]
 
-##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane
+## <a name="csplitterwndischildpane"></a><a name="ischildpane"></a>スプリッタンド::イスプリットペイン
 
-決定かどうか*我が物*は現在、このスプリッター ウィンドウの子ウィンドウ。
+*pWnd*が現在この分割ウィンドウの子ペインかどうかを判断します。
 
 ```
 BOOL IsChildPane(
@@ -758,30 +758,30 @@ BOOL IsChildPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-ポインターを[CWnd](../../mfc/reference/cwnd-class.md)をテストするオブジェクト。
+*Pwnd*<br/>
+テストする[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。
 
 *pRow*<br/>
-ポインター、 **int**行番号を格納します。
+行番号を格納する**int**へのポインター。
 
 *pCol*<br/>
-ポインター、 **int**列番号を格納します。
+列番号を格納する**int**へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ゼロ以外の場合、*我が物*このスプリッター ウィンドウの子ウィンドウは、現在と*pRow*と*pCol*分割ウィンドウのウィンドウの位置が入ります。 場合*我が物*が子ウィンドウ、分割ウィンドウの 0 が返されます。
+0 以外の場合 *、pWnd*は現在この分割ウィンドウの子ペインであり *、pRow*と*pCol*は分割ウィンドウのペインの位置で埋められます。 *pWnd*がこの分割ウィンドウの子ペインでない場合は、0 が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-6.0 より前のバージョンを Visual C では、この関数として定義されました
+6.0 より前の Visual C++ バージョンでは、この関数は次のように定義されていました。
 
 `BOOL IsChildPane(CWnd* pWnd, int& row, int& col);`
 
-このバージョンは廃止されておりは使用できません。
+このバージョンは現在廃止され、使用しないでください。
 
-##  <a name="istracking"></a>  CSplitterWnd::IsTracking
+## <a name="csplitterwndistracking"></a><a name="istracking"></a>スプリッターウンド::イズトラッキング
 
-ウィンドウのスプリッター バーは現在移動中かを判断するには、このメンバー関数を呼び出します。
+ウィンドウ内の分割バーが現在移動中かどうかを調べます。
 
 ```
 BOOL IsTracking();
@@ -789,9 +789,9 @@ BOOL IsTracking();
 
 ### <a name="return-value"></a>戻り値
 
-以外の場合は、分割操作が進行中です。それ以外の場合 0 を返します。
+分割操作が進行中の場合は 0 以外の値を返します。それ以外の場合は 0。
 
-##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter
+## <a name="csplitterwndondrawsplitter"></a><a name="ondrawsplitter"></a>スプリッタ分割::オンドロースプリッター
 
 分割ウィンドウのイメージをレンダリングします。
 
@@ -805,31 +805,31 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-描画するためのデバイス コンテキストへのポインター。 場合*pDC*が null の場合、 [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)と呼びますフレームワークおよびありません分割によってウィンドウが描画されます。
+描画するデバイス コンテキストへのポインター。 *pDC*が NULL の場合[、CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)がフレームワークによって呼び出され、分割ウィンドウは描画されません。
 
 *nType*<br/>
-値、`enum ESplitType`次のいずれかを指定することができます。
+の値`enum ESplitType`は、次のいずれかになります。
 
-    - `splitBox` 分割ドラッグ ボックス。
+- `splitBox`分割線のドラッグ ボックス。
 
-    - `splitBar` 2 つの分割ウィンドウ間に表示されるバー。
+- `splitBar`2 つの分割ウィンドウの間に表示されるバー。
 
-    - `splitIntersection` 分割ウィンドウの積集合。 Windows 95/98 で実行されているときに、この要素は呼び出されません。
+- `splitIntersection`分割ウィンドウの交差部分。 この要素は、Windows 95/98 で実行されている場合は呼び出されません。
 
-    - `splitBorder` 分割ウィンドウの境界線。
+- `splitBorder`分割ウィンドウの境界線。
 
-*rect*<br/>
-参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)分割ウィンドウの形状とサイズを指定するオブジェクト。
+*Rect*<br/>
+分割ウィンドウのサイズと形状を指定する[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、描画し、正確な分割ウィンドウの特性を指定するためにフレームワークによって呼び出されます。 オーバーライド`OnDrawSplitter`スプリッター ウィンドウのさまざまなグラフィック要素の画像の高度にカスタマイズします。 既定の画像は、分割バーの交点のブレンドを Windows または Microsoft Windows 95/98 では、Microsoft は、スプリッターに似ています。
+このメンバー関数は、フレームワークによって、分割ウィンドウの正確な特性を描画および指定するために呼び出されます。 分割`OnDrawSplitter`ウィンドウのさまざまなグラフィカル コンポーネントの画像の高度なカスタマイズをオーバーライドします。 既定のイメージは、分割バーの交差がブレンドされるという点で、Windows 用 Microsoft Works または Windows 95/98 のスプリッターと似ています。
 
-動的分割ウィンドウについての記事では"分割 Windows"を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)、[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)、および`CSplitterWnd`クラスの概要。
+動的分割ウィンドウの詳細については、[記事「複数のドキュメントの種類、ビュー、およびフレーム ウィンドウ](../../mfc/multiple-document-types-views-and-frame-windows.md)」の「スプリッタ ウィンドウ」、テクニカル ノート`CSplitterWnd` [29、](../../mfc/tn029-splitter-windows.md)およびクラスの概要を参照してください。
 
-##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker
+## <a name="csplitterwndoninverttracker"></a><a name="oninverttracker"></a>Cスプリッターウンド::オンインバートトラッカー
 
-同じのサイズと形状、フレーム ウィンドウを分割ウィンドウのイメージをレンダリングします。
+分割ウィンドウのイメージをフレーム ウィンドウと同じサイズおよびシェイプにレンダリングします。
 
 ```
 virtual void OnInvertTracker(const CRect& rect);
@@ -837,36 +837,36 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
-参照を`CRect`追跡四角形を指定するオブジェクト。
+*Rect*<br/>
+追跡用の`CRect`四角形を指定するオブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、分割ウィンドウのサイズ変更時に、フレームワークによって呼び出されます。 オーバーライド`OnInvertTracker`スプリッター ウィンドウの画像の高度にカスタマイズします。 既定の画像は、分割バーの交点のブレンドを Windows または Microsoft Windows 95/98 では、Microsoft は、スプリッターに似ています。
+このメンバー関数は、分割子のサイズ変更時にフレームワークによって呼び出されます。 分割`OnInvertTracker`ウィンドウの画像の高度なカスタマイズをオーバーライドします。 既定のイメージは、分割バーの交差がブレンドされるという点で、Windows 用 Microsoft Works または Windows 95/98 のスプリッターと似ています。
 
-動的分割ウィンドウについての記事では"分割 Windows"を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)、[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)、および`CSplitterWnd`クラスの概要。
+動的分割ウィンドウの詳細については、[記事「複数のドキュメントの種類、ビュー、およびフレーム ウィンドウ](../../mfc/multiple-document-types-views-and-frame-windows.md)」の「スプリッタ ウィンドウ」、テクニカル ノート`CSplitterWnd` [29、](../../mfc/tn029-splitter-windows.md)およびクラスの概要を参照してください。
 
-##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout
+## <a name="csplitterwndrecalclayout"></a><a name="recalclayout"></a>CSplitterWnd::再計算レイアウト
 
-スプリッター ウィンドウを表示し、行または列のサイズを調整した後の呼び出しです。
+行または列のサイズを調整した後に、分割ウィンドウを再表示する呼び出し。
 
 ```
 virtual void RecalcLayout();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-行および列のサイズを調整した後、正しくスプリッター ウィンドウを再表示するのには、このメンバー関数を呼び出す、[小さ](#setrowinfo)と[ため](#setcolumninfo)メンバー関数。 スプリッター ウィンドウが表示される前に、作成プロセスの一部として行と列のサイズを変更する場合、このメンバー関数を呼び出す必要はありません。
+このメンバー関数を呼び出すと、行と列のサイズを調整した後に分割ウィンドウが正しく再表示されます、 [SetRowInfo](#setrowinfo)と[SetColumnInfo](#setcolumninfo)メンバー関数です。 分割ウィンドウが表示される前に作成プロセスの一部として行と列のサイズを変更する場合、このメンバー関数を呼び出す必要はありません。
 
-フレームワークは、ユーザーがスプリッター ウィンドウのサイズを変更または移動されるたびに、このメンバー関数を呼び出します。
+ユーザーが分割ウィンドウのサイズを変更したり、分割を移動したりするたびに、フレームワークはこのメンバー関数を呼び出します。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CSplitterWnd::SetColumnInfo](#setcolumninfo)します。
+  [「次](#setcolumninfo)の例」を参照してください。
 
-##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane
+## <a name="csplitterwndsetactivepane"></a><a name="setactivepane"></a>スプリッタウンド::セットアクティブペイン
 
-フレームのアクティブ状態であるペインを設定します。
+枠内のアクティブなペインに設定します。
 
 ```
 virtual void SetActivePane(
@@ -878,25 +878,25 @@ virtual void SetActivePane(
 ### <a name="parameters"></a>パラメーター
 
 *行*<br/>
-場合*我が物*が NULL でアクティブになるウィンドウで、行を指定します。
+*pWnd*が NULL の場合は、アクティブになるペイン内の行を指定します。
 
 *col*<br/>
-場合*我が物*が NULL でアクティブになるウィンドウで列を指定します。
+*pWnd*が NULL の場合は、アクティブになるペイン内の列を指定します。
 
-*我が物*<br/>
-`CWnd` オブジェクトへのポインター。 によって指定された NULL の場合、ウィンドウ*行*と*col*アクティブに設定されます。 NULL 以外の場合は、アクティブに設定されているウィンドウを指定します。
+*Pwnd*<br/>
+`CWnd` オブジェクトを指すポインターです。 NULL の場合、*行*と*col*で指定されたペインがアクティブに設定されます。 NULL でない場合は、アクティブに設定されているペインを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、フレーム ウィンドウ内のペインにフォーカスが変更されると、ペインをアクティブとして設定するためにフレームワークによって呼び出されます。 明示的に呼び出すことができます`SetActivePane`を指定されたビューにフォーカスを変更します。
+このメンバー関数は、フレームワークによって呼び出され、ユーザーがフレーム ウィンドウ内のペインにフォーカスを変更したときに、ペインをアクティブとして設定します。 明示的に呼び出`SetActivePane`して、指定したビューにフォーカスを変更できます。
 
-行と列のいずれかを提供することでウィンドウを指定**または**により*我が物*します。
+行と列を指定**するか、または** *pWnd*を指定してペインを指定します。
 
-##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo
+## <a name="csplitterwndsetcolumninfo"></a><a name="setcolumninfo"></a>分割された項目::列の設定
 
-指定した列の情報を設定する呼び出し。
+指定した列情報を設定する呼び出し。
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -908,27 +908,27 @@ void SetColumnInfo(
 *col*<br/>
 分割ウィンドウの列を指定します。
 
-*cxIdeal*<br/>
-分割ウィンドウの列の最適の幅をピクセル単位で指定します。
+*cx理想*<br/>
+分割ウィンドウの列の理想的な幅をピクセル単位で指定します。
 
 *cxMin*<br/>
-スプリッター ウィンドウの列の最小幅をピクセル単位で指定します。
+分割ウィンドウの列の最小幅をピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-新しい最小の幅と列の適切な幅を設定するには、このメンバー関数を呼び出します。 列を完全に表示するのには小さすぎるするときに、列の最小値を決定します。
+列の新しい最小幅と理想的な幅を設定します。 列の最小値によって、列が小さすぎて完全に表示できない場合が決まります。
 
-フレームワークは、分割ウィンドウを表示するときは、分割ウィンドウのクライアント領域の右下隅を左上隅から作業、その最適な大きさに基づいて列と行のペインをレイアウトします。
+フレームワークは、分割ウィンドウを表示するときに、最適なサイズに従って、ペインを列と行に配置し、分割ウィンドウのクライアント領域の左上から右下隅まで作業します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]
 
-##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo
+## <a name="csplitterwndsetrowinfo"></a><a name="setrowinfo"></a>スプリッターウンド::セットローインフォ
 
-指定した行の情報を設定する呼び出し。
+指定された行情報を設定する呼び出し。
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -938,44 +938,44 @@ void SetRowInfo(
 ### <a name="parameters"></a>パラメーター
 
 *行*<br/>
-分割ウィンドウの行を指定します。
+分割ウィンドウ行を指定します。
 
-*cyIdeal*<br/>
-最適な分割ウィンドウの行の高さをピクセル単位で指定します。
+*シイディアル*<br/>
+分割ウィンドウの行の理想的な高さをピクセル単位で指定します。
 
-*cyMin*<br/>
-スプリッター ウィンドウの行の最小の高さをピクセル単位で指定します。
+*サイミン*<br/>
+分割ウィンドウの行の最小の高さをピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-新しい高さの最小値と行の最適な高さを設定するには、このメンバー関数を呼び出します。 行が完全に表示するのには小さすぎるにするときに、行の最小値を決定します。
+行の新しい最小の高さと理想的な高さを設定します。 行の最小値によって、行が小さすぎて完全に表示できない場合が決まります。
 
-フレームワークは、分割ウィンドウを表示するときは、分割ウィンドウのクライアント領域の右下隅を左上隅から作業、その最適な大きさに基づいて列と行のペインをレイアウトします。
+フレームワークは、分割ウィンドウを表示するときに、最適なサイズに従って、ペインを列と行に配置し、分割ウィンドウのクライアント領域の左上から右下隅まで作業します。
 
-##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle
+## <a name="csplitterwndsetscrollstyle"></a><a name="setscrollstyle"></a>スプリッタウンド::セットスクロールスタイル
 
-スクロール バーのサポートを共有の分割ウィンドウで、新しいスクロール スタイルを指定します。
+分割ウィンドウの共有スクロール バーのサポートに対する新しいスクロール スタイルを指定します。
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*<br/>
-スプリッター ウィンドウの新しいスクロール スタイルでは、スクロール バーのサポートは、次の値のいずれかを指定することができますを共有しました。
+*Dwstyle*<br/>
+分割ウィンドウの共有スクロール バーのサポートの新しいスクロール スタイルは、次のいずれかの値になります。
 
-- WS_HSCROLL 作成/表示の共有の水平スクロール バー。
+- WS_HSCROLL水平共有スクロール バーを作成/表示します。
 
-- 共有の垂直スクロール バーを作成/表示する言えることです。
+- WS_VSCROLL垂直共有スクロール バーを作成/表示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スクロール バーを作成した後は破棄されない場合でも`SetScrollStyle`せずそのスタイル; が呼び出されて代わりに、スクロール バーが非表示になります。 これにより、隠れている場合でも、その状態を保持するスクロール バーができます。 呼び出した後`SetScrollStyle`を呼び出す必要がある[RecalcLayout](#recalclayout)のすべての変更を有効にします。
+スクロール バーが作成されると、そのスタイルなしで呼び出`SetScrollStyle`されても、スクロール バーは破棄されません。代わりに、これらのスクロールバーは非表示になります。 これにより、スクロール バーは非表示であっても状態を保持できます。 呼び`SetScrollStyle`出した後、すべての変更を有効にするために[RecalcLayout](#recalclayout)を呼び出す必要があります。
 
-##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn
+## <a name="csplitterwndsplitcolumn"></a><a name="splitcolumn"></a>分割列::分割列
 
-フレーム ウィンドウが垂直方向に分割される場所を示します。
+フレーム ウィンドウが垂直方向に分割される位置を示します。
 
 ```
 virtual BOOL SplitColumn(int cxBefore);
@@ -983,22 +983,22 @@ virtual BOOL SplitColumn(int cxBefore);
 
 ### <a name="parameters"></a>パラメーター
 
-*cxBefore*<br/>
-ピクセル単位で分割が発生する前に位置します。
+*cx前*<br/>
+分割が行われる前の位置 (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、垂直方向の分割ウィンドウの作成時に呼び出されます。 `SplitColumn` 分割が発生する既定の場所を示します。
+このメンバー関数は、垂直分割ウィンドウが作成されるときに呼び出されます。 `SplitColumn`は、分割が発生する既定の場所を示します。
 
-`SplitColumn` (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
+`SplitColumn`は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます (つまり、スプリッター ウィンドウにSPLS_DYNAMIC_SPLITスタイルがある場合)。 仮想関数[CreateView](#createview)と共にカスタマイズして、より高度な動的スプリッタを実装できます。
 
-##  <a name="splitrow"></a>  CSplitterWnd::SplitRow
+## <a name="csplitterwndsplitrow"></a><a name="splitrow"></a>スプリッタローンド::スプリットロー
 
-フレーム ウィンドウを水平方向に分割する位置を示します。
+フレーム ウィンドウが水平方向に分割される位置を示します。
 
 ```
 virtual BOOL SplitRow(int cyBefore);
@@ -1006,22 +1006,22 @@ virtual BOOL SplitRow(int cyBefore);
 
 ### <a name="parameters"></a>パラメーター
 
-*cyBefore*<br/>
-ピクセル単位で分割が発生する前に位置します。
+*サイフォア*<br/>
+分割が行われる前の位置 (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、水平方向の分割ウィンドウの作成時に呼び出されます。 `SplitRow` 分割が発生する既定の場所を示します。
+このメンバー関数は、水平分割ウィンドウが作成されるときに呼び出されます。 `SplitRow`は、分割が発生する既定の場所を示します。
 
-`SplitRow` (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
+`SplitRow`は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます (つまり、スプリッター ウィンドウにSPLS_DYNAMIC_SPLITスタイルがある場合)。 仮想関数[CreateView](#createview)と共にカスタマイズして、より高度な動的スプリッタを実装できます。
 
-##  <a name="ondraw"></a>  CSplitterWnd::OnDraw
+## <a name="csplitterwndondraw"></a><a name="ondraw"></a>スプリッタウンド::オンドロー
 
-スプリッター ウィンドウを描画するためにフレームワークによって呼び出されます。
+分割ウィンドウを描画するためにフレームワークによって呼び出されます。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -1032,12 +1032,12 @@ virtual void OnDraw(CDC* pDC);
 *pDC*<br/>
 デバイス コンテキストへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル ビューレックス](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CView クラス](../../mfc/reference/cview-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[Cビュークラス](../../mfc/reference/cview-class.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)

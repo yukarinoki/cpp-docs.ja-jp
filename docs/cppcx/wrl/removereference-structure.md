@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213604"
 ---
 # <a name="removereference-structure"></a>RemoveReference 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -36,17 +36,17 @@ struct RemoveReference<T&&>;
 *T*<br/>
 クラス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定されたクラス テンプレートのパラメーターから参照または右辺値参照の特徴を取り除きます。
+指定したクラステンプレートパラメーターから参照または右辺値参照の特徴を取り除きます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`Type`|クラス テンプレート パラメーターのシノニム。|
+|`Type`|クラステンプレートパラメーターのシノニム。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,10 +54,10 @@ struct RemoveReference<T&&>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** internal.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

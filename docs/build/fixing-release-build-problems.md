@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
 ms.openlocfilehash: 75dba6ecfc915fa22829491705fb5dc769ddf377
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195287"
 ---
 # <a name="fixing-release-build-problems"></a>リリース ビルドの問題の解決
 
-コードは、デバッグ ビルドをリリース ビルドからの切り替え後のコンパイル エラーを生成する場合は、一部の領域を確認する必要があります。
+デバッグ ビルドからリリース ビルドに切り替えた後、コードでコンパイル エラーが発生する場合、確認すべき範囲がいくつかあります。
 
-コンパイラの警告を発生すると、デバッグ ビルド中に受信しなかった最適化 (リリース) のビルド中にあります。
+デバッグ ビルド中に表示されなかったコンパイラ警告が最適化後の (リリース) ビルドに表示されることがあります。
 
-- [ASSERT ステートメントを確認します。](using-verify-instead-of-assert.md)
+- [Assert ステートメントを調べる](using-verify-instead-of-assert.md)
 
-- [メモリ上書きのチェックにデバッグ ビルドを使用します。](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [デバッグ ビルドを使用してメモリ上書きを確認する](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [リリース ビルドのデバッグ情報の生成を有効にします。](how-to-debug-a-release-build.md)
+- [リリース ビルドのデバッグ情報生成をオンにする](how-to-debug-a-release-build.md)
 
-- [メモリ上書きのチェック](checking-for-memory-overwrites.md)
+- [メモリ上書きを確認する](checking-for-memory-overwrites.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,26 +1,27 @@
 ---
 title: .STARTUP
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STARTUP
 helpviewer_keywords:
 - .STARTUP directive
 ms.assetid: 3ce9c878-18bf-49a0-828c-b29928ea3e54
-ms.openlocfilehash: 425335863b17e7fd58a56cdf4aebab1b52e1b3c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5fddb6f8f527b0c4d0f52b8ff993678e14e5758
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203818"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317514"
 ---
-# <a name="startup"></a>.STARTUP
+# <a name="startup-32-bit-masm"></a>.スタートアップ (32 ビット MASM)
 
-プログラムのスタートアップ コードを生成します。
+プログラムのスタートアップコードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .STARTUP
+> **.STARTUP**
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

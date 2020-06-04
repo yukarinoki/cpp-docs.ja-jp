@@ -7,18 +7,18 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 4a6383ee94d021373b984122926a5bb73e18f953
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957090"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689363"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 メモリの割り当てとオブジェクトの解放を支援するクラス、演算子、および各種テンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<memory>
 
@@ -48,9 +48,9 @@ ms.locfileid: "68957090"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|指定されたアドレスを先頭とする指定されたブロック サイズの範囲内にある文字が、追跡可能なポインターを含まないことをガベージ コレクターに通知します。|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|指定されたアドレスが、割り当てられたストレージのアドレスであり、そのストレージに到達可能であることをガベージ コレクションに通知します。|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|`operator new` を使用して割り当てられたオブジェクトを削除します。 `unique_ptr` での使用に適しています。|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|省略`destroy`形のメソッド。|
-|[destroy](../standard-library/memory-functions.md#destroy)|省略`destroy`形のメソッド。|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|省略`destroy`形のメソッド。|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|短縮形 `destroy` メソッド。|
+|[destroy](../standard-library/memory-functions.md#destroy)|短縮形 `destroy` メソッド。|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|短縮形 `destroy` メソッド。|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|`shared_ptr` への動的キャストを行います。|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|`shared_ptr` から削除子を取得します。|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|ガベージ コレクターが想定するポインターの安全性の種類を返します。|
@@ -65,14 +65,14 @@ ms.locfileid: "68957090"
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|指定されたメモリ位置に到達できないことを `garbage_collector` に通知します。|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|指定された入力範囲にあるオブジェクトを、初期化されていないコピー先の範囲にコピーします。|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|入力反復子から、指定した数の要素のコピーを作成します。 コピーは前方反復子に格納されます。|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|省略`uninitialized_default_construct`形のメソッド。|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|省略`uninitialized_construct`形のメソッド。|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|短縮形 `uninitialized_default_construct` メソッド。|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|短縮形 `uninitialized_construct` メソッド。|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|指定された値のオブジェクトを、初期化されていないコピー先の範囲にコピーします。|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|指定された値のオブジェクトを、初期化されていないコピー先の範囲にある指定された数の要素にコピーします。|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|省略`uninitialized_move`形のメソッド。|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|省略`uninitialized_move`形のメソッド。|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|省略`uninitialized_value_construct`形のメソッド。|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|省略`uninitialized_value_construct`形のメソッド。|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|短縮形 `uninitialized_move` メソッド。|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|短縮形 `uninitialized_move` メソッド。|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|短縮形 `uninitialized_value_construct` メソッド。|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|短縮形 `uninitialized_value_construct` メソッド。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>演算子
@@ -91,12 +91,12 @@ ms.locfileid: "68957090"
 
 |||
 |-|-|
-|[allocator](../standard-library/allocator-class.md)|このテンプレート クラスは、**Type** 型のオブジェクトの配列に対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator](../standard-library/allocator-class.md)|クラステンプレートは **、型の**オブジェクトの配列に対して、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレートクラスは、型 <strong>\*</strong>の割り当てられたオブジェクトへのポインターを格納するオブジェクトを表します。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|クラステンプレートは<strong>\*</strong> **型の**割り当てられたオブジェクトへのポインターを格納するオブジェクトを記述します。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
-|[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits` テンプレート クラスのオブジェクトが、ポインター型 `Ptr` を持つアロケーターを記述するために必要とする情報を提供します。|
+|[pointer_traits](../standard-library/pointer-traits-struct.md)|ポインター型 `Ptr` を持つアロケーターを記述するために `allocator_traits` 型のオブジェクトに必要な情報を提供します。|
 |[raw_storage_iterator](../standard-library/raw-storage-iterator-class.md)|アルゴリズムの結果を初期化されていないメモリに格納するために用意されたアダプター クラスです。|
 |[shared_ptr](../standard-library/shared-ptr-class.md)|参照カウント スマート ポインターを、動的に割り当てられたオブジェクトにラップします。|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|所有されているオブジェクトへのポインターを格納します。 このポインターは、この `unique_ptr` によってのみ所有されます。 `unique_ptr` は所有者が破棄されたときに破棄されます。|
@@ -108,7 +108,7 @@ ms.locfileid: "68957090"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|hash|`unique_ptr` および`shared_ptr`に特化したオーバーロードを提供します。|
+|hash|@No__t_0 および `shared_ptr` に特化したオーバーロードを提供します。|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|共有ポインターとウィーク ポインターの所有権ベースの混合型比較を実行します。|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ ms.locfileid: "68957090"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|テンプレートクラスアロケーターを**void**型に特殊化し、この特殊なコンテキストで意味を持つメンバー型のみを定義します。|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|**Void**型へのクラステンプレートアロケーターの特殊化で、この特殊なコンテキストで意味を持つメンバー型のみを定義しています。|
 
 ## <a name="see-also"></a>関連項目
 

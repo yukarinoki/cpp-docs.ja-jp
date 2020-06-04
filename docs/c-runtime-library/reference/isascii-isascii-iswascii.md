@@ -1,10 +1,11 @@
 ---
 title: isascii、__isascii、iswascii
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - iswascii
 - __isascii
-apilocation:
+- _o_iswascii
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +17,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswascii
 - istascii
@@ -34,14 +39,14 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919785"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
+# <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
 特定の文字が ASCII 文字かどうかを判断します。
 
@@ -60,18 +65,20 @@ int iswascii(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返します。 0 以外の場合の各**c** ASCII 文字の特定の表現です。 **_ _isascii**場合は、0 以外の値を返します**c** ASCII 文字 (範囲内で、0x00 から 0x7F)。 **iswascii**場合は、0 以外の値を返します**c** ASCII 文字のワイド文字表現です。 これらのルーチンの各場合 0 を返します**c**テスト条件を満たしていません。
+これらの各ルーチンは、 **c**が ASCII 文字の特殊表現である場合は0以外の値を返します。 **c**が ASCII 文字 (0X00 から0x7f の範囲内) の場合、 **__isascii**は0以外の値を返します。 **c**が ASCII 文字のワイド文字表現である場合、 **iswascii**は0以外の値を返します。 これらの各ルーチンは、 **c**がテスト条件を満たしていない場合は0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-両方 **_ _isascii**と**iswascii**プリプロセッサ マクロ _CTYPE_DISABLE_MACROS が定義されていない場合、マクロとして実装されます。
+プリプロセッサマクロ _CTYPE_DISABLE_MACROS が定義されていない場合、 **__isascii**と**iswascii**の両方がマクロとして実装されます。
 
-旧バージョンと互換性のため、 **isascii**場合のみマクロとして実装されます[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないか 0 として定義されてそれ以外の場合、定義されていません。
+旧バージョンとの互換性のために、 **isascii**はマクロとしてのみ実装されます[&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md)が定義されていないか、0として定義されている場合のみです。それ以外の場合は未定義です。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -81,15 +88,15 @@ int iswascii(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
+|**isascii**、 **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 |**iswascii**|C: \<wctype.h>、\<ctype.h>、または \<wchar.h><br /><br /> C++: \<cwctype>、\<cctype>、\<wctype.h>、\<ctype.h>、または \<wchar.h>|
 
-**Isascii**、 **_ _isascii**と**iswascii**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Isascii**、 **__isascii**および**iswascii**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

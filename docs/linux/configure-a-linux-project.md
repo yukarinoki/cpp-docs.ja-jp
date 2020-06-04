@@ -2,12 +2,12 @@
 title: Visual Studio で C++ Linux プロジェクトを構成する
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80150967"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトを構成する
 
@@ -17,9 +17,9 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-このトピックでは、[Visual Studio での新しい C++ Linux プロジェクトの作成](create-a-new-linux-project.md)に関するページで示されているように、C++ Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトについては、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。 
+このトピックでは、[Visual Studio での新しい C++ Linux プロジェクトの作成](create-a-new-linux-project.md)に関するページで示されているように、C++ Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトについては、[Linux CMake プロジェクトの構成](cmake-linux-project.md)に関するページを参照してください。
 
-物理的な Linux マシン、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) (WSL) を対象にするように、Linux プロジェクトを構成できます。 
+物理的な Linux マシン、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) (WSL) を対象にするように、Linux プロジェクトを構成できます。
 
 ::: moniker range="vs-2019"
 
@@ -92,15 +92,12 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ![ビルド イベント](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> リモート システムのヘッダーでの IntelliSense
-
-::: moniker range="vs-2019"
-
-このセクションは、WSL を対象とするときには適用されません。
-
-::: moniker-end
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> リモート システムのヘッダーでの IntelliSense
 
 **接続マネージャー**で新しい接続を追加すると、Visual Studio によってリモート システム上のコンパイラのインクルード ディレクトリが自動的に検出されます。 Visual Studio によってこれらのファイルが圧縮されて、お使いのローカル Windows コンピューター上のディレクトリにコピーされます。 その後、Visual Studio または CMake プロジェクトでその接続を使用するたびに、IntelliSense を提供するためにこれらのディレクトリ内のヘッダーが使用されます。
+
+> [!NOTE]
+> Visual Studio 2019 バージョン 16.5 以降では、リモート ヘッダーのコピーが最適化されています。 Linux プロジェクトを開くとき、または Linux ターゲットに合わせて CMake を構成するときに、ヘッダーがオンデマンドでコピーされるようになりました。 コピーは、プロジェクトに指定されたコンパイラに基づいて、プロジェクトごとにバックグラウンドで実行されます。 詳細については、「[Linux IntelliSense の精度とパフォーマンスの改善点](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)」を参照してください。
 
 この機能は、Linux コンピューターにインストールされている zip に依存します。 この apt-get コマンドを使用して、zip をインストールできます。
 

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: db9546bb02fcd5b253fec29777fd71172e50739e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 25b09c508b932a4d1470f6b23f03aa52e62c68cc
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500603"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246310"
 ---
 # <a name="transporting-exceptions-between-threads"></a>スレッド間の例外転送
 
-Microsoft C++コンパイラ (MSVC) では、あるスレッドから別のスレッドへの*例外の転送*をサポートしています。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 転送例外を実装するために、MSVC は[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型と[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)の各関数を提供します。
+Microsoft C++コンパイラ (MSVC) では、あるスレッドから別のスレッドへの*例外の転送*をサポートしています。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 MSVC は、転送例外を実装するために、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型、 [current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)の各関数を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,7 +43,7 @@ namespace std
 |パラメーター|説明|
 |---------------|-----------------|
 |*不明*|`exception_ptr` 型を実装するために使用される未指定の内部クラス。|
-|*p*|例外を参照する `exception_ptr` オブジェクト。|
+|*P*|例外を参照する `exception_ptr` オブジェクト。|
 |*E*|例外を表すクラス。|
 |*e*|パラメーター `E` クラスのインスタンス。|
 
@@ -51,21 +51,21 @@ namespace std
 
 `current_exception` 関数は、現在進行中の例外を参照する `exception_ptr` オブジェクトを返します。 処理中の例外がない場合、関数は、例外に関連付けられていない `exception_ptr` オブジェクトを返します。
 
-関数`make_exception_ptr`は、e `exception_ptr`パラメーターによって指定された例外を参照するオブジェクトを返します。
+`make_exception_ptr` 関数は、 *e*パラメーターによって指定された例外を参照する `exception_ptr` オブジェクトを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-### <a name="scenario"></a>シナリオ
+### <a name="scenario"></a>通信の種類
 
 可変作業量を処理するようにスケーリングするアプリケーションを作成する場合を想定します。 この目的を達成するために、初期プライマリ スレッドがジョブの実行に必要な数のセカンダリ スレッドを作成するマルチスレッド アプリケーションを設計します。 セカンダリ スレッドは、リソースの管理、負荷の分散、スループットの向上などの点でプライマリ スレッドを補助します。 作業の分散によって、マルチスレッド アプリケーションは、シングル スレッド アプリケーションよりもパフォーマンスが向上します。
 
 ただし、セカンダリ スレッドが例外をスローした場合、プライマリ スレッドがその例外を処理するようにします。 これは、セカンダリ スレッドの数に関係なく、アプリケーションが例外を一貫した統一された方法で処理するようにしたいためです。
 
-### <a name="solution"></a>ソリューション
+### <a name="solution"></a>解決策:
 
 上記のシナリオを処理するために、C++ 標準はスレッド間での例外の転送をサポートしています。 セカンダリスレッドが例外をスローした場合、その例外は*現在の例外*になります。 現実の世界と同じように、現在の例外は*フライト中で*あると言われています。 現在の例外は、スローされた時点から、それをキャッチする例外ハンドラーによって返されるまでが処理中です。
 
-セカンダリスレッドは、 **catch**ブロックで現在の例外をキャッチしてから、 `current_exception`関数を呼び出して例外を`exception_ptr`オブジェクトに格納できます。 `exception_ptr` オブジェクトはセカンダリ スレッドとプライマリ スレッドで使用できる必要があります。 たとえば、`exception_ptr` オブジェクトは、アクセスがミューテックスによって制御されるグローバル変数にすることができます。 "*トランスポートの例外*" という用語は、あるスレッドの例外が、別のスレッドからアクセスできる形式に変換できることを意味します。
+セカンダリスレッドは、 **catch**ブロックで現在の例外をキャッチした後、`current_exception` 関数を呼び出して、例外を `exception_ptr` オブジェクトに格納できます。 `exception_ptr` オブジェクトはセカンダリ スレッドとプライマリ スレッドで使用できる必要があります。 たとえば、`exception_ptr` オブジェクトは、アクセスがミューテックスによって制御されるグローバル変数にすることができます。 "*トランスポートの例外*" という用語は、あるスレッドの例外が、別のスレッドからアクセスできる形式に変換できることを意味します。
 
 次に、プライマリ スレッドが `rethrow_exception` 関数を呼び出します。これは、`exception_ptr` オブジェクトから例外を抽出してスローします。 例外がスローされると、プライマリ スレッドで現在の例外になります。 つまり、例外はプライマリ スレッドで発生したように見えます。
 
@@ -75,7 +75,7 @@ namespace std
 
 C++ 標準委員会の提案の詳細については、「Language Support for Transporting Exceptions between Threads (スレッド間の例外を転送するための言語のサポート)」というタイトルのドキュメント番号 N2179 をインターネットで検索してください。
 
-### <a name="exception-handling-models-and-compiler-options"></a>例外処理モデルとコンパイラ オプション
+### <a name="exception-handling-models-and-compiler-options"></a>例外処理モデルとコンパイラオプション
 
 アプリケーションの例外処理モデルは、例外をキャッチして転送できるかどうかを判断します。 Visual C++ は、C++ 例外、構造化例外処理 (SEH) 例外、共通言語ランタイム (CLR) 例外を処理できる 3 種類のモデルをサポートします。 [/EH](../build/reference/eh-exception-handling-model.md)コンパイラオプションと[/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションを使用して、アプリケーションの例外処理モデルを指定します。
 
@@ -92,15 +92,15 @@ C++ 標準委員会の提案の詳細については、「Language Support for T
 
 ## <a name="usage"></a>使用法
 
-次の`exception_ptr`セクションでは、型を使用して例外を転送する方法と、、、および`current_exception` `rethrow_exception` `make_exception_ptr`の各関数について説明します。
+次のセクションでは、`exception_ptr` の種類を使用して例外を転送する方法と、`current_exception`、`rethrow_exception`、および `make_exception_ptr` の各関数について説明します。
 
-## <a name="exception_ptr-type"></a>exception_ptr 型
+## <a name="exception_ptr-type"></a>exception_ptr の種類
 
 現在の例外またはユーザーが指定した例外のインスタンスを参照するには、`exception_ptr` オブジェクトを使用します。 Microsoft の実装では、例外は [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) 構造体によって表されます。 各 `exception_ptr` オブジェクトには、例外を表す `EXCEPTION_RECORD` 構造体のコピーを指す例外参照フィールドが含まれています。
 
 `exception_ptr` 変数を宣言する場合、変数は例外に関連付けられません。 つまり、例外参照フィールドが NULL です。 このような `exception_ptr` オブジェクトは、*null exception_ptr* と呼ばれます。
 
-例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 または`current_exception` `make_exception_ptr`関数が他の理由で例外をコピーできない場合、関数は[terminate](../c-runtime-library/reference/terminate-crt.md)関数を呼び出して現在のプロセスを終了します。
+例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 `current_exception` または `make_exception_ptr` 関数が他の理由で例外をコピーできない場合、関数は[terminate](../c-runtime-library/reference/terminate-crt.md)関数を呼び出して現在のプロセスを終了します。
 
 名前とは異なり、`exception_ptr` オブジェクト自体はポインターではありません。 ポインターのセマンティクスに従わず、ポインターメンバーアクセス (`->`) 演算子または間接 (`*`) 演算子と共に使用することはできません。 `exception_ptr` オブジェクトには、パブリック データ メンバーまたはメンバー関数がありません。
 
@@ -110,11 +110,11 @@ C++ 標準委員会の提案の詳細については、「Language Support for T
 
 ## <a name="current_exception-function"></a>current_exception 関数
 
-Catch ブロック`current_exception`で関数を呼び出します。 例外が処理中で、 **catch**ブロックが例外をキャッチできる場合、関数`current_exception`は、例外`exception_ptr`を参照するオブジェクトを返します。 それ以外の場合、関数は null `exception_ptr` オブジェクトを返します。
+**Catch**ブロックで `current_exception` 関数を呼び出します。 例外が処理中で、 **catch**ブロックが例外をキャッチできる場合、`current_exception` 関数は、例外を参照する `exception_ptr` オブジェクトを返します。 それ以外の場合、関数は null `exception_ptr` オブジェクトを返します。
 
-### <a name="details"></a>説明
+### <a name="details"></a>詳細
 
-関数`current_exception`は、 **catch**ステートメントで[例外宣言](../cpp/try-throw-and-catch-statements-cpp.md)ステートメントが指定されているかどうかに関係なく、処理中の例外をキャプチャします。
+`current_exception` 関数は、 **catch**ステートメントで[例外宣言](../cpp/try-throw-and-catch-statements-cpp.md)ステートメントが指定されているかどうかに関係なく、処理中の例外をキャプチャします。
 
 現在の例外のデストラクターは、例外を再スローしない場合は、 **catch**ブロックの最後に呼び出されます。 ただし、デストラクターで `current_exception` 関数を呼び出しても、その関数は現在の例外を参照する `exception_ptr` オブジェクトを返します。
 
@@ -122,9 +122,9 @@ Catch ブロック`current_exception`で関数を呼び出します。 例外が
 
 ### <a name="seh-exceptions"></a>SEH の例外
 
-**/Eha**コンパイラオプションを使用する場合は、 C++ **catch**ブロックで SEH 例外をキャッチできます。 `current_exception` 関数は、SEH 例外を参照する `exception_ptr` オブジェクトを返します。 関数は`rethrow_exception` 、引数として転送`exception_ptr`されたオブジェクトを使用して呼び出された場合、SEH 例外をスローします。
+**/Eha**コンパイラオプションを使用する場合は、 C++ **catch**ブロックで SEH 例外をキャッチできます。 `current_exception` 関数は、SEH 例外を参照する `exception_ptr` オブジェクトを返します。 また、`rethrow_exception` 関数は、転送された `exception_ptr` オブジェクトを引数として呼び出した場合に SEH 例外をスローします。
 
-関数`current_exception`は、SEH **__finally**終了ハンドラー、 **__except**例外ハンドラー、または **__except**フィルター式で呼び出された場合、null `exception_ptr`を返します。
+`current_exception` 関数は、SEH **__finally**の終了ハンドラー、 **__except**例外ハンドラー、または **__except**フィルター式で呼び出した場合、null `exception_ptr` を返します。
 
 転送された例外は、入れ子になった例外をサポートしません。 入れ子になった例外は、例外の処理中に別の例外がスローされると発生します。 入れ子になった例外をキャッチする場合、`EXCEPTION_RECORD.ExceptionRecord` データ メンバーは、関連の例外を記述する `EXCEPTION_RECORD` 構造体のチェーンを指し示します。 `current_exception` 関数は、`exception_ptr` データ メンバーがゼロ設定された `ExceptionRecord` オブジェクトを返すため、入れ子になった例外をサポートしていません。
 
@@ -134,7 +134,7 @@ SEH 例外をキャッチする場合、`EXCEPTION_RECORD.ExceptionInformation` 
 
 ## <a name="rethrow_exception-function"></a>rethrow_exception 関数
 
-キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。 `rethrow_exception`関数の*p*パラメーターが null `exception_ptr`の場合、関数は[std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
+キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。 `rethrow_exception` 関数の*p*パラメーターが null `exception_ptr`の場合、関数は[std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
 
 抽出された例外はプライマリ スレッドで現在の例外になり、他の例外と同様に扱うことができます。 例外をキャッチした場合は、すぐに処理するか、 **throw**ステートメントを使用して上位レベルの例外ハンドラーに送信することができます。 それ以外の場合は、何も実行されず、既定のシステム例外ハンドラーによってプロセスが終了されます。
 
@@ -142,7 +142,7 @@ SEH 例外をキャッチする場合、`EXCEPTION_RECORD.ExceptionInformation` 
 
 `make_exception_ptr` 関数は、クラスのインスタンスを引数として受け取り、そのインスタンスを参照する `exception_ptr` を返します。 通常は、[例外クラス](../standard-library/exception-class.md) オブジェクトを `make_exception_ptr` 関数への引数として指定しますが、任意のクラスのオブジェクトを引数に使用できます。
 
-`current_exception` `exception_ptr` C++関数を呼び出すことは、例外をスローして catch ブロックでキャッチし、その例外を参照するオブジェクトを返す関数を呼び出すことと同じです。 `make_exception_ptr` `make_exception_ptr` 関数の Microsoft 実装は、例外のスローとキャッチよりも効果的です。
+`make_exception_ptr` 関数を呼び出すことは、 C++例外をスローして**catch**ブロックでキャッチし、`current_exception` 関数を呼び出して、例外を参照する `exception_ptr` オブジェクトを返すことと同じです。 `make_exception_ptr` 関数の Microsoft 実装は、例外のスローとキャッチよりも効果的です。
 
 通常、アプリケーションは `make_exception_ptr` 関数を必要とせず、使用は推奨されていません。
 
@@ -250,11 +250,11 @@ exception_ptr 0: Caught an invalid_argument exception.
 exception_ptr 1: Caught a  myException exception.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<exception>
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外処理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)<br/>

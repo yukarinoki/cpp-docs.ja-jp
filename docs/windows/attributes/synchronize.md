@@ -1,21 +1,21 @@
 ---
-title: 同期 (C++ COM 属性)
+title: synchronize (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214514"
 ---
 # <a name="synchronize"></a>synchronize
 
-ターゲット メソッドへのアクセスを同期します。
+ターゲットメソッドへのアクセスを同期します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,17 +23,17 @@ ms.locfileid: "62407134"
 [synchronize]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**同期**C++ 属性には、オブジェクトのターゲット メソッドを同期するためのサポートが実装されています。 同期により、ターゲット メソッドへのアクセスを制御することで、クラスのメソッド) などの一般的なリソースを使用する複数のオブジェクト。
+**Synchronize** C++属性は、オブジェクトのターゲットメソッドを同期するためのサポートを実装します。 同期を使用すると、ターゲットメソッドのアクセスを制御することによって、複数のオブジェクトが共通のリソース (クラスのメソッドなど) を使用できるようになります。
 
-この属性によって挿入されたコードの呼び出し、適切な`Lock`ターゲット メソッドの先頭には、(スレッド処理モデルによって決定) メソッドです。 メソッドが終了したときに`Unlock`自動的に呼び出されます。 これらの関数の詳細については、次を参照してください[CComAutoThreadModule::Lock。](../../atl/reference/ccomautothreadmodule-class.md#lock)
+この属性によって挿入されたコードは、ターゲットメソッドの先頭にある適切な `Lock` メソッド (スレッドモデルによって決まります) を呼び出します。 メソッドが終了すると、`Unlock` が自動的に呼び出されます。 これらの関数の詳細については、「 [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock) 」を参照してください。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、`progid` が適用されている場合、`vi_progid` と `coclass` も適用されます。
 
 ## <a name="example"></a>例
 
-次のコードの同期、`UpdateBalance`のメソッド、`CMyClass`オブジェクト。
+次のコードは、`CMyClass` オブジェクトの `UpdateBalance` メソッドの同期を提供します。
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -66,13 +66,13 @@ class CMyClass {
 
 |||
 |-|-|
-|**対象**|クラスのメソッド|
+|**対象**|Class メソッド、メソッド|
 |**反復可能**|いいえ|
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)

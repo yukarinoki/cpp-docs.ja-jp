@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3276
 ms.assetid: dd6b4fd2-094d-4d34-a467-a9afd59789f7
-ms.openlocfilehash: 671fda26958d50340ccc628a8d50d19ea74f7939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4037c5191c0b7316218100123f1cf1823f9d135b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201449"
 ---
 # <a name="compiler-error-c3276"></a>コンパイラ エラー C3276
 
-'keyword': _ _finally/finally にブロックからのジャンプでが終了処理中に、動作が定義されていません
+' keyword ': __finally/finally ブロックからのジャンプは、終了処理中に定義されていない動作を含んでいます
 
-このエラーは同じ、 [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告します。 ただし、/clr を使用しているときにこの条件を無効にできませんで、[警告](../../preprocessor/warning.md)プラグマ。
+このエラーは、 [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告と同じです。 ただし、/clr を使用している場合は、この条件を[warning](../../preprocessor/warning.md)プラグマで無効にすることはできません。

@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213658"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 演算子 (Microsoft::WRL)
 
-非等値演算子の[ComPtr](comptr-class.md)と[ComPtrRef](comptrref-class.md)オブジェクト。
+[Comptr](comptr-class.md)および[comptrref](comptrref-class.md)オブジェクトの非等値演算子。
 
 ## <a name="syntax"></a>構文
 
@@ -63,14 +63,14 @@ WRL_NOTHROW bool operator!=(
 
 ## <a name="return-value"></a>戻り値
 
-**true** 、オブジェクトが、それ以外の場合**false**します。
+オブジェクトが等しくない場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

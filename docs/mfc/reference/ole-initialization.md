@@ -7,43 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fefb7eda242ffe15e85cd9f0e16e947a067044a0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502022"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751224"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
-アプリケーションで OLE system サービスを使用するには、OLE システム Dll を初期化し、Dll が正しいバージョンであることを確認する必要があります。 関数`AfxOleInit`は、OLE システム dll を初期化します。
+アプリケーションが OLE システム サービスを使用するには、OLE システム DLL を初期化し、DLL が正しいバージョンであることを確認する必要があります。 この`AfxOleInit`関数は、OLE システム DLL を初期化します。
 
 ### <a name="ole-initialization"></a>OLE の初期化
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|OLE ライブラリを初期化します。|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|OLE コントロールのコンテインメントのサポートを有効`InitInstance`にするには、アプリケーションオブジェクトの関数でこの関数を呼び出します。|
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|アプリケーション オブジェクトの`InitInstance`関数でこの関数を呼び出して、OLE コントロールのコンテインメントのサポートを有効にします。|
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a><a name="afxenablecontrolcontainer"></a>コントロール コンテナ
 
-OLE コントロールのコンテインメントのサポートを有効`InitInstance`にするには、アプリケーションオブジェクトの関数でこの関数を呼び出します。
+アプリケーション オブジェクトの`InitInstance`関数でこの関数を呼び出して、OLE コントロールのコンテインメントのサポートを有効にします。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void AfxEnableControlContainer( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-OLE コントロール (現在は ActiveX コントロールと呼ばれます) の詳細については、「 [Activex コントロールのトピック](../mfc-activex-controls.md)」を参照してください。
+OLE コントロール (現在は ActiveX コントロール) の詳細については、「 [ActiveX コントロールのトピック](../mfc-activex-controls.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-##  <a name="afxoleinit"></a>AfxOleInit
+## <a name="afxoleinit"></a><a name="afxoleinit"></a>アfxOleInit
 
 アプリケーションの OLE サポートを初期化します。
 
@@ -55,19 +55,19 @@ BOOL AFXAPI AfxOleInit();
 
 成功した場合は 0 以外の値です。初期化に失敗した場合は 0 です。失敗の原因は多くの場合、正しくないバージョンの OLE システム DLL がインストールされていることです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MFC アプリケーションに対する OLE サポートを初期化するには、この関数を呼び出します。 この関数を呼び出すと、次のアクションが発生します。
 
-- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、「 [Oleinitialize](/windows/win32/api/ole2/nf-ole2-oleinitialize)」を参照してください。
+- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、「 [OleInitialize](/windows/win32/api/ole2/nf-ole2-oleinitialize)」を参照してください。
 
-- [の imessagefilter.prefiltermessage](/windows/win32/api/objidl/nn-objidl-imessagefilter)インターフェイスを実装して、メッセージフィルターオブジェクトを作成します。 このメッセージフィルターには、 [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)の呼び出しを使用してアクセスできます。
-
-> [!NOTE]
->  **AfxOleInit**が MFC DLL から呼び出された場合、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
+- [IMessageFilter](/windows/win32/api/objidl/nn-objidl-imessagefilter)インターフェイスを実装するメッセージ フィルター オブジェクトを作成します。 このメッセージ フィルターには[、AfxOleGet メッセージ フィルター](application-control.md#afxolegetmessagefilter)の呼び出しを使用してアクセスできます。
 
 > [!NOTE]
->  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance`オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
+> **AfxOleInit**が MFC DLL から呼び出された場合、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
+
+> [!NOTE]
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を`InitInstance`呼び出す場合は、COINIT_MULTITHREADEDではなくCOINIT_APARTMENTTHREADEDを指定します。
 
 ### <a name="requirements"></a>必要条件
 

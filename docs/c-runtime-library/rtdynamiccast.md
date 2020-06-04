@@ -1,9 +1,9 @@
 ---
 title: __RTDynamicCast
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __RTDynamicCast
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __RTDynamicCast
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: f4bf4895af99b2d5c2d61e739c9d49d59cecb020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485736"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170073"
 ---
-# <a name="rtdynamiccast"></a>__RTDynamicCast
+# <a name="__rtdynamiccast"></a>__RTDynamicCast
 
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 演算子のランタイム実装です。
 
@@ -63,9 +66,9 @@ PVOID __RTDynamicCast (
 
 ## <a name="exceptions"></a>例外
 
-`dynamic_cast<>` への入力が参照でありキャストに失敗した場合は `bad_cast()`。
+`bad_cast()` への入力が参照でありキャストに失敗した場合は `dynamic_cast<>`。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `inptr` を `TargetType` 型のオブジェクトに変換します。 `inptr` の型は、`TargetType` がポインターの場合はポインター、`TargetType` が参照の場合は左辺値である必要があります。 `TargetType` は、以前に定義されたクラス型への参照かポインター、または void 型へのポインターである必要があります。
 

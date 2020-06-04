@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 75d86b81d9651e5892913af5919ae0a78fe6bbc5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1acf959c371aa23ac55ace7fea9466f0e20813f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318466"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -45,27 +45,27 @@ class CSettingsStore : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CSettingsStore:: CSettingsStore](#csettingsstore)|`CSettingsStore` オブジェクトを構築します。|
+|[ストア::C設定ストア](#csettingsstore)|`CSettingsStore` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSettingsStore:: Close](#close)|開いているレジストリキーを閉じます。|
-|[CSettingsStore::CreateKey](#createkey)|指定されたキーを開くか、存在しない場合は作成します。|
-|[CSettingsStore::DeleteKey](#deletekey)|指定したキーとそのすべての子を削除します。|
-|[CSettingsStore::D eleteValue](#deletevalue)|開いているキーの指定した値を削除します。|
-|[CSettingsStore:: Open](#open)|指定されたキーを開きます。|
-|[CSettingsStore::Read](#read)|指定されたキー値のデータを取得します。|
-|[CSettingsStore:: Write](#write)|レジストリの open キーの下に値を書き込みます。|
+|[保存場所::閉じる](#close)|開いているレジストリ キーを閉じます。|
+|[ストア::キーの作成](#createkey)|指定したキーを開くか、存在しない場合は作成します。|
+|[セッティングストア::Dエレテキー](#deletekey)|指定したキーとそのすべての子を削除します。|
+|[:Dセレテの価値](#deletevalue)|開いているキーの指定した値を削除します。|
+|[ストアを開く](#open)|指定したキーを開きます。|
+|[ストア::読み取り](#read)|指定したキー値のデータを取得します。|
+|[書き込み](#write)|開いているキーの下のレジストリに値を書き込みます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-メンバー関数`CreateKey`と`Open`は非常に似ています。 レジストリキーが既に存在する`CreateKey`場合`Open`は、同じように機能します。 ただし、レジストリキーが存在しない場合は`CreateKey` 、によっ`Open`て作成され、エラー値が返されます。
+メンバー関数`CreateKey`と`Open`非常に似ています。 レジストリ キーが既に存在`CreateKey`する`Open`場合、同じように機能します。 ただし、レジストリ キーが存在しない場合は`CreateKey`、そのレジストリ`Open`キーを作成しますが、エラー値が返されます。
 
 ## <a name="example"></a>例
 
-次の例は、 `CSettingsStore`クラスの Open メソッドと Read メソッドを使用する方法を示しています。 このコードスニペットは、[ツールヒントのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
+クラスの Open メソッドと Read メソッドを使用する方法`CSettingsStore`を次の例に示します。 このコード スニペットは、[ツール ヒント デモ のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 
@@ -77,23 +77,23 @@ class CSettingsStore : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxsettingsstore
+**ヘッダー:** afxsettingsstore.h
 
-##  <a name="close"></a>  CSettingsStore::Close
+## <a name="csettingsstoreclose"></a><a name="close"></a>保存場所::閉じる
 
-開いているレジストリキーを閉じます。
+開いているレジストリ キーを閉じます。
 
 ```
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、このメソッドは[Csettingsstore クラス](../../mfc/reference/csettingsstore-class.md)のデストラクターから呼び出されます。
+既定では、このメソッドは[CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)のデストラクターから呼び出されます。
 
-##  <a name="createkey"></a>  CSettingsStore::CreateKey
+## <a name="csettingsstorecreatekey"></a><a name="createkey"></a>ストア::キーの作成
 
-レジストリキーを開くか、存在しない場合は作成します。
+レジストリ キーを開くか、存在しない場合は作成します。
 
 ```
 virtual BOOL CreateKey(LPCTSTR pszPath);
@@ -101,18 +101,18 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPath*<br/>
-から作成または開くキーの名前を指定します。
+*パス*<br/>
+[in]作成または開くキーの名前を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0。それ以外の場合は0以外の値。
+成功した場合は 0。それ以外の場合は 0 以外の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CreateKey`は`m_hKey` 、レジストリの照会のルートとしてを使用します。 このメソッドは、 *Pszpath*をの`m_hKey`サブキーとして検索します。 キーが存在しない場合は`CreateKey` 、によって作成されます。 それ以外の場合は、キーを開きます。 `CreateKey`次に`m_hKey` 、を作成または開いたキーに設定します。
+`CreateKey`は`m_hKey`レジストリ照会のルートとして使用されます。 のサブキーとして*pszPath*を検索`m_hKey`します。 キーが存在しない場合は、`CreateKey`作成します。 それ以外の場合は、キーを開きます。 `CreateKey`作成された`m_hKey`キーまたは開いたキーに設定します。
 
-##  <a name="csettingsstore"></a>CSettingsStore:: CSettingsStore
+## <a name="csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>ストア::C設定ストア
 
 `CSettngsStore` オブジェクトを作成します。
 
@@ -124,23 +124,23 @@ CSettingsStore(
 
 ### <a name="parameters"></a>パラメーター
 
-*bAdmin*<br/>
-からオブジェクトが管理者モードで`CSettingsStore`動作しているかどうかを指定するブール型パラメーターです。
+*b管理者*<br/>
+[in]オブジェクトが管理者モードで動作`CSettingsStore`するかどうかを指定するブール値パラメーター。
 
-*bReadOnly*<br/>
-からオブジェクトが読み取り専用モードで`CSettingsStore`作成されているかどうかを指定するブール型パラメーターです。
+*読み取り専用*<br/>
+[in]`CSettingsStore`オブジェクトを読み取り専用モードで作成するかどうかを指定するブール値パラメーター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Badmin*が TRUE に設定されて`m_hKey`いる場合、メンバー変数は**HKEY_LOCAL_MACHINE**に設定されます。 *Badmin*を FALSE に設定すると`m_hKey` 、が**HKEY_CURRENT_USER**に設定されます。
+*bAdmin*が TRUE に設定`m_hKey`されている場合、メンバー変数は**HKEY_LOCAL_MACHINE**に設定されます。 *bAdmin*を FALSE に`m_hKey`設定した場合は、**が HKEY_CURRENT_USER**に設定されます。
 
-セキュリティアクセスは、 *bReadOnly*パラメーターに依存します。 *BReadonly*が FALSE の場合、セキュリティアクセスは**KEY_ALL_ACCESS**に設定されます。 *BReadyOnly*が TRUE の場合、セキュリティアクセスは、 **KEY_QUERY_VALUE、KEY_NOTIFY** 、および**KEY_ENUMERATE_SUB_KEYS**の組み合わせに設定されます。 レジストリとのセキュリティアクセスの詳細については、「[レジストリキーのセキュリティとアクセス権](/windows/win32/SysInfo/registry-key-security-and-access-rights)」を参照してください。
+セキュリティ アクセスは *、bReadOnly*パラメーターによって異なります。 *bReadonly*が FALSE の場合、セキュリティ アクセスは**KEY_ALL_ACCESS**に設定されます。 *bReadyOnly*が TRUE の場合、セキュリティ アクセスは **、KEY_QUERY_VALUE、KEY_NOTIFY、****およびKEY_ENUMERATE_SUB_KEYS**の組み合わせに設定されます。 レジストリと共にセキュリティ アクセスの詳細については、「[レジストリ キーのセキュリティとアクセス権](/windows/win32/SysInfo/registry-key-security-and-access-rights)」を参照してください。
 
-の`CSettingsStore`デストラクターは、 `m_hKey`自動的に解放されます。
+リリースのデストラクター`CSettingsStore`は`m_hKey`自動的に行われます。
 
-##  <a name="deletekey"></a>  CSettingsStore::DeleteKey
+## <a name="csettingsstoredeletekey"></a><a name="deletekey"></a>セッティングストア::Dエレテキー
 
-レジストリからキーとそのすべての子を削除します。
+キーとそのすべての子をレジストリから削除します。
 
 ```
 virtual BOOL DeleteKey(
@@ -150,23 +150,23 @@ virtual BOOL DeleteKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPath*<br/>
-から削除するキーの名前。
+*パス*<br/>
+[in]削除するキーの名前。
 
-*bAdmin*<br/>
-から削除するキーの場所を指定するスイッチ。
+*b管理者*<br/>
+[in]削除するキーの場所を指定するスイッチ。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトが読み取り専用モードの`CSettingsStore`場合、このメソッドは失敗します。
+`CSettingsStore`オブジェクトが読み取り専用モードの場合、このメソッドは失敗します。
 
-パラメーター *badmin*が0の場合は`DeleteKey` 、 **HKEY_CURRENT_USER**の下で削除するキーを検索します。 *Badmin*が0以外の`DeleteKey`場合は、 **HKEY_LOCAL_MACHINE**の下で削除するキーを検索します。
+パラメータ*bAdmin*が 0`DeleteKey`の場合は **、HKEY_CURRENT_USER**で削除するキーを検索します。 *bAdmin*が 0`DeleteKey`以外の場合は **、HKEY_LOCAL_MACHINE**で削除するキーを検索します。
 
-##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue
+## <a name="csettingsstoredeletevalue"></a><a name="deletevalue"></a>:Dセレテの価値
 
 から`m_hKey`値を削除します。
 
@@ -176,16 +176,16 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValue*<br/>
-から削除する値フィールドを指定します。
+*値*<br/>
+[in]削除する値フィールドを指定します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-##  <a name="open"></a>  CSettingsStore::Open
+## <a name="csettingsstoreopen"></a><a name="open"></a>ストアを開く
 
-レジストリキーを開きます。
+レジストリ キーを開きます。
 
 ```
 virtual BOOL Open(LPCTSTR pszPath);
@@ -193,20 +193,20 @@ virtual BOOL Open(LPCTSTR pszPath);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPath*<br/>
-からレジストリキーの名前。
+*パス*<br/>
+[in]レジストリ キーの名前。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、指定されたキーを正常`m_hKey`に開くと、このキーのハンドルにを設定します。
+このメソッドは、指定されたキーを正常に開いた`m_hKey`後、このキーのハンドルに設定します。
 
-##  <a name="read"></a>  CSettingsStore::Read
+## <a name="csettingsstoreread"></a><a name="read"></a>ストア::読み取り
 
-レジストリ内のキーから値を読み取ります。
+レジストリのキーから値を読み取ります。
 
 ```
 virtual BOOL Read(
@@ -269,65 +269,65 @@ virtual BOOL Read(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszKey*<br/>
-からレジストリから読み取る値の名前を含む null で終わる文字列へのポインター。
+*キー*<br/>
+[in]レジストリから読み取る値の名前を含む null で終わる文字列へのポインター。
 
 *iVal*<br/>
-入出力レジストリキーから読み取られた値を受け取る整数変数への参照。
+[アウト]レジストリ キーから読み取られた値を受け取る整数変数への参照。
 
-*dwVal*<br/>
-入出力レジストリキーから読み取られた値を受け取る32ビットのダブルワード変数への参照。
+*ドヴァル*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る 32 ビットのダブル ワード変数への参照。
 
 *sVal*<br/>
-入出力レジストリキーから読み取られた値を受け取る文字列変数への参照。
+[アウト]レジストリ キーから読み取った値を受け取る文字列変数への参照。
 
-*scStringList*<br/>
-入出力レジストリキーから読み取られた値を受け取る文字列リスト変数への参照。
+*一覧*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る文字列リスト変数への参照。
 
-*scArray*<br/>
-入出力レジストリキーから読み取られた値を受け取る文字列配列変数への参照。
+*scアレイ*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る文字列配列変数への参照。
 
-*dwcArray*<br/>
-入出力レジストリキーから読み取られた値を受け取る32ビットの double ワード配列変数への参照。
+*ドフアレイ*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る 32 ビットのダブル ワード配列変数への参照。
 
-*wcArray*<br/>
-入出力レジストリキーから読み取られた値を受け取る16ビットワード配列変数への参照。
+*を実行する*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る 16 ビットワード配列変数への参照。
 
-*bcArray*<br/>
-入出力レジストリキーから読み取られた値を受け取るバイト配列変数への参照。
+*bcアレイ*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取るバイト配列変数への参照。
 
 *lpPoint*<br/>
-入出力レジストリキーから読み取られた`POINT`値を受け取る構造体へのポインターへの参照。
+[アウト]レジストリ キーから読み`POINT`取られた値を受け取る構造体へのポインターへの参照。
 
-*rect*<br/>
-入出力レジストリキーから読み取られた値を受け取る、 [CRect](../../atl-mfc-shared/reference/crect-class.md)変数への参照。
+*Rect*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取る[CRect](../../atl-mfc-shared/reference/crect-class.md)変数への参照。
 
-*ppData*<br/>
-入出力レジストリキーから読み取られた値を受け取るデータへのポインターへのポインター。
+*Ppdata*<br/>
+[アウト]レジストリ キーから読み取られた値を受け取るデータへのポインターへのポインター。
 
-*pBytes*<br/>
-入出力符号なし整数変数へのポインター。 この変数は、 *Ppdata*が指すバッファーのサイズを受け取ります。
+*バイト数*<br/>
+[アウト]符号なし整数変数へのポインター。 この変数は *、ppData*が指すバッファのサイズを受け取ります。
 
-*リスト*<br/>
-入出力レジストリキーから読み取られた値を受け取る、 [CObList](../../mfc/reference/coblist-class.md)変数への参照。
+*list*<br/>
+[アウト]レジストリ キーから読み取った値を受け取る[CObList](../../mfc/reference/coblist-class.md)変数への参照。
 
 *obj*<br/>
-入出力レジストリキーから読み取られた値を受け取る[CObject](../../mfc/reference/cobject-class.md)変数への参照。
+[アウト]レジストリ キーから読み取られた値を受け取る[CObject](../../mfc/reference/cobject-class.md)変数への参照。
 
-*pObj*<br/>
-入出力レジストリキーから読み取られた`CObject`値を受け取る変数へのポインターへの参照。
+*を使用します。*<br/>
+[アウト]レジストリ キーから読み`CObject`取られた値を受け取る変数へのポインターへの参照。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Read`*Pszkey*がの`m_hKey`サブキーとしてチェックされます。
+`Read`のサブ*キーとして pszKey*を`m_hKey`チェックします。
 
-##  <a name="write"></a>  CSettingsStore::Write
+## <a name="csettingsstorewrite"></a><a name="write"></a>書き込み
 
-レジストリの open キーの下に値を書き込みます。
+開いているキーの下のレジストリに値を書き込みます。
 
 ```
 virtual BOOL Write(
@@ -390,64 +390,64 @@ virtual BOOL Write(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszKey*<br/>
-から設定する値の名前を含む文字列へのポインター。
+*キー*<br/>
+[in]設定する値の名前を含む文字列へのポインター。
 
 *iVal*<br/>
-から格納するデータを格納している整数変数への参照。
+[in]格納するデータを格納する整数変数への参照。
 
-*dwVal*<br/>
-から格納するデータを格納する32ビットの double ワード変数への参照。
+*ドヴァル*<br/>
+[in]格納するデータを格納する 32 ビットのダブル ワード変数への参照。
 
 *pszVal*<br/>
-から格納するデータを格納している null で終わる文字列変数へのポインター。
+[in]格納するデータを格納する null で終わる文字列変数へのポインター。
 
-*scStringList*<br/>
-から格納するデータを格納している[Cstringlist](../../mfc/reference/cstringlist-class.md)変数への参照。
+*一覧*<br/>
+[in]格納するデータを格納する[CStringList](../../mfc/reference/cstringlist-class.md)変数への参照。
 
-*bcArray*<br/>
-から格納するデータを格納しているバイト配列変数への参照。
+*bcアレイ*<br/>
+[in]格納するデータを格納するバイト配列変数への参照。
 
-*scArray*<br/>
-から格納するデータを格納する文字列配列変数への参照。
+*scアレイ*<br/>
+[in]格納するデータを格納する文字列配列変数への参照。
 
-*dwcArray*<br/>
-から格納するデータを格納する32ビットの double ワード配列変数への参照。
+*ドフアレイ*<br/>
+[in]格納するデータを格納する 32 ビットのダブル ワード配列変数への参照。
 
-*wcArray*<br/>
-から格納するデータを格納している16ビットワード配列変数への参照。
+*を実行する*<br/>
+[in]格納するデータを格納する 16 ビットワード配列変数への参照。
 
-*rect*<br/>
-から格納するデータを含む[CRect](../../atl-mfc-shared/reference/crect-class.md)変数への参照。
+*Rect*<br/>
+[in]格納するデータを格納する[CRect](../../atl-mfc-shared/reference/crect-class.md)変数への参照。
 
 *lpPoint*<br/>
-から格納するデータを格納し`POINT`ている変数へのポインターへの参照。
+[in]格納するデータを`POINT`格納する変数へのポインターへの参照。
 
-*pData*<br/>
-から格納するデータを格納しているバッファーへのポインター。
+*Pdata*<br/>
+[in]格納するデータを格納するバッファーへのポインター。
 
-*nBytes*<br/>
-から*PData*パラメーターが指すデータのサイズをバイト単位で指定します。
+*Nbytes*<br/>
+[in]*pData*パラメーターが指すデータのサイズをバイト単位で指定します。
 
-*リスト*<br/>
-から格納するデータを含む、 [CObList](../../mfc/reference/coblist-class.md)変数への参照。
+*list*<br/>
+[in]格納するデータを格納する[CObList](../../mfc/reference/coblist-class.md)変数への参照。
 
 *obj*<br/>
-から格納するデータを格納している[CObject](../../mfc/reference/cobject-class.md)変数への参照。
+[in]格納するデータを格納する[CObject](../../mfc/reference/cobject-class.md)変数への参照。
 
-*pObj*<br/>
-から格納するデータを格納し`CObject`ている変数へのポインターへのポインター。
+*を使用します。*<br/>
+[in]格納するデータを`CObject`格納する変数へのポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-レジストリに書き込むには、 [Csettingsstore](../../mfc/reference/csettingsstore-class.md)オブジェクトを作成するときに、 *bReadOnly*を0以外の値に設定する必要があります。 詳細については、「 [csettingsstore:: csettingsstore](#csettingsstore)」を参照してください。
+レジストリに書き込むには[、CSettingsStore](../../mfc/reference/csettingsstore-class.md)オブジェクトを作成するときに、0 以外の値に*bReadOnly*を設定する必要があります。 詳細については[、「CSettings ストア::CSettings ストア](#csettingsstore)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)

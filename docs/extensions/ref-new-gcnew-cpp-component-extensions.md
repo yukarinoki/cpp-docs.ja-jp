@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-ms.openlocfilehash: f3dd0b73e300b44cb4f35e42683725813453d7de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: f7269a62d7899df4eb89f6dd9487310c0fda0b4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181812"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new、gcnew (C++/CLI および C++/CX)
 
@@ -33,7 +33,7 @@ ms.locfileid: "65516647"
 
 有効期間が自動的に管理される Windows ランタイム オブジェクトのメモリを割り当てるには、**ref new** を使用します。 オブジェクトは、参照の最後のコピーがスコープ外になった後で参照カウントが 0 になると、自動的に解放されます。 詳細については、「[Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -41,11 +41,11 @@ ms.locfileid: "65516647"
 
 マネージド型 (参照型または値型) のメモリは **gcnew** によって割り当てられ、ガベージ コレクションによって解放されます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、**gcnew** を使用して Message オブジェクトを割り当てています。
 
@@ -87,6 +87,6 @@ int main()
 32
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

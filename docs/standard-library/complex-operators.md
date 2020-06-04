@@ -15,20 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244704"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423967"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 2 つの複素数の間の非同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
-```
+```cpp
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -50,14 +50,14 @@ bool operator!=(
 *左*\
 非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
-*そうです*\
+*右*\
 非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 数値が等しくない場合は **true**、数値が等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 複素数が等しいのは、その実数部が等しく、かつその虚数部も等しい場合だけです。 それ以外の場合は等しくありません。
 
@@ -167,8 +167,7 @@ The complex numbers cl3b & cr3b are equal.
 
 2 つの複素数を乗算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator*(
     const complex<Type>& left,
@@ -188,16 +187,16 @@ complex<Type> operator*(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-最初の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
+2つの複素数の最初の数値。または、\* 演算で乗算される複素数のパラメーター型の数値。
 
-*そうです*\
-2 番目の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
+*右*\
+2つの複素数の2番目、または \* 演算で乗算される複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
 値と型がパラメーター入力で指定された 2 つの数値を乗算した結果の複素数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -261,12 +260,11 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a> operator +
+## <a name="op_add"></a>演算子 +
 
 2 つの複素数を加算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator+(
     const complex<Type>& left,
@@ -291,16 +289,16 @@ complex<Type> operator+(const complex<Type>& left);
 *左*\
 2 つの複素数の 1 番目、または + 演算で加算される複素数のパラメーター型の数値。
 
-*そうです*\
+*右*\
 2 つの複素数の 2 番目、または + 演算で加算される複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
 値と型がパラメーター入力で指定された 2 つの数値を加算した結果の複素数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。 単項演算子を返します*左*します。
+データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。 単項演算子は*left*を返します。
 
 ### <a name="example"></a>例
 
@@ -402,7 +400,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a> 演算子-
+## <a name="operator-"></a>operator
 
 2 つの複素数を減算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -431,14 +429,14 @@ complex<Type> operator-(const complex<Type>& left);
 *左*\
 2 つの複素数の 1 番目、または - 演算で減算される複素数のパラメーター型の数値。
 
-*そうです*\
+*右*\
 2 つの複素数の 2 番目、または - 演算で減算される複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
-減算した結果の複素数*右*から*左*値がパラメーター入力で指定された 2 つの数値。
+*左*から*右*を減算した結果の複素数。値がパラメーター入力によって指定されている2つの数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -544,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a> 演算子/
+## <a name="op_div"></a>operator
 
 2 つの複素数を除算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -570,14 +568,14 @@ complex<Type> operator*(
 *左*\
 複素数、または / 演算における分母で除算される分子である複素数のパラメーター型の数値。
 
-*そうです*\
+*右*\
 複素数、または / 演算における分子を除算する場合に使用される分母である複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーター入力で指定された値の分母で分子を除算した結果の複素数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -664,7 +662,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a> 演算子&lt;&lt;
+## <a name="op_lt_lt"></a>演算子&lt;&lt;
 
 出力ストリームに指定された複素数を挿入します。
 
@@ -680,14 +678,14 @@ basic_ostream<Elem, Traits>& operator<<(
 *Ostr*\
 複素数が入力される出力ストリーム。
 
-*そうです*\
+*右*\
 出力ストリームに入力される複素数。
 
 ### <a name="return-value"></a>戻り値
 
-指定した複素数の値を書き込みます、 *Ostr*デカルト形式: (*実数部, 虚数部*)。
+指定した複素数の値を、デカルト形式 (*実数部、虚数部*) で*ostr*に書き込みます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 出力ストリームはオーバーロードされるため、どの形式の複素数も受け入れられ、その既定の出力形式はデカルト形式となります。
 
@@ -726,12 +724,11 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 2 つの複素数の間の同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
-```
-
+```cpp
 template <class Type>
 bool operator==(
     const complex<Type>& left,
@@ -753,14 +750,14 @@ bool operator==(
 *左*\
 非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
-*そうです*\
+*右*\
 非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 数値が等しい場合は **true**、数値が等しくない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 複素数が等しいのは、その実数部が等しく、かつその虚数部も等しい場合だけです。 それ以外の場合は等しくありません。
 
@@ -866,12 +863,11 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a> 演算子&gt;&gt;
+## <a name="op_gt_gt"></a>演算子&gt;&gt;
 
 入力ストリームから複素数の値を抽出します。
 
-```
-
+```cpp
 template <class Type, class Elem, class Traits>
 basic_istream<Elem, Traits>& operator>>(
    basic_istream<Elem, Traits>& Istr,
@@ -883,14 +879,14 @@ basic_istream<Elem, Traits>& operator>>(
 *Istr*\
 複素数が抽出される入力ストリーム。
 
-*そうです*\
+*右*\
 入力ストリームから抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 
-指定した複素数の値を読み取ります*Istr*にそれを返しますと*右*します。
+指定した複素数の値を*Istr*から読み取り、*右*に戻します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 有効な入力形式は次のとおりです。
 

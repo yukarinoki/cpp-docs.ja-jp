@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange128 組み込み関数
+title: 組み込み関数の _InterlockedCompareExchange128
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 525b0fd77323789eed05c47c944794ff389bfac5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6f6b36b238945f7d46e9817cdc85977d666e1e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077628"
 ---
-# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>_InterlockedCompareExchange128 組み込み関数
+# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>組み込み関数の _InterlockedCompareExchange128
 
 **Microsoft 固有の仕様**
 
@@ -62,13 +62,13 @@ unsigned char _InterlockedCompareExchange128_rel(
 
 ### <a name="parameters"></a>パラメーター
 
-*インストール*\
+*宛先*の\
 [入力、出力]変換先へのポインター。これは128ビットフィールドと見なされる 2 64 ビット整数の配列です。 一般的な保護エラーを回避するために、宛先データは16バイトでアラインされている必要があります。
 
-*ExchangeHigh*\
+*Exchangehigh*\
 から転送先の上位部分と交換できる64ビット整数。
 
-*ExchangeLow*\
+*Exchangelow*\
 から転送先の下位部分と交換できる64ビット整数。
 
 *ComparandResult*\
@@ -76,30 +76,30 @@ unsigned char _InterlockedCompareExchange128_rel(
 
 ## <a name="return-value"></a>戻り値
 
-128ビット比較対照値が変換先の元の値と等しい場合は1。 `ExchangeHigh`と`ExchangeLow`は、128ビットの変換先を上書きします。
+128ビット比較対照値が変換先の元の値と等しい場合は1。 `ExchangeHigh` と `ExchangeLow` 128 ビットの変換先を上書きします。
 
 比較対照値が変換先の元の値と等しくない場合は0。 変換先の値は変更されず、比較対照値の値は変換先の値で上書きされます。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_InterlockedCompareExchange128`|x64、ARM64|
-|`_InterlockedCompareExchange128_acq`、 `_InterlockedCompareExchange128_nf`、 `_InterlockedCompareExchange128_rel`|ARM64|
+|`_InterlockedCompareExchange128_acq`、`_InterlockedCompareExchange128_nf`、`_InterlockedCompareExchange128_rel`|ARM64|
 |`_InterlockedCompareExchange128_np`|x64|
 
-**ヘッダーファイル**\<>
+**ヘッダーファイル**\<に存在します。 h >
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込み`_InterlockedCompareExchange128`は、128 `cmpxchg16b`ビットのロックさ`lock`れた比較と交換を実行する命令 (プレフィックス付き) を生成します。 AMD 64 ビットハードウェアの初期バージョンでは、この命令はサポートされていません。 `cmpxchg16b`命令のハードウェアサポートを確認するには、で`__cpuid` `InfoType=0x00000001 (standard function 1)`組み込みのを呼び出します。 命令がサポート`CPUInfo[2]`されている場合、ビット 13 of (ECX) は1です。
+`_InterlockedCompareExchange128` 組み込みは、128ビットのロックされた比較と交換を実行する `cmpxchg16b` 命令 (`lock` プレフィックス) を生成します。 AMD 64 ビットハードウェアの初期バージョンでは、この命令はサポートされていません。 `cmpxchg16b` 命令のハードウェアサポートを確認するには、`InfoType=0x00000001 (standard function 1)`に組み込まれている `__cpuid` を呼び出します。 命令がサポートされている場合、`CPUInfo[2]` のビット 13 (ECX) は1です。
 
 > [!NOTE]
-> の`ComparandResult`値は常に上書きされます。 命令の`lock`後、この組み込みはの`Destination`初期値をに`ComparandResult`直ちにコピーします。 このため、と`ComparandResult` `Destination`は、予期しない動作を避けるために、別のメモリ位置をポイントする必要があります。
+> `ComparandResult` の値は常に上書きされます。 `lock` 命令の後、この組み込みは、`Destination` の初期値を `ComparandResult`に直ちにコピーします。 このため、`ComparandResult` と `Destination` は、予期しない動作を避けるために、別のメモリ位置を指している必要があります。
 
-低レベルのスレッド`_InterlockedCompareExchange128`同期にを使用できますが、より小さな同期関数 (他の`_InterlockedCompareExchange`組み込みなど) を代わりに使用できる場合は、128ビットを超える同期は必要ありません。 メモリ`_InterlockedCompareExchange128`内の128ビット値にアトミックアクセスする場合は、を使用します。
+低レベルのスレッド同期には `_InterlockedCompareExchange128` を使用できますが、より小さな同期関数 (他の `_InterlockedCompareExchange` 組み込みなど) を使用できる場合は、128ビットを超える同期は必要ありません。 メモリ内の128ビット値にアトミックアクセスする場合は、`_InterlockedCompareExchange128` を使用します。
 
-`cmpxchg16b`命令をサポートしていないハードウェアに組み込みを使用するコードを実行する場合、結果は予測できません。
+`cmpxchg16b` 命令をサポートしていないハードウェアで組み込みを使用するコードを実行する場合、結果は予測できません。
 
 ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
@@ -109,7 +109,7 @@ ARM プラットフォームでは、クリティカル セクションの最初
 
 ## <a name="example"></a>例
 
-この例で`_InterlockedCompareExchange128`は、を使用して、2 64 ビット整数の配列の上位ワードを、その上位単語と下位ワードの合計で置き換え、下位ワードをインクリメントします。 `BigInt.Int`配列へのアクセスはアトミックですが、この例では1つのスレッドを使用し、単純化するためにロックを無視します。
+この例では、`_InterlockedCompareExchange128` を使用して、2 64 ビット整数の配列の上位ワードを、上位および下位の単語の合計に置き換え、下位ワードをインクリメントします。 `BigInt.Int` 配列へのアクセスはアトミックですが、この例では1つのスレッドを使用し、単純化するためにロックを無視します。
 
 ```cpp
 // cmpxchg16b.c
@@ -159,9 +159,8 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 **Microsoft 固有の仕様はここまで**
 
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
-[_InterlockedCompareExchange 組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
+[組み込み関数の _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

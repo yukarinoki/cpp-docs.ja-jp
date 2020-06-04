@@ -8,21 +8,21 @@ helpviewer_keywords:
 - optimizing performance, inline assembly
 - __asm keyword [C++], optimizing
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
-ms.openlocfilehash: d4956ba12e0bc268d78a895e6cb1ec6e2059262a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0051b16ddc19e233cfac2688c0b77e1e023f0833
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169267"
 ---
 # <a name="optimizing-inline-assembly"></a>インライン アセンブリの最適化
 
 **Microsoft 固有の仕様**
 
-有無、`__asm`関数内のブロックがいくつかの方法での最適化に影響します。 コンパイラはまず、最適化するために、`__asm`自体をブロックします。 アセンブリ言語で記述するものが正確に取得します。 2 番目の存在、`__asm`ブロックに影響は、変数の記憶域を登録します。 コンパイラで変数をレジスタ格納を回避できます、`__asm`ブロックでレジスタの内容に変更する場合、`__asm`ブロック。 最後に、いくつかその他の関数全体の最適化の場合は、アセンブリ言語で関数を含めることによって影響が受けるされます。
+関数に `__asm` ブロックが存在すると、いくつかの方法で最適化に影響します。 まず、コンパイラは `__asm` ブロック自体を最適化しようとしません。 アセンブリ言語で記述する内容は、厳密に取得したものです。 2つ目の方法として、`__asm` ブロックが存在すると、レジスタ変数のストレージに影響します。 コンパイラは、レジスタの内容が `__asm` ブロックによって変更された場合に、`__asm` ブロック全体での変数の登録を回避します。 最後に、関数内でアセンブリ言語を含めることによって、関数全体の最適化が影響を受けます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

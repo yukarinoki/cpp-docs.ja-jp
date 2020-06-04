@@ -108,32 +108,32 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449183"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424693"
 ---
-# <a name="iosbase-class"></a>ios_base クラス
+# <a name="ios_base-class"></a>ios_base クラス
 
-このクラスは、テンプレート パラメーターに依存しない、入力ストリームと出力ストリームの両方に共通のストレージとメンバー関数を表します。 (テンプレート クラス [basic_ios](../standard-library/basic-ios-class.md) は、テンプレート パラメーターに依存する、共通の要素を記述します。)
+このクラスは、テンプレート パラメーターに依存しない、入力ストリームと出力ストリームの両方に共通のストレージとメンバー関数を表します。 (クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)には、テンプレートパラメーターに依存している共通の機能が記述されています)。
 
 ios_base クラスのオブジェクトには、次の情報で構成される書式設定情報が格納されます。
 
-- [fmtflags](#fmtflags) 型のオブジェクトの書式設定フラグ。
+- [`fmtflags`](#fmtflags)型のオブジェクトの書式設定フラグ。
 
-- [iostate](#iostate) 型のオブジェクト内の例外マスク。
+- [`iostate`](#iostate)型のオブジェクトの例外マスク。
 
 - **Int**型のオブジェクトのフィールド幅。
 
 - **Int**型のオブジェクトの表示精度。
 
-- 型`locale`のオブジェクトのロケールオブジェクト。
+- `locale`型のオブジェクトのロケールオブジェクト。
 
 - **Long**および**void**ポインター型の要素を持つ2つの拡張可能な配列。
 
-ios_base クラスのオブジェクトでは、ストリームの状態情報が [iostate](#iostate) 型のオブジェクトに格納されるほか、コールバックのスタックも格納されます。
+クラス ios_base のオブジェクトでは、ストリームの状態情報も[`iostate`](#iostate)型のオブジェクトとコールバックスタックに格納されます。
 
 ## <a name="members"></a>メンバー
 
@@ -143,13 +143,13 @@ ios_base クラスのオブジェクトでは、ストリームの状態情報�
 |-|-|
 |[ios_base](#ios_base)|`ios_base` オブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[event_callback](#event_callback)|[register_call](#register_callback) に渡される関数を記述します。|
-|[fmtflags](#fmtflags)|出力の外観を指定する定数。|
-|[iostate](#iostate)|ストリームの状態を表す定数を定義します。|
+|[`fmtflags`](#fmtflags)|出力の外観を指定する定数。|
+|[`iostate`](#iostate)|ストリームの状態を表す定数を定義します。|
 |[openmode](#openmode)|ストリームとの対話方法を記述します。|
 |[seekdir](#seekdir)|オフセット演算の開始位置を指定します。|
 
@@ -169,7 +169,7 @@ ios_base クラスのオブジェクトでは、ストリームの状態情報�
 |[badbit](#iostate)|ストリーム バッファーの整合性の損失を記録します。|
 |[basefield](#fmtflags)|`dec` &#124; `hex` &#124; `oct` のように定義されたビットマスク。|
 |[beg](#seekdir)|シーケンスの先頭からの相対シークを指定します。|
-|[binary](#openmode)|テキスト ストリームではなく、バイナリ ストリームとしてファイルを読み取るように指定します。|
+|[[バイナリ]](#openmode)|テキスト ストリームではなく、バイナリ ストリームとしてファイルを読み取るように指定します。|
 |[boolalpha](#fmtflags)|**ブール**型のオブジェクトを数値としてではなく、名前 ( **true**や**false**など) として挿入または抽出するように指定します。|
 |[cur](#seekdir)|シーケンス内の現在位置からの相対シークを指定します。|
 |[dec](#fmtflags)|10 進形式で整数値を挿入もしくは抽出するように指定します。|
@@ -199,22 +199,22 @@ ios_base クラスのオブジェクトでは、ストリームの状態情報�
 
 |||
 |-|-|
-|[failure](#failure)|このメンバー クラスは、テンプレート クラス [basic_ios](../standard-library/basic-ios-class.md) のメンバー関数 [clear](../standard-library/basic-ios-class.md#clear) によってスローされるすべての例外の基底クラスとして機能します。|
+|[failure](#failure)|このメンバークラスは、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のメンバー関数[clear](../standard-library/basic-ios-class.md#clear)によってスローされるすべての例外の基本クラスとして機能します。|
 |[flags](#flags)|現在のフラグ設定を設定するか返します。|
 |[getloc](#getloc)|格納されているロケール オブジェクトを返します。|
 |[imbue](#imbue)|ロケールを変更します。|
-|[Init](#init)|構築時に標準の iostream オブジェクトを作成します。|
+|[Init](#init)|構築時に標準 `iostream` オブジェクトを作成します。|
 |[iword](#iword)|`iword` として格納される値を割り当てます。|
-|[precision](#precision)|浮動小数点数で表示する桁数を指定します。|
+|[有効桁数 (precision)](#precision)|浮動小数点数で表示する桁数を指定します。|
 |[pword](#pword)|`pword` として格納される値を割り当てます。|
 |[register_callback](#register_callback)|コールバック関数を指定します。|
 |[setf](#setf)|指定したフラグを設定します。|
-|[sync_with_stdio](#sync_with_stdio)|iostream と C ランタイム ライブラリの処理が、ソース コードに現れる順序で実行されるようにします。|
+|[sync_with_stdio](#sync_with_stdio)|`iostream` および C ランタイムライブラリの操作が、ソースコードに出現する順序で実行されることを保証します。|
 |[unsetf](#unsetf)|指定したフラグをオフにします。|
 |[width](#width)|出力ストリームの長さを設定します。|
 |[xalloc](#xalloc)|変数がストリームの一部となるように指定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -222,7 +222,7 @@ ios_base クラスのオブジェクトでは、ストリームの状態情報�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ios>
+**ヘッダー:** \<ios >
 
 **名前空間:** std
 
@@ -237,15 +237,15 @@ enum event {
     copyfmt_event};
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 型は、[register_callback](#register_callback) に登録されている関数の引数として使用するコールバック イベントを格納できるオブジェクトを記述する列挙型です。 それぞれのイベント値は次のとおりです。
 
-- `copyfmt_event`は、[例外マスク](../standard-library/ios-base-class.md)がコピーされる直前に、 [copyfmt へ](../standard-library/basic-ios-class.md#copyfmt)の呼び出しの末尾付近で発生するコールバックを識別します。
+- `copyfmt_event`、[例外マスク](../standard-library/ios-base-class.md)がコピーされる直前に、 [copyfmt へ](../standard-library/basic-ios-class.md#copyfmt)の呼び出しの末尾付近に発生するコールバックを識別します。
 
-- `erase_event`、への呼び出しの開始時に発生するコールバックを識別するために[copyfmt](../standard-library/basic-ios-class.md#copyfmt)、またはのデストラクターへの呼び出しの先頭に **\*この**します。
+- `erase_event`、 [copyfmt へ](../standard-library/basic-ios-class.md#copyfmt)の呼び出しの開始時に発生するコールバックを識別したり、**このを\*** ためにデストラクターの呼び出しの先頭にあるコールバックを識別したりします。
 
-- `imbue_event`。関数が返される直前に、 [imbue](#imbue)の呼び出しの最後に発生するコールバックを識別します。
+- `imbue_event`、関数がを返す直前に、 [imbue](#imbue)の呼び出しの最後に発生するコールバックを識別します。
 
 ### <a name="example"></a>例
 
@@ -264,22 +264,22 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_D)* \
+*_E*\
 [イベント](#event)。
 
-*基本 (_c)* \
+*_Base*\
 イベントが呼び出されたストリーム。
 
 *_I*\
 ユーザー定義された番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、[register_callback](#register_callback) に登録できる関数へのポインターを記述します。 関数のこの型は例外をスローできません。
 
 ### <a name="example"></a>例
 
-`event_callback` の使用例については、「[register_call](#register_callback)」を参照してください。
+[ の使用例については、「](#register_callback)register_call`event_callback`」を参照してください。
 
 ## <a name="failure"></a>不具合
 
@@ -300,7 +300,7 @@ namespace std {
 }
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `what()` によって返される値は `_Message` のコピーであり、`_Code` に基づいて、テストにより拡張されている可能性があります。 `_Code` を指定しない場合、既定値は `make_error_code(io_errc::stream)` になります。
 
@@ -351,7 +351,7 @@ fmtflags flags(fmtflags fmtfl);
 
 以前または現在の `fmtflags` 設定。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 フラグのリストについては、「[ios_base::fmtflags](#fmtflags)」を参照してください。
 
@@ -409,7 +409,7 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [ios](../standard-library/ios.md) のマニピュレーターをサポートします。
 
@@ -423,13 +423,13 @@ public:
 
 - `showbase`、生成された整数フィールドのベースを示すプレフィックスを挿入します。
 
-- `internal`、生成された数値フィールドの内部ポイントに必要に応じて充てん文字を挿入することにより、フィールド幅を埋めます。 (フィールド幅の設定の詳細については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。)
+- `internal`、生成された数値フィールドの内部ポイントに必要に応じて充てん文字を挿入することにより、フィールド幅を埋めます。 (フィールド幅の設定の詳細については、「 [`setw`](../standard-library/iomanip-functions.md#setw))」を参照してください。
 
 - `left`、生成されたフィールドの最後に、必要に応じて充てん文字を挿入することにより、フィールド幅を埋めます (左揃えの場合)。
 
 - `right`、生成されたフィールドの先頭に、必要に応じて充てん文字を挿入することにより、フィールド幅を埋めます (右揃えの場合)。
 
-- `boolalpha`、**ブール**型のオブジェクトを数値ではなく名前 ( **true**や**false**など) として挿入または抽出します。
+- `boolalpha`、数値としてではなく、 **bool**型のオブジェクトを名前 ( **true**や**false**など) として挿入または抽出します。
 
 - `fixed`、固定小数点形式 (指数フィールドなし) で浮動小数点値を挿入します。
 
@@ -495,16 +495,16 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*場所 (_d)* \
+*_Loc*\
 新しいロケール設定。
 
 ### <a name="return-value"></a>戻り値
 
 以前のロケール。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、locale オブジェクトに*を格納し*た後、コールバックイベント`imbue_event`およびを報告します。 以前に格納されていた値を返します。
+このメンバー関数は、 *_Loc*をロケールオブジェクトに格納し、コールバックイベントと `imbue_event`を報告します。 以前に格納されていた値を返します。
 
 ### <a name="example"></a>例
 
@@ -512,15 +512,15 @@ locale imbue(const locale& _Loc);
 
 ## <a name="init"></a>初期化
 
-構築時に標準の iostream オブジェクトを作成します。
+構築時に標準 `iostream` オブジェクトを作成します。
 
 ```cpp
 class Init { };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この入れ子になったクラスが記述するオブジェクトは、その構築により、任意の静的オブジェクトのコンストラクターの実行前でも標準 iostreams オブジェクトが正しく構築されるようにします。
+入れ子になったクラスは、任意の静的オブジェクトのコンストラクターを実行する前でも、標準の `iostream` オブジェクトが適切に構築されることを保証するオブジェクトを表します。
 
 ## <a name="ios_base"></a>ios_base
 
@@ -530,9 +530,9 @@ Ios_base オブジェクトを構築します。
 ios_base();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この (プロテクト) コンストラクターは、何も実行しません。 以降の **basic_ios::** [init](../standard-library/basic-ios-class.md#init) への呼び出しは、オブジェクトを安全に破棄する前に、初期化する必要があります。 このため、クラス ios_base の唯一の安全な使用は、テンプレート クラス [basic_ios](../standard-library/basic-ios-class.md) の基底クラスとして使用することです。
+この (プロテクト) コンストラクターは、何も実行しません。 後で `basic_ios::`[init](../standard-library/basic-ios-class.md#init)を呼び出す場合は、オブジェクトを安全に破棄する前に、そのオブジェクトを初期化する必要があります。 したがって、クラス ios_base に安全に使用できるのは、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)の基本クラスです。
 
 ## <a name="iostate"></a>iostate
 
@@ -550,7 +550,7 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、ストリーム状態情報を格納できるオブジェクトを記述するビットマスク型です。 個々のフラグの値 (要素) は、次のとおりです。
 
@@ -560,7 +560,7 @@ public:
 
 - `failbit`。ストリームからの有効フィールドの抽出エラーを記録します。
 
-さらに、有効な値は`goodbit`です。これまでに説明したビットはいずれ`goodbit`も設定されていません (はゼロであることが保証されています)。
+また、有効な値は `goodbit`です。前述のビットはいずれも設定されていません (`goodbit` はゼロであることが保証されています)。
 
 ## <a name="iword"></a>iword
 
@@ -575,17 +575,17 @@ long& iword(int idx);
 *idx*\
 `iword` として格納する値のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、 **long**型の要素を含む拡張可能な配列の要素*idx*への参照を返します。 すべての要素は、実質的に存在し、最初に値 0 を格納します。 返される参照は、オブジェクトの `iword` への次の呼び出し後、オブジェクトが **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) への呼び出しで変更された後、またはオブジェクトが破棄された後に無効になります。
+このメンバー関数は、 **long**型の要素を含む拡張可能な配列の要素*idx*への参照を返します。 すべての要素は、実質的に存在し、最初に値 0 を格納します。 返された参照は、オブジェクトに対して次に `iword` を呼び出した後、`basic_ios::`[copyfmt へ](../standard-library/basic-ios-class.md#copyfmt)の呼び出しによってオブジェクトが変更された後、またはオブジェクトが破棄された後に無効になります。
 
-*Idx*が負の場合、または要素に対して一意のストレージを使用できない場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** を呼び出し、一意でない可能性がある参照を返します。
+*Idx*が負の場合、または要素に対して一意のストレージを使用できない場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` を呼び出し、一意でない可能性がある参照を返します。
 
-`ios_base` 型のすべてのオブジェクト間で使用するための一意のインデックスを取得するには、[xalloc](#xalloc) を呼び出します。
+`ios_base`型のすべてのオブジェクトで使用するための一意のインデックスを取得するには、 [`xalloc`](#xalloc)を呼び出します。
 
 ### <a name="example"></a>例
 
-`iword` の使用例については、「[xalloc](#xalloc)」を参照してください。
+`iword`の使用方法の例については、「 [`xalloc`](#xalloc) 」を参照してください。
 
 ## <a name="openmode"></a>openmode
 
@@ -603,21 +603,21 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、複数の iostreams オブジェクトのオープン モードを格納できるオブジェクトを記述する `bitmask type` です。 個々のフラグの値 (要素) は、次のとおりです。
+この型は、複数の `iostream` オブジェクトの開始モードを格納できるオブジェクトを表す `bitmask type` です。 個々のフラグの値 (要素) は、次のとおりです。
 
-- `app`。各挿入前にストリームの末尾にシークします。
+- `app`、各挿入前にストリームの末尾をシークします。
 
-- `ate`。コントロールオブジェクトが最初に作成されたときに、ストリームの末尾をシークします。
+- `ate`、そのコントロールオブジェクトが最初に作成されたときに、ストリームの末尾をシークします。
 
-- `binary`。テキストストリームとしてではなく、バイナリストリームとしてファイルを読み取ります。
+- `binary`、テキストストリームとしてではなく、バイナリストリームとしてファイルを読み取ることができます。
 
 - `in`。ストリームからの抽出を許可します。
 
 - `out`。ストリームへの挿入を許可します。
 
-- `trunc`。コントロールオブジェクトが作成されたときに、既存のファイルの内容を削除します。
+- `trunc`、そのコントロールオブジェクトが作成されたときに、既存のファイルの内容を削除します。
 
 ### <a name="example"></a>例
 
@@ -647,14 +647,14 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
-`ios_base` 型のオブジェクト。
+*右*\
+`ios_base` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 割り当て先のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この演算子は、格納されている書式設定情報をコピーして、任意の拡張可能な配列の新しいコピーを作成します。 その後、 **\*this** を返します。 コールバックのスタックはコピーされません。
 
@@ -678,7 +678,7 @@ streamsize precision(streamsize _Prec);
 
 1 番目のメンバー関数は、格納されている[表示桁数](../standard-library/ios-base-class.md)を返します。 2番目のメンバー関数は、 *_Prec*を表示精度に格納し、その前に格納された値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 浮動小数点数は、[fixed](../standard-library/ios-functions.md#fixed) によって固定小数点表記で表示されます。
 
@@ -711,25 +711,25 @@ int main( )
 `pword` として格納される値を割り当てます。
 
 ```cpp
-void *& pword(int _Idx);
+void *& pword(int index);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Idx (_c)* \
+*インデックス*\
 `pword` として格納する値のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、 **void**ポインター型の要素を含む拡張可能な配列の要素 _ *Idx*への参照を返します。 すべての要素は、実質的に存在し、最初に Null ポインターを格納します。 返される参照は、オブジェクトの `pword` への次の呼び出し後、オブジェクトが **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) への呼び出しで変更された後、またはオブジェクトが破棄された後に無効になります。
+このメンバー関数は、 **void**ポインター型の要素を含む拡張可能な配列の要素*インデックス*への参照を返します。 すべての要素は、実質的に存在し、最初に Null ポインターを格納します。 返された参照は、オブジェクトに対して次に `pword` を呼び出した後、`basic_ios::`[copyfmt へ](../standard-library/basic-ios-class.md#copyfmt)の呼び出しによってオブジェクトが変更された後、またはオブジェクトが破棄された後に無効になります。
 
-_ *Idx* が負の場合または要素に一意の値が格納されていない場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** を呼び出し、一意ではない可能性がある参照を返します。
+*Index*が負の場合、または要素に対して一意のストレージを使用できない場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` を呼び出し、一意でない可能性がある参照を返します。
 
-`ios_base` 型のすべてのオブジェクト間で使用するための一意のインデックスを取得するには、[xalloc](#xalloc) を呼び出します。
+`ios_base`型のすべてのオブジェクトで使用するための一意のインデックスを取得するには、 [`xalloc`](#xalloc)を呼び出します。
 
 ### <a name="example"></a>例
 
-`pword` の使用例については、「[xalloc](#xalloc)」を参照してください。
+`pword`の使用例については、「 [`xalloc`](#xalloc) 」を参照してください。
 
 ## <a name="register_callback"></a>register_callback
 
@@ -748,9 +748,9 @@ void register_callback(
 *idx*\
 ユーザー定義された番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、格納`{pfn, idx}`されているコールバックスタック[コールバックスタック](../standard-library/ios-base-class.md)にペアをプッシュします。 コールバックイベント**ev**が報告されると、式`(*pfn)(ev, *this, idx)`によって関数がレジストリとは逆の順序で呼び出されます。
+このメンバー関数は、`{pfn, idx}` ペアを、格納されているコールバックスタックの[コールバックスタック](../standard-library/ios-base-class.md)にプッシュします。 コールバックイベント**ev**が報告されると、`(*pfn)(ev, *this, idx)`式によって、レジストリの逆の順序で関数が呼び出されます。
 
 ### <a name="example"></a>例
 
@@ -856,15 +856,15 @@ namespace std {
 }
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、複数の iostream クラスのメンバー関数への引数として使用されるシークモードを格納できるオブジェクトを表す列挙型です。 次に、それぞれのフラグ値を示します。
+この型は、複数の `iostream` クラスのメンバー関数への引数として使用されるシークモードを格納できるオブジェクトを表す列挙型です。 次に、それぞれのフラグ値を示します。
 
-- `beg`。シーケンス (配列、ストリーム、またはファイル) の先頭を基準にしてシーク (現在の読み取りまたは書き込みの位置を変更) します。
+- `beg`、シーケンス (配列、ストリーム、またはファイル) の先頭を基準にしてシーク (現在の読み取りまたは書き込みの位置を変更) します。
 
-- `cur`。シーケンス内の現在位置を基準にしてシークします。
+- `cur`。シーケンス内の現在位置を基準としてシークします。
 
-- `end`。シーケンスの末尾に対して相対的にシークします。
+- `end`、シーケンスの末尾を基準にしてシークします。
 
 ### <a name="example"></a>例
 
@@ -904,19 +904,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク (_l)* \
+*_Mask*\
 オンにするフラグ。
 
-*設定解除 (_c)* \
+*_Unset*\
 無効にするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
 前の書式設定フラグ
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のメンバー関数は、効果的に[flags](#flags)(  *\_マスク* &#124;  *\_フラグ*) を呼び出してから、前の書式設定フラグを返します。 2番目のメンバー関数`flags(_Mask & fmtfl, flags & ~_Mask)`は、(マスクの下で選択されているビットを置き換える) を実際に呼び出し、前の書式設定フラグを返します。
+最初のメンバー関数は、`(_Mask | _Flags)` (選択されたビットを設定する)[フラグ](#flags)を効果的に呼び出し、前の書式フラグを返します。 2番目のメンバー関数は、`flags(_Mask & fmtfl, flags & ~_Mask)` (マスクの下で選択されているビットを置き換える) を実際に呼び出し、前の書式設定フラグを返します。
 
 ### <a name="example"></a>例
 
@@ -944,7 +944,7 @@ int main( )
 
 ## <a name="sync_with_stdio"></a>sync_with_stdio
 
-iostream と C ランタイム ライブラリの処理が、ソース コードに現れる順序で実行されるようにします。
+`iostream` および C ランタイムライブラリの操作が、ソースコードに出現する順序で実行されることを保証します。
 
 ```cpp
 static bool sync_with_stdio(
@@ -954,16 +954,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>パラメーター
 
-*同期 (_s)* \
-すべてのストリームがと同期さ`stdio`れているかどうか。
+*_Sync*\
+すべてのストリームが `stdio`と同期されているかどうか。
 
 ### <a name="return-value"></a>戻り値
 
 この関数の以前の設定。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-静的メンバー関数は、最初`stdio`は**true**である同期フラグを格納します。 **True**の場合、このフラグにより、同じファイルに対する操作が、 [iostreams](../standard-library/iostreams-conventions.md)関数とC++標準ライブラリで定義されている関数の間で適切に同期されます。 そうしないと、同期が保証されるか、または保証されない場合がありますが、パフォーマンスが向上する可能性があります。 関数は同期フラグに*同期*を`stdio`格納し、その前に格納された値を返します。 標準ストリームに対して操作を実行する前にのみ、確実に呼び出すことができます。
+静的メンバー関数は、最初は**true**である `stdio` 同期フラグを格納します。 **True**の場合、このフラグにより、同じファイルに対する操作が、 [`iostreams`](../standard-library/iostreams-conventions.md)の関数とC++標準ライブラリで定義されている関数の間で適切に同期されます。 そうしないと、同期が保証されるか、または保証されない場合がありますが、パフォーマンスが向上する可能性があります。 関数は、`stdio` 同期フラグに *_Sync*を格納し、その前に格納されていた値を返します。 標準ストリームに対して操作を実行する前にのみ、確実に呼び出すことができます。
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク (_l)* \
+*_Mask*\
 オフにしたいフラグ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、 [](#flags)明示的`~`にフラグ (*マスク* **& フラグ**) を呼び出します (選択したビットをクリアします)。
+このメンバー関数は、明示的に[フラグ](#flags)(`~` *_Mask* **& のフラグ**) を呼び出します (選択したビットをクリアします)。
 
 ### <a name="example"></a>例
 
-の使用`unsetf`例については、「 [ios_base:: setf](#setf) 」を参照してください。
+`unsetf`の使用例については、「 [ios_base:: setf](#setf) 」を参照してください。
 
 ## <a name="width"></a>幅
 
@@ -1001,16 +1001,16 @@ streamsize width(
 
 ### <a name="parameters"></a>パラメーター
 
-*幅 (_s)* \
+*_Wide*\
 出力ストリームの必要なサイズ。
 
 ### <a name="return-value"></a>戻り値
 
 現在の幅の設定。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-1つ目のメンバー関数は、格納されているフィールドの幅を返します。 2番目のメンバー関数は、フィールド*幅に幅*を格納し、その前に格納された値を返します。
+1つ目のメンバー関数は、格納されているフィールドの幅を返します。 2番目のメンバー関数は、フィールドの幅に *_Wide*を格納し、その前に格納されていた値を返します。
 
 ### <a name="example"></a>例
 
@@ -1045,9 +1045,9 @@ static int xalloc( );
 
 静的メンバー関数は、格納されている静的な値を返します。この値は、呼び出しごとに増加します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数[iword](#iword)または[pword](#pword)を呼び出すときに、戻り値を一意のインデックス引数として使用できます。
+メンバー関数[`iword`](#iword)または[`pword`](#pword)を呼び出すときに、戻り値を一意のインデックス引数として使用できます。
 
 ### <a name="example"></a>例
 
@@ -1079,7 +1079,7 @@ int main( )
 testing
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\

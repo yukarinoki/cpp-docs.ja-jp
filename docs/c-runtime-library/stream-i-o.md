@@ -1,19 +1,17 @@
 ---
 title: ストリーム入出力
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746254"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444619"
 ---
 # <a name="stream-io"></a>ストリーム入出力
 
@@ -21,7 +19,7 @@ ms.locfileid: "57746254"
 
 ## <a name="stream-io-routines"></a>ストリーム入出力ルーチン
 
-|ルーチンによって返される値|使用|
+|ルーチン|用途|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md)、 [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|ストリームのクリア エラー インジケーター|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|ストリームを閉じる|
@@ -36,7 +34,7 @@ ms.locfileid: "57746254"
 |[fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)|文字列をストリームから読み取る|
 |[_fileno](../c-runtime-library/reference/fileno.md)|ストリームに関連付けられているファイル記述子を取得する|
 |[_flushall](../c-runtime-library/reference/flushall.md)|すべてのストリームをバッファーまたはストレージ デバイスにフラッシュする|
-|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|ストリームを開く|
+|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|ストリームを開く|
 |[fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)、[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|ストリームに書式付きデータを書き込む|
 |[fputc、fputwc](../c-runtime-library/reference/fputc-fputwc.md)|ストリームに文字を書き込む (**putc** および **putwc** の関数バージョン)|
 |[_fputchar、_fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|**stdout** に文字を書き込む (**putchar** および **putwchar** の関数バージョン)|
@@ -95,7 +93,7 @@ ms.locfileid: "57746254"
 
 出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek** **fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

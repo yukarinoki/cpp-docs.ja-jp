@@ -1,31 +1,31 @@
 ---
-title: '方法: -Clr コンパイルでネイティブ型を使用します。'
+title: 方法:-clr コンパイルでネイティブ型を使用する
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387202"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545205"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>方法: /Clr のコンパイルでネイティブ型を使用します。
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>方法: /clr コンパイルでネイティブ型を使用する
 
-ネイティブ型を定義することができます、 **/clr**コンパイルとどのように使用されるアセンブリ内からそのネイティブな型が無効です。 ただし、ネイティブ型は参照されているメタデータから使用できるようできません。
+**/Clr**コンパイルでネイティブ型を定義し、アセンブリ内からそのネイティブ型を使用することは有効です。 ただし、ネイティブ型は参照されたメタデータからは使用できません。
 
-各アセンブリは、使用するすべてのネイティブ型の定義を含める必要があります。
+各アセンブリには、使用するすべてのネイティブ型の定義が含まれている必要があります。
 
 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-このサンプルでは、定義して、ネイティブな型を使用するコンポーネントを作成します。
+このサンプルでは、ネイティブ型を定義して使用するコンポーネントを作成します。
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>例
 
-このサンプルでは、コンポーネントを使用するクライアントを定義します。 コンパイル単位で定義されている場合を除き、ネイティブな型を使用するとエラーはことに注意してください。
+このサンプルでは、コンポーネントを使用するクライアントを定義します。 コンパイル単位で定義されている場合を除き、ネイティブ型にアクセスする際のエラーであることに注意してください。
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"
@@ -61,6 +61,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

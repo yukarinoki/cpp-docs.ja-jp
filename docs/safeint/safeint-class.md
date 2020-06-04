@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373468"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
 整数オーバーフローを防ぐことができるように整数のプリミティブを拡張し、さまざまな種類の整数を比較してみましょう。
 
-> [!NOTE] 
-> このライブラリの最新バージョンは [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) にあります。
+> [!NOTE]
+> このライブラリの最新バージョンは に[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)にあります。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +33,7 @@ class SafeInt;
 
 ### <a name="parameters"></a>パラメーター
 
-| テンプレート  |  説明 |
+| Template  |  説明 |
 |--------|------------|
 | T         |  `SafeInt` で置き換えられる整数またはブール値パラメーターの型。 |
 | E         |  エラー処理ポリシーを定義する列挙データ型。 |
@@ -42,20 +42,20 @@ class SafeInt;
 | パラメーター  |  説明 |
 |---------|-----------------|
 | *rhs*      |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *i*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *bits*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *私*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *ビット*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-| name                          |  説明 |
+| 名前                          |  説明 |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  既定のコンストラクターです。 |
+| [セーフイント::セーフイント](#safeint)  |  既定のコンストラクターです。 |
 
 ### <a name="assignment-operators"></a>代入演算子
 
-| name  |  構文 |
+| 名前  |  構文 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>キャスト演算子
 
-| name              |  構文 |
+| 名前              |  構文 |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>比較演算子
 
-| name  |  構文 |
+| 名前  |  構文 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>算術演算子
 
-| name  |  構文 |
+| 名前  |  構文 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>論理演算子
 
-| name     |  構文 |
+| 名前     |  構文 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -223,13 +223,13 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `SafeInt`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** safeint.h
 
 **名前空間:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>セーフイント::セーフイント
 
 `SafeInt` オブジェクトを構築します。
 
@@ -257,13 +257,13 @@ SafeInt (
 
 ### <a name="parameters"></a>パラメーター
 
-*i*<br/>
+*私*<br/>
 [in] 新しい `SafeInt` オブジェクトの値。 これは、コンストラクターに応じて、型 T または U のパラメーターにする必要があります。
 
-*b*<br/>
+*B*<br/>
 [in] 新しい `SafeInt` オブジェクトのブール値。
 
-*u*<br/>
+*U*<br/>
 [in] 型 U の `SafeInt`。新しい `SafeInt` オブジェクトは、*u* と同じ値になりますが、型は T になります。
 
 U `SafeInt` に格納されているデータの型。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしの 8 ビットから 64 ビットを使用できます。

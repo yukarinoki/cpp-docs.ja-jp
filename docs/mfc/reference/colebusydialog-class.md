@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: 08e482e6900e96f1d02c34efddc7635bb8e0120e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5be42463c08cacd83de84900fb4d98771774e897
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364239"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog クラス
 
@@ -37,31 +37,31 @@ class COleBusyDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleBusyDialog::COleBusyDialog](#colebusydialog)|`COleBusyDialog` オブジェクトを構築します。|
+|[ダイアログ::コレクビジーダイアログ](#colebusydialog)|`COleBusyDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleBusyDialog::DoModal](#domodal)|サーバー ビジー状態のダイアログ ボックスが表示されます。|
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|ダイアログ ボックスで行った選択を決定します。|
+|[ダイアログ ボックス::Do モーダル](#domodal)|[OLE サーバーのビジー状態] ダイアログ ボックスを表示します。|
+|[ダイアログボックス::選択タイプ](#getselectiontype)|ダイアログ ボックスでの選択を決定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleBusyDialog::m_bz](#m_bz)|ダイアログ ボックスの動作を制御する OLEUIBUSY 型の構造体。|
+|[ダイアログ::m_bz](#m_bz)|ダイアログ ボックスの動作を制御する OLEUIBUSY 型の構造体。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスのオブジェクトを作成`COleBusyDialog`をこれらのダイアログ ボックスを呼び出す場合します。 後に、`COleBusyDialog`オブジェクトが構築された、使用することができます、[各](#m_bz)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_bz`型 OLEUIBUSY 構造です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。
+これらのダイアログ ボックスを`COleBusyDialog`呼び出す場合は、クラスのオブジェクトを作成します。 オブジェクトを`COleBusyDialog`構築した後[、m_bz](#m_bz)構造を使用して、ダイアログ ボックス内のコントロールの値または状態を初期化できます。 構造体`m_bz`の型は、OLEUIBUSY です。 このダイアログ クラスの使用方法の詳細については[、DoModal](#domodal)メンバー関数を参照してください。
 
 > [!NOTE]
->  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。
+> アプリケーション ウィザードで生成されたコンテナー コードでは、このクラスを使用します。
 
-詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。
+詳細については、Windows SDK の[「OLEUIBUSY」](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)の構造体を参照してください。
 
-OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。
+OLE 固有のダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -83,9 +83,9 @@ OLE に固有のダイアログ ボックスの詳細については、記事を
 
 **ヘッダー:** afxodlgs.h
 
-##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog
+## <a name="colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>ダイアログ::コレクビジーダイアログ
 
-この関数は、`COleBusyDialog`オブジェクト。
+この関数は`COleBusyDialog`オブジェクトを構築するだけです。
 
 ```
 explicit COleBusyDialog(
@@ -97,33 +97,33 @@ explicit COleBusyDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*htaskBusy*<br/>
-ビジー状態であるサーバーのタスクへのハンドルします。
+*タスクビジー*<br/>
+ビジー状態のサーバー タスクへのハンドル。
 
-*bNotResponding*<br/>
-TRUE の場合は、サーバーがビジー状態のダイアログ ボックスではなく、応答していません ダイアログ ボックスを呼び出します。 応答していません ダイアログ ボックスの内容は、サーバーがビジー状態 ダイアログ ボックスの内容と若干異なると、キャンセル ボタンが無効になっています。
+*応答しない*<br/>
+TRUE の場合は、[サーバービジー状態] ダイアログ ボックスではなく 、[応答なし] ダイアログ ボックスを呼び出します。 [応答なし] ダイアログ ボックスの表示方法は、[サーバービジー状態] ダイアログ ボックスの文言とは少し異なり、[キャンセル] ボタンは無効になっています。
 
 *dwFlags*<br/>
-作成フラグ。 0 個以上のビットごとの OR 演算子と組み合わせて、次の値を含めることができます。
+作成フラグ。 ビットごとの OR 演算子と組み合わせて、次の値を 0 個以上含めることができます。
 
-- BZ_DISABLECANCELBUTTON では、ダイアログ ボックスを呼び出すときに、[キャンセル] ボタンが無効にします。
+- BZ_DISABLECANCELBUTTON ダイアログ ボックスを呼び出すときに [キャンセル] ボタンを無効にします。
 
-- BZ_DISABLESWITCHTOBUTTON の無効化 ダイアログ ボックスを呼び出すときにスイッチをクリックします。
+- BZ_DISABLESWITCHTOBUTTON ダイアログ ボックスを呼び出すときに [切り替え] ボタンを無効にします。
 
-- BZ_DISABLERETRYBUTTON では、ダイアログ ボックスを呼び出すときに、[再試行] ボタンが無効にします。
+- BZ_DISABLERETRYBUTTON ダイアログ ボックスを呼び出すときに [再試行] ボタンを無効にします。
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログのオブジェクトの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。
+ダイアログ オブジェクトが属する (型`CWnd`) の親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクトへのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ダイアログ ボックスを表示するには、呼び出す[DoModal](#domodal)します。
+ダイアログ ボックスを表示するには[、DoModal](#domodal)を呼び出します。
 
-詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。
+詳細については、Windows SDK の[「OLEUIBUSY」](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)の構造体を参照してください。
 
-##  <a name="domodal"></a>  COleBusyDialog::DoModal
+## <a name="colebusydialogdomodal"></a><a name="domodal"></a>ダイアログ ボックス::Do モーダル
 
-サーバー ビジー状態であるか、サーバーが応答しません ダイアログ ボックスを表示するには、この関数を呼び出します。
+[OLE サーバーがビジー状態] ダイアログ ボックスまたは [サーバーに応答していません] ダイアログ ボックスを表示します。
 
 ```
 virtual INT_PTR DoModal();
@@ -131,23 +131,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスの完了ステータス。 次のいずれかの値です。
+ダイアログ ボックスの完了ステータス。 次のいずれかの値:
 
-- IDOK ダイアログ ボックスが正常に表示されている場合。
+- ダイアログ ボックスが正常に表示された場合は IDOK。
 
-- ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。
+- ユーザーがダイアログ ボックスをキャンセルした場合は、IDCANCEL を指定します。
 
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) Windows SDK 内の関数。
+- エラーが発生した場合は、IDABORT を実行します。 IDABORT が返された場合は`COleDialog::GetLastError`、メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の[「OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw)関数」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_bz)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。
+[m_bz](#m_bz)構造体のメンバを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合は、ダイアログ オブジェクトを`DoModal`構築した後で呼び出す前に、この操作を行う必要があります。
 
-場合`DoModal`返します IDOK、他のメンバーの設定や、ダイアログ ボックスに、ユーザーが入力した情報を取得する関数を呼び出すことができます。
+IDOK が返された場合`DoModal`は、他のメンバー関数を呼び出して、ユーザーがダイアログ ボックスに入力した設定または情報を取得できます。
 
-##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType
+## <a name="colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>ダイアログボックス::選択タイプ
 
-サーバーがビジー状態のダイアログ ボックスでユーザーが選択した型を取得するには、この関数を呼び出します。
+この関数は、[サーバービジー状態] ダイアログ ボックスでユーザーが選択した選択の種類を取得します。
 
 ```
 UINT GetSelectionType() const;
@@ -155,11 +155,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択された型。
+選択の種類です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値の型の値がで指定された、`Selection`で宣言された列挙型、`COleBusyDialog`クラス。
+戻り値の型の値は`Selection`、クラスで宣言された`COleBusyDialog`列挙型によって指定されます。
 
 ```
 enum Selection {
@@ -169,30 +169,30 @@ enum Selection {
     };
 ```
 
-これらの値の簡単な説明に従います。
+これらの値の簡単な説明は次のとおりです。
 
-- `COleBusyDialog::switchTo` 切り替えボタンが押されました。
+- `COleBusyDialog::switchTo`[切り替え] ボタンが押されました。
 
-- `COleBusyDialog::retry` [再試行] ボタンが押されました。
+- `COleBusyDialog::retry`再試行ボタンが押されました。
 
-- `COleBusyDialog::callUnblocked` サーバーをアクティブ化する呼び出しがブロックされていません。
+- `COleBusyDialog::callUnblocked`サーバーをアクティブ化するための呼び出しはブロック解除されました。
 
-##  <a name="m_bz"></a>  COleBusyDialog::m_bz
+## <a name="colebusydialogm_bz"></a><a name="m_bz"></a>ダイアログ::m_bz
 
-OLEUIBUSY 型の構造体、サーバーがビジー状態 ダイアログ ボックスの動作を制御するために使用します。
+[サーバー ビジー状態] ダイアログ ボックスの動作を制御するために使用される OLEUIBUSY 型の構造体。
 
 ```
 OLEUIBUSY m_bz;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。
+この構造体のメンバーは、直接またはメンバー関数を通じて変更できます。
 
-詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。
+詳細については、Windows SDK の[「OLEUIBUSY」](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw)の構造体を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)

@@ -1,5 +1,5 @@
 ---
-title: セキュリティ識別子に関するグローバル関数
+title: セキュリティ識別子のグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlsecurity/ATL::Sids::AccountOps
@@ -37,19 +37,19 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83326c13de7585806ab841f728f587f1131b5e8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325990"
 ---
-# <a name="security-identifier-global-functions"></a>セキュリティ識別子に関するグローバル関数
+# <a name="security-identifier-global-functions"></a>セキュリティ識別子のグローバル関数
 
-これらの関数は、オブジェクトに共通の既知の SID を返します。
+これらの関数は、一般的な既知の SID オブジェクトを返します。
 
 > [!IMPORTANT]
->  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+> 次の表に示す関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 |||
 |-|-|
@@ -84,13 +84,13 @@ ms.locfileid: "62274946"
 |[Sids::SystemOps](#systemops)|DOMAIN_ALIAS_RID_SYSTEM_OPS SID を返します。|
 |[Sids::TerminalServer](#terminalserver)|SECURITY_TERMINAL_SERVER_RID SID を返します。|
 |[Sids::Users](#users)|DOMAIN_ALIAS_RID_USERS SID を返します。|
-|[Sids::World](#world)|SECURITY_WORLD_RID SID を返します。|
+|[シッズ::世界](#world)|SECURITY_WORLD_RID SID を返します。|
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 
-##  <a name="accountops"></a>  Sids::AccountOps
+## <a name="sidsaccountops"></a><a name="accountops"></a>シド::アカウントオプス
 
 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID を返します。
 
@@ -98,7 +98,7 @@ DOMAIN_ALIAS_RID_ACCOUNT_OPS SID を返します。
 CSid AccountOps() throw(...);
 ```
 
-##  <a name="admins"></a>  Sids::Admins
+## <a name="sidsadmins"></a><a name="admins"></a>シド::管理者
 
 DOMAIN_ALIAS_RID_ADMINS SID を返します。
 
@@ -106,7 +106,7 @@ DOMAIN_ALIAS_RID_ADMINS SID を返します。
 CSid Admins() throw(...);
 ```
 
-##  <a name="anonymouslogon"></a>  Sids::AnonymousLogon
+## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a>シズ::匿名ログオン
 
 SECURITY_ANONYMOUS_LOGON_RID SID を返します。
 
@@ -114,7 +114,7 @@ SECURITY_ANONYMOUS_LOGON_RID SID を返します。
 CSid AnonymousLogon() throw(...);
 ```
 
-##  <a name="authenticateduser"></a>  Sids::AuthenticatedUser
+## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a>シズ::認証されたユーザー
 
 SECURITY_AUTHENTICATED_USER_RID SID を返します。
 
@@ -122,7 +122,7 @@ SECURITY_AUTHENTICATED_USER_RID SID を返します。
 CSid AuthenticatedUser() throw(...);
 ```
 
-##  <a name="backupops"></a>  Sids::BackupOps
+## <a name="sidsbackupops"></a><a name="backupops"></a>シド::バックアップオプス
 
 DOMAIN_ALIAS_RID_BACKUP_OPS SID を返します。
 
@@ -130,7 +130,7 @@ DOMAIN_ALIAS_RID_BACKUP_OPS SID を返します。
 CSid BackupOps() throw(...);
 ```
 
-##  <a name="batch"></a>  Sids::Batch
+## <a name="sidsbatch"></a><a name="batch"></a>シド::バッチ
 
 SECURITY_BATCH_RID SID を返します。
 
@@ -138,7 +138,7 @@ SECURITY_BATCH_RID SID を返します。
 CSid Batch() throw(...);
 ```
 
-##  <a name="creatorgroup"></a>  Sids::CreatorGroup
+## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a>シッズ::クリエイターグループ
 
 SECURITY_CREATOR_GROUP_RID SID を返します。
 
@@ -146,7 +146,7 @@ SECURITY_CREATOR_GROUP_RID SID を返します。
 CSid CreatorGroup() throw(...);
 ```
 
-##  <a name="creatorgroupserver"></a>  Sids::CreatorGroupServer
+## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a>シッズ::クリエイターグループサーバー
 
 SECURITY_CREATOR_GROUP_SERVER_RID SID を返します。
 
@@ -154,7 +154,7 @@ SECURITY_CREATOR_GROUP_SERVER_RID SID を返します。
 CSid CreatorGroupServer() throw(...);
 ```
 
-##  <a name="creatorowner"></a>  Sids::CreatorOwner
+## <a name="sidscreatorowner"></a><a name="creatorowner"></a>シズ::クリエイターオーナー
 
 SECURITY_CREATOR_OWNER_RID SID を返します。
 
@@ -162,7 +162,7 @@ SECURITY_CREATOR_OWNER_RID SID を返します。
 CSid CreatorOwner() throw(...);
 ```
 
-##  <a name="creatorownerserver"></a>  Sids::CreatorOwnerServer
+## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a>シズ::クリエイターオーナーサーバー
 
 SECURITY_CREATOR_OWNER_SERVER_RID SID を返します。
 
@@ -170,7 +170,7 @@ SECURITY_CREATOR_OWNER_SERVER_RID SID を返します。
 CSid CreatorOwnerServer() throw(...);
 ```
 
-##  <a name="dialup"></a>  Sids::Dialup
+## <a name="sidsdialup"></a><a name="dialup"></a>シズ::D
 
 SECURITY_DIALUP_RID SID を返します。
 
@@ -178,7 +178,7 @@ SECURITY_DIALUP_RID SID を返します。
 CSid Dialup() throw(...);
 ```
 
-##  <a name="guests"></a>  Sids::Guests
+## <a name="sidsguests"></a><a name="guests"></a>シッズ::ゲスト
 
 DOMAIN_ALIAS_RID_GUESTS SID を返します。
 
@@ -186,7 +186,7 @@ DOMAIN_ALIAS_RID_GUESTS SID を返します。
 CSid Guests() throw(...);
 ```
 
-##  <a name="interactive"></a>  Sids::Interactive
+## <a name="sidsinteractive"></a><a name="interactive"></a>シッズ::インタラクティブ
 
 SECURITY_INTERACTIVE_RID SID を返します。
 
@@ -194,7 +194,7 @@ SECURITY_INTERACTIVE_RID SID を返します。
 CSid Interactive() throw(...);
 ```
 
-##  <a name="local"></a>  Sids::Local
+## <a name="sidslocal"></a><a name="local"></a>シッズ::ローカル
 
 SECURITY_LOCAL_RID SID を返します。
 
@@ -202,7 +202,7 @@ SECURITY_LOCAL_RID SID を返します。
 CSid Local() throw(...);
 ```
 
-##  <a name="network"></a>  Sids::Network
+## <a name="sidsnetwork"></a><a name="network"></a>シド::ネットワーク
 
 SECURITY_NETWORK_RID SID を返します。
 
@@ -210,7 +210,7 @@ SECURITY_NETWORK_RID SID を返します。
 CSid Network() throw(...);
 ```
 
-##  <a name="networkservice"></a>  Sids::NetworkService
+## <a name="sidsnetworkservice"></a><a name="networkservice"></a>シズ::ネットワークサービス
 
 SECURITY_NETWORK_SERVICE_RID SID を返します。
 
@@ -218,13 +218,13 @@ SECURITY_NETWORK_SERVICE_RID SID を返します。
 CSid NetworkService() throw(...);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CPerfMon のセキュリティ オブジェクトの読み取りに NT authority \networkservice ユーザーを有効にするのにには、NetworkService を使用します。 NetworkService は、DLL は Windows XP Home Edition、Windows XP Professional、Windows Server 2003、およびオペレーティング システムが大きいの NetworkService アカウントでログインできるように ATLServer コードに、SecurityAttribute を追加します。
+ネットワーク サービスを使用して、NT オーソリティ\ネットワーク サービス ユーザーが CPerfMon セキュリティ オブジェクトを読み取るようにします。 ネットワーク サービスは、WINDOWS XP ホーム エディション、Windows XP プロフェッショナル、Windows Server 2003 およびより大きなオペレーティング システム上のネットワーク サービス アカウントで DLL がログインできるようにする ATLServer コードにセキュリティ属性を追加します。
 
-カスタム ログのカウンターがパフォーマンス モニター mmc ATLServer CPerfMon クラスを使用して作成されると、リアルタイム ビューに正しく表示されますが、ログ ファイルを表示するときに、カウンターが表示されません。 CPerfMon カスタム パフォーマンス カウンターは、Windows XP Home Edition、Windows XP Professional、windows Server 2003 (またはそれ以上) のオペレーティング システム (smlogsvc.exe)「パフォーマンス ログと警告」のサービスで実行するために必要なアクセス許可を必要はありません。 このサービスは、"NT authority \networkservice"のアカウントで実行されます。
+カスタム ログ カウンタが PERFmon MMC の ATLServer CPerfMon クラスで作成されると、リアルタイム ビューでは正しく表示されますが、ログ ファイルを表示するときにカウンタが表示されないことがあります。 CPerfMon カスタム パフォーマンス カウンタには、Windows XP ホーム エディション、Windows XP プロフェッショナル、Windows Server 2003 (またはそれ以上) のオペレーティング システムの "パフォーマンス ログと警告" サービス (smlogsvc.exe) で実行するために必要なアクセス許可がありません。 このサービスは、"NT オーソリティ\ネットワーク サービス" アカウントで実行されます。
 
-##  <a name="null"></a>  Sids::Null
+## <a name="sidsnull"></a><a name="null"></a>シッズ::ヌル
 
 SECURITY_NULL_RID SID を返します。
 
@@ -232,7 +232,7 @@ SECURITY_NULL_RID SID を返します。
 CSid Null() throw(...);
 ```
 
-##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess
+## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a>シド::PreW2KAccess
 
 DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID を返します。
 
@@ -240,7 +240,7 @@ DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID を返します。
 CSid PreW2KAccess() throw(...);
 ```
 
-##  <a name="powerusers"></a>  Sids::PowerUsers
+## <a name="sidspowerusers"></a><a name="powerusers"></a>シッズ::Pワーユーザー
 
 DOMAIN_ALIAS_RID_POWER_USERS SID を返します。
 
@@ -248,7 +248,7 @@ DOMAIN_ALIAS_RID_POWER_USERS SID を返します。
 CSid PowerUsers() throw(...);
 ```
 
-##  <a name="printops"></a>  Sids::PrintOps
+## <a name="sidsprintops"></a><a name="printops"></a>シッズ::Pリントプス
 
 DOMAIN_ALIAS_RID_PRINT_OPS SID を返します。
 
@@ -256,7 +256,7 @@ DOMAIN_ALIAS_RID_PRINT_OPS SID を返します。
 CSid PrintOps() throw(...);
 ```
 
-##  <a name="proxy"></a>  Sids::Proxy
+## <a name="sidsproxy"></a><a name="proxy"></a>シド::Pロキシー
 
 SECURITY_PROXY_RID SID を返します。
 
@@ -264,7 +264,7 @@ SECURITY_PROXY_RID SID を返します。
 CSid Proxy() throw(...);
 ```
 
-##  <a name="rasservers"></a>  Sids::RasServers
+## <a name="sidsrasservers"></a><a name="rasservers"></a>シド::ラスサーバー
 
 DOMAIN_ALIAS_RID_RAS_SERVERS SID を返します。
 
@@ -272,7 +272,7 @@ DOMAIN_ALIAS_RID_RAS_SERVERS SID を返します。
 CSid RasServers() throw(...);
 ```
 
-##  <a name="replicator"></a>  Sids::Replicator
+## <a name="sidsreplicator"></a><a name="replicator"></a>シズ::レプリケータ
 
 DOMAIN_ALIAS_RID_REPLICATOR SID を返します。
 
@@ -280,7 +280,7 @@ DOMAIN_ALIAS_RID_REPLICATOR SID を返します。
 CSid Replicator() throw(...);
 ```
 
-##  <a name="restrictedcode"></a>  Sids::RestrictedCode
+## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a>シッズ::制限付きコード
 
 SECURITY_RESTRICTED_CODE_RID SID を返します。
 
@@ -288,7 +288,7 @@ SECURITY_RESTRICTED_CODE_RID SID を返します。
 CSid RestrictedCode() throw(...);
 ```
 
-##  <a name="self"></a>  Sids::Self
+## <a name="sidsself"></a><a name="self"></a>シッズ::自己
 
 SECURITY_PRINCIPAL_SELF_RID SID を返します。
 
@@ -296,7 +296,7 @@ SECURITY_PRINCIPAL_SELF_RID SID を返します。
 CSid Self() throw(...);
 ```
 
-##  <a name="serverlogon"></a>  Sids::ServerLogon
+## <a name="sidsserverlogon"></a><a name="serverlogon"></a>シズ::サーバーログオン
 
 SECURITY_SERVER_LOGON_RID SID を返します。
 
@@ -304,7 +304,7 @@ SECURITY_SERVER_LOGON_RID SID を返します。
 CSid ServerLogon() throw(...);
 ```
 
-##  <a name="service"></a>  Sids::Service
+## <a name="sidsservice"></a><a name="service"></a>シッズ::サービス
 
 SECURITY_SERVICE_RID SID を返します。
 
@@ -312,7 +312,7 @@ SECURITY_SERVICE_RID SID を返します。
 CSid Service() throw(...);
 ```
 
-##  <a name="system"></a>  Sids::System
+## <a name="sidssystem"></a><a name="system"></a>シッズ::システム
 
 SECURITY_LOCAL_SYSTEM_RID SID を返します。
 
@@ -320,7 +320,7 @@ SECURITY_LOCAL_SYSTEM_RID SID を返します。
 CSid System() throw(...);
 ```
 
-##  <a name="systemops"></a>  Sids::SystemOps
+## <a name="sidssystemops"></a><a name="systemops"></a>シド::システムオプス
 
 DOMAIN_ALIAS_RID_SYSTEM_OPS SID を返します。
 
@@ -328,7 +328,7 @@ DOMAIN_ALIAS_RID_SYSTEM_OPS SID を返します。
 CSid SystemOps() throw(...);
 ```
 
-##  <a name="terminalserver"></a>  Sids::TerminalServer
+## <a name="sidsterminalserver"></a><a name="terminalserver"></a>シッズ::ターミナルサーバー
 
 SECURITY_TERMINAL_SERVER_RID SID を返します。
 
@@ -336,7 +336,7 @@ SECURITY_TERMINAL_SERVER_RID SID を返します。
 CSid TerminalServer() throw(...);
 ```
 
-##  <a name="users"></a>  Sids::Users
+## <a name="sidsusers"></a><a name="users"></a>シド::ユーザー
 
 DOMAIN_ALIAS_RID_USERS SID を返します。
 
@@ -344,7 +344,7 @@ DOMAIN_ALIAS_RID_USERS SID を返します。
 CSid Users() throw(...);
 ```
 
-##  <a name="world"></a>  Sids::World
+## <a name="sidsworld"></a><a name="world"></a>シッズ::世界
 
 SECURITY_WORLD_RID SID を返します。
 

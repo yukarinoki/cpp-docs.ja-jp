@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: c5069bc63d61016e6f3c2f983de23901b9f35814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f120678c822749c8f27c3c56c95fcdd54647aca3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374930"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog クラス
 
@@ -35,30 +35,30 @@ class COleLinksDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|`COleLinksDialog` オブジェクトを構築します。|
+|[ダイアログボックス::コレクスリンクダイアログ](#colelinksdialog)|`COleLinksDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleLinksDialog::DoModal](#domodal)|OLE の [リンクの編集] ダイアログ ボックスが表示されます。|
+|[ダイアログ ボックス:Do モーダル](#domodal)|[OLE リンクの編集] ダイアログ ボックスを表示します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|ダイアログ ボックスの動作が制御される型の構造体。|
+|[ダイアログ::m_el](#m_el)|ダイアログ ボックスの動作を制御する OLEUIEDITLINKS 型の構造体。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスのオブジェクトを作成`COleLinksDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COleLinksDialog`オブジェクトが構築された、使用することができます、[各](#m_el)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_el`型される構造です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。
+このダイアログ ボックスを`COleLinksDialog`呼び出す場合は、クラスのオブジェクトを作成します。 オブジェクトを`COleLinksDialog`構築した後[、m_el](#m_el)構造を使用して、ダイアログ ボックス内のコントロールの値または状態を初期化できます。 構造体`m_el`の型は OLEUIEDIT リンクです。 このダイアログ クラスの使用方法の詳細については[、DoModal](#domodal)メンバー関数を参照してください。
 
 > [!NOTE]
->  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。
+> アプリケーション ウィザードで生成されたコンテナー コードでは、このクラスを使用します。
 
-詳細については、次を参照してください。、[される](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa)Windows SDK の構造体。
+詳細については、Windows SDK の[「OLEUIEDITLINKS」](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw)の構造を参照してください。
 
-OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。
+OLE 固有のダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,9 +80,9 @@ OLE に固有のダイアログ ボックスの詳細については、記事を
 
 **ヘッダー:** afxodlgs.h
 
-##  <a name="domodal"></a>  COleLinksDialog::DoModal
+## <a name="colelinksdialogdomodal"></a><a name="domodal"></a>ダイアログ ボックス:Do モーダル
 
-OLE の [リンクの編集] ダイアログ ボックスが表示されます。
+[OLE リンクの編集] ダイアログ ボックスを表示します。
 
 ```
 virtual INT_PTR DoModal();
@@ -90,19 +90,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスの完了ステータス。 次のいずれかの値です。
+ダイアログ ボックスの完了ステータス。 次のいずれかの値:
 
-- IDOK ダイアログ ボックスが正常に表示されている場合。
+- ダイアログ ボックスが正常に表示された場合は IDOK。
 
-- ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。
+- ユーザーがダイアログ ボックスをキャンセルした場合は、IDCANCEL を指定します。
 
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa)Windows SDK 内の関数。
+- エラーが発生した場合は、IDABORT を実行します。 IDABORT が返された場合は`COleDialog::GetLastError`、メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の[「OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)関数」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_el)構造、行う必要があります、呼び出す前に`DoModal`はダイアログ オブジェクトを構築します。
+[m_el](#m_el)構造体のメンバを設定してさまざまなダイアログ ボックス コントロールを初期化する場合は、ダイアログ オブジェクトを構築`DoModal`した後で呼び出す前に、この操作を行う必要があります。
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+## <a name="colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>ダイアログボックス::コレクスリンクダイアログ
 
 `COleLinksDialog` オブジェクトを構築します。
 
@@ -117,37 +117,37 @@ COleLinksDialog (
 ### <a name="parameters"></a>パラメーター
 
 *pDoc*<br/>
-編集するリンクを含む OLE ドキュメントへのポインター。
+編集するリンクを含む OLE ドキュメントへのリンク。
 
-*pView*<br/>
-上の現在のビューを指す*pDoc*します。
+*pビュー*<br/>
+*pDoc*上の現在のビューへのポイント
 
 *dwFlags*<br/>
-作成フラグには、0 またはダイアログ ボックスが表示されたら、[ヘルプ] ボタンが表示されるかどうかを指定するのいずれかが含まれています。
+作成フラグは、ダイアログ ボックスが表示されたときに [ヘルプ] ボタンを表示するかどうかを指定する 0 またはELF_SHOWHELPを含みます。
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ ボックスの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。
+ダイアログ オブジェクトが属する (型`CWnd`) の親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクトへのポインター。 NULL の場合、ダイアログ ボックスの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の作成のみを`COleLinksDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。
+この関数は`COleLinksDialog`オブジェクトのみを構築します。 ダイアログ ボックスを表示するには[、DoModal](#domodal)関数を呼び出します。
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+## <a name="colelinksdialogm_el"></a><a name="m_el"></a>ダイアログ::m_el
 
-リンクの編集 ダイアログ ボックスの動作を制御するために使用される型の構造体。
+[リンクの編集] ダイアログ ボックスの動作を制御するために使用される OLEUIEDITLINKS 型の構造体。
 
 ```
 OLEUIEDITLINKS m_el;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。
+この構造体のメンバーは、直接またはメンバー関数を通じて変更できます。
 
-詳細については、次を参照してください。、[される](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa)Windows SDK の構造体。
+詳細については、Windows SDK の[「OLEUIEDITLINKS」](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw)の構造を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)

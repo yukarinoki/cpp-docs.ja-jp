@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f96282a7728c6db6e0b05d36406f15383913f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296164"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372687"
 ---
-# <a name="criticalsection-class"></a>critical_section クラス
+# <a name="critical_section-class"></a>critical_section クラス
 
-同時実行ランタイムを明示的に認識する再入不可能なミューテックスです。
+コンカレンシー ランタイムを明示的に認識する再入不可能なミューテックスです。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class critical_section;
 ```
 
@@ -37,34 +37,34 @@ class critical_section;
 
 |名前|説明|
 |----------|-----------------|
-|`native_handle_type`|`critical_section` オブジェクトへの参照。|
+|`native_handle_type`|`critical_section` オブジェクトへの参照です。|
 
 ### <a name="public-classes"></a>パブリック クラス
 
 |名前|説明|
 |----------|-----------------|
-|[critical_section::scoped_lock クラス](#critical_section__scoped_lock_class)|例外安全な RAII ラッパーを`critical_section`オブジェクト。|
+|[critical_section::scoped_lock クラス](#critical_section__scoped_lock_class)|`critical_section`オブジェクトの例外セーフ RAII ラッパー。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[critical_section](#ctor)|新しい重要なセクションを構築します。|
-|[~ critical_section デストラクター](#dtor)|クリティカル セクションを破棄します。|
+|[critical_section](#ctor)|新しいクリティカル セクションを作成します。|
+|[~critical_sectionデストラクタ](#dtor)|クリティカル セクションを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[lock](#lock)|この重要なセクションを取得します。|
-|[native_handle](#native_handle)|いずれかが存在する場合は、プラットフォーム固有のネイティブ ハンドルを返します。|
-|[try_lock](#try_lock)|ブロックすることがなく、ロックの取得を試みます。|
-|[try_lock_for](#try_lock_for)|ミリ秒数を特定のブロックすることがなく、ロックの取得を試みます。|
-|[unlock](#unlock)|クリティカル セクションのロックを解除します。|
+|[ロック](#lock)|このクリティカル セクションを取得します。|
+|[native_handle](#native_handle)|プラットフォーム固有のネイティブ ハンドルが存在する場合は、そのハンドルを返します。|
+|[try_lock](#try_lock)|ブロックせずにロックを取得しようとします。|
+|[try_lock_for](#try_lock_for)|特定のミリ秒数のブロックを行わずにロックを取得しようとします。|
+|[ロック 解除](#unlock)|クリティカル セクションのロックを解除します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-詳細については、次を参照してください。[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)します。
+詳細については、「[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -74,47 +74,47 @@ class critical_section;
 
 **ヘッダー:** concrt.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="ctor"></a> critical_section
+## <a name="critical_section"></a><a name="ctor"></a>critical_section
 
-新しい重要なセクションを構築します。
+新しいクリティカル セクションを作成します。
 
-```
+```cpp
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~critical_section
+## <a name="critical_section"></a><a name="dtor"></a>~critical_section
 
 クリティカル セクションを破棄します。
 
-```
+```cpp
 ~critical_section();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デストラクターが実行されるときに、ロックが保持されないと想定されます。 未定義の動作で、結果の保持をされている、クリティカル セクションがロックに破棄されることができます。
+デストラクターの実行時にロックが保持されなくなることが予想されます。 ロックを保持したままクリティカル セクションを破棄すると、未定義の動作が発生します。
 
-##  <a name="lock"></a> ロック
+## <a name="lock"></a><a name="lock"></a>ロック
 
-この重要なセクションを取得します。
+このクリティカル セクションを取得します。
 
-```
+```cpp
 void lock();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-利用する方が安全では多くの場合、 [scoped_lock](#critical_section__scoped_lock_class)コンストラクトを取得および解放を`critical_section`オブジェクト、例外が安全な方法です。
+多くの場合[、scoped_lock](#critical_section__scoped_lock_class)の構造を利用して、例外セーフな`critical_section`方法でオブジェクトを取得して解放する方が安全です。
 
-ロックは既に呼び出し元のコンテキストによって保持されている場合、 [improper_lock](improper-lock-class.md)例外がスローされます。
+ロックが呼び出し元のコンテキストによって既に保持されている場合は[、improper_lock](improper-lock-class.md)例外がスローされます。
 
-##  <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
-いずれかが存在する場合は、プラットフォーム固有のネイティブ ハンドルを返します。
+プラットフォーム固有のネイティブ ハンドルが存在する場合は、そのハンドルを返します。
 
-```
+```cpp
 native_handle_type native_handle();
 ```
 
@@ -122,23 +122,23 @@ native_handle_type native_handle();
 
 クリティカル セクションへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-A`critical_section`オブジェクトは、Windows オペレーティング システムのプラットフォームの特定ネイティブ ハンドルに関連付けられていません。 メソッドは、単に、オブジェクト自体への参照を返します。
+`critical_section`オブジェクトは、Windows オペレーティング システムのプラットフォーム固有のネイティブ ハンドルと関連付けされていません。 このメソッドは、オブジェクト自体への参照を返します。
 
-##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock クラス
+## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section::scoped_lockクラス
 
-例外安全な RAII ラッパーを`critical_section`オブジェクト。
+`critical_section`オブジェクトの例外セーフ RAII ラッパー。
 
-```
+```cpp
 class scoped_lock;
 ```
 
-##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock
 
-構築、`scoped_lock`オブジェクトし、取得、`critical_section`で渡されるオブジェクト、`_Critical_section`パラメーター。 クリティカル セクションは、別のスレッドによって保持されているが、この呼び出しはブロックされます。
+オブジェクトを`scoped_lock`構築し、パラメーターで渡`critical_section`されたオブジェクトを`_Critical_section`取得します。 クリティカル セクションが別のスレッドによって保持されている場合、この呼び出しはブロックされます。
 
-```
+```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```
 
@@ -147,52 +147,52 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 ロックするクリティカル セクション。
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock::~scoped_lock
 
-破棄、`scoped_lock`オブジェクトし、そのコンス トラクターで重要なセクションを解放します。
+オブジェクトを`scoped_lock`破棄し、コンストラクターで指定されたクリティカル セクションを解放します。
 
-```
+```cpp
 ~scoped_lock();
 ```
 
-##  <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
-ブロックすることがなく、ロックの取得を試みます。
+ブロックせずにロックを取得しようとします。
 
-```
+```cpp
 bool try_lock();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-ロックが取得された場合、値**true**、それ以外の値**false**します。
+ロックが取得された場合は、値**true、** それ以外の場合は、値**false。**
 
-##  <a name="try_lock_for"></a> try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
-ミリ秒数を特定のブロックすることがなく、ロックの取得を試みます。
+特定のミリ秒数のブロックを行わずにロックを取得しようとします。
 
-```
+```cpp
 bool try_lock_for(unsigned int _Timeout);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *_Timeout*<br/>
-タイムアウトになるまで待機するミリ秒数。
+タイムアウトするまでの待機時間 (ミリ秒) です。
 
 ### <a name="return-value"></a>戻り値
 
-ロックが取得された場合、値**true**、それ以外の値**false**します。
+ロックが取得された場合は、値**true、** それ以外の場合は、値**false。**
 
-##  <a name="unlock"></a> ロックを解除します。
+## <a name="unlock"></a><a name="unlock"></a>ロック 解除
 
 クリティカル セクションのロックを解除します。
 
-```
+```cpp
 void unlock();
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
-[reader_writer_lock クラス](reader-writer-lock-class.md)
+[同時実行名前空間](concurrency-namespace.md)<br/>
+[reader_writer_lockクラス](reader-writer-lock-class.md)

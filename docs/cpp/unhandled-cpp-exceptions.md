@@ -1,4 +1,4 @@
----
+﻿---
 title: 未処理の C++ 例外
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f42a4e2af46ab7690d6f4bc9641c09f3757eb6b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160555"
 ---
 # <a name="unhandled-c-exceptions"></a>未処理の C++ 例外
 
-一致するハンドラーの場合 (または省略記号**キャッチ**ハンドラー) の定義済みの現在の例外は見つかりません`terminate`実行時に呼び出されます。 (または明示的にハンドラーのいずれかで `terminate` を呼び出すことができます)。`terminate` の既定のアクションは、`abort` を呼び出すことです。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate`ルーチンが常に引数として渡された最後関数を呼び出します`set_terminate`します。
+現在の例外に一致するハンドラー (または省略記号の**catch**ハンドラー) が見つからない場合は、定義済みの `terminate` 実行時関数が呼び出されます。 (任意のハンドラーで `terminate` を明示的に呼び出すこともできます)。`terminate` の既定のアクションでは `abort`が呼び出されます。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate` ルーチンは常に、`set_terminate`の引数として渡された最後の関数を呼び出します。
 
 ## <a name="example"></a>例
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```Output
 term_func was called by terminate.
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 `term_func` 関数は、理想的には `exit` を呼び出して、プログラムまたは現在のスレッドを終了する必要があります。 そうしないで、呼び出し元に戻った場合は、`abort` が呼び出されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ 例外処理](../cpp/cpp-exception-handling.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)

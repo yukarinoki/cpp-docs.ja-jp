@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: e2341dcc0f2f03fbfa212d1ea49993016e193638
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c8f883dd4f946c03aaa22dffcf5a3164a539d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364921"
 ---
-# <a name="basicios-class"></a>basic_ios クラス
+# <a name="basic_ios-class"></a>basic_ios クラス
 
-このテンプレート クラスは、テンプレート パラメーターに依存する、入力ストリーム([basic_istream](../standard-library/basic-istream-class.md) テンプレート クラス) と出力ストリーム ([basic_ostream](../standard-library/basic-ostream-class.md) テンプレート クラス) の両方に共通のストレージとメンバー関数を表します。 (クラス [ios_base](../standard-library/ios-base-class.md) は、テンプレート パラメーターに依存しない、共通の要素を記述します。)クラス**basic_ios\<クラス Elem、クラス特徴 >** のオブジェクトは、型の要素を含むストリームを`Elem`制御するのに役立ちます。この型`Traits`の特性はクラスによって決定されます。
+クラス テンプレートは、(クラス テンプレート[basic_istream](../standard-library/basic-istream-class.md)) 入力ストリームと、テンプレート パラメータに依存する (クラス テンプレート[basic_ostream](../standard-library/basic-ostream-class.md)) の出力ストリームの両方に共通するストレージ関数とメンバー関数を記述します。 (クラス[ios_base](../standard-library/ios-base-class.md)は、テンプレート パラメーターに依存しない共通の内容を記述します。クラス**basic_ios\<クラス Elem のオブジェクトであるクラス Traits>は**、クラスによって`Elem`文字の特徴が決定される型の要素を`Traits`使用してストリームを制御するのに役立ちます。
 
 ## <a name="syntax"></a>構文
 
@@ -79,16 +79,16 @@ class basic_ios : public ios_base
 *Elem*\
 型。
 
-*名札*\
+*特徴*\
 `char_traits` 型の変数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **basic_ios\<class Elem, class Traits>** クラスのオブジェクトは以下を格納します。
 
-- [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** 型のオブジェクトを指し示すリンク付けポインター。
+- **\<エレム、トレイト**[>basic_istream型の](../standard-library/basic-istream-class.md)オブジェクトへのタイ ポインタ。
 
-- [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, Traits >** 型のオブジェクトを指し示すストリーム バッファー ポインター。
+- Elem、Traits >basic_streambuf型[の](../standard-library/basic-streambuf-class.md)オブジェクトへのストリーム バッファ ポインタ。**\< **
 
 - [書式設定情報](../standard-library/ios-base-class.md)。
 
@@ -98,13 +98,13 @@ class basic_ios : public ios_base
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[basic_ios](#basic_ios)|`basic_ios` クラスを構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|テンプレート パラメーター `Elem` のシノニム。|
 |[int_type](#int_type)|`Traits::int_type` と同義。|
@@ -116,33 +116,33 @@ class basic_ios : public ios_base
 
 |メンバー関数|説明|
 |-|-|
-|[bad](#bad)|ストリーム バッファーの整合性の損失を示します。|
-|[clear](#clear)|すべてのエラー フラグをクリアします。|
+|[悪い](#bad)|ストリーム バッファーの整合性の損失を示します。|
+|[クリア](#clear)|すべてのエラー フラグをクリアします。|
 |[copyfmt](#copyfmt)|1 つのストリームから別のストリームにフラグをコピーします。|
 |[eof](#eof)|ストリームの末尾に達しているかどうかを示します。|
-|[exceptions](#exceptions)|ストリームによってどの例外がスローされるかを示します。|
-|[fail](#fail)|ストリームからの有効フィールドの抽出エラーを示します。|
-|[fill](#fill)|テキストがストリームの幅に満たない場合に使用される文字を指定するか、返します。|
-|[good](#good)|ストリームの状態が良好であることを示します。|
+|[例外](#exceptions)|ストリームによってどの例外がスローされるかを示します。|
+|[失敗](#fail)|ストリームからの有効フィールドの抽出エラーを示します。|
+|[埋める](#fill)|テキストがストリームの幅に満たない場合に使用される文字を指定するか、返します。|
+|[よし](#good)|ストリームの状態が良好であることを示します。|
 |[imbue](#imbue)|ロケールを変更します。|
-|[init](#init)|`basic_ios` コンストラクターによって呼び出されます。|
-|[move](#move)|ストリーム バッファーへのポインターを除くすべての値を、パラメーターから現在のオブジェクトに移動します。|
+|[Init](#init)|`basic_ios` コンストラクターによって呼び出されます。|
+|[移動](#move)|ストリーム バッファーへのポインターを除くすべての値を、パラメーターから現在のオブジェクトに移動します。|
 |[narrow](#narrow)|指定された `char_type` と同等の文字を検索します。|
 |[rdbuf](#rdbuf)|指定したバッファーにストリームをルーティングします。|
 |[rdstate](#rdstate)|フラグのビットの状態を読み取ります。|
 |[set_rdbuf](#set_rdbuf)|ストリーム バッファーを割り当てて、このストリーム オブジェクトの読み取りバッファーとして使用します。|
 |[setstate](#setstate)|追加のフラグを設定します。|
-|[swap](#swap)|`basic_ios` オブジェクトの値を別の `basic_ios` オブジェクトの値と交換します。 ストリーム バッファーへのポインターは交換されません。|
+|[スワップ](#swap)|`basic_ios` オブジェクトの値を別の `basic_ios` オブジェクトの値と交換します。 ストリーム バッファーへのポインターは交換されません。|
 |[tie](#tie)|1 つのストリームが別のストリームの前に処理されるようにします。|
 |[widen](#widen)|指定された char と同等の `char_type` を検索します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[explicit operator bool](#op_bool)|オブジェクトを`basic_ios` **ブール**値として使用できるようにします。 しばしば発生する意図しない副作用を防ぐため、自動型変換は無効になっています。|
+|[explicit operator bool](#op_bool)|オブジェクトを`basic_ios` **bool**として使用できます。 しばしば発生する意図しない副作用を防ぐため、自動型変換は無効になっています。|
 |[operator void *](#op_void_star)|ストリームが依然として良好かどうかを示します。|
-|[operator!](#op_not)|ストリームが悪化していないかどうかを示します。|
+|[演算子！](#op_not)|ストリームが悪化していないかどうかを示します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -150,7 +150,7 @@ class basic_ios : public ios_base
 
 **名前空間:** std
 
-## <a name="bad"></a>  basic_ios::bad
+## <a name="basic_iosbad"></a><a name="bad"></a>basic_ios::悪い
 
 ストリーム バッファーの整合性の損失を示します。
 
@@ -160,7 +160,7 @@ bool bad() const;
 
 ### <a name="return-value"></a>戻り値
 
-が 0 `rdstate & badbit`以外の場合は**true** 、それ以外の場合は**false**。
+**0** `rdstate & badbit`以外の場合は true。それ以外**の場合は false。**
 
 `badbit` の詳細については、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
@@ -183,7 +183,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_ios"></a>  basic_ios::basic_ios
+## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a>basic_ios::basic_ios
 
 basic_ios クラスを構築します。
 
@@ -194,14 +194,14 @@ basic_ios();
 
 ### <a name="parameters"></a>パラメーター
 
-*sb*\
+*Sb*\
 入力要素または出力要素を格納する標準のバッファー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のコンストラクターは、[init](#init)(_ *Sb*) を呼び出すことによってそのメンバー オブジェクトを初期化します。 2 つ目の (保護された) コンストラクターは、そのメンバー オブジェクトを初期化前の状態のままにします。 を`init`後で呼び出すでは、オブジェクトを安全に破棄する前に、そのオブジェクトを初期化する必要があります。
+最初のコンストラクターは、[init](#init)(_ *Sb*) を呼び出すことによってそのメンバー オブジェクトを初期化します。 2 つ目の (保護された) コンストラクターは、そのメンバー オブジェクトを初期化前の状態のままにします。 後の呼び`init`出しは、オブジェクトを安全に破棄する前に初期化する必要があります。
 
-## <a name="char_type"></a>  basic_ios::char_type
+## <a name="basic_ioschar_type"></a><a name="char_type"></a>basic_ios::char_type
 
 テンプレート パラメーター `Elem` のシノニム。
 
@@ -209,7 +209,7 @@ basic_ios();
 typedef Elem char_type;
 ```
 
-## <a name="clear"></a>  basic_ios::clear
+## <a name="basic_iosclear"></a><a name="clear"></a>basic_ios::クリア
 
 すべてのエラー フラグをクリアします。
 
@@ -221,26 +221,26 @@ void clear(io_state state);
 ### <a name="parameters"></a>パラメーター
 
 *状態*\
-Optionalすべてのフラグをクリアした後に設定するフラグ。 既定値は `goodbit` です。
+(オプション)すべてのフラグをクリアした後に設定するフラグ。 既定値は `goodbit` です。
 
-*reraise*\
-Optional例外を再生成する必要があるかどうかを指定します。 既定値は**false**です (例外は再発生しません)。
+*再発生*\
+(オプション)例外を再発生させるかどうかを指定します。 既定値は**false**です (例外は再発生しません)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フラグ`goodbit`は`failbit` `badbit`、、、、およびです。 `eofbit` [good](#good)、[bad](#bad)、[eof](#eof)、および [fail](#fail) で、これらのフラグをテストします。
+フラグは`goodbit`、 `failbit`、 `eofbit`、 `badbit`、 、 です。 [good](#good)、[bad](#bad)、[eof](#eof)、および [fail](#fail) で、これらのフラグをテストします。
 
 このメンバー関数は、格納されているストリームの状態情報を次のものに置き換えます。
 
 `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-`state` **&** [exceptions](#exceptions) が 0 以外の場合、[failure](../standard-library/ios-base-class.md#failure) クラスのオブジェクトをスローします。
+`state`**&**[例外が](#exceptions)0 以外の場合は、クラス[の失敗](../standard-library/ios-base-class.md#failure)のオブジェクトをスローします。
 
 ### <a name="example"></a>例
 
-の使用`clear`例については、「 [rdstate](#rdstate) 」と「 [getline](../standard-library/string-functions.md#getline) 」を参照してください。
+を使用する例については[、rdstate](#rdstate) `clear`と[getline](../standard-library/string-functions.md#getline)を参照してください。
 
-## <a name="copyfmt"></a>  basic_ios::copyfmt
+## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a>basic_ios::コピーfmt
 
 1 つのストリームから別のストリームにフラグをコピーします。
 
@@ -258,9 +258,9 @@ const basic_ios<Elem, Traits>& right);
 
 フラグをコピーするストリームの **this** オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、コールバックイベントの**消去\_イベント**を報告します。 コピーし、*右* に **\*この** 充填文字、リンク付けポインター、および書式設定情報。 例外マスクを変更する前に、コールバックイベント`copyfmt_event`を報告します。 コピーの完了後、**state &** [exceptions](#exceptions) が 0 以外の場合、関数は引数 [rdstate](#rdstate) を使って効果的に [clear](#clear) を呼び出します。 **\*this** を返します。
+このメンバー関数は、コールバック**イベント\_消去イベント**を報告します。 次に**\****、右*からこの塗りつぶし文字、タイ ポインタ、および書式設定情報にコピーします。 例外マスクを変更する前に、コールバック イベント`copyfmt_event`を報告します。 コピーの完了後、**state &**[exceptions](#exceptions) が 0 以外の場合、関数は引数 [rdstate](#rdstate) を使って効果的に [clear](#clear) を呼び出します。 この値**\*を**返します。
 
 ### <a name="example"></a>例
 
@@ -283,7 +283,7 @@ int main( )
 }
 ```
 
-## <a name="eof"></a>  basic_ios::eof
+## <a name="basic_ioseof"></a><a name="eof"></a>basic_ios::eof
 
 ストリームの末尾に達しているかどうかを示します。
 
@@ -293,11 +293,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>戻り値
 
-ストリームの末尾に到達した場合は**true** 、それ以外の場合は**false** 。
+ストリームの末尾に到達した場合は**true、** それ以外の場合は**false。**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、 [rdstate](#rdstate) `& eofbit`が0以外の場合に**true**を返します。 `eofbit` の詳細については、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
+[rdstate](#rdstate)`& eofbit`が 0 以外の場合、メンバー関数は**true**を返します。 `eofbit` の詳細については、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -321,7 +321,7 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="exceptions"></a>  basic_ios::exceptions
+## <a name="basic_iosexceptions"></a><a name="exceptions"></a>basic_ios::例外
 
 ストリームによってどの例外がスローされるかを示します。
 
@@ -333,16 +333,16 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>パラメーター
 
-*Newexcept*\
+*新規除く*\
 例外をスローするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
 ストリームに対して例外をスローするように現在指定されているフラグ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-1 つ目のメンバー関数は、格納されている例外マスクを返します。 2 つ目のメンバー関数は、 *_Except* を例外マスクに格納し、その前に格納されていた値を返します。 新しい例外マスクを格納することで、[clear](#clear)( [rdstate](#rdstate) ) の呼び出しと同じように例外をスローできます。
+1 つ目のメンバー関数は、格納されている例外マスクを返します。 2 つ目のメンバー関数は、*_Except* を例外マスクに格納し、その前に格納されていた値を返します。 新しい例外マスクを格納することで、[clear](#clear)( [rdstate](#rdstate) ) の呼び出しと同じように例外をスローできます。
 
 ### <a name="example"></a>例
 
@@ -380,7 +380,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set
 ```
 
-## <a name="fail"></a>  basic_ios::fail
+## <a name="basic_iosfail"></a><a name="fail"></a>basic_ios::失敗
 
 ストリームからの有効フィールドの抽出エラーを示します。
 
@@ -390,7 +390,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>戻り値
 
-[rdstate](#rdstate) `& (badbit|failbit)`が0以外の場合は true、それ以外の場合は**false**。
+[rdstate](#rdstate)`& (badbit|failbit)`がゼロ以外の場合は**true、** それ以外の場合は**false。**
 
 `failbit` の詳細については、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
@@ -410,7 +410,7 @@ int main( void )
 }
 ```
 
-## <a name="fill"></a>  basic_ios::fill
+## <a name="basic_iosfill"></a><a name="fill"></a>basic_ios::フィル
 
 テキストがストリームの幅に満たない場合に使用される文字を指定するか、返します。
 
@@ -428,9 +428,9 @@ char_type fill(char_type Char);
 
 現在の充填文字。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-1 つ目のメンバー関数は、格納されている充填文字を返します。 2番目のメンバー関数は、 *Char*を fill 文字に格納し、その前に格納された値を返します。
+1 つ目のメンバー関数は、格納されている充填文字を返します。 2 番目のメンバー関数は *、Fill*文字に Char を格納し、以前に格納された値を返します。
 
 ### <a name="example"></a>例
 
@@ -457,7 +457,7 @@ xxxxa
 x
 ```
 
-## <a name="good"></a>  basic_ios::good
+## <a name="basic_iosgood"></a><a name="good"></a>basic_ios::良い
 
 ストリームの状態が良好であることを示します。
 
@@ -467,7 +467,7 @@ bool good() const;
 
 ### <a name="return-value"></a>戻り値
 
-[rdstate](#rdstate) `== goodbit` (状態フラグが設定されていない) の場合は true、それ以外の場合は**false**。
+[rdstate](#rdstate) `== goodbit` (状態フラグが設定されていない) の場合は**true、** それ以外の場合は**false。**
 
 `goodbit` の詳細については、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
@@ -475,7 +475,7 @@ bool good() const;
 
 `good` の使用例については、「[basic_ios::bad](#bad)」を参照してください。
 
-## <a name="imbue"></a>  basic_ios::imbue
+## <a name="basic_iosimbue"></a><a name="imbue"></a>basic_ios::インビュー
 
 ロケールを変更します。
 
@@ -492,7 +492,7 @@ locale imbue(const locale& Loc);
 
 以前のロケール。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [rdbuf](#rdbuf) が Null ポインターではない場合、メンバー関数は以下を呼び出します。
 
@@ -518,7 +518,7 @@ int main( )
 }
 ```
 
-## <a name="init"></a>  basic_ios::init
+## <a name="basic_iosinit"></a><a name="init"></a>basic_ios::イニト
 
 basic_ios コンストラクターによって呼び出されます。
 
@@ -528,13 +528,13 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>パラメーター
 
-*Sb*\
+*_Sb*\
 入力要素または出力要素を格納する標準のバッファー。
 
 *_Isstd*\
 これが標準のストリームかどうかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数は、以下のようにするため、すべてのメンバー オブジェクトに値を格納します。
 
@@ -542,9 +542,9 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [tie](#tie) が Null ポインターを返す。
 
-- [rdstate](#rdstate)が0以外*の場合*は[goodbit](../standard-library/ios-base-class.md#iostate)を返します。それ以外の場合は、 [badbit](../standard-library/ios-base-class.md#iostate)を返します。
+- [rdstate](#rdstate)は *、_Sb*がゼロ以外の場合は[goodbit](../standard-library/ios-base-class.md#iostate)を返します。それ以外の場合は[、badbit](../standard-library/ios-base-class.md#iostate)を返します。
 
-- [例外](#exceptions)は`goodbit`を返します。
+- [例外は](#exceptions)`goodbit`を返します。
 
 - [flags](../standard-library/ios-base-class.md#flags) が [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags) を返す。
 
@@ -558,7 +558,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [iword](../standard-library/ios-base-class.md#iword) が 0 を返し、[pword](../standard-library/ios-base-class.md#pword) がすべての引数値に Null ポインターを返す。
 
-## <a name="int_type"></a>  basic_ios::int_type
+## <a name="basic_iosint_type"></a><a name="int_type"></a>basic_ios::int_type
 
 `traits_type::int_type` と同義。
 
@@ -566,7 +566,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="move"></a>  basic_ios::move
+## <a name="basic_iosmove"></a><a name="move"></a>basic_ios::移動
 
 ストリーム バッファーへのポインターを除くすべての値を、パラメーターから現在のオブジェクトに移動します。
 
@@ -579,11 +579,11 @@ void move(basic_ios&& right);
 *そうです*\
 値の移動元となる `ios_base` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Protected メンバー関数は、格納されているを除く`*this` 、右側に格納されているすべての値をに移動します`*this`。このストアド`stream buffer pointer`プロシージャは、*直接*変更されず、の null ポインターに設定されます。 格納`tie pointer`されているは、*右*の null ポインターに設定されます。
+プロテクト メンバー関数は *、右*に格納されているすべての値`*this`を、右`stream buffer pointer`に変更されずに格納された*値に移動*し、 で`*this`null ポインターに設定します。 格納された`tie pointer`値は *、右*の null ポインタに設定されます。
 
-## <a name="narrow"></a>  basic_ios::narrow
+## <a name="basic_iosnarrow"></a><a name="narrow"></a>basic_ios::狭い
 
 指定された `char_type` と同等の文字を検索します。
 
@@ -594,18 +594,18 @@ char narrow(char_type Char, char Default = '\0') const;
 ### <a name="parameters"></a>パラメーター
 
 *Char*\
-変換する**char** 。
+変換する**文字**。
 
-*Default*\
-等価のが見つからない場合に返される**char** 。
+*既定*\
+対応する文字が見つからない場合に返される**文字**。
 
 ### <a name="return-value"></a>戻り値
 
-指定`char_type`したに相当する**char** 。
+指定された**char**`char_type`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は[](../standard-library/basic-filebuf-class.md#open)\<、use_facet\<ctype E > > ( [getloc](../standard-library/ios-base-class.md#getloc)())`narrow`を返します。( `Char`, `Default`).
+メンバー関数は[、ctype](../standard-library/basic-filebuf-class.md#open)\<\<E use_facet> > ( [getloc](../standard-library/ios-base-class.md#getloc)( ) を返します。`narrow`( `Char`, `Default`).
 
 ### <a name="example"></a>例
 
@@ -628,7 +628,7 @@ int main( )
 }
 ```
 
-## <a name="off_type"></a>  basic_ios::off_type
+## <a name="basic_iosoff_type"></a><a name="off_type"></a>basic_ios::off_type
 
 `traits_type::off_type` と同義。
 
@@ -636,7 +636,7 @@ int main( )
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="op_void_star"></a>  basic_ios::operator void *
+## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a>basic_ios::オペレーターボイド *
 
 ストリームが依然として良好かどうかを示します。
 
@@ -666,7 +666,7 @@ int main( )
 1
 ```
 
-## <a name="op_not"></a>  basic_ios::operator!
+## <a name="basic_iosoperator"></a><a name="op_not"></a>basic_ios::オペレーター!
 
 ストリームが悪化していないかどうかを示します。
 
@@ -696,19 +696,19 @@ int main( )
 0
 ```
 
-## <a name="op_bool"></a>  basic_ios::operator bool
+## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a>basic_ios::オペレーターブール
 
-オブジェクトを`basic_ios` **ブール**値として使用できるようにします。 しばしば発生する意図しない副作用を防ぐため、自動型変換は無効になっています。
+オブジェクトを`basic_ios` **bool**として使用できます。 しばしば発生する意図しない副作用を防ぐため、自動型変換は無効になっています。
 
 ```cpp
 explicit operator bool() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子は、の場合`fail()`にのみ、 **false**に変換可能な値を返します。 戻り値の型は、 `void *`またはその他の既知のスカラー型ではなく、**ブール**値にのみ変換可能です。
+演算子は、場合にのみ**false**に変換可能`fail()`な値を返します。 戻り値の型は **、bool**にのみ変換可能`void *`で、他の既知のスカラー型には変換されません。
 
-## <a name="pos_type"></a>  basic_ios::pos_type
+## <a name="basic_iospos_type"></a><a name="pos_type"></a>basic_ios::pos_type
 
 `traits_type::pos_type` と同義。
 
@@ -716,7 +716,7 @@ explicit operator bool() const;
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="rdbuf"></a>  basic_ios::rdbuf
+## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a>basic_ios::rdbuf
 
 指定したバッファーにストリームをルーティングします。
 
@@ -728,14 +728,14 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>パラメーター
 
-*Sb*\
+*_Sb*\
 ストリーム。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つ目のメンバー関数は、格納されているストリーム バッファー ポインターを返します。
 
-2番目のメンバー関数は、格納されているストリームバッファーポインターに*Sb*を格納し、以前に格納された値を返します。
+2 番目のメンバー関数は *、_Sb*を格納されたストリーム バッファー ポインターに格納し、以前に格納された値を返します。
 
 ### <a name="example"></a>例
 
@@ -761,7 +761,7 @@ int main( )
 test2
 ```
 
-## <a name="rdstate"></a>  basic_ios::rdstate
+## <a name="basic_iosrdstate"></a><a name="rdstate"></a>basic_ios::rdstate
 
 フラグのビットの状態を読み取ります。
 
@@ -810,7 +810,7 @@ int main( )
 1
 ```
 
-## <a name="setstate"></a>  basic_ios::setstate
+## <a name="basic_iossetstate"></a><a name="setstate"></a>basic_ios::設定状態
 
 追加のフラグを設定します。
 
@@ -820,10 +820,10 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*状態 (_c)* \
+*_state*\
 設定する追加のフラグ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数は効果的に [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)) を呼び出します。
 
@@ -859,7 +859,7 @@ int main( )
 1
 ```
 
-## <a name="set_rdbuf"></a>  basic_ios::set_rdbuf
+## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a>basic_ios::set_rdbuf
 
 ストリーム バッファーを割り当てて、このストリーム オブジェクトの読み取りバッファーとして使用します。
 
@@ -870,14 +870,14 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*\
+*ストルブフ*\
 読み取りバッファーになるストリーム バッファー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は`stream buffer pointer`、 *strbuf*をに格納します。を呼び出す`clear`ことはありません。
+プロテクト メンバー関数は*strbuf*を に格納します`stream buffer pointer`。は呼び出`clear`しません。
 
-## <a name="tie"></a>  basic_ios::tie
+## <a name="basic_iostie"></a><a name="tie"></a>basic_ios::ネクタイ
 
 1 つのストリームが別のストリームの前に処理されるようにします。
 
@@ -889,14 +889,14 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*\
+*Str*\
 ストリーム。
 
 ### <a name="return-value"></a>戻り値
 
-1 つ目のメンバー関数は、格納されているリンク付けポインターを返します。 2番目のメンバー関数は、同一のポインターに*str*を格納し、その前に格納された値を返します。
+1 つ目のメンバー関数は、格納されているリンク付けポインターを返します。 2 番目のメンバー関数は *、str*を tie ポインターに格納し、以前に格納された値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `tie` は 2 つのストリームを同期させて、一方のストリームでの操作が完了すると、もう一方のストリームで操作が行われるようにします。
 
@@ -918,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>  basic_ios::traits_type
+## <a name="basic_iostraits_type"></a><a name="traits_type"></a>basic_ios::traits_type
 
 テンプレート パラメーター `Traits` のシノニム。
 
@@ -926,9 +926,9 @@ int main( )
 typedef Traits traits_type;
 ```
 
-## <a name="widen"></a>  basic_ios::widen
+## <a name="basic_ioswiden"></a><a name="widen"></a>basic_ios::拡幅
 
-指定した`char_type` **char**と等価のを検索します。
+指定された`char_type`char と等価な**値**を検索します。
 
 ```cpp
 char_type widen(char Char) const;
@@ -941,11 +941,11 @@ char_type widen(char Char) const;
 
 ### <a name="return-value"></a>戻り値
 
-指定した`char_type` **char**と等価のを検索します。
+指定された`char_type`char と等価な**値**を検索します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)) を返します。 `widen`( `Char`).
+メンバー関数は **、ctype** \< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)) [use_facet](../standard-library/basic-filebuf-class.md#open)< 返します。 `widen`( `Char`).
 
 ### <a name="example"></a>例
 
@@ -967,7 +967,7 @@ int main( )
 }
 ```
 
-## <a name="swap"></a>  basic_ios::swap
+## <a name="basic_iosswap"></a><a name="swap"></a>basic_ios::スワップ
 
 `basic_ios` オブジェクトの値を別の `basic_ios` オブジェクトの値と交換します。 ただし、ストリーム バッファーへのポインターは交換されません。
 
@@ -980,12 +980,12 @@ void swap(basic_ios&& right);
 *そうです*\
 値を交換するために使用される `basic_ios` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は、格納`stream buffer pointer`されているを除く`*this` 、 *right*に格納されているすべての値を交換します。
+プロテクト メンバー関数は、格納されている値を格納済`*this`み以外の`stream buffer pointer`*、右*に格納されているすべての値を交換します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[iostreams の規則](../standard-library/iostreams-conventions.md)
+[ioストリームの規約](../standard-library/iostreams-conventions.md)

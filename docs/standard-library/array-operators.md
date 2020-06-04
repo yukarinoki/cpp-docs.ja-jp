@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456761"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364907"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
-配列\<> ヘッダーには、**これらの**非メンバー比較テンプレート関数が含まれています。
+配列\<>ヘッダーには、これらの**配列**非メンバー比較テンプレート関数が含まれます。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[演算子!=](#op_neq)|[演算子&gt;](#op_gt)|[演算子&gt;=](#op_gt_eq)|
+|[演算子&lt;](#op_lt)|[演算子&lt;=](#op_lt_eq)|[演算子==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>演算子!=
 
 配列の比較 (等しくない)。
 
@@ -38,19 +38,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left == right)` を返します。
 
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
 
 配列の比較 (より小さい)。
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator<` をオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
+テンプレート関数は、クラス`operator<`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
 
 配列の比較 (以下)。
 
@@ -184,19 +184,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(right < left)` を返します。
 
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
 
 配列の比較 (等しい)。
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator==` をオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
+テンプレート関数は、クラス`operator==`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
 
 配列の比較 (より大きい)。
 
@@ -330,19 +330,19 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `(right < left)` を返します。
 
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
 
 配列の比較 (以上)。
 
@@ -403,19 +403,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 比較する左のコンテナー。
 
 *そうです*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left < right)` を返します。
 
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)
+[\<配列>](../standard-library/array.md)

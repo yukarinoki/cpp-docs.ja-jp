@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457760"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368444"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution クラス
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution クラス
 
 極値分布を生成します。
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*リアルタイプ*\
+浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
-*URNG*\
-乱数ジェネレーターエンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*ウルン*\
+乱数ジェネレーター エンジン。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレートクラスは、極端な値分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラス テンプレートは、ユーザー指定の浮動小数点型の値を生成する分布を表します。 **double** 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 プロパティ関数 `a()` と `b()` はそれぞれ、格納されている分布パラメーター `a` と `b` の値を返します。
 
-分布クラスとそのメンバーの詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
+分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
 
 極値分布の詳細については、Wolfram MathWorld の記事「[極値分布](https://go.microsoft.com/fwlink/p/?linkid=401110)」を参照してください。
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
 
 分布を作成します。
 
@@ -198,18 +198,18 @@ explicit extreme_value_distribution(const param_type& parm);
 *b_value*\
 `b` 分布パラメーター。
 
-*parm*\
+*Parm*\
 分布の作成に使用される `param_type` の構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < b`
+**前提条件:**`0.0 < b`
 
 1 つ目のコンストラクターは、格納されている値 `a` と `b` にそれぞれ *a_value* と *b_value* の値を保持するオブジェクトを作成します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::param_type
 
 分布のパラメーターを格納します。
 
@@ -236,12 +236,12 @@ struct param_type {
 *そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < b`
+**前提条件:**`0.0 < b`
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

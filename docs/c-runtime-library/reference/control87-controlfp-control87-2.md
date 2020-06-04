@@ -1,11 +1,11 @@
 ---
 title: _control87、_controlfp、__control87_2
 ms.date: 08/29/2019
-apiname:
+api_name:
 - _control87
 - _controlfp
 - __control87_2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _control87
 - __control87_2
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-ms.openlocfilehash: 75b2870543ec3ddd20d445a492ad4270b91e80d7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15700a5dabfbc3f8915e251bd8b9270f8f9c1a35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218422"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942903"
 ---
 # <a name="_control87-_controlfp-__control87_2"></a>_control87、_controlfp、__control87_2
 
@@ -104,7 +107,7 @@ _controlfp( _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged
 ```
 
-Mask 定数 (*mask*) と新しい制御値 (*new*) に使用できる値は、[制御単語マスクおよび値] テーブルに表示されます。 次に示すように、これらの関数の引数として、16進数値を明示的に指定するのではなく、下に一覧表示されている移植性のある定数 ( **_MCW_EM、** など) を使用します。
+Mask 定数 (*mask*) と新しい制御値 (*new*) に使用できる値は、[制御単語マスクおよび値] テーブルに表示されます。 次に示すように、これらの関数の引数として、16進数値を明示的に指定するのではなく、下に一覧表示されている移植性のある定数 ( **_MCW_EM、** **など)** を使用します。
 
 Intel x86 から派生したプラットフォームでは、ハードウェアでの DENORMAL 入力値と出力値がサポートされます。 x86 では DENORMAL 値を保持するように動作します。 ARM および ARM64 プラットフォームおよび SSE2 をサポートする x64 プラットフォームでは、DENORMAL のオペランドと結果をフラッシュするか、強制的にゼロにすることができます。 **_Controlfp**関数と **_control87**関数は、この動作を変更するマスクを提供します。 このマスクの使用例を次に示します。
 
@@ -132,7 +135,7 @@ ARM、ARM64、および x64 プラットフォームでは、無限大モード�
 
 ### <a name="control-word-masks-and-values"></a>制御 (単語マスクと値を)
 
-**_MCW_EM** mask では、マスクをクリアすると、ハードウェア例外を許可する例外が設定されます。マスクを設定すると、例外が非表示になります。 **アンダーフロー**または**オーバーフロー**が発生した場合、次の浮動小数点命令が実行されるまで、ハードウェア例外はスローされません。 (_s) ハードウェア例外を生成するには 、すぐに、または**オーバーフロー**が発生した後で、 **fwait** MASM 命令を呼び出します。
+**_MCW_EM** mask では、マスクをクリアすると、ハードウェア例外を許可する例外が設定されます。マスクを設定すると、例外が非表示になります。 **アンダーフロー**または**オーバーフロー**が発生した場合、次の浮動小数点命令が実行されるまで、ハードウェア例外はスローされません。 (_s) ハードウェア例外を生成するには、すぐに、または**オーバーフロー**が**発生した**後で、 **fwait** MASM 命令を呼び出します。
 
 |マスク|16 進値|定数|16 進値|
 |----------|---------------|--------------|---------------|

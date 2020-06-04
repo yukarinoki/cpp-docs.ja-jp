@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 89e6d972fbecb2674e6343bf6d11f9972c25c63d
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: c00f1e41e70e723be185959eeff176390def7647
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374727"
 ---
-# <a name="tilebarrier-class"></a>tile_barrier クラス
+# <a name="tile_barrier-class"></a>tile_barrier クラス
 
 `wait` メソッドを使用してスレッド グループ (タイル) で実行されているスレッドの実行を同期します。 ランタイムのみがこのクラスをインスタンス化できます。
 
-### <a name="syntax"></a>構文
+## <a name="syntax"></a>構文
 
-```
+```cpp
 class tile_barrier;
 ```
 
@@ -35,13 +35,13 @@ class tile_barrier;
 
 |名前|説明|
 |----------|-----------------|
-|[tile_barrier コンス トラクター](#ctor)|`tile_barrier` クラスの新しいインスタンスを初期化します。|
+|[tile_barrierコンストラクタ](#ctor)|`tile_barrier` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[wait](#wait)|タイルのすべてのスレッドの待機が完了するまで、スレッド グループ (タイル) のすべてのスレッドの実行を停止するように指示します。|
+|[待つ](#wait)|タイルのすべてのスレッドの待機が完了するまで、スレッド グループ (タイル) のすべてのスレッドの実行を停止するように指示します。|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|すべてのメモリ アクセスが完了し、タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。|
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|すべてのグローバル メモリ アクセスが完了し、タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。|
 |[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|すべての `tile_static` メモリ アクセスが完了し、タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。|
@@ -54,15 +54,15 @@ class tile_barrier;
 
 **ヘッダー:** amp.h
 
-**名前空間:** コンカレンシー
+**名前空間:** Concurrency
 
-## <a name="ctor"></a>  tile_barrier コンス トラクター
+## <a name="tile_barrier-constructor"></a><a name="ctor"></a>tile_barrierコンストラクタ
 
-既存のものをコピーすることによって、クラスの新しいインスタンスを初期化します。
+既存のインスタンスをコピーして、クラスの新しいインスタンスを初期化します。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 tile_barrier(
     const tile_barrier& _Other ) restrict(amp,cpu);
 ```
@@ -70,48 +70,48 @@ tile_barrier(
 ### <a name="parameters"></a>パラメーター
 
 *_Other*<br/>
-コピーする `tile_barrier` オブジェクト。
+コピーする `tile_barrier` オブジェクトです。
 
-## <a name="wait"></a>待機
+## <a name="wait"></a>wait
 
-タイルのすべてのスレッドの待機が完了するまで実行を停止するには、スレッド グループ (タイル) のすべてのスレッドに指示します。
+スレッド グループ (タイル) 内のすべてのスレッドに、タイル内のすべてのスレッドが待機を終了するまで実行を停止するように指示します。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a> wait_with_all_memory_fence
+## <a name="wait_with_all_memory_fence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
 
 タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これによって、すべてのメモリ アクセスがスレッド タイルの他のスレッドから参照でき、プログラムの順序で実行されます。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="a-namewaitwithglobalmemoryfence-waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence
+## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence">wait_with_global_memory_fence
 
 タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これによって、すべてのグローバル メモリ アクセスがスレッド タイルの他のスレッドから参照でき、プログラムの順序で実行されます。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfence-waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence
+## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence">wait_with_tile_static_memory_fence
 
-タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これにより`tile_static`メモリ アクセスがスレッド タイルの他のスレッドから参照でき、プログラムの順序で実行されます。
+タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これにより、メモリ`tile_static`アクセスがスレッド タイル内の他のスレッドから参照でき、プログラム順に実行されます。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 void wait_with_tile_static_memory_fence() const restrict(amp);
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[同時実行名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

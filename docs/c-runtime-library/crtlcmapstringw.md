@@ -1,9 +1,9 @@
 ---
 title: __crtLCMapStringW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __crtLCMapStringW
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -11,18 +11,21 @@ apilocation:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __crtLCMapStringW
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170996"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 

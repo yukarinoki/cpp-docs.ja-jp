@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87815b5f0e0450b84acbe3c35b7ef4f31216ec72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292586"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749296"
 ---
-# <a name="gh-enable-penter-hook-function"></a>/Gh (_penter フック関数の有効化)
+# <a name="gh-enable-_penter-hook-function"></a>/Gh (_penter フック関数の有効化)
 
-呼び出し、`_penter`すべてのメソッドまたは関数の開始時の関数。
+すべてのメソッドまたは関数の`_penter`先頭で関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,35 +26,35 @@ ms.locfileid: "62292586"
 /Gh
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`_penter`関数は、任意のライブラリの一部ではないの定義を提供するかどうかは`_penter`します。
+この`_penter`関数はライブラリの一部ではなく、 の定義を指定する必要があります`_penter`。
 
-明示的に呼び出す予定がない限り`_penter`プロトタイプを提供する必要はありません。 関数は、次のプロトタイプがあった場合とおよびエントリのすべてのレジスタのコンテンツをプッシュし、終了時に変更されていないコンテンツを表示にする必要がありますに記述する必要があります。
+明示的に呼び出`_penter`す場合を除き、プロトタイプを提供する必要はありません。 関数は、次のプロトタイプを持っているかのように見える必要があり、エントリ上のすべてのレジスタの内容をプッシュし、終了時に変更されていない内容をポップする必要があります。
 
-```
+```cpp
 void __declspec(naked) __cdecl _penter( void );
 ```
 
-この宣言は、64 ビットのプロジェクトで使用可能ではありません。
+この宣言は、64 ビット プロジェクトでは使用できません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
 
 ## <a name="example"></a>例
 
-コンパイルした場合、次のコード **/Gh**、表示方法`_penter`2 回; と呼ばれる関数を入力するときに 1 回`main`関数を入力するときに 1 回`x`。
+次のコードは **、/Gh**でコンパイルされた場合、2 回の呼び出し方法`_penter`を示しています。関数`main`を入力するとき、関数を入力するときに一度`x`、 .
 
 ```cpp
 // Gh_compiler_option.cpp

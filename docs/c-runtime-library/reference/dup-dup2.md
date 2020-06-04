@@ -1,10 +1,12 @@
 ---
 title: _dup、_dup2
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _dup
 - _dup2
-apilocation:
+- _o__dup
+- _o__dup2
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dup2
 - _dup
@@ -28,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288967"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915210"
 ---
-# <a name="dup-dup2"></a>_dup、_dup2
+# <a name="_dup-_dup2"></a>_dup、_dup2
 
-開いているファイルの 2 つ目のファイル記述子を作成します (**_dup**)、またはファイル記述子を再割り当て (**_dup2**)。
+開いているファイル (**_dup**) の2番目のファイル記述子を作成するか、ファイル記述子 (**_dup2**) を再割り当てします。
 
 ## <a name="syntax"></a>構文
 
@@ -56,28 +62,30 @@ int _dup2( int fd1, int fd2 );
 
 ## <a name="return-value"></a>戻り値
 
-**_dup**新しいファイル記述子を返します。 **_dup2**成功を示す 0 を返します。 エラーが発生した場合、各関数の戻り値-1 とセット**errno**に**EBADF**ファイル記述子が有効でない場合または**EMFILE**ファイル記述子をこれ以上使用可能な場合。 ファイル記述子が無効な場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数によって無効なパラメーター ハンドラーも開始されます。
+**_dup**は新しいファイル記述子を返します。 成功を示すには **_dup2** 0 を返します。 エラーが発生した場合、各関数は-1 を返し、ファイル記述子が無効で**ある場合は** **errno**に、ファイル記述子が使用できない場合は**EMFILE**に設定します。 ファイル記述子が無効な場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数によって無効なパラメーター ハンドラーも開始されます。
 
-リターン コードについて詳しくは、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Dup**と **_dup2**関数は、現在開いているファイルと 2 つ目のファイル記述子を関連付けます。 などの定義済みのファイル記述子に関連付けるにはこれらの関数を使用できる**stdout**、別のファイルでします。 ファイル操作はいずれかのファイル記述子を使用して実行できます。 新しい記述子の作成によって、ファイルに対するアクセス権の種類が影響を受けることはありません。 **_dup**指定されたファイルに次の使用可能なファイル記述子を返します。 **_dup2**強制的*fd2*と同じファイルを参照する*fd1*します。 場合*fd2*が関連付けられている呼び出し時に、開いているファイルとそのファイルが閉じられます。
+**_Dup**関数と **_dup2**関数は、2番目のファイル記述子を現在開いているファイルに関連付けます。 これらの関数を使用すると、 **stdout**などの定義済みのファイル記述子を別のファイルに関連付けることができます。 ファイル操作はいずれかのファイル記述子を使用して実行できます。 新しい記述子の作成によって、ファイルに対するアクセス権の種類が影響を受けることはありません。 **_dup**は、指定されたファイルに対して次に使用できるファイル記述子を返します。 **_dup2**は、 *fd2*が*fd1*と同じファイルを参照するように強制します。 呼び出し時に*fd2*が開いているファイルに関連付けられている場合、そのファイルは閉じています。
 
-両方 **_dup**と **_dup2**ファイル記述子をパラメーターとしてそのまま使用します。 ストリームを渡す (`FILE *`) にこれらの関数のいずれかを使用して[_fileno](fileno.md)します。 **Fileno**ルーチンが、指定したストリームに関連付けられているファイル記述子を返します。 次の例に関連付ける方法を示しています**stderr** (として定義されている`FILE *`Stdio.h で) をファイル記述子。
+**_Dup**と **_dup2**はどちらもファイル記述子をパラメーターとして受け取ります。 これらの関数のいずれ`FILE *`かにストリーム () を渡すには、 [_fileno](fileno.md)を使用します。 **Fileno**ルーチンは、指定されたストリームに現在関連付けられているファイル記述子を返します。 次の例は、 **stderr**にとし`FILE *`て定義されている stderr をファイル記述子と関連付ける方法を示しています。
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

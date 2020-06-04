@@ -2,12 +2,12 @@
 title: 宣言の概要
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170437"
 ---
 # <a name="summary-of-declarations"></a>宣言の概要
 
@@ -19,10 +19,10 @@ ms.locfileid: "50647201"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*attribute-seq*: &nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有の仕様 \*/<br/>
+*attribute-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 固有 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
 
-*attribute* : 次のいずれか&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有の仕様 \*/<br/>
+*attribute* : 次のいずれか&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
@@ -31,7 +31,7 @@ ms.locfileid: "50647201"
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  **=**  *initializer* /\* スカラー初期化用 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer* /\* スカラー初期化用 \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -39,17 +39,17 @@ ms.locfileid: "50647201"
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 固有の仕様 \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft 固有 \*/
 
 *type-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Microsoft 固有の仕様 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 固有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 固有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 固有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 固有 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -68,16 +68,16 @@ ms.locfileid: "50647201"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)** /\* 新しい形式の宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)** /\* 古い形式の宣言子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  /\* 新しい形式の宣言子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* 古い形式の宣言子 \*/
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
 
-*parameter-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* パラメーター リスト \*/<br/>
+*parameter-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*パラメーター リスト \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
 
@@ -143,14 +143,14 @@ ms.locfileid: "50647201"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *abstract-declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *initializer-list* **}** /\* 集計初期化用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *initializer-list* **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* 集計初期化用 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -162,11 +162,11 @@ ms.locfileid: "50647201"
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有の仕様 \*/<br/>
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 固有 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 固有の仕様 \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 固有 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>

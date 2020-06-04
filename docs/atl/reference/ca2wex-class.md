@@ -10,28 +10,28 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497961"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168502"
 ---
 # <a name="ca2wex-class"></a>CA2WEX クラス
 
 このクラスは、文字列変換マクロ CA2TEX、CA2CTEX、CT2WEX、CT2CWEX、および typedef CA2W によって使用されます。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2WEX
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *t_nBufferLength*<br/>
 変換プロセスで使用されるバッファーのサイズ。 既定の長さは128バイトです。
@@ -55,10 +55,10 @@ class CA2WEX
 
 |名前|説明|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|ソース文字列を格納するデータメンバー。|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|変換された文字列を格納するために使用する静的バッファー。|
+|[CA2WEX:: m_psz](#m_psz)|ソース文字列を格納するデータメンバー。|
+|[CA2WEX:: m_szBuffer](#m_szbuffer)|変換された文字列を格納するために使用する静的バッファー。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 追加機能が必要な場合を除き、コードで CA2TEX、CA2CTEX、CT2WEX、CT2CWEX、または CA2W を使用してください。
 
@@ -92,11 +92,11 @@ class CA2WEX
 
 **ヘッダー:** atlconv. h
 
-##  <a name="ca2wex"></a>CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
 
 コンストラクターです。
 
-```
+```cpp
 CA2WEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2WEX(LPCSTR psz) throw(...);
 ```
@@ -109,43 +109,43 @@ CA2WEX(LPCSTR psz) throw(...);
 *nCodePage*<br/>
 変換を実行するために使用するコードページ。 詳細については、Windows SDK 関数[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)のコードページパラメーターの説明を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 変換プロセスで使用されるバッファーを割り当てます。
 
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX
 
 デストラクターです。
 
-```
+```cpp
 ~CA2WEX() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 割り当てられたバッファーを解放します。
 
-##  <a name="m_psz"></a>  CA2WEX::m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX:: m_psz
 
 ソース文字列を格納するデータメンバー。
 
-```
+```cpp
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX:: m_szBuffer
 
 変換された文字列を格納するために使用する静的バッファー。
 
-```
+```cpp
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>  CA2WEX::operator LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX:: operator LPWSTR
 
 変換演算子。
 
-```
+```cpp
 operator LPWSTR() const throw();
 ```
 

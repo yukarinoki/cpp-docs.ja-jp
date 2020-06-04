@@ -1,11 +1,14 @@
 ---
-title: _inp、_inpw、_inpd
-ms.date: 11/04/2016
-apiname:
+title: sct.inp、_inp、inpw、_inpw、_inpd
+description: 互換性のために残されている、sct.inp、_inp、inpw、_inpw、および Microsoft C ランタイムライブラリ (CRT) の _inpd 関数について説明します。
+ms.date: 12/09/2019
+api_name:
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -13,9 +16,13 @@ apilocation:
 - msvcr80.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- inpd
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -29,26 +36,24 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748347"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825830"
 ---
-# <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
+# <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-ポートから 1 バイト (`_inp`)、1 ワード (`_inpw`)、または 1 ダブルワード (`_inpd`) のいずれかを読み込みます。
-
-> [!IMPORTANT]
->  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。
+ポート、`inp`バイト (、 `_inp`)、語 (`inpw`, `_inpw`)、またはダブルワード (`_inpd`) からの入力。
 
 > [!IMPORTANT]
->  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> これらは古い関数です。 Visual Studio 2015 以降では、CRT では使用できません。
+> この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 int _inp(
    unsigned short port
 );
@@ -60,9 +65,9 @@ unsigned long _inpd(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
+*ポート*\
 I/O ポート番号。
 
 ## <a name="return-value"></a>戻り値
@@ -75,15 +80,17 @@ I/O ポート番号。
 
 これらの関数は I/O ポートから直接読み込まれるため、ユーザー コードで使用できません。
 
-## <a name="requirements"></a>要件
+と`inp` `inpw`の名前は、関数`_inp`および関数の古い名前`_inpw`で、非推奨とされています。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`_inp`|\<conio.h>|
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -91,5 +98,5 @@ I/O ポート番号。
 
 ## <a name="see-also"></a>関連項目
 
-[コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)
+[コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)\
+[outp、outp、_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)

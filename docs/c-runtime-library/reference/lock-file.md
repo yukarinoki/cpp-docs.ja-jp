@@ -1,9 +1,10 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _lock_file
-apilocation:
+- _o__lock_file
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911536"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-ロックを**ファイル**オブジェクトにアクセスするスレッドの一貫性を確保する、**ファイル**オブジェクトを同時にします。
+**ファイルオブジェクト**に同時にアクセスするスレッドの一貫性を確保するために、**ファイル**オブジェクトをロックします。
 
 ## <a name="syntax"></a>構文
 
@@ -43,20 +48,22 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>パラメーター
 
-*file*<br/>
+*拡張子*<br/>
 ファイル ハンドルです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Lock_file**ロック機能、**ファイル**で指定されたオブジェクト*ファイル*します。 によって、基になるファイルがロックされていない **_lock_file**します。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 呼び出す **_lock_file**と **_unlock_file**スレッド内で一致する必要があります。
+**_Lock_file**関数は、 *file*によって指定された**ファイル**オブジェクトをロックします。 基になるファイルが **_lock_file**によってロックされていません。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 **_Lock_file**と **_unlock_file**の呼び出しは、スレッドで一致している必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

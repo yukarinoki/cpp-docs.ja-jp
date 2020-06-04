@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8724ae4d018948c0f6aa9456f229db96878d7bf2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328273"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (関数レベルのリンクの有効化)
 
@@ -30,32 +30,32 @@ ms.locfileid: "62270725"
 /Gy[-]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-リンカーは、関数が、除外したり、DLL、または .exe ファイルで個別の関数の順序の Comdat として個別にパッケージ化することが必要です。
+リンカーでは、DLL または .exe ファイル内の個々の関数を除外または順序付けするために、関数を COMDAS として個別にパッケージ化する必要があります。
 
-リンカー オプションを使用する[/OPT (最適化)](opt-optimizations.md) .exe ファイルから参照されていないパッケージ化された関数を除外します。
+リンカー オプション[/OPT (最適化) を](opt-optimizations.md)使用して、参照されていないパッケージ化された関数を .exe ファイルから除外できます。
 
-リンカー オプションを使用する[/ORDER (順序で配置関数)](order-put-functions-in-order.md)に .exe ファイルで指定した順序でパッケージ化された関数を含めます。
+リンカー オプション[/ORDER (関数を順序どおりに入れる) を](order-put-functions-in-order.md)使用すると、パッケージ化された関数を指定された順序で .exe ファイルに含めることができます。
 
-インライン関数は、インスタンスが呼び出される場合に常にパッケージ化されます (が発生する、たとえば、インライン化がオフまたは関数のアドレスを取得する)。 さらに、クラス宣言で定義されている C++ メンバー関数は自動的にパッケージ化されます。その他の関数は使用されませんし、それらをパッケージ化された関数としてコンパイルする必要はこのオプションを選択します。
+インライン関数は、呼び出しとしてインスタンス化される場合 (インライン化がオフの場合や関数アドレスを取る場合など) に常にパッケージ化されます。 さらに、クラス宣言で定義された C++ メンバー関数は自動的にパッケージ化されます。他の関数はそうではないため、パッケージ化された関数としてコンパイルするにはこのオプションを選択する必要があります。
 
 > [!NOTE]
->  [/ZI](z7-zi-zi-debug-information-format.md) 、エディット コンティニュを使用するオプションが自動的に設定、 **/Gy**オプション。
+> エディット コンティニュに使用される[/ZI](z7-zi-zi-debug-information-format.md)オプションは **、/Gy**オプションを自動的に設定します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
-1. をクリックして、**コード生成**プロパティ ページ。
+1. [**コード生成**] プロパティ ページをクリックします。
 
-1. 変更、**関数レベルのリンクを有効にする**プロパティ。
+1. [**機能レベルのリンクを有効にする]** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

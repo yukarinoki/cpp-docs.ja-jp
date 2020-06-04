@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166017"
 ---
 # <a name="vararg"></a>vararg
 
-関数が可変個の引数を受け取ることを指定します。
+関数が異なる数の引数をとることを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514886"
 [vararg]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Vararg** C++属性には、 [vararg](/windows/win32/Midl/vararg) MIDL 属性と同じ機能があります。
 
@@ -58,7 +58,7 @@ __interface X : public IUnknown
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)

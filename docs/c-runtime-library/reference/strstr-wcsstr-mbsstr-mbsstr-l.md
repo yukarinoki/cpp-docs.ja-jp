@@ -1,12 +1,14 @@
 ---
 title: strstr、wcsstr、_mbsstr、_mbsstr_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
-apilocation:
+- _o__mbsstr
+- _o__mbsstr_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +22,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrstr
 - _ftcsstr
@@ -44,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500820"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911000"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -116,7 +122,7 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる検索対象の文字列。
 
 *strSearch*<br/>
@@ -129,16 +135,18 @@ NULL で終わる検索する文字列。
 
 *Str*で*strsearch*が最初に出現する位置へのポインター、または*strsearch*が*STR*に出現しない場合は NULL を返します。 *Strsearch*が長さ0の文字列を指している場合、関数は*str*を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 関数`strstr`は、 *str*で最初に出現する*strsearch*へのポインターを返します。 検索には、終端の NULL 文字は含まれません。 `wcsstr` は `strstr` のワイド文字バージョンであり、`_mbsstr` はマルチバイト文字バージョンです。 `wcsstr` 関数の引数と戻り値はワイド文字列で、`_mbsstr` 関数の引数と戻り値はマルチバイト文字列です。 `_mbsstr` はそのパラメーターを検証します。 *Str*または*STRSEARCH*が NULL の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可され`_mbsstr`た`errno`場合、は EINVAL に設定し、0を返します。 `strstr` および `wcsstr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの問題が原因で脅威を受ける可能性があります。 バッファー オーバーランにより、任意のコードが実行できるようになり、その結果認められていない特権の昇格が発生する可能性があるので、バッファー オーバーランの問題はシステムを攻撃するときに使用されることがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 マクロ _CRT_CONST_CORRECT_OVERLOADS は、これらの関数の**const**と**const**以外の両方のバージョンが使用できる場合に定義されます。 両方C++のオーバーロードに非**定数**の動作が必要な場合は、を定義します。
+C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 これらの関数の**const**と**const**以外の両方のバージョンが使用できる場合、マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されます。 両方の C++ オーバーロードに非**定数**の動作が必要な場合は、シンボル _CONST_RETURN を定義します。
 
-出力値は、LC_CTYPE の locale カテゴリの設定に影響されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、LC_CTYPE のロケールカテゴリの設定に影響されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -149,7 +157,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`strstr`|\<string.h>|
 |`wcsstr`|\<string.h> または \<wchar.h>|
@@ -197,11 +205,11 @@ lazy found at position 36
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[basic_string::find](../../standard-library/basic-string-class.md#find)<br/>
+[basic_string:: find](../../standard-library/basic-string-class.md#find)<br/>

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194838"
 ---
 # <a name="linker-tools-error-lnk2004"></a>リンカ ツール エラー LNK2004
 
-gp 相対 fixup のオーバーフローを 'ターゲット';short セクション 'section' は大きすぎる、または範囲外です。
+gp 相対 fixup が ' target ' にオーバーフローしています。短いセクション ' section ' が大きすぎるか、範囲を超えています。
 
 セクションが大きすぎます。
 
-このエラーを解決するには、#pragma セクション (".sectionname"を読み取り、書き込み、時間の長い) を使用して、長いセクションでデータを明示的に設定しを使用していずれかの短いセクションのサイズを小さく`__declspec(allocate(".sectionname"))`データ定義と宣言します。  例えば以下のようにします。
+このエラーを解決するには、短いセクションのサイズを小さくします。そのためには、#pragma セクション ("sectionname"、read、write、long) を介して長いセクションにデータを明示的に配置し、データ定義と宣言で `__declspec(allocate(".sectionname"))` を使用します。  たとえば、次のように入力します。
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-長い形式のデータ セクションでは、コンパイラが割り当てるは 8 バイトを超えるデータのコレクションとなる、独自の構造に論理的にグループ化したデータを移動することもできます。  例えば以下のようにします。
+また、論理的にグループ化されたデータを、8バイトを超えるデータのコレクションとなる独自の構造に移動することもできます。この場合、コンパイラは long data セクションで割り当てます。  たとえば、次のように入力します。
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-このエラーは致命的なエラー続けて`LNK1165`します。
+このエラーには、致命的なエラー `LNK1165`が続きます。

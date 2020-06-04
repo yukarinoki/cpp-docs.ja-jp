@@ -1,10 +1,12 @@
 ---
 title: _filelength、_filelengthi64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _filelengthi64
 - _filelength
-apilocation:
+- _o__filelength
+- _o__filelengthi64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _filelength
 - _filelengthi64
@@ -29,14 +35,14 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 00d755138b9293145865b832994a25062edd883e
-ms.sourcegitcommit: fc6bdffcf7d5521609da629621cc8459b200b004
+ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351773"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910213"
 ---
-# <a name="filelength-filelengthi64"></a>_filelength、_filelengthi64
+# <a name="_filelength-_filelengthi64"></a>_filelength、_filelengthi64
 
 ファイルの長さを取得します。
 
@@ -53,12 +59,16 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 ファイル記述子をターゲットにします。
 
 ## <a name="return-value"></a>戻り値
 
-両方 **_filelength**と **_filelengthi64** (バイト単位) に関連付けられているターゲット ファイルのファイルの長さを返す*fd*します。 場合*fd* 、無効なファイル記述子には」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 どちらの関数がエラーを示すし、設定に-1 L を返しますの実行の継続が許可された場合**errno**に**EBADF**します。
+**_Filelength**と **_filelengthi64**はどちらも、 *fd*に関連付けられているターゲットファイルのファイル長をバイト単位で返します。 *Fd*が無効なファイル記述子の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、どちらの関数もエラーを示す-1L を返し、 **errno**を**EBADF**に設定します。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -67,7 +77,7 @@ __int64 _filelengthi64(
 |**_filelength**|\<io.h>|
 |**_filelengthi64**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

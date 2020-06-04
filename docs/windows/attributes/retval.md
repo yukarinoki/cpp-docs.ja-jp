@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514049"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166342"
 ---
 # <a name="retval"></a>retval
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514049"
 [retval]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Retval** C++属性には、 [retval](/windows/win32/Midl/retval) MIDL 属性と同じ機能があります。
 
@@ -46,7 +46,7 @@ ms.locfileid: "69514049"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>

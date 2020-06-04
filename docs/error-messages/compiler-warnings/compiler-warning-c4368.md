@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d96ae14bc427568dcf7ba7bc6e5d53f3d28883ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165303"
 ---
 # <a name="compiler-warning-c4368"></a>コンパイラの警告 C4368
 
@@ -19,15 +19,15 @@ ms.locfileid: "62311498"
 
 CLR 型にネイティブ データ メンバーを埋め込むことはできません。
 
-ただし、ネイティブ型へのポインターを宣言し、その有効期間をマネージド クラスのコンストラクター、デストラクター、およびファイナライザーで制御することはできます。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+ただし、ネイティブ型へのポインターを宣言し、その有効期間をマネージド クラスのコンストラクター、デストラクター、およびファイナライザーで制御することはできます。 詳細については[、「デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
-この警告は、常にエラーとして表示されます。 使用して、[警告](../../preprocessor/warning.md)プラグマ C4368 を無効にします。
+この警告は、常にエラーとして表示されます。 C4368 を無効にするには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
 ## <a name="example"></a>例
 
-次の例では、C4368 を生成します。
+次の例では、C4368 が生成されます。
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};

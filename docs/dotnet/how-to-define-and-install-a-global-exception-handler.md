@@ -1,25 +1,25 @@
 ---
-title: '方法: グローバル例外ハンドラー定義およびインストール'
+title: '方法: グローバル例外ハンドラーを定義およびインストールする'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387397"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544977"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>方法: グローバル例外ハンドラー定義およびインストール
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>方法: グローバル例外ハンドラーを定義およびインストールする
 
-次のコード例に示す方法未処理の例外をキャプチャできます。 フォーム例にはには、ボタンが含まれています。、、押されたときにスローされる例外を発生させる、null 参照を実行します。 この機能は、一般的なコード エラーを表します。 アプリケーション全体の例外ハンドラーがメインの関数によってインストールされている結果の例外をキャッチします。
+次のコード例は、未処理の例外をキャプチャする方法を示しています。 この例のフォームには、押されたときに null 参照が実行され、例外がスローされるボタンが含まれています。 この機能は、一般的なコードエラーを表します。 結果の例外は、main 関数によってインストールされたアプリケーション全体の例外ハンドラーによってキャッチされます。
 
-デリゲートをバインドすることによってこれは、<xref:System.Windows.Forms.Application.ThreadException>イベント。 この場合、後続の例外に送信されますし、`App::OnUnhandled`メソッド。
+これは、デリゲートを <xref:System.Windows.Forms.Application.ThreadException> イベントにバインドすることで実現されます。 この場合、後続の例外は `App::OnUnhandled` メソッドに送信されます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>
@@ -71,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外処理](../extensions/exception-handling-cpp-component-extensions.md)

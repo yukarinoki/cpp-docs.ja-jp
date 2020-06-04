@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'データ オブジェクトとデータ ソース:操作'
               href: data-objects-and-data-sources-manipulation.md
-        - name: ドラッグ アンド ドロップ (OLE)
-          expanded: false
-          items:
-            - name: ドラッグ アンド ドロップ (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'ドラッグ アンド ドロップ:ドロップ ソースの実装'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'ドラッグ アンド ドロップ:ドロップ ターゲットの実装'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'ドラッグ アンド ドロップ:カスタマイズ'
-              href: drag-and-drop-customizing.md
+        - name: OLE のドラッグ アンド ドロップ
+          href: drag-and-drop-ole.md
         - name: メニューとリソース (OLE)
           expanded: false
           items:
@@ -1023,7 +1014,7 @@
             - name: ダイアログ ボックスの有効期間
               expanded: false
               items:
-                - name: ダイアログ ボックスの有効期間
+                - name: MFC でのダイアログ ボックスの操作
                   href: life-cycle-of-a-dialog-box.md
                 - name: ダイアログ ボックスの作成と表示
                   href: creating-and-displaying-dialog-boxes.md
@@ -1711,7 +1702,7 @@
     - name: MFC のクラス
       expanded: false
       items:
-        - name: MFC のクラス
+        - name: MFC クラス
           href: reference/mfc-classes.md
         - name: CAccelerateDecelerateTransition クラス
           href: reference/cacceleratedeceleratetransition-class.md

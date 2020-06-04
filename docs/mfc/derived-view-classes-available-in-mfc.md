@@ -7,39 +7,39 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12b31074e4fcc2ed6a83e3669e1044f5b9caedab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373503"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC で使用できる派生ビュー クラス
 
-次の表は、MFC のビュー クラスおよび相互の関係を示します。 ビュー クラスの機能は、派生元である MFC ビュー クラスに依存します。
+次の表は、MFC のビュー クラスと、それらの相互関係を示しています。 ビュー クラスの機能は、派生元の MFC ビュー クラスによって異なります。
 
-### <a name="view-classes"></a>ビュー クラス
+### <a name="view-classes"></a>クラスを表示する
 
 |クラス|説明|
 |-----------|-----------------|
-|[CView](../mfc/reference/cview-class.md)|すべてのビューの基本クラスです。|
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|基本クラスの`CTreeView`、 `CListView`、 `CEditView`、および`CRichEditView`します。 これらのクラスを使用して、指定された Windows のコモン コントロールとドキュメント/ビュー アーキテクチャを使用できます。|
-|[CEditView](../mfc/reference/ceditview-class.md)|Windows に基づく単純なビューでは、ボックス コントロールを編集します。 入力とテキストの編集は、単純なテキスト エディター アプリケーションの基礎として使用できます。 参照 `CRichEditView`.|
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|ビューを含む、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)オブジェクト。 このクラスに似ています`CEditView`とは異なり、 `CEditView`、`CRichEditView`書式設定されたテキストのハンドル。|
-|[CListView](../mfc/reference/clistview-class.md)|ビューを含む、 [CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト。|
-|[Ctreeview の比較](../mfc/reference/ctreeview-class.md)|ビューを含む、 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) Visual C でソリューション エクスプ ローラー ウィンドウのようにビューのオブジェクト。|
-|[CScrollView](../mfc/reference/cscrollview-class.md)|基本クラスの`CFormView`、 `CRecordView`、および`CDaoRecordView`します。 ビューの内容をスクロールを実装します。|
-|[CFormView](../mfc/reference/cformview-class.md)|フォーム ビューでは、コントロールを含むビュー。 フォーム ベースのアプリケーションでは、1 つ以上このようなフォーム インターフェイスを提供します。|
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|アプリケーションのユーザー サイトを参照できます、World Wide Web のほかフォルダーで、ネットワークおよびローカル ファイル システムで Web ブラウザー ビュー。 Web ブラウザーの表示は、Active ドキュメント コンテナーとしても作業できます。|
-|[CRecordView](../mfc/reference/crecordview-class.md)|ODBC データベース レコードをコントロールに表示するフォーム ビュー。 ODBC サポート、プロジェクトを選択した場合、ビューの基底クラスは、`CRecordView`します。 接続されているビューを`CRowset`オブジェクト。|
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|DAO データベース レコードをコントロールに表示するフォーム ビュー。 DAO サポート、プロジェクトを選択した場合、ビューの基底クラスは、`CDaoRecordView`します。 接続されているビューを`CDaoRecordset`オブジェクト。|
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|コントロールでの OLE DB レコードを表示するフォーム ビュー。 OLE DB のサポートをプロジェクトを選択した場合、ビューの基底クラスは、`COleDBRecordView`します。 接続されているビューを`CRowset`オブジェクト。|
+|[CView](../mfc/reference/cview-class.md)|すべてのビューの基本クラス。|
+|[CCtrlView](../mfc/reference/cctrlview-class.md)|`CTreeView`、 、 `CListView`、`CEditView`および`CRichEditView`の基本クラス。 これらのクラスを使用すると、示された Windows コモン コントロールでドキュメント/ビュー アーキテクチャを使用できます。|
+|[CEditView](../mfc/reference/ceditview-class.md)|Windows エディット ボックス コントロールに基づく単純なビュー。 テキストの入力と編集が可能で、単純なテキスト エディタ アプリケーションのベースとして使用できます。 `CRichEditView` も参照してください。|
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|[オブジェクトを](../mfc/reference/cricheditctrl-class.md)含むビュー。 このクラスは`CEditView`に似ていますが、 `CEditView``CRichEditView`とは異なり、書式設定されたテキストを処理します。|
+|[CListView](../mfc/reference/clistview-class.md)|[オブジェクト](../mfc/reference/clistctrl-class.md)を含むビュー。|
+|[Cツリービュー](../mfc/reference/ctreeview-class.md)|Visual C++ の [ソリューション エクスプローラ] ウィンドウに似たビューの[場合は、CTreeCtrl](../mfc/reference/ctreectrl-class.md)オブジェクトを含むビュー。|
+|[CScrollView](../mfc/reference/cscrollview-class.md)|、 、`CFormView``CRecordView`および`CDaoRecordView`の基本クラス。 ビューの内容をスクロールする実装。|
+|[CFormView](../mfc/reference/cformview-class.md)|フォーム ビュー、コントロールを含むビュー。 フォーム ベースのアプリケーションは、このようなフォーム インターフェイスを 1 つ以上提供します。|
+|[ビュー](../mfc/reference/chtmlview-class.md)|アプリケーションのユーザーが Www Web 上のサイト、およびローカル ファイル システム内のフォルダ、およびネットワーク上のフォルダを参照できる Web ブラウザ ビュー。 Web ブラウザ ビューは、Active ドキュメント コンテナーとしても機能します。|
+|[CRecordView](../mfc/reference/crecordview-class.md)|コントロールに ODBC データベース レコードを表示するフォーム ビュー。 プロジェクトで ODBC サポートを選択した場合、ビューの基本クラスは`CRecordView`です。 ビューはオブジェクトに`CRowset`接続されています。|
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|コントロール内の DAO データベース レコードを表示するフォーム ビュー。 プロジェクトで DAO サポートを選択した場合、ビューの基本クラスは`CDaoRecordView`です。 ビューはオブジェクトに`CDaoRecordset`接続されています。|
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|OLE DB レコードをコントロールに表示するフォーム ビュー。 プロジェクトで OLE DB サポートを選択した場合、ビューの基本クラス`COleDBRecordView`は です。 ビューはオブジェクトに`CRowset`接続されています。|
 
 > [!NOTE]
->  MFC バージョン 4.0 の時点で`CEditView`から派生`CCtrlView`します。
+> MFC バージョン 4.0`CEditView`の時点では`CCtrlView`、 から派生しています。
 
-これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、次を参照してください。[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)します。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
+これらのクラスをアプリケーションで使用するには、アプリケーションのビュー クラスを派生させます。 関連情報については、「[ビューのスクロールとスケーリング」](../mfc/scrolling-and-scaling-views.md)を参照してください。 データベース クラスの詳細については、「概要[: データベース プログラミング](../data/data-access-programming-mfc-atl.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ビューの使い方](../mfc/using-views.md)
+[ビューの使用](../mfc/using-views.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4722
 ms.assetid: d8660710-f67b-4f59-a5fd-59259475529e
-ms.openlocfilehash: 320061c2daf2be042afe45828af637638399beaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fee3296eba4476680f4948b4a1f7fdee03e8840
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175208"
 ---
 # <a name="compiler-warning-level-1-c4722"></a>コンパイラの警告 (レベル 1) C4722
 
@@ -25,7 +25,7 @@ ms.locfileid: "62327289"
 
 次の例では C4722 が生成されます。
 
-```
+```cpp
 // C4722.cpp
 // compile with: /O1 /W1 /c
 #include <stdlib.h>

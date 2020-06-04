@@ -1,9 +1,10 @@
 ---
 title: _eof
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _eof
-apilocation:
+- _o__eof
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288137"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915055"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 ファイルの終わり (EOF) かどうかをテストします。
 
@@ -47,16 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**_eof**でない場合、現在の位置がファイルの最後または 0 の場合は 1 を返します。 戻り値-1 はエラーを示します無効なパラメーター ハンドラーが呼び出されるこの場合、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**、無効なファイル記述子を示します。
+現在の位置がファイルの末尾である場合、 **_eof**は1を返します。それ以外の場合は0を返します。 戻り値-1 はエラーを示します。この場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は、無効なファイル記述子を示す**EBADF**に設定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Eof**関数は、ファイルの末尾に関連付けられているかどうかを決定します。 *fd*に達しています。
+**_Eof**関数は、 *fd*に関連付けられたファイルの末尾に到達したかどうかを判断します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -64,7 +71,7 @@ int _eof(
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -106,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>入力: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>入力: crt_eof.txt
 
 ```Input
 This file contains some text.

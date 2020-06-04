@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse クラス
+title: クラスを指定します。
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 9c4241049ad323047f06c0b29f946521f2c02167
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6bf1d4e3be849004e13e593fb5f4b5cb87f8123
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277904"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330737"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse クラス
+# <a name="csimplemapequalhelperfalse-class"></a>クラスを指定します。
 
-このクラスのヘルパーは、 [CSimpleMap](../../atl/reference/csimplemap-class.md)クラス。
+このクラスは[、CSimpleMap](../../atl/reference/csimplemap-class.md)クラスのヘルパーです。
 
 ## <a name="syntax"></a>構文
 
@@ -33,22 +33,22 @@ class CSimpleMapEqualHelperFalse
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(静的)2 つのキーの等価性をテストします。|
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(静的)False を返します。|
+|[を指定します。](#isequalkey)|(静的)2 つのキーが等しいかテストします。|
+|[値が等しい](#isequalvalue)|(静的)false を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この特性クラスを補足するため、`CSimpleMap`クラス。 含まれる 2 つの要素を比較するためのメソッドを提供します、`CSimpleMap`オブジェクト、具体的には 2 つの値の要素またはキーの 2 つの要素。
+この特徴クラスはクラスの`CSimpleMap`補足です。 オブジェクトに含まれる 2 つの要素、特`CSimpleMap`に 2 つの値要素または 2 つのキー要素を比較するメソッドを提供します。
 
-値の比較は、常に false を返すし、さらが呼び出されます`ATLASSERT`引数が参照されている場合は false。 等しいかどうかテストが十分に定義されていない場合、このクラスは、ほとんどのメソッドに対して正常に動作しなどの比較に依存する方法を明確に定義された方法で失敗する可能性がキー/値ペアを含むマップを[CSimpleMap:。FindVal](../../atl/reference/csimplemap-class.md#findval)します。
+値比較は常に false を返し、さらに、`ATLASSERT`参照される場合は false の引数を指定して呼び出します。 等値テストが十分に定義されていない状況では、このクラスは、ほとんどのメソッドでキー/値ペアを含むマップが正しく動作しますが[、CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)などの比較に依存するメソッドに対して明確に定義された方法で失敗します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+## <a name="csimplemapequalhelperfalseisequalkey"></a><a name="isequalkey"></a>を指定します。
 
-2 つのキーの等価性をテストします。
+2 つのキーが等しいかテストします。
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -64,13 +64,13 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="return-value"></a>戻り値
 
-キーが false でそれ以外の場合、等しい場合は true を返します。
+キーが等しい場合は true、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを呼び出す[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)します。
+このメソッドは[、を](../../atl/reference/csimplearrayequalhelper-class.md)呼び出します。
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+## <a name="csimplemapequalhelperfalseisequalvalue"></a><a name="isequalvalue"></a>値が等しい
 
 false を返します。
 
@@ -82,11 +82,11 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは常に false を返し、呼び出されます`ATLASSERT`引数が参照されている場合は false。 目的は、`CSimpleMapEqualHelperFalse::IsEqualValue`を強制的に比較を使用して、等しいかどうかテストが適切に定義されていないときに、明確に定義された方法で失敗するメソッド。
+このメソッドは常に false を`ATLASSERT`返し、参照が行われる場合は false の引数を指定して呼び出します。 等価性テスト`CSimpleMapEqualHelperFalse::IsEqualValue`が適切に定義されていない場合に、比較を使用するメソッドが明確に定義された方法で失敗するように強制することを目的とします。
 
 ## <a name="see-also"></a>関連項目
 
-[CSimpleMapEqualHelper クラス](../../atl/reference/csimplemapequalhelper-class.md)<br/>
+[クラスを指定します。](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

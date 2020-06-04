@@ -7,28 +7,28 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 8b66ff0f19392eb1685f8632a3fc4d9e90094304
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907816"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372798"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
 リボン デザイナーを使用すると、MFC アプリケーションでリボンを作成してカスタマイズできます。 リボンは、複数のコマンドを 1 つの論理グループにまとめたユーザー インターフェイス (UI) 要素です。 これらのグループは、ウィンドウの上部に水平に並んで表示されるタブに別々に表示されます。 リボンは、メニュー バーとツール バーの代わりに表示されます。 リボンは、アプリケーションの使用性を大幅に向上させます。 詳細については、「[リボン](/windows/win32/uxguide/cmd-ribbons)」を参照してください。 リボンを次の図に示します。
 
-![MFC リボンリソースコントロール](../mfc/media/ribbon_no_callouts.png "MFC リボンリソースコントロール")
+![MFC リボン リソース コントロール](../mfc/media/ribbon_no_callouts.png "MFC リボン リソース コントロール")
 
-以前のバージョンの Visual Studio では、 [CMFCRibbonBar クラス](../mfc/reference/cmfcribbonbar-class.md)などの MFC リボンクラスを使用するコードを記述することによって、リボンを作成する必要がありました。 Visual Studio 2010 以降では、リボンデザイナーには、リボンを作成するための別の方法が用意されています。 最初に、リボンをリソースとして作成およびカスタマイズします。 次に、リボン リソースを MFC アプリケーションのコードから読み込みます。 リボン リソースと MFC リボン クラスを同時に使用することもできます。 たとえば、リボンリソースを作成し、コードを使用して、実行時にプログラムによって要素を追加することができます。
+以前のバージョンの Visual Studio では、リボンは[、CMFCRibbonBar クラス](../mfc/reference/cmfcribbonbar-class.md)などの MFC リボン クラスを使用するコードを記述して作成する必要がありました。 Visual Studio 2010 以降では、リボン デザイナーは、リボンを構築するための代替メソッドを提供します。 最初に、リボンをリソースとして作成およびカスタマイズします。 次に、リボン リソースを MFC アプリケーションのコードから読み込みます。 リボン リソースと MFC リボン クラスを同時に使用することもできます。 たとえば、リボン リソースを作成しておき、実行時にコードを使用して要素を追加できます。
 
 ## <a name="understanding-the-ribbon-designer"></a>リボン デザイナーについて
 
 リボン デザイナーは、リボンをリソースとして作成および保存します。 リボン リソースを作成すると、リボン デザイナーによって次の 3 つの操作が行われます。
 
-- プロジェクト リソース定義スクリプト (*.rc) にエントリを追加する。 次の例では、IDR_RIBBON は、リボンリソースを識別する一意の名前、RT_RIBBON_XML はリソースの種類、.mfcribbon-ms はリソースファイルの名前です。
+- プロジェクト リソース定義スクリプト (*.rc) にエントリを追加する。 次の例では、IDR_RIBBONリボン リソースを識別する一意の名前、リソースの種類RT_RIBBON_XML、ribbon.mfcribbon-ms はリソース ファイルの名前です。
 
-```
+```cpp
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"
 ```
 
@@ -38,7 +38,7 @@ ms.locfileid: "70907816"
 #define IDR_RIBBON            307
 ```
 
-- リボンのボタン、コントロール、および属性を定義する XML コードを含むリボン リソース ファイル (*.mfcribbon-ms) を作成する。 リボン デザイナーで行ったリボンの変更は、リソース ファイルに XML として保存されます。 次のコード例は、.mfcribbon-ms ファイルの\*内容の一部を示しています。
+- リボンのボタン、コントロール、および属性を定義する XML コードを含むリボン リソース ファイル (*.mfcribbon-ms) を作成する。 リボン デザイナーで行ったリボンの変更は、リソース ファイルに XML として保存されます。 次のコード例は、.mfcribbon-ms\*ファイルの内容の一部を示しています。
 
 ```
 <RIBBON_BAR>
@@ -50,20 +50,20 @@ ms.locfileid: "70907816"
 </ID>
 ```
 
-MFC アプリケーションでリボンリソースを使用するには、 [CMFCRibbonBar:: LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource)を呼び出してリソースを読み込みます。
+MFC アプリケーションでリボン リソースを使用するには[、CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource)を呼び出してリソースを読み込みます。
 
 ## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>リボン デザイナーを使用したリボンの作成
 
 リボン リソースを MFC プロジェクトに追加する方法は 2 つあります。
 
-- MFC アプリケーションを作成し、リボンを作成するように MFC プロジェクト ウィザードを構成する。 詳細については、「[チュートリアル:MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)を使用してリボンアプリケーションを作成する。
+- MFC アプリケーションを作成し、リボンを作成するように MFC プロジェクト ウィザードを構成する。 詳細については、「 チュートリアル : MFC を[使用したリボン アプリケーションの作成](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)」を参照してください。
 
-- 既存の MFC プロジェクトにリボン リソースを作成し、それを読み込む。 詳細については、「[チュートリアル:MFC Scribble アプリケーションの更新 (パート 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+- 既存の MFC プロジェクトにリボン リソースを作成し、それを読み込む。 詳細については、「[チュートリアル : MFC Scribble アプリケーションの更新 (パート 1)」](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)を参照してください。
 
-プロジェクトに手動でコード化されたリボンが既に存在する場合でも、MFC には既存のリボンをリボン リソースに変換するために使用できる機能が用意されています。 詳細については、「[方法 :既存の MFC リボンをリボンリソース](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)に変換します。
+プロジェクトに手動でコード化されたリボンが既に存在する場合でも、MFC には既存のリボンをリボン リソースに変換するために使用できる機能が用意されています。 詳細については、「[方法 : 既存の MFC リボンをリボン リソースに変換する](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)」を参照してください。
 
 > [!NOTE]
->  リボンはダイアログ ベースのアプリケーションには作成できません。 詳細については、「 [[アプリケーションの種類] (MFC アプリケーションウィザード)](../mfc/reference/application-type-mfc-application-wizard.md)」を参照してください。
+> リボンはダイアログ ベースのアプリケーションには作成できません。 詳細については、「[アプリケーションの種類 、 MFC アプリケーション ウィザード](../mfc/reference/application-type-mfc-application-wizard.md)」を参照してください。
 
 ## <a name="customizing-ribbons"></a>リボンのカスタマイズ
 
@@ -71,17 +71,17 @@ MFC アプリケーションでリボンリソースを使用するには、 [CM
 
 リボン デザイナーのさまざまなコンポーネントを次の図に示します。
 
-![MFC リボンデザイナー](../mfc/media/ribbon_designer.png "MFC リボンデザイナー")
+![MFC リボン デザイナー](../mfc/media/ribbon_designer.png "MFC リボン デザイナー")
 
-- **リソース**デザイナー画面にドラッグできるコントロールを格納します。
+- **ツールボックス:** デザイナー画面にドラッグできるコントロールが含まれています。
 
-- **デザイナー画面:** リボンリソースの視覚的な表現を格納します。
+- **デザイナー画面:** リボン リソースのビジュアル表現を格納します。
 
 - **[クラスウィザード](reference/mfc-class-wizard.md):** デザイナー画面で選択されている項目の属性を一覧表示します。
 
-- **リソースビューウィンドウ:** プロジェクトのリボンリソースを含むリソースが表示されます。
+- **[リソース ビュー] ウィンドウ:** プロジェクト内のリボン リソースを含むリソースを表示します。
 
-- **リボンエディターツールバー:** リボンをプレビューし、そのビジュアルテーマを変更するためのコマンドが含まれています。
+- **リボン エディタ ツールバー:** リボンをプレビューし、そのビジュアル テーマを変更できるコマンドが含まれています。
 
 次のトピックでは、リボン デザイナーの機能の使用方法について説明します。
 
@@ -99,17 +99,17 @@ MFC アプリケーションでリボンリソースを使用するには、 [CM
 
 - **アプリケーションボタン:** リボンの左上隅に表示されるボタン。 アプリケーション ボタンは [ファイル] メニューの代わりに表示され、リボンが最小化されている場合でも表示されます。 このボタンをクリックすると、コマンド リストを含むメニューが表示されます。
 
-- **クイックアクセスツールバー:** 使用頻度の高いコマンドを表示する、カスタマイズ可能な小さなツールバー。
+- **クイック アクセス ツールバー:** 頻繁に使用するコマンドを表示する、カスタマイズ可能な小さなツール バー。
 
-- **カテゴリ**:リボンタブの内容を表す論理グループ。
+- **カテゴリ**: リボン タブの内容を表す論理グループ。
 
-- **カテゴリの既定のボタン:** リボンが最小化されたときにリボンに表示されるボタン。 このボタンをクリックすると、カテゴリがメニューとして再表示されます。
+- **カテゴリの既定のボタン:** リボンを最小化したときにリボンに表示されるボタン。 このボタンをクリックすると、カテゴリがメニューとして再表示されます。
 
-- **パネル**関連するコントロールのグループを表示するリボンバーの領域。 すべてのリボン カテゴリには、1 つ以上のリボン パネルが含まれます。
+- **パネル:** 関連するコントロールのグループを表示するリボン バーの領域。 すべてのリボン カテゴリには、1 つ以上のリボン パネルが含まれます。
 
-- **リボン要素:** ボタンやコンボボックスなど、パネル内のコントロール。 リボンでホストできるさまざまなコントロールについては、「 [RibbonGadgets Sample:リボンガジェットアプリケーション](../overview/visual-cpp-samples.md)。
+- **リボン要素:** ボタンやコンボ ボックスなどのパネルのコントロール。 リボンでホストできるさまざまなコントロールを確認するには、「 [RibbonGadgets サンプル: リボン ガジェット アプリケーション](../overview/visual-cpp-samples.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
+[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
 [リソース ファイルの操作](../windows/working-with-resource-files.md)

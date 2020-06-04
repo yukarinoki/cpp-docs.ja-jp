@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167603"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ のテキストと文字列
 
@@ -57,7 +57,7 @@ Unicode の代わりとして、日本語や中国語など、1 バイト文字�
 [国際化](../c-runtime-library/internationalization.md)<br/>
 C ランタイム ライブラリの国際対応のサポートについて説明します。
 
-[国際対応のサンプル](https://github.com/Microsoft/VCSamples)<br/>
+[国際対応のサンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
 Visual C++ の国際化のアプローチを示すサンプルへのリンクを提供します。
 
 [言語および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

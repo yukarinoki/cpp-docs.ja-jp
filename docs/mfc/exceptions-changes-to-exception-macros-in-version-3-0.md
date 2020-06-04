@@ -1,5 +1,5 @@
 ---
-title: 例外:バージョン 3.0 での例外処理マクロの変更
+title: '例外処理 : MFC 3.0 での変更点'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,58 +7,58 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82320b0c7ccd6766e016f0437633339f8f8f61d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365491"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外:バージョン 3.0 での例外処理マクロの変更
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外処理 : MFC 3.0 での変更点
 
-これは、高度なトピックです。
+これは高度なトピックです。
 
-Mfc バージョン 3.0 以降では、例外処理マクロが C++ 例外を使用する変更されました。 この記事では、これらの変更が、マクロを使用する既存のコードの動作に影響を与えるように指示します。
+MFC バージョン 3.0 以降では、例外処理マクロが C++ 例外を使用するように変更されています。 この資料では、これらの変更がマクロを使用する既存のコードの動作にどのように影響するかを説明します。
 
-ここでは、次のトピックについて説明します。
+この記事では、次のトピックについて説明します。
 
-- [例外の種類と、CATCH マクロ](#_core_exception_types_and_the_catch_macro)
+- [例外の種類と CATCH マクロ](#_core_exception_types_and_the_catch_macro)
 
-- [例外の再スロー](#_core_re.2d.throwing_exceptions)
+- [例外を再スローする](#_core_re.2d.throwing_exceptions)
 
-##  <a name="_core_exception_types_and_the_catch_macro"></a> 例外の種類と、CATCH マクロ
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>例外の種類と CATCH マクロ
 
-MFC の以前のバージョンで、**CATCH**マクロでは、MFC の実行時の型情報を使用例外の種類を確認するには例外の型が決定されます、つまり、キャッチ側でします。 C++ の例外を除き、ただし、例外の型は常にスロー サイトによって決まりますスローされる例外オブジェクトの型。 スローされたオブジェクトへのポインターの型がスローされたオブジェクトの種類を異なる場所まれなケースで互換性が失われます。
+以前のバージョンの MFC では **、CATCH**マクロは MFC ランタイム型情報を使用して例外の型を決定していました。例外のタイプは、つまり catch サイトで決定されます。 ただし、C++ 例外を除き、スロー サイトでは、スローされる例外オブジェクトの型によって例外の型が常に決定されます。 これは、スローされたオブジェクトへのポインターの型がスローされたオブジェクトの型と異なるまれなケースでは、互換性が低下します。
 
-次の例は、MFC バージョン 3.0 と以前のバージョンの間には、この違いの結果を示しています。
+次の例は、MFC バージョン 3.0 と以前のバージョンのこの違いの結果を示しています。
 
 [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-このコードはバージョン 3.0 で異なる動作制御が常に最初に渡されるため、**catch**と一致する例外-宣言ブロックします。 スロー式の結果
+このコードは、バージョン 3.0 では、一致する例外宣言を持つ最初の**catch**ブロックに常に渡されるため、動作が異なります。 スロー式の結果
 
 [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-としてスローされる、`CException*`として構築した場合でも、`CCustomException`します。 **CATCH**以前使用して MFC バージョン 2.5 マクロ`CObject::IsKindOf`実行時に、型をテストします。 式
+は`CException*`、 として構築されていても、 としてスローされます`CCustomException`。 MFC**CATCH**バージョン 2.5 以前の CATCH`CObject::IsKindOf`マクロは、実行時に型をテストするために使用します。 式が
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-true の場合、最初の catch ブロックが例外をキャッチします。 C++ 例外を使用して、例外処理マクロの多くを実装する、バージョン 3.0 では、2 番目の catch ブロックと一致する、スローされた`CException`します。
+は true の場合、最初の catch ブロックが例外をキャッチします。 C++ 例外を使用して例外処理マクロの多くを実装するバージョン 3.0 では、2 番目の catch`CException`ブロックがスローされた .
 
-このようなコードは一般的ではありません。 例外オブジェクトがジェネリック型を受け取る別の関数に渡されるときに通常表示`CException*`「スロー」の処理を行い、最後に、例外をスローします。
+このようなコードは一般的ではありません。 通常、例外オブジェクトがジェネリック`CException*`を受け入れる別の関数に渡され、"プリスロー" 処理が実行され、最後に例外がスローされた場合に表示されます。
 
-この問題を回避するには、スロー式を関数から呼び出し元のコードに移動し、例外の生成時にコンパイラに判明する実際の型の例外をスローします。
+この問題を回避するには、throw 式を関数から呼び出し元のコードに移動し、例外が生成された時点でコンパイラが認識している実際の型の例外をスローします。
 
-##  <a name="_core_re.2d.throwing_exceptions"></a> 例外の再スロー
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>例外の再スロー
 
-Catch ブロックでは、その例外はキャッチ例外ポインターと同じをスローできません。
+catch ブロックは、キャッチした例外ポインターと同じ例外ポインターをスローできません。
 
-たとえば、このコードは以前のバージョンで有効ですがバージョン 3.0 での予期しない結果。
+たとえば、このコードは以前のバージョンでは有効でしたが、バージョン 3.0 では予期しない結果が発生します。
 
 [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-使用して**THROW** catch ブロックが、ポインター`e`外側の catch のサイトは無効なポインターを受け取れるように、削除します。 使用**THROW_LAST**再スローする`e`します。
+catch ブロックで**THROW**を使用`e`すると、ポインターが削除され、外部のキャッチ・サイトが無効なポインターを受け取ります。 **THROW_LAST**を使用して、`e`を再スローします。
 
-詳細については、次を参照してください。[例外:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、「[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

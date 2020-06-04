@@ -1,11 +1,13 @@
 ---
 title: difftime、_difftime32、_difftime64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+- _o__difftime32
+- _o__difftime64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,14 +38,14 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288524"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914777"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime、_difftime32、_difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime、_difftime32、_difftime64
 
 2 つの時刻の差を取得します。
 
@@ -61,27 +67,29 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>戻り値
 
-**difftime** (秒単位) からの経過時間を返します*timeStart*に*時刻終了*します。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
+[**時間**] を指定すると、 *Timestart*から*timestart*までの経過時間を秒単位で返します。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Difftime**関数は、2 つの指定された時間値の差を計算*timeStart*と*時刻終了*します。
+**Diffgram**関数は、指定された2つの Time 値*Timestart*と*timestart*の差を計算します。
 
-時刻の値を指定する必要がありますの範囲内に収まる**time_t**します。 **time_t**は 64 ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 範囲の**time_t** 1970 年 1 月 1 日午前 0 時が。
+指定された時刻値は、 **time_t**の範囲内に収まる必要があります。 **time_t**は64ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 **Time_t**の範囲の下限は、1970年1月1日午前0時になります。
 
-**difftime**いずれかに評価されるインライン関数は、 **_difftime32**または **_difftime64**かどうかに応じて **_USE_32BIT_TIME_T**が定義されています。 _difftime32 と _difftime64 を直接使って、特定のサイズの時刻型の使用を強制できます。
+**diffgram**は、 **_USE_32BIT_TIME_T**が定義されているかどうかに応じて **_difftime32**または **_difftime64**のいずれかに評価されるインライン関数です。 _difftime32 と _difftime64 を直接使って、特定のサイズの時刻型の使用を強制できます。
 
-これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は 0 を返します設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は0を返し、 **errno**を**EINVAL**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

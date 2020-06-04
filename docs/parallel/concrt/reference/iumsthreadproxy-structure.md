@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e748b1da02394e1f70afd8b92947e1291957c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345514"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368080"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 構造体
 
@@ -25,7 +25,7 @@ ms.locfileid: "62345514"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
@@ -35,15 +35,15 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 |名前|説明|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|重要な領域を入力するために呼び出されます。 クリティカル領域内で、スケジューラは、リージョンの中に発生する非同期のブロック操作を確認しません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネルの非同期プロシージャ コール (Apc) など、UMS スレッドの再入力しないはことを意味します。|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|重要な領域を終了するために呼び出されます。|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|ハイパー クリティカル領域を終了するために呼び出されます。|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|内のスレッド プロキシは、クリティカル領域の種類を返します。 クリティカル領域とし、ハイパー クリティカル領域では、コードを入力した場合、ハイパー クリティカル領域はクリティカル領域は、のスーパー セットであるため`InsideHyperCriticalRegion`が返されます。|
+|[を指定します。](#entercriticalregion)|クリティカル領域に入るために呼び出されます。 重要な領域内では、スケジューラは、その領域で発生する非同期ブロッキング操作を監視しません。 つまり、ページ フォールト、スレッドの中断、カーネル非同期プロシージャ呼び出し (Apc) などの場合、UMS スレッドのスケジューラは再入力されません。|
+|[を使用します。](#enterhypercriticalregion)|ハイパー クリティカル領域に入るために呼び出されます。 ハイパークリティカル領域内では、スケジューラはリージョン中に発生するブロック操作を監視しません。 つまり、スケジューラは、ブロック、ページ フォールト、スレッドの中断、カーネル非同期プロシージャ呼び出し (APC) などの UMS スレッドのロック取得の試行をブロックするために再入力されません。|
+|[を指定します。](#exitcriticalregion)|クリティカル領域を終了するために呼び出されます。|
+|[を使用します。](#exithypercriticalregion)|ハイパークリティカル領域を終了するために呼び出されます。|
+|[を使用します。](#getcriticalregiontype)|スレッド プロキシが存在する重要領域の種類を返します。 ハイパークリティカル領域は重要領域のスーパーセットであるため、コードがクリティカル領域に入り、ハイパークリティカル領域に入った場合は、`InsideHyperCriticalRegion`そのリージョンが返されます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[IThreadProxy](ithreadproxy-structure.md)
+[プロキシ](ithreadproxy-structure.md)
 
 `IUMSThreadProxy`
 
@@ -51,73 +51,73 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 **ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="entercriticalregion"></a>  Iumsthreadproxy::entercriticalregion メソッド
+## <a name="iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>メソッドを入力します。
 
-重要な領域を入力するために呼び出されます。 クリティカル領域内で、スケジューラは、リージョンの中に発生する非同期のブロック操作を確認しません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネルの非同期プロシージャ コール (Apc) など、UMS スレッドの再入力しないはことを意味します。
+クリティカル領域に入るために呼び出されます。 重要な領域内では、スケジューラは、その領域で発生する非同期ブロッキング操作を監視しません。 つまり、ページ フォールト、スレッドの中断、カーネル非同期プロシージャ呼び出し (Apc) などの場合、UMS スレッドのスケジューラは再入力されません。
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-クリティカル領域の新しい深度。 クリティカル領域は再入可能です。
+臨界領域の新しい深さ。 重要な領域は再入可能です。
 
-##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy::EnterHyperCriticalRegion Method
+## <a name="iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>メソッドを入力します。
 
-ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。
+ハイパー クリティカル領域に入るために呼び出されます。 ハイパークリティカル領域内では、スケジューラはリージョン中に発生するブロック操作を監視しません。 つまり、スケジューラは、ブロック、ページ フォールト、スレッドの中断、カーネル非同期プロシージャ呼び出し (APC) などの UMS スレッドのロック取得の試行をブロックするために再入力されません。
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-ハイパー クリティカル領域の新しい深度。 ハイパースレッディング クリティカル領域は再入可能です。
+超臨界領域の新しい深さ。 超重要領域は再入可能です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スケジューラは、このようなリージョンで呼び出すメソッドとロックが獲得する何について十分に注意である必要があります。 このようなリージョン内のコードをスケジューラをスケジュールするためのものに保持されているロックでブロックする場合は、デッドロックが発生したりします。
+スケジューラは、どのメソッドを呼び出し、どのロックをその領域で取得するかについて、非常に注意する必要があります。 スケジューラーがスケジュールを担当するロック上で、このような領域内のコードがブロックされると、デッドロックが発生する可能性があります。
 
-##  <a name="exitcriticalregion"></a>  Iumsthreadproxy::exitcriticalregion メソッド
+## <a name="iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>メソッドを終了します。
 
-重要な領域を終了するために呼び出されます。
+クリティカル領域を終了するために呼び出されます。
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-クリティカル領域の新しい深度。 クリティカル領域は再入可能です。
+臨界領域の新しい深さ。 重要な領域は再入可能です。
 
-##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion メソッド
+## <a name="iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>メソッドを終了します。
 
-ハイパー クリティカル領域を終了するために呼び出されます。
+ハイパークリティカル領域を終了するために呼び出されます。
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-ハイパー クリティカル領域の新しい深度。 ハイパースレッディング クリティカル領域は再入可能です。
+超臨界領域の新しい深さ。 超重要領域は再入可能です。
 
-##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy::getcriticalregiontype メソッド
+## <a name="iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>メソッドの種類を指定します。
 
-内のスレッド プロキシは、クリティカル領域の種類を返します。 クリティカル領域とし、ハイパー クリティカル領域では、コードを入力した場合、ハイパー クリティカル領域はクリティカル領域は、のスーパー セットであるため`InsideHyperCriticalRegion`が返されます。
+スレッド プロキシが存在する重要領域の種類を返します。 ハイパークリティカル領域は重要領域のスーパーセットであるため、コードがクリティカル領域に入り、ハイパークリティカル領域に入った場合は、`InsideHyperCriticalRegion`そのリージョンが返されます。
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-内のスレッド プロキシは、クリティカル領域の種類。
+スレッド プロキシが存在する重要領域の型。
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[同時実行名前空間](concurrency-namespace.md)<br/>
 [IUMSScheduler 構造体](iumsscheduler-structure.md)

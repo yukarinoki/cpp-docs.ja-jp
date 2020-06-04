@@ -1,15 +1,15 @@
 ---
 title: '方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498594"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246537"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する
 
@@ -23,7 +23,7 @@ ms.locfileid: "69498594"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr`とその親戚は ATL の一部であり、atlcomcli .h > で\<定義されています。 `_com_ptr_t`が comip \<> で宣言されています。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
+`CComPtr` とその親戚は ATL に含まれており、\<atlcomcli. h > で定義されています。 `_com_ptr_t` は \<comip > で宣言されています。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
 
 ## <a name="example"></a>例
 
@@ -37,6 +37,6 @@ ATL では、よりシンプルな構文を持つ `CComQIPtr`も提供されま�
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

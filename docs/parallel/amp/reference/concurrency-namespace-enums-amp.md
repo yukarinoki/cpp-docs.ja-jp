@@ -1,28 +1,28 @@
 ---
-title: 同時実行の名前空間列挙型 (AMP)
+title: コンカレンシー名前空間列挙型 (AMP)
 ms.date: 11/04/2016
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2467db27ad36dfcda31dfb5bb45067ada5470d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180454"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376316"
 ---
-# <a name="concurrency-namespace-enums-amp"></a>同時実行の名前空間列挙型 (AMP)
+# <a name="concurrency-namespace-enums-amp"></a>コンカレンシー名前空間列挙型 (AMP)
 
 |||
 |-|-|
 |[access_type 列挙型](#access_type)|[queuing_mode 列挙型](#queuing_mode)|
 
-##  <a name="access_type"></a>  access_type 列挙型
+## <a name="access_type-enumeration"></a><a name="access_type"></a>access_type列挙
 
 データへのさまざまな種類のアクセスを示すために使用される列挙型。
 
-```
+```cpp
 enum access_type;
 ```
 
@@ -36,11 +36,11 @@ enum access_type;
 |`access_type_read_write`|共有。 割り当ては、アクセラレータ上でアクセスでき、CPU 上では書き込み可能です。|
 |`access_type_write`|共有。 割り当ては、アクセラレータ上でアクセスでき、CPU 上では読み取りおよび書き込みの両方ができます。|
 
-##  <a name="queuing_mode"></a>  queuing_mode 列挙型
+## <a name="queuing_mode-enumeration"></a><a name="queuing_mode"></a>queuing_mode列挙
 
 アクセラレータでサポートされているキュー モードを指定します。
 
-```
+```cpp
 enum queuing_mode;
 ```
 
@@ -48,9 +48,9 @@ enum queuing_mode;
 
 |名前|説明|
 |----------|-----------------|
-|`queuing_mode_immediate`|などのことを指定するキュー モード コマンド[parallel_for_each 関数 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)、呼び出し元に戻るとすぐに対応するアクセラレータ デバイスに送信されます。|
-|`queuing_mode_automatic`|対応するコマンド キューに入れられるコマンドを指定するキュー モード、 [accelerator_view](accelerator-view-class.md)オブジェクト。 コマンドは、デバイスに送信されるときに[accelerator_view::flush](accelerator-view-class.md#flush)が呼び出されます。|
+|`queuing_mode_immediate`|parallel_for_each[関数 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)など、すべてのコマンドが呼び出し元に戻るとすぐに対応するアクセラレータ デバイスに送信されるように指定するキュー イング モード。|
+|`queuing_mode_automatic`|[accelerator_view](accelerator-view-class.md)オブジェクトに対応するコマンド・キューにコマンドをキューに入れるように指定するキューイング・モード。 [コマンドは、accelerator_view::flush](accelerator-view-class.md#flush)が呼び出されたときにデバイスに送信されます。|
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[同時実行名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

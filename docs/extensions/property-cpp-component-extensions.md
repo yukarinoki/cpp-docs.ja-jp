@@ -2,18 +2,15 @@
 title: property (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516507"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171977"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI および C++/CX)
 
@@ -86,9 +83,9 @@ set アクセサーまたは get アクセサーのプロパティ メソッド�
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-詳細については、「[プロパティ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx)」を参照してください。
+詳細については、「[プロパティ (C++/CX)](../cppcx/properties-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -163,11 +160,11 @@ get メソッドと set メソッドのアクセシビリティが異なって�
 
 **property** は状況依存キーワードです。  詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例は、プロパティのデータ メンバーとプロパティ ブロックの宣言方法と使用方法を示しています。  これにより、プロパティ アクセサーがクラスから定義できることもわかります。
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

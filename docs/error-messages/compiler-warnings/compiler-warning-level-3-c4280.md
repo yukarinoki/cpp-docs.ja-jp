@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4280
 ms.assetid: 153fb639-3ee1-4fee-baf9-71420abcf3f6
-ms.openlocfilehash: 6a3daa9903cbf983ddc19538a154d9717a2f9f0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb1d37d3b18563f6c443ae728318eeaf816e9353
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174155"
 ---
 # <a name="compiler-warning-level-3-c4280"></a>コンパイラの警告 (レベル 3) C4280
 
-自己再帰的な型を 'type' が 'operator ->'
+' operator-> ' は型 ' type ' を介して自己再帰的でした
 
-コードは正しくない、 **operator ->** 自体を呼び出す。
+コードによって、**演算子 >** が正しく呼び出されないようにすることができます。
 
 次の例では、C4280 が生成されます。
 
-```
+```cpp
 // C4280.cpp
 // compile with: /W3 /WX
 struct A

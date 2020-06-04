@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90b66a9d819d3014c1e1437b691766ade420bd4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161257"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>コンパイラの警告 (レベル 4) C4220
 
-varargs は残りのパラメーターを一致します。
+varargs は残りのパラメーターと一致します
 
-既定の Microsoft 拡張 (/Ze) では、関数へのポインターと同様が、変数、引数を持つ関数へのポインターを検索します。
+既定の Microsoft 拡張機能 (/Ze) では、関数へのポインターは、類似した、変数、引数を持つ関数へのポインターと一致します。
 
 ## <a name="example"></a>例
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-ANSI 互換では、このようなポインターが一致しません ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+このようなポインターは ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では一致しません。

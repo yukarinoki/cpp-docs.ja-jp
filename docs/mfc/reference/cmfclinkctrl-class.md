@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346207"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754245"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl クラス
 
-`CMFCLinkCtrl`クラス ボタンをハイパーリンクとして表示し、ボタンがクリックされたときに、リンクのターゲットを呼び出します。
+この`CMFCLinkCtrl`クラスは、ボタンをハイパーリンクとして表示し、ボタンがクリックされたときにリンクのターゲットを呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,23 +37,23 @@ class CMFCLinkCtrl : public CMFCButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCLinkCtrl::SetURL](#seturl)|ボタンのテキストとして指定された URL が表示されます。|
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|暗黙的なプロトコルを設定します (たとえば、"http:") の URL。|
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|ボタンのテキストまたはビットマップを格納するボタンのサイズを変更します。|
+|[をクリックします。](#seturl)|指定した URL をボタン テキストとして表示します。|
+|[をクリックします。](#seturlprefix)|URL の暗黙的なプロトコル ("http:"など) を設定します。|
+|[コンテンツのサイズ](#sizetocontent)|ボタンのテキストまたはビットマップを含むボタンのサイズを変更します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|ボタンのフォーカスされた四角形が描画される前に、フレームワークによって呼び出されます。|
+|[次の点に関する情報が表示されます。](#ondrawfocusrect)|ボタンのフォーカス四角形が描画される前に、フレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-派生したボタンをクリックすると、`CMFCLinkCtrl`クラス、フレームワークのパラメーターとして、ボタンの URL を渡して、`ShellExecute`メソッド。 次に、`ShellExecute`メソッドは、URL のターゲットを開きます。
+クラスから派生したボタンを`CMFCLinkCtrl`クリックすると、フレームワークはボタンの URL をパラメーターとしてメソッドに`ShellExecute`渡します。 その後`ShellExecute`、メソッドは URL のターゲットを開きます。
 
 ## <a name="example"></a>例
 
-次の例のサイズを設定する方法を示します、`CMFCLinkCtrl`オブジェクト、および url と、ツールヒントを設定する方法、`CMFCLinkCtrl`オブジェクト。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
+次の例は、`CMFCLinkCtrl`オブジェクトのサイズを設定する方法と、オブジェクト内の url とツールヒントを設定`CMFCLinkCtrl`する方法を示しています。 この例は、[新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -76,9 +76,9 @@ class CMFCLinkCtrl : public CMFCButton
 
 **ヘッダー:** afxlinkctrl.h
 
-##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>次の点に関する情報が表示されます。
 
-ボタンのフォーカスされた四角形が描画される前に、フレームワークによって呼び出されます。
+ボタンのフォーカス四角形が描画される前に、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDrawFocusRect(
@@ -91,48 +91,48 @@ virtual void OnDrawFocusRect(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*rectClient*<br/>
-[in]リンク コントロールの外接する四角形にします。
+*レクトクライアント*<br/>
+[in]リンク コントロールに境界を持つ四角形。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ボタンのフォーカスされた四角形を描画するために、独自のコードを使用する場合に、このメソッドをオーバーライドします。
+独自のコードを使用してボタンのフォーカス四角形を描画する場合は、このメソッドをオーバーライドします。
 
-##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>をクリックします。
 
-ボタンのテキストとして指定された URL が表示されます。
+指定した URL をボタン テキストとして表示します。
 
-```
+```cpp
 void SetURL(LPCTSTR lpszURL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszURL*<br/>
-[in]表示するボタンのテキスト。
+*を指定します。*<br/>
+[in]表示するボタン テキスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>をクリックします。
 
-暗黙的なプロトコルを設定します (たとえば、"http:") の URL。
+URL の暗黙的なプロトコル ("http:"など) を設定します。
 
-```
+```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszPrefix*<br/>
-[in]URL のプロトコルのプレフィックス。
+*プレフィックス*<br/>
+[in]URL プロトコルのプレフィックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用すると、URL プレフィックスを設定できます。 プレフィックスは、ボタンの表面上は表示されませんが、これを使用するには、URL のターゲットを参照します。
+このメソッドは、URL プレフィックスを設定するために使います。 ボタンの顔にはプレフィックスは表示されませんが、URL のターゲットを参照するために使用できます。
 
-##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>コンテンツのサイズ
 
-ボタンのテキストまたはビットマップを格納するボタンのサイズを変更します。
+ボタンのテキストまたはビットマップを含むボタンのサイズを変更します。
 
 ```
 virtual CSize SizeToContent(
@@ -142,21 +142,21 @@ virtual CSize SizeToContent(
 
 ### <a name="parameters"></a>パラメーター
 
-*bVCenter*<br/>
-[in]ボタンのテキストと、リンク コントロールの上下の間に垂直方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。
+*bVセンター*<br/>
+[in]リンク コントロールの上端と下端の間にボタン テキストとビットマップを垂直方向に中央揃えする場合は TRUE。それ以外の場合は FALSE。 既定値は FALSE です。
 
-*bHCenter*<br/>
-[in]ボタンのテキストと、リンク コントロールの左側および右側との間の水平方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。
+*bHセンター*<br/>
+[in]リンク コントロールの左右の左右の間にボタン テキストとビットマップを水平方向に中央揃えする場合は TRUE。それ以外の場合は FALSE。 既定値は FALSE です。
 
 ### <a name="return-value"></a>戻り値
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md)リンク コントロールの新しいサイズを格納しているオブジェクト。
+リンク コントロールの新しいサイズを格納する[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CLinkCtrl クラス](../../mfc/reference/clinkctrl-class.md)<br/>
-[CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)
+[クラス](../../mfc/reference/cmfcbutton-class.md)

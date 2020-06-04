@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0026
 - CAN0026
 ms.assetid: b5bc15f2-f179-4b87-ae88-a57e08e43bfa
-ms.openlocfilehash: 4bc3f4977a6b3ab383c61ce410ade33a4b14a360
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dbe7728b010db4cebb11996a7ccce3398255916
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359944"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195748"
 ---
 # <a name="expression-evaluator-error-cxx0026"></a>式エバリュエーター エラー CXX0026
 
-文字列の形式が正しくありません。
+書式設定文字列が正しくありません
 
-書式指定文字列が正しく指定されています。 式の構文を確認します。
+書式文字列が正しく指定されていません。 式の構文を確認します。
 
-このエラーは、can0026 と同じものと同じです。
+このエラーは CAN0026 と同じです。
 
-詳細については、次を参照してください。 [Format Specifiers in C++](/visualstudio/debugger/format-specifiers-in-cpp)します。
+詳細については、「 [」 C++の「書式指定子](/visualstudio/debugger/format-specifiers-in-cpp)」を参照してください。

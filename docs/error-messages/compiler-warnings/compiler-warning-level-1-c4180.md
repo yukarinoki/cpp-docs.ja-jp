@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4180
 ms.assetid: 40c91bd4-37f1-4d59-a4f3-d5ddab68239b
-ms.openlocfilehash: 8ed09edae5a9577773c573337b6e646a49599862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f542951424325db727fc6d4ba7ac449095bdac83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391700"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175962"
 ---
 # <a name="compiler-warning-level-1-c4180"></a>コンパイラの警告 (レベル 1) C4180
 
@@ -21,7 +21,7 @@ ms.locfileid: "62391700"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4180.cpp
 // compile with: /W1 /c
 typedef int FuncType(void);

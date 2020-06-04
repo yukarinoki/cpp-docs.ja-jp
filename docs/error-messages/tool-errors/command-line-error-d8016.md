@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8016
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
-ms.openlocfilehash: c1e2e3e28f8556416f58d68f8ef1df4b220bc54c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bdef16b14488be86aff880db7c049f4bcddcdb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399968"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196964"
 ---
 # <a name="command-line-error-d8016"></a>コマンド ライン エラー D8016
 
-'オプション 1' と 'option2' コマンド ライン オプションは互換性がありません。
+' オプション 1 ' および ' option2 ' コマンドラインオプションに互換性がありません
 
-コマンド ライン オプションを指定することはできません。
+コマンドラインオプションを一緒に指定することはできません。
 
-CL などの環境変数、オプションの指定を確認してください。
+オプションの指定について、CL などの環境変数を確認します。
 
-**/clr**意味 **/EHa**、その他の操作を指定することはできませんと **/EH**コンパイラ オプションを使用 **/clr**。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
+**/clr**は **/eha**を意味します。 **/clr**で他の任意の **/EH**コンパイラオプションを指定することはできません。 詳細については、「 [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
-Visual C 6.0 プロジェクトを更新後 D8016 が発生する可能性があります。 プロジェクト更新ウィザードの処理を有効にすることがあります **/RTC**オーバーライド プロジェクトのソース コード ファイルごとに、 **/RTC**プロジェクトの設定。  これを解決するには、変更、 **/RTC** 、プロジェクトの設定の既定の設定に、プロジェクト内の各ソース コード ファイルの設定、つまり **/RTC**ファイルごとに有効になります。
+Visual C++ 6.0 プロジェクトを更新すると、D8016 が発生する可能性があります。プロジェクトの更新ウィザードのプロセスでは、プロジェクトの各ソースコードファイルに対して **/rtc**が有効になり、プロジェクトの **/rtc**設定がオーバーライドされる場合があります。  解決するには、プロジェクト内の各ソースコードファイルの **/rtc**設定を既定の設定に変更します。これは、各ファイルで **/rtc**のプロジェクト設定が有効になることを意味します。
 
-参照してください[/RTC (ランタイム エラー チェック)](../../build/reference/rtc-run-time-error-checks.md)変更する方法について、 **/RTC**プロパティの設定。
+**/Rtc**プロパティの設定を変更する方法については、「 [/Rtc (ランタイムエラーチェック)](../../build/reference/rtc-run-time-error-checks.md) 」を参照してください。

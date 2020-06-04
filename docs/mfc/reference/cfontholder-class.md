@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754986"
 ---
 # <a name="cfontholder-class"></a>CFontHolder クラス
 
@@ -49,32 +49,32 @@ class CFontHolder
 
 |名前|説明|
 |----------|-----------------|
-|[CFontHolder::CFontHolder](#cfontholder)|`CFontHolder` オブジェクトを構築します。|
+|[Cフォントホルダー::Cフォントホルダー](#cfontholder)|`CFontHolder` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CFontHolder:: GetDisplayString](#getdisplaystring)|コンテナーのプロパティブラウザーに表示される文字列を取得します。|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|フォントの`IDispatch`インターフェイスを返します。|
-|[CFontHolder::GetFontHandle](#getfonthandle)|Windows フォントのハンドルを返します。|
-|[CFontHolder:: InitializeFont](#initializefont)|オブジェクトを`CFontHolder`初期化します。|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|関連するフォントの情報を取得します。|
-|[CFontHolder::ReleaseFont](#releasefont)|および`IFont` `CFontHolder` インターフェイスからオブジェクトを`IFontNotification`切断します。|
-|[CFontHolder:: Select](#select)|フォントリソースをデバイスコンテキストに選択します。|
-|[CFontHolder::SetFont](#setfont)|オブジェクトを`IFont`インターフェイスに接続します。 `CFontHolder`|
+|[Cフォントホルダー::ゲットディスプレイ文字列](#getdisplaystring)|コンテナーのプロパティ ブラウザーに表示される文字列を取得します。|
+|[Cフォントホルダー::フォントディスパッチを取得します](#getfontdispatch)|フォントのインターフェイスを`IDispatch`返します。|
+|[Cフォントホルダー::フォントハンドルを取得します](#getfonthandle)|Windows フォントのハンドルを返します。|
+|[Cフォントホルダー::初期化フォント](#initializefont)|オブジェクトを`CFontHolder`初期化します。|
+|[Cフォントホルダー::クエリテキストメトリックス](#querytextmetrics)|関連するフォントの情報を取得します。|
+|[Cフォントホルダー::リリースフォント](#releasefont)|`CFontHolder`インターフェイスからオブジェクトを`IFontNotification`切断します`IFont`。|
+|[Cフォントホルダー::選択](#select)|フォント リソースをデバイス コンテキストに選択します。|
+|[Cフォントホルダー::セットフォント](#setfont)|オブジェクトを`CFontHolder`インターフェイスに`IFont`接続します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|`CFontHolder`オブジェクトの`IFont`インターフェイスへのポインター。|
+|[Cフォントホルダー::m_pFont](#m_pfont)|オブジェクトの`CFontHolder``IFont`インターフェイスへのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CFontHolder`に基底クラスがありません。
+`CFontHolder`は基本クラスを持っていません。
 
-コントロールのカスタムフォントプロパティを実装するには、このクラスを使用します。 このようなプロパティの作成の詳細につい[ては、ActiveX コントロールに関する記事を参照してください。フォント](../../mfc/mfc-activex-controls-using-fonts.md)の使用。
+このクラスを使用して、コントロールのカスタム フォント プロパティを実装します。 このようなプロパティの作成については[、「ActiveX コントロール: フォントを使用する](../../mfc/mfc-activex-controls-using-fonts.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -84,7 +84,7 @@ class CFontHolder
 
 **ヘッダー:** afxctl.h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+## <a name="cfontholdercfontholder"></a><a name="cfontholder"></a>Cフォントホルダー::Cフォントホルダー
 
 `CFontHolder` オブジェクトを構築します。
 
@@ -94,16 +94,16 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 
 ### <a name="parameters"></a>パラメーター
 
-*pNotify*<br/>
+*通知する*<br/>
 フォントの`IPropertyNotifySink`インターフェイスへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を使用する`InitializeFont`前に、を呼び出して、結果のオブジェクトを初期化する必要があります。
+結果のオブジェクト`InitializeFont`を使用する前に、呼び出して初期化する必要があります。
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+## <a name="cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>Cフォントホルダー::ゲットディスプレイ文字列
 
-コンテナーのプロパティブラウザーに表示できる文字列を取得します。
+コンテナーのプロパティ ブラウザーに表示できる文字列を取得します。
 
 ```
 BOOL GetDisplayString(CString& strValue);
@@ -116,11 +116,11 @@ BOOL GetDisplayString(CString& strValue);
 
 ### <a name="return-value"></a>戻り値
 
-文字列が正常に取得された場合は0以外の値。それ以外の場合は0です。
+文字列が正常に取得された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+## <a name="cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>Cフォントホルダー::フォントディスパッチを取得します
 
-フォントのディスパッチインターフェイスへのポインターを取得するには、この関数を呼び出します。
+フォントのディスパッチ インターフェイスへのポインターを取得します。
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>戻り値
 
-`CFontHolder`オブジェクトの`IFontDisp`インターフェイスへのポインター。 を呼び出す場合は、 `GetFontDispatch`を呼び出す`IUnknown::Release`関数がこのインターフェイスポインターでを呼び出す必要があることに注意してください。
+オブジェクトの`CFontHolder``IFontDisp`インターフェイスへのポインター。 呼び出す`GetFontDispatch`関数は、この`IUnknown::Release`インターフェイス ポインターを呼び出す必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`InitializeFont` 呼び出す`GetFontDispatch`前にを呼び出します。
+を`InitializeFont`呼び`GetFontDispatch`出す前に呼び出す.
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+## <a name="cfontholdergetfonthandle"></a><a name="getfonthandle"></a>Cフォントホルダー::フォントハンドルを取得します
 
-Windows フォントのハンドルを取得するには、この関数を呼び出します。
+Windows フォントのハンドルを取得します。
 
 ```
 HFONT GetFontHandle();
@@ -148,29 +148,29 @@ HFONT GetFontHandle(
 
 ### <a name="parameters"></a>パラメーター
 
-*cyLogical*<br/>
+*サイロジカル*<br/>
 コントロールが描画される四角形の高さ (論理単位)。
 
-*cyHimetric*<br/>
-コントロールの高さを MM_HIMETRIC 単位で指定します。
+*サイヒメトリック*<br/>
+コントロールの高さ (MM_HIMETRIC単位)。
 
 ### <a name="return-value"></a>戻り値
 
-フォントオブジェクトへのハンドル。それ以外の場合は NULL。
+Font オブジェクトへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Cylogical*と*cylogical*の比率は、MM_HIMETRIC units で表されるフォントのポイントサイズに対して、適切な表示サイズ (論理単位) を計算するために使用されます。
+*cyLogical*と*cyHimetric*の比率は、MM_HIMETRIC単位で表されるフォントのポイント サイズに対する適切な表示サイズを論理単位で計算するために使用されます。
 
-表示サイズ = ( *cylogical* / *cylogical*) X フォントサイズ
+表示サイズ = (*サイロジカル* / *サイメトリック*) X フォントサイズ
 
-パラメーターが指定されていないバージョンでは、画面のフォントサイズが正しく設定されたハンドルが返されます。
+パラメーターを持たないバージョンは、画面に合わせてフォント サイズのハンドルを返します。
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+## <a name="cfontholderinitializefont"></a><a name="initializefont"></a>Cフォントホルダー::初期化フォント
 
 オブジェクトを`CFontHolder`初期化します。
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -178,52 +178,52 @@ void InitializeFont(
 
 ### <a name="parameters"></a>パラメーター
 
-*pFontDesc*<br/>
-フォントの特性を指定するフォント記述構造体 ( [Fontdesc](/windows/win32/api/olectl/ns-olectl-fontdesc)) へのポインター。
+*フォントデック*<br/>
+フォントの特性を指定するフォント記述構造体 ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)) へのポインター。
 
-*pFontDispAmbient*<br/>
-コンテナーのアンビエントフォントプロパティへのポインター。
+*アンビエント*<br/>
+コンテナーのアンビエント Font プロパティへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Pfontdispambient*が NULL でない場合、 `CFontHolder`オブジェクトは、コンテナーのアンビエントフォントプロパティ`IFont`によって使用されるインターフェイスの複製に接続されます。
+*pFontDisp アンビエント*が NULL`CFontHolder`でない場合、オブジェクトはコンテナの`IFont`アンビエント Font プロパティで使用されるインターフェイスのクローンに接続されます。
 
-*Pfontdispambient*が null の場合、 *pfontdesc*によって示されたフォントの説明から新しいフォントオブジェクトが作成されるか、 *pfontdesc*が null の場合は既定の説明から作成されます。
+*pFontDisp アンビエント*が NULL の場合、新しい Font オブジェクトは *、pFontDesc*が指すフォント記述から、または*pFontDesc*が NULL の場合はデフォルトの説明から作成されます。
 
-オブジェクトを構築した後`CFontHolder`に、この関数を呼び出します。
+オブジェクトを構築した後、この`CFontHolder`関数を呼び出します。
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+## <a name="cfontholderm_pfont"></a><a name="m_pfont"></a>Cフォントホルダー::m_pFont
 
-`CFontHolder`オブジェクトの`IFont`インターフェイスへのポインター。
+オブジェクトの`CFontHolder``IFont`インターフェイスへのポインター。
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+## <a name="cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>Cフォントホルダー::クエリテキストメトリックス
 
-`CFontHolder`オブジェクトによって表される物理フォントに関する情報を取得します。
+オブジェクトによって表される物理フォントに関する情報`CFontHolder`を取得します。
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *lptm*<br/>
-情報を受け取る[Textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体へのポインター。
+情報を受け取る[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体へのポインター。
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+## <a name="cfontholderreleasefont"></a><a name="releasefont"></a>Cフォントホルダー::リリースフォント
 
-この関数は、 `CFontHolder`オブジェクトを`IFont`インターフェイスから切断します。
+この関数は、`CFontHolder``IFont`オブジェクトをそのインターフェイスから切断します。
 
-```
+```cpp
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+## <a name="cfontholderselect"></a><a name="select"></a>Cフォントホルダー::選択
 
-コントロールのフォントを指定したデバイスコンテキストに選択するには、この関数を呼び出します。
+コントロールのフォントを指定したデバイス コンテキストに選択します。
 
 ```
 CFont* Select(
@@ -235,36 +235,36 @@ CFont* Select(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-フォントが選択されているデバイスコンテキスト。
+フォントが選択されるデバイス コンテキスト。
 
-*cyLogical*<br/>
+*サイロジカル*<br/>
 コントロールが描画される四角形の高さ (論理単位)。
 
-*cyHimetric*<br/>
-コントロールの高さを MM_HIMETRIC 単位で指定します。
+*サイヒメトリック*<br/>
+コントロールの高さ (MM_HIMETRIC単位)。
 
 ### <a name="return-value"></a>戻り値
 
 置換されるフォントへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Cylogical*および*cylogical*パラメーターの詳細については、「 [GetFontHandle](#getfonthandle) 」を参照してください。
+*サイロジカル*および*サイメトリック*パラメータの説明については[、「GetFontHandle」](#getfonthandle)を参照してください。
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+## <a name="cfontholdersetfont"></a><a name="setfont"></a>Cフォントホルダー::セットフォント
 
-既存のフォントをすべて解放し`CFontHolder` 、オブジェクトを`IFont`インターフェイスに接続します。
+既存のフォントを解放し、`CFontHolder`オブジェクトをインターフェイス`IFont`に接続します。
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pNewFont*<br/>
+*新しいフォント*<br/>
 新しい`IFont`インターフェイスへのポインター。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CPropExchange クラス](../../mfc/reference/cpropexchange-class.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/cpropexchange-class.md)

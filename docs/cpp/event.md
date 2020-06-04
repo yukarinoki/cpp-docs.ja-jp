@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8935408c6e9b43347d4ad6088505a461e254ae2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366300"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 イベントを宣言します。
 
@@ -27,28 +27,28 @@ __event __interface interface-specifier;
 __event member-declarator;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-キーワード **_ _event**メソッドの宣言、インターフェイス宣言、またはデータ メンバーの宣言に適用できます。 ただし、使用することはできません、 **_ _event**キーワードを入れ子になったクラスのメンバーを修飾します。
+**__eventキーワード**は、メソッド宣言、インターフェイス宣言、またはデータ メンバー宣言に適用できます。 ただし **、__event**キーワードを使用して、入れ子になったクラスのメンバーを修飾することはできません。
 
 イベント ソースとイベント レシーバーがネイティブ C++、COM、またはマネージド (.NET Framework) であるかによって、次の構成体をイベントとして使用できます。
 
-|ネイティブ C++|COM|マネージド (.NET Framework)|
+|ネイティブ C++|COM (COM)|マネージド (.NET Framework)|
 |------------------|---------|--------------------------------|
-|メソッド|—|メソッド|
+|Method|—|メソッド|
 |—|interface|—|
-|—|—|データ メンバー|
+|—|—|データ メンバー (data member)|
 
-使用[_ _hook](../cpp/hook.md)ハンドラー メソッドをイベント メソッドに関連付けるには、イベント レシーバーでします。 後のイベントを作成することに注意して、 **_ _event**キーワード、イベントが呼び出されると、その後、そのイベントにフックすべてのイベント ハンドラーが呼び出されます。
+イベント レシーバーで[__hook](../cpp/hook.md)を使用して、ハンドラー メソッドをイベント メソッドに関連付けます。 **__event**キーワードを使用してイベントを作成すると、そのイベントにフックされたすべてのイベント ハンドラーが、イベントの呼び出し時に呼び出されることに注意してください。
 
-**_ _Event**メソッドの宣言は定義を持つことはできません。 定義を暗黙的に生成されると、通常のメソッドの場合と同様、イベントのメソッドを呼び出せるようにします。
+**__event**メソッド宣言は定義を持つことはできません。定義は暗黙的に生成されるため、イベント メソッドは通常のメソッドであるかのように呼び出すことができます。
 
 > [!NOTE]
->  テンプレート クラスまたは構造体にイベントを含めることはできません。
+> テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="native-events"></a>ネイティブ イベント
 
-ネイティブ イベントはメソッドです。 戻り値の型は、通常、HRESULT または**void**、任意の整数型を指定できますなど、 **enum**します。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すときのエラー条件が定義されていると、発生するイベントは他のデリゲートを呼び出します。
+ネイティブ イベントはメソッドです。 戻り値の型は、通常は HRESULT または**void**ですが、**列挙型**を含む任意の整数型を指定できます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すときのエラー条件が定義されていると、発生するイベントは他のデリゲートを呼び出します。
 
 ```cpp
 // Examples of native C++ events:
@@ -56,28 +56,28 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-参照してください[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)サンプル コードについてはします。
+サンプル コードについては、「[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)」を参照してください。
 
 ## <a name="com-events"></a>COM イベント
 
-COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターがある*で*パラメーター (ただし、これは厳格に強制されていません)、ため、*アウト*パラメーターはマルチキャストした場合に便利です。 使用する場合に、レベル 1 の警告が発行される、*アウト*パラメーター。
+COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターは、マルチキャスト*時に* *out*パラメーターが役に立たないため、パラメーターに含める必要があります (ただし、これは厳密には適用されません)。 *out*パラメーターを使用すると、レベル 1 の警告が発行されます。
 
-戻り値の型は、通常、HRESULT または**void**、任意の整数型を指定できますが、含む**列挙型**します。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラはイベント ソース インターフェイスとしてのマークで自動的に注意してください、[ソース](../windows/attributes/source-cpp.md)生成された IDL にします。
+戻り値の型は、通常は HRESULT または**void**ですが、**列挙型**を含む任意の整数型を指定できます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラは、生成された IDL でイベント ソース インターフェイスを[ソース](../windows/attributes/source-cpp.md)として自動的にマークします。
 
-[_ _Interface](../cpp/interface.md)キーワードの後に必要なは常に **_ _event** COM イベント ソース。
+[__interface](../cpp/interface.md)キーワードは、COM イベント ソース**の__event**後に必ず必要です。
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-参照してください[COM でのイベント処理](../cpp/event-handling-in-com.md)サンプル コードについてはします。
+サンプル コードについては[、COM でのイベント処理](../cpp/event-handling-in-com.md)を参照してください。
 
 ## <a name="managed-events"></a>マネージド イベント
 
-新しい構文でイベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
+新しい構文でのイベントのコーディングについては[、event](../extensions/event-cpp-component-extensions.md)を参照してください。
 
-マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用すると、デリゲートの戻り値の型が準拠する必要があります、[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)します。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、次を参照してください。[デリゲートとイベント](../dotnet/delegates-and-events.md)します。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
+マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用する場合、デリゲートの戻り値の型は[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)に準拠している必要があります。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、「[デリゲートとイベント](../dotnet/delegates-and-events.md)」を参照してください。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
 
 .NET Framework では、それ自身がメソッド (つまり、対応するデリゲートの `Invoke` メソッド) であるかのようにデータ メンバーを処理できます。 マネージド イベント データ メンバーを宣言するためのデリゲート型を事前に定義する必要があります。 これに対し、マネージド イベント メソッドは、まだ定義されていない場合、対応するマネージド デリゲートを暗黙的に定義します。 たとえば、次のように、`OnClick` などのイベント値をイベントとして宣言できます。
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 マネージド イベントを暗黙的に宣言するときは、イベント ハンドラーが追加または削除されたときに呼び出される追加および削除アクセサーを指定できます。 クラスの外部からイベントを呼び出す (発生させる) メソッドを定義することもできます。
 
-## <a name="example-native-events"></a>例:ネイティブ イベント
+## <a name="example-native-events"></a>例: ネイティブ イベント
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>例:COM イベント
+## <a name="example-com-events"></a>例: COM イベント
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -129,7 +129,7 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [イベント処理](../cpp/event-handling.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>
 [event_receiver](../windows/attributes/event-receiver.md)<br/>

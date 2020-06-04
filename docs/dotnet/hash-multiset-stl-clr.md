@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-ms.openlocfilehash: 8d8e7ab9bcbaf9ea8ce95558c53d5936473f9c8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87315a24f314222f91e6aa0536ca442bf00f012c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208691"
 ---
-# <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
+# <a name="hash_multiset-stlclr"></a>hash_multiset (STL/CLR)
 
-テンプレート クラスは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`hash_multiset`双方向を格納するテーブルの各エントリをハッシュ テーブルとして要素のシーケンスを管理するには、ノード、および 1 つの要素を格納する各ノードの一覧がリンクされています。 各要素の値は、シーケンスを順序付けをキーとして使用されます。
+このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー `hash_multiset` は、一連の要素をハッシュテーブルとして管理するために使用します。各テーブルエントリは、ノードの双方向のリンクリストを格納し、各ノードには1つの要素を格納します。 各要素の値は、シーケンスの順序付けのためにキーとして使用されます。
 
-下記の説明で`GValue`と同じです`GKey`、さらには同じ*キー*しない限り、後者の場合は、ref 型である場合は`Key^`します。
+以下の説明では、`GValue` は `GKey`と同じですが、後者が ref 型である場合を除き、*キー*と同じです。この場合、`Key^`します。
 
 ## <a name="syntax"></a>構文
 
@@ -126,14 +126,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
-被制御シーケンス内の要素の主要なコンポーネントの型。
+*[キー]*<br/>
+被制御シーケンス内の要素のキー コンポーネントの型。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/hash_set >
 
-**Namespace:** cliext
+**名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
@@ -142,38 +142,38 @@ template<typename Key>
 |[hash_multiset::const_iterator (STL/CLR)](#const_iterator)|被制御シーケンスの定数反復子の型です。|
 |[hash_multiset::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[hash_multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
-|[hash_multiset::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を (場合によっては符号付き) の型。|
-|[hash_multiset::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリック インターフェイスの型。|
-|[hash_multiset::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリック インターフェイスの反復子の型。|
-|[hash_multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの反転反復子の型。|
-|[hash_multiset::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|
-|[hash_multiset::hasher (STL/CLR)](#hasher)|キーのハッシュのデリゲート。|
+|[hash_multiset::difference_type (STL/CLR)](#difference_type)|2つの要素間の (符号付きの) 距離の型。|
+|[hash_multiset::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリックインターフェイスの型。|
+|[hash_multiset::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリックインターフェイスの反復子の型。|
+|[hash_multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリックインターフェイスの反転反復子の型。|
+|[hash_multiset::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリックインターフェイスの要素の型。|
+|[hash_multiset::hasher (STL/CLR)](#hasher)|キーのハッシュデリゲート。|
 |[hash_multiset::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
-|[hash_multiset::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けデリゲート。|
+|[hash_multiset::key_compare (STL/CLR)](#key_compare)|2つのキーの順序付けデリゲート。|
 |[hash_multiset::key_type (STL/CLR)](#key_type)|順序付けキーの型です。|
 |[hash_multiset::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[hash_multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
-|[hash_multiset::size_type (STL/CLR)](#size_type)|(負ではない) 距離は 2 つの要素の型。|
-|[hash_multiset::value_compare (STL/CLR)](#value_compare)|2 つの要素の値の順序付けデリゲート。|
+|[hash_multiset::size_type (STL/CLR)](#size_type)|2つの要素間の (負ではない) 距離の型。|
+|[hash_multiset::value_compare (STL/CLR)](#value_compare)|2つの要素の値の順序付けデリゲート。|
 |[hash_multiset::value_type (STL/CLR)](#value_type)|要素の型。|
 
 |メンバー関数|説明|
 |---------------------|-----------------|
 |[hash_multiset::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|
-|[hash_multiset::bucket_count (STL/CLR)](#bucket_count)|バケットの数をカウントします。|
+|[hash_multiset::bucket_count (STL/CLR)](#bucket_count)|バケット数をカウントします。|
 |[hash_multiset::clear (STL/CLR)](#clear)|すべての要素を削除します。|
-|[hash_multiset::count (STL/CLR)](#count)|指定したキーに一致する要素をカウントします。|
+|[hash_multiset::count (STL/CLR)](#count)|指定されたキーに一致する要素をカウントします。|
 |[hash_multiset::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|
 |[hash_multiset::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|
 |[hash_multiset::equal_range (STL/CLR)](#equal_range)|指定したキーに一致する範囲を検索します。|
 |[hash_multiset::erase (STL/CLR)](#erase)|指定した位置にある要素を削除します。|
 |[hash_multiset::find (STL/CLR)](#find)|指定したキーに一致する要素を検索します。|
-|[hash_multiset::hash_delegate (STL/CLR)](#hash_delegate)|キーのハッシュのデリゲートをコピーします。|
+|[hash_multiset::hash_delegate (STL/CLR)](#hash_delegate)|キーのハッシュデリゲートをコピーします。|
 |[hash_multiset::hash_multiset (STL/CLR)](#hash_multiset)|コンテナー オブジェクトを構築します。|
 |[hash_multiset::insert (STL/CLR)](#insert)|要素を追加します。|
-|[hash_multiset::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けデリゲートをコピーします。|
+|[hash_multiset::key_comp (STL/CLR)](#key_comp)|2つのキーの順序付けデリゲートをコピーします。|
 |[hash_multiset::load_factor (STL/CLR)](#load_factor)|バケットごとの平均要素数をカウントします。|
-|[hash_multiset::lower_bound (STL/CLR)](#lower_bound)|指定したキーに一致する範囲の先頭を検出します。|
+|[hash_multiset::lower_bound (STL/CLR)](#lower_bound)|指定されたキーに一致する範囲の先頭を検索します。|
 |[hash_multiset::make_value (STL/CLR)](#make_value)|値オブジェクトを構築します。|
 |[hash_multiset::max_load_factor (STL/CLR)](#max_load_factor)|バケットあたりの最大要素数を取得または設定します。|
 |[hash_multiset::rbegin (STL/CLR)](#rbegin)|反転被制御シーケンスの先頭を指定します。|
@@ -182,8 +182,8 @@ template<typename Key>
 |[hash_multiset::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[hash_multiset::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|
 |[hash_multiset::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
-|[hash_multiset::upper_bound (STL/CLR)](#upper_bound)|指定したキーに一致する範囲の末尾を検索します。|
-|[hash_multiset::value_comp (STL/CLR)](#value_comp)|2 つの要素の値の順序付けデリゲートをコピーします。|
+|[hash_multiset::upper_bound (STL/CLR)](#upper_bound)|指定されたキーに一致する範囲の末尾を検索します。|
+|[hash_multiset::value_comp (STL/CLR)](#value_comp)|2つの要素の値の順序付けデリゲートをコピーします。|
 
 |演算子|説明|
 |--------------|-----------------|
@@ -191,52 +191,52 @@ template<typename Key>
 
 ## <a name="interfaces"></a>インターフェイス
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|オブジェクトが重複しています。|
-|<xref:System.Collections.IEnumerable>|要素をシーケンス処理します。|
-|<xref:System.Collections.ICollection>|要素のグループを管理します。|
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素をシーケンス処理します。|
-|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|
-|IHash\<キーの値 >|ジェネリックなコンテナーを管理します。|
+|<xref:System.ICloneable>|オブジェクトを複製します。|
+|<xref:System.Collections.IEnumerable>|要素を順番に処理します。|
+|<xref:System.Collections.ICollection>|要素のグループを維持します。|
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番に処理します。|
+|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
+|IHash\<キー、値 >|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オブジェクトでは、割り当ておよび双方向リンク リスト内の個々 のノードとして、制御するシーケンスの記憶域を解放します。 アクセスを高速化、オブジェクトもサブリストのシーケンスとしてリスト全体を効果的に管理する (ハッシュ テーブル) の一覧へのポインターの可変長配列を保持するか、バケットします。 別の 1 つのノードの内容のコピーからではなく、ノード間のリンクを変更することで順序付けられた保持するバケットに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。
+オブジェクトは、双方向のリンクリスト内の個々のノードとして制御するシーケンスのストレージを割り当て、解放します。 オブジェクトは、アクセスを高速化するために、リスト内のさまざまな長さのポインター (ハッシュテーブル) を維持し、一覧全体をサブリストまたはバケットのシーケンスとして効果的に管理します。 要素は、ノード間のリンクを変更することによって順序を維持するバケットに挿入されます。つまり、あるノードのコンテンツを別のノードにコピーすることはできません。 つまり、要素を自由に挿入および削除できます。
 
-オブジェクトは、各バケット ストアド デリゲート型のオブジェクトを呼び出すことによって、制御を注文[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)します。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定できます。既定値は、比較でデリゲート オブジェクトを指定しない場合`operator<=(key_type, key_type)`します。
+オブジェクトは、hash_set:: key_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって制御する各バケットを並べ替えます[(STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 Hash_set を構築するときに、格納されているデリゲートオブジェクトを指定できます。delegate オブジェクトを指定しない場合、既定では `operator<=(key_type, key_type)`の比較が行われます。
 
-メンバー関数を呼び出すことによって、ストアド デリゲート オブジェクトにアクセスする[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`します。 このようなデリゲート オブジェクトがキー型の間の同等の順序を定義する必要があります[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)します。 任意の 2 つのキーのつまり`X`と`Y`:
+格納されているデリゲートオブジェクトにアクセスするには、メンバー関数[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`を呼び出します。 このようなデリゲートオブジェクトでは、hash_set:: key_type 型のキー間の等価な順序を定義する必要があります[(STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 つまり、`X` と `Y`の2つのキーについては、次のようになります。
 
-`key_comp()(X, Y)` 呼び出しごとに、同じブール型の結果を返します。
+`key_comp()(X, Y)` は、すべての呼び出しで同じブール値を返します。
 
-場合`key_comp()(X, Y) && key_comp()(Y, X)`が true の場合、`X`と`Y`同等の順序を持つと言います。
+`key_comp()(X, Y) && key_comp()(Y, X)` が true の場合、`X` と `Y` は等価の順序付けと呼ばれます。
 
-ように動作する任意の順序付けルール`operator<=(key_type, key_type)`、`operator>=(key_type, key_type)`または`operator==(key_type, key_type)`eqivalent の順序を定義します。
+`operator<=(key_type, key_type)`、`operator>=(key_type, key_type)` または `operator==(key_type, key_type)` のように動作する順序付け規則では、eqivalent の順序が定義されます。
 
-コンテナーにより要素キーを持つは、同等の順序がある (および同じ整数値にハッシュ) が、バケット内の隣接するのみことに注意してください。 テンプレート クラスとは異なり[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)、テンプレート クラスのオブジェクト`hash_multiset`はすべての要素のキーが一意である必要ありません。 (2 つ以上のキーと同じ順序付けします。)
+コンテナーは、キーが同等の順序付け (および同じ整数値へのハッシュ) を持つ要素のみがバケット内で隣接していることを確認します。 テンプレートクラス[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)とは異なり、テンプレートクラス `hash_multiset` のオブジェクトでは、すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
 
-オブジェクトを決定するバケット ストアド デリゲート型のオブジェクトを呼び出すことによって特定の順序付けキーを含める必要があります[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)します。 メンバー関数を呼び出すことによって格納されているこのオブジェクトにアクセスする[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`キーの値に依存する整数値を取得します。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定できます。既定値は、関数でデリゲート オブジェクトを指定しない場合`System::Object::hash_value(key_type)`します。 任意のキー、つまり`X`と`Y`:
+オブジェクトは、 [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、指定された順序付けキーを格納するバケットを決定します。 この格納されたオブジェクトにアクセスするには、メンバー関数[hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` を呼び出して、キー値に依存する整数値を取得します。 Hash_set を構築するときに、格納されているデリゲートオブジェクトを指定できます。delegate オブジェクトを指定しない場合、既定値は `System::Object::hash_value(key_type)`関数です。 つまり、`X` と `Y`のキーについては、次のようになります。
 
-`hash_delegate()(X)` すべての呼び出しで同じ結果の整数値を返します。
+`hash_delegate()(X)` は、すべての呼び出しで同じ整数の結果を返します。
 
-場合`X`と`Y`と同じ順序付け、し`hash_delegate()(X)`として同じ整数の結果を返す必要があります`hash_delegate()(Y)`します。
+`X` と `Y` の順序が等価である場合、`hash_delegate()(X)` は `hash_delegate()(Y)`と同じ整数の結果を返す必要があります。
 
-各要素は、キーと値の両方として機能します。 シーケンスは、検索、挿入、および内にある (定数時間) - シーケンス内の要素の数の独立した少なくともケースの最適な操作の数と、任意の要素の削除を許可するように表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
+各要素は、キーと値の両方として機能します。 シーケンスは、シーケンス内の要素数に依存しない複数の操作 (定数時間) を使用して、任意の要素の検索、挿入、および削除を許可する方法で表現されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-ハッシュされた値が均等に分散していない場合、ハッシュ テーブルは逆ことができます。 ハッシュ関数を常に、同じ値を返す--極度の検索、挿入、削除は、シーケンス (線形時間) 内の要素の数に比例します。 コンテナーは、適切なハッシュ関数、mean のバケットのサイズを選択するしますが、ハッシュ テーブルのサイズ (バケットの合計数) は、これらの選択肢の一部またはすべてをオーバーライドできます。 、たとえば、関数を参照してください[hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)と[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)します。
+ただし、ハッシュされた値が一様に分布していない場合は、ハッシュテーブルが逆になることがあります。 極端なでは、常に同じ値を返すハッシュ関数の場合、lookup、挿入、および削除は、シーケンス内の要素数に比例します (線形時間)。 コンテナーは適切なハッシュ関数を選択します。バケットのサイズとハッシュテーブルのサイズ (バケットの合計数) を選択しますが、これらのオプションのいずれかまたはすべてを上書きすることができます。 たとえば、関数[hash_set:: max_load_factor (stl/clr)](../dotnet/hash-set-max-load-factor-stl-clr.md)と[hash_set:: rehash (stl/clr)](../dotnet/hash-set-rehash-stl-clr.md)を参照してください。
 
-Hash_multiset は、隣接する要素を被制御シーケンス内の要素を指定する反復子を指定する手順は、双方向反復子をサポートします。 特別なヘッド ノードによって返される反復子に対応[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`します。 存在する場合は、被制御シーケンスの最後の要素に到達するこの反復子をデクリメントできます。 ヘッド ノードに到達する hash_multiset の反復子をインクリメントして等しく比較がし`end()`します。 によって返される反復子を逆参照することはできませんが、`end()`します。
+Hash_multiset は双方向反復子をサポートします。これは、被制御シーケンス内の要素を指定する反復子が指定されている場合に隣接する要素にステップインできることを意味します。 特別なヘッドノードは[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`によって返される反復子に対応します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 Hash_multiset 反復子をインクリメントしてヘッドノードに移動すると、`end()`と等しいかどうかが比較されます。 ただし、`end()`によって返される反復子を逆参照することはできません。
 
-その位置を表す数値を直接指定した hash_multiset の要素を参照することはできないことに注意してください。--ランダム アクセス反復子が必要です。
+ランダムアクセス反復子を必要とする数値の位置を指定して、hash_multiset 要素を直接参照することはできないことに注意してください。
 
-Hash_multiset の反復子は、それに関連付けられているコンテナーを識別するハンドルを格納する hash_multiset が関連付けられているノードを識別するハンドルを格納します。 関連付けられているコンテナー オブジェクトでのみ、反復子を使用することができます。 Hash_multiset の反復子は、関連付けられている hash_multiset ノードがいくつかの hash_multiset に関連付けられている限り有効です。 さらに、有効な反復子は dereferencable--へのアクセスまたは--指定する要素の値を変更すると等しくない限り、使用する`end()`します。
+Hash_multiset 反復子は、関連付けられている hash_multiset ノードへのハンドルを格納します。このハンドルは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 関連する hash_multiset ノードが hash_multiset に関連付けられている限り、hash_multiset 反復子は有効なままです。 さらに、有効な反復子は dereferencable です。これを使用すると、指定した要素の値にアクセスしたり変更したりすることができます。これは、`end()`と等しくない場合に限ります。
 
-消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型を持つ ref クラスは、コンテナーによりする要素よりも長く保持しないコンテナーです。 ただし、ハンドルのコンテナーは*いない*その要素を破棄します。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="begin"></a> hash_multiset::begin (STL/CLR)
+## <a name="hash_multisetbegin-stlclr"></a><a name="begin"></a>hash_multiset:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -246,9 +246,9 @@ Hash_multiset の反復子は、それに関連付けられているコンテナ
 iterator begin();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの先頭を変更できます。
+このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定する双方向反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -284,9 +284,9 @@ a b c
 *++begin() = b
 ```
 
-## <a name="bucket_count"></a> hash_multiset::bucket_count (STL/CLR)
+## <a name="hash_multisetbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multiset:: bucket_count (STL/CLR)
 
-バケットの数をカウントします。
+バケット数をカウントします。
 
 ### <a name="syntax"></a>構文
 
@@ -294,9 +294,9 @@ a b c
 int bucket_count();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、現在のバケット数を返します。 これを使用するにはハッシュ テーブルのサイズを決定します。
+このメンバー関数は、現在のバケット数を返します。 これを使用して、ハッシュテーブルのサイズを決定します。
 
 ### <a name="example"></a>例
 
@@ -358,7 +358,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_multiset::clear (STL/CLR)
+## <a name="hash_multisetclear-stlclr"></a><a name="clear"></a>hash_multiset:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -368,9 +368,9 @@ max_load_factor() = 0.25
 void clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、効果的に呼び出す[hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`())`. これを使用するには、被制御シーケンスが空であることを確認します。
+このメンバー関数は、実質的に[hash_multiset:: erase](../dotnet/hash-multiset-erase-stl-clr.md) (stl/clr)`(` [hash_multiset:: begin](../dotnet/hash-multiset-begin-stl-clr.md) (stl/clr)`(),` [HASH_MULTISET:: end (stl/](../dotnet/hash-multiset-end-stl-clr.md) clr)`())`を呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -416,7 +416,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_multiset::const_iterator (STL/CLR)
+## <a name="hash_multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multiset:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -426,9 +426,9 @@ size() = 0
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数双方向反復子として機能することができます。
+この型は、被制御シーケンスの定数双方向反復子として使用できる、未指定の型 `T2` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -458,7 +458,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_multiset::const_reference (STL/CLR)
+## <a name="hash_multisetconst_reference-stlclr"></a><a name="const_reference"></a>hash_multiset:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -468,7 +468,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -503,9 +503,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_multiset::const_reverse_iterator (STL/CLR)
+## <a name="hash_multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator (STL/CLR)
 
-被制御シーケンスの定数反転反復子の種類.
+被制御シーケンスの定数反転反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -513,9 +513,9 @@ a b c
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として機能することができます。
+この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -545,7 +545,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_multiset::count (STL/CLR)
+## <a name="hash_multisetcount-stlclr"></a><a name="count"></a>hash_multiset:: count (STL/CLR)
 
 指定したキーに一致する要素の数を検索します。
 
@@ -560,9 +560,9 @@ size_type count(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数と同等の順序を持つ被制御シーケンス内の要素の数を返します*キー*します。 指定したキーと一致する、被制御シーケンスの現在の要素の数を決定するのに使用するとします。
+このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -598,9 +598,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_multiset::difference_type (STL/CLR)
+## <a name="hash_multisetdifference_type-stlclr"></a><a name="difference_type"></a>hash_multiset::d ifference_type (STL/CLR)
 
-2 つの要素間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -608,9 +608,9 @@ count(L'C') = 0
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、場合によって負の値の要素の数を表します。
+この型は、要素の数が負の値になる可能性があることを示します。
 
 ### <a name="example"></a>例
 
@@ -653,7 +653,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_multiset::empty (STL/CLR)
+## <a name="hash_multisetempty-stlclr"></a><a name="empty"></a>hash_multiset:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -663,9 +663,9 @@ begin()-end() = -3
 bool empty();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`します。 Hash_multiset が空かどうかをテストに使用するとします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`と同じです。 Hash_multiset が空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -705,7 +705,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_multiset::end (STL/CLR)
+## <a name="hash_multisetend-stlclr"></a><a name="end"></a>hash_multiset:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -715,9 +715,9 @@ empty() = True
 iterator end();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。そのステータスは被制御シーケンスの長さが変更された場合は変更されません。
+このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示す双方向反復子を返します。 このメソッドを使用して、被制御シーケンスの末尾を指定する反復子を取得します。被制御シーケンスの長さが変更されている場合、その状態は変わりません。
 
 ### <a name="example"></a>例
 
@@ -754,7 +754,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_multiset::equal_range (STL/CLR)
+## <a name="hash_multisetequal_range-stlclr"></a><a name="equal_range"></a>hash_multiset:: equal_range (STL/CLR)
 
 指定したキーに一致する範囲を検索します。
 
@@ -769,9 +769,9 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、反復子のペアを返します。 `cliext::pair<iterator, iterator>(` [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))`します。 指定したキーに一致する要素を被制御シーケンスの現在の範囲を決定するのに使用するとします。
+このメンバー関数は、 [hash_multiset:: lower_bound (stl/clr)](../dotnet/hash-multiset-lower-bound-stl-clr.md)`(key),` [hash_multiset:: upper_bound (stl/clr)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))``cliext::pair<iterator, iterator>(` の反復子のペアを返します。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
 ### <a name="example"></a>例
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_multiset::erase (STL/CLR)
+## <a name="hash_multiseterase-stlclr"></a><a name="erase"></a>hash_multiset:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -835,20 +835,20 @@ bool erase(key_type key)
 消去するキー値。
 
 *last*<br/>
-消去する範囲の終了。
+消去する範囲の末尾。
 
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のメンバー関数が指す被制御シーケンスの要素を削除する*場所*、および削除するには、要素の後に残る最初の要素を指定する反復子を返しますまたは[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()`そのような要素が存在しない場合。 これを使用するには 1 つの要素を削除します。
+最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()` します。 このメソッドを使用して、1つの要素を削除します。
 
-2 番目のメンバー関数は、範囲の被制御シーケンスの要素を削除する [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。
+2番目のメンバー関数は、被制御シーケンスの要素を [`first`、`last`) の範囲で削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は `end()` します。 これを使用して、0個以上の連続する要素を削除します。
 
-3 番目のメンバー関数は、キーを持つと同じ順序付けの被制御シーケンスの任意の要素を削除します。 を*キー*、削除された要素の数のカウントを返します。 削除や、指定したキーと一致するすべての要素のカウントを使用するとします。
+3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
 
-各要素のデータ消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。
+各要素の消去では、被制御シーケンス内の要素数の対数に比例して時間がかかります。
 
 ### <a name="example"></a>例
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_multiset::find (STL/CLR)
+## <a name="hash_multisetfind-stlclr"></a><a name="find"></a>hash_multiset:: find (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -913,9 +913,9 @@ iterator find(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-被制御シーケンス内の少なくとも 1 つの要素があるのと同じ順序付け場合*キー*、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用します。
+被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`を返します。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
 ### <a name="example"></a>例
 
@@ -954,9 +954,9 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a> hash_multiset::generic_container (STL/CLR)
+## <a name="hash_multisetgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multiset:: generic_container (STL/CLR)
 
-コンテナーのジェネリック インターフェイスの型。
+コンテナーのジェネリックインターフェイスの型。
 
 ### <a name="syntax"></a>構文
 
@@ -966,9 +966,9 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスを表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスを表します。
 
 ### <a name="example"></a>例
 
@@ -1018,9 +1018,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> hash_multiset::generic_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multiset:: generic_iterator (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用するため、反復子の型。
+コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1030,9 +1030,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用的な反復子を表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反復子を表します。
 
 ### <a name="example"></a>例
 
@@ -1074,9 +1074,9 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> hash_multiset::generic_reverse_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multiset:: generic_reverse_iterator (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用する反転反復子の型。
+コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1086,9 +1086,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反転反復子を表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反転反復子を表します。
 
 ### <a name="example"></a>例
 
@@ -1130,9 +1130,9 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a> hash_multiset::generic_value (STL/CLR)
+## <a name="hash_multisetgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multiset:: generic_value (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用するための要素の型。
+コンテナーのジェネリックインターフェイスで使用する要素の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1140,9 +1140,9 @@ c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1184,7 +1184,7 @@ a b c
 a
 ```
 
-## <a name="hash_delegate"></a> hash_multiset::hash_delegate (STL/CLR)
+## <a name="hash_multisethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multiset:: hash_delegate (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -1194,9 +1194,9 @@ a
 hasher^ hash_delegate();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数では、キーの値を整数に変換するために使用するデリゲートを返します。 キーのハッシュに使用するとします。
+このメンバー関数は、キー値を整数に変換するために使用されるデリゲートを返します。 キーをハッシュするために使用します。
 
 ### <a name="example"></a>例
 
@@ -1222,7 +1222,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multiset"></a> hash_multiset::hash_multiset (STL/CLR)
+## <a name="hash_multisethash_multiset-stlclr"></a><a name="hash_multiset"></a>hash_multiset:: hash_multiset (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1255,84 +1255,84 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 挿入する範囲の先頭。
 
 *hashfn*<br/>
-ハッシュ バケットにマッピングのキーの関数。
+キーをバケットにマッピングするためのハッシュ関数。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
-*Pred*<br/>
-被制御シーケンスの述語を順序付けします。
+*pred*<br/>
+被制御シーケンスの順序付け述語。
 
 *right*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset();`
 
-既定の順序の述語を使用して要素のない、被制御シーケンスを初期化`key_compare()`、および既定のハッシュ関数を使用します。 これを使用するには、既定の順序の述語とハッシュ関数を持つ、空の初期被制御シーケンスを指定します。
+既定の順序述語 `key_compare()`、既定のハッシュ関数を使用して、要素を含まない被制御シーケンスを初期化します。 既定の順序述語とハッシュ関数を使用して、空の初期被制御シーケンスを指定するために使用します。
 
-コンス トラクター。
+コンストラクター:
 
 `explicit hash_multiset(key_compare^ pred);`
 
-順序付け述語で、要素のない、被制御シーケンスを初期化します*pred*、および既定のハッシュ関数を使用します。 指定した順序付け述語および既定のハッシュ関数を持つ、空の初期被制御シーケンスを指定して使用します。
+順序述語*pred*、および既定のハッシュ関数を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定した順序述語と既定のハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(key_compare^ pred, hasher^ hashfn);`
 
-順序付け述語で、要素のない、被制御シーケンスを初期化します*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用して、順序指定された述語とハッシュ関数を持つ、空の初期被制御シーケンスを指定します。
+順序述語*pred*とハッシュ関数*hashfn*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語とハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(hash_multiset<Key>% right);`
 
-シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)、既定の順序の述語、および既定のハッシュ関数。 Hash_multiset オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序付け述語およびハッシュ関数を使用します。
+既定の順序述語と既定のハッシュ関数を使用して、シーケンス [`right.begin()`、`right.end()`) を使用して被制御シーケンスを初期化します。 これを使用して、hash_multiset オブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(hash_multiset<Key>^ right);`
 
-シーケンスが被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)、既定の順序の述語、および既定のハッシュ関数。 Hash_multiset オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序付け述語およびハッシュ関数を使用します。
+既定の順序述語と既定のハッシュ関数を使用して、シーケンス [`right->begin()`、`right->end()`) を使用して被制御シーケンスを初期化します。 これを使用して、hash_multiset オブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
 
-コンス トラクター。
+コンストラクター:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last);`
 
-シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、既定の順序の述語、および既定のハッシュ関数。 これを使用するには述語とハッシュ関数を順序付け、既定値は、被制御シーケンスの別のシーケンスをコピーを作成します。
+既定の順序述語と既定のハッシュ関数を使用して、シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにし、既定の順序述語とハッシュ関数を使用します。
 
-コンス トラクター。
+コンストラクター:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`
 
-シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、順序付け述語で*pred*と既定のハッシュ関数を使用します。 これを使用するには、被制御シーケンスの別のシーケンスを指定した順序付け述語と既定のハッシュ関数のコピーを作成します。
+順序述語*pred*を使用し、既定のハッシュ関数を使用して、シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語と既定のハッシュ関数を使用して、被制御シーケンスを別のシーケンスのコピーにします。
 
-コンス トラクター。
+コンストラクター:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、順序付け述語で*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用するには、被制御シーケンスの順序指定された述語とハッシュ関数で、もう 1 つのシーケンスのコピーを作成します。
+順序述語*pred*とハッシュ関数*hashfn*を使用して、シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスに別のシーケンスのコピーを指定し、順序付け述語とハッシュ関数を指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*既定の順序の述語、および既定のハッシュ関数。 これを使用するには、被制御シーケンスの既定の順序の述語とハッシュ関数で、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。
+列挙子*権限*によって指定されたシーケンス、既定の順序述語、および既定のハッシュ関数を使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにし、既定の順序述語とハッシュ関数を使用します。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*、順序付け述語で*pred*と既定のハッシュ関数を使用します。 これを使用するには、被制御シーケンスの指定した順序付け述語と既定ハッシュ関数を使用した、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。
+列挙述語*pred*を使用し、既定のハッシュ関数を使用して、列挙子の*権限*で指定されたシーケンスを使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、指定した順序述語と既定のハッシュ関数を使用して、列挙子によって記述された別のシーケンスのコピーにします。
 
-コンス トラクター。
+コンストラクター:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*、順序付け述語で*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用するには、被制御シーケンスの順序指定された述語とハッシュ関数で、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。
+順序付け述語*pred*を使用し、ハッシュ関数*hashfn*を使用して、列挙子*権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙述語とハッシュ関数を指定して、列挙子によって記述された別のシーケンスのコピーにします。
 
 ### <a name="example"></a>例
 
@@ -1462,9 +1462,9 @@ a b c
 a b c
 ```
 
-## <a name="hasher"></a> hash_multiset::hasher (STL/CLR)
+## <a name="hash_multisethasher-stlclr"></a><a name="hasher"></a>hash_multiset:: hasher (STL/CLR)
 
-キーのハッシュのデリゲート。
+キーのハッシュデリゲート。
 
 ### <a name="syntax"></a>構文
 
@@ -1473,9 +1473,9 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
     hasher;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、キーの値を整数に変換するデリゲートを表します。
+この型は、キー値を整数に変換するデリゲートを表します。
 
 ### <a name="example"></a>例
 
@@ -1501,7 +1501,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multiset::insert (STL/CLR)
+## <a name="hash_multisetinsert-stlclr"></a><a name="insert"></a>hash_multiset:: insert (STL/CLR)
 
 要素を追加します。
 
@@ -1521,30 +1521,30 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 挿入する範囲の先頭。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
 *right*<br/>
-挿入する列挙です。
+挿入する列挙体。
 
 *val*<br/>
 挿入するキー値。
 
 *where*<br/>
-(ヒントのみ) を挿入するコンテナー内の場所。
+コンテナー内の挿入位置 (ヒントのみ)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-各メンバー関数は、残りのオペランドで指定されたシーケンスを挿入します。
+各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
 
-最初のメンバー関数は、値を持つ要素を挿入*val*、し、新しく挿入された要素を指定する反復子を返します。 これを使用して、1 つの要素を挿入します。
+1つ目のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 1つの要素を挿入するために使用します。
 
-2 番目のメンバー関数は、値を持つ要素を挿入する*val*を使用して、*場所*(パフォーマンスを向上させる) をヒントとしてし、新しく挿入された要素を指定する反復子を返します。 これを使用するにはわかって要素に隣接する可能性のある 1 つの要素を挿入します。
+2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
 
-3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 これを使用して、別のシーケンスからコピーした 0 個以上の要素を挿入します。
+3番目のメンバー関数は、シーケンス [`first`、`last`) を挿入します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
 
-4 番目のメンバー関数で指定されたシーケンスを挿入する、*右*します。 これを使用して、列挙子によって説明されているシーケンスを挿入します。
+4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
-各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は発生償却定数時間でただし、カーソル位置に隣接する要素を指定するヒントを指定します。
+各要素の挿入には、被制御シーケンス内の要素数の対数に比例した時間がかかります。 挿入ポイントに隣接する要素を指定するヒントを指定すると、挿入は償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -1614,7 +1614,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> hash_multiset::iterator (STL/CLR)
+## <a name="hash_multisetiterator-stlclr"></a><a name="iterator"></a>hash_multiset:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1624,9 +1624,9 @@ a b b c x y
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として機能することができます。
+この型は、被制御シーケンスの双方向反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1656,9 +1656,9 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_multiset::key_comp (STL/CLR)
+## <a name="hash_multisetkey_comp-stlclr"></a><a name="key_comp"></a>hash_multiset:: key_comp (STL/CLR)
 
-2 つのキーの順序付けデリゲートをコピーします。
+2つのキーの順序付けデリゲートをコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -1666,9 +1666,9 @@ a b c
 key_compare^key_comp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 2 つのキーの比較に使用するとします。
+このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 2 つのキーを比較する場合にこれを使用します。
 
 ### <a name="example"></a>例
 
@@ -1715,9 +1715,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multiset::key_compare (STL/CLR)
+## <a name="hash_multisetkey_compare-stlclr"></a><a name="key_compare"></a>hash_multiset:: key_compare (STL/CLR)
 
-2 つのキーの順序付けデリゲート。
+2つのキーの順序付けデリゲート。
 
 ### <a name="syntax"></a>構文
 
@@ -1726,9 +1726,9 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
     key_compare;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型は、そのキーの引数の順序を決定するデリゲートのシノニムです。
+この型は、キー引数の順序を決定するデリゲートのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1775,7 +1775,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_multiset::key_type (STL/CLR)
+## <a name="hash_multisetkey_type-stlclr"></a><a name="key_type"></a>hash_multiset:: key_type (STL/CLR)
 
 順序付けキーの型です。
 
@@ -1785,9 +1785,9 @@ compare(L'b', L'a') = True
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型はテンプレート パラメーターのシノニム*キー*します。
+この型は、テンプレートパラメーター*キー*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1820,7 +1820,7 @@ int main()
 a b c
 ```
 
-## <a name="load_factor"></a> hash_multiset::load_factor (STL/CLR)
+## <a name="hash_multisetload_factor-stlclr"></a><a name="load_factor"></a>hash_multiset:: load_factor (STL/CLR)
 
 バケットごとの平均要素数をカウントします。
 
@@ -1830,9 +1830,9 @@ a b c
 float load_factor();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数を返します`(float)` [hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`します。 これを使用して、バケットの平均サイズを決定します。
+このメンバー関数は、`(float)`[hash_multiset:: size (stl/clr)](../dotnet/hash-multiset-size-stl-clr.md)`() /` [hash_multiset:: bucket_count (stl/clr)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`を返します。 この値を使用して、バケットの平均サイズを決定します。
 
 ### <a name="example"></a>例
 
@@ -1894,9 +1894,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_multiset::lower_bound (STL/CLR)
+## <a name="hash_multisetlower_bound-stlclr"></a><a name="lower_bound"></a>hash_multiset:: lower_bound (STL/CLR)
 
-指定したキーに一致する範囲の先頭を検出します。
+指定されたキーに一致する範囲の先頭を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -1909,9 +1909,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、最初の要素を決定する`X`として同じバケットにハッシュを被制御シーケンス内*キー*と同等の順序あり*キー*します。 このような要素が存在しないかどうか、それを返します[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; 指定する反復子を返します`X`します。 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの先頭を現在検索を使用するとします。
+このメンバー関数は、*キー*と同じバケットにハッシュし、*キー*と同等の順序を持つ被制御シーケンス内の最初の要素 `X` を決定します。 そのような要素が存在しない場合は、 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -1951,7 +1951,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> hash_multiset::make_value (STL/CLR)
+## <a name="hash_multisetmake_value-stlclr"></a><a name="make_value"></a>hash_multiset:: make_value (STL/CLR)
 
 値オブジェクトを構築します。
 
@@ -1966,9 +1966,9 @@ static value_type make_value(key_type key);
 *key*<br/>
 使用するキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数を返します、`value_type`オブジェクト キーを持つ*キー*します。 その他のいくつかのメンバー関数で使用するための適切なオブジェクトの作成に使用するとします。
+このメンバー関数は、キーが*キー*である `value_type` オブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
 ### <a name="example"></a>例
 
@@ -1997,7 +1997,7 @@ int main()
 a b c
 ```
 
-## <a name="max_load_factor"></a> hash_multiset::max_load_factor (STL/CLR)
+## <a name="hash_multisetmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multiset:: max_load_factor (STL/CLR)
 
 バケットあたりの最大要素数を取得または設定します。
 
@@ -2011,13 +2011,13 @@ void max_load_factor(float new_factor);
 #### <a name="parameters"></a>パラメーター
 
 *new_factor*<br/>
-新しい最大値を格納する要素を読み込みます。
+格納する新しい最大負荷係数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のメンバー関数は、現在格納されている最大テーブル要素を返します。 これを使用するには最大バケットの平均サイズを決定します。
+最初のメンバー関数は、現在格納されている最大テーブル占有率を返します。 この値を使用して、バケットの最大サイズを決定します。
 
-2 番目のメンバー関数は、ストアの最大テーブル占有率を*new_factor*します。 自動再ハッシュは行われませんまで後続の挿入します。
+2番目のメンバー関数は、ストアの最大占有率を*new_factor*に置き換えます。 後続の挿入まで自動悪くは発生しません。
 
 ### <a name="example"></a>例
 
@@ -2079,7 +2079,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multiset::operator = (STL/CLR)
+## <a name="hash_multisetoperator-stlclr"></a><a name="op"></a>hash_multiset:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -2094,9 +2094,9 @@ hash_multiset<Key>% operator=(hash_multiset<Key>% right);
 *right*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。
+メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -2134,7 +2134,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_multiset::rbegin (STL/CLR)
+## <a name="hash_multisetrbegin-stlclr"></a><a name="rbegin"></a>hash_multiset:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -2144,9 +2144,9 @@ a b c
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、または空のシーケンスの先頭を越えた、被制御シーケンスの最後の要素を指定する反転反復子を返します。 したがって、指定、`beginning`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの先頭は変更できます。
+このメンバー関数は、被制御シーケンスの最後の要素、または空のシーケンスの先頭の次の位置を指定する反転反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -2182,7 +2182,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_multiset::reference (STL/CLR)
+## <a name="hash_multisetreference-stlclr"></a><a name="reference"></a>hash_multiset:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -2192,7 +2192,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -2227,7 +2227,7 @@ int main()
 a b c
 ```
 
-## <a name="rehash"></a> hash_multiset::rehash (STL/CLR)
+## <a name="hash_multisetrehash-stlclr"></a><a name="rehash"></a>hash_multiset:: rehash (STL/CLR)
 
 ハッシュ テーブルをリビルドします。
 
@@ -2237,9 +2237,9 @@ a b c
 void rehash();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、ことを確認するハッシュ テーブルを再構築[hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)します。 それ以外の場合、挿入後に必要な場合にのみ、ハッシュ テーブルはサイズで増加します。 (が自動的にサイズは小さくなります。)これを使用して、ハッシュ テーブルのサイズを調整します。
+このメンバー関数は、 [hash_multiset:: load_factor (stl/clr)](../dotnet/hash-multiset-load-factor-stl-clr.md)`() <=` [hash_multiset:: max_load_factor (stl/clr)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)を保証して、ハッシュテーブルを再構築します。 それ以外の場合、ハッシュテーブルのサイズは、挿入後の必要に応じて大きくなります。 (サイズが自動的に縮小されることはありません)。ハッシュテーブルのサイズを調整するには、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -2301,7 +2301,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_multiset::rend (STL/CLR)
+## <a name="hash_multisetrend-stlclr"></a><a name="rend"></a>hash_multiset:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -2311,9 +2311,9 @@ max_load_factor() = 0.25
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスの先頭を越えたを指す、逆順反復子を返します。 したがって、指定、`end`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの末尾は変更できます。
+このメンバー関数は、被制御シーケンスの先頭を越えた位置を示す反転反復子を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -2350,7 +2350,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_multiset::reverse_iterator (STL/CLR)
+## <a name="hash_multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multiset:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2360,9 +2360,9 @@ a b c
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として機能することができます。
+この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -2392,7 +2392,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_multiset::size (STL/CLR)
+## <a name="hash_multisetsize-stlclr"></a><a name="size"></a>hash_multiset:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2402,9 +2402,9 @@ c b a
 size_type size();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`します。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [hash_multiset:: empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -2446,9 +2446,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_multiset::size_type (STL/CLR)
+## <a name="hash_multisetsize_type-stlclr"></a><a name="size_type"></a>hash_multiset:: size_type (STL/CLR)
 
-2 つの要素の間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -2456,9 +2456,9 @@ size() = 2 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、負でない要素の数を表します。
+この型は、負でない要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -2494,7 +2494,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multiset::swap (STL/CLR)
+## <a name="hash_multisetswap-stlclr"></a><a name="swap"></a>hash_multiset:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2509,9 +2509,9 @@ void swap(hash_multiset<Key>% right);
 *right*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、交換の間で被制御シーケンス`this`と*右*します。 これは一定の時間内と、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。
+このメンバー関数は、`this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2562,7 +2562,7 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a> hash_multiset::to_array (STL/CLR)
+## <a name="hash_multisetto_array-stlclr"></a><a name="to_array"></a>hash_multiset:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2572,9 +2572,9 @@ a b c
 cli::array<value_type>^ to_array();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。
+このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
 ### <a name="example"></a>例
 
@@ -2612,9 +2612,9 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_multiset::upper_bound (STL/CLR)
+## <a name="hash_multisetupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multiset:: upper_bound (STL/CLR)
 
-指定したキーに一致する範囲の末尾を検索します。
+指定されたキーに一致する範囲の末尾を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -2627,9 +2627,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、最後の要素を決定する`X`として同じバケットにハッシュを被制御シーケンス内*キー*と同等の順序あり*キー*します。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; を超える先頭の要素を指定する反復子を返します`X`. 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの末尾を現在検索を使用するとします。
+このメンバー関数は、*キー*と同じバケットにハッシュし、*キー*と同等の順序を持つ被制御シーケンス内の `X` 最後の要素を決定します。 そのような要素が存在しない場合、または被制御シーケンスの最後の要素が `X` の場合は、 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`を返します。それ以外の場合は、`X`を超えて最初の要素を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2669,9 +2669,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_multiset::value_comp (STL/CLR)
+## <a name="hash_multisetvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multiset:: value_comp (STL/CLR)
 
-2 つの要素の値の順序付けデリゲートをコピーします。
+2つの要素の値の順序付けデリゲートをコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -2679,9 +2679,9 @@ upper_bound(L'x')==end() = True
 value_compare^ value_comp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 これを使用するには 2 つの要素の値を比較します。
+このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 これを使用して、2つの要素の値を比較します。
 
 ### <a name="example"></a>例
 
@@ -2713,9 +2713,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_multiset::value_compare (STL/CLR)
+## <a name="hash_multisetvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multiset:: value_compare (STL/CLR)
 
-2 つの要素の値の順序付けデリゲート。
+2つの要素の値の順序付けデリゲート。
 
 ### <a name="syntax"></a>構文
 
@@ -2724,9 +2724,9 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
     value_compare;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型は、その値の引数の順序を決定するデリゲートのシノニムです。
+この型は、値引数の順序を決定するデリゲートのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_multiset::value_type (STL/CLR)
+## <a name="hash_multisetvalue_type-stlclr"></a><a name="value_type"></a>hash_multiset:: value_type (STL/CLR)
 
 要素の型。
 
@@ -2768,9 +2768,9 @@ compare(L'b', L'a') = False
 typedef generic_value value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は `generic_value` の同意語です。
+この型は `generic_value`の同意語です。
 
 ### <a name="example"></a>例
 

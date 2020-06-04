@@ -1,9 +1,10 @@
 ---
 title: _get_heap_handle
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _get_heap_handle
-apilocation:
+- _o__get_heap_handle
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_heap_handle
 - get_heap_handle
@@ -25,12 +30,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499928"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916298"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -46,17 +51,19 @@ intptr_t _get_heap_handle( void );
 
 C ランタイム システムで使用される Win32 ヒープのハンドルを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="sample"></a>サンプル
 
@@ -83,4 +90,4 @@ int main(void)
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>

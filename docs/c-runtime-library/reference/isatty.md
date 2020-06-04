@@ -1,9 +1,10 @@
 ---
 title: _isatty
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _isatty
-apilocation:
+- _o__isatty
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157475"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919769"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 ファイル記述子が文字デバイスに関連付けられているかどうかを判定します。
 
@@ -43,26 +48,28 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 調べるデバイスを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**_isatty**記述子がキャラクター デバイスに関連付けられている場合は 0 以外の値を返します。 それ以外の場合、 **_isatty** 0 を返します。
+記述子が文字デバイスに関連付けられている場合、 **_isatty**は0以外の値を返します。 それ以外の場合、 **_isatty**は0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Isatty**関数は決定かどうか*fd*キャラクター デバイス (端末、コンソール、プリンター、またはシリアル ポート) に関連付けられています。
+**_Isatty**関数は、 *fd*がキャラクターデバイス (端末、コンソール、プリンター、またはシリアルポート) に関連付けられているかどうかを判断します。
 
-この関数は、検証、 *fd*パラメーター。 場合*fd* 、不適切なファイル ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値 0 とセットが許可された場合**errno**に**EBADF**します。
+この関数は、 *fd*パラメーターを検証します。 *Fd*が無効なファイルポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EBADF**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -88,7 +95,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 stdout has not been redirected to a file

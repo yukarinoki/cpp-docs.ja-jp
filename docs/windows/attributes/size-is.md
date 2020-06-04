@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166251"
 ---
 # <a name="size_is"></a>size_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514033"
 *式 (expression)*<br/>
 サイズ設定されたポインターに割り当てられたメモリのサイズ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Size_is** C++属性には、 [size_is](/windows/win32/Midl/size-is) MIDL 属性と同じ機能があります。
 
@@ -49,7 +49,7 @@ ms.locfileid: "69514033"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

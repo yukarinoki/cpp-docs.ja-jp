@@ -1,10 +1,10 @@
 ---
 title: _execlpe、_wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,10 +16,12 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
-- execlpe
 - wexeclpe
 - _execlpe
 helpviewer_keywords:
@@ -28,14 +30,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339365"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443029"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe、_wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe、_wexeclpe
 
 新しい子プロセスを読み込んで実行します。
 
@@ -66,7 +68,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 実行するファイルのパス。
 
-*arg0*、.*argn*<br/>
+*arg0*、...*argn*<br/>
 パラメーターへのポインターのリスト。
 
 *envp*<br/>
@@ -74,7 +76,7 @@ intptr_t _wexeclpe(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -86,17 +88,17 @@ intptr_t _wexeclpe(
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
 |**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (呼び出しプロセスが正しく割り当てられていないことを示します)。|
 
-リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-これらの関数は、新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列も渡します。 これらの関数を使用して、**パス**環境変数を実行するファイルを検索します。
+これらの関数は、新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列も渡します。 これらの関数は、 **PATH**環境変数を使用して、実行するファイルを検索します。
 
-**_Execlpe**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0* null ポインターまたは空の文字列では、これらの関数は」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
+**_Execlpe**関数は、パラメーターを検証します。 *Cmdname*または*arg0*が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは開始されません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|関数|必須ヘッダー|省略可能なヘッダー|
 |--------------|---------------------|---------------------|
 |**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<process.h> または \<wchar.h>|\<errno.h>|
@@ -107,7 +109,7 @@ intptr_t _wexeclpe(
 
 「[_exec 関数、_wexec 関数](../../c-runtime-library/exec-wexec-functions.md)」の例を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>

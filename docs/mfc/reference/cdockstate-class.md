@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391180"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753261"
 ---
 # <a name="cdockstate-class"></a>CDockState クラス
 
@@ -39,26 +39,26 @@ class CDockState : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CDockState::Clear](#clear)|ドッキング状態情報をクリアします。|
-|[CDockState::GetVersion](#getversion)|格納されているのバージョン番号を取得します。 バーの状態。|
-|[CDockState::LoadState](#loadstate)|レジストリからの情報の状態を取得しますか。INI ファイルです。|
-|[後](#savestate)|状態情報をレジストリまたは INI ファイルに保存します。|
+|[CDockState::クリア](#clear)|ドックの状態情報をクリアします。|
+|[クドックステート::ゲットバージョン](#getversion)|格納されているバーの状態のバージョン番号を取得します。|
+|[Cドックステート::ロードステート](#loadstate)|レジストリまたはから状態情報を取得します。INI ファイル。|
+|[Cドックステート::セーブステート](#savestate)|状態情報をレジストリまたは INI ファイルに保存します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|格納されているへのポインターの配列では、それぞれのコントロール バーの 1 つのエントリに状態情報をドッキングします。|
+|[クドックステート::m_arrBarInfo](#m_arrbarinfo)|各コントロール バーに 1 つのエントリを持つ、格納されているドッキング状態情報へのポインターの配列。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ドッキング状態には、バーとドッキングされているかどうかの位置とサイズが含まれています。 ドッキング状態が格納されているを取得するときに`CDockState`バーのチェック位置と、バーが、現在の画面の設定で表示されない場合`CDockState`バーの位置が表示されるようにします。 主な目的`CDockState`を保存するには、その状態を許可するのには、さまざまなコントロール バーの全体の状態を保持して、レジストリに、アプリケーションのいずれかが読み込まれます。INI ファイル、またはバイナリ形式の一部として、`CArchive`オブジェクトの内容。
+ドッキング状態には、バーのサイズと位置、およびドッキングされているかどうかが含まれます。 格納されているドッキング状態を取得する際`CDockState`に、バーの位置をチェックし、バーが現在の画面設定で表示されない場合は`CDockState`、バーの位置を拡大縮小して表示します。 主な目的`CDockState`は、多数のコントロール バーの状態全体を保持し、その状態を保存してレジストリ 、アプリケーションの .INI ファイル、または`CArchive`オブジェクトの内容の一部としてバイナリ形式で指定します。
 
-バーは、任意のドッキング可能なコントロール バー、ツールバー、ステータス バー、またはダイアログ バーを含むです。 `CDockState` オブジェクトが書き込まれ、する、またはを使用してファイルから読み取る、`CArchive`オブジェクト。
+このバーには、ツールバー、ステータス バー、ダイアログ バーなど、任意のドッキング可能なコントロール バーを使用できます。 `CDockState`オブジェクトは、オブジェクトを介してファイルに書き込`CArchive`まれ、ファイルから読み込まれます。
 
-[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)フレーム ウィンドウのすべての状態情報を取得`CControlBar`オブジェクトを配置に、`CDockState`オブジェクト。 内容を記述することができますし、`CDockState`オブジェクトを使用してストレージに[Serialize](../../mfc/reference/cobject-class.md#serialize)または[後](#savestate)します。 後で、フレーム ウィンドウにコントロール バーの状態を復元する場合での状態を読み込むことができます`Serialize`または[CDockState::LoadState](#loadstate)を使用して[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)保存されたを適用するにはフレーム ウィンドウのコントロール バーの状態です。
+[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)は、すべてのフレーム ウィンドウの`CControlBar`オブジェクトの状態情報を取得し、オブジェクトに`CDockState`配置します。 その後、オブジェクトの`CDockState`内容を[シリアル化](../../mfc/reference/cobject-class.md#serialize)または[CDockState::SaveState](#savestate)を使用してストレージに書き込むことができます。 後でフレーム ウィンドウのコントロール バーの状態を復元する場合は、状態を`Serialize`[CDockState::LoadState](#loadstate)で読み込み[、CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)を使用して、保存された状態をフレーム ウィンドウのコントロール バーに適用します。
 
-ドッキング コントロール バーの詳細については、記事をご覧ください。[コントロール バー](../../mfc/control-bars.md)、[ツールバー。ドッキングとフローティング](../../mfc/docking-and-floating-toolbars.md)、および[Windows フレーム](../../mfc/frame-windows.md)します。
+コントロール バーのドッキングの詳細については、「[コントロール バー](../../mfc/control-bars.md)」、[ツールバー: ドッキングとフローティング](../../mfc/docking-and-floating-toolbars.md)、および[フレーム ウィンドウ](../../mfc/frame-windows.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,21 +70,21 @@ class CDockState : public CObject
 
 **ヘッダー:** afxadv.h
 
-##  <a name="clear"></a>  CDockState::Clear
+## <a name="cdockstateclear"></a><a name="clear"></a>CDockState::クリア
 
-格納されているすべてのドッキング情報をクリアするには、この関数を呼び出し、`CDockState`オブジェクト。
+`CDockState`オブジェクトに格納されているすべてのドッキング情報をクリアします。
 
-```
+```cpp
 void Clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これには、表示されているかどうかを示すだけでなく、バーがドッキングされているか、バーのサイズと位置があるかどうかとが含まれます。
+これには、バーがドッキングされているかどうかだけでなく、バーのサイズと位置、表示されているかどうかも含まれます。
 
-##  <a name="getversion"></a>  CDockState::GetVersion
+## <a name="cdockstategetversion"></a><a name="getversion"></a>クドックステート::ゲットバージョン
 
-格納されているのバージョン番号を取得するには、この関数を呼び出すバーの状態。
+格納されているバーの状態のバージョン番号を取得します。
 
 ```
 DWORD GetVersion();
@@ -92,55 +92,55 @@ DWORD GetVersion();
 
 ### <a name="return-value"></a>戻り値
 
-1 の場合、格納されているバー情報が現在の状態バーより古い場合は 2 ストアド バー情報は、現在と同じ状態のバーします。
+格納されたバー情報が現在のバーの状態よりも古い場合は 1。格納されたバー情報が現在のバーの状態と同じである場合は 2。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-バージョン サポートでは、新しい永続的なプロパティを追加しを検出し、以前のバージョンのバーによって作成された永続的な状態の読み込みができる変更後のバーができます。
+バージョンサポートを使用すると、変更されたバーは新しい永続プロパティを追加でき、以前のバージョンのバーで作成された永続状態を検出して読み込むことができます。
 
-##  <a name="loadstate"></a>  CDockState::LoadState
+## <a name="cdockstateloadstate"></a><a name="loadstate"></a>Cドックステート::ロードステート
 
-レジストリから状態情報を取得するには、この関数を呼び出すか。INI ファイルです。
+レジストリまたはから状態情報を取得します。INI ファイル。
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-初期化ファイルの状態情報が格納されている Windows レジストリのキーのセクションの名前を指定する null で終わる文字列へのポインター。
+*名前を指定します。*<br/>
+初期化ファイル内のセクションの名前、または状態情報が格納されている Windows レジストリのキーを指定する null テミスト文字列へのポイント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロファイル名は、アプリケーションのセクションを示します。INI ファイル、またはバーの状態情報を含むレジストリ。 コントロール バーの状態情報をレジストリに保存できますか。INI ファイルを`SaveState`します。
+プロファイル名は、アプリケーションの セクションです。INI ファイルまたはバーの状態情報を含むレジストリ。 コントロール バーの状態情報は、レジストリまたは に保存できます。INI ファイル`SaveState`と .
 
-##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo
+## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a>クドックステート::m_arrBarInfo
 
-A`CPtrArray`ストアド コントロール バー情報の状態の情報が保存される各コントロール バーへのポインターの配列であるオブジェクトを`CDockState`オブジェクト。
+オブジェクト`CPtrArray`内に状態情報を保存した各コントロール バーの、格納されているコントロール バー情報へのポインターの配列です`CDockState`。
 
 ```
 CPtrArray m_arrBarInfo;
 ```
 
-##  <a name="savestate"></a>  CDockState::SaveState
+## <a name="cdockstatesavestate"></a><a name="savestate"></a>Cドックステート::セーブステート
 
-状態情報をレジストリに保存するには、この関数を呼び出すか。INI ファイルです。
+状態情報をレジストリまたはに保存します。INI ファイル。
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-初期化ファイルの状態情報が格納されている Windows レジストリのキーのセクションの名前を指定する null で終わる文字列へのポインター。
+*名前を指定します。*<br/>
+初期化ファイル内のセクションの名前、または状態情報が格納されている Windows レジストリのキーを指定する null テミスト文字列へのポイント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロファイル名は、アプリケーションのセクションを示します。INI ファイルまたはレジストリを含むコントロール バーの状態情報。 `SaveState` また、現在の画面サイズを保存します。 コントロール バーの情報をレジストリから取得することができますか。INI ファイルを`LoadState`します。
+プロファイル名は、アプリケーションの セクションです。INI ファイルまたはコントロール バーの状態情報を含むレジストリ。 `SaveState`また、現在の画面サイズも保存します。 コントロール バーの情報は、レジストリまたは から取得できます。INI ファイル`LoadState`と .
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)

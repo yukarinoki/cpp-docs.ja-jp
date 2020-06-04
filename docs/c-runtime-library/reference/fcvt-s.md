@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941350"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920203"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,7 +64,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 変換の結果を保持する指定されたバッファー。
 
 *sizeInBytes*<br/>
@@ -74,44 +76,46 @@ errno_t _fcvt_s(
 *count*<br/>
 小数点以下の桁数。
 
-*dec*<br/>
+*alpha*<br/>
 格納された小数点位置を指すポインター。
 
-*sign*<br/>
+*シャープ*<br/>
 格納された符号インジケーターを指すポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 これらのエラーの一覧については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+正常終了した場合は 0 を返します。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 これらのエラーの一覧については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 パラメーターが次の表の無効な値の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*sizeInBytes*|value|count|dec|sign|Return|*バッファー*内の値|
+|*格納*|*sizeInBytes*|value|count|dec|署名|戻り値|*バッファー*内の値|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|任意|任意|任意|任意|任意|**EINVAL**|変更されません。|
-|Not **NULL** (有効なメモリを指す)|<=0|任意|任意|任意|任意|**EINVAL**|変更されません。|
-|任意|任意|任意|任意|**NULL**|任意|**EINVAL**|変更されません。|
-|任意|任意|任意|任意|任意|**NULL**|**EINVAL**|変更されません。|
+|**空白**|any|any|any|any|any|**EINVAL**|変更されません。|
+|Not **NULL** (有効なメモリを指す)|<=0|any|any|any|any|**EINVAL**|変更されません。|
+|any|any|any|any|**空白**|any|**EINVAL**|変更されません。|
+|any|any|any|any|any|**空白**|**EINVAL**|変更されません。|
 
-## <a name="security-issues"></a>セキュリティ上の問題
+## <a name="security-issues"></a>セキュリティの問題
 
-*バッファー*が有効なメモリを指しておらず、かつが**NULL**でない場合は、どのような場合でも、 **fcvt_s**でアクセス違反が発生することがあります。
+*バッファー*が有効なメモリを指しておらず、が**NULL**でない場合、 **_fcvt_s**はアクセス違反を生成する可能性があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/ **Fcvt_s**関数は、浮動小数点数を null で終わる文字列に変換します。 *値*パラメーターは、変換される浮動小数点数です。 **fcvt_s**は、*値*の数字を文字列として格納し、null 文字 (' \ 0 ') を追加します。 *Count*パラメーターは、小数点の後に格納する桁数を指定します。 余分な数字は、*カウント*するために丸められます。 有効桁数が*カウント*よりも小さい場合は、文字列に0が埋め込まれます。
+**_Fcvt_s**関数は、浮動小数点数を null で終わる文字列に変換します。 *値*パラメーターは、変換される浮動小数点数です。 **_fcvt_s**は、*値*の数字を文字列として格納し、null 文字 (' \ 0 ') を追加します。 *Count*パラメーターは、小数点の後に格納する桁数を指定します。 余分な数字は、*カウント*するために丸められます。 有効桁数が*カウント*よりも小さい場合は、文字列に0が埋め込まれます。
 
 文字列には数字だけが格納されます。 小数点の位置と*値*の符号は*dec*から取得でき、呼び出しの後に*符号*を付けます。 *Dec*パラメーターは整数値を指します。この整数値は、文字列の先頭に対する小数点の位置を示します。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター *sign*は、*値*の符号を示す整数を指します。 Value が正で、*値*が負の場合は0以外の値に設定されて*いる場合、* 整数は0に設定されます。
 
 長さ **_CVTBUFSIZE**のバッファーは、任意の浮動小数点値に対して十分です。
 
-このパラメーターの**解釈は、** *count*パラメーターの解釈に**よって異なり**ます。 *カウント*は、出力文字列の合計桁数として解釈されます **。また、** *count*は、小数点の後の桁数とし**て解釈さ**れます。
+**_Ecvt_s**と **_fcvt_s**の違いは、 *count*パラメーターの解釈です。 **_ecvt_s**は、*カウント*を出力文字列の合計桁数として解釈し、 **_fcvt_s**は小数点の後の桁数*として解釈し*ます。
 
-C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-この関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+この関数のデバッグバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -119,9 +123,9 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-**ライブラリ**すべてのバージョンの[CRT ライブラリ機能](../../c-runtime-library/crt-library-features.md)。
+**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
 
 ## <a name="example"></a>例
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4739
 ms.assetid: 600873b3-7c85-4cd4-944e-cd8e01bfcbb0
-ms.openlocfilehash: 4c48ad9349361324c18ec790c51d1095cce104e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c68a9e0a2873de7e919fafbef68835f0970c03b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185699"
 ---
 # <a name="compiler-warning-level-1-c4739"></a>コンパイラの警告 (レベル 1) C4739
 
@@ -23,7 +23,7 @@ ms.locfileid: "62280439"
 
 次の例では C4739 が生成されます。
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;

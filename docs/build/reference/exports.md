@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ede0d3b53c975298dea3d1331bc0fb00ac246b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271347"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328259"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -22,46 +22,46 @@ EXPORTS
    definition
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-最初の*定義*と同じ行に配置できる、`EXPORTS`キーワードまたは後続の行にします。 .DEF ファイルには、1 つ以上の `EXPORTS` ステートメントを含めることができます。
+最初の*定義*は、キーワードと同じ行に`EXPORTS`することも、後続の行に置く場合があります。 .DEF ファイルには、1 つ以上の `EXPORTS` ステートメントを含めることができます。
 
-エクスポートの構文は、*定義*は。
+エクスポート*定義*の構文は次のとおりです。
 
-> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
+> *エントリ名*\[__=__*internal_name*|*other_module.exported_name*[ \[ **\@**_序数_\[ **NONAME**] ] [ \[ \[**プライベート**] |\[ **[ ]**
 
-*entryname*にエクスポートする関数または変数の名前です。 これは必須です。 DLL の名前からエクスポートする名前が異なる場合、エクスポートの名前、DLL を使用して指定*internal_name*します。 たとえば、DLL で関数 `func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
+*エントリ名*は、エクスポートする関数または変数名です。 これは必須です。 エクスポートする名前が DLL の名前と異なる場合は *、internal_name*を使用して DLL にエクスポートの名前を指定します。 たとえば、DLL で関数 `func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
 
 ```DEF
 EXPORTS
    func2=func1
 ```
 
-エクスポートする名前が他のいくつかのモジュールからの場合は、エクスポートの名前、DLL を使用して指定*other_module.exported_name*します。 たとえば、DLL で関数 `other_module.func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
+エクスポートする名前が他のモジュールの名前である場合は、dll で*other_module.exported_name*を使用してエクスポートの名前を指定します。 たとえば、DLL で関数 `other_module.func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
 
 ```DEF
 EXPORTS
    func2=other_module.func1
 ```
 
-序数でエクスポートする別のモジュールからエクスポートする名前がある場合の指定を使用して、エクスポートの DLL で序数に基づく*other_module*.__#__ *序数*します。 たとえば、DLL から他のモジュールでは序数の 42 し、呼び出し元として使用する関数のエクスポート`func2`、指定します。
+エクスポートする名前が序数でエクスポートされる別のモジュールの名前である場合は、 *other_module*を使用して DLL でエクスポートの序数を指定します。__#__*序数*. たとえば、DLL が関数を序数 42 の他のモジュールからエクスポートし、呼び出し元に関数を として`func2`使用する場合は、次のように指定します。
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-MSVC コンパイラの名前の装飾が使用するためC++関数、装飾名を使用する必要がありますか*internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
+MSVC コンパイラは C++ 関数の名前装飾を使用するため、装飾名*を使用internal_name*か、ソース コードで使用`extern "C"`してエクスポートされた関数を定義する必要があります。 コンパイラは、[アンダー](../../cpp/stdcall.md)スコア ( ) プレフィックスと、引数リストのバイト\_数 (10 進数)\@で構成される接尾辞を持つ __stdcall 呼び出し規約を使用する C 関数も修飾します。
 
-コンパイラによって生成された装飾名を検索するには、使用、 [DUMPBIN](dumpbin-reference.md)ツールまたはリンカー [/map](map-generate-mapfile.md)オプション。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
+コンパイラによって生成された装飾名を検索するには[、DUMPBIN](dumpbin-reference.md)ツールまたはリンカー [/MAP](map-generate-mapfile.md)オプションを使用します。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
 
-使用することができます\@*序数*数値、および関数名ではなくが DLL のエクスポート テーブルに移動を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
+\@*序数*を使用して、関数名ではなく数値を DLL のエクスポート テーブルに入るように指定できます。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 DLL のクライアントが従来のサポートに必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
 
-オプションを使用して**NONAME**キーワード、序数のみをエクスポートし、結果の DLL のエクスポート テーブルのサイズを小さくことができます。 ただし、使用する場合[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) DLL の名前を有効にすることはできないために、序数を知る必要があります。
+オプションの**NONAME**キーワードを使用すると、序数のみでエクスポートし、結果の DLL 内のエクスポート テーブルのサイズを小さくすることができます。 ただし、DLL で[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を使用する場合は、名前が有効でないため序数を知っている必要があります。
 
-省略可能なキーワード**プライベート**防止*entryname* LINK によって生成されるインポート ライブラリに含まれるからです。 同じく LINK によって生成されるイメージ内のエクスポートには影響しません。
+オプションのキーワード**PRIVATE**を指定すると、LINK によって生成されたインポート・ライブラリーに*エントリー名*が組み込まれないようにします。 同じく LINK によって生成されるイメージ内のエクスポートには影響しません。
 
-省略可能なキーワード**データ**エクスポートがコードではなく、データを指定します。 次の例では、`exported_global` という名前のデータ変数をエクスポートする方法を示します。
+オプションのキーワード**DATA は**、エクスポートがコードではなくデータであることを指定します。 次の例では、`exported_global` という名前のデータ変数をエクスポートする方法を示します。
 
 ```DEF
 EXPORTS
@@ -70,20 +70,20 @@ EXPORTS
 
 定義をエクスポートするには 4 つの方法があり、それらを推奨される順序で示します。
 
-1. [方式](../../cpp/dllexport-dllimport.md)ソース コード内のキーワード
+1. ソース コードの[__declspec(dllexport)](../../cpp/dllexport-dllimport.md)キーワード
 
 1. .DEF ファイルでの `EXPORTS` ステートメント
 
-1. [/Export](export-exports-a-function.md) LINK コマンド内の指定
+1. LINK コマンドで[の /EXPORT](export-exports-a-function.md)指定
 
-1. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。 次の例は、関数宣言の前に、の #pragma comment ディレクティブ、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
+1. ソース コード内の[、](../../preprocessor/comment-c-cpp.md)フォーム`#pragma comment(linker, "/export: definition ")`のコメント ディレクティブ。 次の例は、`PlainFuncName``_PlainFuncName@4`関数宣言の前に#pragmaコメント ディレクティブを示しています。
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
     BOOL CALLBACK PlainFuncName( Things * lpParams)
     ```
 
-#Pragma ディレクティブは、(たとえば、32 ビットまたは 64 ビットのビルド) でビルド構成によっては別のエクスポートをして、装飾されていない関数の名前をエクスポートする必要がある場合に便利です。
+#pragma ディレクティブは、装飾されていない関数名をエクスポートする必要があり、ビルド構成に応じてエクスポートが異なる場合 (たとえば、32 ビットまたは 64 ビットのビルドで) 便利です。
 
 同じプログラムで 4 つの方法すべてを使用できます。 エクスポートを含むプログラムが LINK によってビルドされる際に、ビルドで .EXP ファイルが使用されていない限り、インポート ライブラリも作成されます。
 

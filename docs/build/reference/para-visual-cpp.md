@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171178"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -30,14 +30,14 @@ ms.locfileid: "62320020"
 *content*<br/>
 段落のテキストです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
 ## <a name="example"></a>例
 
-\<para> の使用例については、「[\<summary>](summary-visual-cpp.md)」を参照してください。
+[para> の使用例については、「\<](summary-visual-cpp.md)summary>\<」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

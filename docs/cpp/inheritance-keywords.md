@@ -18,16 +18,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: 656ee7ed38c24c9f3b8881f84d8e33ca81e3d936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374096"
 ---
 # <a name="inheritance-keywords"></a>継承キーワード
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 ```
 class [__single_inheritance] class-name;
@@ -35,27 +35,27 @@ class [__multiple_inheritance] class-name;
 class [__virtual_inheritance] class-name;
 ```
 
-それぞれの文字について以下に説明します。
+各値の説明:
 
-*class-name*<br/>
+*クラス名*<br/>
 宣言するクラスの名前。
 
-C++ では、クラスを定義する前にクラス メンバーへのポインターを宣言できます。 例:
+C++ では、クラスを定義する前にクラス メンバーへのポインターを宣言できます。 次に例を示します。
 
 ```cpp
 class S;
 int S::*p;
 ```
 
-上記のコードで`p`クラス S. の整数メンバーへのポインターとして宣言されますただし、`class S`が宣言されているだけです。 このコードで定義されていません。 コンパイラがこのようなポインターを検出した場合、そのポインターの汎化表現を作成する必要があります。 この表現のサイズは、指定した継承モデルによって異なります。 コンパイラに継承モデルを指定するには 4 つの方法があります。
+上記のコードでは、`p`クラス S の整数メンバへのポインタとして宣言されています。ただし、`class S`このコードではまだ定義されていません。宣言されているだけです。 コンパイラがこのようなポインターを検出した場合、そのポインターの汎化表現を作成する必要があります。 この表現のサイズは、指定した継承モデルによって異なります。 コンパイラに継承モデルを指定するには 4 つの方法があります。
 
-- Ide の**メンバーへのポインター表現**
+- メンバー**へのポインター表現の下の**IDE で
 
-- 使用して、コマンドラインで、 [/vmg](../build/reference/vmb-vmg-representation-method.md)スイッチ
+- コマンド ラインで[/vmg](../build/reference/vmb-vmg-representation-method.md)スイッチを使用する
 
-- 使用して、 [pointers_to_members](../preprocessor/pointers-to-members.md)プラグマ
+- [pointers_to_members](../preprocessor/pointers-to-members.md)プラグマの使用
 
-- 継承キーワードを使用して **_ _single_inheritance**、 **_ _multiple_inheritance**、および **_ _virtual_inheritance**します。 この手法により、クラス単位で継承モデルを制御します。
+- 継承キーワード __single_inheritance **、** **__multiple_inheritance**、および **__virtual_inheritance**を使用します。 この手法により、クラス単位で継承モデルを制御します。
 
     > [!NOTE]
     >  常にクラスを定義した後で、そのクラスのメンバーへのポインターを宣言する場合は、これらのオプションを使用する必要がありません。
@@ -72,12 +72,12 @@ int S::*p;
 この場合、コマンド ライン オプションやプラグマに関係なく、`class S` のメンバーへのポインターは最小サイズの表現を使用します。
 
 > [!NOTE]
->  メンバーへのクラス ポインター表現の同じ前方宣言は、そのクラスのメンバーへのポインターを宣言する各翻訳単位で発生する必要があり、その宣言はメンバーへのポインターを宣言する前に発生する必要があります。
+> メンバーへのクラス ポインター表現の同じ前方宣言は、そのクラスのメンバーへのポインターを宣言する各翻訳単位で発生する必要があり、その宣言はメンバーへのポインターを宣言する前に発生する必要があります。
 
-以前のバージョンとの互換性のため **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance**のシノニムで **_ _single_inheritance**、 **_ _multiple_inheritance**、および **_ _virtual_inheritance**しない限り、コンパイラ オプション[/Za\(言語を無効にします。拡張機能)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
+以前のバージョンとの互換性を保つには、 **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance**は、コンパイラ オプション[/Za\(の言語拡張を無効](../build/reference/za-ze-disable-language-extensions.md)にする) が指定されていない限り、 **__single_inheritance**、 **__multiple_inheritance**、**および __virtual_inheritance**の同義語です。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

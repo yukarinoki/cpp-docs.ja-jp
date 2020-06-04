@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: c216c4d01513868dd56f47c7d5ca7f8b734d1797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173661"
 ---
 # <a name="math-error-m6202"></a>数値演算エラー M6202
 
-'function': エラー
+' function ': _SING エラー
 
-指定された関数の引数は、この関数の値が不適切でした。 関数は、その引数が定義されていません。
+指定された関数の引数が、この関数の特異値でした。 この引数に対して関数が定義されていません。
 
-このエラーが、`_matherr`関数、関数名、引数、およびエラーの種類を使用します。 書き直すことができます、`_matherr`特定の実行時の浮動小数点数値演算エラーの処理をカスタマイズする関数。
+このエラーは、関数名、引数、およびエラーの種類を使用して `_matherr` 関数を呼び出します。 `_matherr` 関数を書き直して、特定の実行時の浮動小数点演算エラーの処理をカスタマイズすることができます。

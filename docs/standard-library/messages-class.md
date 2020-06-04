@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: deb9eaedba3c99bb2fcb8399ac412ccedb11545f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449940"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375921"
 ---
 # <a name="messages-class"></a>messages クラス
 
-このテンプレート クラスは、特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得するためにロケールのファセットとして使用できるオブジェクトを表します。
+クラス テンプレートは、ロケール ファセットとして機能し、特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得できるオブジェクトを表します。
 
 現在、messages クラスは実装されていますが、メッセージはありません。
 
@@ -44,10 +44,10 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype*\
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
@@ -55,13 +55,13 @@ class messages : public messages_base;
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
-|[messages](#messages)|メッセージのファセット コンストラクター関数。|
+|[メッセージ](#messages)|メッセージのファセット コンストラクター関数。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|メッセージを表示するために使用される文字型。|
 |[string_type](#string_type)|`basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。|
@@ -70,7 +70,7 @@ class messages : public messages_base;
 
 |メンバー関数|説明|
 |-|-|
-|[close](#close)|メッセージ カタログを閉じます。|
+|[閉じる](#close)|メッセージ カタログを閉じます。|
 |[do_close](#do_close)|メッセージ カタログを閉じるために呼び出される仮想関数。|
 |[do_get](#do_get)|メッセージ カタログを取得するために呼び出される仮想関数。|
 |[do_open](#do_open)|メッセージ カタログを開くために呼び出される仮想関数。|
@@ -83,7 +83,7 @@ class messages : public messages_base;
 
 **名前空間:** std
 
-## <a name="char_type"></a>  messages::char_type
+## <a name="messageschar_type"></a><a name="char_type"></a>メッセージ::char_type
 
 メッセージを表示するために使用される文字型。
 
@@ -91,11 +91,11 @@ class messages : public messages_base;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
-## <a name="close"></a>  messages::close
+## <a name="messagesclose"></a><a name="close"></a>メッセージ::閉じる
 
 メッセージ カタログを閉じます。
 
@@ -105,14 +105,14 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*_Catval*\
 終了するカタログ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数は、[do_close](#do_close)(_ *Catval*) を呼び出します。
 
-## <a name="do_close"></a>  messages::do_close
+## <a name="messagesdo_close"></a><a name="do_close"></a>メッセージ: :do_close
 
 メッセージ カタログを閉じるために呼び出される仮想関数。
 
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*_Catval*\
 終了するカタログ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は、 [do_open](#do_open)への以前の呼び出しによって開かれている必要がある*メッセージカタログを*閉じます。
+保護されたメンバー関数は、以前に[do_open](#do_open)を呼び出して開いたメッセージ*カタログ _Catval*を閉じます。
 
 *_Catval* は、以前に開かれ、まだ閉じていないカタログから取得する必要があります。
 
@@ -135,7 +135,7 @@ virtual void do_close(catalog _Catval) const;
 
 [close](#close) の例 (`do_close` を呼び出す) を参照してください。
 
-## <a name="do_get"></a>  messages::do_get
+## <a name="messagesdo_get"></a><a name="do_get"></a>メッセージ: :do_get
 
 メッセージ カタログを取得するために呼び出される仮想関数。
 
@@ -149,31 +149,31 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*_Catval*\
 検索されるメッセージ カタログを示す識別値。
 
-*_ _* \
+*_Set*\
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_d)* \
+*_Message*\
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*エラー (_d)* \
+*_Dfault*\
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は、エラーのコピーを返します。 *(_d)* それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+失敗時に *_Dfault*のコピーを返します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は、*メッセージカタログから*メッセージシーケンスを取得しようとします。 この操作では、 *_l*、 *Message*、および*dfault*が使用される場合があります。
+保護されたメンバー関数は、メッセージ カタログからメッセージ シーケンス*を取得しようとしています_Catval。* _Set *、_Message、* そしてそうすることで *_Set**_Dfault*を利用するかもしれません。
 
 ### <a name="example"></a>例
 
 [get](#get) の例 (`do_get` を呼び出す) を参照してください。
 
-## <a name="do_open"></a>  messages::do_open
+## <a name="messagesdo_open"></a><a name="do_open"></a>メッセージ::do_open
 
 メッセージ カタログを開くために呼び出される仮想関数。
 
@@ -185,19 +185,19 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catname (_c)* \
+*_Catname*\
 検索されるカタログの名前。
 
-*場所 (_d)* \
+*_loc*\
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
 失敗した場合、0 より小さい値を返します。 それ以外の場合は、後で [get](#get) を呼び出すときに、この戻り値を最初の引数として使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は、名前がであるメッセージカタログを開こうとし*ます。* *ロケールの*場所を使用する場合があります。
+保護されたメンバー関数は、名前が *_Catname*のメッセージ カタログを開こうとします。 ロケール *_Loc*を利用して、その際に
 
 後で [close](#close) を呼び出すときに、この戻り値を引数として使用する必要があります。
 
@@ -205,7 +205,7 @@ virtual catalog do_open(
 
 [open](#open) の例 (`do_open` を呼び出す) を参照してください。
 
-## <a name="get"></a>  messages::get
+## <a name="messagesget"></a><a name="get"></a>メッセージ::取得
 
 メッセージ カタログを取得します。
 
@@ -219,27 +219,27 @@ string_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*_Catval*\
 検索されるメッセージ カタログを示す識別値。
 
-*_ _* \
+*_Set*\
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_d)* \
+*_Message*\
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*エラー (_d)* \
+*_Dfault*\
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は、エラーのコピーを返します。 *(_d)* それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+失敗時に *_Dfault*のコピーを返します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、[do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`) を返します。
+メンバー関数は、 ( `_Catval` `_Set`, `_Message` `_Dfault`, , )[を返do_get。](#do_get)
 
-## <a name="messages"></a>  messages::messages
+## <a name="messagesmessages"></a><a name="messages"></a>メッセージ::メッセージ
 
 メッセージのファセット コンストラクター関数。
 
@@ -254,27 +254,27 @@ protected: messages(
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
+*_Refs*\
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-*名前 (_d)* \
+*_Locname*\
 ロケールの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
+*_Refs*パラメータとその有意性の値は次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \>1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンストラクターは、**locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+コンストラクターは、**locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) を使用してその基本オブジェクトを初期化します。
 
-## <a name="open"></a>  messages::open
+## <a name="messagesopen"></a><a name="open"></a>メッセージ::開く
 
 メッセージ カタログを開きます。
 
@@ -286,21 +286,21 @@ catalog open(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catname (_c)* \
+*_Catname*\
 検索されるカタログの名前。
 
-*場所 (_d)* \
+*_loc*\
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
 失敗した場合、0 より小さい値を返します。 それ以外の場合は、後で [get](#get) を呼び出すときに、この戻り値を最初の引数として使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、[do_open](#do_open)( `_Catname`, `_Loc`) を返します。
+メンバー関数は[do_open](#do_open)を返`_Catname`します`_Loc`( , ) 。
 
-## <a name="string_type"></a>  messages::string_type
+## <a name="messagesstring_type"></a><a name="string_type"></a>メッセージ::string_type
 
 `basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。
 
@@ -308,12 +308,12 @@ catalog open(
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、オブジェクトにメッセージ シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
+この型は、メッセージ シーケンスのコピーを格納できるオブジェクトを持つクラス テンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)\
-[messages_base クラス](../standard-library/messages-base-class.md)\
+[\<ロケール>](../standard-library/locale.md)\
+[messages_baseクラス](../standard-library/messages-base-class.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

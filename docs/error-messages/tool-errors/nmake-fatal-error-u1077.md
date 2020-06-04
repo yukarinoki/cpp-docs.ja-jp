@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-ms.openlocfilehash: 6b0e7b13628c9f38231f4a8772e9babadaf90636
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da50af5a1dc0fc6086629d1f26ebe949a25d6faf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193500"
 ---
 # <a name="nmake-fatal-error-u1077"></a>NMAKE の致命的なエラー U1077
 
-'プログラム': 'value' のコードを返す
+' program ': リターンコード ' value '
 
-指定したコマンドまたはプログラムが失敗し、指定された終了コードが返されました (nmake の) によって呼び出されます。
+NMAKE によって呼び出された、指定されたコマンドまたはプログラムが失敗し、指定された終了コードを返しました。
 
-このエラーを抑制して (nmake の) セッションを続行、/I オプションを使用して、**します。無視**ドット ディレクティブ、または、ダッシュ (**-**) コマンド修飾子。 依存関係ツリーの関連のない部分 (nmake の) セッションを続行するには、/K オプションを使用します。
+このエラーを抑制して NMAKE セッションを続行するには、/I オプションを使用し**ます。** ドットディレクティブ、またはダッシュ ( **-** ) コマンド修飾子を無視します。 依存関係ツリーの関連のない部分に対して NMAKE セッションを続行するには、/K オプションを使用します。

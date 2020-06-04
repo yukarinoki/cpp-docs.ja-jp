@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4258
 ms.assetid: bbb75e6d-6693-4e62-8ed3-b006a0ec55e3
-ms.openlocfilehash: a3ce4c81a86920baddfc1b277df0236a96254be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 198873792743a9ccdee94d44e2a0599348589ee6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163207"
 ---
 # <a name="compiler-warning-level-1-c4258"></a>コンパイラの警告 (レベル 1) C4258
 
-'variable': 定義から、ループは無視されます。外側のスコープから定義を使用すると"
+' variable ': for ループからの定義は無視されます。外側のスコープからの定義が使用されます。
 
-[/Ze](../../build/reference/za-ze-disable-language-extensions.md)と[/Zc:forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)で定義された変数を[の](../../cpp/for-statement-cpp.md)ループが後にスコープ外に移動して、**の**ループが終了します。 この警告は、外側のループ内で定義された、ループ変数と同じ名前の変数は、スコープを含むでもう一度使用する場合に発生します。、**の**ループします。 例:
+[/Ze](../../build/reference/za-ze-disable-language-extensions.md)および[/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)では、 **for ループの**終了[後に for ループで](../../cpp/for-statement-cpp.md)定義された変数がスコープ外に出ます。 この警告は、ループ変数と同じ名前で、外側のループで定義されている変数が**for**ループを含むスコープで再び使用された場合に発生します。 次に例を示します。
 
-```
+```cpp
 // C4258.cpp
 // compile with: /Zc:forScope /W1
 int main()

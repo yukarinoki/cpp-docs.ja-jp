@@ -1,11 +1,12 @@
 ---
 title: cosh、coshf、coshl
-ms.date: 04/11/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+- _o_cosh
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,16 +33,16 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347445"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917221"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
-双曲線余弦を計算します。
+ハイパーボリックコサインを計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -59,30 +64,32 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-ハイパーボリック コサイン*x*します。
+*X*のハイパーボリックコサイン。
 
-既定では、結果が大きすぎる場合、 **cosh**、 **coshf**、または**coshl**呼び出すには、関数を返します**HUGE_VAL** を設定し、**errno**に**ERANGE**します。
+既定では、 **cosh**、 **coshf**、 **coshf**呼び出しで結果が大きすぎる場合、関数は**HUGE_VAL**を返し、 **errno**を**ERANGE**に設定します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**不正確な**+**オーバーフロー**|**オーバーフロー**|
+|± **QNAN**、 **IND**|なし|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**不正確**+**オーバーフロー**|**超え**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cosh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**cosh**は、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**cosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cosh**は常に**double**を受け取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
-|**coshf**、 **cosl**、 **coshl**|\<math.h>|\<cmath> または \<math.h>|
+|**coshf**、 **cosl**、 **coshf**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-例を参照してください。 [sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)します。
+[Sinh、sinhf、sinhf](sinh-sinhf-sinhl.md)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

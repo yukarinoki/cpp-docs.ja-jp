@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316341"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335729"
 ---
 # <a name="xml-documentation-visual-c"></a>XML に関するドキュメント (Visual C++)
 
@@ -27,14 +27,14 @@ Visual C++ コード ファイル内では、メソッドまたは型の定義�
 1. 型の宣言と実装が同じヘッダー ファイルに置かれているライブラリの場合
 
 > [!NOTE]
->  現在のリリースでは、テンプレートに対しても、テンプレートの種類を含む要素 (たとえば、テンプレートとしてパラメーターを取る関数) に対してもコード コメントは処理されません。 このようなコメントを追加すると、未定義の動作が発生します。
+> 現在のリリースでは、テンプレートに対しても、テンプレートの種類を含む要素 (たとえば、テンプレートとしてパラメーターを取る関数) に対してもコード コメントは処理されません。 このようなコメントを追加すると、未定義の動作が発生します。
 
 ドキュメント コメントを含む .xml ファイルの作成の詳細については、次のトピックを参照してください。
 
-|参照する内容|参照トピック|
+|対象|参照先|
 |---------------------------|---------|
 |使用するコンパイラ オプション|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|ドキュメントで一般的に使用される機能を提供するために使用できるタグ|[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|ドキュメントで一般的に使用される機能を提供するために使用できるタグ|[ドキュメントコメントの推奨タグ](recommended-tags-for-documentation-comments-visual-cpp.md)|
 |コード内のコンストラクトを識別するために、コンパイラによって生成される ID 文字列|[.xml ファイルの処理](dot-xml-file-processing.md)|
 |ドキュメント タグを区切る方法|[Visual C++ ドキュメント タグの区切り記号](delimiters-for-visual-cpp-documentation-tags.md)|
 |1 つまたは複数の .xdc ファイルからの .xml ファイルの生成。|[XDCMake リファレンス](xdcmake-reference.md)|

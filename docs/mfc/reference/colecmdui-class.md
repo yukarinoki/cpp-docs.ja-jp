@@ -1,5 +1,5 @@
 ---
-title: COleCmdUI クラス
+title: クラス
 ms.date: 09/12/2018
 f1_keywords:
 - COleCmdUI
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7a6b21a3ad778b4a5ca345b1aaf42875810e4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148511"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376264"
 ---
-# <a name="colecmdui-class"></a>COleCmdUI クラス
+# <a name="colecmdui-class"></a>クラス
 
 アプリケーションの `IOleCommandTarget`ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。
 
@@ -37,23 +37,23 @@ class COleCmdUI : public CCmdUI
 
 |名前|説明|
 |----------|-----------------|
-|[COleCmdUI::COleCmdUI](#colecmdui)|`COleCmdUI` オブジェクトを構築します。|
+|[次のコマンドを実行します。](#colecmdui)|`COleCmdUI` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleCmdUI::Enable](#enable)|設定または有効にするコマンドのフラグをクリアします。|
-|[COleCmdUI::SetCheck](#setcheck)|設定のオン/オフ切り替えの状態コマンド。|
-|[COleCmdUI::SetText](#settext)|コマンドのテキスト名またはステータス文字列を返します。|
+|[を有効にします。](#enable)|enable コマンド フラグを設定またはクリアします。|
+|[をクリックします。](#setcheck)|オン/オフトグル コマンドの状態を設定します。|
+|[をクリックします。](#settext)|コマンドのテキスト名またはステータス文字列を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-アプリケーションではない有効になっている DocObjects、MFC アプリケーションでメニューをユーザーのビューが UPDATE_COMMAND_UI 通知を処理するときに。 各通知、 [CCmdUI](../../mfc/reference/ccmdui-class.md)特定のコマンドの状態を反映するように操作できるオブジェクト。 ただし、DocObjects で、アプリケーションが有効な場合に MFC UPDATE_OLE_COMMAND_UI 通知を処理し、割り当てます`COleCmdUI`オブジェクト。
+DocObjects が有効になっていないアプリケーションでは、ユーザーがアプリケーションのメニューを表示すると、MFC はUPDATE_COMMAND_UIの処理を行います。 各通知には、特定のコマンドの状態を反映するように操作できる[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトが与えられます。 ただし、アプリケーションで DocObjects が有効になっている場合、MFC は通知UPDATE_OLE_COMMAND_UI処理`COleCmdUI`し、オブジェクトを割り当てます。
 
-`COleCmdUI` コマンド (という名前、開く、印刷、具合) などのコンテナーのユーザー インターフェイスを受信する DocObject でき DocObject のユーザー インターフェイスで発生するコマンドを受信するためのコンテナーを使用します。 `IDispatch`同じコマンドをディスパッチするされる可能性があります`IOleCommandTarget`クエリし、引数を指定せず、通常は、コマンドの標準セットに依存し、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI` 有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを実行するときに呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)します。
+`COleCmdUI`を使用すると、コンテナのユーザインタフェース(FileNew、Open、Printなど)から発信されたコマンドを DocObject が受け取ることができ、コンテナは DocObject のユーザインタフェースから生成されたコマンドを受け取ることができます。 同`IDispatch`じコマンドをディスパッチするために使用できますが、`IOleCommandTarget`通常は引数を持たない標準のコマンド セットに依存しており、型情報は含まないため、クエリと実行を簡単に行えます。 `COleCmdUI`を使用して、DocObject ユーザー インターフェイス コマンドのその他のプロパティを有効、更新、および設定できます。 コマンドを呼び出す場合は、[呼](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)び出します。
 
-DocObjects については、次を参照してください。 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)します。
+ドキュトオブジェクトの詳細については、[を](../../mfc/reference/cdocobjectserver-class.md)参照[してください。](../../mfc/reference/cdocobjectserveritem-class.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ DocObjects については、次を参照してください。 [CDocObjectServer
 
 **ヘッダー:** afxdocobj.h
 
-##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI
+## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>次のコマンドを実行します。
 
-構築、`COleCmdUI`オブジェクトに関連付けられた特定のユーザー インターフェイス コマンド。
+特定のユーザー`COleCmdUI`インターフェイス コマンドに関連付けられたオブジェクトを構築します。
 
 ```
 COleCmdUI(
@@ -79,21 +79,21 @@ COleCmdUI(
 ### <a name="parameters"></a>パラメーター
 
 *rgCmds*<br/>
-指定された GUID に関連付けられている、サポートされているコマンドの一覧。 `OLECMD`構造体は、コマンド フラグをコマンドを関連付けます。
+指定された GUID に関連付けられているサポートされているコマンドの一覧。 この`OLECMD`構造体は、コマンドをコマンド・フラグに関連付けます。
 
 *cCmds*<br/>
-コマンド数*rgCmds*します。
+*rgCmds*内のコマンドの数。
 
-*pGroup*<br/>
+*グループ化*<br/>
 コマンドのセットを識別する GUID へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`COleCmdUI`オブジェクトは、メニュー項目やコントロール バーのボタンなどの DocObject ユーザー インターフェイス オブジェクトを更新するためのプログラム インターフェイスを提供します。 ユーザー インターフェイス オブジェクトを有効になっている、無効になっている、オンになっている、クリア、`COleCmdUI`オブジェクト。
+この`COleCmdUI`オブジェクトは、メニュー項目やコントロール バー ボタンなどの DocObject ユーザー インターフェイス オブジェクトを更新するためのプログラム インターフェイスを提供します。 ユーザー インターフェイス オブジェクトは、`COleCmdUI`オブジェクトを介して有効、無効、チェック、およびクリアできます。
 
-##  <a name="enable"></a>  COleCmdUI::Enable
+## <a name="colecmduienable"></a><a name="enable"></a>を有効にします。
 
-コマンド フラグを設定するには、この関数を呼び出して、 `COleCmdUI` OLECOMDF_ENABLED、コマンドが有効になって使用可能なインターフェイスに伝える、またはコマンド フラグをクリアするオブジェクトします。
+この関数を呼び出して、`COleCmdUI`オブジェクトのコマンド フラグをOLECOMDF_ENABLEDに設定します。
 
 ```
 virtual void Enable(BOOL bOn);
@@ -101,12 +101,12 @@ virtual void Enable(BOOL bOn);
 
 ### <a name="parameters"></a>パラメーター
 
-*bOn*<br/>
-コマンドが関連付けられているかどうかを示す、`COleCmdUI`オブジェクトを有効または無効にする必要があります。 このコマンドをにより、0 以外0 には、コマンドが無効にします。
+*ボン*<br/>
+オブジェクトに関連付けられたコマンドを`COleCmdUI`有効にするか無効にするかを示します。 0 以外のコマンドは有効です。0 を指定すると、コマンドは無効になります。
 
-##  <a name="setcheck"></a>  COleCmdUI::SetCheck
+## <a name="colecmduisetcheck"></a><a name="setcheck"></a>をクリックします。
 
-オン/オフ切り替えの状態を設定するには、この関数を呼び出すコマンド。
+オン/オフトグル コマンドの状態を設定します。
 
 ```
 virtual void SetCheck(int nCheck);
@@ -114,18 +114,18 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>パラメーター
 
-*確認してください。*<br/>
-オン/オフ切り替えを設定する状態を決定する値コマンド。 値は次のとおりです。
+*nチェック*<br/>
+オン/オフトグル コマンドを設定する状態を決定する値。 値は次のとおりです。
 
 |[値]|説明|
 |-----------|-----------------|
 |**1**|コマンドを on に設定します。|
-|**2**|不確定コマンドを設定します。このコマンドの属性は、上と関連する選択項目の状態をオフの両方では、状態を特定できないことはできません。|
-|その他の値|コマンドをオフに設定します。|
+|**2**|コマンドを不確定に設定します。このコマンドの属性は、関連する選択のオンとオフの両方の状態にあるため、状態を特定できません。|
+|その他の値|コマンドを off に設定します。|
 
-##  <a name="settext"></a>  COleCmdUI::SetText
+## <a name="colecmduisettext"></a><a name="settext"></a>をクリックします。
 
-この関数では、コマンドのテキスト名またはステータス文字列を返します。
+コマンドのテキスト名またはステータス文字列を返します。
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -134,9 +134,9 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-コマンドで使用するテキストへのポインター。
+コマンドで使用されるテキストへのポインター。
 
 ## <a name="see-also"></a>関連項目
 
 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

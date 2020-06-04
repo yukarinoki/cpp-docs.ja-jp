@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374280"
 ---
 # <a name="synclockt-class"></a>SyncLockT クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -37,14 +37,14 @@ class SyncLockT;
 
 ### <a name="parameters"></a>パラメーター
 
-*SyncTraits*<br/>
-この型は、リソースの所有権を取得できます。
+*同期トレイト*<br/>
+リソースの所有権を取得できる型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-排他的に使用できる型を表すか、リソースの所有権を共有します。
+リソースの排他的または共有所有権を取得できる型を表します。
 
-`SyncLockT`クラスの使用などの実装に役立つ、 [SRWLock](srwlock-class.md)クラス。
+この`SyncLockT`クラスは[、SRWLock](srwlock-class.md)クラスの実装を支援するために使用されます。
 
 ## <a name="members"></a>メンバー
 
@@ -52,27 +52,27 @@ class SyncLockT;
 
 名前                                      | 説明
 ----------------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt)        | `SyncLockT` クラスの新しいインスタンスを初期化します。
-[SyncLockT::~SyncLockT](#tilde-synclockt) | インスタンスを初期化解除、`SyncLockT`クラス。
+[シンクロック::シンクロック](#synclockt)        | `SyncLockT` クラスの新しいインスタンスを初期化します。
+[シンクロック::~シンクロック](#tilde-synclockt) | クラスのインスタンスを初期化解除します`SyncLockT`。
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
 名前                               | 説明
 ---------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt) | `SyncLockT` クラスの新しいインスタンスを初期化します。
+[シンクロック::シンクロック](#synclockt) | `SyncLockT` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                             | 説明
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[SyncLockT::IsLocked](#islocked) | 示すかどうか、現在`SyncLockT`リソースを所有するオブジェクトです。 つまり、`SyncLockT`オブジェクトが*ロック*します。
-[Synclockt::unlock](#unlock)     | 現在保持されているリソースの制御を解放`SyncLockT`オブジェクトが存在する場合。
+[シンクロック::イズロック](#islocked) | 現在`SyncLockT`のオブジェクトがリソースを所有しているかどうかを示します。つまり、オブジェクトは`SyncLockT`*ロックされています*。
+[シンクロック::ロック解除](#unlock)     | 現在`SyncLockT`のオブジェクトが保持しているリソースの制御を解放します (存在する場合)。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                      | 説明
 ------------------------- | -------------------------------------------------------------------
-[SyncLockT::sync_](#sync) | によって表される、基になるリソースを保持、`SyncLockT`クラス。
+[シンクロック::sync_](#sync) | クラスで表される基になるリソース`SyncLockT`を保持します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,27 +80,27 @@ class SyncLockT;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::Details
+**名前空間:** マイクロソフト::WRL::ラッパー::D
 
-## <a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>シンクロック::~シンクロック
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 ~SyncLockT();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-インスタンスを初期化解除、`SyncLockT`クラス。
+クラスのインスタンスを初期化解除します`SyncLockT`。
 
-このデストラクターの現在のロックを解除も`SyncLockT`インスタンス。
+このデストラクターは、現在`SyncLockT`のインスタンスのロックも解除します。
 
-## <a name="islocked"></a>SyncLockT::IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a>シンクロック::イズロック
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 bool IsLocked() const;
@@ -108,27 +108,27 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合、`SyncLockT`オブジェクトがロックされている場合はそれ以外の場合、 **false**します。
+オブジェクトがロック`SyncLockT`されている場合は true、ロックされている場合は**true。** それ以外の場合**は false。**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-示すかどうか、現在`SyncLockT`リソースを所有するオブジェクトです。 つまり、`SyncLockT`オブジェクトが*ロック*します。
+現在`SyncLockT`のオブジェクトがリソースを所有しているかどうかを示します。つまり、オブジェクトは`SyncLockT`*ロックされています*。
 
-## <a name="sync"></a>SyncLockT::sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>シンクロック::sync_
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 typename SyncTraits::Type sync_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって表される、基になるリソースを保持、`SyncLockT`クラス。
+クラスで表される基になるリソース`SyncLockT`を保持します。
 
-## <a name="synclockt"></a>SyncLockT::SyncLockT
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>シンクロック::シンクロック
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 SyncLockT(
@@ -142,26 +142,26 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
-別の右辺値参照`SyncLockT`オブジェクト。
+*他*<br/>
+別`SyncLockT`のオブジェクトへの右辺値参照。
 
-*sync*<br/>
-別の参照`SyncLockWithStatusT`オブジェクト。
+*同期*<br/>
+別`SyncLockWithStatusT`のオブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SyncLockT` クラスの新しいインスタンスを初期化します。
 
-最初のコンス トラクターは、現在`SyncLockT`から別のオブジェクト`SyncLockT`パラメーターで指定されたオブジェクト*他*、し、もう一方を無効に`SyncLockT`オブジェクト。 2 番目のコンス トラクターは`protected`、し、現在初期化`SyncLockT`オブジェクトを無効な状態にします。
+最初のコンストラクターは、パラメーター `SyncLockT` other で`SyncLockT`指定された別の*other*オブジェクトから現在のオブジェクトを初期化し、`SyncLockT`その後、そのオブジェクトを無効にします。 2 番目の`protected`コンストラクターは で、現在`SyncLockT`のオブジェクトを無効な状態に初期化します。
 
-## <a name="unlock"></a>Synclockt::unlock
+## <a name="synclocktunlock"></a><a name="unlock"></a>シンクロック::ロック解除
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 void Unlock();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在保持されているリソースの制御を解放`SyncLockT`オブジェクトが存在する場合。
+現在`SyncLockT`のオブジェクトが保持しているリソースの制御を解放します (存在する場合)。

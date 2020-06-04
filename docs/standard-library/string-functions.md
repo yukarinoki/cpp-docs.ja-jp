@@ -28,23 +28,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f1dca71a6bb9d5461150378191b9373f907ecd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455608"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376660"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 関数
 
 ||||
 |-|-|-|
-|[getline](#getline)|[stod](#stod)|[stof](#stof)|
-|[stoi](#stoi)|[stol](#stol)|[stold](#stold)|
-|[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
-|[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
+|[Getline](#getline)|[ストッド](#stod)|[ストフ](#stof)|
+|[ストイ](#stoi)|[stol](#stol)|[stold](#stold)|
+|[stoll](#stoll)|[ストル](#stoul)|[ストゥール](#stoull)|
+|[スワップ](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>Getline
 
 入力ストリームから文字列を行単位で抽出します。
 
@@ -52,70 +52,70 @@ ms.locfileid: "68455608"
 // (1) delimiter as parameter
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    CharType delim);
+    CharType delimiter);
 
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>&& is,
+    basic_istream<CharType, Traits>&& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    const CharType delim);
+    const CharType delimiter);
 
 // (2) default delimiter used
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str);
 
 template <class Allocator, class Traits, class Allocator>
 basic_istream<Allocator, Traits>& getline(
-    basic_istream<Allocator, Traits>&& is,
+    basic_istream<Allocator, Traits>&& in_stream,
     basic_string<Allocator, Traits, Allocator>& str);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*is*\
+*in_stream*\
 文字列の抽出元となる入力ストリーム。
 
-*引数*\
+*Str*\
 入力ストリームから抽出した文字の読み込み先となる文字列。
 
-*delim*\
+*区切り 記号*\
 行の区切り記号。
 
 ### <a name="return-value"></a>戻り値
 
-入力ストリーム*が*です。
+入力ストリーム*in_stream。*
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-抽出文字をとして`(1)`マークされた関数シグネチャのペアは、 *delim*が見つかるまで*str*に格納*さ*れます。
+区切*り文字*が見つかるまで`(1)`*、in_stream*から文字を抽出し *、str*に格納する関数シグネチャのペア。
 
-`(2)`としてマークされた関数シグネチャのペアは、既定の行区切り記号として改行を使用し、 **getline**(`is`, `str`, `is`として動作します。 `widen`(' `\n`')) として動作します。
+マークされた`(2)`関数シグネチャのペアでは、改行文字がデフォルトの行区切り文字として使用`getline(in_stream, str, in_stream. widen('\n'))`され、 として動作します。
 
 各ペアの 2 つ目の関数では、1 つ目の関数と同様に、[右辺値参照](../cpp/lvalues-and-rvalues-visual-cpp.md)がサポートされます。
 
 抽出は、次のいずれかが発生したときに停止します。
 
-- ファイルの終端で *、の内部*状態フラグがに`ios_base::eofbit`設定されている場合。
+- ファイルの末尾で、in_streamの内部状態フラグが に*in_stream*`ios_base::eofbit`設定されます。
 
-- 関数が `delim` と等しい要素を抽出した場合。このとき、抽出された要素が制御対象シーケンスに戻されたり、追加されたりすることはありません。
+- 関数が *、区切り記号*と等しい要素を抽出した後。 要素は、制御されたシーケンスに戻ったり、追加されたりしません。
 
-- 関数が[max_size](../standard-library/basic-string-class.md#max_size)要素`str.`を抽出した後 *、の内部*状態フラグがに`ios_base::failbit`設定されます。
+- 関数の後に`str.`[max_size](../standard-library/basic-string-class.md#max_size)要素を抽出します。 in_stream*の内部*状態フラグは に設定`ios_base::failbit`されます。
 
-- 前に示した以外のエラーが発生した場合、内部状態フラグ*は*に設定されます。`ios_base::badbit`
+- 上記以外のエラー。*in_stream*の内部状態フラグが に`ios_base::badbit`設定されます。
 
 内部状態フラグについては、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
-関数が要素を抽出しなかった場合 *、の内部*状態フラグはに`ios_base::failbit`設定されます。 いずれの場合も`getline` 、*は*を返します。
+関数が要素を抽出しない場合 *、in_stream*の内部状態フラグは に`ios_base::failbit`設定されます。 いずれの場合も、 `getline` *in_stream*を返します。
 
-例外がスローされた場合、*は*になり、 *str*は有効な状態のままになります。
+例外がスローされた場合 *、in_stream*と*str*は有効な状態のままになります。
 
 ### <a name="example"></a>例
 
-次のコードは、2 つのモードの `getline()` を示しています。1 つ目は既定の区切り文字 (改行文字)、2 つ目は区切り文字として空白文字を使用しています。 また、while ループの終了を制御するために、ファイル終端文字 (Ctrl + Z キー) を使用しています。 この文字により、内部状態フラグ `cin` が `eofbit` に設定されます。2 つ目の while ループを正常に動作させるには、このフラグを [basic_ios::clear()](../standard-library/basic-ios-class.md#clear) でクリアする必要があります。
+次のコードは、2 つのモードの `getline()` を示しています。1 つ目は既定の区切り文字 (改行文字)、2 つ目は区切り文字として空白文字を使用しています。 また、while ループの終了を制御するために、ファイル終端文字 (Ctrl + Z キー) を使用しています。 この値は、2 番目の`cin` `eofbit`while ループが正常に動作する前に[basic_ios::clear()](../standard-library/basic-ios-class.md#clear)でクリアする必要がある 内部状態フラグを に設定します。
 
 ```cpp
 // compile with: /EHsc /W4
@@ -156,9 +156,9 @@ int main()
 }
 ```
 
-## <a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>ストッド
 
-文字シーケンスを**倍精度浮動小数点**型に変換します。
+文字シーケンスを**`double`**.
 
 ```cpp
 double stod(
@@ -173,20 +173,21 @@ double stod(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
 
 ### <a name="return-value"></a>戻り値
 
-**Double**値。
+値**`double`**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtod( str.c_str(), _Eptr)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**double**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`double`**`strtod( str.c_str(), _Eptr)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>ストフ
 
 文字シーケンスを float に変換します。
 
@@ -202,20 +203,21 @@ float stof(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
 
 ### <a name="return-value"></a>戻り値
 
-浮動小数点数値。
+値**`float`**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtof( str.c_str(), _Eptr)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**float**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`float`**`strtof( str.c_str(), _Eptr)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>ストイ
 
 文字シーケンスを integer に変換します。
 
@@ -237,23 +239,26 @@ int stoi(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|値が返されるときに、最初の未変換文字のインデックスが格納されます。|
-|*base*|使用する基数。|
+*Str*\
+変換する文字シーケンス。
 
-### <a name="remarks"></a>Remarks
+*Idx*\
+最初の未変換文字のインデックス値。
 
-関数`stoi`は、 *str*内の文字のシーケンスを**int**型の値に変換し、その値を返します。 たとえば、文字シーケンス "10" を渡した場合、`stoi` によって返される値は整数 10 です。
+*ベース*\
+使用する基数。
 
-1 バイト文字に対しては、`stoi` は `strtol` の形式で呼び出された場合の `strtol( str.c_str(), _Eptr, idx)` と同様に動作します。`_Eptr` は関数の内部オブジェクトです。ワイド文字に対しては、類似した `wcstol` の形式で呼び出された場合の `wcstol(Str.c_str(), _Eptr, idx)` と同様に動作します。 詳細については、「[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)」を参照してください。
+### <a name="remarks"></a>解説
 
-の`str.c_str() == *_Eptr`場合`stoi` 、型`invalid_argument`のオブジェクトをスローします。 このような呼び出しによっ`errno`てが設定される場合、または戻り値を**int**型のオブジェクトとして表すことが`out_of_range`できない場合は、型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr - str.c_str()`関数`*idx`はをに格納します。
+str`stoi`*内の*文字のシーケンスを型**`int`** の値に変換し、値を返します。 たとえば、文字シーケンス "10" を渡した場合、`stoi` によって返される値は整数 10 です。
 
-## <a name="stol"></a>  stol
+`stoi`1 バイト文字が`strtol`呼び出された場合、関数の場合`strtol( str.c_str(), _Eptr, idx)``_Eptr`と同様に動作します。または`wcstol`ワイド文字の場合は、同様の方法で呼び出`wcstol(Str.c_str(), _Eptr, idx)`されると、 . 詳細については、「[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)」を参照してください。
 
-文字シーケンスを**long**に変換します。
+の`str.c_str() == *_Eptr`場合`stoi`は、 型のオブジェクト`invalid_argument`をスローします。 このような呼び出しが`errno`設定される場合、または戻り値を型のオブジェクトとして表す可能性**`int`** がある場合は、型のオブジェクトを`out_of_range`スローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr - str.c_str()`、`*idx`関数は に格納されます。
+
+## <a name="stol"></a><a name="stol"></a>Stol
+
+文字シーケンスを**`long`**.
 
 ```cpp
 long stol(
@@ -269,23 +274,26 @@ long stol(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
-|*base*|使用する基数。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
+
+*ベース*\
+使用する基数。
 
 ### <a name="return-value"></a>戻り値
 
 長整数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtol( str.c_str(), _Eptr, idx)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**long**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`long`**`strtol( str.c_str(), _Eptr, idx)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>ストルド
 
-文字シーケンスを**long double**に変換します。
+文字シーケンスを**`long double`**.
 
 ```cpp
 double stold(
@@ -299,22 +307,23 @@ double stold(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
 
 ### <a name="return-value"></a>戻り値
 
-**Long double**値。
+値**`long double`**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtold( str.c_str(), _Eptr)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**long double**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`long double`**`strtold( str.c_str(), _Eptr)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>ストール
 
-文字シーケンスを**long 型**に変換します。
+文字シーケンスを**`long long`**.
 
 ```cpp
 long long stoll(
@@ -330,21 +339,24 @@ long long stoll(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
-|*base*|使用する基数。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
+
+*ベース*\
+使用する基数。
 
 ### <a name="return-value"></a>戻り値
 
-**Long 型**の値。
+値**`long long`**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtoll( str.c_str(), _Eptr, idx)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**long long**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`long long`**`strtoll( str.c_str(), _Eptr, idx)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>ストル
 
 文字シーケンスを unsigned long に変換します。
 
@@ -362,23 +374,26 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
-|*base*|使用する基数。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
+
+*ベース*\
+使用する基数。
 
 ### <a name="return-value"></a>戻り値
 
 unsigned long 整数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtoul( str.c_str(), _Eptr, idx)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**unsigned long**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`unsigned long`**`strtoul( str.c_str(), _Eptr, idx)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>ストゥール
 
-文字シーケンスを**unsigned long long 型**に変換します。
+文字シーケンスを に変換します**`unsigned long long`**。
 
 ```cpp
 unsigned long long stoull(
@@ -394,21 +409,24 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*str*|変換する文字シーケンス。|
-|*idx*|最初の未変換文字のインデックス値。|
-|*base*|使用する基数。|
+*Str*\
+変換する文字シーケンス。
+
+*Idx*\
+最初の未変換文字のインデックス値。
+
+*ベース*\
+使用する基数。
 
 ### <a name="return-value"></a>戻り値
 
-**Unsigned long long 型**の値です。
+値**`unsigned long long`**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を`strtoull( str.c_str(), _Eptr, idx)`呼び出した場合`_Eptr`と同様に、str `val`内の要素のシーケンスを**unsigned long**型の値に変換します。は関数の内部オブジェクトです。 ` str.c_str() == *_Eptr` の場合、`invalid_argument` 型のオブジェクトをスローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合、 *idx*が null ポインターでない場合、 `*_Eptr -  str.c_str()`関数`*idx`はを`val`格納し、を返します。
+この関数は *、str*内の要素のシーケンスを、関数**`unsigned long long`**`strtoull( str.c_str(), _Eptr, idx)`の内部のオブジェクト`_Eptr`である場合と同じ型の値に変換します。 の`str.c_str() == *_Eptr`場合は、 型のオブジェクトを`invalid_argument`スローします。 このような呼び出しによって `errno` が設定される場合、`out_of_range` 型のオブジェクトをスローします。 それ以外の場合 *、idx*が null ポインターでない場合`*_Eptr -  str.c_str()`、`*idx`関数は、値を格納して返します。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>スワップ
 
 2 つの文字列の、文字の配列を交換します。
 
@@ -419,15 +437,15 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-もう一方の文字列と要素を交換する 1 つの文字列。
+*左*\
+要素が別の文字列の要素と入れ替わる文字列。
 
 *そうです*\
 最初の文字列と要素を交換するもう一方の文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、特化されたメンバー関数を*左から*実行します。[スワップ](../standard-library/basic-string-class.md#swap)(*right*) 文字列の場合は、複雑さが一定であることを保証します。
+テンプレート関数は、特殊なメンバ関数*を左*に実行します。[一](../standard-library/basic-string-class.md#swap)定の複雑さを保証する文字列のスワップ(*右*) 。
 
 ### <a name="example"></a>例
 
@@ -464,102 +482,100 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>to_string
 
 値を `string` に変換します。
 
 ```cpp
-string to_string(int Val);
-string to_string(unsigned int Val);
-string to_string(long Val);
-string to_string(unsigned long Val);
-string to_string(long long Val);
-string to_string(unsigned long long Val);
-string to_string(float Val);
-string to_string(double Val);
-string to_string(long double Val);
+string to_string(int value);
+string to_string(unsigned int value);
+string to_string(long value);
+string to_string(unsigned long value);
+string to_string(long long value);
+string to_string(unsigned long long value);
+string to_string(float value);
+string to_string(double value);
+string to_string(long double value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Val*|変換する値。|
+*値*\
+変換する値。
 
 ### <a name="return-value"></a>戻り値
 
 値を表す `string` 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、を呼び出し`sprintf(Buf, Fmt, Val)`た場合と同様に、関数内部の`Buf`配列オブジェクトに格納されている要素の`Fmt`シーケンスに*Val*を変換します。ここで、は
+関数は、*値*を、関数内部の配列オブジェクト`Buf`に格納されている要素のシーケンスに変換`sprintf(Buf, Fmt, value)`します。 `Fmt`
 
-- `"%d"`の`Val`型が**int**の場合
+- `"%d"`*値*がタイプの場合**`int`**
 
-- `"%u"`の`Val`型が**unsigned int**の場合
+- `"%u"`*値*がタイプの場合**`unsigned int`**
 
-- `"%ld"`の`Val`型が**long**の場合
+- `"%ld"`*値*がタイプの場合**`long`**
 
-- `"%lu"`に`Val` **unsigned long**型がある場合
+- `"%lu"`*値*がタイプの場合**`unsigned long`**
 
-- `"%lld"`が`Val` **long long**型の場合
+- `"%lld"`*値*がタイプの場合**`long long`**
 
-- `"%llu"`に`Val` **unsigned long long**型がある場合
+- `"%llu"`*値*がタイプの場合**`unsigned long long`**
 
-- `"%f"`の`Val`型が**float**または**double**の場合
+- `"%f"`*値*がタイプまたはタイプ**`float`** の場合**`double`**
 
-- `"%Lf"`が`Val` **long double**型の場合
+- `"%Lf"`*値*がタイプの場合**`long double`**
 
 `string(Buf)` が返されます。
 
-## <a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>to_wstring
 
 値をワイド文字列に変換します。
 
 ```cpp
-wstring to_wstring(int Val);
-wstring to_wstring(unsigned int Val);
-wstring to_wstring(long Val);
-wstring to_wstring(unsigned long Val);
-wstring to_wstring(long long Val);
-wstring to_wstring(unsigned long long Val);
-wstring to_wstring(float Val);
-wstring to_wstring(double Val);
-wstring to_wstring(long double Val);
+wstring to_wstring(int value);
+wstring to_wstring(unsigned int value);
+wstring to_wstring(long value);
+wstring to_wstring(unsigned long value);
+wstring to_wstring(long long value);
+wstring to_wstring(unsigned long long value);
+wstring to_wstring(float value);
+wstring to_wstring(double value);
+wstring to_wstring(long double value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|`Val`|変換する値。|
+*値*\
+変換する値。
 
 ### <a name="return-value"></a>戻り値
 
 値を表すワイド文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は `Val` を呼び出すように、`Buf` を関数内部の配列オブジェクト `swprintf(Buf, Len, Fmt, Val)` に格納された要素シーケンスに変換します。ここで、`Fmt` は
+関数は、*値*を、関数内部の配列オブジェクト`Buf`に格納されている要素のシーケンスに変換`swprintf(Buf, Len, Fmt, value)`します。 `Fmt`
 
-- `L"%d"`の`Val`型が**int**の場合
+- `L"%d"`*値*がタイプの場合**`int`**
 
-- `L"%u"`の`Val`型が**unsigned int**の場合
+- `L"%u"`*値*がタイプの場合**`unsigned int`**
 
-- `L"%ld"`の`Val`型が**long**の場合
+- `L"%ld"`*値*がタイプの場合**`long`**
 
-- `L"%lu"`に`Val` **unsigned long**型がある場合
+- `L"%lu"`*値*がタイプの場合**`unsigned long`**
 
-- `L"%lld"`が`Val` **long long**型の場合
+- `L"%lld"`*値*がタイプの場合**`long long`**
 
-- `L"%llu"`に`Val` **unsigned long long**型がある場合
+- `L"%llu"`*値*がタイプの場合**`unsigned long long`**
 
-- `L"%f"`の`Val`型が**float**または**double**の場合
+- `L"%f"`*値*がタイプまたはタイプ**`float`** の場合**`double`**
 
-- `L"%Lf"`が`Val` **long double**型の場合
+- `L"%Lf"`*値*がタイプの場合**`long double`**
 
 `wstring(Buf)` が返されます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<string>](../standard-library/string.md)
+[\<文字列>](../standard-library/string.md)

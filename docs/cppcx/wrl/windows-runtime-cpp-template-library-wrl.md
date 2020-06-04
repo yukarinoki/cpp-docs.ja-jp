@@ -1,14 +1,14 @@
 ---
 title: Windows ランタイム C++ テンプレート ライブラリ (WRL)
 ms.date: 11/04/2016
-ms.topic: landing-page
+ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740844"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676939"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -46,16 +46,16 @@ Windows ランタイムC++テンプレートライブラリとC++/cx には、�
 [方法: Windows ランタイムコンポーネントをアクティブ化して使用する](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Windows ランタイムC++テンプレートライブラリを使用して Windows ランタイムを初期化し、Windows ランタイムコンポーネントをアクティブ化して使用する方法について説明します。
 
-[方法: 非同期操作の完了](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[方法: 非同期操作を完了する](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Windows ランタイムC++テンプレートライブラリを使用して非同期操作を開始し、操作の完了時に作業を実行する方法について説明します。
 
-[方法: イベントの処理](how-to-handle-events-using-wrl.md)<br/>
+[方法: イベントを処理する](how-to-handle-events-using-wrl.md)<br/>
 Windows ランタイムC++テンプレートライブラリを使用して、Windows ランタイムオブジェクトのイベントをサブスクライブおよび処理する方法について説明します。
 
 [チュートリアル: WRL および Media Foundation を使用した UWP アプリの作成](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 [Microsoft メディアファンデーション](/windows/win32/medfound/microsoft-media-foundation-sdk)を使用する UWP アプリを作成する方法について説明します。
 
-[方法: クラシック COM コンポーネントを作成する](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[方法: 従来の COM コンポーネントを作成する](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Windows ランタイムC++テンプレートライブラリを使用して基本的な com コンポーネントを作成する方法と、デスクトップアプリから com コンポーネントを登録して使用する基本的な方法について説明します。
 
 [方法: WRL コンポーネントを直接インスタンス化する](how-to-instantiate-wrl-components-directly.md)<br/>
@@ -68,12 +68,12 @@ Windows ランタイムC++テンプレートライブラリを使用して基本
 [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)インターフェイスと[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)インターフェイスをタスクと共に使用して、UWP アプリで HTTP GET 要求と POST 要求を web サービスに送信する方法について説明します。
 
 [Bing マップトリップオプティマイザーのサンプル](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-`HttpRequest` で[は、「チュートリアル:完全な UWP アプリのコンテキストで](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)タスクと XML HTTP 要求を使用して接続します。
+は、「チュートリアル: 完全な UWP アプリのコンテキストでの[タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)」で定義されている `HttpRequest` クラスを使用します。
 
 [サンプルを使用したC++ Windows ランタイム DLL コンポーネントの作成](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Windows ランタイムC++テンプレートライブラリを使用してインプロセス DLL コンポーネントを作成し、/Cx、JavaScript、およびC++ C#からそれらを使用する方法を示します。
 
-[DirectX 大理石迷路ゲームのサンプル](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX 大理石迷路ゲームのサンプル](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Windows ランタイムC++テンプレートライブラリを使用して、完全な3-d ゲームのコンテキストで DirectX やメディアファンデーションなどの COM コンポーネントの有効期間を管理する方法を示します。
 
 [デスクトップアプリからのトースト通知の送信のサンプル](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -99,11 +99,11 @@ Windows ランタイムC++テンプレートライブラリでは、UWP アプ�
 
 - OLE 埋め込み
 
-- ActiveX コントロール
+- [ActiveX コントロール]
 
 - COM+
 
-## <a name="concepts"></a>概念
+## <a name="concepts"></a>の概念
 
 Windows ランタイムC++テンプレートライブラリには、いくつかの基本的な概念を表す型が用意されています。 以下のセクションでは、これらの型について説明します。
 
@@ -113,7 +113,7 @@ Windows ランタイムC++テンプレートライブラリには、いくつか
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) は、指定したインターフェイスのセットを継承する、インスタンス化されたクラスを表します。 オブジェクト`RuntimeClass`は、1つまたは複数の Windows ランタイム COM インターフェイスのサポートと、コンポーネントへの弱い参照の組み合わせを提供できます。
+[RuntimeClass](runtimeclass-class.md) は、指定したインターフェイスのセットを継承する、インスタンス化されたクラスを表します。 `RuntimeClass` オブジェクトは、1つまたは複数の Windows ランタイム COM インターフェイス、またはコンポーネントへの弱い参照の組み合わせを提供できます。
 
 ### <a name="module"></a>Module
 
@@ -125,7 +125,7 @@ Windows ランタイムC++テンプレートライブラリには、いくつか
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) は、 *デリゲート* イベント ハンドラーを管理するために使用します。 Windows ランタイムC++テンプレートライブラリを使用してデリゲートを実装し`EventSource` 、を使用してデリゲートを追加、削除、および呼び出します。
+[EventSource](eventsource-class.md) は、 *デリゲート* イベント ハンドラーを管理するために使用します。 Windows ランタイムC++テンプレートライブラリを使用してデリゲートを実装し、`EventSource` を使用してデリゲートを追加、削除、および呼び出します。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -137,7 +137,7 @@ Windows ランタイムC++テンプレートライブラリには、いくつか
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) は、アクセス可能またはアクセス不可能のオブジェクトを参照する *弱い参照*を表すスマート ポインター型です。 オブジェクト`WeakRef`は、従来の COM ではなく、Windows ランタイムによってのみ使用できます。
+[WeakRef](weakref-class.md) は、アクセス可能またはアクセス不可能のオブジェクトを参照する *弱い参照*を表すスマート ポインター型です。 `WeakRef` オブジェクトは、従来の COM ではなく、Windows ランタイムによってのみ使用できます。
 
 `WeakRef` オブジェクトは通常、外部スレッドまたは外部アプリケーションによって存在が制御されるオブジェクトを表します。 たとえば、 `WeakRef` オブジェクトを使用して、ファイル オブジェクトを参照できます。 そのファイルが開いている場合は、 `WeakRef` が有効になり、参照先ファイルにアクセスできます。 一方、そのファイルが閉じている場合は、 `WeakRef` が無効になり、そのファイルにアクセスできません。
 
@@ -147,5 +147,5 @@ Windows ランタイムC++テンプレートライブラリには、いくつか
 |-|-|
 |[カテゴリ別のキー Api](key-wrl-apis-by-category.md)|プライマリ Windows ランタイムC++テンプレートライブラリの型、関数、およびマクロについて取り上げます。|
 |[参照](wrl-reference.md)|Windows ランタイムC++テンプレートライブラリのリファレンス情報が含まれています。|
-|[クイックリファレンスC++/cx)](../../cppcx/quick-reference-c-cx.md)|Windows ランタイムをサポートC++する/cx 機能について簡単に説明します。|
+|[クイック リファレンス (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Windows ランタイムをサポートC++する/cx 機能について簡単に説明します。|
 |[ビジュアルでの Windows ランタイムコンポーネントの使用C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|/Cx を使用C++して基本的な Windows ランタイムコンポーネントを作成する方法について説明します。|

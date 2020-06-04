@@ -1,9 +1,10 @@
 ---
 title: _setmode
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _setmode
-apilocation:
+- _o__setmode
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356399"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915806"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
 ファイルの変換モードを設定します。
 
@@ -48,41 +53,43 @@ int _setmode (
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 ファイル記述子。
 
-*モード*<br/>
+*mode*<br/>
 新しい変換モード。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合、前の変換モードを返します。
 
-この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラーが呼び出されます。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**いずれかに**EBADF**、無効なファイル記述子では、これを示しますまたは**EINVAL**を無効なことを示します*モード*引数。
+この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を、無効なファイル記述子を示す**EBADF**、または無効な*モード*引数を示す**EINVAL**に設定します。
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Setmode**関数に設定*モード*により与えられたファイルの変換モード*fd*します。 渡す **_O_TEXT**として*モード*設定 (変換) をテキスト モード。 キャリッジ リターンとライン フィード (CR-LF) の組み合わせは、1 つのライン フィード文字の入力に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 渡す **_O_BINARY**バイナリ (無変換) モードを設定、これらの翻訳が抑制されます。
+**_Setmode**関数は、 *fd*によって指定されたファイルの変換モードを*モード*に設定します。 *モード*として **_O_TEXT**を渡すと、テキスト (変換) モードが設定されます。 キャリッジリターンラインフィード (CR-LF) の組み合わせは、入力時に1つのラインフィード文字に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 **_O_BINARY**を渡すと、変換が抑制されるバイナリ (無変換) モードが設定されます。
 
-渡すこともできます **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**このドキュメントの後半では、2 番目の例に示すように、Unicode モードを有効にします。
-
-> [!CAUTION]
-> Unicode モードがワイド印刷機能のためには (たとえば、 `wprintf`) と幅の狭いの印刷機能はサポートされていません。 Unicode モードのストリームの幅の狭い印刷関数を使用するには、アサートがトリガーされます。
-
-**_setmode**の既定の変換モードを変更するのには通常使用**stdin**と**stdout**が任意のファイルで使用することができます。 適用した場合 **_setmode**をストリームのファイル記述子、呼び出す **_setmode**入力または出力ストリームで操作を実行する前にします。
+このドキュメントで後述する2番目の例に示すように、 **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**を渡して Unicode モードを有効にすることもできます。
 
 > [!CAUTION]
-> データを書き込むファイル ストリームでは、明示的にフラッシュ、コードを使用して場合[fflush](fflush.md)を使用する前に **_setmode**モードを変更します。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。
+> Unicode モードは、ワイド印刷関数 (など`wprintf`) 用であり、ナロー印刷関数ではサポートされていません。 Unicode モードストリームでナロー print 関数を使用すると、アサートがトリガーされます。
+
+**_setmode**は通常、 **stdin**と**stdout**の既定の変換モードを変更するために使用されますが、任意のファイルで使用できます。 ストリームのファイル記述子に **_setmode**を適用する場合は、ストリームに対して入力または出力操作を実行する前に **_setmode**を呼び出します。
+
+> [!CAUTION]
+> ファイルストリームにデータを書き込む場合は、 **_setmode**を使用してモードを変更する前に、 [fflush](fflush.md)を使用して明示的にコードをフラッシュします。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
+|ルーチン|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

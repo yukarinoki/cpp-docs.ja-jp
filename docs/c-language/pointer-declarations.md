@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232153"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 
@@ -25,7 +25,7 @@ ms.locfileid: "56152002"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**
@@ -42,7 +42,7 @@ ms.locfileid: "56152002"
 
 *type-specifier* **void** を作成すると、ポインターが参照する型を後から指定できます。 このような項目は、"**void** へのポインター" と呼ばれ、`void *` と記述します。 *void* へのポインターとして宣言された変数は、任意の型のオブジェクトを指すために使用できます。 ただし、ポインターに対する操作やポインターが指すオブジェクトに対する操作のほとんどは、それが指す型を操作ごとに明示的に指定して実行する必要があります (**char** <strong>\*</strong> 型と **void** <strong>\*</strong> 型の変数は代入互換性があり、型キャストは不要です)。このような変換には型キャストを使用します (詳細については、「[型キャスト変換](../c-language/type-cast-conversions.md)」を参照)。
 
-*type-qualifier* には、**const** か **volatile** のいずれか、または両方を指定できます。 **const** はポインターがプログラム自体によって変更できないことを指定し、**volatile** はプログラムによるコントロール以外のプロセスによって適切に変更できることを指定します  (**const** と **volatile** の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照)。
+*type-qualifier* には、**const** か **volatile** のいずれか、または両方を指定できます。 **const** はポインターがプログラム自体によって変更できないことを指定し、**volatile** はプログラムによるコントロール以外のプロセスによって適切に変更できることを指定します (**const** と **volatile** の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照)。
 
 *declarator* は変数に名前を付けます。これには、型修飾子を含めることができます。 たとえば、*declarator* が配列を表す場合、ポインターの型を配列へのポインターに変更できます。
 

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317233"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 イベントの呼び出しサイトを強調します。
 
@@ -24,14 +24,14 @@ ms.locfileid: "62244505"
 __raise method-declarator;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 参照してください[イベント](../extensions/event-cpp-component-extensions.md)詳細についてはします。
+マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 詳細については[、イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
 
-キーワード **_ _raise**非イベントを呼び出す場合に生成されるエラーが発生します。
+キーワード **__raise**を呼び出すと、非イベントを呼び出すとエラーが生成されます。
 
 > [!NOTE]
->  テンプレート クラスまたは構造体にイベントを含めることはできません。
+> テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="example"></a>例
 
@@ -61,6 +61,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [イベント処理](../cpp/event-handling.md)<br/>
 [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)

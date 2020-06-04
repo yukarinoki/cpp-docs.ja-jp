@@ -1,9 +1,10 @@
 ---
 title: ___lc_collate_cp_func
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ___lc_collate_cp_func
-apilocation:
+- _o____lc_collate_cp_func
+api_location:
 - msvcr120.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,20 +12,24 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_collate_cp_func
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738887"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914076"
 ---
-# <a name="lccollatecpfunc"></a>___lc_collate_cp_func
+# <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
 内部 CRT 関数。 スレッドの現在の照合順序コード ページを取得します。
 
@@ -44,9 +49,11 @@ UINT ___lc_codepage_func(void);
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`___lc_collate_cp_func`|crt\src\setlocal.h|
 

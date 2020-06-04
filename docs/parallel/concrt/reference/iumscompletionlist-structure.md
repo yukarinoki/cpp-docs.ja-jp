@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 567b8668934d81c49757660d1a60ca74eb033e68
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368122"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 構造体
 
@@ -21,7 +21,7 @@ UMS の完了リストを表します。 UMS スレッドがブロックされ�
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IUMSCompletionList;
 ```
 
@@ -31,11 +31,11 @@ struct IUMSCompletionList;
 
 |名前|説明|
 |----------|-----------------|
-|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|チェーンを取得します。`IUMSUnblockNotification`プロキシは、最後にこのメソッドにブロック解除が関連付けられているスレッドが呼び出された実行コンテキストを表すインターフェイス。|
+|[インプリートリスト::ブロック解除通知](#getunblocknotifications)|このメソッドが最後に`IUMSUnblockNotification`呼び出されてから、関連付けられたスレッド プロキシがブロック解除された実行コンテキストを表すインターフェイスのチェーンを取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-スケジューラは、入力候補一覧から項目をキューから削除するには、このインターフェイスを使用して後で実行される操作について非常に慎重である必要があります。 項目は、実行可能なコンテキストのスケジューラの一覧に配置する必要があり、できるだけ早く一般にアクセスできるようにします。 デキューされる項目のいずれかを設定した任意のロックの所有権がまったくことができます。 項目をデキューする呼び出しと一般にアクセスできるからスケジューラ内でリストにこれらのアイテムの配置間ブロックできる任意の関数呼び出しは、スケジューラでは、ありません。
+スケジューラは、このインターフェイスを使用して完了リストからアイテムをデキューした後に実行されるアクションに特に注意する必要があります。 項目は、スケジューラーの実行可能コンテキストのリストに配置され、一般にできるだけ早くアクセス可能である必要があります。 キューから取り出された項目の 1 つに任意のロックの所有権が与えられている可能性があります。 スケジューラは、アイテムのデキューの呼び出しと、通常はスケジューラ内からアクセスできるリスト上の項目の配置の間でブロックできる任意の関数呼び出しを行うことはできません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -45,26 +45,26 @@ struct IUMSCompletionList;
 
 **ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="getunblocknotifications"></a>  IUMSCompletionList::GetUnblockNotifications Method
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>メソッドを終了リスト::ブロック解除通知メソッド
 
-チェーンを取得します。`IUMSUnblockNotification`プロキシは、最後にこのメソッドにブロック解除が関連付けられているスレッドが呼び出された実行コンテキストを表すインターフェイス。
+このメソッドが最後に`IUMSUnblockNotification`呼び出されてから、関連付けられたスレッド プロキシがブロック解除された実行コンテキストを表すインターフェイスのチェーンを取得します。
 
-```
+```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-チェーン`IUMSUnblockNotification`インターフェイス。
+インターフェイスの`IUMSUnblockNotification`チェーン。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-実行コンテキストが再スケジュールすると、返される通知が無効です。
+実行コンテキストのスケジュールが変更されると、返される通知は無効になります。
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[同時実行名前空間](concurrency-namespace.md)<br/>
 [IUMSScheduler 構造体](iumsscheduler-structure.md)<br/>
 [IUMSUnblockNotification 構造体](iumsunblocknotification-structure.md)

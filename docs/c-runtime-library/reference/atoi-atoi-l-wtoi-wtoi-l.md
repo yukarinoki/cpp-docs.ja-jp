@@ -1,12 +1,16 @@
 ---
 title: atoi、_atoi_l、_wtoi、_wtoi_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
-apilocation:
+- _o__atoi_l
+- _o__wtoi
+- _o__wtoi_l
+- _o_atoi
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +23,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoi
 - _wtoi
@@ -41,14 +49,14 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919865"
 ---
-# <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
+# <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
 文字列を整数に変換します。
 
@@ -73,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 変換対象の文字列。
 
 *locale*<br/>
@@ -81,21 +89,23 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、 **int**入力文字を数字として解釈して生成された値。 戻り値は 0 です**atoi**と **_wtoi**入力をその型の値に変換できない場合は、します。
+各関数は、入力文字を数値として解釈することによって生成される**int**値を返します。 入力をその型の値に変換できない場合、 **atoi**と **_wtoi**の戻り値は0になります。
 
-大きい負の整数値によるオーバーフローの場合**LONG_MIN**が返されます。 **atoi**と **_wtoi**返す**INT_MAX**と**INT_MIN**でこれらの条件。 すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+大きな負の整数値によるオーバーフローの場合、 **LONG_MIN**が返されます。 **atoi**と **_wtoi**は、これらの条件に対して**INT_MAX**と**INT_MIN**を返します。 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、整数値に文字の文字列を変換 (**atoi**と **_wtoi**)。 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
+これらの関数は、文字列を整数値 (**atoi**および **_wtoi**) に変換します。 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-*Str*引数**atoi**と **_wtoi**は次の形式があります。
+**Atoi**と **_wtoi**の*str*引数の形式は次のとおりです。
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*空白*][*sign*][*数字*]]
 
-A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
+*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の数字です。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -113,7 +123,7 @@ A*空白*は無視されますスペースまたはタブ文字含まれてい�
 
 ## <a name="example"></a>例
 
-このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **atoi**関数。
+このプログラムは、 **atoi**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atoi.c
@@ -163,7 +173,7 @@ Overflow condition occurred.
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

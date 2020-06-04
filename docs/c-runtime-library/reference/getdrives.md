@@ -1,9 +1,10 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getdrives
-apilocation:
+- _o__getdrives
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdrives
 - _getdrives
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 444a54a316b1b1e4cfd26df95d172c7e9748fb88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157683"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913748"
 ---
-# <a name="getdrives"></a>_getdrives
+# <a name="_getdrives"></a>_getdrives
 
 現在使用できるディスク ドライブを表すビットマスクを返します。
 
@@ -46,15 +51,19 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は、現在使用できるディスク ドライブを表すビットマスクです。 ビット位置 0 (最下位ビット) はドライブ A、ビット位置 1 はドライブ B、ビット位置 2 は C ドライブです (以下同様)。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには呼び出します**GetLastError**します。
+関数が成功した場合、戻り値は、現在使用できるディスク ドライブを表すビットマスクです。 ビット位置 0 (最下位ビット) はドライブ A、ビット位置 1 はドライブ B、ビット位置 2 は C ドライブです (以下同様)。 関数が失敗した場合は、0 を返します。 エラーの詳細情報を取得するには、 **GetLastError**を呼び出します。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

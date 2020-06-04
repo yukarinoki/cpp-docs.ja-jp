@@ -1,8 +1,6 @@
 ---
 title: ASSERT に代わる VERIFY の使用
 ms.date: 05/06/2019
-f1_keywords:
-- assert
 helpviewer_keywords:
 - ASSERT statements
 - debugging [MFC], ASSERT statements
@@ -11,24 +9,24 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: 83ea24904c75d41f7c9c9b383f8b7cf8c39e328f
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217668"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438612"
 ---
 # <a name="using-verify-instead-of-assert"></a>ASSERT に代わる VERIFY の使用
 
-MFC アプリケーションのデバッグ バージョンを実行するときに問題がないとします。 ただし、同じアプリケーションのリリース バージョンがクラッシュした不適切な結果を返します。 または他のいくつかの異常な動作を示します。
+MFC アプリケーションのデバッグ バージョンを実行したときに、問題がなかったとします。 ただし、同じアプリケーションのリリース バージョンでは、クラッシュしたり、正しくない結果が返されたり、その他の異常な動作が発生したりする可能性があります。
 
-この問題は、正しく動作することを確認する ASSERT ステートメントで重要なコードを配置するときに発生することができます。 ASSERT ステートメントは、MFC プログラムのリリース ビルドでコメント アウト、ので、コードは、リリース ビルドでは実行されません。
+この問題は、ASSERT ステートメントに重要なコードを配置して、正しく実行されることを確認した場合に発生する可能性があります。 MFC プログラムのリリース ビルドでは ASSERT ステートメントはコメント アウトされるため、リリース ビルドではこのコードは実行されません。
 
-ASSERT 関数呼び出しが成功したことを確認するを使用している場合は、使用を検討して[確認](../mfc/reference/diagnostic-services.md#verify)代わりにします。 VERIFY マクロは、両方のデバッグでは、その引数を評価し、アプリケーションのリリース ビルドをします。
+関数呼び出しが成功したことを確認するために ASSERT を使用している場合は、代わりに [VERIFY](../mfc/reference/diagnostic-services.md#verify) を使用することを検討してください。 VERIFY マクロでは、アプリケーションのデバッグ ビルドとリリース ビルドの両方で、独自の引数が評価されます。
 
-別の手法は、一時変数に関数の戻り値を代入し、ASSERT ステートメントで変数をテスト (推奨)。
+別の推奨される方法は、関数の戻り値を一時変数に割り当ててから、その変数を ASSERT ステートメントでテストすることです。
 
-次のコード フラグメントを確認します。
+次のコード フラグメントがあるとします。
 
 ```
 enum {
@@ -40,15 +38,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-このコードは、MFC アプリケーションのデバッグ バージョンで完全に実行されます。 場合に呼び出し`calloc( )`が失敗したファイルと行番号を含む診断メッセージが表示されます。 ただしでは、MFC アプリケーションの製品版ビルド。
+MFC アプリケーションのデバッグ バージョンでは、このコードは問題なく実行されます。 `calloc( )` の呼び出しが失敗した場合は、ファイルと行番号を含む診断メッセージが表示されます。 ただし、MFC アプリケーションの製品版ビルドでは次のようになります。
 
-- 呼び出し`calloc( )`しないまま発生`buf`初期化されていない、または
+- `calloc( )` の呼び出しは行われず、`buf` は未初期化のままになります。または
 
-- `strcpy_s( )` コピー"`Hello, World`"に、メモリ、場合によって、アプリケーションがクラッシュまたは応答を停止する原因のランダムなのか
+- `strcpy_s( )` によって "`Hello, World`" がランダムにメモリにコピーされ、アプリケーションがクラッシュしたり、システムが応答しなくなったりする可能性があります。または
 
-- `free()` 割り当てられていないメモリを解放しようとします。
+- `free()` によって、割り当てられなかったメモリの解放が試行されます。
 
-ASSERT を正しく使用するには、次のコード サンプルを変更する必要があります。
+ASSERT を正しく使用するには、コード サンプルを次のように変更する必要があります。
 
 ```
 enum {
@@ -61,7 +59,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-または、代わりに検証を使用することができます。
+または、代わりに VERIFY を使用できます。
 
 ```
 enum {

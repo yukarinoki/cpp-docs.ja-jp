@@ -1,9 +1,10 @@
 ---
 title: _fread_nolock_s2
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fread_nolock_s
-apilocation:
+- _o__fread_nolock_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +16,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333106"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912730"
 ---
-# <a name="freadnolocks"></a>_fread_nolock_s
+# <a name="_fread_nolock_s"></a>_fread_nolock_s
 
 他のスレッドをロックしないで、ストリームからデータを読み取ります。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [fread_nolock](fread-nolock.md) です。
 
@@ -45,10 +50,10 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 データの格納場所。
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 ターゲット バッファーのサイズ (バイト単位)。
 
 *elementSize*<br/>
@@ -57,16 +62,18 @@ size_t _fread_nolock_s(
 *elementCount*<br/>
 読み取る項目の最大数。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 「[fread_s](fread-s.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、ロックしないバージョンの**fread_s**します。 これは**fread_s**いない他のスレッドによる干渉から保護には、する点を除いて。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fread_s**のロックされていないバージョンです。 これは、他のスレッドによる干渉から保護されない点を除いて、 **fread_s**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -74,7 +81,7 @@ size_t _fread_nolock_s(
 |--------------|---------------------|
 |**_fread_nolock_s**|C: \<stdio.h>、C++: \<cstdio>、または \<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

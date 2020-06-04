@@ -1,9 +1,10 @@
 ---
 title: _getmbcp
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getmbcp
-apilocation:
+- _o__getmbcp
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getmbcp
 - getmbcp
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - _getmbcp function
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
-ms.openlocfilehash: 4cea84fc771a1d847814d002294391256efae57b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96bf24bbff836849de1b7689ed69bd45871f275a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157644"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913620"
 ---
-# <a name="getmbcp"></a>_getmbcp
+# <a name="_getmbcp"></a>_getmbcp
 
 現在のコード ページを取得します。
 
@@ -45,13 +50,17 @@ int _getmbcp( void );
 
 現在のマルチバイト コード ページを返します。 戻り値 0 は、シングル バイトのコード ページが使用中であることを示します。
 
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_getmbcp**|\<mbctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167993"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514658"
 *式 (expression)*<br/>
 インターフェイスポインターが指す COM インターフェイスの IID を指定する C 言語式。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Iid_is** C++属性には、 [iid_is](/windows/win32/Midl/iid-is) MIDL 属性と同じ機能があります。
 
@@ -64,7 +64,7 @@ __interface IFireTabCtrl : IDispatch
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172348"
 ---
 # <a name="generics-and-templates-ccli"></a>ジェネリックとテンプレート (C++/CLI)
 
 ジェネリックとテンプレートは、どちらもパラメーター化された型のサポートを提供する言語機能です。 ただし、それらは同じではなく、用途が異なっています。 このトピックでは、多くの相違点について、その概要を説明します。
 
-詳細については、「[Windows ランタイムおよびマネージド テンプレート (C++/CLI および C++/CX)](windows-runtime-and-managed-templates-cpp-component-extensions.md)」を参照してください。
+詳細については、「[Windows ランタイムおよびマネージド テンプレート](windows-runtime-and-managed-templates-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="comparing-templates-and-generics"></a>テンプレートとジェネリックの比較
 
@@ -92,6 +92,6 @@ int main() {
 F
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ジェネリック](generics-cpp-component-extensions.md)

@@ -2,7 +2,6 @@
 title: '等値演算子: == および !='
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0c08f438528caeaac6d5e52e806a36fe56dd25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392170"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189248"
 ---
 # <a name="equality-operators--and-"></a>等値演算子: == および !=
 
@@ -30,17 +29,17 @@ expression == expression
 expression != expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの二項等値演算子はそれぞれオペランドを比較し、等しいか、等しくないかを判別します。
 
-"等しい" (`==`) および "等しくない" (`!=`) の等値演算子は関係演算子より優先順位が下ですが、動作は同じです。 これらの演算子の結果型は**bool**します。
+"等しい" (`==`) および "等しくない" (`!=`) の等値演算子は関係演算子より優先順位が下ですが、動作は同じです。 これらの演算子の結果型は**bool**です。
 
-等号演算子 (`==`) を返します**true**場合は (1) 両方のオペランドが同じ値を持つ以外を返しますそれ以外の場合、 **false** (0)。 Not の演算子 (`!=`) を返します**true**オペランドには、同じ値がない場合、それを返します**false**します。
+Equal to 演算子 (`==`) では、両方のオペランドの値が同じである場合、 **true** (1) が返されます。それ以外の場合は**false** (0) を返します。 不等号演算子 (`!=`) は、オペランドの値が同じでない場合に**true**を返します。それ以外の場合は**false**を返します。
 
 ## <a name="operator-keyword-for-"></a>!= の演算子キーワード
 
-`not_eq` 演算子は `!=` の代替表現です。 アクセスする 2 つの方法がある、`not_eq`プログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。
+`not_eq` 演算子は `!=` の代替表現です。 プログラム内の `not_eq` 演算子にアクセスするには、ヘッダーファイル `iso646.h`を含める方法と、 [/za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張機能の無効化) コンパイラオプションを使用してコンパイルする方法の2つの方法があります。
 
 ## <a name="example"></a>例
 
@@ -60,9 +59,9 @@ int main() {
 }
 ```
 
-等値演算子は、同じ型のメンバーへのポインターを比較できます。 このような比較の場合は、メンバーへのポインター変換が実行されます。 メンバーへのポインターは、0 として評価される定数式と比較することもできます。
+等値演算子は、同じ型のメンバーへのポインターを比較できます。 このような比較では、ポインターからメンバーへの変換が実行されます。 メンバーへのポインターは、0 として評価される定数式と比較することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: 開く
-ms.date: 11/04/2016
+title: open
+ms.date: 12/16/2019
 api_name:
 - open
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-ms.openlocfilehash: ebed6030b0736ade47b4bc4f6b4cb2456cca666e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 648f55511983264f127976b83a73dd5623717c14
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951156"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301263"
 ---
-# <a name="open"></a>開く
+# <a name="open"></a>open
 
-この POSIX 関数は非推奨とされます。 代わりに、ISO C++ に準拠する [_open](open-wopen.md) を使用してください。
+Microsoft 実装の POSIX 関数名 `open` は、 [_open](open-wopen.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに[_open](open-wopen.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

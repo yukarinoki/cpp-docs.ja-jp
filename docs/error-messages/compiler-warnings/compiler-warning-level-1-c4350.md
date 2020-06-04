@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
-ms.openlocfilehash: 8f23751151d8d83c68608d926ef422d56dde41a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 890ecd4fcec1212fa04a58b0eaab8c2eb4206763
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187220"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>コンパイラの警告 (レベル 1) C4350
 
 動作変更: 'member1' が 'member2' の代わりに呼び出されました。
 
-右辺値は、非定数の参照にバインドすることはできません。 Visual Studio 2003 の前に Visual C のバージョンでは、直接の初期化で非定数の参照を右辺値をバインドすることでした。 このコードでは、警告できるようになりました。
+右辺値を非定数参照にバインドすることはできません。 Visual Studio 2003 よりC++前のバージョンの visual Studio では、直接初期化で非定数参照に右辺値をバインドすることができました。 このコードでは、警告が返されるようになりました。
 
-旧バージョンとの互換性のため、非定数の参照を右辺値をバインドすることも可能ですが、可能な場合は、標準変換が推奨されます。
+旧バージョンとの互換性のために、右辺値を非 const 参照にバインドすることもできますが、可能な限り標準変換をお勧めします。
 
-この警告は、Visual C .NET 2002 のコンパイラからの動作の変更を表します。 有効な場合、この警告を正しいコードの指定された可能性がある可能性があります。 たとえば、でした指定する必要を使用する場合、 **std::auto_ptr**クラス テンプレートです。
+この警告は、Visual C++ .net 2002 コンパイラからの動作の変更を表します。 有効にすると、正しいコードに対してこの警告が示される可能性があります。 たとえば、 **std:: auto_ptr**クラステンプレートを使用するときに指定できます。
 
-この警告が発生した場合は、非定数の参照を右辺値をバインディングに依存する場合に表示するコードを調べます。 参照に定数を追加するか、追加の const 参照渡しオーバー ロードを提供するには、問題を解決できます。
+この警告が表示された場合は、コードを調べて、非 const 参照への右辺値のバインドに依存しているかどうかを確認します。 Const を参照に追加するか、追加の const 参照オーバーロードを指定すると、問題が解決する可能性があります。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 

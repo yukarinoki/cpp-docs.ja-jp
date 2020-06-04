@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184478"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190538"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>関数の引数依存名の参照 (Koenig 参照)
 
-コンパイラは、引数依存の名前検索を使用して、非限定の関数呼び出しの定義を検索できます。 引数依存の名前検索は Koenig 検索とも呼ばれます。 関数呼び出しの各引数の型は、名前空間、クラス、構造体、共用体、またはテンプレートの階層内で定義されます。 非限定を指定すると[後置](../cpp/postfix-expressions.md)関数呼び出し、コンパイラは、各引数の型に関連付けられている階層内の関数の定義を検索します。
+コンパイラは、引数依存の名前検索を使用して、非限定の関数呼び出しの定義を検索できます。 引数依存の名前検索は Koenig 検索とも呼ばれます。 関数呼び出しの各引数の型は、名前空間、クラス、構造体、共用体、またはテンプレートの階層内で定義されます。 修飾されていない[後置](../cpp/postfix-expressions.md)関数呼び出しを指定すると、コンパイラは、各引数の型に関連付けられている階層内の関数定義を検索します。
 
 ## <a name="example"></a>例
 

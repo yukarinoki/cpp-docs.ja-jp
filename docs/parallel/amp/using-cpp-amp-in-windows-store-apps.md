@@ -17,7 +17,7 @@ ms.locfileid: "62405353"
 
 Visual C コンポーネント拡張 C + を使用しているかどうか/cli CX、ユニバーサル Windows プラットフォーム (UWP) アプリを作成すると共に連続した記憶域プレーン old data (POD) 型を使用することをお勧めします — たとえば、`std::vector`または C スタイル配列 — となるデータの。C++ AMP で使用します。 マーシャリングの必要がないため、非 POD 型または Windows RT コンテナーを使用する場合より高いパフォーマンスの実現に役立ちます.
 
-C ++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。
+C++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。
 
 ```cpp
 // simple vector addition example

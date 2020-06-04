@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376459"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215177"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 
-常に、MFC プロジェクトには、windows をサポートしているいくつかのヘッダー ファイルが含まれます。 使用して追加するには`#include`内のステートメント、`StdAfx.h`ファイル。
+MFC プロジェクトには、windows をサポートするいくつかのヘッダーファイルが常に含まれています。 これらは、`StdAfx.h` ファイル内の `#include` ステートメントを使用して追加されます。
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ ms.locfileid: "62376459"
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-ヘッダー ファイルには、MFC の一般的な値のシンボル ID の値が含まれます。 これらのシンボルを使用できるは、MFC プロジェクトで作業している場合だけです。 `AFX_`プレフィックスの標準のシンボル名のプレフィックスが続きます。
+ヘッダーファイルには、MFC 共通値のシンボル ID 値が含まれています。 これらのシンボルは、MFC プロジェクトで作業している場合にのみ使用できます。 `AFX_` プレフィックスの後に標準のシンボル名プレフィックスが続きます。
 
 |||
 |-|-|
@@ -152,7 +152,7 @@ ms.locfileid: "62376459"
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ UNCHECK|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ オフにする|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -180,8 +180,8 @@ ms.locfileid: "62376459"
 |AFX_IDS_INVALID_DATETIMESPAN|AFX_IDS_ITALIC|
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|
-|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI フォント|
-|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ EXCEPTION|
+|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-フォント|
+|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ 例外|
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|
@@ -211,9 +211,9 @@ ms.locfileid: "62376459"
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming"></a>MFC データベース プログラミング
+## <a name="mfc-database-programming"></a>MFC データベースプログラミング
 
-このテーブル内のシンボルは、データベースのサポートが追加されたときに、MFC プロジェクトでのみ表示されます。 SQL server とデータベース プログラミングへの接続を MFC をサポートしています。
+このテーブルのシンボルは、データベースサポートが追加されている場合にのみ MFC プロジェクトに表示されます。 SQL server とデータベースプログラミングへの MFC 接続をサポートしています。
 
 |||
 |-|-|
@@ -221,11 +221,11 @@ ms.locfileid: "62376459"
 |AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|
 |AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|
 |AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|
-|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ MISMATCH|
+|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ の不一致|
 |AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|
 |AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|
 |AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|
-|AFX_IDP_SQL_NO_POSITIONED_ UPDATES|AFX_IDP_SQL_NO_ROWS_AFFECTED|
+|AFX_IDP_SQL_NO_POSITIONED_ の更新プログラム|AFX_IDP_SQL_NO_ROWS_AFFECTED|
 |AFX_IDP_SQL_ODBC_LOAD_FAILED|AFX_IDP_SQL_ODBC_V2_REQUIRED|
 |AFX_IDP_SQL_RECORDSET_ FORWARD_ONLY|AFX_IDP_SQL_RECORDSET_READONLY|
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
@@ -234,9 +234,9 @@ ms.locfileid: "62376459"
 
 ## <a name="mfc-windows-programming"></a>MFC Windows プログラミング
 
-これらのシンボルは、MFC のサポート ファイルの一部でも、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで使用されます。
+これらのシンボルは、MFC サポートファイルの一部でもありますが、標準の Windows アプリケーションの関数とアクションをサポートしています。 これらのシンボルはメニューと共に使用されます。
 
-メニューを使用するときに、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ**一般的なメニュー コマンドに関連付けられているウィンドウ。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
+**メニューエディター**でメニューを操作しているときに、これらのシンボルは、コモンメニューコマンドに関連付けられている**プロパティ**ウィンドウに表示されます。 たとえば、アプリケーションに **[終了]** コマンドを含む **[ファイル]** メニューがある場合、そのコマンドは、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)内の ID_APP_EXIT シンボルに関連付けられます。
 
 ||||
 |-|-|-|
@@ -258,13 +258,13 @@ ms.locfileid: "62376459"
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|
-|ID_HELP + を使用して|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
+|ID_HELP + 使用|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|
 |ID_OLE_EDIT_PROPERTIES|ID_OLE_INSERT_NEW|ID_OLE_VERB_FIRST|
 |ID_PREV_PANE|ID_REC_FIRST|ID_RECORD_LAST|
-|ID_RECORD_NEXT|ID_RECORD_PREV|として|
+|ID_RECORD_NEXT|ID_RECORD_PREV|ID_SEPARATOR|
 |ID_VIEW_AUTOARRANGE|ID_VIEW_BYNAME|ID_VIEW_DETAILS|
 |ID_VIEW_LARGEICON|ID_VIEW_LINEUP|ID_VIEW_LIST|
 |ID_VIEW_REBAR|ID_VIEW_SMALLICON|ID_VIEW_STATUS_BAR|
@@ -280,7 +280,7 @@ ms.locfileid: "62376459"
 
 MFC
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
 [ATL の定義済みシンボル](../windows/atl-predefined-symbols.md)<br/>

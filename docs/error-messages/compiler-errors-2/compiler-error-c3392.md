@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201046"
 ---
 # <a name="compiler-error-c3392"></a>コンパイラ エラー C3392
 
 'type_arg' : ジェネリック パラメーター 'param' (ジェネリック 'generic_type') の型引数が無効です。パブリックのパラメーターのないコンストラクターを含んでいなければなりません
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義をご確認ください。 詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例を使用して c# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLI。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
+次の例でC#は、を使用して、/cli でC++ジェネリック型を作成するときにサポートされない特定の制約を持つジェネリック型を含むコンポーネントを作成します。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3392.dll コンポーネントは、次の例では C3392 が生成されます。
+C3392 コンポーネントが使用可能になると、次の例では C3392 が生成されます。
 
 ```cpp
 // C3392_b.cpp

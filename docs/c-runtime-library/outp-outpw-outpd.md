@@ -1,11 +1,14 @@
 ---
-title: _outp、_outpw、_outpd
-ms.date: 11/04/2016
-apiname:
+title: outp、outp、_outp、_outpw、_outpd
+description: Microsoft C ランタイムライブラリ (CRT) の廃止された outp、outp、_outp、_outpw、および _outpd 関数について説明します。
+ms.date: 12/09/2019
+api_name:
 - _outpd
 - _outp
 - _outpw
-apilocation:
+- outp
+- outpw
+api_location:
 - msvcrt.dll
 - msvcr100.dll
 - msvcr120.dll
@@ -13,11 +16,16 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -33,46 +41,44 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 1a507f4115a48372706590eb61f9e3e77a0e3548
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752065"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825929"
 ---
-# <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outp、_outp、_outpw、_outpd
 
-1 バイト (`_outp`)、1 ワード (`_outpw`)、または 1 ダブルワード (`_outpd`) のいずれかをポートに出力します。
-
-> [!IMPORTANT]
->  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。
+ポート、`outp`バイト (、 `_outp`)、ワード (`outpw`、 `_outpw`)、またはダブルワード (`_outpd`) を出力します。
 
 > [!IMPORTANT]
->  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> これらは古い関数です。 Visual Studio 2015 以降では、CRT では使用できません。
+> この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
-*port*<br/>
+### <a name="parameters"></a>パラメーター
+
+*ポート*\
 ポート番号。
 
-*databyte、dataword*<br/>
+*databyte、dataword*\
 出力値。
 
 ## <a name="return-value"></a>戻り値
@@ -81,19 +87,21 @@ unsigned long dataword
 
 ## <a name="remarks"></a>解説
 
-`_outp`、 `_outpw`、 `_outpd` の各関数は、指定された出力ポートへそれぞれバイト、ワード、ダブルワードを 1 つ書き込みます。 *port* 引数は、0 - 65,535 の任意の符号なし整数です。 *databyte* は、0 - 255 の任意の整数です。*dataword* は、整数、符号なし短整数、および符号なし長整数の範囲の任意の値です。
+`_outp`、 `_outpw`、 `_outpd` の各関数は、指定された出力ポートへそれぞれバイト、ワード、ダブルワードを 1 つ書き込みます。 *Port*引数には、0 ~ 65535 の範囲の任意の符号なし整数を指定できます。*databyte*は、0-255 の範囲の任意の整数を指定できます。と*dataword*は、整数の範囲内の任意の値、符号なし短整数、および符号なし長整数をそれぞれ使用できます。
 
 これらの関数は I/O ポートへ直接書き込まれるため、ユーザー コードで使用できません。 これらのオペレーティング システムでの I/O ポートの使用方法については、MSDN で「Serial Communications in Win32 (Win32 のシリアル通信)」を検索してください。
 
-## <a name="requirements"></a>要件
+と`outp` `outpw`の名前は、関数`_outp`および関数の古い名前`_outpw`で、非推奨とされています。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`_outp`|\<conio.h>|
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -101,5 +109,5 @@ unsigned long dataword
 
 ## <a name="see-also"></a>関連項目
 
-[コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)
+[コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)\
+[sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450524"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686466"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-コンテナー テンプレート クラスの set と multiset、およびそのサポート用テンプレートを定義します。
+コンテナークラステンプレートセットおよびマルチセットとそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<set>
 
 **名前空間:** std
 
 > [!NOTE]
-> Set > library では、 `#include <initializer_list>`ステートメントも使用されます。 \<
+> @No__t_0set > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

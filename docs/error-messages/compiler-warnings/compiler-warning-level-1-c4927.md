@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 59a39e4e695fdd161135cd70a74e1f3f6518e361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f529435b3d95a64e53985d0fba96917d541e5fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174610"
 ---
 # <a name="compiler-warning-level-1-c4927"></a>コンパイラの警告 (レベル 1) C4927
 
-変換が正しくありません。1 つ以上のユーザー定義の変換が暗黙的に適用されています。
+無効な変換です。複数のユーザー定義の変換が暗黙的に適用されています
 
-1 つ以上のユーザー定義の変換は、単一の値に暗黙的に適用、コンパイラは明示的な変換が見つかりませんでしたが、利用、変換が見つかりました。
+複数のユーザー定義の変換が1つの値に暗黙的に適用されています。コンパイラは明示的な変換を検出しませんでしたが、使用されている変換が見つかりました。
 
 次の例では、C4927 が生成されます。
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

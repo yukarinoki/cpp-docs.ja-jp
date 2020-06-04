@@ -9,10 +9,8 @@ f1_keywords:
 - flush
 - for
 - master
-- ordered
 - parallel
 - section
-- SECTIONS
 - single
 - threadprivate
 helpviewer_keywords:
@@ -29,64 +27,64 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569419b3422b155afc6e9692efaecd4e5a06f188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366441"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
-OpenMP API で使用するディレクティブへのリンクを提供します。
+OpenMP API で使用されるディレクティブへのリンクを提供します。
 
-VisualC++次 OpenMP ディレクティブをサポートしています。
+Visual C++ では、次の OpenMP ディレクティブがサポートされています。
 
-並列作業の共有。
-
-|ディレクティブ|説明|
-|---------|-----------|
-|[parallel](#parallel)|複数のスレッドを並列で実行されるコードは、並列領域を定義します。|
-|[for](#for-openmp)|行われる動作、`for`スレッド間で除算する、並行領域内でループします。|
-|[sections](#sections-openmp)|すべてのスレッド間で分配するコード セクションを識別します。|
-|[single](#single)|コードのセクションは、シングル スレッドで実行する必要があります指定できます。|
-
-マスターと同期します。
+並行ワークシェアリングの場合:
 
 |ディレクティブ|説明|
 |---------|-----------|
-|[master](#master)|マスタ スレッドだけがプログラムのセクションを実行する必要がありますを指定します。|
-|[critical](#critical)|コードが、一度に 1 つのスレッドでのみ実行されるかを指定します。|
-|[barrier](#barrier)|チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまでのすべてのスレッドがバリアで一時停止します。|
-|[atomic](#atomic)|指定するアトミックに更新されるメモリの場所。|
-|[flush](#flush-openmp)|すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。|
-|[順序付け](#ordered-openmp-directives)|並行処理には、そのコードを指定します`for`シーケンシャル ループのようなループを実行する必要があります。|
+|[parallel](#parallel)|並列領域を定義します。|
+|[for](#for-openmp)|並列領域内の`for`ループで実行された処理をスレッド間で分割します。|
+|[セクション](#sections-openmp)|すべてのスレッドに分割するコード セクションを指定します。|
+|[single](#single)|コードのセクションを、必ずしもマスター スレッドではなく、単一のスレッドで実行することを指定できます。|
 
-データ環境。
+マスタと同期の場合:
 
 |ディレクティブ|説明|
 |---------|-----------|
-|[threadprivate](#threadprivate)|変数は、スレッドに対してプライベートであることを指定します。|
+|[master](#master)|マスター スレッドだけがプログラムのセクションを実行することを指定します。|
+|[critical](#critical)|コードが一度に 1 つのスレッドでのみ実行されることを指定します。|
+|[障壁](#barrier)|チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまで、すべてのスレッドがバリアで一時停止します。|
+|[アトミック (atomic)](#atomic)|アトミックに更新されるメモリ位置を指定します。|
+|[フラッシュ](#flush-openmp)|すべてのスレッドが、すべての共有オブジェクトに対して同じメモリ ビューを持つことを指定します。|
+|[注文](#ordered-openmp-directives)|並列`for`化されたループの下のコードをシーケンシャル ループのように実行することを指定します。|
 
-## <a name="atomic"></a>アトミック
+データ環境の場合:
 
-指定するアトミックに更新されるメモリの場所。
+|ディレクティブ|説明|
+|---------|-----------|
+|[threadprivate](#threadprivate)|変数がスレッドに対してプライベートであることを指定します。|
 
-```
+## <a name="atomic"></a><a name="atomic"></a>原子
+
+アトミックに更新されるメモリ位置を指定します。
+
+```cpp
 #pragma omp atomic
    expression
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*式 (expression)*<br/>
-ステートメントを持つ、*左辺値*、1 つ以上の書き込みに対して保護するメモリ位置。
+*式*<br/>
+複数の書き込みから保護するメモリ位置を持つ*lvalue*を持つステートメント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`atomic`ディレクティブに句がサポートされていません。
+ディレクティブ`atomic`は句をサポートしません。
 
-詳細については、次を参照してください。 [2.6.4 atomic 構築](../../../parallel/openmp/2-6-4-atomic-construct.md)します。
+詳細については、 [2.6.4 アトミックコンストラクト](../../../parallel/openmp/2-6-4-atomic-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -113,29 +111,29 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>バリア
+## <a name="barrier"></a><a name="barrier"></a>障壁
 
-チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまでのすべてのスレッドがバリアで一時停止します。
+チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまで、すべてのスレッドがバリアで一時停止します。
 
-```
+```cpp
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`barrier`ディレクティブに句がサポートされていません。
+ディレクティブ`barrier`は句をサポートしません。
 
-詳細については、次を参照してください。 [2.6.3 barrier ディレクティブ](../../../parallel/openmp/2-6-3-barrier-directive.md)します。
+詳細については[、2.6.3 バリア ディレクティブ](../../../parallel/openmp/2-6-3-barrier-directive.md)を参照してください。
 
 ### <a name="example"></a>例
 
-使用する方法の例については`barrier`を参照してください[マスター](#master)します。
+の使用方法`barrier`の例については、「 [master](#master)」を参照してください。
 
-## <a name="critical"></a>重要です
+## <a name="critical"></a><a name="critical"></a>重要
 
-コードは一度に 1 つのスレッドでのみ実行することを指定します。
+コードが一度に 1 つのスレッドでのみ実行されるように指定します。
 
-```
+```cpp
 #pragma omp critical [(name)]
 {
    code_block
@@ -145,13 +143,13 @@ Number of threads: 10
 ### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-(省略可能)Critical コードを識別する名前。 名前は、かっこで囲む必要があります。
+(オプション)重要なコードを識別する名前。 名前は括弧で囲む必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`critical`ディレクティブに句がサポートされていません。
+ディレクティブ`critical`は句をサポートしません。
 
-詳細については、次を参照してください。 [2.6.2 の重要な構築](../../../parallel/openmp/2-6-2-critical-construct.md)します。
+詳細については、 [2.6.2 クリティカルコンストラクト](../../../parallel/openmp/2-6-2-critical-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -211,24 +209,24 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>フラッシュ
+## <a name="flush"></a><a name="flush-openmp"></a>フラッシュ
 
-すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。
+すべてのスレッドが、すべての共有オブジェクトに対して同じメモリ ビューを持つことを指定します。
 
-```
+```cpp
 #pragma omp flush [(var)]
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*var*<br/>
-(省略可能)同期するオブジェクトを表す変数のコンマ区切りの一覧。 場合*var*が指定されていないすべてのメモリをフラッシュします。
+*Var*<br/>
+(オプション)同期するオブジェクトを表す変数のコンマ区切りのリスト。 *var*が指定されていない場合、すべてのメモリがフラッシュされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`flush`ディレクティブに句がサポートされていません。
+ディレクティブ`flush`は句をサポートしません。
 
-詳細については、次を参照してください。 [2.6.5 flush ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)します。
+詳細については、 [2.6.5 フラッシュ ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -287,11 +285,11 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>の
+## <a name="for"></a>次の場合は <a name="for-openmp"></a>: 
 
-行われる動作、`for`スレッド間で除算する、並行領域内でループします。
+並列領域内の`for`ループで実行された処理をスレッド間で分割します。
 
-```
+```cpp
 #pragma omp [parallel] for [clauses]
    for_statement
 ```
@@ -299,26 +297,26 @@ data = 2
 ### <a name="parameters"></a>パラメーター
 
 *句*<br/>
-(省略可能)0 個以上の句を参照してください、**解説**セクション。
+(オプション)0 個以上の句については、「**解説」** を参照してください。
 
 *for_statement*<br/>
-A`for`ループします。 ユーザー コードで未定義の動作が発生、`for`ループ インデックス変数を変更します。
+`for`ループ。 ループ内のユーザー コードがインデックス変数を`for`変更すると、未定義の動作が発生します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`for`ディレクティブは、次の句をサポートしています。
+ディレクティブ`for`は、次の句をサポートしています。
 
-- [private](openmp-clauses.md#private-openmp)
+- [プライベート](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
-- [順序付け](openmp-clauses.md#ordered-openmp-clauses)
-- [schedule](openmp-clauses.md#schedule)
-- [nowait](openmp-clauses.md#nowait)
+- [注文](openmp-clauses.md#ordered-openmp-clauses)
+- [スケジュール](openmp-clauses.md#schedule)
+- [Nowait](openmp-clauses.md#nowait)
 
-場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`for`ディレクティブを除く`nowait`。
+また`parallel`、指定されている場合`clauses`は、`parallel`または`for`ディレクティブで受け入れられる句`nowait`を指定できます 。
 
-詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。
+詳細については、 [2.4.1 の構築を参照](../../../parallel/openmp/2-4-1-for-construct.md)してください。
 
 ### <a name="example"></a>例
 
@@ -384,24 +382,24 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>マスター
+## <a name="master"></a><a name="master"></a>マスター
 
-マスタ スレッドだけがプログラムのセクションを実行する必要がありますを指定します。
+マスター スレッドだけがプログラムのセクションを実行することを指定します。
 
-```
+```cpp
 #pragma omp master
 {
    code_block
 }
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`master`ディレクティブに句がサポートされていません。
+ディレクティブ`master`は句をサポートしません。
 
-[単一](#single)ディレクティブを使用して、シングル スレッドでコードのセクションを実行するように指定できます。
+[単一](#single)のディレクティブを使用すると、コードのセクションを、必ずしもマスター スレッドではなく、単一のスレッドで実行することを指定できます。
 
-詳細については、次を参照してください。 [2.6.1 master コンストラクト](../../../parallel/openmp/2-6-1-master-construct.md)します。
+詳細については、 [2.6.1 マスターコンストラクト](../../../parallel/openmp/2-6-1-master-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -446,22 +444,22 @@ a[3] = 9
 a[4] = 16
 ```
 
-## <a name="ordered-openmp-directives"></a>順序付け
+## <a name="ordered"></a><a name="ordered-openmp-directives"></a>注文
 
-並行処理には、そのコードを指定します`for`シーケンシャル ループのようなループを実行する必要があります。
+並列`for`化されたループの下のコードをシーケンシャル ループのように実行することを指定します。
 
-```
+```cpp
 #pragma omp ordered
    structured-block
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ordered`ディレクティブはの動的範囲内である必要があります、[の](#for-openmp)または`parallel for`で構築、`ordered`句。
+ディレクティブ`ordered`は、句を含む[for](#for-openmp)または`parallel for`construct の`ordered`動的範囲内になければなりません。
 
-`ordered`ディレクティブに句がサポートされていません。
+ディレクティブ`ordered`は句をサポートしません。
 
-詳細については、次を参照してください。 [2.6.6 ordered コンストラクト](../../../parallel/openmp/2-6-6-ordered-construct.md)します。
+詳細については、 [2.6.6 順序付きコンストラクト](../../../parallel/openmp/2-6-6-ordered-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -517,11 +515,11 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>並列
+## <a name="parallel"></a><a name="parallel"></a>並列
 
-複数のスレッドを並列で実行されるコードは、並列領域を定義します。
+並列領域を定義します。
 
-```
+```cpp
 #pragma omp parallel [clauses]
 {
    code_block
@@ -531,28 +529,28 @@ test2() iteration 4
 ### <a name="parameters"></a>パラメーター
 
 *句*<br/>
-(省略可能)0 個以上の句を参照してください、**解説**セクション。
+(オプション)0 個以上の句については、「**解説」** を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`parallel`ディレクティブは、次の句をサポートしています。
+ディレクティブ`parallel`は、次の句をサポートしています。
 
 - [if](openmp-clauses.md#if-openmp)
-- [private](openmp-clauses.md#private-openmp)
+- [プライベート](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
-- [shared](openmp-clauses.md#shared-openmp)
+- [共有](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
 
-`parallel` 使用することができますも、[の](#for-openmp)と[セクション](#sections-openmp)ディレクティブ。
+`parallel`for[および](#for-openmp)[sections](#sections-openmp)ディレクティブと共に使用することもできます。
 
-詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。
+詳細については、 [2.3 並列構造](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
-次の例では、スレッドの数を設定し、並列領域を定義する方法を示します。 スレッドの数は既定では、マシン上の論理プロセッサの数です。 たとえば、ハイパースレッディングが有効になっている 1 つの物理プロセッサを搭載したコンピューターがある場合は、2 つの論理プロセッサと 2 つのスレッドがあります。 出力の順序は、マシンによって異なります。
+次の例は、スレッド数を設定し、並列領域を定義する方法を示しています。 スレッドの数は、デフォルトではマシン上の論理プロセッサの数と同じです。 たとえば、ハイパースレッディングが有効になっている物理プロセッサが 1 つあるマシンがある場合、2 つの論理プロセッサと 2 つのスレッドが存在します。 出力の順序は、マシンによって異なる場合があります。
 
 ```cpp
 // omp_parallel.cpp
@@ -576,11 +574,11 @@ Hello from thread 2
 Hello from thread 3
 ```
 
-## <a name="sections-openmp"></a>セクション
+## <a name="sections"></a><a name="sections-openmp"></a>セクション
 
-すべてのスレッド間で分配するコード セクションを識別します。
+すべてのスレッドに分割するコード セクションを指定します。
 
-```
+```cpp
 #pragma omp [parallel] sections [clauses]
 {
    #pragma omp section
@@ -593,23 +591,23 @@ Hello from thread 3
 ### <a name="parameters"></a>パラメーター
 
 *句*<br/>
-(省略可能)0 個以上の句を参照してください、**解説**セクション。
+(オプション)0 個以上の句については、「**解説」** を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`sections`ディレクティブは、0 個以上含めることができます`section`ディレクティブ。
+ディレクティブ`sections`には、0 個以上`section`のディレクティブを含めることができます。
 
-`sections`ディレクティブは、次の句をサポートしています。
+ディレクティブ`sections`は、次の句をサポートしています。
 
-- [private](openmp-clauses.md#private-openmp)
+- [プライベート](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
-- [nowait](openmp-clauses.md#nowait)
+- [Nowait](openmp-clauses.md#nowait)
 
-場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`sections`ディレクティブを除く`nowait`。
+また`parallel`、指定されている場合`clauses`は、`parallel`または`sections`ディレクティブで受け入れられる句`nowait`を指定できます 。
 
-詳細については、次を参照してください。 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)します。
+詳細については、 [2.4.2 セクションの構成を](../../../parallel/openmp/2-4-2-sections-construct.md)参照してください。
 
 ### <a name="example"></a>例
 
@@ -634,11 +632,11 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>1 つ
+## <a name="single"></a><a name="single"></a>単一
 
-コードのセクションは、シングル スレッドで実行する必要があります指定できます。
+コードのセクションを、必ずしもマスター スレッドではなく、単一のスレッドで実行することを指定できます。
 
-```
+```cpp
 #pragma omp single [clauses]
 {
    code_block
@@ -648,20 +646,20 @@ Hello from thread 0
 ### <a name="parameters"></a>パラメーター
 
 *句*<br/>
-(省略可能)0 個以上の句を参照してください、**解説**セクション。
+(オプション)0 個以上の句については、「**解説」** を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`single`ディレクティブは、次の句をサポートしています。
+ディレクティブ`single`は、次の句をサポートしています。
 
-- [private](openmp-clauses.md#private-openmp)
+- [プライベート](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [copyprivate](openmp-clauses.md#copyprivate)
-- [nowait](openmp-clauses.md#nowait)
+- [Nowait](openmp-clauses.md#nowait)
 
-[マスター](#master)ディレクティブを使用して、コードのセクションをマスター スレッドでのみ実行するように指定できます。
+[master](#master)ディレクティブを使用すると、コードのセクションをマスター スレッドでのみ実行することを指定できます。
 
-詳細については、次を参照してください。 [2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)します。
+詳細については、 [2.4.3 単一のコンストラクト](../../../parallel/openmp/2-4-3-single-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -695,30 +693,30 @@ compute results
 write output
 ```
 
-## <a name="threadprivate"></a>threadprivate
+## <a name="threadprivate"></a><a name="threadprivate"></a>Threadprivate
 
-変数は、スレッドに対してプライベートであることを指定します。
+変数がスレッドに対してプライベートであることを指定します。
 
-```
+```cpp
 #pragma omp threadprivate(var)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*var*<br/>
-スレッドに非公開にする変数のコンマ区切りの一覧。 *var*グローバルまたは名前空間スコープの変数または静的ローカル変数のいずれかにする必要があります。
+*Var*<br/>
+スレッドをプライベートにする変数のコンマ区切りのリスト。 *var*は、グローバル変数または名前空間スコープ変数、またはローカル静的変数でなければなりません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`threadprivate`ディレクティブに句がサポートされていません。
+ディレクティブ`threadprivate`は句をサポートしません。
 
-`threadprivate`ディレクティブがに基づいて、[スレッド](../../../cpp/thread.md)属性を使用して、 [_ _declspec](../../../cpp/declspec.md)キーワード; に対する制限`__declspec(thread)`に適用`threadprivate`します。 たとえば、`threadprivate`変数は、任意のスレッドが並列領域により生成されたスレッド チームの一部であるスレッドだけでなく、プロセスの開始に存在します。 この実装の詳細に注意してください。コンス トラクター、`threadprivate`ユーザー定義型は予想以上と呼ばれます。
+ディレクティブ`threadprivate`は[、__declspec](../../../cpp/declspec.md)キーワードを使用して[スレッド](../../../cpp/thread.md)属性に基づいています。の制限`__declspec(thread)`が`threadprivate`に適用されます。 たとえば、並列領域`threadprivate`によって生成されたスレッド チームの一部であるスレッドだけでなく、プロセスで開始されるスレッドに変数が存在します。 この実装の詳細に注意してください。ユーザー定義型のコンストラクタが、より`threadprivate`頻繁に呼び出され、期待されることがわかります。
 
-使用することができます`threadprivate`でプロセスの起動時に静的に読み込まれる DLL、ただしは使用できません`threadprivate`経由で読み込まれる DLL で[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)で読み込まれる Dll など[/DELAYLOAD (遅延読み込みのインポート)](../../../build/reference/delayload-delay-load-import.md)、使用することも`LoadLibrary`します。
+プロセスの起動時`threadprivate`に静的に読み込まれる DLL で使用できますが[、/DELAYLOAD (読み込み遅延インポート)](../../../build/reference/delayload-delay-load-import.md)を使用する DLL など[、LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)を介して読み込まれる DLL`LoadLibrary`では使用`threadprivate`できません。
 
-A`threadprivate`の変数を*破棄可能な*と呼ばれる、デストラクターがある型は保証されません。 例:
+デス`threadprivate`トラクターが呼び出される保証されていない *、デストラクター*型の変数です。 次に例を示します。
 
-```
+```cpp
 struct MyType
 {
     ~MyType();
@@ -733,10 +731,10 @@ int main()
 }
 ```
 
-ユーザーは、並列領域を構成するスレッドが終了すると、コントロールを持つありません。 プロセスが終了するし、スレッドのプロセスの終了に関する通知が送られませんのデストラクターは呼び出されません、それらのスレッドが存在しない場合`threaded_var`に存在する 1 つを除く任意のスレッドで (ここでは、プライマリ スレッド)。 コードは適切な破棄のため`threadprivate`変数。
+ユーザーは、並列領域を構成するスレッドがいつ終了するかを制御できません。 プロセスの終了時にこれらのスレッドが存在する場合、プロセスの終了に関する通知は行われず、終了するスレッド (ここではプライマリ スレッド`threaded_var`) 以外のスレッドではデストラクターが呼び出されません。 したがって、コードは変数の適切な破棄を`threadprivate`当てにすべきではありません。
 
-詳細については、次を参照してください。 [2.7.1 threadprivate ディレクティブ](../../../parallel/openmp/2-7-1-threadprivate-directive.md)します。
+詳細については、 [2.7.1 スレッドプライベート ディレクティブ](../../../parallel/openmp/2-7-1-threadprivate-directive.md)を参照してください。
 
 ### <a name="example"></a>例
 
-使用するサンプルの`threadprivate`を参照してください[プライベート](openmp-clauses.md#private-openmp)します。
+の使用`threadprivate`の例については、 [private](openmp-clauses.md#private-openmp)を参照してください。

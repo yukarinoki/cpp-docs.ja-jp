@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-ms.openlocfilehash: c81e955b912e03b322c0429097410fae74713b9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f05b3979024cb053394c51fa9337197b5de7bf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197861"
 ---
 # <a name="bscmake-error-bk1503"></a>BSCMAKE エラー BK1503
 
-'filename' をファイルに書き込みできません [: 理由]
+ファイル ' filename ' に書き込めません [: reason]
 
-BSCMAKE では、ブラウザーの 1 つのデータベースへのコンパイル中に生成された .sbr ファイルを結合します。 結果として得られるブラウザー データベースが 64 MB を超える場合、または入力 (.sbr) ファイルの数が 4092 を超えた場合は、このエラーが出力されます。
+BSCMAKE では、コンパイル中に生成された .sbr ファイルを1つのブラウザーデータベースに結合します。 結果として得られるブラウザーデータベースが 64 MB を超える場合、または入力 (.sbr) ファイルの数が4092を超える場合、このエラーが生成されます。
 
-問題の原因が 4092 以上の .sbr ファイルである場合は、入力ファイルの数を減らす必要があります。 Visual Studio で、これは実現できますで[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)し、プロジェクト全体、ファイルをファイルごとに再確認します。
+4092以上の .sbr ファイルが原因で問題が発生した場合は、入力ファイルの数を減らす必要があります。 これは、Visual Studio 内でプロジェクト全体を[実行して](../../build/reference/fr-fr-create-dot-sbr-file.md)から、ファイルごとに再確認することで実現できます。
 
-問題の原因が、64 MB を超える .bsc ファイルである場合は、入力としての .sbr ファイルの数を減らすと生成された .bsc ファイルのサイズを小さくは。 さらに、/Em (マクロ展開シンボルを除外する)、/El (除外するローカル変数)、および/Es (システム ファイルを除外する) を使用してブラウザー情報の量を削減することがあります。
+この問題の原因が、64 MB を超える .bsc ファイルの場合、入力として .sbr ファイルの数を減らすと、結果として得られる .bsc ファイルのサイズが小さくなります。 さらに、ブラウザー情報の量は、/Em (マクロの拡張シンボルの除外)、/El (ローカル変数を除く)、および/Es (システムファイルを除外する) を使用して減らすことができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [BSCMAKE オプション](../../build/reference/bscmake-options.md)

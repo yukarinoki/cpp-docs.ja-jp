@@ -1,11 +1,13 @@
 ---
 title: strcmp、wcscmp、_mbscmp、_mbscmp_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
+- _o__mbscmp
+- _o__mbscmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920386"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp、wcscmp、_mbscmp、_mbscmp_l
 
@@ -99,11 +102,13 @@ Null で終わる比較対象の文字列。
 |0|*string1*は*string2*と同じ|
 |> 0|*string1*が*string2*を超えています。|
 
-パラメーターの検証エラーが発生した場合、_mbscmp と **_mbscmp_l**は **_NLSCMPERROR**を\<返します。これは\<、および mbstring.h > > で定義されています。
+パラメーターの検証エラーが発生した場合、 **_mbscmp**と **_mbscmp_l**は **_NLSCMPERROR**を\<返します。これは\<、mbstring.h> および> で定義されています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strcmp**関数は、 *string1*と*string2*の序数の比較を実行し、それらのリレーションシップを示す値を返します。 **wcscmp**と **_mbscmp**は、それぞれ、 **strcmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **_mbscmp**は、現在のマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合は **_NLSCMPERROR**を返します。 **_mbscmp_l**の動作は同じですが、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 また、 *string1*または*string2*が null ポインターの場合、 **_mbscmp**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **_mbscmp**と **_mbscmp_l**は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。 **strcmp**と**wcscmp**は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+**Strcmp**関数は、 *string1*と*string2*の序数の比較を実行し、それらのリレーションシップを示す値を返します。 **wcscmp**と **_mbscmp**は、それぞれ、 **strcmp**のワイド文字バージョンとマルチバイト文字バージョンです。 **_mbscmp**は、現在のマルチバイトコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合に **_NLSCMPERROR**を返します。 **_mbscmp_l**の動作は同じですが、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」を参照してください。 また、 *string1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_mbscmp**によって無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbscmp**と **_mbscmp_l**は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。 **strcmp**と**wcscmp**は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -111,23 +116,23 @@ Null で終わる比較対象の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-Strcmp**関数は**、 **strcoll 系**関数とは異なります。これは、 **strcmp**比較は序数であり、ロケールの影響を受けません。 **strcoll 系**は、現在のロケールの**LC_COLLATE**カテゴリを使用して辞書式文字列を比較します。 **LC_COLLATE**カテゴリの詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。
+Strcmp**関数は**、 **strcoll 系**関数とは異なります。これは、 **strcmp**比較は序数であり、ロケールの影響を受けません。 **strcoll 系**は、現在のロケールの**LC_COLLATE**カテゴリを使用して、辞書式文字列を比較します。 **LC_COLLATE**カテゴリの詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。
 
 "C"ロケールでは、文字セット (ASCII 文字セット) 内の文字の順序は、辞書式文字順序と同じです。 ただし、その他のロケールでは、文字セット内の文字の順序が辞書式順序と異なる場合があります。 たとえば、ヨーロッパの一部のロケールでは、文字 'a' (値 0x61) は文字セットで文字 'ä' (値 0xE4) の前にありますが、辞書式の順序では文字 'ä' が文字 'a' の前にあります。
 
 文字セットと辞書式文字順序が異なるロケールでは、文字列の辞書式比較に**strcmp**ではなく**strcoll 系**を使用できます。 または、元の文字列で**strxfrm**を使用し、結果の文字列で**strcmp**を使用することもできます。
 
-**Strcmp**関数では大文字と小文字が区別されます。 stricmp、 **wcsicmp 、および\_**  **\_**  **mbsicmp\_** 文字列を小文字形式に変換して比較します。 ASCII テーブルの ' Z ' と ' a ' の間にある文字を含む2つの文字列 (' ['、\\' '、'] '、' ^ '、' _ '、および\`' ') は、大文字と小文字によって異なる方法で比較されます。 たとえば、2つの文字列 "ABCDE...Z" と "ABCD ^" は、比較が小文字 ("abcde...z" > "abcd ^") である場合は1つの方法、比較が大文字の場合は "ABCDE...Z" < "ABCD ^") と比較されます。
+**Strcmp**関数では大文字と小文字が区別されます。 stricmp、 ** \_wcsicmp**、および** \_mbsicmp**文字列を小文字形式に変換して比較します。 ** \_** ASCII テーブルの ' Z ' と ' a ' の間にある文字を含む2つの文字列 (' ['、\\' '、'] '、' ^ '、' _ '、および\`' ') は、大文字と小文字によって異なる方法で比較されます。 たとえば、2つの文字列 "ABCDE...Z" と "ABCD ^" は、比較が小文字 ("abcde...z" > "abcd ^") である場合は1つの方法、比較が大文字の場合は "ABCDE...Z" < "ABCD ^") と比較されます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strcmp**|\<string.h>|
 |**wcscmp**|\<string.h> または \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

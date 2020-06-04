@@ -1,9 +1,9 @@
 ---
 title: _lock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lock
 - _lock
@@ -20,23 +23,23 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: d29488c6dec15fb58eef24f50c1bfafefb8e85c6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741147"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745395"
 ---
-# <a name="lock"></a>_lock
+# <a name="_lock"></a>_lock
 
 マルチスレッドのロックを取得します。
 
 > [!IMPORTANT]
->  これは古い関数です。 Visual Studio 2015 以降、CRT で使用できません。
+> この関数は、現在使用されていません。 Visual Studio 2015 以降では、CRT で使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _lock
    int locknum
 );
@@ -51,7 +54,7 @@ void __cdecl _lock
 
 ロックが既に取得されている場合は、このメソッドによってあらためてロックが取得され、内部 C ランタイム (CRT) エラーが発生します。 メソッドでロックを取得できない場合は、致命的なエラーで終了し、エラー コードが `_RT_LOCK`に設定されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ソース:** mlock.c
 

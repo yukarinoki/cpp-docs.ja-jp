@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4141
 ms.assetid: 6ce8c058-7f4c-41cf-93e7-90a466744656
-ms.openlocfilehash: bbc2aea86c367c4977c8899e7aa9b8418e7fedcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90128e5c306d87cb44b446d686d4df91c5735d90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200097"
 ---
 # <a name="compiler-warning-level-1-c4141"></a>コンパイラの警告 (レベル 1) C4141
 
@@ -19,7 +19,7 @@ ms.locfileid: "62255665"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4141.cpp
 // compile with: /W1 /LD
 inline inline void func ();   // C4141

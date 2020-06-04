@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8dd78872d4edf82fb61c8ab93639dbcd93085754
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162544"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>コンパイラの警告 (レベル 1) C4407
 
-メンバー表記に異なるポインターの間でのキャスト、コンパイラは正しくないコードを生成可能性があります。
+異なるポインター間でメンバー表現がキャストされると、コンパイラが正しくないコードを生成する可能性があります
 
-不正なキャストが検出されました。
+正しくないキャストが検出されました。
 
-Visual Studio 2005 で行ったコンパイラ準拠作業により C4407 で生成されることができます。 修飾名とアドレス演算子に今すぐメンバーへのポインターが必要です (&)。
+C4407 は、Visual Studio 2005 で実行されたコンパイラ準拠作業のために生成されます。 Pointer-to-member には、修飾名とアドレス演算子 (&) が必要になりました。
 
-C4407 は、複数の継承メンバーへのポインター - を単一継承メンバーへのポインターの間でキャストする場合に発生します。 これはうまくができない場合があります単一継承メンバーへのポインターの表現は十分な情報を保持しないため。 コンパイルすると、 **/vmm**役立つ場合があります (詳細については、次を参照してください。 [/vmm、/vms、/vmv (通常)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md))。 基本クラスを再配置することもできます。コンパイラは、基底クラスは派生クラスからゼロ以外のオフセットにあるために、変換に情報が失われる検出します。
+C4407 は、多重継承 pointer-to-member を単一継承 pointer-to-member にキャストすると発生する可能性があります。 これが機能する場合もありますが、単一継承の pointer-to-member 表現が十分な情報を保持していないことが原因である場合があります。 **/Vmm**を使用してコンパイルすると解決する場合があります (詳細については、「 [/vmm、/Vmv (General Purpose 表現)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)」を参照してください)。 また、基底クラスを再配置することもできます。基底クラスが派生したからの0以外のオフセットにあるため、コンパイラは変換の情報が失われていることを検出しています。
 
 次の例では、C4407 が生成されます。
 
-```
+```cpp
 // C4407.cpp
 // compile with: /W1 /c
 struct C1 {};

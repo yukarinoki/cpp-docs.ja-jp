@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346095"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752062"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray クラス
 
@@ -43,9 +43,9 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>パラメーター
 
 *BASE_CLASS*<br/>
-型指定されたポインター、配列クラスの基本クラス配列クラスである必要があります (`CObArray`または`CPtrArray`)。
+型指定されたポインター配列クラスの基本クラス。配列クラス (`CObArray`または`CPtrArray`) でなければなりません。
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
 ## <a name="members"></a>メンバー
@@ -54,30 +54,30 @@ class CTypedPtrArray : public BASE_CLASS
 
 |名前|説明|
 |----------|-----------------|
-|[CTypedPtrArray::Add](#add)|配列の末尾に新しい要素を追加します。 必要に応じて、配列を大きく|
-|[CTypedPtrArray::Append](#append)|1 つの配列の内容を別の末尾に追加します。 必要に応じて、配列を大きく|
-|[CTypedPtrArray::Copy](#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
-|[CTypedPtrArray::ElementAt](#elementat)|配列内の要素ポインターへの一時的な参照を返します。|
-|[CTypedPtrArray::GetAt](#getat)|指定されたインデックス位置にある値を返します。|
-|[CTypedPtrArray::InsertAt](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
-|[CTypedPtrArray::SetAt](#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
+|[次のメソッドを使用します。](#add)|配列の末尾に新しい要素を追加します。 必要に応じて配列を拡張します。|
+|[次のメソッドを追加します。](#append)|配列の内容を別の配列の末尾に追加します。 必要に応じて配列を拡張します。|
+|[コピーの配列::コピー](#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|
+|[要素の配列::要素](#elementat)|配列内の要素ポインターへの一時的な参照を返します。|
+|[クタイププターアレイ::ゲットアット](#getat)|指定されたインデックス位置にある値を返します。|
+|[メソッドの配列::挿入](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
+|[クタイププター配列::セットアット](#setat)|指定されたインデックスの値を設定します。配列は大きくできません。|
+|[クタイプ化された関数配列::セットアットグロー](#setatgrow)|指定されたインデックスの値を設定します。必要に応じて、配列を大きくします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CTypedPtrArray::operator \[ \]](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[メソッドの配列::演算子\[\]](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用すると`CTypedPtrArray`なく`CPtrArray`または`CObArray`C++ の型チェック機能は、一致しないポインター型で発生したエラーを解消します。
+または`CObArray`ではなく`CTypedPtrArray``CPtrArray`を使用する場合、C++ 型検査機能は、ポインター型の不一致によって発生するエラーを除去するのに役立ちます。
 
-さらに、`CTypedPtrArray`を使用した場合に必要になるキャストの多くを実行するラッパー`CObArray`または`CPtrArray`します。
+さらに、ラッパーは`CTypedPtrArray`、使用する場合に必要となるキャスティングの多くを実行`CObArray`します。 `CPtrArray`
 
-すべて`CTypedPtrArray`関数はインラインで、このテンプレートの使用が大幅には影響しません、コードの速度またはサイズ。
+すべての`CTypedPtrArray`関数がインラインであるため、このテンプレートを使用しても、コードのサイズや速度に大きな影響はありません。
 
-使用しての詳細については`CTypedPtrArray`、記事を参照して[コレクション](../../mfc/collections.md)と[クラスのテンプレートに基づく](../../mfc/template-based-classes.md)します。
+の使用方法`CTypedPtrArray`の詳細については、「 コレクションと[テンプレート ベースのクラス](../../mfc/template-based-classes.md)」を参照してください。 [Collections](../../mfc/collections.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -89,9 +89,9 @@ class CTypedPtrArray : public BASE_CLASS
 
 **ヘッダー:** afxtempl.h
 
-##  <a name="add"></a>  CTypedPtrArray::Add
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>次のメソッドを使用します。
 
-このメンバー関数を呼び出す`BASE_CLASS` **:: 追加**します。
+このメンバー関数は`BASE_CLASS`**、::Add**を呼び出します。
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -99,23 +99,23 @@ INT_PTR Add(TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*TYPE*<br/>
+*種類*<br/>
 配列に追加する要素の型を指定するテンプレート パラメーター。
 
-*newElement*<br/>
+*新しい要素*<br/>
 この配列に追加する要素。
 
 ### <a name="return-value"></a>戻り値
 
 追加された要素のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::Add](../../mfc/reference/cobarray-class.md#add)します。
+詳細な説明については[、「CObArray::Add](../../mfc/reference/cobarray-class.md#add)」を参照してください。
 
-##  <a name="append"></a>  CTypedPtrArray::Append
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>次のメソッドを追加します。
 
-このメンバー関数を呼び出す`BASE_CLASS`:: * * 追加します。
+このメンバー関数は`BASE_CLASS`、呼び出します ::Append**。
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,48 +124,48 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>パラメーター
 
 *BASE_CLASS*<br/>
-型指定されたポインター、配列クラスの基本クラス配列クラスである必要があります ( [CObArray](../../mfc/reference/cobarray-class.md)または[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+型指定されたポインター配列クラスの基本クラス。配列クラス ( [CObArray または CPtrArray](../../mfc/reference/cobarray-class.md) ) を指定する必要があります。 [CPtrArray](../../mfc/reference/cptrarray-class.md)
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
 *src*<br/>
-配列に追加する要素のソースです。
+配列に追加する要素のソース。
 
 ### <a name="return-value"></a>戻り値
 
 追加された最初の要素のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::Append](../../mfc/reference/cobarray-class.md#append)します。
+詳細な説明については[、「CObArray::Append](../../mfc/reference/cobarray-class.md#append)」を参照してください。
 
-##  <a name="copy"></a>  CTypedPtrArray::Copy
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>コピーの配列::コピー
 
-このメンバー関数を呼び出す`BASE_CLASS` **:: コピー**します。
+このメンバー関数は`BASE_CLASS`**、::Copy**を呼び出します。
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *BASE_CLASS*<br/>
-型指定されたポインター、配列クラスの基本クラス配列クラスである必要があります ( [CObArray](../../mfc/reference/cobarray-class.md)または[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+型指定されたポインター配列クラスの基本クラス。配列クラス ( [CObArray または CPtrArray](../../mfc/reference/cobarray-class.md) ) を指定する必要があります。 [CPtrArray](../../mfc/reference/cptrarray-class.md)
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
 *src*<br/>
-配列にコピーする要素のソースです。
+配列にコピーする要素のソース。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)します。
+詳細な説明については[、「CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)」を参照してください。
 
-##  <a name="elementat"></a>  CTypedPtrArray::ElementAt
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>要素の配列::要素
 
-このインライン関数`BASE_CLASS` **:: ElementAt**します。
+このインライン関数は`BASE_CLASS`**、::ElementAt**を呼び出します。
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -173,23 +173,23 @@ TYPE& ElementAt(INT_PTR nIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*TYPE*<br/>
+*種類*<br/>
 この配列に格納されている要素の型を指定するテンプレート パラメーター。
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`BASE_CLASS` **:: です**します。
+0 以上、および`BASE_CLASS`**::GetUpperBound**によって返される値以下の整数インデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定された位置にある要素への参照を一時*nIndex*します。 この要素は、テンプレート パラメーターで指定された型*型*します。
+*nIndex*で指定された位置にある要素への一時的な参照。 この要素は、テンプレート パラメータ*TYPE*で指定された型です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)します。
+詳細な説明については[、「CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)」を参照してください。
 
-##  <a name="getat"></a>  CTypedPtrArray::GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>クタイププターアレイ::ゲットアット
 
-このインライン関数`BASE_CLASS` **:: GetAt**します。
+このインライン関数は`BASE_CLASS`**、::GetAt**を呼び出します。
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -197,25 +197,25 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*TYPE*<br/>
+*種類*<br/>
 配列に格納されている要素の型を指定するテンプレート パラメーター。
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`BASE_CLASS` **:: です**します。
+0 以上、および`BASE_CLASS`**::GetUpperBound**によって返される値以下の整数インデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定された位置にある要素のコピーを*nIndex*します。 この要素は、テンプレート パラメーターで指定された型*型*します。
+*nIndex*で指定された位置にある要素のコピー。 この要素は、テンプレート パラメータ*TYPE*で指定された型です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください[CObArray::GetAt。](../../mfc/reference/cobarray-class.md#getat)
+詳細な説明については、[次を](../../mfc/reference/cobarray-class.md#getat)参照してください。
 
-##  <a name="insertat"></a>  CTypedPtrArray::InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>メソッドの配列::挿入
 
-このメンバー関数を呼び出す`BASE_CLASS` **:: InsertAt**します。
+このメンバー関数は`BASE_CLASS`**、::InsertAt**を呼び出します。
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -229,33 +229,33 @@ void InsertAt(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-によって返される値よりも大きい可能性がある整数インデックス[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)します。
+[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)によって返される値よりも大きい可能性のある整数インデックス。
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
-*newElement*<br/>
-この配列に格納するオブジェクトのポインター。 A *newElement*値の**NULL**は許可されています。
+*新しい要素*<br/>
+この配列に配置されるオブジェクト ポインター。 値**NULL**の*新しい要素*が許可されます。
 
-*nCount*<br/>
-(既定値は 1) を挿入する回数がこの要素にする必要があります。
+*nカウント*<br/>
+この要素を挿入する回数 (既定値は 1)。
 
-*nStartIndex*<br/>
-によって返される値よりも大きい可能性がある整数インデックス`CObArray::GetUpperBound`します。
+*インデックスを作成します。*<br/>
+によって返される値より大きい場合がある整数インデックス`CObArray::GetUpperBound`。
 
 *BASE_CLASS*<br/>
-型指定されたポインター、配列クラスの基本クラス配列クラスである必要があります ( [CObArray](../../mfc/reference/cobarray-class.md)または[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+型指定されたポインター配列クラスの基本クラス。配列クラス ( [CObArray または CPtrArray](../../mfc/reference/cobarray-class.md) ) を指定する必要があります。 [CPtrArray](../../mfc/reference/cptrarray-class.md)
 
-*pNewArray*<br/>
+*をクリックします。*<br/>
 この配列に追加する要素を含む別の配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)します。
+詳細な説明については[、「CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)」を参照してください。
 
-##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>次のメソッドを実行します。
 
-これらのインライン演算子を呼び出す`BASE_CLASS` **:: 演算子**します。
+これらのインライン演算子は`BASE_CLASS`**::演算子 [ ] を**呼び出します。
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -264,23 +264,23 @@ TYPE operator[ ](int_ptr nindex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*TYPE*<br/>
+*種類*<br/>
 配列に格納されている要素の型を指定するテンプレート パラメーター。
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下`BASE_CLASS` **:: です**します。
+0 以上、および`BASE_CLASS`**::GetUpperBound**によって返される値以下の整数インデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-示されていない配列の最初の演算子と呼ばれる**const**右 (右辺値) または代入ステートメントの左側 (左辺値) のいずれかで使用できます。 次が呼び出されます。 **const**配列、は、右側にのみ使用できます。
+**const**でない配列に対して呼び出される最初の演算子は、代入ステートメントの右 (r 値) または左 (左辺値) で使用できます。 **2**番目の定数配列に対して呼び出される、右側でのみ使用できます。
 
-ライブラリのデバッグ バージョンはアサート添字 (またはいずれかで、左、代入ステートメントの右側にある) が範囲外です。
+ライブラリのデバッグ バージョンは、下付き文字 (代入ステートメントの左側または右側) が範囲外にある場合にアサートします。
 
-##  <a name="setat"></a>  CTypedPtrArray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>クタイププター配列::セットアット
 
-このメンバー関数を呼び出す`BASE_CLASS` **:: SetAt**します。
+このメンバー関数は`BASE_CLASS`**、::SetAt**を呼び出します。
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -289,23 +289,23 @@ void SetAt(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数インデックスによって返される値以下[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)します。
+0 以上で[、CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)によって返される値以下の整数インデックス。
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
-*ptr*<br/>
-位置を nIndex、配列に挿入される要素へのポインター。 NULL 値が許可されているとします。
+*Ptr*<br/>
+nIndex の配列に挿入される要素へのポインター。 NULL 値を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)します。
+詳細な説明については[、「CObArray::SetAt」](../../mfc/reference/cobarray-class.md#setat)を参照してください。
 
-##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>クタイプ化された関数配列::セットアットグロー
 
-このメンバー関数を呼び出す`BASE_CLASS` **:: SetAtGrow**します。
+このメンバー関数は`BASE_CLASS`**、::SetAtGrow**を呼び出します。
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);
@@ -314,21 +314,21 @@ void SetAtGrow(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-0 以上である整数のインデックス。
+0 以上の整数インデックス。
 
-*TYPE*<br/>
+*種類*<br/>
 基本クラスの配列に格納されている要素の型。
 
-*newElement*<br/>
-この配列に追加するオブジェクトのポインター。 A **NULL**値が許可されています。
+*新しい要素*<br/>
+この配列に追加するオブジェクト ポインター。 **NULL**値を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細についてを参照してください。 [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)します。
+詳細な説明については[、「CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[MFC サンプル コレクト](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray クラス](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray クラス](../../mfc/reference/cobarray-class.md)

@@ -1,9 +1,10 @@
 ---
 title: clearerr
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - clearerr
-apilocation:
+- _o_clearerr
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340562"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916980"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -44,20 +49,22 @@ void clearerr(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Clearerr**関数は、エラー インジケーターとファイルの終わりインジケーターをリセット*ストリーム*します。 エラー インジケーターは自動的にクリアされません。そのストリームに対する操作が引き続きまでエラー値を返し、指定したストリームのエラー インジケーターを設定すると、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)が呼び出されます。
+**Clearerr**関数は、*ストリーム*のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出されるまでエラー値を返し続けます。
 
-場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**を返します。 詳細については**errno** 、エラー コードを参照してくださいと[errno 定数](../../c-runtime-library/errno-constants.md)します。
+*Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、を返します。 **Errno**とエラーコードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 この関数のセキュリティが強化されたバージョンについては、「[clearerr_s](clearerr-s.md)」を参照してください。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 

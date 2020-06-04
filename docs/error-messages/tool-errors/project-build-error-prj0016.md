@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cab1e35a36ab78426923d60acafb5cdf2942469
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192745"
 ---
 # <a name="project-build-error-prj0016"></a>プロジェクト ビルド エラー PRJ0016
 
@@ -23,8 +23,8 @@ ms.locfileid: "69509885"
 
 \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
 
-このエラーを解決するには、RestrictRun キーを削除します。 このレジストリキーが必要な場合は 、キーのエントリの一覧に vcspawn 追加します。
+このエラーを解決するには、RestrictRun キーを削除します。 このレジストリキーが必要な場合は、キーのエントリの一覧に**vcspawn**追加します。
 
-このエラーのもう1つの原因は、ポリシー設定では、このユーザーアカウントに許可されているウィンドウプログラムとして、レジストリキー HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun の下に VCSpawn が含まれていないことです。
+このエラーのもう1つの原因は、ポリシー設定では、レジストリキーの下に VCSpawn が含まれていないことです。これは、このユーザーアカウントに対して許可されているウィンドウプログラムとして HKEY_CURRENT_USER ます。
 
 詳細については、「許可された Windows アプリケーションのみを実行する」の「[システムポリシー設定への準拠](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings)」を参照してください。

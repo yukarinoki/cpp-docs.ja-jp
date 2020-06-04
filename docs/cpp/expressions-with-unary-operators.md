@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26aad64e5b9c7a496c2e6bb131b82740c06abe07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188975"
 ---
 # <a name="expressions-with-unary-operators"></a>単項演算子を含む式
 
@@ -19,7 +19,7 @@ ms.locfileid: "62183872"
 
 - [間接演算子 (*)](../cpp/indirection-operator-star.md)
 
-- [Address-of 演算子 (&)](../cpp/address-of-operator-amp.md)
+- [アドレス演算子 (&)](../cpp/address-of-operator-amp.md)
 
 - [単項プラス演算子 (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
@@ -27,19 +27,19 @@ ms.locfileid: "62183872"
 
 - [論理否定演算子 (!)](../cpp/logical-negation-operator-exclpt.md)
 
-- [1 の補数演算子 (~)](../cpp/one-s-complement-operator-tilde.md)
+- [1の補数演算子 (~)](../cpp/one-s-complement-operator-tilde.md)
 
 - [前置インクリメント演算子 (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [前置デクリメント演算子 (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [前置デクリメント演算子 (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [キャスト演算子)](../cpp/cast-operator-parens.md)
+- [Cast 演算子 ()](../cpp/cast-operator-parens.md)
 
 - [sizeof 演算子](../cpp/sizeof-operator.md)
 
-- [_ _uuidof 演算子](../cpp/uuidof-operator.md)
+- [__uuidof 演算子](../cpp/uuidof-operator.md)
 
-- [_ _alignof 演算子](../cpp/alignof-operator.md)
+- [__alignof 演算子](../cpp/alignof-operator.md)
 
 - [new 演算子](../cpp/new-operator-cpp.md)
 
@@ -51,32 +51,32 @@ ms.locfileid: "62183872"
 
 - *postfix-expression*
 
-- `++` *unary-expression*
+- *単項式*`++`
 
-- `--` *unary-expression*
+- *単項式*`--`
 
-- *unary-operator* *cast-expression*
+- *単項演算子*の*キャスト式*
 
-- **sizeof** *unary-expression*
+- **sizeof** *単項式*
 
-- `sizeof(` *type-name* `)`
+- `sizeof(`*の種類名*`)`
 
-- `decltype(` *expression* `)`
+- `decltype(`*式*`)`
 
-- *allocation-expression*
+- *割り当て-式*
 
-- *deallocation-expression*
+- *割り当て解除-式*
 
-すべて*後置式*と見なされます、*単項式*、し、どの 1 次式と見なされるため、*後置式*、どの 1 次式は、見なされます、*単項式*もします。 詳細については、次を参照してください。[後置式](../cpp/postfix-expressions.md)と[一次式](../cpp/primary-expressions.md)します。
+*後置式*は*単項式*と見なされ、任意のプライマリ式は*後置式*と見なされるため、すべてのプライマリ式は*単項式*と見なされます。 詳細については、「[後置式](../cpp/postfix-expressions.md)と[プライマリ式](../cpp/primary-expressions.md)」を参照してください。
 
-A*単項演算子*の 1 つ以上の次の記号で構成されます。 `* & + - ! ~`
+*単項演算子*は、次の1つ以上の記号で構成されます: `* & + - ! ~`
 
-*キャスト式*単項式の種類を変更する、省略可能なキャストです。 詳細については、次を参照してください。[キャスト演算子: ()](../cpp/cast-operator-parens.md)します。
+*キャスト式*は、型を変更するためのオプションのキャストを含む単項式です。 詳細については、「 [Cast 演算子: ()](../cpp/cast-operator-parens.md)」を参照してください。
 
-*式*式にできます。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。
+*式*には、任意の式を指定できます。 詳細については、「[式](../cpp/expressions-cpp.md)」を参照してください。
 
-*割り当て式*を指す、**new**演算子。 *解放式*を指す、**delete**演算子。 詳細については、このトピックで前述したリンクを参照してください。
+*割り当て式*は、**新しい**演算子を参照します。 *割り当て解除式*は、 **delete**演算子を参照します。 詳細については、このトピックで前述したリンクを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [式の型](../cpp/types-of-expressions.md)

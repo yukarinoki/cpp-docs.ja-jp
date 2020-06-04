@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2217b865109cc48151e4e96b2d38b88764c0c64f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203642"
 ---
 # <a name="fatal-error-c1189"></a>致命的なエラー C1189
 
-> **\#エラー:** *ユーザーが指定したエラー メッセージ*
+> **\#エラー:** *ユーザーが指定したエラーメッセージ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C1189 がによって生成された、`#error`ディレクティブ。 ディレクティブをコード開発者には、エラー メッセージのテキストを指定します。 詳細については、次を参照してください。 [#error ディレクティブ (c/c++)](../../preprocessor/hash-error-directive-c-cpp.md)します。
+C1189 は `#error` ディレクティブによって生成されます。 ディレクティブをコードする開発者は、エラーメッセージのテキストを指定します。 詳細については、「 [#error ディレクティブ (C++C/)](../../preprocessor/hash-error-directive-c-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、C1189 が生成されます。 ため、サンプルでは、開発者がカスタム エラー メッセージを発行、`_WIN32`識別子が定義されていません。
+次の例では、C1189 が生成されます。 このサンプルでは、`_WIN32` 識別子が定義されていないため、開発者はカスタムエラーメッセージを発行します。
 
 ```cpp
 // C1189.cpp
@@ -33,6 +33,6 @@ C1189 がによって生成された、`#error`ディレクティブ。 ディ�
 #endif
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [#define ディレクティブ (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

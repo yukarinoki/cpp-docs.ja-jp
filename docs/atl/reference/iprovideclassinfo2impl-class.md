@@ -1,5 +1,5 @@
 ---
-title: IProvideClassInfo2Impl クラス
+title: クラスをクラスします。
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1ee9acc1cfabc71ecf33fcb5919d826899c671
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329569"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl クラス
+# <a name="iprovideclassinfo2impl-class"></a>クラスをクラスします。
 
-このクラスの既定の実装を提供する、 [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)と[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)メソッド。
+このクラスは、[メソッド](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)の既定の[実装を提供](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2)します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,23 +37,23 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 #### <a name="parameters"></a>パラメーター
 
-*pcoclsid*<br/>
+*プコクシド*<br/>
 コクラスの識別子へのポインター。
 
 *psrcid*<br/>
-コクラスの既定のディスパッチ インターフェイスの送信の識別子へのポインター。
+コクラスの既定の発信ディスイクス インターフェイスの識別子へのポインター。
 
-*plibid*<br/>
-インターフェイスに関する情報を格納するタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
+*プリビッド*<br/>
+インターフェイスに関する情報を含むタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
 
-*wMajor*<br/>
+*wメジャー*<br/>
 タイプ ライブラリのメジャー バージョンです。 既定値は 1 です。
 
-*wMinor*<br/>
+*wマイナー*<br/>
 タイプ ライブラリのマイナー バージョンです。 既定値は 0 です。
 
-*tihclass*<br/>
-コクラスの種類の情報を管理するために使用するクラスです。 既定値は `CComTypeInfoHolder` です。
+*ティクラス*<br/>
+コクラスの型情報を管理するために使用されるクラス。 既定値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー
 
@@ -61,26 +61,26 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 |名前|説明|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|コンストラクターです。|
+|[2Impl::クラス情報2Impl](#iprovideclassinfo2impl)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|取得、`ITypeInfo`コクラスの種類の情報へのポインター。|
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|オブジェクトの送信のディスパッチ インターフェイスの GUID を取得します。|
+|[クラス情報2Impl::Getクラス情報](#getclassinfo)|コクラスの`ITypeInfo`型情報へのポインターを取得します。|
+|[2 次の機能を提供します。](#getguid)|オブジェクトの発信の disp インターフェイスの GUID を取得します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::_tih](#_tih)|コクラスの型情報を管理します。|
+|[2Impl::_tih](#_tih)|コクラスの型情報を管理します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)インターフェイスは、拡張[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)を追加して、`GetGUID`メソッド。 このメソッドでは、クライアントは既定のイベント セットのオブジェクトのアウトゴーイング インターフェイス IID を取得できます。 クラス`IProvideClassInfo2Impl`の既定の実装を提供します、`IProvideClassInfo`と`IProvideClassInfo2`メソッド。
+インターフェイスは、メソッド[を](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2)追加することによって[IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)を拡張`GetGUID`します。 このメソッドを使用すると、クライアントは、既定のイベント セットに対するオブジェクトの出力インターフェイス IID を取得できます。 クラス`IProvideClassInfo2Impl`は、 メソッドの既定`IProvideClassInfo`の`IProvideClassInfo2`実装を提供します。
 
-`IProvideClassInfo2Impl` 型の静的メンバーを含む`CComTypeInfoHolder`コクラスの型情報を管理します。
+`IProvideClassInfo2Impl`には、コクラスの型`CComTypeInfoHolder`情報を管理する型の静的メンバーが含まれています。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -92,21 +92,21 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 **ヘッダー:** atlcom.h
 
-##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
+## <a name="iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>クラス情報2Impl::Getクラス情報
 
-取得、`ITypeInfo`コクラスの種類の情報へのポインター。
+コクラスの`ITypeInfo`型情報へのポインターを取得します。
 
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照してください[IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) Windows SDK にします。
+次[を参照](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo)してください。
 
-##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
+## <a name="iprovideclassinfo2implgetguid"></a><a name="getguid"></a>2 次の機能を提供します。
 
-オブジェクトの送信のディスパッチ インターフェイスの GUID を取得します。
+オブジェクトの発信の disp インターフェイスの GUID を取得します。
 
 ```
 STDMETHOD(GetGUID)(
@@ -114,11 +114,11 @@ STDMETHOD(GetGUID)(
     GUID* pGUID);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照してください[IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) Windows SDK にします。
+Windows SDK[の「クラス情報2::GetGUID」を](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid)参照してください。
 
-##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
+## <a name="iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>2Impl::クラス情報2Impl
 
 コンストラクターです。
 
@@ -126,22 +126,22 @@ STDMETHOD(GetGUID)(
 IProvideClassInfo2Impl();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出し`AddRef`上、 [_tih](#_tih)メンバー。 このデストラクターは `Release` を呼び出します。
+_tih`AddRef`メンバー[_tih](#_tih)を呼び出します。 このデストラクターは `Release` を呼び出します。
 
-##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
+## <a name="iprovideclassinfo2impl_tih"></a><a name="_tih"></a>2Impl::_tih
 
-この静的データ メンバーは、クラス テンプレート パラメーターのインスタンス*tihclass*、既定では、`CComTypeInfoHolder`します。
+この静的データ メンバーは、クラス テンプレート パラメーター *tihclass*のインスタンスで、`CComTypeInfoHolder`既定ではです。
 
 ```
 static  tihclass
     _tih;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`_tih` コクラスの型情報を管理します。
+`_tih`コクラスの型情報を管理します。
 
 ## <a name="see-also"></a>関連項目
 

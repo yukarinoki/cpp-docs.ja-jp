@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 414388fc1b9c6a7425d45e2ba92546960cadf404
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199616"
 ---
 # <a name="compiler-warning-level-1-c4630"></a>コンパイラの警告 (レベル 1) C4630
 
-'symbol': 'extern' ストレージ クラス指定子のメンバーの定義が無効です
+' symbol ': ' extern ' ストレージクラス指定子がメンバー定義で無効です。
 
-データ メンバーまたはメンバー関数とは見なさ`extern`します。 メンバーは、オブジェクト全体のことができますが、外部、することはできません。 コンパイラは無視、`extern`キーワード。 次の例では、C4630 が生成されます。
+データメンバーまたはメンバー関数は、`extern`として定義されます。 オブジェクト全体を使用できますが、メンバーを外部にすることはできません。 コンパイラは `extern` キーワードを無視します。 次の例では、C4630 が生成されます。
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

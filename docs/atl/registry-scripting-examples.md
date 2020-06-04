@@ -1,5 +1,5 @@
 ---
-title: レジストリ スクリプトの例
+title: レジストリスクリプトの例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scripting, examples
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e225ce28309aa619fd9436d8f4b93e60544e86c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275413"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168749"
 ---
-# <a name="registry-scripting-examples"></a>レジストリ スクリプトの例
+# <a name="registry-scripting-examples"></a>レジストリスクリプトの例
 
-このトピックでは、スクリプトの例では、システム レジストリにキーを追加、レジストラーの COM サーバーを登録し、複数の解析ツリーを指定する方法を示します。
+このトピックのスクリプト例では、キーをシステムレジストリに追加する方法、レジストラー COM サーバーを登録する方法、および複数の解析ツリーを指定する方法を示します。
 
-## <a name="add-a-key-to-hkeycurrentuser"></a>HKEY_CURRENT_USER にキーを追加します。
+## <a name="add-a-key-to-hkey_current_user"></a>HKEY_CURRENT_USER にキーを追加する
 
-次の解析ツリーは、1 つのキーをシステム レジストリに追加する単純なスクリプトを示しています。 具体的には、スクリプトは、キーを追加します。`MyVeryOwnKey`を`HKEY_CURRENT_USER`します。 既定の文字列値を割り当てます`HowGoesIt`新しいキー。
+次の解析ツリーは、単一のキーをシステムレジストリに追加する単純なスクリプトを示しています。 特に、スクリプトはキー `MyVeryOwnKey`をに`HKEY_CURRENT_USER`追加します。 また、新しいキーにの既定の`HowGoesIt`文字列値が割り当てられます。
 
-```
+```rgs
 HKEY_CURRENT_USER
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
 
-このスクリプトは、複数のサブキーを次のように定義を簡単に拡張できます。
+このスクリプトは、次のように複数のサブキーを定義するように簡単に拡張できます。
 
-```
+```rgs
 HKCU
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -45,13 +45,13 @@ HKCU
 }
 ```
 
-ここで、スクリプトは、サブキーを追加します。`HasASubkey`を`MyVeryOwnKey`します。 追加どちらも、このサブキーに、`PrettyCool`サブキー (既定値は、 `DWORD` 55 の値)、`ANameValue`名前付きの値 (の文字列値を持つ`WithANamedValue`)。
+これで、スクリプトによってサブ`HasASubkey`キーが`MyVeryOwnKey`に追加されます。 このサブキーに対して`PrettyCool` 、サブキー (既定`DWORD`値は 55) と`ANameValue`名前付きの値 (の`WithANamedValue`文字列値) の両方が追加されます。
 
-##  <a name="_atl_register_the_registrar_com_server"></a> レジストラーは、COM サーバーを登録します。
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>レジストラー COM サーバーを登録する
 
-次のスクリプトでは、レジストラーの COM サーバー自体を登録します。
+次のスクリプトは、レジストラー COM サーバー自体を登録します。
 
-```
+```rgs
 HKCR
 {
     ATL.Registrar = s 'ATL Registrar Class'
@@ -72,31 +72,31 @@ HKCR
 }
 ```
 
-この解析ツリーを追加、実行時に、`ATL.Registrar`キー`HKEY_CLASSES_ROOT`します。 この新しいキーにし、it:
+実行時に、この解析ツリーによっ`ATL.Registrar`てキー `HKEY_CLASSES_ROOT`がに追加されます。 この新しいキーに対して、次のようになります。
 
-- 指定します`ATL Registrar Class`キーの既定の文字列値として。
+- キー `ATL Registrar Class`の既定の文字列値としてを指定します。
 
-- 追加`CLSID`サブキーとして。
+- サブ`CLSID`キーとしてを追加します。
 
-- 指定します`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`の`CLSID`します。 (この値は、レジストラーで使用するための CLSID `CoCreateInstance`)。
+- に`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`対し`CLSID`てを指定します。 (この値は、で`CoCreateInstance`使用するレジストラーの CLSID です)。
 
-`CLSID`は、共有、削除してはなりません登録解除のモードでします。 このステートメントでは、`NoRemove CLSID`であることを示す`CLSID`登録モードで開かれ、登録解除のモードでは無視する必要があります。
+は`CLSID`共有されているため、登録解除モードでは削除しないでください。 ステートメント`NoRemove CLSID`では、をレジスタモードで開き`CLSID` 、登録解除モードでは無視することを指定することによってこれを行います。
 
-`ForceRemove`ステートメントは、キーを再作成する前に、キーとそのすべてのサブキーを削除することによって、ハウスキーピング機能を提供します。 サブキーの名前が変更された場合に便利なことができます。 このスクリプトの例では`ForceRemove`かどうかをチェック`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`既に存在します。 その場合、 `ForceRemove`:
+この`ForceRemove`ステートメントは、キーを再作成する前にキーとそのすべてのサブキーを削除することによって、ハウスキーピング機能を提供します。 これは、サブキーの名前が変更された場合に便利です。 このスクリプトの例で`ForceRemove`は、が既`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`に存在するかどうかを確認します。 次のように`ForceRemove`なります。
 
-- 再帰的に削除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`とそのすべてのサブキー。
+- とその`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`すべてのサブキーを再帰的に削除します。
 
-- 再作成`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`です。
+- を再作成`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`します。
 
-- 追加`ATL Registrar Class`の既定の文字列値として`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`します。
+- の`ATL Registrar Class`既定の文字列値とし`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`てを追加します。
 
-解析ツリーを 2 つの新しいサブキー追加`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`します。 最初のキー `ProgID`ProgID は、既定の文字列値を取得します。 2 番目のキー `InprocServer32`、既定の文字列値を取得します。`%MODULE%`はプリプロセッサ値についてのセクションで説明[置き換え可能パラメーターの使用 (レジストラーのプリプロセッサ)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)、この記事の。 `InprocServer32` 名前付きの値を取得また`ThreadingModel`の文字列値を持つ`Apartment`。
+解析ツリーで、に2つの新しい`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`サブキーが追加されました。 最初のキー `ProgID`は、ProgID である既定の文字列値を取得します。 2番目の`InprocServer32`キーは、既定の文字列値`%MODULE%`を取得します。これは、この記事の[置換可能なパラメーター (レジストラーのプリプロセッサ) を使用して](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)、「」セクションで説明されているプリプロセッサの値です。 `InprocServer32`また、は、という`ThreadingModel`文字列値を持つ名前付き`Apartment`の値を取得します。
 
-## <a name="specify-multiple-parse-trees"></a>複数の解析ツリーを指定します。
+## <a name="specify-multiple-parse-trees"></a>複数の解析ツリーを指定する
 
-スクリプトでは、複数の解析ツリーを指定するには、別の最後に 1 つのツリーを配置します。 たとえば、次のスクリプトは、キーを追加します`MyVeryOwnKey`、両方の解析ツリーを`HKEY_CLASSES_ROOT`と`HKEY_CURRENT_USER`:。
+スクリプト内に複数の解析ツリーを指定するには、1つのツリーを別のツリーの最後に配置します。 たとえば、次のスクリプトは、キーを`MyVeryOwnKey`と`HKEY_CLASSES_ROOT` `HKEY_CURRENT_USER`の両方の解析ツリーに追加します。
 
-```
+```rgs
 HKCR
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> レジストラー スクリプトでは、4 K は、最大トークン サイズです。 (トークンは、構文内の認識可能な要素です)。前のスクリプトの例で`HKCR`、 `HKEY_CURRENT_USER`、 `'MyVeryOwnKey'`、および`'HowGoesIt'`すべてトークンです。
+> レジストラースクリプトでは、4K は最大トークンサイズです。 (トークンは、構文内で認識可能な要素です)。`HKCR`前のスクリプトの例`HKEY_CURRENT_USER`では、 `'MyVeryOwnKey'`、、 `'HowGoesIt'` 、およびはすべてトークンです。
 
 ## <a name="see-also"></a>関連項目
 
-[レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

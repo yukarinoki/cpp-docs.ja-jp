@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4810
 ms.assetid: 39e2cae0-9c1c-4ac1-aaa0-5f661d06085b
-ms.openlocfilehash: 4701ac40d436a9f5511f2c7cec86e8183ec2f837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdeb4dd28587635a391e7b776ccd88b637a7769f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174935"
 ---
 # <a name="compiler-warning-level-1-c4810"></a>コンパイラの警告 (レベル 1) C4810
 
@@ -21,7 +21,7 @@ pragma の値 pack(show) == n
 
 たとえば、次のコードは、pack プラグマで C4810 警告がどのように発生するかを示しています。
 
-```
+```cpp
 // C4810.cpp
 // compile with: /W1 /LD
 // C4810 expected

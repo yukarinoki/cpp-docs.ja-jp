@@ -1,10 +1,12 @@
 ---
 title: _strtime、_wstrtime
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+- _o__strtime
+- _o__wstrtime
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910917"
 ---
-# <a name="strtime-wstrtime"></a>_strtime、_wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
 時刻をバッファーにコピーします。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_strtime_s、_wstrtime_s (_strtime_s、_wstrtime_s)](strtime-s-wstrtime-s.md)」を参照してください。
 
@@ -70,15 +76,17 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>戻り値
 
-結果の文字列へのポインターを返します*で*します。
+結果の文字列*timestr*へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strtime**関数が指すバッファーに現在の現地時刻をコピー*で*します。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間表記で時間を表す 2 桁の数字は、 **mm** 、時間、分を表す2桁の数字は、**ss**秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは 9 バイト以上の長さである必要があります。
+**_Strtime**関数は、現在の現地時刻を*timestr*が指すバッファーにコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは 9 バイト以上の長さである必要があります。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 場合*で*は、 **NULL**ポインターまたは*で*形式が正しくない、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうか、例外が許可された、引き続き、 **NULL**設定と**errno**に**EINVAL**場合*で*が、 **NULL**設定または**errno**に**ERANGE**場合*で*形式が正しくありません。
+**_wstrtime**は **_strtime**のワイド文字バージョンです。**_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 *Timestr*が**NULL**ポインターの場合、または*timestr*が正しく書式設定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 例外の継続が許可された場合、これらの関数は**null**を返し、 **errno**を**EINVAL**に設定します。 *timestr*が**null**の場合、または*timestr*が正しく書式設定されていない場合は**errno**を**ERANGE**に設定します。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -88,12 +96,12 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

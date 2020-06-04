@@ -2,22 +2,22 @@
 title: 列挙型 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: be11d8d8f38a92fbe4be00eed53dd5226bab0b59
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740213"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821754"
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
 
-C++/Cx では`public enum class`キーワードがサポートされています。これC++ `scoped  enum`は、標準に対しては、このキーワードを使用します。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。
+C++/CX では、標準C++ `scoped  enum`に似た `public enum class` キーワードがサポートされています。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。
 
 ### <a name="remarks"></a>Remarks
 
 `public enum class` など、アクセス指定子を持たない `public`は、標準 C++ の [スコープ列挙体](../cpp/enumerations-cpp.md)として扱われます。
 
-または`public enum struct`の宣言は、任意の整数型の基になる型を持つことができますが、Windows ランタイム自体は型を int32 にする必要がありますが、flags 列挙型の場合は uint32 です。 `public enum class` 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。
+`public enum class` または `public enum struct` の宣言は、任意の整数型の基になる型を持つことができますが、Windows ランタイム自体では、型を int32 にする必要があります。また、フラグの列挙体に対して uint32 を使用することもできます。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。
 
 この例は、パブリック列挙型クラスを定義する方法を示しています。
 

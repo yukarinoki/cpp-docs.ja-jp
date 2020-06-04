@@ -7,20 +7,20 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: eff1a99fb95f15c6377e8a74cca36e718cbd6fd9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 784bcfa5325e74180d3981a98cda530d839ab9f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367976"
 ---
-# <a name="lttypetraitsgt-typedefs"></a>&lt;type_traits&gt; typedef
+# <a name="lttype_traitsgt-typedefs"></a>&lt;type_traits&gt; typedef
 
 |||
 |-|-|
 |[false_type](#false_type)|[true_type](#true_type)|
 
-## <a name="false_type"></a>  false_type Typedef
+## <a name="false_type-typedef"></a><a name="false_type"></a>false_type・タイプ定義
 
 false 値を持つ整数定数を保持します。
 
@@ -28,7 +28,7 @@ false 値を持つ整数定数を保持します。
 typedef integral_constant<bool, false> false_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート `integral_constant` から特化したテンプレートのシノニムです。
 
@@ -53,7 +53,7 @@ false_type == false
 true_type == true
 ```
 
-## <a name="true_type"></a>  true_type Typedef
+## <a name="true_type-typedef"></a><a name="true_type"></a>true_typeタイプデフ
 
 true 値を持つ整数定数を保持します。
 
@@ -61,7 +61,7 @@ true 値を持つ整数定数を保持します。
 typedef integral_constant<bool, true> true_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート `integral_constant` から特化したテンプレートのシノニムです。
 

@@ -1,10 +1,12 @@
 ---
 title: isleadbyte、_isleadbyte_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+- _o__isleadbyte_l
+- _o_isleadbyte
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909540"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
 文字がマルチバイト文字の先行バイトかどうかを判定します。
 
@@ -51,20 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-**isleadbyte**そうでない場合、テスト条件または 0 を引数が満たしている場合は、0 以外の値を返します。 文字セット (SBCS) のロケールの"C"ロケールでは 1 バイトで**isleadbyte**常に 0 を返します。
+引数がテスト条件を満たしている場合、 **isリードバイト**は0以外の値を返します。そうでない場合は0を返します。 "C" ロケールと1バイト文字セット (SBCS) のロケールでは、 **isリードバイト**は常に0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Isleadbyte**マクロが、引数がマルチバイト文字の最初のバイトの場合、0 以外の値を返します。 **isleadbyte** -1 から任意の整数引数に対して意味のある結果が生成されます (**EOF**) に**UCHAR_MAX** (0 xff) まで。
+**Isリードバイト**マクロは、引数がマルチバイト文字の最初のバイトの場合、0以外の値を返します。 **isリードバイト**は、-1 (**EOF**) から**UCHAR_MAX** (0xff) までの任意の整数引数に対して意味のある結果を生成します。
 
-予想される引数の型の**isleadbyte**は**int**符号付き文字が渡された場合は、コンパイラが整数に変換が符号拡張、予期しない結果を生成しています。
+**Isリードバイト**の予期される引数の型は**int**です。符号付き文字が渡された場合、コンパイラはそれを符号拡張によって整数に変換することで、予測できない結果が発生する可能性があります。
 
-この関数のバージョン、 **_l**サフィックスは、そのロケールに依存する動作の現在のロケールではなく渡されたロケールを使用すると同じです。
+**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -74,15 +82,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

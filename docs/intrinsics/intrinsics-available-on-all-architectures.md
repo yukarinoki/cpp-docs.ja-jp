@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 6550c97a8d4efae29318d48ed8cab43b85b135f4
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217533"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163469"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>すべてのアーキテクチャで使用可能な組み込みクラス
 
@@ -28,7 +28,46 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
 |[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
 |[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
-__ codeseg |[__debugbreak](../intrinsics/debugbreak.md)|. h | |[disable](../intrinsics/disable.md)| @ in .h | |[_enable](../intrinsics/enable.md)|. h | |[__ fastfail](../intrinsics/fastfail.md)| 自分の. h | |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|. h | |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|. h | |[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|. h | |[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|. h | |[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|. h | |[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|. h | |[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|. h | |[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|. h | |[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|. h | |[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)|. h | |[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|. h | |[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|. h | |[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|. h | |[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|. h | |[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|. h | |[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|. h | |[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|. h | |[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|. h | |[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|. h | |[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|. h | |[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|. h | |[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|. h | |[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|. h | |[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|. h | |[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|. h | |[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|. h | |[__ nop](../intrinsics/nop.md)| に含まれています。[Readバリア](../intrinsics/readbarrier.md)| 存在する. h | |[Readwriteバリア](../intrinsics/readwritebarrier.md)| 存在します。 h | |[Returnaddress](../intrinsics/returnaddress.md)| @ in .h | |[_rotl16](../intrinsics/rotl8-rotl16.md)|. h | |[_rotl8](../intrinsics/rotl8-rotl16.md)|. h | |[rotr16](../intrinsics/rotr8-rotr16.md)| イントラネット内の. h | |[rotr8](../intrinsics/rotr8-rotr16.md)| 自分の. h | |[Writeバリア](../intrinsics/writebarrier.md)| 自分の場所. h |
+|__code_seg|intrin.h|
+|[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|
+|[_disable](../intrinsics/disable.md)|intrin.h|
+|[_enable](../intrinsics/enable.md)|intrin.h|
+|[__fastfail](../intrinsics/fastfail.md)|intrin.h|
+|[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|
+|[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[__nop](../intrinsics/nop.md)|intrin.h|
+|[_ReadBarrier](../intrinsics/readbarrier.md)|intrin.h|
+|[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)|intrin.h|
+|[_ReturnAddress](../intrinsics/returnaddress.md)|intrin.h|
+|[_rotl16](../intrinsics/rotl8-rotl16.md)|intrin.h|
+|[_rotl8](../intrinsics/rotl8-rotl16.md)|intrin.h|
+|[_rotr16](../intrinsics/rotr8-rotr16.md)|intrin.h|
+|[_rotr8](../intrinsics/rotr8-rotr16.md)|intrin.h|
+|[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
 ## <a name="ucrt-intrinsics"></a>UCRT 組み込み
 
@@ -65,7 +104,7 @@ __ codeseg |[__debugbreak](../intrinsics/debugbreak.md)|. h | |[disable](../intr
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[損益](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -123,6 +162,7 @@ __ codeseg |[__debugbreak](../intrinsics/debugbreak.md)|. h | |[disable](../intr
 
 ## <a name="see-also"></a>関連項目
 
-[ARM 組み込み](../intrinsics/arm-intrinsics.md)<br/>
-[x86 組み込み一覧](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64) 組み込み一覧](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[ARM 組み込み](../intrinsics/arm-intrinsics.md)\
+[ARM64 組み込み](../intrinsics/arm64-intrinsics.md)\
+[x86 組み込みリスト](../intrinsics/x86-intrinsics-list.md)\
+[x64 (amd64) 組み込みリスト](../intrinsics/x64-amd64-intrinsics-list.md)

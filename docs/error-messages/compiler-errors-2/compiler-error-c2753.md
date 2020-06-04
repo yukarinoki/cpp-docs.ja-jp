@@ -1,23 +1,23 @@
 ---
-title: コンパイラ エラー C2753
+title: コンパイラエラー C2753
 ms.date: 11/04/2016
 f1_keywords:
 - C2753
 helpviewer_keywords:
 - C2753
 ms.assetid: 92bfeeac-524a-4a8e-9a4f-fb8269055826
-ms.openlocfilehash: e13c45cec99e60d8aec7dcc3db8e5a4813ea7de9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea2901c998ac1a44ad142779e7ce48bfffff66c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228784"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202154"
 ---
-# <a name="compiler-error-c2753"></a>コンパイラ エラー C2753
+# <a name="compiler-error-c2753"></a>コンパイラエラー C2753
 
-'*テンプレート*': 部分的特殊化はプライマリ テンプレートの引数リストと一致ことはできません
+'*template*': 部分的特殊化をプライマリテンプレートの引数リストと一致させることはできません
 
-テンプレート引数リストには、パラメーター リストが一致すると、コンパイラにより、同じテンプレートとして扱います。 2 回、同じテンプレートを定義することはできません。
+テンプレート引数リストがパラメーターリストと一致する場合、コンパイラはそれを同じテンプレートとして扱います。 同じテンプレートを2回定義することはできません。
 
 ## <a name="example"></a>例
 

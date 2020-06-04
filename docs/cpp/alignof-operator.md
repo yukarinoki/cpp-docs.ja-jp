@@ -2,7 +2,6 @@
 title: __alignof 演算子
 ms.date: 12/17/2018
 f1_keywords:
-- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 - __alignof
@@ -14,20 +13,20 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181539"
 ---
-# <a name="alignof-operator"></a>__alignof 演算子
+# <a name="__alignof-operator"></a>__alignof 演算子
 
-C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。
+C++ 11 では、指定された型のアラインメントをバイト単位で返す**alignof**演算子が導入されています。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。
 
 **Microsoft 固有の仕様**
 
-型の値を返します`size_t`型のアラインメント要件であります。
+型のアラインメント要件である `size_t` 型の値を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,28 +34,28 @@ C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配�
   __alignof( type )
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-例:
+次に例を示します。
 
-|正規表現|[値]|
+|式|値|
 |----------------|-----------|
-|**__alignof( char )**|1|
-|**__alignof( short )**|2|
-|**__alignof( int )**|4|
-|**__alignof( \__int64 )**|8|
-|**__alignof( float )**|4|
-|**__alignof( double )**|8|
-|**__alignof( char\* )**|4|
+|**__alignof (char)**|1|
+|**__alignof (短い)**|2|
+|**__alignof (int)**|4|
+|**__alignof (\__int64)**|8|
+|**__alignof (float)**|4|
+|**__alignof (double)**|8|
+|**__alignof (char\*)**|4|
 
-**_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
+**__Alignof**値は、基本型の `sizeof` の値と同じです。 ただし、次の例を検討します。
 
 ```cpp
 typedef struct { int a; double b; } S;
 // __alignof(S) == 8
 ```
 
-ここで、 **_ _alignof**値は、構造内の最大の要素のアラインメント要件。
+この場合、 **__alignof**値は、構造体内の最大の要素のアラインメント要件です。
 
 同様に、
 
@@ -66,7 +65,7 @@ typedef __declspec(align(32)) struct { int a; } S;
 
 `__alignof(S)` と `32` が等価です。
 
-用途の 1 つ **_ _alignof**独自のメモリ割り当てルーチンのいずれかのパラメーターとしてになります。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。
+**__Alignof**の1つの用途は、独自のメモリ割り当てルーチンの1つにパラメーターとして使用することです。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
@@ -74,7 +73,7 @@ int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
 
-以前のバージョンとの互換性のため **_alignof**のシノニムです **_ _alignof**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
+以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_alignof**は **__alignof**のシノニムになります。
 
 配置の変更の詳細については、次を参照してください。
 
@@ -86,7 +85,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [/Zp (構造体メンバーの配置)](../build/reference/zp-struct-member-alignment.md)
 
-- [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
+- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
 
 x86 と x64 用のコード内の配置の違いの詳細については、
 
@@ -94,7 +93,7 @@ x86 と x64 用のコード内の配置の違いの詳細については、
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

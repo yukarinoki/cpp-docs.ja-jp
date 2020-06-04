@@ -5,20 +5,20 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: d870101c80c8a1f6164e7c89dfbb452fb0a3f9a2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246232"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427561"
 ---
-# <a name="ltsystemerrorgt-enums"></a>&lt;system_error&gt; 列挙型
+# <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 列挙型
 
-## <a name="errc"></a> errc
+## <a name="errc"></a>errc
 
-`<errno.h>` の Posix で定義されているすべてのエラー コードのマクロにシンボル名を提供します。
+`<errno.h>`の POSIX で定義されているすべてのエラーコードマクロにシンボル名を提供します。
 
-```
+```cpp
 class errc {
    address_family_not_supported = EAFNOSUPPORT,
    address_in_use = EADDRINUSE,
@@ -101,19 +101,19 @@ class errc {
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="io_errc"></a> io_errc
+## <a name="io_errc"></a>io_errc
 
-\<iostream> にエラー状態のシンボル名を提供します。 [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` 関数によって返される値と比較される [error_condition](../standard-library/error-condition-class.md) オブジェクトを作成するために使用できます。
+\<iostream> にエラー状態のシンボル名を提供します。 [ios_base::failure](../standard-library/error-condition-class.md)[ 関数によって返される値と比較される ](../standard-library/ios-base-class.md#failure)error_condition`code()` オブジェクトを作成するために使用できます。
 
-```
+```cpp
 class io_errc {
    stream = 1
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) と [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) の両方が、この列挙型に対してオーバーロードされます。
 

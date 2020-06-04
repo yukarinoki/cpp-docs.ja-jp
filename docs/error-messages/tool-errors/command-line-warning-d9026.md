@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196704"
 ---
 # <a name="command-line-warning-d9026"></a>コマンド ラインの警告 D9026
 
-オプションはコマンドライン全体に適用されます。
+オプションはコマンドライン全体に適用されます
 
-オプションは、ファイル名を指定したら、コマンドで指定されました。 オプションは、前にそのファイルに適用されました。
+ファイル名が指定された後に、コマンドでオプションが指定されました。 このオプションは、その前にあるファイルに適用されていました。
 
 たとえば、コマンドで
 
@@ -25,6 +25,6 @@ ms.locfileid: "62214208"
 CL verdi.c /G5 puccini.c
 ```
 
-VERDI.c ファイルは、/G4 の既定値ではない、/G5 オプションを使用してコンパイルされます。
+ファイル VERDI は、/G4 の既定値ではなく、/G5 オプションを使用してコンパイルされます。
 
-この動作は VERDI.c 結果として、ファイル名の前に指定されたオプションを使用してコンパイル/G4 と異なり/G5 を使用してをコンパイルするだけに適用されるいくつか以前のバージョンと異なる。
+この動作は、以前のバージョンとは異なり、ファイル名の前に指定されたオプションのみが適用されます。その結果、/G4 および PUCCINI を使用してコンパイルされます。 c は/G5. を使用してコンパイルされます。

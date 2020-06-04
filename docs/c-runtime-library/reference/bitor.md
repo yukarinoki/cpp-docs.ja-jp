@@ -1,7 +1,7 @@
 ---
 title: bitor
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bitor
 - std.bitor
@@ -20,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-ms.openlocfilehash: e8bb78e73b8beca4cbffd975f41c3432cf9fdefe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcd7639fd4959c95b198e080ae3c7d4fbd3234b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171230"
 ---
 # <a name="bitor"></a>bitor
 
@@ -38,7 +41,7 @@ ms.locfileid: "62340990"
 #define bitor |
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 マクロにより &#124; 演算子が生成されます。
 
@@ -70,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<iso646.h>
+**ヘッダー:** \<iso646 >

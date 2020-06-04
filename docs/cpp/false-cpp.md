@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188936"
 ---
 # <a name="false-c"></a>false (C++)
 
-キーワードは型の変数の 2 つの値の 1 つ[bool](../cpp/bool-cpp.md)または条件式 (条件式は、 **true**ブール式)。 たとえば場合、`i`型の変数は、 **bool**、`i = false;`ステートメント割り当てます**false**に`i`します。
+キーワードは、 [bool](../cpp/bool-cpp.md)型の変数または条件式の2つの値のいずれかです (条件式は、**真**のブール式になります)。 たとえば、`i` が**bool**型の変数である場合、`i = false;` ステートメントは `i`に**false**を割り当てます。
 
 ## <a name="example"></a>例
 
@@ -37,6 +37,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)

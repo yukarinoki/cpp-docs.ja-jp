@@ -1,10 +1,12 @@
 ---
 title: wcstombs、_wcstombs_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - wcstombs
 - _wcstombs_l
-apilocation:
+- _o__wcstombs_l
+- _o_wcstombs
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs
 - _wcstombs_l
@@ -30,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498983"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910633"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs、_wcstombs_l
 
@@ -86,9 +92,9 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Wcstombs**がマルチバイト文字列を正常に変換した場合は、終端の null (存在する場合) を除いて、マルチバイト出力文字列に書き込まれたバイト数を返します。 *Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 **Wcstombs**がマルチバイト文字に変換できないワイド文字を検出した場合、型**size_t**にキャストされた-1 を返し、 **errno**を**EILSEQ**に設定します。
+**Wcstombs**がマルチバイト文字列を正常に変換した場合は、終端の null (存在する場合) を除いて、マルチバイト出力文字列に書き込まれたバイト数を返します。 *Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 **Wcstombs**がマルチバイト文字に変換できないワイド文字を検出した場合は、型**size_t**に-1 をキャストし、 **errno**を**EILSEQ**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Wcstombs**関数は、 *wcstr*が指すワイド文字列を対応するマルチバイト文字に変換し、結果を*mbstr*配列に格納します。 *Count*パラメーターは、マルチバイト出力文字列 (つまり、 *mbstr*のサイズ) に格納できる最大バイト数を示します。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 入力文字列内のワイド文字ごとに、マルチバイト出力文字列に2バイト (ワイド文字の null を含む) がある場合、結果は確実に一致します。
 
@@ -98,18 +104,20 @@ size_t _wcstombs_l(
 
 **wcstombs**は、そのパラメーターを検証します。 *Wcstr*が**NULL**の場合、または*count*が**INT_MAX**より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
-**wcstombs**は、ロケールに依存する動作に現在のロケールを使用します。 **_wcstombs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcstombs**は、ロケールに依存する動作に現在のロケールを使用します。**_wcstombs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -156,7 +164,7 @@ Convert wide-character string:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

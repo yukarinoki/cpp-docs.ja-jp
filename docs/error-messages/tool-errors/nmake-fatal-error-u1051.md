@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: ddf1d262fb8dfc6e63b0bf5cc098b7b140539310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193681"
 ---
 # <a name="nmake-fatal-error-u1051"></a>NMAKE の致命的なエラー U1051
 
-メモリ不足
+メモリが不足しています
 
-NMAKE は、メイクファイルが大きすぎるか複雑なために、仮想メモリを含む、メモリが不足します。
+メイクファイルが大きすぎるか複雑すぎるため、NMAKE で仮想メモリなどのメモリが不足していました。
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>修復の可能性がある解決策
 
-1. ディスク領域を解放します。
+1. ディスク上の空き領域を増やします。
 
-1. Windows NT のページング ファイルまたは Windows のスワップ ファイルのサイズを増やします。
+1. Windows NT ページングファイルまたは Windows スワップファイルのサイズを大きくします。
 
-1. メイクファイルの一部を使用している場合のみ、メイクファイルを個別のファイルに分割またはのいずれかを使用して、 **!IF**プリプロセス ディレクティブ (nmake の) を処理する必要がある量を制限します。 **!IF**ディレクティブには、 **!IF**、 `!IFDEF`、 **!IFNDEF**、 **!ELSE IF**、 **!ELSE** `IFDEF`、および **!ELSE** `IFNDEF`します。
+1. メイクファイルの一部だけが使用されている場合は、makefile を別のファイルに分割するか、を使用します **。** プリプロセスディレクティブで、NMAKE が処理する必要がある量を制限する場合は。 **!ディレクティブに** **!の場合**、`!IFDEF`、 **!IFNDEF**、 **!それ以外の場合は**、 **!それ以外**の `IFDEF`、および **!それ以外**の場合は `IFNDEF`。

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398447"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371514"
 ---
 # <a name="ftmbase-class"></a>FtmBase クラス
 
@@ -46,9 +46,9 @@ class FtmBase :
     >;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [RuntimeClass クラス](runtimeclass-class.md)します。
+詳細については、「[ランタイム クラス クラス](runtimeclass-class.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -56,25 +56,25 @@ class FtmBase :
 
 | 名前                         | 説明                                        |
 | ---------------------------- | -------------------------------------------------- |
-| [Ftmbase::ftmbase](#ftmbase) | `FtmBase` クラスの新しいインスタンスを初期化します。 |
+| [フォートムベース::フォートムベース](#ftmbase) | `FtmBase` クラスの新しいインスタンスを初期化します。 |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 | 名前                                                               | 説明                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Ftmbase::createglobalinterfacetable](#createglobalinterfacetable) | グローバル インターフェイス テーブル (GIT) を作成します。                                                                                                                              |
-| [Ftmbase::disconnectobject](#disconnectobject)                     | オブジェクトへのすべての外部接続が強制的に解放します。 オブジェクトのサーバーでは、シャット ダウンする前に、このメソッドのオブジェクトの実装を呼び出します。                |
-| [Ftmbase::getmarshalsizemax](#getmarshalsizemax)                   | 指定したオブジェクトで指定されたインターフェイス ポインターをマーシャ リングするために必要なバイト数の上限を取得します。                                                |
-| [Ftmbase::getunmarshalclass](#getunmarshalclass)                   | COM を使用して、対応するプロキシのコードを含む DLL を検索する CLSID を取得します。 COM は初期化されていないプロキシのインスタンスを作成するには、この DLL を読み込みます。 |
-| [Ftmbase::marshalinterface](#marshalinterface)                     | 一部のクライアント プロセスで、プロキシ オブジェクトを初期化するために必要なデータをストリームに書き込みます。                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | データのマーシャ リングされたパケットは破棄されます。                                                                                                                                    |
-| [Ftmbase::unmarshalinterface](#unmarshalinterface)                 | 新しく作成されたプロキシを初期化し、そのプロキシにインターフェイス ポインターを返します。                                                                                    |
+| [を使用します。](#createglobalinterfacetable) | グローバル インターフェイス テーブル (GIT) を作成します。                                                                                                                              |
+| [フトムベース::Dコネクトオブジェクト](#disconnectobject)                     | オブジェクトへのすべての外部接続を強制的に解放します。 オブジェクトのサーバーは、シャットダウンする前に、このメソッドのオブジェクトの実装を呼び出します。                |
+| [フトムベース::ゲットマーシャルサイズマックス](#getmarshalsizemax)                   | 指定したオブジェクトで指定したインターフェイス ポインターをマーシャリングするために必要なバイト数の上限を取得します。                                                |
+| [フトムベース::ゲットアンマーシャルクラス](#getunmarshalclass)                   | COM が対応するプロキシのコードを含む DLL を検索するために使用する CLSID を取得します。 COM は、プロキシの初期化されていないインスタンスを作成するために、この DLL を読み込みます。 |
+| [フォートムベース::マーシャルインターフェイス](#marshalinterface)                     | クライアント プロセスでプロキシ オブジェクトを初期化するために必要なデータをストリームに書き込みます。                                                                          |
+| [フトムベース::リリースマーシャルデータ](#releasemarshaldata)                 | マーシャリングされたデータ パケットを破棄します。                                                                                                                                    |
+| [フトムベース::アンマーシャルインターフェイス](#unmarshalinterface)                 | 新しく作成されたプロキシを初期化し、そのプロキシへのインターフェイス ポインターを返します。                                                                                    |
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 | 名前                                | 説明                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [Ftmbase::marshaller _](#marshaller) | フリー スレッド マーシャラーへの参照を保持します。 |
+| [フトムベース::marshaller_](#marshaller) | フリー スレッド マーシャラーへの参照を保持します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -84,9 +84,9 @@ class FtmBase :
 
 **ヘッダー:** ftm.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="createglobalinterfacetable"></a>Ftmbase::createglobalinterfacetable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>を使用します。
 
 グローバル インターフェイス テーブル (GIT) を作成します。
 
@@ -98,20 +98,20 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>パラメーター
 
-*git*<br/>
-この操作が完了時は、グローバル インターフェイス テーブルへのポインター。
+*Git*<br/>
+この操作が完了すると、グローバル インターフェイス テーブルへのポインタ。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、`IGlobalInterfaceTable`でトピック、`COM Interfaces`のサブトピック、 `COM Reference` MSDN ライブラリの「します。
+詳細については、MSDN ライブラリ`IGlobalInterfaceTable`の`COM Reference`トピックの`COM Interfaces`サブトピックのトピックを参照してください。
 
-## <a name="disconnectobject"></a>Ftmbase::disconnectobject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>フトムベース::Dコネクトオブジェクト
 
-オブジェクトへのすべての外部接続が強制的に解放します。 オブジェクトのサーバーでは、シャット ダウンする前に、このメソッドのオブジェクトの実装を呼び出します。
+オブジェクトへのすべての外部接続を強制的に解放します。 オブジェクトのサーバーは、シャットダウンする前に、このメソッドのオブジェクトの実装を呼び出します。
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -121,14 +121,14 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReserved*<br/>
+*dw予約済み*<br/>
 今後使用するために予約されています。0 にする必要があります。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="ftmbase"></a>Ftmbase::ftmbase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>フォートムベース::フォートムベース
 
 `FtmBase` クラスの新しいインスタンスを初期化します。
 
@@ -136,9 +136,9 @@ STDMETHODIMP DisconnectObject(
 FtmBase();
 ```
 
-## <a name="getmarshalsizemax"></a>Ftmbase::getmarshalsizemax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>フトムベース::ゲットマーシャルサイズマックス
 
-指定したオブジェクトで指定されたインターフェイス ポインターをマーシャ リングするために必要なバイト数の上限を取得します。
+指定したオブジェクトで指定したインターフェイス ポインターをマーシャリングするために必要なバイト数の上限を取得します。
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -154,34 +154,34 @@ STDMETHODIMP GetMarshalSizeMax(
 ### <a name="parameters"></a>パラメーター
 
 *riid*<br/>
-マーシャ リングするインターフェイスの識別子への参照。
+マーシャリングするインターフェイスの識別子への参照。
 
-*現在価値*<br/>
-インターフェイス ポインターをマーシャ リングします。NULL にすることができます。
+*pv*<br/>
+マーシャリングするインターフェイス ポインタ。NULL を指定できます。
 
-*dwDestContext*<br/>
-コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
+*コンテキスト*<br/>
+指定したインターフェイスをマーシャリング解除する宛先コンテキスト。
 
-1 つまたは複数の MSHCTX 列挙値を指定します。
+1 つ以上の MSHCTX 列挙値を指定します。
 
-現時点では、マーシャ リング解除発生する可能性が現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは現在のプロセス (MSHCTX_LOCAL) と同じコンピューター上の別のプロセスでします。
+現在、マーシャリング解除は、現在のプロセスの別のアパートメント (MSHCTX_INPROC) または現在のプロセス (MSHCTX_LOCAL) と同じコンピュータ上の別のプロセスで発生する可能性があります。
 
-*pvDestContext*<br/>
-今後使用するために予約されていますNULL にする必要があります。
+*コンテキスト*<br/>
+将来の使用のために予約されています。NULL である必要があります。
 
 *mshlflags*<br/>
-マーシャ リングするデータがクライアント プロセスに送信されるかどうかを示すフラグ: 一般的なケース、または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。 1 つまたは複数の MSHLFLAGS 列挙値を指定します。
+マーシャリングするデータをクライアント プロセス (一般的なケース) に転送するか、グローバル テーブルに書き込むかを示すフラグです。 1 つ以上の MSHLFLAGS 列挙値を指定します。
 
-*pSize*<br/>
-この操作が完了時は、マーシャ リングのストリームに書き込まれるデータの量に上限へのポインター。
+*Psize*<br/>
+この操作が完了すると、マーシャリング ストリームに書き込まれるデータ量の上限へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、または E_NOINTERFACE E_FAIL します。
+成功した場合はS_OK。それ以外の場合は、E_FAILまたはE_NOINTERFACE。
 
-## <a name="getunmarshalclass"></a>Ftmbase::getunmarshalclass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>フトムベース::ゲットアンマーシャルクラス
 
-COM を使用して、対応するプロキシのコードを含む DLL を検索する CLSID を取得します。 COM は初期化されていないプロキシのインスタンスを作成するには、この DLL を読み込みます。
+COM が対応するプロキシのコードを含む DLL を検索するために使用する CLSID を取得します。 COM は、プロキシの初期化されていないインスタンスを作成するために、この DLL を読み込みます。
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -197,33 +197,33 @@ STDMETHODIMP GetUnmarshalClass(
 ### <a name="parameters"></a>パラメーター
 
 *riid*<br/>
-マーシャ リングするインターフェイスの識別子への参照。
+マーシャリングするインターフェイスの識別子への参照。
 
-*現在価値*<br/>
-マーシャ リングする; インターフェイスへのポインター呼び出し元では、必要なインターフェイスには、ポインターにいない場合、NULL を指定できます。
+*pv*<br/>
+マーシャリングするインターフェイスへのポインター。呼び出し元が目的のインターフェイスへのポインターを持っていない場合は NULL を指定できます。
 
-*dwDestContext*<br/>
-コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
+*コンテキスト*<br/>
+指定したインターフェイスをマーシャリング解除する宛先コンテキスト。
 
-1 つまたは複数の MSHCTX 列挙値を指定します。
+1 つ以上の MSHCTX 列挙値を指定します。
 
-マーシャ リング解除は、現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは現在のプロセス (MSHCTX_LOCAL) と同じコンピューター上の別のプロセスで発生します。
+マーシャリング解除は、現在のプロセスの別のアパートメント (MSHCTX_INPROC) で発生するか、現在のプロセス (MSHCTX_LOCAL) と同じコンピュータ上の別のプロセスで発生する可能性があります。
 
-*pvDestContext*<br/>
-今後使用するために予約されていますNULL にする必要があります。
+*コンテキスト*<br/>
+将来の使用のために予約されています。NULL である必要があります。
 
 *mshlflags*<br/>
-この操作が完了時は、クライアント プロセスで、プロキシの作成に使用する、CLSID へのポインター。
+この操作が完了したら、クライアント プロセスでプロキシを作成するために使用される CLSID へのポインター。
 
 *pCid*
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、s_false を返します。
+成功した場合はS_OK。それ以外の場合は、S_FALSE。
 
-## <a name="marshalinterface"></a>Ftmbase::marshalinterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>フォートムベース::マーシャルインターフェイス
 
-一部のクライアント プロセスで、プロキシ オブジェクトを初期化するために必要なデータをストリームに書き込みます。
+クライアント プロセスでプロキシ オブジェクトを初期化するために必要なデータをストリームに書き込みます。
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -239,38 +239,38 @@ STDMETHODIMP MarshalInterface(
 ### <a name="parameters"></a>パラメーター
 
 *pStm*<br/>
-マーシャ リング中に使用するストリームへのポインター。
+マーシャリング中に使用されるストリームへのポインター。
 
 *riid*<br/>
-マーシャ リングするインターフェイスの識別子への参照。 このインターフェイスから派生する必要があります、`IUnknown`インターフェイス。
+マーシャリングするインターフェイスの識別子への参照。 このインターフェイスは、 `IUnknown` インターフェイスから派生する必要があります。
 
-*現在価値*<br/>
-マーシャ リング; へのインターフェイス ポインターへのポインター呼び出し元では、必要なインターフェイスには、ポインターにいない場合、NULL を指定できます。
+*pv*<br/>
+マーシャリングするインターフェイス ポインターへのポインター。呼び出し元が目的のインターフェイスへのポインターを持っていない場合は NULL を指定できます。
 
-*dwDestContext*<br/>
-コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
+*コンテキスト*<br/>
+指定したインターフェイスをマーシャリング解除する宛先コンテキスト。
 
-1 つまたは複数の MSHCTX 列挙値を指定します。
+1 つ以上の MSHCTX 列挙値を指定します。
 
-マーシャ リング解除は、現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは (MSHCTX_LOCAL) の現在のプロセスと同じコンピューター上の別のプロセスでが発生することができます。
+マーシャリング解除は、現在のプロセスの別のアパートメント (MSHCTX_INPROC) または現在のプロセスと同じコンピュータ上の別のプロセス (MSHCTX_LOCAL) で発生する可能性があります。
 
-*pvDestContext*<br/>
+*コンテキスト*<br/>
 今後使用するために予約されています。0 にする必要があります。
 
 *mshlflags*<br/>
-マーシャ リングするデータがクライアント プロセスに送信されるかどうかを指定します: 一般的なケース、または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。
+マーシャリングするデータをクライアント プロセス (一般的なケース) に転送するか、グローバル テーブルに書き込むかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイス ポインターが正常にマーシャ リング s_ok を返します。
+S_OK インターフェイス ポインターが正常にマーシャリングされました。
 
-E_NOINTERFACE、指定したインターフェイスがサポートされていません。
+E_NOINTERFACE 指定されたインターフェイスはサポートされていません。
 
 STG_E_MEDIUMFULL ストリームがいっぱいです。
 
-E_FAIL、操作が失敗しました。
+E_FAIL 操作に失敗しました。
 
-## <a name="marshaller"></a>Ftmbase::marshaller _
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>フトムベース::marshaller_
 
 フリー スレッド マーシャラーへの参照を保持します。
 
@@ -278,9 +278,9 @@ E_FAIL、操作が失敗しました。
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>フトムベース::リリースマーシャルデータ
 
-データのマーシャ リングされたパケットは破棄されます。
+マーシャリングされたデータ パケットを破棄します。
 
 ```cpp
 STDMETHODIMP ReleaseMarshalData(
@@ -291,15 +291,15 @@ STDMETHODIMP ReleaseMarshalData(
 ### <a name="parameters"></a>パラメーター
 
 *pStm*<br/>
-破棄するデータ パケットを格納するストリームへのポインター。
+破棄されるデータ パケットを含むストリームへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="unmarshalinterface"></a>Ftmbase::unmarshalinterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>フトムベース::アンマーシャルインターフェイス
 
-新しく作成されたプロキシを初期化し、そのプロキシにインターフェイス ポインターを返します。
+新しく作成されたプロキシを初期化し、そのプロキシへのインターフェイス ポインターを返します。
 
 ```cpp
 STDMETHODIMP UnmarshalInterface(
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>パラメーター
 
 *pStm*<br/>
-インターフェイス ポインターのマーシャ リングする元となるストリームへのポインター。
+インターフェイス ポインターのマーシャリング解除元のストリームへのポインター。
 
 *riid*<br/>
-マーシャ リングするインターフェイスの識別子への参照。
+マーシャリング解除するインターフェイスの識別子への参照。
 
-*ppv*<br/>
-ときにこの操作が完了したらで要求されたインターフェイス ポインターを受け取るポインター変数のアドレス*riid*します。 この操作が成功した場合 **ppv*マーシャ リングするインターフェイスの要求されたインターフェイス ポインターが含まれています。
+*Ppv*<br/>
+この操作が完了すると *、riid*で要求されたインターフェイス ポインターを受け取るポインター変数のアドレス。 この操作が成功した場合、**ppv*にはマーシャリング解除するインターフェイスの要求されたインターフェイス ポインタが含まれます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、または E_FAIL E_NOINTERFACE します。
+成功した場合はS_OK。それ以外の場合は、E_NOINTERFACEまたはE_FAIL。

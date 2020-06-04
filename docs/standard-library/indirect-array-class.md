@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456338"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687921"
 ---
-# <a name="indirectarray-class"></a>indirect_array クラス
+# <a name="indirect_array-class"></a>indirect_array クラス
 
-親 valarray のインデックスのサブセットを指定することにより定義されるサブセット配列間の演算を実行して valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。
+親 valarray のインデックスのサブセットを指定することによって定義されたサブセット配列間の演算を提供することによって、valarray のサブセットであるオブジェクトをサポートする、内部の補助クラステンプレート。
 
 ## <a name="syntax"></a>構文
 
 ## <a name="remarks"></a>Remarks
 
-クラス`va`は、クラス[valarray](../standard-library/valarray-class.md) **\<> 型**のオブジェクトへの参照と、クラス`valarray<size_t>`のオブジェクト`xa`への参照を格納するオブジェクトを記述します。このオブジェクトは、選択する要素のシーケンスを記述します。`valarray<Type>`オブジェクト。
+クラスは、クラス[valarray](../standard-library/valarray-class.md)  **\<Type >** の `va` オブジェクトへの参照、および `valarray<size_t>` オブジェクトから選択する要素のシーケンスを記述するクラス `valarray<Type>` のオブジェクト `xa` を格納するオブジェクトを表します。
 
-オブジェクトを`indirect_array<Type>`構築するには、フォーム`va[xa]`の式を記述する必要があります。 クラス indirect_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。
+@No__t_0 オブジェクトを構築するには `va[xa]` フォームの式を記述する必要があります。 クラス indirect_array のメンバー関数は、`valarray<Type>` に対して定義されている対応する関数シグネチャのように動作します。ただし、選択された要素のシーケンスのみが影響を受けます。
 
-シーケンスは xa で構成さ**れます。** 要素の[サイズ](../standard-library/valarray-class.md#size)を変更`I`します。要素は`I`内`va`のインデックス**xa**[] になります。
+シーケンスは xa で構成さ**れます。** 要素の[サイズ](../standard-library/valarray-class.md#size)を変更します。ここで、要素 `I` は `va` 内のインデックス**xa**[`I`] になります。
 
 ## <a name="example"></a>例:
 
@@ -66,14 +66,14 @@ int main( )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```cpp
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<valarray>
 

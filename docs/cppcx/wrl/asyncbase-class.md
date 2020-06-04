@@ -53,12 +53,12 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 367d0b0cd3197623b27ee1a50e804cca797aedf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0254aa4dc243eeffa43850c437a833a6530c01e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371858"
 ---
 # <a name="asyncbase-class"></a>AsyncBase クラス
 
@@ -81,14 +81,14 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="parameters"></a>パラメーター
 
-*TComplete*<br/>
+*コンプリート*<br/>
 非同期操作の完了時に呼び出されるイベント ハンドラー。
 
-*TProgress*<br/>
-実行中の非同期操作が現在の操作の進行状況を報告したときに呼び出されるイベント ハンドラー。
+*プログレス*<br/>
+実行中の非同期操作が現在の操作の進行状況を報告するときに呼び出されるイベント ハンドラー。
 
 *resultType*<br/>
-1 つ、 [AsyncResultType](asyncresulttype-enumeration.md)列挙値。 既定では、`SingleResult`します。
+列挙値の 1[つ](asyncresulttype-enumeration.md)。 既定では、`SingleResult` になります。
 
 ## <a name="members"></a>メンバー
 
@@ -96,41 +96,40 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 名前                               | 説明
 ---------------------------------- | -------------------------------------------------
-[AsyncBase::AsyncBase](#asyncbase) | `AsyncBase` クラスのインスタンスを初期化します。
+[非同期ベース::非同期ベース](#asyncbase) | `AsyncBase` クラスのインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                         | 説明
 -------------------------------------------- | -------------------------------------------------------------------------------------
-[Asyncbase::cancel](#cancel)                 | 非同期操作をキャンセルします。
-[AsyncBase::Close](#close)                   | 非同期操作を閉じます。
-[Asyncbase::firecompletion](#firecompletion) | 完了イベント ハンドラーを呼び出します。 または内部の進行状況のデリゲートをリセットします。
-[AsyncBase::FireProgress](#fireprogress)     | 現在の進行状況イベント ハンドラーを呼び出します。
-[AsyncBase::get_ErrorCode](#get-errorcode)   | 現在の非同期操作のエラー コードを取得します。
-[AsyncBase::get_Id](#get-id)                 | 非同期操作のハンドルを取得します。
-[AsyncBase::get_Status](#get-status)         | 非同期操作の状態を示す値を取得します。
-[AsyncBase::GetOnComplete](#getoncomplete)   | 指定された変数には、現在の完了イベント ハンドラーのアドレスをコピーします。
-[AsyncBase::GetOnProgress](#getonprogress)   | 指定された変数には、現在の進行状況イベント ハンドラーのアドレスをコピーします。
-[AsyncBase::put_Id](#put-id)                 | 非同期操作のハンドルを設定します。
-[AsyncBase::PutOnComplete](#putoncomplete)   | 完了イベントのハンドラーのアドレスを指定した値に設定します。
-[AsyncBase::PutOnProgress](#putonprogress)   | 進行状況イベント ハンドラーのアドレスを指定した値に設定します。
-
+[非同期ベース::キャンセル](#cancel)                 | 非同期操作をキャンセルします。
+[非同期ベース::閉じる](#close)                   | 非同期操作を閉じます。
+[非同期ベース::火災完了](#firecompletion) | 完了イベント ハンドラーを呼び出すか、内部進捗デリゲートをリセットします。
+[非同期ベース::火災プログレス](#fireprogress)     | 現在の進行状況イベント ハンドラーを呼び出します。
+[非同期ベース::get_ErrorCode](#get-errorcode)   | 現在の非同期操作のエラー コードを取得します。
+[非同期ベース::get_Id](#get-id)                 | 非同期操作のハンドルを取得します。
+[非同期ベース::get_Status](#get-status)         | 非同期操作の状態を示す値を取得します。
+[非同期ベース::ゲットオンコンプリート](#getoncomplete)   | 現在の完了イベント ハンドラーのアドレスを指定した変数にコピーします。
+[非同期ベース::ゲットオンプログレス](#getonprogress)   | 現在の進行状況イベント ハンドラーのアドレスを、指定した変数にコピーします。
+[非同期ベース::p](#put-id)                 | 非同期操作のハンドルを設定します。
+[非同期ベース::Pコンプリート](#putoncomplete)   | 完了イベント ハンドラーのアドレスを指定した値に設定します。
+[非同期ベース::P](#putonprogress)   | progress イベント ハンドラのアドレスを指定した値に設定します。
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 名前                                                                         | 説明
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | 現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。
-[Asyncbase::checkvalidstateforresultscall](#checkvalidstateforresultscall)   | 現在の非同期状態に非同期操作の結果を収集できるかどうかをテストします。
-[AsyncBase::ContinueAsyncOperation](#continueasyncoperation)                 | 非同期操作が処理を続行する必要がありますまたは中止するかどうかを判断します。
-[AsyncBase::CurrentStatus](#currentstatus)                                   | 現在の非同期操作の状態を取得します。
-[AsyncBase::ErrorCode](#errorcode)                                           | 現在の非同期操作のエラー コードを取得します。
-[Asyncbase::oncancel](#oncancel)                                             | 派生クラスでオーバーライドされると、非同期操作をキャンセルします。
-[AsyncBase::OnClose](#onclose)                                               | 派生クラスでオーバーライドされると、非同期操作を終了します。
-[AsyncBase::OnStart](#onstart)                                               | 派生クラスでオーバーライドされると、非同期操作を開始します。
-[AsyncBase::Start](#start)                                                   | 非同期操作を開始します。
-[AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | 現在の非同期操作が完了したかどうかを示します。
-[AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | 指定したエラー コードが内部エラー状態を変更できるかどうかを示します。
+[非同期ベース::チェックValidステートフォーデリゲートコール](#checkvalidstatefordelegatecall) | 現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。
+[非同期ベース::チェックValidステートフォー結果呼び出し](#checkvalidstateforresultscall)   | 現在の非同期状態で非同期操作の結果を収集できるかどうかをテストします。
+[非同期ベース::継続非同期操作](#continueasyncoperation)                 | 非同期操作の処理を続行するか、停止するかを決定します。
+[非同期ベース::現在のステータス](#currentstatus)                                   | 現在の非同期操作の状態を取得します。
+[非同期ベース::エラーコード](#errorcode)                                           | 現在の非同期操作のエラー コードを取得します。
+[非同期ベース::オンキャンセル](#oncancel)                                             | 派生クラスでオーバーライドされると、非同期操作をキャンセルします。
+[非同期ベース::オンクローズ](#onclose)                                               | 派生クラスでオーバーライドされると、非同期操作を閉じます。
+[非同期ベース::オンスタート](#onstart)                                               | 派生クラスでオーバーライドされると、非同期操作を開始します。
+[非同期ベース::開始](#start)                                                   | 非同期操作を開始します。
+[非同期ベース::完了しました](#trytransitiontocompleted)             | 現在の非同期操作が完了したかどうかを示します。
+[非同期ベース::エラーを変換します。](#trytransitiontoerror)                     | 指定されたエラー コードが内部エラー状態を変更できるかどうかを示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -140,11 +139,11 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** async.h
+**ヘッダー:** 非同期.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="asyncbase"></a>AsyncBase::AsyncBase
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>非同期ベース::非同期ベース
 
 `AsyncBase` クラスのインスタンスを初期化します。
 
@@ -152,7 +151,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 AsyncBase();
 ```
 
-## <a name="cancel"></a>Asyncbase::cancel
+## <a name="asyncbasecancel"></a><a name="cancel"></a>非同期ベース::キャンセル
 
 非同期操作をキャンセルします。
 
@@ -164,13 +163,13 @@ STDMETHOD(
 
 ### <a name="return-value"></a>戻り値
 
-既定では、常に S_OK を返します。
+既定では、常にS_OKを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Cancel()` 既定の実装は、 `IAsyncInfo::Cancel`、実際の作業を行いません。 実際には、非同期操作をキャンセルするには、オーバーライド、`OnCancel()`純粋仮想メソッド。
+`Cancel()`は の既定の`IAsyncInfo::Cancel`実装であり、実際の作業は行いません。 非同期操作を実際にキャンセルするには、純粋`OnCancel()`仮想メソッドをオーバーライドします。
 
-## <a name="checkvalidstatefordelegatecall"></a>AsyncBase::CheckValidStateForDelegateCall
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>非同期ベース::チェックValidステートフォーデリゲートコール
 
 現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。
 
@@ -180,11 +179,11 @@ inline HRESULT CheckValidStateForDelegateCall();
 
 ### <a name="return-value"></a>戻り値
 
-デリゲートのプロパティを変更できる場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+デリゲートのプロパティを変更できる場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-## <a name="checkvalidstateforresultscall"></a>AsyncBase::CheckValidStateForResultsCall
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>非同期ベース::チェックValidステートフォー結果呼び出し
 
-現在の非同期状態に非同期操作の結果を収集できるかどうかをテストします。
+現在の非同期状態で非同期操作の結果を収集できるかどうかをテストします。
 
 ```cpp
 inline HRESULT CheckValidStateForResultsCall();
@@ -192,9 +191,9 @@ inline HRESULT CheckValidStateForResultsCall();
 
 ### <a name="return-value"></a>戻り値
 
-結果を収集する場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL します。
+結果を収集できる場合はS_OKします。それ以外の場合は、E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
 
-## <a name="close"></a>AsyncBase::Close
+## <a name="asyncbaseclose"></a><a name="close"></a>非同期ベース::閉じる
 
 非同期操作を閉じます。
 
@@ -206,15 +205,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>戻り値
 
-操作を閉じるかまたは既に場合は S_OK が閉じられました。それ以外の場合、E_ILLEGAL_STATE_CHANGE します。
+操作が終了するか、既に閉じている場合はS_OK。それ以外の場合は、E_ILLEGAL_STATE_CHANGE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Close()` 既定の実装は、 `IAsyncInfo::Close`、実際の作業を行いません。 実際に閉じる非同期操作には、オーバーライド、`OnClose()`純粋仮想メソッド。
+`Close()`は の既定の`IAsyncInfo::Close`実装であり、実際の作業は行いません。 実際に非同期操作を閉じるには、`OnClose()`純粋仮想メソッドをオーバーライドします。
 
-## <a name="continueasyncoperation"></a>AsyncBase::ContinueAsyncOperation
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>非同期ベース::継続非同期操作
 
-非同期操作が処理を続行する必要がありますまたは中止するかどうかを判断します。
+非同期操作の処理を続行するか、停止するかを決定します。
 
 ```cpp
 inline bool ContinueAsyncOperation();
@@ -222,9 +221,9 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、非同期操作の現在の状態は*開始*、つまり、操作を続行する必要があります。 それ以外の場合、 **false**、つまり、操作を停止する必要があります。
+非同期操作の現在の状態が*開始*されている場合**は true。** それ以外の場合は**false**を指定すると、操作は停止します。
 
-## <a name="currentstatus"></a>AsyncBase::CurrentStatus
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>非同期ベース::現在のステータス
 
 現在の非同期操作の状態を取得します。
 
@@ -237,13 +236,13 @@ inline void CurrentStatus(
 ### <a name="parameters"></a>パラメーター
 
 *status*<br/>
-この操作が現在の状態を格納する場所です。
+この操作が現在の状態を格納する場所。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この操作は、スレッド セーフです。
+この操作はスレッド セーフです。
 
-## <a name="errorcode"></a>AsyncBase::ErrorCode
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>非同期ベース::エラーコード
 
 現在の非同期操作のエラー コードを取得します。
 
@@ -255,16 +254,16 @@ inline void ErrorCode(
 
 ### <a name="parameters"></a>パラメーター
 
-*error*<br/>
-この操作が現在のエラー コードを格納する場所です。
+*エラー*<br/>
+この操作が現在のエラー コードを格納する場所。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この操作は、スレッド セーフです。
+この操作はスレッド セーフです。
 
-## <a name="firecompletion"></a>Asyncbase::firecompletion
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>非同期ベース::火災完了
 
-完了イベント ハンドラーを呼び出します。 または内部の進行状況のデリゲートをリセットします。
+完了イベント ハンドラーを呼び出すか、内部進捗デリゲートをリセットします。
 
 ```cpp
 void FireCompletion(
@@ -274,11 +273,11 @@ void FireCompletion(
 virtual void FireCompletion();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のバージョンの`FireCompletion()`内部の進行状況のデリゲート変数をリセットします。 2 番目のバージョンは、非同期操作が完了した場合、完了イベント ハンドラーを呼び出します。
+の最初の`FireCompletion()`バージョンは、内部進捗状況デリゲート変数をリセットします。 2 番目のバージョンでは、非同期操作が完了した場合に完了イベント ハンドラーが呼び出されます。
 
-## <a name="fireprogress"></a>AsyncBase::FireProgress
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>非同期ベース::火災プログレス
 
 現在の進行状況イベント ハンドラーを呼び出します。
 
@@ -290,14 +289,14 @@ void FireProgress(
 
 ### <a name="parameters"></a>パラメーター
 
-*arg*<br/>
+*Arg*<br/>
 呼び出すイベント ハンドラー メソッド。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ProgressTraits` 派生[ArgTraitsHelper 構造体](argtraitshelper-structure.md)します。
+`ProgressTraits`は[、ArgTraitsHelper 構造体](argtraitshelper-structure.md)から派生します。
 
-## <a name="get-errorcode"></a>AsyncBase::get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>非同期ベース::get_ErrorCode
 
 現在の非同期操作のエラー コードを取得します。
 
@@ -310,13 +309,13 @@ STDMETHOD(
 ### <a name="parameters"></a>パラメーター
 
 *errorCode*<br/>
-現在のエラー コードが格納されている場所です。
+現在のエラー コードが格納されている場所。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL、現在の非同期操作が閉じている場合。
+成功した場合はS_OK。それ以外の場合は、現在の非同期操作が閉じている場合E_ILLEGAL_METHOD_CALL。
 
-## <a name="get-id"></a>AsyncBase::get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a>非同期ベース::get_Id
 
 非同期操作のハンドルを取得します。
 
@@ -328,18 +327,18 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-ハンドルが格納される場所です。
+*id*<br/>
+ハンドルを格納する場所。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、`IAsyncInfo::get_Id` を実装します。
 
-## <a name="get-status"></a>AsyncBase::get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a>非同期ベース::get_Status
 
 非同期操作の状態を示す値を取得します。
 
@@ -352,19 +351,19 @@ STDMETHOD(
 ### <a name="parameters"></a>パラメーター
 
 *status*<br/>
-状態が格納される場所です。 詳細については、次を参照してください。`Windows::Foundation::AsyncStatus`列挙体。
+ステータスを格納する場所。 詳細については、「列挙」`Windows::Foundation::AsyncStatus`を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、`IAsyncInfo::get_Status` を実装します。
 
-## <a name="getoncomplete"></a>AsyncBase::GetOnComplete
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>非同期ベース::ゲットオンコンプリート
 
-指定された変数には、現在の完了イベント ハンドラーのアドレスをコピーします。
+現在の完了イベント ハンドラーのアドレスを指定した変数にコピーします。
 
 ```cpp
 STDMETHOD(
@@ -374,16 +373,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*completeHandler*<br/>
-現在の完了イベント ハンドラーのアドレスが格納されている場所です。
+*完全ハンドラー*<br/>
+現在の完了イベント ハンドラーのアドレスが格納されている場所。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-## <a name="getonprogress"></a>AsyncBase::GetOnProgress
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>非同期ベース::ゲットオンプログレス
 
-指定された変数には、現在の進行状況イベント ハンドラーのアドレスをコピーします。
+現在の進行状況イベント ハンドラーのアドレスを、指定した変数にコピーします。
 
 ```cpp
 STDMETHOD(
@@ -393,14 +392,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*progressHandler*<br/>
-現在の進行状況イベント ハンドラーのアドレスが格納されている場所です。
+*プログレスハンドラー*<br/>
+現在の進行状況イベント ハンドラーのアドレスが格納されている場所。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-## <a name="oncancel"></a>Asyncbase::oncancel
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>非同期ベース::オンキャンセル
 
 派生クラスでオーバーライドされると、非同期操作をキャンセルします。
 
@@ -410,9 +409,9 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="onclose"></a>Asyncbase::onclose
+## <a name="asyncbaseonclose"></a><a name="onclose"></a>非同期ベース::オンクローズ
 
-派生クラスでオーバーライドされると、非同期操作を終了します。
+派生クラスでオーバーライドされると、非同期操作を閉じます。
 
 ```cpp
 virtual void OnClose(
@@ -420,7 +419,7 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="onstart"></a>Asyncbase::onstart
+## <a name="asyncbaseonstart"></a><a name="onstart"></a>非同期ベース::オンスタート
 
 派生クラスでオーバーライドされると、非同期操作を開始します。
 
@@ -430,7 +429,7 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="put-id"></a>AsyncBase::put_Id
+## <a name="asyncbaseput_id"></a><a name="put-id"></a>非同期ベース::p
 
 非同期操作のハンドルを設定します。
 
@@ -442,16 +441,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-0 以外のハンドル。
+*id*<br/>
+ゼロ以外のハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_INVALIDARG または E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_INVALIDARGまたはE_ILLEGAL_METHOD_CALL。
 
-## <a name="putoncomplete"></a>AsyncBase::PutOnComplete
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>非同期ベース::Pコンプリート
 
-完了イベントのハンドラーのアドレスを指定した値に設定します。
+完了イベント ハンドラーのアドレスを指定した値に設定します。
 
 ```cpp
 STDMETHOD(
@@ -461,16 +460,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*completeHandler*<br/>
-完了イベントのハンドラーが設定されているアドレスです。
+*完全ハンドラー*<br/>
+完了イベント ハンドラーが設定されるアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-## <a name="putonprogress"></a>AsyncBase::PutOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>非同期ベース::P
 
-進行状況イベント ハンドラーのアドレスを指定した値に設定します。
+progress イベント ハンドラのアドレスを指定した値に設定します。
 
 ```cpp
 STDMETHOD(
@@ -480,14 +479,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*progressHandler*<br/>
-進行状況イベントのハンドラーが設定されているアドレスです。
+*プログレスハンドラー*<br/>
+進行状況イベント ハンドラーが設定されるアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+成功した場合はS_OK。それ以外の場合は、E_ILLEGAL_METHOD_CALL。
 
-## <a name="start"></a>Asyncbase::start
+## <a name="asyncbasestart"></a><a name="start"></a>非同期ベース::開始
 
 非同期操作を開始します。
 
@@ -499,13 +498,13 @@ STDMETHOD(
 
 ### <a name="return-value"></a>戻り値
 
-S_OK 場合は、操作の開始またはが既に開始します。それ以外の場合、E_ILLEGAL_STATE_CHANGE します。
+操作が開始されるか、既に開始されている場合はS_OK。それ以外の場合は、E_ILLEGAL_STATE_CHANGE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Start()` 外部から参照できないためは非同期操作に「ホット スタート」呼び出し元に返す前に保護されたメソッドです。
+`Start()`は、非同期操作が呼び出し元に戻る前に "ホット スタート" であるため、外部から参照できない保護されたメソッドです。
 
-## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>非同期ベース::完了しました
 
 現在の非同期操作が完了したかどうかを示します。
 
@@ -517,11 +516,11 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、非同期の操作が完了するとします。 それ以外の場合、 **false**します。
+非同期操作が完了した場合は**true、** その他の操作は完了しました。それ以外の場合**は false。**
 
-## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>非同期ベース::エラーを変換します。
 
-指定したエラー コードが内部エラー状態を変更できるかどうかを示します。
+指定されたエラー コードが内部エラー状態を変更できるかどうかを示します。
 
 ```cpp
 bool TryTransitionToError(
@@ -531,13 +530,13 @@ bool TryTransitionToError(
 
 ### <a name="parameters"></a>パラメーター
 
-*error*<br/>
-エラーの hresult 値。
+*エラー*<br/>
+エラー HRESULT。
 
 ### <a name="return-value"></a>戻り値
 
-**true**内部エラー状態が変更された。 それ以外の場合**false**します。
+内部エラー状態が変更された場合は**true。** それ以外の場合**は false。**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この操作は、エラー状態は S_OK を既に設定されている場合にのみ、エラー状態を変更します。 エラー状態であるエラー、キャンセル、完了すると、または閉じられた場合は、この操作を指定しても効果はありません。
+この操作は、エラー状態が既にS_OKに設定されている場合にのみ、エラー状態を変更します。 エラー状態が既にエラー、キャンセル、完了、またはクローズされている場合、この操作は無効です。

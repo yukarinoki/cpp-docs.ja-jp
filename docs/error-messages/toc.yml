@@ -141,6 +141,8 @@
       href: compiler-errors-1/fatal-error-c1046.md
     - name: 致命的なエラー C1047
       href: compiler-errors-1/fatal-error-c1047.md
+    - name: 致命的なエラー C1049
+      href: compiler-errors-1/fatal-error-c1049.md
     - name: 致命的なエラー C1051
       href: compiler-errors-1/fatal-error-c1051.md
     - name: 致命的なエラー C1052
@@ -3852,6 +3854,8 @@
           href: compiler-warnings/compiler-warning-level-4-c4571.md
         - name: コンパイラ警告 (レベル 1) C4572
           href: compiler-warnings/compiler-warning-level-1-c4572.md
+        - name: コンパイラ警告 (レベル 1) C4577
+          href: compiler-warnings/compiler-warning-level-1-c4577.md
         - name: コンパイラ警告 (レベル 3) C4580
           href: compiler-warnings/compiler-warning-level-3-c4580.md
         - name: コンパイラ警告 (レベル 1) C4581
@@ -4248,6 +4252,8 @@
           href: compiler-warnings/c5045.md
         - name: コンパイラ警告 (レベル 2) C5046
           href: compiler-warnings/c5046.md
+        - name: コンパイラ警告 (レベル 1) C5105
+          href: compiler-warnings/c5105.md
 - name: コンパイラのバージョンによるコンパイラ警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 既定で無効になっているコンパイラ警告

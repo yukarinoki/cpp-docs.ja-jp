@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1721d472c81c62ba01282f43c7e678d7f84206b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200084"
 ---
 # <a name="compiler-warning-level-1-c4142"></a>コンパイラの警告 (レベル 1) C4142
 
-問題のない型の再定義しています
+型の問題のない再定義
 
-型は、生成されたコードに影響が方法で再定義しません。
+型は、生成されたコードに影響を与えない方法で再定義されます。
 
 次のような原因をチェックして問題を解決するには:
 
-- 派生クラスのメンバー関数は、基底クラスのメンバー関数は、対応するからさまざまな戻り値の型。
+- 派生クラスのメンバー関数は、基底クラスの対応するメンバー関数とは異なる戻り値の型を持っています。
 
-- 定義されている型、`typedef`別の構文を使用して、コマンドが再定義します。
+- `typedef` コマンドで定義された型が、別の構文を使用して再定義されています。
 
 次の例では、C4142 が生成されます。
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;

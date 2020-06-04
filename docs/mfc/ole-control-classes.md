@@ -1,8 +1,6 @@
 ---
 title: OLE コントロール クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - custom controls [MFC], classes
@@ -12,45 +10,45 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c28520d592c4bd49ab6cb40edbb2f5ddf59846
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186089"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447645"
 ---
 # <a name="ole-control-classes"></a>OLE コントロール クラス
 
-これらは、OLE コントロールを作成するときに使用するプライマリ クラスです。 `COleControlModule` OLE コントロール モジュールのクラスは似ています、 [CWinApp](../mfc/reference/cwinapp-class.md)アプリケーション内のクラス。 各モジュールは 1 つまたは複数の OLE コントロール。これらのコントロールがによって表される`COleControl`オブジェクト。 これらのコントロールを使用して、コンテナーと通信`CConnectionPoint`オブジェクト。
+これらは、OLE コントロールを記述するときに使用する主要なクラスです。 OLE コントロールモジュールの `COleControlModule` クラスは、アプリケーションの[CWinApp](../mfc/reference/cwinapp-class.md)クラスに似ています。 各モジュールは、1つまたは複数の OLE コントロールを実装します。これらのコントロールは `COleControl` のオブジェクトによって表されます。 これらのコントロールは `CConnectionPoint` オブジェクトを使用してコンテナーと通信します。
 
-`CPictureHolder`と`CFontHolder`クラスは、画像やフォントなどの COM インターフェイスをカプセル化中に、`COlePropertyPage`と`CPropExchange`クラスを使用して、プロパティ ページとコントロールのプロパティの永続化を実装できます。
+`CPictureHolder` クラスと `CFontHolder` クラスは、画像とフォントの COM インターフェイスをカプセル化します。一方、`COlePropertyPage` および `CPropExchange` クラスは、プロパティページとコントロールのプロパティの永続化を実装するのに役立ちます。
 
 [COleControlModule](../mfc/reference/colecontrolmodule-class.md)<br/>
-置換、 `CWinApp` OLE コントロール モジュールのクラス。 派生、 `COleControlModule` OLE コントロール モジュール オブジェクトを開発するクラス。 OLE コントロールのモジュールを初期化するために、メンバー関数を提供します。
+OLE コントロールモジュールの `CWinApp` クラスを置き換えます。 `COleControlModule` クラスから派生させて、OLE コントロールモジュールオブジェクトを開発します。 OLE コントロールのモジュールを初期化するためのメンバー関数が用意されています。
 
 [COleControl](../mfc/reference/colecontrol-class.md)<br/>
-派生、 `COleControl` OLE コントロールを開発するクラス。 派生した`CWnd`、このクラスは、Windows のウィンドウ オブジェクトのすべての機能とイベントの発生からメソッドとプロパティをサポートする機能などの追加 OLE 固有の機能を継承します。
+`COleControl` クラスから派生させて、OLE コントロールを開発します。 `CWnd`から派生したこのクラスは、Windows ウィンドウオブジェクトのすべての機能に加えて、イベントの発生やメソッドとプロパティをサポートする機能などの追加の OLE 固有の機能を継承します。
 
 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)<br/>
-`CConnectionPoint`クラスは、特殊な種類の接続ポイントと呼ばれる他の OLE オブジェクトとの通信に使用されるインターフェイスを定義します。 接続ポイントは、イベントを発生させるなどの他のオブジェクトに対するアクションを開始して、変更通知が送信インターフェイスを実装します。
+`CConnectionPoint` クラスは、コネクションポイントと呼ばれる他の OLE オブジェクトとの通信に使用される特別な種類のインターフェイスを定義します。 コネクションポイントは、イベントの発生や通知の変更など、他のオブジェクトに対するアクションを開始できる送信インターフェイスを実装します。
 
 [CPictureHolder](../mfc/reference/cpictureholder-class.md)<br/>
-Windows 画像オブジェクトの機能をカプセル化し、 `IPicture` COM インターフェイス; OLE コントロールのカスタム Picture プロパティを実装するために使用します。
+Windows picture オブジェクトと `IPicture` COM インターフェイスの機能をカプセル化します。OLE コントロールのカスタム Picture プロパティを実装するために使用されます。
 
 [CFontHolder](../mfc/reference/cfontholder-class.md)<br/>
-Windows のフォント オブジェクトの機能をカプセル化し、 `IFont` COM インターフェイス; OLE コントロールのストック フォント プロパティを実装するために使用します。
+Windows のフォントオブジェクトと `IFont` COM インターフェイスの機能をカプセル化します。OLE コントロールのストックフォントプロパティを実装するために使用されます。
 
 [COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
-ダイアログ ボックスのようなグラフィカル インターフェイスで制御する OLE のプロパティを表示します。
+ダイアログボックスと同様に、グラフィカルインターフェイスに OLE コントロールのプロパティを表示します。
 
 [CPropExchange](../mfc/reference/cpropexchange-class.md)<br/>
-OLE コントロールのプロパティの永続化の実装をサポートしています。 類似しています[CDataExchange](../mfc/reference/cdataexchange-class.md)のダイアログ ボックス。
+OLE コントロールのプロパティ永続化の実装をサポートします。 ダイアログボックスの[CDataExchange](../mfc/reference/cdataexchange-class.md)に似ています。
 
 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)<br/>
-モニカー、または、モニカーに行うことができますを文字列形式を受け取り、モニカーは名前のストリームに同期的にバインドします。
+モニカーを取得します。また、モニカーにすることができる文字列形式を受け取り、モニカーが名前であるストリームに同期的にバインドします。
 
 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)<br/>
-同じように動作`CMonikerFile`。 ただし、モニカーは名前のストリームに、モニカーを非同期的にバインドにします。
+`CMonikerFile`と同様に機能します。ただし、モニカーは、モニカーが名前であるストリームに非同期的にバインドされます。
 
 [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)<br/>
 非同期で読み込める OLE コントロール プロパティを実装します。
@@ -59,11 +57,11 @@ OLE コントロールのプロパティの永続化の実装をサポートし�
 非同期で転送し、メモリ ファイルにキャッシュする OLE コントロール プロパティを実装します。
 
 [COleCmdUI](../mfc/reference/colecmdui-class.md)<br/>
-により、作業中の文書 (という名前、開く、印刷、具合) などのコンテナーのユーザー インターフェイスで発生するコマンドを受信でき、アクティブなドキュメントのユーザー インターフェイスで発生するコマンドを受信するためのコンテナー。
+アクティブなドキュメントが、コンテナーのユーザーインターフェイス (FileNew、Open、Print など) で発生したコマンドを受け取ることができるようにします。また、コンテナーは、アクティブなドキュメントのユーザーインターフェイスで生成されたコマンドを受け取ることができます。
 
 [COleSafeArray](../mfc/reference/colesafearray-class.md)<br/>
-任意の型と次元の配列で機能します。
+任意の型および次元の配列を操作します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

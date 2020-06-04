@@ -1,9 +1,10 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
-apiname:
+ms.date: 4/2/2020
+api_name:
 - setbuf
-apilocation:
+- _o_setbuf
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +16,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356394"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910329"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -44,21 +49,23 @@ void setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
-*バッファー*<br/>
+*格納*<br/>
 ユーザー割り当てのバッファー。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Setbuf**関数のバッファリングを制御*ストリーム*します。 *ストリーム*引数は、読み取りまたは書き込みされていないを開いているファイルを指す必要があります。 場合、*バッファー*引数が**NULL**ストリームがバッファー内ではありません。 場合は、バッファーが長さの文字配列 をポイントする必要があります、 **BUFSIZ**ここで、 **BUFSIZ** STDIO で定義されているバッファー サイズは、します。H. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定では、バッファーなし、使用することが**setbuf**にバッファーを割り当てる**stderr**します。
+**Setbuf**関数は、*ストリーム*のバッファリングを制御します。 *ストリーム*引数は、読み取りまたは書き込みが行われていない開いているファイルを参照する必要があります。 *バッファー*引数が**NULL**の場合、ストリームはバッファーされません。 それ以外の場合、バッファーは長さ**BUFSIZ**の文字配列を指す必要があります。 **BUFSIZ**は、STDIO で定義されているバッファーサイズです。始め. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定ではバッファリングされませんが、 **setbuf**を使用して、 **stderr**にバッファーを割り当てることができます。
 
-**setbuf**置き換わりました[setvbuf](setvbuf.md)、これは、新しいコード用の優先ルーチンです。 異なり**setvbuf**、 **setbuf**エラーの報告方法がありません。 **setvbuf**バッファリング モードとバッファー サイズの両方を制御することもできます。 **setbuf**既存のコードとの互換性のために存在します。
+**setbuf**は[setvbuf](setvbuf.md)に置き換えられました。これは、新しいコードの推奨されるルーチンです。 **Setvbuf**とは異なり、 **setbuf**にはエラーを報告する方法がありません。 また、 **setvbuf**では、バッファリングモードとバッファーサイズの両方を制御できます。 **setbuf**は、既存のコードとの互換性を維持するために存在します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

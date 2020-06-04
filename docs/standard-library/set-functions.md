@@ -6,15 +6,15 @@ f1_keywords:
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 ms.openlocfilehash: a3a63fb86caa3485b1ee14538c3eb1f1ff72923e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246414"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425167"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt; 系関数
 
-## <a name="swap"></a> swap (map)
+## <a name="swap"></a>スワップ (マップ)
 
 2 つの set の要素を交換します。
 
@@ -25,25 +25,25 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
-交換する要素を提供するセットまたはセットと交換される要素がセット*左*します。
+*右*\
+交換する要素を提供するセット。または、要素が設定された*左側*の要素と交換されるセット。
 
 *左*\
-セットと交換される要素がセット*右*します。
+セット*権限*と要素が交換されるセット。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テンプレート関数は、コンテナー クラス set メンバー関数の実行に特化したアルゴリズム`left.`[スワップ](../standard-library/set-class.md#swap)(`right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+このテンプレート関数は、コンテナークラスに特化したアルゴリズムであり、メンバー関数 `left.`[swap](../standard-library/set-class.md#swap)(`right`) を実行するように設定されています。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
-`template` \< **classT**> **void swap**( **T&** , **T&** )
+`template` \< **classT**> **void swap**( **t &** 、 **t &** )
 
 は、algorithm クラスにあり、代入によって機能し、処理は低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
 ### <a name="example"></a>例
 
-`swap` のテンプレート バージョンの使用例については、メンバー クラス [set::swap](../standard-library/set-class.md#swap) のコード例をご覧ください。
+[ のテンプレート バージョンの使用例については、メンバー クラス ](../standard-library/set-class.md#swap)set::swap`swap` のコード例をご覧ください。
 
-## <a name="swap_multiset"></a> swap (multiset)
+## <a name="swap_multiset"></a>スワップ (マルチセット)
 
 2 つの multiset の要素を交換します。
 
@@ -54,20 +54,20 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
-交換する要素を提供する multiset または要素が multiset と交換される multiset*左*します。
+*右*\
+交換する要素を提供するマルチセット、または要素がマルチセットの*左側*と交換されるマルチセット。
 
 *左*\
-要素が multiset と交換される multiset*右*します。
+要素がマルチセット*右*の要素と交換されるマルチセット。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テンプレート関数はメンバー関数を実行するコンテナー クラス multiset に特化したアルゴリズム`left.`[スワップ](../standard-library/multiset-class.md#swap)(`right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+このテンプレート関数は、コンテナークラスのマルチセットに特化したアルゴリズムであり、`left.`[スワップ](../standard-library/multiset-class.md#swap)(`right`) のメンバー関数を実行します。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
-`template` \< **classT**> **void swap**( **T&** , **T&** )
+`template` \< **classT**> **void swap**( **t &** 、 **t &** )
 
 は、algorithm クラスにあり、代入によって機能し、処理は低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
 ### <a name="example"></a>例
 
-`swap` のテンプレート バージョンの使用例については、メンバー クラス [multiset::swap](../standard-library/multiset-class.md#swap) のコード例をご覧ください。
+[ のテンプレート バージョンの使用例については、メンバー クラス ](../standard-library/multiset-class.md#swap)multiset::swap`swap` のコード例をご覧ください。

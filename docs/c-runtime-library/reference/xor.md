@@ -1,7 +1,7 @@
 ---
 title: xor
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,20 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- Xor
 - std::xor
 - std.xor
 helpviewer_keywords:
 - xor function
 ms.assetid: 0fe9554b-d87b-4487-92ed-366c6dc21df2
-ms.openlocfilehash: 18ef9b442e46c219739133c894afe53c7242bacb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9b3c393f481f083dcf476ae95cc30541a01ad28
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383387"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170099"
 ---
 # <a name="xor"></a>xor
 
@@ -38,7 +40,7 @@ ms.locfileid: "62383387"
 #define xor ^
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 マクロにより ^ 演算子が生成されます。
 
@@ -70,4 +72,4 @@ int main( )
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<iso646.h>
+**ヘッダー:** \<iso646 >

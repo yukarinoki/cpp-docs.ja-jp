@@ -1,28 +1,28 @@
 ---
-title: '方法: オーバーライド指定子を宣言 (C +/cli CLI)'
+title: '方法 : オーバーライド指定子を宣言する (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387423"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374451"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>方法: ネイティブ コンパイルでオーバーライド指定子を宣言 (C +/cli CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>方法: ネイティブ コンパイルでオーバーライド指定子を宣言する (C++/CLI)
 
-[封印された](../extensions/sealed-cpp-component-extensions.md)、[抽象](../extensions/abstract-cpp-component-extensions.md)、および[オーバーライド](../extensions/override-cpp-component-extensions.md)は使用しないでコンパイルで使用可能な **/ZW**または[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。
+[/ZW](../extensions/sealed-cpp-component-extensions.md)または[/clr](../build/reference/clr-common-language-runtime-compilation.md)を使用しないコンパイルでは、**/ZW**シール 、[抽象](../extensions/abstract-cpp-component-extensions.md)、[およびオーバーライド](../extensions/override-cpp-component-extensions.md)を使用できます。
 
 > [!NOTE]
->  ISO c 11 標準言語が、[オーバーライド](../cpp/override-specifier.md)識別子と[最終的な](../cpp/final-specifier.md)識別子、およびその両方が Visual Studio の使用でサポートされている`final`の代わりに`sealed`するものではコードで(ネイティブのみ) としてコンパイルします。
+> ISO C++11 標準言語には[オーバーライド](../cpp/override-specifier.md)識別子と[最終](../cpp/final-specifier.md)識別子があり、どちらもネイティブ専用としてコンパイルされるコードではなく`final`、Visual `sealed` Studio の使用でサポートされています。
 
 ## <a name="example"></a>例
 
 ### <a name="description"></a>説明
 
-例を次に示します`sealed`はネイティブ コンパイルで有効です。
+ネイティブ コンパイルで有効`sealed`な例を次に示します。
 
 ### <a name="code"></a>コード
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>説明
 
-次の例を示します`override`はネイティブ コンパイルで有効です。
+次の例は、`override`ネイティブ コンパイルで有効であることを示しています。
 
 ### <a name="code"></a>コード
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>説明
 
-この例では`abstract`はネイティブ コンパイルで有効です。
+この例では、`abstract`ネイティブ コンパイルで有効であることを示します。
 
 ### <a name="code"></a>コード
 

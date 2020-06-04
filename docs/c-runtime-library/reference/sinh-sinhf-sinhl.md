@@ -1,11 +1,13 @@
 ---
 title: sinh、sinhf、sinhl
-ms.date: 04/10/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
+- sinh
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+- _o_sinh
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,16 +37,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356278"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909902"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
-双曲線正弦を計算します。
+ハイパーボリックサインを計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -62,26 +68,28 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Sinh**関数のハイパーボリック サインを返します*x*します。 既定で、結果が大きすぎる、 **sinh**設定**errno**に**ERANGE** ± を返します**HUGE_VAL**します。
+**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh**は**errno**を**ERANGE**に設定し、±**HUGE_VAL**を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|なし|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
+|± QNAN、IND|None|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sinh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**sinh**は**二重**します。
+C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**sinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sinh**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> または \<math.h>|
+|**sinh**、 **sinhf**、 **sinhf**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

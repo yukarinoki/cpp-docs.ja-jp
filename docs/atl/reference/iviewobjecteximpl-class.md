@@ -1,5 +1,5 @@
 ---
-title: Iviewの Teximpl クラス
+title: クラスを表示します。
 ms.date: 11/04/2016
 f1_keywords:
 - IViewObjectExImpl
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 3aead41f317d175eac9dcb094aa2070d82dc6185
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59c5657dcd892544f7e790b52325cb9ecba0dd56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326340"
 ---
-# <a name="iviewobjecteximpl-class"></a>Iviewの Teximpl クラス
+# <a name="iviewobjecteximpl-class"></a>クラスを表示します。
 
-このクラスは`IUnknown`を実装し、 [iviewobject](/windows/win32/api/oleidl/nn-oleidl-iviewobject)、 [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)、および[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)インターフェイスの既定の実装を提供します。
+このクラスは、`IUnknown`実装し、既定の実装を提供します、 IViewObject、IViewObject2、および[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)インターフェイス。 [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject) [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`IViewObjectExImpl`派生したクラス。
+から派生したクラス`IViewObjectExImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -55,22 +55,22 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|コントロールの表現をデバイスコンテキストに描画します。|
-|[Iview: Teximpl:: Freeze](#freeze)|コントロールの描画された表現を固定して、が`Unfreeze`変更されないようにします。 ATL 実装は E_NOTIMPL を返します。|
-|[Iviewの Teximpl:: GetAdvise](#getadvise)|コントロール上の既存のアドバイザリシンク接続がある場合は、それを取得します。|
-|[Iviewの Teximpl:: GetColorSet](#getcolorset)|コントロールが描画に使用する論理パレットを返します。 ATL 実装は E_NOTIMPL を返します。|
-|[Iviewの Teximpl:: GetExtent](#getextent)|コントロールクラスのデータメンバー [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)から、コントロールの表示サイズを HIMETRIC 単位 (1 ユニットあたり0.01 ミリメートル) で取得します。|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|ユーザーがオブジェクトのサイズを変更するときに使用するオブジェクトのコンテナーからサイズ変更のヒントを提供します。|
-|[IViewObjectExImpl::GetRect](#getrect)|要求された描画の側面を記述する四角形を返します。 ATL 実装は E_NOTIMPL を返します。|
-|[Iviewの Teximpl:: GetViewStatus](#getviewstatus)|オブジェクトの不透明度とサポートされている描画の側面に関する情報を返します。|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|指定した点が指定した四角形内にあるかどうかを確認`pHitResult`し、で[ヒット結果](/windows/win32/api/ocidl/ne-ocidl-hitresult)の値を返します。|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|コントロールの表示領域が、指定された位置の四角形内の任意の点と重なっている`pHitResult`かどうかをチェックし、でのヒット結果の値を返します。|
-|[Iviewの Teximpl:: SetAdvise](#setadvise)|コントロールとアドバイズシンク間の接続を設定して、コントロールのビューの変更についてシンクに通知できるようにします。|
-|[Iviewの Teximpl:: 凍結解除](#unfreeze)|コントロールの描画された表現を Unfreezes します。 ATL 実装は E_NOTIMPL を返します。|
+|[オブジェクトエクスプル::Dロー](#draw)|コントロールの表現をデバイス コンテキストに描画します。|
+|[IView オブジェクトエクスプル::フリーズ](#freeze)|描画されたコントロールの表現を固定し、 が表示されるまでは変化しません`Unfreeze`。 ATL の実装はE_NOTIMPL返します。|
+|[オブジェクトエクスプル::GetAdvise](#getadvise)|コントロール上に既存のアドバイザリ シンク接続がある場合は、その接続を取得します。|
+|[オブジェクトエクスプル::ゲットカラーセット](#getcolorset)|描画用のコントロールで使用される論理パレットを返します。 ATL の実装はE_NOTIMPL返します。|
+|[オブジェクトエクスプル::ゲットエクステント](#getextent)|コントロール クラスのデータ メンバー [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)から、コントロールの表示サイズを HIMETRIC 単位 (単位あたり 0.01 ミリメートル) で取得します。|
+|[オブジェクトエクスプル::ゲットナチュラルエクステント](#getnaturalextent)|ユーザーがサイズ変更を行う場合に使用するオブジェクトのサイズ変更ヒントをコンテナーから提供します。|
+|[IView オブジェクトエクスプル::ゲットレック](#getrect)|要求された描画の側面を示す四角形を返します。 ATL の実装はE_NOTIMPL返します。|
+|[オブジェクトを追加するオブジェクトのインプル::取得状態](#getviewstatus)|オブジェクトの不透明度、およびサポートされている描画の側面に関する情報を返します。|
+|[IView オブジェクトエクスプル::クエリヒットポイント](#queryhitpoint)|指定した点が指定された四角形内にあるかどうかを確認し、 に`pHitResult`[HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult)値を返します。|
+|[IView オブジェクトエクスプル::クエリヒットレクト](#queryhitrect)|コントロールの表示四角形が、指定した位置の四角形内の任意のポイントと重なっているかどうかを確認`pHitResult`し、HITRESULT 値を返します。|
+|[オブジェクトエクスプル::セットアアドバイス](#setadvise)|コントロールとアアドバイス シンクの間の接続を設定し、コントロールのビューの変更をシンクに通知できるようにします。|
+|[IView オブジェクトエクスプル::フリーズ解除](#unfreeze)|描画されたコントロールの表現をフリーズ解除します。 ATL の実装はE_NOTIMPL返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[Iviewobject](/windows/win32/api/oleidl/nn-oleidl-iviewobject)、 [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)、および[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)インターフェイスを使用すると、コントロールを直接表示し、アドバイズシンクを作成および管理して、コントロールの表示で変更をコンテナーに通知することができます。 この`IViewObjectEx`インターフェイスでは、ちらつきなしの描画、四角形でない透明なコントロール、およびヒットテスト (コントロールでマウスクリックを閉じる方法など) の拡張コントロール機能がサポートされています。 クラス`IViewObjectExImpl`は、これらのインターフェイスの既定の実装`IUnknown`を提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
+[IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject) [、IViewObject2、](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)および[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)インターフェイスを使用すると、コントロール自体を直接表示し、コントロール表示の変更をコンテナーに通知するアアドバイス シンクを作成および管理できます。 この`IViewObjectEx`インターフェイスは、ちらつきのない描画、四角形以外の透明なコントロール、ヒット テスト (たとえば、コントロール上でマウス クリックを考慮する必要がある程度) などの拡張コントロール機能をサポートします。 Class`IViewObjectExImpl`は、デバッグ ビルドでダンプ デバイス`IUnknown`に情報を送信することで、これらのインターフェイスと実装の既定の実装を提供します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,11 +80,11 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl. h
+**ヘッダー:** atlctl.h
 
-##  <a name="draw"></a>  IViewObjectExImpl::Draw
+## <a name="iviewobjecteximpldraw"></a><a name="draw"></a>オブジェクトエクスプル::Dロー
 
-コントロールの表現をデバイスコンテキストに描画します。
+コントロールの表現をデバイス コンテキストに描画します。
 
 ```
 STDMETHOD(Draw)(
@@ -99,15 +99,15 @@ STDMETHOD(Draw)(
     DWORD_PTR /* dwContinue */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは`CComControl::OnDrawAdvanced` 、このメソッドを呼び出して、コントロール`OnDraw`クラスのメソッドを呼び出します。 ATL コントロールウィザードを使用してコントロールを作成すると、コントロールクラスにメソッドが自動的に追加されます。`OnDraw` ウィザードの既定`OnDraw`では、"ATL 3.0" というラベルの四角形が描画されます。
+このメソッドは`CComControl::OnDrawAdvanced`、コントロール クラスの`OnDraw`メソッドを呼び出す呼び出しを行います。 ATL コントロール ウィザードを使用してコントロールを作成すると、`OnDraw`メソッドがコントロール クラスに自動的に追加されます。 ウィザードの既定`OnDraw`では、ラベル "ATL 3.0" の四角形が描画されます。
 
-Windows SDK の「 [Iviewobject::D raw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) 」を参照してください。
+Windows SDK[の「iView オブジェクト::Draw」](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)を参照してください。
 
-##  <a name="freeze"></a>  IViewObjectExImpl::Freeze
+## <a name="iviewobjecteximplfreeze"></a><a name="freeze"></a>IView オブジェクトエクスプル::フリーズ
 
-コントロールの描画された表現を固定して、が`Unfreeze`変更されないようにします。 ATL 実装は E_NOTIMPL を返します。
+描画されたコントロールの表現を固定し、 が表示されるまでは変化しません`Unfreeze`。 ATL の実装はE_NOTIMPL返します。
 
 ```
 STDMETHOD(Freeze)(
@@ -117,13 +117,13 @@ STDMETHOD(Freeze)(
     DWORD* /* pdwFreeze */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iviewobject:: Freeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) 」を参照してください。
+「ウィンドウ[SDK の IView オブジェクト::フリーズ](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze)」を参照してください。
 
-##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise
+## <a name="iviewobjecteximplgetadvise"></a><a name="getadvise"></a>オブジェクトエクスプル::GetAdvise
 
-コントロール上の既存のアドバイザリシンク接続がある場合は、それを取得します。
+コントロール上に既存のアドバイザリ シンク接続がある場合は、その接続を取得します。
 
 ```
 STDMETHOD(GetAdvise)(
@@ -132,15 +132,15 @@ STDMETHOD(GetAdvise)(
     IAdviseSink** /* ppAdvSink */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アドバイザリシンクは、コントロールクラスのデータメンバー [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)に格納されます。
+アドバイザリ シンクは、コントロール クラス のデータ メンバー [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)に格納されます。
 
-Windows SDK の「 [Iviewobject:: GetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) 」を参照してください。
+Windows SDK[の「IView オブジェクト::GetAdvise」](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise)を参照してください。
 
-##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet
+## <a name="iviewobjecteximplgetcolorset"></a><a name="getcolorset"></a>オブジェクトエクスプル::ゲットカラーセット
 
-コントロールが描画に使用する論理パレットを返します。 ATL 実装は E_NOTIMPL を返します。
+描画用のコントロールで使用される論理パレットを返します。 ATL の実装はE_NOTIMPL返します。
 
 ```
 STDMETHOD(GetColorSet)(
@@ -152,13 +152,13 @@ STDMETHOD(GetColorSet)(
     LOGPALETTE** /* ppColorSet */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iviewobject:: GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) 」を参照してください。
+「ウィンドウズ SDK の[IView オブジェクト::GetColorSet」](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset)を参照してください。
 
-##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent
+## <a name="iviewobjecteximplgetextent"></a><a name="getextent"></a>オブジェクトエクスプル::ゲットエクステント
 
-コントロールクラスのデータメンバー [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)から、コントロールの表示サイズを HIMETRIC 単位 (1 ユニットあたり0.01 ミリメートル) で取得します。
+コントロール クラスのデータ メンバー [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)から、コントロールの表示サイズを HIMETRIC 単位 (単位あたり 0.01 ミリメートル) で取得します。
 
 ```
 STDMETHOD(GetExtent)(
@@ -168,13 +168,13 @@ STDMETHOD(GetExtent)(
     LPSIZEL* lpsizel);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IViewObject2:: GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) 」を参照してください。
+Windows SDK[の「IView オブジェクト2::GetExtent」](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent)を参照してください。
 
-##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent
+## <a name="iviewobjecteximplgetnaturalextent"></a><a name="getnaturalextent"></a>オブジェクトエクスプル::ゲットナチュラルエクステント
 
-ユーザーがオブジェクトのサイズを変更するときに使用するオブジェクトのコンテナーからサイズ変更のヒントを提供します。
+ユーザーがサイズ変更を行う場合に使用するオブジェクトのサイズ変更ヒントをコンテナーから提供します。
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -186,41 +186,41 @@ STDMETHOD(GetNaturalExtent)(
     LPSIZEL psizel);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`dwAspect` DVASPECT_CONTENT で*pExtentInfo-> dwExtentMode*が DVEXTENT_CONTENT の場合、は`psizel` * をコントロールクラスのデータメンバー [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)に設定します。 それ以外の場合は、エラー HRESULT を返します。
+DVASPECT_CONTENT`dwAspect`され *、>dwExtentMode*がDVEXTENT_CONTENTされている場合は、 *`psizel`をコントロール クラスのデータ メンバー [CComControlBase::m_sizeNatural に](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)設定します。 それ以外の場合は、エラー HRESULT を返します。
 
-Windows SDK の「 [IViewObjectEx:: GetNaturalExtent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) 」を参照してください。
+Windows SDK[の「IViewObjectEx::取得自然範囲](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent)」を参照してください。
 
-##  <a name="getrect"></a>  IViewObjectExImpl::GetRect
+## <a name="iviewobjecteximplgetrect"></a><a name="getrect"></a>IView オブジェクトエクスプル::ゲットレック
 
-要求された描画の側面を記述する四角形を返します。 ATL 実装は E_NOTIMPL を返します。
+要求された描画の側面を示す四角形を返します。 ATL の実装はE_NOTIMPL返します。
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [IViewObjectEx:: GetRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) 」を参照してください。
+Windows SDK[の「IViewObjectEx::GetRect」](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect)を参照してください。
 
-##  <a name="getviewstatus"></a>Iviewの Teximpl:: GetViewStatus
+## <a name="iviewobjecteximplgetviewstatus"></a><a name="getviewstatus"></a>オブジェクトを追加するオブジェクトのインプル::取得状態
 
-オブジェクトの不透明度とサポートされている描画の側面に関する情報を返します。
+オブジェクトの不透明度、およびサポートされている描画の側面に関する情報を返します。
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、ATL `pdwStatus`は、コントロールが VIEWSTATUS_OPAQUE をサポートしていることを示すを設定します (可能な値は[viewstatus](/windows/win32/api/ocidl/ne-ocidl-viewstatus)列挙体にあります)。
+既定では、ATL`pdwStatus`はコントロールがVIEWSTATUS_OPAQUEをサポートしていることを示すために設定します (可能な値は[VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus)列挙体にあります)。
 
-Windows SDK の「 [IViewObjectEx:: GetViewStatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) 」を参照してください。
+Windows SDK[の「IView オブジェクトの種類::GetView ステータス」](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus)を参照してください。
 
-##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint
+## <a name="iviewobjecteximplqueryhitpoint"></a><a name="queryhitpoint"></a>IView オブジェクトエクスプル::クエリヒットポイント
 
-指定した点が指定した四角形内にあるかどうかを確認`pHitResult`し、で[ヒット結果](/windows/win32/api/ocidl/ne-ocidl-hitresult)の値を返します。
+指定した点が指定された四角形内にあるかどうかを確認し、 に`pHitResult`[HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult)値を返します。
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -231,17 +231,17 @@ STDMETHOD(QueryHitPoint)(
     DWORD* /* pHitResult */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値には、HITRESULT_HIT または HITRESULT_OUTSIDE のいずれかを指定できます。
+値は、HITRESULT_HITまたはHITRESULT_OUTSIDEのいずれかです。
 
-が`dwAspect` [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)に等しい場合、メソッドは S_OK を返します。 それ以外の場合、メソッドは E_FAIL を返します。
+DVASPECT_CONTENT`dwAspect`[等しい場合](/windows/win32/api/wtypes/ne-wtypes-dvaspect)、メソッドはS_OKを返します。 それ以外の場合、メソッドはE_FAIL返します。
 
-Windows SDK の「 [IViewObjectEx:: Queryヒットポイント](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint)」を参照してください。
+Windows SDK[の「IViewObjectEx::クエリヒットポイント](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint)」を参照してください。
 
-##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect
+## <a name="iviewobjecteximplqueryhitrect"></a><a name="queryhitrect"></a>IView オブジェクトエクスプル::クエリヒットレクト
 
-コントロールの表示領域が、指定された位置の四角形内の任意の点と重なっている`pHitResult`かどうかをチェックし、での[ヒット結果](/windows/win32/api/ocidl/ne-ocidl-hitresult)の値を返します。
+コントロールの表示四角形が、指定した位置の四角形内の任意のポイントと重なっているかどうかを確認`pHitResult`し[、HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult)値を返します。
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -252,17 +252,17 @@ STDMETHOD(QueryHitRect)(
     DWORD* /* pHitResult */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値には、HITRESULT_HIT または HITRESULT_OUTSIDE のいずれかを指定できます。
+値は、HITRESULT_HITまたはHITRESULT_OUTSIDEのいずれかです。
 
-が`dwAspect` [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)に等しい場合、メソッドは S_OK を返します。 それ以外の場合、メソッドは E_FAIL を返します。
+DVASPECT_CONTENT`dwAspect`[等しい場合](/windows/win32/api/wtypes/ne-wtypes-dvaspect)、メソッドはS_OKを返します。 それ以外の場合、メソッドはE_FAIL返します。
 
-Windows SDK の「 [IViewObjectEx:: Queryヒット長方形](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect)」を参照してください。
+Windows SDK[の「IViewObjectEx::クエリヒットレクト](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect)」を参照してください。
 
-##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise
+## <a name="iviewobjecteximplsetadvise"></a><a name="setadvise"></a>オブジェクトエクスプル::セットアアドバイス
 
-コントロールとアドバイズシンク間の接続を設定して、コントロールのビューの変更についてシンクに通知できるようにします。
+コントロールとアアドバイス シンクの間の接続を設定し、コントロールのビューの変更をシンクに通知できるようにします。
 
 ```
 STDMETHOD(SetAdvise)(
@@ -271,27 +271,27 @@ STDMETHOD(SetAdvise)(
     IAdviseSink* pAdvSink);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アドバイズシンクの[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)インターフェイスへのポインターは、コントロールクラスのデータメンバー [CComControlBase:: m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)に格納されます。
+アアドバイス シンクの[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)インターフェイスへのポインターは、コントロール クラス のデータ メンバー [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)に格納されます。
 
-Windows SDK の「 [Iviewobject:: SetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) 」を参照してください。
+Windows SDK[の「IView オブジェクト::セットアアドバイス](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise)」を参照してください。
 
-##  <a name="unfreeze"></a>Iviewの Teximpl:: 凍結解除
+## <a name="iviewobjecteximplunfreeze"></a><a name="unfreeze"></a>IView オブジェクトエクスプル::フリーズ解除
 
-コントロールの描画された表現を Unfreezes します。 ATL 実装は E_NOTIMPL を返します。
+描画されたコントロールの表現をフリーズ解除します。 ATL の実装はE_NOTIMPL返します。
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows SDK の「 [Iviewobject:: 凍結解除](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze)」を参照してください。
+「Windows SDK[で IView オブジェクト::フリーズ解除](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze)」を参照してください。
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>を閉じる
 
-このオブジェクトに関連付けられているハンドルを閉じるには、このメソッドを実装します。
+このメソッドを実装して、このオブジェクトに関連付けられているハンドルを閉じます。
 
 ```
 HRESULT CloseHandle(HANDLE hHandle);
@@ -299,24 +299,24 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>パラメーター
 
-*hHandle*<br/>
+*hハンドル*<br/>
 閉じるハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドに渡されたハンドルは、 [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)を呼び出すことによって、以前にこのオブジェクトに関連付けられていました。
+このメソッドに渡されたハンドルは、以前は[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)への呼び出しによってこのオブジェクトに関連付けられていた。
 
 ### <a name="example"></a>例
 
-次のコードは、の`IWorkerThreadClient::CloseHandle`単純な実装を示しています。
+次のコードは、 の簡単`IWorkerThreadClient::CloseHandle`な実装を示しています。
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>を実行します。
 
 このオブジェクトに関連付けられたハンドルがシグナル状態になったときにコードを実行するには、このメソッドを実装します。
 
@@ -326,30 +326,30 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwParam*<br/>
-ユーザーパラメーター。
+*ドウパラム*<br/>
+ユーザー パラメーター。
 
-*hObject*<br/>
-がシグナル状態になったハンドル。
+*hオブジェクト*<br/>
+シグナル状態になったハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドに渡されたハンドルと DWORD/ポインターは、 [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)を呼び出すことによって、以前にこのオブジェクトに関連付けられていました。
+このメソッドに渡されたハンドルと DWORD/ポインターは、以前は[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)への呼び出しによってこのオブジェクトに関連付けされていました。
 
 ### <a name="example"></a>例
 
-次のコードは、の`IWorkerThreadClient::Execute`単純な実装を示しています。
+次のコードは、 の簡単`IWorkerThreadClient::Execute`な実装を示しています。
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
-[ActiveX コントロールインターフェイス](/windows/win32/com/activex-controls-interfaces)<br/>
+[CCom コントロール クラス](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX コントロール インターフェイス](/windows/win32/com/activex-controls-interfaces)<br/>
 [チュートリアル](../../atl/active-template-library-atl-tutorial.md)<br/>
 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

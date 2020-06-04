@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4076
 ms.assetid: c424d43b-abb3-4df4-be66-8907b859a555
-ms.openlocfilehash: 05a05c63b9b63aafc52854aa9dcdcccbdc6f8d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f5c5f6bd33fd0e43ccf3c7b55ab54a3cc25ba68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183437"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>リンカー ツールの警告 LNK4076
 
-インクリメンタル ステータス ファイル 'filename';インクリメンタル リンク
+インクリメンタルステータスファイル ' filename ' が無効です。フルのリンク
 
-リンクは、インクリメンタル ステータス (.ilk) ファイルに書き込むことはできません。 いずれか`filename`が壊れているか、インクリメンタル リンクのデータベースではありません。 ファイルと再リンクを削除します。
+リンクは、増分ステータス (.ilk) ファイルに書き込むことができません。 `filename` が破損しているか、インクリメンタルリンクデータベースではありません。 ファイルを削除して再リンクします。

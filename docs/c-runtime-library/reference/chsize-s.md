@@ -1,9 +1,10 @@
 ---
 title: _chsize_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _chsize_s
-apilocation:
+- _o__chsize_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chsize_s
 - _chsize_s
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: a56efe826d43c80dc2cdee295e58872e7dd3c9ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: faed95bfeb6fad88f502101e166ec6124b6e591d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348511"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910411"
 ---
-# <a name="chsizes"></a>_chsize_s
+# <a name="_chsize_s"></a>_chsize_s
 
 ファイル サイズを変更します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_chsize](chsize.md) です。
 
@@ -46,7 +51,7 @@ errno_t _chsize_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 *size*<br/>
@@ -54,25 +59,27 @@ errno_t _chsize_s(
 
 ## <a name="return-value"></a>戻り値
 
-**_chsize_s**ファイル サイズが正常に変更された場合、値 0 を返します。 0 以外の戻り値は、エラーを示します戻り値は**EACCES**アクセスに対して、指定したファイルがロックされている場合**EBADF**場合、指定したファイルが読み取り専用または記述子が有効でない場合 **。ENOSPC** 、デバイス上の領域が残っていない場合または**EINVAL**サイズが 0 よりも小さい場合。 **errno**が同じ値に設定します。
+ファイルサイズが正常に変更された場合、 **_chsize_s**は値0を返します。 0以外の戻り値は、エラーを示します。指定されたファイルがアクセスに対してロックされている場合、 **EACCES**は、指定されたファイルが読み取り専用である場合、または、記述子が無効な場合は ENOSPC **、デバイス**に領域がない場合は**ENOSPC** 、サイズが0未満の場合は**EINVAL**を返します。 **errno**が同じ値に設定されています。
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Chsize_s**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*します。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
+**_Chsize_s**関数は、 *fd*に関連付けられているファイルを*size*によって指定された長さに拡張または切り捨てます。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
-**_chsize_s**ファイル サイズとして 64 ビット整数を受け取り、4 GB を超えるファイル サイズを処理できます。 **_chsize**は 32 ビット ファイルのサイズに制限されます。
+**_chsize_s**は、ファイルサイズとして64ビット整数を受け取るため、4 GB を超えるファイルサイズを処理できます。 **_chsize**は、32ビットのファイルサイズに制限されています。
 
-この関数は、パラメーターを検証します。 場合*fd*は無効なパラメーター ハンドラーが呼び出される、有効なファイル記述子またはサイズが 0 より小さい」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+この関数は、パラメーターを検証します。 *Fd*が有効なファイル記述子でないか、またはサイズが0未満の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize_s**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

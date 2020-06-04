@@ -1,5 +1,5 @@
 ---
-title: CComEnumImpl クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnumImpl
@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 7d26c59a38bfe43e49215fbb6108453e10ca6dea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 965e0a8bf6c890882754b60e2785832933d1c52c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497171"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327863"
 ---
-# <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
+# <a name="ccomenumimpl-class"></a>クラス
 
 このクラスは、列挙される項目が配列に格納される COM 列挙子インターフェイスの実装を提供します。
 
@@ -39,17 +39,17 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*常用*<br/>
-COM 列挙子インターフェイス。 例については、「 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 」を参照してください。
+*ベース*<br/>
+COM 列挙子インターフェイス。 例については[、IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring)を参照してください。
 
-*piid*<br/>
+*ピッド*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
 *T*<br/>
 列挙子インターフェイスによって公開される項目の型。
 
 *コピー*<br/>
-同種の[コピーポリシークラス](../../atl/atl-copy-policy-classes.md)。
+同種[のコピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)。
 
 ## <a name="members"></a>メンバー
 
@@ -57,39 +57,39 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 
 |名前|説明|
 |----------|-----------------|
-|[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|コンストラクターです。|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|デストラクターです。|
+|[コマヌビレンプル::コマヌプル](#ccomenumimpl)|コンストラクターです。|
+|[コマヌプル::~コマヌプル](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComEnumImpl::Clone](#clone)|**Clone**列挙インターフェイスメソッドの実装。|
-|[CComEnumImpl::Init](#init)|列挙子を初期化します。|
-|[CComEnumImpl::Next](#next)|**Next**の実装。|
-|[CComEnumImpl::Reset](#reset)|**Reset**の実装。|
-|[CComEnumImpl::Skip](#skip)|**Skip**の実装。|
+|[クコム列挙型::クローン](#clone)|**Clone**列挙インターフェイス メソッドの実装。|
+|[コマヌビレンプル::イニト](#init)|列挙子を初期化します。|
+|[コマヌビImpl::次へ](#next)|**Next**の実装。|
+|[クコム列挙型::リセット](#reset)|**リセット**の実装。|
+|[クコム列挙型::スキップ](#skip)|**スキップ**の実装。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComEnumImpl::m_begin](#m_begin)|配列内の最初の項目へのポインター。|
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|コピーフラグが渡さ`Init`れます。|
-|[CComEnumImpl::m_end](#m_end)|配列内の最後の項目の次の位置を指すポインター。|
-|[CComEnumImpl::m_iter](#m_iter)|配列内の現在の項目へのポインター。|
-|[CComEnumImpl::m_spUnk](#m_spunk)|列挙されるコレクションを提供するオブジェクトのポインター。`IUnknown`|
+|[コム列挙型::m_begin](#m_begin)|配列の最初の項目へのポインター。|
+|[コム列挙型::m_dwFlags](#m_dwflags)|を通過するフラグ`Init`をコピーします。|
+|[コマ列挙型::m_end](#m_end)|配列の最後の項目のすぐ外にある位置へのポインター。|
+|[コム列挙型::m_iter](#m_iter)|配列内の現在の項目へのポインター。|
+|[コマ列挙型::m_spUnk](#m_spunk)|列挙`IUnknown`されるコレクションを提供するオブジェクトのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-メソッド実装の例については、「 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 」を参照してください。 `CComEnumImpl`列挙される項目が配列に格納される COM 列挙子インターフェイスの実装を提供します。 このクラスは、 `IEnumOnSTLImpl` C++標準ライブラリコンテナーに基づく列挙子インターフェイスの実装を提供するクラスに似ています。
+メソッドの実装例については[、「IEnumString」](/windows/win32/api/objidl/nn-objidl-ienumstring)を参照してください。 `CComEnumImpl`は、列挙される項目が配列に格納される COM 列挙子インターフェイスの実装を提供します。 このクラスは、C++`IEnumOnSTLImpl`標準ライブラリ コンテナーに基づく列挙子インターフェイスの実装を提供するクラスに似ています。
 
 > [!NOTE]
->  `CComEnumImpl`とのその`IEnumOnSTLImpl`他の相違点の詳細については、「 [CComEnumImpl:: Init](#init)」を参照してください。
+> と の`CComEnumImpl``IEnumOnSTLImpl`違いの詳細については[、「CComEnumImpl::Init](#init)」を参照してください。
 
-通常、このインターフェイスの実装から派生することで、独自の列挙子クラスを作成する必要はあり*ません*。 配列に基づいて ATL で提供される列挙子を使用する場合は、 [CComEnum](../../atl/reference/ccomenum-class.md)のインスタンスを作成する方が一般的です。
+通常、このインターフェイスの実装から派生して独自の列挙子クラスを作成する必要*はありません*。 配列に基づいて ATL が提供する列挙子を使用する場合は[、CComEnum](../../atl/reference/ccomenum-class.md)のインスタンスを作成する方が一般的です。
 
-ただし、カスタム列挙子を提供する必要がある場合 (列挙子インターフェイスに加えてインターフェイスを公開するものなど)、このクラスから派生させることができます。 このような状況では、独自の実装を提供するために、 [CComEnumImpl:: Clone](#clone)メソッドをオーバーライドする必要がある可能性があります。
+ただし、カスタム列挙子 (たとえば、列挙子インターフェイスに加えてインターフェイスを公開する列挙子) を指定する必要がある場合は、このクラスから派生できます。 このような場合は、独自の実装を提供する[CComEnumImpl::Clone](#clone)メソッドをオーバーライドする必要があります。
 
 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
@@ -101,9 +101,9 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>コマヌビレンプル::コマヌプル
 
 コンストラクターです。
 
@@ -111,7 +111,7 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a>コマヌプル::~コマヌプル
 
 デストラクターです。
 
@@ -119,9 +119,9 @@ CComEnumImpl();
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  CComEnumImpl::Init
+## <a name="ccomenumimplinit"></a><a name="init"></a>コマヌビレンプル::イニト
 
-列挙子インターフェイスへのポインターを任意のクライアントに渡す前に、このメソッドを呼び出す必要があります。
+列挙子インターフェイスへのポインターをクライアントに返す前に、このメソッドを呼び出す必要があります。
 
 ```
 HRESULT Init(
@@ -133,29 +133,29 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*begin*<br/>
-列挙される項目を格納している配列の最初の要素へのポインター。
+*開始*<br/>
+列挙する項目を含む配列の最初の要素へのポインター。
 
 *end*<br/>
-列挙される項目を格納している配列の最後の要素の次の位置を指すポインター。
+列挙する項目を含む配列の最後の要素のちょうど後の位置へのポインター。
 
-*pUnk*<br/>
-から列挙子の有効期間中に保持する必要があるオブジェクトのポインター。`IUnknown` そのようなオブジェクトが存在しない場合は、NULL を渡します。
+*パンク*<br/>
+[in]列挙`IUnknown`子の有効期間中に保持する必要があるオブジェクトのポインター。 そのようなオブジェクトが存在しない場合は NULL を渡します。
 
-*flags*<br/>
-列挙子が配列の所有権を取得する必要があるかどうか、またはそのコピーを作成するかどうかを指定するフラグ。 使用可能な値を以下に示します。
+*フラグ*<br/>
+列挙子が配列の所有権を取得するか、または配列のコピーを作成するかを指定するフラグ。 使用できる値は以下のとおりです。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを1回だけ呼び出します。列挙子を初期化し、使用してから破棄します。
+このメソッドを 1 回だけ呼び出す — 列挙子を初期化し、それを使用して、それを捨てる。
 
-別のオブジェクトに保持されている配列内の項目にポインターを渡す場合 (データをコピーするように列挙子に要求しない場合)、 *pUnk*パラメーターを使用して、列挙子が必要とする限り、そのオブジェクトと保持する配列を使用できるようにすることができます。 列挙子は、オブジェクトに対する COM 参照を保持するだけです。 COM 参照は、列挙子が破棄されると自動的に解放されます。
+別のオブジェクトに保持されている配列内の項目へのポインタを渡す場合 (および列挙子にデータのコピーを要求しない場合 *)、pUnk*パラメータを使用して、列挙子が必要な限り、オブジェクトとそれが保持する配列を使用できるようにします。 列挙子は、オブジェクトの COM 参照を保持して、オブジェクトを保持します。 COM 参照は、列挙子が破棄されると自動的に解放されます。
 
-*Flags*パラメーターを使用すると、列挙子が渡された配列要素をどのように処理するかを指定できます。 *フラグ*は、次に示す列挙の`CComEnumFlags`いずれかの値を取ることができます。
+*flags*パラメーターを使用すると、列挙子が渡される配列要素をどのように処理するかを指定できます。 *フラグ*は、次の`CComEnumFlags`列挙体の値の 1 つを取ることができます。
 
 ```
 enum CComEnumFlags
@@ -166,18 +166,18 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy`は、配列の有効期間が列挙子によって制御されないことを意味します。 この場合、配列が静的になるか、または*pUnk*によって識別されるオブジェクトが、不要になったときに配列を解放する必要があります。
+`AtlFlagNoCopy`配列の有効期間が列挙子によって制御されないことを意味します。 この場合、配列が静的であるか *、pUnk*で識別されたオブジェクトが不要になったときに配列を解放する必要があります。
 
-`AtlFlagTakeOwnership`は、配列の破棄が列挙子によって制御されることを意味します。 この場合、配列は**new**を使用して動的に割り当てられている必要があります。 列挙子は、そのデストラクター内の配列を削除します。 通常、 *pUnk*には NULL を渡しますが、何らかの理由で列挙子の破棄を通知する必要がある場合は、有効なポインターを渡すこともできます。
+`AtlFlagTakeOwnership`配列の破棄は列挙子によって制御されることを意味します。 この場合、配列は**new**を使用して動的に割り当てられている必要があります。 列挙子は、デストラクター内の配列を削除します。 通常は、何らかの理由で列挙子の破棄を通知する必要がある場合でも、有効なポインタを渡すことができますが、 *pUnk*には NULL を渡します。
 
-`AtlFlagCopy`は、に`Init`渡された配列をコピーすることによって、新しい配列を作成することを意味します。 新しい配列の有効期間は、列挙子によって制御されます。 列挙子は、そのデストラクター内の配列を削除します。 通常、 *pUnk*には NULL を渡しますが、何らかの理由で列挙子の破棄を通知する必要がある場合は、有効なポインターを渡すこともできます。
+`AtlFlagCopy`に渡された配列をコピーして新しい配列を作成することを意味します`Init`。 新しい配列の有効期間は、列挙子によって制御されます。 列挙子は、デストラクター内の配列を削除します。 通常は、何らかの理由で列挙子の破棄を通知する必要がある場合でも、有効なポインタを渡すことができますが、 *pUnk*には NULL を渡します。
 
 > [!NOTE]
->  このメソッドのプロトタイプは、配列要素を型`T`として指定します。ここ`T`で、はクラスのテンプレートパラメーターとして定義されています。 これは、COM インターフェイスメソッド[CComEnumImpl:: Next](#next)を通じて公開される同じ型です。 これは、 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)とは異なり、このクラスは異なるストレージと公開されたデータ型をサポートしていないことを意味します。 配列内の要素のデータ型は、COM インターフェイスによって公開されるデータ型と同じである必要があります。
+> このメソッドのプロトタイプは、クラスのテンプレート パラメーターとして定義`T``T`された配列要素を type として指定します。 これは、COM インターフェイス メソッド[によって](#next)公開されるのと同じ型です。 このことは[、IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)とは異なり、このクラスは、異なるストレージと公開データ型をサポートしていないということを意味します。 配列内の要素のデータ型は、COM インターフェイスによって公開されるデータ型と同じである必要があります。
 
-##  <a name="clone"></a>  CComEnumImpl::Clone
+## <a name="ccomenumimplclone"></a><a name="clone"></a>クコム列挙型::クローン
 
-このメソッドは、型`CComEnum`のオブジェクトを作成し、現在のオブジェクトによって使用される同じ配列と反復子を使用して初期化し、新しく作成されたオブジェクトのインターフェイスを返すことによって、 **Clone**メソッドの実装を提供します。
+このメソッドは、型`CComEnum`のオブジェクトを作成し、現在のオブジェクトで使用されるのと同じ配列と反復器で初期化し、新しく作成されたオブジェクトのインターフェイスを返すことによって **、Clone**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -186,59 +186,59 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>パラメーター
 
 *ppEnum*<br/>
-入出力現在の列挙子から複製された、新しく作成されたオブジェクトの列挙子インターフェイス。
+[アウト]現在の列挙子から複製された新しく作成されたオブジェクトの列挙子インターフェイス。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-複製された列挙子は、元の列挙子によって使用されるデータのコピー (または所有権の取得) を行わないことに注意してください。 必要に応じて、複製された列挙子は、元の列挙子を (COM 参照を使用して) 保持したままにして、必要な限りデータを確実に使用できるようにします。
+複製された列挙子は、元の列挙子で使用されるデータの独自のコピーを作成 (または所有権を取得) することはありません。 必要に応じて、複製された列挙子は、元の列挙子を (COM 参照を使用して) 保持し、データが必要な限り使用可能であることを確認します。
 
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk
+## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a>コマ列挙型::m_spUnk
 
-このスマートポインターは、 [CComEnumImpl:: Init](#init)に渡されたオブジェクトへの参照を保持し、列挙子の有効期間中もそのままの状態を維持します。
+このスマート ポインターは[、CComEnumImpl::Init](#init)に渡されるオブジェクトの参照を保持し、列挙子の有効期間中もそのオブジェクトが保持されるようにします。
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a>コム列挙型::m_begin
 
-列挙される項目を格納している配列の最後の要素の次の位置を指すポインター。
+列挙する項目を含む配列の最後の要素のちょうど後の位置へのポインター。
 
 ```
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+## <a name="ccomenumimplm_end"></a><a name="m_end"></a>コマ列挙型::m_end
 
-列挙される項目を格納している配列の最初の要素へのポインター。
+列挙する項目を含む配列の最初の要素へのポインター。
 
 ```
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a>コム列挙型::m_iter
 
-列挙される項目を格納している配列の現在の要素へのポインター。
+列挙する項目を含む配列の現在の要素へのポインター。
 
 ```
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags
+## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a>コム列挙型::m_dwFlags
 
-[CComEnumImpl:: Init](#init)に渡されるフラグ。
+に渡されたフラグ[: :Init](#init).
 
 ```
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>  CComEnumImpl::Next
+## <a name="ccomenumimplnext"></a><a name="next"></a>コマヌビImpl::次へ
 
-このメソッドは、**次**のメソッドの実装を提供します。
+このメソッドは **、Next**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -246,22 +246,22 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
-から要求された要素の数。
+*celt*<br/>
+[in]要求された要素の数。
 
-*rgelt*<br/>
-入出力要素を格納する配列。
+*ルゲルト*<br/>
+[アウト]要素で埋める配列。
 
-*フェッチされる pcelt*<br/>
-入出力*Rgelt*で実際に返される要素の数。 リストに残っている要素数が 2未満の場合は、この値が2未満になることがあります。
+*pceltFetched*<br/>
+[アウト]実際に*rgelt*で返される要素の数。 これは、リストに残っている*celt*要素よりも少ない場合は *、celt*よりも小さくなる可能性があります。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="reset"></a>  CComEnumImpl::Reset
+## <a name="ccomenumimplreset"></a><a name="reset"></a>クコム列挙型::リセット
 
-このメソッドは、 **Reset**メソッドの実装を提供します。
+このメソッドは **、Reset**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Reset)(void);
@@ -271,9 +271,9 @@ STDMETHOD(Reset)(void);
 
 標準の HRESULT 値。
 
-##  <a name="skip"></a>  CComEnumImpl::Skip
+## <a name="ccomenumimplskip"></a><a name="skip"></a>クコム列挙型::スキップ
 
-このメソッドは、 **Skip**メソッドの実装を提供します。
+このメソッドは **、Skip**メソッドの実装を提供します。
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -281,19 +281,19 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
-からスキップする要素の数。
+*celt*<br/>
+[in]スキップする要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-E_INVALIDARG が 0の場合、S_FALSE を返します。 2 ~ 2 の要素が返される場合は S_FALSE を返し、それ以外の場合は S_OK を返します。
+*celt*がゼロの場合E_INVALIDARGを返し *、celt*要素が返される値より小さい場合はS_FALSEを返し、それ以外の場合は S_OKを返します。
 
 ## <a name="see-also"></a>関連項目
 
-[IEnumOnSTLImpl クラス](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[CComEnum クラス](../../atl/reference/ccomenum-class.md)<br/>
+[クラス](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[クラス](../../atl/reference/ccomenum-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

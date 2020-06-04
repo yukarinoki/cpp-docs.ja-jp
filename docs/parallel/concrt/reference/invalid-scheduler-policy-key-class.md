@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60d5a57ff9cb33a3d522c14514f5107844216852
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341095"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143022"
 ---
-# <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key クラス
+# <a name="invalid_scheduler_policy_key-class"></a>invalid_scheduler_policy_key クラス
 
 このクラスは、無効なキーまたは不明なキーが `SchedulerPolicy` オブジェクトのコンストラクターに渡された場合、あるいは、本来他の方法 (`SetPolicyValue` メソッドなど) で変更する必要のあるキーが `SchedulerPolicy` オブジェクトの `SetConcurrencyLimits` メソッドに渡された場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_scheduler_policy_key : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[invalid_scheduler_policy_key](#ctor)|オーバーロードされます。 `invalid_scheduler_policy_key` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class invalid_scheduler_policy_key : public std::exception;
 
 `invalid_scheduler_policy_key`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_key
+## <a name="ctor"></a>invalid_scheduler_policy_key
 
 `invalid_scheduler_policy_key` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_key() throw();
@@ -60,7 +60,7 @@ invalid_scheduler_policy_key() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [SchedulerPolicy クラス](schedulerpolicy-class.md)

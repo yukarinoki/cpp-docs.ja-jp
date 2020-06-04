@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4007
 ms.assetid: 61ec0417-6961-43c1-ade8-f9d6e93289e9
-ms.openlocfilehash: 796bfd4258c7ad7190cb2e55555549d40f34f258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3663cb4b94d077719c64a67b500e4901e81c98aa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193174"
 ---
 # <a name="nmake-warning-u4007"></a>NMAKE の警告 U4007
 
-ファイル名 'filename' が長すぎます。8.3 に切り詰めました。
+ファイル名 ' filename ' が長すぎます。8.3 への切り捨て
 
-指定されたファイルの基本名が 8 個を超える文字は、または拡張機能に次の 3 つ以上の文字。 NMAKE では、8 文字ベースと 3 文字の拡張機能に名前が切り捨てられます。
+指定されたファイルのベース名が8文字を超えているか、拡張子が3文字を超えています。 NMAKE は、名前を8文字の基数と3文字の拡張子に切り詰めました。
 
-長いファイル名は、ファイル システムでサポートされている場合、名前は、二重引用符で囲みます (**"**)。
+ファイルシステムで長いファイル名がサポートされている場合は、名前を二重引用符 ( **"** ) で囲みます。

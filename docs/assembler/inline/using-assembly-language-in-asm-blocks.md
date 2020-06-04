@@ -6,18 +6,18 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166569"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169124"
 ---
-# <a name="using-assembly-language-in-asm-blocks"></a>__asm ブロックでのアセンブリ言語の使用
+# <a name="using-assembly-language-in-__asm-blocks"></a>__asm ブロックでのアセンブリ言語の使用
 
 **Microsoft 固有の仕様**
 
-インライン アセンブラーでは、ほとんど共通点の他のアセンブラーがあります。 たとえば、MASM では無効である任意の式を受け入れます。 このセクションでは、アセンブリ言語機能の使用をについて説明します`__asm`ブロックします。
+インラインアセンブラーは、他のアセンブラーとよく似ています。 たとえば、MASM で有効な任意の式を受け取ります。 ここでは、`__asm` ブロックでのアセンブリ言語機能の使用について説明します。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
@@ -37,7 +37,7 @@ ms.locfileid: "62166569"
 
 - [アセンブリ言語のコメント](../../assembler/inline/assembly-language-comments.md)
 
-- [_Emit 疑似命令](../../assembler/inline/emit-pseudoinstruction.md)
+- [_Emit 擬似命令](../../assembler/inline/emit-pseudoinstruction.md)
 
 - [インライン アセンブリのデバッグと一覧表示](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
@@ -45,6 +45,6 @@ ms.locfileid: "62166569"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: pow、powf、powl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+- _o_pow
+- _o_powf
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916790"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-計算*x*の累乗*y*します。
+*X*の累乗を*y*で計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -65,36 +71,38 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 底。
 
-*y*<br/>
+*前年*<br/>
 指数。
 
 ## <a name="return-value"></a>戻り値
 
-値を返します*x*<sup>*y*</sup>します。 オーバーフローまたはアンダーフロー時に、エラー メッセージは印刷されません。
+*X*<sup>*y*</sup>の値を返します。 オーバーフローまたはアンダーフロー時に、エラー メッセージは印刷されません。
 
 |x の値と y の値|pow の値を返す|
 |-----------------------|-------------------------|
-|*x* ! = 0.0 と*y* 0.0 を = =|1|
-|*x* 0.0 を = = と*y* 0.0 を = =|1|
-|*x* 0.0 を = = と*y* < 0|INF|
+|*x* ! = 0.0 および*y* = = 0.0|1|
+|*x* = = 0.0 および*y* = = 0.0|1|
+|*x* = = 0.0 および*y* < 0|INF|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**pow** 2 より大きい整数の浮動小数点値を認識しない<sup>64</sup> (1.0E100 など)。
+**pow**は、2<sup>64</sup>を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
 
-**pow**ストリーミング SIMD 拡張命令 2 (SSE2) を使用して実装されています。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**pow**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバー ロード、ためのさまざまなオーバー ロードのいずれかを呼び出すことができます**pow**します。 C プログラムで**pow**常に 2 つ受け取る**二重**値を返します、**二重**値。
+C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、 **pow**は常に2つの**double**値を受け取り、 **double**値を返します。
 
-`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバー ロードを使用する場合、コンパイラから出力される可能性があります[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)します。 この問題を回避するには、最初のパラメーターをキャスト**二重**、 **float**、または**長い****二重**します。
+`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを**double**、 **float**、または**long** **double**にキャストします。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> または \<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

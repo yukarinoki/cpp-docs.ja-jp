@@ -1,11 +1,14 @@
----
+﻿---
 title: remainder、remainderf、remainderl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357643"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917846"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -56,26 +63,28 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 分子。
 
-*y*<br/>
+*前年*<br/>
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-浮動小数点の剰余*x* / *y*します。 場合の値*y* 0.0、**剰余**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)します。
+*X* / *y*の浮動小数点の剰余。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**剰余**関数は浮動小数点の剰余を計算*r*の*x* / *y*ように*x*  =  *n* \* *y* + *r*ここで、 *n*が、値を最も近い整数*x* / *y*と*n*偶数たびに&#124; *n*  - *x* / *y* &#124; = 1/2。 ときに*r* = 0、 *r*と同じ符号*x*します。
+**剰余**関数*は x* *y* *y* - *x* /  *x* / *y* *x* /  + *r* *r* \* *n* *n* *n**y* *x* = の浮動小数点の剰余 r を計算します。ここで、n は x y の値に最も近い整数、n は &#124; n x y &#124; = 1/2 になるたびに n になります。 *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**剰余**を受け取って返す**float**または**長い** **二重**値。 C プログラムで**剰余**常に 2 つは、**二重**引数を返す、**二重**。
+C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**剰余**のオーバーロードを呼び出すことができます。 C プログラムでは、**剰余**は常に2つの**double**引数を受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
-|**残りの部分**、 **remainderf**、 **remainderl**|\<math.h>|\<cmath> または \<math.h>|
+|**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

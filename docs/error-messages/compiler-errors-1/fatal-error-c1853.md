@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 056db975fecef4e101dbbba7e2084236489498c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165919"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202866"
 ---
 # <a name="fatal-error-c1853"></a>致命的なエラー C1853
 
-> '*filename*' プリコンパイル済みヘッダー ファイルは、コンパイラの以前のバージョンから、またはプリコンパイル済みヘッダーは C++ および C から (またはその逆) に使用されます
+> '*filename*' プリコンパイル済みヘッダーファイルが以前のバージョンのコンパイラからのものであるかC++ 、プリコンパイル済みヘッダーが C から使用されています (またはその逆)。
 
-以下の原因が考えられます。
+考えられる原因:
 
-- プリコンパイル済みヘッダーは、旧バージョンのコンパイラでコンパイルされました。 現在のコンパイラでヘッダーを再コンパイルしてください。
+- プリコンパイル済みヘッダーは、以前のバージョンのコンパイラでコンパイルされました。 現在のコンパイラでヘッダーを再コンパイルしてみてください。
 
-- プリコンパイル済みヘッダーは C++ および C で使用するためのヘッダーを再コンパイルのいずれかを指定することによって C から使用している、 [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)コンパイラ オプション、またはソース ファイルのサフィックスの"c"に変更します。 詳細については、次を参照してください。[コードをプリコンパイルする 2 つの選択肢](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)します。
+- プリコンパイル済みヘッダー C++はで、c から使用しています。 [/tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)コンパイラオプションのいずれかを指定するか、ソースファイルのサフィックスを "c" に変更して、c で使用できるようにヘッダーを再コンパイルしてみてください。 詳細については、「[コードをプリコンパイルする2つの選択肢](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)」を参照してください。

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-ms.openlocfilehash: 3293e07eb7c03c71d582d83e40bc011fa7c1eb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a456d2fc4097dd01524f9b62d46dc49160cd7d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186245"
 ---
 # <a name="compiler-warning-level-1-c4547"></a>コンパイラの警告 (レベル 1) C4547
 
-'operator': コンマも何も起こりません前の演算子。予想される演算子の副作用
+' operator ': コンマの前の演算子は無効です。副作用のある演算子が必要です
 
-正しくない形式のコンマ式が検出されました。
+コンパイラにより、正しくない形式のコンマ式が検出されました。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
 次の例では、C4547 が生成されます。
 
-```
+```cpp
 // C4547.cpp
 // compile with: /W1
 #pragma warning (default : 4547)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: a68596136e61aa33176365a4eff818124463b77e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390465"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175039"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>コンパイラの警告 (レベル 1) C4807
 
@@ -23,7 +23,7 @@ ms.locfileid: "62390465"
 
 次の例では C4807 が生成されます。
 
-```
+```cpp
 // C4807.cpp
 // compile with: /W1
 typedef struct bitfield {

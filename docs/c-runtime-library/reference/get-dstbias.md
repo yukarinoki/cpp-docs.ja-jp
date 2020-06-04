@@ -1,9 +1,11 @@
 ---
 title: _get_dstbias
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_dstbias
 - __dstbias
+- _o___dstbias
+- _o__get_dstbias
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955948"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919364"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -49,24 +52,26 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>パラメーター
 
-*seconds*<br/>
+*待ち時間*<br/>
 夏時間のオフセット (秒単位)。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は0、エラーが発生した場合は**errno**値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Get_dstbias**関数は、夏時間の秒数を整数として取得します。 夏時間が適用されている場合、既定のオフセットは 3,600 秒であり、これは 1 時間の秒数です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
 *Seconds*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-**マクロで**はなく、この関数を使用することをお勧めします。または、非推奨の関数 **__ dstバイアス**です。
+マクロ **_dstbias**または非推奨の関数 **__dstbias**の代わりに、この関数を使用することをお勧めします。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 

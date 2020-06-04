@@ -1,11 +1,12 @@
 ---
 title: tan、tanf、tanl
-ms.date: 04/10/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+- _o_tan
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258627"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912380"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -63,24 +68,26 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Tan**のタンジェントを返します関数*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
+**Tan**関数は、 *x*のタンジェントを返します。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
 
-|入力|SEH 例外|**Matherr**例外|
+|入力|SEH 例外|**Matherr**例外的|
 |-----------|-------------------|-------------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |± INF|**無効です**|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tan**を受け取って返す**float**または**長い****二重**値。 C プログラムで**tan**は**二重**します。
+C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**tan**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tan**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,10 +1,13 @@
 ---
-title: _popen、_wpopen
-ms.date: 11/04/2016
-apiname:
+title: _popen, _wpopen
+description: Microsoft C ランタイム (CRT) ライブラリ関数_popenおよび_wpopenのリファレンスです。
+ms.date: 4/2/2020
+api_name:
 - _popen
 - _wpopen
-apilocation:
+- _o__popen
+- _o__wpopen
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,12 +40,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499596"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915287"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -62,33 +78,35 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>パラメーター
 
-*command*<br/>
+*メニュー*\
 実行するコマンド。
 
-*モード*<br/>
+*mode*\
 返されるストリームのモード。
 
 ## <a name="return-value"></a>戻り値
 
-作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 *コマンド*または*モード*が null ポインターの場合や、*モード*が有効なモードでない場合など、エラーが無効なパラメーターである場合、 **errno**は**EINVAL**に設定されます。 有効なモードについては、「解説」を参照してください。
+作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 エラーが無効なパラメーターによって発生した場合、 **errno**は**EINVAL**に設定されます。 有効なモードについては、「解説」を参照してください。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Popen**関数は、パイプを作成し、指定した文字列*コマンド*を使用して、コマンドプロセッサの生成されたコピーを非同期に実行します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
+**_Popen**関数は、パイプを作成します。 次に、コマンドプロセッサの生成されたコピーを非同期に実行し、コマンドラインとして*コマンド*を使用します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
 
 |アクセス モード|説明|
 |-|-|
-|**"r"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準出力を読み取ることができます。|
-|**"w"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準入力に書き込むことができます。|
-|**"b"**|バイナリ モードで開きます。|
-|**"t"**|テキスト モードで開きます。|
+|**\r\n\r\n**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準出力を読み取ることができます。|
+|**リダイレクト**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準入力に書き込むことができます。|
+|**b**|バイナリ モードで開きます。|
+|**\t**|テキスト モードで開きます。|
 
 > [!NOTE]
-> Windows プログラムで使用した場合、 **_popen**関数は無効なファイルポインターを返し、プログラムは無期限に応答を停止します。 **_popen**は、コンソールアプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するには、「Windows SDK にリダイレクトされた[入力と出力を持つ子プロセスの作成](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)」を参照してください。
+> Windows プログラムで使用する場合、 **_popen**関数は、プログラムが無期限に応答を停止する無効なファイルポインターを返します。 **_popen**は、コンソールアプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するには、「Windows SDK にリダイレクトされた[入力と出力を持つ子プロセスの作成](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)」を参照してください。
 
-**_wpopen**は、 **_popen**のワイド文字バージョンです。 **_wpopen**への*パス*引数は、ワイド文字列です。 それ以外では、 **_wpopen**と **_popen**は同じように動作します。
+**_wpopen**は **_popen**のワイド文字バージョンです。**_wpopen**の*パス*引数は、ワイド文字列です。 **_wpopen**と **_popen**は同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,12 +116,12 @@ FILE *_wpopen(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -138,7 +156,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -153,9 +171,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
-
-この出力は、現在のディレクトリに .c ファイル名拡張子を持つファイルが 1 個だけあると仮定しています。
+この出力では、ファイル名拡張子を`.c`持つファイルが現在のディレクトリに1つだけ存在することを前提としています。
 
 ```Output
 Volume in drive C is CDRIVE
@@ -172,6 +188,6 @@ Process returned 0
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)\
+[_pclose](pclose.md)\
+[_pipe](pipe.md)

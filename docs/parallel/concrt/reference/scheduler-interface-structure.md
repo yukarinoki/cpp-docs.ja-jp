@@ -6,20 +6,20 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_interface
 - PPLINTERFACE/concurrency::scheduler_interface::scheduler_interface::schedule
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
-ms.openlocfilehash: 99a3ea8b6ad1f23b4f3d54b7f2f406a3d115b374
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da2ebc2f9c2878baefcfa792bac08f420dbbb281
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358785"
 ---
-# <a name="schedulerinterface-structure"></a>scheduler_interface 構造体
+# <a name="scheduler_interface-structure"></a>scheduler_interface 構造体
 
 スケジューラ インターフェイス
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct __declspec(novtable) scheduler_interface;
 ```
 
@@ -29,7 +29,7 @@ struct __declspec(novtable) scheduler_interface;
 
 |名前|説明|
 |----------|-----------------|
-|[scheduler_interface::schedule](#schedule)||
+|[scheduler_interface::スケジュール](#schedule)||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -39,11 +39,11 @@ struct __declspec(novtable) scheduler_interface;
 
 **ヘッダー:** pplinterface.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="schedule"></a>  scheduler_interface::schedule メソッド
+## <a name="scheduler_interfaceschedule-method"></a><a name="schedule"></a>scheduler_interface::スケジュール方法
 
-```
+```cpp
 virtual void schedule(
     TaskProc_t,
 void*) = 0;
@@ -51,4 +51,4 @@ void*) = 0;
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[同時実行名前空間](concurrency-namespace.md)

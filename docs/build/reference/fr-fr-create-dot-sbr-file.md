@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292797"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320517"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (.sbr ファイルの作成)
 
@@ -31,7 +31,7 @@ ms.locfileid: "62292797"
 /Fr[pathname[\filename]]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!WARNING]
 > BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
@@ -47,11 +47,11 @@ ms.locfileid: "62292797"
 **/Fr** は非推奨とされます。代わりに **/FR** を使用してください。 詳しくは、 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)の「非推奨とされた削除済みのコンパイラ オプション」をご覧ください。
 
 > [!NOTE]
->  .sbr 拡張子を変更しないでください。 BSCMAKE では、中間ファイルにその拡張子を含める必要があります。
+> .sbr 拡張子を変更しないでください。 BSCMAKE では、中間ファイルにその拡張子を含める必要があります。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. ナビゲーション ウィンドウで、 **[C/C++]**、 **[ブラウザー情報]** プロパティ ページを選択してください。
 
@@ -59,7 +59,7 @@ ms.locfileid: "62292797"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> 」および「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>」を参照してください。
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> と <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A> を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

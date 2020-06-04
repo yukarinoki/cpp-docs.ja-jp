@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4944
 ms.assetid: e2905eb1-2e3b-4fab-a48b-c0cae0fd997f
-ms.openlocfilehash: 0c58a438f4e2c1437e1038b6087d57f47db30775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9db36d52647b55c292a15ca724822f8b8b47e9c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199201"
 ---
 # <a name="compiler-warning-level-1-c4944"></a>コンパイラの警告 (レベル 1) C4944
 
@@ -23,7 +23,7 @@ ms.locfileid: "62301995"
 
 ClassA という型を使用してコンポーネントを作成する例を次に示します。
 
-```
+```csharp
 // C4944.cs
 // compile with: /target:library
 // C# source code to create a dll
@@ -36,7 +36,7 @@ public class ClassA {
 
 次の例では C4944 が生成されます。
 
-```
+```cpp
 // C4944b.cpp
 // compile with: /clr /W1
 class ClassA {

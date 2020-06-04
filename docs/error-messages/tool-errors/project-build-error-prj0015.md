@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0015
 ms.assetid: 2096c8f1-e96c-49a4-a690-1cb893a8bf6f
-ms.openlocfilehash: b83c8f6ba7dac5b4af44cb03d941750fb0092df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d88a3c2c25542cf492f374fb9857e709697c865d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359437"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192576"
 ---
 # <a name="project-build-error-prj0015"></a>プロジェクト ビルド エラー PRJ0015
 
-NULL デバイスは、システム内にありません。 ビルドの起動、できます。
+システムに NULL デバイスがありません。 ビルドを開始できません。
 
-このエラーは、システム リソースの不足によって発生することができます。 一部のアプリケーションを閉じるか、再起動します。
+このエラーは、システムリソースが不足していることが原因で発生する可能性があります。 いくつかのアプリケーションを閉じるか、再起動します。
 
-コンピューター上の NULL デバイスに十分な特権がいない場合にも発生することができます。
+また、コンピューター上の NULL デバイスに対する十分な特権がない場合にも発生する可能性があります。

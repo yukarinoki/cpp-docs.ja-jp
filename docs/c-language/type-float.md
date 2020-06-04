@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346328"
 ---
 # <a name="type-float"></a>float 型
 
@@ -29,7 +29,7 @@ ms.locfileid: "56151274"
 
 ### <a name="floating-point-types"></a>浮動小数点型
 
-|型|有効桁数|バイト数|
+|種類|有効桁数|バイト数|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
@@ -40,7 +40,7 @@ ms.locfileid: "56151274"
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>指数と仮数の長さ
 
-|型|指数の長さ|仮数の長さ|
+|種類|指数の長さ|仮数の長さ|
 |----------|---------------------|---------------------|
 |float|8 ビット|23 ビット|
 |double|11 ビット|52 ビット|
@@ -55,7 +55,7 @@ ms.locfileid: "56151274"
 
 ### <a name="range-of-floating-point-types"></a>浮動小数点型の範囲
 
-|型|最小値|最大値|
+|種類|最小値|最大値|
 |----------|-------------------|-------------------|
 |フローティング|1.175494351 E - 38|3.402823466 E + 38|
 |double|2.2250738585072014 E - 308|1.7976931348623158 E + 308|

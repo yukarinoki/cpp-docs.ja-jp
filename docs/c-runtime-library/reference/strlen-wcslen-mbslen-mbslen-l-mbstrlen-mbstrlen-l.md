@@ -1,14 +1,18 @@
 ---
 title: strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbslen
 - _mbslen_l
 - _mbstrlen
 - wcslen
 - _mbstrlen_l
 - strlen
-apilocation:
+- _o__mbslen
+- _o__mbslen_l
+- _o__mbstrlen
+- _o__mbstrlen_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +26,11 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstrlen
 - wcslen
@@ -49,12 +57,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919974"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -90,7 +98,7 @@ size_t _mbstrlen_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる文字列。
 
 *locale*<br/>
@@ -98,13 +106,15 @@ NULL で終わる文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、端末の null を除く、 *str*内の文字数を返します。 **_Mbstrlen**と **_mbstrlen_l**を除き、エラーを示す戻り値は予約されていませ`((size_t)(-1))`ん。これは、文字列に無効なマルチバイト文字が含まれている場合にを返します。
+これらの各関数は、端末の null を除く、 *str*内の文字数を返します。 文字列に無効なマルチバイト文字が含まれている場合に **_mbstrlen_l**を返す`((size_t)(-1))` **_mbstrlen**と _mbstrlen_l を除き、エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **strlen**は文字列を1バイト文字列として解釈するため、文字列にマルチバイト文字が含まれている場合でも、戻り値は常にバイト数と等しくなります。 **wcslen**は、 **strlen**のワイド文字バージョンです。**wcslen**の引数はワイド文字列で、文字数はワイド (2 バイト) 文字で指定します。 それ以外では、 **wcslen**と**strlen**は同じように動作します。
 
 **セキュリティに関するメモ** これらの関数は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -114,20 +124,20 @@ NULL で終わる文字列。
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**と **_mbslen_l**は、マルチバイト文字の文字列に含まれるマルチバイト文字の数を返しますが、マルチバイト文字の有効性はテストしません。 **_mbstrlen**と **_mbstrlen_l**は、マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 **_Mbstrlen**または **_mbstrlen_l**に渡された文字列に、コードページの無効なマルチバイト文字が含まれている場合、この関数は-1 を返し、 **errno**を**EILSEQ**に設定します。
+**_mbslen**と **_mbslen_l**はマルチバイト文字の文字列のマルチバイト文字数を返しますが、マルチバイト文字の有効性はテストしません。 **_mbstrlen**および **_mbstrlen_l**マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 **_Mbstrlen**または **_mbstrlen_l**に渡された文字列に、コードページの無効なマルチバイト文字が含まれている場合、この関数は-1 を返し、 **errno**を**EILSEQ**に設定します。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> または \<wchar.h>|
 |**_mbslen**、 **_mbslen_l**|\<mbstring.h>|
 |**_mbstrlen**、 **_mbstrlen_l**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -196,7 +206,7 @@ Bytes in 'ABCァD' : 6
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

@@ -21,7 +21,7 @@ ms.locfileid: "70220219"
 
 ## <a name="syntax"></a>構文
 
-> **#undef***識別子*
+> **#undef** *識別子*
 
 ## <a name="remarks"></a>Remarks
 

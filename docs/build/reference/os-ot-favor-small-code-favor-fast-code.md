@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
-ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
+ms.openlocfilehash: 0eda9461b3ef730e0e0a832aa94a688e03c7e1bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412240"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336188"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)
 
-最小化または Exe および Dll のサイズを最大化します。
+EXE と DLL のサイズを最小化または最大化します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,23 +35,23 @@ ms.locfileid: "67412240"
 /Ot
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Os** (小さなコードのどちらを優先) サイズの優先順位の速度をコンパイラに指示して Exe および Dll のサイズを最小限に抑えられます。 コンパイラは、機能的に同等のマシン語コードの多くの C および C++ の構造を減らすことができます。 場合によってはこれらの違いは、サイズと速度のトレードオフを提供します。 **/Os**と **/Ot**オプションを使用すると、相互の基本設定を指定できます。
+**/Os** (小規模コードを優先) は、コンパイラに速度よりもサイズを優先するように指示することで、EXE と DLL のサイズを最小限に抑えます。 コンパイラは、多くの C および C++ の構成要素を、機能的に類似したマシン コードのシーケンスに減らすことができます。 時折、これらの違いは、サイズと速度のトレードオフを提供します。 **/Os**および **/Ot**オプションを使用すると、一方の設定を他のオプションより優先的に指定できます。
 
-**/Ot** (優先する高速コード) では、Exe および Dll の速度を最大限のサイズを超える速度を優先するようにコンパイラに指示しています。 (これは、既定値です)。コンパイラは、機能的に同等のマシン語コードの多くの C および C++ の構造を減らすことができます。 場合によっては、これらの違いは、サイズと速度のトレードオフを提供します。 **/Ot**オプションが速度の最大化が含まれる ([/O2](o1-o2-minimize-size-maximize-speed.md)) オプション。 **/O2**オプションは、非常に高速なコードを生成するためにいくつかのオプションを結合します。
+**/Ot** (優先高速コード) は、コンパイラにサイズよりも速度を優先するように指示することにより、EXE と DLL の速度を最大化します。 (これがデフォルトです。コンパイラは、多くの C および C++ の構成要素を、機能的に類似したマシン コードのシーケンスに減らすことができます。 場合によっては、これらの違いはサイズと速度のトレードオフを提供します。 **/Ot**オプションは、速度最大化 ([/O2](o1-o2-minimize-size-maximize-speed.md)) オプションによって暗黙的に指定されます。 **/O2**オプションは、非常に高速なコードを生成するために、いくつかのオプションを組み合わせています。
 
-使用する場合 **/Os**または **/Ot**、その後も指定する必要があります[/Og](og-global-optimizations.md)コードを最適化します。
-
-> [!NOTE]
->  プロファイリングのテスト実行から収集される情報はそれ以外の場合に効果を指定する場合の最適化が上書きされます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)します。
-
-**x86 固有**
-
-次のコード例は、優先する小さなコードの間の違いを示します ( **/Os**) オプションと優先する高速のコード ( **/Ot**) オプション。
+**/Os**または **/Ot**を使用する場合は[、/Og](og-global-optimizations.md)を指定してコードを最適化する必要があります。
 
 > [!NOTE]
->  使用する場合、次に、予想される動作について説明します **/Os**または **/Ot**します。 ただし、コンパイラの動作リリースごとに次のコードの最適化が異なる可能性があります。
+> プロファイリング テストの実行から収集された情報は **、/Ob** **、/O、** または **/Ot**を指定すると有効になる最適化をオーバーライドします。 詳細については、「[ガイド付き最適化のプロファイル」を参照してください](../profile-guided-optimizations.md)。
+
+**x86 固有の仕様→**
+
+次のコード例は、優先小コード (**/Os**) オプションと Favor Fast Code (**/Ot**) オプションの違いを示しています。
+
+> [!NOTE]
+> 以下は **、/Os**または **/Ot**を使用する場合の予期される動作を示しています。 ただし、リリースからリリースへのコンパイラの動作は、以下のコードで異なる最適化を生じる可能性があります。
 
 ```
 /* differ.c
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-以下のマシン語コードのフラグメントに示すように DIFFER.c がコンパイルされたときのサイズ ( **/Os**)、コンパイラの実装、return ステートメントで式を乗算として明示的に、コードの短いが低速のシーケンスを生成するには、乗数値。
+以下のマシンコードの断片に示すように、SIZE (**/Os**) に対して、コンパイラは return ステートメントの乗算式を明示的に乗算として実装し、短いが遅いコードシーケンスを生成します。
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-速度の DIFFER.c がコンパイルされたときに代わりに、( **/Ot**)、コンパイラの実装、一連のシフトとして return ステートメントで式を乗算と`LEA`コードの高速であるが、長いシーケンスを生成する手順。
+もう 1 つの方法として、SPEED (**/Ot**) を使用してコンパイルされた場合、コンパイラは return ステートメントの multiply`LEA`式を一連のシフトおよび命令として実装し、高速で長いコード シーケンスを生成します。
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -82,21 +82,21 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx
 ```
 
-**END x86 固有**
+**エンド x86 特定**
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
-1. をクリックして、**最適化**プロパティ ページ。
+1. [最適化] プロパティ ページ**を**クリックします。
 
-1. 変更、**速度またはサイズを優先**プロパティ。
+1. **[優先サイズ] プロパティまたは [速度]** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

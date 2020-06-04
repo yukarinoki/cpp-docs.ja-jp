@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
-ms.openlocfilehash: c737a48883b97970af70014e2bda4bdc508ab471
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c216143f2b47148f73502c847175201ea9a74fee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207569"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175897"
 ---
 # <a name="compiler-warning-level-1-c4228"></a>コンパイラの警告 (レベル 1) C4228
 
-使用される標準の拡張機能: 宣言リスト内のコンマの後に修飾子は無視されます
+非標準の拡張機能が使用されています: 宣言子リストのコンマの後の修飾子は無視されます
 
-修飾子の使用などの**const**または`volatile`変数を宣言するときに、コンマが、Microsoft 拡張機能 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。
+変数の宣言時に、 **const**や `volatile` のような修飾子をコンマの後に使用することは、Microsoft 拡張機能 ([/ze](../../build/reference/za-ze-disable-language-extensions.md)) です。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4228.cpp
 // compile with: /W1
 int j, const i = 0;  // C4228

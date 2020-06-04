@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525114"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211459"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>ウィザードを使用しないコンシューマーの作成
 
@@ -17,7 +17,7 @@ ms.locfileid: "65525114"
 
 **ATL OLE DB コンシューマー ウィザード**を使用せずに OLE DB コンシューマーのサポートを追加するには:
 
-- pch.h ファイルで、次の `#include` ステートメントを追加します。
+- *Pch*ファイルで、次の `#include` ステートメントを追加します。
 
     ```cpp
     #include <atlbase.h>
@@ -56,7 +56,7 @@ ms.locfileid: "65525114"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 必要に応じて、`CDBPropSet::AddProperty` を使用して行セットのプロパティを設定し、それらをパラメーターとして `rs.Open` に渡します。 これを行う方法の例については、「[コンシューマー ウィザードで生成されたメソッド](../../data/oledb/consumer-wizard-generated-methods.md)」の `GetRowsetProperties` を参照してください。
+- 必要に応じて、`CDBPropSet::AddProperty` を使用して行セットのプロパティを設定し、それらをパラメーターとして `rs.Open` に渡します。 これを行う方法の例については、「`GetRowsetProperties`コンシューマー ウィザードで生成されたメソッド[」の ](../../data/oledb/consumer-wizard-generated-methods.md) を参照してください。
 
 - これで、行セットを使用してデータを取得/操作できるようになりました。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65525114"
     ds.Close();
     ```
 
-   コマンドを使用している場合は、`Close` の後に `ReleaseCommand` を呼び出すことができます。 [CCommand::Close](../../data/oledb/ccommand-close.md) のコード例で、`Close` と `ReleaseCommand` を呼び出す方法を示しています。
+   コマンドを使用している場合は、`ReleaseCommand` の後に `Close` を呼び出すことができます。 [CCommand::Close](../../data/oledb/ccommand-close.md) のコード例で、`Close` と `ReleaseCommand` を呼び出す方法を示しています。
 
 - `CoUnInitialize` を呼び出して COM を初期化前の状態に戻します。 これは、メインのコードで呼び出されます。
 
@@ -76,6 +76,6 @@ ms.locfileid: "65525114"
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer.md)

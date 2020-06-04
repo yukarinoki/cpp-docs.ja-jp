@@ -1,53 +1,53 @@
 ---
-title: '方法: マニフェストを C/C++ アプリケーション内に埋め込む'
+title: '方法: マニフェストを C/C++ アプリケーションに埋め込む'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323002"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法: マニフェストを C/C++ アプリケーション内に埋め込む
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法: マニフェストを C/C++ アプリケーションに埋め込む
 
-ほとんどのシナリオで適切な実行時の動作が保証されるため、アプリケーションまたはライブラリが最終的なバイナリ内のマニフェストを埋め込むことをお勧めします。 既定では、Visual Studio はプロジェクトをビルドするときに、マニフェストを埋め込むしようとします。 詳細については、次を参照してください。 [Visual Studio でのマニフェスト生成](manifest-generation-in-visual-studio.md)します。 ただし、nmake を使用して、アプリケーションをビルドする場合は、メイクファイルにいくつかの変更する必要があります。 このセクションでは、最終的なバイナリ内のマニフェストを自動的に埋め込まれますので、メイクファイルを変更する方法を示します。
+ほとんどのシナリオで正しいランタイムの動作が保証されるため、アプリケーションまたはライブラリのマニフェストを最終的なバイナリの中に埋め込むことが推奨されてきました。 Visual Studio では、既定ではプロジェクトのビルド時にマニフェストの埋め込みを試みます。 詳細については、「[Visual Studio でのマニフェスト生成](manifest-generation-in-visual-studio.md)」を参照してください。 ただし、nmake を使用してアプリケーションをビルドする場合は、メイクファイルにいくつかの変更を加える必要があります。 このセクションでは、マニフェストを最終的なバイナリに自動的に埋め込むようにメイクファイルを変更する方法を示します。
 
 ## <a name="two-approaches"></a>2 つの方法
 
-アプリケーションまたはライブラリ内のマニフェストを埋め込むには 2 つの方法はあります。
+アプリケーションまたはライブラリにマニフェストを埋め込む方法は 2 つあります。
 
-- インクリメンタル ビルドを実行しない場合は、ビルド後の手順として、次のようなコマンドラインを使用してマニフェストを直接埋め込むことができます。
+- インクリメンタル ビルドを実行していない場合は、次のようなコマンド ラインを使用して、ビルド後の手順としてマニフェストを直接埋め込むことができます。
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
    ```
 
-   または
+   or
 
    ```cmd
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   Dll、EXE と 2 の 1 を使用します。
+   EXE の場合は 1、DLL の場合は 2 を使用します。
 
 - インクリメンタル ビルドを実行している場合は、次の手順を使用します。
 
-   - MyApp.exe.manifest ファイルを生成するバイナリにリンクします。
+  - バイナリをリンクして、MyApp.exe.manifest ファイルを生成します。
 
-   - マニフェストをリソース ファイルに変換します。
+  - マニフェストをリソース ファイルに変換します。
 
-   - 再マニフェスト リソースをバイナリに埋め込むために (インクリメンタル) リンクします。
+  - 再リンク (インクリメンタル) を行って、マニフェスト リソースをバイナリに埋め込みます。
 
-次の例では、両方の手法を組み込むことのメイクファイルを変更する方法を示します。
+次の例では、両方の手法を組み込むようにメイクファイルを変更する方法を示します。
 
-## <a name="makefiles-before"></a>メイクファイル (変更前) に、
+## <a name="makefiles-before"></a>メイクファイル (変更前)
 
-1 つのファイルから構築された単純なアプリケーション、MyApp.exe の (nmake の) スクリプトを検討してください。
+1 つのファイルから構築された単純なアプリケーションである MyApp.exe の nmake スクリプトを検討します。
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-このスクリプトを Visual Studio でそのまま実行する場合、MyApp.exe 正常に作成します。 実行時に依存するアセンブリをロードするオペレーティング システムで使用するための外部のマニフェスト ファイル MyApp.exe.manifest も作成します。
+このスクリプトを Visual Studio で変更せずに実行すると、MyApp が正常に作成されます。 さらに、実行時に依存アセンブリを読み込むためにオペレーティング システムによって使用される外部マニフェスト ファイル MyApp.exe.manifest も作成されます。
 
-MyLibrary.dll の (nmake の) スクリプトはよく似ています。
+MyLibrary.dll の nmake スクリプトはよく似ています。
 
 ```
 # build MyLibrary.dll
@@ -94,7 +94,7 @@ clean :
 
 ## <a name="makefiles-after"></a>メイクファイル (変更後)
 
-ビルドで使用するには、元のメイクファイルに 4 つの小さな変更を加える必要があるマニフェストに埋め込まれます。 : MyApp.exe メイクファイルで
+埋め込まれたマニフェストを使用してビルドするには、元のメイクファイルに対して、4 つの小さな変更を加える必要があります。 MyApp.exe メイクファイルの場合:
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-: MyLibrary.dll メイクファイルで
+MyLibrary.dll メイクファイルの場合:
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-メイクファイルには、実際の処理、makefile.inc makefile.targ.inc を実行する 2 つのファイルが追加されました。
+これで、実際の作業を行う 2 つのファイル (makefile.inc と makefile.targ.inc) がメイクファイルに含まれるようになりました。
 
-Makefile.inc を作成し、次をコピーします。
+makefile.inc を作成し、その中に以下をコピーします。
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-今すぐ作成**makefile.targ.inc**し、次をコピーします。
+次に、**makefile.targ.inc** を作成し、その中に以下をコピーします。
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

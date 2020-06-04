@@ -8,20 +8,20 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373137"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 関数
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 関数
 
 |||
 |-|-|
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a>スワップ (unordered_map)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -34,10 +34,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*レジストリ*\
+*キー*\
 キーの型。
 
-*~* \
+*Ty*\
 マップされた型。
 
 *ハッシュ*\
@@ -46,18 +46,18 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*割り当て*\
+*Alloc*\
 アロケーター クラス。
 
-*左側*\
+*左*\
 スワップする最初のコンテナー。
 
 *そうです*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、`left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)` を実行します。
+テンプレート関数は`left.`[、unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`を実行します。
 
 ### <a name="example"></a>例
 
@@ -114,7 +114,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>スワップ (unordered_multimap)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -127,10 +127,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*レジストリ*\
+*キー*\
 キーの型。
 
-*~* \
+*Ty*\
 マップされた型。
 
 *ハッシュ*\
@@ -139,18 +139,18 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*割り当て*\
+*Alloc*\
 アロケーター クラス。
 
-*左側*\
+*左*\
 スワップする最初のコンテナー。
 
 *そうです*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、`left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)` を実行します。
+テンプレート関数は`left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`を実行します。
 
 ### <a name="example"></a>例
 

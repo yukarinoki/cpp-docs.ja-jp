@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aed7ca5dcf5803305d8765f50430520a5b73d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192537"
 ---
 # <a name="project-build-error-prj0019"></a>プロジェクト ビルド エラー PRJ0019
 
-ツールからのエラー コードを返しました
+ツールからエラーコードが返されました
 
-エラー レベルは、カスタム ビルド ステップまたはビルド イベントの 0 以外の値でした。
+カスタムビルドステップまたはビルドイベントでは、エラーレベルは0以外でした。
 
-ツールは、エラー コードがエラー メッセージが返されるときに、PRJ0019 も表示されます。 これは、たとえば、MIDL の出力を NUL にリダイレクトする場合に発生します。
+また、ツールがエラーコードを返してもエラーメッセージが返されなかった場合にも、PRJ0019 が表示されます。 これは、たとえば、MIDL の出力を NUL にリダイレクトする場合に発生する可能性があります。
 
-参照してください[カスタム ビルド ステップのトラブルシューティングとビルド イベント](../../build/troubleshooting-build-customizations.md)詳細についてはします。
+詳細については[、「カスタムビルドステップのトラブルシューティング」および「ビルドイベント](../../build/troubleshooting-build-customizations.md)」を参照してください。
 
-このエラーは、ユーザー グループのメンバーとして実行して、管理アクセス権が必要なときにも発生します。 詳細については、次を参照してください。[ユーザー グループのメンバーとして実行されている](../../security/running-as-a-member-of-the-users-group.md)します。
+このエラーは、ユーザーグループのメンバとしてを実行していて、管理アクセスが必要な場合にも発生することがあります。 詳細については、「 [Users グループのメンバーとし](../../security/running-as-a-member-of-the-users-group.md)ての実行」を参照してください。

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224942"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753897"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 
@@ -59,34 +59,34 @@ class COleDataSource : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[COleDataSource::COleDataSource](#coledatasource)|`COleDataSource` オブジェクトを構築します。|
+|[をソース:::コレデータソース](#coledatasource)|`COleDataSource` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleDataSource::CacheData](#cachedata)|使用して、指定された形式でデータを提供する`STGMEDIUM`構造体。|
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|渡すを使用して、指定された形式でデータを提供します。|
-|[COleDataSource::DelayRenderData](#delayrenderdata)|遅延レンダリングを使用して、指定された形式でデータを提供します。|
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|指定された形式でデータを提供する`CFile`ポインター。|
-|[COleDataSource::DelaySetData](#delaysetdata)|サポートされているすべての形式と呼ばれる`OnSetData`します。|
-|[COleDataSource::DoDragDrop](#dodragdrop)|データ ソースとドラッグ アンド ドロップ操作を実行します。|
-|[COleDataSource::Empty](#empty)|空に、`COleDataSource`データのオブジェクト。|
-|[COleDataSource::FlushClipboard](#flushclipboard)|すべてのデータをクリップボードにレンダリングします。|
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|クリップボードにデータがまだあることを確認します。|
-|[COleDataSource::OnRenderData](#onrenderdata)|遅延レンダリングの一部としてデータを取得します。|
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|データを取得、`CFile`遅延レンダリングの一部として。|
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|遅延レンダリングの一部として hglobal データを取得します。|
-|[COleDataSource::OnSetData](#onsetdata)|内のデータを交換できるという、`COleDataSource`オブジェクト。|
-|[COleDataSource::SetClipboard](#setclipboard)|場所、`COleDataSource`クリップボード上のオブジェクト。|
+|[をソース::キャッシュデータ](#cachedata)|構造体を使用して、指定した形式`STGMEDIUM`でデータを提供します。|
+|[をソース::キャッシュグローバルデータ](#cacheglobaldata)|HGLOBAL を使用して、指定された形式でデータを提供します。|
+|[:Dデータを提供します。](#delayrenderdata)|遅延レンダリングを使用して、指定した形式でデータを提供します。|
+|[データを:D](#delayrenderfiledata)|ポインター内の指定された形式のデータ`CFile`を提供します。|
+|[:Dデータデータ](#delaysetdata)|でサポートされているすべての形式に対して呼`OnSetData`び出されます。|
+|[:Do ドラッグドロップ](#dodragdrop)|データ ソースでドラッグ アンド ドロップ操作を実行します。|
+|[を指定します。](#empty)|データのオブジェクト`COleDataSource`を空にします。|
+|[を使用します。](#flushclipboard)|すべてのデータをクリップボードにレンダリングします。|
+|[を取得します。](#getclipboardowner)|クリップボードに格納されているデータがまだ存在することを確認します。|
+|[データソース::オンレンダリングデータ](#onrenderdata)|遅延レンダリングの一部としてデータを取得します。|
+|[データを表示します。](#onrenderfiledata)|遅延レンダリングの一部`CFile`としてデータを取得します。|
+|[データソース::オンレンダリンググローバルデータ](#onrenderglobaldata)|遅延レンダリングの一部として、HGLOBAL にデータを取得します。|
+|[を使用します。](#onsetdata)|オブジェクト内のデータを置き`COleDataSource`換えるために呼び出されます。|
+|[クリップボードを設定します。](#setclipboard)|オブジェクトを`COleDataSource`クリップボードに配置します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-OLE のデータ ソースを直接作成することができます。 または、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)クラスへの応答での OLE データ ソースの作成、`CopyToClipboard`と`DoDragDrop`メンバー関数。 参照してください[COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard)簡単な説明。 上書き、 `OnGetClipboardData` OLE のデータ ソース内のデータに追加のクリップボード形式を追加するクライアント項目またはサーバー項目クラスのメンバー関数用に作成、`CopyToClipboard`または`DoDragDrop`メンバー関数。
+OLE データ ソースは直接作成できます。 または、[クラス](../../mfc/reference/coleclientitem-class.md)[は、](../../mfc/reference/coleserveritem-class.md)そのクラスと`CopyToClipboard``DoDragDrop`メンバー関数に応答して OLE データ ソースを作成します。 簡単[な説明については、COleServerItem::クリップボードのコピー](../../mfc/reference/coleserveritem-class.md#copytoclipboard)を参照してください。 または`OnGetClipboardData`メンバー関数用に作成された OLE データ ソースのデータにクリップボード形式を追加するには、クライアント アイテムまたは`CopyToClipboard``DoDragDrop`サーバー アイテム クラスのメンバー関数をオーバーライドします。
 
-データの転送を準備するときに、このクラスのオブジェクトを作成し、データの最適な方法を使用してデータを格納する必要があります。 データ ソースに挿入する方法にデータがすぐに提供されるかどうかは直接影響 (即時レンダリング)、またはオンデマンド (遅延レンダリング)。 使用するクリップボード形式を渡すことによって、データの提供をすべてのクリップボード形式の (と省略可能な[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)構造)、呼び出す[に](#delayrenderdata)。
+転送用のデータを準備する場合は、このクラスのオブジェクトを作成し、データに最適な方法を使用してデータをデータに入力する必要があります。 データ ソースへの挿入方法は、データが即時に提供されるか (即時レンダリング)、オンデマンド(遅延レンダリング)かによって直接影響を受けます。 使用するクリップボード形式 (およびオプションの[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体) を渡してデータを提供するすべてのクリップボード形式に対して[、DelayRenderData](#delayrenderdata)を呼び出します。
 
-データ ソースとデータ転送する方法の詳細については、記事を参照してください。[データ オブジェクトとデータ ソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)します。 さらに、この記事で[クリップボード トピック](../../mfc/clipboard.md)OLE クリップボード機構について説明します。
+データ ソースとデータ転送の詳細については、「[データ オブジェクトとデータ ソース (OLE)」](../../mfc/data-objects-and-data-sources-ole.md)を参照してください。 また、この記事の[「クリップボード トピック」では](../../mfc/clipboard.md)、OLE クリップボードのメカニズムについて説明しています。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -100,11 +100,11 @@ OLE のデータ ソースを直接作成することができます。 また�
 
 **ヘッダー:** afxole.h
 
-##  <a name="cachedata"></a>  COleDataSource::CacheData
+## <a name="coledatasourcecachedata"></a><a name="cachedata"></a>をソース::キャッシュデータ
 
-提供されるデータのデータ転送操作の形式を指定するには、この関数を呼び出します。
+データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -113,34 +113,34 @@ void CacheData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが提供されるクリップボード形式。 このパラメーターは、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数。
+*cf フォーマット*<br/>
+データを提供するクリップボード形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpStgMedium*<br/>
-指す、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)指定された形式でデータを含む構造体。
+*中程度*<br/>
+指定された形式のデータを含む[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体へのポイント。
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)提供されるデータの形式を記述する構造体。 指定されたクリップボード形式の書式の追加情報を指定する場合、このパラメーターの値を指定*cfFormat*します。 他のフィールドの既定値が使用されますが、NULL の場合、`FORMATETC`構造体。
+*フォーマットの問題*<br/>
+データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は即時レンダリングを使用して提供するために、データを指定してください。 データは、必要になるまでにキャッシュされます。
+この関数は即時レンダリングを使用してデータを提供するため、データを指定する必要があります。 データは必要になるまでキャッシュされます。
 
-使用してデータを提供する[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)構造体。 使用することも、`CacheGlobalData`データの量を指定している場合、メンバー関数がそれほど効率的に渡すを使用して転送します。
+[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体を使用してデータを提供します。 また、提供する`CacheGlobalData`データの量が HGLOBAL を使用して効率的に転送できるほど小さい場合にも、メンバー関数を使用できます。
 
-呼び出し後`CacheData`、`ptd`のメンバー`lpFormatEtc`の内容と*lpStgMedium*呼び出し元ではなく、データ オブジェクトによって所有されています。
+の`CacheData``ptd`メンバー`lpFormatEtc`への呼び出し後、および*lpStgMedium*の内容は、呼び出し元ではなく、データ オブジェクトによって所有されます。
 
-遅延レンダリングを使用する呼び出し、[に](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+遅延レンダリングを使用するには、[メンバー](#delayrenderdata)関数を呼び出[します](#delayrenderfiledata)。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-詳細については、次を参照してください。、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 内の構造体。
+詳細については、Windows SDK の[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)および[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を参照してください。
 
-詳細については、次を参照してください。[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK に含まれています。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData
+## <a name="coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>をソース::キャッシュグローバルデータ
 
-提供されるデータのデータ転送操作の形式を指定するには、この関数を呼び出します。
+データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -149,26 +149,26 @@ void CacheGlobalData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが提供されるクリップボード形式。 このパラメーターは、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数。
+*cf フォーマット*<br/>
+データを提供するクリップボード形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*hGlobal*<br/>
-指定された形式のデータを含むグローバル メモリ ブロックへのハンドルします。
+*Hglobal*<br/>
+指定された形式のデータを含むグローバル メモリ ブロックへのハンドル。
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)提供されるデータの形式を記述する構造体。 指定されたクリップボード形式の書式の追加情報を指定する場合、このパラメーターの値を指定*cfFormat*します。 他のフィールドの既定値が使用されますが、NULL の場合、`FORMATETC`構造体。
+*フォーマットの問題*<br/>
+データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数はこの関数を呼び出すときに、データを指定する必要がありますので、即時レンダリングを使用してデータを提供します。データは、必要になるまでにキャッシュされます。 使用して、`CacheData`大量のデータや構造化された記憶域メディアが必要なかどうかを指定している場合、メンバー関数。
+この関数は、即時レンダリングを使用してデータを提供するため、関数を呼び出すときにデータを指定する必要があります。データは必要になるまでキャッシュされます。 大量の`CacheData`データを提供する場合、または構造化ストレージ・メディアが必要な場合は、メンバー関数を使用します。
 
-遅延レンダリングを使用する呼び出し、[に](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+遅延レンダリングを使用するには、[メンバー](#delayrenderdata)関数を呼び出[します](#delayrenderfiledata)。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を参照してください。
 
-詳細については、次を参照してください。[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK に含まれています。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="coledatasource"></a>  COleDataSource::COleDataSource
+## <a name="coledatasourcecoledatasource"></a><a name="coledatasource"></a>をソース:::コレデータソース
 
 `COleDataSource` オブジェクトを構築します。
 
@@ -176,11 +176,11 @@ void CacheGlobalData(
 COleDataSource();
 ```
 
-##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData
+## <a name="coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>:Dデータを提供します。
 
-提供されるデータのデータ転送操作の形式を指定するには、この関数を呼び出します。
+データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -188,29 +188,29 @@ void DelayRenderData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが提供されるクリップボード形式。 このパラメーターは、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数。
+*cf フォーマット*<br/>
+データを提供するクリップボード形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)提供されるデータの形式を記述する構造体。 指定されたクリップボード形式の書式の追加情報を指定する場合、このパラメーターの値を指定*cfFormat*します。 他のフィールドの既定値が使用されますが、NULL の場合、`FORMATETC`構造体。
+*フォーマットの問題*<br/>
+データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、データがすぐに指定されていないため、遅延レンダリングを使用してデータを提供します。 [は](#onrenderdata)または[によって](#onrenderglobaldata)メンバー関数は、データを要求します。
+この関数は遅延レンダリングを使用してデータを提供するため、データはすぐには提供されません。 メンバー[関数が呼](#onrenderdata)び[OnRenderGlobalData](#onrenderglobaldata)出され、データが要求されます。
 
-使用してデータを指定しない場合は、この関数を使用して、`CFile`オブジェクト。 使用してデータを指定する場合、`CFile`オブジェクトを呼び出し、 [DelayRenderFileData](#delayrenderfiledata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+オブジェクトを介してデータを提供しない場合は、この関数を`CFile`使用します。 `CFile`オブジェクトを介してデータを指定する場合は、[メンバー](#delayrenderfiledata)関数を呼び出します。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-即時のレンダリングを使用する呼び出し、 [CacheData](#cachedata)または[使う](#cacheglobaldata)メンバー関数。
+即時レンダリングを使用するには、[メンバー](#cachedata)関数を呼[CacheGlobalData](#cacheglobaldata)び出します。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を参照してください。
 
-詳細については、次を参照してください。[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK に含まれています。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData
+## <a name="coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>データを:D
 
-提供されるデータのデータ転送操作の形式を指定するには、この関数を呼び出します。
+データ転送操作中にデータが提供される形式を指定します。
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -218,29 +218,29 @@ void DelayRenderFileData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが提供されるクリップボード形式。 このパラメーターは、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数。
+*cf フォーマット*<br/>
+データを提供するクリップボード形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)提供されるデータの形式を記述する構造体。 指定されたクリップボード形式の書式の追加情報を指定する場合、このパラメーターの値を指定*cfFormat*します。 他のフィールドの既定値が使用されますが、NULL の場合、`FORMATETC`構造体。
+*フォーマットの問題*<br/>
+データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、データがすぐに指定されていないため、遅延レンダリングを使用してデータを提供します。 [可変](#onrenderfiledata)メンバー関数は、データを要求します。
+この関数は遅延レンダリングを使用してデータを提供するため、データはすぐには提供されません。 メンバー[関数](#onrenderfiledata)が呼び出され、データを要求します。
 
-使用する場合は、この関数を使用して、`CFile`データを提供するオブジェクト。 使用しようとしていない場合、`CFile`オブジェクトを呼び出し、[に](#delayrenderdata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+データを提供するためにオブジェクトを使用する場合は`CFile`、この関数を使用します。 `CFile`オブジェクトを使用しない場合は、[メンバー](#delayrenderdata)関数を呼び出します。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-即時のレンダリングを使用する呼び出し、 [CacheData](#cachedata)または[使う](#cacheglobaldata)メンバー関数。
+即時レンダリングを使用するには、[メンバー](#cachedata)関数を呼[CacheGlobalData](#cacheglobaldata)び出します。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を参照してください。
 
-詳細については、次を参照してください。[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK に含まれています。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData
+## <a name="coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>:Dデータデータ
 
-データ ソースの内容の変更をサポートするためには、この関数を呼び出します。
+データ ソースの内容の変更をサポートします。
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -248,23 +248,23 @@ void DelaySetData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データの配置先のクリップボード形式。 このパラメーターは、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数。
+*cf フォーマット*<br/>
+データを配置するクリップボード形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)データの交換形式を記述する構造体。 指定されたクリップボード形式の書式の追加情報を指定する場合、このパラメーターの値を指定*cfFormat*します。 他のフィールドの既定値が使用されますが、NULL の場合、`FORMATETC`構造体。
+*フォーマットの問題*<br/>
+データを置き換える形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[データ変更](#onsetdata)このような場合に、フレームワークが呼び出します。 フレームワークからのデータ ソースが返されるときにだけ使用[は](../../mfc/reference/coleserveritem-class.md#getdatasource)します。 場合`DelaySetData`は呼び出されません、`OnSetData`関数は呼び出されません。 `DelaySetData` クリップボードの内容が各呼び出す必要がありますまたは`FORMATETC`をサポートする形式。
+[これが発生すると、OnSetData](#onsetdata)はフレームワークによって呼び出されます。 これは、フレームワークが[COleServerItem から](../../mfc/reference/coleserveritem-class.md#getdatasource)データ ソースを返す場合にのみ使用されます。 呼`DelaySetData`び出されない場合、`OnSetData`関数は呼び出されません。 `DelaySetData`は、サポートするクリップボードまたは`FORMATETC`フォーマットごとに呼び出す必要があります。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を参照してください。
 
-詳細については、次を参照してください。[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK に含まれています。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop
+## <a name="coledatasourcedodragdrop"></a><a name="dodragdrop"></a>:Do ドラッグドロップ
 
-呼び出す、`DoDragDrop`メンバー関数は通常、このデータ ソースのドラッグ アンド ドロップ操作を実行する、 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)ハンドラー。
+このデータ ソースに対してドラッグ アンド ドロップ操作を実行するには、通常[は CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)ハンドラーでメンバー関数を呼び出します。 `DoDragDrop`
 
 ```
 DROPEFFECT DoDragDrop(
@@ -275,72 +275,72 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwEffects*<br/>
-ドラッグ アンド ドロップ操作ができるこのデータ ソース。 次の 1 つ以上を指定できます。
+*dw エフェクト*<br/>
+このデータ ソースで許可されているドラッグ アンド ドロップ操作。 次の 1 つ以上の値を指定できます。
 
 - DROPEFFECT_COPY コピー操作を実行できます。
 
-- 行った移動操作を実行できます。
+- DROPEFFECT_MOVE 移動操作を実行できます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクを確立でした。
+- DROPEFFECT_LINK ドロップされたデータから元のデータへのリンクが確立される可能性があります。
 
-- DROPEFFECT_SCROLL では、ドラッグのスクロール操作が発生することを示します。
+- DROPEFFECT_SCROLL ドラッグ スクロール操作が発生する可能性があることを示します。
 
-*lpRectStartDrag*<br/>
-実際には、ドラッグの開始位置を定義する四角形を指すポインター。 詳細については、「解説」を参照してください。
+*ドラッグを開始します。*<br/>
+ドラッグが実際に開始される位置を定義する四角形へのポインター。 詳細については、「解説」を参照してください。
 
-*pDropSource*<br/>
-ドロップ ソースへのポインター。 場合の既定の実装は、NULL [COleDropSource](../../mfc/reference/coledropsource-class.md)使用されます。
+*ソースを指定します。*<br/>
+ドロップ ソースへのポイント。 NULL の場合は[、COleDropSource](../../mfc/reference/coledropsource-class.md)の既定の実装が使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-ドラッグ アンド ドロップ操作によって生成される効果をドロップします。それ以外の場合せず、操作を開始しないため、指定された四角形を終了する前に、マウス ボタンを離した場合。
+ドラッグ アンド ドロップ操作によって生成されるドロップ効果。それ以外の場合は、指定された四角形を離れる前にユーザーがマウス ボタンを離したために操作が開始されない場合はDROPEFFECT_NONE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドラッグ アンド ドロップ操作はすぐに開始されません。 指定された四角形をマウス カーソルが離れる待機*lpRectStartDrag*または指定したミリ秒数が経過するまでです。 場合*lpRectStartDrag*が null の場合、四角形のサイズが 1 ピクセルです。
+ドラッグ アンド ドロップ操作はすぐには開始されません。 このオブジェクトは *、lpRectStartDrag*で指定された四角形からマウス カーソルが離れるまで、または指定されたミリ秒数が経過するまで待機します。 *lpRectStartDrag*が NULL の場合、四角形のサイズは 1 ピクセルです。
 
-時刻の遅延は、レジストリ キーの設定によって指定されます。 遅延時間を変更するには呼び出すことによって[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)または[cwinapp::writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)します。 遅延時間を指定しない場合は、200 ミリ秒の既定値が使用されます。 ドラッグの遅延時間は、次のように格納されます。
+遅延時間は、レジストリ キーの設定で指定します。 遅延時間を変更するには[、CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)または[CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint)を呼び出します。 遅延時間を指定しない場合は、デフォルト値の 200 ミリ秒が使用されます。 ドラッグ遅延時間は次のように保存されます。
 
-- Windows NT ドラッグ遅延時間は、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay に格納されます。
+- Windows NT ドラッグ遅延時間は、HKEY_LOCAL_MACHINE\ソフトウェア\Windows\NT\現在のバージョン\IniFileMapping\win.ini\Windows\ドラッグディレイに保存されます。
 
-- Windows 3.x ドラッグの遅延時間は、WIN に格納されます。INI ファイルの [Windows} セクション。
+- ウィンドウズ 3.x ドラッグ遅延時間は WIN に格納されます。INI ファイル、[ウィンドウ] セクションの下。
 
-- Windows 95/98 ドラッグ遅延時間は、WIN のキャッシュされたバージョンに格納されます。INI します。
+- Windows 95/98 ドラッグ遅延時間は、キャッシュされたバージョンの WIN に格納されます。Ini。
 
-レジストリのいずれかの遅延情報が格納されている方法の詳細についてはドラッグのまたはします。INI ファイルを参照してください[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK に含まれています。
+レジストリまたは .INI ファイルを[参照してください](/windows/win32/api/winbase/nf-winbase-writeprofilestringw)。
 
-詳細については、この記事を参照してください。[ドラッグ アンド ドロップします。ドロップ ソースの実装](../../mfc/drag-and-drop-implementing-a-drop-source.md)します。
+詳細については、「 [OLE ドラッグ アンド ドロップ](../../mfc/drag-and-drop-ole.md)」を参照してください。
 
-##  <a name="empty"></a>  COleDataSource::Empty
+## <a name="coledatasourceempty"></a><a name="empty"></a>を指定します。
 
-この関数は、空を呼び出して、`COleDataSource`データのオブジェクト。
+データのオブジェクトを空に`COleDataSource`します。
 
-```
+```cpp
 void Empty();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-両方のキャッシュし、再利用できるように、遅延レンダリング フォーマットが空にします。
+キャッシュされたレンダリング形式と遅延レンダリング形式の両方が空になり、再利用できます。
 
-詳細については、次を参照してください。 [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) Windows SDK に含まれています。
+詳細については、Windows SDK[のリリース StgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium)を参照してください。
 
-##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard
+## <a name="coledatasourceflushclipboard"></a><a name="flushclipboard"></a>を使用します。
 
-クリップボードにおよび、アプリケーションのシャット ダウンした後、クリップボードからデータをペーストできますし、データを表示します。
+クリップボードにあるデータをレンダリングし、アプリケーションのシャットダウン後にクリップボードからデータを貼り付けることができます。
 
 ```
 static void PASCAL FlushClipboard();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用[SetClipboard](#setclipboard)をクリップボードにデータを格納します。
+クリップボードにデータを格納するには、[クリップボードの設定](#setclipboard)を使用します。
 
-##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner
+## <a name="coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>を取得します。
 
-クリップボードにデータが変更されたかどうかを判断します[SetClipboard](#setclipboard)と、最後に呼び出された場合は、現在の所有者を識別します。
+[SetClipboard](#setclipboard)が最後に呼び出された後でクリップボードのデータが変更されたかどうかを調べ、その場合は現在の所有者を識別します。
 
 ```
 static COleDataSource* PASCAL GetClipboardOwner();
@@ -348,11 +348,11 @@ static COleDataSource* PASCAL GetClipboardOwner();
 
 ### <a name="return-value"></a>戻り値
 
-データは、クリップボードに現在ソースか、クリップボードがない場合、またはクリップボードが呼び出し元アプリケーションによって所有されていない場合は NULL。
+クリップボードに現在データ ソースが存在しない場合、またはクリップボードに何も存在しない場合、またはクリップボードが呼び出し元アプリケーションによって所有されていない場合は NULL。
 
-##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData
+## <a name="coledatasourceonrenderdata"></a><a name="onrenderdata"></a>データソース::オンレンダリングデータ
 
-指定された形式でデータを取得するためにフレームワークによって呼び出されます。
+指定した形式でデータを取得するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnRenderData(
@@ -362,29 +362,29 @@ virtual BOOL OnRenderData(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。
+*フォーマットの問題*<br/>
+情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。
 
-*lpStgMedium*<br/>
-指す、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)データが返される構造体。
+*中程度*<br/>
+データが返される[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体へのポイント。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した形式は、1 つに既に配置、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装を呼び出す[可変](#onrenderfiledata)または[によって](#onrenderglobaldata)場合は、指定したストレージ メディアは、ファイルまたはメモリ、それぞれします。 これらの形式のどちらを指定した場合、既定の実装は 0 が返され、何もしません。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+指定された形式は、遅延レンダリングの`COleDataSource`[遅延レンダリングの遅延レンダリングデータまたは DelayRenderFileData](#delayrenderdata)メンバー関数を使用して、オブジェクトに以前に配置された形式です。 [DelayRenderFileData](#delayrenderfiledata) この関数の既定の実装は、指定されたストレージ メディアがそれぞれファイルまたはメモリである場合に[、OnRenderFileData](#onrenderfiledata)または[OnRenderGlobalData](#onrenderglobaldata)を呼び出します。 これらの形式がどちらも指定されていない場合、既定の実装は 0 を返し、何もしません。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-場合*lpStgMedium*-> *tymed* TYMED_NULL には、`STGMEDIUM`割り当てられで指定したとおりに入力する必要があります*lpFormatEtc tymed]-> [* します。 TYMED_NULL、ない場合、`STGMEDIUM`のデータが配置を入力する必要があります。
+*lpStgMedium*-> *のタイム*がTYMED_NULL場合は`STGMEDIUM`、 *lpFormatEtc->のタイム*で指定されたとおりに割り当てられ、埋める必要があります。 TYMED_NULLでない場合は、データを`STGMEDIUM`所定の位置に入力する必要があります。
 
-これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドすることがあります。 データが小さく、固定サイズの場合は、オーバーライド`OnRenderGlobalData`します。 データは、ファイルでは、または可変サイズは、オーバーライド`OnRenderFileData`します。
+これは、高度なオーバーライド可能です。 要求された形式とメディアでデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドする必要があります。 データが小さく、サイズが固定されている場合は`OnRenderGlobalData`、 をオーバーライドします。 データがファイル内にある場合、または可変サイズの場合は、`OnRenderFileData`オーバーライドします。
 
-詳細については、次を参照してください、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)構造体、 [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列挙型、および[IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) 。で、Windows SDK。
+詳細については[、STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体と[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体[、TYMED](/windows/win32/api/objidl/ne-objidl-tymed)列挙型、および Windows SDK の[IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)を参照してください。
 
-##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData
+## <a name="coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>データを表示します。
 
-ファイルの指定したストレージ メディアは、指定された形式でデータを取得するためにフレームワークによって呼び出されます。
+指定されたストレージ メディアがファイルである場合に、指定した形式でデータを取得するためにフレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnRenderFileData(
@@ -394,27 +394,27 @@ virtual BOOL OnRenderFileData(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。
+*フォーマットの問題*<br/>
+情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。
 
-*pFile*<br/>
-指す、 [CFile](../../mfc/reference/cfile-class.md)データがレンダリングされるオブジェクト。
+*ファイル*<br/>
+データがレンダリングされる[CFile](../../mfc/reference/cfile-class.md)オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した形式は、1 つに既に配置、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装は、単に FALSE を返します。
+指定された形式は、遅延レンダリングの`COleDataSource` [DelayRenderData](#delayrenderdata)メンバー関数を使用して、オブジェクトに以前に配置された形式です。 この関数の既定の実装では、単に FALSE が返されます。
 
-これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドする可能性があります。 複数のストレージ メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データは、ファイルでは、または可変サイズは、オーバーライド`OnRenderFileData`します。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+これは、高度なオーバーライド可能です。 要求された形式とメディアでデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドする必要があります。 複数のストレージ メディアを処理する場合は[、OnRenderData](#onrenderdata)をオーバーライドします。 データがファイル内にある場合、または可変サイズの場合は、`OnRenderFileData`オーバーライドします。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)構造と[IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK に含まれています。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体と[IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)を参照してください。
 
-##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData
+## <a name="coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>データソース::オンレンダリンググローバルデータ
 
-指定したストレージ メディアがグローバル メモリに指定された形式でデータを取得するためにフレームワークによって呼び出されます。
+指定されたストレージ メディアがグローバル メモリである場合に、指定した形式でデータを取得するためにフレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -424,29 +424,29 @@ virtual BOOL OnRenderGlobalData(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。
+*フォーマットの問題*<br/>
+情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。
 
-*phGlobal*<br/>
-データが返されるグローバル メモリ ハンドルへのポインター。 いずれかがまだ割り当てられていない場合、このパラメーターは NULL を指定できます。
+*フグローバル*<br/>
+データが返されるグローバル メモリへのハンドルへのポイント。 割り当てられていない場合、このパラメーターは NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した形式は、1 つに既に配置、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装は、単に FALSE を返します。
+指定された形式は、遅延レンダリングの`COleDataSource` [DelayRenderData](#delayrenderdata)メンバー関数を使用して、オブジェクトに以前に配置された形式です。 この関数の既定の実装では、単に FALSE が返されます。
 
-場合*phGlobal*新しい HGLOBAL を割り当てられで返される必要がありますし、NULL の場合は、 *phGlobal*します。 指定された、HGLOBAL のそれ以外の場合、 *phGlobal*データが格納される必要があります。 HGLOBAL で配置されるデータ量は、メモリ ブロックの現在のサイズを超えない必要があります。 また、ブロックより大きなサイズに再割り当てできることはできません。
+*phGlobal*が NULL の場合は、新しい HGLOBAL を割り当て *、phGlobal*に返す必要があります。 それ以外の場合は *、phGlobal*によって指定された HGLOBAL にデータを入力する必要があります。 HGLOBAL に格納されるデータの量は、メモリー・ブロックの現行サイズを超えてはなりません。 また、ブロックを大きなサイズに再割り当てすることはできません。
 
-これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドすることがあります。 複数のストレージ メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データは、ファイルでは、または可変サイズは、オーバーライド[可変](#onrenderfiledata)します。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+これは、高度なオーバーライド可能です。 要求された形式とメディアでデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドする必要があります。 複数のストレージ メディアを処理する場合は[、OnRenderData](#onrenderdata)をオーバーライドします。 データがファイル内にある場合、または可変サイズの場合は、[オーバーライドします](#onrenderfiledata)。 MFC で処理される遅延レンダリングの詳細については、「[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
-詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)構造と[IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK に含まれています。
+詳細については、Windows SDK の[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体と[IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)を参照してください。
 
-##  <a name="onsetdata"></a>  COleDataSource::OnSetData
+## <a name="coledatasourceonsetdata"></a><a name="onsetdata"></a>を使用します。
 
-設定または内のデータを置換するためにフレームワークによって呼び出される、`COleDataSource`指定した形式のオブジェクト。
+指定した形式で`COleDataSource`オブジェクトのデータを設定または置換するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnSetData(
@@ -457,39 +457,39 @@ virtual BOOL OnSetData(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFormatEtc*<br/>
-指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)データを交換する形式を指定します。
+*フォーマットの問題*<br/>
+データを置換する形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。
 
-*lpStgMedium*<br/>
-指す、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)を現在の内容を置き換えるデータを含む構造体、`COleDataSource`オブジェクト。
+*中程度*<br/>
+オブジェクトの現在の内容を置き換えるデータを含む[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体への`COleDataSource`ポイント。
 
-*bRelease*<br/>
-関数呼び出しの完了後、ストレージ メディアの所有権を持っているユーザーを示します。 呼び出し元は、ストレージ メディアの代わりに割り当てられたリソースを解放するため担当するユーザーを決定します。 呼び出し元は設定することによって*bRelease*します。 場合*bRelease*が 0 以外の場合、データ ソースが所有権、使用が完了したら、メディアを解放します。 ときに*bRelease* 0 は、呼び出し元が所有権を保持およびデータ ソースは、ストレージ メディアを使用して、呼び出しの期間に対してのみです。
+*bリリース*<br/>
+関数呼び出しの完了後にストレージ メディアの所有権を持つユーザーを示します。 呼び出し元は、ストレージ メディアに代わって割り当てられたリソースを解放する担当者を決定します。 呼び出し元は*bRelease*を設定してこれを行います。 *bRelease*が 0 以外の場合、データ ソースは所有権を取得し、使用が終了するとメディアを解放します。 *bRelease*が 0 の場合、呼び出し元は所有権を保持し、データ ソースは呼び出しの間のみストレージ メディアを使用できます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-正常に取得するまで、データ ソースによるデータの所有権はなりません。 つまり、その所有権を持ちません場合`OnSetData`0 を返します。 呼び出すことによってストレージ メディアを解放、データ ソースに所有権がある場合は、パラメーター、 [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)関数。
+データ ソースは、データを正常に取得するまで、データの所有権を取得しません。 つまり、0 を`OnSetData`返しても所有権は取得されません。 データ ソースが所有権を取得する場合は[、ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium)関数を呼び出すことによってストレージ メディアを解放します。
 
-既定の実装では、何も行われません。 指定された形式でデータを置換するには、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。
+既定の実装では、何も行われません。 指定した形式のデータを置き換えるには、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。
 
-詳細については、次を参照してください、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)構造体と[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)と[IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) 。Windows SDK で機能します。
+詳細については、Windows SDK の[「STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)および[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体」および「[リリースStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium)および[IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)関数」を参照してください。
 
-##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
+## <a name="coledatasourcesetclipboard"></a><a name="setclipboard"></a>クリップボードを設定します。
 
-含まれるデータの格納、`COleDataSource`後、次の関数のいずれかを呼び出してクリップボード上のオブジェクト。[CacheData](#cachedata)、[使う](#cacheglobaldata)、[に](#delayrenderdata)、または[DelayRenderFileData](#delayrenderfiledata)します。
+次の関数のいずれかを呼び`COleDataSource`出した[後、オブジェクト](#cachedata)に含まれるデータをクリップボードに格納[DelayRenderData](#delayrenderdata)[します](#delayrenderfiledata)。 [CacheGlobalData](#cacheglobaldata)
 
-```
+```cpp
 void SetClipboard();
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプルの OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル ヒエルスヴル](../../overview/visual-cpp-samples.md)<br/>
+[サンプル O クライアント](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDataObject クラス](../../mfc/reference/coledataobject-class.md)

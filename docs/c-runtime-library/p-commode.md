@@ -1,9 +1,10 @@
 ---
 title: __p__commode
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - __p__commode
-apilocation:
+- _o___p__commode
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,20 +13,24 @@ apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __p__commode
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 3a565a179077635438c03539cefa83823603bb00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482703"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919496"
 ---
-# <a name="pcommode"></a>__p__commode
+# <a name="__p__commode"></a>__p__commode
 
 ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。
 
@@ -40,14 +45,16 @@ int * __p__commode(
 
 `_commode` グローバル変数へのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `__p__commode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
 
 ファイル コミット モードは重要なデータがディスクに書き込まれるタイミングを指定します。 詳細については、「[fflush](../c-runtime-library/reference/fflush.md)」をご覧ください。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |__p\__commode|internal.h|

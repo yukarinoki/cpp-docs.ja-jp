@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: db2774b6a73a989b4e9250719f99122826b486fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79c8809b4de9d6853aaacec4283bf01d0e89305e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187103"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>コンパイラの警告 (レベル 1) C4364
 
-\#アセンブリ 'file' location(line_number) as_friend 属性なしで以前に確認されたを使用してください。as_friend は適用されません。
+as_friend 属性のない場所 (line_number) で以前に検出されたアセンブリ ' file ' に対してを使用して \#。as_friend 適用されていません
 
-A`#using`ディレクティブが指定したメタデータ ファイルは、繰り返されましたが、`as_friend`修飾子は、最初に見つかったでは使用されませんでした。 コンパイラは、2 つ目を無視`as_friend`します。
+指定されたメタデータファイルに対して `#using` ディレクティブが繰り返されましたが、`as_friend` 修飾子が最初に出現するときに使用されませんでした。コンパイラは、2番目の `as_friend`を無視します。
 
-詳細については、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)します。
+詳細については、「 [FriendC++Assemblies ()](../../dotnet/friend-assemblies-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 コンポーネントを作成する例を次に示します。
 
-```
+```cpp
 // C4364.cpp
 // compile with: /clr /LD
 ref class A {};
@@ -35,7 +35,7 @@ ref class A {};
 
 次の例では、C4364 が生成されます。
 
-```
+```cpp
 // C4364_b.cpp
 // compile with: /clr /W1 /c
 #using " C4364.dll"

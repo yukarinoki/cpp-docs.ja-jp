@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::stack
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::stack::assign
 - cliext::stack::const_reference
 - cliext::stack::container_type
@@ -59,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208326"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-テンプレート クラスは後入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`stack`プッシュ ダウン スタックとの基になるコンテナーを管理します。
+このテンプレートクラスは、後入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプター `stack` を使用すると、基になるコンテナーをプッシュダウンスタックとして管理できます。
 
-下記の説明で`GValue`と同じ*値*しない限り、後者の場合は、ref 型である場合は`Value^`します。 同様に、`GContainer`と同じ*コンテナー*しない限り、後者の場合は、ref 型である場合は`Container^`します。
+次の説明では、`GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、`Value^`します。 同様に、`GContainer` は*コンテナー*と同じですが、後者が参照型である場合は `Container^`ます。
 
 ## <a name="syntax"></a>構文
 
@@ -86,7 +80,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>パラメーター
 
-*[値]*<br/>
+*Value*<br/>
 被制御シーケンス内の要素の型。
 
 *コンテナー*<br/>
@@ -96,7 +90,7 @@ template<typename Value,
 
 **ヘッダー:** \<cliext/stack >
 
-**Namespace:** cliext
+**名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
@@ -105,8 +99,8 @@ template<typename Value,
 |[stack::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[stack::container_type (STL/CLR)](#container_type)|基になるコンテナーの型。|
 |[stack::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[stack::generic_container (STL/CLR)](#generic_container)|コンテナー アダプターのジェネリック インターフェイスの型。|
-|[stack::generic_value (STL/CLR)](#generic_value)|コンテナー アダプターのジェネリック インターフェイスの要素の型。|
+|[stack::generic_container (STL/CLR)](#generic_container)|コンテナーアダプターのジェネリックインターフェイスの型。|
+|[stack::generic_value (STL/CLR)](#generic_value)|コンテナーアダプターのジェネリックインターフェイスの要素の型。|
 |[stack::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[stack::size_type (STL/CLR)](#size_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[stack::value_type (STL/CLR)](#value_type)|要素の型。|
@@ -130,27 +124,27 @@ template<typename Value,
 |演算子|説明|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator!= (stack) (STL/CLR)](#op_neq)|かどうかを`stack`オブジェクトが等しく別`stack`オブジェクト。|
-|[operator< (stack) (STL/CLR)](#op_lt)|かどうかを`stack`オブジェクトが他よりも小さい`stack`オブジェクト。|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|かどうかを`stack`オブジェクトが別に小さい`stack`オブジェクト。|
-|[operator== (stack) (STL/CLR)](#op_eq)|かどうかを`stack`オブジェクトが相互に等しい`stack`オブジェクト。|
-|[operator> (stack) (STL/CLR)](#op_gt)|かどうかを`stack`オブジェクトが他よりも大きい`stack`オブジェクト。|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|かどうかを`stack`オブジェクトより大きいまたは相互に等しい`stack`オブジェクト。|
+|[operator!= (stack) (STL/CLR)](#op_neq)|`stack` オブジェクトが別の `stack` オブジェクトと等しくないかどうかを判断します。|
+|[operator< (stack) (STL/CLR)](#op_lt)|`stack` オブジェクトが、別の `stack` オブジェクトより小さいかどうかを判断します。|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|`stack` オブジェクトが、別の `stack` オブジェクト以下かどうかを判断します。|
+|[operator== (stack) (STL/CLR)](#op_eq)|`stack` オブジェクトが別の `stack` オブジェクトと等しいかどうかを判断します。|
+|[operator> (stack) (STL/CLR)](#op_gt)|`stack` オブジェクトが、別の `stack` オブジェクトより大きいかどうかを判断します。|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|`stack` オブジェクトが、別の `stack` オブジェクト以上かどうかを判断します。|
 
 ## <a name="interfaces"></a>インターフェイス
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|オブジェクトが重複しています。|
-|IStack\<値、コンテナー >|汎用コンテナー アダプターを管理します。|
+|<xref:System.ICloneable>|オブジェクトを複製します。|
+|IStack\<値、コンテナー >|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-割り当ておよび解放型の基になるコンテナーを通じて制御してシーケンスに対するストレージの*コンテナー*、格納する*値*要素と、必要に応じて大きくなります。 オブジェクトは、プッシュとポップだけ、最後の要素 (LIFO キュー、またはスタックとも呼ばれます) は、後入れ先出しキューの実装へのアクセスを制限します。
+オブジェクトは、コンテナー型の基になるコンテナー ( *container*) によって制御されるシーケンスのストレージを割り当て、解放します。このコンテナーは、*値*要素を格納し、必要に応じて拡大します。 オブジェクトは、最後の要素だけをプッシュしてポップするアクセスを制限し、最後の先入れ先出しキュー (LIFO キューまたはスタックとも呼ばれます) を実装します。
 
 ## <a name="members"></a>メンバー
 
-## <a name="assign"></a> stack::assign (STL/CLR)
+## <a name="stackassign-stlclr"></a><a name="assign"></a>stack:: assign (STL/CLR)
 
 すべての要素を置換します。
 
@@ -163,11 +157,11 @@ void assign(stack<Value, Container>% right);
 #### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-挿入するコンテナー アダプター。
+挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、代入`right.get_container()`を基になるコンテナー。 スタックのすべての内容を変更するのに使用するとします。
+このメンバー関数は、基になるコンテナーに `right.get_container()` を割り当てます。 スタックの内容全体を変更するには、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -204,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> stack::const_reference (STL/CLR)
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>stack:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -214,7 +208,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -248,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> stack::container_type (STL/CLR)
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>stack:: container_type (STL/CLR)
 
 基になるコンテナーの型。
 
@@ -258,7 +252,7 @@ c b a
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター *Container* のシノニムです。
 
@@ -290,9 +284,9 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> stack::difference_type (STL/CLR)
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>stack::d ifference_type (STL/CLR)
 
-2 つの要素間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -300,9 +294,9 @@ a b c
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、場合によって負の値の要素の数を表します。
+この型は、要素の数が負の値になる可能性があることを示します。
 
 ### <a name="example"></a>例
 
@@ -348,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> stack::empty (STL/CLR)
+## <a name="stackempty-stlclr"></a><a name="empty"></a>stack:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -358,9 +352,9 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`します。 これを使用するには、スタックが空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`に相当します。 スタックが空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -402,9 +396,9 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> stack::generic_container (STL/CLR)
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>stack:: generic_container (STL/CLR)
 
-コンテナー アダプターのジェネリック インターフェイスの型。
+コンテナーアダプターのジェネリックインターフェイスの型。
 
 ### <a name="syntax"></a>構文
 
@@ -413,9 +407,9 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレート コンテナー アダプター クラスのジェネリック インターフェイスを表します。
+この型は、このテンプレートコンテナーアダプタークラスのジェネリックインターフェイスを表します。
 
 ### <a name="example"></a>例
 
@@ -465,9 +459,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> stack::generic_value (STL/CLR)
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>stack:: generic_value (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用するための要素の型。
+コンテナーのジェネリックインターフェイスで使用する要素の型。
 
 ### <a name="syntax"></a>構文
 
@@ -475,9 +469,9 @@ a b c d e
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。 (`GValue`か`value_type`または`value_type^`場合`value_type`ref 型です)。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。 (`GValue` は、`value_type` が ref 型である場合は `value_type` または `value_type^` です)。
 
 ### <a name="example"></a>例
 
@@ -523,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> stack::get_container (STL/CLR)
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a>stack:: get_container (STL/CLR)
 
 基になるコンテナーにアクセスします。
 
@@ -533,9 +527,9 @@ c b a
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、基になるコンテナーのハンドルを返します。 これを使用して、コンテナー ラッパーによる制限を回避します。
+このメンバー関数は、基になるコンテナーのハンドルを返します。 コンテナーラッパーによって課される制限を回避するために使用します。
 
 ### <a name="example"></a>例
 
@@ -565,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> stack::operator = (STL/CLR)
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a>stack:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -578,11 +572,11 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 #### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-コピーするコンテナー アダプター。
+コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。
+メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -619,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> stack::pop (STL/CLR)
+## <a name="stackpop-stlclr"></a><a name="pop"></a>stack::p op (STL/CLR)
 
 最後の要素を削除します。
 
@@ -629,9 +623,9 @@ a b c
 void pop();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 後ろに 1 つの要素によって、スタックを短縮するのに使用するとします。
+このメンバー関数は、被制御シーケンスの最後の要素を削除します。この要素は空にすることはできません。 これを使用して、スタックを1要素ずつ短くします。
 
 ### <a name="example"></a>例
 
@@ -667,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> stack::push (STL/CLR)
+## <a name="stackpush-stlclr"></a><a name="push"></a>stack::p u (STL/CLR)
 
 新しい最後の要素を追加します。
 
@@ -677,9 +671,9 @@ a b
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、値を持つ要素を挿入する`val`被制御シーケンスの最後にします。 それを使用するには、スタックに別の要素を追加します。
+このメンバー関数は、被制御シーケンスの末尾に `val` 値を持つ要素を挿入します。 このメソッドを使用して、別の要素をスタックに追加します。
 
 ### <a name="example"></a>例
 
@@ -708,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> stack::reference (STL/CLR)
+## <a name="stackreference-stlclr"></a><a name="reference"></a>stack:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -718,7 +712,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -757,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> stack::size (STL/CLR)
+## <a name="stacksize-stlclr"></a><a name="size"></a>stack:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -767,9 +761,9 @@ a b x
 size_type size();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`します。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかについては、「 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -811,9 +805,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> stack::size_type (STL/CLR)
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>stack:: size_type (STL/CLR)
 
-2 つの要素の間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -821,9 +815,9 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、負でない要素の数を表します。
+この型は、負でない要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -860,9 +854,9 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> stack::stack (STL/CLR)
+## <a name="stackstack-stlclr"></a><a name="stack"></a>stack:: stack (STL/CLR)
 
-コンテナー アダプター オブジェクトを構築します。
+コンテナーアダプターオブジェクトを構築します。
 
 ### <a name="syntax"></a>構文
 
@@ -878,34 +872,34 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 コピーするオブジェクト。
 
-*ラップされました。*<br/>
-使用するラップされたコンテナーです。
+*回り*<br/>
+使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクター。
+コンストラクター:
 
 `stack();`
 
-空のラップされたコンテナーを作成します。 空の初期被制御シーケンスの指定に使用するとします。
+空のラップされたコンテナーを作成します。 このメソッドを使用して、空の初期被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `stack(stack<Value, Container>% right);`
 
-コピーであるラップされたコンテナーを作成します。`right.get_container()`します。 Stack オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。
+`right.get_container()`のコピーである、ラップされたコンテナーを作成します。 このメソッドを使用して、スタックオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `stack(stack<Value, Container>^ right);`
 
-コピーであるラップされたコンテナーを作成します。`right->get_container()`します。 Stack オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`*right`します。
+`right->get_container()`のコピーである、ラップされたコンテナーを作成します。 これを使用して、スタックオブジェクト `*right`によって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `explicit stack(container_type% wrapped);`
 
-既存のコンテナーを使用して*ラップ*ラップされたコンテナーとして。 それを使用して既存のコンテナーからのスタックを構築します。
+ラップされたコンテナーとして*ラップ*された既存のコンテナーを使用します。 これを使用して、既存のコンテナーからスタックを構築します。
 
 ### <a name="example"></a>例
 
@@ -953,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> stack::to_array (STL/CLR)
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a>stack:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -963,9 +957,9 @@ x x x x x
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。
+このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
 ### <a name="example"></a>例
 
@@ -1003,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> stack::top (STL/CLR)
+## <a name="stacktop-stlclr"></a><a name="top"></a>stack:: top (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -1013,9 +1007,9 @@ a b c
 reference top();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 最後の要素へのアクセスが存在することがわかっている場合に使用するとします。
+このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最後の要素にアクセスするために使用します。
 
 ### <a name="example"></a>例
 
@@ -1055,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> stack::top_item (STL/CLR)
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>stack:: top_item (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -1065,9 +1059,9 @@ a b x
 property value_type top_item;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 存在することがわかっている場合、最後の要素の読み書きに使用するとします。
+プロパティは、被制御シーケンスの最後の要素にアクセスします。この要素は、空にすることはできません。 このメソッドは、最後の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
 ### <a name="example"></a>例
 
@@ -1107,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> stack::value_type (STL/CLR)
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>stack:: value_type (STL/CLR)
 
 要素の型。
 
@@ -1117,9 +1111,9 @@ a b x
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型はテンプレート パラメーターのシノニム*値*します。
+この型は、テンプレートパラメーター*値*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1152,9 +1146,9 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> 演算子! = (スタック) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operator! = (stack) (STL/CLR)
 
-スタックには、比較と等しくありません。
+スタックが等しくないかどうかの比較。
 
 ### <a name="syntax"></a>構文
 
@@ -1173,9 +1167,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(left == right)`します。 テストに使用するかどうか*左*順序付けされていないと同じ*右*2 つのスタックが比較対象の要素ごとの場合。
+演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1223,9 +1217,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> 演算子&lt;(スタック) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator&lt; (stack) (STL/CLR)
 
-スタックが比較未満です。
+スタックは比較していません。
 
 ### <a name="syntax"></a>構文
 
@@ -1244,9 +1238,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します。 場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`します。 返しますそれ以外の場合、 `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()`テストに使用するかどうか*左*前に順序付けは*右*2 つのスタックが比較対象の要素ごとにいる場合。
+Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `right->size()``() <` を返します。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1294,9 +1288,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 演算子&lt;= (スタック) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator&lt;= (stack) (STL/CLR)
 
-以下のスタックの比較。
+スタックが以下であるかどうかを比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -1315,9 +1309,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(right < left)`します。 テストに使用するかどうか*左*後に順序付けされていない*右*2 つのスタックが比較対象の要素ごとの場合。
+演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1365,9 +1359,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 演算子 (スタック) (STL/CLR) = =
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>operator = = (stack) (STL/CLR)
 
-スタックに比較します。
+スタック等比較。
 
 ### <a name="syntax"></a>構文
 
@@ -1386,9 +1380,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子の関数によって制御されるシーケンスの場合にのみ true を返します*左*と*右*同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`します。 テストに使用するかどうか*左*が同じ順序付け*右*2 つのスタックが比較対象の要素ごとの場合。
+演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのスタックが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1436,9 +1430,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 演算子&gt;(スタック) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator&gt; (stack) (STL/CLR)
 
-スタックの比較よりも大きいです。
+スタックが比較を超えています。
 
 ### <a name="syntax"></a>構文
 
@@ -1457,9 +1451,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`right` `<` `left`します。 テストに使用するかどうか*左*が後に順序付け*右*2 つのスタックが比較対象の要素ごとの場合。
+Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう*かをテストします。
 
 ### <a name="example"></a>例
 
@@ -1507,9 +1501,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 演算子&gt;= (スタック) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator&gt;= (stack) (STL/CLR)
 
-Stack より大きいまたは等しい比較します。
+スタックが以上比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -1528,9 +1522,9 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(left < right)`します。 テストに使用するかどうか*左*する前に順序付けされていない*右*2 つのスタックが比較対象の要素ごとの場合。
+演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

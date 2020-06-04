@@ -1,28 +1,26 @@
 ---
 title: LIB のその他の出力
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 1f0140d33a06a1bdb95df4a8c52aea1f84b3aca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4152795c2f1cc2acbeb7a55d0d5ee3419fe6f789
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320254"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439176"
 ---
 # <a name="other-lib-output"></a>LIB のその他の出力
 
-既定のモードでは、結果として得られるライブラリに関する情報を表示、/LIST オプションを使用できます。 この出力は、ファイルにリダイレクトできます。
+既定のモードでは、/LIST オプションを使用して、結果として得られるライブラリに関する情報を表示できます。 この出力をファイルにリダイレクトできます。
 
-著作権およびバージョンのメッセージが表示されますおよび/NOLOGO オプションを使用しない場合は、コマンド ファイルをエコーします。
+[/NOLOGO] オプションが使用されていない限り、LIB は著作権およびバージョンメッセージを表示し、コマンドファイルをエコーします。
 
-入力すると`lib`LIB をしないその他の入力には、そのオプションを要約した法を表示します。
+他の入力を使用せずに `lib` を入力すると、LIB にはそのオプションを要約する usage ステートメントが表示されます。
 
-エラーおよび警告の LIB によって発行されたメッセージがあるフォーム LNK*nnnn*します。 リンク、DUMPBIN、EDITBIN ツールでは、このエラーの範囲も使用します。 ヘルプは、出力ウィンドウで、エラーを選択し、f1 キーを押します。
+LIB によって発行されたエラーメッセージと警告メッセージの形式は、LNK*nnnn*です。 LINK、DUMPBIN、および EDITBIN ツールでも、このようなエラーの範囲が使用されます。 ヘルプを表示するには、[出力] ウィンドウでエラーを選択し、F1 キーを押します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [LIB の概要](overview-of-lib.md)

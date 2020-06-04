@@ -4,42 +4,42 @@ ms.date: 11/04/2016
 f1_keywords:
 - CMapWordToOb
 - AFXCOLL/CMapWordToOb
-- AFXCOLL/CMapStringToOb::CMapStringToOb
-- AFXCOLL/CMapStringToOb::GetCount
-- AFXCOLL/CMapStringToOb::GetHashTableSize
-- AFXCOLL/CMapStringToOb::GetNextAssoc
-- AFXCOLL/CMapStringToOb::GetSize
-- AFXCOLL/CMapStringToOb::GetStartPosition
-- AFXCOLL/CMapStringToOb::HashKey
-- AFXCOLL/CMapStringToOb::InitHashTable
-- AFXCOLL/CMapStringToOb::IsEmpty
-- AFXCOLL/CMapStringToOb::Lookup
-- AFXCOLL/CMapStringToOb::LookupKey
-- AFXCOLL/CMapStringToOb::RemoveAll
-- AFXCOLL/CMapStringToOb::RemoveKey
-- AFXCOLL/CMapStringToOb::SetAt
+- AFXCOLL/CMapWordToOb::CMapWordToOb
+- AFXCOLL/CMapWordToOb::GetCount
+- AFXCOLL/CMapWordToOb::GetHashTableSize
+- AFXCOLL/CMapWordToOb::GetNextAssoc
+- AFXCOLL/CMapWordToOb::GetSize
+- AFXCOLL/CMapWordToOb::GetStartPosition
+- AFXCOLL/CMapWordToOb::HashKey
+- AFXCOLL/CMapWordToOb::InitHashTable
+- AFXCOLL/CMapWordToOb::IsEmpty
+- AFXCOLL/CMapWordToOb::Lookup
+- AFXCOLL/CMapWordToOb::LookupKey
+- AFXCOLL/CMapWordToOb::RemoveAll
+- AFXCOLL/CMapWordToOb::RemoveKey
+- AFXCOLL/CMapWordToOb::SetAt
 helpviewer_keywords:
-- CMapStringToOb [MFC], CMapStringToOb
-- CMapStringToOb [MFC], GetCount
-- CMapStringToOb [MFC], GetHashTableSize
-- CMapStringToOb [MFC], GetNextAssoc
-- CMapStringToOb [MFC], GetSize
-- CMapStringToOb [MFC], GetStartPosition
-- CMapStringToOb [MFC], HashKey
-- CMapStringToOb [MFC], InitHashTable
-- CMapStringToOb [MFC], IsEmpty
-- CMapStringToOb [MFC], Lookup
-- CMapStringToOb [MFC], LookupKey
-- CMapStringToOb [MFC], RemoveAll
-- CMapStringToOb [MFC], RemoveKey
-- CMapStringToOb [MFC], SetAt
+- CMapWordToOb [MFC], CMapWordToOb
+- CMapWordToOb [MFC], GetCount
+- CMapWordToOb [MFC], GetHashTableSize
+- CMapWordToOb [MFC], GetNextAssoc
+- CMapWordToOb [MFC], GetSize
+- CMapWordToOb [MFC], GetStartPosition
+- CMapWordToOb [MFC], HashKey
+- CMapWordToOb [MFC], InitHashTable
+- CMapWordToOb [MFC], IsEmpty
+- CMapWordToOb [MFC], Lookup
+- CMapWordToOb [MFC], LookupKey
+- CMapWordToOb [MFC], RemoveAll
+- CMapWordToOb [MFC], RemoveKey
+- CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375861"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442583"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb クラス
 
@@ -53,53 +53,53 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>メンバー
 
-メンバー関数は、`CMapWordToOb`クラスのメンバー関数のような[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)します。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所を確認、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、WORD に置き換えてください。
-
-`BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;'
-
-たとえば、次のように変換します。
+`CMapWordToOb` のメンバー関数は、 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CString` または**char**への**const**ポインターが表示されている場合は、代わりに WORD を使用します。
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
+たとえば、次のように変換します。
+
+`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
+
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
+|[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ要素の数を返します。|
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|現在のハッシュ テーブル内の要素数を決定します。|
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|反復処理するためには、次の要素を取得します。|
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|このマップ要素の数を返します。|
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|最初の要素の位置を返します。|
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|指定したキーのハッシュ値を計算します。|
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|ハッシュ テーブルを初期化します。|
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|マップが空の状態 (要素がない場合) をテストします。|
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Void ポインター キーに基づく void ポインターを検索します。 エンティティではなく、ポインター値は、キーの比較に使用されます。|
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|指定したキー値に関連付けられているキーへの参照を返します。|
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|このマップからすべての要素を削除します。|
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|キーで指定された要素を削除します。|
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|マップに要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|
+|[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
+|[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
+|[CMapWordToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|反復処理の対象となる次の要素を取得します。|
+|[CMapWordToOb:: GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|このマップ内の要素の数を返します。|
+|[CMapWordToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|最初の要素の位置を返します。|
+|[CMapWordToOb:: HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|指定したキーのハッシュ値を計算します。|
+|[CMapWordToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|ハッシュテーブルを初期化します。|
+|[CMapWordToOb:: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|空のマップ条件 (要素なし) があるかどうかをテストします。|
+|[CMapWordToOb:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Void ポインターキーに基づいて void ポインターを検索します。 ポインター値は、それが指すエンティティではなく、キー比較に使用されます。|
+|[CMapWordToOb:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|指定されたキー値に関連付けられているキーへの参照を返します。|
+|[CMapWordToOb:: RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|このマップからすべての要素を削除します。|
+|[CMapWordToOb:: RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|キーによって指定された要素を削除します。|
+|[CMapWordToOb:: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Map に要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|マップに要素を挿入、演算子の代替の`SetAt`します。|
+|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。 `SetAt`の場合は演算子を代入します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`CMapWordToOb` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 各要素は、アーカイブ、オーバー ロードされた挿入のあるいずれかにマップが格納されている場合にシリアル化。 ( **<<**) 演算子、または、`Serialize`メンバー関数。
+`CMapWordToOb` には、要素のシリアル化とダンプをサポートするための IMPLEMENT_SERIAL マクロが組み込まれています。 各要素は、マップがアーカイブに格納されている場合は、オーバーロードされた挿入 ( **<<** ) 演算子または `Serialize` メンバー関数と共にシリアル化されます。
 
-個々 の単語のダンプが必要な場合`CObject`要素、1 以上に、ダンプ コンテキストの深さを設定する必要があります。
+個々のワード `CObject` 要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
 
-ときに、`CMapWordToOb`オブジェクトを削除すると、またはその要素が削除されます、`CObject`ポインターを削除します。 によって参照されるオブジェクト、`CObject`ポインターは破棄されません。
+`CMapWordToOb` オブジェクトが削除されるか、またはその要素が削除されると、`CObject` ポインターが削除されます。 `CObject` ポインターによって参照されているオブジェクトは破棄されません。
 
-詳細については`CMapWordToOb`、記事をご覧ください[コレクション](../../mfc/collections.md)します。
+`CMapWordToOb`の詳細については、「[コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,11 +107,11 @@ class CMapWordToOb : public CObject
 
 `CMapWordToOb`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

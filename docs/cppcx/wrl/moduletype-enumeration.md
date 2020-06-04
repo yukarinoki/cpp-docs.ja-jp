@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403231"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213721"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列挙型
 
@@ -28,20 +28,20 @@ enum ModuleType;
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`InProc`|・ インプロセス サーバーです。|
-|`OutOfProc`|アウト プロセス サーバーの場合。|
-|`DisableCaching`|モジュールのキャッシュ メカニズムを無効にします。|
-|`InProcDisableCaching`|組み合わせた`InProc`と`DisableCaching`します。|
-|`OutOfProcDisableCaching`|組み合わせた`OutOfProc`と`DisableCaching`します。|
+|`InProc`|インプロセスサーバー。|
+|`OutOfProc`|アウトプロセスサーバー。|
+|`DisableCaching`|モジュールのキャッシュメカニズムを無効にします。|
+|`InProcDisableCaching`|`InProc` と `DisableCaching`の組み合わせ。|
+|`OutOfProcDisableCaching`|`OutOfProc` と `DisableCaching`の組み合わせ。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** resource.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

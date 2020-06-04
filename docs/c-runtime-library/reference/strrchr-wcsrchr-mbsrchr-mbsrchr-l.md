@@ -1,12 +1,14 @@
 ---
 title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
-apilocation:
+- _o__mbsrchr
+- _o__mbsrchr_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +22,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsrchr
 - _ftcsrchr
@@ -42,14 +48,14 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347299"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911160"
 ---
-# <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
+# <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
 文字列をスキャンして最後に出現する文字を検索します。
 
@@ -114,10 +120,10 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 NULL で終わる検索対象の文字列。
 
-*c*<br/>
+*40u-c*<br/>
 検索する文字。
 
 *locale*<br/>
@@ -125,19 +131,21 @@ NULL で終わる検索対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-最後に見つかったにポインターを返します*c*で*str*場合は、NULL または*c*が見つかりません。
+*Str*で*c*が最後に出現する位置へのポインターを返すか、 *c*が見つからない場合は NULL を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`strrchr`関数検索の最後に見つかった*c* (に変換**char**) で*str*します。 検索には、終端の null 文字が含まれます。
+関数`strrchr`は、 *str*で最後に出現した*c* ( **char**型に変換) を検索します。 検索には、終端の null 文字が含まれます。
 
 `wcsrchr` 関数と `_mbsrchr` 関数は、 `strrchr`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
 
-C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の動作C++オーバー ロードは、シンボル _CONST_RETURN を定義します。
+C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 これらの関数の**const**と**const**以外の両方のバージョンが使用できる場合、マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されます。 両方の C++ オーバーロードに非**定数**の動作が必要な場合は、シンボル _CONST_RETURN を定義します。
 
-`_mbsrchr` はそのパラメーターを検証します。 場合*str*が null の場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 続けるには、実行が許可された場合`errno`EINVAL に設定されていると`_mbsrchr`0 を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbsrchr` はそのパラメーターを検証します。 *Str*が NULL の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可され`errno`た場合、は EINVAL `_mbsrchr`に設定され、0を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -148,7 +156,7 @@ C では、これらの関数の実行、 **const**最初の引数のポイン�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
 |`wcsrchr`|\<string.h> または \<wchar.h>|
@@ -163,7 +171,7 @@ C では、これらの関数の実行、 **const**最初の引数のポイン�
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

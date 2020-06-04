@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194864"
 ---
 # <a name="linker-tools-error-lnk1313"></a>リンカ ツール エラー LNK1313
 
 > ijw/ネイティブ モジュールが検出されました。純粋なモジュールとリンクできません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Visual C の現在のバージョンは、ネイティブまたは混合のマネージド/ネイティブ .obj ファイルでコンパイルされた .obj ファイルをリンクをサポートしていない **/clr: 純粋な**します。
+現在のバージョンの Visual C++は、 **/clr: pure**を使用してコンパイルされた .obj ファイルを使用したネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていません。
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 ## <a name="example"></a>例
 

@@ -1,8 +1,6 @@
 ---
-title: TN002:永続的なオブジェクトのデータ形式
+title: 'テクニカル ノート 2: 永続オブジェクトのデータ形式'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.data
 helpviewer_keywords:
 - VERSIONABLE_SCHEMA macro [MFC]
 - persistent object data
@@ -10,24 +8,24 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f65a7b7afcf6bd832c9c23560bb29374038fae1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370452"
 ---
-# <a name="tn002-persistent-object-data-format"></a>TN002:永続的なオブジェクトのデータ形式
+# <a name="tn002-persistent-object-data-format"></a>テクニカル ノート 2: 永続オブジェクトのデータ形式
 
-ここでは、ファイルに格納されるときに、永続的な C++ オブジェクトと、オブジェクトのデータの形式をサポートする MFC ルーチンについて説明します。 これでクラスにのみ適用されます、 [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)マクロ。
+このノートでは、永続的な C++ オブジェクトをサポートする MFC ルーチンと、ファイルに格納されているオブジェクト データの形式について説明します。 これは[、DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)マクロを持つクラスにのみ適用されます。
 
-## <a name="the-problem"></a>問題を
+## <a name="the-problem"></a>問題
 
-永続的なデータの MFC 実装では、1 つの連続するパーツ ファイルの多数のオブジェクトのデータを格納します。 オブジェクトの`Serialize`メソッドは、オブジェクトのデータをコンパクトなバイナリ形式に変換します。
+永続データの MFC 実装では、ファイルの連続した単一部分に多数のオブジェクトのデータを格納します。 オブジェクトの`Serialize`メソッドは、オブジェクトのデータをコンパクトなバイナリ形式に変換します。
 
-実装の保証を使用して、すべてのデータが同じ形式で保存、 [CArchive クラス](../mfc/reference/carchive-class.md)します。 使用して、`CArchive`翻訳者としてのオブジェクト。 このオブジェクトを呼び出すまでは作成時からが解決しない[CArchive::Close](../mfc/reference/carchive-class.md#close)します。 このメソッドを呼び出せませんプログラマによって明示的にまたは暗黙的に、デストラクターでプログラムを含むスコープの終了時、`CArchive`します。
+この実装では[、CArchive クラス](../mfc/reference/carchive-class.md)を使用して、すべてのデータが同じ形式で保存されます。 オブジェクトを`CArchive`トランスレータとして使用します。 このオブジェクトは、作成された時点から[CArchive::Close](../mfc/reference/carchive-class.md#close)を呼び出すまで保持されます。 このメソッドは、プログラマが明示的に呼び出すか、またはプログラムが`CArchive`を含むスコープを終了するときにデストラクターによって暗黙的に呼び出すことができます。
 
-この注の実装を記述する、`CArchive`メンバー [CArchive::ReadObject](../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../mfc/reference/carchive-class.md#writeobject)します。 Arcobj.cpp との主な実装のこれらの関数コードを検索するは`CArchive`Arccore.cpp でします。 ユーザー コードは呼び出しません`ReadObject`と`WriteObject`直接します。 代わりに、これらのオブジェクトは、ストリームのマクロによって自動的に生成される特定のクラス タイプ セーフな挿入と抽出演算子によって使用されます。 次のコードはどのように`WriteObject`と`ReadObject`は暗黙的に呼び出されます。
+このメモでは、`CArchive`[メンバー CArchive::ReadObject](../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject の実装について説明します](../mfc/reference/carchive-class.md#writeobject)。 これらの関数のコードは Arcobj.cpp にあり、Arccore.cpp`CArchive`の主な実装も確認できます。 ユーザー コードは直接`ReadObject`呼`WriteObject`び出しません。 代わりに、これらのオブジェクトは、DECLARE_SERIALおよびIMPLEMENT_SERIALマクロによって自動的に生成されるクラス固有のタイプ セーフな挿入および抽出演算子によって使用されます。 次のコードは、`WriteObject`どのように`ReadObject`暗黙的に呼び出されるのかを示しています。
 
 ```
 class CMyObject : public CObject
@@ -44,68 +42,68 @@ ar <<pObj;        // calls ar.WriteObject(pObj)
 ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 ```
 
-## <a name="saving-objects-to-the-store-carchivewriteobject"></a>オブジェクトを (CArchive::WriteObject) ストアに保存します。
+## <a name="saving-objects-to-the-store-carchivewriteobject"></a>オブジェクトを保存する (CArchive::WriteObject)
 
-メソッド`CArchive::WriteObject`オブジェクトの再構築に使用されるヘッダーのデータを書き込みます。 このデータは、2 つの部分で構成されています: オブジェクトとオブジェクトの状態の種類。 このメソッドは、(循環のポインターを含む)、そのオブジェクトへのポインターの数に関係なく、コピーは 1 つだけが保存されるように書き出されるオブジェクトの id を維持する責任を負いますもできます。
+このメソッド`CArchive::WriteObject`は、オブジェクトの再構築に使用されるヘッダー データを書き込みます。 このデータは、オブジェクトの型とオブジェクトの状態という 2 つの部分で構成されます。 このメソッドは、書き出されるオブジェクトの ID を保持する役割も果たします。
 
-(挿入) を保存し、いくつか「マニフェスト定数です」に依存 (解凍) オブジェクトを復元する。 バイナリに格納され、アーカイブ (メモ"w"プレフィックスが 16 ビットの数を示します) に重要な情報を提供する値を次に示します。
+オブジェクトの保存 (挿入) と復元 (抽出) は、いくつかの 「マニフェスト定数」に依存します。 これらはバイナリで格納され、アーカイブに重要な情報を提供する値です ("w" 接頭辞は 16 ビットの量を示します)。
 
 |タグ|説明|
 |---------|-----------------|
-|wNullTag|NULL オブジェクト ポインター (0) を使用します。|
-|wNewClassTag|次のクラスの説明はこのアーカイブ コンテキスト (-1) に新しいことを示します。|
-|wOldClassTag|読み取られるオブジェクトのクラスは、このコンテキスト (0x8000) で発生することを示します。|
+|タグ|NULL オブジェクト ポインタ (0) に使用されます。|
+|をクリックします。|このアーカイブ コンテキストに新しく追加されたクラスの説明 (-1) を示します。|
+|クラスタグ|読み取られるオブジェクトのクラスがこのコンテキストで見られたことを示します (0x8000)。|
 
-オブジェクトを格納するときに、アーカイブを保持する[CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) (、 *m_pStoreMap*) 格納されているオブジェクトから 32 ビットの永続的な識別子 (PID) へのマッピングであります。 PID は、すべての一意のオブジェクトと、アーカイブのコンテキストに保存されているすべての一意のクラス名に割り当てられます。 この pid は順番に 1 から始まります。 これらの Pid 有意性、アーカイブの対象外を持たず、具体的には、レコード番号またはその他の識別情報項目と混同しないように。
+オブジェクトを格納する場合、アーカイブは[CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) *(m_pStoreMap)* を保持します。 PID は、アーカイブのコンテキストに保存されるすべての一意のオブジェクトとすべての固有のクラス名に割り当てられます。 これらの PID は、1 から順に渡されます。 これらの PID はアーカイブの範囲外では意味を持たないので、特にレコード番号やその他の ID 項目と混同しないでください。
 
-`CArchive`クラス、Pid は 32 ビットは始まりません 16 ビットとして 0x7ffe でない限り、します。 大規模な Pid は、32 ビットの PID を続けて 0x7FFF として記述されます。 これにより、以前のバージョンで作成されたプロジェクトとの互換性を維持します。
+`CArchive`このクラスでは、PID は 32 ビットですが、0x7FFE より大きい場合を除き、16 ビットとして書き出されます。 大きな PID は 0x7FFF の後に 32 ビット PID として書き込まれます。 これにより、以前のバージョンで作成されたプロジェクトとの互換性が維持されます。
 
-Null チェックが行われます (通常は、グローバル挿入演算子を使用して) をアーカイブするオブジェクトを保存する要求が行われる[CObject](../mfc/reference/cobject-class.md)ポインター。 ポインターが NULL の場合、 *wNullTag*アーカイブ ストリームに挿入されます。
+オブジェクトをアーカイブに保存する要求が行われると (通常はグローバル挿入演算子を使用して)、NULL [CObject](../mfc/reference/cobject-class.md)ポインタがチェックされます。 ポインタが NULL の場合 *、wNullTag*がアーカイブ ストリームに挿入されます。
 
-ポインターが NULL でないし、シリアル化できるかどうか (クラス、`DECLARE_SERIAL`クラス)、コードのチェック、 *m_pStoreMap*オブジェクトが既に保存されているかどうかを確認します。 場合は、コードは、アーカイブ ストリームに、そのオブジェクトに関連付けられている 32 ビットの PID を挿入します。
+ポインターが NULL ではなく、シリアル化できる場合 (クラスクラス`DECLARE_SERIAL`)、オブジェクトが既に保存されているかどうかを確認するために*m_pStoreMap*をチェックします。 その場合、コードは、そのオブジェクトに関連付けられている 32 ビット PID をアーカイブ ストリームに挿入します。
 
-考慮すべき 2 つの可能性がある場合は、オブジェクトが保存されていない: オブジェクトとオブジェクトの正確な型 (つまり、クラス) の両方がこのアーカイブ コンテキストに新しいまたはオブジェクトが既に正確な型のいずれか。 種類が表示されているかどうかを判断するコードのクエリ、 *m_pStoreMap*の[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)と一致するオブジェクト、`CRuntimeClass`保存されているオブジェクトに関連付けられているオブジェクト。 一致がある場合`WriteObject`ビットであるタグを挿入`OR`の*wOldClassTag*とこのインデックス。 場合、`CRuntimeClass`はこのアーカイブ コンテキストに新しい`WriteObject`新しい PID をそのクラスに割り当てられ、前に、アーカイブ内に挿入、 *wNewClassTag*値。
+オブジェクトが以前に保存されていない場合、オブジェクトとオブジェクトの正確な型 (つまり、クラス) の両方がこのアーカイブ コンテキストに新しいか、オブジェクトが既に見られる正確な型であるかの 2 つの方法があります。 型が見られたかどうかを確認するために、コードは、保存されるオブジェクトに関連付けられているオブジェクトと一致する`CRuntimeClass`[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクトの*m_pStoreMap*を照会します。 一致する場合は`WriteObject`*、wOldClassTag*とこのインデックスのビット`OR`単位のタグを挿入します。 このアーカイブ`CRuntimeClass`コンテキストに新しいが存在`WriteObject`する場合は、そのクラスに新しい PID を割り当て、その PID をアーカイブに*挿入します。*
 
-このクラスの記述子を使用して、アーカイブに挿入して、`CRuntimeClass::Store`メソッド。 `CRuntimeClass::Store` クラス (下記参照) のスキーマの数と、クラスの ASCII テキスト名を挿入します。 ASCII テキスト名の使用によって、アプリケーション間で、アーカイブの一意性が保証されるしないことに注意してください。 そのため、破損を防ぐために、データ ファイルをタグ付けする必要があります。 次のクラス情報の挿入、アーカイブに配置オブジェクトを*m_pStoreMap*し呼び出します、`Serialize`クラスに固有のデータを挿入するメソッド。 オブジェクトを配置すること、 *m_pStoreMap*呼び出す前に`Serialize`オブジェクトの複数のコピーがストアに保存されていることを防ぎます。
+このクラスの記述子は、メソッドを使用してアーカイブに挿入されます`CRuntimeClass::Store`。 `CRuntimeClass::Store`クラスのスキーマ番号 (下記参照) とクラスの ASCII テキスト名を挿入します。 ASCII テキスト名を使用しても、アプリケーション間でアーカイブの一意性が保証されるわけではありません。 したがって、データ ファイルにタグを付け、破損を防ぐ必要があります。 クラス情報の挿入後、アーカイブはオブジェクトを*m_pStoreMap*に入れ、メソッドを`Serialize`呼び出してクラス固有のデータを挿入します。 呼び出す`Serialize`前にオブジェクトを*m_pStoreMap*に配置すると、オブジェクトの複数のコピーがストアに保存されなくなります。
 
-呼び出す必要がある場合、最初の呼び出し元 (通常はオブジェクトのネットワークのルート) に戻って、 [CArchive::Close](../mfc/reference/carchive-class.md#close)します。 実行する予定の場合[CFile](../mfc/reference/cfile-class.md)、操作を呼び出す必要があります、`CArchive`メソッド[フラッシュ](../mfc/reference/carchive-class.md#flush)アーカイブの破損を回避します。
+最初の呼び出し元 (通常はオブジェクトのネットワークのルート) に戻る場合は[、CArchive::Close](../mfc/reference/carchive-class.md#close)を呼び出す必要があります。 他の[CFile](../mfc/reference/cfile-class.md)操作を実行する場合は、アーカイブ`CArchive`の破損を防ぐためにメソッド[Flush](../mfc/reference/carchive-class.md#flush)を呼び出す必要があります。
 
 > [!NOTE]
->  この実装は、アーカイブ コンテキストごとインデックス数が 0x3FFFFFFE ハード制限です。 この数は 1 つのアーカイブに保存できるクラスと一意のオブジェクトの最大数を表しますが、1 つのディスク ファイルは、アーカイブのコンテキストの無制限の数を持つことができます。
+> この実装では、アーカイブコンテキストごとに 0x3FFFFFFE インデックスのハード制限が適用されます。 この数は、1 つのアーカイブに保存できる一意のオブジェクトとクラスの最大数を表しますが、1 つのディスク ファイルにアーカイブ コンテキストの数を制限することはできません。
 
-## <a name="loading-objects-from-the-store-carchivereadobject"></a>ストア (CArchive::ReadObject) からオブジェクトの読み込み
+## <a name="loading-objects-from-the-store-carchivereadobject"></a>ストアからのオブジェクトの読み込み (CArchive::ReadObject)
 
-オブジェクトを使用して (の抽出) を読み込み、`CArchive::ReadObject`メソッドの逆で、`WriteObject`します。 同様`WriteObject`、`ReadObject`ユーザー コードが直接は呼び出さないユーザー コードはタイプ セーフな抽出演算子を呼び出す必要があります`ReadObject`備えた`CRuntimeClass`します。 これにより、抽出操作の型の整合性が保証されます。
+オブジェクトの読み込み (`CArchive::ReadObject`抽出) は、`WriteObject`の逆のメソッドを使用します。 と同様`WriteObject`に`ReadObject`、ユーザー コードによって直接呼び出されるわけではありません。ユーザー コードは、予期される`ReadObject``CRuntimeClass`を呼び出すタイプ セーフな抽出演算子を呼び出す必要があります。 これにより、抽出操作の型の整合性が保証されます。
 
-以降、`WriteObject`実装には、1 から始まる増加の Pid が割り当てられている (0 は、NULL オブジェクトとして定義済み)、`ReadObject`実装は、アーカイブのコンテキストの状態を維持するために配列を使用できます。 場合、PID は読み取り専用ストアからの現在の上限よりも大きい場合は、PID、 *m_pLoadArray*、`ReadObject`新しいオブジェクト (またはクラスの説明) に従うことを認識します。
+実装では`WriteObject`、1 (0 は NULL オブジェクトとして事前定義) から、PID`ReadObject`の増加を割り当てるため、実装では、配列を使用してアーカイブ コンテキストの状態を維持できます。 PID がストアから読み取られると、pid が*m_pLoadArray現在の上限*より大きい場合`ReadObject`は、新しいオブジェクト (またはクラスの説明) が次のとおりであることを認識します。
 
-## <a name="schema-numbers"></a>スキーマの番号
+## <a name="schema-numbers"></a>スキーマ番号
 
-スキーマの数、クラスに割り当てられるときに、`IMPLEMENT_SERIAL`クラスのメソッドが発生した、クラスの実装の「バージョン」です。 回数の合計が、特定のオブジェクトは永続的な (オブジェクトのバージョンと通常呼ばれる)、スキーマが、クラスの実装を示します。
+クラスの`IMPLEMENT_SERIAL`メソッドが検出されたときにクラスに割り当てられるスキーマ番号は、クラス実装の「バージョン」です。 スキーマは、特定のオブジェクトが永続 (通常はオブジェクト バージョンと呼ばれます) が行われた回数ではなく、クラスの実装を参照します。
 
-長期にわたって、同じクラスの複数の異なる実装を管理する場合は、インクリメント、スキーマ オブジェクトの編集した後、`Serialize`の古いバージョンを使用して格納されているオブジェクトを読み込むことができるコードを記述するメソッドの実装が有効にします。実装。
+同じクラスの複数の異なる実装を時間の経過と同時に維持する場合、オブジェクトの`Serialize`メソッド実装を変更するときにスキーマをインクリメントすると、古いバージョンの実装を使用して格納されたオブジェクトを読み込むことができるコードを記述できます。
 
-`CArchive::ReadObject`メソッドがスローされます、 [CArchiveException](../mfc/reference/carchiveexception-class.md)クラスの説明をメモリ内のスキーマの数とは異なる、永続的なストアでのスキーマの数に到達したとき。 この例外から回復する簡単ではありません。
+この`CArchive::ReadObject`メソッドは、永続ストア内で、メモリ内のクラス記述のスキーマ番号とは異なるスキーマ番号を検出すると[、CArchiveException](../mfc/reference/carchiveexception-class.md)をスローします。 この例外から回復するのは容易ではありません。
 
-使用することができます`VERSIONABLE_SCHEMA`と組み合わせる (ビット演算**または**) して、この例外がスローされているスキーマ バージョン。 使用して`VERSIONABLE_SCHEMA`、コード、適切な処置を実行できるその`Serialize`関数からの戻り値をチェックして[CArchive::GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema)します。
+スキーマバージョン`VERSIONABLE_SCHEMA`(ビットごとの**OR)** と組み合わせて使用すると、この例外がスローされないようにすることができます。 を使用`VERSIONABLE_SCHEMA`すると、コードは`Serialize`[CArchive::GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema)からの戻り値をチェックすることで、関数内で適切なアクションを実行できます。
 
-## <a name="calling-serialize-directly"></a>呼び出し元を直接シリアル化します。
+## <a name="calling-serialize-directly"></a>シリアル化を直接呼び出す
 
-多くの場合の一般的なオブジェクトのアーカイブ スキーマのオーバーヘッド`WriteObject`と`ReadObject`必要はありません。 これは、データのシリアル化の一般的なケースを[CDocument](../mfc/reference/cdocument-class.md)します。 ここで、`Serialize`のメソッド、`CDocument`抽出または挿入演算子ではなく、直接と呼ばれます。 ドキュメントの内容は、一般的なオブジェクト アーカイブ スキームを使用さらに可能性があります。
+多くの場合、一般オブジェクトアーカイブ方式の`WriteObject`オーバーヘッドは不要`ReadObject`です。 これは、データを[CDocument](../mfc/reference/cdocument-class.md)にシリアル化する一般的なケースです。 この場合、の`Serialize`メソッド`CDocument`は、抽出演算子または挿入演算子ではなく、直接呼び出されます。 文書の内容は、より一般的なオブジェクトアーカイブスキームを使用する場合があります。
 
-呼び出す`Serialize`次の長所と短所を直接には。
+直接`Serialize`呼び出す場合、次の長所と短所があります。
 
-- オブジェクトがシリアル化後または前にアーカイブに追加のバイトが追加されません。 これだけでなく、保存したデータをより小さい場合は、によりが実装することができます`Serialize`ファイル形式のいずれかを処理できるルーチン。
+- オブジェクトがシリアル化される前または後に、アーカイブに追加されたバイト数は追加されません。 これにより、保存されたデータが小さくなるだけでなく、任意のファイル`Serialize`形式を処理できるルーチンを実装できます。
 
-- MFC が調整されたため、`WriteObject`と`ReadObject`の実装と関連するコレクションはリンクされませんをアプリケーションに別の目的より一般的なオブジェクトのアーカイブ スキームが必要でない限りです。
+- MFC は、他の`WriteObject`目的`ReadObject`のためにより一般的なオブジェクト アーカイブスキームが必要な場合を除き、 および 実装と関連するコレクションがアプリケーションにリンクしないように調整されています。
 
-- コードを古いスキーマ番号から復元する必要はありません。 これにより、ドキュメントのシリアル化コードは、エンコード スキーマ番号、ファイル形式のバージョン番号、またはあらゆる識別番号を担当する、データ ファイルの先頭に使用します。
+- コードは、古いスキーマ番号から回復する必要はありません。 これにより、スキーマ番号、ファイル形式のバージョン番号、またはデータ ファイルの先頭で使用する識別番号をエンコードするドキュメントシリアル化コードが行われます。
 
-- 任意のオブジェクトを直接呼び出しでは、シリアル化を`Serialize`は使用しないで`CArchive::GetObjectSchema`またはする必要があります (UINT)-1 の戻り値のハンドルを示す、バージョンが不明でした。
+- 直接呼び出し`Serialize`を使用してシリアル化されるオブジェクトは、`CArchive::GetObjectSchema`バージョンが不明であることを示す (UINT)-1 の戻り値を使用しないか、または処理する必要があります。
 
-`Serialize`と呼ばれますが、ドキュメントに直接ことはできません、通常はその親ドキュメントへの参照をアーカイブするドキュメントのサブオブジェクトの。 これらのオブジェクト必要があるポインターがコンテナーのドキュメントを明示的にまたは使用する必要があります[CArchive::MapObject](../mfc/reference/carchive-class.md#mapobject)にマップする関数、`CDocument`これらの戻りポインターをアーカイブする前に、PID へのポインター。
+ドキュメント`Serialize`に直接呼び出されるため、通常、ドキュメントのサブオブジェクトが親ドキュメントへの参照をアーカイブすることはできません。 これらのオブジェクトは、コンテナー ドキュメントへのポインターを明示的に与える必要[CArchive::MapObject](../mfc/reference/carchive-class.md#mapobject)`CDocument`があります。
 
-エンコード バージョンと呼び出すときに情報を自分でクラスが前述のように、`Serialize`直接、古いファイルとの下位互換性を維持しながら、後で、形式を変更することを有効にします。 `CArchive::SerializeClass`直接オブジェクトをシリアル化する前に、または基底クラスを呼び出す前に、関数を明示的に呼び出すことができます。
+前述のように、直接呼び出`Serialize`すときにバージョンとクラスの情報を自分でエンコードし、古いファイルとの下位互換性を維持しながら、後でフォーマットを変更できるようにする必要があります。 この`CArchive::SerializeClass`関数は、オブジェクトを直接シリアル化する前、または基本クラスを呼び出す前に明示的に呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 

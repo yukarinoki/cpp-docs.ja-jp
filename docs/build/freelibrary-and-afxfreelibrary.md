@@ -13,18 +13,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0b530aca2ab036de186ff3fdb11be23f41e12d05
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221416"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821552"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary と AfxFreeLibrary
 
-明示的にリンクする DLL の呼び出しプロセス、 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) DLL モジュールが不要になったときに機能します。 モジュールの参照カウントをデクリメントを関数し、参照カウントが 0 の場合は、プロセスのアドレス空間からマッピングを解除します。
+DLL に明示的にリンクするプロセスは、DLL モジュールが不要になったときに、[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) 関数を呼び出します。 この関数は、モジュールの参照数をデクリメントします。 また、参照数が 0 の場合は、プロセスのアドレス空間からマップ解除されます。
 
-MFC アプリケーションで使用して[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)の代わりに`FreeLibrary`MFC 拡張 DLL をアンロードします。 インターフェイス (関数プロトタイプ)`AfxFreeLibrary`と同じ`FreeLibrary`します。
+MFC アプリケーションでは、`FreeLibrary` ではなく [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) を使用して、MFC 拡張 DLL をアンロードします。 `AfxFreeLibrary` のインターフェイス (関数プロトタイプ) は、`FreeLibrary` と同じです。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
@@ -40,6 +40,6 @@ MFC アプリケーションで使用して[AfxFreeLibrary](../mfc/reference/app
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Visual Studio での C/C++ DLL の作成](dlls-in-visual-cpp.md)\
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

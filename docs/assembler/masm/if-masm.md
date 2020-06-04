@@ -1,36 +1,35 @@
 ---
 title: IF (MASM)
-ms.date: 08/30/2018
-f1_keywords:
-- if
+ms.date: 12/17/2019
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e63f5c8075b3c94370ad8863d224c097cf0ecdf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203065"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440748"
 ---
-# <a name="if-masm"></a>IF (MASM)
+# <a name="if"></a>IF
 
-アセンブリの*ifstatements*場合*expression1*が true (0 以外の場合) または*elseifstatements*場合*expression1*が false (0) と*expression2*は true。
+*Expression1*が true (0 以外) の場合は*ifstatements*のアセンブリを、 *expression1*が false (0)、 *expression2*が true の場合は*elseifstatements*を許可します。
 
 ## <a name="syntax"></a>構文
 
-> IF *expression1*<br/>
-> *ifstatements*<br/>
-> [[ELSEIF *expression2*<br/>
-> *elseifstatements*]<br/>
-> [[ELSE<br/>
-> *elsestatements*]<br/>
-> ENDIF
+> **IF** *Expression1*\
+> *if ステートメント*\
+> ⟦**ELSEIF** *expression2*\
+> *elseif-ステートメント*⟧ \
+> ⟦**ELSE**\
+> *else-ステートメント*⟧ \
+> **ENDIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-次のディレクティブを置き換えることがあります[ELSEIF](../../assembler/masm/elseif-masm.md):**ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、 **ELSEIFIDNI**、 **ELSEIFNB**、および**ELSEIFNDEF**します。 必要に応じて、アセンブル*elsestatements*前の式が false の場合。 アセンブリの時に式が評価されることに注意してください。
+次のディレクティブは、 [ELSEIF](elseif-masm.md): **ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、ELSEIFIDNI、 **ELSEIFIDNI** **ELSEIFNB**、 **ELSEIFNDEF**の代わりに使用できます。 前の式が false の場合は、必要に応じて*else ステートメント*をアセンブルします。 式は、アセンブリ時に評価されることに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172283"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)
 
 値型で **Interior_ptr** を使用できます。
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

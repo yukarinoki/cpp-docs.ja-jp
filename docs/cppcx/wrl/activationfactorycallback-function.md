@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214215"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 関数
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -30,27 +30,27 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ### <a name="parameters"></a>パラメーター
 
 *activationId*<br/>
-ランタイム クラス名を指定する文字列へのハンドルします。
+ランタイムクラス名を指定する文字列を処理します。
 
 *ppFactory*<br/>
-ときにこの操作が完了すると、パラメーターに対応するアクティベーション ファクトリ*activationId*します。
+この操作が完了すると、パラメーター *activationId*に対応するアクティベーションファクトリ。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 可能性の高いエラー Hresult CLASS_E_CLASSNOTAVAILABLE、E_INVALIDARG です。
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 可能性のあるエラー Hresult は CLASS_E_CLASSNOTAVAILABLE および E_INVALIDARG です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定されたアクティブ化 ID のアクティベーション ファクトリを取得します。
+指定されたアクティベーション ID のアクティベーションファクトリを取得します。
 
-Windows ランタイムでは、ランタイム クラス名で指定されたオブジェクトを要求するには、このコールバック関数を呼び出します。
+Windows ランタイムは、このコールバック関数を呼び出して、ランタイムクラス名によって指定されたオブジェクトを要求します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** resource.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

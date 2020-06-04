@@ -1,12 +1,13 @@
 ---
 title: ___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
-apilocation:
+- _o____mb_cur_max_func
+api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___mb_cur_max_func
 - ___mb_cur_max_l_func
@@ -27,14 +32,14 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: 9d5178a9a0801767019b713696ddf809c3fe6f0c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8287e2e7cab8880d35fef170287713adcc103c7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744518"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912955"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
+# <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
 
 内部 CRT 関数。 現在または指定されたロケールのマルチバイト文字の最大バイト数を取得します。
 
@@ -63,11 +68,13 @@ locale 結果の取得元のロケール構造。 この値が null の場合は
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|`___mb_cur_max_func`、 `___mb_cur_max_l_func`、 `__p___mb_cur_max`|\<ctype.h>、\<stdlib.h>|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>、\<stdlib.h>|
 
 ## <a name="see-also"></a>関連項目
 

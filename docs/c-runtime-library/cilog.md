@@ -1,9 +1,10 @@
 ---
 title: _CIlog
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIlog
-apilocation:
+- _o__CIlog
+api_location:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIlog
 - CIlog
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 29b35e5807ca3bd1fbb994118314952a9a1760c4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737721"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918057"
 ---
-# <a name="cilog"></a>_CIlog
+# <a name="_cilog"></a>_CIlog
 
 スタックのトップ値の自然対数を計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIlog();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIlog();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

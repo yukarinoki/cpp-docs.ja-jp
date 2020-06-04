@@ -1,12 +1,16 @@
 ---
 title: strtoll、_strtoll_l、wcstoll、_wcstoll_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strtoll
 - wcstoll
 - _strtoll_l
 - _wcstoll_l
-apilocation:
+- _o__strtoll_l
+- _o__wcstoll_l
+- _o_strtoll
+- _o_wcstoll
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strtoll_l
 - _tcstoll_l
@@ -34,16 +42,16 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cb8d47ce9f045d3652d1523d1f39c8be72f8997
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269151"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912441"
 ---
-# <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll、_strtoll_l、wcstoll、_wcstoll_l
+# <a name="strtoll-_strtoll_l-wcstoll-_wcstoll_l"></a>strtoll、_strtoll_l、wcstoll、_wcstoll_l
 
-文字列に変換を**長い** **長い**値。
+文字列を**long** **型**の値に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -88,17 +96,19 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtoll**文字列で表される値を返します*strSource*、を除き、表現はオーバーフローが発生すると、その場合を返します**LLONG_MAX**または**LLONG_MIN**します。 この関数は、変換を実行できない場合には 0 を返します。 **wcstoll**と同様に値を返します**strtoll**します。
+**strtoll**では、文字列*strtoll*に示されている値が返されます。ただし、オーバーフローが発生する場合を除きます。この場合、 **LLONG_MAX**または**LLONG_MIN**が返されます。 この関数は、変換を実行できない場合には 0 を返します。 **wcstoll** **は、** と同様に値を返します。
 
-**LLONG_MAX**と**LLONG_MIN**制限で定義されます。H.
+**LLONG_MAX**と**LLONG_MIN**は制限で定義されています。始め.
 
-場合*strSource*は**NULL**または*基本*0 以外の場合は、いずれか 2 未満または 36 を超えると**errno**に設定されている**EINVAL**.
+*Strsource*が**NULL**であるか、*ベース*が0以外で、2より大きいか、または36を超える場合、 **errno**は**EINVAL**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strtoll**関数に変換します*strSource*を**長い** **長い**します。 どちらの関数は、文字列の読み取りを停止*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは最初の数値文字に以上である可能性がある*基本*します。 **wcstoll**のワイド文字バージョンは、 **strtoll**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**Strtoll**関数は、 *strtoll*を**long** **型**に変換します。 どちらの関数も、数値の一部として認識できない最初の文字で文字列*Strsource*の読み取りを停止します。 これは、終端の null 文字である場合もあれば、*基数*以上の最初の数字の場合もあります。 **wcstoll**は、ワイド文字バージョンの**strtoll**です。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -107,29 +117,29 @@ NULL で終わる変換対象の文字列。
 |**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
 |**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
-ロケールの**LC_NUMERIC**の小数点文字のカテゴリの設定が認識*strSource*; 詳細についてを参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)します。 関数がない、 **_l**サフィックスを使用して、現在のロケール **_strtoll_l**と **_wcstoll_l**で渡されるロケールを代わりに使用する点を除いて、サフィックスがない、対応する関数と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+ロケールの**LC_NUMERIC**カテゴリの設定によって、 *strsource*の小数点文字が認識されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。**_strtoll_l**と **_wcstoll_l**は、渡されたロケールを代わりに使用する点を除いて、サフィックスが付いていない対応する関数と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-**strtoll**が必要ですが*strSource*次の形式の文字列を指すようにします。
+**strtoll**では、 *strtoll*が次の形式の文字列を指す必要があります。
 
-> [*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*空白*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*桁*は 1 つ以上の 10 進数字です。*文字*1 つまたは複数の文字を 'a' から 'z' (または 'A' ~ 'Z')。 この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*が 2 ~ 36 の間の数値の基数として使用されます。 場合*基本*は 0 が指す文字列の先頭の文字です。 *strSource*を使用して、ベースを決定します。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*は 0 です。 および、スキャンされた最初の文字は '0'、8 進数の整数が想定されますと、'8' または '9' の文字が、スキャンを停止します。
+*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*数字*は1桁以上の10進数です。*文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合、 *strsource*によって指定された文字列の最初の文字が、ベースを決定するために使用されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strtoll**、 **_strtoll_l**|\<stdlib.h>|
 |**wcstoll**、 **_wcstoll_l**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

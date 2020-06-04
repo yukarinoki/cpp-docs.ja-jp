@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-ms.openlocfilehash: ed145444d6eec583c448a3a49167ca1f82644f0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f457b5424cbca071e047f4375aaa85962e52210
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510001"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991486"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>コンパイラの警告 (レベル 4) C4242
 
@@ -25,7 +25,7 @@ C4242 の詳細については、「[一般的なコンパイラエラー](/wind
 
 次の例では、C4242 が生成されます。
 
-```
+```cpp
 // C4242.cpp
 // compile with: /W4
 #pragma warning(4:4242)

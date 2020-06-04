@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300538"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201163"
 ---
 # <a name="compiler-error-c3367"></a>コンパイラ エラー C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "62300538"
 
 バインドされていないデリゲートを呼び出す場合は、オブジェクトのインスタンスを渡す必要があります。 静的メンバー関数はクラス名によって呼び出されるので、バインドされていないデリゲートは、インスタンス メンバー関数でのみインスタンス化できます。
 
-バインドされていないデリゲートの詳細については、次を参照してください。[方法。定義し、デリゲートを使用して (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)します。
+バインドされていないデリゲートの詳細については、「[方法C++: デリゲートを定義および使用する (/cli)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)」を参照してください。
 
 ## <a name="example"></a>例
 

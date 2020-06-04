@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154517"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189547"
 ---
 # <a name="default-arguments"></a>既定の引数
 
-多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を示すために示されている例を検討してください。[関数のオーバー ロード](../cpp/function-overloading.md)します。
+多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を説明するために、関数の[オーバーロード](../cpp/function-overloading.md)に示されている例を考えてみましょう。
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**二重**:
+`print` 関数の実装は、 **double**型の関数が1つしか存在しないという事実を反映するために若干変更されています。
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 追加の既定の引数は、後の宣言によって追加できます。
 
-- 既定の引数は、関数へのポインターに対して指定できます。 例:
+- 既定の引数は、関数へのポインターに対して指定できます。 次に例を示します。
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

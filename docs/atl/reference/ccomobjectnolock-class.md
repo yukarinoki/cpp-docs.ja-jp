@@ -1,5 +1,5 @@
 ---
-title: CComObjectNoLock クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectNoLock
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c190f495e284e98b27a6c6dc2099a8dfc4b1693d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497036"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327613"
 ---
-# <a name="ccomobjectnolock-class"></a>CComObjectNoLock クラス
+# <a name="ccomobjectnolock-class"></a>クラス
 
-このクラスは`IUnknown` 、非集計オブジェクトに対してを実装しますが、コンストラクターのモジュールロック数をインクリメントしません。
+このクラスは`IUnknown`、非集約オブジェクトを実装しますが、コンストラクターのモジュール ロック カウントはインクリメントしません。
 
 ## <a name="syntax"></a>構文
 
@@ -31,8 +31,8 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*常用*<br/>
-[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
+*ベース*<br/>
+[CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 ## <a name="members"></a>メンバー
 
@@ -40,22 +40,22 @@ class CComObjectNoLock : public Base
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|コンストラクターです。|
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|デストラクターです。|
+|[CCom オブジェクトノロック::CCom オブジェクトノロック](#ccomobjectnolock)|コンストラクターです。|
+|[CCom オブジェクトノロック::~CCom オブジェクトノロック](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectNoLock::AddRef](#addref)|オブジェクトの参照カウントをインクリメントします。|
-|[CComObjectNoLock::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを返します。|
-|[CComObjectNoLock::Release](#release)|オブジェクトの参照カウントをデクリメントします。|
+|[CCom オブジェクトノロック::追加参照](#addref)|オブジェクトの参照カウントをインクリメントします。|
+|[をクリックします。](#queryinterface)|要求されたインターフェイスへのポインターを返します。|
+|[CComオブジェクトノロック::リリース](#release)|オブジェクトの参照カウントを減算します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComObjectNoLock`は、非集計オブジェクトに対して[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装するという点で、 [CComObject](../../atl/reference/ccomobject-class.md)に似ています。ただし、 `CComObjectNoLock`では、コンストラクターのモジュールロックカウントはインクリメントされません。
+`CComObjectNoLock`は、非集約オブジェクトに対して[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装するという点で[CComObject](../../atl/reference/ccomobject-class.md)に似ています。ただし、`CComObjectNoLock`コンストラクター内のモジュール ロックカウントはインクリメントしません。
 
-ATL で`CComObjectNoLock`は、クラスファクトリに対して内部的にを使用します。 一般に、このクラスは直接使用しません。
+ATL`CComObjectNoLock`はクラス ファクトリに内部的に使用します。 一般に、このクラスを直接使用することはできません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ ATL で`CComObjectNoLock`は、クラスファクトリに対して内部的に�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectNoLock::AddRef
+## <a name="ccomobjectnolockaddref"></a><a name="addref"></a>CCom オブジェクトノロック::追加参照
 
 オブジェクトの参照カウントをインクリメントします。
 
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-診断またはテストに役立つ可能性のある値。
+診断やテストに役立つ値。
 
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+## <a name="ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CCom オブジェクトノロック::CCom オブジェクトノロック
 
-コンストラクターです。 [CComObject](../../atl/reference/ccomobject-class.md)とは異なり、はモジュールのロックカウントをインクリメントしません。
+コンストラクターです。 [CComObject](../../atl/reference/ccomobject-class.md)とは異なり、モジュールロックカウントはインクリメントしません。
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -90,9 +90,9 @@ CComObjectNoLock(void* = NULL);
 ### <a name="parameters"></a>パラメーター
 
 <em>void\*</em><br/>
-からこの無名パラメーターは使用されません。 これは、他の`CComXXXObjectXXX`コンストラクターとの対称のために存在します。
+[in]この名前のないパラメーターは使用されません。 他`CComXXXObjectXXX`のコンストラクタとの対称性のために存在します。
 
-##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock
+## <a name="ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CCom オブジェクトノロック::~CCom オブジェクトノロック
 
 デストラクターです。
 
@@ -100,11 +100,11 @@ CComObjectNoLock(void* = NULL);
 ~CComObjectNoLock();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられたすべてのリソースを解放し、 [FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出します。
+割り当てられたすべてのリソースを解放し[、FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出します。
 
-##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
+## <a name="ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>をクリックします。
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -114,19 +114,19 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*<br/>
-から要求されているインターフェイスの識別子。
+*Iid*<br/>
+[in]要求されているインターフェイスの識別子。
 
-*ppvObject*<br/>
-入出力*Iid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject*は NULL に設定されます。
+*オブジェクト*<br/>
+[アウト]*iid*で識別されるインターフェイス ポインタへのポインタ。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObject*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="release"></a>  CComObjectNoLock::Release
+## <a name="ccomobjectnolockrelease"></a><a name="release"></a>CComオブジェクトノロック::リリース
 
-オブジェクトの参照カウントをデクリメントします。
+オブジェクトの参照カウントを減算します。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,7 +134,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-デバッグビルドでは`Release` 、診断またはテストに役立つ値が返されます。 非デバッグビルドでは、 `Release`は常に0を返します。
+デバッグ ビルドでは`Release`、診断やテストに役立つ値を返します。 非デバッグ ビルドでは、`Release`常に 0 を返します。
 
 ## <a name="see-also"></a>関連項目
 

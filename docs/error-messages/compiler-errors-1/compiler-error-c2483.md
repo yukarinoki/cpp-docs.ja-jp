@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: 7a627ce28e60f42dabcf0a257464a8bfbd58b9a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205115"
 ---
 # <a name="compiler-error-c2483"></a>コンパイラ エラー C2483
 
->'*identifier*' : object with constructor or destructor cannot be declared 'thread'
+>'*identifier*': コンストラクターまたはデストラクターを持つオブジェクトを ' thread ' として宣言することはできません
 
-このエラー メッセージは、Visual Studio 2015 以降で廃止されています。 以前のバージョンで宣言された変数、`thread`コンス トラクターまたは実行時の評価が必要なその他の式では、属性を初期化できません。 静的な式が初期化に必要な`thread`データ。
+このエラーメッセージは、Visual Studio 2015 以降のバージョンでは廃止されています。 以前のバージョンでは、`thread` 属性を使用して宣言された変数を、実行時の評価を必要とするコンストラクターまたはその他の式で初期化することはできません。 `thread` データを初期化するには、静的な式が必要です。
 
 ## <a name="example"></a>例
 
-次の例では、Visual Studio 2013 および以前のバージョンで C2483 が生成されます。
+次の例では Visual Studio 2013 以前のバージョンで C2483 が生成されます。
 
 ```cpp
 // C2483.cpp
@@ -34,6 +34,6 @@ __declspec(thread) struct A {
 __declspec(thread) struct B {} b;   // OK
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [thread](../../cpp/thread.md)

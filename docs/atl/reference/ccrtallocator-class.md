@@ -1,5 +1,5 @@
 ---
-title: CCRTAllocator クラス
+title: CCRTアロケータークラス
 ms.date: 11/04/2016
 f1_keywords:
 - CCRTAllocator
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6bae3818fa0f1639e0e3cee4e09121580da768
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327177"
 ---
-# <a name="ccrtallocator-class"></a>CCRTAllocator クラス
+# <a name="ccrtallocator-class"></a>CCRTアロケータークラス
 
 このクラスは、CRT メモリ ルーチンを使用してメモリを管理するためのメソッドを提供します。
 
@@ -33,19 +33,19 @@ class ATL::CCRTAllocator
 
 |名前|説明|
 |----------|-----------------|
-|[CCRTAllocator::Allocate](#allocate)|(静的)メモリを割り当てるには、このメソッドを呼び出します。|
-|[CCRTAllocator::Free](#free)|(静的)メモリを解放するには、このメソッドを呼び出します。|
-|[CCRTAllocator::Reallocate](#reallocate)|(静的)メモリを再割り当てするには、このメソッドを呼び出します。|
+|[CCRTAllocator::割り当て](#allocate)|(静的)メモリを割り当てるには、このメソッドを呼び出します。|
+|[CCRTAllocator::無料](#free)|(静的)メモリを解放するには、このメソッドを呼び出します。|
+|[CCRTAllocator::再割り当て](#reallocate)|(静的)メモリを再割り当てします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスによって使用されます[CHeapPtr](../../atl/reference/cheapptr-class.md) CRT メモリ割り当てルーチンを提供します。 対応するクラス、 [CComAllocator](../../atl/reference/ccomallocator-class.md)COM のルーチンを使用する同じメソッドを提供します。
+このクラスは、CRT メモリ割り当てルーチンを提供するために[CHeapPtr](../../atl/reference/cheapptr-class.md)によって使用されます。 対応するクラス[である CComAllocator](../../atl/reference/ccomallocator-class.md)は、COM ルーチンを使用して同じメソッドを提供します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 
-##  <a name="allocate"></a>  CCRTAllocator::Allocate
+## <a name="ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::割り当て
 
 メモリを割り当てる場合は、この静的関数を呼び出します。
 
@@ -55,20 +55,20 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*<br/>
+*Nbytes*<br/>
 割り当てるバイト数。
 
 ### <a name="return-value"></a>戻り値
 
 メモリが不足している場合、割り当てられた領域に void ポインターを返すか、NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メモリを割り当てます。 参照してください[malloc](../../c-runtime-library/reference/malloc.md)の詳細。
+メモリを割り当てます。 詳細については[、malloc](../../c-runtime-library/reference/malloc.md)を参照してください。
 
-##  <a name="free"></a>  CCRTAllocator::Free
+## <a name="ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::無料
 
-メモリを解放する、この静的関数を呼び出します。
+この静的関数を呼び出して、メモリを解放します。
 
 ```
 static void Free(void* p) throw();
@@ -76,14 +76,14 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
+*P*<br/>
 割り当てられたメモリへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられたメモリを解放します。 参照してください[無料](../../c-runtime-library/reference/free.md)の詳細。
+割り当てられたメモリを解放します。 詳細については[、無料](../../c-runtime-library/reference/free.md)で見てください。
 
-##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
+## <a name="ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::再割り当て
 
 メモリを再割り当てする場合は、この静的関数を呼び出します。
 
@@ -93,22 +93,22 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
+*P*<br/>
 割り当てられたメモリへのポインター。
 
-*nBytes*<br/>
+*Nbytes*<br/>
 再割り当てするバイト数。
 
 ### <a name="return-value"></a>戻り値
 
 メモリが不足している場合、割り当てられた領域に void ポインターを返すか、NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられたメモリの量を変更します。 参照してください[realloc](../../c-runtime-library/reference/realloc.md)の詳細。
+割り当てられたメモリの量を変更します。 詳細については[、realloc](../../c-runtime-library/reference/realloc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
-[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)<br/>
+[Cヒーププタークラス](../../atl/reference/cheapptr-class.md)<br/>
+[コマッロロケータクラス](../../atl/reference/ccomallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458166"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687060"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-`den`この`ratio` テンプレートは`num` 、 ==`num`分子/分母とであり、`den`共通の要因を持たない静的定数を定義します。 `den` `num`  /  `num` / `den`は、テンプレートクラスによって表される値です。 したがって`type` 、はインスタンス`ratio<num, den>`化を指定します。
+テンプレート `ratio` は、`num` と `den` の静的定数を定義します。これにより、`num`  /  `den` = = 分子/分母と `num` と `den` に共通の要因がありません。 `num`  /  `den` は、クラステンプレートによって表される値です。 したがって、`type` インスタンス化 `ratio<num, den>` を指定します。
 
 ### <a name="specializations"></a>特殊化
 
@@ -70,7 +70,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 それぞれの特殊化は、`ratio` の特殊化である必要がある 2 つのテンプレート パラメーターを使用します。 `type` の値は関連する論理操作によって決定されます。
 
-|名前|`type` 値|
+|名|`type` 値|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

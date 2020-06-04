@@ -1,5 +1,5 @@
 ---
-title: CComObjectGlobal クラス
+title: クラスの数
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectGlobal
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a784584179186cdf1e63c1ec43cad4d59391ec3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259340"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327635"
 ---
-# <a name="ccomobjectglobal-class"></a>CComObjectGlobal クラス
+# <a name="ccomobjectglobal-class"></a>クラスの数
 
-このクラスの参照カウントを含むモジュールの管理、`Base`オブジェクト。
+このクラスは、オブジェクトを含むモジュールの参照カウント`Base`を管理します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +33,7 @@ class CComObjectGlobal : public Base
 #### <a name="parameters"></a>パラメーター
 
 *ベース*<br/>
-派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のインターフェイスからも、します。
+[CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 ## <a name="members"></a>メンバー
 
@@ -41,28 +41,28 @@ class CComObjectGlobal : public Base
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|コンストラクターです。|
-|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|デストラクターです。|
+|[グローバルなオブジェクト::CComオブジェクトグローバル](#ccomobjectglobal)|コンストラクターです。|
+|[オブジェクトグローバル::~CComオブジェクトグローバル](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectGlobal::AddRef](#addref)|グローバル実装`AddRef`します。|
-|[CComObjectGlobal::QueryInterface](#queryinterface)|グローバル実装`QueryInterface`します。|
-|[CComObjectGlobal::Release](#release)|グローバル実装`Release`します。|
+|[オブジェクトグローバル::AddRef](#addref)|グローバル`AddRef`を実装します。|
+|[インターフェイスの種類](#queryinterface)|グローバル`QueryInterface`を実装します。|
+|[オブジェクトグローバル::リリース](#release)|グローバル`Release`を実装します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|構築時に返される HRESULT を含む、`CComObjectGlobal`オブジェクト。|
+|[コムオブジェクトグローバル::m_hResFinalConstruct](#m_hresfinalconstruct)|オブジェクトの構築中に返される HRESULT を`CComObjectGlobal`格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComObjectGlobal` 参照カウントを含むモジュールを管理、`Base`オブジェクト。 `CComObjectGlobal` により、モジュールが解放されない限り、オブジェクトは削除されません。 オブジェクトは、モジュール全体の参照カウントがゼロになったときにのみ削除されます。
+`CComObjectGlobal`は、オブジェクトを含むモジュールの参照カウント`Base`を管理します。 `CComObjectGlobal`モジュールが解放されない限り、オブジェクトが削除されないことを確認します。 モジュール全体の参照カウントがゼロになった場合にのみ、オブジェクトが削除されます。
 
-たとえばを使用して`CComObjectGlobal`、クラス ファクトリは、すべてのクライアントで共有されている一般的なグローバル オブジェクトを保持できます。
+たとえば、 を`CComObjectGlobal`使用すると、クラス ファクトリは、すべてのクライアントで共有される共通のグローバル オブジェクトを保持できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -74,9 +74,9 @@ class CComObjectGlobal : public Base
 
 **ヘッダー:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectGlobal::AddRef
+## <a name="ccomobjectglobaladdref"></a><a name="addref"></a>オブジェクトグローバル::AddRef
 
-オブジェクトの参照カウントを 1 だけインクリメントします。
+オブジェクトの参照カウントを 1 ずつインクリメントします。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -84,25 +84,25 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-診断に役立ちますし、テスト可能性のある値。
+診断とテストに役立つ値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、`AddRef`呼び出し`_Module::Lock`ここで、`_Module`のグローバル インスタンス[CComModule](../../atl/reference/ccommodule-class.md)またはその派生クラス。
+既定では`AddRef`[、CComModule](../../atl/reference/ccommodule-class.md)のグローバル インスタンスまたはそこから派生したクラス`_Module::Lock``_Module`は、 を呼び出します。
 
-##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>グローバルなオブジェクト::CComオブジェクトグローバル
 
-コンストラクターです。 呼び出し`FinalConstruct`し、設定[m_hResFinalConstruct](#m_hresfinalconstruct)を`HRESULT`によって返される`FinalConstruct`します。
+コンストラクターです。 m_hResFinalConstruct`FinalConstruct`を呼び出し`HRESULT`、[次に、](#m_hresfinalconstruct)によって返される`FinalConstruct`値に設定します。
 
 ```
 CComObjectGlobal(void* = NULL));
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-基底クラスを派生していない場合[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)、独自に指定する必要があります`FinalConstruct`メソッド。 このデストラクターは `FinalRelease` を呼び出します。
+[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)から基本クラスを派生していない場合は、独自`FinalConstruct`のメソッドを指定する必要があります。 このデストラクターは `FinalRelease` を呼び出します。
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>オブジェクトグローバル::~CComオブジェクトグローバル
 
 デストラクターです。
 
@@ -110,19 +110,19 @@ CComObjectGlobal(void* = NULL));
 CComObjectGlobal();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)します。
+割り当てられたすべてのリソースを解放し[、FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出します。
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct
+## <a name="ccomobjectglobalm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>コムオブジェクトグローバル::m_hResFinalConstruct
 
-呼び出しから HRESULT を含む`FinalConstruct`の構築時に、`CComObjectGlobal`オブジェクト。
+オブジェクトの構築中に呼`FinalConstruct`び出しを`CComObjectGlobal`行った HRESULT を格納します。
 
 ```
 HRESULT m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface
+## <a name="ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>インターフェイスの種類
 
 要求されたインターフェイス ポインターへのポインターを取得します。
 
@@ -132,23 +132,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*<br/>
-[in]要求されているインターフェイスの GUID です。
+*Iid*<br/>
+[in]要求されているインターフェイスの GUID。
 
-*ppvObject*<br/>
-[out]インターフェイスが見つからない場合は、iid、または NULL で識別されるインターフェイス ポインターへのポインター。
+*オブジェクト*<br/>
+[アウト]iid で識別されるインターフェイス ポインタへのポインタ。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `QueryInterface` が処理するのは、COM マップ テーブル内のインターフェイスのみです。
 
-##  <a name="release"></a>  CComObjectGlobal::Release
+## <a name="ccomobjectglobalrelease"></a><a name="release"></a>オブジェクトグローバル::リリース
 
-オブジェクトの参照カウントを 1 だけデクリメントします。
+オブジェクトの参照カウントを 1 で減算します。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -156,15 +156,15 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-デバッグ ビルドで`Release`診断に役立ちますし、テスト可能性のある値を返します。 非デバッグ ビルドで`Release`常に 0 を返します。
+デバッグ ビルドでは`Release`、診断とテストに役立つ値を返します。 非デバッグ ビルドでは、`Release`常に 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、`Release`呼び出し`_Module::Unlock`ここで、`_Module`のグローバル インスタンス[CComModule](../../atl/reference/ccommodule-class.md)またはその派生クラス。
+既定では`Release`[、CComModule](../../atl/reference/ccommodule-class.md)のグローバル インスタンスまたはそこから派生したクラス`_Module::Unlock``_Module`は、 を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComObjectStack クラス](../../atl/reference/ccomobjectstack-class.md)<br/>
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
+[クラス](../../atl/reference/ccomobjectstack-class.md)<br/>
+[クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[クラス](../../atl/reference/ccomobject-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

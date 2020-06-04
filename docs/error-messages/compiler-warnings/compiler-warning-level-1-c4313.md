@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
-ms.openlocfilehash: 774af2d5d29112d56adf97e22d1bdd758a816ef1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14ac938d62b4c5b6f22957268721aea9c3ffef22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352937"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163051"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>コンパイラの警告 (レベル 1) C4313
 
@@ -23,7 +23,7 @@ ms.locfileid: "62352937"
 
 次のコード サンプルは、64 ビット ターゲットのコンパイル時に C4313 を生成します。
 
-```
+```cpp
 // C4313.cpp
 // Compile by using: cl /W1 C4313.cpp
 #include <stdio.h>

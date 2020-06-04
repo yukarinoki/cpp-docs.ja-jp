@@ -1,31 +1,29 @@
 ---
 title: アクティブ ドキュメント クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.document
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: c4087d8e223e08842d5b402bdf063a908d1e22bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c74b1287243c18bf8d7f26325e726b09463700f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394989"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445813"
 ---
 # <a name="active-document-classes"></a>アクティブ ドキュメント クラス
 
-Internet Explorer 5.5 などの Web ブラウザーの全体のクライアント ウィンドウで、またはアクティブなドキュメントをサポートする Microsoft Office バインダーなど、アクティブなコンテナーでは、アクティブなドキュメントを表示できます。
+アクティブなドキュメントは、Internet Explorer 5.5 などの Web ブラウザーのクライアントウィンドウ全体に表示することも、アクティブなドキュメントをサポートする Microsoft Office バインダーなどのアクティブなコンテナーに表示することもできます。
 
 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
-アクティブなドキュメントのインターフェイスのマップしを初期化し、アクティブなドキュメント オブジェクトがアクティブになります。
+アクティブドキュメントインターフェイスをマップし、アクティブなドキュメントオブジェクトを初期化してアクティブ化します。
 
 [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
-Active ドキュメント サーバー専用の OLE サーバー動詞を実装します。
+は、Active ドキュメントサーバー専用の OLE サーバー動詞を実装します。
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
 Active ドキュメント コンテインメントを実装します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

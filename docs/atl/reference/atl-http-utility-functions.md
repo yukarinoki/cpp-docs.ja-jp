@@ -2,12 +2,12 @@
 title: ATL HTTP ユーティリティ関数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497974"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168606"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
@@ -28,7 +28,7 @@ ms.locfileid: "69497974"
 
 **ヘッダー:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 URL を標準形式に変換します。安全でない文字や空白をエスケープ シーケンスに変換する処理などが含まれます。
 
@@ -52,13 +52,13 @@ inline BOOL AtlCanonicalizeUrl(
 *Szcanonicalized*された長さの文字数を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwFlags*<br/>
-この関数の動作を制御する ATL_URL フラグ。
+この関数の動作を制御するフラグ ATL_URL ます。
 
 - ATL_URL_BROWSER_MODE は、"#" または "?" の後の文字をエンコードまたはデコードしません。また、"?" の後の末尾の空白は削除されません。 この値が指定されていない場合は、URL 全体がエンコードされ、末尾の空白が削除されます。
 
 - ATL_URL_DECODE は、URL が解析される前に、すべての% XX シーケンスをエスケープシーケンスを含む文字に変換します。
 
-- ATL_URL_ENCODE_PERCENT は、検出されたパーセント記号をエンコードします。 既定では、パーセント記号はエンコードされません。
+- ATL_URL_ENCODE_PERCENT は、発生したパーセント記号をエンコードします。 既定では、パーセント記号はエンコードされません。
 
 - ATL_URL_ENCODE_SPACES_ONLY は、スペースのみをエンコードします。
 
@@ -72,11 +72,11 @@ inline BOOL AtlCanonicalizeUrl(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 現在のバージョンの[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
-## <a name="atlcombineurl"></a> AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>Atl連結 Eurl
 
 ベース URL と相対 URL を結合して、1 つの標準形式の URL にします。
 
@@ -110,11 +110,11 @@ inline BOOL AtlCombineUrl(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 は、現在のバージョンの[Internet連結 Eurl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
-## <a name="atlescapeurl"></a> AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
 
 すべての安全でない文字をエスケープ シーケンスに変換します。
 
@@ -149,17 +149,17 @@ DWORD 変数へのポインター。 関数が成功した場合、 *pdwStrLen*�
 バッファー *Lpszstringout*のサイズ。
 
 *dwFlags*<br/>
-この関数の動作を制御する ATL_URL フラグ。 使用可能な値については、 [ATLCanonicalizeUrl](#atlcanonicalizeurl)を参照してください。
+この関数の動作を制御するフラグ ATL_URL ます。 使用可能な値については、 [ATLCanonicalizeUrl](#atlcanonicalizeurl)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 特定のインターネット プロトコルまたはスキームに関連付けられた、既定のポート番号を取得します。
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
@@ -170,13 +170,13 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 
 ### <a name="return-value"></a>戻り値
 
-指定したスキームに関連付けられている[ATL_URL_PORT](atl-typedefs.md#atl_url_port) 、またはスキームが認識されない場合は ATL_URL_INVALID_PORT_NUMBER。
+指定されたスキームに関連付けられている[ATL_URL_PORT](atl-typedefs.md#atl_url_port) 。スキームが認識されない場合は ATL_URL_INVALID_PORT_NUMBER。
 
-## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 URL で使用しても安全な文字かどうかを判断します。
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
@@ -189,11 +189,11 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 入力文字が安全でない場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 Url で使用しない文字は、この関数を使用してテストし、 [AtlCanonicalizeUrl](#atlcanonicalizeurl)を使用して変換することができます。
 
-## <a name="atlunescapeurl"></a> AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
 
 エスケープされた文字を元の値に変換します。
 
@@ -229,11 +229,11 @@ DWORD 変数へのポインター。 関数が成功した場合、変数はバ�
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [AtlEscapeUrl](#atlescapeurl)によって適用された変換処理を反転します。
 
-## <a name="rgbtohtml"></a> RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
 
 [COLORREF](/windows/win32/gdi/colorref)値をその色の値に対応する HTML テキストに変換します。
 
@@ -246,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
+*color*<br/>
 RGB カラー値。
 
 *pbOut*<br/>
@@ -259,11 +259,11 @@ HTML カラー値のテキストを受信するために、呼び出し元が割
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 HTML カラー値は、カラーの赤、緑、および青の各成分に対して2桁を使用する、シャープ記号と6桁の16進数の値 (たとえば、#FFFFFF が白) です。
 
-## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 システム時刻を HTTP ヘッダーで使用できる形式の文字列に変換します。
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 HTTP 書式指定文字列として取得されるシステム時刻。
 
 *strTime*<br/>
-Rfc 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) および rfc 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)) で定義されている HTTP 日付時刻を受け取る文字列変数への参照。
+RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) および rfc 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)) で定義されている HTTP 日付時刻を受け取る文字列変数への参照。
 
 ## <a name="see-also"></a>関連項目
 

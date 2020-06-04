@@ -1,8 +1,6 @@
 ---
 title: コード ページ
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738569"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443498"
 ---
 # <a name="code-pages"></a>コード ページ
 
@@ -35,13 +33,13 @@ Microsoft ランタイム ライブラリでは、次の種類のコード ペ�
 
    また、システム既定の ANSI コード ページにロケールを設定します。
 
-- ロケールのコード ページ。 ランタイム ルーチンの動作は、ロケール コード ページを含む、現在のロケール設定に依存します。 (詳細については、[ロケール依存のルーチン](../c-runtime-library/locale.md)に関するページを参照してください。)既定では、Microsoft ランタイム ライブラリのすべてのロケール依存ルーチンで "C" ロケールに相当するコード ページが使用されます。 実行時、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) を呼び出し、使用中のロケール コード ページを変更したり、クエリを実行したりできます。
+- ロケールのコード ページ。 ランタイム ルーチンの動作は、ロケール コード ページを含む、現在のロケール設定に依存します。 (詳細については、「[ロケールに依存するルーチン](../c-runtime-library/locale.md)」を参照してください)。既定では、Microsoft ランタイムライブラリのすべてのロケールに依存するルーチンは、"C" ロケールに対応するコードページを使用します。 実行時、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) を呼び出し、使用中のロケール コード ページを変更したり、クエリを実行したりできます。
 
 - マルチバイト コード ページ。 ランタイム ライブラリのマルチバイト文字のほとんどの動作は、現在のマルチバイト コード ページ設定に依存します。 既定では、これらのルーチンではシステム既定の ANSI コード ページが使用されます。 実行時に、[_getmbcp](../c-runtime-library/reference/getmbcp.md) と [_setmbcp](../c-runtime-library/reference/setmbcp.md) でマルチバイト コード ページをそれぞれ照会または変更できます。
 
 - "C" ロケールは、従来、C プログラムが実行されていたロケールに対応するよう、ANSI により定義されます。 "C" ロケールのコード ページ ("C" コード ページ) は ASCII 文字セットに対応します。 たとえば、"C" ロケールでは、**islower** は値 0x61 - 0x7A にのみ true を返します。 別のロケールの場合、**islower** は、そのロケールによる定義に基づき、値 0x61 - 0x7A とその他の値に true を返すことがあります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

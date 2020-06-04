@@ -1,9 +1,10 @@
 ---
 title: _resetstkoflw
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _resetstkoflw
-apilocation:
+- _o__resetstkoflw
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +15,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
@@ -24,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: fc8a625e767daeb964f838c91f74732c9bd337a4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499492"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917785"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -48,7 +53,7 @@ int _resetstkoflw( void );
 
 関数が成功した場合は 0 以外、失敗した場合は 0。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Resetstkoflw**関数は、スタックオーバーフロー条件から回復します。これにより、プログラムは致命的な例外エラーで失敗するのではなく、続行できます。 **_Resetstkoflw**関数が呼び出されていない場合は、前の例外の後にガードページはありません。 次にスタック オーバーフローが発生したときに例外は発生しないので、プロセスは警告なしで終了します。
 
@@ -74,7 +79,7 @@ int _resetstkoflw( void );
 
 その時点ではスタックにガード ページがないことに注意してください。 次にプログラムによってスタックのサイズが最後まで拡張されると、この場合はガード ページがある必要があり、プログラムはスタックの末尾を越えて書き込みを行い、アクセス違反が発生します。
 
-スタックオーバーフロー例外の後に復旧が行われるたびに、 **_resetstkoflw**を呼び出して、ガードページを復元します。 この関数は、 **__except**ブロックのメイン本体の内部から、または **__except**ブロックの外側から呼び出すことができます。 ただし、使用する必要がある場合には、いくつかの制限があります。 **_resetstkoflw**を呼び出すことはできません。
+スタックオーバーフロー例外の後に復旧が行われるたびにガードページを復元するには、 **_resetstkoflw**を呼び出します。 この関数は、 **__except**ブロックのメイン本体の内部から、または **__except**ブロックの外側から呼び出すことができます。 ただし、使用する必要がある場合には、いくつかの制限があります。 **_resetstkoflw**を呼び出すことはできません。
 
 - フィルター式。
 
@@ -88,23 +93,25 @@ int _resetstkoflw( void );
 
 これらの時点では、スタックは完全にはアンワインドされていません。
 
-スタックオーバーフロー例外は構造化例外として生成C++されますが、例外ではありません。したがって、 **_resetstkoflw**はスタックオーバーフロー例外をキャッチしないため、通常の**catch**ブロックでは役に立ちません。 ただし、[_set_se_translator](set-se-translator.md) を使用して C++ 例外をスローする構造化例外の変換を実装すると (2 番目の例のように)、スタック オーバーフロー例外によって C ++ 例外が発生します。これは C++ の catch ブロックで処理できます。
+スタックオーバーフロー例外は、C++ 例外ではなく、構造化例外として生成されるため、 **_resetstkoflw**はスタックオーバーフロー例外をキャッチしないため、通常の**catch**ブロックでは役に立ちません。 ただし、[_set_se_translator](set-se-translator.md) を使用して C++ 例外をスローする構造化例外の変換を実装すると (2 番目の例のように)、スタック オーバーフロー例外によって C ++ 例外が発生します。これは C++ の catch ブロックで処理できます。
 
 構造化例外変換関数によってスローされる例外から到達した C ++ catch ブロックでの **_resetstkoflw** の呼び出しは安全ではありません。 この場合、catch ブロックの前で消滅させられるオブジェクトに対してデストラクターが呼び出された場合でも、catch ブロックの外部に出るまでスタック領域は解放されず、スタック ポインターはリセットされません。 この関数は、スタック領域が解放され、スタック ポインターがリセットされるまで呼び出さないようにする必要があります。 したがって、catch ブロックが終了した後でのみ呼び出すようにします。 catch ブロックではできるだけ小さなスタック領域を使用するようにします。これは、前回のスタック オーバーフローから自身で回復しようとしている catch ブロックでスタック オーバーフローが発生すると回復できなくなり、catch ブロック内でのオーバーフローによって同じ catch ブロックによってハンドルされる例外がトリガーされてプログラムの応答が停止するおそれがあるためです。
 
-**_resetstkoflw** が **__except** ブロック内などの適切な位置で使用されていても、エラーになる場合があります。 スタックのアンワインドを実行した後でも、スタックの最後のページに書き込みをしないで **_resetstkoflw** を実行するためのスタック領域が十分にない場合は、 **_resetstkoflw** はスタックの最後のページをガード ページとしてリセットすることに失敗し、エラーを表す 0 を返します。 したがってこの関数を安全に使用するには、スタックを使用しても安全であると想定するのではなく、戻り値をチェックする必要があります。
+**_resetstkoflw** が **__except** ブロック内などの適切な位置で使用されていても、エラーになる場合があります。 スタックのアンワインドを実行した後でも、スタックの最後のページに書き込みをしないで **_resetstkoflw** を実行するためのスタック領域が十分にない場合は、**_resetstkoflw** はスタックの最後のページをガード ページとしてリセットすることに失敗し、エラーを表す 0 を返します。 したがってこの関数を安全に使用するには、スタックを使用しても安全であると想定するのではなく、戻り値をチェックする必要があります。
 
 アプリケーションが **/clr**でコンパイルされている場合、構造化例外処理は**STATUS_STACK_OVERFLOW**例外をキャッチしません (「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください)。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_resetstkoflw**|\<malloc.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-**ライブラリ**すべてのバージョンの[CRT ライブラリ機能](../../c-runtime-library/crt-library-features.md)。
+**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
 
 ## <a name="example"></a>例
 
@@ -212,7 +219,7 @@ resetting stack overflow
 
 ### <a name="description"></a>説明
 
-次の例は、構造化例外が例外にC++変換されるプログラムでの _resetstkoflw の推奨される使用方法を示しています。
+次の例は、構造化例外が C++ 例外に変換されるプログラムでの **_resetstkoflw**の推奨される使用方法を示しています。
 
 ### <a name="code"></a>コード
 

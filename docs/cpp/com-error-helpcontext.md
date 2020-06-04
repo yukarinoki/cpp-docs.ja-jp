@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155086"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180590"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Microsoft 固有の仕様**
 
@@ -27,14 +27,14 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>戻り値
 
-結果を返します`IErrorInfo::GetHelpContext`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 ない場合は`IErrorInfo`オブジェクトが記録されますが、0 を返します。
+`_com_error` オブジェクト内に記録された `IErrorInfo` オブジェクトの `IErrorInfo::GetHelpContext` の結果を返します。 `IErrorInfo` オブジェクトが記録されない場合は、0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出すときの失敗、`IErrorInfo::GetHelpContext`メソッドは無視されます。
+`IErrorInfo::GetHelpContext` メソッドの呼び出し中に発生したエラーは無視されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_error クラス](../cpp/com-error-class.md)

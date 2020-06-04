@@ -1,10 +1,12 @@
 ---
 title: puts、_putws
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _putws
 - puts
-apilocation:
+- _o__putws
+- _o_puts
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +36,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358087"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916106"
 ---
-# <a name="puts-putws"></a>puts、_putws
+# <a name="puts-_putws"></a>puts、_putws
 
 **stdout** に文字列を書き込みます。
 
@@ -54,22 +60,24 @@ int _putws(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 出力する文字列。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合は、0 以上の値を返します。 場合**配置**失敗すると、それを返します**EOF**場合 **_putws**失敗すると、それを返します**WEOF**します。 場合*str* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数が設定**errno**に**EINVAL**戻って**EOF**または**WEOF**します。
+正常に終了した場合は、0 以上の値を返します。 **Put**が失敗した場合は**EOF**を返します。**_putws**が失敗した場合は、 **WEOF**を返します。 *Str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定し、 **EOF**または**WEOF**を返します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**配置**関数*str*を標準出力ストリームに**stdout**、置換文字列の終端の null 文字 ('\0') は改行文字 ('\n') で、出力ストリーム。
+**Put**関数は、 *str*を標準出力ストリーム**stdout**に書き込みます。出力ストリームで文字列の終端の null 文字 (' \ 0 ') は改行文字 (' \n ') に置き換えられます。
 
-**_putws**のワイド文字バージョンは、**配置**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **配置**UNICODE ストリームへの出力をサポートされていません。
+**_putws**は、 **put**のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、2つの関数の動作は同じになります。 現在、UNICODE ストリームへの出力はサポートされて**いません**。
 
-**_putwch**は現在の CONSOLE LOCALE 設定を使用して Unicode 文字を書き出します。
+**_putwch**は、現在のコンソールのロケール設定を使用して Unicode 文字を書き込みます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -79,12 +87,12 @@ int _putws(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

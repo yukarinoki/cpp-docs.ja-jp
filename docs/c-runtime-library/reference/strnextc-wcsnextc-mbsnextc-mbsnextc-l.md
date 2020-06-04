@@ -1,12 +1,14 @@
 ---
 title: _strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _strnextc
 - _mbsnextc_l
 - _mbsnextc
 - _wcsnextc
-apilocation:
+- _o__mbsnextc
+- _o__mbsnextc_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strnextc
 - tcsnextc
@@ -44,12 +50,12 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 8a0075a039e11f81917d605214d3924521851a26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4017dc4f72a0072df8d0969406169a26c1da43ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500893"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919260"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
@@ -78,7 +84,7 @@ unsigned int _mbsnextc_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*引数*<br/>
 ソース文字列。
 
 *locale*<br/>
@@ -88,7 +94,7 @@ unsigned int _mbsnextc_l(
 
 これらの各関数は、 *str*の次の文字の整数値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Mbsnextc**関数は、文字列ポインターを進めずに、 *str*内の次のマルチバイト文字の整数値を返します。 **_mbsnextc**は、現在使用中の[マルチバイトコードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字のシーケンスを認識します。
 
@@ -96,31 +102,33 @@ unsigned int _mbsnextc_l(
 
 **セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**と **_wcsnextc**は、 **_mbsnextc**の1バイト文字の文字列とワイド文字列バージョンです。 **_wcsnextc**は、 *str*の次のワイド文字の整数値を返します。 **_strnextc**は、 *str*内の次の1バイト文字の整数値を返します。 **_strnextc**と **_wcsnextc**はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+**_strnextc**と **_wcsnextc**は、 **_mbsnextc**の1バイト文字の文字列とワイド文字列バージョンです。 **_wcsnextc**は、 *str*の次のワイド文字の整数値を返します。**_strnextc**は、 *str*内の次の1バイト文字の整数値を返します。 **_strnextc**と **_wcsnextc**はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
 **_mbsnextc_l**は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnextc**|\<mbstring.h>|
 |**_mbsnextc_l**|\<mbstring.h>|
 |**_strnextc**|\<tchar.h>|
 |**_wcsnextc**|\<tchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec、_wcsdec、_mbsdec、_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc、_wcsinc、_mbsinc、_mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

@@ -1,34 +1,62 @@
 ---
 title: リソースのみの DLL の作成
-ms.date: 11/04/2016
+description: Visual Studio でリソースのみの DLL を作成する方法。
+ms.date: 01/27/2020
 helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 0d729be60ebec7a37d07fed1d14c4fd5330c7242
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+no-loc:
+- noentry
+ms.openlocfilehash: ef79de77e35cbef6acd4af1cec82a4edc1b7d105
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220838"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821344"
 ---
 # <a name="creating-a-resource-only-dll"></a>リソースのみの DLL の作成
 
-リソースのみの DLL とは、リソース以外のものを一切含まず、アイコン、ビットマップ、文字列、ダイアログ ボックスだけを含む DLL です。 リソースのみの DLL は、複数のプログラム間でリソース群を共有するのに適しています。 複数の言語にローカライズされたリソースをアプリケーションに提供する優れた方法も (を参照してください[MFC アプリケーションのローカライズされたリソース。サテライト Dll](localized-resources-in-mfc-applications-satellite-dlls.md))。
+リソースのみの DLL とは、リソース以外のものを一切含まず、アイコン、ビットマップ、文字列、ダイアログ ボックスだけを含む DLL です。 リソースのみの DLL は、複数のプログラム間でリソース群を共有するのに適しています。 また、複数の言語にローカライズされたリソースをアプリケーションに提供する場合にも適しています。 詳細については、「[MFC アプリケーションのローカライズされたリソース: サテライト DLL](localized-resources-in-mfc-applications-satellite-dlls.md)」を参照してください。
 
-リソースのみの DLL を作成するには、Win32 DLL (非 MFC) プロジェクトを新規作成し、ここにリソースを追加します。
+## <a name="create-a-resource-only-dll"></a>リソースのみの DLL を作成する
 
-- Win32 プロジェクトを選択、**新しいプロジェクト** ダイアログ ボックスし、Win32 プロジェクト ウィザードで DLL プロジェクトの種類を指定します。
+リソースのみの DLL を作成するには、Windows DLL (非 MFC) プロジェクトを新規作成し、ここにリソースを追加します。
 
-- DLL 用のリソース (文字列やメニューなど) を含むリソース スクリプトを新規作成し、.rc ファイルに保存します。
+::: moniker range="vs-2015"
 
-- **プロジェクト** メニューのをクリックして**既存項目の追加**、し、新しい .rc ファイルをプロジェクトに挿入します。
+1. **[新しいプロジェクト]** ダイアログ ボックスで **[Win32 プロジェクト]** を選択します。 プロジェクトとソリューションの名前を入力し、 **[OK]** を選択します。
 
-- 指定、 [/NOENTRY](reference/noentry-no-entry-point.md)リンカー オプション。 /NOENTRY への参照のリンクから、リンカーを防止する`_main`リソース専用 DLL を作成する DLL のこのオプションが必要です。
+1. **Win32 アプリケーション ウィザード**で、 **[アプリケーション設定]** を選択します。 **[DLL]** の **[アプリケーションの種類]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[完了]** を選択してプロジェクトを作成します。
 
-- DLL をビルドします。
+1. DLL のリソース (文字列やメニューなど) を含む新しいリソース スクリプトを作成します。 `.rc` ファイルを保存します。
 
-リソース専用 DLL を使用するアプリケーションを呼び出す必要があります[LoadLibrary](loadlibrary-and-afxloadlibrary.md) DLL に明示的にリンクします。 リソースにアクセスするには、ジェネリック関数を呼び出す`FindResource`と`LoadResource`リソースの種類にまたは、次のリソースに固有の関数のいずれかを呼び出します。
+1. **[プロジェクト]** メニューで、 **[既存項目の追加]** を選択し、新しい `.rc` ファイルをプロジェクトに挿入します。
+
+1. [/NOENTRY](reference/noentry-no-entry-point.md) リンカー オプションを指定します。 `/NOENTRY` を指定すると、`_main` への参照が DLL にリンクされません。リソースのみの DLL を作成する場合は、このオプションを指定する必要があります。
+
+1. DLL をビルドします。
+
+::: moniker-end
+::: moniker range=">=vs-2017"
+
+1. **[新しいプロジェクト]** ダイアログ ボックスで **[Windows デスクトップ ウィザード]** を選択し、 **[次へ]** を選択します **[新しいプロジェクトの構成]** ページで、プロジェクトとソリューションの名前を入力し、 **[作成]** を選択します。
+
+1. **[Windows デスクトップ プロジェクト]** ダイアログ ボックスで、 **[ダイナミック リンク ライブラリ]** の **[アプリケーションの種類]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[OK]** を選択してプロジェクトを作成します。
+
+1. DLL のリソース (文字列やメニューなど) を含む新しいリソース スクリプトを作成します。 `.rc` ファイルを保存します。
+
+1. **[プロジェクト]** メニューで、 **[既存項目の追加]** を選択し、新しい `.rc` ファイルをプロジェクトに挿入します。
+
+1. [/NOENTRY](reference/noentry-no-entry-point.md) リンカー オプションを指定します。 `/NOENTRY` を指定すると、`_main` への参照が DLL にリンクされません。リソースのみの DLL を作成する場合は、このオプションを指定する必要があります。
+
+1. DLL をビルドします。
+
+::: moniker-end
+
+## <a name="use-a-resource-only-dll"></a>リソースのみの DLL を使用する
+
+リソースのみの DLL を使用するアプリケーションの場合、[LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) または関連する関数を呼び出して、DLL に明示的にリンクする必要があります。 リソースにアクセスするには、あらゆる種類のリソースで機能する汎用関数 `FindResource` および `LoadResource` を呼び出します。 または、次のリソース固有の関数のいずれかを呼び出します。
 
 - `FormatMessage`
 
@@ -44,9 +72,9 @@ ms.locfileid: "65220838"
 
 - `LoadString`
 
-アプリケーションを呼び出す必要があります`FreeLibrary`が完了すると、リソースを使用します。
+リソースの使用が終了したら、アプリケーションから `FreeLibrary` を呼び出す必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
-[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)
+[リソース ファイルの操作](../windows/working-with-resource-files.md)\
+[Visual Studio での C/C++ Dll の作成](dlls-in-visual-cpp.md)

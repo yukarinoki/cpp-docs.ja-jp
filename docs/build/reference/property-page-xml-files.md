@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630742"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303166"
 ---
 # <a name="property-page-xml-rule-files"></a>プロパティ ページの XML 規則ファイル
 
@@ -95,7 +95,7 @@ cl.xml はメモ帳または任意の XML エディターで開くことがで�
 
    e. **xmlns:** これは、標準の XAML 要素です。 3 つの名前空間が一覧表示されます。 これらは、XAML の逆シリアル化クラスの名前空間、XAML スキーマ、およびシステム名前空間にそれぞれ対応しています。
 
-   f. **DisplayName:** Rule ノードのプロパティ ページの UI に表示される名前です。 この値はローカライズされます。 内部のローカライズ ツールの要件により、DisplayName は (Name や SwitchPrefix のような) 属性としてではなく、Rule の子要素として作成されています。 XAML の観点からは、どちらも同じです。 そのため、単に属性にして煩雑さを軽減することも、そのままにしておくこともできます。
+   f. **DisplayName:** Rule ノードのプロパティ ページの UI に表示される名前です。 この値はローカライズされます。 内部のローカライズ ツールの要件により、DisplayName は (Name や SwitchPrefix のような) 属性としてではなく、Rule の子要素として作成されています。 XAML の観点からは、両方とも同じです。 そのため、単に属性にして煩雑さを軽減することも、そのままにしておくこともできます。
 
    g. **DataSource:** これは、プロジェクト システムにプロパティ値を読み書きする場所およびそのグループ化 (下記参照) を伝える非常に重要なプロパティです。 cl.xml の場合、これらの値は次のとおりです。
 
@@ -112,7 +112,7 @@ cl.xml はメモ帳または任意の XML エディターで開くことがで�
    - `HasConfigurationCondition="true"` は、現在のプロジェクト構成に対してのみ有効になるように、値に構成条件を添えるようにプロジェクト システムに指示します (条件は、親グループまたは値そのものに添えることができます)。 たとえば、プロジェクト ノードのプロパティ ページを開き、 **[構成プロパティ] > [C/C++ の全般]** の下でプロパティ **Treat Warnings As Error** の値を "Yes" に設定します。 次の値がプロジェクト ファイルに書き込まれます。 親 Itemdefinitiongroup に構成条件が添付されていることに注目してください。
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
@@ -124,20 +124,20 @@ cl.xml はメモ帳または任意の XML エディターで開くことがで�
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   上記に一覧表示されていない **DataSource** のもう 1 つの属性が、**PersistedName** です。 この属性を使用すると、別の名前を使用しているプロジェクト ファイル内のプロパティを表すことができます。 既定では、この属性はプロパティの **Name** に設定されています。
+   上記に一覧表示されていない **DataSource** のもう 1 つの属性が、**PersistedName** です。 この属性を使用すると、別の名前を使用しているプロジェクト ファイル内のプロパティを表すことができます。 既定では、この属性はプロパティの**名前**に設定されます。
 
-   個々のプロパティは、その親 Rule の DataSource をオーバーライドできます。 その場合、そのプロパティの値の場所は、Rule 内の他のプロパティとは異なる場所になります。
+   個々のプロパティは、その親ルールの DataSource をオーバーライドできます。 その場合、そのプロパティの値の場所は、ルール内の他のプロパティとは異なります。
 
-   h. ここに示されていない、Rule のその他の属性があります (Description、SupportsFileBatching など)。 Rule またはその他の要素に適用可能な属性の完全なセットは、これらの型のドキュメントを参照することで取得できます。 または、`Microsoft.Build.Framework .dll` アセンブリ内の `Microsoft.Build.Framework.XamlTypes` 名前空間内の型でパブリック プロパティを調べることもできます。
+   h. ここに示されていない、Rule のその他の属性があります (Description、SupportsFileBatching など)。 Rule またはその他の要素に適用可能な属性の完全なセットは、これらの型のドキュメントを参照することで取得できます。 または、`Microsoft.Build.Framework.XamlTypes` アセンブリ内の `Microsoft.Build.Framework .dll` 名前空間内の型でパブリック プロパティを調べることもできます。
 
    i. **DisplayName**、**PageTemplate**、および **Order** は、ここに存在している UI 関連のプロパティか、そうでない場合は、UI に依存しないデータ モデルです。 これらのプロパティは、プロパティ ページを表示するために使用される任意の UI でほぼ確実に使用されます。 **DisplayName** と **Description** の 2 つのプロパティは、xml ファイル内のほぼすべての要素に存在します。 また、ローカライズされるのはこの 2 つのプロパティだけです (これらの文字列のローカライズについては、以降の記事で説明します)。
 
-1. **カテゴリ:** Rule は複数の Category を持つことができます。 xml ファイル内でカテゴリが表示される順序は、カテゴリを同じ順序で表示するための UI への提案です。 たとえば、UI で見られるように、C/C++ ノードの下のカテゴリの順序が、全般、最適化、プリプロセッサというようになっているのは、  cl.xml 内と同じ順序です。 サンプル カテゴリは、次のようになります。
+1. **Category:** Rule は複数の Category を持つことができます。 xml ファイル内でカテゴリが表示される順序は、カテゴリを同じ順序で表示するための UI への提案です。 たとえば、UI で見られるように、C/C++ ノードの下のカテゴリの順序が、全般、最適化、プリプロセッサというようになっているのは、  cl.xml 内と同じ順序です。 サンプル カテゴリは、次のようになります。
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ cl.xml はメモ帳または任意の XML エディターで開くことがで�
 
    上記のスニペットでは、上記で説明した **Name** 属性と **DisplayName** 属性が示されています。 ここでも、**Category** には、上記で使用されていないその他の属性があります。 これらについて知るには、ドキュメントを読むか、ildasm.exe を使用するアセンブリを調べます。
 
-1. **Properties:** これは xml ファイルの本質で、この Rule 内のすべてのプロパティの一覧が含まれています。 各プロパティは、上記の XAML スケルトンで示されている 5 つの可能な型のいずれかを指定できます。 もちろん、これらの型の一部だけをファイル内で指定することもできます。 プロパティは、十分に説明できるように多くの属性を持つことができます。 ここでは、**StringProperty** のみを説明します。 残りは非常に似ています。
+1. **Properties:** これは xml ファイルの本質で、この Rule 内のすべてのプロパティの一覧が含まれています。 各プロパティは、上記の XAML スケルトンで示されている 5 つの可能な型のいずれかを指定できます。 もちろん、これらの型の一部だけをファイル内で指定することもできます。 プロパティは、十分に説明できるように多くの属性を持つことができます。 ここでは、 **Stringproperty**のみについて説明します。 残りは非常に似ています。
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ cl.xml はメモ帳または任意の XML エディターで開くことがで�
 
    スニペット内の属性のほとんどは、前述しました。 新しい属性は、Subtype、Category、および Switch です。
 
-   a. **Subtype** は、**StringProperty** と **StringListProperty** に対してのみ使用可能な属性で、コンテキスト情報を提供します。 たとえば、"file" の値は、プロパティがファイル パスを表すことを示します。 このようなコンテキスト情報は、ユーザーがファイルを視覚的に選択できるプロパティのエディターとして Windows エクスプローラーを提供することで、編集エクスペリエンスを強化するために使用されます。
+   a. **Subtype** は、**StringProperty** と **StringListProperty** に対してのみ使用可能な属性で、コンテキスト情報を提供します。 たとえば、"file" の値は、プロパティがファイル パスを表すことを示します。 このような文脈情報は、ユーザーがファイルを視覚的に選択できるようにするためのプロパティエディターとして Windows エクスプローラーを提供することで、編集エクスペリエンスを向上させるために使用されます。
 
-   b. **カテゴリ:** このプロパティが該当するカテゴリを宣言します。 UI 内の **[出力ファイル]** カテゴリの下で、このプロパティの検索を試みます。
+   b. **Category:** このプロパティが該当するカテゴリを宣言します。 UI 内の **[出力ファイル]** カテゴリの下で、このプロパティの検索を試みます。
 
    c. **Switch:** Rule がツールを表す場合 (この場合のコンパイラ ツールなど)、Rule のほとんどのプロパティがビルド時にツールの実行可能ファイルにスイッチとして渡されます。 この属性の値は、使用されるスイッチ リテラルを示します。 上記のプロパティは、そのスイッチが **Fo** にする必要があることを指定します。 このプロパティは、親 Rule で **SwitchPrefix** 属性と組み合わされて、 **/Fo"Debug\"** として実行可能ファイルに渡されます (プロパティ ページの UI で C/C++ のコマンド ラインで表示可能)。
 
    その他のプロパティの属性は次のとおりです。
 
-   d. **Visible:** 何らかの理由で、プロパティ ページにプロパティを表示したくない (ただし、ビルド時にはまだ使用できる) 場合、この属性を false に設定します。
+   d. **表示:** 何らかの理由でプロパティがプロパティページに表示されないようにする場合は (ただし、ビルド時に使用できる場合もあります)、この属性を false に設定します。
 
-   e. **ReadOnly:** プロパティ ページで、このプロパティの値の読み取り専用ビューを提供する場合は、この属性を true に設定します。
+   e. **ReadOnly:** プロパティページでこのプロパティの値の読み取り専用ビューを指定する場合は、この属性を true に設定します。
 
    f. **IncludeInCommandLine:** プロパティの中には、ビルド時にツールに渡す必要のないものもあります。 この属性を false に設定すると、渡されないようにすることができます。

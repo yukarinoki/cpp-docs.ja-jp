@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325742"
 ---
 # <a name="c-constant-expressions"></a>C 定数式
 
@@ -35,7 +35,7 @@ ms.locfileid: "50490533"
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: 次のいずれか<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
 
 構造体宣言子、列挙子、直接宣言子、直接抽象宣言子、およびラベル付きステートメントの必須でない要素は、必須でない要素の *constant-expression* を含みます。
 

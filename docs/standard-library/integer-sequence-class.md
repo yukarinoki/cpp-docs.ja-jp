@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451021"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031473"
 ---
-# <a name="integersequence-class"></a>integer_sequence クラス
+# <a name="integer_sequence-class"></a>integer_sequence クラス
 
 整数のシーケンスを表します。 このクラスを使用して、関数に引数として渡される std::tuple\<T...> などの可変個引数型のパラメーター パックを推測および拡大できます。
 
@@ -34,10 +34,10 @@ struct integer_sequence
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T*\
 値の型。整数型である必要があります (bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なしの整数型)。
 
-*Vals*\
+*ヴァルス*\
 整数型 T の値のシーケンスを表す非型パラメーター パック。
 
 ## <a name="members"></a>メンバー
@@ -47,17 +47,17 @@ struct integer_sequence
 |`static size_t size() noexcept`|シーケンス内の要素の数。|
 |`typedef T value_type`|シーケンス内の各要素の型。 整数型である必要があります。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 関数に直接渡されるパラメーター パックは、特別なライブラリ ヘルパーなしでアンパックできます。 パラメーター パックが関数に渡される型の一部であるときに要素にアクセスするためにインデックスが必要な場合、これをアンパックする最も簡単な方法は、`integer_sequence` とその関連する型のエイリアス `make_integer_sequence`、`index_sequence`、`make_index_sequence`、`index_sequence_for` を使用する方法です。
 
 ## <a name="example"></a>例
 
-次の例は、[N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html) に関する記事を原案としています。 この例では、`integer_sequence` を使用して `std::array<T,N>` から `std::tuple` を作成する方法と、`integer_sequence` を使用してタプルのメンバーにアクセスする方法を示しています。
+次の例は、[N3658](https://wg21.link/n3658) に関する記事を原案としています。 この例では、`integer_sequence` を使用して `std::array<T,N>` から `std::tuple` を作成する方法と、`integer_sequence` を使用してタプルのメンバーにアクセスする方法を示しています。
 
 `a2t` 関数の `index_sequence` は、`size_t` 整数型に基づく `integer_sequence` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
 
-Apply 関数は、 [std:: tuple](../standard-library/tuple-class.md)を受け取り、 `integer_sequence` `tuple_size`ヘルパークラスを使用してを生成します。 [Tuple_size](../standard-library/tuple-size-class-tuple.md)は参照型では動作しないため、 [std::d ecay_t](../standard-library/decay-class.md)が必要であることに注意してください。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
+apply 関数は[std::tuple](../standard-library/tuple-class.md)を受け取`integer_sequence`り、ヘルパー`tuple_size`クラスを使用して を生成します。 [std::decay_t](../standard-library/decay-class.md)は[、tuple_size](../standard-library/tuple-size-class-tuple.md)参照型では動作しないため、必要です。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
 
 ```cpp
 #include <stddef.h>
@@ -125,4 +125,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[省略記号と可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)
+[省略記号と可変テンプレート](../cpp/ellipses-and-variadic-templates.md)

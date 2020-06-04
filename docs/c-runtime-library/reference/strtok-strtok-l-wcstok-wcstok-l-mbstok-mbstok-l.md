@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -8,6 +8,10 @@ api_name:
 - _mbstok
 - strtok
 - _wcstok_l
+- _o__mbstok
+- _o__mbstok_l
+- _o_strtok
+- _o_wcstok
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957652"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912633"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -109,7 +114,7 @@ unsigned char *_mbstok_l(
 
 *StrToken*で見つかった次のトークンへのポインターを返します。 これらの関数は、トークンが見つからない場合は**NULL**を返します。 各呼び出しは、返されたトークンの後に出現する最初の区切り記号として null 文字を置換することで、 *strToken*を変更します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Strtok**関数は、 *strToken*内の次のトークンを検索します。 *Strdelimit*の文字セットは、現在の呼び出しの*strToken*にあるトークンの有効な区切り記号を指定します。 **wcstok**と **_mbstok**は、 **strtok**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcstok**の引数と戻り値はワイド文字列です。これらの **_mbstok**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
@@ -125,6 +130,8 @@ unsigned char *_mbstok_l(
 > [!NOTE]
 > 各関数は、文字列をトークンに解析する際にスレッド ローカルの静的変数を使用します。 したがって、複数のスレッドが望ましくない影響を受けずに同時にこれらの関数を呼び出すことができます。 ただし、1 つのスレッド内でこれらの関数のいずれかの呼び出しをインターリーブすると、データの破損や正確でない結果が生成される可能性が非常に高くなります。 さまざまな文字列を解析する際、1 つの文字列の解析を完了してから、次の解析を開始します。 また、別の関数が呼び出されているループから、これらの関数の 1 つを呼び出す場合の危険性にも注意してください。 他の関数が最終的にこれらの関数の 1 つを使用した場合、インターリーブされた呼び出しのシーケンスにより、データの破損を招くことがあります。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
@@ -134,13 +141,13 @@ unsigned char *_mbstok_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> または \<wchar.h>|
 |**_mbstok**、 **_mbstok_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -191,7 +198,7 @@ tokens
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

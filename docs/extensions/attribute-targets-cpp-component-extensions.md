@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172621"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>属性のターゲット (C++/CLI および C++/CX)
 
@@ -193,7 +193,7 @@ ms.locfileid: "65516147"
     };
     ```
 
-通常、属性は、それが適用される言語要素の直前に配置します。 ただし、場合によっては、意図された属性のターゲットを決定するには属性の位置では不十分です。 次の例について考えます。
+通常、属性は、それが適用される言語要素の直前に配置します。 ただし、場合によっては、意図された属性のターゲットを決定するには属性の位置では不十分です。 次の例を考えてみましょう。
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ユーザー定義の属性](user-defined-attributes-cpp-component-extensions.md)

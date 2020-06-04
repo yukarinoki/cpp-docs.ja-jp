@@ -1,10 +1,12 @@
 ---
 title: _getche_nolock、_getwche_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getche_nolock
 - _getwche_nolock
-apilocation:
+- _o__getche_nolock
+- _o__getwche_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getche_nolock
 - _gettche_nolock
@@ -34,14 +40,14 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: b5745d85ec1a7338a4625d0c3eaf54da498e2af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 901c823d2e6539d7c07e3521c5d372b7816eb9b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910758"
 ---
-# <a name="getchenolock-getwchenolock"></a>_getche_nolock、_getwche_nolock
+# <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock、_getwche_nolock
 
 エコーありで、スレッドはロックしないで、コンソールから文字を取得します。
 
@@ -59,9 +65,11 @@ wint_t _getwche_nolock( void );
 
 読み取られた文字を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_getche_nolock**と **_getwche_nolock**と同じ **_getche**と **_getwche**する点を除いて、他のスレッドによる干渉から保護されません。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getche_nolock**と **_getwche_nolock**は **_getche**および **_getwche**と同じですが、他のスレッドによる干渉から保護されていない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -71,12 +79,12 @@ wint_t _getwche_nolock( void );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_getche_nolock**|\<conio.h>|
 |**_getwche_nolock**|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227053fbfa4190dc6227ba7096a7c76aef30bb54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181552"
 ---
 # <a name="align-c"></a>align (C++)
 
-Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コントロールの配置を指定子。 詳細については、[配置](../cpp/alignment-cpp-declarations.md)を参照してください。
+Visual Studio 2015 以降では、C++ 11 標準 `alignas` 指定子を使用して、アラインメントを制御します。 詳細については、「[アラインメント](../cpp/alignment-cpp-declarations.md)」を参照してください。
 
 **Microsoft 固有の仕様**
 
@@ -24,23 +24,23 @@ Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コン
 
 ## <a name="syntax"></a>構文
 
-> **__declspec( align(** *#* **) )** *declarator*
+> **__declspec (align (** *#* **))** *宣言子*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 最新のプロセッサ命令を使用するアプリケーションの記述では、いくつかの新しい制約や問題があります。 特に、多くの新しい命令では、データを 16 バイト境界にアラインする必要があります。 また、頻繁に使用されるデータを特定のプロセッサのキャッシュ ラインのサイズにアラインすることで、キャッシュ パフォーマンスが向上します。 たとえば、サイズが 32 バイト未満の構造体を定義する場合、その構造体型のオブジェクトが効率的にキャッシュされるように、その構造体を 32 バイトにアラインできます。
 
-\# アラインメント値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
+\# はアラインメントの値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
 
-型の値を返す方法については`size_t`型のアラインメント要件を参照してください[_ _alignof](../cpp/alignof-operator.md)します。 64 ビット プロセッサを対象とするときにアラインされていないポインターを宣言する方法については、次を参照してください。 [_ _unaligned](../cpp/unaligned.md)します。
+型のアラインメント要件である `size_t` 型の値を返す方法については、「 [__alignof](../cpp/alignof-operator.md)」を参照してください。 64ビットプロセッサを対象とする場合に、整列されていないポインターを宣言する方法については、「 [__unaligned](../cpp/unaligned.md)」を参照してください。
 
-使用することができます`__declspec(align(#))`を定義するとき、**構造体**、**共用体**、または**クラス**変数を宣言する場合またはします。
+`__declspec(align(#))` は、**構造体**、**共用体**、または**クラス**を定義するとき、または変数を宣言するときに使用できます。
 
-コンパイラは、コピーまたはデータ変換の処理中に、データのアラインメント属性の保持を保証したり、保持しようとしません。 たとえば、 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)で宣言された構造体をコピーできます`__declspec(align(#))`任意の場所にします。 通常に注意してくださいアロケーター — たとえば、 [malloc](../c-runtime-library/reference/malloc.md)、C++ [new 演算子](new-operator-cpp.md)、および Win32 アロケーター — は通常、適切にアラインされないのメモリを返す`__declspec(align(#))`構造体や配列の構造体。 コピーまたはデータの変換操作のコピー先が正しく整列されていることを保証するには使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)、または独自のアロケーターを記述します。
+コンパイラは、コピーまたはデータ変換の処理中に、データのアラインメント属性の保持を保証したり、保持しようとしません。 たとえば、 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)は、`__declspec(align(#))` で宣言された構造体を任意の場所にコピーできます。 通常のアロケーター ( [malloc](../c-runtime-library/reference/malloc.md)、 C++ [operator new](new-operator-cpp.md)、Win32 アロケーターなど) では、通常、構造体または構造体の配列に `__declspec(align(#))` 対して十分にアラインメントされていないメモリが返されることに注意してください。 コピーまたはデータ変換操作の転送先が正しく配置されていることを保証するには、 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)を使用するか、独自のアロケーターを記述します。
 
-関数パラメーターのアラインメントは指定できません。 アラインメント属性を持つデータがスタック上で値によって渡されるときに、そのアラインメントは呼び出し規約によって制御されます。 呼び出された関数でデータのアラインメントが重要な場合は、使用する前にパラメーターを正常にアラインされたメモリにコピーします。
+関数パラメーターのアラインメントは指定できません。 アラインメント属性を持つデータがスタック上で値によって渡されるときに、そのアラインメントは呼び出し規則によって制御されます。 呼び出された関数でデータのアラインメントが重要な場合は、使用する前にパラメーターを正常にアラインされたメモリにコピーします。
 
-せず`__declspec(align(#))`コンパイラは一般にターゲット プロセッサと最大で 32 ビットのプロセッサで 4 バイト境界、データのサイズに基づいて、自然な境界と 64 ビット プロセッサ、8 バイト境界上のデータを配置します。 クラスまたは構造体のデータは、自然なアラインメントと現在のパッキング設定 (#pragma `pack` または `/Zp` コンパイラ オプションから) のうちの最小値でクラスまたは構造体内でアラインされます。
+`__declspec(align(#))`を使用しない場合、コンパイラは一般に、ターゲットプロセッサとデータサイズ、32ビットプロセッサで最大4バイトの境界、64ビットプロセッサの8バイト境界に基づいて、自然な境界にデータを配置します。 クラスまたは構造体のデータは、自然なアラインメントと現在のパッキング設定 (#pragma `pack` または `/Zp` コンパイラ オプションから) のうちの最小値でクラスまたは構造体内でアラインされます。
 
 `__declspec(align(#))` を使用する例を次に示します。
 
@@ -50,9 +50,9 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-この型には、32 バイト アラインメント属性が設定されました。 これは、すべての静的および自動インスタンスが 32 バイト境界で開始されることを意味します。 この種類のメンバーとして宣言されている追加の構造体の型がこの型のアラインメント属性を保持する、構造体は、`Str1`ように、少なくとも 32 のアラインメント属性を持つ要素。
+この型には、32 バイト アラインメント属性が設定されました。 これは、すべての静的および自動インスタンスが 32 バイト境界で開始されることを意味します。 この型でメンバーとして宣言された追加の構造体型は、この型のアラインメント属性を保持します。つまり、要素として `Str1` を持つ構造体は、少なくとも32のアラインメント属性を持ちます。
 
-`sizeof(struct Str1)` が 32 と等しいことに注意してください。 このため、Str1 オブジェクトの配列が作成されて、配列のベース アドレスが 32 バイトでアラインされる場合、配列の各メンバーも 32 バイトでアラインされます。 動的メモリでは、ベースが正しくアラインされた配列を作成するには、使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)、または独自のアロケーターを記述します。
+`sizeof(struct Str1)` が 32 と等しいことに注意してください。 このため、Str1 オブジェクトの配列が作成されて、配列のベース アドレスが 32 バイトでアラインされる場合、配列の各メンバーも 32 バイトでアラインされます。 動的メモリにベースが正しくアラインされた配列を作成するには、 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)を使用するか、独自のアロケーターを記述します。
 
 構造体の `sizeof` 値は、最後のメンバーのオフセットにメンバーのサイズを加え、最大サイズのメンバーのアラインメント値の倍数か、構造体全体のアラインメント値のどちらか大きい方に切り上げた値です。
 
@@ -68,19 +68,19 @@ __declspec(align(32)) struct Str1{
 
 `__declspec(align(#))` では、単にアラインメントの制限が多くなることがあります。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [align の例](#vclrfalignexamples)
+- [整列の例](#vclrfalignexamples)
 
-- [__Declspec(align(#)) と新しい型を定義します。](#vclrf_declspecaligntypedef)
+- [__Declspec を使用した新しい型の定義 (align (#))](#vclrf_declspecaligntypedef)
 
-- [スレッド ローカル ストレージにデータの整列](#vclrfthreadlocalstorageallocation)
+- [スレッドローカルストレージでのデータの整列](#vclrfthreadlocalstorageallocation)
 
-- [Align のデータのパッキングでの動作](#vclrfhowalignworkswithdatapacking)
+- [データパッキングとの整列の連携](#vclrfhowalignworkswithdatapacking)
 
-- [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
+- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
 
-## <a name="vclrfalignexamples"></a> align の例
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a>整列の例
 
 次の例では、`__declspec(align(#))` がデータ構造体のサイズとアラインメントにどのような影響を与えるかを示します。 この例では、次の定義を前提とします。
 
@@ -89,7 +89,7 @@ __declspec(align(32)) struct Str1{
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-次の例では、`S1` 構造体は `__declspec(align(32))` を使用して定義されます。 変数定義または他の型宣言で `S1` を使用すると、すべて 32 バイトでアラインされます。 `sizeof(struct S1)` は 32 を返し、`S1` では 4 つの整数の保持に必要な 16 バイトの後に 16 バイトのパディングが挿入されます。 各**int**メンバーには、4 バイトのアラインメントが必要ですが、構造体自体のアラインメントは 32 として宣言されています。 そのため、全体的なアラインメントは 32 になります。
+次の例では、`S1` 構造体は `__declspec(align(32))` を使用して定義されます。 変数定義または他の型宣言で `S1` を使用すると、すべて 32 バイトでアラインされます。 `sizeof(struct S1)` は 32 を返し、`S1` では 4 つの整数の保持に必要な 16 バイトの後に 16 バイトのパディングが挿入されます。 各**int**メンバーには4バイトのアラインメントが必要ですが、構造体自体のアラインメントは32として宣言されています。 そのため、全体的なアラインメントは 32 になります。
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -169,22 +169,22 @@ void fn() {
 }
 ```
 
-メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 場合*arg* > = 8、8 バイトでアラインするが、メモリが返されます。 場合*arg* < 8、返されるメモリのアラインメントは、最初の 2 の累乗より小さい*arg*します。 たとえば、malloc(7) を使用すると、アラインメントは 4 バイトになります。
+メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 *Arg* > が8の場合、返されるメモリは8バイトでアラインされます。 *Arg* < 8 の場合、返されるメモリのアラインメントは、最初の2の累乗で、 *arg*より小さい値になります。 たとえば、malloc(7) を使用すると、アラインメントは 4 バイトになります。
 
-## <a name="vclrf_declspecaligntypedef"></a> __Declspec(align(#)) と新しい型を定義します。
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>__Declspec を使用した新しい型の定義 (align (#))
 
 型のアラインメントを定義できます。
 
-たとえば、定義、`struct`のアラインメント値このように。
+たとえば、次のようにアラインメント値を指定して `struct` を定義できます。
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-ここで、`aType`と`bType`は同じサイズ (8 バイト) が型の変数`bType`32 バイトでアラインされます。
+現在、`aType` と `bType` は同じサイズ (8 バイト) ですが、`bType` 型の変数は32バイトでアラインされています。
 
-## <a name="vclrfthreadlocalstorageallocation"></a> スレッド ローカル ストレージにデータの整列
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>スレッドローカルストレージでのデータの整列
 
 `__declspec(thread)` 属性を使用して作成され、イメージ内の TLS セクションに配置された静的なスレッド ローカル ストレージ (TLS: Thread-Local Storage) は、通常の静的データとまったく同じようにアラインメントされます。 TLS データを作成するために、オペレーティング システムは、TLS セクションのサイズのメモリを割り当て、TLS セクションのアラインメント属性に従います。
 
@@ -207,9 +207,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-## <a name="vclrfhowalignworkswithdatapacking"></a> Align のデータのパッキングでの動作
+## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>データパッキングとの整列の連携
 
-`/Zp`コンパイラ オプションおよび`pack`プラグマ構造体と共用体のメンバーのデータ パッキングの効果があります。この例ではどのように`/Zp`と`__declspec(align(#))`連携。
+`/Zp` コンパイラオプションと `pack` プラグマは、構造体と共用体のメンバーのデータをパッキングする効果を持ちます。この例では、`/Zp` と `__declspec(align(#))` を連携させる方法を示します。
 
 ```cpp
 struct S {
@@ -240,7 +240,7 @@ struct S {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 規則の概要](../build/overview-of-arm-abi-conventions.md)<br/>

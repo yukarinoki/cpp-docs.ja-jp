@@ -2,12 +2,12 @@
 title: 浮動小数点の移行に関する問題
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215021"
 ---
 # <a name="floating-point-migration-issues"></a>浮動小数点の移行に関する問題
 
@@ -29,8 +29,8 @@ Visual Studio のさまざまな浮動小数点モードでコード生成が修
 
 ほとんどの場合、最新のコンパイラとライブラリの浮動小数点の変更により、動作がより早くなったか、またはより正確になりました。あるいはこの両方を満たすようになりました。 SSE2 指示が x87 指示に取って代わると、プロセッサ パワーのパフォーマンスが改善されることがあります。 ただし、以前のコンパイラの浮動小数点動作を正確に複製しなければならないコードがある場合、Visual Studio のネイティブ マルチターゲット機能を利用し、影響を受けるプロジェクトを以前のツールセットで構築することを検討してください。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)
+[Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)

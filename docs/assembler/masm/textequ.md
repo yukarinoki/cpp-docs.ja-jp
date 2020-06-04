@@ -1,26 +1,27 @@
 ---
 title: TEXTEQU
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - TEXTEQU
 helpviewer_keywords:
 - TEXTEQU directive
 ms.assetid: 7c01df77-10d6-4555-8fe0-c5f7762df86d
-ms.openlocfilehash: 34d408bbe4234e004df50905e2cf881616af719a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cac09d500ac7f8478891eccf7daa61dea2159578
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210080"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319139"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-割り当てます*テキスト アイテム*に*名前*します。 *テキスト アイテム*前に定数リテラル文字列を指定できます、 `%`、またはマクロの関数によって返される文字列。
+*名前*に*textitem*を割り当てます。 *Textitem*には、リテラル文字列、`%`の前にある定数、またはマクロ関数によって返される文字列を指定できます。
 
 ## <a name="syntax"></a>構文
 
-> 名前 TEXTEQU [テキスト アイテム]
+> *名前* **TEXTEQU** ⟦*textitem*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

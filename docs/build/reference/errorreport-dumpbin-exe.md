@@ -1,32 +1,34 @@
 ---
 title: /ERRORREPORT (dumpbin.exe)
-ms.date: 11/04/2016
+description: Microsoft DUMPBIN ユーティリティ/ERRORREPORT コマンドラインオプションのリファレンスです。
+ms.date: 02/09/2020
 f1_keywords:
-- /ERRORREPORT
+- /ERRORREPORT_dumpbin
 helpviewer_keywords:
 - -ERRORREPORT dumpbin option
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 02c8ee07264c21669c3adad2cf9bd8f57a13fc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f701c2e28dcf82194589877709bf6959de4bcbfc
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293004"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439935"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> /ERRORREPORT オプションは非推奨とされます。 Windows Vista 以降では、エラー報告は[Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="syntax"></a>構文
 
-使用することができます dumpbin.exe では、実行時に失敗した場合、 **/ERRORREPORT**これらの内部エラーに関する情報を Microsoft に送信します。
+> **/Errorreport**\[**NONE** \| **PROMPT** \| **QUEUE** \| **SEND** ]
 
-詳細については **/ERRORREPORT**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)します。
+## <a name="remarks"></a>コメント
 
-## <a name="see-also"></a>関連項目
+**/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 レポートが Windows エラー報告によって有効になっている場合、DUMPBIN によって内部エラーのレポートが Microsoft に自動的に送信されます。 Windows エラー報告で無効になっている場合、レポートは送信されません。
+
+## <a name="see-also"></a>参照
 
 [DUMPBIN オプション](dumpbin-options.md)

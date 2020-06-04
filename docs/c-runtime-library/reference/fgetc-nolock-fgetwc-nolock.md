@@ -1,10 +1,12 @@
 ---
 title: _fgetc_nolock、_fgetwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+- _o__fgetc_nolock
+- _o__fgetwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,14 +41,14 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2744dc17c79fc1e3e568dd3b7a62602b75603be0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333970"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912768"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock、_fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock、_fgetwc_nolock
 
 スレッドをロックせずにストリームから文字を読み取ります。
 
@@ -59,16 +65,18 @@ wint_t _fgetwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 「[fgetc、fgetwc](fgetc-fgetwc.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_fgetc_nolock**と **_fgetwc_nolock**と同じ**fgetc**と**fgetwc**をそれぞれで干渉から保護されない点を除いて、他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_fgetc_nolock**と **_fgetwc_nolock**はそれぞれ、他のスレッドによる干渉から保護されない点を除いて、 **fgetc**および**fgetwc**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -83,7 +91,7 @@ wint_t _fgetwc_nolock(
 |**_fgetc_nolock**|\<stdio.h>|
 |**_fgetwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -121,7 +129,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>入力: crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>入力: crt_fgetc_nolock.txt
 
 ```Input
 Line one.

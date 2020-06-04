@@ -2,16 +2,16 @@
 layout: HubPage
 title: Visual C++ ドキュメント
 description: C++ を使って、プラットフォームやデバイス用のアプリケーション、サービス、ツールを開発する方法について説明します。
-author: mikeblome
-ms.author: mblome
 ms.topic: hub-page
-ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177505"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446107"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">

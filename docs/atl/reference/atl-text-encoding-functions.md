@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: f5587e6b8bdafaef328c27407f04febbfe4395cc
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375895"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168829"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキストエンコーディング関数
 
@@ -55,7 +55,7 @@ ms.locfileid: "68375895"
 |[QEncodeGetRequiredLength](#qencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 |[QPDecode](#qpdecode)|前回の[qの](#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。|
 |[QPDecodeGetRequiredLength](#qpdecodegetrequiredlength)|quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
-|[Qのコード](#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
+|[QPEncode](#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
 |[QPEncodeGetRequiredLength](#qpencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 |[UUDecode](#uudecode)|[Uuencode](#uuencode)の前回の呼び出しによって、uuencode されたデータの文字列をデコードします。|
 |[UUDecodeGetRequiredLength](#uudecodegetrequiredlength)|指定した長さの uuencode された文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
@@ -66,11 +66,11 @@ ms.locfileid: "68375895"
 
 **ヘッダー:** atlenc
 
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a><a name="atlgethexvalue"></a>AtlGetHexValue
 
 16 進数の数値を取得します。
 
-```
+```cpp
 inline char AtlGetHexValue(char chIn) throw();
 ```
 
@@ -83,11 +83,11 @@ inline char AtlGetHexValue(char chIn) throw();
 
 16進数字として解釈される入力文字の数値。 たとえば、' 0 ' の入力は値0を返し、' A ' の入力は値10を返します。 入力文字が16進数字でない場合、この関数は-1 を返します。
 
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a><a name="atlgetversion"></a>AtlGetVersion
 
 使用している ATL ライブラリのバージョンを取得するには、この関数を呼び出します。
 
-```
+```cpp
 ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
@@ -110,11 +110,11 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 **ヘッダー:** atlbase. h
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a><a name="atlhexdecode"></a>AtlHexDecode
 
 [AtlHexEncode](#atlhexencode)の以前の呼び出しによって、16進数のテキストとしてエンコードされたデータの文字列をデコードします。
 
-```
+```cpp
 inline BOOL AtlHexDecode(
    LPCSTR pSrcData,
    int nSrcLen,
@@ -134,17 +134,17 @@ inline BOOL AtlHexDecode(
 デコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-Pdest の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
+Pdest の長さ (バイト単位) を格納し*pbDest*ている変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a><a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
 
 指定した長さの 16 進エンコードされた文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```
+```cpp
 inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -157,11 +157,11 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 
 デコードされた文字列の*nSrcLen*文字を保持できるバッファーに必要なバイト数。
 
-## <a name="atlhexencode"></a> AtlHexEncode
+## <a name="atlhexencode"></a><a name="atlhexencode"></a>AtlHexEncode
 
 一部のデータを 16 進テキストの文字列としてエンコードします。
 
-```
+```cpp
 inline BOOL AtlHexEncode(
    const BYTE * pbSrcData,
    int nSrcLen,
@@ -187,15 +187,15 @@ int * pnDestLen) throw();
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソースデータの各バイトは、2つの16進文字としてエンコードされます。
 
-## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a><a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```
+```cpp
 inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -208,11 +208,11 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-## <a name="atlhexvalue"></a> AtlHexValue
+## <a name="atlhexvalue"></a><a name="atlhexvalue"></a>AtlHexValue
 
 16 進数の数値を取得します。
 
-```
+```cpp
 inline short AtlHexValue(char chIn) throw();
 ```
 
@@ -225,11 +225,11 @@ inline short AtlHexValue(char chIn) throw();
 
 16進数字として解釈される入力文字の数値。 たとえば、' 0 ' の入力は値0を返し、' A ' の入力は値10を返します。 入力文字が16進数字でない場合、この関数は-1 を返します。
 
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a><a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
 
 Unicode 文字列を UTF-8 に変換します。
 
-```
+```cpp
 ATL_NOINLINE inline int AtlUnicodeToUTF8(
    LPCWSTR wszSrc,
    int nSrc,
@@ -255,15 +255,15 @@ Unicode 文字列の長さ (文字数)。
 
 変換された文字列の文字数を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 変換された文字列に必要なバッファーのサイズを確認するには、この関数を呼び出して、 *szdest*と*ndest*に0を渡します。
 
-## <a name="bencode"></a>BEncode
+## <a name="bencode"></a><a name="bencode"></a>BEncode
 
 "B" エンコーディングを使用して一部のデータを変換します。
 
-```
+```cpp
 inline BOOL BEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -293,15 +293,15 @@ inline BOOL BEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 "B" エンコード方式については、RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)() を参照してください。
 
-## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
+## <a name="bencodegetrequiredlength"></a><a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```
+```cpp
 inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
@@ -317,15 +317,15 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 "B" エンコード方式については、RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)() を参照してください。
 
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a><a name="escapexml"></a>EscapeXML
 
 XML での使用には安全でない文字を安全な文字に変換します。
 
-```
+```cpp
 inline int EscapeXML(
    const wchar_t * szIn,
    int nSrcLen,
@@ -351,18 +351,18 @@ inline int EscapeXML(
 *dwFlags*<br/>
 変換の実行方法を記述する ATL_ESC フラグ。
 
-- ATL_ESC_FLAG_NONE の既定の動作。 引用符とアポストロフィは変換されません。
+- 既定の動作を ATL_ESC_FLAG_NONE します。 引用符とアポストロフィは変換されません。
 - ATL_ESC_FLAG_ATTR 引用符とアポストロフィは、それぞれと`&quot;` `&apos;`に変換されます。
 
 ### <a name="return-value"></a>戻り値
 
 変換された文字列の長さ (文字数)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 次の表に、この関数によって実行される可能性のある変換を示します。
 
-|Source|[Destination]|
+|source|Destination|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -370,11 +370,11 @@ inline int EscapeXML(
 |'|&apos;|
 |"|&quot;|
 
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a><a name="getextendedchars"></a>GetExtendedChars
 
 文字列に含まれる拡張文字の数を取得します。
 
-```
+```cpp
 inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
@@ -390,28 +390,28 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 
 [IsExtendedChar](#isextendedchar)によって決定される文字列内で見つかった拡張文字数を返します。
 
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a><a name="isextendedchar"></a>IsExtendedChar
 
 この関数を呼び出して、特定の文字が拡張文字 (32 未満、126より大きい、タブ、ラインフィード、またはキャリッジリターンではない) であるかどうかを確認します。
 
-```
+```cpp
 inline int IsExtendedChar(char ch) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*<br/>
+*ハーフ*<br/>
 テストする文字
 
 ### <a name="return-value"></a>戻り値
 
 文字が拡張されている場合は TRUE、それ以外の場合は FALSE。
 
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a><a name="qencode"></a>QEncode
 
 "Q" エンコーディングを使用して一部のデータを変換します。
 
-```
+```cpp
 inline BOOL QEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -445,15 +445,15 @@ inline BOOL QEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 "Q" エンコード方式については、RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)() を参照してください。
 
-## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
+## <a name="qencodegetrequiredlength"></a><a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```
+```cpp
 inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
@@ -469,15 +469,15 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 "Q" エンコード方式については、RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)() を参照してください。
 
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a><a name="qpdecode"></a>QPDecode
 
 前回の[qの](#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。
 
-```
+```cpp
 inline BOOL QPDecode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -507,15 +507,15 @@ inline BOOL QPDecode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式につい[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)ては、RFC 2045 () を参照してください。
 
-## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a><a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
 quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```
+```cpp
 inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -528,15 +528,15 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 
 デコードされた文字列の*nSrcLen*文字を保持できるバッファーに必要なバイト数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式につい[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)ては、RFC 2045 () を参照してください。
 
-## <a name="qpencode"></a>Qのコード
+## <a name="qpencode"></a><a name="qpencode"></a>Qのコード
 
 一部のデータを quoted-printable 形式にエンコードします。
 
-```
+```cpp
 inline BOOL QPEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -562,7 +562,7 @@ inline BOOL QPEncode(
 *dwFlags*<br/>
 変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
 
-- ATLSMTP_QPENCODE_DOT 行の先頭にピリオドがある場合は、エンコードされただけでなく出力にも追加されます。
+- ATLSMTP_QPENCODE_DOT、行の先頭にピリオドがある場合は、エンコードされただけでなく出力にも追加されます。
 
 - ATLSMTP_QPENCODE_TRAILING_SOFT は`=\r\n` 、エンコードされた文字列にを追加します。
 
@@ -572,15 +572,15 @@ inline BOOL QPEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式につい[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)ては、RFC 2045 () を参照してください。
 
-## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a><a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```
+```cpp
 inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
@@ -593,15 +593,15 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式につい[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)ては、RFC 2045 () を参照してください。
 
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a><a name="uudecode"></a>UUDecode
 
 [Uuencode](#uuencode)の前回の呼び出しによって、uuencode されたデータの文字列をデコードします。
 
-```
+```cpp
 inline BOOL UUDecode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -621,21 +621,21 @@ inline BOOL UUDecode(
 デコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-Pdest の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
+Pdest の長さ (バイト単位) を格納し*pbDest*ている変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a><a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
 
 指定した長さの uuencode された文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```
+```cpp
 inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
@@ -648,15 +648,15 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 
 デコードされた文字列の*nSrcLen*文字を保持できるバッファーに必要なバイト数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a><a name="uuencode"></a>UUEncode
 
 データを uuencode します。
 
-```
+```cpp
 inline BOOL UUEncode(
    const BYTE* pbSrcData,
    int nSrcLen,
@@ -681,12 +681,12 @@ inline BOOL UUEncode(
 *Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 *lpszFile*<br/>
-ATLSMTP_UUENCODE_HEADER が*dwFlags*で指定されている場合に、ヘッダーに追加されるファイル。
+ATLSMTP_UUENCODE_HEADER が*dwFlags*に指定されている場合に、ヘッダーに追加されるファイル。
 
 *dwFlags*<br/>
 この関数の動作を制御するフラグ。
 
-- ATLSMTP_UUENCODE_HEADE ヘッダーはエンコードされます。
+- ATLSMTP_UUENCODE_HEADE ヘッダーがエンコードされます。
 
 - ATLSMTP_UUENCODE_END END はエンコードされます。
 
@@ -696,15 +696,15 @@ ATLSMTP_UUENCODE_HEADER が*dwFlags*で指定されている場合に、ヘッ�
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a><a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```
+```cpp
 inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
@@ -717,7 +717,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 

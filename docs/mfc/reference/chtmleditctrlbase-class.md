@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrlBase クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrlBase
@@ -220,14 +220,14 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: a39d61fc6b62b3739d45d4765f839b6d73a5c9d3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506094"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752341"
 ---
-# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
+# <a name="chtmleditctrlbase-class"></a>クラス
 
 HTML 編集コンポーネントを表します。
 
@@ -243,124 +243,124 @@ template <class T> class CHtmlEditCtrlBase
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|デザインモードで特定のタグに対して表示する画像を指定する、グリフテーブルにエントリを追加します。|
-|[CHtmlEditCtrlBase:: Bold](#bold)|選択したテキストの太字の状態を切り替えます。|
-|[CHtmlEditCtrlBase:: Button](#button)|現在選択されているボタンコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: CheckBox](#checkbox)|現在の選択範囲のチェックボックスコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: ClearSelection](#clearselection)|現在の選択範囲をクリアします。|
-|[CHtmlEditCtrlBase:: Copy](#copy)|現在の選択項目をクリップボードにコピーします。|
-|[CHtmlEditCtrlBase:: Cut](#cut)|現在の選択範囲をクリップボードにコピーしてから削除します。|
-|[CHtmlEditCtrlBase::D e)](#delete)|現在の選択範囲を削除します。|
-|[CHtmlEditCtrlBase::D ropDownBox](#dropdownbox)|現在の選択範囲のドロップダウン選択コントロールを上書きします。|
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|グリフテーブルからすべてのエントリを削除します。これにより、デザインモードのタグに表示されるすべてのイメージが非表示になります。|
-|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|コマンドを実行します。|
-|[CHtmlEditCtrlBase:: Font](#font)|現在選択されているテキストの色、フォント、およびフォントサイズをユーザーが変更できるようにするための [フォント] ダイアログボックスを開きます。|
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|要素の position プロパティが "absolute" であるかどうかを返します。|
-|[CHtmlEditCtrlBase:: GetBackColor](#getbackcolor)|現在の選択範囲の背景色を取得します。|
-|[CHtmlEditCtrlBase:: GetBlockFormat](#getblockformat)|現在のブロック書式タグを取得します。|
-|[CHtmlEditCtrlBase:: GetBlockFormatNames](#getblockformatnames)|使用可能なブロック形式タグに対応する文字列を取得します。|
-|[CHtmlEditCtrlBase:: GetBookMark](#getbookmark)|ブックマークアンカーの名前を取得します。|
-|[CHtmlEditCtrlBase:: GetDocument](#getdocument)|ドキュメントオブジェクトを取得します。|
-|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|現在のドキュメントの HTML を取得します。|
-|[CHtmlEditCtrlBase:: GetDocumentTitle](#getdocumenttitle)|ドキュメントのタイトルを取得します。|
-|[CHtmlEditCtrlBase:: GetEvent](#getevent)|最新のイベントに関連する情報を格納しているイベントオブジェクトへのインターフェイスポインターを取得します。|
-|[CHtmlEditCtrlBase:: GetEventSrcElement](#geteventsrcelement)|イベントを発生させたオブジェクトを取得します。|
-|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|現在の選択範囲のフォント名を取得します。|
-|[CHtmlEditCtrlBase:: GetFontSize](#getfontsize)|現在の選択範囲のフォントサイズを取得します。|
-|[CHtmlEditCtrlBase:: GetForeColor](#getforecolor)|現在の選択範囲の前景 (テキスト) の色を取得します。|
-|[CHtmlEditCtrlBase:: Getフレームゾーン](#getframezone)|Web ブラウザーの現在のページのセキュリティゾーンを返します。|
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|HTML ドキュメントが変更されたかどうかを示します。|
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|プロパティを`styleFloat`持つすべての要素に対してグリフを表示するかどうかを示す値を返します。|
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|WebBrowser がドキュメント内のすべてのタグの位置を表示するグリフを表示するかどうかを示す値を返します。|
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|WebBrowser が区分タグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase:: GetShowBRTags](#getshowbrtags)|WebBrowser が br タグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase:: Getshowコメントタグ](#getshowcommenttags)|WebBrowser がコメントタグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase:: Getshow誤 Ctags](#getshowmisctags)|WebBrowser が Microsoft Internet Explorer 4.0 に表示されているすべてのタグを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase:: GetShowScriptTags](#getshowscripttags)|WebBrowser がすべてのスクリプトタグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|WebBrowser がすべてのスタイルタグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|WebBrowser が不明なすべてのタグのグリフを表示するかどうかを取得します。|
-|[CHtmlEditCtrlBase:: 水平線](#horizontalline)|現在の選択範囲の水平線を上書きします。|
-|[CHtmlEditCtrlBase:: HyperLink](#hyperlink)|現在の選択範囲にハイパーリンクを挿入します。|
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Microsoft Internet Explorer 5 と互換性のある貼り付け操作を実行します。|
-|[CHtmlEditCtrlBase:: Iframe](#iframe)|現在の選択範囲のインラインフレームを上書きします。|
-|[CHtmlEditCtrlBase:: Image](#image)|現在の選択範囲のイメージを上書きします。|
-|[CHtmlEditCtrlBase:: Indent](#indent)|選択したテキストのインデントを1インデントインクリメントして増やします。|
-|[CHtmlEditCtrlBase:: フィールドセット](#insfieldset)|現在の選択範囲のボックスを上書きします。|
-|[CHtmlEditCtrlBase:: InsInputButton](#insinputbutton)|現在選択されているボタンコントロールを上書きします。|
-|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|現在の選択範囲に非表示のコントロールを挿入します。|
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|現在選択されているイメージコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: InsInputPassword](#insinputpassword)|現在選択されているパスワードコントロールを上書きします。|
-|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|現在の選択範囲のリセットコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: InsInputSubmit](#insinputsubmit)|現在の選択範囲の送信コントロールを上書きします。|
-|[CHtmlEditCtrlBase:: Insinputu Ad](#insinputupload)|現在の選択範囲のファイルアップロードコントロールを上書きします。|
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|要素が静的に配置されているかどうかを判断します。|
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|要素が絶対に配置されているかどうかを判断します。|
-|[CHtmlEditCtrlBase::Italic](#italic)|現在の選択範囲を斜体と非斜体の間で切り替えます。|
-|[CHtmlEditCtrlBase:: ジャストの場合](#justifycenter)|現在の選択範囲が配置されている書式指定ブロックを中央揃えにします。|
-|[CHtmlEditCtrlBase:: ジャスト Ifyleft](#justifyleft)|現在の選択範囲が配置されている書式指定ブロックを左揃えにします。|
-|[CHtmlEditCtrlBase:: ジャスト Ifyright](#justifyright)|現在の選択範囲が配置されている書式指定ブロックを右揃えにします。|
-|[CHtmlEditCtrlBase:: ListBox](#listbox)|現在選択されているリストボックス選択コントロールを上書きします。|
-|[CHtmlEditCtrlBase:: Marquee](#marquee)|現在の選択範囲の空のマーキーを上書きします。|
-|[CHtmlEditCtrlBase:: 「Newdocument」](#newdocument)|新しいドキュメントを作成します。|
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|順序付きリストと通常のフォーマットブロックの間で現在選択されている項目を切り替えます。|
-|[CHtmlEditCtrlBase:: インデント解除](#outdent)|現在の選択範囲が配置されている書式指定ブロックのインデントを1ずつ減らします。|
-|[CHtmlEditCtrlBase::P aragraph](#paragraph)|現在の選択範囲の改行を上書きします。|
-|[CHtmlEditCtrlBase::P aste](#paste)|現在の選択範囲のクリップボードの内容を上書きします。|
-|[CHtmlEditCtrlBase::P rintDocument](#printdocument)|現在のドキュメントを印刷します。|
-|[CHtmlEditCtrlBase::P rintPreview](#printpreview)|既定の印刷プレビューテンプレートまたはカスタムテンプレートを使用して、現在のドキュメントの [印刷プレビュー] ウィンドウを開きます。|
-|[CHtmlEditCtrlBase:: QueryStatus](#querystatus)|コマンドの状態を照会するには、このメソッドを呼び出します。|
-|[CHtmlEditCtrlBase:: RadioButton](#radiobutton)|現在の選択範囲のラジオコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: RefreshDocument](#refreshdocument)|現在のドキュメントを更新します。|
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|現在の選択範囲から書式設定タグを削除します。|
-|[CHtmlEditCtrlBase:: SaveAs](#saveas)|現在の Web ページをファイルに保存します。|
-|[CHtmlEditCtrlBase:: SelectAll](#selectall)|ドキュメント全体を選択します。|
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|ドラッグして、絶対に配置された要素を移動できるようにします。|
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|要素の position プロパティを "absolute" または "static" に設定します。|
-|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|アトミック選択モードを設定します。|
-|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|自動 URL 検出のオンとオフを切り替えます。|
-|[CHtmlEditCtrlBase:: SetBackColor](#setbackcolor)|現在の選択範囲の背景色を設定します。|
-|[CHtmlEditCtrlBase:: SetBlockFormat](#setblockformat)|現在のブロック書式タグを設定します。|
-|[CHtmlEditCtrlBase:: SetBookMark](#setbookmark)|現在の選択またはカーソル位置にブックマークアンカーを作成します。|
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|エディターがサポートする CSS レベル (CSS1 または css) を選択します (存在する場合)。|
-|[CHtmlEditCtrlBase:: Setdefault Sesettings](#setdefaultcomposesettings)|既定の作成設定を設定するには、このメソッドを呼び出します。|
-|[CHtmlEditCtrlBase:: SetDesignMode](#setdesignmode)|デザインモードを設定します。|
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|ハッチ境界線を無効にし、エディットフォーカスを持つ要素の周囲をハンドルします。|
-|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|現在のドキュメントの HTML を設定します。|
-|[CHtmlEditCtrlBase:: SetFontFace](#setfontface)|現在の選択範囲のフォントを設定します。|
-|[CHtmlEditCtrlBase:: SetFontSize](#setfontsize)|現在の選択範囲のフォントサイズを設定します。|
-|[CHtmlEditCtrlBase:: SetForeColor](#setforecolor)|現在の選択範囲の前景 (テキスト) の色を設定します。|
-|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Microsoft Internet Explorer 5 と互換性があるように貼り付け操作を設定します。|
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|WebBrowser が、サイズ変更操作または移動操作中に要素の外観を継続的に更新するようにします。|
-|[CHtmlEditCtrlBase:: SetMultiSelect](#setmultiselect)|複数選択を有効にします。|
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|コマンド WebBrowser がマウスポインターを変更しないようにします。|
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|挿入と上書きの間のテキスト入力モードを切り替えます。|
-|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|デザインモードで非表示の要素を非表示にします。|
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|プロパティを`styleFloat`持つすべての要素のグリフを表示します。|
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|ドキュメント内のすべてのタグの場所を表示するグリフを表示します。|
-|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|すべての区分タグのグリフを表示します。|
-|[CHtmlEditCtrlBase:: SetShowBRTags](#setshowbrtags)|すべての br タグのグリフを表示します。|
-|[CHtmlEditCtrlBase:: Setshowコメントタグ](#setshowcommenttags)|すべてのコメントタグのグリフを表示します。|
-|[CHtmlEditCtrlBase:: Setshow誤 Ctags](#setshowmisctags)|Microsoft Internet Explorer 4.0 に表示されているすべてのタグを表示します。|
-|[CHtmlEditCtrlBase:: SetShowScriptTags](#setshowscripttags)|すべてのスクリプトタグのグリフを表示します。|
-|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|すべてのスタイルタグのグリフを表示します。|
-|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|すべての不明なタグのグリフを表示します。|
-|[CHtmlEditCtrlBase:: TextArea](#textarea)|現在の選択範囲の複数行テキスト入力コントロールを上書きします。|
-|[CHtmlEditCtrlBase:: TextBox](#textbox)|現在選択されているテキストコントロールを上書きします。|
-|[CHtmlEditCtrlBase:: UnBookmark](#unbookmark)|現在の選択範囲からブックマークを削除します。|
-|[CHtmlEditCtrlBase:: アンダーライン](#underline)|現在の選択範囲を下線付きと下線なしの間で切り替えます。|
-|[CHtmlEditCtrlBase:: Unlink](#unlink)|現在の選択範囲からハイパーリンクを削除します。|
-|[CHtmlEditCtrlBase:: UnorderList](#unorderlist)|順序付きリストと通常のフォーマットブロックの間で現在選択されている項目を切り替えます。|
+|[次の項目を使用します。](#addtoglyphtable)|デザイン モードで特定のタグに表示するイメージを指定するエントリを glyph テーブルに追加します。|
+|[次の項目を使用します。](#bold)|選択したテキストの太字の状態を切り替えます。|
+|[ボタン](#button)|現在の選択項目のボタン コントロールを上書きします。|
+|[チェックボックス](#checkbox)|現在の選択項目のチェック ボックス コントロールを上書きします。|
+|[次の項目を選択します。](#clearselection)|現在の選択を解除します。|
+|[次の項目を使用します。](#copy)|現在選択している部分をクリップボードにコピーします。|
+|[カット](#cut)|現在の選択範囲をクリップボードにコピーし、削除します。|
+|[:Dエレテ](#delete)|現在の選択範囲を削除します。|
+|[:Dロップダウンボックス](#dropdownbox)|現在の選択範囲のドロップダウン選択コントロールを上書きします。|
+|[次の文字列を使用します。](#emptyglyphtable)|デザイン モードでタグに表示されているすべてのイメージを非表示にするグリフ テーブルからすべてのエントリを削除します。|
+|[次のコマンド](#execcommand)|コマンドを実行します。|
+|[フォント](#font)|フォント ダイアログ ボックスを開き、現在の選択項目のテキストの色、フォント、およびフォント サイズを変更できるようにします。|
+|[を取得します。](#getabsoluteposition)|要素の位置プロパティが "絶対" かどうかを返します。|
+|[次の項目を取得します。](#getbackcolor)|現在の選択範囲の背景色を取得します。|
+|[をクリックします。](#getblockformat)|現在のブロック書式タグを取得します。|
+|[を使用します。](#getblockformatnames)|使用可能なブロック形式タグに対応する文字列を取得します。|
+|[をクリックします。](#getbookmark)|ブックマーク アンカーの名前を取得します。|
+|[次の項目を取得します。](#getdocument)|ドキュメント オブジェクトを取得します。|
+|[を使用します。](#getdocumenthtml)|現在のドキュメントの HTML を取得します。|
+|[をクリックします。](#getdocumenttitle)|ドキュメントのタイトルを取得します。|
+|[次のイベントを取得します。](#getevent)|最新のイベントに関連する情報を含むイベント オブジェクトへのインターフェイス ポインターを取得します。|
+|[要素を取得します。](#geteventsrcelement)|イベントを発生したオブジェクトを取得します。|
+|[次の項目を使用します。](#getfontface)|現在の選択範囲のフォント名を取得します。|
+|[を使用します。](#getfontsize)|現在の選択範囲のフォント サイズを取得します。|
+|[次の色を取得します。](#getforecolor)|現在の選択範囲の前景色 (テキスト) を取得します。|
+|[次の項目を使用します。](#getframezone)|Web ブラウザーで現在のページのセキュリティ ゾーンを返します。|
+|[をクリックします。](#getisdirty)|HTML ドキュメントが変更されたかどうかを示します。|
+|[サイトタグを取得します。](#getshowalignedsitetags)|`styleFloat`プロパティを持つすべての要素に対してグリフが表示されるかどうかを返します。|
+|[次のタグを表示します。](#getshowalltags)|文書内のすべてのタグの位置を示すグリフを表示するかどうかを返します。|
+|[次の要素を表示します。](#getshowareatags)|WebBrowser がエリア タグのグリフを表示するかどうかを取得します。|
+|[次の項目を使用します。](#getshowbrtags)|webBrowser が br タグのグリフを表示するかどうかを取得します。|
+|[タグを表示します。](#getshowcommenttags)|WebBrowser がコメント タグのグリフを表示するかどうかを取得します。|
+|[タグ::ゲットショーミズックタグ](#getshowmisctags)|WebBrowser が、インターネット エクスプローラ 4.0 に表示されているすべてのタグを表示するかどうかを取得します。|
+|[次の要素を使用します。](#getshowscripttags)|WebBrowser がすべてのスクリプト タグのグリフを表示するかどうかを取得します。|
+|[タグを表示します。](#getshowstyletags)|WebBrowser がすべてのスタイル タグのグリフを表示するかどうかを取得します。|
+|[タグを表示します。](#getshowunknowntags)|WebBrowser が不明なすべてのタグのグリフを表示するかどうかを取得します。|
+|[をクリックします。](#horizontalline)|現在の選択範囲の水平線を上書きします。|
+|[次の手順を実行します。](#hyperlink)|現在の選択範囲にハイパーリンクを挿入します。|
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|インターネット エクスプローラ 5 と互換性のある貼り付け操作を実行します。|
+|[次の項目を使用します。](#iframe)|現在の選択範囲のインライン フレームを上書きします。|
+|[イメージ](#image)|現在の選択範囲のイメージを上書きします。|
+|[インデント](#indent)|選択したテキストのインデントを 1 インデントのインクリメント単位で増やします。|
+|[次の項目セット](#insfieldset)|現在の選択範囲のボックスを上書きします。|
+|[次のコマンドを使用します。](#insinputbutton)|現在の選択項目のボタン コントロールを上書きします。|
+|[をクリックします。](#insinputhidden)|現在の選択範囲に非表示のコントロールを挿入します。|
+|[次の値を入力します。](#insinputimage)|現在の選択範囲のイメージ コントロールを上書きします。|
+|[を入力します。](#insinputpassword)|現在の選択項目のパスワード コントロールを上書きします。|
+|[をクリックします。](#insinputreset)|現在の選択項目のリセット コントロールを上書きします。|
+|[次のコマンドを使用します。](#insinputsubmit)|現在の選択項目の送信コントロールを上書きします。|
+|[をクリックします。](#insinputupload)|現在の選択項目のファイル アップロード コントロールを上書きします。|
+|[をクリックします。](#is1delement)|要素が静的に配置されているかどうかを判断します。|
+|[をクリックします。](#is2delement)|要素が絶対位置にあるかどうかを判断します。|
+|[イタリック](#italic)|現在の選択を斜体と非斜体の間で切り替えます。|
+|[ソースセンター](#justifycenter)|現在の選択範囲が配置されている書式ブロックを中央揃えします。|
+|[左に位置合わせ](#justifyleft)|現在の選択範囲が配置されている書式ブロックを左揃えで指定します。|
+|[次の点に基づいて編集します。](#justifyright)|現在の選択範囲が配置されている書式ブロックを右揃えで指定します。|
+|[リストボックス](#listbox)|現在の選択項目のリスト ボックス選択コントロールを上書きします。|
+|[マーキー](#marquee)|現在の選択範囲の空の選択範囲を上書きします。|
+|[ドキュメントの新規作成](#newdocument)|新しいドキュメントを作成します。|
+|[注文リスト](#orderlist)|現在の選択を、順序付きリストと標準書式ブロックの間で切り替えます。|
+|[を押し付け、次の文字列を選択します。](#outdent)|現在の選択範囲が配置されている書式ブロックのインデントを 1 ずつ減らします。|
+|[:Pアラグラフ](#paragraph)|現在の選択範囲の改行を上書きします。|
+|[次の行:P](#paste)|現在の選択範囲のクリップボードの内容を上書きします。|
+|[:Pリントドキュメント](#printdocument)|現在のドキュメントを印刷します。|
+|[:Pリントプレビュー](#printpreview)|既定の印刷プレビュー テンプレートまたはカスタム テンプレートを使用して、現在のドキュメントの [印刷プレビュー] ウィンドウを開きます。|
+|[クエリステータス](#querystatus)|コマンドの状態を照会します。|
+|[ラジオボタン](#radiobutton)|現在の選択項目の無線コントロールを上書きします。|
+|[ドキュメントの更新](#refreshdocument)|現在のドキュメントを更新します。|
+|[フォーマットの削除](#removeformat)|現在の選択範囲から書式タグを削除します。|
+|[次の項目を使用します。](#saveas)|現在の Web ページをファイルに保存します。|
+|[すべての項目を選択します。](#selectall)|ドキュメント全体を選択します。|
+|[を設定します。](#set2dposition)|絶対位置の要素をドラッグして移動できます。|
+|[を設定します。](#setabsoluteposition)|要素の位置プロパティを"絶対"または"静的"に設定します。|
+|[を選択します。](#setatomicselection)|アトミック選択モードを設定します。|
+|[を設定します。](#setautourldetectmode)|URL 自動検出のオンとオフを切り替えます。|
+|[次の項目を使用します。](#setbackcolor)|現在の選択範囲の背景色を設定します。|
+|[を設定します。](#setblockformat)|現在のブロック書式タグを設定します。|
+|[をクリックします。](#setbookmark)|現在の選択範囲またはカーソル位置にブックマーク アンカーを作成します。|
+|[を編集します。](#setcsseditinglevel)|エディタがサポートする CSS レベル (CSS1 または CSS2) があれば、そのレベルを選択します。|
+|[設定既定の構成設定](#setdefaultcomposesettings)|既定の作成設定を設定します。|
+|[次の項目を使用します。](#setdesignmode)|デザイン モードを設定します。|
+|[次の項目を使用します。](#setdisableeditfocusui)|ハッチングされた境界線を無効にし、編集フォーカスのある要素の周囲を処理します。|
+|[を使用します。](#setdocumenthtml)|現在のドキュメントの HTML を設定します。|
+|[次の文字列を設定します。](#setfontface)|現在の選択範囲のフォントを設定します。|
+|[次の文字列を設定します。](#setfontsize)|現在の選択範囲のフォント サイズを設定します。|
+|[次の色を設定します。](#setforecolor)|現在の選択範囲の前景色 (テキスト) を設定します。|
+|[次の手順を実行します。](#setie5pastemode)|貼り付け操作を、インターネット エクスプローラ 5 との互換性を設定します。|
+|[を設定します。](#setliveresize)|サイズ変更または移動操作中に、WebBrowser が要素の外観を継続的に更新するようにします。|
+|[を選択します。](#setmultiselect)|複数選択を有効にします。|
+|[カーソルを置き換えます。](#setoverridecursor)|マウス ポインタを変更しない WebBrowser を実行します。|
+|[次の値を指定します。](#setoverwritemode)|挿入と上書きの間でテキスト入力モードを切り替えます。|
+|[デザインの設定](#setrespectvisindesign)|デザイン モードで非表示の要素を非表示にします。|
+|[次の項目を配置します。](#setshowalignedsitetags)|プロパティを持つすべての要素のグリフを`styleFloat`表示します。|
+|[をクリックします。](#setshowalltags)|ドキュメント内のすべてのタグの位置を示すグリフを表示します。|
+|[ウィンドウタグを表示します。](#setshowareatags)|すべてのエリア タグのグリフを表示します。|
+|[次の項目を使用します。](#setshowbrtags)|すべての br タグのグリフを表示します。|
+|[タグを表示します。](#setshowcommenttags)|すべてのコメント タグのグリフを表示します。|
+|[次の項目を使用します。](#setshowmisctags)|インターネット エクスプローラ 4.0 に表示されているすべてのタグを表示します。|
+|[次の要素を使用します。](#setshowscripttags)|すべてのスクリプト タグのグリフを表示します。|
+|[次の項目を使用します。](#setshowstyletags)|すべてのスタイル タグのグリフを表示します。|
+|[タグを表示します。](#setshowunknowntags)|不明なすべてのタグのグリフを表示します。|
+|[テキストエリア](#textarea)|現在の選択範囲の複数行テキスト入力コントロールを上書きします。|
+|[テキストボックス](#textbox)|現在の選択範囲のテキスト コントロールを上書きします。|
+|[をクリックします。](#unbookmark)|現在の選択範囲からブックマークを削除します。|
+|[下線](#underline)|現在の選択範囲を下線付きと下線なしの間で切り替えます。|
+|[リンクを解除します。](#unlink)|現在の選択範囲からハイパーリンクを削除します。|
+|[次のリストを並べ替えます。](#unorderlist)|現在の選択を、順序付きリストと標準書式ブロックの間で切り替えます。|
 
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
 派生クラスの名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CHtmlEditCtrlBase`[Bold](#bold)など、WEBBROWSER の HTML 編集コマンドのメンバー関数を提供します。 (または、 [ExecCommand](#execcommand)を呼び出して IDM_BOLD コマンドを実行できます)。
+`CHtmlEditCtrlBase`は[、WebBrowser](#bold)の HTML 編集コマンド (太字など) のメンバー関数を提供します。 (または[、execCommand](#execcommand)を呼び出してIDM_BOLDコマンドを実行することもできます)。
 
-`CHtmlEditCtrlBase`は独自のものであることを意図していません。 これは、WebBrowser の HTML 編集機能を公開する派生クラスの基本クラスとして設計されています (「 [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) and [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)」を参照してください)。
+`CHtmlEditCtrlBase`単独で立つことを意図したものではありません。 これは、WebBrowser の HTML 編集機能を公開する派生クラスの基本クラスとして設計されています ( [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md)および[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)を参照してください ) 。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -370,9 +370,9 @@ template <class T> class CHtmlEditCtrlBase
 
 **ヘッダー:** afxhtml.h
 
-##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable
+## <a name="chtmleditctrlbaseaddtoglyphtable"></a><a name="addtoglyphtable"></a>次の項目を使用します。
 
-デザインモードで特定のタグに対して表示する画像を指定する、グリフテーブルにエントリを追加します。
+デザイン モードで特定のタグに表示するイメージを指定するエントリを glyph テーブルに追加します。
 
 ```
 HRESULT AddToGlyphTable(
@@ -388,41 +388,41 @@ HRESULT AddToGlyphTable(
 
 ### <a name="parameters"></a>パラメーター
 
-*szTag*<br/>
-タグ名 (たとえば、"P" または "table")。
+*szタグ*<br/>
+タグ名 ("P" や "テーブル" など)。
 
-*szImgUrl*<br/>
-画像の URL。
+*シムズラ*<br/>
+イメージの URL。
 
-*nTagType*<br/>
-タグの種類:0は、イメージが開始タグ専用であることを示します。 1は、イメージが終了タグ専用であることを示します。 2は、イメージが開始タグと終了タグの両方に対するものであることを意味します。 タグの種類を0に設定して、br や comment などの単一のタグを追加する必要があります。
+*nタグタイプ*<br/>
+タグタイプ: 0 は、画像が開始タグ専用であることを示します。 1 は、画像が終了タグ専用であることを意味します。 2 は、開始タグと終了タグの両方に対するイメージを意味します。 br や comment などの単一のタグは、タグの種類を 0 に設定して追加する必要があります。
 
-*nAlignment*<br/>
-Alignment (四角形の要素のみ):このパラメーターは、イメージがアラインメント属性を持つ要素用であることを示します。 Left = 0、center = 1、right = 2、undefined = 3。 Left、right、または center 属性は、要素に対して明示的に設定する必要があります。
+*n整列*<br/>
+アライメント (矩形要素のみ): このパラメータは、イメージが線形属性を持つ要素用であることを示します。 左 = 0、中心 = 1、右 = 2、未定義 = 3。 左、右、または中央の属性は、要素に明示的に設定する必要があります。
 
-*nPosInfo*<br/>
-位置情報。 グリフが適用されるカスケードスタイルシート (CSS) の配置値を決定します。静的な位置 = 0、絶対位置 = 1、相対位置 = 2、および all = 3 です。 このフィールドでは、タグが配置されていないときに1つのグリフを指定できます。また、タグが配置されたときにアンカーポイントを表示する別のグリフを指定することもできます。
+*NPosInfo*<br/>
+位置決め情報。 グリフが適用されるカスケード スタイル シート (CSS) の位置を決定します。 このフィールドでは、タグが配置されていない場合にタグのグリフを指定し、タグが配置されているときにアンカーポイントを表示する別のグリフを指定できます。
 
-*nDirection*<br/>
-方向。 このパラメーターは、現在の言語の読み取り順序に基づいて、タグのイメージを指定します。 0は左から右、1は右から左、2は上から下、3は一番下、4はすべてを指定します。 通常、このフィールドは4に設定します。
+*n方向*<br/>
+方向。 このパラメーターは、現在の言語の読み取り順序に基づいてタグのイメージを指定します。 0 は左から右、1 は右から左、2 は上から下、3 は下から上、4 は全てを指定します。 通常、このフィールドは 4 に設定します。
 
-*nImgWidth*<br/>
+*幅*<br/>
 イメージの幅 (ピクセル単位)。
 
-*nImgHeight*<br/>
+*nImgの高さ*<br/>
 イメージの高さ (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-パラメーターの詳細については、「グリフの[編集](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\))」の「グリフテーブル文字列形式」を参照してください。
+パラメーターの詳細については、グリフの編集の「グリフテーブル文字列形式」[を参照](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\))してください。
 
-このメソッドは、 [IDM_ADDTOGLYPHTABLE コマンド ID](/previous-versions/aa769891\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_ADDTOGLYPHTABLEコマンド ID](/previous-versions/aa769891\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
+## <a name="chtmleditctrlbasebold"></a><a name="bold"></a>次の項目を使用します。
 
 選択したテキストの太字の状態を切り替えます。
 
@@ -432,15 +432,15 @@ HRESULT Bold() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BOLD コマンド ID](/previous-versions/aa769861\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_BOLDコマンド ID](/previous-versions/aa769861\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="button"></a>  CHtmlEditCtrlBase::Button
+## <a name="chtmleditctrlbasebutton"></a><a name="button"></a>ボタン
 
-現在選択されているボタンコントロールを上書きします。
+現在の選択項目のボタン コントロールを上書きします。
 
 ```
 HRESULT Button(LPCTSTR szId = NULL) const;
@@ -449,19 +449,19 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-ボタンコントロールの ID。
+ボタン コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BUTTON コマンド ID](/previous-versions/aa769966\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_BUTTONコマンド ID](/previous-versions/aa769966\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="checkbox"></a>CHtmlEditCtrlBase:: CheckBox
+## <a name="chtmleditctrlbasecheckbox"></a><a name="checkbox"></a>チェックボックス
 
-現在の選択範囲のチェックボックスコントロールを上書きします。
+現在の選択項目のチェック ボックス コントロールを上書きします。
 
 ```
 HRESULT CheckBox(LPCTSTR szId = NULL) const;
@@ -470,19 +470,19 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-チェックボックスコントロールの ID。
+チェック ボックス コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_CHECKBOX コマンド ID](/previous-versions/aa769972\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_CHECKBOXコマンド ID](/previous-versions/aa769972\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="clearselection"></a>CHtmlEditCtrlBase:: ClearSelection
+## <a name="chtmleditctrlbaseclearselection"></a><a name="clearselection"></a>次の項目を選択します。
 
-現在の選択範囲をクリアします。
+現在の選択を解除します。
 
 ```
 HRESULT ClearSelection() const;
@@ -490,15 +490,15 @@ HRESULT ClearSelection() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_CLEARSELECTION コマンド ID](/previous-versions/aa770038\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_CLEARSELECTIONコマンド ID](/previous-versions/aa770038\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
+## <a name="chtmleditctrlbasecopy"></a><a name="copy"></a>次の項目を使用します。
 
-現在の選択項目をクリップボードにコピーします。
+現在選択している部分をクリップボードにコピーします。
 
 ```
 HRESULT Copy() const;
@@ -506,15 +506,15 @@ HRESULT Copy() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_COPY コマンド ID](/previous-versions/aa769872\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_COPYコマンド ID](/previous-versions/aa769872\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
+## <a name="chtmleditctrlbasecut"></a><a name="cut"></a>カット
 
-現在の選択範囲をクリップボードにコピーしてから削除します。
+現在の選択範囲をクリップボードにコピーし、削除します。
 
 ```
 HRESULT Cut() const;
@@ -522,13 +522,13 @@ HRESULT Cut() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_CUT コマンド ID](/previous-versions/aa769875\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_CUTコマンド ID](/previous-versions/aa769875\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
+## <a name="chtmleditctrlbasedelete"></a><a name="delete"></a>:Dエレテ
 
 現在の選択範囲を削除します。
 
@@ -538,13 +538,13 @@ HRESULT Delete() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_DELETE コマンド ID](/previous-versions/aa769876\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_DELETEコマンド ID](/previous-versions/aa769876\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::D ropDownBox
+## <a name="chtmleditctrlbasedropdownbox"></a><a name="dropdownbox"></a>:Dロップダウンボックス
 
 現在の選択範囲のドロップダウン選択コントロールを上書きします。
 
@@ -559,15 +559,15 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_DROPDOWNBOX コマンド ID](/previous-versions/aa769984\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_DROPDOWNBOXコマンド ID](/previous-versions/aa769984\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
+## <a name="chtmleditctrlbaseemptyglyphtable"></a><a name="emptyglyphtable"></a>次の文字列を使用します。
 
-グリフテーブルからすべてのエントリを削除します。これにより、デザインモードのタグに表示されるすべてのイメージが非表示になります。
+デザイン モードでタグに表示されているすべてのイメージを非表示にするグリフ テーブルからすべてのエントリを削除します。
 
 ```
 HRESULT EmptyGlyphTable() const;
@@ -575,13 +575,13 @@ HRESULT EmptyGlyphTable() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_EMPTYGLYPHTABLE コマンド ID](/previous-versions/aa769907\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_EMPTYGLYPHTABLEコマンド ID](/previous-versions/aa769907\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
+## <a name="chtmleditctrlbaseexeccommand"></a><a name="execcommand"></a>次のコマンド
 
 コマンドを実行します。
 
@@ -602,32 +602,32 @@ HRESULT ExecCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-*cmdID*<br/>
-実行するコマンド ID。 リストについては、「 [MSHTML コマンド識別子](/previous-versions/aa741315\(v=vs.85\))」を参照してください。
+*Cmdid*<br/>
+実行するコマンド ID。 一覧については、「 [MSHTML コマンド識別子](/previous-versions/aa741315\(v=vs.85\))」を参照してください。
 
-*cmdExecOpt*<br/>
-オブジェクトがコマンドを実行する方法を記述する[OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt)列挙から取得された値。
+*をクリックします。*<br/>
+[OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt)列挙体から取得される値。
 
 *pInVar*<br/>
 入力引数。
 
-*pOutVar*<br/>
-コマンドの出力。
+*を使用します。*<br/>
+コマンド出力。
 
-*pGuid*<br/>
-コマンドグループの GUID。
+*をクリックします。*<br/>
+コマンド グループの GUID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)の機能を提供します。
+このメソッドは[、IOleCommandTarget::Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)の機能を提供します。
 
-##  <a name="font"></a>  CHtmlEditCtrlBase::Font
+## <a name="chtmleditctrlbasefont"></a><a name="font"></a>フォント
 
-現在選択されているテキストの色、フォント、およびフォントサイズをユーザーが変更できるようにするための [フォント] ダイアログボックスを開きます。
+フォント ダイアログ ボックスを開き、現在の選択項目のテキストの色、フォント、およびフォント サイズを変更できるようにします。
 
 ```
 HRESULT Font() const;
@@ -635,15 +635,15 @@ HRESULT Font() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_FONT コマンド ID](/previous-versions/aa769913\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTコマンド ID](/previous-versions/aa769913\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition
+## <a name="chtmleditctrlbasegetabsoluteposition"></a><a name="getabsoluteposition"></a>を取得します。
 
-要素の position プロパティが "absolute" であるかどうかを返します。
+要素の位置プロパティが "絶対" かどうかを返します。
 
 ```
 HRESULT GetAbsolutePosition(bool& bCurValue) const;
@@ -651,18 +651,18 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-要素の position プロパティが "absolute" に設定されている場合は TRUE。
+*値*<br/>
+TRUE 要素の位置プロパティが "絶対" に設定されている場合。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_ABSOLUTE_POSITION COMMAND ID](/previous-versions/aa769889\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))」を参照してください。
 
-##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
+## <a name="chtmleditctrlbasegetbackcolor"></a><a name="getbackcolor"></a>次の項目を取得します。
 
 現在の選択範囲の背景色を取得します。
 
@@ -672,18 +672,18 @@ HRESULT GetBackColor(int& nColor) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nColor*<br/>
+*nカラー*<br/>
 背景色。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
+## <a name="chtmleditctrlbasegetblockformat"></a><a name="getblockformat"></a>をクリックします。
 
 現在のブロック書式タグを取得します。
 
@@ -698,13 +698,13 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BLOCKFMT コマンド ID](/previous-versions/aa769883\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_BLOCKFMTコマンド ID](/previous-versions/aa769883\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
+## <a name="chtmleditctrlbasegetblockformatnames"></a><a name="getblockformatnames"></a>を使用します。
 
 使用可能なブロック形式タグに対応する文字列を取得します。
 
@@ -714,20 +714,20 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*sa*<br/>
+*Sa*<br/>
 文字列の配列として使用できるブロック形式タグ。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_GETBLOCKFMTS コマンド ID](/previous-versions/aa769884\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_GETBLOCKFMTSコマンド ID](/previous-versions/aa769884\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
+## <a name="chtmleditctrlbasegetbookmark"></a><a name="getbookmark"></a>をクリックします。
 
-ブックマークアンカーの名前を取得します。
+ブックマーク アンカーの名前を取得します。
 
 ```
 HRESULT GetBookMark(CString& strAnchor) const;
@@ -735,20 +735,20 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*strAnchor*<br/>
-ブックマークアンカーの名前。
+*strアンカー*<br/>
+ブックマーク アンカーの名前。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_BOOKMARK COMMAND ID](/previous-versions/aa769873\(v=vs.85\))」を参照してください。
+詳細については、「 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))」を参照してください。
 
-##  <a name="getdocument"></a>CHtmlEditCtrlBase:: GetDocument
+## <a name="chtmleditctrlbasegetdocument"></a><a name="getdocument"></a>次の項目を取得します。
 
-ドキュメントオブジェクトを取得します。
+ドキュメント オブジェクトを取得します。
 
 ```
 HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
@@ -757,13 +757,13 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppDoc*<br/>
-ドキュメントオブジェクト。
+ドキュメント オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML
+## <a name="chtmleditctrlbasegetdocumenthtml"></a><a name="getdocumenthtml"></a>を使用します。
 
 現在のドキュメントの HTML を取得します。
 
@@ -778,9 +778,9 @@ HTML。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase:: GetDocumentTitle
+## <a name="chtmleditctrlbasegetdocumenttitle"></a><a name="getdocumenttitle"></a>をクリックします。
 
 ドキュメントのタイトルを取得します。
 
@@ -790,16 +790,16 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szTitle*<br/>
+*szタイトル*<br/>
 ドキュメントのタイトル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent
+## <a name="chtmleditctrlbasegetevent"></a><a name="getevent"></a>次のイベントを取得します。
 
-最新のイベントに関連する情報を格納しているイベントオブジェクトへのインターフェイスポインターを取得します。
+最新のイベントに関連する情報を含むイベント オブジェクトへのインターフェイス ポインターを取得します。
 
 ```
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
@@ -807,16 +807,16 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ppEventObj*<br/>
+*を使用します。*<br/>
 イベント オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement
+## <a name="chtmleditctrlbasegeteventsrcelement"></a><a name="geteventsrcelement"></a>要素を取得します。
 
-イベントを発生させたオブジェクトを取得します。
+イベントを発生したオブジェクトを取得します。
 
 ```
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
@@ -824,14 +824,14 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ppSrcElement*<br/>
-イベントを発生させた要素。
+*要素*<br/>
+イベントを発生した要素。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace
+## <a name="chtmleditctrlbasegetfontface"></a><a name="getfontface"></a>次の項目を使用します。
 
 現在の選択範囲のフォント名を取得します。
 
@@ -841,22 +841,22 @@ HRESULT GetFontFace(CString& strFace) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*strFace*<br/>
+*ストフェイス*<br/>
 フォント名。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在の選択範囲で複数のフォントが使用されている場合、 *Strface*は空の文字列になります。
+現在の選択範囲で複数のフォントを使用している場合 *、strFace*は空の文字列になります。
 
-このメソッドは、 [IDM_FONTNAME コマンド ID](/previous-versions/aa769880\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTNAMEコマンド ID](/previous-versions/aa769880\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
+## <a name="chtmleditctrlbasegetfontsize"></a><a name="getfontsize"></a>を使用します。
 
-現在の選択範囲のフォントサイズを取得します。
+現在の選択範囲のフォント サイズを取得します。
 
 ```
 HRESULT GetFontSize(short& nSize) const;
@@ -864,20 +864,20 @@ HRESULT GetFontSize(short& nSize) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nSize*<br/>
-フォントサイズ。
+*Nsize*<br/>
+フォント サイズ。
 
 ### <a name="return-value"></a>戻り値
 
-HTML フォントサイズ (1-7) を返します。 選択範囲に複数のフォントサイズが含まれている場合は0を返します。
+HTML フォント サイズ (1 ~ 7) を返します。 選択範囲に複数のフォント サイズが含まれている場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTSIZEコマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
+## <a name="chtmleditctrlbasegetforecolor"></a><a name="getforecolor"></a>次の色を取得します。
 
-現在の選択範囲の前景 (テキスト) の色を取得します。
+現在の選択範囲の前景色 (テキスト) を取得します。
 
 ```
 HRESULT GetForeColor(int& nColor);
@@ -885,20 +885,20 @@ HRESULT GetForeColor(int& nColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*nColor*<br/>
+*nカラー*<br/>
 前景色。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FORECOLORコマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getframezone"></a>CHtmlEditCtrlBase:: Getフレームゾーン
+## <a name="chtmleditctrlbasegetframezone"></a><a name="getframezone"></a>次の項目を使用します。
 
-Web ブラウザーの現在のページのセキュリティゾーンを返します。
+Web ブラウザーで現在のページのセキュリティ ゾーンを返します。
 
 ```
 HRESULT GetFrameZone(short& nZone) const;
@@ -906,18 +906,18 @@ HRESULT GetFrameZone(short& nZone) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nZone*<br/>
-セキュリティゾーン。
+*nゾーン*<br/>
+セキュリティ ゾーン。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_GETFRAMEZONE コマンド ID](/previous-versions/aa769916\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_GETFRAMEZONEコマンド ID](/previous-versions/aa769916\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
+## <a name="chtmleditctrlbasegetisdirty"></a><a name="getisdirty"></a>をクリックします。
 
 HTML ドキュメントが変更されたかどうかを示します。
 
@@ -925,13 +925,13 @@ HTML ドキュメントが変更されたかどうかを示します。
 HRESULT GetIsDirty() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドキュメントが変更されたかどうかを示します。 `GetIsDirty`[IPersistStorage:: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty)から HRESULT を返します。
+ドキュメントが変更されたかどうかを示します。 `GetIsDirty`[から](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty)HRESULT を返します。
 
-##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags
+## <a name="chtmleditctrlbasegetshowalignedsitetags"></a><a name="getshowalignedsitetags"></a>サイトタグを取得します。
 
-プロパティを`styleFloat`持つすべての要素に対してグリフを表示するかどうかを示す値を返します。
+`styleFloat`プロパティを持つすべての要素に対してグリフが表示されるかどうかを返します。
 
 ```
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
@@ -939,20 +939,20 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-プロパティを`styleFloat`持つすべての要素にグリフが表示される場合は TRUE。グリフが表示されない場合は FALSE。
+*値*<br/>
+`styleFloat`プロパティを持つすべての要素に対してグリフが表示される場合は TRUE。グリフが表示されない場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWALIGNEDSITETAGS COMMAND ID](/previous-versions/aa769947\(v=vs.85\))」を参照してください。
+詳細については、「 [IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags
+## <a name="chtmleditctrlbasegetshowalltags"></a><a name="getshowalltags"></a>次のタグを表示します。
 
-WebBrowser がドキュメント内のすべてのタグの位置を表示するグリフを表示するかどうかを示す値を返します。
+文書内のすべてのタグの位置を示すグリフを表示するかどうかを返します。
 
 ```
 HRESULT GetShowAllTags(bool& bCurValue) const;
@@ -960,20 +960,20 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-ドキュメント内のすべてのタグの場所を表示するために WebBrowser がグリフを表示する場合は TRUE。そうでない場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser でドキュメント内のすべてのタグの位置を示すグリフが表示されます。FALSE でない場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWALLTAGS COMMAND ID](/previous-versions/aa769948\(v=vs.85\))」を参照してください。
+詳細については、「 [IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags
+## <a name="chtmleditctrlbasegetshowareatags"></a><a name="getshowareatags"></a>次の要素を表示します。
 
-WebBrowser が区分タグのグリフを表示するかどうかを取得します。
+WebBrowser がエリア タグのグリフを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowAreaTags(bool& bCurValue) const;
@@ -981,20 +981,20 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser が区分タグのグリフを表示する場合は TRUE、それ以外の場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser がエリア タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWAREATAGS COMMAND ID](/previous-versions/aa769949\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase:: GetShowBRTags
+## <a name="chtmleditctrlbasegetshowbrtags"></a><a name="getshowbrtags"></a>次の項目を使用します。
 
-WebBrowser が br タグのグリフを表示するかどうかを取得します。
+webBrowser が br タグのグリフを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowBRTags(bool& bCurValue) const;
@@ -1002,20 +1002,20 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser で br タグのグリフが表示される場合は TRUE、そうでない場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser が br タグのグリフを表示し、表示されない場合は FALSE を返します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWWBRTAGS COMMAND ID](/previous-versions/aa769956\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase:: Getshowコメントタグ
+## <a name="chtmleditctrlbasegetshowcommenttags"></a><a name="getshowcommenttags"></a>タグを表示します。
 
-WebBrowser がコメントタグのグリフを表示するかどうかを取得します。
+WebBrowser がコメント タグのグリフを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowCommentTags(bool& bCurValue) const;
@@ -1023,20 +1023,20 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser でコメントタグのグリフが表示される場合は TRUE、そうでない場合は FALSE。
+*値*<br/>
+True を指定すると、コメント タグのグリフが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWCOMMENTTAGS COMMAND ID](/previous-versions/aa769950\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase:: Getshow誤 Ctags
+## <a name="chtmleditctrlbasegetshowmisctags"></a><a name="getshowmisctags"></a>タグ::ゲットショーミズックタグ
 
-WebBrowser が Microsoft Internet Explorer 4.0 に表示されているすべてのタグを表示するかどうかを取得します。
+WebBrowser が、インターネット エクスプローラ 4.0 に表示されているすべてのタグを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowMiscTags(bool& bCurValue) const;
@@ -1044,20 +1044,20 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-Microsoft Internet Explorer 4.0 に示されているすべてのタグが WebBrowser で表示される場合は TRUE、それ以外の場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser に表示されるすべてのタグが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWMISCTAGS COMMAND ID](/previous-versions/aa769952\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase:: GetShowScriptTags
+## <a name="chtmleditctrlbasegetshowscripttags"></a><a name="getshowscripttags"></a>次の要素を使用します。
 
-WebBrowser がすべてのスクリプトタグのグリフを表示するかどうかを取得します。
+WebBrowser がすべてのスクリプト タグのグリフを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowScriptTags(bool& bCurValue) const;
@@ -1065,20 +1065,20 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser がすべてのスクリプトタグのグリフを表示する場合は TRUE、それ以外の場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser ですべてのスクリプト タグのグリフが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWSCRIPTTAGS COMMAND ID](/previous-versions/aa769953\(v=vs.85\))」を参照してください。
+詳細については[、「IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags
+## <a name="chtmleditctrlbasegetshowstyletags"></a><a name="getshowstyletags"></a>タグを表示します。
 
-WebBrowser がすべてのスタイルタグのグリフを表示するかどうかを取得します。
+WebBrowser がすべてのスタイル タグのグリフを表示するかどうかを取得します。
 
 ```
 HRESULT GetShowStyleTags(bool& bCurValue) const;
@@ -1086,18 +1086,18 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser がすべてのスタイルタグのグリフを表示する場合は TRUE、それ以外の場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser ですべてのスタイル タグのグリフが表示され、表示されない場合は FALSE が表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWSTYLETAGS COMMAND ID](/previous-versions/aa769954\(v=vs.85\))」を参照してください。
+詳細については、「 [IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))」を参照してください。
 
-##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags
+## <a name="chtmleditctrlbasegetshowunknowntags"></a><a name="getshowunknowntags"></a>タグを表示します。
 
 WebBrowser が不明なすべてのタグのグリフを表示するかどうかを取得します。
 
@@ -1107,18 +1107,18 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bCurValue*<br/>
-WebBrowser で不明なすべてのタグのグリフが表示される場合は TRUE、それ以外の場合は FALSE。
+*値*<br/>
+True を指定すると、WebBrowser で不明なすべてのタグのグリフが表示され、表示されない場合は FALSE になります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、「 [IDM_SHOWUNKNOWNTAGS COMMAND ID](/previous-versions/aa769955\(v=vs.85\))」を参照してください。
+詳細については、「[コマンド ID IDM_SHOWUNKNOWNTAGS」](/previous-versions/aa769955\(v=vs.85\))を参照してください。
 
-##  <a name="horizontalline"></a>CHtmlEditCtrlBase:: 水平線
+## <a name="chtmleditctrlbasehorizontalline"></a><a name="horizontalline"></a>をクリックします。
 
 現在の選択範囲の水平線を上書きします。
 
@@ -1133,13 +1133,13 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_HORIZONTALLINE コマンド ID](/previous-versions/aa769968\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_HORIZONTALLINEコマンド ID](/previous-versions/aa769968\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
+## <a name="chtmleditctrlbasehyperlink"></a><a name="hyperlink"></a>次の手順を実行します。
 
 現在の選択範囲にハイパーリンクを挿入します。
 
@@ -1149,20 +1149,20 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szUrl*<br/>
-ハイパーリンクの URL。
+*スズUrl*<br/>
+ハイパーリンク URL。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_HYPERLINK コマンド ID](/previous-versions/aa769874\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_HYPERLINKコマンド ID](/previous-versions/aa769874\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste
+## <a name="chtmleditctrlbaseie50paste"></a><a name="ie50paste"></a>次の項目を使用します。
 
-Internet Explorer 5 と互換性のある貼り付け操作を実行します。
+インターネット エクスプローラ 5 と互換性のある貼り付け操作を実行します。
 
 ```
 HRESULT IE50Paste(LPCTSTR szData) const;
@@ -1170,20 +1170,20 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szData*<br/>
+*szデータ*<br/>
 貼り付ける文字列。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_IE50_PASTE コマンド ID](/previous-versions/aa769922\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_IE50_PASTEコマンド ID](/previous-versions/aa769922\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
+## <a name="chtmleditctrlbaseiframe"></a><a name="iframe"></a>次の項目を使用します。
 
-現在の選択範囲のインラインフレームを上書きします。
+現在の選択範囲のインライン フレームを上書きします。
 
 ```
 HRESULT Iframe(LPCTSTR szId = NULL) const;
@@ -1192,17 +1192,17 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-インラインフレームの ID。
+インライン フレームの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_IFRAME コマンド ID](/previous-versions/aa769969\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_IFRAMEコマンド ID](/previous-versions/aa769969\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="image"></a>  CHtmlEditCtrlBase::Image
+## <a name="chtmleditctrlbaseimage"></a><a name="image"></a>イメージ
 
 現在の選択範囲のイメージを上書きします。
 
@@ -1212,20 +1212,20 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szUrl*<br/>
+*スズUrl*<br/>
 挿入するイメージのパスとファイル名。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_IMAGE コマンド ID](/previous-versions/aa769970\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_IMAGEコマンド ID](/previous-versions/aa769970\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
+## <a name="chtmleditctrlbaseindent"></a><a name="indent"></a>インデント
 
-選択したテキストのインデントを1インデントインクリメントして増やします。
+選択したテキストのインデントを 1 インデントのインクリメント単位で増やします。
 
 ```
 HRESULT Indent() const;
@@ -1233,13 +1233,13 @@ HRESULT Indent() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INDENT コマンド ID](/previous-versions/aa769963\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INDENTコマンド ID](/previous-versions/aa769963\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insfieldset"></a>CHtmlEditCtrlBase:: フィールドセット
+## <a name="chtmleditctrlbaseinsfieldset"></a><a name="insfieldset"></a>次の項目セット
 
 現在の選択範囲のボックスを上書きします。
 
@@ -1254,15 +1254,15 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSFIELDSET コマンド ID](/previous-versions/aa769967\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSFIELDSETコマンド ID](/previous-versions/aa769967\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
+## <a name="chtmleditctrlbaseinsinputbutton"></a><a name="insinputbutton"></a>次のコマンドを使用します。
 
-現在選択されているボタンコントロールを上書きします。
+現在の選択項目のボタン コントロールを上書きします。
 
 ```
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;
@@ -1271,17 +1271,17 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-ボタンコントロールの ID。
+ボタン コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTBUTTON コマンド ID](/previous-versions/aa769971\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTBUTTONコマンド ID](/previous-versions/aa769971\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
+## <a name="chtmleditctrlbaseinsinputhidden"></a><a name="insinputhidden"></a>をクリックします。
 
 現在の選択範囲に非表示のコントロールを挿入します。
 
@@ -1296,15 +1296,15 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTHIDDEN コマンド ID](/previous-versions/aa769974\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTHIDDENコマンド ID](/previous-versions/aa769974\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
+## <a name="chtmleditctrlbaseinsinputimage"></a><a name="insinputimage"></a>次の値を入力します。
 
-現在選択されているイメージコントロールを上書きします。
+現在の選択範囲のイメージ コントロールを上書きします。
 
 ```
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;
@@ -1313,19 +1313,19 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-イメージコントロールの ID。
+イメージ コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTIMAGE コマンド ID](/previous-versions/aa769975\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTIMAGEコマンド ID](/previous-versions/aa769975\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
+## <a name="chtmleditctrlbaseinsinputpassword"></a><a name="insinputpassword"></a>を入力します。
 
-現在選択されているパスワードコントロールを上書きします。
+現在の選択項目のパスワード コントロールを上書きします。
 
 ```
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
@@ -1338,15 +1338,15 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTPASSWORD コマンド ID](/previous-versions/aa769976\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTPASSWORDコマンド ID](/previous-versions/aa769976\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
+## <a name="chtmleditctrlbaseinsinputreset"></a><a name="insinputreset"></a>をクリックします。
 
-現在の選択範囲のリセットコントロールを上書きします。
+現在の選択項目のリセット コントロールを上書きします。
 
 ```
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;
@@ -1355,19 +1355,19 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-リセットコントロールの ID。
+リセット コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTRESET コマンド ID](/previous-versions/aa769978\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTRESETコマンド ID](/previous-versions/aa769978\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
+## <a name="chtmleditctrlbaseinsinputsubmit"></a><a name="insinputsubmit"></a>次のコマンドを使用します。
 
-現在の選択範囲の送信コントロールを上書きします。
+現在の選択項目の送信コントロールを上書きします。
 
 ```
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
@@ -1380,15 +1380,15 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTSUBMIT コマンド ID](/previous-versions/aa769979\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTSUBMITコマンド ID](/previous-versions/aa769979\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
+## <a name="chtmleditctrlbaseinsinputupload"></a><a name="insinputupload"></a>をクリックします。
 
-現在の選択範囲のファイルアップロードコントロールを上書きします。
+現在の選択項目のファイル アップロード コントロールを上書きします。
 
 ```
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
@@ -1397,17 +1397,17 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-ファイルアップロードコントロールの ID。
+ファイル アップロード コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_INSINPUTUPLOAD コマンド ID](/previous-versions/aa769973\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_INSINPUTUPLOADコマンド ID](/previous-versions/aa769973\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
+## <a name="chtmleditctrlbaseis1delement"></a><a name="is1delement"></a>をクリックします。
 
 要素が静的に配置されているかどうかを判断します。
 
@@ -1417,20 +1417,20 @@ HRESULT Is1DElement(bool& bValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bValue*<br/>
+*b値*<br/>
 要素が静的に配置されている場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_1D_ELEMENT コマンド ID](/previous-versions/aa769885\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_1D_ELEMENTコマンド ID](/previous-versions/aa769885\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
+## <a name="chtmleditctrlbaseis2delement"></a><a name="is2delement"></a>をクリックします。
 
-要素が絶対に配置されているかどうかを判断します。
+要素が絶対位置にあるかどうかを判断します。
 
 ```
 HRESULT Is2DElement(bool& bValue) const;
@@ -1438,20 +1438,20 @@ HRESULT Is2DElement(bool& bValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bValue*<br/>
-要素が絶対に配置されている場合は TRUE、それ以外の場合は FALSE。
+*b値*<br/>
+要素が絶対位置にある場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_2D_ELEMENT コマンド ID](/previous-versions/aa769886\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_2D_ELEMENTコマンド ID](/previous-versions/aa769886\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
+## <a name="chtmleditctrlbaseitalic"></a><a name="italic"></a>イタリック
 
-現在の選択範囲を斜体と非斜体の間で切り替えます。
+現在の選択を斜体と非斜体の間で切り替えます。
 
 ```
 HRESULT Italic() const;
@@ -1459,15 +1459,15 @@ HRESULT Italic() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_ITALIC コマンド ID](/previous-versions/aa769988\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_ITALICコマンド ID](/previous-versions/aa769988\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="justifycenter"></a>CHtmlEditCtrlBase:: ジャストの場合
+## <a name="chtmleditctrlbasejustifycenter"></a><a name="justifycenter"></a>ソースセンター
 
-現在の選択範囲が配置されている書式指定ブロックを中央揃えにします。
+現在の選択範囲が配置されている書式ブロックを中央揃えします。
 
 ```
 HRESULT JustifyCenter() const;
@@ -1475,15 +1475,15 @@ HRESULT JustifyCenter() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_JUSTIFYCENTER コマンド ID](/previous-versions/aa769989\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_JUSTIFYCENTERコマンド ID](/previous-versions/aa769989\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="justifyleft"></a>CHtmlEditCtrlBase:: ジャスト Ifyleft
+## <a name="chtmleditctrlbasejustifyleft"></a><a name="justifyleft"></a>左に位置合わせ
 
-現在の選択範囲が配置されている書式指定ブロックを左揃えにします。
+現在の選択範囲が配置されている書式ブロックを左揃えで指定します。
 
 ```
 HRESULT JustifyLeft() const;
@@ -1491,15 +1491,15 @@ HRESULT JustifyLeft() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_JUSTIFYLEFT コマンド ID](/previous-versions/aa770011\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_JUSTIFYLEFTコマンド ID](/previous-versions/aa770011\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="justifyright"></a>CHtmlEditCtrlBase:: ジャスト Ifyright
+## <a name="chtmleditctrlbasejustifyright"></a><a name="justifyright"></a>次の点に基づいて編集します。
 
-現在の選択範囲が配置されている書式指定ブロックを右揃えにします。
+現在の選択範囲が配置されている書式ブロックを右揃えで指定します。
 
 ```
 HRESULT JustifyRight() const;
@@ -1507,15 +1507,15 @@ HRESULT JustifyRight() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_JUSTIFYRIGHT コマンド ID](/previous-versions/aa770013\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_JUSTIFYRIGHTコマンド ID](/previous-versions/aa770013\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="listbox"></a>CHtmlEditCtrlBase:: ListBox
+## <a name="chtmleditctrlbaselistbox"></a><a name="listbox"></a>リストボックス
 
-現在選択されているリストボックス選択コントロールを上書きします。
+現在の選択項目のリスト ボックス選択コントロールを上書きします。
 
 ```
 HRESULT ListBox(LPCTSTR szId = NULL) const;
@@ -1524,19 +1524,19 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-リストボックスコントロールの ID。
+リスト ボックス コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_LISTBOX コマンド ID](/previous-versions/aa769985\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_LISTBOXコマンド ID](/previous-versions/aa769985\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
+## <a name="chtmleditctrlbasemarquee"></a><a name="marquee"></a>マーキー
 
-現在の選択範囲の空のマーキーを上書きします。
+現在の選択範囲の空の選択範囲を上書きします。
 
 ```
 HRESULT Marquee(LPCTSTR szId = NULL) const;
@@ -1549,13 +1549,13 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_MARQUEE コマンド ID](/previous-versions/aa769981\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_MARQUEEコマンド ID](/previous-versions/aa769981\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
+## <a name="chtmleditctrlbasenewdocument"></a><a name="newdocument"></a>ドキュメントの新規作成
 
 新しいドキュメントを作成します。
 
@@ -1565,11 +1565,11 @@ HRESULT NewDocument() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList
+## <a name="chtmleditctrlbaseorderlist"></a><a name="orderlist"></a>注文リスト
 
-順序付きリストと通常のフォーマットブロックの間で現在選択されている項目を切り替えます。
+現在の選択を、順序付きリストと標準書式ブロックの間で切り替えます。
 
 ```
 HRESULT OrderList(LPCTSTR szId = NULL) const;
@@ -1578,19 +1578,19 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-順序付けられたリストの ID。
+順序付きリストの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_ORDERLIST コマンド ID](/previous-versions/aa769982\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_ORDERLISTコマンド ID](/previous-versions/aa769982\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
+## <a name="chtmleditctrlbaseoutdent"></a><a name="outdent"></a>を押し付け、次の文字列を選択します。
 
-現在の選択範囲が配置されている書式指定ブロックのインデントを1ずつ減らします。
+現在の選択範囲が配置されている書式ブロックのインデントを 1 ずつ減らします。
 
 ```
 HRESULT Outdent() const;
@@ -1598,13 +1598,13 @@ HRESULT Outdent() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_OUTDENT コマンド ID](/previous-versions/aa770015\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_OUTDENTコマンド ID](/previous-versions/aa770015\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
+## <a name="chtmleditctrlbaseparagraph"></a><a name="paragraph"></a>:Pアラグラフ
 
 現在の選択範囲の改行を上書きします。
 
@@ -1619,13 +1619,13 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_PARAGRAPH コマンド ID](/previous-versions/aa769983\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_PARAGRAPH コマンド ID](/previous-versions/aa769983\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
+## <a name="chtmleditctrlbasepaste"></a><a name="paste"></a>次の行:P
 
 現在の選択範囲のクリップボードの内容を上書きします。
 
@@ -1635,13 +1635,13 @@ HRESULT Paste() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_PASTE コマンド ID](/previous-versions/aa770017\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_PASTEコマンド ID](/previous-versions/aa770017\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
+## <a name="chtmleditctrlbaseprintdocument"></a><a name="printdocument"></a>:Pリントドキュメント
 
 現在のドキュメントを印刷します。
 
@@ -1653,23 +1653,23 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szPrintTemplate*<br/>
-印刷テンプレートへのパス。何も指定されていない場合は、既定の印刷テンプレートが使用されます。
+*テンプレート*<br/>
+印刷テンプレートへのパス。指定がない場合は、既定の印刷テンプレートが使用されます。
 
-*bShowPrintDialog*<br/>
-TRUE の場合、[印刷] ダイアログが表示されます。
+*ダイアログボックスを表示します。*<br/>
+TRUE の場合は、[印刷] ダイアログボックスを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_PRINT コマンド ID](/previous-versions/aa769937\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_PRINTコマンド ID](/previous-versions/aa769937\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
+## <a name="chtmleditctrlbaseprintpreview"></a><a name="printpreview"></a>:Pリントプレビュー
 
-既定の印刷プレビューテンプレートまたはカスタムテンプレートを使用して、現在のドキュメントの [印刷プレビュー] ウィンドウを開きます。
+既定の印刷プレビュー テンプレートまたはカスタム テンプレートを使用して、現在のドキュメントの [印刷プレビュー] ウィンドウを開きます。
 
 ```
 HRESULT PrintPreview() const;
@@ -1678,20 +1678,20 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szPrintTemplate*<br/>
+*テンプレート*<br/>
 印刷テンプレートへのパス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_PRINTPREVIEW コマンド ID](/previous-versions/aa769938\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769938\(v=vs.85\))コントロールにIDM_PRINTPREVIEWコマンド ID を送信します。
 
-##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
+## <a name="chtmleditctrlbasequerystatus"></a><a name="querystatus"></a>クエリステータス
 
-コマンドの状態を照会するには、このメソッドを呼び出します。
+コマンドの状態を照会します。
 
 ```
 long QueryStatus(long cmdID) const;
@@ -1699,16 +1699,16 @@ long QueryStatus(long cmdID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cmdID*<br/>
-コマンド ID。 コマンド識別子は、CGID_MSHTML コマンドグループから取得されます。 これらのコマンドは、Mshtmcid で定義されています。 また、 [MSHTML コマンド識別子](https://go.microsoft.com/fwlink/p/?linkid=149220)でリストをオンラインで見つけることもできます。
+*Cmdid*<br/>
+コマンド ID。 コマンド ID は、CGID_MSHTMLコマンド・グループから取得されます。 これらのコマンドは Mshtmcid.h で定義されています。 リストは[MSHTML コマンド識別子](https://go.microsoft.com/fwlink/p/?linkid=149220)でオンラインでも見つけることができます。
 
 ### <a name="return-value"></a>戻り値
 
-*CmdID*の状態を示す[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)を返します。失敗した場合は0を返します。
+*cmdID*の状態を示す[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)を返します。
 
-##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton
+## <a name="chtmleditctrlbaseradiobutton"></a><a name="radiobutton"></a>ラジオボタン
 
-現在の選択範囲のラジオコントロールを上書きします。
+現在の選択項目の無線コントロールを上書きします。
 
 ```
 HRESULT RadioButton(LPCTSTR szId = NULL) const;
@@ -1717,17 +1717,17 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-オプションボタンの ID。
+ラジオ ボタンの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_RADIOBUTTON コマンド ID](/previous-versions/aa769977\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_RADIOBUTTONコマンド ID](/previous-versions/aa769977\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
+## <a name="chtmleditctrlbaserefreshdocument"></a><a name="refreshdocument"></a>ドキュメントの更新
 
 現在のドキュメントを更新します。
 
@@ -1737,15 +1737,15 @@ HRESULT RefreshDocument() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_REFRESH コマンド ID](/previous-versions/aa770020\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_REFRESH コマンド ID](/previous-versions/aa770020\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
+## <a name="chtmleditctrlbaseremoveformat"></a><a name="removeformat"></a>フォーマットの削除
 
-現在の選択範囲から書式設定タグを削除します。
+現在の選択範囲から書式タグを削除します。
 
 ```
 HRESULT RemoveFormat() const;
@@ -1753,13 +1753,13 @@ HRESULT RemoveFormat() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_REMOVEFORMAT コマンド ID](/previous-versions/aa770021\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_REMOVEFORMATコマンド ID](/previous-versions/aa770021\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
+## <a name="chtmleditctrlbasesaveas"></a><a name="saveas"></a>次の項目を使用します。
 
 現在の Web ページをファイルに保存します。
 
@@ -1769,18 +1769,18 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szPath*<br/>
-Web ページの保存先のパスとファイル名。
+*szパス*<br/>
+Web ページの保存先のパスとファイル名を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_SAVEAS コマンド ID](/previous-versions/aa770024\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SAVEASコマンド ID](/previous-versions/aa770024\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
+## <a name="chtmleditctrlbaseselectall"></a><a name="selectall"></a>すべての項目を選択します。
 
 ドキュメント全体を選択します。
 
@@ -1790,15 +1790,15 @@ HRESULT SelectAll() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_SELECTALL コマンド ID](/previous-versions/aa770025\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SELECTALLコマンド ID](/previous-versions/aa770025\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition
+## <a name="chtmleditctrlbaseset2dposition"></a><a name="set2dposition"></a>を設定します。
 
-ドラッグして、絶対に配置された要素を移動できるようにします。
+絶対位置の要素をドラッグして移動できます。
 
 ```
 HRESULT Set2DPosition(bool bNewValue) const;
@@ -1806,20 +1806,20 @@ HRESULT Set2DPosition(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、絶対に配置された要素はドラッグして移動できます。
+*新しい価値*<br/>
+TRUE の場合、絶対位置の要素はドラッグして移動できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_2D_POSITION コマンド ID](/previous-versions/aa769887\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_2D_POSITIONコマンド ID](/previous-versions/aa769887\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition
+## <a name="chtmleditctrlbasesetabsoluteposition"></a><a name="setabsoluteposition"></a>を設定します。
 
-要素の position プロパティを "absolute" または "static" に設定します。
+要素の位置プロパティを"絶対"または"静的"に設定します。
 
 ```
 HRESULT SetAbsolutePosition(bool bNewValue) const;
@@ -1827,18 +1827,18 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、要素の position プロパティは "absolute" です。FALSE の場合、"static" になります。
+*新しい価値*<br/>
+TRUE の場合、要素の位置プロパティは "絶対" です。FALSE の場合、それは"静的"です。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_ABSOLUTE_POSITIONコマンド ID](/previous-versions/aa769889\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection
+## <a name="chtmleditctrlbasesetatomicselection"></a><a name="setatomicselection"></a>を選択します。
 
 アトミック選択モードを設定します。
 
@@ -1848,20 +1848,20 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、ATOMICSELECTION 属性が TRUE に設定されている要素は、1つの単位としてのみ選択できます。
+*新しい価値*<br/>
+TRUE の場合、ATOMICSELECTION 属性が TRUE に設定されている要素は、単位としてのみ選択できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_ATOMICSELECTION コマンド ID](/previous-versions/aa769892\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_ATOMICSELECTIONコマンド ID](/previous-versions/aa769892\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
+## <a name="chtmleditctrlbasesetautourldetectmode"></a><a name="setautourldetectmode"></a>を設定します。
 
-自動 URL 検出のオンとオフを切り替えます。
+URL 自動検出のオンとオフを切り替えます。
 
 ```
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;
@@ -1869,18 +1869,18 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
+*新しい価値*<br/>
 TRUE の場合、URL の自動検出が有効になります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_AUTOURLDETECT_MODE コマンド ID](/previous-versions/aa769893\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_AUTOURLDETECT_MODEコマンド ID](/previous-versions/aa769893\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
+## <a name="chtmleditctrlbasesetbackcolor"></a><a name="setbackcolor"></a>次の項目を使用します。
 
 現在の選択範囲の背景色を設定します。
 
@@ -1891,21 +1891,21 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nColor*<br/>
-色。 「 [IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))」の「 *pvain* 」を参照してください。
+*nカラー*<br/>
+色。 [コマンド ID](/previous-versions/aa769858\(v=vs.85\))の*pvaIn* IDM_BACKCOLOR参照してください。
 
-*szColor*<br/>
-色。 「 [IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))」の「 *pvain* 」を参照してください。
+*sz色*<br/>
+色。 [コマンド ID](/previous-versions/aa769858\(v=vs.85\))の*pvaIn* IDM_BACKCOLOR参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BACKCOLOR_ コマンド ID](/previous-versions/aa769858\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769858\(v=vs.85\))コントロールにIDM_BACKCOLOR_コマンド ID を送信します。
 
-##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
+## <a name="chtmleditctrlbasesetblockformat"></a><a name="setblockformat"></a>を設定します。
 
 現在のブロック書式タグを設定します。
 
@@ -1915,20 +1915,20 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szFormat*<br/>
-Format タグ。
+*sz フォーマット*<br/>
+書式タグ。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BLOCKFMT_COMMAND ID](/previous-versions/aa769883\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769883\(v=vs.85\))コントロールに IDM_BLOCKFMT_command ID を送信します。
 
-##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
+## <a name="chtmleditctrlbasesetbookmark"></a><a name="setbookmark"></a>をクリックします。
 
-現在の選択またはカーソル位置にブックマークアンカーを作成します。
+現在の選択範囲またはカーソル位置にブックマーク アンカーを作成します。
 
 ```
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;
@@ -1936,20 +1936,20 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szAnchorName*<br/>
+*アンカー名*<br/>
 アンカー名。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_BOOKMARKコマンド ID](/previous-versions/aa769873\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
+## <a name="chtmleditctrlbasesetcsseditinglevel"></a><a name="setcsseditinglevel"></a>を編集します。
 
-エディターがサポートする CSS レベル (CSS1 または css) を選択します (存在する場合)。
+エディタがサポートする CSS レベル (CSS1 または CSS2) があれば、そのレベルを選択します。
 
 ```
 HRESULT SetCSSEditingLevel(short nLevel) const;
@@ -1957,20 +1957,20 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nLevel*<br/>
-CSS レベル。 CSS のサポートが不要な場合は、0を渡します。
+*nレベル*<br/>
+CSS レベル。 CSS サポートを希望しない場合は 0 を渡します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_CSSEDITING_LEVEL コマンド ID](/previous-versions/aa769903\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_CSSEDITING_LEVELコマンド ID](/previous-versions/aa769903\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
+## <a name="chtmleditctrlbasesetdefaultcomposesettings"></a><a name="setdefaultcomposesettings"></a>設定既定の構成設定
 
-既定の作成設定を設定するには、このメソッドを呼び出します。
+既定の作成設定を設定します。
 
 ```
 HRESULT SetDefaultComposeSettings(
@@ -1985,38 +1985,38 @@ HRESULT SetDefaultComposeSettings(
 
 ### <a name="parameters"></a>パラメーター
 
-*szFontName*<br/>
+*フォント名*<br/>
 フォント名。
 
-*nFontSize*<br/>
-フォントサイズ。
+*フォントサイズ*<br/>
+フォント サイズ。
 
-*crFontColor*<br/>
+*カラーフォントカラー*<br/>
 フォントの色。
 
-*crFontBgColor*<br/>
+*クフォントブブカラー*<br/>
 フォントの背景色。
 
-*bBold*<br/>
-太字のテキストの場合は TRUE を渡します。
+*bボールド*<br/>
+太字のテキストには TRUE を渡します。
 
 *bItalic*<br/>
 斜体のテキストに TRUE を渡します。
 
-*bUnderline*<br/>
+*b アンダーライン*<br/>
 下線付きのテキストには TRUE を渡します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_COMPOSESETTINGS コマンド ID](/previous-versions/aa769901\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_COMPOSESETTINGSコマンド ID](/previous-versions/aa769901\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
+## <a name="chtmleditctrlbasesetdesignmode"></a><a name="setdesignmode"></a>次の項目を使用します。
 
-デザインモードを設定します。
+デザイン モードを設定します。
 
 ```
 BOOL SetDesignMode(BOOL bMode) const;
@@ -2024,16 +2024,16 @@ BOOL SetDesignMode(BOOL bMode) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bMode*<br/>
-TRUE の場合、デザインモードをオンにします。
+*bモード*<br/>
+TRUE の場合、デザイン モードがオンになります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE、失敗した場合は FALSE を返します。
+成功した場合は TRUE を返し、失敗した場合は FALSE を返します。
 
-##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI
+## <a name="chtmleditctrlbasesetdisableeditfocusui"></a><a name="setdisableeditfocusui"></a>次の項目を使用します。
 
-ハッチ境界線を無効にし、エディットフォーカスを持つ要素の周囲をハンドルします。
+ハッチングされた境界線を無効にし、編集フォーカスのある要素の周囲を処理します。
 
 ```
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;
@@ -2041,18 +2041,18 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合は、要素がデザインモードで "エディットフォーカス" を持っている場合に、サイト選択可能な要素の周囲のハッチ境界線とハンドルを無効にします。つまり、要素のテキストまたは内容を編集できるようになります。
+*新しい価値*<br/>
+TRUE の場合、要素がデザイン モードで "編集フォーカス" を持っている場合、ハッチングされた境界線と、サイトで選択可能な要素の周囲のハンドルを無効にします。つまり、要素のテキストまたは内容を編集できる場合です。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM_DISABLE_EDITFOCUS_UI コマンド ID](/previous-versions/aa769905\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_DISABLE_EDITFOCUS_UIコマンド ID](/previous-versions/aa769905\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML
+## <a name="chtmleditctrlbasesetdocumenthtml"></a><a name="setdocumenthtml"></a>を使用します。
 
 現在のドキュメントの HTML を設定します。
 
@@ -2067,9 +2067,9 @@ HTML。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace
+## <a name="chtmleditctrlbasesetfontface"></a><a name="setfontface"></a>次の文字列を設定します。
 
 現在の選択範囲のフォントを設定します。
 
@@ -2084,15 +2084,15 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM FONTNAME コマンド ID](/previous-versions/aa769880\(v=vs.85\))を送信します。
+このメソッドは[、IDM_FONTNAMEコマンド ID](/previous-versions/aa769880\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setfontsize"></a>CHtmlEditCtrlBase:: SetFontSize
+## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>次の文字列を設定します。
 
-現在の選択範囲のフォントサイズを設定します。
+現在の選択範囲のフォント サイズを設定します。
 
 ```
 HRESULT SetFontSize(unsigned short size) const;
@@ -2101,19 +2101,19 @@ HRESULT SetFontSize(unsigned short size) const;
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-HTML フォントサイズ (1-7)。 値が0の場合、フォントサイズは1に設定されます。
+HTML フォント サイズ (1 ~ 7)。 値 0 を指定すると、フォント サイズは 1 に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FONTSIZEコマンド ID](/previous-versions/aa769881\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
+## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>次の色を設定します。
 
-現在の選択範囲の前景 (テキスト) の色を設定します。
+現在の選択範囲の前景色 (テキスト) を設定します。
 
 ```
 HRESULT SetForeColor(LPCTSTR szColor) const;
@@ -2122,23 +2122,23 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*szColor*<br/>
+*sz色*<br/>
 色。
 
-*nColor*<br/>
+*nカラー*<br/>
 色。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_FORECOLORコマンド ID](/previous-versions/aa769882\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode
+## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>次の手順を実行します。
 
-Microsoft Internet Explorer 5 と互換性があるように貼り付け操作を設定します。
+貼り付け操作を、インターネット エクスプローラ 5 との互換性を設定します。
 
 ```
 HRESULT SetIE5PasteMode(bool bNewValue) const;
@@ -2146,20 +2146,20 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべての貼り付け操作は Internet Explorer 5 と互換性があります。FALSE の場合、貼り付け操作は Internet Explorer 5.5 と互換性があります。
+*新しい価値*<br/>
+TRUE の場合、すべての貼り付け操作は Internet Explorer 5 と互換性があります。FALSE の場合、貼り付け操作は、インターネット エクスプ ローラー 5.5 と互換性があります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM IE50_PASTE_MODE コマンド ID](/previous-versions/aa769923\(v=vs.85\))を送信します。
+このメソッドは[、IDM_IE50_PASTE_MODEコマンド ID](/previous-versions/aa769923\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
+## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>を設定します。
 
-移動またはサイズ変更の完了時にのみ更新するのではなく、サイズ変更中または移動中に、WebBrowser が要素の外観を継続的に更新するようにします。
+移動またはサイズ変更の完了時にのみ更新するのではなく、サイズ変更または移動操作中に WebBrowser が要素の外観を継続的に更新するようにします。
 
 ```
 HRESULT SetLiveResize(bool bNewValue) const;
@@ -2167,18 +2167,18 @@ HRESULT SetLiveResize(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、WebBrowser はサイズ変更中または移動操作中に要素の外観を継続的に更新します。FALSE の場合、移動またはサイズ変更の完了時にのみ更新されます。
+*新しい価値*<br/>
+TRUE の場合、サイズ変更または移動操作中に要素の外観が継続的に更新されます。FALSE の場合、移動またはサイズ変更の完了時にのみ更新されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM LIVERESIZE コマンド ID](/previous-versions/aa769928\(v=vs.85\))を送信します。
+このメソッドは[、IDM_LIVERESIZEコマンド ID](/previous-versions/aa769928\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setmultiselect"></a>CHtmlEditCtrlBase:: SetMultiSelect
+## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>を選択します。
 
 複数選択を有効にします。
 
@@ -2188,20 +2188,20 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、ユーザーが SHIFT キーまたは CTRL キーを押したときに、複数のサイトから選択可能な要素を選択できます。
+*新しい価値*<br/>
+TRUE の場合、ユーザーが Shift キーまたは Ctrl キーを押したときに、一度に複数のサイトで選択可能な要素を選択できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM の多重選択コマンド ID](/previous-versions/aa769929\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_MULTIPLESELECTIONコマンド ID](/previous-versions/aa769929\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor
+## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>カーソルを置き換えます。
 
-コマンド WebBrowser がマウスポインターを変更しないようにします。
+マウス ポインタを変更しない WebBrowser を実行します。
 
 ```
 HRESULT SetOverrideCursor(bool bNewValue) const;
@@ -2209,20 +2209,20 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、WebBrowser はマウスポインターを変更しません。
+*新しい価値*<br/>
+TRUE の場合、WebBrowser はマウス ポインタを変更しません。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM OVERRIDE_CURSOR コマンド ID](/previous-versions/aa769932\(v=vs.85\))を送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769932\(v=vs.85\))コントロールにIDM_OVERRIDE_CURSORコマンド ID を送信します。
 
-##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
+## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>次の値を指定します。
 
-挿入と上書きの間のテキスト入力モードを切り替えます。
+挿入と上書きの間でテキスト入力モードを切り替えます。
 
 ```
 HRESULT SetOverwriteMode(bool bMode) const;
@@ -2230,20 +2230,20 @@ HRESULT SetOverwriteMode(bool bMode) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bMode*<br/>
-TRUE の場合、テキスト入力モードは overwrite です。FALSE の場合、テキスト入力モードは insert です。
+*bモード*<br/>
+TRUE の場合、テキスト入力モードは上書きされます。FALSE の場合、テキスト入力モードが挿入されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM の上書きコマンド ID](/previous-versions/aa770016\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_OVERWRITEコマンド ID](/previous-versions/aa770016\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign
+## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>デザインの設定
 
-デザインモードで非表示の要素を非表示にします。
+デザイン モードで非表示の要素を非表示にします。
 
 ```
 HRESULT SetRespectVisInDesign(bool bNewValue) const;
@@ -2251,20 +2251,20 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、可視性が "hidden" または display プロパティが "none" に設定されている要素は、デザインモードとブラウズモードの両方で表示されません。FALSE の場合、これらの要素はブラウズモードでのみ表示されます。
+*新しい価値*<br/>
+TRUE の場合、表示設定が "非表示" または "none" に設定された表示プロパティを持つ要素は、デザイン モードとブラウズ モードの両方で表示されません。FALSE の場合、これらの要素はブラウズ モードでのみ表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM RESPECTVISIBILITY_INDESIGN コマンド ID](/previous-versions/aa770023\(v=vs.85\))を送信します。
+このメソッドは[、IDM_RESPECTVISIBILITY_INDESIGNコマンド ID](/previous-versions/aa770023\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags
+## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>次の項目を配置します。
 
-プロパティを`styleFloat`持つすべての要素のグリフを表示します。
+プロパティを持つすべての要素のグリフを`styleFloat`表示します。
 
 ```
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
@@ -2272,20 +2272,20 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、プロパティを`styleFloat`持つすべての要素のグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、プロパティを持つすべての要素の`styleFloat`グリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags
+## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>をクリックします。
 
-ドキュメント内のすべてのタグの場所を表示するグリフを表示します。
+ドキュメント内のすべてのタグの位置を示すグリフを表示します。
 
 ```
 HRESULT SetShowAllTags(bool bNewValue) const;
@@ -2293,20 +2293,20 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、文書内のすべてのタグの位置を示すグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、ドキュメント内のすべてのタグの位置を示すグリフが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWALLTAGSコマンド ID](/previous-versions/aa769948\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags
+## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>ウィンドウタグを表示します。
 
-すべての区分タグのグリフを表示します。
+すべてのエリア タグのグリフを表示します。
 
 ```
 HRESULT SetShowAreaTags(bool bNewValue) const;
@@ -2314,18 +2314,18 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべての区分タグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべてのエリア タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWAREATAGSコマンド ID](/previous-versions/aa769949\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase:: SetShowBRTags
+## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>次の項目を使用します。
 
 すべての br タグのグリフを表示します。
 
@@ -2335,20 +2335,20 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべての br タグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべての br タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWWBRTAGSコマンド ID](/previous-versions/aa769956\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase:: Setshowコメントタグ
+## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>タグを表示します。
 
-すべてのコメントタグのグリフを表示します。
+すべてのコメント タグのグリフを表示します。
 
 ```
 HRESULT SetShowCommentTags(bool bNewValue) const;
@@ -2356,20 +2356,20 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべてのコメントタグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべてのコメント タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM SHOWコメントタグコマンド ID](/previous-versions/aa769950\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWCOMMENTTAGSコマンド ID](/previous-versions/aa769950\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase:: Setshow誤 Ctags
+## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>次の項目を使用します。
 
-Microsoft Internet Explorer 4.0 に表示されているすべてのタグを表示します。
+インターネット エクスプローラ 4.0 に表示されているすべてのタグを表示します。
 
 ```
 HRESULT SetShowMiscTags(bool bNewValue) const;
@@ -2377,20 +2377,20 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合は、Microsoft Internet Explorer 4.0 に表示されるすべてのタグが表示されます。
+*新しい価値*<br/>
+TRUE の場合は、インターネット エクスプローラ 4.0 に表示されているすべてのタグが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM SHOW誤 CTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa769952\(v=vs.85\))コントロールにIDM_SHOWMISCTAGSコマンド ID を送信します。
 
-##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase:: SetShowScriptTags
+## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>次の要素を使用します。
 
-すべてのスクリプトタグのグリフを表示します。
+すべてのスクリプト タグのグリフを表示します。
 
 ```
 HRESULT SetShowScriptTags(bool bNewValue) const;
@@ -2398,20 +2398,20 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべてのスクリプトタグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべてのスクリプト タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_SHOWSCRIPTTAGSコマンド ID](/previous-versions/aa769953\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags
+## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>次の項目を使用します。
 
-すべてのスタイルタグのグリフを表示します。
+すべてのスタイル タグのグリフを表示します。
 
 ```
 HRESULT SetShowStyleTags(bool bNewValue) const;
@@ -2419,20 +2419,20 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、すべてのスタイルタグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべてのスタイル タグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWSTYLETAGSコマンド ID](/previous-versions/aa769954\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags
+## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>タグを表示します。
 
-すべての不明なタグのグリフを表示します。
+不明なすべてのタグのグリフを表示します。
 
 ```
 HRESULT SetShowUnknownTags(bool bNewValue) const;
@@ -2440,18 +2440,18 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bNewValue*<br/>
-TRUE の場合、不明なすべてのタグのグリフが表示されます。
+*新しい価値*<br/>
+TRUE の場合、すべての不明なタグのグリフを表示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、WebBrowser コントロールに[IDM SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))を送信します。
+このメソッドは[、IDM_SHOWUNKNOWNTAGSコマンド ID](/previous-versions/aa769955\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
+## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>テキストエリア
 
 現在の選択範囲の複数行テキスト入力コントロールを上書きします。
 
@@ -2466,15 +2466,15 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM TEXTAREA コマンド ID](/previous-versions/aa769986\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_TEXTAREAコマンド ID](/previous-versions/aa769986\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="textbox"></a>CHtmlEditCtrlBase:: TextBox
+## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>テキストボックス
 
-現在選択されているテキストコントロールを上書きします。
+現在の選択範囲のテキスト コントロールを上書きします。
 
 ```
 HRESULT TextBox(LPCTSTR szId = NULL) const;
@@ -2483,17 +2483,17 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-テキストコントロールの ID。
+テキスト コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM TEXTBOX コマンド ID](/previous-versions/aa769980\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_TEXTBOXコマンド ID](/previous-versions/aa769980\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="unbookmark"></a>CHtmlEditCtrlBase:: UnBookmark
+## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>をクリックします。
 
 現在の選択範囲からブックマークを削除します。
 
@@ -2503,13 +2503,13 @@ HRESULT UnBookmark() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM UNBOOKMARK コマンド ID](/previous-versions/aa770034\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNBOOKMARKコマンド ID](/previous-versions/aa770034\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="underline"></a>CHtmlEditCtrlBase:: アンダーライン
+## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>下線
 
 現在の選択範囲を下線付きと下線なしの間で切り替えます。
 
@@ -2519,13 +2519,13 @@ HRESULT Underline() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM 下線のコマンド ID](/previous-versions/aa770035\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、webBrowser](/previous-versions/aa770035\(v=vs.85\))コントロールにIDM_UNDERLINEコマンド ID を送信します。
 
-##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
+## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>リンクを解除します。
 
 現在の選択範囲からハイパーリンクを削除します。
 
@@ -2535,15 +2535,15 @@ HRESULT Unlink() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM UNLINK コマンド ID](/previous-versions/aa770037\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNLINKコマンド ID](/previous-versions/aa770037\(v=vs.85\))を WebBrowser コントロールに送信します。
 
-##  <a name="unorderlist"></a>CHtmlEditCtrlBase:: UnorderList
+## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>次のリストを並べ替えます。
 
-順序付きリストと通常のフォーマットブロックの間で現在選択されている項目を切り替えます。
+現在の選択を、順序付きリストと標準書式ブロックの間で切り替えます。
 
 ```
 HRESULT UnorderList(LPCTSTR szId = NULL) const;
@@ -2552,17 +2552,17 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ### <a name="parameters"></a>パラメーター
 
 *szId*<br/>
-順序付けられていないリストの ID。
+順序なしリストの ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 [IDM UNORDERLIST コマンド ID](/previous-versions/aa769987\(v=vs.85\))を WebBrowser コントロールに送信します。
+このメソッドは[、IDM_UNORDERLISTコマンド ID](/previous-versions/aa769987\(v=vs.85\))を WebBrowser コントロールに送信します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[HTML 編集のサンプル](../../overview/visual-cpp-samples.md)

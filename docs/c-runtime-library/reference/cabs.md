@@ -1,9 +1,10 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _cabs
-apilocation:
+- _o__cabs
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,27 +16,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341068"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913349"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 複素数の絶対値を計算します。
 
@@ -49,24 +50,26 @@ double _cabs(
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*<br/>
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
-**_cabs**成功した場合、その引数の絶対値を返します。 オーバーフローについては、 **_cabs**返します**HUGE_VAL**設定と**errno**に**ERANGE**します。 エラー処理は [_matherr](matherr.md) で変更できます。
+**_cabs**は、成功した場合、引数の絶対値を返します。 オーバーフローの場合、 **_cabs**は**HUGE_VAL**を返し、 **errno**を**ERANGE**に設定します。 エラー処理は [_matherr](matherr.md) で変更できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Cabs**関数型の構造体である必要があります、複素数の絶対値を計算する[_complex](../../c-runtime-library/standard-types.md)します。 構造体*z*は実際のコンポーネントで構成されます*x*と虚数*y*します。 呼び出し **_cabs**と同等の式の値を生成`sqrt( z.x * z.x + z.y * z.y )`します。
+**_Cabs**関数は、複素数の絶対値を計算します。この値は[_complex](../../c-runtime-library/standard-types.md)型の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **_Cabs**を呼び出すと、式`sqrt( z.x * z.x + z.y * z.y )`の値と等価の値が生成されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

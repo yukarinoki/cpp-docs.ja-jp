@@ -1,9 +1,10 @@
 ---
 title: _fwrite_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fwrite_nolock
-apilocation:
+- _o__fwrite_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6856dd2af0536deacfbef6b02c7cdf38d41f9c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919431"
 ---
-# <a name="fwritenolock"></a>_fwrite_nolock
+# <a name="_fwrite_nolock"></a>_fwrite_nolock
 
 スレッドをロックせずにストリームにデータを書き込みます。
 
@@ -48,7 +53,7 @@ size_t _fwrite_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 書き込むデータへのポインター。
 
 *size*<br/>
@@ -57,16 +62,18 @@ size_t _fwrite_nolock(
 *count*<br/>
 書き込む項目の最大数。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 [fwrite](fwrite.md) と同じです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、ロックしないバージョンの**fwrite**します。 これは**fwrite**いない他のスレッドによる干渉から保護には、する点を除いて。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fwrite**のロックされていないバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fwrite**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -74,7 +81,7 @@ size_t _fwrite_nolock(
 |--------------|---------------------|
 |**_fwrite_nolock**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

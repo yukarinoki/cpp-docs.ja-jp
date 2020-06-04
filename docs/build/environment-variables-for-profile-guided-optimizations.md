@@ -6,69 +6,69 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195274"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>ガイド付き最適化のプロファイルの環境変数
 
-作成されたイメージのテスト シナリオに影響する 3 つの環境変数がある **/LTCG:PGI**プロファイル ガイド付き最適化の。
+ガイド付き最適化のプロファイルでは、 **/LTCG:PGI** で作成されるイメージでテスト シナリオに影響を与える環境変数が 3 つあります。
 
-- **PogoSafeMode**アプリケーションのプロファイリングに高速モードとセーフ モードを使用するかどうかを指定します。
+- **PogoSafeMode** では、アプリケーションのプロファイリングに高速モードとセーフ モードのどちらを使用するかを指定します。
 
-- **VCPROFILE_ALLOC_SCALE**プロファイラーで使用するための追加のメモリを追加します。
+- **VCPROFILE_ALLOC_SCALE** では、プロファイラーが使用するためのメモリが追加されます。
 
-- **VCPROFILE_PATH** .pgc ファイルを使用するフォルダーを指定することができます。
+- **VCPROFILE_PATH** では、.pgc ファイルで使用されるフォルダーを指定できます。
 
-**PogoSafeMode と VCPROFILE_ALLOC_SCALE 環境変数は、Visual Studio 2015 以降では非推奨します。** リンカー オプション[/GENPROFILE または/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)と[/USEPROFILE](reference/useprofile.md)これらの環境変数として同じリンカーの動作を指定します。
+**The PogoSafeMode and VCPROFILE_ALLOC_SCALE 環境変数は Visual Studio 2015 より非推奨になっています。** リンカー オプションの [/GENPROFILE または /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) および [/USEPROFILE](reference/useprofile.md) では、これらの環境変数と同じリンカー動作が指定されます。
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-この環境変数が非推奨とされます。 使用して、 **EXACT**または**noexact は、** 引数 **/GENPROFILE**または **/FASTGENPROFILE**この動作を制御します。
+この環境変数は非推奨です。 **EXACT** または **NOEXACT** 引数を **/GENPROFILE** または **/FASTGENPROFILE** に使用し、この動作を制御します。
 
-設定またはオフ、 **PogoSafeMode** x86 上でアプリケーションのプロファイリングに高速モードとセーフ モードを使用するかどうかを指定する環境変数のシステム。
+**PogoSafeMode** 環境変数を解除するか設定し、x86 システムのアプリケーション プロファイルで高速モードを使用するか、セーフ モードを使用するか指定します。
 
-最適化のガイド付きプロファイル (PGO) が、プロファイリング フェーズ中に 2 つのモードを持つ:*高速モード*と*セーフ モード*します。 使用して高速モードでプロファイリングを行う、ときに、 **INC**命令データ カウンター数を増やします。 **INC**命令は高速化が、スレッド セーフではありません。 セーフ モードでプロファイリングを行う、ときに使用して、 **LOCK INC**命令データ カウンター数を増やします。 **LOCK INC**命令と同じ機能を持つ、 **INC**よりも低速ですが、命令があり、スレッド セーフで、 **INC**命令。
+ガイド付き最適化のプロファイル (PGO: Profile-Guided Optimization) では、プロファイリング フェーズで*高速モード*と*セーフ モード*の 2 つのモードを使用できます。 高速モードでプロファイリングを行う場合は、**INC** 命令を使用してデータ カウンター数を増やします。 **INC** 命令は高速ですが、スレッド セーフではありません。 セーフ モードでプロファイリングを行う場合は、**LOCK INC** 命令を使用してデータ カウンター数を増やします。 **LOCK INC** 命令は **INC** 命令と同じ機能を持ち、スレッド セーフですが、**INC** 命令より低速です。
 
-既定では、PGO プロファイリングは高速モードで動作します。 **PogoSafeMode**がセーフ モードを使用するかどうかにのみ必要です。
+既定では、PGO プロファイリングは高速モードで動作します。 **PogoSafeMode** は、セーフ モードを使用する場合にのみ必要です。
 
-セーフ モードでの PGO プロファイリングを実行する、環境変数を使用する必要がありますか**PogoSafeMode**かリンカー スイッチ **/PogoSafeMode**、システムによって異なります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 X86 でプロファイリングを実行するかどうか、コンピューター、リンカーを使用することがあります切り替えるか、設定、 **PogoSafeMode**最適化プロセスを開始する前に、任意の値を環境変数。
+PGO プロファイリングをセーフ モードで実行するには、システムに応じて、環境変数 **PogoSafeMode** かリンカー スイッチ **/PogoSafeMode** のどちらかを使用する必要があります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 x86 コンピューターでプロファイリングを実行する場合は、最適化処理を開始する前に、リンカー スイッチを使用するか、**PogoSafeMode** 環境変数を任意の値に設定できます。
 
 ### <a name="pogosafemode-syntax"></a>PogoSafeMode 構文
 
-> **set PogoSafeMode**[**=**_value_]
+> **set PogoSafeMode**[ **=** _value_]
 
-設定**PogoSafeMode**セーフ モードを有効にする任意の値にします。 前の値をクリアして、高速モードを再度有効にする値を設定します。
+**PogoSafeMode** を任意の値に設定し、セーフ モードを有効にします。 値なしで設定すると、前の値が解除され、高速モードが再び有効になります。
 
-## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+## <a name="vcprofile_alloc_scale"></a>VCPROFILE_ALLOC_SCALE
 
-この環境変数が非推奨とされます。 使用して、 **MEMMIN**と**MEMMAX**引数 **/GENPROFILE**または **/FASTGENPROFILE**この動作を制御します。
+この環境変数は非推奨です。 **MEMMIN** および **MEMMAX** 引数を **/GENPROFILE** または **/FASTGENPROFILE** に使用し、この動作を制御します。
 
-変更、 **VCPROFILE_ALLOC_SCALE**プロファイル データを保持するメモリの量を変更する環境変数が割り当てられます。 まれなケースではありません十分なメモリをサポートするために使用可能なテスト シナリオを実行するときに、プロファイル データを収集します。 その場合、メモリの量を増やすを設定して**VCPROFILE_ALLOC_SCALE**します。 不足しているメモリがあることを示すテストの実行中にエラー メッセージを受信する場合に大きな値を割り当てる**VCPROFILE_ALLOC_SCALE**まで、メモリ不足のエラーのない完全なテストを実行します。
+**VCPROFILE_ALLOC_SCALE** 環境変数を変更し、プロファイル データを保持するために割り当てられるメモリ量を変更します。 テスト シナリオの実行時、メモリが足りず、プロファイル データを収集できないことがまれにあります。 そのような場合、**VCPROFILE_ALLOC_SCALE** を設定し、メモリ量を増加できます。 テスト実行中、エラー メッセージが表示され、メモリが足りないことが判明した場合、メモリ不足エラーなしでテスト実行が完了されるまで、**VCPROFILE_ALLOC_SCALE** に割り当てる値を大きくしてください。
 
-### <a name="vcprofileallocscale-syntax"></a>VCPROFILE_ALLOC_SCALE 構文
+### <a name="vcprofile_alloc_scale-syntax"></a>VCPROFILE_ALLOC_SCALE 構文
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **set VCPROFILE_ALLOC_SCALE**[ __=__ *scale_value*]
 
-*Scale_value*パラメーターは、テスト シナリオの実行対象とするメモリの量のスケール ファクター。  既定値は 1 です。 たとえば、このコマンドラインは、2 にスケール ファクターを設定します。
+*scale_value* パラメーターは、テスト シナリオの実行に必要なメモリ量を調整するパラメーターです。  既定値は 1 です。 たとえば、次のコマンド ラインではスケール ファクターが 2 に設定されます。
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
-## <a name="vcprofilepath"></a>VCPROFILE_PATH
+## <a name="vcprofile_path"></a>VCPROFILE_PATH
 
-使用して、 **VCPROFILE_PATH** .pgc ファイルを作成するディレクトリを指定する環境変数。 既定では、.pgc ファイルは、プロファイリング中、バイナリと同じディレクトリに作成されます。 ただし、バイナリの絶対パスが存在しない場合、バイナリがビルドされた場所から別のコンピューターにプロファイルのシナリオを実行すると、大文字と小文字をすることがある、設定できます**VCPROFILE_PATH**ターゲット コンピューター上に存在するパスにします。
+**VCPROFILE_PATH** 環境変数を使用し、.pgc ファイルを作成するディレクトリを指定します。 既定では、.pgc プロファイルはプロファイリング中のバイナリと同じディレクトリで作成されます。 ただし、バイナリが構築されたコンピューターとは別のコンピューターでプロファイル シナリオを実行するときにあることですが、バイナリの絶対パスが存在しない場合、ターゲット コンピューターに存在するパスに **VCPROFILE_PATH** を設定できます。
 
-### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH 構文
+### <a name="vcprofile_path-syntax"></a>VCPROFILE_PATH 構文
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **set VCPROFILE_PATH**[ **=** _path_]
 
-設定、*パス*.pgc ファイルを追加するディレクトリ パスのパラメーター。 たとえば、このコマンドラインは、C:\profile にフォルダーを設定します。
+.pgc ファイルを追加するディレクトリ パスに *path* パラメーターを設定します。 たとえば、このコマンド ラインではフォルダーが C:\profile に設定されます。
 
 `set VCPROFILE_PATH=c:\profile`
 
 ## <a name="see-also"></a>関連項目
 
 [ガイド付き最適化のプロファイル](profile-guided-optimizations.md)<br/>
-[/GENPROFILE と/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE と /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

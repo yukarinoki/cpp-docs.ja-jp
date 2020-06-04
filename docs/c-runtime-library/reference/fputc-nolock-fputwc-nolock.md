@@ -1,10 +1,12 @@
 ---
 title: _fputc_nolock、_fputwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fputwc_nolock
 - _fputc_nolock
-apilocation:
+- _o__fputc_nolock
+- _o__fputwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fputc_nolock
 - fputwc_nolock
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e25539bf6c6d590a787615e091ec68753cd1c93e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333132"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920136"
 ---
-# <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock、_fputwc_nolock
+# <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock、_fputwc_nolock
 
 スレッドをロックせずにストリームに文字を書き込みます。
 
@@ -59,21 +65,23 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 書き込む文字。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 これらの各関数は、書き込まれた文字を返します。 エラーの詳細については、「[fputc、fputwc](fputc-fputwc.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_fputc_nolock**と **_fputwc_nolock**と同じ**fputc**と**fputwc**をそれぞれで干渉から保護されない点を除いて、他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_fputc_nolock**と **_fputwc_nolock**はそれぞれ、他のスレッドによる干渉から保護されない点を除いて、 **fputc**および**fputwc**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **_fputc_nolock** UNICODE ストリームへ現在出力をサポートしません。
+ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **_fputc_nolock**は、現在 UNICODE ストリームへの出力をサポートしていません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -88,7 +96,7 @@ wint_t _fputwc_nolock(
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

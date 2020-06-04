@@ -5,24 +5,24 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 776f715f72d2e3b6b3841856323a52953e9c5344
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376340"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 名前空間関数
 
 |||
 |-|-|
-|[copy](#copy)|[copy_async](#copy_async)|
+|[コピー](#copy)|[copy_async](#copy_async)|
 
-##  <a name="copy"></a>  copy 関数 (concurrency::graphics Namespace)
+## <a name="copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>コピー関数 (同時実行::グラフィックス名前空間)
 
 ソースのテクスチャをターゲットのバッファーにコピーするか、またはソースのバッファーをターゲットのバッファーにコピーします。 この関数の一般的な形式は `copy(src, dest)` です。
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -133,10 +133,10 @@ void copy (
 *_Dst_offset*<br/>
 コピー開始位置でのコピー先へのオフセット。
 
-*InputIterator*<br/>
-入力列挙子の型。
+*入力反復器*<br/>
+入力反復子の型。
 
-*OutputIterator*<br/>
+*出力反復器*<br/>
 出力反復子の型。
 
 *_Src*<br/>
@@ -157,11 +157,11 @@ void copy (
 *last*<br/>
 ソース コンテナーへの終了の反復子。
 
-##  <a name="copy_async"></a>  copy_async 関数 (concurrency::graphics Namespace)
+## <a name="copy_async-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async関数 (同時実行::グラフィックス名前空間)
 
-コピー先のバッファーにソース テクスチャを非同期的にコピーまたは元のバッファーをコピー先のバッファーにコピーを返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。
+ソース テクスチャをコピー先のバッファーに非同期にコピーするか、またはソース バッファーをコピー先バッファーにコピーし、待機できる[completion_future](completion-future-class.md)オブジェクトを返します。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -268,10 +268,10 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 *_Dst_offset*<br/>
 コピー開始位置でのコピー先へのオフセット。
 
-*InputIterator*<br/>
-入力列挙子の型。
+*入力反復器*<br/>
+入力反復子の型。
 
-*OutputIterator*<br/>
+*出力反復器*<br/>
 出力反復子の型。
 
 *_Src*<br/>
@@ -296,7 +296,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 
 **ヘッダー:** amp_graphics.h
 
-**名前空間:** Concurrency::graphics
+**名前空間:** 同時実行::グラフィックス
 
 ## <a name="see-also"></a>関連項目
 

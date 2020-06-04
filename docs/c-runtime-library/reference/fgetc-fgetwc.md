@@ -1,10 +1,12 @@
 ---
 title: fgetc、fgetwc
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+- _o_fgetc
+- _o_fgetwc
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334009"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912866"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -54,24 +60,26 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**fgetc**として読み取られた文字を返します、 **int**返しますまたは**EOF**エラーまたはファイルの終わりを示します。 **fgetwc**から制御が戻るとして、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応する値または**WEOF**エラーまたはファイルの終わりを示します。 両方の関数を使用して、 **feof**または**ferror**エラーと、ファイルの終わり条件とを区別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 場合*ストリーム*は**NULL**、 **fgetc**と**fgetwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EOF**します。
+**fgetc**は、 **int**として読み取られた文字を返すか、または**EOF**を返してエラーまたはファイルの末尾を示します。 **fgetwc**は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返します。または、エラーまたはファイルの末尾を示す**WEOF**を返します。 どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 *Stream*が**NULL**の場合、 **fgetc**および**fgetwc**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関連付けられているファイルの現在位置から 1 つの文字を読み取りますこれらの各関数*ストリーム*します。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
+これらの各関数は、*ストリーム*に関連付けられているファイルの現在位置から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**fgetc**と等価**getc**関数とマクロではなく関数としてのみ実装されます。
+**fgetc**は**getc**に相当しますが、関数およびマクロとしてではなく、関数としてのみ実装されます。
 
-**fgetwc**のワイド文字バージョンは、 **fgetc**; 読み取り**c**マルチバイト文字またはワイド文字かどうかに従ってとして*ストリーム*で開くテキスト モードまたはバイナリ モードの場合は。
+**fgetwc**は、 **fgetc**のワイド文字バージョンです。*ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに応じて、 **c**はマルチバイト文字またはワイド文字として読み取られます。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。
 
 テキスト モードとバイナリ モードのワイド文字とマルチバイト文字の処理の詳細については、「[Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」 (テキスト モードとバイナリ モードの Unicode ストリーム入出力) を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,7 +94,7 @@ wint_t fgetwc(
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -125,7 +133,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>入力: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>入力: crt_fgetc.txt
 
 ```Input
 Line one.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381105"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738428"
 ---
 # <a name="compiler-error-c3488"></a>コンパイラ エラー C3488
 
@@ -29,11 +29,11 @@ ms.locfileid: "62381105"
 
 - capture 句に値によって変数を渡します。 (これにより、ラムダ式の動作が変更される可能性があります。)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、変数 `n` への参照が、既定モードが参照渡しであるラムダ式の capture 句にあるため、C3488 が生成されます。
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -43,11 +43,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3488 について考えられる 4 つの解決策を示します。
 
-```
+```cpp
 // C3488b.cpp
 
 int main()
@@ -72,6 +72,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

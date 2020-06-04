@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-ms.openlocfilehash: 0abad1b98ff4782f077312752603ec17fd611c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92702864a00455e4b70f00dfc9988bfb754e2e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183281"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>リンカー ツールの警告 LNK4197
 
-> エクスポート '*exportname*' 複数回; 最初の仕様を使用して指定されました。
+> export '*exportname*' が複数回指定されました。最初の仕様を使用する
 
-エクスポートが複数の指定とさまざまな方法です。 リンカーは、最初の仕様を使用し、残りの部分を無視します。
+エクスポートは複数の異なる方法で指定されます。 リンカーは最初の仕様を使用し、残りは無視します。
 
-C ランタイム ライブラリを再構築する場合は、このメッセージを無視できます。
+C ランタイムライブラリを再構築する場合は、このメッセージを無視してもかまいません。
 
-エクスポートが複数回にまったく同じ方法を指定する場合、リンカーは警告を発行しません。
+エクスポートが同じ方法で複数回指定されている場合、リンカーは警告を発行しません。
 
 たとえば、.def ファイルの次の内容では、この警告が発生します。
 
@@ -33,6 +33,6 @@ EXPORTS
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. 同じエクスポートが指定されたコマンドラインの両方 (エクスポートによって:) および .def ファイル。
+1. コマンドラインで同じエクスポートが指定されている (export:).def ファイル内にあります。
 
-2. 同じエクスポートは、異なる属性を持つ .def ファイルに 2 回表示されます。
+2. .Def ファイルには、属性が異なる同じエクスポートが2回記述されています。

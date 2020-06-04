@@ -1,14 +1,20 @@
 ---
 title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349278"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920046"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
-文字列を double 型に変換 (**_atodbl**)、long double (**_atoldbl**)、または浮動小数点数 (**_atoflt**)。
+文字列を double (**_atodbl**)、long double (**_atoldbl**)、または float (**_atoflt**) に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -76,7 +86,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 文字列を浮動小数点値に変換することで生成される double 型、long double 型、または float 型の値。 これらの値は構造体でラップされます。
 
-*str*<br/>
+*引数*<br/>
 浮動小数点値に変換するために解析する文字列。
 
 *locale*<br/>
@@ -84,21 +94,23 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は 0 を返します。 可能性のあるエラー コードは、 **_UNDERFLOW**または **_OVERFLOW**、ヘッダー ファイルで定義されている\<math.h >。
+処理が正常に終了した場合は 0 を返します。 考えられるエラーコードは、 **_UNDERFLOW**または **_OVERFLOW**であり、ヘッダー \<ファイルの math. h> で定義されています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、文字列を浮動小数点値に変換します。 これらの関数の違い、 **atof**ファミリの関数は、これらの関数は浮動小数点コードを生成しないと、ハードウェア例外は発生しません。 代わりに、エラー状態がエラー コードとして報告されます。
+これらの関数は、文字列を浮動小数点値に変換します。 これらの関数と**atof**ファミリの関数の違いは、これらの関数は浮動小数点コードを生成せず、ハードウェア例外を発生させないことです。 代わりに、エラー状態がエラー コードとして報告されます。
 
-文字列には、浮動小数点値として有効な解釈がない場合*値*と戻り値の 0 に設定されている値は 0 です。
+文字列に浮動小数点値として有効な解釈がない場合、*値*は0に設定され、戻り値は0になります。
 
-これらの関数のバージョン、 **_l**サフィックスを使用する点を除いて、サフィックスがない、バージョン、*ロケール*現在のスレッドではなくに渡されるパラメーターロケール。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて、サフィックスが付いていないバージョンと同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
-|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l**、 **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>例
 
@@ -160,5 +172,5 @@ Return value: 3
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

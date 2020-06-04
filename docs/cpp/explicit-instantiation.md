@@ -6,18 +6,18 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-ms.openlocfilehash: 45661653b4b8f1a4f94ece1c53aa86f4a431700b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b1290bc23c56c0f35ddd3bb93e37ce4f5f0d2ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361957"
 ---
 # <a name="explicit-instantiation"></a>明示的なインスタンス化
 
 明示的なインスタンス化によって、テンプレート化されたクラスまたは関数をコードで実際に使用することなく、そのインスタンスを作成できます。 配布用のテンプレートを使用するライブラリ (.lib) ファイルを作成する場合は、この方法が便利です。そのため、インスタンス化されないテンプレート定義はオブジェクト (.obj) ファイルに格納されません。
 
-このコードは明示的にインスタンス化`MyStack`の**int**変数と 6 つの項目。
+このコードは`MyStack`**、int**変数と 6 つの項目を明示的にインスタンス化します。
 
 ```cpp
 template class MyStack<int, 6>;
@@ -31,9 +31,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );
 ```
 
-例で示すように、再宣言する特定の型引数を使用して、関数テンプレートをインスタンス化することが明示的に[関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)します。
+関数テンプレートのインスタンス化の例に示すように、特定の型引数を使用して関数[テンプレート](../cpp/function-template-instantiation.md)を明示的にインスタンス化して再宣言できます。
 
-使用することができます、 **extern**メンバーの自動インスタンス化されないようにするキーワード。 例:
+**extern**キーワードを使用すると、メンバーの自動インスタンス化を防ぐことができます。 次に例を示します。
 
 ```cpp
 extern template class MyStack<int, 6>;
@@ -45,10 +45,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );
 ```
 
-使用することができます、 **extern**キーワードをコンパイラがオブジェクトの 1 つ以上のモジュールで、同じインスタンス化コードを生成することを防止します。 関数が呼び出される場合には、少なくとも 1 つのリンクされたモジュールで指定した明示的なテンプレート パラメーターを使用して、テンプレート関数をインスタンス化する必要があります。そのようにインスタンス化しないと、プログラムのビルド時にリンカー エラーが発生します。
+**extern**キーワードを使用すると、コンパイラが複数のオブジェクト モジュールで同じインスタンス化コードを生成しないようにすることができます。 関数が呼び出される場合には、少なくとも 1 つのリンクされたモジュールで指定した明示的なテンプレート パラメーターを使用して、テンプレート関数をインスタンス化する必要があります。そのようにインスタンス化しないと、プログラムのビルド時にリンカー エラーが発生します。
 
 > [!NOTE]
->  **Extern**特殊化のキーワードはクラスの本体の外部で定義されているメンバー関数にのみ適用されます。 クラス宣言内で定義されている関数はインライン関数と見なされ、常にインスタンス化されます。
+> 特殊化の**extern**キーワードは、クラス本体の外部で定義されたメンバー関数にのみ適用されます。 クラス宣言内で定義されている関数はインライン関数と見なされ、常にインスタンス化されます。
 
 ## <a name="see-also"></a>関連項目
 

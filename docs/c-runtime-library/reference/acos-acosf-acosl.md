@@ -1,11 +1,12 @@
 ---
 title: acos、acosf、acosl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+- _o_acos
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916887"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -58,27 +63,29 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
--1 から 1 のアーク コサイン (逆余弦) を計算するまでの値します。
+アークコサイン (逆余弦) を計算する-1 ~ 1 の範囲の値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acos**関数のアーク コサインを返します*x* 0 ~ π ラジアンの範囲内です。
+**Acos**関数は、0 ~ πラジアンの範囲の*x*のアークコサインを返します。
 
-既定では場合、 *x*が-1、1 より大きいか小さい**acos**は不定値を返します。
+既定では、 *x*が-1 より小さいか、または1より大きい場合、 **acos**は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **acos**を受け取って返す**float**と**長い****二重**型。 C プログラムで**acos**は、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
+|ルーチン|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 

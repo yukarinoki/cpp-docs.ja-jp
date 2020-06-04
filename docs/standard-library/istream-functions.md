@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458761"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363078"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 関数
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[スワップ](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>スワップ
 
 2 つのストリーム オブジェクトの要素を交換します。
 
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 ストリーム。
 
 *そうです*\
 ストリーム。
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 ストリーム内の空白をスキップします。
 
@@ -57,13 +57,13 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="return-value"></a>戻り値
 
-ストリーム。
+ストリームです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ch`マニピュレーターは、 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**  [](../standard-library/ios-base-class.md#getloc)Elem > > (getloc) のすべての要素を抽出して破棄します。\< **is**( **ctype**\< **Elem**>::**領域**、 **ch**) は true。
+マニピュ`ch`レータは **、ctype** **ctype** \< Elem> >( [getloc](../standard-library/ios-base-class.md#getloc)) [use_facet](../standard-library/basic-filebuf-class.md#open)< 要素を抽出して破棄します。 **は** **(ctype** \< **Elem**>::**スペース** **、ch**) が真です。
 
-この関数は、要素の抽出中にファイルの終わりに達した場合 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。 *_Istr*が返されます。
+この関数は、要素の抽出中にファイルの終わりに達した場合 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。 _Istr返*します*。
 
 ### <a name="example"></a>例
 
@@ -71,4 +71,4 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ## <a name="see-also"></a>関連項目
 
-[\<istream>](../standard-library/istream.md)
+[\<i流>](../standard-library/istream.md)

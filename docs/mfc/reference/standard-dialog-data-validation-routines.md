@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 77b08945c99b9e9e2652a40e5710d8c4e89846b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83e3e215ec8d66321bbac5a4a308b04ef69dc68c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309994"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372899"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準的なダイアログ データ検証ルーチン
 
-このトピックでは、共通の MFC ダイアログ コントロールの使用される標準的なダイアログ データ検証 (DDV) ルーチンを使用します。
+ここでは、MFC のコモン ダイアログ コントロールで使用される標準のダイアログ データ検証 (DDV) ルーチンを示します。
 
 > [!NOTE]
->  標準的なダイアログ データ エクス チェンジ ルーチンは、ヘッダー ファイル afxdd_.h で定義されます。 ただし、アプリケーションでは、afxwin.h を含める必要があります。
+> 標準のダイアログ データ交換ルーチンは、ヘッダー ファイル afxdd_.h で定義されます。 ただし、アプリケーションには afxwin.h を含める必要があります。
 
 ### <a name="ddv-functions"></a>DDV 関数
 
 |||
 |-|-|
-|[DDV_MaxChars](#ddv_maxchars)|指定されたコントロール値の文字の数が、指定された最大を超えていないことを確認します。|
-|[DDV_MinMaxByte](#ddv_minmaxbyte)|指定されたコントロール値を超えていないことを確認、指定された**バイト**範囲。|
-|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|指定されたコントロール値が指定された時間範囲を超えないことを確認します。|
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|指定されたコントロール値を超えていないことを確認、指定された**二重**範囲。|
-|[DDV_MinMaxDWord](#ddv_minmaxdword)|指定されたコントロール値を超えていないことを確認、指定された**DWORD**範囲。|
-|[DDV_MinMaxFloat](#ddv_minmaxfloat)|指定されたコントロール値を超えていないことを確認、指定された**float**範囲。|
-|[DDV_MinMaxInt](#ddv_minmaxint)|指定されたコントロール値を超えていないことを確認、指定された**int**範囲。|
-|[DDV_MinMaxLong](#ddv_minmaxlong)|指定されたコントロール値を超えていないことを確認、指定された**長い**範囲。|
-|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|指定されたコントロール値を超えていないことを確認、指定された**LONGLONG**範囲。|
-|[DDV_MinMaxMonth](#ddv_minmaxmonth)|指定されたコントロール値が指定した日付範囲を超えていないことを確認します。|
-|[DDV_MinMaxShort](#ddv_minmaxshort)|指定されたコントロール値を超えていないことを確認、指定された**短い**範囲。|
-|[DDV_MinMaxSlider](#ddv_minmaxslider)|特定のスライダー コントロールの値が指定された範囲内にあることを確認します。|
-|[DDV_MinMaxUInt](#ddv_minmaxuint)|指定されたコントロール値を超えていないことを確認、指定された**UINT**範囲。|
-|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|指定されたコントロール値がある 2 つの指定した値を確認します。|
-|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|指定されたコントロール値を超えていないことを確認、指定された**ULONGLONG**範囲。|
+|[DDV_MaxChars](#ddv_maxchars)|指定されたコントロール値の文字数が、指定された最大値を超えていないかどうかを確認します。|
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|指定されたコントロール値が、指定された**BYTE**範囲を超えていないかどうかを検証します。|
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|指定されたコントロール値が指定された時間範囲を超えていないかどうかを確認します。|
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|指定されたコントロール値が、指定された**倍精度**範囲を超えていないかどうかを検証します。|
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|指定されたコントロール値が、指定された**DWORD**範囲を超えていないかどうかを確認します。|
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|指定されたコントロール値が、指定された**浮動小数点**数の範囲を超えていないかどうかを検証します。|
+|[DDV_MinMaxInt](#ddv_minmaxint)|指定されたコントロール値が、指定された**int**範囲を超えていないことを検証します。|
+|[DDV_MinMaxLong](#ddv_minmaxlong)|指定されたコントロール値が、指定された**long**範囲を超えていないかどうかを検証します。|
+|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|指定されたコントロール値が、指定された**LONGLONG**範囲を超えていないかどうかを確認します。|
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|指定されたコントロール値が指定された日付範囲を超えていないかどうかを確認します。|
+|[DDV_MinMaxShort](#ddv_minmaxshort)|指定されたコントロール値が、指定された**短い**範囲を超えていないかどうかを検証します。|
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|指定されたスライダー コントロール値が指定された範囲内にあることを確認します。|
+|[DDV_MinMaxUInt](#ddv_minmaxuint)|指定されたコントロール値が、指定された**UINT**範囲を超えていないことを確認します。|
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|指定されたコントロール値が指定された 2 つの値の間に収まれるかどうかを確認します。|
+|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|指定されたコントロール値が、指定された**ULONG**範囲を超えていないかどうかを確認します。|
 
-##  <a name="ddv_maxchars"></a>  DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
 
-呼び出す`DDV_MaxChars`コントロール内の文字の量に関連付けられていることを確認する*値*超えない*文字数*します。
+`DDV_MaxChars`*値*に関連付けられたコントロールの文字数が*nChars*を超えていないことを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MaxChars(
     CDataExchange* pDX,
     CString const& value,
@@ -51,28 +51,28 @@ void AFXAPI DDV_MaxChars(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*文字数*<br/>
-使用できる文字の最大数。
+*nChars*<br/>
+最大文字数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
 
-呼び出す`DDV_MinMaxByte`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxByte`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxByte(
     CDataExchange* pDX,
     BYTE value,
@@ -82,31 +82,31 @@ void AFXAPI DDV_MinMaxByte(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-(型バイト) の最小値。
+*ミンヴァル*<br/>
+(BYTE 型の) 最小値が許可されます。
 
-*maxVal*<br/>
-(型バイト) の最大値。
+*最大値*<br/>
+(BYTE 型の) 最大値が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
 
-呼び出す`DDV_MinMaxDateTime`日付と時刻の選択で日付/時刻値が制御することを確認する ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) に関連付けられている*refValue*間*refMinRange*と*refMaxRange*します。
+`DDV_MinMaxDateTime` *refValue*に関連付けられている日時指定コントロール ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) の時刻/日付値が*refMinRange*と*refMaxRange*の間にあることを確認します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDateTime(
     CDataExchange* pDX,
     CTime& refValue,
@@ -122,31 +122,31 @@ void AFXAPI DDV_MinMaxDateTime(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。 このオブジェクトを削除する必要はありません。
+*Pdx*<br/>
+[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。 このオブジェクトを削除する必要はありません。
 
-*refValue*<br/>
-参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)または[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)  ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数に関連付けられているオブジェクト。 このオブジェクトには、検証するデータが含まれています。
+*値*<br/>
+ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数に関連付けられた[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトまたは[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトへの参照。 このオブジェクトには、検証するデータが含まれています。
 
-*refMinRange*<br/>
-最小許容値の日付/時刻。
+*レミンレンジ*<br/>
+最小日付/時刻値が許可されます。
 
-*refMaxRange*<br/>
-許容される最大の日付/時刻値。
+*最大レンジ*<br/>
+許可される日付/時刻の最大値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
 
-呼び出す`DDV_MinMaxDouble`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxDouble`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDouble(
     CDataExchange* pDX,
     double const& value,
@@ -156,31 +156,31 @@ void AFXAPI DDV_MinMaxDouble(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**二重**) 許可します。
+*ミンヴァル*<br/>
+最小値 (**ダブル**型) が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**二重**) 許可します。
+*最大値*<br/>
+最大値 (**ダブル**型) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
 
-呼び出す`DDV_MinMaxDWord`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxDWord`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDWord(
     CDataExchange* pDX,
     DWORD const& value,
@@ -190,31 +190,31 @@ void AFXAPI DDV_MinMaxDWord(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-(DWORD 型) の最小値。
+*ミンヴァル*<br/>
+(DWORD 型の) 最小値が許可されます。
 
-*maxVal*<br/>
-(DWORD 型) の最大値。
+*最大値*<br/>
+(DWORD 型の) 最大値が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
 
-呼び出す`DDV_MinMaxFloat`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxFloat`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxFloat(
     CDataExchange* pDX,
     float value,
@@ -224,31 +224,31 @@ void AFXAPI DDV_MinMaxFloat(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**float**) 許可します。
+*ミンヴァル*<br/>
+最小値 **(float**型) が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**float**) 許可します。
+*最大値*<br/>
+最大値 **(float**型) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
 
-呼び出す`DDV_MinMaxInt`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxInt`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxInt(
     CDataExchange* pDX,
     int value,
@@ -258,31 +258,31 @@ void AFXAPI DDV_MinMaxInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**int**) 許可します。
+*ミンヴァル*<br/>
+最小値 ( **int**型 ) が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**int**) 許可します。
+*最大値*<br/>
+最大値 ( **int**型 ) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
 
-呼び出す`DDV_MinMaxLong`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxLong`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxLong(
     CDataExchange* pDX,
     long value,
@@ -292,31 +292,31 @@ void AFXAPI DDV_MinMaxLong(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**長い**) 許可します。
+*ミンヴァル*<br/>
+(long 型の**long**) 最小値が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**長い**) 許可します。
+*最大値*<br/>
+最大値 **(long**型) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
 
-呼び出す`DDV_MinMaxLongLong`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxLongLong`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxLongLong(
     CDataExchange* pDX,
     LONGLONG value,
@@ -326,31 +326,31 @@ void AFXAPI DDV_MinMaxLongLong(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-(型 LONGLONG) の最小値。
+*ミンヴァル*<br/>
+(LONGLONG 型の) 最小値が許可されます。
 
-*maxVal*<br/>
-(型 LONGLONG) の最大値。
+*最大値*<br/>
+最大値 (LONGLONG 型) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
 
-呼び出す`DDV_MinMaxMonth`か月カレンダーで日付/時刻値が制御することを確認する ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) に関連付けられている*refValue*間*refMinRange*と*refMaxRange*します。
+参照`DDV_MinMaxMonth`値に関連付けられている月の予定表コントロール ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) の時刻/日付値が*refMinRange*と*refMaxRange*の間にあることを確認します。 *refValue*
 
-```
+```cpp
 void AFXAPI DDV_MinMaxMonth(
     CDataExchange* pDX,
     CTime& refValue,
@@ -366,31 +366,31 @@ void AFXAPI DDV_MinMaxMonth(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*refValue*<br/>
-型のオブジェクトへの参照を`CTime`または`COleDateTime` ダイアログ ボックスのメンバー変数に関連付けられている、フォーム ビュー、またはコントロール ビュー オブジェクト。 このオブジェクトには、検証するデータが含まれています。 これは、ときに参照 MFC パス`DDV_MinMaxMonth`が呼び出されます。
+*値*<br/>
+型`CTime`のオブジェクト、または`COleDateTime`ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数に関連付けられたオブジェクトへの参照。 このオブジェクトには、検証するデータが含まれています。 MFC は呼び出`DDV_MinMaxMonth`されたときにこの参照を渡します。
 
-*refMinRange*<br/>
-最小許容値の日付/時刻。
+*レミンレンジ*<br/>
+最小日付/時刻値が許可されます。
 
-*refMaxRange*<br/>
-許容される最大の日付/時刻値。
+*最大レンジ*<br/>
+許可される日付/時刻の最大値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
 
-呼び出す`DDV_MinMaxShort`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxShort`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxShort(
     CDataExchange* pDX,
     short value,
@@ -400,31 +400,31 @@ void AFXAPI DDV_MinMaxShort(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**短い**) 許可します。
+*ミンヴァル*<br/>
+最小値 **(short**型) が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**短い**) 許可します。
+*最大値*<br/>
+最大値 **(short**型) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
 
-呼び出す`DDV_MinMaxSlider`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxSlider`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxSlider(
     CDataExchange* pDX,
     DWORD value,
@@ -434,31 +434,31 @@ void AFXAPI DDV_MinMaxSlider(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-検証する値への参照。 このパラメーターを保持またはスライダー コントロールのつまみの現在の位置を設定します。
+検証する値への参照。 このパラメータは、スライダー コントロールの現在のつまみ位置を保持または設定します。
 
-*minVal*<br/>
-許容される最小値。
+*ミンヴァル*<br/>
+最小値が許容されます。
 
-*maxVal*<br/>
-許容される最大値。
+*最大値*<br/>
+最大値が許容されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)します。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダー コントロールの詳細については、「 [CSliderCtrl](../../mfc/using-csliderctrl.md)の使用 」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
 
-呼び出す`DDV_MinMaxUInt`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxUInt`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxUInt(
     CDataExchange* pDX,
     UINT value,
@@ -468,31 +468,31 @@ void AFXAPI DDV_MinMaxUInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-(UINT 型) の最小値。
+*ミンヴァル*<br/>
+最小値 (UINT 型) が許可されます。
 
-*maxVal*<br/>
-(UINT 型) の最大値。
+*最大値*<br/>
+許可される最大値 (UINT 型) です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
 
-呼び出す`DDV_MinMaxULongLong`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxULongLong`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
-```
+```cpp
 void AFXAPI DDV_MinMaxULongLong(
     CDataExchange* pDX,
     ULONGLONG value,
@@ -502,33 +502,33 @@ void AFXAPI DDV_MinMaxULongLong(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-(型 ULONGLONG) の最小値。
+*ミンヴァル*<br/>
+(タイプ ULONG) の最小値が許可されます。
 
-*maxVal*<br/>
-(型 ULONGLONG) の最大値。
+*最大値*<br/>
+(タイプ ULONG) の最大値が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
-## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
+## <a name="ddv_minmaxunsigned"></a>DDV_MinMaxUnsigned
 
-呼び出す`DDV_MinMaxUnsigned`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
+値`DDV_MinMaxUnsigned`に関連*付けられたコントロール*の値が*minVal*と*maxVal*の間にあることを確認するために呼び出します。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
    void AFXAPI DDV_MinMaxUnsigned(
        CDataExchange* pDX,
        unsigned value,
@@ -538,21 +538,21 @@ DDV の詳細については、次を参照してください。[ダイアログ
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*Pdx*<br/>
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *value*<br/>
-ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
+データの検証に使用するダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-*minVal*<br/>
-最小値 (型の**符号なし**) 許可します。
+*ミンヴァル*<br/>
+最小値 (**符号なし**) が許可されます。
 
-*maxVal*<br/>
-最大値 (型の**符号なし**) 許可します。
+*最大値*<br/>
+最大値 (**符号なし**のタイプ) が許可されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../dialog-data-exchange-and-validation.md)です。
+DDV の詳細については、「[ダイアログ データ エクスチェンジおよび検証](../dialog-data-exchange-and-validation.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

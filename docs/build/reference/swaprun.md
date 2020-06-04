@@ -2,18 +2,18 @@
 title: /SWAPRUN
 ms.date: 11/04/2016
 f1_keywords:
-- /swaprun
+- /swaprun_editbin
 helpviewer_keywords:
 - /SWAPRUN editbin option
 - -SWAPRUN editbin option
 - SWAPRUN editbin option
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
-ms.openlocfilehash: ff11e64ae8ec0eb5236369e8322e051ee40b26bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83aa2cdb445ed1ac6bac5b1237f90a116986b0a9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317758"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438843"
 ---
 # <a name="swaprun"></a>/SWAPRUN
 
@@ -21,18 +21,18 @@ ms.locfileid: "62317758"
 /SWAPRUN:{[!]NET|[!]CD}
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このオプションは、スワップ ファイルにイメージをコピーし、そこから実行するオペレーティング システムに指示するイメージを編集します。 ネットワークまたはリムーバブル メディア上に存在するイメージには、このオプションを使用します。
+このオプションでは、イメージを編集してイメージをスワップファイルにコピーし、そこから実行するようにオペレーティングシステムに指示します。 このオプションは、ネットワークまたはリムーバブルメディア上に存在するイメージに対して使用します。
 
-追加または NET または CD の修飾子を削除できます。
+次のように、NET または CD の修飾子を追加または削除できます。
 
-- NET は、ネットワーク上のイメージが置かれていることを示します。
+- NET は、イメージがネットワーク上に存在することを示します。
 
-- CD では、CD-ROM やリムーバブル メディアで、イメージが置かれていることを示します。
+- CD は、イメージが cd-rom または類似のリムーバブルメディアにあることを示します。
 
-- 使用してください NET と!。NET と CD の効果を反転する CD。
+- ! NET および! を使用します。NET と CD の効果を逆にする CD。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

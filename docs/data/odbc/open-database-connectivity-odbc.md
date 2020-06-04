@@ -6,61 +6,60 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395743"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213084"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
-MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 および SQL Server 2012 の ODBC SQL データ ソースに接続することをお勧めは。
+MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 と SQL Server 2012 ODBC は、SQL データソースへの接続に推奨される方法です。
 
-MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN の SDK です。
-
+MFC を使用せずに ODBC API を使用する方法の詳細については、MSDN の「 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [ODBC](odbc-basics.md): Open Database Connectivity 標準と API
+- [ODBC](odbc-basics.md)— Open Database Connectivity STANDARD および API
 
-- [どのような MFC サポートが提供](odbc-and-mfc.md)ODBC プログラミング向け
+- ODBC プログラミング用に[用意されている MFC のサポート](odbc-and-mfc.md)
 
-- [ODBC ドライバーの使用](odbc-driver-list.md)
+- [使用可能な ODBC ドライバー](odbc-driver-list.md)
 
-- [ODBC データ ソースに接続します。](data-source-managing-connections-odbc.md)
+- [ODBC データソースへの接続](data-source-managing-connections-odbc.md)
 
-- [レコード フィールド エクス チェンジ (RFX)](record-field-exchange-rfx.md)データベースとレコード セット オブジェクトの間
+- データベースとレコードセットオブジェクトの間の[レコードフィールドエクスチェンジ (RFX)](record-field-exchange-rfx.md)
 
-- [ODBC レコード セット](recordset-odbc.md)
+- [ODBC レコードセット](recordset-odbc.md)
 
-- [SQL](sql.md) for ODBC
+- ODBC 用[SQL](sql.md)
 
-- [データベース トランザクション](transaction-odbc.md)
+- [データベーストランザクション](transaction-odbc.md)
 
-- [ODBC データ ソースのスキーマを決定する](data-source-determining-the-schema-of-the-data-source-odbc.md)実行時に
+- 実行時[の ODBC データソースのスキーマの決定](data-source-determining-the-schema-of-the-data-source-odbc.md)
 
-- [プログラムにおける ODBC データ ソースの設定](data-source-programmatically-configuring-an-odbc-data-source.md)
+- [プログラムによる ODBC データソースの構成](data-source-programmatically-configuring-an-odbc-data-source.md)
 
-- [プログラムにおける ODBC データ ソース テーブルの作成](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)
+- [プログラムによる ODBC データソースでのテーブルの作成](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)
 
-- [バルク行フェッチ](recordset-fetching-records-in-bulk-odbc.md)
+- [一括でのレコードのフェッチ](recordset-fetching-records-in-bulk-odbc.md)
 
-- [レコード セットの SQL ステートメントのカスタマイズ](sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [レコードセットの SQL ステートメントのカスタマイズ](sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL の直接呼び出しを行う](sql-making-direct-sql-calls-odbc.md)
+- [直接 SQL 呼び出しを行う](sql-making-direct-sql-calls-odbc.md)
 
-- [Odbc: ODBC api の直接呼び出し](odbc-calling-odbc-api-functions-directly.md)
+- [ODBC API の直接呼び出し](odbc-calling-odbc-api-functions-directly.md)
 
-- [MFC のドキュメント/ビュー アーキテクチャ データベース クラスのしくみ](working-with-documents-and-views.md)
+- [データベースクラスは、MFC のドキュメント/ビューアーキテクチャとどのように連携しますか。](working-with-documents-and-views.md)
 
 - [ODBC ドライバーの一覧](odbc-driver-list.md)
 
 ## <a name="odbc-database-tasks"></a>ODBC データベースの操作方法
 
-これらのタスクは、MFC に基づいて[ODBC](odbc-basics.md)クラス。 MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
+これらのタスクは、MFC [ODBC](odbc-basics.md)クラスに基づいています。 MFC を使用せずに ODBC API を使用する方法の詳細については、 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK を参照してください。
 
-- [インストールして、ODBC の概要](installing-and-getting-started-with-odbc.md)
+- [ODBC のインストールと使用を開始する](installing-and-getting-started-with-odbc.md)
 
 - [ODBC データベース アプリケーションのデザインと作成](design-and-create-an-odbc-database-application.md)
 
@@ -76,6 +75,6 @@ MFC を使用せず、ODBC API の使用に関する詳細については、次�
 
 - [MFC ODBC レコードセットの使用](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ アクセス プログラミング (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

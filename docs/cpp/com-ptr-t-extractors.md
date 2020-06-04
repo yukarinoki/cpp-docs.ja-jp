@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190028"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t 抽出
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t 抽出
 
 **Microsoft 固有の仕様**
 
@@ -44,22 +44,22 @@ Interface** operator&( ) throw( );
 operator bool( ) const throw( );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-- **演算子インターフェイス**<strong>\*</strong>場合 NULL にはカプセル化されたインターフェイス ポインターを返します。
+- **Operator interface** <strong>\*</strong>は、カプセル化されたインターフェイスポインターを返します。 NULL の場合もあります。
 
-- **演算子インターフェイス &** をカプセル化されたインターフェイス ポインター、参照を取得し、ポインターが NULL の場合はエラーを発行します。
+- **Operator インターフェイス &** カプセル化されたインターフェイスポインターへの参照を返し、ポインターが NULL の場合はエラーを発行します。
 
-- **演算子**<strong>\*</strong>逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。
+- **operator** <strong>\*</strong>演算子を使用すると、スマートポインターオブジェクトは、逆参照時に実際にカプセル化されたインターフェイスのように動作します。
 
-- **演算子 ->** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。
+- **演算子->** スマートポインターオブジェクトが、逆参照時に実際にカプセル化されたインターフェイスであるかのように動作することを許可します。
 
-- **演算子 &** null の場合に置き換えて、任意のカプセル化されたインターフェイス ポインターを解放し、カプセル化されたポインターのアドレスを返します。 これにより、スマート ポインターによってアドレスが関数に渡される、*アウト*パラメーターが使用されるインターフェイス ポインターを返します。
+- **& 演算子**カプセル化されたインターフェイスポインターをすべて解放し、NULL で置き換えて、カプセル化されたポインターのアドレスを返します。 これにより、インターフェイスポインターを返す*out*パラメーターを持つ関数に、アドレスを使用してスマートポインターを渡すことができます。
 
-- **operator bool**条件式で使用するスマート ポインター オブジェクトを使用します。 この演算子は、ポインターが NULL でない場合に TRUE を返します。
+- **bool 演算子**スマートポインターオブジェクトを条件式で使用できるようにします。 この演算子は、ポインターが NULL でない場合に TRUE を返します。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

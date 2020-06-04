@@ -2,12 +2,12 @@
 title: Windows::UI::Xaml::Interop::TypeName 演算子
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35056ca1a4e7f06c9f91fe86998a676a12395f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337000"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName 演算子
 
@@ -23,11 +23,11 @@ Operator TypeName(Platform::Type^ type);
 
 [が指定されていると、](/uwp/api/windows.ui.xaml.interop.typename) Windows::UI::Xaml::Interop::TypeName `Platform::Type^`が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 `TypeName`Navigate [関数での](/uwp/api/windows.ui.xaml.controls.frame.navigate) の使用例を次に示します。
 
-```
+```cpp
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
@@ -35,8 +35,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 
 次に、 `TypeName` と `Type`の間の変換方法を示します。
 
-```
-
+```cpp
 // Convert from Type to TypeName
 Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);
 
@@ -46,7 +45,7 @@ Type^ tx2 = (Type^)(tn);
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
-.NET framework プログラム プロジェクト`TypeName`として[System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True)します。
+.NET Framework`TypeName`プログラム プロジェクト[は、システム.Type として行われます](/dotnet/api/system.type)。
 
 ### <a name="requirements"></a>必要条件
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516517"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181825"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>プラットフォーム、既定、および cli 名前空間 (C++/CLI および C++/CX)
 
@@ -26,9 +26,9 @@ Visual Studio では、プロジェクトの作成時に、既定の名前空間
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-詳細については、「[名前空間と型の参照範囲 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx)」を参照してください。
+詳細については、「[名前空間と型の参照範囲 (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -54,11 +54,11 @@ C++CLI では、**cli** 名前空間がサポートされています。 `/clr` 
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、**cli** 名前空間のシンボルを、ユーザー定義シンボルとして自分のコードで使用できることを示します。  ただし、これを行った場合は、同じ名前の **cli** 言語要素への参照を、明示的または暗黙的に修飾する必要があります。
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

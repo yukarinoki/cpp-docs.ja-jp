@@ -1,9 +1,10 @@
 ---
 title: _chsize
-ms.date: 03/29/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _chsize
-apilocation:
+- _o__chsize
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chsize
 helpviewer_keywords:
@@ -25,14 +30,14 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340327"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917200"
 ---
-# <a name="chsize"></a>_chsize
+# <a name="_chsize"></a>_chsize
 
 ファイル サイズを変更します。 セキュリティが強化されたバージョンについては、「[_chsize_s](chsize-s.md)」を参照してください。
 
@@ -47,7 +52,7 @@ int _chsize(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*スクリプター*<br/>
 開いているファイルを参照するファイル記述子。
 
 *size*<br/>
@@ -55,23 +60,25 @@ int _chsize(
 
 ## <a name="return-value"></a>戻り値
 
-**_chsize**ファイル サイズが正常に変更された場合、値 0 を返します。 戻り値-1 はエラーを示します: **errno**に設定されている**EACCES**指定したファイルが読み取り専用か、指定したファイルがアクセスに対してにロックされている**EBADF**場合、記述子が有効でない**ENOSPC** 、デバイス上の領域が残っていない場合または**EINVAL**場合*サイズ*0 未満です。
+ファイルサイズが正常に変更された場合、 **_chsize**は値0を返します。 戻り値-1 はエラーを示します。指定されたファイルが読み取り専用の場合、または指定されたファイルがアクセスに対してロックされている場合は**EACCES**に設定され、記述子が無効**である場合**は ENOSPC、デバイスに領域がない場合は**ENOSPC** 、*サイズ*が0未満の場合は**EINVAL**に設定さ**れます。**
 
-リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Chsize**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*します。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
+**_Chsize**関数は、 *fd*に関連付けられているファイルを*size*によって指定された長さに拡張または切り捨てます。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
-この関数は、パラメーターを検証します。 場合*サイズ*が 0 未満または*fd*が正しくないファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+この関数は、パラメーターを検証します。 *Size*が0より小さいか、 *fd*が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

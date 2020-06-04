@@ -14,28 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: 2cd207038a92b944bf95575f0e0c820b8f09d615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b07e60265570e66337a2d13007e9ad57c6f369e4
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260150"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167865"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT クラス
 
-このクラスは、ATL モジュールを実装します。
+このクラスは ATL モジュールを実装します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-クラスから派生した`CAtlModuleT`します。
+から`CAtlModuleT`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -49,18 +49,18 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlModuleT::InitLibId](#initlibid)|現在のモジュールの GUID を格納しているデータ メンバーを初期化します。|
-|[CAtlModuleT::RegisterAppId](#registerappid)|レジストリに、exe ファイルを追加します。|
-|[CAtlModuleT::RegisterServer](#registerserver)|レジストリにサービスを追加します。|
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|レジストリからの exe ファイルを削除します。|
+|[CAtlModuleT:: InitLibId](#initlibid)|現在のモジュールの GUID を含むデータメンバーを初期化します。|
+|[CAtlModuleT:: RegisterAppId](#registerappid)|EXE をレジストリに追加します。|
+|[CAtlModuleT::RegisterServer](#registerserver)|サービスをレジストリに追加します。|
+|[CAtlModuleT:: UnregisterAppId](#unregisterappid)|レジストリから EXE を削除します。|
 |[CAtlModuleT::UnregisterServer](#unregisterserver)|レジストリからサービスを削除します。|
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|レジストリ内の EXE の情報を更新します。|
+|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|レジストリ内の実行可能ファイルの情報を更新します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CAtlModuleT`、から派生した[CAtlModule](../../atl/reference/catlmodule-class.md)、実行可能ファイル (EXE) またはサービス (EXE) ATL モジュールを実装します。 実行可能モジュールは、サービス モジュールは Windows の起動時に、バック グラウンドで実行されている Windows アプリケーションのローカルのアウト プロセス サーバー、です。
+`CAtlModuleT`[CAtlModule](../../atl/reference/catlmodule-class.md)から派生したは、実行可能 (exe) またはサービス (exe) の ATL モジュールを実装します。 実行可能モジュールはローカルのアウトプロセスサーバーであるのに対し、サービスモジュールは windows の起動時にバックグラウンドで実行される Windows アプリケーションです。
 
-`CAtlModuleT` 初期化、登録、およびモジュールの登録を解除するには、サポートを提供します。
+`CAtlModuleT`モジュールの初期化、登録、および登録解除のサポートを提供します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -72,49 +72,49 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT
+## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT
 
 コンストラクターです。
 
-```
+```cpp
 CAtlModuleT() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出し[CAtlModuleT::InitLibId](#initlibid)します。
+[CAtlModuleT:: InitLibId](#initlibid)を呼び出します。
 
-##  <a name="initlibid"></a>  CAtlModuleT::InitLibId
+## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT:: InitLibId
 
-現在のモジュールの GUID を格納しているデータ メンバーを初期化します。
+現在のモジュールの GUID を含むデータメンバーを初期化します。
 
-```
+```cpp
 static void InitLibId() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクターによって呼び出される[CAtlModuleT::CAtlModuleT](#catlmodulet)します。
+コンストラクター [CAtlModuleT:: CAtlModuleT](#catlmodulet)によって呼び出されます。
 
-##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId
+## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT:: RegisterAppId
 
-レジストリに、exe ファイルを追加します。
+EXE をレジストリに追加します。
 
-```
+```cpp
 HRESULT RegisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer
+## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer
 
-レジストリにサービスを追加します。
+サービスをレジストリに追加します。
 
-```
+```cpp
 HRESULT RegisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
@@ -123,32 +123,32 @@ HRESULT RegisterServer(
 ### <a name="parameters"></a>パラメーター
 
 *bRegTypeLib*<br/>
-TRUE の場合、タイプ ライブラリを登録します。 既定値は FALSE です。
+タイプライブラリを登録する場合は TRUE。 既定値は FALSE です。
 
-*pclsid の値*<br/>
-登録するオブジェクトの CLSID を指します。 NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトを登録するかどうか。
+*pCLSID*<br/>
+登録するオブジェクトの CLSID を指します。 NULL (既定値) の場合、オブジェクトマップ内のすべてのオブジェクトが登録されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT:: UnregisterAppId
 
-レジストリからの exe ファイルを削除します。
+レジストリから EXE を削除します。
 
-```
+```cpp
 HRESULT UnregisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer
 
 レジストリからサービスを削除します。
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bUnRegTypeLib,
     const CLSID* pCLSID = NULL) throw();
@@ -157,20 +157,20 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>パラメーター
 
 *bUnRegTypeLib*<br/>
-タイプ ライブラリが登録解除するにもある場合は TRUE。
+タイプライブラリも登録解除される場合は TRUE。
 
-*pclsid の値*<br/>
-登録解除するオブジェクトの CLSID を指します。 場合は NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトが登録されます。
+*pCLSID*<br/>
+登録を解除するオブジェクトの CLSID を指します。 NULL (既定値) の場合、オブジェクトマップ内のすべてのオブジェクトの登録が解除されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId
+## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId
 
-レジストリ内の EXE の情報を更新します。
+レジストリ内の実行可能ファイルの情報を更新します。
 
-```
+```cpp
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```
 
@@ -181,10 +181,10 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ## <a name="see-also"></a>関連項目
 
 [CAtlModule クラス](../../atl/reference/catlmodule-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[モジュール クラス](../../atl/atl-module-classes.md)
+[モジュールクラス](../../atl/atl-module-classes.md)

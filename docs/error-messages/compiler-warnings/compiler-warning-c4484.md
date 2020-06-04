@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c168c91f8259b744ed10dd72701d34fd60b98681
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165159"
 ---
 # <a name="compiler-warning-c4484"></a>コンパイラの警告 C4484
 
-'override_function': 基本 ref クラス メソッド 'base_class_function' と一致しますが、'virtual'、'new' または 'override'; に、設定されていません'new' (および 'virtual') と見なされます
+' override_function ': 基本 ref クラスメソッド ' base_class_function ' と一致しますが、' virtual '、' new '、' override ' に設定されていません。' new ' (' virtual ' ではなく) が想定されています
 
-コンパイルするときに **/clr**コンパイラは暗黙的には、関数が、vtable の新しいスロットを取得することを意味、基底クラスの関数をオーバーライドしません。 解決するには、明示的に関数がオーバーライドがかどうかを指定します。
+**/Clr**を指定してコンパイルする場合、コンパイラは基底クラスの関数を暗黙的にオーバーライドしません。これは、関数が vtable 内の新しいスロットを取得することを意味します。 解決するには、関数がオーバーライドであるかどうかを明示的に指定します。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
 
@@ -27,13 +27,13 @@ ms.locfileid: "62363532"
 
 - [new (vtable の新しいスロット)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 は常に、エラーとして発行されます。 使用して、[警告](../../preprocessor/warning.md)C4484 を抑制するプラグマ。
+C4484 は常にエラーとして発行されます。 C4484 を抑制するには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
 ## <a name="example"></a>例
 
 次の例では、C4484 が生成されます。
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

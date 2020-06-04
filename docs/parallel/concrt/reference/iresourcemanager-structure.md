@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7afb37fb35040975d6e9471a1d12465e5163fafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15e27a586fc039791255c01a053f6a1109183f90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368189"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 構造体
 
-同時実行ランタイムのリソース マネージャーに対するインターフェイスです。 これは、スケジューラがリソース マネージャーと通信する際に使用されるインターフェイスです。
+コンカレンシー ランタイムのリソース マネージャーに対するインターフェイスです。 これは、スケジューラがリソース マネージャーと通信する際に使用されるインターフェイスです。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IResourceManager;
 ```
 
@@ -37,22 +37,22 @@ struct IResourceManager;
 
 |名前|説明|
 |----------|-----------------|
-|[IResourceManager::OSVersion](#osversion)|オペレーティング システムのバージョンを表す列挙型。|
+|[リソースマネージャー::OSVersion](#osversion)|オペレーティング システムのバージョンを表す列挙型。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|デバッグにのみ存在するが、ランタイムのビルドは、このメソッドは、Resource Manager のハードウェア トポロジをさまざまな構成に一致する実際のハードウェアを必要とせずにテストを容易にするためのテスト フック。 ランタイムの製品版ビルドでは、このメソッドは操作を実行せずに戻ります。|
-|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Resource Manager を使用可能なノードの数を返します。|
-|[IResourceManager::GetFirstNode](#getfirstnode)|リソース マネージャーで定義される列挙の順番で最初のノードを返します。|
-|[IResourceManager::Reference](#reference)|リソース マネージャー インスタンスの参照カウントをインクリメントします。|
-|[IResourceManager::RegisterScheduler](#registerscheduler)|スケジューラを Resource Manager を登録します。 使用して、Resource Manager と通信する必要があります、スケジューラが登録されたら、`ISchedulerProxy`返されるインターフェイス。|
-|[IResourceManager::Release](#release)|Resource Manager インスタンスで、参照カウントをデクリメントします。 参照カウントになると、リソース マネージャーが破棄される`0`します。|
+|[Iリソースマネージャー:ノードトポロジを作成します。](#createnodetopology)|ランタイムのデバッグ ビルドでのみ存在するこのメソッドは、構成に一致する実際のハードウェアを必要とせずに、さまざまなハードウェア トポロジで Resource Manager のテストを容易にするように設計されたテスト フックです。 ランタイムの製品版ビルドでは、このメソッドは何もアクションを実行せずに戻ります。|
+|[を使用します。](#getavailablenodecount)|リソース マネージャーで使用できるノードの数を返します。|
+|[を使用します。](#getfirstnode)|リソース マネージャーで定義されている列挙順の最初のノードを返します。|
+|[リソースマネージャー::参照](#reference)|リソース マネージャー インスタンスの参照カウントをインクリメントします。|
+|[を使用します。](#registerscheduler)|リソース マネージャーにスケジューラを登録します。 スケジューラは、登録されると、返されるインターフェイスを使用してリソース マネージャー`ISchedulerProxy`と通信する必要があります。|
+|[Iリソースマネージャー::リリース](#release)|リソース マネージャー インスタンスの参照カウントをデクリメントします。 リソース マネージャの参照カウントが に行くと`0`、リソース マネージャは破棄されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用して、 [CreateResourceManager](concurrency-namespace-functions.md)シングルトン Resource Manager のインスタンスへのインターフェイスを取得します。 メソッドは、Resource Manager での参照カウントをインクリメントし、呼び出す必要があります、 [iresourcemanager::release](#release)したら Resource Manager での参照を解放します。 通常、各スケジューラを作成するは、作成中に、このメソッドを呼び出すし、シャット ダウンした後は、Resource Manager への参照を解放します。
+シングルトン リソース マネージャー インスタンスへのインターフェイスを取得するには[、CreateResourceManager](concurrency-namespace-functions.md)関数を使用します。 このメソッドはリソース マネージャーの参照カウントをインクリメントし、リソース マネージャーでの完了時に参照を解放する[IResourceManager::Release](#release)メソッドを呼び出す必要があります。 通常、作成する各スケジューラは、作成時にこのメソッドを呼び出し、リソース マネージャーがシャットダウンした後にリソース マネージャーへの参照を解放します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,13 +62,13 @@ struct IResourceManager;
 
 **ヘッダー:** concrtrm.h
 
-**名前空間:** concurrency
+**名前空間:** 同時実行
 
-##  <a name="createnodetopology"></a>  Iresourcemanager::createnodetopology メソッド
+## <a name="iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>Iリソースマネージャー::ノードトポロジメソッドの作成
 
-デバッグにのみ存在するが、ランタイムのビルドは、このメソッドは、Resource Manager のハードウェア トポロジをさまざまな構成に一致する実際のハードウェアを必要とせずにテストを容易にするためのテスト フック。 ランタイムの製品版ビルドでは、このメソッドは操作を実行せずに戻ります。
+ランタイムのデバッグ ビルドでのみ存在するこのメソッドは、構成に一致する実際のハードウェアを必要とせずに、さまざまなハードウェア トポロジで Resource Manager のテストを容易にするように設計されたテスト フックです。 ランタイムの製品版ビルドでは、このメソッドは何もアクションを実行せずに戻ります。
 
-```
+```cpp
 virtual void CreateNodeTopology(
     unsigned int nodeCount,
     _In_reads_(nodeCount) unsigned int* pCoreCount,
@@ -78,73 +78,73 @@ virtual void CreateNodeTopology(
 
 ### <a name="parameters"></a>パラメーター
 
-*nodeCount*<br/>
-シミュレートされているプロセッサ ノードの数。
+*ノード数*<br/>
+シミュレートされるプロセッサ ノードの数。
 
-*pCoreCount*<br/>
-各ノードのコアの数を指定する配列。
+*カウント*<br/>
+各ノードのコア数を指定する配列。
 
-*pNodeDistance*<br/>
-2 つのノード間の距離を指定する行列。 このパラメーターは、値を持つことができます`NULL`します。
+*距離*<br/>
+任意の 2 つのノード間のノード距離を指定する行列。 このパラメーターには、 値`NULL`を指定できます。
 
-*pProcessorGroups*<br/>
-プロセッサ グループを指定する配列に各ノードが属しています。
+*プロセッサグループ*<br/>
+各ノードが属するプロセッサ グループを指定する配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[invalid_argument](../../../standard-library/invalid-argument-class.md)場合にスローされるパラメーター `nodeCount` 、値を持つ`0`が渡され、またはパラメーター `pCoreCount` 、値を持つ`NULL`します。
+[invalid_argument](../../../standard-library/invalid-argument-class.md)は、`nodeCount`パラメーターに値が渡された`0`場合、またはパラメーター`pCoreCount`に値`NULL`が含まれる場合にスローされます。
 
-[invalid_operation](invalid-operation-class.md)プロセスの他のスケジューラが存在している間、このメソッドが呼び出された場合にスローされます。
+[invalid_operation](invalid-operation-class.md)は、プロセス内に他のスケジューラが存在する間に、このメソッドが呼び出されるとスローされます。
 
-##  <a name="getavailablenodecount"></a>  Iresourcemanager::getavailablenodecount メソッド
+## <a name="iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>メソッドを取得します。
 
-Resource Manager を使用可能なノードの数を返します。
+リソース マネージャーで使用できるノードの数を返します。
 
-```
+```cpp
 virtual unsigned int GetAvailableNodeCount() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-Resource Manager を使用可能なノードの数。
+リソース マネージャーで使用できるノードの数。
 
-##  <a name="getfirstnode"></a>  Iresourcemanager::getfirstnode メソッド
+## <a name="iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>メソッドを取得します。
 
-リソース マネージャーで定義される列挙の順番で最初のノードを返します。
+リソース マネージャーで定義されている列挙順の最初のノードを返します。
 
-```
+```cpp
 virtual ITopologyNode* GetFirstNode() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-リソース マネージャーで定義される列挙の順番で最初のノードです。
+リソース マネージャーで定義されている列挙順の最初のノード。
 
-##  <a name="osversion"></a>  Iresourcemanager::osversion 列挙
+## <a name="iresourcemanagerosversion-enumeration"></a><a name="osversion"></a>を使用します。
 
 オペレーティング システムのバージョンを表す列挙型。
 
-```
+```cpp
 enum OSVersion;
 ```
 
-##  <a name="reference"></a>  Iresourcemanager::reference メソッド
+## <a name="iresourcemanagerreference-method"></a><a name="reference"></a>メソッドを参照します。
 
 リソース マネージャー インスタンスの参照カウントをインクリメントします。
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-結果として得られる、参照カウントします。
+結果の参照カウント。
 
-##  <a name="registerscheduler"></a>  Iresourcemanager::registerscheduler メソッド
+## <a name="iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>メソッドを登録します。
 
-スケジューラを Resource Manager を登録します。 使用して、Resource Manager と通信する必要があります、スケジューラが登録されたら、`ISchedulerProxy`返されるインターフェイス。
+リソース マネージャーにスケジューラを登録します。 スケジューラは、登録されると、返されるインターフェイスを使用してリソース マネージャー`ISchedulerProxy`と通信する必要があります。
 
-```
+```cpp
 virtual ISchedulerProxy *RegisterScheduler(
     _Inout_ IScheduler* pScheduler,
     unsigned int version) = 0;
@@ -152,36 +152,36 @@ virtual ISchedulerProxy *RegisterScheduler(
 
 ### <a name="parameters"></a>パラメーター
 
-*pScheduler*<br/>
-`IScheduler`を登録する scheduler へのインターフェイス。
+*スケジューラー*<br/>
+登録`IScheduler`するスケジューラへのインターフェイス。
 
 *version*<br/>
-通信インターフェイスのバージョン、スケジューラは Resource Manager での通信を使用します。 バージョンを使用すると、スケジューラに古い機能のアクセス権を取得しながら、通信インターフェイスを進化させるリソース マネージャーができます。 Visual Studio 2010 に存在するリソース マネージャーの機能を使用するスケジューラは、バージョンを使用する必要があります`CONCRT_RM_VERSION_1`します。
+スケジューラがリソース マネージャーと通信するために使用している通信インターフェイスのバージョン。 バージョンを使用すると、スケジューラが古い機能にアクセスできるように、リソース マネージャーは通信インターフェイスを進化させることができます。 Visual Studio 2010 でリソース マネージャーの機能を使用するスケジューラは、`CONCRT_RM_VERSION_1`バージョンを使用する必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-`ISchedulerProxy` Resource Manager が、スケジューラに関連付けられているインターフェイス。 スケジューラのこのポイントから Resource Manager での通信にこのインターフェイスを使用する必要があります。
+リソース`ISchedulerProxy`マネージャーがスケジューラに関連付けられているインターフェイス。 スケジューラは、この時点からリソース マネージャーと通信するために、このインターフェイスを使用する必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用して、リソース マネージャーとの通信を開始します。 メソッドを関連付けます、`IScheduler`インターフェイスを使用して、スケジューラ、`ISchedulerProxy`インターフェイスと、再度の手です。 、スケジューラによって使用される実行リソースを要求するか、Resource Manager でのスレッドを購読、返されたインターフェイスを使用することができます。 Resource Manager がによって返されるスケジューラ ポリシーからポリシー要素を使用して、 [ischeduler::getpolicy](ischeduler-structure.md#getpolicy)メソッドは、スケジューラ スレッドの種類を決定するのには作業を実行する必要があります。 場合、`SchedulerKind`ポリシー キーは、値を持つ`UmsThreadDefault`値として、ポリシーから戻さ値は読み取り専用と`UmsThreadDefault`、`IScheduler`インターフェイス、メソッドに渡される必要があります、`IUMSScheduler`インターフェイス。
+このメソッドは、リソース マネージャーとの通信を開始するために使います。 このメソッドは、スケジューラ`IScheduler`のインターフェイスを`ISchedulerProxy`インターフェイスに関連付け、それを返します。 返されたインターフェイスを使用して、スケジューラで使用する実行リソースを要求したり、リソース マネージャーでスレッドをサブスクライブしたりできます。 リソース マネージャーは[、IScheduler::GetPolicy](ischeduler-structure.md#getpolicy)メソッドによって返されるスケジューラ ポリシーのポリシー要素を使用して、スケジューラが作業を実行する必要があるスレッドの種類を決定します。 `SchedulerKind`ポリシー キーに`UmsThreadDefault`値があり、値がポリシーから値`UmsThreadDefault`として読み取り戻される場合、メソッド`IScheduler`に渡されるインターフェイスは`IUMSScheduler`インターフェイスである必要があります。
 
-メソッドをスロー、`invalid_argument`例外場合パラメーター `pScheduler` 、値を持つ`NULL`場合は、パラメーター`version`通信インターフェイスの有効なバージョンではありません。
+パラメーター`invalid_argument`に値`pScheduler``NULL`がある場合、またはパラメーター`version`が通信インターフェースの有効なバージョンでない場合、このメソッドは例外をスローします。
 
-##  <a name="release"></a>  Iresourcemanager::release メソッド
+## <a name="iresourcemanagerrelease-method"></a><a name="release"></a>メソッドのリリース
 
-Resource Manager インスタンスで、参照カウントをデクリメントします。 参照カウントになると、リソース マネージャーが破棄される`0`します。
+リソース マネージャー インスタンスの参照カウントをデクリメントします。 リソース マネージャの参照カウントが に行くと`0`、リソース マネージャは破棄されます。
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-結果として得られる、参照カウントします。
+結果の参照カウント。
 
 ## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[同時実行名前空間](concurrency-namespace.md)<br/>
 [ISchedulerProxy 構造体](ischedulerproxy-structure.md)<br/>
 [IScheduler 構造体](ischeduler-structure.md)

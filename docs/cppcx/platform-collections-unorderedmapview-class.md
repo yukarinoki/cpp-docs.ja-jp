@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161635"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031486"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 
@@ -35,11 +35,11 @@ ref class UnorderedMapView sealed;
 キー/値ペア内の値の型。
 
 *C*<br/>
-2 つのキー値を比較して等価性を確認できる関数オブジェクトを提供する型。 既定では、 [std::equal_to\<K >](../standard-library/equal-to-struct.md)
+2 つのキー値を比較して等価性を確認できる関数オブジェクトを提供する型。 デフォルトでは[、std::equal_to\<K>](../standard-library/equal-to-struct.md)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)アプリケーション バイナリ インターフェイス (ABI) を越えて渡されるインターフェイス。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+順序付けられていないマップ ビューは[、Windows::Foundation::コレクション::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2)の具体的な実装であり、アプリケーション バイナリ インターフェイス (ABI) を介して渡されます。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -47,17 +47,17 @@ UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::I
 
 |名前|説明|
 |----------|-----------------|
-|[UnorderedMapView::UnorderedMapView](#ctor)|UnorderedMapView クラスの新しいインスタンスを初期化します。|
+|[順序付けられていないマップビュー::順序指定されていないマップビュー](#ctor)|UnorderedMapView クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[UnorderedMapView::First](#first)|マップ ビュー内の最初の要素に初期化される反復子を返します。|
-|[UnorderedMapView::HasKey](#haskey)|指定したキーが現在の UnorderedMapView に格納されているかどうかを判定します。|
-|[UnorderedMapView::Lookup](#lookup)|現在の UnorderedMapView オブジェクト内の指定されたキーの位置の要素を取得します。|
-|[UnorderedMapView::Size](#size)|現在の UnorderedMapView オブジェクトの要素数を返します。|
-|[UnorderedMapView::Split](#split)|元の UnorderedMapView オブジェクトを 2 つの UnorderedMapView オブジェクトに分割します。|
+|[順序付けされていないマップビュー::最初](#first)|マップ ビュー内の最初の要素に初期化される反復子を返します。|
+|[順序付けされていないマップビュー::ハスキー](#haskey)|指定したキーが現在の UnorderedMapView に格納されているかどうかを判定します。|
+|[順序付けされていないマップビュー::ルックアップ](#lookup)|現在の UnorderedMapView オブジェクト内の指定されたキーの位置の要素を取得します。|
+|[順序指定されていないマップビュー::サイズ](#size)|現在の UnorderedMapView オブジェクトの要素数を返します。|
+|[順序付けされていないマップビュー::分割](#split)|元の UnorderedMapView オブジェクトを 2 つの UnorderedMapView オブジェクトに分割します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,9 +69,9 @@ UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::I
 
 **名前空間:** Platform::Collections
 
-## <a name="first"></a>  UnorderedMapView::First メソッド
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>順序付けされていないマップビュー::最初のメソッド
 
-最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)順序なしのマップ内の要素。
+順序付けられていないマップ内の最初の[Windows::Foundation::コレクション::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を指定する反復子を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -85,11 +85,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 マップ ビュー内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myMapView->First();` のようにします。
+First() によって返される反復器を保持する便利な方法は **、auto**型推論キーワードで宣言された変数に戻り値を代入することです。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
 
-## <a name="haskey"></a>  UnorderedMapView::HasKey メソッド
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>順序付けられていないマップビュー::ハスキーメソッド
 
 指定したキーが現在の UnorderedMap に格納されているかどうかを判定します。
 
@@ -102,13 +102,13 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-要素の検索に使用するキー。 型`key`typename が*K*します。
+要素の検索に使用するキー。 の型`key`は型名*K*です。
 
 ### <a name="return-value"></a>戻り値
 
-**true**キーが見つかった。 それ以外の場合**false**します。
+キーが見つかった場合は**true。** それ以外の場合**は false。**
 
-## <a name="lookup"></a>  UnorderedMapView::Lookup メソッド
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>順序指定されていないマップビュー::ルックアップ メソッド
 
 型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -121,15 +121,15 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-UnorderedMapView の要素の検索に使用するキー。 型`key`typename が*K*します。
+UnorderedMapView の要素の検索に使用するキー。 の型`key`は型名*K*です。
 
 ### <a name="return-value"></a>戻り値
 
-`key` とペアになる値。 戻り値の型は typename *V* します。
+`key` とペアになる値。 戻り値の型は型名*V*です。
 
-## <a name="size"></a>  UnorderedMapView::Size メソッド
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a>順序指定されていないマップビュー::サイズのメソッド
 
-数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMapView 内の要素。
+順序指定されていないマップビューの[要素を>する要素\<](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -141,7 +141,7 @@ virtual property unsigned int Size;
 
 Unordered MapView の要素数。
 
-## <a name="split"></a>  UnorderedMapView::Split メソッド
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>順序指定されていないマップビュー::分割メソッド
 
 現在の UnorderedMapView オブジェクトを 2 つの UnorderedMapView オブジェクトに分割します。 このメソッドは操作不可です。
 
@@ -157,17 +157,17 @@ void Split(
 
 ### <a name="parameters"></a>パラメーター
 
-*firstPartition*<br/>
+*最初のパーティション*<br/>
 元の UnorderedMapView オブジェクトの最初の部分。
 
-*secondPartition*<br/>
+*2番目のパーティション*<br/>
 元の UnorderedMapView オブジェクトの 2 つ目の部分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは操作可能ではありません。これは何も実行しません。
 
-## <a name="ctor"></a>  UnorderedMapView::UnorderedMapView コンストラクター
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>順序付けされていないマップビュー::順序なしマップビューのコンス トラクター
 
 UnorderedMapView クラスの新しいインスタンスを初期化します。
 
@@ -221,17 +221,17 @@ UnorderedMapView(
 *n*<br/>
 領域を事前に割り当てる要素の数。
 
-*InIt*<br/>
+*Init*<br/>
 UnorderedMapView の型名。
 
 *H*<br/>
-キーのハッシュ値にできる関数オブジェクト。 既定値は[std::hash\<K >](../standard-library/hash-class.md)の種類を`std::hash`をサポートしています。
+キーのハッシュ値にできる関数オブジェクト。 デフォルトは、サポートする型に対して[>\<std::hash K](../standard-library/hash-class.md)です。 `std::hash`
 
 *P*<br/>
-2 つのキーを比較して等価性を確認できる関数オブジェクトを提供する型。 既定値は[std::equal_to\<K >](../standard-library/equal-to-struct.md)します。
+2 つのキーを比較して等価性を確認できる関数オブジェクトを提供する型。 デフォルトは[std::equal_to\<K>](../standard-library/equal-to-struct.md)です。
 
-*m*<br/>
-参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md) UnorderedMapView を初期化するために使用されます。
+*M*<br/>
+unorderedMapView を初期化するために使用される[std::unordered_map](../standard-library/unordered-map-class.md)への参照または[Lvalues と Rvalues。](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 *first*<br/>
 UnorderedMapView を初期化するために使用される要素の範囲内の最初の要素の入力反復子。
@@ -242,4 +242,4 @@ UnorderedMapView を初期化するために使用される要素の範囲の後
 ## <a name="see-also"></a>関連項目
 
 [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

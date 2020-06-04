@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 890ebb7d4c2b8fbd51a4460e21efba3e763ead7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240490"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687187"
 ---
-# <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function クラス
+# <a name="pointer_to_binary_function-class"></a>pointer_to_binary_function クラス
 
-二項関数ポインターを適応性のある二項関数に変換します。 C++ 11、c++ 17 では削除では、非推奨とされます。
+二項関数ポインターを適応性のある二項関数に変換します。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -33,22 +33,22 @@ class pointer_to_binary_function
 
 ### <a name="parameters"></a>パラメーター
 
-*pfunc*\
+*pfunc* \
 変換する二項関数。
 
 *左*\
 *\*pfunc* が呼び出される左辺のオブジェクト。
 
-*そうです*\
+*右*\
 *\*pfunc* が呼び出される右側のオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
-テンプレート クラスのコピーを格納する`pfunc`します。 そのメンバー関数`operator()`返すよう`(* pfunc)(Left, right)`します。
+クラステンプレートには、`pfunc` のコピーが格納されます。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
 ## <a name="remarks"></a>Remarks
 
-二項関数ポインターは関数オブジェクトであり、パラメーターとして二項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適応性はありません。 値をバインドなど、否定子と共に使用するアダプターを使用して入れ子にされた型で指定する必要があります`first_argument_type`、 `second_argument_type`、および`result_type`このような適応を可能にします。 `pointer_to_binary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
+二項関数ポインターは関数オブジェクトであり、パラメーターとして二項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適応性はありません。 これをアダプターで使用するには (値をバインドする、negator で使用するなど)、入れ子にされた型 `first_argument_type`、`second_argument_type`、およびそのような適合を可能にする `result_type` を指定する必要があります。 `pointer_to_binary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
 
 ## <a name="example"></a>例
 

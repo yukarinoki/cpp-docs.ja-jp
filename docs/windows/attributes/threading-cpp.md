@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513934"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214501"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,23 +28,23 @@ COM オブジェクトのスレッド処理モデルを指定します。
 *model*<br/>
 Optional次のいずれかのスレッドモデル:
 
-- `apartment`(アパートメントスレッド)
+- `apartment` (アパートメントスレッド)
 
-- `neutral`(ユーザーインターフェイスのないコンポーネント .NET Framework)
+- `neutral` (ユーザーインターフェイスを持たないコンポーネントの .NET Framework)
 
-- `single`(単純なスレッド処理)
+- `single` (単純なスレッド処理)
 
-- `free`(フリースレッド)
+- `free` (フリースレッド)
 
-- `both`(アパートメントおよびフリースレッド)
+- `both` (アパートメントおよびフリースレッド)
 
 既定値は `apartment` です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **スレッド** C++属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
 
-ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、*モデル*で指定されたスレッドモデルは、 `coclass`属性によって挿入される[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラスにテンプレートパラメーターとして渡されます。
+ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、*モデル*で指定されたスレッドモデルは、`coclass` 属性によって挿入される[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラスにテンプレートパラメーターとして渡されます。
 
 **スレッド**属性は、 [event_source](event-source.md)へのアクセスも保護します。
 
@@ -65,7 +65,7 @@ ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

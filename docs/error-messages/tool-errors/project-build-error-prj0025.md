@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383952"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192355"
 ---
 # <a name="project-build-error-prj0025"></a>プロジェクト ビルド エラー PRJ0025
 
-> バッチ ファイル '*ファイル*' ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。
+> バッチファイル '*file*' に、ユーザーの ANSI コードページに変換できない Unicode の内容が含まれています。
 >
-> *ファイルの UNICODE の内容*
+> *ファイルの UNICODE コンテンツ*
 
-プロジェクト システムは、Unicode の内容をカスタム ビルド規則またはビルドのユーザーの現在の ANSI コード ページに正しく変換できないイベントが見つかりました。
+プロジェクトシステムは、ユーザーの現在の ANSI コードページに適切に変換できない、カスタムビルド規則またはビルドイベントに Unicode の内容を検出しました。
 
-このエラーの解決は、ビルド規則の内容を更新またはビルド イベントをまたは ANSI を使用するコード ページをコンピューターにインストールし、システムの既定値として設定するには。
+このエラーを解決するには、ビルドルールまたはビルドイベントの内容を更新して ANSI を使用するか、コンピューターにコードページをインストールして、システムの既定値として設定します。
 
-詳細については、カスタム ビルド ステップとビルド イベントを参照してください[についてカスタム ビルド ステップとビルド イベント](../../build/understanding-custom-build-steps-and-build-events.md)します。
+カスタムビルドステップとビルドイベントの詳細については、「[カスタムビルドステップとビルドイベント](../../build/understanding-custom-build-steps-and-build-events.md)について」を参照してください。

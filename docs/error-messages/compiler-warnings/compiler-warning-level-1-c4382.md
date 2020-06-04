@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186973"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>コンパイラの警告 (レベル 1) C4382
 
-> スロー '*型*': _ _clrcall デストラクターまたはコピー コンス トラクターを持つ型のみを/clr でキャッチできます純粋なモジュール。
+> '*type*' をスローしています: __clrcall デストラクターまたはコピーコンストラクターを持つ型は、/clr: pure モジュールでのみキャッチできます
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-コンパイルされたときに **/clr** (いない **/clr: 純粋な**)、例外処理には、メンバー関数は、ネイティブ型にするにが必要です[_ _cdecl](../../cpp/cdecl.md)なく[_ _clrcall](../../cpp/clrcall.md). ネイティブ型を使用してメンバー関数で`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**します。
+**/Clr (** **/clr: pure**ではなく) を使用してコンパイルした場合、例外処理では、ネイティブ型のメンバー関数が[__clrcall](../../cpp/clrcall.md)ではなく[__cdecl](../../cpp/cdecl.md)されることを想定しています。 `__clrcall` 呼び出し規約を使用するメンバー関数を持つネイティブ型は、 **/clr**でコンパイルされたモジュールでキャッチできません。
 
-コンパイルされたモジュールで、例外がキャッチされるかどうか **/clr: 純粋な**、この警告を無視することができます。
+**/Clr: pure**を指定してコンパイルされたモジュールで例外がキャッチされる場合は、この警告を無視してもかまいません。
 
-詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
+詳細については、「 [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ## <a name="example"></a>例
 

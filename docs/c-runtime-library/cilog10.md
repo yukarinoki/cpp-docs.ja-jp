@@ -1,9 +1,10 @@
 ---
 title: _CIlog10
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIlog10
-apilocation:
+- _o__CIlog10
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIlog10
 - _CIlog10
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 771ed103c8ab0fe29061086923189cc90eb047d9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ba5868892a352f071774a817e375c1f43505ed02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746332"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918023"
 ---
-# <a name="cilog10"></a>_CIlog10
+# <a name="_cilog10"></a>_CIlog10
 
 スタックのトップ値に対して `log10` 演算を実行します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIlog10();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIlog10();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

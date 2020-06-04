@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500544"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444292"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException クラス
 
@@ -48,14 +48,14 @@ COMException クラスには、次のプロパティがあります。
 
 |メンバー|説明|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|例外に対応する HRESULT。|
-|[Exception::Message](#message)|例外を説明するメッセージ。|
+|[例外:: HResult](#hresult)|例外に対応する HRESULT。|
+|[例外:: Message](#message)|例外を説明するメッセージ。|
 
 ## <a name="derived-exceptions"></a>派生例外
 
 次の定義済みの例外は COMException から派生します。 これらは、その名前、コンストラクターの名前、および基になる HRESULT 値だけが COMException とは異なります。
 
-|名前|基になる HRESULT|説明|
+|Name|基になる HRESULT|説明|
 |----------|------------------------|-----------------|
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|
 |AccessDeniedException|E_ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|
@@ -71,13 +71,13 @@ COMException クラスには、次のプロパティがあります。
 |OutOfBoundsException|E_BOUNDS|操作が有効範囲外のデータにアクセスを試みるとスローされます。|
 |OutOfMemoryException|E_OUTOFMEMORY|メモリが不足して操作を完了できないときにスローされます。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 
 **サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
 **メタデータ:** platform.winmd
 
@@ -107,11 +107,11 @@ public:
     property int HResult { int get();}
 ```
 
-## <a name="property-value"></a>プロパティ値
+## <a name="property-value"></a>プロパティの値
 
 エラーを指定する HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 HRESULT 値を解釈する方法の詳細については、「 [COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
@@ -125,10 +125,10 @@ HRESULT 値を解釈する方法の詳細については、「 [COM エラーコ
 public:property String^ Message {    String^ get();}
 ```
 
-### <a name="property-value"></a>プロパティ値
+### <a name="property-value"></a>プロパティの値
 
 例外の説明。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

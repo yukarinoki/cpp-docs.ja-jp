@@ -13,19 +13,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349378"
 ---
-# <a name="environ-wenviron"></a>_environ、_wenviron
+# <a name="_environ-_wenviron"></a>_environ、_wenviron
 
 `_environ` 変数は、プロセスの環境を構成するマルチバイト文字列へのポインターの配列を指すポインターです。 このグローバル変数は非推奨となりました。セキュリティを強化したバージョンである [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) および[_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) を、グローバル変数の代わりに使用する必要があります。 `_environ` は Stdlib.h で宣言されています。
 
 > [!IMPORTANT]
->  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -56,7 +56,7 @@ extern wchar_t **_wenviron;
 2 つの環境のコピー (MBCS および Unicode) がプログラムに同時に存在する場合、ランタイム システムは、両方のコピーを保持する必要があるため、実行時間が長くなります。 たとえば、`_putenv` を呼び出す場合は、2 つの環境文字列が対応するように `_wputenv` も自動的に呼び出されます。
 
 > [!CAUTION]
->  まれに、ランタイム システムが Unicode バージョンとマルチバイト バージョンの両方の環境を保持している場合、これら 2 つのバージョンの環境が正確には対応しないことがあります。 これは、一意のマルチバイト文字列はすべて一意の Unicode 文字列に対応していますが、一意の Unicode 文字列は必ずしも一意のマルチバイト文字列に対応していないためです。 このため、2 つの個別の Unicode 文字列が、同一のマルチバイト文字列にマップされる可能性があります。
+> まれに、ランタイム システムが Unicode バージョンとマルチバイト バージョンの両方の環境を保持している場合、これら 2 つのバージョンの環境が正確には対応しないことがあります。 これは、一意のマルチバイト文字列はすべて一意の Unicode 文字列に対応していますが、一意の Unicode 文字列は必ずしも一意のマルチバイト文字列に対応していないためです。 このため、2 つの個別の Unicode 文字列が、同一のマルチバイト文字列にマップされる可能性があります。
 
 Unicode コンテキストで `_environ` をポーリングすることは、[/MD](../build/reference/md-mt-ld-use-run-time-library.md) または `/MDd` リンケージが使用される場合には無意味です。 CRT DLL では、プログラムの種類 (ワイドまたはマルチバイト) は不明です。 ほとんどの場合のシナリオどおり、マルチバイトの種類のプログラムだけが作成されます。
 

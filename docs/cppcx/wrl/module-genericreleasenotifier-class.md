@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371300"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier クラス
 
-現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダをファンクター、または関数へのポインターによって指定されます。
+現在のモジュールの最後のオブジェクトが解放されたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダ、ファンクタ、または関数へのポインターで指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-イベント ハンドラーの場所を含むデータ メンバーの型。
+イベント ハンドラーの場所を格納するデータ メンバーの型。
 
 ## <a name="members"></a>メンバー
 
@@ -42,19 +42,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 名前                                                                                                     | 説明
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | `Module::GenericReleaseNotifier` クラスの新しいインスタンスを初期化します。
+[モジュール::ジェネリックリリースNotifier::ジェネリックリリースNotifier](#genericreleasenotifier-genericreleasenotifier) | `Module::GenericReleaseNotifier` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                                     | 説明
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::Invoke](#genericreleasenotifier-invoke) | 現在関連付けられているイベント ハンドラーを呼び出す`Module::GenericReleaseNotifier`オブジェクト。
+[モジュール::ジェネリックリリースNotifier::呼び出し](#genericreleasenotifier-invoke) | 現在`Module::GenericReleaseNotifier`のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                                                                          | 説明
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | ラムダ、ファンクター、または現在に関連付けられている関数へのポインター イベント ハンドラーを保持`Module::GenericReleaseNotifier`オブジェクト。
+[モジュール::ジェネリックリリースNotifier::callback_](#genericreleasenotifier-callback) | 現在`Module::GenericReleaseNotifier`のオブジェクトに関連付けられているラムダ、ファンクタ、または関数へのポインターイベント ハンドラーを保持します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -64,19 +64,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** モジュール.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>モジュール::ジェネリックリリースNotifier::callback_
 
-ラムダ、ファンクター、または現在に関連付けられている関数へのポインター イベント ハンドラーを保持`Module::GenericReleaseNotifier`オブジェクト。
+現在`Module::GenericReleaseNotifier`のオブジェクトに関連付けられているラムダ、ファンクタ、または関数へのポインターイベント ハンドラーを保持します。
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>モジュール::ジェネリックリリースNotifier::ジェネリックリリースNotifier
 
 `Module::GenericReleaseNotifier` クラスの新しいインスタンスを初期化します。
 
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>パラメーター
 
-*callback*<br/>
-ラムダをファンクター、またはかっこ関数の演算子を呼び出すことができる関数へのポインター イベント ハンドラー (`()`)。
+*コールバック*<br/>
+かっこ関数演算子 ( )`()`で呼び出すことができるラムダ、ファンクタ、または関数へのポインターのイベント ハンドラー。
 
-*release*<br/>
-指定`true`、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)メソッド。 それ以外の場合、指定`false`します。
+*リリース*<br/>
+基`true`になるモジュールの呼び出しを有効にすることを指定します: [:リリースNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)メソッド;それ以外の`false`場合は、 を指定します。
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier::Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>モジュール::ジェネリックリリースNotifier::呼び出し
 
-現在関連付けられているイベント ハンドラーを呼び出す`Module::GenericReleaseNotifier`オブジェクト。
+現在`Module::GenericReleaseNotifier`のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。
 
 ```cpp
 void Invoke();

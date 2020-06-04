@@ -1,14 +1,18 @@
 ---
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
 - _strncpy_s_l
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
-apilocation:
+- _o__mbsncpy_s
+- _o__mbsncpy_s_l
+- _o_strncpy_s
+- _o_wcsncpy_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +26,11 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncpy_s
 - _wcsncpy_s_l
@@ -46,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209762"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919290"
 ---
-# <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
+# <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 文字列の文字を他の文字列にコピーします。  これらの [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) のバージョンは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsncpy_s**と **_mbsncpy_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsncpy_s**と **_mbsncpy_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -162,52 +170,54 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は 0 **STRUNCATE**切り捨てが発生した場合、それ以外の場合、エラー コード。
+成功した場合は0、切り捨てが発生した場合は、それ以外**の場合は**エラーコード。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*strDest*|*numberOfElements*|*strSource*|戻り値|内容*追加される文字*|
+|*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest*の内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*追加される文字*[0] が 0 に設定|
-|任意|0|任意|**EINVAL**|変更されない|
-|いない**NULL**|小さすぎる|任意|**ERANGE**|*追加される文字*[0] が 0 に設定|
+|**空白**|any|any|**EINVAL**|変更されない|
+|any|any|**空白**|**EINVAL**|*Strdest*[0] を0に設定します。|
+|any|0|any|**EINVAL**|変更されない|
+|**NULL**以外|小さすぎる|any|**ERANGE**|*Strdest*[0] を0に設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数が 1 つ目のコピーを試行*D*の文字*strSource*に*追加される文字*ここで、 *D*はより小さく、*数*の長さと*strSource*します。 場合は、これら*D*内に収まる文字*追加される文字*(として、サイズが指定*numberOfElements*) これらの文字をコピーし、引き続き、null の終端文字の分のままにして終端の null が追加されます。それ以外の場合、*追加される文字*[0] 設定は、null 文字を無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+これらの関数は、 *Strsource*の最初の*D*文字を*strsource*にコピーしようとします。ここで、 *d*は、 *count*の小さい方、および*strsource*の長さです。 これらの*D*文字が*strdest* (サイズが*numberofelements*として指定されている) 内に収まり、null 終端文字のための空き領域が残っている場合は、それらの文字がコピーされ、終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-これには例外があります。 場合*カウント*は **_TRUNCATE**、だけの*strSource*に収まる*追加される文字*の空きを残して、コピーが、追加される常に null を終了しています。
+これには例外があります。 *Count*が **_TRUNCATE**場合は、常に追加される終端の null 用の空きを残したまま、 *strsource*に収まる範囲の*strsource*がコピーされます。
 
-例えば以下のようにします。
+たとえば、次のように入力します。
 
 ```C
 char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-確認していることを意味**strncpy_s** 5 つをコピーする文字をバッファーに 5 バイト長これは余裕がありません、null の終端ため**strncpy_s** 、文字列をゼロと無効な呼び出し。パラメーターのハンドラー。
+は、5文字をバッファーに5バイト長コピーする**strncpy_s**を要求していることを意味します。この場合、null 終端文字にはスペースが残されないため、文字列をゼロに**strncpy_s**し、無効なパラメーターハンドラーを呼び出します。
 
-切り捨て動作が必要な場合は **_TRUNCATE**または (*サイズ*- 1)。
+切り捨て動作が必要な場合は、 **_TRUNCATE**または (*size* -1) を使用します。
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-異なり**strncpy**場合は、*カウント*がの長さより大きい*strSource*、コピー先文字列がまでnull文字が埋め込まれません*カウント*します。
+**Strncpy**とは異なり、 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれていないことに*注意してください。*
 
-動作**strncpy_s**元とコピー先文字列が重なり合う場合は定義されません。
+コピー元とコピー先の文字列が重なり合っている場合、 **strncpy_s**の動作は定義されていません。
 
-場合*追加される文字*または*strSource*は**NULL**、または*numberOfElements*が 0 の場合、無効なパラメーター ハンドラーが呼び出されます。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
+*Strdest*または*Strdest*が**NULL**の場合、または*numberofelements*が0の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-**wcsncpy_s**と **_mbsncpy_s**のワイド文字とマルチバイト文字バージョン**strncpy_s**します。 引数と戻り値の**wcsncpy_s**と**mbsncpy_s**はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**wcsncpy_s**と **_mbsncpy_s**は**strncpy_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -217,17 +227,17 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**、 **_wcsncpy_s_l**と **_mbsncpy_s_l**ロケールの依存関係がない、だけで提供されて **_tcsncpy_s_l**とするものはありません直接呼び出されます。
+> **_strncpy_s_l**、 **_wcsncpy_s_l**および **_mbsncpy_s_l**にはロケールに依存せず、 **_tcsncpy_s_l**のためだけに提供されており、直接呼び出すためのものではありません。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strncpy_s**、 **_strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
-|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
+|**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -403,7 +413,7 @@ After strncpy_s (with null-termination):
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

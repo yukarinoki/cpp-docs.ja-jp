@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214631"
 ---
 # <a name="rdx"></a>rdx
 
-レジストリ キーを作成または既存のレジストリ キーを変更します。
+レジストリキーを作成するか、既存のレジストリキーを変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,19 +26,19 @@ ms.locfileid: "62407498"
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-作成または開かれたキーの名前。
+作成または開くキーの名前。
 
 *valuename*<br/>
-(省略可能)設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
+Optional設定する値フィールドを指定します。 この名前の値フィールドがキーにまだ存在しない場合は、追加されます。
 
 *regtype*<br/>
-追加されるレジストリ キーの型。 次のいずれかを指定できます: `text`、 `dword`、 `binary`、または`CString`します。
+追加するレジストリキーの種類。 次のいずれかを指定できます: `text`、`dword`、`binary`、または `CString`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Rdx** C++ 属性を作成または既存の COM コンポーネントのレジストリ キーを変更します。 属性は、対象のメンバーを実装するオブジェクトに BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`、レジストリおよびデータ メンバーの間でデータを転送する、BEGIN_RDX_MAP マクロした結果、挿入関数を使用できます
+**Rdx** C++属性は、COM コンポーネントの既存のレジストリキーを作成または変更します。 属性は、ターゲットメンバーを実装するオブジェクトに BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`、BEGIN_RDX_MAP マクロの結果として挿入された関数を使用して、レジストリとデータメンバーの間でデータを転送できます。
 
-この属性を組み合わせて使用することができます、[コクラス](coclass.md)、 [progid](progid.md)、または[vi_progid](vi-progid.md)属性または他の属性をこれらのいずれかを意味します。
+この属性は、[コクラス](coclass.md)、 [progid](progid.md)、または[vi_progid](vi-progid.md)属性、またはこれらの属性のいずれかを意味するその他の属性と組み合わせて使用できます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -46,7 +46,7 @@ ms.locfileid: "62407498"
 
 |||
 |-|-|
-|**対象**|**クラス**または**構造体**メンバー|
+|**対象**|**クラス**または**構造体**のメンバー|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
@@ -55,7 +55,7 @@ ms.locfileid: "62407498"
 
 ## <a name="example"></a>例
 
-次のコードは、CMyClass COM コンポーネントを記述するシステム プロパティと呼ばれるレジストリ キーを追加します。
+次のコードでは、CMyClass COM コンポーネントを記述するシステムに MyValue というレジストリキーを追加します。
 
 ```cpp
 // cpp_attr_ref_rdx.cpp
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [registration_script](registration-script.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202918"
 ---
 # <a name="fatal-error-c1601"></a>致命的なエラー C1601
 
 サポートされていないインライン アセンブラー オペコード
 
-このエラーは、不完全なインストールが原因で発生した可能性が、コンパイラ .exe ファイルが一致しないことを示します。 たとえば、インストール済みサービス パックが、プロセッサ パックではありません。 必要なすべての製品をインストールします。
+このエラーは、インストールが不完全であるために発生した可能性がある、コンパイラの .exe ファイルの不一致を示しています。 たとえば、Service Pack がインストールされていても、プロセッサパックはインストールされていない場合があります。 必要なすべての製品をインストールします。

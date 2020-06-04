@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318603"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438911"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -22,32 +22,32 @@ ms.locfileid: "62318603"
 /SECTION:name[=newname][,attributes][alignment]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このオプションは、セクションのオブジェクト ファイルがコンパイルまたはリンク時に設定された属性、セクションの属性を変更します。
+このオプションは、セクションの属性を変更して、セクションのオブジェクトファイルがコンパイルまたはリンクされたときに設定された属性をオーバーライドします。
 
-コロンの後に ( **:** )、指定、*名前*セクションの。 セクション名を変更するには、次の*名前*は等号 (=) で、 *newname*セクション。
+コロン ( **:** ) の後に、セクションの*名前*を指定します。 セクション名を変更するには、*名前*の後に等号 (=) と*newname*を指定します。
 
-設定または変更、セクションの`attributes`、コンマ区切り (**、**) の後ろに 1 つまたは複数の属性の文字。 属性を否定するには、前に感嘆符 (!) には、その文字を付けます。 次の文字は、メモリの属性を指定します。
+セクションの `attributes`を設定または変更するには、コンマ ( **,** ) の後に1つ以上の属性文字を指定します。 属性を否定するには、その文字の前に感嘆符 (!) を付けます。 次の文字では、メモリ属性が指定されています。
 
 |属性|設定|
 |---------------|-------------|
-|c|code|
-|d|破棄できます。|
-|e|executable|
+|c|コード|
+|d|アンドゥ|
+|e|実行可能ファイル (executable)|
 |i|初期化されたデータ|
 |k|キャッシュされた仮想メモリ|
-|m|リンクを削除します。|
+|m|リンクの削除|
 |o|リンク情報|
-|p|ページの仮想メモリ|
+|p|ページング仮想メモリ|
 |r|読み取り|
 |s|shared|
 |u|初期化されていないデータ|
-|週|書き込み|
+|w|write|
 
-コントロールに*配置*、文字を指定して**A**続けて次のように、(バイト単位) の配置のサイズを設定するのには、次の文字のいずれか。
+*配置*を制御するには、次のように、文字**A**の後に次の文字のいずれかを指定して、アラインメントのサイズをバイト単位で設定します。
 
-|文字|配置のサイズ (バイト単位)|
+|文字|配置サイズ (バイト単位)|
 |---------------|-----------------------------|
 |1|1|
 |2|2|
@@ -56,10 +56,10 @@ ms.locfileid: "62318603"
 |p|16|
 |t|32|
 |s|64|
-|x|合わせなし|
+|x|配置なし|
 
-指定、`attributes`と*配置*文字として空白を含む文字列。 文字では大文字小文字が区別されません。
+`attributes` と*配置*文字を、空白のない文字列として指定します。 文字の大文字と小文字は区別されません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

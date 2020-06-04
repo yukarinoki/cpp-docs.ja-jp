@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270914"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749228"
 ---
-# <a name="gh-enable-pexit-hook-function"></a>/GH (_pexit フック関数の有効化)
+# <a name="gh-enable-_pexit-hook-function"></a>/GH (_pexit フック関数の有効化)
 
-呼び出し、`_pexit`関数のすべてのメソッドまたは関数の末尾。
+すべてのメソッド`_pexit`または関数の末尾で関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,31 +26,31 @@ ms.locfileid: "62270914"
 /GH
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`_pexit`関数は、任意のライブラリの一部ではないの定義を提供するかどうかは`_pexit`します。
+この`_pexit`関数はライブラリの一部ではなく、 の定義を指定する必要があります`_pexit`。
 
-明示的に呼び出す予定がない限り`_pexit`プロトタイプを提供する必要はありません。 関数は、次のプロトタイプがあった場合とおよびエントリのすべてのレジスタのコンテンツをプッシュし、終了時に変更されていないコンテンツを表示にする必要がありますに記述する必要があります。
+明示的に呼び出`_pexit`す場合を除き、プロトタイプを提供する必要はありません。 関数は、次のプロトタイプを持っているかのように見える必要があり、エントリ上のすべてのレジスタの内容をプッシュし、終了時に変更されていない内容をポップする必要があります。
 
-```
+```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` ような`_penter`; を参照してください[/Gh (有効にする _penter フック関数)](gh-enable-penter-hook-function.md)を記述する方法の例については、`_pexit`関数。
+`_pexit`は に`_penter`似ています。関数の記述方法の例については[、/Gh (_penterフック関数を有効](gh-enable-penter-hook-function.md)にする)を参照してください。 `_pexit`
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,9 +1,10 @@
 ---
 title: ferror
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ferror
-apilocation:
+- _o_ferror
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334334"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920149"
 ---
 # <a name="ferror"></a>ferror
 
@@ -44,18 +49,20 @@ int ferror(
 
 ### <a name="parameters"></a>パラメーター
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生していない場合*ストリーム*、 **ferror** 0 を返します。 それ以外の場合は、0 以外の値を返します。 ストリームが場合**NULL**、 **ferror**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+*ストリーム*でエラーが発生しなかった場合、 **ferror**は0を返します。 それ以外の場合は、0 以外の値を返します。 Stream が**NULL**の場合、 **ferror**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Ferror**ルーチン (関数とマクロの両方を実装) を読み取りまたは書き込みエラーに関連付けられているファイルをテスト*ストリーム*します。 エラーが発生した場合、ストリームが閉じているか、巻き戻されるまで、またはまで、ストリームのエラー インジケーターが設定のままになります**clearerr**に対してと呼びます。
+**Ferror**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*に関連付けられているファイルに対して読み取りまたは書き込みエラーが発生したかどうかをテストします。 エラーが発生した場合、ストリームが閉じられるか巻き戻されるか、またはそのストリームに対して**clearerr**が呼び出されるまで、ストリームのエラーインジケーターが設定されたままになります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19e3f820b5bd7fdd8eac2f7b5a96fb5923ae0b92
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183801"
 ---
 # <a name="linker-tools-error-lnk1245"></a>リンカ ツール エラー LNK1245
 
-無効なサブシステム 'サブシステム' が指定されます。/WINDOWS、WINDOWSCE、またはコンソール サブシステムがある必要があります。
+無効なサブシステム ' subsystem ' が指定されました。/SUBSYSTEM は WINDOWS、WINDOWSCE、または CONSOLE である必要があります
 
-[/clr](../../build/reference/clr-common-language-runtime-compilation.md)オブジェクトをコンパイルするために使用された、次の条件のいずれかの条件が true だったとします。
+オブジェクトをコンパイルするために[/clr](../../build/reference/clr-common-language-runtime-compilation.md)が使用され、次のいずれかの条件が満たされました。
 
-- カスタム エントリ ポイントが定義されている ([/ENTRY](../../build/reference/entry-entry-point-symbol.md)) ようなリンカーのサブシステムを推測できませんでした。
+- カスタムエントリポイント ([/entry](../../build/reference/entry-entry-point-symbol.md)) が定義されました。そのため、リンカーはサブシステムを推論できませんでした。
 
-- 値が渡された、 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) /clr オブジェクトに対して有効でないリンカー オプション。
+- /Clr オブジェクトに対して無効な[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)リンカーオプションに値が渡されました。
 
-どちらの場合は、解像度は、/SUBSYSTEM リンカー オプションに有効な値を指定します。
+どちらの場合も、/SUBSYSTEM リンカーオプションに有効な値を指定することが解決策となります。

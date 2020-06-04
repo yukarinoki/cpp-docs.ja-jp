@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2017
 ms.assetid: f7c21733-b0fb-4888-a295-9b453ba6ee77
-ms.openlocfilehash: ce5332c2812740ef0b8c7d8e9c64a095d20a4e2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02e80de5c34809a331003f3b0fb28d32e138a531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194734"
 ---
 # <a name="linker-tools-error-lnk2017"></a>リンカ ツール エラー LNK2017
 
-'symbol' relocation to 'segment' invalid without /LARGEADDRESSAWARE:NO
+' segment ' への ' symbol ' 再配置は/LARGEADDRESSAWARE がないため無効です: NO
 
-32 ビットのアドレスを持つ 64 ビット イメージをビルドしようとしました。 これを行うには、次の必要があります。
+32ビットのアドレスを使用して64ビットのイメージを構築しようとしています。 これには、次の操作が必要です。
 
 - 固定の読み込みアドレスを使用します。
 
-- イメージは、3 GB に制限します。
+- イメージを 3 GB に制限します。
 
-- 指定[/largeaddressaware:no](../../build/reference/largeaddressaware-handle-large-addresses.md)します。
+- [/Largeaddressaware: no](../../build/reference/largeaddressaware-handle-large-addresses.md)を指定します。

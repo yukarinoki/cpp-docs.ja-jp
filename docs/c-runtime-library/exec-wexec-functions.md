@@ -1,7 +1,7 @@
 ---
 title: _exec、_wexec 系関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _texecve
 - texecl
@@ -53,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351661"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 系関数
 
@@ -102,10 +105,10 @@ ms.locfileid: "69500137"
 `_exec` 呼び出しのパラメーターとして文字列へのポインターを指定することにより、新しいプロセスにパラメーターが渡されます。 これらの文字列が新しいプロセスのパラメーター リストとなります。 呼び出しプロセスから継承した環境設定の文字列と、新しいプロセスのパラメーター リストの文字列を合わせた長さが、32 KB を超えないようにしてください。 各文字列の終端を表す NULL 文字 ('\0') はカウントされませんが、パラメーターを区切るために自動的に挿入されるスペース文字はカウントされます。
 
 > [!NOTE]
->  文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_exec` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。
+> 文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_exec` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。
 
 > [!IMPORTANT]
->  ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
+> ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
 
 `_exec` 関数は、パラメーターを検証します。 いずれかのパラメーターが null ポインター、空の文字列、または省略されている場合、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、`_exec` 関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、-1 を返します。 新しいプロセスは実行されません。
 
@@ -115,7 +118,7 @@ ms.locfileid: "69500137"
 
 `_execv`、`_execve`、`_execvp`、および `_execvpe` の各呼び出しは、新しいプロセスのパラメーターの数が変化する場合に便利です。 パラメーターへのポインターは、配列 `argv` として渡されます。 通常の場合、パラメーター `argv`[0] は `cmdname` へのポインターです。 パラメーター `argv`[1] ～ `argv`[`n`] は、新しいパラメーター リストを構成する文字列を指します。 パラメーター リストの終端を示すために、パラメーター `argv`[`n`+1] は **NULL** ポインターである必要があります。
 
-`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 `value` は二重引用符で囲みません。`envp` 配列の最後の要素は **NULL** にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
+`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (二重`value`引用符で囲まれていないことに注意してください。配列の最後の`envp`要素は**NULL**である必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
 
 `_exec` 系関数で実行されるプログラムは、常に、プログラムの .exe ファイル ヘッダーの maximum allocation フィールドが既定値 0xFFFFH であるかのように、メモリに読み込まれます。
 
@@ -123,7 +126,7 @@ ms.locfileid: "69500137"
 
 ## <a name="example"></a>例
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -154,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 次のプログラムを使用して Crt_args.exe を実行します。
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -235,10 +238,10 @@ int main( int ac, char* av[] )
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[プロセスと環境の制御](../c-runtime-library/process-and-environment-control.md)<br/>
+[中止](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[終了、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
 [_spawn 系関数と _wspawn 系関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

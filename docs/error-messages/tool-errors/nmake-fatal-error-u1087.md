@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1087
 ms.assetid: 5236ab54-e117-484d-99c3-852b061fd3d0
-ms.openlocfilehash: 47015443114404de2e5f9edfdb1100c324d5e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad6f422f42b2ba284a2886065b6181b879e7c7fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193513"
 ---
 # <a name="nmake-fatal-error-u1087"></a>NMAKE の致命的なエラー U1087
 
-できません: と:: 同じターゲットの依存
+同じターゲットに対して: と:: の依存関係を持つことはできません
 
-両方を 1 つのコロンでターゲットを指定することはできません (**:**) とダブル コロン (`::`) 依存関係。
+1つのコロン ( **:** ) と2つのコロン (`::`) の依存関係の両方でターゲットを指定することはできません。
 
-複数の記述ブロックのターゲットを指定するには使用`::`依存関係の行ごとにします。
+複数の説明ブロックでターゲットを指定するには、各依存関係行で `::` を使用します。

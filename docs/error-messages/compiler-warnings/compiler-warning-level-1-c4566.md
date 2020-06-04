@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87d610980ffe9d9e5087ddaec0ecb91d813a4d60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162259"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>コンパイラの警告 (レベル 1) C4566
 
-ユニバーサル文字名 'char' で表される文字は、現在のコード ページ (ページ) で表すことができません。
+ユニバーサル文字名 ' char ' で表される文字は、現在のコードページ (ページ) では表現できません
 
-現在の ANSI コード ページではないすべての Unicode 文字を表現できます。
+現在の ANSI コードページですべての Unicode 文字を表すことはできません。
 
-ナロー文字列 (1 バイト文字) は、ワイド文字列 (2 バイト文字) はないマルチバイト文字に変換されます。
+ナロー文字列 (1 バイト文字) はマルチバイト文字に変換されますが、ワイド文字列 (2 バイト文字) は変換されません。
 
 次の例では、C4566 が生成されます。
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

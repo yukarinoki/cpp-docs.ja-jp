@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: 657e78ece2ce4039eb8dc8561abd455c60aaff75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2b28af52a2ca2263a7bad77c8c69242396ff2b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195254"
 ---
 # <a name="linker-tools-error-lnk1181"></a>リンカ ツール エラー LNK1181
 
-入力ファイル 'filename' を開くことができません。
+入力ファイル ' filename ' を開くことができません
 
-リンカーが見つかりませんでした。`filename`が存在しないか、パスが見つかりませんでした。
+リンカーは、存在しないかパスが見つからなかったため、`filename` を見つけることができませんでした。
 
-よくある原因のエラー LNK1181 が含まれます。
+エラー LNK1181 の一般的な原因には、次のものがあります。
 
-- `filename` リンカーのコマンドラインは、ファイルの追加の依存関係が存在しないために参照されます。
+- リンカー行に対する追加の依存関係として `filename` が参照されていますが、ファイルが存在しません。
 
-- A **/LIBPATH**格納されているディレクトリを指定するステートメント`filename`がありません。
+- `filename` が含まれているディレクトリを指定する **/libpath**ステートメントがありません。
 
-上記の問題を解決するには、リンカーのコマンドラインで参照されているすべてのファイルは、システムに存在を確認します。  あることを確認、 **/LIBPATH**リンカーの依存ファイルを含む各ディレクトリに対してステートメントです。
+上記の問題を解決するには、リンカー行で参照されているファイルがシステムに存在することを確認します。  また、リンカーに依存するファイルが格納されている各ディレクトリに対して、 **/libpath**ステートメントがあることを確認します。
 
-詳細については、次を参照してください。[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)します。
+詳細については、「[リンカー入力としての .Lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)」を参照してください。
 
-LNK1181 のもう 1 つの考えられる原因は、長いファイル名に埋め込まれたスペースが引用符で囲まれていないことです。  その場合は、リンカーだけ最初のスペースでは、最大のファイル名が認識され、ファイル拡張子を想定します .obj。このような状況を解決するには長いファイル名を囲む (パスとファイル名) 引用符で囲んで指定します。
+LNK1181 のもう1つの原因としては、スペースが埋め込まれている長いファイル名が引用符で囲まれていないことが考えられます。  この場合、リンカーは最初のスペースまでのファイル名のみを認識し、.obj のファイル拡張子を想定します。 この状況に対処するには、長いファイル名 (パスとファイル名) を引用符で囲みます。
 
-コンパイルすると、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)オプションにより、LNK1181 のため、そのオプションの .obj ファイルの作成を抑制します。
+[/P (ファイルを前処理する)](../../build/reference/p-preprocess-to-a-file.md)オプションを使用してコンパイルすると、LNK1181 が発生する可能性があります。これは、このオプションによって .obj ファイルの作成が抑制されるためです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [/LIBPATH (追加ライブラリのパス)](../../build/reference/libpath-additional-libpath.md)

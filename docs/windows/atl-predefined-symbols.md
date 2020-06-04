@@ -5,37 +5,37 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 6e876fe27bd57194513f637fda90845ca68c59ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0661dbf3dd02bef5f5f056c5f09b39e33d17364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168552"
 ---
 # <a name="atl-predefined-symbols"></a>ATL の定義済みシンボル
 
-これらのシンボルは、ATL ヘッダー ファイルで定義されているが、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、ダイアログ ボックスが主に使用されます。
+これらのシンボルは ATL ヘッダーファイルで定義されていますが、標準の Windows アプリケーション関数とアクションをサポートしています。 これらのシンボルは、主にダイアログボックスと共に使用されます。
 
-ダイアログとコントロールを使用する場合に、[ダイアログ エディター](../windows/dialog-editor.md)にこれらのシンボルが表示されます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)コモン コントロールに関連付けられています。 たとえば、ダイアログ ボックスがある場合、**キャンセル**ボタン、コマンドは IDCANCEL シンボルに関連付けられますことで、**プロパティ**ウィンドウ。
+[ダイアログエディターでダイアログ](../windows/dialog-editor.md)とコントロールを操作しているときに、これらのシンボルは、コモンコントロールに関連付けられている[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)に表示されます。 たとえば、ダイアログボックスに **[キャンセル**] ボタンがある場合、そのコマンドは **[プロパティ]** ウィンドウのシンボル IDCANCEL に関連付けられます。
 
 |||
 |-|-|
-|IDABORT|(コントロール)ダイアログ ボックスで、中止 ボタン|
-|IDC_STATIC|(コントロール)スタティック コントロール|
-|IDCANCEL|(コントロール)ダイアログ ボックスで、[キャンセル] ボタン|
-|IDIGNORE|(コントロール)ダイアログ ボックスで、[無視] ボタン|
-|IDNO|(コントロール)ダイアログ ボックスで、 ボタンがないです。|
-|IDOK|(コントロール)ダイアログ ボックスで、[ok] ボタン|
-|IDR_ACCELERATOR1|(リソース)アクセラレータ テーブル|
-|IDRETRY|(コントロール)ダイアログ ボックスで、[再試行] ボタン|
-|IDS_PROJNAME|(string)現在のアプリケーション名|
-|IDYES|(コントロール)ダイアログ ボックスで、[はい] ボタン|
+|IDABORT|制御ダイアログボックス、[中止] ボタン|
+|IDC_STATIC|制御スタティックコントロール|
+|IDCANCEL|制御ダイアログボックス、[キャンセル] ボタン|
+|IDIGNORE|制御ダイアログボックス、[無視] ボタン|
+|IDNO|制御ダイアログボックス、[いいえ] ボタン|
+|IDOK|制御ダイアログボックスの [OK] ボタン|
+|IDR_ACCELERATOR1|センターアクセラレータテーブル|
+|IDRETRY|制御ダイアログボックスの [再試行] ボタン|
+|IDS_PROJNAME|文字列現在のアプリケーション名|
+|IDYES|制御ダイアログボックス、[はい] ボタン|
 
 ## <a name="requirements"></a>必要条件
 
-[ATL]
+ATL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
 [MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)<br/>

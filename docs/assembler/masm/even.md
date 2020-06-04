@@ -1,26 +1,27 @@
 ---
 title: EVEN
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EVEN
 helpviewer_keywords:
 - EVEN directive
 ms.assetid: 68938ba4-8cb9-44d4-914e-9f9fee6bcbf4
-ms.openlocfilehash: 060c62a82c03f3de76b310d12360928bdf60e7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c454b29e6492aa93506ff2a354326cda03ae96b1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185042"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318112"
 ---
 # <a name="even"></a>EVEN
 
-次の変数または偶数のバイトの命令を配置します。
+次の変数または命令を偶数バイトに配置します。
 
 ## <a name="syntax"></a>構文
 
-> EVEN
+> **EVEN**
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

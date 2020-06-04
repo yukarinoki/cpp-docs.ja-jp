@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2534
 ms.assetid: 481f9f54-5b51-4aa0-8eea-218f10807705
-ms.openlocfilehash: e684804ea31b16f31c82e244cb4f9a6aaf2d08c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b1e481c733f52b0be419b7fd786b26a90362f9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386968"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737090"
 ---
 # <a name="compiler-error-c2534"></a>コンパイラ エラー C2534
 
-'identifier': コンス トラクターは、値を返すことはできません
+' identifier ': コンストラクターは値を返せません。
 
-コンス トラクターの戻り値または戻り値の型があることはできません (であっても、`void`型を返す)。
+コンストラクターが値を返さないか、戻り値の型を持つことができません (戻り値の型が `void` であっても)。
 
-このエラーは、削除することによって解決される可能性があります、`return`コンス トラクターの定義からのステートメント。
+このエラーは、コンストラクターの定義から `return` ステートメントを削除することによって解決できる場合があります。
 
 次の例では、C2534 が生成されます。
 
-```
+```cpp
 // C2534.cpp
 class A {
 public:

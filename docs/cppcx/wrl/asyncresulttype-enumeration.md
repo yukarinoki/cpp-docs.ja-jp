@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a2a9ec803fba1be0012fcb58bf3b42e78f9071
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398798"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214163"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列挙型
 
-によって返される結果の種類を指定します、`GetResults()`メソッド。
+`GetResults()` メソッドによって返される結果の種類を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,17 +28,17 @@ enum AsyncResultType;
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`MultipleResults`|一連の間で段階的に表示されますが、複数の結果`Start`状態とする前に`Close()`が呼び出されます。|
-|`SingleResult`|後に示す 1 つの結果、`Complete`イベントが発生します。|
+|`MultipleResults`|複数の結果のセット。 `Start` の状態と `Close()` が呼び出される前に徐々に表示されます。|
+|`SingleResult`|1つの結果。 `Complete` イベントが発生した後に表示されます。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** async.h
+**ヘッダー:** async .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

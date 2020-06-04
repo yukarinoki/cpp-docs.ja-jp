@@ -1,12 +1,16 @@
 ---
 title: strtoull、_strtoull_l、wcstoull、_wcstoull_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _strtoull_l
 - _wcstoull_l
 - strtoull
 - wcstoull
-apilocation:
+- _o__strtoull_l
+- _o__wcstoull_l
+- _o_strtoull
+- _o_wcstoull
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoull_l
 - _tcstoull
@@ -34,14 +42,14 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95b64b96de1919e430a8114678cbb3db2d513c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912428"
 ---
-# <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull、_strtoull_l、wcstoull、_wcstoull_l
+# <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull、_strtoull_l、wcstoull、_wcstoull_l
 
 文字列を符号なし長整数の値に変換します。
 
@@ -88,19 +96,21 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtoull**存在する場合は、変換後の値を返しますまたは**ULLONG_MAX**オーバーフローが発生します。 **strtoull**変換を実行できない場合は 0 を返します。 **wcstoull**と同様に値を返します**strtoull**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローやアンダー フローが発生した場合。
+**strtoull**は、変換された値 (存在する場合)、またはオーバーフローに**ULLONG_MAX**を返します。 変換を実行できない場合、 **strtoull**は0を返します。 **wcstoull**は、 **strtoull**にと同様値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生した場合、 **errno**は**ERANGE**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-入力文字列の各関数に変換します*strSource*を**符号なし****長い****長い**整数値。
+これらの各関数は、入力文字列*Strsource*を**符号なし** **long** **長**整数値に変換します。
 
-**strtoull**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは最初の数値文字に以上である可能性がある*基本*します。 設定、 **LC_NUMERIC**ロケールのカテゴリの小数点文字の認識されます*strSource*; 詳細についてを参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md). **strtoull**と**wcstoull** ; 現在のロケールを使用します **_strtoull_l**と **_wcstoull_l**代わりに渡されるロケールは同一それ以外の場合。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**strtoull**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 これは、終端の null 文字である場合もあれば、*基数*以上の最初の数字の場合もあります。 ロケールの**LC_NUMERIC**カテゴリの設定によって、 *strsource*の小数点文字が認識されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **strtoull**と**wcstoull**は現在のロケールを使用します。**_strtoull_l**と **_wcstoull_l**では、渡されたロケールを使用しますが、それ以外の場合は同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-**wcstoull**のワイド文字バージョンは、 **strtoull**とその*strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcstoull**は**strtoull**のワイド文字バージョンであり、その*strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -109,22 +119,22 @@ NULL で終わる変換対象の文字列。
 |**_tcstoull**|**strtoull**|**strtoull**|**wcstoull**|
 |**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
-**strtoull**が必要ですが*strSource*次の形式の文字列を指すようにします。
+**strtoull**は、 *strsource*が次の形式の文字列を指すことを想定しています。
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*空白*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。 *数字*は 1 つ以上の 10 進数字。 *文字*1 つまたは複数の文字を 'a' から 'z' (または 'A' ~ 'Z')。 この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*が 2 ~ 36 の間の数値の基数として使用されます。 場合*基本*は 0 が指す文字列の先頭の文字です。 *strSource*を使用して、ベースを決定します。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*は 0 です。 および、スキャンされた最初の文字は '0'、8 進数の整数が想定されますと、'8' または '9' の文字が、スキャンを停止します。 **strtoull**により、プラス記号 (**+**) またはマイナス記号 (**-**) プレフィックスは先頭の負符号は戻り値の符号が反転されることを示します。
+*空白*は、空白文字とタブ文字で構成される場合があります。これは無視されます。 *数字*は1桁以上の10進数です。 *文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合、 *strsource*によって指定された文字列の最初の文字が、ベースを決定するために使用されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。 **strtoull**では、正符号**+**() または負**-** 符号 () のプレフィックスを使用できます。先頭の負符号は、戻り値が否定されることを示します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
 |**wcstoull**|\<stdlib.h> または \<wchar.h>|
 |**_strtoull_l**|\<stdlib.h>|
 |**_wcstoull_l**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -133,7 +143,7 @@ A*空白*は無視されますスペースやタブ文字で構成されてい�
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

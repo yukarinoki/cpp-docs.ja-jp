@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187038"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>コンパイラの警告 (レベル 1) C4374
 
-'function1': インターフェイス メソッドは非仮想メソッド 'function2' によって実装されません
+' function1 ': インターフェイスメソッドは、仮想でないメソッド ' function2 ' によって実装されません
 
-コンパイラが予期されましたが、[仮想](../../cpp/virtual-specifier.md)メソッド定義のキーワード。
+コンパイラは、メソッド定義で[virtual](../../cpp/virtual-specifier.md)キーワードを検索する必要があります。
 
 次の例では、C4374 が生成されます。
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

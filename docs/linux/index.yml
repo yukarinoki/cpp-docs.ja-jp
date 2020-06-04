@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: C++ を使用した Linux の開発 | Linux 用アプリケーションの作成とデバッグ
+summary: Linux 用のアプリケーションを作成およびデバッグするには、Visual Studio 2017 以降で C++ を使用します。
+metadata:
+  title: C++ による Linux 開発
+  description: Visual Studio 2017 以降で C++ を使用して Linux 用のアプリケーションを作成およびデバッグする方法について説明します。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 04/26/2020
+  ms.openlocfilehash: ac705ae3ae457d804ed2ca884143c8c6cb5a4758
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108642"
+landingContent:
+- title: Visual Studio で Linux C++ アプリを管理する
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Linux ワークロードのダウンロード、インストール、セットアップ
+      url: download-install-and-setup-the-linux-development-workload.md
+  - linkListType: how-to-guide
+    links:
+    - text: ご利用のターゲット Linux システムに接続する
+      url: connect-to-your-remote-linux-computer.md
+  - linkListType: reference
+    links:
+    - text: ConnectionManager リファレンス
+      url: connectionmanager-reference.md
+- title: Visual Studio で Linux プロジェクトをビルドする
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 新しい Linux プロジェクトを作成する
+      url: create-a-new-linux-project.md
+    - text: Linux プロジェクトを構成する
+      url: configure-a-linux-project.md
+    - text: Linux プロジェクトのデプロイ、実行、デバッグ
+      url: deploy-run-and-debug-your-linux-project.md
+  - linkListType: reference
+    links:
+    - text: Linux プロジェクト プロパティ ページの参照
+      url: prop-pages-linux.md
+- title: Visual Studio で Linux CMake プロジェクトをビルドする
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Linux CMake プロジェクトの作成と構成
+      url: cmake-linux-project.md
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する
+      url: /cpp/build/get-started-linux-cmake

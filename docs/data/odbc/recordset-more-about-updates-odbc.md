@@ -1,5 +1,5 @@
 ---
-title: レコード セット:詳細については、更新 (ODBC)
+title: 'レコードセット: 更新処理の詳細 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,102 +10,102 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 955b26137ce976514d84f95f4d819779b93bd78a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368675"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>レコード セット:詳細については、更新 (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>レコードセット: 更新処理の詳細 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 このトピックでは、次の内容について説明します。
 
-- [トランザクションなどの他の操作が更新プログラムに与える影響](#_core_how_transactions_affect_updates)します。
+- [トランザクションなどの他の操作が更新に与える影響](#_core_how_transactions_affect_updates)
 
-- [更新プログラムや他のユーザーの](#_core_your_updates_and_the_updates_of_other_users)します。
+- [更新プログラムと他のユーザーの更新](#_core_your_updates_and_the_updates_of_other_users):
 
-- [詳細については、Update および Delete のメンバー関数は](#_core_more_about_update_and_delete)します。
+- [更新および削除のメンバー関数の詳細](#_core_more_about_update_and_delete)については、
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、 `AddNew`、 `Edit`、`Delete`と`Update`メンバー関数。 ただし、トランザクションを実行することができます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装している場合、一部の情報は適用されません。 たとえば、 `AddNew`、 `Edit`、`Delete`および メンバー関数を`Update`呼び出すことはできません。ただし、トランザクションを実行することはできます。 バルク行フェッチの詳細については、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-##  <a name="_core_how_other_operations_affect_updates"></a> 更新プログラムの他の操作の影響
+## <a name="how-other-operations-affect-updates"></a><a name="_core_how_other_operations_affect_updates"></a>その他の操作が更新に与える影響
 
-更新による影響はトランザクション有効で、更新時にトランザクションを完了する前にスクロールして、トランザクションを完了する前に、レコード セットを閉じることで。
+更新は、更新時に有効なトランザクション、トランザクションを完了する前にレコードセットを閉じること、およびトランザクションを完了する前にスクロールすることによって、影響を受けます。
 
-###  <a name="_core_how_transactions_affect_updates"></a> トランザクションが更新プログラムに与える影響
+### <a name="how-transactions-affect-updates"></a><a name="_core_how_transactions_affect_updates"></a>トランザクションが更新に与える影響
 
-理解を超える方法`AddNew`、 `Edit`、および`Delete`作業を理解しておく必要が方法、 `BeginTrans`、 `CommitTrans`、および`Rollback`のメンバー関数[CDatabase](../../mfc/reference/cdatabase-class.md)と連携更新関数[CRecordset](../../mfc/reference/crecordset-class.md)します。
+`AddNew`の方法 、`Edit``Delete`および機能を理解する以外に、 `BeginTrans`CDatabase`CommitTrans`の`Rollback`、 、および メンバー関数が[CRecordset](../../mfc/reference/cdatabase-class.md)の更新関数とどのように連携するかを理解することが重要です。 [CRecordset](../../mfc/reference/crecordset-class.md)
 
-既定では、呼び出し`AddNew`と`Edit`データ ソースを呼び出すとすぐに影響`Update`します。 `Delete` 呼び出しは直ちに有効にします。 ただし、トランザクションを確立し、このような呼び出しのバッチを実行できます。 コミットするまでは、更新プログラムが永続的なされません。 頭を変更する場合をロールバックできますから、そのコミットではなく、トランザクション。
+既定では、 を`AddNew`呼`Edit`び出すと、データ ソースが`Update`呼び出され、すぐに反映されます。 `Delete`呼び出しは即時に有効になります。 しかし、トランザクションを確立し、そのような呼び出しのバッチを実行できます。 更新は、コミットするまで永続的ではありません。 考えが変わった場合は、コミットせずにトランザクションをロールバックできます。
 
-トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+トランザクションの詳細については、「[トランザクション (ODBC) 」](../../data/odbc/transaction-odbc.md)を参照してください。
 
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> 更新プログラムの影響、レコード セットを閉じる
+### <a name="how-closing-the-recordset-affects-updates"></a><a name="_core_how_closing_the_recordset_affects_updates"></a>レコードセットを閉じると更新に与える影響
 
-レコード セット、またはそれに関連を閉じた場合`CDatabase`進行中のトランザクションでのオブジェクト (呼び出さないが[CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans)または[CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback))、トランザクションはロールバックされます自動的に (がない限り、データベース バックエンド Microsoft Jet データベース エンジン) をバックアップします。
+トランザクションが進行中のレコードセットまたは関連`CDatabase`オブジェクトを閉じると[(CDatabase::CommitTrans または CDatabase::Rollback)、](../../mfc/reference/cdatabase-class.md#committrans)トランザクションは自動的にロールバックされます (データベースバックエンドが Microsoft Jet データベース エンジンでない限り)。 [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)
 
 > [!CAUTION]
->  Microsoft Jet データベース エンジンを使用している場合、明示的なトランザクション内でレコード セットを閉じるは発生しませんに変更された行または明示的なトランザクションがコミットまたはロールバックされるまでに配置されていたロックの解除。 そのを常に両方開いて閉じるレコード セットは、内部または外部 Jet の明示的なトランザクションをお勧めします。
+> Microsoft Jet データベース エンジンを使用している場合、明示的なトランザクション内でレコードセットを閉じると、明示的なトランザクションがコミットまたはロールバックされるまで、変更された行やロックが解放されることはありません。 明示的な Jet トランザクションの内部または外部のレコードセットは、常に開く、閉じるのを行うことをお勧めします。
 
-###  <a name="_core_how_scrolling_affects_updates"></a> 更新プログラムの影響のスクロール
+### <a name="how-scrolling-affects-updates"></a><a name="_core_how_scrolling_affects_updates"></a>スクロールが更新に与える影響
 
-ときにする[レコード セット。スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 、レコード セット (前のレコードが最初に保存されませんが) 新しい現在のレコードをエディット バッファーを入力します。 削除されたレコードには、スキップをスクロールします。 後にスクロールする場合、`AddNew`または`Edit`呼び出さずに呼び出し`Update`、 `CommitTrans`、または`Rollback`最初に、変更は失われます (に警告がありません) に新しいレコードが編集のバッファーに読み込まれるとします。 エディット バッファーのスクロール レコードが挿入、レコードが解放されると、およびデータ ソースの変更は行われません。 両方に適用`AddNew`と`Edit`します。
+[レコードセット: レコードセット内のスクロール (ODBC) の](../../data/odbc/recordset-scrolling-odbc.md)場合、編集バッファーには新しいレコードがそれぞれ格納されます (前のレコードは最初に保存されません)。 スクロールすると、以前に削除されたレコードをスキップします。 を`CommitTrans`呼び出さず`AddNew`に`Edit`、または`Rollback``Update`を呼び出した後にスクロールすると、新しいレコードがエディット バッファに取り込まれるため、変更は失われます (警告は表示されません)。 編集バッファーには、レコードがスクロールされて、格納されているレコードが解放され、データ ソースに変更は発生しません。 これは、`AddNew` と `Edit` の両方に適用されます。
 
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> 更新プログラムと他のユーザーの更新プログラム
+## <a name="your-updates-and-the-updates-of-other-users"></a><a name="_core_your_updates_and_the_updates_of_other_users"></a>更新プログラムと他のユーザーの更新
 
-レコード セットを使用してデータを更新するときに、更新プログラムは他のユーザーに影響します。 同様に、レコード セットの有効期間中に他のユーザーの更新プログラムに影響します。
+レコードセットを使用してデータを更新すると、更新が他のユーザーに影響を与えます。 同様に、レコードセットの有効期間中に他のユーザーが更新された場合にも影響します。
 
-マルチ ユーザー環境では、他のユーザーは、レコード セットで選択した同じレコードの一部が含まれているレコード セットを開くことができます。 レコード セットには、取得する前にレコードへの変更が反映されます。 ダイナセットを使う場合は、スクロールするたびにレコードを取得、ためダイナセットを使う場合は、レコードをスクロールするたびに変更を反映します。 スナップショットは、スナップショットが最初に、レコードをスクロールする前に発生した変更のみを反映させるために、スクロールする初めてのレコードを取得します。
+マルチユーザー環境では、他のユーザーがレコードセットで選択したレコードと同じレコードを含むレコードセットを開くことができます。 レコードを取得する前に変更したレコードは、レコードセットに反映されます。 ダイナセットは、レコードにスクロールするたびにレコードを取得するため、レコードにスクロールするたびに変更が反映されます。 スナップショットは、最初にレコードにスクロールしたときにレコードを取得するため、最初にレコードにスクロールする前に発生した変更のみがスナップショットに反映されます。
 
-レコード セットには再実行する場合を除き、レコード セットを開いた後、他のユーザーによって追加されたレコードは表示されません。 レコード セットがダイナセットである場合は、影響を受けるレコードをスクロールすると、他のユーザーが既存のレコードを編集は、ダイナセットで表示します。 レコード セットがスナップショットである場合は、スナップショットを再実行するまで、編集内容は表示されません。 追加されたレコードを参照してください。 または、スナップショット、または、ダイナセットでは、他のユーザーによって追加されたレコードの他のユーザーによって削除する場合[:requery](../../mfc/reference/crecordset-class.md#requery) 、レコード セットを再構築します。 (他のユーザーの削除がダイナセットで表示されるメモ。)呼び出すことがありますも`Requery`のレコードを追加するに、削除が表示されないが、します。
+レコードセットを開いた後に他のユーザーによって追加されたレコードは、再クエリを行わない限り、レコードセットに表示されません。 レコードセットがダイナセットの場合、影響を受けるレコードまでスクロールすると、他のユーザーによる既存のレコードの編集がダイナセットに表示されます。 レコードセットがスナップショットの場合、スナップショットを再クエリするまで編集は表示されません。 スナップショットの他のユーザーによって追加または削除されたレコード、またはダイナセット内の他のユーザーによって追加されたレコードを表示するには[、CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)を呼び出してレコードセットを再構築します。 (他のユーザーの削除はダイナセットに表示されることに注意してください。追加したレコードを`Requery`表示するために呼び出す場合もありますが、削除を表示することはできません。
 
 > [!TIP]
->  一度にスナップショット全体のキャッシュを強制的に呼び出す`MoveLast`スナップショットを開いた後すぐにします。 呼び出して`MoveFirst`レコードを使用して作業を開始します。 `MoveLast` すべてのレコードをスクロールすると同じですが、それらを一度に取得します。 ただし、パフォーマンスが低下して、一部のドライバーに必要なことができない可能性がありますこのことに注意してください。
+> スナップショット全体を一度にキャッシュするには、スナップショットを`MoveLast`開いた直後に呼び出します。 次に`MoveFirst`、レコードの操作を開始するために呼び出します。 `MoveLast`すべてのレコードをスクロールするのと同じですが、すべてを一度に取得します。 ただし、パフォーマンスが低下する可能性があり、一部のドライバでは必要ない場合があることに注意してください。
 
-他のユーザーに、更新プログラムの効果は、影響と似ています。
+更新プログラムが他のユーザーに及ぼす影響は、ユーザーに与える影響と似ています。
 
-##  <a name="_core_more_about_update_and_delete"></a> 詳細については、Update および Delete
+## <a name="more-about-update-and-delete"></a><a name="_core_more_about_update_and_delete"></a>更新と削除の詳細
 
-このセクションを使用するのに役立つ追加情報を提供します。`Update`と`Delete`します。
+ここでは、 および の作業に役立`Update`つ`Delete`追加情報を提供します。
 
-### <a name="update-success-and-failure"></a>更新プログラムの成功と失敗
+### <a name="update-success-and-failure"></a>更新の成功と失敗
 
-場合`Update`が成功した、`AddNew`または`Edit`モードが終了します。 開始する、`AddNew`または`Edit`モードをもう一度、呼び出し`AddNew`または`Edit`します。
+成功`Update`すると、または`Edit`モード`AddNew`は終了します。 または`AddNew``Edit`モードをもう一度開始`AddNew`するには`Edit`、 または を呼び出します。
 
-場合`Update`が失敗した (FALSE を返しますまたは例外をスローします) のままにする`AddNew`または`Edit`モードに応じてどの関数が最後に呼び出されます。 次のいずれかを実行できます。
+失敗`Update`した場合 (FALSE を返すか、例外をスロー `AddNew` )、最後に呼び出した関数に応じて、または`Edit`モードのままになります。 その場合、次のいずれかを行うことができます。
 
-- フィールド データ メンバーを変更して再試行してください、`Update`もう一度です。
+- フィールド データ メンバーを変更して`Update`、もう一度実行してください。
 
-- 呼び出す`AddNew`フィールド データ メンバーを Null にリセットする、フィールド データ メンバーの値の設定を呼び出して`Update`もう一度です。
+- フィールド`AddNew`データ メンバーを Null にリセットし、フィールド データ メンバーの値を設定`Update`してから、もう一度呼び出します。
 
-- 呼び出す`Edit`最初の呼び出しの前に、レコード セットに含まれていた値を再読み込みする`AddNew`または`Edit`、フィールド データ メンバーの値を設定、および、呼び出して`Update`もう一度です。 成功したら`Update`呼び出し (後を除き、`AddNew`呼び出し)、フィールド データ メンバーは、新しい値を保持します。
+- または`Edit`への最初の呼び出しの前にレコードセットに`AddNew`含`Edit`まれている値を再読み込みし、フィールド データ`Update`メンバーの値を設定してから、再度呼び出します。 呼び出`Update`しが成功した後`AddNew`(呼び出し後を除く)、フィールド データ メンバーは新しい値を保持します。
 
-- 呼び出す`Move`(を含む`Move`AFX_MOVE_REFRESH、または 0 のパラメーターを持つ)、変更をすべて消去して、いずれかが終了`AddNew`または`Edit`モードを有効にします。
+- AFX_MOVE_REFRESH`Move`のパラメータ`Move`を含む呼び出し(パラメータを含む、または 0)、`Edit`変更をフラッシュし、有効な任意のモードまたはモードを`AddNew`終了します。
 
-### <a name="update-and-delete"></a>更新および削除
+### <a name="update-and-delete"></a>更新と削除
 
-このセクションの両方に適用されます`Update`と`Delete`します。
+このセクションは、`Update`および`Delete`の両方に適用されます。
 
-`Update`または`Delete`操作では、1 つだけのレコードを更新する必要があります。 そのレコードは、レコード セットのフィールド内のデータ値に対応する現在のレコードです。 場合は、次のいずれかを含むレコードに影響はありませんか、1 つ以上のレコードが影響を受けるなんらかの理由により、例外がスロー **RETCODE**値。
+または`Delete``Update`操作では、1 つのレコードだけを更新する必要があります。 レコードはカレント レコードであり、レコードセットのフィールドのデータ値に対応します。 何らかの理由でレコードが影響を受けない場合、または複数のレコードが影響を受ける場合は、次のいずれかの**RETCODE**値を含む例外がスローされます。
 
 - AFX_SQL_ERROR_NO_ROWS_AFFECTED
 
 - AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED
 
-これらの例外がスローされたときの維持、`AddNew`または`Edit`を呼び出したときにされていた状態`Update`または`Delete`します。 これらの例外が表示される最も一般的なシナリオを次に示します。 最もよく見できました。
+これらの例外がスローされた場合は、`AddNew`または`Edit``Update``Delete`を呼び出したときに 、または の状態が維持されます。 これらの例外が発生する最も一般的なシナリオを次に示します。 次の項目が表示される可能性が最も高い:
 
-- AFX_SQL_ERROR_NO_ROWS_AFFECTED オプティミスティック ロック モードを使用すると、別のユーザーの方法でレコードが変更から正しい更新または削除するレコードを識別するフレームワークを阻止します。
+- AFX_SQL_ERROR_NO_ROWS_AFFECTEDオプティミスティック ロック モードを使用していて、別のユーザーが更新または削除する正しいレコードをフレームワークが識別できないようにレコードを変更した場合です。
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED テーブルを更新するときに、主キーがないか、一意なインデックスとする十分な列でないテーブルの行を一意に識別するレコード セット。
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED更新するテーブルに主キーまたは一意のインデックスがなく、テーブルの行を一意に識別するための十分な列がレコードセットにない場合です。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)
+[例外処理 : データベースの例外](../../mfc/exceptions-database-exceptions.md)

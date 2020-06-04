@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 96b6204fe46cb624d22506b2d3e5c1d7621b1865
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b081b0728514c0fca2eb31462e1bcd9e91a47aa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372479"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753012"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo 構造体
 
-印刷または印刷プレビュー ジョブに関する情報を格納します。
+印刷ジョブまたは印刷プレビュー ジョブに関する情報を格納します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,45 +29,45 @@ struct CPrintInfo
 
 |名前|説明|
 |----------|-----------------|
-|[CPrintInfo::GetFromPage](#getfrompage)|印刷されている最初のページの数を返します。|
-|[CPrintInfo::GetMaxPage](#getmaxpage)|ドキュメントの最後のページ数を返します。|
-|[CPrintInfo::GetMinPage](#getminpage)|ドキュメントの最初のページ数を返します。|
-|[CPrintInfo::GetOffsetPage](#getoffsetpage)|結合された DocObject 印刷ジョブで印刷する DocObject 項目の最初のページの前のページの数を返します。|
-|[CPrintInfo::GetToPage](#gettopage)|最後に印刷されるページ数を返します。|
-|[CPrintInfo::SetMaxPage](#setmaxpage)|ドキュメントの最後のページの数を設定します。|
-|[CPrintInfo::SetMinPage](#setminpage)|ドキュメントの最初のページの数を設定します。|
+|[ページから取得します。](#getfrompage)|印刷される最初のページの番号を返します。|
+|[を見る](#getmaxpage)|文書の最後のページの番号を返します。|
+|[を見る](#getminpage)|文書の最初のページの番号を返します。|
+|[ページを表示します。](#getoffsetpage)|結合された DocObject 印刷ジョブで印刷される DocObject アイテムの最初のページの前にあるページ数を返します。|
+|[をクリックします。](#gettopage)|最後に印刷されたページの番号を返します。|
+|[を設定します。](#setmaxpage)|ドキュメントの最後のページの番号を設定します。|
+|[ページを設定します。](#setminpage)|ドキュメントの最初のページの番号を設定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|フレームワークが印刷ループを続行するかどうかを示すフラグが含まれています。|
-|[CPrintInfo::m_bDirect](#m_bdirect)|(せずに直接印刷 ダイアログ ボックスを表示する) ドキュメントを印刷するかどうかを示すフラグが含まれています。|
-|[CPrintInfo::m_bDocObject](#m_bdocobject)|印刷中のドキュメントが DocObject かどうかを示すフラグが含まれています。|
-|[CPrintInfo::m_bPreview](#m_bpreview)|ドキュメントがプレビューされているかどうかを示すフラグが含まれています。|
-|[CPrintInfo::m_dwFlags](#m_dwflags)|DocObject 印刷操作を指定します。|
-|[CPrintInfo::m_lpUserData](#m_lpuserdata)|ユーザーが作成した構造体へのポインターが含まれています。|
-|[CPrintInfo::m_nCurPage](#m_ncurpage)|現在印刷中のページの数を識別します。|
-|[CPrintInfo::m_nJobNumber](#m_njobnumber)|現在の印刷ジョブのオペレーティング システムによって割り当てられたジョブの数を指定します|
-|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|プレビュー ウィンドウに表示されるページの番号を識別します1 または 2 のいずれか。|
-|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|結合 DocObject 印刷ジョブでは、特定の DocObject の最初のページのオフセットを指定します。|
-|[CPrintInfo::m_pPD](#m_ppd)|ポインターが含まれています、`CPrintDialog`印刷 ダイアログ ボックスを使用するオブジェクト。|
-|[CPrintInfo::m_rectDraw](#m_rectdraw)|現在の使用可能なページ領域を定義する四角形を指定します。|
-|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|ページ番号の表示の書式指定文字列が含まれています。|
+|[情報を提供::m_bContinuePrinting](#m_bcontinueprinting)|フレームワークが印刷ループを続行するかどうかを示すフラグを含みます。|
+|[情報を m_bDirect提供します。](#m_bdirect)|ドキュメントを直接印刷するかどうかを示すフラグを含みます ([印刷] ダイアログ ボックスを表示せずに)。|
+|[情報を提供::m_bDocObject](#m_bdocobject)|印刷するドキュメントが DocObject であるかどうかを示すフラグを含みます。|
+|[m_bPreview](#m_bpreview)|ドキュメントがプレビューされているかどうかを示すフラグを含みます。|
+|[m_dwFlags](#m_dwflags)|DocObject の印刷操作を指定します。|
+|[M_lpUserData](#m_lpuserdata)|ユーザーが作成した構造体へのポインターを格納します。|
+|[m_nCurPage](#m_ncurpage)|現在印刷中のページ番号を示します。|
+|[m_nJobNumber](#m_njobnumber)|現在の印刷ジョブにオペレーティング システムによって割り当てられたジョブ番号を指定します。|
+|[m_nNumPreviewPages](#m_nnumpreviewpages)|プレビュー ウィンドウに表示されるページ数を示します。1 または 2 のいずれか。|
+|[m_nOffsetPage](#m_noffsetpage)|結合された DocObject 印刷ジョブにおける特定の DocObject の最初のページのオフセットを指定します。|
+|[を設定::m_pPD](#m_ppd)|[印刷] ダイアログ`CPrintDialog`ボックスに使用するオブジェクトへのポインターを格納します。|
+|[情報を提供::m_rectDraw](#m_rectdraw)|現在の有効なページ領域を定義する四角形を指定します。|
+|[情報を提供::m_strPageDesc](#m_strpagedesc)|ページ番号の表示用の書式指定文字列を格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CPrintInfo` 構造体であり、基底クラスではありません。
+`CPrintInfo`は構造体であり、基本クラスを持っていません。
 
-オブジェクトを作成するために、フレームワーク`CPrintInfo`たびに、印刷または印刷プレビュー を選択して、コマンドの完了時に破棄します。
+フレームワークは、印刷または印刷`CPrintInfo`プレビューコマンドが選択されるたびにオブジェクトを作成し、コマンドが完了したときに破棄します。
 
-`CPrintInfo` 印刷するページの範囲など、全体として印刷ジョブと現在印刷中のページなどの印刷ジョブの現在の状態の両方に関する情報が含まれています。 いくつかの情報が格納されている、関連付けられているで[CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトです。 このオブジェクトには、[印刷] ダイアログ ボックスで、ユーザーが入力した値が含まれています。
+`CPrintInfo`印刷するページの範囲や、現在印刷中のページなど、印刷ジョブの現在の状態など、印刷ジョブ全体に関する情報が含まれます。 一部の情報は、関連付けられた[CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトに格納されます。このオブジェクトには、ユーザーが [印刷] ダイアログ ボックスに入力した値が含まれます。
 
-A`CPrintInfo`オブジェクトは、印刷プロセス中に、フレームワークと、ビューのクラス間で渡され、2 つの情報を交換するために使用します。 たとえば、フレームワークに通知ビュー クラスの値を割り当てることで印刷するドキュメントのページ、`m_nCurPage`のメンバー`CPrintInfo`ビュー クラスは、値を取得し、指定したページの印刷を実行します。
+オブジェクト`CPrintInfo`は、印刷プロセス中にフレームワークとビュー クラスの間で渡され、両者の間で情報を交換するために使用されます。 たとえば、フレームワークは、のメンバーに値を割り当てることによって、ドキュメントのどのページを印刷するかをビュー`m_nCurPage`クラスに`CPrintInfo`通知します。ビュー クラスは値を取得し、指定されたページの実際の印刷を実行します。
 
-別の例は、印刷されるまで、ドキュメントの長さは認識されません。 このような状況では、ビュー クラスは、ページが印刷されるたびを文書の最後のテストします。 最後に達すると、ビュー クラスの設定、`m_bContinuePrinting`のメンバー`CPrintInfo`印刷ループを停止するためにフレームワークに通知を FALSE にします。
+もう 1 つの例として、文書の長さが印刷されるまでは不明な場合があります。 このような場合は、ページが印刷されるたびに、ビュー クラスはドキュメントの末尾をテストします。 最後に達すると、ビュー クラスはのメンバー`m_bContinuePrinting``CPrintInfo`を FALSE に設定します。これにより、フレームワークは印刷ループを停止するように通知します。
 
-`CPrintInfo` メンバー関数によって使用される`CView`表示」も参照してください"。 Microsoft Foundation Class ライブラリによって提供される印刷のアーキテクチャの詳細については、次を参照してください[フレーム Windows](../../mfc/frame-windows.md)と[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)と情報の記事[。印刷](../../mfc/printing.md)と[印刷します。マルチページ ドキュメント](../../mfc/multipage-documents.md)します。
+`CPrintInfo`は、「関連項目」に`CView`リストされているメンバー関数によって使用されます。 Microsoft Foundation クラス ライブラリが提供する印刷アーキテクチャの詳細については、「[フレーム ウィンドウ](../../mfc/frame-windows.md)と[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)」および「[印刷](../../mfc/printing.md)と[印刷: 複数ページのドキュメント](../../mfc/multipage-documents.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -77,9 +77,9 @@ A`CPrintInfo`オブジェクトは、印刷プロセス中に、フレームワ�
 
 **ヘッダー:** afxext.h
 
-##  <a name="getfrompage"></a>  CPrintInfo::GetFromPage
+## <a name="cprintinfogetfrompage"></a><a name="getfrompage"></a>ページから取得します。
 
-印刷する最初のページの数を取得するには、この関数を呼び出します。
+印刷する最初のページの番号を取得します。
 
 ```
 UINT GetFromPage() const;
@@ -87,15 +87,15 @@ UINT GetFromPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-印刷する最初のページの数。
+印刷する最初のページの番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これは、[印刷] ダイアログ ボックスでユーザーが指定した値に格納されている、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。 ユーザーが値を指定していない場合は、既定では、ドキュメントの最初のページです。
+これは、ユーザーが [印刷] ダイアログ ボックスで指定した値で、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。 ユーザーが値を指定していない場合、既定値はドキュメントの最初のページです。
 
-##  <a name="getmaxpage"></a>  CPrintInfo::GetMaxPage
+## <a name="cprintinfogetmaxpage"></a><a name="getmaxpage"></a>を見る
 
-ドキュメントの最後のページの数を取得するには、この関数を呼び出します。
+ドキュメントの最後のページの番号を取得します。
 
 ```
 UINT GetMaxPage() const;
@@ -103,15 +103,15 @@ UINT GetMaxPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントの最後のページの数。
+ドキュメントの最後のページの番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。
+この値は、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。
 
-##  <a name="getminpage"></a>  CPrintInfo::GetMinPage
+## <a name="cprintinfogetminpage"></a><a name="getminpage"></a>を見る
 
-ドキュメントの最初のページの数を取得するには、この関数を呼び出します。
+ドキュメントの最初のページの番号を取得します。
 
 ```
 UINT GetMinPage() const;
@@ -119,15 +119,15 @@ UINT GetMinPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントの最初のページの数。
+ドキュメントの最初のページの番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。
+この値は、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。
 
-##  <a name="getoffsetpage"></a>  CPrintInfo::GetOffsetPage
+## <a name="cprintinfogetoffsetpage"></a><a name="getoffsetpage"></a>ページを表示します。
 
-DocObject クライアントから複数の項目の DocObject を印刷するときに、オフセットを取得するには、この関数を呼び出します。
+DocObject クライアントから複数の DocObject アイテムを印刷するときにオフセットを取得します。
 
 ```
 UINT GetOffsetPage() const;
@@ -135,15 +135,15 @@ UINT GetOffsetPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-結合された DocObject 印刷ジョブで印刷する DocObject 項目の最初のページの前のページの数。
+結合された DocObject 印刷ジョブで印刷される DocObject アイテムの最初のページの前にあるページ数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値がによって参照される、`m_nOffsetPage`メンバー。 ドキュメントの最初のページ番号になります、`m_nOffsetPage`値は + 1 として他のアクティブなドキュメントの DocObject を印刷するとき。 `m_nOffsetPage`メンバーが有効な場合にのみ、`m_bDocObject`値は TRUE です。
+この値は`m_nOffsetPage`、メンバーによって参照されます。 ドキュメントの最初のページには、他のアクティブドキュメント`m_nOffsetPage`と共に DocObject として印刷されるときに、値 + 1 が付けられます。 メンバ`m_nOffsetPage`は、値が TRUE`m_bDocObject`の場合にのみ有効です。
 
-##  <a name="gettopage"></a>  CPrintInfo::GetToPage
+## <a name="cprintinfogettopage"></a><a name="gettopage"></a>をクリックします。
 
-印刷する最後のページの数を取得するには、この関数を呼び出します。
+印刷する最後のページの番号を取得します。
 
 ```
 UINT GetToPage() const;
@@ -151,55 +151,55 @@ UINT GetToPage() const;
 
 ### <a name="return-value"></a>戻り値
 
-印刷する最後のページの数。
+印刷する最後のページの番号を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これは、[印刷] ダイアログ ボックスでユーザーが指定した値に格納されている、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。 ユーザーが値を指定していない場合は、既定では、ドキュメントの最後のページです。
+これは、ユーザーが [印刷] ダイアログ ボックスで指定した値で、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。 ユーザーが値を指定していない場合、既定値はドキュメントの最後のページになります。
 
-##  <a name="m_bcontinueprinting"></a>  CPrintInfo::m_bContinuePrinting
+## <a name="cprintinfom_bcontinueprinting"></a><a name="m_bcontinueprinting"></a>情報を提供::m_bContinuePrinting
 
-フレームワークが印刷ループを続行するかどうかを示すフラグが含まれています。
+フレームワークが印刷ループを続行するかどうかを示すフラグを含みます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-印刷時の改ページ調整を実行している場合は、オーバーライドで FALSE にこのメンバーを設定できます`CView::OnPrepareDC`ドキュメントの末尾に達しているとします。 使用して、印刷ジョブの先頭にあるドキュメントの長さを指定した場合、この変数を変更する必要はありません、`SetMaxPage`メンバー関数。 `m_bContinuePrinting`メンバーは、BOOL 型のパブリック変数です。
+印刷時間のページ分割を行う場合は、ドキュメントの末尾に到達した後の`CView::OnPrepareDC`上書きでこのメンバーを FALSE に設定できます。 この変数は、メンバー関数を使用して印刷ジョブの先頭に文書の長さを指定した場合には、変更する`SetMaxPage`必要はありません。 メンバー`m_bContinuePrinting`は BOOL 型のパブリック変数です。
 
-##  <a name="m_bdirect"></a>  CPrintInfo::m_bDirect
+## <a name="cprintinfom_bdirect"></a><a name="m_bdirect"></a>情報を m_bDirect提供します。
 
-フレームワークでは、[印刷] ダイアログ ボックスは直接印刷のバイパスされる場合を TRUE にこのメンバーを設定します。FALSE それ以外の場合。
+フレームワークは、印刷ダイアログ ボックスが直接印刷のためにバイパスされる場合は、このメンバーを TRUE に設定します。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-印刷が完了すると、シェルから印刷する場合、通常、[印刷] ダイアログがバイパスされる ID ID_FILE_PRINT_DIRECT コマンドを使用します。
+通常、シェルから印刷するとき、またはコマンド ID ID_FILE_PRINT_DIRECTを使用して印刷を行うと、印刷ダイアログはバイパスされます。
 
-通常、このメンバーの変更はありませんが、これを変更する場合は、変更する前に呼び出し[しません](../../mfc/reference/cview-class.md#doprepareprinting)のオーバーライドで[き](../../mfc/reference/cview-class.md#onprepareprinting)します。
+通常は、このメンバーを変更しませんが、変更する場合は[、CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting)を呼び出す前に変更[します。](../../mfc/reference/cview-class.md#onprepareprinting)
 
-##  <a name="m_bdocobject"></a>  CPrintInfo::m_bDocObject
+## <a name="cprintinfom_bdocobject"></a><a name="m_bdocobject"></a>情報を提供::m_bDocObject
 
-印刷中のドキュメントが DocObject かどうかを示すフラグが含まれています。
+印刷するドキュメントが DocObject であるかどうかを示すフラグを含みます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-データ メンバー`m_dwFlags`と`m_nOffsetPage`が、このフラグが TRUE でない限り、無効です。
+このフラグ`m_dwFlags``m_nOffsetPage`が TRUE でない場合は、データ メンバーは無効です。
 
-##  <a name="m_bpreview"></a>  CPrintInfo::m_bPreview
+## <a name="cprintinfom_bpreview"></a><a name="m_bpreview"></a>m_bPreview
 
-ドキュメントがプレビューされているかどうかを示すフラグが含まれています。
+ドキュメントがプレビューされているかどうかを示すフラグを含みます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これは、ユーザーのコマンドを実行するに応じてフレームワークによって設定されます。 印刷 ダイアログ ボックスは、印刷プレビュー ジョブには表示されません。 `m_bPreview`メンバーは、BOOL 型のパブリック変数です。
+これは、ユーザーが実行するコマンドに応じてフレームワークによって設定されます。 印刷プレビュー ジョブの場合、[印刷] ダイアログ ボックスは表示されません。 メンバー`m_bPreview`は BOOL 型のパブリック変数です。
 
-##  <a name="m_dwflags"></a>  CPrintInfo::m_dwFlags
+## <a name="cprintinfom_dwflags"></a><a name="m_dwflags"></a>m_dwFlags
 
-DocObject 印刷操作を指定するフラグの組み合わせが含まれています。
+DocObject の印刷操作を指定するフラグの組み合わせが含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-有効な場合にのみデータ メンバー`m_bDocObject`は TRUE です。
+データ メンバー`m_bDocObject`が TRUE の場合にのみ有効です。
 
-フラグは、次の値の 1 つ以上を指定できます。
+フラグには、次の値の 1 つ以上を指定できます。
 
 - PRINTFLAG_MAYBOTHERUSER
 
@@ -215,113 +215,113 @@ DocObject 印刷操作を指定するフラグの組み合わせが含まれて�
 
 - PRINTFLAG_PRINTTOFILE
 
-##  <a name="m_lpuserdata"></a>  CPrintInfo::m_lpUserData
+## <a name="cprintinfom_lpuserdata"></a><a name="m_lpuserdata"></a>M_lpUserData
 
-ユーザーが作成した構造体へのポインターが含まれています。
+ユーザーが作成した構造体へのポインターを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ビュー クラスに格納したくない印刷固有のデータを格納するのにには、これを使用できます。 `m_lpUserData`メンバーが型 LPVOID のパブリック変数です。
+この機能を使用して、ビュー クラスに格納しない印刷固有のデータを格納できます。 メンバー`m_lpUserData`は、LPVOID 型のパブリック変数です。
 
-##  <a name="m_ncurpage"></a>  CPrintInfo::m_nCurPage
+## <a name="cprintinfom_ncurpage"></a><a name="m_ncurpage"></a>m_nCurPage
 
-現在のページの数が含まれています。
+現在のページの番号を格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Framework 呼び出し`CView::OnPrepareDC`と`CView::OnPrint`1 回; たびにこのメンバーの別の値を指定する、ドキュメントの各ページの範囲の値によって返される値`GetFromPage`により返された`GetToPage`します。 このメンバーを使用して`CView::OnPrepareDC`と`CView::OnPrint`ドキュメントの指定したページを印刷します。
+フレームワークは、`CView::OnPrepareDC`ドキュメント`CView::OnPrint`の各ページを呼び出し、毎回このメンバーに異なる値を指定します。値の範囲は、返された`GetFromPage`値から、 によって`GetToPage`返される値までです。 このメンバーは、ドキュメントの`CView::OnPrepareDC`指定したページ`CView::OnPrint`をオーバーライドして印刷するときに使用します。
 
-プレビュー モードが初めて呼び出されたときに、フレームワークは、ドキュメントのページに最初にプレビューするかを判断するには、このメンバーの値を読み取ります。 このメンバーの値を設定するには、オーバーライド`CView::OnPreparePrinting`プレビュー モードを入力するときに、ドキュメント内のユーザーの現在位置を維持するためにします。 `m_nCurPage`メンバーが型 UINT のパブリック変数です。
+プレビュー モードが最初に起動されると、フレームワークはこのメンバーの値を読み取り、ドキュメントのどのページを最初にプレビューするかを決定します。 プレビュー モードに入ったときに、ドキュメント内のユーザーの`CView::OnPreparePrinting`現在の位置を維持するために、このメンバーの値をオーバーライドで設定できます。 メンバー`m_nCurPage`は UINT 型のパブリック変数です。
 
-##  <a name="m_njobnumber"></a>  CPrintInfo::m_nJobNumber
+## <a name="cprintinfom_njobnumber"></a><a name="m_njobnumber"></a>m_nJobNumber
 
-現在の印刷ジョブのオペレーティング システムによって割り当てられたジョブの数を示します。
+現在の印刷ジョブに対してオペレーティング システムによって割り当てられたジョブ番号を示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は、ジョブが印刷されていない場合、SP_ERROR 可能性があります (場合に、`CPrintInfo`オブジェクトが新しく構築され、印刷に使用されていない)、またはジョブの開始時にエラーが発生しました。
+この値は、ジョブがまだ印刷されていない場合 (つまり、`CPrintInfo`オブジェクトが新しく作成され、印刷に使用されていない場合)、またはジョブの開始中にエラーが発生した場合にSP_ERROR可能性があります。
 
-##  <a name="m_nnumpreviewpages"></a>  CPrintInfo::m_nNumPreviewPages
+## <a name="cprintinfom_nnumpreviewpages"></a><a name="m_nnumpreviewpages"></a>m_nNumPreviewPages
 
-プレビュー モードで表示されるページの数が含まれています1 または 2 のいずれかを指定できます。
+プレビュー モードで表示されるページ数を含みます。1 または 2 のいずれかです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_nNumPreviewPages`メンバーが型 UINT のパブリック変数です。
+メンバー`m_nNumPreviewPages`は UINT 型のパブリック変数です。
 
-##  <a name="m_noffsetpage"></a>  CPrintInfo::m_nOffsetPage
+## <a name="cprintinfom_noffsetpage"></a><a name="m_noffsetpage"></a>m_nOffsetPage
 
-結合された DocObject 印刷ジョブ内の特定の DocObject の最初のページの前のページ数が含まれています。
+結合された DocObject 印刷ジョブの特定の DocObject の最初のページの前にページ数を含めます。
 
-##  <a name="m_ppd"></a>  CPrintInfo::m_pPD
+## <a name="cprintinfom_ppd"></a><a name="m_ppd"></a>を設定::m_pPD
 
-ポインターが含まれています、`CPrintDialog`オブジェクトの印刷ジョブの印刷 ダイアログ ボックスを表示するために使用します。
+印刷ジョブの [`CPrintDialog`印刷] ダイアログ ボックスを表示するために使用するオブジェクトへのポインターを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_pPD`メンバーへのポインターとして宣言されたパブリック変数は、`CPrintDialog`します。
+メンバー`m_pPD`は、 へのポインターとして宣言されたパブリック変数`CPrintDialog`です。
 
-##  <a name="m_rectdraw"></a>  CPrintInfo::m_rectDraw
+## <a name="cprintinfom_rectdraw"></a><a name="m_rectdraw"></a>情報を提供::m_rectDraw
 
-論理座標で、ページの使用可能な描画領域を指定します。
+ページの有効な作図領域を論理座標で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オーバーライドでこれを参照する`CView::OnPrint`します。 ヘッダーとフッターを印刷した後、どのような領域が使えるを追跡するのには、このメンバーを使用できます。 `m_rectDraw`メンバーが型のパブリック変数`CRect`します。
+のオーバーライドでこれを参照することもできます`CView::OnPrint`。 このメンバーを使用して、ヘッダーやフッターなどを印刷した後に使用できる領域を追跡できます。 メンバー`m_rectDraw`は、 型のパブリック変数`CRect`です。
 
-##  <a name="m_strpagedesc"></a>  CPrintInfo::m_strPageDesc
+## <a name="cprintinfom_strpagedesc"></a><a name="m_strpagedesc"></a>情報を提供::m_strPageDesc
 
-印刷プレビュー中にページ番号を表示するために使用する書式指定文字列が含まれていますこの文字列は、単一ページの表示用と、'\n' 文字で終了各二重ページ表示のための 2 つの部分文字列で構成されます。
+印刷プレビュー中にページ番号を表示するための書式指定文字列を格納します。この文字列は、1 つの部分文字列と 2 ページ表示用の 2 つの部分文字列で構成され、それぞれ '\n' 文字で終わる 2 ページ表示用です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、既定値として"ページ %u\npages%u-%u\n"を使用します。 ページ番号の別の形式を使う場合は、書式指定文字列を指定のオーバーライドで`CView::OnPreparePrinting`します。 `m_strPageDesc`メンバーが型のパブリック変数`CString`します。
+フレームワークは、既定値として "ページ %u\nPages %u-%u\n" を使用します。 ページ番号に異なる形式を設定する場合は、 の上書きで書式`CView::OnPreparePrinting`指定文字列を指定します。 メンバー`m_strPageDesc`は、 型のパブリック変数`CString`です。
 
-##  <a name="setmaxpage"></a>  CPrintInfo::SetMaxPage
+## <a name="cprintinfosetmaxpage"></a><a name="setmaxpage"></a>を設定します。
 
-この関数では、ドキュメントの最後のページの数を指定します。
+ドキュメントの最後のページの番号を指定します。
 
-```
+```cpp
 void SetMaxPage(UINT nMaxPage);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nMaxPage*<br/>
-ドキュメントの最後のページの数。
+*最大ページ*<br/>
+ドキュメントの最後のページの番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。 印刷前に、ドキュメントの長さが既知の場合は、この関数を呼び出すのオーバーライドから`CView::OnPreparePrinting`します。 ドキュメントの長さは、印刷 ダイアログ ボックスでユーザーが指定された設定に依存する場合は、この関数を呼び出すのオーバーライドから`CView::OnBeginPrinting`します。 不明な場合、ドキュメントの長さが印刷されるまでを使用して、`m_bContinuePrinting`印刷ループを制御するメンバー。
+この値は、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。 ドキュメントの長さが印刷前にわかっている場合は、`CView::OnPreparePrinting`のオーバーライドからこの関数を呼び出します。 ドキュメントの長さが [印刷] ダイアログ ボックスでユーザーが指定した設定に依存する場合は、`CView::OnBeginPrinting`の上書きからこの関数を呼び出します。 印刷されるまでドキュメントの長さがわからない場合は、そのメンバーを`m_bContinuePrinting`使用して印刷ループを制御します。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[き](../../mfc/reference/cview-class.md#onprepareprinting)します。
+  [「CView::OnPrepare印刷](../../mfc/reference/cview-class.md#onprepareprinting)」の例を参照してください。
 
-##  <a name="setminpage"></a>  CPrintInfo::SetMinPage
+## <a name="cprintinfosetminpage"></a><a name="setminpage"></a>ページを設定します。
 
-この関数では、ドキュメントの最初のページの数を指定します。
+ドキュメントの最初のページの番号を指定します。
 
-```
+```cpp
 void SetMinPage(UINT nMinPage);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nMinPage*<br/>
-ドキュメントの最初のページの数。
+*ページ*<br/>
+ドキュメントの最初のページの番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-通常、ページ番号は 1 から始まります。 この値は、`CPrintDialog`によって参照されるオブジェクト、`m_pPD`メンバー。
+ページ番号は通常 1 から始まります。 この値は、メンバーが`CPrintDialog`参照するオブジェクトに`m_pPD`格納されます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[MFC サンプル ディブルック](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
-[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
-[CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
-[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
-[関数](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
-[CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
+[Cビュー::オンエンドプリント](../../mfc/reference/cview-class.md#onendprinting)<br/>
+[プレビュー::オンエンドプリントプレビュー](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
+[Cビュー::オン準備DC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
+[Cビュー::準備印刷中](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
+[Cビュー::オンプリント](../../mfc/reference/cview-class.md#onprint)

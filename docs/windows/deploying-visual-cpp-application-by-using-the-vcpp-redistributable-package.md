@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: a235fa12138fd00a0f6d722cad7776980ad3d292
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: d2bd0794a67cf70b9da0499e3d2cafa553531fe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370256"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置
 
 この資料では、Visual C++ 再頒布可能パッケージを使用して、Visual C++ アプリケーションを配置する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、次のコンポーネントが必要です。
 
@@ -25,7 +25,7 @@ ms.locfileid: "64877282"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Visual C++ 再頒布可能パッケージを使用してアプリケーションを配置するには
 
-1.  「[チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)」の手順に従って、MFC アプリケーションを作成してビルドします。
+1. 「[チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)」の手順に従って、MFC ++ アプリケーションを作成してビルドします。
 
 1. ファイルを作成して setup.bat という名前を付け、それに次のコマンドを追加します。 `MyMFCApplication` を自分のプロジェクトの名前に変更します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "64877282"
 
       - 自分の MFC アプリケーション (.exe ファイル)。
 
-      - vcredist_x86.exe。 このファイルは、\Program Files (x86)\Microsoft Visual Studio \<バージョン>\SDK\Bootstrapper\Packages\. にあります。 このファイルは [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555) からダウンロードすることもできます。
+      - vcredist_x86.exe。 Visual Studio 2015 では、このファイルは *%VCINSTALLDIR%redist\\1033\\*にあります。 Visual Studio 2017 および Visual Studio 2019 では、このファイルは *%VCToolsRedistDir%* にあります。 また、[マイクロソフトから最新のサポートされている再ディスト ファイルをダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)することもできます。
 
       - 前の手順で作成した、setup.bat ファイル。
 
@@ -72,7 +72,7 @@ ms.locfileid: "64877282"
 
    1. **[自己展開指示ファイルの保存]** ページで、**[自己展開指示 (SED) ファイルを保存する]** を選択し、**[次へ]** を選択します。
 
-   1. **[パッケージの作成]** ページで、**[次へ]** を選択します。 **[完了]** を選択します。
+   1. **[パッケージの作成]** ページで、**[次へ]** を選択します。 **[完了]** をクリックします。
 
 1. Visual C++ ライブラリを持たない他のコンピューターで、自己展開型のセットアップ ファイルをテストします。
 
@@ -83,8 +83,8 @@ ms.locfileid: "64877282"
       自己展開型のセットアップ ファイルにより、手順 2. で指定したフォルダーに格納されている MFC アプリケーションがインストールされます。 Visual C++ 再頒布可能パッケージのインストーラーは自己展開型のセットアップ ファイルに含まれているため、アプリケーションが正常に実行されます。
 
       > [!IMPORTANT]
-      > どのバージョンのランタイムがインストールされているかを判断するため、インストーラーによってレジストリ キー \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<バージョン>\VC\Runtimes\\<platform> がチェックされます。 インストーラーがインストールしようとしているバージョンよりも現在インストールされているバージョンが新しい場合、インストーラーは古いバージョンをインストールせずに成功を返し、追加のエントリをコントロール パネルのインストールされているプログラム ページに残したままにします。
+      > _platform_\\インストールされているランタイムのバージョンを確認するには、インストーラーは、レジストリ キー_version_\\\\\\ \\HKLM\\\\ソフトウェア\\を確認\\します。 インストーラーがインストールしようとしているバージョンよりも現在インストールされているバージョンが新しい場合、インストーラーは古いバージョンをインストールせずに成功を返し、追加のエントリをコントロール パネルのインストールされているプログラム ページに残したままにします。
 
 ## <a name="see-also"></a>関連項目
 
-[配置例](deployment-examples.md)<br/>
+[展開の例](deployment-examples.md)<br/>

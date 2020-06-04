@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0047
 - CXX0047
 ms.assetid: db23d0db-fce2-4d86-b391-6e1d6ad13fd4
-ms.openlocfilehash: ecc2ca4061f01cfa3ef868ed2916ceaeb5513116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5a8ebaaac351833970b10336f4f71940082114
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184906"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>式エバリュエーター エラー CXX0047
 
 引数リストが関数と一致しません
 
-式には、プログラムで定義されている同じ名前を持つ任意の関数の仮パラメーター リストと一致しない実際のパラメーター リストを持つ関数が呼び出されます。
+プログラムで定義されている同じ名前の関数の仮パラメーターリストと一致しなかった実際のパラメーターリストを持つ関数と呼ばれる式。
 
-正確なパラメーターに一致するか、オブジェクトの構築を必要としない一致がある場合にのみ、オーバー ロードされた関数を呼び出すことができます。
+オーバーロードされた関数を呼び出すことができるのは、オブジェクトの構築を必要としない正確なパラメーター一致または一致がある場合だけです。
 
-このエラーは、can0047 と同じものと同じです。
+このエラーは CAN0047 と同じです。

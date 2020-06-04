@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148076"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778459"
 ---
 # <a name="elements-of-c"></a>C の要素
 
@@ -34,7 +34,7 @@ ms.locfileid: "56148076"
 
 - [区切り記号と特殊文字](../c-language/punctuation-and-special-characters.md)
 
-このセクションには、[トライグラフ](../c-language/trigraphs.md)、[浮動小数点定数の制限](../c-language/limits-on-floating-point-constants.md)、 [C++ 整数の制限](../c-language/cpp-integer-limits.md)、[エスケープ シーケンス](../c-language/escape-sequences.md)の参照テーブルも含まれています。
+このセクションには、[トライグラフ](../c-language/trigraphs.md)、[浮動小数点定数の制限](../c-language/limits-on-floating-point-constants.md)、[C および C++ 整数の制限](../c-language/cpp-integer-limits.md)、[エスケープ シーケンス](../c-language/escape-sequences.md)の参照テーブルも含まれています。
 
 演算子は、値の操作方法を指定するシンボル (単一文字および文字の組み合わせ) です。 各シンボルはトークンと呼ばれる 1 つの単位として解釈されます。 詳細については、「[演算子](../c-language/c-operators.md)」を参照してください。
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165744"
 ---
 # <a name="compiler-error-c3768"></a>コンパイラ エラー C3768
 
-> 純粋なマネージ コードで仮想 vararg 関数のアドレスを取得できません。
+> 純粋マネージコードで仮想 vararg 関数のアドレスを取得することはできません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-コンパイルするときに **/clr: 純粋な**、仮想のアドレスを取得できません`vararg`関数。
+**/Clr: pure**を使用してコンパイルする場合、仮想 `vararg` 関数のアドレスを取得することはできません。
 
 ## <a name="example"></a>例
 

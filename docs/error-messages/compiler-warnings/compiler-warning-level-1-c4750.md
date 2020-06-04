@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 2a6d83074f180a455e9c305fb4ca8ea270d0a593
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175169"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>コンパイラの警告 (レベル 1) C4750
 
@@ -33,7 +33,7 @@ ms.locfileid: "62385401"
 
 次のコード例はループ内で `MyFunction` を呼び出し、 `MyFunction` は `_alloca` 関数を呼び出します。 `__forceinline` 修飾子により、 `_alloca` 関数のインライン展開が発生します。
 
-```
+```cpp
 // c4750.cpp
 // compile with: /O2 /W1 /c
 #include <intrin.h>
@@ -55,6 +55,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_alloca](../../c-runtime-library/reference/alloca.md)

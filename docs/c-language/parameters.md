@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters [C++], function
 - functions [C], parameters
 - function parameters, syntax
-- ellipses (...), parameters
+- ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147231"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032071"
 ---
 # <a name="parameters"></a>パラメーター
 
@@ -34,8 +34,8 @@ ms.locfileid: "56147231"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 関数宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* 新しい形式の宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 古い形式の宣言子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新しい形式の宣言子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 古い形式の宣言子 \*/
 
 *parameter-type-list*: /\* パラメーター リスト \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
@@ -66,7 +66,7 @@ void new( double x, double y, double z )
 }
 ```
 
-1 つ以上のパラメーターがパラメーター リストにある場合、リストは、コンマとその後に続く 3 つのピリオド (**, ...**) で終了できます。"省略記号表記" と呼ばれるこのコンストラクションは、関数への可変数の引数を示します (詳細については、「[可変数の引数を使用した呼び出し](../c-language/calls-with-a-variable-number-of-arguments.md)」を参照)。ただし、関数の呼び出しでは、少なくとも最後のコンマの前にパラメーターと同じ数の引数が必要です。
+1 つ以上のパラメーターがパラメーター リストにある場合、リストは、コンマとその後に続く 3 つのピリオド ( **, ...** ) で終了できます。"省略記号表記" と呼ばれるこのコンストラクションは、関数への可変数の引数を示します (詳細については、「[可変数の引数を使用した呼び出し](../c-language/calls-with-a-variable-number-of-arguments.md)」を参照)。ただし、関数の呼び出しでは、少なくとも最後のコンマの前にパラメーターと同じ数の引数が必要です。
 
 引数が関数に渡されない場合、パラメーターのリストはキーワード `void` で置き換えられます。 この `void` の使い方は、型指定子としての使い方とは異なります。
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4281
 ms.assetid: a9771261-5725-4fc6-87b6-16cf92113a25
-ms.openlocfilehash: 69496438d8078ee0298bdb447fcf4f7df1b75464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31c389f4bc0546270240c9c701be7f1e9e620db1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174142"
 ---
 # <a name="compiler-warning-level-3-c4281"></a>コンパイラの警告 (レベル 3) C4281
 
-型 'type' から 'operator ->' の再帰が発生しました
+' operator-> ' 再帰が型 ' type ' で発生しました
 
-コードにより**operator ->** 自体を呼び出す。
+コードを使用して、**演算子 >** がそれ自体を呼び出すことができます。
 
 次の例では、C4281 が生成されます。
 
-```
+```cpp
 // C4281.cpp
 // compile with: /W3 /WX
 struct A;

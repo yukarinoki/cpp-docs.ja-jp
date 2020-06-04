@@ -7,25 +7,25 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453770"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686080"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-テンプレート クラスのスタックと 2 つのサポート用テンプレートを定義します。
+クラステンプレートスタックと2つのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<stack>
 
 **名前空間:** std
 
 > [!NOTE]
-> Stack \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0stack > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -39,12 +39,6 @@ ms.locfileid: "68453770"
 |[operator==](../standard-library/stack-operators.md#op_eq_eq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しいかどうかを調べます。|
 |[operator>](../standard-library/stack-operators.md#op_gt)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以上かどうかを調べます。|
-
-### <a name="functions"></a>関数
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>クラス
 

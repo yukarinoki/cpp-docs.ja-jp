@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae13505da411b9a9cc445560907d053afa4bf81d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453803"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351705"
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution クラス
+# <a name="lognormal_distribution-class"></a>lognormal_distribution クラス
 
 対数正規分布を生成します。
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*リアルタイプ*\
+浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレートクラスは、対数正規分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラス テンプレートは、ユーザー指定の整数型の値を生成する分布を表します。 **double** 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
 
 LogNormal 分布の詳細については、Wolfram MathWorld の記事「[LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917)」をご覧ください。
 
@@ -184,7 +184,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
 
 分布を作成します。
 
@@ -195,24 +195,24 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*m*\
+*M*\
 `m` 分布パラメーター。
 
-*2$s*\
+*S*\
 `s` 分布パラメーター。
 
-*parm*\
+*Parm*\
 分布の作成に使用される `param_type` の構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < s`
+**前提条件:**`0.0 < s`
 
 1 つ目のコンストラクターは、格納されている値 `m` と `s` にそれぞれ *m* と *s* の値を保持するオブジェクトを作成します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="param_type"></a>  lognormal_distribution::param_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::pアラム_タイプ
 
 分布のパラメーターを格納します。
 
@@ -230,21 +230,21 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*m*\
+*M*\
 `m` 分布パラメーター。
 
-*2$s*\
+*S*\
 `s` 分布パラメーター。
 
 *そうです*\
 比較に使用される `param_type` 構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**前提条件:** `0.0 < s`
+**前提条件:**`0.0 < s`
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

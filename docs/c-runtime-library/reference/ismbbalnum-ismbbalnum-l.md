@@ -1,10 +1,12 @@
 ---
 title: _ismbbalnum、_ismbbalnum_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbbalnum
 - _ismbbalnum_l
-apilocation:
+- _o__ismbbalnum
+- _o__ismbbalnum_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbalnum
 - ismbbalnum
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286562"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917553"
 ---
-# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum、_ismbbalnum_l
+# <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum、_ismbbalnum_l
 
 指定されたマルチバイト文字が英字または数字かどうかを判定します。
 
@@ -52,7 +58,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -60,22 +66,26 @@ int _ismbbalnum_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbalnum**場合 0 以外の値を返す式。
+次の式の場合、 **_ismbbalnum**は0以外の値を返します。
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-0 以外の場合は、 *c*、または 0 でない場合。
+*c*の場合は0以外の。それ以外の場合は0。
 
-この関数のバージョン、 **_l**サフィックスは、そのロケールに依存する動作の現在のロケールではなく渡されたロケールを使用すると同じです。
+**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -84,4 +94,4 @@ int _ismbbalnum_l(
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -2,18 +2,18 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273197"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440383"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -24,14 +24,14 @@ DLL をバインドできるかどうかを指定します。
 /ALLOWBIND[:NO]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**/ALLOWBIND**オプションは、ビット イメージがバインドできることを Bind.exe に指示を示します DLL のヘッダーを設定します。 バインディングは、高速に読み込むリベースを各参照されている DLL をアドレスのフィックス アップを実行する、ローダーがない場合にイメージを許可できます。 デジタル署名されている場合にバインドする DLL は避けたい-バインドには、署名が無効になります。 バインディングには効果がないを使用して、イメージのアドレス空間レイアウト randomization (ASLR) が有効になっている場合 **/DYNAMICBASE** ASLR をサポートする Windows のバージョン。
+**/Allowbind**オプションは、DLL のヘッダー内のビットを設定します。これは、イメージをバインドできることをバインドすることを示します。 バインディングを使用すると、ローダーが参照される各 DLL のアドレスの修正をリベースして実行する必要がない場合に、イメージの読み込みを高速化できます。 DLL がデジタル署名されている場合、バインドを無効にすることができます。バインディングは、署名を無効にします。 ASLR をサポートするバージョンの Windows で **/DYNAMICBASE**を使用してイメージに対してアドレス空間レイアウトのランダム化 (aslr) が有効になっている場合、バインドは無効です。
 
-使用 **/ALLOWBIND:NO** Bind.exe が DLL をバインドするを防ぐためにします。
+**/Allowbind: NO**を使用して、Bind .EXE が DLL をバインドできないようにします。
 
-詳細については、次を参照してください。、 [/ALLOWBIND](allowbind-prevent-dll-binding.md)リンカー オプション。
+詳細については、「 [/allowbind](allowbind-prevent-dll-binding.md)リンカーオプション」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

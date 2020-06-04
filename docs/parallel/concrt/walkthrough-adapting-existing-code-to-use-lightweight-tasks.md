@@ -1,38 +1,34 @@
 ---
-title: 'チュートリアル: 軽量タスクを使用するための既存のコードの適合'
+title: 'チュートリアル: 既存のコードを改変して軽量タスクを使用する'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 406d4d24d0042c7bded4f94dcef1e7731ab3947f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e7c6096829a1cd45cfdb849a1899d6b4a2d4cb78
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512154"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141993"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 軽量タスクを使用するための既存のコードの適合
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 既存のコードを改変して軽量タスクを使用する
 
 ここでは、Windows API を使用する既存のコードを改変して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。
 
 *軽量タスク*は、 [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクトまたは[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトから直接スケジュールするタスクです。 軽量タスクは、既存のコードを改変してコンカレンシー ランタイムのスケジュール機能を使用する場合に有用です。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを開始する前に、「[タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数を使用して、別のスレッドで `MyThreadFunction` を呼び出します。
 
-Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数を使用`MyThreadFunction`して、別のスレッドでを呼び出します。
-
-### <a name="code"></a>コード
+### <a name="initial-code"></a>最初のコード
 
 [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]
-
-### <a name="comments"></a>コメント
 
 この例を実行すると、次の出力が生成されます。
 
@@ -56,15 +52,15 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. タスクが完了したことをメインアプリケーションに通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを含めるように構造体を変更します。`MyData`
+1. タスクが完了したことをメインアプリケーションに通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを含めるように `MyData` 構造を変更します。
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. の呼び出し`CreateThread`を[concurrency:: currentscheduler:: scheduletask](reference/currentscheduler-class.md#scheduletask)メソッドの呼び出しに置き換えます。
+1. `CreateThread` の呼び出しを[concurrency:: CurrentScheduler:: ScheduleTask](reference/currentscheduler-class.md#scheduletask)メソッドの呼び出しに置き換えます。
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. の呼び出し`WaitForSingleObject`を[concurrency:: event:: wait](reference/event-class.md#wait)メソッドの呼び出しに置き換えて、タスクが終了するのを待ちます。
+1. `WaitForSingleObject` の呼び出しを[concurrency:: event:: wait](reference/event-class.md#wait)メソッドの呼び出しに置き換えて、タスクが終了するのを待ちます。
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
@@ -74,25 +70,19 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-9. `MyThreadFunction`関数の最後で、 [concurrency:: event:: set](reference/event-class.md#set)メソッドを呼び出して、タスクが終了したことをメインアプリケーションに通知します。
+1. `MyThreadFunction` 関数の最後で、 [concurrency:: event:: set](reference/event-class.md#set)メソッドを呼び出して、タスクが終了したことをメインアプリケーションに通知します。
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-10. `return` ステートメントを `MyThreadFunction` から削除します。
+1. `return` ステートメントを `MyThreadFunction` から削除します。
 
-## <a name="example"></a>例
-
-### <a name="description"></a>説明
+### <a name="completed-code"></a>完成したコード
 
 次の完成版の例に、軽量タスクを使用して `MyThreadFunction` 関数を呼び出すためのコードを示します。
 
-### <a name="code"></a>コード
-
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-### <a name="comments"></a>コメント
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler クラス](../../parallel/concrt/reference/scheduler-class.md)

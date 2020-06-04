@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2378
 ms.assetid: 507a91c6-ca72-48df-b3a4-2cf931c86806
-ms.openlocfilehash: fb6d228826cf1b21904863505c0963069e89d32d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 63063ec98bbc4d42f3237fd42e42b9fdce489892
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344876"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745422"
 ---
 # <a name="compiler-error-c2378"></a>コンパイラ エラー C2378
 
@@ -21,7 +21,7 @@ ms.locfileid: "64344876"
 
 次の例では C2378 が生成されます。
 
-```
+```cpp
 // C2378.cpp
 // compile with: /c
 int i;

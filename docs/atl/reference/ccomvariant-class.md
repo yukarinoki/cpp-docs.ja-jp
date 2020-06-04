@@ -1,5 +1,5 @@
 ---
-title: CComVariant クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComVariant
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a84d91e20242fb206d1d3f71fcb3dd207561f62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327225"
 ---
-# <a name="ccomvariant-class"></a>CComVariant クラス
+# <a name="ccomvariant-class"></a>クラス
 
-このクラスは、格納されているデータの種類を示すメンバーを提供する、バリアント型をラップします。
+このクラスは、格納されているデータの型を示すメンバーを提供する VARIANT 型をラップします。
 
 ## <a name="syntax"></a>構文
 
@@ -43,39 +43,39 @@ class CComVariant : public tagVARIANT
 
 |名前|説明|
 |----------|-----------------|
-|[CComVariant::CComVariant](#ccomvariant)|コンストラクターです。|
-|[CComVariant::~CComVariant](#dtor)|デストラクターです。|
+|[コミュ・バリアント:コミュ・バリアント](#ccomvariant)|コンストラクターです。|
+|[コミュ・バリアント::~コミュ・バリアント](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComVariant::Attach](#attach)|バリアントをアタッチ、`CComVariant`オブジェクト。|
-|[CComVariant::ChangeType](#changetype)|変換、`CComVariant`オブジェクトを新しい型。|
-|[CComVariant::Clear](#clear)|消去、`CComVariant`オブジェクト。|
-|[CComVariant::Copy](#copy)|コピーへのバリアント、`CComVariant`オブジェクト。|
-|[CComVariant::CopyTo](#copyto)|内容をコピー、`CComVariant`オブジェクト。|
-|[CComVariant::Detach](#detach)|基になるバリアントのデタッチ、`CComVariant`オブジェクト。|
-|[CComVariant::GetSize](#getsize)|内容のバイト数のサイズを返します、`CComVariant`オブジェクト。|
-|[CComVariant::ReadFromStream](#readfromstream)|ストリームからのバリアントを読み込みます。|
-|[CComVariant::SetByRef](#setbyref)|初期化します、`CComVariant`オブジェクトと設定、 `vt` VT_BYREF するメンバー。|
-|[CComVariant::WriteToStream](#writetostream)|基になるバリアントをストリームに保存します。|
+|[コミュ・バリアント:アタッチ](#attach)|オブジェクトにバリアント型をアタッチ`CComVariant`します。|
+|[を変更します。](#changetype)|オブジェクトを`CComVariant`新しい型に変換します。|
+|[コミュ・バリアント:クリア](#clear)|オブジェクトをクリア`CComVariant`します。|
+|[コミュ・バリアント:コピー](#copy)|オブジェクトにバリアント型`CComVariant`(VARIANT) をコピーします。|
+|[コミュ・バリアント:コピー・トー](#copyto)|オブジェクトの内容を`CComVariant`コピーします。|
+|[コミュニア :Dバリアント](#detach)|基になる VARIANT を`CComVariant`オブジェクトからデタッチします。|
+|[を指定します。](#getsize)|オブジェクトの内容のバイト数でサイズを`CComVariant`返します。|
+|[を読み取る](#readfromstream)|ストリームからバリアント型 (VARIANT) を読み込みます。|
+|[を指定します。](#setbyref)|オブジェクトを`CComVariant`初期化し、メンバーを`vt`VT_BYREFに設定します。|
+|[を使用します。](#writetostream)|基になる VARIANT をストリームに保存します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |||
 |-|-|
-|[CComVariant::operator <](#operator_lt)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型より小さい。|
-|[CComVariant::operator >](#operator_gt)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型よりも大きい。|
-|[operator !=](#operator_neq)|示すかどうか、`CComVariant`オブジェクトが、指定されたバリアント型と一致しません。|
-|[operator=](#operator_eq)|値を割り当てます、`CComVariant`オブジェクト。|
-|[operator ==](#operator_eq_eq)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型。|
+|[<演算子](#operator_lt)|オブジェクトが指定`CComVariant`した VARIANT より小さいかどうかを示します。|
+|[>演算子](#operator_gt)|オブジェクトが指定`CComVariant`した VARIANT より大きいかどうかを示します。|
+|[演算子 !=](#operator_neq)|オブジェクトが指定`CComVariant`した VARIANT と等しくないかどうかを示します。|
+|[演算子 =](#operator_eq)|`CComVariant`オブジェクトに値を割り当てます。|
+|[演算子 ==](#operator_eq_eq)|オブジェクトが指定`CComVariant`した VARIANT と等しいかどうかを示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComVariant` 共用体と共用体に格納されたデータの種類を示すメンバーから成る VARIANT と VARIANTARG 型をラップします。 バリアントは、Automation で通常使用されます。
+`CComVariant`和集合と、共用体に格納されているデータの型を示すメンバーから成るバリアント型と VARIANTARG 型をラップします。 VARIANT は通常、オートメーションで使用されます。
 
-`CComVariant` バリアントを使用できる場所に使用できるように、VARIANT 型から派生します。 型を抽出する V_VT マクロを使用することができます、たとえば、`CComVariant`またはアクセスすることができます、`vt`メンバーを直接と同じように、バリアントで購入できます。
+`CComVariant`バリアント型から派生するため、バリアント型を使用できる場所であればどこでも使用できます。 たとえば、V_VT マクロを使用して a 型を`CComVariant`抽出したり、VARIANT と同様に`vt`メンバーに直接アクセスすることができます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -87,9 +87,9 @@ class CComVariant : public tagVARIANT
 
 **ヘッダー:** atlcomcli.h
 
-##  <a name="attach"></a>  CComVariant::Attach
+## <a name="ccomvariantattach"></a><a name="attach"></a>コミュ・バリアント:アタッチ
 
-現在の内容を安全に消去、`CComVariant`オブジェクトの内容をコピー *pSrc*に、このオブジェクトのバリアント型を設定し、 *pSrc* VT_EMPTY にします。
+オブジェクトの現在の内容を`CComVariant`安全にクリアし *、pSrc*の内容をこのオブジェクトにコピーしてから *、pSrc*のバリアント型をVT_EMPTYに設定します。
 
 ```
 HRESULT Attach(VARIANT* pSrc);
@@ -98,19 +98,19 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>パラメーター
 
 *pSrc*<br/>
-[in]指す、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)オブジェクトに接続します。
+[in]オブジェクトにアタッチする[バリアント型 (VARIANT)](/windows/win32/api/oaidl/ns-oaidl-variant)へのポイント。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-保持しているデータの所有権*pSrc*に転送される、`CComVariant`オブジェクト。
+*pSrc*が保有するデータの所有権は、オブジェクト`CComVariant`に転送されます。
 
-##  <a name="ccomvariant"></a>  CComVariant::CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a>コミュ・バリアント:コミュ・バリアント
 
-各コンス トラクターのセーフな初期化を処理する、`CComVariant`オブジェクトを呼び出すことによって、 `VariantInit` Win32 関数またはオブジェクトの値とに従って渡されるパラメーターの型を設定します。
+各コンストラクターは`VariantInit`、Win32`CComVariant`関数を呼び出すか、渡されたパラメーターに従ってオブジェクトの値と型を設定することによって、オブジェクトの安全な初期化を処理します。
 
 ```
 CComVariant() throw();
@@ -141,45 +141,45 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-[in]`CComVariant`または初期化に使用されるバリアント、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
+[in]オブジェクト`CComVariant`の初期化に使用される`CComVariant`バリアント型 (VARIANT) です。 ソースバリアントの内容は変換されずにコピー先にコピーされます。
 
 *lpszSrc*<br/>
-[in]初期化に使用される文字の文字列、`CComVariant`オブジェクト。 LPCOLESTR バージョンのコンス トラクターまたは LPCSTR バージョンに、ANSI 文字列には、ワイド (Unicode) 文字 0 で終わる文字列を渡すことができます。 いずれの場合も、文字列は Unicode を使用して割り当て BSTR に変換`SysAllocString`します。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
+[in]オブジェクトの初期化に使用する`CComVariant`文字列。 ゼロ終端ワイド (Unicode) 文字ストリングを LPCOLESTR バージョンのコンストラクターに、または ANSI ストリングを LPCSTR バージョンに渡すことができます。 どちらの場合も、文字列は を使用して`SysAllocString`割り当てられた Unicode BSTR に変換されます。 オブジェクトの`CComVariant`型はVT_BSTRされます。
 
 *bSrc*<br/>
-[in]**Bool**初期化に使用される、`CComVariant`オブジェクト。 **Bool**引数が保存される前に、VARIANT_BOOL に変換されます。 種類、 `CComVariant` VT_BOOL がオブジェクトになります。
+[in]オブジェクトの初期化に使用される`CComVariant` **bool。** **bool**引数は、保存される前にVARIANT_BOOLに変換されます。 オブジェクトの`CComVariant`型がVT_BOOLされます。
 
 *nSrc*<br/>
-[in]**Int**、**バイト**、**短い**、**長い**、LONGLONG、ULONGLONG、 **unsigned short**、 **unsigned long**、または**符号なし int**初期化に使用される、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、VT_UI4、またはそれぞれなります。
+[in]**int**、 **BYTE**、**ショート**、**ロング**ロング 、 ULONG、**符号なしの短い**、**符号なし長** `CComVariant` 、 または符号なし**int**を使用してオブジェクトを初期化します。 オブジェクトの`CComVariant`型は、それぞれVT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、またはVT_UI4になります。
 
 *vtSrc*<br/>
-[in]バリアントの型。 最初のパラメーターの場合は**int**、有効な型は VT_I4 と VT_INT します。 最初のパラメーターの場合は**長い**、有効な型は VT_I4 と VT_ERROR します。 最初のパラメーターの場合は**二重**、有効な種類は VT_R8、および VT_DATE します。 最初のパラメーターの場合は**符号なし int**、有効な種類は VT_UI4 と VT_UINT します。
+[in]バリアントの型。 最初のパラメータが**int**の場合、有効な型はVT_I4され、VT_INT。 最初のパラメータが**long**の場合、有効な型はVT_I4され、VT_ERROR。 最初のパラメータが**倍精度浮動小数点数**の場合、有効な型はVT_R8され、VT_DATE。 最初のパラメータが**符号なし int**の場合、有効な型はVT_UI4され、VT_UINT。
 
-*fltSrc*<br/>
-[in]**Float**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R4 がオブジェクトになります。
+*フルツルク*<br/>
+[in]オブジェクトの初期化に使用される`CComVariant`**浮動小数点数**。 オブジェクトの`CComVariant`型がVT_R4されます。
 
 *dblSrc*<br/>
-[in]**二重**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R8 がオブジェクトになります。
+[in]オブジェクト**double**の初期化に使用される`CComVariant`double です。 オブジェクトの`CComVariant`型はVT_R8されます。
 
-*cySrc*<br/>
-[in]`CY`初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_CY がオブジェクトになります。
+*サイスルク*<br/>
+[in]オブジェクト`CY`の初期化に使用`CComVariant`されます。 オブジェクトの`CComVariant`型はVT_CYされます。
 
 *pSrc*<br/>
-[in]`IDispatch`または`IUnknown`ポインターの初期化に使用される、`CComVariant`オブジェクト。 `AddRef` インターフェイス ポインターで呼び出されます。 種類、`CComVariant`オブジェクトが VT_DISPATCH またはで VT_UNKNOWN、それぞれします。
+[in]オブジェクト`IDispatch`の`IUnknown`初期化に使用される`CComVariant`またはポインター。 `AddRef`はインターフェイス ポインターで呼び出されます。 オブジェクトの`CComVariant`型はそれぞれVT_DISPATCHまたはVT_UNKNOWNされます。
 
-または、初期化するために使用される SAFERRAY ポインター、`CComVariant`オブジェクト。 SAFEARRAY のコピーが格納されている、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトの SAFEARRAY、VT_ARRAY 元の型の組み合わせになります。
+または、オブジェクトの初期化に使用される`CComVariant`SAFERRAY ポインター。 SAFEARRAY のコピーがオブジェクトに`CComVariant`格納されます。 オブジェクトの`CComVariant`型は、SAFEARRAY の元の型とVT_ARRAYの組み合わせになります。
 
-*cSrc*<br/>
-[in]**Char**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_I1 がオブジェクトになります。
+*Csrc*<br/>
+[in]オブジェクトの初期化に使用する`CComVariant` **char。** オブジェクトの`CComVariant`型はVT_I1されます。
 
 *bstrSrc*<br/>
-[in]初期化するために使用される、BSTR、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
+[in]オブジェクトの初期化に使用される`CComVariant`BSTR。 オブジェクトの`CComVariant`型はVT_BSTRされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デストラクターを呼び出してクリーンアップを管理する[CComVariant::Clear](#clear)します。
+デストラクターは[、CComVariant::Clear](#clear)を呼び出すことによってクリーンアップを管理します。
 
-##  <a name="dtor"></a>  CComVariant:: ~ CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="dtor"></a>コミュ・バリアント::~コミュ・バリアント
 
 デストラクターです。
 
@@ -187,13 +187,13 @@ CComVariant(const CComBSTR& bstrSrc);
 ~CComVariant() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを呼び出してクリーンアップを管理する[CComVariant::Clear](#clear)します。
+このメソッドは[、CComVariant::Clear](#clear)を呼び出すことによってクリーンアップを管理します。
 
-##  <a name="changetype"></a>  CComVariant::ChangeType
+## <a name="ccomvariantchangetype"></a><a name="changetype"></a>を変更します。
 
-変換、`CComVariant`オブジェクトを新しい型。
+オブジェクトを`CComVariant`新しい型に変換します。
 
 ```
 HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
@@ -202,22 +202,22 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *vtNew*<br/>
-[in]新しい型、`CComVariant`オブジェクト。
+[in]`CComVariant`オブジェクトの新しい型。
 
 *pSrc*<br/>
-[in]値を持つは、新しい型に変換するバリアントへのポインター。 既定値は null の場合、つまり、`CComVariant`オブジェクトはインプレース変換されます。
+[in]値が新しい型に変換される VARIANT へのポインター。 既定値は NULL で、オブジェクト`CComVariant`は所定の位置に変換されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値を渡す場合*pSrc*、`ChangeType`このバリアントをソースと変換に使用します。 それ以外の場合、`CComVariant`オブジェクトには、ソースとなります。
+*pSrc*に値を渡すと`ChangeType`、変換元としてこのバリアントを使用します。 それ以外の`CComVariant`場合、オブジェクトはソースになります。
 
-##  <a name="clear"></a>  CComVariant::Clear
+## <a name="ccomvariantclear"></a><a name="clear"></a>コミュ・バリアント:クリア
 
-消去、`CComVariant`オブジェクトを呼び出すことによって、 `VariantClear` Win32 関数。
+Win32`CComVariant`関数を呼`VariantClear`び出してオブジェクトをクリアします。
 
 ```
 HRESULT Clear();
@@ -227,13 +227,13 @@ HRESULT Clear();
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デストラクターが自動的に呼び出します`Clear`します。
+デストラクターは、`Clear`を自動的に呼び出します。
 
-##  <a name="copy"></a>  CComVariant::Copy
+## <a name="ccomvariantcopy"></a><a name="copy"></a>コミュ・バリアント:コピー
 
-解放、`CComVariant`オブジェクトを指定されたバリアント型のコピーを割り当てます。
+オブジェクトを`CComVariant`解放し、指定した VARIANT のコピーを割り当てます。
 
 ```
 HRESULT Copy(const VARIANT* pSrc);
@@ -242,15 +242,15 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>パラメーター
 
 *pSrc*<br/>
-[in]ポインター、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)をコピーします。
+[in]コピーする[バリアント型 (VARIANT)](/windows/win32/api/oaidl/ns-oaidl-variant)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-##  <a name="copyto"></a>  CComVariant::CopyTo
+## <a name="ccomvariantcopyto"></a><a name="copyto"></a>コミュ・バリアント:コピー・トー
 
-内容をコピー、`CComVariant`オブジェクト。
+オブジェクトの内容を`CComVariant`コピーします。
 
 ```
 HRESULT CopyTo(BSTR* pstrDest);
@@ -258,20 +258,20 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrDest*<br/>
-内容のコピーを受信する BSTR を指す、`CComVariant`オブジェクト。
+*最も多い*<br/>
+オブジェクトの内容のコピーを受け取る BSTR への`CComVariant`ポイント。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CComVariant` VT_BSTR 型のオブジェクトがある必要があります。
+オブジェクト`CComVariant`は、VT_BSTR型である必要があります。
 
-##  <a name="detach"></a>  CComVariant::Detach
+## <a name="ccomvariantdetach"></a><a name="detach"></a>コミュニア :Dバリアント
 
-基になるバリアントのデタッチ、`CComVariant`オブジェクトし、オブジェクトの型を VT_EMPTY に設定します。
+基になる VARIANT を`CComVariant`オブジェクトからデタッチし、オブジェクトの型をVT_EMPTYに設定します。
 
 ```
 HRESULT Detach(VARIANT* pDest);
@@ -280,19 +280,19 @@ HRESULT Detach(VARIANT* pDest);
 ### <a name="parameters"></a>パラメーター
 
 *pDest*<br/>
-[out]オブジェクトの基になるバリアント値を返します。
+[アウト]オブジェクトの基になる VARIANT 値を返します。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって参照される、バリアントの内容に注意してください*pDest*値と、呼び出し元の型に割り当てられる前に自動的にクリアされます`CComVariant`オブジェクト。
+*pDest*によって参照される VARIANT の内容は、呼び出し元`CComVariant`オブジェクトの値と型が割り当てられる前に自動的に消去されます。
 
-##  <a name="getsize"></a>  CComVariant::GetSize
+## <a name="ccomvariantgetsize"></a><a name="getsize"></a>を指定します。
 
-このメソッドが戻るの単純な固定サイズのバリエーション、 **sizeof**プラスの基になるデータ型**終了する**します。
+単純固定サイズの VARIANT の場合、このメソッドは、基になるデータ型**のサイズ**に**sizeof (VARTYPE)** を加えたサイズを返します。
 
 ```
 ULONG GetSize() const;
@@ -300,19 +300,19 @@ ULONG GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の内容のバイト単位のサイズ、`CComVariant`オブジェクト。
+オブジェクトの現在の内容のサイズ (`CComVariant`バイト単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-バリアントには、インターフェイス ポインターが含まれている場合`GetSize`照会`IPersistStream`または`IPersistStreamInit`します。 成功すると、戻り値がによって返される値の下位 32 ビット`GetSizeMax`だけでなく、 **sizeof** CLSID と**終了する**します。 インターフェイス ポインターが NULL の場合`GetSize`を返します、 **sizeof**プラス CLSID**終了する**します。 合計サイズが、ULONG_MAX を超える場合`GetSize`返します**終了する**エラーを示します。
+VARIANT にインターフェイス ポインターが含`GetSize`まれている場合は`IPersistStream`、`IPersistStreamInit`または を照会します。 成功した場合、戻り値は、CLSID と`GetSizeMax`**sizeof (VARTYPE)****のサイズ**を足した値の下位 32 ビットです。 インターフェイス ポインタが NULL`GetSize`の場合は、CLSID プラス**サイズのサイズを**返します。 **sizeof** 合計サイズがULONG_MAXより大きい場合は`GetSize`、エラーを示す**sizeof(VARTYPE) を**返します。
 
-その他のすべてのケースで型 VT_BSTR の一時的なバリアントは、現在のバリアントから強制的に変換されます。 この BSTR の長さは、文字列の長さと文字列自体の長さのサイズの正符号の null 文字のサイズの合計として計算されます**終了する**します。 バリアントは VT_BSTR 型のバリアントを強制的に変換できない場合`GetSize`返します**終了する**します。
+それ以外のすべての場合、VT_BSTR型の一時的な VARIANT は、現在の VARIANT から強制変換されます。 この BSTR の長さは、文字列の長さに文字列自体の長さに、null 文字 + **sizeof (VARTYPE)** のサイズを加えた長さのサイズとして計算されます。 バリアント型を型 VT_BSTRのバリアント型に強制変換できない場合は、 `GetSize` **sizeof (VARTYPE)** を返します。
 
-このメソッドによって返されるサイズで使用されるバイトの数が一致[な](#writetostream)成功の条件下でします。
+このメソッドによって返されるサイズは、正常な条件下で[使用](#writetostream)されるバイト数と一致します。
 
-##  <a name="operator_eq"></a>  CComVariant::operator =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq"></a>演算子 =
 
-値と対応する型を割り当てます、`CComVariant`オブジェクト。
+オブジェクトに値と対応する型を`CComVariant`割り当てます。
 
 ```
 CComVariant& operator=(const CComVariant& varSrc);
@@ -342,92 +342,92 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-[in]`CComVariant`または[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)に割り当てられる、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
+[in]オブジェクトに割り当てられる バリアント`CComVariant`型 ( [VARIANT)](/windows/win32/api/oaidl/ns-oaidl-variant)です。 `CComVariant` ソースバリアントの内容は変換されずにコピー先にコピーされます。
 
 *bstrSrc*<br/>
-[in]割り当てられる BSTR、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
+[in]`CComVariant`オブジェクトに割り当てられる BSTR。 オブジェクトの`CComVariant`型はVT_BSTRされます。
 
 *lpszSrc*<br/>
-[in]文字の文字列に割り当てられる、`CComVariant`オブジェクト。 演算子または LPCSTR バージョンに、ANSI 文字列の LPCOLESTR バージョンには、ワイド (Unicode) 文字 0 で終わる文字列を渡すことができます。 どちらの場合、文字列は Unicode を使用して割り当て BSTR に変換`SysAllocString`します。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
+[in]`CComVariant`オブジェクトに割り当てられる文字列。 ゼロ終端ワイド (Unicode) 文字ストリングを LPCOLESTR バージョンのオペレーターに、または ANSI ストリングを LPCSTR バージョンに渡すことができます。 いずれの場合も、文字列は を使用して`SysAllocString`割り当てられた Unicode BSTR に変換されます。 オブジェクトの`CComVariant`型はVT_BSTRされます。
 
 *bSrc*<br/>
-[in]**Bool**に割り当てられる、`CComVariant`オブジェクト。 **Bool**引数が保存される前に、VARIANT_BOOL に変換されます。 種類、 `CComVariant` VT_BOOL がオブジェクトになります。
+[in]`CComVariant`オブジェクトに割り当てられる**bool。** **bool**引数は、保存される前にVARIANT_BOOLに変換されます。 オブジェクトの`CComVariant`型がVT_BOOLされます。
 
 *nSrc*<br/>
-[in]**Int**、BYTE、**短い**、**長い**、LONGLONG、ULONGLONG、 **unsigned short**、 **unsigned long**、または**符号なし int**に割り当てられる、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、VT_UI4、またはそれぞれなります。
+[in]**int**、 BYTE 、 **short**、 **long**、 Longlong 、**符号なしの短い**、**符号なし長**、`CComVariant`または**符号なし int**をオブジェクトに割り当てる。 オブジェクトの`CComVariant`型は、それぞれVT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、またはVT_UI4になります。
 
-*fltSrc*<br/>
-[in]**Float**に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R4 がオブジェクトになります。
+*フルツルク*<br/>
+[in]オブジェクトに割り当てられる**浮動小数点数**。 `CComVariant` オブジェクトの`CComVariant`型がVT_R4されます。
 
 *dblSrc*<br/>
-[in]**二重**に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R8 がオブジェクトになります。
+[in]オブジェクトに割り当てられる**倍精度**浮動小数点数。 `CComVariant` オブジェクトの`CComVariant`型はVT_R8されます。
 
-*cySrc*<br/>
-[in]`CY`に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_CY がオブジェクトになります。
+*サイスルク*<br/>
+[in]オブジェクト`CY`に割り当てられる`CComVariant`。 オブジェクトの`CComVariant`型はVT_CYされます。
 
 *pSrc*<br/>
-[in]`IDispatch`または`IUnknown`ポインターに割り当てられる、`CComVariant`オブジェクト。 `AddRef` インターフェイス ポインターで呼び出されます。 種類、`CComVariant`オブジェクトが VT_DISPATCH またはで VT_UNKNOWN、それぞれします。
+[in]オブジェクトに割り当てられる`IDispatch`または`IUnknown`ポインタ。 `CComVariant` `AddRef`はインターフェイス ポインターで呼び出されます。 オブジェクトの`CComVariant`型はそれぞれVT_DISPATCHまたはVT_UNKNOWNされます。
 
-または、SAFEARRAY へのポインターに割り当てられる、`CComVariant`オブジェクト。 SAFEARRAY のコピーが格納されている、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトの SAFEARRAY、VT_ARRAY 元の型の組み合わせになります。
+または、オブジェクトに割り当てる SAFEARRAY`CComVariant`ポインター。 SAFEARRAY のコピーがオブジェクトに`CComVariant`格納されます。 オブジェクトの`CComVariant`型は、SAFEARRAY の元の型とVT_ARRAYの組み合わせになります。
 
-*cSrc*<br/>
-[in]割り当てられる char、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_I1 がオブジェクトになります。
+*Csrc*<br/>
+[in]`CComVariant`オブジェクトに割り当てられる char。 オブジェクトの`CComVariant`型はVT_I1されます。
 
-##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
+## <a name="ccomvariantoperator-"></a><a name="operator_eq_eq"></a>次の演算子 ==
 
-示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型。
+オブジェクトが指定`CComVariant`した VARIANT と等しいかどうかを示します。
 
 ```
 bool operator==(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合に TRUE を返しますの種類と値*varSrc*値よぶ型と等しい、それぞれの`CComVariant`オブジェクト。 それ以外の場合、FALSE です。 演算子では、ユーザーの既定のロケールを使用して、比較を実行します。
+*varSrc*の値と型が、オブジェクトの値と型と等しい場合は TRUE を`CComVariant`返します。 それ以外の場合は FALSE。 演算子は、ユーザーのデフォルトロケールを使用して比較を実行します。
 
-演算子は、バリアント型の値のみを比較します。 文字列、整数、および浮動小数点がないアレイまたはレコードを比較します。
+演算子は、バリアント型の値のみを比較します。 文字列、整数、浮動小数点を比較しますが、配列やレコードは比較しません。
 
-##  <a name="operator_neq"></a>  CComVariant::operator! =
+## <a name="ccomvariantoperator-"></a><a name="operator_neq"></a>演算子を使用します。
 
-示すかどうか、`CComVariant`オブジェクトが、指定されたバリアント型と一致しません。
+オブジェクトが指定`CComVariant`した VARIANT と等しくないかどうかを示します。
 
 ```
 bool operator!=(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-True の場合値または型の*varSrc*型、その値と等しくない、それぞれの`CComVariant`オブジェクト。 それ以外の場合、FALSE です。 演算子では、ユーザーの既定のロケールを使用して、比較を実行します。
+*varSrc*の値または型が、オブジェクトの値または型と等しくない場合は、TRUE を`CComVariant`返します。 それ以外の場合は FALSE。 演算子は、ユーザーのデフォルトロケールを使用して比較を実行します。
 
-演算子は、バリアント型の値のみを比較します。 文字列、整数、および浮動小数点がないアレイまたはレコードを比較します。
+演算子は、バリアント型の値のみを比較します。 文字列、整数、浮動小数点を比較しますが、配列やレコードは比較しません。
 
-##  <a name="operator_lt"></a>  CComVariant::operator &lt;
+## <a name="ccomvariantoperator-lt"></a><a name="operator_lt"></a>演算子&lt;
 
-示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型より小さい。
+オブジェクトが指定`CComVariant`した VARIANT より小さいかどうかを示します。
 
 ```
 bool operator<(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-True の場合の値、`CComVariant`オブジェクトがの値より小さい*varSrc*します。 それ以外の場合、FALSE です。 演算子では、ユーザーの既定のロケールを使用して、比較を実行します。
+オブジェクトの値が`CComVariant`*varSrc*の値より小さい場合は TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーのデフォルトロケールを使用して比較を実行します。
 
-##  <a name="operator_gt"></a>  CComVariant::operator &gt;
+## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a>演算子&gt;
 
-示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型よりも大きい。
+オブジェクトが指定`CComVariant`した VARIANT より大きいかどうかを示します。
 
 ```
 bool operator>(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-True の場合の値、`CComVariant`オブジェクトがの値より大きい*varSrc*します。 それ以外の場合、FALSE です。 演算子では、ユーザーの既定のロケールを使用して、比較を実行します。
+`CComVariant`オブジェクトの値が*varSrc*の値より大きい場合は TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーのデフォルトロケールを使用して比較を実行します。
 
-##  <a name="readfromstream"></a>  CComVariant::ReadFromStream
+## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a>を読み取る
 
-指定したストリームに含まれるバリアントを基になるバリアントを設定します。
+基になる VARIANT を、指定したストリームに含まれる VARIANT に設定します。
 
 ```
 HRESULT ReadFromStream(IStream* pStream);
@@ -435,20 +435,20 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*<br/>
-[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インターフェイスで、データを含むストリーム。
+*pストリーム*<br/>
+[in]データを含むストリーム上の[IStream](/windows/win32/api/objidl/nn-objidl-istream)インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ReadToStream` 以前の呼び出しを必要と[WriteToStream](#writetostream)します。
+`ReadToStream`には、前の呼び出し[が必要です](#writetostream)。
 
-##  <a name="setbyref"></a>  CComVariant::SetByRef
+## <a name="ccomvariantsetbyref"></a><a name="setbyref"></a>を指定します。
 
-初期化します、`CComVariant`オブジェクトと設定、 `vt` VT_BYREF するメンバー。
+オブジェクトを`CComVariant`初期化し、メンバーを`vt`VT_BYREFに設定します。
 
 ```
 template < typename T >
@@ -458,20 +458,20 @@ void SetByRef(T* pT) throw();
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-、たとえば、BSTR、バリアントの型**int**、または**char**します。
+バリアント型 (BSTR、int、または**int**char など **) の**型。
 
-*pT*<br/>
-ポインターの初期化に使用される、`CComVariant`オブジェクト。
+*Pt*<br/>
+オブジェクトの初期化に使用する`CComVariant`ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`SetByRef` 関数テンプレートを初期化するには、`CComVariant`オブジェクト ポインターを*pT*設定と、 `vt` VT_BYREF するメンバー。 例えば:
+`SetByRef`は、ポインター *pT*に`CComVariant`オブジェクトを初期化し、メンバーをVT_BYREFに`vt`設定する関数テンプレートです。 次に例を示します。
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>  CComVariant::WriteToStream
+## <a name="ccomvariantwritetostream"></a><a name="writetostream"></a>を使用します。
 
-基になるバリアントをストリームに保存します。
+基になる VARIANT をストリームに保存します。
 
 ```
 HRESULT WriteToStream(IStream* pStream);
@@ -479,8 +479,8 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*<br/>
-[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)ストリーム上のインターフェイス。
+*pストリーム*<br/>
+[in]ストリーム上の[IStream](/windows/win32/api/objidl/nn-objidl-istream)インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 

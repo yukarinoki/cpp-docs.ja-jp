@@ -1,5 +1,5 @@
 ---
-title: CSimpleArrayEqualHelperFalse クラス
+title: クラスを返します。
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eca3145d64895e34b599fbf83834af142b65973
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330893"
 ---
-# <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse クラス
+# <a name="csimplearrayequalhelperfalse-class"></a>クラスを返します。
 
-このクラスのヘルパーは、 [CSimpleArray](../../atl/reference/csimplearray-class.md)クラス。
+このクラスは、クラスのヘルパー[です](../../atl/reference/csimplearray-class.md)。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ class CSimpleArrayEqualHelperFalse
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生クラスです。
+派生クラス。
 
 ## <a name="members"></a>メンバー
 
@@ -37,17 +37,17 @@ class CSimpleArrayEqualHelperFalse
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(静的)False を返します。|
+|[を返します。](#isequal)|(静的)false を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この特性クラスを補完するは、`CSimpleArray`クラス。 False、およびさらに、返しますは呼び出しは常に it`ATLASSERT`引数が参照されている場合は false。 等しいかどうかテストが十分に定義されていない場合、このクラスは、ほとんどのメソッドに対して正常に動作しなどの比較に依存する方法を明確に定義された方法で失敗する可能性が要素を含む配列[CSimpleArray:。検索](../../atl/reference/csimplearray-class.md#find)します。
+この特徴クラスはクラスを補完する`CSimpleArray`クラスです。 常に false を返し、さらに、`ATLASSERT`参照される場合は false の引数を指定して呼び出します。 等値テストが十分に定義されていない状況では、このクラスは、要素を含む配列がほとんどのメソッドで正しく動作しますが[、CSimpleArray::Find](../../atl/reference/csimplearray-class.md#find)などの比較に依存するメソッドに対して明確に定義された方法で失敗することを可能にします。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+## <a name="csimplearrayequalhelperfalseisequal"></a><a name="isequal"></a>を返します。
 
 false を返します。
 
@@ -59,11 +59,11 @@ static bool IsEqual(const T&, const T&);
 
 false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは常に false を返し、呼び出されます`ATLASSERT`引数は参照されている場合は false。 目的は、`CSimpleArrayEqualHelperFalse::IsEqual`を強制的に比較を使用して、等しいかどうかテストが適切に定義されていないときに、明確に定義された方法で失敗するメソッド。
+このメソッドは常に false を`ATLASSERT`返し、参照されている場合は false の引数を指定して呼び出します。 等価性テスト`CSimpleArrayEqualHelperFalse::IsEqual`が適切に定義されていない場合に、比較を使用するメソッドが明確に定義された方法で失敗するように強制することを目的とします。
 
 ## <a name="see-also"></a>関連項目
 
-[CSimpleArrayEqualHelper クラス](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
+[クラスを配列します。](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

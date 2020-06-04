@@ -1,10 +1,12 @@
 ---
 title: _execvp、_wexecvp
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _execvp
 - _wexecvp
-apilocation:
+- _o__execvp
+- _o__wexecvp
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execvp
 - wexecvp
@@ -27,14 +33,14 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339100"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915929"
 ---
-# <a name="execvp-wexecvp"></a>_execvp、_wexecvp
+# <a name="_execvp-_wexecvp"></a>_execvp、_wexecvp
 
 新しい子プロセスを読み込んで実行します。
 
@@ -64,7 +70,7 @@ intptr_t _wexecvp(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -78,11 +84,13 @@ intptr_t _wexecvp(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数の各読み込んでコマンドライン引数へポインターの配列を渡すを使用して、新しいプロセスを実行し、**パス**環境変数を実行するファイルを検索します。
+これらの各関数は、新しいプロセスを読み込んで実行し、コマンドライン引数へのポインターの配列を渡し、 **PATH**環境変数を使用して実行するファイルを検索します。
 
-**_Execvp**関数は、パラメーターを検証します。 場合、 *cmdname* null ポインター、または*argv*が null ポインターの場合、空の配列へのポインター、またはこれらの関数が無効なパラメーター ハンドラーを呼び出しますが、配列に最初の引数として空の文字列が含まれている場合」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
+**_Execvp**関数は、パラメーターを検証します。 *Cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -91,7 +99,7 @@ intptr_t _wexecvp(
 |**_execvp**|\<process.h>|\<errno.h>|
 |**_wexecvp**|\<process.h> または \<wchar.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -99,11 +107,11 @@ intptr_t _wexecvp(
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
 [_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

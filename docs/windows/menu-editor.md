@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214449"
 ---
 # <a name="menu-editor-c"></a>メニューエディター (C++)
 
@@ -53,17 +53,17 @@ ms.locfileid: "69514832"
 > [!TIP]
 > **メニューエディター**を使用しているときに、多くの場合、右クリックすると、頻繁に使用するコマンドのポップアップメニューを表示できます。 使用できるコマンドは、ポインターの位置によって異なります。
 
-## <a name="how-to"></a>方法
+## <a name="how-to"></a>操作方法
 
 **メニューエディター**では、次のことが可能です。
 
 ### <a name="to-create-a-standard-menu"></a>標準メニューを作成するには
 
-1. メニュー**ビュー** > **リソースビュー**にアクセスし、**メニュー**見出しを右クリックします。 **[リソースの追加]** 、[**メニュー]** の順に選択します。
+1. [メニューの**表示**] をクリックして > **その他のウィンドウ** > **リソースビュー**し、**メニュー**見出しを右クリックします。 **[リソースの追加]** 、[**メニュー]** の順に選択します。
 
 1. メニューバーで、 **[新しい項目]** ボックス (*ここでは型*を含む四角形) を選択します。
 
-   ![メニューエディターの新しい項目ボックス](../windows/media/vcmenueditornewitembox.gif "Vcmenueditornewitembox")<br/>
+   ![メニューエディターの新しい項目ボックス](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
    **新しい項目**ボックス
 
 1. 新しいメニューの名前 ([*ファイル*] など) を入力します。
@@ -72,7 +72,7 @@ ms.locfileid: "69514832"
 
    メニュー バーで新しいメニューの名前を指定すると、さらに別のメニューを追加できるように [新しい項目] ボックスが右に移動し、最初のメニューの下に新しい [新しい項目] ボックスが表示されます。この新しいボックスでメニュー コマンドを追加できます。
 
-   展開された![新しい項目ボックス](../windows/media/vcmenueditornewitemboxexpanded.gif "Vcmenueditornewitemboxexpanded")<br/>
+   ![展開された新しい項目ボックス](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
    メニュー名を入力した後にフォーカスが移動される**新しい項目**ボックス
 
    > [!NOTE]
@@ -104,7 +104,7 @@ ms.locfileid: "69514832"
    > 入力したテキストは、**メニューエディター**と [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)の **[キャプション]** ボックスの両方に表示されます。 新しいメニューのプロパティはこのどちらからでも編集できます。
 
    > [!TIP]
-   > ユーザーがメニュー コマンドを選択できるようにするニーモニック キー (ホット キー) を定義することができます。 文字の前に`&`アンパサンド () を入力して、ニーモニックとして指定します。 この文字を入力することで、ユーザーはメニュー コマンドを選択できます。
+   > ユーザーがメニュー コマンドを選択できるようにするニーモニック キー (ホット キー) を定義することができます。 文字の前にアンパサンド (`&`) を入力して、ニーモニックとして指定します。 この文字を入力することで、ユーザーはメニュー コマンドを選択できます。
 
 1. **[プロパティ]** ウィンドウで、適用するメニューコマンドのプロパティを選択します。 詳細については、「[メニューコマンドのプロパティ](../windows/menu-command-properties.md)」を参照してください。
 
@@ -194,7 +194,7 @@ ms.locfileid: "69514832"
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース エディター](../windows/resource-editors.md)<br/>
 [メニュー コマンド](../windows/menu-command-properties.md)<br/>

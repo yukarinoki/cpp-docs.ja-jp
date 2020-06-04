@@ -1,5 +1,5 @@
 ---
-title: CComObjectRootEx クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectRootEx
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747906"
 ---
-# <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
+# <a name="ccomobjectrootex-class"></a>クラス
 
-このクラスは、非集計と集計の両方のオブジェクトのオブジェクト参照カウントの管理を処理するメソッドを提供します。
+このクラスには、非集約オブジェクトと集約オブジェクトの両方のオブジェクト参照カウント管理を処理するメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -40,8 +40,8 @@ class CComObjectRootEx : public CComObjectRootBase
 
 #### <a name="parameters"></a>パラメーター
 
-*表*<br/>
-目的のスレッド処理モデルのメソッドとして実装するクラスです。 スレッド処理モデルを設定して明示的に選択できます*表*に[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。 設定して、サーバーの既定のスレッド モデルをそのまま使用できる*表*に[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)します。
+*スレッドモデル*<br/>
+メソッドが目的のスレッド モデルを実装するクラス。 *スレッドモデル*を[CCom シングルスレッドモデル、CCom マルチスレッドモデル 、または](../../atl/reference/ccomsinglethreadmodel-class.md) [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)に設定することで、スレッドモデルを明示的に選択できます。 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) サーバーの既定のスレッド モデルを受け入れるには、*スレッド モデル*を CCom オブジェクト スレッド モデルまたは[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)に設定します。 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)
 
 ## <a name="members"></a>メンバー
 
@@ -49,67 +49,67 @@ class CComObjectRootEx : public CComObjectRootBase
 
 |||
 |-|-|
-|[CComObjectRootEx](#ccomobjectrootex)|コンストラクターです。|
-|[InternalAddRef](#internaladdref)|非集計オブジェクトの参照カウントをインクリメントします。|
-|[InternalRelease](#internalrelease)|非集計オブジェクトの参照カウントをデクリメントします。|
-|[ロック](#lock)|スレッド モデルがマルチ スレッドの場合は、クリティカル セクション オブジェクトの所有権を取得します。|
-|[ロックを解除します。](#unlock)|スレッド モデルがマルチ スレッドの場合は、クリティカル セクション オブジェクトの所有権を解放します。|
+|[ココムオブジェクトルート](#ccomobjectrootex)|コンストラクターです。|
+|[内部AddRef](#internaladdref)|非集約オブジェクトの参照カウントをインクリメントします。|
+|[内部リリース](#internalrelease)|非集約オブジェクトの参照カウントを減算します。|
+|[[Lock] (ロック)](#lock)|スレッド モデルがマルチスレッドの場合、クリティカル セクション オブジェクトの所有権を取得します。|
+|[ロック 解除](#unlock)|スレッド モデルがマルチスレッドの場合、クリティカル セクション オブジェクトの所有権を解放します。|
 
-### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase メソッド
+### <a name="ccomobjectrootbase-methods"></a>メソッド
 
 |||
 |-|-|
-|[Finalconstruct 関数](#finalconstruct)|オブジェクトに必要な初期化を実行するクラスでオーバーライドします。|
-|[FinalRelease](#finalrelease)|オブジェクトに必要なクリーンアップを実行するクラスでオーバーライドします。|
-|[OuterAddRef](#outeraddref)|集約オブジェクトの参照カウントをインクリメントします。|
-|[OuterQueryInterface](#outerqueryinterface)|デリゲートを外部`IUnknown`の集約オブジェクト。|
-|[OuterRelease](#outerrelease)|集約オブジェクトの参照カウントをデクリメントします。|
+|[ファイナルコンストラクト](#finalconstruct)|オブジェクトに必要な初期化を実行するには、クラスでオーバーライドします。|
+|[ファイナルリリース](#finalrelease)|オブジェクトに必要なクリーンアップを実行するには、クラスでオーバーライドします。|
+|[アウターアドレフ](#outeraddref)|集約されたオブジェクトの参照カウントをインクリメントします。|
+|[インターフェイス](#outerqueryinterface)|集約オブジェクトの外側`IUnknown`にデリゲートします。|
+|[アウターリリース](#outerrelease)|集約オブジェクトの参照カウントを減算します。|
 
 ### <a name="static-functions"></a>静的関数
 
 |||
 |-|-|
-|[InternalQueryInterface](#internalqueryinterface)|デリゲート、`IUnknown`の非集約オブジェクト。|
-|[ObjectMain](#objectmain)|モジュールの初期化とオブジェクトのマップに記載されている派生クラスの終了時に呼び出されます。|
+|[内部クエリ インターフェイス](#internalqueryinterface)|非集約オブジェクト`IUnknown`の にデリゲートします。|
+|[オブジェクトメイン](#objectmain)|オブジェクト マップにリストされている派生クラスのモジュールの初期化および終了中に呼び出されます。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |||
 |-|-|
-|[m_dwRef](#m_dwref)|`m_pOuterUnknown`共用体の一部であります。 オブジェクトがの参照カウントを保持するために集計されないときに使用`AddRef`と`Release`します。|
-|[アグリゲート](#m_pouterunknown)|`m_dwRef`共用体の一部であります。 オブジェクトは外側の"不明"にポインターを保持するために集計するときに使用します。|
+|[m_dwRef](#m_dwref)|と`m_pOuterUnknown`、ユニオンの一部。 の参照カウント`AddRef`を保持するためにオブジェクトが集約されていない場合に使用`Release`します。|
+|[m_pOuterUnknown](#m_pouterunknown)|と`m_dwRef`、ユニオンの一部。 オブジェクトが集計されるときに、外部不明へのポインターを保持するときに使用されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComObjectRootEx` 非集計と集計の両方のオブジェクトのオブジェクト参照カウントの管理を処理します。 オブジェクトが集計されていませんし、オブジェクトが集約されている場合、不明な外部へのポインターを保持する場合は、オブジェクトの参照カウントを保持します。 集計のオブジェクトの`CComObjectRootEx`を構築する内部オブジェクトのエラーを処理するメソッドを使用でき、内部のインターフェイスがリリースされたときに削除されないように、外側のオブジェクトまたは内部のオブジェクトを保護するために削除されます。
+`CComObjectRootEx`非集約オブジェクトと集約オブジェクトの両方のオブジェクト参照カウント管理を処理します。 オブジェクトが集約されていない場合はオブジェクト参照カウントを保持し、オブジェクトが集約されている場合は外部不明へのポインタを保持します。 集約オブジェクトの場合、`CComObjectRootEx`メソッドを使用して内部オブジェクトの構築の失敗を処理し、内部インターフェイスが解放されたり内部オブジェクトが削除されたりしたときに外部オブジェクトが削除されないように保護できます。
 
-COM サーバーを実装するクラスを継承する必要があります`CComObjectRootEx`または[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)します。
+COM サーバーを実装するクラスは、または`CComObjectRootEx`[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)から継承する必要があります。
 
-クラスの定義が指定されている場合、 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)マクロ、ATL のインスタンスを作成します。`CComPolyObject<CYourClass>`とき`IClassFactory::CreateInstance`が呼び出されます。 作成時に、不明な外部の値がチェックされます。 NULL の場合`IUnknown`の非集計オブジェクトに実装されます。 不明な外部が NULL でない場合`IUnknown`集約オブジェクトに実装されます。
+クラス定義で[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)マクロを指定すると、ATL は`CComPolyObject<CYourClass>`when`IClassFactory::CreateInstance`が呼び出されるインスタンスを作成します。 作成中に、外部不明の値がチェックされます。 NULL の場合`IUnknown`、非集約オブジェクトに対して実装されます。 外側の不明な値が NULL`IUnknown`でない場合は、集約オブジェクトに対して実装されます。
 
-ATL がのインスタンスを作成する場合は、クラスが DECLARE_POLY_AGGREGATABLE マクロを指定しない`CAggComObject<CYourClass>`集約オブジェクトまたはのインスタンスの`CComObject<CYourClass>`の非集約オブジェクト。
+クラスでDECLARE_POLY_AGGREGATABLE マクロを指定しない場合、ATL は集約オブジェクト`CAggComObject<CYourClass>`のインスタンスまたは非集約オブジェクトの`CComObject<CYourClass>`インスタンスを作成します。
 
-使用する利点`CComPolyObject`は両方を持つように`CComAggObject`と`CComObject`集計データおよび非集計のケースを処理するモジュールでします。 1 つ`CComPolyObject`オブジェクトは両方のケースを処理します。 そのため、vtable の 1 つだけのコピーと関数の 1 つのコピーは、モジュール内に存在します。 Vtable が大きい場合、モジュールのサイズが大幅に減りこのことができます。 ただし、vtable が小さい場合を使用して`CComPolyObject`には、集計または非集約オブジェクトは、最適化されていないために、モジュールのサイズを少し大きめにつながるは`CComAggObject`と`CComObject`します。
+使用`CComPolyObject`の利点は、集約されたケースと非`CComAggObject`集約`CComObject`型のケースを処理するために、モジュールの両方を使用しないようにすることです。 1`CComPolyObject`つのオブジェクトが両方のケースを処理します。 したがって、モジュールには、vtable のコピーと関数のコピーが 1 つだけ存在します。 vtable が大きい場合、モジュールのサイズが大幅に減少する可能性があります。 ただし、vtable が小さい場合は`CComPolyObject`、モジュールサイズが少し大きくなる可能性があります`CComAggObject``CComObject`。
 
-オブジェクトを集約すると場合、 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)によって実装される`CComAggObject`または`CComPolyObject`します。 これらのクラスに委任`QueryInterface`、 `AddRef`、および`Release`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`不明な外部に転送します。 通常、オーバーライドする`CComObjectRootEx::FinalConstruct`な集約オブジェクトを作成し、オーバーライドするクラスで`CComObjectRootEx::FinalRelease`メモリを解放するオブジェクトを集計します。
+オブジェクトが集約されている場合[、IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)は または`CComAggObject``CComPolyObject`によって実装されます。 これらのクラスは`QueryInterface`、 `AddRef`、`Release`を`CComObjectRootEx`デリゲートし`OuterQueryInterface`、's、 、 を`OuterAddRef`呼び出して`OuterRelease`、外側の不明なクラスに転送します。 通常、クラスで`CComObjectRootEx::FinalConstruct`オーバーライドして集約オブジェクトを作成し、すべての集約オブジェクトを`CComObjectRootEx::FinalRelease`解放するようにオーバーライドします。
 
-場合は、オブジェクトは集計されず`IUnknown`によって実装される`CComObject`または`CComPolyObject`します。 この場合、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`の`InternalQueryInterface`、 `InternalAddRef`、および`InternalRelease`実際の操作を実行します。
+オブジェクトが集約されていない場合は、`IUnknown`または`CComObject``CComPolyObject`によって実装されます。 この場合、 `QueryInterface`、 `AddRef`、`Release`を呼び出して`CComObjectRootEx`、 `InternalQueryInterface``InternalAddRef`に委任`InternalRelease`し、実際の操作を実行します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
-##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx
+## <a name="ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>::CComオブジェクトルート
 
-コンス トラクターでは、参照カウントを 0 に初期化します。
+コンストラクターは、参照カウントを 0 に初期化します。
 
 ```
 CComObjectRootEx();
 ```
 
-##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct
+## <a name="ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComオブジェクトルートエクステックス::ファイナルコンストラクト
 
-このメソッドは、オブジェクトの必要な初期化を実行する派生クラスでオーバーライドできます。
+派生クラスでこのメソッドをオーバーライドして、オブジェクトに必要な初期化を実行できます。
 
 ```
 HRESULT FinalConstruct();
@@ -117,57 +117,57 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>戻り値
 
-HRESULT 値、成功時または標準エラーのいずれかに S_OK を返します。
+成功時にS_OKを返すか、標準エラー HRESULT 値の 1 つを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、`CComObjectRootEx::FinalConstruct`単に S_OK を返します。
+デフォルトでは、`CComObjectRootEx::FinalConstruct`単にS_OKを返します。
 
-初期化を実行するための利点がある`FinalConstruct`クラスのコンス トラクターではなく。
+クラスのコンストラクタではなく、初期化`FinalConstruct`を実行する利点があります。
 
-- 状態コードは、コンス トラクターから返すことはできませんの HRESULT を返すことができます、`FinalConstruct`の値を返します。 ATL によって提供される標準のクラス ファクトリを使用して、クラスのオブジェクトの作成中と、は、詳細なエラー情報を提供することができます、COM クライアントにこの戻り値が反映されます。
+- コンストラクターから状態コードを返すことはできませんが、戻り値を使用して HRESULT`FinalConstruct`を返すことができます。 ATL が提供する標準クラス ファクトリを使用してクラスのオブジェクトを作成する場合、この戻り値は COM クライアントに反映され、詳細なエラー情報を提供できます。
 
-- クラスのコンス トラクターから仮想関数のメカニズムを通じて仮想関数を呼び出すことはできません。 継承階層内の時点で定義されている、静的に解決される、関数呼び出しで結果をクラスのコンス トラクターから仮想関数を呼び出します。 純粋仮想関数への呼び出しは、リンカー エラーが発生します。
+- クラスのコンストラクターから仮想関数の機構を通じて仮想関数を呼び出すことはできません。 クラスのコンストラクターから仮想関数を呼び出すと、継承階層のその時点で定義されている関数の呼び出しが静的に解決されます。 純粋仮想関数を呼び出すと、リンカー エラーが発生します。
 
-   継承階層で最派生クラスではなく、その機能の一部を提供する ATL によって提供される派生クラスに依存します。 初期化は、(これは確かに、クラスのオブジェクトが他のオブジェクトを集計する必要がある場合) そのクラスによって提供される機能を使用する必要がある可能性があるが、クラスにコンス トラクターには、これらの機能にアクセスする方法はありません。 クラスの構築用のコードは、最派生クラスが完全に構築される前に実行されます。
+   クラスは継承階層の中で最も派生したクラスではなく、ATL によって提供される派生クラスに依存して、その機能の一部を提供します。 初期化では、そのクラスで提供される機能を使用する必要がある可能性が高いですが (クラスのオブジェクトが他のオブジェクトを集約する必要がある場合は、これは確かに当てはまります)、クラスのコンストラクタはそれらの機能にアクセスする方法がありません。 クラスの構築コードは、最派生クラスが完全に構築される前に実行されます。
 
-   ただし、`FinalConstruct`仮想関数を呼び出すし、ATL で提供される、参照カウントの実装を使用することができますクラスが完全に生成される、最も多く派生後すぐには呼び出されます
+   ただし、`FinalConstruct`最も派生したクラスが完全に構築された直後に呼び出され、仮想関数を呼び出して ATL によって提供される参照カウントの実装を使用できます。
 
 ### <a name="example"></a>例
 
-通常から派生したクラスでは、このメソッドをオーバーライド`CComObjectRootEx`オブジェクトの集計を作成します。 例:
+通常、派生したクラスでこのメソッド`CComObjectRootEx`をオーバーライドして、集約オブジェクトを作成します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]
 
-構築に失敗した場合は、エラーを取得できます。 マクロを使用することもできます。[アグリゲート](aggregation-and-class-factory-macros.md#declare_protect_final_construct)されない、外側のオブジェクトを保護する場合、作成時に、内部オブジェクト カウントをインクリメント、デクリメントして参照カウントを 0 には削除します。
+構築に失敗した場合は、エラーを返すことができます。 また、マクロ[DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct)を使用して、内部集計オブジェクトが参照カウントをインクリメントし、カウントを 0 に減らす場合に、外部オブジェクトが削除されないようにすることもできます。
 
 集計を作成する一般的な方法を次に示します。
 
-- 追加、`IUnknown`クラスへのポインター オブジェクトをコンス トラクターで NULL に初期化します。
+- クラス`IUnknown`オブジェクトへのポインターを追加し、コンストラクターで NULL に初期化します。
 
-- オーバーライド`FinalConstruct`集計を作成します。
+- 集計`FinalConstruct`を作成するためにオーバーライドします。
 
-- 使用して、`IUnknown`ポインターをパラメーターとして定義されている、[で定義](com-interface-entry-macros.md#com_interface_entry_aggregate)マクロ。
+- COM_INTERFACE_ENTRY_AGGREGATE`IUnknown`マクロのパラメーターとして定義したポインターを[COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate)使用します。
 
-- オーバーライド`FinalRelease`を解放する、`IUnknown`ポインター。
+- ポインター`FinalRelease`を解放する`IUnknown`場合はオーバーライドします。
 
-##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease
+## <a name="ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComオブジェクトルート::最終リリース
 
-このメソッドは、オブジェクトの必要なクリーンアップを実行する派生クラスでオーバーライドできます。
+派生クラスでこのメソッドをオーバーライドして、オブジェクトに必要なクリーンアップを実行できます。
 
-```
+```cpp
 void FinalRelease();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、`CComObjectRootEx::FinalRelease`何も行われません。
+デフォルトでは、`CComObjectRootEx::FinalRelease`何もしません。
 
-クリーンアップを実行する`FinalRelease`は、オブジェクトの位置を表すポイントで引き続き完全構築のため、クラスのデストラクターにコードを追加することをお勧め`FinalRelease`が呼び出されます。 これにより、最派生クラスによって提供されるメソッドを安全にアクセスできます。 これは、削除する前にすべての集計オブジェクトの解放にとって特に重要です。
+クリーンアップを`FinalRelease`実行する場合は、クラスのデストラクターにコードを追加する方が`FinalRelease`望ましいです。 これにより、最も派生したクラスによって提供されるメソッドに安全にアクセスできます。 これは、削除前に集約オブジェクトを解放する場合に特に重要です。
 
-##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef
+## <a name="ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>を使用します。
 
-非集計オブジェクトの参照カウントを 1 だけインクリメントします。
+非集約オブジェクトの参照カウントを 1 ずつインクリメントします。
 
 ```
 ULONG InternalAddRef();
@@ -175,13 +175,13 @@ ULONG InternalAddRef();
 
 ### <a name="return-value"></a>戻り値
 
-診断に役立ちますし、テスト可能性のある値。
+診断とテストに役立つ値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スレッド モデルがマルチ スレッドの場合は`InterlockedIncrement`を 1 つ以上のスレッドが同時に、参照カウントを変更することを防ぐために使用します。
+スレッド モデルがマルチスレッドの場合は`InterlockedIncrement`、複数のスレッドが同時に参照カウントを変更することを防ぐために使用されます。
 
-##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface
+## <a name="ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>次のクラス::内部クエリインターフェイス
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -195,29 +195,29 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*pThis*<br/>
-[in]COM に公開されるインターフェイスのマップを格納しているオブジェクトへのポインター`QueryInterface`します。
+*pこれ*<br/>
+[in]に公開されているインターフェイスの COM マップを格納しているオブジェクトへのポインター `QueryInterface`。
 
-*pEntries*<br/>
-[in]ポインター、`_ATL_INTMAP_ENTRY`使用可能なインターフェイスのマップにアクセスする構造体。
+*エントリー*<br/>
+[in]使用可能なインターフェイスの`_ATL_INTMAP_ENTRY`マップにアクセスする構造体へのポインター。
 
-*iid*<br/>
-[in]要求されているインターフェイスの GUID です。
+*Iid*<br/>
+[in]要求されているインターフェイスの GUID。
 
-*ppvObject*<br/>
-[out]指定されたインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
+*オブジェクト*<br/>
+[アウト]*iid*で指定されたインターフェイス ポインターへのポインター、 またはインターフェイスが見つからない場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値の 1 つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`InternalQueryInterface` が処理するのは、COM マップ テーブル内のインターフェイスのみです。 オブジェクトを集約すると場合、`InternalQueryInterface`不明な外部への委任しません。 インターフェイスは、マクロ、COM マップ テーブルを入力できます[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)またはそのバリエーションの 1 つ。
+`InternalQueryInterface` が処理するのは、COM マップ テーブル内のインターフェイスのみです。 オブジェクトが集約されている場合、`InternalQueryInterface`外部不明にデリゲートしません。 COM マップ テーブルにインターフェイスを入力するには、マクロ[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)またはそのバリアントを使用します。
 
-##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease
+## <a name="ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComオブジェクトルートエクスックス::内部リリース
 
-非集計オブジェクトの参照カウントを 1 だけデクリメントします。
+非集約オブジェクトの参照カウントを 1 で減算します。
 
 ```
 ULONG InternalRelease();
@@ -225,37 +225,37 @@ ULONG InternalRelease();
 
 ### <a name="return-value"></a>戻り値
 
-どちらも非デバッグし、デバッグ ビルド、テストや診断に使用できる値を返します。 参照カウントになるで使用して、オペレーティング システムなどのさまざまな要因に依存する場合や、ことはできません、正確な値が返されます。
+デバッグビルドとデバッグ ビルド以外のビルドの両方で、この関数は診断やテストに役立つ値を返します。 返される正確な値は、使用されるオペレーティング システムなどの多くの要因によって異なり、参照カウントである場合としない場合もあります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スレッド モデルがマルチ スレッドの場合は`InterlockedDecrement`を 1 つ以上のスレッドが同時に、参照カウントを変更することを防ぐために使用します。
+スレッド モデルがマルチスレッドの場合は`InterlockedDecrement`、複数のスレッドが同時に参照カウントを変更することを防ぐために使用されます。
 
-##  <a name="lock"></a>  CComObjectRootEx::Lock
+## <a name="ccomobjectrootexlock"></a><a name="lock"></a>CComオブジェクトルート::ロック
 
-このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)、どの待機スレッドがクリティカル セクション オブジェクトの所有権を取得できるまでは、プライベート データ メンバーを通じて取得します。
+スレッド モデルがマルチスレッドの場合、このメソッドは Win32 API 関数[EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)を呼び出し、スレッドがプライベート データ メンバーを通じて取得したクリティカル セクション オブジェクトの所有権を取得できるまで待機します。
 
-```
+```cpp
 void Lock();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-保護されたコードでは、実行が完了すると、スレッドを呼び出す必要があります`Unlock`クリティカル セクションの所有権を解放します。
+保護されたコードの実行が終了したら、クリティカル セクションの`Unlock`所有権を解放するためにスレッドが呼び出す必要があります。
 
-スレッド モデルがシングル スレッドの場合、このメソッドは何もしません。
+スレッド モデルがシングル スレッドの場合、このメソッドは何も実行しません。
 
-##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef
+## <a name="ccomobjectrootexm_dwref"></a><a name="m_dwref"></a>ココムオブジェクトルートエクスックス::m_dwRef
 
-4 バイトのメモリにアクセスする共用体の一部です。
+4 バイトのメモリにアクセスする共用体の一部。
 
 ```
 long m_dwRef;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_pOuterUnknown`共用体の一部であります。
+では`m_pOuterUnknown`、ユニオンの一部:
 
 ```
 union {
@@ -264,20 +264,20 @@ union {
 };
 ```
 
-オブジェクトは集計されず、参照カウントがによってアクセス`AddRef`と`Release`は`m_dwRef`します。 不明な外部へのポインターが格納されている場合は、オブジェクトを集計すると、[アグリゲート](#m_pouterunknown)します。
+オブジェクトが集約されていない場合、参照カウントは によって`AddRef`アクセスされ、`Release`に`m_dwRef`格納されます。 オブジェクトが集約されている場合、外部不明へのポインターは[m_pOuterUnknown](#m_pouterunknown)に格納されます。
 
-##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown
+## <a name="ccomobjectrootexm_pouterunknown"></a><a name="m_pouterunknown"></a>ココムオブジェクトルートエクスックス::m_pOuterUnknown
 
-4 バイトのメモリにアクセスする共用体の一部です。
+4 バイトのメモリにアクセスする共用体の一部。
 
 ```
 IUnknown*
     m_pOuterUnknown;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`m_dwRef`共用体の一部であります。
+では`m_dwRef`、ユニオンの一部:
 
 ```
 union {
@@ -286,11 +286,11 @@ union {
 };
 ```
 
-不明な外部へのポインターが格納されている場合は、オブジェクトを集計すると、`m_pOuterUnknown`します。 オブジェクトは集計されず、参照カウントがによってアクセス`AddRef`と`Release`は[m_dwRef](#m_dwref)します。
+オブジェクトが集約されている場合、外側の不明なオブジェクトへのポインターは`m_pOuterUnknown`に格納されます。 オブジェクトが集約されていない場合、参照カウントは アクセス`AddRef`され、 `Release` [m_dwRef](#m_dwref)に格納されます。
 
-##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain
+## <a name="ccomobjectrootexobjectmain"></a><a name="objectmain"></a>オブジェクトメイン
 
-モジュールが初期化される場合、1 回、オブジェクトのマップに表示されている各クラスのこの関数が呼び出され、もう一度が終了したとき。
+オブジェクト マップにリストされている各クラスに対して、この関数は、モジュールが初期化されるときに 1 回呼び出され、終了したときに再度呼び出されます。
 
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -298,22 +298,22 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>パラメーター
 
-*bStarting*<br/>
-[out]値が TRUE の場合は、クラス初期化しています。それ以外の場合は FALSE です。
+*b開始*<br/>
+[アウト]クラスが初期化されている場合は、値は TRUE です。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値、 *bStarting*パラメーターは、モジュールがされているかどうかを示します初期化または終了します。 既定の実装`ObjectMain`、何も行われませんが、初期化またはクラスに割り当てるリソースをクリーンアップするには、クラスでこの関数をオーバーライドすることができます。 なお`ObjectMain`クラスのすべてのインスタンスが要求される前に呼び出されます。
+*bStarting*パラメーターの値は、モジュールが初期化されているか終了されるかを示します。 の既定の`ObjectMain`実装では何も実行されませんが、クラスでこの関数をオーバーライドして、クラスに割り当てるリソースを初期化またはクリーンアップできます。 クラスの`ObjectMain`インスタンスが要求される前に呼び出されることに注意してください。
 
-`ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、次を参照してください。 [Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)します。
+`ObjectMain`は DLL のエントリ ポイントから呼び出されるため、エントリ ポイント関数が実行できる操作の種類は制限されます。 これらの制限の詳細については、「 DLL[と Visual C++ ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)」および「 [DllMain](/windows/win32/Dlls/dllmain)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]
 
-##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef
+## <a name="ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>オブジェクトルート::アウターアドレフ
 
-集計の不明な外部の参照カウントをインクリメントします。
+集計の外部不明の参照カウントをインクリメントします。
 
 ```
 ULONG OuterAddRef();
@@ -321,9 +321,9 @@ ULONG OuterAddRef();
 
 ### <a name="return-value"></a>戻り値
 
-診断に役立ちますし、テスト可能性のある値。
+診断とテストに役立つ値。
 
-##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface
+## <a name="ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>インターフェイス::インターフェイス
 
 要求されたインターフェイスへの間接ポインターを取得します。
 
@@ -333,19 +333,19 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*<br/>
-[in]要求されているインターフェイスの GUID です。
+*Iid*<br/>
+[in]要求されているインターフェイスの GUID。
 
-*ppvObject*<br/>
-[out]指定されたインターフェイス ポインターへのポインター *iid*集計は、インターフェイスをサポートしていない場合は null です。
+*オブジェクト*<br/>
+[アウト]*iid*で指定されたインターフェイス ポインターへのポインターまたは NULL 、または集約がインターフェイスをサポートしていない場合。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値の 1 つ。
 
-##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease
+## <a name="ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComオブジェクトルート::アウターリリース
 
-集計の不明な外部の参照カウントをデクリメントします。
+集計の外部不明の参照カウントをデクリメントします。
 
 ```
 ULONG OuterRelease();
@@ -353,25 +353,25 @@ ULONG OuterRelease();
 
 ### <a name="return-value"></a>戻り値
 
-非デバッグ ビルドで常に 0 を返します。 デバッグ ビルドでは、テストや診断に使用する値を返します。
+非デバッグ ビルドでは、常に 0 を返します。 デバッグ ビルドでは、診断やテストに役立つ値を返します。
 
-##  <a name="unlock"></a>  CComObjectRootEx::Unlock
+## <a name="ccomobjectrootexunlock"></a><a name="unlock"></a>CComオブジェクトルートEx::ロック解除
 
-このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、[により](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)、クリティカル セクション オブジェクトの所有権を解放するが、プライベート データ メンバーを介して取得します。
+スレッド モデルがマルチスレッドの場合、このメソッドは Win32 API 関数[LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)を呼び出し、プライベート データ メンバーを通じて取得したクリティカル セクション オブジェクトの所有権を解放します。
 
-```
+```cpp
 void Unlock();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-所有権を取得するスレッドを呼び出す必要があります`Lock`します。 呼び出しごとに`Lock`に対応する呼び出しを必要と`Unlock`クリティカル セクションの所有権を解放します。
+所有権を取得するには、スレッドが`Lock`を呼び出す必要があります。 各呼び`Lock`出しは、クリティカル`Unlock`セクションの所有権を解放するために、対応する呼び出しが必要です。
 
-スレッド モデルがシングル スレッドの場合、このメソッドは何もしません。
+スレッド モデルがシングル スレッドの場合、このメソッドは何も実行しません。
 
 ## <a name="see-also"></a>関連項目
 
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
-[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
+[クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[クラス](../../atl/reference/ccomobject-class.md)<br/>
+[クラス](../../atl/reference/ccompolyobject-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,9 +1,10 @@
 ---
 title: _ecvt
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ecvt
-apilocation:
+- _o__ecvt
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ecvt
 helpviewer_keywords:
@@ -24,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915093"
 ---
-# <a name="ecvt"></a>_ecvt
+# <a name="_ecvt"></a>_ecvt
 
-変換を**二重**数値を文字列にします。 この関数のセキュリティが強化されたバージョンについては、「[_ecvt_s](ecvt-s.md)」をご覧ください。
+**倍精度浮動**小数点数を文字列に変換します。 この関数のセキュリティが強化されたバージョンについては、「[_ecvt_s](ecvt-s.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -54,29 +59,31 @@ char *_ecvt(
 *count*<br/>
 格納する桁数。
 
-*dec*<br/>
+*alpha*<br/>
 格納された小数点位置。
 
-*sign*<br/>
+*シャープ*<br/>
 変換後の数値の符号。
 
 ## <a name="return-value"></a>戻り値
 
-**_ecvt**桁の文字列へのポインターを返します**NULL**場合は、エラーが発生しました。
+**_ecvt**は、数字の文字列へのポインターを返します。エラーが発生した場合は**NULL**です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Ecvt**関数は、浮動小数点数を文字の文字列に変換します。 *値*パラメーターは変換する浮動小数点数です。 この関数は最大格納*カウント*の桁*値*を文字列として null 文字 ('\0') を追加します。 場合の桁数*値*を超える*カウント*下位の桁は丸められます。 も少なかった場合*カウント*数字、文字列が 0 で埋められます。
+**_Ecvt**関数は、浮動小数点数を文字列に変換します。 *値*パラメーターは、変換される浮動小数点数です。 この関数は、最大*数*の*値*を文字列として格納し、null 文字 (' \ 0 ') を追加します。 [*値*] の桁数が*count*を超えている場合は、下位の桁が丸められます。 *Count*の桁数よりも小さい場合は、文字列に0が埋め込まれます。
 
-によって返される総桁数 **_ecvt**が超えない **_CVTBUFSIZE**します。
+**_Ecvt**によって返された合計桁数が **_CVTBUFSIZE**を超えてはなりません。
 
-文字列には数字だけが格納されます。 符号、小数点の位置*値*から取得できます*dec*と*サインオン*呼び出しの後にします。 *Dec*パラメーターが指す文字列の先頭に対する小数点の位置を示す整数値。 0 または負の整数値は、最初の桁の左側に小数点があることを示します。 *サインオン*パラメーターは変換後の数値の符号を示す整数を指します。 整数値が 0 の場合、数値は正の値です。 それ以外の場合、数値は負の値です。
+文字列には数字だけが格納されます。 小数点の位置と*値*の符号は*dec*から取得でき、呼び出しの後に*符号*を付けます。 *Dec*パラメーターは、文字列の先頭に対する小数点の位置を示す整数値を指します。 0 または負の整数値は、最初の桁の左側に小数点があることを示します。 *Sign*パラメーターは、変換後の数値の符号を示す整数を指します。 整数値が 0 の場合、数値は正の値です。 それ以外の場合、数値は負の値です。
 
-間の差 **_ecvt**と **_fcvt**の解釈には、*カウント*パラメーター。 **_ecvt**解釈*カウント*として、出力文字列に数字の合計数は **_fcvt**解釈*カウント*の後の桁数として、小数点 10 進数。
+**_Ecvt**と **_fcvt**の違いは、 *count*パラメーターの解釈です。 **_ecvt**は、*カウント*を出力文字列の合計桁数として解釈しますが、 **_fcvt**は小数点の後の桁数*として解釈し*ます。
 
-**_ecvt**と **_fcvt**変換に 1 つの静的に割り当てられたバッファーを使用します。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
+**_ecvt**と **_fcvt**は、静的に割り当てられた1つのバッファーを使用して変換を行います。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-この関数は、パラメーターを検証します。 場合*dec*または*サインオン*は**NULL**、または*カウント*が 0 の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**NULL**が返されます。
+この関数は、パラメーターを検証します。 *Dec*または*sign*が**NULL**の場合、または*count*が0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、 **NULL**が返されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -84,7 +91,7 @@ char *_ecvt(
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

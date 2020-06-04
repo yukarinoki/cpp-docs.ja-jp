@@ -5,18 +5,18 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 45078d8e1bdbeb23dd311d915ba2cf47e42b2663
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194513"
 ---
 # <a name="linker-tools-error-lnk2038"></a>リンカ ツール エラー LNK2038
 
-> 不一致が検出されました '*名前*': 値'*value_1*'値と一致しない'*value_2*' で *<filename.obj>。*
+> '*name*' に対して不一致が検出されました。値 '*value_1*' は、*ファイル名 .obj*の値 '*value_2*' と一致しません
 
-シンボルの不一致がリンカーによって検出されました。 このエラーは、アプリへのリンクが競合するシンボル定義を使用して、ライブラリまたは他のオブジェクトを含む、アプリのさまざまな部分のコードを示します。 [の不一致を検出](../../preprocessor/detect-mismatch.md)プラグマを使用して、このようなシンボルを定義し、競合する値を検出します。
+シンボルの不一致がリンカーによって検出されました。 このエラーは、アプリのさまざまな部分 (ライブラリや、アプリがリンクしているその他のオブジェクトコードなど) が、競合するシンボル定義を使用していることを示します。 [検出不一致](../../preprocessor/detect-mismatch.md)プラグマは、このようなシンボルを定義し、競合する値を検出するために使用されます。
 
 ## <a name="possible-causes-and-solutions"></a>考えられる原因と解決策
 
@@ -24,22 +24,22 @@ ms.locfileid: "65446954"
 
 Visual Studio は、実行時エラーまたはその他の予測できない動作を発生させる可能性のある互換性のないコードのリンクを防ぐために、次のシンボルを定義します。
 
-- `_MSC_VER` Microsoft のメジャーおよびマイナー バージョン番号を示すC++コンパイラ (MSVC) アプリまたはライブラリを構築するために使用します。 MSVC の 1 つのバージョンを使用してコンパイルされたコードは、別のメジャーおよびマイナー バージョン番号のあるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、次を参照してください。`_MSC_VER`で[定義済みマクロ](../../preprocessor/predefined-macros.md)します。
+- `_MSC_VER` は、アプリまたはライブラリのビルドに使用C++される Microsoft コンパイラ (MSVC) のメジャーバージョン番号とマイナーバージョン番号を示します。 1つのバージョンの MSVC を使用してコンパイルされたコードは、メジャーバージョン番号とマイナーバージョン番号が異なるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、「[定義済みマクロ](../../preprocessor/predefined-macros.md)での `_MSC_VER`」を参照してください。
 
-   を使用していると、取得またはライブラリの互換性のあるバージョンをビルドすることはできませんが、MSVC のバージョンと互換性がないライブラリをリンクする場合は、プロジェクトをビルドする以前のバージョンのコンパイラを使用できます。 変更、 **プラットフォーム ツールセット**以前のツールセットにプロジェクトのプロパティ。 詳細については、「[方法 :ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   使用しているバージョンの MSVC と互換性のないライブラリにリンクしていて、互換性のあるバージョンのライブラリを取得またはビルドできない場合は、以前のバージョンのコンパイラを使用してプロジェクトをビルドします。プロジェクトの **[プラットフォームツールセット]** プロパティを以前のツールセットに変更します。 詳細については、「[方法: ターゲットフレームワークおよびプラットフォームのツールセットを変更する](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
-- `_ITERATOR_DEBUG_LEVEL` セキュリティ機能とデバッグ、C++ 標準ライブラリで有効になっている機能のレベルを示します。 これらの機能は、特定の C++ 標準ライブラリのオブジェクトの表示を変更できるため、こうしたオブジェクトは、異なるセキュリティ機能とデバッグ機能を使用するオブジェクトと互換性がなくなります。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)」を参照してください。
+- `_ITERATOR_DEBUG_LEVEL` は、 C++標準ライブラリで有効になっているセキュリティ機能とデバッグ機能のレベルを示します。 これらの機能は、特定の C++ 標準ライブラリのオブジェクトの表示を変更できるため、こうしたオブジェクトは、異なるセキュリティ機能とデバッグ機能を使用するオブジェクトと互換性がなくなります。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)」を参照してください。
 
-- `RuntimeLibrary` アプリまたはライブラリで使用される C++ 標準ライブラリと C ランタイムのバージョンを示します。 C++ 標準ライブラリまたは C ランタイムの 1 種類のバージョンを使用するコードは、異なるバージョンを使用するコードと互換性がありません。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。
+- `RuntimeLibrary` は、アプリまたはC++ライブラリによって使用される標準ライブラリと C ランタイムのバージョンを示します。 C++ 標準ライブラリまたは C ランタイムの 1 種類のバージョンを使用するコードは、異なるバージョンを使用するコードと互換性がありません。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。
 
-- `_PPLTASKS_WITH_WINRT` そのコードを使用することを示します、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)のさまざまな設定を使用してコンパイルされたオブジェクトにリンクされて、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラ オプション。 (**/ZW**サポートC++/CX)。同じを使用して使用したり、PPL に依存するコードをコンパイルする必要があります **/ZW**アプリの残りの部分で使用される設定。
+- `_PPLTASKS_WITH_WINRT` は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)を使用するコードが、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラオプションの別の設定を使用してコンパイルされたオブジェクトにリンクされていることを示します。 ( **/ZW**はC++、/cxをサポートしています)。またはを使用するコードは、アプリケーションの他の部分で使用されているのと同じ **/ZW**設定を使用してコンパイルする必要があります。
 
 これらのシンボルの値が、Visual Studio ソリューションのプロジェクト全体で一貫していることと、使用中のアプリがリンクしているコードとライブラリに一致していることを確認してください。
 
-## <a name="third-party-library-issues-and-vcpkg"></a>サード パーティ製のライブラリの問題と Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>サードパーティライブラリの問題と Vcpkg
 
-ビルドの一部として、サード パーティ製ライブラリを構成しようとしているときにこのエラーが発生する場合は、使用を検討して[Vcpkg](../../vcpkg.md)ビジュアルの C++ パッケージ マネージャーをインストールして、ライブラリをビルドします。 Vcpkg のサポートが増加し続ける[サード パーティ製ライブラリの一覧](https://github.com/Microsoft/vcpkg/tree/master/ports)、およびすべての構成プロパティと、プロジェクトの一部として、成功したビルドに必要な依存関係を設定します。 詳細については、関連するを参照してください[Visual C ブログ](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)を投稿します。
+ビルドの一部としてサードパーティのライブラリを構成しようとしているときにこのエラーが表示される場合は、 C++ [Vcpkg](../../vcpkg.md)(Visual Package Manager) を使用してライブラリをインストールし、ビルドすることを検討してください。 Vcpkg は、多数[のサードパーティ製ライブラリ](https://github.com/Microsoft/vcpkg/tree/master/ports)をサポートしており、プロジェクトの一部として成功したビルドに必要なすべての構成プロパティと依存関係を設定します。 詳細については、関連[するC++ビジュアルのブログ](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)投稿を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リンカー ツール エラーと警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

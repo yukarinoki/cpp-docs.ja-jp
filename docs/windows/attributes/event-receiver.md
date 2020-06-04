@@ -12,14 +12,14 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9653a0b5c756857d92914496b9c5c6f8aee56ebb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409637"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167083"
 ---
-# <a name="eventreceiver"></a>event_receiver
+# <a name="event_receiver"></a>event_receiver
 
 イベント レシーバー (シンク) を作成します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "62409637"
 *type*<br/>
 次の値のいずれかの列挙です。
 
-- `native` アンマネージ C/C++ コード (ネイティブ クラスの既定値)。
+- アンマネージ C/C++ code (ネイティブクラスの既定値) の `native`。
 
 - COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
 
@@ -46,19 +46,19 @@ ms.locfileid: "62409637"
     ```
 
 *layout_dependent*<br/>
-指定*layout_dependent*場合にのみ`type` = **com**します。 *layout_dependent*ブール値です。
+**Com**=`type`場合にのみ、 *layout_dependent*を指定します。 *layout_dependent*はブール型です。
 
-- **true**ことに、受信する必要がありますと正確に一致するが、フック イベント ソース、イベント、デリゲートのシグネチャを意味します。 イベント レシーバーのハンドラー名は、関連するイベント ソース インターフェイスで指定された名前と一致する必要があります。 使用する必要があります`coclass`とき*layout_dependent*は**true**します。 指定するより効率的です**true**します。
+- **true**は、イベントレシーバー内のデリゲートのシグネチャが、イベントソースでフックされているデリゲートと完全に一致する必要があることを意味します。 イベントレシーバーハンドラー名は、関連するイベントソースインターフェイスで指定されている名前と一致している必要があります。 *Layout_dependent*が**true**の場合は、`coclass` を使用する必要があります。 **True**を指定すると、もう少し効率的になります。
 
-- **false** (既定値) を意味する呼び出し規約とストレージ クラス (virtual、static、およびその他の) イベント メソッドとハンドラー; に一致する必要はありませんもハンドラー名は行うイベント ソース インターフェイスのメソッド名に一致する必要があります。
+- **false** (既定値) は、呼び出し規約とストレージクラス (virtual、static など) がイベントメソッドとハンドラーに一致する必要がないことを意味します。また、ハンドラー名は、イベントソースインターフェイスのメソッド名と一致する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Event_receiver** C++属性は、クラスまたは構造体を適用するによって、ビジュアルを使用して、イベント レシーバーがなることを指定しますC++統一イベント モデル。
+**Event_receiver** C++属性は、ビジュアルC++統合イベントモデルを使用して、適用されるクラスまたは構造体がイベントレシーバーになることを指定します。
 
-**event_receiver**を併用、 [event_source](event-source.md)属性と[_ _hook](../../cpp/hook.md)と[_ _unhook](../../cpp/unhook.md)キーワード。 使用`event_source`イベント ソースを作成します。 使用 **_ _hook**にイベント ソースのイベントをイベント レシーバー メソッドを (「フック」) を関連付けるイベント レシーバーのメソッド内で。 使用 **_ _unhook**の関連付けを解除しています。
+**event_receiver**は、 [event_source](event-source.md)属性および[__hook](../../cpp/hook.md)および[__unhook](../../cpp/unhook.md)キーワードと共に使用されます。 イベントソースを作成するには、`event_source` を使用します。 イベントレシーバーのメソッド内で **__hook**を使用して、イベントレシーバーメソッドをイベントソースのイベントに関連付けます ("フック")。 これらの関連付けを解除するには、 **__unhook**を使用します。
 
-*layout_dependent* COM イベント レシーバーのみ指定 (`type`=**com**)。 既定の*layout_dependent*は**false**します。
+*layout_dependent*は、com イベントレシーバー (`type`=**com**) に対してのみ指定されます。 *Layout_dependent*の既定値は**false**です。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
@@ -71,12 +71,12 @@ ms.locfileid: "62409637"
 |-|-|
 |**対象**|**クラス**、**構造体**|
 |**反復可能**|いいえ|
-|**必要な属性**|`coclass` ときに*layout_dependent*=**は true。**|
+|**必要な属性**|*layout_dependent*=**true**の場合に `coclass`|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [event_source](event-source.md)<br/>

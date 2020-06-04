@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4229
 ms.assetid: aadfc83b-1e5f-4229-bd0a-9c10a5d13182
-ms.openlocfilehash: 05d11a02d3aea8748a2955dff77a0af750ee0275
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1cb97c51dca7cf3fdbca024ead969c4d4e1f3eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207506"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163285"
 ---
 # <a name="compiler-warning-level-1-c4229"></a>コンパイラの警告 (レベル 1) C4229
 
-旧形式に使用されていますデータの修飾子は無視されます。
+旧形式の使用: データの修飾子は無視されます
 
-Microsoft の修飾子を使用して`__cdecl`データ宣言は旧式の手段です。
+データ宣言で `__cdecl` などの Microsoft 修飾子を使用することは、古い方法です。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4229.cpp
 // compile with: /W1 /LD
 int __cdecl counter;   // C4229 cdecl ignored

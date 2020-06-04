@@ -1,36 +1,36 @@
 ---
-title: マーシャ リングに関するグローバル関数
+title: グローバル関数のマーシャリング
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326261"
 ---
-# <a name="marshaling-global-functions"></a>マーシャ リングに関するグローバル関数
+# <a name="marshaling-global-functions"></a>グローバル関数のマーシャリング
 
-これらの関数は、マーシャ リングとマーシャ リング データ インターフェイス ポインターに変換するサポートを提供します。
+これらの関数は、マーシャリングデータをインターフェイス ポインタにマーシャリングおよび変換するためのサポートを提供します。
 
 > [!IMPORTANT]
->  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+> 次の表に示す関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 |||
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|マーシャ リング データを解放し、`IStream`ポインター。|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|新しいストリーム オブジェクトを作成し、指定されたインターフェイス ポインターをマーシャ リングします。|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|インターフェイス ポインターには、ストリームのマーシャ リング データを変換します。|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|マーシャリング データとポインタを`IStream`解放します。|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|新しいストリーム オブジェクトを作成し、指定したインターフェイス ポインターをマーシャリングします。|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|ストリームのマーシャリング データをインターフェイス ポインターに変換します。|
 
 ## <a name="requirements"></a>要件:
 
 **ヘッダー:** atlbase.h
 
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>アトルフリーマーシャルストリーム
 
 ストリーム内のマーシャリング データを解放し、次にストリーム ポインターも解放します。
 
@@ -40,14 +40,14 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*<br/>
-[in]ポインター、`IStream`インターフェイスのマーシャ リングするために使用するストリーム。
+*pストリーム*<br/>
+[in]マーシャリングに使用される`IStream`ストリームのインターフェイスへのポインター。
 
 ### <a name="example"></a>例
 
-例をご覧ください[AtlMarshalPtrInProc](#atlmarshalptrinproc)します。
+「」の例[AtlMarshalPtrInProc](#atlmarshalptrinproc)を参照してください。
 
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>アトルマーシャルプットリング
 
 新しいストリーム オブジェクトを作成し、プロキシの CLSID をストリームに書き込みます。さらに、プロキシの初期化に必要なデータをストリームに書き込んで、指定されたインターフェイス ポインターをマーシャリングします。
 
@@ -60,32 +60,32 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*<br/>
-[in]マーシャ リングするインターフェイスへのポインター。
+*パンク*<br/>
+[in]マーシャリングするインターフェイスへのポインター。
 
-*iid*<br/>
-[in]マーシャ リングされるインターフェイスの GUID です。
+*Iid*<br/>
+[in]マーシャリングされるインターフェイスの GUID。
 
 *ppStream*<br/>
-[out]ポインター、`IStream`マーシャ リングするため、新しいストリーム オブジェクトのインターフェイス。
+[アウト]マーシャリングに使用される`IStream`新しいストリーム オブジェクトのインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-MSHLFLAGS_TABLESTRONG フラグは設定されているため、複数のストリームにポインターをマーシャ リングすることができます。 ポインターもいないマーシャ リングされた複数回できます。
+MSHLFLAGS_TABLESTRONG フラグは、ポインターを複数のストリームにマーシャリングできるように設定されます。 ポインターは、複数回マーシャリング解除することもできます。
 
-失敗をマーシャ リングする場合は、ストリーム ポインターが解放されます。
+マーシャリングが失敗した場合、ストリーム ポインターは解放されます。
 
-`AtlMarshalPtrInProc` プロセスでオブジェクトへのポインターでのみ使用できます。
+`AtlMarshalPtrInProc`は、インプロセス オブジェクトへのポインターでのみ使用できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>アトルアンマーシャルプター
 
 ストリームのマーシャリング データをクライアントが使用できるインターフェイス ポインターに変換します。
 
@@ -98,14 +98,14 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*<br/>
-[in]マーシャ リング解除されているストリームへのポインター。
+*pストリーム*<br/>
+[in]マーシャリング解除されるストリームへのポインター。
 
-*iid*<br/>
-[in]マーシャ リング解除されているインターフェイスの GUID です。
+*Iid*<br/>
+[in]マーシャリング解除されるインターフェイスの GUID。
 
 *ppUnk*<br/>
-[out]マーシャ リング解除されたインターフェイスへのポインター。
+[アウト]マーシャリングされていないインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -113,7 +113,7 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="example"></a>例
 
-例をご覧ください[AtlMarshalPtrInProc](#atlmarshalptrinproc)します。
+「」の例[AtlMarshalPtrInProc](#atlmarshalptrinproc)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

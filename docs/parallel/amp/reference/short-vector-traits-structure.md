@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374732"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits 構造体
+# <a name="short_vector_traits-structure"></a>short_vector_traits 構造体
 
-short_vector_traits により、基になるベクトルの長さと short ベクター型のスカラー型、またはスカラー型の取得
+short_vector_traits、短いベクトル型またはスカラー型の基になるベクトル長およびスカラー型の取得が可能
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,7 +75,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 `T`
 
@@ -91,7 +91,7 @@ struct short_vector_traits<double_4>;
 
 |名前|説明|
 |----------|-----------------|
-|[short_vector_traits::short_vector_traits コンス トラクター](#ctor)||
+|[short_vector_traits::short_vector_traits コンストラクター](#ctor)||
 
 ### <a name="public-constants"></a>パブリック定数
 
@@ -107,17 +107,17 @@ struct short_vector_traits<double_4>;
 
 **ヘッダー:** amp_short_vectors.h
 
-**名前空間:** Concurrency::graphics
+**名前空間:** 同時実行::グラフィックス
 
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits コンス トラクター
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traitsコンストラクタ
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size 定数
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::サイズ定数
 
-```
+```cpp
 static int const size = 1;
 ```
 

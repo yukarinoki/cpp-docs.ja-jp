@@ -1,10 +1,12 @@
 ---
 title: _chmod、_wchmod
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _chmod
 - _wchmod
-apilocation:
+- _o__chmod
+- _o__wchmod
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chmod
 - _wchmod
@@ -29,14 +35,14 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917010"
 ---
-# <a name="chmod-wchmod"></a>_chmod、_wchmod
+# <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
 ファイルのアクセス許可の設定を変更します。
 
@@ -49,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*/db*<br/>
 既存のファイルの名前。
 
 *pmode*<br/>
@@ -57,23 +63,25 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからない場合、 **errno**に設定されている**ENOENT**パラメーターが有効でない場合**errno**に設定されている**EINVAL**します。
+これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからなかった場合、 **errno**は**ENOENT**に設定されます。パラメーターが無効な場合、 **errno**は**EINVAL**に設定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Chmod**関数で指定されたファイルのアクセス許可の設定を変更する*filename*します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode* sys \stat.h で定義されている、次のマニフェスト定数の一方または両方が含まれています。
+**_Chmod**関数は、 *filename*によって指定されたファイルのアクセス許可の設定を変更します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode*には、sysh に定義されている次のマニフェスト定数のいずれかまたは両方が含まれています。
 
 | *pmode* | 説明 |
 |-|-|
 | **\_S\_IREAD** | 読み取りのみが許可されます。 |
 | **\_S\_IWRITE** | 書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。 |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | 読み取りと書き込みが許可されます。 |
+| **\_S\_iread** &#124; ** \_s\_iread** | 読み取りと書き込みが許可されます。 |
 
-ビットごとに参加している両方の定数が指定されると、or 演算子 (**\|**)。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モードではそのため、 **_S_IWRITE**と **_S_IREAD** \| **_S_IWRITE**は同等です。
+両方の定数が指定されている場合は、ビットごとの**\|** or 演算子 () と結合されます。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 したがって、 **_S_IWRITE**と **_S_IREAD** \| **_S_IWRITE**のモードは同等です。
 
-**_wchmod**のワイド文字バージョンです **_chmod**、 *filename*への引数 **_wchmod**はワイド文字列です。 **_wchmod**と **_chmod**動作は同じです。
+**_wchmod**は **_chmod**のワイド文字バージョンです。**_wchmod**する*filename*引数は、ワイド文字列です。 **_wchmod**と **_chmod**は同じように動作します。
 
-この関数は、パラメーターを検証します。 場合*pmode*マニフェスト定数のいずれかの組み合わせではないまたは代替のセットを組み込んで、定数の関数は、単にそれらを無視します。 場合*filename*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
+この関数は、パラメーターを検証します。 *Pmode*がマニフェスト定数のいずれかの組み合わせではない場合、または別の定数セットを組み込んでいる場合、関数は単にそれらを無視します。 *Filename*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -83,12 +91,12 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> または \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

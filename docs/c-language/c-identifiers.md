@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325664"
 ---
 # <a name="c-identifiers"></a>C 識別子
 
@@ -34,7 +34,7 @@ int main()
 
 識別子を宣言した後、それ以降のプログラム ステートメントでその識別子を使用して、関連する値を参照できます。
 
-`goto` ステートメントでは、ステートメント ラベルと呼ばれる特殊な識別子を使用できます  (宣言は「[型の宣言](../c-language/declarations-and-types.md)」で説明し、ステートメント ラベルは [goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md) に関するページで説明します)。
+`goto` ステートメントでは、ステートメント ラベルと呼ばれる特殊な識別子を使用できます (宣言は「[型の宣言](../c-language/declarations-and-types.md)」で説明し、ステートメント ラベルは [goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md) に関するページで説明します)。
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +44,7 @@ int main()
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 *nondigit*: 次のいずれか<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
 
 *digit*: 次のいずれか<br/>

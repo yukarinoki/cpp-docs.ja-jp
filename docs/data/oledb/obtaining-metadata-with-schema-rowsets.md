@@ -6,61 +6,61 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04b9a335c60cefdc28be2347ef1f0762c424d8e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387566"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210133"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
 プロバイダー、行セット、テーブル、列、またはその他のデータベース情報に関する情報を行セットを開かずに取得することが必要な場合があります。 データベース構造に関するデータはメタデータと呼ばれます。メタデータはさまざまな方法で取得できます。 1 つは、スキーマ行セットを使用する方法です。
 
-OLE DB テンプレートは、一連のスキーマ情報を取得するためのクラスを提供します。これらのクラスは、定義済みのスキーマ行セットを作成し、記載されて[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)します。
+OLE DB テンプレートは、スキーマ情報を取得するためのクラスのセットを提供します。これらのクラスは、定義済みのスキーマ行セットを作成し、[スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)に一覧表示します。
 
 > [!NOTE]
 > OLAP を使用していて、行セットの一部がスキーマ行セット クラスでサポートされていない場合 (列数が変数の場合など) は、`CManualAccessor` または `CDynamicAccessor` の使用を検討する必要があります。 列をスクロールし、case ステートメントを使用して、各列で可能なデータ型を処理できます。
 
 ## <a name="catalogschema-model"></a>カタログ/スキーマ モデル
 
-ANSI SQL はデータ ストアのカタログ/スキーマ モデルを定義しています。OLE DB はこのモデルを使用します。 このモデルでカタログ (データベース) がスキーマにあり、スキーマのテーブルが存在します。
+ANSI SQL はデータ ストアのカタログ/スキーマ モデルを定義しています。OLE DB はこのモデルを使用します。 このモデルでは、カタログ (データベース) にスキーマがあり、スキーマにテーブルがあります。
 
-- **カタログ**カタログは、データベースに別の名前。 これは、関連するスキーマのコレクションです。 指定したデータ ソースに属するカタログ (データベース) を一覧表示する[CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md)します。 多数のデータベースが 1 つだけカタログが、メタデータはスキーマ情報と呼ばれることがあります。
+- **カタログ**カタログは、データベースの別の名前です。 これは、関連するスキーマのコレクションです。 特定のデータソースに属するカタログ (データベース) を一覧表示するには、 [Ccatalog](../../data/oledb/ccatalogs-ccataloginfo.md)を使用します。 多くのデータベースにはカタログが1つしかないため、メタデータはスキーマ情報と呼ばれることがあります。
 
-- **スキーマ**スキーマが所有しているまたは特定のユーザーによって作成されたデータベース オブジェクトのコレクション。 特定のユーザーが所有するスキーマを一覧表示する[CSchemata](../../data/oledb/cschemata-cschematainfo.md)します。
+- **スキーマ**スキーマは、特定のユーザーによって所有または作成されているデータベースオブジェクトのコレクションです。 特定のユーザーが所有するスキーマを一覧表示するには、 [CSchemata](../../data/oledb/cschemata-cschematainfo.md)を使用します。
 
-   Microsoft SQL Server と ODBC 2.x の用語では、スキーマは所有者です (たとえば、dbo は一般的なスキーマ名)。 また、SQL Server は一連のテーブルでメタデータを格納します。 1 つのテーブルには、すべてのテーブルの一覧が含まれていますし、別のテーブルには、すべての列の一覧が含まれています。 Microsoft Access データベース内のスキーマに相当することはありません。
+   Microsoft SQL Server と ODBC 2. x の用語では、スキーマは所有者です (たとえば、dbo は一般的なスキーマ名です)。 また、SQL Server は、一連のテーブルにメタデータを格納します。1つのテーブルにすべてのテーブルの一覧が含まれ、別のテーブルにはすべての列の一覧が含まれています。 Microsoft Access データベースのスキーマに相当するものはありません。
 
-- **テーブル**テーブルは、特定の順序で分類された列のコレクション。 指定したカタログ (データベース) とそれらのテーブルに関する情報で定義されているテーブルを一覧表示する[CTables](../../data/oledb/ctables-ctableinfo.md))。
+- **テーブル**テーブルは、特定の順序で配置された列のコレクションです。 特定のカタログ (データベース) で定義されているテーブルを一覧表示し、それらのテーブルに関する情報を表示するには、 [Ctables](../../data/oledb/ctables-ctableinfo.md)を使用します。
 
-## <a name="restrictions"></a>制約
+## <a name="restrictions"></a>制限
 
-スキーマ情報を照会すると、関心がある情報の種類を指定するのに制限を使用できます。 制約は、クエリのフィルターまたは修飾子として考えることができます。 たとえば、次のクエリについて考えます。
+スキーマ情報を照会するときに、制限を使用して、関心のある情報の種類を指定できます。 制約は、クエリのフィルターまたは修飾子として考えることができます。 たとえば、次のクエリについて考えます。
 
 ```sql
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-このクエリでは、`l_name` が制約です。 これは、1 つだけ制限; 簡単な例スキーマ行セット クラスでは、いくつかの制限をサポートします。
+このクエリでは、`l_name` が制約です。 これは、制限が1つだけの単純な例です。スキーマ行セットクラスでは、いくつかの制限がサポートされています。
 
-[スキーマ行セット typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)他の行セットと同じようにスキーマ行セットをインスタンス化して開くことによってアクセスできるように、すべての OLE DB スキーマ行セットをカプセル化します。 たとえば、typedef クラス[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)として定義されます。
+[スキーマ行セット typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)は、すべての OLE DB スキーマ行セットをカプセル化して、他の行セットと同様に、スキーマ行セットにアクセスできるようにします。そのために、インスタンス化して開きます。 たとえば、typedef クラス[Ccolumns](../../data/oledb/ccolumns-ccolumnsinfo.md)は次のように定義されます。
 
 ```cpp
 CRestrictions<CAccessor<CColumnsInfo>
 ```
 
-[CRestrictions](../../data/oledb/crestrictions-class.md)クラスは制約がサポートを提供します。 スキーマ行セットのインスタンスを作成した後で呼び出す[crestrictions::open](../../data/oledb/crestrictions-open.md)します。 このメソッドは、指定された制約に基づいて結果セットを返します。
+[CRestrictions](../../data/oledb/crestrictions-class.md)クラスは、制限のサポートを提供します。 スキーマ行セットのインスタンスを作成した後、 [CRestrictions:: Open](../../data/oledb/crestrictions-open.md)を呼び出します。 このメソッドは、指定された制約に基づいて結果セットを返します。
 
-制限を指定するを参照してください[付録 b:スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052(v=vs.85)); そのトピックでは、COLUMNS 行セットの制限列。TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. 制約を指定するときは、この順序に従う必要があります。
+制限を指定するには、 [「付録 B: スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))」を参照し、使用している行セットを参照してください。 たとえば、`CColumns` は[COLUMNS 行セット](/previous-versions/windows/desktop/ms723052(v=vs.85))に対応します。このトピックでは、COLUMNS 行セットの制限列の一覧を示します。 TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、COLUMN_NAME です。 制約を指定するときは、この順序に従う必要があります。
 
-そのため、たとえば、テーブル名で制限する場合は、TABLE_NAME が 3 番目の制限列と 呼び出し`Open`、次の例に示すように、3 番目の制限パラメーターとして必要なテーブル名を指定します。
+たとえば、テーブル名で制限する場合は、次の例に示すように、TABLE_NAME が3番目の制限列であり、`Open`を呼び出して、必要なテーブル名を3番目の制限パラメーターとして指定します。
 
 ### <a name="to-use-schema-rowsets"></a>スキーマ行セットを使用するには
 
-1. ヘッダー ファイルをインクルード`Atldbsch.h`(する必要がある`Atldbcli.h`コンシューマー サポートでも)。
+1. ヘッダーファイル `Atldbsch.h` を含めます (コンシューマーサポートでも `Atldbcli.h` が必要です)。
 
-1. コンシューマーまたはドキュメントのヘッダー ファイル内のスキーマ行セット オブジェクトをインスタンス化します。 テーブルの情報を実行する場合に、宣言、`CTables`オブジェクト。 列情報を実行する場合に、宣言、`CColumns`オブジェクト。 authors テーブルの列を取得する方法の例を次に示します。
+1. コンシューマーまたはドキュメントのヘッダー ファイル内のスキーマ行セット オブジェクトをインスタンス化します。 テーブル情報が必要な場合は、`CTables` オブジェクトを宣言します。列情報が必要な場合は、`CColumns` オブジェクトを宣言します。 authors テーブルの列を取得する方法の例を次に示します。
 
     ```cpp
     CDataSource ds;
@@ -78,16 +78,16 @@ CRestrictions<CAccessor<CColumnsInfo>
     }
     ```
 
-1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、次を参照してください。 [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)します。
+1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータメンバーは COLUMN_NAME に対応しています。 各データメンバーが対応する OLE DB 列については、「 [Ccolumns](../../data/oledb/ccolumns-ccolumnsinfo.md)」を参照してください。
 
-OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。
+スキーマ行セットのリファレンスについては、OLE DB テンプレートに用意されている typedef クラス (「[スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください)。
 
-制限列を含め、OLE DB スキーマ行セットの詳細については、次を参照してください[付録 b:。スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
+制限列を含む OLE DB スキーマ行セットの詳細については、 **OLE DB プログラマーリファレンス**の[「付録 B: スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))」を参照してください。
 
-スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](https://github.com/Microsoft/VCSamples)と[DBViewer](https://github.com/Microsoft/VCSamples)サンプル。
+スキーマ行セットクラスの使用方法のより複雑な例については、 [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)と[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)のサンプルを参照してください。
 
-スキーマ行セット プロバイダーのサポートについては、次を参照してください。[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)します。
+スキーマ行セットのプロバイダーサポートの詳細については、「[スキーマ行セット](../../data/oledb/supporting-schema-rowsets.md)のサポート」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [アクセサーの使用](../../data/oledb/using-accessors.md)

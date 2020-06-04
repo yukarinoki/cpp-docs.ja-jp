@@ -6,26 +6,26 @@ helpviewer_keywords:
 - menus, updating as context changes
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-ms.openlocfilehash: de94b28e713459edfd63aff832caecc7ea49ca33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bfb907d21c928c605b304c595acb834d0046e35
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152645"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209054"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>レコード ビューのユーザー インターフェイスの更新 (MFC データ アクセス)
 
-`CRecordView` 移動コマンド用の既定のユーザー インターフェイス更新ハンドラーを提供します。 これらのハンドラーにより、ユーザー インターフェイス オブジェクト (メニュー項目とツール バー ボタン) の有効/無効が自動的に切り替えられます。 アプリケーション ウィザードは、標準のメニューを提供し、選択した場合、**ドッキング可能ツールバー**オプション、コマンドのツール バー ボタンのセット。 `CRecordView` を使用してレコード ビュー クラスを作成する場合は、同じユーザー インターフェイス オブジェクトをアプリケーションに追加することが必要になることがあります。
+`CRecordView` は、ナビゲーションコマンドの既定のユーザーインターフェイス更新ハンドラーを提供します。 これらのハンドラーにより、ユーザー インターフェイス オブジェクト (メニュー項目とツール バー ボタン) の有効/無効が自動的に切り替えられます。 アプリケーションウィザードには標準のメニューが用意されています。 [ドッキング可能な**ツールバー** ] オプションを選択した場合は、コマンドの一連のツールバーボタンが表示されます。 `CRecordView` を使用してレコード ビュー クラスを作成する場合は、同じユーザー インターフェイス オブジェクトをアプリケーションに追加することが必要になることがあります。
 
 ### <a name="to-create-menu-resources-with-the-menu-editor"></a>エディター メニューを使用してメニュー リソースを作成するには
 
-1. 使用に関する情報を参照し、[メニュー エディター](../windows/menu-editor.md)、4 つのコマンドを独自のメニューを作成します。
+1. [メニューエディター](../windows/menu-editor.md)の使用方法については、同じ4つのコマンドを使用して独自のメニューを作成する方法に関する情報を参照してください。
 
 #### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>グラフィックス エディターを使用してツール バー ボタンを作成するには
 
-1. 使用に関する情報を参照し、[ツール バー エディター](../windows/toolbar-editor.md)、編集、レコード移動コマンド用のツール バー ボタンを追加するツール バー リソース。
+1. ツールバー[エディター](../windows/toolbar-editor.md)の使用に関する情報を参照するには、ツールバーリソースを編集して、レコードナビゲーションコマンドのツールバーボタンを追加します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
-[レコード ビューの使用](../data/using-a-record-view-mfc-data-access.md)
+[レコードビューでのナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
+[レコードビューの使用](../data/using-a-record-view-mfc-data-access.md)

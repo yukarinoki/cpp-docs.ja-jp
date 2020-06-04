@@ -1,14 +1,20 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285773"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911369"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -104,19 +114,21 @@ long long int llrintl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合の丸めた整数値を返します*x*します。
+成功した場合は、 *x*の丸められた整数値を返します。
 
-|懸案事項|Return|
+|問題|戻り値|
 |-----------|------------|
-|*x*戻り値の型の範囲外です<br /><br /> *x* ±∞ を =<br /><br /> *x* = NaN|発生させる**FE_INVALID**をゼロ (0) を返します。|
+|*x*が戻り値の型の範囲外です。<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **lrint**と**llrint**を受け取る**float**と**長い** **二重**型。 C プログラムで**lrint**と**llrint**常に、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lrint**と**llrint**は常に**double**を受け取ります。
 
-場合*x*の整数値、これらの関数の生成と等価の浮動小数点を表さない**FE_INEXACT**します。
+*X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
-**Microsoft 固有の仕様**:結果が戻り値の型の範囲外にある場合、またはパラメーターが NaN または無限大の場合は、定義された実装を返します。 Microsoft コンパイラは0 の値を返します。
+**Microsoft 固有**: 結果が戻り値の型の範囲外の場合、またはパラメーターが NaN または無限大の場合、戻り値は実装定義になります。 Microsoft コンパイラは0 の値を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -124,7 +136,7 @@ long long int llrintl(
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

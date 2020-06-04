@@ -3,16 +3,16 @@ title: プロパティ ページの追加 (ATL チュートリアル、パート
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524682"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078766"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>プロパティ ページの追加 (ATL チュートリアル、パート 6)
 
-> [!NOTE] 
+> [!NOTE]
 > ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降では使用できません。
 
 プロパティ ページは個別の COM オブジェクトとして実装されるため、必要に応じて共有することができます。 この手順では、次のタスクを行ってプロパティ ページをコントロールに追加します。
@@ -35,7 +35,7 @@ ms.locfileid: "65524682"
 
 1. テンプレートの一覧で **[ATL]**  >  **[ATL プロパティ ページ]** を選択し、 **[追加]** をクリックします。
 
-1. **ATL プロパティ ページ ウィザード**が表示されたら、**短い**名前として「*PolyProp*」と入力します。
+1. **ATL プロパティ ページ ウィザード**が表示されたら、*短い*名前として「**PolyProp**」と入力します。
 
 1. **[文字列]** をクリックして **[文字列]** ページを開き、**タイトル**として「 **&Polygon**」と入力します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "65524682"
 
 次の 3 つのファイルが作成されます。
 
-|ファイル|説明|
+|ファイル|Description|
 |----------|-----------------|
 |PolyProp.h|プロパティ ページを実装する C++クラス `CPolyProp` が含まれています。|
 |PolyProp.cpp|PolyProp.h ファイルが含まれています。|
@@ -77,7 +77,7 @@ ms.locfileid: "65524682"
 
 1. **ツールボックス**からラベルの右側に**編集コントロール**をドラッグします。
 
-1. 最後に、 **[プロパティ]** ウィンドウを使用して編集コントロールの **ID** を `IDC_SIDES` に変更します。
+1. 最後に、 **[プロパティ]** ウィンドウを使用して編集コントロールの `IDC_SIDES`ID**を** に変更します。
 
 これで、プロパティ ページのリソースを作成するプロセスが完了します。
 
@@ -93,7 +93,7 @@ ms.locfileid: "65524682"
 
     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]
 
-プロパティ ページには同時に複数のクライアントをアタッチできるため、`Apply` 関数は繰り返し実行し、編集ボックスから取得した値を持つ各クライアントに対して `put_Sides` を呼び出します。 ここで使用している [CComQIPtr](../atl/reference/ccomqiptr-class.md) クラスは、各オブジェクトに対して `QueryInterface` を実行し、(`m_ppUnk` 配列に格納されている) `IUnknown` インターフェイスから `IPolyCtl` インターフェイスを取得します。
+プロパティ ページには同時に複数のクライアントをアタッチできるため、`Apply` 関数は繰り返し実行し、編集ボックスから取得した値を持つ各クライアントに対して `put_Sides` を呼び出します。 ここで使用している [CComQIPtr](../atl/reference/ccomqiptr-class.md) クラスは、各オブジェクトに対して `QueryInterface` を実行し、(`IPolyCtl` 配列に格納されている) `IUnknown` インターフェイスから `m_ppUnk` インターフェイスを取得します。
 
 このコードは、この段階で `Sides` プロパティの設定が実際に行われたかどうかをチェックします。 失敗していた場合、コードはメッセージ ボックスを表示して、`IErrorInfo` インターフェイスからのエラーの詳細を表示します。 通常、コンテナーはまずオブジェクトに `ISupportErrorInfo` インターフェイスを要求して `InterfaceSupportsErrorInfo` を呼び出し、そのオブジェクトでエラー情報の設定がサポートされているかどうかを確認します。 このタスクは省略できます。
 
@@ -119,7 +119,7 @@ ms.locfileid: "65524682"
 
     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]
 
-`IDC_SIDES` コントロールの `EN_CHANGE` の通知とともに `WM_COMMAND` メッセージが送信されるときに、`OnEnChangeSides` が呼び出されます。 その後 `OnEnChangeSides` は `SetDirty` を呼び出して TRUE を渡し、プロパティ ページがダーティになり、 **[適用]** ボタンを有効にする必要があることを示します。
+`OnEnChangeSides` コントロールの `WM_COMMAND` の通知とともに `EN_CHANGE` メッセージが送信されるときに、`IDC_SIDES` が呼び出されます。 その後 `OnEnChangeSides` は `SetDirty` を呼び出して TRUE を渡し、プロパティ ページがダーティになり、 **[適用]** ボタンを有効にする必要があることを示します。
 
 ## <a name="adding-the-property-page-to-the-control"></a>プロパティ ページをコントロールに追加する
 
@@ -149,6 +149,6 @@ ms.locfileid: "65524682"
 
 [手順 5 に戻る](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [手順 7 に進む](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)

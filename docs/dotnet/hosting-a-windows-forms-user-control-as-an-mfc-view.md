@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf91730f98685935d50ee0076739b436e8d9da60
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222872"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "79544785"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
 
-MFC では、MFC ビューでの Windows フォーム ユーザー コントロールをホストするのに CWinFormsView クラスを使用します。 MFC Windows フォーム ビューは、ActiveX コントロールです。 ユーザー コントロールがネイティブ ビューの子としてホストされているネイティブ ビューの全体のクライアント領域を占有しています。
+MFC では、CWinFormsView クラスを使用して、MFC ビューで Windows フォームユーザーコントロールをホストします。 MFC Windows フォームビューは ActiveX コントロールです。 ユーザーコントロールは、ネイティブビューの子としてホストされ、ネイティブビューのクライアント領域全体を占有します。
 
-最終的な結果がによって使用されるモデルに似ています、 [CFormView クラス](../mfc/reference/cformview-class.md)します。 豊富なフォーム ベースのビューを作成するには、Windows フォーム デザイナーとランタイムを活用できます。
+最終的な結果は、 [CFormView クラス](../mfc/reference/cformview-class.md)によって使用されるモデルに似ています。 これにより、Windows フォームデザイナーとランタイムを利用して、豊富なフォームベースのビューを作成できます。
 
-MFC Windows フォーム ビューは、ActiveX コントロールであるためにがない同じ`hwnd`MFC ビューとして。 またへのポインターとして渡されることはできません、 [CView](../mfc/reference/cview-class.md)ビュー。 一般に、.NET Framework のメソッドを使用して、Windows フォーム ビューの使用と、Win32 にあまり依存しています。
+MFC Windows フォームビューは ActiveX コントロールであるため、MFC ビューと同じ `hwnd` はありません。 また、 [CView](../mfc/reference/cview-class.md)ビューへのポインターとして渡すこともできません。 一般に、.NET Framework メソッドを使用して Windows フォームビューを操作し、Win32 に依存しないようにします。
 
-Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。
+MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://www.microsoft.com/download/details.aspx?id=2113)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -31,7 +31,7 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 [方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC での Windows フォーム ユーザー コントロールの使用](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[方法: 複合コントロールを作成](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[方法: 複合コントロールを作成する](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

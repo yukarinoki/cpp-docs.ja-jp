@@ -5,20 +5,20 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d7df6b3c5dc0d0d493d17b3e9995bc4758ffd6d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370585"
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 関数
+# <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 関数
 
 |||
 |-|-|
-|[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
+|[スワップ](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>スワップ
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -34,14 +34,14 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する hash_set、また*は hash_set の*要素と交換される要素を持つ hash_set。
+hash_set、スワップする要素を提供する要素、または要素を*左*hash_setの要素と交換するhash_set。
 
-*左側*\
-要素が hash_set *right*の要素と交換される hash_set。
+*左*\
+要素がhash_set*権利*の要素と交換されるhash_set.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、コンテナークラス hash_set に特化したアルゴリズムであり、 `left.`メンバー関数`right`swap () を実行します。 [](../standard-library/hash-set-class.md#swap) `swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+テンプレート`swap`関数は、メンバー関数`left.`[のスワップ](../standard-library/hash-set-class.md#swap)( )`right`を実行するhash_setコンテナー クラスに特化したアルゴリズムです。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
 **template \<class T> void swap(T&, T&),**
 
@@ -51,7 +51,7 @@ void swap(
 
 `swap` のテンプレート バージョンの使用例については、メンバー クラス [hash_set::swap](../standard-library/hash-set-class.md#swap) のコード例をご覧ください。
 
-## <a name="swap_hash_multiset"></a> swap (hash_multiset)
+## <a name="swap-hash_multiset"></a><a name="swap_hash_multiset"></a>スワップ (hash_multiset)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -65,14 +65,14 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する hash_multiset、また*は hash_multiset の*要素と交換される要素を持つ hash_multiset。
+hash_multiset交換する要素を提供する要素、または要素を*左*hash_multisetの要素と交換するhash_multiset。
 
-*左側*\
-要素が hash_multiset *right*の要素と交換される hash_multiset。
+*左*\
+要素をhash_multiset*権利*の要素と交換するhash_multiset。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このテンプレート関数は、コンテナークラス hash_multiset に特化したアルゴリズムであり、 `left.`メンバー関数`right`swap () を実行します。 [](../standard-library/hash-multiset-class.md#swap) `swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+テンプレート`swap`関数は、メンバー関数`left.`[のスワップ](../standard-library/hash-multiset-class.md#swap)( )`right`を実行するためにhash_multisetコンテナ クラスに特化したアルゴリズムです。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
 **template \<class T> void swap(T&, T&),**
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371743"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>コレクション クラスの選択に関する推奨事項
 
@@ -47,45 +47,45 @@ ms.locfileid: "62218613"
 
 - 6 列目は、各形状で項目の重複が許可されるかどうかを表しています。
 
-### <a name="_core_collection_shape_features"></a>  コレクションの形状と特徴
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>コレクションシェイプの機能
 
-|形式|順序あり|インデックスを作成|要素の追加|指定した要素の検索|重複する要素|
+|図形|注文済み|インデックス 付き|要素の追加|指定した要素の検索|重複する要素|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|リスト|[はい]|いいえ|Fast|遅い|[はい]|
-|配列|[はい]|整数に基づく|遅い|遅い|はい|
+|List|はい|いいえ|Fast|遅い|はい|
+|Array|はい|整数に基づく|遅い|遅い|はい|
 |マップ|いいえ|キーに基づく|Fast|Fast|いいえ (キー)、はい (値)|
 
 次の表「 [MFC コレクション クラスの特性](#_core_characteristics_of_mfc_collection_classes)」に、特定の MFC コレクション クラスの他の重要な特性をまとめてあります。選択の際に参考にしてください。 クラスを選択する際は、通常、クラスが C++ テンプレートをベースにしているかどうか、MFC のドキュメント [シリアル化](../mfc/serialization-in-mfc.md) 機構で要素をシリアル化できるかどうか、MFC の診断ダンプ機構で要素をダンプできるかどうか、クラスがタイプ セーフかどうか (つまり、クラスに基づいてコレクションに格納する項目または取得される項目の型が保証されるかどうか) を考慮します。
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  MFC コレクション クラスの特性
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>MFC コレクション クラスの特徴
 
-|クラス|C++<br /><br /> テンプレートの使用|シリアル化<br /><br /> できるか|シリアル化<br /><br /> ダンプ|Is<br /><br /> タイプ セーフ|
+|クラス|C++<br /><br /> テンプレート|シリアル化<br /><br /> できるか|シリアル化<br /><br /> ダンプ|Is<br /><br /> タイプ セーフ|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
-|`CArray`|[はい]|はい 1|はい 1|いいえ|
-|`CByteArray`|×|[はい]|はい|はい 3|
-|`CDWordArray`|いいえ|[はい]|はい|はい 3|
+|`CArray`|はい|はい 1|はい 1|いいえ|
+|`CByteArray`|いいえ|はい|はい|はい 3|
+|`CDWordArray`|いいえ|はい|はい|はい 3|
 |`CList`|はい|はい 1|はい 1|いいえ|
-|`CMap`|[はい]|はい 1|はい 1|いいえ|
-|`CMapPtrToPtr`|×|×|はい|×|
-|`CMapPtrToWord`|×|×|はい|×|
-|`CMapStringToOb`|×|[はい]|[はい]|×|
-|`CMapStringToPtr`|×|×|はい|×|
-|`CMapStringToString`|×|[はい]|[はい]|はい 3|
-|`CMapWordToOb`|いいえ|[はい]|[はい]|×|
-|`CMapWordToPtr`|×|×|はい|×|
-|`CObArray`|×|[はい]|[はい]|×|
-|`CObList`|×|[はい]|[はい]|×|
-|`CPtrArray`|×|×|はい|×|
-|`CPtrList`|×|×|はい|×|
-|`CStringArray`|×|[はい]|はい|はい 3|
-|`CStringList`|いいえ|[はい]|はい|はい 3|
-|`CTypedPtrArray`|はい|状況に依存 2|[はい]|はい|
-|`CTypedPtrList`|[はい]|状況に依存 2|はい|はい|
-|`CTypedPtrMap`|はい|状況に依存 2|[はい]|[はい]|
-|`CUIntArray`|×|×|[はい]|はい 3|
-|`CWordArray`|いいえ|[はい]|はい|はい 3|
+|`CMap`|はい|はい 1|はい 1|いいえ|
+|`CMapPtrToPtr`|いいえ|いいえ|はい|いいえ|
+|`CMapPtrToWord`|いいえ|いいえ|はい|いいえ|
+|`CMapStringToOb`|いいえ|はい|はい|いいえ|
+|`CMapStringToPtr`|いいえ|いいえ|はい|いいえ|
+|`CMapStringToString`|いいえ|はい|はい|はい 3|
+|`CMapWordToOb`|いいえ|はい|はい|いいえ|
+|`CMapWordToPtr`|いいえ|いいえ|はい|いいえ|
+|`CObArray`|いいえ|はい|はい|いいえ|
+|`CObList`|いいえ|はい|はい|いいえ|
+|`CPtrArray`|いいえ|いいえ|はい|いいえ|
+|`CPtrList`|いいえ|いいえ|はい|いいえ|
+|`CStringArray`|いいえ|はい|はい|はい 3|
+|`CStringList`|いいえ|はい|はい|はい 3|
+|`CTypedPtrArray`|はい|状況に依存 2|はい|はい|
+|`CTypedPtrList`|はい|状況に依存 2|はい|はい|
+|`CTypedPtrMap`|はい|状況に依存 2|はい|はい|
+|`CUIntArray`|いいえ|いいえ|はい|はい 3|
+|`CWordArray`|いいえ|はい|はい|はい 3|
 
-1. シリアル化を行うには、コレクション オブジェクトの `Serialize` 関数を明示的に呼び出す必要があります。ダンプを行うには、`Dump` 関数を明示的に呼び出す必要があります。 フォーム `ar << collObj` を使用してシリアル化を行うことはできません。また、フォーム `dmp` `<< collObj` を使用してダンプを行うこともできません。
+1. シリアル化を行うには、コレクション オブジェクトの `Serialize` 関数を明示的に呼び出す必要があります。ダンプを行うには、`Dump` 関数を明示的に呼び出す必要があります。 フォーム`ar << collObj`を使用してシリアル化したり、フォーム`dmp``<< collObj`をダンプすることはできません。
 
 2. シリアル化ができるかどうかは、基になるコレクションの型に依存します。 たとえば、型付きポインター配列が `CObArray`に基づいている場合はシリアル化できますが、 `CPtrArray`に基づいている場合はシリアル化できません。 通常、"Ptr" が付くクラスはシリアル化できません。
 
@@ -94,6 +94,6 @@ ms.locfileid: "62218613"
 ## <a name="see-also"></a>関連項目
 
 [コレクション](../mfc/collections.md)<br/>
-[テンプレート ベースのクラス](../mfc/template-based-classes.md)<br/>
+[テンプレートベースのクラス](../mfc/template-based-classes.md)<br/>
 [方法: タイプ セーフなコレクションを作成する](../mfc/how-to-make-a-type-safe-collection.md)<br/>
-[コレクションの全メンバーへのアクセス](../mfc/accessing-all-members-of-a-collection.md)
+[コレクションのすべてのメンバーへのアクセス](../mfc/accessing-all-members-of-a-collection.md)

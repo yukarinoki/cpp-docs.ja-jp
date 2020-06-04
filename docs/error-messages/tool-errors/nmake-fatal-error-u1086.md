@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1086
 ms.assetid: 6d3cd68a-ead6-4a6d-a205-01324785de7e
-ms.openlocfilehash: 2b0768697821b732a918403fedb463bdb127c54b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 166e5b49f765bef4145fe966577dfbaac228ca39
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193356"
 ---
 # <a name="nmake-fatal-error-u1086"></a>NMAKE の致命的なエラー U1086
 
-**推論規則は、依存関係を持つことはできません。**
+**推論規則に依存関係を含めることはできません**
 
-コロン (**:**) 推論のルールの後に次のいずれか。
+推論規則のコロン ( **:** ) の後には、次のいずれかを指定する必要があります。
 
 - 改行文字
 
-- セミコロン (**;**)、コマンドで指定します。
+- セミコロン ( **;)。** コマンドの後に指定できます。
 
-- シャープ記号 (**#**)、コメントを指定します。
+- シャープ記号 ( **#** )。その後にコメントを付けることができます。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4624
 ms.assetid: 14f61769-d92e-482b-9515-debd87b30a66
-ms.openlocfilehash: b1a7d715057f4c6d8ada104ad07f6ad0b9c52fb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d6e89efb042b8f757feec3911b160961e51f72a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199694"
 ---
 # <a name="compiler-warning-level-1-c4624"></a>コンパイラの警告 (レベル 1) C4624
 
@@ -21,7 +21,7 @@ ms.locfileid: "62221393"
 
 次の例では、C4624 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C4624.cpp
 // compile with: /W1 /c
 class B {

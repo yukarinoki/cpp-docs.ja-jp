@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4632
 ms.assetid: 9e35d205-cf21-4e34-8bd5-e1e7b0e2cdd3
-ms.openlocfilehash: f1870da4f7889d79f5a4eabfcc3a95a21703e9fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a5e6ef8cb461f609ff06fad227b8c7bce81e58c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393546"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199556"
 ---
 # <a name="compiler-warning-level-1-c4632"></a>コンパイラの警告 (レベル 1) C4632
 
-XML ドキュメント コメント: ファイルのアクセスが拒否されました: 理由
+XML ドキュメントコメント: ファイルアクセスが拒否されました: 理由
 
-.Xdc ファイルへのパス (`file`) が正しくないと、.xdc ファイルが作成されません。
+.Xdc ファイル (`file`) へのパスが無効で、.xdc ファイルが作成されていません。
 
 次の例では、C4632 が生成されます。
 
-```
+```cpp
 // C4632.cpp
 // compile with: /clr /docv:\\falsedir /LD /W1
 // C4632 expected

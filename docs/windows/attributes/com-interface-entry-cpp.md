@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168305"
 ---
-# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+# <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
-ターゲット クラスの COM マップにインターフェイス エントリを追加します。
+ターゲットクラスの COM マップにインターフェイスエントリを追加します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,15 +27,15 @@ ms.locfileid: "62148264"
 ### <a name="parameters"></a>パラメーター
 
 *com_interface_entry*<br/>
-エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)します。
+エントリの実際のテキストを格納している文字列。 使用可能な値の一覧については、「 [COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Com_interface_entry** C++属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。
+**Com_interface_entry** C++属性は、対象オブジェクトの com インターフェイスマップに文字列の unabridged の内容を挿入します。 属性が対象オブジェクトに1回適用された場合、エントリは既存のインターフェイスマップの先頭に挿入されます。 属性が同じ対象オブジェクトに繰り返し適用される場合、エントリは、受信された順にインターフェイスマップの先頭に挿入されます。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、`progid` が適用されている場合、`vi_progid` と `coclass` も適用されます。
 
-の最初の使用**com_interface_entry**インターフェイス マップの先頭に挿入する新しいインターフェイスにより COM_INTERFACE_ENTRY 種類は次のいずれかの必要があります。
+**Com_interface_entry**の最初の使用方法では、インターフェイスマップの先頭に新しいインターフェイスが挿入されるため、次のいずれかの COM_INTERFACE_ENTRY 型である必要があります。
 
 - COM_INTERFACE_ENTRY
 
@@ -45,9 +45,9 @@ ms.locfileid: "62148264"
 
 - COM_INTERFACE_ENTRY2_IID
 
-追加の使用法、 **com_interface_entry**属性はサポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
+**Com_interface_entry**属性の使用法を追加すると、サポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
 
-この制限は、ATL は、id とインターフェイス マップに最初のエントリを使用するために必要な`IUnknown`。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルがインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。
+ATL では、インターフェイスマップの最初のエントリが id `IUnknown`として使用されるため、この制限が必要です。したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコードサンプルは、インターフェイスマップの最初のエントリに実際の COM インターフェイスが指定されていないため、無効です。
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ ms.locfileid: "62148264"
 
 ## <a name="example"></a>例
 
-次のコードでは、2 つのエントリを追加するは、既存の COM インターフェイス マップ`CMyBaseClass`します。 1 つは、標準のインターフェイスと、2 つ目の非表示になります、`IDebugTest`インターフェイス。
+次のコードでは、`CMyBaseClass`の既存の COM インターフェイスマップに2つのエントリを追加します。 1つ目は標準のインターフェイスであり、2番目のインターフェイスは `IDebugTest` インターフェイスを非表示にします。
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-結果として得られる COM オブジェクト マップ`CMyBaseClass`のとおりです。
+結果として `CMyBaseClass` の COM オブジェクトマップは次のようになります。
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -103,7 +103,7 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -111,12 +111,12 @@ END_COM_MAP()
 |-|-|
 |**対象**|**クラス**、**構造体**|
 |**反復可能**|はい|
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

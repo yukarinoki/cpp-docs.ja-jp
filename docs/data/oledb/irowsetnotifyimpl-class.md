@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 552fcdcee99f1bfe78a28c6ea41a89557f1682f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e6b4c3298c063038e7365496f26f50d3789be86
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390705"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "79544442"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl クラス
 
-実装し、登録[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))コンシューマー (別名「シンク」) の通知を処理できるようにします。
+コンシューマー ("シンク" とも呼ばれます) に[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))を実装して登録し、通知を処理できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ ms.locfileid: "62390705"
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -47,19 +47,19 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 |||
 |-|-|
-|[OnFieldChange](#onfieldchange)|列の値の変更をコンシューマーに通知します。|
-|[OnRowChange](#onrowchange)|最初の行を変更または行全体に影響する変更のコンシューマーに通知します。|
-|[OnRowsetChange](#onrowsetchange)|行セット全体に影響を与える変更をコンシューマーに通知します。|
+|[OnFieldChange](#onfieldchange)|列の値に対する変更をコンシューマーに通知します。|
+|[OnRowChange](#onrowchange)|行に対する最初の変更、または行全体に影響のある変更をコンシューマーに通知します。|
+|[OnRowsetChange](#onrowsetchange)|行セット全体に影響のある変更をコンシューマーに通知します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[通知の受信](../../data/oledb/receiving-notifications.md)コンシューマーのコネクション ポイントのインターフェイスを実装する方法。
+「コンシューマーへのコネクションポイントインターフェイスの実装に関する[通知の受信](../../data/oledb/receiving-notifications.md)」を参照してください。
 
-`IRowsetNotifyImpl` ダミー実装を提供`IRowsetNotify`、空の関数を含む、`IRowsetNotify`メソッド[OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85))、 [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))、および[OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). 実装する場合、このクラスから継承する場合、`IRowsetNotify`インターフェイスに必要なメソッドのみを実装することができます。 また、自分でその他のメソッドの空の実装を提供する必要があります。
+`IRowsetNotifyImpl` には `IRowsetNotify`のダミーの実装が用意されており、`IRowsetNotify` メソッド[Onfieldchange](/previous-versions/windows/desktop/ms715961(v=vs.85))、 [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))、および[OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85))に対して空の関数を使用します。 `IRowsetNotify` インターフェイスを実装するときにこのクラスを継承する場合は、必要なメソッドのみを実装できます。 また、他のメソッドの空の実装を自分で提供する必要もあります。
 
-## <a name="onfieldchange"></a> IRowsetNotifyImpl::OnFieldChange
+## <a name="irowsetnotifyimplonfieldchange"></a><a name="onfieldchange"></a>IRowsetNotifyImpl:: OnFieldChange
 
-列の値の変更をコンシューマーに通知します。
+列の値に対する変更をコンシューマーに通知します。
 
 ### <a name="syntax"></a>構文
 
@@ -76,19 +76,19 @@ STDMETHOD(OnFieldChange)(
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms715961(v=vs.85))のパラメーターの説明。
+パラメーターの説明については、「 [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[は、](/previous-versions/windows/desktop/ms715961(v=vs.85))値の説明を返します。
+戻り値の説明については、「 [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms715961(v=vs.85))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。
+このメソッドは、 [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85))メソッドをラップします。 詳細については、OLE DB プログラマーリファレンスのメソッドの説明を参照してください。
 
-## <a name="onrowchange"></a> IRowsetNotifyImpl::OnRowChange
+## <a name="irowsetnotifyimplonrowchange"></a><a name="onrowchange"></a>IRowsetNotifyImpl:: OnRowChange
 
-最初の行を変更または行全体に影響する変更のコンシューマーに通知します。
+行に対する最初の変更、または行全体に影響のある変更をコンシューマーに通知します。
 
 ### <a name="syntax"></a>構文
 
@@ -104,19 +104,19 @@ STDMETHOD(OnRowChange)(
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms722694(v=vs.85))のパラメーターの説明。
+パラメーターの説明については、「 [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[は、](/previous-versions/windows/desktop/ms722694(v=vs.85))値の説明を返します。
+戻り値の説明については、「 [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722694(v=vs.85))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。
+このメソッドは、 [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))メソッドをラップします。 詳細については、OLE DB プログラマーリファレンスのメソッドの説明を参照してください。
 
-## <a name="onrowsetchange"></a> IRowsetNotifyImpl::OnRowsetChange
+## <a name="irowsetnotifyimplonrowsetchange"></a><a name="onrowsetchange"></a>IRowsetNotifyImpl:: OnRowsetChange
 
-行セット全体に影響を与える変更をコンシューマーに通知します。
+行セット全体に影響のある変更をコンシューマーに通知します。
 
 ### <a name="syntax"></a>構文
 
@@ -130,19 +130,18 @@ STDMETHOD(OnRowsetChange)(
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms722669(v=vs.85))のパラメーターの説明。
+パラメーターの説明については、「 [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[は、](/previous-versions/windows/desktop/ms722669(v=vs.85))値の説明を返します。
+戻り値の説明については、「 [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722669(v=vs.85))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。
+このメソッドは、 [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85))メソッドをラップします。 詳細については、OLE DB プログラマーリファレンスのメソッドの説明を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [IRowsetNotifyCP クラス](../../data/oledb/irowsetnotifycp-class.md)

@@ -1,9 +1,10 @@
 ---
 title: _CIpow
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIpow
-apilocation:
+- _o__CIpow
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIpow
 - _CIpow
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 0131a813f43f2d18b5d66313cd368a911fd1fbbe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 80acead0f40896db6c27cca8440a3069a18c5332
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741999"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917962"
 ---
-# <a name="cipow"></a>_CIpow
+# <a name="_cipow"></a>_CIpow
 
 スタックのトップ値に基づいて、*x* の *y* 乗を計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIpow();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIpow();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

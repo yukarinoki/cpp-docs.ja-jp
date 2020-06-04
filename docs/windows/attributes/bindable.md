@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167356"
 ---
 # <a name="bindable"></a>bindable
 
@@ -23,17 +23,17 @@ ms.locfileid: "69501825"
 [bindable]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **バインド** C++可能な属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または[propputref](propputref.md)属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
 
 次の MFC サンプルは、**バインド**可能の使用方法を示しています。
 
-- [コントロールのサンプル:MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CIRC サンプル:ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [CIRC サンプル: ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP サンプル:ツールヒントとヘルプが表示された ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP サンプル: ツールヒントとヘルプが表示された ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>例
 
@@ -71,7 +71,7 @@ __interface IPropDemo : IDispatch {
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

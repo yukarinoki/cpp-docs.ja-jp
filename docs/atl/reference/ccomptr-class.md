@@ -1,6 +1,7 @@
 ---
 title: CComPtr クラス
-ms.date: 11/04/2016
+description: Microsoft C++ アクティブ テンプレート ライブラリ (ATL) クラス CComPtr のリファレンス ガイド。
+ms.date: 02/07/2020
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
@@ -8,28 +9,28 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 5e3e510291daa50ddcf5d63451edef0428d66ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855466225db2672755658dcbbc9a266d09e0e7be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259106"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327519"
 ---
 # <a name="ccomptr-class"></a>CComPtr クラス
 
-COM インターフェイス ポインターを管理するためのスマート ポインター クラスです。
+COM インターフェイス ポインターを管理するためのスマート ポインター クラス。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<class T>
 class CComPtr
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-COM インターフェイスを格納するポインターの種類を指定します。
+格納するポインターの型を指定する COM インターフェイス。
 
 ## <a name="members"></a>メンバー
 
@@ -37,29 +38,29 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 |名前|説明|
 |----------|-----------------|
-|[CComPtr::CComPtr](#ccomptr)|コンストラクターです。|
+|[コムプター::CComPtr](#ccomptr)|コンストラクターです。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CComPtr::operator =](#operator_eq)|メンバーのポインターにポインターを割り当てます。|
+|[CComPtr::演算子 =](#operator_eq)|メンバ ポインタにポインタを割り当てます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ATL を使用して`CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインターを管理します。 派生両方[CComPtrBase](../../atl/reference/ccomptrbase-class.md)、両方は、自動参照カウントを実行するとします。
+ATL`CComPtr`は COM インターフェイス ポインタを管理するために[使用し、CComQIPtr](../../atl/reference/ccomqiptr-class.md)を使用します。 どちらも[CComPtrBase](../../atl/reference/ccomptrbase-class.md)から派生し、どちらも自動参照カウントを行います。
 
-`CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.md)クラスは、自動参照カウントを実行することによってメモリ リークを解決できます。  次の関数は両方が、同じ論理操作を実行します。ただし、どのように 2 番目のバージョンがありますエラーの発生を使用して、`CComPtr`クラス。
+`CComPtr` [CComQIPtr クラスと CComQIPtr](../../atl/reference/ccomqiptr-class.md)クラスは、自動参照カウントを実行することでメモリ リークを排除するのに役立ちます。  次の関数は、どちらも同じ論理演算を実行します。 ただし、2 番目のバージョンでは`CComPtr`クラスを使用するため、エラーが発生しにくい可能性があります。
 
 [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
 
 [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
 
-デバッグ ビルドでは、コードのトレースの atlsd.lib をリンクします。
+デバッグ ビルドで、コード トレース用に atlsd.lib をリンクします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
+[コムプトルベース](../../atl/reference/ccomptrbase-class.md)
 
 `CComPtr`
 
@@ -67,11 +68,11 @@ ATL を使用して`CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.m
 
 **ヘッダー:** atlbase.h
 
-##  <a name="ccomptr"></a>  CComPtr::CComPtr
+## <a name="ccomptrccomptr"></a><a name="ccomptr"></a>コムプター::CComPtr
 
 コンストラクターです。
 
-```
+```cpp
 CComPtr() throw ();
 CComPtr(T* lp) throw ();
 CComPtr (const CComPtr<T>& lp) throw ();
@@ -79,31 +80,35 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>パラメーター
 
-*lp*<br/>
-インターフェイス ポインターを初期化するために使用されます。
+*Lp*<br/>
+インターフェイス ポインターを初期化するために使用します。
 
 *T*<br/>
-COM インターフェイスです。
+COM インターフェイス。
 
-##  <a name="operator_eq"></a>  CComPtr::operator =
+### <a name="remarks"></a>解説
+
+引数を受け取るコンストラクターは`AddRef`、引数を受け取る*場合は、null*ポインターでない場合は、lp を呼び出します。 Null 以外の所有オブジェクトは、CComPtr オブジェクトの破棄、または新しいオブジェクトが CComPtr オブジェクトに割り当てられている場合に`Release`呼び出しを受け取ります。
+
+## <a name="ccomptroperator-"></a><a name="operator_eq"></a>CComPtr::演算子 =
 
 代入演算子。
 
-```
+```cpp
 T* operator= (T* lp) throw ();
 T* operator= (const CComPtr<T>& lp) throw ();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-更新されたポインターを返します`CComPtr`オブジェクト
+更新された`CComPtr`オブジェクトへのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この AddRefs 新しいオブジェクトを操作して解放場合は、1 つの既存のオブジェクトが存在します。
+この操作は、新しいオブジェクトを AddRef し、既存のオブジェクトが存在する場合は、そのオブジェクトを解放します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComPtr::CComPtr](#ccomptr)<br/>
+[コムプター::CComPtr](#ccomptr)<br/>
 [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

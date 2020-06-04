@@ -1,12 +1,16 @@
 ---
 title: _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
-apilocation:
+- _o__mbcjistojms
+- _o__mbcjistojms_l
+- _o__mbcjmstojis
+- _o__mbcjmstojis_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbcjistojms
 - _mbcjistojms
@@ -38,14 +46,14 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156825"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918434"
 ---
-# <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
+# <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 
 日本工業標準 (JIS: Japan Industry Standard) 文字と Japan Microsoft (JMS) 文字の間を変換します。
 
@@ -73,7 +81,7 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 変換する文字。
 
 *locale*<br/>
@@ -83,30 +91,32 @@ unsigned int _mbcjmstojis_l(
 
 日本語のロケールで、これらの関数は変換された文字を返すか、または変換可能でない場合は 0 を返します。 日本語以外のロケールで、これらの関数は、渡された文字を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbcjistojms**関数は、日本工業標準 (JIS) 文字を Microsoft の漢字 (Shift JIS) 文字に変換します。 潜在顧客と後続バイトが範囲 0x21 - 0x7E 内にある場合にのみ、文字が変換されます。 先行バイトまたは後続バイトがこの範囲の外の場合**errno**に設定されている**EILSEQ**します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+**_Mbcjistojms**関数は、日本工業規格 (JIS) 文字を Microsoft の漢字 (シフト JIS) 文字に変換します。 この文字は、先行バイトと後続バイトの範囲が 0x21-0x7E の場合にのみ変換されます。 先行バイトまたは評価バイトがこの範囲外の場合、 **errno**は**EILSEQ**に設定されます。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-**_Mbcjmstojis**関数は Shift JIS の文字を JIS の文字に変換します。 先行バイトが 0x81-0x81-0x9f または 0xe0-0xfc の範囲内で 0 xfc と後続バイトが範囲 0x40 ~ 0x7E または 0x80 ~ 0 xfc 場合にのみ、文字が変換されます。 その範囲の一部のコード ポイントには割り当てられた文字がないため、変換できないことに注意してください。
+**_Mbcjmstojis**関数は、シフト jis 文字を jis 文字に変換します。 文字は、先行バイトが 0x81 ~ 0x9F または 0xE0-0xFC の範囲にあり、後続バイトが 0x40 ~ 0x7E または 0x80-0xFC の範囲内にある場合にのみ変換されます。 その範囲の一部のコード ポイントには割り当てられた文字がないため、変換できないことに注意してください。
 
-値*c*が上位の 8 ビットに変換する文字の先行バイトが下位の 8 ビットを表すと後続バイト、16 ビットの値を指定する必要があります。
+値*c*は、変換対象の文字の先行バイトを表し、下位の8ビットが後続バイトを表す16ビット値である必要があります。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbcjistojms**と **_mbcjmstojis**呼び出された**jistojms**と**jmstojis**、それぞれします。 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis**と **_mbcjmstojis_l**代わりに使用する必要があります。
+以前のバージョンでは、 **_mbcjistojms**と **_mbcjmstojis**はそれぞれ**jistojms**と**jmstojis**と呼ばれていました。 代わりに、 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis** 、および **_mbcjmstojis_l**を使用する必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbcjistojms**|\<mbstring.h>|
 |**_mbcjistojms_l**|\<mbstring.h>|
 |**_mbcjmstojis**|\<mbstring.h>|
 |**_mbcjmstojis_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

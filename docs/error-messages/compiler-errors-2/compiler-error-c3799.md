@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
-ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 980683ebc2e086e4c16180f04466af9dbdd49d02
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165653"
 ---
 # <a name="compiler-error-c3799"></a>コンパイラ エラー C3799
 
-インデックス付きプロパティが空のパラメーター リストを含めることはできません。
+インデックス付きプロパティに空のパラメーターリストを指定することはできません
 
-インデックス付きプロパティの宣言が正しくありません。 詳細については、「[方法 :プロパティを使用してC++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+インデックス付きプロパティが正しく宣言されていません。 詳細については、「[方法:/cli でC++プロパティを使用](../../dotnet/how-to-use-properties-in-cpp-cli.md)する」を参照してください。
 
 ## <a name="example"></a>例
 

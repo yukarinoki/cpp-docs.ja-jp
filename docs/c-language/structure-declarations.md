@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157805"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 
@@ -149,7 +149,7 @@ struct somestruct
 
 コンパイラは、構造体の最後のメンバーとして可変長配列またはサイズが 0 の配列を許可します。 これは、使用されるさまざまな状況によって定数配列のサイズが異なるときに便利な場合があります。 このような構造体の宣言は次のようになります。
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
 可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に `sizeof` 演算子を適用すると、可変長配列のサイズには 0 が想定されます。
 

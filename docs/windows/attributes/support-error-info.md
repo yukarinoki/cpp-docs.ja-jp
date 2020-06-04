@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407290"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166147"
 ---
-# <a name="supporterrorinfo"></a>support_error_info
+# <a name="support_error_info"></a>support_error_info
 
 詳細なエラーを返すためのサポートを実装します。
 
@@ -26,17 +26,17 @@ ms.locfileid: "62407290"
 ### <a name="parameters"></a>パラメーター
 
 *error_interface*<br/>
-実装するインターフェイスの識別子`IErrorInfo`します。
+`IErrorInfo`を実装するインターフェイスの識別子。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 エラーのメソッドをサポートするために、オブジェクトの`IErrorInfo`オブジェクトでインターフェイスを実装する必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。
+**support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 オブジェクトがエラーをサポートするには、オブジェクトによって `IErrorInfo` インターフェイスのメソッドが実装されている必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。
 
-この属性により、 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 これは、結果の既定の実装、 `ISupportErrorInfo` 1 つのインターフェイスは、オブジェクトのエラーを生成するときに使用できます。
+この属性により、 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 この結果、`ISupportErrorInfo` の既定の実装が生成され、1つのインターフェイスがオブジェクトに対してエラーを生成するときに使用できます。
 
 ## <a name="example"></a>例
 
-次のコードは、既定のサポートを追加、`ISupportErrorInfo`へのインターフェイス、`CMyClass`オブジェクト。
+次のコードは、`ISupportErrorInfo` インターフェイスの既定のサポートを `CMyClass` オブジェクトに追加します。
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,14 +64,14 @@ class CMyClass
 
 |||
 |-|-|
-|**対象**|**クラス**|
+|**対象**|**class**|
 |**反復可能**|はい|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)

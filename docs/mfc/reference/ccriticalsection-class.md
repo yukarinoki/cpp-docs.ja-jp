@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d79199a332f6930619e6b4995b04bc590b6ea580
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385379"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369362"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection クラス
 
-「クリティカル セクション」を表します: リソースまたはコード セクションへのアクセスには、一度に 1 つのスレッドをできるようにする同期オブジェクト。
+"クリティカル セクション" を表します— 一度に 1 つのスレッドがリソースまたはコードのセクションにアクセスできるようにする同期オブジェクト。
 
 ## <a name="syntax"></a>構文
 
@@ -37,45 +37,45 @@ class CCriticalSection : public CSyncObject
 
 |名前|説明|
 |----------|-----------------|
-|[CCriticalSection::CCriticalSection](#ccriticalsection)|`CCriticalSection` オブジェクトを構築します。|
+|[クリティカルセクション::クリティカルセクション](#ccriticalsection)|`CCriticalSection` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CCriticalSection::Lock](#lock)|アクセスするために使用して、`CCriticalSection`オブジェクト。|
-|[CCriticalSection::Unlock](#unlock)|`CCriticalSection` のオブジェクトを解放します。|
+|[クリティカルセクション::ロック](#lock)|`CCriticalSection`オブジェクトにアクセスするために使用します。|
+|[クリティカルセクション::ロック解除](#unlock)|`CCriticalSection` のオブジェクトを解放します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CCriticalSection::operator CRITICAL_SECTION*](#operator_critical_section_star)|内部の CRITICAL_SECTION オブジェクトへのポインターを取得します。|
+|[クリティカルセクション::オペレーターCRITICAL_SECTION*](#operator_critical_section_star)|内部CRITICAL_SECTION オブジェクトへのポインターを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CCriticalSection::m_sect](#m_sect)|CRITICAL_SECTION オブジェクト。|
+|[危機的なセクション::m_sect](#m_sect)|CRITICAL_SECTIONオブジェクト。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-重要なセクションは、データまたはその他の制御されたリソースの変更を一度に 1 つのスレッドができる場合に便利です。 たとえば、リンク リスト ノードの追加は、一度に 1 つのスレッドでのみ許可するプロセスです。 使用して、`CCriticalSection`だけで、一覧に、一度に 1 つのスレッドがアクセスできるリンクのリストを制御するオブジェクト。
+クリティカル セクションは、一度に 1 つのスレッドだけがデータやその他の制御されたリソースを変更できる場合に役立ちます。 たとえば、リンク リストにノードを追加するプロセスは、一度に 1 つのスレッドだけが許可する必要があります。 オブジェクトを`CCriticalSection`使用してリンク リストを制御すると、一度に 1 つのスレッドだけがリストにアクセスできます。
 
 > [!NOTE]
->  機能、`CCriticalSection`クラスは、実際の Win32 CRITICAL_SECTION オブジェクトによって提供されます。
+> クラスの`CCriticalSection`機能は、実際の Win32 CRITICAL_SECTION オブジェクトによって提供されます。
 
-重要なセクションは、ミュー テックスの代わりに使用されます (を参照してください[CMutex](../../mfc/reference/cmutex-class.md)) と速度が重要なプロセス境界をまたいでリソースは使用されません。
+速度が重要で、リソースがプロセス境界を越えて使用されない場合、ミューテックスの代わりにクリティカル セクションが使用されます[(CMutex](../../mfc/reference/cmutex-class.md)を参照)。
 
-2 つのメソッドを使用するため、`CCriticalSection`オブジェクト: スタンドアロンおよび埋め込みクラスにします。
+`CCriticalSection`オブジェクトを使用する方法には、スタンドアロンとクラスに埋め込まれる 2 つのメソッドがあります。
 
-- スタンドアロンを使用するスタンドアロン メソッド`CCriticalSection`オブジェクト、構築、`CCriticalSection`必要がある場合のオブジェクトします。 呼び出してオブジェクトを明示的にコンス トラクターから正常に返された後にロック[ロック](#lock)します。 呼び出す[Unlock](#unlock)が終わったら、クリティカル セクションにアクセスします。 だれかが、ソース コードを読むにはわかり、このメソッドは、ロックし、アクセスの前後にクリティカル セクションのロックを解除することが、エラーが発生しやすいです。
+- スタンドアロン メソッド スタンドアロン`CCriticalSection`オブジェクトを使用するには、必要なときにオブジェクト`CCriticalSection`を構築します。 コンストラクターから正常に戻った後[、Lock](#lock)の呼び出しでオブジェクトを明示的にロックします。 クリティカル セクションへのアクセスが完了したら[、Unlock](#unlock)を呼び出します。 この方法は、ソースコードを読んでいる人にとって明確ですが、アクセスの前後にクリティカルセクションをロックおよびロック解除することを忘れないようにする必要があります。
 
-   望ましいメソッドは、使用する、 [CSingleLock](../../mfc/reference/csinglelock-class.md)クラス。 また、`Lock`と`Unlock`メソッドは、例外が発生した場合、リソースのロックを解除について心配する必要はありません。
+   より望ましい方法は[、CSingleLock](../../mfc/reference/csinglelock-class.md)クラスを使用することです。 また、`Lock`メソッドと`Unlock`メソッドもありますが、例外が発生した場合にリソースのロックを解除する必要はありません。
 
-- メソッドを追加することで、複数のスレッドでクラスを共有することもできますを埋め込み、 `CCriticalSection`-クラスと必要なときに、データ メンバーをロックする型のデータ メンバー。
+- 埋め込みメソッド -type データ メンバーをクラス`CCriticalSection`に追加し、必要に応じてデータ メンバーをロックすることで、クラスを複数のスレッドと共有することもできます。
 
-使用しての詳細については`CCriticalSection`オブジェクトは、記事をご覧ください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+オブジェクトの使用方法`CCriticalSection`の詳細については、「[マルチスレッド : 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -89,7 +89,7 @@ class CCriticalSection : public CSyncObject
 
 **ヘッダー:** afxmt.h
 
-##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection
+## <a name="ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>クリティカルセクション::クリティカルセクション
 
 `CCriticalSection` オブジェクトを構築します。
 
@@ -97,17 +97,17 @@ class CCriticalSection : public CSyncObject
 CCriticalSection();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アクセスまたはリリースを`CCriticalSection`オブジェクトを作成、 [CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。 場合、`CCriticalSection`オブジェクトがスタンドアロンの使用にされている場合、呼び出しの[ロックの解除](#unlock)メンバー関数は、それを解放します。
+`CCriticalSection`オブジェクトにアクセスまたは解放するには[、CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを作成し、[そのロック](../../mfc/reference/csinglelock-class.md#lock)と[ロック解除](../../mfc/reference/csinglelock-class.md#unlock)のメンバー関数を呼び出します。 オブジェクトが`CCriticalSection`スタンドアロンで使用されている場合は[、Unlock](#unlock)メンバー関数を呼び出して解放します。
 
-コンス トラクターが必要なシステム メモリ、メモリ不足の例外の割り当てに失敗するかどうか (型の[CMemoryException](../../mfc/reference/cmemoryexception-class.md)) が自動的にスローされます。
+コンストラクタが必要なシステム メモリの割り当てに失敗した場合[、(CMemoryException](../../mfc/reference/cmemoryexception-class.md)型の) メモリ例外が自動的にスローされます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CCriticalSection::Lock](#lock)します。
+  [「CCriticalSection::Lock」](#lock)の例を参照してください。
 
-##  <a name="lock"></a>  CCriticalSection::Lock
+## <a name="ccriticalsectionlock"></a><a name="lock"></a>クリティカルセクション::ロック
 
 クリティカル セクション オブジェクトにアクセスするには、このメンバー関数を呼び出します。
 
@@ -118,50 +118,50 @@ BOOL Lock(DWORD dwTimeout);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwTimeout*<br/>
-`Lock` このパラメーターの値は無視されます。
+*タイムアウト*<br/>
+`Lock`このパラメータ値は無視されます。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+関数が正常に終了した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Lock` クリティカル セクション オブジェクトがシグナル状態になるまでは返されませんをブロッキング呼び出し (利用になります)。
+`Lock`は、クリティカル セクション オブジェクトがシグナル状態になるまで戻らないブロッキング呼び出しです (使用可能になります)。
 
-使用することができますがタイムアウトしました待機が必要な場合、 [CMutex](../../mfc/reference/cmutex-class.md)オブジェクトの代わりに、`CCriticalSection`オブジェクト。
+時間指定待機が必要な場合は、オブジェクトの代わりに[CMutex](../../mfc/reference/cmutex-class.md) `CCriticalSection`オブジェクトを使用できます。
 
-場合`Lock`がメモリ不足の例外であり、必要なシステム メモリの割り当てに失敗した (型の[CMemoryException](../../mfc/reference/cmemoryexception-class.md)) が自動的にスローされます。
+必要`Lock`なシステム メモリの割り当てに失敗した場合は[、(CMemoryException](../../mfc/reference/cmemoryexception-class.md)型の) メモリ例外が自動的にスローされます。
 
 ### <a name="example"></a>例
 
-この例では、共有リソースへのアクセスを制御することで、入れ子になったのクリティカル セクションの方法を示します (静的な`_strShared`オブジェクト)、共有を使用して`CCriticalSection`オブジェクト。 `SomeMethod`関数では、安全な方法での共有リソースの更新について説明します。
+この例では、共有`_strShared``CCriticalSection`オブジェクトを使用して共有リソース (静的オブジェクト) へのアクセスを制御することにより、入れ子になったクリティカル セクションのアプローチを示します。 この`SomeMethod`関数は、共有リソースを安全に更新する方法を示します。
 
 [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]
 
-##  <a name="m_sect"></a>  CCriticalSection::m_sect
+## <a name="ccriticalsectionm_sect"></a><a name="m_sect"></a>危機的なセクション::m_sect
 
-すべてで使用されるクリティカル セクション オブジェクトを含む`CCriticalSection`メソッド。
+すべての`CCriticalSection`メソッドで使用されるクリティカル セクション オブジェクトを含みます。
 
 ```
 CRITICAL_SECTION m_sect;
 ```
 
-##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION*
+## <a name="ccriticalsectionoperator-critical_section"></a><a name="operator_critical_section_star"></a>クリティカルセクション::オペレーターCRITICAL_SECTION*
 
-したがって、CRITICAL_SECTION オブジェクトを取得します。
+CRITICAL_SECTION オブジェクトを取得します。
 
 ```
 operator CRITICAL_SECTION*();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-内部の CRITICAL_SECTION オブジェクトへのポインターを取得するには、この関数を呼び出します。
+内部CRITICAL_SECTION オブジェクトへのポインターを取得します。
 
-##  <a name="unlock"></a>  CCriticalSection::Unlock
+## <a name="ccriticalsectionunlock"></a><a name="unlock"></a>クリティカルセクション::ロック解除
 
-リリース、`CCriticalSection`別のスレッドによって使用されるオブジェクト。
+別の`CCriticalSection`スレッドで使用するオブジェクトを解放します。
 
 ```
 BOOL Unlock();
@@ -169,18 +169,18 @@ BOOL Unlock();
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の値、`CCriticalSection`オブジェクトがスレッドによって所有されているし、リリースが成功した。 それ以外の場合に 0 です。
+オブジェクトが`CCriticalSection`スレッドによって所有され、解放が成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合、`CCriticalSection`が使用されているスタンドアロン、`Unlock`クリティカル セクションによって制御されるリソースの使用を完了した直後に呼び出す必要があります。 場合、 [CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを使用している`CCriticalSection::Unlock`ロック オブジェクトのによって呼び出される`Unlock`メンバー関数。
+がスタンドアロン`CCriticalSection`で使用されている場合は、`Unlock`クリティカル セクションによって制御されるリソースの使用が完了した直後に呼び出す必要があります。 [CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトが使用されている場合は`CCriticalSection::Unlock`、ロック オブジェクトの`Unlock`メンバー関数によって呼び出されます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CCriticalSection::Lock](#lock)します。
+  [「CCriticalSection::Lock」](#lock)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CSyncObject クラス](../../mfc/reference/csyncobject-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/csyncobject-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CMutex クラス](../../mfc/reference/cmutex-class.md)

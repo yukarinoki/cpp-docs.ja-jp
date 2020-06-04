@@ -6,15 +6,15 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245353"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425611"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列挙型
 
-## <a name="float_denorm_style"></a> float_denorm_style
+## <a name="float_denorm_style"></a>float_denorm_style
 
 この列挙体では、小さすぎて、正規化された値としては表現できない非正規化された浮動小数点値を表現するために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -29,17 +29,17 @@ enum float_denorm_style {
 
 この列挙型は以下を返します。
 
-- `denorm_indeterminate` 変換時に、非正規化形式の有無を特定できません。 場合、
+- 変換時に非正規化されたフォームの有無を判断できない場合に `denorm_indeterminate` します。
 
-- `denorm_absent` 非正規化形式が存在しない場合は。
+- 非正規化形式が存在しない場合に `denorm_absent` します。
 
-- `denorm_present` 非正規化形式が存在する場合。
+- 非正規化形式が存在する場合は `denorm_present` します。
 
 ### <a name="example"></a>例
 
 この列挙型の値にアクセスする例については、「[numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)」を参照してください。
 
-## <a name="float_round_style"></a> float_round_style
+## <a name="float_round_style"></a>float_round_style
 
 この列挙体では、浮動小数点値を整数値に丸めるために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -56,15 +56,15 @@ enum float_round_style {
 
 この列挙型は以下を返します。
 
-- `round_indeterminate` 場合は、丸め処理を行うメソッドを特定できません。
+- 丸め方法を決定できない場合は `round_indeterminate` します。
 
-- `round_toward_zero` 場合はゼロに向かって丸める。
+- を0方向に丸める場合は `round_toward_zero` します。
 
-- `round_to_nearest` 場合は最も近い整数に丸める。
+- が最も近い整数に丸める場合は `round_to_nearest` します。
 
-- `round_toward_infinity` 場合はゼロから離れる方向に丸める。
+- が0から離れる場合に `round_toward_infinity` します。
 
-- `round_toward_neg_infinity` 場合は負の整数に丸める。
+- 負の整数に丸められた場合は `round_toward_neg_infinity` します。
 
 ### <a name="example"></a>例
 

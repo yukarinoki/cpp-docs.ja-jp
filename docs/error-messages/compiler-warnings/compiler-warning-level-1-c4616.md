@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4616
 ms.assetid: 71e15265-c5bc-42ce-a6a9-4879892472b1
-ms.openlocfilehash: d63e1abffce617a48ac1a5cd8c61feba941b31ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd36d0cdbcaaeca4f84ce85aa80f3bb1fba616a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185907"
 ---
 # <a name="compiler-warning-level-1-c4616"></a>コンパイラの警告 (レベル 1) C4616
 
-\#pragma 警告: 警告番号 'number' 有効なコンパイラ警告ではありません
+\#プラグマ警告: 警告番号 ' number ' は有効なコンパイラ警告ではありません
 
-指定された警告の数、[警告](../../preprocessor/warning.md)プラグマが再割り当てすることはできません。 プラグマは無視されました。
+[警告](../../preprocessor/warning.md)プラグマに指定された警告番号を再割り当てできません。 プラグマは無視されました。
 
 次の例では、C4616 が生成されます。
 
-```
+```cpp
 // C4616.cpp
 // compile with: /W1 /c
 #pragma warning( disable : 0 )   // C4616

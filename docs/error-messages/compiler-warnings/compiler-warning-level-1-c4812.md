@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
-ms.openlocfilehash: 6ba32bf3cad905d686eae78fbfbc198e911e91c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9355886c3ec19e75cc1aa62f8cc41bba9f951d7c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174909"
 ---
 # <a name="compiler-warning-level-1-c4812"></a>コンパイラの警告 (レベル 1) C4812
 
@@ -21,7 +21,7 @@ ms.locfileid: "62406263"
 
 次の例では C4812 が生成されます。
 
-```
+```cpp
 // C4812.cpp
 // compile with: /W1 /c
 template <class T>

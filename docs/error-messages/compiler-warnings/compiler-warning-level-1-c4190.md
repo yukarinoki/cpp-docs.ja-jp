@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-ms.openlocfilehash: 05984594a57878aad8037861a15ac9284ff65192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d110aa70a470382e274546e95599804fa3bc7d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199876"
 ---
 # <a name="compiler-warning-level-1-c4190"></a>コンパイラの警告 (レベル 1) C4190
 
-'identifier1' が指定すると、C リンケージが UDT には C と互換性がない ' identifier2' を返します
+' identifier1 ' には C リンケージが指定されていますが、C と互換性のない UDT ' identifier2 ' が返されます
 
-関数または関数へのポインターは、戻り値の型として、UDT (ユーザー定義型、クラス、構造体、列挙型、または共用体である) を持つと`extern`"C"リンケージです。 これは、有効な場合。
+関数への関数またはポインターには、戻り値の型と `extern` "C" リンケージとして UDT (ユーザー定義型、クラス、構造体、列挙型、または共用体) があります。 次の場合に有効です。
 
-- この関数に対するすべての呼び出しは、C++ から発生します。
+- この関数のすべての呼び出しはC++、から発生します。
 
-- 関数の定義は、C++ では。
+- 関数の定義はにC++あります。
 
 ## <a name="example"></a>例
 

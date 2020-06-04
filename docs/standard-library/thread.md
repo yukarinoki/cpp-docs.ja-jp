@@ -40,11 +40,11 @@ ms.locfileid: "68460071"
 
 |名前|説明|
 |----------|-----------------|
-|[hash 構造体 (C++ 標準ライブラリ)](../standard-library/hash-structure-stl.md)|によって`thread::id`一意に決定される値を返すメンバー関数を定義します。 このメンバー関数は、 [](../standard-library/hash-class.md)型`thread::id`の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。|
+|[hash 構造体 (C++ 標準ライブラリ)](../standard-library/hash-structure-stl.md)|によって`thread::id`一意に決定される値を返すメンバー関数を定義します。 このメンバー関数は、型`thread::id`の値をインデックス値の分布にマッピングするのに適した[ハッシュ](../standard-library/hash-class.md)関数を定義します。|
 
 ### <a name="public-functions"></a>パブリック関数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|現在の実行スレッドを一意に識別します。|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|呼び出し元のスレッドをブロックします。|

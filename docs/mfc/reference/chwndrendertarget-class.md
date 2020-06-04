@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1669d89183cd971e1afe0f05a1bad040f6b07df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752703"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget クラス
 
-ID2D1HwndRenderTarget のラッパーです。
+ID2D1HwndRenderTarget のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -49,61 +49,61 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |名前|説明|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|HWND から CHwndRenderTarget オブジェクトを構築します。|
+|[をクリックします。](#chwndrendertarget)|HWND から CHwndRenderTarget オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|既存の接続は、ターゲット オブジェクトのインターフェイスを表示します。|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|このレンダー ターゲットに関連付けられている HWND がオクルー ジョンかどうかを示します。|
-|[CHwndRenderTarget::Create](#create)|ウィンドウに関連付けられているレンダー ターゲットを作成します。|
-|[CHwndRenderTarget::Detach](#detach)|オブジェクトからのレンダー ターゲットのインターフェイスをデタッチします。|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|レンダリング ターゲットをこれに関連付けられている HWND を返します。|
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|ID2D1HwndRenderTarget インターフェイスを返します。|
-|[CHwndRenderTarget::ReCreate](#recreate)|ウィンドウに関連付けられているレンダー ターゲットを再作成します。|
-|[CHwndRenderTarget::Resize](#resize)|レンダー ターゲットのサイズを指定したピクセルのサイズに変更します。|
+|[CHwndレンダリングターゲット::アタッチ](#attach)|既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。|
+|[ウィンドウ状態を確認します。](#checkwindowstate)|このレンダー ターゲットに関連付けられている HWND が隠されているかどうかを示します。|
+|[CHwndレンダリングターゲット::作成](#create)|ウィンドウに関連付けられたレンダー ターゲットを作成します。|
+|[CHwndRenderターゲット::Dエタッハ](#detach)|オブジェクトからレンダー ターゲット インターフェイスをデタッチします。|
+|[CHwndレンダーターゲット::ゲットワード](#gethwnd)|このレンダー ターゲットに関連付けられている HWND を返します。|
+|[をクリックします。](#gethwndrendertarget)|インターフェイスを返します。|
+|[CHwndレンダーターゲット::再作成](#recreate)|ウィンドウに関連付けられたレンダー ターゲットを再作成します。|
+|[CHwndレンダーターゲット::サイズ変更](#resize)|レンダー ターゲットのサイズを指定したピクセル サイズに変更します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|ID2D1HwndRenderTarget インターフェイスを返します。|
+|[::オペレーター ID2D1Hwndレンダーターゲット*](#operator_id2d1hwndrendertarget_star)|インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|ID2D1HwndRenderTarget オブジェクトへのポインター。|
+|[CHwndレンダーターゲット:m_pHwndRenderTarget](#m_phwndrendertarget)|オブジェクトへのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+[クレンダターゲット](../../mfc/reference/crendertarget-class.md)
 
-[CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
+[ターゲット](../../mfc/reference/chwndrendertarget-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndレンダリングターゲット::アタッチ
 
-既存の接続は、ターゲット オブジェクトのインターフェイスを表示します。
+既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。
 
-```
+```cpp
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pTarget*<br/>
-既存のレンダー ターゲットのインターフェイスです。 NULL にすることはできません。
+*pターゲット*<br/>
+既存のレンダー ターゲット インターフェイス。 NULL にすることはできません。
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>ウィンドウ状態を確認します。
 
-このレンダー ターゲットに関連付けられている HWND がオクルー ジョンかどうかを示します。
+このレンダー ターゲットに関連付けられている HWND が隠されているかどうかを示します。
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
@@ -111,9 +111,9 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 
 ### <a name="return-value"></a>戻り値
 
-これに関連付けられている HWND がレンダー ターゲットであるかどうかを示す値が遮蔽されます。
+このレンダー ターゲットに関連付けられている HWND が閉塞されているかどうかを示す値。
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>をクリックします。
 
 HWND から CHwndRenderTarget オブジェクトを構築します。
 
@@ -123,12 +123,12 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*hwnd*<br/>
-これに関連付けられている HWND レンダー ターゲット
+*Hwnd*<br/>
+このレンダー ターゲットに関連付けられた HWND
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndレンダリングターゲット::作成
 
-ウィンドウに関連付けられているレンダー ターゲットを作成します。
+ウィンドウに関連付けられたレンダー ターゲットを作成します。
 
 ```
 BOOL Create(HWND hWnd);
@@ -137,15 +137,15 @@ BOOL Create(HWND hWnd);
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-これに関連付けられている HWND レンダー ターゲット
+このレンダー ターゲットに関連付けられた HWND
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE が返されます
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderターゲット::Dエタッハ
 
-オブジェクトからのレンダー ターゲットのインターフェイスをデタッチします。
+オブジェクトからレンダー ターゲット インターフェイスをデタッチします。
 
 ```
 ID2D1HwndRenderTarget* Detach();
@@ -153,11 +153,11 @@ ID2D1HwndRenderTarget* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたへのポインターは、ターゲットのインターフェイスをレンダリングします。
+デタッチされたレンダー ターゲット インターフェイスへのポインター。
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndレンダーターゲット::ゲットワード
 
-レンダリング ターゲットをこれに関連付けられている HWND を返します。
+このレンダー ターゲットに関連付けられている HWND を返します。
 
 ```
 HWND GetHwnd() const;
@@ -165,11 +165,11 @@ HWND GetHwnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-これに関連付けられている HWND はレンダー ターゲットです。
+このレンダー ターゲットに関連付けられている HWND。
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>をクリックします。
 
-ID2D1HwndRenderTarget インターフェイスを返します。
+インターフェイスを返します。
 
 ```
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
@@ -177,19 +177,19 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1HwndRenderTarget インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+ID2D1HwndRenderTarget インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndレンダーターゲット:m_pHwndRenderTarget
 
-ID2D1HwndRenderTarget オブジェクトへのポインター。
+オブジェクトへのポインター。
 
 ```
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>::オペレーター ID2D1Hwndレンダーターゲット*
 
-ID2D1HwndRenderTarget インターフェイスを返します。
+インターフェイスを返します。
 
 ```
 operator ID2D1HwndRenderTarget*();
@@ -197,11 +197,11 @@ operator ID2D1HwndRenderTarget*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1HwndRenderTarget インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+ID2D1HwndRenderTarget インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndレンダーターゲット::再作成
 
-ウィンドウに関連付けられているレンダー ターゲットを再作成します。
+ウィンドウに関連付けられたレンダー ターゲットを再作成します。
 
 ```
 BOOL ReCreate(HWND hWnd);
@@ -210,15 +210,15 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-これに関連付けられている HWND レンダー ターゲット
+このレンダー ターゲットに関連付けられた HWND
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE を返します。
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndレンダーターゲット::サイズ変更
 
-レンダー ターゲットのサイズを指定したピクセルのサイズに変更します。
+レンダー ターゲットのサイズを指定したピクセル サイズに変更します。
 
 ```
 BOOL Resize(const CD2DSizeU& size);
@@ -227,11 +227,11 @@ BOOL Resize(const CD2DSizeU& size);
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-デバイス ピクセル単位で、レンダー ターゲットの新しいサイズ
+レンダー ターゲットの新しいサイズ (デバイス ピクセル単位)
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE を返します。
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

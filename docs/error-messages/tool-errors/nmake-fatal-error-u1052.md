@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193551"
 ---
 # <a name="nmake-fatal-error-u1052"></a>NMAKE の致命的なエラー U1052
 
-> ファイル '*filename*' が見つかりません。
+> ファイル '*filename*' が見つかりません
 
-(Nmake の) は、次のいずれかで指定されたファイルを見つけられませんでした。
+NMAKE は、次のいずれかで指定されたファイルを見つけることができませんでした:
 
 - **/F**オプション
 
-- **!含める**プリプロセス ディレクティブ
+- **!** プリプロセスディレクティブを含める
 
-- アット マーク (**\@**) 応答ファイルの指定子
+- 応答ファイルのアットマーク ( **\@** ) 指定子
 
 ファイルが存在し、ファイル名のスペルが正しいことを確認します。

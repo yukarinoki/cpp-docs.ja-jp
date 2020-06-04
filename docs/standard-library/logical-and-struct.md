@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351690"
 ---
-# <a name="logicaland-struct"></a>logical_and 構造体
+# <a name="logical_and-struct"></a>logical_and 構造体
 
 引数に対して論理積演算 (`operator&&`) を実行する定義済みの関数オブジェクト。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,20 +39,20 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*\
+*タイプ*, *T*, *U*\
 指定または推論された型のオペランドを受け取る `operator&&` をサポートする任意の型。
 
 *左*\
-論理積演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+論理積演算の左オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*T*の左辺値と右辺値参照引数を完全に転送します。
 
 *そうです*\
-論理積演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+論理積演算の右オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*U*の左辺値と右辺値参照引数を完全に転送します。
 
 ## <a name="return-value"></a>戻り値
 
 `Left && Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator&&` によって返された型が含まれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ユーザー定義型の場合、オペランドの評価のショートサーキットはありません。 どちらの引数も `operator&&` によって評価されます。
 
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

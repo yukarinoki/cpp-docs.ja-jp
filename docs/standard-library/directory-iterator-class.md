@@ -32,7 +32,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68454426"
 ---
-# <a name="directoryiterator-class"></a>directory_iterator クラス
+# <a name="directory_iterator-class"></a>directory_iterator クラス
 
 ディレクトリのファイル名を走査する入力反復子を表します。 反復子`X`の場合、式`*X`は、ファイル名をラップ`directory_entry`するクラスのオブジェクトと、その状態に関する既知のものに評価されます。
 
@@ -70,7 +70,7 @@ class directory_iterator;
 |-|-|
 |[operator!=](#op_neq)|`!(*this == right)` を返します。|
 |[operator=](#op_as)|この既定のメンバー代入演算子は想定どおりに動作します。|
-|[operator==](#op_eq)|*との*両方`*this`がシーケンス末尾の反復子であるか、両方がシーケンスの末尾の反復子でない場合にのみ、 **true**を返します。|
+|[operator==](#op_eq)|との両方`*this`がシーケンス末尾の反復子であるか、*両方がシーケンス*の末尾の反復子でない場合にのみ、true を返します。|
 |[operator*](#op_star)|`myentry` を返します。|
 |[operator->](#op_cast)|`&**this` を返します。|
 |[operator++](#op_increment)|を`increment()`呼び出し、を`*this`返すか、またはオブジェクトのコピーを作成`increment()`してを呼び出し、そのコピーを返します。|
@@ -126,7 +126,7 @@ bool operator!=(const directory_iterator& right) const;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-iterator-class.md)比較する`directory_iterator`directory_iterator。
+と比較する`directory_iterator`[directory_iterator](../standard-library/directory-iterator-class.md)。
 
 ## <a name="op_as"></a>directory_iterator:: operator =
 
@@ -153,7 +153,7 @@ bool operator==(const directory_iterator& right) const;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-iterator-class.md)比較する`directory_iterator`directory_iterator。
+と比較する`directory_iterator`[directory_iterator](../standard-library/directory-iterator-class.md)。
 
 ## <a name="op_star"></a>directory_iterator:: operator *
 

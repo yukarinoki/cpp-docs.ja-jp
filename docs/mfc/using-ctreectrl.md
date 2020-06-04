@@ -1,26 +1,24 @@
 ---
 title: CTreeCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411657"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442195"
 ---
 # <a name="using-ctreectrl"></a>CTreeCtrl の使い方
 
-ツリー コントロール、クラスによって表される[CTreeCtrl](../mfc/reference/ctreectrl-class.md)ディスクに見出し、ドキュメントのインデックス、またはファイルとディレクトリ内のエントリなどの項目の階層リストを表示するウィンドウです。 各項目はラベルとオプションのビットマップ イメージと、各項目に関連付けられているサブ項目の一覧を持つことができます。 項目をクリックすると、ユーザーが展開し、関連するサブ項目の一覧を折りたたみできます。 ファイル エクスプ ローラーの左側のウィンドウで、ディレクトリ ツリーは、ツリー コントロールの例を示します。
+クラス[CTreeCtrl](../mfc/reference/ctreectrl-class.md)によって表されるツリーコントロールは、ドキュメント内の見出し、インデックス内のエントリ、ディスク上のファイルやディレクトリなどの項目の階層リストを表示するウィンドウです。 各項目は、ラベルとオプションのビットマップイメージで構成され、各項目に関連付けられているサブ項目のリストを持つことができます。 項目をクリックすると、関連付けられているサブ項目のリストを展開したり折りたたんだりできます。 エクスプローラーの左側のウィンドウにあるディレクトリツリーは、ツリーコントロールの一例です。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [CTreeCtrl とCTreeView の比較](../mfc/ctreectrl-vs-ctreeview.md)
+- [CTreeCtrl と CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
 - [ツリー コントロールの使い方](../mfc/using-tree-controls.md)
 
@@ -48,6 +46,6 @@ ms.locfileid: "62411657"
 
 - [ツリー コントロールの通知メッセージ](../mfc/tree-control-notification-messages.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

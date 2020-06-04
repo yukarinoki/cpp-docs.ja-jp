@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2224
 ms.assetid: 27b93bbf-4ce7-47a3-a9c4-f4fbed689bdf
-ms.openlocfilehash: 8660f45267a21eb0914cc54dd2c4137fd5a336e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 620d28bfed178f3bb38df268ae851412bf6b0815
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395535"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206573"
 ---
 # <a name="compiler-error-c2224"></a>コンパイラ エラー C2224
 
-'.identifier' の左側が構造体、共用体型をいる必要があります。
+' identifier ' の左側は構造体型または共用体型でなければなりません
 
-ピリオド (.) の左側のオペランドがクラス、構造体または共用体。
+ピリオド (.) の左側のオペランドが、クラス、構造体、または共用体ではありません。
 
-このエラーは、未定義の変数には、左側のオペランドによって発生することができます (したがって入力`int`)。
+このエラーは、未定義の変数 (したがって、型 `int`) である左オペランドによって発生することがあります。

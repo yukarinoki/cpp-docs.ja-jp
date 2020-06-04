@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198667"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>コンパイラの警告 (レベル 3) C4398
 
-> '*変数*': プロセスごとのグローバル オブジェクトは複数の appdomain と共に動作しない可能性があります、__declspec(appdomain) を使用してみてください。
+> '*variable*': プロセスごとのグローバルオブジェクトは、複数の appdomain で正しく機能しない可能性があります。__declspec (appdomain) の使用を検討する
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-仮想関数と[_ _clrcall](../../cpp/clrcall.md)の作成をネイティブ型で規則を呼び出すと、アプリケーション ドメインの vtable ごと。 複数のアプリケーション ドメインで使用する場合は、このような変数が適切に修正されない場合があります。
+ネイティブ型で[__clrcall](../../cpp/clrcall.md)呼び出し規約を持つ仮想関数は、アプリケーションドメイン vtable ごとにを作成します。 このような変数は、複数のアプリケーションドメインで使用されている場合、正しく修正されない可能性があります。
 
-この警告を解決するには、変数を明示的にマークすることによって`__declspec(appdomain)`します。 Visual Studio 2017 の前に Visual Studio のバージョンでは、この警告を解決でコンパイルする **/clr: 純粋な**、appdomain ごとのグローバル変数は既定では、これです。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+この警告を解決するには、変数 `__declspec(appdomain)`に明示的にマークします。 Visual Studio 2017 より前のバージョンの Visual Studio では、 **/clr: pure**を指定してコンパイルすることで、この警告を解決できます。これにより、既定で appdomain ごとにグローバル変数が作成されます。 **/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)します。
+詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「[アプリケーションドメインとビジュアルC++ ](../../dotnet/application-domains-and-visual-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 

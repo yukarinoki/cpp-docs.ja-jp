@@ -5,24 +5,24 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7053917ebb3cebfe298e9d89f28e357dc7fdbd83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148212"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214904"
 ---
 # <a name="custom-attributes-c"></a>カスタム属性 (C++)
 
-カスタム属性は、ユーザーが、メタデータを拡張できる厳密に型指定された手法です。 このトピックでは、属性が使用されています: パラメーターとターゲットを指定します。
+カスタム属性は、ユーザーがメタデータを拡張できるようにする、厳密に型指定された手法です。 このトピックでは、パラメーターとターゲットを指定する属性の使用について説明します。
 
-カスタム属性の定義についてを参照してください。
+新しいカスタム属性を定義する方法の詳細については、「」を参照してください。
 
 - [ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 
-- [属性](attribute.md)(非推奨の構文を参照)。
+- [属性](attribute.md)(非推奨の構文)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [attribute](attribute.md)<br/>
 [カスタム属性 (C++)](custom-attributes-cpp.md)

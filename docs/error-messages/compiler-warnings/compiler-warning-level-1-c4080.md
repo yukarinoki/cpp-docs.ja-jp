@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4080
 ms.assetid: 964fb3f4-b9fd-450b-aa23-35cece126172
-ms.openlocfilehash: a91963d524300c8768768a8a4615b1ab27e033e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4e216ff455404514e1cd5f76b820111dba83a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200318"
 ---
 # <a name="compiler-warning-level-1-c4080"></a>コンパイラの警告 (レベル 1) C4080
 
@@ -21,7 +21,7 @@ ms.locfileid: "62256285"
 
 次の例では C4080 が生成されます。
 
-```
+```cpp
 // C4080.cpp
 // compile with: /W1
 extern "C" void func(void);

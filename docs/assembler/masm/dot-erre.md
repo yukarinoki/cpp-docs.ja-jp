@@ -1,26 +1,27 @@
 ---
 title: .ERRE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRE
 helpviewer_keywords:
 - .ERRE directive
 ms.assetid: cfb5a4bb-4488-4101-bd06-63ba43b1473e
-ms.openlocfilehash: 6e031b64aff2421b8908ed537b9c37e42b8ebc4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab432c5d1dc0a87e5de71688196332a56367b3ec
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185228"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313484"
 ---
 # <a name="erre"></a>.ERRE
 
-エラーが発生*式*が false (0)。
+*Expression*が false (0) の場合、エラーが生成されます。
 
 ## <a name="syntax"></a>構文
 
-> .ERRE 式 [] メッセージ]
+> **..Erre** *expression* ⟦ __、__ *message*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

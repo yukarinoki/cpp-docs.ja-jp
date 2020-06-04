@@ -5,29 +5,29 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380000deef40cdfaf18bde4bf9e5cc626c518007
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336822"
 ---
 # <a name="mfc-database-classes"></a>MFC データベース クラス
 
 > [!NOTE]
->  ODBC Microsoft ODBC Driver 13 を使用して (またはそれ以降) を使用してをお勧めします。 新しいプロジェクトの SQL Server 用です。 DAO がサポートされていません。
+> 新しいプロジェクトでは、SQL Server の ODBC ドライバ 13 (またはそれ以降) を使用して ODBC を使用することをお勧めします。 DAO はサポートされなくなりました。
 
 詳細については、次のトピックを参照してください。
 
-- [データ アクセス テクノロジのロードマップ](https://msdn.microsoft.com/library/ms810810.aspx)
+- [Microsoft SQL Server のドライバー履歴](/sql/connect/connect-history)
 
-- [ODBC Driver 13.1 for SQL Server がリリースされた](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)を新しいアプリケーションを作成したり、SQL Server 2016 の新機能を活用するために必要とする既存のアプリケーションを拡張したり、Microsoft ODBC Driver 13 for SQL Server を使用する必要があります。
+- [SQL Server 用 ODBC ドライバ 13.1 がリリースされました](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)SQL Server 用の MICROSOFT ODBC ドライバー 13 を使用して、新しいアプリケーションを作成するか、新しい SQL Server 2016 の機能を利用する必要がある既存のアプリケーションを強化する必要があります。
 
 - [ODBC と MFC](../data/odbc/odbc-and-mfc.md)
 
-- [ドキュメントとビューを用いたデータベース クラス](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [ドキュメントとビューでのデータベース クラスの使用](../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [ドキュメントとビューを用いないデータベース クラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
+- [ドキュメントとビューを使用しないデータベース クラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,22 +1,22 @@
 ---
-title: CMFCDragFrameImpl クラス
+title: クラスをドラッグします。
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 527fd089962e05c44a7e47b1ae52345116da4470
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348615"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752444"
 ---
-# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl クラス
+# <a name="cmfcdragframeimpl-class"></a>クラスをドラッグします。
 
-`CMFCDragFrameImpl`クラスは、ユーザーが標準ドッキング モードのペインをドラッグしたときに表示されるドラッグ四角形を描画します。
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+この`CMFCDragFrameImpl`クラスは、ユーザーが標準ドック モードでペインをドラッグしたときに表示されるドラッグ四角形を描画します。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -24,11 +24,11 @@ ms.locfileid: "62348615"
 class CMFCDragFrameImpl
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスのオブジェクトがそれぞれに埋め込まれた[CPane クラス](../../mfc/reference/cpane-class.md)オブジェクト。 使用してそのため、各ペイン、`CanFloat`メソッドが、ユーザーがドラッグしたときに、ドラッグ四角形を表示します。
+このクラスのオブジェクトは、各[CPane クラス](../../mfc/reference/cpane-class.md)オブジェクトに埋め込まれます。 したがって、メソッドを使用する各`CanFloat`ペインは、ユーザーがドラッグしたときにドラッグ四角形を表示します。
 
-使用してドラッグ四角形の幅を制御する[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)と[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)します。
+ドラッグ長方形の厚みは[、AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)と[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)を使用して制御できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -38,45 +38,45 @@ class CMFCDragFrameImpl
 
 **ヘッダー:** afxdragframeimpl.h
 
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCドラッグフレームインプル::エンドドロードラッグフレーム
 
-```
+```cpp
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bClearInternalRects*<br/>
+[in]*内部レクトをクリアする*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="init"></a>  CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCドラッグフレームインプル::イニト
 
-```
+```cpp
 void Init(CWnd* pDraggedWnd);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDraggedWnd*<br/>
+[in]*プリドウンド*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCドラッグフレームインプル::移動ドラッグフレーム
 
-```
+```cpp
 void MoveDragFrame(BOOL bForceMove = FALSE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *bForceMove*<br/>
+[in]*を動かす*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCドラッグフレームインプル::Pレースタブプレドッキング
 
-```
+```cpp
 void PlaceTabPreDocking(
     CBaseTabbedPane* pTabbedBar,
     BOOL bFirstTime);
@@ -86,36 +86,36 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *pTabbedBar*<br/>
+[in]*pタブ付きバー*<br/>
 
-[in]*bFirstTime*<br/>
+[in]*bファーストタイム*<br/>
 
-[in]*pCBarToPlaceOn*<br/>
+[in]*pCBarToプレープレイソン*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCドラッグフレームインプル::タブプレドッキングの削除
 
-```
+```cpp
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pOldTargetBar*<br/>
+[in]*ターゲット バー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCドラッグフレームインプル::リセットステート
 
-```
+```cpp
 void ResetState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CPane クラス](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

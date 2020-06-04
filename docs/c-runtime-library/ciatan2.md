@@ -1,9 +1,10 @@
 ---
 title: _CIatan2
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIatan2
-apilocation:
+- _o__CIatan2
+api_location:
 - msvcr80.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIatan2
 - _CIatan2
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 914af27921d5fe023a101c4aeec3a808241dcb79
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749179"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918105"
 ---
-# <a name="ciatan2"></a>_CIatan2
+# <a name="_ciatan2"></a>_CIatan2
 
-*x* / *y* のアーク タンジェントを計算します。*x*と*y* は、スタックの最上位の値です。
+*X* / *y*のアークタンジェントを計算します。 *x*と*y*は、スタックの一番上の値です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIatan2();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIatan2();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

@@ -1,11 +1,13 @@
 ---
 title: cbrt、cbrtf、cbrtl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+- _o_cbrt
+- _o_cbrtf
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341097"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912102"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -65,23 +71,25 @@ long double cbrtl(
 
 ## <a name="return-value"></a>戻り値
 
-**Cbrt**関数の立方根を返します*x*します。
+**Cbrt**関数は、 *x*の cube ルートを返します。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|none|
+|± ∞、QNAN、IND|なし|なし|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cbrt**を受け取る**float**または**長い** **二重**型。 C プログラムで**cbrt**は**二重**します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**cbrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cbrt**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**、 **cbrtf**、 **cbrtf**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

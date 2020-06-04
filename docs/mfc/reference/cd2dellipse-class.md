@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369265"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse クラス
 
@@ -31,7 +31,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DEllipse:: CD2DEllipse](#cd2dellipse)|オーバーロードされます。 オブジェクトから`CD2DEllipse` `D2D1_ELLIPSE`オブジェクトを構築します。|
+|[CD2D楕円::CD2D楕円](#cd2dellipse)|オーバーロードされます。 オブジェクトから`D2D1_ELLIPSE`オブジェクト`CD2DEllipse`を構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,9 +41,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxrendertarget
+**ヘッダー:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse:: CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2D楕円::CD2D楕円
 
 CD2DRectF オブジェクトから CD2DEllipse オブジェクトを構築します。
 
@@ -59,16 +59,16 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
-ソース四角形
+*Rect*<br/>
+ソース矩形
 
-*楕円*<br/>
-変換元の楕円
+*ellipse*<br/>
+ソース楕円
 
-*ptCenter*<br/>
+*ptセンター*<br/>
 楕円の中心点。
 
-*sizeRadius*<br/>
+*サイズ半径*<br/>
 楕円の X 半径と Y 半径。
 
 ## <a name="see-also"></a>関連項目

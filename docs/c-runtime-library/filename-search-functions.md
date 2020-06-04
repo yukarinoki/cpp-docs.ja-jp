@@ -1,7 +1,7 @@
 ---
 title: ファイル名検索関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740554"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300311"
 ---
 # <a name="filename-search-functions"></a>ファイル名検索関数
 
@@ -34,7 +37,7 @@ ms.locfileid: "57740554"
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 `_findfirst` 関数は `filespec` 引数で指定されたファイルと一致するファイル名の最初のインスタンスに関する情報を提供します。 `filespec` では、ホスト オペレーティング システムでサポートされているいかなるワイルドカード文字の組み合わせも使用できます。
 
@@ -95,17 +98,17 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 
 |構造体|時刻型|ファイル サイズの型|
 |---------------|---------------|--------------------|
-|`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
-|`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
-|`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
+|`_finddata_t`、`_wfinddata_t`|`__time64_t`|`_fsize_t`|
+|`_finddata32_t`、`_wfinddata32_t`|`__time32_t`|`_fsize_t`|
+|`__finddata64_t`、`__wfinddata64_t`|`__time64_t`|`__int64`|
+|`_finddata32i64_t`、`_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`_finddata64i32_t`、`_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
 `_fsize_t` は `unsigned long` (32 ビット) の `typedef` です。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension

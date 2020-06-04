@@ -1,12 +1,16 @@
 ---
 title: _isctype、iswctype、_isctype_l、_iswctype_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+- _o__isctype
+- _o__isctype_l
+- _o__iswctype_l
+- _o_iswctype
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +46,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918953"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-テスト*c* ctype プロパティで指定された、 *desc*引数。 有効な各値に対して*desc*、同等のワイド文字分類ルーチンがあります。
+*Desc*引数で指定された ctype プロパティについて*c*をテストします。 *Desc*の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -74,10 +82,10 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
-*desc*<br/>
+*順*<br/>
 テストするプロパティ。 これは通常、ctype または [wctype](wctype.md) を使用して取得されます。
 
 *locale*<br/>
@@ -85,27 +93,31 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_isctype**と**iswctype**場合は、0 以外の値を返す*c*で指定されたプロパティを持つ*desc*で現在のロケールまたはそうでない場合は 0。 これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールで*desc*によって指定されたプロパティが*c*にある場合、 **_isctype**と**iswctype**は0以外の値を返します。それ以外の場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作 **_isctype**と **_isctype_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **_isctype**と **_isctype_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|適用なし|**_isctype**|適用なし|**_iswctype**|
-|適用なし|**_isctype_l**|適用なし|**_iswctype_l**|
+|該当なし|**_isctype**|該当なし|**_iswctype**|
+|該当なし|**_isctype_l**|該当なし|**_iswctype_l**|
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h> または \<wchar.h>|
 |**_isctype_l**|\<ctype.h>|
 |**_iswctype_l**|\<ctype.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -114,5 +126,5 @@ int _iswctype_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

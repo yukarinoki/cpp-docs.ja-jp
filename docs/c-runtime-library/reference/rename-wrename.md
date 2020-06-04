@@ -1,10 +1,12 @@
 ---
 title: rename、_wrename
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rename
 - _wrename
-apilocation:
+- _o__wrename
+- _o_rename
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +40,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357501"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917799"
 ---
-# <a name="rename-wrename"></a>rename、_wrename
+# <a name="rename-_wrename"></a>rename、_wrename
 
 ファイルまたはディレクトリの名前を変更します。
 
@@ -68,7 +74,7 @@ int _wrename(
 
 ## <a name="return-value"></a>戻り値
 
-名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラー関数は 0 以外の値を返します。 設定および**errno**値は次のいずれかに。
+名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno**を次の値のいずれかに設定します。
 
 |errno の値|条件|
 |-|-|
@@ -78,11 +84,13 @@ int _wrename(
 
 その他の返される可能性のある戻り値については、「[_doserrno、_errno、syserrlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **rename** 関数は、*oldname* によって指定されたファイルまたはディレクトリの名前を *newname* によって指定された名前に変更します。 古い名前は、既存のファイルまたはディレクトリのパスである必要があります。 新しい名前を既存のファイルまたはディレクトリのパスにすることはできません。 **rename** を使用して、*newname* 引数で別のパスを指定することにより、1 つのディレクトリまたはデバイスから別のディレクトリまたはデバイスにファイルを移動することができます。 ただし、**rename** を使用してディレクトリを移動することはできません。 ディレクトリの名前を変更することはできますが、移動はできません。
 
-**_wrename**のワイド文字バージョンは、 **_rename**; 引数 **_wrename**はワイド文字列です。 **_wrename**と **_rename**動作は同じです。
+**_wrename**は **_rename**のワイド文字バージョンです。**_wrename**する引数はワイド文字列です。 **_wrename**と **_rename**は同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -92,12 +100,12 @@ int _wrename(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**rename**|\<io.h> または \<stdio.h>|
 |**_wrename**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

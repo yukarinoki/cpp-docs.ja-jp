@@ -1,10 +1,11 @@
 ---
 title: sin、sinf、sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948071"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915769"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -69,22 +71,24 @@ long double sin(long double x);  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|なし|_DOMAIN|
+|± QNAN、IND|None|_DOMAIN|
 |± ∞ (sin、sinf、sinl)|INVALID|_DOMAIN|
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sin**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sin**は常にを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinf**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

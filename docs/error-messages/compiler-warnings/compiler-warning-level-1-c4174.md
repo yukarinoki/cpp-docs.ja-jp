@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4174
 ms.assetid: 63301e51-24bc-43c4-bb11-252f7d513e9e
-ms.openlocfilehash: cc55318c8ef54f7d7f69e93d72717f54578ba576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f572886a24b8bb8f16ba504a561ae37cab3b6aaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163456"
 ---
 # <a name="compiler-warning-level-1-c4174"></a>コンパイラの警告 (レベル 1) C4174
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391687"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4174.cpp
 // compile with: /W1
 #pragma component(info)  // C4174; unknown

@@ -1,6 +1,6 @@
 ---
-title: itoa 関数 (_d)
-ms.date: 08/19/2019
+title: _itoa, _itow 関数
+ms.date: 4/2/2020
 api_name:
 - itoa
 - _itoa
@@ -15,6 +15,16 @@ api_name:
 - _ultow
 - _i64tow
 - _ui64tow
+- _o__i64toa
+- _o__i64tow
+- _o__itoa
+- _o__itow
+- _o__ltoa
+- _o__ltow
+- _o__ui64toa
+- _o__ui64tow
+- _o__ultoa
+- _o__ultow
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,6 +38,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -102,16 +113,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953572"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914660"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-整数を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_itoa_s、_t 関数」を](itoa-s-itow-s.md)参照してください。
+整数を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_itoa_s、_itow_s functions」を](itoa-s-itow-s.md)参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -128,7 +139,7 @@ wchar_t * _ultow( unsigned long value, wchar_t *buffer, int radix );
 wchar_t * _i64tow( long long value, wchar_t *buffer, int radix );
 wchar_t * _ui64tow( unsigned long long value, wchar_t *buffer, int radix );
 
-// These Posix versions of the functions have deprecated names:
+// These POSIX versions of the functions have deprecated names:
 char * itoa( int value, char *buffer, int radix );
 char * ltoa( long value, char *buffer, int radix );
 char * ultoa( unsigned long value, char *buffer, int radix );
@@ -171,40 +182,42 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *value*<br/>
 変換される数値。
 
-*バッファー*<br/>
+*格納*<br/>
 変換の結果を保持するバッファー。
 
-*radix*<br/>
+*ベース*<br/>
 *値*の変換に使用するベース。2-36 の範囲内である必要があります。
 
 *size*<br/>
-文字型の単位でのバッファーの長さ。 このパラメーターは、のC++ *buffer*引数から推論されます。
+文字型の単位でのバッファーの長さ。 このパラメーターは、C++ の*buffer*引数から推論されます。
 
 ## <a name="return-value"></a>戻り値
 
 これらの各関数は、*バッファー*へのポインターを返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_I64toa**関数と **_ltoa**関数は、指定された*値*引数の数字を null で終わる文字列に**変換し、** その結果を格納します (の場合は最大33文字に**なります** **)。** 、 **_ltoa** **、および** **_i64toa**の場合は、65の場合は、*バッファー*内の場合は)。 場合*基数*が10、*値*が負の場合、格納されている文字列の最初の文字 **-** は負符号 () です。 **_Ltow** **、** _i64tow、および**ui64の**各関数**は、それぞれ**、 **、** _ltoa、_i64toa、およびの各関数のワイド文字バージョン**です (_t**)。これらの関数は、それぞれ、、および**ui64toa**です。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、および **_ui64toa**の各関数は、指定され*た値*引数の数字を null で終わる文字列に変換し、結果を格納*します (* **_itoa**、 **_ltoa**、**および _ultoa**の場合は最大33文字、_i64toa の場合は65、 **_ui64toa の場合**は **)。** 場合*基数*が10、*値*が負の場合、格納されている文字列の最初の文字**-** は負符号 () です。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**、および **_ui64tow**の各関数は、それぞれ **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**のワイド文字バージョンです。
 
 > [!IMPORTANT]
 > これらの関数は、小さすぎるバッファーの末尾を越えて書き込むことができます。 バッファーオーバーランを防ぐには、*バッファー*が、変換された数字と末尾の null 文字および符号文字を保持するのに十分な大きさであることを確認します。 これらの関数を誤用すると、コードに重大なセキュリティ上の問題が発生する可能性があります。
 
-既定では、これらの関数によって、セキュリティ上の問題が発生する可能性があるため、非推奨の警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が発生します。**この関数または変数は安全でない可能性があります。代わりに** safe_function**を使用することを検討してください。廃止を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 警告メッセージによって提案された*safe_function*を使用するようにソースコードを変更することをお勧めします。 より安全な関数では、指定されたバッファーサイズよりも多くの文字を書き込むことはできません。 詳細については、「 [_itoa_s, _t 関数](itoa-s-itow-s.md)」を参照してください。
+セキュリティ上の問題が発生する可能性があるため、既定では、これらの関数は非推奨の警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)を引き起こします。**この関数または変数は安全でない可能性があります。代わりに safe_function の使用を検討** *safe_function*してください **。廃止を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 警告メッセージによって提案された*safe_function*を使用するようにソースコードを変更することをお勧めします。 より安全な関数では、指定されたバッファーサイズよりも多くの文字を書き込むことはできません。 詳細については、「 [_itoa_s」、「_itow_s functions](itoa-s-itow-s.md)」を参照してください。
 
-これらの関数を非推奨の警告なしで使用するには、CRT ヘッダーを含める前に **_CRT_SECURE_NO_WARNINGS**プリプロセッサマクロを定義します。 これは、 **/D_CRT_SECURE_NO_WARNINGS**コンパイラオプションを**cl**コマンドに追加することによって、開発者コマンドプロンプトでコマンドラインで実行できます。 それ以外の場合は、ソースファイルでマクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーインクルードファイル (Visual Studio 2017 以前の場合は*stdafx.h* ) の先頭にマクロを定義*します。* ソースコードでマクロを定義するには、次の例のように、CRT ヘッダーを含める前に **#define**ディレクティブを使用します。
+これらの関数を非推奨の警告なしで使用するには、CRT ヘッダーを含める前に **_CRT_SECURE_NO_WARNINGS**プリプロセッサマクロを定義します。 この操作は、開発者コマンドプロンプトで **/D_CRT_SECURE_NO_WARNINGS**コンパイラオプションを**cl**コマンドに追加することによって、コマンドラインで行うことができます。 それ以外の場合は、ソースファイルでマクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーインクルードファイル (Visual Studio 2017 以前の場合は*stdafx.h* ) の先頭にマクロを定義*します。* ソースコードでマクロを定義するには、次の例のように、CRT ヘッダーを含める前に **#define**ディレクティブを使用します。
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-でC++は、これらの関数には、より安全な対応するテンプレートオーバーロードがあります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数には、より安全な対応するテンプレートのオーバーロードがあります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-Posix 名**itoa**、 **ltoa**、および**ultoa** **は、** **_ltoa** **関数の**エイリアスとして存在します。 Posix 名は、ISO C の実装固有の関数名規則に従っていないため、非推奨とされます。既定では、これらの関数は廃止警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)を発生させます。**この項目の POSIX 名は非推奨とされます。代わりに、ISO C とC++準拠する名前:** *新しい名前*を使用します。 これらの関数、 **_itoa_s**、 **_ltoa_s**、または **_ultoa_s**のより安全なバージョンを使用するようにソースコードを変更することをお勧めします。 詳細については、「 [_itoa_s, _t 関数](itoa-s-itow-s.md)」を参照してください。
+POSIX 名**itoa**、 **ltoa**、および**ultoa**は、 **_itoa**、 **_ltoa**、および **_ultoa**関数のエイリアスとして存在します。 POSIX 名は、ISO C の実装固有のグローバル関数名規則に従っていないため、非推奨とされます。既定では、これらの関数は非推奨の警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)を引き起こします。**この項目の POSIX 名は非推奨とされます。代わりに、ISO C および C++ に準拠する名前:** *new_name*を使用します。 これらの関数、 **_itoa_s**、 **_ltoa_s**、または **_ultoa_s**のより安全なバージョンを使用するようにソースコードを変更することをお勧めします。 詳細については、「 [_itoa_s」、「_itow_s functions](itoa-s-itow-s.md)」を参照してください。
 
-ソースコードの移植性を確保するために、コードで Posix 名を保持することをお勧めします。 これらの関数を非推奨の警告なしで使用するには、CRT ヘッダーを含める前に、 **_CRT_NONSTDC_NO_WARNINGS**と **_CRT_SECURE_NO_WARNINGS**の両方のプリプロセッサマクロを定義します。 これは、 **/D_CRT_SECURE_NO_WARNINGS**および **/D_CRT_NONSTDC_NO_WARNINGS**コンパイラオプションを**cl**コマンドに追加することによって、開発者コマンドプロンプトでコマンドラインで実行できます。 それ以外の場合は、ソースファイルでマクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーインクルードファイルの先頭にマクロを定義します。 ソースコードでマクロを定義するには、次の例のように、CRT ヘッダーを含める前に **#define**ディレクティブを使用します。
+ソースコードの移植性を確保するために、コードで POSIX 名を保持することをお勧めします。 これらの関数を非推奨の警告なしで使用するには、CRT ヘッダーを含める前に、 **_CRT_NONSTDC_NO_WARNINGS**と **_CRT_SECURE_NO_WARNINGS**のプリプロセッサマクロの両方を定義します。 この操作は、コマンドラインで **/D_CRT_SECURE_NO_WARNINGS**および **/D_CRT_NONSTDC_NO_WARNINGS**コンパイラオプションを**cl**コマンドに追加することで、コマンドラインで実行できます。 それ以外の場合は、ソースファイルでマクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーインクルードファイルの先頭にマクロを定義します。 ソースコードでマクロを定義するには、次の例のように、CRT ヘッダーを含める前に **#define**ディレクティブを使用します。
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -220,12 +233,12 @@ Posix 名**itoa**、 **ltoa**、および**ultoa** **は、** **_ltoa** **関数
 
 ||||
 |-|-|-|
-|関数|radix|[マクロ]|
-|**itoa**(_t **)**|16<br/>10<br/>9<br/>2|**すべてのカウント (_L) (_S)**<br/>**カウント (_R) (_S)**<br/>**カウント (_R) (_S)**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
-|**_ltoa**、 **_ltow**|16<br/>10<br/>9<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
-|検索 **(_t**)|16<br/>10<br/>9<br/>2|**(_S) カウント (_D)**<br/>**(_S) カウント (_S)**<br/>**カウント (_S) (_S)**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
-|**_i64toa**、 **_i64tow**|16<br/>10<br/>9<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
-|**ui64toa** **(_c)**|16<br/>10<br/>9<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
+|関数|radix|マクロ|
+|**_itoa**、 **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**、 **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**、 **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa**、 **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa**、 **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 この例では、変換数マクロを使用して、基数が2である**unsigned long long**を格納するのに十分な大きさのバッファーを定義します。
 
@@ -243,25 +256,25 @@ int main()
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_**|**_itoa**|**_itoa**|**_itow**|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
 |**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
-|**& t)**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
-|**ui64tot (_c)**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**itoa**、 **ltoa**、 **ultoa**|\<stdlib.h>|
-|**_ltoa** **、** **_i64toa**、および**ui64toa** **(_t**)|\<stdlib.h>|
-|**_ltow**、 **_i64tow、** **、** **またはその** **他の方法**|\<stdlib.h> または \<wchar.h>|
+|**_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**|\<stdlib.h>|
+|**_itow**、 **_ltow**、 **_ultow**、 **_i64tow**、 **_ui64tow**|\<stdlib.h> または \<wchar.h>|
 
-これらの関数とマクロは、Microsoft 固有のものです。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数とマクロは、Microsoft 固有のものです。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
-このサンプルでは、いくつかの整数変換関数の使用方法を示します。 **_CRT_SECURE_NO_WARNINGS**マクロを使用して警告 C4996 をサイレント状態にすることに注意してください。
+このサンプルでは、いくつかの整数変換関数の使用方法を示します。 **_CRT_SECURE_NO_WARNINGS**マクロを使用して、警告 C4996 をサイレント状態にすることに注意してください。
 
 ```C
 // crt_itoa.c
@@ -339,4 +352,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, _t 関数](itoa-s-itow-s.md)<br/>
+[_itoa_s, _itow_s 関数](itoa-s-itow-s.md)<br/>

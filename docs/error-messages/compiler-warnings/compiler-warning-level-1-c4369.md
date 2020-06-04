@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0d99792e3e0ea372c8629319553dd9a59ad4b47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207031"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187064"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>コンパイラの警告 (レベル 1) C4369
 
-'enumerator' :  enumerator value 'value' cannot be represented as 'type', value is 'new_value'
+' enumerator ': 列挙子の値 ' value ' を ' type ' として表すことはできません。値は ' new_value ' です
 
-列挙子を計算すると、指定した基になる型の最大値よりも大きい値を指定します。  これにより、オーバーフローが発生し、コンパイラが型の最小値を列挙子の値をラップします。
+列挙子が、指定された基になる型の最大値を超えていることが計算されました。  これによりオーバーフローが発生し、コンパイラが列挙子の値をその型の可能な最小値にラップしました。
 
 ## <a name="example"></a>例
 
 次の例では、C4369 が生成されます。
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {

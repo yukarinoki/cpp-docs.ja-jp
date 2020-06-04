@@ -1,10 +1,12 @@
 ---
 title: putchar、putwchar
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - putchar
 - putwchar
-apilocation:
+- _o_putchar
+- _o_putwchar
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putchar
 - putwchar
@@ -28,12 +34,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b6573b2907ec8fffa5ff4d3d76b8430748f60a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357996"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918892"
 ---
 # <a name="putchar-putwchar"></a>putchar、putwchar
 
@@ -52,20 +58,22 @@ wint_t putwchar(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 書き込む文字。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字を返します。 エラーまたはファイルの終わりの状態を示す**putc**と**putchar**返す**EOF**;**putwc**と**putwchar**返す**WEOF**します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 Null ポインターを渡された場合*ストリーム*、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**または**WEOF**設定と**errno**に**EINVAL**します。
+書き込まれた文字を返します。 エラーまたはファイルの終端状態を示すには、 **putc**と**Putchar**は**EOF**を返します。**putwc**と**putwchar**は**WEOF**を返します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 *ストリーム*に null ポインターが渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター例外を生成します。 実行の継続が許可された場合は、 **EOF**または**WEOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Putc**ルーチンは、1 つの文字を書き込みます*c*出力に*ストリーム*現在の位置。 任意の整数を渡すことが**putc**が下位の 8 ビットのみに書き込まれます。 **Putchar**ルーチンと同じ`putc( c, stdout )`します。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**のような**fputc**と **_fputchar**、それぞれ、関数およびマクロとして実装されますが、(を参照してください[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md))。 **putwc**と**putwchar**のワイド文字バージョン**putc**と**putchar**、それぞれします。
+**Putc**ルーチンは、1文字の*c*を出力*ストリーム*に現在の位置に書き込みます。 任意の整数を**putc**に渡すことができますが、下位8ビットのみが書き込まれます。 **Putchar**ルーチンはと同じ`putc( c, stdout )`です。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**はそれぞれ**fputc**と **_fputchar**に似ていますが、関数とマクロの両方として実装されています (「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください)。 **putwc**と**putwchar**は、それぞれ**putc**と**putchar**のワイド文字バージョンです。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -75,12 +83,12 @@ wint_t putwchar(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

@@ -1,10 +1,12 @@
 ---
 title: _cgets、_cgetws
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _cgetws
 - _cgets
-apilocation:
+- _o__cgets
+- _o__cgetws
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +16,11 @@ apilocation:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cgetws
 - _cgetws
@@ -27,22 +33,22 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750338"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917429"
 ---
-# <a name="cgets-cgetws"></a>_cgets、_cgetws
+# <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
 コンソールから文字列を取得します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
 
 > [!IMPORTANT]
->  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。 これらの関数のセキュリティを強化したバージョン _cgets_s および _cgetws_s は、引き続き使用できます。 これらの代替関数の詳細については、「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
+> これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。 これらの関数のセキュリティを強化したバージョン _cgets_s および _cgetws_s は、引き続き使用できます。 これらの代替関数の詳細については、「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
 
 > [!IMPORTANT]
->  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -65,7 +71,7 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 データの格納場所。
 
 ## <a name="return-value"></a>戻り値
@@ -78,7 +84,9 @@ wchar_t *_cgetws(
 
 コンソール ウィンドウでは、 `_cgets` または `_cgetws` が呼び出されたときにはすべての編集キーがアクティブになっているため、F3 キーを押すと最後に入力したエントリが繰り返されます。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,18 +94,18 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes

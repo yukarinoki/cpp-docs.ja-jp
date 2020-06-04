@@ -1,10 +1,12 @@
 ---
 title: _ungetc_nolock、_ungetwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
-apilocation:
+- _o__ungetc_nolock
+- _o__ungetwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc_nolock
 - ungetwc_nolock
@@ -32,14 +38,14 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268885"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915995"
 ---
-# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
+# <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock、_ungetwc_nolock
 
 ストリームに文字をプッシュ バックします。
 
@@ -58,21 +64,23 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 プッシュする文字。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-成功すると、各これらの関数を返します。 文字引数*c*します。 場合*c*プッシュ バックできない文字を読まれなかった場合は、入力ストリームは変更されませんまたはと **_ungetc_nolock**返します**EOF**;**_ungetwc_nolock**返します**WEOF**します。 場合*ストリーム*は**NULL**、 **EOF**または**WEOF**が返されますと**errno**に設定されている**EINVAL**します。
+成功した場合、これらの各関数は、文字引数*c*を返します。 *C*をプッシュバックできない場合、または文字が読み取られなかった場合は、入力ストリームは変更されず、 **_ungetc_nolock**は**EOF**を返します。**_ungetwc_nolock**は**WEOF**を返します。 *Stream*が**NULL**の場合、 **EOF**または**WEOF**が返され、 **errno**が**EINVAL**に設定されます。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、ロックしないバージョンの**ungetc**と**ungetwc**します。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、 **ungetc**および**ungetwc**のロックされていないバージョンです。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -82,12 +90,12 @@ wint_t _ungetwc_nolock(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_ungetc_nolock**|\<stdio.h>|
 |**_ungetwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

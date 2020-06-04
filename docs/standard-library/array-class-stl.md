@@ -1,6 +1,6 @@
 ---
 title: array クラス (C++ 標準ライブラリ) |Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 11/13/2019
 f1_keywords:
 - array/std::array
 - array/std::array::const_iterator
@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456913"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643644"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -130,8 +130,8 @@ class array;
 |[const_reference](#const_reference)|要素への定数参照の型です。|
 |[const_reverse_iterator](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[difference_type](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[Iterator](#iterator)|被制御シーケンスの反復子の型です。|
-|[pointer](#pointer)|要素へのポインターの型です。|
+|[反](#iterator)|被制御シーケンスの反復子の型です。|
+|[ポインター (pointer)](#pointer)|要素へのポインターの型です。|
 |[reference](#reference)|要素への参照の型です。|
 |[reverse_iterator](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
@@ -140,33 +140,33 @@ class array;
 |メンバー関数|説明|
 |-|-|
 |[array](#array)|配列オブジェクトを構築します。|
-|[assign](#assign)|すべての要素を置換します。|
+|[assign](#assign)|公表. を`fill`使用します。)すべての要素を置換します。|
 |[at](#at)|指定した位置にある要素にアクセスします。|
-|[back](#back)|最後の要素にアクセスします。|
-|[begin](#begin)|被制御シーケンスの先頭を指定します。|
+|[戻る](#back)|最後の要素にアクセスします。|
+|[初め](#begin)|被制御シーケンスの先頭を指定します。|
 |[cbegin](#cbegin)|配列内の最初の要素を示すランダム アクセスの定数反復子を返します。|
 |[cend](#cend)|配列の末尾の次の位置を指し示すランダム アクセス定数反復子を返します。|
 |[crbegin](#crbegin)|反転された配列内の最初の要素への定数反復子を返します。|
 |[crend](#crend)|反転された配列内の末尾の要素への定数反復子を返します。|
-|[data](#data)|最初の要素のアドレスを取得します。|
+|[データ](#data)|最初の要素のアドレスを取得します。|
 |[empty](#empty)|要素が存在するかどうかをテストします。|
 |[end](#end)|被制御シーケンスの末尾を指定します。|
-|[fill](#fill)|すべての要素を、指定された値に置き換えます。|
-|[front](#front)|最初の要素にアクセスします。|
+|[入力](#fill)|すべての要素を、指定された値に置き換えます。|
+|[外側](#front)|最初の要素にアクセスします。|
 |[max_size](#max_size)|要素の数をカウントします。|
 |[rbegin](#rbegin)|反転被制御シーケンスの先頭を指定します。|
 |[rend](#rend)|反転被制御シーケンスの末尾を指定します。|
 |[size](#size)|要素の数をカウントします。|
-|[swap](#swap)|2 つのコンテナーのコンテンツを交換します。|
+|[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 
 |演算子|説明|
 |-|-|
-|[array::operator=](#op_eq)|被制御シーケンスを置き換えます。|
+|[array:: operator =](#op_eq)|被制御シーケンスを置き換えます。|
 |[array:: operator\[\]](#op_at)|指定した位置にある要素にアクセスします。|
 
 ## <a name="remarks"></a>Remarks
 
-この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 例えば以下のようにします。
+この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 たとえば、次のように入力します。
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -180,7 +180,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **名前空間:** std
 
-## <a name="array"></a>  array::array
+## <a name="arrayarray"></a><a name="array"></a>array:: array
 
 配列オブジェクトを構築します。
 
@@ -199,37 +199,39 @@ array(const array& right);
 
 既定のコンストラクター `array()` は、被制御シーケンスを初期化されない状態 (または既定の初期化された状態) のままにします。 これを使用して、初期化されていない被制御シーケンスを指定します。
 
-コピー コンストラクター `array(const array& right)` は、被制御シーケンスをシーケンス [*right*`.begin()`, *right*`.end()`) で初期化します。 これを使用して、配列オブジェクト *right* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+`array(const array& right)`コピーコンストラクターは、シーケンス [*right*`.begin()`, *right*`.end()`) を使用して被制御シーケンスを初期化します。 これを使用して、配列オブジェクト *right* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_array.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    typedef std::array<int, 4> Myarray;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    Myarray c0 = { 0, 1, 2, 3 };
+
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1(c0);
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c1)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -237,61 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="assign"></a>  array::assign
+## <a name="arrayassign"></a><a name="assign"></a>array:: assign
 
 C++ 11 では廃止され、[fill](#fill) に置き換えられています。 すべての要素を置換します。
 
-```cpp
-void assign(const Ty& val);
-```
-
-### <a name="parameters"></a>パラメーター
-
-*val*\
-代入する値。
-
-### <a name="remarks"></a>Remarks
-
-このメンバー関数は、によって`*this`制御されるシーケンス`N`を、値*val*の要素の繰り返しで置き換えます。
-
-### <a name="example"></a>例
-
-```cpp
-// std__array__array_assign.cpp
-// compile with: /EHsc
-#include <array>
-#include <iostream>
-
-typedef std::array<int, 4> Myarray;
-int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
-
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    Myarray c1;
-    c1.assign(4);
-
-// display contents " 4 4 4 4"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    return (0);
-    }
-```
-
-```Output
-0 1 2 3
-4 4 4 4
-```
-
-## <a name="at"></a>  array::at
+## <a name="arrayat"></a><a name="at"></a>array:: at
 
 指定した位置にある要素にアクセスします。
 
@@ -313,32 +265,31 @@ constexpr const_reference at(size_type off) const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_at.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0.at(1);
     std::cout << " " << c0.at(3);
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
-## <a name="back"></a>  array::back
+## <a name="arrayback"></a><a name="back"></a>array:: back
 
 最後の要素にアクセスします。
 
@@ -355,28 +306,27 @@ constexpr const_reference back() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_back.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     std::cout << " " << c0.back();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -384,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="begin"></a>  array::begin
+## <a name="arraybegin"></a><a name="begin"></a>array:: begin
 
 被制御シーケンスの先頭を指定します。
 
@@ -400,29 +350,28 @@ const_iterator begin() const noexcept;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_begin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::iterator it2 = c0.begin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -430,7 +379,7 @@ int main()
 0
 ```
 
-## <a name="cbegin"></a>  array::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>array:: cbegin
 
 範囲内の最初の要素を指す**定数**反復子を返します。
 
@@ -440,7 +389,7 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲`cbegin() == cend()`の場合は) を指す、const ランダムアクセス反復子。
+範囲**const**の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は`cbegin() == cend()`) を指す、const ランダムアクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -456,7 +405,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  array::cend
+## <a name="arraycend"></a><a name="cend"></a>array:: cend
 
 範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
@@ -484,7 +433,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="const_iterator"></a>  array::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array:: const_iterator
 
 被制御シーケンスの定数反復子の型です。
 
@@ -499,8 +448,6 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_const_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -508,14 +455,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::const_iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::const_iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -534,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="const_pointer"></a>  array::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array:: const_pointer
 
 要素への定数ポインターの型です。
 
@@ -549,29 +496,28 @@ typedef const Ty *const_pointer;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_const_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -579,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="const_reference"></a>  array::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>array:: const_reference
 
 要素への定数参照の型です。
 
@@ -594,29 +540,28 @@ typedef const Ty& const_reference;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_const_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -624,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="const_reverse_iterator"></a>  array::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array:: const_reverse_iterator
 
 被制御シーケンスの定数反転反復子の型です。
 
@@ -639,29 +584,28 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_const_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -669,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="crbegin"></a>  array::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>array:: crbegin
 
 反転された配列内の最初の要素への定数反復子を返します。
 
@@ -688,8 +632,6 @@ const_reverse_iterator crbegin() const;
 ### <a name="example"></a>例
 
 ```cpp
-// array_crbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -715,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="crend"></a>  array::crend
+## <a name="arraycrend"></a><a name="crend"></a>array:: crend
 
 逆順の配列内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -740,8 +682,6 @@ const_reverse_iterator crend() const noexcept;
 ### <a name="example"></a>例
 
 ```cpp
-// array_crend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -761,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a>  array::data
+## <a name="arraydata"></a><a name="data"></a>配列: ata:d
 
 最初の要素のアドレスを取得します。
 
@@ -778,29 +718,28 @@ const Ty *data() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_data.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = c0.data();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -808,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a>  array::difference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>配列::d ifference_type
 
 2 つの要素間の距離を表す、符号付きの型です。
 
@@ -823,29 +762,28 @@ typedef std::ptrdiff_t difference_type;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_difference_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance first-last " -4"
+    // display distance first-last " -4"
     Myarray::difference_type diff = c0.begin() - c0.end();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -853,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="empty"></a>  array::empty
+## <a name="arrayempty"></a><a name="empty"></a>array:: empty
 
 要素が存在しないかどうかをテストします。
 
@@ -868,34 +806,33 @@ constexpr bool empty() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_empty.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display whether c0 is empty " false"
+    // display whether c0 is empty " false"
     std::cout << std::boolalpha << " " << c0.empty();
     std::cout << std::endl;
 
     std::array<int, 0> c1;
 
-// display whether c1 is empty " true"
+    // display whether c1 is empty " true"
     std::cout << std::boolalpha << " " << c1.empty();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -904,7 +841,7 @@ false
 true
 ```
 
-## <a name="end"></a>  array::end
+## <a name="arrayend"></a><a name="end"></a>array:: end
 
 被制御シーケンスの末尾を指定します。
 
@@ -921,29 +858,28 @@ const_reference end() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_end.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::iterator it2 = c0.end();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -951,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="fill"></a>  array::fill
+## <a name="arrayfill"></a><a name="fill"></a>array:: fill
 
 配列を消去し、空の配列に指定された要素をコピーします。
 
@@ -972,31 +908,32 @@ void fill(const Type& val);
 ### <a name="example"></a>例
 
 ```cpp
-// array_fill.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
-int main( )
+int main()
 {
-   using namespace std;
-   array<int, 2> v1 = {1, 2};
-   array<int, 2>::iterator iter;
+    using namespace std;
+    array<int, 2> v1 = { 1, 2 };
 
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    cout << "v1 = ";
+    for (const auto& it : v1)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 
-   v1.fill(3);
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    v1.fill(3);
+    cout << "v1 = ";
+    for (const auto& it : v1)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 }
 ```
 
-## <a name="front"></a>  array::front
+## <a name="arrayfront"></a><a name="front"></a>array:: front
 
 最初の要素にアクセスします。
 
@@ -1013,28 +950,27 @@ constexpr const_reference front() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_front.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     std::cout << " " << c0.front();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1042,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="iterator"></a>  array::iterator
+## <a name="arrayiterator"></a><a name="iterator"></a>array:: iterator
 
 被制御シーケンスの反復子の型です。
 
@@ -1057,8 +993,6 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -1066,14 +1000,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -1093,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="max_size"></a>  array::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>array:: max_size
 
 要素の数をカウントします。
 
@@ -1108,28 +1042,27 @@ constexpr size_type max_size() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_max_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display (maximum) size " 4"
+    // display (maximum) size " 4"
     std::cout << " " << c0.max_size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1137,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="op_at"></a>  array::operator[]
+## <a name="arrayoperator"></a><a name="op_at"></a>array:: operator []
 
 指定した位置にある要素にアクセスします。
 
@@ -1161,29 +1094,28 @@ constexpr const_reference operator[](size_type off) const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_operator_sub.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0[1];
     std::cout << " " << c0[3];
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1191,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="op_eq"></a>  array::operator=
+## <a name="arrayoperator"></a><a name="op_eq"></a>array:: operator =
 
 被制御シーケンスを置き換えます。
 
@@ -1211,33 +1143,34 @@ array<Value> operator=(array<Value> right);
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_operator_as.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1;
     c1 = c0;
 
-// display copied contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+    // display copied contents " 0 1 2 3"
+        // display contents " 0 1 2 3"
+    for (auto it : c1)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1245,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="pointer"></a>  array::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>配列::p ointer
 
 要素へのポインターの型です。
 
@@ -1260,29 +1193,28 @@ typedef Ty *pointer;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1290,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="rbegin"></a>  array::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>array:: rbegin
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1306,29 +1238,28 @@ const_reverse_iterator rbegin() const noexcept;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_rbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1336,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="reference"></a>  array::reference
+## <a name="arrayreference"></a><a name="reference"></a>array:: reference
 
 要素への参照の型です。
 
@@ -1351,29 +1282,28 @@ typedef Ty& reference;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1381,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="rend"></a>  array::rend
+## <a name="arrayrend"></a><a name="rend"></a>array:: rend
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1397,29 +1327,28 @@ const_reverse_iterator rend() const noexcept;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_rend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reverse_iterator it2 = c0.rend();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1427,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="reverse_iterator"></a>  array::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array:: reverse_iterator
 
 被制御シーケンスの反転反復子の型です。
 
@@ -1442,29 +1371,28 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1472,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="size"></a>  array::size
+## <a name="arraysize"></a><a name="size"></a>array:: size
 
 要素の数をカウントします。
 
@@ -1487,28 +1415,27 @@ constexpr size_type size() const;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display size " 4"
+    // display size " 4"
     std::cout << " " << c0.size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1516,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="size_type"></a>  array::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>array:: size_type
 
 2 つの要素間の距離を表す、符号なしの型です。
 
@@ -1531,29 +1458,28 @@ typedef std::size_t size_type;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_size_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance last-first " 4"
+    // display distance last-first " 4"
     Myarray::size_type diff = c0.end() - c0.begin();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1561,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="swap"></a>  array::swap
+## <a name="arrayswap"></a><a name="swap"></a>array:: swap
 
 この配列の内容を別の配列と交換します。
 
@@ -1576,48 +1502,49 @@ void swap(array& right);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は *、との*間`*this`で被制御シーケンスを交換します。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
+このメンバー関数は、との間`*this`で被制御シーケンスを*交換します*。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
 
 2つの**配列**インスタンスをスワップするために使用できる非メンバー[スワップ](array-functions.md#swap)関数もあります。
 
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_swap.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-    Myarray c1 = {4, 5, 6, 7};
+    Myarray c1 = { 4, 5, 6, 7 };
     c0.swap(c1);
 
-// display swapped contents " 4 5 6 7"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 4 5 6 7"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     swap(c0, c1);
 
-// display swapped contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1626,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="value_type"></a>  array::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>array:: value_type
 
 要素の型。
 
@@ -1641,33 +1568,31 @@ typedef Ty value_type;
 ### <a name="example"></a>例
 
 ```cpp
-// std__array__array_value_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        {
-        Myarray::value_type val = *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        Myarray::value_type val = it;
         std::cout << " " << val;
-        }
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1677,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)
+[\<配列の>](../standard-library/array.md)

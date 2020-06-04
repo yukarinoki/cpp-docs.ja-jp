@@ -1,9 +1,10 @@
 ---
 title: _get_timezone
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _get_timezone
-apilocation:
+- _o__get_timezone
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287444"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918499"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
 協定世界時刻 (UTC) と現地時刻の秒単位の差を取得します。
 
@@ -45,22 +50,24 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>パラメーター
 
-*seconds*<br/>
+*待ち時間*<br/>
 UTC と現地時刻の秒単位の差。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合や、0 **errno**エラーが発生した場合の値します。
+成功した場合は0、エラーが発生した場合は**errno**値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Get_timezone**関数は、UTC と現地時刻の間で、整数として秒単位で差を取得します。 既定値は、太平洋標準時 (UTC から 8 時間遅れ) を表す 28,800 秒です。
+**_Get_timezone**関数は、UTC と現地時刻の間の差を整数として取得します。 既定値は、太平洋標準時 (UTC から 8 時間遅れ) を表す 28,800 秒です。
 
-場合*秒*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
+*Seconds*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 

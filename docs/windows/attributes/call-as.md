@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501807"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167337"
 ---
 # <a name="call_as"></a>call_as
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501807"
 *function*<br/>
 リモート関数が呼び出されたときに呼び出されるローカル関数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Call_as** C++属性には、 [call_as](/windows/win32/Midl/call-as) MIDL 属性と同じ機能があります。
 
@@ -61,7 +61,7 @@ __interface IMInterface {
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

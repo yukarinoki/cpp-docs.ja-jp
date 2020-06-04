@@ -1,10 +1,12 @@
 ---
 title: _putch_nolock、_putwch_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _putwch_nolock
 - _putch_nolock
-apilocation:
+- _o__putch_nolock
+- _o__putwch_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch_nolock
 - _puttch_nolock
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df32b156d8c57d51ee81c4b4893bf11887915672
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916197"
 ---
-# <a name="putchnolock-putwchnolock"></a>_putch_nolock、_putwch_nolock
+# <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock、_putwch_nolock
 
 スレッドをロックせずにコンソールに文字を書き込みます。
 
@@ -60,16 +66,18 @@ wchar_t c
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 出力する文字。
 
 ## <a name="return-value"></a>戻り値
 
 処理が正常に終了した場合は、*c* を返します。 **_putch_nolock** は、失敗した場合 **EOF** を返します。**_putwch_nolock** は、失敗した場合 **WEOF** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_putch_nolock** と **_putwch_nolock** は、他のスレッドによる干渉から保護されない点を除いて **_putch** および **_putwch** それぞれと同じものです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -79,12 +87,12 @@ wchar_t c
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putch_nolock**|\<conio.h>|
 |**_putwch_nolock**|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 

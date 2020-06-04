@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1311
 ms.assetid: 6590a06c-ce9d-4f17-8f62-c809343143b8
-ms.openlocfilehash: ba2b797c9bf521533e7c2ccff8d358b6216d392f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57e4e0899a5f9d81e87a203b1b699cef0884f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203269"
 ---
 # <a name="fatal-error-c1311"></a>致命的なエラー C1311
 
-COFF 形式は、'var' を数値のバイトのアドレスを静的に初期化できません。
+COFF 形式では、' var ' をアドレスのバイト数で静的に初期化することはできません
 
-アドレスの値がコンパイル時に不明は、型に 4 バイト未満のストレージを持つ変数に静的に割り当てることができません。
+コンパイル時に認識されない値を持つアドレスは、型が4バイト未満のストレージを持つ変数に静的に割り当てることはできません。
 
-このエラーは、それ以外の場合は、コードで発生する可能性が有効な C++ です。
+このエラーは、それ以外の場合に有効C++なコードで発生する可能性があります。
 
-次の例では、C1311 を引き起こす可能性のある 1 つの条件を示します。
+次の例は、C1311 の原因となる可能性がある1つの条件を示しています。
 
 ```
 char c = (char)"Hello, world";   // C1311

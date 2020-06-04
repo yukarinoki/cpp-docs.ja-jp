@@ -1,10 +1,12 @@
 ---
 title: ungetc、ungetwc
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ungetwc
 - ungetc
-apilocation:
+- _o_ungetc
+- _o_ungetwc
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc
 - ungetwc
@@ -28,12 +34,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 406ce7d8befd1d9e9e6a065f2549bacf46d2fd6e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915982"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -54,29 +60,31 @@ wint_t ungetwc(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 プッシュする文字。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-成功すると、各これらの関数を返します。 文字引数*c*します。 場合*c*プッシュ バックできない文字を読まれなかった場合は、入力ストリームは変更されませんまたはと**ungetc**返します**EOF**;**ungetwc**返します**WEOF**します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**EOF**または**WEOF**が返されますと**errno**に設定されている**EINVAL**します。
+成功した場合、これらの各関数は、文字引数*c*を返します。 *C*をプッシュバックできない場合、または文字が読み取られなかった場合、入力ストリームは変更されず、 **ungetc**は**EOF**を返します。**ungetwc**は**WEOF**を返します。 *Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **EOF**または**WEOF**が返され、 **errno**が**EINVAL**に設定されます。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Ungetc**関数の文字をプッシュする*c*戻さ*ストリーム*し、ファイルの終わりインジケーターをクリアします。 ストリームは、読み取り用に開かれている必要があります。 後続の読み取り操作*ストリーム*で始まる*c*します。 プッシュしよう**EOF**を使用してストリームに**ungetc**は無視されます。
+**Ungetc**関数は、文字*c*を*ストリーム*にプッシュし、ファイルの終端のインジケーターをクリアします。 ストリームは、読み取り用に開かれている必要があります。 *ストリーム*に対する後続の読み取り操作は、 *c*で始まります。 **Ungetc**を使用してストリームに**EOF**をプッシュしようとすると無視されます。
 
-ストリームに文字**ungetc**場合が消去される**fflush**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[を巻き戻す](rewind.md)ストリームから文字を読み取る前に呼び出されます。 ファイル位置インジケーターの値は、文字がプッシュ バックされる前のファイル位置インジケーターの値になります。 ストリームに対応する外部のストレージは変更されません。 成功**ungetc**すべてのプッシュ バックされた文字の読み取りまたは破棄されるまでは、ファイル位置インジケーター、テキスト ストリームに対する呼び出しは指定されていません。 各成功**ungetc**呼び出しに対して、バイナリ ストリーム、ファイル位置インジケーターがデクリメントされます。 その値を呼び出す前に 0 であった場合、値は未定義の呼び出しの後です。
+**Ungetc**によってストリームに配置された文字は、その文字がストリームから読み取られる前に**fflush**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出された場合、消去される可能性があります。 ファイル位置インジケーターの値は、文字がプッシュ バックされる前のファイル位置インジケーターの値になります。 ストリームに対応する外部のストレージは変更されません。 テキストストリームに対する**ungetc**の呼び出しが成功した場合、プッシュバックされたすべての文字が読み取りまたは破棄されるまで、ファイル位置インジケーターは指定されません。 バイナリストリームに対する**ungetc**の呼び出しが成功するたびに、ファイル位置インジケーターがデクリメントされます。呼び出しの前の値が0の場合、呼び出しの後に値が未定義になります。
 
-結果は予測できない場合**ungetc**は読み取りまたは 2 つの呼び出しの間のファイル位置の操作なし 2 回呼び出されます。 呼び出しの後に**fscanf**への呼び出し**ungetc**しない限り、他の読み取り操作が失敗する可能性があります (など**getc**) が実行されています。 これは、ため**fscanf**自体を呼び出す**ungetc**します。
+2回の呼び出しの間に読み取りまたはファイル位置の操作を行わずに**ungetc**が2回呼び出された場合、結果は予測できません。 **Fscanf**を呼び出した後に、別の読み取り操作 ( **getc**など) が実行されていないと、 **ungetc**の呼び出しが失敗する可能性があります。 これは、 **fscanf**自体が**ungetc**を呼び出すためです。
 
-**ungetwc**のワイド文字バージョンは、 **ungetc**します。 各でただし、成功した**ungetwc**テキストまたはバイナリ ストリームで、ファイル位置インジケーターの値に対して呼び出しが指定されていないすべてのプッシュ バックされた文字の読み取りまたは破棄されるまで。
+**ungetwc**は、 **ungetc**のワイド文字バージョンです。 ただし、テキストストリームまたはバイナリストリームに対して成功した**ungetwc**呼び出しでは、プッシュバックされたすべての文字が読み取りまたは破棄されるまで、ファイル位置インジケーターの値は指定されません。
 
 これらの関数はスレッド セーフであり、実行時に重要情報をロックします。 ロックしないバージョンについては、「[_ungetc_nolock、_ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,12 +94,12 @@ wint_t ungetwc(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

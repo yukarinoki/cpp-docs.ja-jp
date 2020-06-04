@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 1c9c0805834a59d10a559bfc2b6da0f10e2fe160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77bcb8336e4650de7ed01a067fa1bdd7ec0ba3e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374263"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,14 +35,14 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>パラメーター
 
-*SyncTraits*<br/>
-排他的に使用できる型またはリソースの所有権を共有します。
+*同期トレイト*<br/>
+リソースの排他的または共有所有権を取得できる型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-排他的に使用できる型を表すか、リソースの所有権を共有します。
+リソースの排他的または共有所有権を取得できる型を表します。
 
-`SyncLockWithStatusT`クラスが実装するために使用される、[ミュー テックス](mutex-class.md)と[セマフォ](semaphore-class.md)クラス。
+この`SyncLockWithStatusT`クラスは、[ミューテックス](mutex-class.md)クラスと[セマフォ](semaphore-class.md)クラスを実装するために使用されます。
 
 ## <a name="members"></a>メンバー
 
@@ -50,26 +50,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 名前                                                             | 説明
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
+[ステータスを同期します。::同期します。](#synclockwithstatust) | `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
 名前                                                             | 説明
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
+[ステータスを同期します。::同期します。](#synclockwithstatust) | `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                         | 説明
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::GetStatus](#getstatus) | 現在の待機状態を取得`SyncLockWithStatusT`オブジェクト。
-[SyncLockWithStatusT::IsLocked](#islocked)   | 示すかどうか、現在`SyncLockWithStatusT`リソースを所有するオブジェクトです。 つまり、`SyncLockWithStatusT`オブジェクトが*ロック*します。
+[ステータスを取得します。](#getstatus) | 現在`SyncLockWithStatusT`のオブジェクトの待機状態を取得します。
+[ステータスTと同期::IsLocked](#islocked)   | 現在`SyncLockWithStatusT`のオブジェクトがリソースを所有しているかどうかを示します。つまり、オブジェクトは`SyncLockWithStatusT`*ロックされています*。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                                    | 説明
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::status_](#status) | 基になる待機操作の結果を保持するオブジェクトのロック操作が現在に基づいて後`SyncLockWithStatusT`オブジェクト。
+[ステータスを同期::status_](#status) | 現在`SyncLockWithStatusT`のオブジェクトに基づくオブジェクトのロック操作後に、基になる待機操作の結果を保持します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -79,13 +79,13 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::Details
+**名前空間:** マイクロソフト::WRL::ラッパー::D
 
-## <a name="getstatus"></a>SyncLockWithStatusT::GetStatus
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>ステータスを取得します。
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 DWORD GetStatus() const;
@@ -93,45 +93,45 @@ DWORD GetStatus() const;
 
 ### <a name="return-value"></a>戻り値
 
-基づくオブジェクトの待機操作の結果、`SyncLockWithStatusT`クラスなど、[ミュー テックス](mutex-class.md)または[セマフォ](semaphore-class.md)します。 ゼロ (0) では、待機操作にはシグナルの状態が返されることを示しますそれ以外の場合、別の状態が発生しました、タイムアウト値が経過した場合など。
+`SyncLockWithStatusT`[クラス](mutex-class.md)に基づくオブジェクトに対する待機操作の結果[です。](semaphore-class.md) ゼロ (0) は、待機操作がシグナル状態を返したことを示します。それ以外の場合は、タイムアウト値が経過したなどの別の状態が発生しました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在の待機状態を取得`SyncLockWithStatusT`オブジェクト。
+現在`SyncLockWithStatusT`のオブジェクトの待機状態を取得します。
 
-GetStatus() 関数は、基になる値を取得[status _](#status)データ メンバー。 基づくオブジェクト、`SyncLockWithStatusT`クラスは、ロック操作を実行、使用可能になるオブジェクトのオブジェクトが最初に待機します。 待機操作の結果は、`status_`データ メンバー。 可能な値、`status_`データ メンバーは、待機操作の戻り値。 詳細については、の戻り値を参照してください、 `WaitForSingleObjectEx()` MSDN ライブラリ内の関数。
+GetStatus() 関数は、基になる[status_](#status)データ メンバーの値を取得します。 クラスに基づくオブジェクトが`SyncLockWithStatusT`ロック操作を実行すると、オブジェクトはまずオブジェクトが使用可能になるまで待機します。 その待機操作の結果は、データ メンバー`status_`に格納されます。 データ メンバーの値`status_`は、待機操作の戻り値です。 詳細については、MSDN ライブラリの関数の`WaitForSingleObjectEx()`戻り値を参照してください。
 
-## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>ステータスTと同期::IsLocked
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 bool IsLocked() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-示すかどうか、現在`SyncLockWithStatusT`リソースを所有するオブジェクトです。 つまり、`SyncLockWithStatusT`オブジェクトが*ロック*します。
+現在`SyncLockWithStatusT`のオブジェクトがリソースを所有しているかどうかを示します。つまり、オブジェクトは`SyncLockWithStatusT`*ロックされています*。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合、`SyncLockWithStatusT`オブジェクトがロックされている場合はそれ以外の場合、 **false**します。
+オブジェクトがロック`SyncLockWithStatusT`されている場合は true、ロックされている場合は**true。** それ以外の場合**は false。**
 
-## <a name="status"></a>SyncLockWithStatusT::status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a>ステータスを同期::status_
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 DWORD status_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-基になる待機操作の結果を保持するオブジェクトのロック操作が現在に基づいて後`SyncLockWithStatusT`オブジェクト。
+現在`SyncLockWithStatusT`のオブジェクトに基づくオブジェクトのロック操作後に、基になる待機操作の結果を保持します。
 
-## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>ステータスを同期します。::同期します。
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 SyncLockWithStatusT(
@@ -146,17 +146,17 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
-別の右辺値参照`SyncLockWithStatusT`オブジェクト。
+*他*<br/>
+別`SyncLockWithStatusT`のオブジェクトへの右辺値参照。
 
-*sync*<br/>
-別の参照`SyncLockWithStatusT`オブジェクト。
+*同期*<br/>
+別`SyncLockWithStatusT`のオブジェクトへの参照。
 
 *status*<br/>
-値、 [status _](#status)のデータ メンバー、*他*パラメーターまたは*同期*パラメーター。
+*他*のパラメーターまたは*同期*パラメーターの[status_](#status)データ メンバーの値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
 
-最初のコンス トラクターは、現在`SyncLockWithStatusT`から別のオブジェクト`SyncLockWithStatusT`パラメーターで指定された*他*、し、もう一方を無効に`SyncLockWithStatusT`オブジェクト。 2 番目のコンス トラクターは`protected`、し、現在初期化`SyncLockWithStatusT`オブジェクトを無効な状態にします。
+最初のコンストラクターは、パラメーター `SyncLockWithStatusT` *other*で指定された別の`SyncLockWithStatusT`オブジェクトから現在のオブジェクトを初期化し`SyncLockWithStatusT`、その後、そのオブジェクトを無効にします。 2 番目の`protected`コンストラクターは で、現在`SyncLockWithStatusT`のオブジェクトを無効な状態に初期化します。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 048d2933b8c024e74511e6cb49ae5c3240f3e710
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167122"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -23,7 +23,7 @@ Visual Basic コードの最適化に使用します。
 [defaultcollelem]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Default/elem** C++属性には、 [default/elem](/windows/win32/Midl/defaultcollelem) MIDL 属性と同じ機能があります。
 
@@ -57,7 +57,7 @@ __interface IMyForm
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)

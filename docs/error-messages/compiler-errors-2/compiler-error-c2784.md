@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2784
+title: コンパイラエラー C2784
 ms.date: 11/04/2016
 f1_keywords:
 - C2784
 helpviewer_keywords:
 - C2784
 ms.assetid: 3d761fe2-881c-48bd-afae-e2e714e20473
-ms.openlocfilehash: 906cb5d8df9fb8ac57c5d4289d77ac662ac26a92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff91135f6a6207921aa1f83d42ebd1689e711a1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208185"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739637"
 ---
-# <a name="compiler-error-c2784"></a>コンパイラ エラー C2784
+# <a name="compiler-error-c2784"></a>コンパイラエラー C2784
 
 'declaration' : 'type' のテンプレート引数を 'type' から推測できませんでした。
 
@@ -21,7 +21,7 @@ ms.locfileid: "62208185"
 
 次の例では、C2784 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2784.cpp
 template<class T> class X {};
 template<class T> void f(X<T>) {}

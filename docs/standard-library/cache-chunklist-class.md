@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366756"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist クラス
+# <a name="cache_chunklist-class"></a>cache_chunklist クラス
 
 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除する[ブロック アロケーター](../standard-library/allocators-header.md)を定義します。
 
@@ -34,15 +34,15 @@ class cache_chunklist
 |---------------|-----------------|
 |*Sz*|割り当てられる配列内の要素の数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレートクラスは、 **operator new**を使用して生メモリのチャンクを割り当てます。また、必要に応じてメモリブロックにストレージを割り当てるようにブロックを割り当てます。割り当て解除されたメモリブロックをチャンクごとに個別のフリーリストに格納し、 **operator delete**を使用して、メモリブロックが使用されていない場合にチャンクの割り当てを解除します。
+このクラス テンプレートでは **、演算子 new**を使用して生メモリのチャンクを割り当て、必要に応じてメモリ ブロックの記憶域を割り当てるブロックをサブアローケートします。割り当て解除されたメモリ ブロックはチャンクごとに別の空きリストに格納され、使用されているメモリ ブロックがまったくない場合は **、演算子 delete**を使用してチャンクの割り当てを解除します。
 
-各メモリブロックは、使用可能なメモリの*Sz*バイトとそれが属するチャンクへのポインターを保持します。 各チャンクは`Nelts` 、メモリブロック、3つのポインター、int、 **operator new**および**operator delete**に必要なデータを保持します。
+各メモリ ブロックは、使用できるメモリの*Sz*バイトと、それが属するチャンクへのポインタを保持します。 各チャンクには`Nelts`、メモリブロック、3つのポインタ、int、**および演算子 new**および**operator delete**が必要とするデータが保持されます。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[cache_chunklist](#cache_chunklist)|`cache_chunklist` 型のオブジェクトを構築します。|
 
@@ -50,8 +50,8 @@ class cache_chunklist
 
 |メンバー関数|説明|
 |-|-|
-|[allocate](#allocate)|メモリのブロックを割り当てます。|
-|[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
+|[割り当てる](#allocate)|メモリのブロックを割り当てます。|
+|[解放](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -59,7 +59,7 @@ class cache_chunklist
 
 **名前空間:** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist:割り当て
 
 メモリのブロックを割り当てます。
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
 `cache_chunklist` 型のオブジェクトを構築します。
 
@@ -87,9 +87,9 @@ void *allocate(std::size_t count);
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::d割り当て
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*Ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
 |*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<アロケーター>](../standard-library/allocators-header.md)

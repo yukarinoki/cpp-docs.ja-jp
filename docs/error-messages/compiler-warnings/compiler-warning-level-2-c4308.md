@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4308
 ms.assetid: d4e5c53c-71b2-4bbc-8a7c-3a2a3180d9d9
-ms.openlocfilehash: f97d66f9e3445d022adc3362532774b15ea09961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 138344be8d70866583214a9c5a26f10c972a7889
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161843"
 ---
 # <a name="compiler-warning-level-2-c4308"></a>コンパイラの警告 (レベル 2) C4308
 
-負の整数定数が符号なしの型に変換
+符号なしの型に変換された負の整数定数
 
-式では、負の整数定数を符号なしの型に変換します。 式の結果は無意味な可能性があります。
+式は、負の整数定数を符号なしの型に変換します。 式の結果は、意味がない可能性があります。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4308.cpp
 // compile with: /W2
 unsigned int u = (-5 + 3U);   // C4308

@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e494285f33cf282d7b7515aac374ec86ef3036b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372486"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
-CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。  また、ラッパーには、そのデストラクターが呼び出されたときに、オブジェクトを所有しているすべての参照を解放し、COM オブジェクトの有効期間管理が自動化されます。 類似しています[CComPtr クラス](../atl/reference/ccomptr-class.md)します。
+CLR クラスのメンバーとして使用できる COM オブジェクトのラッパー。  ラッパーは、COM オブジェクトの有効期間管理も自動化し、デストラクターが呼び出されたときに、オブジェクト上のすべての所有参照を解放します。 [CComPtr クラス](../atl/reference/ccomptr-class.md)に類似しています。
 
 ## <a name="syntax"></a>構文
 
@@ -37,19 +37,19 @@ ref class ptr;
 ### <a name="parameters"></a>パラメーター
 
 *_interface_type*<br/>
-COM インターフェイスです。
+COM インターフェイス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-A `com::ptr` COM のさまざまなタスクを簡略化および有効期間管理を自動化するもローカル関数の変数としては使用できます。
+A`com::ptr`は、さまざまな COM タスクを簡略化し、有効期間管理を自動化するために、ローカル関数変数としても使用できます。
 
-A`com::ptr`関数のパラメーターとして直接使用することはできません。 使用して、[追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)代わりにします。
+関数`com::ptr`パラメータとして直接使用することはできません。代わりに[、追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクトへのハンドル演算子 (^) を](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)使用します。
 
-A`com::ptr`関数から直接返されることはできません。 代わりに、ハンドルを使用します。
+関数`com::ptr`から直接返すことはできません。代わりにハンドルを使用してください。
 
 ## <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  クラスの結果のパブリック メソッドを呼び出し、格納されている呼び出しで`IXMLDOMDocument`オブジェクト。  サンプルは、XML ドキュメントのインスタンスを作成し、簡単な XML が格納、簡単に、コンソールに XML を出力する解析済みドキュメント ツリー内のノードの走査。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  クラスのパブリック メソッドを呼び出すと、含まれている`IXMLDOMDocument`オブジェクトが呼び出されます。  このサンプルでは、XML ドキュメントのインスタンスを作成し、その XML を単純な XML で満たし、解析されたドキュメント ツリー内のノードを簡単に操作して XML をコンソールに出力します。
 
 ```cpp
 // comptr.cpp
@@ -167,42 +167,40 @@ int main() {
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|構築、 `com::ptr` COM オブジェクトをラップします。| 
-|[ptr::~ptr](#tilde-ptr)|Destructs、`com::ptr`します。| 
+|名前|説明|
+|---------|-----------|
+|[ptr::ptr](#ptr)|COM オブジェクト`com::ptr`をラップするを構築します。|
+|[ptr::~ptr](#tilde-ptr)|を破棄します`com::ptr`。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
-|---------|-----------| 
-|[ptr::Attach](#attach)|COM オブジェクトのアタッチ、`com::ptr`します。| 
-|[ptr::CreateInstance](#createInstance)|内の COM オブジェクトのインスタンスを作成、`com::ptr`します。| 
-|[ptr::Detach](#detach)|オブジェクトへのポインターを返す COM オブジェクトの所有権を放棄します。| 
-|[ptr::GetInterface](#getInterface)|内の COM オブジェクトのインスタンスを作成、`com::ptr`します。| 
-|[ptr::QueryInterface](#queryInterface)|インターフェイスの所有されている COM オブジェクトのクエリを実行し、結果を別に添付`com::ptr`します。| 
-|[ptr::Release](#release)|COM オブジェクトに所有されているすべての参照を解放します。|
+|---------|-----------|
+|[ptr::Attach](#attach)|COM オブジェクトを`com::ptr`にアタッチします。|
+|[ptr::CreateInstance](#createInstance)|内に COM オブジェクトのインスタンスを`com::ptr`作成します。|
+|[ptr::Detach](#detach)|COM オブジェクトの所有権を終了し、オブジェクトへのポインターを返します。|
+|[ptr::GetInterface](#getInterface)|内に COM オブジェクトのインスタンスを`com::ptr`作成します。|
+|[ptr::QueryInterface](#queryInterface)|所有している COM オブジェクトにインターフェイスを照会し、その結果を別`com::ptr`の .|
+|[ptr::Release](#release)|COM オブジェクト上のすべての所有参照を解放します。|
 
-### <a name="public-operators"></a>パブリック演算子
+### <a name="public-operators"></a>公共事業者
 
 |名前|説明|
-|---------|-----------| 
-|[ptr::operator-&gt;](#operator-arrow)|メンバー アクセス演算子で所有されている COM オブジェクトでメソッドを呼び出すために使用します。| 
-|[ptr::operator=](#operator-assign)|COM オブジェクトのアタッチ、`com::ptr`します。| 
-|[ptr::operator&nbsp;bool](#operator-bool)|使用するための演算子`com::ptr`条件式。| 
-|[ptr::operator!](#operator-logical-not)|所有されている COM オブジェクトが有効であるかを決定する演算子です。| 
+|---------|-----------|
+|[ptr::演算子-&gt;](#operator-arrow)|所有している COM オブジェクトのメソッドを呼び出すために使用されるメンバー アクセス演算子。|
+|[ptr::演算子=](#operator-assign)|COM オブジェクトを`com::ptr`にアタッチします。|
+|[ptr::オペレーター&nbsp;・ブール](#operator-bool)|条件式で`com::ptr`使用する演算子。|
+|[ptr::operator!](#operator-logical-not)|所有している COM オブジェクトが無効かどうかを判断する演算子。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー ファイル** \<msclr\com\ptr.h >
+**ヘッダー ファイル**\<msclr\com\ptr.h>
 
-**Namespace** msclr::com
+**名前空間**msclr::com
 
- 
+## <a name="ptrptr"></a><a name="ptr"></a>ptr::ptr
 
-## <a name="ptr"></a>ptr::ptr
-
-所有されている COM オブジェクトへのポインターを返します。
+所有している COM オブジェクトへのポインターを返します。
 
 ```cpp
 ptr();
@@ -216,17 +214,17 @@ ptr(
 *P*<br/>
 COM インターフェイス ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-引数のないコンス トラクターを代入`nullptr`を基になるオブジェクトのハンドル。 将来を呼び出し、`com::ptr`内部オブジェクトを検証し、オブジェクトを作成またはアタッチされるまで、サイレント モードで失敗します。
+引数なしのコンストラクターは、`nullptr`基になるオブジェクト ハンドルに割り当てます。 今後の`com::ptr`呼び出しでは内部オブジェクトが検証され、オブジェクトが作成またはアタッチされるまで、通知なしに失敗します。
 
-引数が 1 つのコンス トラクターは、COM オブジェクトへの参照を追加しますが、呼び出し元が呼び出す必要がありますので、呼び出し元の参照を解放しない`Release`で完全に制御を断念する COM オブジェクトでします。 ときに、`com::ptr`のデストラクターが呼び出される COM オブジェクトへの参照が自動的に解放します。
+1 つの引数のコンストラクターは、COM オブジェクトへの参照を追加しますが、呼び出し元の参照を解放しないので`Release`、呼び出し元は COM オブジェクトを呼び出して、完全に制御を放棄する必要があります。 デストラ`com::ptr`クタが呼び出されると、COM オブジェクトに対する参照が自動的に解放されます。
 
-渡す`NULL`このコンス トラクターには、引数のないバージョンの呼び出しと同じです。
+この`NULL`コンストラクターへの渡しは、引数なしのバージョンを呼び出すことと同じです。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 コンス トラクターの両方のバージョンの使用方法を示します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 この例では、両方のバージョンのコンストラクターの使用方法を示します。
 
 ```cpp
 // comptr_ptr.cpp
@@ -287,21 +285,21 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>ptr:: ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr::~ptr
 
-Destructs、`com::ptr`します。
+を破棄します`com::ptr`。
 
 ```cpp
 ~ptr();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-破棄、`com::ptr`その COM オブジェクトを所有しているすべての参照を解放します。 COM オブジェクトに保持されているその他の参照がないと仮定 COM オブジェクトが削除され、そのメモリを解放します。
+破棄すると、COM`com::ptr`オブジェクトに対して所有しているすべての参照が解放されます。 COM オブジェクトに対する他の参照が存在しないと仮定すると、COM オブジェクトは削除され、メモリは解放されます。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `main`関数では、2 つ`XmlDocument`のスコープ外に出るときに、オブジェクトのデストラクターが呼び出される、`try`ブロック、その結果、基になる`com::ptr`デストラクターが呼び出される COM を所有しているすべての参照を解放オブジェクト。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  `main`この関数では、2`XmlDocument`つのオブジェクトのデストラクターが`try`ブロックのスコープ外に出ると呼び出され、その結果、基になる`com::ptr`デストラクターが呼び出され、COM オブジェクトへのすべての所有参照が解放されます。
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr::アタッチ
 
-COM オブジェクトのアタッチ、`com::ptr`します。
+COM オブジェクトを`com::ptr`にアタッチします。
 
 ```cpp
 void Attach(
@@ -379,17 +377,17 @@ void Attach(
 
 ### <a name="exceptions"></a>例外
 
-場合、 `com::ptr` 、COM オブジェクトへの参照を既に所有している`Attach`スロー<xref:System.InvalidOperationException>します。
+が既`com::ptr`に COM オブジェクトへの参照を所有`Attach`している場合<xref:System.InvalidOperationException>は、 がスローされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出し`Attach`COM オブジェクトを参照しますが、呼び出し元の参照を解放しません。
+COM オブジェクト`Attach`を参照する呼び出しは、呼び出し元の参照を解放しません。
 
-渡す`NULL`に`Attach`行われている起こりません。
+結果`NULL`に`Attach`渡すと、アクションは実行されません。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `ReplaceDocument`メンバー関数の最初の呼び出し`Release`いずれかで所有していたオブジェクトに呼び出し`Attach`新しい document オブジェクトをアタッチします。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 メンバー`ReplaceDocument`関数は、最初`Release`に所有されていたオブジェクトを呼び出`Attach`し、次に新しいドキュメント オブジェクトをアタッチする呼び出しを行います。
 
 ```cpp
 // comptr_attach.cpp
@@ -463,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>ptr::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr::インスタンスの作成
 
-内の COM オブジェクトのインスタンスを作成、`com::ptr`します。
+内に COM オブジェクトのインスタンスを`com::ptr`作成します。
 
 ```cpp
 void CreateInstance(
@@ -508,31 +506,31 @@ void CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*progid*<br/>
+*Progid*<br/>
 `ProgID` 文字列。
 
-*pouter*<br/>
-集約オブジェクトの IUnknown インターフェイス (controlling IUnknown) へのポインター。 場合`pouter`が指定されていない`NULL`使用されます。
+*パウター*<br/>
+集約オブジェクトの IUnknown インターフェイス (制御 IUnknown) へのポインター。 指定`pouter`されていない場合は、`NULL`使用されます。
 
 *cls_context*<br/>
-新しく作成されたオブジェクトを管理するコードを実行するコンテキスト。 値がから取得されます、`CLSCTX`列挙体。 場合`cls_context`が指定されていない値 CLSCTX_ALL が使用されます。
+新しく作成されたオブジェクトを管理するコードが実行されるコンテキスト。 値は列挙体から取得`CLSCTX`されます。 指定`cls_context`しない場合は、CLSCTX_ALL値が使用されます。
 
 *rclsid*<br/>
-`CLSID` 関連付けられたデータとオブジェクトの作成に使用されるコード。
+`CLSID`オブジェクトの作成に使用されるデータおよびコードに関連付けられます。
 
 ### <a name="exceptions"></a>例外
 
-場合、 `com::ptr` 、COM オブジェクトへの参照を既に所有している`CreateInstance`スロー<xref:System.InvalidOperationException>します。
+が既`com::ptr`に COM オブジェクトへの参照を所有`CreateInstance`している場合<xref:System.InvalidOperationException>は、 がスローされます。
 
-この関数を呼び出す`CoCreateInstance`を使用して<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>エラーに変換する`HRESULT`適切な例外にします。
+この関数は`CoCreateInstance`、エラー<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>`HRESULT`を適切な例外に変換するために呼び出し、使用します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CreateInstance` 使用して`CoCreateInstance`ProgID または CLSID のいずれかを識別する、指定したオブジェクトの新しいインスタンスを作成します。 `com::ptr`新しく作成されたオブジェクトを参照し、破棄時に所有しているすべての参照を自動的に解放されます。
+`CreateInstance`は`CoCreateInstance`、ProgID または CLSID から識別される、指定されたオブジェクトの新しいインスタンスを作成するために使用されます。 新`com::ptr`しく作成されたオブジェクトを参照し、破棄時に所有されているすべての参照を自動的に解放します。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 クラスのコンス トラクターの 2 つの異なる形式を使用して、 `CreateInstance` ProgID または CLSID plus、CLSCTX からドキュメント オブジェクトを作成します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 クラス コンストラクターは、 の 2`CreateInstance`つの異なる形式を使用して、ProgID または CLSID と CLSCTX からドキュメント オブジェクトを作成します。
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr::Dエタッハ
 
-オブジェクトへのポインターを返す COM オブジェクトの所有権を放棄します。
+COM オブジェクトの所有権を終了し、オブジェクトへのポインターを返します。
 
 ```cpp
 _interface_type * Detach();
@@ -593,19 +591,19 @@ _interface_type * Detach();
 
 COM オブジェクトへのポインター。
 
-オブジェクトが所有していない場合は、NULL が返されます。
+オブジェクトが所有されていない場合は、NULL が返されます。
 
 ### <a name="exceptions"></a>例外
 
-内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。
+内部的には、`QueryInterface`所有する COM オブジェクトに対して呼`HRESULT`び出され、エラーは<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>によって例外に変換されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Detach` によって所有されているすべての参照を解放し、まず、呼び出し元に代わって COM オブジェクトへの参照を追加し、`com::ptr`します。  呼び出し元には、返されたオブジェクトを破棄して最終的に解放する必要があります。
+`Detach`まず呼び出し元に代わって COM オブジェクトへの参照を追加し、次に`com::ptr`が所有するすべての参照を解放します。  呼び出し元は、最終的に、返されたオブジェクトを解放して破棄する必要があります。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `DetachDocument`メンバー関数の呼び出し`Detach`を COM オブジェクトの所有権を放棄し、呼び出し元へのポインターを返します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  COM`DetachDocument`オブジェクトの`Detach`所有権を放棄し、呼び出し元へのポインターを返すメンバー関数を呼び出します。
 
 ```cpp
 // comptr_detach.cpp
@@ -686,9 +684,9 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr::インターフェイスを取得します。
 
-所有されている COM オブジェクトへのポインターを返します。
+所有している COM オブジェクトへのポインターを返します。
 
 ```cpp
 _interface_type * GetInterface();
@@ -696,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>戻り値
 
-所有されている COM オブジェクトへのポインター。
+所有している COM オブジェクトへのポインター。
 
 ### <a name="exceptions"></a>例外
 
-内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。
+内部的には、`QueryInterface`所有する COM オブジェクトに対して呼`HRESULT`び出され、エラーは<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>によって例外に変換されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`com::ptr`呼び出し元の代わりに、COM オブジェクトへの参照を追加し、COM オブジェクトの独自の参照が保持されます。 呼び出し元が返されるオブジェクトの参照を最終的に解放する必要があります。 または決して破棄されます。
+呼`com::ptr`び出し元の代わりに COM オブジェクトへの参照を追加し、COM オブジェクトに対する独自の参照も保持します。 呼び出し元は、最終的に返されたオブジェクトの参照を解放する必要があります。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `GetDocument`メンバー関数を使用して`GetInterface`COM オブジェクトへのポインターを返します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 メンバー`GetDocument`関数は、COM オブジェクトへのポインターを返すために使用`GetInterface`します。
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr::クエリインターフェイス
 
-インターフェイスの所有されている COM オブジェクトのクエリを実行し、結果を別に添付`com::ptr`します。
+所有している COM オブジェクトにインターフェイスを照会し、その結果を別`com::ptr`の .
 
 ```cpp
 template<class _other_type>
@@ -841,20 +839,20 @@ void QueryInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 `com::ptr`インターフェイスを取得します。
 
 ### <a name="exceptions"></a>例外
 
-内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。
+内部的には、`QueryInterface`所有する COM オブジェクトに対して呼`HRESULT`び出され、エラーは<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>によって例外に変換されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のラッパーによって所有されている COM オブジェクトのさまざまなインターフェイスを COM ラッパーを作成するのにには、このメソッドを使用します。 このメソッドを呼び出す`QueryInterface`を介して COM オブジェクト、COM の特定のインターフェイスへのポインターを要求するオブジェクトし、を渡されるに返されるインターフェイス ポインターをアタッチします`com::ptr`します。
+このメソッドは、現在のラッパーが所有する COM オブジェクトの別のインターフェイスに対して COM ラッパーを作成するために使います。 このメソッドは`QueryInterface`、所有する COM オブジェクトを通じて COM オブジェクトの特定のインターフェイスへのポインターを要求し、返されたインターフェイス ポインター`com::ptr`を渡されたインターフェイス にアタッチします。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteTopLevelNode`メンバー関数を使用して`QueryInterface`ローカルを入力する`com::ptr`で、`IXMLDOMNode`し、渡します、 `com::ptr` (追跡参照) をノードの名前とテキストのプロパティをコンソールに書き込まれるプライベート メンバー関数。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 メンバー`WriteTopLevelNode`関数は、`QueryInterface`を`com::ptr``IXMLDOMNode`使用してローカルにを埋め込み`com::ptr`、ノードの名前とテキスト プロパティをコンソールに書き込むプライベート メンバー関数に (追跡参照によって) 渡します。
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,21 +957,21 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>ptr::Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr::リリース
 
-COM オブジェクトに所有されているすべての参照を解放します。
+COM オブジェクト上のすべての所有参照を解放します。
 
 ```cpp
 void Release();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す COM オブジェクトを所有しているすべての参照を解放し、内部ハンドルを COM オブジェクトを設定`nullptr`します。  COM オブジェクトの他の参照が存在しない場合は破棄されます。
+この関数を呼び出すと、COM オブジェクト上のすべての所有参照が解放され、内部ハンドル`nullptr`が COM オブジェクトに設定されます。  COM オブジェクトに他の参照が存在しない場合、その参照は破棄されます。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `ReplaceDocument`メンバー関数を使用して`Release`を新しいドキュメントをアタッチする前に、前のドキュメント オブジェクトを解放します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  この`ReplaceDocument`メンバー関数は`Release`、新しいドキュメントを添付する前に、以前のドキュメント オブジェクトを解放するために使用します。
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>ptr::operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr::演算子-&gt;
 
-メンバー アクセス演算子で所有されている COM オブジェクトでメソッドを呼び出すために使用します。
+所有している COM オブジェクトのメソッドを呼び出すために使用されるメンバー アクセス演算子。
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>戻り値
 
-A `smart_com_ptr` COM オブジェクトにします。
+COM`smart_com_ptr`オブジェクトへの A。
 
 ### <a name="exceptions"></a>例外
 
-内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。
+内部的には、`QueryInterface`所有する COM オブジェクトに対して呼`HRESULT`び出され、エラーは<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>によって例外に変換されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子を使用して、所有されている COM オブジェクトのメソッドを呼び出すことができます。 一時的な返します`smart_com_ptr`自動的に処理する独自`AddRef`と`Release`します。
+この演算子を使用すると、所有されている COM オブジェクトのメソッドを呼び出すことができます。 このメソッドは、`smart_com_ptr`独自`AddRef`のと を自動的`Release`に処理する一時を返します。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteDocument`関数は`operator->`を呼び出す、`get_firstChild`ドキュメント オブジェクトのメンバー。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 この`WriteDocument`関数は`operator->`、ドキュメント`get_firstChild`オブジェクトのメンバーを呼び出すために使用します。
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>ptr::operator=
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr::演算子=
 
-COM オブジェクトのアタッチ、`com::ptr`します。
+COM オブジェクトを`com::ptr`にアタッチします。
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1206,21 +1204,21 @@ ptr<_interface_type> % operator=(
 
 ### <a name="return-value"></a>戻り値
 
-追跡参照、`com::ptr`します。
+の追跡参照`com::ptr`。
 
 ### <a name="exceptions"></a>例外
 
-場合、 `com::ptr` 、COM オブジェクトへの参照を既に所有している`operator=`スロー<xref:System.InvalidOperationException>します。
+が既`com::ptr`に COM オブジェクトへの参照を所有`operator=`している場合<xref:System.InvalidOperationException>は、 がスローされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-COM オブジェクトを割り当て、 `com::ptr` COM オブジェクトを参照しますが、呼び出し元の参照を解放しません。
+COM オブジェクトを COM`com::ptr`オブジェクトへの割り当ては COM オブジェクトを参照しますが、呼び出し元の参照は解放されません。
 
-この演算子と同じ効果を持つ`Attach`します。
+この演算子は、 と同`Attach`じ効果を持ちます。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `ReplaceDocument`メンバー関数の最初の呼び出し`Release`いずれかで所有していたオブジェクトおよび、使用`operator=`新しい document オブジェクトをアタッチします。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  メンバー`ReplaceDocument`関数は、最初`Release`に所有されているオブジェクトを呼び出`operator=`し、次に新しいドキュメント オブジェクトのアタッチに使用します。
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> ptr::operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr::オペレーター・ブール
 
-使用するための演算子`com::ptr`条件式。
+条件式で`com::ptr`使用する演算子。
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>戻り値
 
-`true` 所有されている COM オブジェクトが無効である場合`false`それ以外の場合。
+`true`所有している COM オブジェクトが有効な場合。`false`それ以外の場合。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-所有されている COM オブジェクトがない場合は、有効では`nullptr`します。
+所有している COM オブジェクトが有効でない`nullptr`場合は有効です。
 
-この演算子の変換を`_detail_class::_safe_bool`よりも安全である`bool`整数型に変換できないためです。
+この演算子は、整数`_detail_class::_safe_bool`型に変換できないため`bool`、より安全に変換されます。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `CreateInstance`メンバー関数を使用して`operator bool`が有効では、コンソールに出力する場合はかどうかを判断する新しい document オブジェクトを作成した後。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。 メンバー`CreateInstance`関数は、`operator bool`新しいドキュメント オブジェクトを作成した後に、有効かどうかを判断し、有効な場合はコンソールに書き込みを行います。
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>ptr::operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr::オペレーター!
 
-所有されている COM オブジェクトが有効であるかを決定する演算子です。
+所有している COM オブジェクトが無効かどうかを判断する演算子。
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>戻り値
 
-`true` 所有されている COM オブジェクトが無効である場合`false`それ以外の場合。
+`true`所有している COM オブジェクトが無効な場合。`false`それ以外の場合。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-所有されている COM オブジェクトがない場合は、有効では`nullptr`します。
+所有している COM オブジェクトが有効でない`nullptr`場合は有効です。
 
 ### <a name="example"></a>例
 
-この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `CreateInstance`メンバー関数を使用して`operator!`ドキュメント オブジェクトを既に所有するいると、オブジェクトが有効でない場合にのみ新しいインスタンスを作成します。
+この例では、 を使用してプライベート`com::ptr`メンバー`IXMLDOMDocument`オブジェクトをラップする CLR クラスを実装します。  この`CreateInstance`メンバー関数は`operator!`、ドキュメント オブジェクトが既に所有されているかどうかを判断するために使用し、オブジェクトが無効な場合にのみ新しいインスタンスを作成します。
 
 ```cpp
 // comptr_op_not.cpp

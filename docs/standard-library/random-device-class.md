@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320268"
 ---
-# <a name="randomdevice-class"></a>random_device クラス
+# <a name="random_device-class"></a>random_device クラス
 
 外部デバイスからランダム シーケンスを生成します。
 
@@ -53,10 +53,10 @@ public:
 
 |||
 |-|-|
-|[random_device](#random_device)|[entropy](#entropy)|
-|[random_device::operator()](#op_call)||
+|[random_device](#random_device)|[エントロピー](#entropy)|
+|[random_device::演算子()](#op_call)||
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このクラスは乱数のソースを表します。ISO C++ 標準では、非確定的または暗号的に安全であることが認められていますが、要求されていはいません。 Visual Studio の実装では、生成される値は非確定的で暗号的に安全ですが、エンジンやエンジン アダプター ([mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) など、大部分のアプリケーションで選択される高品質で高速のエンジン) から作成されるジェネレーターよりも実行は遅いです。
 
@@ -64,7 +64,7 @@ public:
 
 `random_device` が非ブロッキング呼び出しになることは保証されていません。
 
-一般に、`random_device` は、エンジンまたはエンジン アダプターで作成された他のジェネレーターにシードを設定するために使用されます。 詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
+一般に、`random_device` は、エンジンまたはエンジン アダプターで作成された他のジェネレーターにシードを設定するために使用されます。 詳細については、「[\<ランダム>](../standard-library/random.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -100,7 +100,7 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 代表的なコード サンプルについては、「[\<random>](../standard-library/random.md)」を参照してください。
+これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 より代表的なコード例については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -108,7 +108,7 @@ a random value == 213725214
 
 **名前空間:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
 
 ジェネレーターを構築します。
 
@@ -116,11 +116,11 @@ a random value == 213725214
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このコンストラクターは、文字列パラメーターを無視して必要に応じてジェネレーターを初期化します。 `random_device` を初期化できなかった場合は、[exception](../standard-library/exception-class.md) から派生された実装定義型の値をスローします。
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::エントロピー
 
 乱数発生源の無作為性を推定します。
 
@@ -128,11 +128,11 @@ random_device(const std::string& = "");
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、乱数発生源がどの程度の無作為性を持っているかの推定値を返します。評価の単位には、ビットが使用されます。
 
-## <a name="op_call"></a>  random_device::operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device::演算子()
 
 乱数値を返します。
 
@@ -140,10 +140,10 @@ double entropy() const noexcept;
 result_type operator()();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 閉区間 [ `min, max`] で、メンバー関数 `min()` および `max()` で定義されたように、一様に分布した値を返します。 乱数が取得できない場合は、[exception](../standard-library/exception-class.md) から導出される実装定義型の値をスローします。
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

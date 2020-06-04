@@ -1,11 +1,14 @@
 ---
 title: rint、rintf、rintl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+- _o_rint
+- _o_rintf
+- _o_rintl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357591"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917720"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -58,16 +65,18 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Rint**関数に最も近い整数を表す浮動小数点値を返す*x*します。 中間の値が同じ浮動小数点丸めモードの現在の設定に従って丸められますが、 **nearbyint**関数。 異なり、 **nearbyint**関数の場合、 **rint**関数が生じる可能性がある、 **FE_INEXACT**引数からの値で、結果が異なる場合は、浮動小数点例外。 エラーの戻り値はありません。
+**Rint**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの現在の設定に従って丸められます。これは、 **nearbyint**関数と同じです。 **Nearbyint**関数とは異なり、 **rint**関数は、結果が引数の値と異なる場合に**FE_INEXACT**浮動小数点例外を発生させる可能性があります。 エラーの戻り値はありません。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|none|
-|非正規化数|EXCEPTION_FLT_UNDERFLOW|none|
+|± ∞、QNAN、IND|なし|なし|
+|非正規化数|EXCEPTION_FLT_UNDERFLOW|なし|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **rint**を受け取って返す**float**と**長い****二重**値。 C プログラムで**rint**は、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**rint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **rint**は常に**double**を受け取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -75,7 +84,7 @@ long double rint( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

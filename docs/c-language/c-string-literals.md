@@ -33,7 +33,7 @@ ms.locfileid: "67400586"
 
 &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 次の例は、単純な文字列リテラルです。
 

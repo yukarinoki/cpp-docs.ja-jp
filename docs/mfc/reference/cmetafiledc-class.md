@@ -1,5 +1,5 @@
 ---
-title: CMetaFileDC クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMetaFileDC
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 95f54f50d7a87e9a2ad4689c14f3b7f8d42ff71e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0919dacfd758df39064c5381690e9e23a029fcd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369951"
 ---
-# <a name="cmetafiledc-class"></a>CMetaFileDC クラス
+# <a name="cmetafiledc-class"></a>クラス
 
 イメージやテキストを自由に作成するための一連のグラフィック デバイス インターフェイス (GDI) コマンドを含む Windows のメタファイルを実装します。
 
@@ -39,34 +39,34 @@ class CMetaFileDC : public CDC
 
 |名前|説明|
 |----------|-----------------|
-|[CMetaFileDC::CMetaFileDC](#cmetafiledc)|`CMetaFileDC` オブジェクトを構築します。|
+|[CメタファイルDC:CメタファイルDC](#cmetafiledc)|`CMetaFileDC` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMetaFileDC::Close](#close)|デバイス コンテキストを閉じて、メタファイルのハンドルを作成します。|
-|[CMetaFileDC::CloseEnhanced](#closeenhanced)|拡張メタファイル デバイス コンテキストを閉じ、拡張メタファイルのハンドルを作成します。|
-|[CMetaFileDC::Create](#create)|Windows メタファイル デバイス コンテキストを作成しにアタッチします、`CMetaFileDC`オブジェクト。|
-|[CMetaFileDC::CreateEnhanced](#createenhanced)|拡張形式メタファイルのメタファイル デバイス コンテキストを作成します。|
+|[ファイルDC::閉じる](#close)|デバイス コンテキストを閉じ、メタファイル ハンドルを作成します。|
+|[ファイル DC::クローズ拡張](#closeenhanced)|拡張メタファイル デバイス コンテキストを閉じ、拡張メタファイル ハンドルを作成します。|
+|[ファイルDC:作成](#create)|Windows メタファイル デバイス コンテキストを作成し、オブジェクト`CMetaFileDC`にアタッチします。|
+|[CMetaFileDC::拡張の作成](#createenhanced)|拡張形式のメタファイルのメタファイル デバイス コンテキストを作成します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Windows メタファイルを実装するために最初に作成、`CMetaFileDC`オブジェクト。 呼び出す、`CMetaFileDC`コンス トラクターを呼び出して、[作成](#create)メンバー関数は、Windows メタファイル デバイス コンテキストを作成しにアタッチします、`CMetaFileDC`オブジェクト。
+Windows メタファイルを実装するには、まずオブジェクト`CMetaFileDC`を作成します。 コンストラクターを`CMetaFileDC`呼び出し[、Create](#create)メンバー関数を`CMetaFileDC`呼び出します。
 
-次に送信、`CMetaFileDC`を再生するために意図されている CDC GDI コマンドのシーケンスのオブジェクトします。 出力を作成します。 GDI コマンドのみ`MoveTo`と`LineTo`、使用することができます。
+次に、`CMetaFileDC`再生する CDC GDI コマンドのシーケンスをオブジェクトに送信します。 や などの`MoveTo``LineTo`出力を作成する GDI コマンドのみを使用できます。
 
-メタファイルに必要なコマンドを送信した後、`Close`メタファイルのハンドルを返しますメタファイル デバイス コンテキストを閉じ、メンバー関数。 破棄、`CMetaFileDC`オブジェクト。
+メタファイルに目的のコマンドを送信した後、メンバー関数を`Close`呼び出します。 次に、オブジェクト`CMetaFileDC`を破棄します。
 
-[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メタファイルを繰り返し再生するメタファイルのハンドルを使用し、ことができます。 メタファイルできますなど Windows の関数で操作することも[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)メタファイルをディスクにコピーします。
+[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)はメタファイル ハンドルを使用してメタファイルを繰り返し再生できます。 メタファイルは、メタファイルをディスクにコピーする[CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)などの Windows 関数によっても操作できます。
 
-メタファイルを不要になったときにメモリから削除、 [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows 関数。
+メタファイルが不要になったら、そのメタファイルを削除して、Windows の機能を使用してメモリから[削除](/windows/win32/api/wingdi/nf-wingdi-deletemetafile)します。
 
-実装することも、`CMetaFileDC`オブジェクトを処理できるようにの呼び出しの出力し、GDI 呼び出しの属性両方`GetTextExtent`します。 このようなメタファイルはより柔軟なと詳細は簡単に再利用できる一般的な GDI コードでは、多くの場合、出力と属性の呼び出しの組み合わせで構成されます。 `CMetaFileDC`クラスは、2 つのデバイス コンテキストを継承`m_hDC`と`m_hAttribDC`、CDC から。 `m_hDC`のすべてのデバイス コンテキストが処理[CDC](../../mfc/reference/cdc-class.md) GDI 呼び出しの出力と`m_hAttribDC`デバイス コンテキストは、CDC GDI 属性のすべての呼び出しを処理します。 通常、これらの 2 つのデバイス コンテキストでは、同じデバイスを参照してください。 場合`CMetaFileDC`DC の属性は、既定で NULL に設定されます。
+また、`CMetaFileDC`出力呼び出しと、 などの`GetTextExtent`属性 GDI 呼び出しの両方を処理できるように、オブジェクトを実装することもできます。 このようなメタファイルはより柔軟で、出力と属性の呼び出しが混在する一般的な GDI コードをより簡単に再利用できます。 この`CMetaFileDC`クラスは、CDC`m_hDC`から 2`m_hAttribDC`つのデバイス コンテキストと を継承します。 デバイス`m_hDC`コンテキストは、すべての[CDC](../../mfc/reference/cdc-class.md) GDI`m_hAttribDC`出力呼び出しを処理し、デバイス コンテキストは、すべての CDC GDI 属性呼び出しを処理します。 通常、これら 2 つのデバイス コンテキストは同じデバイスを参照します。 の場合`CMetaFileDC`、属性 DC は既定で NULL に設定されます。
 
-画面、プリンター、または、メタファイル以外のデバイスへのポインターを呼び出している 2 つ目のデバイス コンテキストを作成、`SetAttribDC`メンバー関数を使用して、新しいデバイス コンテキストを関連付ける`m_hAttribDC`します。 GDI 呼び出し情報のようになりましたが表示されます、新しい`m_hAttribDC`します。 移動する 出力 GDI 呼び出し`m_hDC`メタファイルを表します。
+画面、プリンター、またはメタファイル以外のデバイスを指す 2 つ目のデバイス コンテキストを作成し`SetAttribDC`、メンバー関数を呼び出して新`m_hAttribDC`しいデバイス コンテキストを に関連付けます。 GDI から情報を求める情報が新しい`m_hAttribDC`. 出力 GDI 呼び`m_hDC`出しは、メタファイルを表す に行きます。
 
-詳細については`CMetaFileDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。
+の詳細については、「 `CMetaFileDC`[デバイス コンテキスト](../../mfc/device-contexts.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,9 +80,9 @@ Windows メタファイルを実装するために最初に作成、`CMetaFileDC
 
 **ヘッダー:** afxext.h
 
-##  <a name="close"></a>  CMetaFileDC::Close
+## <a name="cmetafiledcclose"></a><a name="close"></a>ファイルDC::閉じる
 
-メタファイル デバイス コンテキストを閉じて、メタファイルを使用して、再生に使用できる Windows メタファイルのハンドルを作成、 [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メンバー関数。
+メタファイル デバイス コンテキストを閉じ[、CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メンバー関数を使用してメタファイルを再生するために使用できる Windows メタファイル ハンドルを作成します。
 
 ```
 HMETAFILE Close();
@@ -90,17 +90,17 @@ HMETAFILE Close();
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合に、有効な HMETAFILEそれ以外の場合は NULL です。
+関数が正常に実行された場合は有効な HMETAFILE。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows メタファイルのハンドルがなど Windows の関数とメタファイルを操作することもでき[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)します。
+Windows メタファイル ハンドルを使用して、[コピーメタ](/windows/win32/api/wingdi/nf-wingdi-copymetafilew)ファイルなどの Windows 関数を使用してメタファイルを操作することもできます。
 
-使用後に、Windows を呼び出すことによって、メタファイルを削除[DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile)関数。
+使用後に、Windows の削除メタファイル関数を呼び出して[メタファイルを削除](/windows/win32/api/wingdi/nf-wingdi-deletemetafile)します。
 
-##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced
+## <a name="cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>ファイル DC::クローズ拡張
 
-拡張メタファイル デバイス コンテキストを閉じ、拡張形式、メタファイルを識別するハンドルを返します。
+拡張メタファイル デバイス コンテキストを閉じ、拡張形式のメタファイルを識別するハンドルを返します。
 
 ```
 HENHMETAFILE CloseEnhanced();
@@ -108,45 +108,45 @@ HENHMETAFILE CloseEnhanced();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、拡張メタファイルのハンドルそれ以外の場合は NULL です。
+正常終了した場合は、拡張メタファイルのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションは、この関数によって返される拡張メタファイルのハンドルを使用して、次のタスクを実行できます。
+アプリケーションは、この関数によって返される拡張メタファイル ハンドルを使用して、次のタスクを実行できます。
 
-- 拡張メタファイルに格納されている画像を表示します。
+- 拡張メタファイルに保存されている画像を表示する
 
-- 拡張メタファイルのコピーを作成します。
+- 拡張メタファイルのコピーを作成する
 
-- 列挙、編集、または拡張メタファイル内の個々 のレコードのコピー
+- 拡張メタファイル内の個々のレコードを列挙、編集、またはコピーする
 
-- 拡張メタファイル ヘッダーからメタファイルの内容の説明 (オプション) を取得します。
+- 拡張メタファイル ヘッダーからメタファイルの内容の説明を取得するオプション
 
-- 拡張メタファイル ヘッダーのコピーを取得します。
+- 拡張メタファイル ヘッダーのコピーを取得する
 
-- 拡張メタファイルのバイナリのコピーを取得します。
+- 拡張メタファイルのバイナリ コピーを取得する
 
-- 省略可能なパレットで色を列挙します。
+- オプションのパレットで色を列挙する
 
-- Windows メタファイルを拡張形式、メタファイルに変換します。
+- 拡張形式のメタファイルを Windows 形式のメタファイルに変換する
 
-Win32 を呼び出すことによって、ハンドルを解除する必要が、アプリケーションで拡張メタファイルのハンドルが不要になった場合は、`DeleteEnhMetaFile`関数。
+アプリケーションが拡張メタファイル ハンドルを必要としなくなった場合は、Win32`DeleteEnhMetaFile`関数を呼び出してハンドルを解放する必要があります。
 
-##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC
+## <a name="cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CメタファイルDC:CメタファイルDC
 
-構築、 `CMetaFileDC` 2 つのステップ内のオブジェクト。
+2`CMetaFileDC`つの手順でオブジェクトを作成します。
 
 ```
 CMetaFileDC();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初に、呼び出す`CMetaFileDC`、呼び出して`Create`、Windows メタファイル デバイス コンテキストを作成しにアタッチする`CMetaFileDC`オブジェクト。
+まず、`CMetaFileDC`を呼び`Create`出し、次に Windows メタファイル デバイス コンテキストを`CMetaFileDC`作成し、オブジェクトにアタッチする を呼び出します。
 
-##  <a name="create"></a>  CMetaFileDC::Create
+## <a name="cmetafiledccreate"></a><a name="create"></a>ファイルDC:作成
 
-構築、 `CMetaFileDC` 2 つのステップ内のオブジェクト。
+2`CMetaFileDC`つの手順でオブジェクトを作成します。
 
 ```
 BOOL Create(LPCTSTR lpszFilename = NULL);
@@ -154,18 +154,18 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszFilename*<br/>
-Null で終わる文字列へのポインター。 作成するメタファイルのファイル名を指定します。 場合*場合*が null の場合、新しいメモリ内のメタファイルを作成します。
+*ファイル名*<br/>
+NULL で終わる文字列を指します。 作成するメタファイルのファイル名を指定します。 *lpszFilename*が NULL の場合、新しいインメモリ メタファイルが作成されます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初に、コンス トラクターを呼び出す`CMetaFileDC`、呼び出して`Create`、Windows メタファイル デバイス コンテキストを作成しにアタッチする`CMetaFileDC`オブジェクト。
+まず、コンストラクタ`CMetaFileDC`を呼び出してから`Create`、Windows メタファイル デバイス コンテキストを作成して`CMetaFileDC`オブジェクトにアタッチする を呼び出します。
 
-##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced
+## <a name="cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::拡張の作成
 
 拡張形式メタファイルのデバイス コンテキストを作成します。
 
@@ -179,41 +179,41 @@ BOOL CreateEnhanced(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDCRef*<br/>
-拡張メタファイルの参照のデバイスを識別します。
+*を参照します。*<br/>
+拡張メタファイルの参照デバイスを識別します。
 
-*lpszFileName*<br/>
-Null で終わる文字列へのポインター。 作成する拡張メタファイルのファイル名を指定します。 メモリ ベースとその内容をオブジェクトが破棄されるとき、または紛失拡張メタファイルは、このパラメーターが NULL の場合、Win32`DeleteEnhMetaFile`関数が呼び出されます。
+*ファイル名*<br/>
+NULL で終わる文字列を指します。 作成する拡張メタファイルのファイル名を指定します。 このパラメーターが NULL の場合、拡張メタファイルはメモリ ベースであり、オブジェクトが破棄されたとき、または Win32`DeleteEnhMetaFile`関数が呼び出されたときにその内容が失われます。
 
 *lpBounds*<br/>
-指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md) HIMETRIC 単位 (.01 ミリメートル単位)、図の拡張メタファイルに格納されるディメンションを指定するオブジェクト。
+拡張メタファイルに格納される画像の寸法を HIMETRIC 単位 (0.01 ミリ単位) 単位で指定する[RECT](/windows/win32/api/windef/ns-windef-rect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポイント。
 
-*lpszDescription*<br/>
-画像のタイトルと同様に、画像を作成したアプリケーションの名前を指定する 0 で終わる文字列へのポインター。
+*説明をします。*<br/>
+画像を作成したアプリケーションの名前と、画像のタイトルを指定する、ゼロで終わる文字列を指します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、拡張メタファイル デバイス コンテキストのハンドルそれ以外の場合は NULL です。
+正常終了した場合は、拡張メタファイルのデバイス コンテキストのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この DC は、デバイスに依存しない画像を格納できます。
+この DC は、デバイスに依存しない画像を格納するために使用できます。
 
-Windows で識別される参照のデバイスを使用して、 *pDCRef*解像度と図の最初の表示をデバイス単位を記録するパラメーター。 場合、 *pDCRef*パラメーターが NULL で、現在のディスプレイ デバイスを使用して参照します。
+Windows は *、pDCRef*パラメーターで識別される参照デバイスを使用して、画像が最初に表示されたデバイスの解像度と単位を記録します。 *pDCRef*パラメーターが NULL の場合、参照用に現在の表示装置が使用されます。
 
-左と上のメンバー、`RECT`によって示されるデータ構造、 *lpBounds*パラメーター未満でなければなりません右側と下部にあるメンバーをそれぞれします。 図では、四角形の辺に沿ったポイントが含まれます。 場合*lpBounds*が null の場合、グラフィックス デバイス インターフェイス (GDI) は、アプリケーションで描画される画像を囲む最小の四角形の大きさを計算します。 *LpBounds*可能であれば、パラメーターを指定する必要があります。
+*lpBounds*パラメーターによって指定`RECT`されるデータ構造体の左と上のメンバーは、それぞれ右と下のメンバーよりも小さくする必要があります。 四角形の端に沿ったポイントが画像に含まれます。 *lpBounds*が NULL の場合、グラフィックス デバイス インターフェイス (GDI) は、アプリケーションによって描画された画像を囲むことができる最小の四角形のサイズを計算します。 可能な場合は *、lpBounds*パラメーターを指定する必要があります。
 
-指し示さ、文字列、 *lpszDescription*パラメーターは、アプリケーション名と画像名の間の null 文字を含める必要があり、2 つの null 文字で終了する必要があります: たとえば、"XYZ グラフィックス Editor\0Bald Eagle\0\0、"\0 は null 文字を表します。 場合*lpszDescription*が null の場合、拡張メタファイル ヘッダーに対応するエントリはありません。
+*lpszDescription*パラメータで指定される文字列には、アプリケーション名と画像名の間に null 文字が含まれ、2 つの NULL 文字で終わる必要があります。 *lpszDescription*が NULL の場合、拡張メタファイル ヘッダーに対応するエントリはありません。
 
-アプリケーションでは、この関数によって作成されたドメイン コント ローラーを使用して拡張メタファイルにグラフィックス画像を保存します。 このドメイン コント ローラーを識別するハンドルは、任意の GDI 関数に渡すことができます。
+アプリケーションは、この関数によって作成された DC を使用して、グラフィックス画像を拡張メタファイルに格納します。 この DC を識別するハンドルは、任意の GDI 関数に渡すことができます。
 
-アプリケーションは、拡張メタファイルに画像を保存した後、画像を表示できる任意の出力デバイスで呼び出すことによって、`CDC::PlayMetaFile`関数。 Windows が指す長方形を使用して、画像を表示するときに、 *lpBounds*パラメーターと位置し、スケールの図を参照するデバイスからの解像度のデータ。 この関数によって返されるデバイス コンテキストには、任意の新しい DC に関連付けられている同じ既定の属性が含まれています。
+アプリケーションは、拡張メタファイルに画像を格納した後、関数を呼び出すことによって、任意の出力デバイス`CDC::PlayMetaFile`上に画像を表示できます。 ピクチャを表示する場合、Windows は *、lpBounds*パラメーターで示された四角形と、参照デバイスからの解像度データを使用して、画像を配置およびスケーリングします。 この関数によって返されるデバイス コンテキストには、新しい DC に関連付けられた同じ既定の属性が含まれています。
 
-アプリケーションは、Win32 を使用する必要があります`GetWinMetaFileBits`拡張メタファイルを以前の Windows メタファイル形式に変換する関数。
+アプリケーションは、拡張メタファイルを`GetWinMetaFileBits`古い Windows メタファイル形式に変換するために Win32 関数を使用する必要があります。
 
-拡張メタファイルのファイル名を使用する必要があります、します。EMF 拡張機能。
+拡張メタファイルのファイル名には.EMF 拡張。
 
 ## <a name="see-also"></a>関連項目
 
-[CDC クラス](../../mfc/reference/cdc-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[CDCクラス](../../mfc/reference/cdc-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)

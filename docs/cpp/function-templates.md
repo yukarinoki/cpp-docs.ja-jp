@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179745"
 ---
 # <a name="function-templates"></a>関数テンプレート
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-このコードは、引数の値を入れ替える関数のファミリを定義します。 このテンプレートを入れ替える関数を生成できます**int**と**長い**型、およびユーザー定義型です。 `MySwap` は、クラスのコピー コンストラクターと代入演算子が正しく定義されていれば、クラスの入れ替えも実行します。
+このコードは、引数の値を入れ替える関数のファミリを定義します。 このテンプレートからは、 **int**型と**long**型、およびユーザー定義型を交換する関数を生成できます。 `MySwap` は、クラスのコピー コンストラクターと代入演算子が正しく定義されていれば、クラスの入れ替えも実行します。
 
-さらに、関数テンプレートが入れ替えが防止、さまざまな種類のオブジェクトの型をコンパイラが認識するため、 *、* と*b*コンパイル時にパラメーター。
+また、関数テンプレートを使用すると、コンパイル時に*a*と*b*のパラメーターの型がコンパイラに認識されるため、異なる型のオブジェクトを交換できなくなります。
 
 template 宣言されていない関数も、void ポインターを使用してこの関数を実行できますが、テンプレート バージョンはタイプ セーフです。 次の呼び出しがあるとします。
 
@@ -44,7 +44,7 @@ MySwap( j, Hello );      //error
 
 コンパイラはパラメーターの型が異なる `MySwap` 関数を生成できないため、2 番目の `MySwap` 呼び出しでは、コンパイル時にエラーが発生します。 void ポインターが使用されている場合は、どちらの関数呼び出しも正しくコンパイルされますが、関数は実行時に正しく機能しません。
 
-関数テンプレートのテンプレート引数を明示的に指定できます。 例えば:
+関数テンプレートのテンプレート引数を明示的に指定できます。 次に例を示します。
 
 ```cpp
 // function_templates2.cpp
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-テンプレート引数を明示的に指定すると、通常の暗黙の型変換が実行されて、関数の引数が対応する関数テンプレート パラメーターの型に変換されます。 上記の例では、コンパイラの変換`j`入力**char**します。
+テンプレート引数を明示的に指定すると、通常の暗黙の型変換が実行されて、関数の引数が対応する関数テンプレート パラメーターの型に変換されます。 上の例では、コンパイラは `j` を**char**型に変換します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[テンプレート]](../cpp/templates-cpp.md)<br/>
+[テンプレート](../cpp/templates-cpp.md)<br/>
 [関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)<br/>
 [明示的なインスタンス化](../cpp/explicit-instantiation.md)<br/>
 [関数テンプレートの明示的特殊化](../cpp/explicit-specialization-of-function-templates.md)

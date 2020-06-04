@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 46418063625e16385497740a4f7e3d837e923156
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198589"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>コンパイラの警告 (レベル 4) C4800
 
 ::: moniker range=">= vs-2019"
 Visual Studio 2019 以降:
-> 暗黙的な変換 '*型*' bool にします。 可能な情報の損失
+> '*Type*' から bool への暗黙的な変換です。 考えられる情報の損失
 ::: moniker-end
 
-Visual Studio 2015 以前のバージョンで、レベル 3 の警告 C4800 に示します。
-> '*型*': 値を強制的にブール値は 'true' または 'false' (パフォーマンスの警告)
+C4800 は、Visual Studio 2015 以前のレベル3の警告です。
+> '*type*': ブール値 ' true ' または ' false ' に強制的に値を指定します (パフォーマンス警告)
 
-値が型に暗黙的に変換するときにこの警告は生成`bool`します。 通常、このメッセージは割り当てることで発生`int`変数`bool`変数を`int`変数には値のみが含まれています**true**と**false**、可能性があります型として再宣言`bool`します。 型を使用する式を書き直すことができない場合`bool`、追加することができますし、"`!=0`"式の型を式に示す`bool`します。 式の型にキャスト`bool`デザインでは、警告を無効にしません。
+この警告は、値が型 `bool`に暗黙的に変換されるときに生成されます。 通常、このメッセージは、`int` 変数に**true**と**false**の値のみが含まれている `bool` 変数に `int` 変数を割り当てることによって発生し、型 `bool`として再宣言することができます。 型 `bool`を使用するように式を書き直すことができない場合は、式に "`!=0`" を追加して、式の型 `bool`を指定することができます。 式を型 `bool` にキャストしても、警告は無効になりません。これは仕様です。
 
 ::: moniker range=">= vs-2017"
-この警告は、Visual Studio 2017 では発生しません。
+この警告は、Visual Studio 2017 では生成されません。
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
-この警告は以降では、Visual Studio 2019 既定で無効にします。 使用 __/w__*n*__4800__レベルとして C4800 を有効にする*n*警告、または[/wall](../../build/reference/compiler-option-warning-level.md)すべての警告を有効にします。既定で無効にします。 詳細については、次を参照してください。[コンパイラの警告を、既定でオフ](../../preprocessor/compiler-warnings-that-are-off-by-default.md)します。
+この警告は、Visual Studio 2019 以降、既定ではオフになっています。 __/W__*n*__4800__を使用して C4800 をレベル*n*の警告として有効にするか、 [/Wall](../../build/reference/compiler-option-warning-level.md)を使用して既定でオフになっているすべての警告を有効にします。 詳細については、「[既定でオフになっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 ::: moniker-end
 
 ## <a name="example"></a>例

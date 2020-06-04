@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213344"
 ---
 # <a name="connecting-to-a-data-source"></a>データ ソースへの接続
 
-ODBC データ ソースは、特定のデータ、データ、およびデータ ソース名を使用して記述されるデータ ソースの場所にアクセスするために必要な情報セットです。 プログラムの観点から、データ、DBMS、(ある場合) は、ネットワーク、および ODBC データ ソースが含まれます。
+ODBC データソースは、データの特定のセット、そのデータにアクセスするために必要な情報、およびデータソースの場所であり、データソース名を使用して記述できます。 プログラムの観点から見ると、データソースには、データ、DBMS、ネットワーク (存在する場合)、および ODBC が含まれています。
 
-データ ソースによって提供されるデータにアクセスするには、プログラムはまず、データ ソースに接続を確立する必要があります。 すべてのデータ アクセスは、その接続を介して管理されます。
+データソースによって提供されるデータにアクセスするには、まず、プログラムがデータソースへの接続を確立する必要があります。 すべてのデータアクセスは、その接続を介して管理されます。
 
-データ ソースへの接続がクラスによってカプセル化された[CDatabase](../../mfc/reference/cdatabase-class.md)します。 ときに、`CDatabase`オブジェクトがデータ ソースに接続されていることができます。
+データソース接続は、 [CDatabase](../../mfc/reference/cdatabase-class.md)クラスによってカプセル化されます。 `CDatabase` オブジェクトがデータソースに接続されている場合、次のことができます。
 
-- 構築[レコード セット](../../mfc/reference/crecordset-class.md)レコードのテーブルまたはクエリを選択します。
+- テーブルまたはクエリからレコードを選択するレコード[セット](../../mfc/reference/crecordset-class.md)を構築します。
 
-- 管理[トランザクション](../../data/odbc/transaction-odbc.md)、バッチ処理の更新すべてがデータ ソースにコミットを一度に (またはデータ ソースは変更されません、バックアップ全体のトランザクションはロールバックされます): データ ソースが必要なレベルのトランザクションをサポートしている場合。
+- データソースが必要なレベルのトランザクションをサポートしている場合は、[トランザクション](../../data/odbc/transaction-odbc.md)を管理して、すべての更新を一度にデータソースにコミットする (または、データソースが変更されないようにトランザクション全体をロールバックする) ことができます。
 
-- 直接実行[SQL](../../data/odbc/sql.md)ステートメント。
+- [SQL](../../data/odbc/sql.md)ステートメントを直接実行します。
 
-データ ソース接続の操作が完了したら、閉じる、`CDatabase`オブジェクトとそれを破棄するか、新しい接続の再利用します。 データ ソース接続の詳細については、次を参照してください。[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)します。
+データソース接続の操作が完了したら、`CDatabase` オブジェクトを閉じ、新しい接続に対して破棄するか再利用します。 データソース接続の詳細については、「[データソース (ODBC)](../../data/odbc/data-source-odbc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)

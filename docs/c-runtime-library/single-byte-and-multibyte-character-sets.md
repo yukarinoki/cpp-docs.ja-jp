@@ -1,20 +1,18 @@
 ---
 title: 1 バイト文字セットとマルチバイト文字セット
 ms.date: 11/04/2016
-f1_keywords:
-- c.character.multibyte
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a6a0f3aaaa463297b7c51b035acc7b2f4a40b6cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745330"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444651"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>1 バイト文字セットとマルチバイト文字セット
 
@@ -25,7 +23,7 @@ ASCII 文字セットでは、0x00 から 0x7F までの範囲の文字を定義
 
 マルチバイト文字セットは、1 バイト文字と 2 バイト文字の両方で構成されることがあります。 そのため、マルチバイト文字列には、 1 バイト文字と 2 バイト文字が混在することがあります。 2 バイト文字には、先行バイトと後続バイトがあります。 特殊なマルチバイト文字セットでは、先行バイトが後続バイトと同じ範囲の値を持っている場合があります。 先頭バイトと後続バイトの範囲が重複する場合は、コンテキストを確認し、指定したバイトが先頭バイトと後続バイトのどちらであるかを判断する必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

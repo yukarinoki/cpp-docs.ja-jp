@@ -1,9 +1,9 @@
 ---
 title: _amsg_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _amsg_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,20 +14,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _amsg_exit
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31979a3181dc57644f1e6877277884e55cebf733
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335621"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170938"
 ---
-# <a name="amsgexit"></a>_amsg_exit
+# <a name="_amsg_exit"></a>_amsg_exit
 
 指定したランタイム エラー メッセージを出力した後に、エラー コード 255 でアプリケーションを終了します。
 
@@ -42,7 +45,7 @@ void _amsg_exit ( int rterrnum );
 *rterrnum*<br/>
 システム定義のランタイム エラー メッセージの ID 番号。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数は、ランタイム エラー メッセージをコンソール アプリケーションの **stderr** に出力するか、Windows アプリケーションのメッセージ ボックスにメッセージを表示します。 デバッグ モードでは、終了する前にデバッガーを起動できます。
 

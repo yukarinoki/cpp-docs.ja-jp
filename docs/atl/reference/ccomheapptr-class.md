@@ -1,5 +1,5 @@
 ---
-title: CComHeapPtr クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeapPtr
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: ace8dbb174bd6585e61bd941a60dad28296af72a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78cadfff9a278cf080393ab919f3891b201c91aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327773"
 ---
-# <a name="ccomheapptr-class"></a>CComHeapPtr クラス
+# <a name="ccomheapptr-class"></a>クラス
 
-ヒープのポインターを管理するためのスマート ポインター クラス。
+ヒープ ポインターを管理するためのスマート ポインター クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-ヒープに格納されるオブジェクトの種類。
+ヒープに格納されるオブジェクト型。
 
 ## <a name="members"></a>メンバー
 
@@ -37,17 +37,17 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 
 |名前|説明|
 |----------|-----------------|
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|コンストラクターです。|
+|[CComヒーププター::CComヒーププター](#ccomheapptr)|コンストラクターです。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComHeapPtr` 派生した`CHeapPtr`が使用して[CComAllocator](../../atl/reference/ccomallocator-class.md) COM ルーチンを使用してメモリを割り当てることです。 参照してください[CHeapPtr](../../atl/reference/cheapptr-class.md)と[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)の使用可能なメソッドです。
+`CComHeapPtr`は から`CHeapPtr`派生しますが、COM ルーチンを使用してメモリを割り当てる[には CComAllocator](../../atl/reference/ccomallocator-class.md)を使用します。 使用可能なメソッドについては[、「C ヒーププター](../../atl/reference/cheapptr-class.md)と[C ヒーププターベース](../../atl/reference/cheapptrbase-class.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
+[ヒーププターベース](../../atl/reference/cheapptrbase-class.md)
 
-[CHeapPtr](../../atl/reference/cheapptr-class.md)
+[クヒーププター](../../atl/reference/cheapptr-class.md)
 
 `CComHeapPtr`
 
@@ -55,7 +55,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 
 **ヘッダー:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComヒーププター::CComヒーププター
 
 コンストラクターです。
 
@@ -66,16 +66,16 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*<br/>
-既存の `CComHeapPtr` オブジェクト。
+*Pdata*<br/>
+既存の `CComHeapPtr` オブジェクトです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既存を使用して、ヒープのポインターを作成することができます必要に応じて`CComHeapPtr`オブジェクト。 そうである場合、新しい`CComHeapPtr`オブジェクトを新しいポインターとリソースを管理する責任を前提としています。
+ヒープ ポインターは、既存`CComHeapPtr`のオブジェクトを使用して任意で作成できます。 その場合、新しい`CComHeapPtr`オブジェクトは、新しいポインターとリソースを管理する責任を負います。
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
-[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)<br/>
-[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)<br/>
+[Cヒーププタークラス](../../atl/reference/cheapptr-class.md)<br/>
+[クラス](../../atl/reference/cheapptrbase-class.md)<br/>
+[コマッロロケータクラス](../../atl/reference/ccomallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

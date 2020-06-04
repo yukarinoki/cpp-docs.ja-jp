@@ -9,18 +9,18 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cdd5db4fae8d9167fa9ab1aeb6a4e8cbfe76ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209192"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372507"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
 
 共通言語ランタイムにはプラットフォーム呼び出しサービス (PInvoke: Platform Invocation Services) が用意されており、マネージド コードでネイティブなダイナミック リンク ライブラリ (DLL : Dynamic Link Library) の C スタイルの関数を呼び出すことができます。 COM とランタイムの相互運用と、"It Just Works (そのままで動く)" つまり IJW 機構のどちらにも、同じデータ マーシャリングが使用されています。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
@@ -29,13 +29,13 @@ ms.locfileid: "62209192"
 このセクションのサンプルで、`PInvoke` の使い方を示します。 `PInvoke` を使用すると、マーシャリング情報を手続き的なコードで書く代わりに属性として宣言できるため、データ マーシャリングを簡単にカスタマイズできます。
 
 > [!NOTE]
->  マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができるようになります。 参照してください[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)マーシャ リング ライブラリの詳細についてはします。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。
+> マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができるようになります。 マーシャリング ライブラリの詳細については[、「C++ での](../dotnet/overview-of-marshaling-in-cpp.md)マーシャリングの概要」を参照してください。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke と DllImport 属性
 
 次の例は、Visual C++ プログラムで `PInvoke` を使用する方法を示しています。 ネイティブ関数 puts が msvcrt.dll で定義されています。 DllImport 属性は puts の宣言に使用されます。
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -52,7 +52,7 @@ int main() {
 
 次の例は上のサンプルと同じものですが、IJW を使用しています。
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -145,7 +145,7 @@ char* fstringA(char* param) {
 
 次の例はこの問題を示しています。プログラムが正確な出力を与えるように見える場合でも、その出力は既に解放されたメモリから行われています。
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -172,35 +172,35 @@ int main() {
 
 しかし、フォームが異なる場合はマーシャリングが必要です。 フォームが異なる型とは、char、string、struct などの型です。 次の表は、マーシャラーが各型に使用するマップを示します。
 
-|wtypes.h|Visual C++|/clr を指定した Visual C++|共通言語ランタイム|
+|wtypes.h|Visual C++|/clr を指定した Visual C++|共通言語ランタイム|
 |--------------|------------------|-----------------------------|-----------------------------|
-|HANDLE|void \*|void \*|IntPtr、UIntPtr|
+|HANDLE|無効\*|無効\*|IntPtr、UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
-|INT|int|int|Int32|
+|INT|INT|INT|Int32|
 |UINT|unsigned int|unsigned int|UInt32|
 |LONG|long|long|Int32|
-|BOOL|long|bool|ブール型|
+|BOOL|long|[bool]|Boolean|
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
-|LPCSTR|const char \*|String ^|String|
-|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPSTR|Char\*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|定数文字\*|String ^|String|
+|LPWSTR|Wchar_t\*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
 |LPCWSTR|const wchar_t \*|String ^|String|
 |FLOAT|float|float|Single|
-|DOUBLE|double|double|倍精度浮動小数点型|
+|DOUBLE|double|double|Double|
 
 マーシャラーは、ランタイム ヒープに割り当てられたメモリのアドレスをアンマネージ関数に渡す場合、メモリを自動的に固定します。 メモリの固定によって、割り当てられたメモリ ブロックをガベージ コレクターが圧縮時に移動することはなくなります。
 
 このトピックの最初に示した例では、DllImport の CharSet パラメーターでマネージド型の String をマーシャリングする方法を示しています。この場合、マネージド型の String をネイティブ側で使用できるように ANSI 文字列にマーシャリングしています。
 
-ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 文字列をマーシャ リングするためのいくつかの選択肢がある\*引数。BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr します。 既定値は LPStr です。
+ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 文字列\*引数をマーシャリングする方法として、BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr といういくつかの選択肢があります。 既定値は LPStr です。
 
-この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力は、Hello World の最初の文字です。 マーシャ リングされた文字列の 2 番目のバイトが null の場合、配置のため、文字列の末尾のマーカーとして解釈します。
+この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力はハローワールドの最初の文字です! マーシャリングされた文字列の 2 番目のバイトは null であるため、このバイトは文字列の終わりマーカーとして解釈されます。
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 属性は System::Runtime::InteropServices 名前空間にあります。 この属性は、配列などのほかのデータ型にも使用できます。
 
-このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、次を参照してください。 [c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)します。
+このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、「 [C++ でのマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
 
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
 

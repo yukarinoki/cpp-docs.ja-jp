@@ -3,29 +3,28 @@ title: __declspec(dllexport) を使った DLL からのエクスポート
 ms.date: 05/06/2019
 f1_keywords:
 - dllexport
-- __declspec
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
 - names [C++], DLL exports by
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 075962758773660085ae0b98b668c264524cc6aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328595"
 ---
-# <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
+# <a name="exporting-from-a-dll-using-__declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 
-DLL を使用してから、データ、関数、クラス、またはクラス メンバー関数をエクスポートすることができます、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。
+**__declspec(dllexport)** キーワードを使うと、データ、関数、クラス、クラスのメンバー関数を DLL からエクスポートできます。 **__declspec(dllexport)** は、オブジェクト ファイルにエクスポート ディレクティブを追加するので、.def ファイルは不要です。
 
-この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 使用する場合**方式**アカウントにのみ、名前付け規約の変更のために必要なは、DLL と従属する .exe ファイルを再コンパイルします。
+この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 **__declspec(dllexport)** を使用する場合は、名前付け規約の変更に対応するためだけに、DLL とその従属する .exe ファイルを再コンパイルする必要があります。
 
-序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただしを使用して**方式**に加えて、.def ファイルはしないビルド エラーが発生します。
+序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただし、.def ファイルに加えて **__declspec(dllexport)** を使うと、ビルド エラーが発生しません。
 
-関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例:
+関数をエクスポートするには、呼び出し規約キーワードが指定されている場合、 **__declspec(dllexport)** キーワードは呼び出し規約キーワードの左に記述します。 次に例を示します。
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -39,35 +38,35 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
->  `__declspec(dllexport)` は、`__clrcall` 呼び出し規則を伴う関数には適用できません。
+> `__declspec(dllexport)` は、`__clrcall` 呼び出し規則を伴う関数には適用できません。
 
-通常、関数のプロトタイプやエクスポートし、追加するクラスを含むヘッダー ファイルを作成する DLL を作成するときに**方式**ヘッダー ファイル内の宣言にします。 コードを読みやすくするためのマクロを定義**方式**をエクスポートする各シンボルでマクロを使用。
+DLL のビルド時には通常、エクスポートする関数のプロトタイプやクラスを含むヘッダー ファイルを作成し、そのヘッダー ファイル内の宣言に **__declspec(dllexport)** を追加します。 コードを読みやすくするために、次のように **__declspec(dllexport)** 用のマクロを定義して、そのマクロをエクスポートする各シンボルに使います。
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-**方式**ストア機能の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合を参照してください。[関数ではなく序数値の名前を DLL からエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)します。
+**__declspec(dllexport)** は、関数名を DLL のエクスポート テーブルに格納します。 テーブル サイズの最適化方法については、「[名前ではなく序数値による DLL 関数のエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)」を参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
+- [.def ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使用してエクスポートとインポートを行う](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用する C++ 関数をエクスポートする](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C または C++ 言語の実行可能ファイルで使用する C 関数をエクスポートする](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使い分け](determining-which-exporting-method-to-use.md)
 
 - [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
+- [DLL の初期化](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [_ _Declspec キーワード](../cpp/declspec.md)
+- [__declspec キーワード](../cpp/declspec.md)
 
 - [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 

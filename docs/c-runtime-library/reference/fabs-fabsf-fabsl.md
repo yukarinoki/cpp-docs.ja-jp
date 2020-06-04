@@ -1,10 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941493"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920241"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -77,11 +79,13 @@ long double fabsl(
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ではオーバーロードが可能であるため、 \<cmath > ヘッダーを含める場合は、fabs のオーバーロードを呼び出すことができます。 C プログラムでは、 **fabs**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、 **fabs** \<cmath> ヘッダーを含めた場合は、fabs のオーバーロードを呼び出すことができます。 C プログラムでは、 **fabs**は常に**double**を受け取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -89,7 +93,7 @@ C++ではオーバーロードが可能であるため、 \<cmath > ヘッダー
 |--------------|-----------------------|---------------------------|
 |**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

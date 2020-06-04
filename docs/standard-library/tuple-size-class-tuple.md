@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241553"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688850"
 ---
-# <a name="tuplesize-class"></a>tuple_size クラス
+# <a name="tuple_size-class"></a>tuple_size クラス
 
 `tuple` を含む要素の数を報告します。
 
@@ -60,19 +60,19 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>パラメーター
 
-*タプル*\
+*タプル*の \
 タプルの型。
 
-*Elem*\
+*Elem* \
 配列要素の型。
 
-*サイズ*\
+@No__t_1*サイズ*
 配列のサイズ。
 
-*T1*\
+*T1* \
 ペアの最初のメンバーの型。
 
-*T2*\
+*T2* \
 ペアの 2 番目のメンバーの型。
 
 *型*\
@@ -80,9 +80,9 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、メンバーがある`value`は整数定数式の値は、タプル型の範囲*タプル*します。
+クラステンプレートには、タプル型の*タプル*の範囲を値として持つ整数定数式であるメンバー `value` があります。
 
-配列のテンプレート特殊化を持つメンバー`value`は整数定数式の値は*サイズ*、これは、配列のサイズです。
+配列のテンプレート特殊化には、*値が配列のサイズである*整数定数式である `value` メンバーが含まれています。
 
 ペアのテンプレート特殊化には、2 を値として持つ整数定数式であるメンバー `value` が含まれます。
 
@@ -115,7 +115,7 @@ int main()
 4
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<tuple>
 

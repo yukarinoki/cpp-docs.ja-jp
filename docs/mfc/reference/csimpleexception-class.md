@@ -1,5 +1,5 @@
 ---
-title: CSimpleException クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleException
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb94ba9e3d26b3cd910f23c3d4abb29d3b8b1cd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318359"
 ---
-# <a name="csimpleexception-class"></a>CSimpleException クラス
+# <a name="csimpleexception-class"></a>クラス
 
 このクラスは、リソース クリティカルな MFC 例外の基底クラスです。
 
@@ -33,29 +33,29 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleException::CSimpleException](#csimpleexception)|コンストラクターです。|
+|[::CSimple例外](#csimpleexception)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleException::GetErrorMessage](#geterrormessage)|発生したエラーに関するテキストを提供します。|
+|[をクリックします。](#geterrormessage)|発生したエラーに関するテキストを提供します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CSimpleException` リソース クリティカルな MFC 例外の基本クラスですし、所有権とエラー メッセージの初期化を処理します。 次のクラスの使用`CSimpleException`その基本クラスとして。
+`CSimpleException`は、リソース クリティカルな MFC 例外の基本クラスであり、エラー メッセージの所有権と初期化を処理します。 次のクラスは`CSimpleException`、基本クラスとして使用されます。
 
 |||
 |-|-|
-|[CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)|メモリ不足の例外|
-|[CNotSupportedException クラス](../../mfc/reference/cnotsupportedexception-class.md)|サポートされていない操作の要求|
-|[CResourceException クラス](../../mfc/reference/cresourceexception-class.md)|見つからないか、またはできない Windows リソース|
-|[CUserException クラス](../../mfc/reference/cuserexception-class.md)|リソースを示す例外が見つかりませんでした。|
-|[CInvalidArgException クラス](../../mfc/reference/cinvalidargexception-class.md)|無効な引数を示す例外|
+|[クラス](../../mfc/reference/cmemoryexception-class.md)|メモリ不足の例外|
+|[クラスをサポートしていません。](../../mfc/reference/cnotsupportedexception-class.md)|サポートされていない操作の要求|
+|[クラス](../../mfc/reference/cresourceexception-class.md)|Windows リソースが見つからないか、または作成可能でない|
+|[CUserException クラス](../../mfc/reference/cuserexception-class.md)|リソースが見つからなかったことを示す例外|
+|[クラスを無効にします。](../../mfc/reference/cinvalidargexception-class.md)|無効な引数を示す例外|
 
-`CSimpleException`抽象基本クラスでは、宣言することはできません、`CSimpleException`オブジェクトに直接します。 代わりに、前の表にあるなどの派生オブジェクトを宣言する必要があります。 派生クラスを宣言している場合は、モデルとして前のクラスを使用します。
+抽象`CSimpleException`基本クラスであるため、オブジェクトを`CSimpleException`直接宣言することはできません。 代わりに、前の表のような派生オブジェクトを宣言する必要があります。 独自の派生クラスを宣言する場合は、前のクラスをモデルとして使用します。
 
-詳細については、次を参照してください。、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+詳細については[、「CException クラス](../../mfc/reference/cexception-class.md)」および[「例外処理 (MFC)」](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 **ヘッダー:** afx.h
 
-##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException
+## <a name="csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>::CSimple例外
 
 コンストラクターです。
 
@@ -80,16 +80,16 @@ explicit CSimpleException(BOOL bAutoDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAutoDelete*<br/>
-場合は TRUE を指定のメモリ、`CSimpleException`オブジェクトがヒープに割り当てられています。 これにより、`CSimpleException`ときに削除するオブジェクト、`Delete`例外を削除するメンバー関数が呼び出されます。 場合は FALSE を指定、`CSimpleException`オブジェクトがスタック上にまたはグローバル オブジェクトです。 ここで、`CSimpleException`オブジェクトができない場合に削除されます、`Delete`メンバー関数が呼び出されます。
+*b自動削除*<br/>
+オブジェクトのメモリがヒープに`CSimpleException`割り当てられている場合は、TRUE を指定します。 これにより、メンバー関数`CSimpleException`が呼び出されたときに、例外`Delete`を削除するオブジェクトが削除されます。 オブジェクトがスタック上`CSimpleException`にある場合、またはグローバルオブジェクトである場合は、FALSE を指定します。 この場合、`Delete`メンバー関数`CSimpleException`が呼び出されたときにオブジェクトは削除されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローする関数のインスタンスを作成する必要があります、 `CException`-クラスを派生し、コンス トラクターまたはそれを呼び出す必要があります、MFC のいずれかを使用してスロー関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。
+通常、このコンストラクターを直接呼び出す必要はありません。 例外をスローする関数は`CException`、派生クラスのインスタンスを作成してそのコンストラクターを呼び出すか、または MFC の throw 関数[(AfxThrowFileException](exception-processing.md#afxthrowfileexception)など) のいずれかを使用して定義済みの型をスローする必要があります。
 
-##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage
+## <a name="csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>をクリックします。
 
-発生したエラーに関するテキストを提供するには、このメンバー関数を呼び出します。
+発生したエラーに関するテキストを提供します。
 
 ```
 virtual BOOL GetErrorMessage(
@@ -100,25 +100,25 @@ virtual BOOL GetErrorMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszError*<br/>
+*エラー*<br/>
 エラー メッセージを受け取るバッファーへのポインター。
 
-*nMaxError*<br/>
-NULL ターミネータを含めた、バッファーが保持できる文字の最大数。
+*エラー*<br/>
+バッファーが保持できる最大文字数 (NULL 終端文字を含む)。
 
-*pnHelpContext*<br/>
-ヘルプ コンテキスト ID を受け取る UINT のアドレス NULL の場合、ID は返されません。
+*コンテキスト*<br/>
+ヘルプ コンテキスト ID を受け取る UINT のアドレス。 NULL の場合、ID は返されません。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合それ以外の場合 0 の場合、エラー メッセージ テキストは使用できます。
+関数が成功した場合は 0 以外の値を返します。それ以外の場合は 0 (エラー メッセージ テキストが使用できない場合)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)します。
+詳細については[、「CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CException クラス](../../mfc/reference/cexception-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラスの例外](../../mfc/reference/cexception-class.md)<br/>
 [例外処理](../../mfc/exception-handling-in-mfc.md)

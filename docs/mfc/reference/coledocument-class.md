@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341816"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753874"
 ---
 # <a name="coledocument-class"></a>COleDocument クラス
 
@@ -75,51 +75,51 @@ class COleDocument : public CDocument
 
 |名前|説明|
 |----------|-----------------|
-|[COleDocument::COleDocument](#coledocument)|`COleDocument` オブジェクトを構築します。|
+|[ドキュメント::ドキュメント](#coledocument)|`COleDocument` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleDocument::AddItem](#additem)|ドキュメントによって管理されるアイテムのリストに項目を追加します。|
-|[COleDocument::ApplyPrintDevice](#applyprintdevice)|文書のすべてのクライアント アイテムの印刷ターゲット デバイスを設定します。|
-|[COleDocument::EnableCompoundFile](#enablecompoundfile)|OLE 構造化ストレージ ファイルの形式を使用して格納されるドキュメントをによりします。|
-|[COleDocument::GetInPlaceActiveItem](#getinplaceactiveitem)|現在の実行中である OLE 項目を返します。|
-|[COleDocument::GetNextClientItem](#getnextclientitem)|反復処理するためには、クライアントの次の項目を取得します。|
-|[COleDocument::GetNextItem](#getnextitem)|反復処理するためには、ドキュメントの次の項目を取得します。|
-|[COleDocument::GetNextServerItem](#getnextserveritem)|反復処理するためには、サーバーの次の項目を取得します。|
-|[COleDocument::GetPrimarySelectedItem](#getprimaryselecteditem)|文書内のプライマリの選択されている OLE 項目を返します。|
-|[COleDocument::GetStartPosition](#getstartposition)|初期のイテレーションを開始する位置を取得します。|
-|[COleDocument::HasBlankItems](#hasblankitems)|文書内の空の項目を確認します。|
-|[COleDocument::OnShowViews](#onshowviews)|表示または非表示のドキュメントになると呼び出されます。|
-|[COleDocument::RemoveItem](#removeitem)|ドキュメントによって管理されるアイテムの一覧から項目を削除します。|
-|[COleDocument::UpdateModifiedFlag](#updatemodifiedflag)|含まれている OLE 項目のいずれかが変更された場合の変更としては、ドキュメントをマークします。|
+|[ドキュメント::アイテムの追加](#additem)|ドキュメントによって保持されている項目の一覧に項目を追加します。|
+|[をクリックします。](#applyprintdevice)|ドキュメント内のすべてのクライアント項目の印刷対象デバイスを設定します。|
+|[コンパウンドファイルを有効にする](#enablecompoundfile)|OLE 構造化ストレージ ファイル形式を使用して文書を保存します。|
+|[をクリックします。](#getinplaceactiveitem)|現在作業中の OLE アイテムを返します。|
+|[次のクライアントアイテムを取得します。](#getnextclientitem)|反復処理の次のクライアント項目を取得します。|
+|[次のアイテムを取得します。](#getnextitem)|反復処理の次のドキュメント アイテムを取得します。|
+|[次のサーバーアイテムを取得します。](#getnextserveritem)|反復処理の次のサーバー項目を取得します。|
+|[を選択しました。](#getprimaryselecteditem)|ドキュメント内で選択されている主な OLE アイテムを返します。|
+|[ドキュメント::取得開始位置](#getstartposition)|反復を開始する最初の位置を取得します。|
+|[ドキュメント::を空白にします](#hasblankitems)|ドキュメント内の空白の項目をチェックします。|
+|[ドキュメント::オンショービュー](#onshowviews)|ドキュメントが表示または非表示になったときに呼び出されます。|
+|[アイテムを削除します。](#removeitem)|ドキュメントによって保持されている項目の一覧から項目を削除します。|
+|[ドキュメント::更新変更フラグ](#updatemodifiedflag)|含まれている OLE アイテムのいずれかが変更されている場合、ドキュメントを変更済みとしてマークします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleDocument::OnEditChangeIcon](#oneditchangeicon)|アイコンの変更 メニュー コマンドのイベントを処理します。|
-|[COleDocument::OnEditConvert](#oneditconvert)|1 つの型から別の埋め込みまたはリンクされたオブジェクトの変換を処理します。|
-|[COleDocument::OnEditLinks](#oneditlinks)|[編集] メニューのリンクのコマンドのイベントを処理します。|
-|[COleDocument::OnFileSendMail](#onfilesendmail)|ドキュメントを添付して、メール メッセージを送信します。|
-|[COleDocument::OnUpdateEditChangeIcon](#onupdateeditchangeicon)|アイコンの編集/変更 メニュー オプションのコマンドの UI を更新するためにフレームワークによって呼び出されます。|
-|[COleDocument::OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|コマンド UI/リンクの編集 メニュー オプションを更新するためにフレームワークによって呼び出されます。|
-|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|編集のためのコマンドは、UI を更新するためにフレームワークによって呼び出される/ *ObjectName*メニュー オプションとからアクセスされる動詞サブメニュー/ *ObjectName*します。|
-|[COleDocument::OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|貼り付けメニュー オプションのコマンドの UI を更新するためにフレームワークによって呼び出されます。|
-|[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|貼り付けメニュー オプションのコマンドの UI を更新するためにフレームワークによって呼び出されます。|
+|[ドキュメント::オンエディットチェンジアイコン](#oneditchangeicon)|[アイコンの変更] メニュー コマンドのイベントを処理します。|
+|[ドキュメント::オンエディットコンバート](#oneditconvert)|埋め込みオブジェクトまたはリンク オブジェクトの型間の変換を処理します。|
+|[ドキュメント::オンエディットリンク](#oneditlinks)|[編集] メニューの [リンク] コマンドでイベントを処理します。|
+|[ファイル送信メール](#onfilesendmail)|ドキュメントが添付されたメール メッセージを送信します。|
+|[ドキュメント::オンアップデートエディットチェンジアイコン](#onupdateeditchangeicon)|[アイコンの編集/変更] メニュー オプションのコマンド UI を更新するために、フレームワークによって呼び出されます。|
+|[次の項目をクリックします。](#onupdateeditlinksmenu)|編集/リンク メニュー オプションのコマンド UI を更新するために、フレームワークによって呼び出されます。|
+|[をクリックします。](#onupdateobjectverbmenu)|フレームワークによって呼び出され、編集/*オブジェクト名*メニュー オプションのコマンド UI と、編集/*オブジェクト名*からアクセスされる動詞サブメニューを更新します。|
+|[ドキュメント::オンアップデートペーストリンクメニュー](#onupdatepastelinkmenu)|[形式を選択して貼り付け] メニュー オプションのコマンド UI を更新するために、フレームワークによって呼び出されます。|
+|[ドキュメント::オンアップデートペーストメニュー](#onupdatepastemenu)|[貼り付け] メニュー オプションのコマンド UI を更新するために、フレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`COleDocument` 派生`CDocument`、OLE アプリケーション、Microsoft Foundation Class ライブラリによって提供されるドキュメント/ビュー アーキテクチャを使用することができます。
+`COleDocument`は`CDocument`から派生し、OLE アプリケーションは、Microsoft Foundation クラス ライブラリが提供するドキュメント/ビュー アーキテクチャを使用できます。
 
-`COleDocument` コレクションとしてドキュメントを扱う[CDocItem](../../mfc/reference/cdocitem-class.md) OLE 項目を処理するオブジェクト。 コンテナーとサーバーの両方のアプリケーションでは、自分のドキュメントは、OLE アイテムを含めることができる必要がありますので、このようなアーキテクチャが必要です。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)と[COleClientItem](../../mfc/reference/coleclientitem-class.md)両方から派生したクラス、`CDocItem`アプリケーションと OLE アイテム間の相互作用を管理します。
+`COleDocument`は、OLE アイテムを処理する[CDocItem](../../mfc/reference/cdocitem-class.md)オブジェクトのコレクションとしてドキュメントを処理します。 コンテナー アプリケーションとサーバー アプリケーションの両方で、OLE アイテムを含めるドキュメントが必要なため、このようなアーキテクチャが必要です。 から派生`CDocItem`した[クラス](../../mfc/reference/coleserveritem-class.md)と[COleClientItem](../../mfc/reference/coleclientitem-class.md)クラスは、アプリケーションと OLE アイテムの間の相互作用を管理します。
 
-単純なコンテナー アプリケーションを作成する場合からドキュメント クラスを派生`COleDocument`します。 ドキュメントが含まれている埋め込みアイテムへのリンクをサポートするコンテナー アプリケーションを作成する場合からドキュメント クラスを派生[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)します。 作成する場合、サーバー アプリケーションまたは組み合わせのコンテナー/サーバーからドキュメント クラスを派生[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)します。 `COleLinkingDoc` `COleServerDoc`から派生`COleDocument`これらのクラスで利用できるすべてのサービスを継承するので、`COleDocument`と`CDocument`します。
+単純なコンテナー アプリケーションを作成する場合は、 から`COleDocument`ドキュメント クラスを派生させます。 ドキュメントに含まれる埋め込みアイテムへのリンクをサポートするコンテナ アプリケーションを作成する場合は[、COleリンDoc](../../mfc/reference/colelinkingdoc-class.md)からドキュメント クラスを派生させます。 サーバー アプリケーションまたは組み合わせコンテナー/サーバーを作成する場合は、ドキュメント クラスを[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)から派生させます。 `COleLinkingDoc`および`COleServerDoc`から`COleDocument`派生しているので、これらのクラスは で使用できるすべての`COleDocument`サービス`CDocument`を継承します。
 
-使用する`COleDocument`、そこから派生クラスを作成およびアプリケーションの非 OLE データだけでなく埋め込みまたはリンクされた項目を管理する機能を追加します。 定義する場合`CDocItem`-アプリケーションのネイティブ データを格納するクラスの派生によって定義された既定の実装を使用する`COleDocument`OLE と非 OLE データの両方を格納します。 OLE 項目から個別に非 OLE データを格納するための独自のデータ構造を設計することもできます。 詳細については、この記事を参照してください。[コンテナー。複合ファイル](../../mfc/containers-compound-files.md).
+を使用`COleDocument`するには、クラスを派生させ、アプリケーションの OLE 以外のデータ、および埋め込みアイテムやリンクアイテムを管理する機能を追加します。 アプリケーションのネイティブ`CDocItem`データを格納する -derived クラスを定義する場合は、 で`COleDocument`定義されている既定の実装を使用して、OLE データと OLE 以外のデータの両方を格納できます。 OLE アイテムとは別に OLE 以外のデータを格納するための独自のデータ構造を設計することもできます。 詳細については、「[コンテナ: 複合ファイル](../../mfc/containers-compound-files.md)」を参照してください。
 
-`CDocument` サポート メール サポート (MAPI) が存在する場合にメールを使ってドキュメントを送信します。 `COleDocument` 更新が[OnFileSendMail](#onfilesendmail)複合ドキュメントを正しく処理します。 詳細については、記事を参照してください[MAPI](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)..
+`CDocument`は、メールサポート(MAPI)が存在する場合、メールを介して文書を送信することをサポートします。 `COleDocument`複合ドキュメントを正しく処理するように[OnFileSendMail](#onfilesendmail)を更新しました。 詳細については、MFC の[MAPI](../../mfc/mapi.md)と[MAPI サポートの記事を](../../mfc/mapi-support-in-mfc.md)参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -135,9 +135,9 @@ class COleDocument : public CDocument
 
 **ヘッダー:** afxole.h
 
-##  <a name="additem"></a>  COleDocument::AddItem
+## <a name="coledocumentadditem"></a><a name="additem"></a>ドキュメント::アイテムの追加
 
-ドキュメントに項目を追加するには、この関数を呼び出します。
+ドキュメントにアイテムを追加します。
 
 ```
 virtual void AddItem(CDocItem* pItem);
@@ -145,16 +145,16 @@ virtual void AddItem(CDocItem* pItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pItem*<br/>
-追加されるドキュメント項目へのポインター。
+*Pitem*<br/>
+追加するドキュメント アイテムへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出された場合、この関数を明示的に呼び出す必要はありません、`COleClientItem`または`COleServerItem`ドキュメントへのポインターを受け取るコンス トラクター。
+ドキュメントへのポインターを受け取る`COleClientItem`または`COleServerItem`コンストラクターによって呼び出される場合、この関数を明示的に呼び出す必要はありません。
 
-##  <a name="applyprintdevice"></a>  COleDocument::ApplyPrintDevice
+## <a name="coledocumentapplyprintdevice"></a><a name="applyprintdevice"></a>をクリックします。
 
-埋め込まれたすべての出力先デバイスを変更するには、この関数を呼び出す[COleClientItem](../../mfc/reference/coleclientitem-class.md)アプリケーションのコンテナー ドキュメント内の項目。
+アプリケーションのコンテナー ドキュメント内のすべての埋め込み[COleClientItem](../../mfc/reference/coleclientitem-class.md)項目の印刷対象デバイスを変更します。
 
 ```
 BOOL ApplyPrintDevice(const DVTARGETDEVICE* ptd);
@@ -163,27 +163,27 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptd*<br/>
-ポインターを`DVTARGETDEVICE`データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。
+*Ptd*<br/>
+新しい印刷`DVTARGETDEVICE`対象デバイスに関する情報を含むデータ構造体へのポインター。 NULL にすることができます。
 
-*ppd*<br/>
-ポインターを`PRINTDLG`データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。
+*Ppd*<br/>
+新しい印刷`PRINTDLG`対象デバイスに関する情報を含むデータ構造体へのポインター。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+関数が正常に終了した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、すべての項目の出力先のデバイスを更新が、それらの項目のプレゼンテーションのキャッシュは更新されません。 アイテムのプレゼンテーションのキャッシュを更新するには、呼び出す[COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)します。
+この関数は、すべての項目の印刷対象デバイスを更新しますが、それらの項目のプレゼンテーション キャッシュは更新されません。 アイテムのプレゼンテーション キャッシュを更新するには[、COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)を呼び出します。
 
-この関数の引数には、OLE をターゲット デバイスを識別するために使用する情報が含まれています。 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)構造体には、一般的な印刷 ダイアログ ボックスを初期化するために Windows を使用する情報が含まれます。 ユーザーがダイアログ ボックスを閉じた後、Windows はこの構造体で、ユーザーの選択に関する情報を返します。 `m_pd`のメンバー、 [CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトが、`PRINTDLG`構造体。
+この関数の引数には、OLE がターゲット デバイスを識別するために使用する情報が含まれています。 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)構造体には、Windows が共通の印刷ダイアログ ボックスを初期化するために使用する情報が含まれています。 ユーザーがダイアログ ボックスを閉じた後、Windows は、この構造体でユーザーの選択に関する情報を返します。 オブジェクト`m_pd`のメンバーは[CPrintDialog](../../mfc/reference/cprintdialog-class.md)構造体です`PRINTDLG`。
 
-詳細については、次を参照してください。、 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK の構造体。
+詳細については、Windows SDK の[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)構造体を参照してください。
 
-詳細については、次を参照してください。、 [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK の構造体。
+詳細については、Windows SDK の[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)構造体を参照してください。
 
-##  <a name="coledocument"></a>  COleDocument::COleDocument
+## <a name="coledocumentcoledocument"></a><a name="coledocument"></a>ドキュメント::ドキュメント
 
 `COleDocument` オブジェクトを構築します。
 
@@ -191,30 +191,30 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 COleDocument();
 ```
 
-##  <a name="enablecompoundfile"></a>  COleDocument::EnableCompoundFile
+## <a name="coledocumentenablecompoundfile"></a><a name="enablecompoundfile"></a>コンパウンドファイルを有効にする
 
-複合ファイル形式を使用してドキュメントを格納する場合は、この関数を呼び出します。
+複合ファイル形式を使用して文書を保存する場合は、この関数を呼び出します。
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-複合ファイルのサポートを有効または無効になっているかどうかを指定します。
+*b 有効にする*<br/>
+複合ファイルのサポートを有効にするか無効にするかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これは構造化ストレージとも呼ばれます。 通常のコンス トラクターからこの関数を呼び出す、 `COleDocument`-クラスを派生します。 複合ドキュメントの詳細については、記事を参照してください。[コンテナー。複合ファイル](../../mfc/containers-compound-files.md).
+これは構造化ストレージとも呼ばれます。 通常、この関数は`COleDocument`、派生クラスのコンストラクターから呼び出します。 複合ドキュメントの詳細については、「[コンテナ: 複合ファイル](../../mfc/containers-compound-files.md)」を参照してください。
 
-このメンバー関数を呼び出さない場合は、構造化されていない (「フラット」) ファイル形式でドキュメントに格納されています。
+このメンバー関数を呼び出さない場合、ドキュメントは非構造化 ("フラット" ) ファイル形式で格納されます。
 
-複合ファイルのサポートを有効になっているまたはドキュメントを無効にすると、ドキュメントの有効期間中に、設定を変更できません必要があります。
+複合ファイルのサポートがドキュメントに対して有効または無効になった後、ドキュメントの有効期間中に設定を変更しないでください。
 
-##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem
+## <a name="coledocumentgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>をクリックします。
 
-項目の OLE を取得するには、この関数の呼び出しは、現在の場所で識別されるビューを含むフレーム ウィンドウ内でアクティブ化されて*我が物*します。
+*pWnd*で識別されるビューを含むフレーム ウィンドウ内で現在アクティブになっている OLE アイテムを取得します。
 
 ```
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
@@ -222,16 +222,16 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-コンテナーのドキュメントを表示するウィンドウへのポインター。
+*Pwnd*<br/>
+コンテナー ドキュメントを表示するウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-1 つ、インプレース アクティブ OLE アイテムへのポインター項目がない OLE 現在「インプレース アクティブ」状態の場合は NULL します。
+埋め込み先アクティブな OLE アイテムへのポインター。現在"インプレース アクティブ" 状態の OLE アイテムがない場合は NULL です。
 
-##  <a name="getnextclientitem"></a>  COleDocument::GetNextClientItem
+## <a name="coledocumentgetnextclientitem"></a><a name="getnextclientitem"></a>次のクライアントアイテムを取得します。
 
-クライアント アイテム、ドキュメント内の各にアクセスするには、繰り返しには、この関数を呼び出します。
+ドキュメント内の各クライアントアイテムにアクセスするには、この関数を繰り返し呼び出します。
 
 ```
 COleClientItem* GetNextClientItem(POSITION& pos) const;
@@ -240,23 +240,23 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-以前の呼び出しで値セットの位置への参照を`GetNextClientItem`; によって、初期値が返される、`GetStartPosition`メンバー関数。
+前の呼び出しによって設定された POSITION`GetNextClientItem`値への参照。初期値は`GetStartPosition`メンバー関数によって返されます。
 
 ### <a name="return-value"></a>戻り値
 
-次のクライアントへのポインターは、ドキュメント内の項目または項目をそれ以上クライアントがある場合は NULL。
+ドキュメント内の次のクライアント アイテムへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値は、各呼び出しの後に*pos*可能性がありますまたはクライアント アイテムとは限りませんが、ドキュメントの次の項目に設定します。
+各呼び出しの後 *、pos*の値がドキュメント内の次の項目に設定されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]
 
-##  <a name="getnextitem"></a>  COleDocument::GetNextItem
+## <a name="coledocumentgetnextitem"></a><a name="getnextitem"></a>次のアイテムを取得します。
 
-各ドキュメント内のアイテムにアクセスするには、繰り返しには、この関数を呼び出します。
+ドキュメント内の各アイテムにアクセスするには、この関数を繰り返し呼び出します。
 
 ```
 virtual CDocItem* GetNextItem(POSITION& pos) const;
@@ -265,23 +265,23 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-以前の呼び出しで値セットの位置への参照を`GetNextItem`; によって、初期値が返される、`GetStartPosition`メンバー関数。
+前の呼び出しによって設定された POSITION`GetNextItem`値への参照。初期値は`GetStartPosition`メンバー関数によって返されます。
 
 ### <a name="return-value"></a>戻り値
 
-指定した位置にあるドキュメント項目へのポインター。
+指定した位置にあるドキュメント アイテムへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値は、各呼び出しの後に*pos*ドキュメントの次の項目の位置の値に設定されます。 取得した要素の新しい値は、ドキュメントの最後の要素が場合*pos*は NULL です。
+各呼び出しの後 *、pos*の値はドキュメント内の次の項目の POSITION 値に設定されます。 取得した要素がドキュメントの最後の要素である場合 *、pos*の新しい値は NULL です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]
 
-##  <a name="getnextserveritem"></a>  COleDocument::GetNextServerItem
+## <a name="coledocumentgetnextserveritem"></a><a name="getnextserveritem"></a>次のサーバーアイテムを取得します。
 
-各ドキュメント内のサーバー項目にアクセスするには、繰り返しには、この関数を呼び出します。
+ドキュメント内の各サーバー項目にアクセスするには、この関数を繰り返し呼び出します。
 
 ```
 COleServerItem* GetNextServerItem(POSITION& pos) const;
@@ -290,23 +290,23 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-以前の呼び出しで値セットの位置への参照を`GetNextServerItem`; によって、初期値が返される、`GetStartPosition`メンバー関数。
+前の呼び出しによって設定された POSITION`GetNextServerItem`値への参照。初期値は`GetStartPosition`メンバー関数によって返されます。
 
 ### <a name="return-value"></a>戻り値
 
-次のサーバーへのポインターは、ドキュメント内の項目またはこれ以上のサーバー項目がある場合は NULL です。
+ドキュメント内の次のサーバー アイテムへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-値は、各呼び出しの後に*pos*可能性がありますまたはサーバーのアイテムとは限りませんが、ドキュメントの次の項目に設定します。
+各呼び出しの後 *、pos*の値がドキュメント内の次の項目に設定されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]
 
-##  <a name="getprimaryselecteditem"></a>  COleDocument::GetPrimarySelectedItem
+## <a name="coledocumentgetprimaryselecteditem"></a><a name="getprimaryselecteditem"></a>を選択しました。
 
-指定したビューで現在選択されている OLE 項目を取得するためにフレームワークによって呼び出されます。
+フレームワークによって呼び出され、指定されたビューで現在選択されている OLE アイテムを取得します。
 
 ```
 virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
@@ -314,20 +314,20 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 
 ### <a name="parameters"></a>パラメーター
 
-*pView*<br/>
-ドキュメントを表示するアクティブなビューのオブジェクトへのポインター。
+*pビュー*<br/>
+ドキュメントを表示するアクティブなビュー オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-1 つ、選択した OLE アイテムへのポインターOLE 項目が選択されていないかが選択されている数より多い場合は NULL です。
+選択された単一の OLE アイテムへのポインター。OLE アイテムが選択されていない場合、または複数のアイテムが選択されている場合は、NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の実装では、1 つ選択したアイテムのアイテムに含まれている OLE の一覧を検索し、ポインターを返します。 選択した項目が存在しない場合、または選択した 1 つ以上の項目がある場合は、関数は NULL を返します。 オーバーライドする必要があります、`CView::IsSelected`させるには、この関数のビュー クラスでメンバー関数。 含まれている OLE 項目を格納する独自のメソッドがある場合は、この関数をオーバーライドします。
+既定の実装では、選択されている 1 つのアイテムについて、含まれている OLE アイテムの一覧を検索し、そのアイテムへのポインターを返します。 選択されている項目がない場合、または複数の項目が選択されている場合、関数は NULL を返します。 この関数を動作`CView::IsSelected`させるには、ビュー クラスのメンバー関数をオーバーライドする必要があります。 含まれている OLE アイテムを格納する独自のメソッドがある場合は、この関数をオーバーライドします。
 
-##  <a name="getstartposition"></a>  COleDocument::GetStartPosition
+## <a name="coledocumentgetstartposition"></a><a name="getstartposition"></a>ドキュメント::取得開始位置
 
-ドキュメント内の最初の項目の位置を取得するには、この関数を呼び出します。
+ドキュメント内の最初の項目の位置を取得します。
 
 ```
 virtual POSITION GetStartPosition() const;
@@ -335,15 +335,15 @@ virtual POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントの項目を反復処理を開始するために使用する位置の値ドキュメントに項目があるない場合は NULL です。
+ドキュメントのアイテムの反復処理を開始するために使用できる POSITION 値。ドキュメントに項目がない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返される値を渡す`GetNextItem`、 `GetNextClientItem`、または`GetNextServerItem`します。
+返される値を`GetNextItem`、 `GetNextClientItem`、`GetNextServerItem`または に渡します。
 
-##  <a name="hasblankitems"></a>  COleDocument::HasBlankItems
+## <a name="coledocumenthasblankitems"></a><a name="hasblankitems"></a>ドキュメント::を空白にします
 
-この関数では、空白項目がドキュメントに含まれるかどうかを確認します。
+ドキュメントに空白の項目が含まれているかどうかを調べます。
 
 ```
 BOOL HasBlankItems() const;
@@ -351,69 +351,69 @@ BOOL HasBlankItems() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントには、空の項目が含まれている場合、0 以外の場合それ以外の場合 0 を返します。
+ドキュメントに空白の項目が含まれている場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-空のアイテムは、1 つの四角形が空です。
+空白の項目は、四角形が空のアイテムです。
 
-##  <a name="oneditchangeicon"></a>  COleDocument::OnEditChangeIcon
+## <a name="coledocumentoneditchangeicon"></a><a name="oneditchangeicon"></a>ドキュメント::オンエディットチェンジアイコン
 
-OLE の [アイコンの変更] ダイアログ ボックスを表示し、ダイアログ ボックスで、ユーザーが選択アイコンへの現在選択されている OLE 項目を表すアイコンを変更します。
+[OLE のアイコンの変更] ダイアログ ボックスを表示し、現在選択されている OLE アイテムを表すアイコンを、ダイアログ ボックスでユーザーが選択したアイコンに変更します。
 
 ```
 afx_msg void OnEditChangeIcon();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnEditChangeIcon` 作成し、起動、`COleChangeIconDialog`アイコンの変更 ダイアログ ボックス。
+`OnEditChangeIcon`[アイコンの変更]`COleChangeIconDialog`ダイアログ ボックスが作成され、起動されます。
 
-##  <a name="oneditconvert"></a>  COleDocument::OnEditConvert
+## <a name="coledocumentoneditconvert"></a><a name="oneditconvert"></a>ドキュメント::オンエディットコンバート
 
-OLE 変換 ダイアログ ボックスが表示されますおよびに変換またはに従ってユーザーの選択 ダイアログ ボックスで現在選択されている OLE 項目をアクティブにします。
+[OLE 変換] ダイアログ ボックスを表示し、ダイアログ ボックスでユーザーが選択した選択に従って、現在選択されている OLE アイテムを変換またはアクティブにします。
 
 ```
 afx_msg void OnEditConvert();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnEditConvert` 作成し、起動、`COleConvertDialog`変換 ダイアログ ボックス。
+`OnEditConvert`変換ダイアログボックスを`COleConvertDialog`作成して起動します。
 
-変換の例では、ワードパッドのドキュメントに、Microsoft Word のドキュメントを変換です。
+変換の例として、Word 文書をワードパッド ドキュメントに変換する場合があります。
 
-##  <a name="oneditlinks"></a>  COleDocument::OnEditLinks
+## <a name="coledocumentoneditlinks"></a><a name="oneditlinks"></a>ドキュメント::オンエディットリンク
 
-[リンク] ダイアログ ボックスが表示されます。
+[OLE 編集/リンク] ダイアログ ボックスを表示します。
 
 ```
 afx_msg void OnEditLinks();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnEditLinks` 作成し、起動、`COleLinksDialog`ユーザーがリンクされているオブジェクトを変更できるリンク ダイアログ ボックス。
+`OnEditLinks`リンク オブジェクトを`COleLinksDialog`変更するためのリンク ダイアログ ボックスを作成して起動します。
 
-##  <a name="onfilesendmail"></a>  COleDocument::OnFileSendMail
+## <a name="coledocumentonfilesendmail"></a><a name="onfilesendmail"></a>ファイル送信メール
 
-メッセージを送信常駐メール ホスト経由で (ある場合)、ドキュメント、添付ファイルとして。
+ドキュメントを添付ファイルとして、常駐メール ホスト経由でメッセージを送信します( 存在する場合)。
 
 ```
 afx_msg void OnFileSendMail();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnFileSendMail` 呼び出し`OnSaveDocument`(保存) 無題と変更されたドキュメントは、電子メールで送信し、一時ファイルをシリアル化します。 ドキュメントが変更されていない場合、一時ファイルは必要ありません。元に送信されます。 `OnFileSendMail` MAPI32 を読み込みます。既に読み込まれていない場合は、DLL です。
+`OnFileSendMail`無`OnSaveDocument`題のドキュメントや変更されたドキュメントを一時ファイルにシリアル化 (保存) する呼び出しを、電子メールで送信します。 ドキュメントが変更されていない場合、一時ファイルは必要ありません。オリジナルが送信されます。 `OnFileSendMail`MAPI32 を読み込みます。DLL がまだ読み込まれていない場合。
 
-実装とは異なり`OnFileSendMail`の`CDocument`、この関数は、複合ファイルを正しく処理します。
+`OnFileSendMail`の`CDocument`実装とは異なり、この関数は複合ファイルを正しく処理します。
 
-詳細については、次を参照してください、 [MAPI トピック](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)記事..
+詳細については[、MFC](../../mfc/mapi.md)の MAPI トピックと[MAPI サポートを参照](../../mfc/mapi-support-in-mfc.md)してください。
 
-##  <a name="onshowviews"></a>  COleDocument::OnShowViews
+## <a name="coledocumentonshowviews"></a><a name="onshowviews"></a>ドキュメント::オンショービュー
 
-フレームワークは、状態の変更、ドキュメントの表示後にこの関数を呼び出します。
+フレームワークは、ドキュメントの可視性の状態が変更された後に、この関数を呼び出します。
 
 ```
 virtual void OnShowViews(BOOL bVisible);
@@ -421,16 +421,16 @@ virtual void OnShowViews(BOOL bVisible);
 
 ### <a name="parameters"></a>パラメーター
 
-*bVisible*<br/>
-ドキュメントが表示または非表示になるかどうかを示します。
+*ビジブル*<br/>
+ドキュメントが表示または非表示になっているかどうかを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の既定のバージョンでは、何も行われません。 アプリケーションは、ドキュメントの可視性が変更されたときに、特別な処理を実行する必要がありますがある場合は、これをオーバーライドします。
+この関数の既定のバージョンでは、何も実行されません。 ドキュメントの表示設定が変更されたときにアプリケーションで特別な処理を実行する必要がある場合は、この値をオーバーライドします。
 
-##  <a name="onupdateeditchangeicon"></a>  COleDocument::OnUpdateEditChangeIcon
+## <a name="coledocumentonupdateeditchangeicon"></a><a name="onupdateeditchangeicon"></a>ドキュメント::オンアップデートエディットチェンジアイコン
 
-編集 メニューのアイコンの変更 コマンドを更新するためにフレームワークによって呼び出されます。
+[編集] メニューの [アイコンの変更] コマンドを更新するために、フレームワークによって呼び出されます。
 
 ```
 afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
@@ -438,16 +438,16 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
-ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
+*を使用します。*<br/>
+update コマンドを`CCmdUI`生成したメニューを表す構造体へのポインター。 更新ハンドラーは、ユーザー`Enable`インターフェイスを更新`CCmdUI`する*pCmdUI*を使用して構造体のメンバー関数を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnUpdateEditChangeIcon` 有効なアイコンが、ドキュメントに存在するかどうかに応じて、コマンドのユーザー インターフェイスを更新します。 動作を変更するには、この関数をオーバーライドします。
+`OnUpdateEditChangeIcon`は、ドキュメント内に有効なアイコンが存在するかどうかに応じて、コマンドのユーザー インターフェイスを更新します。 動作を変更するには、この関数をオーバーライドします。
 
-##  <a name="onupdateeditlinksmenu"></a>  COleDocument::OnUpdateEditLinksMenu
+## <a name="coledocumentonupdateeditlinksmenu"></a><a name="onupdateeditlinksmenu"></a>次の項目をクリックします。
 
-[編集] メニューのリンクのコマンドを更新するためにフレームワークによって呼び出されます。
+[編集] メニューの [リンク] コマンドを更新するために、フレームワークによって呼び出されます。
 
 ```
 afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
@@ -455,16 +455,16 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
-ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
+*を使用します。*<br/>
+update コマンドを`CCmdUI`生成したメニューを表す構造体へのポインター。 更新ハンドラーは、ユーザー`Enable`インターフェイスを更新`CCmdUI`する*pCmdUI*を使用して構造体のメンバー関数を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-以降で、ドキュメントの最初の OLE 項目`OnUpdateEditLinksMenu`各項目にアクセスする、項目は、リンクし、リンクである場合は、リンクの設定 を有効かどうかをテストします。 動作を変更するには、この関数をオーバーライドします。
+ドキュメント内の最初の OLE アイテムから`OnUpdateEditLinksMenu`開始し、各アイテムにアクセスし、そのアイテムがリンクであるかどうかをテストし、リンクの場合は [リンク] コマンドを有効にします。 動作を変更するには、この関数をオーバーライドします。
 
-##  <a name="onupdateobjectverbmenu"></a>  COleDocument::OnUpdateObjectVerbMenu
+## <a name="coledocumentonupdateobjectverbmenu"></a><a name="onupdateobjectverbmenu"></a>をクリックします。
 
-更新するためにフレームワークによって呼び出されます、 *ObjectName*コマンドを編集 メニューからアクセスされる動詞 サブメニューで、 *ObjectName*コマンド、場所*ObjectName*の名前を指定しますOLE オブジェクトは、ドキュメントに埋め込まれます。
+フレームワークによって呼び出され、編集メニューの*ObjectName*コマンドと *、ObjectName*コマンドからアクセスされる動詞サブメニュー*ObjectName*を更新します。
 
 ```
 afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
@@ -472,16 +472,16 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
-ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
+*を使用します。*<br/>
+update コマンドを`CCmdUI`生成したメニューを表す構造体へのポインター。 更新ハンドラーは、ユーザー`Enable`インターフェイスを更新`CCmdUI`する*pCmdUI*を使用して構造体のメンバー関数を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`OnUpdateObjectVerbMenu` 更新プログラム、 *ObjectName*ドキュメントで、有効なオブジェクトが存在するかどうかに応じて、コマンドのユーザー インターフェイス。 オブジェクトが存在する場合、 *ObjectName* [編集] メニューのコマンドを有効にします。 このメニュー コマンドを選択すると、動詞のサブメニューが表示されます。 動詞のサブメニューには、編集やプロパティなど、オブジェクトで使用できるすべての動詞コマンドが含まれています。 動作を変更するには、この関数をオーバーライドします。
+`OnUpdateObjectVerbMenu`は、ドキュメント内に有効なオブジェクトが存在するかどうかに応じて*ObjectName*コマンドのユーザー インターフェイスを更新します。 オブジェクトが存在する場合は、[編集] メニューの *[オブジェクト名*] コマンドが有効になります。 このメニュー コマンドを選択すると、動詞サブメニューが表示されます。 動詞サブメニューには、編集、プロパティなど、オブジェクトで使用できるすべての動詞コマンドが含まれています。 動作を変更するには、この関数をオーバーライドします。
 
-##  <a name="onupdatepastelinkmenu"></a>  COleDocument::OnUpdatePasteLinkMenu
+## <a name="coledocumentonupdatepastelinkmenu"></a><a name="onupdatepastelinkmenu"></a>ドキュメント::オンアップデートペーストリンクメニュー
 
-リンクされている OLE 項目をクリップボードから貼り付けができるかどうかを判断するためにフレームワークによって呼び出されます。
+リンクされた OLE アイテムをクリップボードから貼り付けることができるかどうかを判断するために、フレームワークによって呼び出されます。
 
 ```
 afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
@@ -489,16 +489,16 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
-ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
+*を使用します。*<br/>
+update コマンドを`CCmdUI`生成したメニューを表す構造体へのポインター。 更新ハンドラーは、ユーザー`Enable`インターフェイスを更新`CCmdUI`する*pCmdUI*を使用して構造体のメンバー関数を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-貼り付けメニュー コマンドが有効になっているまたは項目が、ドキュメントに貼り付けられるかどうかによって決まります。
+[形式を選択して貼り付け] メニュー コマンドは、アイテムをドキュメントに貼り付けることができるかどうかによって有効または無効になります。
 
-##  <a name="onupdatepastemenu"></a>  COleDocument::OnUpdatePasteMenu
+## <a name="coledocumentonupdatepastemenu"></a><a name="onupdatepastemenu"></a>ドキュメント::オンアップデートペーストメニュー
 
-埋め込み OLE アイテムは、クリップボードから貼り付けができるかどうかを判断するためにフレームワークによって呼び出されます。
+埋め込み OLE アイテムをクリップボードから貼り付けることができるかどうかを判断するために、フレームワークによって呼び出されます。
 
 ```
 afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
@@ -506,16 +506,16 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
-ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
+*を使用します。*<br/>
+update コマンドを`CCmdUI`生成したメニューを表す構造体へのポインター。 更新ハンドラーは、ユーザー`Enable`インターフェイスを更新`CCmdUI`する*pCmdUI*を使用して構造体のメンバー関数を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[貼り付け] コマンドとボタンが有効になっているまたは項目が、ドキュメントに貼り付けられるかどうかによって決まります。
+[貼り付け] メニューコマンドとボタンは、アイテムをドキュメントに貼り付けることができるかどうかによって有効または無効になります。
 
-##  <a name="removeitem"></a>  COleDocument::RemoveItem
+## <a name="coledocumentremoveitem"></a><a name="removeitem"></a>アイテムを削除します。
 
-ドキュメントから項目を削除するには、この関数を呼び出します。
+ドキュメントから項目を削除します。
 
 ```
 virtual void RemoveItem(CDocItem* pItem);
@@ -523,28 +523,28 @@ virtual void RemoveItem(CDocItem* pItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pItem*<br/>
-削除するドキュメント項目へのポインター。
+*Pitem*<br/>
+削除するドキュメント アイテムへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-通常必要はありません。 明示的にこの関数を呼び出すデストラクターを呼び出して`COleClientItem`と`COleServerItem`します。
+通常、この関数を明示的に呼び出す必要はありません。と のデストラクタ`COleClientItem`によって呼び出`COleServerItem`されます。
 
-##  <a name="updatemodifiedflag"></a>  COleDocument::UpdateModifiedFlag
+## <a name="coledocumentupdatemodifiedflag"></a><a name="updatemodifiedflag"></a>ドキュメント::更新変更フラグ
 
-含まれている OLE 項目のいずれかが変更された場合に変更されたドキュメントをマークするには、この関数を呼び出します。
+含まれている OLE アイテムのいずれかが変更されている場合に、ドキュメントを変更済みとしてマークします。
 
 ```
 virtual void UpdateModifiedFlag();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これにより、ドキュメント内のネイティブのデータが変更されていない場合でも、閉じる前に、ドキュメントを保存するようにユーザーに、フレームワークができます。
+これにより、ドキュメント内のネイティブ データが変更されていない場合でも、閉じる前にドキュメントを保存するようにユーザーに求めるメッセージを表示できます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル コンテナー](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル コンテナ](../../overview/visual-cpp-samples.md)<br/>
 [MFC サンプル MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument クラス](../../mfc/reference/cdocument-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

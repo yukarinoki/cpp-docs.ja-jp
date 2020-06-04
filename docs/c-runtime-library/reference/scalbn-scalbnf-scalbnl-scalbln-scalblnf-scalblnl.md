@@ -1,14 +1,20 @@
 ---
 title: scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357162"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918189"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -97,28 +107,30 @@ long double scalblnl(
 *x*<br/>
 浮動小数点値。
 
-*exp*<br/>
+*期限*<br/>
 整数の指数。
 
 ## <a name="return-value"></a>戻り値
 
-**Scalbn**関数の値を返す*x* \* **FLT_RADIX**<sup>exp</sup>成功するとします。 オーバーフローが発生 (の符号に応じて*x*)、 **scalbn** +/-返します**HUGE_VAL**、 **errno**値に設定されて**ERANGE**.
+**Scalbn**関数は、成功した場合に*x* \* **FLT_RADIX**<sup>exp</sup>の値を返します。 オーバーフロー時 ( *x*の符号によって異なります)、 **scalbn**は +/- **HUGE_VAL**; を返します。**errno**値は**ERANGE**に設定されます。
 
-詳細については**errno**および考えられるエラー戻り値は、「 [errno _doserrno _sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
+**Errno**および考えられるエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**FLT_RADIX**で定義されている\<float.h > ネイティブ浮動小数点基数としてバイナリ システムで、そのは値 2 と**scalbn**と等価[ldexp](ldexp.md)します。
+**FLT_RADIX**は、浮動\<小数点のネイティブな基数として> で定義されます。バイナリシステムでは、値は2、 **scalbn**は[ldexp](ldexp.md)に相当します。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **scalbn**と**scalbln**を受け取って返す**float**または**長い** **二重**型。 C プログラムで**scalbn**は常に、**二重**と**int**を返します、**二重**、および**scalbln**は常に、**二重**と**長い**を返します、**二重**します。
+C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取って返す、 **scalbn**の**オーバーロードを呼び**出すことができます。 C プログラムでは、 **scalbn**は常に**double**と**int**を受け取り、 **double**を返します。また、**スケール bln**は常に double と**long** **を受け取り**、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**scalbn**、 **scalbnf**、 **scalbnl**、 **scalbln**、 **scalblnf**、 **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn**、 **scalbnf**、 **btree bnl**、**スケール bln**、 **、スケール** **blnl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

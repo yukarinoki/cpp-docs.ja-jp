@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: c816c1b3f5481ccff19fd2a2377c5fc98f950fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186700"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>コンパイラの警告 (レベル 1) C4488
 
-'function': 'keyword' キーワード 'interface_method' インターフェイス メソッドを実装する必要があります
+' function ': インターフェイスメソッド ' interface_method ' を実装するには、' keyword ' キーワードが必要です
 
-クラスは、直接継承するインターフェイスのすべてのメンバーを実装する必要があります。 実装されるメンバーは、パブリック アクセシビリティがあり、virtual に指定する必要があります。
+クラスは、直接継承元のインターフェイスのすべてのメンバーを実装する必要があります。 実装されたメンバーは、パブリックアクセシビリティを持つ必要があり、virtual としてマークする必要があります。
 
 ## <a name="example"></a>例
 
-C4488 は、実装されるメンバーがパブリックでない場合に発生することができます。 次の例では、C4488 が生成されます。
+C4488 は、実装されたメンバーがパブリックでない場合に発生する可能性があります。 次の例では、C4488 が生成されます。
 
-```
+```cpp
 // C4488.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {
@@ -42,9 +42,9 @@ public:
 
 ## <a name="example"></a>例
 
-C4488 は、実装されるメンバーが仮想にマークされていない場合に発生することができます。 次の例では、C4488 が生成されます。
+C4488 は、実装されたメンバーが virtual とマークされていない場合に発生する可能性があります。 次の例では、C4488 が生成されます。
 
-```
+```cpp
 // C4488_b.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {

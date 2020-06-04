@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516637"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544640"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++/CLI および C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI および C++/CX)
 
 **safe_cast** 操作は、指定された式を指定した型で返します (成功した場合)。失敗した場合は、`InvalidCastException` をスローします。
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516637"
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-**safe_cast** を使用して、指定された式の型を変更できます。 変数またはパラメーターを特定の型に問題なく変換できることがわかっている場合、**try-catch** ブロックを使用せずに **safe_cast** を使用して、開発中のプログラミング エラーを検出することができます。 詳細については、「[キャスト (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx)」を参照してください。
+**safe_cast** を使用して、指定された式の型を変更できます。 変数またはパラメーターを特定の型に問題なく変換できることがわかっている場合、**try-catch** ブロックを使用せずに **safe_cast** を使用して、開発中のプログラミング エラーを検出することができます。 詳細については、「[キャスト (C++/CX)](../cppcx/casting-c-cx.md)」を参照してください。
 
 ### <a name="syntax"></a>構文
 
@@ -45,18 +45,18 @@ ms.locfileid: "65516637"
 *type-id*<br/>
 変換後の *expression* の型。 参照型または値型へのハンドル、値型、参照型または値型への追跡参照。
 
-*expression*<br/>
+*式 (expression)*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照として評価される式。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
-**safe_cast** は、*expression* を *type-id* で指定された型に変換できない場合は、`InvalidCastException` をスローします。`InvalidCastException` をキャッチするには、[/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md) コンパイラ オプションを指定し、**try/catch** ステートメントを使用します。
+**safe_cast**は、*式*を*型 id*で指定された型に変換できない場合に `InvalidCastException` をスローします。`InvalidCastException`をキャッチするには、/ [EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラオプションを指定し、 **try/catch**ステートメントを使用します。
 
 ### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、Windows ランタイムで **safe_cast** を使用する方法を示します。
 
@@ -105,10 +105,10 @@ Caught expected exception: InvalidCastException
 *type-id*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照。
 
-*expression*<br/>
+*式 (expression)*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照として評価される式。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 式 `safe_cast<`*type-id*`>(`*expression*`)` は、オペランド *expression* を *type-id* 型のオブジェクトに変換します。
 
@@ -120,7 +120,7 @@ Caught expected exception: InvalidCastException
 
 **safe_cast** は **const_cast** (**const** のキャスト) を適用しません。
 
-**safe_cast** は cli 名前空間に存在します。  詳細については、「[プラットフォーム、既定、および cli 名前空間](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
+**safe_cast** は cli 名前空間に存在します。  詳細については、「[Platform, default, and cli Namespaces (プラットフォーム、既定、および cli 名前空間)](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
 
 **safe_cast** の詳細については、以下を参照してください。
 
@@ -132,7 +132,7 @@ Caught expected exception: InvalidCastException
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 コンパイラで **static_cast** を使用できないが **safe_cast** を使用できる状況の例の 1 つは、関連していないインターフェイス型の間でのキャストです。  **safe_cast** を使用した場合、コンパイラは変換エラーを生成せず、キャストが可能であるかどうかを実行時に検証します。
 
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

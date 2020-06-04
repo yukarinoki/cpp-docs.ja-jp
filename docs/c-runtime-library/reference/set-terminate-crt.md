@@ -1,9 +1,10 @@
 ---
 title: set_terminate (CRT)
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - set_terminate
-apilocation:
+- _o_set_terminate
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +28,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356447"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914518"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-によって呼び出される独自の終了ルーチンをインストール**終了**します。
+**Terminate**によって呼び出される独自の終了ルーチンをインストールします。
 
 ## <a name="syntax"></a>構文
 
@@ -47,15 +52,15 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>戻り値
 
-によって登録された前の関数へのポインターを返します**set_terminate**前の関数を後で復元できるようにします。 戻り値を既定の動作を復元する使用可能性があります前の関数が設定されていない場合この値は、 **NULL**します。
+前の関数を後で復元できるように、 **set_terminate**によって登録された前の関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は**NULL**でもかまいません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Set_terminate**インストールに機能*termFunction*によって呼び出される関数として**終了**します。 **set_terminate**併用C++例外処理と、例外がスローされる前に、プログラムのどの時点でも呼び出すことができます。 **終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 必要なクリーンアップ タスクのいずれかを実行した後*termFunction*プログラムを終了する必要があります。 かどうか (この場合、呼び出し元に返す) 終了せず、[中止](abort.md)が呼び出されます。
+**Set_terminate**関数は、**終了**によって呼び出される関数として*termfunction*をインストールします。 **set_terminate**は C++ 例外処理で使用され、例外がスローされる前にプログラムの任意の時点で呼び出すことができます。 **terminate**呼び出しは、既定で[中止](abort.md)されます。 独自の終了関数を記述し、関数の名前を引数として**set_terminate**を呼び出すことによって、この既定値を変更できます。 **terminate**は、 **set_terminate**の引数として渡された最後の関数を呼び出します。 必要なクリーンアップタスクを実行した後、 *Termfunction*はプログラムを終了する必要があります。 終了しない場合 (呼び出し元に戻る場合)、 [abort](abort.md)が呼び出されます。
 
 マルチ スレッド環境では、終了関数はスレッドごとに別々に管理されます。 新しいスレッドは各々、それぞれの終了関数をインストールする必要があります。 したがって、各スレッドがそれぞれの終了処理を担当します。
 
-**Terminate_function**型 EH で定義されます。ユーザー定義の終了関数へのポインターとして H *termFunction*を返す**void**します。 カスタム関数*termFunction*できます引数を受け取らず、呼び出し元には返されません。 その場合、[中止](abort.md)が呼び出されます。 内から例外をスローしない可能性が*termFunction*します。
+**Terminate_function**型は EH で定義されています。ユーザー定義の終了関数へのポインターとしての H。 **void**を返す*termfunction*です。 カスタム関数*Termfunction*は引数を取らず、呼び出し元に戻らないようにする必要があります。 この場合、 [abort](abort.md)が呼び出されます。 *Termfunction*内から例外がスローされない可能性があります。
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -64,15 +69,17 @@ typedef void ( *terminate_function )( );
 > [!NOTE]
 > **Set_terminate**関数は、デバッガーの外部でのみ機能します。
 
-1 つは**set_terminate**ハンドラーを動的にリンクされる Dll または Exe; を呼び出す場合でも**set_terminate**を他のハンドラーを置き換えることができますか、別によって設定されたハンドラーを置き換えることがありますDLL または exe ファイル。
+動的にリンクされたすべての Dll または Exe に対して1つの**set_terminate**ハンドラーがあります。を呼び出した場合でも、ハンドラーを別の DLL または別の DLL または EXE によって設定されたハンドラーに置き換えることが**set_terminate**ます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -81,8 +88,8 @@ typedef void ( *terminate_function )( );
 ## <a name="see-also"></a>関連項目
 
 [例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[取り消し](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[解約](terminate-crt.md)<br/>
+[不適切](unexpected-crt.md)<br/>

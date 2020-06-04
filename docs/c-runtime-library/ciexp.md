@@ -1,9 +1,10 @@
 ---
 title: _CIexp
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _CIexp
-apilocation:
+- _o__CIexp
+api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -12,7 +13,11 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIexp
 - _CIexp
@@ -20,20 +25,20 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: 5d51e8e542ffb14a77001d045903dccb1a091d53
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751338"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918043"
 ---
-# <a name="ciexp"></a>_CIexp
+# <a name="_ciexp"></a>_CIexp
 
 スタックのトップ値の指数を計算します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 void __cdecl _CIexp();
 ```
 
@@ -43,7 +48,9 @@ void __cdecl _CIexp();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
+
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

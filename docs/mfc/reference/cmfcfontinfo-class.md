@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e87971e2afefc9cf1574abe951920c254dcd2ae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237514"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367479"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo クラス
 
-`CMFCFontInfo`クラスは、名とフォントの他の属性について説明します。
+この`CMFCFontInfo`クラスは、フォントの名前とその他の属性を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -47,33 +47,33 @@ class CMFCFontInfo : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCFontInfo::GetFullName](#getfullname)|フォントとその文字の連結された名前のセット (スクリプト) を取得します。|
+|[を取得します。](#getfullname)|フォントとその文字セット (スクリプト) の連結名を取得します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|フォントに関連付けられている文字セット (スクリプト) を指定する値。|
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|ピッチとファミリのフォントを指定する値。|
-|[CMFCFontInfo::m_nType](#m_ntype)|フォントの種類を指定する値。|
-|[CMFCFontInfo::m_strName](#m_strname)|フォントの名前たとえば、 **Arial**します。|
-|[CMFCFontInfo::m_strScript](#m_strscript)|フォントに関連付けられている文字セット (スクリプト) の名前。|
+|[フォント情報::m_nCharSet](#m_ncharset)|フォントに関連付けられている文字セット (スクリプト) を指定する値。|
+|[フォント情報::m_nPitchAndFamily](#m_npitchandfamily)|フォントのピッチとファミリを指定する値。|
+|[フォント情報::m_nType](#m_ntype)|フォントの種類を指定する値。|
+|[m_strName](#m_strname)|フォントの名前。たとえば、 **Arial**.|
+|[フォント情報::m_strScript](#m_strscript)|フォントに関連付けられた文字セット (スクリプト) の名前。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-アタッチすることができます、`CMFCFontInfo`オブジェクトの項目を[CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)クラス。 呼び出す、 [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc)へのポインターを取得するメソッドを`CMFCFontInfo`オブジェクト。
+`CMFCFontInfo`[クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)クラスの項目にオブジェクトをアタッチできます。 オブジェクトへの[ポインターを取得](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc)するには、メソッドを`CMFCFontInfo`呼び出します。
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメンバーを使用する方法、`CMFCFontInfo`クラス。 例では、取得する方法を示します、`CMFCFontInfo`オブジェクトから、 `CMFCRibbonFontComboBox`、およびそのローカル変数にアクセスする方法。 この例は、 [MSOffice 2007 デモのサンプル](../../overview/visual-cpp-samples.md)します。
+クラスのさまざまなメンバーを使用する方法を次の例に`CMFCFontInfo`示します。 この例では、`CMFCFontInfo``CMFCRibbonFontComboBox`からオブジェクトを取得する方法と、そのローカル変数にアクセスする方法を示します。 この例は[MSOffice 2007 デモ サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxtoolbarfontcombobox.h
+**ヘッダー:** afxツールバーフォントコンボボックス.h
 
-##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo
+## <a name="cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>をクリックします。
 
 `CMFCFontInfo` オブジェクトを構築します。
 
@@ -90,33 +90,33 @@ CMFCFontInfo(const CMFCFontInfo& src);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*<br/>
-[in]フォントの名前。 詳細については、次を参照してください。、`lfFaceName`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。
+*名前を指定します。*<br/>
+[in]フォントの名前。 詳しくは[、LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) `lfFaceName`構造体のメンバーを参照してください。
 
-*lpszScript*<br/>
+*スクリプト*<br/>
 [in]フォントのスクリプト (文字セット) の名前。
 
-*nCharSet*<br/>
-[in]フォントの文字セット (スクリプト) を指定する値。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。
+*nCharセット*<br/>
+[in]フォントの文字セット (スクリプト) を指定する値。 詳しくは[、LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) `lfCharSet`構造体のメンバーを参照してください。
 
-*nPitchAndFamily*<br/>
-[in]ピッチとファミリのフォントを指定する値。 詳細については、次を参照してください。、`lfPitchAndFamily`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。
+*アンドファミリー*<br/>
+[in]フォントのピッチとファミリを指定する値。 詳しくは[、LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) `lfPitchAndFamily`構造体のメンバーを参照してください。
 
 *nType*<br/>
-[in]フォントの種類を指定する値。 このパラメーターは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR) を指定できます。
+[in]フォントの種類を指定する値。 このパラメーターは、DEVICE_FONTTYPE、RASTER_FONTTYPE、およびTRUETYPE_FONTTYPEのビットごとの組み合わせ (OR) にすることができます。
 
 *src*<br/>
-[in]既存の`CMFCFontInfo`オブジェクト メンバーがこれを構築するため`CMFCFontInfo`オブジェクト。
+[in]この`CMFCFontInfo`オブジェクト`CMFCFontInfo`の構築に使用されるメンバーを持つ既存のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このドキュメントでは、用語*文字セット*と*スクリプト*同じ意味で。 A*スクリプト*文字と 1 つまたは複数の言語でこれらの文字を書き込むための規則のコレクションでは書記体系であるとも呼ばれます。 文字のコレクションには、アルファベットとそのスクリプトで使用される区切り記号が含まれています。 など、米国で話されていることと、そのアルファベットには a ~ Z の文字が含まれています、ラテン文字は英語に使用します。`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体は、文字セットを指定します。 たとえば、ANSI_CHARSET 値には、ラテン文字のアルファベットを含む、ANSI 文字セットを指定します。
+このドキュメントでは、*文字セット*と*スクリプト*という用語を同じ意味で使用します。 *スクリプト*は、書記システムとも呼ばれ、1 つ以上の言語で文字を書き込む文字とルールの集まりです。 文字のコレクションには、そのスクリプトで使用されるアルファベットと句読点が含まれます。 たとえば、ラテン文字は米国で話されている英語に使用され、アルファベットには A ~ Z の文字が含まれます。`lfCharSet` [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)構造体のメンバーは、文字セットを指定します。 たとえば、ANSI_CHARSET値は、ラテン文字のアルファベットを含む ANSI 文字セットを指定します。
 
-##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName
+## <a name="cmfcfontinfogetfullname"></a><a name="getfullname"></a>を取得します。
 
-フォントとその文字の連結された名前のセット (スクリプト) を取得します。
+フォントとその文字セット (スクリプト) の連結名を取得します。
 
 ```
 CString GetFullName() const;
@@ -124,13 +124,13 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>戻り値
 
-スクリプトとフォントの名前を含む文字列。
+フォント名とスクリプトを含む文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用すると、フォントの完全な名前を取得できます。 たとえば、フォント名が**Arial** 、およびフォント スクリプトが**キリル**、このメソッドは、"Arial (キリル)"を返します。
+このメソッドは、フォントの完全な名前を取得するために使います。 たとえば、フォント名が**Arial**で、フォント スクリプトが**キリル文字**の場合、このメソッドは "Arial (キリル文字)" を返します。
 
-##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet
+## <a name="cmfcfontinfom_ncharset"></a><a name="m_ncharset"></a>フォント情報::m_nCharSet
 
 フォントに関連付けられている文字セット (スクリプト) を指定する値。
 
@@ -138,23 +138,23 @@ CString GetFullName() const;
 const BYTE m_nCharSet;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、 *nCharSet*のパラメーター、 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)コンス トラクター。
+詳細については[、コンストラクターの](#cmfcfontinfo) *nCharSet*パラメーターを参照してください。
 
-##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily
+## <a name="cmfcfontinfom_npitchandfamily"></a><a name="m_npitchandfamily"></a>フォント情報::m_nPitchAndFamily
 
-声の高さ (ポイント サイズ) とフォントのファミリ (serif、sans serif, および monospace など) を指定する値。
+フォントのピッチ (ポイント サイズ) とファミリ (セリフ、sans-serif、およびモノスペースなど) を指定する値。
 
 ```
 const BYTE m_nPitchAndFamily;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、 *nPitchAndFamily*のパラメーター、 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)コンス トラクター。
+詳細については[、コンストラクターの](#cmfcfontinfo) *nPitchAndFamily*パラメーターを参照してください。
 
-##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType
+## <a name="cmfcfontinfom_ntype"></a><a name="m_ntype"></a>フォント情報::m_nType
 
 フォントの種類を指定する値。
 
@@ -162,37 +162,37 @@ const BYTE m_nPitchAndFamily;
 const int m_nType;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、 *%n タイプ*のパラメーター、 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)コンス トラクター。
+詳細については[、コンストラクターの](#cmfcfontinfo) *nType*パラメーターを参照してください。
 
-##  <a name="m_strname"></a>  CMFCFontInfo::m_strName
+## <a name="cmfcfontinfom_strname"></a><a name="m_strname"></a>m_strName
 
-フォントの名前。 たとえば、 **Arial**します。
+フォントの名前 : たとえば、 **Arial**.
 
 ```
 const CString m_strName;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、 *lpszName*のパラメーター、 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)コンス トラクター。
+詳細については[、コンストラクターの](#cmfcfontinfo) *lpszName*パラメーターを参照してください。
 
-##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript
+## <a name="cmfcfontinfom_strscript"></a><a name="m_strscript"></a>フォント情報::m_strScript
 
-フォントに関連付けられている文字セット (スクリプト) の名前。
+フォントに関連付けられた文字セット (スクリプト) の名前。
 
 ```
 const CString m_strScript;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。、 *lpszScript*のパラメーター、 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)コンス トラクター。
+詳細については[、コンストラクターの](#cmfcfontinfo) *lpszScript*パラメーターを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
-[CMFCToolBarFontSizeComboBox クラス](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+[コンボボックス クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
+[コンボボックス クラス](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)

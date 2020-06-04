@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161036"
 ---
 # <a name="nonstandard-behavior"></a>非標準動作
 
-部分をいくつか次のセクションでは、ボックスの一覧での Microsoft 実装C++に準拠していない、C++標準。 ここで示している節番号は C++ 11 規格 (ISO/IEC 14882:2011(E)) の節番号に対応しています。
+次のセクションでは、のC++ Microsoft 実装がC++標準に準拠していない場所の一部を示します。 ここで示している節番号は C++ 11 規格 (ISO/IEC 14882:2011(E)) の節番号に対応しています。
 
-C++ 標準で定義されているものとは異なるコンパイラの制限の一覧が記載[コンパイラの制限](../cpp/compiler-limits.md)します。
+標準で定義されているものと異なるコンパイラの制限の一覧については、「コンパイラの制限」を指定します。 [Compiler Limits](../cpp/compiler-limits.md) C++
 
 ## <a name="covariant-return-types"></a>共変の戻り値の型
 
-仮想関数が可変個の引数を持つ場合、仮想既定クラスは共変の戻り値の型としてサポートされません。 このことは C++ ISO 仕様の 10.3 節 7 項に準拠していません。 次のサンプルがコンパイルできないコンパイラ エラー [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+仮想関数が可変個の引数を持つ場合、仮想既定クラスは共変の戻り値の型としてサポートされません。 このことは C++ ISO 仕様の 10.3 節 7 項に準拠していません。 次のサンプルはコンパイルされず、コンパイラエラー [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)が発生します。
 
 ```cpp
 // CovariantReturn.cpp
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>テンプレートの非依存名のバインド
 
-MicrosoftC++コンパイラはサポートされていない非依存名のバインド、テンプレート初期解析時にします。 このことは、C++ ISO 仕様の 14.6.3 節に準拠していません。 そのため、テンプレートの定義後 (ただしインスタンス化前) にオーバーロードが宣言される場合があります。
+現在、 C++ Microsoft コンパイラでは、テンプレートを最初に解析するときに非依存の名前をバインドすることはサポートされていません。 このことは、C++ ISO 仕様の 14.6.3 節に準拠していません。 そのため、テンプレートの定義後 (ただしインスタンス化前) にオーバーロードが宣言される場合があります。
 
 ```cpp
 #include <iostream>
@@ -64,18 +64,18 @@ int main() {
 
 ## <a name="function-exception-specifiers"></a>関数の例外指定子
 
-`throw()` 以外の関数の例外の指定子は解析されますが、使用されません。 このことは、ISO C++ 仕様の 15.4 節に準拠していません。 例えば:
+`throw()` 以外の関数の例外の指定子は解析されますが、使用されません。 このことは、ISO C++ 仕様の 15.4 節に準拠していません。 次に例を示します。
 
 ```cpp
 void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-例外の仕様の詳細については、次を参照してください。[例外仕様](../cpp/exception-specifications-throw-cpp.md)します。
+例外の指定の詳細については、「[例外の指定](../cpp/exception-specifications-throw-cpp.md)」を参照してください。
 
-## <a name="chartraitseof"></a>char_traits::eof()
+## <a name="char_traitseof"></a>char_traits::eof()
 
-C++規格に[char_traits::eof](../standard-library/char-traits-struct.md#eof)を有効にする必要があります対応していない`char_type`値。 MicrosoftC++コンパイラでは、この制約の種類の**char**、型ではなく**wchar_t**します。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
+標準C++の状態は[char_traits:: eof](../standard-library/char-traits-struct.md#eof)が有効な `char_type` 値に対応していてはなりません。 Microsoft C++コンパイラは**char**型にこの制約を適用しますが、型**wchar_t**には適用しません。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>オブジェクトの格納場所
 
-C++ 規格の 1.8 節 6 項によると、完全な C++ オブジェクトには一意の格納場所が必要です。 ただし microsoft C++、場所の種類のデータ メンバーは共有記憶域の場所他の種類とオブジェクトの有効期間にわたって場合があります。
+C++ 規格の 1.8 節 6 項によると、完全な C++ オブジェクトには一意の格納場所が必要です。 ただし、Microsoft C++では、データメンバーのない型が、オブジェクトの有効期間にわたって他の型とストレージの場所を共有する場合があります。

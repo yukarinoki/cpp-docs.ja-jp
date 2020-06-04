@@ -1,12 +1,14 @@
 ---
 title: islower、iswlower、_islower_l、_iswlower_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - iswlower
 - _islower_l
 - islower
 - _iswlower_l
-apilocation:
+- _o_islower
+- _o_iswlower
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +21,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istlower
 - islower
@@ -42,14 +48,14 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: b6b58522277b45fe8147dfa13a5930003f83c835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4add576b9abe2bedda227d76cf3fc57890cfcbc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331572"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917562"
 ---
-# <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
+# <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower、iswlower、_islower_l、_iswlower_l
 
 整数が小文字を表すかどうかを決定します。
 
@@ -74,7 +80,7 @@ int _iswlower_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*40u-c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -82,11 +88,11 @@ int _iswlower_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返します。 0 以外の場合の各*c*小文字の文字の特定の表現です。 **islower**場合は、0 以外の値を返します*c*小文字 (a ~ z)。 **iswlower**場合は、0 以外の値を返します*c*を小文字に対応するワイド文字または*c* のワイド文字の実装定義セットの1つは**iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**が 0 以外。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。
+これらの各ルーチンは、 *c*が小文字の特殊表現である場合は0以外の値を返します。 *c*が小文字 (a ~ z) の場合、 **islower**は0以外の値を返します。 *c*が小文字に対応するワイド文字の場合、または*c*が、 **iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**のいずれも0以外のワイド文字の実装定義セットの1つである場合、 **iswlower**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
 
-これらの関数がのバージョン、 **_l**サフィックスは、現在のロケールの代わりに渡されるロケールを使用して、ロケールに依存する動作。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作**islower**と **_islower_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **islower**と **_islower_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -95,19 +101,23 @@ int _iswlower_l(
 |**_istlower**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
 |**_istlower_l**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l**|
 
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**islower**|\<ctype.h>|
 |**iswlower**|\<ctype.h> または \<wchar.h>|
 |**_islower_l**|\<ctype.h>|
 |**_swlower_l**|\<ctype.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
+[国](../../c-runtime-library/locale.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

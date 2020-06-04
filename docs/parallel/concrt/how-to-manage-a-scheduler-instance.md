@@ -1,30 +1,30 @@
 ---
-title: '方法: スケジューラインスタンスを管理する'
+title: '方法: スケジューラ インスタンスを管理する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c7ec321eaf0960dc14b61bbd8fdc76b53a31f8c5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510531"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141727"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラインスタンスを管理する
+# <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラ インスタンスを管理する
 
 スケジューラ インスタンスにより、特定のスケジューリング ポリシーと各種の作業負荷を関連付けることができます。 このトピックには、スケジューラ インスタンスを作成および管理する方法を示す 2 つの基本的な例が含まれています。
 
-例では、既定のスケジューラ ポリシーを使用するスケジューラを作成します。 カスタムポリシーを使用するスケジューラを作成する例については[、「方法:特定のスケジューラポリシー](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)を指定します。
+例では、既定のスケジューラ ポリシーを使用するスケジューラを作成します。 カスタムポリシーを使用するスケジューラを作成する例については、「[方法: 特定のスケジューラポリシーを指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)する」を参照してください。
 
-### <a name="to-manage-a-scheduler-instance-in-your-application"></a>アプリケーションのスケジューラ インスタンスを管理するには
+## <a name="to-manage-a-scheduler-instance-in-your-application"></a>アプリケーションのスケジューラ インスタンスを管理するには
 
 1. Scheduler が使用するポリシー値を含む[concurrency:: Scheduler policy](../../parallel/concrt/reference/schedulerpolicy-class.md)オブジェクトを作成します。
 
 1. Scheduler インスタンスを作成するには、 [concurrency:: CurrentScheduler:: create](reference/currentscheduler-class.md#create)メソッドまたは[Concurrency:: Scheduler:: create](reference/scheduler-class.md#create)メソッドを呼び出します。
 
-   `Scheduler::Create`メソッドを使用する場合は、scheduler を現在のコンテキストに関連付ける必要があるときに、 [concurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach)メソッドを呼び出します。
+   `Scheduler::Create` メソッドを使用する場合は、scheduler を現在のコンテキストに関連付ける必要があるときに[concurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach)メソッドを呼び出します。
 
 1. [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw)関数を呼び出して、シグナルのない自動リセットイベントオブジェクトへのハンドルを作成します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "69510531"
 
 1. [Concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach)メソッドを呼び出して、現在のスケジューラをデタッチし、以前のスケジューラを現在のスケジューラとして復元します。
 
-   `Scheduler::Create`メソッドを使用する場合は、 [concurrency:: Scheduler:: Release](reference/scheduler-class.md#release)メソッドを呼び出して、 `Scheduler`オブジェクトの参照カウントをデクリメントします。
+   `Scheduler::Create` メソッドを使用する場合は、 [concurrency:: Scheduler:: Release](reference/scheduler-class.md#release)メソッドを呼び出して、`Scheduler` オブジェクトの参照カウントをデクリメントします。
 
 1. イベントのハンドルを[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)関数に渡して、スケジューラがシャットダウンするのを待ちます。
 
@@ -71,11 +71,11 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、visual studio プロジェクトに貼り付けるか、という名前`scheduler-instance.cpp`のファイルに貼り付けてから、visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`scheduler-instance.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc scheduler-instance**
+> **cl.exe/EHsc scheduler-instance**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)<br/>
 [方法: 特定のスケジューラ ポリシーを指定する](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)

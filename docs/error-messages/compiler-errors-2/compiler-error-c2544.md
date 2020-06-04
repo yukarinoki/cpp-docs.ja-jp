@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2544
 ms.assetid: 8e79b74a-4e92-4752-a5fe-c3143dfc5524
-ms.openlocfilehash: 85136a8d05b2a9f4bdc7a53571aba83cc8fca1ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569f092adfc49116337dc39cdf3c3f33d55ffcb9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202515"
 ---
 # <a name="compiler-error-c2544"></a>コンパイラ エラー C2544
 
 演算子 '()'に対して、 ')'が必要です。
 
-関数呼び出し演算子には、左かっこがありません。
+関数呼び出し演算子に左かっこがありません。
 
-このエラーは、マクロの展開で発生することができます。
+このエラーは、マクロの展開が原因で発生する場合があります。

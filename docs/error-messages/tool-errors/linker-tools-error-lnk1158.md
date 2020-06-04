@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1158
 ms.assetid: 45febf16-d9e1-42db-af91-532e2717fd6a
-ms.openlocfilehash: 0dbb40fb1fe0405f3685a5e7246ecba2b53ec526
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2602c488db660ce067c672df4a746c388d987120
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184061"
 ---
 # <a name="linker-tools-error-lnk1158"></a>リンカ ツール エラー LNK1158
 
-cannot run 'filename'
+' filename ' を実行できません
 
-指定された実行可能ファイルによって呼び出される[リンク](../../build/reference/linking.md)がリンクを含むディレクトリではなくでも、PATH 環境変数で指定したディレクトリ。
+[Link](../../build/reference/linking.md)によって呼び出された、指定された実行可能ファイルが、PATH 環境変数で指定されたリンクまたはディレクトリに含まれていません。
 
-:PGOPTIMIZE パラメーターを使用しようとする場合にこのエラーが発生されますなど、 [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) 32 ビットのオペレーティング システムのコンピューター上のリンカー オプション。
+たとえば、32ビットのオペレーティングシステムが搭載されたコンピューターで PGOPTIMIZE パラメーターを[/ltcg](../../build/reference/ltcg-link-time-code-generation.md)リンカーオプションに使用しようとすると、このエラーが発生します。

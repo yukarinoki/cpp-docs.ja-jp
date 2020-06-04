@@ -1,7 +1,7 @@
 ---
 title: and_eq
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - and_eq
 - std.and_eq
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - and_eq macro
 ms.assetid: 11091772-e359-4c2b-95c6-00841ac04354
-ms.openlocfilehash: 4dbce5115c656137f845e31b4793f43b5531afc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f505faa561dafc5ba0f929f94676e0ee81a32199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170918"
 ---
-# <a name="andeq"></a>and_eq
+# <a name="and_eq"></a>and_eq
 
 &= 演算子の代替手段。
 
@@ -37,7 +40,7 @@ ms.locfileid: "62341978"
 #define and_eq &=
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 マクロにより &= 演算子が生成されます。
 
@@ -69,4 +72,4 @@ int main( )
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<iso646.h>
+**ヘッダー:** \<iso646 >

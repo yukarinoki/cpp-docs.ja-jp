@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4684
 ms.assetid: e95f1a83-2784-4b05-ae94-12148e056e26
-ms.openlocfilehash: 8ba3d75ecb370ac86c9a6ab47f05dd49fc12ba23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 017d2ad9ac327e99bdd9afb0914d17946103771c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374405"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175455"
 ---
 # <a name="compiler-warning-level-1-c4684"></a>コンパイラの警告 (レベル 1) C4684
 
-' attribute':警告!! 属性が原因で、無効なコードの生成: 慎重に使用
+' attribute ': WARNING!! 属性により、無効なコード生成が発生する可能性があります: 使用に注意してください
 
-属性をよく使用する必要がありますを使用するとします。
+通常は使用しない属性を使用しています。
 
 次の例では、C4684 が生成されます。
 
-```
+```cpp
 // C4684.cpp
 // compile with: /W1 /LD
 [module(name="xx")]; // C4684 expected

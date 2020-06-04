@@ -1,5 +1,5 @@
 ---
-title: クリップボード:その他のデータ形式の追加
+title: 'クリップボード : その他のデータ形式の追加'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - formats [MFC], Clipboard
@@ -9,43 +9,43 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4e159cc1b6918843d4a164dcca88500eb7b038
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374603"
 ---
-# <a name="clipboard-adding-other-formats"></a>クリップボード:その他のデータ形式の追加
+# <a name="clipboard-adding-other-formats"></a>クリップボード : その他のデータ形式の追加
 
-このトピックでは、OLE サポートするためのサポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード。コピーと貼り付けデータ](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 **CF_METAFILEPICT**、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および場合によって**CF_LINKSOURCE**します。 ほとんどのアプリケーションには、これらの 3 つよりも、クリップボードにその他の形式が必要です。
+ここでは、特に OLE サポートでサポートされている形式の一覧を展開する方法について説明します。 「[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)」では、クリップボードからのコピーと貼り付けのサポートに必要な最小限の実装について説明します。 これがすべて実装されている場合、クリップボードに配置される形式は、 、 **CF_EMBEDSOURCE 、**、 CF_OBJECTDESCRIPTOR 、 および場合によっては**CF_LINKSOURCE** **CF_METAFILEPICT**だけです。 **CF_OBJECTDESCRIPTOR** ほとんどのアプリケーションでは、クリップボードにこれらの 3 つよりも多くの形式が必要になります。
 
-##  <a name="_core_registering_custom_formats"></a> 形式のカスタムの登録
+## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>カスタム書式の登録
 
-独自のカスタム形式を作成するには、独自のクリップボード形式を登録するときに使用する同じ手順を実行しますする形式の名前を渡す、**独自のデータ**関数および形式 id とその戻り値を使用して。
+独自のカスタム書式を作成するには、カスタムクリップボード形式を登録するときに使用するのと同じ手順に従います。 **RegisterClipboardFormat**
 
-##  <a name="_core_placing_formats_on_the_clipboard"></a> 形式をクリップボードにコピーします。
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>クリップボードに書式を配置する
 
-オーバーライドする必要がありますにクリップボードに格納されたものをその他の書式を追加する、`OnGetClipboardData`いずれかから派生するクラスの関数`COleClientItem`または`COleServerItem`(データのコピーがネイティブかどうか) によって異なります。 この関数で、次の手順を使用する必要があります。
+クリップボードに配置された形式にさらに書式を追加するには、派生元のクラス`OnGetClipboardData`で関数をオーバーライド`COleClientItem`するか、コピー`COleServerItem`するデータがネイティブかどうかに応じてオーバーライドする必要があります。 この関数では、次の手順を使用する必要があります。
 
-#### <a name="to-place-formats-on-the-clipboard"></a>クリップボードの形式を配置するには
+#### <a name="to-place-formats-on-the-clipboard"></a>クリップボードに書式を配置するには
 
 1. `COleDataSource` オブジェクトを作成します。
 
-1. このデータ ソースを呼び出すことによってサポートされている形式の一覧に、ネイティブ データ形式を追加する関数に渡す`COleDataSource::CacheGlobalData`します。
+1. このデータ ソースを関数に渡し、 を呼び出`COleDataSource::CacheGlobalData`して、サポートされている形式の一覧にネイティブ データ形式を追加します。
 
-1. 標準の形式を呼び出すことによって追加`COleDataSource::CacheGlobalData`は、各標準形式をサポートします。
+1. サポートする標準フォーマットごとに`COleDataSource::CacheGlobalData`呼び出して、標準フォーマットを追加します。
 
-MFC OLE サンプル プログラムでこの手法が使用される[HIERSVR](../overview/visual-cpp-samples.md) (確認、`OnGetClipboardData`のメンバー関数、**よう**クラス)。 このサンプルでは、唯一の違いは、HIERSVR が他の標準形式をサポートしていないため、そのステップ 3 は実装されていません。
+この手法は、MFC OLE サンプル プログラム[HIERSVR](../overview/visual-cpp-samples.md) `OnGetClipboardData`で使用されます **(CServerItem**クラスのメンバー関数を確認します)。 このサンプルの唯一の違いは、HIERSVR が他の標準フォーマットをサポートしていないため、ステップ 3 が実装されないことです。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
-- [OLE データ オブジェクトとデータ ソースと統一されたデータの転送します。](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE データ オブジェクトとデータ ソースと統一されたデータ転送](../mfc/data-objects-and-data-sources-ole.md)
 
-- [OLE ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
+- [OLE のドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE●ole○](../mfc/ole-background.md)
 
 ## <a name="see-also"></a>関連項目
 
-[クリップボード:OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[クリップボード: OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

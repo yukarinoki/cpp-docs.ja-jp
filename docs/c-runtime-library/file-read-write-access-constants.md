@@ -1,8 +1,6 @@
 ---
 title: ファイル読み出し/書き込みアクセス定数
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - read/write access constants
 - write access constants
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 96d146b2e2f0ed82cbdc52b11d92c049da50e2cb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746072"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438396"
 ---
 # <a name="file-readwrite-access-constants"></a>ファイル読み出し/書き込みアクセス定数
 
@@ -25,7 +23,7 @@ ms.locfileid: "57746072"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 これらの定数は、ファイルに対して要求されるアクセスの種類 ("a"、"r"、または "w") を指定します。 [変換モード](../c-runtime-library/file-translation-constants.md) ("b" または "t") と[ディスク コミット モード](../c-runtime-library/commit-to-disk-constants.md) ("c" または "n") をアクセスの種類で指定できます。
 
@@ -42,9 +40,9 @@ ms.locfileid: "57746072"
 
 "r+"、"w+"、または "a+" のいずれかを指定すると、読み取りと書き込みの両方を行うことができます (この場合、ファイルは"更新"用に開かれると言います)。 ただし、読み取りと書き込みを切り替える場合は、その前に `fflush`、`fsetpos`、`fseek`、または `rewind` のいずれかの操作を実行する必要があります。 `fsetpos` または `fseek` の操作には現在位置を指定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
+[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
 [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

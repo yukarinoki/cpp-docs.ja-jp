@@ -1,23 +1,23 @@
 ---
-title: Winmodule に関するグローバル関数
+title: グローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 0e7450ea2a42c0b35dc5a6d1b77dfb0f2acb9520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329360"
 ---
-# <a name="winmodule-global-functions"></a>Winmodule に関するグローバル関数
+# <a name="winmodule-global-functions"></a>グローバル関数
 
-これらの関数のサポートを提供する`_AtlCreateWndData`操作を構造体します。
+これらの関数は、構造体`_AtlCreateWndData`の操作をサポートします。
 
 > [!IMPORTANT]
-> Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+> 次の表に示す関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 |||
 |-|-|
@@ -28,7 +28,7 @@ ms.locfileid: "62196860"
 
 **ヘッダー:** atlbase.h
 
-##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>データを追加します。
 
 `_AtlCreateWndData` 構造体を初期化して追加します。
 
@@ -41,20 +41,20 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWinModule*<br/>
-モジュールへのポインター [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)構造体。
+*モジュール*<br/>
+モジュールの[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)構造体へのポインター。
 
-*pData*<br/>
-ポインター、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化して、現在のモジュールに追加します。
+*Pdata*<br/>
+初期化および現在のモジュールに追加する[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体へのポインター。
 
 *pObject*<br/>
-オブジェクトへのポインター**この**ポインター。
+オブジェクトの**この**ポインターへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-初期化します、`_AtlCreateWndData`を格納するために使用する構造体、**この**ポインター クラスのインスタンスを参照するために使用し、モジュールの参照の一覧に追加`_ATL_WIN_MODULE70`構造体。 によって呼び出される[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)します。
+クラス インスタンス`_AtlCreateWndData`の参照に使用される**this**ポインターを格納するために使用される構造体を初期化し、モジュールの`_ATL_WIN_MODULE70`構造体によって参照されるリストに追加します。 [によって](catlwinmodule-class.md#addcreatewnddata)呼び出されます。
 
-##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>データを抽出します。
 
 既存の `_AtlCreateWndData` 構造体を抽出します。
 
@@ -64,16 +64,16 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>パラメーター
 
-*pWinModule*<br/>
-モジュールへのポインター [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)構造体。
+*モジュール*<br/>
+モジュールの[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを返します、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体。
+[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、既存の抽出`_AtlCreateWndData`モジュールのによって参照されている一覧から構造`_ATL_WIN_MODULE70`構造体。
+この関数は、モジュールの`_AtlCreateWndData`構造によって参照されるリストから既存の`_ATL_WIN_MODULE70`構造を抽出します。
 
 ## <a name="see-also"></a>関連項目
 

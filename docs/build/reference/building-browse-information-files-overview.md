@@ -1,5 +1,5 @@
 ---
-title: ブラウザー情報ファイルのビルド。概要
+title: 'ブラウザー情報ファイルのビルド : 概要'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
@@ -7,47 +7,46 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: ffacb7aaf9ac1f7ad6fc4cf12ab479099dc57725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320670"
 ---
-# <a name="building-browse-information-files-overview"></a>ブラウザー情報ファイルのビルド。概要
-
+# <a name="building-browse-information-files-overview"></a>ブラウザー情報ファイルのビルド : 概要
 
 > [!WARNING]
 > BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
 
-シンボル参照の参照情報を作成するには、コンパイラは、BSCMAKE では、プロジェクトでソース ファイルごとに、.sbr ファイルを作成します。EXE は .bsc ファイルの 1 つに、.sbr ファイルを連結します。
+シンボル参照の参照情報を作成するために、コンパイラはプロジェクト内の各ソース ファイルに対して .sbr ファイルを作成し、次に BSCMAKE を作成します。EXE は、.sbr ファイルを 1 つの .bsc ファイルに連結します。
 
-.Sbr ファイルと .bsc ファイルを生成する、時間がかかるため、Visual Studio は、既定でオフこれらの関数にします。 を現在の情報を参照する場合は、参照オプションをオンにして、プロジェクトをもう一度ビルドする必要があります。
+.sbr ファイルと .bsc ファイルの生成には時間がかかるため、Visual Studio ではこれらの関数が既定でオフになります。 現在の情報を参照する場合は、参照オプションをオンにして、プロジェクトを再度ビルドする必要があります。
 
-使用[/FR](fr-fr-create-dot-sbr-file.md)または[/Fr](fr-fr-create-dot-sbr-file.md) .sbr ファイルを作成するようにコンパイラに指示します。 .Bsc ファイルを作成するを呼び出すことができます[BSCMAKE](bscmake-command-line.md)コマンドラインから。 BSCMAKE コマンドラインから使用するブラウザー情報ファイルの操作をより正確に制御します。 参照してください[BSCMAKE リファレンス](bscmake-reference.md)詳細についてはします。
+[/FR](fr-fr-create-dot-sbr-file.md)または[/Fr](fr-fr-create-dot-sbr-file.md)を使用して、.sbr ファイルを作成するようにコンパイラに指示します。 .bsc ファイルを作成するには、コマンド ラインから[BSCMAKE を](bscmake-command-line.md)呼び出します。 コマンド ラインから BSCMAKE を使用すると、参照情報ファイルの操作をより正確に制御できます。 詳細については[、「BSCMAKE リファレンス」](bscmake-reference.md)を参照してください。
 
 > [!TIP]
->  .Bsc ファイルの生成がオフのままには、.sbr ファイルの生成を有効にすることができます。 これにより、高速のビルドは .bsc ファイルの生成をオンにし、プロジェクトをビルドして、新しい .bsc ファイルをすばやく作成することもできます。
+> .sbr ファイルの生成は有効にできますが、.bsc ファイルの生成はオフのままにしておきます。 これにより、高速ビルドが可能になりますが、.bsc ファイルの生成を有効にしてプロジェクトをビルドすることで、新しい .bsc ファイルを迅速に作成することもできます。
 
-時間、メモリ、および .bsc ファイルのサイズを小さくして .bsc ファイルのビルドに必要なディスク領域を減らすことができます。
+.bsc ファイルのサイズを小さくすることによって、.bsc ファイルの作成に必要な時間、メモリ、およびディスク領域を削減できます。
 
-参照してください[[全般] プロパティ ページ (プロジェクト)](general-property-page-project.md)については、開発環境でのブラウザー ファイルを作成する方法。
+開発環境でブラウザー ファイルをビルドする方法については、「[一般プロパティ ページ (Project)」](general-property-page-project.md)を参照してください。
 
-### <a name="to-create-a-smaller-bsc-file"></a>サイズの小さい .bsc ファイルを作成するには
+### <a name="to-create-a-smaller-bsc-file"></a>より小さい .bsc ファイルを作成するには
 
-1. 使用[BSCMAKE コマンド ライン オプション](bscmake-options.md)ブラウザー情報ファイルから情報を除外します。
+1. [BSCMAKE コマンド ライン オプション](bscmake-options.md)を使用して、参照情報ファイルから情報を除外します。
 
-1. コンパイルまたはアセンブルすると、.sbr ファイルの 1 つまたは複数のローカルのシンボルを除外します。
+1. コンパイルまたはアセンブルの際に、1 つ以上の .sbr ファイルでローカル シンボルを省略します。
 
-1. オブジェクト ファイルに、現在のステージのデバッグに必要な情報が含まれていない場合は、ブラウザー情報ファイルを再構築するときに、BSCMAKE コマンドから、.sbr ファイルを省略します。
+1. オブジェクト ファイルにデバッグの現在の段階に必要な情報が含まれていない場合は、参照情報ファイルを再構築するときに、BSCMAKE コマンドから .sbr ファイルを省略します。
 
-### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>1 つのブラウザー ファイル (.bsc) にいくつかのプロジェクトから参照情報を結合するには
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>複数のプロジェクトの参照情報を 1 つのブラウザー ファイル (.bsc) に結合するには
 
-1. いずれかが、プロジェクト レベルで .bsc ファイルをビルドまたは .sbr ファイルが切り詰められていることを防ぐために、/n スイッチを使用しないでください。
+1. プロジェクト レベルで .bsc ファイルをビルドしないか、/n スイッチを使用して .sbr ファイルが切り捨てられないようにします。
 
-1. すべてのプロジェクトをビルドすると後、は、入力としてのすべての .sbr ファイルで BSCMAKE を実行します。 ワイルドカードを使用します。 たとえば、プロジェクト ディレクトリ C:\X、C:\Y、C:\Z すべて .bsc ファイルの 1 つに結合するときのそれらの .sbr ファイルがある場合、使用 BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\\*.sbr の/o c:\whatever_directory\combined.bsc 結合された .bsc ファイルをビルドします。
+1. すべてのプロジェクトがビルドされたら、すべての .sbr ファイルを入力として BSCMAKE を実行します。 ワイルドカードを使用できます。 たとえば、プロジェクト ディレクトリ C:\X、C:\Y、C:\Z と .sbr ファイルを含む C:\\Z があり、それらを 1 つの .bsc ファイルに結合\\\*する場合は、BSCMAKE\\\*C:\X .sbr C:\Y .sbr C:whatever_directory\Y .sbr C:\Z\\\*.sbr/結合.bsc を使用して、結合された .bsc ファイルを作成します。
 
 ## <a name="see-also"></a>関連項目
 
-[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[その他の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
 [BSCMAKE リファレンス](bscmake-reference.md)
