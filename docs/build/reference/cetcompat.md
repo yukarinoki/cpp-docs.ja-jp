@@ -1,51 +1,54 @@
 ---
-title: /CETCOMPAT (CET シャドウ スタック互換)
+title: /Cetcompat (中央のシャドウスタックと互換性あり)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c807d91d69b967fd62e01a077711dede5f55c44
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273249"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421302"
 ---
-# <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (CET シャドウ スタック互換)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/Cetcompat (中央のシャドウスタックと互換性あり)
 
-制御フローの適用テクノロジ (CET) シャドウ スタックに互換性がある実行可能イメージをマークするかどうかを指定します。
+実行可能イメージを、制御フロー強制テクノロジ (中央管理) シャドウスタックと互換性のあるものとしてマークするかどうかを指定します。
 
 ## <a name="syntax"></a>構文
 
-> **/CETCOMPAT**\[**:NO**]
+> **/Cetcompat** \[**: いいえ**]
 
 ## <a name="arguments"></a>引数
 
 **違います**<br/>
-実行可能ファイル マークしないで CET シャドウ スタックとの互換性を指定します。
+実行可能ファイルが、中央のシャドウスタックと互換性があるとマークされていないことを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-制御フローの適用テクノロジ (CET) シャドウ スタックは、戻り指向プログラミング (ROP) に対する防御機能ベースのマルウェアの攻撃を提供するコンピューターのプロセッサ機能です。 詳細については、次を参照してください。 [Intel 制御フローの適用テクノロジ プレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)します。
+制御フロー強制テクノロジ (中央値) シャドウスタックは、リターン指向プログラミング (ROP) ベースのマルウェア攻撃から保護する機能を提供するコンピュータープロセッサ機能です。 詳細については、「 [Intel Control Flow 強制テクノロジプレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)」を参照してください。
 
-**/CETCOMPAT**リンカー オプションとして CET シャドウ スタックと互換性のあるバイナリをマークするリンカーに指示します。 **/CETCOMPAT:NO**として CET シャドウ スタックと互換性のないバイナリをマークします。 両方のオプションをコマンドラインで指定する場合は、指定された最後の 1 つが使用されます。 このスイッチは、現在 x86 および x64 アーキテクチャに適用できるのみです。
+**/Cetcompat**リンカーオプションは、バイナリをバイナリシャドウスタック互換としてマークするようにリンカーに指示します。 **/Cetcompat:** は、バイナリを、中央のシャドウスタックと互換性がないとしてマークします。 両方のオプションがコマンドラインで指定されている場合は、最後に指定されたものが使用されます。 このスイッチは、現在、x86 および x64 アーキテクチャにのみ適用されます。
 
-**/CETCOMPAT**オプションは、以降、Visual Studio 2019 の Preview 3 のツールセットで使用できます。
+**/Cetcompat**オプションは、Visual Studio 2019 Preview 3 ツールセットから使用できます。
 
-### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Visual Studio で/CETCOMPAT リンカー オプションを設定するには
+### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Visual Studio で/cetcompat リンカーオプションを設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../working-with-project-properties.md)」を参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**]  >  **リンカー**の  >  **[詳細設定**] プロパティページを選択します。
 
-1. **追加オプション**ボックスで、追加 **/CETCOMPAT**または **/CETCOMPAT:NO**選び、 **OK**または**適用**、変更を保存します。
+1. [中央値の**シャドウスタック互換**] プロパティを選択します。
+
+1. ドロップダウンコントロールで、 **[はい] (/cetcompat)** を選択して EH 継続メタデータを有効にします。無効にするには、[**いいえ] (/cetcompat: no)** を選択します。
+
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-このオプションでは、同等のプログラムはありません。
+このオプションには、プログラムに相当するものはありません。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプション](linker-options.md)
+[リンカーオプション](linker-options.md)
