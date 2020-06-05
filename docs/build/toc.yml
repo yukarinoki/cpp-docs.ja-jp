@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs (スタック チェック呼び出しの制御)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard (制御フロー ガードを有効にする)
+                - name: '/guard:cf (制御フロー ガードを有効にする)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (EH 継続メタデータを有効にする)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: /GT (スレッド ローカル ストレージを使用したファイバー保護のサポート)
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw (グローバル データの最適化)
