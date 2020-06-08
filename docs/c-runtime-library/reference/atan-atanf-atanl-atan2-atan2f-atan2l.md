@@ -1,6 +1,6 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920073"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506781"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-**X**のアークタンジェント (**atan**、 **atanf**、 **atanl**)、または**y**/**x**のアークタンジェント (**atan2**、 **atan2f**、および**atan2l**) を計算します。
+**X**のアークタンジェント (**atan**、 **atanf**、 **atanl**)、または**y** / **x**のアークタンジェント (**atan2**、 **atan2f**、および**atan2l**) を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -82,7 +83,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**atan**は、-π/2 ~ π/2 ラジアンの範囲の*x*のアークタンジェントを返します。 **atan2**は、-π ~ πラジアンの範囲で*y*/*x*のアークタンジェントを返します。 *X*が0の場合、 **atan**は0を返します。 **Atan2**の両方のパラメーターが0の場合、この関数は0を返します。 すべての結果はラジアンにあります。
+**atan**は、-π/2 ~ π/2 ラジアンの範囲の*x*のアークタンジェントを返します。 **atan2**は、 *y* / -π ~ πラジアンの範囲で y*x*のアークタンジェントを返します。 *X*が0の場合、 **atan**は0を返します。 **Atan2**の両方のパラメーターが0の場合、この関数は0を返します。 すべての結果はラジアンにあります。
 
 **atan2**は、両方のパラメーターの符号を使用して、戻り値のクアドラントを決定します。
 
@@ -92,7 +93,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-**Atan**関数は、 *x*のアークタンジェント (逆タンジェント関数) を計算します。 **atan2**は、 *y*/*x*のアークタンジェントを計算します ( *x*が0の場合、 **atan2**は、 *y*が正の場合はπ/2、y が負*の場合は*-π/2、 *y*が0の場合は 0)。
+**Atan**関数は、 *x*のアークタンジェント (逆タンジェント関数) を計算します。 **atan2**は、 *y*x のアークタンジェントを計算します / *x* ( *x*が0の場合、 **atan2**は、 *y*が正の場合はπ/2、y が負*の場合は*-π/2、 *y*が0の場合は 0)。
 
 **atan**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
@@ -102,7 +103,7 @@ C++ ではオーバーロードが可能であるため、 **float**または**l
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -139,7 +140,7 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>
 [cos、cosf、cosl](cos-cosf-cosl.md)<br/>

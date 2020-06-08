@@ -1,22 +1,22 @@
 ---
 title: カテゴリ別のコンパイラ オプション
-description: Microsoft C/C++コンパイラのコマンドラインオプションのカテゴリ別の参照リスト。
-ms.date: 02/09/2020
+description: Microsoft C/c + + コンパイラのコマンドラインオプションのカテゴリ別の参照リスト。
+ms.date: 06/03/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0275e6e5459f01d6ab8428274cc5e2313ab3066d
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421339"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
 この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順の一覧については、「[アルファベット順に表示されるコンパイラオプション](compiler-options-listed-alphabetically.md)」を参照してください。
 
-## <a name="optimization"></a>Optimization
+## <a name="optimization"></a>最適化
 
 |オプション|目的|
 |------------|-------------|
@@ -32,12 +32,12 @@ ms.locfileid: "79422788"
 |[/Oy](oy-frame-pointer-omission.md)|フレーム ポインターなし (x86 のみ)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|指定したアーキテクチャまたは一連のアーキテクチャ用に最適化されたコードを生成します。|
 
-## <a name="code-generation"></a>コードの生成
+## <a name="code-generation"></a>コード生成
 
 |オプション|目的|
 |------------|-------------|
 |[/arch](arch-x86.md)|コード生成で SSE または SSE2 命令を使用します。 (x86 のみ)|
-|[/clr](clr-common-language-runtime-compilation.md)|共通言語ランタイムで実行する出力ファイルを作成します。|
+|[伴う](clr-common-language-runtime-compilation.md)|共通言語ランタイムで実行する出力ファイルを作成します。|
 |[/EH](eh-exception-handling-model.md)|例外処理のモデルを指定します。|
 |[/fp](fp-specify-floating-point-behavior.md)|浮動小数点の動作を指定します。|
 |[/GA](ga-optimize-for-windows-application.md)|Windows アプリケーション用に最適化します。|
@@ -54,6 +54,7 @@ ms.locfileid: "79422788"
 |[/Gs](gs-control-stack-checking-calls.md)|スタック プローブを制御します。|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|静的スレッド ローカル ストレージを使用して割り当てられたデータに対して、ファイバー保護をサポートします。|
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
+|[/ガード: ehcont](guard-enable-eh-continuation-metadata.md)|EH 継続メタデータを有効にします。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
 |[/Gw](gw-optimize-global-data.md)|プログラム全体のグローバル データの最適化を有効にします。|
 |[/GX](gx-enable-exception-handling.md)|非推奨になりました。 同期例外処理を有効にします。 代わりに [/EH](eh-exception-handling-model.md) を使用してください。|
@@ -89,15 +90,15 @@ ms.locfileid: "79422788"
 |[/Fm](fm-name-mapfile.md)|マップファイルを作成します。|
 |[/Fo](fo-object-file-name.md)|オブジェクト ファイルを作成します。|
 |[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
-|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザーファイル *`.sbr`* 生成された名前。|
+|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|名前生成された *`.sbr`* ブラウザーファイル。|
 
 ## <a name="preprocessor"></a>プリプロセッサ
 
 |オプション|目的|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡されたファイル参照を解決するために検索するディレクトリを指定します。|
-|[/C](c-preserve-comments-during-preprocessing.md)|プリプロセス時にコメントを保持します。|
-|[/D](d-preprocessor-definitions.md)|定数とマクロを定義します。|
+|[スイッチ](c-preserve-comments-during-preprocessing.md)|プリプロセス時にコメントを保持します。|
+|[D](d-preprocessor-definitions.md)|定数とマクロを定義します。|
 |[/E](e-preprocess-to-stdout.md)|プリプロセッサ出力を標準出力にコピーします。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力にコピーします。|
 |[/FI](fi-name-forced-include-file.md)|指定したインクルード ファイルをプリプロセスします。|
@@ -128,8 +129,8 @@ ms.locfileid: "79422788"
 |[/Zf](zf.md)|並列ビルドでの PDB 生成時間を改善します。|
 |[/ZH](zh.md)|デバッグ情報のチェックサムに MD5、SHA-1、または SHA-256 を指定します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。 (x86 のみ)|
-|[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
-|[/Zl](zl-omit-default-library-name.md)|*`.obj`* ファイルから既定のライブラリ名を削除します。|
+|[/ZI](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
+|[/Zl](zl-omit-default-library-name.md)|ファイルから既定のライブラリ名を削除し *`.obj`* ます。|
 |[/Zp](zp-struct-member-alignment.md) *n*|構造体メンバーをパックします。|
 |[/Zs](zs-syntax-check-only.md)|構文だけをチェックします。|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
@@ -156,15 +157,15 @@ ms.locfileid: "79422788"
 |[@](at-specify-a-compiler-response-file.md)|応答ファイルを指定します。|
 |[/analyze](analyze-code-analysis.md)|コード分析を有効にします。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|.obj ファイル内のアドレス指定可能なセクションの数を増やします。|
-|[/c](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
+|[スイッチ](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|最適化およびコード生成に使用する*cl.exe*スレッド数を指定します。|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)| 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|診断テキストで*cl.exe*に渡されるソースコードファイルの完全パスを表示します。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|は、Mspdbsrv によってシリアル化される PDB ファイルへの書き込みを強制*します。EXE*。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨になりました。 外部名 (パブリック名) の長さを制限します。|
-|[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
+|[使い方](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
 |[/J](j-default-char-type-is-unsigned.md)|既定の `char` 型を変更します。|
-|[/JMC](jmc.md)|ネイティブC++マイコードのみデバッグをサポートします。|
+|[/JMC](jmc.md)|ネイティブ C++ マイコードのみデバッグをサポートします。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|コンパイラとリンカーは、Windows カーネルで実行可能なバイナリを作成します。|
 |[/MP](mp-build-with-multiple-processes.md)|複数のソース ファイルを同時にビルドします。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|著作権情報を表示しません。|
@@ -173,7 +174,7 @@ ms.locfileid: "79422788"
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|C ソース ファイルを指定します。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソースファイルが C であることを指定します。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|C++ ソース ファイルを指定します。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソースファイルがC++であることを指定します。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソースファイルが C++ であることを指定します。|
 |[/V](v-version-number.md)|非推奨になりました。 バージョン文字列を設定します。|
 |[/w](compiler-option-warning-level.md)|すべての警告を無効にします。|
 |[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|出力警告レベルを設定します。|
@@ -198,16 +199,16 @@ ms.locfileid: "79422788"
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字に対してのみ UTF-8 ファイルを検証します。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|診断メッセージの形式を制御します。|
 |[/permissive-](permissive-standards-conformance.md)|標準準拠モードを設定します。|
-|[/std](std-specify-language-standard-version.md)|C++標準バージョン互換性セレクター。|
+|[/std](std-specify-language-standard-version.md)|C++ 標準バージョン互換性セレクター。|
 
 ## <a name="experimental-options"></a>試験的なオプション
 
-試験的なオプションは、コンパイラの特定のバージョンでのみサポートされます。 また、コンパイラのバージョンによって動作が異なる場合もあります。 多くの場合、 [ C++ Microsoft チームのブログ](https://devblogs.microsoft.com/cppblog/)には、実験的なオプションについてのドキュメントが最適であるか、唯一のものです。
+試験的なオプションは、コンパイラの特定のバージョンでのみサポートされます。 また、コンパイラのバージョンによって動作が異なる場合もあります。 多くの場合、 [Microsoft C++ チームのブログ](https://devblogs.microsoft.com/cppblog/)には、試験的なオプションに関する最良のドキュメント、または唯一のドキュメントが含まれています。
 
 |オプション|目的|
 |------------|-------------|
-|[/実験的: モジュール](experimental-module.md)|実験的なモジュールのサポートを有効にします。|
-|[/実験的: プリプロセッサ](experimental-preprocessor.md)|試験的に準拠するプリプロセッサのサポートを有効にします。|
+|[/experimental:module](experimental-module.md)|実験的なモジュールのサポートを有効にします。|
+|[/experimental:preprocessor](experimental-preprocessor.md)|試験的に準拠するプリプロセッサのサポートを有効にします。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>非推奨のコンパイラオプションと削除されたコンパイラオプション
 
@@ -223,15 +224,15 @@ ms.locfileid: "79422788"
 |[/H](h-restrict-length-of-external-names.md)|非推奨になりました。 外部名 (パブリック名) の長さを制限します。|
 |[/Og](og-global-optimizations.md)|非推奨になりました。 グローバル最適化を使用します。|
 |[/QIfist](qifist-suppress-ftol.md)|非推奨になりました。 浮動小数点型から整数型に変換する方法を指定するために使われていました。|
-|[/V](v-version-number.md)|非推奨になりました。 *`.obj`* ファイルのバージョン文字列を設定します。|
+|[/V](v-version-number.md)|非推奨になりました。 *`.obj`* ファイルバージョン文字列を設定します。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|互換性のために残されています。 64 ビット移植性の問題を検出します。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|非推奨になりました。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりに [/Zi](z7-zi-zi-debug-information-format.md) を使用してください。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|非推奨になりました。 for ループ スコープの準拠を無効にします。|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨になりました。 言語拡張機能を有効にします。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015 で削除されました。 関数プロトタイプを生成します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C/C++ビルド参照](c-cpp-building-reference.md)\
+[C/c + + ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC コンパイラオプション](compiler-options.md)\
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

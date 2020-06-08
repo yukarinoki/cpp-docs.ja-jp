@@ -1,11 +1,12 @@
 ---
 title: sin、sinf、sinl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sinl
 - sinf
 - sin
 - _o_sin
+- _o_sinf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507015"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -71,7 +72,7 @@ long double sin(long double x);  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|None|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |± ∞ (sin、sinf、sinl)|INVALID|_DOMAIN|
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
@@ -84,7 +85,7 @@ C++ ではオーバーロードが可能であるため、 **float**または**l
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinf**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -120,7 +121,7 @@ cos( 1.570796 ) = 0.000000
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>
 [atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

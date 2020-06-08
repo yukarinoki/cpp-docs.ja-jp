@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759239"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507054"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -139,6 +139,9 @@ Line one
 |**wprintf**、 **_wprintf_l**|\<stdio.h> または \<wchar.h>|
 
 コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+
+> [!IMPORTANT]
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、1.5 と2.5 の両方が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって行われる丸め処理は、 [fesetround](fegetround-fesetround2.md)によって設定される浮動小数点丸めモードにも反映されるようになりました。 以前は、丸め処理は常に FE_TONEAREST の動作を選択していました。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [legacy_stdio_float_rounding .obj](../link-options.md)にリンクします。
 
 ## <a name="example"></a>例
 
