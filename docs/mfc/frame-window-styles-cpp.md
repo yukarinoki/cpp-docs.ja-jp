@@ -9,29 +9,29 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: cade8e7e50779437feb73a94058dc62118c03c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c22944537370a44aee1af1cf71281264ed4969b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626454"
 ---
 # <a name="frame-window-styles-c"></a>フレーム ウィンドウ スタイル (C++)
 
-フレームワークのフレーム ウィンドウは、ほとんどのプログラムに適していますが、高度な関数を使用してさらに高い柔軟性を得ることができます、 [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)と MFC のグローバル関数[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` メンバー関数は、`CWnd`します。
+フレームワークを使用して取得したフレームウィンドウは、ほとんどのプログラムに適していますが、高度な関数[PreCreateWindow](reference/cwnd-class.md#precreatewindow)と MFC グローバル関数[AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass)を使用すると、さらに柔軟性が得られます。 `PreCreateWindow`はのメンバー関数です `CWnd` 。
 
-適用する場合、 **WS_HSCROLL**と**WS_VSCROLL**メイン フレーム ウィンドウ スタイル、代わりに適用されるため、 **MDICLIENT**ウィンドウをスクロールすると、ように**MDICLIENT**領域。
+**WS_HSCROLL**と**WS_VSCROLL**のスタイルをメインフレームウィンドウに適用した場合、ユーザーは**MDICLIENT**ウィンドウに適用されるので、ユーザーは**MDICLIENT**領域をスクロールできます。
 
-場合、ウィンドウの**FWS_ADDTOTITLE**スタイル ビットが設定されます (これには、既定では)、ビューのドキュメント、ビューの名前に基づいて、ウィンドウのタイトル バーに表示するタイトルをフレーム ウィンドウに指示します。
+ウィンドウの**FWS_ADDTOTITLE**スタイルビットが設定されている場合 (既定では)、ビューのドキュメント名に基づいて、ウィンドウのタイトルバーに表示するタイトルがフレームウィンドウに示されます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [MDI 子ウィンドウ (クイック ウォッチ) の管理](../mfc/managing-mdi-child-windows.md)MDI 子ウィンドウを含む MDI フレーム ウィンドウ
+- Mdi 子ウィンドウの管理 (mdi 子ウィンドウを含む mdi フレーム内のウィンドウ[) (MDICLIENT)](managing-mdi-child-windows.md)
 
-- [MFC で作成したウィンドウのスタイルを変更します。](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [MFC で作成したウィンドウのスタイル変更](changing-the-styles-of-a-window-created-by-mfc.md)
 
-- [ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#window-styles)
+- [ウィンドウスタイル](reference/styles-used-by-mfc.md#window-styles)
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウ](../mfc/frame-windows.md)
+[フレーム ウィンドウ](frame-windows.md)

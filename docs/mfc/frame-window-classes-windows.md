@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0a1e1e93433e0fbe07c11eb350216173e74d84
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625852"
 ---
 # <a name="frame-window-classes-windows"></a>フレーム ウィンドウ クラス (Windows)
 
-フレーム ウィンドウでは、ウィンドウ フレームのアプリケーションまたはアプリケーションの一部です。 通常、フレーム ウィンドウには、ビュー、ツール バー、およびステータス バーなどの他のウィンドウが含まれます。 場合に`CMDIFrameWnd`を含めることは`CMDIChildWnd`オブジェクトを直接します。
+フレームウィンドウとは、アプリケーションまたはアプリケーションの一部をフレームにするウィンドウのことです。 通常、フレームウィンドウには、ビュー、ツールバー、ステータスバーなど、他のウィンドウが含まれています。 の場合 `CMDIFrameWnd` 、オブジェクトに間接的にオブジェクトが含まれている可能性があり `CMDIChildWnd` ます。
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-SDI アプリケーションのメイン フレーム ウィンドウの基本クラス。 またの基本クラスの他のすべてのフレーム ウィンドウ クラス。
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+SDI アプリケーションのメインフレームウィンドウの基本クラス。 他のすべてのフレームウィンドウクラスの基本クラスでもあります。
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
-MDI アプリケーションのメイン フレーム ウィンドウの基本クラス。
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
+MDI アプリケーションのメインフレームウィンドウの基本クラス。
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-MDI アプリケーションのドキュメント フレーム ウィンドウの基本クラスです。
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
+MDI アプリケーションのドキュメントフレームウィンドウの基本クラス。
 
-[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
-一般的にフローティング ツールバーの周りの半分の高さのフレーム ウィンドウ。
+[CMiniFrameWnd](reference/cminiframewnd-class.md)<br/>
+通常、フローティングツールバーの周りに表示されるハーフハイトフレームウィンドウです。
 
-[クラスからではなく、](../mfc/reference/coleipframewnd-class.md)<br/>
-インプレース サーバー ドキュメントを編集するときに、フレーム ウィンドウ ビューを提供します。
+[クラスからではなく、](reference/coleipframewnd-class.md)<br/>
+サーバードキュメントをその場で編集しているときに、ビューのフレームウィンドウを提供します。
 
 ## <a name="related-class"></a>関連クラス
 
-クラス`CMenu`アプリケーションのメニューにアクセスするためのインターフェイスを提供します。 実行時に動的メニューを操作するのに役立ちますたとえば、追加またはコンテキストに応じてメニュー項目を削除する場合です。 メニューは、フレーム ウィンドウで最もよく使用される、ダイアログ ボックスおよびその他の子ウィンドウ以外のウィンドウで、使用できます。
+クラスに `CMenu` は、アプリケーションのメニューにアクセスするためのインターフェイスが用意されています。 実行時にメニューを動的に操作する場合に便利です。たとえば、コンテキストに従ってメニュー項目を追加または削除する場合などです。 多くの場合、メニューはフレームウィンドウで使用されますが、ダイアログボックスや他の非子ウィンドウで使用することもできます。
 
-[CMenu](../mfc/reference/cmenu-class.md)<br/>
-カプセル化、`HMENU`アプリケーションのメニュー バーやポップアップ メニューへのハンドル。
+[CMenu](reference/cmenu-class.md)<br/>
+`HMENU`アプリケーションのメニューバーとポップアップメニューへのハンドルをカプセル化します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

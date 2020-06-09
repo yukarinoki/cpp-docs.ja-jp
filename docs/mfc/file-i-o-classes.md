@@ -1,5 +1,5 @@
 ---
-title: ファイル I/o クラス
+title: ファイル i/o クラス
 ms.date: 11/04/2016
 f1_keywords:
 - vc.classes.file
@@ -15,54 +15,54 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: 914325ec56f0cae30c7293305496d65f358f2731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fcf4dfc1388df0df2bc25928ec8541486c6bb2d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405808"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615668"
 ---
 # <a name="file-io-classes"></a>ファイル I/O クラス
 
-これらのクラスは、従来のディスク ファイル、メモリ内のファイル、Active ストリーム、および Windows ソケットへのインターフェイスを提供します。 すべてのクラスから派生した`CFile`で使用できる、`CArchive`オブジェクトをシリアル化を実行します。
+これらのクラスは、従来のディスクファイル、メモリ内ファイル、アクティブなストリーム、および Windows ソケットに対するインターフェイスを提供します。 から派生したすべてのクラスを `CFile` オブジェクトと共に使用して、 `CArchive` シリアル化を実行できます。
 
-次のクラスを使用して、特に`CArchive`と`CFile`入力/出力の処理を記述する場合は、します。 通常これらのクラスから派生する必要はありません。 アプリケーション フレームワークの既定の実装を使用する場合、**オープン**と**保存**コマンドを**ファイル**メニューは、ファイル I/O を処理する (クラスを使用して`CArchive`)、ドキュメントをオーバーライドする場合に限り、`Serialize`関数を指定するがドキュメントの内容をシリアル化する方法に関する詳細情報します。 ファイルのクラスとシリアル化する方法の詳細については、記事を参照してください。 [MFC のファイル](../mfc/files-in-mfc.md)」および「[シリアル化](../mfc/serialization-in-mfc.md)します。
+`CArchive` `CFile` 独自の入出力処理を作成する場合は、特に、次のクラスを使用します。 通常、これらのクラスから派生する必要はありません。 アプリケーションフレームワークを使用する場合、ドキュメントの関数をオーバーライドしてドキュメントの内容を**File**シリアル化する方法の**Open** **Save** `CArchive` `Serialize` 詳細を指定する限り、[ファイル] メニューの [開く] および [保存] コマンドの既定の実装では、(クラスを使用して) ファイル i/o が処理されます。 ファイルクラスとシリアル化の詳細については、「 [MFC のファイル](files-in-mfc.md)と[シリアル化](serialization-in-mfc.md)」を参照してください。
 
-[CFile](../mfc/reference/cfile-class.md)<br/>
-ディスクのバイナリ ファイルにファイルのインターフェイスを提供します。
+[CFile](reference/cfile-class.md)<br/>
+バイナリディスクファイルへのファイルインターフェイスを提供します。
 
-[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
-提供、`CFile`テキスト モードでは、通常のバッファー済みストリーム ディスク ファイルへのインターフェイス。
+[CStdioFile](reference/cstdiofile-class.md)<br/>
+`CFile`通常はテキストモードでバッファリングされたストリームディスクファイルへのインターフェイスを提供します。
 
-[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
-提供、`CFile`メモリ内のファイルへのインターフェイス。
+[CMemFile](reference/cmemfile-class.md)<br/>
+`CFile`インメモリファイルへのインターフェイスを提供します。
 
-[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
-提供、`CFile`共有メモリ内のファイルへのインターフェイス。
+[CSharedFile](reference/csharedfile-class.md)<br/>
+`CFile`共有メモリ内ファイルへのインターフェイスを提供します。
 
-[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
-COM を使用して`IStream`インターフェイスを提供する`CFile`複合ファイルにアクセスします。
+[COleStreamFile](reference/colestreamfile-class.md)<br/>
+は、COM インターフェイスを使用して、 `IStream` `CFile` 複合ファイルにアクセスできるようにします。
 
-[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
-提供、 `CFile` Windows ソケット インターフェイス。
+[CSocketFile](reference/csocketfile-class.md)<br/>
+`CFile`Windows ソケットへのインターフェイスを提供します。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
-[CArchive](../mfc/reference/carchive-class.md)<br/>
-使用と連携して、`CFile`永続的ストレージにシリアル化を通じてオブジェクトを実装するオブジェクト (を参照してください[cobject::serialize](../mfc/reference/cobject-class.md#serialize))。
+[CArchive](reference/carchive-class.md)<br/>
+Cooperates オブジェクトを使用して、 `CFile` シリアル化によってオブジェクトの永続的なストレージを実装します ( [CObject:: Serialize](reference/cobject-class.md#serialize)を参照)。
 
-[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+[CArchiveException](reference/carchiveexception-class.md)<br/>
 アーカイブの例外。
 
-[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+[CFileException](reference/cfileexception-class.md)<br/>
 ファイル指向の例外。
 
-[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
-開くか、ファイルを保存するのには、標準のダイアログ ボックスを提供します。
+[CFileDialog](reference/cfiledialog-class.md)<br/>
+ファイルを開く、または保存するための標準のダイアログボックスを提供します。
 
-[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+[CRecentFileList](reference/crecentfilelist-class.md)<br/>
 最近使用した (MRU) ファイルの一覧を保持します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

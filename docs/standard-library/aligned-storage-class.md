@@ -7,14 +7,14 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623828"
 ---
-# <a name="alignedstorage-class"></a>aligned_storage クラス
+# <a name="aligned_storage-class"></a>aligned_storage クラス
 
 適切にアライメントされた型を作成します。
 
@@ -38,7 +38,7 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ## <a name="remarks"></a>Remarks
 
-テンプレートメンバー typedef `type`は、アラインメントの*Align*と size *Len*を持つ POD 型のシノニムです。 *Align*は、何らか`alignment_of<T>::value`の型`T`、または既定のアラインメントと同じである必要があります。
+テンプレートメンバー typedef `type` は、アラインメントの*Align*と size *Len*を持つ POD 型のシノニムです。 *Align*は `alignment_of<T>::value` 、何らかの型 `T` 、または既定のアラインメントと同じである必要があります。
 
 ## <a name="example"></a>例
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of クラス](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[alignment_of クラス](alignment-of-class.md)

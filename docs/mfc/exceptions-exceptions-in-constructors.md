@@ -1,26 +1,26 @@
 ---
-title: 例外:コンス トラクターで例外
+title: '例外処理 : コンストラクターの例外処理'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [MFC], exceptions
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4089f4d44f03c7de3432f137b5d28f74189e1cb9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624610"
 ---
-# <a name="exceptions-exceptions-in-constructors"></a>例外:コンス トラクターで例外
+# <a name="exceptions-exceptions-in-constructors"></a>例外処理 : コンストラクターの例外処理
 
-コンス トラクターで例外をスローするときにで説明したように、例外をスローする前に行われたが任意のオブジェクトとメモリの割り当てをクリーンアップ[例外。独自の関数から例外をスロー](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)します。
+コンストラクターで例外をスローする場合は、「[例外: 独自の関数からの例外のスロー](exceptions-throwing-exceptions-from-your-own-functions.md)」で説明されているように、例外をスローする前に作成したオブジェクトとメモリ割り当てをすべてクリーンアップします。
 
-コンス トラクターで例外をスローするときに、コンス トラクターが呼び出された時点で、オブジェクト自体のメモリが既に割り当てられました。 そのため、コンパイラは自動的に例外がスローされた後に、オブジェクトによって占有されているメモリを解放します。
+コンストラクターで例外をスローする場合、オブジェクト自体のメモリは、コンストラクターが呼び出されたときに既に割り当てられています。 そのため、コンパイラは、例外がスローされた後、オブジェクトによって占有されているメモリの割り当てを自動的に解除します。
 
-詳細については、次を参照してください。[例外。例外オブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)します。
+詳細については、「[例外: 例外でのオブジェクトの解放](exceptions-freeing-objects-in-exceptions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[例外処理](../mfc/exception-handling-in-mfc.md)
+[例外処理](exception-handling-in-mfc.md)

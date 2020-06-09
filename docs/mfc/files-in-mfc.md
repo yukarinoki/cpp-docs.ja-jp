@@ -14,53 +14,53 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 3a99c4143bbd27ba765b0289b80be8870a940f63
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8859e188e42f4419ca7ee7f683cc31de0c75b3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365310"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625876"
 ---
 # <a name="files-in-mfc"></a>MFC のファイル
 
-MFC クラス[CFile](../mfc/reference/cfile-class.md)クラスは、通常のファイル I/O 操作を処理します。 この記事ファミリでは、ファイルを開いたり閉じたり、それらのファイルに対してデータを読み書きする方法について説明します。 また、ファイルステータスの操作についても説明します。 MFC のオブジェクト ベースのシリアル化機能を、ファイル内のデータの読み取りと書き込みの代替手段として使用する方法については、「[シリアル化](../mfc/serialization-in-mfc.md)」を参照してください。
+Microsoft Foundation Class ライブラリ (MFC) では、クラス[CFile](reference/cfile-class.md)は通常のファイル i/o 操作を処理します。 この記事の記事では、ファイルを開いたり閉じたりする方法について説明し、これらのファイルに対するデータの読み取りと書き込みを行う方法について説明します。 また、ファイルの状態の操作についても説明します。 ファイル内のデータの読み取りと書き込みを行う別の方法として、MFC のオブジェクトベースのシリアル化機能を使用する方法の詳細については、「[シリアル化](serialization-in-mfc.md)」を参照してください。
 
 > [!NOTE]
-> MFC`CDocument`オブジェクトを使用すると、フレームワークはシリアル化の多くを実行します。 特に、フレームワークはオブジェクトを`CFile`作成して使用します。 クラス`Serialize``CDocument`のメンバー関数のオーバーライドでコードを記述するだけで済みます。
+> MFC オブジェクトを使用すると、フレームワークによって `CDocument` 多くのシリアル化が機能します。 特に、フレームワークによってオブジェクトが作成され、使用され `CFile` ます。 クラスのメンバー関数のオーバーライドでコードを記述するだけで済み `Serialize` `CDocument` ます。
 
-この`CFile`クラスは、汎用のバイナリ ファイル操作用のインターフェイスを提供します。 から`CStdioFile`派生`CMemFile`したクラスと`CFile`派生`CMemFile`元`CSharedFile`のクラスは、より専門的なファイル サービスを提供します。
+クラスは、 `CFile` 汎用のバイナリファイル操作のためのインターフェイスを提供します。 から派生したクラスと、から派生したクラスは、 `CStdioFile` `CMemFile` `CFile` `CSharedFile` `CMemFile` より専門的なファイルサービスを提供します。
 
-MFC ファイル処理の代替方法の詳細については、『ランタイム ライブラリ リファレンス』の[「ファイル処理](../c-runtime-library/file-handling.md)」を*参照してください*。
+MFC ファイル処理の代替方法の詳細については、「*ランタイムライブラリリファレンス*」の「[ファイル処理](../c-runtime-library/file-handling.md)」を参照してください。
 
-派生`CFile`クラスの詳細については[、MFC 階層グラフ](../mfc/hierarchy-chart.md)を参照してください。
+派生クラスの詳細については、 `CFile` 「 [MFC 階層図](hierarchy-chart.md)」を参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか
 
-*Cファイルを使用する*
+*CFile を使用する*
 
-- [CFile でファイルを開く](../mfc/opening-files.md)
+- [CFile でファイルを開きます。](opening-files.md)
 
-- [CFile を使用してファイルを読み書きする](../mfc/reading-and-writing-files.md)
+- [CFile を使用したファイルの読み取りと書き込み](reading-and-writing-files.md)
 
-- [CFile を使用してファイルを閉じる](../mfc/closing-files.md)
+- [CFile でファイルを閉じます](closing-files.md)
 
-- [CFile を使用してファイルのステータスにアクセスする](../mfc/accessing-file-status.md)
+- [CFile でファイルの状態にアクセスする](accessing-file-status.md)
 
-*MFC シリアル化 (オブジェクトの永続性) を使用する*
+*MFC シリアル化の使用 (オブジェクトの永続化)*
 
-- [シリアル化可能なクラスを作成する](../mfc/serialization-making-a-serializable-class.md)
+- [Serializable クラスを作成する](serialization-making-a-serializable-class.md)
 
-- [CArchive オブジェクトを使用してオブジェクトをシリアル化する](../mfc/serialization-serializing-an-object.md)
+- [CArchive オブジェクトを介してオブジェクトをシリアル化する](serialization-serializing-an-object.md)
 
-- [CArchive オブジェクトを作成する](../mfc/two-ways-to-create-a-carchive-object.md)
+- [CArchive オブジェクトを作成する](two-ways-to-create-a-carchive-object.md)
 
-- [CArchive <\<と >> 演算子を使用する](../mfc/using-the-carchive-output-and-input-operators.md)
+- [CArchive <> 演算子を使用する \< and >](using-the-carchive-output-and-input-operators.md)
 
-- [アーカイブを使用して CObject および CObject 派生オブジェクトを保存およびロードする](../mfc/storing-and-loading-cobjects-via-an-archive.md)
+- [アーカイブを使用して通じた cobject および CObject から派生したオブジェクトを格納して読み込む](storing-and-loading-cobjects-via-an-archive.md)
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../mfc/mfc-concepts.md)<br/>
-[MFC の一般的なトピック](../mfc/general-mfc-topics.md)<br/>
-[CArchive クラス](../mfc/reference/carchive-class.md)<br/>
-[Cオブジェクトクラス](../mfc/reference/cobject-class.md)
+[概念](mfc-concepts.md)<br/>
+[MFC の一般的なトピック](general-mfc-topics.md)<br/>
+[CArchive クラス](reference/carchive-class.md)<br/>
+[CObject クラス](reference/cobject-class.md)
