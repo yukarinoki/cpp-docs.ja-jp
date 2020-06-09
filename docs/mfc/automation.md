@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616521"
 ---
 # <a name="automation"></a>オートメーション
 
 オートメーション (以前の OLE オートメーション) を使うと、アプリケーションから、他のアプリケーションに実装されているオブジェクトを操作したり、他のアプリケーションから操作できるように自分のオブジェクトを公開したりできます。
 
-[オートメーション サーバー](../mfc/automation-servers.md) は、COM インターフェイスを通して他のアプリケーション ( [オートメーション クライアント](../mfc/automation-clients.md)) に機能を公開するアプリケーション (一種の COM サーバー) です。 オートメーション クライアントは、この公開を通してオブジェクトに直接アクセスし、オブジェクトが提供するサービスを使用することで、特定の機能を自動化できます。
+[オートメーション サーバー](automation-servers.md) は、COM インターフェイスを通して他のアプリケーション ( [オートメーション クライアント](automation-clients.md)) に機能を公開するアプリケーション (一種の COM サーバー) です。 オートメーション クライアントは、この公開を通してオブジェクトに直接アクセスし、オブジェクトが提供するサービスを使用することで、特定の機能を自動化できます。
 
 オートメーション サーバーとオートメーション クライアントは、COM インターフェイスを使用します。COM インターフェイスは、常に `IDispatch` から派生し、オートメーション型と呼ばれる一連のデータ型を受け取ったり返したりします。 他のアプリケーションからアクセス可能なメソッドやプロパティを提供し、オートメーション インターフェイスを公開するオブジェクトはすべて自動化できます。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。 オブジェクトの自動化は、ローカルでもリモートでも可能です。リモートとは、ネットワークでアクセス可能な別のコンピューターにあるという意味です。つまり、オートメーションには次の 2 つのカテゴリがあります。
 
@@ -49,9 +49,9 @@ Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケー�
 
 ## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> オートメーションにおけるパラメーターの受け渡し
 
-オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに **、HRESULT** (OLE エラー コード)、CURRENCY (固定小数点数値型)、**および DATE** (絶対日付と時刻) 型、およびポインターと`IUnknown``IDispatch`インターフェイスもサポートしています。 **CURRENCY**
+オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに、 **HRESULT** (OLE エラーコード)、**通貨**(固定小数点数値型)、 **date** (絶対日付と時刻) 型、およびインターフェイスへのポインターもサポートしてい `IUnknown` `IDispatch` ます。
 
-**VARIANT** 型は、 [COleVariant](../mfc/reference/colevariant-class.md) クラスにカプセル化されています。 サポートしている **CURRENCY** クラスと **DATE** クラスは、 [COleCurrency](../mfc/reference/colecurrency-class.md) クラスと [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) クラスにカプセル化されています。
+**VARIANT** 型は、 [COleVariant](reference/colevariant-class.md) クラスにカプセル化されています。 サポートしている **CURRENCY** クラスと **DATE** クラスは、 [COleCurrency](reference/colecurrency-class.md) クラスと [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) クラスにカプセル化されています。
 
 ## <a name="automation-samples"></a>オートメーションのサンプル
 
@@ -67,26 +67,26 @@ Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケー�
 
 - [MFCCALC](../overview/visual-cpp-samples.md) オートメーション クライアント アプリケーションの例を示します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [オートメーション クライアント](../mfc/automation-clients.md)
+- [オートメーションクライアント](automation-clients.md)
 
-- [オートメーション サーバー](../mfc/automation-servers.md)
+- [オートメーション サーバー](automation-servers.md)
 
-- [OLE●ole○](../mfc/ole-in-mfc.md)
+- [OLE●ole○](ole-in-mfc.md)
 
-- [Active テクノロジ](../mfc/mfc-com.md)
+- [Active テクノロジ](mfc-com.md)
 
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか
 
-- [オートメーション クラスを追加する](../mfc/automation-servers.md)
+- [オートメーション クラスを追加する](automation-servers.md)
 
-- [タイプ ライブラリを使用する](../mfc/automation-clients-using-type-libraries.md)
+- [タイプ ライブラリを使用する](automation-clients-using-type-libraries.md)
 
-- [オートメーション サーバーにアクセスする](../mfc/automation-servers.md)
+- [オートメーション サーバーにアクセスする](automation-servers.md)
 
-- [C++ でオートメーション クライアントを記述する](../mfc/automation-clients.md)
+- [C++ でオートメーション クライアントを記述する](automation-clients.md)
 
 ## <a name="see-also"></a>関連項目
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

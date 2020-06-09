@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-ms.openlocfilehash: 5abdcc87dba937938ffa3643d19ff69431f62af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54e43c8445bb6b8db4c6a7a4b28890e81be52d6c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206945"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616953"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>標準コントロールからのコントロールの派生
 
-同じよう[CWnd](../mfc/reference/cwnd-class.md)の派生クラスでは、既存のコントロール クラスから新しいクラスを派生することによって、コントロールの動作を変更できます。
+[CWnd](reference/cwnd-class.md)の派生クラスと同様に、既存のコントロールクラスから新しいクラスを派生させることによって、コントロールの動作を変更できます。
 
-### <a name="to-create-a-derived-control-class"></a>派生コントロール クラスを作成するには
+### <a name="to-create-a-derived-control-class"></a>派生コントロールクラスを作成するには
 
-1. 既存のコントロール クラスからクラスを派生し、必要に応じてオーバーライドして、`Create`のメンバー関数の基底クラスに必要な引数を提供するように`Create`関数。
+1. 既存のコントロールクラスからクラスを派生させ、必要に応じて、 `Create` 基底クラスの関数に必要な引数を提供するようにメンバー関数をオーバーライドし `Create` ます。
 
-1. メッセージ ハンドラー メンバー関数とでは、特定の Windows メッセージに応答して、コントロールの動作を変更するメッセージ マップ エントリを提供します。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
+1. 特定の Windows メッセージに応答してコントロールの動作を変更するために、メッセージハンドラーのメンバー関数とメッセージマップエントリを提供します。 「[関数へのメッセージのマッピング」を](reference/mapping-messages-to-functions.md)参照してください。
 
-1. (省略可能) のコントロールの機能を拡張する新しいメンバー関数を提供します。
+1. 新しいメンバー関数を指定して、コントロールの機能を拡張します (省略可能)。
 
-派生コントロール ダイアログ ボックスを使用して、余分な作業が必要です。 型と、ダイアログ ボックスで、コントロールの位置は通常、ダイアログ テンプレート リソースで指定します。 派生コントロール クラスを作成する場合は、することはできませんで指定するダイアログ テンプレート リソース コンパイラに伝わり、派生クラスについて何もあるため。
+ダイアログボックスで派生コントロールを使用するには、追加の作業が必要です。 ダイアログボックス内のコントロールの種類と位置は、通常、ダイアログテンプレートリソースで指定されます。 派生したコントロールクラスを作成する場合、ダイアログテンプレートでは指定できません。これは、リソースコンパイラが派生クラスについて何も認識しないためです。
 
-#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>ダイアログ ボックスで、派生コントロールを配置するには
+#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>派生したコントロールをダイアログボックスに配置するには
 
-1. ダイアログの派生クラスの宣言では、派生コントロール クラスのオブジェクトを埋め込みます。
+1. 派生したダイアログクラスの宣言に、派生したコントロールクラスのオブジェクトを埋め込みます。
 
-1. 上書き、`OnInitDialog`メンバー関数を呼び出すダイアログ クラスで、`SubclassDlgItem`派生コントロールのメンバー関数。
+1. `OnInitDialog`ダイアログクラスのメンバー関数をオーバーライドして、 `SubclassDlgItem` 派生したコントロールのメンバー関数を呼び出します。
 
-`SubclassDlgItem` 「動的なサブクラス」コントロールは、ダイアログ テンプレートから作成されます。 コントロールが動的にサブクラス化されたときに、独自のアプリケーション内でいくつかのメッセージを処理、残りのメッセージを Windows に渡す Windows にフックします。 詳細については、次を参照してください。、 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)クラスのメンバー関数`CWnd`で、 *MFC リファレンス*します。 次の例は、のオーバーライドを作成する方法を示しています`OnInitDialog`を呼び出す`SubclassDlgItem`:。
+`SubclassDlgItem`ダイアログテンプレートから作成されたコントロールを "動的にサブクラス化" します。 コントロールを動的にサブクラス化する場合は、Windows にフックし、独自のアプリケーション内の一部のメッセージを処理した後、残りのメッセージを Windows に渡します。 詳細については、 [SubclassDlgItem](reference/cwnd-class.md#subclassdlgitem) `CWnd` *MFC リファレンス*のクラスの SubclassDlgItem メンバー関数を参照してください。 次の例は、のオーバーライドを記述してを呼び出す方法を示してい `OnInitDialog` `SubclassDlgItem` ます。
 
-[!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#3](codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
 
-ダイアログ クラスの派生コントロールが埋め込まれているために、ダイアログ ボックスを構築するがダイアログ ボックスが破棄されるときに破棄される時に構築されます。 このコード例を比較[手動でコントロールを追加する](../mfc/adding-controls-by-hand.md)します。
+派生コントロールはダイアログクラスに埋め込まれているため、ダイアログボックスが構築されるときに作成され、ダイアログボックスが破棄されると破棄されます。 このコードを手動でコントロールを[追加](adding-controls-by-hand.md)する例と比較します。
 
 ## <a name="see-also"></a>関連項目
 
-[コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[コントロールの作成方法と使い方](making-and-using-controls.md)<br/>
+[制限](controls-mfc.md)

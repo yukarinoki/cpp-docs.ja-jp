@@ -6,24 +6,24 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-ms.openlocfilehash: 2ba935f52f24f62dded3b89df1563454cf7e0335
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26f31705068df009e906d50451efa9ea6572d7e6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625453"
 ---
 # <a name="methods-of-creating-tool-tips"></a>ツール ヒントの作成方法
 
-MFC には、3 つのクラスを作成および管理ツール ヒント コントロールが用意されています。[CWnd](../mfc/reference/cwnd-class.md)、 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)、 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)と[CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md)します。 これらのクラスで、ツール ヒントのメンバー関数は、Windows のコモン コントロール API をラップします。 クラス`CToolBarCtrl`とクラス`CToolTipCtrl`クラスから派生されて`CWnd`します。
+MFC には、ツールヒントコントロール ( [CWnd](reference/cwnd-class.md)、 [CToolBarCtrl](reference/ctoolbarctrl-class.md)、 [CToolTipCtrl](reference/ctooltipctrl-class.md) 、および[CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md)) を作成および管理するための3つのクラスが用意されています。 これらのクラスのツールヒントメンバー関数は、Windows コモンコントロール API をラップします。 クラス `CToolBarCtrl` とクラス `CToolTipCtrl` は、クラスから派生 `CWnd` します。
 
-`CWnd` 次の 4 つのメンバー関数を作成および管理ツール ヒントを提供します。[EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)、 [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips)、 [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage)、および[OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest)します。 ツール ヒントの実装方法の詳細についてはこれらの個々 のメンバー関数を参照してください。
+`CWnd`には、ヒントヒント、[キャンセル](reference/cwnd-class.md#canceltooltips)ツールヒント、 [FilterToolTipMessage](reference/cwnd-class.md#filtertooltipmessage)、および[OnToolHitTest](reference/cwnd-class.md#ontoolhittest)の 4[つのメンバー](reference/cwnd-class.md#enabletooltips)関数が用意されています。 ツールヒントの実装方法の詳細については、これらの個々のメンバー関数を参照してください。
 
-使用してツールバーを作成する場合`CToolBarCtrl`、次のメンバー関数を使用して直接、ツールバーのツール ヒントを実装することができます。[GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips)と[SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips)します。 これらの個々 のメンバー関数を参照してくださいと[ツール ヒントの通知の処理](../mfc/handling-tool-tip-notifications.md)ツール ヒントの実装方法の詳細についてはします。
+を使用してツールバーを作成した場合は `CToolBarCtrl` 、そのツールバーのツールヒントを、 [gettooltips](reference/ctoolbarctrl-class.md#gettooltips)および[settooltips](reference/ctoolbarctrl-class.md#settooltips)というメンバー関数を使用して直接実装できます。 ツールヒントの実装方法の詳細については、これらの個々のメンバー関数と[ツールヒントの通知の処理](handling-tool-tip-notifications.md)に関する説明を参照してください。
 
-`CToolTipCtrl`クラスには、Windows の一般的なツール ヒント コントロールの機能が用意されています。 1 つのツール ヒント コントロールは、1 つ以上のツールの情報を提供できます。 ツールは、子ウィンドウやコントロール、ウィンドウのクライアント領域内でアプリケーションで定義された四角形領域など、いずれかのウィンドウです。 [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md)クラスから派生`CToolTipCtrl`visual スタイルの追加と機能を提供します。
+クラスは、 `CToolTipCtrl` Windows コモンツールヒントコントロールの機能を提供します。 1つのツールヒントコントロールで、複数のツールに関する情報を提供できます。 ツールは、子ウィンドウやコントロールなどのウィンドウ、またはウィンドウのクライアント領域内のアプリケーション定義の四角形領域のいずれかです。 [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md)クラスはから派生 `CToolTipCtrl` し、追加の視覚スタイルと機能を提供します。
 
 ## <a name="see-also"></a>関連項目
 
-[CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CToolTipCtrl の使い方](using-ctooltipctrl.md)<br/>
+[制限](controls-mfc.md)

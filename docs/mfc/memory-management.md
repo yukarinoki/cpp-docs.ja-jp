@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626257"
 ---
 # <a name="memory-management"></a>メモリ管理
 
@@ -25,21 +25,21 @@ Windows 用プログラムのメモリ管理に関する MFC 以外の情報に�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [フレーム割り当て](../mfc/memory-management-frame-allocation.md)
+- [フレーム割り当て](memory-management-frame-allocation.md)
 
-- [ヒープ割り当て](../mfc/memory-management-heap-allocation.md)
+- [ヒープ割り当て](memory-management-heap-allocation.md)
 
-- [配列にメモリを割り当てる](../mfc/memory-management-examples.md)
+- [配列にメモリを割り当てる](memory-management-examples.md)
 
-- [ヒープからの配列のメモリの解放](../mfc/memory-management-examples.md)
+- [ヒープからの配列のメモリの解放](memory-management-examples.md)
 
-- [データ構造のメモリの割り当て](../mfc/memory-management-examples.md)
+- [データ構造のメモリの割り当て](memory-management-examples.md)
 
-- [オブジェクトのメモリの割り当て](../mfc/memory-management-examples.md)
+- [オブジェクトのメモリの割り当て](memory-management-examples.md)
 
-- [サイズ変更可能メモリブロック](../mfc/memory-management-resizable-memory-blocks.md)
+- [サイズ変更可能メモリブロック](memory-management-resizable-memory-blocks.md)
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../mfc/mfc-concepts.md)<br/>
-[MFC の一般的なトピック](../mfc/general-mfc-topics.md)
+[概念](mfc-concepts.md)<br/>
+[MFC の一般的なトピック](general-mfc-topics.md)

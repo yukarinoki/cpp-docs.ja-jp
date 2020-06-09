@@ -9,162 +9,161 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616475"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
-ActiveX コントロールは、更新されたバージョンの OLE コントロールの仕様です。
+ActiveX コントロールは、OLE コントロール仕様の更新されたバージョンです。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
-コントロールは、さまざまなインターネット上の COM 対応の Web ブラウザーなど、別のコンテナーで使用できるプログラミング可能なソフトウェア コンポーネントを開発するための基本的なアーキテクチャです。 ActiveX コントロールことができます、インターネット コントロールし、アクティブなドキュメントにその機能を追加したり Web ページの一部にします。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。
+コントロールは、インターネット上の COM 対応 Web ブラウザーを含むさまざまなコンテナーで使用できる、プログラミング可能なソフトウェアコンポーネントを開発するための主要なアーキテクチャです。 ActiveX コントロールは、インターネットコントロールにすることができます。また、アクティブなドキュメントに機能を追加したり、Web ページの一部にすることができます。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。
 
-ActiveX コントロールは、インターネットに限定されません。 コントロールがそのコンテナーに必要なインターフェイスをサポートしていれば、任意のコンテナーで ActiveX コントロールを使用こともできます。
+ActiveX コントロールは、インターネットに限定されていません。 ActiveX コントロールは、そのコンテナーで必要なインターフェイスをサポートしていれば、任意のコンテナーで使用することもできます。
 
-**ActiveX コントロールなど、いくつかの利点があります。**
+**ActiveX コントロールには、次のようないくつかの利点があります。**
 
-- インターフェイスは、以前の OLE コントロールよりも少ない必要です。
+- 以前の OLE コントロールよりも必要なインターフェイスが減ります。
 
-- ウィンドウなしで使用可能と常にで実行中です。
+- ウィンドウなしで、常にアクティブにする機能。
 
-**ActiveX コントロールをするためには、コントロールが必要です。**
+**ActiveX コントロールにするために、コントロールは次の操作を行う必要があります。**
 
-- サポート、`IUnknown`インターフェイス。
+- インターフェイスをサポート `IUnknown` します。
 
-- COM オブジェクトであります。
+- COM オブジェクトである。
 
-- エクスポート**DLLRegisterServer**と**DLLUnRegisterServer**します。
+- **DLLRegisterServer**と**DLLUnRegisterServer**をエクスポートします。
 
-- 機能の必要に応じて追加のインターフェイスをサポートします。
+- 機能に必要な追加のインターフェイスをサポートします。
 
-## <a name="making-your-existing-controls-internet-friendly"></a>既存のコントロールをインターネット対応にします。
+## <a name="making-your-existing-controls-internet-friendly"></a>既存のコントロールをインターネットで使いやすくする
 
-インターネット環境で適切に動作するコントロールをデザインすると、相対的に低い伝送速度のインターネット上の考慮事項が必要です。 既存のコントロールを使用することができます。ただし、コードのサイズを小さくし、コントロール プロパティを非同期的にダウンロードを実行する手順があります。
+インターネット環境で適切に機能するコントロールを設計するには、インターネット上で比較的低転送速度を考慮する必要があります。 既存のコントロールを使用できます。ただし、コードサイズを小さくし、コントロールプロパティを非同期にダウンロードするために実行する必要がある手順があります。
 
-コントロールのパフォーマンスを向上させるのには、次のヒントを参考に、効率性に関する考慮事項を実行します。
+コントロールのパフォーマンスを向上させるには、効率性に関する考慮事項に関する次のヒントに従ってください。
 
-- この記事で説明する手法を実装[ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
+- 「 [ActiveX コントロール: 最適化](mfc-activex-controls-optimization.md)」で説明されている手法を実装します。
 
-- コントロールがインスタンス化する方法を検討してください。
+- コントロールがインスタンス化される方法を検討します。
 
-- 非同期です。その他のプログラムを保持しません。
+- 非同期である。他のプログラムを保持しないでください。
 
-- 小さなブロック内のデータをダウンロードします。
+- 小さいブロックでデータをダウンロードします。
 
-   ビットマップ、ビデオ データなどの大きなストリームをダウンロードするときに、コンテナーとの連携で非同期的にコントロールのデータにアクセスします。 データも取得する他のコントロールと協調して、増分または連続的な方法でデータを取得します。 コードは、非同期的にもダウンロードできます。
+   ビットマップやビデオデータなどの大規模なストリームをダウンロードする場合は、コンテナーと連携して、コントロールのデータに非同期にアクセスします。 データを増分またはプログレッシブ方式で取得し、データを取得する可能性がある他のコントロールと協調して作業します。 コードを非同期的にダウンロードすることもできます。
 
-- コードとプロパティをバック グラウンドでダウンロードできます。
+- コードとプロパティをバックグラウンドでダウンロードします。
 
-- ユーザー インターフェイスになるできる限り迅速にアクティブです。
+- ユーザーインターフェイスをできるだけ早くアクティブにします。
 
-- 検討してください (ビットマップ画像やビデオ データ) などのプロパティと大規模なデータの両方が Blob 永続的なデータの格納方法。
+- 永続データの格納方法、プロパティと大きなデータ Blob (ビットマップイメージ、ビデオデータなど) を考慮してください。
 
-   大きなビットマップなど、AVI ファイルの永続的なデータの量が大幅にコントロールでは、ダウンロードの方法に注意が必要です。 ドキュメントまたはページはできるだけ早く表示になるし、コントロールがバック グラウンドでデータを取得中に、ページと対話するユーザーを許可します。
+   大きなビットマップや AVI ファイルなど、大量の永続データを持つコントロールでは、メソッドのダウンロードに注意する必要があります。 ドキュメントまたはページは、できるだけ早く表示される可能性があります。また、コントロールがバックグラウンドでデータを取得するときに、ユーザーがページと対話できるようになります。
 
-- コードのサイズを保持し、実行時間を短くするために、効率的なルーチンを記述します。
+- コードサイズと実行時間を維持するための効率的なルーチンを記述します。
 
-   永続的なデータは、わずか数バイトで、小規模のボタンとラベル コントロールは、ブラウザー内で、作業とインターネット環境で使用するために適しています。
+   わずか数バイトの永続データを持つ小さいボタンとラベルのコントロールは、インターネット環境での使用に適しており、ブラウザー内で適切に動作します。
 
-- コンテナーに進行状況の通知を検討してください。
+- 進行状況をコンテナーに伝達することを検討します。
 
-   など、ユーザーは、ページとの対話を開始できると、ダウンロードが完了すると、非同期のダウンロードの進行中のコンテナーに通知します。 コンテナーを表示できます進行状況 (% 完了) とユーザー。
+   ユーザーがページとの対話を開始できるタイミングやダウンロードが完了したときなど、非同期ダウンロードで進行状況をコンテナーに通知します。 コンテナーでは、ユーザーに進行状況 (パーセント完了など) を表示できます。
 
-- クライアント コンピューターのコントロールを登録する方法を検討してください。
+- クライアントコンピューターでのコントロールの登録方法を検討します。
 
-## <a name="creating-a-new-activex-control"></a>新しい ActiveX コントロールを作成します。
+## <a name="creating-a-new-activex-control"></a>新しい ActiveX コントロールの作成
 
-アプリケーション ウィザードを使用して、新しいコントロールを作成するときに非同期モニカーとその他の最適化を有効にすることもできます。 コントロールのプロパティを非同期的にダウンロードするサポートを追加するには、次の手順を実行します。
+アプリケーションウィザードを使用して新しいコントロールを作成する場合、非同期モニカーとその他の最適化のサポートを有効にすることもできます。 コントロールのプロパティを非同期的にダウンロードするためのサポートを追加するには、次の手順を実行します。
 
-#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザードを使用してプロジェクトを作成するには
+#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>MFC ActiveX コントロールウィザードを使用してプロジェクトを作成するには
 
-1. クリックして**新規**上、**ファイル**メニュー。
+1. [**ファイル**] メニューの [**新規作成**] をクリックします。
 
-1. 選択**MFC ActiveX コントロール ウィザード**Visual Studio からC++プロジェクトし、プロジェクトの名前します。
+1. Visual Studio C++ プロジェクトの [ **MFC ActiveX コントロールウィザード**] を選択し、プロジェクトの名前を指定します。
 
-1. **コントロール設定**] ページで、[**プロパティを非同期的に読み込みます**します。 このオプションを選択する準備完了状態プロパティおよび状態変更イベントを設定します。
+1. [**コントロールの設定**] ページで、[プロパティを**非同期に読み込む**] を選択します。 このオプションを選択すると、準備完了状態プロパティと準備完了状態変更イベントが設定されます。
 
-   など、その他の最適化を選択することもできます。**ウィンドウなしのアクティベーション**、に記載されている[ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
+   **ウィンドウなしのアクティブ化**など、他の最適化を選択することもできます。これについては、「 [ActiveX コントロール: 最適化](mfc-activex-controls-optimization.md)」を参照してください。
 
-1. 選択**完了**プロジェクトを作成します。
+1. **[完了]** を選択して、プロジェクトを作成します。
 
 #### <a name="to-create-a-class-derived-from-cdatapathproperty"></a>CDataPathProperty から派生したクラスを作成するには
 
-1. 派生したクラスを作成する`CDataPathProperty`します。
+1. から派生したクラスを作成 `CDataPathProperty` します。
 
-1. 各コントロールのヘッダー ファイルを含むソース ファイルでは、その前に、このクラスのヘッダー ファイルを追加します。
+1. 各ソースファイルには、コントロールのヘッダーファイルが含まれています。その前に、このクラスのヘッダーファイルを追加します。
 
-1. このクラスでオーバーライド`OnDataAvailable`します。 この関数は、データが表示されるたびに呼び出されます。 データが使用可能になるとは、任意の方法、たとえば段階的にレンダリングして処理できます。
+1. このクラスでは、をオーバーライド `OnDataAvailable` します。 この関数は、データを表示できるようにするたびに呼び出されます。 データが使用可能になると、選択した任意の方法で処理できます。たとえば、プログレッシブレンダリングを行うことができます。
 
-   次に示すコードでは、段階的にデータを表示するための編集コントロールでの単純な例を示します。 フラグの使用に注意してください**BSCF_FIRSTDATANOTIFICATION**エディット コントロールをオフにします。
+   次のコード抜粋は、エディットコントロールにデータをプログレッシブ表示する簡単な例です。 **BSCF_FIRSTDATANOTIFICATION**フラグを使用して、エディットコントロールをクリアします。
 
-   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-   AFXCMN を含める必要があることに注意してください。使用する H、`CListCtrl`クラス。
+   AFXCMN.H を含める必要があることに注意してください。H クラスを使用し `CListCtrl` ます。
 
-1. コントロールの全体的な状態が変化 (たとえば、読み込みに初期化されたまたはユーザーから対話型)、呼び出し`COleControl::InternalSetReadyState`します。 コードを追加するには、コントロールに 1 つのデータ パスのプロパティがある場合は、**知らせる**ダウンロードが完了したコンテナーに通知します。 例:
+1. コントロールの全体的な状態が変化した場合 (たとえば、読み込みから初期化済みまたはユーザー対話形式に変更した場合) は、を呼び出し `COleControl::InternalSetReadyState` ます。 コントロールにデータパスプロパティが1つしかない場合は、ダウンロードが完了したことをコンテナーに通知するコードを**BSCF_LASTDATANOTIFICATION**に追加できます。 次に例を示します。
 
-   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
-1. `OnProgress` をオーバーライドします。 `OnProgress`最大範囲を示す数値が渡される、および現在のダウンロードが完了するまでどの番号が表示されました。 これらの番号を使用すると、ユーザーに達成率などの状態を表示します。
+1. `OnProgress` をオーバーライドします。 では `OnProgress` 、最大範囲と現在のダウンロードにおける距離を示す数値が渡されます。 これらの数値を使用して、ユーザーに対する完了率などの状態を表示できます。
 
-次の手順では、した派生クラスを使用するコントロールにプロパティを追加します。
+次の手順では、プロパティをコントロールに追加して、派生したクラスを使用します。
 
 #### <a name="to-add-a-property"></a>プロパティを追加するには
 
-1. **クラス ビュー**ライブラリ ノードの下にインターフェイスを右クリックし、選択、**追加**、し**プロパティの追加**します。 これは、開始、**プロパティの追加ウィザード**します。
+1. **クラスビュー**で、[ライブラリ] ノードの下のインターフェイスを右クリックし、[**追加**]、[**プロパティの追加**] の順に選択します。 これにより、**プロパティの追加ウィザード**が開始されます。
 
-1. **プロパティの追加ウィザード**を選択、**の設定/取得方法**ラジオ ボタン、型、**プロパティ名**EditControlText、として選択BSTRなど、**プロパティ型**します。
+1. プロパティの**追加ウィザード**で、[**メソッドの設定/取得**] オプションボタンを選択し、**プロパティ名**(たとえば、Editcontroltext) を入力し、**プロパティの型**として [BSTR] を選択します。
 
 1. **[完了]** をクリックします。
 
-1. メンバー変数を宣言、 `CDataPathProperty`-ActiveX コントロール クラスにクラスを派生します。
+1. 派生クラスのメンバー変数を `CDataPathProperty` ActiveX コントロールクラスに宣言します。
 
-   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
-1. 
-  `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
+1. `Get/Set` メソッドを実装します。 の `Get` 場合は、文字列を返します。 の場合は `Set` 、プロパティを読み込んでを呼び出し `SetModifiedFlag` ます。
 
-   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
-1. [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)、次の行を追加します。
+1. [DoPropExchange](reference/colecontrol-class.md#dopropexchange)で、次の行を追加します。
 
-   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
-1. オーバーライド[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)この行を追加してコントロールをリセットするプロパティに通知します。
+1. [Resetdata](reference/cdatapathproperty-class.md#resetdata)をオーバーライドして、次の行を追加してコントロールをリセットするようにプロパティに通知します。
 
-   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
-## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>CDataPathProperty またはプロパティから派生するかどうかを決定します。
+## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>CDataPathProperty または CCachedDataPathProperty から派生するかどうかを決定する
 
-前の例は、コントロールのプロパティから派生する手順を説明します。`CDataPathProperty`します。 これは、頻繁に変更されると、すべてのデータが、現在の値のみを保持する必要のない、リアルタイムのデータをダウンロードしている場合に、適切な選択です。 例は、株価表示器コントロールです。
+前の例では、からコントロールのプロパティを派生させる手順について説明し `CDataPathProperty` ます。 これは、頻繁に変更されるリアルタイムデータをダウンロードする場合に、すべてのデータを保持する必要がなく、現在の値のみを保持する必要がある場合に適しています。 例として、株式ティッカーコントロールなどがあります。
 
-派生することもできます。`CCachedDataPathProperty`します。 この場合は、ダウンロードされたデータは、メモリ ファイルにキャッシュされます。 これは、ダウンロードしたすべてのデータを保持する必要がある場合の適切な選択肢 — たとえば、段階的にビットマップをレンダリングするコントロール。 この場合は、クラスには、データを含むメンバー変数があります。
+から派生することもでき `CCachedDataPathProperty` ます。 この場合、ダウンロードしたデータはメモリファイルにキャッシュされます。 これは、すべてのダウンロードされたデータを保持する必要がある場合に適しています。たとえば、ビットマップをプログレッシブにレンダリングするコントロールなどです。 この場合、クラスには、データを含むメンバー変数があります。
 
 `CMemFile m_Cache;`
 
-このメモリ マップト ファイルを使用する ActiveX コントロール クラスで`OnDraw`データを表示します。 ActiveX コントロールで`CCachedDataPathProperty`-派生クラスでメンバー関数をオーバーライド`OnDataAvailable`し、基本クラスの実装を呼び出した後、コントロールを無効にします。
+ActiveX コントロールクラスでは、このメモリマップファイルを使用し `OnDraw` てデータを表示できます。 ActiveX コントロールの `CCachedDataPathProperty` 派生クラスで、 `OnDataAvailable` 基底クラスの実装を呼び出した後、メンバー関数をオーバーライドし、コントロールを無効にします。
 
-[!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]
+[!code-cpp[NVC_MFCActiveXControl#7](codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]
 
-## <a name="downloading-data-asynchronously-using-activex-controls"></a>非同期的に ActiveX コントロールを使用してデータをダウンロードします。
+## <a name="downloading-data-asynchronously-using-activex-controls"></a>ActiveX コントロールを使用してデータを非同期的にダウンロードする
 
-ネットワーク経由でデータのダウンロードは非同期に実行する必要があります。 利点ようにされている場合は大量のデータの転送または接続が低速の場合は、ダウンロード プロセスはクライアント上の他のプロセスをブロックされません。
+ネットワーク経由でのデータのダウンロードは、非同期に実行する必要があります。 これを行う利点は、大量のデータが転送される場合や、接続速度が遅い場合、ダウンロードプロセスによってクライアント上の他のプロセスがブロックされないことです。
 
-非同期モニカーは、ネットワーク経由でデータを非同期的にダウンロードする方法を提供します。 非同期モニカーで読み取り操作は、操作が完了されていない場合でも、すぐに返します。
+非同期モニカーは、ネットワーク経由でデータを非同期的にダウンロードする方法を提供します。 非同期モニカーに対する読み取り操作は、操作が完了していない場合でも直ちに返されます。
 
-たとえば、のみが 10 バイトが使用可能な読み取りは 1 K ファイルを非同期的に呼び出されます。、読み取りブロックしないが現在使用可能な 10 バイトを返します。
+たとえば、使用できるのが10バイトだけで、読み取りが1K ファイルで非同期に呼び出される場合、Read はブロックしませんが、は現在使用可能な10バイトでを返します。
 
-実装する[非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)を使用して、`CAsyncMonikerFile`クラス。 ただし、ActiveX コントロールを使用できる、`CDataPathProperty`クラスから派生した`CAsyncMonikerFile`、非同期のコントロールのプロパティを実装するのに役立つ。
+[非同期モニカー](asynchronous-monikers-on-the-internet.md)は、クラスを使用して実装し `CAsyncMonikerFile` ます。 ただし、ActiveX コントロールでは、から派生したクラスを使用して、 `CDataPathProperty` `CAsyncMonikerFile` 非同期コントロールプロパティを実装できます。
 
-## <a name="displaying-a-control-on-a-web-page"></a>Web ページ上のコントロールを表示します。
+## <a name="displaying-a-control-on-a-web-page"></a>Web ページにコントロールを表示する
 
-オブジェクト タグおよび Web ページ上のコントロールを挿入するための属性の例を次に示します。
+Web ページにコントロールを挿入するためのオブジェクトタグと属性の例を次に示します。
 
 ```xml
 <OBJECT
@@ -182,17 +181,17 @@ ActiveX コントロールは、インターネットに限定されません。
 </OBJECT>
 ```
 
-## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>ActiveX コントロールの新しい機能を使用する既存の OLE コントロールを更新しています
+## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>新しい ActiveX コントロール機能を使用するための既存の OLE コントロールの更新
 
-OLE コントロールは、Visual C の 4.2 より前のバージョンで作成されている場合、パフォーマンスが向上し、その機能を強化するために行える手順があります。 これらの変更の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
+4.2 より前のバージョンの Visual C++ で OLE コントロールを作成した場合は、パフォーマンスを向上させ、その機能を強化するために実行できる手順があります。 これらの変更の詳細については、「 [ActiveX コントロール: Optimization](mfc-activex-controls-optimization.md)」を参照してください。
 
-非同期のプロパティのサポートを追加する既存のコントロールには、準備完了状態プロパティを追加する必要があります、`ReadyStateChange`イベント自分でします。 コントロールのコンス トラクターは、次のように追加します。
+既存のコントロールに非同期プロパティのサポートを追加する場合は、準備完了状態プロパティとイベントを自分で追加する必要があり `ReadyStateChange` ます。 コントロールのコンストラクターで、次のように追加します。
 
-[!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
+[!code-cpp[NVC_MFCActiveXControl#8](codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
-呼び出すことによって、コードのダウンロード、準備完了状態を更新する、[中](../mfc/reference/colecontrol-class.md#internalsetreadystate)します。 呼び出すことが 1 か所`InternalSetReadyState`からは、`OnProgress`のオーバーライド`CDataPathProperty`-クラスを派生します。
+コードのダウンロード時には、 [COleControl:: InternalSetReadyState](reference/colecontrol-class.md#internalsetreadystate)を呼び出すことによって準備完了の状態を更新します。 を呼び出すことができる1つ `InternalSetReadyState` の場所は、 `OnProgress` の派生クラスのオーバーライドです `CDataPathProperty` 。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
-[MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
+[MFC インターネット プログラミングの作業](mfc-internet-programming-tasks.md)<br/>
+[MFC インターネットプログラミングの基礎](mfc-internet-programming-basics.md)
