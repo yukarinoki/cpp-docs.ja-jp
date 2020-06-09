@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620830"
 ---
-# <a name="addconst-class"></a>add_const クラス
+# <a name="add_const-class"></a>add_const クラス
 
 型から const 型を作成します。
 
@@ -27,12 +27,12 @@ struct add_const;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-この型修飾子のインスタンスは、 *ty*が参照、関数、または const で修飾された型で*ある場合は*、修飾型を保持`const Ty`します。それ以外の場合は、を保持します。
+この型修飾子のインスタンスは、 *ty*が参照、関数、または const で修飾さ*れた型である場合は*、修飾型を保持します。それ以外の場合は、を保持 `const Ty` します。
 
 ## <a name="example"></a>例
 
@@ -60,11 +60,11 @@ add_const<int> == int
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)\
-[remove_const クラス](../standard-library/remove-const-class.md)
+[<type_traits>](type-traits.md)\
+[remove_const クラス](remove-const-class.md)

@@ -1,33 +1,33 @@
 ---
-title: ドキュメント/ビューのサンプル一覧
+title: ドキュメント/ビューのサンプル リスト
 ms.date: 11/04/2016
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-ms.openlocfilehash: ae7104478fb643701c1f659136a33dd3cd69f6e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89098381e20e91d3e1653d01a4f4ee749442cd0d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624740"
 ---
 # <a name="documentview-sample-list"></a>ドキュメント/ビューのサンプル リスト
 
-おもしろい方法で MFC のドキュメント/ビュー アーキテクチャを使用するかを示す次のサンプル プログラムを参照してください。
+次のサンプルプログラムでは、MFC のドキュメント/ビューアーキテクチャを興味深い方法で使用する方法を説明しています。
 
 *ドキュメント/ビューのバリエーション*
 
 - [MDI](../overview/visual-cpp-samples.md)
 
-- [SCRIBBLE](../overview/visual-cpp-samples.md)
+- [軌跡](../overview/visual-cpp-samples.md)
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
-*ダイアログ ボックスのインターフェイスには、ドキュメント/ビューが置き換えられます*
+*ドキュメント/ビューを置き換えるダイアログボックスインターフェイス*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*COleDocument とその派生クラスを使用します。*
+*COleDocument とその派生クラスの使用*
 
 - [コンテナー](../overview/visual-cpp-samples.md)
 
@@ -37,4 +37,4 @@ ms.locfileid: "62240648"
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+[ドキュメント/ビューアーキテクチャ](document-view-architecture.md)

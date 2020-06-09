@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078839"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616035"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>例 : メニュー コマンドによるダイアログ ボックスの表示
 
@@ -25,11 +25,11 @@ ms.locfileid: "80078839"
 
 - メニューコマンドを使用して、モードレスダイアログボックスを表示します。
 
-どちらのサンプルプロシージャも MFC アプリケーション用であり、 [Mfc アプリケーションウィザード](../mfc/reference/mfc-application-wizard.md)を使用して作成するアプリケーションで動作します。
+どちらのサンプルプロシージャも MFC アプリケーション用であり、 [Mfc アプリケーションウィザード](reference/mfc-application-wizard.md)を使用して作成するアプリケーションで動作します。
 
 この手順では、次の名前と値を使用します。
 
-|アイテム|名前または値|
+|Item|名前または値|
 |----------|-------------------|
 |Application|DisplayDialog|
 |メニューコマンド|[表示] メニューの [テスト] コマンドコマンド ID = ID_VIEW_TEST|
@@ -44,7 +44,7 @@ ms.locfileid: "80078839"
 
 1. ダイアログボックスのクラスを追加します。 詳細について[は、「クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。
 
-1. **クラスビュー**で、ドキュメントクラス (cdisplayの doc) を選択します。 **[プロパティ]** ウィンドウで、 **[イベント]** ボタンをクリックします。 メニューコマンドの ID (ID_VIEW_TEST) をダブルクリックします。 次に、下矢印をクリックし、[ **\<追加] > OnViewTest**を選択します。
+1. **クラスビュー**で、ドキュメントクラス (cdisplayの doc) を選択します。 **[プロパティ]** ウィンドウで、 **[イベント]** ボタンをクリックします。 メニューコマンドの ID (ID_VIEW_TEST) をダブルクリックします。 次に、下矢印をクリックし、[ ** \<Add> onviewtest**] を選択します。
 
    MDI アプリケーションのメインフレームにメニューコマンドを追加した場合は、代わりにアプリケーションクラス (Cdisplayの App) を選択します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "80078839"
    #include "TestDialog.h"
    ```
 
-1. 次のコードを `OnViewTest` に追加して、関数を実装します。
+1. 関数を実装するには、に次のコードを追加し `OnViewTest` ます。
 
    ```cpp
    CTestDialog testdlg;
@@ -99,7 +99,7 @@ ms.locfileid: "80078839"
    delete m_pTestDlg;
    ```
 
-   - 次のコードを `OnViewTest` に追加して、関数を実装します。
+   - 関数を実装するには、に次のコードを追加し `OnViewTest` ます。
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ ms.locfileid: "80078839"
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[モーダルとモードレスのダイアログ ボックス](../mfc/modal-and-modeless-dialog-boxes.md)
+[ダイアログボックス](dialog-boxes.md)<br/>
+[モーダルおよびモードレスのダイアログボックス](modal-and-modeless-dialog-boxes.md)

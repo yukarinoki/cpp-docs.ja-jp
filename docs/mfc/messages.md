@@ -5,19 +5,19 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624281"
 ---
 # <a name="messages"></a>メッセージ
 
-メッセージ ループで、`Run`クラスのメンバー関数`CWinApp`を取得しますがさまざまなイベントによって生成されたメッセージをキューに登録します。 たとえば、ユーザーには、マウスがクリックすると、Windows は WM_LBUTTONDOWN マウスの左ボタンが押されたときに、マウスの左ボタンが離されたとき、WM_LBUTTONUP など、いくつかのマウス関連メッセージを送信します。 アプリケーション メッセージ ループのフレームワークの実装では、適切なウィンドウにメッセージをディスパッチします。
+`Run`クラスのメンバー関数のメッセージループは、 `CWinApp` さまざまなイベントによって生成されるキューに置かれたメッセージを取得します。 たとえば、ユーザーがマウスをクリックすると、Windows はマウスに関連するいくつかのメッセージを送信します。たとえば、マウスの左ボタンを押したときに、マウスの左ボタンが離されたときに WM_LBUTTONUP WM_LBUTTONDOWN などです。 フレームワークのアプリケーションメッセージループの実装により、メッセージが適切なウィンドウにディスパッチされます。
 
-メッセージの重要なカテゴリが記載されて[メッセージ カテゴリ](../mfc/message-categories.md)します。
+メッセージの重要なカテゴリについては、「[メッセージのカテゴリ](message-categories.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
+[フレームワークのメッセージとコマンド](messages-and-commands-in-the-framework.md)

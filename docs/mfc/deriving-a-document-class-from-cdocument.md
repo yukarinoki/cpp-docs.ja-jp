@@ -8,27 +8,27 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616118"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>CDocument からのドキュメント クラスの派生
 
-ドキュメントでは、含めることがおよびアプリケーションのデータを管理します。 MFC アプリケーション ウィザードで提供されるドキュメント クラスを使用するには、次の操作を行う必要があります。
+ドキュメントには、アプリケーションのデータが格納され、管理されます。 MFC アプリケーションウィザードで提供されるドキュメントクラスを使用するには、次の操作を行う必要があります。
 
-- クラスを派生`CDocument`ドキュメントの種類ごとにします。
+- ドキュメントの種類ごとにからクラスを派生させ `CDocument` ます。
 
-- 各ドキュメントのデータを格納するメンバー変数を追加します。
+- 各ドキュメントのデータを格納するためのメンバー変数を追加します。
 
-- オーバーライド`CDocument`の`Serialize`ドキュメント クラスのメンバー関数。 `Serialize` ディスクと、ドキュメントのデータを読み書きします。
+- `CDocument` `Serialize` ドキュメントクラスのメンバー関数をオーバーライドします。 `Serialize`ディスクとの間でドキュメントのデータを読み書きします。
 
-## <a name="other-document-functions-often-overridden"></a>オーバーライドされた多くの場合、その他のドキュメント関数
+## <a name="other-document-functions-often-overridden"></a>多くの場合、オーバーライドされるその他のドキュメント関数
 
-その他をオーバーライドすることも`CDocument`メンバー関数。 具体的には、オーバーライドする必要があります[でも実質的](../mfc/reference/cdocument-class.md#onnewdocument)と[かまいません](../mfc/reference/cdocument-class.md#onopendocument)ドキュメントのデータ メンバーを初期化するために、 [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)を破棄するにはデータを動的に割り当てられます。 オーバーライド可能なメンバーについては、クラスを参照してください。 [CDocument](../mfc/reference/cdocument-class.md)で、 *MFC リファレンス*します。
+他のメンバー関数をオーバーライドすることもでき `CDocument` ます。 特に、多くの場合、 [OnNewDocument](reference/cdocument-class.md#onnewdocument)と[onopendocument](reference/cdocument-class.md#onopendocument)をオーバーライドしてドキュメントのデータメンバーを初期化し、 [DeleteContents](reference/cdocument-class.md#deletecontents)を使用して動的に割り当てられたデータを破棄する必要があります。 オーバーライド可能なメンバーの詳細については、 *MFC リファレンス*の「 [CDocument](reference/cdocument-class.md)クラス」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメントの使い方](../mfc/using-documents.md)
+[ドキュメントの使い方](using-documents.md)

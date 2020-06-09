@@ -1,40 +1,40 @@
 ---
-title: MFC ActiveX コントロール:プロパティ
+title: 'MFC ActiveX コントロール : プロパティ'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7ed0fddea660409f5089159b71d39a29b01d538
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618180"
 ---
-# <a name="mfc-activex-controls-properties"></a>MFC ActiveX コントロール:プロパティ
+# <a name="mfc-activex-controls-properties"></a>MFC ActiveX コントロール : プロパティ
 
-ActiveX コントロールは、そのコントロールのコンテナーとの通信にイベントを発生させます。 コンテナーでは、コントロールと通信するメソッドとプロパティを代わりに、使用します。 メソッドとプロパティは使用し、目的のようなそれぞれ、メンバー関数と C++ のクラスのメンバー変数にです。 プロパティは、任意のコンテナーに公開されている ActiveX コントロールのデータ メンバーです。 プロパティは、オートメーション クライアントや ActiveX コントロール コンテナーなどの ActiveX コントロールを含むアプリケーションのインターフェイスを提供します。
+ActiveX コントロールは、コントロールコンテナーと通信するためのイベントを発生させます。 返されるコンテナーは、メソッドとプロパティを使用してコントロールと通信します。 メソッドとプロパティは、それぞれ、C++ クラスのメンバー関数とメンバー変数に対して、使用と目的に似ています。 プロパティは、任意のコンテナーに公開されている ActiveX コントロールのデータメンバーです。 プロパティは、オートメーションクライアントや ActiveX コントロールコンテナーなどの ActiveX コントロールを含むアプリケーションのインターフェイスを提供します。
 
 プロパティは、属性とも呼ばれます。
 
-ActiveX コントロールのメソッドの詳細については、記事を参照してください。 [MFC ActiveX コントロール。メソッド](../mfc/mfc-activex-controls-methods.md)します。
+ActiveX コントロールメソッドの詳細については、「 [MFC Activex コントロール: メソッド](mfc-activex-controls-methods.md)」を参照してください。
 
-ActiveX コントロールには、在庫とカスタム メソッドとプロパティの両方を実装できます。 クラス`COleControl`ストック プロパティの実装を提供します。 (ストック プロパティの完全な一覧は、記事を参照してください。 [MFC ActiveX コントロール。ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md))。開発者は、によって定義されたカスタムのプロパティは、ActiveX コントロールに特別な機能を追加します。 詳細については、次を参照してください。 [MFC ActiveX コントロール。カスタム プロパティの追加](../mfc/mfc-activex-controls-adding-custom-properties.md)します。
+ActiveX コントロールは、ストックとカスタムの両方のメソッドとプロパティを実装できます。 クラス `COleControl` は、ストックプロパティの実装を提供します。 (ストックプロパティの完全な一覧については、「 [MFC ActiveX コントロール: ストックプロパティの追加](mfc-activex-controls-adding-stock-properties.md)」を参照してください)。開発者によって定義されたカスタムプロパティは、ActiveX コントロールに特殊な機能を追加します。 詳細については、「 [MFC ActiveX コントロール: カスタムプロパティの追加](mfc-activex-controls-adding-custom-properties.md)」を参照してください。
 
-メソッドと同様に、カスタムおよびストックの両方のプロパティがプロパティおよびメソッドとの既存のメンバー関数を処理するディスパッチ マップで構成されるメカニズムによってサポートされている、`COleControl`クラス。 さらに、これらのプロパティは、開発者がコントロールに追加情報を渡すために使用するパラメーターを持つことができます。
+カスタムプロパティとストックプロパティは、メソッドのように、プロパティとメソッド、およびクラスの既存のメンバー関数を処理するディスパッチマップで構成されるメカニズムによってサポートされ `COleControl` ます。 また、これらのプロパティには、開発者が追加情報をコントロールに渡すために使用するパラメーターを含めることができます。
 
-次の記事では、さらに詳しく ActiveX コントロールのプロパティについて説明します。
+次の記事では、ActiveX コントロールのプロパティについて詳しく説明します。
 
-- [MFC ActiveX コントロール: ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
+- [MFC ActiveX コントロール: ストック プロパティの追加](mfc-activex-controls-adding-stock-properties.md)
 
-- [MFC ActiveX コントロール: カスタム プロパティの追加](../mfc/mfc-activex-controls-adding-custom-properties.md)
+- [MFC ActiveX コントロール: カスタム プロパティの追加](mfc-activex-controls-adding-custom-properties.md)
 
-- [MFC ActiveX コントロール: 高度なプロパティの実装](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+- [MFC ActiveX コントロール: 高度なプロパティの実装](mfc-activex-controls-advanced-property-implementation.md)
 
-- [MFC ActiveX コントロール: アンビエント プロパティへのアクセス](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+- [MFC ActiveX コントロール: アンビエント プロパティへのアクセス](mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
+[MFC ActiveX コントロール](mfc-activex-controls.md)
