@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], control-notification messages
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
-ms.openlocfilehash: 985048643192e218dd4f4df7766e1036aee5422b
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 2c6fabc64551610bd20a3956b17f55b574d3d826
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685603"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619673"
 ---
 # <a name="commonly-added-member-functions"></a>通常追加されるメンバー関数
 
@@ -19,6 +19,6 @@ ms.locfileid: "71685603"
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)<br/>
-[通常オーバーライドされるメンバー関数](../mfc/commonly-overridden-member-functions.md)
+[ダイアログボックス](dialog-boxes.md)<br/>
+[MFC でのダイアログ ボックスの操作](life-cycle-of-a-dialog-box.md)<br/>
+[通常オーバーライドされるメンバー関数](commonly-overridden-member-functions.md)

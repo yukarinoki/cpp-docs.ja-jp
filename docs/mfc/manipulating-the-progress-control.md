@@ -8,46 +8,46 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-ms.openlocfilehash: c9da6f8048adf1c7da184570ff7f94deee7441e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e3521a82854a85062f9b06bc33eb268d4b9c7a6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622433"
 ---
 # <a name="manipulating-the-progress-control"></a>プログレス コントロールの操作
 
-プログレス コントロールの現在位置を変更する 3 つの方法はあります ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md))。
+プログレスコントロール ([CProgressCtrl](reference/cprogressctrl-class.md)) の現在位置を変更するには、次の3つの方法があります。
 
-- 事前設定された増分で位置を変更できます。
+- 位置は、事前設定された増分金額によって変更できます。
 
-- 位置は、任意の量によって変更できます。
+- 位置は任意の量で変更できます。
 
 - 位置は、特定の値に変更できます。
 
-### <a name="to-change-the-position-by-a-preset-amount"></a>事前設定された量だけ位置を変更するには
+### <a name="to-change-the-position-by-a-preset-amount"></a>事前設定された金額で位置を変更するには
 
-1. 使用して、 [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)増分量を設定します。 既定ではこの値は 10 です。 この値は通常、コントロールの初期設定の 1 つとして設定します。 ステップ値を負にすることができます。
+1. インクリメント量を設定するには、 [Setstep](reference/cprogressctrl-class.md#setstep)メンバー関数を使用します。 既定では、この値は10です。 この値は、通常、コントロールの初期設定の1つとして設定されます。 ステップ値には負の値を指定できます。
 
-1. 使用して、 [StepIt](../mfc/reference/cprogressctrl-class.md#stepit)の位置をインクリメントするメンバー関数。 これにより、自動的に再描画するコントロール。
-
-    > [!NOTE]
-    >  `StepIt` ラップする位置になります。 たとえば、20、ステップと 90 の場合、位置 1 の-100 の範囲を指定`StepIt`位置を 10 に設定されます。
-
-### <a name="to-change-the-position-by-an-arbitrary-amount"></a>任意の大きさで位置を変更するには
-
-1. 使用して、 [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos)メンバー関数は、位置を変更します。 `OffsetPos` 負の値を受け入れます。
+1. 位置をインクリメントするには、 [StepIt](reference/cprogressctrl-class.md#stepit)メンバー関数を使用します。 これにより、コントロール自体が再描画されます。
 
     > [!NOTE]
-    >  `OffsetPos`、とは異なり`StepIt`、位置は折り返されません。 新しい位置を調整して、範囲内に保持されます。
+    >  `StepIt`によって位置がラップされます。 たとえば、1-100 の範囲、20の手順、および90の位置を指定すると、 `StepIt` 位置は10に設定されます。
 
-### <a name="to-change-the-position-to-a-specific-value"></a>特定の値に位置を変更するには
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>任意の量で位置を変更するには
 
-1. 使用して、 [SetPos](../mfc/reference/cprogressctrl-class.md#setpos)メンバー関数は、位置を特定の値に設定します。 必要に応じて、範囲内に新しい位置が調整されます。
+1. 位置を変更するには、 [OffsetPos](reference/cprogressctrl-class.md#offsetpos)メンバー関数を使用します。 `OffsetPos`負の値を受け取ります。
 
-通常、進行状況コントロールは、出力にのみ使用されます。 新しい値を指定せず、現在の位置を取得する[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)します。
+    > [!NOTE]
+    >  `OffsetPos`とは異なり、 `StepIt` は位置をラップしません。 新しい位置は、範囲内に収まるように調整されます。
+
+### <a name="to-change-the-position-to-a-specific-value"></a>位置を特定の値に変更するには
+
+1. 位置を特定の値に設定するには、 [SetPos](reference/cprogressctrl-class.md#setpos)メンバー関数を使用します。 必要に応じて、新しい位置を範囲内に収まるように調整します。
+
+通常、進行状況コントロールは出力のみに使用されます。 新しい値を指定せずに現在の位置を取得するには、 [GetPos](reference/cprogressctrl-class.md#getpos)を使用します。
 
 ## <a name="see-also"></a>関連項目
 
-[CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CProgressCtrl の使い方](using-cprogressctrl.md)<br/>
+[制限](controls-mfc.md)

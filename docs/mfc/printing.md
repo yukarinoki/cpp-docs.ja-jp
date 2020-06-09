@@ -7,55 +7,55 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: a46096592c9983d04d2122bfabb56ece9346c4bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d2ef494be66171cbcbf2b8b9e19c29c8bdc5c2f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371202"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619801"
 ---
 # <a name="printing"></a>印刷
 
-デバイスに依存しないディスプレイが実装されています。 MFC では、ビュー クラスの`OnDraw`メンバー関数で同じ描画呼び出しが、ディスプレイ上およびプリンターなどの他のデバイス上で描画する必要があることを意味します。 印刷プレビューの場合、ターゲット デバイスは、ディスプレイへのプリンター出力をシミュレートします。
+Microsoft Windows では、デバイスに依存しないディスプレイを実装しています。 MFC では、これは、 `OnDraw` ビュークラスのメンバー関数内の同じ描画呼び出しが、ディスプレイや、プリンターなどの他のデバイス上での描画を担当することを意味します。 印刷プレビューの場合、ターゲットデバイスは、シミュレートされたプリンター出力をディスプレイに出力します。
 
-## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>印刷におけるあなたの役割とフレームワークの役割
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>印刷におけるロールとフレームワークのロール
 
-ビュー クラスには、次の責任があります。
+ビュークラスには、次の役割があります。
 
 - ドキュメント内のページ数をフレームワークに通知します。
 
-- 指定したページを印刷するように求められたら、その部分を文書に描画します。
+- 指定したページを印刷するように求められたら、文書のその部分を描画します。
 
-- 印刷に必要なフォントやその他のグラフィックス デバイス インターフェイス (GDI) リソースを割り当て、割り当て解除します。
+- 印刷に必要なフォントまたはその他のグラフィックスデバイスインターフェイス (GDI) リソースを割り当て、割り当てを解除します。
 
-- 必要に応じて、特定のページを印刷する前に、プリンタ モードを変更するために必要なエスケープ コードを送信します。
+- 必要に応じて、ページごとに印刷の向きを変更するなど、特定のページを印刷する前に、プリンターモードを変更するために必要なすべてのエスケープコードを送信します。
 
-フレームワークの責任は次のとおりです。
+このフレームワークの役割は次のとおりです。
 
-- **[印刷**] ダイアログ ボックスを表示します。
+- [**印刷**] ダイアログボックスを表示します。
 
-- プリンタの[CDC](../mfc/reference/cdc-class.md)オブジェクトを作成します。
+- プリンターの[CDC](reference/cdc-class.md)オブジェクトを作成します。
 
-- オブジェクトの[開始Doc](../mfc/reference/cdc-class.md#startdoc)および[EndDoc](../mfc/reference/cdc-class.md#enddoc)メンバー`CDC`関数を呼び出します。
+- オブジェクトの[StartDoc](reference/cdc-class.md#startdoc)および[EndDoc](reference/cdc-class.md#enddoc)メンバー関数を呼び出し `CDC` ます。
 
-- オブジェクトの[StartPage](../mfc/reference/cdc-class.md#startpage)メンバー関数を繰り返し呼び出し、印刷するページをビュー クラスに通知し、オブジェクトの`CDC` [EndPage](../mfc/reference/cdc-class.md#endpage)メンバー関数を呼び出します。 `CDC`
+- オブジェクトの[StartPage](reference/cdc-class.md#startpage)メンバー関数を繰り返し呼び出し `CDC` 、出力するページをビュークラスに通知し、オブジェクトの[EndPage](reference/cdc-class.md#endpage)メンバー関数を呼び出し `CDC` ます。
 
-- ビュー内でオーバーライド可能な関数を適切な時間に呼び出します。
+- ビュー内のオーバーライド可能な関数を適切なタイミングで呼び出します。
 
-次の記事では、フレームワークが印刷プレビューと印刷プレビューをサポートする方法について説明します。
+次の記事では、フレームワークが印刷と印刷プレビューをサポートする方法について説明します。
 
-### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
+### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [既定の印刷の実行方法](../mfc/how-default-printing-is-done.md)
+- [既定の印刷方法](how-default-printing-is-done.md)
 
-- [複数ページのドキュメント](../mfc/multipage-documents.md)
+- [マルチページドキュメント](multipage-documents.md)
 
-- [ヘッダーとフッター](../mfc/headers-and-footers.md)
+- [ヘッダーとフッター](headers-and-footers.md)
 
-- [印刷用の GDI リソースの割り当て](../mfc/allocating-gdi-resources.md)
+- [印刷用の GDI リソースの割り当て](allocating-gdi-resources.md)
 
-- [印刷プレビュー](../mfc/print-preview-architecture.md)
+- [印刷プレビュー](print-preview-architecture.md)
 
 ## <a name="see-also"></a>関連項目
 
-[[印刷と印刷プレビュー]](../mfc/printing-and-print-preview.md)
+[[印刷と印刷プレビュー]](printing-and-print-preview.md)

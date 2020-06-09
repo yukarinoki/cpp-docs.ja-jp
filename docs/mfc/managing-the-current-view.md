@@ -11,21 +11,21 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-ms.openlocfilehash: a926a9e31f7c43ab625220a4d759f6d536c2a77f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2ce9d77234260ebcb1946dd381264fb6654a91c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621310"
 ---
 # <a name="managing-the-current-view"></a>現在のビューの管理
 
-フレーム ウィンドウの既定の実装の一部として、フレーム ウィンドウを現在アクティブなビューの追跡を保持します。 フレーム ウィンドウには、分割ウィンドウで、たとえば、複数のビューが含まれている場合、現在のビューは、使用中で最新のビューが。 アクティブなビューでは、Windows または現在の入力フォーカスのアクティブ ウィンドウ依存しません。
+フレームウィンドウの既定の実装の一部として、フレームウィンドウは現在アクティブなビューを追跡します。 分割ウィンドウのように、フレームウィンドウに複数のビューが含まれている場合は、現在のビューが使用中の最新のビューになります。 アクティブなビューは、Windows のアクティブウィンドウまたは現在の入力フォーカスに依存しません。
 
-変更すると、アクティブなビュー、フレームワークは、呼び出すことによって、現在のビューの[OnActivateView](../mfc/reference/cview-class.md#onactivateview)メンバー関数。 表示されているかどうかを確認するアクティブ化または非アクティブに調べることで`OnActivateView`の*bActivate*パラメーター。 既定では、`OnActivateView`のアクティブ化に関する現在のビューにフォーカスを設定します。 オーバーライドできます`OnActivateView`ビューが非アクティブ化または再アクティブ化したときに、特別な処理を実行します。 たとえば、非アクティブで、その他のビューから、アクティブなビューを区別するために特別な視覚的な手掛かりを提供します。
+アクティブなビューが変更されると、フレームワークは、 [Onアクティブ](reference/cview-class.md#onactivateview)化メンバー関数を呼び出すことにより、現在のビューに通知します。 ビューがアクティブ化されているかどうかを確認するには、 `OnActivateView` の*bactivate*パラメーターを調べます。 既定では、は、 `OnActivateView` アクティブ化時に現在のビューにフォーカスを設定します。 `OnActivateView`をオーバーライドすると、ビューが非アクティブ化または再アクティブ化されたときに、特別な処理を実行できます。 たとえば、アクティブビューを他の非アクティブなビューと区別するために、特別な視覚的な手掛かりを提供する場合があります。
 
-フレーム ウィンドウは」の説明に従ってコマンドを現在の (アクティブ) のビューを転送[コマンド ルーティング](../mfc/command-routing.md)、標準のコマンド ルーティングの一部として。
+フレームウィンドウは、コマンド[ルーティング](command-routing.md)に関するページで説明されているように、コマンドを現在の (アクティブな) ビューに転送します。
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+[フレームウィンドウの使用](using-frame-windows.md)

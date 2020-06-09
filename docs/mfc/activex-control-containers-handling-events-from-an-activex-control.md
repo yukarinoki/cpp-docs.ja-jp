@@ -11,62 +11,62 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: ae623ee0973e78db3b542646dd6bdec58cc2dfc8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b7bc78a2937c010a4d2f1fb000ae0fe8ca2416c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625124"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX コントロール コンテナー : ActiveX コントロールで発生したイベントの処理
 
-この資料では **、ActiveX**コントロール コンテナーに ActiveX コントロールのイベント ハンドラーをインストールする **[プロパティ]** ウィンドウ (クラス ビュー) を使用する方法について説明します。 イベント ハンドラーは、特定のイベントの通知を (コントロールから) 受信し、応答として何らかのアクションを実行するために使用されます。 この通知は、イベントを 「発生」と呼びます。
+この記事では、[**プロパティ**] ウィンドウ (**クラスビュー**) を使用して ActiveX コントロールコンテナーに activex コントロールのイベントハンドラーをインストールする方法について説明します。 イベントハンドラーは、特定のイベントの通知 (コントロールからの) を受信し、応答で何らかのアクションを実行するために使用されます。 この通知は、イベントの "起動" と呼ばれます。
 
 >[!IMPORTANT]
-> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
 > [!NOTE]
-> この記事では、プロシージャとコードの例として、Container という名前のダイアログ ベースの ActiveX コントロール コンテナー プロジェクトと Circ という名前の埋め込みコントロールを使用します。
+> この記事では、コンテナーという名前のダイアログベースの ActiveX コントロールコンテナープロジェクトと、手順とコードの例として、Circ という名前の埋め込みコントロールを使用します。
 
-[**プロパティ**] ウィンドウ (**クラス ビュー**) の [イベント] ボタンを使用すると、ActiveX コントロール コンテナー アプリケーションで発生する可能性のあるイベントのマップを作成できます。 このマップは、"イベント シンク マップ" と呼ばれ、Visual C++ によって作成され、コントロール コンテナー クラスにイベント ハンドラーを追加するときに管理されます。 イベント マップ エントリを使用して実装された各イベント ハンドラーは、特定のイベントをコンテナー イベント ハンドラーのメンバー関数にマップします。 このイベント ハンドラー関数は、指定されたイベントが ActiveX コントロール オブジェクトによって発生したときに呼び出されます。
+[**プロパティ**] ウィンドウの [イベント] ボタン (**クラスビュー**) を使用すると、ActiveX コントロールコンテナーアプリケーションで発生するイベントのマップを作成できます。 "イベントシンクマップ" と呼ばれるこのマップは、イベントハンドラーをコントロールコンテナークラスに追加するときに Visual C++ によって作成および管理されます。 イベントマップエントリと共に実装された各イベントハンドラーは、特定のイベントをコンテナーイベントハンドラーのメンバー関数にマップします。 このイベントハンドラー関数は、ActiveX コントロールオブジェクトによって指定されたイベントが発生したときに呼び出されます。
 
-イベント シンク マップの詳細については、『クラス ライブラリ リファレンス』の[「イベント シンク マップ](../mfc/reference/event-sink-maps.md)」を*参照してください*。
+イベントシンクマップの詳細については、*クラスライブラリリファレンス*の「[イベントシンクマップ](reference/event-sink-maps.md)」を参照してください。
 
-## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a>プロジェクトに対するイベント ハンドラの変更
+## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a>プロジェクトに対するイベントハンドラーの変更
 
-**[プロパティ]** ウィンドウを使用してイベント ハンドラーを追加すると、イベント シンク マップが宣言され、プロジェクトで定義されます。 次のステートメントがコントロールに追加されます。CPP ファイルは、イベント ハンドラーが最初に追加された時に発生します。 このコードは、ダイアログ ボックス クラスのイベント シンク マップを宣言します`CContainerDlg`(この場合は次のようになります)。
+[**プロパティ**] ウィンドウを使用してイベントハンドラーを追加すると、イベントシンクマップが宣言され、プロジェクトで定義されます。 次のステートメントがコントロールに追加されます。最初にイベントハンドラーが追加されたときの CPP ファイル。 このコードは、ダイアログボックスクラス (この場合は) のイベントシンクマップを宣言し `CContainerDlg` ます。
 
-[!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]
-[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]
+[!code-cpp[NVC_MFC_AxCont#8](codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]
+[!code-cpp[NVC_MFC_AxCont#9](codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]
 
-**[プロパティ]** ウィンドウを使用してイベントを追加すると、イベント`ON_EVENT`マップ エントリ ( ) がイベント シンク マップに追加され、イベント ハンドラー関数がコンテナーの実装 ( ) に追加されます。CPP) ファイル。
+[**プロパティ**] ウィンドウを使用してイベントを追加すると、イベントマップエントリ ( `ON_EVENT` ) がイベントシンクマップに追加され、イベントハンドラー関数がコンテナーの実装 (に追加されます。CPP) ファイル。
 
-次の例では、Circ コントロール`OnClickInCircCtrl``ClickIn`のイベントに対して、 というイベント ハンドラーを宣言します。
+次の例では、 `OnClickInCircCtrl` Circ コントロールのイベントに対してという名前のイベントハンドラーを宣言してい `ClickIn` ます。
 
-[!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]
+[!code-cpp[NVC_MFC_AxCont#10](codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]
 
-さらに、次のテンプレートがクラスの`CContainerDlg`実装に追加されます (.イベント ハンドラ メンバー関数の CPP) ファイル:
+さらに、次のテンプレートがクラスの実装 (に追加され `CContainerDlg` ます。CPP) ファイルハンドラーのメンバー関数の場合:
 
-[!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]
+[!code-cpp[NVC_MFC_AxCont#11](codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]
 
-イベント シンク マクロの詳細については、「クラス ライブラリ リファレンス」の[「イベント シンク マップ](../mfc/reference/event-sink-maps.md)」を*参照してください*。
+イベントシンクマクロの詳細については、*クラスライブラリリファレンス*の「[イベントシンクマップ](reference/event-sink-maps.md)」を参照してください。
 
-#### <a name="to-create-an-event-handler-function"></a>イベント ハンドラー関数を作成するには
+#### <a name="to-create-an-event-handler-function"></a>イベントハンドラー関数を作成するには
 
-1. クラス ビューから、ActiveX コントロールを含むダイアログ クラスを選択します。 この例では、`CContainerDlg`を使用します。
+1. クラスビューから、ActiveX コントロールを含むダイアログクラスを選択します。 この例では、を使用 `CContainerDlg` します。
 
 1. **[プロパティ]** ウィンドウで、 **[イベント]** ボタンをクリックします。
 
-1. **[プロパティ]** ウィンドウで、埋め込まれた ActiveX コントロールのコントロール ID を選択します。 この例では、`IDC_CIRCCTRL1`を使用します。
+1. [**プロパティ**] ウィンドウで、埋め込み ActiveX コントロールのコントロール ID を選択します。 この例では、を使用 `IDC_CIRCCTRL1` します。
 
-   **[プロパティ]** ウィンドウには、埋め込まれた ActiveX コントロールによって発生できるイベントの一覧が表示されます。 太字で示されているメンバー関数には、ハンドラー関数が既に割り当てられています。
+   [**プロパティ**] ウィンドウには、埋め込み ActiveX コントロールによって起動できるイベントの一覧が表示されます。 太字で示されているメンバー関数には、既にハンドラー関数が割り当てられています。
 
-1. ダイアログ クラスで処理するイベントを選択します。 この例では、 **[ クリック**] を選択します。
+1. ダイアログクラスで処理するイベントを選択します。 この例では、 **[クリック]** を選択します。
 
-1. 右側のドロップダウン リスト ボックスで、[**\<クリックキルカ1 の追加>** を選択します。
+1. 右側のドロップダウンリストボックスで、[ ** \<Add> ClickCircctrl1**] を選択します。
 
-1. クラス ビューから新しいハンドラー関数をダブルクリックして、実装内のイベント ハンドラー コードにジャンプします (.の CPP)`CContainerDlg`ファイル。
+1. クラスビューから新しいハンドラー関数をダブルクリックして、実装 () のイベントハンドラーコードに移動します。CPP) ファイル `CContainerDlg` 。
 
 ## <a name="see-also"></a>関連項目
 
-[ActiveX コントロール コンテナ](../mfc/activex-control-containers.md)
+[ActiveX コントロールコンテナー](activex-control-containers.md)

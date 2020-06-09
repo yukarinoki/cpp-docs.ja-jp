@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620691"
 ---
 # <a name="command-routing"></a>コマンド ルーティング
 
@@ -31,18 +31,18 @@ ms.locfileid: "70907629"
 
 コマンドへの応答としてのハンドラーの動作と比較した場合、このルーティングメカニズムのコストは低くなります。 フレームワークでコマンドが生成されるのは、ユーザーがユーザー インターフェイス オブジェクトを操作したときだけです。
 
-### <a name="_core_standard_command_route"></a> 標準のコマンド ルート
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> 標準のコマンド ルート
 
 |コマンドを受信したオブジェクトの種類 . .|コマンドを処理する機会が与えられるコマンド ターゲット オブジェクトとその順序|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1. アクティブな `CMDIChildWnd`<br />2. このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
-|ドキュメント フレーム ウィンドウ (`CFrameWnd`､ `CMDIChildWnd`)|1. アクティブ ビュー<br />2. このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
-|表示|1. このビュー<br />2. ビューにアタッチされたドキュメント|
-|ドキュメント|1. このドキュメント<br />2. ドキュメントにアタッチされたドキュメント テンプレート|
-|ダイアログ ボックス|1. このダイアログ ボックス<br />2. ダイアログ ボックスを所有するウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
+|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1. アクティブ`CMDIChildWnd`<br />2. このフレームウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
+|ドキュメント フレーム ウィンドウ (`CFrameWnd`､ `CMDIChildWnd`)|1. アクティブビュー<br />2. このフレームウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
+|View|1. このビュー<br />2. ビューに添付されたドキュメント|
+|ドキュメント|1. このドキュメント<br />2. ドキュメントに添付されたドキュメントテンプレート|
+|ダイアログ ボックス|1. このダイアログボックス<br />2. ダイアログボックスを所有するウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
 
 前の表の右側の列に他のオブジェクト (ドキュメントなど) が示されている場合は、左側の列の対応する項目を確認してください。 たとえば、右側の列を見ると、ビューがコマンドをドキュメントに転送していることがわかるので、左側の列の「ドキュメント」のルーティングも参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
+[フレームワークがハンドラーを呼び出す方法](how-the-framework-calls-a-handler.md)

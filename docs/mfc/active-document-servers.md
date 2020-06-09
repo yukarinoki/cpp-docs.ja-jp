@@ -6,29 +6,29 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f2a63a8c640e6ae31640af680894763603e1d0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619139"
 ---
 # <a name="active-document-servers"></a>Active ドキュメント サーバー
 
-その他のアプリケーションの種類のホスト ドキュメントの Word、Excel、または PowerPoint などの active ドキュメント サーバーでは、アクティブなドキュメントと呼ばれます。 OLE の埋め込み (これは、別のドキュメントのページに表示されるだけ) オブジェクトでは、アクティブなドキュメントが、完全なインターフェイスとそれを作成したサーバー アプリケーションの完全なネイティブ機能を提供します。 ユーザーがドキュメントを作成できます (有効になっているアクティブなドキュメントの場合) は、使い慣れたアプリケーションの全機能を使用してまだ扱うことができます、結果として得られるプロジェクトとして 1 つのエンティティ。
+Word、Excel、PowerPoint などの active ドキュメントサーバーは、アクティブなドキュメントと呼ばれる他のアプリケーションの種類のドキュメントをホストします。 OLE 埋め込みオブジェクト (別のドキュメントのページ内に表示されます) とは異なり、アクティブドキュメントには、それらを作成するサーバーアプリケーションの完全なインターフェイスと完全なネイティブ機能が用意されています。 ユーザーは、お気に入りのアプリケーションを最大限に活用してドキュメントを作成でき (アクティブなドキュメントが有効になっている場合)、結果のプロジェクトを1つのエンティティとして扱うことができます。
 
-アクティブなドキュメントでは、1 ページ以上を持つことができ、インプレース アクティブでは常にします。 アクティブなドキュメントで、メニューのマージ、ユーザー インターフェイスの一部の制御、**ファイル**と**ヘルプ**コンテナーのメニュー。 コンテナーの編集領域全体を占めるいて、ビューとプリンターのページ (余白やページ フッター、) のレイアウトを制御します。
+アクティブなドキュメントには複数のページを含めることができ、常にアクティブになります。 Active documents は、ユーザーインターフェイスの一部を制御し、そのメニューをコンテナーの [**ファイル**] メニューと [**ヘルプ**] メニューと結合します。 コンテナーの編集領域全体を占有し、プリンターページ (余白、フッターなど) のビューとレイアウトを制御します。
 
-MFC では、active ドキュメント サーバーには、ドキュメント/ビューのインターフェイス、コマンドのディスパッチ マップ、印刷、メニューの管理、およびレジストリの管理を実装します。 特定のプログラミング要件については[active ドキュメント](../mfc/active-documents.md)します。
+MFC では、ドキュメント/ビューインターフェイス、コマンドディスパッチマップ、印刷、メニュー管理、およびレジストリ管理を使用して、アクティブなドキュメントサーバーを実装します。 特定のプログラミング要件については、「 [active ドキュメント](active-documents.md)」で説明します。
 
-MFC でのアクティブなドキュメントをサポートしています、 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)クラスから派生した[CCmdTarget](../mfc/reference/ccmdtarget-class.md)、および[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)から派生した[COleServerItem](../mfc/reference/coleserveritem-class.md)します。 MFC での active ドキュメント コンテナーをサポートしています、 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)クラスから派生した[COleClientItem](../mfc/reference/coleclientitem-class.md)します。
+MFC は、 [CDocObjectServer](reference/cdocobjectserver-class.md)クラスを使用したアクティブなドキュメントをサポートしています。このクラスは、 [CDocObjectServerItem](reference/cdocobjectserveritem-class.md)から派生し[たもので](reference/ccmdtarget-class.md)、 [COleServerItem](reference/coleserveritem-class.md)から派生したものです。 MFC では、 [COleClientItem](reference/coleclientitem-class.md)から派生した[COleDocObjectItem](reference/coledocobjectitem-class.md)クラスを使用した active ドキュメントコンテナーがサポートされています。
 
-`CDocObjectServer` アクティブなドキュメントは、インターフェイスしを初期化し、アクティブ ドキュメントをアクティブにマップされます。 MFC には、コマンドは、アクティブなドキュメントのルーティングを処理するためにマクロも用意されています。 アプリケーションでアクティブなドキュメントを使用するには、StdAfx.h ファイルに AfxDocOb.h を含めます。
+`CDocObjectServer`アクティブドキュメントインターフェイスをマップし、アクティブなドキュメントを初期化してアクティブ化します。 MFC には、アクティブなドキュメント内のコマンドルーティングを処理するマクロも用意されています。 アプリケーションでアクティブなドキュメントを使用するには、Stdafx.h ファイルに AfxDocOb を含めます。
 
-通常の MFC サーバー フック独自`COleServerItem`-クラスを派生します。 MFC アプリケーション ウィザードは、選択した場合のこのクラスを生成、**ミニ サーバー**または**フル サーバー**複合ドキュメント サポートをアプリケーション サーバーに付与する チェック ボックス。 選択した場合、 **Active ドキュメント サーバー**チェック ボックスをオンから派生したクラスを生成する MFC アプリケーション ウィザード`CDocObjectServerItem`代わりにします。
+通常の MFC サーバーは、独自 `COleServerItem` の派生クラスをフックします。 [**ミニサーバー** ] または [**完全サーバー** ] チェックボックスをオンにしてアプリケーションサーバーの複合ドキュメントをサポートする場合は、MFC アプリケーションウィザードによってこのクラスが生成されます。 [ **Active ドキュメントサーバー** ] チェックボックスもオンにした場合、MFC アプリケーションウィザードでは、代わりにから派生したクラスが生成され `CDocObjectServerItem` ます。
 
-`COleDocObjectItem`クラスが、OLE コンテナーの active ドキュメント コンテナーになることができます。 MFC アプリケーション ウィザードを使用して、選択して、active ドキュメント コンテナーを作成することができます、 **Active ドキュメント コンテナー** MFC アプリケーション ウィザードの [複合ドキュメント サポート] ページでチェック ボックスをオンします。 詳細については、次を参照してください。 [Active ドキュメント コンテナー アプリケーションを作成する](../mfc/creating-an-active-document-container-application.md)します。
+`COleDocObjectItem`クラスを使用すると、OLE コンテナーをアクティブドキュメントコンテナーにすることができます。 Mfc アプリケーションウィザードの [複合ドキュメントのサポート] ページで [**アクティブドキュメントコンテナー** ] チェックボックスをオンにすると、active ドキュメントコンテナーを作成できます。 詳細については、「 [Active ドキュメントコンテナーアプリケーションの作成](creating-an-active-document-container-application.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
+[Active ドキュメント コンテインメント](active-document-containment.md)

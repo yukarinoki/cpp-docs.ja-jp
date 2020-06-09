@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7b2bf819c5305da4039fae172578298d3b4e609
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618508"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>コマンド以外のメッセージのハンドラー検索方法
 
-コマンドとは異なりは、標準 Windows メッセージは、チェーン コマンド ターゲットでルーティングされませんが、Windows メッセージを送信する先のウィンドウで、通常は処理されます。 メイン フレーム ウィンドウ、MDI 子ウィンドウ、標準のコントロール、ダイアログ ボックス、ビュー、または他の種類の子ウィンドウのウィンドウがあります。
+コマンドとは異なり、標準の Windows メッセージはコマンドターゲットのチェーン経由ではルーティングされませんが、通常は Windows がメッセージを送信するウィンドウによって処理されます。 ウィンドウには、メインフレームウィンドウ、MDI 子ウィンドウ、標準コントロール、ダイアログボックス、ビュー、その他の種類の子ウィンドウなどがあります。
 
-実行時に、各 Windows ウィンドウがウィンドウのオブジェクトにアタッチ (から直接または間接的に派生した`CWnd`) を持つ独自の関連付けられているメッセージ マップおよびハンドラー関数。 フレームワークは、メッセージ マップを使用: コマンドと、メッセージの受信ハンドラーをマッピングします。
+実行時には、各ウィンドウは、 `CWnd` 独自のメッセージマップおよびハンドラー関数を持つウィンドウオブジェクト (から直接または間接的に派生) にアタッチされます。 フレームワークでは、コマンドの場合と同様に、メッセージマップを使用して、受信メッセージをハンドラーにマップします。
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
+[フレームワークがハンドラーを呼び出す方法](how-the-framework-calls-a-handler.md)

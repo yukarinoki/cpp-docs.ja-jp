@@ -7,43 +7,43 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e3dbfc2269f5fbf3c12dc00c19f8a2253fd16a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626442"
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
 
-指定した場合、 **TBSTYLE_TOOLTIPS**ツールバーのスタイルを作成し、ツール ヒント コントロールを管理します。 ツール ヒントは、ツール バー ボタンを説明するテキストの行を格納する小さなポップアップ ウィンドウです。 ツール ヒントが非表示され場合にのみ、ユーザー ツール バー ボタン上にカーソルを置きます約半分のままに 2 つ目を表示します。 カーソルの近くにツール ヒントが表示されます。
+**TBSTYLE_TOOLTIPS**スタイルを指定すると、ツールバーはツールヒントコントロールを作成して管理します。 ツールヒントは、ツールバーボタンを説明するテキスト行を含む小さなポップアップウィンドウです。 ツールヒントは表示されません。ユーザーがツールバーボタンにカーソルを置いたときに表示され、約 1 0.5 秒間はその位置に置かれます。 ツールヒントはカーソルの近くに表示されます。
 
-ツール ヒントが表示される前に、 **TTN_NEEDTEXT**通知メッセージは、ボタンのわかりやすいテキストを取得するツールバーのオーナー ウィンドウに送信されます。 ツールバーのオーナー ウィンドウがある場合、`CFrameWnd`余分に労力、ヒントが表示されますので、ツール ウィンドウで、`CFrameWnd`の既定のハンドラーを持つ、 **TTN_NEEDTEXT**通知します。 ツールバーのオーナー ウィンドウがから派生していないかどうかは`CFrameWnd`、ダイアログ ボックスまたはフォーム ビューなどはする必要があります、オーナー ウィンドウのメッセージ マップにエントリを追加し、メッセージ マップでの通知ハンドラーを提供します。 オーナー ウィンドウのメッセージ マップ エントリは次のとおりです。
+ツールヒントが表示される前に、ツールバーのオーナーウィンドウに**TTN_NEEDTEXT**通知メッセージが送信され、ボタンの説明テキストが取得されます。 ツールバーの [オーナー] ウィンドウがウィンドウの場合、 `CFrameWnd` 追加の作業を行わずにツールヒントが表示され `CFrameWnd` ます。には**TTN_NEEDTEXT**通知の既定のハンドラーがあるためです。 ツールバーのオーナーウィンドウがダイアログボックスやフォームビューなどから派生していない場合は、 `CFrameWnd` オーナーウィンドウのメッセージマップにエントリを追加し、メッセージマップに通知ハンドラーを提供する必要があります。 オーナーウィンドウのメッセージマップへのエントリは次のとおりです。
 
-[!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#40](codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]
 
 ## <a name="remarks"></a>Remarks
 
 *memberFxn*<br/>
-このボタンのテキストが必要なときに呼び出されるメンバー関数。
+このボタンにテキストが必要な場合に呼び出されるメンバー関数。
 
-ツール ヒントの id は常に 0 です。
+ツールヒントの id は常に0であることに注意してください。
 
-加え、 **TTN_NEEDTEXT**通知では、ツール ヒント コントロール通知を送信できます、次をツール バー コントロール。
+ツールヒントコントロールは、 **TTN_NEEDTEXT**通知に加えて、次の通知を toolbar コントロールに送信できます。
 
-|Notification|説明|
+|通知|意味|
 |------------------|-------------|
-|**TTN_NEEDTEXTA**|ツール ヒント コントロールには、ASCII テキスト (Windows 95 の場合のみ) が必要です。|
-|**TTN_NEEDTEXTW**|ツール ヒント コントロールには、UNICODE テキスト (Windows NT のみ) が必要です。|
-|**TBN_HOTITEMCHANGE**|ホットの (強調表示されている) アイテムが変更されたことを示します。|
-|**NM_RCLICK**|ユーザーがボタンを右クリックを示します。|
-|**TBN_DRAGOUT**|ユーザーがボタンをクリックし、ボタンからポインターをドラッグすることを示します。 これにより、アプリケーションがドラッグを実装して、ツール バー ボタンから削除できます。 この通知を受信するときに、アプリケーションは、ドラッグを開始し、ドロップ操作。|
-|**TBN_DROPDOWN**|ユーザーが使用しているボタンをクリックしたことを示します、 **TBSTYLE_DROPDOWN**スタイル。|
-|**TBN_GETOBJECT**|ユーザーがポインターを使用しているボタンの上に移動することを示します、 **TBSTYLE_DROPPABLE**スタイル。|
+|**TTN_NEEDTEXTA**|ツールヒントコントロールには ASCII テキストが必要です (Windows 95 のみ)|
+|**TTN_NEEDTEXTW**|ツールヒントコントロールには UNICODE テキストが必要です (Windows NT のみ)|
+|**TBN_HOTITEMCHANGE**|ホット (強調表示) 項目が変更されたことを示します。|
+|**NM_RCLICK**|ユーザーがボタンを右クリックしたことを示します。|
+|**TBN_DRAGOUT**|ユーザーがボタンをクリックし、ポインターをボタンの外にドラッグしたことを示します。 これにより、アプリケーションは、ツールバーボタンからドラッグアンドドロップを実装できます。 この通知を受信すると、アプリケーションはドラッグアンドドロップ操作を開始します。|
+|**TBN_DROPDOWN**|ユーザーが**TBSTYLE_DROPDOWN**スタイルを使用するボタンをクリックしたことを示します。|
+|**TBN_GETOBJECT**|ユーザーが**TBSTYLE_DROPPABLE**スタイルを使用するボタンの上にポインターを移動したことを示します。|
 
-ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、次を参照してください。[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)します。
+ハンドラー関数の例と、ツールヒントを有効にする方法の詳細については、「[ツールヒント](tool-tips-in-windows-not-derived-from-cframewnd.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CToolBarCtrl の使い方](using-ctoolbarctrl.md)<br/>
+[制限](controls-mfc.md)
