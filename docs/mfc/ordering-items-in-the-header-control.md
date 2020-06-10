@@ -12,27 +12,27 @@ helpviewer_keywords:
 - SetOrderArray method [MFC]
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
-ms.openlocfilehash: bae351d921c25993d6b7029f9052e1938179673b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4b4711729c6c3a4b63d4ad05252a5c49df98a0c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622132"
 ---
 # <a name="ordering-items-in-the-header-control"></a>ヘッダー コントロールの項目の並べ替え
 
-すると[ヘッダー コントロールに項目を追加](../mfc/adding-items-to-the-header-control.md)、操作するか、次の関数では、その順序に関する情報を取得します。
+[項目をヘッダーコントロールに追加](adding-items-to-the-header-control.md)すると、次の関数を使用して、その順序に関する情報を操作したり取得したりできます。
 
-- [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray)と[CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
+- [CHeaderCtrl:: getorderarray](reference/cheaderctrl-class.md#getorderarray)と[CHeaderCtrl:: setorderarray](reference/cheaderctrl-class.md#setorderarray)
 
-   取得し、ヘッダー項目の左から右の順序を設定します。
+   ヘッダー項目の左から右の順序を取得および設定します。
 
-- [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex)します。
+- [CHeaderCtrl:: OrderToIndex](reference/cheaderctrl-class.md#ordertoindex)。
 
    特定のヘッダー項目のインデックス値を取得します。
 
-に加えて、前のメンバー関数は、HDS_DRAGDROP 形式は、ドラッグ アンド ドロップのヘッダー コントロールのヘッダー項目にユーザーをできます。 詳細については、次を参照してください。[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)します。
+HDS_DRAGDROP スタイルでは、前のメンバー関数に加えて、ヘッダーコントロール内のヘッダー項目をドラッグアンドドロップすることができます。 詳細については、「[ヘッダー項目に対するドラッグアンドドロップのサポートの提供](providing-drag-and-drop-support-for-header-items.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)
+[CHeaderCtrl の使い方](using-cheaderctrl.md)
