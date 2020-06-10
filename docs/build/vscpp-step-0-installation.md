@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio に C および C++ サポートをインストールする
 description: Visual Studio の Visual C++ のためのサポートをインストールします
 ms.custom: mvc

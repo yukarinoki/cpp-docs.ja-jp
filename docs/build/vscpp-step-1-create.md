@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ コンソール アプリ プロジェクトを作成する
 description: Visual Studio で Microsoft C++ を使用して Hello World コンソール アプリを作成します。
 ms.custom: mvc

@@ -1,4 +1,4 @@
----
+﻿---
 title: Catch ブロックの評価方法 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:

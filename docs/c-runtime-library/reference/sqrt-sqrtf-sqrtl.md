@@ -1,4 +1,4 @@
----
+﻿---
 title: sqrt、sqrtf、sqrtl
 ms.date: 6/5/2020
 api_name:

@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外C++とエラー処理に関する最新のベストプラクティス
 ms.date: 11/19/2019
 ms.topic: conceptual

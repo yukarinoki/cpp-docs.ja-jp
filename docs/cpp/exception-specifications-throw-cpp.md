@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外の指定 (throw、noexcept)C++()
 ms.date: 01/18/2018
 helpviewer_keywords:

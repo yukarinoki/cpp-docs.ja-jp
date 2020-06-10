@@ -1,4 +1,4 @@
----
+﻿---
 title: 関数 (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: '例外処理 : 古いコードの変換'
 ms.date: 08/27/2018
 helpviewer_keywords:

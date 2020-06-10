@@ -1,4 +1,4 @@
----
+﻿---
 title: log1p、log1pf、log1pl2
 ms.date: 4/2/2020
 api_name:

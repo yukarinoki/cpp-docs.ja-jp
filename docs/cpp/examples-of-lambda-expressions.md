@@ -1,4 +1,4 @@
----
+﻿---
 title: ラムダ式の例
 ms.date: 05/07/2019
 helpviewer_keywords:

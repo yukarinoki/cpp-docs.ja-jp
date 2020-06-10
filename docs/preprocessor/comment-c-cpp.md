@@ -1,4 +1,4 @@
----
+﻿---
 title: comment プラグマ
 ms.date: 08/29/2019
 f1_keywords:

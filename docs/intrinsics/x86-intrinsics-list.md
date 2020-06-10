@@ -1,4 +1,4 @@
----
+﻿---
 title: x86 組み込み一覧
 description: Visual Studio でマイクロソフト C++ コンパイラでサポートされている x64 (AMD64) の組み込みのリファレンス リスト。
 ms.date: 02/28/2020

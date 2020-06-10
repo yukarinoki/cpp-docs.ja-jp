@@ -1,4 +1,4 @@
----
+﻿---
 title: /permissive- (標準への準拠)
 description: Microsoft C++/permissive-(標準準拠) コンパイラオプションのリファレンスガイド。
 ms.date: 06/04/2020

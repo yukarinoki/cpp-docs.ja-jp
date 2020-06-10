@@ -1,4 +1,4 @@
----
+﻿---
 title: switchステートメント (C++)
 description: Microsoft Visual Studio C++ の標準 C++ ステートメントへの参照 switch 。
 ms.date: 04/25/2020

@@ -1,4 +1,4 @@
----
+﻿---
 title: データ型の範囲
 ms.date: 05/28/2020
 helpviewer_keywords:

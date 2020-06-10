@@ -1,4 +1,4 @@
----
+﻿---
 title: high_resolution_clock 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018

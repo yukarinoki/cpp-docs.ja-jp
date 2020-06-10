@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加'
 ms.date: 04/25/2019
 helpviewer_keywords:

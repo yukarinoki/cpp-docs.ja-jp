@@ -1,4 +1,4 @@
----
+﻿---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 4/2/2020
 api_name:

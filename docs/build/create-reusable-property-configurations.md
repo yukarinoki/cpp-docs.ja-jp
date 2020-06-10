@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio プロジェクトの設定を共有または再利用する - C++
 ms.date: 07/17/2019
 helpviewer_keywords:

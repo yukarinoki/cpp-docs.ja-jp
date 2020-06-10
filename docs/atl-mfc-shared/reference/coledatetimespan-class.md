@@ -1,4 +1,4 @@
----
+﻿---
 title: クラス
 ms.date: 03/27/2019
 f1_keywords:

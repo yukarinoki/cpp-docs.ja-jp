@@ -1,4 +1,4 @@
----
+﻿---
 title: 終了ハンドラーに関する制約
 ms.date: 11/04/2016
 helpviewer_keywords:

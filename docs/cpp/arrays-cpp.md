@@ -1,4 +1,4 @@
----
+﻿---
 title: 配列 (C++)
 ms.date: 11/14/2019
 helpviewer_keywords:
