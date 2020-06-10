@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620954"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
 整数オーバーフローを防ぐことができるように整数のプリミティブを拡張し、さまざまな種類の整数を比較してみましょう。
 
 > [!NOTE]
-> このライブラリの最新バージョンは に[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)にあります。
+> このライブラリの最新バージョンは、にあり [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) ます。
 
 ## <a name="syntax"></a>構文
 
@@ -39,11 +39,11 @@ class SafeInt;
 | E         |  エラー処理ポリシーを定義する列挙データ型。 |
 | U         |  第 2 オペランドの整数またはブール値パラメーターの型。 |
 
-| パラメーター  |  説明 |
+| パラメーター  |  Description |
 |---------|-----------------|
 | *rhs*      |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *私*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *ビット*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *i*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *列*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
 
 ## <a name="members"></a>メンバー
 
@@ -51,7 +51,7 @@ class SafeInt;
 
 | 名前                          |  説明 |
 |---------------------------|--------------------|
-| [セーフイント::セーフイント](#safeint)  |  既定のコンストラクターです。 |
+| [SafeInt:: SafeInt](#safeint)  |  既定のコンストラクターです。 |
 
 ### <a name="assignment-operators"></a>代入演算子
 
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `SafeInt` クラスは、数学演算での整数オーバーフローを防ぎます。 たとえば、2 つの 8 ビット整数を追加するとします。1 つは値が 200 であり、2 つ目は値が 100 です。 正しい数学演算は 200 + 100 = 300 です。 ただし、8 ビット整数の制限があるため、上位ビットは失われ、結果としてコンパイラから 44 (300 - 2<sup>8</sup>) が返されます。 この数式に依存するすべての演算では、予期しない動作が起こります。
 
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > `SafeInt` クラスはあらゆる種類の整数を受け取りますが、符号なしの型を使用するとより効率的に実行されます。
 
-`E` は、`SafeInt` で使用されるエラー処理メカニズムです。 SafeInt ライブラリには、2 つのエラー処理メカニズムが用意されています。 既定のポリシーは `SafeIntErrorPolicy_SafeIntException` であり、エラーが発生したときに [SafeIntException クラス](../safeint/safeintexception-class.md)例外がスローされます。 もう 1 つのポリシーは `SafeIntErrorPolicy_InvalidParameter` であり、エラーが発生した場合にプログラムが停止されます。
+`E` は、`SafeInt` で使用されるエラー処理メカニズムです。 SafeInt ライブラリには、2 つのエラー処理メカニズムが用意されています。 既定のポリシーは `SafeIntErrorPolicy_SafeIntException` であり、エラーが発生したときに [SafeIntException クラス](safeintexception-class.md)例外がスローされます。 もう 1 つのポリシーは `SafeIntErrorPolicy_InvalidParameter` であり、エラーが発生した場合にプログラムが停止されます。
 
 エラー ポリシーをカスタマイズするオプションは 2 つあります。 1 つ目のオプションは、`SafeInt` を作成するときにパラメーター `E` を設定することです。 エラー処理ポリシーを 1 つの `SafeInt` のみに変更する場合は、このオプションを使用します。 もう 1 つのオプションは、`SafeInt` ライブラリを組み込む前に、カスタマイズされたエラー処理クラスとして _SAFEINT_DEFAULT_ERROR_POLICY を定義することです。 コード内の `SafeInt` クラスのすべてのインスタンスで既定のエラー処理ポリシーを変更する場合は、このオプションを使用します。
 
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **名前空間:** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>セーフイント::セーフイント
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
 
 `SafeInt` オブジェクトを構築します。
 
@@ -257,18 +257,18 @@ SafeInt (
 
 ### <a name="parameters"></a>パラメーター
 
-*私*<br/>
+*i*<br/>
 [in] 新しい `SafeInt` オブジェクトの値。 これは、コンストラクターに応じて、型 T または U のパラメーターにする必要があります。
 
-*B*<br/>
+*b*<br/>
 [in] 新しい `SafeInt` オブジェクトのブール値。
 
-*U*<br/>
+*u*<br/>
 [in] 型 U の `SafeInt`。新しい `SafeInt` オブジェクトは、*u* と同じ値になりますが、型は T になります。
 
 U `SafeInt` に格納されているデータの型。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしの 8 ビットから 64 ビットを使用できます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 コンストラクターの入力パラメーター *i* または *u* は、ブール型、文字型、または整数型にする必要があります。 これが異なる型のパラメーターの場合、`SafeInt` クラスから [static_assert](../cpp/static-assert.md) が呼び出され、無効な入力パラメーターが示されます。
 

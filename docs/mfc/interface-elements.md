@@ -5,67 +5,67 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d4d81287cb30a7d3608025085cdb3f9a208147a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619990"
 ---
 # <a name="interface-elements"></a>インターフェイス要素
 
-このドキュメントでは、Visual Studio 2008 SP1 で導入されたインターフェイス要素について説明し、ライブラリの以前のバージョンとの違いについても説明します。
+このドキュメントでは、Visual Studio 2008 SP1 で導入されたインターフェイス要素について説明します。また、以前のバージョンのライブラリとの違いについても説明します。
 
-次の図は、新しいインターフェイスの要素を使用して構築されたアプリケーションを示します。
+次の図は、新しいインターフェイス要素を使用して作成されたアプリケーションを示しています。
 
-![サンプル アプリケーションの MFC Feature Pack](../mfc/media/mfc_featurepack.png "MFC Feature Pack のサンプル アプリケーション")
+![MFC Feature Pack のアプリケーション例](../mfc/media/mfc_featurepack.png "MFC Feature Pack のアプリケーション例")
 
 ## <a name="window-docking"></a>ウィンドウのドッキング
 
-ウィンドウのドッキング機能では、Visual Studio のグラフィカル ユーザー インターフェイスを使用して、ドッキング ウィンドウに似ています。
+ウィンドウのドッキング機能は、Visual Studio のグラフィカルユーザーインターフェイスで使用されるウィンドウのドッキングに似ています。
 
-## <a name="control-bars-are-now-panes"></a>コントロール バーがウィンドウようになりました
+## <a name="control-bars-are-now-panes"></a>コントロールバーがペインになりました
 
-コントロール バー ペインと呼ばれることは今すぐおよびからは派生[CBasePane クラス](../mfc/reference/cbasepane-class.md)します。 以前のバージョンの MFC では、コントロール バーの基本クラスが`CControlBar`します。
+コントロールバーは、ウィンドウと呼ばれ、 [Cbasepane クラス](reference/cbasepane-class.md)から派生したものです。 以前のバージョンの MFC では、コントロールバーの基本クラスはでした `CControlBar` 。
 
-アプリケーションのメイン フレーム ウィンドウがによって表されるは、通常、 [CFrameWndEx クラス](../mfc/reference/cframewndex-class.md)または[CMDIFrameWndEx クラス](../mfc/reference/cmdiframewndex-class.md)します。 メイン フレームと呼ばれる、*ドッキング サイト*します。 ウィンドウは、親の 3 種類のいずれかを指定できます: ドッキング サイト、ドッキング バー、またはミニフレーム ウィンドウ。
+アプリケーションのメインフレームウィンドウは、通常、 [CFrameWndEx クラス](reference/cframewndex-class.md)または[CMDIFrameWndEx クラス](reference/cmdiframewndex-class.md)によって表されます。 メインフレームは、 *dock サイト*と呼ばれます。 ペインには、ドッキングサイト、ドッキングバー、またはミニフレームウィンドウの3種類の親があります。
 
-ペインの 2 種類があります。 サイズを変更およびサイズを変更します。 ステータス バーやツールバーなどのサイズ変更可能なペイン スプリッターまたはスライダーを使用してサイズを変更できます。 サイズ変更可能なペインには、(別のウィンドウでは、それらの間の分割を作成するのには 1 つのペインをドッキングできる) コンテナーを形成できます。 ただし、サイズ変更可能なペインがあります (ドッキング) バーをドッキングするのにはアタッチできません。
+2種類のペインがあります。サイズ変更不可能で、サイズを変更できます。 ステータスバーやツールバーなどのサイズ変更可能なウィンドウは、スプリッターまたはスライダーを使用してサイズを変更できます。 サイズ変更可能なウィンドウでは、コンテナーを形成できます (あるウィンドウを別のウィンドウにドッキングし、それらの間にスプリッターを作成できます)。 ただし、サイズ変更可能ペインはドッキングバーに装着 (ドッキング) できません。
 
-アプリケーションでは、サイズを変更できないウィンドウを使用する場合は派生から[CPane クラス](../mfc/reference/cpane-class.md)します。  アプリケーションでは、サイズ変更可能なペインを使用する場合は派生から[CDockablePane クラス](../mfc/reference/cdockablepane-class.md)
+アプリケーションでサイズ変更できないウィンドウを使用する場合は、 [CPane クラス](reference/cpane-class.md)から派生させます。  アプリケーションでサイズ変更可能なウィンドウを使用する場合は、 [CDockablePane クラス](reference/cdockablepane-class.md)から派生させます。
 
-## <a name="dock-site"></a>ドッキング サイト
+## <a name="dock-site"></a>サイトのドッキング
 
-ドッキング サイト (またはメイン フレーム ウィンドウ) は、すべてのペインと、アプリケーション内のミニフレーム ウィンドウを所有しています。 ドッキング サイトに含まれる、 [CDockingManager](../mfc/reference/cdockingmanager-class.md)メンバー。 このメンバーは、ドッキング サイトに属しているすべてのウィンドウのリストを保持します。 リストの順序は、ドッキング サイトの外側のエッジに作成されたウィンドウが一覧の先頭に配置されているようにします。 ドッキング サイトが再描画するために、フレームワーク、ときにこの一覧をループし、ドッキング サイトの現在の外接する四角形を含めるには、各ウィンドウのレイアウトを調整します。 呼び出すことができます`AdjustDockingLayout`または`RecalcLayout`ドッキングのレイアウトを調整する必要があるし、フレームワークは、ドッキング マネージャーには、この呼び出しをリダイレクトします。
+Dock サイト (またはメインフレームウィンドウ) は、アプリケーション内のすべてのペインとミニフレームウィンドウを所有します。 Dock サイトには、 [CDockingManager](reference/cdockingmanager-class.md)メンバーが含まれています。 このメンバーは、dock サイトに属しているすべてのウィンドウの一覧を保持します。 リストは、ドッキングサイトの外縁で作成されたペインがリストの先頭に配置されるように並べ替えられます。 フレームワークは、ドッキングサイトを再描画するときに、この一覧をループし、各ペインのレイアウトを調整して、ドッキングサイトの現在の外接する四角形を含めます。 `AdjustDockingLayout`ドッキングレイアウトを調整する必要があるときにまたはを呼び出すことができ、 `RecalcLayout` フレームワークはこの呼び出しをドッキングマネージャーにリダイレクトします。
 
-## <a name="dock-bars"></a>ドッキング バー
+## <a name="dock-bars"></a>ドッキングバー
 
-各メイン フレーム ウィンドウを配置できます*ドッキング バー*に沿っての境界線。 ドッキング バーが属するウィンドウ、 [CDockSite クラス](../mfc/reference/cdocksite-class.md)します。 派生したオブジェクトを受け入れることができるドッキング バー [CPane](../mfc/reference/cpane-class.md)、ツールバーなど。 メイン フレーム ウィンドウが初期化されるときに、ドッキング バーを作成するには、呼び出す`EnableDocking`します。 自動的に隠すバーを有効にするには、呼び出す`EnableAutoHideBars`します。 `EnableAutoHideBars` 作成[CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)オブジェクト、および各ドッキング バーの隣に配置します。
+各メインフレームウィンドウは、*ドッキングバー*を境界線に沿って配置できます。 ドッキングバーは、 [CDockSite クラス](reference/cdocksite-class.md)に属するペインです。 ドッキングバーは、ツールバーなどの[CPane](reference/cpane-class.md)から派生したオブジェクトを受け入れることができます。 メインフレームウィンドウが初期化されたときにドッキングバーを作成するには、を呼び出し `EnableDocking` ます。 自動非表示バーを有効にするには、を呼び出し `EnableAutoHideBars` ます。 `EnableAutoHideBars`[CAutoHideDockSite](reference/cautohidedocksite-class.md)オブジェクトを作成し、各ドックバーの横に配置します。
 
-各ドッキング バーは、ドッキング行に分割されます。 ドッキングの行がによって表される、 [CDockingPanesRow クラス](../mfc/reference/cdockingpanesrow-class.md)します。 ドッキングの各行には、ツールバーの一覧が含まれています。 ユーザーがツールバーをドッキングまたは 1 つの行から同じドッキング バー内の別に、ツールバーを移動、フレームワークが新しい行を作成し、ドッキング バーのサイズを変更または既存の行を上にツールバーを配置します。
+各 dock バーは、ドッキング行に分割されます。 Dock 行は、 [CDockingPanesRow クラス](reference/cdockingpanesrow-class.md)によって表されます。 各 dock 行には、ツールバーの一覧が含まれています。 ユーザーがツールバーをドッキングするか、同じドッキングバー内のある行から別の行にツールバーを移動すると、フレームワークは新しい行を作成し、それに応じてドッキングバーのサイズを変更するか、または既存の行にツールバーを配置します。
 
-## <a name="mini-frame-windows"></a>ミニフレームの Windows
+## <a name="mini-frame-windows"></a>ミニフレームウィンドウ
 
-フローティング ウィンドウは、ミニフレーム ウィンドウに存在します。 ミニフレーム ウィンドウは、2 つのクラスによって表されます。[CMDITabInfo クラス](../mfc/reference/cmditabinfo-class.md)(これは、1 つのペインを含めることができます) と[CMultiPaneFrameWnd クラス](../mfc/reference/cmultipaneframewnd-class.md)(これは、いくつかのペインを含めることができます)。 コードでは、ペインをフローティング、呼び出す[CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane)します。 ペインがフローティング状態になった後は、フレームワークがミニフレーム ウィンドウを自動的に作成し、ミニフレーム ウィンドウがフローティング ウィンドウの親になります。 フローティング ペインがドッキングし、フレームワークがその親をリセット フローティング ペイン (ツールバー) 用のドッキング バーまたはドッキング サイト (のサイズ変更可能なペイン) になります。
+フローティングペインはミニフレームウィンドウに存在します。 ミニフレームウィンドウは、 [CMDITabInfo クラス](reference/cmditabinfo-class.md)(1 つのペインのみを含めることができます) と[CMultiPaneFrameWnd クラス](reference/cmultipaneframewnd-class.md)(複数のペインを含むことができます) で表されます。 コード内でペインをフローティングするには、 [Cbasepane:: FloatPane](reference/cbasepane-class.md#floatpane)を呼び出します。 ペインがフローティング状態になると、フレームワークによってミニフレームウィンドウが自動的に作成され、ミニフレームウィンドウがフローティングペインの親になります。 フローティングペインがドッキングされると、フレームワークによって親がリセットされ、フローティングペインがドッキングバー (ツールバーの場合) または dock サイト (サイズ変更可能なウィンドウの場合) になります。
 
-## <a name="pane-dividers"></a>ウィンドウの分割
+## <a name="pane-dividers"></a>ペインの区分線
 
-ペインの区分線が (スライダーまたはスプリッターとも呼ばれます) がによって表される、 [CPaneDivider クラス](../mfc/reference/cpanedivider-class.md)します。 ユーザーは、ペインをドッキング、フレームワークは、ドック サイトまたは別のペインで、ペインはドッキングするかどうかに関係なく、ペインの区分線を作成します。 ペインをドッキング サイトにドッキング、ペイン分割バーが呼び出されます、*ペイン分割バーを既定*します。 既定ペイン分割バーでは、ドッキング サイト内のすべてのドッキング ペインのレイアウトを担当します。 ドッキング マネージャーには、この既定ペインの区分線の一覧と、ペインの一覧が維持されます。 ドッキング マネージャーは、すべてのドッキング ペインのレイアウトを行います。
+ペインの区切り線 (名前付きスライダーまたはスプリッター) は、 [Cpanedivider クラス](reference/cpanedivider-class.md)によって表されます。 ユーザーがペインをドッキングすると、ペインがドッキングサイトにドッキングされているか、別のペインにドッキングされているかに関係なく、フレームワークによってペインの区切り線が作成されます。 ペインがドッキングサイトにドッキングされている場合、ペインの区分線は*既定のペインの区分線*と呼ばれます。 既定のペインの区分線は、ドッキングサイトのすべてのドッキングウィンドウのレイアウトを担当します。 Dock マネージャーでは、既定のペインの区切り線の一覧と、ウィンドウの一覧が保持されます。 ドッキングマネージャーは、すべてのドッキングウィンドウのレイアウトを担当します。
 
-## <a name="containers"></a>コンテナー
+## <a name="containers"></a>Containers
 
-すべてのサイズ変更可能なペイン、相互にドッキングされているときは、コンテナーに保持されます。 コンテナーがによって表される、 [CPaneContainer クラス](../mfc/reference/cpanecontainer-class.md)します。 各コンテナーには左端と右端の部分の間で、左側のウィンドウ、右側のウィンドウ、サブ コンテナーの左、右のサブ コンテナーおよび分割線へのポインター。 (*左*と*右*物理辺を参照していませんではなくツリー構造の分岐を識別します)。この方法でウィンドウ、分割ウィンドウのツリーを構築をそのためにまとめてサイズを変更できるウィンドウの複雑なレイアウトを実現できます。 `CPaneContainer`クラスはコンテナーのツリーを保持; ペインと、このツリー内に存在するスライダーの 2 つのリストも保持されます。 コンテナー マネージャーのウィンドウは通常、既定のスライダーと複数のペインを実行するミニフレーム ウィンドウに埋め込まれます。
+相互にドッキングされているすべてのサイズ変更可能なウィンドウは、コンテナーに保持されます。 コンテナーは[Cpanecontainer クラス](reference/cpanecontainer-class.md)によって表されます。 各コンテナーには、左ペイン、右ペイン、左サブコンテナー、右サブコンテナー、および左側と右側の部分の分割線へのポインターがあります。 (*左*と*右*は、物理的な側を参照せず、ツリー構造の分岐を識別します)。このようにして、ウィンドウとスプリッターのツリーを作成することができます。これにより、複数のウィンドウのサイズを変更できる複雑なレイアウトが実現されます。 クラスは、 `CPaneContainer` コンテナーのツリーを保持します。また、このツリーに存在するペインとスライダーの2つのリストも保持します。 ペインコンテナーマネージャーは、通常、複数のウィンドウを表示する既定のスライダーとミニフレームウィンドウに埋め込まれます。
 
-## <a name="auto-hide-control-bars"></a>コントロール バーを自動的に隠す
+## <a name="auto-hide-control-bars"></a>コントロールバーの自動非表示
 
-既定では、各`CDockablePane`自動的に隠す機能をサポートします。 ユーザーが暗証番号 (pin) ボタンのキャプションをクリックすると、`CDockablePane`フレームワークは、ウィンドウを自動非表示モードに切り替えます。 クリックを処理するために、フレームワークを作成、 [CMFCAutoHideBar クラス](../mfc/reference/cmfcautohidebar-class.md)と[CMFCAutoHideButton クラス](../mfc/reference/cmfcautohidebutton-class.md)に関連付けられている、`CMFCAutoHideBar`オブジェクト。 フレームワークは、新しい`CMFCAutoHideBar`上、 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)します。 フレームワークもアタッチ、`CMFCAutoHideButton`ツールバーにします。 [CDockingManager Class](../mfc/reference/cdockingmanager-class.md)保持、`CDockablePane`します。
+既定では、 `CDockablePane` は自動的に隠す機能をサポートしています。 ユーザーがのキャプションの [ピン留め] ボタンをクリックすると、フレームワークによって `CDockablePane` ウィンドウが自動的に非表示モードに切り替わります。 このクリックを処理するために、フレームワークは、オブジェクトに関連付けられた[Cmfcautohidebar クラス](reference/cmfcautohidebar-class.md)と[Cmfcautohidebar クラス](reference/cmfcautohidebutton-class.md)を作成し `CMFCAutoHideBar` ます。 フレームワークは、新しいを `CMFCAutoHideBar` [CAutoHideDockSite](reference/cautohidedocksite-class.md)に配置します。 フレームワークは、を `CMFCAutoHideButton` ツールバーにもアタッチします。 [CDockingManager クラス](reference/cdockingmanager-class.md)はを保持し `CDockablePane` ます。
 
-## <a name="tabbed-control-bars-and-outlook-bars"></a>タブ付きのコントロール バーおよび Outlook バー
+## <a name="tabbed-control-bars-and-outlook-bars"></a>タブ付きコントロールバーと Outlook バー
 
-[CMFCBaseTabCtrl クラス](../mfc/reference/cmfcbasetabctrl-class.md)切り離し可能なタブをタブ付きウィンドウの基本機能を実装します。 使用する、`CMFCBaseTabCtrl`オブジェクト、初期化、 [CBaseTabbedPane クラス](../mfc/reference/cbasetabbedpane-class.md)アプリケーションでします。 `CBaseTabbedPane` 派生`CDockablePane`へのポインターを保持し、`CMFCBaseTabCtrl`オブジェクト。 `CBaseTabbedPane`ドッキングしてタブ付きコントロール バーのサイズを変更することができます。 使用[cdockablepane::attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd)ドッキングされ、タブ付きされるコントロール バーを動的に作成します。
+[CMFCBaseTabCtrl クラス](reference/cmfcbasetabctrl-class.md)は、切り離し可能なタブを持つタブ付きウィンドウの基本機能を実装します。 オブジェクトを使用するには `CMFCBaseTabCtrl` 、アプリケーションで[CBaseTabbedPane クラス](reference/cbasetabbedpane-class.md)を初期化します。 `CBaseTabbedPane`はから派生 `CDockablePane` し、オブジェクトへのポインターを保持し `CMFCBaseTabCtrl` ます。 を `CBaseTabbedPane` 使用すると、ユーザーはタブ付きコントロールバーをドッキングしたり、サイズを変更したりできます。 [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd)を使用して、ドッキングされたコントロールバーとタブを動的に作成します。
 
-Outlook バー コントロールがタブ バーにも基づいています。 [CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)から派生`CBaseTabbedPane`します。 Outlook バーを使用する方法の詳細については、次を参照してください。 [CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)します。
+Outlook バーコントロールは、タブ付きバーにも基づいています。 [Cmfcoutlookbar クラス](reference/cmfcoutlookbar-class.md)はから派生 `CBaseTabbedPane` しています。 Outlook バーの使用方法の詳細については、「 [Cmfcoutlookbar クラス](reference/cmfcoutlookbar-class.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../mfc/mfc-concepts.md)
+[概念](mfc-concepts.md)

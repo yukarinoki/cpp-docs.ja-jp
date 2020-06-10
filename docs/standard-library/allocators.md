@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457541"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623512"
 ---
 # <a name="allocators"></a>アロケーター
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-C++ 標準ライブラリでは、アロケーターの既定の実装が提供されます。 C++11 以降では、既定のアロケーターがより小さなインターフェイスを公開するように更新されています。この新しいアロケーターは、*最小アロケーター*と呼ばれています。 特に、最小アロケーターの `construct()` メンバーは、パフォーマンスを大幅に改善できる移動セマンティクスをサポートしています。 ほとんどの場合、この既定のアロケーターがあれば十分です。 C++11 では、`std::function`、`shared_ptr, allocate_shared()`、`basic_string` など、すべての標準ライブラリの型、およびアロケーター型のパラメーターを受け取る関数が、最小アロケーターをサポートしています。  既定のアロケーターの詳細については、「[allocator クラス](../standard-library/allocator-class.md)」を参照してください。
+C++ 標準ライブラリでは、アロケーターの既定の実装が提供されます。 C++11 以降では、既定のアロケーターがより小さなインターフェイスを公開するように更新されています。この新しいアロケーターは、*最小アロケーター*と呼ばれています。 特に、最小アロケーターの `construct()` メンバーは、パフォーマンスを大幅に改善できる移動セマンティクスをサポートしています。 ほとんどの場合、この既定のアロケーターがあれば十分です。 C++11 では、`std::function`、`shared_ptr, allocate_shared()`、`basic_string` など、すべての標準ライブラリの型、およびアロケーター型のパラメーターを受け取る関数が、最小アロケーターをサポートしています。  既定のアロケーターの詳細については、「[allocator クラス](allocator-class.md)」を参照してください。
 
 ## <a name="writing-your-own-allocator-c11"></a>独自のアロケーターの記述 (C++ 11)
 
@@ -119,8 +119,8 @@ C++ 03 では、C++ 標準ライブラリのコンテナーで使用されるア
 |`allocate`|`operator!=`|
 |`construct`||
 
-これらの型定義およびメソッドの詳細については、「[allocator クラス](../standard-library/allocator-class.md)」を参照してください。
+これらの型定義およびメソッドの詳細については、「[allocator クラス](allocator-class.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリリファレンス](cpp-standard-library-reference.md)

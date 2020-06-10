@@ -7,29 +7,29 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619731"
 ---
 # <a name="building-on-the-framework"></a>フレームワークを使ったアプリケーションの作成
 
-MFC フレームワークとアプリケーションの構成でのロールは、アプリケーション固有のソース コードを指定して、どのようなメッセージと応答するコマンドを定義することで、コンポーネントを接続するには。 C++ 言語および標準的な C++ 手法を使用して、クラス ライブラリで指定されているから、独自のアプリケーション固有のクラスを派生およびをオーバーライドし、基本クラスの動作を追加します。
+MFC フレームワークを使用してアプリケーションを構成する際の役割は、アプリケーション固有のソースコードを提供し、応答するメッセージとコマンドを定義することによってコンポーネントを接続することです。 C++ 言語と標準 C++ 手法を使用して、クラスライブラリによって提供されるクラスから独自のアプリケーション固有のクラスを派生させ、基底クラスの動作をオーバーライドおよび拡張します。
 
-関連のトピックでは、次の表は、次の通常操作とフレームワークの役割とお客様の責任の一般的な手順を示します。
+関連トピックでは、次の表に、通常従う操作の一般的な順序と、その役割とフレームワークの役割について説明します。
 
-- [フレームワークとアプリケーションを構築するためのシーケンス](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+- [フレームワークを使用してアプリケーションをビルドするためのシーケンス](sequence-of-operations-for-building-mfc-applications.md)
 
-- [OLE アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+- [OLE アプリケーションの作成手順](sequence-of-operations-for-creating-ole-applications.md)
 
-- [ActiveX コントロールの作成手順](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+- [ActiveX コントロールの作成手順](sequence-of-operations-for-creating-activex-controls.md)
 
-- [データベース アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-database-applications.md)
+- [データベース アプリケーションの作成手順](sequence-of-operations-for-creating-database-applications.md)
 
-ほとんどの場合、別のオプションは一部の手順は、MFC アプリケーションを作成するための手順のシーケンスとしてこれらのテーブルをフォローできます。 たとえば、ほとんどのアプリケーションは、使用できるいくつかの型からビュー クラスの 1 つの型を使用します。
+ほとんどの場合、これらの表は、MFC アプリケーションを作成するための一連の手順として使用できます。ただし、一部の手順は代替オプションです。 たとえば、ほとんどのアプリケーションでは、いくつかの種類のビュークラスを使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC の一般的なトピック](../mfc/general-mfc-topics.md)
+[MFC の一般的なトピック](general-mfc-topics.md)

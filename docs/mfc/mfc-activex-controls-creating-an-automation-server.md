@@ -1,52 +1,52 @@
 ---
-title: MFC ActiveX コントロール:オートメーション サーバーの作成
+title: 'MFC ActiveX コントロール : オートメーション サーバーの作成'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers [MFC], MFC ActiveX controls
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: 01f0162e124c5c49d45ce4a90f5243c88b09b5a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2c941e43e810845560b4c35c558ec70248c21ed
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225251"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622381"
 ---
-# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX コントロール:オートメーション サーバーの作成
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX コントロール : オートメーション サーバーの作成
 
-MFC ActiveX コントロールは、別のアプリケーションでそのコントロールを埋め込むと、アプリケーションのコントロールのメソッドを呼び出すことをプログラムでの目的でオートメーション サーバーとして開発できます。 このようなコントロールは ActiveX コントロール コンテナーでホストできますもよい。
+プログラムを使用してそのコントロールを別のアプリケーションに埋め込み、アプリケーションからコントロール内のメソッドを呼び出すために、オートメーションサーバーとして MFC ActiveX コントロールを開発できます。 このようなコントロールは、ActiveX コントロールコンテナーで引き続きホストできます。
 
-### <a name="to-create-a-control-as-an-automation-server"></a>オートメーション サーバーとしてコントロールを作成するには
+### <a name="to-create-a-control-as-an-automation-server"></a>オートメーションサーバーとしてコントロールを作成するには
 
-1. [作成](../mfc/reference/mfc-activex-control-wizard.md)コントロール。
+1. コントロールを[作成](reference/mfc-activex-control-wizard.md)します。
 
-1. [メソッドを追加](../mfc/mfc-activex-controls-methods.md)します。
+1. [メソッドを追加](mfc-activex-controls-methods.md)します。
 
-1. オーバーライド[オーバーライド](../mfc/reference/colecontrol-class.md#isinvokeallowed)します。
+1. [Isinvokeallowed](reference/colecontrol-class.md#isinvokeallowed)をオーバーライドします。
 
 1. コントロールをビルドします。
 
-### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>オートメーション サーバーでメソッドをプログラムでアクセスするには
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>オートメーションサーバーでプログラムによってメソッドにアクセスするには
 
-1. たとえば、アプリケーションを作成、 [MFC exe](../mfc/reference/mfc-application-wizard.md)します。
+1. [MFC exe](reference/mfc-application-wizard.md)などのアプリケーションを作成します。
 
-1. 先頭に、`InitInstance`関数は、次の行を追加します。
+1. 関数の先頭に、 `InitInstance` 次の行を追加します。
 
-   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
-1. クラス ビューでは、プロジェクト ノードを右クリックして**typelib クラス追加**タイプ ライブラリをインポートします。
+1. クラスビューで、プロジェクトノードを右クリックし、[ **typelib からクラスを追加**] を選択してタイプライブラリをインポートします。
 
-   これにより、ファイル名拡張子の .h および .cpp ファイルがプロジェクトに追加されます。
+   これにより、ファイル名拡張子 .h と .cpp のファイルがプロジェクトに追加されます。
 
-1. ヘッダー ファイルでクラスの ActiveX コントロールの 1 つまたは複数のメソッドを呼び出すことは、次の行を追加します:`#include filename.h`ファイル名は、タイプ ライブラリをインポートしたときに作成されたヘッダー ファイルの名前です。
+1. ActiveX コントロールで1つ以上のメソッドを呼び出すクラスのヘッダーファイルで、次の行を追加します。 `#include filename.h` ここで、file name はタイプライブラリをインポートしたときに作成されたヘッダーファイルの名前です。
 
-1. ActiveX コントロールのメソッドの呼び出しを行ったは関数では、コントロールのラッパー クラスのオブジェクトを作成するコードを追加し、ActiveX オブジェクトを作成します。 たとえば、次の MFC コードがインスタンス化、`CCirc`制御、キャプションのプロパティを取得およびダイアログ ボックスで [ok] ボタンがクリックされたときに、結果を表示します。
+1. ActiveX コントロールのメソッドへの呼び出しが行われる関数では、コントロールのラッパークラスのオブジェクトを作成し、ActiveX オブジェクトを作成するコードを追加します。 たとえば、次の MFC コードでは、コントロールをインスタンス化し、 `CCirc` Caption プロパティを取得して、ダイアログボックスで [OK] ボタンをクリックしたときに結果を表示します。
 
-   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
-アプリケーションで使用した後、ActiveX コントロールにメソッドを追加する場合は、タイプ ライブラリをインポートしたときに作成されたファイルを削除するアプリケーションでコントロールの最新バージョンの使用を開始できます。 再度、タイプ ライブラリをインポートします。
+ActiveX コントロールをアプリケーションで使用した後に、そのコントロールにメソッドを追加する場合は、タイプライブラリをインポートしたときに作成されたファイルを削除することによって、アプリケーションで最新バージョンのコントロールの使用を開始できます。 その後、タイプライブラリをもう一度インポートします。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
+[MFC ActiveX コントロール](mfc-activex-controls.md)

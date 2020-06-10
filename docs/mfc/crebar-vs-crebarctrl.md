@@ -6,31 +6,31 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 94f889be453a17a55357a260bd2a0c07037f6ded
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445287"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620456"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar と CReBarCtrl の比較
 
-MFC には、 [CReBar](../mfc/reference/crebar-class.md)と[crebarctrl](../mfc/reference/crebarctrl-class.md) (Windows コモンコントロール API をラップする) の2つのクラスが用意されています。 `CReBar` には、rebar コモンコントロールのすべての機能が用意されており、必要な一般的なコントロール設定と構造の多くがユーザーに対して処理されます。
+MFC には、 [CReBar](reference/crebar-class.md)と[crebarctrl](reference/crebarctrl-class.md) (Windows コモンコントロール API をラップする) の2つのクラスが用意されています。 `CReBar`rebar コモンコントロールのすべての機能を提供し、必要な共通コントロール設定と構造体の多くを処理します。
 
-`CReBarCtrl` は Win32 rebar コントロールのラッパークラスであるため、rebar を MFC アーキテクチャに統合する予定がない場合は、実装が簡単になる可能性があります。 `CReBarCtrl` を使用し、rebar を MFC アーキテクチャに統合する予定がある場合は、rebar コントロールの操作を MFC に伝えるために、さらに注意する必要があります。 この通信は難しくありません。ただし、`CReBar`を使用する場合は、不要な追加作業です。
+`CReBarCtrl`は、Win32 rebar コントロールのラッパークラスであるため、rebar を MFC アーキテクチャに統合する予定がない場合は、実装が簡単になる可能性があります。 Rebar を使用して MFC アーキテクチャに統合する予定がある場合は `CReBarCtrl` 、さらに注意を払って、rebar コントロールの操作を mfc に伝える必要があります。 この通信は難しくありません。ただし、を使用する場合は、不要な追加作業です `CReBar` 。
 
-Visual C++には、rebar コモンコントロールを利用する2つの方法が用意されています。
+Visual C++ には、rebar コモンコントロールを利用する2つの方法があります。
 
-- `CReBar`を使用して rebar を作成し、次に[CReBar:: GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl)を呼び出して、`CReBarCtrl` メンバー関数へのアクセスを取得します。
+- を使用して rebar を作成 `CReBar` し、 [CReBar:: GetReBarCtrl](reference/crebar-class.md#getrebarctrl)を呼び出して、メンバー関数へのアクセスを取得し `CReBarCtrl` ます。
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` は、rebar オブジェクトの**this**ポインターをキャストするインラインメンバー関数です。 これは、実行時に関数呼び出しにオーバーヘッドがないことを意味します。
+    >  `CReBar::GetReBarCtrl`は、rebar オブジェクトの**this**ポインターをキャストするインラインメンバー関数です。 これは、実行時に関数呼び出しにオーバーヘッドがないことを意味します。
 
-- [Crebarctrl](../mfc/reference/crebarctrl-class.md)のコンストラクターを使用して rebar を作成します。
+- [Crebarctrl](reference/crebarctrl-class.md)のコンストラクターを使用して rebar を作成します。
 
-どちらの方法でも、rebar コントロールのメンバー関数へのアクセス権が付与されます。 `CReBar::GetReBarCtrl`を呼び出すと、いずれかのメンバー関数を使用できるように、`CReBarCtrl` オブジェクトへの参照が返されます。 `CReBar`を使用した rebar の構築と作成の詳細については、「 [CReBar](../mfc/reference/crebar-class.md) 」を参照してください。
+どちらの方法でも、rebar コントロールのメンバー関数へのアクセス権が付与されます。 を呼び出すと `CReBar::GetReBarCtrl` 、 `CReBarCtrl` メンバー関数のいずれかを使用できるように、オブジェクトへの参照が返されます。 を使用した rebar の構築と作成の詳細については、「 [CReBar](reference/crebar-class.md) 」を参照してください `CReBar` 。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CReBarCtrl の使い方](using-crebarctrl.md)<br/>
+[制限](controls-mfc.md)

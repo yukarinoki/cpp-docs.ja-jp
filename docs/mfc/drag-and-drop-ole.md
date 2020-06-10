@@ -10,16 +10,16 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 23680765377d325bdc1f8878daf4d4fc553a1304
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623187"
 ---
 # <a name="ole-drag-and-drop"></a>OLE のドラッグ アンド ドロップ
 
-OLE のドラッグアンドドロップ機能は、主にデータのコピーと貼り付けを行うためのショートカットです。 クリップボードを使用してデータをコピーまたは貼り付ける場合は、いくつかの手順を実行する必要があります。 データを選択し、 **[編集]** メニューの **[切り取り]** または **[コピー]** をクリックします。 次に、目的のアプリまたはウィンドウに移動し、ターゲットの場所にカーソルを置きます。 最後に、メニューから [**編集** > **貼り付け**] を選択します。
+OLE のドラッグアンドドロップ機能は、主にデータのコピーと貼り付けを行うためのショートカットです。 クリップボードを使用してデータをコピーまたは貼り付ける場合は、いくつかの手順を実行する必要があります。 データを選択し、[**編集**] メニューの [**切り取り**] または [**コピー** ] をクリックします。 次に、目的のアプリまたはウィンドウに移動し、ターゲットの場所にカーソルを置きます。 最後に、メニューから [貼り付け]**を選択し**  >  **Paste**ます。
 
 OLE ドラッグアンドドロップ機能は、ファイルマネージャーのドラッグアンドドロップメカニズムとは異なります。 ファイルマネージャーは、ファイル名のみを処理でき、ファイル名をアプリケーションに渡すために特に設計されています。 OLE でのドラッグアンドドロップは、より一般的な操作です。 これにより、クリップボードに配置できる任意のデータをドラッグアンドドロップすることができます。
 
@@ -27,31 +27,31 @@ OLE ドラッグアンドドロップを使用する場合は、プロセスか�
 
 OLE ドラッグアンドドロップを使用すると、データを1つの場所から別の場所に簡単に転送できます。ドキュメント内、異なるドキュメント間、またはアプリケーション間でデータを転送できます。 コンテナーまたはサーバーアプリケーションで実装される場合があります。 すべてのアプリケーションには、ドロップソース、ドロップ先、またはその両方を指定できます。 アプリケーションがドロップソースとドロップ先の両方のサポートを実装している場合は、子ウィンドウ間でドラッグアンドドロップを行うことも、1つのウィンドウ内でドラッグアンドドロップすることもできます。 この機能により、アプリケーションの使用が非常に簡単になります。
 
-[データオブジェクトとデータソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)の記事では、アプリケーションにデータ転送を実装する方法について説明します。 また、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)を調べると便利です。
+[データオブジェクトとデータソース (OLE)](data-objects-and-data-sources-ole.md)の記事では、アプリケーションにデータ転送を実装する方法について説明します。 また、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)を調べると便利です。
 
-## <a name="implement-a-drop-source"></a>ドロップソースの実装
+## <a name="implement-a-drop-source"></a><a name="implement-a-drop-source"></a>ドロップソースの実装
 
 アプリケーションでドラッグアンドドロップ操作にデータを提供するには、ドロップソースを実装します。 ドロップソースの基本的な実装は比較的単純です。 最初の手順は、ドラッグ操作を開始するイベントを特定することです。 推奨されるユーザーインターフェイスガイドラインでは、選択したデータ内のあるポイントで**WM_LBUTTONDOWN**イベントが発生したときのドラッグ操作の開始を定義します。 MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)は、次のガイドラインに従います。
 
-アプリケーションがコンテナーであり、選択したデータが `COleClientItem`型のリンクされたオブジェクトまたは埋め込みオブジェクトの場合は、その `DoDragDrop` メンバー関数を呼び出します。 それ以外の場合は、`COleDataSource` オブジェクトを構築し、選択範囲で初期化して、データソースオブジェクトの `DoDragDrop` メンバー関数を呼び出します。 アプリケーションがサーバーの場合は、`COleServerItem::DoDragDrop`を使用します。 標準のドラッグアンドドロップ動作のカスタマイズの詳細については、「[ドラッグアンドドロップのカスタマイズ](#customize-drag-and-drop)」セクションを参照してください。
+アプリケーションがコンテナーであり、選択したデータが型のリンクされたオブジェクトまたは埋め込みオブジェクトの場合は `COleClientItem` 、その `DoDragDrop` メンバー関数を呼び出します。 それ以外の場合は、オブジェクトを構築し、 `COleDataSource` 選択項目を使用して初期化し、データソースオブジェクトの `DoDragDrop` メンバー関数を呼び出します。 アプリケーションがサーバーである場合は、を使用 `COleServerItem::DoDragDrop` します。 標準のドラッグアンドドロップ動作のカスタマイズの詳細については、「[ドラッグアンドドロップのカスタマイズ](#customize-drag-and-drop)」セクションを参照してください。
 
-`DoDragDrop` が**DROPEFFECT_MOVE**を返した場合は、ソースドキュメントからすぐにソースデータを削除します。 `DoDragDrop` からのその他の戻り値には、ドロップソースに対する影響はありません。
+が `DoDragDrop` **DROPEFFECT_MOVE**を返した場合は、ソースドキュメントからすぐにソースデータを削除します。 からの他の戻り値 `DoDragDrop` は、ドロップソースには影響しません。
 
-詳細については、「 [ole データオブジェクトとデータソース: 作成と破棄](../mfc/data-objects-and-data-sources-creation-and-destruction.md)」および「 [ole データオブジェクトとデータソース: 操作](../mfc/data-objects-and-data-sources-manipulation.md)\.」を参照してください。
+詳細については、「 [ole データオブジェクトとデータソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)」および「 [ole データオブジェクトとデータソース: 操作](data-objects-and-data-sources-manipulation.md)」を参照してください。\.
 
-## <a name="implement-a-drop-target"></a>ドロップ先の実装
+## <a name="implement-a-drop-target"></a><a name="implement-a-drop-target"></a>ドロップ先の実装
 
 ドロップソースよりもドロップターゲットを実装するには若干の作業が必要ですが、比較的単純です。
 
 ### <a name="to-implement-an-ole-drop-target"></a>OLE ドロップターゲットを実装するには
 
-1. まだ存在していない場合は、アプリケーションの `InitInstance` メンバー関数に `AfxOleInit` の呼び出しを追加します。 この呼び出しは、OLE ライブラリを初期化するために必要です。
+1. まだ存在しない場合は、 `AfxOleInit` アプリケーションのメンバー関数にの呼び出しを追加し `InitInstance` ます。 この呼び出しは、OLE ライブラリを初期化するために必要です。
 
-1. ドロップ先にするアプリケーションの各ビューにメンバー変数を追加します。 このメンバー変数は `COleDropTarget` 型であるか、またはそれから派生したクラスである必要があります。
+1. ドロップ先にするアプリケーションの各ビューにメンバー変数を追加します。 このメンバー変数は、型 `COleDropTarget` またはそれから派生したクラスである必要があります。
 
-1. **WM_CREATE**メッセージ (通常 `OnCreate`) を処理するビュークラスの関数から、新しいメンバー変数の `Register` メンバー関数を呼び出します。 ビューが破棄されると、`Revoke` が自動的に呼び出されます。
+1. **WM_CREATE**メッセージ (通常は) を処理するビュークラスの関数から `OnCreate` 、新しいメンバー変数の `Register` メンバー関数を呼び出します。 `Revoke`は、ビューが破棄されると自動的に呼び出されます。
 
-1. 次の関数をオーバーライドします。 アプリケーション全体で同じ動作が必要な場合は、これらの関数をビュークラスでオーバーライドします。 分離されたケースで動作を変更する場合、または非`CView` ウィンドウでの削除を有効にする場合は、`COleDropTarget`派生クラスでこれらの関数をオーバーライドします。
+1. 次の関数をオーバーライドします。 アプリケーション全体で同じ動作が必要な場合は、これらの関数をビュークラスでオーバーライドします。 分離されたケースで動作を変更する場合、または windows 以外での削除を有効にする場合は `CView` 、派生クラスでこれらの関数をオーバーライドし `COleDropTarget` ます。
 
    | オーバーライド | 許可する方法 |
    | -------- | -------- |
@@ -63,33 +63,33 @@ OLE ドラッグアンドドロップを使用すると、データを1つの場
 
 MAINVIEW を参照してください。これらの関数を連携させる方法の例については、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)の一部である CPP ファイルをご利用ください。
 
-詳細については、「 [ole データオブジェクトとデータソース: 作成と破棄](../mfc/data-objects-and-data-sources-creation-and-destruction.md)」および「 [ole データオブジェクトとデータソース: 操作](../mfc/data-objects-and-data-sources-manipulation.md)\.」を参照してください。
+詳細については、「 [ole データオブジェクトとデータソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)」および「 [ole データオブジェクトとデータソース: 操作](data-objects-and-data-sources-manipulation.md)」を参照してください。\.
 
-## <a name="customize-drag-and-drop"></a>ドラッグアンドドロップのカスタマイズ
+## <a name="customize-drag-and-drop"></a><a name="customize-drag-and-drop"></a>ドラッグアンドドロップのカスタマイズ
 
 ほとんどのアプリケーションでは、ドラッグアンドドロップ機能の既定の実装で十分です。 ただし、アプリケーションによっては、この標準動作の変更が必要になる場合があります。 ここでは、これらの既定値を変更するために必要な手順について説明します。 この手法を使用すると、複合ドキュメントをサポートしていないアプリケーションをドロップソースにすることができます。
 
-標準の OLE ドラッグアンドドロップ動作をカスタマイズしている場合、または OLE 以外のアプリケーションがある場合は、データを格納する `COleDataSource` オブジェクトを作成する必要があります。 ユーザーがドラッグアンドドロップ操作を開始すると、コードでは、ドラッグアンドドロップ操作をサポートする他のクラスからではなく、このオブジェクトから `DoDragDrop` 関数を呼び出す必要があります。
+標準の OLE ドラッグアンドドロップ動作をカスタマイズしている場合、または OLE 以外のアプリケーションがある場合は、 `COleDataSource` データを格納するオブジェクトを作成する必要があります。 ユーザーがドラッグアンドドロップ操作を開始すると、コードでは、ドラッグアンド `DoDragDrop` ドロップ操作をサポートする他のクラスからではなく、このオブジェクトから関数を呼び出す必要があります。
 
-必要に応じて、`COleDropSource` オブジェクトを作成して、変更する動作の種類に応じて、削除を制御し、その機能の一部をオーバーライドすることもできます。 このドロップソースオブジェクトを `COleDataSource::DoDragDrop` に渡して、これらの関数の既定の動作を変更します。 これらの異なるオプションを使用すると、アプリケーションでドラッグアンドドロップ操作をサポートする方法に大きな柔軟性がもたらされます。 データソースの詳細については、「[データオブジェクトとデータソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)」を参照してください。
+必要に応じて、オブジェクトを作成して `COleDropSource` 、変更する動作の種類に応じて、削除を制御し、その機能の一部をオーバーライドすることもできます。 次に、このドロップソースオブジェクトをに渡し `COleDataSource::DoDragDrop` て、これらの関数の既定の動作を変更します。 これらの異なるオプションを使用すると、アプリケーションでドラッグアンドドロップ操作をサポートする方法に大きな柔軟性がもたらされます。 データソースの詳細については、「[データオブジェクトとデータソース (OLE)](data-objects-and-data-sources-ole.md)」を参照してください。
 
 ドラッグアンドドロップ操作をカスタマイズするには、次の関数をオーバーライドします。
 
 | オーバーライド | カスタマイズするには |
 | -------- | ------------ |
-| `OnBeginDrag` | `DoDragDrop`を呼び出した後に、ドラッグ操作を開始する方法。 |
+| `OnBeginDrag` | を呼び出した後に、ドラッグ操作を開始する方法 `DoDragDrop` 。 |
 | `GiveFeedback` | さまざまなドロップ結果の視覚的なフィードバック (カーソルの外観など)。 |
 | `QueryContinueDrag` | ドラッグアンドドロップ操作の終了。 この関数を使用すると、ドラッグ操作中に修飾子キーの状態を確認できます。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE](../mfc/ole-in-mfc.md)\
-[OLE データオブジェクトとデータソース](../mfc/data-objects-and-data-sources-ole.md)\
-[OLE データオブジェクトとデータソース:\ の作成と破棄](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
-[OLE データオブジェクトとデータソース: 操作](../mfc/data-objects-and-data-sources-manipulation.md)\
-[COleClientItem::D odragdrop](../mfc/reference/coleclientitem-class.md#dodragdrop)\
-[COleDataSource クラス](../mfc/reference/coledatasource-class.md)\
-[COleDataSource::D odragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)\
-[COleDropSource クラス](../mfc/reference/coledropsource-class.md)\
-[COleDropTarget クラス](../mfc/reference/coledroptarget-class.md)\
-[CView:: OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+[OLE](ole-in-mfc.md)\
+[OLE データオブジェクトとデータソース](data-objects-and-data-sources-ole.md)\
+[OLE データオブジェクトとデータソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)\
+[OLE データオブジェクトとデータソース: 操作](data-objects-and-data-sources-manipulation.md)\
+[COleClientItem::D oDragDrop](reference/coleclientitem-class.md#dodragdrop)\
+[COleDataSource クラス](reference/coledatasource-class.md)\
+[COleDataSource::D oDragDrop](reference/coledatasource-class.md#dodragdrop)\
+[COleDropSource クラス](reference/coledropsource-class.md)\
+[COleDropTarget クラス](reference/coledroptarget-class.md)\
+[CView:: OnDragLeave](reference/cview-class.md#ondragleave)
