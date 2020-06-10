@@ -1,5 +1,5 @@
 ---
-title: コンテナー:クライアント アイテムの状態
+title: 'コンテナー : クライアント アイテムの状態'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,41 +7,41 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 927211ccec35d8ec26e2f76b971c59b80248ab96
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625988"
 ---
-# <a name="containers-client-item-states"></a>コンテナー:クライアント アイテムの状態
+# <a name="containers-client-item-states"></a>コンテナー : クライアント アイテムの状態
 
-この記事では、クライアントの項目がその有効期間内を通過するさまざまな状態について説明します。
+この記事では、クライアント項目が有効期間内に通過するさまざまな状態について説明します。
 
-クライアント アイテムは、作成、アクティブ化、変更、および保存されるいくつかの状態を通過します。 項目の状態の変更、フレームワークによって毎回[として](../mfc/reference/coleclientitem-class.md#onchange)で、 **OLE_CHANGED_STATE**通知します。 2 番目のパラメーターの値は、`COleClientItem::ItemState`列挙体。 次のいずれかを指定できます。
+クライアント項目は、作成、アクティブ化、変更、および保存されると、いくつかの状態を通過します。 フレームワークは、項目の状態が変化するたびに、 **OLE_CHANGED_STATE**通知を使用して[COleClientItem:: OnChange](reference/coleclientitem-class.md#onchange)を呼び出します。 2番目のパラメーターは、列挙体の値です `COleClientItem::ItemState` 。 次のいずれかを指定できます。
 
-- *COleClientItem::emptyState*
+- *COleClientItem:: emptyState*
 
-- *COleClientItem::loadedState*
+- *COleClientItem:: ロード状態*
 
-- *COleClientItem::openState*
+- *COleClientItem:: openState*
 
-- *COleClientItem::activeState*
+- *COleClientItem:: activeState*
 
-- *COleClientItem::activeUIState*
+- *COleClientItem:: activeUIState*
 
-空の状態でクライアント アイテムはまだ完全項目です。 メモリが、割り当てられていますが、OLE アイテムのデータで初期化されていません。 これは、クライアントの項目を呼び出すことによって作成されたときの状態**新しい**が、一般的な 2 段階の作成の 2 番目の手順を実施されていません。
+空の状態では、クライアント項目はまだ完全な項目ではありません。 メモリが割り当てられていますが、OLE 項目のデータでまだ初期化されていません。 これは、**新しい**への呼び出しによって作成されたクライアント項目の状態ですが、通常の2段階の作成の2番目の手順はまだ行われていません。
 
-呼び出すことによって実行される、2 番目の手順で`COleClientItem::CreateFromFile`別または`CreateFrom` *xxxx*関数の場合、項目が作成される完全にします。 (ファイルまたはクリップボードなど、他のソース) から OLE データが関連付けられている、 `COleClientItem`-派生オブジェクト。 これで、アイテムが読み込み済み状態です。
+2番目の手順では、または別の xxxx 関数を呼び出すことで実行されます。この場合、 `COleClientItem::CreateFromFile` 項目は完全に `CreateFrom` *xxxx*作成されます。 OLE データ (ファイルまたはクリップボードなどの他のソース) が、から派生したオブジェクトに関連付けられてい `COleClientItem` ます。 これで、項目が読み込まれた状態になります。
 
-項目がされているサーバーのウィンドウで開かれているではなく、コンテナーのドキュメント内で開かれているときに開いている (または完全なオープン) の状態になります。 この状態で、クロスハッチ通常を描画、項目がアクティブであることを示す別の場所のコンテナーのウィンドウ内の項目の形式をします。
+コンテナーのドキュメント内ではなく、サーバーのウィンドウで項目が開かれている場合は、開いている (または完全に開いている) 状態になります。 この状態では、通常、項目が他の場所でアクティブであることを示すために、コンテナーのウィンドウ内の項目の表現に交差するハッチが描画されます。
 
-項目はインプレース アクティブ化時に合格した通常のみアクティブな状態を簡単にします。 メニューのツールバー、およびコンテナーの場合は、その他のユーザー インターフェイス コンポーネントのサーバーにマージ、UI のアクティブな状態を入力します。 これらのユーザー インターフェイス コンポーネントの存在は、アクティブな状態から UI のアクティブな状態を区別します。 それ以外の場合、アクティブな状態では、UI のアクティブな状態に似ています。 サーバーは、元に戻すをサポートする場合は、サーバーが読み込まれたまたはオープン状態に到達するまで OLE 項目の元に戻す状態情報を保持するために必要です。
+項目が所定の位置でアクティブ化されると、通常は、アクティブな状態によって一時的にのみ渡されます。 次に、UI のアクティブ状態に入ります。この状態では、サーバーによって、メニュー、ツールバー、およびその他のユーザーインターフェイスコンポーネントがコンテナーのものと結合されています。 これらのユーザーインターフェイスコンポーネントが存在すると、UI のアクティブな状態がアクティブな状態と区別されます。 それ以外の場合、アクティブな状態は UI のアクティブな状態に似ています。 サーバーで Undo がサポートされている場合、読み込まれた状態または開いた状態になるまで、サーバーは OLE 項目の元に戻す状態の情報を保持する必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[コンテナー](../mfc/containers.md)<br/>
-[アクティベーション](../mfc/activation-cpp.md)<br/>
-[コンテナー:クライアント アイテム通知](../mfc/containers-client-item-notifications.md)<br/>
-[トラッカー](../mfc/trackers.md)<br/>
-[CRectTracker クラス](../mfc/reference/crecttracker-class.md)
+[Containers](containers.md)<br/>
+[アクティブ化](activation-cpp.md)<br/>
+[コンテナー: クライアント アイテムへの通知](containers-client-item-notifications.md)<br/>
+[トラッカー](trackers.md)<br/>
+[CRectTracker クラス](reference/crecttracker-class.md)

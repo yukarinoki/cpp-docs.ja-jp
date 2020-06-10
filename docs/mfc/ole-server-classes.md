@@ -7,42 +7,42 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 92dec514611dcce7d6c666fdd271843e69561637
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 06f5cf0985756506e42c7ad9fde24641b5a0ce93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619861"
 ---
 # <a name="ole-server-classes"></a>OLE サーバー クラス
 
-これらのクラスは、サーバーアプリケーションによって使用されます。 サーバードキュメントは、`CDocument`からではなく、`COleServerDoc` から派生します。 `COleServerDoc` は `COleLinkingDoc`から派生しているため、サーバードキュメントは、リンクをサポートするコンテナーでもあることに注意してください。
+これらのクラスは、サーバーアプリケーションによって使用されます。 サーバードキュメントは、 `COleServerDoc` からではなくから派生 `CDocument` します。 `COleServerDoc`はから派生しているため `COleLinkingDoc` 、サーバードキュメントはリンクをサポートするコンテナーでもあることに注意してください。
 
-`COleServerItem` クラスは、文書またはドキュメントの一部を表し、別のドキュメントに埋め込むことも、リンク先として使用することもできます。
+クラスは、文書 `COleServerItem` またはドキュメントの一部を表し、別のドキュメントに埋め込んだり、リンク先として使用したりできます。
 
-`COleIPFrameWnd` と `COleResizeBar` では、オブジェクトがコンテナー内にある間はインプレース編集がサポートされ、`COleTemplateServer` はドキュメントとビューのペアの作成をサポートしているため、他のアプリケーションからの OLE オブジェクトを編集できます。
+`COleIPFrameWnd`と `COleResizeBar` は、オブジェクトがコンテナー内にあるときのインプレース編集をサポートし、 `COleTemplateServer` 他のアプリケーションからの OLE オブジェクトを編集できるように、ドキュメント/ビューペアの作成をサポートします。
 
-[COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
-サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc` オブジェクトは、`COleServerItem` オブジェクトとの対話によってサーバー全体のサポートを提供します。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
+[COleServerDoc](reference/coleserverdoc-class.md)<br/>
+サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc`オブジェクトを使用すると、オブジェクトとの対話によってサーバーのサポートが強化され `COleServerItem` ます。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
 
-[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-`COleClientItem` および `COleServerItem`の抽象基本クラス。 `CDocItem` から派生したクラスのオブジェクトは、ドキュメントの一部を表します。
+[CDocItem](reference/cdocitem-class.md)<br/>
+およびの抽象基本 `COleClientItem` クラス `COleServerItem` 。 から派生したクラスのオブジェクトは `CDocItem` 、ドキュメントの一部を表します。
 
-[含ん](../mfc/reference/coleserveritem-class.md)<br/>
-`COleServerDoc` 項目への OLE インターフェイスを表すために使用されます。 通常、ドキュメントの埋め込み部分を表す `COleServerDoc` オブジェクトが1つあります。 ドキュメントの一部へのリンクをサポートするサーバーでは、多くの `COleServerItem` オブジェクトがあり、それぞれがドキュメントの一部へのリンクを表します。
+[COleServerItem](reference/coleserveritem-class.md)<br/>
+項目への OLE インターフェイスを表すために使用され `COleServerDoc` ます。 通常、 `COleServerDoc` ドキュメントの埋め込み部分を表すオブジェクトが1つあります。 ドキュメントの一部へのリンクをサポートするサーバーでは、多く `COleServerItem` のオブジェクトがあり、それぞれがドキュメントの一部へのリンクを表します。
 
-[クラスからではなく、](../mfc/reference/coleipframewnd-class.md)<br/>
+[クラスからではなく、](reference/coleipframewnd-class.md)<br/>
 サーバードキュメントをその場で編集しているときに、ビューのフレームウィンドウを提供します。
 
-[COleResizeBar](../mfc/reference/coleresizebar-class.md)<br/>
-インプレースサイズ変更のための標準ユーザーインターフェイスを提供します。 このクラスのオブジェクトは、常に `COleIPFrameWnd` オブジェクトと共に使用されます。
+[COleResizeBar](reference/coleresizebar-class.md)<br/>
+インプレースサイズ変更のための標準ユーザーインターフェイスを提供します。 このクラスのオブジェクトは、常にオブジェクトと共に使用され `COleIPFrameWnd` ます。
 
-[COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
-フレームワークのドキュメント/ビューアーキテクチャを使用してドキュメントを作成するために使用されます。 `COleTemplateServer` オブジェクトは、そのほとんどの作業を、関連付けられた `CDocTemplate` オブジェクトにデリゲートします。
+[COleTemplateServer](reference/coletemplateserver-class.md)<br/>
+フレームワークのドキュメント/ビューアーキテクチャを使用してドキュメントを作成するために使用されます。 オブジェクトは、 `COleTemplateServer` そのほとんどの作業を、関連付けられたオブジェクトにデリゲートし `CDocTemplate` ます。
 
-[COleException](../mfc/reference/coleexception-class.md)<br/>
+[COleException](reference/coleexception-class.md)<br/>
 OLE 処理のエラーによって発生する例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

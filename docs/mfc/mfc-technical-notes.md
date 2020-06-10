@@ -6,25 +6,25 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617937"
 ---
 # <a name="mfc-technical-notes"></a>MFC テクニカル ノート
 
-テクニカル ノートは、プログラマがプログラマ向けに作成されたドキュメントです。
+テクニカルノートは、プログラマ向けに記述されたドキュメントです。
 
-各テクニカル ノートでは、問題または MFC のドキュメントの残りの部分の範囲を超えている機能について説明します。 テクニカル ノートでは、ユーザーからの情報と、MFC 開発者は、高度なユーザーは、場合予測特殊化された情報の要求が反映されます。
+各テクニカルノートでは、MFC の他のドキュメントの範囲を超えている問題または機能について説明しています。 提供されるテクニカルノートには、ユーザーからの情報の要求と、MFC 開発者が上級ユーザーに期待する特別な情報が反映されています。
 
-テクニカル ノートを参照する 2 つの方法はあります。
+テクニカルノートを参照するには、次の2つの方法があります。
 
-- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)
+- [番号別テクニカルノート](technical-notes-by-number.md)
 
-- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+- [カテゴリ別テクニカルノート](technical-notes-by-category.md)
 
 ## <a name="see-also"></a>関連項目
 
-[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)
+[MFC デスクトップ アプリケーション](mfc-desktop-applications.md)

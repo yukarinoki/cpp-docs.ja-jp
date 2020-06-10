@@ -9,36 +9,36 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 620a9ec58b3a5a8fcdac63626b81fbc4620de399
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87cb560a1054a912a4e8574cfe2dee74d5e61fe6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625131"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け
 
-コントロール コンテナー アプリケーション内から ActiveX コントロールにアクセスする最も簡単な方法は、ActiveX コントロールを、そのコントロールを含むダイアログ クラスのメンバ変数に関連付ける方法です。
+コントロールコンテナーアプリケーション内から ActiveX コントロールにアクセスする最も簡単な方法は、ActiveX コントロールを、コントロールを格納するダイアログクラスのメンバー変数に関連付けることです。
 
 > [!NOTE]
-> コンテナー クラス内から埋め込みコントロールにアクセスする方法は、この方法だけではありませんが、この記事の目的で十分です。
+> これは、コンテナークラス内から埋め込まれたコントロールにアクセスする唯一の方法ではありませんが、この記事の目的上、十分です。
 
-### <a name="adding-a-member-variable-to-the-dialog-class"></a>ダイアログ クラスへのメンバー変数の追加
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>ダイアログクラスへのメンバー変数の追加
 
-1. クラス ビューで、メイン ダイアログ クラスを右クリックしてショートカット メニューを開きます。 たとえば、「 `CContainerDlg` 」のように入力します。
+1. クラスビューから、メインダイアログクラスを右クリックしてショートカットメニューを開きます。 たとえば、`CContainerDlg` のようにします。
 
-1. ショートカット メニューの [**追加**] をクリックし、[**変数の追加**] をクリックします。
+1. ショートカットメニューの [**追加**] をクリックし、[**変数の追加**] をクリックします。
 
-1. メンバー変数の追加ウィザードで、**コントロール変数**をクリックします。
+1. メンバー変数の追加ウィザードで、[**制御変数**] をクリックします。
 
-1. [**コントロール ID] ボックス**の一覧で、埋め込まれた ActiveX コントロールのコントロール ID を選択します。 たとえば、「 `IDC_CIRCCTRL1` 」のように入力します。
+1. [**コントロール id** ] ボックスの一覧で、埋め込み ActiveX コントロールのコントロール id を選択します。 たとえば、`IDC_CIRCCTRL1` のようにします。
 
 1. [**変数名**] ボックスに名前を入力します。
 
-   たとえば *、m_circctl。*
+   たとえば、 *m_circctl*のようにします。
 
-1. [**完了] を**クリックして選択内容を受け入れ、メンバー変数の追加ウィザードを終了します。
+1. [**完了**] をクリックして選択内容を確定し、メンバー変数の追加ウィザードを終了します。
 
 ## <a name="see-also"></a>関連項目
 
-[ActiveX コントロール コンテナ](../mfc/activex-control-containers.md)
+[ActiveX コントロールコンテナー](activex-control-containers.md)

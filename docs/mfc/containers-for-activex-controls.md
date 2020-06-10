@@ -4,46 +4,46 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-ms.openlocfilehash: 57b359d4d78c71ef2b0c8ceefad20c6521307a1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 875a5277da829b18befd56c50eeb1333c1635e0a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625976"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX コントロールのコンテナー
 
-Visual C++ で開発された ActiveX コントロールは、ActiveX コントロールのコンテインメントをサポートしている限り、他のアプリケーションでも使用できます。 一覧に記載されているバージョンから始まる多くのマイクロソフト アプリケーションでは、ActiveX コントロールの包含がサポートされています。
+Activex コントロールの含有がサポートされていれば、Visual C++ で開発した ActiveX コントロールを他のアプリケーションで使用できます。 表示されているバージョンから、ActiveX コントロールの含有をサポートする Microsoft アプリケーションが多数あります。
 
 >[!IMPORTANT]
-> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
 > [!NOTE]
-> 次の一覧は、ActiveX コントロールをサポートするアプリケーションの完全な一覧ではありませんが、テストで最も頻繁に使用されるセットを表しています。
+> 次の一覧は、ActiveX コントロールをサポートするが、テストで最も頻繁に使用されるセットを表すアプリケーションの完全な一覧ではありません。
 
-ActiveX コントロールの包含をサポートするアプリケーションには、次のものがあります。
+ActiveX コントロールのコンテインメントをサポートするアプリケーションには、次のものがあります。
 
-- インターネット エクスプローラ 3.x 以上
+- Internet Explorer 3.x 以降
 
-- ビジュアルベーシック 4.x 以上
+- Visual Basic 4.x 以上
 
-- ビジュアル C++ 4.x 以上
+- Visual C++ 4.x 以上
 
-- アクセス 95 以上
+- 95以上にアクセス
 
-- Excel 97 以上
+- Excel 97 以降
 
-- ワード 97 以上
+- Word 97 以上
 
-- アクセス 97 以上
+- 97以上にアクセス
 
-- フロントページ 97 以上
+- FrontPage 97 以降
 
-- PowerPoint 97 以上
+- PowerPoint 97 以降
 
-- ビジュアルインターデフ97以上
+- Visual InterDev 97 以降
 
-ActiveX コントロールの包含をサポートするマイクロソフト以外のアプリケーションを次に示します。
+ActiveX コントロールのコンテインメントをサポートする Microsoft 以外のアプリケーションを次に示します。
 
 - PowerBuilder
 
@@ -51,8 +51,8 @@ ActiveX コントロールの包含をサポートするマイクロソフト以
 
 - C++ ビルダー
 
-- ネットスケープナビゲーター用NComパスプラグイン
+- Netscape Navigator 用の NCompass プラグイン
 
 ## <a name="see-also"></a>関連項目
 
-[ActiveX コントロール コンテナ](../mfc/activex-control-containers.md)
+[ActiveX コントロールコンテナー](activex-control-containers.md)

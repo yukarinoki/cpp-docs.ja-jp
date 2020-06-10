@@ -12,43 +12,43 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303405"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618795"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 
-MFC (Microsoft Foundation Class) ライブラリフレームワークでの作業は、主にいくつかの主要なクラスといくつC++かのビジュアルツールに基づいています。 Win32 アプリケーションプログラミングインターフェイス (API) の大部分をカプセル化するクラスもあります。 他のクラスは、ドキュメント、ビュー、アプリケーション自体などのアプリケーションの概念をカプセル化します。 その他のユーザーは、OLE 機能、ODBC および DAO データアクセス機能をカプセル化します。  (DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます)。
+MFC (Microsoft Foundation Class) ライブラリフレームワークでの作業は、主にいくつかの主要なクラスといくつかの Visual C++ ツールに基づいています。 Win32 アプリケーションプログラミングインターフェイス (API) の大部分をカプセル化するクラスもあります。 他のクラスは、ドキュメント、ビュー、アプリケーション自体などのアプリケーションの概念をカプセル化します。 その他のユーザーは、OLE 機能、ODBC および DAO データアクセス機能をカプセル化します。  (DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます)。
 
-たとえば、Win32's というウィンドウの概念は、MFC クラス `CWnd`によってカプセル化されています。 つまり、`CWnd` とC++いうクラスは、Windows ウィンドウを表す `HWND` ハンドルをカプセル化または "ラップ" します。 同様に、クラス `CDialog` は Win32 のダイアログボックスをカプセル化します。
+たとえば、Win32's というウィンドウの概念は、MFC クラスによってカプセル化されてい `CWnd` ます。 つまり、という名前の C++ クラスは、 `CWnd` `HWND` Windows ウィンドウを表すハンドルをカプセル化または "ラップ" します。 同様に、クラスは `CDialog` Win32 のダイアログボックスをカプセル化します。
 
-カプセル化とはC++ 、たとえば、クラス `CWnd`が `HWND`型のメンバー変数を含み、クラスのメンバー関数が、パラメーターとして `HWND` を受け取る Win32 関数への呼び出しをカプセル化することを意味します。 クラスメンバー関数には、通常、カプセル化する Win32 関数と同じ名前が付けられています。
+カプセル化とは、たとえば、C++ クラスには `CWnd` 型のメンバー変数が含まれ、 `HWND` クラスのメンバー関数はを `HWND` パラメーターとして受け取る Win32 関数への呼び出しをカプセル化することを意味します。 クラスメンバー関数には、通常、カプセル化する Win32 関数と同じ名前が付けられています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[SDI と MDI](../mfc/sdi-and-mdi.md)
+[SDI と MDI](sdi-and-mdi.md)
 
-[ドキュメント、ビュー、フレームワーク](../mfc/documents-views-and-the-framework.md)
+[ドキュメント、ビュー、フレームワーク](documents-views-and-the-framework.md)
 
-[ウィザードとリソースエディター](../mfc/wizards-and-the-resource-editors.md)
+[ウィザードとリソースエディター](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>関連セクション
 
-[フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
+[フレームワークでのビルド](building-on-the-framework.md)
 
-[フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)
+[フレームワークと記述したコードとの関係](how-the-framework-calls-your-code.md)
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)
 
-[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](../mfc/document-templates-and-the-document-view-creation-process.md)
+[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](document-templates-and-the-document-view-creation-process.md)
 
-[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+[メッセージの処理とマップ](message-handling-and-mapping.md)
 
-[Window オブジェクト](../mfc/window-objects.md)
+[ウィンドウ オブジェクト](window-objects.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[クラスを使用した Windows アプリケーションの作成](using-the-classes-to-write-applications-for-windows.md)

@@ -16,51 +16,51 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 4a836bb7bd03bd6654e5c940442fecf541042fd1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9f90640007f84c854d59cc27e0c38459c76fe46
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619196"
 ---
 # <a name="accessing-run-time-class-information"></a>ランタイム クラス情報へのアクセス方法
 
-この資料では、実行時にオブジェクトのクラスに関する情報にアクセスする方法について説明します。
+この記事では、実行時にオブジェクトのクラスに関する情報にアクセスする方法について説明します。
 
 > [!NOTE]
 > MFC では、Visual C++ 4.0 で導入された[ランタイム型情報](../cpp/run-time-type-information.md)(RTTI) のサポートは使用されません。
 
-[CObject](../mfc/reference/cobject-class.md)からクラスを派生し **、Declare**_**DYNAMIC** `IMPLEMENT_DYNAMIC`および 、`DECLARE_DYNCREATE`および`IMPLEMENT_DYNCREATE`を使用`DECLARE_SERIAL`した`IMPLEMENT_SERIAL`場合、または を使用して、CObject[からクラス](../mfc/deriving-a-class-from-cobject.md)を`CObject`派生する」の記事で説明されていると と を使用する場合、クラスは実行時にオブジェクトの正確なクラスを決定する機能を持ちます。
+[Cobject](reference/cobject-class.md)からクラスを派生させ、 **DECLARE**_**動的**を使用し、「 `IMPLEMENT_DYNAMIC` `DECLARE_DYNCREATE` `IMPLEMENT_DYNCREATE` cobject からクラスを派生させる」で説明されている、および、およびマクロを使用した場合、クラスは実行時 `DECLARE_SERIAL` `IMPLEMENT_SERIAL` [Deriving a Class from CObject](deriving-a-class-from-cobject.md) `CObject` にオブジェクトの正確なクラスを判別できます。
 
-この機能は、関数引数の型チェックが必要な場合や、オブジェクトのクラスに基づいて特別な目的のコードを記述する必要がある場合に最も便利です。 ただし、仮想関数の機能が重複しているため、通常は推奨されません。
+この機能は、関数の引数の追加の型チェックが必要な場合や、オブジェクトのクラスに基づいて特殊な目的のコードを記述する必要がある場合に、最も役立ちます。 ただし、この方法は、仮想関数の機能と重複するため、通常は推奨されません。
 
-メンバー`CObject`関数`IsKindOf`を使用して、特定のオブジェクトが指定したクラスに属しているかどうか、または特定のクラスから派生しているかどうかを判断できます。 引数`IsKindOf`はオブジェクトで`CRuntimeClass`、クラス名の`RUNTIME_CLASS`マクロを使用して取得できます。
+メンバー関数は、特定のオブジェクトが特定の `CObject` `IsKindOf` クラスに属しているかどうか、または特定のクラスから派生したものかどうかを判断するために使用できます。 の引数は `IsKindOf` オブジェクトです `CRuntimeClass` 。このオブジェクトは、マクロとクラスの名前を使用して取得でき `RUNTIME_CLASS` ます。
 
 ### <a name="to-use-the-runtime_class-macro"></a>RUNTIME_CLASS マクロを使用するには
 
-1. クラス`RUNTIME_CLASS`の名前と共に使用します`CObject`。
+1. `RUNTIME_CLASS`クラスの名前と共にを使用します。クラスの例を次に示し `CObject` ます。
 
-   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
-ランタイム クラス オブジェクトに直接アクセスする必要はほとんどありません。 さらに一般的な使用方法は、次の手順に示すように、ランタイム`IsKindOf`クラス オブジェクトを関数に渡す方法です。 この`IsKindOf`関数は、オブジェクトが特定のクラスに属しているかどうかを調べているかどうかをテストします。
+実行時クラスオブジェクトに直接アクセスする必要はほとんどありません。 一般的な使用方法は、 `IsKindOf` 次の手順に示すように、ランタイムクラスオブジェクトを関数に渡すことです。 関数は、 `IsKindOf` オブジェクトが特定のクラスに属しているかどうかを調べます。
 
-#### <a name="to-use-the-iskindof-function"></a>関数を使用するには
+#### <a name="to-use-the-iskindof-function"></a>IsKindOf 関数を使用するには
 
-1. クラスがランタイム クラスをサポートしていることを確認します。 `CObject`つまり、クラスが直接的または間接的に派生し **、Declare**_**DYNAMIC**および`IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE`および`IMPLEMENT_DYNCREATE``DECLARE_SERIAL``IMPLEMENT_SERIAL`マクロを使用して[CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)の記事で説明されている必要があります。
+1. クラスにランタイムクラスのサポートがあることを確認します。 つまり、クラスは、から直接または間接的に派生 `CObject` し、 **DECLARE**_**DYNAMIC**および、、およびの各マクロを使用して、 `IMPLEMENT_DYNAMIC` `DECLARE_DYNCREATE` `IMPLEMENT_DYNCREATE` `DECLARE_SERIAL` `IMPLEMENT_SERIAL` 「 [CObject からクラスを派生](deriving-a-class-from-cobject.md)させる」で説明されているようにする必要があります。
 
-1. 次に`IsKindOf`示すように、そのクラスのオブジェクトのメンバー関数`RUNTIME_CLASS`を呼び出`CRuntimeClass`し、マクロを使用して引数を生成します。
+1. `IsKindOf` `RUNTIME_CLASS` 次に示すように、マクロを使用して引数を生成し、そのクラスのオブジェクトに対してメンバー関数を呼び出し `CRuntimeClass` ます。
 
-   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
-    >  IsKindOf オブジェクトが指定したクラスのメンバーであるか、指定したクラスから派生したクラスのメンバーである場合は**TRUE**を返します。 `IsKindOf`では、多重継承または仮想基底クラスはサポートされませんが、必要に応じて、派生した Microsoft Foundation クラスに対して多重継承を使用できます。
+    >  オブジェクトが、指定されたクラスのメンバーであるか、または指定されたクラスから派生したクラスのメンバーである場合、IsKindOf は**TRUE**を返します。 `IsKindOf`は、複数の継承または仮想基底クラスをサポートしていませんが、必要に応じて、派生した Microsoft Foundation クラスに複数の継承を使用できます。
 
-実行時クラス情報の使用の 1 つは、オブジェクトの動的な作成です。 このプロセスについては、「[動的オブジェクトの作成」で](../mfc/dynamic-object-creation.md)説明します。
+ランタイムクラス情報の使用方法の1つは、オブジェクトの動的な作成です。 このプロセスについては、「[動的オブジェクトの作成](dynamic-object-creation.md)」をご覧ください。
 
-シリアル化とランタイム クラスの詳細については[、「MFC および](../mfc/files-in-mfc.md)[シリアル化](../mfc/serialization-in-mfc.md)のファイル」を参照してください。
+シリアル化およびランタイムクラス情報の詳細については、MFC および[シリアル化](serialization-in-mfc.md)に関する記事の[ファイル](files-in-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CObject の使い方](../mfc/using-cobject.md)
+[CObject の使い方](using-cobject.md)

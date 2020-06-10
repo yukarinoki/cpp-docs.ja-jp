@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615406"
 ---
 # <a name="safeintexception-class"></a>SafeIntException クラス
 
 `SafeInt` クラスでは、数学演算を完了できない理由を特定するために `SafeIntException` を使用します。
 
 > [!NOTE]
-> このライブラリの最新バージョンは に[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)にあります。
+> このライブラリの最新バージョンは、にあり [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) ます。
 
 ## <a name="syntax"></a>構文
 
@@ -37,11 +37,11 @@ class SafeIntException;
 
 名前                                                    | 説明
 ------------------------------------------------------- | ------------------------------------
-[セーフイント例外::セーフイント例外](#safeintexception) | `SafeIntException` オブジェクトを作成します。
+[SafeIntException:: SafeIntException](#safeintexception) | `SafeIntException` オブジェクトを作成します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-[SafeInt クラス](../safeint/safeint-class.md)は、`SafeIntException` クラスを使用する唯一のクラスです。
+[SafeInt クラス](safeint-class.md)は、`SafeIntException` クラスを使用する唯一のクラスです。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -53,7 +53,7 @@ class SafeIntException;
 
 **名前空間:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>セーフイント例外::セーフイント例外
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException:: SafeIntException
 
 `SafeIntException` オブジェクトを作成します。
 
@@ -67,10 +67,10 @@ SafeIntException(
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 [in] 発生したエラーを説明する列挙データ値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 *code* に使用できる値は、Safeint.h ファイルに定義されています。 参考までに、使用できる値を次に示します。
 

@@ -8,59 +8,59 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616352"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 
-Active ドキュメント コンテナー アプリケーションを作成する最も簡単で最も推奨される方法は、MFC アプリケーション ウィザードを使用して MFC EXE コンテナー アプリケーションを作成し、active ドキュメント コンテインメントをサポートするためにアプリケーションを変更します。
+Active ドキュメントコンテナーアプリケーションを作成する最も簡単かつ最も推奨される方法は、MFC アプリケーションウィザードを使用して MFC EXE コンテナーアプリケーションを作成し、次に、active document コンテインメントをサポートするようにアプリケーションを変更することです。
 
-#### <a name="to-create-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションを作成するには
+#### <a name="to-create-an-active-document-container-application"></a>Active ドキュメントコンテナーアプリケーションを作成するには
 
-1. **ファイル** メニューのをクリックして**プロジェクト**から、**新規**サブメニューで開く。
+1. [**ファイル**] メニューの [**新規作成**] サブメニューから [**プロジェクト**] をクリックします。
 
-1. 左側のウィンドウから次のようにクリックします。 **Visual c**プロジェクトの種類。
+1. 左側のウィンドウで、[ **Visual C++** プロジェクトの種類] をクリックします。
 
-1. 選択**MFC アプリケーション**右側のウィンドウ。
+1. 右ペインで [ **MFC アプリケーション**] を選択します。
 
-1. プロジェクトに名前を*MyProj*、 をクリックして**OK**します。
+1. プロジェクトに*Myproj*という名前を指定し、[ **OK]** をクリックします。
 
-1. 選択、**複合ドキュメント サポート**ページ。
+1. [**複合ドキュメントのサポート**] ページを選択します。
 
-1. 選択、**コンテナー**または**コンテナー/フル サーバー**オプション。
+1. **コンテナー**または**コンテナー/フルサーバー**オプションを選択します。
 
-1. 選択、 **Active ドキュメント コンテナー**チェック ボックスをオンします。
+1. [ **Active ドキュメントコンテナー** ] チェックボックスをオンにします。
 
 1. **[完了]** をクリックします。
 
-1. MFC アプリケーション ウィザードでは、アプリケーションの生成が完了したら、ソリューション エクスプ ローラーを使用して、次のファイルを開きます。
+1. MFC アプリケーションウィザードでアプリケーションの生成が完了したら、ソリューションエクスプローラーを使用して次のファイルを開きます。
 
-   - *MyProjview.cpp*
+   - *MyProjview .cpp*
 
-1. *MyProjview.cpp*、次の変更します。
+1. *Myprojview .cpp*で、次の変更を行います。
 
-   - `CMyProjView::OnPreparePrinting`関数の内容を次のコードに置き換えます。
+   - で `CMyProjView::OnPreparePrinting` 、関数の内容を次のコードに置き換えます。
 
-     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-   `OnPreparePrinting` 印刷のサポートを提供します。 このコードで置き換えます`DoPreparePrinting`、これは、既定の印刷準備します。
+   `OnPreparePrinting`印刷サポートを提供します。 このコード `DoPreparePrinting` は、既定の印刷準備であるを置き換えます。
 
-   Active ドキュメント コンテインメントには、強化された印刷スキームが用意されています。
+   Active ドキュメントコンテインメントでは、より優れた印刷スキームが提供されます。
 
-   - 使用してアクティブなドキュメントを最初に呼び出すことができます、`IPrint`インターフェイス自体を印刷するように指定しています。 これに対し、プリンターに含まれているアイテムの画像を表示するコンテナー必要がある、以前の OLE コンテインメント`CDC`オブジェクト。
+   - 最初に、インターフェイスを使用してアクティブドキュメントを呼び出し、 `IPrint` それ自体を印刷するように指示できます。 これは以前の OLE コンテインメントとは異なり、コンテナーは、含まれている項目のイメージをプリンターオブジェクトにレンダリングする必要がありました `CDC` 。
 
-   - 失敗した場合、通知自体を介して印刷に含まれているアイテムの`IOleCommandTarget`インターフェイス
+   - 失敗した場合は、含まれている項目にインターフェイスを通じて出力するように指示します。 `IOleCommandTarget`
 
-   - 失敗した場合は、独自のアイテムの表示を確認します。
+   - それでも失敗する場合は、アイテムを独自にレンダリングします。
 
-   静的メンバー関数は、`COleDocObjectItem::OnPrint`と`COleDocObjectItem::OnPreparePrinting`前のコードに実装されると、この強化された印刷スキームを処理します。
+   前のコードで実装された静的メンバー関数とは、 `COleDocObjectItem::OnPrint` `COleDocObjectItem::OnPreparePrinting` この改善された印刷スキームを処理します。
 
-1. 独自の実装を追加し、アプリケーションをビルドします。
+1. 独自のの実装を追加し、アプリケーションをビルドします。
 
 ## <a name="see-also"></a>関連項目
 
-[Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
+[Active ドキュメント コンテインメント](active-document-containment.md)

@@ -11,43 +11,43 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371603"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623214"
 ---
 # <a name="creating-stack-and-queue-collections"></a>スタック コレクションとキュー コレクションの作成
 
-この資料では[、MFC](#_core_stacks)リスト クラスからスタックやキューなどの他のデータ構造[を作成する](#_core_queues)方法について説明します。 この例では、 から`CList`派生したクラスを使用`CList`しますが、機能を追加する必要がない限り、直接使用できます。
+この記事では、MFC リストクラスから、[スタック](#_core_stacks)や[キュー](#_core_queues)などの他のデータ構造を作成する方法について説明します。 この例では、から派生したクラスを使用し `CList` ますが、機能を追加する必要がない限り、を直接使用することもでき `CList` ます。
 
-## <a name="stacks"></a><a name="_core_stacks"></a>スタック
+## <a name="stacks"></a><a name="_core_stacks"></a>煙
 
-標準のリスト コレクションには頭と尾部の両方があるため、先入れ先出しスタックの動作を模倣した派生リスト コレクションを簡単に作成できます。 スタックはカフェテリアのトレイの積み重ねのようなものです。 トレイがスタックに追加されると、それらはスタックの上に移動します。 最後に追加されたトレイが最初に取り外されます。 リスト コレクションのメンバー`AddHead`関数`RemoveHead`を使用して、リストの先頭に対して要素を追加および削除できます。したがって、最後に追加された要素は、最初に削除されます。
+標準リストコレクションには先頭と末尾の両方があるため、後入れ先出しスタックの動作を模倣する派生リストコレクションを簡単に作成できます。 スタックは、カフェテリアのトレイのスタックに似ています。 トレイがスタックに追加されると、スタックの一番上に表示されます。 最後に追加されたトレイが、最初に削除されます。 リストコレクションメンバー関数とは、 `AddHead` `RemoveHead` リストの先頭から要素を追加および削除するために使用できます。したがって、最後に追加された要素が最初に削除されます。
 
-#### <a name="to-create-a-stack-collection"></a>スタック コレクションを作成するには
+#### <a name="to-create-a-stack-collection"></a>スタックコレクションを作成するには
 
-1. 既存の MFC リスト クラスの 1 つから新しいリスト クラスを派生させ、スタック操作の機能をサポートするメンバー関数を追加します。
+1. 既存の MFC リストクラスの1つから新しいリストクラスを派生させ、スタック操作の機能をサポートするためにメンバー関数を追加します。
 
-   次の例では、スタックに要素をプッシュするメンバー関数を追加し、スタックの一番上の要素を覗いて、スタックから最上位の要素をポップする方法を示します。
+   次の例では、メンバー関数を追加して、スタックに要素をプッシュし、スタックの最上位の要素をピークし、スタックから最上位の要素をポップする方法を示します。
 
-   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
-この方法では、基になる`CObList`クラスが公開されることに注意してください。 ユーザーは、スタックに`CObList`対して意味を持つかどうかにかかわらず、任意のメンバー関数を呼び出すことができます。
+この方法では、基になるクラスが公開されることに注意 `CObList` してください。 ユーザーは、 `CObList` スタックにとって意味があるかどうかにかかわらず、任意のメンバー関数を呼び出すことができます。
 
 ## <a name="queues"></a><a name="_core_queues"></a> キュー
 
-標準リスト コレクションには先頭と末尾の両方があるため、先入れ先出しキューの動作を模倣した派生リスト コレクションを簡単に作成できます。 行列は食堂の人々の列のようなものです。 最初に並ぶ人が最初に奉仕されます。 より多くの人々が来るにつれて、彼らは順番を待つために行の終わりに行きます。 リスト コレクションのメンバー`AddTail`関数`RemoveHead`を使用して、リストの先頭または末尾に対して要素を追加および削除できます。したがって、最後に追加された要素は、常に最後に削除されます。
+標準リストコレクションには先頭と末尾の両方があるため、先入れ先出しのキューの動作を模倣する派生リストのコレクションを簡単に作成できます。 キューは、カフェテリアの1行のメンバーに似ています。 最初のユーザーが最初に提供されます。 さらに多くのユーザーは、行の終わりにアクセスして、そのターンを待ちます。 リストコレクションメンバー関数とは、 `AddTail` `RemoveHead` リストの先頭または末尾から要素を追加および削除するために使用できます。したがって、最後に追加された要素は常に最後に削除されます。
 
-#### <a name="to-create-a-queue-collection"></a>キュー コレクションを作成するには
+#### <a name="to-create-a-queue-collection"></a>キューコレクションを作成するには
 
-1. Microsoft Foundation クラス ライブラリに用意されている定義済みのリスト クラスの 1 つから新しいリスト クラスを派生し、キュー操作のセマンティクスをサポートするメンバー関数を追加します。
+1. Microsoft Foundation Class ライブラリに用意されている定義済みリストクラスの1つから新しいリストクラスを派生し、キュー操作のセマンティクスをサポートするためにメンバー関数を追加します。
 
-   次の例は、メンバー関数を追加して、要素をキューの末尾に追加し、キューの先頭から要素を取得する方法を示しています。
+   次の例では、メンバー関数を追加して、キューの末尾に要素を追加し、キューの先頭から要素を取得する方法を示します。
 
-   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>関連項目
 
-[コレクション](../mfc/collections.md)
+[コレクション](collections.md)

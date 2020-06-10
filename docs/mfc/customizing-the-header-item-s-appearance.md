@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bf1bdad6a0408746b50b6b0dcbecbce308f5ede
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508720"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617087"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>ヘッダー項目&#39;の外観のカスタマイズ
 
-最初にヘッダーコントロール ([CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)) を作成するときに*dwStyle*パラメーターを設定することにより、ヘッダー項目またはヘッダーコントロール自体の外観と動作を定義できます。
+最初にヘッダーコントロール ([CHeaderCtrl:: create](reference/cheaderctrl-class.md#create)) を作成するときに*dwStyle*パラメーターを設定することにより、ヘッダー項目またはヘッダーコントロール自体の外観と動作を定義できます。
 
 設定できるスタイルのサンプルとその用途は次のとおりです。
 
@@ -29,11 +29,11 @@ ms.locfileid: "69508720"
 
 - ヘッダーコントロールを非表示にする必要があることを示すには、 **HDS_HIDDEN**スタイルを使用します。
 
-   **HDS_HIDDEN**スタイルは、ヘッダーコントロールがビジュアルコントロールではなくデータコンテナーとして使用されることを示します。 このスタイルでは、コントロールが自動的に非表示になることはあり`CHeaderCtrl::Layout`ませんが、の動作に影響します。 `WINDOWPOS`構造体の*cy*メンバーで返される値は0になり、コントロールがユーザーに表示されないことを示します。
+   **HDS_HIDDEN**スタイルは、ヘッダーコントロールがビジュアルコントロールではなくデータコンテナーとして使用されることを示します。 このスタイルでは、コントロールが自動的に非表示になることはありませんが、の動作に影響し `CHeaderCtrl::Layout` ます。 構造体の*cy*メンバーで返される値は `WINDOWPOS` 0 になり、コントロールがユーザーに表示されないことを示します。
 
-これらのプロパティの詳細については、「Windows SDK 内の[項目](/windows/win32/Controls/header-controls)」を参照してください。 ヘッダーコントロールへの項目の追加の詳細については、「[ヘッダーコントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)」を参照してください。
+これらのプロパティの詳細については、「Windows SDK 内の[項目](/windows/win32/Controls/header-controls)」を参照してください。 ヘッダーコントロールへの項目の追加の詳細については、「[ヘッダーコントロールへの項目の追加](adding-items-to-the-header-control.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CHeaderCtrl の使い方](using-cheaderctrl.md)<br/>
+[制限](controls-mfc.md)

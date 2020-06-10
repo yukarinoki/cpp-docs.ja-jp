@@ -9,24 +9,24 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619336"
 ---
 # <a name="com-interface-entry-points"></a>COM インターフェイスのエントリ ポイント
 
-COM インターフェイスのメンバー関数は、使用、`METHOD_PROLOGUE`エクスポートされたインターフェイスのメソッドを呼び出すときに、適切なグローバル状態を維持するためにマクロ。
+COM インターフェイスのメンバー関数の場合は、エクスポートされたインターフェイスのメソッドを呼び出すときに、マクロを使用して、 `METHOD_PROLOGUE` 適切なグローバル状態を維持します。
 
-によって実装されるインターフェイスのメンバー関数の通常、 `CCmdTarget`-の自動初期化を提供する、このマクロを既に使用して派生オブジェクト、`pThis`ポインター。 例:
+通常、派生オブジェクトによって実装されたインターフェイスのメンバー関数は、 `CCmdTarget` このマクロを使用してポインターを自動的に初期化し `pThis` ます。 次に例を示します。
 
-[!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#5](codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-詳細については、次を参照してください。[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装します。
+詳細については、「MFC/OLE の実装に関する[テクニカルノート 38](tn038-mfc-ole-iunknown-implementation.md) 」を参照してください `IUnknown` 。
 
-`METHOD_PROLOGUE`としてマクロが定義されます。
+`METHOD_PROLOGUE`マクロは次のように定義されます。
 
 ```cpp
 #define METHOD_PROLOGUE(theClass, localClass) \
@@ -35,12 +35,12 @@ COM インターフェイスのメンバー関数は、使用、`METHOD_PROLOGUE
     AFX_MANAGE_STATE(pThis->m_pModuleState) \
 ```
 
-マクロ、グローバル状態の管理に関連の部分は次のとおりです。
+グローバル状態の管理に関係するマクロの部分は次のとおりです。
 
 `AFX_MANAGE_STATE( pThis->m_pModuleState )`
 
-この式で*m_pModuleState*親オブジェクトのメンバー変数と見なされます。 によって実装されている、`CCmdTarget`基底クラスとは、適切な値に初期化`COleObjectFactory`オブジェクトがインスタンス化されるときに、します。
+この式では、 *m_pModuleState*は、含んでいるオブジェクトのメンバー変数であると見なされます。 これは基底クラスによって実装され、 `CCmdTarget` `COleObjectFactory` オブジェクトがインスタンス化されるときに、によって適切な値に初期化されます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
+[MFC モジュールの状態データの管理](managing-the-state-data-of-mfc-modules.md)

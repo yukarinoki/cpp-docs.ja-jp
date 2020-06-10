@@ -7,43 +7,43 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 57b98f7e2e4f9e23175b8b01c2e37ff49c499949
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623994"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>永続化と初期化の最適化
 
-既定では、によって永続化とコントロールの初期化を処理します。、`DoPropExchange`メンバー関数。 この関数には、一般的なコントロールには、いくつかの呼び出しが含まれています**px _** 関数 (`PX_Color`、`PX_Font`など) の各プロパティのいずれか。
+既定では、コントロールの永続化と初期化は、メンバー関数によって処理され `DoPropExchange` ます。 一般的なコントロールでは、この関数には、プロパティごとに1つずつ、いくつかの**PX_** 関数 ( `PX_Color` 、など) の呼び出しが含まれてい `PX_Font` ます。
 
-この方法の利点を 1 つ`DoPropExchange`初期化、バイナリ形式で永続化およびいくつかのコンテナーで使用される、いわゆる「プロパティ バッグ」形式で永続化の実装を使用できます。 この 1 つの関数は、プロパティと 1 か所で既定値に関するすべての情報を提供します。
+このアプローチには、1つの `DoPropExchange` 実装を初期化に使用したり、バイナリ形式で永続化したり、一部のコンテナーで使用されるいわゆる "プロパティバッグ" 形式で永続化したりするという利点があります。 この1つの関数は、プロパティとその既定値に関するすべての情報を1つの便利な場所に提供します。
 
-ただし、この効率は低下します。 **Px _** 関数取得マルチレイヤーの実装では、本質的にでは柔軟性がより直接的が、柔軟性のアプローチよりも効率的です。 さらに、コントロールに既定値を渡す場合、 **px _** 関数は、既定値にする必要があります、既定値が必ずしも使用がいない場合であっても、毎回が提供することです。 場合、既定値を生成する、重要なタスク (たとえば、値がアンビエント プロパティから取得したとき)、追加、不要な処理は既定値が使用されていない場合に行われます。
+ただし、この一般性には効率の低下が伴います。 **PX_** 関数は、より直接的ではありませんが、柔軟性が低く、アプローチが少ない多層実装によって、柔軟性が得られます。 さらに、コントロールが**PX_** 関数に既定値を渡す場合は、既定値が必ずしも使用されない場合でも、その既定値を毎回指定する必要があります。 既定値の生成が非常に重要なタスクである場合 (たとえば、アンビエントプロパティから値を取得した場合)、既定値が使用されていない場合に余分な不要な作業が行われます。
 
-コントロールのオーバーライドすることで、コントロールのバイナリの永続化のパフォーマンスを向上できます`Serialize`関数。 このメンバー関数の既定の実装への呼び出し、`DoPropExchange`関数。 これをオーバーライドすることでは、バイナリの持続性のより直接的な実装を行うことができます。 たとえば、このことを検討`DoPropExchange`関数。
+コントロールの関数をオーバーライドすると、コントロールのバイナリ永続化のパフォーマンスを向上させることができ `Serialize` ます。 このメンバー関数の既定の実装では、関数の呼び出しが行われ `DoPropExchange` ます。 オーバーライドすることにより、バイナリ永続化のためのより直接的な実装を提供できます。 たとえば、次の関数について考えてみ `DoPropExchange` ます。
 
-[!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#1](codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
 
-このコントロールのバイナリの永続化のパフォーマンスを向上させるのには、オーバーライド、`Serialize`次のように機能します。
+このコントロールのバイナリ永続化のパフォーマンスを向上させるには、次のように関数をオーバーライドし `Serialize` ます。
 
-[!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#2](codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
 
-`dwVersion`ローカル変数は、バージョン コントロールの永続的な状態の読み込みまたは保存を検出するために使用することができます。 この変数を使用して、呼び出す代わりに[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)します。
+`dwVersion`ローカル変数は、読み込まれているか保存されているコントロールの永続的な状態を検出するために使用できます。 [CPropExchange:: GetVersion](reference/cpropexchange-class.md#getversion)を呼び出す代わりに、この変数を使用できます。
 
-永続的な形式で、小さい領域を保存する、 **BOOL**プロパティ (、によって生成される形式との互換性を保つ`PX_Bool`)、としてプロパティを格納することができます、**バイト**、次のように。
+**ブール**型プロパティの永続的な形式で小さな空白を保存するには (およびによって生成される形式との互換性を保つため `PX_Bool` )、次のようにプロパティを**バイト**として格納します。
 
-[!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#3](codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
 
-キャストするのではなく、負荷の場合、一時変数の使用をし、その値が割り当てられている、 *m_boolProp*を**バイト**参照。 キャストの手法の 1 バイトだけになる*m_boolProp*変更される、初期化されていない残りのバイトします。
+読み込みケースでは、一時変数が使用され、その値が割り当てられることに注意してください。これは、 *M_boolProp* **バイト**参照にキャストすることではありません。 キャストの手法によって、 *m_boolProp*の1バイトだけが変更され、残りのバイトは初期化されません。
 
-同じコントロールの場合は、オーバーライドすることでコントロールの初期化を最適化できます[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate)次のようにします。
+同じコントロールに対して、次のように、 [COleControl:: OnResetState](reference/colecontrol-class.md#onresetstate)をオーバーライドすることによって、コントロールの初期化を最適化できます。
 
-[!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#4](codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
 
-`Serialize`と`OnResetState`オーバーライドされている、`DoPropExchange`関数おく必要があるそのままプロパティ バッグ形式で永続化をまだ使用されています。 どの永続性に関係なく、コンテナーのメカニズムを使用してのコントロールがそのプロパティを一貫した管理することを確認するこれらの関数の 3 つすべてを維持するために重要です。
+`Serialize`と `OnResetState` はオーバーライドされましたが、関数は、 `DoPropExchange` プロパティバッグ形式で永続化に使用されているため、そのまま保持される必要があります。 これら3つの関数をすべて維持して、コンテナーが使用する永続化メカニズムに関係なく、コントロールのプロパティが一貫して管理されるようにすることが重要です。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)
+[MFC ActiveX コントロール: 最適化](mfc-activex-controls-optimization.md)

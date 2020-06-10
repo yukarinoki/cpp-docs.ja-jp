@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9e5b94736de44d5cfeef81f5b78a759df3b8aa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619911"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>アニメーション コントロールによる通知の送信
 
-アニメーションコントロール ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) は、2つの異なる種類の通知メッセージを送信します。 通知は、 [WM_COMMAND](/windows/win32/menurc/wm-command)メッセージの形式で送信されます。
+アニメーションコントロール ([CAnimateCtrl](reference/canimatectrl-class.md)) は、2つの異なる種類の通知メッセージを送信します。 通知は[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージの形式で送信されます。
 
 [ACN_START](/windows/win32/Controls/acn-start)メッセージは、アニメーションコントロールがクリップの再生を開始したときに送信されます。 [ACN_STOP](/windows/win32/Controls/acn-stop)メッセージは、アニメーションコントロールがクリップの再生を完了または停止したときに送信されます。
 
 ## <a name="see-also"></a>関連項目
 
-[CAnimateCtrl の使い方](../mfc/using-canimatectrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CAnimateCtrl の使い方](using-canimatectrl.md)<br/>
+[制限](controls-mfc.md)

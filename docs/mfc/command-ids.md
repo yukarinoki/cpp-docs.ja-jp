@@ -5,21 +5,21 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7d675891904301b16aafe3acb2c294eede6d8d8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619038"
 ---
 # <a name="command-ids"></a>コマンド ID
 
-コマンドが、コマンド ID だけで完全に説明されている (でエンコードされた、 **WM_COMMAND**メッセージ)。 この ID は、コマンドを生成するユーザー インターフェイス オブジェクトに割り当てられます。 通常、Id に割り当てられているユーザー インターフェイス オブジェクトの機能の名前です。
+コマンドは、コマンド ID だけで完全に記述されます ( **WM_COMMAND**メッセージでエンコードされます)。 この ID は、コマンドを生成するユーザーインターフェイスオブジェクトに割り当てられます。 通常、Id には、割り当てられているユーザーインターフェイスオブジェクトの機能の名前が付けられます。
 
-たとえば、編集 メニューで すべてクリア項目割り当てられる可能性が ID など**ID_EDIT_CLEAR_ALL**します。 クラス ライブラリは特に、フレームワークを処理するなどのコマンドの場合、何らかの Id が組み込まれて**ID_EDIT_CLEAR_ALL**または**ID_FILE_OPEN**します。 その他のコマンド Id 自分で作成します。
+たとえば、[編集] メニューの [すべてクリア] 項目には、 **ID_EDIT_CLEAR_ALL**などの ID が割り当てられる場合があります。 クラスライブラリは、特に、 **ID_EDIT_CLEAR_ALL**や**ID_FILE_OPEN**など、フレームワークが自身を処理するコマンドに対して、いくつかの id を事前します。 他のコマンド Id は自分で作成します。
 
-ビジュアルで独自のメニューを作成するときC++クラス ライブラリに従うことをお勧めの名前付け規則のようには、そのメニュー エディター、 **ID_FILE_OPEN**します。 [標準コマンド](../mfc/standard-commands.md)クラス ライブラリによって定義される標準のコマンドについて説明します。
+Visual C++ メニューエディターで独自のメニューを作成する場合は、 **ID_FILE_OPEN**で示されているように、クラスライブラリの名前付け規則に従うことをお勧めします。 [標準コマンド](standard-commands.md)では、クラスライブラリで定義されている標準コマンドについて説明します。
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス オブジェクトとコマンド ID](../mfc/user-interface-objects-and-command-ids.md)
+[ユーザーインターフェイスオブジェクトとコマンド Id](user-interface-objects-and-command-ids.md)

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a9a20676c91dab0d1708293e004513bb648d178
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396380"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626198"
 ---
 # <a name="menus-mfc"></a>メニュー (MFC)
 
-MFC には、メニューを使用するための 2 つの要素が用意されています。
+MFC では、次の2つの要素を使用して、メニューを操作できます。
 
-- クラス[CMenu](../mfc/reference/cmenu-class.md)実行時に、プログラムのメニューを操作するためです。 ドキュメントを使用して、`CMenu`サンプルとサンプルを使用する方法について`CMenu`効果的にします。
+- 実行時にプログラムのメニューを操作するためのクラス[CMenu](reference/cmenu-class.md) 。 を `CMenu` 効果的に使用する方法については、およびサンプルのドキュメントを参照して `CMenu` ください。
 
-- メニューとツールバーのボタンを更新するメカニズム: を有効にするか、現在プログラムの条件に合わせてその場で無効にしています。
+- メニューとツールバーボタンを更新するためのメカニズム: 現在のプログラムの条件に合わせて、その場で有効または無効にします。
 
-Visual C も用意されています。、[メニュー エディター](../windows/menu-editor.md)の作成とプログラムのメニュー リソースを編集します。
+Visual C++ には、プログラムのメニューリソースを作成および編集するための[メニューエディター](../windows/menu-editor.md)も用意されています。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [プログラムの実行時のメニュー オブジェクトの操作](../mfc/manipulating-menus-during-program-execution.md)
+- [プログラム実行時のメニューオブジェクトの操作](manipulating-menus-during-program-execution.md)
 
-- [ユーザー インターフェイス オブジェクトを更新する方法](../mfc/how-to-update-user-interface-objects.md)
+- [ユーザーインターフェイスオブジェクトを更新する方法](how-to-update-user-interface-objects.md)
 
-- [サンプル](../mfc/menu-sample-list.md)
+- [サンプル](menu-sample-list.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+[ユーザーインターフェイス要素](user-interface-elements-mfc.md)

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-ms.openlocfilehash: 5c9612a22eab27d568c0dbb86d29ba031fe5985e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d308cfe83f02dcfe3687790c6638d268cc69fc24
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621425"
 ---
 # <a name="list-control-and-list-view"></a>リスト コントロールとリスト ビュー
 
-便宜上、MFC では、2 つの方法でリスト コントロールがカプセル化します。 リスト コントロールを使用することができます。
+便宜上、MFC はリストコントロールを2つの方法でカプセル化します。 リストコントロールを使用できます。
 
-- 埋め込むことによって、直接、 [CListCtrl](../mfc/reference/clistctrl-class.md)ダイアログ クラス内のオブジェクト。
+- 直接です。ダイアログクラスに[CListCtrl](reference/clistctrl-class.md)オブジェクトを埋め込むことによって行います。
 
-- クラスを使用して、直接[CListView](../mfc/reference/clistview-class.md)します。
+- 間接的には、 [CListView](reference/clistview-class.md)クラスを使用します。
 
-`CListView` 簡単にコントロールをカプセル化 MFC ドキュメント/ビュー アーキテクチャは、リスト コントロールの統合と同じ[CEditView](../mfc/reference/ceditview-class.md)エディット コントロールをカプセル化: コントロールが MFC ビューの領域全体を入力します。 (ビュー*は*にキャスト、コントロール`CListView`)。
+`CListView`では、リストコントロールを MFC のドキュメント/ビューアーキテクチャと簡単に統合できるようになっています。これにより、コントロールが編集コントロールを[カプセル化する](reference/ceditview-class.md)ようになります。コントロールは、mfc ビューのサーフェイス領域全体を占めます。 (ビューはコントロールであり、にキャスト*さ* `CListView` れます)。
 
-A`CListView`オブジェクトから継承[CCtrlView](../mfc/reference/cctrlview-class.md)し、その基本クラスし、基になるリスト コントロールを取得するメンバー関数を追加します。 メンバーの表示を使用して、ビューとして使用します。 使用して、 [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)リスト コントロールのメンバー関数へのアクセスを取得します。 これらのメンバーを使用します。
+オブジェクトは、 `CListView` [CCtrlView](reference/cctrlview-class.md)とその基本クラスから継承され、基になるリストコントロールを取得するためのメンバー関数を追加します。 ビューをビューとして操作するには、ビューメンバーを使用します。 リストコントロールのメンバー関数にアクセスするには、 [Getlistctrl](reference/clistview-class.md#getlistctrl)メンバー関数を使用します。 これらのメンバーは次の用途に使用します。
 
-- 追加、削除、またはリスト内の「アイテム」を操作します。
+- リスト内の "items" を追加、削除、または操作します。
 
-- 設定またはコントロール属性の一覧を取得します。
+- リストコントロールの属性を設定または取得します。
 
-参照を取得する、`CListCtrl`基になる、 `CListView`、呼び出す`GetListCtrl`一覧ビュー クラスから。
+基になるに対する参照を取得するには `CListCtrl` `CListView` 、 `GetListCtrl` リストビュークラスからを呼び出します。
 
 [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]
 
-このトピックでは、リスト コントロールを使用する両方の方法について説明します。
+このトピックでは、リストコントロールを使用する両方の方法について説明します。
 
 ## <a name="see-also"></a>関連項目
 
-[CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CListCtrl の使い方](using-clistctrl.md)<br/>
+[制限](controls-mfc.md)

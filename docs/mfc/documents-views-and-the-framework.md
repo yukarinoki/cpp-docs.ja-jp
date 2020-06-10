@@ -16,54 +16,54 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: 799035976ea55988a635f7dc9b667e87c48d8f7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17956c0b175e978c6e4e2fefcdad5f744929d457
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406177"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621835"
 ---
 # <a name="documents-views-and-the-framework"></a>ドキュメント、ビュー、フレームワーク
 
-MFC フレームワークの中核には、ドキュメントとビューの概念が。 ドキュメントでは、ユーザーが編集セッションで対話するデータ オブジェクトです。 によって作成される、**新規**または**オープン**コマンドを**ファイル**メニューと、通常、ファイルに保存します。 (クラスから派生した、MFC の標準ドキュメント`CDocument`、アクティブなドキュメントと OLE 複合ドキュメントとは異なります)。ビューは、使用される、ユーザーがドキュメントを操作ウィンドウ オブジェクトです。
+MFC フレームワークの中核となるのは、ドキュメントとビューの概念です。 ドキュメントは、ユーザーが編集セッションを操作するときに使用するデータオブジェクトです。 これは、[**ファイル**] メニューの [**新規**作成] または [**開く**] コマンドによって作成され、通常はファイルに保存されます。 (クラスから派生した標準の MFC ドキュメント `CDocument` は、アクティブなドキュメントや OLE 複合ドキュメントとは異なります)。ビューは、ユーザーがドキュメントを操作するときに使用するウィンドウオブジェクトです。
 
-実行中のアプリケーションで主要なオブジェクトは次のとおりです。
+実行中のアプリケーションの主要なオブジェクトは次のとおりです。
 
 - ドキュメントまたはドキュメント。
 
-   ドキュメント クラス (から派生した[CDocument](../mfc/reference/cdocument-class.md))、アプリケーションのデータを指定します。
+   ドキュメントクラス ( [CDocument](reference/cdocument-class.md)から派生) は、アプリケーションのデータを指定します。
 
-   OLE の機能をアプリケーションで使用すると場合からドキュメント クラスを派生[COleDocument](../mfc/reference/coledocument-class.md)またはその派生クラスで必要とする機能の種類に応じてのいずれか。
+   アプリケーションで OLE 機能が必要な場合は、必要な機能の種類に応じて、 [COleDocument](reference/coledocument-class.md)またはその派生クラスのいずれかからドキュメントクラスを派生させます。
 
-- ビューまたは表示します。
+- ビューまたはビュー。
 
-   ビュー クラス (から派生した[CView](../mfc/reference/cview-class.md))、ユーザーの「ウィンドウ データを」。 ビュー クラスでは、ユーザーのドキュメントのデータを表示および対話を制御します。 場合によっては、データのビューを複数のドキュメントをする可能性があります。
+   ビュークラス ( [CView](reference/cview-class.md)から派生) は、ユーザーの "データに対するウィンドウ" です。 ビュークラスは、ユーザーがドキュメントのデータを確認し、それと対話する方法を制御します。 場合によっては、ドキュメントにデータの複数のビューを含めることが必要になることがあります。
 
-   スクロールが必要な場合から派生[CScrollView](../mfc/reference/cscrollview-class.md)します。 派生して、ビューにダイアログ テンプレート リソースに配置されるユーザー インターフェイスがある場合は、 [CFormView](../mfc/reference/cformview-class.md)します。 単純なテキスト データを使用して、またはそれから派生した[CEditView](../mfc/reference/ceditview-class.md)します。 データ入力プログラムなどのフォーム ベースのデータ アクセス アプリケーションから派生[CRecordView](../mfc/reference/crecordview-class.md) (for ODBC)。 使用可能なクラス[CTreeView](../mfc/reference/ctreeview-class.md)、 [CListView](../mfc/reference/clistview-class.md)、および[CRichEditView](../mfc/reference/cricheditview-class.md)します。
+   スクロールが必要な場合は、 [CScrollView](reference/cscrollview-class.md)から派生します。 ダイアログテンプレートリソースにレイアウトされたユーザーインターフェイスがビューにある場合は、 [CFormView](reference/cformview-class.md)から派生します。 単純なテキストデータの場合は、CEditView を使用するか、または[CEditView](reference/ceditview-class.md)から派生させます。 データ入力プログラムなど、フォームベースのデータアクセスアプリケーションの場合は、 [CRecordView](reference/crecordview-class.md) (ODBC の場合) から派生します。 また、 [CTreeView](reference/ctreeview-class.md)、 [CListView](reference/clistview-class.md)、 [CRichEditView](reference/cricheditview-class.md)の各クラスも使用できます。
 
-- フレーム ウィンドウ
+- フレームウィンドウ
 
-   「ドキュメント フレーム ウィンドウ」内のビューに表示されます。 SDI アプリケーションで使用するドキュメント フレーム ウィンドウとは、またアプリケーションの「メイン フレーム ウィンドウ」です。 MDI アプリケーションでは、ドキュメント ウィンドウは、メイン フレーム ウィンドウ内に表示される子ウィンドウです。 派生のメイン フレーム ウィンドウ クラスには、ビューを含むフレーム ウィンドウの他の特性とスタイルを指定します。 フレーム ウィンドウをカスタマイズする必要がある場合から派生[CFrameWnd](../mfc/reference/cframewnd-class.md) SDI アプリケーションは、ドキュメント フレーム ウィンドウをカスタマイズします。 派生[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) MDI アプリケーションのメイン フレーム ウィンドウをカスタマイズします。 クラスを派生させることも[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)をそれぞれ個別の種類のアプリケーションをサポートする MDI ドキュメント フレーム ウィンドウをカスタマイズします。
+   ビューは、"ドキュメントフレームウィンドウ" 内に表示されます。 SDI アプリケーションでは、ドキュメントフレームウィンドウはアプリケーションの "メインフレームウィンドウ" でもあります。 MDI アプリケーションでは、ドキュメントウィンドウはメインフレームウィンドウ内に表示される子ウィンドウです。 派生メインフレームウィンドウクラスでは、ビューを含むフレームウィンドウのスタイルとその他の特性を指定します。 フレームウィンドウをカスタマイズする必要がある場合は、 [CFrameWnd](reference/cframewnd-class.md)から派生して、SDI アプリケーション用のドキュメントフレームウィンドウをカスタマイズします。 MDI アプリケーションのメインフレームウィンドウをカスタマイズするには、 [CMDIFrameWnd](reference/cmdiframewnd-class.md)から派生します。 また、 [CMDIChildWnd](reference/cmdichildwnd-class.md)からクラスを派生させて、アプリケーションがサポートするさまざまな種類の MDI ドキュメントフレームウィンドウをカスタマイズします。
 
-- ドキュメント テンプレートまたはテンプレート
+- ドキュメントテンプレート
 
-   ドキュメント テンプレートでは、ドキュメント、ビュー、フレーム ウィンドウの作成を調整します。 クラスから派生した、特定のドキュメント テンプレート クラス[CDocTemplate](../mfc/reference/cdoctemplate-class.md)を作成し、1 つの種類のすべての開いているドキュメントを管理します。 ドキュメントの 1 つ以上の型をサポートするアプリケーションでは、複数のドキュメント テンプレートがあります。 クラスを使用して[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI アプリケーション、またはクラスを使用して[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI アプリケーション用。
+   ドキュメントテンプレートは、ドキュメント、ビュー、およびフレームウィンドウの作成を調整します。 クラス[CDocTemplate](reference/cdoctemplate-class.md)から派生した特定のドキュメントテンプレートクラスは、1つの種類のすべての開いているドキュメントを作成し、管理します。 複数の種類のドキュメントをサポートするアプリケーションには、複数のドキュメントテンプレートがあります。 SDI アプリケーションには[CSingleDocTemplate](reference/csingledoctemplate-class.md)クラスを使用し、MDI アプリケーションには[CMultiDocTemplate](reference/cmultidoctemplate-class.md)クラスを使用します。
 
-- アプリケーション オブジェクト
+- アプリケーションオブジェクト
 
-   アプリケーション クラス (から派生した[CWinApp](../mfc/reference/cwinapp-class.md)) 上のオブジェクトのすべてを制御し、初期化やクリーンアップなどのアプリケーションの動作を指定します。 アプリケーションの 1 つ、唯一のアプリケーション オブジェクトを作成し、アプリケーションがサポートするドキュメント型のドキュメント テンプレートを管理します。
+   アプリケーションクラス ( [CWinApp](reference/cwinapp-class.md)から派生) は、上のすべてのオブジェクトを制御し、初期化やクリーンアップなどのアプリケーションの動作を指定します。 アプリケーションの1つのアプリケーションオブジェクトのみが、アプリケーションがサポートするドキュメントの種類のドキュメントテンプレートを作成および管理します。
 
-- スレッド オブジェクト
+- スレッドオブジェクト
 
-   アプリケーションが実行の個別のスレッドを作成する場合: たとえば、バック グラウンドで計算を実行する — から派生したクラスを使用します[CWinThread](../mfc/reference/cwinthread-class.md)。 [CWinApp](../mfc/reference/cwinapp-class.md)自体に由来`CWinThread`アプリケーションで、プライマリ スレッドの実行 (または、メイン プロセス) を表します。 セカンダリ スレッドで MFC を使用することもできます。
+   たとえば、バックグラウンドで計算を実行するために、アプリケーションが個別の実行スレッドを作成する場合は、 [CWinThread](reference/cwinthread-class.md)から派生したクラスを使用します。 [CWinApp](reference/cwinapp-class.md)自体はから派生 `CWinThread` し、アプリケーションの実行のプライマリスレッド (またはメインプロセス) を表します。 セカンダリスレッドで MFC を使用することもできます。
 
-実行中のアプリケーションでこれらのオブジェクトは、協調的コマンドおよびその他のメッセージによって結合されて、ユーザーの操作に応答します。 1 つのアプリケーション オブジェクトは、1 つまたは複数のドキュメント テンプレートを管理します。 それぞれのドキュメント テンプレートを作成および (アプリケーションが SDI または MDI のどちらか) に応じて、1 つまたは複数のドキュメントを管理します。 ユーザーは、表示して、フレーム ウィンドウ内に含まれるビューを使用して、ドキュメントを操作できます。 次の図は、SDI アプリケーションのこれらのオブジェクト間の関係を示します。
+実行中のアプリケーションでは、これらのオブジェクトは、コマンドやその他のメッセージによって連結されたユーザー操作に協調的に応答します。 1つのアプリケーションオブジェクトが1つ以上のドキュメントテンプレートを管理します。 各ドキュメントテンプレートは、1つまたは複数のドキュメントを作成および管理します (アプリケーションが SDI と MDI のどちらであるかによって異なります)。 ユーザーは、フレームウィンドウ内に含まれるビューを使用してドキュメントを表示および操作します。 次の図は、SDI アプリケーションのこれらのオブジェクト間の関係を示しています。
 
-![実行中の SDI アプリケーション内のオブジェクト](../mfc/media/vc386v1.gif "中の実行中の SDI アプリケーション オブジェクト") <br/>
+![実行中の SDI アプリケーション内のオブジェクト](../mfc/media/vc386v1.gif "実行中の SDI アプリケーションのオブジェクト") <br/>
 動作中の SDI アプリケーションのオブジェクト
 
-この一連のトピックの残りの部分では、framework のツール、MFC アプリケーション ウィザード、および、リソース エディターがこれらのオブジェクトを作成する方法、どのように連動する、および、プログラミングでの使用方法について説明します。 ドキュメント、ビュー、およびフレーム ウィンドウがで詳しく説明されている[ウィンドウ オブジェクト](../mfc/window-objects.md)と[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)します。
+この記事の残りの部分では、フレームワークツール、MFC アプリケーションウィザード、およびリソースエディターを使用してこれらのオブジェクトを作成する方法、それらのオブジェクトを連携させる方法、およびプログラミングでそれらを使用する方法について説明します。 ドキュメント、ビュー、フレームウィンドウの詳細については、 [「ウィンドウオブジェクト](window-objects.md)と[ドキュメント/ビューアーキテクチャ](document-view-architecture.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[クラスを使用した Windows アプリケーションの作成](using-the-classes-to-write-applications-for-windows.md)

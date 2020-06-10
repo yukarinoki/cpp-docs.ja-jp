@@ -12,30 +12,30 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: d4b4a4876f47452361b13837b0279f5bf98f8658
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e8e3d0aa51eeea112597485a9221dcba4feda87
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618359"
 ---
 # <a name="managing-mdi-child-windows"></a>MDI 子ウィンドウの管理
 
-MDI メイン フレーム ウィンドウ (アプリケーションごとに 1 つ) には、クイック ウォッチ ウィンドウと呼ばれる特殊な子ウィンドウが含まれています。 [クイック ウォッチ] ウィンドウがメイン フレーム ウィンドウのクライアント領域を管理し、子ウィンドウ自体に含まれて: から派生して、ドキュメント ウィンドウ`CMDIChildWnd`します。 ドキュメント ウィンドウは、フレーム ウィンドウ自体 (MDI 子ウィンドウ) であるため、それぞれに子こともできます。 すべてのこれらのケースでは、親ウィンドウは、その子ウィンドウを管理し、いくつかのコマンドを転送します。
+MDI メインフレームウィンドウ (アプリケーションごとに1つ) には、MDICLIENT ウィンドウと呼ばれる特殊な子ウィンドウがあります。 MDICLIENT ウィンドウはメインフレームウィンドウのクライアント領域を管理し、それ自体には子ウィンドウがあります。ドキュメントウィンドウは、から派生したもの `CMDIChildWnd` です。 ドキュメントウィンドウはフレームウィンドウ自体 (MDI 子ウィンドウ) であるため、独自の子を持つこともできます。 これらのすべての場合、親ウィンドウは子ウィンドウを管理し、コマンドを転送します。
 
-MDI フレーム ウィンドウは、フレーム ウィンドウは、クイック ウォッチ ウィンドウで、コントロール バーと共に再配置を管理します。 [クイック ウォッチ] ウィンドウで、さらに、すべての MDI 子フレーム ウィンドウを管理します。 次の図は、MDI フレーム ウィンドウ、クイック ウォッチ ウィンドウ、およびその子ドキュメント フレーム ウィンドウ間の関係を示します。
+MDI フレームウィンドウでは、フレームウィンドウは MDICLIENT ウィンドウを管理し、コントロールバーと共に移動します。 MDICLIENT ウィンドウでは、すべての MDI 子フレームウィンドウが管理されます。 次の図は、MDI フレームウィンドウとその MDICLIENT ウィンドウとその子ドキュメントフレームウィンドウの間の関係を示しています。
 
-![子ウィンドウの MDI フレーム ウィンドウ](../mfc/media/vc37gb1.gif "子ウィンドウの MDI フレーム ウィンドウ") <br/>
+![MDI フレーム ウィンドウの子ウィンドウ](../mfc/media/vc37gb1.gif "MDI フレーム ウィンドウの子ウィンドウ") <br/>
 MDI フレーム ウィンドウと子ウィンドウ
 
-MDI フレーム ウィンドウは、1 つを使用する必要がある場合も、現在の MDI 子ウィンドウと組み合わせては機能します。 MDI フレーム ウィンドウは、自分で処理する前に、MDI 子ウィンドウにコマンド メッセージを委任します。
+MDI フレームウィンドウは、現在の MDI 子ウィンドウと共に使用することもできます (存在する場合)。 MDI フレームウィンドウは、コマンドメッセージを MDI 子に代行させてから、それ自体を処理しようとします。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ドキュメント フレーム ウィンドウの作成](../mfc/creating-document-frame-windows.md)
+- [ドキュメント フレーム ウィンドウの作成](creating-document-frame-windows.md)
 
-- [フレーム ウィンドウ スタイル](../mfc/frame-window-styles-cpp.md)
+- [フレームウィンドウスタイル](frame-window-styles-cpp.md)
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+[フレームウィンドウの使用](using-frame-windows.md)

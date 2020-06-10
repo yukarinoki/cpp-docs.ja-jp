@@ -8,52 +8,52 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 99a2764dcad15267b1aab8a60951f99f21352726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392870"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619518"
 ---
 # <a name="exception-classes"></a>例外クラス
 
-クラス ライブラリには、クラスに基づいた例外処理メカニズム`CException`します。 アプリケーション フレームワークでは、コードで例外を使用します。独自のコードに使用することもできます。 詳細については、この記事を参照してください。[例外](../mfc/exception-handling-in-mfc.md)します。 独自の例外型を派生する`CException`します。
+クラスライブラリは、クラスに基づく例外処理機構を提供し `CException` ます。 アプリケーションフレームワークは、コード内で例外を使用します。また、自分で使用することもできます。 詳細については、「[例外](exception-handling-in-mfc.md)」を参照してください。 から独自の例外の種類を派生させることができ `CException` ます。
 
-MFC では、すべてのサポートの例外の例外クラスと同様に、独自の例外の派生元となる例外クラスを提供します。
+MFC には、例外クラスが用意されています。このクラスは、独自の例外だけでなく、サポートするすべての例外の例外クラスを派生させることができます。
 
-[CException](../mfc/reference/cexception-class.md)<br/>
+[CException](reference/cexception-class.md)<br/>
 例外の基底クラス。
 
-[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+[CArchiveException](reference/carchiveexception-class.md)<br/>
 アーカイブの例外。
 
-[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
-DAO データベース操作の失敗による例外です。
+[CDaoException](reference/cdaoexception-class.md)<br/>
+DAO データベース操作の失敗に起因する例外。
 
-[CDBException](../mfc/reference/cdbexception-class.md)<br/>
-ODBC データベースの処理中のエラーによる例外。
+[CDBException](reference/cdbexception-class.md)<br/>
+ODBC データベースの処理でエラーが発生したため、例外が発生します。
 
-[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+[CFileException](reference/cfileexception-class.md)<br/>
 ファイル指向の例外。
 
-[CMemoryException](../mfc/reference/cmemoryexception-class.md)<br/>
-メモリ不足の例外。
+[CMemoryException](reference/cmemoryexception-class.md)<br/>
+メモリ不足の例外です。
 
-[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)<br/>
-サポートされていない機能を使用して結果である例外。
+[CNotSupportedException](reference/cnotsupportedexception-class.md)<br/>
+サポートされていない機能を使用した結果として生成される例外。
 
-[COleException](../mfc/reference/coleexception-class.md)<br/>
-OLE の処理中のエラーによる例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
+[COleException](reference/coleexception-class.md)<br/>
+OLE 処理のエラーによって発生する例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
 
-[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
-Automation の中にエラーによる例外。 Automation の例外はオートメーション サーバーによってスローされ、オートメーション クライアントによってキャッチします。
+[COleDispatchException](reference/coledispatchexception-class.md)<br/>
+オートメーション中のエラーによって発生する例外。 オートメーションの例外はオートメーションサーバーによってスローされ、オートメーションクライアントによってキャッチされます。
 
-[CResourceException](../mfc/reference/cresourceexception-class.md)<br/>
-Windows リソースの読み込みに失敗による例外です。
+[CResourceException](reference/cresourceexception-class.md)<br/>
+Windows リソースの読み込みに失敗した場合の例外。
 
-[CUserException](../mfc/reference/cuserexception-class.md)<br/>
-使用して、ユーザーが開始した操作を停止する例外。 通常、ユーザーに通知されました、問題の前に、この例外がスローされます。
+[CUserException](reference/cuserexception-class.md)<br/>
+ユーザーが開始した操作を停止するために使用される例外。 通常、この例外がスローされる前に、ユーザーに問題が通知されています。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

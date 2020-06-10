@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX コントロール:最適化
+title: 'MFC ActiveX コントロール : 最適化'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
@@ -14,57 +14,57 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615401"
 ---
-# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール:最適化
+# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール : 最適化
 
-この記事では、パフォーマンス向上のため、ActiveX コントロールを最適化するために使用できる手法について説明します。
+この記事では、パフォーマンス向上のために ActiveX コントロールを最適化するために使用できる手法について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
-トピックでは、[にすることから、アクティブ化表示時にオプション](../mfc/turning-off-the-activate-when-visible-option.md)と[を提供するマウス操作中に非アクティブな](../mfc/providing-mouse-interaction-while-inactive.md)をアクティブ化されるまでウィンドウを作成しないコントロールについて説明します。 トピック[ウィンドウなしのアクティベーション](../mfc/providing-windowless-activation.md)アクティブにしている場合でも、ウィンドウを作成しないコントロールについて説明します。
+これらのトピックでは[、[表示時にアクティブ化] オプションをオフ](turning-off-the-activate-when-visible-option.md)にし、[非アクティブのときにマウス操作](providing-mouse-interaction-while-inactive.md)を行うと、アクティブ化されるまでウィンドウを作成しないコントロールについて話し合います。 ウィンドウ[なしのアクティベーションを提供](providing-windowless-activation.md)するトピックでは、ウィンドウがアクティブになった場合でもウィンドウを作成しないコントロールについて説明します。
 
-Windows OLE オブジェクトの 2 つの主な欠点がある: 透明またはアクティブな場合、四角形以外のオブジェクトは、およびインスタンス化とコントロールの表示に大きなオーバーヘッドを追加します。 通常、ウィンドウを作成すると、コントロールの作成時の 60% がかかります。 1 つの共有ウィンドウ (通常は、コンテナーの) といくつかのディスパッチのコードでは、コントロールは、パフォーマンスの低下なしに一般的に、同じウィンドウ サービスを受信します。 ウィンドウは、オブジェクトの不要なオーバーヘッドがほとんどです。
+Windows には、OLE オブジェクトに対して主に2つの欠点があります。アクティブなときにオブジェクトが透明または非表示にならないようにし、コントロールのインスタンス化と表示に大きなオーバーヘッドを追加します。 通常、ウィンドウを作成するには、コントロールの作成時間の60% が必要です。 1つの共有ウィンドウ (通常はコンテナーの) といくつかのディスパッチコードを使用すると、コントロールは同じウィンドウサービスを受け取ります。通常、パフォーマンスが低下することはありません。 ウィンドウを使用すると、オブジェクトのオーバーヘッドがほとんど不要になります。
 
-いくつかの最適化は必ずしもパフォーマンスが向上しない特定のコンテナー コントロールを使用するとします。 たとえば、ため、この機能の実装は古いコンテナーの特典を提供しません、1996年する前にリリースされたコンテナーはウィンドウなしのアクティベーションをサポートしませんでした。 ただし、ほぼすべてのコンテナーは、コントロールの永続化コードの最適化が任意のコンテナーで、パフォーマンスは向上可能性がありますので、永続化をサポートします。 コントロールは、コンテナーの 1 つの特定の種類で使用するためのものでは具体的には、場合の研究にこれらの最適化のコンテナーでサポートされています。 一般に、ただし、する必要がありますしようとするさまざまなコンテナーのように、コントロールの実行とその可能性があることを確認して、特定のコントロールに適用可能なこれらの手法の多くを実装します。
+一部の最適化では、特定のコンテナーでコントロールが使用されている場合、必ずしもパフォーマンスが向上するとは限りません。 たとえば、1996より前にリリースされたコンテナーは、ウィンドウなしのアクティベーションをサポートしていなかったので、この機能を実装しても、古いコンテナーではメリットが得られません。 ただし、ほぼすべてのコンテナーで永続化がサポートされているため、コントロールの永続化コードを最適化すると、どのコンテナーでもパフォーマンスが向上する可能性があります。 1つの特定の種類のコンテナーでの使用を目的としてコントロールが特別に使用されている場合は、そのコンテナーでどの最適化がサポートされているかを調査することをお勧めします。 ただし、通常は、特定のコントロールに適用できるものと同じ数の手法を実装して、コントロールを確実に実行できるようにする必要があります。
 
-これらの最適化の多くを実装することができます、 [MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)の[コントロール設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md)ページ。
+これらの最適化の多くは、 [MFC ActiveX コントロールウィザード](reference/mfc-activex-control-wizard.md)の [[コントロールの設定](reference/control-settings-mfc-activex-control-wizard.md)] ページで実装できます。
 
-### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX コントロール ウィザード OLE 最適化オプション
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX コントロールウィザードの OLE 最適化オプション
 
-|MFC ActiveX コントロール ウィザード、コントロールの設定|アクション|詳細情報|
+|MFC ActiveX コントロールウィザードのコントロール設定|アクション|説明|
 |-------------------------------------------------------|------------|----------------------|
-|**表示時にアクティブ** チェック ボックス|Clear|[オフにすると、ときにアクティブ化 [表示] オプション](../mfc/turning-off-the-activate-when-visible-option.md)|
-|**ウィンドウなしのアクティベーション** チェック ボックス|選択|[ウィンドウなしのアクティベーション](../mfc/providing-windowless-activation.md)|
-|**クリッピングを行わないデバイス コンテキスト** チェック ボックス|選択|[クリッピングを行わないデバイス コンテキストの使用](../mfc/using-an-unclipped-device-context.md)|
-|**アクティブ化のちらつきのない** チェック ボックス|選択|[ちらつきなしのアクティベーションの提供](../mfc/providing-flicker-free-activation.md)|
-|**マウス ポインターの通知時に非アクティブな** チェック ボックス|選択|[コントロールがアクティブでないときのマウスとの対話](../mfc/providing-mouse-interaction-while-inactive.md)|
-|**最適化された描画コード** チェック ボックス|選択|[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)|
+|[**表示時にアクティブにする**] チェックボックス|Clear|[[表示時にアクティブ化] オプションをオフにする](turning-off-the-activate-when-visible-option.md)|
+|**ウィンドウなしのアクティブ化**チェックボックス|Select|[ウィンドウなしのアクティベーション](providing-windowless-activation.md)|
+|クリッピングを行っていない**デバイスコンテキスト**のチェックボックス|Select|[クリッピングを行わないデバイス コンテキストの使用](using-an-unclipped-device-context.md)|
+|[**ちらつきなしでアクティブ化**する] チェックボックス|Select|[ちらつきなしのアクティベーションの提供](providing-flicker-free-activation.md)|
+|[**非アクティブ時のマウスポインター通知**] チェックボックス|Select|[コントロールがアクティブでないときのマウスとの対話](providing-mouse-interaction-while-inactive.md)|
+|最適化された**描画コード**チェックボックス|Select|[コントロールの描画の最適化](optimizing-control-drawing.md)|
 
-これらの最適化を実装するメンバー関数の詳細については、次を参照してください。 [COleControl](../mfc/reference/colecontrol-class.md)します。
+これらの最適化を実装するメンバー関数の詳細については、「 [COleControl](reference/colecontrol-class.md)」を参照してください。
 
 詳細については次を参照してください:
 
-- [永続化と初期化の最適化](../mfc/optimizing-persistence-and-initialization.md)
+- [永続化と初期化の最適化](optimizing-persistence-and-initialization.md)
 
-- [ウィンドウなしのアクティベーション](../mfc/providing-windowless-activation.md)
+- [ウィンドウなしのアクティベーション](providing-windowless-activation.md)
 
-- [オフにすると、ときにアクティブ化 [表示] オプション](../mfc/turning-off-the-activate-when-visible-option.md)
+- [[表示時にアクティブ化] オプションをオフにする](turning-off-the-activate-when-visible-option.md)
 
-- [コントロールがアクティブでないときのマウスとの対話](../mfc/providing-mouse-interaction-while-inactive.md)
+- [コントロールがアクティブでないときのマウスとの対話](providing-mouse-interaction-while-inactive.md)
 
-- [ちらつきなしのアクティベーションの提供](../mfc/providing-flicker-free-activation.md)
+- [ちらつきなしのアクティベーションの提供](providing-flicker-free-activation.md)
 
-- [クリッピングを行わないデバイス コンテキストの使用](../mfc/using-an-unclipped-device-context.md)
+- [クリッピングを行わないデバイス コンテキストの使用](using-an-unclipped-device-context.md)
 
-- [コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)
+- [コントロールの描画の最適化](optimizing-control-drawing.md)
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
+[MFC ActiveX コントロール](mfc-activex-controls.md)

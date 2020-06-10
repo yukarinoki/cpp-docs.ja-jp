@@ -15,43 +15,43 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: 13a0edb72657c9ffad00dcb909019bdfe4b87e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 18e482ca93166246df7569be9babff93d983dfd5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618060"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX コントロール : ストック プロパティ ページの使用
 
-この資料では、ActiveX コントロールで使用できるストック プロパティ ページとその使用方法について説明します。
+この記事では、ActiveX コントロールで使用できるストックプロパティページとその使用方法について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
-ActiveX コントロールでプロパティ ページを使用する方法の詳細については、次の記事を参照してください。
+ActiveX コントロールでのプロパティページの使用の詳細については、次の記事を参照してください。
 
-- [MFC ActiveX コントロール: プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)
+- [MFC ActiveX コントロール: プロパティ ページ](mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX コントロール : カスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX コントロール : カスタム プロパティ ページの追加](mfc-activex-controls-adding-another-custom-property-page.md)
 
-MFC には、ActiveX コントロールで使用する 3 `CLSID_CColorPropPage``CLSID_CFontPropPage`つのストック`CLSID_CPicturePropPage`プロパティ ページがあります。 これらのページには、それぞれ、ストック カラー、フォント、およびピクチャプロパティのユーザー インターフェイスが表示されます。
+MFC には、ActiveX コントロールで使用する3つのストックプロパティページ `CLSID_CColorPropPage` (、、および) が用意されて `CLSID_CFontPropPage` `CLSID_CPicturePropPage` います。 これらのページには、株価、フォント、および画像の各プロパティのユーザーインターフェイスがそれぞれ表示されます。
 
-これらのプロパティ ページをコントロールに組み込むには、コントロールのプロパティ ページ ID の配列を初期化するコードに、その ID を追加します。 次の例では、このコードはコントロール実装ファイル (.CPP) を指定すると、3 つのストック プロパティ ページと既定のプロパティ`CMyPropPage`ページ (この例で指定) がすべて含まれる配列を初期化します。
+これらのプロパティページをコントロールに組み込むには、コントロールのプロパティページ Id の配列を初期化するコードにその Id を追加します。 次の例では、このコードはコントロール実装ファイル () にあります。CPP) を初期化し、次の3つのストックプロパティページと既定のプロパティページ (この例ではという名前) をすべて格納するように配列を初期化し `CMyPropPage` ます。
 
-[!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#21](codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]
 
-BEGIN_PROPPAGEIDS マクロのプロパティ ページの数は 4 です。 これは、ActiveX コントロールでサポートされるプロパティ ページの数を表します。
+BEGIN_PROPPAGEIDS マクロでは、プロパティページの数が4であることに注意してください。 これは、ActiveX コントロールでサポートされているプロパティページの数を表します。
 
-これらの変更が完了したら、プロジェクトを再構築します。 これで、コントロールにフォント、ピクチャ、および色のプロパティページが追加されました。
+これらの変更が行われたら、プロジェクトをリビルドします。 コントロールに、フォント、画像、および色のプロパティのプロパティページが用意されました。
 
 > [!NOTE]
-> コントロール のストック プロパティ ページにアクセスできない場合は、MFC DLL (MFCxx.DLL) が現在のオペレーティング システムに正しく登録されていない可能性があります。 これは通常、現在実行しているオペレーティング システムとは異なるオペレーティング システムで Visual C++ をインストールした結果です。
+> コントロールのストックプロパティページにアクセスできない場合は、MFC DLL (Mfcxx.dll) が現在のオペレーティングシステムに正しく登録されていないことが原因である可能性があります。 通常、これは、現在実行されているオペレーティングシステムとは異なるオペレーティングシステムで Visual C++ をインストールした場合に発生します。
 
 > [!TIP]
-> ストック プロパティ ページが表示されない場合 (前の注を参照)、コマンド ラインから RegSvr32.exe を実行して DLL を登録し、DLL へのフル パス名を指定します。
+> ストックプロパティページが表示されていない場合 (前のメモを参照) は、dll への完全なパス名を指定してコマンドラインから RegSvr32 を実行し、DLL を登録します。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール: ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[MFC ActiveX コントロール](mfc-activex-controls.md)<br/>
+[MFC ActiveX コントロール: ストック プロパティの追加](mfc-activex-controls-adding-stock-properties.md)

@@ -9,34 +9,34 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: 2cf5b266348e299fe761ba40bd2cfb849f02b9ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a458f19f956bb1092cc76acd587bc467f25325e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377193"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625580"
 ---
 # <a name="initinstance-member-function"></a>InitInstance メンバー関数
 
-Windows オペレーティング システムでは、同じアプリケーションの複数のコピー ("インスタンス") を実行できます。 `WinMain`アプリケーションの新しいインスタンスが起動するたびに[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)を呼び出します。
+Windows オペレーティングシステムでは、同じアプリケーションの複数のコピー ("インスタンス") を実行できます。 `WinMain`アプリケーションの新しいインスタンスが開始されるたびに、 [InitInstance](reference/cwinapp-class.md#initinstance)を呼び出します。
 
-MFC`InitInstance`アプリケーション ウィザードによって作成される標準の実装では、次のタスクが実行されます。
+`InitInstance`MFC アプリケーションウィザードによって作成される標準の実装では、次のタスクを実行します。
 
-- その中心的なアクションとして、ドキュメント、ビュー、およびフレーム ウィンドウを作成するドキュメント テンプレートを作成します。 このプロセスの詳細については、「[ドキュメント テンプレートの作成](../mfc/document-template-creation.md)」を参照してください。
+- 中心的なアクションとして、はドキュメント、ビュー、フレームウィンドウを作成するドキュメントテンプレートを作成します。 このプロセスの詳細については、[ドキュメントテンプレートの作成](document-template-creation.md)に関する記事をご覧ください。
 
-- .ini ファイルまたは Windows レジストリから、最近使用したファイルの名前を含む標準ファイル オプションを読み込みます。
+- .Ini ファイルまたは Windows レジストリから、最近使用したファイルの名前を含む標準ファイルオプションを読み込みます。
 
-- 1 つ以上のドキュメント テンプレートを登録します。
+- 1つ以上のドキュメントテンプレートを登録します。
 
-- MDI アプリケーションの場合、メイン フレーム ウィンドウを作成します。
+- MDI アプリケーションの場合は、メインフレームウィンドウを作成します。
 
-- コマンド ラインで指定されたドキュメントを開くか、新しい空のドキュメントを開くために、コマンド ラインを処理します。
+- コマンドラインで指定されたドキュメントを開くか、新しい空のドキュメントを開くために、コマンドラインを処理します。
 
 独自の初期化コードを追加したり、ウィザードによって作成されたコードを変更したりできます。
 
 > [!NOTE]
-> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を`InitInstance`呼び出す場合は、COINIT_MULTITHREADEDではなくCOINIT_APARTMENTTHREADEDを指定します。
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は `InitInstance` 、COINIT_MULTITHREADED ではなく COINIT_APARTMENTTHREADED を指定します。
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)

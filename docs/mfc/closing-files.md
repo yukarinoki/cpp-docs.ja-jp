@@ -5,23 +5,23 @@ helpviewer_keywords:
 - MFC, file operations
 - files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
-ms.openlocfilehash: 69a0960c1edabab00cb71702acda526ee9ebd798
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51e51c88260a51ec44f11ecb5c2a88e645194f4e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326925"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617228"
 ---
 # <a name="closing-files"></a>ファイルを閉じる
 
-通常どおり、I/O 操作でファイルを終了すると閉じてください。
+通常の i/o 操作では、ファイルの終了後、ファイルを閉じなければなりません。
 
-#### <a name="to-close-a-file"></a>ファイルを閉じる
+#### <a name="to-close-a-file"></a>ファイルを閉じるには
 
-1. 使用して、**閉じる**メンバー関数。 この関数は、ファイル システムのファイルを閉じ、必要な場合は、バッファーをフラッシュします。
+1. **Close**メンバー関数を使用します。 この関数は、ファイルシステムファイルを閉じ、必要に応じてバッファーをフラッシュします。
 
-割り当て済みの場合、 [CFile](../mfc/reference/cfile-class.md)フレーム上のオブジェクト (に示す例のように[ファイルを開く](../mfc/opening-files.md))、オブジェクトが自動的に閉じてスコープ外になったときに破棄されます。 削除することに注意してください、`CFile`オブジェクトには、ファイル システムで物理ファイルは削除されません。
+[[ファイルを開く](opening-files.md)] に示されている例のように、フレームに[CFile](reference/cfile-class.md)オブジェクトを割り当てた場合、オブジェクトは自動的に閉じられ、スコープ外に出ると破棄されます。 オブジェクトを削除して `CFile` も、ファイルシステム内の物理ファイルは削除されないことに注意してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル](../mfc/files-in-mfc.md)
+[[ファイル]](files-in-mfc.md)

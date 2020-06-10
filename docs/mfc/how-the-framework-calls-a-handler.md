@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254009"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618514"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>フレームワークがハンドラーを呼び出す方法
 
-次のトピックは最初、コマンドのルーティング方法を確認し、windows への他のメッセージとコントロール通知の送信方法を確認します。
+次のトピックでは、最初にフレームワークがコマンドをルーティングする方法を確認し、その後、他のメッセージとコントロールの通知がどのように windows に送信されるかを確認します。
 
-- [メッセージの送信と受信](../mfc/message-sending-and-receiving.md)
+- [メッセージの送信と受信](message-sending-and-receiving.md)
 
-- [非コマンドのメッセージのハンドラー検索方法](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [コマンド以外のメッセージのハンドラーへの接続方法](how-noncommand-messages-reach-their-handlers.md)
 
-- [コマンド ルーティング](../mfc/command-routing.md)
+- [コマンドルーティング](command-routing.md)
 
-- [コマンド ルーティングの図](../mfc/command-routing-illustration.md)
+- [コマンド ルーティングの図](command-routing-illustration.md)
 
-- [OnCmdMsg ハンドラー](../mfc/oncmdmsg-handler.md)
+- [OnCmdMsg ハンドラー](oncmdmsg-handler.md)
 
-- [標準のコマンド ルーティングのオーバーライド](../mfc/overriding-the-standard-command-routing.md)
+- [標準のコマンド ルーティングのオーバーライド](overriding-the-standard-command-routing.md)
 
 ## <a name="see-also"></a>関連項目
 
-[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+[メッセージの処理とマップ](message-handling-and-mapping.md)

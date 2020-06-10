@@ -7,31 +7,31 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: d378c6e07280349f9995981ad794039ebc015b25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14abf72551d39b2d1b2069bd17da308b39d7f6cc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621410"
 ---
 # <a name="list-items-and-image-lists"></a>リスト項目とイメージ リスト
 
-リスト コントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) の "項目" は、アイコン、ラベル、および他の情報 ("サブ項目" の場合もある) で構成されます。
+リストコントロール ([CListCtrl](reference/clistctrl-class.md)) の "項目" は、アイコン、ラベル、および場合によっては ("サブ項目" 内の) 他の情報で構成されます。
 
-リスト コントロール項目のアイコンは、イメージ リストに含まれています。 1 つのイメージ リストには、アイコン ビューで使用されるフルサイズのアイコンが含まれています。 2 番目のオプションのイメージ リストには、コントロールの他のビューで使用する同じアイコンの小さなバージョンが含まれています。 3 番目のオプション リストには、チェック ボックスなどの "状態" イメージが含まれています。 4 番目の省略可能なリストには、リスト コントロールの個々のヘッダー項目に表示されるイメージが含まれます。
+リストコントロール項目のアイコンは、イメージリストに含まれています。 1つのイメージリストには、アイコンビューで使用されるフルサイズのアイコンが含まれています。 2番目のオプションのイメージリストには、コントロールの他のビューで使用する同じアイコンの小さいバージョンが含まれています。 3番目のオプションリストには、特定のビューの小さいアイコンの前に表示するためのチェックボックスなどの "状態" のイメージが含まれています。 4番目のオプションリストには、リストコントロールの個々のヘッダー項目に表示される画像が含まれています。
 
 > [!NOTE]
-> リスト ビュー コントロールがLVS_SHAREIMAGELISTS スタイルで作成された場合、イメージ リストが使用されなくなったときに、そのリストを破棄する必要があります。 同じイメージ リストを複数のリスト ビュー コントロールに割り当てる場合は、このスタイルを指定します。そうしないと、複数のコントロールが同じイメージ リストを破棄しようとする可能性があります。
+> リストビューコントロールが LVS_SHAREIMAGELISTS スタイルで作成されている場合は、使用されなくなったときにイメージリストを破棄する必要があります。 同じイメージリストを複数のリストビューコントロールに割り当てる場合は、このスタイルを指定します。それ以外の場合は、複数のコントロールが同じイメージリストを破棄しようとすることがあります。
 
-リスト項目の詳細については、「Windows SDK の[リスト ビュー イメージ リスト](/windows/win32/Controls/using-list-view-controls)と[アイテムとサブアイテム](/windows/win32/Controls/using-list-view-controls)」を参照してください。 また *、MFC リファレンス*のクラス[CImageList](../mfc/reference/cimagelist-class.md)とこのファミリの[CImageList](../mfc/using-cimagelist.md)の使用も参照してください。
+リスト項目の詳細については、「Windows SDK の[リストビューのイメージリスト](/windows/win32/Controls/using-list-view-controls)と[項目および](/windows/win32/Controls/using-list-view-controls)サブ項目」を参照してください。 また、 *MFC リファレンス*のクラス[cimagelist](reference/cimagelist-class.md)と、このファミリーの記事の「 [cimagelist](using-cimagelist.md) 」を参照してください。
 
-リスト コントロールを作成するには、新しい項目をリストに挿入するときに使用するイメージ リストを指定する必要があります。 次の例は *、m_pImagelist*が型`CImageList`のポインターであり、データ メンバー *m_listctrl*場合のこの`CListCtrl`プロシージャを示しています。
+リストコントロールを作成するには、リストに新しい項目を挿入するときに使用するイメージリストを指定する必要があります。 次の例では、 *m_pImagelist*が型のポインターであり `CImageList` *m_listctrl*がデータメンバーであるこの手順を示し `CListCtrl` ます。
 
-[!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#19](codesnippet/cpp/list-items-and-image-lists_1.cpp)]
 
-ただし、リスト ビューやリスト コントロールにアイコンを表示する予定がない場合は、イメージ リストは必要ありません。
+ただし、リストビューまたはリストコントロールにアイコンを表示する予定がない場合は、イメージリストは必要ありません。
 
 ## <a name="see-also"></a>関連項目
 
-[CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CListCtrl の使い方](using-clistctrl.md)<br/>
+[制限](controls-mfc.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623608"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; マクロ
 
@@ -30,15 +30,15 @@ ms.locfileid: "81364968"
 
 ## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-アロケータ クラス テンプレートを生成します。
+アロケータークラステンプレートを生成します。
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-このマクロは、テンプレート定義`template <class Type> class name {.....}`と、同期フィルター`template <> class name<void> {.....}``sync`と型のキャッシュを使用するアロケーター クラス テンプレートを定義する特殊化`cache`を生成します。
+マクロによって、テンプレート定義 `template <class Type> class name {.....}` と特殊化が生成され `template <> class name<void> {.....}` ます。これにより、同期フィルターと型のキャッシュを使用するアロケータークラステンプレートが定義され `sync` `cache` ます。
 
 再バインドをコンパイルできるコンパイラの場合、作成されるテンプレート定義は次のようになります。
 
@@ -76,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
@@ -86,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 ## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
@@ -106,10 +106,10 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 コンパイラがシングル スレッド アプリケーションとマルチ スレッド アプリケーションの両方のコンパイルをサポートしている場合、マクロはシングル スレッド アプリケーションには `stdext::allocators::sync_none` を生成し、それ以外の場合は `stdext::allocators::sync_shared` を生成します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<アロケーター>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

@@ -1,31 +1,31 @@
 ---
-title: '方法: クイックアクセスツールバーのカスタマイズ'
+title: '方法: クイック アクセス ツール バーをカスタマイズする'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907781"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620031"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>方法: クイックアクセスツールバーのカスタマイズ
+# <a name="how-to-customize-the-quick-access-toolbar"></a>方法: クイック アクセス ツール バーをカスタマイズする
 
 クイックアクセスツールバー (QAT) はカスタマイズ可能なツールバーで、[アプリケーション] ボタンまたは [カテゴリ] タブの横に表示される一連のコマンドが含まれています。 次の図は、一般的なクイックアクセスツールバーを示しています。
 
-![MFC リボンクイックアクセスツールバー](../mfc/media/quick_access_toolbar.png "MFC リボンクイックアクセスツールバー")
+![MFC リボンのクイック アクセス ツール バー](../mfc/media/quick_access_toolbar.png "MFC リボンのクイック アクセス ツール バー")
 
-クイックアクセスツールバーをカスタマイズするには、 **[プロパティ]** ウィンドウで開き、コマンドを変更してから、リボンコントロールをプレビューします。
+クイックアクセスツールバーをカスタマイズするには、[**プロパティ**] ウィンドウで開き、コマンドを変更してから、リボンコントロールをプレビューします。
 
 ### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>クイックアクセスツールバーを開くにはプロパティウィンドウ
 
-1. Visual Studio の **[表示]** メニューで、 **[リソースビュー]** をクリックします。
+1. Visual Studio の [**表示**] メニューで、[**リソースビュー**] をクリックします。
 
 1. **リソースビュー**で、リボンリソースをダブルクリックしてデザイン画面に表示します。
 
-1. デザイン画面で、クイックアクセスツールバーメニューを右クリックし、 **[プロパティ]** をクリックします。
+1. デザイン画面で、クイックアクセスツールバーメニューを右クリックし、[**プロパティ**] をクリックします。
 
 ## <a name="quick-access-toolbar-properties"></a>クイックアクセスツールバーのプロパティ
 
@@ -38,9 +38,9 @@ ms.locfileid: "70907781"
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>クイックアクセスツールバーのコマンドを追加または削除するには
 
-1. **[プロパティ]** ウィンドウで **[QAT Items]** をクリックし、省略記号ボタン ([. **..])** をクリックします。
+1. [**プロパティ**] ウィンドウで [ **QAT Items**] をクリックし、省略記号ボタン ([. **..])** をクリックします。
 
-1. **[QAT 項目エディター]** ダイアログボックスで、 **[追加]** ボタンと **[削除]** ボタンを使用して、クイックアクセスツールバーのコマンドの一覧を変更します。
+1. [ **QAT 項目エディター** ] ダイアログボックスで、[**追加**] ボタンと [**削除**] ボタンを使用して、クイックアクセスツールバーのコマンドの一覧を変更します。
 
 1. クイックアクセスツールバーとクイックアクセスツールバーメニューの両方にコマンドを表示する場合は、コマンドの横にあるチェックボックスをオンにします。 メニューにのみコマンドを表示する場合は、このチェックボックスをオフにします。
 
@@ -50,8 +50,8 @@ ms.locfileid: "70907781"
 
 #### <a name="to-preview-the-ribbon-control"></a>リボンコントロールをプレビューするには
 
-- **リボンエディターのツールバー**で、テスト **リボン** の順にクリックします。
+- **リボンエディターのツールバー**で、[テスト] [**リボン**] の順にクリックします。
 
 ## <a name="see-also"></a>関連項目
 
-[リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
+[リボンデザイナー (MFC)](ribbon-designer-mfc.md)

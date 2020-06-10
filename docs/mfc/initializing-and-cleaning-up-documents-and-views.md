@@ -11,44 +11,44 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: 3c92d60941cd6542bd0d6c27e8a879dc85e3a3d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5beed5618d4fa991160ad1688a5a686aeaa842f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626365"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>ドキュメントとビューの初期化と後処理
 
-ドキュメントとビューの後の初期化とクリーンアップについては、次のガイドラインに従います。
+ドキュメントとビューの初期化とクリーンアップには、次のガイドラインを使用します。
 
-- MFC フレームワークはドキュメントとビューを初期化します。追加するデータは初期化します。
+- MFC フレームワークは、ドキュメントとビューを初期化します。追加したすべてのデータを初期化します。
 
-- フレームワークは、ドキュメントとビューが閉じるとクリーンアップします。これらのドキュメントとビューのメンバー関数内から、ヒープに割り当てたメモリを割り当て解除する必要があります。
+- フレームワークはドキュメントとビューを閉じるとクリーンアップされます。これらのドキュメントとビューのメンバー関数内から、ヒープに割り当てられたメモリの割り当てを解除する必要があります。
 
 > [!NOTE]
-> アプリケーション全体の初期化は、 クラス`CWinApp`の`CWinApp`[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)メンバー関数のオーバーライドで行うのが最善であり、アプリケーション全体のクリーンアップは、メンバー関数[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)のオーバーライドで行うのが最善です。
+> クラスの[InitInstance](reference/cwinapp-class.md#initinstance)メンバー関数をオーバーライドする場合は、アプリケーション全体の初期化を行うことをお勧め `CWinApp` します。また、アプリケーション全体のクリーンアップは、 `CWinApp` メンバー関数[exitinstance](reference/cwinapp-class.md#exitinstance)のオーバーライドで実行することをお勧めします。
 
-MDI アプリケーションでのドキュメント (およびそのフレーム ウィンドウ、ビュー、ビュー) のライフ サイクルは次のとおりです。
+MDI アプリケーションのドキュメント (およびそのフレームウィンドウとビューまたはビュー) のライフサイクルは次のとおりです。
 
-1. 動的な作成時に、ドキュメント コンストラクターが呼び出されます。
+1. 動的作成中に、ドキュメントコンストラクターが呼び出されます。
 
-1. 新しいドキュメントごとに、ドキュメントの[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)または[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)が呼び出されます。
+1. 新しいドキュメントごとに、ドキュメントの[OnNewDocument](reference/cdocument-class.md#onnewdocument)または[onopendocument](reference/cdocument-class.md#onopendocument)が呼び出されます。
 
-1. ユーザーは、ドキュメントの有効期間中にドキュメントを操作します。 通常、この問題は、ユーザーがビューを通じてドキュメント データを操作し、データを選択および編集するときに発生します。 ビューは、ドキュメントに変更を渡して、他のビューを保存および更新します。 この間、ドキュメントとビューの両方がコマンドを処理する場合があります。
+1. ユーザーは、その有効期間全体にわたってドキュメントを操作します。 通常、これは、ユーザーがビューを介してドキュメントデータを操作し、データを選択して編集すると発生します。 ビューは、ストレージの変更と他のビューの更新をドキュメントに渡します。 この期間中は、ドキュメントとビューの両方でコマンドが処理される可能性があります。
 
-1. フレームワークは、ドキュメントに固有のデータを削除する[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)を呼び出します。
+1. フレームワークは、 [DeleteContents](reference/cdocument-class.md#deletecontents)を呼び出して、ドキュメントに固有のデータを削除します。
 
 1. ドキュメントのデストラクターが呼び出されます。
 
-SDI アプリケーションでは、ドキュメントが最初に作成されるときに、手順 1 が 1 回実行されます。 次に、手順 2 ~ 4 は、新しいドキュメントを開くたびに繰り返し実行されます。 新しいドキュメントは、既存のドキュメント オブジェクトを再利用します。 最後に、アプリケーションが終了したときにステップ 5 が実行されます。
+SDI アプリケーションでは、ドキュメントが最初に作成されたときにステップ1が1回実行されます。 次に、新しいドキュメントが開かれるたびに、手順 2. ~ 4. が繰り返し実行されます。 新しいドキュメントは、既存のドキュメントオブジェクトを再利用します。 最後に、手順5は、アプリケーションの終了時に実行されます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ドキュメントとビューの初期化](../mfc/initializing-documents-and-views.md)
+- [ドキュメントとビューの初期化](initializing-documents-and-views.md)
 
-- [ドキュメントとビューの後処理](../mfc/cleaning-up-documents-and-views.md)
+- [ドキュメントとビューの後処理](cleaning-up-documents-and-views.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+[ドキュメント/ビューアーキテクチャ](document-view-architecture.md)

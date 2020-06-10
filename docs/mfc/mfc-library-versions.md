@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425701"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626128"
 ---
 # <a name="mfc-library-versions"></a>MFC ライブラリのバージョン
 
@@ -77,9 +77,9 @@ MFC ヘッダーファイルには、MFC ライブラリ、Win32 ライブラリ
 
 MFC ANSI/MBCS ライブラリバージョンでは、ASCII などの1バイト文字セットと、Shift + JIS などのマルチバイト文字セットがサポートされています。 MFC Unicode ライブラリのバージョンでは、16LE ワイド文字でエンコードされた形式で Unicode がサポートされています。 UTF-8 でエンコードされた Unicode をサポートするには、MFC の ANSI/MBCS ライブラリバージョンを使用します。
 
-IDE で1バイト、マルチバイト、またはワイド文字の Unicode 文字列と文字のサポートを使用するようにプロジェクト構成を設定するには、 **[プロジェクトのプロパティ]** ダイアログボックスを使用します。 **構成プロパティ** > **全般** ページで、**文字セット** プロパティを 1 バイト文字セットを使用する に設定し**ない**ように設定します。 **マルチバイト文字**セットを使用するためにマルチバイト文字セットを使用するようにプロパティを設定するか、 **unicode 文字セット**を使用して utf-16 としてエンコードされた unicode を使用します。
+IDE で1バイト、マルチバイト、またはワイド文字の Unicode 文字列と文字のサポートを使用するようにプロジェクト構成を設定するには、[**プロジェクトのプロパティ**] ダイアログボックスを使用します。 **構成プロパティ**の  >  **[全般**] ページで、[**文字セット**] プロパティを [1 バイト文字セットを使用する] に設定し**ない**ように設定します。 **マルチバイト文字**セットを使用するためにマルチバイト文字セットを使用するようにプロパティを設定するか、 **unicode 文字セット**を使用して utf-16 としてエンコードされた unicode を使用します。
 
-MFC プロジェクトでは、プリプロセッサシンボル \_UNICODE を使用して UTF-16 ワイド文字 Unicode のサポートを示し、MBCS を \_MBCS のサポートを示すようにします。 これらのオプションはプロジェクトで相互に排他的です。
+MFC プロジェクトでは、プリプロセッサシンボル unicode を使用し \_ て utf-16 ワイド文字 unicode のサポートが示され、mbcs では mbcs のサポートが示さ \_ れます。 これらのオプションはプロジェクトで相互に排他的です。
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC スタティックライブラリの名前付け規則
 
@@ -92,12 +92,12 @@ MFC のスタティックライブラリでは、次の名前付け規則を使�
 |指定子|値と意味|
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) または Unicode (U);ダイアログ内の MFC コントロールのないバージョンでは省略|
-|*c*|ダイアログ内の MFC コントロールのバージョン (CW) またはなし (NMCD)|
+|*40u-c*|ダイアログ内の MFC コントロールのバージョン (CW) またはなし (NMCD)|
 |*d*|デバッグまたはリリース: D = デバッグ。Release の指定子を省略します|
 
 次の表に記載されているすべてのライブラリは、サポートされているビルドアーキテクチャ用の \ atlmfc/lib ディレクトリにあらかじめ構築されています。
 
-|ライブラリ|Description|
+|ライブラリ|説明|
 |-------------|-----------------|
 |NAFXCW.LIB|MFC スタティックリンクライブラリ、リリースバージョン|
 |NAFXCWD.LIB|MFC スタティックリンクライブラリ、デバッグバージョン|
@@ -114,7 +114,7 @@ MFC の共有 Dll も、構造化された名前付け規則に従います。 �
 
 MFC Dll には、バイナリの互換性を示す*バージョン*番号が付いています。 プロジェクト内で互換性を保証するために、他のライブラリやコンパイラツールセットと同じバージョンの MFC Dll を使用します。
 
-|DLL|Description|
+|[DLL]|説明|
 |---------|-----------------|
 |MFC の*バージョン*。DLL|MFC DLL、ANSI または MBCS リリースバージョン|
 |MFC*バージョン*U .dll|MFC DLL、Unicode リリースバージョン|
@@ -129,16 +129,16 @@ MFC Dll には、バイナリの互換性を示す*バージョン*番号が付�
 
 MFC の共有 DLL バージョンに動的にリンクする場合は、アプリケーションからのものであるか、MFC 拡張 DLL からのものであるかにかかわらず、対応する MFC*バージョン*を含める必要があります。製品を展開するときの DLL または MFC*バージョン*の .dll。
 
-アプリケーションと共に配布C++できる Visual dll の一覧については、 [Microsoft Visual Studio 2017 の再頒布可能コードおよび Microsoft Visual Studio 2017 SDK (ユーティリティと Buildserver ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs) 、または[visual Studio 2019 の](/visualstudio/releases/2019/redistribution)再頒布可能コードを参照してください。
+アプリケーションと共に配布できる Visual C++ Dll の一覧については、「 [Microsoft Visual Studio 2017 および Microsoft Visual Studio 2017 SDK の再頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs) 」または「 [Visual Studio 2019 の](/visualstudio/releases/2019/redistribution)再頒布可能コード」を参照してください。
 
 MFC での MBCS および Unicode のサポートの詳細については、「 [Unicode およびマルチバイト文字セット (mbcs) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)」を参照してください。
 
 ## <a name="dynamic-link-library-support"></a>ダイナミックリンクライブラリのサポート
 
-MFC と MFC 以外の実行可能ファイルの両方で使用できる Dll を作成するには、静的または共有の動的 MFC ライブラリを使用できます。 これらは、"regular Dll" または "regular MFC Dll" と呼ばれ、MFC アプリおよび MFC Dll でのみ使用できる MFC 拡張 Dll と区別されます。 Mfc スタティックライブラリを使用してビルドされた DLL は、USRDLL と呼ばれることがあります。これは、MFC DLL プロジェクトがプリプロセッサシンボル **\_USRDLL**を定義するためです。 MFC の共有 Dll を使用する DLL は、プリプロセッサシンボル **\_AFXDLL**に定義されているため、以前の参照では AFXDLL と呼ばれることがあります。
+MFC と MFC 以外の実行可能ファイルの両方で使用できる Dll を作成するには、静的または共有の動的 MFC ライブラリを使用できます。 これらは、"regular Dll" または "regular MFC Dll" と呼ばれ、MFC アプリおよび MFC Dll でのみ使用できる MFC 拡張 Dll と区別されます。 Mfc スタティックライブラリを使用してビルドされた DLL は、前の参照で USRDLL と呼ばれることがあります。これは、MFC DLL プロジェクトでプリプロセッサシンボル** \_ USRDLL**が定義されるためです。 MFC の共有 Dll を使用する DLL は、プリプロセッサシンボル** \_ AFXDLL**を定義するため、以前の参照では AFXDLL と呼ばれることがあります。
 
 MFC スタティックライブラリにリンクして DLL プロジェクトを作成する場合、MFC 共有 Dll を使用せずに DLL を配置できます。 DLL プロジェクトがインポートライブラリ MFC*バージョン*にリンクするとき。LIB または MFC*バージョン*.lib。一致する MFC 共有 DLL MFC*バージョン*を配置する必要があります。Dll または MFC*バージョン*の .DLL を dll と共に使用します。 詳細については、「 [dll](../build/dlls-in-visual-cpp.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[MFC の一般的なトピック](../mfc/general-mfc-topics.md)
+[MFC の一般的なトピック](general-mfc-topics.md)

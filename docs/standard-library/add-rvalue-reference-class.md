@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456533"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623920"
 ---
-# <a name="addrvaluereference-class"></a>add_rvalue_reference クラス
+# <a name="add_rvalue_reference-class"></a>add_rvalue_reference クラス
 
 テンプレート パラメーターがオブジェクトまたは関数の型の場合に、その右辺値参照型を作成します。 それ以外の場合、参照縮小のセマンティクスのため、型はテンプレート パラメーターと同じです。
 
@@ -34,9 +34,9 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ## <a name="remarks"></a>Remarks
 
-クラスには、という`type`名前のメンバーがあります。これは、テンプレートパラメーター T への右辺値参照の型のエイリアスです。  `add_rvalue_reference`参照の縮小のセマンティクスは、非オブジェクト型と非関数型*t* `T&&`の場合、 *t*です。たとえば、 *T*が左辺値参照型`add_rvalue_reference<T>::type`の場合、は右辺値参照ではなく左辺値参照型です。
+クラスには `add_rvalue_reference` 、という名前のメンバーがあり `type` ます。これは、テンプレートパラメーター *T*への右辺値参照の型のエイリアスです。参照の縮小のセマンティクスは、非オブジェクト型と非関数型*t*の場合、 `T&&` *t*です。たとえば、 *T*が左辺値参照型の場合、 `add_rvalue_reference<T>::type` は右辺値参照ではなく左辺値参照型です。
 
-便宜上、 \<type_traits > は、の`add_rvalue_reference`メンバーの`type`エイリアス`add_rvalue_reference_t`であるヘルパーテンプレートを定義します。
+便宜上、は、 \<type_traits> `add_rvalue_reference_t` のメンバーにエイリアスを使用するヘルパーテンプレートを定義し `type` `add_rvalue_reference` ます。
 
 ## <a name="example"></a>例
 
@@ -71,12 +71,12 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>必要条件
 
-ヘッダー: \<type_traits >
+ヘッダー: \<type_traits>
 
 名前空間: std
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)\
-[add_lvalue_reference クラス](../standard-library/add-lvalue-reference-class.md)\
-[is_rvalue_reference クラス](../standard-library/is-rvalue-reference-class.md)
+[<type_traits>](type-traits.md)\
+[add_lvalue_reference クラス](add-lvalue-reference-class.md)\
+[is_rvalue_reference クラス](is-rvalue-reference-class.md)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 6ed2e4c09e2fe413d29ad9953dbb8a03c106e86c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5114fe53a5bac345eb6a55fb6c371f7bc1f698ef
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624027"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg ハンドラー
 
-各コマンド ターゲットを呼び出すコマンドのルーティングを実現する、`OnCmdMsg`次のコマンド ターゲット シーケンス内のメンバー関数。 コマンドの使用対象`OnCmdMsg`コマンドを処理できるかどうかを判断し、処理できない場合は、別のコマンド ターゲットにルーティングします。
+コマンドのルーティングを実現するために、各コマンドターゲットは、 `OnCmdMsg` シーケンス内の次のコマンドターゲットのメンバー関数を呼び出します。 コマンドターゲットはを使用して、 `OnCmdMsg` コマンドを処理できるかどうかを判断し、それを処理できない場合は別のコマンドターゲットにルーティングします。
 
-コマンド ターゲット クラスごとのオーバーライド、`OnCmdMsg`メンバー関数。 上書きは、次のターゲットを特定する各クラスのルート コマンドを使用できます。 フレーム ウィンドウでは、たとえば、常にコマンドをルーティングする現在の子ウィンドウまたはビューの表に示すように[標準のコマンド ルート](../mfc/command-routing.md)します。
+各コマンドターゲットクラスは、メンバー関数をオーバーライドでき `OnCmdMsg` ます。 オーバーライドにより、各クラスで特定の次のターゲットにコマンドをルーティングできます。 たとえば、フレームウィンドウでは、テーブルの[標準コマンドルート](command-routing.md)に示されているように、常に現在の子ウィンドウまたはビューにコマンドがルーティングされます。
 
-既定の`CCmdTarget`の実装`OnCmdMsg`コマンド ターゲット クラスのメッセージ マップを使用して受信する各コマンド メッセージのハンドラー関数の検索-標準的なメッセージを検索することと同じ方法でします。 一致が見つかると、ハンドラーを呼び出します。 メッセージ マップの検索については[方法、フレームワークのメッセージ マップ検索](../mfc/how-the-framework-searches-message-maps.md)します。
+の既定 `CCmdTarget` の実装で `OnCmdMsg` は、コマンドターゲットクラスのメッセージマップを使用して、受信する各コマンドメッセージのハンドラー関数を検索します。これは、標準のメッセージを検索する場合と同じです。 一致するものが見つかった場合は、ハンドラーを呼び出します。 メッセージマップの検索につい[ては、「フレームワークがメッセージマップを検索する方法](how-the-framework-searches-message-maps.md)」で説明されています。
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
+[フレームワークがハンドラーを呼び出す方法](how-the-framework-calls-a-handler.md)

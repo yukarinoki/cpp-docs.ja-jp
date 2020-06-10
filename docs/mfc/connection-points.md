@@ -15,55 +15,55 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153314"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620725"
 ---
 # <a name="connection-points"></a>コネクション ポイント
 
-この記事は、(以前は OLE コネクション ポイントと呼ばれます) の接続ポイントを実装する方法を説明します MFC クラスを使用して`CCmdTarget`と`CConnectionPoint`します。
+この記事では、MFC クラスおよびを使用して、接続ポイント (旧称 OLE connection points) を実装する方法について説明し `CCmdTarget` `CConnectionPoint` ます。
 
-以前は、コンポーネント オブジェクト モデル (COM) に汎用的なメカニズムが定義されている (`IUnknown::QueryInterface`*) を実装し、インターフェイスで機能を公開するオブジェクトを許可します。 ただし、特定のインターフェイスを呼び出すには、機能を公開するオブジェクトを許可されている対応するメカニズムが定義されていません。 COM がオブジェクトにポインターを受信する方法を定義する、(そのオブジェクトのインターフェイスへのポインター) が処理されましたが、発信インターフェイス (ポインターが他のオブジェクトのインターフェイスへのオブジェクトを保持) の明示的なモデルがありませんでした。 COM は、この機能をサポートするモデル、接続のポイントと呼ばれるようになりました。
+以前は、コンポーネントオブジェクトモデル (COM) は、 `IUnknown::QueryInterface` オブジェクトを実装し、インターフェイスに機能を公開するために使用できる汎用機構 (*) を定義していました。 ただし、オブジェクトが特定のインターフェイスを呼び出すことができるようにするための対応する機構は定義されていません。 つまり、COM は、オブジェクトへの受信ポインター (そのオブジェクトのインターフェイスへのポインター) がどのように処理されたかを定義していましたが、送信インターフェイス (オブジェクトが他のオブジェクトのインターフェイスに保持するポインター) の明示的なモデルを持っていませんでした。 COM には、この機能をサポートする接続ポイントと呼ばれるモデルが用意されています。
 
-接続で 2 つの部分: ソースとのインターフェイスを実装するオブジェクトと呼ばれるインターフェイスを呼び出すオブジェクトには、シンクが呼び出されます。 接続ポイントは、ソースによって公開されるインターフェイスです。 接続ポイントを公開するでは、ソースは、シンク自体 (ソース) への接続の確立を許可します。 コネクション ポイント機構 (、`IConnectionPoint`インターフェイス)、ソース オブジェクトに、シンク インターフェイスへのポインターが渡されます。 このポインターは、一連のメンバー関数のシンクの実装にアクセス権を持つソースを提供します。 たとえば、シンクによって実装されるイベントを発生させるには、ソースは、シンクの実装の適切なメソッドを呼び出すことができます。 次の図は、接続を示して説明したポイント。
+接続には、ソースと呼ばれるインターフェイスを呼び出すオブジェクトと、シンクと呼ばれるインターフェイスを実装するオブジェクトの2つの部分があります。 コネクションポイントは、ソースによって公開されるインターフェイスです。 コネクションポイントを公開することにより、ソースはシンクがそれ自体への接続 (ソース) を確立できるようになります。 コネクションポイント機構 (インターフェイス) を使用して、 `IConnectionPoint` シンクインターフェイスへのポインターがソースオブジェクトに渡されます。 このポインターは、ソースに、一連のメンバー関数のシンクの実装へのアクセスを提供します。 たとえば、シンクによって実装されたイベントを発生させるには、ソースはシンクの実装の適切なメソッドを呼び出すことができます。 次の図は、ここで説明した接続ポイントを示しています。
 
-![接続ポイントを実装](../mfc/media/vc37lh1.gif "接続ポイントの実装") <br/>
+![実装されたコネクション ポイント](../mfc/media/vc37lh1.gif "実装されたコネクション ポイント") <br/>
 コネクション ポイントの実装
 
-MFC 実装では、このモデル、 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)と[CCmdTarget](../mfc/reference/ccmdtarget-class.md)クラス。 派生したクラス`CConnectionPoint`実装、`IConnectionPoint`インターフェイス、その他のオブジェクトへの接続ポイントを公開するために使用します。 派生したクラス`CCmdTarget`実装、`IConnectionPointContainer`インターフェイスでは、すべてのオブジェクトの使用可能な接続ポイントを列挙または特定の接続ポイントを見つけることができます。
+MFC では、 [CConnectionPoint](reference/cconnectionpoint-class.md)クラスと[CCmdTarget](reference/ccmdtarget-class.md)クラスにこのモデルが実装されています。 から派生したクラスは、 `CConnectionPoint` `IConnectionPoint` 接続ポイントを他のオブジェクトに公開するために使用されるインターフェイスを実装します。 から派生したクラス `CCmdTarget` は、インターフェイスを実装します `IConnectionPointContainer` 。これにより、オブジェクトの使用可能なすべての接続ポイントを列挙したり、特定のコネクションポイントを検索したりできます。
 
-クラスで実装されたコネクション ポイントごとに、接続ポイントを実装する接続の部分を宣言する必要があります。 1 つまたは複数の接続ポイントを実装する場合は、クラスで 1 つの接続マップを宣言することも必要があります。 コネクション マップは、ActiveX コントロールでサポートされる接続ポイントのテーブルです。
+クラスに実装されている各接続ポイントについて、コネクションポイントを実装する接続部分を宣言する必要があります。 1つ以上のコネクションポイントを実装する場合は、クラスで1つの接続マップも宣言する必要があります。 接続マップは、ActiveX コントロールによってサポートされる接続ポイントのテーブルです。
 
-次の例では、単純な接続のマップと 1 つの接続ポイントを示します。 最初の例で、接続のマップとポイント;2 番目の例では、マップとポイントを実装します。 なお`CMyClass`必要があります、 `CCmdTarget`-クラスを派生します。 最初の例では、コードが挿入される、クラス宣言の下、**保護**セクション。
+次の例は、単純な接続マップと1つのコネクションポイントを示しています。 最初の例では、接続マップとポイントを宣言します。2番目の例では、マップとポイントを実装しています。 は `CMyClass` 、から派生したクラスである必要があることに注意してください `CCmdTarget` 。 最初の例では、コードがクラス宣言の**protected**セクションの下に挿入されます。
 
-[!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]
+[!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-**BEGIN_CONNECTION_PART**と**END_CONNECTION_PART**マクロ、埋め込みのクラスを宣言する`XSampleConnPt`(から派生した`CConnectionPoint`)、この特定の接続ポイントを実装します。 オーバーライドする場合`CConnectionPoint`メンバー関数または独自のメンバー関数を追加、これら 2 つのマクロの間、それらを宣言します。 たとえば、`CONNECTION_IID`マクロよりも優先、`CConnectionPoint::GetIID`これら 2 つのマクロの間に配置した場合、メンバー関数。
+**BEGIN_CONNECTION_PART**マクロと**END_CONNECTION_PART**マクロは、 `XSampleConnPt` この特定のコネクションポイントを実装する (から派生した) 埋め込みクラスを宣言し `CConnectionPoint` ます。 メンバー関数をオーバーライドする場合 `CConnectionPoint` 、または独自のメンバー関数を追加する場合は、これらの2つのマクロの間で宣言します。 たとえば、マクロは、 `CONNECTION_IID` `CConnectionPoint::GetIID` この2つのマクロの間に配置されたメンバー関数をオーバーライドします。
 
-2 番目の例では、コントロールの実装ファイル (.cpp ファイル) でコードが挿入されます。 このコードの実装接続ポイントを含む接続マップ`SampleConnPt`:
+2番目の例では、コントロールの実装ファイル (.cpp ファイル) にコードが挿入されます。 このコードは、接続ポイントを含む接続マップを実装し `SampleConnPt` ます。
 
-[!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-1 つ以上の接続ポイントし、追加の挿入があるかどうかは**CONNECTION_PART**マクロの間、 **BEGIN_CONNECTION_MAP**と**END_CONNECTION_MAP**マクロ。
+クラスに複数のコネクションポイントがある場合は、 **BEGIN_CONNECTION_MAP**と**END_CONNECTION_MAP**マクロの間に追加の**CONNECTION_PART**マクロを挿入します。
 
-最後への呼び出しを追加`EnableConnections`クラスのコンス トラクター内。 例:
+最後に、クラスのコンストラクターにの呼び出しを追加し `EnableConnections` ます。 次に例を示します。
 
-[!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
-このコードが挿入されると、 `CCmdTarget`-派生クラスの接続ポイントを公開する、`ISampleSink`インターフェイス。 次の図は、この例を示します。
+このコードが挿入されると、 `CCmdTarget` 派生クラスはインターフェイスのコネクションポイントを公開し `ISampleSink` ます。 次の図は、この例を示しています。
 
 ![MFC を使用して実装されたコネクション ポイント](../mfc/media/vc37lh2.gif "MFC を使用して実装されたコネクション ポイント") <br/>
-MFC で実装されたコネクション ポイント
+MFC で実装されたコネクションポイント
 
-接続ポイントが「マルチキャスト」をサポートする、通常は、同じインターフェイスに接続する複数のシンクにブロードキャストする機能。 次の例のフラグメントは、マルチキャスト コネクション ポイントで各シンクを反復処理する方法。
+通常、接続ポイントは "マルチキャスト" をサポートします。これは、同じインターフェイスに接続されている複数のシンクにブロードキャストする機能です。 次のフラグメントの例では、コネクションポイントで各シンクを反復処理することで、マルチキャストを実行する方法を示します。
 
-[!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#4](codesnippet/cpp/connection-points_4.cpp)]
 
-この例では、接続の現在のセットを取得、`SampleConnPt`接続ポイントへの呼び出しが`CConnectionPoint::GetConnections`します。 接続および呼び出しで反復処理し、`ISampleSink::SinkFunc`アクティブな接続ごとにします。
+この例では、接続ポイントの現在の接続のセットを、の呼び出しによって取得し `SampleConnPt` `CConnectionPoint::GetConnections` ます。 次に、接続を反復処理し、 `ISampleSink::SinkFunc` アクティブなすべての接続に対してを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

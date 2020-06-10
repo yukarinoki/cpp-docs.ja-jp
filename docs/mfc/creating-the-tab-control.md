@@ -10,55 +10,55 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], creating
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
-ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d5aa6873966ecb4c845f1c503b24c07b6c0c7a3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619605"
 ---
 # <a name="creating-the-tab-control"></a>タブ コントロールの作成
 
-タブ コントロールを作成する方法は、ダイアログ ボックスで、コントロールの使用または以外のウィンドウで作成するかどうかによって異なります。
+タブコントロールの作成方法は、ダイアログボックスでコントロールを使用しているか、nondialog ウィンドウで作成したかによって異なります。
 
-### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>ダイアログ ボックスで直接 CTabCtrl を使用するには
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>ダイアログボックスで CTabCtrl を直接使用するには
 
-1. ダイアログ エディターでダイアログ テンプレート リソースをタブ コントロールを追加します。 そのコントロールの ID を指定します
+1. ダイアログエディターで、ダイアログテンプレートリソースにタブコントロールを追加します。 コントロール ID を指定します。
 
-1. 使用して、[メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)型のメンバー変数を追加する[CTabCtrl](../mfc/reference/ctabctrl-class.md)コントロール プロパティにします。 このメンバーを使用するには、呼び出しと`CTabCtrl`メンバー関数。
+1. [メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)を使用して、コントロールプロパティを持つ[CTabCtrl](reference/ctabctrl-class.md)型のメンバー変数を追加します。 このメンバーを使用して、メンバー関数を呼び出すことができ `CTabCtrl` ます。
 
-1. 処理する必要がある任意のタブ コントロール通知のメッセージのダイアログ クラスのハンドラー関数にマップします。 詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
+1. 処理する必要があるすべてのタブコントロール通知メッセージのダイアログクラスのマップハンドラー関数。 詳細については、「[関数へのメッセージのマッピング](reference/mapping-messages-to-functions.md)」を参照してください。
 
-1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)のスタイルを設定、`CTabCtrl`します。
+1. [OnInitDialog](reference/cdialog-class.md#oninitdialog)で、のスタイルを設定し `CTabCtrl` ます。
 
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>CTabCtrl を以外のウィンドウで使用するには
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Nondialog ウィンドウで CTabCtrl を使用するには
 
-1. ビューまたはウィンドウのクラスでは、コントロールを定義します。
+1. ビューまたはウィンドウクラスでコントロールを定義します。
 
-1. コントロールの呼び出し[作成](../mfc/reference/ctabctrl-class.md#create)メンバー関数は、おそらくで[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)、親ウィンドウの可能性がありますの早期[OnCreate](../mfc/reference/cwnd-class.md#oncreate)いる場合、ハンドラー関数コントロールをサブクラス)。 コントロールのスタイルを設定します。
+1. コントロールの Create member 関数を呼び出します。これは、おそらく親ウィンドウの[OnCreate](reference/cwnd-class.md#oncreate) handler 関数 (コントロールをサブクラス化している場合) のように、 [OnInitialUpdate](reference/cview-class.md#oninitialupdate)で[作成](reference/ctabctrl-class.md#create)します。 コントロールのスタイルを設定します。
 
-後に、`CTabCtrl`オブジェクトが作成された、設定または、次の拡張スタイルをオフにすることができます。
+`CTabCtrl`オブジェクトが作成された後、次の拡張スタイルを設定またはクリアできます。
 
-- **TCS_EX_FLATSEPARATORS**タブ コントロールは、タブ項目間の区切り記号を描画します。 これは、拡張スタイルのみに影響を持つコントロールのタブ、 **TCS_BUTTONS**と**TCS_FLATBUTTONS**スタイル。 既定では、使用して、タブ コントロールを作成、 **TCS_FLATBUTTONS**スタイルでは、この拡張スタイルを設定します。
+- **TCS_EX_FLATSEPARATORS**タブコントロールは、タブ項目間の区切り記号を描画します。 この拡張スタイルは、 **TCS_BUTTONS**と**TCS_FLATBUTTONS**スタイルを持つタブコントロールにのみ影響します。 既定では、 **TCS_FLATBUTTONS**スタイルを使用してタブコントロールを作成すると、この拡張スタイルが設定されます。
 
-- **TCS_EX_REGISTERDROP**タブ コントロールを生成**TCN_GETOBJECT**オブジェクトは、コントロールのタブ項目をドラッグするオブジェクトの通知メッセージをドロップ先を要求します。
+- **TCS_EX_REGISTERDROP**Tab コントロールは**TCN_GETOBJECT**通知メッセージを生成して、コントロールのタブ項目の上にオブジェクトをドラッグしたときにドロップ先オブジェクトを要求します。
 
     > [!NOTE]
-    >  受信する、 **TCN_GETOBJECT** 、通知への呼び出しで OLE ライブラリを初期化する必要があります[AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit)します。
+    >  **TCN_GETOBJECT**通知を受信するには、 [AfxOleInit](reference/ole-initialization.md#afxoleinit)を呼び出すことによって、OLE ライブラリを初期化する必要があります。
 
-これらのスタイルを取得して、コントロールが作成されている、それぞれの呼び出しの後に、設定できる、 [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle)と[SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle)メンバー関数。
+これらのスタイルは、コントロールが作成された後、 [Getextendedstyle](reference/ctabctrl-class.md#getextendedstyle)および[SetExtendedStyle](reference/ctabctrl-class.md#setextendedstyle)メンバー関数を呼び出すことによって取得および設定できます。
 
-たとえば、設定、 **TCS_EX_FLATSEPARATORS**次のコード行のスタイル。
+たとえば、次のコード行を使用して**TCS_EX_FLATSEPARATORS**スタイルを設定します。
 
-[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#33](codesnippet/cpp/creating-the-tab-control_1.cpp)]
 
-クリア、 **TCS_EX_FLATSEPARATORS**スタイルを`CTabCtrl`次のコード行を持つオブジェクト。
+**TCS_EX_FLATSEPARATORS** `CTabCtrl` 次のコード行を使用して、オブジェクトから TCS_EX_FLATSEPARATORS スタイルをクリアします。
 
-[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#34](codesnippet/cpp/creating-the-tab-control_2.cpp)]
 
-これにより、区切り記号のボタンの間に表示される、`CTabCtrl`オブジェクト。
+これにより、オブジェクトのボタン間に表示される区切り記号が削除され `CTabCtrl` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[CTabCtrl の使い方](../mfc/using-ctabctrl.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[CTabCtrl の使い方](using-ctabctrl.md)<br/>
+[制限](controls-mfc.md)

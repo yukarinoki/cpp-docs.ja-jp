@@ -10,25 +10,25 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f47cac34f6cdbdae01af98ec28be5af17edf0e25
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345200"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620962"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>シリアル化機構のバイパス
 
-説明したように、フレームワークはファイルとの間でデータを読み書きする既定の方法を提供します。 アーカイブ オブジェクトをシリアル化するには、多くの優れたアプリケーションのニーズが適しています。 このようなアプリケーションは、全体がメモリにファイルを読み取り、ユーザーがファイルを更新できるようにし、ディスクに再び更新されたバージョンを書き込みます。
+既に説明したように、フレームワークには、ファイルとの間でデータを読み書きするための既定の方法が用意されています。 Archive オブジェクトによるシリアル化は、多くのアプリケーションのニーズに適しています。 このようなアプリケーションでは、ファイル全体がメモリに読み込まれ、ユーザーがファイルを更新して、更新されたバージョンを再びディスクに書き込むことができます。
 
-ただし、一部のアプリケーションは非常に異なる方法でデータを操作し、これらのアプリケーションのアーカイブをシリアル化は適していません。 例には、データベース プログラム、大きなファイルの部分のみを編集プログラム、テキストのみのファイルの書き込みプログラムおよびデータ ファイルを共有するプログラムが含まれます。
+ただし、アプリケーションによっては、データがまったく異なる方法で処理されるものもあれば、アーカイブによってシリアル化されるアプリケーションに適していないものもあります。 たとえば、データベースプログラム、大きなファイルの一部のみを編集するプログラム、テキストのみのファイルを書き込むプログラム、データファイルを共有するプログラムなどがあります。
 
-このような場合は、オーバーライドすることができます、 [Serialize](../mfc/reference/cobject-class.md#serialize)を介してファイルのアクションを仲介する別の方法で関数を[CFile](../mfc/reference/cfile-class.md)オブジェクトではなく[CArchive](../mfc/reference/carchive-class.md)オブジェクト。
+このような場合は、[シリアル化](reference/cobject-class.md#serialize)関数を別の方法でオーバーライドして、 [CArchive](reference/carchive-class.md)オブジェクトではなく[CFile](reference/cfile-class.md)オブジェクトを使用してファイルアクションを仲介することができます。
 
-使用することができます、 `Open`、 `Read`、 `Write`、 `Close`、および`Seek`クラスのメンバー関数`CFile`ファイル ポインターを移動するファイルを開くには、レコード (指定された数のバイトを読み取るファイルで、特定のポイントには、(シーク)) その時点では、ユーザー レコードを更新し、もう一度同じ時点にシークし、レコードをファイルに書き込むできるようにします。 フレームワークは、ファイルを開くし、使用することができます、`GetFile`クラスのメンバー関数`CArchive`へのポインターを取得する、`CFile`オブジェクト。 オーバーライドすることができます、さらに高度で柔軟性の高い使用するため、[かまいません](../mfc/reference/cdocument-class.md#onopendocument)と[呼び出す必要はありません](../mfc/reference/cdocument-class.md#onsavedocument)クラスのメンバー関数`CWinApp`します。 詳細については、クラスを参照してください。 [CFile](../mfc/reference/cfile-class.md)で、 *MFC リファレンス*します。
+`Open` `Read` `Write` クラスの、、、 `Close` 、およびの各メンバー関数を使用して、ファイルを開き、ファイル `Seek` `CFile` ポインター (seek) をファイル内の特定の位置に移動し、その時点でレコード (指定されたバイト数) を読み取り、ユーザーがレコードを更新してから、そのレコードを再びファイルに書き戻すことができます。 フレームワークによってファイルが開き、 `GetFile` クラスのメンバー関数を使用して `CArchive` 、オブジェクトへのポインターを取得でき `CFile` ます。 さらに洗練された柔軟な使用方法として、クラスの[Onopendocument](reference/cdocument-class.md#onopendocument)および[onsavedocument](reference/cdocument-class.md#onsavedocument)メンバー関数をオーバーライドでき `CWinApp` ます。 詳細については、 *MFC リファレンス*の「クラス[CFile](reference/cfile-class.md) 」を参照してください。
 
-このシナリオで、`Serialize`しない場合は、たとえば、ドキュメントを閉じるときに最新の状態を保持するファイルのヘッダーの読み書きに何もオーバーライドしません。
+このシナリオでは、 `Serialize` 上書きによって何も実行されません。ただし、たとえば、ドキュメントを閉じるときに最新の状態に保つためにファイルヘッダーを読み書きする必要がある場合は除きます。
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメントの使い方](../mfc/using-documents.md)
+[ドキュメントの使い方](using-documents.md)

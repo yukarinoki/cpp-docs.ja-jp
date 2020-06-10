@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619739"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Windows コモンコントロールのビルド要件
 
@@ -18,7 +18,7 @@ MFC (Microsoft Foundation Class) ライブラリでは、 [Windows コモンコ�
 
 ## <a name="compilation-requirements"></a>コンパイルの要件
 
-### <a name="supported-versions"></a>Supported Versions
+### <a name="supported-versions"></a>サポートされているバージョン
 
 MFC は、すべてのバージョンのコモンコントロールをサポートしています。 Windows コモンコントロールバージョンの詳細については、「[コモンコントロールバージョン](/windows/win32/controls/common-control-versions)」を参照してください。
 
@@ -30,7 +30,7 @@ Windows コモンコントロールは、ANSI 文字セットではなく、Unic
 /D_UNICODE /DUNICODE
 ```
 
-Visual Studio 統合開発環境 (IDE: integrated development environment) でアプリケーションをビルドする場合は、プロジェクトプロパティの **[全般**] ノードで、 **[文字セット]** プロパティの **[Unicode 文字セット]** オプションを指定します。
+Visual Studio 統合開発環境 (IDE: integrated development environment) でアプリケーションをビルドする場合は、プロジェクトプロパティの **[全般**] ノードで、[**文字セット**] プロパティの [ **Unicode 文字セット**] オプションを指定します。
 
 ## <a name="migration-requirements"></a>移行の要件
 
@@ -52,6 +52,6 @@ Visual Studio IDE を使用して、Windows コモンコントロールを使用
 
 ## <a name="see-also"></a>関連項目
 
-[MFC の一般的なトピック](../mfc/general-mfc-topics.md)<br/>
-[階層図](../mfc/hierarchy-chart.md)<br/>
-[非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)
+[MFC の一般的なトピック](general-mfc-topics.md)<br/>
+[階層図](hierarchy-chart.md)<br/>
+[非推奨の ANSI API](deprecated-ansi-apis.md)

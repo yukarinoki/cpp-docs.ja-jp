@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241949"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626509"
 ---
 # <a name="creating-windows"></a>ウィンドウの作成
 
-フレームワークはフレームワーク プログラムで必要な windows のほとんどを自動的に作成されます。 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)フレームワークがドキュメントとビューに関連付けられているフレーム ウィンドウを作成する方法を示しています。 特別な目的が独自のウィンドウを作成することができますが、-フレーム ウィンドウまたはビューの独自の子ウィンドウを含む、フレームワークによって提供される windows だけでなく。
+フレームワークは、フレームワークプログラムで必要なウィンドウの大半を自動的に作成します。 [ドキュメント/ビューの作成](document-view-creation.md)では、ドキュメントとビューに関連付けられているフレームウィンドウがフレームワークによってどのように作成されるかを示します。 ただし、特別な目的のために、フレームワークによって提供されるウィンドウに加えて、独自のウィンドウ (フレームウィンドウまたはビューの独自の子ウィンドウを含む) を作成することもできます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [登録ウィンドウ「クラス」](../mfc/registering-window-classes.md) (C++ ウィンドウ オブジェクト) ではなく
+- (C++ ウィンドウオブジェクトではなく)[ウィンドウ "クラス" を登録](registering-window-classes.md)しています
 
-- [全般的なウィンドウ作成順序](../mfc/general-window-creation-sequence.md)
+- [ウィンドウの一般的な作成順序](general-window-creation-sequence.md)
 
-- [ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
+- [破棄 (ウィンドウオブジェクトを)](destroying-window-objects.md)
 
-- [ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)
+- [ウィンドウオブジェクトの操作](working-with-window-objects.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Window オブジェクト](../mfc/window-objects.md)
+[ウィンドウ オブジェクト](window-objects.md)

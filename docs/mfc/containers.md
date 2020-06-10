@@ -1,5 +1,5 @@
 ---
-title: コンテナー
+title: Containers
 ms.date: 11/04/2016
 helpviewer_keywords:
 - containers [MFC]
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153009"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620636"
 ---
-# <a name="containers"></a>コンテナー
+# <a name="containers"></a>Containers
 
-コンテナー アプリケーションは、独自のドキュメントに埋め込まれたまたはリンクされた項目を取り入れることのできるアプリケーションです。 コンテナーのアプリケーションによって管理されているドキュメントを保存して、アプリケーション自体によって作成されたデータと同様に OLE 複合ドキュメント コンポーネントを表示できる必要があります。 コンテナー アプリケーションでは、新しい項目を挿入または既存の項目を編集するのにもようにする必要があります。
+コンテナーアプリケーションは、埋め込みまたはリンクされた項目を独自のドキュメントに組み込むことができるアプリケーションです。 コンテナーアプリケーションによって管理されるドキュメントでは、アプリケーション自体によって作成されたデータだけでなく、OLE 複合ドキュメントコンポーネントを格納して表示できる必要があります。 コンテナーアプリケーションでは、ユーザーが新しい項目を挿入したり、既存の項目を編集したりできるようにする必要もあります。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[コンテナーを実装します。](../mfc/containers-implementing-a-container.md)
+[コンテナーを実装する](containers-implementing-a-container.md)
 
-[コンテナー クライアント アイテム](../mfc/containers-client-items.md)
+[コンテナークライアント項目](containers-client-items.md)
 
-[複合ファイルの使用](../mfc/containers-compound-files.md)
+[複合ファイルを使用する](containers-compound-files.md)
 
-[コンテナーのユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)
+[コンテナーのユーザーインターフェイスの問題](containers-user-interface-issues.md)
 
-[コンテナーの高度な機能](../mfc/containers-advanced-features.md)
+[コンテナーの高度な機能](containers-advanced-features.md)
 
 ## <a name="see-also"></a>関連項目
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[サーバー](../mfc/servers.md)<br/>
-[アクティベーション](../mfc/activation-cpp.md)<br/>
-[メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)
+[OLE●ole○](ole-in-mfc.md)<br/>
+[サーバー](servers.md)<br/>
+[アクティブ化](activation-cpp.md)<br/>
+[メニューとリソース (OLE)](menus-and-resources-ole.md)

@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28bf4beaafaaff5c4b9122daeca9d61ed05346fc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384076"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625911"
 ---
 # <a name="dialog-sample-list"></a>ダイアログ ボックスのサンプル一覧
 
-ダイアログ ボックスおよびプロパティ シートを示す次のサンプル プログラムを参照してください。
+ダイアログボックスとプロパティシートを示す次のサンプルプログラムを参照してください。
 
-*ダイアログ ボックスで、MDI サンプル アプリケーション*
+*ダイアログボックスを使用した MDI サンプルアプリケーション*
 
-- [SCRIBBLE](../overview/visual-cpp-samples.md)
+- [軌跡](../overview/visual-cpp-samples.md)
 
-*モードレス ダイアログ ボックス*
+*モードレスダイアログボックス*
 
-- [モードレス](../overview/visual-cpp-samples.md)
+- [固定](../overview/visual-cpp-samples.md)
 
-*プロパティ シート ダイアログ ボックス (タブ ダイアログ ボックス)*
+*[プロパティシート] ダイアログボックス ([タブ] ダイアログボックス)*
 
 - [PROPDLG](../overview/visual-cpp-samples.md)
 
@@ -31,13 +31,13 @@ ms.locfileid: "62384076"
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*ダイアログ ボックスに基づくアプリケーション*
+*ダイアログボックスに基づくアプリケーション*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*ダイアログ ボックス コントロール*
+*ダイアログボックスコントロール*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
@@ -45,14 +45,14 @@ ms.locfileid: "62384076"
 
 - [CTRLTEST](../overview/visual-cpp-samples.md)
 
-*ダイアログのようなフォーム ビュー*
+*ダイアログ形式のフォームビュー*
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
-*メモリ内のダイアログ テンプレート*
+*メモリ内ダイアログテンプレート*
 
 - [DLGTEMPL](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)
+[ダイアログボックス](dialog-boxes.md)

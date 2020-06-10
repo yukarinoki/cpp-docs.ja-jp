@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246535"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620920"
 ---
-# <a name="1-object"></a>_1 オブジェクト
+# <a name="_1-object"></a>_1 オブジェクト
 
 置き換え可能な引数のプレースホルダーです。
 
@@ -29,7 +29,7 @@ namespace placeholders {
 
 ## <a name="remarks"></a>Remarks
 
-オブジェクト`_1, _2, ... _M`指定するプレース ホルダーは、1 番目、…、番目の引数、関数呼び出しによって返されるオブジェクトでそれぞれ[バインド](../standard-library/functional-functions.md#bind)します。 bind 式が評価されるときに N 番目の引数が挿入される場所を指定するには、`_N` を使用します。
+オブジェクトは、 `_1, _2, ... _M` [bind](functional-functions.md#bind)によって返されるオブジェクトへの関数呼び出しで、それぞれ first、second、...、Mth の各引数を指定するプレースホルダーです。 bind 式が評価されるときに N 番目の引数が挿入される場所を指定するには、`_N` を使用します。
 
 この実装では、`M` の値は 20 です。
 

@@ -10,125 +10,125 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 5747e4450816b803f97ad5ff6338b9e01ad41bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394612"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616948"
 ---
 # <a name="dialog-box-classes"></a>ダイアログ ボックス クラス
 
-クラス`CDialog`とその派生クラスがダイアログ ボックスの機能をカプセル化します。 ダイアログ ボックスはウィンドウの特殊なので`CDialog`から派生`CWnd`します。 ダイアログ クラスを派生`CDialog`またはいずれかを使用開始や印刷、フォントや色を選択すると、ファイルの保存などの標準のダイアログ ボックスのコモン ダイアログ クラスの検索と置換操作を開始するか、実行するさまざまな OLE 関連操作です。
+クラス `CDialog` とその派生クラスは、ダイアログボックスの機能をカプセル化します。 ダイアログボックスは特別な種類のウィンドウであるため、 `CDialog` はから派生してい `CWnd` ます。 からダイアログクラスを派生させる `CDialog` か、標準的なダイアログボックスのコモンダイアログクラスの1つを使用します。たとえば、ファイルを開いたり保存したり、フォントや色を選択したり、検索と置換の操作を開始したり、OLE 関連のさまざまな操作を実行したりすることができます。
 
-[CDialog](../mfc/reference/cdialog-class.md)<br/>
-すべてのダイアログ ボックス、モーダルとモードレスの両方の基本クラス。
+[CDialog](reference/cdialog-class.md)<br/>
+モーダルとモードレスの両方のダイアログボックスの基本クラスです。
 
-[CDataExchange](../mfc/reference/cdataexchange-class.md)<br/>
-ダイアログ ボックスのデータの交換と検証情報を提供します。
+[CDataExchange](reference/cdataexchange-class.md)<br/>
+ダイアログボックスのデータ交換および検証情報を提供します。
 
-## <a name="common-dialogs"></a>コモン ダイアログ
+## <a name="common-dialogs"></a>コモンダイアログ
 
-これらのダイアログ ボックス クラスは、Windows のコモン ダイアログ ボックスをカプセル化します。 複雑なダイアログ ボックスの使いやすい実装を提供します。
+これらのダイアログボックスクラスは、Windows のコモンダイアログボックスをカプセル化します。 複雑なダイアログボックスの使いやすい実装が用意されています。
 
-[CCommonDialog](../mfc/reference/ccommondialog-class.md)<br/>
-すべての一般的なダイアログ ボックスの基本クラス。
+[CCommonDialog](reference/ccommondialog-class.md)<br/>
+すべてのコモンダイアログボックスの基本クラスです。
 
-[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
-開くか、ファイルを保存するのには、標準のダイアログ ボックスを提供します。
+[CFileDialog](reference/cfiledialog-class.md)<br/>
+ファイルを開く、または保存するための標準のダイアログボックスを提供します。
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
-色を選択するためには、標準のダイアログ ボックスを提供します。
+[CColorDialog](reference/ccolordialog-class.md)<br/>
+色を選択するための標準のダイアログボックスを提供します。
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
-フォントを選択するためには、標準のダイアログ ボックスを提供します。
+[CFontDialog](reference/cfontdialog-class.md)<br/>
+フォントを選択するための標準のダイアログボックスを提供します。
 
-[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)<br/>
-検索と置換操作を標準のダイアログ ボックスを提供します。
+[CFindReplaceDialog](reference/cfindreplacedialog-class.md)<br/>
+検索と置換の操作に使用する標準のダイアログボックスを提供します。
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
-ファイルの印刷には、標準のダイアログ ボックスを提供します。
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
+には、ファイルを印刷するための標準のダイアログボックスが用意されています。
 
-[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)<br/>
-Windows 印刷のプロパティ シートを提供します。
+[CPrintDialogEx](reference/cprintdialogex-class.md)<br/>
+Windows 印刷プロパティシートを提供します。
 
-[CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)<br/>
-追加サポートと共に設定および印刷の余白を変更するための Windows コモン ページ設定ダイアログ ボックスが提供するサービスをカプセル化します。
+[CPageSetupDialog](reference/cpagesetupdialog-class.md)<br/>
+[Windows コモンページ設定] ダイアログボックスで提供されるサービスをカプセル化して、印刷の余白を設定および変更するための追加のサポートを提供します。
 
-## <a name="ole-common-dialogs"></a>OLE コモン ダイアログ
+## <a name="ole-common-dialogs"></a>OLE コモンダイアログ
 
-OLE では、Windows にいくつかのコモン ダイアログ ボックスを追加します。 これらのクラスは、OLE コモン ダイアログ ボックスをカプセル化します。
+OLE では、いくつかのコモンダイアログボックスがウィンドウに追加されます。 これらのクラスは、OLE コモンダイアログボックスをカプセル化します。
 
-[COleDialog](../mfc/reference/coledialog-class.md)<br/>
-すべての OLE ダイアログ ボックスの一般的な実装を格納するフレームワークで使用します。 ユーザー インターフェイス カテゴリ内のすべてのダイアログ ボックス クラスは、この基本クラスから派生します。 `COleDialog` 直接使用することはできません。
+[COleDialog](reference/coledialog-class.md)<br/>
+すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog`を直接使用することはできません。
 
-[COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)<br/>
-リンクまたは埋め込みアイテムの新しい OLE を挿入するは、オブジェクトの挿入 ダイアログ ボックスで、標準のユーザー インターフェイスを表示します。
+[COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
+[オブジェクトの挿入] ダイアログボックスを表示します。これは、新しい OLE リンクまたは埋め込みアイテムを挿入するための標準ユーザーインターフェイスです。
 
-[COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)<br/>
-貼り付け ダイアログ ボックス、編集貼り付けコマンドを実装するための標準のユーザー インターフェイスを表示します。
+[COlePasteSpecialDialog](reference/colepastespecialdialog-class.md)<br/>
+[特殊な貼り付け] ダイアログボックスを表示します。このダイアログボックスは、[貼り付けの編集] を実装するための標準ユーザーインターフェイスです。
 
-[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)<br/>
-リンクの編集 ダイアログ ボックスで、リンクされた項目に関する情報を変更するための標準のユーザー インターフェイスを表示します。
+[COleLinksDialog](reference/colelinksdialog-class.md)<br/>
+リンクされた項目に関する情報を変更するための標準ユーザーインターフェイスである [リンクの編集] ダイアログボックスを表示します。
 
-[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)<br/>
-アイコンの変更のダイアログ ボックスで、OLE に関連付けられているアイコンの埋め込みを変更するか、リンクされた項目の標準のユーザー インターフェイスが表示されます。
+[COleChangeIconDialog](reference/colechangeicondialog-class.md)<br/>
+OLE 埋め込みまたはリンクされた項目に関連付けられているアイコンを変更するための標準ユーザーインターフェイスである [アイコンの変更] ダイアログボックスを表示します。
 
-[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)<br/>
-変換 ダイアログ ボックスで、OLE 項目の 1 つの型を変換するための標準的なユーザー インターフェイスを表示します。
+[COleConvertDialog](reference/coleconvertdialog-class.md)<br/>
+OLE 項目をある種類から別の型に変換するための標準ユーザーインターフェイスである [変換] ダイアログボックスを表示します。
 
-[COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
-Windows の一般的な OLE プロパティ ダイアログ ボックスをカプセル化します。 共通の OLE プロパティ ダイアログ ボックスを表示し、Windows の標準に準拠した方法での OLE ドキュメント項目のプロパティを変更する簡単な方法を提供します。
+[COlePropertiesDialog](reference/colepropertiesdialog-class.md)<br/>
+Windows のコモン OLE プロパティダイアログボックスをカプセル化します。 共通の OLE プロパティダイアログボックスを使用すると、Windows 標準と一貫性のある方法で OLE ドキュメントアイテムのプロパティを簡単に表示および変更することができます。
 
-[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
-更新プログラム ダイアログ ボックスで、ドキュメント内のすべてのリンクを更新するための標準のユーザー インターフェイスを表示します。 ダイアログ ボックスには、完了するまで、更新手順を閉じる方法を示す進行状況インジケーターが含まれています。
+[COleUpdateDialog](reference/coleupdatedialog-class.md)<br/>
+ドキュメント内のすべてのリンクを更新するための標準ユーザーインターフェイスである [更新] ダイアログボックスを表示します。 ダイアログボックスには、更新手順の終了方法を示す進行状況インジケーターが表示されます。
 
-[COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
-ソースの変更 ダイアログ ボックスで、宛先またはリンクのソースを変更するための標準のユーザー インターフェイスを表示します。
+[COleChangeSourceDialog](reference/colechangesourcedialog-class.md)<br/>
+リンク先を変更するための標準ユーザーインターフェイスである [変更ソース] ダイアログボックスを表示します。
 
-[COleBusyDialog](../mfc/reference/colebusydialog-class.md)<br/>
-サーバーがビジー状態とサーバーが応答していないダイアログ ボックスを使用中のアプリケーションへの呼び出しを処理するための標準のユーザー インターフェイスを表示します。 通常、によって自動的に表示されます、 [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)実装します。
+[COleBusyDialog](reference/colebusydialog-class.md)<br/>
+ビジー状態のアプリケーションの呼び出しを処理するための標準ユーザーインターフェイスである [サーバーがビジー] ダイアログボックスと [サーバーに応答しません] ダイアログボックスが表示されます。 通常、 [Colemessagefilter](reference/colemessagefilter-class.md)実装によって自動的に表示されます。
 
-## <a name="property-sheet-classes"></a>プロパティ シート クラス
+## <a name="property-sheet-classes"></a>プロパティシートクラス
 
-プロパティ シートのクラスには、アプリケーションで、プロパティ シートとも呼ばれるタブ付きダイアログ ボックスを使用するができます。 プロパティ シートは、1 つのダイアログ ボックスのコントロールの数が多いを整理する効率的な方法です。
+プロパティシートクラスを使用すると、アプリケーションでプロパティシート (タブ付きダイアログとも呼ばれます) を使用できます。 プロパティシートは、1つのダイアログボックスで多数のコントロールを整理するための効率的な方法です。
 
-[CPropertyPage](../mfc/reference/cpropertypage-class.md)<br/>
-プロパティ シート内の各ページを提供します。 クラスを派生`CPropertyPage`プロパティ シートに追加するには、各ページ。
+[CPropertyPage](reference/cpropertypage-class.md)<br/>
+プロパティシート内の個々のページを提供します。 `CPropertyPage`プロパティシートに追加するページごとに、からクラスを派生させます。
 
-[CPropertySheet](../mfc/reference/cpropertysheet-class.md)<br/>
-複数のプロパティ ページのフレームを提供します。 プロパティ シートのクラスを派生`CPropertySheet`のプロパティ シートを迅速に実装します。
+[CPropertySheet](reference/cpropertysheet-class.md)<br/>
+複数のプロパティページのフレームを提供します。 プロパティシートクラスをから派生させ `CPropertySheet` て、プロパティシートを迅速に実装します。
 
-[COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
-ダイアログ ボックスのようなグラフィカル インターフェイスで制御する OLE のプロパティを表示します。
+[COlePropertyPage](reference/colepropertypage-class.md)<br/>
+ダイアログボックスと同様に、グラフィカルインターフェイスに OLE コントロールのプロパティを表示します。
 
-## <a name="html-based-dialog-classes"></a>HTML ベースのダイアログ クラス
+## <a name="html-based-dialog-classes"></a>HTML ベースのダイアログクラス
 
-[CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)<br/>
-ダイアログではなく、HTML リソースによるユーザー インターフェイスを実装するダイアログ ボックスを作成するために使用します。
+[CDHtmlDialog](reference/cdhtmldialog-class.md)<br/>
+ダイアログリソースではなく、HTML を使用してユーザーインターフェイスを実装するダイアログボックスを作成するために使用します。
 
-[CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)<br/>
+[CMultiPageDHtmlDialog](reference/cmultipagedhtmldialog-class.md)<br/>
 複数の HTML ページを順番に表示し、各ページのイベントを処理します。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
-これらのクラスは本質的にダイアログ ボックスされてされませんが、ダイアログ ボックスのテンプレートを使用して、また、ダイアログ ボックスの動作の多くがあります。
+これらのクラスは、ユーザーごとのダイアログボックスではなく、ダイアログボックステンプレートを使用し、ダイアログボックスの動作の多くを備えています。
 
-[CDialogBar](../mfc/reference/cdialogbar-class.md)<br/>
-ダイアログ ボックスのテンプレートに基づくコントロール バーです。
+[CDialogBar](reference/cdialogbar-class.md)<br/>
+ダイアログボックステンプレートに基づくコントロールバー。
 
-[CFormView](../mfc/reference/cformview-class.md)<br/>
-レイアウトを持つが、ダイアログ ボックスのテンプレートで定義されているスクロール可能なビュー。 クラスを派生`CFormView` ダイアログ ボックスのテンプレートに基づくユーザー インターフェイスを実装します。
+[CFormView](reference/cformview-class.md)<br/>
+ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 からクラスを派生させ、 `CFormView` ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装します。
 
-[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-フォーム ビューのデータ アクセス オブジェクト (DAO) のレコード セット オブジェクトに直接接続します。 などのすべてのフォーム ビュー、 `CDaoRecordView`  ダイアログ ボックスのテンプレートに基づきます。
+[CDaoRecordView](reference/cdaorecordview-class.md)<br/>
+データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、は `CDaoRecordView` ダイアログボックステンプレートに基づいています。
 
-[CRecordView](../mfc/reference/crecordview-class.md)<br/>
-フォーム ビューの Open Database Connectivity (ODBC) レコード セット オブジェクトに直接接続されています。 などのすべてのフォーム ビュー、 `CRecordView`  ダイアログ ボックスのテンプレートに基づきます。
+[CRecordView](reference/crecordview-class.md)<br/>
+Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、は `CRecordView` ダイアログボックステンプレートに基づいています。
 
-[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-印刷または印刷プレビュー ジョブに関する情報を含む構造体。 印刷アーキテクチャで使用される[CView](../mfc/reference/cview-class.md)します。
+[CPrintInfo](reference/cprintinfo-structure.md)<br/>
+印刷または印刷プレビュージョブに関する情報を格納している構造体。 [CView](reference/cview-class.md)の印刷アーキテクチャで使用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

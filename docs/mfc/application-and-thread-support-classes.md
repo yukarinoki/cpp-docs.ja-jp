@@ -11,66 +11,66 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e64cc50a121f457b7e32e0ed549db2fa9950843
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619448"
 ---
 # <a name="application-and-thread-support-classes"></a>アプリケーションおよびスレッド サポート クラス
 
-各アプリケーションには、1 つのアプリケーション オブジェクトです。このオブジェクトは、実行中のプログラムの他のオブジェクトを調整しから派生`CWinApp`します。
+各アプリケーションには、アプリケーションオブジェクトが1つだけあります。このオブジェクトは、実行中のプログラム内の他のオブジェクトを調整し、から派生し `CWinApp` ます。
 
-Microsoft Foundation Class (MFC) ライブラリでは、複数のアプリケーション内での実行スレッドをサポートします。 すべてのアプリケーションは、少なくとも 1 つのスレッドをいる必要があります。使用されるスレッド、`CWinApp`オブジェクトがこのプライマリ スレッド。
+MFC (Microsoft Foundation Class) ライブラリでは、アプリケーション内での複数のスレッドの実行がサポートされています。 すべてのアプリケーションには、少なくとも1つのスレッドが必要です。オブジェクトによって使用されるスレッド `CWinApp` は、このプライマリスレッドです。
 
-`CWinThread` オペレーティング システムのスレッド処理の機能の一部をカプセル化します。 複数のスレッドをより簡単に使用するために、MFC も同期オブジェクト クラスを提供します Win32 同期オブジェクトに C++ インターフェイスを提供します。
+`CWinThread`オペレーティングシステムのスレッド処理機能の一部をカプセル化します。 複数のスレッドを簡単に使用できるようにするために、MFC には、Win32 同期オブジェクトに C++ インターフェイスを提供する同期オブジェクトクラスも用意されています。
 
-## <a name="application-and-thread-classes"></a>アプリケーションおよびスレッド クラス
+## <a name="application-and-thread-classes"></a>アプリケーションクラスとスレッドクラス
 
-[CWinApp](../mfc/reference/cwinapp-class.md)<br/>
-初期化、実行、およびアプリケーションを終了するコードをカプセル化します。 アプリケーション オブジェクトは、このクラスから派生されます。
+[CWinApp](reference/cwinapp-class.md)<br/>
+アプリケーションを初期化し、実行し、終了するコードをカプセル化します。 このクラスからアプリケーションオブジェクトを派生させます。
 
-[CWinThread](../mfc/reference/cwinthread-class.md)<br/>
-すべてのスレッドの基本クラスです。 を直接使用またはからクラスを派生`CWinThread`場合は、スレッドは、ユーザー インターフェイス機能を実行します。 `CWinApp` は、`CWinThread` から派生しています。
+[CWinThread](reference/cwinthread-class.md)<br/>
+すべてのスレッドの基本クラス。 を直接使用するか、 `CWinThread` スレッドがユーザーインターフェイス関数を実行する場合はからクラスを派生させます。 `CWinApp` は、`CWinThread` から派生しています。
 
-## <a name="synchronization-object-classes"></a>同期オブジェクト クラス
+## <a name="synchronization-object-classes"></a>同期オブジェクトクラス
 
-[CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
-同期オブジェクトのクラスの基本クラス。
+[CSyncObject](reference/csyncobject-class.md)<br/>
+同期オブジェクトクラスの基本クラスです。
 
-[CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
-オブジェクトにアクセスする 1 つのプロセス内で 1 つのスレッドを使用する同期クラス。
+[CCriticalSection](reference/ccriticalsection-class.md)<br/>
+1つのプロセス内で1つのスレッドだけがオブジェクトにアクセスできるようにする同期クラス。
 
-[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
-1 ~ 指定の最大数のオブジェクトに同時にアクセスできるようにする同期クラスです。
+[CSemaphore](reference/csemaphore-class.md)<br/>
+1つのオブジェクトと指定した最大数の同時アクセスを許可する同期クラス。
 
-[CMutex](../mfc/reference/cmutex-class.md)<br/>
-任意の数のオブジェクトにアクセスするプロセス内で 1 つのスレッドを使用する同期クラス。
+[CMutex](reference/cmutex-class.md)<br/>
+任意の数のプロセス内の1つのスレッドだけがオブジェクトにアクセスできるようにする同期クラス。
 
-[CEvent](../mfc/reference/cevent-class.md)<br/>
-イベントが発生したときに、アプリケーションに通知する同期クラス。
+[CEvent](reference/cevent-class.md)<br/>
+イベントが発生したときにアプリケーションに通知する同期クラス。
 
-[CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
-スレッド セーフなクラスのメンバー関数で 1 つの同期オブジェクトをロックするために使用します。
+[CSingleLock](reference/csinglelock-class.md)<br/>
+スレッドセーフなクラスのメンバー関数で、1つの同期オブジェクトをロックするために使用されます。
 
-[CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
-スレッド セーフなクラスのメンバー関数で使用すると、同期オブジェクトの配列から 1 つまたは複数の同期オブジェクトをロックします。
+[CMultiLock](reference/cmultilock-class.md)<br/>
+同期オブジェクトの配列から1つ以上の同期オブジェクトをロックするために、スレッドセーフクラスのメンバー関数で使用されます。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
-[CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)<br/>
-プログラムが起動するコマンドラインを解析します。
+[CCommandLineInfo](reference/ccommandlineinfo-class.md)<br/>
+プログラムが起動されたコマンドラインを解析します。
 
-[CWaitCursor](../mfc/reference/cwaitcursor-class.md)<br/>
-待機カーソルを画面に配置します。 時間のかかる操作中に使用します。
+[CWaitCursor](reference/cwaitcursor-class.md)<br/>
+画面に待機カーソルを置きます。 時間のかかる操作中に使用されます。
 
-[CDockState](../mfc/reference/cdockstate-class.md)<br/>
-ドッキング コントロール バーの状態データの永続的なストレージを処理します。
+[CDockState](reference/cdockstate-class.md)<br/>
+コントロールバーのドッキング状態データの永続ストレージを処理します。
 
-[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+[CRecentFileList](reference/crecentfilelist-class.md)<br/>
 最近使用した (MRU) ファイルの一覧を保持します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

@@ -10,35 +10,35 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616218"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>データ オブジェクトとデータ ソース (OLE)
 
-データ転送では、クリップボードまたはドラッグ アンド ドロップを使用して、いずれかを実行すると、データは、ソースとターゲットをが。 1 つのアプリケーションをコピーするためのデータの提供を貼り付けるのための別のアプリケーションを受け取り、引き受けます。 転送のそれぞれの側は、同じデータを正常に転送するためにさまざまな操作を実行する必要があります。 Microsoft Foundation Class (MFC) ライブラリには、この転送のそれぞれの側を表す 2 つのクラスが用意されています。
+クリップボードまたはドラッグアンドドロップを使用してデータ転送を実行すると、データに変換元と変換先が表示されます。 1つのアプリケーションがコピー用のデータを提供し、別のアプリケーションがそのデータを貼り付けのために受け入れます。 転送を成功させるには、転送の各側で同じデータに対して異なる操作を実行する必要があります。 MFC (Microsoft Foundation Class) ライブラリには、この転送の各側を表す2つのクラスが用意されています。
 
-- データ ソース (によって実装される`COleDataSource`オブジェクト) データ転送のソース側を表します。 データがクリップボードにコピーする場合、またはドラッグ アンド ドロップ操作のデータが提供されている場合、送信元アプリケーションによって作成されます。
+- データソース (オブジェクトによって実装される) は、 `COleDataSource` データ転送のソース側を表します。 これらは、データがクリップボードにコピーされるとき、またはドラッグアンドドロップ操作のためにデータが提供されるときに、ソースアプリケーションによって作成されます。
 
-- データ オブジェクト (によって実装される`COleDataObject`オブジェクト) データ転送のターゲット側を表します。 コピー先のアプリケーションがあるデータの削除を使用するか、クリップボードから貼り付け操作の実行が要求されたときに作成されます。
+- データオブジェクト (オブジェクトによって実装される `COleDataObject` ) は、データ転送の変換先を表します。 これらは、変換先アプリケーションにデータがドロップされたとき、またはクリップボードから貼り付け操作を実行するように求められたときに作成されます。
 
-次の記事では、データ オブジェクトと、アプリケーションでデータ ソースを使用する方法について説明します。 この情報は、両方をコピーして貼り付けるデータ時に呼び出すことがあるために、コンテナーとサーバーの両方のアプリケーションに適用されます。
+次の記事では、アプリケーションでデータオブジェクトとデータソースを使用する方法について説明します。 この情報は、コンテナーとサーバーアプリケーションの両方に適用されます。これは、データのコピーと貼り付けを行うために両方が呼び出される可能性があるためです。
 
-- [データ オブジェクトとデータ ソース: 作成と破棄](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [データ オブジェクトとデータ ソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [データ オブジェクトとデータ ソース: 操作](../mfc/data-objects-and-data-sources-manipulation.md)
+- [データ オブジェクトとデータ ソース: 操作](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
+[ドラッグアンドドロップ](drag-and-drop-ole.md)
 
-[クリップボード](../mfc/clipboard.md)
+[クリップボード](clipboard.md)
 
 ## <a name="see-also"></a>関連項目
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[COleDataObject クラス](../mfc/reference/coledataobject-class.md)<br/>
-[COleDataSource クラス](../mfc/reference/coledatasource-class.md)
+[OLE●ole○](ole-in-mfc.md)<br/>
+[COleDataObject クラス](reference/coledataobject-class.md)<br/>
+[COleDataSource クラス](reference/coledatasource-class.md)

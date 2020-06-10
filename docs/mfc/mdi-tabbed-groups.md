@@ -5,64 +5,64 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c1bf925003d5081b2cdc837012a57585b1ace60
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310842"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624357"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI タブ付きグループ
 
-マルチ ドキュメント インターフェイス (MDI) のタブ付きグループ機能により、1 つまたは複数のタブ付きウィンドウを表示する、マルチ ドキュメント インターフェイス (MDI) アプリケーション (またはグループと呼ばれる、タブ付きウィンドウの*タブ付きグループ*) MDI クライアント領域にします。 タブ付きウィンドウは、垂直方向または水平方向に配置できます。 アプリケーションでは、1 つ以上の MDI タブ付きグループをホストしている場合、グループは、スプリッターで区切られます。
+マルチドキュメントインターフェイス (MDI) のタブ付きグループ機能を使用すると、マルチドキュメントインターフェイス (mdi) アプリケーションで、MDI クライアント領域に1つ以上のタブ付きウィンドウ (タブ付き*グループ*と呼ばれる) を表示できます。 タブ付きウィンドウは、垂直方向または水平方向に配置できます。 アプリケーションが複数の MDI タブ付きグループをホストしている場合は、分割されたグループが分割されます。
 
-## <a name="features"></a>機能
+## <a name="features"></a>特徴
 
-MDI タブ付きグループの機能は、次のとおりです。
+MDI タブ付きグループの機能を次に示します。
 
 - アプリケーションでは、タブ付きウィンドウを動的に作成できます。
 
-- アプリケーションは、水平方向または垂直方向にタブ付きウィンドウを整列できます。
+- アプリケーションでは、タブ付きウィンドウを水平方向または垂直方向に配置できます。
 
-- タブ付きウィンドウのグループは、スプリッターで区切られます。 ユーザーは、スプリッターを使用してタブ付きグループのサイズを変更できます。
+- タブ付きウィンドウのグループはスプリッターで区切られます。 ユーザーはスプリッターを使用して、タブ付きグループのサイズを変更できます。
 
-- ユーザーは、グループ間で、個々 のタブをドラッグできます。
+- ユーザーは、グループ間で個々のタブをドラッグできます。
 
-- ユーザーは、新しいグループを作成する個々 のタブをドラッグできます。
+- ユーザーは、個々のタブをドラッグして新しいグループを作成できます。
 
-- ユーザーでは、タブを移動したり、ショートカット メニューを使用して新しいグループを作成することができます。
+- ユーザーは、ショートカットメニューを使用してタブを移動したり、新しいグループを作成したりできます。
 
-- アプリケーションは、保存して、タブ付きウィンドウのレイアウトを読み込むことができます。
+- アプリケーションでは、タブ付きウィンドウのレイアウトを保存して読み込むことができます。
 
-- アプリケーションは、保存し、MDI ドキュメントの一覧を読み込むことができます。
+- アプリケーションでは、MDI ドキュメントの一覧を保存して読み込むことができます。
 
-- アプリケーションでは、個々 のタブ付きグループにアクセスでき、そのパラメーターを変更することができます。
+- アプリケーションは、個々のタブ付きグループにアクセスし、パラメーターを変更できます。
 
-### <a name="using-mdi-tabbed-groups"></a>MDI を使用してタブ付きグループ
+### <a name="using-mdi-tabbed-groups"></a>MDI タブ付きグループの使用
 
-以下は、通常は MDI タブ付きグループで実行されるタスクです。
+MDI タブ付きグループで一般的に実行されるタスクを次に示します。
 
-- メイン フレーム ウィンドウの MDI タブ付きグループを有効にするのには、呼び出す[cmdiframewndex::enablemditabbedgroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)します。 このメソッドの 2 番目のパラメーターのインスタンスである、`CMDITabInfo`クラス。 既定のパラメーターを使用または呼び出す前にそれらを変更できます`CMDIFrameWndEx::EnableMDITabbedGroups`します。
+- メインフレームウィンドウの MDI タブ付きグループを有効にするには、 [CMDIFrameWndEx:: EnableMDITabbedGroups](reference/cmdiframewndex-class.md#enablemditabbedgroups)を呼び出します。 このメソッドの2番目のパラメーターは、クラスのインスタンスです `CMDITabInfo` 。 を呼び出す前に、既定のパラメーターを使用することも、変更することもでき `CMDIFrameWndEx::EnableMDITabbedGroups` ます。
 
-- 実行時に MDI タブ付きグループのプロパティを変更するには、作成または変更、`CMDITabInfo`オブジェクトと呼び出し`CMDIFrameWndEx::EnableMDITabbedGroups`もう一度
+- 実行時に MDI タブ付きグループのプロパティを変更するには、オブジェクトを作成または変更 `CMDITabInfo` して、を再度呼び出します。 `CMDIFrameWndEx::EnableMDITabbedGroups`
 
-- タブ付きウィンドウの MDI の一覧を取得する、呼び出す`CMDIFrameWndEx::GetMDITabGroups`します。
+- MDI タブ付きウィンドウの一覧を取得するには、を呼び出し `CMDIFrameWndEx::GetMDITabGroups` ます。
 
-- 作業中のタブ付きグループの横にある新しい MDI タブ付きグループを作成するには`CMDIFrameWndEx::MDITabNewGroup`します。
+- アクティブなタブ付きグループの横に新しい MDI タブ付きグループを作成するには、を呼び出し `CMDIFrameWndEx::MDITabNewGroup` ます。
 
-- タブ付きグループの前または次のウィンドウに入力フォーカスをシフトする呼び出す`CMDIFrameWndEx::MDITabMoveToNextGroup`します。
+- タブ付きグループの前または次のウィンドウに入力フォーカスを移動するには、を呼び出し `CMDIFrameWndEx::MDITabMoveToNextGroup` ます。
 
-- タブ付きグループの呼び出しをウィンドウ、MDI のメンバーであるかどうかを判断する`CMDIFrameWndEx::IsMemberOfMDITabGroup`します。
+- ウィンドウが MDI タブ付きグループ呼び出しのメンバーであるかどうかを確認する場合は `CMDIFrameWndEx::IsMemberOfMDITabGroup` 。
 
-- メイン フレーム ウィンドウの MDI タブまたは MDI タブ付きグループが有効になっているかどうかを確認するのには、呼び出す`CMDIFrameWndEx::AreMDITabs`します。 MDI タブ付きグループが有効になっているかどうかにのみを確認を呼び出す`CMDIFrameWndEx::IsMDITabbedGroup`します。
+- メインフレームウィンドウに対して MDI タブまたは MDI タブ付きグループが有効になっているかどうかを確認するには、を呼び出し `CMDIFrameWndEx::AreMDITabs` ます。 MDI タブ付きグループが有効かどうかを判断するには、を呼び出し `CMDIFrameWndEx::IsMDITabbedGroup` ます。
 
-- ユーザーがタブをクリックしてまたは別の MDI タブ付きグループにドラッグしたときにショートカット メニューを表示するには、オーバーライド`CMDIFrameWndEx::OnShowMDITabContextMenu`で、 `CMDIFrameWndEx`-クラスを派生します。 このメソッドを実装していない場合でも、アプリケーションでは、ショートカット メニューは表示されません。
+- ユーザーがタブをクリックしたとき、または別の MDI タブ付きグループにドラッグしたときにショートカットメニューを表示するには、の `CMDIFrameWndEx::OnShowMDITabContextMenu` 派生クラスでをオーバーライドし `CMDIFrameWndEx` ます。 このメソッドを実装しない場合、アプリケーションではショートカットメニューが表示されません。
 
-- アプリケーションで MDI タブ付きグループのレイアウトを保存する`CMDIFrameWndEx::SaveMDIState`します。 タブ付きグループのプロファイルを以前に保存した MDI を読み込むには、`CMDIFrameWndEx::LoadMDIState`します。 読み込みまたは MDI アプリケーションで開かれたドキュメントの一覧を保存するこれらのメソッドを呼び出すこともできます。 保存と読み込みの状態の MDI の詳細については、次を参照してください。 [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)します。
+- アプリケーションで MDI タブ付きグループのレイアウトを保存するには、を呼び出し `CMDIFrameWndEx::SaveMDIState` ます。 以前に保存した MDI タブ付きグループプロファイルを読み込むには、を呼び出し `CMDIFrameWndEx::LoadMDIState` ます。 また、これらのメソッドを呼び出して、開いているドキュメントの一覧を MDI アプリケーションに読み込んだり、保存したりすることもできます。 MDI 状態の保存と読み込みの詳細については、「 [CMDIFrameWndEx:: LoadMDIState](reference/cmdiframewndex-class.md#loadmdistate)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
-[CMDIFrameWndEx クラス](../mfc/reference/cmdiframewndex-class.md)<br/>
-[CMDIChildWndEx クラス](../mfc/reference/cmdichildwndex-class.md)<br/>
-[CMDITabInfo クラス](../mfc/reference/cmditabinfo-class.md)
+[ユーザーインターフェイス要素](user-interface-elements-mfc.md)<br/>
+[CMDIFrameWndEx クラス](reference/cmdiframewndex-class.md)<br/>
+[CMDIChildWndEx クラス](reference/cmdichildwndex-class.md)<br/>
+[CMDITabInfo クラス](reference/cmditabinfo-class.md)

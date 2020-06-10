@@ -14,37 +14,37 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623446"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの全体像
 
-一般的な MFC アプリケーションでは、ドキュメントとビューがペアリングされます。 ドキュメント内のデータが格納されているが、ビューは、データへのアクセスを特権します。 ビューからドキュメントの分離は、その表示から、ストレージとデータのメンテナンスを区切ります。
+ドキュメントとビューは、一般的な MFC アプリケーションでペアになっています。 データはドキュメントに格納されますが、ビューにはデータへの特権アクセスがあります。 [ドキュメントの表示] を分離すると、データの保存とメンテナンスがその表示から分離されます。
 
-## <a name="gaining-access-to-document-data-from-the-view"></a>ドキュメント、ビューからデータにアクセスするため
+## <a name="gaining-access-to-document-data-from-the-view"></a>ビューからドキュメントデータへのアクセスを取得する
 
-ビュー データにアクセスする、ドキュメントのいずれかで、 [GetDocument](../mfc/reference/cview-class.md#getdocument)関数は、ドキュメント、または C++ のクラス ビューを作成して、ポインターを返します`friend`ドキュメント クラスの。 ビューは、このデータへのアクセスを使用して描画したり、それ以外の場合を操作するのに準備ができた場合は、データを取得します。
+ビューはドキュメントのデータにアクセスします。 [Getdocument](reference/cview-class.md#getdocument)関数は、ドキュメントへのポインターを返すか、ビュークラスを `friend` ドキュメントクラスの C++ にします。 その後、ビューはデータへのアクセスを使用してデータを取得し、描画や操作を行う準備ができたときにデータを取得します。
 
-ビューの例: から[OnDraw](../mfc/reference/cview-class.md#ondraw)ビューで使用するメンバー関数は、`GetDocument`ドキュメント ポインターを取得します。 アクセスにそのポインターを使用して、`CString`ドキュメント内のデータ メンバー。 文字列に、ビュー、`TextOut`関数。 この例のコードを表示するには、次を参照してください。[ビューの描画](../mfc/drawing-in-a-view.md)します。
+たとえば、ビューの[OnDraw](reference/cview-class.md#ondraw)メンバー関数から、ビューはを使用して `GetDocument` ドキュメントポインターを取得します。 次に、そのポインターを使用して `CString` 、ドキュメント内のデータメンバーにアクセスします。 このビューでは、文字列が関数に渡され `TextOut` ます。 この例のコードを確認するには、「[ビューでの描画](drawing-in-a-view.md)」を参照してください。
 
-## <a name="user-input-to-the-view"></a>ビューにユーザー入力
+## <a name="user-input-to-the-view"></a>ビューへのユーザー入力
 
-ビューの選択またはデータの編集のいずれかとしてそれ自体の中のマウス クリック解釈できます。 同様に、データ入力または編集としてキーストロークを解釈可能性があります。 テキストを管理するビューで、ユーザーの種類を文字列とします。 ビューは、ドキュメントへのポインターを取得し、ポインターを使用して、ドキュメントでは、いくつかのデータ構造に格納する新しいデータを渡します。
+ビューでは、データの選択または編集として、単独でマウスクリックを解釈することもできます。 同様に、キーストロークはデータ入力または編集として解釈される場合があります。 ユーザーが、テキストを管理するビューに文字列を入力したとします。 ビューはドキュメントへのポインターを取得し、ポインターを使用してドキュメントに新しいデータを渡します。このデータは、データ構造に格納されます。
 
-## <a name="updating-multiple-views-of-the-same-document"></a>同じドキュメントの複数のビューを更新しています
+## <a name="updating-multiple-views-of-the-same-document"></a>同じドキュメントの複数のビューを更新する
 
-アプリケーションで同じドキュメントの複数のビュー-テキスト エディターでの分割ウィンドウなど、ビューがドキュメントに最初に、新しいデータを渡します。 ドキュメントの呼び出して[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)メンバー関数を新しいデータを反映して更新するためにドキュメントのすべてのビューが示されます。 これは、ビューを同期します。
+テキストエディターの分割ウィンドウなど、同じドキュメントの複数のビューを持つアプリケーションでは、最初に新しいデータがドキュメントに渡されます。 次に、ドキュメントの[UpdateAllViews](reference/cdocument-class.md#updateallviews)メンバー関数を呼び出します。これは、新しいデータを反映して、ドキュメントのすべてのビューを更新するように指示します。 これにより、ビューが同期されます。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ドキュメント/ビュー アーキテクチャの利点](../mfc/advantages-of-the-document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャの利点](advantages-of-the-document-view-architecture.md)
 
-- [ドキュメント/ビュー アーキテクチャの代替手段](../mfc/alternatives-to-the-document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャの代替手段](alternatives-to-the-document-view-architecture.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+[ドキュメント/ビューアーキテクチャ](document-view-architecture.md)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621863"
 ---
 # <a name="destroying-window-objects"></a>ウィンドウ オブジェクトの破棄
 
-注意が必要で独自の子ウィンドウのウィンドウで、ユーザーが終了すると、C++ ウィンドウ オブジェクトを破棄します。 これらのオブジェクトを破棄しないと、アプリケーションはメモリを復元できません。 さいわい、フレームワークは、フレーム ウィンドウ、ビュー、およびダイアログ ボックスの作成とウィンドウの破棄を管理します。 追加のウィンドウを作成する場合は、それらを破棄する必要があります。
+ユーザーがウィンドウで終了したときに C++ ウィンドウオブジェクトを破棄するには、独自の子ウィンドウを使用する必要があります。 これらのオブジェクトが破棄されていない場合、アプリケーションはメモリを回復しません。 さいわい、フレームワークはウィンドウの破棄だけでなく、フレームウィンドウ、ビュー、およびダイアログボックスの作成も管理します。 追加のウィンドウを作成する場合は、そのウィンドウを破棄する必要があります。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ウィンドウの破棄順序](../mfc/window-destruction-sequence.md)
+- [ウィンドウの破棄順序](window-destruction-sequence.md)
 
-- [割り当てとウィンドウ メモリの解放](../mfc/allocating-and-deallocating-window-memory.md)
+- [ウィンドウメモリの割り当てと割り当て解除](allocating-and-deallocating-window-memory.md)
 
-- [Cwnd と HWND の分離](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [CWnd と HWND の分離](detaching-a-cwnd-from-its-hwnd.md)
 
-- [一般的なウィンドウ作成順序](../mfc/general-window-creation-sequence.md)
+- [全般ウィンドウ作成順序](general-window-creation-sequence.md)
 
-- [フレーム ウィンドウの破棄](../mfc/destroying-frame-windows.md)
+- [フレーム ウィンドウの破棄](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Window オブジェクト](../mfc/window-objects.md)
+[ウィンドウ オブジェクト](window-objects.md)

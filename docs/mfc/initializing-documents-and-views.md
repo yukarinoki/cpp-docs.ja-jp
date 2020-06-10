@@ -8,19 +8,19 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e970d6e8a166283f82575b309cf023f48899403
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626352"
 ---
 # <a name="initializing-documents-and-views"></a>ドキュメントとビューの初期化
 
-ドキュメント クラスは、両方の方法をサポートする必要がありますので、2 つの異なる方法でドキュメントが作成されます。 最初に、ユーザーは、ファイルの新しいコマンドを使用して、新しい空の文書を作成できます。 その場合は、オーバーライドでドキュメントを初期化、[でも実質的](../mfc/reference/cdocument-class.md#onnewdocument)クラスのメンバー関数[CDocument](../mfc/reference/cdocument-class.md)します。 次に、ユーザーは、ファイルから内容を読み取る新しい文書を作成するのに、[ファイル] メニュー、開いているコマンドを使用できます。 その場合は、オーバーライドでドキュメントを初期化、[かまいません](../mfc/reference/cdocument-class.md#onopendocument)クラスのメンバー関数`CDocument`します。 両方の初期化が同じ場合は、両方のオーバーライドから一般的なメンバー関数を呼び出すことができますまたは`OnOpenDocument`呼び出せる`OnNewDocument`をクリーンなドキュメントを初期化して、ファイルを開く操作を完了します。
+ドキュメントは2つの異なる方法で作成されるため、ドキュメントクラスは両方の方法をサポートする必要があります。 最初に、ユーザーは、新しい空のドキュメントを作成できます。これには、File New コマンドを使用します。 その場合は、 [OnNewDocument](reference/cdocument-class.md#onnewdocument)クラスのメンバー関数のオーバーライドでドキュメントを初期[化します](reference/cdocument-class.md)。 次に、[ファイル] メニューの [開く] コマンドを使用して、ファイルから内容を読み取る新しいドキュメントを作成できます。 その場合は、クラスの[Onopendocument](reference/cdocument-class.md#onopendocument)メンバー関数のオーバーライドでドキュメントを初期化し `CDocument` ます。 両方の初期化が同じである場合は、両方のオーバーライドから共通メンバー関数を呼び出すか、 `OnOpenDocument` `OnNewDocument` を呼び出してクリーンドキュメントを初期化してから、開いている操作を完了することができます。
 
-ビューは、ドキュメントの作成後に作成されます。 ビューを初期化するために最適なタイミングは、フレームワークのドキュメント、フレーム ウィンドウ、およびビューの作成が完了した後です。 オーバーライドすることで、ビューを初期化することができます、 [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)のメンバー関数[CView](../mfc/reference/cview-class.md)します。 再初期化または調整する必要がある場合は、ドキュメントの変更されるたびに、オーバーライドすることができます[OnUpdate](../mfc/reference/cview-class.md#onupdate)します。
+ビューは、ドキュメントが作成された後に作成されます。 ビューの初期化に最適なタイミングは、フレームワークがドキュメント、フレームウィンドウ、およびビューの作成を完了した後です。 [CView](reference/cview-class.md)の[OnInitialUpdate](reference/cview-class.md#oninitialupdate)メンバー関数をオーバーライドすることにより、ビューを初期化できます。 ドキュメントが変更されるたびに再初期化または調整が必要な場合は、 [OnUpdate](reference/cview-class.md#onupdate)をオーバーライドできます。
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメントとビューの初期化と後処理](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+[ドキュメントとビューの初期化と後処理](initializing-and-cleaning-up-documents-and-views.md)

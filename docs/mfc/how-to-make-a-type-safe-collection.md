@@ -10,93 +10,93 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 1901100996a776244b57efe0951795ceec3c630a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377255"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620008"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法 : タイプ セーフなコレクションを作成する
 
-この記事では、独自のデータ型のタイプ セーフなコレクションを作成する方法について説明します。 取り上げるトピックは次のとおりです。
+この記事では、独自のデータ型に対してタイプセーフなコレクションを作成する方法について説明します。 取り上げるトピックは次のとおりです。
 
-- [タイプ セーフのためのテンプレート ベースのクラスの使用](#_core_using_template.2d.based_classes_for_type_safety)
+- [タイプセーフでのテンプレートベースのクラスの使用](#_core_using_template.2d.based_classes_for_type_safety)
 
 - [ヘルパー関数の実装](#_core_implementing_helper_functions)
 
-- [非テンプレート コレクション クラスの使用](#_core_using_nontemplate_collection_classes)
+- [非テンプレートコレクションクラスの使用](#_core_using_nontemplate_collection_classes)
 
-Microsoft Foundation クラス ライブラリには、C++ テンプレートに基づく定義済みのタイプ セーフなコレクションが用意されています。 これらのクラスはテンプレートであるため、型のキャストや、この目的のために非テンプレート クラスを使用するその他の追加作業を行わずに、タイプ セーフで使いやすさを実現します。 MFC サンプル[COLLECT](../overview/visual-cpp-samples.md)は、MFC アプリケーションでテンプレート ベースのコレクション クラスを使用する方法を示します。 一般に、これらのクラスは、新しいコレクション コードを記述するときにはいつでも使用します。
+Microsoft Foundation Class ライブラリには、C++ テンプレートに基づく定義済みのタイプセーフなコレクションが用意されています。 これらのクラスはテンプレートなので、型キャストや、非テンプレートクラスを使用するために必要なその他の追加作業を行わずに、タイプセーフで使いやすさを提供するのに役立ちます。 MFC サンプル[収集](../overview/visual-cpp-samples.md)は、mfc アプリケーションでテンプレートベースのコレクションクラスを使用する方法を示しています。 一般に、新しいコレクションコードを記述するときは常にこれらのクラスを使用します。
 
-## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a>タイプ セーフのためのテンプレート ベースのクラスの使用
+## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a>タイプセーフでのテンプレートベースのクラスの使用
 
-#### <a name="to-use-template-based-classes"></a>テンプレート ベースのクラスを使用するには
+#### <a name="to-use-template-based-classes"></a>テンプレートベースのクラスを使用するには
 
-1. コレクション クラス型の変数を宣言します。 次に例を示します。
+1. コレクションクラス型の変数を宣言します。 次に例を示します。
 
-   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
-1. コレクション オブジェクトのメンバー関数を呼び出します。 次に例を示します。
+1. コレクションオブジェクトのメンバー関数を呼び出します。 次に例を示します。
 
-   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
-1. 必要に応じて、[ヘルパー関数](../mfc/reference/collection-class-helpers.md)と[SerializeElements を](../mfc/reference/collection-class-helpers.md#serializeelements)実装します。 これらの関数の実装については、「 ヘルパー関数の[実装](#_core_implementing_helper_functions)」を参照してください。
+1. 必要に応じて、[ヘルパー関数](reference/collection-class-helpers.md)と[SerializeElements](reference/collection-class-helpers.md#serializeelements)を実装します。 これらの関数の実装の詳細については、「[ヘルパー関数の実装](#_core_implementing_helper_functions)」を参照してください。
 
-この例では、整数のリストの宣言を示します。 手順 1 の最初のパラメーターは、リストの要素として格納されているデータの型です。 2 番目のパラメーターは、コレクション クラスのメンバー関数にデータを渡し、`Add`および コレクション クラスの`GetAt`メンバー関数から返す方法を指定します。
+この例では、整数のリストの宣言を示します。 手順 1. の最初のパラメーターは、リストの要素として格納されるデータの種類です。 2番目のパラメーターは、コレクションクラスのメンバー関数 (やなど) との間でデータをやり取りする方法を指定し `Add` `GetAt` ます。
 
 ## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a>ヘルパー関数の実装
 
-テンプレート ベースのコレクション`CArray`クラス`CList`、、および`CMap`派生コレクション クラスに合わせてカスタマイズできる 5 つのグローバル ヘルパ関数を使用します。 これらのヘルパー関数の詳細については、「MFC リファレンス」の[「コレクション クラス ヘルパー](../mfc/reference/collection-class-helpers.md) 」を*参照してください。* シリアル化関数の実装は、テンプレート ベースのコレクション クラスのほとんどの用途に必要です。
+テンプレートベースのコレクションクラス、 `CArray` `CList` 、およびは、 `CMap` 5 つのグローバルヘルパー関数を使用します。これは、派生コレクションクラスに必要に応じてカスタマイズできます。 これらのヘルパー関数の詳細については、「 *MFC リファレンス*」の「[コレクションクラスヘルパー](reference/collection-class-helpers.md) 」を参照してください。 テンプレートベースのコレクションクラスのほとんどの使用には、シリアル化関数の実装が必要です。
 
-### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a>要素のシリアル化
+### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a>シリアル化 (要素を)
 
-、 `CArray` `CList`、および`CMap`クラスは`SerializeElements`、コレクション要素をアーカイブに格納したり、アーカイブから読み取ったりするために呼び出します。
+、、およびの各クラスは、を呼び出して、 `CArray` `CList` `CMap` `SerializeElements` コレクションの要素をアーカイブに格納するか、アーカイブから読み取ります。
 
-ヘルパー関数の`SerializeElements`既定の実装では、オブジェクトがアーカイブにビット単位で書き込まれるか、またはオブジェクトがアーカイブに格納されているか、アーカイブから取得されているかに応じて、アーカイブからオブジェクトへのビットごとの読み取りが行われます。 この`SerializeElements`アクションが適切でない場合はオーバーライドします。
+ヘルパー関数の既定の実装では、オブジェクト `SerializeElements` からアーカイブへのビットごとの書き込み、またはオブジェクトがアーカイブに格納されているかどうかに応じて、アーカイブからオブジェクトへのビットごとの読み取りを行います。 `SerializeElements`このアクションが適切でない場合は、をオーバーライドします。
 
-コレクションが派生したオブジェクトを格納`CObject`し、コレクション要素`IMPLEMENT_SERIAL`クラスの実装でマクロを使用する場合は、 と`CArchive``CObject`に組み込まれているシリアル化機能を利用できます。
+コレクションがから派生したオブジェクト `CObject` を格納し、その `IMPLEMENT_SERIAL` マクロを collection 要素クラスの実装で使用する場合は、とに組み込まれているシリアル化機能を利用でき `CArchive` `CObject` ます。
 
-[!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]
+[!code-cpp[NVC_MFCCollections#9](codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]
 
-各`CPerson`オブジェクトの呼び出`CArchive`し`CObject::Serialize`(またはその関数のオーバーライド) に対するオーバーロードされた挿入演算子。
+`CArchive` `CObject::Serialize` 各オブジェクトの呼び出し (またはその関数のオーバーライド) のオーバーロードされた挿入演算子 `CPerson` 。
 
-## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>非テンプレート コレクション クラスの使用
+## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>非テンプレートコレクションクラスの使用
 
-MFC では、MFC バージョン 1.0 で導入されたコレクション クラスもサポートしています。 これらのクラスはテンプレートに基づいていません。 サポート`CObject*`されている型 、 、、`UINT``DWORD`および`CString`のデータを格納するために使用できます。 これらの定義済みコレクション ( など`CObList`) を使用して、 から`CObject`派生したオブジェクトのコレクションを保持できます。 MFC には、void ポインター (*)`UINT``void`などのプリミティブ型を保持する他の定義済みコレクションも用意されています。 ただし、一般的には、より特定のクラスとその派生物のオブジェクトを保持するために、独自のタイプ セーフなコレクションを定義すると便利です。 テンプレートに基づくコレクション クラスを使用する方が、テンプレート ベースのクラスを使用するよりも作業が多いことに注意してください。
+MFC では、MFC バージョン1.0 で導入されたコレクションクラスもサポートされています。 これらのクラスは、テンプレートに基づいていません。 サポートされている型、、、およびのデータを格納するために使用でき `CObject*` `UINT` `DWORD` `CString` ます。 これらの定義済みコレクション (など) を使用して `CObList` 、から派生したオブジェクトのコレクションを保持でき `CObject` ます。 MFC には `UINT` 、や void ポインター (*) などのプリミティブ型を保持するための、他の定義済みコレクションも用意されて `void` います。 ただし、一般的には、より具体的なクラスとその派生クラスのオブジェクトを保持するために、独自のタイプセーフなコレクションを定義すると便利です。 テンプレートに基づいていないコレクションクラスを使用する場合は、テンプレートベースのクラスを使用するよりも作業が多くなります。
 
-非テンプレート コレクションを使用してタイプ セーフなコレクションを作成するには、次の 2 つの方法があります。
+非テンプレートコレクションでタイプセーフなコレクションを作成するには、次の2つの方法があります。
 
-1. 必要に応じて、型キャストで非テンプレート コレクションを使用します。 これは簡単なアプローチです。
+1. 必要に応じて型キャストを使用して、非テンプレートコレクションを使用します。 これは簡単な方法です。
 
-1. 非テンプレート タイプ セーフ なコレクションを派生および拡張します。
+1. から派生し、非テンプレートタイプセーフなコレクションを拡張します。
 
-#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>型キャストで非テンプレート コレクションを使用するには
+#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>非テンプレートコレクションを型キャストで使用するには
 
-1. テンプレート以外のクラス (など`CWordArray`) を直接使用します。
+1. などの非テンプレートクラスの1つを `CWordArray` 直接使用します。
 
-   たとえば、作成`CWordArray`して 32 ビットの値を追加し、それらを取得できます。 これ以上やるべきことは何もない。 定義済みの機能を使用するだけです。
+   たとえば、を作成 `CWordArray` し、32ビット値を追加してから取得することができます。 これ以上の操作はありません。 定義済みの機能を使用するだけです。
 
-   また、 など`CObList`、定義済みのコレクションを使用して、 から`CObject`派生したオブジェクトを保持することもできます。 コレクション`CObList`は、 へのポインターを保持するように`CObject`定義されています。 リストからオブジェクトを取得する場合、`CObList`関数が ポインタを 返すため、結果を適切な型にキャストする`CObject`必要がある場合があります。 たとえば、コレクションにオブジェクトを`CPerson``CObList`格納する場合、取得した要素を`CPerson`オブジェクトへのポインターにキャストする必要があります。 次の例では、`CObList`コレクションを使用`CPerson`してオブジェクトを保持します。
+   また、定義済みのコレクション (など) を使用して `CObList` 、から派生したオブジェクトを保持することもでき `CObject` ます。 `CObList`コレクションは、へのポインターを保持するために定義され `CObject` ます。 リストからオブジェクトを取得する場合、関数がへのポインターを返すため、結果を適切な型にキャストすることが必要になる場合があり `CObList` `CObject` ます。 たとえば、オブジェクトをコレクションに格納する場合は、取得した `CPerson` `CObList` 要素をオブジェクトへのポインターにキャストする必要があり `CPerson` ます。 次の例では、コレクションを使用して `CObList` オブジェクトを保持し `CPerson` ます。
 
-   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-   この方法では、定義済みのコレクション型を使用し、必要に応じてキャストする方法は、コレクションのニーズの多くにとって適切な場合があります。 さらに機能が必要な場合やタイプ セーフを強化する必要がある場合は、テンプレート ベースのクラスを使用するか、次の手順に従います。
+   このように定義済みのコレクション型を使用し、必要に応じてキャストする方法は、コレクションのニーズの多くに適している場合があります。 さらに機能またはタイプセーフが必要な場合は、テンプレートベースのクラスを使用するか、次の手順に従います。
 
-#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>非テンプレート タイプ セーフ コレクションを派生および拡張するには
+#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>非テンプレートタイプセーフコレクションを派生して拡張するには
 
-1. 定義済みの非テンプレート クラスの 1 つから独自のコレクション クラスを派生させます。
+1. 定義済みの非テンプレートクラスの1つから独自のコレクションクラスを派生させます。
 
-   クラスを派生させる場合は、タイプ セーフなラッパー関数を追加して、既存の関数にタイプ セーフなインターフェイスを提供できます。
+   クラスを派生させると、タイプセーフなラッパー関数を追加して、既存の関数にタイプセーフなインターフェイスを提供できます。
 
-   `CObList`たとえば、オブジェクトを保持`CPerson`するためにリストを派生した場合、次に示すように、ラッパー関数`AddHeadPerson`と`GetHeadPerson`を追加できます。
+   たとえば、オブジェクトを保持するためにからリストを派生させる場合は、 `CObList` `CPerson` `AddHeadPerson` 次に示すように、ラッパー関数とを追加することができ `GetHeadPerson` ます。
 
-   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-   これらのラッパー関数は、派生リストからオブジェクトを追加および取得`CPerson`するタイプ セーフな方法を提供します。 `GetHeadPerson`関数の場合は、型キャストをカプセル化していることがわかります。
+   これらのラッパー関数は、派生リストからオブジェクトを追加および取得するためのタイプセーフな方法を提供し `CPerson` ます。 関数の場合は、単純に型キャストをカプセル化するだけであることがわかり `GetHeadPerson` ます。
 
-   また、既存の機能をタイプ セーフラッパーにラップするのではなく、コレクションの機能を拡張する新しい関数を定義することで、新しい機能を追加することもできます。 たとえば[、CObject コレクション内のすべてのオブジェクトを削除する](../mfc/deleting-all-objects-in-a-cobject-collection.md)の記事では、リストに含まれるすべてのオブジェクトを削除する関数について説明します。 この関数は、派生クラスにメンバー関数として追加できます。
+   また、既存の機能をタイプセーフラッパーにラップするだけではなく、コレクションの機能を拡張する新しい関数を定義して、新しい機能を追加することもできます。 たとえば、 [CObject コレクション内のすべてのオブジェクトを削除](deleting-all-objects-in-a-cobject-collection.md)する記事では、一覧に含まれるすべてのオブジェクトを削除する関数について説明しています。 この関数は、メンバー関数として派生クラスに追加できます。
 
 ## <a name="see-also"></a>関連項目
 
-[コレクション](../mfc/collections.md)
+[コレクション](collections.md)

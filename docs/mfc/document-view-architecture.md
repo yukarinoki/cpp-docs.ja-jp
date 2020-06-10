@@ -12,71 +12,71 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624785"
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 
-既定では、MFC アプリケーション ウィザードは、ドキュメント クラスとビュー クラスで、アプリケーションのスケルトンを作成します。 MFC では、これら 2 つのクラスのデータ管理を分離します。 ドキュメントは、データを格納およびデータ印刷の管理し、データの複数のビューの更新を調整します。 ビューは、データを表示し、選択や編集など、ユーザー操作を管理します。
+既定では、MFC アプリケーションウィザードは、ドキュメントクラスとビュークラスを使用してアプリケーションスケルトンを作成します。 MFC では、データ管理をこの2つのクラスに分割します。 このドキュメントでは、データを格納し、データの印刷を管理し、データの複数のビューの更新を調整します。 ビューには、データが表示され、選択や編集など、データとのユーザー操作を管理します。
 
-このモデルでは、MFC のドキュメント オブジェクトは読み取りし、永続的ストレージにデータを書き込みます。 ドキュメントは、(データベースなど) が存在する限り、データにインターフェイスを提供も可能性があります。 個別のビュー オブジェクトは、ユーザー選択ウィンドウにデータを表示して、データの編集からのデータの表示を管理します。 ビューでは、ドキュメントからデータの表示を取得し、データが変更を文書に通信します。
+このモデルでは、MFC ドキュメントオブジェクトが永続ストレージに対してデータの読み取りと書き込みを行います。 ドキュメントには、データが置かれている場所 (データベースなど) へのインターフェイスも用意されている場合があります。 独立したビューオブジェクトは、ウィンドウのデータをユーザーが選択して編集するためのデータ表示を管理します。 ビューでは、ドキュメントから表示データが取得され、データが変更されるとドキュメントに返信されます。
 
-簡単にオーバーライドするか、ドキュメント/ビューの分離を無視する、ほとんどの場合は、このモデルに従うにいられない理由があります。 最高の 1 つは、スプレッドシートとグラフ ビューの両方など、同じドキュメントの複数のビューを作成する必要がある場合です。 ドキュメント/ビュー モデルは、コードの一般的なドキュメントにすべてのビュー (など、計算エンジン) を配置するときに、データの各ビューを表す個別のビュー オブジェクトを使用できます。 ドキュメントは、データが変更されるたびに、すべてのビューを更新するタスクもかかります。
+ドキュメント/ビューの分離を簡単にオーバーライドまたは無視できますが、ほとんどの場合、このモデルに従うことが非常に重要な理由があります。 最適な方法の1つは、スプレッドシートとグラフビューの両方など、同じドキュメントの複数のビューが必要な場合です。 ドキュメント/ビューモデルでは、データの各ビューを個別のビューオブジェクトで表すことができます。一方、すべてのビュー (計算エンジンなど) に共通するコードは、ドキュメントに含めることができます。 このドキュメントでは、データが変更されるたびにすべてのビューを更新するタスクについても説明します。
 
-MFC のドキュメント/ビュー アーキテクチャでは、複数のビュー、複数のドキュメント タイプ、分割ウィンドウ、およびその他の貴重なユーザー インターフェイス機能のサポートが容易にします。
+MFC のドキュメント/ビューアーキテクチャを使用すると、複数のビュー、複数のドキュメントの種類、分割ウィンドウ、およびその他の重要なユーザーインターフェイス機能を簡単にサポートできます。
 
-プログラマ、およびユーザーに表示されている MFC フレームワークの部分では、ドキュメントとビューを示します。 フレームワークとアプリケーションの開発に、作業の大部分は、ドキュメントとビューのクラスを作成に移動します。 この記事のファミリについて説明します。
+ユーザーとプログラマの両方にとって最もわかりやすい MFC フレームワークの部分は、ドキュメントとビューです。 フレームワークを使用したアプリケーション開発の作業のほとんどは、ドキュメントを作成し、クラスを表示します。 この記事ファミリでは次のことについて説明します。
 
-- ドキュメント、ビュー、およびフレームワークでやり取りする方法の目的。
+- ドキュメントとビューの目的、およびフレームワーク内でのそれらの対話方法。
 
-- 必要がありますに何を実装します。
+- それらを実装するために行う必要があること。
 
-ドキュメント/ビューの中心にある 4 つのキー クラスには。
+ドキュメント/ビューの中核となるのは、次の4つの主要なクラスです。
 
-[CDocument](../mfc/reference/cdocument-class.md) (または[COleDocument](../mfc/reference/coledocument-class.md)) クラスを格納またはプログラムのデータの制御に使用されるオブジェクトをサポートします ドキュメントのプログラマが定義したクラスの基本的な機能を提供します。 ドキュメントでは、ユーザーは通常ファイル メニューの 開く コマンドを表示して、ファイル メニュー、保存 コマンドを保存しますデータの単位を表します。
+[CDocument](reference/cdocument-class.md) (または[COleDocument](reference/coledocument-class.md)) クラスは、プログラムのデータの格納や制御に使用されるオブジェクトをサポートし、プログラマが定義したドキュメントクラスの基本機能を提供します。 ドキュメントは、通常、[ファイル] メニューの [開く] コマンドを使用してユーザーが開くデータの単位を表し、[ファイル] メニューの [保存] コマンドを使用して保存します。
 
-[CView](../mfc/reference/cview-class.md) (またはその派生クラスのいずれかの) ビューのプログラマが定義したクラスの基本的な機能を提供します。 ビューがドキュメントにアタッチされているし、ドキュメントとユーザーの間の仲介役として機能します。 ビューは、画面上のドキュメントのイメージを表示しますし、ユーザー入力をドキュメントに操作として解釈します。 ビューには、印刷と印刷プレビュー画像も表示します。
+[CView](reference/cview-class.md) (またはその多くの派生クラスの1つ) には、プログラマが定義したビュークラスの基本機能が用意されています。 ビューはドキュメントにアタッチされ、ドキュメントとユーザーの間の仲介役として機能します。このビューは、ドキュメントの画像を画面に表示し、ユーザーの入力をドキュメントに対する操作として解釈します。 また、このビューでは、印刷と印刷プレビューの両方のイメージがレンダリングされます。
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md) (またはそのバリエーションの 1 つ) は、ドキュメントの 1 つまたは複数のビューを囲むフレームを提供するオブジェクトをサポートします。
+[CFrameWnd](reference/cframewnd-class.md) (またはそのバリエーションの1つ) では、ドキュメントの1つ以上のビューの周囲にフレームを提供するオブジェクトがサポートされています。
 
-[CDocTemplate](../mfc/reference/cdoctemplate-class.md) (または[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)または[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) を指定された型の 1 つまたは複数の既存のドキュメントを調整し、適切な作成を管理するオブジェクトをサポートしていますドキュメント、ビュー、およびその型のフレーム ウィンドウ オブジェクト。
+[CDocTemplate](reference/cdoctemplate-class.md) (または[CSingleDocTemplate](reference/csingledoctemplate-class.md)または[CMultiDocTemplate](reference/cmultidoctemplate-class.md)) は、指定された種類の1つ以上の既存のドキュメントを調整し、その型の正しいドキュメント、ビュー、およびフレームウィンドウオブジェクトの作成を管理するオブジェクトをサポートします。
 
-次の図は、ドキュメントとビュー間の関係を示します。
+次の図は、ドキュメントとそのビューの関係を示しています。
 
-![ビューが表示されているドキュメントの一部](../mfc/media/vc379n1.gif "ビューが表示されているドキュメントの一部") <br/>
+![ビューは表示されているドキュメントの一部です](../mfc/media/vc379n1.gif "ビューは表示されているドキュメントの一部です") <br/>
 ドキュメントとビュー
 
-クラス ライブラリのドキュメント/ビューの実装は、データ自体の表示と、データ上でユーザー操作からを区切ります。 データに対するすべての変更は、ドキュメントのクラスによって管理されます。 ビューにアクセスしてデータを更新するには、このインターフェイスを呼び出します。
+クラスライブラリのドキュメント/ビュー実装は、データ自体をその表示とユーザー操作から分離します。 データへのすべての変更は、ドキュメントクラスによって管理されます。 ビューは、このインターフェイスを呼び出してデータにアクセスし、データを更新します。
 
-ドキュメント、関連付けられたビュー、およびフレーム ウィンドウ ビューには、ドキュメント テンプレートによって作成されます。 ドキュメント テンプレートは、作成して、1 つのドキュメントの種類のすべてのドキュメントを管理する責任を負います。
+ドキュメント、関連付けられたビュー、およびビューをフレーム化するフレームウィンドウは、ドキュメントテンプレートによって作成されます。 ドキュメントテンプレートは、1つのドキュメントの種類のすべてのドキュメントを作成および管理する役割を担います。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ドキュメント/ビュー アーキテクチャの全体像](../mfc/a-portrait-of-the-document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャの全体像](a-portrait-of-the-document-view-architecture.md)
 
-- [ドキュメント/ビュー アーキテクチャの利点](../mfc/advantages-of-the-document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャの利点](advantages-of-the-document-view-architecture.md)
 
-- [アプリケーション ウィザードによって作成されたドキュメントとビュー クラス](../mfc/document-and-view-classes-created-by-the-mfc-application-wizard.md)
+- [アプリケーションウィザードによって作成されるドキュメントクラスとビュークラス](document-and-view-classes-created-by-the-mfc-application-wizard.md)
 
-- [ドキュメント/ビュー アーキテクチャの代替手段](../mfc/alternatives-to-the-document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャの代替手段](alternatives-to-the-document-view-architecture.md)
 
-- [シングル ドキュメントへのマルチ ビューの追加](../mfc/adding-multiple-views-to-a-single-document.md)
+- [1つのドキュメントに複数のビューを追加する](adding-multiple-views-to-a-single-document.md)
 
-- [ドキュメントの使い方](../mfc/using-documents.md)
+- [ドキュメントの使い方](using-documents.md)
 
-- [ビューの使い方](../mfc/using-views.md)
+- [ビューの使用](using-views.md)
 
-- [複数のドキュメント タイプ、ビュー、フレーム ウィンドウ](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [複数のドキュメント タイプ、ビュー、フレーム ウィンドウ](multiple-document-types-views-and-frame-windows.md)
 
-- [ドキュメントとビューの初期化と後処理](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+- [ドキュメントとビューの初期化とクリーンアップ](initializing-and-cleaning-up-documents-and-views.md)
 
-- [ドキュメントとビュー クラスに、独自の追加を初期化します。](../mfc/creating-new-documents-windows-and-views.md)
+- [ドキュメント & ビュークラスに対する独自の追加の初期化](creating-new-documents-windows-and-views.md)
 
-- [ドキュメントとビューを用いたデータベース クラス](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [ドキュメントとビューを用いたデータベース クラスの使用](../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [ドキュメントとビューを用いないデータベース クラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
 
@@ -84,9 +84,9 @@ MFC のドキュメント/ビュー アーキテクチャでは、複数のビ�
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
-[Windows](../mfc/windows.md)<br/>
-[フレーム ウィンドウ](../mfc/frame-windows.md)<br/>
-[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[ドキュメント/ビューの作成](../mfc/document-view-creation.md)<br/>
-[新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
+[ユーザーインターフェイス要素](user-interface-elements-mfc.md)<br/>
+[Windows](windows.md)<br/>
+[フレーム ウィンドウ](frame-windows.md)<br/>
+[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](document-templates-and-the-document-view-creation-process.md)<br/>
+[ドキュメントおよびビューの作成](document-view-creation.md)<br/>
+[新しいドキュメント、ウィンドウ、およびビューの作成](creating-new-documents-windows-and-views.md)

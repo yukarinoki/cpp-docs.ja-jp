@@ -10,29 +10,29 @@ helpviewer_keywords:
 - MAPI, MFC
 - enabling applications for mail [MFC]
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
-ms.openlocfilehash: a5f60e1ba8c2b68ddca312859694f532e38da965
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0008a2bc433401f3e048b6f5a92cded88114d08e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625549"
 ---
 # <a name="mapi"></a>MAPI
 
-この記事では、クライアント アプリケーション開発者はメッセージを Microsoft メッセージング アプリケーション プログラミング インターフェイス (MAPI) について説明します。 MFC クラスで MAPI のサブセットのサポートを提供する`CDocument`API 全体をカプセル化しないが、します。 詳細については、次を参照してください。 [MFC での MAPI サポート](../mfc/mapi-support-in-mfc.md)します。
+この記事では、クライアントメッセージアプリケーション開発者向けの Microsoft Messaging Application Programming Interface (MAPI) について説明します。 MFC は、クラスの MAPI のサブセットをサポートしてい `CDocument` ますが、API 全体をカプセル化していません。 詳細については、「 [MFC での MAPI サポート](mapi-support-in-mfc.md)」を参照してください。
 
-MAPI は、一連のメールが有効なメール対応のアプリケーションを作成、操作、転送、およびメール メッセージの格納に使用する関数です。 メール メッセージの内容と目的を定義するためのツールを使用するには、アプリケーション開発者と、保存したメール メッセージの管理の柔軟性を提供します。 MAPI には、アプリケーション開発者は、メールが有効な作成に使用できる共通のインターフェイスと基になるメッセージング システムの独立したメールに対応するアプリケーションも用意されています。
+MAPI は、メールを有効にし、メールを認識するアプリケーションが、メールメッセージの作成、操作、転送、および保存に使用する一連の機能です。 これにより、アプリケーション開発者はメールメッセージの目的と内容を定義するツールを使用できるようになり、保存されたメールメッセージを柔軟に管理できるようになります。 また、MAPI には、アプリケーション開発者が、基になるメッセージングシステムとは独立して、メール対応アプリケーションとメール対応アプリケーションを作成するために使用できる共通インターフェイスも用意されています。
 
-メッセージング クライアントは、Microsoft Windows メッセージング システム (WMS) との対話のヒューマン インターフェイスを提供します。 この操作には、通常、メッセージ ストアとアドレス帳などの MAPI 互換のプロバイダーからのサービスを要求が含まれます。
+メッセージングクライアントは、Microsoft Windows Messaging System (WMS) と対話するためのユーザーインターフェイスを提供します。 通常、この相互作用には、メッセージストアやアドレス帳などの MAPI 準拠プロバイダーからのサービスの要求が含まれます。
 
-MAPI の詳細については、Windows SDK のガイドで Win32 MAPI (Messaging) 中の記事を参照してください。
+MAPI の詳細については、Windows SDK の「Win32 Messaging (MAPI) のガイド」の記事を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[MAPI サポート (MFC で)](../mfc/mapi-support-in-mfc.md)
+[MAPI サポート (MFC)](mapi-support-in-mfc.md)
 
 ## <a name="see-also"></a>関連項目
 
-[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
-[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
-[COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+[CDocument:: OnFileSendMail](reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument:: OnUpdateFileSendMail](reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[COleDocument:: OnFileSendMail](reference/coledocument-class.md#onfilesendmail)

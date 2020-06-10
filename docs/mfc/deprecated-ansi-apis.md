@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153555"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616995"
 ---
 # <a name="deprecated-ansi-apis"></a>非推奨の ANSI API
 
-Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行中です。 その結果、一部の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。
+MFC (Microsoft Foundation Class) ライブラリは、Unicode 文字セットに基づくクラスおよびメソッドに移行しています。 そのため、いくつかの MFC メソッドの ANSI バージョンは非推奨とされます。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用します。
 
-Windows vista が出荷される Windows コモン コントロール バージョン 6.1 以降で、次の ANSI メソッドは非推奨します。
+Windows Vista に付属している Windows コモンコントロールバージョン6.1 以降では、次の ANSI メソッドは非推奨とされます。
 
 ## <a name="cbutton-class"></a>CButton クラス
 
@@ -152,4 +152,4 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ## <a name="see-also"></a>関連項目
 
-[Windows Vista コモン コントロールの作成要件](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Windows Vista コモン コントロールの作成要件](build-requirements-for-windows-vista-common-controls.md)

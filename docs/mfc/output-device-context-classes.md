@@ -11,60 +11,60 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15f5034604f9d6b67574288140b79b144692478
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615359"
 ---
 # <a name="output-device-context-classes"></a>出力 (デバイス コンテキスト) クラス
 
-これらのクラスには、Windows で使用可能なデバイス コンテキストのさまざまな種類がカプセル化します。
+これらのクラスは、Windows で使用可能なさまざまな種類のデバイスコンテキストをカプセル化します。
 
-次のクラスのほとんどは、Windows デバイス コンテキストを識別するハンドルをカプセル化します。 デバイス コンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows オブジェクトです。 すべての描画呼び出しは、デバイス コンテキスト オブジェクトを介して行われます。 その他のクラスから派生した`CDC`Windows メタファイルのサポートなど、特殊化されたデバイス コンテキストの機能をカプセル化します。
+次のクラスのほとんどは、Windows デバイスコンテキストへのハンドルをカプセル化しています。 デバイスコンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を格納する Windows オブジェクトです。 すべての描画呼び出しは、デバイスコンテキストオブジェクトを使用して行われます。 から派生したその他のクラス `CDC` は、Windows メタファイルのサポートなど、特殊なデバイスコンテキスト機能をカプセル化します。
 
-[CDC](../mfc/reference/cdc-class.md)<br/>
-デバイス コンテキストの基本クラスです。 画面全体にアクセスするためには、直接、プリンターなどのディスプレイ コンテキストにアクセスするために使用されます。
+[CDC](reference/cdc-class.md)<br/>
+デバイスコンテキストの基本クラス。 ディスプレイ全体にアクセスしたり、プリンターなどの非表示コンテキストにアクセスしたりするために直接使用されます。
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
-使用されるディスプレイ コンテキスト`OnPaint`windows のメンバー関数。 自動的に呼び出します`BeginPaint`コンス トラクターでと`EndPaint`消滅します。
+[CPaintDC](reference/cpaintdc-class.md)<br/>
+Windows のメンバー関数で使用される表示コンテキスト `OnPaint` 。 `BeginPaint`構築時および破棄時に自動的にを呼び出し `EndPaint` ます。
 
-[CClientDC](../mfc/reference/cclientdc-class.md)<br/>
-Windows のクライアント領域のディスプレイ コンテキスト。 マウス イベントをすぐに応答を描画するときに使用など。
+[CClientDC](reference/cclientdc-class.md)<br/>
+Windows のクライアント領域の表示コンテキスト。 たとえば、マウスイベントに対してすぐに応答を描画するために使用されます。
 
-[CWindowDC](../mfc/reference/cwindowdc-class.md)<br/>
-クライアントと非クライアント領域を含む、全体の windows のディスプレイ コンテキスト。
+[CWindowDC](reference/cwindowdc-class.md)<br/>
+クライアント領域と非クライアント領域の両方を含む、ウィンドウ全体の表示コンテキスト。
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)<br/>
-Windows メタファイル デバイス コンテキスト。 Windows メタファイルには、イメージを作成するために再生できますグラフィック デバイス インターフェイス (GDI) コマンドのシーケンスが含まれています。 メンバー関数への呼び出しを`CMetaFileDC`メタファイルに記録されます。
+[CMetaFileDC](reference/cmetafiledc-class.md)<br/>
+Windows メタファイルのデバイスコンテキスト。 Windows メタファイルには、イメージを作成するために再生できるグラフィックスデバイスインターフェイス (GDI) コマンドのシーケンスが含まれています。 のメンバー関数に対して行わ `CMetaFileDC` れる呼び出しは、メタファイルに記録されます。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
 [CPoint](../atl-mfc-shared/reference/cpoint-class.md)<br/>
-(X, y) 座標ペアの保持されます。
+座標 (x, y) ペアを保持します。
 
 [CSize](../atl-mfc-shared/reference/csize-class.md)<br/>
-距離、相対位置、または値のペアを保持します。
+距離、相対位置、またはペアの値を保持します。
 
 [CRect](../atl-mfc-shared/reference/crect-class.md)<br/>
-四角形領域の座標を保持します。
+四角形の領域の座標を保持します。
 
-[CRgn](../mfc/reference/crgn-class.md)<br/>
-ウィンドウ内の楕円、多角形、または不定期的な領域を操作するための GDI 領域をカプセル化します。 クラスのクリッピングのメンバー関数と組み合わせて使用`CDC`します。
+[CRgn](reference/crgn-class.md)<br/>
+ウィンドウ内で楕円、多角形、または不規則な領域を操作するための GDI 領域をカプセル化します。 クラスのクリッピングメンバー関数と組み合わせて使用され `CDC` ます。
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-表示し、サイズ変更および四角形のオブジェクトを移動するためのユーザー インターフェイスを処理します。
+[CRectTracker](reference/crecttracker-class.md)<br/>
+四角形オブジェクトのサイズ変更と移動を行うためのユーザーインターフェイスを表示して処理します。
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
-色を選択するためには、標準のダイアログ ボックスを提供します。
+[CColorDialog](reference/ccolordialog-class.md)<br/>
+色を選択するための標準のダイアログボックスを提供します。
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
-フォントを選択するためには、標準のダイアログ ボックスを提供します。
+[CFontDialog](reference/cfontdialog-class.md)<br/>
+フォントを選択するための標準のダイアログボックスを提供します。
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
-ファイルの印刷には、標準のダイアログ ボックスを提供します。
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
+には、ファイルを印刷するための標準のダイアログボックスが用意されています。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../mfc/class-library-overview.md)
+[クラスの概要](class-library-overview.md)

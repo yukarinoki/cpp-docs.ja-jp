@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620510"
 ---
 # <a name="creating-your-dialog-class"></a>ダイアログ クラスの作成
 
@@ -23,7 +23,7 @@ ms.locfileid: "71685652"
 
 .H ファイルで、次のようにします。
 
-- ダイアログクラスのクラス宣言。 クラスは、 [CDialog](../mfc/reference/cdialog-class.md)から派生します。
+- ダイアログクラスのクラス宣言。 クラスは、 [CDialog](reference/cdialog-class.md)から派生します。
 
 .Cpp ファイルで、次のようにします。
 
@@ -31,9 +31,9 @@ ms.locfileid: "71685652"
 
 - ダイアログボックスの標準コンストラクター。
 
-- [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)メンバー関数のオーバーライド。 この関数を編集します。 ダイアログデータエクスチェンジおよび検証機能に使用されます。詳細については、「[ダイアログデータエクスチェンジと検証](../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
+- [DoDataExchange](reference/cwnd-class.md#dodataexchange)メンバー関数のオーバーライド。 この関数を編集します。 ダイアログデータエクスチェンジおよび検証機能に使用されます。詳細については、「[ダイアログデータエクスチェンジと検証](dialog-data-exchange-and-validation.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[コード ウィザードによるダイアログ クラスの作成](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)
+[コードウィザードを使用したダイアログクラスの作成](creating-a-dialog-class-with-code-wizards.md)<br/>
+[MFC でのダイアログ ボックスの操作](life-cycle-of-a-dialog-box.md)

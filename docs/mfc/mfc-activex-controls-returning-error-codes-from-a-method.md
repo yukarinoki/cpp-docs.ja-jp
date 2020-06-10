@@ -10,28 +10,28 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7564d750b476ac3f57656f3392e0801652e5d5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615518"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX コントロール : メソッドからのエラー コードのリターン
 
-この資料では、ActiveX コントロール メソッドからエラー コードを返す方法について説明します。
+この記事では、ActiveX コントロールメソッドからエラーコードを返す方法について説明します。
 
-メソッド内でエラーが発生したことを示すには、パラメーターとして SCODE (状態コード) を受け取る[COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)メンバー関数を使用する必要があります。 事前定義された SCODE を使用することも、独自の SCODE を定義することもできます。
+メソッド内でエラーが発生したことを示すには、パラメーターとして SCODE (状態コード) を受け取る、 [COleControl:: ThrowError](reference/colecontrol-class.md#throwerror)メンバー関数を使用する必要があります。 定義済みの SCODE を使用することも、独自の SCODE を定義することもできます。
 
 > [!NOTE]
-> `ThrowError`プロパティの Get 関数または Set 関数またはオートメーション メソッド内からエラーを返す手段としてのみ使用されます。 これらは、スタック上に適切な例外ハンドラーが存在する唯一の時間です。
+> `ThrowError`は、プロパティの Get または Set 関数またはオートメーションメソッド内からエラーを返す手段としてのみ使用されることを意図しています。 これらは、適切な例外ハンドラーがスタックに存在する唯一の時間です。
 
-ヘルパー関数は[、COleControl::SetNotSupported、COleControl::GetNotSupported、](../mfc/reference/colecontrol-class.md#setnotsupported)[および COleControl::SetNot許可](../mfc/reference/colecontrol-class.md#setnotpermitted)されたなどの最も一般的な定義済みの SCODEs に対して存在します。 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)
+このヘルパー関数は、最も一般的な定義済みの SCODEs (例: [colecontrol:: SetNotSupported](reference/colecontrol-class.md#setnotsupported)、 [Colecontrol:: GetNotSupported](reference/colecontrol-class.md#getnotsupported)、および[colecontrol:: setnotpermitted](reference/colecontrol-class.md#setnotpermitted)) に対して存在します。
 
-定義済みの SCOD の一覧とカスタム SCOD の定義手順については[、「ActiveX コントロールでの ActiveX コントロールのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md): 詳細トピック」を参照してください。
+定義済みの SCODEs の一覧およびカスタム SCODEs を定義する手順については、「ActiveX コントロールでの[エラーの処理](mfc-activex-controls-advanced-topics.md): 高度なトピック」を参照してください。
 
-コードの他の領域での例外の報告の詳細については[、「COleControl::FireError」](../mfc/reference/colecontrol-class.md#fireerror)と「ActiveX コントロールの[ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md): 詳細トピック」を参照してください。
+コードの他の領域の例外を報告する方法の詳細については、「 [COleControl:: 焼討 error](reference/colecontrol-class.md#fireerror) 」と「activex コントロールの[activex コントロールでのエラー処理](mfc-activex-controls-advanced-topics.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
+[MFC ActiveX コントロール](mfc-activex-controls.md)

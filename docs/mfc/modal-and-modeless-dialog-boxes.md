@@ -7,16 +7,16 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685177"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622205"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>モーダルとモードレスのダイアログ ボックス
 
-クラス[CDialog](../mfc/reference/cdialog-class.md)を使用すると、次の2種類のダイアログボックスを管理できます。
+クラス[CDialog](reference/cdialog-class.md)を使用すると、次の2種類のダイアログボックスを管理できます。
 
 - *モーダルダイアログボックス*。プログラムを続行する前にユーザーが応答する必要があります。
 
@@ -32,9 +32,9 @@ ms.locfileid: "71685177"
 
 1. ダイアログクラスの[メッセージハンドラーにダイアログリソースのコントロールを](../windows/adding-event-handlers-for-dialog-box-controls.md)接続します。
 
-1. ダイアログボックスのコントロールに関連付けられているデータメンバーを追加し、コントロールの[ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)と[ダイアログデータ検証](../mfc/dialog-data-validation.md)を指定します。
+1. ダイアログボックスのコントロールに関連付けられているデータメンバーを追加し、コントロールの[ダイアログデータエクスチェンジ](dialog-data-exchange.md)と[ダイアログデータ検証](dialog-data-validation.md)を指定します。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)
+[ダイアログボックス](dialog-boxes.md)<br/>
+[MFC でのダイアログ ボックスの操作](life-cycle-of-a-dialog-box.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58546d26293ad48a39a36b98ba4bfdabb68385ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622694"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance メンバー関数
 
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)クラスのメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)アプリケーションのコピーを終了すると、通常、ユーザーがアプリケーションの終了結果として毎回と呼びます。
+クラス[CWinApp](reference/cwinapp-class.md)の[exitinstance](reference/cwinapp-class.md#exitinstance)メンバー関数は、アプリケーションのコピーが終了するたびに呼び出されます。通常は、ユーザーがアプリケーションを終了した結果として呼び出されます。
 
-オーバーライド`ExitInstance`グラフィックス デバイス インターフェイス (GDI) のリソースを解放することや、プログラムの実行中に使用されるメモリの割り当てを解除などの特別なクリーンアップ処理を必要があるかどうか。 ただし、ドキュメント、ビューなどの標準的なアイテムのクリーンアップは、これらのオブジェクトに固有のクリーンアップを行うためのオーバーライド可能な他の関数と、フレームワークによって提供されます。
+`ExitInstance`グラフィックスデバイスインターフェイス (GDI) リソースの解放やプログラムの実行中に使用されるメモリの割り当て解除など、特別なクリーンアップ処理が必要な場合は、をオーバーライドします。 ただし、ドキュメントやビューなどの標準アイテムのクリーンアップは、フレームワークによって提供され、これらのオブジェクトに固有の特別なクリーンアップを実行するための他のオーバーライド可能な関数が用意されています。
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)

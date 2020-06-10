@@ -1,43 +1,43 @@
 ---
-title: OLE の背景知識:Implementation Strategies
+title: 'OLE の背景知識 : 実装の方法'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90517f9b37872dd7de0ce1a2d08da94c93e6f8f8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619895"
 ---
-# <a name="ole-background-implementation-strategies"></a>OLE の背景知識:Implementation Strategies
+# <a name="ole-background-implementation-strategies"></a>OLE の背景知識 : 実装の方法
 
-アプリケーションによっては、OLE サポートを追加するための 4 つの考えられる実装戦略があります。
+アプリケーションによっては、OLE サポートを追加するための実装方法として、次の4つが考えられます。
 
-- 新しいアプリケーションを作成しています。
+- 新しいアプリケーションを作成しようとしています。
 
-   このような状況は、少なくとも通常必要があります。 作業します。 MFC アプリケーション ウィザードを実行し、スケルトン アプリケーションを作成する高度な機能または複合ドキュメント サポートを選択します。 これらのオプションとその実行内容については、この記事を参照してください。 [MFC EXE プログラムを作成する](../mfc/reference/mfc-application-wizard.md)します。
+   この状況では、通常、最小限の作業が必要です。 MFC アプリケーションウィザードを実行し、[高度な機能] または [複合ドキュメントのサポート] を選択してスケルトンアプリケーションを作成します。 これらのオプションとその機能の詳細については、 [MFC EXE プログラムの作成](reference/mfc-application-wizard.md)に関する記事を参照してください。
 
-- OLE をサポートしていない Microsoft Foundation Class ライブラリ version 2.0 以降で記述されたプログラムがあります。
+- OLE をサポートしていない Microsoft Foundation Class ライブラリバージョン2.0 以降のプログラムが記述されています。
 
-   既に触れましたが、MFC アプリケーション ウィザードを使用して新しいアプリケーションを作成し、コピーして、既存のアプリケーションに新しいアプリケーションのコードを貼り付けます。 これは、サーバー、コンテナー、または自動化されたアプリケーションの動作します。 MFC を参照してください。 [SCRIBBLE](../overview/visual-cpp-samples.md)サンプルをこの方法の例です。
+   前述のように、MFC アプリケーションウィザードを使用して新しいアプリケーションを作成し、新しいアプリケーションから既存のアプリケーションにコードをコピーして貼り付けます。 これは、サーバー、コンテナー、または自動アプリケーションに対して機能します。 この戦略の例については、「MFC [SCRIBBLE](../overview/visual-cpp-samples.md)サンプル」を参照してください。
 
-- OLE バージョン 1.0 のサポートを実装している Microsoft Foundation Class ライブラリ プログラムがあります。
+- OLE バージョン1.0 サポートを実装する Microsoft Foundation Class ライブラリプログラムがあります。
 
-   参照してください[MFC テクニカル ノート 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)この変換方法。
+   この変換方法については、「 [MFC テクニカルノート 41](tn041-mfc-ole1-migration-to-mfc-ole-2.md) 」を参照してください。
 
-- Microsoft Foundation クラスを使用して書き込んだではありませんし、可能性がありますまたは OLE サポート実装されていませんが、アプリケーションがあります。
+- Microsoft Foundation Classes を使用して記述されていないアプリケーションがあり、OLE サポートが実装されているか、実装されていない可能性があります。
 
-   このような状況では、最も多くの作業が必要です。 1 つの方法が、最初の方法では、ように、新しいアプリケーションを作成し、コピーして、既存のコードを貼り付けます。 既存のコードは C で記述され場合、は、C++ コードとしてコンパイルできるように変更する必要があります。 C のコードには、Windows API を呼び出す場合は、Microsoft Foundation classes を使用するように変更する必要はありません。 多くの場合は、バージョン 2.0 以降、Microsoft Foundation Classes のによって使用されるドキュメント/ビュー アーキテクチャをサポートするために、プログラムのいくつかの制限が必要です。 このアーキテクチャの詳細については、次を参照してください。[テクニカル ノート 25](../mfc/tn025-document-view-and-frame-creation.md)します。
+   この状況では、ほとんどの作業が必要です。 1つ目の方法として、最初の方法と同じように新しいアプリケーションを作成し、既存のコードをコピーして貼り付けます。 既存のコードが C で記述されている場合は、C++ コードとしてコンパイルできるように、コードを変更する必要がある場合があります。 C コードで Windows API を呼び出す場合は、Microsoft Foundation クラスを使用するように変更する必要はありません。 この方法では、バージョン2.0 以上の Microsoft Foundation Classes によって使用されるドキュメント/ビューアーキテクチャをサポートするために、プログラムの再構築が必要になる可能性があります。 このアーキテクチャの詳細については、「[テクニカルノート 25](tn025-document-view-and-frame-creation.md)」を参照してください。
 
-読み取りが必要があります、戦略を決定した後、[コンテナー](../mfc/containers.md)または[サーバー](../mfc/servers.md) (作成中のアプリケーションの種類) に応じて記事やサンプル プログラム、またはその両方を確認します。 MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)コンテナーとサーバーのさまざまな側面をそれぞれ実装する方法について説明します。 これらの記事全体でさまざまな時点で説明している手法の例として、これらのサンプルで特定の関数に呼ばれます。
+戦略を決定したら、[コンテナー](containers.md)または[サーバー](servers.md)の記事 (記述するアプリケーションの種類によって異なります) を読むか、サンプルプログラムまたはその両方を確認する必要があります。 MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)および[HIERSVR](../overview/visual-cpp-samples.md)は、コンテナーとサーバーのさまざまな側面をそれぞれ実装する方法を示しています。 これらの記事のさまざまな点で、これらのサンプルの特定の機能が、説明されている手法の例として参照されます。
 
 ## <a name="see-also"></a>関連項目
 
-[OLE の背景知識](../mfc/ole-background.md)<br/>
-[コンテナー: コンテナーの実装](../mfc/containers-implementing-a-container.md)<br/>
-[サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
-[MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)
+[OLE の背景知識](ole-background.md)<br/>
+[コンテナー: コンテナーの実装](containers-implementing-a-container.md)<br/>
+[サーバー : サーバーの実装](servers-implementing-a-server.md)<br/>
+[MFC アプリケーションウィザード](reference/mfc-application-wizard.md)

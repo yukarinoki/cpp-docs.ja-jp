@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611953"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618722"
 ---
 # <a name="hierarchy-chart"></a>階層図
 
@@ -25,11 +25,11 @@ ms.locfileid: "65611953"
 
 次の図は、`CObject` から派生していない MFC クラスを表しています。
 
-![CObject から派生しないクラス](../mfc/media/mfc_hierarchy_chart3of3.png "CObject から派生しないクラス")
+![CObject から派生していないクラス](../mfc/media/mfc_hierarchy_chart3of3.png "CObject から派生していないクラス")
 
-完全なグラフは、次の場所からダウンロードできます。[MFC 階層グラフ ダウンロード](https://aka.ms/hxgg8e)します。
+完全なグラフは、次の場所からダウンロードできます。 [MFC 階層グラフをダウンロード](https://aka.ms/hxgg8e)します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図カテゴリ](../mfc/hierarchy-chart-categories.md)<br/>
-[クラスの概要](../mfc/class-library-overview.md)
+[階層図のカテゴリ](hierarchy-chart-categories.md)<br/>
+[クラスの概要](class-library-overview.md)
