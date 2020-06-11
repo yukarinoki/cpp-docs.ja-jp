@@ -1,0 +1,185 @@
+### YamlMime:Hub
+title: Microsoft C++、C、およびアセンブラーのドキュメント
+summary: C++、C、およびアセンブリ言語を使用して、お使いのプラットフォームやデバイス用のアプリケーション、サービス、ツールを開発する方法について説明します。
+brand: visual-studio
+metadata:
+  title: Microsoft C/C++ ドキュメント
+  description: C++ を使って、プラットフォームやデバイス用のアプリケーション、サービス、ツールを開発する方法について説明します。
+  ms.prod: visual-cpp
+  ms.topic: hub-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 06/04/2020
+  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507843"
+highlightedContent:
+  items:
+  - title: Visual Studio のインストールと、C++ のワークロードの選択
+    itemType: download
+    url: build/vscpp-step-0-installation.md
+  - title: Visual Studio での C++ へようこそ
+    itemType: overview
+    url: overview/visual-cpp-in-visual-studio.md
+  - title: Visual Studio と C++ の作業を開始する
+    itemType: get-started
+    url: get-started/tutorial-console-cpp.md
+  - title: Visual Studio での C++ の新機能
+    itemType: whats-new
+    url: overview/what-s-new-for-visual-cpp-in-visual-studio.md
+conceptualContent:
+  title: C++ および C の作業を開始する
+  items:
+  - title: Visual Studio IDE の使用方法を学習する
+    links:
+    - text: Visual Studio のガイド ツアーを開始する
+      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      itemType: overview
+    - text: リポジトリからコードを開く
+      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      itemType: tutorial
+    - text: コードを作成して編集する
+      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      itemType: tutorial
+    - text: コードをビルドする
+      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      itemType: tutorial
+    - text: コードをデバッグする
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+    - text: コードをテストする
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+  - title: Visual Studio で C++ および C アプリを作成する
+    links:
+    - text: コンソール アプリを作成する
+      url: get-started/tutorial-console-cpp.md
+      itemType: tutorial
+    - text: Win32 を使用して Windows デスクトップ アプリを作成する
+      url: windows/walkthrough-creating-windows-desktop-applications-cpp.md
+      itemType: tutorial
+    - text: MFC を使用して Windows デスクトップ アプリを作成する
+      url: mfc/reference/creating-an-mfc-application.md
+      itemType: tutorial
+    - text: Windows DLL を作成する
+      url: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+      itemType: tutorial
+    - text: スタティック ライブラリを作成する
+      url: build/walkthrough-creating-and-using-a-static-library-cpp.md
+      itemType: tutorial
+    - text: .NET コンポーネントを作成する
+      url: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+      itemType: tutorial
+    - text: ユニバーサル Windows プラットフォームのアプリを作成する
+      url: /windows/uwp/cpp-and-winrt-apis/get-started
+      itemType: tutorial
+  - title: コマンド ライン ツールを使用する
+    links:
+    - text: C++ コードのコンパイル
+      url: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C コードのコンパイル
+      url: build/walkthrough-compile-a-c-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C++/CX のコンパイル
+      url: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C++/CLI のコンパイル
+      url: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+      itemType: tutorial
+  - title: Visual Studio Code で C++ および C を使用する
+    links:
+    - text: Visual Studio Code の作業を開始する
+      url: https://code.visualstudio.com/docs
+      itemType: tutorial
+    - text: Microsoft C/C++ 拡張機能をインストールする
+      url: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+      itemType: tutorial
+    - text: Windows での Microsoft C/C++ の使用
+      url: https://code.visualstudio.com/docs/cpp/config-msvc
+      itemType: tutorial
+    - text: Linux 用 Windows サブシステムでの C++ の使用
+      url: https://code.visualstudio.com/docs/cpp/config-wsl
+      itemType: tutorial
+    - text: Linux での C++ の使用
+      url: https://code.visualstudio.com/docs/cpp/config-linux
+      itemType: tutorial
+    - text: MacOS での C++ の使用
+      url: https://code.visualstudio.com/docs/cpp/config-clang-mac
+      itemType: tutorial
+tools:
+  title: 言語とフレームワーク
+  items:
+  - title: C++
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cpp/index.yml
+  - title: C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_C.svg
+    url: c-language/index.yml
+  - title: Microsoft アセンブラー
+    imageSrc: media/index/logo-asm.svg
+    url: intrinsics/index.yml
+  - title: Windows ランタイム用 C++/CX
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cppcx/visual-c-language-reference-c-cx.md
+  - title: .NET 用 C++/CLI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+  - title: Active Template Library (ATL)
+    imageSrc: media/index/logo-atl.svg
+    url: atl/atl-com-desktop-components.md
+  - title: Microsoft Foundation Classes (MFC)
+    imageSrc: media/index/logo-mfc.svg
+    url: mfc/mfc-desktop-applications.md
+  - title: Windows ランタイム用 C++/WinRT
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: /windows/uwp/cpp-and-winrt-apis/
+additionalContent:
+  sections:
+  - title: C++ および C のワークロード、機能、およびライブラリ
+    summary: Visual Studio ツールを使用して、選択したプラットフォーム向けに開発を行います。
+    items:
+    - title: 作業負荷
+      links:
+      - text: ユニバーサル Windows プラットフォーム開発
+        url: cppcx/universal-windows-apps-cpp.md
+      - text: Windows デスクトップ開発
+        url: windows/windows-desktop-applications-cpp.md
+      - text: Linux 開発
+        url: linux/index.yml
+      - text: モバイル開発
+        url: cross-platform/index.yml
+      - text: ゲーム開発
+        url: /windows/uwp/gaming/e2e/
+    - title: フィーチャー
+      links:
+      - text: コードの編集とリファクタリング
+        url: ide/writing-and-refactoring-code-cpp.md
+      - text: コード プロジェクトのビルド
+        url: build/projects-and-build-systems-cpp.md
+      - text: コードをデバッグする
+        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+      - text: コードの分析
+        url: code-quality/index.yml
+      - text: アプリのパフォーマンス向上
+        url: https://docs.microsoft.com/visualstudio/profiling
+      - text: コードの移植およびアップグレード
+        url: porting/visual-cpp-porting-and-upgrading-guide.md
+    - title: ライブラリ
+      links:
+      - text: C++ 標準ライブラリ リファレンス
+        url: standard-library/cpp-standard-library-reference.md
+      - text: C ランタイム ライブラリ リファレンス
+        url: c-runtime-library/c-run-time-library-reference.md
+      - text: MFC および ATL Windows デスクトップ ライブラリ
+        url: mfc/mfc-and-atl.md
+      - text: 並列プログラミング ライブラリ
+        url: parallel/parallel-programming-in-visual-cpp.md
+      - text: クラウドおよびネットワーク ライブラリ
+        url: cloud/cloud-and-web-programming-in-visual-cpp.md
+      - text: ユニバーサル Windows プラットフォーム ライブラリ
+        url: cppcx/namespaces-reference-c-cx.md
+  footer: '[ブログ](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [問題の報告](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html) - C++ ドキュメントへの投稿:[共同作成者ガイド](https://docs.microsoft.com/contribute/)をお読みください。'
