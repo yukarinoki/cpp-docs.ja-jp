@@ -1,0 +1,91 @@
+### YamlMime:Landing
+title: コンパイラの組み込みとアセンブリ言語
+summary: 最大限のパフォーマンスと制御を実現するために、Visual Studio で低レベルのプロセッサ固有のコードを作成する方法について説明します。
+metadata:
+  title: コンパイラの組み込みとアセンブリ言語
+  description: Visual Studio には、低レベルのプログラミング タスク用にアセンブラーとコンパイラの組み込みが含まれています。
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: f50d2541bd9fd7ca0071cc6ff76397b3dd240843
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507823"
+landingContent:
+- title: コンパイラの組み込みを使用する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: コンパイラの組み込みの概要
+      url: ../intrinsics/compiler-intrinsics.md
+  - linkListType: reference
+    links:
+    - text: ARM 組み込み
+      url: ../intrinsics/arm-intrinsics.md
+    - text: ARM64 組み込み
+      url: ../intrinsics/arm64-intrinsics.md
+    - text: x86 組み込み一覧
+      url: ../intrinsics/x86-intrinsics-list.md
+    - text: x64 (amd64) 組み込み一覧
+      url: ../intrinsics/x64-amd64-intrinsics-list.md
+    - text: すべてのアーキテクチャで使用可能な組み込みクラス
+      url: ../intrinsics/intrinsics-available-on-all-architectures.md
+    - text: 組み込みの一覧 (アルファベット順)
+      url: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
+- title: Microsoft C/C++ で x86 用インライン アセンブリを使用する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: インライン アセンブラーの概要
+      url: ../assembler/inline/inline-assembler-overview.md
+  - linkListType: concept
+    links:
+    - text: __asm キーワード
+      url: ../assembler/inline/asm.md
+  - linkListType: how-to-guide
+    links:
+    - text: __asm ブロックでのアセンブリ言語の使用
+      url: ../assembler/inline/using-assembly-language-in-asm-blocks.md
+    - text: __asm ブロックでの C または C++ の使用
+      url: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
+    - text: レジスタの使用および保持
+      url: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
+    - text: インライン アセンブリでの C++ 関数の呼び出し
+      url: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
+    - text: インライン アセンブリの最適化
+      url: ../assembler/inline/optimizing-inline-assembly.md
+- title: ARM および ARM64 アセンブラーの使用
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ARM および ARM64 アセンブラーのリファレンス
+      url: ../assembler/arm/arm-assembler-reference.md
+    - text: ARM および ARM64 アセンブラーのコマンド ライン リファレンス
+      url: ../assembler/arm/arm-assembler-command-line-reference.md
+    - text: ARM および ARM64 アセンブラーの診断メッセージ
+      url: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - text: ARM および ARM64 アセンブラーのディレクティブ
+      url: ../assembler/arm/arm-assembler-directives.md
+- title: x86 および x64 アセンブラーの使用
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: x86 および x64 用 Microsoft Macro Assembler のリファレンス
+      url: ../assembler/masm/microsoft-macro-assembler-reference.md
+    - text: x64 用 MASM (ml64.exe)
+      url: ../assembler/masm/masm-for-x64-ml64-exe.md
+    - text: ML および ML64 のコマンド ライン リファレンス
+      url: ../assembler/masm/ml-and-ml64-command-line-reference.md
+    - text: ディレクティブ リファレンス
+      url: ../assembler/masm/directives-reference.md
+    - text: シンボル リファレンス
+      url: ../assembler/masm/symbols-reference.md
+    - text: 演算子リファレンス
+      url: ../assembler/masm/operators-reference.md
+    - text: MASM BNF 文法
+      url: ../assembler/masm/masm-bnf-grammar.md
+    - text: ML および ML64 のエラー メッセージ
+      url: ../assembler/masm/ml-error-messages.md
+    - text: プロセッサの製造元のプログラミング マニュアル
+      url: ../assembler/masm/processor-manufacturer-programming-manuals.md
