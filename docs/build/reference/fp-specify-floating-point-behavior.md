@@ -24,7 +24,7 @@ ms.locfileid: "80150788"
 
 ## <a name="syntax"></a>構文
 
-> **/fp:** [**precise** | **strict** | **fast** | [ **except** [-]]]
+> **/fp:** [**precise** | **strict** | **fast** | **except**[-]]
 
 ### <a name="arguments"></a>引数
 
