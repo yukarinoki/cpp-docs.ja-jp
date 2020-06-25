@@ -1,6 +1,6 @@
 ---
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
-ms.date: 11/04/2016
+ms.date: 06/23/2020
 api_name:
 - __swprintf_l
 - sprintf
@@ -49,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958291"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334947"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
-文字列に書式付きデータを書き込みます。 これらの関数のセキュリティを強化したバージョンについては、「[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)」をご覧ください。 **Swprintf**と**swprintf_l**のセキュリティで保護されたバージョンは、 *count*パラメーターを受け取りません。
+文字列に書式付きデータを書き込みます。 これらの関数のセキュリティを強化したバージョンについては、「[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)」をご覧ください。 **Swprintf**と **_swprintf_l**のセキュリティで保護されたバージョンは、バッファーのサイズをパラメーターとして受け取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -110,7 +110,7 @@ int _sprintf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 出力の格納場所。
 
 *count*<br/>
@@ -125,7 +125,7 @@ int _sprintf_l(
 *locale*<br/>
 使用するロケール。
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
 ## <a name="return-value"></a>戻り値
 
@@ -133,34 +133,34 @@ int _sprintf_l(
 
 **sprintf**は、*バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 **Sprintf**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> **Sprintf**を使用すると、書き込まれる文字数を制限することはできません。これは、 **sprintf**を使用するコードがバッファーオーバーランの影響を受ける可能性があることを意味します。 *Buffer*に書き込む最大文字数を指定する、関連する関数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)を使用することを検討してください。または、バッファーが必要なサイズを決定するために[scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)を使用します。 また、*形式*がユーザー定義の文字列ではないことを確認します。
+> **Sprintf**を使用すると、書き込まれる文字数を制限することはできません。これは、 **sprintf**を使用するコードがバッファーオーバーランの影響を受ける可能性があることを意味します。 関連する関数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)を使用することを検討してください。これは、*バッファー*に書き込む最大文字数を指定するか、 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)を使用してバッファーのサイズを決定します。 また、*形式*がユーザー定義の文字列ではないことを確認します。
 
-**swprintf**は、 **sprintf**のワイド文字バージョンです。**swprintf**へのポインター引数はワイド文字列です。 **Swprintf**でのエンコードエラーの検出は、 **sprintf**の場合とは異なる場合があります。 **swprintf**と**fwprintf**は同じように動作しますが、 **Swprintf**は出力を型**ファイル**の出力先ではなく文字列に書き込みます。 **swprintf**では、 *count*パラメーターで最大数を指定する必要があります。書き込まれる文字の。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**swprintf**は、 **sprintf**のワイド文字バージョンです。**swprintf**へのポインター引数はワイド文字列です。 **Swprintf**でのエンコードエラーの検出は、 **sprintf**とは異なる場合があります。 **swprintf**と**fwprintf**は同じように動作します。ただし、 **swprintf**は型**ファイル**の出力先ではなく文字列に出力します。 **swprintf**では、書き込む最大文字数を指定するために*count*パラメーターが必要です。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-**swprintf**は ISO C 規格に準拠しています。これには、 **size_t**型の2番目のパラメーター *count*が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS**を定義します。 この古い動作は、将来的には削除される可能性があるので、規格に準拠した新しい動作を使用するようにコードを変更する必要があります。
+**swprintf**は ISO C 規格に準拠しています。これには**size_t**型の2番目のパラメーター *count*が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS**を定義します。 この古い動作は、将来的には削除される可能性があるので、規格に準拠した新しい動作を使用するようにコードを変更する必要があります。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
-|**stprintf_l (_d)**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
+|**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**sprintf**、 **_sprintf_l**|\<stdio.h>|
-|**swprintf**、 **swprintf_l**|\<stdio.h> または \<wchar.h>|
+|**swprintf**、 **_swprintf_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -230,4 +230,4 @@ wrote -1 characters
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>

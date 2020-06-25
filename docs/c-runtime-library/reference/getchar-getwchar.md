@@ -1,6 +1,6 @@
 ---
 title: getchar、getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920327"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334976"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>戻り値
 
-読み取られた文字を返します。 読み取りエラーまたはファイルの終端状態を示すために、 **getchar**は**EOF**を返し、 **getwchar**は**WEOF**を返します。 **Getchar**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。
+読み取られた文字を返します。 これらの関数は入力を待機し、入力が使用可能になるまで戻りません。
 
-## <a name="remarks"></a>解説
+読み取りエラーまたはファイルの終端状態を示すために、 **getchar**は**EOF**を返し、 **getwchar**は**WEOF**を返します。 **Getchar**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。
+
+## <a name="remarks"></a>注釈
 
 各ルーチンは、 **stdin**から1文字を読み取り、関連付けられているファイルポインターが次の文字を指すようにインクリメントします。 **getchar**は[_fgetchar](fgetc-fgetwc.md)と同じですが、関数およびマクロとして実装されます。
 
-これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)」をご覧ください。
+これらの関数は、呼び出し元のスレッドもロックし、スレッドセーフです。 ロックしないバージョンについては、「[_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)」をご覧ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -71,7 +73,7 @@ wint_t getwchar();
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> または \<wchar.h>|
