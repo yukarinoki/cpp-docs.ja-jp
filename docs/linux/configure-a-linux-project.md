@@ -1,13 +1,13 @@
 ---
 title: Visual Studio で C++ Linux プロジェクトを構成する
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623589"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269742"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトを構成する
 
@@ -78,7 +78,7 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 リモート システムのビルド時に、開発用 PC 上のソース ファイルは、Linux コンピューターにコピーされ、そこでコンパイルされます。 既定では、Visual Studio プロジェクトのすべてのソースは、上記の設定で指定された場所にコピーされます。 ただし、リストにさらにソースを追加するこもできます。あるいは、ソースのコピーを完全にオフ (メイクファイル プロジェクトではこれが既定) にすることもできます。
 
-- **[コピーするソース]** で、リモート コンピューターにコピーするソースが決定します。 既定では、 **\@(SourcesToCopyRemotely)** はプロジェクトのすべてのソース コード ファイルの規定値ですが、画像などの資産ファイルやリソースファイルは含まれません。
+- **[コピーするソース]** で、リモート コンピューターにコピーするソースが決定します。 既定では、 **\@(SourcesToCopyRemotely)** がプロジェクトのすべてのソース コード ファイルの既定値ですが、画像などの資産ファイルやリソースファイルは含まれません。
 
 - **[ソースのコピー]** をオンまたはオフにして、リモート コンピューターへのソース ファイルのコピーを有効または無効にすることができます。
 
@@ -122,6 +122,10 @@ sudo apt install zip
 ![リモート ログ記録](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a> Linux ターゲットのロケール
+
+Visual studio はインストールされているパッケージを管理または構成しないため、Visual Studio の言語設定は Linux ターゲットに反映されません。 ビルド エラーなどの **[出力]** ウィンドウに表示されるメッセージは、Linux ターゲットの言語とロケールを使用して表示されます。 目的のロケールに合わせて Linux ターゲットを構成する必要があります。
 
 ## <a name="see-also"></a>関連項目
 
