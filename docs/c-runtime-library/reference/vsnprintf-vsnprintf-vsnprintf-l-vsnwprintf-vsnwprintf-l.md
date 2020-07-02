@@ -1,6 +1,6 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
-ms.date: 11/04/2016
+ms.date: 06/24/2020
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737584"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -142,7 +142,7 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 出力の格納位置。
 
 *count*<br/>
@@ -157,31 +157,33 @@ int _vsnwprintf_l(
 *locale*<br/>
 使用するロケール。
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
 ## <a name="return-value"></a>戻り値
 
-**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定されたバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数になります。これは、 *count*が十分に大きい場合、null 文字をカウントしません。 戻り値が*count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
+**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定したバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数で、 *count*が十分に大きい場合は null 文字をカウントしません。 戻り値が*count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
 
-**_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。書き込む文字数が*count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
+**_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。 書き込む文字数が*count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
 
-これらすべての関数によって返される値には、書き込まれているかどうかを問わず、終端の null は含まれません。 *Count*が0の場合、返される値は、関数が書き込む文字の数です。終端の null は含まれません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
+これらのすべての関数によって返される値には、記述されているかどうかにかかわらず、終端の null は含まれません。
 
-*Format*が**null**の場合、または*buffer*が**null**で、 *count*が0以外の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+- *Count*が0で、 *buffer*が**NULL**の場合、返される値は、関数が書き込む文字数になります。 この値では、終端の**NULL**は考慮されません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
+- *Count*が0でも、 *buffer*が**NULL**でない場合は、何も書き込まれず、関数はを返し `-1` ます。
+- *Format*が**null**の場合、または*buffer*が**null**で、 *Count*が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
 これらの各関数は、引数リストへのポインターを受け取り、データを書式設定して、*バッファー*が指すメモリに最大文字*数*を書き込みます。 **Vsnprintf**関数は、出力を切り捨てる場合でも、常に null 終端文字を書き込みます。 **_Vsnprintf**と **_vsnwprintf**を使用する場合、バッファーは、末尾に余裕がある場合 (つまり、書き込む文字数が*カウント*未満の場合) にのみ null で終了します。
 
 > [!IMPORTANT]
-> 特定の種類のセキュリティリスクを回避するには、その*形式*がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> 特定の種類のセキュリティリスクを回避するには、*形式*がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
-> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*がバッファーの長さより厳密に小さく、バッファーを null に初期化してから、関数を呼び出します。
+> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*の値がバッファーの長さより厳密に小さく、関数を呼び出す前にバッファーを null に初期化します。
 >
 > **Vsnprintf**は常に終端の null を書き込むため、 *count*パラメーターはバッファーのサイズと同じにすることができます。
 
-Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf**は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。 **_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
+Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf**は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。**_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
 
 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
@@ -194,7 +196,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
@@ -203,7 +205,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、および **_vsnwprintf_l**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```C
 // crt_vsnwprintf.c
@@ -245,7 +247,7 @@ nSize: -1, buff: Hi there!
 
 代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *Count*パラメーターにはバッファーのサイズ全体を指定できます。戻り値は、 *count*が十分に大きい場合に書き込まれた文字数です。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```C
 // crt_vsnprintf.c
@@ -281,12 +283,12 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>
 [書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

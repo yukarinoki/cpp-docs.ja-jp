@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813551"
 ---
 # <a name="function-call-operator-"></a>関数呼び出し演算子: ()
 
-関数呼び出しはの一種で *`postfix-expression`* あり、関数を識別する式、および関数呼び出し演算子を指定する式によって形成され **`()`** ます。 オブジェクトは、 `operator ()` オブジェクトの関数呼び出しのセマンティクスを提供する関数を宣言できます。
+関数呼び出しはの一種であり *`postfix-expression`* 、関数または呼び出し可能オブジェクトに評価され、その後に関数呼び出し演算子が続く式によって形成され **`()`** ます。 オブジェクトは、 `operator ()` オブジェクトの関数呼び出しのセマンティクスを提供する関数を宣言できます。
 
 ## <a name="syntax"></a>構文
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>Remarks
 
 関数呼び出し演算子の引数は *`argument-expression-list`* 、式のコンマ区切りリストであるから取得されます。 これらの式の値は、引数として関数に渡されます。 *引数式リスト*は空にすることができます。 C++ 17 より前では、関数式と引数式の評価順序は指定されておらず、任意の順序で発生する可能性があります。 C++ 17 以降では、関数式は、引数式または既定の引数の前に評価されます。 引数の式は、不確定なシーケンスで評価されます。
 
-は、 *`postfix-expression`* 呼び出す関数を識別します。 関数アドレスに評価される必要があります。 次の形式のいずれかを使用できます。
+は、 *`postfix-expression`* 呼び出す関数に評価されます。 次の形式のいずれかを使用できます。
 
-- 関数または関数オブジェクトの名前またはポインター。
-- 関数または関数オブジェクトを参照する左辺値式。
-- 明示的または暗黙的なメンバー関数アクセサー。
+- 現在のスコープ内、または指定された関数引数のスコープ内で参照できる関数識別子。
+- 関数、関数ポインター、呼び出し可能オブジェクト、またはそのいずれかへの参照に評価される式。
+- メンバー関数アクセサー (明示的または黙示)
+- メンバー関数への逆参照されたポインター。
 
-によって指定された関数は、 *`postfix-expression`* オーバーロードされた関数である可能性があります。 オーバーロードの解決に関する通常の規則は、呼び出す実際の関数を決定します。
+は、 *`postfix-expression`* オーバーロードされた関数識別子でも、オーバーロードされたメンバー関数アクセサーでもかまいません。 オーバーロードの解決規則によって、呼び出す実際の関数が決まります。 メンバー関数が virtual の場合、呼び出す関数は実行時に決定されます。
 
 宣言の例を次に示します。
 

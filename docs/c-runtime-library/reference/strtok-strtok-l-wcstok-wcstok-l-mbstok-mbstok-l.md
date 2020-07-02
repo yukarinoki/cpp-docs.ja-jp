@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737517"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,13 +115,18 @@ unsigned char *_mbstok_l(
 *locale*<br/>
 使用するロケール。
 
+*context*<br/>
+パーサーの内部状態を格納するために使用されるメモリを指します。これにより、次に**wcstok**を呼び出すときに、パーサーは中断した場所から続行できます。
+
 ## <a name="return-value"></a>戻り値
 
 *StrToken*で見つかった次のトークンへのポインターを返します。 これらの関数は、トークンが見つからない場合は**NULL**を返します。 各呼び出しは、返されたトークンの後に出現する最初の区切り記号として null 文字を置換することで、 *strToken*を変更します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **Strtok**関数は、 *strToken*内の次のトークンを検索します。 *Strdelimit*の文字セットは、現在の呼び出しの*strToken*にあるトークンの有効な区切り記号を指定します。 **wcstok**と **_mbstok**は、 **strtok**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcstok**の引数と戻り値はワイド文字列です。これらの **_mbstok**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+
+**Wcstok**の2つの引数のバージョンは標準ではありません。 このバージョンを使用する必要がある場合は、 `_CRT_NON_CONFORMING_WCSTOK` (または) の前にを定義する必要があり `#include <wchar.h>` `#include <string.h>` ます。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -141,10 +151,11 @@ unsigned char *_mbstok_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> または \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**、 **_mbstok_l**|\<mbstring.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
@@ -198,7 +209,7 @@ tokens
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

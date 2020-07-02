@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813610"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++)
 
@@ -57,7 +57,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-153.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-153.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -83,7 +83,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-153.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-153.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -113,7 +113,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-150.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-150.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -389,7 +389,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    ```
 
    `HDC`コードはデバイスコンテキストを示すハンドルであり、ウィンドウのクライアント領域に描画するために使用されます。 `BeginPaint` `EndPaint` クライアント領域で描画を準備して完了するには、関数と関数を使用します。 `BeginPaint`クライアント領域に描画するために使用される表示デバイスコンテキストへのハンドルを返します。`EndPaint`描画要求を終了し、デバイスコンテキストを解放します。
-   
+
 1. 通常、アプリケーションは他の多くのメッセージを処理します。 たとえば、ウィンドウが最初に作成されたときに[WM_CREATE](/windows/win32/winmsg/wm-create) 、ウィンドウが閉じられたときに[WM_DESTROY](/windows/win32/winmsg/wm-destroy)ます。 単純でも完成した `WndProc` 関数のコードを次に示します。
 
    ```cpp
@@ -588,7 +588,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![DesktopApp プロジェクトを実行する](../build/media/desktop-app-project-run-157.PNG "DesktopApp プロジェクトを実行する")
 
-おめでとうございます! このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
+おめでとうございます。 このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
 
 ## <a name="see-also"></a>関連項目
 
