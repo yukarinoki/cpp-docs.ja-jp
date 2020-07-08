@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058621"
@@ -23,7 +24,7 @@ ms.locfileid: "86058621"
 
 > **`#line`***digit-sequence* ["*filename*"]
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 コンパイラは、行番号および省略可能なファイル名を使用して、コンパイル時に見つかったエラーを参照します。 通常、行番号は現在の入力行を参照し、ファイル名は現在の入力ファイルを参照します。 行番号は、各行が処理された後、インクリメントします。
 
