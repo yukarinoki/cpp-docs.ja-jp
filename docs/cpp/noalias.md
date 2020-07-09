@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377440"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127866"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
 **Microsoft 固有の仕様**
 
-**noalias**関数呼び出しの変更または表示されるグローバル状態の参照はないことを意味のみが指すメモリを変更し、*直接*ポインター パラメーター (第 1 レベルの間接指定)。
+**`noalias`** は、関数呼び出しが表示されているグローバル状態を変更または参照せず、ポインターパラメーターによって*直接*ポイントされているメモリのみを変更することを意味します (第1レベルの間接参照)。
 
-関数は、注釈が付けられている場合**noalias**オプティマイザーは、パラメーター自体に加えてポインター パラメーターのだけ最初のレベルの間接指定が参照または変更された関数内で想定できます。 表示されるグローバル状態は、コンパイルのスコープ外では、アドレスは取られません定義または参照されていないすべてのデータの設定です。 コンパイル スコープは、すべてのソース ファイル ([/LTCG (リンク時コード生成)](../build/reference/ltcg-link-time-code-generation.md)ビルド) または 1 つのソース ファイル (非 **/LTCG**ビルド)。
+関数にという注釈が付けられている場合 **`noalias`** 、オプティマイザーでは、パラメーター自体だけでは、ポインターパラメーターの最初のレベルの間接参照のみが関数内で参照または変更されると想定できます。
 
-**Noalias**注釈は、注釈付きの関数の本体でのみ適用されます。 関数としてマーク**内**関数によって返されるポインターのエイリアスには影響しません。
+注釈は、 **`noalias`** 注釈付き関数の本体内でのみ適用されます。 関数をとしてマークしても、 **`__declspec(noalias)`** 関数によって返されるポインターの別名には影響しません。
 
-エイリアスに影響するもう 1 つの注釈を参照してください。 [__declspec(restrict)](../cpp/restrict.md)します。
+別名に影響する可能性がある別の注釈については、「」を参照してください [`__declspec(restrict)`](../cpp/restrict.md) 。
 
 ## <a name="example"></a>例
 
-次の例では、使用**内**します。
+の使用例を次に示し **`__declspec(noalias)`** ます。
 
-ときに、関数`multiply`アクセスのメモリの注釈が付けられている**内**、この関数がパラメーター リストでポインターを通じてを除くグローバル状態を変更しないことをコンパイラに伝えます。
+`multiply`メモリにアクセスする関数に注釈が付けられると **`__declspec(noalias)`** 、この関数は、パラメーターリスト内のポインターを除き、グローバル状態を変更しないことをコンパイラに指示します。
 
 ```C
 // declspec_noalias.c
@@ -100,6 +100,6 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)
