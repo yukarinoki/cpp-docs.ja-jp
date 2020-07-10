@@ -1,6 +1,7 @@
 ---
 title: /Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)
-ms.date: 11/04/2016
+description: MSVC コンパイラオプション/Os および/Ot は、コードを最適化するときにサイズまたは速度を優先するかどうかを指定します。
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -17,43 +18,39 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: 0eda9461b3ef730e0e0a832aa94a688e03c7e1bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 384019ddf7b80b8dd4e00197d73d1e4ac536634c
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336188"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180826"
 ---
-# <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)
+# <a name="os-ot-favor-small-code-favor-fast-code"></a>`/Os`、 `/Ot` (小さいコードを優先、高速コードを優先)
 
-EXE と DLL のサイズを最小化または最大化します。
+Exe と Dll のサイズを最小化または最大化します。
 
 ## <a name="syntax"></a>構文
 
-```
-/Os
-/Ot
-```
+> **`/Os`**\
+> **`/Ot`**
 
 ## <a name="remarks"></a>解説
 
-**/Os** (小規模コードを優先) は、コンパイラに速度よりもサイズを優先するように指示することで、EXE と DLL のサイズを最小限に抑えます。 コンパイラは、多くの C および C++ の構成要素を、機能的に類似したマシン コードのシーケンスに減らすことができます。 時折、これらの違いは、サイズと速度のトレードオフを提供します。 **/Os**および **/Ot**オプションを使用すると、一方の設定を他のオプションより優先的に指定できます。
+**`/Os`**(小さいコードを優先) コンパイラが速度よりもサイズを優先するように指示することにより、Exe と Dll のサイズを最小限に抑えます。 コンパイラは、C および C++ のさまざまな構造を、コンピューターコードの機能的に似たシーケンスに減らすことができます。 これらの違いによって、サイズと速度のトレードオフが生じることがあります。 **`/Os`** オプションとオプションを使用すると、もう一方の **`/Ot`** 優先順位を指定できます。
 
-**/Ot** (優先高速コード) は、コンパイラにサイズよりも速度を優先するように指示することにより、EXE と DLL の速度を最大化します。 (これがデフォルトです。コンパイラは、多くの C および C++ の構成要素を、機能的に類似したマシン コードのシーケンスに減らすことができます。 場合によっては、これらの違いはサイズと速度のトレードオフを提供します。 **/Ot**オプションは、速度最大化 ([/O2](o1-o2-minimize-size-maximize-speed.md)) オプションによって暗黙的に指定されます。 **/O2**オプションは、非常に高速なコードを生成するために、いくつかのオプションを組み合わせています。
-
-**/Os**または **/Ot**を使用する場合は[、/Og](og-global-optimizations.md)を指定してコードを最適化する必要があります。
+**`/Ot`**(高速コードを優先) は、サイズよりも速い速度を優先するようコンパイラに指示することによって、Exe と Dll の速度を最大にします。 **`/Ot`** は、最適化が有効になっている場合の既定値です。 コンパイラは、C および C++ のさまざまな構造を、コンピューターコードの機能的に似たシーケンスに減らすことができます。 これらの違いによって、サイズと速度のトレードオフが生じることがあります。 **`/Ot`** オプションは、([速度を最大にする]) オプションによって示され [`/O2`](o1-o2-minimize-size-maximize-speed.md) ます。 オプションには、 **`/O2`** より高速なコードを生成するためのオプションがいくつか組み込まれています。
 
 > [!NOTE]
-> プロファイリング テストの実行から収集された情報は **、/Ob** **、/O、** または **/Ot**を指定すると有効になる最適化をオーバーライドします。 詳細については、「[ガイド付き最適化のプロファイル」を参照してください](../profile-guided-optimizations.md)。
+> プロファイルテストを実行したときに収集された情報は **`/Ob`** 、、、またはを指定した場合に有効な最適化をオーバーライドし **`/Os`** **`/Ot`** ます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
 
-**x86 固有の仕様→**
+### <a name="x86-specific-example"></a>x86 固有の例
 
-次のコード例は、優先小コード (**/Os**) オプションと Favor Fast Code (**/Ot**) オプションの違いを示しています。
+次のコード例は、 **`/Os`** ([小さいコードを優先]) オプションと [ **`/Ot`** (高速コードを優先)] オプションの違いを示しています。
 
 > [!NOTE]
-> 以下は **、/Os**または **/Ot**を使用する場合の予期される動作を示しています。 ただし、リリースからリリースへのコンパイラの動作は、以下のコードで異なる最適化を生じる可能性があります。
+> この例では、またはを使用する場合の想定される動作について説明し **`/Os`** **`/Ot`** ます。 ただし、リリースからリリースへのコンパイラの動作により、以下のコードの最適化が異なる場合があります。
 
-```
+```c
 /* differ.c
   This program implements a multiplication operator
   Compile with /Os to implement multiply explicitly as multiply.
@@ -65,16 +62,16 @@ int differ(int x)
 }
 ```
 
-以下のマシンコードの断片に示すように、SIZE (**/Os**) に対して、コンパイラは return ステートメントの乗算式を明示的に乗算として実装し、短いが遅いコードシーケンスを生成します。
+次のマシンコードのフラグメントに示されているように、 *`differ.c`* が size () に対してコンパイルされると、 **`/Os`** コンパイラは return ステートメント内の乗算式を明示的に乗算として実装し、短い遅延したコードシーケンスを生成します。
 
-```
+```asm
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-もう 1 つの方法として、SPEED (**/Ot**) を使用してコンパイルされた場合、コンパイラは return ステートメントの multiply`LEA`式を一連のシフトおよび命令として実装し、高速で長いコード シーケンスを生成します。
+また、 *`differ.c`* を speed () 用にコンパイルすると、 **`/Ot`** コンパイラは return ステートメント内の乗算式を一連のシフトとして実装し、 `LEA` 高速かつ長いコードシーケンスを生成する命令を実装します。
 
-```
+```asm
 mov    eax, DWORD PTR _x$[ebp]
 mov    ecx, eax
 shl    eax, 3
@@ -82,21 +79,17 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx
 ```
 
-**エンド x86 特定**
-
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[C/C++]** フォルダーをクリックします。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **最適化**] プロパティページを選択します。
 
-1. [最適化] プロパティ ページ**を**クリックします。
-
-1. **[優先サイズ] プロパティまたは [速度]** プロパティを変更します。
+1. "**サイズまたは速度を優先**" プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>
 
 ## <a name="see-also"></a>関連項目
 
