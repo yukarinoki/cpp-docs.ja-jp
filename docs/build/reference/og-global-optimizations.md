@@ -1,6 +1,7 @@
 ---
 title: /Og (グローバルの最適化)
-ms.date: 09/22/2017
+description: 非推奨の MSVC コンパイラオプション/Og について説明します。以前は、グローバルな最適化を有効にするために使用しています。
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320293"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180852"
 ---
-# <a name="og-global-optimizations"></a>/Og (グローバルの最適化)
+# <a name="og-global-optimizations"></a>`/Og`(グローバルな最適化)
 
-非推奨。 ローカルとグローバルの最適化を提供して自動レジスタ割り当て、および最適化をループします。 いずれかを使用することをお勧めします。 [/O1 (サイズを最小限に抑える)](o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](o1-o2-minimize-size-maximize-speed.md)代わりにします。
+非推奨になりました。 ローカルおよびグローバルの最適化、自動レジスタ割り当て、およびループの最適化を提供します。 代わりに、 [ `/O1` (サイズを最小化する)](o1-o2-minimize-size-maximize-speed.md)または[ `/O2` (最大速度)](o1-o2-minimize-size-maximize-speed.md)のいずれかを使用することをお勧めします。
 
 ## <a name="syntax"></a>構文
 
-> /Og
+> **`/Og`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
+**`/Og`** は非推奨とされます。 最適化が有効になっている場合、これらの最適化は既定で有効になります。 最適化の詳細については、「」 [ `/O1` `/O2` (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)、または[ `/Ox` (最も高速な最適化を有効にする)](ox-full-optimization.md)を参照してください。
 
-次の最適化は **/Og**:
+では、次の最適化を使用でき **`/Og`** ます。
 
 - ローカルとグローバルの共通部分式の削除
 
-   この最適化では、共通部分式の値が 1 回計算されます。 次の例では場合の値`b`と`c`3 つの式の間で変更しないで、コンパイラでの計算を割り当てることができます`b + c`一時変数の変数を置き換える`b + c`:
+   この最適化では、共通部分式の値が1回計算されます。 次の例では、との値 `b` が `c` 3 つの式の間で変更されない場合、コンパイラはの計算を `b + c` 一時変数に割り当て、その変数をに使用でき `b + c` ます。
 
     ```C
     a = b + c;
@@ -44,15 +45,15 @@ ms.locfileid: "62320293"
     e = b + c;
     ```
 
-   ローカルの共通部分式最適化では、コンパイラは共通部分式のコードの短いセクションを調べます。 グローバルの共通部分式最適化では、コンパイラは、すべての関数に共通部分式を検索します。
+   ローカルの共通部分式の最適化では、コンパイラは、共通部分式のコードの短いセクションを調べます。 グローバルな共通部分式の最適化では、コンパイラは関数全体で共通の部分式を検索します。
 
 - 自動レジスタ割り当て
 
-   この最適化により、レジスタにも、コンパイラは頻繁に使用されるストアの変数と部分式`register`キーワードは無視されます。
+   この最適化により、コンパイラは、頻繁に使用される変数と部分式をレジスタに格納できます。`register`キーワードは無視されます。
 
 - ループの最適化
 
-   この最適化では、ループの本体からインバリアント部分式を削除します。 最適なループには、ループの各実行により変更する値を持つ式のみが含まれています。 次の例では、式で`x + y`ループの本体が変更されていません。
+   この最適化によって、ループの本体から不変部分式が削除されます。 最適なループには、ループの各実行によって値が変化する式だけが含まれます。 次の例では、式は `x + y` ループ本体では変更されません。
 
     ```C
     i = -100;
@@ -61,7 +62,7 @@ ms.locfileid: "62320293"
     }
     ```
 
-   最適化後`x + y`ループが実行されるたびにではなく 1 回計算されます。
+   最適化後、 `x + y` は、ループが実行されるたびではなく、1回計算されます。
 
     ```C
     i = -100;
@@ -71,22 +72,20 @@ ms.locfileid: "62320293"
     }
     ```
 
-   コンパイラ偽物ではなく、エイリアスで設定するときに、ループの最適化がはるかに効果的[_ _restrict](../../cpp/extension-restrict.md)、 [noalias](../../cpp/noalias.md)、または[制限](../../cpp/restrict.md)します。
+   、、またはを使用して設定した別名がコンパイラによって想定されていない場合は、ループの最適化の方がはるかに効果的です [`__restrict`](../../cpp/extension-restrict.md) [`noalias`](../../cpp/noalias.md) [`restrict`](../../cpp/restrict.md) 。
 
    > [!NOTE]
-   > 有効にまたはを使用して、関数ごとにグローバルな最適化を無効にすることができます、`optimize`プラグマと組み合わせて、`g`オプション。
+   > プラグマをオプションと共に使用して、関数ごとにグローバル最適化を有効または無効にすることができ `optimize` `g` ます。
 
-関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
+関連情報については、「 [ `/Oi` (組み込み関数の生成)](oi-generate-intrinsic-functions.md) 」および「 [ `/Ox ` (ほとんどの速度の最適化を有効にする)](ox-full-optimization.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[C/C++]** フォルダーをクリックします。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. **[コマンド ライン]** プロパティ ページをクリックします。
-
-1. コンパイラ オプションを入力して、**追加オプション**ボックス。
+1. [**追加オプション**] ボックスにコンパイラオプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -94,4 +93,4 @@ ms.locfileid: "62320293"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
