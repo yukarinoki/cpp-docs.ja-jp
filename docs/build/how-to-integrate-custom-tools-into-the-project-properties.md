@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 0c0233ad6715a3adb7d47f021a87207f288d5139
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837028"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373750"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>方法: カスタム ツールをプロジェクトのプロパティに統合する
 
@@ -17,7 +17,7 @@ ms.locfileid: "65837028"
 
 **[プロパティ ページ]** ウィンドウの **[構成プロパティ]** セクションには、"*ルール*" と呼ばれる設定グループが表示されます。 すべてのルールには、ツールまたは機能のグループの設定が含まれています。 たとえば、 **[リンカー]** ルールには、リンカー ツールの設定が含まれています。 ルールの設定は、"*カテゴリ*" に分かれている場合があります。
 
-このドキュメントでは、カスタム ツールのプロパティが含まれるファイルを設定ディレクトリに作成して、Visual Studio の起動時にプロパティが読み込まれるようにする方法について説明します。 ファイルを変更する方法については、Visual Studio プロジェクト チーム ブログの「[Platform Extensibility Part 2 (プラットフォームの機能性第 2 部)](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/)」をご覧ください。
+このドキュメントでは、カスタム ツールのプロパティが含まれるファイルを設定ディレクトリに作成して、Visual Studio の起動時にプロパティが読み込まれるようにする方法について説明します。 ファイルを変更する方法については、Visual Studio プロジェクト チーム ブログの「[Platform Extensibility Part 2 (プラットフォームの機能性第 2 部)](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2)」をご覧ください。
 
 ### <a name="to-add-or-change-project-properties"></a>プロジェクトのプロパティを追加または変更するには
 
