@@ -1,15 +1,15 @@
 ---
 title: 規則セットを使用した実行対象の C++ 規則の指定
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269716"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373854"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行対象の C++ 規則を指定する
 
@@ -33,7 +33,7 @@ Visual Studio でカスタム C++ 規則セットを作成するには、Visual 
 
      \- または
 
-   - **\<Browse...>** 一覧に含まれていない既存の規則セットを指定する場合に選択します。
+   - **\<Browse...>** 一覧にない既存の規則セットを指定する場合に選択します。
 
 1. [**開く**] を選択すると、ルールセットエディターにルールが表示されます。
 
@@ -236,17 +236,19 @@ Visual Studio でカスタム C++ 規則セットを作成するには、Visual 
 
 スキーマ要素の詳細:
 
-- TLocalization: ルールセットファイルの名前、ルールセットファイルの説明、ローカライズされたリソースを含むリソースアセンブリの名前、ローカライズされたリソースのベース名など、ローカライズ情報。
-- TRuleHintPaths: ルールセットファイルを検索するためのヒントとして使用されるファイルパスです。
-- TName: 現在のルールセットファイルの名前。
-- TDescription: 現在のルールセットファイルの説明です。
-- TInclude: ルールアクションを含む、含まれているルールセットへのパス。
-- TIncludeAll: すべてのルールのルールアクション。
-- TRule: ルールのアクションを含むルール ID。
-- TRules: 1 つまたは複数の規則のコレクション。
-- TRuleSet: ローカライズ情報、ルールヒントパス、すべての情報を含む規則セットファイル形式 (情報、規則情報、名前、説明、ツールのバージョン情報を含む)。
-- TRuleAction: エラー、警告、情報、hidden、none などのルールアクションを説明する列挙です。
-- TIncludeAction: エラー、警告、情報、hidden、none、default などのルールアクションを説明する列挙です。
-- TIncludeAllAction: エラー、警告、情報、非表示などのルールアクションを説明する列挙です。
+| Schema 要素 | [説明] |
+|--------------------|--------------|
+| `TLocalization` | ルールセットファイルの名前、ルールセットファイルの説明、ローカライズされたリソースを含むリソースアセンブリの名前、ローカライズされたリソースのベース名など、ローカライズ情報 |
+| `TRuleHintPaths` | ルールセットファイルを検索するためのヒントとして使用されるファイルパス |
+| `TName` | 現在のルールセットファイルの名前 |
+| `TDescription` | 現在のルールセットファイルの説明 |
+| `TInclude` | ルールアクションを含む含まれるルールセットへのパス |
+| `TIncludeAll` | すべてのルールのルールアクション |
+| `TRule` | ルールのアクションを含むルール ID |
+| `TRules` | 1つまたは複数のルールのコレクション |
+| `TRuleSet` | ローカライズ情報、ルールヒントパス、すべての情報を含む規則セットファイル形式 (情報、規則情報、名前、説明、ツールのバージョン情報を含む) |
+| `TRuleAction` | エラー、警告、情報、非表示、またはなしなどのルールアクションを説明する列挙です。 |
+| `TIncludeAction` | エラー、警告、情報、hidden、none、default などのルールアクションを説明する列挙です。 |
+| `TIncludeAllAction` | エラー、警告、情報、非表示などのルールアクションを説明する列挙です。 |
 
 ルールセットの例については、「」を参照して、[テキストエディターで規則セットを作成する](#to-create-a-rule-set-in-a-text-editor)か、に格納されている既定の規則セットのいずれかを作成し `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` ます。

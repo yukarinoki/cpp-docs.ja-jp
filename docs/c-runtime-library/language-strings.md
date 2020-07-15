@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438249"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373605"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数と [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 関数は、Unicode コード ページを使用しないオペレーティング システム上では、Windows NLS API をサポートする言語を使用できます。 オペレーティング システムのバージョンごとにサポートされる言語の一覧については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)」(付録 A: 製品の動作) をご覧ください。 言語識別文字列には、サポートされる言語の一覧の **[Language]** 列と **[Language tag]** 列の任意の値を指定できます。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数と [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 関数は、Unicode コード ページを使用しないオペレーティング システム上では、Windows NLS API をサポートする言語を使用できます。 オペレーティングシステムのバージョン別にサポートされる言語の一覧については、「[付録 a:](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS Lcid の製品の動作」を参照してください \[ 。 言語識別文字列には、サポートされる言語の一覧の **[Language]** 列と **[Language tag]** 列の任意の値を指定できます。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
 
 ## <a name="additional-supported-language-strings"></a>サポートされるその他の言語識別文字列
 
@@ -87,9 +87,9 @@ Microsoft の C ランタイム ライブラリの実装では、次の言語識
 |us|ja-JP|
 |usa|ja-JP|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ロケール名、言語、および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Country/Region Strings](../c-runtime-library/country-region-strings.md)<br/>
+[国/地域識別文字列](../c-runtime-library/country-region-strings.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
