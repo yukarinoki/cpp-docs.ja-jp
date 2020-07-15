@@ -2,36 +2,36 @@
 title: /HIGHENTROPYVA (64 ビット ASLR のサポート)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f8601d89e8456461aac3d91f9fd2cfda216d7f5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291601"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373841"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (64 ビット ASLR のサポート)
 
 実行可能ファイル イメージが高いエントロピの 64 ビット ASLR (Address Space Layout Randomization) をサポートするかどうかを指定します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
-> **/HIGHENTROPYVA** **[:NO]**
+> **/HIGHENTROPYVA**[**: NO**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/HIGHENTROPYVA**のヘッダーを変更、*実行可能イメージ*、.dll ファイルまたは .exe ファイル、ASLR が全体の 64 ビット アドレス空間を使用できるかどうかを示す。 このオプションを実行可能ファイルおよび依存するモジュールのすべてに設定すると、64 ビット ASLR をサポートするオペレーティング システムは、読み込み時に 64 ビットの仮想アドレス空間でランダム化されたアドレスを使用して、実行可能イメージのセグメントのベース アドレスをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
+**/HIGHENTROPYVA**は、ASLR が64ビットのアドレス空間全体を使用できるかどうかを示すために、.dll ファイルまたは .exe ファイルの*実行可能イメージ*のヘッダーを変更します。 このオプションを実行可能ファイルおよび依存するモジュールのすべてに設定すると、64 ビット ASLR をサポートするオペレーティング システムは、読み込み時に 64 ビットの仮想アドレス空間でランダム化されたアドレスを使用して、実行可能イメージのセグメントのベース アドレスをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
 
-既定では、 **/HIGHENTROPYVA** 64 ビット実行可能イメージが有効になっています。 このオプションが必要です[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)も 64 ビット イメージに対して既定で有効になっています。 **/HIGHENTROPYVA**適用可能でない、32 ビット実行可能イメージに、リンカーが、オプションを無視します。 このオプションを明示的に無効にするには、 **/HIGHENTROPYVA:NO**します。
+既定では、64ビットの実行可能イメージに対して **/HIGHENTROPYVA**が有効になっています。 このオプションには[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)が必要です。これは64ビットイメージでも既定で有効になっています。 **/HIGHENTROPYVA**は、32ビットの実行可能イメージには適用されません。リンカーはこのオプションを無視します。 このオプションを明示的に無効にするには、 **/HIGHENTROPYVA: NO**を使用します。
 
-**/HIGHENTROPYVA** 、読み込み時に影響する[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)も有効にする必要があります。 **/DYNAMICBASE**が既定では、有効になり、ASLR の Windows Vista 以降のオペレーティング システムで有効にするために必要な。 Windows の以前のバージョンでは、このフラグを無視します。
+読み込み時に **/HIGHENTROPYVA**が効果を持つようにするには、 [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)も有効にする必要があります。 **/DYNAMICBASE**は既定で有効になっており、Windows Vista 以降のオペレーティングシステムで ASLR を有効にするために必要です。 以前のバージョンの Windows では、このフラグは無視します。
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
 
-1. **追加オプション**、入力`/HIGHENTROPYVA`または`/HIGHENTROPYVA:NO`します。
+1. [**追加オプション**] で、またはを入力し `/HIGHENTROPYVA` `/HIGHENTROPYVA:NO` ます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -39,4 +39,4 @@ ms.locfileid: "62291601"
 - [MSVC リンカー オプション](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
-- [Windows ISV Software Security Defenses](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Windows ISV ソフトウェアセキュリティ防御](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
