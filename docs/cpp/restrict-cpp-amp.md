@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 5a0011d11e4a59c9ca3a5e18f44d4cf831b21582
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366653"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404939"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 制限指定子は、関数宣言およびラムダ宣言に適用できます。 制限は、関数のコードに適用され、また、C++ Accelerated Massive Parallelism (C++ AMP) ランタイムを使用するアプリケーションの関数の動作に適用されます。
 
 > [!NOTE]
-> **__declspec**ストレージ・クラス属性の一部である**restrict**キーワードについては、 [restrict](../cpp/restrict.md)を参照してください。
+> **__Declspec**ストレージクラス属性の一部である**restrict**キーワードの詳細については、「 [restrict](../cpp/restrict.md)」を参照してください。
 
-**restrict**句は次の形式をとります。
+**Restrict**句の形式は次のとおりです。
 
 |句|説明|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "81366653"
 
 ## <a name="remarks"></a>解説
 
-**restrict**キーワードはコンテキスト キーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 **restrict**句を持たない関数は、`restrict(cpu)`句を持つ関数と同じです。
+**Restrict**キーワードは、コンテキストキーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 **Restrict**句を持たない関数は、句を持つ関数と同じです `restrict(cpu)` 。
 
 `restrict(amp)` 句を持つ関数には次の制限があります。
 
@@ -39,7 +39,7 @@ ms.locfileid: "81366653"
 
 - 関数はインライン化できる必要があります。
 
-- 関数は **、int**、**符号なし int** **、float**、**および double**変数、およびこれらの型のみを含むクラスと構造体のみを宣言できます。 **bool**も許可されますが、複合型で使用する場合は 4 バイトで整列する必要があります。
+- 関数は、 **int**、 **unsigned int**、 **float**、および**double**の各変数、およびこれらの型のみを含むクラスと構造体のみを宣言できます。 **bool**も使用できますが、複合型で使用する場合は、4バイトでアラインする必要があります。
 
 - ラムダ関数は、参照によってキャプチャできず、また、ポインターをキャプチャできません。
 
@@ -49,7 +49,7 @@ ms.locfileid: "81366653"
 
   - 再帰
 
-  - [volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
+  - [Volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
 
   - 仮想関数
 
@@ -65,25 +65,25 @@ ms.locfileid: "81366653"
 
   - ラベル付きステートメント
 
-  - **を試す**、**キャッチ**、 または**ステートメントをスロー**する。
+  - **try**、 **catch**、または**throw**ステートメントを実行します。
 
   - グローバル変数
 
-  - 静的変数 代わりに[tile_staticキーワードを](../cpp/tile-static-keyword.md)使用してください。
+  - 静的変数 代わりに[Tile_static キーワード](../cpp/tile-static-keyword.md)を使用してください。
 
   - **dynamic_cast**キャスト。
 
-  - **typeid**演算子。
+  - **Typeid**演算子。
 
   - asm 宣言
 
   - 可変個引数
 
-機能の制限については、[制限 (amp) の制限](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)を参照してください。
+関数の制限事項の詳細については、「制限[(amp) 制限](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction)」を参照してください。
 
 ## <a name="example"></a>例
 
-句の使用方法を次の例に`restrict(amp)`示します。
+次の例では、句を使用する方法を示し `restrict(amp)` ます。
 
 ```cpp
 void functionAmp() restrict(amp) {}

@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182202"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405001"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ
 
-Microsoft C++コンパイラオプションの[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を使用して、[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)を設定して、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
+Microsoft C++ コンパイラオプションの[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を使用して、[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)を設定し、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>情報メッセージ
 
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) 
 [自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Visual Studio 2012 の自動ベクター化–概要](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[Visual Studio 2012 での自動ベクター化–概要](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
 [#pragma ループ ()](../../preprocessor/loop.md) \
 [/Q オプション (低レベルの操作)](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report (自動並行化レポートレベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (自動ベクター化レポート作成レベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-report (自動ベクター化レポートレベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
