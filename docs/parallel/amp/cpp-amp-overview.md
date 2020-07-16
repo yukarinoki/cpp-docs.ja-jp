@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: f0b46065371b8cb70802cfc38b7365fd2db14bf5
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538649"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404848"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -27,13 +27,13 @@ C++ Accelerated Massive Parallelism (C++ AMP) は、独立したグラフィッ�
 
 - DirectX 11 機能レベル 11.0 以降のハードウェア
 
-- ソフトウェアエミュレーターでのデバッグには、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳細については、「 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)」を参照してください。
+- ソフトウェアエミュレーターでのデバッグには、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳しくは、「[GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)」をご覧ください。
 
 - 注: AMP は、現在、ARM64 ではサポートされていません。
 
 ## <a name="introduction"></a>はじめに
 
-次の 2 つの例は、C++ AMP の主要コンポーネントを示しています。 2 個の 1 次元配列の対応する要素を加算するとします。 たとえば、を追加`{1, 2, 3, 4, 5}`して`{6, 7, 8, 9, 10}`を取得`{7, 9, 11, 13, 15}`することができます。 C++ AMP を使用しない場合、数値を加算し、結果を表示するために、次のようなコードを記述します。
+次の 2 つの例は、C++ AMP の主要コンポーネントを示しています。 2 個の 1 次元配列の対応する要素を加算するとします。 たとえば、を追加してを取得することができ `{1, 2, 3, 4, 5}` `{6, 7, 8, 9, 10}` `{7, 9, 11, 13, 15}` ます。 C++ AMP を使用しない場合、数値を加算し、結果を表示するために、次のようなコードを記述します。
 
 ```cpp
 #include <iostream>
@@ -102,11 +102,11 @@ void CppAmpMethod() {
 
 基本的な要素は同じですが、C++ AMP のコンストラクトが使用されています。
 
-- データ: C++ の配列を使用して、3つの C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトを構築します。 4 個の値を指定して `array_view` オブジェクトを構築します。すなわち、各次元の `array_view` オブジェクトのデータ値、ランク、要素の型、および長さです。 ランクと型は型パラメーターとして渡されます。 データと長さは、コンストラクターのパラメーターとして渡されます。 この例では、コンストラクターに渡される C++ 配列は 1 次元です。 ランクと長さは `array_view` オブジェクト内のデータの四角形を構築するために使用され、データ値は配列の値を設定するために使用されます。 ランタイムライブラリには、 `array_view`クラスに似たインターフェイスを備えた[配列クラス](../../parallel/amp/reference/array-class.md)も含まれています。このクラスについては、この記事の後半で説明します。
+- データ: C++ の配列を使用して、3つの C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトを構築します。 4 個の値を指定して `array_view` オブジェクトを構築します。すなわち、各次元の `array_view` オブジェクトのデータ値、ランク、要素の型、および長さです。 ランクと型は型パラメーターとして渡されます。 データと長さは、コンストラクターのパラメーターとして渡されます。 この例では、コンストラクターに渡される C++ 配列は 1 次元です。 ランクと長さは `array_view` オブジェクト内のデータの四角形を構築するために使用され、データ値は配列の値を設定するために使用されます。 ランタイムライブラリには、クラスに似たインターフェイスを備えた[配列クラス](../../parallel/amp/reference/array-class.md)も含まれてい `array_view` ます。このクラスについては、この記事の後半で説明します。
 
 - イテレーション: [Parallel_for_each 関数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)は、データ要素または*計算ドメイン*を反復処理するメカニズムを提供します。 この例では、計算のドメインは `sum.extent` によって指定されます。 実行するコードは、ラムダ式または*カーネル関数*に含まれています。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。
 
-- インデックス:[インデックスクラス](../../parallel/amp/reference/index-class.md)変数`idx`は、 `array_view`オブジェクトのランクと一致するように、ランクが1で宣言されています。 インデックスを使用することによって、`array_view` オブジェクトの個々の要素にアクセスできます。
+- インデックス:[インデックスクラス](../../parallel/amp/reference/index-class.md)変数は、 `idx` オブジェクトのランクと一致するように、ランクが1で宣言されてい `array_view` ます。 インデックスを使用することによって、`array_view` オブジェクトの個々の要素にアクセスできます。
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>データを構造化してインデックスを作成する: index と extent
 
@@ -114,7 +114,7 @@ void CppAmpMethod() {
 
 ### <a name="index-class"></a>index クラス
 
-[インデックスクラス](../../parallel/amp/reference/index-class.md)は、オブジェクト`array`または`array_view`オブジェクト内の位置を指定します。各次元の原点からのオフセットを1つのオブジェクトにカプセル化します。 配列内の位置にアクセスする場合、整数のインデックスのリストの代わりに、`index` オブジェクトを、インデックス作成演算子 `[]` に渡します。 各次元の要素にアクセスするには、 [array:: operator ()](reference/array-class.md#operator_call)演算子または[array_view:: operator ()](reference/array-view-class.md#operator_call)演算子を使用します。
+[インデックスクラス](../../parallel/amp/reference/index-class.md)は、オブジェクトまたはオブジェクト内の位置を指定し `array` `array_view` ます。各次元の原点からのオフセットを1つのオブジェクトにカプセル化します。 配列内の位置にアクセスする場合、整数のインデックスのリストの代わりに、`index` オブジェクトを、インデックス作成演算子 `[]` に渡します。 各次元の要素にアクセスするには、 [array:: operator ()](reference/array-class.md#operator_call)演算子または[array_view:: operator ()](reference/array-view-class.md#operator_call)演算子を使用します。
 
 次の例では、1 次元の `array_view` オブジェクト内の 3 番目の要素を指定する 1 次元インデックスを作成します。 このインデックスを使用して、`array_view` オブジェクトの 3 番目の要素を出力します。 出力は 3 になります。
 
@@ -140,7 +140,7 @@ std::cout <<a[idx] << "\n";
 // Output: 6
 ```
 
-次の例では、3次元の`array_view`オブジェクトの深さが0、行が1、列が3の要素を指定する3次元のインデックスを作成します。 最初のパラメーターが奥行コンポーネント、2 番目のパラメーターが行コンポーネント、3 番目のパラメーターが列コンポーネントであることに注意してください。 出力は8です。
+次の例では、3次元のオブジェクトの深さが0、行が1、列が3の要素を指定する3次元のインデックスを作成し `array_view` ます。 最初のパラメーターが奥行コンポーネント、2 番目のパラメーターが行コンポーネント、3 番目のパラメーターが列コンポーネントであることに注意してください。 出力は8です。
 
 ```cpp
 int aCPP[] = {
@@ -158,7 +158,7 @@ std::cout << a[idx] << "\n";
 
 ### <a name="extent-class"></a>extent クラス
 
-[Extent クラス](../../parallel/amp/reference/extent-class.md)は、オブジェクト`array`または`array_view`オブジェクトの各次元のデータの長さを指定します。 範囲を作成し、範囲を使用して `array` または `array_view` オブジェクトを作成できます。 また、既存の `array` または `array_view` オブジェクトの範囲を取得することもできます。 次の例では、`array_view` オブジェクトの各次元の範囲の長さを出力します。
+[Extent クラス](../../parallel/amp/reference/extent-class.md)は、オブジェクトまたはオブジェクトの各次元のデータの長さを指定し `array` `array_view` ます。 範囲を作成し、範囲を使用して `array` または `array_view` オブジェクトを作成できます。 また、既存の `array` または `array_view` オブジェクトの範囲を取得することもできます。 次の例では、`array_view` オブジェクトの各次元の範囲の長さを出力します。
 
 ```cpp
 int aCPP[] = {
@@ -192,7 +192,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 
 ### <a name="array-class"></a>array クラス
 
-`array` オブジェクトを構築するときに、データ セットへのポインターを含むコンストラクターを使用している場合、アクセラレータでデータの詳細コピーが作成されます。 カーネル関数は、アクセラレータ上のコピーを変更します。 カーネル関数の実行が終了すると、ソースのデータ構造にデータをコピーして戻す必要があります。 次の例では、ベクター内の各要素に 10 を乗算します。 カーネル関数が終了`vector conversion operator`したら、を使用してデータを vector オブジェクトにコピーして戻します。
+`array` オブジェクトを構築するときに、データ セットへのポインターを含むコンストラクターを使用している場合、アクセラレータでデータの詳細コピーが作成されます。 カーネル関数は、アクセラレータ上のコピーを変更します。 カーネル関数の実行が終了すると、ソースのデータ構造にデータをコピーして戻す必要があります。 次の例では、ベクター内の各要素に 10 を乗算します。 カーネル関数が終了したら、を `vector conversion operator` 使用してデータを vector オブジェクトにコピーして戻します。
 
 ```cpp
 std::vector<int> data(5);
@@ -232,15 +232,15 @@ for (int i = 0; i < 5; i++)
 |図形|長方形。|長方形。|
 |データ ストレージ|データ コンテナーである。|データ ラッパーである。|
 |コピー|定義時の明示的な詳細コピー。|カーネル関数を使用してアクセスされた場合の暗黙のコピー。|
-|データの取得|配列データを CPU スレッド上のオブジェクトにコピーして戻すことによる。|`array_view`オブジェクトに直接アクセスするか、 [array_view:: synchronize メソッド](reference/array-view-class.md#synchronize)を呼び出して元のコンテナーのデータへのアクセスを継続します。|
+|データの取得|配列データを CPU スレッド上のオブジェクトにコピーして戻すことによる。|オブジェクトに直接アクセス `array_view` するか、 [array_view:: synchronize メソッド](reference/array-view-class.md#synchronize)を呼び出して元のコンテナーのデータへのアクセスを継続します。|
 
 ### <a name="shared-memory-with-array-and-array_view"></a>共有メモリと配列および array_view
 
 共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。
 
-関連するアクセラレータがサポートする場合、`array` オブジェクトを使用して、共有メモリの使用のきめ細かな制御を指定できます。 アクセラレータが共有メモリをサポートするかどうかは、アクセラレータの[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)プロパティによって決定されます。これは、共有メモリがサポートされている場合に**true**を返します。 共有メモリがサポートされている場合、アクセラレータでのメモリ割り当ての既定の[Access_type 列挙](reference/concurrency-namespace-enums-amp.md#access_type)は、 `default_cpu_access_type`プロパティによって決定されます。 既定では、`array` オブジェクトと `array_view` のオブジェクトはプライマリに関連する `access_type` と同じ `accelerator` を取得します。
+関連するアクセラレータがサポートする場合、`array` オブジェクトを使用して、共有メモリの使用のきめ細かな制御を指定できます。 アクセラレータが共有メモリをサポートするかどうかは、アクセラレータの[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)プロパティによって決定されます。これは、共有メモリがサポートされている場合に**true**を返します。 共有メモリがサポートされている場合、アクセラレータでのメモリ割り当ての既定の[Access_type 列挙](reference/concurrency-namespace-enums-amp.md#access_type)は、プロパティによって決定され `default_cpu_access_type` ます。 既定では、`array` オブジェクトと `array_view` のオブジェクトはプライマリに関連する `access_type` と同じ `accelerator` を取得します。
 
-の[array:: Cpu_access_type データメンバー](reference/array-class.md#cpu_access_type)プロパティを`array`明示的に設定することにより、共有メモリの使用方法をきめ細かく制御できます。これにより、計算カーネルのメモリアクセスパターンに基づいて、ハードウェアのパフォーマンス特性に合わせてアプリを最適化できます。 `array_view` は、関連付けられている `cpu_access_type` と同じ `array` を反映するか、または、array_view がデータ ソースを使用せずに構築される場合は、その `access_type` は、まずストレージを割り当てるようにする環境を反映します。 つまり、まずホスト (CPU) によってアクセスされた場合は、CPU データ ソースに対して作成されたかのように動作し、キャプチャによって関連付けられた `access_type` の `accelerator_view` を共有します。ただし、まず `accelerator_view` によってアクセスされた場合は、その `array` 上で作成された `accelerator_view` に対して作成されたかのように動作し、`array` の `access_type` を共有します。
+の[array:: Cpu_access_type データメンバー](reference/array-class.md#cpu_access_type)プロパティを明示的に設定することにより、 `array` 共有メモリの使用方法をきめ細かく制御できます。これにより、計算カーネルのメモリアクセスパターンに基づいて、ハードウェアのパフォーマンス特性に合わせてアプリを最適化できます。 `array_view` は、関連付けられている `cpu_access_type` と同じ `array` を反映するか、または、array_view がデータ ソースを使用せずに構築される場合は、その `access_type` は、まずストレージを割り当てるようにする環境を反映します。 つまり、まずホスト (CPU) によってアクセスされた場合は、CPU データ ソースに対して作成されたかのように動作し、キャプチャによって関連付けられた `access_type` の `accelerator_view` を共有します。ただし、まず `accelerator_view` によってアクセスされた場合は、その `array` 上で作成された `accelerator_view` に対して作成されたかのように動作し、`array` の `access_type` を共有します。
 
 次のコード例では、既定のアクセラレータが共有メモリをサポートし、異なる cpu_access_type 構成を持つ複数の配列を作成するかどうかを確認する方法を説明します。
 
@@ -284,7 +284,7 @@ int main()
 
 ## <a name="executing-code-over-data-parallel_for_each"></a>データに対してコードを実行する: parallel_for_each
 
-[Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)関数は、オブジェクト`array`または`array_view`オブジェクトのデータに対してアクセラレータで実行するコードを定義します。 このトピックの概要で示した次のコードを考えてます。
+[Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)関数は、オブジェクトまたはオブジェクトのデータに対してアクセラレータで実行するコードを定義し `array` `array_view` ます。 このトピックの概要で示した次のコードを考えてます。
 
 ```cpp
 #include <amp.h>
@@ -316,9 +316,9 @@ void AddArrays() {
 
 `parallel_for_each` メソッドは、計算ドメインとラムダ式の 2 個の引数を使用します。
 
-*計算ドメイン*は、並列`extent`実行のため`tiled_extent`に作成するスレッドのセットを定義するオブジェクトまたはオブジェクトです。 計算ドメインの各要素について、1 つのスレッドが生成されます。 この場合、`extent` オブジェクトは 1 次元で、5 個の要素があります。 したがって、5 個のスレッドが開始されます。
+*計算ドメイン*は、 `extent` `tiled_extent` 並列実行のために作成するスレッドのセットを定義するオブジェクトまたはオブジェクトです。 計算ドメインの各要素について、1 つのスレッドが生成されます。 この場合、`extent` オブジェクトは 1 次元で、5 個の要素があります。 したがって、5 個のスレッドが開始されます。
 
-*ラムダ式*は、各スレッドで実行するコードを定義します。 `[=]`Capture 句は、ラムダ式の本体がすべてのキャプチャされた変数に値でアクセスすることを指定し`a`ます`b`。この`sum`場合、は、、およびです。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  制限修飾子を持つ関数の制限事項については、「[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)」を参照してください。 詳細については、「[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
+*ラムダ式*は、各スレッドで実行するコードを定義します。 Capture 句は、 `[=]` ラムダ式の本体がすべてのキャプチャされた変数に値でアクセスすることを指定します。この場合、は `a` 、、 `b` および `sum` です。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  制限修飾子を持つ関数の制限事項については、「[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)」を参照してください。 詳細については、「[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
 
 ラムダ式では、実行するコードを含めることも、別のカーネル関数を呼び出すこともできます。 カーネル関数には `restrict(amp)` 修飾子を含める必要があります。 次の例は前の例と同じですが、別のカーネル関数を呼び出します。
 
@@ -360,9 +360,9 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>コードの加速化: タイルとバリア
 
-タイルを使用することによって、さらに高速化を実現できます。 タイルでは、スレッドが等しい四角形のサブセットまたは*タイル*に分割されます。 データ セットと、コーディングしているアルゴリズムに基づいて、適切なタイトルのサイズを決定します。 各スレッドについて、データ要素の全体また`array`は`array_view`全体に対するアクセス権を*持ち、タイル*を基準とした*ローカル*の場所にアクセスできます。 ローカル インデックス値を使用すると、インデックス値をグローバルからローカルに変換するコードを記述する必要がないため、コードは簡略化されます。 タイルを使用するには、 `parallel_for_each`メソッドでコンピューティングドメインの[extent:: tile メソッド](reference/extent-class.md#tile)を呼び出し、ラムダ式で[tiled_index](../../parallel/amp/reference/tiled-index-class.md)オブジェクトを使用します。
+タイルを使用することによって、さらに高速化を実現できます。 タイルでは、スレッドが等しい四角形のサブセットまたは*タイル*に分割されます。 データ セットと、コーディングしているアルゴリズムに基づいて、適切なタイトルのサイズを決定します。 各スレッドについて、データ要素の全体または全体に対するアクセス権を*持ち、* `array` `array_view` タイルを基準とした*ローカル*の場所にアクセスできます。 ローカル インデックス値を使用すると、インデックス値をグローバルからローカルに変換するコードを記述する必要がないため、コードは簡略化されます。 タイルを使用するには、メソッドでコンピューティングドメインの[extent:: Tile メソッド](reference/extent-class.md#tile)を呼び出し、 `parallel_for_each` ラムダ式で[tiled_index](../../parallel/amp/reference/tiled-index-class.md)オブジェクトを使用します。
 
-一般的なアプリケーションでは、タイルの要素はなんらかの方法で関連付けられており、コードではタイル全体で値にアクセスして追跡する必要があります。 これを行うには、 [Tile_static キーワード](../../cpp/tile-static-keyword.md)キーワードと[tile_barrier:: wait メソッド](reference/tile-barrier-class.md#wait)を使用します。 **Tile_static**キーワードを持つ変数は、タイル全体でスコープを持ち、各タイルに対して変数のインスタンスが作成されます。 タイル スレッドの変数に対するアクセスの同期を処理する必要があります。 [Tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait)は、タイル内のすべてのスレッドがの呼び出しに到達するまで、現在のスレッド`tile_barrier::wait`の実行を停止します。 そのため、 **tile_static**変数を使用して、タイル全体に値を蓄積できます。 次に、すべての値にアクセスする必要がある計算を終了できます。
+一般的なアプリケーションでは、タイルの要素はなんらかの方法で関連付けられており、コードではタイル全体で値にアクセスして追跡する必要があります。 これを行うには、 [Tile_static キーワード](../../cpp/tile-static-keyword.md)キーワードと[tile_barrier:: wait メソッド](reference/tile-barrier-class.md#wait)を使用します。 **Tile_static**キーワードを持つ変数は、タイル全体でスコープを持ち、各タイルに対して変数のインスタンスが作成されます。 タイル スレッドの変数に対するアクセスの同期を処理する必要があります。 [Tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait)は、タイル内のすべてのスレッドがの呼び出しに到達するまで、現在のスレッドの実行を停止し `tile_barrier::wait` ます。 そのため、 **tile_static**変数を使用して、タイル全体に値を蓄積できます。 次に、すべての値にアクセスする必要がある計算を終了できます。
 
 次の図は、タイルに配置されたサンプリング データの 2 次元配列を表します。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数値演算ライブラリ
 
-C++ AMP には 2 つの数値演算ライブラリが含まれます。 [Concurrency::p Recise_math 名前空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)の倍精度ライブラリでは、倍精度関数がサポートされています。 また、ハードウェアでの倍精度サポートは必要ですが、単精度関数もサポートします。 [C99 仕様 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)に準拠しています。 アクセラレータは倍精度を完全にサポートしている必要があります。 [Accelerator:: Supports_double_precision データメンバー](reference/accelerator-class.md#supports_double_precision)の値を確認することによって、それが実行されるかどうかを判断できます。 [Concurrency:: Fast_math 名前空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)の高速数値演算ライブラリには、別の一連の数値演算関数が含まれています。 これらの関数は、`float` のオペランドのみをサポートするため、実行速度は速くなりますが、精度は倍精度数値演算ライブラリほど高くありません。 関数は、 \<amp_math> ヘッダーファイルに含まれており、すべてを使用`restrict(amp)`して宣言されています。 Cmath> ヘッダーファイル内の関数は、名前空間と`precise_math`名前`fast_math`空間の両方にインポートされます。 \< **Restrict**キーワードは、 \<cmath> バージョンと C++ AMP バージョンを区別するために使用されます。 次のコードは、計算のドメインにある各値の高速メソッドを使用して、10 を底とする対数を計算します。
+C++ AMP には 2 つの数値演算ライブラリが含まれます。 [Concurrency::p Recise_math 名前空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)の倍精度ライブラリでは、倍精度関数がサポートされています。 また、ハードウェアでの倍精度サポートは必要ですが、単精度関数もサポートします。 [C99 仕様 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)に準拠しています。 アクセラレータは倍精度を完全にサポートしている必要があります。 [Accelerator:: Supports_double_precision データメンバー](reference/accelerator-class.md#supports_double_precision)の値を確認することによって、それが実行されるかどうかを判断できます。 [Concurrency:: Fast_math 名前空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)の高速数値演算ライブラリには、別の一連の数値演算関数が含まれています。 これらの関数は、`float` のオペランドのみをサポートするため、実行速度は速くなりますが、精度は倍精度数値演算ライブラリほど高くありません。 関数はヘッダーファイルに含まれ \<amp_math.h> ており、すべてがで宣言されてい `restrict(amp)` ます。 ヘッダーファイル内の関数は、 \<cmath> との両方の名前空間にインポートされ `fast_math` `precise_math` ます。 **Restrict**キーワードは、バージョンと C++ AMP バージョンを区別するために使用され \<cmath> ます。 次のコードは、計算のドメインにある各値の高速メソッドを使用して、10 を底とする対数を計算します。
 
 ```cpp
 #include <amp.h>
@@ -459,13 +459,13 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>グラフィックス ライブラリ
 
-C++ AMP には、アクセラレータ機能を使用するグラフィックスのプログラミング用に設計されたグラフィックス ライブラリが含まれます。 このライブラリは、ネイティブ グラフィックス機能をサポートするデバイスでのみ使用されます。 メソッドは[Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあり、 \<amp_graphics> のヘッダーファイルに含まれています。 グラフィックス ライブラリの主要コンポーネントは次のとおりです。
+C++ AMP には、アクセラレータ機能を使用するグラフィックスのプログラミング用に設計されたグラフィックス ライブラリが含まれます。 このライブラリは、ネイティブ グラフィックス機能をサポートするデバイスでのみ使用されます。 メソッドは、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあり、ヘッダーファイルに含まれてい \<amp_graphics.h> ます。 グラフィックス ライブラリの主要コンポーネントは次のとおりです。
 
 - [テクスチャクラス](../../parallel/amp/reference/texture-class.md): テクスチャクラスを使用して、メモリまたはファイルからテクスチャを作成できます。 テクスチャはデータを含んでいるため、配列に似ています。また、割り当てとコピーの構築に関しては、C++ 標準ライブラリのコンテナーに似ています。 詳細については、「[C++ 標準ライブラリ コンテナー](../../standard-library/stl-containers.md)」を参照してください。 `texture` クラスのテンプレート パラメーターは、要素型とランクです。 ランクには 1、2、または 3 を指定できます。 要素型には、後で説明する short ベクター型のいずれかを指定できます。
 
 - [Writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md): テクスチャへの書き込み専用アクセスを提供します。
 
-- Short vector Library: **int**、 `uint`、 **float**、 **double**、[標準](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)に基づく長さ2、3、および4の短いベクター型のセットを定義します。
+- Short vector Library: **int**、 `uint` 、 **float**、 **double**、[標準](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)に基づく長さ2、3、および4の短いベクター型のセットを定義します。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>ユニバーサル Windows プラットフォーム (UWP) アプリ
 
@@ -495,9 +495,9 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [GPU アクティビティ (他のプロセス)](/visualstudio/profiling/gpu-activity-other-processes)
 
-- [チャネル (スレッド ビュー)](/visualstudio/profiling/channels-threads-view)
+- [チャネル (スレッドビュー)](/visualstudio/profiling/channels-threads-view)
 
-- [同時実行ビジュアライザーを使用した C++ AMP コードの分析](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [同時実行ビジュアライザーを使用した C++ AMP コードの分析](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
 
 ## <a name="performance-recommendations"></a>パフォーマンスに関する推奨事項
 

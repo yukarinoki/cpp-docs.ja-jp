@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332254"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404552"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`基になるインターフェイスポインターを表す型を宣言します。 を使用し `ComPtr<>` て変数を宣言し、矢印のメンバーアクセス演算子 ( `->` ) を使用してインターフェイスメンバー関数にアクセスします。
 
-スマートポインターの詳細については、MSDN ライブラリの[Com コーディング方法](/windows/win32/LearnWin32/com-coding-practices)に関する記事の「Com スマートポインター」サブセクションを参照してください。
+スマートポインターの詳細については、 [com のコーディング方法](/windows/win32/LearnWin32/com-coding-practices)に関する記事の「Com スマートポインター」サブセクションを参照してください。
 
 ## <a name="members"></a>メンバー
 

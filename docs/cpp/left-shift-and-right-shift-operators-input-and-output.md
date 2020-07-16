@@ -1,5 +1,5 @@
 ---
-title: 左シフト演算子と右シフト演算子&gt; &gt; ( &lt; &lt;および)
+title: 左シフト演算子と右シフト演算子 ( &gt; &gt; および &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825916"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404771"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左シフト演算子と右シフト演算子&gt; &gt; ( &lt; &lt;および)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左シフト演算子と右シフト演算子 ( &gt; &gt; および &lt; &lt; )
 
-ビットごとのシフト演算子は、右シフト演算子 (**&gt;**) であり、*シフト式*のビットを右に移動し、左シフト演算子 (**&lt;**) を使用して、*シフト式*のビットを左に移動します。 <sup>1</sup>
+ビットごとのシフト演算子は、右シフト演算子 ( **&gt;&gt;** ) であり、*シフト式*のビットを右に移動し、左シフト演算子 () を使用して、 **&lt;&lt;** *シフト式*のビットを左に移動します。 <sup>1</sup>
 
 ## <a name="syntax"></a>構文
 
-> *シフト式* `<<` *加法*式\
+> *シフト式* `<<`*加法-式*\
 > *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>解説
 
 > [!IMPORTANT]
-> 次の説明と例は、x86 および x64 アーキテクチャの Windows で有効です。 ARM デバイスの場合、左シフト演算子と右シフト演算子の実装は大きく異なります。 詳細については、 [HELLO ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx)のブログ記事の「シフト演算子」セクションを参照してください。
+> 次の説明と例は、x86 および x64 アーキテクチャの Windows で有効です。 ARM デバイスの場合、左シフト演算子と右シフト演算子の実装は大きく異なります。 詳細については、 [HELLO ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/)のブログ記事の「シフト演算子」セクションを参照してください。
 
 ## <a name="left-shifts"></a>左シフト
 
@@ -195,7 +195,7 @@ int main() {
 }
 ```
 
-## <a name="additional-details"></a>追加情報
+## <a name="additional-details"></a>追加の詳細
 
 *加算式*が負の場合、または*加算式*が (昇格された)*シフト式*のビット数以上の場合、シフト演算の結果は未定義になります。 *加法式*が0の場合、シフト演算は実行されません。
 
@@ -224,9 +224,9 @@ int main() {
 
 <sup>1</sup>次に示すのは、C++ 11 ISO 仕様におけるシフト演算子の説明です (この例では、/ISO/IEC 14882-2011 [2012])、セクション5.8.2 と5.8.3。
 
-`E1 << E2` の結果は、`E1` を `E2` ビット左にシフトした値であり、空いたビットはゼロで埋められる。 に`E1`符号なしの型がある場合、結果の値は**E1 × 2**<sup>**E2**</sup>になり、剰余が結果の型で表現可能な最大値を超えています。 それ以外の`E1`場合、に符号付きの型と負でない値が含まれ、 **E1 x 2**<sup>**E2**</sup>が結果の型の対応する符号なしの型で表現できる場合、結果の型に変換された値が結果の値になります。それ以外の場合、動作は定義されていません。
+`E1 << E2` の結果は、`E1` を `E2` ビット左にシフトした値であり、空いたビットはゼロで埋められる。 `E1`に符号なしの型がある場合、結果の値は**E1 × 2**<sup>**E2**</sup>になり、剰余が結果の型で表現可能な最大値を超えています。 それ以外の場合、 `E1` に符号付きの型と負でない値が含まれ、 **E1 × 2**<sup>**E2**</sup>が結果の型の対応する符号なしの型で表現できる場合、結果の型に変換された値が結果の値になります。それ以外の場合、動作は定義されません。
 
-`E1 >> E2` の結果は、`E1` を `E2` ビット右にシフトした値である。 `E1`に符号なしの型がある`E1`場合、またはに符号付きの型と負でない値が含まれている場合、結果の値は**E1/2**<sup>**E2**</sup>の商の整数部分になります。 `E1` が符号付きの型で値が負の場合、結果として得られる値は実装に依存する。
+`E1 >> E2` の結果は、`E1` を `E2` ビット右にシフトした値である。 `E1`に符号なしの型がある場合、または `E1` に符号付きの型と負でない値が含まれている場合、結果の値は**E1/2**<sup>**E2**</sup>の商の整数部分になります。 `E1` が符号付きの型で値が負の場合、結果として得られる値は実装に依存する。
 
 ## <a name="see-also"></a>関連項目
 

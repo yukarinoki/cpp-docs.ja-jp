@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624669"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403726"
 ---
 # <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 
@@ -38,7 +38,7 @@ DAO (obsolete) と ODBC のどちらを使用している場合でも、この�
 
 フレームワークによって定義されたリターンコードに加えて、 **AFX_SQL_ERROR_XXX**フォームの名前が付いているため、一部の[CDBExceptions](reference/cdbexception-class.md)は[ODBC](../data/odbc/odbc-basics.md)のリターンコードに基づいています。 このような例外のリターンコードには**SQL_ERROR_XXX**の形式の名前があります。
 
-データベースクラスが返すことができるリターンコード (フレームワーク定義と ODBC 定義の両方) は、クラスの[m_nRetCode](reference/cdbexception-class.md#m_nretcode)データメンバーの下に記載されてい `CDBException` ます。 ODBC で定義されているリターンコードに関する追加情報については、MSDN ライブラリの ODBC SDK*プログラマーズリファレンスを参照*してください。
+データベースクラスが返すことができるリターンコード (フレームワーク定義と ODBC 定義の両方) は、クラスの[m_nRetCode](reference/cdbexception-class.md#m_nretcode)データメンバーの下に記載されてい `CDBException` ます。 Odbc で定義されているリターンコードの詳細については、 [Odbc プログラマーズリファレンスを参照](/sql/odbc/reference/odbc-programmer-s-reference)してください。
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>DAO 例外に使用されるエラーコード
 

@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 8966d982b7bcbe9844a7bf1ec3088c2a9424b23a
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467055"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404025"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 
@@ -62,32 +62,32 @@ SAL は、重要なセクション、ミューテックス、スピンロック�
 
 次の表に、ロックの注釈の一覧を示します。
 
-|Annotation|説明|
+|注釈|説明|
 |----------------|-----------------|
-|`_Acquires_exclusive_lock_(expr)`|関数に注釈を付け、post 状態のときに、`expr`によって指定されたロックオブジェクトの排他ロックカウントによって関数がインクリメントされることを示します。|
-|`_Acquires_lock_(expr)`|関数に注釈を付け、post 状態のときに、`expr`によって指定されたロックオブジェクトのロックカウントによって関数がインクリメントされることを示します。|
-|`_Acquires_nonreentrant_lock_(expr)`|`expr` によって指定されたロックが取得されます。  ロックが既に保持されている場合は、エラーが報告されます。|
-|`_Acquires_shared_lock_(expr)`|関数に注釈を付け、post 状態のときに、`expr`によって指定されたロックオブジェクトの共有ロックカウントによって関数がインクリメントされることを示します。|
-|`_Create_lock_level_(name)`|シンボルを宣言するステートメントがロックレベルであり、注釈 `_Has_Lock_level_` と `_Lock_level_order_`に使用できるように `name` ます。|
-|`_Has_lock_kind_(kind)`|リソースオブジェクトの型情報を絞り込むために、任意のオブジェクトに注釈を加えます。 場合によっては、さまざまな種類のリソースに共通の型が使用され、オーバーロードされた型は、さまざまなリソース間でセマンティック要件を区別するのに十分ではありません。 定義済みの `kind` パラメーターの一覧を次に示します。<br /><br /> `_Lock_kind_mutex_`<br /> Mutex のロックの種類 ID。<br /><br /> `_Lock_kind_event_`<br /> イベントのロックの種類 ID。<br /><br /> `_Lock_kind_semaphore_`<br /> セマフォのロックの種類 ID。<br /><br /> `_Lock_kind_spin_lock_`<br /> スピンロックのロックの種類の ID。<br /><br /> `_Lock_kind_critical_section_`<br /> クリティカルセクションのロックの種類 ID。|
-|`_Has_lock_level_(name)`|ロックオブジェクトに注釈を付け、`name`のロックレベルを与えます。|
-|`_Lock_level_order_(name1, name2)`|`name1` と `name2`間のロックの順序を与えるステートメント。  レベル `name2`を持つロックの前に、レベル `name1` を持つロックを取得する必要があります。|
-|`_Post_same_lock_(expr1, expr2)`|関数に注釈を付け、post 状態で、2つのロック (`expr1` と `expr2`) が同じロックオブジェクトであるかのように処理されることを示します。|
-|`_Releases_exclusive_lock_(expr)`|関数に注釈を付け、post 状態のときに、`expr`によって指定されたロックオブジェクトの排他ロックカウントによって関数がデクリメントされることを示します。|
-|`_Releases_lock_(expr)`|関数に注釈を付け、post 状態では、`expr`によって指定されたロックオブジェクトのロックカウントによって関数がデクリメントされることを示します。|
-|`_Releases_nonreentrant_lock_(expr)`|`expr` によって指定されたロックが解放されます。 ロックが現在保持されていない場合は、エラーが報告されます。|
-|`_Releases_shared_lock_(expr)`|関数に注釈を付け、post 状態のときに、`expr`によって指定されたロックオブジェクトの共有ロックカウントによって関数がデクリメントされることを示します。|
-|`_Requires_lock_held_(expr)`|関数に注釈を付け、pre 状態で、`expr` によって指定されたオブジェクトのロックカウントが少なくとも1つであることを示します。|
-|`_Requires_lock_not_held_(expr)`|関数に注釈を付け、pre 状態では `expr` によって指定されたオブジェクトのロックカウントが0であることを示します。|
+|`_Acquires_exclusive_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトの排他ロックカウントによって関数がインクリメントされることを示し `expr` ます。|
+|`_Acquires_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトのロックカウントによって関数がインクリメントされることを示し `expr` ます。|
+|`_Acquires_nonreentrant_lock_(expr)`|によって名前が付けられたロック `expr` が取得されます。  ロックが既に保持されている場合は、エラーが報告されます。|
+|`_Acquires_shared_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトの共有ロックカウントによって関数がインクリメントされることを示し `expr` ます。|
+|`_Create_lock_level_(name)`|`name`注釈とで使用できるように、記号をロックレベルとして宣言するステートメント `_Has_Lock_level_` `_Lock_level_order_` 。|
+|`_Has_lock_kind_(kind)`|リソースオブジェクトの型情報を絞り込むために、任意のオブジェクトに注釈を加えます。 場合によっては、さまざまな種類のリソースに共通の型が使用され、オーバーロードされた型は、さまざまなリソース間でセマンティック要件を区別するのに十分ではありません。 定義済みのパラメーターの一覧を次に示し `kind` ます。<br /><br /> `_Lock_kind_mutex_`<br /> Mutex のロックの種類 ID。<br /><br /> `_Lock_kind_event_`<br /> イベントのロックの種類 ID。<br /><br /> `_Lock_kind_semaphore_`<br /> セマフォのロックの種類 ID。<br /><br /> `_Lock_kind_spin_lock_`<br /> スピンロックのロックの種類の ID。<br /><br /> `_Lock_kind_critical_section_`<br /> クリティカルセクションのロックの種類 ID。|
+|`_Has_lock_level_(name)`|ロックオブジェクトに注釈を付け、のロックレベルを与え `name` ます。|
+|`_Lock_level_order_(name1, name2)`|との間のロックの順序を与えるステートメント `name1` `name2` 。  レベルを持つロック `name1` は、レベルを持つロックの前に取得する必要があり `name2` ます。|
+|`_Post_same_lock_(expr1, expr2)`|関数に注釈を付け、post 状態では2つのロック ( `expr1` と) が同じロックオブジェクトであるかのように処理されることを示し `expr2` ます。|
+|`_Releases_exclusive_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトの排他ロックカウントによって関数がデクリメントされることを示し `expr` ます。|
+|`_Releases_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトのロックカウントによって関数がデクリメントされることを示し `expr` ます。|
+|`_Releases_nonreentrant_lock_(expr)`|によって指定されたロック `expr` が解放されます。 ロックが現在保持されていない場合は、エラーが報告されます。|
+|`_Releases_shared_lock_(expr)`|関数に注釈を付け、post 状態のときに、によって指定されたロックオブジェクトの共有ロックカウントによって関数がデクリメントされることを示し `expr` ます。|
+|`_Requires_lock_held_(expr)`|関数に注釈を付け、pre 状態で、によって名前が付けられたオブジェクトのロックカウントが少なくとも1つであることを示し `expr` ます。|
+|`_Requires_lock_not_held_(expr)`|関数に注釈を付け、pre 状態で、によって名前が付けられたオブジェクトのロックカウントが0であることを示し `expr` ます。|
 |`_Requires_no_locks_held_`|関数に注釈を指定し、チェッカーが認識しているすべてのロックのロック数が0であることを示します。|
-|`_Requires_shared_lock_held_(expr)`|関数に注釈を付け、pre 状態で、`expr` によって指定されたオブジェクトの共有ロックカウントが少なくとも1つであることを示します。|
-|`_Requires_exclusive_lock_held_(expr)`|関数に注釈を付け、pre 状態で、`expr` によって指定されたオブジェクトの排他ロックカウントが少なくとも1つであることを示します。|
+|`_Requires_shared_lock_held_(expr)`|関数に注釈を付け、pre 状態で、によって名前が付けられたオブジェクトの共有ロックカウント `expr` が少なくとも1つであることを示します。|
+|`_Requires_exclusive_lock_held_(expr)`|関数に注釈を付け、pre 状態で、によって名前が付けられたオブジェクトの排他ロックカウント `expr` が少なくとも1つであることを示します。|
 
 ## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>非公開のロック オブジェクトに対する SAL の組み込み
 
 特定のロックオブジェクトは、関連付けられているロック関数の実装によって公開されません。  次の表に、これらの非公開のロックオブジェクトを操作する関数に対する注釈を有効にする SAL 組み込み変数を示します。
 
-|Annotation|説明|
+|注釈|説明|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|キャンセルスピンロックについて説明します。|
 |`_Global_critical_region_`|クリティカル領域について説明します。|
@@ -98,29 +98,29 @@ SAL は、重要なセクション、ミューテックス、スピンロック�
 
 次の表は、共有データアクセスの注釈を示しています。
 
-|Annotation|説明|
+|注釈|説明|
 |----------------|-----------------|
-|`_Guarded_by_(expr)`|変数に注釈を付け、変数がアクセスされるたびに、`expr` によって指定されたロックオブジェクトのロック数が少なくとも1つであることを示します。|
-|`_Interlocked_`|変数に注釈をし、`_Guarded_by_(_Global_interlock_)`に相当します。|
+|`_Guarded_by_(expr)`|変数に注釈を付け、変数がアクセスされるたびに、によって指定されたロックオブジェクトのロック数 `expr` が少なくとも1であることを示します。|
+|`_Interlocked_`|変数に注釈を付いており、これはと同じです `_Guarded_by_(_Global_interlock_)` 。|
 |`_Interlocked_operand_`|注釈付き関数のパラメーターは、さまざまなインタロックされた関数のいずれかのターゲットオペランドです。  これらのオペランドには、特定の追加プロパティが必要です。|
-|`_Write_guarded_by_(expr)`|変数に注釈を付け、変数が変更されるたびに、`expr` によって指定されたロックオブジェクトのロック数が少なくとも1つであることを示します。|
+|`_Write_guarded_by_(expr)`|変数に注釈を付け、変数が変更されるたびに、によって指定されたロックオブジェクトのロック数 `expr` が少なくとも1であることを示します。|
 
 ## <a name="smart-lock-and-raii-annotations"></a>注釈の Smart Lock と RAII
 
-通常、スマートロックはネイティブロックをラップし、その有効期間を管理します。 次の表に、`move` セマンティクスをサポートするスマートロックと RAII コーディングパターンで使用できる注釈を示します。
+通常、スマートロックはネイティブロックをラップし、その有効期間を管理します。 次の表に、セマンティクスをサポートするスマートロックと RAII コーディングパターンで使用できる注釈を示し `move` ます。
 
-|Annotation|説明|
+|注釈|説明|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|スマートロックが取得されたことを想定するようにアナライザーに指示します。 この注釈では、パラメーターとして参照ロックの種類が想定されています。|
 |`_Analysis_assume_smart_lock_released_`|スマートロックが解放されたことを想定するようにアナライザーに指示します。 この注釈では、パラメーターとして参照ロックの種類が想定されています。|
-|`_Moves_lock_(target, source)`|`source` オブジェクトから `target`にロック状態を転送する `move constructor` 操作について説明します。 `target` は新しく構築されたオブジェクトと見なされるため、以前の状態が失われ、`source` の状態に置き換えられます。 `source` も、ロック数またはエイリアシングターゲットを使用せずにクリーン状態にリセットされますが、それを指すエイリアスは変更されません。|
-|`_Replaces_lock_(target, source)`|ソースから状態を転送する前に、ターゲットロックが解放される `move assignment operator` セマンティクスについて説明します。 これは、前に `_Releases_lock_(target)`を `_Moves_lock_(target, source)` の組み合わせと見なすことができます。|
-|`_Swaps_locks_(left, right)`|オブジェクト `left` と `right` の状態を交換することを前提としている標準の `swap` 動作について説明します。 交換される状態には、ロック数とエイリアスターゲット (存在する場合) が含まれます。 `left` オブジェクトと `right` オブジェクトを指すエイリアスは変更されません。|
-|`_Detaches_lock_(detached, lock)`|ロックラッパーの種類で、含まれているリソースと関連付け解除を許可するシナリオについて説明します。 これは、`std::unique_ptr` が内部ポインターで動作する方法と似ています。プログラマはポインターを抽出し、スマートポインターコンテナーをクリーンな状態にしておくことができます。 同様のロジックは `std::unique_lock` でサポートされており、カスタムロックラッパーに実装できます。 デタッチされたロックは、その状態 (ロックカウントとエイリアスターゲットが存在する場合) を保持しますが、ラッパーは、独自のエイリアスを保持しながら、ゼロロックカウントとエイリアスターゲットを含まないようにリセットされます。 ロック数に対する操作 (解放および取得) はありません。 この注釈は `_Moves_lock_` とまったく同じように動作しますが、デタッチされた引数は `this`ではなく `return` である必要があります。|
+|`_Moves_lock_(target, source)`|`move constructor`オブジェクトからにロック状態を転送する操作について説明し `source` `target` ます。 は `target` 新しく構築されたオブジェクトと見なされるため、以前の状態が失われ、状態に置き換えられ `source` ます。 また、は、 `source` ロック数または別名ターゲットを使用せずにクリーン状態にリセットされますが、エイリアスを指すエイリアスは変更されません。|
+|`_Replaces_lock_(target, source)`|`move assignment operator`ソースから状態を転送する前にターゲットロックが解放されるセマンティクスについて説明します。 これは、の前にを付けたものと見なすことができ `_Moves_lock_(target, source)` `_Releases_lock_(target)` ます。|
+|`_Swaps_locks_(left, right)`|オブジェクトを想定し、その状態を交換する標準の動作について説明し `swap` `left` `right` ます。 交換される状態には、ロック数とエイリアスターゲット (存在する場合) が含まれます。 オブジェクトおよびオブジェクトを指すエイリアスは `left` `right` 変更されません。|
+|`_Detaches_lock_(detached, lock)`|ロックラッパーの種類で、含まれているリソースと関連付け解除を許可するシナリオについて説明します。 これは、が内部ポインターを操作する方法と似 `std::unique_ptr` ています。プログラマはポインターを抽出し、スマートポインターコンテナーをクリーンな状態にしておくことができます。 同様のロジックはでサポートされて `std::unique_lock` おり、カスタムロックラッパーで実装できます。 デタッチされたロックは、その状態 (ロックカウントとエイリアスターゲットが存在する場合) を保持しますが、ラッパーは、独自のエイリアスを保持しながら、ゼロロックカウントとエイリアスターゲットを含まないようにリセットされます。 ロック数に対する操作 (解放および取得) はありません。 この注釈はとまったく同じように動作し `_Moves_lock_` ますが、デタッチされた引数はではなくである必要がある点が異なり `return` `this` ます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [SAL 注釈を使って C/C++ のコード障害を減らす方法](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+- [C/C++ コードの欠陥を減らすための SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [SAL について](../code-quality/understanding-sal.md)
 - [関数パラメーターおよび戻り値の注釈設定](../code-quality/annotating-function-parameters-and-return-values.md)
 - [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)
@@ -128,4 +128,3 @@ SAL は、重要なセクション、ミューテックス、スピンロック�
 - [注釈を適用するタイミングと場所の指定](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [組み込み関数](../code-quality/intrinsic-functions.md)
 - [ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)
-- [コード分析チームのブログ](https://blogs.msdn.microsoft.com/codeanalysis/)

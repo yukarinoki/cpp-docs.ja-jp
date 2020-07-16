@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367047"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403869"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "81367047"
 - [実行時に列を動的にバインドする方法](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
-> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「レコード[セット: バルクデータフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> どのようなときに列を動的にバインドするか
 
@@ -45,7 +45,7 @@ ms.locfileid: "81367047"
 
 レコードセットには、設計時にわかっていた列のデータ メンバーも含まれています。 また、ターゲット テーブルに新しい列が追加されているかどうかを動的に判別し、そうである場合はこれらの新しい列を (レコード セットのデータ メンバーではなく) 動的に割り当てられた記憶域にバインドする、少量の追加コードも含まれます。
 
-このトピックでは、削除されたテーブルや列など、他の動的なバインドの場合については説明しません。 それらのケースについては、さらに直接的に ODBC API の呼び出しを使う必要があります。 詳細については、MSDN ライブラリ CD に収録されている ODBC SDK の*プログラマーズ リファレンス*を参照してください。
+このトピックでは、削除されたテーブルや列など、他の動的なバインドの場合については説明しません。 それらのケースについては、さらに直接的に ODBC API の呼び出しを使う必要があります。 詳細については、 [ODBC プログラマーズリファレンス](/sql/odbc/reference/odbc-programmer-s-reference)を参照してください。
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 列を動的にバインドする方法
 
@@ -81,7 +81,7 @@ ms.locfileid: "81367047"
 
    1 つの方法は、動的なリストを 1 つ以上作成することです。1 つ目のリストは新しい列の名前用、2 つ目は結果の値用、3 つ目はデータ型用 (必要な場合) です。 これらのリスト (特に値リスト) で、バインドのための情報と必要な記憶域を提供します。 次の図はリストの作成を示したものです。
 
-   ![動的にバインドする列のリストの作成](../../data/odbc/media/vc37w61.gif "動的に結びつける列のリストを生成する方法")<br/>
+   ![動的にバインドする列のリストを作成する](../../data/odbc/media/vc37w61.gif "動的に結びつける列のリストを生成する方法")<br/>
    動的に結び付ける列のリストを生成する方法
 
 1. メイン レコードセットの `DoFieldExchange` 関数で、追加する列ごとに RFX 関数の呼び出しを追加します。 これらの RFX の呼び出しでは、レコードをフェッチし、追加の列を組み込み、レコードセットのデータ メンバーまたは追加列用に動的に提供した記憶域に、列をバインドします。
@@ -139,14 +139,14 @@ ms.locfileid: "81367047"
 
 1. 各列のデータの値を格納する Dynamic-Column-Values (Columns-to-Bind-Dynamically と並列) を作成します。
 
-   たとえば、図は、動的列値 (リスト 4) と 1 つの`CString`要素を示しています。
+   たとえば、次の図は、1つの要素を持つ動的列の値 (List 4) を示しています。これは、 `CString` 現在のレコードの実際の電話番号を含むオブジェクトです。 "555-1212"。
 
    最も一般的なケースでは、Dynamic-Column-Values には `CString` 型の要素が含まれます。 さまざまなデータ型の列を扱っている場合は、さまざまな型の要素を含むことのできるリストが必要です。
 
-前の手順の結果は、列からバインドへの動的な名前を含む 2 つの主要なリストと、現在のレコードの列の値を含む動的列値です。
+前の手順の結果は、現在のレコードの列の値を含む列の名前と動的列の値を動的に含む、2つの主なリストになります。
 
 > [!TIP]
-> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は AFXDB で定義されます。H.) 列のデータ型の表現方法に基づいて、リストの種類を選択します。
+> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は、AFXDB.H で定義されています。H) 列のデータ型の表現方法に基づいてリストの種類を選択します。
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 列をバインドするための RFX 呼び出しの追加
 
@@ -174,4 +174,4 @@ RFX 関数の詳細については、"*クラス ライブラリ リファレン
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[レコードセット: 大きなデータ項目の操作 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
