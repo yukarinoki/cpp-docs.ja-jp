@@ -30,7 +30,7 @@
       href: ../build/vscpp-step-1-create.md
     - name: C++ コンソール アプリ プロジェクトのビルドと実行
       href: ../build/vscpp-step-2-build.md
-    - name: 2 つ目の C++ アプリの作成
+    - name: C++ でコンソール電卓を作成する
       href: ../get-started/tutorial-console-cpp.md
     - name: UWP アプリの作成
       href: /windows/uwp/cpp-and-winrt-apis/get-started
@@ -79,7 +79,7 @@
       items:
         - name: 言語
           href: ../overview/languages-cpp.md
-        - name: 'C# 言語リファレンス'
+        - name: C# 言語リファレンス
           href: ../c-language/c-language-reference.md
         - name: C++ 言語リファレンス
           href: ../cpp/cpp-language-reference.md
