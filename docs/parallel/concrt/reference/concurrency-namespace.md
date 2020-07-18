@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143227"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446741"
 ---
 # <a name="concurrency-namespace"></a>コンカレンシー名前空間
 
@@ -41,19 +41,19 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`runtime_object_identity`|各メッセージ インスタンスには、メッセージング コンポーネント間でメッセージ インスタンスの複製または受け渡しを行うときに使用する ID があります。 メッセージ オブジェクトのアドレスをこの ID として指定することはできません。|
-|`task_status`|タスクの終了状態を表す型。 有効値は `completed` または `canceled` です。|
+|`task_status`|タスクの終了状態を表す型。 有効な値は、`completed`、`canceled` です。|
 |`TaskProc`|`void (__cdecl * TaskProc)(void *)` として定義される、タスクの基本抽象化です。 `TaskProc` は、タスクの本体を呼び出すために呼び出されます。|
 |`TaskProc_t`|`void (__cdecl * TaskProc_t)(void *)` として定義される、タスクの基本抽象化です。 `TaskProc` は、タスクの本体を呼び出すために呼び出されます。|
 
 ### <a name="classes"></a>クラス
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[affinity_partitioner クラス](affinity-partitioner-class.md)|`affinity_partitioner` クラスは `static_partitioner` クラスに似ていますが、ワーカー スレッドへのマッピングのサブ範囲の選択によってキャッシュの関係が向上します。 同じデータ セットに対してループ処理が再実行されるときにパフォーマンスを大幅に向上させることができ、データはキャッシュに収まります。 データの局所性のメリットを利用するには、特定のデータ セットに対して実行される並列ループの以降のイテレーションで、同じ `affinity_partitioner` オブジェクトを使用する必要があります。|
-|[agent クラス](agent-class.md)|すべての独立エージェントの基底クラスとして使用されるクラスです。 他のエージェントに状態が表示されないようにしたり、メッセージ渡しでやり取りしたりする目的で使用されます。|
+|[エージェントクラス](agent-class.md)|すべての独立エージェントの基底クラスとして使用されるクラスです。 他のエージェントに状態が表示されないようにしたり、メッセージ渡しでやり取りしたりする目的で使用されます。|
 |[auto_partitioner クラス](auto-partitioner-class.md)|`auto_partitioner` クラスは、反復処理する範囲を分割するために、既定のメソッド `parallel_for`、`parallel_for_each`、および `parallel_transform` の使用を表します。 このパーティション分割方法では、負荷分散と反復処理ごとのキャンセルに対して範囲の盗用が使用されます。|
 |[bad_target クラス](bad-target-class.md)|このクラスは、実行する操作の無効なターゲットへのポインターがメッセージング ブロックに渡された場合にスローされる例外を表します。|
 |[call クラス](call-class.md)|`call` メッセージング ブロックは、複数のソースを持つ、順序付けられた `target_block` であり、メッセージを受け取ったときに指定された関数を呼び出します。|
@@ -61,13 +61,13 @@ namespace concurrency;
 |[cancellation_token_registration クラス](cancellation-token-registration-class.md)|`cancellation_token_registration` クラスは、`cancellation_token` からのコールバック通知を表します。 `register` の `cancellation_token` メソッドを使用して取り消し発生の通知を受け取るとき、`cancellation_token_registration` オブジェクトはハンドルとしてコールバックに返されます。したがって、呼び出し元は `deregister` メソッドを使用して、特定のコールバックが以降行われないように要求できます。|
 |[cancellation_token_source クラス](cancellation-token-source-class.md)|`cancellation_token_source` クラスは、取り消し可能な操作を取り消す機能を表します。|
 |[choice クラス](choice-class.md)|`choice` メッセージング ブロックは、複数のソースと単一のターゲットを持つブロックであり、一連のソースとの制御フローの相互作用を表します。 choice ブロックは、複数のソースのいずれかがメッセージを生成するのを待ち、そのメッセージを生成したソースのインデックスを伝達します。|
-|[combinable クラス](combinable-class.md)|`combinable<T>` オブジェクトは、スレッド プライベートなデータのコピーを提供し、並列アルゴリズムにおいてロック制御不要なスレッド ローカルのサブ計算を実行するために用意されています。 並列操作の最後に、スレッド プライベート サブ計算を最終結果にマージできます。 共有変数に多数の競合が発生する可能性がある場合、共有変数の代わりにこのクラスを使用することにより、パフォーマンスを改善できます。|
+|[組み合わせ可能クラス](combinable-class.md)|`combinable<T>` オブジェクトは、スレッド プライベートなデータのコピーを提供し、並列アルゴリズムにおいてロック制御不要なスレッド ローカルのサブ計算を実行するために用意されています。 並列操作の最後に、スレッド プライベート サブ計算を最終結果にマージできます。 共有変数に多数の競合が発生する可能性がある場合、共有変数の代わりにこのクラスを使用することにより、パフォーマンスを改善できます。|
 |[concurrent_priority_queue クラス](concurrent-priority-queue-class.md)|`concurrent_priority_queue` クラスは、複数のスレッドが項目を同時にプッシュおよびポップできるようにするコンテナーです。 項目は優先順位の順にポップされます。この優先順位は、テンプレート引数として指定されたファンクタによって決まります。|
 |[concurrent_queue クラス](concurrent-queue-class.md)|`concurrent_queue` クラスは、キューの要素に先入れ先出し方式でアクセスできるようにするシーケンス コンテナー クラスです。 これを使用すると、`push`、`try_pop` などの特定のコンカレンシー セーフな操作を実行できます。|
-|[concurrent_unordered_map クラス](concurrent-unordered-map-class.md)|ph x="1" /&gt; クラスは、`concurrent_unordered_map` 型要素の可変長シーケンスを制御するコンカレンシー セーフなコンテナーです。 このシーケンスは、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|
-|[concurrent_unordered_multimap クラス](concurrent-unordered-multimap-class.md)|ph x="1" /&gt; クラスは、`concurrent_unordered_multimap` 型要素の可変長シーケンスを制御するコンカレンシー セーフなコンテナーです。 このシーケンスは、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|
-|[concurrent_unordered_multiset クラス](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` クラスは、K 型の要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。シーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、および反復子の走査操作を可能にするように表現されます。|
-|[concurrent_unordered_set クラス](concurrent-unordered-set-class.md)|`concurrent_unordered_set` クラスは、K 型の要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。シーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、および反復子の走査操作を可能にするように表現されます。|
+|[concurrent_unordered_map クラス](concurrent-unordered-map-class.md)|ph x="1" /&gt; クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御するコンカレンシー セーフなコンテナーです。 このシーケンスは、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|
+|[concurrent_unordered_multimap クラス](concurrent-unordered-multimap-class.md)|ph x="1" /&gt; クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御するコンカレンシー セーフなコンテナーです。 このシーケンスは、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|
+|[concurrent_unordered_multiset クラス](concurrent-unordered-multiset-class.md)|クラスは、 `concurrent_unordered_multiset` K 型の要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。シーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、および反復子の走査操作を可能にするように表現されます。|
+|[concurrent_unordered_set クラス](concurrent-unordered-set-class.md)|クラスは、 `concurrent_unordered_set` K 型の要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。シーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、および反復子の走査操作を可能にするように表現されます。|
 |[concurrent_vector クラス](concurrent-vector-class.md)|`concurrent_vector` クラスは、任意の要素にランダムにアクセスできるようにするシーケンス コンテナー クラスです。 これを使用すると、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、および反復子走査の各操作を実行できます。|
 |[Context クラス](context-class.md)|実行コンテキストの抽象化を表します。|
 |[context_self_unblock クラス](context-self-unblock-class.md)|このクラスは、同じコンテキストから `Unblock` オブジェクトの `Context` メソッドが呼び出された場合にスローされる例外を表します。 これは、特定のコンテキストがそれ自体のブロックを解除しようとしたことを示します。|
@@ -75,7 +75,7 @@ namespace concurrency;
 |[critical_section クラス](critical-section-class.md)|コンカレンシー ランタイムを明示的に認識する再入不可能なミューテックスです。|
 |[CurrentScheduler クラス](currentscheduler-class.md)|呼び出し元コンテキストに関連付けられている現在のスケジューラの抽象化を表します。|
 |[default_scheduler_exists クラス](default-scheduler-exists-class.md)|このクラスは、既定のスケジューラが既にプロセス内に存在するときに `Scheduler::SetDefaultSchedulerPolicy` メソッドが呼び出された場合にスローされる例外を表します。|
-|[event クラス](event-class.md)|コンカレンシー ランタイムを明示的に認識する手動リセット イベントです。|
+|[イベントクラス](event-class.md)|コンカレンシー ランタイムを明示的に認識する手動リセット イベントです。|
 |[improper_lock クラス](improper-lock-class.md)|このクラスは、ロックが正しく取得されなかった場合にスローされる例外を表します。|
 |[improper_scheduler_attach クラス](improper-scheduler-attach-class.md)|このクラスは、現在のコンテキストに既にアタッチされている `Attach` オブジェクトで `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。|
 |[improper_scheduler_detach クラス](improper-scheduler-detach-class.md)|このクラスは、`CurrentScheduler::Detach` オブジェクトの `Attach` メソッドによってスケジューラにアタッチされていないコンテキストで `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。|
@@ -110,7 +110,7 @@ namespace concurrency;
 |[scheduler_not_attached クラス](scheduler-not-attached-class.md)|このクラスは、現在のコンテキストにスケジューラがアタッチされている必要がある操作を実行するときにスケジューラがアタッチされていない場合にスローされる例外を表します。|
 |[scheduler_resource_allocation_error クラス](scheduler-resource-allocation-error-class.md)|このクラスは、コンカレンシー ランタイムでクリティカル リソースを取得できないためにスローされる例外を表します。|
 |[scheduler_worker_creation_error クラス](scheduler-worker-creation-error-class.md)|このクラスは、コンカレンシー ランタイムでワーカー実行コンテキストを作成できないためにスローされる例外を表します。|
-|[SchedulerPolicy クラス](schedulerpolicy-class.md)|`SchedulerPolicy` クラスには、ポリシー要素ごとに 1 つずつ、スケジューラ インスタンスの動作を制御するキーと値のペアのセットが含まれています。|
+|[スケジューラポリシークラス](schedulerpolicy-class.md)|`SchedulerPolicy` クラスには、ポリシー要素ごとに 1 つずつ、スケジューラ インスタンスの動作を制御するキーと値のペアのセットが含まれています。|
 |[simple_partitioner クラス](simple-partitioner-class.md)|`simple_partitioner` クラスは、`parallel_for` によって反復処理される範囲の静的パーティション分割を表します。 パーティショナーは範囲をチャンクに分割します。各チャンクには、少なくともチャンク サイズによって指定された数のイテレーションが含まれます。|
 |[single_assignment クラス](single-assignment-class.md)|`single_assignment` メッセージング ブロックは、一度だけ書き込むことができる `propagator_block` を 1 つ格納できる、複数のターゲットと複数のソースを持つ順序付けられた `message` です。|
 |[single_link_registry クラス](single-link-registry-class.md)|`single_link_registry` オブジェクトは、単一のソース ブロックまたはターゲット ブロックのみを管理する `network_link_registry` です。|
@@ -119,21 +119,21 @@ namespace concurrency;
 |[static_partitioner クラス](static-partitioner-class.md)|`static_partitioner` クラスは、`parallel_for` によって反復処理される範囲の静的パーティション分割を表します。 パーティショナーは、この範囲を、基になるスケジューラで使用できるワーカーと同じ数のチャンクに分割します。|
 |[structured_task_group クラス](structured-task-group-class.md)|`structured_task_group` クラスは、並列処理の高度に構造化されたコレクションを表します。 `structured_task_group` オブジェクトを使用して個々の並列タスクを `task_handle` のキューに配置し、それらのタスクが完了するまで待機するか、実行が完了する前にタスク グループを取り消すことができます。取り消すと、実行が開始されていないタスクはすべて中止されます。|
 |[target_block クラス](target-block-class.md)|`target_block` クラスは、基本的なリンク管理機能と、ターゲットのみのブロックのエラー チェック機能を実現する抽象基底クラスです。|
-|[task クラス (コンカレンシー ランタイム)](task-class.md)|並列パターン ライブラリ (PPL) `task` クラス。 ph x="1" /&gt; オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、およびコンカレンシー ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 また、continuations(`then`)、および join(`when_all`) パターンと choice(`when_any`) パターンを使用して、他のタスクと共に構成することもできます。|
-|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 取り消されたタスクについては、[タスク](task-class.md)の `get()` メソッドによってもスローされます。|
+|[task クラス (同時実行ランタイム)](task-class.md)|並列パターン ライブラリ (PPL) `task` クラス。 ph x="1" /&gt; オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、およびコンカレンシー ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 また、continuations(`then`)、および join(`when_all`) パターンと choice(`when_any`) パターンを使用して、他のタスクと共に構成することもできます。|
+|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 取り消されたタスクについても、タスクのメソッドによってスローされ `get()` ます。 [task](task-class.md)|
 |[task_completion_event クラス](task-completion-event-class.md)|`task_completion_event` クラスを使用すると、条件が満たされるまで、または外部イベントに応答してタスクを開始するまで、タスクの実行を遅延できます。|
 |[task_continuation_context クラス](task-continuation-context-class.md)|`task_continuation_context` クラスを使用すると、継続する場所を指定できます。 UWP アプリからこのクラスを使用する場合にのみ役立ちます。 非 Windows ランタイムアプリの場合、タスクの継続の実行コンテキストはランタイムによって決定され、構成することはできません。|
 |[task_group クラス](task-group-class.md)|`task_group` クラスは、待機または取り消しができる並列処理のコレクションを表します。|
 |[task_handle クラス](task-handle-class.md)|`task_handle` クラスは個々の並列作業項目を表します。 このクラスは、1 つの処理を実行するために必要な命令およびデータをカプセル化します。|
-|[task_options クラス (コンカレンシー ランタイム)](task-options-class-concurrency-runtime.md)|タスクの作成に使用できるオプションを表します。|
+|[task_options クラス (同時実行ランタイム)](task-options-class-concurrency-runtime.md)|タスクの作成に使用できるオプションを表します。|
 |[timer クラス](timer-class.md)|`timer` メッセージング ブロックは単一のターゲットを持つ `source_block` であり、指定された時間の経過後か、特定の間隔で、メッセージをターゲットに送信することができます。|
-|[transformer クラス](transformer-class.md)|`transformer` メッセージング ブロックは、単一のターゲットと複数のソースを持つ順序付けられた `propagator_block` であり、1 つの種類のメッセージを複数受け入れ、別の種類のメッセージを無制限に格納することができます。|
+|[トランスフォーマークラス](transformer-class.md)|`transformer` メッセージング ブロックは、単一のターゲットと複数のソースを持つ順序付けられた `propagator_block` であり、1 つの種類のメッセージを複数受け入れ、別の種類のメッセージを無制限に格納することができます。|
 |[unbounded_buffer クラス](unbounded-buffer-class.md)|`unbounded_buffer` メッセージング ブロックは、メッセージを無制限に格納することができる、複数のターゲットと複数のソースを持つ順序付けられた `propagator_block` です。|
 |[unsupported_os クラス](unsupported-os-class.md)|このクラスは、サポート外のオペレーティング システムが使用された場合にスローされる例外を表します。|
 
 ### <a name="structures"></a>構造体
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[DispatchState 構造体](dispatchstate-structure.md)|`DispatchState` 構造体は、状態を `IExecutionContext::Dispatch` メソッドに転送するために使用されます。 `Dispatch` メソッドが `IExecutionContext` インターフェイスで呼び出される状況を示します。|
 |[IExecutionContext 構造体](iexecutioncontext-structure.md)|特定の仮想プロセッサで実行でき、協調的にコンテキストを切り替えることができる実行コンテキストへのインターフェイスです。|
@@ -150,11 +150,11 @@ namespace concurrency;
 |[IUMSUnblockNotification 構造体](iumsunblocknotification-structure.md)|ブロックされ、スケジューラの指定されたスケジュール コンテキストに制御を戻すことをトリガーされたスレッド プロキシが、ブロック解除され、スケジュールできる状態であることを示す、リソース マネージャーからの通知を表します。 このインターフェイスは、`GetContext` メソッドから返される、スレッド プロキシの関連付けられた実行コンテキストが再スケジュールされると無効になります。|
 |[IVirtualProcessorRoot 構造体](ivirtualprocessorroot-structure.md)|スレッド プロキシが実行できるハードウェア スレッドの抽象化です。|
 |[scheduler_interface 構造体](scheduler-interface-structure.md)|スケジューラ インターフェイス|
-|[scheduler_ptr 構造体 (コンカレンシー ランタイム)](scheduler-ptr-structure-concurrency-runtime.md)|スケジューラへのポインターを表します。 このクラスは、shared_ptr を使用して共有の有効期間を指定できるようにするか、生のポインターを使用して単純な参照のみを許可するために存在します。|
+|[scheduler_ptr 構造体 (同時実行ランタイム)](scheduler-ptr-structure-concurrency-runtime.md)|スケジューラへのポインターを表します。 このクラスは、shared_ptr を使用して共有の有効期間を指定できるようにするか、生のポインターを使用して単純な参照のみを許可するために存在します。|
 
-### <a name="enumerations"></a>列挙体
+### <a name="enumerations"></a>列挙型
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` の有効な状態。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|エージェント ライブラリによって提供されるトレース機能を使用してトレースできるイベントの種類。|
@@ -173,18 +173,18 @@ namespace concurrency;
 
 ### <a name="functions"></a>関数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[Alloc 関数](concurrency-namespace-functions.md#alloc)|コンカレンシー ランタイムのキャッシュ サブアロケータから、指定したサイズのメモリ ブロックを割り当てます。|
 |[asend 関数](concurrency-namespace-functions.md#asend)|オーバーロードされます。 ターゲット ブロックにデータを反映するタスクをスケジュールする非同期送信操作です。|
-|[cancel_current_task 関数](concurrency-namespace-functions.md#cancel_current_task)|現在実行中のタスクを取り消します。 この関数は、タスクの実行を中止して `canceled` 状態に遷移させるために、タスクの本体から呼び出すことができます。<br /><br /> `task` の本体以外では、この関数を呼び出すシナリオはサポートされません。 これを行うと、アプリケーションのクラッシュや停止など、定義されていない動作が発生します。|
+|[cancel_current_task 関数](concurrency-namespace-functions.md#cancel_current_task)|現在実行中のタスクを取り消します。 この関数は、タスクの実行を中止して `canceled` 状態に遷移させるために、タスクの本体から呼び出すことができます。<br /><br /> `task` の本体以外では、この関数を呼び出すシナリオはサポートされません。 これにより、アプリケーションのクラッシュや無応答などの未定義の動作が発生します。|
 |[create_async 関数](concurrency-namespace-functions.md#create_async)|ユーザーが指定したラムダまたは関数オブジェクトに基づいて Windows ランタイムの非同期構造を作成します。 `create_async` の戻り値の型は、`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^`、`IAsyncOperationWithProgress<TResult, TProgress>^` のいずれかで、メソッドに渡されるラムダのシグネチャに基づいています。|
 |[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 PPL[タスク](task-class.md)オブジェクトを作成します。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。|
 |[CreateResourceManager 関数](concurrency-namespace-functions.md#createresourcemanager)|コンカレンシー ランタイムのリソース マネージャーのシングルトン インスタンスを表すインターフェイスを返します。 リソース マネージャーは、相互の連携を必要とするスケジューラにリソースを割り当てます。|
 |[DisableTracing 関数](concurrency-namespace-functions.md#disabletracing)|コンカレンシー ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため非推奨とされます。|
 |[EnableTracing 関数](concurrency-namespace-functions.md#enabletracing)|コンカレンシー ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため非推奨とされます。|
 |[Free 関数](concurrency-namespace-functions.md#free)|以前に `Alloc` メソッドによってコンカレンシー ランタイムのキャッシュ サブアロケータに割り当てられたメモリ ブロックを解放します。|
-|[get_ambient_scheduler 関数 (同時実行ランタイム)](concurrency-namespace-functions.md#get_ambient_scheduler)||
+|[get_ambient_scheduler 関数 (コンカレンシー ランタイム)](concurrency-namespace-functions.md#get_ambient_scheduler)||
 |[GetExecutionContextId 関数](concurrency-namespace-functions.md#getexecutioncontextid)|`IExecutionContext` インターフェイスを実装する実行コンテキストに割り当てることのできる一意識別子を返します。|
 |[GetOSVersion 関数](concurrency-namespace-functions.md#getosversion)|オペレーティング システムのバージョンを返します。|
 |[GetProcessorCount 関数](concurrency-namespace-functions.md#getprocessorcount)|基になるシステム上のハードウェア スレッドの数を返します。|
@@ -207,33 +207,33 @@ namespace concurrency;
 |[receive 関数](concurrency-namespace-functions.md#receive)|オーバーロードされます。 receive の一般的な実装です。これにより、コンテキストで 1 つのソースからのデータを待機し、受け取った値をフィルター処理できます。|
 |[run_with_cancellation_token 関数](concurrency-namespace-functions.md#run_with_cancellation_token)|関数オブジェクトを、指定されたキャンセル トークンのコンテキストですばやく同期的に実行します。|
 |[send 関数](concurrency-namespace-functions.md#send)|オーバーロードされます。 ターゲットがメッセージを受け入れるか拒否するまで待機する同期送信操作です。|
-|[set_ambient_scheduler 関数 (同時実行ランタイム)](concurrency-namespace-functions.md#set_ambient_scheduler)||
+|[set_ambient_scheduler 関数 (コンカレンシー ランタイム)](concurrency-namespace-functions.md#set_ambient_scheduler)||
 |[set_task_execution_resources 関数](concurrency-namespace-functions.md#set_task_execution_resources)|オーバーロードされます。 コンカレンシー ランタイムの内部ワーカー スレッドが使用する実行リソースを、指定された関係セットに制限します。<br /><br /> このメソッドの呼び出しは、リソース マネージャーの作成前、または 2 つのリソース マネージャーの有効期間の間のみ有効です。 これは、呼び出し時にリソース マネージャーが存在しない限り複数回呼び出すことができます。 関係の制限が設定されたら、次の有効な `set_task_execution_resources` メソッド呼び出しまで保持されます。<br /><br /> 指定された関係マスクは、プロセス関係マスクのサブセットである必要はありません。 プロセス関係は必要に応じて更新されます。|
 |[swap 関数](concurrency-namespace-functions.md#swap)|2 つの `concurrent_vector` オブジェクトの要素を交換します。|
-|[task_from_exception 関数 (同時実行ランタイム)](concurrency-namespace-functions.md#task_from_exception)||
-|[task_from_result 関数 (同時実行ランタイム)](concurrency-namespace-functions.md#task_from_result)||
+|[task_from_exception 関数 (コンカレンシー ランタイム)](concurrency-namespace-functions.md#task_from_exception)||
+|[task_from_result 関数 (コンカレンシー ランタイム)](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name 関数](concurrency-namespace-functions.md#trace_agents_register_name)|指定された名前を、ETW トレースのメッセージ ブロックまたはエージェントに関連付けます。|
 |[try_receive 関数](concurrency-namespace-functions.md#try_receive)|オーバーロードされます。 try-receive の一般的な実装です。これにより、コンテキストで 1 つのソースに対してのみデータの検索を実行し、受け取った値をフィルター処理できます。 データが準備されていない場合、メソッドは false を返します。|
 |[wait 関数](concurrency-namespace-functions.md#wait)|指定した時間だけ現在のコンテキストを停止します。|
 |[when_all 関数](concurrency-namespace-functions.md#when_all)|引数として指定されたすべてのタスクが正常に完了したときに正常に完了するタスクを作成します。|
 |[when_any 関数](concurrency-namespace-functions.md#when_any)|オーバーロードされます。 引数として指定されたいずれかのタスクが正常に完了したときに正常に完了するタスクを作成します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator!=](concurrency-namespace-operators.md#operator_neq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しくないかどうかを調べます。|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|オーバーロードされます。 引数として指定された両方のタスクが正常に完了したときに正常に完了するタスクを作成します。|
+|[operator! =](concurrency-namespace-operators.md#operator_neq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しくないかどうかを調べます。|
+|[&&演算子](concurrency-namespace-operators.md#operator_amp_amp)|オーバーロードされます。 引数として指定された両方のタスクが正常に完了したときに正常に完了するタスクを作成します。|
 |[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|オーバーロードされます。 引数として指定されたいずれかのタスクが正常に完了したときに正常に完了するタスクを作成します。|
-|[operator<](concurrency-namespace-operators.md#operator_lt)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより小さいかどうかを調べます。|
+|[<演算子](concurrency-namespace-operators.md#operator_lt)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより小さいかどうかを調べます。|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|演算子の左側の `concurrent_vector` オブジェクトが右側の  `concurrent_vector` オブジェクト以下かどうかを調べます。|
-|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しいかどうかを調べます。|
-|[operator>](concurrency-namespace-operators.md#operator_gt)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより大きいかどうかを調べます。|
+|[operator = =](concurrency-namespace-operators.md#operator_eq_eq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しいかどうかを調べます。|
+|[>演算子](concurrency-namespace-operators.md#operator_gt)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより大きいかどうかを調べます。|
 |[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクト以上であるかどうかを調べます。|
 
 ### <a name="constants"></a>定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|コンカレンシー ランタイムのエージェント ライブラリによって生成される ETW イベントを表すカテゴリの GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})。|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、作業またはタスクに直接関係する ETW イベントを表すカテゴリの GUID。|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、スケジューラ アクティビティに直接関係する ETW イベントを表すカテゴリの GUID。|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、仮想プロセッサに直接関係する ETW イベントを表すカテゴリの GUID。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **Header:** agents、concrt .crt、pplconcrt.h、concurrent_queue、concurrent_unordered_map、concurrent_unordered_set、concurrent_vector、internal_concurrent_hash、internal_split_ordered_list、pplcancellation_token、、ppltasks.h、のようにして、を実行しています。 h、、およびについては次のようになります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[リファレンス](reference-concurrency-runtime.md)
+[参照](reference-concurrency-runtime.md)
