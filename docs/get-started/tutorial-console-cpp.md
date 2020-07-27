@@ -1,23 +1,23 @@
 ---
-title: C++ コンソール アプリ プロジェクトを作成する
+title: C++ でコンソール電卓を作成する
 description: Visual C++ で Hello World コンソール アプリと電卓アプリを作成する
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80079284"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404451"
 ---
-# <a name="create-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトを作成する
+# <a name="create-a-console-calculator-in-c"></a>C++ でコンソール電卓を作成する
 
 ::: moniker range=">=vs-2019"
 
-C++ プログラマーにとってよくある出発点は、コマンド ラインで実行される "Hello, world!" アプリケーションです。 この記事でも、Visual Studio を利用してこのアプリを作成します。その後、もっと難しいアプリ、電卓アプリを作成します。
+C++ プログラマーにとってよくある出発点は、コマンド ラインで実行される "Hello, world!" アプリケーションです。 この記事でも、まず Visual Studio を利用してこのアプリを作成します。その後、もっと難しいアプリ、電卓アプリを作成します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -381,7 +381,7 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 ## <a name="next-steps"></a>次の手順
 
-[Visual Studio for C++ の詳細](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Visual Studio for C++ の詳細](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
@@ -752,6 +752,6 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 ## <a name="next-steps"></a>次の手順
 
-[Visual Studio for C++ の詳細](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Visual Studio for C++ の詳細](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end

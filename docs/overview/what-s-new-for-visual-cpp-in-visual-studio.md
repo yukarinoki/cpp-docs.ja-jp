@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630485"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446871"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -70,7 +70,7 @@ Spectre Variant 1 のリスク軽減サポートを提供するため、`/Qspect
 
 - 並列アルゴリズムのライブラリの実行時の動的リンク検出で、関数ポインターの配列を格納するためにページ全体が使われなくなりました。 このメモリを読み取り専用にすることは、セキュリティのために重要だと見なされなくなりました。
 
-- `std::thread` のコンストラクターでスレッドの開始が待機されなくなり、基になる C ライブラリ `_beginthreadex` と指定された呼び出し可能オブジェクトの間にそれほど多くの関数呼び出しのレイヤーが挿入されなくなりました。 以前の `std::thread` では、`_beginthreadex` と指定された呼び出し可能オブジェクトの間に 6 つの関数が配置されていました。 この数は 3 つのみに減りました。そのうちの 2 つは単に `std::invoke` です。 また、この変更により、`std::thread` の作成とちょうど同じ時間にシステム クロックが変更された場合に `std::thread` のコンストラクターがハングするという、あいまいなタイミングのバグも解決されます。
+- `std::thread` のコンストラクターでスレッドの開始が待機されなくなり、基になる C ライブラリ `_beginthreadex` と指定された呼び出し可能オブジェクトの間にそれほど多くの関数呼び出しのレイヤーが挿入されなくなりました。 以前の `std::thread` では、`_beginthreadex` と指定された呼び出し可能オブジェクトの間に 6 つの関数が配置されていました。 この数は 3 つのみに減りました。そのうちの 2 つは単に `std::invoke` です。 また、この変更により、`std::thread` の作成とちょうど同じ時間にシステム クロックが変更された場合に `std::thread` のコンストラクターが応答を停止するという、あいまいなタイミングのバグも解決されます。
 
 - `std::hash<std::filesystem::path>` を実装する際に導入された `std::hash` のパフォーマンス低下を修正しました。
 
@@ -358,8 +358,8 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 
 ### <a name="conformance-improvements"></a>準拠の強化
 
-- \<any\>、\<string_view\>、`apply()`、`make_from_tuple()` が追加されました。
-- \<optional\>、\<variant\>、`shared_ptr::weak_type`、および \<cstdalign\> が追加されました。
+- \<any\>、\<string_view\>、`apply()`、`make_from_tuple()` を追加しました。
+- \<optional\>、\<variant\>、`shared_ptr::weak_type`、\<cstdalign\> を追加しました。
 - `min(initializer_list)`、`max(initializer_list)`、および `minmax(initializer_list)` で、さらに `min_element()`、`max_element()`、および `minmax_element()` で C++14 `constexpr` が有効になりました。
 
 詳細については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
@@ -590,7 +590,7 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
 元の C++ ワークロードのインストールに対して、より詳細なインストール エクスペリエンスを提供します。 必要なツールだけをインストールできる選択可能なコンポーネントが追加されました。 インストーラーの UI のコンポーネント一覧で示されるインストール サイズは正確ではなく、合計サイズが少なめに表示されます。
 
-C++ デスクトップ ワークロードで Win32 プロジェクトを作成するには、ツールセットと Windows SDK の両方をインストールする必要があります。 推奨される (選択されている) コンポーネント **VC++ 2017 v141 toolset (x86, x64)** と **Windows 10 SDK (10.0.nnnnn)** をインストールすれば、確実に実行できます。 必要なツールがインストールされていない場合、プロジェクトは正常に作成されず、ウィザードがハングします。
+C++ デスクトップ ワークロードで Win32 プロジェクトを作成するには、ツールセットと Windows SDK の両方をインストールする必要があります。 推奨される (選択されている) コンポーネント **VC++ 2017 v141 toolset (x86, x64)** と **Windows 10 SDK (10.0.nnnnn)** をインストールすれば、確実に実行できます。 必要なツールがインストールされていない場合、プロジェクトは正常に作成されず、ウィザードが応答を停止します。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
@@ -598,7 +598,7 @@ Visual C++ Build ツール (以前はスタンドアロン製品として入手�
 
 ## <a name="linux-development-with-c"></a>C++ による Linux 開発
 
-よく利用される拡張機能である [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) が Visual Studio に組み込まれます。 このインストールでは、Linux 環境で実行する C++ アプリケーションの開発とデバッグに必要なすべてのものが提供されます。
+よく利用される拡張機能である [Visual C++ for Linux Development](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) が Visual Studio に組み込まれます。 このインストールでは、Linux 環境で実行する C++ アプリケーションの開発とデバッグに必要なすべてのものが提供されます。
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 バージョン 15.2
 

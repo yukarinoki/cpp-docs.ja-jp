@@ -3,12 +3,12 @@ title: C++ 準拠の強化
 ms.date: 05/18/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630499"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405105"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -177,7 +177,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 [P0887R1 type_identity](https://wg21.link/p0887r1). 非推奨 `std::identity` クラス テンプレート拡張が削除され、C++20 `std::type_identity` メタ関数と `std::identity` 関数オブジェクトに置換されました。 いずれも [/std:c++latest](../build/reference/std-specify-language-standard-version.md) でのみ利用できます。
 
-次の例では、Visual Studio 2017 の `std::identity` (\<type_traits> に定義) に対して非推奨警告 C4996 が生成されます。
+次の例では、Visual Studio 2017 の `std::identity` (\<type_traits> で定義) に対して非推奨警告 C4996 が生成されます。
 
 ```cpp
 #include <type_traits>
@@ -237,7 +237,7 @@ void f() {
 - `basic_string` と `basic_string_view` 向けの `starts_with()` と `ends_with()`。
 - 連想コンテナーの `contains()`。
 - `list` と `forward_list` の `remove()`、`remove_if()`、および `unique()` で `size_type` が返されるようになりました。
-- `shift_left()` と `shift_right()` が \<algorithm> に追加されました。
+- `shift_left()` および `shift_right()` が \<algorithm> に追加されました。
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a> 16.2 の準拠の強化
 
@@ -376,7 +376,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>標準ライブラリの機能強化
 
-- \<charconv>`to_chars()` (固定/科学的表記)。 (16.4 では一般的表記が計画されています。)
+- \<charconv> `to_chars()` (固定/科学的表記)。 (16.4 では一般的表記が計画されています。)
 - [P0020R6](https://wg21.link/p0020r6): atomic\<float>、atomic\<double>、atomic\<long double>
 - [P0463R1](https://wg21.link/p0463r1): エンディアン
 - [P0482R6](https://wg21.link/p0482r6): char8_t のライブラリ サポート
@@ -456,7 +456,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 ### <a name="standard-library-improvements"></a>標準ライブラリの機能強化
 
-非標準のヘッダー \<stdexcpt.h> と \<typeinfo.h> が削除されました。 これらが含まれるコードには、代わりに標準ヘッダー \<exception> と \<typeinfo> をそれぞれ含める必要があります。
+非標準ヘッダーの \<stdexcpt.h> と \<typeinfo.h> が削除されました。 これらが含まれるコードには、代わりに標準ヘッダー \<exception> と \<typeinfo> をそれぞれ含める必要があります。
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a> Visual Studio 2019 バージョン 16.4 の準拠の強化
 
@@ -1288,7 +1288,7 @@ int main()
 
 標準では呼び出されず、C4244 絞り込み警告を誤って非表示にしていた不適切な `static_cast` が `std::string` から削除されました。 `std::string::string(const wchar_t*, const wchar_t*)` を呼び出そうとすると、C4244 `narrowing a wchar_t into a char` が正しく出力されるようになりました。
 
-### <a name="various-filesystem-correctness-fixes"></a>\<filesystem> のさまざまな正確性修正
+### <a name="various-filesystem-correctness-fixes"></a>さまざまな \<filesystem> 正確性の修正
 
 - ディレクトリの最後の書き込み時刻を変更しようとすると失敗する `std::filesystem::last_write_time` が修正されました。
 - `std::filesystem::directory_entry` コンストラクターには、存在しないターゲット パスが指定されたとき、例外をスローせず、エラー結果が格納されるようになりました。
@@ -1322,7 +1322,7 @@ C++ チームのブログ記事「[VS 2017 15.8 での STL の機能と修正](h
 
 - 以前は、`condition_variable::wait_for(seconds::max())` など、同時実行ライブラリに渡されていた一部の時間値がオーバーフローしていました。 このようなオーバーフローが解消され、うわべではランダムの 29 日周期で動作が変わりました (基礎となる Win32 API で受け取られる uint32_t ミリ秒がオーバーフローしたとき)。
 
-- \<ctime> ヘッダーでは、グローバル名前空間で `timespec` と `timespec_get` を宣言することに加え、名前空間 `std` でそれらを正しく宣言できるようになりました。
+- \<ctime> ヘッダーでは、グローバル名前空間で宣言できることに加え、名前空間 `std` で `timespec` と `timespec_get` を正しく宣言できるようになりました。
 
 ### <a name="various-fixes-for-containers"></a>コンテナーのさまざまな修正
 
@@ -1410,7 +1410,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **constexpr*
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11:より多くのライブラリでの SFINAE 式のサポート
 
-コンパイラでは、SFINAE 式のサポートが継続的に改善されています。 これは、**decltype** および **constexpr** 式がテンプレート パラメーターとして使用されるテンプレート引数の演繹と代替のために必要です。 詳細については、「[Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)」 (Visual Studio 2017 RC での SFINAE 式の機能拡張) を参照してください。
+コンパイラでは、SFINAE 式のサポートが継続的に改善されています。 これは、**decltype** および **constexpr** 式がテンプレート パラメーターとして使用されるテンプレート引数の演繹と代替のために必要です。 詳細については、「[Expression SFINAE improvements in Visual Studio 2017 RC](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/)」 (Visual Studio 2017 RC での SFINAE 式の機能拡張) を参照してください。
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14:集計用の NSDMI
 
@@ -1542,7 +1542,7 @@ C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace st
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17: ライブラリ基礎 V1
 
-[P0220R1](https://wg21.link/p0220r1): C++17 用のライブラリ基礎技術仕様が標準に組み込まれています。 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource>、\<experimental/algorithm> の更新内容が含まれています。
+[P0220R1](https://wg21.link/p0220r1): C++17 用のライブラリ基礎技術仕様が標準に組み込まれています。 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource>、\<experimental/algorithm> の更新が含まれています。
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++17:標準ライブラリのクラス テンプレート引数の推論の機能強化
 
