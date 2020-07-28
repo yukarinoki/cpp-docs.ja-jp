@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689635"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182500"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty* \
+*Fty*\
 ラップする関数の型。
 
-*Ax* \
+*Ax*\
 アロケーター関数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、呼び出しシグネチャが `Ret(T1, T2, ..., TN)` の呼び出しラッパーです。 これを使用して、同一形式のラッパーでさまざまな呼び出し可能オブジェクトを囲みます。
+クラステンプレートは、呼び出しシグネチャがである呼び出しラッパーです `Ret(T1, T2, ..., TN)` 。 これを使用して、同一形式のラッパーでさまざまな呼び出し可能オブジェクトを囲みます。
 
 一部のメンバー関数は、目的のターゲット オブジェクトの名前を示すオペランドを取ります。 その場合、オペランドは次のような方法で指定できます。
 
@@ -111,7 +111,7 @@ public:
 |-|-|
 |[function](#function)|空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -122,19 +122,19 @@ public:
 |||
 |-|-|
 |[assign](#assign)|呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。|
-|[swap](#swap)|2 つの呼び出し可能オブジェクトを入れ替えます。|
+|[スワップ](#swap)|2 つの呼び出し可能オブジェクトを入れ替えます。|
 |[target](#target)|格納されている呼び出し可能オブジェクトが指定されたとおりに呼び出し可能かどうかをテストします。|
 |[target_type](#target_type)|呼び出し可能オブジェクトの型情報を取得します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
 |[指定されていない演算子](#op_unspecified)|格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。|
-|[演算子 ()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
-|[operator=](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
+|[operator ()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
+|[operator =](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
 
-## <a name="assign"></a>割り当てる
+## <a name="assign"></a><a name="assign"></a>割り当てる
 
 呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*Func \ (_c)*
+*_Func*\
 呼び出し可能オブジェクト。
 
-*_Fnref* \
+*_Fnref*\
 呼び出し可能オブジェクトを含む参照ラッパー。
 
-*Ax* \
+*Ax*\
 アロケーター オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-各メンバー関数は、`*this` によって保持されている `callable object` を `operand` として渡される呼び出し可能オブジェクトに置き換えます。 両方とも、アロケーターオブジェクト*Ax*を使用してストレージを割り当てます。
+各メンバー関数は、によって保持されているを `callable object` **`*this`** 、として渡される呼び出し可能オブジェクトに置き換え `operand` ます。 両方とも、アロケーターオブジェクト*Ax*を使用してストレージを割り当てます。
 
-## <a name="function"></a>プロシージャ
+## <a name="function"></a><a name="function"></a> 関数
 
 空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。
 
@@ -190,25 +190,25 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 コピーする関数オブジェクト。
 
-*Fx* \
+*Fx*\
 呼び出し可能オブジェクトの型。
 
-*Func \ (_c)*
+*_Func*\
 ラップする呼び出し可能オブジェクト。
 
-*Alloc* \
+*割り当て*\
 アロケーター型。
 
-*Ax* \
+*Ax*\
 アロケーター。
 
-*_Fnref* \
+*_Fnref*\
 ラップする呼び出し可能オブジェクトの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初の 2 つのコンストラクターは、空の `function` オブジェクトを構築します。 次の 3 つのコンストラクターは、オペランドとして渡される呼び出し可能オブジェクトを保持する `function` オブジェクトを構築します。 最後の 2 つのコンス トラクターは、アロケーター オブジェクト Ax を使用してストレージを割り当てます。
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>指定されていない演算子
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a>指定されていない演算子
 
 格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。
 
@@ -290,9 +290,9 @@ g is empty (correct).
 operator unspecified();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子は、オブジェクトが空でない場合にのみ true 値を持つ**ブール**値に変換できる値を返します。 その値を使用して、オブジェクトが空かどうかをテストします。
+この演算子は、 **`bool`** オブジェクトが空でない場合にのみ、true 値を持つに変換可能な値を返します。 その値を使用して、オブジェクトが空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>operator ()
+## <a name="operator"></a><a name="op_call"></a>operator ()
 
 呼び出し可能オブジェクトを呼び出します。
 
@@ -337,15 +337,15 @@ result_type operator()(
 
 ### <a name="parameters"></a>パラメーター
 
-*TN* \
+*TN5250*\
 N 番目の引数の型。
 
-*tN* \
+*Tn5250*\
 N 番目の呼び出しの引数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は `INVOKE(fn, t1, t2, ..., tN, Ret)` を返します。ここで、`fn` は `*this` に保存されるターゲット オブジェクトです。 それを使用してラップされた呼び出し可能オブジェクトを呼び出します。
+このメンバー関数は `INVOKE(fn, t1, t2, ..., tN, Ret)` 、を返し `fn` ます。ここで、はに格納されているターゲットオブジェクト **`*this`** です。 それを使用してラップされた呼び出し可能オブジェクトを呼び出します。
 
 ### <a name="example"></a>例
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 格納されている呼び出し可能オブジェクトを置き換えます。
 
@@ -390,21 +390,21 @@ template <class Fty>
 
 ### <a name="parameters"></a>パラメーター
 
-*npc* \
+*npc*\
 null ポインターの定数。
 
-*右*\
+*そうです*\
 コピーする関数オブジェクト。
 
-*fn* \
+*1億*\
 ラップする呼び出し可能オブジェクト。
 
-*fnref* \
+*fnref*\
 ラップする呼び出し可能オブジェクトの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子はそれぞれ `*this` によって保持されている呼び出し可能オブジェクトを、オペランドとして渡された呼び出し可能オブジェクトに置き換えます。
+各演算子は、によって保持されている呼び出し可能オブジェクトを **`*this`** オペランドとして渡される呼び出し可能オブジェクトに置き換えます。
 
 ### <a name="example"></a>例
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a>result_type
 
 格納された呼び出し可能オブジェクトの戻り値の型。
 
@@ -465,7 +465,7 @@ val == -3
 typedef Ret result_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この typedef は、テンプレートの呼び出しシグネチャ内の型 `Ret` のシノニムです。 それを使用して、ラップされた呼び出し可能オブジェクトの戻り値の型を特定します。
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a>フォト
 
 2 つの呼び出し可能オブジェクトを入れ替えます。
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 入れ替える関数オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、`*this` と*right*の間でターゲットオブジェクトを交換します。 一定時間に実行し、例外をスローしません。
+このメンバー関数は、との間でターゲットオブジェクトを交換し **`*this`** ます。 *right* 一定時間に実行し、例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>接続
+## <a name="target"></a><a name="target"></a> target
 
 格納されている呼び出し可能オブジェクトが指定されたとおりに呼び出し可能かどうかをテストします。
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty2* \
+*Fty2*\
 テスト対象の呼び出し可能オブジェクトの型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型*Fty2*は `T1, T2, ..., TN` 引数型に対して呼び出し可能で、戻り値の型 `Ret` である必要があります。 `target_type() == typeid(Fty2)` の場合、メンバー テンプレート関数は、ターゲット オブジェクトのアドレスを返し、それ以外の場合は、0 を返します。
+型*Fty2*は、引数の型と戻り値の型に対して呼び出し可能である必要があり `T1, T2, ..., TN` `Ret` ます。 `target_type() == typeid(Fty2)` の場合、メンバー テンプレート関数は、ターゲット オブジェクトのアドレスを返し、それ以外の場合は、0 を返します。
 
-型*Fty2*は `T1, T2, ..., TN` 引数型に対して呼び出すことができます。戻り値の `Ret` 型は、`Fty2, T1, T2, ..., TN` 型の左辺値 `fn, t1, t2, ..., tN`、`INVOKE(fn, t1, t2, ..., tN)` が適切な形式であり、`Ret` が**void**でない場合は `Ret` に変換できます。
+型*Fty2*は、引数型に対して呼び出し可能であり `T1, T2, ..., TN` 、型 `Ret` の左辺値の場合、 `fn, t1, t2, ..., tN` それぞれが `Fty2, T1, T2, ..., TN` `INVOKE(fn, t1, t2, ..., tN)` 適切な形式であり、がでない場合はに変換可能である場合は、戻り値の型として使用 `Ret` **`void`** `Ret` できます。
 
 ### <a name="example"></a>例
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a>target_type
 
 呼び出し可能オブジェクトの型情報を取得します。
 
@@ -627,9 +627,9 @@ no target == true
 const std::type_info& target_type() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、`*this` が空の場合、`typeid(void)` を返します。それ以外の場合 `typeid(T)` を返します。`T` はターゲット オブジェクトの型です。
+このメンバー関数は、 `typeid(void)` が空の場合はを返し、それ以外の場合はを **`*this`** 返し `typeid(T)` `T` ます。はターゲットオブジェクトの型です。
 
 ### <a name="example"></a>例
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193654"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -19,13 +19,13 @@ ms.locfileid: "68457900"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<exception>
+**ヘッダー:**\<exception>
 
 **名前空間:** std
 
 ## <a name="members"></a>メンバー
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -45,10 +45,10 @@ ms.locfileid: "68457900"
 |[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|入れ子になっている場合は、をキャストし、例外をスローします。|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|プログラムの終了時に呼び出される新しい `terminate_handler` を設定します。|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|予期しない例外が発生したときに新しい `unexpected_handler` が存在するように設定します。|
-|[terminate](../standard-library/exception-functions.md#terminate)|終了ハンドラーを呼び出します。|
+|[解約](../standard-library/exception-functions.md#terminate)|終了ハンドラーを呼び出します。|
 |[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|入れ子になっている場合は例外をスローします。|
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|スローされた例外が現在処理されている場合にのみ **true** を返します。|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|予期しないハンドラーを呼び出します。|
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|**`true`** スローされた例外が現在処理されている場合にのみ、を返します。|
+|[不適切](../standard-library/exception-functions.md#unexpected)|予期しないハンドラーを呼び出します。|
 
 ### <a name="classes"></a>クラス
 
@@ -60,5 +60,5 @@ ms.locfileid: "68457900"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

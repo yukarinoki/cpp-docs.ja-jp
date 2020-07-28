@@ -1,26 +1,26 @@
 ---
-title: コンパイラ エラー C2131
+title: コンパイラエラー C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220419"
 ---
-# <a name="compiler-error-c2131"></a>コンパイラ エラー C2131
+# <a name="compiler-error-c2131"></a>コンパイラエラー C2131
 
-> 式は定数に評価されませんでした。
+> 式が定数に評価されませんでした
 
-として宣言されている式**const**または**constexpr**コンパイル時定数に評価しませんでした。 コンパイラは、される時点で、式の値を決定できる必要があります。
+またはとして宣言された式 **`const`** は、 **`constexpr`** コンパイル時に定数に評価されませんでした。 コンパイラは、使用されている時点で式の値を判別できる必要があります。
 
 ## <a name="example"></a>例
 
-この例では、エラー C2131、およびその修正方法が発生する方法を示します。
+この例では、エラー C2131 の原因とその修正方法を示します。
 
 ```cpp
 // c2131.cpp

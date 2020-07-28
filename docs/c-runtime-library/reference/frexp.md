@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220705"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -82,15 +82,15 @@ long double frexp(
 
 ## <a name="remarks"></a>解説
 
-**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 未満で*x* = *m* * 2<sup>*n*</sup>よりも大きいことを示します。 整数の指数*n*は、によって示される位置に格納*されます*。
+**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 未満で*x*  =  *m* * 2<sup>*n*</sup>よりも大きいことを示します。 整数の指数*n*は、によって示される位置に格納*されます*。
 
-C++ ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に**double**と**int**ポインターを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に **`double`** とポインターを受け取り、 **`int`** を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**frexp**、 **frexpf**、 **frexpf**|\<math.h>|
 
@@ -123,6 +123,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf、modff、modfl](modf-modff-modfl.md)<br/>

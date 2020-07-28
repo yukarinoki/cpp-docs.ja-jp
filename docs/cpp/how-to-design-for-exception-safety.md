@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187804"
 ---
 # <a name="how-to-design-for-exception-safety"></a>方法: 例外の安全性を設計する
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII 表現を使用してリソースを管理する
 
-例外セーフにするために、関数は `malloc` または**新しい**を使用して割り当てられたオブジェクトが破棄され、例外がスローされた場合でもファイルハンドルなどのすべてのリソースが閉じられるか、解放されることを保証する必要があります。 *リソースの取得は初期化*(RAII) で、このようなリソースの管理を自動変数の有効期間に結び付けます。 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 `vector`、`string`、`make_shared`、`fstream`などのクラスが、リソースの取得を処理することに注意してください。  ただし、リソースの取得はオブジェクトではなくユーザーによって実行されるため、`unique_ptr` と従来の `shared_ptr` の構造は特別です。そのため、リソースの*解放は破棄*としてカウントされますが、RAII としては問題になります。
+例外セーフにするために、関数は、またはを使用して割り当てたオブジェクトが `malloc` **`new`** 破棄され、例外がスローされた場合でもファイルハンドルなどのすべてのリソースが閉じられるか解放されることを確認する必要があります。 *リソースの取得は初期化*(RAII) で、このようなリソースの管理を自動変数の有効期間に結び付けます。 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 `vector`、、 `string` `make_shared` 、 `fstream` 、および類似クラスは、リソースの取得を処理することに注意してください。  ただし、 `unique_ptr` および従来の `shared_ptr` 構造は、リソースの取得がオブジェクトではなくユーザーによって実行されるため、特別なものです。したがって、*リソースの解放は破棄され*ますが、RAII としては問題になります。
 
 ## <a name="the-three-exception-guarantees"></a>3つの例外の保証
 
@@ -119,7 +119,7 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 
 - デストラクターから例外が漏れないようにします。 C++ の基本的な原則は、デストラクターで例外が呼び出し履歴の上方向へ伝達されないようにすることです。 デストラクターで例外をスローする可能性がある操作を実行する必要がある場合は、try catch ブロックで実行し、例外を飲み込む必要があります。 標準ライブラリでは、定義されているすべてのデストラクターでこのことが保証されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[例外C++とエラー処理に関する最新のベストプラクティス](errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[例外とエラー処理に関する最新の C++ のベストプラクティス](errors-and-exception-handling-modern-cpp.md)<br/>
+[方法: 例外的なコードと非例外的なコードの間のインターフェイス](how-to-interface-between-exceptional-and-non-exceptional-code.md)

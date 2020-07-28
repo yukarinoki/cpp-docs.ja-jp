@@ -2,18 +2,18 @@
 title: コンパイラの警告 (レベル 3 および 4) C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cadba931af9c4497ec78938c37f94fe13daab0af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214322"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>コンパイラの警告 (レベル 3 および 4) C4244
 
 'conversion': 'type1' から 'type2' に変換しました。データが失われている可能性があります。
 
-整数型が、より小さい整数の型に変換されています。 Type1*が `int` 場合、および* *type1*が `int`よりも小さい場合、これはレベル4の警告です。 それ以外の場合は、レベル 3 (`unsigned int`型の変数に[__int64](../../cpp/int8-int16-int32-int64.md)型の値が割り当てられます) です。 データが失われた可能性があります。
+整数型が、より小さい整数の型に変換されています。 *Type1*が **`int`** で、かつ type1 がよりも小さい場合*type2* 、これはレベル4の警告です **`int`** 。 それ以外の場合は、レベル3になります (型[__int64](../../cpp/int8-int16-int32-int64.md)の値が型の変数に代入され **`unsigned int`** ます)。 データが失われた可能性があります。
 
 C4244 の場合は、互換性のある型を使用するようにプログラムを変更するか、別のロジックをコードに追加して、変換される値の範囲が使用している型と常に互換性があるようにします。
 

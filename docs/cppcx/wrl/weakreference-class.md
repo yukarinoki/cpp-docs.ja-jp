@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a367a61a029abe1be599b1e262e279402149ccd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220458"
 ---
 # <a name="weakreference-class"></a>WeakReference クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -38,13 +38,13 @@ class WeakReference;
 
 ## <a name="remarks"></a>解説
 
-Windows ランタイムまたはクラシック COM で使用できる*弱い参照*を表します。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。
+Windows ランタイムまたは従来の COM と共に使用できる*弱い参照*を表します。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。
 
-オブジェクト`WeakReference`は、オブジェクトへのポインタである*強い参照*、 およびメソッドによって配布された厳密参照のコピー数である厳密な*参照カウント*を保持します`Resolve()`。 厳密な参照カウントが 0 以外の場合、厳密な参照は有効であり、オブジェクトはアクセス可能です。 厳密な参照カウントが 0 になると、厳密な参照は無効になり、オブジェクトにアクセスできません。
+オブジェクトは、オブジェクトへのポインターである強い参照 `WeakReference` と、メソッドによって配布された強い参照のコピーの数である強い参照*カウント*を保持します*strong reference* `Resolve()` 。 強い参照カウントが0以外の場合、強い参照は有効で、オブジェクトにアクセスできます。 強い参照カウントがゼロになると、強い参照は無効になり、オブジェクトにアクセスできなくなります。
 
-オブジェクト`WeakReference`は通常、外部スレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用されます。 たとえば、ファイル オブジェクト`WeakReference`への参照からオブジェクトを構築します。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。
+オブジェクトは、 `WeakReference` 通常、外部のスレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用されます。 たとえば、 `WeakReference` ファイルオブジェクトへの参照からオブジェクトを構築します。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。
 
-メソッド`WeakReference`はスレッド セーフです。
+`WeakReference`メソッドはスレッドセーフです。
 
 ## <a name="members"></a>メンバー
 
@@ -52,17 +52,17 @@ Windows ランタイムまたはクラシック COM で使用できる*弱い参
 
 名前                                                  | 説明
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[弱い参照::弱い参照](#weakreference)        | `WeakReference` クラスの新しいインスタンスを初期化します。
-[弱い参照::~弱い参照](#tilde-weakreference) | `WeakReference`クラスの現在のインスタンスを初期化解除 (破棄) します。
+[WeakReference:: WeakReference](#weakreference)        | `WeakReference` クラスの新しいインスタンスを初期化します。
+[WeakReference:: ~ WeakReference](#tilde-weakreference) | クラスの現在のインスタンスを破棄 (破棄) `WeakReference` します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                                 | 説明
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[弱い参照::DecrementStrongReference](#decrementstrongreference) | 現在`WeakReference`のオブジェクトの厳密な参照カウントをデクリメントします。
-[弱い参照::インクリメントストロングリファレンス](#incrementstrongreference) | 現在`WeakReference`のオブジェクトの厳密な参照カウントをインクリメントします。
-[弱い参照::解決](#resolve)                                   | 厳密な参照カウントが 0 以外の場合、指定したポインターを現在の厳密な参照値に設定します。
-[弱い参照::設定不明](#setunknown)                             | 現在の`WeakReference`オブジェクトの指定したインターフェイス ポインターへの厳密な参照を設定します。
+[WeakReference::D ecrementStrongReference](#decrementstrongreference) | 現在のオブジェクトの強い参照カウントをデクリメントし `WeakReference` ます。
+[WeakReference:: IncrementStrongReference](#incrementstrongreference) | 現在のオブジェクトの強い参照カウントをインクリメントし `WeakReference` ます。
+[WeakReference:: Resolve](#resolve)                                   | 強い参照カウントが0以外の場合に、指定されたポインターを現在の厳密な参照値に設定します。
+[WeakReference:: SetUnknown](#setunknown)                             | `WeakReference`指定したインターフェイスポインターに現在のオブジェクトの強い参照を設定します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,13 +70,13 @@ Windows ランタイムまたはクラシック COM で使用できる*弱い参
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** 実装.h
+**Header:** を実装します。
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>弱い参照::~弱い参照
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 virtual ~WeakReference();
@@ -86,11 +86,11 @@ virtual ~WeakReference();
 
 ### <a name="remarks"></a>解説
 
-クラスの現在のインスタンスを初期化解除`WeakReference`します。
+クラスの現在のインスタンスを初期化解除 `WeakReference` します。
 
-## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>弱い参照::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::D ecrementStrongReference
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ULONG DecrementStrongReference();
@@ -98,17 +98,17 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>解説
 
-現在`WeakReference`のオブジェクトの厳密な参照カウントをデクリメントします。
+現在のオブジェクトの強い参照カウントをデクリメントし `WeakReference` ます。
 
-厳密な参照カウントが 0 になると、厳密な参照は`nullptr`に設定されます。
+強い参照カウントがゼロになると、強い参照はに設定され **`nullptr`** ます。
 
 ### <a name="return-value"></a>戻り値
 
-デクリメントされた強い参照カウント。
+デクリメントされた厳密な参照カウント。
 
-## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>弱い参照::インクリメントストロングリファレンス
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>WeakReference:: IncrementStrongReference
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ULONG IncrementStrongReference();
@@ -116,15 +116,15 @@ ULONG IncrementStrongReference();
 
 ### <a name="return-value"></a>戻り値
 
-インクリメントされた強い参照カウント。
+インクリメントされた厳密な参照カウント。
 
 ### <a name="remarks"></a>解説
 
-現在`WeakReference`のオブジェクトの厳密な参照カウントをインクリメントします。
+現在のオブジェクトの強い参照カウントをインクリメントし `WeakReference` ます。
 
-## <a name="weakreferenceresolve"></a><a name="resolve"></a>弱い参照::解決
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference:: Resolve
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 STDMETHOD(Resolve)
@@ -138,24 +138,24 @@ STDMETHOD(Resolve)
 *riid*<br/>
 インターフェイス ID。
 
-*オブジェクト*<br/>
-この操作が完了すると、現在の厳密参照のコピー (厳密な参照カウントが 0 以外の場合)。
+*ppvObject*<br/>
+この操作が完了すると、厳密な参照カウントが0以外の場合は、現在の強い参照のコピー。
 
 ### <a name="return-value"></a>戻り値
 
-- この操作が成功し、厳密な参照カウントが 0 である場合にS_OKします。 *ppvObject*パラメータは`nullptr`に設定されます。
+- この操作が成功し、厳密な参照カウントが0の場合に S_OK します。 *PpvObject*パラメーターはに設定されて **`nullptr`** います。
 
-- この操作が成功し、厳密な参照カウントが 0 以外の場合にS_OKします。 *ppvObject*パラメータは、強い参照に設定されます。
+- この操作が成功し、厳密な参照カウントが0以外の場合に S_OK します。 *PpvObject*パラメーターには、強い参照が設定されています。
 
 - それ以外の場合は、この操作が失敗した理由を示す HRESULT。
 
 ### <a name="remarks"></a>解説
 
-厳密な参照カウントが 0 以外の場合、指定したポインターを現在の厳密な参照値に設定します。
+強い参照カウントが0以外の場合に、指定されたポインターを現在の厳密な参照値に設定します。
 
-## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>弱い参照::設定不明
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>WeakReference:: SetUnknown
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 void SetUnknown(
@@ -165,16 +165,16 @@ void SetUnknown(
 
 ### <a name="parameters"></a>パラメーター
 
-*アンク*<br/>
-オブジェクトの`IUnknown`インターフェイスへのポインター。
+*unk*<br/>
+`IUnknown`オブジェクトのインターフェイスへのポインター。
 
 ### <a name="remarks"></a>解説
 
-現在の`WeakReference`オブジェクトの指定したインターフェイス ポインターへの厳密な参照を設定します。
+`WeakReference`指定したインターフェイスポインターに現在のオブジェクトの強い参照を設定します。
 
-## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>弱い参照::弱い参照
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference:: WeakReference
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 WeakReference();
@@ -184,4 +184,4 @@ WeakReference();
 
 `WeakReference` クラスの新しいインスタンスを初期化します。
 
-オブジェクトの`WeakReference`厳密な参照ポインターが に`nullptr`初期化され、厳密な参照カウントが 1 に初期化されます。
+オブジェクトの強い参照ポインター `WeakReference` がに初期化され、 **`nullptr`** 厳密な参照カウントが1に初期化されます。

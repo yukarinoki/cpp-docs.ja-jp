@@ -42,16 +42,16 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: 95b64b96de1919e430a8114678cbb3db2d513c78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9664ee4c671796ad8805c19c93d5a5fd289c80ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189117"
 ---
 # <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull、_strtoull_l、wcstoull、_wcstoull_l
 
-文字列を符号なし長整数の値に変換します。
+文字列を **`unsigned long long`** 整数値に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -102,7 +102,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、入力文字列*Strsource*を**符号なし** **long** **長**整数値に変換します。
+これらの各関数は、入力文字列の*Strsource*を **`unsigned long long`** 整数値に変換します。
 
 **strtoull**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 これは、終端の null 文字である場合もあれば、*基数*以上の最初の数字の場合もあります。 ロケールの**LC_NUMERIC**カテゴリの設定によって、 *strsource*の小数点文字が認識されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **strtoull**と**wcstoull**は現在のロケールを使用します。**_strtoull_l**と **_wcstoull_l**では、渡されたロケールを使用しますが、それ以外の場合は同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -121,13 +121,13 @@ NULL で終わる変換対象の文字列。
 
 **strtoull**は、 *strsource*が次の形式の文字列を指すことを想定しています。
 
-> [*空白*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
+> [*空白*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
 
-*空白*は、空白文字とタブ文字で構成される場合があります。これは無視されます。 *数字*は1桁以上の10進数です。 *文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合、 *strsource*によって指定された文字列の最初の文字が、ベースを決定するために使用されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。 **strtoull**では、正符号**+**() または負**-** 符号 () のプレフィックスを使用できます。先頭の負符号は、戻り値が否定されることを示します。
+*空白*は、空白文字とタブ文字で構成される場合があります。これは無視されます。 *数字*は1桁以上の10進数です。 *文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合、 *strsource*によって指定された文字列の最初の文字が、ベースを決定するために使用されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。 **strtoull**では、正符号 ( **+** ) または負符号 () のプレフィックスを使用でき **-** ます。先頭の負符号は、戻り値が否定されることを示します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
 |**wcstoull**|\<stdlib.h> または \<wchar.h>|
@@ -143,10 +143,10 @@ NULL で終わる変換対象の文字列。
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[文字列から数値への関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

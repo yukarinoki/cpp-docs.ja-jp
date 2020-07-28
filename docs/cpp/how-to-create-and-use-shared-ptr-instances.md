@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245827"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187960"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>例 1
 
-最初にメモリ リソースを作成するときは、可能な限り、[ を作成するために ](../standard-library/memory-functions.md#make_shared)make_shared`shared_ptr` 関数を使用してください。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared` を使用しない場合は、オブジェクトを `new` コンストラクターに渡す前にオブジェクトを作成するために、明示的な `shared_ptr` 式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。
+最初にメモリ リソースを作成するときは、可能な限り、`shared_ptr` を作成するために [make_shared](../standard-library/memory-functions.md#make_shared) 関数を使用してください。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 を使用しない場合は `make_shared` 、 **`new`** コンストラクターに渡す前に、明示的な式を使用してオブジェクトを作成する必要があり `shared_ptr` ます。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="example-4"></a>例 4
 
-`dynamic_pointer_cast`, `static_pointer_cast` および `const_pointer_cast` を使用して、`shared_ptr` をキャストすることができます。 これらの関数は、`dynamic_cast`、`static_cast`、および `const_cast` の各演算子に似ています。 次の例では、基底クラスの `shared_ptr` のベクター内にある各要素の派生型をテストし、要素をコピーし、それらに関する情報を表示する方法を示します。
+`dynamic_pointer_cast`, `static_pointer_cast` および `const_pointer_cast` を使用して、`shared_ptr` をキャストすることができます。 これらの関数は **`dynamic_cast`** 、、、およびの各演算子に似て **`static_cast`** **`const_cast`** います。 次の例では、基底クラスの `shared_ptr` のベクター内にある各要素の派生型をテストし、要素をコピーし、それらに関する情報を表示する方法を示します。
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -116,6 +116,6 @@ int main()
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[スマート ポインター (Modern C++)](smart-pointers-modern-cpp.md)
+[スマートポインター (最新の C++)](smart-pointers-modern-cpp.md)

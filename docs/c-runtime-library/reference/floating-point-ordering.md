@@ -21,16 +21,16 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333704"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220718"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
-2 つの浮動小数点値の順序付けの関係を決定します。
+2つの浮動小数点値間の順序付けリレーションシップを決定します。
 
 ## <a name="syntax"></a>構文
 
@@ -107,33 +107,33 @@ inline bool isunordered(
 ### <a name="parameters"></a>パラメーター
 
 *x*、 *y*<br/>
-比較対象の浮動小数点値。
+比較する浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-すべての比較では、無限大記号が同じは等しいと比較します。 負の無限大とは、有限値または正の無限大より小さいです。 正の無限大では、任意の有限値または負の無限大を超えています。 ゼロでは、符号に関係なく同じです。 Nan は、同じか、または別の NaN を含む、任意の値より大きいよりも小さいではありません。
+すべての比較で、同じ符号の無限大が等しいと見なされます。 負の無限大は、有限値または正の無限大を下回っています。 正の無限大が有限値または負の無限大を超えています。 符号に関係なく、ゼロは等しくなります。 Nan が、他の NaN を含む任意の値よりも小さいか、同じか、または大きい値ではありません。
 
-どちらの引数が NaN の場合、順序付けのマクロが場合**isgreater**、 **isgreaterequal**、**isless**、および**islessequal**ゼロ以外の値を返します場合は値の間で、指定された順序付けリレーションシップ*x*と*y* true を保持します。 これらのマクロは、いずれかまたは両方の引数が Nan である場合、または注文のリレーションシップが false の場合に 0 を返します。 関数フォームは、同様に動作しますが、返す**true**または**false**します。
+どちらの引数も NaN でない場合、順序**付けマクロは**、 *x*と*y*の間に指定された順序付けの関係が true を保持している場合、 **isgreaterequal**、 **isgreater**、および**islessequal**は0以外の値を返します。 これらのマクロは、いずれかまたは両方の引数が Nan の場合、または順序付け関係が false の場合に0を返します。 関数の形式は同じように動作しますが、 **`true`** またはを返し **`false`** ます。
 
-**Islessgreater**マクロは、両方に 0 以外の値を返します*x*と*y* 、Nan でないと*x*かよりも大きいか小さい*y*します。 いずれかまたは両方の引数が Nan の場合、または値が等しい場合は 0 を返します。 関数の形式は、同様に動作が返されます**true**または**false**します。
+*X*と*y*の両方が nan ではなく、 *x*が y よりも小さいか、または*y*より大きい場合、 **isless**マクロは0以外の値を返します。 いずれかまたは両方の引数が Nan の場合、または値が等しい場合は0を返します。 関数フォームは同じように動作しますが、 **`true`** またはを返し **`false`** ます。
 
-**Isunordered**マクロは、いずれかに 0 以外の値を返します*x*、 *y*、または両方に Nan です。 それ以外の場合は、0 を返します。 関数の形式は、同様に動作が返されます**true**または**false**します。
+**Isunordered なし**のマクロは、 *x*、 *y*、またはその両方が nan の場合、0以外の値を返します。 それ以外の場合は 0 を返します。 関数フォームは同じように動作しますが、 **`true`** またはを返し **`false`** ます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの比較操作は、C および C++ としてコンパイルされるときに、テンプレート関数をインラインとしてコンパイルされるときにマクロとして実装されます。
+これらの比較操作は、C としてコンパイルした場合はマクロとして実装され、C++ としてコンパイルされる場合はインラインテンプレート関数として実装されます。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**、 **isgreaterequal**、**isless**、<br/>**islessequal**、 **islessgreater**、 **isunordered** | \<math.h> | \<math.h> または \<cmath> |
+| **isgreater**、 **isgreaterequal**、 **isgreater**、<br/>**islessequal**、 **is不等号** **isunordered** | \<math.h> | \<math.h> または \<cmath> |
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

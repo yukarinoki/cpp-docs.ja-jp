@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404771"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186959"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左シフト演算子と右シフト演算子 ( &gt; &gt; および &lt; &lt; )
 
@@ -176,7 +176,7 @@ int main() {
 
 シフト演算子の両側の式は整数型であることが必要です。 整数の上位変換は、「[標準変換](standard-conversions.md)」で説明されている規則に従って実行されます。 結果の型は、昇格させた*シフト式*の型と同じです。
 
-次の例では、 **char**型の変数は**int**に上位変換されます。
+次の例では、型の変数 **`char`** がに昇格され **`int`** ます。
 
 ```cpp
 #include <iostream>

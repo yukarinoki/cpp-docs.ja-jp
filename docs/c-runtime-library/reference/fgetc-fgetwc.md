@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189286"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -65,7 +65,7 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>戻り値
 
-**fgetc**は、 **int**として読み取られた文字を返すか、または**EOF**を返してエラーまたはファイルの末尾を示します。 **fgetwc**は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返します。または、エラーまたはファイルの末尾を示す**WEOF**を返します。 どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 *Stream*が**NULL**の場合、 **fgetc**および**fgetwc**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
+**fgetc**は、として読み取られた文字を返す **`int`** か、または**EOF**を返してエラーまたはファイルの末尾を示します。 **fgetwc**は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返します。または、エラーまたはファイルの末尾を示す**WEOF**を返します。 どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 *Stream*が**NULL**の場合、 **fgetc**および**fgetwc**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
 
 ## <a name="remarks"></a>解説
 
@@ -89,7 +89,7 @@ wint_t fgetwc(
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> または \<wchar.h>|

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404552"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220549"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>解説
 
-このヘルパー関数は、STDMETHOD マクロを使用することによって生じる不要なオーバーヘッドを除去します。 この関数は、で `IUnknown` `private` はなく型を作成 `virtual` します。
+このヘルパー関数は、STDMETHOD マクロを使用することによって生じる不要なオーバーヘッドを除去します。 この関数は、で `IUnknown` **`private`** はなく型を作成 **`virtual`** します。
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は、 `true` オブジェクト*a*がオブジェクト*b*と等しい場合はを生成します。それ以外の場合はを返し `false` ます。
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しい場合はを生成します。それ以外の場合はを返し **`false`** ます。
 
-2番目と3番目の演算子は、 `true` オブジェクト*a*がと等しい場合はを、 `nullptr` それ以外の場合はを生成します `false` 。
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しい場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は、オブジェクト a がオブジェクト b と等しくない場合はを生成します。 `true` それ以外の場合はを返し*a* *b* `false` ます。
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しくない場合はを、それ以外の場合はを生成 **`false`** します。
 
-2番目と3番目の演算子は、オブジェクト a がと等しくない場合はを生成します。 `true` *a* `nullptr` それ以外の場合はを返し `false` ます。
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しくない場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: ブール型
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスがこのに関連付けられている場合は、 `ComPtr` [bool struct:: Member](boolstruct-structure.md#member)データメンバーのアドレス。それ以外の場合は `nullptr` 。
+インターフェイスがこのに関連付けられている場合は、 `ComPtr` [bool struct:: Member](boolstruct-structure.md#member)データメンバーのアドレス。それ以外の場合は **`nullptr`** 。
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 

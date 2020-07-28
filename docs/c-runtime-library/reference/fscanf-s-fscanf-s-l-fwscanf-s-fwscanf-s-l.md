@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956554"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220692"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
@@ -97,36 +97,36 @@ int _fwscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf_s**および**fwscanf_s**の戻り値は**EOF**になります。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf_s**と**fwscanf_s**の戻り値は**EOF**になります。
 
 これらの関数では、パラメーターの検証が行われます。 *Stream*が無効なファイルポインターの場合、または*format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Fscanf_s**関数は、*ストリーム*の現在位置から、*引数*によって指定された場所 (存在する場合) にデータを読み取ります。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf_s**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。  **fwscanf_s**は、 **fscanf_s**のワイド文字バージョンです。**fwscanf_s**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s**は、現在 UNICODE ストリームからの入力をサポートしていません。
+**Fscanf_s**関数は、*ストリーム*の現在位置から、*引数*によって指定された位置 (存在する場合) にデータを読み取ります。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf_s**の*書式*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。  **fwscanf_s**は**fscanf_s**のワイド文字バージョンです。**fwscanf_s**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s**は、UNICODE ストリームからの入力を現在サポートしていません。
 
-より安全な関数 ( **_s**サフィックスがある) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各**c**、 **c**、 **s**、 **s**、および **[** type] フィールドのサイズを文字単位で指定する必要があることです。変数の直後に引数として渡されます。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
+より安全な関数 ( **_s**サフィックスを持つ) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各**c**、 **c**、 **s**、 **s**、および **[** 型フィールドの文字数を、変数の直後の引数として渡す必要があることです。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターは、 **size_t**ではなく**unsigned**型です。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
 
-**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ftscanf_s (_d)**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
+|**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
 |**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fscanf_s**、 **_fscanf_s_l**|\<stdio.h>|
 |**fwscanf_s**、 **_fwscanf_s_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

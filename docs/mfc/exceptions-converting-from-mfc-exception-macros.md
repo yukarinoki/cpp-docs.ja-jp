@@ -14,18 +14,18 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183813"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>例外処理 : 古いコードの変換
 
 これは高度なトピックです。
 
-この記事では、Microsoft Foundation Class マクロ ( **try**、 **catch**、 **throw**など) で記述された既存のコードを変換し、C++ 例外処理キーワードの**try**、 **catch**、および**throw**を使用する方法について説明します。 取り上げるトピックは次のとおりです。
+この記事では、Microsoft Foundation Class マクロ ( **TRY**、 **CATCH**、 **THROW**など) で記述された既存のコードを変換し、C++ 例外処理キーワード、、およびを使用する方法について説明し **`try`** **`catch`** **`throw`** ます。 取り上げるトピックは次のとおりです。
 
 - [変換の利点](#_core_advantages_of_converting)
 
@@ -39,7 +39,7 @@ ms.locfileid: "84621763"
 
 - C++ の例外処理キーワードを使用するコードは、少し小さいにコンパイルされます。EXE または。DLL.
 
-- C++ の例外処理キーワードは、より汎用性があります。コピー可能な任意のデータ型 (**int**、 **float**、 **char**など) の例外を処理できます。一方、マクロは、派生クラスと派生クラスの例外のみを処理し `CException` ます。
+- C++ の例外処理キーワードは、より汎用性があります。コピーできるデータ型 (、、など) の例外を処理できるのに **`int`** **`float`** 対し、 **`char`** マクロは例外を処理し `CException` ます。
 
 マクロとキーワードの大きな違いは、マクロを "自動的に" 使用するコードは、例外がスコープ外に出たときにキャッチされた例外を削除するということです。 キーワードを使用するコードは、キャッチされた例外を明示的に削除する必要があります。 詳細については、例外の[キャッチと削除](exceptions-catching-and-deleting-exceptions.md)に関する記事を参照してください。
 
@@ -53,7 +53,7 @@ ms.locfileid: "84621763"
 
    クラス名とオブジェクトポインター名の間にコンマがあることに注意してください。
 
-   **Catch**キーワードの例外宣言では、次の構文を使用します。
+   キーワードの例外宣言では、次の **`catch`** 構文を使用します。
 
    **catch (** *exception_type* *exception_name* **)**
 
@@ -63,11 +63,11 @@ ms.locfileid: "84621763"
 
    マクロを使用すると、 **catch**マクロ (引数を含む) が最初の catch ブロックを開始します。**AND_CATCH**マクロは後続の catch ブロックを開始し、 **END_CATCH**マクロは catch ブロックのシーケンスを終了します。
 
-   キーワードを使用すると、 **catch**キーワード (例外宣言を含む) が各 catch ブロックを開始します。 **END_CATCH**マクロに対応するものがありません。catch ブロックは、右中かっこで終わります。
+   キーワードを使用すると、 **`catch`** キーワード (例外宣言を含む) が各 catch ブロックを開始します。 **END_CATCH**マクロに対応するものがありません。catch ブロックは、右中かっこで終わります。
 
 3. Throw 式:
 
-   マクロは、現在の例外を再スローするために**THROW_LAST**を使用します。 引数を指定せずに**throw**キーワードを指定すると、同じ効果があります。
+   マクロは、現在の例外を再スローするために**THROW_LAST**を使用します。 引数を指定せずにキーワードを指定する **`throw`** と、同じ効果があります。
 
 ## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>変換の実行
 
@@ -77,17 +77,17 @@ ms.locfileid: "84621763"
 
 2. 次のマクロのすべての出現箇所を置換または削除します。
 
-   **Try** ( **try**に置き換える)
+   **試してみてください**(に置き換える **`try`** )
 
-   **Catch** ( **catch**に置き換える)
+   **キャッチ**(に置き換える **`catch`** )
 
-   **AND_CATCH** ( **CATCH**に置き換える)
+   **AND_CATCH** (に置き換える **`catch`** )
 
    **END_CATCH** (削除)
 
-   **Throw** ( **throw**に置き換える)
+   **THROW** (に置き換える **`throw`** )
 
-   **THROW_LAST** ( **THROW**に置き換える)
+   **THROW_LAST** (に置き換える **`throw`** )
 
 3. マクロの引数を変更して、有効な例外宣言を形成するようにします。
 
@@ -95,7 +95,7 @@ ms.locfileid: "84621763"
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   to
+   から
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 

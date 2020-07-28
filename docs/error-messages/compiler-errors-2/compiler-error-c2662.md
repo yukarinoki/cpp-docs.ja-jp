@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5e2dd6b01db5f7d3026f14c5032ab4623eb6fb58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220289"
 ---
 # <a name="compiler-error-c2662"></a>コンパイラエラー C2662
 
 ' function ': ' type1 ' から ' type1 ' に ' this ' ポインターを変換することはできません
 
-コンパイラは、`this` ポインターを `type1` から `type2`に変換できませんでした。
+コンパイラは、からへのポインターを変換できませんでした **`this`** `type1` `type2` 。
 
-このエラーは、`const` オブジェクトで非`const` メンバー関数を呼び出すことによって発生することがあります。  考えられる解決策は次のとおりです。
+このエラーは、オブジェクトに対して非メンバー関数を呼び出すことによって発生することがあり **`const`** **`const`** ます。  考えられる解決策は次のとおりです。
 
-- オブジェクト宣言から `const` を削除します。
+- **`const`** オブジェクト宣言からを削除します。
 
-- メンバー関数に `const` を追加します。
+- **`const`** メンバー関数にを追加します。
 
 次の例では、C2662 が生成されます。
 
@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-**/Clr**を使用してコンパイルする場合、`const` または `volatile` 修飾マネージ型で関数を呼び出すことはできません。 マネージクラスの const メンバー関数を宣言することはできないため、const マネージオブジェクトのメソッドを呼び出すことはできません。
+**/Clr**を使用してコンパイルする場合、 **`const`** または修飾されたマネージ型で関数を呼び出すことはできません **`volatile`** 。 マネージクラスの const メンバー関数を宣言することはできないため、const マネージオブジェクトのメソッドを呼び出すことはできません。
 
 ```cpp
 // C2662_b.cpp

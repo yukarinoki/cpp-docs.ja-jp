@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446607"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182747"
 ---
 # <a name="concurrency-namespace-functions"></a>コンカレンシー名前空間の関数
 
@@ -110,7 +110,7 @@ bool asend(
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが返される前にメッセージが受け入れられた場合は**true** 、それ以外の場合は**false** 。
+**`true`** メソッドが返される前にメッセージが受け入れられた場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -199,7 +199,7 @@ IResourceManager* __cdecl CreateResourceManager();
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-PPL[タスク](task-class.md)オブジェクトを作成します。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。
+PPL[タスク](task-class.md)オブジェクトを作成します。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 これは、 **`auto`** タスクの作成時にキーワードを使用できるため、主に便宜上提供されています。
 
 ```cpp
 template<typename T>
@@ -408,7 +408,7 @@ inline void interruption_point();
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-現在のコンテキストで現在インラインで実行されているタスク グループがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。 現在のコンテキストで現在インラインで実行されているタスク グループが存在しない場合は、`false` が返されます。
+現在のコンテキストで現在インラインで実行されているタスク グループがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。 現在のコンテキストで現在インラインで実行されているタスクグループがない場合は、 **`false`** が返されます。
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,7 +416,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>戻り値
 
-現在実行中のタスクグループがキャンセルされている場合は**true** 、それ以外の場合は**false** 。
+**`true`** 現在実行中のタスクグループがキャンセルされている場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -679,7 +679,7 @@ C++ 標準ライブラリ互換メモリアロケーターの型。
 C++ 標準ライブラリ互換メモリアロケーターのインスタンス。
 
 *_Func*<br/>
-順序の連続する要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。
+順序の連続する要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は、2つの引数を受け取り、満たされると満たされない場合はを返し **`true`** **`false`** ます。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。
 
 *_Chunk_size*<br/>
 並列実行のために2つに分割されるチャンクの最低限サイズ。
@@ -767,7 +767,7 @@ void parallel_for(
 各反復処理で実行される関数。 ラムダ式、関数ポインター、またはシグネチャを持つ関数呼び出し演算子のバージョンをサポートする任意のオブジェクトを指定でき `void operator()(_Index_type)` ます。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます `const` [auto_partitioner](auto-partitioner-class.md) `&` `const` [static_partitioner](static-partitioner-class.md) `&` `const` [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 ### <a name="remarks"></a>解説
 
@@ -811,7 +811,7 @@ void parallel_for_each(
 範囲内の各要素に適用されるユーザー定義関数オブジェクト。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます `const` [auto_partitioner](auto-partitioner-class.md) `&` `const` [static_partitioner](static-partitioner-class.md) `&` `const` [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 ### <a name="remarks"></a>解説
 
@@ -1209,7 +1209,7 @@ inline void parallel_sort(
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *_Func*<br/>
-順序の連続する要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。
+順序の連続する要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は、2つの引数を受け取り、満たされると満たされない場合はを返し **`true`** **`false`** ます。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。
 
 *_Chunk_size*<br/>
 並列実行のために2つに分割されるチャンクの最小サイズ。
@@ -1325,7 +1325,7 @@ first2,
 ソース範囲内の各要素に適用されるユーザー定義の単項関数オブジェクト。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます `const` [auto_partitioner](auto-partitioner-class.md) `&` `const` [static_partitioner](static-partitioner-class.md) `&` `const` [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 *first2*<br/>
 操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。
@@ -1452,7 +1452,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが受け入れられた場合は**true** 、それ以外の場合は**false** 。
+**`true`** メッセージが受け入れられた場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -1605,7 +1605,7 @@ void Trace_agents_register_name(
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-try-receive の一般的な実装です。これにより、コンテキストで 1 つのソースに対してのみデータの検索を実行し、受け取った値をフィルター処理できます。 データの準備ができていない場合、メソッドは**false**を返します。
+try-receive の一般的な実装です。これにより、コンテキストで 1 つのソースに対してのみデータの検索を実行し、受け取った値をフィルター処理できます。 データの準備ができていない場合、メソッドはを返し **`false`** ます。
 
 ```cpp
 template <class T>
@@ -1643,7 +1643,7 @@ bool try_receive(
 
 ### <a name="return-value"></a>戻り値
 
-`bool`ペイロードがに配置されたかどうかを示す値 `_value` 。
+**`bool`** ペイロードがに配置されたかどうかを示す値 `_value` 。
 
 ### <a name="remarks"></a>解説
 
@@ -1692,11 +1692,11 @@ auto when_all(
 結果のタスクに組み込まれる要素範囲外にある最初の要素の位置。
 
 *_TaskOptions*<br/>
-`task_options` オブジェクトです。
+`task_options` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-すべての入力タスクが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
+すべての入力タスクが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>>` になります。 入力タスクの種類がである場合は、 **`void`** 出力タスクもになり `task<void>` ます。
 
 ### <a name="remarks"></a>解説
 
@@ -1749,7 +1749,7 @@ auto when_any(
 
 ### <a name="return-value"></a>戻り値
 
-入力したタスクのいずれかが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::pair<T, size_t>>>` になります。ここでは、pair の最初の要素は完了したタスクの結果であり、2 番目の要素は完了したタスクのインデックスです。 入力したタスクの種類が `void` である場合、出力は `task<size_t>` になります。この場合、結果は完了したタスクのインデックスです。
+入力したタスクのいずれかが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::pair<T, size_t>>>` になります。ここでは、pair の最初の要素は完了したタスクの結果であり、2 番目の要素は完了したタスクのインデックスです。 入力タスクの種類がである場合、出力はになります。結果は、完了した **`void`** `task<size_t>` タスクのインデックスです。
 
 ### <a name="remarks"></a>解説
 

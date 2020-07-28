@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220497"
 ---
 # <a name="enableif-structure"></a>EnableIf 構造体
 
@@ -38,15 +38,15 @@ struct EnableIf<true, T>;
 
 ## <a name="remarks"></a>解説
 
-最初のテンプレートパラメーターが**true**と評価された場合に、2番目のテンプレートパラメーターによって指定された型のデータメンバーを定義します。
+最初のテンプレートパラメーターがに評価される場合、2番目のテンプレートパラメーターによって指定された型のデータメンバーを定義し **`true`** ます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`type`|テンプレートパラメーター *b*が**true**と評価された場合、部分的特殊化は `T`型である `type` データメンバーを定義します。|
+|`type`|テンプレートパラメーター *b*がと評価 **`true`** された場合、部分的特殊化はデータメンバー `type` を型として定義し `T` ます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,6 +58,6 @@ struct EnableIf<true, T>;
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

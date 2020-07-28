@@ -1,5 +1,5 @@
 ---
-title: メモリ割り当て
+title: メモリの割り当て
 ms.date: 11/04/2016
 f1_keywords:
 - c.memory
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2adfd0de21a5dc7a1f3aa65041a6b8a9a9cf1d69
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189507"
 ---
-# <a name="memory-allocation"></a>メモリ割り当て
+# <a name="memory-allocation"></a>メモリの割り当て
 
 これらのルーチンを使用して、メモリを割り当て、解放、および再割り当てします。
 
 ## <a name="memory-allocation-routines"></a>メモリ割り当てルーチン
 
-|ルーチンによって返される値|使用|
+|ルーチンによって返される値|用途|
 |-------------|---------|
 |[_alloca](../c-runtime-library/reference/alloca.md)、[_malloca](../c-runtime-library/reference/malloca.md)|スタックからメモリを割り当てます。|
 |[calloc](../c-runtime-library/reference/calloc.md)|配列の記憶域を割り当て、割り当てられたブロック内のすべてのバイトを 0 に初期化します。|
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|**calloc** のデバッグ バージョン。ランタイム ライブラリのデバッグ バージョンでのみ使用できます。|
-|[operator delete](../c-runtime-library/operator-delete-crt.md)|割り当てられたブロックを解放します。|
+|[delete 演算子](../c-runtime-library/operator-delete-crt.md)|割り当てられたブロックを解放します。|
 |[operator delete&#91;&#93;](../c-runtime-library/delete-operator-crt.md)|割り当てられたブロックを解放します。|
 |[_expand](../c-runtime-library/reference/expand.md)|メモリ ブロックを移動しないで拡大および縮小します。|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|**_expand** のデバッグ バージョン。ランタイム ライブラリのデバッグ バージョンでのみ使用できます。|
-|[free](../c-runtime-library/reference/free.md)|割り当てられたブロックを解放します。|
+|[空け](../c-runtime-library/reference/free.md)|割り当てられたブロックを解放します。|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|**free** のデバッグ バージョン。ランタイム ライブラリのデバッグ バージョンでのみ使用できます。|
 |[_freea](../c-runtime-library/reference/freea.md)|スタックから割り当てられたブロックを解放します。|
 |[_get_heap_handle](../c-runtime-library/reference/get-heap-handle.md)|CRT ヒープの Win32 HANDLE を取得します。|
@@ -49,7 +49,7 @@ ms.locfileid: "57742792"
 |[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|**malloc** に対して **_set_new_mode** によって設定された新しいハンドラー モードを示す整数を返します|
 |[realloc](../c-runtime-library/reference/realloc.md)|ブロックを新しいサイズに再割り当てします。|
 |[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|**realloc** のデバッグ バージョン。ランタイム ライブラリのデバッグ バージョンでのみ使用できます。|
-|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|**new** 演算子が (メモリの割り当てに) 失敗したときにエラー処理機構を有効にし、C++ 標準ライブラリのコンパイルを有効にします|
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|演算子が失敗したときに **`new`** (メモリを割り当てて)、C++ 標準ライブラリのコンパイルを有効にすると、エラー処理機構が有効になります。|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|**malloc** の新しいハンドラー モードを設定します。|
 
 ## <a name="see-also"></a>関連項目
