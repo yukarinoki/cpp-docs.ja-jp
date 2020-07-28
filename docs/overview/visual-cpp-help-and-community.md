@@ -3,12 +3,12 @@ title: Visual C++ のヘルプおよびコミュニティ
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "75791694"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405079"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
 
@@ -18,13 +18,13 @@ ms.locfileid: "75791694"
 
 |Title|説明|
 |-----------|-----------------|
-|[開発者コード サンプル](https://code.msdn.microsoft.com/)|Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。|
+|[開発者コード サンプル](https://docs.microsoft.com/samples)|Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。|
 
 ## <a name="product-documentation"></a>製品ドキュメント
 
 |Title|説明|
 |-----------|-----------------|
-|[Visual Studio での C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。 MSDN ライブラリの一部です。|
+|[Visual Studio での C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。|
 |[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 10 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
 
 ### <a name="online-and-offline-documentation"></a>オンラインおよびオフラインのドキュメント
@@ -39,7 +39,7 @@ Microsoft デベロッパー コンテンツをオンラインで見ることが
 
 |Title|説明|
 |-----------|-----------------|
-|[Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)|Visual C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。|
+|[C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/)|Microsoft の C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。|
 |[Channel 9](https://channel9.msdn.com/)|ビデオ インタビューや講義が含まれています。 C++ コンテンツを検索するには、Channel 9 ホーム ページの検索ボックスを使用します。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Visual Studio および関連する開発ツールに関する記事やニュースが含まれています。|
-|[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/home?category=visualc)と[開発者コミュニティ](https://developercommunity.visualstudio.com)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|
+|[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/)と Visual Studio [Developer Community](https://developercommunity.visualstudio.com)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|
