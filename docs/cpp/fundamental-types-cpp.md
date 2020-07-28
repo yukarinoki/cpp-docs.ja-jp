@@ -1,4 +1,4 @@
----
+﻿---
 title: 組み込み型 (C++)
 ms.date: 12/11/2019
 f1_keywords:

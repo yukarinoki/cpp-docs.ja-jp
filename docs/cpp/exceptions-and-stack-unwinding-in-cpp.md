@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ での例外とスタック アンワインド
 ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed

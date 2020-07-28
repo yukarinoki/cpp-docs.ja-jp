@@ -1,4 +1,4 @@
----
+﻿---
 title: strtold、_strtold_l、wcstold、_wcstold_l
 ms.date: 4/2/2020
 api_name:

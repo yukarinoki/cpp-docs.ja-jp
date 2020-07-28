@@ -1,4 +1,4 @@
----
+﻿---
 title: steady_clock 構造体
 ms.date: 05/22/2018
 f1_keywords:

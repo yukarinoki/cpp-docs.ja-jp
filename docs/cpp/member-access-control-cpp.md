@@ -1,4 +1,4 @@
----
+﻿---
 title: メンバー アクセス コントロール (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -16,6 +16,7 @@ ms.locfileid: "81369859"
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
 アクセス コントロールを使用すると、クラスの[パブリック](../cpp/public-cpp.md)インターフェイスを[、派生](../cpp/private-cpp.md)クラスでのみ使用するプライベート実装の詳細と[保護された](../cpp/protected-cpp.md)メンバーから分離できます。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
+
 
 ```cpp
 class Point

@@ -1,4 +1,4 @@
----
+﻿---
 title: 標準変換
 ms.date: 10/02/2019
 helpviewer_keywords:

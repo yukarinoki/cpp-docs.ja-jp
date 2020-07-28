@@ -1,4 +1,4 @@
----
+﻿---
 title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
 api_name:

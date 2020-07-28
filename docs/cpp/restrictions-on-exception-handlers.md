@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外ハンドラーに対する制限
 ms.date: 11/04/2016
 helpviewer_keywords:

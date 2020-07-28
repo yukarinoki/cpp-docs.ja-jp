@@ -1,4 +1,4 @@
----
+﻿---
 title: try、throw、および catch ステートメント (C++)
 ms.date: 11/04/2016
 f1_keywords:

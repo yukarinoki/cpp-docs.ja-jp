@@ -1,4 +1,4 @@
----
+﻿---
 title: C (構造化) と例外C++の混合
 ms.date: 08/14/2018
 helpviewer_keywords:

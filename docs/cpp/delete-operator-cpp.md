@@ -1,4 +1,4 @@
----
+﻿---
 title: delete 演算子 (C++)
 ms.date: 08/12/2019
 f1_keywords:

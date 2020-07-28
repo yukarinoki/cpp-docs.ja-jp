@@ -1,4 +1,4 @@
----
+﻿---
 title: _query_new_mode
 ms.date: 11/04/2016
 api_name:

@@ -1,4 +1,4 @@
----
+﻿---
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:

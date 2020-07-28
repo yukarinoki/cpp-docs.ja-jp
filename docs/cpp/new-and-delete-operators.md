@@ -1,4 +1,4 @@
----
+﻿---
 title: new および delete 演算子
 description: C++ 言語の new および delete 演算子を使用すると、割り当てを制御できます。
 ms.date: 07/07/2020

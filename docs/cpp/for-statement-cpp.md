@@ -1,4 +1,4 @@
----
+﻿---
 title: for ステートメント (C++)
 description: ステートメントの標準 C++ への参照です。
 f1_keywords:

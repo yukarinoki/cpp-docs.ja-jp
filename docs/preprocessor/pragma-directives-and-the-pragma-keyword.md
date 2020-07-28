@@ -1,4 +1,4 @@
----
+﻿---
 title: プラグマ ディレクティブと __pragma キーワード
 ms.date: 08/29/2019
 f1_keywords:

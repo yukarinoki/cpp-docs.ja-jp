@@ -1,4 +1,4 @@
----
+﻿---
 title: '例外処理のタイミング: 概要'
 ms.date: 05/07/2019
 helpviewer_keywords:

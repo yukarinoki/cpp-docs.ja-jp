@@ -1,4 +1,4 @@
----
+﻿---
 title: expm1、expm1f、expm1l
 ms.date: 04/05/2018
 api_name:

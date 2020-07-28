@@ -1,4 +1,4 @@
----
+﻿---
 title: try-finally ステートメント
 ms.date: 11/19/2018
 f1_keywords:
@@ -76,7 +76,7 @@ ms.locfileid: "82825897"
 
 以前のバージョンとの互換性を保つために、 **_try**、 **_finally**、および **_leave**は、コンパイラオプションである [[言語\(拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、 **__try**、 **__finally**、および **__leave**のシノニムです。
 
-## <a name="the-__leave-keyword"></a>__leave キーワード
+## <a name="the-leave-keyword"></a>__leave キーワード
 
 **__Leave**キーワードは、 **try-catch**ステートメントの保護されたセクション内でのみ有効であり、その結果、保護されたセクションの末尾に移動します。 実行は、終了ハンドラーの最初のステートメントに移って続行されます。
 

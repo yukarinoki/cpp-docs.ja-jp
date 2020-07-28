@@ -1,4 +1,4 @@
----
+﻿---
 title: remainder、remainderf、remainderl
 ms.date: 4/2/2020
 api_name:

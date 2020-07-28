@@ -1,4 +1,4 @@
----
+﻿---
 title: 関数テンプレートの明示的特殊化
 ms.date: 11/04/2016
 helpviewer_keywords:

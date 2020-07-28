@@ -1,4 +1,4 @@
----
+﻿---
 title: 'アドレス演算子: &amp;'
 ms.date: 11/04/2016
 f1_keywords:

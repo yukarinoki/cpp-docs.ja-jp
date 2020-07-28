@@ -1,4 +1,4 @@
----
+﻿---
 title: /Zc:ternary (条件演算子ルールの強制)
 ms.date: 09/12/2019
 f1_keywords:

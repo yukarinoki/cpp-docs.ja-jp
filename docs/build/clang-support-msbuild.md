@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio の Visual Studio プロジェクトでの Clang/LLVM のサポート
 ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.

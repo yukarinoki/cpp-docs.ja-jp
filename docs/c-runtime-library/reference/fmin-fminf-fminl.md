@@ -1,4 +1,4 @@
----
+﻿---
 title: fmin、fminf、fminl
 ms.date: 04/05/2018
 api_name:

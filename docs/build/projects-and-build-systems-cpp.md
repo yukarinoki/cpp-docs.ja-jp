@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio の C/C++ プロジェクトとビルド システム
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
 ms.date: 07/17/2019
@@ -30,6 +30,8 @@ C++ の基本的なコンパイルには、次の 3 つの主要な手順が含�
 - C++ プリプロセッサによって、各ソース ファイル内のすべての # ディレクティブとマクロの定義が変換されます。 これにより、"*翻訳単位*" が作成されます。
 - C++ コンパイラによって、各翻訳単位がオブジェクト ファイル (.obj) にコンパイルされます。設定されているすべてのコンパイラ オプションが適用されます。
 - "*リンカー*" によって、オブジェクト ファイルが単一の実行可能ファイルにマージされます。設定されているリンカー オプションが適用されます。
+
+
 
 ## <a name="the-msvc-toolset"></a>MSVC ツールセット
 

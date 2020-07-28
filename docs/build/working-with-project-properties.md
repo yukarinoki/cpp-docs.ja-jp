@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio で C++ コンパイラとビルド プロパティを設定する
 description: Visual Studio IDE を使用して、C++ コンパイラ オプション、リンカー オプション、およびその他のビルド設定を変更します。
 ms.date: 07/17/2019

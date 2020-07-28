@@ -1,4 +1,4 @@
----
+﻿---
 title: ポインター (C++)
 ms.date: 11/19/2019
 description: Microsoft C++ の生のポインターとスマート ポインターについて。

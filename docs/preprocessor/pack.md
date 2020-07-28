@@ -1,4 +1,4 @@
----
+﻿---
 title: pack プラグマ
 ms.date: 11/11/2019
 f1_keywords:

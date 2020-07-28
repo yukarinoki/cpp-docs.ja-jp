@@ -1,4 +1,4 @@
----
+﻿---
 title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: if-else ステートメント (C++)
 ms.date: 07/20/2019
 description: のC++ if-else ステートメントを使用して、条件分岐を制御します。
