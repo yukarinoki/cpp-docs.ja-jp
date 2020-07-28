@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755916"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214764"
 ---
 # <a name="compiler-error-c2146"></a>コンパイラ エラー C2146
 
 構文エラー: 識別子 ' identifier ' の前に ' token ' がありません。
 
-コンパイラは `token` を予期していましたが、代わりに `identifier` 見つかりました。  次の原因が考えられます。
+コンパイラが予期 `token` していましたが、代わりに見つかりました `identifier` 。  考えられる原因:
 
 1. スペルまたは大文字小文字のエラー。
 
@@ -25,7 +25,7 @@ ms.locfileid: "74755916"
 
 このエラーは、タイポグラフィエラーが原因で発生する可能性があります。 通常、エラー [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)はこのエラーの前にあります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2146 が生成されます。
 
@@ -44,9 +44,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。 `typename` キーワードがありません。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。キーワードがありません **`typename`** 。
 
 次のサンプルは、Visual Studio .NET 2002 ではコンパイルされますが、Visual Studio .NET 2003 では失敗します。
 
@@ -69,11 +69,11 @@ template <typename T>
 typename X<T>::Y func() { }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果としても表示されます。明示的な特殊化では、プライマリテンプレートからテンプレートパラメーターが見つからなくなりました。
 
-プライマリテンプレートからの `T` の使用は、明示的な特殊化では許可されていません。 Visual Studio .NET 2003 と Visual Studio .NET でコードを有効にするには、特殊化のテンプレートパラメーターのすべてのインスタンスを明示的に特殊化された型で置き換えます。
+`T`プライマリテンプレートからのの使用は、明示的な特殊化では許可されていません。 Visual Studio .NET 2003 と Visual Studio .NET でコードを有効にするには、特殊化のテンプレートパラメーターのすべてのインスタンスを明示的に特殊化された型で置き換えます。
 
 次のサンプルは、Visual Studio .NET ではコンパイルされますが、Visual Studio .NET 2003 では失敗します。
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220744"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -66,28 +66,28 @@ long double cabsl(
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*<br/>
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
 *Z*の絶対値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**値または **_Lcomplex**値を受け取る**cab**のオーバーロードを呼び出し、 **float**型または**long** **double**型の値を返すことができます。 C プログラムでは、 **cab**は常に、 **double**型の**値を取得**し、double 値を返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex**または **_Lcomplex**値を受け取り、値または値を返す**cab**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **cab**は常に **_Dcomplex**値を受け取り、 **`double`** 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**キャビネット**、 **cabsf**、 **cabsf**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>

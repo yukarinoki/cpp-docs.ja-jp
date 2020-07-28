@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172153"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214270"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -45,7 +45,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>パラメーター
 
 *cv_qualifier*<br/>
-**const** または **volatile** 修飾子。
+**`const`** または **`volatile`** 修飾子。
 
 *type*<br/>
 *initializer* の型。
@@ -66,17 +66,17 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 内部ポインターはスタックにのみ存在するため、内部ポインターのアドレスを取得すると、アンマネージ ポインターが発生します。
 
-**interior_ptr** には**bool** への暗黙的な変換があり、これにより、条件付きステートメントで使用することができます。
+**interior_ptr**にはへの暗黙的な変換があり **`bool`** 、これによって条件付きステートメントで使用できます。
 
 ガベージ コレクション ヒープ上に移動できないオブジェクトを指す内部ポインターを宣言する方法については、[pin_ptr](pin-ptr-cpp-cli.md) を参照してください。
 
-**interior_ptr** は cli 名前空間に存在します。  詳細については、「[Platform, default, and cli Namespaces (プラットフォーム、既定、および cli 名前空間)](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
+**interior_ptr** は cli 名前空間に存在します。  詳細については、「[プラットフォーム、既定、および cli 名前空間](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
 
 内部ポインターの詳細については、以下を参照してください。
 
 - [方法: 内部ポインターおよびマネージド配列を宣言および使用する (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [方法: interior_ptr キーワードを使用して値型を宣言する (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
 - [方法: 内部ポインターとネイティブ ポインターを使用して関数をオーバーロードする (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

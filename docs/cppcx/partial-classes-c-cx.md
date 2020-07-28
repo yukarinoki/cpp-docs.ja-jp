@@ -2,12 +2,12 @@
 title: 部分クラス (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740473"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185464"
 ---
 # <a name="partial-classes-ccx"></a>部分クラス (C++/CX)
 
@@ -17,23 +17,23 @@ ms.locfileid: "70740473"
 
 部分クラスを定義するには、通常のクラス定義のクラス キーの直前に `partial` キーワードを使用します。 `partial ref class` などのキーワードは、空白文字を含むコンテキスト キーワードです。 部分定義は、次の構造体でサポートされています。
 
-- `class` または `struct`
+- **`class`** または **`struct`**
 
-- `ref class` または `ref struct`
+- **`ref class`** または **`ref struct`**
 
-- `value class` または `value struct`
+- **`value class`** または **`value struct`**
 
-- `enum` または `enum class`
+- **`enum`** または **`enum class`**
 
-- `ref interface`、 `interface class`、 `interface struct`、または `__interface`
+- `ref interface`、 **`interface class`** 、 **`interface struct`** 、または **' __interface**
 
-- `union`
+- **`union`**
 
-この例は、部分的な `ref class`を示しています。
+この例は、部分的なを示してい **`ref class`** ます。
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>目次
+## <a name="contents"></a>内容
 
 部分クラス定義には、 `partial` キーワードを省略した場合に完全クラス定義に含めることができるすべてのものを含めることができます。 1 つの例外を除き、これには、基底クラス、データ メンバー、メンバー関数、列挙体、フレンド宣言、および属性など、任意の有効な構造体が含まれます。 また、静的データ メンバーのインライン定義が許可されています。
 
@@ -61,7 +61,7 @@ ms.locfileid: "70740473"
 
 1 つのクラスに関する部分クラス定義のそれぞれは、構文上、そのクラスに関する 1 つの完全定義より前に記述する必要がありますが、そのクラスの事前宣言より前に記述する必要はありません。 クラスの完全定義がない場合、部分クラス宣言に指定できるのは事前宣言のみです。
 
-`class` や `struct` などのすべてのクラス キーは一致する必要があります。 たとえば、 `partial class X {}; struct X {};`という名前のみ説明します。
+やなどのすべてのクラス **`class`** キー **`struct`** が一致している必要があります。 たとえば、 `partial class X {}; struct X {};`という名前のみ説明します。
 
 次の例は、数字と順序を示しています。 最後の部分宣言は、クラスが既に定義されているため失敗します。
 
@@ -81,13 +81,13 @@ ms.locfileid: "70740473"
 
 部分クラスをテンプレートとして指定することはできません。
 
-## <a name="restrictions"></a>制約
+## <a name="restrictions"></a>制限
 
 部分クラスが、1 つの翻訳単位の範囲を越えることはできません。
 
-`partial` キーワードは、 `ref class` キーワードまたは `value class` キーワードと組み合わせた場合のみサポートされます。
+キーワードは、キーワード `partial` またはキーワードと組み合わせた場合にのみサポートされ **`ref class`** **`value class`** ます。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、2 つのコード ファイルにまたがって `Address` クラスを定義しています。 デザイナーは `Address.details.h` を変更し、ユーザーは `Address.h`を変更します。 最初のファイルのクラス定義のみ、 `partial` キーワードを使用します。
 
@@ -99,4 +99,4 @@ ms.locfileid: "70740473"
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
 [C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[名前空間参照](../cppcx/namespaces-reference-c-cx.md)
+[名前空間のリファレンス](../cppcx/namespaces-reference-c-cx.md)

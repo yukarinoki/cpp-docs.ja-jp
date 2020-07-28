@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 638b5dbca1b3c0c9b9c9c946418ea70354ff6266
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179992"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220562"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>関数テンプレートの明示的特殊化
 
@@ -23,7 +23,7 @@ ms.locfileid: "80179992"
 template<> void MySwap(double a, double b);
 ```
 
-この宣言により、 **double**変数に対して別の関数を定義できます。 非テンプレート関数と同様に、標準型変換 ( **float**型の変数の昇格**など) が**適用されます。
+この宣言により、変数に別の関数を定義でき **`double`** ます。 非テンプレート関数と同様に、標準型変換 (型の変数の昇格など **`float`** **`double`** ) が適用されます。
 
 ## <a name="example"></a>例
 
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数テンプレート](../cpp/function-templates.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2516
 ms.assetid: cd3accc1-0179-4a13-9587-616908c4ad1d
-ms.openlocfilehash: fb0636edd621de06bea553c9975626249ae06d80
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 678c90c5f4d41b0a05bbb07f2aada82e9bfcdb1e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746501"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214660"
 ---
 # <a name="compiler-error-c2516"></a>コンパイラ エラー C2516
 
 ' name ': 有効な基底クラスではありません
 
-クラスは、`typedef` ステートメントによって定義された型名から派生します。
+クラスは、ステートメントで定義された型名から派生 **`typedef`** します。
 
 次の例では、C2516 が生成されます。
 

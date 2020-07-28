@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189676"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT ロケール名、言語、および国/地域識別文字列
 
@@ -34,7 +34,7 @@ ms.locfileid: "86373551"
 
 ロケールを指定するためにコード ページだけを使用する場合、ユーザーの既定の言語と国または地域 ([GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename) で報告される) が使用されます。 たとえば、英語 (米国) に構成されたユーザーのロケールとして `".1254"` (ANSI トルコ語) を指定した場合は、格納されているロケールは `English_United States.1254` です。 この形式はお勧めしません。これにより一貫性のない動作が実行される可能性があるためです。
 
-`C` の*ロケール*引数値は、C 翻訳のための ANSI に準拠した最小環境を指定します。 `C` ロケールは、任意の **char** データ型が 1 バイトであり、値は常に 256 未満であると推定します。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。
+`C` の*ロケール*引数値は、C 翻訳のための ANSI に準拠した最小環境を指定します。 ロケールは、 `C` すべての **`char`** データ型が1バイトであり、その値が常に256未満であることを前提としています。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。
 
 `setlocale` 関数と `_wsetlocale` 関数に `LC_ALL` カテゴリを使用して、ロケールのカテゴリのすべてを同時に指定できます。 カテゴリはすべて同じロケールに設定できますが、次の形式を持つロケール引数を使用して各カテゴリを個別に設定できます。
 

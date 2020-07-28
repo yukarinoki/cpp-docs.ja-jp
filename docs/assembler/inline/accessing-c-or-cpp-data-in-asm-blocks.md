@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fbe855c2f5de96d81e6c8a27c4bfcee0864f12c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193043"
 ---
 # <a name="accessing-c-or-c-data-in-__asm-blocks"></a>__asm ブロックの C または C++ のデータへのアクセス
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-インライン アセンブリの大きな便利な方法は、C または C++ 変数を名前で参照できることです。 ブロック`__asm`は、ブロックが出現するスコープ内にある変数名を含む任意のシンボルを参照できます。 たとえば、C 変数`var`がスコープ内にある場合、命令は
+インラインアセンブリの優れた利便性は、C または C++ の変数を名前で参照できることです。 ブロックは、 **`__asm`** ブロックが表示されているスコープ内の任意のシンボル (変数名を含む) を参照できます。 たとえば、C 変数 `var` がスコープ内にある場合、命令
 
 ```cpp
 __asm mov eax, var
 ```
 
-の値を`var`EAX に格納します。
+の値を `var` EAX に格納します。
 
-クラス、構造体、または共用体のメンバーが一意の名前を`__asm`持つ場合、ブロックは、ピリオド (**.**) 演算子の`typedef`前に変数または名前を指定しなくても、メンバー名のみを使用して参照できます。 ただし、メンバー名が固有でない場合は、変数または`typedef`名前をピリオド演算子の直前に置く必要があります。 たとえば、次のサンプルの構造体型は、メンバー`same_name`名として共有されます。
+クラス、構造体、または共用体のメンバーに一意の名前がある場合、ブロックは、 **`__asm`** **`typedef`** ピリオド (**.**) 演算子の前に変数または名前を指定せずに、メンバー名のみを使用して参照できます。 ただし、メンバー名が一意でない場合は、変数または名前をピリオド演算子の直前に配置する必要があり **`typedef`** ます。 たとえば、次の例では、という名前の構造体が `same_name` メンバー名として共有されています。
 
 型を使用して変数を宣言する場合
 
@@ -35,7 +35,7 @@ struct first_type hal;
 struct second_type oat;
 ```
 
-メンバー`same_name`へのすべての参照は、一意ではないため`same_name`、変数名を使用する必要があります。 ただし、メンバー`weasel`には一意の名前が付いているため、メンバー名のみを使用して参照できます。
+が一意ではないため、メンバーへのすべての参照で `same_name` 変数名を使用する必要があり `same_name` ます。 ただし、メンバーには `weasel` 一意の名前が付いているため、メンバー名のみを使用して参照できます。
 
 ```cpp
 // InlineAssembler_Accessing_C_asm_Blocks.cpp
@@ -68,12 +68,12 @@ int main()
 }
 ```
 
-変数名を省略することは、単なるコーディングの利便性に過ぎないことに注意してください。 変数名が存在するかどうかにかかわらず、同じアセンブリ命令が生成されます。
+変数名の省略は単なるコーディングの便宜であることに注意してください。 変数名が存在するかどうかにかかわらず、同じアセンブリ命令が生成されます。
 
-C++ のデータ メンバーには、アクセス制限に関係なくアクセスできます。 ただし、メンバー関数を呼び出すことはできません。
+アクセス制限に関係なく、C++ のデータメンバーにアクセスできます。 ただし、メンバー関数を呼び出すことはできません。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[__asm ブロックでの C または C++ の使用](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[__Asm ブロックでの C または C++ の使用](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

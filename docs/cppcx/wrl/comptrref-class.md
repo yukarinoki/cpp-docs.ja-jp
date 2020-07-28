@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f92a3e14018cf8c02dec40b664b72a0956f6220e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372635"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220536"
 ---
 # <a name="comptrref-class"></a>ComPtrRef クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -46,11 +46,11 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-[ComPtr\<T>](comptr-class.md)型、または この型から派生した型は、 で表されるインターフェイスだけではありません。 `ComPtr`
+によって表されるインターフェイスだけでなく、 [Comptr \<T> ](comptr-class.md)型またはそれから派生した型 `ComPtr` 。
 
 ## <a name="remarks"></a>解説
 
-型のオブジェクトへの参照を表します`ComPtr<T>`。
+型のオブジェクトへの参照を表し `ComPtr<T>` ます。
 
 ## <a name="members"></a>メンバー
 
@@ -58,25 +58,25 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 名前                               | 説明
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[コンプトルレフ::コムプトルレフ](#comptrref) | 指定したポインターから別`ComPtrRef``ComPtrRef`のオブジェクトへのクラスの新しいインスタンスを初期化します。
+[ComPtrRef:: ComPtrRef](#comptrref) | 別のオブジェクトへのポインターを指定して、クラスの新しいインスタンスを初期化し `ComPtrRef` `ComPtrRef` ます。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                         | 説明
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[を見る](#getaddressof)                     | 現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインターのアドレスを取得します。
-[を見る](#releaseandgetaddressof) | 現在`ComPtrRef`のオブジェクトを削除し、オブジェクトによって表されたインターフェイスへのポインターを`ComPtrRef`返します。
+[ComPtrRef:: GetAddressOf](#getaddressof)                     | 現在のオブジェクトによって表されるインターフェイスへのポインターのアドレスを取得し `ComPtrRef` ます。
+[ComPtrRef:: ReleaseAndGetAddressOf](#releaseandgetaddressof) | 現在のオブジェクトを削除 `ComPtrRef` し、オブジェクトによって表されたインターフェイスへのポインターからポインターを返し `ComPtrRef` ます。
 
 ### <a name="public-operators"></a>パブリック演算子
 
 名前                                                                     | 説明
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[インターフェイスタイプ**](#operator-interfacetype-star-star) | 現在`ComPtrRef`のオブジェクトを削除し、オブジェクトによって表されたインターフェイスへのポインターを`ComPtrRef`返します。
-[オペレーター T*](#operator-t-star)                               | 現在の ComPtrRef オブジェクトの[ptr_](comptrrefbase-class.md#ptr)データ メンバーの値を返します。
-[オペレーターボイド**](#operator-void-star-star)                   | 現在`ComPtrRef`のオブジェクトを削除し、オブジェクトがポインターからポインターへのポインターとして表した`ComPtrRef`インターフェイスにポインターを`void`キャストし、キャスト ポインターを返します。
-[演算子*](#operator-star)                                   | 現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインターを取得します。
-[を参照します。](#operator-equality)                              | 2 つの `ComPtrRef` オブジェクトが等しいかどうかを示します。
-[を参照してください。:演算子!=](#operator-inequality)                            | 2 つの `ComPtrRef` オブジェクトが等しくないかどうかを示します。
+[ComPtrRef:: operator InterfaceType * *](#operator-interfacetype-star-star) | 現在のオブジェクトを削除 `ComPtrRef` し、オブジェクトによって表されたインターフェイスへのポインターからポインターを返し `ComPtrRef` ます。
+[ComPtrRef:: operator T *](#operator-t-star)                               | 現在の ComPtrRef オブジェクトの[ptr_](comptrrefbase-class.md#ptr)データメンバーの値を返します。
+[ComPtrRef:: operator void * *](#operator-void-star-star)                   | 現在のオブジェクトを削除し、ポインターからポインターへの `ComPtrRef` ポインターとしてオブジェクトによって表されたインターフェイスへのポインターをキャスト `ComPtrRef` し、 **`void`** キャストポインターを返します。
+[ComPtrRef:: operator *](#operator-star)                                   | 現在のオブジェクトによって表されるインターフェイスへのポインターを取得し `ComPtrRef` ます。
+[ComPtrRef:: operator = =](#operator-equality)                              | 2 つの `ComPtrRef` オブジェクトが等しいかどうかを示します。
+[ComPtrRef:: operator! =](#operator-inequality)                            | 2 つの `ComPtrRef` オブジェクトが等しくないかどうかを示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -88,11 +88,11 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 **ヘッダー:** client.h
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>コンプトルレフ::コムプトルレフ
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:: ComPtrRef
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ComPtrRef(
@@ -102,16 +102,16 @@ ComPtrRef(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*<br/>
-別`ComPtrRef`のオブジェクトの基になる値。
+*ptr*<br/>
+別のオブジェクトの基になる値 `ComPtrRef` 。
 
 ### <a name="remarks"></a>解説
 
-指定したポインターから別`ComPtrRef``ComPtrRef`のオブジェクトへのクラスの新しいインスタンスを初期化します。
+別のオブジェクトへのポインターを指定して、クラスの新しいインスタンスを初期化し `ComPtrRef` `ComPtrRef` ます。
 
-## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>を見る
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:: GetAddressOf
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 InterfaceType* const * GetAddressOf() const;
@@ -119,15 +119,15 @@ InterfaceType* const * GetAddressOf() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインターのアドレス。
+現在のオブジェクトによって表されるインターフェイスへのポインターのアドレス `ComPtrRef` 。
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインターのアドレスを取得します。
+現在のオブジェクトによって表されるインターフェイスへのポインターのアドレスを取得し `ComPtrRef` ます。
 
-## <a name="comptrrefoperator"></a><a name="operator-equality"></a>を参照します。
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef:: operator = =
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 bool operator==(
@@ -158,27 +158,27 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*A*<br/>
+*ある*<br/>
 `ComPtrRef` オブジェクトへの参照です。
 
-*B*<br/>
-別`ComPtrRef`のオブジェクトへの参照、または匿名型へのポインター (`void*`) 。
+*b*<br/>
+別のオブジェクトへの参照 `ComPtrRef` 、または匿名型 () へのポインター **`void*`** 。
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は **、** オブジェクト*a*がオブジェクト*b*と等しい場合に true を返します。それ以外の場合**は false。**
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しい場合はを生成します。それ以外の場合はを返し **`false`** ます。
 
-2 番目と 3 番目の演算子は、オブジェクト*a*が**nullptr**と等しい場合は**true**を返します。それ以外の場合**は false。**
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しい場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
-4 番目と 5 番目の演算子は、オブジェクト*a*がオブジェクト*b*と等しい場合は**true**を返します。それ以外の場合**は false。**
+4番目と5番目の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しい場合はを、それ以外の場合はを生成し **`false`** ます。
 
 ### <a name="remarks"></a>解説
 
 2 つの `ComPtrRef` オブジェクトが等しいかどうかを示します。
 
-## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>を参照してください。:演算子!=
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef:: operator! =
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 bool operator!=(
@@ -209,27 +209,27 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*A*<br/>
+*ある*<br/>
 `ComPtrRef` オブジェクトへの参照です。
 
-*B*<br/>
-別`ComPtrRef`のオブジェクトへの参照、または匿名オブジェクトへのポインタ (`void*`)
+*b*<br/>
+別のオブジェクトへの参照、 `ComPtrRef` または匿名オブジェクトへのポインター ( **`void*`** )。
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は **、** オブジェクト*a*がオブジェクト*b*と等しくない場合に true を返します。それ以外の場合**は false。**
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しくない場合はを、それ以外の場合はを生成 **`false`** します。
 
-2 番目と 3 番目の演算子は、オブジェクト*a*が**nullptr**と等しくない場合は**true**を返します。それ以外の場合**は false。**
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しくない場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
-4 番目と 5 番目の演算子は、オブジェクト*a*がオブジェクト*b*と等しくない場合は**true**を返します。それ以外の場合**は false。**
+4番目と5番目の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しくない場合はを、それ以外の場合はを生成し **`false`** ます。
 
 ### <a name="remarks"></a>解説
 
 2 つの `ComPtrRef` オブジェクトが等しくないかどうかを示します。
 
-## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>インターフェイスタイプ**
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef:: operator InterfaceType\*\*
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 operator InterfaceType**();
@@ -237,11 +237,11 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトを削除し、オブジェクトによって表されたインターフェイスへのポインターを`ComPtrRef`返します。
+現在のオブジェクトを削除 `ComPtrRef` し、オブジェクトによって表されたインターフェイスへのポインターからポインターを返し `ComPtrRef` ます。
 
-## <a name="comptrrefoperator"></a><a name="operator-star"></a>演算子*
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:: operator *
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 InterfaceType* operator *();
@@ -249,15 +249,15 @@ InterfaceType* operator *();
 
 ### <a name="return-value"></a>戻り値
 
-現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインター。
+現在のオブジェクトによって表されるインターフェイスへのポインター `ComPtrRef` 。
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトによって表されるインターフェイスへのポインターを取得します。
+現在のオブジェクトによって表されるインターフェイスへのポインターを取得し `ComPtrRef` ます。
 
-## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>オペレーター T*
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef:: operator T *
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 operator T*();
@@ -265,11 +265,11 @@ operator T*();
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトの[ptr_](comptrrefbase-class.md#ptr)データ メンバーの値を返します。
+現在のオブジェクトの[ptr_](comptrrefbase-class.md#ptr)データメンバーの値を返し `ComPtrRef` ます。
 
-## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>オペレーターボイド\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef:: operator void\*\*
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 operator void**() const;
@@ -277,11 +277,11 @@ operator void**() const;
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトを削除し、オブジェクトがポインターからポインターへのポインターとして表した`ComPtrRef`インターフェイスにポインターを`void`キャストし、キャスト ポインターを返します。
+現在のオブジェクトを削除し、ポインターからポインターへの `ComPtrRef` ポインターとしてオブジェクトによって表されたインターフェイスへのポインターをキャスト `ComPtrRef` し、 **`void`** キャストポインターを返します。
 
-## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>を見る
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef:: ReleaseAndGetAddressOf
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 InterfaceType** ReleaseAndGetAddressOf();
@@ -289,8 +289,8 @@ InterfaceType** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>戻り値
 
-削除された`ComPtrRef`オブジェクトによって表されたインターフェイスへのポインター。
+削除されたオブジェクトによって表されるインターフェイスへのポインター `ComPtrRef` 。
 
 ### <a name="remarks"></a>解説
 
-現在`ComPtrRef`のオブジェクトを削除し、オブジェクトによって表されたインターフェイスへのポインターを`ComPtrRef`返します。
+現在のオブジェクトを削除 `ComPtrRef` し、オブジェクトによって表されたインターフェイスへのポインターからポインターを返し `ComPtrRef` ます。

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916887"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220770"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -79,13 +79,13 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**acos**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **acos**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
@@ -141,7 +141,7 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>
 [atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos、cosf、cosl](cos-cosf-cosl.md)<br/>

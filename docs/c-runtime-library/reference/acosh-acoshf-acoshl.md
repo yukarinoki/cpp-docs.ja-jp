@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220757"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -68,7 +68,7 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、 `errno`がに`EDOM`設定され、結果は簡易な NaN になります。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
+**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、 `errno` がに設定され、結果は簡易な NaN になり `EDOM` ます。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
 |入力|SEH 例外|`_matherr` 例外|
 |-----------|-------------------|--------------------------|
@@ -77,13 +77,13 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ を使用すると、 **float 型**または**long** **double**型の値を受け取って返す**acosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acosh**は常にを受け取り、 **double**を返します。
+C++ を使用すると、またはの値を受け取って返す**acosh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **acosh**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
@@ -119,7 +119,7 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>

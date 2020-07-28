@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211303"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220445"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 からスキーマ行セットの制限を指定します。
 
 *bBind*<br/>
-から列マップを自動的にバインドするかどうかを指定します。 既定値は**true**です。これにより、列マップが自動的にバインドされます。 *Bbind*を**false**に設定すると、手動でバインドできるように、列マップが自動的にバインドされなくなります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
+から列マップを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、列マップが自動的にバインドされます。 *Bbind*をに設定すると、 **`false`** 手動でバインドできるように、列マップが自動的にバインドされなくなります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -94,8 +94,8 @@ HRESULT Open(const CSession& session,
 
 各スキーマ行セットに定義されている制限については、「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

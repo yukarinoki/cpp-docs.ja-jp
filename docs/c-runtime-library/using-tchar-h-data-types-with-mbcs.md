@@ -6,14 +6,14 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188636"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>TCHAR.H データ型の _MBCS 定義下での使用
+# <a name="using-tcharh-data-types-with-_mbcs"></a>TCHAR.H データ型の _MBCS 定義下での使用
 
 **Microsoft 固有の仕様**
 
@@ -21,7 +21,7 @@ ms.locfileid: "57814437"
 
 - マルチバイト、文字、文字列を適切に処理する SBCS ルーチン。 この場合、文字列引数は **char&#42;** 型であることを想定しています。 たとえば、**_tprintf** は **printf** にマップされ、**printf** への文字列引数は **char&#42;** 型になります。 文字列型として汎用テキストのデータ型である **_TCHAR** を使用する場合、**_TCHAR&#42;** は **char&#42;** にマップされるため **printf** の仮パラメーターと実パラメーターの型は一致します。
 
-- MBCS 固有ルーチン。 この場合、文字列引数は __unsigned char&#42;__ 型であることを想定しています。 たとえば、**_tcsrev** は、__unsigned char&#42;__ 型の文字列を必要とし、それを返す **_mbsrev** にマップされます。 上記と同じように、文字列型として汎用テキストのデータ型である **_TCHAR** を使用する場合、**_TCHAR** が **char** にマップされるため、今度は型が競合する可能性があります。
+- MBCS 固有ルーチン。 この場合、文字列引数は __unsigned char&#42;__ 型であることを想定しています。 たとえば、**_tcsrev** は、__unsigned char&#42;__ 型の文字列を必要とし、それを返す **_mbsrev** にマップされます。 ここでも、文字列型に **_TCHAR**汎用テキストデータ型を使用すると、 **_TCHAR**が型にマップされるため、型が競合する可能性があり **`char`** ます。
 
 この型の競合 (および C コンパイラの警告または C++ コンパイラのエラーという結果) を回避するためには、次のような 3 つの解決方法があります。
 
@@ -60,7 +60,7 @@ ms.locfileid: "57814437"
    #define _tcschr _mbschr
    ```
 
-この方法を採用する場合は、文字列の引数と文字列の戻り値に適切なデータ型を使用するように注意する必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である **_TXCHAR** を使用できます。 **_TXCHAR** は SBCS コードでは **char** 型にマップされますが、MBCS コードでは **unsigned char** 型にマップされます。 汎用テキストのマクロの詳細については、「[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)」をご覧ください。
+この方法を採用する場合は、文字列の引数と文字列の戻り値に適切なデータ型を使用するように注意する必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である **_TXCHAR** を使用できます。 **_TXCHAR**は、SBCS コードの型にマップさ **`char`** れますが、MBCS コードでは型にマップさ **`unsigned char`** れます。 汎用テキストのマクロの詳細については、「[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)」をご覧ください。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 7d60a31e69e8a1ad82086f715cac6dde064d1fac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193303"
 ---
 # <a name="fpos-class"></a>fpos クラス
 
-クラス テンプレートは、任意のストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを記述します。 fpos\< **St**> クラスのオブジェクトには、実質的に 2 個以上のメンバー オブジェクトが格納されます。
+クラステンプレートは、任意のストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。 クラス fpos のオブジェクトには、少なくとも \< **St**> 2 つのメンバーオブジェクトが効果的に格納されます。
 
 - [streamoff](../standard-library/ios-typedefs.md#streamoff) 型のバイト オフセット。
 
-- 通常`St``mbstate_t`、クラス basic_filebufのオブジェクトで使用する変換状態です。
+- 型のクラス basic_filebuf のオブジェクトによって使用される変換状態 ( `St` 通常は) `mbstate_t` 。
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md) クラスのオブジェクトで使用するために、`fpos_t` 型の任意のファイル位置も格納できます。 ただし、ファイル サイズが制限された環境では、`streamoff` と `fpos_t` が区別されずに使用される場合があります。 状態依存のエンコードを使用したストリームがない環境では、実際に `mbstate_t` が使用されていない場合があります。 したがって、格納されるメンバー オブジェクトの数が異なる場合があります。
 
@@ -37,12 +37,12 @@ class fpos
 
 ### <a name="parameters"></a>パラメーター
 
-*ステートタイプ*\
+*Statetype*\
 状態情報。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[fpos](#fpos)|ストリーム内の位置 (オフセット) に関する情報を格納するオブジェクトを作成します。|
 
@@ -57,21 +57,21 @@ class fpos
 
 |演算子|説明|
 |-|-|
-|[演算子!=](#op_neq)|ファイル位置インジケーターが等しくないかどうかをテストします。|
-|[演算子+](#op_add)|ファイル位置インジケーターをインクリメントします。|
-|[演算子 +=](#op_add_eq)|ファイル位置インジケーターをインクリメントします。|
-|[演算子-](#operator-)|ファイル位置インジケーターをデクリメントします。|
-|[演算子-=](#operator-_eq)|ファイル位置インジケーターをデクリメントします。|
-|[演算子==](#op_eq_eq)|ファイル位置インジケーターが等しいかどうかをテストします。|
+|[operator! =](#op_neq)|ファイル位置インジケーターが等しくないかどうかをテストします。|
+|[演算子 +](#op_add)|ファイル位置インジケーターをインクリメントします。|
+|[演算子 + =](#op_add_eq)|ファイル位置インジケーターをインクリメントします。|
+|[operator](#operator-)|ファイル位置インジケーターをデクリメントします。|
+|[operator-=](#operator-_eq)|ファイル位置インジケーターをデクリメントします。|
+|[operator = =](#op_eq_eq)|ファイル位置インジケーターが等しいかどうかをテストします。|
 |[operator streamoff](#op_streamoff)|`fpos` 型のオブジェクトを `streamoff` 型のオブジェクトにキャストします。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ios>
+**ヘッダー:**\<ios>
 
 **名前空間:** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>フポス::fpos
+## <a name="fposfpos"></a><a name="fpos"></a>fpos:: fpos
 
 ストリーム内の位置 (オフセット) に関する情報を格納するオブジェクトを作成します。
 
@@ -86,7 +86,7 @@ fpos(Statetype _State, fpos_t _Filepos);
 *_Off*\
 ストリームへのオフセット。
 
-*_state*\
+*_State*\
 `fpos` オブジェクトの開始状態。
 
 *_Filepos*\
@@ -94,11 +94,11 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、オフセット *_Off*ファイルの先頭を基準にして、初期変換状態 (重要な場合) を格納します。 *_Off*が -1 の場合、結果のオブジェクトは無効なストリーム位置を表します。
+1つ目のコンストラクターは、ファイルの先頭と初期の変換状態 (それが重要な場合) に相対的に *_Off*オフセットを格納します。 *_Off*が-1 の場合、結果として得られるオブジェクトは無効なストリームの位置を表します。
 
-2 番目のコンストラクターは、ゼロ オフセットを格納し、オブジェクト*は _State。*
+2番目のコンストラクターは、0オフセットとオブジェクト *_State*を格納します。
 
-## <a name="fposoperator"></a><a name="op_neq"></a>fpos::演算子!
+## <a name="fposoperator"></a><a name="op_neq"></a>fpos:: operator! =
 
 ファイル位置インジケーターが等しくないかどうかをテストします。
 
@@ -113,7 +113,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイル位置インジケーターが等しくない場合は **true**。それ以外の場合は **false**。
+**`true`** ファイル位置インジケーターが等しくない場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>fpos::オペレーター+
+## <a name="fposoperator"></a><a name="op_add"></a>fpos:: operator +
 
 ファイル位置インジケーターをインクリメントします。
 
@@ -196,7 +196,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 `operator+` の使用例については、[operator!=](#op_neq) を参照してください。
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos::演算子+=
+## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos:: operator + =
 
 ファイル位置インジケーターをインクリメントします。
 
@@ -215,13 +215,13 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、格納されているオフセット メンバー オブジェクトに *_Off*を追加し、**\*この値を**返します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
+このメンバー関数は、格納されているオフセットメンバーオブジェクトに *_Off*を追加し、 ** \* これ**を返します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
 
 ### <a name="example"></a>例
 
 `operator+=` の使用例については、[operator!=](#op_neq) を参照してください。
 
-## <a name="fposoperator-"></a><a name="operator-"></a>fpos::演算子-
+## <a name="fposoperator-"></a><a name="operator-"></a>fpos:: operator-
 
 ファイル位置インジケーターをデクリメントします。
 
@@ -247,7 +247,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 `operator-` の使用例については、[operator!=](#op_neq) を参照してください。
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos::演算子- =
+## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos:: operator-=
 
 ファイル位置インジケーターをデクリメントします。
 
@@ -272,7 +272,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 `operator-=` の使用例については、[operator!=](#op_neq) を参照してください。
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos::演算子==
+## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos:: operator = =
 
 ファイル位置インジケーターが等しいかどうかをテストします。
 
@@ -287,7 +287,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイル位置インジケーターが等しい場合は **true**。それ以外の場合は **false**。
+**`true`** ファイル位置インジケーターが等しい場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -297,7 +297,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 `operator+=` の使用例については、[operator!=](#op_neq) を参照してください。
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos::オペレーターストリームオフ
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos:: operator streamoff
 
 `fpos` 型のオブジェクトを `streamoff` 型のオブジェクトにキャストします。
 
@@ -336,7 +336,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>フポス::シーポス
+## <a name="fposseekpos"></a><a name="seekpos"></a>fpos:: seekpos
 
 このメソッドは、C++ 標準ライブラリのみによって内部的に使用されます。 このメソッドをコードから呼び出さないでください。
 
@@ -344,7 +344,7 @@ int main( )
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>fpos::状態
+## <a name="fposstate"></a><a name="state"></a>fpos:: state
 
 変換状態を設定または返します。
 
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*_state*\
+*_State*\
 新しい変換状態。
 
 ### <a name="return-value"></a>戻り値
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は、メンバー オブジェクトに`St`格納されている値を返します。 2 番目のメンバー関数は *、メンバー*オブジェクトに_Stateを`St`格納します。
+1つ目のメンバー関数は、メンバーオブジェクトに格納されている値を返し `St` ます。 2番目のメンバー関数は、メンバーオブジェクトに *_State*を格納し `St` ます。
 
 ### <a name="example"></a>例
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

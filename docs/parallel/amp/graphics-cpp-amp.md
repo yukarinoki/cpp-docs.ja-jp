@@ -2,12 +2,12 @@
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182812"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
@@ -21,11 +21,11 @@ C++ AMP には、Gpu のテクスチャサポートにアクセスするため�
 
 ## <a name="the-norm-and-unorm-types"></a>norm 型および unorm 型
 
-`norm`型と `unorm` 型は、**浮動小数点**値の範囲を制限するスカラー型です。これを*クランプ*と呼びます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初に**float**にキャストされ、次に、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と、 **float**や**int**などの他の組み込みスカラー型の間で定義されています: +、-、 \* 、/、= =、! =、>、 \<, > =、<=。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
+`norm`型と `unorm` 型は、値の範囲を制限するスカラー型です **`float`** 。これは、*クランプ*と呼ばれます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初ににキャストされた **`float`** 後、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と **`float`** 、and **`int`** : +、-、 \* 、/、= =、! =、>、 \<, > =、<= などの他の組み込みスカラー型の間で定義されます。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
-Short Vector ライブラリは、HLSL で定義されている[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、 **double**、 **float**、 **int**、、、 `norm` `uint` および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応する**typedef**もあります。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)にあります。これにより、 **__int8**や **__int16**などの同様の名前の基本型から明確に分離されます。
+Short Vector ライブラリは、HLSL で定義されている[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
 
 ||長さ 2|長さ3|長さ4|
 |-|--------------|--------------|--------------|
@@ -63,7 +63,7 @@ short ベクター ライブラリは、short ベクターのコンポーネン�
 
 多くの GPU には、ピクセルとテクセルをフェッチし、イメージとテクスチャを表示するために最適化されたハードウェアとキャッシュがあります。 この[テクスチャ \<T,N> ](../../parallel/amp/reference/texture-class.md)クラスは、テクセルオブジェクトのコンテナークラスであり、これらの gpu のテクスチャ機能を公開します。 テクセルは次のようになります。
 
-- **Int**、 `uint` 、 **float**、 **double**、 `norm` 、または `unorm` スカラー。
+- **`int`**、、 `uint` 、 **`float`** 、 **`double`** `norm` 、または `unorm` スカラー。
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 
@@ -214,7 +214,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T にあるのは 1 つのスカラー コンポーネントのみです。 (short ベクターは使用できません。)
 
-- T が**double**、 `norm` 、またはではありません `unorm` 。
+- T が **`double`** 、、 `norm` またはではありません `unorm` 。
 
 - `texture::bits_per_scalar_element` プロパティは 32 です。
 

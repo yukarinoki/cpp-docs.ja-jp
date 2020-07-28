@@ -1,5 +1,5 @@
 ---
-title: '/ガード: ehcont (EH 継続メタデータの有効化)'
+title: /guard:ehcont (EH 継続メタデータを有効にする)
 description: 'Microsoft C++/guard: ehcont コンパイラオプションのリファレンスガイド。'
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190521"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/ガード: ehcont (EH 継続メタデータの有効化)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (EH 継続メタデータを有効にする)
 
 コンパイラによる EH 継続 (EHCONT) メタデータの生成を有効にします。
 
@@ -33,7 +33,7 @@ ms.locfileid: "84421360"
 
 シャドウスタックを使用して、ROP 攻撃を防ぐことができる場合、攻撃者は他の悪用手法を使用することになります。 使用できる技法の1つは、[コンテキスト](/windows/win32/api/winnt/ns-winnt-context)構造内の命令ポインター値を破損させることです。 この構造体は、、、などのスレッドの実行をリダイレクトするシステム呼び出しに渡され `NtContinue` [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) ます。 `CONTEXT`構造体はメモリに格納されます。 含まれている命令ポインターを破損すると、システム呼び出しによって、攻撃者によって制御されるアドレスに実行が転送される可能性があります。 現在、 `NTContinue` 任意の継続ポイントを使用してを呼び出すことができます。 そのため、シャドウスタックが有効になっているときに命令ポインターを検証することが不可欠です。
 
-`RtlRestoreContext`と `NtContinue` は、構造化例外処理 (SEH) 例外アンワインド中に、ブロックを含むターゲットフレームにアンワインドするために使用され `__except` ます。 命令ポインターの検証が `__except` 失敗する可能性があるため、ブロックの命令ポインターはシャドウスタック上に存在している必要はありません。 **`/guard:ehcont`** コンパイラスイッチは、"EH 継続テーブル" を生成します。 これには、バイナリ内のすべての有効な例外処理継続ターゲットの RVAs の並べ替え済みリストが含まれます。 `NtContinue`は、最初にユーザーが指定した命令ポインターのシャドウスタックを確認し、命令ポインターが見つからない場合は、命令ポインターを含むバイナリからの EH 継続テーブルのチェックを続行します。 含まれているバイナリがテーブルを使用してコンパイルされていない場合は、レガシバイナリとの互換性のために、の `NtContinue` 続行が許可されます。 EHCONT 継続するデータを持たないレガシバイナリと、EHCONT データを含み、テーブルエントリを含まないバイナリを区別することが重要です。 前者は、バイナリ内のすべてのアドレスを有効な継続ターゲットとして許可します。 後者では、バイナリ内のアドレスを有効な継続ターゲットとして使用することは許可されていません。
+`RtlRestoreContext`と `NtContinue` は、構造化例外処理 (SEH) 例外アンワインド中に、ブロックを含むターゲットフレームにアンワインドするために使用され **`__except`** ます。 命令ポインターの検証が **`__except`** 失敗する可能性があるため、ブロックの命令ポインターはシャドウスタック上に存在している必要はありません。 **`/guard:ehcont`** コンパイラスイッチは、"EH 継続テーブル" を生成します。 これには、バイナリ内のすべての有効な例外処理継続ターゲットの RVAs の並べ替え済みリストが含まれます。 `NtContinue`は、最初にユーザーが指定した命令ポインターのシャドウスタックを確認し、命令ポインターが見つからない場合は、命令ポインターを含むバイナリからの EH 継続テーブルのチェックを続行します。 含まれているバイナリがテーブルを使用してコンパイルされていない場合は、レガシバイナリとの互換性のために、の `NtContinue` 続行が許可されます。 EHCONT 継続するデータを持たないレガシバイナリと、EHCONT データを含み、テーブルエントリを含まないバイナリを区別することが重要です。 前者は、バイナリ内のすべてのアドレスを有効な継続ターゲットとして許可します。 後者では、バイナリ内のアドレスを有効な継続ターゲットとして使用することは許可されていません。
 
 オプションは、 **`/guard:ehcont`** バイナリの EH 継続ターゲット RVAs を生成するために、コンパイラとリンカーの両方に渡す必要があります。 1 つの `cl` コマンドを使用してバイナリが作成されている場合、コンパイラはリンカーにオプションを渡します。 コンパイラは、オプションも [**`/guard:cf`**](guard-enable-control-flow-guard.md) リンカーに渡します。 を個別にコンパイルしてリンクする場合、これらのオプションは、コンパイラとリンカーの両方のコマンドで設定する必要があります。
 

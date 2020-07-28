@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909275"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189442"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -77,13 +77,13 @@ long double asin( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**と**long** **double**値を使用して**アークサイン**のオーバーロードを呼び出すことができます。 C プログラムでは、**アークサイン**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、との値を使用して、**アークサイン**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、**アークサイン**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**アークサイン**、 **asinf**、 **asinl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -93,7 +93,7 @@ C++ ではオーバーロードが可能であるため、 **float**と**long** 
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>
 [atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos、cosf、cosl](cos-cosf-cosl.md)<br/>

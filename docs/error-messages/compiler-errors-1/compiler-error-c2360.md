@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a2a164f919dc7535a4587d51f4f7dba8653a1760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759907"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214686"
 ---
 # <a name="compiler-error-c2360"></a>コンパイラ エラー C2360
 
 ' identifier ' の初期化は ' case ' ラベルによってスキップされます
 
-`identifier` の初期化は、`switch` ステートメントではスキップできます。 宣言がブロックで囲まれている場合を除き、初期化子を使用して宣言をスキップすることはできません。 (ブロック内で宣言されていない限り、変数は、`switch` ステートメントが終了するまでスコープ内にあります)。
+ステートメントでは、の初期化を `identifier` スキップでき **`switch`** ます。 宣言がブロックで囲まれている場合を除き、初期化子を使用して宣言をスキップすることはできません。 (ブロック内で宣言されていない限り、変数はステートメントの最後までスコープ内に **`switch`** あります)。
 
 次の例では、C2360 が生成されます。
 
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C2360b.cpp
