@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233458"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 
-OLE DB テンプレート内のすべてのアクセサーは、このクラスから派生します。 `CAccessorBase` では、1つの行セットで複数のアクセサーを管理できます。 また、パラメーターと出力列の両方のバインドも提供します。
+OLE DB テンプレート内のすべてのアクセサーは、このクラスから派生します。 `CAccessorBase`1つの行セットで複数のアクセサーを管理できます。 また、パラメーターと出力列の両方のバインドも提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -122,7 +122,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 ### <a name="return-value"></a>戻り値
 
-アクセサーが autoaccessor の場合は**true**を返します。 それ以外の場合は **false**を返します。
+**`true`** アクセサーが autoaccessor の場合はを返します。 それ以外の場合はを返し **`false`** ます。
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-からアクセサーが作成された COM オブジェクトの `IUnknown` インターフェイスへのポインター。
+から`IUnknown`アクセサーが作成された COM オブジェクトのインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -147,8 +147,8 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md)から呼び出されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessorBase クラス](../../data/oledb/caccessorbase-class.md)

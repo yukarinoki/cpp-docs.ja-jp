@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c632966c9ac1264747568facd459a33d1e13338
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233081"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
 
-## <a name="operator"></a><a name="op_neq"></a>演算子!=
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しくないかどうかを調べます。
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -45,7 +45,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-map が等しくない場合は **true**、map が等しい場合は **false**。
+**`true`** マップが等しくない場合は、**`false`** マップが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより小さいかどうかを調べます。
 
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -110,7 +110,7 @@ bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の map が演算子の右辺の map より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の map が演算子の右辺の map より厳密に小さい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以下かどうかを調べます。
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -175,7 +175,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の map が演算子の右辺の map 以下である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の map が演算子の右辺の map 以下である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しいかどうかを調べます。
 
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -243,7 +243,7 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の map が演算子の右辺の map と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の map が演算子の右辺の map と等しい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより大きいかどうかを調べます。
 
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -308,7 +308,7 @@ bool operator>(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の map が演算子の右辺の map より大きい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の map が演算子の右辺の map より大きい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以上かどうかを調べます。
 
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型オブジェクト。
 
 *そうです*\
@@ -372,7 +372,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側の map がリストの右側の map 以上の場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の map が、リストの右側の map 以上の場合は、です ()。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>演算子!= (マルチマップ)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operator! = (multimap)
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -440,7 +440,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-multimap が等しくない場合は **true**、multimap が等しい場合は **false**。
+**`true`** multimap が等しくない場合は、**`false`** 複数のマップが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_multimap"></a>演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>operator&lt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより小さいかどうかをテストします。
 
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -505,7 +505,7 @@ bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の multimap が演算子の右辺の multimap より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の multimap が演算子の右辺の multimap よりも厳密に小さい場合は、それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>operator&lt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以下かどうかをテストします。
 
@@ -562,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -570,7 +570,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の multimap が演算子の右辺の multimap 以下の場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の multimap が演算子の右辺の multimap 以下である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>演算子==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しいかどうかをテストします。
 
@@ -630,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -638,7 +638,7 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の multimap が演算子の右辺の multimap と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の multimap が演算子の右辺の multimap と等しい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_multimap"></a>演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>operator&gt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより大きいかどうかをテストします。
 
@@ -695,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -703,7 +703,7 @@ bool operator>(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の multimap が演算子の右辺の multimap より大きい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の multimap が演算子の右辺の multimap より大きい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>operator&gt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以上かどうかをテストします。
 
@@ -760,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型オブジェクト。
 
 *そうです*\
@@ -768,7 +768,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側の multimap がリストの右側の multimap 以上の場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の multimap が、リストの右辺の multimap 以上である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 

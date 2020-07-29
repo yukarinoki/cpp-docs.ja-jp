@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442668"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223045"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr クラス
 
@@ -53,7 +53,7 @@ class CMapPtrToPtr : public CObject
 
 ## <a name="members"></a>メンバー
 
-`CMapPtrToPtr` のメンバー関数は、 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが表示されている場合は、ポインターを**void**に置き換えます。 関数パラメーターまたは戻り値として `CString` または**char**への**const**ポインターが表示されている場合は、ポインターを**void**に置き換えます。
+のメンバー関数 `CMapPtrToPtr` は、 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 `CObject`関数パラメーターまたは戻り値としてポインターが表示されている場合は、へのポインターを置き換え **`void`** ます。 `CString`関数パラメーターまたは戻り値としてまたはへのポインターが表示されている場合は、への **`const`** **`char`** ポインターを置き換え **`void`** ます。
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[CMapPtrToPtr::CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[CMapPtrToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
 |[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -87,19 +87,19 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CMapPtrToPtr:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。 `SetAt`の場合は演算子を代入します。|
+|[CMapPtrToPtr:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。に対する演算子の代入 `SetAt` 。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`CMapPtrToPtr` には、実行時の型へのアクセスをサポートし、`CDumpContext` オブジェクトへのダンプを行うための IMPLEMENT_DYNAMIC マクロが組み込まれています。 個々のマップ要素 (ポインター値) のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+`CMapPtrToPtr`には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のマップ要素 (ポインター値) のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
 
 ポインターからポインターへのマップはシリアル化できません。
 
 `CMapPtrToPtr` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。
 
-`CMapPtrToPtr`の詳細については、「[コレクション](../../mfc/collections.md)」を参照してください。
+の詳細については `CMapPtrToPtr` 、「[コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,11 +107,11 @@ class CMapPtrToPtr : public CObject
 
 `CMapPtrToPtr`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

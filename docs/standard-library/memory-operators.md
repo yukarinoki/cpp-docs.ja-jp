@@ -10,16 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233055"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 演算子
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 オブジェクト間の不等性をテストします。
 
@@ -42,10 +42,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 不等性をテストする一方のオブジェクト。
 
-*右*\
+*そうです*\
 不等性をテストする一方のオブジェクト。
 
 *Ty1*\
@@ -56,7 +56,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが等しくない場合は **true**、オブジェクトが等しい場合は **false**。
+**`true`** オブジェクトが等しくない場合は。**`false`** オブジェクトが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 オブジェクト同士が等しいかどうかをテストします。
 
@@ -143,10 +143,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 等しいかどうかをテストするオブジェクト。
 
-*右*\
+*そうです*\
 等しいかどうかをテストするオブジェクト。
 
 *Ty1*\
@@ -157,7 +157,7 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが等しい場合は**true** 、オブジェクトが等しくない場合は**false** 。
+**`true`** オブジェクトが等しい場合は、 **`false`** オブジェクトが等しくない場合はです。
 
 ### <a name="remarks"></a>解説
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 1 つ目のオブジェクトが 2 つ目のオブジェクト以上であるかをテストします。
 
@@ -250,10 +250,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 比較するオブジェクトの 1 つ。
 
-*右*\
+*そうです*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -264,9 +264,9 @@ bool operator>=(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート演算子は `left.get() >= right.get()`を返します。
+このテンプレート演算子は `left.get() >= right.get()` を返します。
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより小さいかどうかをテストします。
 
@@ -284,10 +284,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 比較するオブジェクトの 1 つ。
 
-*右*\
+*そうです*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -296,7 +296,7 @@ bool operator<(
 *Ty2*\
 右辺のポインターによって制御される型。
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 1 番目のオブジェクトが 2 番目のオブジェクト以下であるかどうかをテストします。
 
@@ -314,10 +314,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 比較するオブジェクトの 1 つ。
 
-*右*\
+*そうです*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -328,9 +328,9 @@ bool operator<=(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート演算子はを返し `left.get() <= right.get()`
+このテンプレート演算子は `left.get() <= right.get()` を返します。
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより大きいかどうかをテストします。
 
@@ -348,10 +348,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 比較するオブジェクトの 1 つ。
 
-*右*\
+*そうです*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -360,7 +360,7 @@ bool operator>(
 *Ty2*\
 右辺の共有ポインターによって制御される型。
 
-## <a name="op_lt_lt"></a>演算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
 
 共有ポインターをストリームに書き込みます。
 
@@ -378,13 +378,13 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Tr*\
 ストリーム要素の特性の型。
 
-*Ty*\
+*~*\
 共有ポインターによって制御される型。
 
-*out*\
+*入出力*\
 出力ストリーム。
 
-*sp*\
+*プロセッサー*\
 共有ポインター。
 
 ### <a name="remarks"></a>解説

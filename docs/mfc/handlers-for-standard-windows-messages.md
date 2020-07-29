@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 190acd619224bdf22a5c8d35f541fa48b6664fe1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223149"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows メッセージのハンドラー
 
@@ -23,7 +23,7 @@ ms.locfileid: "84625757"
 
 `afx_msg void OnPaint();`
 
-**Afx_msg**キーワードは、他のメンバー関数からハンドラーを区別することによって、C++ **virtual**キーワードの効果を提案し `CWnd` ます。 ただし、これらの関数は実際には仮想ではないことに注意してください。代わりに、メッセージマップを使用して実装されます。 メッセージマップは、C++ 言語の拡張機能ではなく、標準のプリプロセッサマクロにのみ依存します。 **Afx_msg**キーワードは、前処理後に空白に解決されます。
+**Afx_msg**キーワードは、 **`virtual`** 他のメンバー関数からハンドラーを区別することによって、C++ のキーワードの効果を提案し `CWnd` ます。 ただし、これらの関数は実際には仮想ではないことに注意してください。代わりに、メッセージマップを使用して実装されます。 メッセージマップは、C++ 言語の拡張機能ではなく、標準のプリプロセッサマクロにのみ依存します。 **Afx_msg**キーワードは、前処理後に空白に解決されます。
 
 基底クラスで定義されたハンドラーをオーバーライドするには、派生クラスで同じプロトタイプを持つ関数を定義し、ハンドラーのメッセージマップエントリを作成するだけです。 ハンドラーは、クラスの基底クラスにある同じ名前の任意のハンドラーを "オーバーライド" します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "84625757"
 
 [!code-cpp[NVC_MFCMessageHandling#3](codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-慣例により、これらのハンドラーの名前はプレフィックス "On" で始まります。 これらのハンドラーの中には引数を取らないものもあれば、いくつかのハンドラーがあります。 また、 **void**以外の戻り値の型もあります。 すべての**WM_** メッセージの既定のハンドラーは、"On" で始まる名前を持つクラスのメンバー関数として、 *MFC リファレンス*に記載されてい `CWnd` ます。 のメンバー関数宣言の `CWnd` 先頭には**afx_msg**が付きます。
+慣例により、これらのハンドラーの名前はプレフィックス "On" で始まります。 これらのハンドラーの中には引数を取らないものもあれば、いくつかのハンドラーがあります。 また、に以外の戻り値の型もあり **`void`** ます。 すべての**WM_** メッセージの既定のハンドラーは、"On" で始まる名前を持つクラスのメンバー関数として、 *MFC リファレンス*に記載されてい `CWnd` ます。 のメンバー関数宣言の `CWnd` 先頭には**afx_msg**が付きます。
 
 ## <a name="see-also"></a>関連項目
 
