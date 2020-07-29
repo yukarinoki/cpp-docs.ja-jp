@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225203"
 ---
 # <a name="linker-tools-error-lnk2031"></a>リンカ ツール エラー LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "80194565"
 
 ## <a name="remarks"></a>解説
 
-ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙的な呼び出し規約がネイティブコンパイルと純粋コンパイルで異なることに注意してください。 純粋なイメージの詳細については、「[純粋でC++検証可能なコード (/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)」を参照してください。
+ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙的な呼び出し規約がネイティブコンパイルと純粋コンパイルで異なることに注意してください。 純粋なイメージの詳細については、「[純粋なコードと検証可能なコード (C++/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)」を参照してください。
 
 **/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-次のサンプルは、純粋なイメージからネイティブ関数を使用する方法を示しています。 明示的な **__cdecl**呼び出し規約指定子に注意してください。
+次のサンプルは、純粋なイメージからネイティブ関数を使用する方法を示しています。 明示的な **`__cdecl`** 呼び出し規約指定子に注意してください。
 
 ```cpp
 // LNK2031_c.cpp

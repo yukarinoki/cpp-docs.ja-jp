@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: c68a7c9764e7f52131a90d38db22d2645eed9a4f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 354cd1cac5db775ea56cb5215a8528bdfe9ac5ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625421"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225008"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
 
@@ -43,7 +43,7 @@ Windows コントロールをサブクラス化するには、次のタスクを
 
 ## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>IsSubclassedControl と PreCreateWindow のオーバーライド
 
-およびをオーバーライドするには `PreCreateWindow` `IsSubclassedControl` 、コントロールクラス宣言の**protected**セクションに次のコード行を追加します。
+およびをオーバーライドするには `PreCreateWindow` `IsSubclassedControl` 、 **`protected`** コントロールクラス宣言のセクションに次のコード行を追加します。
 
 [!code-cpp[NVC_MFC_AxSub#1](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 

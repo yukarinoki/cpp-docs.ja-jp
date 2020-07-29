@@ -5,12 +5,12 @@ helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: e7c6096829a1cd45cfdb849a1899d6b4a2d4cb78
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7ce18b54835b2380d3baee77b00a670351e3279f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141993"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224917"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 既存のコードを改変して軽量タスクを使用する
 
@@ -24,7 +24,7 @@ ms.locfileid: "77141993"
 
 ## <a name="example"></a>例
 
-Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数を使用して、別のスレッドで `MyThreadFunction` を呼び出します。
+Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数を使用して、 `MyThreadFunction` 別のスレッドでを呼び出します。
 
 ### <a name="initial-code"></a>最初のコード
 
@@ -44,23 +44,23 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. `using` 名前空間の `concurrency` ディレクティブを追加します。
+1. **`using`** 名前空間のディレクティブを追加 `concurrency` します。
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規約を使用すると共に、`void` を返します。
+1. `MyThreadFunction`呼び出し規約を使用してを返すように、の宣言を変更し **`__cdecl`** **`void`** ます。
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. タスクが完了したことをメインアプリケーションに通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを含めるように `MyData` 構造を変更します。
+1. タスクが `MyData` 完了したことをメインアプリケーションに通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを含めるように構造体を変更します。
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. `CreateThread` の呼び出しを[concurrency:: CurrentScheduler:: ScheduleTask](reference/currentscheduler-class.md#scheduletask)メソッドの呼び出しに置き換えます。
+1. の呼び出しを `CreateThread` [concurrency:: currentscheduler:: scheduletask](reference/currentscheduler-class.md#scheduletask)メソッドの呼び出しに置き換えます。
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. `WaitForSingleObject` の呼び出しを[concurrency:: event:: wait](reference/event-class.md#wait)メソッドの呼び出しに置き換えて、タスクが終了するのを待ちます。
+1. の呼び出しを `WaitForSingleObject` [concurrency:: event:: wait](reference/event-class.md#wait)メソッドの呼び出しに置き換えて、タスクが終了するのを待ちます。
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
@@ -70,11 +70,11 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-1. `MyThreadFunction` 関数の最後で、 [concurrency:: event:: set](reference/event-class.md#set)メソッドを呼び出して、タスクが終了したことをメインアプリケーションに通知します。
+1. 関数の最後で、 `MyThreadFunction` [concurrency:: event:: set](reference/event-class.md#set)メソッドを呼び出して、タスクが終了したことをメインアプリケーションに通知します。
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-1. `return` ステートメントを `MyThreadFunction` から削除します。
+1. **`return`** からステートメントを削除 `MyThreadFunction` します。
 
 ### <a name="completed-code"></a>完成したコード
 
@@ -82,7 +82,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler クラス](../../parallel/concrt/reference/scheduler-class.md)
