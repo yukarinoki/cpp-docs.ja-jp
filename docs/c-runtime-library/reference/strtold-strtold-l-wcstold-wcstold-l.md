@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912598"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213490"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
@@ -82,7 +82,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtold**た場合は、浮動小数点数の値が**long** **double**として返されます。ただし、オーバーフローが発生する場合を除きます。この場合、関数は +/-**HUGE_VALL**を返します。 **HUGE_VALL**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合は、 **0 を返し**ます。
+**strtold**た場合は、浮動小数点数の値がとして返されます **`long double`** 。ただし、オーバーフローが発生する場合を除きます。この場合、関数は +/-**HUGE_VALL**を返します。 **HUGE_VALL**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合は、 **0 を返し**ます。
 
 **wcstold** **は、** と同様に値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生して、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されると、 **errno**は**ERANGE**に設定されます。
 
@@ -90,7 +90,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-各関数は、入力文字列*Strsource*を**long** **double**に変換します。 **Strtold**関数は、数値の一部として認識できない最初の文字で文字列*strtold*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 ここ**では、** ワイド文字のバージョンは**wcstold**です。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列*Strsource*をに変換し **`long double`** ます。 **Strtold**関数は、数値の一部として認識できない最初の文字で文字列*strtold*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 ここ**では、** ワイド文字のバージョンは**wcstold**です。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -109,11 +109,11 @@ NULL で終わる変換対象の文字列。
 
 [*空白*][*sign*][*数字*][.*数字*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*数字*]
 
-*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*sign*は正符号 (**+**) または負**-** 符号 () です。と*数字*は、1桁以上の10進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には指数部を指定できます。指数部は、指数部の開始文字 (**d**、**D**、**e**、**E**) および必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
+*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*sign*は、正符号 ( **+** ) または負符号 () です。 **-** *数字*は1桁以上の10進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には指数部を指定できます。指数部は、指数部の開始文字 (**d**、**D**、**e**、**E**) および必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtold**、 **_strtold_l**|\<stdlib.h>|
 |**wcstold**、 **_wcstold_l**|\<stdlib.h> または \<wchar.h>|
@@ -154,10 +154,10 @@ string = 3.1415926535898This stopped it
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[文字列から数値への関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

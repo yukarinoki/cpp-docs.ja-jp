@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212450"
 ---
 # <a name="cfileexception-class"></a>CFileException クラス
 
@@ -67,7 +67,7 @@ class CFileException : public CException
 |[CFileException:: m_lOsError](#m_loserror)|関連するオペレーティングシステムのエラー番号を格納します。|
 |[CFileException:: m_strFileName](#m_strfilename)|この例外のファイルの名前を格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 クラスには、 `CFileException` 移植可能な原因コードとオペレーティングシステム固有のエラー番号を保持するパブリックデータメンバーが含まれています。 クラスには、ファイル例外をスローし、オペレーティングシステムエラーと C ランタイムエラーの両方の原因コードを返すための静的メンバー関数も用意されています。
 
@@ -107,7 +107,7 @@ CFileException(
 *Lpszアーカイブ*<br/>
 例外を発生させたオブジェクトの名前を含む文字列を指し `CFile` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このコンストラクターを直接使用するのではなく、グローバル関数[AfxThrowFileException](exception-processing.md#afxthrowfileexception)を呼び出します。
 
@@ -131,7 +131,7 @@ static int PASCAL ErrnoToException(int nErrno);
 
 特定のランタイムライブラリエラー値に対応する列挙値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 列挙可能な値の一覧については、「 [CFileException:: m_cause](#m_cause) 」を参照してください。
 
@@ -165,7 +165,7 @@ virtual BOOL GetErrorMessage(
 
 メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 指定されたバッファーが小さすぎる場合、エラーメッセージは切り捨てられます。
 
@@ -183,9 +183,9 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このデータメンバーは、 **int**型のパブリック変数です。列挙子とその意味は次のとおりです。
+このデータメンバーは、型のパブリック変数です **`int`** 。 列挙子とその意味は次のとおりです。
 
 | エラー | 値と意味 |
 |--|--|
@@ -209,7 +209,7 @@ int m_cause;
 > これらの `CFileException` 原因列挙子は、`CArchiveException` 原因列挙子とは異なります。
 
 > [!NOTE]
-> `CArchiveException::generic` は非推奨とされます。 代わりに、`genericException` を使用してください。 **Generic**をアプリケーションで使用し、/clr を使用してビルドした場合、結果の構文エラーは解読が容易ではありません。
+> `CArchiveException::generic` は非推奨とされます。 代わりに `genericException` を使用してください **Generic**をアプリケーションで使用し、/clr を使用してビルドした場合、結果の構文エラーは解読が容易ではありません。
 
 ### <a name="example"></a>例
 
@@ -223,7 +223,7 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 エラーコードの一覧については、オペレーティングシステムの技術マニュアルを参照してください。 このデータメンバーは LONG 型のパブリック変数です。
 

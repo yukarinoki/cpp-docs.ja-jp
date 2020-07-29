@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219665"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
@@ -40,19 +40,19 @@ __int64 __ll_rshift(
 
 ## <a name="return-value"></a>戻り値
 
-ビットで`nBit`シフトされたマスク。
+ビットでシフトされたマスク `nBit` 。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__ll_rshift`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-2番目のパラメーターが x64 の 64 (x86 の場合は 32) を超える場合は、シフトするビット数を決定するために、その数値が 64 (x86 の場合は 32) によって取得されます。 プレフィックス`ll`は、が`long long`操作であることを示します。これ`__int64`は、64ビットの符号付き整数型である別の名前です。
+2番目のパラメーターが x64 の 64 (x86 の場合は 32) を超える場合は、シフトするビット数を決定するために、その数値が 64 (x86 の場合は 32) によって取得されます。 プレフィックスは、 `ll` が操作であることを示します。これは、 **`long long`** **`__int64`** 64 ビットの符号付き整数型である別の名前です。
 
 ## <a name="example"></a>例
 
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 ffffffffffffff00
@@ -88,7 +88,7 @@ fffffffffffffff0
 ```
 
 > [!NOTE]
-> が`_ull_rshift`使用されている場合は、右シフトされた値の MSB が0になったため、目的の結果が負の値の場合に取得されていません。
+> `_ull_rshift`が使用されている場合は、右シフトされた値の MSB が0になったため、目的の結果が負の値の場合に取得されていません。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213529"
 ---
 # <a name="isnormal"></a>isnormal
 
-浮動小数点値が通常の値であるかどうかを判断します。
+浮動小数点値が通常の値かどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,23 +37,23 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>戻り値
 
-**isnormal** 0 以外の値を返します (**true**でC++コード) 場合、引数*x*は 0、非、無限でも、NaN です。 それ以外の場合、 **isnormal** 0 を返します (**false**でC++コード)。
+**isnormal** **`true`** 引数*x*が0、subnormal、無限、NaN のいずれでもない場合、isnormal は0以外の値 (C++ コード) を返します。 それ以外の場合、 **isnormal**は 0 ( **`false`** C++ コードでは) を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**isnormal** C、およびとしてコンパイルする場合は、インライン関数のテンプレートとしてコンパイルすると、マクロは、C++します。
+**isnormal**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインライン関数テンプレートです。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
 |**isnormal**|\<math.h>|\<math.h> または \<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

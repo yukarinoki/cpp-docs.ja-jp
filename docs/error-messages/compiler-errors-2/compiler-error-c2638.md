@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 863537c60584ba836c6605f31249ada95a88a1bf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748347"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212697"
 ---
 # <a name="compiler-error-c2638"></a>コンパイラエラー C2638
 
 ' identifier ': __based 修飾子は、メンバーへのポインターでは無効です
 
-`__based` 修飾子は、メンバーへのポインターには使用できません。
+修飾子は、 **`__based`** メンバーへのポインターには使用できません。
 
 次の例では、C2638 が生成されます。
 

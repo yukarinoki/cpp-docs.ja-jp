@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: c852b3040a94035f6a84b1f717c3583fababbb2c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b5f18de772ea2221ecbd4098b94e0b4f14c0484c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220926"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
-標準ヘッダー \<future > をインクルードして、クラステンプレートや、(場合によっては別のスレッドで) 関数の実行を簡略化し、その結果を取得するためのサポートテンプレートを定義します。 結果は、関数によって返される値、または関数によって生成されるが関数ではキャッチされない例外になります。
+標準ヘッダーをインクルードして、 \<future> クラステンプレートを定義し、関数の実行を簡略化する (場合によっては別のスレッドでの) サポートテンプレートを定義して、結果を取得します。 結果は、関数によって返される値、または関数によって生成されるが関数ではキャッチされない例外になります。
 
 このヘッダーではコンカレンシー ランタイム (ConcRT) が使用されます。これにより、このヘッダーを他の ConcRT メカニズムと共に使用できます。 ConcRT の詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
@@ -23,7 +23,7 @@ ms.locfileid: "72688026"
 #include <future>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!NOTE]
 > **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
@@ -34,21 +34,21 @@ ms.locfileid: "72688026"
 
 非同期プロバイダーや、関連付けられた非同期状態を保持しない非同期のリターン オブジェクトは、*空*になります。
 
-関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ*準備完了*になります。
+関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ*準備ができ*ます。
 
-テンプレート関数 `async` およびクラステンプレート `promise` と `packaged_task` は、非同期プロバイダーです。 クラステンプレート `future` および `shared_future`、非同期の戻りオブジェクトを記述します。
+テンプレート関数 `async` およびクラステンプレート `promise` とは、 `packaged_task` 非同期プロバイダーです。 クラステンプレート `future` と `shared_future` 非同期の戻り値オブジェクトについて説明します。
 
-各クラステンプレート `promise`、`future`、および `shared_future` には、 **void**型の特殊化と、参照渡しで値を格納および取得するための部分的特殊化があります。 これらの特殊化がプライマリ テンプレートと異なる点は、戻り値を格納および取得する関数のシグネチャとセマンティクスだけです。
+各クラステンプレート `promise` 、 `future` 、およびに `shared_future` は、型の特殊化と、 **`void`** 参照渡しで値を格納および取得するための部分的特殊化があります。 これらの特殊化がプライマリ テンプレートと異なる点は、戻り値を格納および取得する関数のシグネチャとセマンティクスだけです。
 
-クラステンプレート `future` および `shared_future` デストラクターではブロックされません。ただし、旧バージョンとの互換性のために残されている1つのケースは除きます。これは、で開始したタスクにアタッチされる、`future` または最後の `shared_future` の他のすべてのフューチャとは異なり `std::async`では、タスクが完了していない場合、デストラクターはブロックします。つまり、このスレッドが `.get()` または `.wait()` をまだ呼び出しておらず、タスクがまだ実行中である場合は、ブロックされます。 標準の草案では、`std::async` の説明に使用上の注意事項が追加されています。その注意事項とは、「メモ: std::async から取得された future をローカル スコープ外に移動する場合、future を使用する他のコードでは、future のデストラクターは共有状態が準備完了になるのをブロックする可能性があることを考慮する必要があります。」といったものです。ただし、それ以外の場合は、`future` と `shared_future` のデストラクターでは、ブロックが確実に実行されないようにする必要があります。
+クラステンプレートとは、 `future` `shared_future` 逆方向互換性のために保持される1つのケースを除き、デストラクターではブロックされません。つまり、で開始された `future` `shared_future` タスクに関連付けられている、または最後のすべてのフューチャとは異なり、 `std::async` デストラクターはタスクが完了 `.get()` `.wait()` していない場合はブロックします。 標準の草案では、`std::async` の説明に使用上の注意事項が追加されています。その注意事項とは、「メモ: std::async から取得された future をローカル スコープ外に移動する場合、future を使用する他のコードでは、future のデストラクターは共有状態が準備完了になるのをブロックする可能性があることを考慮する必要があります。」といったものです。ただし、それ以外の場合は、`future` と `shared_future` のデストラクターでは、ブロックが確実に実行されないようにする必要があります。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="classes"></a>クラス
 
-|名|説明|
+|名前|説明|
 |----------|-----------------|
-|[future クラス](../standard-library/future-class.md)|非同期のリターン オブジェクトを記述します。|
+|[将来のクラス](../standard-library/future-class.md)|非同期のリターン オブジェクトを記述します。|
 |[future_error クラス](../standard-library/future-error-class.md)|`future` オブジェクトを管理する型のメソッドによってスローされる例外オブジェクトを記述します。|
 |[packaged_task クラス](../standard-library/packaged-task-class.md)|呼び出しラッパーであり、呼び出しシグネチャが `Ty(ArgTypes...)` である非同期プロバイダーを記述します。 その関連付けられた非同期状態には、可能性がある結果に加えて呼び出し可能オブジェクトのコピーが保持されます。|
 |[promise クラス](../standard-library/promise-class.md)|非同期プロバイダーを記述します。|
@@ -56,24 +56,24 @@ ms.locfileid: "72688026"
 
 ### <a name="structures"></a>構造体
 
-|名|説明|
+|名前|説明|
 |----------|-----------------|
 |[is_error_code_enum 構造体](../standard-library/is-error-code-enum-structure.md)|`future_errc` が `error_code` の格納に適していることを示す特殊化です。|
 |[uses_allocator 構造体](../standard-library/uses-allocator-structure.md)|常に true を保持する特殊化です。|
 
 ### <a name="functions"></a>関数
 
-|名|説明|
+|名前|説明|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|非同期プロバイダーを表します。|
 |[future_category](../standard-library/future-functions.md#future_category)|`error_category` オブジェクトに関連するエラーの特性を設定する `future` オブジェクトへの参照を返します。|
 |[make_error_code](../standard-library/future-functions.md#make_error_code)|`error_code` エラーの特性を設定する `error_category` オブジェクトを保持する `future` を作成します。|
 |[make_error_condition](../standard-library/future-functions.md#make_error_condition)|`error_condition` エラーの特性を設定する `error_category` オブジェクトを保持する `future` を作成します。|
-|[swap](../standard-library/future-functions.md#swap)|関連付けられた非同期状態を、`promise` オブジェクト間で交換します。|
+|[スワップ](../standard-library/future-functions.md#swap)|関連付けられた非同期状態を、`promise` オブジェクト間で交換します。|
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
-|名|説明|
+|名前|説明|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` クラスによって報告されるエラーのシンボル名を提供します。|
 |[future_status](../standard-library/future-enums.md#future_status)|期限が設定された wait 関数から返される理由のシンボル名を提供します。|

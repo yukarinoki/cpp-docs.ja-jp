@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b7b99dae2ffb58123c05a65872e4c71e149ac12c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142745"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219574"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy クラス
 
@@ -32,14 +32,14 @@ class SchedulerPolicy;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[SchedulerPolicy](#ctor)|オーバーロードされます。 新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる[ポリシーキー](concurrency-namespace-enums.md)の値を設定します。|
 |[~ スケジューラポリシーのデストラクター](#dtor)|スケジューラ ポリシーを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[GetPolicyValue](#getpolicyvalue)|`key` パラメーターとして指定されるポリシー キーの値を取得します。|
 |[SetConcurrencyLimits](#setconcurrencylimits)|`MinConcurrency` オブジェクトに対して、`MaxConcurrency` ポリシーおよび `SchedulerPolicy` ポリシーを同時に設定します。|
@@ -47,25 +47,25 @@ class SchedulerPolicy;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator=](#operator_eq)|別のスケジューラ ポリシーからスケジューラ ポリシーを割り当てます。|
+|[operator =](#operator_eq)|別のスケジューラ ポリシーからスケジューラ ポリシーを割り当てます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`SchedulerPolicy` クラスを使用して制御できるポリシーの詳細については、「 [Policyelementkey](concurrency-namespace-enums.md)」を参照してください。
+クラスを使用して制御できるポリシーの詳細については `SchedulerPolicy` 、「 [Policyelementkey](concurrency-namespace-enums.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `SchedulerPolicy`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt、concrtrm .h
 
 **名前空間:** concurrency
 
-## <a name="getpolicyvalue"></a>GetPolicyValue
+## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue
 
 `key` パラメーターとして指定されるポリシー キーの値を取得します。
 
@@ -80,13 +80,13 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 
 ### <a name="return-value"></a>戻り値
 
-`key` パラメーターによって指定されたキーがサポートされている場合、`unsigned int`にキャストするキーのポリシー値。
+パラメーターで指定したキーがサポートされている場合は、 `key` にキャストするキーのポリシー値 **`unsigned int`** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メソッドは、無効なポリシーキーの[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)をスローします。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 別のスケジューラ ポリシーからスケジューラ ポリシーを割り当てます。
 
@@ -103,11 +103,11 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 
 スケジューラポリシーへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、新しいスケジューラ ポリシーを定義する最も簡単な方法は、既存のポリシーをコピーし、それを `SetPolicyValue` メソッドまたは `SetConcurrencyLimits` メソッドを使用して変更することです。
 
-## <a name="ctor"></a>SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy
 
 新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる[ポリシーキー](concurrency-namespace-enums.md)の値を設定します。
 
@@ -130,7 +130,7 @@ SchedulerPolicy(
 *_SrcPolicy*<br/>
 コピー元のポリシー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のコンストラクターでは、すべてのポリシーが既定値に初期化される新しいスケジューラ ポリシーを作成します。
 
@@ -138,7 +138,7 @@ SchedulerPolicy(
 
 3 番目のコンストラクターはコピー コンストラクターです。 通常、新しいスケジューラ ポリシーを定義する最も簡単な方法は、既存のポリシーをコピーし、それを `SetPolicyValue` メソッドまたは `SetConcurrencyLimits` メソッドを使用して変更することです。
 
-## <a name="dtor"></a>~ スケジューラポリシー
+## <a name="schedulerpolicy"></a><a name="dtor"></a>~ スケジューラポリシー
 
 スケジューラ ポリシーを破棄します。
 
@@ -146,7 +146,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```
 
-## <a name="setconcurrencylimits"></a>SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits
 
 `MinConcurrency` オブジェクトに対して、`MaxConcurrency` ポリシーおよび `SchedulerPolicy` ポリシーを同時に設定します。
 
@@ -159,18 +159,18 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>パラメーター
 
 *_MinConcurrency*<br/>
-`MinConcurrency` ポリシーキーの値。
+ポリシーキーの値 `MinConcurrency` 。
 
 *_MaxConcurrency*<br/>
-`MaxConcurrency` ポリシーキーの値。
+ポリシーキーの値 `MaxConcurrency` 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`MinConcurrency` ポリシーに指定された値が `MaxConcurrency` ポリシーで指定された値よりも大きい場合、メソッドは[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)をスローします。
+ポリシーに指定された値がポリシーに指定された値よりも大きい場合、メソッドは[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)をスローし `MinConcurrency` `MaxConcurrency` ます。
 
 メソッドは、他の無効な値の[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)をスローすることもできます。
 
-## <a name="setpolicyvalue"></a>SetPolicyValue
+## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue
 
 `key` パラメーターとして指定されるポリシー キーの値を設定し、古い値を返します。
 
@@ -190,19 +190,19 @@ unsigned int SetPolicyValue(
 
 ### <a name="return-value"></a>戻り値
 
-`key` パラメーターによって指定されたキーがサポートされている場合、`unsigned int`にキャストするキーの古いポリシー値。
+パラメーターで指定されたキーがサポートされている場合は、にキャストされた `key` キーの古いポリシー値 **`unsigned int`** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメソッドは、無効なポリシーキーまたは値が `SetPolicyValue` メソッドによって設定できないポリシーキーに対して[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)をスローします。
+メソッドは、無効なポリシーキーまたはメソッドによって値を設定できないポリシーキーの[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)をスローし `SetPolicyValue` ます。
 
-メソッドは、`key` パラメーターで指定されたキーに対してサポートされていない値の[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)をスローします。
+メソッドは、パラメーターで指定されたキーに対してサポートされていない値の[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)をスローし `key` ます。
 
-この方法では、`MinConcurrency` ポリシーまたは `MaxConcurrency` ポリシーを設定できないことに注意してください。 これらの値を設定するには、 [SetConcurrencyLimits](#setconcurrencylimits)メソッドを使用します。
+このメソッドでは、ポリシーまたはポリシーの設定は許可されていないことに注意 `MinConcurrency` `MaxConcurrency` してください。 これらの値を設定するには、 [SetConcurrencyLimits](#setconcurrencylimits)メソッドを使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler クラス](currentscheduler-class.md)<br/>
 [Scheduler クラス](scheduler-class.md)<br/>

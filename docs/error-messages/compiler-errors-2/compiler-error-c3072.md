@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bcf2548fbe1182f7f6c4bd966ca6aa9ef9f10089
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212606"
 ---
 # <a name="compiler-error-c3072"></a>コンパイラ エラー C3072
 
-演算子 ' operator ' を ref クラスのインスタンスに適用することはできません
+> 演算子 '*operator name*' を ref クラスのインスタンスに適用することはできません
 
-単項 '`operator` ' 演算子を使用して ref クラスのインスタンスをハンドル型に変換します
+単項*演算子-name*演算子を使用して、ref クラスのインスタンスをハンドル型に変換します。
 
 CLR 型には、ネイティブ (または標準) 演算子ではなく、CLR 演算子が必要です。  詳細については、「[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3072 が生成されます。
 
