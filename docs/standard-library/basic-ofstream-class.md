@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: f2d0facd92e0ef1935f8218a6d323a62edb81e5b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d825dbbe278325e755af6fdffe01a34ac0a4080d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219262"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream クラス
 
-クラス> のストリーム バッファーへの要素とエンコードされたオブジェクト[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem``Tr`の挿入を制御するオブジェクトについて説明します`Elem``Tr`。
+要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクト[basic_filebuf](../standard-library/basic-filebuf-class.md)を記述します。このオブジェクトは、 <  `Elem` 型の要素を使用して、 `Tr` 文字の `Elem` 特徴がクラスによって決定される> basic_filebuf `Tr` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +44,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ## <a name="remarks"></a>解説
 
-ファイルへの**wchar_t**`basic_ofstream`書き込みのwchar_t特殊化時に、ファイルがテキストモードで開かれている場合、MBCS シーケンスが書き込まれます。 内部表現には `wchar_t` 文字のバッファーが使用されます。
+を **`wchar_t`** 特殊化して `basic_ofstream` ファイルに書き込みを行う場合、ファイルがテキストモードで開かれていると、MBCS シーケンスが書き込まれます。 内部表現は、文字のバッファーを使用し **`wchar_t`** ます。
 
 このオブジェクトは、クラス `basic_filebuf`< `Elem`, `Tr`> のオブジェクトを格納します。
 
@@ -72,7 +72,7 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[basic_ofstream](#basic_ofstream)|`basic_ofstream` 型のオブジェクトを作成します。|
 
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
 
 |メンバー関数|説明|
 |-|-|
-|[閉じる](#close)|ファイルを閉じます。|
+|[ok](#close)|ファイルを閉じます。|
 |[is_open](#is_open)|ファイルが開いているかどうかを判断します。|
 |[open](#open)|ファイルを開きます。|
 |[rdbuf](#rdbuf)|格納されたストリーム バッファーのアドレスを返します。|
@@ -90,15 +90,15 @@ int main(int argc, char **argv)
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_eq)|このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。|
+|[operator =](#op_eq)|このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<fstream>
+**ヘッダー:**\<fstream>
 
 **名前空間:** std
 
-## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream::basic_ofstream
+## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream:: basic_ofstream
 
 `basic_ofstream` 型のオブジェクトを作成します。
 
@@ -135,11 +135,11 @@ basic_ofstream(
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、basic_ostream [(](../standard-library/basic-ostream-class.md)`sb`) を呼び`sb`出すことによって基本クラスを初期化します`Tr`( ) は、> クラス[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`の格納されたオブジェクトです。 また、`basic_filebuf`< `Elem`, `Tr`> を呼び出すことで `sb` の初期化もします。
+最初のコンストラクターは[basic_ostream](../standard-library/basic-ostream-class.md)() を呼び出すことによって基底クラスを初期化し `sb` `sb` ます。は、 [basic_filebuf](../standard-library/basic-filebuf-class.md)クラスの格納されているオブジェクトで、 <  `Elem` `Tr`> です。 また、`basic_filebuf`< `Elem`, `Tr`> を呼び出すことで `sb` の初期化もします。
 
-2 番目と 3 番目のコンストラクターは、`basic_ostream`( **sb**) を呼び出すことで基底クラスを初期化します。 また、 を`sb`呼び`basic_filebuf`< `Elem`出`Tr`して初期化>、 そして 、 を呼び出します`sb`。 [開く](../standard-library/basic-filebuf-class.md#open) `_Mode` ( `ios_base::out` `_Filename`, &#124; ) 後者の関数が null ポインターを返す場合、コンストラクター`failbit`は[setstate](../standard-library/basic-ios-class.md#setstate)( ) を呼び出します。
+2 番目と 3 番目のコンストラクターは、`basic_ostream`( **sb**) を呼び出すことで基底クラスを初期化します。 また `sb` 、を呼び出してを初期化し、> してから、を初期化し `basic_filebuf` <  `Elem` `Tr` `sb` ます。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename` 、&#124; `_Mode` ) を開き `ios_base::out` ます。 後者の関数が null ポインターを返す場合、コンストラクターは[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
 
-4 番目のコンストラクターは、copy 関数です。 右辺値参照として扱われる*right*の内容でオブジェクトを初期化します。
+4 番目のコンストラクターは、copy 関数です。 右辺値参照として扱われる*right*の内容を使用してオブジェクトを初期化します。
 
 ### <a name="example"></a>例
 
@@ -163,7 +163,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream::閉じる
+## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream:: close
 
 ファイルを閉じます。
 
@@ -173,13 +173,13 @@ void close();
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は[rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close)を呼び出します。
+このメンバー関数は、 [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)を呼び出します。
 
 ### <a name="example"></a>例
 
 `close` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream::is_open
+## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream:: is_open
 
 ファイルが開いているかどうかを示します。
 
@@ -189,11 +189,11 @@ bool is_open() const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイルが開いている場合は **true**、それ以外の場合は **false**。
+**`true`** ファイルが開いている場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)を返します。
+このメンバー関数は、 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)を返します。
 
 ### <a name="example"></a>例
 
@@ -217,7 +217,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream::オープン
+## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream:: open
 
 ファイルを開きます。
 
@@ -254,13 +254,13 @@ void open(
 
 ### <a name="remarks"></a>解説
 
-メンバ関数は[、rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ `_Mode` `ios_base::out`*ファイル名*、 &#124; ) を呼び出します。 その関数が null ポインタを返す場合、関数は`failbit` [setstate](../standard-library/basic-ios-class.md#setstate)( ) を呼び出します。
+このメンバー関数は、 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, &#124;) を呼び出し `_Mode` `ios_base::out` ます。 この関数が null ポインターを返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
 
 ### <a name="example"></a>例
 
-を使用する例については[、basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)を参照`open`してください。
+の使用例については、「 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 」を参照してください `open` 。
 
-## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream::演算子=
+## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream:: operator =
 
 このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。
 
@@ -275,13 +275,13 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="return-value"></a>戻り値
 
-`*this` が返されます。
+を返し **`*this`** ます。
 
 ### <a name="remarks"></a>解説
 
-member 演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。
+メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。
 
-## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream::rdbuf
+## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream:: rdbuf
 
 格納されたストリーム バッファーのアドレスを返します。
 
@@ -297,7 +297,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 `rdbuf` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream::スワップ
+## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream:: swap
 
 2 つの `basic_ofstream` オブジェクトの内容を交換します。
 
@@ -312,11 +312,11 @@ void swap(basic_ofstream& right);
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、このオブジェクトの内容を*right*の内容と交換します。
+このメンバー関数は、このオブジェクトの内容を*右*の内容と交換します。
 
 ## <a name="see-also"></a>関連項目
 
-[basic_ostreamクラス](../standard-library/basic-ostream-class.md)\
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[basic_ostream クラス](../standard-library/basic-ostream-class.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

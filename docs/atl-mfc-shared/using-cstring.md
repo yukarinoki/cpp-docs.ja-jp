@@ -6,24 +6,24 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ebf3441c7d8856fe412e2efed4c717b01ced362
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219015"
 ---
 # <a name="using-cstring"></a>CString の使用
 
-このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 に関するリファレンス ドキュメント、`CString`クラス、ドキュメントを参照して[CStringT](../atl-mfc-shared/reference/cstringt-class.md)します。
+このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 クラスに関するリファレンスドキュメントについては `CString` 、「 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)のドキュメント」を参照してください。
 
 `CString` を使用するには、`atlstr.h` ヘッダーをインクルードします。
 
-`CString`、 `CStringA`、および`CStringW`クラスと呼ばれるクラス テンプレートの特殊化は、 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)サポートする、文字データの種類に基づきます。
+`CString`、 `CStringA` 、およびの `CStringW` 各クラスは、サポートする文字データの型に基づいて、 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)と呼ばれるクラステンプレートの特殊化です。
 
-A`CStringW`オブジェクトが含まれています、 **wchar_t**を入力し、Unicode 文字列がサポートされます。 A`CStringA`オブジェクトが含まれています、 **char**型、およびサポートするシングル バイト文字とマルチバイト (MBCS) 文字列。 A`CString`オブジェクトがサポートするか、 **char**型または`wchar_t`MBCS シンボルまたは UNICODE 記号はコンパイル時に定義されているかどうかに応じて、種類。
+オブジェクトには `CStringW` 型が含まれており、Unicode 文字列がサポートされてい **`wchar_t`** ます。 オブジェクトには `CStringA` 型が含まれて **`char`** おり、1バイト文字列とマルチバイト (MBCS) 文字列をサポートしています。 オブジェクトは、 `CString` **`char`** **`wchar_t`** MBCS シンボルまたは UNICODE シンボルがコンパイル時に定義されているかどうかに応じて、型または型のいずれかをサポートします。
 
-`CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` NULL で終わる C スタイルの文字列を受け入れます。 `CString` 文字列の追跡のパフォーマンスを向上させることが、長さも LPCWSTR への変換をサポートするために格納されている文字データに NULL 文字を保持します。 `CString` C スタイルの文字列をエクスポートする場合、null 終端文字が含まれます。 その他の場所に NULL を挿入できる、 `CString`、予期しない結果が生じる。
+`CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString`NULL で終わる C スタイルの文字列を受け入れます。 `CString`は、高速なパフォーマンスを実現するために文字列の長さを追跡しますが、LPCWSTR への変換をサポートするために、格納されている文字データの NULL 文字も保持します。 `CString`C スタイルの文字列をエクスポートするときに、null 終端文字を含めます。 内の他の場所に NULL を挿入することはでき `CString` ますが、予期しない結果が生じる可能性があります。
 
 文字列クラス `CAtlString`、`CAtlStringA`、および `CAtlStringW` は、CRT サポートがある場合もない場合も、MFC ライブラリにリンクせずに使用できます。
 
@@ -53,22 +53,22 @@ C リテラル文字列からのオブジェクトの作成、`CString` 内の�
 [CString セマンティクス](../atl-mfc-shared/cstring-semantics.md)<br/>
 `CString` オブジェクトの使用方法について説明します。
 
-[C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[C スタイルの文字列に関連する CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 C スタイルの null で終わる文字列のように `CString` オブジェクトの内容を操作する方法について説明します。
 
 [BSTR 用のメモリの割り当てと解放](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
-BSTR および COM オブジェクトのメモリの使用について説明します。
+BSTR オブジェクトと COM オブジェクトのメモリの使用について説明します。
 
-[CString の例外の後処理](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
+[CString 例外のクリーンアップ](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 MFC 3.0 以降で明示的な後処理が不要になったことについて説明します。
 
-[CString 引数の渡し方](../atl-mfc-shared/cstring-argument-passing.md)<br/>
+[CString 引数の引き渡し](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 CString オブジェクトを関数に渡す方法と関数から `CString` オブジェクトを返す方法について説明します。
 
-[Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
+[Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 MFC で Unicode と MBCS をサポートできるようにする方法について説明します。
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>リファレンス
 
 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 `CStringT` クラスに関するリファレンス情報を提供します。
@@ -78,7 +78,7 @@ MFC で Unicode と MBCS をサポートできるようにする方法につい�
 
 ## <a name="related-sections"></a>関連項目
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[文字列 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 文字列データを管理する複数の方法について説明したトピックへのリンクが含まれています。
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+[文字列 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

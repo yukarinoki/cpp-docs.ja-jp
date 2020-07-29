@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456239"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217767"
 ---
-# <a name="isintegral-class"></a>is_integral クラス
+# <a name="is_integral-class"></a>is_integral クラス
 
 型が整数かどうかをテストします。
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が整数型の1つ、または`cv-qualified`整数型の1つの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型*Ty*が整数型の1つ、または整数型の1つの形式である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
-整数型は、 **bool**、 **char**、 **unsigned char**、 **signed char**、 **wchar_t**、 **short**、 **unsigned short**、 **int**、 **unsigned int**、 **long**、 **unsigned long**のいずれかです。 また、これらを提供するコンパイラでは、整数型は long 長、 **unsigned long long**、 **__int64**、 **unsigned __int64** **のいずれ**かになります。
+整数型は、、、、、、、、、、、およびのいずれかです **`bool`** **`char`** **`unsigned char`** **`signed char`** **`wchar_t`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** 。 また、それらを提供するコンパイラでは、整数型は、、、 **`long long`** **`unsigned long long`** **`__int64`** および**符号なしの __int64**のいずれかになります。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

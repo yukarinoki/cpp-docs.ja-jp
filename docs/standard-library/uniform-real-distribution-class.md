@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 4f293f73eb1fa8a38bf06692ef5b7938faeab0d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367271"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217364"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution クラス
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*リアルタイプ*\
-浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*RealType*\
+浮動小数点演算の結果の型は、既定ではに **`double`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、すべての値が等しく可能性が高いように、ユーザー指定の整数浮動小数点型の値を、分布を持つ包括的な排他的分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、すべての値が均等になるように、分布を使用してユーザー指定の整数浮動小数点型の値を生成する、包括的限定の分布を記述します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-プロパティ メンバー `a()` は、現在格納されている分布の最小限度値を返し、`b()` は、現在格納されている最大限度値を返します。 この分布クラスの場合、これらの最小値と最大値は、共通のプロパティ関数`min()`によって返される値`max()`[\<>](../standard-library/random.md)と同じです。
+プロパティ メンバー `a()` は、現在格納されている分布の最小限度値を返し、`b()` は、現在格納されている最大限度値を返します。 この分布クラスでは、これらの最小値と最大値は、 `min()` `max()` 「」で説明されている一般的なプロパティ関数によって返される値と同じ [\<random>](../standard-library/random.md) です。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -93,7 +93,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="example"></a>例
 
@@ -174,11 +174,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:: uniform_real_distribution
 
 分布を作成します。
 
@@ -189,24 +189,24 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*A*\
+*ある*\
 乱数値の下限 (包含的)。
 
-*B*\
+*b*\
 乱数値の上限 (排他的)。
 
-*Parm*\
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>解説
 
 **前提条件:**`a < b`
 
-最初のコンストラクターは *、格納された*値が*a*を保持し、格納された b 値が*b*値*b*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、値*を*保持し、格納さ*れて*いる*b*値が値*b*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::pアラム_タイプ
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 
@@ -224,10 +224,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*A*\
+*ある*\
 乱数値の下限 (包含的)。
 
-*B*\
+*b*\
 乱数値の上限 (排他的)。
 
 *そうです*\
@@ -241,4 +241,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

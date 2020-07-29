@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217936"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>例外処理 : 例外処理でのオブジェクトの解放
 
@@ -30,9 +30,9 @@ ms.locfileid: "84622822"
 
 これを行うには、2つの主要な方法があります。
 
-- **Try**キーワードと**catch**キーワードを使用して例外をローカルで処理し、1つのステートメントですべてのオブジェクトを破棄します。
+- キーワードとキーワードを使用して例外をローカル **`try`** **`catch`** で処理し、1つのステートメントを使用してすべてのオブジェクトを破棄します。
 
-- 後続の処理のためにブロックの外側で例外をスローする前に、 **catch**ブロック内のすべてのオブジェクトを破棄します。
+- ブロックの **`catch`** 外部で例外をスローする前に、ブロック内のオブジェクトをすべて破棄します。
 
 次の2つの方法は、次のような問題のある例の解決策として示されています。
 
@@ -50,7 +50,7 @@ ms.locfileid: "84622822"
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>オブジェクトの破棄後に例外をスローする
 
-例外を処理するもう1つの方法は、例外を次の外側の例外処理コンテキストに渡すことです。 **Catch**ブロックでは、ローカルに割り当てられたオブジェクトのクリーンアップを実行し、さらに処理するために例外をスローすることができます。
+例外を処理するもう1つの方法は、例外を次の外側の例外処理コンテキストに渡すことです。 ブロックでは **`catch`** 、ローカルに割り当てられたオブジェクトのクリーンアップを実行し、さらに処理するために例外をスローすることができます。
 
 スローする関数は、ヒープオブジェクトの割り当てを解除する必要がある場合とない場合があります。 関数が通常のケースでを返す前にヒープオブジェクトの割り当てを解除する場合、関数は、例外をスローする前にヒープオブジェクトの割り当てを解除する必要があります。 一方、通常のケースでが返される前に関数がオブジェクトの割り当てを解除しない場合は、ヒープオブジェクトの割り当てを解除するかどうかをケースバイケースで決定する必要があります。
 

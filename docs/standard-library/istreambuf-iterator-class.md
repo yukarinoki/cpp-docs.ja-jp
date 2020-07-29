@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 80bca2160f2e60938e9d0c85557b11a273c23264
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217702"
 ---
 # <a name="istreambuf_iterator-class"></a>istreambuf_iterator クラス
 
-クラス テンプレート istreambuf_iteratorは、入力ストリーム バッファーから、格納するオブジェクトを通じてアクセスする`basic_streambuf`\<**、CharType**へのポインター型の入力反復子オブジェクトを記述 **>。**
+クラステンプレート istreambuf_iterator は、入力ストリームバッファーから文字要素を抽出する入力反復子オブジェクトを記述します。これには、へのポインター型の、格納されているオブジェクトを介してアクセス `basic_streambuf` \< **CharType**, **Traits**> します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,11 +39,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype*\
+*CharType*\
 istreambuf_iterator の文字型を表す型。
 
-*特徴*\
-istreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*名札*\
+istreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits` \< *CharType> . * です。
 
 ## <a name="remarks"></a>解説
 
@@ -53,13 +53,13 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|入力ストリームから文字を読み取るために初期化される `istreambuf_iterator` を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[char_type](#char_type)|`ostreambuf_iterator` の文字型を提供する型。|
 |[int_type](#int_type)|`istreambuf_iterator` の整数型を提供する型。|
@@ -71,23 +71,23 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 
 |メンバー関数|説明|
 |-|-|
-|[等しい](#equal)|2 つ入力ストリーム バッファー反復子の等価性をテストします。|
+|[つの](#equal)|2 つ入力ストリーム バッファー反復子の等価性をテストします。|
 
 ### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[演算子*](#op_star)|逆参照演算子は、ストリーム内の次の文字を返します。|
-|[演算子++](#op_add_add)|入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
-|[オペレーター->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
+|[operator](#op_star)|逆参照演算子は、ストリーム内の次の文字を返します。|
+|[+ + 演算子](#op_add_add)|入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
+|[演算子->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<iterator>
+**ヘッダー:**\<iterator>
 
 **名前空間:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator::char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:: char_type
 
 `ostreambuf_iterator` の文字型を提供する型。
 
@@ -132,7 +132,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator::等しい
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator:: 等しい
 
 2 つの入力ストリーム バッファー反復子の等価性をテストします。
 
@@ -147,11 +147,11 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-両方の `istreambuf_iterator` がストリームの終わりの反復子であるか、どちらもストリームの終わりの反復子でない場合は **true**、それ以外の場合は **false**。
+**`true`** 両方のが `istreambuf_iterator` ストリームの末尾の反復子であるか、どちらもストリームの末尾の反復子でない場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-範囲は、現在位置と`istreambuf_iterator`ストリーム終端反復子によって定義されますが、すべての非ストリーム終わり反復子は`equal`メンバー関数の下で同等であるため、s を使用して`istreambuf_iterator`任意の部分範囲を定義することはできません。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
+範囲は、によって `istreambuf_iterator` 現在の位置とストリームの末尾の反復子によって定義されますが、すべての非終端ストリーム反復子がメンバー関数の下で等価であるため `equal` 、を使用して部分範囲を定義することはできません `istreambuf_iterator` 。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
 
 ### <a name="example"></a>例
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator::int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:: int_type
 
 `istreambuf_iterator` の整数型を提供する型。
 
@@ -212,7 +212,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator::istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:: istream_type
 
 `istreambuf_iterator` のストリーム型を提供する型。
 
@@ -222,13 +222,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、`basic_istream`\< **CharType**, **Traits**> のシノニムです。
+この型はのシノニムです `basic_istream` \< **CharType**, **Traits**> 。
 
 ### <a name="example"></a>例
 
 `istream_type` を宣言して使用する方法の例については、[istreambuf_iterator](#istreambuf_iterator) に関するセクションをご覧ください。
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator::istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:: istreambuf_iterator
 
 入力ストリームから文字を読み取るために初期化される istreambuf_iterator を構築します。
 
@@ -239,7 +239,7 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ストルブフ*\
+*strbuf*\
 `istreambuf_iterator` が関連付けられている入力ストリーム バッファー。
 
 *_Istr*\
@@ -247,7 +247,7 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、入力ストリーム バッファー ポインターを*strbuf*で初期化します。 2 番目のコンストラクターは、入力ストリーム バッファー ポインターを *_Istr*で初期化します。 `rdbuf`をクリックし、最終的に型`CharType`のオブジェクトを抽出して格納しようとします。
+最初のコンストラクターは、 *strbuf*で入力ストリームバッファーポインターを初期化します。 2番目のコンストラクターは、 *_Istr*を使用して、入力ストリームバッファーポインターを初期化します。 `rdbuf`次に、は、型のオブジェクトの抽出と格納を試み `CharType` ます。
 
 ### <a name="example"></a>例
 
@@ -281,7 +281,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator::演算子*
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:: operator *
 
 逆参照演算子は、ストリーム内の次の文字を返します。
 
@@ -321,7 +321,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator::演算子++
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:: operator + +
 
 入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>解説
 
-最初の演算子は、最終的に、関連付けられた入力ストリームから`CharType`型のオブジェクトを抽出して格納しようとします。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
+最初の演算子は、最終的に、 `CharType` 関連付けられている入力ストリームから型のオブジェクトの抽出と格納を試みます。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
 
 ### <a name="example"></a>例
 
@@ -366,7 +366,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator::演算子-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator:: operator-&gt;
 
 メンバーの値 (存在する場合) を返します。
 
@@ -376,9 +376,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>戻り値
 
-演算子は**&\*\*、この値を**返します。
+演算子は** & \* \* this**を返します。
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator::streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:: streambuf_type
 
 istreambuf_iterator のストリーム型を提供する型。
 
@@ -388,13 +388,13 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、`basic_streambuf`\< **CharType**, **Traits**> のシノニムです。
+この型はのシノニムです `basic_streambuf` \< **CharType**, **Traits**> 。
 
 ### <a name="example"></a>例
 
 `istreambuf_type` を宣言して使用する方法の例については、[istreambuf_iterator](#istreambuf_iterator) に関するセクションをご覧ください。
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator::traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:: traits_type
 
 `istream_iterator` の文字特性型を提供する型。
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[反復器の構造体](../standard-library/iterator-struct.md)\
-[\<反復器>](../standard-library/iterator.md)\
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[iterator 構造体](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142833"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213880"
 ---
 # <a name="call-class"></a>call クラス
 
@@ -43,20 +43,20 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[発信](#ctor)|オーバーロードされます。 `call` メッセージング ブロックを構築します。|
-|[~ 呼び出しデストラクター](#dtor)|`call` メッセージングブロックを破棄します。|
+|[call](#ctor)|オーバーロードされます。 `call` メッセージング ブロックを構築します。|
+|[~ 呼び出しデストラクター](#dtor)|`call`メッセージングブロックを破棄します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|入力メッセージに対して call 関数を実行します。|
-|[process_message](#process_message)|この `call` メッセージングブロックによって受け入れられたメッセージを処理します。|
-|[propagate_message](#propagate_message)|`ISource` ブロックからこの `call` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。|
-|[send_message](#send_message)|`ISource` ブロックからのメッセージを、この `call` メッセージングブロックに同期的に渡します。 これは、ソースブロックによって呼び出されたときに、`send` メソッドによって呼び出されます。|
-|[supports_anonymous_source](#supports_anonymous_source)|`supports_anonymous_source` メソッドをオーバーライドして、このブロックがリンクされていないソースによって提供されるメッセージを受け入れることができることを示します。 ( [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source)よりも優先されます)。|
+|[process_message](#process_message)|このメッセージングブロックで受け入れられたメッセージを処理 `call` します。|
+|[propagate_message](#propagate_message)|`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `call` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。|
+|[send_message](#send_message)|`ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `call` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。|
+|[supports_anonymous_source](#supports_anonymous_source)|このブロックがリンクされて `supports_anonymous_source` いないソースによって提供されるメッセージを受け入れることができることを示すために、メソッドをオーバーライドします。 ( [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source)よりも優先されます)。|
 
 ## <a name="remarks"></a>解説
 
@@ -70,13 +70,13 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 `call`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>発信
+## <a name="call"></a><a name="ctor"></a>発信
 
 `call` メッセージング ブロックを構築します。
 
@@ -125,19 +125,19 @@ call(
 
 `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
-`_Call_method` 型は、メッセージを処理するためにこの `call` メッセージングブロックによって呼び出されるシグネチャ `void (T const &)` を持つファンクタです。
+この型 `_Call_method` は、 `void (T const &)` `call` メッセージを処理するためにこのメッセージングブロックによって呼び出される、署名付きのファンクタです。
 
-`filter_method` 型は、提供されたメッセージを受け入れるかどうかを判断するために、この `call` メッセージングブロックによって呼び出される、シグネチャ `bool (T const &)` のファンクタです。
+この型は、提供された `filter_method` `bool (T const &)` メッセージを `call` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="dtor"></a>~ 呼び出し
+## <a name="call"></a><a name="dtor"></a>~ 呼び出し
 
-`call` メッセージングブロックを破棄します。
+`call`メッセージングブロックを破棄します。
 
 ```cpp
 ~call();
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 入力メッセージに対して call 関数を実行します。
 
@@ -150,9 +150,9 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 処理するメッセージへのポインター。
 
-## <a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a>process_message
 
-この `call` メッセージングブロックによって受け入れられたメッセージを処理します。
+このメッセージングブロックで受け入れられたメッセージを処理 `call` します。
 
 ```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -163,9 +163,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 処理するメッセージへのポインター。
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-`ISource` ブロックからこの `call` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。
+`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `call` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ virtual message_status propagate_message(
 
 対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-`ISource` ブロックからのメッセージを、この `call` メッセージングブロックに同期的に渡します。 これは、ソースブロックによって呼び出されたときに、`send` メソッドによって呼び出されます。
+`ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `call` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
 ```cpp
 virtual message_status send_message(
@@ -207,9 +207,9 @@ virtual message_status send_message(
 
 対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
-`supports_anonymous_source` メソッドをオーバーライドして、このブロックがリンクされていないソースによって提供されるメッセージを受け入れることができることを示します。
+このブロックがリンクされて `supports_anonymous_source` いないソースによって提供されるメッセージを受け入れることができることを示すために、メソッドをオーバーライドします。
 
 ```cpp
 virtual bool supports_anonymous_source();
@@ -217,9 +217,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-ブロックは提供されたメッセージを延期しないため、 **true**になります。
+**`true`** ブロックは提供されたメッセージを延期しないためです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
-[transformer クラス](transformer-class.md)
+[concurrency 名前空間](concurrency-namespace.md)<br/>
+[トランスフォーマークラス](transformer-class.md)

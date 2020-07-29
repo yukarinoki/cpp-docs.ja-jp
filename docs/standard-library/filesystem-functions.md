@@ -84,16 +84,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 1e5994faab69c1809f820b41186d9b618aa7c193
-ms.sourcegitcommit: d2ccbba1bf4e66d6b6b0582dc01ba39f4a54f0aa
+ms.openlocfilehash: c637c4893a13df577fd6c083c8a4f2380c9c4cad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82984085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219158"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 関数
 
-[ \<ファイルシステムの>](../standard-library/filesystem.md)ヘッダーに含まれるこれらの free 関数は、パス、ファイル、シンボリックリンク、ディレクトリ、およびボリュームに対する操作を変更し、クエリを実行します。 詳細とコード例については、「[ファイルシステムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
+ヘッダーに含まれるこれらの free 関数 [\<filesystem>](../standard-library/filesystem.md) は、パス、ファイル、シンボリックリンク、ディレクトリ、およびボリュームに対する操作を変更し、クエリを実行します。 詳細とコード例については、「[ファイルシステムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
 ## <a name="absolute"></a><a name="absolute"></a>絶対
 
@@ -101,15 +101,15 @@ ms.locfileid: "82984085"
 path absolute(const path& pval, const path& base = current_path());
 ```
 
-関数は、パス名`base`に対して相対的な*pval*に対応する絶対パス名を返します。
+関数は、パス名に対して相対的な*pval*に対応する絶対パス名を返し `base` ます。
 
-1. 関数`pval.has_root_name() && pval.has_root_directory()`が*pval*を返す場合は。
+1. `pval.has_root_name() && pval.has_root_directory()`関数が*pval*を返す場合は。
 
-1. 関数`pval.has_root_name() && !pval.has_root_directory()`が`pval.root_name()`  /  `absolute(base).root_directory()`  / を返す`absolute(base).relative_path()`場合 / 。 `pval.relative_path()`
+1. `pval.has_root_name() && !pval.has_root_directory()`関数がを返す場合は `pval.root_name()`  /  `absolute(base).root_directory()`  /  `absolute(base).relative_path()`  /  `pval.relative_path()` 。
 
-1. 関数`!pval.has_root_name() && pval.has_root_directory()`が`absolute(base).root_name()`  /  *pval*を返す場合は。
+1. `!pval.has_root_name() && pval.has_root_directory()`関数が pval を返す場合は `absolute(base).root_name()`  /  *pval*。
 
-1. 関数`!pval.has_root_name() && !pval.has_root_directory()`が`absolute(base)`  /  *pval*を返す場合は。
+1. `!pval.has_root_name() && !pval.has_root_directory()`関数が pval を返す場合は `absolute(base)`  /  *pval*。
 
 ## <a name="begin"></a><a name="begin"></a>初め
 
@@ -129,15 +129,15 @@ path canonical(const path& pval, error_code& ec);
 path canonical(const path& pval, const path& base, error_code& ec);
 ```
 
-これらの関数はすべて絶対パス`pabs = absolute(pval, base)`名 ( `pabs = absolute(pval)`または、基本パラメーターのないオーバーロード) を形成してから、次の一連の手順で正規の形式に縮小します。
+これらの関数はすべて絶対パス名 `pabs = absolute(pval, base)` (または `pabs = absolute(pval)` 、基本パラメーターのないオーバーロード) を形成してから、次の一連の手順で正規の形式に縮小します。
 
-1. が true で`X`あるすべてのパスコンポーネントは、 `read_symlink(X)`に置き換えられます。 **true** `is_symlink(X)`
+1. がに置換されるすべてのパスコンポーネント `X` `is_symlink(X)` **`true`** `read_symlink(X)` 。
 
-1. すべてのパス`.`コンポーネント (ドットは、前のパスコンポーネントによって確立された現在のディレクトリ) が削除されます。
+1. すべてのパスコンポーネント `.` (ドットは、前のパスコンポーネントによって確立された現在のディレクトリ) が削除されます。
 
-1. パスコンポーネント`X` / `..`のすべてのペア (ドットドットは、前のパスコンポーネントによって確立された親ディレクトリ) が削除されます。
+1. パスコンポーネントのすべてのペア `X` / `..` (ドットドットは、前のパスコンポーネントによって確立された親ディレクトリ) が削除されます。
 
-次に、関数`pabs`はを返します。
+次に、関数はを返し `pabs` ます。
 
 ## <a name="copy"></a><a name="copy"></a>copy
 
@@ -148,45 +148,45 @@ void copy(const path& from, const path& to, copy_options opts);
 void copy(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-これら*の関数*では、指定されて`copy_options::none`いない1つ以上のファイルを*から**にコピー*またはリンクすること*ができます*。 *opts* 1 つのを含めることができます:
+これら*の関数*では、指定されていない1つ以上のファイルを*から**にコピー*またはリンクすることが `copy_options::none` できます*opts* 。 *opts* 1 つのを含めることができます:
 
-- `skip_existing`、 `overwrite_existing`、または `update_existing`
+- `skip_existing`、`overwrite_existing`、または `update_existing`
 
 - `copy_symlinks` または `skip_symlinks`
 
-- `directories_only`、 `create_symlinks`、または `create_hard_links`
+- `directories_only`、`create_symlinks`、または `create_hard_links`
 
-これらの関数は、最初に`f` `t`の*との*file_status 値を次の*ように*決定します。
+これらの関数は、最初に `f` の*from*との file_status 値を次の `t` *ように*決定します。
 
-- の`opts & (copy_options::create_symlinks | copy_options::skip_symlinks)`場合、を呼び出します。`symlink_status`
+- `opts & (copy_options::create_symlinks | copy_options::skip_symlinks)`の場合、を呼び出します。`symlink_status`
 
 - それ以外の場合は、を呼び出します。`status`
 
 - それ以外の場合は、エラーを報告します。
 
-の`!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)`場合は、エラーを報告します (他の操作は何も行いません)。
+の場合は `!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)` 、エラーを報告します (他の操作は何も行いません)。
 
-それ以外の`is_symlink(f)`場合は、次のようになります。
+それ以外の場合は、次の `is_symlink(f)` ようになります。
 
-- の`options & copy_options::skip_symlinks`場合は、何も行いません。
+- の場合は `options & copy_options::skip_symlinks` 、何も行いません。
 
-- それ以外の`!exists(t)&& options & copy_options::copy_symlinks`場合は`copy_symlink(from, to, opts)`、の場合はです。
+- それ以外の場合は、の場合は `!exists(t)&& options & copy_options::copy_symlinks` `copy_symlink(from, to, opts)` です。
 
 - それ以外の場合は、エラーを報告します。
 
-それ以外の`is_regular_file(f)`場合、の場合は次のようになります。
+それ以外の場合、の場合は `is_regular_file(f)` 次のようになります。
 
-- の`opts & copy_options::directories_only`場合は、何も行いません。
+- の場合は `opts & copy_options::directories_only` 、何も行いません。
 
-- それ以外の`opts & copy_options::create_symlinks`場合は`create_symlink(to, from)`、の場合はです。
+- それ以外の場合は、の場合は `opts & copy_options::create_symlinks` `create_symlink(to, from)` です。
 
-- それ以外の`opts & copy_options::create_hard_links`場合は`create_hard_link(to, from)`、の場合はです。
+- それ以外の場合は、の場合は `opts & copy_options::create_hard_links` `create_hard_link(to, from)` です。
 
-- それ以外の`is_directory(f)`場合は`copy_file(from, to`  /  `from.filename(), opts)`、の場合はです。
+- それ以外の場合は、の場合は `is_directory(f)` `copy_file(from, to`  /  `from.filename(), opts)` です。
 
 - それ以外の場合は `copy_file(from, to, opts)`。
 
-それ以外の`is_directory(f) && (opts & copy_options::recursive || !opts)`場合、の場合は次のようになります。
+それ以外の場合、の場合は `is_directory(f) && (opts & copy_options::recursive || !opts)` 次のようになります。
 
 ```cpp
 if (!exists(t))
@@ -211,13 +211,13 @@ bool copy_file(const path& from, const path& to, copy_options opts);
 bool copy_file(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-これら*の関数*では、指定されていない場合は、を使用して`copy_options::none` *から**にファイル*をコピーすること*ができます*。 *opts*使用するには、、、 `skip_existing`また`overwrite_existing`は`update_existing`のうち1つだけを含める必要があります。
+これら*の関数*では、指定されていない場合は、を使用して*から**にファイル*をコピーすることが `copy_options::none` できます。 *opts* *opts*使用するに `skip_existing` は、、、またはのうち1つだけを含める必要があり `overwrite_existing` `update_existing` ます。
 
-の`exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))`場合は、ファイルが既に存在することを示すエラーとして報告します。
+の場合は `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))` 、ファイルが既に存在することを示すエラーとして報告します。
 
-それ以外の`!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))`場合は、の場合は、ファイルの内容と属性を*から*ファイルにコピー*します。* このコピーの試行が失敗すると、エラーが報告されます。
+それ以外の場合は、の場合は、 `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))` ファイルの内容と属性を*から*ファイルに*to*コピーします。 このコピーの試行が失敗すると、エラーが報告されます。
 
-コピーが試行されて成功した場合、関数は**true**を返します。それ以外の場合は**false**を返します。
+**`true`** コピーが試行され、成功した場合、関数はを返します。それ以外の場合はを返し **`false`** ます。
 
 ## <a name="copy_symlink"></a><a name="copy_symlink"></a>copy_symlink
 
@@ -226,7 +226,7 @@ void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-の`is_directory(from)`場合、関数は`create_directory_symlink(from, to)`を呼び出します。 それ以外の場合`create_symlink(from, to)`は、を呼び出します。
+の場合 `is_directory(from)` 、関数はを呼び出し `create_directory_symlink(from, to)` ます。 それ以外の場合は、を呼び出し `create_symlink(from, to)` ます。
 
 ## <a name="create_directories"></a><a name="create_directories"></a>create_directories
 
@@ -235,7 +235,7 @@ bool create_directories(const path& pval);
 bool create_directories(const path& pval, error_code& ec) noexcept;
 ```
 
-\/B\/c などのパス名の場合、関数は必要に応じてディレクトリ\/a と b を作成し、必要に応じて\/ディレクトリ\/a b c を作成できるようにします。 このメソッドは、実際にディレクトリ*pval*を作成する場合にのみ**true**を返します。
+B c などのパス名の場合、関数は必要に応じ \/ \/ てディレクトリ a と b を作成し、必要に応じ \/ てディレクトリ a b c を作成できるようにし \/ \/ ます。 このメソッドは **`true`** 、ディレクトリ*pval*を実際に作成した場合にのみを返します。
 
 ## <a name="create_directory"></a><a name="create_directory"></a>create_directory
 
@@ -247,7 +247,7 @@ bool create_directory(const path& pval, const path& attr);
 bool create_directory(const path& pval, const path& attr, error_code& ec) noexcept;
 ```
 
-関数は、必要に応じてディレクトリ*pval*を作成します。 このメソッドは、実際にディレクトリ*pval*を作成する場合にのみ true を返します。この場合、既存のファイル*attr*からアクセス許可がコピーされるか、または`perms::all` *attr*パラメーターのないオーバーロードにを使用します。
+関数は、必要に応じてディレクトリ*pval*を作成します。 このメソッドは、実際にディレクトリ*pval*を作成する場合にのみ true を返します。この場合、既存のファイル*attr*からアクセス許可がコピーされるか、または `perms::all` *attr*パラメーターのないオーバーロードにを使用します。
 
 ## <a name="create_directory_symlink"></a><a name="create_directory_symlink"></a>create_directory_symlink
 
@@ -295,16 +295,16 @@ directory_iterator& end(const directory_iterator& iter) noexcept;
 recursive_directory_iterator& end(const recursive_directory_iterator& iter) noexcept;
 ```
 
-最初の関数は`directory_iterator()`を返し、2番目の関数はを返します。`recursive_directory_iterator()`
+最初の関数はを返し、 `directory_iterator()` 2 番目の関数はを返します。`recursive_directory_iterator()`
 
-## <a name="equivalent"></a><a name="equivalent"></a>表現
+## <a name="equivalent"></a><a name="equivalent"></a> での同等機能
 
 ```cpp
 bool equivalent(const path& left, const path& right);
 bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 ```
 
-これらの関数は、 *left*と*right*が同じ filesystem エンティティを選択した場合にのみ**true**を返します。
+これらの関数は、 **`true`** *left*と*right*が同じ filesystem エンティティを選択した場合にのみを返します。
 
 ## <a name="exists"></a><a name="exists"></a>あり
 
@@ -314,7 +314,7 @@ bool exists(const path& pval);
 bool exists(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `status_known && stat.type() != file_not_found` を返します。 2番目と3番`exists(status(pval))`目の関数はを返します。
+最初の関数は `status_known && stat.type() != file_not_found` を返します。 2番目と3番目の関数はを返し `exists(status(pval))` ます。
 
 ## <a name="file_size"></a><a name="file_size"></a>file_size
 
@@ -323,7 +323,7 @@ uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-関数は、 *pval*によって選択されたファイルのサイズ ( `exists(pval) && is_regular_file(pval)`バイト単位) を返します。また、ファイルサイズを確認できる場合はを返します。 それ以外の場合は、エラー `uintmax_t(-1)`を報告してを返します。
+関数は、 *pval*によって選択されたファイルのサイズ (バイト単位) を返し `exists(pval) && is_regular_file(pval)` ます。また、ファイルサイズを確認できる場合はを返します。 それ以外の場合は、エラーを報告してを返し `uintmax_t(-1)` ます。
 
 ## <a name="hard_link_count"></a><a name="hard_link_count"></a>hard_link_count
 
@@ -332,7 +332,7 @@ uintmax_t hard_link_count(const path& pval);
 uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 ```
 
-関数は、 *pval*のハードリンクの数を返します\-。エラーが発生した場合は1を返します。
+関数は、 *pval*のハードリンクの数を返し \- ます。エラーが発生した場合は1を返します。
 
 ## <a name="hash_value"></a><a name="hash_value"></a>hash_value
 
@@ -340,7 +340,7 @@ uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 size_t hash_value(const path& pval) noexcept;
 ```
 
-関数は、の`pval.native()`ハッシュ値を返します。
+関数は、のハッシュ値を返し `pval.native()` ます。
 
 ## <a name="is_block_file"></a><a name="is_block_file"></a>is_block_file
 
@@ -350,7 +350,7 @@ bool is_block_file(const path& pval);
 bool is_block_file(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::block` を返します。 残りの関数は`is_block_file(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::block` を返します。 残りの関数は、 `is_block_file(status(pval))` を返します。
 
 ## <a name="is_character_file"></a><a name="is_character_file"></a>is_character_file
 
@@ -360,7 +360,7 @@ bool is_character_file(const path& pval);
 bool is_character_file(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::character` を返します。 残りの関数は`is_character_file(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::character` を返します。 残りの関数は、 `is_character_file(status(pval))` を返します。
 
 ## <a name="is_directory"></a><a name="is_directory"></a>is_directory
 
@@ -370,7 +370,7 @@ bool is_directory(const path& pval);
 bool is_directory(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::directory` を返します。 残りの関数は`is_directory_file(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::directory` を返します。 残りの関数は、 `is_directory_file(status(pval))` を返します。
 
 ## <a name="is_empty"></a><a name="is_empty"></a>is_empty
 
@@ -380,7 +380,7 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-の`is_directory(pval)`場合、関数はを`directory_iterator(pval) == directory_iterator()`返します。それ以外の`file_size(pval) == 0`場合はを返します。
+の場合、 `is_directory(pval)` 関数はを返し `directory_iterator(pval) == directory_iterator()` ます。それ以外の場合はを返し `file_size(pval) == 0` ます。
 
 ## <a name="is_fifo"></a><a name="is_fifo"></a>is_fifo
 
@@ -390,7 +390,7 @@ bool is_fifo(const path& pval);
 bool is_fifo(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::fifo` を返します。 残りの関数は`is_fifo(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::fifo` を返します。 残りの関数は、 `is_fifo(status(pval))` を返します。
 
 ## <a name="is_other"></a><a name="is_other"></a>is_other
 
@@ -400,7 +400,7 @@ bool is_other(const path& pval);
 bool is_other(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::other` を返します。 残りの関数は`is_other(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::other` を返します。 残りの関数は、 `is_other(status(pval))` を返します。
 
 ## <a name="is_regular_file"></a><a name="is_regular_file"></a>is_regular_file
 
@@ -410,7 +410,7 @@ bool is_regular_file(const path& pval);
 bool is_regular_file(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::regular` を返します。 残りの関数は`is_regular_file(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::regular` を返します。 残りの関数は、 `is_regular_file(status(pval))` を返します。
 
 ## <a name="is_socket"></a><a name="is_socket"></a>is_socket
 
@@ -420,7 +420,7 @@ bool is_socket(const path& pval);
 bool is_socket(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::socket` を返します。 残りの関数は`is_socket(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::socket` を返します。 残りの関数は、 `is_socket(status(pval))` を返します。
 
 ## <a name="is_symlink"></a><a name="is_symlink"></a>is_symlink
 
@@ -430,7 +430,7 @@ bool is_symlink(const path& pval);
 bool is_symlink(const path& pval, error_code& ec) noexcept;
 ```
 
-最初の関数は `stat.type() == file_type::symlink` を返します。 残りの関数は`is_symlink(status(pval))`、を返します。
+最初の関数は `stat.type() == file_type::symlink` を返します。 残りの関数は、 `is_symlink(status(pval))` を返します。
 
 ## <a name="last_write_time"></a><a name="last_write_time"></a>last_write_time
 
@@ -441,7 +441,7 @@ void last_write_time(const path& pval, file_time_type new_time);
 void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;
 ```
 
-最初の2つの関数は、 *pval*の最終データ変更の時刻`file_time_type(-1)`を返します。エラーが発生した場合は、を返します。 最後の2つの関数は、 *pval*に対して最後にデータを変更した時刻を*new_time*に設定します。
+最初の2つの関数は、 *pval*の最終データ変更の時刻を返し `file_time_type(-1)` ます。エラーが発生した場合は、を返します。 最後の2つの関数は、 *pval*に対して最後にデータを変更した時刻を*new_time*に設定します。
 
 ## <a name="permissions"></a><a name="permissions"></a>許可
 
@@ -450,9 +450,9 @@ void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-これらの関数は、 *pval*によって選択され`mask & perms::mask`たパス名`perms & (perms::add_perms | perms::remove_perms)`に対するアクセス許可をの制御下に設定します。 *mask*には、との`perms::add_perms`うち 1 `perms::remove_perms`つだけを含める必要があります。
+これらの関数は、 *pval*によって選択されたパス名に対するアクセス許可を `mask & perms::mask` の制御下に設定し `perms & (perms::add_perms | perms::remove_perms)` ます。 *mask*には、とのうち1つだけを含める必要が `perms::add_perms` `perms::remove_perms` あります。
 
-の`mask & perms::add_perms`場合、これらの関数はアクセス`status(pval).permissions() | mask & perms::mask`許可をに設定します。 それ以外の`mask & perms::remove_perms`場合、の場合、これらの`status(pval).permissions() & ~(mask & perms::mask)`関数はアクセス許可をに設定します。 それ以外の場合、これらの関数`mask & perms::mask`はアクセス許可をに設定します。
+の場合、これらの `mask & perms::add_perms` 関数はアクセス許可をに設定し `status(pval).permissions() | mask & perms::mask` ます。 それ以外の場合、の場合、これらの `mask & perms::remove_perms` 関数はアクセス許可をに設定し `status(pval).permissions() & ~(mask & perms::mask)` ます。 それ以外の場合、これらの関数はアクセス許可をに設定し `mask & perms::mask` ます。
 
 ## <a name="proximate"></a><a name="proximate"></a>近接
 
@@ -469,7 +469,7 @@ path read_symlink(const path& pval);
 path read_symlink(const path& pval, error_code& ec);
 ```
 
-関数はエラーを報告し、 `path()`の`!is_symlink(pval)`場合はを返します。 それ以外の場合は、これらの関数はシンボリック リンクを格納している `path` 型のオブジェクトを返します。
+関数はエラーを報告し、の `path()` 場合はを返し `!is_symlink(pval)` ます。 それ以外の場合は、これらの関数はシンボリック リンクを格納している `path` 型のオブジェクトを返します。
 
 ## <a name="relative"></a><a name="relative"></a>点
 
@@ -486,7 +486,7 @@ bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-関数は、 **true**およびファイルが`exists(symlink_status(pval))`正常に削除された場合にのみ true を返します。 シンボリックリンク自体は削除され、選択されたファイルではなくなります。
+関数は、 **`true`** `exists(symlink_status(pval))` とファイルが正常に削除された場合にのみを返します。 シンボリックリンク自体は削除され、選択されたファイルではなくなります。
 
 ## <a name="remove_all"></a><a name="remove_all"></a>remove_all
 
@@ -495,7 +495,7 @@ uintmax_t remove_all(const path& pval);
 uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 ```
 
-*Pval*がディレクトリである場合、関数はすべてのディレクトリエントリを再帰的に削除してから、そのエントリ自体を削除します。 それ以外の場合、 `remove`関数はを呼び出します。 これらの関数は、正常に削除した要素の合計数を返します。
+*Pval*がディレクトリである場合、関数はすべてのディレクトリエントリを再帰的に削除してから、そのエントリ自体を削除します。 それ以外の場合、関数はを呼び出し `remove` ます。 これらの関数は、正常に削除した要素の合計数を返します。
 
 ## <a name="rename"></a><a name="rename"></a>リネーム
 
@@ -522,7 +522,7 @@ space_info space(const path& pval);
 space_info space(const path& pval, error_code& ec) noexcept;
 ```
 
-関数は、 *pval*によって選択されたボリュームに関する情報を`space_info`型の構造体で返します。 構造体に`uintmax_t(-1)`は、特定できない値が含まれています。
+関数は、 *pval*によって選択されたボリュームに関する情報を型の構造体で返し `space_info` ます。 構造体には、特定できない値が含まれてい `uintmax_t(-1)` ます。
 
 ## <a name="status"></a><a name="status"></a>オンライン
 
@@ -556,7 +556,7 @@ file_status symlink_status(const path& pval);
 file_status symlink_status(const path& pval, error_code& ec) noexcept;
 ```
 
-これらの関数は、 *pval*に関連付けられているパス名のシンボリックリンクの状態、ファイルの種類、およびアクセス許可を返します。 関数はと同じよう`status(pval)`に動作しますが、シンボリックリンク自体は、選択したファイルではなくテストされる点が異なります。
+これらの関数は、 *pval*に関連付けられているパス名のシンボリックリンクの状態、ファイルの種類、およびアクセス許可を返します。 関数はと同じように動作しますが、 `status(pval)` シンボリックリンク自体は、選択したファイルではなくテストされる点が異なります。
 
 ## <a name="system_complete"></a><a name="system_complete"></a>system_complete
 
@@ -565,7 +565,7 @@ path system_complete(const path& pval);
 path system_complete(const path& pval, error_code& ec);
 ```
 
-これらの関数は、ルート名に関連付けられた現在のディレクトリを必要に応じて考慮に入れた絶対パス名を返します。 \(POSIX の場合、関数は`absolute(pval)`を返します。\)
+これらの関数は、ルート名に関連付けられた現在のディレクトリを必要に応じて考慮に入れた絶対パス名を返します。 \(POSIX の場合、関数はを返し `absolute(pval)` ます。\)
 
 ## <a name="temp_directory_path"></a><a name="temp_directory_path"></a>temp_directory_path
 
@@ -586,7 +586,7 @@ template <class InIt>
 path u8path(InIt first, InIt last);
 ```
 
-最初の関数はと同じよう`path(source)`に動作し、2番目の`path(first, last)`関数はと同じように動作しますが、各ケースで選択されたソースは、ファイルシステムではなく utf-8 としてエンコードされた char 要素のシーケンスとして扱われる点が異なります。
+最初の関数はと同じように動作 `path(source)` し、2番目の関数はと同じように動作しますが、 `path(first, last)` 各ケースで選択されたソースは、ファイルシステムではなく utf-8 としてエンコードされた char 要素のシーケンスとして扱われる点が異なります。
 
 ## <a name="weakly_canonical"></a><a name="weakly_canonical"></a>weakly_canonical
 

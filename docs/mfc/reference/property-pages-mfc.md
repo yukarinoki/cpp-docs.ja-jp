@@ -5,49 +5,49 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751145"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214049"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 
-プロパティ ページには、ダイアログ データ エクスチェンジ (DDX) に基づくデータ マッピング メカニズムをサポートすることにより、表示および編集するためのカスタマイズ可能なグラフィカル インターフェイスで、特定の OLE コントロール プロパティの現在の値が表示されます。
+プロパティページには、ダイアログデータエクスチェンジ (DDX) に基づくデータマッピング機構をサポートすることにより、特定の OLE コントロールのプロパティの現在の値がカスタマイズ可能なグラフィカルインターフェイスに表示されます。
 
-このデータ マッピング機構は、プロパティ ページ コントロールを OLE コントロールの個々のプロパティにマップします。 コントロール プロパティの値は、プロパティ ページ コントロールの状態または内容を反映します。 プロパティ ページ のコントロールとプロパティの間の**DDP_** マッピングは、プロパティ ページの`DoDataExchange`メンバー関数でDDP_関数呼び出しによって指定されます。 コントロールのプロパティ ページを使用して入力されたデータを交換する**DDP_** 関数の一覧を次に示します。
+このデータマップ機構は、プロパティページコントロールを OLE コントロールの個々のプロパティにマップします。 コントロールプロパティの値には、プロパティページコントロールの状態または内容が反映されます。 プロパティページのコントロールとプロパティ間のマッピングは、プロパティページのメンバー関数の**DDP_** 関数呼び出しによって指定され `DoDataExchange` ます。 次に示すのは、コントロールのプロパティページを使用して入力されたデータを交換する**DDP_** 関数の一覧です。
 
-### <a name="property-page-data-transfer"></a>プロパティ ページのデータ転送
+### <a name="property-page-data-transfer"></a>プロパティページデータ転送
 
 |||
 |-|-|
-|[DDP_CBIndex](#ddp_cbindex)|コンボ ボックス内の選択した文字列のインデックスをコントロールのプロパティとリンクします。|
-|[DDP_CBString](#ddp_cbstring)|コンボ ボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列は、プロパティの値と同じ文字で始めることができますが、完全に一致する必要はありません。|
-|[DDP_CBStringExact](#ddp_cbstringexact)|コンボ ボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列とプロパティの文字列値は、正確に一致する必要があります。|
-|[DDP_Check](#ddp_check)|コントロールのプロパティ ページのチェック ボックスをコントロールのプロパティにリンクします。|
-|[DDP_LBIndex](#ddp_lbindex)|リスト ボックス内の選択した文字列のインデックスをコントロールのプロパティにリンクします。|
-|[DDP_LBString](#ddp_lbstring)|リスト ボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列は、プロパティの値と同じ文字で始めることができますが、完全に一致する必要はありません。|
-|[DDP_LBStringExact](#ddp_lbstringexact)|リスト ボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列とプロパティの文字列値は、正確に一致する必要があります。|
+|[DDP_CBIndex](#ddp_cbindex)|コンボボックス内の選択した文字列のインデックスをコントロールのプロパティにリンクします。|
+|[DDP_CBString](#ddp_cbstring)|コンボボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列は、プロパティの値と同じ文字で始まることができますが、完全に一致する必要はありません。|
+|[DDP_CBStringExact](#ddp_cbstringexact)|コンボボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列とプロパティの文字列値が正確に一致している必要があります。|
+|[DDP_Check](#ddp_check)|コントロールのプロパティページのチェックボックスをコントロールのプロパティにリンクします。|
+|[DDP_LBIndex](#ddp_lbindex)|リストボックス内の選択した文字列のインデックスをコントロールのプロパティにリンクします。|
+|[DDP_LBString](#ddp_lbstring)|リストボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列は、プロパティの値と同じ文字で始まることができますが、完全に一致している必要はありません。|
+|[DDP_LBStringExact](#ddp_lbstringexact)|リストボックス内の選択した文字列をコントロールのプロパティにリンクします。 選択した文字列とプロパティの文字列値が正確に一致している必要があります。|
 |[DDP_PostProcessing](#ddp_postprocessing)|コントロールからのプロパティ値の転送を完了します。|
-|[DDP_Radio](#ddp_radio)|コントロールのプロパティ ページのオプション ボタン グループをコントロールのプロパティにリンクします。|
-|[DDP_Text](#ddp_text)|コントロールのプロパティ ページ内のコントロールをコントロールのプロパティにリンクします。 この関数は **、double** **、short**、BSTR、long などのさまざまな種類の**long**プロパティを処理します。|
+|[DDP_Radio](#ddp_radio)|コントロールのプロパティページのラジオボタングループをコントロールのプロパティとリンクします。|
+|[DDP_Text](#ddp_text)|コントロールのプロパティページ内のコントロールを、コントロールのプロパティを使用してリンクします。 この関数は、、、BSTR、など、いくつかの異なる種類のプロパティを処理し **`double`** **`short`** **`long`** ます。|
 
-関数とプロパティ ページ`DoDataExchange`の詳細については、「 [ActiveX コントロール : プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
+関数およびプロパティページの詳細については、 `DoDataExchange` 「 [ActiveX コントロール: プロパティページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
 
-OLE コントロールのプロパティ ページを作成および管理するために使用するマクロの一覧を次に示します。
+OLE コントロールのプロパティページを作成および管理するために使用するマクロの一覧を次に示します。
 
 ### <a name="property-pages"></a>[プロパティ ページ]
 
 |||
 |-|-|
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|プロパティ ページ ID のリストを開始します。|
-|[END_PROPPAGEIDS](#end_proppageids)|プロパティ ページ ID のリストを終了します。|
-|[PROPPAGEID](#proppageid)|コントロール クラスのプロパティ ページを宣言します。|
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|プロパティページ Id の一覧を開始します。|
+|[END_PROPPAGEIDS](#end_proppageids)|プロパティページ Id の一覧を終了します。|
+|[PROPPAGEID](#proppageid)|コントロールクラスのプロパティページを宣言します。|
 
 ## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
 
-プロパティ ページのプロパティ ページの`DoDataExchange`コンボ ボックス内の現在の選択範囲のインデックスと整数プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの関数でこの関数を呼び出して、 `DoDataExchange` プロパティページのコンボボックス内の現在の選択範囲のインデックスと整数プロパティの値を同期します。
 
 ```cpp
 void AFXAPI DDP_CBIndex(
@@ -59,21 +59,21 @@ void AFXAPI DDP_CBIndex(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているコンボ ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたコンボ ボックス コントロールと交換するコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたコンボボックスコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_CBIndex`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBIndex` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -81,7 +81,7 @@ void AFXAPI DDP_CBIndex(
 
 ## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
 
-プロパティ ページの`DoDataExchange`コンボ ボックスで現在選択されている文字列プロパティの値とを同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの関数でこの関数を呼び出して、 `DoDataExchange` 文字列プロパティの値を、プロパティページのコンボボックスで現在選択されている値と同期します。
 
 ```cpp
 void AFXAPI DDP_CBString(
@@ -93,21 +93,21 @@ void AFXAPI DDP_CBString(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているコンボ ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたコンボ ボックス文字列と交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_CBString`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBString` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -115,7 +115,7 @@ void AFXAPI DDP_CBString(
 
 ## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
 
-プロパティ ページのコンボ ボックスで現在`DoDataExchange`の選択項目と完全に一致する文字列プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの `DoDataExchange` コンボボックスで現在選択されている項目と完全に一致する文字列プロパティの値を同期するには、プロパティページの関数でこの関数を呼び出します。
 
 ```cpp
 void AFXAPI DDP_CBStringExact(
@@ -127,21 +127,21 @@ void AFXAPI DDP_CBStringExact(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているコンボ ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたコンボ ボックス文字列と交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_CBStringExact`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBStringExact` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -149,7 +149,7 @@ void AFXAPI DDP_CBStringExact(
 
 ## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
 
-プロパティの値を関連付けられたプロパティ`DoDataExchange`ページのチェック ボックス コントロールと同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの関数でこの関数を呼び出して、プロパティ `DoDataExchange` の値を、関連付けられているプロパティページのチェックボックスコントロールと同期します。
 
 ```cpp
 void AFXAPI DDP_Check(
@@ -161,21 +161,21 @@ void AFXAPI DDP_Check(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*pszPropName*で指定されたコントロール プロパティに関連付けられているチェック ボックス コントロールのリソース ID。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているチェックボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたチェック ボックス コントロールと交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたチェックボックスコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_Check`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Check` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -183,7 +183,7 @@ void AFXAPI DDP_Check(
 
 ## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
 
-プロパティ ページのリスト ボックス内の`DoDataExchange`現在の選択範囲のインデックスと整数プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの関数でこの関数を呼び出して、 `DoDataExchange` プロパティページのリストボックス内の現在の選択範囲のインデックスと整数プロパティの値を同期します。
 
 ```cpp
 void AFXAPI DDP_LBIndex(
@@ -195,21 +195,21 @@ void AFXAPI DDP_LBIndex(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているリスト ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたリスト ボックス文字列と交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_LBIndex`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBIndex` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -217,7 +217,7 @@ void AFXAPI DDP_LBIndex(
 
 ## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
 
-プロパティ ページの`DoDataExchange`リスト ボックスで現在選択されている文字列プロパティの値と同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの関数でこの関数を呼び出して、 `DoDataExchange` プロパティページのリストボックス内の現在の選択項目と文字列プロパティの値を同期します。
 
 ```cpp
 void AFXAPI DDP_LBString(
@@ -229,21 +229,21 @@ void AFXAPI DDP_LBString(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているリスト ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたリスト ボックス文字列と交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_LBString`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBString` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -251,7 +251,7 @@ void AFXAPI DDP_LBString(
 
 ## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
 
-プロパティ ページのリスト ボックスの現在`DoDataExchange`の選択と完全に一致する文字列プロパティの値を同期するには、プロパティ ページの関数でこの関数を呼び出します。
+プロパティページの `DoDataExchange` リストボックスで現在選択されている項目と完全に一致する文字列プロパティの値を同期するには、プロパティページの関数でこの関数を呼び出します。
 
 ```cpp
 void AFXAPI DDP_LBStringExact(
@@ -263,21 +263,21 @@ void AFXAPI DDP_LBStringExact(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているリスト ボックス コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたリスト ボックス文字列と交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_LBStringExact`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBStringExact` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -285,7 +285,7 @@ void AFXAPI DDP_LBStringExact(
 
 ## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
 
-プロパティページの`DoDataExchange`関数でこの関数を呼び出して、プロパティ値を保存するときにプロパティ ページからコントロールへのプロパティ値の転送を完了します。
+プロパティ `DoDataExchange` 値が保存されている場合、プロパティページからコントロールへのプロパティ値の転送を完了するには、プロパティページの関数でこの関数を呼び出します。
 
 ```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
@@ -293,12 +293,12 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、すべてのデータ交換関数が完了した後に呼び出す必要があります。 次に例を示します。
+すべてのデータ交換関数が完了した後に、この関数を呼び出す必要があります。 次に例を示します。
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
@@ -308,7 +308,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
 
-コントロールの`DoPropExchange`関数でこの関数を呼び出して、プロパティの値を関連付けられたプロパティ ページのオプション ボタン コントロールと同期させます。
+`DoPropExchange`プロパティの値を、関連付けられているプロパティページのラジオボタンコントロールと同期するには、コントロールの関数でこの関数を呼び出します。
 
 ```cpp
 void AFXAPI DDP_Radio(
@@ -320,21 +320,21 @@ void AFXAPI DDP_Radio(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているオプション ボタン コントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているオプションボタンコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたオプション ボタン コントロールと交換されるコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたオプションボタンコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_Radio`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Radio` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -342,7 +342,7 @@ void AFXAPI DDP_Radio(
 
 ## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
 
-コントロールの`DoDataExchange`関数でこの関数を呼び出して、プロパティの値を関連付けられたプロパティ ページ コントロールと同期させます。
+`DoDataExchange`プロパティの値を、関連付けられているプロパティページコントロールと同期するには、コントロールの関数でこの関数を呼び出します。
 
 ```cpp
 void AFXAPI DDP_Text(
@@ -396,21 +396,21 @@ void AFXAPI DDP_Text(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-`CDataExchange`オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-指定されたコントロール プロパティに関連付けられているコントロールのリソース*ID*です。
+*PszPropName*によって指定されたコントロールプロパティに関連付けられているコントロールのリソース ID。
 
-*メンバー*<br/>
-*id*で指定されたプロパティ ページ コントロールと、指定されたプロパティに関連付けられているメンバー変数*pszPropName*。
+*レプリカ*<br/>
+*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
 
-*名前を変更します。*<br/>
-*id*で指定されたコントロールと交換するコントロール プロパティのプロパティ名。
+*pszPropName*<br/>
+*Id*で指定されたコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
-この関数は、対応する`DDX_Text`関数呼び出しの前に呼び出す必要があります。
+この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Text` ます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -418,7 +418,7 @@ void AFXAPI DDP_Text(
 
 ## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
 
-コントロールのプロパティ ページ ID の一覧の定義を開始します。
+コントロールのプロパティページ Id のリストの定義を開始します。
 
 ```
 BEGIN_PROPPAGEIDS(class_name,  count)
@@ -427,16 +427,16 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="parameters"></a>パラメーター
 
 *class_name*<br/>
-プロパティ ページを指定するコントロール クラスの名前。
+プロパティページを指定するコントロールクラスの名前。
 
 *count*<br/>
-コントロール クラスで使用されるプロパティ ページの数。
+コントロールクラスによって使用されるプロパティページの数。
 
 ### <a name="remarks"></a>解説
 
-クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_PROPPAGEIDS マクロを使用してプロパティ ページの一覧を開始し、各プロパティ ページのマクロ エントリを追加し、END_PROPPAGEIDS マクロを使用してプロパティ ページの一覧を完成させます。
+クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_PROPPAGEIDS マクロを使用してプロパティページリストを起動し、各プロパティページにマクロエントリを追加して、END_PROPPAGEIDS マクロを使用してプロパティページリストを完成させます。
 
-プロパティ ページの詳細については、「 [ActiveX コントロール : プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
+プロパティページの詳細については、「 [ActiveX コントロール: プロパティページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -444,7 +444,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
 
-プロパティ ページ ID リストの定義を終了します。
+プロパティページ ID リストの定義を終了します。
 
 ```
 END_PROPPAGEIDS(class_name)
@@ -453,15 +453,15 @@ END_PROPPAGEIDS(class_name)
 ### <a name="parameters"></a>パラメーター
 
 *class_name*<br/>
-プロパティ ページを所有するコントロール クラスの名前。
+プロパティページを所有するコントロールクラスの名前。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
-## <a name="proppageid"></a><a name="proppageid"></a>プロップページID
+## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
 
-OLE コントロールで使用するプロパティ ページを追加します。
+OLE コントロールで使用するプロパティページを追加します。
 
 ```
 PROPPAGEID(clsid)
@@ -469,12 +469,12 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>パラメーター
 
-*Clsid*<br/>
-プロパティ ページの一意のクラス ID。
+*clsid*<br/>
+プロパティページの一意のクラス ID。
 
 ### <a name="remarks"></a>解説
 
-すべての PROPPAGEID マクロは、コントロールの実装ファイル内のBEGIN_PROPPAGEIDSとEND_PROPPAGEIDSマクロの間に配置する必要があります。
+すべての PROPPAGEID マクロは、コントロールの実装ファイルの BEGIN_PROPPAGEIDS と END_PROPPAGEIDS のマクロの間に配置する必要があります。
 
 ### <a name="requirements"></a>必要条件
 

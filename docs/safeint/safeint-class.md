@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219353"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `SafeInt` クラスは、数学演算での整数オーバーフローを防ぎます。 たとえば、2 つの 8 ビット整数を追加するとします。1 つは値が 200 であり、2 つ目は値が 100 です。 正しい数学演算は 200 + 100 = 300 です。 ただし、8 ビット整数の制限があるため、上位ビットは失われ、結果としてコンパイラから 44 (300 - 2<sup>8</sup>) が返されます。 この数式に依存するすべての演算では、予期しない動作が起こります。
 
@@ -187,7 +187,7 @@ SafeInt オブジェクトとの論理比較を行う場合、厳密には算術
 
 - `((uint)~0) > -1`
 
-1 つ目のステートメントは **true** に解決されますが、2 つ目のステートメントは `false` に解決されます。 0 のビットごとの否定は 0xFFFFFFFF です。 2 つ目のステートメントでは、既定の比較演算子によって 0xFFFFFFFF と 0xFFFFFFFF が比較され、それらが等しいと見なされます。 クラスの比較演算子は `SafeInt` 、2番目のパラメーターが負の値であっても、最初のパラメーターが符号なしであることを認識します。 したがって、ビット表現は同じですが、 `SafeInt` 論理演算子は、符号なし整数が-1 より大きいことを認識します。
+最初のステートメントはに解決され **`true`** ますが、2番目のステートメントはに解決され **`false`** ます。 0 のビットごとの否定は 0xFFFFFFFF です。 2 つ目のステートメントでは、既定の比較演算子によって 0xFFFFFFFF と 0xFFFFFFFF が比較され、それらが等しいと見なされます。 `SafeInt` クラスの比較演算子は、2 つ目のパラメーターが負であり、1 つ目のパラメーターは符号なしであると認識しています。 そのため、ビット表現は同じですが、`SafeInt` 論理演算子は、符号なし整数が -1 よりも大きいと認識しています。
 
 `SafeInt` クラスを `?:` 三項演算子と組み合わせて使用するときは注意してください。 次のコード行があるとします。
 
@@ -201,7 +201,7 @@ Int x = flag ? SafeInt<unsigned int>(y) : -1;
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-`flag` が `false` の場合、-1 の値が `x` に割り当てられるのではなく、コンパイラから例外がスローされます。 そのため、この動作を回避するには、次の行のように正しいコードを使用します。
+がの場合 `flag` **`false`** 、コンパイラは、-1 の値をに割り当てる代わりに、例外をスローし `x` ます。 そのため、この動作を回避するには、次の行のように正しいコードを使用します。
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
@@ -279,7 +279,7 @@ SafeInt (const U& i)
 
 `U`に格納されているデータの型 `SafeInt` 。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしで、8 ~ 64 ビットの範囲で指定できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コンストラクターの入力パラメーター *i* または *u* は、ブール型、文字型、または整数型にする必要があります。 別の型のパラメーターの場合、 `SafeInt` クラスは[static_assert](../cpp/static-assert.md)を呼び出して、無効な入力パラメーターを示します。
 

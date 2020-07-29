@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 65ea01a9ced1ca69cd1b1526e7594c4b54387553
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dcc1f4bf1ce25890945f1d9e207f2363122c0ad2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336783"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217494"
 ---
 # <a name="shared_future-class"></a>shared_future クラス
 
@@ -55,8 +55,8 @@ class shared_future;
 |名前|説明|
 |----------|-----------------|
 |[get](#get)|*関連付けられた非同期状態*に格納されている結果を取得します。|
-|[有効](#valid)|オブジェクトが空でないかどうかを指定します。|
-|[待つ](#wait)|関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。|
+|[妥当](#valid)|オブジェクトが空でないかどうかを指定します。|
+|[待機](#wait)|関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。|
 |[wait_for](#wait_for)|関連付けられた非同期状態が準備できるまで、または指定した時間が経過するまでブロックします。|
 |[wait_until](#wait_until)|関連付けられた非同期状態が準備できるまで、または指定した時点までブロックします。|
 
@@ -64,15 +64,15 @@ class shared_future;
 
 |名前|説明|
 |----------|-----------------|
-|[shared_future::演算子=](#op_eq)|新しい関連付けられた非同期状態を割り当てます。|
+|[shared_future:: operator =](#op_eq)|新しい関連付けられた非同期状態を割り当てます。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:**\<将来の>
+**ヘッダー:**\<future>
 
 **名前空間:** std
 
-## <a name="shared_futureget"></a><a name="get"></a>shared_future::取得
+## <a name="shared_futureget"></a><a name="get"></a>shared_future:: get
 
 *関連付けられた非同期状態*に格納されている結果を取得します。
 
@@ -90,13 +90,13 @@ void get() const;
 
 結果を取得する前に、このメソッドは、関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。
 
-部分的特殊化`shared_future<Ty&>`の場合、格納された値は、事実上、戻り値として*非同期プロバイダー*に渡されたオブジェクトへの参照です。
+部分的特殊化では、格納されている `shared_future<Ty&>` 値は、事実上*非同期プロバイダー*に戻り値として渡されたオブジェクトへの参照です。
 
-特殊化`shared_future<void>`に格納されている値が存在しないため、メソッドは**void**を返します。
+特殊化には格納されている値が存在しないため、 `shared_future<void>` メソッドはを返し **`void`** ます。
 
-## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future::演算子=
+## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future:: operator =
 
-指定したオブジェクトから*関連付けられた非同期状態*を転送します。
+指定されたオブジェクトから、*関連付けられた非同期状態*を転送します。
 
 ```cpp
 shared_future& operator=(shared_future&& Right) noexcept;
@@ -114,11 +114,11 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>解説
 
-最初の演算子の場合、操作後に*Right*に関連付けられた非同期状態がなくなりました。
+最初の演算子では、操作の後に、 *Right*に関連付けられた非同期状態がありません。
 
-2 番目のメソッドの*Right は*、関連付けられた非同期状態を維持します。
+2番目のメソッドでは、 *Right*は関連付けられた非同期状態を保持します。
 
-## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>shared_future::shared_futureコンストラクタ
+## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>shared_future:: shared_future コンストラクター
 
 `shared_future` オブジェクトを構築します。
 
@@ -136,15 +136,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、`shared_future`*関連付けられた非同期状態*を持たないオブジェクトを構築します。
+1つ目のコンストラクターは、 `shared_future` *関連付けられた非同期状態*を持たないオブジェクトを構築します。
 
-2 番目と 3 番目`shared_future`のコンストラクターはオブジェクトを構築し、関連する非同期状態を*Right*から転送します。 *Right*には、非同期状態が関連付けなくなりました。
+2番目と3番目のコンストラクターは、オブジェクトを構築 `shared_future` し、関連付けられている非同期状態を*右*から転送します。 *Right*には、関連付けられた非同期状態がありません。
 
-4 番目のコンストラクターは`shared_future`、 *Right*と同じ関連付けられた非同期状態を持つオブジェクトを構築します。
+4番目のコンストラクターは、 `shared_future` と同じ関連付けられた非同期状態を持つオブジェクトを*構築し*ます。
 
-## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future::有効
+## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future:: 有効
 
-オブジェクトに*関連付けられた非同期状態*を持つかどうかを指定します。
+オブジェクトに*関連付けられた非同期状態*があるかどうかを指定します。
 
 ```cpp
 bool valid() noexcept;
@@ -152,9 +152,9 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトに非同期状態が関連付けられている場合は**true、** その他の値は true です。それ以外の場合**は false。**
+**`true`** オブジェクトに関連付けられた非同期状態がある場合は。それ以外の場合は **`false`** 。
 
-## <a name="shared_futurewait"></a><a name="wait"></a>shared_future::待つ
+## <a name="shared_futurewait"></a><a name="wait"></a>shared_future:: wait
 
 *関連付けられた非同期状態*が*準備完了*になるまで、現在のスレッドをブロックします。
 
@@ -166,7 +166,7 @@ void wait() const;
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ準備完了になります。
 
-## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future::wait_for
+## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future:: wait_for
 
 関連付けられた非同期状態が *ready* になるまで、または指定した時間が経過するまで、現在のスレッドをブロックします。
 
@@ -187,9 +187,9 @@ future_status wait_for(
 
 ### <a name="remarks"></a>解説
 
-関連付けられた非同期状態は、その非同期プロバイダーが戻り値を格納している場合、または例外を格納している場合にのみ*準備が可能*です。
+関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ*準備ができ*ます。
 
-## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future::wait_until
+## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future:: wait_until
 
 関連付けられた非同期状態が *ready* になるまで、または指定した時点後まで現在のスレッドをブロックします。
 
@@ -214,5 +214,5 @@ future_status wait_until(
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<将来の>](../standard-library/future.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

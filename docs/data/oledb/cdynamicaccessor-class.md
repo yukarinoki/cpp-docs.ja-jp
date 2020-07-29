@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 160e5b6d8eb4b45850dc071299413d9ad2cfcee9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6182d66b49647758bf17ab160d536e39b97b8c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216480"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 
@@ -143,7 +143,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**: atldbcli.h
+**ヘッダー**: atldbcli. h
 
 ## <a name="members"></a>メンバー
 
@@ -152,7 +152,7 @@ class CDynamicAccessor : public CAccessorBase
 |||
 |-|-|
 |[AddBindEntry](#addbindentry)|既定のアクセサーをオーバーライドするときに、出力列にバインドエントリを追加します。|
-|[CDynamicAccessor](#cdynamicaccessor)|`CDynamicAccessor` オブジェクトをインスタンス化し、初期化します。|
+|[CDynamicAccessor](#cdynamicaccessor)|オブジェクトをインスタンス化し、初期化し `CDynamicAccessor` ます。|
 |[[閉じる]](#close)|すべての列のバインドを解除し、割り当てられたメモリを解放して、クラス内の[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))インターフェイスポインターを解放します。|
 |[GetBlobHandling](#getblobhandling)|現在の行の BLOB 処理値を取得します。|
 |[GetBlobSizeLimit](#getblobsizelimit)|BLOB の最大サイズをバイト単位で取得します。|
@@ -174,7 +174,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ## <a name="remarks"></a>解説
 
-`CDynamicAccessor` メソッドを使用して、列名、列数、データ型などの列情報を取得します。 次に、この列情報を使用して、実行時にアクセサーを動的に作成します。
+列 `CDynamicAccessor` 名、列数、データ型などの列情報を取得するには、メソッドを使用します。 次に、この列情報を使用して、実行時にアクセサーを動的に作成します。
 
 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)を使用してバッファーからデータを取得します。
 
@@ -192,8 +192,8 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*info*<br/>
-から列情報を格納している `DBCOLUMNINFO` 構造体。 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」の「DBCOLUMNINFO 構造体」を参照してください。
+*インフォメーション*<br/>
+から`DBCOLUMNINFO`列情報を格納している構造体。 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」の「DBCOLUMNINFO 構造体」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -201,11 +201,11 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 ### <a name="remarks"></a>解説
 
-`CDynamicAccessor` で作成された既定のアクセサーをオーバーライドする場合は、このメソッドを使用します (「[データをフェッチする方法](../../data/oledb/fetching-data.md)」を参照してください)。
+で作成された既定のアクセサーをオーバーライドする場合は、このメソッドを使用し `CDynamicAccessor` ます (「[データをフェッチする方法](../../data/oledb/fetching-data.md)」を参照してください)。
 
 ## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
 
-`CDynamicAccessor` オブジェクトをインスタンス化し、初期化します。
+オブジェクトをインスタンス化し、初期化し `CDynamicAccessor` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -224,9 +224,9 @@ BLOB の最大サイズ (バイト単位)。この値に対する列データは
 
 ### <a name="remarks"></a>解説
 
-コンストラクターを使用して `CDynamicAccessor` オブジェクトを初期化する場合は、Blob のバインド方法を指定できます。 Blob には、グラフィックス、サウンド、コンパイル済みコードなどのバイナリデータを含めることができます。 既定の動作では、8000バイトを超える列を Blob として扱い、`ISequentialStream` オブジェクトにバインドしようとします。 ただし、BLOB サイズとして別の値を指定することもできます。
+コンストラクターを使用してオブジェクトを初期化する場合は `CDynamicAccessor` 、blob のバインド方法を指定できます。 Blob には、グラフィックス、サウンド、コンパイル済みコードなどのバイナリデータを含めることができます。 既定の動作では、8000バイトを超える列を Blob として扱い、それらをオブジェクトにバインドしようとし `ISequentialStream` ます。 ただし、BLOB サイズとして別の値を指定することもできます。
 
-BLOB データとして使用できる列データを `CDynamicAccessor` が処理する方法を指定することもできます。これは、BLOB データを既定の方法で処理できます。BLOB データをスキップする (バインドしない) ことができます。または、プロバイダーによって割り当てられたメモリ内の BLOB データをバインドすることもできます。
+また、BLOB データとして使用する列データを処理する方法を指定することもでき `CDynamicAccessor` ます。 blob データは既定の方法で処理できます。 blob データはスキップ (バインドしない) できます。また、プロバイダーが割り当てたメモリ内の blob データをバインドすることもできます。
 
 ## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: Close
 
@@ -287,7 +287,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 ### <a name="remarks"></a>解説
 
-ブックマークを取得するには、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定する必要があります。
+`DBPROP_IRowsetLocate`ブックマークを取得するには、を VARIANT_TRUE に設定する必要があります。
 
 ## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
 
@@ -324,7 +324,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 ### <a name="return-value"></a>戻り値
 
-列の特性が正常に取得された場合は**true**を返します。 それ以外の場合は **false**を返します。
+**`true`** 列の特性が正常に取得された場合は、を返します。 それ以外の場合はを返し **`false`** ます。
 
 ### <a name="remarks"></a>解説
 
@@ -352,7 +352,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 入出力行セット内の列数を返すメモリへのポインター。この数値には、ブックマーク列 (存在する場合) が含まれます。
 
 *ppColumnInfo*<br/>
-入出力`DBCOLUMNINFO` 構造体の配列を返すメモリへのポインター。 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」の「DBCOLUMNINFO 構造体」を参照してください。
+入出力構造体の配列を返すメモリへのポインター `DBCOLUMNINFO` 。 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」の「DBCOLUMNINFO 構造体」を参照してください。
 
 *ppStringsBuffer*<br/>
 入出力1つの割り当てブロック内で、すべての文字列値 ( *columnid*または for *pwszName*内で使用される名前) のストレージへのポインターを返すメモリへのポインター。
@@ -363,7 +363,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 ### <a name="remarks"></a>解説
 
-データ型 `DBORDINAL`、`DBCOLUMNINFO`、および `OLECHAR`の詳細については、 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
+データ型、、およびの詳細については、 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください `DBORDINAL` `DBCOLUMNINFO` `OLECHAR` 。
 
 ## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: GetColumnName
 
@@ -405,7 +405,7 @@ bool GetColumnType(DBORDINAL nColumn,
 
 ### <a name="return-value"></a>戻り値
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 ## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor:: GetLength
 
@@ -437,7 +437,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>戻り値
 
-指定された列が見つかった場合は**true**を返します。 それ以外の場合、この関数は**false**を返します。
+**`true`** 指定された列が見つかった場合は、を返します。 それ以外の場合、この関数はを返し **`false`** ます。
 
 ### <a name="remarks"></a>解説
 
@@ -467,7 +467,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>戻り値
 
-指定された名前の列が見つかった場合に**true**を返します。 それ以外の場合、この関数は**false**を返します。
+**`true`** 指定された名前の列が見つかった場合は、を返します。 それ以外の場合、この関数はを返し **`false`** ます。
 
 ## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor:: GetStatus
 
@@ -499,7 +499,7 @@ bool GetStatus(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>戻り値
 
-指定された列が見つかった場合は**true**を返します。 それ以外の場合、この関数は**false**を返します。
+**`true`** 指定された列が見つかった場合は、を返します。 それ以外の場合、この関数はを返し **`false`** ます。
 
 ## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
 
@@ -527,7 +527,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *ctype*<br/>
-から特別な処理を必要とする文字列型 (`CHAR*`、`WCHAR*`) を除く任意のデータ型を処理する、テンプレート化されたパラメーター。 `GetValue` は、ここで指定した内容に基づいて適切なデータ型を使用します。
+から`CHAR*` `WCHAR*` 特別な処理を必要とする文字列型 (、) を除く任意のデータ型を処理する、テンプレート化されたパラメーター。 `GetValue`では、ここで指定した内容に基づいて、適切なデータ型が使用されます。
 
 *n 列*<br/>
 から列番号。 列番号は1から始まります。 値が0の場合は、ブックマーク列 (存在する場合) を参照します。
@@ -540,9 +540,9 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-文字列データを渡す場合は、`GetValue`の非テンプレートバージョンを使用します。 このメソッドの非テンプレート化バージョンは `void*`を返します。これは、指定された列データを格納するバッファーの部分を指します。 列が見つからない場合は NULL を返します。
+文字列データを渡す場合は、の非テンプレートバージョンを使用し `GetValue` ます。 このメソッドの非テンプレートバージョンは、 **`void*`** 指定された列データを格納するバッファーの部分を指すを返します。 列が見つからない場合は NULL を返します。
 
-他のすべてのデータ型については、テンプレート化されたバージョンの `GetValue`を使用する方が簡単です。 テンプレート化されたバージョンは、成功した**場合は true** 、失敗した場合は**false**を返します。
+他のすべてのデータ型では、のテンプレート化されたバージョンを使用する方が簡単です `GetValue` 。 テンプレート化されたバージョンは、 **`true`** 成功または失敗時にを返し **`false`** ます。
 
 ### <a name="remarks"></a>解説
 
@@ -565,9 +565,9 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 *eBlobHandling*<br/>
 BLOB データを処理する方法を指定します。 次の値を使用できます。
 
-- DBBLOBHANDLING_DEFAULT: `SetBlobSizeLimit`によって設定された、 *Nblobsize*を超える列データを BLOB データとして処理し、`ISequentialStream` または `IStream` オブジェクトを使用して取得します。 このオプションは、 *Nblobsize*より大きいデータを含むすべての列をバインドするか、BLOB データとして DBTYPE_IUNKNOWN として表示します。
+- DBBLOBHANDLING_DEFAULT: *Nblobsize* (によって設定) より大きい列データ `SetBlobSizeLimit` を BLOB データとして処理し、 `ISequentialStream` オブジェクトまたはオブジェクトを使用して取得し `IStream` ます。 このオプションは、 *Nblobsize*より大きいデータを含むすべての列をバインドするか、BLOB データとして DBTYPE_IUNKNOWN として表示します。
 
-- DBBLOBHANDLING_NOSTREAMS: *Nblobsize* (`SetBlobSizeLimit`によって設定される) よりも大きい列データを BLOB データとして処理し、プロバイダーが割り当てたコンシューマー所有のメモリ内の参照を使用して取得します。 このオプションは、複数の BLOB 列を含むテーブルで、プロバイダーがアクセサーごとに1つの `ISequentialStream` オブジェクトのみをサポートする場合に便利です。
+- DBBLOBHANDLING_NOSTREAMS: *Nblobsize* (によって設定) より大きい列データ `SetBlobSizeLimit` を BLOB データとして処理し、プロバイダーによって割り当てられたコンシューマー所有のメモリ内の参照を使用して取得します。 このオプションは、複数の BLOB 列を含むテーブルで、プロバイダーがアクセサーごとに1つのオブジェクトのみをサポートする場合に便利です `ISequentialStream` 。
 
 - DBBLOBHANDLING_SKIP: Blob を含んでいる列として修飾された列をスキップします (バインドしないでください) (アクセサーは列の値をバインドまたは取得しませんが、列の状態と長さを取得します)。
 
@@ -594,7 +594,7 @@ BLOB サイズの制限を指定します。
 
 ### <a name="remarks"></a>解説
 
-BLOB の最大サイズをバイト単位で設定します。この値より大きい列データは、BLOB として扱われます。 プロバイダーによっては、列のサイズが非常に大きくなる場合があります (2 GB など)。 このサイズの列にメモリを割り当てるのではなく、通常、これらの列を Blob としてバインドしようとします。 この方法では、すべてのメモリを割り当てる必要はありませんが、切り捨てをしなくてもすべてのデータを読み取ることができます。 ただし、ネイティブデータ型の大きな列をバインドする `CDynamicAccessor` を強制することが必要になる場合もあります。 これを行うには、`Open`を呼び出す前に `SetBlobSizeLimit` を呼び出します。
+BLOB の最大サイズをバイト単位で設定します。この値より大きい列データは、BLOB として扱われます。 プロバイダーによっては、列のサイズが非常に大きくなる場合があります (2 GB など)。 このサイズの列にメモリを割り当てるのではなく、通常、これらの列を Blob としてバインドしようとします。 この方法では、すべてのメモリを割り当てる必要はありませんが、切り捨てをしなくてもすべてのデータを読み取ることができます。 ただし、 `CDynamicAccessor` ネイティブデータ型の大きな列を強制的にバインドすることが必要になる場合もあります。 これを行うには、を `SetBlobSizeLimit` 呼び出す前にを呼び出し `Open` ます。
 
 コンストラクターメソッド[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)は、BLOB の最大サイズを8000バイトの既定値に設定します。
 
@@ -628,7 +628,7 @@ bool SetLength(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>戻り値
 
-指定した列の長さが正常に設定されている場合は**true**を返します。 それ以外の場合、この関数は**false**を返します。
+**`true`** 指定した列の長さが正常に設定されている場合は、を返します。 それ以外の場合、この関数はを返し **`false`** ます。
 
 ## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
 
@@ -660,7 +660,7 @@ bool SetStatus(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>戻り値
 
-指定された列の状態が正常に設定されている場合に**true**を返します。 それ以外の場合、この関数は**false**を返します。
+**`true`** 指定された列の状態が正常に設定されている場合は、を返します。 それ以外の場合、この関数はを返し **`false`** ます。
 
 ## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
 
@@ -688,7 +688,7 @@ bool SetValue(
 #### <a name="parameters"></a>パラメーター
 
 *ctype*<br/>
-から特別な処理を必要とする文字列型 (`CHAR*`、`WCHAR*`) を除く任意のデータ型を処理する、テンプレート化されたパラメーター。 `GetValue` は、ここで指定した内容に基づいて適切なデータ型を使用します。
+から`CHAR*` `WCHAR*` 特別な処理を必要とする文字列型 (、) を除く任意のデータ型を処理する、テンプレート化されたパラメーター。 `GetValue`では、ここで指定した内容に基づいて、適切なデータ型が使用されます。
 
 *pColumnName*<br/>
 から列名を含む文字列へのポインター。
@@ -701,14 +701,14 @@ bool SetValue(
 
 ### <a name="return-value"></a>戻り値
 
-文字列データを設定する場合は、`GetValue`の非テンプレートバージョンを使用します。 このメソッドの非テンプレート化バージョンは `void*`を返します。これは、指定された列データを格納するバッファーの部分を指します。 列が見つからない場合は NULL を返します。
+文字列データを設定する場合は、の非テンプレートバージョンを使用し `GetValue` ます。 このメソッドの非テンプレートバージョンは、 **`void*`** 指定された列データを格納するバッファーの部分を指すを返します。 列が見つからない場合は NULL を返します。
 
-他のすべてのデータ型については、テンプレート化されたバージョンの `GetValue`を使用する方が簡単です。 テンプレート化されたバージョンは、成功した**場合は true** 、失敗した場合は**false**を返します。
+他のすべてのデータ型では、のテンプレート化されたバージョンを使用する方が簡単です `GetValue` 。 テンプレート化されたバージョンは、 **`true`** 成功または失敗時にを返し **`false`** ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)

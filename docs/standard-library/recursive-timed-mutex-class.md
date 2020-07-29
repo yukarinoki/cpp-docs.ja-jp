@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15517425f3d81bc3798df2e42f39ac0b0d32ba31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217598"
 ---
 # <a name="recursive_timed_mutex-class"></a>recursive_timed_mutex クラス
 
-*時間指定ミューテックス型*を表します。 この型のオブジェクトは、プログラム内での時間制限ブロックを使った相互排他を強制するのに使用されます。 [timed_mutex](../standard-library/timed-mutex-class.md) 型のオブジェクトとは異なり、`recursive_timed_mutex` オブジェクトにロック メソッドを呼び出すことによる影響は詳細に定義されています。
+*Timed mutex 型*を表します。 この型のオブジェクトは、プログラム内での時間制限ブロックを使った相互排他を強制するのに使用されます。 [timed_mutex](../standard-library/timed-mutex-class.md) 型のオブジェクトとは異なり、`recursive_timed_mutex` オブジェクトにロック メソッドを呼び出すことによる影響は詳細に定義されています。
 
 ## <a name="syntax"></a>構文
 
@@ -42,25 +42,25 @@ class recursive_timed_mutex;
 |名前|説明|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|ロックされていない `recursive_timed_mutex` オブジェクトを構築します。|
-|[~recursive_timed_mutexデストラクタ](#dtorrecursive_timed_mutex_destructor)|`recursive_timed_mutex` オブジェクトによって使用されるすべてのリソースを解放します。|
+|[~ recursive_timed_mutex デストラクター](#dtorrecursive_timed_mutex_destructor)|`recursive_timed_mutex` オブジェクトによって使用されるすべてのリソースを解放します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ロック](#lock)|呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。|
+|[lock](#lock)|呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。|
 |[try_lock](#try_lock)|ブロックせずに `mutex` の所有権を取得しようとします。|
 |[try_lock_for](#try_lock_for)|指定した時間のあいだ `mutex` の所有権の取得を試みます。|
 |[try_lock_until](#try_lock_until)|指定した時刻まで `mutex` の所有権の取得を試みます。|
-|[ロック 解除](#unlock)|`mutex` の所有権を解放します。|
+|[ロック](#unlock)|`mutex` の所有権を解放します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:**\<ミューテックス>
+**ヘッダー:**\<mutex>
 
 **名前空間:** std
 
-## <a name="lock"></a><a name="lock"></a>ロック
+## <a name="lock"></a><a name="lock"></a>制限
 
 呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。
 
@@ -72,7 +72,7 @@ void lock();
 
 呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに返され、以前のロックは有効のままになります。
 
-## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutexコンストラクタ
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutex コンストラクター
 
 ロックされていない `recursive_timed_mutex` オブジェクトを構築します。
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが の所有権を取得できた場合`mutex`、または呼び出し元のスレッド`mutex`が既に所有している場合は**true。** それ以外の場合**は false。**
+**`true`** メソッドがの所有権を正常に取得した場合 `mutex` は。呼び出し元のスレッドが既にを所有している場合は `mutex` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-呼び出し元のスレッド`mutex`が 既に を所有している場合、関数はすぐに**true**を返し、前のロックは有効なままです。
+呼び出し元のスレッドが既にを所有している場合、 `mutex` 関数はすぐにを返し、 **`true`** 前のロックは有効のままになります。
 
 ## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
@@ -124,11 +124,11 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが の所有権を正常に取得した場合`mutex`、または呼び出し元の`mutex`スレッドが既に所有している場合は**true。** それ以外の場合**は false。**
+**`true`** メソッドがの所有権を正常に取得した場合 `mutex` は。呼び出し元のスレッドが既にを所有している場合は `mutex` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-呼び出し元のスレッド`mutex`が 既に を所有している場合、メソッドはすぐに**true**を返し、前のロックは有効なままです。
+呼び出し元のスレッドが既にを所有している場合、 `mutex` メソッドは直ちにを返し、 **`true`** 以前のロックは有効のままになります。
 
 ## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
@@ -148,13 +148,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが の所有権を正常に取得した場合`mutex`、または呼び出し元の`mutex`スレッドが既に所有している場合は**true。** それ以外の場合**は false。**
+**`true`** メソッドがの所有権を正常に取得した場合 `mutex` は。呼び出し元のスレッドが既にを所有している場合は `mutex` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-呼び出し元のスレッド`mutex`が 既に を所有している場合、メソッドはすぐに**true**を返し、前のロックは有効なままです。
+呼び出し元のスレッドが既にを所有している場合、 `mutex` メソッドは直ちにを返し、 **`true`** 以前のロックは有効のままになります。
 
-## <a name="unlock"></a><a name="unlock"></a>ロック 解除
+## <a name="unlock"></a><a name="unlock"></a>ロック
 
 `mutex` の所有権を解放します。
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<ミューテックス>](../standard-library/mutex.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

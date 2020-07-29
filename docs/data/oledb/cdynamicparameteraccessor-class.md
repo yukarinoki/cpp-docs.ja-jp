@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 9c326c337ff210ef9de26b3fd88c0d853832b260
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211871"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216467"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -109,7 +109,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**: atldbcli.h
+**ヘッダー**: atldbcli. h
 
 ## <a name="members"></a>メンバー
 
@@ -199,9 +199,9 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-テンプレートが使用されていないバージョンでは、はバッファーから取得したデータを格納しているメモリを指します。 テンプレート化されたバージョンの場合は、成功した場合は**true** 、失敗した場合は**false**を返します。
+テンプレートが使用されていないバージョンでは、はバッファーから取得したデータを格納しているメモリを指します。 テンプレート化されたバージョンの場合、成功した場合は、失敗した場合はを返し **`true`** **`false`** ます。
 
-バッファーから文字列以外のパラメーターデータを取得するには、`GetParam` を使用します。 [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)を使用して、バッファーから文字列パラメーターデータを取得します。
+`GetParam`バッファーから文字列以外のパラメーターデータを取得するには、を使用します。 [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)を使用して、バッファーから文字列パラメーターデータを取得します。
 
 ## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor:: GetParamCount
 
@@ -234,7 +234,7 @@ bool GetParamIO(DBORDINAL nParam,
 からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
 
 *pParamIO*<br/>
-指定されたパラメーターの `DBPARAMIO` 型 (入力または出力) を格納している変数へのポインター。 次のように定義します。
+`DBPARAMIO`指定されたパラメーターの型 (入力または出力) を格納している変数へのポインター。 次のように定義します。
 
 ```cpp
 typedef DWORD DBPARAMIO;
@@ -248,7 +248,7 @@ enum DBPARAMIOENUM {
 
 ### <a name="return-value"></a>戻り値
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 ## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: GetParamLength
 
@@ -273,7 +273,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>解説
 
-最初のオーバーライドは、成功した**場合は true** 、失敗した場合は**false**を返します。 2番目のオーバーライドは、パラメーターの長さを格納しているメモリを指します。
+最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、パラメーターの長さを格納しているメモリを指します。
 
 ## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: GetParamName
 
@@ -317,7 +317,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>解説
 
-最初のオーバーライドは、成功した**場合は true** 、失敗した場合は**false**を返します。 2番目のオーバーライドは、指定されたパラメーターの状態を格納しているメモリを指します。
+最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、指定されたパラメーターの状態を格納しているメモリを指します。
 
 ## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: GetParamString
 
@@ -347,7 +347,7 @@ bool GetParamString(DBORDINAL nParam,
 からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
 
 *strOutput*<br/>
-入出力指定されたパラメーターの ANSI (`CSimpleStringA`) または Unicode (`CSimpleStringW`) 文字列データ。 `CString`型のパラメーターを渡す必要があります。次に例を示します。
+入出力`CSimpleStringA`指定されたパラメーターの ANSI () 文字列データまたは Unicode ( `CSimpleStringW` ) 文字列データ。 型のパラメーターを渡す必要があり `CString` ます。次に例を示します。
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
 
@@ -359,13 +359,13 @@ bool GetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>解説
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-*Pbuffer*が NULL の場合、このメソッドは、 *pbuffer*が指すメモリ内の必要なバッファーサイズを設定し、データをコピーせずに**true**を返します。
+*Pbuffer*が NULL の場合、このメソッドは、 *pbuffer*が指すメモリ内の必要なバッファーサイズを設定し、 **`true`** データをコピーせずにを返します。
 
 バッファーの*Pbuffer*が文字列全体を格納するのに十分な大きさでない場合、このメソッドは失敗します。
 
-`GetParamString` を使用して、バッファーから文字列パラメーターデータを取得します。 [Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)を使用して、バッファーから文字列以外のパラメーターデータを取得します。
+`GetParamString`バッファーから文字列パラメーターデータを取得するには、を使用します。 [Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)を使用して、バッファーから文字列以外のパラメーターデータを取得します。
 
 ## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor:: GetParamType
 
@@ -388,7 +388,7 @@ bool GetParamType(DBORDINAL nParam,
 
 ### <a name="return-value"></a>戻り値
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 ## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: SetParam
 
@@ -429,9 +429,9 @@ bool SetParam(TCHAR* pParamName,
 
 ### <a name="return-value"></a>戻り値
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-バッファーに文字列以外のパラメーターデータを設定するには、`SetParam` を使用します。 [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)を使用して、バッファー内の文字列パラメーターデータを設定します。
+`SetParam`バッファーに文字列以外のパラメーターデータを設定するには、を使用します。 [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)を使用して、バッファー内の文字列パラメーターデータを設定します。
 
 ## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor:: SetParamLength
 
@@ -454,7 +454,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 ### <a name="remarks"></a>解説
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 ## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: SetParamStatus
 
@@ -477,7 +477,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 ### <a name="remarks"></a>解説
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 ## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: SetParamString
 
@@ -506,16 +506,16 @@ bool SetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>解説
 
-成功した**場合は true** 、失敗した場合は**false**を返します。
+**`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-*pstring*に指定された最大サイズを超える文字列を設定しようとすると、`SetParamString` は失敗します。
+`SetParamString`は、 *pstring*に指定された最大サイズを超える文字列を設定しようとすると失敗します。
 
-`SetParamString` を使用して、バッファー内の文字列パラメーターデータを設定します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md)を使用します。
+`SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md)を使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)

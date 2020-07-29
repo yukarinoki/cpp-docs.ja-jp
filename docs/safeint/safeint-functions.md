@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334927"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219340"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 
@@ -51,7 +51,7 @@ SafeInt ライブラリには、[SafeInt クラス](safeint-class.md)のイン�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-関数                      | 説明
+機能                      | 説明
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | 2 つの数値を加算し、オーバーフローから保護します。
 [SafeCast](#safecast)         | ある型のパラメーターを別の型にキャストします。
@@ -94,7 +94,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -118,7 +118,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safedivide"></a><a name="safedivide"></a>保存
 
@@ -146,7 +146,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -170,9 +170,9 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* と *u* が等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*と*u*が等しい場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドでは `==` が強化されます。`SafeEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -198,9 +198,9 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも大きい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*より大きい場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SafeGreaterThan` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
@@ -226,9 +226,9 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも大きいか等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*以上の場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SafeGreaterThanEquals` では標準の比較演算子が強化され、2 つの異なる型の数値を比較できます。
 
@@ -254,9 +254,9 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも小さい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*未満の場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドでは標準の比較演算子が強化されます。`SafeLessThan` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -282,9 +282,9 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも小さいか等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*以下の場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SafeLessThanEquals` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
@@ -314,7 +314,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -342,7 +342,7 @@ inline bool SafeMultiply (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は `true`。エラーが発生した場合は `false`。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t*と*u*が等しくない場合は**true** 。それ以外の場合は**false**。
+**`true`***t*と*u*が等しくない場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドでは `!=` が強化されます。`SafeNotEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -398,4 +398,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。

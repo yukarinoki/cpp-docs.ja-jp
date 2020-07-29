@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219314"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf クラス
 
@@ -66,12 +66,12 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 *Tr*\
 ファイルバッファーの基本要素の特徴 (通常は `char_traits<Char_T>` )。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 クラステンプレートは、 *Char_T*型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス*Tr*によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
 
 > [!NOTE]
-> 型のオブジェクト `basic_filebuf` は、 __ \* __ `char_type` 型パラメーター *Char_T*によって指定されたに関係なく、char 型の内部バッファーを使用して作成されます。 これは、内部バッファーに書き込まれる前に、( **wchar_t**文字を含む) Unicode 文字列が ANSI 文字列 ( **char**文字を含む) に変換されることを意味します。 Unicode 文字列をバッファーに格納するには、 **wchar_t**型の新しいバッファーを作成し、メソッドを使用して設定し [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` ます。 この動作を示す例については、以降のセクションを参照してください。
+> 型のオブジェクト `basic_filebuf` は、 __ \* __ `char_type` 型パラメーター *Char_T*によって指定されたに関係なく、char 型の内部バッファーを使用して作成されます。 つまり、Unicode 文字列 (文字を含む **`wchar_t`** ) は、 **`char`** 内部バッファーに書き込まれる前に、(文字を含む) ANSI 文字列に変換されます。 Unicode 文字列をバッファーに格納するには、型の新しいバッファーを作成 **`wchar_t`** し、メソッドを使用して設定し [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` ます。 この動作を示す例については、以降のセクションを参照してください。
 
 クラスのオブジェクトは、 `basic_filebuf<Char_T, Tr>` ファイルポインターを格納します。これは、 `FILE` 開いているファイルに関連付けられているストリームを制御するオブジェクトを指定します。 さらに、プロテクト メンバー関数である [overflow](#overflow) と [underflow](#underflow) で使用される 2 つのファイル変換ファセットへのポインターも格納します。 詳細については、「[`basic_filebuf::open`](#open)」を参照してください。
 
@@ -202,7 +202,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[char_type](#char_type)|型名を `Char_T` テンプレート パラメーターに関連付けます。|
 |[int_type](#int_type)|`basic_filebuf` のスコープ内のこの型を、`Tr` スコープ内の同じ名前の型と同等にします。|
@@ -243,7 +243,7 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、ファイル ポインターにも Null ポインターを格納します。
 
@@ -269,11 +269,11 @@ basic_filebuf<Char_T, Tr> *close();
 
 メンバー関数は、ファイル ポインターが Null ポインターの場合に、Null ポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`close` は `fclose(fp)` を呼び出します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返してファイルが正常に閉じられたことを示します。
+`close` は `fclose(fp)` を呼び出します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、を返して、 **`this`** ファイルが正常に閉じられたことを示します。
 
-ワイドストリームの場合、ストリームが開かれた後、またはの最後の呼び出し以降に挿入が発生した場合、 `streampos` 関数はを呼び出し [`overflow`](#overflow) ます。 また、必要に応じて、ファイル変換ファセットを使用してを呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入し `fac` `fac.unshift` ます。 `byte` **Char**型の生成された各要素は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(byte, fp)` ます。 またはの書き込みに失敗した場合 `fac.unshift` 、関数は成功しません。
+ワイドストリームの場合、ストリームが開かれた後、またはの最後の呼び出し以降に挿入が発生した場合、 `streampos` 関数はを呼び出し [`overflow`](#overflow) ます。 また、必要に応じて、ファイル変換ファセットを使用してを呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入し `fac` `fac.unshift` ます。 型の生成された各要素 `byte` **`char`** は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(byte, fp)` ます。 またはの書き込みに失敗した場合 `fac.unshift` 、関数は成功しません。
 
 ### <a name="example"></a>例
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイルポインターが null でない場合は**true** 。
+**`true`** ファイルポインターが null でない場合。
 
 ### <a name="example"></a>例
 
@@ -413,9 +413,9 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="return-value"></a>戻り値
 
-バッファーが既に開いている場合、またはファイルポインターが null ポインターの場合、関数は null ポインターを返します。 それ以外の場合は、**this** を返します。
+バッファーが既に開いている場合、またはファイルポインターが null ポインターの場合、関数は null ポインターを返します。 それ以外の場合はを返し **`this`** ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、を使用し `FILE *` `basic_filebuf` てを呼び出した場合と同じようにを返し [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md) `(filename, strmode)` ます。 `strmode`次のものから決定され `mode & ~(` [`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode) `)` ます。
 
@@ -454,7 +454,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 __* This__を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。 詳細については、「[右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
@@ -475,7 +475,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 関数が成功しなかった場合は、を返し `traits_type::eof` ます。 それ以外の場合はを返し `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `_Meta != traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) の場合、プロテクト仮想メンバー関数は、要素を出力バッファーに挿入しようと `ch = traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(_Meta)` します。 これはさまざまな方法で行うことができます。
 
@@ -502,7 +502,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 関数が成功しなかった場合は、を返し `traits_type::eof` ます。 それ以外の場合はを返し `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 の場合、 `_Meta == traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) プッシュバックする要素は、実際には、現在の要素の前に既にストリームにある要素です。 それ以外の場合、その要素はに置き換えられ `ch = traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(_Meta)` ます。 この関数は、さまざまな方法で要素を戻すことができます。
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 関数で位置を使用できるようにするには、その位置を `putback` 指すように次のポインターを設定し、その位置に格納し `ch` ます。
 
-- 関数が要素を入力ストリームにプッシュバックできる場合は、 `ungetc` **char**型の要素に対してを呼び出すなどして、この処理を実行できます。
+- 関数が要素を入力ストリームにプッシュバックできる場合は、 `ungetc` 型の要素に対してを呼び出すなどして、この処理を実行でき **`char`** ます。
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
 
@@ -546,7 +546,7 @@ virtual pos_type seekoff(
 
 新しい位置または無効なストリーム位置を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 プロテクト仮想メンバー関数は、制御されたストリームの現在位置を変更しようとします。 クラスのオブジェクトの場合 [`basic_filebuf`](../standard-library/basic-filebuf-class.md) `<Char_T, Tr>` 、ストリームの位置は、型のオブジェクトで表すことができ `fpos_t` ます。これには、オフセットとワイドストリームを解析するために必要なすべての状態情報が格納されます。 オフセット0は、ストリームの最初の要素を参照します。 (型のオブジェクトは [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type) 、少なくとも `fpos_t` オブジェクトを格納します)。
 
@@ -576,13 +576,13 @@ virtual pos_type seekpos(
 
 ファイルポインター `fp` が null ポインターの場合、関数は失敗します。 それ以外の場合は、を呼び出してストリームの位置を変更しようと `fsetpos(fp, &fposn)` `fposn` `fpos_t` します。ここで、はに格納されているオブジェクト `pos` です。 その関数が成功すると、関数は `pos` を返します。 それ以外の場合は、無効なストリームの位置が返されます。 ストリームの位置が無効であることを確認するには、戻り値と `pos_type(off_type(-1))` を比較します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 プロテクト仮想メンバー関数は、制御されたストリームの現在位置を変更しようとします。 クラスのオブジェクトの場合 [`basic_filebuf`](../standard-library/basic-filebuf-class.md) `<Char_T, Tr>` 、ストリームの位置は、型のオブジェクトで表すことができ `fpos_t` ます。これには、オフセットとワイドストリームを解析するために必要なすべての状態情報が格納されます。 オフセット0は、ストリームの最初の要素を参照します。 (型 `pos_type` のオブジェクトは、少なくとも `fpos_t` オブジェクトを格納します)。
 
 読み取りと書き込みのために開かれたファイルの場合、入力と出力の両方のストリームが直列に配置されます。 挿入と抽出を切り替えるには、またはを呼び出す必要があり [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) ます。 `pubseekoff`(およびへ `seekoff` の) の呼び出しには、テキストストリーム、バイナリストリーム、およびワイドストリームに対するさまざまな制限があります。
 
-ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセットを使用してを呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入し `fac` `fac.unshift` ます。 `byte` **Char**型の生成された各要素は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(byte, fp)` ます。 またはの書き込みに失敗した場合 `fac.unshift` 、関数は成功しません。
+ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセットを使用してを呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入し `fac` `fac.unshift` ます。 型の生成された各要素 `byte` **`char`** は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(byte, fp)` ます。 またはの書き込みに失敗した場合 `fac.unshift` 、関数は成功しません。
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
 
@@ -606,9 +606,9 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 プロテクト メンバー関数は、ファイル ポインター `fp` が Null ポインターの場合に、0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`setbuf`を呼び出すと、 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` `count` *_Buffer*で始まる要素の配列がストリームのバッファーとして提供されます。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
+`setbuf`を呼び出すと、 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` `count` *_Buffer*で始まる要素の配列がストリームのバッファーとして提供されます。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、 **`this`** signal success に戻ります。
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
 
@@ -655,13 +655,13 @@ virtual int_type underflow();
 
 関数が成功しなかった場合は、を返し `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) ます。 それ以外の場合は、「 `ch` 解説」の説明に従って変換されたを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 プロテクト仮想メンバー関数は、入力ストリームから現在の要素を抽出 `ch` し、要素をとして返し `traits_type::` [`to_int_type`](../standard-library/char-traits-struct.md#to_int_type) `(ch)` ます。 これはさまざまな方法で行うことができます。
 
 - 読み取り位置が使用可能な場合は、 `ch` 読み取り位置に格納されている要素としてを受け取り、入力バッファーの次のポインターを進めます。
 
-- これにより、フォームの連続する呼び出しの場合と同様に、 **char**型の1つ以上の要素を読み取り、 `fgetc(fp)` `ch` `Char_T` ファイル変換ファセットを使用して必要に応じてを呼び出すことで、型の要素に変換でき `fac` `fac.in` ます。 任意の読み取りまたは変換が失敗すると、関数は失敗します。
+- このメソッドは、フォームの連続した呼び出しでのように、型の1つ以上の要素を読み取り、必要に応じ **`char`** `fgetc(fp)` `ch` `Char_T` てファイル変換ファセットを使用してを型の要素に変換し `fac` `fac.in` ます。 任意の読み取りまたは変換が失敗すると、関数は失敗します。
 
 ## <a name="see-also"></a>関連項目
 

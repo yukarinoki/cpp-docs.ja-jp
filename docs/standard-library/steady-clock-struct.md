@@ -4,16 +4,16 @@ ms.date: 05/22/2018
 f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
-ms.openlocfilehash: 19e9f5c4dcfc7306b989605894e9a0787e0920ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d21d5c2ed7ed667333007f3bd12d13f47b868380
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217403"
 ---
 # <a name="steady_clock-struct"></a>steady_clock 構造体
 
-表す、*定常*クロック。
+*定常*クロックを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -21,38 +21,38 @@ ms.locfileid: "62412398"
 struct steady_clock;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Windows で`steady_clock`ラップ、`QueryPerformanceCounter`関数。
+Windows では、 `steady_clock` 関数をラップし `QueryPerformanceCounter` ます。
 
-`now` への最初の呼び出しによって返される値が、`now` への以降の呼び出しによって返される値以下である場合、クロックは常に*単調*になります。 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
+`now` の最初の呼び出しによって返される値が、常に `now` の以降の呼び出しによって返される値以下である場合、クロックは*単調*になります。 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
 
-`high_resolution_clock` typedef は、`steady_clock`します。
+`high_resolution_clock`はの typedef です `steady_clock` 。
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
 |名前|説明|
 |----------|-----------------|
-|`steady_clock::duration`|シノニム`nanoseconds`で定義された\<chrono >。|
-|`steady_clock::period`|シノニム`nano`で定義された\<ratio >。|
-|`steady_clock::rep`|シノニム**long** **long**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
+|`steady_clock::duration`|に `nanoseconds` 定義されているのシノニム \<chrono> 。|
+|`steady_clock::period`|に `nano` 定義されているのシノニム \<ratio> 。|
+|`steady_clock::rep`|**`long long`** のシノニム。含まれているのインスタンス化のクロックティック数を表すために使用される型 `duration` 。|
 |`steady_clock::time_point`|`chrono::time_point<steady_clock>` と同義。|
 
 ## <a name="public-functions"></a>パブリック関数
 
-|関数|説明|
+|機能|説明|
 |--------------|-----------------|
-|`now`|として現在の時刻を返します、`time_point`値。|
+|`now`|現在の時刻を値として返し `time_point` ます。|
 
 ## <a name="public-constants"></a>パブリック定数
 
 |名前|説明|
 |----------|-----------------|
-|`steady_clock::is_steady`|保持している**true**します。 `steady_clock` は*安定*しています。|
+|`steady_clock::is_steady`|**`true`** を保持します。 `steady_clock` は*安定*しています。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<chrono >
+**ヘッダー:**\<chrono>
 
 **名前空間:** std::chrono
 
