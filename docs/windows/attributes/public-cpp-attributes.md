@@ -1,17 +1,17 @@
 ---
-title: public (C++ Attributes) (C++ COM 属性)
+title: public (C++ 属性) (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5307b96c58492aa06f115ca7a814aa221062e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224371"
 ---
 # <a name="public-c-attributes"></a>public (C++ 属性)
 
@@ -25,11 +25,11 @@ ms.locfileid: "80214721"
 
 ## <a name="remarks"></a>解説
 
-**Public** C++属性には、 [public](/windows/win32/Midl/public) MIDL 属性と同じ機能があります。
+C++ 属性には、 **`public`** [public](/windows/win32/Midl/public) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、 **public**属性の使用方法を示しています。
+次のコードは、属性の使用方法を示してい **`public`** ます。
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,14 +51,14 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**対象**|**typedef**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`typedef`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)
