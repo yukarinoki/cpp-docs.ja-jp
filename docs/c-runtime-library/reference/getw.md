@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226217"
 ---
 # <a name="_getw"></a>_getw
 
@@ -58,13 +58,13 @@ int _getw(
 
 ## <a name="remarks"></a>解説
 
-**_Getw**関数は、*ストリーム*に関連付けられているファイルから**int**型の次のバイナリ値を読み取り、関連付けられているファイルポインターがある場合はそれをインクリメントして、次の未読文字を指すようにします。 **_getw**は、ストリーム内の項目の特別な配置を想定していません。 **_Getw**では、 **int**型のサイズと**int**型内のバイトの順序がシステム間で異なるため、移植に関する問題が発生する可能性があります。
+**_Getw**関数は、ストリームに関連付けられているファイルから型の次のバイナリ値を読み取り **`int`** 、関連付けられているファイルポインターがある場合はそれをインクリメントして、次の*stream*未読文字を指すようにします。 **_getw**は、ストリーム内の項目の特別な配置を想定していません。 **_Getw**では、型のサイズ **`int`** と型内のバイトの順序が **`int`** システム間で異なるため、移植に関する問題が発生する可能性があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 

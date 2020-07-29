@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226230"
 ---
 # <a name="math-and-floating-point-support"></a>数値演算と浮動小数点のサポート
 
@@ -21,11 +21,11 @@ ms.locfileid: "76821513"
 
 浮動小数点数値演算ライブラリ関数の多くは、CPU アーキテクチャの種類に応じて実装の種類も異なります。 たとえば、32 ビット x86 CRT の実装は、64 ビット x64 CRT の実装とは異なります。 さらに、関数の中には特定の CPU アーキテクチャに対して複数の実装が用意されているものもあります。 CPU でサポートされている命令セットに応じて実行時に動的に実装を選択するのが最も効率的な方法です。 たとえば、32 ビット x86 CRT で、一部の関数には x87 実装と SSE2 実装の両方が用意されています。 SSE2 をサポートしている CPU で実行すると、速い方の SSE2 実装が使用されます。 SSE2 をサポートしていない CPU で実行すると、遅い方の x87 実装が使用されます。 数値演算ライブラリ関数の実装の種類が異なると、結果を生成するために使用する CPU 命令およびアルゴリズムも異なる場合があります。このため、CPU 間で、関数の生成する結果が異なる場合があります。 ほとんどの場合、結果は正確に丸めた結果の +/- 1 ulp の誤差範囲内に収まります。ただし、実際の結果は、CPU 間で異なる場合があります。
 
-以前の 16 ビット バージョンの Microsoft C/C++ および Microsoft Visual C++ では、80 ビット精度浮動小数点データ型として **long double** 型をサポートしていました。 最近のバージョンの Visual C++ では、**long double** データ型は、**double** 型と同じ 64 ビット精度浮動小数点データ型となっています。 コンパイラは **long double** と **double** を個別の型として扱いますが、**long double** 関数はそれに対応する **double** 関数と同じです。 CRT では、ISO C99 ソース コードの互換性を維持するために **long double** バージョンの数値演算関数を提供しています。ただし、そのバイナリ表現は他のコンパイラと異なる場合があるので注意してください。
+以前の16ビットバージョンの Microsoft C/c + + および Microsoft Visual C++ では、 **`long double`** 80 ビット精度浮動小数点データ型として型がサポートされていました。 新しいバージョンの Visual C++ では、 **`long double`** データ型は、型と同じ64ビット精度浮動小数点データ型です **`double`** 。 コンパイラは **`long double`** とを **`double`** 個別の型として扱いますが、 **`long double`** 関数は対応する関数と同じです **`double`** 。 CRT は、 **`long double`** ISO C99 ソースコードの互換性のために、数値演算関数のバージョンを提供しますが、バイナリ表現は他のコンパイラとは異なる場合があることに注意してください。
 
 ## <a name="supported-math-and-floating-point-routines"></a>サポートされている数値演算と浮動小数点のルーチン
 
-|ルーチンによって返される値|[使用]|
+|ルーチンによって返される値|用途|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|整数型の絶対値を計算します
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|アーク コサインを計算します
@@ -34,9 +34,9 @@ ms.locfileid: "76821513"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|双曲線アーク サインを計算します
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|アーク タンジェントを計算します
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|双曲線アーク タンジェントを計算します
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列を **double** に変換します
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列を **double** に変換します
-[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列を **float** または **long double** に変換します
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列をに変換します。**`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列をに変換します。**`double`**
+[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列をまたはに変換します。 **`float`****`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|立方根を計算します
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|切り上げを計算します
 [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|加法逆元を計算します
@@ -47,7 +47,7 @@ ms.locfileid: "76821513"
 [cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|サインを計算します
 [cosh、coshf、coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|双曲線サインを計算します
 [div、ldiv、lldiv](../c-runtime-library/reference/div.md)|2 つの整数値の商と剰余を計算します
-[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|**double** を文字列に変換します
+[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|を文字列に変換します。 **`double`**
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|安全なバージョンの **_ecvt** です
 [erf、erff、erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|エラー関数を計算します
 [erfc、erfcf、erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|相補誤差関数を計算します
@@ -94,15 +94,15 @@ ms.locfileid: "76821513"
 [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Bessel 関数を計算します
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|x*2<sup>n</sup> を計算します
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|ガンマ関数の絶対値の自然対数を計算します
-[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|浮動小数点値を最も近い **long long** 値に丸めます
-[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|浮動小数点値を最も近い **long long** 値に丸めます
+[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|浮動小数点値を最も近い値に丸めます。 **`long long`**
+[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|浮動小数点値を最も近い値に丸めます。 **`long long`**
 [log、logf、logl、log10、log10f、log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|自然対数または 10 を底とする対数を計算します
 [log1p、log1pf、log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|1+x の自然対数を計算します
 [log2、log2f、log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|2 を底とする対数を計算します
 [logb、logbf、logbl、_logb、_logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|浮動小数点値の指数を返します
-[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|浮動小数点値を最も近い **long** 値に丸めます
+[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|浮動小数点値を最も近い値に丸めます。 **`long`**
 [_lrotl、_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|整数値を左または右に回転します
-[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|浮動小数点値を最も近い **long** 値に丸めます
+[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|浮動小数点値を最も近い値に丸めます。 **`long`**
 [_matherr](../c-runtime-library/reference/matherr.md)|既定の数値演算エラー ハンドラーです
 [__max](../c-runtime-library/reference/max.md)|2 つの値の大きい方を返すマクロです
 [__min](../c-runtime-library/reference/min.md)|2 つの値の小さい方を返すマクロです
@@ -126,13 +126,13 @@ ms.locfileid: "76821513"
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|双曲線サインを計算します
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|平方根を計算します
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|浮動小数点ステータス ワードを取得します
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|文字列を **float** に変換します
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列を**long** **double**に変換します。
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|文字列をに変換します。**`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列をに変換します。**`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|タンジェントを計算します
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|双曲線タンジェントを計算します
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|ガンマ関数を計算します
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|小数部を切り捨てます
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列を **double** に変換します
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列をに変換します。**`double`**
 [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Bessel 関数を計算します
 
 ## <a name="see-also"></a>関連項目

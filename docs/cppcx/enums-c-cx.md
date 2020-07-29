@@ -2,22 +2,22 @@
 title: 列挙型 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: be11d8d8f38a92fbe4be00eed53dd5226bab0b59
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 54e413e65b3130b9b83e6d1ed56b5ee87b84e0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821754"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225762"
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
 
-C++/CX では、標準C++ `scoped  enum`に似た `public enum class` キーワードがサポートされています。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。
+C++/CX では、 `public enum class` 標準 c++ に似たキーワードがサポートされてい `scoped  enum` ます。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`public enum class` など、アクセス指定子を持たない `public`は、標準 C++ の [スコープ列挙体](../cpp/enumerations-cpp.md)として扱われます。
+などの `public enum class` アクセス指定子を持たないは、 **`public`** 標準 C++[スコープ列挙型](../cpp/enumerations-cpp.md)として扱われます。
 
-`public enum class` または `public enum struct` の宣言は、任意の整数型の基になる型を持つことができますが、Windows ランタイム自体では、型を int32 にする必要があります。また、フラグの列挙体に対して uint32 を使用することもできます。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。
+`public enum class`またはの宣言は、 `public enum struct` 任意の整数型の基になる型を持つことができますが、Windows ランタイム自体は型を int32 にする必要がありますが、flags 列挙型の場合は uint32 です。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。
 
 この例は、パブリック列挙型クラスを定義する方法を示しています。
 
@@ -27,7 +27,7 @@ C++/CX では、標準C++ `scoped  enum`に似た `public enum class` キーワ�
 
 [!code-cpp[cx_enums#02](../cppcx/codesnippet/CPP/cpp/class1.h#02)]
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例は、列挙型を宣言する方法を示します。
 
@@ -41,4 +41,4 @@ C++/CX では、標準C++ `scoped  enum`に似た `public enum class` キーワ�
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
 [C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[名前空間参照](../cppcx/namespaces-reference-c-cx.md)
+[名前空間のリファレンス](../cppcx/namespaces-reference-c-cx.md)
