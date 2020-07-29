@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201129"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -30,7 +30,7 @@ ms.locfileid: "80214488"
 
 ## <a name="remarks"></a>解説
 
-**Transmit_as** C++属性には、 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 属性と同じ機能があります。
+**Transmit_as** C++ 属性には、 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -70,15 +70,15 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**対象**|**typedef**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`typedef`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[輸出](export.md)

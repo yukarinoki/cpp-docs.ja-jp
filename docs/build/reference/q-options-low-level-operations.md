@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231495"
 ---
 # <a name="q-options-low-level-operations"></a>/Q オプション (低水準の操作)
 
@@ -20,9 +20,9 @@ ms.locfileid: "77034520"
 
 - [/Qfast_transcendentals (Force Fast 超越関数)](qfast-transcendentals-force-fast-transcendentals.md): Fast 超越関数を生成します。
 
-- [/QIfist (非表示 _ftol)](qifist-suppress-ftol.md): 浮動小数点型から整数型への変換が必要な場合に `_ftol` を抑制します (x86 のみ)。
+- [/QIfist (非表示 _ftol)](qifist-suppress-ftol.md): `_ftol` 浮動小数点型から整数型への変換が必要な場合は抑制します (x86 のみ)。
 
-- [/Qimprecise_fwaits (Try ブロック内の fwaits を削除)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): `try` ブロック内の `fwait` コマンドを削除します。
+- [/Qimprecise_fwaits (Try ブロック内の fwaits を削除)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): `fwait` ブロック内のコマンドを削除 **`try`** します。
 
 - [/QIntel-jcc-erratum](qintel-jcc-erratum.md): Intel Jump Conditional CODE (jcc) erratum マイクロコード更新によるパフォーマンスの影響を軽減します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "77034520"
 
 - [/Qvec-report (自動ベクター化 Reporting Level)](qvec-report-auto-vectorizer-reporting-level.md): 自動ベクター化のレポートレベルを有効にします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

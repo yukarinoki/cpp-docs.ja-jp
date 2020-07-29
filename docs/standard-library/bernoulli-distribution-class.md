@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230260"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution クラス
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*ウルン*\
-均一乱数発生器エンジン。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*URNG*\
+均一乱数ジェネレーターエンジン。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラスは、ベルヌーイ分布離散確率関数に従って分布する**bool**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラスは、 **`bool`** ベルヌーイ分布の離散確率関数に従って分布した、型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ベルヌイ分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[ベルヌイ分布](https://go.microsoft.com/fwlink/p/?linkid=398467)」を参照してください。
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:: bernoulli_distribution
 
 分布を作成します。
 
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*\
+*irtran-p*\
 格納されている `p` 分布パラメーター。
 
-*Parm*\
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>解説
@@ -183,17 +183,17 @@ explicit bernoulli_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::pラム_タイプ
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p aram_type
 
 分布のパラメーターを含みます。
 
-構造体param_type { typedef bernoulli_distribution distribution_type; param_type (倍 p = 0.5); ダブル p() 定数;
+構造体 param_type {typedef bernoulli_distribution distribution_type; param_type (double p = 0.5); double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>パラメーター
 
-*P*\
+*irtran-p*\
 格納されている `p` 分布パラメーター。
 
 ### <a name="remarks"></a>解説
@@ -204,4 +204,4 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

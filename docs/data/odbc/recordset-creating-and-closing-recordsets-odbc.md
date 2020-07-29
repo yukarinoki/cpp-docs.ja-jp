@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216519"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット: レコードセットの生成と破棄 (ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-`Open` を呼び出した後、オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、データ ソースで発生した変更を含めるために、クエリを再実行またはレコードセットを更新することをお勧めします。 詳細については、「[レコードセット : レコードセットの再クエリ (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)」を参照してください。
+`Open` を呼び出した後、オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、データ ソースで発生した変更を含めるために、クエリを再実行またはレコードセットを更新することをお勧めします。 詳細については、「[レコードセット: レコードセットの再クエリ (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)」を参照してください。
 
 > [!TIP]
-> 開発時に使用する接続文字列は、最終的にユーザーが必要とする接続文字列とは異なる場合があります。 この点に関するアプリケーションの一般化の方法については、「[データ ソース : 接続の管理 (ODBC)」](../../data/odbc/data-source-managing-connections-odbc.md)を参照してください。
+> 開発時に使用する接続文字列は、最終的にユーザーが必要とする接続文字列とは異なる場合があります。 この点でアプリケーションを一般化する方法については、「[データソース: 接続の管理 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)」を参照してください。
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> レコードセットのオプションを設定する
 
@@ -106,7 +106,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 1. レコードセット オブジェクトを破棄します。
 
-   関数のスタック フレームで宣言した場合は、オブジェクトがスコープから外れたときに、オブジェクトが自動的に破棄されます。 それ以外の場合は、**delete** 演算子を使用します。
+   関数のスタック フレームで宣言した場合は、オブジェクトがスコープから外れたときに、オブジェクトが自動的に破棄されます。 それ以外の場合は、演算子を使用し **`delete`** ます。
 
 `Close` によってレコードセットの `HSTMT` ハンドルが解放されます。 C++ オブジェクトは破棄されません。
 
@@ -114,4 +114,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[レコードセット: レコードの追加、更新、および削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

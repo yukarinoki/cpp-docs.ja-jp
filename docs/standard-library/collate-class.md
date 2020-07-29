@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccdf05a7a41fc7f646852e7d326832b86c41dde8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230105"
 ---
 # <a name="collate-class"></a>collate クラス
 
-文字列内の文字の順序付けとグループ化、文字列のハッシュの比較を制御するロケール ファセットとして使用できるオブジェクトを記述するクラス テンプレート。
+文字列内の文字の順序付けとグループ化、文字列内の文字の比較、および文字列のハッシュ処理を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。
 
 ## <a name="syntax"></a>構文
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype*\
+*CharType*\
 文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>解説
@@ -51,13 +51,13 @@ class collate : public locale::facet;
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[照合](#collate)|文字列の並べ替え規則を処理するためにロケールのファセットとして機能する `collate` クラスのオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[char_type](#char_type)|`CharType` 型の文字を表す型。|
 |[string_type](#string_type)|`basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。|
@@ -66,20 +66,20 @@ class collate : public locale::facet;
 
 |メンバー関数|説明|
 |-|-|
-|[比較](#compare)|等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較します。|
+|[対照](#compare)|等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較します。|
 |[do_compare](#do_compare)|等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較するために呼び出される仮想関数。|
 |[do_hash](#do_hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定するために呼び出される仮想関数。|
 |[do_transform](#do_transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換するために呼び出される仮想関数。|
-|[ハッシュ](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
+|[hash](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
 |[transform](#transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
-## <a name="collatechar_type"></a><a name="char_type"></a>照合::char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>collate:: char_type
 
 `CharType` 型の文字を表す型。
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 この型は、テンプレート パラメーター `CharType` のシノニムです。
 
-## <a name="collatecollate"></a><a name="collate"></a>照合::照合
+## <a name="collatecollate"></a><a name="collate"></a>collate:: collate
 
 文字列の並べ替え規則を処理するためにロケール ファセットとして機能する collate クラスのオブジェクトのコンストラクター。
 
@@ -116,7 +116,7 @@ const char* _Locname,
 
 ### <a name="remarks"></a>解説
 
-*_Refs*パラメータとその有意性の値は次のとおりです。
+*_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -124,9 +124,9 @@ const char* _Locname,
 
 - \>1: これらの値は定義されていません。
 
-コンストラクターは、基本オブジェクトを**locale: ファ**[セット](../standard-library/locale-class.md#facet_class)(`_Refs`) で初期化します。
+コンストラクターは、 **locale::**[facet](../standard-library/locale-class.md#facet_class)() を使用して、その基本オブジェクトを初期化し `_Refs` ます。
 
-## <a name="collatecompare"></a><a name="compare"></a>照合::比較
+## <a name="collatecompare"></a><a name="compare"></a>collate:: compare
 
 等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較します。
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初の1*\
+*first1*\
 比較する最初のシーケンスの最初の要素へのポインター。
 
-*ラスト1*\
+*last1*\
 比較する最初のシーケンスの最後の要素へのポインター。
 
-*最初の2*\
+*first2*\
 比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*ラスト2*\
+*last2*\
 比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -165,7 +165,7 @@ int compare(const CharType* first1,
 
 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
-メンバー関数は[、do_compare](#do_compare) `first1`、 `last1` `first2`, `last2`, ) を返します。
+このメンバー関数は、 [do_compare](#do_compare)(,,,) を返し `first1` `last1` `first2` `last2` ます。
 
 ### <a name="example"></a>例
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="collatedo_compare"></a><a name="do_compare"></a>照合::do_比較
+## <a name="collatedo_compare"></a><a name="do_compare"></a>collate::d o_compare
 
 等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較するために呼び出される仮想関数。
 
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初の1*\
+*first1*\
 比較する最初のシーケンスの最初の要素へのポインター。
 
-*ラスト1*\
+*last1*\
 比較する最初のシーケンスの最後の要素へのポインター。
 
-*最初の2*\
+*first2*\
 比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*ラスト2*\
+*last2*\
 比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -229,13 +229,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、 [ * first1, Last1)* のシーケンスを *[ first2, last2 ]* のシーケンスと比較します。 型の対応する要素のペア`operator<`を適用して値を比較します`CharType`。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
+プロテクト仮想メンバー関数は、[* first1, Last1) * のシーケンスを、 *[first2, last2*) のシーケンスと比較します。 `operator<`型の対応する要素のペアの間にを適用することで、値を比較し `CharType` ます。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
 ### <a name="example"></a>例
 
 [collate::compare](#compare) の例 (`do_compare` を呼び出す) を参照してください。
 
-## <a name="collatedo_hash"></a><a name="do_hash"></a>照合::do_ハッシュ
+## <a name="collatedo_hash"></a><a name="do_hash"></a>collate::d o_hash
 
 ファセット固有の規則に従ってシーケンスのハッシュ値を決定するために呼び出される仮想関数。
 
@@ -253,7 +253,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>戻り値
 
-シーケンスの **long** 型のハッシュ値。
+シーケンスの型のハッシュ値 **`long`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -263,7 +263,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 [hash](#hash) の例 (`do_hash` を呼び出す) を参照してください。
 
-## <a name="collatedo_transform"></a><a name="do_transform"></a>::do_変換
+## <a name="collatedo_transform"></a><a name="do_transform"></a>collate::d o_transform
 
 ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換するために呼び出される仮想関数。
 
@@ -285,13 +285,13 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、クラス[string_type](#string_type)のオブジェクトを返し、その被制御シーケンスが`first`シーケンス`last`のコピーである [ , ] を返します。 collate\< **CharType**> から派生したクラスで [do_compare](#do_compare) をオーバーライドする場合は、それに合わせて `do_transform` もオーバーライドする必要があります。 `collate::compare` に渡した場合、変換された 2 つの文字列の結果は、派生クラスで比較するために未変換文字列を渡した場合と同じものが生成される必要があります。
+プロテクト仮想メンバー関数は、被制御シーケンスがシーケンス [,) のコピーである[string_type](#string_type)クラスのオブジェクトを返し `first` `last` ます。 Collate から派生したクラス \< **CharType**> が[do_compare](#do_compare)をオーバーライドする場合は、 `do_transform` 一致するようにもオーバーライドする必要があります。 `collate::compare` に渡した場合、変換された 2 つの文字列の結果は、派生クラスで比較するために未変換文字列を渡した場合と同じものが生成される必要があります。
 
 ### <a name="example"></a>例
 
 [transform](#transform) の例 (`do_transform` を呼び出す) を参照してください。
 
-## <a name="collatehash"></a><a name="hash"></a>照合::ハッシュ
+## <a name="collatehash"></a><a name="hash"></a>collate:: hash
 
 ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。
 
@@ -309,11 +309,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>戻り値
 
-シーケンスの **long** 型のハッシュ値。
+シーケンスの型のハッシュ値 **`long`** 。
 
 ### <a name="remarks"></a>解説
 
-メンバ関数は[do_hash](#do_hash)( `first` `last`, ) を返します。
+このメンバー関数は、 [do_hash](#do_hash)( `first` ,) を返し `last` ます。
 
 ハッシュ値は、リストの配列で擬似ランダムにシーケンスを分散させる場合などに役立ちます。
 
@@ -345,7 +345,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="collatestring_type"></a><a name="string_type"></a>照合::string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>collate:: string_type
 
 `basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。
 
@@ -355,13 +355,13 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、ソース シーケンスのコピーを格納できるオブジェクトを持つクラス テンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
+この型は、ソースシーケンスのコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ### <a name="example"></a>例
 
 `string_type` の宣言および使用方法の例については、「[collate::transform](#transform)」を参照してください。
 
-## <a name="collatetransform"></a><a name="transform"></a>コレート::変換
+## <a name="collatetransform"></a><a name="transform"></a>collate:: transform
 
 ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。
 
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は[do_transform](#do_transform)(`first` `last`, ) を返します。
+このメンバー関数は、 [do_transform](#do_transform)( `first` ,) を返し `last` ます。
 
 ### <a name="example"></a>例
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[\<ロケール>](../standard-library/locale.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

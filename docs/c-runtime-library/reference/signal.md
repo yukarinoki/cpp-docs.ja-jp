@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625850"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216753"
 ---
 # <a name="signal"></a>signal
 
@@ -53,11 +53,11 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ## <a name="return-value"></a>戻り値
 
-**signal**は、指定されたシグナルに関連付けられている func の前の値を返します。 たとえば、 *func*の前の値が**SIG_IGN**の場合、戻り値も**SIG_IGN**になります。 **SIG_ERR**の戻り値はエラーを示します。その場合、 **errno**は**EINVAL**に設定されます。
+**signal**は、指定されたシグナルに関連付けられている func の前の値を返します。 たとえば、 *func*の前の値が**SIG_IGN**場合、戻り値も**SIG_IGN**ます。 **SIG_ERR**の戻り値はエラーを示します。その場合、 **errno**は**EINVAL**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Signal**関数を使用すると、プロセスで、オペレーティングシステムからの割り込みシグナルを処理する複数の方法のいずれかを選択できます。 *Sig*引数は、**シグナル**が応答する割り込みです。SIGNAL で定義されている次のマニフェスト定数のいずれかである必要があります。始め.
 
@@ -77,15 +77,15 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 > [!NOTE]
 > **SIGINT**は、どの Win32 アプリケーションでもサポートされていません。 Ctrl + C 割り込みが発生すると、Win32 オペレーティング システムは、その割り込みを処理する専用の新しいスレッドを生成します。 これにより、UNIX のアプリケーションなどのシングル スレッド アプリケーションがマルチスレッドになり、予期しない動作が発生する可能性があります。
 
-*Func*引数は、記述するシグナルハンドラーのアドレス、または signal でも定義されている定義済みの定数**SIG_DFL**または**SIG_IGN**のいずれかになります。始め. *Func*が関数の場合は、指定されたシグナルのシグナルハンドラーとしてインストールされます。 シグナルハンドラーのプロトタイプには、 **int**型の1つの仮引数*sig*が必要です。割り込みが発生すると、オペレーティングシステムは*sig*を使用して実際の引数を提供します。引数は、割り込みを生成したシグナルです。 したがって、シグナル ハンドラーで (前の表の) 6 つのマニフェスト定数を使用して、発生した割り込みを特定し、適切なアクションを実行できます。 たとえば、 **signal**を2回呼び出して同じハンドラーを2つの異なるシグナルに割り当て、受信したシグナルに基づいて異なるアクションを実行するためにハンドラーの*sig*引数をテストすることができます。
+*Func*引数は、記述するシグナルハンドラーのアドレス、またはシグナルでも定義されている定義済みの定数**SIG_DFL**または**SIG_IGN**のいずれかになります。始め. *Func*が関数の場合は、指定されたシグナルのシグナルハンドラーとしてインストールされます。 シグナルハンドラーのプロトタイプには、型の1つの仮引数*sig*が必要です **`int`** 。 割り込みが発生すると、オペレーティングシステムは*sig*を使用して実際の引数を提供します。引数は、割り込みを生成したシグナルです。 したがって、シグナル ハンドラーで (前の表の) 6 つのマニフェスト定数を使用して、発生した割り込みを特定し、適切なアクションを実行できます。 たとえば、 **signal**を2回呼び出して同じハンドラーを2つの異なるシグナルに割り当て、受信したシグナルに基づいて異なるアクションを実行するためにハンドラーの*sig*引数をテストすることができます。
 
-浮動小数点例外 (**SIGFPE**) をテストする場合、 *FUNC*は、FLOAT で定義されているいくつかのマニフェスト定数の1つである省略可能な2番目の引数を受け取る関数を指します。H 形式の**FPE_xxx**です。 **SIGFPE**シグナルが発生した場合、2番目の引数の値をテストして、浮動小数点例外の種類を特定し、適切なアクションを実行できます。 この引数とその有効な値は Microsoft 拡張機能です。
+浮動小数点例外 (**SIGFPE**) をテストする場合、 *FUNC*は、FLOAT で定義されているいくつかのマニフェスト定数の1つである省略可能な2番目の引数を受け取る関数を指します。H 形式の**FPE_xxx**。 **SIGFPE**シグナルが発生した場合、2番目の引数の値をテストして、浮動小数点例外の種類を特定し、適切なアクションを実行できます。 この引数とその有効な値は Microsoft 拡張機能です。
 
 浮動小数点例外の場合、シグナルの受信時に*func*の値はリセットされません。 浮動小数点例外から回復するには、try/except 句で浮動小数点演算を囲みます。 [setjmp](setjmp.md) と [longjmp](longjmp.md) を使用して回復することもできます。 いずれの場合も、呼び出し元プロセスは実行を再開し、プロセスの浮動小数点状態を未定義のままにします。
 
 シグナル ハンドラーが戻った場合、呼び出し元プロセスは、割り込みシグナルを受け取った位置の直後から実行を再開します。 この動作は、どの種類のシグナルまたは動作モードにも当てはまります。
 
-指定された関数が実行される前に、 *func*の値が**SIG_DFL**に設定されます。 **シグナル**の介在する呼び出しで特に指定されていない限り、次の割り込みシグナルは**SIG_DFL**の説明として扱われます。 この機能を使用して、呼び出された関数でシグナルをリセットできます。
+指定された関数が実行される前に、 *func*の値が**SIG_DFL**に設定されます。 **シグナル**の介在する呼び出しで特に指定されていない限り、次の割り込みシグナルは**SIG_DFL**の記述として扱われます。 この機能を使用して、呼び出された関数でシグナルをリセットできます。
 
 シグナル ハンドラー ルーチンは、通常、割り込みの発生時に非同期的に呼び出されるので、実行時の操作が未完了で、不明な状態の場合は、シグナル ハンドラー関数が制御を取得することがあります。 次の一覧に、シグナル ハンドラー ルーチンで使用できる関数が決まる制限事項について説明します。
 
@@ -93,9 +93,9 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 - ヒープルーチンや、ヒープルーチンを使用するルーチン ( **malloc**、 **_strdup**、 **_putenv**など) を呼び出さないでください。 詳細については、「[malloc](malloc.md)」を参照してください。
 
-- システムコールを生成する関数 ( **_getcwd**や**time**など) は使用しないでください。
+- システムコールを生成する関数 ( **_getcwd**や**時刻**など) は使用しないでください。
 
-- 割り込みが浮動小数点例外 (つまり、 *sig*は**SIGFPE**) に起因する場合を除き、 **longjmp**は使用しないでください。 この場合は、最初に **_fpreset**の呼び出しを使用して、浮動小数点パッケージを再初期化します。
+- 割り込みが浮動小数点例外 (つまり、 *sig*は**SIGFPE**) に起因する場合を除き、 **longjmp**は使用しないでください。 この場合は、まず **_fpreset**の呼び出しを使用して、浮動小数点パッケージを再初期化します。
 
 - オーバーレイ ルーチンを使用しない。
 
@@ -105,11 +105,11 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 volatile double d = 0.0f;
 ```
 
-Windows では、 **Sigill**信号とシグナルは生成されません。 これは、ANSI との互換性を維持するために用意されています。 そのため、 **signal**を使用してこれらのシグナルのシグナルハンドラーを設定できます。また、 [raise](raise.md)を呼び出すことによって、これらのシグナルを明示的に生成することもできます。
+Windows では、 **Sigill**信号と**SIGTERM**シグナルは生成されません。 これは、ANSI との互換性を維持するために用意されています。 そのため、 **signal**を使用してこれらのシグナルのシグナルハンドラーを設定できます。また、 [raise](raise.md)を呼び出すことによって、これらのシグナルを明示的に生成することもできます。
 
-[_Exec](../../c-runtime-library/exec-wexec-functions.md)関数または[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数の呼び出しによって作成されたプロセスでは、シグナル設定が保持されません。 シグナル設定は、新しいプロセスでは既定値にリセットされます。
+シグナル設定は、 [_exec](../../c-runtime-library/exec-wexec-functions.md)または[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数の呼び出しによって作成された、生成されたプロセスでは保持されません。 シグナル設定は、新しいプロセスでは既定値にリセットされます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -162,9 +162,9 @@ R6010
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[を呼び出してプログラム実行を終了する際、](abort.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

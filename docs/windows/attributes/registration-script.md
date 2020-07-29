@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217221"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -25,12 +25,12 @@ ms.locfileid: "80214579"
 
 ### <a name="parameters"></a>パラメーター
 
-*小*<br/>
-カスタム登録スクリプト (.rgs) ファイルへの完全パス。 値が**none**(`script = "none"`など) の場合、コクラスに登録要件がないことを示します。
+*script*<br/>
+カスタム登録スクリプト (.rgs) ファイルへの完全パス。 値が**none**(など) の `script = "none"` 場合、コクラスに登録要件がないことを示します。
 
 ## <a name="remarks"></a>解説
 
-**Registration_script** C++属性は、*スクリプト*によって指定されたカスタム登録スクリプトを実行します。 この属性が指定されていない場合は、標準の .rgs ファイル (コンポーネントを登録するための情報を含む) が使用されます。 .Rgs ファイルの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
+**Registration_script** C++ 属性は、*スクリプト*によって指定されたカスタム登録スクリプトを実行します。 この属性が指定されていない場合は、標準の .rgs ファイル (コンポーネントを登録するための情報を含む) が使用されます。 .Rgs ファイルの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 
@@ -63,14 +63,14 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|、、またはが1つ以上あり `coclass` `progid` `vi_progid` ます。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

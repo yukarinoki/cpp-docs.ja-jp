@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 6f41b56995e1a5a7d7f4267cb1def5370f953d5c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7438c90eec8b1f88a4c1608953ce21772254f02c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230533"
 ---
 # <a name="compiler-intrinsics"></a>コンパイラの組み込み
 
@@ -24,13 +24,13 @@ ms.locfileid: "80171672"
 
 組み込みの使用はコードの移植性に影響します。これは、Visual C++ で使用できる組み込み関数が、コードが他のコンパイラでコンパイルされた場合には利用できない場合があったり、また、あるターゲット アーキテクチャで使用できる組み込みが、すべてのアーキテクチャで使用できるとは限らないためです。 ただし、組み込みは通常、インライン アセンブリよりも移植性があります。 組み込みはインライン アセンブリがサポートされていない 64 ビット アーキテクチャに必要です。
 
-`__assume` や `__ReadWriteBarrier` などの組み込みは、オプティマイザーの動作に影響を与える情報をコンパイラを提供します。
+やなどの一部の組み込みは、 **`__assume`** `__ReadWriteBarrier` オプティマイザーの動作に影響を与える情報をコンパイラに提供します。
 
-組み込み関数としてのみ使用できる組み込みもあり、また関数および組み込み実装の両方で使用できる組み込みもあります。 特定の関数のみを有効化するか、またはすべての組み込みを有効化するかによって、2 つのうちの 1 つの方法で組み込みの実装を使用するようにコンパイラに指示を与えることができます。 最初の方法は *、`#pragma intrinsic(``)`* を使用することです。 プラグマを使用して、コンマで区切った 1 つの組み込みまたは複数の組み込みを指定することができます。 2つ目の方法では、 [/Oi (組み込み関数の生成)](../build/reference/oi-generate-intrinsic-functions.md)コンパイラオプションを使用します。これにより、特定のプラットフォーム上のすべての組み込みを使用できるようになります。 **/Oi**を使用して、組み込み*関数*の代わりに関数呼び出しを強制的に使用するには `#pragma function(``)` を使用します。 ルーチンが組み込みとしてのみ使用可能であることを示す特定の組み込みメモのドキュメントでは、 **/Oi**または `#pragma intrinsic` が指定されているかどうかに関係なく、組み込み実装が使用されます。 どのような場合でも、 **/Oi**または `#pragma intrinsic` では、オプティマイザーが組み込みのを使用することはできますが、強制されません。 オプティマイザーは、関数を呼び出すことも可能です。
+組み込み関数としてのみ使用できる組み込みもあり、また関数および組み込み実装の両方で使用できる組み込みもあります。 特定の関数のみを有効化するか、またはすべての組み込みを有効化するかによって、2 つのうちの 1 つの方法で組み込みの実装を使用するようにコンパイラに指示を与えることができます。 最初の方法は、 `#pragma intrinsic(` *組み込み関数名リスト*を使用することです `)` 。 プラグマを使用して、コンマで区切った 1 つの組み込みまたは複数の組み込みを指定することができます。 2つ目の方法では、 [/Oi (組み込み関数の生成)](../build/reference/oi-generate-intrinsic-functions.md)コンパイラオプションを使用します。これにより、特定のプラットフォーム上のすべての組み込みを使用できるようになります。 **/Oi**の下で、組み込みのでは `#pragma function(` なく関数呼び出しを強制的に使用するには、*組み込み関数名リスト*を使用し `)` ます。 ルーチンが組み込みとしてのみ使用可能であることを示す特定の組み込みメモのドキュメントでは、 **/Oi**またはが指定されているかどうかに関係なく、組み込みの実装が使用され `#pragma intrinsic` ます。 どのような場合でも、 **/Oi**またはが `#pragma intrinsic` 許可されますが、オプティマイザーは組み込みのを使用することはできません。 オプティマイザーは、関数を呼び出すことも可能です。
 
 いくつかの標準 C/C++ ライブラリ関数は、いくつかのアーキテクチャの組み込み実装で使用できます。 CRT 関数を呼び出す場合、 **/Oi**がコマンドラインで指定されている場合、組み込み実装が使用されます。
 
-共通の組み込み関数のプロトタイプを宣言するヘッダーファイル (\<は、.h > にあります) を使用できます。 製造元固有の組み込みは、\<immintrin .h > と \<ammintrin .h > ヘッダーファイルで使用できます。 さらに、特定の Windows ヘッダーは、コンパイラの組み込みにマップする関数を宣言します。
+\<intrin.h>共通の組み込み関数のプロトタイプを宣言するヘッダーファイルを使用できます。 製造元固有の組み込みは、およびの \<immintrin.h> ヘッダーファイルで使用でき \<ammintrin.h> ます。 さらに、特定の Windows ヘッダーは、コンパイラの組み込みにマップする関数を宣言します。
 
 次のセクションでは、さまざまなアーキテクチャで使用できるすべての組み込みを示します。 特定のターゲット プロセッサでの組み込みの動作の詳細については、開発元のリファレンス ドキュメントを参照してください。
 
@@ -38,15 +38,15 @@ ms.locfileid: "80171672"
 
 - [ARM64 組み込み](../intrinsics/arm64-intrinsics.md)
 
-- [x86 組み込みリスト](../intrinsics/x86-intrinsics-list.md)
+- [x86 組み込み一覧](../intrinsics/x86-intrinsics-list.md)
 
 - [x64 (amd64) 組み込み一覧](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [すべてのアーキテクチャで使用可能な組み込み](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [すべてのアーキテクチャで使用可能な組み込みクラス](../intrinsics/intrinsics-available-on-all-architectures.md)
 
 - [組み込み関数のアルファベット順の一覧](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ARM アセンブラーリファレンス](../assembler/arm/arm-assembler-reference.md)<br/>
 [Microsoft マクロアセンブラーリファレンス](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

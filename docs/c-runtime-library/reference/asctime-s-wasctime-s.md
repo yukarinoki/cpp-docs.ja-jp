@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909407"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217013"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -81,7 +81,7 @@ errno_t _wasctime_s(
 結果を格納するために使用されるバッファーのサイズ。
 
 *tmSource*<br/>
-時刻/日付の構造体。 この関数は、有効な**struct** **tm**オブジェクトへのポインターを想定しています。
+時刻/日付の構造体。 この関数は、有効な tm オブジェクトへのポインターを前提としてい **`struct`** **tm**ます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -91,10 +91,10 @@ errno_t _wasctime_s(
 
 |*格納*|*numberOfElements*|*tmSource*|戻り値|*バッファー*内の値|
 |--------------|------------------------|----------|------------|-----------------------|
-|**空白**|Any|Any|**EINVAL**|変更されない|
+|**NULL**|Any|Any|**EINVAL**|変更されない|
 |Not **NULL** (有効なメモリを指す)|0|Any|**EINVAL**|変更されない|
 |**NULL**以外|0< サイズ < 26|Any|**EINVAL**|空の文字列|
-|**NULL**以外|>= 26|**空白**|**EINVAL**|空の文字列|
+|**NULL**以外|>= 26|**NULL**|**EINVAL**|空の文字列|
 |**NULL**以外|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**EINVAL**|空の文字列|
 
 > [!NOTE]
@@ -118,7 +118,7 @@ errno_t _wasctime_s(
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)、および [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-**Asctime_s**によって生成される文字列の結果は、26文字`Wed Jan 02 02:03:55 1980\n\0`で、という形式になります。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 小さい場合は、エラーコード**EINVAL**が返されます。
+**Asctime_s**によって生成される文字列の結果は、26文字で、という形式に `Wed Jan 02 02:03:55 1980\n\0` なります。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 小さい場合は、エラーコード**EINVAL**が返されます。
 
 **_wasctime_s**は**asctime_s**のワイド文字バージョンです。 **_wasctime_s**と**asctime_s**は同じように動作します。
 
@@ -136,12 +136,12 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> または \<wchar.h>|
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 バッファーポインターが**NULL**ではなく、ポインターが有効なバッファーを指していない場合、関数はその位置にあるものをすべて上書きします。 これによりアクセス違反が発生することもあります。
 

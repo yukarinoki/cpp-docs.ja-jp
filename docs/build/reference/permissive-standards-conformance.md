@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217208"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準への準拠)
 
@@ -40,7 +40,7 @@ ms.locfileid: "84507028"
 
 Visual Studio 2017 バージョン15.3 以降のバージョンのコンパイラでは、オプションがオプションに設定されて **`/permissive-`** [**`/Zc:ternary`**](zc-ternary.md) います。 コンパイラは、2フェーズの名前参照に関する要件の多くも実装しています。 このオプションを設定すると、 **`/permissive-`** コンパイラは、関数とクラスのテンプレート定義を解析し、テンプレートで使用される依存名と非依存の名前を識別します。 このリリースでは、名前の依存関係の分析だけが実行されます。
 
-標準が実装に残る環境固有の拡張機能と言語領域は、による影響を受けません **`/permissive-`** 。 たとえば、Microsoft 固有 `__declspec` 、呼び出し規約、構造化例外処理のキーワード、コンパイラ固有のプラグマディレクティブ、または属性は、モードでコンパイラによってフラグが設定されていません **`/permissive-`** 。
+標準が実装に残る環境固有の拡張機能と言語領域は、による影響を受けません **`/permissive-`** 。 たとえば、Microsoft 固有 **`__declspec`** 、呼び出し規約、構造化例外処理のキーワード、コンパイラ固有のプラグマディレクティブ、または属性は、モードでコンパイラによってフラグが設定されていません **`/permissive-`** 。
 
 オプションは、 **`/permissive-`** 現在のコンパイラバージョンの準拠サポートを使用して、準拠していない言語構成要素を特定します。 オプションでは、コードが C++ 標準の特定のバージョンに準拠しているかどうかは判断されません。 最新のドラフト標準に対して実装されているすべてのコンパイラサポートを有効にするには、オプションを使用し [**`/std:c++latest`**](std-specify-language-standard-version.md) ます。 コンパイラのサポートを現在実装されている C++ 17 標準に限定するには、オプションを使用し [**`/std:c++17`**](std-specify-language-standard-version.md) ます。 コンパイラのサポートが C++ 14 標準に近いものになるように制限するに [**`/std:c++14`**](std-specify-language-standard-version.md) は、既定のオプションを使用します。
 

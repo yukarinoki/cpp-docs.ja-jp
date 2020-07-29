@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230273"
 ---
 # <a name="add_volatile-class"></a>add_volatile クラス
 
-指定した型から**volatile**型を作成します。
+**`volatile`** 指定された型から型を作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,9 +33,9 @@ using add_volatile_t = typename add_volatile<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-のインスタンスには、t が `add_volatile<T>` **typedef** `type` 参照、関数、 *T*または volatile で修飾された型である場合は*t* 、それ以外の場合は**volatile** *t*であるメンバー typedef があります。エイリアス `add_volatile_t` は、メンバー **typedef**にアクセスするためのショートカットです `type` 。
+のインスタンスには、t が `add_volatile<T>` **`typedef`** `type` 参照、関数*T* 、または volatile で修飾された型である場合は*t* 、それ以外の場合は t となるメンバーがあり **`volatile`** *T*ます。エイリアス `add_volatile_t` は、メンバーにアクセスするためのショートカットです **`typedef`** `type` 。
 
 ## <a name="example"></a>例
 
