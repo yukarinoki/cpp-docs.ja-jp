@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231040"
 ---
 # <a name="virtual-functions"></a>仮想関数
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 `NameOf` 関数が `Base` へのポインターまたは `Derived` へのポインターを介して呼び出されるかどうかに関係なく、`Derived` に対してこの関数が呼び出されます。 `Derived` が仮想関数であり、`NameOf` と `pBase` の両方が `pDerived` 型のオブジェクトを指すため、`Derived` に対する関数を呼び出します。
 
-仮想関数はクラス型のオブジェクトに対してのみ呼び出されるため、グローバル関数または静的関数を**virtual**として宣言することはできません。
+仮想関数はクラス型のオブジェクトに対してのみ呼び出されるため、グローバル関数または静的関数をとして宣言することはできません **`virtual`** 。
 
-**virtual**キーワードは、派生クラスでオーバーライドする関数を宣言するときに使用できますが、これは不要です。仮想関数のオーバーライドは常に virtual です。
+キーワードは、 **`virtual`** 派生クラスでオーバーライドする関数を宣言するときに使用できますが、不要です。仮想関数のオーバーライドは常に virtual です。
 
 基底クラスの仮想関数は、*純粋指定子*を使用して宣言されていない限り、定義する必要があります。 (純粋仮想関数の詳細については、「[抽象クラス](../cpp/abstract-classes-cpp.md)」を参照してください)。
 
