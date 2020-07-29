@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: 8adeffd0352d04fe844b286ea7456c66e907a0a7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 74e8cf037f8adfb6fdd9338c3cd95e2363f8de75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619259"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222616"
 ---
 # <a name="add_pointer-class"></a>add_pointer クラス
 
@@ -33,9 +33,9 @@ using add_pointer_t = typename add_pointer<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このメンバー **typedef**は `type` 、と同じ型に名前を付け `remove_reference<T>::type*` ます。 エイリアス `add_pointer_t` は、メンバー **typedef**にアクセスするためのショートカットです `type` 。
+メンバーは、 **`typedef`** `type` と同じ型に名前を付け `remove_reference<T>::type*` ます。 エイリアス `add_pointer_t` は、メンバーにアクセスするためのショートカットです **`typedef`** `type` 。
 
 参照からポインターを作成することは無効であるため、`add_pointer` は型へのポインターを作成する前に、指定された型から参照を削除します (存在する場合)。 その結果、型が参照であるかどうかを気にすることなく、型を `add_pointer` で使用できます。
 

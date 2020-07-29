@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: df592e965b436ed5a1d60702f9e57088887d5a94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222707"
 ---
 # <a name="isource-class"></a>ISource クラス
 
@@ -41,33 +41,33 @@ class ISource;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`source_type`|`T`の型のエイリアス。|
+|`source_type`|の型のエイリアス `T` 。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[~ ISource デストラクター](#dtor)|`ISource` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[受入](#accept)|派生クラスでオーバーライドされると、この `ISource` ブロックによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。|
-|[acquire_ref](#acquire_ref)|派生クラスでオーバーライドされると、この `ISource` ブロックの参照カウントを取得して、削除されないようにします。|
-|[使用](#consume)|派生クラスでオーバーライドされると、この `ISource` ブロックによって以前に提供され、ターゲットによって正常に予約されたメッセージを使用して、所有権を呼び出し元に譲渡します。|
-|[link_target](#link_target)|派生クラスでオーバーライドされると、ターゲットブロックをこの `ISource` ブロックにリンクします。|
-|[release](#release)|派生クラスでオーバーライドされると、前回成功したメッセージの予約を解放します。|
-|[release_ref](#release_ref)|派生クラスでオーバーライドされると、この `ISource` ブロックの参照カウントを解放します。|
-|[reserve](#reserve)|派生クラスでオーバーライドされると、この `ISource` ブロックによって以前に提供されたメッセージを予約します。|
-|[unlink_target](#unlink_target)|派生クラスでオーバーライドされた場合、この `ISource` ブロックからターゲットブロックをリンク解除します。|
-|[unlink_targets](#unlink_targets)|派生クラスでオーバーライドされると、この `ISource` ブロックからすべてのターゲットブロックのリンクを解除します。|
+|[受入](#accept)|派生クラスでオーバーライドされると、このブロックによって提供されたメッセージを受け取り、 `ISource` 所有権を呼び出し元に譲渡します。|
+|[acquire_ref](#acquire_ref)|派生クラスでオーバーライドされると、削除を防ぐために、このブロックの参照カウントを取得し `ISource` ます。|
+|[可能性](#consume)|派生クラスでオーバーライドされると、このブロックによって既に提供され、ターゲットによって正常に予約されたメッセージを使用して、 `ISource` 所有権を呼び出し元に譲渡します。|
+|[link_target](#link_target)|派生クラスでオーバーライドされると、ターゲットブロックをこのブロックにリンクし `ISource` ます。|
+|[解除](#release)|派生クラスでオーバーライドされると、前回成功したメッセージの予約を解放します。|
+|[release_ref](#release_ref)|派生クラスでオーバーライドされると、このブロックの参照カウントを解放し `ISource` ます。|
+|[省](#reserve)|派生クラスでオーバーライドされると、このブロックによって以前に提供されたメッセージを予約 `ISource` します。|
+|[unlink_target](#unlink_target)|派生クラスでオーバーライドされた場合、前にリンクされたターゲットブロックをこのブロックからリンク解除 `ISource` します。|
+|[unlink_targets](#unlink_targets)|派生クラスでオーバーライドされた場合、このブロックのすべてのターゲットブロックのリンクを解除し `ISource` ます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
@@ -75,15 +75,15 @@ class ISource;
 
 `ISource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept"></a>受入
+## <a name="accept"></a><a name="accept"></a>受入
 
-派生クラスでオーバーライドされると、この `ISource` ブロックによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。
+派生クラスでオーバーライドされると、このブロックによって提供されたメッセージを受け取り、 `ISource` 所有権を呼び出し元に譲渡します。
 
 ```cpp
 virtual message<T>* accept(
@@ -94,22 +94,22 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-提供された `message` オブジェクトの `runtime_object_identity`。
+提供された `runtime_object_identity` `message` オブジェクトの。
 
 *_PTarget*<br/>
-`accept` メソッドを呼び出しているターゲットブロックへのポインター。
+メソッドを呼び出しているターゲットブロックへのポインター `accept` 。
 
 ### <a name="return-value"></a>戻り値
 
 現在呼び出し元に所有権があることを示すメッセージへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`accept` メソッドは、この `ISource` ブロックによってメッセージが提供されている間、ターゲットによって呼び出されます。 返されるメッセージポインターは、このソースがメッセージのコピーを作成することにした場合、`ITarget` ブロックの `propagate` メソッドに渡されたものと異なる場合があります。
+メソッドは、 `accept` このブロックによってメッセージが提供されている間、ターゲットによって呼び出され `ISource` ます。 `propagate` `ITarget` このソースがメッセージのコピーを作成することにした場合、返されるメッセージポインターは、ブロックのメソッドに渡されたものと異なる場合があります。
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-派生クラスでオーバーライドされると、この `ISource` ブロックの参照カウントを取得して、削除されないようにします。
+派生クラスでオーバーライドされると、削除を防ぐために、このブロックの参照カウントを取得し `ISource` ます。
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -120,13 +120,13 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 *_PTarget*<br/>
 このメソッドを呼び出しているターゲットブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメソッドは、`link_target` メソッド中にこのソースにリンクされている `ITarget` オブジェクトによって呼び出されます。
+このメソッドは `ITarget` 、メソッドの実行中にこのソースにリンクされるオブジェクトによって呼び出され `link_target` ます。
 
-## <a name="consume"></a>可能性
+## <a name="consume"></a><a name="consume"></a>可能性
 
-派生クラスでオーバーライドされると、この `ISource` ブロックによって以前に提供され、ターゲットによって正常に予約されたメッセージを使用して、所有権を呼び出し元に譲渡します。
+派生クラスでオーバーライドされると、このブロックによって既に提供され、ターゲットによって正常に予約されたメッセージを使用して、 `ISource` 所有権を呼び出し元に譲渡します。
 
 ```cpp
 virtual message<T>* consume(
@@ -137,20 +137,20 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-予約された `message` オブジェクトの `runtime_object_identity`。
+予約された `runtime_object_identity` `message` オブジェクトの。
 
 *_PTarget*<br/>
-`consume` メソッドを呼び出しているターゲットブロックへのポインター。
+メソッドを呼び出しているターゲットブロックへのポインター `consume` 。
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
+`message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`consume` メソッドは `accept`に似ていますが、常に**true**を返す `reserve` を呼び出す必要があります。
+`consume`メソッドはと似ていますが、常にを呼び出した後に、 `accept` 返されたを呼び出す必要があり `reserve` **`true`** ます。
 
-## <a name="dtor"></a>~ ISource
+## <a name="isource"></a><a name="dtor"></a>~ ISource
 
 `ISource` オブジェクトを破棄します。
 
@@ -158,9 +158,9 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-派生クラスでオーバーライドされると、ターゲットブロックをこの `ISource` ブロックにリンクします。
+派生クラスでオーバーライドされると、ターゲットブロックをこのブロックにリンクし `ISource` ます。
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -169,9 +169,9 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_PTarget*<br/>
-この `ISource` ブロックにリンクされているターゲットブロックへのポインター。
+このブロックにリンクされているターゲットブロックへのポインター `ISource` 。
 
-## <a name="release"></a>解除
+## <a name="release"></a><a name="release"></a>解除
 
 派生クラスでオーバーライドされると、前回成功したメッセージの予約を解放します。
 
@@ -184,14 +184,14 @@ virtual void release(
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-予約された `message` オブジェクトの `runtime_object_identity`。
+予約された `runtime_object_identity` `message` オブジェクトの。
 
 *_PTarget*<br/>
-`release` メソッドを呼び出しているターゲットブロックへのポインター。
+メソッドを呼び出しているターゲットブロックへのポインター `release` 。
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-派生クラスでオーバーライドされると、この `ISource` ブロックの参照カウントを解放します。
+派生クラスでオーバーライドされると、このブロックの参照カウントを解放し `ISource` ます。
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -202,13 +202,13 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 *_PTarget*<br/>
 このメソッドを呼び出しているターゲットブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメソッドは、このソースからリンク解除されている `ITarget` オブジェクトによって呼び出されます。 ソースブロックは、ターゲットブロック用に予約されているすべてのリソースを解放できます。
+このメソッドは、このソースからリンク解除されているオブジェクトによって呼び出され `ITarget` ます。 ソースブロックは、ターゲットブロック用に予約されているすべてのリソースを解放できます。
 
-## <a name="reserve"></a>省
+## <a name="reserve"></a><a name="reserve"></a>省
 
-派生クラスでオーバーライドされると、この `ISource` ブロックによって以前に提供されたメッセージを予約します。
+派生クラスでオーバーライドされると、このブロックによって以前に提供されたメッセージを予約 `ISource` します。
 
 ```cpp
 virtual bool reserve(
@@ -219,22 +219,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-提供された `message` オブジェクトの `runtime_object_identity`。
+提供された `runtime_object_identity` `message` オブジェクトの。
 
 *_PTarget*<br/>
-`reserve` メソッドを呼び出しているターゲットブロックへのポインター。
+メソッドを呼び出しているターゲットブロックへのポインター `reserve` 。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが正常に予約されている場合は**true** 、それ以外の場合は**false** 。 予約は、さまざまな理由で失敗する可能性があります。これには、メッセージが既に別のターゲットによって既に予約または受け入れられている場合、ソースが予約を拒否する場合などがあります。
+**`true`** メッセージが正常に予約された場合は **`false`** 。それ以外の場合は。 予約は、さまざまな理由で失敗する可能性があります。これには、メッセージが既に別のターゲットによって既に予約または受け入れられている場合、ソースが予約を拒否する場合などがあります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`reserve`を呼び出した後に成功した場合は、メッセージの所有を取得または取得するために、`consume` または `release` をそれぞれ呼び出す必要があります。
+を呼び出した後、成功した場合は、 `reserve` `consume` メッセージを `release` 取得または取得するために、またはのいずれかを呼び出す必要があります。
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-派生クラスでオーバーライドされた場合、この `ISource` ブロックからターゲットブロックをリンク解除します。
+派生クラスでオーバーライドされた場合、前にリンクされたターゲットブロックをこのブロックからリンク解除 `ISource` します。
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -243,17 +243,17 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_PTarget*<br/>
-この `ISource` ブロックからリンク解除されているターゲットブロックへのポインター。
+このブロックからリンク解除されているターゲットブロックへのポインター `ISource` 。
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-派生クラスでオーバーライドされると、この `ISource` ブロックからすべてのターゲットブロックのリンクを解除します。
+派生クラスでオーバーライドされた場合、このブロックのすべてのターゲットブロックのリンクを解除し `ISource` ます。
 
 ```cpp
 virtual void unlink_targets() = 0;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [ITarget クラス](itarget-class.md)

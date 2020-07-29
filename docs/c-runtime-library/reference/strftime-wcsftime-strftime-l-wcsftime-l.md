@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404321"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215141"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -90,7 +90,7 @@ size_t _wcsftime_l(
 出力する文字列。
 
 *maxsize*<br/>
-文字数 (**char**または**wchar_t**) で計測される、 *strdest*バッファーのサイズ。
+*Strdest*バッファーのサイズ。文字 ( **`char`** または) で計測さ **`wchar_t`** れます。
 
 *format*<br/>
 書式指定文字列。
@@ -199,7 +199,7 @@ size_t _wcsftime_l(
 
 ## <a name="see-also"></a>関連項目
 
-[国](../../c-runtime-library/locale.md) <br/>
+[ロケール](../../c-runtime-library/locale.md) <br/>
 [時間管理](../../c-runtime-library/time-management.md) <br/>
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

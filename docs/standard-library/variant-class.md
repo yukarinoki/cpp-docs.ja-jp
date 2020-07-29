@@ -1,5 +1,5 @@
 ---
-title: バリアント クラス
+title: variant クラス
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215401"
 ---
-# <a name="variant-class"></a>バリアント クラス
+# <a name="variant-class"></a>variant クラス
 
-値が保持していないまたは特定の時点のバリアントの任意のインスタンスが、その代替の型のいずれかの値を保持します。
+任意の時点における variant のインスタンスはいずれも、その代わりの型のいずれかの値を保持するか、値を保持しません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,26 +35,26 @@ template <class... Types>
 
 |||
 |-|-|
-|[バリアント](#variant)|`variant` 型のオブジェクトを構築します。|
+|[variant](#variant)|`variant` 型のオブジェクトを構築します。|
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
-|[emplace](#emplace)|新しい含まれている値を作成します。|
-|[index](#index)|含まれている値のインデックスを返します。|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|返します**false**バリアントは値を保持している場合。|
+|[emplace](#emplace)|格納されている新しい値を作成します。|
+|[インデックス](#index)|格納されている値のインデックスを返します。|
+|[スワップ](#swap)||
+|[valueless_by_exception](#emplace)|**`false`** バリアントが値を保持している場合はを返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#op_eq)|バリアントを別のバリエーションのコピーに置き換えます。|
+|[operator =](#op_eq)|バリアントを別のバリアントのコピーで置き換えます。|
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-新しい含まれている値を作成します。
+格納されている新しい値を作成します。
 
 ```cpp
 template <class T, class... Args>
@@ -67,17 +67,17 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> インデックス
+## <a name="index"></a><a name="index"></a>化
 
-含まれている値のインデックスを返します。
+格納されている値のインデックスを返します。
 
 ```cpp
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> バリアント
+## <a name="variant"></a><a name="variant"></a>型
 
-`variant` 型のオブジェクトを構築します。 また、デストラクターが含まれます。
+`variant` 型のオブジェクトを構築します。 には、デストラクターも含まれています。
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -116,12 +116,12 @@ template <class Alloc, size_t I, class U, class... Args>
 
 ### <a name="parameters"></a>パラメーター
 
-*Al*\
+*ウムアルクラ*\
 このオブジェクトに対して使用するアロケーター クラス。
 
-## <a name="op_eq"></a> 演算子 =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-バリアントを別のバリエーションのコピーに置き換えます。
+バリアントを別のバリアントのコピーで置き換えます。
 
 ```cpp
 variant& operator=(const variant&);
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a><a name="swap"></a>フォト
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-返します**false**バリアントは値を保持している場合。
+**`false`** バリアントが値を保持している場合はを返します。
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

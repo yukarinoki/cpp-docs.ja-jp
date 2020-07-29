@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d91fe64e7d06a80402a0a540be8f63d98ea96d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424831"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222486"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; の演算子
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しくないかどうかを調べます。
 
@@ -35,15 +35,15 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-deque オブジェクトが等しくない場合は **true**、deque オブジェクトが等しい場合は **false**。
+**`true`** deque オブジェクトが等しくない場合は、**`false`** deque オブジェクトが等しい場合はです。
 
 ### <a name="remarks"></a>解説
 
@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトより小さいかどうかを調べます。
 
@@ -86,15 +86,15 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の deque が演算子の右辺の deque 未満である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の deque が演算子の右辺の deque 以下である場合は、。それ以外の場合は、それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以下かどうかを調べます。
 
@@ -141,15 +141,15 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の deque が演算子の右辺の deque 以下である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の deque が演算子の右辺の deque 以下である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しいかどうかを調べます。
 
@@ -196,15 +196,15 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の deque が演算子の右辺の deque と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の deque が演算子の右辺の deque と等しい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -244,7 +244,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトより大きいかどうかを調べます。
 
@@ -254,15 +254,15 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の deque が演算子の右辺の deque より大きい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の deque が演算子の右辺の deque より大きい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以上かどうかを調べます。
 
@@ -310,15 +310,15 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `deque` 型オブジェクト。
 
-*右*\
+*そうです*\
 `deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の deque が演算子の右辺の deque 以上である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の deque が演算子の右辺の deque より大きいか等しい場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 

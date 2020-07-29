@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215349"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -31,9 +31,9 @@ ms.locfileid: "80168305"
 
 ## <a name="remarks"></a>解説
 
-**Com_interface_entry** C++属性は、対象オブジェクトの com インターフェイスマップに文字列の unabridged の内容を挿入します。 属性が対象オブジェクトに1回適用された場合、エントリは既存のインターフェイスマップの先頭に挿入されます。 属性が同じ対象オブジェクトに繰り返し適用される場合、エントリは、受信された順にインターフェイスマップの先頭に挿入されます。
+**Com_interface_entry** C++ 属性は、対象オブジェクトの com インターフェイスマップに文字列の unabridged の内容を挿入します。 属性が対象オブジェクトに1回適用された場合、エントリは既存のインターフェイスマップの先頭に挿入されます。 属性が同じ対象オブジェクトに繰り返し適用される場合、エントリは、受信された順にインターフェイスマップの先頭に挿入されます。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、`progid` が適用されている場合、`vi_progid` と `coclass` も適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が適用されている場合、 `progid` `vi_progid` と `coclass` も適用されます。
 
 **Com_interface_entry**の最初の使用方法では、インターフェイスマップの先頭に新しいインターフェイスが挿入されるため、次のいずれかの COM_INTERFACE_ENTRY 型である必要があります。
 
@@ -47,7 +47,7 @@ ms.locfileid: "80168305"
 
 **Com_interface_entry**属性の使用法を追加すると、サポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
 
-ATL では、インターフェイスマップの最初のエントリが id `IUnknown`として使用されるため、この制限が必要です。したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコードサンプルは、インターフェイスマップの最初のエントリに実際の COM インターフェイスが指定されていないため、無効です。
+ATL では、インターフェイスマップの最初のエントリを id として使用するため、この制限が必要です `IUnknown` 。したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコードサンプルは、インターフェイスマップの最初のエントリに実際の COM インターフェイスが指定されていないため、無効です。
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ ATL では、インターフェイスマップの最初のエントリが id `IU
 
 ## <a name="example"></a>例
 
-次のコードでは、`CMyBaseClass`の既存の COM インターフェイスマップに2つのエントリを追加します。 1つ目は標準のインターフェイスであり、2番目のインターフェイスは `IDebugTest` インターフェイスを非表示にします。
+次のコードでは、の既存の COM インターフェイスマップに2つのエントリを追加し `CMyBaseClass` ます。 1つ目は標準のインターフェイスで、2番目のインターフェイスはインターフェイスを非表示にし `IDebugTest` ます。
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-結果として `CMyBaseClass` の COM オブジェクトマップは次のようになります。
+結果の COM オブジェクトマップは次のように `CMyBaseClass` なります。
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,15 +109,15 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|はい|
-|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|はい|
+|**必須属性**|、、またはが1つ以上あり `coclass` `progid` `vi_progid` ます。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)
