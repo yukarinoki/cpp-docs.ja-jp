@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177626"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231144"
 ---
 # <a name="primary-expressions"></a>原始式
 
@@ -28,9 +28,9 @@ name
 
 *リテラル*は定数のプライマリ式です。 その型は、リテラルの指定の形式によって決まります。 リテラルの指定の詳細については、「[リテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)」を参照してください。
 
-**This**キーワードは、クラスオブジェクトへのポインターです。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 **この**キーワードは、クラスメンバー関数の本体の外側では使用できません。
+**`this`** キーワードは、クラスオブジェクトへのポインターです。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 キーワードは、 **`this`** クラスメンバー関数の本体の外側では使用できません。
 
-**このポインター**の型は、**この**ポインターを特に変更していない関数内で、const (`type` はクラス名) **\*** `type` ます。 次の例では、メンバー関数の宣言と、**この**の型を示します。
+ポインターの型 **`this`** は、ポインターを `type` ** \* ** `type` 明示的に変更しない関数内の const (はクラス名) です **`this`** 。 次の例では、メンバー関数の宣言との型を示し **`this`** ます。
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-**この**ポインターの型を変更する方法の詳細については、[このポインター](this-pointer.md)を参照してください。
+ポインターの型を変更する方法の詳細については、[このポインター](this-pointer.md)を参照してください **`this`** 。
 
 名前の前のスコープ解決演算子 (`::`) は基本式です。  そのような名前は、メンバー名ではなく、グローバル スコープでの名前であることが必要です。  この式の型は名前の宣言によって決まります。 宣言名が左辺値である場合は、左辺値 (代入演算子式の左辺になる式) です。 スコープ解決演算子を使用すると、グローバル名が現在のスコープでは隠されていても、その名前を参照できます。 スコープ解決演算子の使用方法の例については、「[スコープ](../cpp/scope-visual-cpp.md)」を参照してください。
 
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[式の型](../cpp/types-of-expressions.md)
+[式の種類](../cpp/types-of-expressions.md)
