@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459052"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230208"
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; 構造体
+# <a name="char_traitsltchar32_tgt-struct"></a>char_traits&lt;char32_t&gt; 構造体
 
-テンプレート構造体 **char_traits\<CharType>** を `char32_t` 型の要素に特殊化した構造体。
+テンプレート構造体**char_traits \<CharType> **型の要素に特殊化した構造体 **`char32_t`** 。
 
 ## <a name="syntax"></a>構文
 
@@ -25,13 +25,13 @@ template <>
 struct char_traits<char32_t>;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-特殊化により、構造体でこの型 `char32_t` のオブジェクトを操作するライブラリ関数を利用できます。
+特殊化により、構造体は、この型のオブジェクトを操作するライブラリ関数を利用でき **`char32_t`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<string>
+**ヘッダー:**\<string>
 
 **名前空間:** std
 
