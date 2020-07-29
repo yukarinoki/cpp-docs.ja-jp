@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180864"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229052"
 ---
 # <a name="cleaning-up-resources"></a>リソースの後処理
 
@@ -26,7 +26,7 @@ ms.locfileid: "80180864"
 
 1. **__Try**ステートメントブロックで、リソースを割り当てます。 各ハンドルは、リソースが割り当てられると、正の値に設定されます。
 
-1. **__Finally**ステートメントブロックで、対応する handle 変数または flag 変数が0以外であるか、NULL ではない各リソースを解放します。
+1. **`__finally`** ステートメントブロックで、対応する handle 変数または flag 変数が0以外であるか、NULL ではない各リソースを解放します。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
 [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

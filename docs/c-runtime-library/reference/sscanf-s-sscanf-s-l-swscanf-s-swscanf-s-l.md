@@ -44,12 +44,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229351"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
@@ -84,11 +84,11 @@ int _swscanf_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 格納されるデータ。
 
 *format*<br/>
-書式指定文字列。 詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
+書式指定文字列。 詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 *argument*<br/>
 省略可能な引数。
@@ -102,9 +102,9 @@ int _swscanf_s_l(
 
 *Buffer*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Sscanf_s**関数は、各*引数*によって指定された場所に*バッファー*からデータを読み取ります。 書式指定文字列の後の引数は、*形式*の型指定子に対応する型を持つ変数へのポインターを指定します。 安全性の低いバージョン[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)とは異なり、 **[]** で囲まれている型フィールド文字**c**、 **c**、 **s**、 **s**、または文字列コントロールセットを使用する場合は、バッファーサイズのパラメーターが必要です。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。 たとえば、文字列を読み込む場合、その文字列のバッファー サイズは次のように渡されます。
 
@@ -132,19 +132,19 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターは、 **size_t**ではなく**unsigned**型です。 64ビットターゲットのコンパイル時には、静的なキャストを使用して、または**sizeof** **の**結果を正しいサイズに変換します。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。 64ビットターゲットをコンパイルする場合は、静的なキャストを使用して **_countof**または **`sizeof`** 結果を正しいサイズに変換します。
 
 *Format*引数は、入力フィールドの解釈を制御し、 **scanf_s**関数の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**swscanf_s**は、 **sscanf_s**のワイド文字バージョンです。**swscanf_s**の引数はワイド文字列です。 **sscanf_s**では、マルチバイトの16進文字は処理されません。 **swscanf_s**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **swscanf_s**と**sscanf_s**は同じように動作します。
+**swscanf_s**は**sscanf_s**のワイド文字バージョンです。**swscanf_s**する引数はワイド文字列です。 **sscanf_s**では、マルチバイトの16進文字は処理されません。 **swscanf_s**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **swscanf_s**と**sscanf_s**は同じように動作します。
 
-**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**stscanf_s (_d)**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
+|**_stscanf_s**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
 |**_stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
 
 ## <a name="requirements"></a>必要条件
@@ -154,7 +154,7 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 |**sscanf_s**、 **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**、 **_swscanf_s_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -201,5 +201,5 @@ Real:     = 15.000000
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

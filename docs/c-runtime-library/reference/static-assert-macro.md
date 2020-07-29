@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229325"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT マクロ
 
@@ -45,13 +45,13 @@ _STATIC_ASSERT(
 *booleanExpression*<br/>
 0以外 (**TRUE**) または 0 (**FALSE**) に評価される式 (ポインターを含む)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このマクロは[_ASSERT マクロと _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)に似ていますが、 *booleanExpression*は実行時ではなくコンパイル時に評価される点が異なります。 *BooleanExpression*が**FALSE** (0) に評価される場合、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
+このマクロは[_ASSERT と _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)に似ていますが、 *booleanExpression*は実行時ではなくコンパイル時に評価される点が異なります。 *BooleanExpression*が**FALSE** (0) に評価される場合、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
 
 ## <a name="example"></a>例
 
-この例では、 [sizeof](../../c-language/sizeof-operator-c.md) a **int**が2バイト以上であるかどうか、および[sizeof](../../c-language/sizeof-operator-c.md) a **long**が1バイトかどうかを確認します。 プログラムはコンパイルされず、 **long**が1バイトを超えるため、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
+この例では、 [sizeof](../../c-language/sizeof-operator-c.md) **`int`** a が2バイト以上であり、 [sizeof](../../c-language/sizeof-operator-c.md) a が1バイトであるかどうかを確認し **`long`** ます。 が1バイトを超えるため、プログラムはコンパイルされず、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成され **`long`** ます。
 
 ```C
 // crt__static_assert.c
@@ -79,5 +79,5 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
-[_ASSERT、_ASSERTE、_ASSERT_EXPR Macros](assert-asserte-assert-expr-macros.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT、_ASSERTE、_ASSERT_EXPR マクロ](assert-asserte-assert-expr-macros.md)<br/>

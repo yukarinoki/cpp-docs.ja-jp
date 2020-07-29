@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506885"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229364"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -75,7 +75,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**sqrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、または型を受け取る**sqrt**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **sqrt**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -89,7 +89,7 @@ C++ ではオーバーロードが可能であるため、 **float**型または
 |- ∞|なし|_DOMAIN|
 |x<0|なし|_DOMAIN|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
