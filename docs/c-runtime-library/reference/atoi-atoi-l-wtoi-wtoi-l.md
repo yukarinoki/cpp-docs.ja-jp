@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232574"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -89,7 +89,7 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**int**値を返します。 入力をその型の値に変換できない場合、 **atoi**と **_wtoi**の戻り値は0になります。
+各関数は、 **`int`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、 **atoi**と **_wtoi**の戻り値は0になります。
 
 大きな負の整数値によるオーバーフローの場合、 **LONG_MIN**が返されます。 **atoi**と **_wtoi**は、これらの条件に対して**INT_MAX**と**INT_MIN**を返します。 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
@@ -172,8 +172,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

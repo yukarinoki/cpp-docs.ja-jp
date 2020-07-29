@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232561"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -94,7 +94,7 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される **__int64**値を返します。 入力をその型の値に変換できない場合、 **_atoi64**の戻り値は0です。
+各関数は、 **`__int64`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、 **_atoi64**の戻り値は0です。
 
 大きな正の整数値によるオーバーフローの場合、 **_atoi64**は**I64_MAX**を返し、大きな負の整数値でオーバーフローが発生した場合に**I64_MIN**します。
 
@@ -184,8 +184,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
