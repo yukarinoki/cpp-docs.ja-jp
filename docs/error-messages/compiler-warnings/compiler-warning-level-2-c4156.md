@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: b9add4af0fddf8d68bbba0293530f2bb0ce3800d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 279ab5d9de738fb4e2aa6dece4bb16353eca031b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206485"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>コンパイラの警告 (レベル 2) C4156
 
 ' delete ' の配列形式を使用せずに配列式を削除しています。配列形式の置換
 
-配列以外の形式の**delete**では、配列を削除できません。 コンパイラが**delete**を配列形式に変換しました。
+の非配列形式は、 **`delete`** 配列を削除できません。 コンパイラが配列形式に変換されました **`delete`** 。
 
 この警告は、Microsoft 拡張機能 (/Ze) でのみ発生します。
 

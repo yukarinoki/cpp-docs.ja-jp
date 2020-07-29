@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218685"
 ---
 # <a name="floating-point-primitives"></a>浮動小数点プリミティブ
 
@@ -289,7 +289,7 @@ short __cdecl _fd_int(float* px, short exp);
 *ピクセル*<br/>
 浮動小数点引数へのポインター。
 
-*期限*<br/>
+*exp*<br/>
 整数型の指数。
 
 ### <a name="remarks"></a>解説
@@ -311,7 +311,7 @@ short __cdecl _fdscale(float* px, long exp);
 *ピクセル*<br/>
 浮動小数点引数へのポインター。
 
-*期限*<br/>
+*exp*<br/>
 整数型の指数。
 
 ### <a name="remarks"></a>解説
@@ -352,13 +352,13 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="parameters"></a>パラメーター
 
-*前年*<br/>
+*y*<br/>
 浮動小数点関数の引数。
 
 *ピクセル*<br/>
 浮動小数点引数へのポインター。
 
-*期限*<br/>
+*exp*<br/>
 整数型の指数。
 
 ### <a name="remarks"></a>解説
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>パラメーター
 
 *ps*<br/>
-**Unsigned** **short**の配列として表現された浮動小数点値のビットごとの表現へのポインター。
+の配列として表現された浮動小数点値のビットごとの表現へのポインター **`unsigned short`** 。
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、アンダーフロー浮動小数点値の小数部を正規化し、一致するように*特性*(バイアスを持つ指数) を調整します。 値`_double_val`は、 `_ldouble_val`punning で宣言された、、または`_float_val`型の union を通じて**unsigned** **short**の配列に変換された浮動小数点型のビットごとの表現として渡されます。 戻り値は、入力された浮動小数点値が NaN または無限大の場合はその値を、それ以外の場合は出力値に対して、 **fpclassify**の結果になります。
+これらの浮動小数点プリミティブは、アンダーフロー浮動小数点値の小数部を正規化し、一致するように*特性*(バイアスを持つ指数) を調整します。 この値は **`unsigned short`** `_double_val` 、punning で宣言された、 `_ldouble_val` 、または `_float_val` 型の配列に変換された浮動小数点型のビットごとの表現として渡されます。 戻り値は、入力された浮動小数点値が NaN または無限大の場合はその値を、それ以外の場合は出力値に対して、 **fpclassify**の結果になります。
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly、_ldpoly、_fdpoly
 
@@ -406,7 +406,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、係数が*テーブル*内の対応する定数値によって表される、順序*n*の多項式の*x*の評価を返します。 たとえば、*テーブル*\[0] = 3.0、*テーブル*\[1] = 4.0、*テーブル*\[2] = 5.0、および*n* = 2 の場合、これは多項式 5.0 x<sup>2</sup> + 4.0 x + 3.0 を表します。 この多項式が2.0 の*x*に対して評価された場合、結果は31.0 になります。 これらの関数は、内部的には使用されません。
+これらの浮動小数点プリミティブは、係数が*テーブル*内の対応する定数値によって表される、順序*n*の多項式の*x*の評価を返します。 たとえば、*テーブル* \[ 0] = 3.0、*テーブル* \[ 1] = 4.0、*テーブル* \[ 2] = 5.0、および*n* = 2 の場合、これは多項式 5.0 x<sup>2</sup> + 4.0 x + 3.0 を表します。 この多項式が2.0 の*x*に対して評価された場合、結果は31.0 になります。 これらの関数は、内部的には使用されません。
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog、_dlog、_dlog
 
@@ -446,7 +446,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 浮動小数点関数の引数。
 
 *クアドラント*<br/>
-、 `sin` `cos`、 `-sin`、および`-cos`の結果を生成するために使用する、0、1、2、または3のクアドラントのオフセット。
+`sin`、、 `cos` `-sin` 、およびの結果を生成するために使用する、0、1、2、または3のクアドラントのオフセット `-cos` 。
 
 ### <a name="remarks"></a>解説
 
@@ -454,13 +454,13 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ## <a name="requirements"></a>必要条件
 
-ヘッダー: \<math. h>
+ヘッダー: \<math.h>
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../floating-point-support.md)<br/>
+[浮動小数点サポート](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

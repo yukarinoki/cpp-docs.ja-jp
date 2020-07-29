@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 01ae4286e996db9819cb697360f6de9c344edd21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3fed25b975eefe33f9eb7014ca91a52ba419c936
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211568"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
-Windows ランタイム`IVectorView`インターフェイスから派生したオブジェクトの標準テンプレート ライブラリ反復器を提供します。
+Windows ランタイムインターフェイスから派生したオブジェクトの標準テンプレートライブラリ反復子を提供 `IVectorView` します。
 
 `ViewVectorIterator` は、 `VectorProxy<T>`型の要素を格納するプロキシ反復子です。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
@@ -48,27 +48,27 @@ VectorViewIterator テンプレート クラスの型名。
 
 |名前|説明|
 |----------|-----------------|
-|[ベクトルビュー・イットエレーター::ベクトルビュー・イットエレーター](#ctor)|VectorViewIterator クラスの新しいインスタンスを初期化します。|
+|[VectorViewIterator:: VectorViewIterator](#ctor)|VectorViewIterator クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[ベクトルビュー反復器::演算子 - 演算子](#operator-minus)|現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。|
-|[ベクトルビュー反復器::演算子 -- 演算子](#operator-decrement)|現在の VectorViewIterator をデクリメントします。|
-|[ベクトルビュー反復器::演算子!= 演算子](#operator-inequality)|現在の VectorViewIterator が、指定された VectorViewIterator と等しくないかどうかを示します。|
-|[ベクトルビュー反復器::演算子* 演算子](#operator-dereference)|現在の VectorViewIterator により指定された要素への参照を取得します。|
-|[ベクトルビュー反復器::演算子\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|
-|[ベクトルビュー・イットエレーター::オペレーター+ 演算子](#operator-plus)|指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。|
-|[ベクトルビュー反復器::演算子++ 演算子](#operator-increment)|現在の VectorViewIterator をインクリメントします。|
-|[ベクトルビュー・イットエレーター::オペレーター+= 演算子](#operator-plus-equals)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
-|[ベクトルビュー・ティテレーター::演算子<演算子](#operator-less-than)|現在の VectorViewIterator が、指定された VectorViewIterator より小さいかどうかを示します。|
-|[ベクトルビュー反復器::演算子\<= 演算子](#operator-less-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以下であるかどうかを示します。|
-|[ベクトルビュー反復器::演算子- = 演算子](#operator-minus-assign)|現在の VectorViewIterator を、指定されたディスプレイスメントだけデクリメントします。|
-|[ベクトルビュー反復器::演算子==演算子](#operator-equality)|現在の VectorViewIterator が、指定された VectorViewIterator と等しいかどうかを示します。|
+|[VectorViewIterator:: operator-演算子](#operator-minus)|現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。|
+|[VectorViewIterator:: operator--演算子](#operator-decrement)|現在の VectorViewIterator をデクリメントします。|
+|[VectorViewIterator:: operator! = 演算子](#operator-inequality)|現在の VectorViewIterator が、指定された VectorViewIterator と等しくないかどうかを示します。|
+|[VectorViewIterator:: operator * 演算子](#operator-dereference)|現在の VectorViewIterator により指定された要素への参照を取得します。|
+|[VectorViewIterator:: operator\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|
+|[VectorViewIterator:: operator + 演算子](#operator-plus)|指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。|
+|[VectorViewIterator:: operator + + 演算子](#operator-increment)|現在の VectorViewIterator をインクリメントします。|
+|[VectorViewIterator:: operator + = 演算子](#operator-plus-equals)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
+|[VectorViewIterator:: operator< 演算子](#operator-less-than)|現在の VectorViewIterator が、指定された VectorViewIterator より小さいかどうかを示します。|
+|[VectorViewIterator:: operator \< = 演算子](#operator-less-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以下であるかどうかを示します。|
+|[VectorViewIterator:: operator-= 演算子](#operator-minus-assign)|現在の VectorViewIterator を、指定されたディスプレイスメントだけデクリメントします。|
+|[VectorViewIterator:: operator = = 演算子](#operator-equality)|現在の VectorViewIterator が、指定された VectorViewIterator と等しいかどうかを示します。|
 |[VectorViewIterator::operator> 演算子](#operator-greater-than)|現在の VectorViewIterator が、指定された VectorViewIterator より大きいかどうかを示します。|
-|[ベクトルビュー反復器::演算子>演算子](#operator-arrow)|現在の VectorViewIterator により参照される要素のアドレスを取得します。|
-|[ベクトルビュー・>:演算子 = 演算子](#operator-greater-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以上であるかどうかを示します。|
+|[VectorViewIterator:: operator-> 演算子](#operator-arrow)|現在の VectorViewIterator により参照される要素のアドレスを取得します。|
+|[VectorViewIterator:: operator>= 演算子](#operator-greater-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以上であるかどうかを示します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,7 +80,7 @@ VectorViewIterator テンプレート クラスの型名。
 
 **名前空間:** Platform::Collections
 
-## <a name="vectorviewiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>ベクトルビュー反復器::演算子 -&gt;演算子
+## <a name="vectorviewiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>VectorViewIterator:: operator- &gt; 演算子
 
 現在の VectorViewIterator により参照される要素のアドレスを取得します。
 
@@ -96,7 +96,7 @@ Detail::ArrowProxy<T> operator->() const;
 
 戻り値の型は、この演算子の実装に必要な、指定されていない内部型です。
 
-## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a>ベクトルビュー反復器::演算子 -- 演算子
+## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a>VectorViewIterator:: operator--演算子
 
 現在の VectorViewIterator をデクリメントします。
 
@@ -115,9 +115,9 @@ VectorViewIterator operator--(int);
 
 最初の VectorViewIterator 構文は、現在の VectorViewIterator の前置デクリメントを実行します。
 
-2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置デクリメント演算を示します。
+2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、デクリメント後の演算を示します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-dereference"></a>ベクトルビュー反復器::演算子\*
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-dereference"></a>VectorViewIterator:: operator \* 演算子
 
 現在の VectorViewIterator により指定された要素への参照を取得します。
 
@@ -131,7 +131,7 @@ reference operator*() const;
 
 現在の VectorViewIterator により指定された要素。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a>ベクトルビュー反復器::演算子==演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a>VectorViewIterator:: operator = = 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator と等しいかどうかを示します。
 
@@ -143,14 +143,14 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
 
-現在`VectorViewIterator`が*他*の値と等しい場合は**true。** それ以外の場合**は false。**
+**`true`** 現在の `VectorViewIterator` が*他の*と等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>ベクトルビュー反復器::演算子&gt;
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>VectorViewIterator:: operator &gt; 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator より大きいかどうかを示します。
 
@@ -163,16 +163,16 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
 
-現在のベクタービューイテレータが*他*の値よりも大きい場合は**true。** それ以外の場合**は false。**
+**`true`** 現在の VectorViewIterator が*other*より大きい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>ベクトルビュー反復器::演算子&gt;= 演算子
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorViewIterator:: operator &gt; = 演算子
 
-現在`VectorViewIterator`の値が指定した`VectorViewIterator`.
+現在の `VectorViewIterator` が、指定したと等しいかそれより大きいかどうかを示し `VectorViewIterator` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -183,14 +183,14 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**現在**`VectorViewIterator`が*他*の値以上の場合は true。それ以外の場合**は false。**
+**`true`** 現在の `VectorViewIterator` が*他の*より大きいか等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a>ベクトルビュー反復器::演算子++ 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a>VectorViewIterator:: operator + + 演算子
 
 現在の VectorViewIterator をインクリメントします。
 
@@ -210,9 +210,9 @@ VectorViewIterator operator++(int);
 
 最初の VectorViewIterator 構文は、現在の VectorViewIterator の前置インクリメントを実行します。
 
-2 番目の構文は、現在の VectorViewIterator の後置インクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置インクリメント演算を示します。
+2 番目の構文は、現在の VectorViewIterator の後置インクリメントを実行します。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、後置インクリメント演算を示します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a>ベクトルビュー反復器::演算子!= 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a>VectorViewIterator:: operator! = 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator と等しくないかどうかを示します。
 
@@ -224,14 +224,14 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
 
-現在`VectorViewIterator`が*他*の値と等しくない場合は**true。** それ以外の場合**は false。**
+**`true`** 現在の `VectorViewIterator` が*他の*と等しくない場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than"></a>ベクトルビュー反復器::演算子&lt;
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than"></a>VectorViewIterator:: operator &lt; 演算子
 
 現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。
 
@@ -243,16 +243,16 @@ bool operator<(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の `VectorIterator`。
 
 ### <a name="return-value"></a>戻り値
 
-現在`VectorIterator`が*他*の電流より小さい場合は**true。** それ以外の場合**は false。**
+**`true`** 現在の `VectorIterator` が*他の*値より小さい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>ベクトルビュー反復器::演算子&lt;= 演算子
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorViewIterator:: operator &lt; = 演算子
 
-現在`VectorIterator`の値が指定した`VectorIterator`.
+現在のが、指定したの値以下かどうかを示し `VectorIterator` `VectorIterator` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -263,14 +263,14 @@ bool operator<=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*他*<br/>
+*他の*<br/>
 別の `VectorIterator`。
 
 ### <a name="return-value"></a>戻り値
 
-**電流**`VectorIterator`が*他*の電流以下の場合は true。それ以外の場合**は false。**
+**`true`** 現在の `VectorIterator` が*他の*の値以下である場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a>ベクトルビュー反復器::演算子 - 演算子
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a>VectorViewIterator:: operator-演算子
 
 現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。
 
@@ -288,14 +288,14 @@ difference_type operator-(const VectorViewIterator& other) const;
 *n*<br/>
 要素の数。
 
-*他*<br/>
+*他の*<br/>
 別の VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
 
 最初の演算子構文は、現在の VectorViewIterator より `n` 要素少ない VectorViewIterator オブジェクトを返します。 2 番目の演算子構文は、現在の VectorViewIterator と `other` VectorViewIterator の間の要素の数を返します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a>ベクトルビュー・イットエレーター::オペレーター+= 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a>VectorViewIterator:: operator + = 演算子
 
 指定された転置数だけ現在の VectorViewIterator をインクリメントします。
 
@@ -314,7 +314,7 @@ VectorViewIterator& operator+=(difference_type n);
 
 更新された VectorViewIterator。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a>ベクトルビュー・イットエレーター::オペレーター+ 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a>VectorViewIterator:: operator + 演算子
 
 指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。
 
@@ -338,7 +338,7 @@ inline VectorViewIterator<T> operator+
 *n*<br/>
 整数のディスプレイスメント。
 
-*私*<br/>
+*i*<br/>
 2 番目の構文では、VectorViewIterator。
 
 ### <a name="return-value"></a>戻り値
@@ -347,7 +347,7 @@ inline VectorViewIterator<T> operator+
 
 2 番目の構文では、`i` パラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator。
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a>ベクトルビュー反復器::演算子- = 演算子
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a>VectorViewIterator:: operator-= 演算子
 
 指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。
 
@@ -366,7 +366,7 @@ VectorViewIterator& operator-=(difference_type n);
 
 更新された VectorIterator。
 
-## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a>ベクトルビュー反復器::演算子\[\]
+## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a>VectorViewIterator:: operator\[\]
 
 現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。
 
@@ -385,7 +385,7 @@ reference operator[](difference_type n) const;
 
 現在の VectorViewIterator から `n` 要素だけ転置された要素。
 
-## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a>ベクトルビュー反復器::ベクトルビュー反復器コンストラクタ
+## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a>VectorViewIterator:: VectorViewIterator コンストラクター
 
 VectorViewIterator クラスの新しいインスタンスを初期化します。
 
@@ -402,13 +402,13 @@ explicit VectorViewIterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*V*<br/>
-オブジェクトを表示\<>。
+*画像*<br/>
+IVectorView \<T> オブジェクトです。
 
 ### <a name="remarks"></a>解説
 
-最初の構文例は既定のコンストラクターです。 2 番目の構文の例は、IVectorView\<T> オブジェクトから VectorViewIterator を構築するために使用される明示的なコンストラクターです。
+最初の構文例は既定のコンストラクターです。 2番目の構文例は、IVectorView オブジェクトから VectorViewIterator を構築するために使用される明示的なコンストラクターです \<T> 。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム名前空間](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

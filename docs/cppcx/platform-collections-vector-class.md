@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 5a35efb3ca1590931ce1db5fd12d7c930b258286
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218404"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
-インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションを表します。 XAML[データ バインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援する[Windows::ファウンデーション:コレクション::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1)を実装します。
+インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションを表します。 XAML[データバインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援するために、 [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ template <typename T, typename E>
 *T*<br/>
 Vector オブジェクトに含まれている要素の型。
 
-*E*<br/>
-*型 T*の値と等しい値をテストするための二項述語を指定します。既定値は です`std::equal_to<T>`。
+*つまり*<br/>
+*T*型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>` です。
 
 ### <a name="remarks"></a>解説
 
 使用できる型は次のとおりです。
 
-1. 整数
+1. integers
 
-1. インターフェイス クラス^
+1. インターフェイスクラス ^
 
 1. パブリック ref クラス ^
 
@@ -61,9 +61,9 @@ Vector オブジェクトに含まれている要素の型。
 
 1. パブリック列挙型クラス
 
-**ベクター**クラスは[、Windows::Foundation::コレクション::IVector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ 具体的な実装です。
+**Vector**クラスは、 [Windows:: Foundation:: Collections:: Ivector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ の具象実装です。
 
-パブリックの戻り値またはパラメーターで**Vector**型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+パブリックの戻り値またはパラメーターで**Vector**型を使用しようとすると、コンパイラエラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -71,32 +71,32 @@ Vector オブジェクトに含まれている要素の型。
 
 |名前|説明|
 |----------|-----------------|
-|[ベクトル::ベクトル](#ctor)|ベクター クラスの新しいインスタンスを初期化します。|
+|[Vector:: Vector](#ctor)|ベクター クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[Vector::Append](#append)|指定された項目を、現在の Vector の最後の項目の後に挿入します。|
-|[ベクトル::クリア](#clear)|現在のベクター内のすべての要素を削除します。|
-|[ベクトル::最初](#first)|Vector 内の最初の要素を指定する反復子を返します。|
-|[ベクトル::ゲットアット](#getat)|指定されたインデックスで識別される現在のベクターの要素を取得します。|
-|[ベクトル::ゲットマニー](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
-|[ベクトル::ゲットビュー](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
-|[ベクトル::インデックスOf](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
-|[Vector::InsertAt](#insertat)|指定した項目を、指定したインデックスで識別される要素の現在のベクターに挿入します。|
+|[Vector:: Clear](#clear)|現在のベクター内のすべての要素を削除します。|
+|[Vector:: First](#first)|Vector 内の最初の要素を指定する反復子を返します。|
+|[Vector:: GetAt](#getat)|指定されたインデックスで識別される現在のベクターの要素を取得します。|
+|[Vector:: GetMany](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
+|[Vector:: GetView](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
+|[Vector:: IndexOf](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
+|[Vector::InsertAt](#insertat)|現在のベクター内の指定したインデックスによって識別される要素の位置に、指定した項目を挿入します。|
 |[Vector::ReplaceAll](#replaceall)|現在のベクターの要素を削除し、指定された配列の要素を挿入します。|
 |[Vector::RemoveAt](#removeat)|現在のベクターから指定されたインデックスで識別される要素を削除します。|
 |[Vector::RemoveAtEnd](#removeatend)|現在の Vector の末尾から要素を削除します。|
 |[Vector::SetAt](#setat)|現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。|
-|[ベクトル::サイズ](#size)|現在のベクター オブジェクトの要素数を返します。|
+|[Vector:: Size](#size)|現在のベクター オブジェクトの要素数を返します。|
 
-### <a name="events"></a>イベント
+### <a name="events"></a>events
 
 |||
 |-|-|
 |名前|説明|
-|イベント[ウィンドウズ::ファウンデーション:コレクション::ベクター\<変更イベントハンドラT>^ ベクトル変更](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector が変更されたときに発生します。|
+|イベント[ウィンドウ:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -108,7 +108,7 @@ Vector オブジェクトに含まれている要素の型。
 
 **名前空間:** Platform::Collections
 
-## <a name="vectorappend-method"></a><a name="append"></a>ベクトル::追加メソッド
+## <a name="vectorappend-method"></a><a name="append"></a>Vector:: Append メソッド
 
 指定された項目を、現在の Vector の最後の項目の後に挿入します。
 
@@ -120,10 +120,10 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
-Vector に挿入する項目。 *項目*のタイプは T*型名*で定義されます。
+*インデックス*<br/>
+Vector に挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorclear-method"></a><a name="clear"></a>ベクトル::クリアメソッド
+## <a name="vectorclear-method"></a><a name="clear"></a>Vector:: Clear メソッド
 
 現在のベクター内のすべての要素を削除します。
 
@@ -133,7 +133,7 @@ Vector に挿入する項目。 *項目*のタイプは T*型名*で定義され
 virtual void Clear();
 ```
 
-## <a name="vectorfirst-method"></a><a name="first"></a>ベクトル::最初の方法
+## <a name="vectorfirst-method"></a><a name="first"></a>Vector:: First メソッド
 
 Vector 内の最初の要素を指す反復子を返します。
 
@@ -149,11 +149,11 @@ Vector 内の最初の要素を指す反復子。
 
 ### <a name="remarks"></a>解説
 
-First() によって返される反復器を保持する便利な方法は **、auto**型推論キーワードで宣言された変数に戻り値を代入することです。 たとえば、「 `auto x = myVector->First();` 」のように入力します。 この反復子は、コレクションの長さを認識しています。
+First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myVector->First();` 」のように入力します。 この反復子は、コレクションの長さを認識しています。
 
-STL 関数に渡す反復子のペアが必要な場合は、フリー関数を使用[します。](../cppcx/begin-function.md) [Windows::Foundation::Collections::end](../cppcx/end-function.md)
+STL 関数に渡す反復子のペアが必要な場合は、free 関数の[windows:: foundation:: collections:: begin](../cppcx/begin-function.md)および[Windows:: Foundation:: collections:: end](../cppcx/end-function.md)を使用します。
 
-## <a name="vectorgetat-method"></a><a name="getat"></a>ベクトル::GetAtメソッド
+## <a name="vectorgetat-method"></a><a name="getat"></a>Vector:: GetAt メソッド
 
 指定されたインデックスで識別される現在のベクターの要素を取得します。
 
@@ -165,14 +165,14 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 ### <a name="return-value"></a>戻り値
 
-*インデックス*パラメーターで指定された要素。 要素の型は*T*型名で定義されます。
+*Index*パラメーターによって指定された要素。 要素の型は、 *T*型名によって定義されます。
 
-## <a name="vectorgetmany-method"></a><a name="getmany"></a>ベクトル::Get多くのメソッド
+## <a name="vectorgetmany-method"></a><a name="getmany"></a>Vector:: GetMany メソッド
 
 指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得し、呼び出し元が割り当てた配列にコピーします。
 
@@ -189,8 +189,8 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 取得する項目の 0 から始まるインデックス。
 
-*dest*<br/>
-*startIndex*で指定された要素から始まり、Vector の最後の要素で終了する、呼び出し元が割り当てた項目の配列。
+*先*<br/>
+*StartIndex*によって指定された要素から開始し、ベクターの最後の要素で終了する項目の、呼び出し元が割り当てた配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -198,9 +198,9 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>解説
 
-この関数は、直接クライアント コードで使用することを目的としたものではありません。 これは、プラットフォーム::ベクトルインタンスをstd::vectorインスタンスに効率的に変換できるようにするために[、to_vector関数](../cppcx/to-vector-function.md)で内部的に使用されます。
+この関数は、直接クライアント コードで使用することを目的としたものではありません。 Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md)で内部的に使用されます。
 
-## <a name="vectorgetview-method"></a><a name="getview"></a>ベクトル::GetViewメソッド
+## <a name="vectorgetview-method"></a><a name="getview"></a>Vector:: GetView メソッド
 
 Vector の読み取り専用ビュー、つまり IVectorView を返します。
 
@@ -214,7 +214,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 IVectorView オブジェクト。
 
-## <a name="vectorindexof-method"></a><a name="indexof"></a>ベクトル::インデックスのメソッド
+## <a name="vectorindexof-method"></a><a name="indexof"></a>Vector:: IndexOf メソッド
 
 現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。
 
@@ -229,22 +229,22 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 検索する項目。
 
-*index*<br/>
-パラメーター*値*が見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は 0。
+*インデックス*<br/>
+パラメーター*値*が見つかった場合は、項目の0から始まるインデックス。それ以外の場合は0です。
 
-項目が Vector の最初の要素であるか、または項目が見つからなかった場合 *、index*パラメーターは 0 です。 戻り値が**true**の場合、項目が見つかり、最初の要素になります。それ以外の場合、アイテムは見つかりませんでした。
+*インデックス*パラメーターは、項目がベクターの最初の要素であるか、項目が見つからなかった場合は0になります。 戻り値がの場合、項目が見つかり、それが最初の要素になります。 **`true`** それ以外の場合、項目は見つかりませんでした。
 
 ### <a name="return-value"></a>戻り値
 
-指定した項目が見つかった場合は true、指定したアイテムが見つかった場合は**true。** それ以外の場合**は false。**
+**`true`** 指定した項目が見つかった場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 IndexOf は、std::find_if を使用して項目を検索します。 このため、find_if が必要とする等価比較を有効にするために、カスタム要素の種類で == および != 演算子をオーバーロードする必要があります。
 
-## <a name="vectorinsertat-method"></a><a name="insertat"></a>ベクトル::挿入メソッド
+## <a name="vectorinsertat-method"></a><a name="insertat"></a>Vector:: InsertAt メソッド
 
-指定した項目を、指定したインデックスで識別される要素の現在のベクターに挿入します。
+現在のベクター内の指定したインデックスによって識別される要素の位置に、指定した項目を挿入します。
 
 ### <a name="syntax"></a>構文
 
@@ -254,13 +254,13 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*<br/>
-*index*で指定された要素のベクターに挿入する項目。 *項目*のタイプは T*型名*で定義されます。
+*Index*で指定された要素のベクターに挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorremoveat-method"></a><a name="removeat"></a>ベクトル::RemoveAtメソッド
+## <a name="vectorremoveat-method"></a><a name="removeat"></a>Vector:: RemoveAt メソッド
 
 現在のベクターから指定されたインデックスで識別される要素を削除します。
 
@@ -272,10 +272,10 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
-## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>ベクトル::RemoveAtEndメソッド
+## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>Vector:: RemoveAtEnd メソッド
 
 現在の Vector の末尾から要素を削除します。
 
@@ -285,7 +285,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>ベクトル::すべてのメソッドを置換
+## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>Vector:: ReplaceAll メソッド
 
 現在のベクターの要素を削除し、指定された配列の要素を挿入します。
 
@@ -297,10 +297,10 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>パラメーター
 
-*Arr*<br/>
-型が*T*型名で定義されているオブジェクトの配列。
+*→*<br/>
+*T*型名によって定義される型を持つオブジェクトの配列。
 
-## <a name="vectorsetat-method"></a><a name="setat"></a>ベクトル::セットアットメソッド
+## <a name="vectorsetat-method"></a><a name="setat"></a>Vector:: SetAt メソッド
 
 現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。
 
@@ -312,13 +312,13 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*<br/>
-指定された要素に代入する値。 *項目*のタイプは T*型名*で定義されます。
+指定された要素に代入する値。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorsize-method"></a><a name="size"></a>ベクトル::サイズ法
+## <a name="vectorsize-method"></a><a name="size"></a>Vector:: Size メソッド
 
 現在のベクター オブジェクトの要素数を返します。
 
@@ -332,7 +332,7 @@ virtual property unsigned int Size;
 
 現在の Vector 内の要素数。
 
-## <a name="vectorvector-constructor"></a><a name="ctor"></a>ベクトル::ベクトルコンストラクタ
+## <a name="vectorvector-constructor"></a><a name="ctor"></a>Vector:: Vector コンストラクター
 
 ベクター クラスの新しいインスタンスを初期化します。
 
@@ -357,17 +357,17 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>パラメーター
 
-*A*<br/>
-ベクトルの初期化に使用される[std::配列](../standard-library/array-class-stl.md)。
+*ある*<br/>
+ベクターを初期化するために使用される[std:: array](../standard-library/array-class-stl.md) 。
 
-*Arr*<br/>
-ベクトルの初期化に使用される[プラットフォーム::配列](../cppcx/platform-array-class.md)。
+*→*<br/>
+ベクターを初期化するために使用される[Platform:: Array](../cppcx/platform-array-class.md) 。
 
-*Init*<br/>
+*初期化*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの型。
 
-*イリノイ*<br/>
-ベクトルの初期化に使用される*T*型のオブジェクトの[std::initializer_list。](../standard-library/initializer-list-class.md)
+*自動車*<br/>
+ベクターの初期化に使用される*T*型のオブジェクトの[std:: initializer_list](../standard-library/initializer-list-class.md) 。
 
 *N*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの要素数。
@@ -378,20 +378,20 @@ Vector(std::initializer_list<T> il);
 *value*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
-*V*<br/>
-現在のベクトルを初期化するために使用される[std::vector](../standard-library/vector-class.md)への[Lvalues および Rvalues。](../cpp/lvalues-and-rvalues-visual-cpp.md)
+*画像*<br/>
+現在のベクターを初期化するために使用される[std:: vector](../standard-library/vector-class.md)の[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
-*Ptr*<br/>
+*ptr*<br/>
 現在のベクターを初期化するために使用される `std::vector` へのポインター。
 
 *first*<br/>
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 *最初*のタイプは*完全な転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 *最初*のの型は、*完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 *last*<br/>
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 *最後*のタイプは*完全な転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 *最後*のの種類は、*完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [コレクション (C++/CX)](collections-c-cx.md)<br/>
-[プラットフォーム名前空間](platform-namespace-c-cx.md)<br/>
+[Platform 名前空間](platform-namespace-c-cx.md)<br/>
 [C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

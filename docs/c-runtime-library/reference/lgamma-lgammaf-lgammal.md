@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218651"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -72,7 +72,7 @@ long double lgamma( long double x ); //C++ only
 
 |問題|戻り値|
 |-----------|------------|
-|*x* = NaN|(NaN)|
+|*x* = NaN|NaN|
 |*x* = ±0|+INFINITY|
 |*x*= 負の整数|+INFINITY|
 |±無限大|+INFINITY|
@@ -83,7 +83,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**lgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**lgamma**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lgamma**は常にを受け取り、を返し **`double`** ます。
 
 X が有理数の場合、この関数は (x-1) の階乗の対数を返します。
 
@@ -91,7 +91,7 @@ X が有理数の場合、この関数は (x-1) の階乗の対数を返しま�
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**lgamma**、 **lgammaf**、 **lgammal**|\<math.h>|\<cmath>|
 
@@ -99,5 +99,5 @@ X が有理数の場合、この関数は (x-1) の階乗の対数を返しま�
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [tgamma、tgammaf、tgammal](tgamma-tgammaf-tgammal.md)<br/>

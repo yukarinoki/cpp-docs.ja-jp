@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913967"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218547"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-**new** 演算子がメモリの割り当てに失敗した場合は、独自のエラー処理機構に制御を移します。
+演算子がメモリの割り当てに失敗した場合は、エラー処理機構に制御を転送し **`new`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -58,7 +58,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>解説
 
-C++ の **_set_new_handler**関数は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **新しい**エラーが発生した場合、ランタイムシステムは、引数として渡された例外処理関数を **_set_new_handler**に自動的に呼び出します。 新しい .h で定義されている **_PNH**は、型**int**を返し、型**size_t**の引数を受け取る関数へのポインターです。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
+C++ の **_set_new_handler**関数は、演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定し **`new`** ます。 が失敗した場合 **`new`** 、ランタイムシステムは、引数として渡された例外処理関数を **_set_new_handler**に自動的に呼び出します。 新しい .h で定義されている **_PNH**は、型を返し **`int`** 、 **size_t**型の引数を受け取る関数へのポインターです。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
 
 既定のハンドラーはありません。
 
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **malloc**は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします。
 
-ユーザー定義`operator new`が指定されている場合、新しいハンドラー関数は失敗時に自動的には呼び出されません。
+ユーザー定義が指定されている場合 `operator new` 、新しいハンドラー関数は失敗時に自動的には呼び出されません。
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
@@ -111,7 +111,7 @@ _set_new_mode(1);
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4150
 ms.assetid: ff1760ec-0d9f-4d45-b797-94261624becf
-ms.openlocfilehash: c4d84165c7fcda4ceab94b1380a818236f6f5ea5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3993d2b993205c98de968ca893f24f703b3b635
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218144"
 ---
 # <a name="compiler-warning-level-2-c4150"></a>コンパイラの警告 (レベル 2) C4150
 
 不完全な型 ' type ' へのポインターを削除しています。デストラクターが呼び出されません
 
-**Delete**演算子は、宣言されているが定義されていない型を削除するために呼び出されます。そのため、コンパイラはデストラクターを見つけることができません。
+**`delete`** 演算子は、宣言されているが定義されていない型を削除するために呼び出されます。そのため、コンパイラはデストラクターを見つけることができません。
 
 次の例では、C4150 が生成されます。
 

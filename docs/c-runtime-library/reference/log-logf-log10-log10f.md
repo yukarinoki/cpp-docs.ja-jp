@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507041"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218599"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -96,7 +96,7 @@ long double log10( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float 型**または**long double 型**の値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log**と**log10**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **log**と**log10**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911425"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218586"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -98,9 +98,9 @@ long double log1pl(
 
 ## <a name="remarks"></a>解説
 
-*X*が0に近い場合、 **log1p**関数`log(x + 1)`はを使用するよりも正確な場合があります。
+**log1p** `log(x + 1)` *X*が0に近い場合、log1p 関数はを使用するよりも正確な場合があります。
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**log1p**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log1p**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**log1p**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **log1p**は常にを受け取り、を返し **`double`** ます。
 
 *X*が自然数の場合、この関数は (*x* -1) の階乗の対数を返します。
 
@@ -108,7 +108,7 @@ C++ ではオーバーロードが可能であるため、 **float**型および
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
 
@@ -116,6 +116,6 @@ C++ ではオーバーロードが可能であるため、 **float**型および
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [log2、log2f、log2l](log2-log2f-log2l.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>

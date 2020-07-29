@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623850"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205536"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "84623850"
 > [!NOTE]
 > ライブラリは、 \<algorithm> ステートメントも使用し `#include <initializer_list>` ます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 C++ 標準ライブラリ アルゴリズムは、さまざまなデータ構造体を操作できるため汎用的です。 操作できるデータ構造には、`vector` や `list` などの C++ 標準ライブラリ コンテナー クラスだけではなく、特定のアルゴリズムの要件を満たす、プログラムで定義されたデータ構造や要素の配列も含まれます。 C++ 標準ライブラリ アルゴリズムは、反復子によって間接的にコンテナー要素にアクセスし、走査することによって、このレベルの一般性を実現します。
 
@@ -49,13 +49,13 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。|
-|[all_of](algorithm-functions.md#all_of)|指定された範囲内の各要素に条件が存在する場合に**true**を返します。|
-|[any_of](algorithm-functions.md#any_of)|指定された要素の範囲内に条件が1回以上存在する場合に**true**を返します。|
+|[all_of](algorithm-functions.md#all_of)|**`true`** 指定された範囲内の各要素に条件が存在する場合、を返します。|
+|[any_of](algorithm-functions.md#any_of)|**`true`** 指定された要素の範囲内に条件が1回以上存在する場合に、を返します。|
 |[binary_search](algorithm-functions.md#binary_search)|並べ替えられた範囲に、指定された値と等しい要素が存在するか、または二項述語で指定された意味で、指定された値と等価の要素が存在するかどうかをテストします。|
 |[クリップ](algorithm-functions.md#clamp)||
 |[copy](algorithm-functions.md#copy)|要素のソース シーケンス全体を繰り返し、順方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
 |[copy_backward](algorithm-functions.md#copy_backward)|要素のソース シーケンス全体を繰り返し、逆方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
-|[copy_if](algorithm-functions.md#copy_if)|指定した範囲のすべての要素をコピーします。指定された条件を**満たす場合は true**をテストします。|
+|[copy_if](algorithm-functions.md#copy_if)|指定された条件をテストする特定の範囲のすべての要素をコピーする **`true`**|
 |[copy_n](algorithm-functions.md#copy_n)|指定された数の要素をコピーします。|
 |[count](algorithm-functions.md#count)|範囲内で値が指定された値と一致する要素の数を返します。|
 |[count_if](algorithm-functions.md#count_if)|範囲内で値が指定された条件と一致する要素の数を返します。|
@@ -74,19 +74,19 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[generate_n](algorithm-functions.md#generate_n)|範囲内の指定された数の要素に関数オブジェクトによって生成される値を割り当て、最後に割り当てられた値を 1 つ超えた位置を返します。|
 |[が含まれ](algorithm-functions.md#includes)|1 つの並べ替えられた範囲に、別の並べ替えられた範囲内のすべての要素が含まれるかどうかをテストします。要素間の順序または等価の基準は二項述語によって指定できます。|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|2 つの連続する並べ替えられた範囲の要素を単一の並べ替えられた範囲として連結します。順序の基準は二項述語によって指定できます。|
-|[is_heap](algorithm-functions.md#is_heap)|指定された範囲の要素がヒープを形成する場合に**true**を返します。|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|指定された範囲が最後の要素までヒープを形成する場合に**true**を返します。|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|条件の**true**をテストする特定の範囲のすべての要素が、 **false**をテストする要素の前にある場合に**true**を返します。|
+|[is_heap](algorithm-functions.md#is_heap)|**`true`** 指定された範囲の要素がヒープを形成する場合はを返します。|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|**`true`** 指定された範囲が最後の要素までヒープを形成する場合はを返します。|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|**`true`** 条件をテストする特定の範囲のすべての要素が、テスト対象の要素の前にある場合は、を返し **`true`** **`false`** ます。|
 |[is_permutation](algorithm-functions.md#is_permutation)|特定の範囲の要素が有効な順列を形成するかどうかを決定します。|
-|[is_sorted](algorithm-functions.md#is_sorted)|指定された範囲の要素が並べ替えられた順序である場合に**true**を返します。|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|指定された範囲の要素が並べ替えられた順序である場合に**true**を返します。|
+|[is_sorted](algorithm-functions.md#is_sorted)|指定した **`true`** 範囲の要素が並べ替えられた順序である場合はを返します。|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|指定した **`true`** 範囲の要素が並べ替えられた順序である場合はを返します。|
 |[iter_swap](algorithm-functions.md#iter_swap)|指定された反復子のペアで参照される 2 個の値を交換します。|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|2 つのシーケンスを要素ごとに比較して、2 つのうちどちらが小さいかを判断します。|
 |[lower_bound](algorithm-functions.md#lower_bound)|順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値と等価以上の値を持つ最初の要素の位置を検索します。|
 |[make_heap](algorithm-functions.md#make_heap)|指定された範囲の要素を、最初の要素が最大であるヒープに変換します。並べ替えの基準は二項述語によって指定できます。|
 |[max](algorithm-functions.md#max)|2 つのオブジェクトを比較し、大きい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[max_element](algorithm-functions.md#max_element)|並べ替え基準をバイナリ述語で指定できる、指定された範囲内の最大の要素の最初の出現箇所を検索します。|
-|[マージ](algorithm-functions.md#merge)|2 つの並べ替えられたソース範囲のすべての要素を単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。|
+|[merge](algorithm-functions.md#merge)|2 つの並べ替えられたソース範囲のすべての要素を単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。|
 |[min](algorithm-functions.md#min)|2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[min_element](algorithm-functions.md#min_element)|指定された範囲内の最小の要素の最初の出現箇所を検索します。順序の基準は二項述語によって指定できます。|
 |[minmax](algorithm-functions.md#minmax)|2 つの入力パラメーターを比較し、それらを昇順のペアとして返します。|
@@ -95,12 +95,12 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[&lt;alg の &gt; 移動](algorithm-functions.md#alg_move)|指定された範囲に関連付けられている要素を移動します。|
 |[move_backward](algorithm-functions.md#move_backward)|ある反復子の要素を別の反復子に移動します。 移動は、指定した範囲の最後の要素から開始され、その範囲内の先頭の要素で終了します。|
 |[next_permutation](algorithm-functions.md#next_permutation)|範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。|
-|[none_of](algorithm-functions.md#none_of)|指定された範囲内の要素間に条件が存在しない場合に**true**を返します。|
+|[none_of](algorithm-functions.md#none_of)|**`true`** 指定された範囲内の要素間に条件が存在しない場合はを返します。|
 |[nth_element](algorithm-functions.md#nth_element)|要素の範囲を分割し、その範囲内のシーケンスの*n*番目の要素を正しく検索します。これにより、その前にあるすべての要素がそれ以下で、シーケンス内の後続のすべての要素がその値以上になります。|
 |[partial_sort](algorithm-functions.md#partial_sort)|範囲内で指定された数の、より小さい要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|ソース範囲からターゲット範囲に要素をコピーします。ソース要素は小なりまたは指定された別の二項述語によって並べ替えられます。|
 |[partition](algorithm-functions.md#partition)|範囲内の要素を 2 つの分離されたセットに分類し、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。|
-|[partition_copy](algorithm-functions.md#partition_copy)|条件が**true**である要素を1つの変換先にコピーし、条件を**false**にします。 要素は指定された範囲に含まれている必要があります。|
+|[partition_copy](algorithm-functions.md#partition_copy)|条件が **`true`** 1 つの宛先にあり、条件が別の変換先になる要素をコピーし **`false`** ます。 要素は指定された範囲に含まれている必要があります。|
 |[partition_point](algorithm-functions.md#partition_point)|特定の範囲内で条件を満たさない最初の要素を返します。 要素は、条件を満たす要素が条件を満たさない要素の前に来るように並べ替えられます。|
 |[pop_heap](algorithm-functions.md#pop_heap)|ヒープの先頭と範囲内の最後から 2 番目の位置との間で最大の要素を削除し、残りの要素から新しいヒープを形成します。|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。|
@@ -114,7 +114,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[replace_copy](algorithm-functions.md#replace_copy)|ソース範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えて結果を新しいターゲット範囲にコピーします。|
 |[replace_copy_if](algorithm-functions.md#replace_copy_if)|ソース範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えて結果を新しいターゲット範囲にコピーします。|
 |[replace_if](algorithm-functions.md#replace_if)|範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えます。|
-|[後ろ向き](algorithm-functions.md#reverse)|範囲内の要素の順序を反転させます。|
+|[reverse](algorithm-functions.md#reverse)|範囲内の要素の順序を反転させます。|
 |[reverse_copy](algorithm-functions.md#reverse_copy)|ソース範囲内の要素の順序を反転し、結果をターゲット範囲にコピーします。|
 |[回転](algorithm-functions.md#rotate)|2 つの隣接する範囲の要素を交換します。|
 |[rotate_copy](algorithm-functions.md#rotate_copy)|ソース範囲内の 2 つの隣接する範囲の要素を交換し、結果をターゲット範囲にコピーします。|

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912227"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218521"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -86,11 +86,11 @@ long double tgammal(
 |問題|戻り値|
 |-----------|------------|
 |x = ±0|±無限大|
-|x = 負の整数|(NaN)|
-|x =-無限大|(NaN)|
+|x = 負の整数|NaN|
+|x =-無限大|NaN|
 |x = +INFINITY|+INFINITY|
-|x = NaN|(NaN)|
-|ドメイン エラー|(NaN)|
+|x = NaN|NaN|
+|ドメイン エラー|NaN|
 |極エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
@@ -99,7 +99,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**tgamma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tgamma**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**tgamma**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **tgamma**は常にを受け取り、を返し **`double`** ます。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 
@@ -107,7 +107,7 @@ x が自然数の場合、この関数は (x-1) の階乗を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
 
@@ -115,5 +115,5 @@ x が自然数の場合、この関数は (x-1) の階乗を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [lgamma、lgammaf、lgammal](lgamma-lgammaf-lgammal.md)<br/>

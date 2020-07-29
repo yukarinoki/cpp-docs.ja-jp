@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206043"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>コンパイラの警告 (レベル 2) C4396
 
@@ -21,11 +21,11 @@ ms.locfileid: "80161816"
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- フレンド関数の宣言から `inline`、 `__inline`、 `__forceinline` の指定子を削除します。
+- **`inline`** **`__inline`** フレンド関数の宣言から、、、またはの指定子を削除し **`__forceinline`** ます。
 
 ## <a name="example"></a>例
 
-次のコード例では、 `inline` 指定子のある無効なフレンド関数の宣言を示します。
+次のコード例は、指定子を持つ無効なフレンド関数の宣言を示して **`inline`** います。
 
 ```cpp
 // C4396.cpp

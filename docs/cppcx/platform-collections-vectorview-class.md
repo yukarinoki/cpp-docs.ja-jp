@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032227"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218391"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 
@@ -35,12 +35,12 @@ template <typename T, typename E>
 *T*<br/>
 `VectorView` オブジェクトに格納されている要素の型。
 
-*E*<br/>
+*つまり*<br/>
 `T`型の値との等値性をテストするための二項述語を指定します。 既定値は `std::equal_to<T>` です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-クラス`VectorView`は[、Windows::Foundation::コレクション::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)インターフェイス、および標準テンプレート ライブラリ反復子のサポートを実装します。
+クラスは、 `VectorView` [Windows:: Foundation:: Collections:: IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)インターフェイスを実装し、標準テンプレートライブラリ反復子をサポートします。
 
 ### <a name="members"></a>メンバー
 
@@ -48,16 +48,16 @@ template <typename T, typename E>
 
 |名前|説明|
 |----------|-----------------|
-|[ベクトルビュー::ベクトルビュー](#ctor)|VectorView クラスの新しいインスタンスを初期化します。|
+|[VectorView:: VectorView](#ctor)|VectorView クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ベクトルビュー::最初](#first)|VectorView 内の最初の要素を指定する反復子を返します。|
-|[ベクトルビュー::ゲットアット](#getat)|指定されたインデックスで示される現在の VectorView の要素を取得します。|
-|[ベクトルビュー::ゲットマニ](#getmany)|指定されたインデックスを開始位置として、現在の VectorView から項目のシーケンスを取得します。|
-|[ベクトルビュー::インデックスOf](#indexof)|現在の VectorView 内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
+|[VectorView:: First](#first)|VectorView 内の最初の要素を指定する反復子を返します。|
+|[VectorView:: GetAt](#getat)|指定されたインデックスで示される現在の VectorView の要素を取得します。|
+|[VectorView:: GetMany](#getmany)|指定されたインデックスを開始位置として、現在の VectorView から項目のシーケンスを取得します。|
+|[VectorView:: IndexOf](#indexof)|現在の VectorView 内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
 |[VectorView::Size](#size)|現在の VectorView オブジェクトの要素数を返します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -70,7 +70,7 @@ template <typename T, typename E>
 
 **名前空間:** Platform::Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>ベクトルビュー::最初のメソッド
+## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView:: First メソッド
 
 VectorView 内の最初の要素を指定する反復子を返します。
 
@@ -88,9 +88,9 @@ VectorView 内の最初の要素を指定する反復子。
 
 ### <a name="remarks"></a>解説
 
-First() によって返される反復器を保持する便利な方法は **、auto**型推論キーワードで宣言された変数に戻り値を代入することです。 たとえば、「 `auto x = myVectorView->First();` 」のように入力します。
+First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myVectorView->First();` 」のように入力します。
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>ベクトルビュー::GetAtメソッド
+## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView:: GetAt メソッド
 
 指定されたインデックスで示される現在の VectorView の要素を取得します。
 
@@ -105,14 +105,14 @@ T GetAt(
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 VectorView オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 ### <a name="return-value"></a>戻り値
 
-`index` パラメーターで指定された要素。 要素の型は、VectorView テンプレート パラメーター T で指定*します。*
+`index` パラメーターで指定された要素。 要素の型は、VectorView テンプレートパラメーター *T*によって指定されます。
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>ベクトルビュー::多くのメソッドを取得します。
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView:: GetMany メソッド
 
 指定されたインデックスを開始位置として、現在の VectorView から項目のシーケンスを取得します。
 
@@ -131,14 +131,14 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 取得する項目の 0 から始まるインデックス。
 
-*dest*<br/>
+*先*<br/>
 この操作が完了するときに、`startIndex` で指定された要素を開始位置とし、VectorView 内の最後の要素を終了位置とする、項目の配列。
 
 ### <a name="return-value"></a>戻り値
 
 取得した項目数。
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>ベクトルビュー::メソッドのインデックス
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView:: IndexOf メソッド
 
 現在の VectorView 内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。
 
@@ -157,16 +157,16 @@ virtual bool IndexOf(
 *value*<br/>
 検索する項目。
 
-*index*<br/>
+*インデックス*<br/>
 `value` パラメーターが見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は 0。
 
-項目が 最初の要素であるか、`VectorView`項目が見つからなかった場合 *、index*パラメーターは 0 です。 戻り値が**true**の場合、項目が見つかり、最初の要素になります。それ以外の場合、アイテムは見つかりませんでした。
+*インデックス*パラメーターは、項目がの最初の要素であるか、項目が見つからなかった場合は0になり `VectorView` ます。 戻り値がの場合、項目が見つかり、それが最初の要素になります。 **`true`** それ以外の場合、項目は見つかりませんでした。
 
 ### <a name="return-value"></a>戻り値
 
-指定した項目が見つかった場合は true、指定したアイテムが見つかった場合は**true。** それ以外の場合**は false。**
+**`true`** 指定した項目が見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>ベクトルビュー::サイズメソッド
+## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView:: Size メソッド
 
 現在の VectorView オブジェクトの要素数を返します。
 
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
 
 現在の VectorView 内の要素数。
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>ベクトルビュー::ベクトルビューコンストラクタ
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView:: VectorView コンストラクター
 
 VectorView クラスの新しいインスタンスを初期化します。
 
@@ -241,11 +241,11 @@ VectorView(
 
 ### <a name="parameters"></a>パラメーター
 
-*Init*<br/>
+*初期化*<br/>
 現在の VectorView を初期化するために使用されるオブジェクトのコレクションの型。
 
-*イリノイ*<br/>
-vectorView の初期化に使用される要素を持つ[std::initializer_list。](../standard-library/initializer-list-class.md)
+*自動車*<br/>
+VectorView の初期化に使用される要素を持つ[std:: initializer_list](../standard-library/initializer-list-class.md) 。
 
 *N*<br/>
 現在の VectorView を初期化するために使用されるオブジェクトのコレクションの要素数。
@@ -256,25 +256,25 @@ VectorView の要素数。
 *value*<br/>
 現在の VectorView の各要素を初期化するために使用される値。
 
-*V*<br/>
-現在[のベクトル](../cpp/lvalues-and-rvalues-visual-cpp.md)ビューを初期化するために使用される[std::vector](../standard-library/vector-class.md)への値と値。
+*画像*<br/>
+[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)は、現在の VectorView を初期化するために使用される[std:: vector](../standard-library/vector-class.md)になります。
 
-*Ptr*<br/>
+*ptr*<br/>
 現在の VectorView を初期化するために使用される `std::vector` へのポインター。
 
-*Arr*<br/>
-現在のベクター ビューを初期化するために使用される[プラットフォーム::配列](../cppcx/platform-array-class.md)オブジェクト。
+*→*<br/>
+現在の VectorView を初期化するために使用される[Platform:: Array](../cppcx/platform-array-class.md)オブジェクト。
 
-*A*<br/>
-現在のベクタービューを初期化するために使用される[std::配列](../standard-library/array-class-stl.md)オブジェクト。
+*ある*<br/>
+現在の VectorView を初期化するために使用される[std:: array](../standard-library/array-class-stl.md)オブジェクト。
 
 *first*<br/>
-現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最初の要素。 のタイプ`first`は*完全な転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最初の要素。 の型は、 `first` *完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 *last*<br/>
-現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最後の要素。 のタイプ`last`は*完全な転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最後の要素。 の型は、 `last` *完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム名前空間](platform-namespace-c-cx.md)<br/>
+[Platform 名前空間](platform-namespace-c-cx.md)<br/>
 [C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210931"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-このテンプレートクラスは、先入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプター `queue` を使用すると、基になるコンテナーをキューとして管理できます。
+このテンプレートクラスは、先入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプターは、 `queue` 基になるコンテナーをキューとして管理するために使用します。
 
-次の説明では、`GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、`Value^`します。 同様に、`GContainer` は*コンテナー*と同じですが、後者が参照型である場合は `Container^`ます。
+次の説明で、 `GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、*コンテナー*と同じです。この場合、は `Container^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -92,13 +92,13 @@ template<typename Value,
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/queue >
+**ヘッダー:**\<cliext/queue>
 
 **名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
-|型定義|説明|
+|型の定義|説明|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[queue::container_type (STL/CLR)](#container_type)|基になるコンテナーの型。|
@@ -122,7 +122,7 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[queue::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
 
-|プロパティ|説明|
+|プロパティ|Description|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|最後の要素にアクセスします。|
 |[queue::front_item (STL/CLR)](#front_item)|最初の要素にアクセスします。|
@@ -130,23 +130,23 @@ template<typename Value,
 |演算子|説明|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator!= (queue) (STL/CLR)](#op_neq)|`queue` オブジェクトが別の `queue` オブジェクトと等しくないかどうかを判断します。|
-|[operator< (queue) (STL/CLR)](#op_lt)|`queue` オブジェクトが、別の `queue` オブジェクトより小さいかどうかを判断します。|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|`queue` オブジェクトが、別の `queue` オブジェクト以下かどうかを判断します。|
-|[operator== (queue) (STL/CLR)](#op_eq)|`queue` オブジェクトが別の `queue` オブジェクトと等しいかどうかを判断します。|
-|[operator> (queue) (STL/CLR)](#op_gt)|`queue` オブジェクトが、別の `queue` オブジェクトより大きいかどうかを判断します。|
-|[operator>= (queue) (STL/CLR)](#op_gteq)|`queue` オブジェクトが、別の `queue` オブジェクト以上かどうかを判断します。|
+|[operator! = (queue) (STL/CLR)](#op_neq)|オブジェクトが別のオブジェクトと等しくないかどうかを判断し `queue` `queue` ます。|
+|[operator< (queue) (STL/CLR)](#op_lt)|`queue`オブジェクトが別のオブジェクトより小さいかどうかを判断し `queue` ます。|
+|[operator<= (queue) (STL/CLR)](#op_lteq)|オブジェクトが別のオブジェクト以下かどうかを判断し `queue` `queue` ます。|
+|[operator = = (queue) (STL/CLR)](#op_eq)|オブジェクトが別のオブジェクトと等しいかどうかを判断し `queue` `queue` ます。|
+|[operator> (queue) (STL/CLR)](#op_gt)|`queue`オブジェクトが他のオブジェクトより大きいかどうかを判断し `queue` ます。|
+|[operator>= (queue) (STL/CLR)](#op_gteq)|オブジェクトが別のオブジェクト以上かどうかを判断し `queue` `queue` ます。|
 
 ## <a name="interfaces"></a>インターフェイス
 
 |インターフェイス|説明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|オブジェクトを複製します。|
-|IQueue\<値、コンテナー >|汎用コンテナーアダプターを維持します。|
+|IQueue\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクトは、`Value` 要素を格納し、必要に応じて拡張する、`Container`型の基になるコンテナーによって制御されるシーケンスに対して、ストレージの割り当てと解放を行います。 オブジェクトは、最初の要素をプッシュして最後の要素をポップするだけにアクセスを制限し、先入れ先出しのキュー (FIFO キューとも呼ばれます) または単なるキューを実装します。
+オブジェクトは、 `Container` 要素を格納し、必要に応じて拡張する、基になるコンテナー (型) によって制御されるシーケンスのストレージを割り当て、解放し `Value` ます。 オブジェクトは、最初の要素をプッシュして最後の要素をポップするだけにアクセスを制限し、先入れ先出しのキュー (FIFO キューとも呼ばれます) または単なるキューを実装します。
 
 ## <a name="members"></a>メンバー
 
@@ -162,12 +162,12 @@ void assign(queue<Value, Container>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 挿入するコンテナーアダプター。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、基になるコンテナーに `right.get_container()` を割り当てます。 キューの内容全体を変更するには、これを使用します。
+このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 キューの内容全体を変更するには、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -364,7 +364,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレート パラメーター `Container`のシノニムです。
+この型は、テンプレート パラメーター `Container` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`に相当します。 このメソッドを使用して、キューが空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)に相当 `() == 0` します。 このメソッドを使用して、キューが空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。 (`GValue` は、`value_type` が ref 型である場合は `value_type` または `value_type^` です)。
+この型は、 `GValue` このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する型のオブジェクトを表します。 (はであるか、 `GValue` `value_type` `value_type^` `value_type` が ref 型である場合はです)。
 
 ### <a name="example"></a>例
 
@@ -784,12 +784,12 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするコンテナーアダプター。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -886,7 +886,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、キューの末尾に `val` 値を持つ要素を追加します。 これを使用して、キューに要素を追加します。
+このメンバー関数は、キューの末尾に値を持つ要素を追加し `val` ます。 これを使用して、キューに要素を追加します。
 
 ### <a name="example"></a>例
 
@@ -930,7 +930,7 @@ explicit queue(container_type% wrapped);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするオブジェクト。
 
 *回り*<br/>
@@ -948,13 +948,13 @@ explicit queue(container_type% wrapped);
 
 `queue(queue<Value, Container>% right);`
 
-`right.get_container()`のコピーである、ラップされたコンテナーを作成します。 このメソッドを使用して、キューオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、キューオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `queue(queue<Value, Container>^ right);`
 
-`right->get_container()`のコピーである、ラップされたコンテナーを作成します。 これを使用して、キューオブジェクト `*right`によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right->get_container()` ます。 これを使用して、キューオブジェクトによって制御されるシーケンスのコピーである最初の被制御シーケンスを指定し `*right` ます。
 
 コンストラクター:
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズが0以外であるかどうかに注意する必要がある場合は、「 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`」を参照してください。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズが0以外であるかどうかについては、「 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -1270,15 +1270,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>operator&lt; (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>演算子 &lt; (queue) (STL/CLR)
 
 キューの比較が少なくなっています。
 
@@ -1341,15 +1341,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->`[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `right->size()``() <` を返します。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*右*に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator&lt;= (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = (queue) (STL/CLR)
 
 キューの値が以下であるかどうかを比較します。
 
@@ -1412,15 +1412,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1483,15 +1483,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>operator&gt; (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>演算子 &gt; (queue) (STL/CLR)
 
 キューが比較を超えています。
 
@@ -1554,15 +1554,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right*の後にある*かどうか*をテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right*の後にある*かどうか*をテストします。
 
 ### <a name="example"></a>例
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator&gt;= (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = (queue) (STL/CLR)
 
 キューが以上比較しています。
 
@@ -1625,15 +1625,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
