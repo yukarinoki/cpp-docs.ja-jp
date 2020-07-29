@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228727"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
@@ -41,16 +41,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>パラメーター
 
 *class_access*<br/>
-(省略可能) アセンブリの外部にあるクラスまたは構造体のアクセシビリティ。 使用可能な値は **public** と **private** です (既定値は **private** です)。 入れ子になったクラスまたは構造体には *class_access* 指定子を指定できません。
+(省略可能) アセンブリの外部にあるクラスまたは構造体のアクセシビリティ。 使用可能な値は **`public`** とです **`private`** ( **`private`** が既定値です)。 入れ子になったクラスまたは構造体には *class_access* 指定子を指定できません。
 
 *name*<br/>
 クラスまたは構造体の名前。
 
-*modifier*<br/>
+*変換*<br/>
 (省略可能) 有効な修飾子は、[abstract](abstract-cpp-component-extensions.md) と [sealed](sealed-cpp-component-extensions.md) です。
 
 *inherit_access*<br/>
-(省略可能) *base_interface* のアクセシビリティ。 許可されるアクセシビリティは **public** のみです (既定値は **public** です)。
+(省略可能) *base_interface* のアクセシビリティ。 許可されているアクセシビリティはのみです **`public`** ( **`public`** 既定値はです)。
 
 *base_type*<br/>
 (省略可能) 基本型。 ただし、値型を基本型として使用することはできません。
@@ -59,9 +59,9 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>解説
 
-**ref class** または **value class** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **private** です。 また、**ref struct** または **value struct** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **public** です。
+**Ref クラス**または**値クラス**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造**体または**値構造体**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
 
-参照型が別の参照型から継承される場合、基底クラスの仮想関数は ([override](override-cpp-component-extensions.md) を使用して) 明示的にオーバーライドするか、([new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md) を使用して) 非表示にする 必要があります。 派生クラスの関数も、明示的に **virtual** とマークする必要があります。
+参照型が別の参照型から継承される場合、基底クラスの仮想関数は ([override](override-cpp-component-extensions.md) を使用して) 明示的にオーバーライドするか、([new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md) を使用して) 非表示にする 必要があります。 派生クラスの関数も、として明示的にマークする必要があり **`virtual`** ます。
 
 コンパイル時に、型が **ref class**、**ref struct**、**value class**、または **value struct** であるかを検出するには、`__is_ref_class (type)`、`__is_value_class (type)`、または `__is_simple_value_class (type)` を使用します。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
@@ -69,17 +69,17 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [クラスと構造体のインスタンス化](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [参照型の C++ スタック セマンティクス](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [参照型の C++ スタックセマンティクス](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [クラス、構造体、および共用体](../cpp/classes-and-structs-cpp.md)
 
-- [「方法: クラスと構造体を定義および使用する (C++/cli)」のデストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [「方法: クラスと構造体を定義および使用する (C++/CLI)」のデストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
-- [ユーザー定義の演算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
+- [ユーザー定義演算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [ユーザー定義変換 (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [方法: ネイティブ クラスを C# で使用できるようにラップする](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [方法: ネイティブクラスを C で使用できるようにラップする#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [ジェネリック クラス (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -121,6 +121,6 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)
