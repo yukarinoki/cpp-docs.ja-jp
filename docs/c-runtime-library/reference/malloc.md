@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 4e699920f37139be40542ba91b3740cd9edef148
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232509"
 ---
 # <a name="malloc"></a>malloc
 
@@ -53,7 +53,7 @@ void *malloc(
 
 ## <a name="return-value"></a>戻り値
 
-**malloc**は、割り当てられた領域への void ポインターを返します。または、使用可能なメモリが不足している場合は**NULL**を返します。 **Void**以外の型へのポインターを返すには、戻り値に型キャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C++ では、基本的なアラインメントは、 **double**または8バイトに必要なアラインメントです。 64ビットプラットフォームを対象とするコードでは、16バイトです)。アラインメントの要件が大きいオブジェクト (たとえば、SSE 型[__m128](../../cpp/m128.md)や **__m256**など) にストレージを割り当てるには[_aligned_malloc](aligned-malloc.md)を使用し、 **n**が8より`__declspec(align( n ))`大きい場合はを使用して宣言された型を割り当てます。 *Size*が0の場合、 **malloc**はヒープに長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。 要求されたメモリの量が少ない場合でも、 **malloc**からの戻り値を常に確認してください。
+**malloc**は、割り当てられた領域への void ポインターを返します。または、使用可能なメモリが不足している場合は**NULL**を返します。 以外の型へのポインターを返すには、 **`void`** 戻り値に型キャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C++ では、基本的なアラインメントとして **`double`** 、または8バイトのアラインメントが必要です。 64ビットプラットフォームを対象とするコードでは、16バイトです)。[_Aligned_malloc](aligned-malloc.md)を使用して、より大きなアラインメント要件を持つオブジェクトのストレージを割り当てます。たとえば、SSE 型[__m128](../../cpp/m128.md)や **`__m256`** 、n を使用して宣言された型 ( `__declspec(align( n ))` **n**は8より大きい) などです。 *Size*が0の場合、 **malloc**はヒープに長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。 要求されたメモリの量が少ない場合でも、 **malloc**からの戻り値を常に確認してください。
 
 ## <a name="remarks"></a>解説
 
@@ -76,19 +76,19 @@ void *malloc(
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[値](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、**malloc** 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定値をオーバーライドするに`_set_new_mode(1)`は、プログラムの早い段階でを呼び出すか、newmode を使用してリンクします。OBJ (「[リンクオプション](../../c-runtime-library/link-options.md)」を参照)。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、**malloc** 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **malloc**は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定値をオーバーライドするに `_set_new_mode(1)` は、プログラムの早い段階でを呼び出すか、NEWMODE を使用してリンクします。OBJ (「[リンクオプション](../../c-runtime-library/link-options.md)」を参照)。
 
 アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **malloc**は[_malloc_dbg](malloc-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**malloc**はと`__declspec(noalias)`マーク`__declspec(restrict)`されています。これは、関数がグローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証することを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**malloc**はとマークされてい `__declspec(noalias)` `__declspec(restrict)` ます。これは、関数がグローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証することを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**malloc**|\<stdlib.h> と \<malloc.h>|
+|**malloc**|\<stdlib.h> および \<malloc.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

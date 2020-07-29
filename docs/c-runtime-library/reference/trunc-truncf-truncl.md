@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232392"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -68,7 +68,7 @@ float trunc( float x ); //C++ only
 
 それ以外の場合は、次のいずれかを返します。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
 |*x* = ±無限大|x|
 |*x* = ±0|x|
@@ -76,9 +76,9 @@ float trunc( float x ); //C++ only
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**trunc**のオーバーロードを呼び出すことができます。 C プログラムでは、 **trunc**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**trunc**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **trunc**はを受け取り、を返し **`double`** ます。
 
 浮動小数点の最大値はちょうど整数であるため、この関数は単独ではオーバーフローしません。 ただし、整数型に値を返すことによって、関数のオーバーフローが発生する場合があります。
 
@@ -86,15 +86,15 @@ float trunc( float x ); //C++ only
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**trunc**、 **truncf**、 **truncl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>

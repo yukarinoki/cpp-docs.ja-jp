@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: d6dc1ca309c096a4f5e857ade3d7550749991f3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b9df2ee2abcaca1c7c11c08ef73ae795a84310d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366207"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232249"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,22 +25,22 @@ private base-class
 
 ## <a name="remarks"></a>解説
 
-クラス メンバーのリストの前に **、private**キーワードは、メンバー関数とクラスのフレンドからのみそれらのメンバーにアクセスできるように指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。
+クラスメンバーのリストの前にある場合、キーワードは、 **`private`** これらのメンバーがクラスのメンバー関数およびフレンドからのみアクセス可能であることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。
 
-基本クラスの名前の前に **、private**キーワードは、基本クラスのパブリック メンバーとプロテクト メンバーが派生クラスのプライベート メンバーであることを指定します。
+基底クラスの名前を前に付けた場合、キーワードは、 **`private`** 基底クラスのパブリックメンバーとプロテクトメンバーが派生クラスのプライベートメンバーであることを指定します。
 
 クラスのメンバーの既定のアクセスはプライベートです。 構造体または共用体のメンバーの既定のアクセスはパブリックです。
 
 基底クラスの既定のアクセスは、クラスの場合はプライベートで、構造体の場合はパブリックです。 共用体に基底クラスを設定することはできません。
 
-関連情報については、「[フレンド](../cpp/friend-cpp.md)、[パブリック](../cpp/public-cpp.md)、[プロテ](../cpp/protected-cpp.md)クト」、および[「クラス メンバーへのアクセスの制御](member-access-control-cpp.md)」の「メンバーアクセス」の表を参照してください。
+関連情報については、「 [friend](../cpp/friend-cpp.md)」、「 [public](../cpp/public-cpp.md)」、「 [Protected](../cpp/protected-cpp.md)」、および「[クラスメンバーへのアクセスの制御](member-access-control-cpp.md)」のメンバーアクセステーブルを参照してください。
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**プロテクト**) は、アセンブリに関する型とメソッドの参照に影響を与える可能性があります。 詳細については、「メンバー[アクセス制御](member-access-control-cpp.md)」を参照してください。
+CLR 型では、C++ アクセス指定子キーワード ( **`public`** 、 **`private`** 、および) は、 **`protected`** アセンブリに関して型およびメソッドの可視性に影響を与える可能性があります。 詳細については、「[メンバー Access Control](member-access-control-cpp.md)」を参照してください。
 
 > [!NOTE]
-> [/LN](../build/reference/ln-create-msil-module.md)を指定してコンパイルされたファイルは、この動作の影響を受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
+> [/LN](../build/reference/ln-create-msil-module.md)でコンパイルされたファイルは、この動作の影響を受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
 
 ## <a name="end-clr-specific"></a>END /clr 固有
 
@@ -84,4 +84,4 @@ int main() {
 ## <a name="see-also"></a>関連項目
 
 [クラス メンバーへのアクセス制御](member-access-control-cpp.md)<br/>
-[Keywords](../cpp/keywords-cpp.md)
+[キーワード](../cpp/keywords-cpp.md)

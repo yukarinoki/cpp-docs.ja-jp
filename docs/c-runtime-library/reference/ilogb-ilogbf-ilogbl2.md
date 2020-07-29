@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232522"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -75,9 +75,9 @@ int ilogbl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、 *x*の底2の指数を符号付き**整数**値として返します。
+成功した場合は、 *x*の底2の指数を値として返し **`signed int`** ます。
 
-それ以外の場合、\<math.h > で定義されている次の値のいずれかを返します。
+それ以外の場合は、で定義されている次のいずれかの値を返し \<math.h> ます。
 
 |入力|結果|
 |-----------|------------|
@@ -86,22 +86,22 @@ int ilogbl(
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ilogb** を受け取って返す **float** と **long** **double**型。 C プログラムでは、 **ilogb**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**ilogb**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **ilogb**は常にを受け取り、を返し **`double`** ます。
 
-この関数の呼び出しは、同等の**logb**関数を呼び出してから、戻り値を**int**にキャストすることと似ています。
+この関数の呼び出しは、同等の**logb**関数を呼び出し、戻り値をにキャストすることと似てい **`int`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>
 [logb、logbf、logbl、_logb、_logbf](logb-logbf-logbl-logb-logbf.md)<br/>

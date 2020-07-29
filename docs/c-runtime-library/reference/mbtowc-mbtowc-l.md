@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915424"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232483"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -62,7 +62,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>パラメーター
 
 *wchar*<br/>
-ワイド文字のアドレス (型**wchar_t**)。
+ワイド文字 (型) のアドレス **`wchar_t`** 。
 
 *mbchar*<br/>
 バイト シーケンスのアドレス (マルチバイト文字)。
@@ -85,7 +85,7 @@ int _mbtowc_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>

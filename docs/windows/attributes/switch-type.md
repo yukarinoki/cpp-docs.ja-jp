@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211932"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -32,9 +32,9 @@ type
 
 ## <a name="remarks"></a>解説
 
-**Switch_type** C++属性には、 [switch_type](/windows/win32/Midl/switch-type) MIDL 属性と同じ機能があります。
+**Switch_type** C++ 属性には、 [switch_type](/windows/win32/Midl/switch-type) MIDL 属性と同じ機能があります。
 
-C++属性は、カプセル化された[共用体](/windows/win32/Midl/encapsulated-unions)をサポートしていません。 [カプセル化](/windows/win32/Midl/nonencapsulated-unions)されていない共用体は、次の形式でのみサポートされます。
+C++ 属性は、カプセル化された[共用体](/windows/win32/Midl/encapsulated-unions)をサポートしていません。 [カプセル化](/windows/win32/Midl/nonencapsulated-unions)されていない共用体は、次の形式でのみサポートされます。
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,15 +63,15 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**対象**|**typedef**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`typedef`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[輸出](export.md)

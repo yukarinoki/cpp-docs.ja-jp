@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212307"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 演算子
 
 ||||
 |-|-|-|
-|[演算子!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[演算子==](#op_eq_eq)|
-|[演算子 == (hash_multiset)](#op_eq_eq_hash_multiset)|
+|[operator! =](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator = =](#op_eq_eq)|
+|[operator = = (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="operator"></a><a name="op_neq"></a>演算子!=
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -32,7 +32,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `hash_set` 型オブジェクト。
 
 *そうです*\
@@ -40,13 +40,13 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="return-value"></a>戻り値
 
-hash_sets が等しくない場合は **true**、hash_sets が等しい場合は **false**。
+**`true`** hash_sets が等しくない場合は。**`false`** hash_sets が等しい場合は。
 
 ### <a name="remarks"></a>解説
 
 hash_set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_sets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-[<hash_map>](../standard-library/hash-map.md)と[<hash_set>hash_setヘッダー](../standard-library/hash-set.md)ファイルのメンバは、 [stdext Namespace に格納されます](../standard-library/stdext-namespace.md)。
+[<hash_map>](../standard-library/hash-map.md)および[<hash_set](../standard-library/hash-set.md)ヘッダーファイルのメンバーは、 [stdext 名前空間](../standard-library/stdext-namespace.md)にあります。
 
 ### <a name="example"></a>例
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -100,7 +100,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `hash_set` 型オブジェクト。
 
 *そうです*\
@@ -108,7 +108,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の hash_set が演算子の右辺の hash_set と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の hash_set が、演算子の右辺の hash_set と等しい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>演算子!= (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operator! = (hash_multiset)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -166,7 +166,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `hash_multiset` 型オブジェクト。
 
 *そうです*\
@@ -174,7 +174,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="return-value"></a>戻り値
 
-hash_multisets が等しくない場合は **true**、hash_multisets が等しい場合は **false**。
+**`true`** hash_multisets が等しくない場合は。**`false`** hash_multisets が等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>演算子 == (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operator = = (hash_multiset)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -232,7 +232,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `hash_multiset` 型オブジェクト。
 
 *そうです*\
@@ -240,7 +240,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の hash_multiset が演算子の右辺の hash_multiset と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の hash_multiset が、演算子の右辺の hash_multiset と等しい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 

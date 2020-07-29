@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168834"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230001"
 ---
 # <a name="cadapt-class"></a>CAdapt クラス
 
@@ -47,7 +47,7 @@ class CAdapt
 
 |名前|説明|
 |----------|-----------------|
-|[CAdapt:: operator const T&](#operator_const_t_amp)|へ`m_T`の**定数**参照を返します。|
+|[CAdapt:: operator const T&](#operator_const_t_amp)|への **`const`** 参照を返し `m_T` ます。|
 |[CAdapt:: operator T&](#operator_t_amp)|`m_T` への参照を返します。|
 |[CAdapt:: operator <](#operator_lt)|適合された型のオブジェクトを `m_T` と比較します。|
 |[CAdapt:: operator =](#operator_eq)|適合された型のオブジェクトを `m_T` に割り当てます。|
@@ -61,9 +61,9 @@ class CAdapt
 
 ## <a name="remarks"></a>解説
 
-`CAdapt` は、オブジェクトのアドレス以外の値を返すために、アドレス演算子 (`operator &`) を再定義するクラスをラップするときに使用される簡単なテンプレートです。 このようなクラスの例としては、ATL の `CComBSTR`、`CComPtr`、および `CComQIPtr` クラス、そしてコンパイラ COM サポート クラスである `_com_ptr_t` が含まれます。 これらのクラスはすべて、アドレス演算子を再定義して、いずれかのデータメンバー (の`CComBSTR`場合は BSTR) のアドレスと、他のクラスの場合はインターフェイスポインターを返します。
+`CAdapt` は、オブジェクトのアドレス以外の値を返すために、アドレス演算子 (`operator &`) を再定義するクラスをラップするときに使用される簡単なテンプレートです。 このようなクラスの例としては、ATL の `CComBSTR`、`CComPtr`、および `CComQIPtr` クラス、そしてコンパイラ COM サポート クラスである `_com_ptr_t` が含まれます。 これらのクラスはすべて、アドレス演算子を再定義して、いずれかのデータメンバー (の場合は BSTR) のアドレス `CComBSTR` と、他のクラスの場合はインターフェイスポインターを返します。
 
-`CAdapt`主な役割は、クラス*T*によって定義されたアドレス演算子を非表示にすることです。ただし、適用されるクラスの特性は維持されます。 `CAdapt`この役割を果たしには、パブリックメンバー、型*t*の[m_T](#m_t)を保持し、変換演算子、比較演算子、およびコピーコンストラクターを定義します。 `CAdapt`これにより、の特殊化を型*t*のオブジェクトとして扱うことができます。
+`CAdapt`主な役割は、クラス*T*によって定義されたアドレス演算子を非表示にすることです。ただし、適用されるクラスの特性は維持されます。 `CAdapt`この役割を果たしには、パブリックメンバー、型*t*の[m_T](#m_t)を保持し、変換演算子、比較演算子、およびコピーコンストラクターを定義します。これにより、の特殊化 `CAdapt` を型*t*のオブジェクトとして扱うことができます。
 
 アダプター クラス `CAdapt` は、いくつかの container-style クラスで、含まれるオブジェクトのアドレスを address-of 演算子を使用して取得できることが想定されているために、役立ちます。 address-of 演算子の再定義によって、この要件に混乱が生じ、通常はコンパイル エラーが発生し、"単に動作" することが想定されているクラスで、適合されていない型の使用が妨げられることがあります。 `CAdapt` では、こうした問題を回避するための手段が提供されています。
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>解説
 
-この**パブリック**データメンバーには、 [operator const t&](#operator_const_t_amp)および[operator t&](#operator_t_amp)を使用して直接または間接的にアクセスできます。
+この **`public`** データメンバーには、 [Operator const t&](#operator_const_t_amp)および[operator t&](#operator_t_amp)を使用して直接または間接的にアクセスできます。
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
 
-[M_T](#m_t)メンバーへの**定数**参照を返します。これにより、アダプターオブジェクトを*T*型のオブジェクトとして扱うことができます。
+**`const`** [M_T](#m_t)メンバーへの参照を返します。これにより、アダプターオブジェクトを*T*型のオブジェクトとして扱うことができます。
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>戻り値
 
-へ**const** `m_T`の定数参照。
+**`const`** への参照 `m_T` 。
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt:: operator T&amp;
 

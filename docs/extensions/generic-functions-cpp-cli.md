@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516377"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216012"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516377"
 
 Windows ランタイムでは、この機能はサポートされていません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -53,13 +53,13 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>パラメーター
 
-*属性*<br/>
+*attributes*<br/>
 (省略可能) 追加の宣言情報。 属性と属性クラスについては、「属性」を参照してください。
 
-*modifiers*<br/>
-(省略可能) 関数の修飾子です (static など)。  仮想メソッドはジェネリックではない可能性があるため、**virtual** は許可されません。
+*ド*<br/>
+(省略可能) 関数の修飾子です (static など)。  **`virtual`** 仮想メソッドはジェネリックではない可能性があるため、は許可されません。
 
-*return-type*<br/>
+*戻り値の型*<br/>
 メソッドによって返される型。 戻り値が void の場合、戻り値は要求されません。
 
 *identifier*<br/>
@@ -74,7 +74,7 @@ return-type identifier<type-parameter identifier(s)>
 *type-parameter-constraints-clauses*<br/>
 これは、型引数として使用できる型に対する制約を指定し、「[ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)」に指定されている書式を使用します。
 
-*function-body*<br/>
+*関数本体*<br/>
 型パラメーターの識別子を参照できるメソッドの本体。
 
 ### <a name="remarks"></a>解説
@@ -85,11 +85,11 @@ return-type identifier<type-parameter identifier(s)>
 
 呼び出されると、ジェネリック型パラメーターは、実際の型に置換されます。 テンプレート関数の呼び出しに似た構文を使用して、実際の型を山かっこで囲んで明示的に指定できます。 型パラメーターなしで呼び出すと、コンパイラは、関数呼び出しで提供されたパラメーターから実際の型を推測しようとします。 使用しているパラメーターから目的の型引数を推測できない場合、コンパイラはエラーを報告します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、ジェネリック関数を示します。
 
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)<br/>
 [ジェネリック](generics-cpp-component-extensions.md)

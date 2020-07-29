@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952775"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232496"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -52,28 +52,28 @@ void *_malloca(
 
 ## <a name="return-value"></a>戻り値
 
-**_Malloca**ルーチンは、割り当てられた領域への**void**ポインターを返します。これは、どの型のオブジェクトの格納にも適切にアラインメントされていることが保証されています。 *Size*が0の場合、 **_malloca**は長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。
+**_Malloca**ルーチンは、 **`void`** 割り当てられた領域へのポインターを返します。これは、オブジェクトのすべての型を格納するために適切にアラインメントされていることが保証されています。 *Size*が0の場合、 **_malloca**によって長さ0の項目が割り当てられ、その項目への有効なポインターが返されます。
 
-*Size*が **_ALLOCA_S_THRESHOLD**より大きい場合、 **_malloca**はヒープに割り当てを試み、スペースを割り当てることができない場合は null ポインターを返します。 *Size*が **_ALLOCA_S_THRESHOLD**以下の場合、 **_malloca**はスタックに割り当てを試行し、領域を割り当てることができない場合はスタックオーバーフロー例外が生成されます。 スタックオーバーフロー例外は例外でC++はありません。構造化された例外です。 例外処理をC++使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) を使用してこの例外をキャッチする必要があります。
+*Size*が **_ALLOCA_S_THRESHOLD**より大きい場合、 **_malloca**はヒープに割り当てを試み、スペースを割り当てることができない場合は null ポインターを返します。 *Size*が **_ALLOCA_S_THRESHOLD**以下の場合、 **_malloca**はスタックに割り当てを試行し、領域を割り当てることができない場合はスタックオーバーフロー例外が生成されます。 スタックオーバーフロー例外は C++ 例外ではありません。構造化された例外です。 C++ 例外処理を使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) を使用してこの例外をキャッチする必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_malloca**は、要求が **_ALLOCA_S_THRESHOLD**によって指定された特定のサイズ (バイト単位) を超えた場合に、プログラムスタックまたはヒープから*サイズ*バイトを割り当てます。 **_Malloca**と **_alloca**の違いは、 **_alloca**はサイズに関係なく常にスタックに割り当てられるという点です。 メモリを解放して割り当てられるように解放するために**無料**の呼び出しを必要としない、または許可しない **_alloca**とは異なり、 **_malloca**ではメモリを解放するために[_freea](freea.md)を使用する必要があります。 デバッグモードでは、 **_malloca**は常にヒープからメモリを割り当てます。
+要求が **_ALLOCA_S_THRESHOLD**によって指定されたバイト数を超えた場合、 **_malloca**はプログラムスタックまたはヒープから*サイズ*バイトを割り当てます。 **_Malloca**と **_alloca**の違いは、サイズにかかわらず、 **_alloca**は常にスタックに割り当てられるという点です。 メモリを解放して割り当てられるように**解放**するための呼び出しが不要であるか許可されていない **_alloca**とは異なり、 **_malloca**では、メモリを解放するために[_freea](freea.md)を使用する必要があります。 デバッグモードでは、 **_malloca**は常にヒープからメモリを割り当てます。
 
-例外ハンドラー (EH) で **_malloca**を明示的に呼び出すには、制限があります。 X86 クラスのプロセッサで実行される EH ルーチンは、独自のメモリフレームで動作します。これらのタスクは、外側の関数のスタックポインターの現在の位置に基づいていないメモリ空間で実行されます。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_malloca**を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
+例外ハンドラー (EH) で **_malloca**を明示的に呼び出すには制限があります。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_malloca**を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
 
-- Windows NT SEH 例外フィルター式: **__except** (`_malloca ()` )
+- Windows NT SEH 例外フィルター式: **`__except`** ( `_malloca ()` )
 
-- Windows NT SEH 最終例外ハンドラー: **__finally** {`_malloca ()` }
+- Windows NT SEH の最後の例外ハンドラー: **`__finally`** { `_malloca ()` }
 
 - C++ EH catch 句の式
 
 ただし、 **_malloca**は、eh ルーチン内から直接呼び出すことも、前述の eh シナリオのいずれかで呼び出されるアプリケーション提供のコールバックから呼び出すこともできます。
 
 > [!IMPORTANT]
-> Windows XP では、 **_malloca**が try/catch ブロック内で呼び出される場合は、catch ブロックで[_resetstkoflw](resetstkoflw.md)を呼び出す必要があります。
+> Windows XP で **_malloca**が try/catch ブロック内で呼び出された場合は、catch ブロックで[_resetstkoflw](resetstkoflw.md)を呼び出す必要があります。
 
-上記の制限に加え、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用する場合、 **_malloca**を **__except**ブロックで使用することはできません。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
+上記の制限に加え、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用する場合、 **_malloca**をブロック内で使用することはできません **`__except`** 。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -175,7 +175,7 @@ Enter the number of bytes to allocate using _malloca: 1000
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

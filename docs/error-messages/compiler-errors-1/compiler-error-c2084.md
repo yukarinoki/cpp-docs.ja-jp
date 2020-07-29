@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 881ae051b2779fe674b31b64a7cbe7be7cf63705
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f217e0b94e27c0f85879e80b3ae887cb4f76f486
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216363"
 ---
 # <a name="compiler-error-c2084"></a>コンパイラエラー C2084
 
@@ -23,9 +23,9 @@ Visual Studio 2002 より前の場合
 
 - コンパイラは、同じ実際の型に解決される複数のテンプレートの特殊化を受け入れますが、追加の定義は使用できません。 コンパイラは、これらの複数の定義を検出するようになりました。
 
-- `__int32` と `int` は個別の型として扱われました。 コンパイラは、`__int32` を `int`のシノニムとして扱うようになりました。 つまり、関数が `__int32` と `int` の両方でオーバーロードされている場合、コンパイラは複数の定義を検出し、エラーが発生します。
+- **`__int32`** とは **`int`** 別々の型として扱われました。 コンパイラは、 **`__int32`** のシノニムとしてを処理するようになりました **`int`** 。 つまり、関数がとの両方でオーバーロードされている場合、コンパイラは複数の定義を検出し、 **`__int32`** **`int`** エラーが発生します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2084 が生成されます。
 

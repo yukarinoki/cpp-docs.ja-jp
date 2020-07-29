@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3390d57bf3c0a10ccde8a4f850a07451dd63ae67
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737466"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231989"
 ---
 # <a name="compiler-error-c3351"></a>コンパイラ エラー C3351
 
 'object': デリゲート コンストラクター: 2 番目の引数は、静的メンバー関数またはグローバル関数のアドレスでなければなりません
 
-コンパイラには、 `static`として宣言された関数のアドレスが必要です。
+コンパイラは、宣言された関数のアドレスを予期していました **`static`** 。
 
 次の例では C3351 が生成されます。
 

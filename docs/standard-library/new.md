@@ -1,41 +1,41 @@
 ---
-title: '&lt;new&gt;'
+title: '&lt;新規&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <new>
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457683"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212164"
 ---
-# <a name="ltnewgt"></a>&lt;new&gt;
+# <a name="ltnewgt"></a>&lt;新規&gt;
 
 プログラムの制御下でストレージの割り当てと解放を制御するいくつかの型および関数を定義します。 また、ストレージ管理エラーに関するレポート用のコンポーネントを定義します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<new>
+**ヘッダー:**\<new>
 
 **名前空間:** std
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このヘッダーで宣言されている関数の一部は置換できます。 実装の際に既定のバージョンが提供されます。既定バージョンの動作については、このドキュメントで説明します。 ただし、プログラムで同じシグネチャを持つ関数を定義して、リンク時に既定のバージョンを置換することもできます。 置換バージョンは、このドキュメントで説明する要件を満たす必要があります。
 
 ## <a name="members"></a>メンバー
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|**Nothrow**バージョンの**new**および**delete**の引数として使用されるオブジェクトを提供します。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|およびのバージョンの引数として使用されるオブジェクトを提供し **`nothrow`** **`new`** **`delete`** ます。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -51,16 +51,16 @@ ms.locfileid: "68457683"
 |[launder](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|メモリ割り当ての試行に新たに失敗した場合に呼び出されるユーザー関数をインストールします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator delete](../standard-library/new-operators.md#op_delete)|個々のオブジェクトに対するストレージの割り当てを解除する削除式によって呼び出される関数。|
+|[delete 演算子](../standard-library/new-operators.md#op_delete)|個々のオブジェクトに対するストレージの割り当てを解除する削除式によって呼び出される関数。|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|オブジェクトの配列に対するストレージの割り当てを解除する削除式によって呼び出される関数。|
-|[operator new](../standard-library/new-operators.md#op_new)|個々のオブジェクトにストレージを割り当てる新しい式によって呼び出される関数。|
+|[new 演算子](../standard-library/new-operators.md#op_new)|個々のオブジェクトにストレージを割り当てる新しい式によって呼び出される関数。|
 |[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|オブジェクトの配列にストレージを割り当てる新しい式によって呼び出される関数。|
 
-### <a name="enums"></a>列挙体
+### <a name="enums"></a>列挙型
 
 |||
 |-|-|
@@ -76,5 +76,5 @@ ms.locfileid: "68457683"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

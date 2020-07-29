@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179745"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232288"
 ---
 # <a name="function-templates"></a>関数テンプレート
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-このコードは、引数の値を入れ替える関数のファミリを定義します。 このテンプレートからは、 **int**型と**long**型、およびユーザー定義型を交換する関数を生成できます。 `MySwap` は、クラスのコピー コンストラクターと代入演算子が正しく定義されていれば、クラスの入れ替えも実行します。
+このコードは、引数の値を入れ替える関数のファミリを定義します。 このテンプレートから、 **`int`** **`long`** 型と型、およびユーザー定義型を交換する関数を生成できます。 `MySwap` は、クラスのコピー コンストラクターと代入演算子が正しく定義されていれば、クラスの入れ替えも実行します。
 
 また、関数テンプレートを使用すると、コンパイル時に*a*と*b*のパラメーターの型がコンパイラに認識されるため、異なる型のオブジェクトを交換できなくなります。
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-テンプレート引数を明示的に指定すると、通常の暗黙の型変換が実行されて、関数の引数が対応する関数テンプレート パラメーターの型に変換されます。 上の例では、コンパイラは `j` を**char**型に変換します。
+テンプレート引数を明示的に指定すると、通常の暗黙の型変換が実行されて、関数の引数が対応する関数テンプレート パラメーターの型に変換されます。 上の例では、コンパイラは `j` 型に変換し **`char`** ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [テンプレート](../cpp/templates-cpp.md)<br/>
 [関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)<br/>
 [明示的なインスタンス化](../cpp/explicit-instantiation.md)<br/>
-[関数テンプレートの明示的特殊化](../cpp/explicit-specialization-of-function-templates.md)
+[関数テンプレートの明示的な特殊化](../cpp/explicit-specialization-of-function-templates.md)
