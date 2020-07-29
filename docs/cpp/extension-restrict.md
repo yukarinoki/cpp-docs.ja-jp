@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 27ac76251456d9a0bf5908ad6d1fc2bee7534e9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6318e6d78f6c4c4bb6827a79d26bca028dfe3f3f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233744"
 ---
 # <a name="__restrict"></a>__restrict
 
-__declspec **( [restrict](../cpp/restrict.md) )** 修飾子と同様に **、__restrict**キーワードは、シンボルが現在のスコープ内でエイリアス化されないことを示します。 **__restrict**キーワードは、修飾子と`__declspec ( restrict )`は次の点で異なります。
+**__Declspec ( [restrict](../cpp/restrict.md) )** 修飾子と同様に、 **`__restrict`** キーワードは、現在のスコープでシンボルがエイリアス化されていないことを示します。 キーワードは、 **`__restrict`** 修飾子と `__declspec ( restrict )` 次の点で異なります。
 
-- **__restrict**キーワードは変数でのみ有効で`__declspec ( restrict )`、関数の宣言と定義でのみ有効です。
+- **`__restrict`** キーワードは変数でのみ有効で、 `__declspec ( restrict )` 関数の宣言と定義でのみ有効です。
 
-- **__restrict**は C99 仕様からの**制限**に似ていますが **、__restrict**は C++ または C プログラムで使用できます。
+- **`__restrict`** は C99 仕様のと似 **`restrict`** ていますが、 **`__restrict`** C++ または C プログラムで使用できます。
 
-- **__restrict**使用すると、コンパイラは変数の no-alias プロパティを反映しません。 つまり、__restrict**以外の変数**に **__restrict**変数を割り当てた場合でも、コンパイラは__restrict以外の変数にエイリアスを設定できます。 これは、**制限キーワードの**C99 仕様からの動作とは異なります。
+- を使用した場合 **`__restrict`** 、コンパイラは変数のエイリアスなしのプロパティを伝達しません。 つまり、変数を非変数に割り当てた場合で **`__restrict`** **`__restrict`** も、コンパイラは非 __restrict 変数に別名を付けることができます。 これは、C99 仕様のキーワードの動作とは異なり **`restrict`** ます。
 
 一般に、関数全体の動作に影響を及ぼす場合、キーワードよりも `__declspec ( restrict )` を使用する方が適切です。
 
-以前のバージョンとの互換性のために **、_restrict**コンパイラオプション[/Za\(無効化言語拡張) が](../build/reference/za-ze-disable-language-extensions.md)指定されていない限り **、__restrict**の同義語です。
+以前のバージョンとの互換性 **_restrict**を維持するために、 **`__restrict`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、_restrict はのシノニムになります。
 
-Visual Studio 2015 以降では **、__restrict** C++ 参照で使用できます。
+Visual Studio 2015 以降では、を **`__restrict`** C++ 参照で使用できます。
 
 > [!NOTE]
-> [volatile](../cpp/volatile-cpp.md)キーワードも持つ変数で使用すると **、volatile**が優先されます。
+> [Volatile](../cpp/volatile-cpp.md)キーワードも含む変数で使用すると、 **`volatile`** が優先されます。
 
 ## <a name="example"></a>例
 
@@ -60,4 +60,4 @@ union z {
 
 ## <a name="see-also"></a>関連項目
 
-[Keywords](../cpp/keywords-cpp.md)
+[キーワード](../cpp/keywords-cpp.md)
