@@ -16,12 +16,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: db198dbdc7bd43ffd4de9bde39ee81a8b95a25ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316887"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223812"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (ディスプレイスメントの無効化)
 
@@ -34,37 +34,37 @@ ms.locfileid: "62316887"
 ## <a name="arguments"></a>引数
 
 **0**<br/>
-Vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーを使用すると、抑制します。 すべてのクラスのコンス トラクターとデストラクターが仮想呼び出すことがわかっている場合にのみ、このオプションは事実上関数を選択します。
+Vtordisp コンストラクター/デストラクターのディスプレイスメントメンバーを非表示にします。 このオプションは、すべてのクラスコンストラクターとデストラクターが仮想関数を仮想的に呼び出すことが確実である場合にのみ選択してください。
 
 **1**<br/>
-隠し vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーを作成をできます。 このオプションは、既定値です。
+隠し vtordisp コンストラクター/デストラクターのディスプレイスメントメンバーの作成を有効にします。 これは既定の設定です。
 
 **2**<br/>
-使用できるように[dynamic_cast Operator](../../cpp/dynamic-cast-operator.md)で構築されるオブジェクト。 たとえば、仮想基底クラスから派生クラスへの dynamic_cast です。
+構築中のオブジェクトに対して[Dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)を使用できるようにします。 たとえば、仮想基底クラスから派生クラスに dynamic_cast ます。
 
-**/vd2**仮想関数を持つ仮想基底がある場合は、vtordisp フィールドを追加します。 **/vd1**十分です。 最も一般的なケース **/vd2**が必要なは、仮想ベースで唯一の仮想関数がデストラクターの場合。
+仮想関数を持つ仮想ベースがある場合、 **/vd2**は vtordisp フィールドを追加します。 **/vd1**は十分です。 **/Vd2**が必要な最も一般的なケースは、仮想ベースの唯一の仮想関数がデストラクターである場合です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらのオプションは、仮想基底クラスを使用する C++ コードにのみ適用されます。
+これらのオプションは、仮想ベースを使用する C++ コードにのみ適用されます。
 
-Visual C では、仮想継承を使用する状況で C++ ディスプレイスメントをサポートを実装します。 ディスプレイスメントは仮想関数の場合、仮想ベースで宣言され、派生クラスでオーバーライドされるときに作成の問題を解決、さらに派生クラスの構築中にコンス トラクターから呼び出されます。
+Visual C++ は、仮想継承が使用される場合に、C++ の構築のディスプレイスメントをサポートします。 構築の変位は、仮想基底クラスで宣言され、派生クラスでオーバーライドされた仮想関数が、さらに派生したクラスの構築時にコンストラクターから呼び出された場合に作成される問題を解決します。
 
-問題は仮想関数が不適切な渡される可能性があります、`this`ポインター、結果として、仮想変位の不一致の基底クラスとその派生クラスにします。 ソリューションでは、各仮想基本クラスの vtordisp フィールドと呼ばれる 1 つ構築変位の調整を提供します。
+問題は、 **`this`** クラスの仮想基底クラスへの変位と、その派生クラスへの変位との差が原因で、仮想関数に正しくないポインターが渡される可能性があることです。 このソリューションでは、クラスの各仮想ベースに対して、vtordisp フィールドと呼ばれる1つの構築変位調整が提供されます。
 
-既定では、vtordisp フィールドは、コードは、ユーザー定義のコンス トラクターとデストラクターを定義し、仮想基底クラスの仮想関数がオーバーライドされるたびに導入されました。
+既定では、vtordisp フィールドは、コードがユーザー定義のコンストラクターとデストラクターを定義し、仮想基底の仮想関数もオーバーライドするたびに導入されます。
 
-これらのオプションでは、ソース ファイル全体に影響します。 使用[vtordisp](../../preprocessor/vtordisp.md)を抑制しクラスによって単位で vtordisp フィールドを再度有効にします。
+これらのオプションは、ソースファイル全体に影響します。 [Vtordisp](../../preprocessor/vtordisp.md)を使用して、クラスごとに vtordisp フィールドを非表示にしてから再び有効にします。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -73,4 +73,4 @@ Visual C では、仮想継承を使用する状況で C++ ディスプレイス
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

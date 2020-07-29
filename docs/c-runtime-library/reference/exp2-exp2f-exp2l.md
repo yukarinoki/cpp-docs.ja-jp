@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234160"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
@@ -86,7 +86,7 @@ long double exp2l(
 |*x* = ±0|1|
 |*x* =-無限大|+0|
 |*x* = + 無限大|+INFINITY|
-|*x* = NaN|(NaN)|
+|*x* = NaN|NaN|
 |オーバーフロー範囲エラー|+HUGE_VAL、+HUGE_VALF、または +HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正しい結果|
 
@@ -94,13 +94,13 @@ long double exp2l(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long double**型を受け取って返す**exp2**のオーバーロードを呼び出すことができます。 C プログラムでは、 **exp2**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す**exp2**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **exp2**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**exp**, **、** **expl**|\<math.h>|\<cmath>|
 
@@ -108,6 +108,6 @@ C++ ではオーバーロードが可能であるため、 **float**型および
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>
 [log2、log2f、log2l](log2-log2f-log2l.md)<br/>

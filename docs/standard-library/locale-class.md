@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224826"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -140,7 +140,7 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|コンストラクター|[説明]|
 |-|-|
 |[locale](#locale)|ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。|
 
@@ -152,7 +152,7 @@ cout.imbue(loc);
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|[説明]|
 |-|-|
 |[結合](#combine)|ターゲット ロケールに指定されたロケールのファセットを挿入します。|
 |[name](#name)|格納されているロケール名を返します。|
@@ -161,12 +161,12 @@ cout.imbue(loc);
 
 |||
 |-|-|
-|[クラシック](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
+|[classic](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
 |[global](#global)|プログラムの既定のロケールをリセットします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[operator =](#op_eq)|ロケールを割り当てます。|
 |[operator! =](#op_neq)|2 つのロケールが等しくないかどうかをテストします。|
@@ -180,7 +180,7 @@ cout.imbue(loc);
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[`id`](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<locale>
 
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>解説
 
-この型は、クラスロケールに対してローカルなビットマスク型の個別の要素のグループを表すことができる**int**型のシノニムです。または、対応する C ロケールカテゴリのいずれかを表すために使用できます。 要素は次のとおりです。
+この型は、 **`int`** クラスロケールに対してローカルなビットマスク型の個別の要素のグループを表すことができる型のシノニムです。または、対応する C ロケールカテゴリのいずれかを表すために使用できます。 要素は次のとおりです。
 
 - `collate`。 C カテゴリに対応する LC_COLLATE
 
@@ -574,7 +574,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ロケールが同じロケールのコピーでない場合は**true**を示すブール値。 ロケールが同じロケールのコピーである場合は**false**です。
+**`true`** ロケールが同じロケールのコピーでない場合は、ブール値。 ロケールが **`false`** 同じロケールのコピーである場合は、
 
 ### <a name="remarks"></a>解説
 
@@ -641,7 +641,7 @@ bool operator()(
 
 ### <a name="return-value"></a>戻り値
 
-- `true`*left*が辞書式未満の場合*は、それ以外の場合*は `false` 。
+- **`true`***left*が辞書式未満の場合*は、それ以外の場合*は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -701,7 +701,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ロケールが同じロケールのコピーである場合は**true**を示すブール値。 ロケールが同じロケールのコピーでない場合は、 **false**になります。
+**`true`** ロケールが同じロケールのコピーである場合は、ブール値。 **`false`** ロケールが同じロケールのコピーではない場合です。
 
 ### <a name="remarks"></a>解説
 

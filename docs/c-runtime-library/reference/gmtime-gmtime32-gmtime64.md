@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234108"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
@@ -63,9 +63,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>戻り値
 
-型 [tm](../../c-runtime-library/standard-types.md) 構造体へのポインター。 返される構造体のフィールドには、 *sourcetime*引数の評価値が現地時刻ではなく UTC で格納されます。 構造体の各フィールドの型は**int**で、次のようになります。
+型 [tm](../../c-runtime-library/standard-types.md) 構造体へのポインター。 返される構造体のフィールドには、 *sourcetime*引数の評価値が現地時刻ではなく UTC で格納されます。 構造体の各フィールドは **`int`** 、次のように型になります。
 
-|フィールド|説明|
+|フィールド|[説明]|
 |-|-|
 |**tm_sec**|秒後 (0-59)。|
 |**tm_min**|分後 (0-59)。|
@@ -96,9 +96,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> また\<は time .h>|
+|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> または \<time.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

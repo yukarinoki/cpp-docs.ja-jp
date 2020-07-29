@@ -6,16 +6,16 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234095"
 ---
 # <a name="isinf"></a>isinf
 
-浮動小数点値が無限であるかどうかを判断します。
+浮動小数点値が無限大であるかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,23 +37,23 @@ inline bool isinf(
 
 ## <a name="return-value"></a>戻り値
 
-**isinf** 0 以外の値を返します (**true** C++ コードで) 場合、引数*x*正または負の無限大します。 **isinf** 0 を返します (**false** C++ コードで) 場合は、引数が無限または NAN です。 通常、ある両方の浮動小数点値は、有限と見なされます。
+**isinf** **`true`** 引数*x*が正または負の無限大の場合、isinf は (C++ コードでは) 0 以外の値を返します。 引数が有限または NAN の場合、 **isinf**は 0 ( **`false`** C++ コード内) を返します。 法線と subnormal の両方の浮動小数点値は、有限と見なされます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**isinf** C、C++ としてコンパイルする場合は、インライン テンプレートの関数としてコンパイルすると、マクロは、します。
+**isinf**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインラインテンプレート関数です。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
 |**isinf**|\<math.h>|\<math.h> または \<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

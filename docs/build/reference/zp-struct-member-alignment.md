@@ -11,57 +11,57 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315912"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234303"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (構造体メンバーの配置)
 
-メモリに構造体のメンバーをパックする方法を制御し、モジュール内のすべての構造の同じパッキングを指定します。
+構造体のメンバーをメモリにパックする方法を制御し、モジュール内のすべての構造体に対して同じパッキングを指定します。
 
 ## <a name="syntax"></a>構文
 
-> **/Zp**[**1**|**2**|**4**|**8**|**16**]
+> **`/Zp`**[**`1`**|**`2`**|**`4`**|**`8`**|**`16`**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Zp**_n_オプションは各構造体メンバーを格納する場所をコンパイラに指示します。 コンパイラはメンバーの種類のサイズのどちらか小さい方である境界を 1 つ目の後にメンバーを格納または*n*-バイト境界。
+オプションは、 **`/ZpN`** 各構造体メンバーを格納する場所をコンパイラに指示します。 コンパイラは、メンバー型のサイズまたは*N*バイトの境界のいずれか小さい方の境界上にある最初のメンバーの後にメンバーを格納します。
 
-パッキングの使用可能な値は、次の表で説明します。
+次の表で、使用可能なパッキング値について説明します。
 
 |/Zp 引数|効果|
 |-|-|
-|1|構造体は、1 バイト境界でパックします。 同じ **/Zp**します。|
-|2|構造体を 2 バイト境界でパックします。|
-|4|構造体は、4 バイト境界でパックします。|
-|8|8 バイト境界 (x86、ARM、および ARM64 の既定値) の構造体にパックします。|
-|16| 16 バイト境界 (x64 用の既定値) の構造体にパックします。|
+|1|構造体を1バイト境界でパックします。 と同じ **`/Zp`** です。|
+|2|構造体を2バイト境界でパックします。|
+|4|構造体を4バイト境界でパックします。|
+|8|構造体を8バイト境界でパックします (x86、ARM、および ARM64 の既定値)。|
+|16| 構造体を16バイト境界でパックします (x64 の既定値)。|
 
-特定のアラインメント要件がない限り、このオプションを使用しないでください。
+特定のアラインメント要件がない場合は、このオプションを使用しないでください。
 
 > [!WARNING]
-> Windows SDK の C++ ヘッダーが設定され、想定 **、/zp8 です**梱包を内部的にします。 メモリの破損が生じる場合、 **/Zp** Windows SDK のヘッダー内で設定を変更します。 ヘッダーは、いずれかが影響を受けません **/Zp**オプションをコマンドラインで設定します。
+> Windows SDK セットの C++ ヘッダーは、内部的にパッキングを想定し **`/Zp8`** ます。 **`/Zp`** Windows SDK ヘッダー内で設定が変更された場合、メモリの破損が発生する可能性があります。 ヘッダーは、 **`/Zp`** コマンドラインで設定したオプションの影響を受けません。
 
-使用することも[パック](../../preprocessor/pack.md)制御構造のパッキングにします。 アラインメントの詳細については、次のトピックを参照してください。
+また、を使用して、 [`pack`](../../preprocessor/pack.md) 構造のパッキングを制御することもできます。 アラインメントの詳細については、次のトピックを参照してください。
 
-- [align](../../cpp/align-cpp.md)
+- [`align`](../../cpp/align-cpp.md)
 
-- [__alignof 演算子](../../cpp/alignof-operator.md)
+- [`alignof` 演算子](../../cpp/alignof-operator.md)
 
-- [__unaligned](../../cpp/unaligned.md)
+- [`__unaligned`](../../cpp/unaligned.md)
 
-- [/ALIGN (セクションの配置)](align-section-alignment.md)
+- [`/ALIGN`(セクションの配置)](align-section-alignment.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **コード生成**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コード生成**] プロパティページを選択します。
 
-1. 変更、**構造体メンバーのアラインメント**プロパティ。
+1. **構造体メンバーのアラインメント**プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -69,5 +69,5 @@ ms.locfileid: "62315912"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラ オプション](compiler-options.md) \
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラオプション](compiler-options.md) \
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

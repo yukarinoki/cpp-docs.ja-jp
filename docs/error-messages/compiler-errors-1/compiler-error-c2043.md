@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2043
 ms.assetid: 6cc829f3-c6ea-43ae-8a3f-303ecf6c7dc6
-ms.openlocfilehash: c46f5d361165881e48e6425ff6f5b7b55c00d9c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d39831bfcdbb79810548336ee2cb6c90b197f449
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208007"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225593"
 ---
 # <a name="compiler-error-c2043"></a>コンパイラ エラー C2043
 
 'break' が正しくありません。
 
-[break](../../cpp/break-statement-cpp.md) は、 `do`、 `for`、 `while`、または `switch` ステートメント内でのみ有効です。
+[Break](../../cpp/break-statement-cpp.md)は、、、 **`do`** **`for`** **`while`** 、またはステートメント内でのみ有効です **`switch`** 。

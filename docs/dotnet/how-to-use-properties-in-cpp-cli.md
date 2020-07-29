@@ -1,24 +1,24 @@
 ---
-title: '方法: プロパティを使用して、c++/cli CLI'
+title: '方法: C++/CLI でプロパティを使用する'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225671"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>方法: プロパティを使用して、c++/cli CLI
+# <a name="how-to-use-properties-in-ccli"></a>方法: C++/CLI でプロパティを使用する
 
-この記事では、c++ のプロパティを使用する方法を示しています。/cli CLI。
+この記事では、C++/CLI でプロパティを使用する方法について説明します。
 
-## <a name="basic-properties"></a>基本プロパティ
+## <a name="basic-properties"></a>基本的な性質
 
-基本プロパティ: だけを割り当てるし、プライベート データ メンバーを取得する、明示的に get を定義およびプロパティのデータ型だけを指定するときに、コンパイラが自動的に提供するためのアクセサー関数を設定する必要はありません。 このコードでは、基本的なプロパティを示しています。
+基本プロパティ (プライベートデータメンバーを割り当てて取得するだけのプロパティ) では、get および set アクセサー関数を明示的に定義する必要はありません。これは、プロパティのデータ型のみが指定された場合に、コンパイラがそれらを自動的に提供するためです。 このコードは、基本的なプロパティを示しています。
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>静的プロパティ
 
-このコード サンプルでは、宣言および静的プロパティを使用する方法を示します。  静的プロパティは、そのクラスの静的メンバーにのみアクセスできます。
+このコードサンプルでは、静的プロパティを宣言して使用する方法を示します。  静的プロパティは、そのクラスの静的メンバーにのみアクセスできます。
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -86,11 +86,11 @@ int main() {
 
 インデックス付きプロパティは、通常、添字演算子を使用してアクセスされるデータ構造を公開します。
 
-使用する場合は、既定のインデックス付きプロパティがデータ構造は、クラス名を参照するだけでアクセスできるユーザー定義のインデックス付きプロパティを使用する場合は、データ構造にアクセスするプロパティ名を指定する必要があります。
+既定のインデックス付きプロパティを使用する場合は、クラス名を参照するだけでデータ構造にアクセスできますが、ユーザー定義のインデックス付きプロパティを使用する場合は、データ構造にアクセスするためのプロパティ名を指定する必要があります。
 
-記述されたインデクサーを使用する方法についてはC#を参照してください[方法。使用、C#インデクサー (C +/cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)します。
+C# で記述されたインデクサーを使用する方法については、「[方法: C# インデクサーを使用する (C++/cli)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)」を参照してください。
 
-このコード サンプルでは、既定値とユーザー定義のインデックス付きプロパティを使用する方法を示します。
+このコードサンプルでは、既定のインデックス付きプロパティとユーザー定義のインデックス付きプロパティを使用する方法を示します。
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-次のサンプルを使用して既定のインデクサーを呼び出す方法を示しています、`this`ポインター。
+次のサンプルでは、ポインターを使用して既定のインデクサーを呼び出す方法を示し **`this`** ます。
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-このサンプルは、使用する方法を示します<xref:System.Reflection.DefaultMemberAttribute>を既定のインデクサーを指定します。
+このサンプルでは、を使用し <xref:System.Reflection.DefaultMemberAttribute> て既定のインデクサーを指定する方法を示します。
 
 ```cpp
 // specify_default_indexer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-次の例では、前の例で作成されたメタデータを消費します。
+次のサンプルでは、前の例で作成したメタデータを使用します。
 
 ```cpp
 // consume_default_indexer.cpp
@@ -211,7 +211,7 @@ int main() {
 
 ## <a name="virtual-properties"></a>仮想プロパティ
 
-このコード サンプルでは、宣言および仮想のプロパティを使用する方法を示します。
+このコードサンプルでは、仮想プロパティを宣言して使用する方法を示します。
 
 ```cpp
 // mcppv2_property_4.cpp
@@ -257,11 +257,11 @@ int main() {
 43
 ```
 
-## <a name="abstract-and-sealed-properties"></a>Abstract および sealed プロパティ
+## <a name="abstract-and-sealed-properties"></a>抽象プロパティと sealed プロパティ
 
-[抽象](../extensions/abstract-cpp-component-extensions.md)と[シール](../extensions/sealed-cpp-component-extensions.md)キーワードは、ECMA で有効と指定されたC++、microsoft の/CLI 仕様C++コンパイラ、ことはできませんに指定しても、単純なプロパティでの非 trivial プロパティのプロパティの宣言。
+[Abstract](../extensions/abstract-cpp-component-extensions.md)キーワードと[sealed](../extensions/sealed-cpp-component-extensions.md)キーワードは、ECMA C++/cli 仕様の中で有効として指定されていますが、Microsoft C++ コンパイラでは、自明なプロパティや、自明でないプロパティのプロパティ宣言では指定できません。
 
-Sealed または抽象プロパティを宣言するには、重要なプロパティを定義し、指定する必要があります、`abstract`または`sealed`キーワードを get と set アクセサー関数。
+Sealed プロパティまたは abstract プロパティを宣言するには、単純なプロパティを定義してから **`abstract`** 、 **`sealed`** get および set アクセサー関数でまたはキーワードを指定する必要があります。
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>多次元プロパティ
 
-多次元プロパティを使用すると、パラメーターの非標準の数を取得するプロパティのアクセサー メソッドを定義します。
+多次元プロパティを使用して、標準以外の数のパラメーターを受け取るプロパティアクセサーメソッドを定義できます。
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -368,9 +368,9 @@ int main() {
 1.1
 ```
 
-## <a name="overloading-property-accessors"></a>プロパティ アクセサーをオーバー ロード
+## <a name="overloading-property-accessors"></a>プロパティアクセサーのオーバーロード
 
-次の例では、インデックス付きプロパティをオーバー ロードする方法を示します。
+次の例は、インデックス付きプロパティをオーバーロードする方法を示しています。
 
 ```cpp
 // mcppv2_property_6.cpp
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[プロパティ](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

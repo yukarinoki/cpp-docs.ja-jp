@@ -48,19 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079996"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234251"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 コンソールから書式化されたデータを読み出します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)」を参照してください。
 
 > [!NOTE]
-> Visual Studio 2015 では、`printf` および `scanf` の関数ファミリが**inline**として宣言され、`<stdio.h>` と `<conio.h>` のヘッダーに移動されました。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「[ビジュアルC++の変更履歴 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
+> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -120,12 +120,12 @@ int _cwscanf_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cscanf**、 **_cscanf_l**|\<conio.h>|
 |**_cwscanf**、 **_cwscanf_l**|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

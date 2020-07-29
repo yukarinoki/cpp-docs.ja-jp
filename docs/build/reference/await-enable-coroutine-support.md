@@ -9,24 +9,24 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223929"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (コルーチン サポートを有効にする)
 
 コルーチンのコンパイラサポートを有効にするには、 **/await**コンパイラオプションを使用します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 > /await
 
 ## <a name="remarks"></a>解説
 
-**/Await**コンパイラオプションを使用すると、C++ コルーチン、キーワード**co_await**、 **co_yield**、および**co_return**のコンパイラサポートが有効になります。 このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、 [Visual Studio チームのブログ](https://devblogs.microsoft.com/cppblog/category/coroutine/)を参照してください。 コルーチン standard 提案の詳細については、「 [N4628 Working Draft」、「コルーチン用の C++ 拡張機能の技術仕様](https://wg21.link/n4628)」を参照してください。
+**/Await**コンパイラオプションを使用すると、C++ コルーチン、キーワード、、およびのコンパイラサポートが有効になり **`co_await`** **`co_yield`** **`co_return`** ます。 このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、 [Visual Studio チームのブログ](https://devblogs.microsoft.com/cppblog/category/coroutine/)を参照してください。 コルーチン standard 提案の詳細については、「 [N4628 Working Draft」、「コルーチン用の C++ 拡張機能の技術仕様](https://wg21.link/n4628)」を参照してください。
 
 **/Await**オプションは、Visual Studio 2015 以降で使用できます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "86373698"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> ) をご覧ください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 

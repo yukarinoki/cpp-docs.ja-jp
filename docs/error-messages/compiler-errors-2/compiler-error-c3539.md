@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 813da5a2fd79c191df731937e58100d749f8690c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761531"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223409"
 ---
 # <a name="compiler-error-c3539"></a>コンパイラ エラー C3539
 
 ' type ': テンプレート引数に ' auto ' を含む型を指定することはできません
 
-指定されたテンプレート引数の型に `auto` キーワードの使用を含めることはできません。
+指定されたテンプレート引数の型にキーワードの使用を含めることはできません **`auto`** 。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. `auto` キーワードを使用して、テンプレート引数を指定しないでください。
+1. テンプレート引数は、キーワードを使用して指定しないでください **`auto`** 。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3539 が生成されます。
 
@@ -38,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [auto キーワード](../../cpp/auto-keyword.md)

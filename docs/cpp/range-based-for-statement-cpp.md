@@ -2,12 +2,12 @@
 title: 範囲ベースの for ステートメント (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188351"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223617"
 ---
 # <a name="range-based-for-statement-c"></a>範囲ベースの for ステートメント (C++)
 
@@ -15,18 +15,16 @@ ms.locfileid: "80188351"
 
 ## <a name="syntax"></a>構文
 
-```
-for ( for-range-declaration : expression )
-   statement
-```
+> **`for (`***範囲内の宣言* **`:`***式***`)`**\
+&emsp;*ステートメント*
 
 ## <a name="remarks"></a>解説
 
-範囲ベース**の for**ステートメントを使用して、"範囲" を通じて実行する必要があるループを構築します。これは、反復処理できるものとして定義C++されます。たとえば、`std::vector`、または `begin()` と `end()`によって範囲が定義されているその他の標準ライブラリシーケンスです。 `for-range-declaration` 部分で宣言されている名前は for ステートメントに**対し**てローカルであり、`expression` または `statement`で再宣言することはできません。 [Auto](../cpp/auto-cpp.md)キーワードは、ステートメントの `for-range-declaration` 部分で優先されることに注意してください。
+範囲ベースのステートメントを使用して、範囲を **`for`** 通じて実行*range*する必要があるループを構築します。これは、、などの反復処理可能なものとして定義され `std::vector` ます。また、範囲がとで定義されているその他の C++ 標準ライブラリシーケンスとして定義され `begin()` `end()` ます。 部分で宣言されている名前 `for-range-declaration` は、ステートメントに対してローカルで **`for`** あり、またはで再宣言することはできません `expression` `statement` 。 キーワードは、 [`auto`](../cpp/auto-cpp.md) ステートメントの部分で優先されることに注意して `for-range-declaration` ください。
 
-**Visual Studio 2017 の新方法:** 範囲ベースの for ループでは、begin () と end () が同じ型のオブジェクトを返す必要がなくなりました。 これにより、end() が、Ranges-V3 範囲で定義されている範囲で使用されるような sentinel オブジェクトを返すことができます。 詳細については、「[Generalizing the Range-Based For Loop](https://wg21.link/p0184r0)」 (範囲ベースの for loop の汎用化) と「[range-v3 library on GitHub](https://github.com/ericniebler/range-v3)」 (GitHub 上の range-v3 ライブラリ) を参照してください。
+**Visual Studio 2017 の新方法:** 範囲ベース **`for`** のループでは、が `begin()` `end()` 同じ型のオブジェクトを返す必要がなくなりました。 これにより、は、 `end()` 範囲-V3 の提案で定義されている範囲によって使用されるなど、sentinel オブジェクトを返すことができます。 詳細については、「[範囲ベースの `For` ループの一般化](https://wg21.link/p0184r0)」と、 [GitHub の範囲-v3 ライブラリ](https://github.com/ericniebler/range-v3)を参照してください。
 
-このコードは、範囲ベース**の for**ループを使用して、配列とベクターを反復処理する方法を示しています。
+このコードは、範囲ベースの **`for`** ループを使用して配列とベクターを反復処理する方法を示しています。
 
 ```cpp
 // range-based-for.cpp
@@ -96,9 +94,9 @@ end of integer array test
 end of vector test
 ```
 
-範囲**ベースの for ループは**、これらのいずれかの `statement` が実行されると終了します。つまり、 [break](../cpp/break-statement-cpp.md)、 [return](../cpp/return-statement-cpp.md)、または、範囲ベース**の for**ループの外側のラベル付きステートメントへの[移動](../cpp/goto-statement-cpp.md)です。 範囲ベース**の for**ループ内の[continue](../cpp/continue-statement-cpp.md)ステートメントは、現在のイテレーションのみを終了します。
+範囲ベース **`for`** のループは、の、、 `statement` [`break`](../cpp/break-statement-cpp.md) またはが、 [`return`](../cpp/return-statement-cpp.md) [`goto`](../cpp/goto-statement-cpp.md) 範囲ベースのループの外側のラベル付きステートメントに対して実行 **`for`** されると終了します。 [`continue`](../cpp/continue-statement-cpp.md)範囲ベースのループ内のステートメントは、 **`for`** 現在のイテレーションのみを終了します。
 
-範囲ベースのについては、次**の**点に注意してください。
+範囲ベースについては、次の点に注意してください **`for`** 。
 
 - 自動的に配列を認識します。
 
@@ -106,11 +104,11 @@ end of vector test
 
 - それ以外については `begin()` および `end()` の引数依存の参照を使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[auto](../cpp/auto-cpp.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
 [繰り返しステートメント](../cpp/iteration-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[while ステートメント (C++)](../cpp/while-statement-cpp.md)<br/>
-[do-while ステートメント (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[for ステートメント (C++)](../cpp/for-statement-cpp.md)
+[`while` ステートメント (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while` ステートメント (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for` ステートメント (C++)](../cpp/for-statement-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: クラスを構成します。
+title: CComMultiThreadModelNoCS クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 4d41ffcfccbd7ef65ed86df79bffec1209a88cd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: beb5cd1e13de1a10546f28d4a7eb98e45b6e9af1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224267"
 ---
-# <a name="ccommultithreadmodelnocs-class"></a>クラスを構成します。
+# <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS クラス
 
-`CComMultiThreadModelNoCS`には、クリティカル セクションのロックやロック解除機能を使用せずに、変数の値をインクリメントおよびデクリメントするためのスレッド セーフなメソッドが用意されています。
+`CComMultiThreadModelNoCS`クリティカルセクションのロックまたはロック解除機能を使用せずに、変数の値をインクリメントおよびデクリメントするためのスレッドセーフなメソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,37 +35,37 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CCom マルチスレッドモデルNoCS::オートクリティカルセクション](#autocriticalsection)|クラス[CComFake クリティカルセクションを参照します](../../atl/reference/ccomfakecriticalsection-class.md)。|
-|[CCom マルチスレッドモデルNoCS::クリティカルセクション](#criticalsection)|クラス`CComFakeCriticalSection`を参照します。|
-|[を使用します。](#threadmodelnocs)|クラス`CComMultiThreadModelNoCS`を参照します。|
+|[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)クラスを参照します。|
+|[CComMultiThreadModelNoCS:: CriticalSection](#criticalsection)|参照クラス `CComFakeCriticalSection` 。|
+|[CComMultiThreadModelNoCS:: ThreadModelNoCS](#threadmodelnocs)|参照クラス `CComMultiThreadModelNoCS` 。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CCom マルチスレッドモデルNoCS::D](#decrement)|(静的)指定した変数の値をスレッド セーフな方法でデクリメントします。|
-|[CCom マルチスレッドモデルNoCS::インクリメント](#increment)|(静的)スレッド セーフな方法で、指定した変数の値をインクリメントします。|
+|[CComMultiThreadModelNoCS::D ecrement](#decrement)|雑音指定された変数の値をスレッドセーフな方法でデクリメントします。|
+|[CComMultiThreadModelNoCS:: Increment](#increment)|雑音指定された変数の値をスレッドセーフな方法でインクリメントします。|
 
 ## <a name="remarks"></a>解説
 
-`CComMultiThreadModelNoCS`は、変数をインクリメントおよびデクリメントするためのスレッド セーフメソッドを提供するという点で[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)に似ています。 ただし、 を使用してクリティカル セクション`CComMultiThreadModelNoCS`クラスを参照すると`Lock`、`Unlock`メソッドは何も実行しません。
+`CComMultiThreadModelNoCS`は、変数をインクリメントおよびデクリメントするためのスレッドセーフメソッドを提供するという点で、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)に似ています。 ただし、を使用してクリティカルセクションクラスを参照する場合、 `CComMultiThreadModelNoCS` やなどのメソッド `Lock` `Unlock` は何も行いません。
 
-通常は`CComMultiThreadModelNoCS``ThreadModelNoCS`**、typedef**名を使用します。 この**タイプ定義**は、 `CComMultiThreadModelNoCS`、`CComMultiThreadModel`および[CCom シングルスレッドモデル](../../atl/reference/ccomsinglethreadmodel-class.md)で定義されています。
+通常は、と `CComMultiThreadModelNoCS` いう名前を使用し `ThreadModelNoCS` **`typedef`** ます。 これ **`typedef`** は `CComMultiThreadModelNoCS` 、、、および CComSingleThreadModel で定義されて `CComMultiThreadModel` います。 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)
 
 > [!NOTE]
-> グローバル**な型定義**名[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)および[CComGlobals スレッドモデルは](atl-typedefs.md#ccomglobalsthreadmodel)参照`CComMultiThreadModelNoCS`しません。
+> グローバル **`typedef`** 名[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)と[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)は参照しません `CComMultiThreadModelNoCS` 。
 
-に加えて`ThreadModelNoCS`、 `CComMultiThreadModelNoCS` `AutoCriticalSection`および`CriticalSection`を定義します。 これらの後者の 2 つの**typedef**名は、クリティカル セクションの取得と解放に関連付けられた空のメソッドを提供する[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。
+に加え `ThreadModelNoCS` て、は `CComMultiThreadModelNoCS` およびを定義し `AutoCriticalSection` `CriticalSection` ます。 これらの後者の2つの **`typedef`** 名前は、 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。これは、クリティカルセクションの取得と解放に関連付けられた空のメソッドを提供します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CCom マルチスレッドモデルNoCS::オートクリティカルセクション
+## <a name="ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection
 
-を使用`CComMultiThreadModelNoCS`する場合 **、typedef**名`AutoCriticalSection`はクラス[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。
+を使用する場合 `CComMultiThreadModelNoCS` 、 **`typedef`** 名前は `AutoCriticalSection` クラス[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。
 
 ```
 typedef CComFakeCriticalSection AutoCriticalSection;
@@ -73,25 +73,25 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>解説
 
-クリティカル`CComFakeCriticalSection`セクションを提供しないため、そのメソッドは何も実行しません。
+`CComFakeCriticalSection`はクリティカルセクションを提供しないため、メソッドは何も行いません。
 
-[の](../../atl/reference/ccommultithreadmodel-class.md)[定義も含](../../atl/reference/ccomsinglethreadmodel-class.md)まれています`AutoCriticalSection`。 スレッド モデル クラスと、 で参照されるクリティカル セクション クラスの関係を次`AutoCriticalSection`の表に示します。
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)と[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)には、の定義も含まれて `AutoCriticalSection` います。 次の表は、スレッドモデルクラスと、によって参照されるクリティカルセクションクラスとの関係を示してい `AutoCriticalSection` ます。
 
-|で定義されたクラス|参照されるクラス|
+|クラスの定義|参照されるクラス|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-また`AutoCriticalSection`、**タイプ定義**名の[CriticalSection](#criticalsection)を使用することもできます。 CRT スタートアップ`AutoCriticalSection`コードを削除する場合は、グローバル オブジェクトまたは静的クラス メンバーで指定しないでください。
+に加え `AutoCriticalSection` て、CriticalSection という名前を使用することもでき **`typedef`** ます。 [CriticalSection](#criticalsection) `AutoCriticalSection`CRT スタートアップコードを削除する場合は、グローバルオブジェクトまたは静的クラスメンバーにを指定しないでください。
 
 ### <a name="example"></a>例
 
-[「CCom マルチスレッドモデル::オートクリティカルセクション](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
+「 [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
 
-## <a name="ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CCom マルチスレッドモデルNoCS::クリティカルセクション
+## <a name="ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS:: CriticalSection
 
-を使用`CComMultiThreadModelNoCS`する場合 **、typedef**名`CriticalSection`はクラス[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。
+を使用する場合 `CComMultiThreadModelNoCS` 、 **`typedef`** 名前は `CriticalSection` クラス[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)を参照します。
 
 ```
 typedef CComFakeCriticalSection CriticalSection;
@@ -99,25 +99,25 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>解説
 
-クリティカル`CComFakeCriticalSection`セクションを提供しないため、そのメソッドは何も実行しません。
+`CComFakeCriticalSection`はクリティカルセクションを提供しないため、メソッドは何も行いません。
 
-[の](../../atl/reference/ccommultithreadmodel-class.md)[定義も含](../../atl/reference/ccomsinglethreadmodel-class.md)まれています`CriticalSection`。 スレッド モデル クラスと、 で参照されるクリティカル セクション クラスの関係を次`CriticalSection`の表に示します。
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)と[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)には、の定義も含まれて `CriticalSection` います。 次の表は、スレッドモデルクラスと、によって参照されるクリティカルセクションクラスとの関係を示してい `CriticalSection` ます。
 
-|で定義されたクラス|参照されるクラス|
+|クラスの定義|参照されるクラス|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-に加えて`CriticalSection`、 **typedef**名`AutoCriticalSection`を使用できます。 CRT スタートアップ`AutoCriticalSection`コードを削除する場合は、グローバル オブジェクトまたは静的クラス メンバーで指定しないでください。
+に加え `CriticalSection` て、という名前を使用することもでき **`typedef`** `AutoCriticalSection` ます。 `AutoCriticalSection`CRT スタートアップコードを削除する場合は、グローバルオブジェクトまたは静的クラスメンバーにを指定しないでください。
 
 ### <a name="example"></a>例
 
-[「CCom マルチスレッドモデル::オートクリティカルセクション](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
+「 [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
 
-## <a name="ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CCom マルチスレッドモデルNoCS::D
+## <a name="ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::D ecrement
 
-この静的関数は *、Win32*関数[InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)を呼び出し、p が指す変数の値をデクリメントします。
+この静的関数は、Win32 関数[InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)を呼び出します。これにより、 *p*が指す変数の値が減少します。
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -125,20 +125,20 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-[in]デクリメントされる変数へのポインター。
+*irtran-p*<br/>
+からデクリメントする変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-デクリメントの結果が 0 の場合は`Decrement`、0 を返します。 デクリメントの結果が 0 以外の場合、戻り値も 0 以外ですが、減分の結果と等しくない可能性があります。
+デクリメントの結果が0の場合、は `Decrement` 0 を返します。 デクリメントの結果が0以外の場合、戻り値も0以外になりますが、デクリメントの結果と一致しない可能性があります。
 
 ### <a name="remarks"></a>解説
 
-**InterlockedDecrement**は、複数のスレッドがこの変数を同時に使用するのを防ぎます。
+**InterlockedDecrement**を使用すると、複数のスレッドがこの変数を同時に使用することを防ぐことができます。
 
-## <a name="ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CCom マルチスレッドモデルNoCS::インクリメント
+## <a name="ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS:: Increment
 
-この静的関数は *、Win32*関数[InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)を呼び出し、p が指す変数の値をインクリメントします。
+この静的関数は、Win32 関数[InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)を呼び出します。これにより、 *p*が指す変数の値がインクリメントされます。
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -146,20 +146,20 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-[in]インクリメントされる変数へのポインター。
+*irtran-p*<br/>
+からインクリメントする変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-増分の結果が 0 の場合 **、Increment**は 0 を返します。 増分の結果が 0 以外の場合、戻り値も 0 以外の値になりますが、増分の結果と等しくない可能性があります。
+インクリメントの結果が0の場合、 **increment**は0を返します。 インクリメントの結果が0以外の場合、戻り値も0以外になりますが、インクリメントの結果と一致しない可能性があります。
 
 ### <a name="remarks"></a>解説
 
-**InterlockedIncrement**は、複数のスレッドがこの変数を同時に使用できないようにします。
+**InterlockedIncrement**を使用すると、複数のスレッドがこの変数を同時に使用することを防ぐことができます。
 
-## <a name="ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>を使用します。
+## <a name="ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS:: ThreadModelNoCS
 
-を使用`CComMultiThreadModelNoCS`する場合 **、typedef** `ThreadModelNoCS`名`CComMultiThreadModelNoCS`は 単に を参照します。
+を使用する場合 `CComMultiThreadModelNoCS` 、名前は単にを **`typedef`** 参照し `ThreadModelNoCS` `CComMultiThreadModelNoCS` ます。
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -167,23 +167,23 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="remarks"></a>解説
 
-[の](../../atl/reference/ccommultithreadmodel-class.md)[定義も含](../../atl/reference/ccomsinglethreadmodel-class.md)まれています`ThreadModelNoCS`。 スレッド モデル クラスと によって参照されるクラスの関係を次の表に`ThreadModelNoCS`示します。
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)と[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)には、の定義も含まれて `ThreadModelNoCS` います。 次の表は、スレッドモデルクラスとによって参照されるクラスの関係を示してい `ThreadModelNoCS` ます。
 
-|で定義されたクラス|参照されるクラス|
+|クラスの定義|参照されるクラス|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComMultiThreadModelNoCS`|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
 
-`ThreadModelNoCS`の`CComMultiThreadModelNoCS`定義は、 と と`CComMultiThreadModel``CComSingleThreadModel`の対称性を提供します。 たとえば、次の**typedef**`CComMultiThreadModel::AutoCriticalSection`を宣言したサンプル コードを考えます。
+のの定義は、とと対称であることに注意して `ThreadModelNoCS` `CComMultiThreadModelNoCS` `CComMultiThreadModel` `CComSingleThreadModel` ください。 たとえば、のサンプルコードが次のように宣言されているとし `CComMultiThreadModel::AutoCriticalSection` **`typedef`** ます。
 
 [!code-cpp[NVC_ATL_COM#37](../../atl/codesnippet/cpp/ccommultithreadmodelnocs-class_1.h)]
 
-に指定されたクラス`ThreadModel`(など`CComMultiThreadModelNoCS`) に`_ThreadModel`関係なく、それに応じて解決されます。
+に対して指定されたクラス (など) に関係なく `ThreadModel` `CComMultiThreadModelNoCS` 、は `_ThreadModel` それに応じて解決します。
 
 ### <a name="example"></a>例
 
-[「CCom マルチスレッドモデル::オートクリティカルセクション](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
+「 [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

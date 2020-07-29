@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507067"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223825"
 ---
-# <a name="std-specify-language-standard-version"></a>/std (言語の標準バージョンの指定)
+# <a name="std-specify-language-standard-version"></a>`/std`(言語の標準バージョンの指定)
 
 指定したバージョンの C++ 言語標準でサポートされる C++ 言語機能を有効にします。
 
@@ -29,9 +29,9 @@ ms.locfileid: "84507067"
 
 既定のオプションでは、 **`/std:c++14`** MSVC コンパイラによって実装された c++ 14 の機能のセットが有効になります。 このオプションを使用すると、言語標準のより新しいバージョンで変更された機能または新しい機能に対するコンパイラと標準ライブラリのサポートが無効になります。 以前のリリースの MSVC コンパイラで既に実装されている C++ 17 の一部の機能を無効にすることはできません。 Visual Studio 2015 Update 2 で使用可能な機能に対して既に依存関係を取得しているユーザーの重大な変更を回避するために、これらの機能 **`/std:c++14`** はオプションが指定されている場合は有効のままになります。
 
-- [かっこ付き初期化リストがある auto の規則](https://wg21.link/n3922)
+- [かっこ付きを `auto` 使用したの規則](https://wg21.link/n3922)
 
-- [テンプレートのテンプレート パラメーターの typename](https://wg21.link/n4051)
+- [`typename`テンプレートテンプレートのパラメーター](https://wg21.link/n4051)
 
 - [トライグラフの削除](https://wg21.link/n4086)
 

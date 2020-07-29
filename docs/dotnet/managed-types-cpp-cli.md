@@ -17,22 +17,22 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152775"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225606"
 ---
 # <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
 
-Visual C では、共通言語ランタイムの機能のサポートを提供し、利点、およびランタイムの制限を マネージ型を使用して .NET 機能へのアクセスを許可します。
+Visual C++ を使用すると、共通言語ランタイムの機能をサポートするマネージ型を使用して .NET 機能にアクセスでき、ランタイムの利点と制限が適用されます。
 
-## <a name="main_functions"></a> マネージ型と main 関数
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>マネージ型と main 関数
 
-使用して、アプリケーションの書き込み時に **/clr**の引数、 **main()** 関数をマネージ型にすることはできません。
+を使用してアプリケーションを作成する場合 **`/clr`** 、 **main ()** 関数の引数をマネージ型にすることはできません。
 
-適切な署名の例を示します。
+適切な署名の例を次に示します。
 
 ```cpp
 // managed_types_and_main.cpp
@@ -40,37 +40,37 @@ Visual C では、共通言語ランタイムの機能のサポートを提供�
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> C++ ネイティブ型に対応する .NET framework
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework C++ ネイティブ型に相当します。
 
-次の表は、定義済みの型のエイリアスである組み込みの Visual C 型のキーワードで、**システム**名前空間。
+次の表は、**システム**名前空間の定義済みの型のエイリアスである組み込み Visual C++ 型のキーワードを示しています。
 
-|C++ のビジュアルの種類|.NET Framework 型|
+|Visual C++ の種類|.NET Framework 型|
 |-----------------------|-------------------------|
-|**void**|<xref:System.Void?displayProperty=nameWithType>|
-|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
-|**signed char** |<xref:System.SByte?displayProperty=nameWithType>|
-|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
-|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
-|**short**と**signed short**|<xref:System.Int16?displayProperty=nameWithType>|
-|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**int**、 **signed int**、**long**、および**signed long**|<xref:System.Int32?displayProperty=nameWithType>|
-|**符号なし int**と**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**_ _int64**と **_ _int64 の署名**|<xref:System.Int64?displayProperty=nameWithType>|
-|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
-|**float**|<xref:System.Single?displayProperty=nameWithType>|
-|**double**と**long double**|<xref:System.Double?displayProperty=nameWithType>|
+|**`void`**|<xref:System.Void?displayProperty=nameWithType>|
+|**`bool`**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**`signed char`** |<xref:System.SByte?displayProperty=nameWithType>|
+|**`unsigned char`**|<xref:System.Byte?displayProperty=nameWithType>|
+|**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
+|**`short`** および **`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
+|**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**`int`**、 **`signed int`** 、 **`long`** 、および**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`unsigned int`** および **`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**`__int64`** および **`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
+|**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**`float`**|<xref:System.Single?displayProperty=nameWithType>|
+|**`double`** および **`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
-既定の符号付きまたは符号なしにするコンパイラ オプションの詳細については**char**を参照してください[/J (既定の char 型は符号付き)](../build/reference/j-default-char-type-is-unsigned.md)します。
+コンパイラオプションの既定値をまたはに設定する方法の詳細につい **`signed char`** **`unsigned char`** ては、「 [ `/J` (既定 **`char`** の型は **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md)」を参照してください。
 
-## <a name="version_issues"></a> ネイティブ型に入れ子になった値の型のバージョンの問題
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>ネイティブ型で入れ子になっている値型のバージョンの問題
 
-クライアント アセンブリをビルドするために使用する署名 (厳密な名前) アセンブリのコンポーネントを検討してください。 コンポーネントには、ネイティブの共用体、クラス、または配列のメンバーの種類として、クライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンでは、サイズまたは値型のレイアウトを変更する場合、クライアントが再コンパイルする必要があります。
+クライアントアセンブリを構築するために使用される署名済みの (厳密な名前の) アセンブリコンポーネントを考えてみます。 コンポーネントには、ネイティブ共用体、クラス、または配列のメンバーの型としてクライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンで値の型のサイズまたはレイアウトが変更された場合は、クライアントを再コンパイルする必要があります。
 
-キー ファイルを作成[sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`)。
+[sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) () を使用してキーキーを作成 `sn -k mykey.snk` します。
 
 ### <a name="example"></a>例
 
-次の例は、コンポーネントです。
+コンポーネントの例を次に示します。
 
 ```cpp
 // nested_value_types.cpp
@@ -89,7 +89,7 @@ public value struct S {
 
 ### <a name="example"></a>例
 
-このサンプルでは、クライアントです。
+このサンプルは、クライアントです。
 
 ```cpp
 // nested_value_types_2.cpp
@@ -123,13 +123,13 @@ S.i = 10
 S.i = 11
 ```
 
-### <a name="comments"></a>コメント
+### <a name="comments"></a>説明
 
-ただし、する別のメンバーを追加する場合`struct S`nested_value_types.cpp で (たとえば、 `double d;`) と、クライアントを再コンパイルしなくても、コンポーネントを再コンパイル、ハンドルされない例外になります (型の<xref:System.IO.FileLoadException?displayProperty=fullName>)。
+ただし、別のメンバーを `struct S` nested_value_types .cpp (など) に追加し、クライアントを `double d;` 再コンパイルせずにコンポーネントを再コンパイルした場合、結果はハンドルされない例外 (型) になり <xref:System.IO.FileLoadException?displayProperty=fullName> ます。
 
-## <a name="test_equality"></a>方法: 等しいかどうかをテストします。
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>方法: 等しいかどうかをテストする
 
-次の例では、c++ マネージ拡張を使用して等しいかどうかのテストはハンドルの参照先に基づいています。
+次の例では、Managed Extensions for C++ を使用する等しいかどうかのテストは、ハンドルが参照している内容に基づいています。
 
 ### <a name="example"></a>例
 
@@ -145,38 +145,38 @@ bool Test1() {
 }
 ```
 
-このプログラムの IL では、戻り値が op_Equality への呼び出しを使用して実装されることを示します。
+このプログラムの IL は、op_Equality の呼び出しを使用して戻り値が実装されていることを示しています。
 
 ```MSIL
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a>方法: 診断し、アセンブリの互換性の問題を修正
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>方法: アセンブリの互換性の問題を診断および修正する
 
-このトピックでは、コンパイル時に参照されるアセンブリのバージョンは、実行時に参照されるアセンブリのバージョンと一致しないときに生じると、問題を回避する方法。
+このトピックでは、コンパイル時に参照されるアセンブリのバージョンが、実行時に参照されるアセンブリのバージョンと一致しない場合に発生する可能性があることと、この問題を回避する方法について説明します。
 
-その他のアセンブリを参照するアセンブリをコンパイルすると、`#using`構文。 、コンパイル時にこれらのアセンブリは、コンパイラによってアクセスします。 これらのアセンブリからの情報は、最適化の決定に使用されます。
+アセンブリがコンパイルされると、他のアセンブリが構文で参照される可能性があり `#using` ます。 コンパイル中に、これらのアセンブリはコンパイラによってアクセスされます。 これらのアセンブリからの情報は、最適化に関する決定を行うために使用されます。
 
-ただし、参照アセンブリが変更され、再コンパイルし、それに依存する参照元のアセンブリを再コンパイルしないで、アセンブリが可能性がありますいない互換性のあるものです。 有効だった最適化処理を行う最初できないアセンブリの新しいバージョンに対して適切です。 これらの非互換性による、さまざまなのランタイム エラーが発生する可能性があります。 このような場合に生成される特定の例外はありません。 実行時に、エラーを報告する方法は、問題の原因となったコードの変更の性質によって異なります。
+ただし、参照されたアセンブリを変更して再コンパイルした場合、それに依存している参照元のアセンブリを再コンパイルしないと、アセンブリに互換性がない可能性があります。 最初に有効であった最適化の決定は、新しいアセンブリバージョンに対して正しくない可能性があります。 これらの非互換性のために、さまざまなランタイムエラーが発生する可能性があります。 このような場合に生成される特定の例外はありません。 実行時にエラーが報告される方法は、問題の原因となったコードの変更の性質によって異なります。
 
-アプリケーション全体が、製品のリリース版の再構築する限り、これらのエラーは、最終的な運用環境のコードで問題をしないでください。 これらの問題を回避することにより、正式なバージョン番号では、パブリックにリリースされているアセンブリをマークする必要があります。 詳細については、「[アセンブリのバージョン管理](/dotnet/framework/app-domains/assembly-versioning)」を参照してください。
+製品のリリース版に対してアプリケーション全体が再構築されている限り、これらのエラーは最終的な運用コードでは問題にならないようにしてください。 パブリックにリリースされるアセンブリは、正式なバージョン番号でマークする必要があります。これにより、これらの問題が回避されます。 詳細については、「[アセンブリのバージョン管理](/dotnet/framework/app-domains/assembly-versioning)」を参照してください。
 
-### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>診断と非互換性エラーを修正
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>非互換性エラーの診断と修正
 
-1. ランタイムの例外や、別のアセンブリを参照しているコードで発生するその他のエラー条件が発生し、その他の原因がある場合、古いアセンブリを扱って可能性があります。
+1. 別のアセンブリを参照するコードで発生するランタイム例外またはその他のエラー条件が発生し、その他の原因が特定されない場合は、古いアセンブリを処理している可能性があります。
 
-1. 最初に、分離し、例外またはその他のエラー状態を再現します。 期限切れの例外のために発生する問題を再現可能なことがあります。
+1. まず、例外またはその他のエラー状態を特定し、再現します。 古い例外が原因で発生する問題は、再現できます。
 
-1. アプリケーションで参照されるアセンブリのタイムスタンプを確認します。
+1. アプリケーションで参照されているアセンブリのタイムスタンプを確認します。
 
-1. 参照先アセンブリのタイムスタンプが、アプリケーションの最後のコンパイルのタイムスタンプより後の場合は、アプリケーションが期限切れです。 このような場合、最新のアセンブリを使用してアプリケーションを再コンパイルし、必要なコード変更を行います。
+1. 参照されたアセンブリのタイムスタンプがアプリケーションの前回のコンパイルのタイムスタンプよりも後である場合、アプリケーションは最新ではありません。 このような場合は、最新のアセンブリを使用してアプリケーションを再コンパイルし、コードを変更する必要があります。
 
-1. アプリケーションを再実行で問題を再現して、例外が発生しないことを確認する手順を実行します。
+1. アプリケーションを再実行し、問題を再現する手順を実行して、例外が発生していないことを確認します。
 
 ### <a name="example"></a>例
 
-次のプログラムでは、メソッドのアクセシビリティを削減し、再コンパイルしなくても、別のアセンブリには、そのメソッドにアクセスしようとして問題を示しています。 コンパイルしてみてください`changeaccess.cpp`最初。 これは、参照アセンブリが変更されます。 コンパイルし、`referencing.cpp`します。 コンパイルは成功します。 次に、呼び出されたメソッドのアクセシビリティを削減します。 再コンパイル`changeaccess.cpp`フラグ`/DCHANGE_ACCESS`します。 これにより、メソッド、プライベートではなく、保護されているため、合法的に呼び出すになったことができます。 再コンパイルしなくても`referencing.exe`アプリケーションを再実行します。 例外<xref:System.MethodAccessException>になります。
+次のプログラムは、メソッドのアクセシビリティを減らし、再コンパイルせずに別のアセンブリのメソッドにアクセスしようとすることで、この問題を示しています。 最初にコンパイルしてみてください `changeaccess.cpp` 。 これは、変更される参照アセンブリです。 次に、をコンパイル `referencing.cpp` します。 コンパイルは成功します。 ここで、呼び出されたメソッドのアクセシビリティを下げます。 `changeaccess.cpp`フラグを使用して再コンパイル `/DCHANGE_ACCESS` します。 これにより、メソッドはプライベートではなく、保護されるため、合法的に呼び出すことができます。 再コンパイルせず `referencing.exe` に、アプリケーションを再実行します。 例外 <xref:System.MethodAccessException> が発生します。
 
 ```cpp
 // changeaccess.cpp
@@ -229,7 +229,7 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [他の .NET 言語との相互運用性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>
-[マネージド型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
+[マネージ型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
 [#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)

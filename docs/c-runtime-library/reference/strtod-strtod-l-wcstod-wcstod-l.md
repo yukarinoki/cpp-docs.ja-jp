@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233978"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -106,9 +106,9 @@ NULL で終わる変換対象の文字列。
 
 このリターンコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-各関数は、入力文字列の*Strsource*を**double**に変換します。 **Strtod**関数は、 *strsource*を倍精度値に変換します。 **strtod**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 この文字は、終端の null 文字である場合があります。 **wcstod**は**strtod**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列*Strsource*をに変換し **`double`** ます。 **Strtod**関数は、 *strsource*を倍精度値に変換します。 **strtod**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 この文字は、終端の null 文字である場合があります。 **wcstod**は**strtod**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -210,7 +210,7 @@ string = 10110134932
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [文字列から数値への関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
