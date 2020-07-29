@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221953"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -83,7 +83,7 @@ long double ceill(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**ceil**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ceil**は常に**倍精度浮動小数点数**を取得して返します。
+C++ ではオーバーロードが可能であるため、型または型を受け取る**ceil**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **ceil**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

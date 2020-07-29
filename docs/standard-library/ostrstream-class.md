@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: b52ba70607a5214a6aa28f04cdded0b19a56b2f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222226"
 ---
 # <a name="ostrstream-class"></a>ostrstream クラス
 
@@ -38,7 +38,7 @@ class ostrstream : public ostream
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[ostrstream](#ostrstream)|`ostrstream` 型のオブジェクトを構築します。|
 
@@ -46,18 +46,18 @@ class ostrstream : public ostream
 
 |メンバー関数|説明|
 |-|-|
-|[凍結](#freeze)|ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。|
+|[あせん](#freeze)|ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。|
 |[pcount](#pcount)|被制御シーケンスに書き込まれる要素の数を返します。|
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
-|[Str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
+|[引数](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<strstream>
+**ヘッダー:**\<strstream>
 
 **名前空間:** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>オストストリーム::フリーズ
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream:: freeze
 
 ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。
 
@@ -68,17 +68,17 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>パラメーター
 
 *_Freezeit*\
-ストリームを凍結するかどうかを示す**bool。**
+**`bool`** ストリームを固定するかどうかを示す。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は[rdbuf](#rdbuf) -> [のフリーズ](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit)* を呼び出します。
+このメンバー関数は、 [rdbuf](#rdbuf)  ->  [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*) を呼び出します。
 
 ### <a name="example"></a>例
 
-を使用する例については、 [strstream::freeze](../standard-library/strstreambuf-class.md#freeze)を参照`freeze`してください。
+の使用例については、「 [strstream:: freeze](../standard-library/strstreambuf-class.md#freeze) 」を参照してください `freeze` 。
 
-## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>オストストリーム::オストストリーム
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream:: ostrstream
 
 `ostrstream` 型のオブジェクトを構築します。
 
@@ -92,10 +92,10 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 バッファーです。
 
-*カウント*\
+*数*\
 バッファーのサイズ (バイト単位)。
 
 *_Mode*\
@@ -103,13 +103,13 @@ ostrstream(char* ptr,
 
 ### <a name="remarks"></a>解説
 
-両方のコンストラクターは、 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**)`sb`を呼び出して基本クラス[を](../standard-library/strstreambuf-class.md)初期化します。 最初のコンストラクターも、`sb`を呼`strstreambuf`び出して初期化します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
+どちらのコンストラクターも、 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、を `sb` 呼び出すことによっても初期化し `strstreambuf` ます。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
 
-- `_Mode`  &  **ios_base::app**== 0`ptr`の場合、要素の配列の最初の`count`要素を指定し、コンストラクタ`strstreambuf`が`ptr`呼`count`び`ptr`出す ( , ) 。
+- `_Mode`  &  **Ios_base:: app**= = 0 の場合は、 `ptr` 要素の配列の最初の要素を指定する必要があり、 `count` コンストラクターは `strstreambuf` ( `ptr` , `count` ,) を呼び出し `ptr` ます。
 
-- それ以外`ptr`の`ptr`場合は、最初の要素が によって指定される C 文字列を含む count 要素の配列の最初の`strstreambuf`要素`ptr`を`count`指定`ptr` + `strlen`し`ptr`、コンストラクターが呼び出す ( , , ( ) 。
+- それ以外の場合、は、 `ptr` 最初の要素がによって指定された C 文字列を含む count 要素の最初の要素を指定する必要があり `ptr` ます。また、コンストラクターは `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )) を呼び出します。
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>オストストリーム::pカウント
+## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream::p 数
 
 被制御シーケンスに書き込まれる要素の数を返します。
 
@@ -123,13 +123,13 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は[、rdbuf](#rdbuf) -> [の pcount](../standard-library/strstreambuf-class.md#pcount)を返します。
+このメンバー関数は、 [rdbuf](#rdbuf)  ->  [pcount](../standard-library/strstreambuf-class.md#pcount)を返します。
 
 ### <a name="example"></a>例
 
 `pcount` の使用例は、[strstream::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>オストストリーム::rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream:: rdbuf
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインターを返します。
 
@@ -143,13 +143,13 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、格納された型`pointer`のストリーム バッファーのアドレスを[strstreambuf](../standard-library/strstreambuf-class.md)に返します。
+このメンバー関数は、型の格納されているストリームバッファーのアドレスを `pointer` [strstreambuf](../standard-library/strstreambuf-class.md)に返します。
 
 ### <a name="example"></a>例
 
 `rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="ostrstreamstr"></a><a name="str"></a>オストストリーム::str
+## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream:: str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。
 
@@ -163,15 +163,15 @@ char *str();
 
 ### <a name="remarks"></a>解説
 
-メンバ関数は[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)を返します。
+このメンバー関数は、 [rdbuf](#rdbuf)  ->  [str](../standard-library/strstreambuf-class.md#str)を返します。
 
 ### <a name="example"></a>例
 
-を使用するサンプルについては、 [strstream::str](../standard-library/strstreambuf-class.md#str)を参照`str`してください。
+を使用するサンプルについては、「 [strstream:: str](../standard-library/strstreambuf-class.md#str) 」を参照してください `str` 。
 
 ## <a name="see-also"></a>関連項目
 
-[オストリーム](../standard-library/ostream-typedefs.md#ostream)\
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

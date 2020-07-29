@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221888"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 パスの格納場所。
 
 *maxlen*\
-文字数でのパスの最大長: **_getcwd**の場合は**char** 、 **_wgetcwd**の場合は**wchar_t** 。
+文字数でのパスの最大長 **`char`** : **_getcwd**の場合は、 **`wchar_t`** **_wgetcwd**の場合は。
 
 ## <a name="return-value"></a>戻り値
 
@@ -82,7 +82,7 @@ wchar_t *_wgetcwd(
 
 **_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全なパスを取得し、*バッファー*に格納します。 Integer 引数*maxlen*は、パスの最大長を指定します。 パスの長さ (終端の null 文字を含む) が*maxlen*を超えると、エラーが発生します。 *Buffer*引数には**NULL**を指定できます。パスを格納するために、少なくともサイズが*maxlen* (必要な場合にのみ) のバッファーが**malloc**を使用して自動的に割り当てられます。 このバッファーは、後で**free**を呼び出して、 **_getcwd**の戻り値 (割り当てられたバッファーへのポインター) を渡すことによって解放できます。
 
-**_getcwd**は、現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列は円記号 (`\`) で終わります。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
+**_getcwd**は、現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列は円記号 () で終わり `\` ます。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
 
 **_wgetcwd**は **_getcwd**のワイド文字バージョンです。**_wgetcwd**の*バッファー*引数と戻り値はワイド文字列です。 **_wgetcwd**と **_getcwd**は同じように動作します。
 
@@ -98,7 +98,7 @@ wchar_t *_wgetcwd(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> または \<wchar.h>|

@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221446"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 
-適用可能なランタイムは、*フレンド アセンブリ*言語機能により、名前空間スコープ、または 1 つまたは複数のクライアント アセンブリまたは .netmodule がアクセスできるアセンブリ コンポーネント内のグローバル スコープにある型です。
+適用可能なランタイムの場合、*フレンドアセンブリ*言語機能を使用すると、アセンブリコンポーネント内の名前空間スコープまたはグローバルスコープにある型が、1つ以上のクライアントアセンブリまたは netmodule にアクセスできるようになります。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
 **解説**
 
-(この言語機能はすべてのランタイムでないサポート)。
+(この言語機能は、すべてのランタイムでサポートされているわけではありません)。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
 **解説**
 
-(この言語機能は Windows ランタイムでないサポート)。
+(Windows ランタイムでは、この言語機能はサポートされていません。)
 
 ### <a name="requirements"></a>必要条件
 
@@ -35,29 +35,29 @@ ms.locfileid: "65447305"
 
 **解説**
 
-#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>アセンブリ コンポーネントの名前空間のスコープまたはグローバル スコープにある型にクライアント アセンブリ、または .netmodule にアクセスできるようにするには
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>アセンブリコンポーネント内の名前空間スコープまたはグローバルスコープで型をクライアントアセンブリまたは .netmodule にアクセスできるようにするには
 
-1. コンポーネントでは、アセンブリ属性を指定<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>、クライアント アセンブリまたは名前空間スコープ、またはコンポーネント内のグローバル スコープにある型にアクセスする .netmodule の名前を渡します。  追加の属性を指定することで、複数のクライアント アセンブリまたは .netmodule を指定できます。
+1. コンポーネントでアセンブリの属性を指定し、コンポーネントの名前 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 空間スコープまたはグローバルスコープの型にアクセスするクライアントアセンブリまたは .netmodule の名前を渡します。  追加の属性を指定することによって、複数のクライアントアセンブリまたは. netmodule を指定できます。
 
-1. クライアント アセンブリまたはコンポーネントのアセンブリを使用して参照するときに、.netmodule `#using`、渡す、`as_friend`属性。  指定した場合、`as_friend`属性が指定されていないアセンブリを`InternalsVisibleToAttribute`、名前空間スコープ、またはコンポーネント内のグローバル スコープでの型にアクセスしようとする場合、ランタイム例外がスローされます。
+1. クライアントアセンブリまたは .netmodule で、を使用してコンポーネントアセンブリを参照する場合は、 `#using` 属性を渡し **`as_friend`** ます。  **`as_friend`** を指定しないアセンブリの属性を指定すると `InternalsVisibleToAttribute` 、コンポーネントの名前空間スコープまたはグローバルスコープで型にアクセスしようとすると、ランタイム例外がスローされます。
 
-アセンブリを格納している場合、ビルド エラーが発生、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>属性が厳密な名前が使用するクライアント アセンブリがない、`as_friend`属性します。
+属性を含むアセンブリに厳密な名前がなくて <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> も、属性を使用するクライアントアセンブリでは、ビルドエラーが発生 **`as_friend`** します。
 
-名前空間のスコープとグローバル スコープの種類は、クライアント アセンブリ、または .netmodule にわかっていますされますが、メンバーのアクセシビリティは引き続き有効です。  たとえば、プライベート メンバーにアクセスすることはできません。
+名前空間スコープとグローバルスコープの型はクライアントアセンブリまたは .netmodule で認識されますが、メンバーアクセシビリティは引き続き有効です。  たとえば、プライベートメンバーにアクセスすることはできません。
 
-アセンブリ内のすべての型へのアクセスを明示的に付与する必要があります。  たとえば、アセンブリ C がアクセスできないすべての種類にアセンブリ A でアセンブリ C がアセンブリ B を参照し、アセンブリ B はアセンブリ A のすべての型へのアクセスを持つ場合
+アセンブリ内のすべての型へのアクセスは、明示的に許可する必要があります。  たとえば、アセンブリ c がアセンブリ B を参照し、アセンブリ B がアセンブリ A 内のすべての型にアクセスできる場合、アセンブリ C はアセンブリ A 内のすべての型にアクセスできません。
 
-署名する方法についてに厳密な名前を付与する方法: アセンブリは、Microsoft を使用して構築されたC++コンパイラを参照してください[厳密な名前のアセンブリ (アセンブリ署名) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+署名方法 (Microsoft C++ コンパイラを使用してビルドされるアセンブリ) に署名する方法については、「厳密な名前のアセンブリ[(アセンブリ署名) (C++/cli](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md))」を参照してください。
 
-フレンド アセンブリの機能を使用する代わりに、使用することができます<xref:System.Security.Permissions.StrongNameIdentityPermission>個々 の型へのアクセスを制限します。
+Friend アセンブリ機能を使用する代わりに、を使用して <xref:System.Security.Permissions.StrongNameIdentityPermission> 個々の型へのアクセスを制限することもできます。
 
 ### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/clr**
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
-次のコード例では、コンポーネントの種類にアクセスできるクライアント アセンブリを指定するコンポーネントを定義します。
+コンポーネントの型にアクセスできるクライアントアセンブリを指定するコンポーネントを定義するコード例を次に示します。
 
 ```cpp
 // friend_assemblies.cpp
@@ -75,7 +75,7 @@ public:
 };
 ```
 
-次のコード例では、コンポーネントでプライベート型にアクセスします。
+次のコード例では、コンポーネント内のプライベート型にアクセスします。
 
 ```cpp
 // friend_assemblies_2.cpp
@@ -92,9 +92,9 @@ int main() {
 Class1::Test_Public
 ```
 
-次のコード例では、コンポーネントを定義しますが、コンポーネントの型にアクセスできるクライアント アセンブリを指定しません。
+次のコード例では、コンポーネントを定義していますが、コンポーネント内の型にアクセスできるクライアントアセンブリを指定していません。
 
-使用して、コンポーネントがリンクされていることに注意してください。 **/opt: noref**します。 これにより、コンポーネントのメタデータは、必要でない場合にプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。
+コンポーネントが **/opt: noref**を使用してリンクされていることに注意してください。 これにより、属性が存在する場合には不要な、コンポーネントのメタデータでプライベート型が生成され `InternalsVisibleTo` ます。 詳細については、「[/OPT (最適化)](../build/reference/opt-optimizations.md)」を参照してください。
 
 ```cpp
 // friend_assemblies_3.cpp
@@ -109,7 +109,7 @@ public:
 };
 ```
 
-次のコード例では、そのプライベート型にアクセス権を与えられませんコンポーネントにプライベート型にアクセスしようとするクライアントを定義します。 ランタイムの動作のため、例外をキャッチする場合、ヘルパー関数でプライベート型にアクセスする必要がありますましょう。
+次のコード例では、プライベート型へのアクセスが許可されていないコンポーネントのプライベート型にアクセスしようとするクライアントを定義しています。 ランタイムの動作により、例外をキャッチする場合は、ヘルパー関数でプライベート型にアクセスしようとする必要があります。
 
 ```cpp
 // friend_assemblies_4.cpp
@@ -136,7 +136,7 @@ int main() {
 caught an exception
 ```
 
-次のコード例では、コンポーネントの型にアクセスできるクライアント アセンブリを指定する厳密な名前のコンポーネントを作成する方法を示します。
+次のコード例では、コンポーネント内の型にアクセスできるクライアントアセンブリを指定する厳密な名前のコンポーネントを作成する方法を示します。
 
 ```cpp
 // friend_assemblies_5.cpp
@@ -155,19 +155,19 @@ public:
 };
 ```
 
-コンポーネントがその公開キーを指定する必要がありますに注意してください。 次のコマンド キーのペアを作成し、公開キーを取得するコマンド プロンプトで、順番に実行することをお勧めします。
+コンポーネントで公開キーを指定する必要があることに注意してください。 キーペアを作成して公開キーを取得するには、コマンドプロンプトで次のコマンドを順番に実行することをお勧めします。
 
-**sn -d friend_assemblies.snk**
+**sn-d friend_assemblies .snk**
 
-**sn -k friend_assemblies.snk**
+**sn-k friend_assemblies .snk**
 
-**sn -i friend_assemblies.snk friend_assemblies.snk**
+**sn-i friend_assemblies .snk friend_assemblies .snk**
 
-**sn -pc friend_assemblies.snk key.publickey**
+**sn-pc friend_assemblies .snk**
 
-**sn-tp key.publickey**
+**sn -tp key.publickey**
 
-次のコード例では、厳密な名前のコンポーネントでプライベート型にアクセスします。
+次のコード例では、厳密な名前のコンポーネントのプライベート型にアクセスします。
 
 ```cpp
 // friend_assemblies_6.cpp

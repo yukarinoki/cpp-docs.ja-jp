@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506898"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221927"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -77,7 +77,7 @@ long double cos( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**cos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cos**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**cos**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **cos**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221368"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 
-<xref:System.String> オブジェクトの文字にアクセスして、`wchar_t*` 文字列を受け取るアンマネージ関数に対する高パフォーマンスの呼び出しを行うことができます。 メソッドは、<xref:System.String> オブジェクトの最初の文字への内部ポインターを生成します。 このポインターは、直接操作したり固定したりすることができ、通常の `wchar_t` 文字列を必要とする関数に渡すことができます。
+オブジェクトの文字にアクセスして、 <xref:System.String> 文字列を受け取るアンマネージ関数に対する高パフォーマンスの呼び出しを行うことができ `wchar_t*` ます。 メソッドは、オブジェクトの最初の文字への内部ポインターを生成し <xref:System.String> ます。 このポインターを直接操作したり、固定して、通常の文字列を必要とする関数に渡すことができ **`wchar_t`** ます。
 
 ## <a name="example"></a>例
 
-`PtrToStringChars` は、内部ポインター (`byref`とも呼ばれます) である <xref:System.Char>を返します。 そのため、ガベージコレクションの対象になります。 ネイティブ関数に渡す場合を除き、このポインターを固定する必要はありません。
+`PtrToStringChars`<xref:System.Char>内部ポインター (とも呼ばれます) であるを返し `byref` ます。 そのため、ガベージコレクションの対象になります。 ネイティブ関数に渡す場合を除き、このポインターを固定する必要はありません。
 
-次のコードについて考えてみましょう。  `ppchar` が内部ポインターであるため、固定は必要ありません。ガベージコレクターが指す文字列を移動すると、`ppchar`も更新されます。 [Pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md)を使用しない場合、コードは機能しますが、ピン留めによってパフォーマンスが低下する可能性はありません。
+次のコードについて考えてみましょう。  は内部ポインターであるため、固定は必要ありません。また、 `ppchar` ガベージコレクターが指す文字列を移動すると、も更新され `ppchar` ます。 [Pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md)を使用しない場合、コードは機能しますが、ピン留めによってパフォーマンスが低下する可能性はありません。
 
-`ppchar` をネイティブ関数に渡す場合は、固定ポインターである必要があります。ガベージコレクターは、アンマネージスタックフレーム上のポインターを更新できません。
+をネイティブ関数に渡す場合は、 `ppchar` 固定ポインターである必要があります。ガベージコレクターは、アンマネージスタックフレーム上のポインターを更新できません。
 
 ```cpp
 // PtrToStringChars.cpp
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-内部ポインターには、ネイティブC++ポインターのすべてのプロパティが含まれています。 たとえば、このメソッドを使用して、リンクされたデータ構造を調べ、1つのポインターだけを使用して挿入と削除を行うことができます。
+内部ポインターには、ネイティブ C++ ポインターのすべてのプロパティが含まれています。 たとえば、このメソッドを使用して、リンクされたデータ構造を調べ、1つのポインターだけを使用して挿入と削除を行うことができます。
 
 ```cpp
 // PtrToStringChars_3.cpp
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)
