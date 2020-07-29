@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230897"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain 関数
 
@@ -45,21 +45,21 @@ RetType call_in_appdomain(
 関数を呼び出す appdomain。
 
 *voidFunc*<br/>
-N 個のパラメーターを受け取る `void` 関数へのポインター (0 < = N < = 15)。
+**`void`** N 個のパラメーターを受け取る関数へのポインター (0 <= n <= 15)。
 
 *非 Voidfunc*<br/>
-N 個のパラメーターを受け取る非`void` 関数へのポインター (0 < = N < = 15)。
+N 個のパラメーターを受け取る非関数へのポインター **`void`** (0 <= N <= 15)。
 
 *arg1...argN*<br/>
-0 ~ 15 個のパラメーターを `voidFunc` に渡すか、他の appdomain で `nonvoidFunc` します。
+`voidFunc`他の appdomain に渡される 0 ~ 15 個 `nonvoidFunc` のパラメーター。
 
 ## <a name="return-value"></a>戻り値
 
-指定されたアプリケーションドメインで `voidFunc` または `nonvoidFunc` を実行した結果。
+`voidFunc` `nonvoidFunc` 指定したアプリケーションドメインでまたはを実行した結果。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`call_in_appdomain` に渡される関数の引数を CLR 型にすることはできません。
+に渡される関数の引数を `call_in_appdomain` CLR 型にすることはできません。
 
 ## <a name="example"></a>例
 
@@ -116,8 +116,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダーファイル**\<msclr\appdomain.h >
+**ヘッダー ファイル** \<msclr\appdomain.h>
 
 **名前空間**msclr

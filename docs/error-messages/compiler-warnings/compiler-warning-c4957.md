@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ada10b5989b714ec4c75a24de1bbb101e1f51ee6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230767"
 ---
 # <a name="compiler-warning-c4957"></a>コンパイラの警告 C4957
 
@@ -21,9 +21,9 @@ ms.locfileid: "80164909"
 
 キャストにより、検証不可能なイメージが生成されます。
 
-安全なキャストもあります (ユーザー定義の変換をトリガーする `static_cast` 、 `const_cast`など)。 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
+一部のキャストは安全です (たとえば、 **`static_cast`** ユーザー定義の変換とをトリガーするなど **`const_cast`** )。 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
 
-詳細については、「[ピュアおよび検証C++可能なコード (/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)」を参照してください。
+詳細については、「[純粋なコードと検証可能なコード (C++/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)」を参照してください。
 
 **/Clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50f97c4360080f1271d9decc3b3460c06f3fec0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230819"
 ---
 # <a name="compiler-error-c3556"></a>コンパイラ エラー C3556
 
 > '*expression*': ' decltype ' の引数が正しくありません
 
-コンパイラは `decltype(`*expression*`)` 型指定子への引数である式の型を推測できません。
+コンパイラは、 `decltype(` *式*の `)` 型指定子への引数である式の型を推測できません。
 
 ## <a name="example"></a>例
 
-次のコード例では、 `myFunction` がオーバーロードされているため、コンパイラは `myFunction` 引数の型を推定できません。 この問題を解決するには、`static_cast` を使用して、`decltype` 式で指定するオーバーロードされた特定の関数へのポインターのインスタンスを作成します。
+次のコード例では、 `myFunction` がオーバーロードされているため、コンパイラは `myFunction` 引数の型を推定できません。 この問題を解決するには、を使用して、 **`static_cast`** 式で指定するオーバーロードされた特定の関数へのポインターのインスタンスを作成し **`decltype`** ます。
 
 ```cpp
 // C3556.cpp
