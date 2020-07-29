@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: db3a9594a77a9ada971213eaea74a9842bd96a54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9370952f503850fbc296c3df912d4a0fafe163f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179342"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227349"
 ---
 # <a name="mutable-data-members-c"></a>変更可能なデータ メンバー (C++)
 
-このキーワードは、クラスの non-static データ メンバーおよび non-const データ メンバーにのみ適用できます。 データメンバーが**mutable**と宣言されている場合は、 **const**メンバー関数からこのデータメンバーに値を割り当てることができます。
+このキーワードは、クラスの non-static データ メンバーおよび non-const データ メンバーにのみ適用できます。 データメンバーが宣言されている場合は **`mutable`** 、メンバー関数からこのデータメンバーに値を割り当てることが **`const`** できます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ mutable member-variable-declaration;
 
 ## <a name="remarks"></a>解説
 
-たとえば、次のコードはエラーなしでコンパイルされます。 `m_accessCount` は変更**可能と**して宣言されているため、`GetFlag` が const メンバー関数であっても `GetFlag` によって変更できます。
+たとえば、次のコードは、がとして宣言されているため、エラーなしでコンパイルされ `m_accessCount` **`mutable`** ます。したがって、 `GetFlag` が const メンバー関数であっても、によって変更でき `GetFlag` ます。
 
 ```cpp
 // mutable.cpp
@@ -47,6 +47,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)

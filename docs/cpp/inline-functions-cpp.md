@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: 454a727f0c002dc476e5fdab217efc3dea716e14
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d2356d7813167f3973ac2748423c6af7f0b5573b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227414"
 ---
 # <a name="inline-functions-c"></a>インライン関数 (C++)
 
@@ -67,7 +67,7 @@ int main()
 
 クラスメンバー関数は、その関数の定義に指定子が含まれていない限り、既定で外部リンケージに設定され **`inline`** ます。 前の例では、指定子を使用してこれらの関数を明示的に宣言する必要がないことを示してい **`inline`** ます。 **`inline`** 関数定義でを使用すると、インライン関数になります。 ただし、 **`inline`** その関数を呼び出した後に関数を再宣言することはできません。
 
-## <a name="inline-__inline-and-__forceinline"></a>`inline`、 `__inline`、および `__forceinline`
+## <a name="inline-__inline-and-__forceinline"></a>`inline`、`__inline`、`__forceinline`
 
 **`inline`** および指定子は、関数 **`__inline`** が呼び出される各場所に関数本体のコピーを挿入するようコンパイラに指示します。
 
@@ -157,7 +157,7 @@ private:
 
 **Microsoft 固有の仕様はここまで**
 
-**インライン**指定子の使用の詳細については、次を参照してください。
+指定子の使用方法の詳細については **`inline`** 、次を参照してください。
 
 - [インライン クラス メンバー関数](../cpp/inline-functions-cpp.md)
 
