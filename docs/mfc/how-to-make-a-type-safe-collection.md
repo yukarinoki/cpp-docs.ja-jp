@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228623"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法 : タイプ セーフなコレクションを作成する
 
@@ -63,7 +63,7 @@ Microsoft Foundation Class ライブラリには、C++ テンプレートに基�
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>非テンプレートコレクションクラスの使用
 
-MFC では、MFC バージョン1.0 で導入されたコレクションクラスもサポートされています。 これらのクラスは、テンプレートに基づいていません。 サポートされている型、、、およびのデータを格納するために使用でき `CObject*` `UINT` `DWORD` `CString` ます。 これらの定義済みコレクション (など) を使用して `CObList` 、から派生したオブジェクトのコレクションを保持でき `CObject` ます。 MFC には `UINT` 、や void ポインター (*) などのプリミティブ型を保持するための、他の定義済みコレクションも用意されて `void` います。 ただし、一般的には、より具体的なクラスとその派生クラスのオブジェクトを保持するために、独自のタイプセーフなコレクションを定義すると便利です。 テンプレートに基づいていないコレクションクラスを使用する場合は、テンプレートベースのクラスを使用するよりも作業が多くなります。
+MFC では、MFC バージョン1.0 で導入されたコレクションクラスもサポートされています。 これらのクラスは、テンプレートに基づいていません。 サポートされている型、、、およびのデータを格納するために使用でき `CObject*` `UINT` `DWORD` `CString` ます。 これらの定義済みコレクション (など) を使用して `CObList` 、から派生したオブジェクトのコレクションを保持でき `CObject` ます。 MFC には `UINT` 、や void ポインター () などのプリミティブ型を保持するための、他の定義済みコレクションも用意されて **`void*`** います。 ただし、一般的には、より具体的なクラスとその派生クラスのオブジェクトを保持するために、独自のタイプセーフなコレクションを定義すると便利です。 テンプレートに基づいていないコレクションクラスを使用する場合は、テンプレートベースのクラスを使用するよりも作業が多くなります。
 
 非テンプレートコレクションでタイプセーフなコレクションを作成するには、次の2つの方法があります。
 

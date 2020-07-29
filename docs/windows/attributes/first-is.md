@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228064"
 ---
 # <a name="first_is"></a>first_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80167018"
 
 ## <a name="remarks"></a>解説
 
-**First_is** C++属性には、 [first_is](/windows/win32/Midl/first-is) MIDL 属性と同じ機能があります。
+**First_is** C++ 属性には、 [first_is](/windows/win32/Midl/first-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -62,17 +62,17 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**対象**|**構造体**または**共用体**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`struct`** またはのフィールド **`union`** 、インターフェイスパラメーター、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
