@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914518"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234017"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 マルチ スレッド環境では、終了関数はスレッドごとに別々に管理されます。 新しいスレッドは各々、それぞれの終了関数をインストールする必要があります。 したがって、各スレッドがそれぞれの終了処理を担当します。
 
-**Terminate_function**型は EH で定義されています。ユーザー定義の終了関数へのポインターとしての H。 **void**を返す*termfunction*です。 カスタム関数*Termfunction*は引数を取らず、呼び出し元に戻らないようにする必要があります。 この場合、 [abort](abort.md)が呼び出されます。 *Termfunction*内から例外がスローされない可能性があります。
+**Terminate_function**型は EH で定義されています。ユーザー定義の終了関数へのポインターとしての H、を返す*termfunction* **`void`** 。 カスタム関数*Termfunction*は引数を取らず、呼び出し元に戻らないようにする必要があります。 この場合、 [abort](abort.md)が呼び出されます。 *Termfunction*内から例外がスローされない可能性があります。
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -75,7 +75,7 @@ typedef void ( *terminate_function )( );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 
@@ -88,7 +88,7 @@ typedef void ( *terminate_function )( );
 ## <a name="see-also"></a>関連項目
 
 [例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)<br/>
-[取り消し](abort.md)<br/>
+[を呼び出してプログラム実行を終了する際、](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [解約](terminate-crt.md)<br/>

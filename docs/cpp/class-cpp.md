@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226009"
 ---
 # <a name="class-c"></a>class (C++)
 
-Class**キーワードは**、クラス型を宣言するか、クラス型のオブジェクトを定義します。
+キーワードは、 **`class`** クラス型を宣言するか、クラス型のオブジェクトを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 テンプレートの指定 (省略可能)。 詳細については、「[テンプレート](templates-cpp.md)」を参照してください。
 
 *class*<br/>
-**Class**キーワード。
+**`class`** キーワード。
 
 *ms の宣言*<br/>
 ストレージ クラスの指定 (省略可能)。 詳細については、 [__declspec](../cpp/declspec.md)キーワードを参照してください。
@@ -50,7 +50,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 クラス メンバーのリスト。 詳細については、[クラスメンバーの概要](../cpp/class-member-overview.md)に関するトピックを参照してください。
 
 *declarators*<br/>
-クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータメンバーが**パブリック**である場合は、宣言子に初期化子リストを含めることができます。 これは、クラスよりもデータメンバーが既定で**パブリック**である構造体では一般的です。 詳細については、「[宣言子の概要](../cpp/overview-of-declarators.md)」を参照してください。
+クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータメンバーがである場合は、宣言子に初期化子リストを含めることができ **`public`** ます。 これは、クラスよりもデータメンバーが既定である構造体では一般的です **`public`** 。 詳細については、「[宣言子の概要](../cpp/overview-of-declarators.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -66,7 +66,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-/Cli およびC++ C++/cx のマネージクラスと構造体の詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
+C++/CLI および C++/CX のマネージクラスと構造体の詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -78,7 +78,6 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #include <iostream>
 #include <string>
-#define TRUE = 1
 using namespace std;
 
 class dog
@@ -141,7 +140,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

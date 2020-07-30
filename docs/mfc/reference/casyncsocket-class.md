@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195097"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 
@@ -155,7 +155,7 @@ class CAsyncSocket : public CObject
 |----------|-----------------|
 |[CAsyncSocket:: m_hSocket](#m_hsocket)|このオブジェクトにアタッチされているソケットハンドルを示し `CAsyncSocket` ます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 クラス `CAsyncSocket` は、Windows ソケット関数 API をカプセル化して、Windows ソケットを MFC と組み合わせて使用するプログラマにオブジェクト指向の抽象化を提供します。
 
@@ -224,7 +224,7 @@ virtual BOOL Accept(
 
 - WSAEWOULDBLOCK ソケットが非ブロッキングとしてマークされていて、受け入れられる接続が存在しません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このルーチンは、保留中の接続のキュー内の最初の接続を抽出し、このソケットと同じプロパティを使用して新しいソケットを作成し、 *Rconnectedsocket*にアタッチします。 保留中の接続がキューに存在しない場合、は `Accept` 0 を返し、 `GetLastError` エラーを返します。 受け入れられたソケット ( *Rconnectedsocket)* を使用して、より多くの接続を受け入れることはできません。 元のソケットは開いたままリッスンしています。
 
@@ -267,7 +267,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 
 - かかわらず WSAEINPROGRESS Windows ソケットのブロッキング操作が進行中です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、ソケットに対して呼び出される MFC コールバック通知関数を指定するために使用されます。 `AsyncSelect`は、このソケットを非ブロッキングモードに自動的に設定します。 詳細については、「 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)」を参照してください。
 
@@ -304,7 +304,7 @@ BOOL Attach(
 
 正常終了した場合は 0 以外を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソケットハンドルは、オブジェクトの[m_hSocket](#m_hsocket)データメンバーに格納されます。
 
@@ -358,7 +358,7 @@ BOOL Bind (
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このルーチンは、後続のまたはを呼び出す前に、未接続のデータグラムまたはストリームソケットで使用され `Connect` `Listen` ます。 接続要求を受け入れるには、リッスンしているサーバーソケットがポート番号を選択し、を呼び出して Windows ソケットに認識させる必要があり `Bind` ます。 `Bind`名前のないソケットにローカル名を割り当てることにより、ソケットのローカルの関連付け (ホストアドレスとポート番号) を確立します。
 
@@ -370,7 +370,7 @@ BOOL Bind (
 CAsyncSocket();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 オブジェクトを構築した後、その `Create` メンバー関数を呼び出してソケットデータ構造を作成し、そのアドレスをバインドする必要があります。 (Windows ソケット通信のサーバー側では、リッスンソケットが呼び出しで使用するソケットを作成するときに、 `Accept` そのソケットに対してを呼び出すことはありません `Create` )。
 
@@ -382,7 +382,7 @@ CAsyncSocket();
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、ソケット記述子を解放して、それ以降の参照がエラー WSAENOTSOCK で失敗するようにします。 これが基になるソケットへの最後の参照である場合、関連付けられている名前付け情報とキューに格納されたデータは破棄されます。 ソケットオブジェクトのデストラクターがを呼び出し `Close` ます。
 
@@ -454,7 +454,7 @@ BOOL Connect(
 
 - WSAEWOULDBLOCK ソケットは非ブロッキングとしてマークされており、すぐに接続を完了することはできません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソケットがバインド解除されている場合は、システムによってローカルの関連付けに一意の値が割り当てられ、ソケットはバインド済みとしてマークされます。 名前構造の address フィールドがすべてゼロの場合、 `Connect` は0を返します。 拡張されたエラー情報を取得するには、 `GetLastError` メンバー関数を呼び出します。
 
@@ -522,7 +522,7 @@ SOCK_STREAM または SOCK_DGRAM。
 
 - WSAESOCKTNOSUPPORT このアドレスファミリでは、指定されたソケットの種類がサポートされていません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `Create`[ソケット](#socket)を呼び出します。成功した場合は、 [bind](#bind)を呼び出して、ソケットを指定されたアドレスにバインドします。 次のソケットの種類がサポートされています。
 
@@ -574,7 +574,7 @@ BOOL CreateEx(
 
 [Create ()](#return-value-5)の戻り値を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [Create ()](#remarks-8)については、「解説」を参照してください。
 
@@ -603,7 +603,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 
 オブジェクトへのポインター `CAsyncSocket` `CAsyncSocket` 。 *hsocket*にアタッチされたオブジェクトがない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソケットハンドルが指定されている場合、 `CAsyncSocket` オブジェクトがハンドルにアタッチされていない場合、メンバー関数は NULL を返します。
 
@@ -619,7 +619,7 @@ static int PASCAL GetLastError();
 
 戻り値は、このスレッドで最後に実行された Windows Sockets API ルーチンのエラーコードを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 特定のメンバー関数がエラーが発生したことを示す場合は、 `GetLastError` 適切なエラーコードを取得するためにを呼び出す必要があります。 該当するエラーコードの一覧については、個々のメンバー関数の説明を参照してください。
 
@@ -669,7 +669,7 @@ BOOL GetPeerName(
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 IPv6 アドレスを処理するには、 [CAsyncSocket:: GetPeerNameEx](#getpeernameex)を使用します。
 
@@ -707,7 +707,7 @@ BOOL GetPeerNameEx(
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、IPv6 アドレスおよび古いプロトコルを処理することを除いて、 [CAsyncSocket:: GetPeerName](#getpeername)と同じです。
 
@@ -755,7 +755,7 @@ BOOL GetSockName(
 
 - WSAEINVAL ソケットは、アドレスにバインドされていません `Bind` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この呼び出しは、 `Connect` 最初のを実行せずに呼び出しが行われた場合に特に便利です `Bind` 。この呼び出しでは、システムによって設定されたローカルの関連付けを特定できる唯一の手段が提供されます。
 
@@ -795,7 +795,7 @@ BOOL GetSockNameEx(
 
 - WSAEINVAL ソケットは、アドレスにバインドされていません `Bind` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この呼び出しは[CAsyncSocket:: GetSockName](#getsockname)と同じですが、IPv6 アドレスおよび古いプロトコルを処理する点が異なります。
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 値の取得対象となるソケットオプション。
 
 *lpOptionValue*<br/>
-要求されたオプションの値が返されるバッファーへのポインター。 選択したオプションに関連付けられている値は、バッファー *lpOptionValue*で返されます。 *Lpoptionlen*が指す整数には、最初にこのバッファーのサイズをバイト単位で格納する必要があります。返されると、返される値のサイズに設定されます。 SO_LINGER の場合、これは構造体のサイズになります。 `LINGER` 他のすべてのオプションについては、オプションに応じて、BOOL または**int**のサイズになります。 オプションとそのサイズの一覧については、「解説」を参照してください。
+要求されたオプションの値が返されるバッファーへのポインター。 選択したオプションに関連付けられている値は、バッファー *lpOptionValue*で返されます。 *Lpoptionlen*が指す整数には、最初にこのバッファーのサイズをバイト単位で格納する必要があります。返されると、返される値のサイズに設定されます。 SO_LINGER の場合、これは構造体のサイズになります `LINGER` 。他のすべてのオプションについては、 **`int`** オプションに応じて BOOL またはのサイズになります。 オプションとそのサイズの一覧については、「解説」を参照してください。
 
 *lpOptionLen*<br/>
 *LpOptionValue*バッファーのサイズ (バイト単位) へのポインター。
@@ -843,7 +843,7 @@ BOOL GetSockOpt(
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `GetSockOpt`任意の型のソケットに関連付けられているソケットオプションの現在の値を任意の状態で取得し、その結果を*lpOptionValue*に格納します。 オプションは、パケットのルーティング、帯域外のデータ転送などのソケット操作に影響します。
 
@@ -856,26 +856,26 @@ BOOL GetSockOpt(
 |SO_DEBUG|BOOL|デバッグが有効になっています。|
 |SO_DONTLINGER|BOOL|True の場合、SO_LINGER オプションは無効になります。|
 |SO_DONTROUTE|BOOL|ルーティングは無効になっています。|
-|SO_ERROR|**int**|エラーの状態を取得してクリアします。|
+|SO_ERROR|**`int`**|エラーの状態を取得してクリアします。|
 |SO_KEEPALIVE|BOOL|キープアライブが送信されています。|
 |SO_LINGER|`struct LINGER`|現在の待機オプションを返します。|
 |SO_OOBINLINE|BOOL|通常のデータストリームで帯域外データを受信しています。|
 |SO_RCVBUF|INT|受信のバッファーサイズ。|
 |SO_REUSEADDR|BOOL|ソケットは、既に使用されているアドレスにバインドできます。|
-|SO_SNDBUF|**int**|送信のバッファーサイズ。|
-|SO_TYPE|**int**|ソケットの種類 (SOCK_STREAM など)。|
+|SO_SNDBUF|**`int`**|送信のバッファーサイズ。|
+|SO_TYPE|**`int`**|ソケットの種類 (SOCK_STREAM など)。|
 |TCP_NODELAY|BOOL|送信結合用の Nagle アルゴリズムを無効にします。|
 
 でサポートされていないソフトウェア配布 (BSD) のオプション `GetSockOpt` は次のとおりです。
 
 |値|Type|意味|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|低いウォーターマークを受け取ります。|
-|SO_RCVTIMEO|**int**|受信タイムアウト。|
-|SO_SNDLOWAT|**int**|低いウォーターマークを送信します。|
-|SO_SNDTIMEO|**int**|送信タイムアウト。|
+|SO_RCVLOWAT|**`int`**|低いウォーターマークを受け取ります。|
+|SO_RCVTIMEO|**`int`**|受信タイムアウト。|
+|SO_SNDLOWAT|**`int`**|低いウォーターマークを送信します。|
+|SO_SNDTIMEO|**`int`**|送信タイムアウト。|
 |IP_OPTIONS||IP ヘッダーのオプションを取得します。|
-|TCP_MAXSEG|**int**|TCP セグメントの最大サイズを取得します。|
+|TCP_MAXSEG|**`int`**|TCP セグメントの最大サイズを取得します。|
 
 `GetSockOpt`サポートされていないオプションを指定してを呼び出すと、から返される WSAENOPROTOOPT のエラーコードが発生 `GetLastError` します。
 
@@ -911,7 +911,7 @@ BOOL IOCtl(
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このルーチンは、任意の状態の任意のソケットで使用できます。 これは、プロトコルおよび通信サブシステムとは関係なく、ソケットに関連付けられている操作パラメーターを取得または取得するために使用されます。 次のコマンドがサポートされています。
 
@@ -960,7 +960,7 @@ BOOL Listen(int nConnectionBacklog = 5);
 
 - WSAEOPNOTSUPP 参照されているソケットが、操作をサポートする型ではありません `Listen` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 接続を受け入れるには、ソケットがで最初に作成され、 `Create` 着信接続のバックログがで指定され `Listen` ます。その後、接続はで受け入れられ `Accept` ます。 `Listen`接続をサポートするソケット、つまり SOCK_STREAM 型のソケットにのみ適用されます。 このソケットは "パッシブ" モードになります。このモードでは、着信接続が受信確認され、プロセスによって保留されていることが確認されます。
 
@@ -993,7 +993,7 @@ virtual void OnAccept(int nErrorCode);
 
 - Windows ソケット実装の WSAENETDOWN は、ネットワークサブシステムで障害が発生したことを検出しました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、「 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)」を参照してください。
 
@@ -1018,7 +1018,7 @@ virtual void OnClose(int nErrorCode);
 
 - WSAECONNABORTED タイムアウトまたはその他のエラーにより、接続が中止されました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、「 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)」を参照してください。
 
@@ -1065,7 +1065,7 @@ virtual void OnConnect(int nErrorCode);
 
 - WSAETIMEDOUT 接続を確立せずに接続の試行がタイムアウトしました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 > [CSocket](../../mfc/reference/csocket-class.md)では、 `OnConnect` 通知関数は呼び出されません。 接続の場合は、を呼び出すだけです `Connect` 。接続が完了すると (正常にまたはエラーが発生)、が返されます。 接続通知の処理方法は、MFC 実装の詳細です。
@@ -1093,7 +1093,7 @@ virtual void OnOutOfBandData(int nErrorCode);
 
 - Windows ソケット実装の WSAENETDOWN は、ネットワークサブシステムで障害が発生したことを検出しました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 帯域外データは、SOCK_STREAM 種類の接続されたソケットの各ペアに関連付けられている論理的に独立したチャネルです。 チャネルは、通常、緊急データを送信するために使用されます。
 
@@ -1116,7 +1116,7 @@ virtual void OnReceive(int nErrorCode);
 
 - Windows ソケット実装の WSAENETDOWN は、ネットワークサブシステムで障害が発生したことを検出しました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、「 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)」を参照してください。
 
@@ -1141,7 +1141,7 @@ virtual void OnSend(int nErrorCode);
 
 - Windows ソケット実装の WSAENETDOWN は、ネットワークサブシステムで障害が発生したことを検出しました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、「 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)」を参照してください。
 
@@ -1162,7 +1162,7 @@ void operator=(const CAsyncSocket& rSrc);
 *.Rsrc*<br/>
 既存のオブジェクトへの参照 `CAsyncSocket` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既存の `CAsyncSocket` オブジェクトを別のオブジェクトにコピーするには、この関数を呼び出し `CAsyncSocket` ます。
 
@@ -1178,7 +1178,7 @@ operator SOCKET() const;
 
 成功した場合は、ソケットオブジェクトのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ハンドルを使用すると、Windows Api を直接呼び出すことができます。
 
@@ -1236,7 +1236,7 @@ virtual int Receive(
 
 - WSAECONNRESET リモート側によって仮想回線がリセットされました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、接続されているストリームまたはデータグラムソケットに対して使用され、受信データを読み取るために使用されます。
 
@@ -1329,7 +1329,7 @@ int ReceiveFrom(
 
 - WSAECONNRESET リモート側によって仮想回線がリセットされました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、(接続されている可能性がある) ソケットで受信データを読み取り、データの送信元のアドレスをキャプチャするために使用されます。
 
@@ -1407,7 +1407,7 @@ int ReceiveFromEx(
 
 - WSAECONNRESET リモート側によって仮想回線がリセットされました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、(接続されている可能性がある) ソケットで受信データを読み取り、データの送信元のアドレスをキャプチャするために使用されます。
 
@@ -1483,7 +1483,7 @@ virtual int Send(
 
 - WSAECONNRESET リモート側によって仮想回線がリセットされました。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `Send`は、接続されているストリームまたはデータグラムソケットで送信データを書き込むために使用されます。 データグラムソケットの場合は、基になるサブネットの最大 IP パケットサイズを超えないように注意する必要があり `iMaxUdpDg` ます。これは、によって返される[WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)構造体の要素によって指定され `AfxSocketInit` ます。 データが長すぎて、基になるプロトコルを使用してアトミックに渡すことができない場合、エラー WSAEMSGSIZE はによって返され、 `GetLastError` データは送信されません。
 
@@ -1586,7 +1586,7 @@ int SendTo(
 
 - この時点では、このホストからネットワークに到達できません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SendTo`は、データグラムソケットまたはストリームソケットで使用され、ソケットで送信データを書き込むために使用されます。 データグラムソケットの場合は、基になるサブネットの最大 IP パケットサイズを超えないように注意する必要があります。これは、 `iMaxUdpDg` [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)によって入力される[WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)構造体の要素によって指定されます。 データが長すぎて、基になるプロトコルを使用してアトミックに渡すことができない場合、エラー WSAEMSGSIZE が返され、データは送信されません。
 
@@ -1676,7 +1676,7 @@ int SendToEx(
 
 - この時点では、このホストからネットワークに到達できません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、IPv6 アドレスおよび古いプロトコルを処理することを除いて、 [CAsyncSocket:: SendTo](#sendto)と同じです。
 
@@ -1736,7 +1736,7 @@ BOOL SetSockOpt(
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SetSockOpt`任意の状態のソケットに関連付けられているソケットオプションの現在の値を設定します。 オプションは複数のプロトコルレベルで存在できますが、この仕様では、最上位の "ソケット" レベルに存在するオプションのみが定義されています。 オプションは、通常のデータストリームで優先データを受信するかどうか、ソケットでブロードキャストメッセージを送信できるかどうかなど、ソケット操作に影響します。
 
@@ -1765,9 +1765,9 @@ SO_DEBUG オプションがアプリケーションによって設定されて�
 |SO_KEEPALIVE|BOOL|キープアライブを送信します。|
 |SO_LINGER|`struct LINGER`|`Close`未送信のデータが存在する場合は、を待機します。|
 |SO_OOBINLINE|BOOL|通常のデータストリームで帯域外データを受信します。|
-|SO_RCVBUF|**int**|受信のバッファーサイズを指定します。|
+|SO_RCVBUF|**`int`**|受信のバッファーサイズを指定します。|
 |SO_REUSEADDR|BOOL|既に使用されているアドレスにソケットをバインドできるようにします。 (「 [Bind](#bind)」を参照してください)。|
-|SO_SNDBUF|**int**|送信のバッファーサイズを指定します。|
+|SO_SNDBUF|**`int`**|送信のバッファーサイズを指定します。|
 |TCP_NODELAY|BOOL|送信結合用の Nagle アルゴリズムを無効にします。|
 
 でサポートされていないソフトウェア配布 (BSD) のオプション `SetSockOpt` は次のとおりです。
@@ -1775,12 +1775,12 @@ SO_DEBUG オプションがアプリケーションによって設定されて�
 |値|Type|意味|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|ソケットがリッスンしています|
-|SO_ERROR|**int**|エラーの状態を取得してクリアします。|
-|SO_RCVLOWAT|**int**|低いウォーターマークを受け取ります。|
-|SO_RCVTIMEO|**int**|[受信タイムアウト]|
-|SO_SNDLOWAT|**int**|低いウォーターマークを送信します。|
-|SO_SNDTIMEO|**int**|送信タイムアウト。|
-|SO_TYPE|**int**|ソケットの種類。|
+|SO_ERROR|**`int`**|エラーの状態を取得してクリアします。|
+|SO_RCVLOWAT|**`int`**|低いウォーターマークを受け取ります。|
+|SO_RCVTIMEO|**`int`**|[受信タイムアウト]|
+|SO_SNDLOWAT|**`int`**|低いウォーターマークを送信します。|
+|SO_SNDTIMEO|**`int`**|送信タイムアウト。|
+|SO_TYPE|**`int`**|ソケットの種類。|
 |IP_OPTIONS||IP ヘッダーのオプションフィールドを設定します。|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown
@@ -1818,7 +1818,7 @@ BOOL ShutDown(int nHow = sends);
 
 - WSAENOTSOCK 記述子はソケットではありません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `ShutDown`は、受信、転送、またはその両方を無効にするために、すべての種類のソケットで使用されます。 *Nhow*が0の場合、ソケットでの後続の受信は許可されません。 これは、下位のプロトコルレイヤーには影響しません。
 
@@ -1872,7 +1872,7 @@ BOOL Socket(
 
 正常に終了した場合は、`TRUE` を返します。それ以外の場合は、`FALSE` を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、ソケットハンドルを割り当てます。 [CAsyncSocket:: Bind](#bind)を呼び出して、指定したアドレスにソケットをバインドすることはありません。そのため、後でを呼び出して `Bind` 、ソケットを指定されたアドレスにバインドする必要があります。 [CAsyncSocket:: SetSockOpt](#setsockopt)を使用すると、ソケットオプションをバインドする前に設定できます。
 

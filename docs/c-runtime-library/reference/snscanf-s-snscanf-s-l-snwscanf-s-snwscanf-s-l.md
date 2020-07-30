@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229403"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -113,16 +113,16 @@ int __cdecl _snwscanf_s_l(
 
 *Input*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、入力文字列から調べる必要がある固定数の文字を指定できる点を除いて、 **sscanf_s**に似ています。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
+この関数は**sscanf_s**に似ていますが、入力文字列から調べる必要がある固定数の文字を指定する機能が用意されています。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
 
 バッファーサイズのパラメーターには、型フィールド文字**c**、 **c**、 **s**、 **s**、および **[** が必要です。 詳細については、「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターは、 **size_t**ではなく**unsigned**型です。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
 
 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
@@ -130,17 +130,17 @@ int __cdecl _snwscanf_s_l(
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**sntscanf_s (_d)**|**_snscanf_s**|**_snscanf_s**|**_snwscanf_s**|
+|**_sntscanf_s**|**_snscanf_s**|**_snscanf_s**|**_snwscanf_s**|
 |**_sntscanf_s_l**|**_snscanf_s_l**|**_snscanf_s_l**|**_snwscanf_s_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
-|**snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> または \<wchar.h>|
+|**_snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
+|**_snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -179,4 +179,4 @@ _snwscanf_s converted 2 fields: 15 and 12.000000
 
 ## <a name="see-also"></a>関連項目
 
-[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)<br/>
+[scanf 関数の幅指定](../../c-runtime-library/scanf-width-specification.md)<br/>

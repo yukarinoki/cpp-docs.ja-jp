@@ -6,26 +6,26 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: ef6f6f56a82cc76c2c270817ed40d15418960dc1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6697bdd296a3c71f03bc22986efa47dd586d5d9e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217910"
 ---
 # <a name="asynchronous-message-blocks"></a>非同期メッセージ ブロック
 
 エージェント ライブラリには、アプリケーション コンポーネント間でメッセージをスレッド セーフに伝達できるメッセージ ブロックの型がいくつか用意されています。 多くの場合、これらのメッセージブロックの型は、 [concurrency:: send](reference/concurrency-namespace-functions.md#send)、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)、 [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)、 [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)など、さまざまなメッセージパッシングルーチンと共に使用されます。 エージェントライブラリによって定義されるメッセージパッシングルーチンの詳細については、「[メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)」を参照してください。
 
-## <a name="top"></a> セクション
+## <a name="sections"></a><a name="top"></a>各項
 
-このトピックは、次のセクションで構成されています。
+このトピックには、次のセクションが含まれます。
 
 - [ソースとターゲット](#sources_and_targets)
 
 - [メッセージの伝達](#propagation)
 
-- [メッセージブロック型の概要](#overview)
+- [メッセージ ブロックの型の概要](#overview)
 
 - [unbounded_buffer クラス](#unbounded_buffer)
 
@@ -35,11 +35,11 @@ ms.locfileid: "77141953"
 
 - [call クラス](#call)
 
-- [transformer クラス](#transformer)
+- [トランスフォーマークラス](#transformer)
 
 - [choice クラス](#choice)
 
-- [クラスの結合と multitype_join](#join)
+- [join クラスと multitype_join クラス](#join)
 
 - [timer クラス](#timer)
 
@@ -47,15 +47,15 @@ ms.locfileid: "77141953"
 
 - [メッセージの予約](#reservation)
 
-## <a name="sources_and_targets"></a>ソースとターゲット
+## <a name="sources-and-targets"></a><a name="sources_and_targets"></a>ソースとターゲット
 
 ソースとターゲットは、メッセージ パッシングの 2 つの重要な参加要素です。 *ソース*とは、メッセージを送信する通信のエンドポイントを指します。 *ターゲット*とは、メッセージを受信する通信のエンドポイントを指します。 ソースは読み取るエンドポイントであり、ターゲットは書き込むエンドポイントであると考えることができます。 アプリケーションは、ソースとターゲットを相互に接続して、*メッセージングネットワーク*を形成します。
 
 エージェントライブラリでは、2つの抽象クラスを使用して、ソースとターゲットを表します。 [concurrency:: ISource](../../parallel/concrt/reference/isource-class.md)と[Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md)。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。 ソースおよびターゲットとして機能するメッセージ ブロックの型は、それぞれ `ISource` および `ITarget` から派生します。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="propagation"></a>メッセージの伝達
+## <a name="message-propagation"></a><a name="propagation"></a>メッセージの伝達
 
 *メッセージの伝達*は、あるコンポーネントから別のコンポーネントにメッセージを送信する操作です。 メッセージ ブロックにメッセージが提供されると、そのメッセージ ブロックはメッセージを受け入れるか、拒否するか、または延期します。 各メッセージ ブロックの型は、さまざまな方法でメッセージを格納および送信します。 たとえば、`unbounded_buffer` クラスはメッセージを無制限に格納し、`overwrite_buffer` クラスは一度に 1 つのメッセージを格納し、transformer クラスは各メッセージの変更後のバージョンを格納します。 これらのメッセージ ブロックの型については、このドキュメントの後半で詳しく説明します。
 
@@ -65,9 +65,9 @@ ms.locfileid: "77141953"
 
 アプリケーションでは、ソースとターゲットを接続することでメッセージング ネットワークを形成します。 通常、ネットワークをリンクし、`send` または `asend` を呼び出してデータをネットワークに渡します。 ソースメッセージブロックをターゲットに接続するには、 [concurrency:: ISource:: link_target](reference/isource-class.md#link_target)メソッドを呼び出します。 ソースブロックをターゲットから切断するには、 [concurrency:: ISource:: unlink_target](reference/isource-class.md#unlink_target)メソッドを呼び出します。 ソースブロックをすべてのターゲットから切断するには、 [concurrency:: ISource:: unlink_targets](reference/isource-class.md#unlink_targets)メソッドを呼び出します。 定義済みのメッセージ ブロックの型のいずれかがスコープから外れるか、破棄されると、自動的にすべてのターゲット ブロックから接続解除されます。 メッセージ ブロックの型の中には、書き込み先として使用できるターゲットの最大数が制限されているものもあります。 次のセクションでは、定義済みのメッセージ ブロックの型に適用される制限事項について説明します。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="overview"></a>メッセージブロック型の概要
+## <a name="overview-of-message-block-types"></a><a name="overview"></a>メッセージブロック型の概要
 
 次の表では、重要なメッセージ ブロックの型の役割について簡単に説明しています。
 
@@ -80,16 +80,16 @@ ms.locfileid: "77141953"
 [single_assignment](#single_assignment)<br/>
 1 回の書き込みと複数回の読み取りを行うことができるメッセージを 1 つ格納します。
 
-[発信](#call)<br/>
+[call](#call)<br/>
 メッセージを受信するときに処理を実行します。
 
 [変換](#transformer)<br/>
 データを受け取り、その処理の結果を別のターゲット ブロックに送信するときに処理を実行します。 `transformer` クラスでは、異なる入力と出力の種類を操作できます。
 
-[どれ](#choice)<br/>
+[choice](#choice)<br/>
 一連のソースから最初の使用可能なメッセージを選択します。
 
-[join とマルチタイプ join](#join)<br/>
+[join と multitype join](#join)<br/>
 一連のソースからすべてのメッセージを受信するまで待機し、別のメッセージ ブロックのために、複数のメッセージを結合して 1 つのメッセージにします。
 
 [期限](#timer)<br/>
@@ -109,21 +109,21 @@ ms.locfileid: "77141953"
 
 |メッセージ ブロックの型|伝達の種類 (ソース、ターゲット、または両方)|メッセージの順序付け (順序ありまたは順序なし)|ソース カウント|ターゲット カウント|
 |------------------------|--------------------------------------------------|-----------------------------------------------|------------------|------------------|
-|`unbounded_buffer`|両方|順序あり|制限なし|制限なし|
-|`overwrite_buffer`|両方|順序あり|制限なし|制限なし|
-|`single_assignment`|両方|順序あり|制限なし|制限なし|
-|`call`|ターゲット|順序あり|制限なし|適用外|
-|`transformer`|両方|順序あり|制限なし|1|
-|`choice`|両方|順序あり|10|1|
-|`join`|両方|順序あり|制限なし|1|
-|`multitype_join`|両方|順序あり|10|1|
-|`timer`|[ソース]|適用外|適用外|1|
+|`unbounded_buffer`|Both|注文済み|制限なし|制限なし|
+|`overwrite_buffer`|Both|注文済み|制限なし|制限なし|
+|`single_assignment`|Both|注文済み|制限なし|制限なし|
+|`call`|移行先|注文済み|制限なし|適用外|
+|`transformer`|Both|注文済み|制限なし|1|
+|`choice`|Both|注文済み|10|1|
+|`join`|Both|注文済み|制限なし|1|
+|`multitype_join`|Both|注文済み|10|1|
+|`timer`|source|適用外|適用外|1|
 
 以下のセクションでは、メッセージ ブロックの型について詳しく説明します。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="unbounded_buffer"></a>unbounded_buffer クラス
+## <a name="unbounded_buffer-class"></a><a name="unbounded_buffer"></a>unbounded_buffer クラス
 
 [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)クラスは、汎用的な非同期メッセージング構造体を表します。 このクラスでは、複数のソースが書き込むことができるメッセージ、または複数のターゲットが読み取ることができるメッセージの先入れ先出し (FIFO) のキューを格納します。 ターゲットが `unbounded_buffer` オブジェクトからメッセージを受信すると、そのメッセージはメッセージ キューから削除されます。 そのため、`unbounded_buffer` オブジェクトには複数のターゲットを設定できますが、各メッセージを受信するターゲットは 1 つだけです。 `unbounded_buffer` クラスは、複数のメッセージを別のコンポーネントに渡し、そのコンポーネントで各メッセージを受信する必要がある場合に便利です。
 
@@ -133,19 +133,19 @@ ms.locfileid: "77141953"
 
 [!code-cpp[concrt-unbounded_buffer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_1.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 334455
 ```
 
-`unbounded_buffer` クラスの使用方法を示す完全な例については、「[方法: さまざまなプロデューサー/コンシューマーパターンを実装](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `unbounded_buffer` ては、「[方法: さまざまなプロデューサー/コンシューマーパターンを実装](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="overwrite_buffer"></a>overwrite_buffer クラス
+## <a name="overwrite_buffer-class"></a><a name="overwrite_buffer"></a>overwrite_buffer クラス
 
-[Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラスは `unbounded_buffer` クラスに似ていますが、`overwrite_buffer` オブジェクトは1つのメッセージだけを格納する点が異なります。 また、ターゲットが `overwrite_buffer` オブジェクトからメッセージを受信しても、そのメッセージはバッファーから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。
+[Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラスはクラスに似て `unbounded_buffer` いますが、オブジェクトには1つのメッセージだけが格納される点が異なり `overwrite_buffer` ます。 また、ターゲットが `overwrite_buffer` オブジェクトからメッセージを受信しても、そのメッセージはバッファーから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。
 
 `overwrite_buffer` クラスは、複数のメッセージを別のコンポーネントに渡すときに、そのコンポーネントで必要になるのが最新の値のみである場合に便利です。 また、このクラスは、メッセージを複数のコンポーネントにブロードキャストする場合にも便利です。
 
@@ -155,19 +155,19 @@ ms.locfileid: "77141953"
 
 [!code-cpp[concrt-overwrite_buffer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_2.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 555555
 ```
 
-`overwrite_buffer` クラスの使用方法を示す完全な例については、「[方法: さまざまなプロデューサー/コンシューマーパターンを実装](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `overwrite_buffer` ては、「[方法: さまざまなプロデューサー/コンシューマーパターンを実装](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="single_assignment"></a>single_assignment クラス
+## <a name="single_assignment-class"></a><a name="single_assignment"></a>single_assignment クラス
 
-[Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)クラスは `overwrite_buffer` クラスに似ていますが、`single_assignment` オブジェクトを1回だけ書き込むことができる点が異なります。 `overwrite_buffer` クラスと同様に、ターゲットが `single_assignment` オブジェクトからメッセージを受信しても、そのメッセージはそのオブジェクトから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。 また、`single_assignment` クラスは、1 つのメッセージを複数のコンポーネントにブロードキャストする場合にも便利です。
+[Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)クラスはクラスに似て `overwrite_buffer` いますが、 `single_assignment` オブジェクトを1回だけ書き込むことができる点が異なります。 `overwrite_buffer` クラスと同様に、ターゲットが `single_assignment` オブジェクトからメッセージを受信しても、そのメッセージはそのオブジェクトから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。 また、`single_assignment` クラスは、1 つのメッセージを複数のコンポーネントにブロードキャストする場合にも便利です。
 
 ### <a name="example"></a>例
 
@@ -175,73 +175,73 @@ ms.locfileid: "77141953"
 
 [!code-cpp[concrt-single_assignment-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_3.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 333333
 ```
 
-`single_assignment` クラスの使用方法を示す完全な例については、「[チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)」を参照してください。
+クラスの使用方法を示す完全な例につい `single_assignment` ては、「[チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="call"></a>call クラス
+## <a name="call-class"></a><a name="call"></a>call クラス
 
 [Concurrency:: call](../../parallel/concrt/reference/call-class.md)クラスは、データを受信するときに処理関数を実行するメッセージの受信者として機能します。 この処理関数には、ラムダ式、関数オブジェクト、または関数ポインターを使用できます。 `call` オブジェクトは、メッセージを送信する他のコンポーネントに対して並列に動作するため、通常の関数呼び出しとは動作が異なります。 `call` オブジェクトがメッセージを受信したときに処理を実行していると、そのメッセージはキューに追加されます。 各 `call` オブジェクトでは、キューに配置されたメッセージを受信した順序で処理します。
 
 ### <a name="example"></a>例
 
-次の例では、`call` クラスの使用方法の基本的な構造を示します。 この例では、受信した各値をコンソールに出力する `call` オブジェクトを作成します。 その後、3 つの値を `call` オブジェクトに送信します。 `call` オブジェクトは別のスレッドでメッセージを処理するため、この例では、カウンター変数と[イベント](../../parallel/concrt/reference/event-class.md)オブジェクトを使用して、`wmain` 関数が返される前に、`call` オブジェクトがすべてのメッセージを処理するようにしています。
+次の例では、`call` クラスの使用方法の基本的な構造を示します。 この例では、受信した各値をコンソールに出力する `call` オブジェクトを作成します。 その後、3 つの値を `call` オブジェクトに送信します。 オブジェクトは `call` 別のスレッドでメッセージを処理するため、この例では、カウンター変数と[イベント](../../parallel/concrt/reference/event-class.md)オブジェクトを使用して、 `call` 関数が戻る前に、オブジェクトがすべてのメッセージを処理するようにして `wmain` います。
 
 [!code-cpp[concrt-call-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_4.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 334455
 ```
 
-`call` クラスの使用方法を示す完全な例については、「[方法: 呼び出しクラスおよびトランスフォーマークラスに処理関数を提供](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `call` ては、「[方法: 呼び出しクラスおよびトランスフォーマークラスに処理関数を提供](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="transformer"></a>トランスフォーマークラス
+## <a name="transformer-class"></a><a name="transformer"></a>トランスフォーマークラス
 
 [Concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)クラスは、メッセージの受信者として、メッセージの送信者として機能します。 `transformer` クラスは、データを受信するとユーザー定義の処理関数を実行するため、`call` クラスに似ています。 ただし、`transformer` クラスも処理関数の結果を受信側のオブジェクトに送信します。 `call` オブジェクトと同様に、`transformer` オブジェクトはメッセージを送信する他のコンポーネントに対して並列に動作します。 `transformer` オブジェクトがメッセージを受信したときに処理を実行していると、そのメッセージはキューに追加されます。 各 `transformer` オブジェクトでは、キューに配置されたメッセージを受信した順序で処理します。
 
-`transformer` クラスでは、メッセージを 1 つのターゲットに送信します。 コンストラクターの `_PTarget` パラメーターを `NULL`に設定した場合は、 [concurrency:: link_target](reference/source-block-class.md#link_target)メソッドを呼び出すことによって、後でターゲットを指定できます。
+`transformer` クラスでは、メッセージを 1 つのターゲットに送信します。 コンストラクターのパラメーターをに設定した場合は、 `_PTarget` `NULL` [concurrency:: link_target](reference/source-block-class.md#link_target)メソッドを呼び出すことによって、後でターゲットを指定できます。
 
 エージェント ライブラリに用意されている他のすべての非同期メッセージ ブロックの型とは異なり、`transformer` クラスでは異なる入力と出力の種類を操作できます。 データをある型から別の型に変換するこの機能により、`transformer` クラスは多くの同時実行ネットワークで重要なコンポーネントとなっています。 また、`transformer` オブジェクトの処理関数により詳細な並列機能を追加できます。
 
 ### <a name="example"></a>例
 
-次の例では、`transformer` クラスの使用方法の基本的な構造を示します。 この例では、`transformer` 値の出力を生成するために、`int` の各入力値に 0.33 を乗算する `double` オブジェクトを作成します。 その後、変換後の値を同じ `transformer` オブジェクトから受け取り、それらをコンソールに出力します。
+次の例では、`transformer` クラスの使用方法の基本的な構造を示します。 この例では、 `transformer` **`int`** **`double`** 出力として値を生成するために、各入力値を0.33 で乗算するオブジェクトを作成します。 その後、変換後の値を同じ `transformer` オブジェクトから受け取り、それらをコンソールに出力します。
 
 [!code-cpp[concrt-transformer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_5.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 10.8914.5218.15
 ```
 
-`transformer` クラスの使用方法を示す完全な例については、「[方法: データパイプラインでトランスフォーマーを使用](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `transformer` ては、「[方法: データパイプラインでトランスフォーマーを使用](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="choice"></a>choice クラス
+## <a name="choice-class"></a><a name="choice"></a>choice クラス
 
-[Concurrency:: choice](../../parallel/concrt/reference/choice-class.md)クラスは、一連のソースから最初に使用可能なメッセージを選択します。 `choice` クラスは、データフロー機構ではなく制御フロー機構を表します (トピック「[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」では、データフローと制御フローの違いについて説明しています)。
+[Concurrency:: choice](../../parallel/concrt/reference/choice-class.md)クラスは、一連のソースから最初に使用可能なメッセージを選択します。 クラスは、データ `choice` フロー機構ではなく制御フロー機構を表します (トピック「[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」では、データフローと制御フローの違いについて説明しています)。
 
 choice オブジェクトからの読み取りは、`WaitForMultipleObjects` パラメーターが `bWaitAll` に設定されている場合の Windows API 関数 `FALSE` の呼び出しに似ています。 ただし、`choice` クラスでは、外部同期オブジェクトではなく、イベント自体にデータをバインドします。
 
-通常、アプリケーションで制御フローを駆動するには、`choice` クラスを[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)関数と共に使用します。 さまざまな型のメッセージ バッファーの中から選択する必要がある場合は、`choice` クラスを使用します。 同じ型のメッセージ バッファーの中から選択する必要がある場合は、`single_assignment` クラスを使用します。
+通常は、クラスを `choice` [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)関数と共に使用して、アプリケーションの制御フローを駆動します。 さまざまな型のメッセージ バッファーの中から選択する必要がある場合は、`choice` クラスを使用します。 同じ型のメッセージ バッファーの中から選択する必要がある場合は、`single_assignment` クラスを使用します。
 
 ソースを `choice` オブジェクトにリンクさせる順序によって選択するメッセージを決定できるため、その順序は重要です。 たとえば、既にメッセージが格納されている複数のメッセージ バッファーを `choice` オブジェクトにリンクさせるとします。 `choice` オブジェクトによって、リンク先の最初のソースからメッセージが選択されます。 すべてのソースをリンクさせると、`choice` オブジェクトでは各ソースがメッセージを受信した順序を保持します。
 
 ### <a name="example"></a>例
 
-次の例では、`choice` クラスの使用方法の基本的な構造を示します。 この例では、 [concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice)関数を使用して、3つのメッセージブロックの中から選択する `choice` オブジェクトを作成します。 次に、さまざまなフィボナッチ数列を計算し、それぞれの結果を別個のメッセージ ブロックに格納します。 その後、最初に終了した操作に基づくメッセージをコンソールに出力します。
+次の例では、`choice` クラスの使用方法の基本的な構造を示します。 この例では、 [concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice)関数を使用し `choice` て、3つのメッセージブロックのうちの1つを選択するオブジェクトを作成します。 次に、さまざまなフィボナッチ数列を計算し、それぞれの結果を別個のメッセージ ブロックに格納します。 その後、最初に終了した操作に基づくメッセージをコンソールに出力します。
 
 [!code-cpp[concrt-choice-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_6.cpp)]
 
@@ -253,19 +253,19 @@ fib35 received its value first. Result = 9227465
 
 35<sup>番</sup>目のフィボナッチ数列を計算するタスクは、最初に完了することが保証されていないため、この例の出力は異なる場合があります。
 
-この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、フィボナッチ数を並列で計算します。 `parallel_invoke`の詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
+この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、フィボナッチ数を並列で計算します。 の詳細について `parallel_invoke` は、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-`choice` クラスの使用方法を示す完全な例については、「[方法: 完了したタスクを選択](../../parallel/concrt/how-to-select-among-completed-tasks.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `choice` ては、「[方法: 完了したタスクを選択](../../parallel/concrt/how-to-select-among-completed-tasks.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="join"></a>クラスの結合と multitype_join
+## <a name="join-and-multitype_join-classes"></a><a name="join"></a>クラスの結合と multitype_join
 
 [Concurrency:: join](../../parallel/concrt/reference/join-class.md)および[concurrency:: multitype_join](../../parallel/concrt/reference/multitype-join-class.md)クラスを使用すると、一連のソースの各メンバーがメッセージを受信するまで待機できます。 `join` クラスでは、共通のメッセージ型を持つソース オブジェクトを処理します。 `multitype_join` クラスでは、異なるメッセージ型を持つことができるソース オブジェクトを処理します。
 
 `join` オブジェクトまたは `multitype_join` オブジェクトからの読み取りは、`WaitForMultipleObjects` パラメーターが `bWaitAll` に設定されている場合の Windows API 関数 `TRUE` の呼び出しに似ています。 ただし、`choice` オブジェクトと同様に、`join` オブジェクトおよび `multitype_join` オブジェクトでは、外部同期オブジェクトではなく、イベント自体にデータをバインドするイベント機構を使用します。
 
-`join` オブジェクトから読み取ると、std::[vector](../../standard-library/vector-class.md)オブジェクトが生成されます。 `multitype_join` オブジェクトから読み取ると、std::[tuple](../../standard-library/tuple-class.md)オブジェクトが生成されます。 対応するソース バッファーと同じ順序でこれらのオブジェクトに出現する要素は、`join` オブジェクトまたは `multitype_join` オブジェクトにリンクされます。 ソース バッファーを `join` オブジェクトまたは `multitype_join` オブジェクトにリンクする順序は、結果の `vector` オブジェクトまたは `tuple` オブジェクトの要素の順序に関連するため、既存のソース バッファーを結合からリンク解除しないことをお勧めします。 そのようにすると、未定義の動作が発生する可能性があります。
+オブジェクトから読み取る `join` と、std::[vector](../../standard-library/vector-class.md)オブジェクトが生成されます。 オブジェクトから読み取る `multitype_join` と、std::[tuple](../../standard-library/tuple-class.md)オブジェクトが生成されます。 対応するソース バッファーと同じ順序でこれらのオブジェクトに出現する要素は、`join` オブジェクトまたは `multitype_join` オブジェクトにリンクされます。 ソース バッファーを `join` オブジェクトまたは `multitype_join` オブジェクトにリンクする順序は、結果の `vector` オブジェクトまたは `tuple` オブジェクトの要素の順序に関連するため、既存のソース バッファーを結合からリンク解除しないことをお勧めします。 そのようにすると、未定義の動作が発生する可能性があります。
 
 ### <a name="greedy-versus-non-greedy-joins"></a>最長一致の結合と最短一致の結合
 
@@ -275,31 +275,31 @@ fib35 received its value first. Result = 9227465
 
 ### <a name="example"></a>例
 
-次の例では、`join` クラスの使用方法の基本的な構造を示します。 この例では、 [concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join)関数を使用して、3つの `single_assignment` オブジェクトから受け取る `join` オブジェクトを作成します。 この例では、さまざまなフィボナッチ数列を計算し、それぞれの結果を別個の `single_assignment` オブジェクトに格納します。その後、`join` オブジェクトが保持している各結果をコンソールに出力します。 この例は `choice` クラスの例に似ています。ただし、`join` クラスでは、すべてのソース メッセージ ブロックがメッセージを受信するまで待機します。
+次の例では、`join` クラスの使用方法の基本的な構造を示します。 この例では、 [concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join)関数を使用し `join` て、3つのオブジェクトからを受け取るオブジェクトを作成し `single_assignment` ます。 この例では、さまざまなフィボナッチ数列を計算し、それぞれの結果を別個の `single_assignment` オブジェクトに格納します。その後、`join` オブジェクトが保持している各結果をコンソールに出力します。 この例は `choice` クラスの例に似ています。ただし、`join` クラスでは、すべてのソース メッセージ ブロックがメッセージを受信するまで待機します。
 
 [!code-cpp[concrt-join-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_7.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 ```
 
-この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、フィボナッチ数を並列で計算します。 `parallel_invoke`の詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
+この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、フィボナッチ数を並列で計算します。 の詳細について `parallel_invoke` は、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-`join` クラスの使用方法を示す完全な例については、「[方法: 完了したタスクの中から選択](../../parallel/concrt/how-to-select-among-completed-tasks.md)する」および「[チュートリアル: Join を使用してデッドロックを防ぐ](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)」を参照してください。
+クラスの使用方法を示す完全な例につい `join` ては、「[方法: 完了したタスクの中から選択](../../parallel/concrt/how-to-select-among-completed-tasks.md)する」および「[チュートリアル: Join を使用してデッドロックを防ぐ](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="timer"></a>timer クラス
+## <a name="timer-class"></a><a name="timer"></a>timer クラス
 
 Concurrency::[timer クラス](../../parallel/concrt/reference/timer-class.md)は、メッセージソースとして機能します。 `timer` オブジェクトでは、指定された時間が経過するとメッセージをターゲットに送信します。 `timer` クラスは、メッセージの送信を遅延させる必要がある場合や、定期的にメッセージを送信する場合に便利です。
 
-`timer` クラスでは、メッセージを 1 つのターゲットにのみ送信します。 コンストラクターの `_PTarget` パラメーターを `NULL`に設定した場合は、 [concurrency:: ISource:: link_target](reference/source-block-class.md#link_target)メソッドを呼び出すことによって、後でターゲットを指定できます。
+`timer` クラスでは、メッセージを 1 つのターゲットにのみ送信します。 コンストラクターのパラメーターをに設定した場合は、 `_PTarget` `NULL` [Concurrency:: ISource:: link_target](reference/source-block-class.md#link_target)メソッドを呼び出すことによって、後でターゲットを指定できます。
 
-`timer` オブジェクトには、繰り返しと非繰り返しがあります。 繰り返しタイマーを作成するには、コンストラクターを呼び出すときに `_Repeating` パラメーターに**true**を渡します。 それ以外の場合は、`_Repeating` パラメーターに**false**を渡して、非繰り返しタイマーを作成します。 タイマーが繰り返しの場合、一定の間隔で同じメッセージをターゲットに送信します。
+`timer` オブジェクトには、繰り返しと非繰り返しがあります。 繰り返しタイマーを作成するには、 **`true`** コンストラクターを呼び出すときに、パラメーターにを渡し `_Repeating` ます。 それ以外の場合は、 **`false`** パラメーターにを渡して、 `_Repeating` 繰り返しないタイマーを作成します。 タイマーが繰り返しの場合、一定の間隔で同じメッセージをターゲットに送信します。
 
-エージェント ライブラリによって、開始されていない状態の `timer` オブジェクトが作成されます。 Timer オブジェクトを開始するには、 [concurrency:: timer:: start](reference/timer-class.md#start)メソッドを呼び出します。 `timer` オブジェクトを停止するには、オブジェクトを破棄するか、 [concurrency:: timer:: stop](reference/timer-class.md#stop)メソッドを呼び出します。 繰り返しタイマーを一時停止するには、 [concurrency:: timer::p ause](reference/timer-class.md#pause)メソッドを呼び出します。
+エージェント ライブラリによって、開始されていない状態の `timer` オブジェクトが作成されます。 Timer オブジェクトを開始するには、 [concurrency:: timer:: start](reference/timer-class.md#start)メソッドを呼び出します。 オブジェクトを停止するに `timer` は、オブジェクトを破棄するか、 [concurrency:: timer:: stop](reference/timer-class.md#stop)メソッドを呼び出します。 繰り返しタイマーを一時停止するには、 [concurrency:: timer::p ause](reference/timer-class.md#pause)メソッドを呼び出します。
 
 ### <a name="example"></a>例
 
@@ -313,11 +313,11 @@ Concurrency::[timer クラス](../../parallel/concrt/reference/timer-class.md)�
 Computing fib(42)..................................................result is 267914296
 ```
 
-`timer` クラスの使用方法を示す完全な例については、「[方法: メッセージを定期的に送信](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)する」を参照してください。
+クラスの使用方法を示す完全な例につい `timer` ては、「[方法: メッセージを定期的に送信](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="filtering"></a>メッセージのフィルター処理
+## <a name="message-filtering"></a><a name="filtering"></a>メッセージのフィルター処理
 
 メッセージブロックオブジェクトを作成するときに、メッセージブロックがメッセージを受け入れるか拒否するかを決定する*フィルター関数*を指定できます。 フィルター関数は、メッセージ ブロックが特定の値のみを受信するようにする便利な方法です。
 
@@ -325,7 +325,7 @@ Computing fib(42)..................................................result is 267
 
 [!code-cpp[concrt-filter-function#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_9.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 0 2 4 6 8
@@ -342,9 +342,9 @@ bool (T const &)
 
 メッセージフィルターは、データの受信時にコンポーネントが計算を実行するデータ*フロー*プログラミングモデルをサポートします。 フィルター関数を使用してメッセージを渡すメッセージのデータフローを制御する例については、「[方法: メッセージブロックフィルターを使用](../../parallel/concrt/how-to-use-a-message-block-filter.md)する」、「[チュートリアル:](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)データフローエージェントを作成する」、および「[チュートリアル: イメージ処理ネットワークを作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)する」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="reservation"></a>メッセージの予約
+## <a name="message-reservation"></a><a name="reservation"></a>メッセージの予約
 
 メッセージの*予約*を使用すると、メッセージブロックは、後で使用するためにメッセージを予約できます。 通常、メッセージの予約を直接使用することはありません。 ただし、メッセージの予約について理解しておくと、定義済みのいくつかのメッセージ ブロックの型の動作を理解しやすくなります。
 
@@ -354,8 +354,8 @@ bool (T const &)
 
 独自のカスタム メッセージ ブロックの型を実装する場合は、メッセージの予約を使用できます。 カスタムメッセージブロックの型を作成する方法の例については、「[チュートリアル: カスタムメッセージブロックの作成](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)

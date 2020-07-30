@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206555"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212814"
 ---
 # <a name="compiler-error-c2248"></a>コンパイラ エラー C2248
 
 '*member*': クラス '*class*' で宣言された '*access_level*' メンバーにアクセスできません
 
-派生クラスのメンバーは、基底クラスの `private` メンバーにアクセスすることはできません。 クラスインスタンスのメンバー `private` または `protected` にアクセスすることはできません。
+派生クラスのメンバーは **`private`** 、基底クラスのメンバーにアクセスできません。 **`private`** または **`protected`** クラスインスタンスのメンバーにアクセスすることはできません。
 
 ## <a name="example"></a>例
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-C2248 を公開するもう1つの準拠の問題は、テンプレートのフレンドと特殊化を使用することです。 この問題を解決するには、空のテンプレートパラメーターリスト < > または特定のテンプレートパラメーターを使用して、フレンドテンプレート関数を宣言します。
+C2248 を公開するもう1つの準拠の問題は、テンプレートのフレンドと特殊化を使用することです。 この問題を解決するには、空のテンプレートパラメーターリスト <> か、特定のテンプレートパラメーターを使用して、フレンドテンプレート関数を宣言します。
 
 ```cpp
 // C2248_template.cpp

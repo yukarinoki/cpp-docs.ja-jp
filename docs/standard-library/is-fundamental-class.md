@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456259"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233120"
 ---
-# <a name="isfundamental-class"></a>is_fundamental クラス
+# <a name="is_fundamental-class"></a>is_fundamental クラス
 
 型が void であるか数値型であるかを調べます。
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が基本型、つまり、 **void**、整数型、浮動小数点型`cv-qualified` 、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型*Ty*が基本型、つまり、、 **`void`** 整数型、浮動小数点型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -71,7 +71,7 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

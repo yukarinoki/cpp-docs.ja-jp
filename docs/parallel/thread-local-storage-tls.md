@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
-ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
+ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301967"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222655"
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 
@@ -22,9 +22,9 @@ ms.locfileid: "84301967"
 
 ## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>TLS のコンパイラ実装
 
-**C++ 11:** `thread_local`ストレージクラス指定子は、オブジェクトおよびクラスメンバーのスレッドローカルストレージを指定するために推奨される方法です。 詳細については、「[ストレージクラス (C++)](../cpp/storage-classes-cpp.md)」を参照してください。
+**C++ 11:** **`thread_local`** ストレージクラス指定子は、オブジェクトおよびクラスメンバーのスレッドローカルストレージを指定するために推奨される方法です。 詳細については、「[ストレージクラス (C++)](../cpp/storage-classes-cpp.md)」を参照してください。
 
-MSVC は、拡張ストレージクラス修飾子として、Microsoft 固有の属性である[thread](../cpp/thread.md)も提供します。 **__Declspec**キーワードを使用して、**スレッド**変数を宣言します。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
+MSVC は、拡張ストレージクラス修飾子として、Microsoft 固有の属性である[thread](../cpp/thread.md)も提供します。 **`__declspec`** 変数を宣言するには、キーワードを使用し **`thread`** ます。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -34,13 +34,13 @@ __declspec( thread ) int tls_i = 1;
 
 静的にバインドされるスレッド ローカル オブジェクトと変数を宣言する場合は、次のガイドラインに従ってください。 これらのガイドラインは、[スレッド](../cpp/thread.md)と[thread_local](../cpp/storage-classes-cpp.md)の両方に適用されます。
 
-- **Thread**属性は、クラスおよびデータの宣言と定義にのみ適用できます。 関数の宣言または定義では使用できません。 たとえば、次のコードはコンパイラ エラーになります。
+- 属性は、 **`thread`** クラスおよびデータの宣言と定義にのみ適用できます。 関数の宣言または定義では使用できません。 たとえば、次のコードはコンパイラ エラーになります。
 
     ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **Thread**修飾子は、**静的**なエクステントを持つデータ項目に対してのみ指定できます。 これには、グローバルデータオブジェクト (**静的**および**extern**の両方)、ローカルの静的オブジェクト、および C++ クラスの静的データメンバーが含まれます。 自動データオブジェクトは、 **thread**属性を使用して宣言することはできません。 次のコードはコンパイラ エラーになります。
+- 修飾子は、 **`thread`** エクステントを持つデータ項目に対してのみ指定でき **`static`** ます。 これには、グローバルデータオブジェクト (との両方 **`static`** **`extern`** )、ローカルの静的オブジェクト、および C++ クラスの静的データメンバーが含まれます。 自動データオブジェクトを属性で宣言することはできません **`thread`** 。 次のコードはコンパイラ エラーになります。
 
     ```C
     void func1()
@@ -54,7 +54,7 @@ __declspec( thread ) int tls_i = 1;
     }
     ```
 
-- スレッドローカルオブジェクトの宣言と定義では、すべて**スレッド**属性を指定する必要があります。 たとえば、次のコードはエラーになります。
+- スレッドローカルオブジェクトの宣言と定義では、すべて属性を指定する必要があり **`thread`** ます。 たとえば、次のコードはエラーになります。
 
     ```C
     #define Thread  __declspec( thread )
@@ -62,13 +62,13 @@ __declspec( thread ) int tls_i = 1;
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- **Thread**属性を型修飾子として使用することはできません。 たとえば、次のコードはコンパイラ エラーになります。
+- **`thread`** 属性を型修飾子として使用することはできません。 たとえば、次のコードはコンパイラ エラーになります。
 
     ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- **スレッド**属性を使用する C++ オブジェクトの宣言は許可されているため、次の2つの例は意味が同じです。
+- 属性を使用する C++ オブジェクトの宣言は許可されているため、 **`thread`** 次の2つの例は同じ意味になります。
 
     ```cpp
     __declspec( thread ) class B
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   `sizeof`初期化されるオブジェクトを含む式は、それ自体への参照を表しておらず、C と C++ の両方で有効になっています。
+   **`sizeof`** 初期化されるオブジェクトを含む式は、それ自体への参照を表しておらず、C と C++ の両方で有効になっています。
 
    C++ では、スレッドのローカルストレージ機能が将来拡張される可能性があるため、スレッドデータの動的な初期化を許可していません。
 

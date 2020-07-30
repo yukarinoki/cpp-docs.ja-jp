@@ -18,37 +18,37 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 61a5983eec13902ed4b0e397e3befca4860977d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365760"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222824"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 
-ここでは、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールのプロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータ メンバとの間でデータを交換するために使用するDDX_OC関数を示します。
+このトピックでは、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーの間でデータを交換するために使用される DDX_OC 関数の一覧を示します。
 
-### <a name="ddx_oc-functions"></a>DDX_OC関数
+### <a name="ddx_oc-functions"></a>DDX_OC 関数
 
 |||
 |-|-|
-|[DDX_OCBool](#ddx_ocbool)|OLE コントロールのプロパティと**BOOL**データ メンバー間での**BOOL**データの転送を管理します。|
-|[DDX_OCBoolRO](#ddx_ocboolro)|OLE コントロールの読み取り専用プロパティと**BOOL**データ メンバー間の**BOOL**データの転送を管理します。|
-|[DDX_OCColor](#ddx_occolor)|OLE コントロールのプロパティと**OLE_COLOR**データ メンバー間の**OLE_COLOR**データの転送を管理します。|
-|[DDX_OCColorRO](#ddx_occolorro)|OLE コントロールの読み取り専用プロパティと**OLE_COLOR**データ メンバー間の**OLE_COLOR**データの転送を管理します。|
-|[DDX_OCFloat](#ddx_ocfloat)|OLE コントロールのプロパティと**フロート**(**または倍精度**浮動小数点) データ メンバー間の**フロート**(または**倍**精度浮動小数点数) のデータ転送を管理します。|
-|[DDX_OCFloatRO](#ddx_ocfloatro)|OLE コントロールの読み取り専用プロパティと**フロート**(または**倍精度**浮動小数点数) のデータ メンバとの間で**のフロート**(または**倍**精度浮動小数点数) のデータ転送を管理します。|
-|[DDX_OCInt](#ddx_ocint)|OLE コントロールのプロパティと**int** (**または long)** データ メンバとの間**での int** (または**long)** データの転送を管理します。|
-|[DDX_OCIntRO](#ddx_ocintro)|OLE コントロールの読み取り専用プロパティと**int** (または**long)** データ メンバとの間**での int** (または**long)** データの転送を管理します。|
-|[DDX_OCShort](#ddx_ocshort)|OLE コントロールのプロパティと**短い**データ メンバ間の**短い**データの転送を管理します。|
-|[DDX_OCShortRO](#ddx_ocshortro)|OLE コントロールの読み取り専用プロパティと**短い**データ メンバー間の**短い**データの転送を管理します。|
-|[DDX_OCText](#ddx_octext)|OLE コントロールのプロパティと**CString**データ メンバー間の**CString**データの転送を管理します。|
-|[DDX_OCTextRO](#ddx_octextro)|OLE コントロールの読み取り専用プロパティと**CString**データ メンバー間の**CString**データの転送を管理します。|
+|[DDX_OCBool](#ddx_ocbool)|OLE コントロールのプロパティと**bool**データメンバーとの間の**ブール**データの転送を管理します。|
+|[DDX_OCBoolRO](#ddx_ocboolro)|OLE コントロールの読み取り専用プロパティと**ブール**データメンバーとの間の**ブール**データの転送を管理します。|
+|[DDX_OCColor](#ddx_occolor)|OLE コントロールのプロパティと**OLE_COLOR**データメンバーの間の**OLE_COLOR**データの転送を管理します。|
+|[DDX_OCColorRO](#ddx_occolorro)|OLE コントロールの読み取り専用プロパティと**OLE_COLOR**データメンバーの間の**OLE_COLOR**データの転送を管理します。|
+|[DDX_OCFloat](#ddx_ocfloat)|**`float`** **`double`** OLE コントロールのプロパティと **`float`** (または) データメンバーの間の (または) データの転送を管理し **`double`** ます。|
+|[DDX_OCFloatRO](#ddx_ocfloatro)|**`float`** **`double`** OLE コントロールの読み取り専用プロパティと **`float`** (または) データメンバーとの間での (または) データの転送を管理し **`double`** ます。|
+|[DDX_OCInt](#ddx_ocint)|**`int`** **`long`** OLE コントロールのプロパティと **`int`** (または) データメンバーの間の (または) データの転送を管理し **`long`** ます。|
+|[DDX_OCIntRO](#ddx_ocintro)|**`int`** **`long`** OLE コントロールの読み取り専用プロパティと **`int`** (または) データメンバーとの間での (または) データの転送を管理し **`long`** ます。|
+|[DDX_OCShort](#ddx_ocshort)|**`short`** OLE コントロールのプロパティとデータメンバーの間のデータ転送を管理し **`short`** ます。|
+|[DDX_OCShortRO](#ddx_ocshortro)|**`short`** OLE コントロールの読み取り専用プロパティとデータメンバーの間のデータ転送を管理し **`short`** ます。|
+|[DDX_OCText](#ddx_octext)|OLE コントロールのプロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
+|[DDX_OCTextRO](#ddx_octextro)|OLE コントロールの読み取り専用プロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
 
 ## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
 
-この`DDX_OCBool`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールのプロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの BOOL データ メンバ間で**の BOOL**データの転送を管理します。 **BOOL**
+この `DDX_OCBool` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCBool(
@@ -60,13 +60,13 @@ void AFXAPI DDX_OCBool(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -82,7 +82,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
 
-この`DDX_OCBoolRO`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの BOOL データ メンバとの間で**の BOOL**データの転送を管理します。 **BOOL**
+この `DDX_OCBoolRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCBoolRO(
@@ -94,13 +94,13 @@ void AFXAPI DDX_OCBoolRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -116,7 +116,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
 
-この`DDX_OCColor`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールのプロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのOLE_COLORデータ メンバ間でのOLE_COLORデータ転送を管理します。
+この `DDX_OCColor` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE_COLOR データメンバーの間で OLE_COLOR データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCColor(
@@ -128,13 +128,13 @@ void AFXAPI DDX_OCColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -150,7 +150,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
 
-この`DDX_OCColorRO`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのOLE_COLORデータ メンバとの間でのOLE_COLORデータの転送を管理します。
+この `DDX_OCColorRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE_COLOR データメンバーの間で OLE_COLOR データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCColorRO(
@@ -162,13 +162,13 @@ void AFXAPI DDX_OCColorRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -184,7 +184,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
 
-この`DDX_OCFloat`関数は、OLE コントロールのプロパティとダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの**フロー****ト**(または**倍**精度浮動小数点数) の**double**データ転送を管理します。
+この `DDX_OCFloat` 関数は、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間の (または) データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCFloat(
@@ -202,13 +202,13 @@ void AFXAPI DDX_OCFloat(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -224,7 +224,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
 
-この`DDX_OCFloatRO`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの**フロート**(または**倍精度**浮動小数点) データ メンバ間での**フロート**(または**倍**精度浮動小数点) データの転送を管理します。
+この `DDX_OCFloatRO` 関数は、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間で、(または) データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCFloatRO(
@@ -242,13 +242,13 @@ void AFXAPI DDX_OCFloatRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -264,7 +264,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
 
-この`DDX_OCInt`関数は、OLE コントロールのプロパティとダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの**int** (または**int****long)** データの転送を**long**管理します。
+この `DDX_OCInt` 関数は、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間の (または) データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCInt(
@@ -282,13 +282,13 @@ void AFXAPI DDX_OCInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -304,7 +304,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
 
-この`DDX_OCIntRO`関数は、OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの**int** (または**long)** データ メンバ間での**int** (または**long)** データの転送を管理します。
+この `DDX_OCIntRO` 関数は、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間で、(または) データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCIntRO(
@@ -322,13 +322,13 @@ void AFXAPI DDX_OCIntRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -344,7 +344,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
 
-この`DDX_OCShort`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールのプロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの短いデータ メンバとの間での短いデータ転送を管理します。
+この `DDX_OCShort` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの短いデータメンバーとの間で、短いデータの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCShort(
@@ -356,13 +356,13 @@ void AFXAPI DDX_OCShort(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -378,7 +378,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
 
-この`DDX_OCShortRO`関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの短いデータ メンバとの間での短いデータの転送を管理します。
+この `DDX_OCShortRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの短いデータメンバーとの間で、短いデータの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCShortRO(
@@ -390,13 +390,13 @@ void AFXAPI DDX_OCShortRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -412,7 +412,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
 
-**DDX_OCText**関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールのプロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの**CString**データ メンバとの間で**CString**データを転送します。
+**DDX_OCText**関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**cstring**データメンバーとの間での**cstring**データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCText(
@@ -424,13 +424,13 @@ void AFXAPI DDX_OCText(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-**オブジェクト**へのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+*pDX*<br/>
+**CDataExchange**オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>
@@ -458,13 +458,13 @@ void AFXAPI DDX_OCTextRO(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
+*pDX*<br/>
 `CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
 
-*Dispid*<br/>
+*dispid*<br/>
 コントロールのプロパティのディスパッチ ID。
 
 *value*<br/>

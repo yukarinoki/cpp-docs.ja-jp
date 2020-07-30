@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444619"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231248"
 ---
 # <a name="stream-io"></a>ストリーム入出力
 
@@ -19,9 +19,9 @@ ms.locfileid: "79444619"
 
 ## <a name="stream-io-routines"></a>ストリーム入出力ルーチン
 
-|ルーチン|用途|
+|ルーチンによって返される値|用途|
 |-------------|---------|
-|[clearerr](../c-runtime-library/reference/clearerr.md)、 [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|ストリームのクリア エラー インジケーター|
+|[clearerr](../c-runtime-library/reference/clearerr.md)、[clearerr_s](../c-runtime-library/reference/clearerr-s.md)|ストリームのクリア エラー インジケーター|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|ストリームを閉じる|
 |[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|**stdin**、**stdout**、**stderr** を除く、開いているすべてのストリームを閉じる|
 |[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|開いているファイルのファイル記述子にストリームを関連付ける|
@@ -34,13 +34,13 @@ ms.locfileid: "79444619"
 |[fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)|文字列をストリームから読み取る|
 |[_fileno](../c-runtime-library/reference/fileno.md)|ストリームに関連付けられているファイル記述子を取得する|
 |[_flushall](../c-runtime-library/reference/flushall.md)|すべてのストリームをバッファーまたはストレージ デバイスにフラッシュする|
-|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|ストリームを開く|
+|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|ストリームを開く|
 |[fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)、[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|ストリームに書式付きデータを書き込む|
 |[fputc、fputwc](../c-runtime-library/reference/fputc-fputwc.md)|ストリームに文字を書き込む (**putc** および **putwc** の関数バージョン)|
 |[_fputchar、_fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|**stdout** に文字を書き込む (**putchar** および **putwchar** の関数バージョン)|
 |[fputs、fputws](../c-runtime-library/reference/fputs-fputws.md)|文字列をストリームに書き込む|
 |[fread](../c-runtime-library/reference/fread.md)|書式設定されていないデータをストリームから読み取る|
-|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)、 [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|**FILE** ストリーム ポインターを新しいファイルまたはデバイスに再割り当てする|
+|[freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|**FILE** ストリーム ポインターを新しいファイルまたはデバイスに再割り当てする|
 |[fscanf、fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|書式付きデータをストリームから読み取る|
 |[fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|ファイルの位置を指定の場所に移動する|
 |[fsetpos](../c-runtime-library/reference/fsetpos.md)|ストリームの位置インジケーターを設定する|
@@ -51,19 +51,19 @@ ms.locfileid: "79444619"
 |[getchar、getwchar](../c-runtime-library/reference/getc-getwc.md)|**stdin** から文字を読み取る (**fgetchar** および **fgetwchar** のマクロ バージョン)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|ストリーム入出力のレベルで許可されている、同時に開かれたファイルの数を返します。|
 |[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|**stdin** から行を読み取る|
-|[_getw](../c-runtime-library/reference/getw.md)|ストリームからバイナリ **int** を読み取る|
+|[_getw](../c-runtime-library/reference/getw.md)|**`int`** ストリームからバイナリを読み取る|
 |[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)、[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|**stdout** に書式付きデータを書き込む|
 |[putc、putwc](../c-runtime-library/reference/putc-putwc.md)|ストリームに文字を書き込む (**fputc** および **fputwc** のマクロ バージョン)|
 |[putchar、putwchar](../c-runtime-library/reference/putc-putwc.md)|**stdout** に文字を書き込む (**fputchar** および **fputwchar** のマクロ バージョン)|
 |[puts、_putws](../c-runtime-library/reference/puts-putws.md)|ストリームに行を書き込む|
-|[_putw](../c-runtime-library/reference/putw.md)|ストリームにバイナリ **int** を書き込む|
+|[_putw](../c-runtime-library/reference/putw.md)|**`int`** ストリームにバイナリを書き込む|
 |[rewind](../c-runtime-library/reference/rewind.md)|ファイルの位置をストリームの先頭に移動する|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|**tmpfile** によって作成された一時ファイルを削除する|
 |[scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|**stdin** から書式付きデータを読み取る|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|ストリーム バッファリングを制御する|
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|ストリーム入出力のレベルで同時に開かれるファイルの数の最大値を設定する。|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|ストリーム バッファリングとバッファー サイズを制御する|
-|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)、 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|指定された長さの書式付きデータを文字列に書き込む|
+|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)、[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|指定された長さの書式付きデータを文字列に書き込む|
 |[_snscanf、_snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md)、[_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|指定した長さの書式付きデータを標準入力ストリームから読み取ります。|
 |[sprintf、swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)、[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|文字列に書式付きデータを書き込む|
 |[sscanf、swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)、[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|文字列から書式付きデータを読み取る|
@@ -91,9 +91,9 @@ ms.locfileid: "79444619"
 
 プログラムが明示的にストリームを閉じない場合、ストリームはプログラムが終了するときに自動的に閉じます。 ただし、一度に開くことのできるストリームの数は限られているため、プログラムがストリームの作業を終了したら、そのストリームを閉じる必要があります。 この制限については、 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) を参照してください。
 
-出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek** **fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
+出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek****fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[入出力](../c-runtime-library/input-and-output.md)<br/>
+[入力と出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

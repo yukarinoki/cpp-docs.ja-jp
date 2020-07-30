@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231339"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -116,7 +116,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbcnt**と **_mbsnbcnt_l**は、 *str*のマルチバイト文字の最初の*カウント*で見つかったバイト数を返します。 **_mbsnccnt**と **_mbsnccnt_l**は、 *str**の最初のバイト数で*見つかった文字数を返します。 *Str*の検査が完了する前に null 文字が検出されると、null 文字の前に見つかったバイト数または文字数が返されます。 *Str*が*カウント*文字またはバイト数未満で構成されている場合は、文字列の文字数またはバイト数を返します。 *Count*が0未満の場合は、0を返します。 以前のバージョンでは、これらの関数には、 **size_t**ではなく**int**型の戻り値がありました。
+**_mbsnbcnt**と **_mbsnbcnt_l**は、 *str*のマルチバイト文字の最初の*カウント*で見つかったバイト数を返します。 **_mbsnccnt**と **_mbsnccnt_l**は、 *str**の最初のバイト数で*見つかった文字数を返します。 *Str*の検査が完了する前に null 文字が検出されると、null 文字の前に見つかったバイト数または文字数が返されます。 *Str*が*カウント*文字またはバイト数未満で構成されている場合は、文字列の文字数またはバイト数を返します。 *Count*が0未満の場合は、0を返します。 以前のバージョンでは、これらの関数には、 **`int`** **size_t**ではなく型の戻り値がありました。
 
 **_strncnt**は、1バイトの文字列*str*の最初の*count*バイトの文字数を返します。 **_wcsncnt**は、ワイド文字列*str*の最初の文字*数*のワイド文字数を返します。
 
@@ -134,7 +134,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|ルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
+|ルーチンによって返される値|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|該当なし|
@@ -144,7 +144,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcnt**|\<mbstring.h>|
 |**_mbsnbcnt_l**|\<mbstring.h>|
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

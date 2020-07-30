@@ -7,18 +7,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217988"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 固有の仕様**
 
-切り捨ての単精度浮動小数点数を64ビット整数 (`cvttss2si`) 命令に変換した x64 拡張バージョンを出力します。
+切り捨ての単精度浮動小数点数を64ビット整数 () 命令に変換した x64 拡張バージョンを出力し `cvttss2si` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -30,8 +30,8 @@ __int64 _mm_cvttss_si64x(
 
 ### <a name="parameters"></a>パラメーター
 
-*value*\
-から単精度浮動小数点値を含む構造体。`__m128`
+*数値*\
+から**`__m128`** 単精度浮動小数点値を含む構造体。
 
 ## <a name="return-value"></a>戻り値
 
@@ -39,15 +39,15 @@ __int64 _mm_cvttss_si64x(
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込みは、不`_mm_cvtss_si64x`正確な変換が0方向に切り捨てられた場合にのみ異なります。 構造体`__m128`は XMM register を表しているため、生成された命令は XMM レジスタからシステムメモリにデータを移動します。
+組み込みは、 `_mm_cvtss_si64x` 不正確な変換が0方向に切り捨てられた場合にのみ異なります。 構造体は XMM register を表しているため、 **`__m128`** 生成された命令は XMM レジスタからシステムメモリにデータを移動します。
 
 このルーチンは、組み込みとしてのみ使用できます。
 

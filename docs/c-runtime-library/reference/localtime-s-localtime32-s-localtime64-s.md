@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218612"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -82,8 +82,8 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|戻り値|*Tmdest*の値|無効なパラメーター ハンドラーを呼び出す|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**空白**|any|**EINVAL**|変更されない|はい|
-|Not **NULL** (有効なメモリを指す)|**空白**|**EINVAL**|すべてのフィールドが -1 に設定される|はい|
+|**NULL**|any|**EINVAL**|変更されない|はい|
+|Not **NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|はい|
 |Not **NULL** (有効なメモリを指す)|0より小さいか、または **_MAX__TIME64_T**を超えています。|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
 
 最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
@@ -101,7 +101,7 @@ errno_t _localtime64_s(
 
 **localtime_s**は **_localtime64_s**に評価されるインライン関数であり、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これにより、 **localtime_s**が **_localtime32_s**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
+Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは次の値を格納します。各値は **`int`** です。
 
 |フィールド|説明|
 |-|-|
@@ -121,9 +121,9 @@ Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールド�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> また\<は time .h>|
+|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime> または \<time.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

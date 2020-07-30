@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85ee066a12d4297d9a782ae07ef0fa16798f1616
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214540"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228051"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214540"
 
 ## <a name="remarks"></a>解説
 
-**Switch_is** C++属性には、 [switch_is](/windows/win32/Midl/switch-is) MIDL 属性と同じ機能があります。
+**Switch_is** C++ 属性には、 [switch_is](/windows/win32/Midl/switch-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -37,15 +37,15 @@ ms.locfileid: "80214540"
 
 |||
 |-|-|
-|**対象**|**typedef**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`typedef`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [switch_type](switch-type.md)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: df19f90e17d6737a2639eb1245da197881e35c96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218105"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>コンパイラの警告 (レベル 4) C4211
 
 非標準の拡張が使用されています: extern を static に再定義します
 
-既定の Microsoft 拡張機能 (/Ze) では、`extern` 識別子を**static**として再定義できます。
+既定の Microsoft 拡張機能 (/Ze) では、識別子をとして再定義でき **`extern`** **`static`** ます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // C4211.c

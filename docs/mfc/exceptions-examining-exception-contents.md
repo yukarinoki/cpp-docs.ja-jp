@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 8554dda2f465aa058cea3d257c22ec38bc6e2c18
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7500db2a29f9d4ccef37b9265f5f2968c2d07993
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217949"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外処理 : 例外の内容の調査
 
-**Catch**ブロックの引数はほぼすべてのデータ型にすることができますが、MFC 関数はクラスから派生した型の例外をスローし `CException` ます。 MFC 関数によってスローされた例外をキャッチするには**catch** 、引数が `CException` オブジェクト (またはから派生したオブジェクト) へのポインターである catch ブロックを記述し `CException` `CMemoryException` ます。 例外の正確な型によっては、例外オブジェクトのデータメンバーを調べて、例外の特定の原因に関する情報を収集できます。
+**`catch`** ブロックの引数はほぼすべてのデータ型にすることができますが、MFC 関数はクラスから派生した型の例外をスローし `CException` ます。 MFC 関数によってスローされた例外をキャッチするには、 **`catch`** `CException` オブジェクト (またはから派生したオブジェクト) へのポインターである引数を持つブロックを記述し `CException` `CMemoryException` ます。 例外の正確な型によっては、例外オブジェクトのデータメンバーを調べて、例外の特定の原因に関する情報を収集できます。
 
 たとえば、型に `CFileException` は、 `m_cause` ファイルの例外の原因を指定する列挙型を含むデータメンバーがあります。 返される戻り値の例とし `CFileException::fileNotFound` ては、とがあり `CFileException::readOnly` ます。
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - exiting applications
 - programs [C++], terminating
 ms.assetid: acbe2332-9d8a-4a58-a471-dd652a837384
-ms.openlocfilehash: 04041ab84cf2533fcb6f18c1a8c00fcc6dfc9a16
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3832a74e9f36a0f6b1d40b6d82f197ac2bfc21ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227700"
 ---
 # <a name="additional-termination-considerations"></a>終了に関するその他の考慮事項
 
-プログラムをC++終了するには、`exit`、 **return**、または `abort`を使用します。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。
+`exit`、、またはを使用して、C++ プログラムを終了でき **`return`** `abort` ます。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[起動と終了](../cpp/startup-and-termination-cpp.md)
+[スタートアップと終了](../cpp/startup-and-termination-cpp.md)

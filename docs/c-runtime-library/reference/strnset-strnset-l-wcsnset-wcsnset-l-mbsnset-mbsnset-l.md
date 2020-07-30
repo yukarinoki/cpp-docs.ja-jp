@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231326"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -145,7 +145,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>解説
 
-**_Strnset**関数は、 *str*の最初の最大文字*数*を*c* ( **char**に変換) に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。
+**_Strnset**関数は、 *str*の最初の最大文字*数*を*c* (に変換された) に設定し **`char`** ます。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。
 
 **_wcsnset**と **_mbsnset**は **_strnset**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset**の文字列引数と戻り値はワイド文字列です。これらの **_mbsnset**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
@@ -164,7 +164,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|
@@ -201,7 +201,7 @@ After:  **** is a test
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

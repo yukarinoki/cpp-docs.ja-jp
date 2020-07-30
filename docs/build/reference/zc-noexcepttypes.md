@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218950"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexceptTypes (C++ 17 noexcept ルール)
 
-C++ 17 標準では、 `throw()` のエイリアスを作成し、 `noexcept` とを削除し、特定の `throw(` *`type-list`* `)` `throw(...)` 型に含めることができる `noexcept` ようにします。 この変更により、C++ 14 以前に準拠しているコードでソース互換性の問題がいくつか発生する可能性があります。 オプションは、 **`/Zc:noexceptTypes`** c++ 17 標準に準拠することを指定します。 **`/Zc:noexceptTypes-`** c++ 17 モードでコードをコンパイルするときに、C++ 14 以前の動作を許可します。
+C++ 17 標準では、 `throw()` のエイリアスを作成し、 **`noexcept`** とを削除し、特定の `throw(` *`type-list`* `)` `throw(...)` 型に含めることができる **`noexcept`** ようにします。 この変更により、C++ 14 以前に準拠しているコードでソース互換性の問題がいくつか発生する可能性があります。 オプションは、 **`/Zc:noexceptTypes`** c++ 17 標準に準拠することを指定します。 **`/Zc:noexceptTypes-`** c++ 17 モードでコードをコンパイルするときに、C++ 14 以前の動作を許可します。
 
 ## <a name="syntax"></a>構文
 

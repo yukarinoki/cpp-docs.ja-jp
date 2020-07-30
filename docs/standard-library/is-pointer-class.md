@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455729"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222343"
 ---
-# <a name="ispointer-class"></a>is_pointer クラス
+# <a name="is_pointer-class"></a>is_pointer クラス
 
 型がポインターであるかどうかをテストします。
 
@@ -27,12 +27,12 @@ struct is_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型の述語のインスタンスは、型*Ty*が**void**へのポインター、オブジェクトへのポインター、関数へのポインター、または`cv-qualified`そのいずれかの形式である場合は true を保持します。それ以外の場合は、false を保持します。 Ty が`is_pointer`メンバーへのポインターまたはメンバー関数へのポインターである場合、は false を保持することに注意してください。
+型の述語のインスタンスは、型*Ty*がへのポインター、オブジェクトへのポインター、 **`void`** 関数へのポインター、またはそのいずれかの形式である場合、true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。 `is_pointer` *Ty*がメンバーへのポインターまたはメンバー関数へのポインターである場合、は false を保持することに注意してください。
 
 ## <a name="example"></a>例
 
@@ -74,7 +74,7 @@ is_pointer<int *> == true
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

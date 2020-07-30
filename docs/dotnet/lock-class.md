@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225619"
 ---
 # <a name="lock-class"></a>lock クラス
 
-このクラスは、複数のスレッドからオブジェクトへのアクセスを同期するためのロックの取得を自動化します。  構築されると、ロックを取得し、破棄されるとロックを解放します。
+このクラスは、複数のスレッドからオブジェクトへのアクセスを同期するためのロックの取得を自動化します。  構築時にロックが取得され、破棄されるとロックが解放されます。
 
 ## <a name="syntax"></a>構文
 
@@ -33,45 +33,45 @@ ref class lock;
 
 ## <a name="remarks"></a>解説
 
-`lock`は CLR オブジェクトでのみ使用でき、CLR コードでのみ使用できます。
+`lock`は CLR オブジェクトに対してのみ使用でき、CLR コードでのみ使用できます。
 
-内部的には、ロック クラスは<xref:System.Threading.Monitor>アクセスの同期に使用します。 詳細については、参照先の記事を参照してください。
+内部的には、ロッククラスはを使用して <xref:System.Threading.Monitor> アクセスを同期します。 詳細については、参照されている記事を参照してください。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名前|[説明]|
 |---------|-----------|
-|[ロック::ロック](#lock)|ロックを`lock`永遠に取得するのを待機するオブジェクトを、指定した時間だけ、またはまったく行わないオブジェクトを構築します。|
-|[lock::~lock](#tilde-lock)|オブジェクトを`lock`破棄します。|
+|[lock:: lock](#lock)|オブジェクトを構築し `lock` 、必要に応じて、ロックの取得を無期限に待機するか、指定した時間だけ待機するか、またはまったく使用しないかを待機します。|
+|[lock::~lock](#tilde-lock)|オブジェクトを Destructs `lock` します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |---------|-----------|
-|[lock::acquire](#acquire)|オブジェクトのロックを取得し、オプションでロックを永遠に取得するのを待機するか、指定した時間だけ、またはまったくロックを取得しない。|
+|[lock::acquire](#acquire)|オブジェクトのロックを取得します。また、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。|
 |[lock::is_locked](#is-locked)|ロックが保持されているかどうかを示します。|
-|[lock::release](#release)|ロックを解除します。|
-|[lock::try_acquire](#try-acquire)|オブジェクトのロックを取得し、指定された時間待機し、例外をスローする代`bool`わりに取得の成功を報告するためにを返します。|
+|[lock::release](#release)|ロックを解放します。|
+|[lock::try_acquire](#try-acquire)|オブジェクトのロックを取得し、指定した時間待機した後、を返して、 **`bool`** 例外をスローする代わりに、取得の成功を報告します。|
 
-### <a name="public-operators"></a>公共事業者
+### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|名前|[説明]|
 |---------|-----------|
-|[ロック::オペレータ&nbsp;ブール](#operator-bool)|条件式で`lock`使用する演算子。|
+|[lock:: operator &nbsp; bool](#operator-bool)|条件式でを使用するための演算子 `lock` 。|
 |[lock::operator==](#operator-equality)|等値演算子。|
-|[ロック::演算子!=](#operator-inequality)|不等式演算子。|
+|[lock:: operator! =](#operator-inequality)|非等値演算子。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー ファイル**\<msclr\lock.h>
+**ヘッダー ファイル** \<msclr\lock.h>
 
 **名前空間**msclr
 
-## <a name="locklock"></a><a name="lock"></a>ロック::ロック
+## <a name="locklock"></a><a name="lock"></a>lock:: lock
 
-ロックを`lock`永遠に取得するのを待機するオブジェクトを、指定した時間だけ、またはまったく行わないオブジェクトを構築します。
+オブジェクトを構築し `lock` 、必要に応じて、ロックの取得を無期限に待機するか、指定した時間だけ待機するか、またはまったく使用しないかを待機します。
 
 ```cpp
 template<class T> lock(
@@ -94,28 +94,28 @@ template<class T> lock(
 ### <a name="parameters"></a>パラメーター
 
 *_object*<br/>
-ロックするオブジェクト。
+ロックされるオブジェクト。
 
 *_timeout*<br/>
-タイムアウト値 (ミリ秒単位または<xref:System.TimeSpan>.
+ミリ秒単位またはとしてのタイムアウト値 <xref:System.TimeSpan> 。
 
 ### <a name="exceptions"></a>例外
 
-タイムアウト前<xref:System.ApplicationException>にロック取得が発生しない場合にスローします。
+<xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
 ### <a name="remarks"></a>解説
 
-コンストラクタの最初の 3 つの形式は、指定された`_object`タイムアウト期間内 (または<xref:System.Threading.Timeout.Infinite>指定されていない場合) にロックを取得しようとします。
+コンストラクターの最初の3つの形式は、 `_object` 指定されたタイムアウト期間内 (または <xref:System.Threading.Timeout.Infinite> 何も指定されていない場合) にロックを取得しようとします。
 
-コンストラクタの 4 番目の形式では、 のロック`_object`は取得されません。 `lock_later`は[、lock_when列挙型](../dotnet/lock-when-enum.md)のメンバーです。 この場合、ロックを取得するには[lock::acquire](../dotnet/lock-acquire.md)または[lock::try_acquire](../dotnet/lock-try-acquire.md)を使用します。
+コンストラクターの4番目の形式では、のロックが取得されません `_object` 。 `lock_later`は[lock_when 列挙型](../dotnet/lock-when-enum.md)のメンバーです。 Lock [:: 獲得](../dotnet/lock-acquire.md)または[lock:: try_acquire](../dotnet/lock-try-acquire.md)を使用して、この場合にロックを取得します。
 
-デストラクターが呼び出されると、ロックは自動的に解放されます。
+このロックは、デストラクターが呼び出されたときに自動的に解放されます。
 
-`_object`はできません<xref:System.Threading.ReaderWriterLock>。  コンパイル エラーが発生した場合は、エラーが発生します。
+`_object`をにすることはできません <xref:System.Threading.ReaderWriterLock> 。  そのような場合は、コンパイラエラーが発生します。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。 メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。 メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>ロック::~ロック
+## <a name="locklock"></a><a name="tilde-lock"></a>lock:: ~ lock
 
-オブジェクトを`lock`破棄します。
+オブジェクトを Destructs `lock` します。
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ All threads completed.
 
 ### <a name="remarks"></a>解説
 
-デストラクターは[lock::release](../dotnet/lock-release.md)を呼び出します。
+デストラクターは[lock:: release](../dotnet/lock-release.md)を呼び出します。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。  メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。  メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>ロック::取得
+## <a name="lockacquire"></a><a name="acquire"></a>lock:: 獲得
 
-オブジェクトのロックを取得し、オプションでロックを永遠に取得するのを待機するか、指定した時間だけ、またはまったくロックを取得しない。
+オブジェクトのロックを取得します。また、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。
 
 ```cpp
 void acquire();
@@ -322,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>パラメーター
 
 *_timeout*<br/>
-タイムアウト値 (ミリ秒単位または<xref:System.TimeSpan>)。
+ミリ秒単位またはとしてのタイムアウト値 <xref:System.TimeSpan> 。
 
 ### <a name="exceptions"></a>例外
 
-タイムアウト前<xref:System.ApplicationException>にロック取得が発生しない場合にスローします。
+<xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
 ### <a name="remarks"></a>解説
 
-タイムアウト値が指定されていない場合、デフォルトのタイムアウトは<xref:System.Threading.Timeout.Infinite>です。
+タイムアウト値が指定されていない場合、既定のタイムアウトはに <xref:System.Threading.Timeout.Infinite> なります。
 
-ロックがすでに取得されている場合、この関数は何も実行しません。
+ロックが既に取得されている場合、この関数は何も行いません。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。 メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。 メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>ロック::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>lock:: is_locked
 
 ロックが保持されているかどうかを示します。
 
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>戻り値
 
-`true`ロックが保持されている場合、`false`それ以外の場合。
+**`true`** ロックが保持されている場合は **`false`** 。それ以外の場合は。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。  メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認し、すべてのワーカー スレッドがタスクを完了するまで終了するのを待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。  メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックし、すべてのワーカースレッドがそのタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>ロック::オペレータブール
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock:: operator bool
 
-条件式で`lock`使用する演算子。
+条件式でを使用するための演算子 `lock` 。
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>戻り値
 
-`true`ロックが保持されている場合、`false`それ以外の場合。
+**`true`** ロックが保持されている場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
-この演算子は、整数型`_detail_class::_safe_bool`に変換できないため、`bool`実際に変換する方が安全です。
+この演算子は、実際に `_detail_class::_safe_bool` は、 **`bool`** 整数型に変換できないため、より安全なに変換されます。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。 メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。  クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。 メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,9 +634,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>ロック::リリース
+## <a name="lockrelease"></a><a name="release"></a>lock:: release
 
-ロックを解除します。
+ロックを解放します。
 
 ```cpp
 void release();
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>解説
 
-ロックが保持されていない場合は、`release`何もしません。
+ロックが保持されていない場合、 `release` は何も行いません。
 
-この関数を明示的に呼び出す必要はありません。 オブジェクトが`lock`スコープ外に出ると、そのデストラクターが`release`呼び出されます。
+この関数を明示的に呼び出す必要はありません。 オブジェクトが `lock` スコープ外に出ると、そのデストラクターはを呼び出し `release` ます。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。 メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。 メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>ロック::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock:: try_acquire
 
-オブジェクトのロックを取得し、指定された時間待機し、例外をスローする代`bool`わりに取得の成功を報告するためにを返します。
+オブジェクトのロックを取得し、指定した時間待機した後、を返して、 **`bool`** 例外をスローする代わりに、取得の成功を報告します。
 
 ```cpp
 bool try_acquire(
@@ -754,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>パラメーター
 
 *_timeout*<br/>
-タイムアウト値 (ミリ秒単位または<xref:System.TimeSpan>)。
+ミリ秒単位またはとしてのタイムアウト値 <xref:System.TimeSpan> 。
 
 ### <a name="return-value"></a>戻り値
 
-`true`ロックが取得された場合`false`、それ以外の場合。
+**`true`** ロックが取得された場合は **`false`** 。それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
-ロックがすでに取得されている場合、この関数は何も実行しません。
+ロックが既に取得されている場合、この関数は何も行いません。
 
 ### <a name="example"></a>例
 
-この例では、複数のスレッドでクラスの単一インスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスが各スレッドに対して一貫していることを確認します。 メイン アプリケーション スレッドは、クラスの同じインスタンスのロックを使用して、ワーカー スレッドがまだ存在するかどうか定期的に確認します。 メイン アプリケーションは、すべてのワーカー スレッドがタスクを完了するまで終了するまで待機します。
+この例では、複数のスレッドでクラスの1つのインスタンスを使用します。 クラスは、自身のロックを使用して、内部データへのアクセスがスレッドごとに一貫していることを確認します。 メインアプリケーションスレッドは、クラスの同じインスタンスでロックを使用して、ワーカースレッドがまだ存在するかどうかを定期的にチェックします。 メインアプリケーションは、すべてのワーカースレッドがタスクを完了するまで、終了を待機します。
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>ロック::演算子==
+## <a name="lockoperator"></a><a name="operator-equality"></a>lock:: operator = =
 
 等値演算子。
 
@@ -866,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\t*<br/>
 等しいかどうかを比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-ロックのオブジェクトと同じかどうかを`true``t`返します。 `false`
+**`true`** `t` がロックのオブジェクトと同じ場合はを返します。それ以外の場合はを返し **`false`** ます。
 
 ### <a name="example"></a>例
 
@@ -897,9 +897,9 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>ロック::演算子!=
+## <a name="lockoperator"></a><a name="operator-inequality"></a>lock:: operator! =
 
-不等式演算子。
+非等値演算子。
 
 ```cpp
 template<class T> bool operator!=(
@@ -909,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
-不等式を比較するオブジェクト。
+*\t*<br/>
+等しくないかどうかを比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-ロックのオブジェクトと異なるかどうかを`true``t`返します。 `false`
+**`true`** が `t` ロックのオブジェクトと異なる場合はを返し **`false`** ます。それ以外の場合はを返します。
 
 ### <a name="example"></a>例
 

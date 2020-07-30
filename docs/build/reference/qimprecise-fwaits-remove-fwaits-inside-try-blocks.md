@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424feda66f6925cb305256249101ea4013e3090f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232678"
 ---
-# <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (try ブロック内部の fwaits を削除する)
+# <a name="qimprecise_fwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (try ブロック内部の fwaits を削除する)
 
-削除、`fwait`コマンドの内部`try`ブロックを使用する場合、 [/fp: を除く](fp-specify-floating-point-behavior.md)コンパイラ オプション。
+`fwait` **`try`** [/Fp: except](fp-specify-floating-point-behavior.md)コンパイラオプションを使用すると、ブロック内部のコマンドが削除されます。
 
 ## <a name="syntax"></a>構文
 
@@ -24,19 +24,19 @@ ms.locfileid: "62319591"
 /Qimprecise_fwaits
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションには効果がない場合は **/fp: 除く**も指定されていません。 指定した場合、 **/fp: を除く**オプション、コンパイラが挿入されます、`fwait`コマンド内のコードの各行の周りを`try`ブロック。 これにより、コンパイラは、特定の例外が発生したコード行を識別できます。 **/Qimprecise_fwaits**内部削除`fwait`手順については、周囲の待機のみを残して、`try`ブロックします。 これは、パフォーマンスは向上しますが、コンパイラは指定できる`try`ブロック、例外では、どの行が発生します。
+このオプションは、 **/fp: except**が指定されていない場合は効果がありません。 **/Fp: except**オプションを指定すると、コンパイラは `fwait` ブロック内のコード行ごとにコマンドを挿入し **`try`** ます。 このようにして、コンパイラは例外を生成する特定のコード行を識別できます。 **/Qimprecise_fwaits**内部 `fwait` 命令を削除し、ブロックを囲む待機だけを残し **`try`** ます。 これにより、パフォーマンスが向上しますが、コンパイラは、 **`try`** どのブロックによって例外が発生するかを特定することしかできません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -44,6 +44,6 @@ ms.locfileid: "62319591"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[/Q オプション (低レベルの操作)](q-options-low-level-operations.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

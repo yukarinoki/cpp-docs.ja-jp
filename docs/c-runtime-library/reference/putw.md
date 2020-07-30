@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232431"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,13 +65,13 @@ int _putw(
 
 ## <a name="remarks"></a>解説
 
-**_Putw**関数は、 **int**型のバイナリ値をストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 **_Putw**で移植性の問題が発生する可能性があります。これは **、int のサイズと** **int**内のバイトの順序がシステム間で異なるためです。
+**_Putw**関数は、型のバイナリ値を **`int`** ストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 のサイズ **_putw** **`int`** と内のバイトの順序が **`int`** システム間で異なるため、_putw で移植性の問題が発生する可能性があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 

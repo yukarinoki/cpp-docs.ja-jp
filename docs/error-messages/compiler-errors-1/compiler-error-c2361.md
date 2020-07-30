@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b95c6459c0ff093d22f3e754f2c7fd6564d2b296
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221199"
 ---
 # <a name="compiler-error-c2361"></a>コンパイラ エラー C2361
 
 ' identifier ' の初期化が ' default ' ラベルによってスキップされました
 
-`identifier` の初期化は、`switch` ステートメントではスキップできます。 宣言がブロックで囲まれている場合を除き、初期化子を使用して宣言をスキップすることはできません。 (ブロック内で宣言されていない限り、変数は、`switch` ステートメントが終了するまでスコープ内にあります)。
+ステートメントでは、の初期化を `identifier` スキップでき **`switch`** ます。 宣言がブロックで囲まれている場合を除き、初期化子を使用して宣言をスキップすることはできません。 (ブロック内で宣言されていない限り、変数はステートメントの最後までスコープ内に **`switch`** あります)。
 
 次の例では、C2361 が生成されます。
 
@@ -35,7 +35,7 @@ void func( void ) {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C2361b.cpp

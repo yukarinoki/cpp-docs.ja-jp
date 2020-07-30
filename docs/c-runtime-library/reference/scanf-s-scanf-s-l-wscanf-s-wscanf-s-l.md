@@ -45,12 +45,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948877"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231365"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -94,15 +94,15 @@ int _wscanf_s_l(
 
 正常に変換されて割り当てられたフィールドの数を返します。 戻り値には、読み取られたが割り当てられていないフィールドは含まれません。 戻り値が0の場合は、フィールドが割り当てられていないことを示します。 戻り値は、エラーの場合は**EOF** 、ファイルの終端文字または文字列の末尾の文字が最初に文字を読み取ろうとしたときに見つかった場合はです。 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **scanf_s**と**wscanf_s**は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Scanf_s**関数は、標準入力ストリーム ( **stdin**) からデータを読み取り、それを*引数*に書き込みます。 各*引数*は、*形式*の型指定子に対応する変数型へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**wscanf_s**は、 **scanf_s**のワイド文字バージョンです。**wscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wscanf_s**と**scanf_s**は同じように動作します。 **scanf_s**は、現在 UNICODE ストリームからの入力をサポートしていません。
+**wscanf_s**は**scanf_s**のワイド文字バージョンです。**wscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wscanf_s**と**scanf_s**は同じように動作します。 **scanf_s**は、UNICODE ストリームからの入力を現在サポートしていません。
 
-**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに*locale*パラメーターを使用する点を除いて同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは同じですが、現在のスレッドロケールの代わりに*locale*パラメーターを使用する点が異なります。
 
 **Scanf**と**wscanf**とは異なり、 **scanf_s**と**wscanf_s**では、一部のパラメーターに対してバッファーサイズを指定する必要があります。 すべての**c**、 **c**、 **s**、 **s**、または文字列コントロールセットの **[]** パラメーターのサイズを指定します。 文字単位のバッファーサイズは、追加のパラメーターとして渡されます。 バッファーまたは変数へのポインターの直後に続きます。 たとえば、文字列を読み取る場合、その文字列のバッファーサイズは次のように渡されます。
 
@@ -114,7 +114,7 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 バッファーサイズには、ターミナルの null が含まれます。 [幅指定] フィールドを使用して、読み取られたトークンがバッファーに確実に収まるようにすることができます。 トークンが大きすぎて収まりきらない場合、幅指定がない限り、バッファーには何も書き込まれません。
 
 > [!NOTE]
-> Size パラメーターは、 **size_t**ではなく**unsigned**型です。 64ビットのビルド構成では、静的なキャストを使用して**size_t**値を**unsigned**に変換します。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。 静的なキャストを使用し**size_t** **`unsigned`** て、64ビットのビルド構成の size_t 値をに変換します。
 
 バッファーサイズのパラメーターは、バイトではなく最大文字数を示します。 この例では、バッファーの種類の幅が書式指定子の幅と一致しません。
 
@@ -148,7 +148,7 @@ scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 |**_tscanf_s**|**scanf_s**|**scanf_s**|**wscanf_s**|
 |**_tscanf_s_l**|**_scanf_s_l**|**_scanf_s_l**|**_wscanf_s_l**|
 
-詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
+詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -157,7 +157,7 @@ scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 |**scanf_s**、 **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**、 **_wscanf_s_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 標準ストリームは、C ランタイム関数が UWP アプリで使用できるようにするために、 **stdin**、 **stdout**、 **stderr**を処理する必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 標準ストリームは、C ランタイム関数が UWP アプリで使用できるようにするために、 **stdin**、 **stdout**、 **stderr**を処理する必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -208,10 +208,10 @@ The contents are: 36 92.300003 y n Wide characters
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b79b65ab3cbf4565f31ad6717f8163c678697c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213191"
 ---
 # <a name="static-members-c"></a>静的メンバー (C++)
 
-クラスには、静的なメンバー データとメンバー関数を含めることができます。 データメンバーが**静的**として宣言されている場合、クラスのすべてのオブジェクトに対してデータのコピーが1つだけ保持されます。
+クラスには、静的なメンバー データとメンバー関数を含めることができます。 データメンバーがとして宣言されている場合 **`static`** 、クラスのすべてのオブジェクトに対してデータのコピーが1つだけ保持されます。
 
 静的データ メンバーは、特定のクラス型のオブジェクトの一部ではありません。 その結果、静的データ メンバーの宣言は定義とは見なされません。 データ メンバーはクラス スコープで宣言されますが、定義はファイル スコープで行われます。 これらの静的メンバーは外部リンケージを持ちます。 次の例を使って説明します。
 
@@ -75,8 +75,8 @@ long nBytes = Console.bytecount;
 
 静的データ メンバーはクラス メンバーのアクセス規則に従うため、静的データ メンバーへのプライベート アクセスはクラス メンバー関数およびフレンドだけに許可されます。 これらの規則については[、「メンバー-Access Control](../cpp/member-access-control-cpp.md)」を参照してください。 例外は、静的データ メンバーが、そのアクセス制限にかかわらず、ファイルのスコープ内で定義されなければならないということです。 データ メンバーを明示的に初期化する場合は、初期化子を定義で指定する必要があります。
 
-静的メンバーの型は、クラス名で修飾されていません。 したがって、`BufferedOutput::bytecount` の型は**long**です。
+静的メンバーの型は、クラス名で修飾されていません。 したがって、の型 `BufferedOutput::bytecount` は **`long`** です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

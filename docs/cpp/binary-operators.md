@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229130"
 ---
 # <a name="binary-operators"></a>二項演算子
 
@@ -19,9 +19,9 @@ ms.locfileid: "80181305"
 
 ## <a name="redefinable-binary-operators"></a>再定義可能な二項演算子
 
-|演算子|Name|
+|演算子|名前|
 |--------------|----------|
-|**、**|コンマ|
+|**,**|コンマ|
 |**!=**|非等値|
 |**%**|Modulus|
 |**%=**|剰余/代入|
@@ -36,7 +36,7 @@ ms.locfileid: "80181305"
 |**-=**|減算/代入|
 |**->**|メンバー選択|
 |**->&#42;**|メンバーへのポインター選択|
-|**/**|除算|
+|**/**|事業部|
 |**/=**|除算/代入|
 |**<**|より小さい|
 |**<<**|左シフト|
@@ -56,19 +56,19 @@ ms.locfileid: "80181305"
 
 二項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。
 
-> *ret* **operator** *op* **(** *arg* **)**
+> *ret-型* **`operator`***op* **(** *arg* **)**
 
 ここで、 *ret 型*は戻り値の型、 *op*は前の表に示した演算子の1つであり、 *arg*は任意の型の引数です。
 
 二項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。
 
-> *ret* **演算子** *op* **(** _arg1_ **、** _arg2_ **)**
+> *ret-型* **`operator`***op* **(** _arg1_**、** _arg2_ **)**
 
 ここで、 *ret 型*と*op*は、メンバー演算子関数について説明されているように、 *arg1*と*arg2*は引数です。 少なくとも 1 つの引数がクラス型である必要があります。
 
 > [!NOTE]
 > 二項演算子の戻り値の型に制限はありません。ただし、ほとんどのユーザー定義の二項演算子は、クラス型かクラス型への参照を返します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [演算子のオーバーロード](../cpp/operator-overloading.md)

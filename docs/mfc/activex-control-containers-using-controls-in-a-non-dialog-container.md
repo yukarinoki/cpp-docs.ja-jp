@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620770"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214166"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用
 
@@ -55,7 +55,7 @@ Windows スタイル。 完全な一覧については、「 [CWnd:: CreateContr
 
 1. `WM_CREATE`メッセージハンドラーをクラスに追加 `CMyView` します。
 
-1. ハンドラー関数で、 `CMyView::OnCreate` `Create` **この**ポインターを親ウィンドウとして使用して、コントロールの関数の呼び出しを行います。
+1. ハンドラー関数で、 `CMyView::OnCreate` `Create` 親ウィンドウとしてポインターを使用して、コントロールの関数を呼び出し **`this`** ます。
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 

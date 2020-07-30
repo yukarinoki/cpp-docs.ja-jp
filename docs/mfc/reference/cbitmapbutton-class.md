@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CBitmapButton クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CBitmapButton
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: df21591dec1da5861125d7e9480fb9345aaad061
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0cf4554f86f4a9275e4d96b3db519fde7fb05b22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752952"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231872"
 ---
-# <a name="cbitmapbutton-class"></a>クラス
+# <a name="cbitmapbutton-class"></a>CBitmapButton クラス
 
 ラベルがテキストではなくビットマップ イメージのプッシュ ボタン コントロールを作成します。
 
@@ -37,64 +37,64 @@ class CBitmapButton : public CButton
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#cbitmapbutton)|`CBitmapButton` オブジェクトを構築します。|
+|[CBitmapButton:: CBitmapButton](#cbitmapbutton)|`CBitmapButton` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#autoload)|ダイアログ ボックスのボタンを`CBitmapButton`クラスのオブジェクトに関連付け、名前でビットマップを読み込み、ビットマップに合わせてボタンのサイズを変更します。|
-|[ビットマップボタン::ビットマップを読み込む](#loadbitmaps)|アプリケーションのリソース ファイルから 1 つ以上の名前付きビットマップ リソースを読み込み、そのビットマップをオブジェクトにアタッチして、オブジェクトを初期化します。|
-|[コンテンツのサイズ](#sizetocontent)|ビットマップに合わせてボタンのサイズを変更します。|
+|[CBitmapButton:: 自動読み込み](#autoload)|ダイアログボックスのボタンをクラスのオブジェクトと関連付け `CBitmapButton` 、ビットマップを名前で読み込み、ビットマップに合わせてボタンのサイズを調整します。|
+|[CBitmapButton:: LoadBitmaps](#loadbitmaps)|アプリケーションのリソースファイルから1つまたは複数の名前付きビットマップリソースを読み込み、オブジェクトにビットマップをアタッチすることによって、オブジェクトを初期化します。|
+|[CBitmapButton:: SizeToContent](#sizetocontent)|ビットマップに合わせてボタンのサイズを調整します。|
 
 ## <a name="remarks"></a>解説
 
-`CBitmapButton`オブジェクトには最大 4 つのビットマップが含まれ、ボタンが想定できるさまざまな状態のイメージ(アップ(または通常)、下(または選択)、フォーカス、無効のイメージが含まれます。 最初のビットマップのみが必要です。その他はオプションです。
+`CBitmapButton`オブジェクトには、最大4つのビットマップが含まれています。これには、ボタンが想定しているさまざまな状態のイメージが含まれています。たとえば、up (または normal)、down (または selected)、フォーカス、および無効になります。 最初のビットマップのみが必要です。他のオプションは省略可能です。
 
-ビットマップ ボタン イメージには、イメージの周囲の境界線と、イメージ自体が含まれます。 通常、境界線はボタンの状態を示す部分を果たします。 たとえば、フォーカス状態のビットマップは、通常、上の状態のビットマップと似ていますが、境界線から差し込んだ破線の四角形、または境界線に太い実線が付いています。 無効状態のビットマップは、通常、アップ状態のビットマップに似ていますが、コントラストが低くなります (淡色表示または淡色表示のメニュー選択など)。
+ビットマップボタンのイメージには、イメージの周りとイメージ自体の境界線が含まれます。 境界線は、通常、ボタンの状態を示す部分を再生します。 たとえば、フォーカスされた状態のビットマップは、通常、アップ状態のビットマップに似ていますが、境界線または境界線の枠線から破線の四角形が埋め込まれています。 無効な状態のビットマップは、通常、アップ状態のビットマップに似ていますが、コントラストは低くなります (淡色表示またはグレー表示のメニューの選択など)。
 
-これらのビットマップは任意のサイズにできますが、すべてのビットマップはアップ状態のビットマップと同じサイズであるかのように扱われます。
+これらのビットマップは任意のサイズにすることができますが、すべてが up 状態のビットマップと同じサイズであるかのように扱われます。
 
-さまざまなアプリケーションで、ビットマップイメージの異なる組み合わせが必要です。
+さまざまなアプリケーションでは、ビットマップイメージのさまざまな組み合わせが必要になります。
 
-|上へ|[下へ]|フォーカスされている|無効|Application|
+|上へ|[下へ]|フォーカスされている|無効|アプリケーション|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
-|×|×|||WS_TABSTOPスタイルのないボタン|
-|×|×|×|×|すべての状態を含むダイアログ ボタン|
-|×|×|×||WS_TABSTOPスタイルのダイアログ ボタン|
+|×|×|||WS_TABSTOP スタイルのないボタン|
+|×|×|×|×|すべての状態のダイアログボタン|
+|×|×|×||WS_TABSTOP スタイルのダイアログボタン|
 
-ビットマップ ボタン コントロールを作成する場合は、BS_OWNERDRAWスタイルを設定して、ボタンがオーナー描画であることを指定します。 これにより、Windows はボタンのWM_MEASUREITEMとWM_DRAWITEMメッセージを送信します。フレームワークは、これらのメッセージを処理し、ボタンの外観を管理します。
+ビットマップボタンコントロールを作成する場合は、BS_OWNERDRAW スタイルを設定して、ボタンがオーナー描画であることを指定します。 これにより、Windows がボタンの WM_MEASUREITEM と WM_DRAWITEM メッセージを送信するようになります。フレームワークは、これらのメッセージを処理し、ボタンの外観を管理します。
 
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>ウィンドウのクライアント領域にビットマップ ボタン コントロールを作成するには
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>ウィンドウのクライアント領域にビットマップボタンコントロールを作成するには
 
-1. ボタンに対して 1 ~ 4 個のビットマップ イメージを作成します。
+1. ボタン用に 1 ~ 4 個のビットマップイメージを作成します。
 
-1. [オブジェクトを](#cbitmapbutton)構築します。
+1. [Cbitmapbutton](#cbitmapbutton)オブジェクトを構築します。
 
-1. [Create](../../mfc/reference/cbutton-class.md#create)関数を呼び出して Windows ボタン コントロールを`CBitmapButton`作成し、オブジェクトにアタッチします。
+1. [Create](../../mfc/reference/cbutton-class.md#create)関数を呼び出して、Windows のボタンコントロールを作成し、それをオブジェクトにアタッチし `CBitmapButton` ます。
 
-1. [LoadBitmaps](#loadbitmaps)メンバー関数を呼び出して、ビットマップ ボタンが構築された後にビットマップ リソースを読み込みます。
+1. [Load](#loadbitmaps) bitmap メンバー関数を呼び出して、ビットマップボタンの構築後にビットマップリソースを読み込みます。
 
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>ダイアログ ボックスにビットマップ ボタン コントロールを含めるには
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>ビットマップボタンコントロールをダイアログボックスに追加するには
 
-1. ボタンに対して 1 ~ 4 個のビットマップ イメージを作成します。
+1. ボタン用に 1 ~ 4 個のビットマップイメージを作成します。
 
-1. ビットマップ ボタンを配置するオーナー描画ボタンを使用して、ダイアログ テンプレートを作成します。 テンプレートのボタンのサイズは重要ではありません。
+1. ビットマップボタンを配置するオーナー描画ボタンを持つダイアログテンプレートを作成します。 テンプレート内のボタンのサイズは関係ありません。
 
-1. ボタンのキャプションを "MYIMAGE" などの値に設定し、IDC_MYIMAGEなどのボタンのシンボルを定義します。
+1. ボタンのキャプションを "MYIMAGE" などの値に設定し、IDC_MYIMAGE などのボタンのシンボルを定義します。
 
-1. アプリケーションのリソース スクリプトで、ボタン用に作成された各イメージに、ステップ 3 のボタン キャプションに使用される文字列に"U"、"D"、"F"、または "X" (上下、フォーカス、および無効) の文字を追加して作成された ID を指定します。 たとえば、ボタンのキャプション"MYIMAGE"の場合、IDは"MYIMAGEU"、"MYIMAGED"、"MYIMAGEF"、および "MYIMAGEX"になります。 ビットマップの ID は二重引用符で囲んで指定**する必要があります**。 それ以外の場合、リソース エディターは、リソースに整数を割り当てると、MFC はイメージを読み込むときに失敗します。
+1. アプリケーションのリソーススクリプトで、ボタン用に作成された各イメージを、手順 3. のボタンキャプションに使用する文字列に "U"、"D"、"F"、"X" (up、down、フォーカス、および無効) のいずれかの文字を追加して作成した ID を付けます。 たとえば、ボタンのキャプション "MYIMAGE" の場合、Id は "MYIMAGEU"、"MYIMAGE"、"MYIMAGEF"、"MYIMAGE" のようになります。 ビットマップの ID を二重引用符で囲んで指定**する必要があり**ます。 そうしないと、リソースエディターによってリソースに整数が割り当てられ、イメージの読み込み時に MFC は失敗します。
 
-1. アプリケーションのダイアログ クラス ( から`CDialog`派生 )`CBitmapButton`で、メンバー オブジェクトを追加します。
+1. アプリケーションのダイアログクラス (から派生) で `CDialog` 、 `CBitmapButton` メンバーオブジェクトを追加します。
 
-1. オブジェクトの`CDialog` [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンで、ボタンの`CBitmapButton`コントロール ID とオブジェクトの**this**ポインターをパラメーターとして使用して、オブジェクト`CDialog`の[AutoLoad](#autoload)関数を呼び出します。
+1. `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンで、オブジェクトの自動読み込み関数を呼び出し `CBitmapButton` ます。その際、ボタンのコントロール ID とオブジェクトのポインターをパラメーターとして使用し[AutoLoad](#autoload) `CDialog` **`this`** ます。
 
-ビットマップ ボタン コントロールから親に送信されるBN_CLICKEDなどの Windows 通知メッセージ (通常は派生`CDialog`クラス) を処理する場合は、各メッセージ`CDialog`のメッセージ マップ エントリとメッセージ ハンドラー メンバー関数を派生オブジェクトに追加します。 オブジェクトによって送信される`CBitmapButton`通知は[、CButton](../../mfc/reference/cbutton-class.md)オブジェクトによって送信されるものと同じです。
+ビットマップボタンコントロールによって親 (通常はから派生するクラス) にビットマップボタンコントロールによって送信された BN_CLICKED などの Windows 通知メッセージを処理する場合は `CDialog` 、 `CDialog` 各メッセージのメッセージマップエントリとメッセージハンドラーメンバー関数を、派生オブジェクトに追加します。 オブジェクトによって送信される通知 `CBitmapButton` は、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクトによって送信される通知と同じです。
 
-[CToolBar](../../mfc/reference/ctoolbar-class.md)クラスは、ビットマップボタンに対して異なるアプローチをとっています。
+クラスの[CToolBar](../../mfc/reference/ctoolbar-class.md)は、ビットマップボタンに別のアプローチを取ります。
 
-`CBitmapButton`の詳細については、「[コントロール](../../mfc/controls-mfc.md)」を参照してください。
+の詳細につい `CBitmapButton` ては、「[コントロール](../../mfc/controls-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -112,9 +112,9 @@ class CBitmapButton : public CButton
 
 **ヘッダー:** afxext.h
 
-## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>をクリックします。
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton:: 自動読み込み
 
-ダイアログ ボックスのボタンを`CBitmapButton`クラスのオブジェクトに関連付け、名前でビットマップを読み込み、ビットマップに合わせてボタンのサイズを変更します。
+ダイアログボックスのボタンをクラスのオブジェクトと関連付け `CBitmapButton` 、ビットマップを名前で読み込み、ビットマップに合わせてボタンのサイズを調整します。
 
 ```
 BOOL AutoLoad(
@@ -127,7 +127,7 @@ BOOL AutoLoad(
 *nID*<br/>
 ボタンのコントロール ID。
 
-*親*<br/>
+*pParent*<br/>
 ボタンを所有するオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -136,13 +136,13 @@ BOOL AutoLoad(
 
 ### <a name="remarks"></a>解説
 
-この関数`AutoLoad`を使用して、ダイアログ ボックスのオーナー描画ボタンをビットマップ ボタンとして初期化します。 この関数を使用する手順は、クラスの解説`CBitmapButton`にあります。
+関数を使用し `AutoLoad` て、ダイアログボックスのオーナー描画ボタンをビットマップボタンとして初期化します。 この関数を使用する手順については、クラスの解説を参照して `CBitmapButton` ください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]
 
-## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>をクリックします。
+## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton:: CBitmapButton
 
 `CBitmapButton` オブジェクトを作成します。
 
@@ -152,15 +152,15 @@ CBitmapButton();
 
 ### <a name="remarks"></a>解説
 
-C++`CBitmapButton`オブジェクトを作成した後[、CButton::Create](../../mfc/reference/cbutton-class.md#create)を呼び出して Windows ボタン`CBitmapButton`コントロールを作成し、オブジェクトにアタッチします。
+C++ オブジェクトを作成した後 `CBitmapButton` 、 [CButton:: create](../../mfc/reference/cbutton-class.md#create)を呼び出して、Windows ボタンコントロールを作成し、それをオブジェクトにアタッチし `CBitmapButton` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>ビットマップボタン::ビットマップを読み込む
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps
 
-この関数は、リソース名または ID 番号で識別されるビットマップ イメージを読み込む場合、または`AutoLoad`ダイアログ ボックスの一部ではないビットマップ ボタンを作成する場合などに、この関数を使用できない場合に使用します。
+この関数は、リソース名または ID 番号で識別されるビットマップイメージを読み込む場合、または、 `AutoLoad` ダイアログボックスの一部ではないビットマップボタンを作成する場合などに使用します。
 
 ```
 BOOL LoadBitmaps(
@@ -178,29 +178,29 @@ BOOL LoadBitmaps(
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-ビットマップ ボタンの標準状態または "up" 状態のビットマップの名前を含む null で終わる文字列を指します。 必須。
+*lpszBitmapResource*<br/>
+ビットマップボタンの normal または "up" 状態のビットマップの名前を含む、null で終わる文字列を指します。 必須。
 
-*を使用します。*<br/>
-ビットマップ ボタンの選択状態または "down" 状態のビットマップの名前を含む null で終わる文字列を指します。 NULL の場合もあります。
+*lpszBitmapResourceSel*<br/>
+ビットマップボタンの選択された状態または "down" 状態のビットマップの名前を含む、null で終わる文字列を指します。 NULL の場合もあります。
 
-*リソースを割り当てる*<br/>
-ビットマップ ボタンのフォーカス状態のビットマップの名前を含む null で終わる文字列へのポイント。 NULL の場合もあります。
+*lpszBitmapResourceFocus*<br/>
+ビットマップボタンのフォーカス状態のビットマップの名前を含む、null で終わる文字列を指します。 NULL の場合もあります。
 
-*リソースを割り出しました。*<br/>
-ビットマップ ボタンの無効状態のビットマップの名前を含む null で終わる文字列へのポイント。 NULL の場合もあります。
+*lpszBitmapResourceDisabled*<br/>
+ビットマップボタンの無効状態のビットマップの名前を含む、null で終わる文字列を指します。 NULL の場合もあります。
 
-*リソース*<br/>
-ビットマップ ボタンの標準状態または "up" 状態のビットマップ リソースのリソース ID 番号を指定します。 必須。
+*nIDBitmapResource*<br/>
+ビットマップボタンの normal または "up" 状態のビットマップリソースのリソース ID 番号を指定します。 必須。
 
-*を使用します。*<br/>
-ビットマップ ボタンの選択状態または "down" 状態のビットマップ リソースのリソース ID 番号を指定します。 0 であってもよい。
+*nIDBitmapResourceSel*<br/>
+ビットマップボタンの選択または "ダウン" 状態のビットマップリソースのリソース ID 番号を指定します。 0の場合もあります。
 
-*リソースを割り当てる*<br/>
-ビットマップ ボタンのフォーカス状態のビットマップ リソースのリソース ID 番号を指定します。 0 であってもよい。
+*nIDBitmapResourceFocus*<br/>
+ビットマップボタンのフォーカス状態に関するビットマップリソースのリソース ID 番号を指定します。 0の場合もあります。
 
-*を無効にします。*<br/>
-ビットマップ ボタンの無効状態のビットマップ リソースのリソース ID 番号を指定します。 0 であってもよい。
+*nIDBitmapResourceDisabled*<br/>
+ビットマップボタンの無効状態に関するビットマップリソースのリソース ID 番号を指定します。 0の場合もあります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -210,9 +210,9 @@ BOOL LoadBitmaps(
 
 [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]
 
-## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>コンテンツのサイズ
+## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton:: SizeToContent
 
-ビットマップ ボタンのサイズをビットマップのサイズに変更します。
+ビットマップのサイズを変更するには、この関数を呼び出します。
 
 ```cpp
 void SizeToContent();
@@ -224,6 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRL テスト](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[階層図](../../mfc/hierarchy-chart.md)

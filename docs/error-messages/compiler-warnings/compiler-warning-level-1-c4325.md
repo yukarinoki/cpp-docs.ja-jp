@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 551680bc1d24097200a1e641bc4238f883ad94dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163025"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230702"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>コンパイラの警告 (レベル 1) C4325
 
@@ -25,7 +25,7 @@ ms.locfileid: "80163025"
 #pragma section(".sdata", long)
 ```
 
-これにより、 **long**データ型の**short**データ型を使用する `.sdata` の標準セクションが上書きされます。
+これにより、データ型がのデータ型を使用する標準のセクションが上書きされ `.sdata` **`short`** **`long`** ます。
 
 変更できない属性を持つ標準セクションには、次のようなものがあります。
 
@@ -49,6 +49,6 @@ ms.locfileid: "80163025"
 
 後で追加のセクションを追加することもできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[section](../../preprocessor/section.md)
+[下](../../preprocessor/section.md)

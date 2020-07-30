@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: e640d18dc3755385188e166c57ad5e912ac24fb4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de90cd2068f9b701167a340fe0b335e2a6c93102
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160594"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225801"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>単項加算演算子と否定演算子: + および -
 
@@ -29,9 +29,9 @@ ms.locfileid: "80160594"
 
 ## <a name="-operator"></a>+ 演算子
 
-単項プラス演算子 ( **+** ) の結果は、そのオペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。
+単項プラス演算子 () の結果は、 **+** そのオペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。
 
-整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 このため、式 `+ch`では、`ch` は**char**型であるため、 **int**型になります。値が変更されていません。 プロモーションの実行方法の詳細については、「[標準変換](standard-conversions.md)」を参照してください。
+整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 したがって、式 `+ch` ( `ch` は型) は **`char`** 型になりますが、 **`int`** 値は変更されません。 プロモーションの実行方法の詳細については、「[標準変換](standard-conversions.md)」を参照してください。
 
 ## <a name="--operator"></a>- 演算子
 
@@ -45,7 +45,7 @@ ms.locfileid: "80160594"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

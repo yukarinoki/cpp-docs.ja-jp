@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917846"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216805"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -63,24 +63,24 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 分子。
 
-*前年*<br/>
+*y*<br/>
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-*X* / *y*の浮動小数点の剰余。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
+*X*y の浮動小数点の剰余  /  *y*。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**剰余**関数*は x* *y* *y* - *x* /  *x* / *y* *x* /  + *r* *r* \* *n* *n* *n**y* *x* = の浮動小数点の剰余 r を計算します。ここで、n は x y の値に最も近い整数、n は &#124; n x y &#124; = 1/2 になるたびに n になります。 *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
+**剰余**関数は x y*の浮動小数点の剰余* *r*を計算します。  /  *y* *x*  =  *n* \* *y*  +  *r*ここで、 *n*は x y の値に最も近い*x*整数、n は  /  *y* &#124; *n* *n*  -  *x*  /  *y* &#124; = 1/2 になるたびに n になります。 *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**剰余**のオーバーロードを呼び出すことができます。 C プログラムでは、**剰余**は常に2つの**double**引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**剰余**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、**剰余**は常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
 |**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -110,7 +110,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod、fmodf](fmod-fmodf.md)<br/>

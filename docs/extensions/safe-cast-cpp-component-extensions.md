@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544640"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225125"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI および C++/CX)
 
@@ -42,17 +42,17 @@ ms.locfileid: "79544640"
 
 ### <a name="parameters"></a>パラメーター
 
-*type-id*<br/>
+*種類-id*<br/>
 変換後の *expression* の型。 参照型または値型へのハンドル、値型、参照型または値型への追跡参照。
 
 *式 (expression)*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照として評価される式。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-**safe_cast**は、*式*を*型 id*で指定された型に変換できない場合に `InvalidCastException` をスローします。`InvalidCastException`をキャッチするには、/ [EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラオプションを指定し、 **try/catch**ステートメントを使用します。
+**safe_cast**は、 `InvalidCastException` *式*を*型 id*で指定された型に変換できない場合は、をスローします。キャッチするには、/ `InvalidCastException` [EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラオプションを指定し、 **try/catch**ステートメントを使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -102,25 +102,25 @@ Caught expected exception: InvalidCastException
 
 ### <a name="parameters"></a>パラメーター
 
-*type-id*<br/>
+*種類-id*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照。
 
 *式 (expression)*<br/>
 参照型または値型へのハンドル、値型、参照型または値型への追跡参照として評価される式。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-式 `safe_cast<`*type-id*`>(`*expression*`)` は、オペランド *expression* を *type-id* 型のオブジェクトに変換します。
+式の `safe_cast<` *型 id* `>(` *式*は、 `)` オペランド*式*を型*id*型のオブジェクトに変換します。
 
-コンパイラでは、[safe_cast](../cpp/static-cast-operator.md) を使用できるほとんどの場所で、**safe_cast** を使用できます。  ただし、**safe_cast** では確実に検証可能な MSIL が生成されますが、**static_cast** では検証不可能な MSIL が生成される場合があります。  検証可能なコードの詳細については、「[純粋なコードと検証可能なコード (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)」と「[Peverify.exe (PEVerify ツール)](/dotnet/framework/tools/peverify-exe-peverify-tool)」を参照してください。
+コンパイラでは、[safe_cast](../cpp/static-cast-operator.md) を使用できるほとんどの場所で、**safe_cast** を使用できます。  ただし、 **safe_cast**は検証可能な msil を生成することが保証されますが、では **`static_cast`** 検証できない msil が生成される可能性があります。  検証可能なコードの詳細については、「[純粋なコードと検証可能なコード (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)」と「[Peverify.exe (PEVerify ツール)](/dotnet/framework/tools/peverify-exe-peverify-tool)」を参照してください。
 
-**static_cast** 同様、**safe_cast** はユーザー定義の変換を呼び出します。
+と同様 **`static_cast`** に、 **safe_cast**はユーザー定義の変換を呼び出します。
 
 キャストの詳細については、「[キャスト演算子](../cpp/casting-operators.md)」を参照してください。
 
-**safe_cast** は **const_cast** (**const** のキャスト) を適用しません。
+**safe_cast**は、 **`const_cast`** (cast) を適用 **`const`** しません。
 
-**safe_cast** は cli 名前空間に存在します。  詳細については、「[Platform, default, and cli Namespaces (プラットフォーム、既定、および cli 名前空間)](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
+**safe_cast** は cli 名前空間に存在します。  詳細については、「[プラットフォーム、既定、および cli 名前空間](platform-default-and-cli-namespaces-cpp-component-extensions.md)」を参照してください。
 
 **safe_cast** の詳細については、以下を参照してください。
 
@@ -128,13 +128,13 @@ Caught expected exception: InvalidCastException
 
 - [方法: C++/CLI で safe_cast を使用する](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
 ### <a name="examples"></a>例
 
-コンパイラで **static_cast** を使用できないが **safe_cast** を使用できる状況の例の 1 つは、関連していないインターフェイス型の間でのキャストです。  **safe_cast** を使用した場合、コンパイラは変換エラーを生成せず、キャストが可能であるかどうかを実行時に検証します。
+コンパイラがを受け入れないが、safe_cast を受け入れる例の1つとして、関連のない **`static_cast`** インターフェイス型間の**safe_cast**キャストがあります。  **safe_cast** を使用した場合、コンパイラは変換エラーを生成せず、キャストが可能であるかどうかを実行時に検証します。
 
 ```cpp
 // safe_cast.cpp
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

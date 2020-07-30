@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fc163255a5ab342938f56f8a22af3984a48e56a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216623"
 ---
 # <a name="_bstr_t-relational-operators"></a>_bstr_t 関係演算子
 
@@ -39,10 +39,10 @@ bool operator>=(const _bstr_t& str) const throw( );
 
 ## <a name="remarks"></a>解説
 
-これらの演算子は 2 つの `_bstr_t` オブジェクトを辞書式に比較します。 これらの演算子は、比較が保留になっている場合は TRUE を返し、それ以外の場合は FALSE を返します。
+これらの演算子は 2 つの `_bstr_t` オブジェクトを辞書式に比較します。 演算子は、 **`true`** 比較が保留されている場合はを返し、それ以外の場合はを返し **`false`** ます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)

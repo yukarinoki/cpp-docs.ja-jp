@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916425"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218625"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime、_localtime32、_localtime64
 
@@ -76,7 +76,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 **localtime**は **_localtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime**が **_localtime32**に評価されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
+Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは次の値を格納します。各値はです **`int`** 。
 
 |フィールド|説明|
 |-|-|
@@ -94,7 +94,7 @@ Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールド�
 
 ## <a name="remarks"></a>解説
 
-**Localtime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **Long** Value *sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
+**Localtime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **`long`** 値*sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
 
 [Gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および**localtime**の32ビットバージョンと64ビットバージョンの両方で、変換にスレッドごとに1つの**tm**構造が使用されます。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
@@ -109,9 +109,9 @@ Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールド�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> また\<は time .h>|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> または \<time.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

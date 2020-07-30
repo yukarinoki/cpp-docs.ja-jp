@@ -2,22 +2,22 @@
 title: コンカレンシー名前空間演算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228480"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>コンカレンシー名前空間演算子 (AMP)
 
 ||||
 |-|-|-|
-|[演算子!=](#operator_neq)|[演算子%](#operator_mod)|[演算子*](#operator_star)|
-|[演算子+](#operator_add)|[演算子-](#operator-)|[オペレーター/](#operator_div)|
-|[演算子==](#operator_eq_eq)|
+|[operator! =](#operator_neq)|[operator](#operator_mod)|[operator](#operator_star)|
+|[演算子 +](#operator_add)|[operator](#operator-)|[operator](#operator_div)|
+|[operator = =](#operator_eq_eq)|
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>演算子==
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
 指定した引数が等しいかどうかを判断します。
 
@@ -44,9 +44,9 @@ bool operator== (
 
 ### <a name="return-value"></a>戻り値
 
-タプルが等しい場合は**true。** それ以外の場合**は false。**
+**`true`** 組が等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="operator"></a><a name="operator_neq"></a>演算子!=
+## <a name="operator"></a><a name="operator_neq"></a>operator! =
 
 指定した引数が等しくないかどうかを判断します。
 
@@ -73,9 +73,9 @@ bool operator!= (
 
 ### <a name="return-value"></a>戻り値
 
-タプルが等しくない場合は**true。** それ以外の場合**は false。**
+**`true`** 組が等しくない場合は。それ以外の場合は **`false`** 。
 
-## <a name="operator"></a><a name="operator_add"></a>演算子+
+## <a name="operator"></a><a name="operator_add"></a>演算子 +
 
 指定された引数の要素ごとの合計を計算します。
 
@@ -120,7 +120,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 指定された引数の要素ごとの合計。
 
-## <a name="operator-"></a><a name="operator-"></a>演算子-
+## <a name="operator-"></a><a name="operator-"></a>operator
 
 指定された引数の要素ごとの差を計算します。
 
@@ -165,7 +165,7 @@ _Tuple_type<_Rank>   operator-(
 
 指定された引数の要素ごとの差。
 
-## <a name="operator"></a><a name="operator_star"></a>演算子*
+## <a name="operator"></a><a name="operator_star"></a>operator
 
 指定された引数の要素ごとの積を計算します。
 
@@ -202,7 +202,7 @@ _Tuple_type<_Rank>   operator*(
 
 指定された引数の要素ごとの積。
 
-## <a name="operator"></a><a name="operator_div"></a>オペレーター/
+## <a name="operator"></a><a name="operator_div"></a>operator
 
 指定された引数のコンポーネントごとの商を計算します。
 
@@ -239,7 +239,7 @@ _Tuple_type<_Rank>   operator/(
 
 指定された引数のコンポーネントごとの商。
 
-## <a name="operator"></a><a name="operator_mod"></a>演算子%
+## <a name="operator"></a><a name="operator_mod"></a>operator
 
 2 番目の指定された引数による 1 番目の指定された引数の剰余を計算します。
 
@@ -278,4 +278,4 @@ _Tuple_type<_Rank>   operator%(
 
 ## <a name="see-also"></a>関連項目
 
-[同時実行名前空間](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間](concurrency-namespace-cpp-amp.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232990"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution クラス
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*リアルタイプ*\
-浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*RealType*\
+浮動小数点型の結果は、既定ではに **`double`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="example"></a>例
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::pシエスワイズ_定数_分布
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::p iecewise_constant_distribution
 
 分布を作成します。
 
@@ -248,19 +248,19 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*最初のI*\
+*firstI*\
 ターゲット範囲内の先頭の要素を示す入力反復子。
 
-*ラストI*\
+*lastI*\
 ターゲット範囲内の末尾の要素を示す入力反復子。
 
-*最初のW*\
+*firstW*\
 重み範囲内の先頭の要素を示す入力反復子。
 
-*間隔*\
+*不定期*\
 分布の区間を含む [initializer_list](../cpp/initializers.md)。
 
-*カウント*\
+*数*\
 分布範囲内にある要素の数。
 
 *xmin*\
@@ -269,10 +269,10 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *xmax*\
 分布範囲内の最大値。 *xmin* より大きくなければなりません。
 
-*重量Func*\
-分布の確率関数を表すオブジェクト。 パラメータと戻り値の両方を**double**に変換できる必要があります。
+*weightfunc*\
+分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方がに変換可能である必要があり **`double`** ます。
 
-*Parm*\
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>解説
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-初期化子リストの*間隔*と、関数*weightfunc*から生成された重み付けの間隔を持つ配布オブジェクトを構築します。
+初期化子リストの*間隔*、および関数*weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-*カウント*間隔が [ ]`xmin,xmax`に一様に分散された分布オブジェクトを構築し、weightfunc 関数に従って各間隔の重みを割り当て *、weightfunc*は 1 つのパラメータを受`double`け入れ、戻り値を持つ必要があります。 *weightfunc* **前提条件:**`xmin < xmax`
+[] で均等に分布した*数*の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数*weightfunc*に従って割り当てます。 *weightfunc*は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:**`xmin < xmax`
 
 次のように定義されたコンストラクターは
 
@@ -316,9 +316,9 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-は、格納されたパラメータ構造として*parm*を使用して分散オブジェクトを構築します。
+格納されているパラメーター構造として*parm*を使用して、配布オブジェクトを構築します。
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::pラム_タイプ
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 
@@ -350,5 +350,5 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)\
+[\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

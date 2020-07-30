@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204886"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "84623577"
 > [!NOTE]
 > \<allocators>は、Visual Studio 2019 バージョン16.3 以降では非推奨とされます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \<allocators>ヘッダーには、ノードベースのコンテナーのメモリ管理戦略を選択するために使用できる6つのアロケーターテンプレートが用意されています。 これらのテンプレートで使用するため、さまざまなマルチスレッド スキーム (なしを含む) に合わせてメモリ管理方法を調整するためのさまざまな同期フィルターも用意されています。 メモリ管理戦略をメモリ使用パターンや同期要件と照合することで、アプリの速度を上げたり、メモリ要件を減らしたりすることができます。
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md) 同期フィルターを使用してノードを割り当てます。
 
-ブロック アロケーターは、キャッシュまたはフィルターです。 キャッシュは、std:: size_t 型の引数を1つ受け取るクラステンプレートです。 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。 Operator **new**を使用してメモリを取得する必要がありますが、各ブロックに対して**new**演算子を個別に呼び出す必要はありません。 たとえば、より大規模なブロックからサブ割り当てしたり、割り当て解除したブロックを後続の再割り当てのためにキャッシュしたりすることができます。
+ブロック アロケーターは、キャッシュまたはフィルターです。 キャッシュは、std:: size_t 型の引数を1つ受け取るクラステンプレートです。 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。 演算子を使用してメモリを取得する必要 **`new`** がありますが、 **`new`** 各ブロックに対して個別の operator 呼び出しを行う必要はありません。 たとえば、より大規模なブロックからサブ割り当てしたり、割り当て解除したブロックを後続の再割り当てのためにキャッシュしたりすることができます。
 
 テンプレートがインスタンス化されたときに使用された std:: size_t 引数の値を再バインドできないコンパイラでは、キャッシュのメンバー関数に渡される _Sz 引数の値が割り当てられ、割り当てが解除されるとは限りません。
 
@@ -130,7 +130,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 |[CACHE_SUBALLOC](allocators-functions.md#cache_suballoc)|`stdext::allocators::cache_suballoc<sizeof(Type)>` を生成します。|
 |[SYNC_DEFAULT](allocators-functions.md#sync_default)|同期フィルターを生成します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|Description|
 |-|-|

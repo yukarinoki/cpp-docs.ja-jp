@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221979"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -79,13 +79,13 @@ long double cbrtl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**cbrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cbrt**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、または型を受け取る**cbrt**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **cbrt**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**cbrt**、 **cbrtf**、 **cbrtf**|\<math.h>|\<cmath>|
 
@@ -117,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>
 [pow、powf、powl](pow-powf-powl.md)<br/>

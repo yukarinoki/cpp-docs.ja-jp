@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180852"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215206"
 ---
 # <a name="og-global-optimizations"></a>`/Og`(グローバルな最適化)
 
-非推奨になりました。 ローカルおよびグローバルの最適化、自動レジスタ割り当て、およびループの最適化を提供します。 代わりに、 [ `/O1` (サイズを最小化する)](o1-o2-minimize-size-maximize-speed.md)または[ `/O2` (最大速度)](o1-o2-minimize-size-maximize-speed.md)のいずれかを使用することをお勧めします。
+非推奨。 ローカルおよびグローバルの最適化、自動レジスタ割り当て、およびループの最適化を提供します。 代わりに、 [ `/O1` (サイズを最小化する)](o1-o2-minimize-size-maximize-speed.md)または[ `/O2` (最大速度)](o1-o2-minimize-size-maximize-speed.md)のいずれかを使用することをお勧めします。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ ms.locfileid: "86180852"
 
 - 自動レジスタ割り当て
 
-   この最適化により、コンパイラは、頻繁に使用される変数と部分式をレジスタに格納できます。`register`キーワードは無視されます。
+   この最適化により、コンパイラは、頻繁に使用される変数と部分式をレジスタに格納できます。**`register`** キーワードは無視されます。
 
 - ループの最適化
 

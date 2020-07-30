@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423943"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230092"
 ---
 # <a name="complex-class"></a>complex クラス
 
-クラステンプレートは、`Type`型の2つのオブジェクトを格納するオブジェクトを記述します。1つは複素数の実数部、もう1つは虚数部を表すオブジェクトです。
+クラステンプレートは、型の2つのオブジェクトを格納するオブジェクトを記述し `Type` ます。1つは複素数の実数部、もう1つは虚数部を表すオブジェクトです。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>解説
 
-クラス `Type`のオブジェクト。
+クラスのオブジェクト `Type` :
 
 - 従来の動作で、パブリックな既定のコンストラクター、デストラクター、コピー コンストラクター、および代入演算子が用意されています。
 
@@ -38,9 +38,9 @@ class complex
 
 - 従来の動作で、必要に応じて浮動小数点型に対して定義される算術演算子と数学関数を定義します。
 
-特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 `Type` クラスのオブジェクトに対する操作では、例外をスローすることはできません。
+特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 クラスのオブジェクトに対する操作では、 `Type` 例外がスローされない場合があります。
 
-クラステンプレート complex の明示的な特殊化は、3つの浮動小数点型に存在します。 この実装では、`Type` の他の型の値は、実際の計算では**double**になり、`Type`型の格納されたオブジェクトに**double**型の結果が割り当てられます。
+クラステンプレート complex の明示的な特殊化は、3つの浮動小数点型に存在します。 この実装では、他の型の値は、 `Type` 実際の計算では型キャストになり、 **`double`** **`double`** 結果は型の格納されたオブジェクトに戻され `Type` ます。
 
 ## <a name="members"></a>メンバー
 
@@ -48,7 +48,7 @@ class complex
 
 |||
 |-|-|
-|[complex](#complex)|指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。|
+|[作業](#complex)|指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -67,13 +67,13 @@ class complex
 
 |||
 |-|-|
-|[operator*=](#op_star_eq)|ターゲットの複素数を係数で乗算します。係数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
-|[operator+=](#op_add_eq)|ターゲットの複素数に数値を加算します。加算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
+|[operator * =](#op_star_eq)|ターゲットの複素数を係数で乗算します。係数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
+|[演算子 + =](#op_add_eq)|ターゲットの複素数に数値を加算します。加算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 |[operator-=](#operator-_eq)|ターゲットの複素数から数値を減算します。減算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 |[operator/=](#op_div_eq)|ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
-|[operator=](#op_eq)|ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
+|[operator =](#op_eq)|ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 
-## <a name="complex"></a>作業
+## <a name="complex"></a><a name="complex"></a>作業
 
 指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。
 
@@ -95,12 +95,12 @@ constexpr complex(
 *_ImagVal*\
 構築される複素数の初期化に使用される虚数部の値。
 
-*Complexnum*\
+*complexNum*\
 構築される複素数の初期化に、その実数部と虚数部の値が使用される複素数。
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、格納されている実数部を *\_RealVal*に、格納された虚数部を *\_imagval*に初期化します。 2番目のコンストラクターは、格納されている実数部を `complexNum.real()` に初期化し、格納されている虚数部を `complexNum.imag()`に初期化します。
+最初のコンストラクターは、格納されている実数部を* \_ realval*に初期化し、格納された虚数部を* \_ imagval*に初期化します。 2番目のコンストラクターは、格納されている実数部をに初期化し、 `complexNum.real()` 格納された虚数部をに初期化し `complexNum.imag()` ます。
 
 この実装では、トランスレーターがメンバー テンプレート関数をサポートしない場合、次のテンプレートは、
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a>imag
 
 複素数の虚数部を抽出します。
 
@@ -169,7 +169,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 虚数部が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a>operator * =
 
 ターゲットの複素数を係数で乗算します。係数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -226,7 +226,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>演算子 + =
+## <a name="operator"></a><a name="op_add_eq"></a>演算子 + =
 
 ターゲットの複素数に数値を加算します。加算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -311,7 +311,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
 
 ターゲットの複素数から数値を減算します。減算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -414,7 +414,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-*Complexnum*\
+*complexNum*\
 ターゲットの複素数を除算する複素数。
 
 *_RealPart*\
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a>operator/=
 
 ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -522,7 +522,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-*Complexnum*\
+*complexNum*\
 ターゲットの複素数を除算する複素数。
 
 *_RealPart*\
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -624,7 +624,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>本当の
+## <a name="real"></a><a name="real"></a>本当の
 
 複素数の実数部を取得または設定します。
 
@@ -701,7 +701,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 実数値が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 複素数の実数部と虚数部を表すために使用するデータ型を表す型。
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>解説
 
-`value_type` は、class complex `Type` template パラメーターのシノニムです。
+`value_type`は、クラスの複合テンプレートパラメーターのシノニムです `Type` 。
 
 ### <a name="example"></a>例
 
@@ -780,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

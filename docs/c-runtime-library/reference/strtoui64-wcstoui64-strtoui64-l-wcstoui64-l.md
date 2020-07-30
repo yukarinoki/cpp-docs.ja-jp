@@ -48,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc70cc5a2a7c1c8975e90d5e8d1d5225522e0592
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233939"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 
-文字列を符号なし **__int64**値に変換します。
+文字列を値に変換 **`unsigned __int64`** します。
 
 ## <a name="syntax"></a>構文
 
@@ -112,7 +112,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-**_Strtoui64**関数は、 *strsource*を**unsigned** **__int64**に変換します。 **_wcstoui64**は **_strtoui64**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Strtoui64**関数は、 *strsource*をに変換 **`unsigned __int64`** します。 **_wcstoui64**は **_strtoui64**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 どちらの関数も、数値の一部として認識できない最初の文字で文字列*Strsource*の読み取りを停止します。 これは、終端の null 文字でもかまいません。または、*基数*以上の最初の数値文字である場合もあります。
 
@@ -131,13 +131,13 @@ NULL で終わる変換対象の文字列。
 
 **_strtoui64**では、 *strsource*が次の形式の文字列を指す必要があります。
 
-> [*空白*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
+> [*空白*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*数字*&#124;*文字*]
 
 *空白*は、空白文字とタブ文字で構成される場合があります。これは無視されます。 *数字*は1桁以上の10進数です。 *文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合は、 *strsource*が指す文字列の先頭の文字が、ベースを決定するために使用されます。 最初の文字が 0 で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strtoui64**|\<stdlib.h>|
 |**_wcstoui64**|\<stdlib.h> または \<wchar.h>|
@@ -169,10 +169,10 @@ u = 18446744073709551615
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[文字列から数値への関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: f75cf8483e7d6d65d118cc8f0ea756302d1b1d7c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c65eed8abafe424fa27c5b9a72d3c73b7127b68e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139845"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219587"
 ---
 # <a name="join-class"></a>join クラス
 
@@ -42,31 +42,31 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 ブロックによって結合および伝達されたメッセージのペイロードの種類。
 
 *_Jtype*<br/>
-`join` ブロックの種類は、`greedy` またはのいずれかになり `non_greedy`
+このブロックの種類は `join` 、またはのいずれかです。 `greedy``non_greedy`
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[join](#ctor)|オーバーロードされます。 `join` メッセージング ブロックを構築します。|
-|[~ 結合デストラクター](#dtor)|`join` ブロックを破棄します。|
+|[~ 結合デストラクター](#dtor)|ブロックを破棄 `join` します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[accept_message](#accept_message)|この `join` メッセージングブロックによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。|
-|[consume_message](#consume_message)|`join` メッセージングブロックによって既に提供され、ターゲットによって予約されているメッセージを使用して、所有権を呼び出し元に譲渡します。|
-|[link_target_notification](#link_target_notification)|新しいターゲットがこの `join` メッセージングブロックにリンクされていることを通知するコールバック。|
-|[propagate_message](#propagate_message)|`ISource` ブロックからこの `join` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。|
+|[accept_message](#accept_message)|このメッセージングブロックによって提供されたメッセージを受け入れ `join` 、所有権を呼び出し元に転送します。|
+|[consume_message](#consume_message)|メッセージングブロックによって既に提供され、ターゲットによって予約されているメッセージを使用して、 `join` 所有権を呼び出し元に譲渡します。|
+|[link_target_notification](#link_target_notification)|新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `join` 。|
+|[propagate_message](#propagate_message)|`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `join` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。|
 |[propagate_to_any_targets](#propagate_to_any_targets)|すべての送信元からの入力メッセージを含む出力メッセージを構築します。 この出力メッセージを各ターゲットに送信します。|
 |[release_message](#release_message)|以前のメッセージ予約を解放します。 ( [Source_block:: release_message](source-block-class.md#release_message)をオーバーライドします。)|
-|[reserve_message](#reserve_message)|この `join` メッセージングブロックによって以前に提供されたメッセージを予約します。 ( [Source_block:: reserve_message](source-block-class.md#reserve_message)をオーバーライドします。)|
+|[reserve_message](#reserve_message)|このメッセージングブロックによって以前に提供されたメッセージを予約 `join` します。 ( [Source_block:: reserve_message](source-block-class.md#reserve_message)をオーバーライドします。)|
 |[resume_propagation](#resume_propagation)|予約が解放された後、伝達を再開します。 ( [Source_block:: resume_propagation](source-block-class.md#resume_propagation)をオーバーライドします。)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
@@ -82,15 +82,15 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 
 `join`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-この `join` メッセージングブロックによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。
+このメッセージングブロックによって提供されたメッセージを受け入れ `join` 、所有権を呼び出し元に転送します。
 
 ```cpp
 virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
@@ -99,15 +99,15 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-提供された `message` オブジェクトの `runtime_object_identity`。
+提供された `runtime_object_identity` `message` オブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
+`message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
-`join` メッセージングブロックによって既に提供され、ターゲットによって予約されているメッセージを使用して、所有権を呼び出し元に譲渡します。
+メッセージングブロックによって既に提供され、ターゲットによって予約されているメッセージを使用して、 `join` 所有権を呼び出し元に譲渡します。
 
 ```cpp
 virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
@@ -116,17 +116,17 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-使用されている `message` オブジェクトの `runtime_object_identity`。
+使用 `runtime_object_identity` `message` されているオブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
+`message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`accept`と似ていますが、常に `reserve`の呼び出しが前に続きます。
+に似 `accept` ていますが、の前には常にが呼び出され `reserve` ます。
 
-## <a name="ctor"></a>結合
+## <a name="join"></a><a name="ctor"></a>結合
 
 `join` メッセージング ブロックを構築します。
 
@@ -171,31 +171,31 @@ join(
 *_PScheduleGroup*<br/>
 その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `join` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
-`filter_method` 型は、提供されたメッセージを受け入れるかどうかを判断するために、この `join` メッセージングブロックによって呼び出される、シグネチャ `bool (T const &)` のファンクタです。
+この型は、提供された `filter_method` `bool (T const &)` メッセージを `join` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="dtor"></a>~ join
+## <a name="join"></a><a name="dtor"></a>~ join
 
-`join` ブロックを破棄します。
+ブロックを破棄 `join` します。
 
 ```cpp
 ~join();
 ```
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-新しいターゲットがこの `join` メッセージングブロックにリンクされていることを通知するコールバック。
+新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `join` 。
 
 ```cpp
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-`ISource` ブロックからこの `join` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。
+`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `join` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
 ```cpp
 message_status propagate_message(
@@ -215,7 +215,7 @@ message_status propagate_message(
 
 対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
 
-## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
 すべての送信元からの入力メッセージを含む出力メッセージを構築します。 この出力メッセージを各ターゲットに送信します。
 
@@ -223,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 以前のメッセージ予約を解放します。
 
@@ -234,11 +234,11 @@ virtual void release_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-解放される `message` オブジェクトの `runtime_object_identity`。
+`runtime_object_identity` `message` 解放されるオブジェクトの。
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-この `join` メッセージングブロックによって以前に提供されたメッセージを予約します。
+このメッセージングブロックによって以前に提供されたメッセージを予約 `join` します。
 
 ```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
@@ -247,17 +247,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-提供された `message` オブジェクトの `runtime_object_identity`。
+提供された `runtime_object_identity` `message` オブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが正常に予約されている場合は**true** 、それ以外の場合は**false** 。
+**`true`** メッセージが正常に予約された場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`reserve` が呼び出された後、 **true**が返された場合は、メッセージの所有権を取得または解放するために、`consume` または `release` のいずれかを呼び出す必要があります。
+が呼び出された後、 `reserve` がを返す場合 **`true`** `consume` は、 `release` メッセージの所有権を取得または解放するためにまたはのいずれかを呼び出す必要があります。
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 予約が解放された後、伝達を再開します。
 
@@ -265,8 +265,8 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [choice クラス](choice-class.md)<br/>
 [multitype_join クラス](multitype-join-class.md)

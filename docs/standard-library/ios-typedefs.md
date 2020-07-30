@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375402"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212281"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 
-## <a name="ios"></a><a name="ios"></a>Ios
+## <a name="ios"></a><a name="ios"></a>ios
 
 従来の iostream ライブラリの ios クラスをサポートします。
 
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>解説
 
-型は、既定の文字特性を持つ**char**型の要素に特化したクラス テンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムです。
+この型は、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムであり、既定の文字の特性を持つ型の要素に対して特殊化されてい **`char`** ます。
 
-## <a name="streamoff"></a><a name="streamoff"></a>ストリームオフ
+## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
 内部操作をサポートします。
 
@@ -44,9 +44,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>解説
 
-型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 この値`streamoff(-1)`は、通常、誤ったオフセットを示します。
+型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 通常、値は `streamoff(-1)` 間違ったオフセットを示します。
 
-## <a name="streampos"></a><a name="streampos"></a>ストリームポス
+## <a name="streampos"></a><a name="streampos"></a>streampos
 
 バッファー ポインターまたはファイル ポインターの現在の位置を保持します。
 
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>解説
 
-型は[fpos](../standard-library/fpos-class.md) <  `mbstate_t`>のシノニムです。
+この型は、 [fpos](../standard-library/fpos-class.md)> のシノニムです <  `mbstate_t` 。
 
 ### <a name="example"></a>例
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>ストリームサイズ
+## <a name="streamsize"></a><a name="streamsize"></a>streamsize
 
 ストリームのサイズを表します。
 
@@ -117,7 +117,7 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>ウィオス
+## <a name="wios"></a><a name="wios"></a>wios
 
 従来の iostream ライブラリの wios クラスをサポートします。
 
@@ -127,7 +127,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>解説
 
-型は、既定の文字特性を持つ型**wchar_t**要素に特化したクラス テンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムです。
+この型は、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムであり、既定の文字の特性を持つ型の要素に対して特殊化されてい **`wchar_t`** ます。
 
 ## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
 
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>解説
 
-型は[fpos](../standard-library/fpos-class.md) <  `mbstate_t`>のシノニムです。
+この型は、 [fpos](../standard-library/fpos-class.md)> のシノニムです <  `mbstate_t` 。
 
 ### <a name="example"></a>例
 

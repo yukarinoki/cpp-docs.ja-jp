@@ -17,16 +17,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b8a37293166ec21aeb9410f05fb70c9753ec4f22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127778"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230416"
 ---
 # <a name="texture-class"></a>texture クラス
 
-テクスチャは範囲ドメイン内の `accelerator_view` についてのデータ集合体です。 これは、範囲ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数には、プリミティブ型C++ (`unsigned int`、`int`、`float`、`double`)、スカラー型 (`norm`または `unorm`)、または short ベクター型に対応する値が保持されます。
+テクスチャは範囲ドメイン内の `accelerator_view` についてのデータ集合体です。 これは、範囲ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数には、C++ プリミティブ型 (、、 **`unsigned int`** **`int`** **`float`** 、 **`double`** )、スカラー型 ( `norm` 、または `unorm` )、または short ベクター型に対応する値が保持されます。
 
 ## <a name="syntax"></a>構文
 
@@ -47,23 +47,23 @@ class texture;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |`scalar_type`|スカラー型。|
 |`value_type`|値型。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[テクスチャコンストラクター](#ctor)|`texture` クラスの新しいインスタンスを初期化します。|
 |[~ テクスチャデストラクター](#ctor)|`texture` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[copy_to](#copy_to)|詳細コピーを実行して、`texture` オブジェクトをコピー先にコピーします。|
+|[copy_to](#copy_to)|`texture`詳細コピーを実行して、オブジェクトをコピー先にコピーします。|
 |[data](#data)|このテクスチャの生データに CPU のポインターを返します。|
 |[get](#get)|指定したインデックス位置に要素の値を返します。|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|コピー先のこのテクスチャの優先ターゲットとなる[accelerator_view](accelerator-view-class.md)を返します。|
@@ -73,21 +73,21 @@ class texture;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[演算子 ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
+|[operator ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
 |[operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
-|[operator=](#operator_eq)|指定した[テクスチャ](texture-class.md)オブジェクトをこのオブジェクトにコピーします。|
+|[operator =](#operator_eq)|指定した[テクスチャ](texture-class.md)オブジェクトをこのオブジェクトにコピーします。|
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[rank 定数](#rank)|`texture` オブジェクトのランクを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[associated_accelerator_view](#associated_accelerator_view)|コピー先のこのテクスチャの優先ターゲットとなる[accelerator_view](accelerator-view-class.md)を取得します。|
 |[depth_pitch](#depth_pitch)|CPU の 3D ステージング テクスチャの各深度スライス間のバイト数を取得します。|
@@ -99,13 +99,13 @@ class texture;
 
 `texture`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_graphics
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="dtor"></a>~ テクスチャ
+## <a name="texture"></a><a name="dtor"></a>~ テクスチャ
 
 `texture` オブジェクトを破棄します。
 
@@ -113,7 +113,7 @@ class texture;
 ~texture() restrict(cpu);
 ```
 
-## <a name="associated_accelerator_view"></a>associated_accelerator_view
+## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a>associated_accelerator_view
 
 コピー先のこのテクスチャの優先ターゲットとなる[accelerator_view](accelerator-view-class.md)を取得します。
 
@@ -121,9 +121,9 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-## <a name="copy_to"></a>copy_to
+## <a name="copy_to"></a><a name="copy_to"></a>copy_to
 
-詳細コピーを実行して、`texture` オブジェクトをコピー先にコピーします。
+`texture`詳細コピーを実行して、オブジェクトをコピー先にコピーします。
 
 ```cpp
 void copy_to(texture& _Dest) const;
@@ -141,7 +141,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 *value_type*<br/>
 テクスチャの要素の型。
 
-## <a name="data"></a>データ
+## <a name="data"></a><a name="data"></a> データ
 
 このテクスチャの生データに CPU のポインターを返します。
 
@@ -155,7 +155,7 @@ const void* data() const restrict(cpu);
 
 テクスチャの生データへのポインター。
 
-## <a name="depth_pitch"></a>depth_pitch
+## <a name="depth_pitch"></a><a name="depth_pitch"></a>depth_pitch
 
 CPU の 3D ステージング テクスチャの各深度スライス間のバイト数を取得します。
 
@@ -163,7 +163,7 @@ CPU の 3D ステージング テクスチャの各深度スライス間のバ�
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-## <a name="get"></a>取得
+## <a name="get"></a><a name="get"></a>取得
 
 指定したインデックス位置に要素の値を返します。
 
@@ -180,7 +180,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 
 指定されたインデックス位置にある要素の値。
 
-## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
 コピー先であるこのテクスチャの優先ターゲットである accelerator_view を返します。
 
@@ -192,7 +192,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 
 コピー先のこのテクスチャの優先ターゲットである[accelerator_view](accelerator-view-class.md) 。
 
-## <a name="get_depth_pitch"></a>get_depth_pitch
+## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a>get_depth_pitch
 
 CPU の 3D ステージング テクスチャの各深度スライス間のバイト数を返します。
 
@@ -204,7 +204,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 CPU の 3D ステージング テクスチャの各深度スライス間のバイト数。
 
-## <a name="get_row_pitch"></a>get_row_pitch
+## <a name="get_row_pitch"></a><a name="get_row_pitch"></a>get_row_pitch
 
 2 次元ステージング テクスチャの各行間、または 3 次元ステージング テクスチャの深度スライスの各行間のバイト数を返します。
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 2 次元ステージング テクスチャの各行間、または 3 次元ステージング テクスチャの深度スライスの各行間のバイト数。
 
-## <a name="operator_call"></a>operator ()
+## <a name="operator"></a><a name="operator_call"></a>operator ()
 
 パラメーターによって指定された要素の値を返します。
 
@@ -258,7 +258,7 @@ const value_type operator() (
 
 パラメーターで指定された要素の値。
 
-## <a name="operator_at"></a>演算子 []
+## <a name="operator"></a><a name="operator_at"></a>演算子 []
 
 指定したインデックス位置にある要素を返します。
 
@@ -280,7 +280,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 
 指定したインデックス位置にある要素。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 指定した[テクスチャ](texture-class.md)オブジェクトをこのオブジェクトにコピーします。
 
@@ -301,7 +301,7 @@ texture& operator= (
 
 この `texture` オブジェクトへの参照。
 
-## <a name="rank"></a>ランク
+## <a name="rank"></a><a name="rank"></a>ランク
 
 `texture` オブジェクトのランクを取得します。
 
@@ -309,7 +309,7 @@ texture& operator= (
 static const int rank = _Rank;
 ```
 
-## <a name="row_pitch"></a>row_pitch
+## <a name="row_pitch"></a><a name="row_pitch"></a>row_pitch
 
 CPU の 2D または 3D ステージング テクスチャの各行間のバイト数を取得します。
 
@@ -317,7 +317,7 @@ CPU の 2D または 3D ステージング テクスチャの各行間のバイ�
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-## <a name="set"></a>一連
+## <a name="set"></a><a name="set"></a>一連
 
 指定されたインデックス位置にある要素の値を設定します。
 
@@ -338,7 +338,7 @@ void set(
 *value*<br/>
 要素の新しい値。
 
-## <a name="ctor"></a>テクスチャ
+## <a name="texture"></a><a name="ctor"></a>テクスチャ
 
 `texture` クラスの新しいインスタンスを初期化します。
 
@@ -594,6 +594,6 @@ texture(
 *_Rank*<br/>
 セクションのランク。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

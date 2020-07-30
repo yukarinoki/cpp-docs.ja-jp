@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687821"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217689"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
-クラステンプレート `numeric_limits` と、浮動小数点の表現と丸め処理に関する2つの列挙体を定義します。
+クラステンプレートと、 `numeric_limits` 浮動小数点の表現と丸め処理に関する2つの列挙体を定義します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<limits>
+**ヘッダー:**\<limits>
 
 **名前空間:** std
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-@No__t_0 クラスの明示的な特殊化では、基本型の多くのプロパティが記述されています。**これには**、文字、整数、浮動小数点型、および、 C++言語. \<limits> に記述されたプロパティには、精度、表現の最小と最大サイズ、丸め処理、およびシグナリングに関するエラーが含まれます。
+クラスの明示的な特殊化には、 `numeric_limits` 文字、整数、浮動小数点型など、基本型の多くのプロパティが記述さ **`bool`** れています。これは、C++ 言語の規則ではなく、定義された実装です。 「」で説明されているプロパティに \<limits> は、精度、最小および最大サイズの表現、丸め、およびシグナリングの種類のエラーが含まれます。
 
 ## <a name="members"></a>メンバー
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
 |||
 |-|-|
@@ -45,5 +45,5 @@ ms.locfileid: "72687821"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

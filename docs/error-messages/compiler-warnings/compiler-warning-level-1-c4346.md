@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187246"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223201"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>コンパイラの警告 (レベル 1) C4346
 
 ' name ': 依存名は型ではありません
 
-依存名を型として扱う場合は、 [typename](../../cpp/typename.md)キーワードを指定する必要があります。 すべてのバージョンのビジュアルC++で同じコードを使用するには、宣言に `typename` を追加します。
+依存名を型として扱う場合は、 [typename](../../cpp/typename.md)キーワードを指定する必要があります。 Visual C++ のすべてのバージョンで同じように動作するコードの場合は、を **`typename`** 宣言に追加します。
 
 次の例では、C4346 が生成されます。
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-次のサンプルは、 **typename**キーワードが必要なその他の例を示しています。
+次のサンプルは、キーワードが必要なその他の例を示して **`typename`** います。
 
 ```cpp
 // C4346b.cpp

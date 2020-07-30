@@ -1,5 +1,5 @@
 ---
-title: '&lt;オプション&gt;の演算子'
+title: '&lt;オプションの &gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224683"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;オプション&gt;の演算子
+# <a name="ltoptionalgt-operators"></a>&lt;オプションの &gt; 演算子
 
-## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しいかどうかを調べます。
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
-## <a name="operator"></a><a name="op_neq"></a>演算子!=
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しくないかどうかを調べます。
 
@@ -59,17 +59,17 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 ### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left == right)` を返します。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより小さいかどうかを調べます。
 
@@ -83,17 +83,17 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の list が演算子の右辺の list 未満である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のリストが演算子の右辺のリストより小さい場合は、それ以外の場合は。それ以外の場合は **`false`** 。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左側の `optional` オブジェクトが右側の  `optional` オブジェクト以下かどうかを調べます。
 
@@ -107,21 +107,21 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の list が演算子の右辺の list 以下である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のリストが演算子の右辺の list 以下である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(right < left)` を返します。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより大きいかどうかを調べます。
 
@@ -135,21 +135,21 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の list が演算子の右辺の list より大きい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のリストが演算子の右辺の list より大きい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 このテンプレート関数は `right < left` を返します。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクト以上であるかどうかを調べます。
 
@@ -163,15 +163,15 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+*左側*\
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 *そうです*\
-型`optional`、、`nullopt_t`または`T`のオブジェクト。
+`optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の `optional` が演算子の右辺の `optional` 以上である場合は **true**、それ以外の場合は **false**。
+**`true`**`optional`演算子の左辺のが演算子の右辺のより大きいか等しい場合は `optional` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 

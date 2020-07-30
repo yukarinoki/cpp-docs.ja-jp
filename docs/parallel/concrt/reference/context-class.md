@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d888c7ba3d4a6680b2f77fef98d91c64825cda6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215830"
 ---
 # <a name="context-class"></a>Context クラス
 
@@ -41,13 +41,13 @@ class Context;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
 |[~ Context デストラクター](#dtor)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
 |[ブロック](#block)|現在のコンテキストをブロックします。|
 |[CurrentContext](#currentcontext)|現在のコンテキストへのポインターを返します。|
@@ -81,7 +81,7 @@ class Context;
 
 **名前空間:** concurrency
 
-## <a name="block"></a>帯
+## <a name="block"></a><a name="block"></a>帯
 
 現在のコンテキストをブロックします。
 
@@ -95,17 +95,17 @@ static void __cdecl Block();
 
 呼び出し元のコンテキストが仮想プロセッサ上で実行されている場合、仮想プロセッサは実行する別の実行可能なコンテキストを検出するか、新しいコンテキストを作成する可能性があります。
 
-`Block` メソッドが呼び出された後、または呼び出された後に、もう一度実行するには、別の実行コンテキストから[ブロック解除](#unblock)メソッドを呼び出す必要があります。 コードが `Unblock` メソッドを呼び出すことができるようにするために、また、実際のメソッドの `Block` 呼び出しが行われる地点まで、コードが別のスレッドのコンテキストを公開するまでの間には重要な点があることに注意してください。 この期間中は、メソッドを呼び出さないでください。これらのメソッドは、独自の理由 (たとえば、ロックの取得) によってブロックおよびブロック解除することができます。 `Block` および `Unblock` メソッドの呼び出しでは、ブロックとブロック解除の理由は追跡されません。 1つのオブジェクトだけに `Unblock` ペアの `Block`- 所有権が必要です。
+`Block`メソッドが呼び出された後、または呼び出された後、もう一度実行するには、別の実行コンテキストから[ブロック解除](#unblock)メソッドの呼び出しを使用してこのメソッドを組み合わせる必要があります。 他のスレッドがメソッドを呼び出すことができるようにするために、また、実際のメソッド呼び出しが行われる地点の間には、重要な期間がある点に注意して `Unblock` `Block` ください。 この期間中は、メソッドを呼び出さないでください。これらのメソッドは、独自の理由 (たとえば、ロックの取得) によってブロックおよびブロック解除することができます。 `Block`メソッドとメソッドの呼び出しでは、 `Unblock` ブロックとブロック解除の理由は追跡されません。 1つのオブジェクトだけがペアの所有権を持つ必要があり `Block` -  `Unblock` ます。
 
 このメソッドは、 [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)を含むさまざまな例外をスローする場合があります。
 
-## <a name="dtor"></a>~ コンテキスト
+## <a name="context"></a><a name="dtor"></a>~ コンテキスト
 
 ```cpp
 virtual ~Context();
 ```
 
-## <a name="currentcontext"></a>CurrentContext
+## <a name="currentcontext"></a><a name="currentcontext"></a>CurrentContext
 
 現在のコンテキストへのポインターを返します。
 
@@ -121,7 +121,7 @@ static Context* __cdecl CurrentContext();
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
-## <a name="getid"></a>GetId
+## <a name="getid"></a><a name="getid"></a>GetId
 
 コンテキストが属するスケジューラ内で一意のコンテキストの識別子を返します。
 
@@ -133,7 +133,7 @@ virtual unsigned int GetId() const = 0;
 
 コンテキストが属するスケジューラ内で一意のコンテキストの識別子。
 
-## <a name="getschedulegroupid"></a>GetScheduleGroupId
+## <a name="getschedulegroupid"></a><a name="getschedulegroupid"></a>GetScheduleGroupId
 
 コンテキストが現在実行されているスケジュール グループの識別子を返します。
 
@@ -149,7 +149,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 
 このメソッドからの戻り値は、コンテキストが実行されているスケジュールグループの瞬間的なサンプリングです。 現在のコンテキスト以外のコンテキストでこのメソッドが呼び出された場合、値は返された時点で古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
-## <a name="getvirtualprocessorid"></a>GetVirtualProcessorId
+## <a name="getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a>GetVirtualProcessorId
 
 コンテキストが現在実行されている仮想プロセッサの識別子を返します。
 
@@ -159,13 +159,13 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 
 ### <a name="return-value"></a>戻り値
 
-コンテキストが現在仮想プロセッサで実行されている場合は、コンテキストが現在実行されている仮想プロセッサの識別子。それ以外の場合は、`-1`値です。
+コンテキストが現在仮想プロセッサで実行されている場合は、コンテキストが現在実行されている仮想プロセッサの識別子。それ以外の場合は、値 `-1` 。
 
 ### <a name="remarks"></a>解説
 
 このメソッドからの戻り値は、コンテキストが実行されている仮想プロセッサの瞬間的なサンプリングです。 この値は、返される瞬間に古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
-## <a name="id"></a>番号
+## <a name="id"></a><a name="id"></a>番号
 
 現在のコンテキストが属するスケジューラ内で一意の現在のコンテキストの識別子を返します。
 
@@ -175,9 +175,9 @@ static unsigned int __cdecl Id();
 
 ### <a name="return-value"></a>戻り値
 
-現在のコンテキストがスケジューラにアタッチされている場合、現在のコンテキストが属するスケジューラ内で一意の現在のコンテキストの識別子。それ以外の場合は、`-1`値です。
+現在のコンテキストがスケジューラにアタッチされている場合、現在のコンテキストが属するスケジューラ内で一意の現在のコンテキストの識別子。それ以外の場合は、値 `-1` 。
 
-## <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling
+## <a name="iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling
 
 現在のコンテキストで現在インラインで実行されているタスク コレクションがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。
 
@@ -187,9 +187,9 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 
 ### <a name="return-value"></a>戻り値
 
-スケジューラが呼び出し元のコンテキストにアタッチされていて、タスクグループがそのコンテキストでインラインタスクを実行している場合、そのタスクグループがアクティブなキャンセル処理中であるかどうかを示します (または、間もなく有効になります)。それ以外の場合は、`false`値です。
+スケジューラが呼び出し元のコンテキストにアタッチされていて、タスクグループがそのコンテキストでインラインタスクを実行している場合、そのタスクグループがアクティブなキャンセル処理中であるかどうかを示します (または、間もなく有効になります)。それ以外の場合は、値 **`false`** 。
 
-## <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked
+## <a name="issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked
 
 コンテキストが同期的にブロックされているかどうかを判断します。 コンテキストがブロックを引き起こしたアクションを明示的に実行した場合、そのコンテキストは同期的にブロックされていると見なされます。
 
@@ -203,13 +203,13 @@ virtual bool IsSynchronouslyBlocked() const = 0;
 
 ### <a name="remarks"></a>解説
 
-コンテキストがブロックを引き起こしたアクションを明示的に実行した場合、そのコンテキストは同期的にブロックされていると見なされます。 スレッドスケジューラでは、これは、`Context::Block` メソッドまたは `Context::Block` メソッドを使用して構築された同期オブジェクトへの直接呼び出しを示します。
+コンテキストがブロックを引き起こしたアクションを明示的に実行した場合、そのコンテキストは同期的にブロックされていると見なされます。 スレッドスケジューラでは、メソッド `Context::Block` またはメソッドを使用してビルドされた同期オブジェクトへの直接呼び出しを示し `Context::Block` ます。
 
 このメソッドからの戻り値は、コンテキストが同期的にブロックされているかどうかを示す瞬時のサンプルです。 この値は、返される瞬間に古くなる可能性があり、非常に限定的な状況でのみ使用できます。
 
-## <a name="operator_delete"></a>delete 演算子
+## <a name="operator-delete"></a><a name="operator_delete"></a>delete 演算子
 
-`Context` オブジェクトは、ランタイムによって内部的に破棄されます。 明示的に削除することはできません。
+`Context`オブジェクトは、ランタイムによって内部的に破棄されます。 明示的に削除することはできません。
 
 ```cpp
 void operator delete(void* _PObject);
@@ -220,7 +220,7 @@ void operator delete(void* _PObject);
 *_PObject*<br/>
 削除するオブジェクトへのポインター。
 
-## <a name="oversubscribe"></a>オーバーサブスクライブ
+## <a name="oversubscribe"></a><a name="oversubscribe"></a>オーバーサブスクライブ
 
 スケジューラの仮想プロセッサのいずれかで実行されるコンテキストで呼び出された場合に、コード ブロックの期間中、追加の仮想プロセッサをそのスケジューラに挿入します。
 
@@ -231,9 +231,9 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ### <a name="parameters"></a>パラメーター
 
 *_BeginOversubscription*<br/>
-**True**の場合は、オーバーサブスクリプションの間に追加の仮想プロセッサを追加する必要があることを示します。 **False**の場合は、オーバーサブスクリプションを終了し、以前に追加した仮想プロセッサを削除する必要があることを示します。
+の場合は **`true`** 、オーバーサブスクリプションの間に追加の仮想プロセッサを追加する必要があることを示します。 の場合は、オーバーサブスクリプションを終了し、以前に追加した仮想プロセッサを削除する必要がある **`false`** ことを示します。
 
-## <a name="schedulegroupid"></a>ScheduleGroupId
+## <a name="schedulegroupid"></a><a name="schedulegroupid"></a>ScheduleGroupId
 
 現在のコンテキストが実行されているスケジュール グループの識別子を返します。
 
@@ -243,9 +243,9 @@ static unsigned int __cdecl ScheduleGroupId();
 
 ### <a name="return-value"></a>戻り値
 
-現在のコンテキストがスケジューラにアタッチされ、スケジュールグループで作業している場合は、現在のコンテキストが動作しているスケジューラグループの識別子。それ以外の場合は、`-1`値です。
+現在のコンテキストがスケジューラにアタッチされ、スケジュールグループで作業している場合は、現在のコンテキストが動作しているスケジューラグループの識別子。それ以外の場合は、値 `-1` 。
 
-## <a name="unblock"></a>解除
+## <a name="unblock"></a><a name="unblock"></a>解除
 
 コンテキストのブロックを解除し、実行できるようにします。
 
@@ -255,13 +255,13 @@ virtual void Unblock() = 0;
 
 ### <a name="remarks"></a>解説
 
-`Unblock` メソッドの呼び出しが、[ブロック](#block)メソッドへの対応する呼び出しの前に来るようにすることは、完全に有効です。 `Block` メソッドと `Unblock` メソッドの呼び出しが適切にペアになっている限り、ランタイムはどちらの順序の自然な競合を適切に処理します。 `Block` 呼び出しの前に `Unblock` 呼び出しを行うと、`Block` 呼び出しの効果が単に否定されます。
+メソッドへの呼び出しが、 `Unblock` [ブロック](#block)メソッドへの対応する呼び出しの前に来るように、完全に有効です。 `Block`メソッドとメソッドの呼び出し `Unblock` が適切にペアになっている限り、ランタイムはどちらの順序の自然な競合を適切に処理します。 呼び出し `Unblock` の前に呼び出された呼び出しは、 `Block` 単に呼び出しの効果を否定し `Block` ます。
 
-このメソッドからスローされる可能性がある例外がいくつかあります。 コンテキストがそれ自体で `Unblock` メソッドを呼び出そうとすると、 [context_self_unblock](context-self-unblock-class.md)例外がスローされます。 `Block` と `Unblock` の呼び出しが適切にペアになっていない場合 (たとえば、現在実行されているコンテキストに対して `Unblock` の2回の呼び出しが行われた場合)、 [context_unblock_unbalanced](context-unblock-unbalanced-class.md)例外がスローされます。
+このメソッドからスローされる可能性がある例外がいくつかあります。 コンテキストがそれ自体でメソッドを呼び出そうとすると `Unblock` 、 [context_self_unblock](context-self-unblock-class.md)例外がスローされます。 との呼び出し `Block` `Unblock` が適切にペアになっていない場合 (たとえば、現在実行されているコンテキストに対しての2回の呼び出しが行われた場合 `Unblock` )、 [context_unblock_unbalanced](context-unblock-unbalanced-class.md)例外がスローされます。
 
-コードが `Unblock` メソッドを呼び出すことができるようにするために、また、実際のメソッドの `Block` 呼び出しが行われる地点まで、コードが別のスレッドのコンテキストを公開するまでの間には重要な点があることに注意してください。 この期間中は、メソッドを呼び出さないでください。これらのメソッドは、独自の理由 (たとえば、ロックの取得) によってブロックおよびブロック解除することができます。 `Block` および `Unblock` メソッドの呼び出しでは、ブロックとブロック解除の理由は追跡されません。 `Block` と `Unblock` ペアの所有権を持つことができるオブジェクトは1つだけです。
+他のスレッドがメソッドを呼び出すことができるようにするために、また、実際のメソッド呼び出しが行われる地点の間には、重要な期間がある点に注意して `Unblock` `Block` ください。 この期間中は、メソッドを呼び出さないでください。これらのメソッドは、独自の理由 (たとえば、ロックの取得) によってブロックおよびブロック解除することができます。 `Block`メソッドとメソッドの呼び出しでは、 `Unblock` ブロックとブロック解除の理由は追跡されません。 とのペアの所有権を持つことができるオブジェクトは1つだけ `Block` `Unblock` です。
 
-## <a name="virtualprocessorid"></a>VirtualProcessorId
+## <a name="virtualprocessorid"></a><a name="virtualprocessorid"></a>VirtualProcessorId
 
 現在のコンテキストが実行されている仮想プロセッサの識別子を返します。
 
@@ -271,13 +271,13 @@ static unsigned int __cdecl VirtualProcessorId();
 
 ### <a name="return-value"></a>戻り値
 
-現在のコンテキストがスケジューラにアタッチされている場合は、現在のコンテキストが実行されている仮想プロセッサの識別子。それ以外の場合は、`-1`値です。
+現在のコンテキストがスケジューラにアタッチされている場合は、現在のコンテキストが実行されている仮想プロセッサの識別子。それ以外の場合は、値 `-1` 。
 
 ### <a name="remarks"></a>解説
 
 このメソッドからの戻り値は、現在のコンテキストが実行されている仮想プロセッサの瞬間的なサンプリングです。 この値は、返される瞬間に古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
-## <a name="yield"></a>得
+## <a name="yield"></a><a name="yield"></a>得
 
 別のコンテキストが実行できるように実行を譲歩します。 実行の権利を譲る他のコンテキストが存在しない場合、スケジューラによって別のオペレーティング システム スレッドに明け渡されます。
 
@@ -289,7 +289,7 @@ static void __cdecl Yield();
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
-## <a name="yieldexecution"></a>YieldExecution
+## <a name="yieldexecution"></a><a name="yieldexecution"></a>YieldExecution
 
 別のコンテキストが実行できるように実行を譲歩します。 実行の権利を譲る他のコンテキストが存在しない場合、スケジューラによって別のオペレーティング システム スレッドに明け渡されます。
 
@@ -303,8 +303,8 @@ static void __cdecl YieldExecution();
 
 この関数は Visual Studio 2015 で新しく追加されたものであり、 [yield](#yield)関数と同じですが、Windows .H の yield マクロと競合しません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)<br/>
 [タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

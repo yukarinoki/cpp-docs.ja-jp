@@ -5,18 +5,18 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926117"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233289"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>コンパイラの警告 (レベル 1) C4305
 
-> '*context*': ' type1 *' から '* *type1*' への切り捨て
+> '*context*': ' type1 *' から '**type1*' への切り捨て
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この警告は、値が初期化時に小さい型に変換されるか、コンストラクター引数として変換されると、情報が失われる場合に発行されます。
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-この問題を解決するには、正しい型の値を使用してを初期化するか、適切な型への明示的なキャストを使用します。 たとえば、 **double** (浮動小数点リテラルの既定の型) ではなく 2.71828 f などの**float**リテラルを使用して、 **float**変数を初期化したり、 **float**引数を受け取るコンストラクターに渡したりします。
+この問題を解決するには、正しい型の値を使用してを初期化するか、適切な型への明示的なキャストを使用します。 たとえば、 **`float`** (浮動小数点リテラルの既定の型) ではなく 2.71828 f などのリテラルを使用して **`double`** 変数を初期化する **`float`** か、引数を受け取るコンストラクターに渡すことが **`float`** できます。

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 6b429b0e5c734f81216c988e372c02021528cffd
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690024"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203875"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr クラス
 
@@ -55,15 +55,15 @@ class auto_ptr {
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 既存のリソースの取得元となる `auto_ptr`。
 
-*ptr* \
+*ポインター*\
 格納されたポインターを置換するように指定されたポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、割り当てられたオブジェクトに対する `auto_ptr` と呼ばれるスマートポインターを記述します。 ポインターは、null であるか、または**new**によって割り当てられたオブジェクトを指定している必要があります。 `auto_ptr` は、格納されている値が別のオブジェクトに割り当てられている場合、所有権を転送します。 (転送後に格納されている値を null ポインターに置き換えます)。@No__t_0 のデストラクターは、割り当てられたオブジェクトを削除します。 `auto_ptr<Type>` は、コントロールがブロックを離れるとき、例外がスローされる場合であっても、割り当てられたオブジェクトが確実に自動的に削除するようにします。 同じオブジェクトを所有する 2 つの `auto_ptr<Type>` オブジェクトを構成しないでください。
+クラステンプレートは、割り当てられたオブジェクトに対すると呼ばれるスマートポインターを記述し `auto_ptr` ます。 ポインターは、null であるか、によって割り当てられたオブジェクトを指定している必要があり **`new`** ます。 `auto_ptr` は、格納されている値が別のオブジェクトに割り当てられている場合、所有権を転送します。 (転送後に格納されている値を null ポインターに置き換えます)。のデストラクターは、 `auto_ptr<Type>` 割り当てられたオブジェクトを削除します。 `auto_ptr<Type>` は、コントロールがブロックを離れるとき、例外がスローされる場合であっても、割り当てられたオブジェクトが確実に自動的に削除するようにします。 同じオブジェクトを所有する 2 つの `auto_ptr<Type>` オブジェクトを構成しないでください。
 
 `auto_ptr<Type>` オブジェクトを関数呼び出しの引数として値渡しで渡せます。 `auto_ptr` を標準ライブラリのコンテナーの要素にすることはできません。 C++ 標準ライブラリのコンテナーを持つ `auto_ptr<Type>` オブジェクトのシーケンスを確実に管理することはできません。
 
@@ -75,7 +75,7 @@ class auto_ptr {
 |-|-|
 |[auto_ptr](#auto_ptr)|`auto_ptr` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -86,20 +86,20 @@ class auto_ptr {
 |||
 |-|-|
 |[get](#get)|このメンバー関数は、格納されているポインター `myptr` を返します。|
-|[release](#release)|このメンバーは、格納されたポインター `myptr` を null ポインターで置換して、以前に格納されたポインターを返します。|
+|[解除](#release)|このメンバーは、格納されたポインター `myptr` を null ポインターで置換して、以前に格納されたポインターを返します。|
 |[reset](#reset)|このメンバー関数は、関数呼び出しの結果として格納されているポインター値 `myptr` が変化する場合に限り、式 `delete myptr` を評価します。 その後、格納されたポインターを *ptr* で置換します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#op_eq)|1 つの `auto_ptr` オブジェクトから別のオブジェクトに所有権を転送する代入演算子。|
-|[operator*](#op_star)|`auto_ptr` 型のオブジェクトの逆参照演算子。|
-|[operator->](#op_arrow)|メンバーにアクセスできるようにする演算子。|
+|[operator =](#op_eq)|1 つの `auto_ptr` オブジェクトから別のオブジェクトに所有権を転送する代入演算子。|
+|[operator](#op_star)|`auto_ptr` 型のオブジェクトの逆参照演算子。|
+|[演算子->](#op_arrow)|メンバーにアクセスできるようにする演算子。|
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|1 つの種類の `auto_ptr` から別の種類の `auto_ptr` にキャストします。|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|`auto_ptr` から `auto_ptr_ref` にキャストします。|
 
-### <a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
 
 `auto_ptr` 型のオブジェクトのコンストラクター。
 
@@ -116,19 +116,19 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*ptr* \
+*ポインター*\
 `auto_ptr` がカプセル化するオブジェクトへのポインター。
 
-*右*\
+*そうです*\
 コンストラクターによってコピーされる `auto_ptr` オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-最初のコンストラクターは、割り当てられたオブジェクトへの格納されたポインターである `myptr` に*ptr*を格納します。 2番目のコンストラクターは、 *right に格納*されているポインターの所有権を*転送します。* `myptr` での[リリース](#release)。
+1つ目の*ptr*コンストラクターは、 `myptr` 割り当てられたオブジェクトへの格納されたポインターである ptr を格納します。 2番目のコンストラクターは、 *right に格納*されているポインターの所有権を*転送します。* での[リリース](#release) `myptr` 。
 
-3番目のコンストラクターは、`right` を格納する点を除いて、2番目のコンストラクターと同じように動作します。 `ref`. `myptr` で `release` します。 `ref` は `right` に格納されている参照です。
+3番目のコンストラクターは、を格納する点を除いて、2番目のコンストラクターと同じように動作し `right` ます。 `ref`. `release`で `myptr` は、 `ref` はに格納されている参照です `right` 。
 
-テンプレートコンストラクターは、2番目のコンストラクターと同じように動作します。これは、`Other` へのポインターを `Type` へのポインターに暗黙的に変換できる場合に限ります。
+へのポインターをへのポインターに暗黙的に変換できる場合、テンプレートコンストラクターは2番目のコンストラクターと同じように動作し `Other` `Type` ます。
 
 #### <a name="example"></a>例
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a>element_type
 
 この型は、テンプレート パラメーター `Type` のシノニムです。
 
@@ -197,7 +197,7 @@ Destructing 00311AF8
 typedef Type element  _type;
 ```
 
-### <a name="get"></a>取得
+### <a name="get"></a><a name="get"></a>取得
 
 このメンバー関数は、格納されているポインター `myptr` を返します。
 
@@ -207,7 +207,7 @@ Type *get() const throw();
 
 #### <a name="return-value"></a>戻り値
 
-格納されているポインター `myptr`。
+格納されているポインター `myptr` 。
 
 #### <a name="example"></a>例
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a>operator =
 
 1 つの `auto_ptr` オブジェクトから別のオブジェクトに所有権を転送する代入演算子。
 
@@ -269,22 +269,22 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*右*\
-`auto_ptr` 型のオブジェクト。
+*そうです*\
+`auto_ptr` 型オブジェクト。
 
 #### <a name="return-value"></a>戻り値
 
 `auto_ptr<Type>` 型のオブジェクトへの参照。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-代入は `delete myptr` 式を評価しますが、代入の結果として格納されているポインター `myptr` 変化する場合に限ります。 次*に、right に格納*されているポインターの所有権を*転送します。* `myptr` での[リリース](#release)。 関数は __\*this__ を返します。
+代入は式を評価し `delete myptr` ますが、 `myptr` 代入の結果として格納されたポインターが変化する場合に限ります。 次*に、right に格納*されているポインターの所有権を*転送します。* での[リリース](#release) `myptr` 。 関数は、 __ \* これ__を返します。
 
 #### <a name="example"></a>例
 
 メンバー演算子の使用例については、「 [auto_ptr](#auto_ptr)」を参照してください。
 
-### <a name="op_star"></a>operator
+### <a name="operator"></a><a name="op_star"></a>operator
 
 `auto_ptr` 型のオブジェクトの逆参照演算子。
 
@@ -294,9 +294,9 @@ Type& operator*() const throw();
 
 #### <a name="return-value"></a>戻り値
 
-ポインターが所有する `Type` 型のオブジェクトへの参照。
+ポインターが所有する型のオブジェクトへの参照 `Type` 。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 間接演算子は `*`[get](#get) を返します。 つまり、格納されたポインターは、null にすることはできません。
 
@@ -304,7 +304,7 @@ Type& operator*() const throw();
 
 メンバー関数の使用例については、「 [auto_ptr](#auto_ptr)」を参照してください。
 
-### <a name="op_arrow"></a>演算子-&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a>operator&gt;
 
 メンバーにアクセスできるようにする演算子。
 
@@ -314,17 +314,17 @@ Type * operator->() const throw();
 
 #### <a name="return-value"></a>戻り値
 
-@No__t_0 所有するオブジェクトのメンバー。
+を所有するオブジェクトのメンバー `auto_ptr` 。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-選択演算子は [get](#get)`( )` を返して、式 *ap*-> **member** が ( *ap*. **get**( ) )-> **member** と同じ動作をするようにします。ここで、*ap* はクラス `auto_ptr`\< **Type**> のオブジェクトです。 このため、格納されているポインターを null にすることはできません。 `Type` は、`member` メンバーを持つクラス、構造体型、または共用体型である必要があります。
+選択演算子は[get](#get)を返します `( )` 。これにより、式の*ap* ->  **メンバー**は ( *ap*) と同じように動作します。 **get**())->**メンバー**。ここで、 *ap*はクラスのオブジェクト `auto_ptr` \< **Type**> です。 したがって、格納されているポインターは null にすることはできず、 `Type` メンバーを持つクラス、構造体、または共用体型にする必要があり `member` ます。
 
 #### <a name="example"></a>例
 
 メンバー関数の使用例については、「 [auto_ptr](#auto_ptr)」を参照してください。
 
-### <a name="op_auto_ptr_lt_other_gt"></a>operator auto_ptr &lt;Other &gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>演算子 auto_ptr &lt; その他&gt;
 
 1 つの種類の `auto_ptr` から別の種類の `auto_ptr` にキャストします。
 
@@ -335,7 +335,7 @@ operator auto _ptr<Other>() throw();
 
 #### <a name="return-value"></a>戻り値
 
-型キャスト演算子は `auto_ptr` \< **Other**>( **\*this**) を返します。
+型キャスト演算子は `auto_ptr` \< **Other**> ( ** \* this**) を返します。
 
 #### <a name="example"></a>例
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="op_auto_ptr_ref_lt_other_gt"></a>operator auto_ptr_ref &lt;Other &gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>演算子 auto_ptr_ref &lt; その他&gt;
 
 `auto_ptr` から `auto_ptr_ref` にキャストします。
 
@@ -365,7 +365,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 #### <a name="return-value"></a>戻り値
 
-型キャスト演算子は **auto_ptr_ref**\< **Other**>( **\*this**) を返します。
+型キャスト演算子は**auto_ptr_ref** \< **Other**> ( ** \* this**) を返します。
 
 #### <a name="example"></a>例
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a>解除
+### <a name="release"></a><a name="release"></a>解除
 
 このメンバーは、格納されたポインター `myptr` を null ポインターで置換して、以前に格納されたポインターを返します。
 
@@ -427,7 +427,7 @@ Type *release() throw();
 
 以前に格納されたポインター。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバーは、格納されたポインター `myptr` を null ポインターで置換して、以前に格納されたポインターを返します。
 
@@ -477,9 +477,9 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a>解除
+### <a name="reset"></a><a name="reset"></a>解除
 
-このメンバー関数は `delete myptr` 式を評価しますが、格納されているポインター値 `myptr` 関数呼び出しの結果として変更された場合に限ります。 その後、格納されたポインターを `ptr` で置換します。
+このメンバー関数は、式 `delete myptr` を評価しますが、格納されているポインター値が `myptr` 関数呼び出しの結果として変更された場合に限ります。 その後、格納されたポインターを `ptr` で置換します。
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -487,8 +487,8 @@ void reset(Type* ptr = 0);
 
 #### <a name="parameters"></a>パラメーター
 
-*ptr* \
-@No__t_0 格納されているポインターを置き換えるために指定されたポインター。
+*ポインター*\
+格納されているポインターを置き換えるために指定されたポインター `myptr` 。
 
 #### <a name="example"></a>例
 

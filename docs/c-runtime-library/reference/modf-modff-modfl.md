@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914635"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216870"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -78,15 +78,15 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**パラメーターを受け取って返す**modf**のオーバーロードを呼び出すことができます。 C プログラムでは、 **modf**は常に2つの double 値を受け取り、double 値を返します。
+C++ ではオーバーロードが可能であるため、またはパラメーターを受け取って返す**modf**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **modf**は常に2つの double 値を受け取り、double 値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modff**|C: \<math.h><br /><br /> C++: \<cmath> または \<math.h>|
+|**modf**、 **modff**、 **modff**|40u-c\<math.h><br /><br /> C++:、 \<cmath> または\<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

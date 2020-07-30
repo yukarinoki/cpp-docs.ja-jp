@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446741"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230377"
 ---
 # <a name="concurrency-namespace"></a>コンカレンシー名前空間
 
@@ -41,16 +41,16 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |`runtime_object_identity`|各メッセージ インスタンスには、メッセージング コンポーネント間でメッセージ インスタンスの複製または受け渡しを行うときに使用する ID があります。 メッセージ オブジェクトのアドレスをこの ID として指定することはできません。|
-|`task_status`|タスクの終了状態を表す型。 有効な値は、`completed`、`canceled` です。|
+|`task_status`|タスクの終了状態を表す型。 有効な値は `completed` と `canceled` です。|
 |`TaskProc`|`void (__cdecl * TaskProc)(void *)` として定義される、タスクの基本抽象化です。 `TaskProc` は、タスクの本体を呼び出すために呼び出されます。|
 |`TaskProc_t`|`void (__cdecl * TaskProc_t)(void *)` として定義される、タスクの基本抽象化です。 `TaskProc` は、タスクの本体を呼び出すために呼び出されます。|
 
 ### <a name="classes"></a>クラス
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[affinity_partitioner クラス](affinity-partitioner-class.md)|`affinity_partitioner` クラスは `static_partitioner` クラスに似ていますが、ワーカー スレッドへのマッピングのサブ範囲の選択によってキャッシュの関係が向上します。 同じデータ セットに対してループ処理が再実行されるときにパフォーマンスを大幅に向上させることができ、データはキャッシュに収まります。 データの局所性のメリットを利用するには、特定のデータ セットに対して実行される並列ループの以降のイテレーションで、同じ `affinity_partitioner` オブジェクトを使用する必要があります。|
 |[エージェントクラス](agent-class.md)|すべての独立エージェントの基底クラスとして使用されるクラスです。 他のエージェントに状態が表示されないようにしたり、メッセージ渡しでやり取りしたりする目的で使用されます。|
@@ -83,7 +83,7 @@ namespace concurrency;
 |[invalid_link_target クラス](invalid-link-target-class.md)|このクラスは、メッセージング ブロックの `link_target` メソッドが呼び出されたときに、そのメッセージング ブロックがターゲットにリンクできない場合にスローされる例外を表します。 この例外の原因としては、メッセージング ブロックのリンク数の上限を超えた場合、または特定のターゲットを同じソースに 2 回リンクしようとした場合があります。|
 |[invalid_multiple_scheduling クラス](invalid-multiple-scheduling-class.md)|このクラスは、`task_handle` オブジェクトまたは `run` オブジェクトの `task_group` メソッドを使用して `structured_task_group` オブジェクトが複数回スケジュールされた場合、間に `wait` メソッドまたは `run_and_wait` メソッドを呼び出さなかったときにスローされる例外を表します。|
 |[invalid_operation クラス](invalid-operation-class.md)|このクラスは、コンカレンシー ランタイムによってスローされる他の例外の種類によって正確に記述されない無効な操作を実行しようとした場合にスローされる例外を表します。|
-|[invalid_oversubscribe_operation クラス](invalid-oversubscribe-operation-class.md)|このクラスは、`Context::Oversubscribe` パラメーターが `_BeginOversubscription` に設定された `false` メソッドを事前に呼び出さずに、`Context::Oversubscribe` パラメーターが `_BeginOversubscription` に設定された `true` メソッドを呼び出した場合にスローされる例外を表します。|
+|[invalid_oversubscribe_operation クラス](invalid-oversubscribe-operation-class.md)|このクラスは、パラメーターが `Context::Oversubscribe` `_BeginOversubscription` に設定され **`false`** たメソッドを前に呼び出すことなく、パラメーターをに設定してメソッドを呼び出した場合にスローされる例外を表し `Context::Oversubscribe` `_BeginOversubscription` **`true`** ます。|
 |[invalid_scheduler_policy_key クラス](invalid-scheduler-policy-key-class.md)|このクラスは、無効なキーまたは不明なキーが `SchedulerPolicy` オブジェクトのコンストラクターに渡された場合、あるいは、本来他の方法 (`SetPolicyValue` メソッドなど) で変更する必要のあるキーが `SchedulerPolicy` オブジェクトの `SetConcurrencyLimits` メソッドに渡された場合にスローされる例外を表します。|
 |[invalid_scheduler_policy_thread_specification クラス](invalid-scheduler-policy-thread-specification-class.md)|このクラスは、`SchedulerPolicy` オブジェクトのコンカレンシー数の限度を設定する際に、`MinConcurrency` キーに指定された値が `MaxConcurrency` キーの値よりも小さい場合にスローされる例外を表します。|
 |[invalid_scheduler_policy_value クラス](invalid-scheduler-policy-value-class.md)|このクラスは、`SchedulerPolicy` オブジェクトのポリシー キーがそのキーの無効な値に設定された場合にスローされる例外を表します。|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>構造体
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[DispatchState 構造体](dispatchstate-structure.md)|`DispatchState` 構造体は、状態を `IExecutionContext::Dispatch` メソッドに転送するために使用されます。 `Dispatch` メソッドが `IExecutionContext` インターフェイスで呼び出される状況を示します。|
 |[IExecutionContext 構造体](iexecutioncontext-structure.md)|特定の仮想プロセッサで実行でき、協調的にコンテキストを切り替えることができる実行コンテキストへのインターフェイスです。|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>列挙型
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` の有効な状態。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|エージェント ライブラリによって提供されるトレース機能を使用してトレースできるイベントの種類。|
@@ -173,13 +173,13 @@ namespace concurrency;
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[Alloc 関数](concurrency-namespace-functions.md#alloc)|コンカレンシー ランタイムのキャッシュ サブアロケータから、指定したサイズのメモリ ブロックを割り当てます。|
 |[asend 関数](concurrency-namespace-functions.md#asend)|オーバーロードされます。 ターゲット ブロックにデータを反映するタスクをスケジュールする非同期送信操作です。|
 |[cancel_current_task 関数](concurrency-namespace-functions.md#cancel_current_task)|現在実行中のタスクを取り消します。 この関数は、タスクの実行を中止して `canceled` 状態に遷移させるために、タスクの本体から呼び出すことができます。<br /><br /> `task` の本体以外では、この関数を呼び出すシナリオはサポートされません。 これにより、アプリケーションのクラッシュや無応答などの未定義の動作が発生します。|
 |[create_async 関数](concurrency-namespace-functions.md#create_async)|ユーザーが指定したラムダまたは関数オブジェクトに基づいて Windows ランタイムの非同期構造を作成します。 `create_async` の戻り値の型は、`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^`、`IAsyncOperationWithProgress<TResult, TProgress>^` のいずれかで、メソッドに渡されるラムダのシグネチャに基づいています。|
-|[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 PPL[タスク](task-class.md)オブジェクトを作成します。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。|
+|[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 PPL[タスク](task-class.md)オブジェクトを作成します。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 これは、 **`auto`** タスクの作成時にキーワードを使用できるため、主に便宜上提供されています。|
 |[CreateResourceManager 関数](concurrency-namespace-functions.md#createresourcemanager)|コンカレンシー ランタイムのリソース マネージャーのシングルトン インスタンスを表すインターフェイスを返します。 リソース マネージャーは、相互の連携を必要とするスケジューラにリソースを割り当てます。|
 |[DisableTracing 関数](concurrency-namespace-functions.md#disabletracing)|コンカレンシー ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため非推奨とされます。|
 |[EnableTracing 関数](concurrency-namespace-functions.md#enabletracing)|コンカレンシー ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため非推奨とされます。|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[GetProcessorNodeCount 関数](concurrency-namespace-functions.md#getprocessornodecount)|基になるシステム上の NUMA ノードまたはプロセッサ パッケージの数を返します。|
 |[GetSchedulerId 関数](concurrency-namespace-functions.md#getschedulerid)|`IScheduler` インターフェイスを実装するスケジューラに割り当てることができる一意識別子を返します。|
 |[interruption_point 関数](concurrency-namespace-functions.md#interruption_point)|取り消しの割り込みポイントを作成します。 この関数が呼び出されるコンテキストで取り消しが進行中の場合、現在実行中の並列処理を中止する内部例外がスローされます。 取り消しが進行中でない場合は、何も実行されません。|
-|[is_current_task_group_canceling 関数](concurrency-namespace-functions.md#is_current_task_group_canceling)|現在のコンテキストで現在インラインで実行されているタスク グループがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。 現在のコンテキストで現在インラインで実行されているタスク グループが存在しない場合は、`false` が返されます。|
+|[is_current_task_group_canceling 関数](concurrency-namespace-functions.md#is_current_task_group_canceling)|現在のコンテキストで現在インラインで実行されているタスク グループがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。 現在のコンテキストで現在インラインで実行されているタスクグループがない場合は、 **`false`** が返されます。|
 |[make_choice 関数](concurrency-namespace-functions.md#make_choice)|オーバーロードされます。 オプションの `choice` や `Scheduler`、および 2 つ以上の入力ソースから `ScheduleGroup` メッセージング ブロックを構築します。|
 |[make_greedy_join 関数](concurrency-namespace-functions.md#make_greedy_join)|オーバーロードされます。 オプションの `greedy multitype_join` や `Scheduler`、および 2 つ以上の入力ソースから `ScheduleGroup` メッセージング ブロックを構築します。|
 |[make_join 関数](concurrency-namespace-functions.md#make_join)|オーバーロードされます。 オプションの `non_greedy multitype_join` や `Scheduler`、および 2 つ以上の入力ソースから `ScheduleGroup` メッセージング ブロックを構築します。|
@@ -218,9 +218,9 @@ namespace concurrency;
 |[when_all 関数](concurrency-namespace-functions.md#when_all)|引数として指定されたすべてのタスクが正常に完了したときに正常に完了するタスクを作成します。|
 |[when_any 関数](concurrency-namespace-functions.md#when_any)|オーバーロードされます。 引数として指定されたいずれかのタスクが正常に完了したときに正常に完了するタスクを作成します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[operator! =](concurrency-namespace-operators.md#operator_neq)|演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しくないかどうかを調べます。|
 |[&&演算子](concurrency-namespace-operators.md#operator_amp_amp)|オーバーロードされます。 引数として指定された両方のタスクが正常に完了したときに正常に完了するタスクを作成します。|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>定数
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|コンカレンシー ランタイムのエージェント ライブラリによって生成される ETW イベントを表すカテゴリの GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})。|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、作業またはタスクに直接関係する ETW イベントを表すカテゴリの GUID。|
@@ -254,7 +254,7 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、スケジューラ アクティビティに直接関係する ETW イベントを表すカテゴリの GUID。|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|コンカレンシー ランタイムによって生成される ETW イベントのうち、仮想プロセッサに直接関係する ETW イベントを表すカテゴリの GUID。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **Header:** agents、concrt .crt、pplconcrt.h、concurrent_queue、concurrent_unordered_map、concurrent_unordered_set、concurrent_vector、internal_concurrent_hash、internal_split_ordered_list、pplcancellation_token、、ppltasks.h、のようにして、を実行しています。 h、、およびについては次のようになります。
 

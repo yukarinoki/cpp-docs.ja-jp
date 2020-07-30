@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219730"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI および C++/CX)
 
@@ -48,9 +48,9 @@ delegate-type-identifier
 ### <a name="parameters"></a>パラメーター
 
 *access*<br/>
-(省略可能) デリゲートのアクセシビリティ。**public** (既定値) または **private** が可能です。 関数プロトタイプも、**const** または **volatile** キーワードで修飾できます。
+optionalデリゲートのアクセシビリティ **`public`** 。 (既定値) またはにすることができ **`private`** ます。 関数プロトタイプは、キーワードまたはキーワードで修飾することもでき **`const`** **`volatile`** ます。
 
-*return-type*<br/>
+*戻り値の型*<br/>
 関数プロトタイプの戻り値の型。
 
 *delegate-type-identifier*<br/>
@@ -87,7 +87,7 @@ function_declaration
 *function_declaration*<br/>
 デリゲートにバインドできる関数のシグネチャ。 デリゲートの戻り値の型には、任意のマネージ型を指定できます。 相互運用性の理由から、デリゲートの戻り値の型は CLS 型にすることをお勧めします。
 
-バインドされていないデリゲートを定義するには、*function_declaration* の最初のパラメーターを、オブジェクトの **this** ポインターの型にする必要があります。
+バインドされていないデリゲートを定義するには、 *function_declaration*の最初のパラメーターが、オブジェクトのポインターの型である必要があり **`this`** ます。
 
 ### <a name="remarks"></a>解説
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

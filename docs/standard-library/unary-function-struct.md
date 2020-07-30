@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243483"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217377"
 ---
-# <a name="unaryfunction-struct"></a>unary_function 構造体
+# <a name="unary_function-struct"></a>unary_function 構造体
 
 派生クラスによって継承される可能性がある型を定義し、単項関数オブジェクトを提供する空の基底構造体。
 
@@ -27,9 +27,9 @@ struct unary_function
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレート構造体は、**result_type**`operator()`( **constargument_type&** ) **const** 形式のメンバー関数を定義するクラスの基底になります。
+このテンプレート構造体は、 **result_type** `operator()` ( **constargument_type&**) の形式のメンバー関数を定義するクラスの基本として機能し **`const`** ます。
 
 派生した単項関数すべてで、単一の引数型を **argument_type**、戻り値の型を **result_type** として参照できます。
 

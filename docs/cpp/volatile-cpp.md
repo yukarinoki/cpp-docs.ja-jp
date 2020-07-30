@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 841b2e1e4ffbec87a170c45be8ad0cd0f831a0ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbdd7d03d820b9fc0d541dbb31d55b641226f14e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371901"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213100"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -28,35 +28,35 @@ volatile declarator ;
 
 ## <a name="remarks"></a>解説
 
-[/volatile](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラ スイッチを使用すると、コンパイラがこのキーワードを解釈する方法を変更できます。
+[/Volatile](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラスイッチを使用して、コンパイラがこのキーワードを解釈する方法を変更できます。
 
-ターゲット アーキテクチャによって **、揮発性**キーワードの解釈が異なります。 ARM の場合 **、/volatile**コンパイラ オプションが指定されていない場合、コンパイラは **/volatile:iso**が指定された場合と同様に実行されます。 ARM 以外のアーキテクチャの場合 **、/volatile**コンパイラ オプションが指定されていない場合、コンパイラは **/volatile:ms**が指定されたかのように実行されます。したがって、ARM 以外のアーキテクチャでは、スレッド間で共有されるメモリを処理する場合は **、/volatile:iso**を指定し、明示的な同期プリミティブとコンパイラ組み込みを使用することを強くお勧めします。
+Visual Studio では、 **`volatile`** ターゲットアーキテクチャによってキーワードが異なる方法で解釈されます。 ARM では、 **/volatile**コンパイラオプションが指定されていない場合、コンパイラは **/volatile: iso**が指定されているかのように実行します。 ARM 以外のアーキテクチャでは、 **/volatile**コンパイラオプションが指定されていない場合、コンパイラは **/volatile: ms**が指定されているかのように実行します。そのため、ARM 以外のアーキテクチャの場合は、 **/volatile: iso**を指定することを強くお勧めします。また、スレッド間で共有されるメモリを扱う場合は、明示的な同期プリミティブとコンパイラ組み込みを使用することをお勧めします。
 
-**volatile**修飾子を使用すると、割り込みハンドラーなどの非同期プロセスで使用されるメモリの場所へのアクセスを提供できます。
+修飾子を使用して、 **`volatile`** 割り込みハンドラーなどの非同期プロセスによって使用されるメモリ位置へのアクセスを提供できます。
 
-[__restrict](../cpp/extension-restrict.md)キーワードも持つ変数で**volatile**が使用される場合は **、volatile**が優先されます。
+**`volatile`** [__Restrict](../cpp/extension-restrict.md)キーワードも持つ変数でを使用すると、が優先され **`volatile`** ます。
 
-**構造体**メンバーが**volatile**としてマークされている場合 **、volatile**は構造体全体に伝達されます。 構造体に、1 つの命令を使用して現在のアーキテクチャ上でコピーできる長さがない場合、**その**構造体で volatile が完全に失われる可能性があります。
+**`struct`** メンバーがとしてマークされている場合 **`volatile`** 、 **`volatile`** は構造体全体に反映されます。 1つの命令を使用して、現在のアーキテクチャでコピーできる長さが構造体にない場合、は **`volatile`** その構造で完全に失われる可能性があります。
 
-次のいずれかの条件に該当する場合 **、volatile**キーワードはフィールドに影響を与える可能性があります。
+**`volatile`** 次の条件のいずれかに該当する場合、キーワードはフィールドに影響しない可能性があります。
 
 - volatile フィールドの長さが、現在のアーキテクチャで 1 つの命令を使用してコピーできる最大サイズを超えている。
 
-- 最も外側**の構造体の**長さ (または入れ子になっている**構造体**のメンバーの場合) は、1 つの命令を使用して現在のアーキテクチャにコピーできる最大サイズを超えています。
+- 入れ子になっている可能性があるのメンバーである場合は、最も外側にあるの長さが、 **`struct`** **`struct`** 1 つの命令を使用して現在のアーキテクチャでコピーできる最大サイズを超えています。
 
-プロセッサはキャッシュできないメモリ アクセスを並べ替えませんが、コンパイラがメモリ アクセスを並べ替えないことを保証するために、キャッシュできない変数を**volatile**としてマークする必要があります。
+プロセッサはキャッシュ不可能なメモリアクセスの順序を変更しませんが、キャッシュされていない変数は、 **`volatile`** コンパイラがメモリアクセスの順序を変更しないことを保証するために、としてマークする必要があります。
 
-**volatile**として宣言されたオブジェクトは、値がいつでも変更される可能性があるため、特定の最適化では使用されません。  システムは、以前の命令で同じオブジェクトの値が要求されていても、常に volatile オブジェクトの現在の値を、要求されたときに読み取ります。  また、オブジェクトの値は、代入時にすぐに書き込まれます。
+として宣言されているオブジェクト **`volatile`** は、値がいつでも変更される可能性があるため、特定の最適化では使用されません。  システムは、以前の命令で同じオブジェクトの値が要求されていても、常に volatile オブジェクトの現在の値を、要求されたときに読み取ります。  また、オブジェクトの値は、代入時にすぐに書き込まれます。
 
 ## <a name="iso-compliant"></a>ISO 準拠 →
 
-C# volatile キーワードに精通している場合、または以前のバージョンの Microsoft C++ コンパイラ (MSVC) で**の揮発性**の動作に慣れている場合は、C++11 ISO 標準**の volatile**キーワードが異なっており[、/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラ オプションが指定されている場合は MSVC でサポートされます。 ARM では、このオプションが既定で指定されています。 C++11 ISO 標準コードの**volatile**キーワードは、ハードウェア アクセスにのみ使用されます。スレッド間通信には使用しないでください。 スレッド間通信では[、c++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)から[std::atomic\<T>](../standard-library/atomic.md)などのメカニズムを使用します。
+C# の Volatile キーワードを使い慣れている場合、または以前のバージョンの Microsoft C++ コンパイラ (MSVC) のの動作をよく理解している場合は、 **`volatile`** C++ 11 Iso 標準の **`volatile`** キーワードが異なり、 [/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラオプションが指定されている場合は MSVC でサポートされていることに注意してください。 ARM では、このオプションが既定で指定されています。 **`volatile`** C++ 11 ISO 標準コード内のキーワードは、ハードウェアアクセスにのみ使用されます。スレッド間通信には使用しないでください。 スレッド間通信には、 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)の[std:: atomic \<T> ](../standard-library/atomic.md)などの機構を使用します。
 
 ## <a name="end-of-iso-compliant"></a>END ISO 準拠
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-**/volatile:ms**コンパイラ オプションを使用すると (既定では ARM 以外のアーキテクチャが対象指定されている場合)、コンパイラは他のグローバル オブジェクトへの参照への順序を維持するだけでなく、volatile オブジェクトへの参照間で順序を維持するための余分なコードを生成します。 特に次の点に違いがあります。
+**/Volatile: ms**コンパイラオプションが使用されている場合 (ARM 以外のアーキテクチャが対象となっている場合、既定では、コンパイラは、他のグローバルオブジェクトへの参照の順序を維持するだけでなく、揮発性オブジェクトへの参照の順序を維持するために追加のコードを生成します。 特に次の点に違いがあります。
 
 - volatile オブジェクトへの書き込み (volatile 書き込み) は、解放セマンティクスを持っています。つまり、命令シーケンスで volatile オブジェクトへの書き込み前に発生するグローバル オブジェクトまたは静的オブジェクトへの参照は、コンパイルされたバイナリでの volatile 書き込みの前に発生します。
 
@@ -65,12 +65,12 @@ C# volatile キーワードに精通している場合、または以前のバ�
 これによって、マルチスレッド アプリケーションでのメモリのロックと解放に volatile オブジェクトを使用できるようになります。
 
 > [!NOTE]
-> **/volatile:ms**コンパイラ オプションを使用する場合に提供される拡張保証に依存する場合、コードは移植できません。
+> **/Volatile: ms**コンパイラオプションの使用時に提供される強化された保証に依存する場合、コードは移植できません。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[Keywords](../cpp/keywords-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>
-[定数および揮発性のポインタ](../cpp/const-and-volatile-pointers.md)
+[const ポインターと volatile ポインター](../cpp/const-and-volatile-pointers.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4932
 ms.assetid: 0b8d88cc-21f6-45cb-a9f5-1795b7db0dfa
-ms.openlocfilehash: dd1db3cccf9f1b24f82ddddf10fcf35f39a9251a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 992e047f31e4a30edd29ba6110bf119d2bc8928b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230598"
 ---
 # <a name="compiler-warning-level-4-c4932"></a>コンパイラの警告 (レベル 4) C4932
 
-__identifier (識別子) と \__identifier (識別子) は区別されません
+__identifier (識別子) と \_ _identifier (識別子) は区別されません
 
-コンパイラは **_finally** と `__finally` または `__try` と **_try** を [__identifier](../../extensions/identifier-cpp-cli.md)に渡されるパラメーターとして区別することができません。 [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) エラーが発生するため、同じプログラム内で識別子として両方を使用しないようにします。
+コンパイラは、 **_finally** **`__finally`** `__try` [__identifier](../../extensions/identifier-cpp-cli.md)に渡されるパラメーターとして、_finally とまたはの **_try**とを区別できません。 [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) エラーが発生するため、同じプログラム内で識別子として両方を使用しないようにします。
 
 次の例では C4932 警告が生成されます。
 

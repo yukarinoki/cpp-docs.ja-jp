@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2388
 ms.assetid: 764ad2d7-cb04-425f-ba30-70989488c4a4
-ms.openlocfilehash: 21658a659468a6e2a0d911af70eefdaed320446c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 50148f4fb5c3af33d8de8b005f75f491b0540271
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225502"
 ---
 # <a name="compiler-error-c2388"></a>コンパイラ エラー C2388
 
-' symbol ': シンボルを __declspec (appdomain) と \__declspec (process) の両方で宣言することはできません
+' symbol ': シンボルを __declspec (appdomain) と \_ _declspec (process) の両方で宣言することはできません
 
-`appdomain` および `process` `__declspec` 修飾子は、同じシンボルでは使用できません。 変数のストレージは、プロセスごとまたはアプリケーション ドメインごとに存在します。
+`appdomain`および修飾子は、 `process` **`__declspec`** 同じシンボルでは使用できません。 変数のストレージは、プロセスごとまたはアプリケーション ドメインごとに存在します。
 
 詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「 [process](../../cpp/process.md)」を参照してください。
 

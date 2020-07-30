@@ -7,12 +7,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 4df83e944552fd6c0d2482efa72883d87cd45f8c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217884"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
 
@@ -26,25 +26,25 @@ ms.locfileid: "77140655"
 
 - [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)
 
-- [チュートリアル: エージェント ベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [チュートリアル: エージェントベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
-- [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)
+- [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)
+- [メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)
 
 - [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a> セクション
+## <a name="sections"></a><a name="top"></a>各項
 
 このチュートリアルは、次のセクションで構成されています。
 
 - [食事する哲学者の問題](#problem)
 
-- [単純な実装](#deadlock)
+- [この問題を考慮していない実装](#deadlock)
 
 - [Join を使用してデッドロックを防止する](#solution)
 
-## <a name="problem"></a>食事する哲学者の問題
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>食事する哲学者の問題
 
 "食事する哲学者の問題" は、アプリケーションでどのようにデッドロックが発生するかを示します。 この問題では、5 人の哲学者が丸いテーブルを囲んで座っています。 どの哲学者も思索と食事を交互に行っています。 どの哲学者も左隣の哲学者と 1 本の箸を共有する必要があり、また右隣の哲学者とも別の 1 本の箸を共有する必要があります。 次の図は、この配置を表しています。
 
@@ -52,13 +52,13 @@ ms.locfileid: "77140655"
 
 食事をするには、哲学者は 2 本の箸を持つ必要があります。 すべての哲学者が 1 本の箸を持ち、もう 1 本の箸を待つと、どの哲学者も食事することができず、すべての哲学者が餓死することになります。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="deadlock"></a>単純な実装
+## <a name="a-nave-implementation"></a><a name="deadlock"></a>単純な実装
 
-次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 [Concurrency:: agent](../../parallel/concrt/reference/agent-class.md)から派生する `philosopher` クラスを使用すると、各哲学者を個別に動作させることができます。 この例では、 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)オブジェクトの共有配列を使用して、各 `philosopher` オブジェクトに箸のペアへの排他アクセスを与えます。
+次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 `philosopher` [Concurrency:: agent](../../parallel/concrt/reference/agent-class.md)から派生するクラスを使用すると、各哲学者を個別に動作させることができます。 この例では、 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)オブジェクトの共有配列を使用して、各 `philosopher` オブジェクトに箸のペアへの排他アクセスを与えます。
 
-この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 `int` 変数は、それぞれの箸を表します。 `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 `run` メソッドは、哲学者の生命をシミュレートしています。 `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。
+この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 変数は、 **`int`** 各箸を表します。 `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 `run` メソッドは、哲学者の生命をシミュレートしています。 `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。
 
 `philosopher` オブジェクトは、`critical_section` メソッドを呼び出す前に、両方の `eat` オブジェクトをロックして、箸置きから箸が取られたことをシミュレートします。 `eat` の呼び出しの後、`philosopher` オブジェクトは、`critical_section` オブジェクトをロック解除状態に再設定することで、箸を箸置きに戻します。
 
@@ -70,17 +70,17 @@ ms.locfileid: "77140655"
 
 ### <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`philosophers-deadlock.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `philosophers-deadlock.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 > **cl.exe/EHsc philosophers-deadlock**
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="solution"></a>Join を使用してデッドロックを防止する
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Join を使用してデッドロックを防止する
 
 このセクションでは、メッセージ バッファーおよびメッセージ パッシング関数を使用して、デッドロックを発生させないようにする方法について説明します。
 
-この例を前の例と関連付けるために、`philosopher` クラスは[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトと `join` オブジェクトを使用して、各 `critical_section` オブジェクトを置き換えます。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
+この例を前の例と関連付けるために、 `philosopher` クラスは `critical_section` [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトとオブジェクトを使用して各オブジェクトを置き換え `join` ます。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
 
 この例では、`unbounded_buffer` クラスを使用しています。これは、ターゲットが `unbounded_buffer` オブジェクトからメッセージを受け取ったときに、そのメッセージはメッセージ キューから削除されるためです。 これにより、メッセージを保持する `unbounded_buffer` オブジェクトは、箸が使用できることを示すことができます。 メッセージを保持しない `unbounded_buffer` オブジェクトは、箸が使用されていることを示します。
 
@@ -138,17 +138,17 @@ plato ate 50 times.
 
 ### <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`philosophers-join.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `philosophers-join.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 > **cl.exe/EHsc philosophers-join**
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)<br/>
-[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)<br/>
+[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)<br/>
 [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)

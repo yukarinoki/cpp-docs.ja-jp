@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 39aebd9d82f098225c1275ac6f43d64fc1ce3ba8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231716"
 ---
 # <a name="itarget-class"></a>ITarget クラス
 
@@ -40,32 +40,32 @@ class ITarget;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`filter_method`|提供されたメッセージを受け入れる必要があるかどうかを判断するために `bool` 値を返す、ブロックによって使用されるメソッドのシグネチャ。|
-|`type`|`T`の型のエイリアス。|
+|`filter_method`|提供された **`bool`** メッセージを受け入れる必要があるかどうかを判断するために値を返す、ブロックによって使用されるメソッドのシグネチャ。|
+|`type`|の型のエイリアス `T` 。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[~ ITarget デストラクター](#dtor)|`ITarget` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[伝](#propagate)|派生クラスでオーバーライドされると、ソースブロックからこのターゲットブロックにメッセージを非同期的に渡します。|
-|[send](#send)|派生クラスでオーバーライドされると、ターゲットブロックにメッセージを同期的に渡します。|
-|[supports_anonymous_source](#supports_anonymous_source)|派生クラスでオーバーライドされると、リンクされていないソースによって提供されるメッセージをメッセージブロックが受け入れるかどうかに応じて、true または false を返します。 オーバーライドされたメソッドが**true**を返す場合、指定されたメッセージをターゲットが延期することはできません。延期されたメッセージを後で使用する場合は、ソースリンクレジストリでソースを識別する必要があります。|
+|[送信](#send)|派生クラスでオーバーライドされると、ターゲットブロックにメッセージを同期的に渡します。|
+|[supports_anonymous_source](#supports_anonymous_source)|派生クラスでオーバーライドされると、リンクされていないソースによって提供されるメッセージをメッセージブロックが受け入れるかどうかに応じて、true または false を返します。 オーバーライドされたメソッドがを返す場合、 **`true`** 提供されたメッセージをターゲットが延期することはできません。延期されたメッセージを後で使用する場合は、ソースリンクレジストリでソースを識別する必要があります。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[link_source](#link_source)|派生クラスでオーバーライドされると、指定したソースブロックをこの `ITarget` ブロックにリンクします。|
-|[unlink_source](#unlink_source)|派生クラスでオーバーライドされると、指定したソースブロックをこの `ITarget` ブロックからリンク解除します。|
-|[unlink_sources](#unlink_sources)|派生クラスでオーバーライドされた場合、この `ITarget` ブロックのすべてのソースブロックのリンクを解除します。|
+|[link_source](#link_source)|派生クラスでオーバーライドされると、指定したソースブロックをこのブロックにリンクし `ITarget` ます。|
+|[unlink_source](#unlink_source)|派生クラスでオーバーライドされると、指定したソースブロックをこのブロックからリンク解除し `ITarget` ます。|
+|[unlink_sources](#unlink_sources)|派生クラスでオーバーライドされた場合、このブロックのすべてのソースブロックのリンクを解除し `ITarget` ます。|
 
 ## <a name="remarks"></a>解説
 
@@ -75,13 +75,13 @@ class ITarget;
 
 `ITarget`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="dtor"></a>~ ITarget
+## <a name="itarget"></a><a name="dtor"></a>~ ITarget
 
 `ITarget` オブジェクトを破棄します。
 
@@ -89,9 +89,9 @@ class ITarget;
 virtual ~ITarget();
 ```
 
-## <a name="link_source"></a>link_source
+## <a name="link_source"></a><a name="link_source"></a>link_source
 
-派生クラスでオーバーライドされると、指定したソースブロックをこの `ITarget` ブロックにリンクします。
+派生クラスでオーバーライドされると、指定したソースブロックをこのブロックにリンクし `ITarget` ます。
 
 ```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
@@ -100,13 +100,13 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_PSource*<br/>
-この `ITarget` ブロックにリンクされている `ISource` ブロック。
+`ISource`このブロックにリンクされているブロック `ITarget` 。
 
 ### <a name="remarks"></a>解説
 
-この関数は、`ITarget` ブロックで直接呼び出すことはできません。 ブロックは、`ISource` ブロックの `link_target` メソッドを使用して接続する必要があります。これにより、対応するターゲットの `link_source` メソッドが呼び出されます。
+この関数は、ブロックで直接呼び出すことはできません `ITarget` 。 ブロックは、 `link_target` `ISource` 対応するターゲットに対してメソッドを呼び出すブロックに対して、メソッドを使用して一緒に接続する必要があり `link_source` ます。
 
-## <a name="propagate"></a>伝
+## <a name="propagate"></a><a name="propagate"></a>伝
 
 派生クラスでオーバーライドされると、ソースブロックからこのターゲットブロックにメッセージを非同期的に渡します。
 
@@ -130,9 +130,9 @@ virtual message_status propagate(
 
 ### <a name="remarks"></a>解説
 
-`_PMessage` または `_PSource` パラメーターが `NULL`の場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
+パラメーターまたはパラメーターのいずれかがの場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローし `_PMessage` `_PSource` `NULL` ます。
 
-## <a name="send"></a>送信
+## <a name="send"></a><a name="send"></a>送信
 
 派生クラスでオーバーライドされると、ターゲットブロックにメッセージを同期的に渡します。
 
@@ -156,15 +156,15 @@ virtual message_status send(
 
 ### <a name="remarks"></a>解説
 
-`_PMessage` または `_PSource` パラメーターが `NULL`の場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
+パラメーターまたはパラメーターのいずれかがの場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローし `_PMessage` `_PSource` `NULL` ます。
 
-メッセージの開始時以外に `send` メソッドを使用し、ネットワーク内でメッセージを伝達することは危険であり、デッドロックにつながる可能性があります。
+`send`メッセージの開始時以外にメソッドを使用し、ネットワーク内でメッセージを伝達することは危険であり、デッドロックにつながる可能性があります。
 
-`send` が返された場合、メッセージは既に受け入れられていて、ターゲットブロックに転送されているか、ターゲットによって拒否されています。
+`send`がを返した場合、メッセージは既に受け入れられていて、ターゲットブロックに転送されているか、ターゲットによって拒否されています。
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
-派生クラスでオーバーライドされると、リンクされていないソースによって提供されるメッセージをメッセージブロックが受け入れるかどうかに応じて、true または false を返します。 オーバーライドされたメソッドが**true**を返す場合、提供されたメッセージをターゲットが延期することはできません。延期されたメッセージを後で使用する場合は、ソースが sourse リンクレジストリで識別される必要があります。
+派生クラスでオーバーライドされると、リンクされていないソースによって提供されるメッセージをメッセージブロックが受け入れるかどうかに応じて、true または false を返します。 オーバーライドされたメソッドがを返す場合、 **`true`** 提供されたメッセージをターゲットが延期することはできません。延期されたメッセージを後で使用する場合は、ソースが sourse リンクレジストリで識別される必要があります。
 
 ```cpp
 virtual bool supports_anonymous_source();
@@ -172,11 +172,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-ブロックがリンクされていないソースからのメッセージを受け入れることができる場合は**true** 、それ以外の場合は**false** 。
+**`true`** ブロックがリンクされていないソースからのメッセージを受け入れることができる場合は **`false`** 。それ以外の場合は。
 
-## <a name="unlink_source"></a>unlink_source
+## <a name="unlink_source"></a><a name="unlink_source"></a>unlink_source
 
-派生クラスでオーバーライドされると、指定したソースブロックをこの `ITarget` ブロックからリンク解除します。
+派生クラスでオーバーライドされると、指定したソースブロックをこのブロックからリンク解除し `ITarget` ます。
 
 ```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
@@ -185,21 +185,21 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_PSource*<br/>
-この `ITarget` ブロックからリンク解除されている `ISource` ブロック。
+`ISource`このブロックからリンク解除されているブロック `ITarget` 。
 
 ### <a name="remarks"></a>解説
 
-この関数は、`ITarget` ブロックで直接呼び出すことはできません。 ブロックは、`unlink_target` または `ISource` ブロックの `unlink_targets` メソッドを使用して切断する必要があります。これにより、対応するターゲットで `unlink_source` メソッドが呼び出されます。
+この関数は、ブロックで直接呼び出すことはできません `ITarget` 。 ブロックは、ブロックでメソッドまたはメソッドを使用して切断する必要があり `unlink_target` `unlink_targets` `ISource` ます。これにより、 `unlink_source` 対応するターゲットでメソッドが呼び出されます。
 
-## <a name="unlink_sources"></a>unlink_sources
+## <a name="unlink_sources"></a><a name="unlink_sources"></a>unlink_sources
 
-派生クラスでオーバーライドされた場合、この `ITarget` ブロックのすべてのソースブロックのリンクを解除します。
+派生クラスでオーバーライドされた場合、このブロックのすべてのソースブロックのリンクを解除し `ITarget` ます。
 
 ```cpp
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [ISource クラス](isource-class.md)

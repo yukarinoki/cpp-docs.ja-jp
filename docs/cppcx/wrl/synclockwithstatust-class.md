@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403825"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216545"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT クラス
 
@@ -115,7 +115,7 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>戻り値
 
-**true** `SyncLockWithStatusT` オブジェクトがロックされている場合は true、それ以外の場合は**false**。
+**`true`**`SyncLockWithStatusT`オブジェクトがロックされている場合は。それ以外の場合は **`false`** 。
 
 ## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT:: status_
 
@@ -159,4 +159,4 @@ explicit SyncLockWithStatusT(
 
 `SyncLockWithStatusT` クラスの新しいインスタンスを初期化します。
 
-最初のコンストラクターは、 `SyncLockWithStatusT` `SyncLockWithStatusT` *他の*パラメーターによって指定された別のオブジェクトから現在のオブジェクトを初期化し、もう一方のオブジェクトを無効にし `SyncLockWithStatusT` ます。 2番目のコンストラクターは `protected` で、現在の `SyncLockWithStatusT` オブジェクトを無効な状態に初期化します。
+最初のコンストラクターは、 `SyncLockWithStatusT` `SyncLockWithStatusT` *他の*パラメーターによって指定された別のオブジェクトから現在のオブジェクトを初期化し、もう一方のオブジェクトを無効にし `SyncLockWithStatusT` ます。 2番目のコンストラクターは **`protected`** で、現在の `SyncLockWithStatusT` オブジェクトを無効な状態に初期化します。

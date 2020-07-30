@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: d9aff4b554f4b162f87de9e1d373d59dea019637
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 607122b5592c9db4fc2ad4cabf369b4605b2673b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228766"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>コンパイラの警告 (レベル 3) C4645
 
 __declspec(noreturn) で宣言された関数に return ステートメントがあります。
 
-[Noreturn](../../cpp/noreturn.md) `__declspec` 修飾子でマークされた関数に[return](../../cpp/return-statement-in-program-termination-cpp.md)ステートメントが見つかりました。 `return` ステートメントは無視されました。
+[Noreturn](../../cpp/noreturn.md)修飾子でマークされた関数に[return](../../cpp/return-statement-in-program-termination-cpp.md)ステートメントが見つかりました **`__declspec`** 。 **`return`** ステートメントは無視されました。
 
 次の例では C4645 が生成されます。
 

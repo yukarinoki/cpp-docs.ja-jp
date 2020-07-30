@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0acd42db19151001d9e292561ef20e469f9e14ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222967"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 
@@ -43,55 +43,55 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CMDIチャイルドウンド::CMDIチャイルドウンド](#cmdichildwnd)|`CMDIChildWnd` オブジェクトを構築します。|
+|[CMDIChildWnd:: CMDIChildWnd](#cmdichildwnd)|`CMDIChildWnd` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CMDIチャイルドウンド::作成](#create)|オブジェクトに関連付けられた Windows MDI`CMDIChildWnd`子ウィンドウを作成します。|
-|[マチチャイルドウンド::ゲットムディフレーム](#getmdiframe)|MDI クライアント ウィンドウの親 MDI フレームを返します。|
-|[CMDIチャイルドウンド::MDIアクティベート](#mdiactivate)|この MDI 子ウィンドウをアクティブにします。|
-|[マフィチャイルドウンド::MDIデストロイ](#mdidestroy)|この MDI 子ウィンドウを破棄します。|
-|[マチチャイルドウンド::MDI最大化](#mdimaximize)|この MDI 子ウィンドウを最大化します。|
-|[マシチャイルドウンド::MDI復元](#mdirestore)|この MDI 子ウィンドウを最大化または最小化されたサイズから復元します。|
-|[を設定します。](#sethandles)|メニューリソースとアクセラレータリソースのハンドルを設定します。|
+|[CMDIChildWnd:: Create](#create)|オブジェクトに関連付けられた Windows MDI 子ウィンドウを作成し `CMDIChildWnd` ます。|
+|[CMDIChildWnd:: GetMDIFrame](#getmdiframe)|MDI クライアントウィンドウの親 MDI フレームを返します。|
+|[CMDIChildWnd:: MDIActivate](#mdiactivate)|この MDI 子ウィンドウをアクティブにします。|
+|[CMDIChildWnd:: MDIDestroy](#mdidestroy)|この MDI 子ウィンドウを破棄します。|
+|[CMDIChildWnd:: MDIMaximize](#mdimaximize)|この MDI 子ウィンドウを最大化します。|
+|[CMDIChildWnd:: MDIRestore](#mdirestore)|この MDI 子ウィンドウを最大化または最小化されたサイズから復元します。|
+|[CMDIChildWnd:: SetHandles](#sethandles)|メニューとアクセラレータのリソースのハンドルを設定します。|
 
 ## <a name="remarks"></a>解説
 
-MDI 子ウィンドウは、通常のフレーム ウィンドウとよく似ていますが、MDI 子ウィンドウはデスクトップではなく MDI フレーム ウィンドウ内に表示されます。 MDI 子ウィンドウには、独自のメニュー バーはありませんが、MDI フレーム ウィンドウのメニューを共有します。 フレームワークは、現在アクティブな MDI 子ウィンドウを表す MDI フレーム メニューを自動的に変更します。
+Mdi 子ウィンドウは、一般的なフレームウィンドウのように見えますが、mdi 子ウィンドウは、デスクトップではなく MDI フレームウィンドウ内に表示される点が異なります。 MDI 子ウィンドウには独自のメニューバーはありませんが、代わりに MDI フレームウィンドウのメニューが共有されます。 現在アクティブな MDI 子ウィンドウを表すように、フレームワークによって MDI フレームメニューが自動的に変更されます。
 
-アプリケーションに便利な MDI 子ウィンドウを作成するには、 から`CMDIChildWnd`クラスを派生させます。 派生クラスにメンバー変数を追加して、アプリケーション固有のデータを格納します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。
+アプリケーションに便利な MDI 子ウィンドウを作成するには、からクラスを派生させ `CMDIChildWnd` ます。 アプリケーションに固有のデータを格納するために、派生クラスにメンバー変数を追加します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。
 
-MDI 子ウィンドウを構築するには、次の 3 つの方法があります。
+MDI 子ウィンドウを構築するには、次の3つの方法があります。
 
-- を使用して`Create`直接構築します。
+- を使用して直接作成 `Create` します。
 
-- を使用して`LoadFrame`直接構築します。
+- を使用して直接作成 `LoadFrame` します。
 
-- 間接的にドキュメント テンプレートを使用して構築します。
+- ドキュメントテンプレートを使用して間接的に構築します。
 
-または`LoadFrame`を`Create`呼び出す前に、C++ **new**演算子を使用して、ヒープ上にフレーム ウィンドウ オブジェクトを構築する必要があります。 呼び`Create`出す前に、フレームのアイコンとクラス スタイルを設定する[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数を使用してウィンドウ クラスを登録することもできます。
+またはを呼び出す前に、 `Create` `LoadFrame` C++ の演算子を使用して、ヒープ上にフレームウィンドウオブジェクトを構築する必要があり **`new`** ます。 を呼び出す前に、 `Create` ウィンドウクラスを[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数に登録して、フレームのアイコンとクラススタイルを設定することもできます。
 
-メンバー関数`Create`を使用して、フレームの作成パラメーターを即時引数として渡します。
+メンバー関数を使用し `Create` て、フレームの作成パラメーターをイミディエイト引数として渡します。
 
-`LoadFrame`必要な引数は`Create`よりも少なく、代わりに、フレームのキャプション、アイコン、アクセラレータ テーブル、メニューなど、リソースからその既定値のほとんどを取得します。 で`LoadFrame`アクセスできるようにするには、これらすべてのリソースに同じリソース ID (IDR_MAINFRAME など) が必要です。
+`LoadFrame`に必要な引数がより少なく `Create` 、代わりに、フレームのキャプション、アイコン、アクセラレータテーブル、メニューなど、リソースからほとんどの既定値を取得します。 によってアクセスできるようにするには `LoadFrame` 、これらすべてのリソースが同じリソース ID を持つ必要があります (たとえば、IDR_MAINFRAME)。
 
-オブジェクトに`CMDIChildWnd`ビューとドキュメントが含まれている場合、それらはプログラマが直接作成するのではなく、フレームワークによって間接的に作成されます。 オブジェクト`CDocTemplate`は、フレームの作成、含むビューの作成、およびビューの適切なドキュメントへの接続を調整します。 コンストラクターのパラメーターは`CDocTemplate`、関連する`CRuntimeClass`3 つのクラス (ドキュメント、フレーム、ビュー) の を指定します。 オブジェクト`CRuntimeClass`は、ユーザーが指定した場合 (たとえば、ファイル新規作成コマンドまたは MDI ウィンドウ新規作成コマンドを使用して) 新しいフレームを動的に作成するために、フレームワークによって使用されます。
+オブジェクトに `CMDIChildWnd` ビューとドキュメントが含まれている場合は、プログラマが直接作成するのではなく、フレームワークによって間接的に作成されます。 オブジェクトは、 `CDocTemplate` フレームの作成、含まれるビューの作成、および適切なドキュメントへのビューの接続を調整します。 コンストラクターのパラメーターは、 `CDocTemplate` 関連する `CRuntimeClass` 3 つのクラス (ドキュメント、フレーム、およびビュー) のを指定します。 `CRuntimeClass`オブジェクトは、ユーザーが指定したときに新しいフレームを動的に作成するために、フレームワークによって使用されます (たとえば、File new コマンドや MDI Window new コマンドを使用します)。
 
-上記のRUNTIME_CLASS機構が正しく`CMDIChildWnd`機能するためには、派生したフレーム ウィンドウ クラスをDECLARE_DYNCREATEで宣言する必要があります。
+上の RUNTIME_CLASS 機構を正しく動作させるには、から派生したフレームウィンドウクラスを `CMDIChildWnd` DECLARE_DYNCREATE で宣言する必要があります。
 
-この`CMDIChildWnd`クラスは、既定の実装の多くを`CFrameWnd`から継承します。 これらの機能の詳細なリストについては[、CFrameWnd](../../mfc/reference/cframewnd-class.md)クラスの説明を参照してください。 この`CMDIChildWnd`クラスには、次の追加機能があります。
+クラスは、 `CMDIChildWnd` の既定の実装の多くを継承 `CFrameWnd` します。 これらの機能の詳細な一覧については、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)クラスの説明を参照してください。 クラスには `CMDIChildWnd` 、次の追加機能があります。
 
-- `CMultiDocTemplate`クラスと組み合わせて、`CMDIChildWnd`同じドキュメント テンプレートの複数のオブジェクトが同じメニューを共有し、Windows システム リソースを節約します。
+- クラスと共に `CMultiDocTemplate` 、 `CMDIChildWnd` 同じドキュメントテンプレートの複数のオブジェクトが同じメニューを共有し、Windows システムリソースを保存します。
 
-- 現在アクティブな MDI 子ウィンドウ メニューは、MDI フレーム ウィンドウのメニューに完全に置き換わります。 MDI フレーム ウィンドウと共に実装される MDI 子ウィンドウ関数の詳細な例については、`CMDIFrameWnd`クラスの説明を参照してください。
+- 現在アクティブな MDI 子ウィンドウメニューは、MDI フレームウィンドウのメニューを完全に置き換えるもので、現在アクティブな MDI 子ウィンドウのキャプションが MDI フレームウィンドウのキャプションに追加されます。 MDI フレームウィンドウと共に実装される MDI 子ウィンドウ関数のその他の例については、クラスの説明を参照してください `CMDIFrameWnd` 。
 
-C++**の delete**演算子を使用してフレーム ウィンドウを破棄しないでください。 代わりに `CWnd::DestroyWindow` を使用してください の`CFrameWnd``PostNcDestroy`実装は、ウィンドウが破棄されると C++ オブジェクトを削除します。 ユーザーがフレーム ウィンドウを閉じると、既定`OnClose`のハンドラーが`DestroyWindow`呼び出されます。
+C++ の演算子を使用して **`delete`** フレームウィンドウを破棄しないでください。 代わりに `CWnd::DestroyWindow` を使用してください `CFrameWnd`の実装は、 `PostNcDestroy` ウィンドウが破棄されたときに C++ オブジェクトを削除します。 ユーザーがフレームウィンドウを閉じると、既定の `OnClose` ハンドラーはを呼び出し `DestroyWindow` ます。
 
-詳細については、「`CMDIChildWnd`フレーム[ウィンドウ](../../mfc/frame-windows.md)」を参照してください。
+の詳細につい `CMDIChildWnd` ては、「[フレームウィンドウ](../../mfc/frame-windows.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -109,9 +109,9 @@ C++**の delete**演算子を使用してフレーム ウィンドウを破棄�
 
 **ヘッダー:** afxwin.h
 
-## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIチャイルドウンド::CMDIチャイルドウンド
+## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd:: CMDIChildWnd
 
-オブジェクトを構築するための`CMDIChildWnd`呼び出し。
+を呼び出して、 `CMDIChildWnd` オブジェクトを構築します。
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>解説
 
-表示`Create`ウィンドウを作成する呼び出し。
+`Create`を呼び出して、表示されるウィンドウを作成します。
 
 ### <a name="example"></a>例
 
-  [「CMDIChildWnd::作成](#create)」の例を参照してください。
+  [CMDIChildWnd:: Create](#create)の例を参照してください。
 
-## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIチャイルドウンド::作成
+## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd:: Create
 
-Windows MDI 子ウィンドウを作成し、`CMDIChildWnd`オブジェクトにアタッチします。
+このメンバー関数を呼び出して、Windows MDI 子ウィンドウを作成し、オブジェクトにアタッチし `CMDIChildWnd` ます。
 
 ```
 virtual BOOL Create(
@@ -141,23 +141,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
-Windows クラス[(WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体) に名前を付ける NULL で終わる文字列を指します。 クラス名は[、AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数に登録された任意の名前にすることができます。 標準の場合は NULL`CMDIChildWnd`にする必要があります。
+*lpszClassName*<br/>
+Windows クラス ( [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体) に名前を指定する null で終わる文字列を指します。 クラス名には、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数に登録されている任意の名前を指定できます。 標準の場合は NULL にする必要があり `CMDIChildWnd` ます。
 
-*名前をクリックします。*<br/>
-ウィンドウ名を表す null で終わる文字列を指します。 タイトル バーのテキストとして使用されます。
+*lpszWindowName*<br/>
+ウィンドウ名を表す null で終わる文字列を指します。 タイトルバーのテキストとして使用されます。
 
-*Dwstyle*<br/>
-ウィンドウ[スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の属性を指定します。 WS_CHILDスタイルが必要です。
+*dwStyle*<br/>
+ウィンドウ[スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性を指定します。 WS_CHILD スタイルが必要です。
 
-*Rect*<br/>
-ウィンドウのサイズと位置を示します。 この`rectDefault`値を使用すると、新しい`CMDIChildWnd`.
+*rect*<br/>
+ウィンドウのサイズと位置を格納します。 この `rectDefault` 値により、Windows は新しいのサイズと位置を指定でき `CMDIChildWnd` ます。
 
 *pParentWnd*<br/>
-ウィンドウの親を指定します。 NULL の場合は、メイン アプリケーション ウィンドウが使用されます。
+ウィンドウの親を指定します。 NULL の場合、メインアプリケーションウィンドウが使用されます。
 
 *pContext*<br/>
-構造体を指定[します](../../mfc/reference/ccreatecontext-structure.md)。 このパラメーターは NULL にすることができます。
+[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)構造体を指定します。 このパラメーターには NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -165,9 +165,9 @@ Windows クラス[(WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構
 
 ### <a name="remarks"></a>解説
 
-現在アクティブな MDI 子フレーム ウィンドウは、親フレーム ウィンドウのキャプションを決定できます。 この機能は、子フレーム ウィンドウのFWS_ADDTOTITLE スタイル ビットをオフにすることで無効になります。
+現在アクティブな MDI 子フレームウィンドウでは、親フレームウィンドウのキャプションを確認できます。 この機能は、子フレームウィンドウの FWS_ADDTOTITLE スタイルビットをオフにすると無効になります。
 
-フレームワークは、子ウィンドウを作成するユーザー コマンドに応答してこのメンバー関数を呼び出し、フレームワークは *、pContext*パラメーターを使用して、子ウィンドウをアプリケーションに適切に接続します。 を呼び`Create`出すとき*は、pContext*を NULL にできます。
+フレームワークは、ユーザーコマンドに応答してこのメンバー関数を呼び出し、子ウィンドウを作成します。フレームワークは、 *pContext*パラメーターを使用して、子ウィンドウをアプリケーションに適切に接続します。 を呼び出すと `Create` 、 *PCONTEXT*を NULL にすることができます。
 
 ### <a name="example"></a>例
 
@@ -183,9 +183,9 @@ Windows クラス[(WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>マチチャイルドウンド::ゲットムディフレーム
+## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd:: GetMDIFrame
 
-MDI 親フレームを返します。
+MDI 親フレームを返すには、この関数を呼び出します。
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>戻り値
 
-MDI 親フレーム ウィンドウへのポインター。
+MDI 親フレームウィンドウへのポインター。
 
 ### <a name="remarks"></a>解説
 
-返されるフレームは、 から削除された`CMDIChildWnd`2 つの親であり、オブジェクトを管理する MDICLIENT`CMDIChildWnd`型のウィンドウの親です。 オブジェクトの直接 MDICLIENT 親`CMDIChildWnd`を一時的な`CWnd`ポインターとして返す[GetParent](../../mfc/reference/cwnd-class.md#getparent)メンバー関数を呼び出します。
+返されるフレームはから削除された2つの親であり、 `CMDIChildWnd` オブジェクトを管理する MDICLIENT 型のウィンドウの親です `CMDIChildWnd` 。 [GetParent](../../mfc/reference/cwnd-class.md#getparent) `CMDIChildWnd` オブジェクトのイミディエイト MDICLIENT parent を一時ポインターとして返すには、GetParent メンバー関数を呼び出し `CWnd` ます。
 
 ### <a name="example"></a>例
 
-  [次](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)の例を参照してください。
+  [CMDIFrameWnd:: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)の例を参照してください。
 
-## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIチャイルドウンド::MDIアクティベート
+## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd:: MDIActivate
 
-MDI フレーム ウィンドウとは独立して MDI 子ウィンドウをアクティブにします。
+Mdi フレームウィンドウとは別に MDI 子ウィンドウをアクティブにするには、このメンバー関数を呼び出します。
 
 ```cpp
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>解説
 
-フレームがアクティブになると、最後にアクティブになった子ウィンドウもアクティブになります。
+フレームがアクティブになると、最後にアクティブ化された子ウィンドウもアクティブになります。
 
 ### <a name="example"></a>例
 
-  [の例を](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)参照してください。
+  [CMDIFrameWnd:: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)の例を参照してください。
 
-## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>マフィチャイルドウンド::MDIデストロイ
+## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd:: MDIDestroy
 
-MDI 子ウィンドウを破棄するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、MDI 子ウィンドウを破棄します。
 
 ```cpp
 void MDIDestroy();
@@ -229,13 +229,13 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、フレーム ウィンドウから子ウィンドウのタイトルを削除し、子ウィンドウを非アクティブにします。
+このメンバー関数は、フレームウィンドウから子ウィンドウのタイトルを削除し、子ウィンドウを非アクティブにします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>マチチャイルドウンド::MDI最大化
+## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd:: MDIMaximize
 
 MDI 子ウィンドウを最大化するには、このメンバー関数を呼び出します。
 
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>解説
 
-子ウィンドウが最大化されると、Windows は、クライアント領域がフレーム ウィンドウのクライアント領域いっぱいに変更されます。 Windows では、子ウィンドウのコントロール メニューがフレームのメニュー バーに配置されるため、ユーザーは子ウィンドウを元に戻したり閉じたりして、子ウィンドウのタイトルをフレーム ウィンドウのタイトルに追加できます。
+子ウィンドウが最大化されると、クライアント領域がフレームウィンドウのクライアント領域に収まるように、ウィンドウのサイズが変更されます。 Windows では、子ウィンドウのコントロールメニューをフレームのメニューバーに配置して、ユーザーが子ウィンドウを復元または閉じ、子ウィンドウのタイトルをフレームウィンドウのタイトルに追加できるようにします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>マシチャイルドウンド::MDI復元
+## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd:: MDIRestore
 
-MDI 子ウィンドウを最大化または最小化されたサイズから復元します。
+このメンバー関数を呼び出して、最大化または最小化されたサイズから MDI 子ウィンドウを復元します。
 
 ```cpp
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>を設定します。
+## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd:: SetHandles
 
-メニューリソースとアクセラレータリソースのハンドルを設定します。
+メニューとアクセラレータのリソースのハンドルを設定します。
 
 ```cpp
 void SetHandles(
@@ -275,22 +275,22 @@ void SetHandles(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hmenu*<br/>
-メニュー リソースのハンドル。
+*hMenu*<br/>
+メニューリソースのハンドル。
 
-*ハッセル*<br/>
-アクセラレータ リソースのハンドル。
+*hAccel*<br/>
+アクセラレータリソースのハンドル。
 
 ### <a name="remarks"></a>解説
 
-MDI 子ウィンドウ オブジェクトによって使用されるメニューとアクセラレータ のリソースを設定します。
+MDI 子ウィンドウオブジェクトによって使用されるメニューおよびアクセラレータリソースを設定するには、この関数を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[MDI のサンプル](../../overview/visual-cpp-samples.md)<br/>
-[サンプル MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル スナップVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CMDIFrameWnd クラス](../../mfc/reference/cmdiframewnd-class.md)

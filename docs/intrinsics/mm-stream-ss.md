@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217351"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215986"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
@@ -34,26 +34,26 @@ void _mm_stream_ss(
 *インストール*\
 入出力ソースデータが書き込まれる場所へのポインター。
 
-*Source*\
-から下位32ビットに書き込まれる`float`値を含む128ビットの数値。
+*電源*\
+から**`float`** 下位32ビットに書き込まれる値を含む128ビットの数値。
 
 ## <a name="return-value"></a>戻り値
 
-なし。
+ありません。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込みによって`movntss`命令が生成されます。 この命令のハードウェアサポートを確認するには`__cpuid` 、で`InfoType=0x80000001`組み込みのを呼び出し、 `CPUInfo[2] (ECX)`のビット6を確認します。 命令がサポートされている場合はこのビットが1になり、それ以外の場合は0になります。
+組み込みによって命令が生成され `movntss` ます。 この命令のハードウェアサポートを確認するには、で組み込みのを呼び出し、 `__cpuid` `InfoType=0x80000001` のビット6を確認し `CPUInfo[2] (ECX)` ます。 命令がサポートされている場合はこのビットが1になり、それ以外の場合は0になります。
 
-命令`movntss`をサポートし`_mm_stream_ss`ていないハードウェアに組み込みを使用するコードを実行する場合、結果は予測できません。
+命令をサポートしていないハードウェアに組み込みを使用するコードを実行する場合、 `_mm_stream_ss` `movntss` 結果は予測できません。
 
 ## <a name="example"></a>例
 
@@ -89,7 +89,7 @@ f[2] = -3, f[3] = 3
 
 **Microsoft 固有の仕様はここまで**
 
-高度なマイクロデバイス (Inc.) による部分の著作権2007All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
+高度なマイクロデバイス (Inc.) による部分の著作権2007すべての権限が予約されています。 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 

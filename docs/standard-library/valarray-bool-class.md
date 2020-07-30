@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9145a6c75850fec78ca821b236133cc6c38beda9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688752"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215427"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; クラス
 
-クラステンプレート valarray の特殊化されたバージョンは、 **bool**型の要素に **> \<Type**ます。
+クラステンプレート**valarray \<Type> **の特殊なバージョンを型の要素に格納し **`bool`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -71,13 +71,13 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 */
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<valarray>
+**ヘッダー:**\<valarray>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [valarray クラス](../standard-library/valarray-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

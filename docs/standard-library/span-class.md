@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217455"
 ---
 # <a name="span-class-c-standard-library"></a>span クラス (C++ 標準ライブラリ)
 
@@ -86,8 +86,8 @@ class span;
 
 | **型定義** | **説明** |
 |-|-|
-| [const_pointer](#pointer) | 要素へのポインターの型 `const` 。 |
-| [const_reference](#reference) | 要素への参照の型 `const` 。 |
+| [const_pointer](#pointer) | 要素へのポインターの型 **`const`** 。 |
+| [const_reference](#reference) | 要素への参照の型 **`const`** 。 |
 | [difference_type](#difference_type) | 2 つの要素間の距離を表す、符号付きの型です。 |
 | [element_type](#element_type) | Span 要素の型。 |
 | [反](#iterator) | スパンの反復子の型。 |
@@ -95,17 +95,17 @@ class span;
 | [reference](#reference) | 要素への参照の型です。 |
 | [reverse_iterator](#reverse_iterator) | スパンの反転反復子の型。 |
 | [size_type](#size_type) | スパン内の2つの要素間の符号なし距離の結果の型。 |
-| [value_type](#value_type) | 要素の型 ( `const` またはの修飾なし) `volatile` 。 |
+| [value_type](#value_type) | 要素の型 ( **`const`** またはの修飾なし) **`volatile`** 。 |
 | **コンストラクター** | **説明** |
-|[スパン](#span)| を構築 `span` します。|
+|[スパン](#span)| `span` を構築します。|
 | **反復子のサポート** | **説明** |
 |[初め](#begin) | スパン内の最初の要素を指す反復子を取得します。|
-|[終わり](#end) | スパンの末尾を指す反復子を取得します。 |
+|[end](#end) | スパンの末尾を指す反復子を取得します。 |
 |[rbegin](#rbegin) | スパンの最後の要素を指す反転反復子を取得します。これは、反転スパンの開始部分です。|
 |[rend](#rend) | スパンの前を指す反転反復子を取得します。つまり、反転されたスパンの最後です。|
 | **アクセス要素**| **説明** |
 |[戻る](#back) | スパン内の最後の要素を取得します。|
-|[データ](#data) | スパン内の最初の要素のアドレスを取得します。|
+|[data](#data) | スパン内の最初の要素のアドレスを取得します。|
 |[外側](#front) | スパン内の最初の要素を取得します。|
 |[operator\[\]](#op_at) | 指定した位置にある要素にアクセスします。|
 | **オブザーバー** | **説明** |
@@ -120,7 +120,7 @@ class span;
 |[span:: operator =](#op_eq)| スパンを置き換えます。|
 |[span:: 演算子\[\]](#op_at)| 指定した位置にある要素を取得します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 すべて `span` のメンバー関数には、一定時間の複雑さがあります。
 
@@ -270,7 +270,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 スパンが作成されると、テンプレートパラメーターから型が取得され `T` ます。
 
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-`true`の場合はを返し `this->size() == 0` ます。 それ以外の場合は `false` を返します。
+**`true`** の場合はを返し `this->size() == 0` ます。 それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -336,7 +336,7 @@ constexpr iterator end() const noexcept;
 
 スパンの末尾の次の位置を指す反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `end` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -371,7 +371,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 `count`このスパンの先頭からの要素を格納しているスパン。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コンパイル時にを検証し、範囲に関する情報を保持するために、可能な場合は、この関数のテンプレートバージョンを使用し `count` ます。これにより、固定エクステントの範囲が返されます。
 
@@ -451,7 +451,7 @@ Span 要素に対する反復子の型。
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、スパン内の要素に対する反復子として機能します。
 
@@ -496,7 +496,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 このスパンの最後の要素を格納しているスパン `count` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コンパイル時にを検証し、範囲に関する情報を保持するために、可能な場合は、この関数のテンプレートバージョンを使用し `count` ます。これにより、固定エクステントの範囲が返されます。
 
@@ -588,7 +588,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 割り当てでは、データポインターとサイズの簡易コピーが行われます。 は、 `span` それに含まれる要素にメモリを割り当てないため、浅いコピーは安全です。
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-Span 要素へのポインターとポインターの型 `const` 。
+Span 要素へのポインターとポインターの型 **`const`** 。
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-Span 要素への参照と参照の型 `const` 。
+Span 要素への参照と参照の型 **`const`** 。
 
 ```cpp
 using reference = T&;
@@ -740,7 +740,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 反転されたスパン内の最後の要素の次のプレースホルダーへの反転反復子。つまり、反転されていないスパン内の最初の要素の前のプレースホルダーです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `rend`span [:: end](#end)が span で使用されるのと同様に、反転スパンと共に使用されます。 これを使用して、逆順反復子がスパンの末尾に達したかどうかをテストします。
 
@@ -954,7 +954,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *\r\n\r\n*\
 この範囲からスパンを構築します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 スパンは、スパン内のオブジェクトのストレージを所有していないため、スパン内のアイテムのストレージを解放しません。
 
@@ -1015,7 +1015,7 @@ constexpr auto subspan() const noexcept
 
 このスパンのから開始するスパン `offset` 。 要素が含まれてい `count` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数のテンプレートバージョンを使用すると、コンパイル時にカウントを確認できます。これにより、一定の範囲の範囲を返すことによってスパンに関する情報が保持されます。
 
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-範囲内の要素の型 (またはの条件なし) `const` `volatile` 。
+範囲内の要素の型 (またはの条件なし) **`const`** **`volatile`** 。
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

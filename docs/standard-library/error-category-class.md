@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224878"
 ---
 # <a name="error_category-class"></a>error_category クラス
 
@@ -37,7 +37,7 @@ virtual ~error_category();
 error_category(const error_category&) = delete
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 定義済みの 2 つのオブジェクト [generic_category](../standard-library/system-error-functions.md#generic_category) および [system_category](../standard-library/system-error-functions.md#system_category) によって `error_category` が実装されます。
 
@@ -60,7 +60,7 @@ error_category(const error_category&) = delete
 |[name](#name)|カテゴリの名前を返します。|
 |[system_category](#system)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -86,7 +86,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 `error_condition(_Errval, *this)` を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ### <a name="equivalent"></a><a name="equivalent"></a> での同等機能
 
@@ -113,9 +113,9 @@ virtual bool equivalent(const error_code& _Code,
 
 #### <a name="return-value"></a>戻り値
 
-カテゴリと値が等しい場合は**true** 。それ以外の場合は**false**。
+**`true`** カテゴリと値が等しい場合は。それ以外の場合は **`false`** 。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 最初のメンバー関数は `*this == _Cond.category() && _Cond.value() == _Errval` を返します。
 
@@ -144,7 +144,7 @@ virtual string message(error_code::value_type val) const = 0;
 
 カテゴリのエラーコード*val*のわかりやすい名前を返します。 エラーコードが認識されない場合、はを返し `"unknown error"` ます。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 ### <a name="name"></a><a name="name"></a> 名
 
@@ -179,9 +179,9 @@ bool operator==(const error_category& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
+**`true`** オブジェクトが等しい場合は。**`false`** オブジェクトが等しくない場合は。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、`this == &right` を返します。
 
@@ -200,9 +200,9 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-オブジェクトが、渡されたオブジェクトと等しくない場合は**true** 、それ以外の場合は `error_category` `error_category` **false**。 *right*
+**`true`**`error_category`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_category` 。それ以外*right*の場合は **`false`** 。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、 `(!*this == right)`を返します。
 
@@ -221,9 +221,9 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-`error_category` オブジェクトが、比較対象として渡された `error_category` より小さい場合は **true**。それ以外の場合は **false**。
+**`true`**`error_category`オブジェクトが `error_category` 比較のために渡されたオブジェクトより小さい場合は。それ以外の場合は **`false`** 。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメンバー演算子は、 `this < &right`を返します。
 
@@ -241,6 +241,6 @@ const error_category& system_category();
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-この型定義は、 **int**のシノニムです。
+この型定義はのシノニムです **`int`** 。

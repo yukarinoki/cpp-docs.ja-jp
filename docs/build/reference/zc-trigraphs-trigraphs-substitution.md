@@ -1,6 +1,7 @@
 ---
 title: /Zc:trigraphs (トライグラフの置換)
-ms.date: 03/06/2018
+description: トライグラフの準拠サポートを制御する Microsoft C++ コンパイラオプション。
+ms.date: 07/25/2020
 f1_keywords:
 - /Zc:trigraphs
 helpviewer_keywords:
@@ -9,38 +10,38 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-ms.openlocfilehash: 0e4c98e09551d39e3ff7978767b21f1d2c5bb318
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e24f3d2f0064c3acc04b4c3774f47f6e442d5ddd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438657"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211854"
 ---
-# <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (トライグラフの置換)
+# <a name="zctrigraphs-trigraphs-substitution"></a>`/Zc:trigraphs`(トライグラフ置換)
 
-**/Zc: トライグラフ**が指定されている場合、コンパイラは、対応する区切り記号を使用して、トライグラフ文字シーケンスを置き換えます。
+を指定した場合 **`/Zc:trigraphs`** 、コンパイラは、対応する区切り記号を使用して、トライグラフの文字シーケンスを置き換えます。
 
 ## <a name="syntax"></a>構文
 
-> **/Zc: トライグラフ**[ **-** ]
+> **`/Zc:trigraphs`**[**`-`**]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-*トライグラフ*は、2つの連続する疑問符 ("??") とそれに続く一意の3番目の文字で構成されます。 C 言語標準では、一部の区切り文字に対して便利なグラフィック表現が含まれていない文字セットを使用するソースファイルのトライグラフがサポートされています。 たとえば、トライグラフが有効になっている場合、コンパイラは "??= "トライグラフ (' # ' 文字を使用した)。 C++ 14 までは、トライグラフは C のようにサポートされています。C++ 17 標準では、 C++言語からトライグラフが削除されます。 コードC++では、 **/zc: トライグラフ**コンパイラオプションを使用すると、トライグラフシーケンスを対応する区切り記号で置き換えることができます。 **/Zc: トライグラフ-** トライグラフの置換を無効にします。
+*トライグラフ*は、2つの連続する疑問符 ( **`??`** ) の後に一意の3番目の文字で構成されます。 C 言語標準では、一部の区切り文字に対して便利なグラフィック表現が含まれていない文字セットを使用するソースファイルのトライグラフがサポートされています。 たとえば、トライグラフが有効になっている場合、コンパイラは **`??=`** 文字を使用してトライグラフを置き換え **`#`** ます。 C++ 14 までは、トライグラフは C のようにサポートされています。C++ 17 標準では、C++ 言語からトライグラフが削除されます。 C++ コードでは、 **`/Zc:trigraphs`** コンパイラオプションを使用すると、トライグラフシーケンスを対応する区切り記号で置き換えることができます。 **`/Zc:trigraphs-`** トライグラフの置換を無効にします。
 
-**/Zc: トライグラフ**オプションは既定ではオフになっており、 [/permissive-](permissive-standards-conformance.md)オプションが指定されている場合、オプションは影響を受けません。
+このオプションは **`/Zc:trigraphs`** 既定ではオフになっており、オプション [`/permissive-`](permissive-standards-conformance.md) が指定されている場合、オプションは影響を受けません。
 
-C/C++トライグラフの一覧と、トライグラフの使用方法を示す例については、[トライグラフ](../../c-language/trigraphs.md)を参照してください。
+C/c + + トライグラフの一覧と、トライグラフの使用方法を示す例については、[トライグラフ](../../c-language/trigraphs.md)を参照してください。
 
-## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. **/Zc: トライグラフ**または **/zc: トライグラフ**が含まれるように "**追加オプション**" プロパティを変更し、[ **OK]** をクリックします。
+1. またはを含むように "**追加オプション**" プロパティを変更し、[ **`/Zc:trigraphs`** **`/Zc:trigraphs-`** **OK]** をクリックします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](zc-conformance.md)<br/>
-[トライグラフ](../../c-language/trigraphs.md)<br/>
+[`/Zc`互換性](zc-conformance.md)<br/>
+[トライグラフ](../../c-language/trigraphs.md)

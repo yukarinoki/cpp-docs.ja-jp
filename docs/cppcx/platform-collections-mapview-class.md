@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032435"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214998"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 
@@ -35,18 +35,18 @@ ref class MapView sealed;
 
 #### <a name="parameters"></a>パラメーター
 
-*K*<br/>
+*Kb*<br/>
 キー/値ペア内のキーの型。
 
-*V*<br/>
+*画像*<br/>
 キー/値ペア内の値の型。
 
 *C*<br/>
-並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 デフォルトでは[、std::less\<K>。 ](../standard-library/less-struct.md)
+並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: \<K> less](../standard-library/less-struct.md)です。
 
 ### <a name="remarks"></a>解説
 
-MapView は、アプリケーション バイナリ インターフェイス (ABI) を介して渡される[Windows::Foundation::コレクション::IMapView \<K,V>](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+MapView は、アプリケーションバイナリインターフェイス (ABI) を通じて渡される[Windows:: Foundation \<K,V> :: Collections:: IMapView](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -54,17 +54,17 @@ MapView は、アプリケーション バイナリ インターフェイス (AB
 
 |名前|説明|
 |----------|-----------------|
-|[マップビュー::マップビュー](#ctor)|MapView クラスの新しいインスタンスを初期化します。|
+|[MapView:: MapView](#ctor)|MapView クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[マップビュー::最初](#first)|マップ ビュー内の最初の要素に初期化される反復子を返します。|
-|[マップビュー::ハスキー](#haskey)|現在の MapView に、指定されたキーが含まれているかどうかを判定します。|
-|[マップビュー::ルックアップ](#lookup)|現在の MapView オブジェクト内の、指定されたキーの位置の要素を取得します。|
+|[MapView:: First](#first)|マップ ビュー内の最初の要素に初期化される反復子を返します。|
+|[MapView:: HasKey](#haskey)|現在の MapView に、指定されたキーが含まれているかどうかを判定します。|
+|[MapView:: Lookup](#lookup)|現在の MapView オブジェクト内の、指定されたキーの位置の要素を取得します。|
 |[MapView::Size](#size)|現在の MapView オブジェクトの要素数を返します。|
-|[マップビュー::スプリット](#split)|元の MapView オブジェクトを、2 つの MapView オブジェクトに分割します。|
+|[MapView:: Split](#split)|元の MapView オブジェクトを、2 つの MapView オブジェクトに分割します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -76,7 +76,7 @@ MapView は、アプリケーション バイナリ インターフェイス (AB
 
 **名前空間:** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>マップビュー::最初のメソッド
+## <a name="mapviewfirst-method"></a><a name="first"></a>MapView:: First メソッド
 
 マップ ビュー内の最初の要素を指定する反復子を返します。
 
@@ -93,9 +93,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>解説
 
-First() によって返される反復器を保持する便利な方法は **、auto**型推論キーワードで宣言された変数に戻り値を代入することです。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
+First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>マップビュー::ハスキーメソッド
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView:: HasKey メソッド
 
 現在の MapView に、指定されたキーが含まれているかどうかを判定します。
 
@@ -109,13 +109,13 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-MapView 要素の検索に使用するキー。 *キー*の種類は型名*K*です。
+MapView 要素の検索に使用するキー。 *キー*の型は typename *K*です。
 
 ### <a name="return-value"></a>戻り値
 
-キーが見つかった場合は**true。** それ以外の場合**は false。**
+**`true`** キーが見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>マップビュー::ルックアップメソッド
+## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView:: Lookup メソッド
 
 型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -128,13 +128,13 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-MapView の要素の検索に使用するキー。 の型`key`は型名*K*です。
+MapView の要素の検索に使用するキー。 の型 `key` は Typename *K*です。
 
 ### <a name="return-value"></a>戻り値
 
-`key` とペアになる値。 戻り値の型は型名*V*です。
+`key` とペアになる値。 戻り値の型は typename *V*です。
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>マップビュー::マップビューコンストラクタ
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView:: MapView コンストラクター
 
 MapView クラスの新しいインスタンスを初期化します。
 
@@ -159,14 +159,14 @@ MapView(
 
 ### <a name="parameters"></a>パラメーター
 
-*Init*<br/>
+*初期化*<br/>
 現在の MapView の型名。
 
-*作曲*<br/>
+*comp*<br/>
 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクト。
 
-*M*<br/>
-現在の MapView を初期化するために使用`map Class`されるを参照または[Lvalues および Rvalues。](../cpp/lvalues-and-rvalues-visual-cpp.md)
+*m*<br/>
+現在の MapView を初期化するために使用されるへの参照または[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 。
 
 *first*<br/>
 現在の MapView を初期化するために使用される要素の範囲内の最初の要素の入力反復子。
@@ -174,10 +174,10 @@ MapView(
 *last*<br/>
 現在の MapView を初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
-*イリノイ*<br/>
-要素が MapView に挿入される[std::initializer_list<std::pair\<K,V>>。](../standard-library/initializer-list-class.md)
+*自動車*<br/>
+[Std:: initializer_list<\<K,V> > std::p](../standard-library/initializer-list-class.md) 、その要素が mapview に挿入されます。
 
-## <a name="mapviewsize-method"></a><a name="size"></a>マップビュー::サイズメソッド
+## <a name="mapviewsize-method"></a><a name="size"></a>MapView:: Size メソッド
 
 現在の MapView オブジェクトの要素数を返します。
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 現在の MapView 内の要素数。
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>マップビュー::分割メソッド
+## <a name="mapviewsplit-method"></a><a name="split"></a>MapView:: Split メソッド
 
 現在の MapView を 2 つの MapView オブジェクトに分割します。 このメソッドは操作不可です。
 
@@ -207,10 +207,10 @@ void Split(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初のパーティション*<br/>
+*firstPartition*<br/>
 元の MapView オブジェクトの最初の部分。
 
-*2番目のパーティション*<br/>
+*第第のパーティション*<br/>
 元の MapView オブジェクトの 2 番目の部分。
 
 ### <a name="remarks"></a>解説
@@ -219,4 +219,4 @@ void Split(
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム名前空間](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a33f7c55fa2825eae1c7d8b9d8ab78e4ed5274
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175039"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225333"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>コンパイラの警告 (レベル 1) C4807
 
 'operation': 'type' 型と 'type' 型の符号付きビットフィールドの混用は安全ではありません。
 
-この警告は、1 ビットの符号付きビットフィールドと `bool` 変数を比較すると、生成されます。 1 ビットの符号付きビットフィールドには、値 -1 または 0 のみを含めることがでるため、 `bool`と比較するのは危険です。 `bool` と 1 ビットの符号なしビットフィールドは `bool` を同じであり、0 または 1 のみを保持できるため、これらを混用しても警告は生成されません。
+この警告は、1ビットの符号付きビットフィールドと変数を比較したときに生成され **`bool`** ます。 1ビットの符号付きビットフィールドには、値-1 または0のみを含めることができるため、と比較するのは危険です **`bool`** 。 はと同じであり、 **`bool`** **`bool`** 0 または1のみを保持できるため、混合と1ビットの符号なしビットフィールドに関する警告は生成されません。
 
 ## <a name="example"></a>例
 

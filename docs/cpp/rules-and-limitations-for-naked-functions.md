@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3dd089e13323e1811cf9d7c7717612313f2cef7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178952"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225853"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>naked 関数の規則と制限
 
@@ -17,7 +17,7 @@ ms.locfileid: "80178952"
 
 次の規則と制約が naked 関数に適用されます。
 
-- **Return**ステートメントは許可されていません。
+- **`return`** ステートメントは許可されていません。
 
 - 構造化例外処理コンストラクトと C++ の例外処理コンストラクトは、スタック フレームを越えてアンワインドする必要があるため許可されていません。
 
@@ -31,9 +31,9 @@ ms.locfileid: "80178952"
 
 - 関数の構文スコープでは C++ クラス オブジェクトを宣言できません。 ただし、入れ子になったブロックではオブジェクトを宣言できます。
 
-- [/Clr](../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合、**生**のキーワードは無視されます。
+- **`naked`** キーワードは、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合は無視されます。
 
-- [__Fastcall](../cpp/fastcall.md)の生関数の場合、レジスタ引数のいずれかにC++ C/コードで参照があるたびに、プロローグコードはそのレジスタの値をその変数のスタック位置に格納する必要があります。 次に例を示します。
+- [__Fastcall](../cpp/fastcall.md)の生関数の場合、レジスタ引数のいずれかに C/c + + コードの参照があるたびに、プロローグコードはそのレジスタの値をその変数のスタック位置に格納する必要があります。 次に例を示します。
 
 ```cpp
 // nkdfastcl.cpp
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[naked 関数呼び出し](../cpp/naked-function-calls.md)
+[生の関数呼び出し](../cpp/naked-function-calls.md)

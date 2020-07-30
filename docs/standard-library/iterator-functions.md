@@ -32,16 +32,16 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 615ebeedc87563eeac46c462304072ff1979040c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222317"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 関数
 
-## <a name="advance"></a>切り替わる
+## <a name="advance"></a><a name="advance"></a>切り替わる
 
 指定された位置の番号によって反復子をインクリメントします。
 
@@ -55,16 +55,16 @@ template <class InputIterator, class Distance>
 *初期化*\
 インクリメントされる、入力反復子の要件を満たしている必要がある反復子。
 
-*オフ*\
+*オート*\
 反復子の差の型に変換可能で、反復子の位置を進めるインクリメントの数を指定する整数型。
 
 ### <a name="remarks"></a>解説
 
 進む範囲は非特異である必要があり、反復子が逆参照可能であるか、末尾を超える必要があります。
 
-`InputIterator` が双方向反復子型の要件を満たしている場合、 *Off*は負の値になることがあります。 `InputIterator` が入力反復子または前方反復子型である場合、 *Off*は負でない必要があります。
+が `InputIterator` 双方向反復子型の要件を満たしている場合、 *Off*は負の値になる可能性があります。 `InputIterator`が入力または前方反復子型である場合、 *Off*は負ではない必要があります。
 
-`InputIterator` がランダムアクセス反復子の要件を満たす場合、advance 関数の複雑さは一定です。それ以外の場合は、直線的な複雑さがあるため、コストが高くなる可能性があります。
+アドバンス関数は、 `InputIterator` ランダムアクセス反復子の要件を満たす場合に、複雑な複雑さを持ちます。それ以外の場合は、直線的な複雑さがあるため、コストが高くなる可能性があります。
 
 ### <a name="example"></a>例
 
@@ -113,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a>back_inserter
+## <a name="back_inserter"></a><a name="back_inserter"></a>back_inserter
 
 指定されたコンテナーの後ろに要素を挿入できる反復子を作成します。
 
@@ -129,7 +129,7 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーオブジェクト *_Cont*に関連付けられている `back_insert_iterator`。
+`back_insert_iterator`コンテナーオブジェクトに関連付けられている *_Cont*。
 
 ### <a name="remarks"></a>解説
 
@@ -184,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a>初め
 
 指定されたコンテナーの最初の要素への反復子を取得します。
 
@@ -203,10 +203,10 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*の\
+*連続*\
 コンテナー。
 
-*配列*の\
+*配列*\
 `Ty` 型のオブジェクトの配列。
 
 ### <a name="return-value"></a>戻り値
@@ -286,7 +286,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 指定されたコンテナーの最初の要素への const 反復子を取得します。
 
@@ -298,7 +298,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*の\
+*連続*\
 コンテナーまたは initializer_list。
 
 ### <a name="return-value"></a>戻り値
@@ -309,7 +309,7 @@ auto cbegin(const Container& cont)
 
 この関数はすべての C++ 標準ライブラリ コンテナーと [initializer_list](../standard-library/initializer-list-class.md) を使用します。
 
-`begin()` テンプレート関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`begin()` と `cbegin()`をサポートする任意の種類の変更可能な (非**定数**) コンテナーまたは `initializer_list` である `Container` を検討してください。
+`begin()` テンプレート関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、が `Container` 変更可能な (非 **`const`** ) コンテナーであるか、またはとを `initializer_list` サポートする任意の種類のであることを想定して `begin()` `cbegin()` います。
 
 ```cpp
 auto i1 = Container.begin();
@@ -319,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 指定されたコンテナーの最後の要素の後ろにある要素への定数反復子を取得します。
 
@@ -331,7 +331,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*の\
+*連続*\
 コンテナーまたは initializer_list。
 
 ### <a name="return-value"></a>戻り値
@@ -342,7 +342,7 @@ auto cend(const Container& cont)
 
 この関数はすべての C++ 標準ライブラリ コンテナーと [initializer_list](../standard-library/initializer-list-class.md) を使用します。
 
-[end()](../standard-library/iterator-functions.md#end) テンプレート関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`end()` と `cend()`をサポートする任意の種類の変更可能な (非**定数**) コンテナーまたは `initializer_list` である `Container` を検討してください。
+[end()](../standard-library/iterator-functions.md#end) テンプレート関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、が `Container` 変更可能な (非 **`const`** ) コンテナーであるか、またはとを `initializer_list` サポートする任意の種類のであることを想定して `end()` `cend()` います。
 
 ```cpp
 auto i1 = Container.end();
@@ -352,19 +352,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a>crbegin
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a>データ
+## <a name="data"></a><a name="data"></a> データ
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +373,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a>単位
+## <a name="distance"></a><a name="distance"></a>単位
 
 2 つの反復子によってアドレス指定された位置の間のインクリメント数を決定します。
 
@@ -384,10 +384,10 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の\
+*まずは*\
 2 番目の反復子からの距離を特定する 1 番目の反復子。
 
-*最後*の\
+*前の*\
 1 番目の反復子からの距離を特定する 2 番目の反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -396,7 +396,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="remarks"></a>解説
 
-`InputIterator` がランダムアクセス反復子の要件を満たす場合、distance 関数の複雑さは一定です。それ以外の場合は、直線的な複雑さがあるため、コストが高くなる可能性があります。
+Distance 関数は、ランダムアクセス反復子の要件を満たす場合には一定の複雑さを持ち `InputIterator` ます。それ以外の場合は、直線的な複雑さがあるため、コストが高くなる可能性があります。
 
 ### <a name="example"></a>例
 
@@ -446,7 +446,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a>指定
 
 ```cpp
 template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
@@ -454,7 +454,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a>終わり
+## <a name="end"></a><a name="end"></a>終わり
 
 指定されたコンテナーの最後の要素の後ろにある要素への反復子を取得します。
 
@@ -473,10 +473,10 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*の\
+*連続*\
 コンテナー。
 
-*配列*の\
+*配列*\
 `Ty` 型のオブジェクトの配列。
 
 ### <a name="return-value"></a>戻り値
@@ -489,7 +489,7 @@ Ty *end(Ty (& array)[Size]);
 
 コード例については、[begin](../standard-library/iterator-functions.md#begin) を参照してください。
 
-## <a name="front_inserter"></a>front_inserter
+## <a name="front_inserter"></a><a name="front_inserter"></a>front_inserter
 
 指定されたコンテナーの前に要素を挿入できる反復子を作成します。
 
@@ -505,7 +505,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーオブジェクト *_Cont*に関連付けられている `front_insert_iterator`。
+`front_insert_iterator`コンテナーオブジェクトに関連付けられている *_Cont*。
 
 ### <a name="remarks"></a>解説
 
@@ -560,9 +560,9 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a>インサーター
+## <a name="inserter"></a><a name="inserter"></a>インサーター
 
-`insert_iterator<Container>(_Cont, _Where)`ではなく `inserter(_Cont, _Where)` を使用できるようにするヘルパーテンプレート関数。
+の代わりにを使用できるようにするヘルパーテンプレート関数 `inserter(_Cont, _Where)` `insert_iterator<Container>(_Cont, _Where)` 。
 
 ```cpp
 template <class Container>
@@ -582,7 +582,7 @@ inserter(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`を返します。
+このテンプレート関数は[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)を返し `<Container>(_Cont, _Where)` ます。
 
 ### <a name="example"></a>例
 
@@ -631,7 +631,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a>make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a><a name="make_checked_array_iterator"></a>make_checked_array_iterator
 
 他のアルゴリズムで使用できる [checked_array_iterator](../standard-library/checked-array-iterator-class.md) を作成します。
 
@@ -649,13 +649,13 @@ Iter Ptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 コピー先配列へのポインター。
 
 *サイズ*\
 ターゲット配列のサイズ。
 
-*[インデックス]* \
+*化*\
 配列のインデックス (省略可能)。
 
 ### <a name="return-value"></a>戻り値
@@ -725,9 +725,9 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a>make_move_iterator
+## <a name="make_move_iterator"></a><a name="make_move_iterator"></a>make_move_iterator
 
-指定した反復子を `move iterator` 反復子として含む `stored` を作成します。
+指定した反復子を `stored` 反復子として含む `move iterator` を作成します。
 
 ```cpp
 template <class Iterator>
@@ -742,9 +742,9 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は `move_iterator` `<Iterator>(_It)`を返します。
+このテンプレート関数は `move_iterator` `<Iterator>(_It)` を返します。
 
-## <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a><a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
 
 他のアルゴリズムで使用できる [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) を作成します。
 
@@ -759,7 +759,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 コピー先配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -823,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a>次に
+## <a name="next"></a><a name="next"></a>次に
 
 指定された回数を繰り返し、新しい反復子の位置を返します。
 
@@ -836,7 +836,7 @@ InputIterator next(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の\
+*まずは*\
 現在位置を返します。
 
 *_Off*\
@@ -848,9 +848,9 @@ InputIterator next(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、 *_Off*回インクリメント `next` を返します。
+このテンプレート関数は、インクリメントされた _Off の回数を返します。 `next` *_Off*
 
-## <a name="prev"></a>前
+## <a name="prev"></a><a name="prev"></a>前
 
 指定された回数を逆方向に繰り返し、新しい反復子の位置を返します。
 
@@ -863,7 +863,7 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の\
+*まずは*\
 現在位置を返します。
 
 *_Off*\
@@ -871,23 +871,23 @@ BidirectionalIterator prev(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、`next` 回デクリメントされた `off` を返します。
+このテンプレート関数は、`off` 回デクリメントされた `next` を返します。
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a>幅
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());

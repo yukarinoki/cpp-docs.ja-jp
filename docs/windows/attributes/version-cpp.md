@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165991"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213802"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "80165991"
 
 ## <a name="remarks"></a>解説
 
-**Version** C++属性には[バージョン](/windows/win32/Midl/version)MIDL 属性と同じ機能があり、生成された .idl ファイルに渡されます。
+**Version** C++ 属性には[バージョン](/windows/win32/Midl/version)MIDL 属性と同じ機能があり、生成された .idl ファイルに渡されます。
 
 ## <a name="example"></a>例
 
@@ -43,14 +43,14 @@ ms.locfileid: "80165991"
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|**coclass**|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|**coclass**|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [クラス属性](class-attributes.md)

@@ -8,37 +8,37 @@ helpviewer_keywords:
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-ms.openlocfilehash: 309567f897bf5ca941852b433cdee0e8e0d44b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd297752728f54de2b2ff50877954440cbe70ff9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392636"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228571"
 ---
 # <a name="ready-to-use-array-classes"></a>使用可能な配列クラス
 
 次のクラスは、すぐに使用できる配列クラスです。
 
 [CByteArray](../mfc/reference/cbytearray-class.md)<br/>
-型の要素を格納**バイト**配列にします。
+**BYTE**型の要素を配列に格納します。
 
 [CDWordArray](../mfc/reference/cdwordarray-class.md)<br/>
-型の要素を格納**DWORD**配列にします。
+**DWORD**型の要素を配列に格納します。
 
 [CObArray](../mfc/reference/cobarray-class.md)<br/>
-クラスのオブジェクトへのポインターを格納`CObject`から派生したクラスのオブジェクトに`CObject`配列にします。
+クラスのオブジェクトへのポインター、 `CObject` または配列内のから派生したクラスのオブジェクトへのポインターを格納 `CObject` します。
 
 [CPtrArray](../mfc/reference/cptrarray-class.md)<br/>
-ポインターを格納**void** (ジェネリック ポインター) の配列。
+**`void`**(ジェネリックポインター) へのポインターを配列に格納します。
 
 [CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
-型の要素を格納**UINT**配列にします。
+**UINT**型の要素を配列に格納します。
 
 [CWordArray](../mfc/reference/cwordarray-class.md)<br/>
-型の要素を格納**WORD**配列にします。
+**WORD**型の要素を配列に格納します。
 
 [CStringArray](../mfc/reference/cstringarray-class.md)<br/>
-ストア`CString`配列内のオブジェクト。
+`CString`オブジェクトを配列に格納します。
 
 ## <a name="see-also"></a>関連項目
 

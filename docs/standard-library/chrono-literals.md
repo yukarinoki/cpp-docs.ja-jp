@@ -2,16 +2,16 @@
 title: chrono リテラル
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244901"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230157"
 ---
 # <a name="chrono-literals"></a>chrono リテラル
 
-(C++14) \<chrono> ヘッダーでは、時、分、秒、ミリ秒、マイクロ秒、ナノ秒を表すリテラルの使用を容易にする 12 個の[ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)が定義されています。 各ユーザー定義リテラルには、整数と浮動小数点数のオーバーロードがあります。 これらのリテラルは、std::chrono がスコープ内にあると自動的にスコープ内になる literals::chrono_literals インライン名前空間で定義されています。
+(C++ 14)ヘッダーには、 \<chrono> 時間、分、秒、ミリ秒、マイクロ秒、ナノ秒を表すリテラルの使用を容易にする12個の[ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)が定義されています。 各ユーザー定義リテラルには、整数と浮動小数点数のオーバーロードがあります。 これらのリテラルは、std::chrono がスコープ内にあると自動的にスコープ内になる literals::chrono_literals インライン名前空間で定義されています。
 
 ## <a name="syntax"></a>構文
 
@@ -60,7 +60,7 @@ inline namespace literals {
 
 ## <a name="return-value"></a>戻り値
 
-受け取るリテラル、 **long**引数が値または対応する型を返します。 浮動小数点数の引数を受け取るリテラルは、[期間](../standard-library/duration-class.md)を返します。
+引数を受け取るリテラルは、 **`long long`** 値または対応する型を返します。 浮動小数点数の引数を受け取るリテラルは、[期間](../standard-library/duration-class.md)を返します。
 
 ## <a name="example"></a>例
 

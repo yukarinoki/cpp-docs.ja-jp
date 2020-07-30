@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215284"
 ---
 # <a name="db_table"></a>db_table
 
@@ -32,20 +32,20 @@ OLE DB テーブルを開きます。
 Optionalテーブルを操作するために使用するハンドルの名前。 複数の結果行を返す場合は、このパラメーターを指定する必要があります。 **db_table**は、指定された*名前*を持つ変数を生成します。この変数は、行セットを走査したり、複数のアクションクエリを実行したりするために使用できます。
 
 *source_name*<br/>
-Optionalコマンドが実行される `db_source` 属性が適用されているクラスの `CSession` 変数またはインスタンス。 「 [db_source](db-source.md)」をご覧ください。
+Optionalコマンドを実行するために `CSession` 属性が適用されているクラスの変数またはインスタンス `db_source` 。 「 [db_source](db-source.md)」をご覧ください。
 
 *hresult*<br/>
 Optionalこのデータベースコマンドの HRESULT を受け取る変数を指定します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
 ## <a name="remarks"></a>解説
 
-**db_table**は、テーブルを開くために OLE DB コンシューマーによって使用される[CTable](../../data/oledb/ctable-class.md)オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 `db_column` を使用して、テーブル列を変数にバインドします。パラメーターの区切り (パラメーターの型の設定など) を行うには、`db_param` を使用します。
+**db_table**は、テーブルを開くために OLE DB コンシューマーによって使用される[CTable](../../data/oledb/ctable-class.md)オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 を使用し `db_column` てテーブル列を変数にバインドします。 `db_param` パラメーターの区切り記号 (パラメーターの型の設定など) を使用します。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を*classname*アクセサーに \_します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは classname というクラスも作成します。これ*は、\_* *classname*アクセサーから派生します。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
-次の例では、`CProducts`で使用する Products テーブルを開きます。
+次の例では、で使用する Products テーブルを開き `CProducts` ます。
 
 ```cpp
 // db_table.cpp
@@ -68,13 +68,13 @@ class CProducts {
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー属性](ole-db-consumer-attributes.md)
+[OLE DB のコンシューマー属性](ole-db-consumer-attributes.md)

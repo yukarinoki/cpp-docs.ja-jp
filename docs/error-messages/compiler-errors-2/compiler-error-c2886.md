@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3e445b52c2a0abbfca198c4cb0f4108dd5ba5ffb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233432"
 ---
 # <a name="compiler-error-c2886"></a>コンパイラ エラー C2886
 
 ' class:: identifier ': シンボルをメンバー using 宣言の中で使用することはできません
 
-`using` 宣言では、名前空間名などのシンボルを使用します。 `using` 宣言は、基底クラスのメンバーを宣言するためのものです。
+宣言では、 **`using`** 名前空間名などのシンボルを使用します。 **`using`** 宣言は、基底クラスのメンバーを宣言するためのものです。
 
 次の例では、C2886 が生成されます。
 

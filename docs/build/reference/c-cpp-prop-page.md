@@ -4,12 +4,12 @@ description: Visual Studio の Microsoft C/c + + プロジェクトプロパテ�
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180891"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229741"
 ---
 # <a name="cc-property-pages"></a>C/c + + プロパティページ
 
@@ -120,8 +120,8 @@ Windows ランタイム言語拡張機能を使用します。 [`/ZW`](zw-window
 
 - **[Default]**
 - **Disabled** -既定でオンになっているインライン展開を無効にします。
-- **__Inline のみ**-、、またはとマークされた関数のみ **`inline`** を展開 `__forceinline` `__inline` します。 または、C++ メンバー関数では、クラス宣言内で定義されます。
-- またはとしてマークされている、**適切**に展開さ **`inline`** れた関数、 `__inline` およびコンパイラが選択したその他の関数。 (拡張はコンパイラの裁量で行われ、多くの場合、*自動インライン展開*と呼ばれます)。
+- **__Inline のみ**-、、またはとマークされた関数のみ **`inline`** を展開 **`__forceinline`** **`__inline`** します。 または、C++ メンバー関数では、クラス宣言内で定義されます。
+- またはとしてマークされている、**適切**に展開さ **`inline`** れた関数、 **`__inline`** およびコンパイラが選択したその他の関数。 (拡張はコンパイラの裁量で行われ、多くの場合、*自動インライン展開*と呼ばれます)。
 
 ### <a name="enable-intrinsic-functions"></a>組み込み関数を有効にする
 
@@ -255,7 +255,7 @@ C と C++ のソースファイルをプリプロセスし、前処理された�
 #### <a name="choices"></a>選択
 
 - **はい**-ガードセットのセキュリティチェックを有効に [`/guard:cf`](guard-enable-control-flow-guard.md) します。
-- "**いいえ**"
+- **いいえ**
 
 ### <a name="enable-function-level-linking"></a>関数レベルでリンクする
 
@@ -317,7 +317,7 @@ CVE 2017-5753 の Spectre 軽減策。 [`/Qspectre`](qspectre.md)を設定しま
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>組み込み型として wchar_t を扱う
 
-指定した場合、型はにマップされるのと **`wchar_t`** 同じ方法で、ネイティブ型になり `__wchar_t` **`short`** `__int16` ます。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)既定ではオンになっています。
+指定した場合、型はにマップされるのと **`wchar_t`** 同じ方法で、ネイティブ型になり **`__wchar_t`** **`short`** **`__int16`** ます。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)既定ではオンになっています。
 
 ### <a name="force-conformance-in-for-loop-scope"></a>For ループスコープの強制準拠
 
@@ -434,10 +434,10 @@ ASM リスティングファイルの相対パスまたは名前を指定しま�
 
 #### <a name="choices"></a>選択
 
-- **__cdecl** - `__cdecl` C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し `__stdcall` `__fastcall` ます。
-- **__fastcall** - `__fastcall` C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し `__cdecl` `__stdcall` ます。 すべての `__fastcall` 関数には、プロトタイプ宣言が必要です。
-- **__stdcall** - `__stdcall` C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し `__cdecl` `__fastcall` ます。 すべての `__stdcall` 関数には、プロトタイプ宣言が必要です。
-- **__vectorcall** - `__vectorcall` C++ メンバー関数と、、、またはとマークされている関数を除くすべての関数の呼び出し規約を指定し `__cdecl` `__fastcall` `__stdcall` ます。 すべての `__vectorcall` 関数には、プロトタイプ宣言が必要です。
+- **`__cdecl`**- **`__cdecl`** C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し **`__stdcall`** **`__fastcall`** ます。
+- **`__fastcall`**- **`__fastcall`** C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し **`__cdecl`** **`__stdcall`** ます。 すべて **`__fastcall`** の関数にはプロトタイプが必要です。
+- **`__stdcall`**- **`__stdcall`** C++ メンバー関数およびまたはとマークされている関数を除くすべての関数の呼び出し規約を指定し **`__cdecl`** **`__fastcall`** ます。 すべて **`__stdcall`** の関数にはプロトタイプが必要です。
+- **`__vectorcall`**- **`__vectorcall`** C++ メンバー関数と、、、またはとマークされている関数を除くすべての関数の呼び出し規約を指定し **`__cdecl`** **`__fastcall`** **`__stdcall`** ます。 すべて **`__vectorcall`** の関数にはプロトタイプが必要です。
 
 ### <a name="compile-as"></a>コンパイル言語の選択
 

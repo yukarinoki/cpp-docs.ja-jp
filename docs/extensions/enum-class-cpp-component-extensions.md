@@ -3,12 +3,12 @@ title: enum class (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219717"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI および C++/CX)
 
@@ -18,7 +18,7 @@ ms.locfileid: "80182137"
 
 ### <a name="remarks"></a>解説
 
-C++/CX および C++/CLI では、**public enum class** と **private enum class** をサポートします。これらは、標準 C++ の **enum class** に似ていますが、アクセシビリティ指定子が追加されている点が異なります。 **/clr** では、C++11 の **enum class** 型を使用できますが、C++/CX と C++/CLI の型ではなく ISO の列挙型でよいかどうかを確認する警告 C4472 が生成されます。 ISO 標準 C++ の **enum** キーワードについて詳しくは、「[列挙型](../cpp/enumerations-cpp.md)」をご覧ください。
+C++/CX および C++/CLI では、**public enum class** と **private enum class** をサポートします。これらは、標準 C++ の **enum class** に似ていますが、アクセシビリティ指定子が追加されている点が異なります。 **/clr** では、C++11 の **enum class** 型を使用できますが、C++/CX と C++/CLI の型ではなく ISO の列挙型でよいかどうかを確認する警告 C4472 が生成されます。 ISO 標準 C++ キーワードの詳細については **`enum`** 、「[列挙型](../cpp/enumerations-cpp.md)」を参照してください。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -35,20 +35,20 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 ### <a name="parameters"></a>パラメーター
 
 *access*<br/>
-列挙型のアクセシビリティ。**public** または **private** を指定できます。
+列挙型のアクセシビリティ **`public`** 。またはを指定でき **`private`** ます。
 
 *enumeration-identifier*<br/>
 列挙型の名前。
 
-*underlying-type*<br/>
+*基になる型*<br/>
 (省略可能) 列挙型の基になる型。
 
-(省略可能、 Windows ランタイムのみ) 列挙型の基になる型。**bool**、**char**、`char16`、`int16`、`uint16`、**int**、`uint32`、`int64`,、または `uint64` を指定できます。
+(省略可能、 Windows ランタイムのみ) 列挙型の基になる型。、、、、、、、、の **`bool`** **`char`** いずれかになり `char16` `int16` `uint16` **`int`** `uint32` `int64` `uint64` ます。
 
-*enumerator-list*<br/>
+*列挙子-一覧*<br/>
 列挙子名のコンマ区切りのリスト。
 
-それぞれの列挙子の値は、コンパイラによって暗黙的に定義された定数式か、" *enumerator*`=`*constant-expression*」をご覧ください。 既定では、最初の列挙子が暗黙的に定義されている場合、その値は 0 です。 それ以降の暗黙的に定義された列挙子の値は、前の列挙子の値に 1 を加算した値になります。
+各列挙子の値は、コンパイラによって暗黙的に定義された定数式か、*列挙子* `=` *定数式*によって明示的に定義された定数式です。 既定では、最初の列挙子が暗黙的に定義されている場合、その値は 0 です。 それ以降の暗黙的に定義された列挙子の値は、前の列挙子の値に 1 を加算した値になります。
 
 *var*<br/>
 (省略可能) 列挙型の変数の名前。
@@ -61,7 +61,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 - *underlying-type* が数値であり、列挙子がその型の最大値を指定する場合は、次に暗黙的に定義されている列挙型の値は表すことができません。
 
-- *underlying-type* が **bool** であり、3 つ以上の列挙子が暗黙的に定義されている場合、最初の 2 つの列挙子より後の列挙子は表すことができません。
+- *基になる型*が **`bool`** で、3つ以上の列挙子が暗黙的に定義されている場合、最初の2つの列挙子は表すことができません。
 
 - *underlying-type* が `char16`であり、列挙型の値が 0xD800 から 0xDFFF の範囲にある場合、その値を表すことができます。 この値は Unicode サロゲート ペアの一方を表していますが、このペアは分離して表すことができないため、論理的にはこの値は正しくありません。
 
@@ -83,16 +83,16 @@ accessenum structname [:type] { enumerator-list } var;
 ### <a name="parameters"></a>パラメーター
 
 *access*<br/>
-列挙型のアクセシビリティ。 **public** または **private** を指定できます。
+列挙型のアクセシビリティ。 またはのいずれかを指定でき **`public`** **`private`** ます。
 
-*enumerator-list*<br/>
+*列挙子-一覧*<br/>
 列挙型に含まれる識別子 (列挙子) のコンマ区切りのリスト。
 
 *name*<br/>
 列挙型の名前。 匿名のマネージド列挙型は使用できません。
 
 *type*<br/>
-(省略可能) "*識別子*" の基になる型。 符号付きまたは符号なしの **int**、**short**、**long** など、任意のスカラー型を指定できます。  **bool** または **char** も使用できます。
+(省略可能) "*識別子*" の基になる型。 これは、 **`int`** 、、またはの符号付きまたは符号なしのバージョンなど、任意のスカラー型にすることができ **`short`** **`long`** ます。  **`bool`** または **`char`** も使用できます。
 
 *var*<br/>
 (省略可能) 列挙型の変数の名前。
@@ -138,7 +138,7 @@ static const int mon = 1;
 
 Visual Studio 2002 と Visual Studio 2003 では、列挙子は弱く挿入されていました (同じ名前の別の識別子が存在していない限り、外側のスコープで参照可能)。
 
-C++ 標準列挙型が定義されている (**class** または **struct** は指定されていない) 場合、`/clr` を指定してコンパイルすると、列挙型がマネージド列挙型としてコンパイルされます。  この列挙型のセマンティクスはアンマネージ列挙型のままです。  コンパイラは、その列挙型をネイティブ列挙型にするというプログラマの意図を示すために、`Microsoft::VisualC::NativeEnumAttribute` 属性を挿入します。  他のコンパイラは、標準列挙型を単にマネージド列挙型として認識します。
+標準 C++ 列挙型が定義されている場合 (またはなし)、を指定してコンパイルすると、 **`class`** **`struct`** `/clr` 列挙型がマネージ列挙型としてコンパイルされます。  この列挙型のセマンティクスはアンマネージ列挙型のままです。  コンパイラは、その列挙型をネイティブ列挙型にするというプログラマの意図を示すために、`Microsoft::VisualC::NativeEnumAttribute` 属性を挿入します。  他のコンパイラは、標準列挙型を単にマネージド列挙型として認識します。
 
 `/clr` を指定してコンパイルされた名前付きの標準列挙型は、アセンブリでマネージド列挙型として参照可能であり、他のマネージド コンパイラでも実行できます。   ただし、名前のない標準列挙体は、アセンブリからパブリックに参照することができません。
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

@@ -1,12 +1,12 @@
 ---
-title: setlocale, _wsetlocale
-description: Microsoft C runtime (CRT) ライブラリ関数setlocaleと_wsetlocaleについて説明します。
+title: ':::no-loc(setlocale):::, :::no-loc(_wsetlocale):::'
+description: 'Microsoft C runtime (CRT) ライブラリ関数とについて説明し :::no-loc(setlocale)::: :::no-loc(_wsetlocale)::: ます。'
 ms.date: 4/2/2020
 api_name:
-- _wsetlocale
-- setlocale
-- _o__wsetlocale
-- _o_setlocale
+- ':::no-loc(_wsetlocale):::'
+- ':::no-loc(setlocale):::'
+- '_o_:::no-loc(_wsetlocale):::'
+- '_o_:::no-loc(setlocale):::'
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,40 +25,40 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _wsetlocale
-- _tsetlocale
-- setlocale
+- ':::no-loc(_wsetlocale):::'
+- '_t:::no-loc(setlocale):::'
+- ':::no-loc(setlocale):::'
 helpviewer_keywords:
-- wsetlocale function
-- setlocale function
-- tsetlocale function
+- 'w:::no-loc(setlocale)::: function'
+- ':::no-loc(setlocale)::: function'
+- 't:::no-loc(setlocale)::: function'
 - locales, defining
-- _tsetlocale function
+- '_t:::no-loc(setlocale)::: function'
 - defining locales
-- _wsetlocale function
+- ':::no-loc(_wsetlocale)::: function'
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
-- setlocale
-- _wsetlocale
-ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+- ':::no-loc(setlocale):::'
+- ':::no-loc(_wsetlocale):::'
+ms.openlocfilehash: 05e4e96297e2237ed6768e05ff4cacfd63744e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226139"
 ---
-# <a name="setlocale-_wsetlocale"></a>setlocale、_wsetlocale
+# <a name="no-locsetlocale-no-loc_wsetlocale"></a>:::no-loc(setlocale):::, :::no-loc(_wsetlocale):::
 
 実行時ロケールを設定または取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C
-char *setlocale(
+char *:::no-loc(setlocale):::(
    int category,
    const char *locale
 );
-wchar_t *_wsetlocale(
+wchar_t *:::no-loc(_wsetlocale):::(
    int category,
    const wchar_t *locale
 );
@@ -79,7 +79,7 @@ wchar_t *_wsetlocale(
 たとえば、
 
 ```C
-setlocale( LC_ALL, "en-US" );
+:::no-loc(setlocale):::( LC_ALL, "en-US" );
 ```
 
 を呼び出すと、すべてのカテゴリを設定し、文字列だけを返します
@@ -88,13 +88,13 @@ setlocale( LC_ALL, "en-US" );
 en-US
 ```
 
-**Setlocale**によって返された文字列をコピーして、プログラムのロケール情報のその部分を復元できます。 **Setlocale**によって返される文字列には、グローバルまたはスレッドローカルストレージが使用されます。 後で**setlocale**を呼び出すと、文字列が上書きされ、以前の呼び出しによって返された文字列ポインターが無効になります。
+によって返された文字列をコピーして、 **:::no-loc(setlocale):::** プログラムのロケール情報のその部分を復元できます。 によって返される文字列には、グローバルまたはスレッドローカルストレージが使用され **:::no-loc(setlocale):::** ます。 後でを呼び出し **:::no-loc(setlocale):::** て文字列を上書きします。これにより、以前の呼び出しによって返された文字列ポインターが無効になります。
 
 ## <a name="remarks"></a>解説
 
-*Locale*および*category*によって指定された現在のプログラムのロケール情報の一部またはすべてを設定、変更、または照会するには、 **setlocale**関数を使用します。 *ロケール*とは、プログラムの特定の側面をカスタマイズできる地域 (国/地域と言語) を指します。 ロケールに依存するカテゴリとしては、日付の形式や通貨値の表示形式などがあります。 コンピューターで複数の形式がサポートされている言語の既定の文字列に*ロケール*を設定した場合は、 **setlocale**戻り値をチェックして、有効な言語を確認する必要があります。 たとえば、 *locale*を "中国語" に設定した場合、戻り値は "簡体字中国語または繁体字中国語" のいずれかになります。
+関数を使用し **:::no-loc(setlocale):::** て、 *locale*および*category*によって指定された現在のプログラムのロケール情報の一部またはすべてを設定、変更、または照会します。 *ロケール*とは、プログラムの特定の側面をカスタマイズできる地域 (国/地域と言語) を指します。 ロケールに依存するカテゴリとしては、日付の形式や通貨値の表示形式などがあります。 コンピューターで複数の形式がサポートされている言語の既定の文字列に*ロケール*を設定した場合は、戻り値をチェックして、有効な言語を確認する必要があり **:::no-loc(setlocale):::** ます。 たとえば、 *locale*を "中国語" に設定した場合、戻り値は "簡体字中国語または繁体字中国語" のいずれかになります。
 
-**_wsetlocale**は、 **setlocale**のワイド文字バージョンです。**_wsetlocale**の*ロケール*引数と戻り値はワイド文字列です。 それ以外の場合、 **_wsetlocale**と**setlocale**は同じように動作します。
+**:::no-loc(_wsetlocale):::** は、のワイド文字バージョンです **:::no-loc(setlocale):::** 。の*ロケール*引数と戻り値 **:::no-loc(_wsetlocale):::** はワイド文字列です。 **:::no-loc(_wsetlocale):::****:::no-loc(setlocale):::** それ以外の場合は、との動作は同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -102,7 +102,7 @@ en-US
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
+|**_t:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(_wsetlocale):::**|
 
 *Category*引数は、影響を受けるプログラムのロケール情報の部分を指定します。 *Category*に使用されるマクロと、影響を与えるプログラムの部分は次のとおりです。
 
@@ -117,22 +117,22 @@ en-US
 
 この関数は、カテゴリ パラメーターを検証します。 Category パラメーターが前の表に示した値のいずれでもない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定し、 **NULL**を返します。
 
-*Locale*引数は、ロケールを指定する文字列へのポインターです。 *Locale*引数の形式の詳細については、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。 C の値は、C 翻訳のための ANSI に準拠した最小環境**を指定し**ます。 **C**ロケールでは、すべての**char**データ型が1バイトであり、その値が常に256未満であることを前提としています。
+*Locale*引数は、ロケールを指定する文字列へのポインターです。 *Locale*引数の形式の詳細については、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。 C の値は、C 翻訳のための ANSI に準拠した最小環境**を指定し**ます。 **C**ロケールでは、すべてのデータ型が1バイトであり、その **`char`** 値が常に256未満であることを前提としています。
 
 プログラムの開始時に、次のステートメントの等価性の確認が実行されます。
 
-`setlocale( LC_ALL, "C" );`
+`:::no-loc(setlocale):::( LC_ALL, "C" );`
 
-*Locale*引数は、ロケール名、言語文字列、言語文字列と国/地域コード、コードページ、言語文字列、国/地域コード、およびコードページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコードページのセットには、Windows NLS API でサポートされているものがすべて含まれています。 **Setlocale**でサポートされているロケール名のセットについては、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 **Setlocale**でサポートされる言語および国/地域識別文字列のセットは、「[言語文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)」に記載されています。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
+*Locale*引数は、ロケール名、言語文字列、言語文字列と国/地域コード、コードページ、言語文字列、国/地域コード、およびコードページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコードページのセットには、Windows NLS API でサポートされているものがすべて含まれています。 でサポートされているロケール名のセットに **:::no-loc(setlocale):::** ついては、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 でサポートされる言語および国/地域識別文字列のセットは、「 **:::no-loc(setlocale):::** [言語文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)」に記載されています。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
 
-*Locale*引数として渡された null ポインターは、国際化環境を設定するのではなく、をクエリするように**setlocale**に指示します。 *Locale*引数が null ポインターの場合、プログラムの現在のロケール設定は変更されません。 代わりに、 **setlocale**は、スレッドの現在のロケールの*カテゴリ*に関連付けられている文字列へのポインターを返します。 *Category*引数が**LC_ALL**の場合、関数は各カテゴリの現在の設定をセミコロンで区切って示す文字列を返します。 たとえば、呼び出しのシーケンス 
+*Locale*引数として渡される null ポインターは、 **:::no-loc(setlocale):::** 国際環境を設定するのではなく、クエリを実行するように指示します。 *Locale*引数が null ポインターの場合、プログラムの現在のロケール設定は変更されません。 代わりに、は、 **:::no-loc(setlocale):::** スレッドの現在のロケールの*カテゴリ*に関連付けられている文字列へのポインターを返します。 *Category*引数が**LC_ALL**の場合、関数は各カテゴリの現在の設定をセミコロンで区切って示す文字列を返します。 たとえば、呼び出しのシーケンス 
 
 ```C
 // Set all categories and return "en-US"
-setlocale(LC_ALL, "en-US");
+:::no-loc(setlocale):::(LC_ALL, "en-US");
 // Set only the LC_MONETARY category and return "fr-FR"
-setlocale(LC_MONETARY, "fr-FR");
-printf("%s\n", setlocale(LC_ALL, NULL));
+:::no-loc(setlocale):::(LC_MONETARY, "fr-FR");
+printf("%s\n", :::no-loc(setlocale):::(LC_ALL, NULL));
 ```
 
 は、次の値は返します。
@@ -145,81 +145,81 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 次の例は、 **LC_ALL**カテゴリに関連しています。 文字列 "のいずれかです。OCP "and"。コードページ番号の代わりに、ACP "を使用して、ユーザーの既定の OEM コードページとユーザー既定の ANSI コードページの使用をそれぞれ指定することができます。
 
-- `setlocale( LC_ALL, "" );`
+- `:::no-loc(setlocale):::( LC_ALL, "" );`
 
    ロケールを既定に設定します。これはオペレーティング システムから取得したユーザー既定の ANSI コード ページです。 ロケール名は、 [Getuserdefaultlocalename](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)によって返される値に設定されます。 コードページは、 [Getacp](/windows/win32/api/winnls/nf-winnls-getacp)によって返される値に設定されます。
 
-- `setlocale( LC_ALL, ".OCP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".OCP" );`
 
    ロケールを、オペレーティングシステムから取得した現在の OEM コードページに設定します。 ロケール名は、 [Getuserdefaultlocalename](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)によって返される値に設定されます。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によってユーザーの既定のロケール名の[LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
 
-- `setlocale( LC_ALL, ".ACP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".ACP" );`
 
    ロケールに、オペレーティング システムから取得した ANSI コード ページを設定します。 ロケール名は、 [Getuserdefaultlocalename](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)によって返される値に設定されます。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によってユーザーの既定のロケール名の[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
 
-- `setlocale( LC_ALL, "<localename>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<localename>" );`
 
-   ロケールを* \<localename>* によって示されるロケール名に設定します。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によって指定されたロケール名の[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
+   ロケールをによって示されるロケール名に設定 *\<localename>* します。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によって指定されたロケール名の[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
 
-- `setlocale( LC_ALL, "<language>_<country>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>" );`
 
-   ロケールを、 * \<言語>* と* \<国>* によって示される言語と国/地域、およびホストオペレーティングシステムから取得した既定のコードページに設定します。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によって指定されたロケール名の[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
+   ロケールを、 *\<language>* *\<country>* ホストオペレーティングシステムから取得した既定のコードページと共に、およびによって示される言語と国/地域に設定します。 コードページは、 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)によって指定されたロケール名の[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)値に設定されます。
 
-- `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   ロケールを、言語、国/地域、および* \<言語>*、 * \<国>*、および* \<code_page>* 文字列で示されるコードページに設定します。 言語、国/地域、およびコード ページはさまざまに組み合わせて使用できます。 たとえば、次の呼び出しは、ロケールに、カナダ フランス語、およびコード ページ 1252 を設定します。
+   ロケールを、、、およびの各文字列で示される言語、国/地域、およびコードページに設定し *\<language>* *\<country>* *\<code_page>* ます。 言語、国/地域、およびコード ページはさまざまに組み合わせて使用できます。 たとえば、次の呼び出しは、ロケールに、カナダ フランス語、およびコード ページ 1252 を設定します。
 
-   `setlocale( LC_ALL, "French_Canada.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.1252" );`
 
    次の呼び出しは、ロケールに、カナダ フランス語、および既定の ANSI コード ページを設定します。
 
-   `setlocale( LC_ALL, "French_Canada.ACP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.ACP" );`
 
    次の呼び出しは、ロケールに、カナダ フランス語、および既定の OEM コード ページを設定します。
 
-   `setlocale( LC_ALL, "French_Canada.OCP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.OCP" );`
 
-- `setlocale( LC_ALL, "<language>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>" );`
 
-   ロケールを* \<言語>* によって示される言語に設定し、ホストオペレーティングシステムから取得した、指定した言語の既定の国/地域と、その国/地域のユーザー既定の ANSI コードページを使用します。 たとえば、次の**setlocale**への呼び出しは機能的には同等です。
+   ロケールをによって示される言語に設定 *\<language>* し、ホストオペレーティングシステムから取得した、指定した言語の既定の国/地域と、その国/地域のユーザー既定の ANSI コードページを使用します。 たとえば、次のの呼び出しは **:::no-loc(setlocale):::** 機能的には同等です。
 
-   `setlocale( LC_ALL, "en-US" );`
+   `:::no-loc(setlocale):::( LC_ALL, "en-US" );`
 
-   `setlocale( LC_ALL, "English" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English" );`
 
-   `setlocale( LC_ALL, "English_United States.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English_United States.1252" );`
 
    パフォーマンスと保守性の理由から、最初の形式を使用することをお勧めします。
 
-- `setlocale( LC_ALL, ".<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".<code_page>" );`
 
    コード ページに、*<code_page>* で表される値、および指定したコード ページの既定の国/地域と言語 (ホスト オペレーティング システムによって定義) を設定します。
 
-カテゴリは、コードページの変更に影響を与える**LC_ALL**または**LC_CTYPE**である必要があります。 たとえば、ホストオペレーティングシステムの既定の国/地域と言語が "米国" と "English" の場合、 **setlocale**への次の2つの呼び出しは機能的に同等になります。
+カテゴリは、コードページの変更に影響を与える**LC_ALL**または**LC_CTYPE**である必要があります。 たとえば、ホストオペレーティングシステムの既定の国/地域と言語が "米国" と "English" の場合、次の2つの呼び出し **:::no-loc(setlocale):::** は機能的に同等です。
 
-`setlocale( LC_ALL, ".1252" );`
+`:::no-loc(setlocale):::( LC_ALL, ".1252" );`
 
-`setlocale( LC_ALL, "English_United States.1252");`
+`:::no-loc(setlocale):::( LC_ALL, "English_United States.1252");`
 
-詳細については、「[C/C++ プリプロセッサ リファレンス](../../preprocessor/c-cpp-preprocessor-reference.md)」の [setlocale](../../preprocessor/setlocale.md) pragma ディレクティブをご覧ください。
+詳細については、「 [:::no-loc(setlocale):::](../../preprocessor/:::no-loc(setlocale):::.md) [C/c + + プリプロセッサリファレンス](../../preprocessor/c-cpp-preprocessor-reference.md)」のプラグマディレクティブを参照してください。
 
-関数[_configthreadlocale](configthreadlocale.md)は、 **setlocale**がプログラム内のすべてのスレッドのロケールに影響するか、呼び出し元のスレッドのロケールだけに影響するかを制御するために使用されます。
+が[_configthreadlocale](configthreadlocale.md) **:::no-loc(setlocale):::** プログラム内のすべてのスレッドのロケールに影響するか、呼び出し元のスレッドのロケールだけに影響するかを制御するには、関数 _configthreadlocale を使用します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**setlocale**|\<locale.h>|
-|**_wsetlocale**|\<locale.h> または \<wchar.h>|
+|**:::no-loc(setlocale):::**|\<locale.h>|
+|**:::no-loc(_wsetlocale):::**|\<locale.h> または \<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 ```C
-// crt_setlocale.c
+// crt_:::no-loc(setlocale):::.c
 //
-// This program demonstrates the use of setlocale when
+// This program demonstrates the use of :::no-loc(setlocale)::: when
 // using two independent threads.
 //
 
@@ -263,7 +263,7 @@ uintptr_t __stdcall SecondThreadFunc( void* pArguments )
 
     // Set the thread locale
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, locale));
+           :::no-loc(setlocale):::(LC_ALL, locale));
 
     // Retrieve the date string from the helper function
     if (get_date(str) == 0)
@@ -289,7 +289,7 @@ int main()
 
     // Set the locale of the main thread to US English.
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, "en-US"));
+           :::no-loc(setlocale):::(LC_ALL, "en-US"));
 
     // Create the second thread with a German locale.
     // Our thread function takes an argument of the locale to use.

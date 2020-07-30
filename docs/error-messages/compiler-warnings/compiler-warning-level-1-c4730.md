@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: ba6d305a414e99bd22ca603aaac2615994780c7d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a132dcc795d6055c854a5ad147940868fe4e088b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228779"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>コンパイラの警告 (レベル 1) C4730
 
 ' main ': _m64 と浮動小数点式の混合により、正しくないコードが生成される可能性があります
 
-関数は、 **double**型/[__m64](../../cpp/m64.md)と**float**を使用します。 MMX レジスタと浮動小数点レジスタは同じ物理レジスタ領域を共有するため (同時に使用することはできません)、同じ関数で `__m64` と**float**/**double**型を使用すると、データが破損する可能性があり、例外が発生する可能性があります。
+関数は[__m64](../../cpp/m64.md)と型を使用 **`float`** / **`double`** します。 MMX レジスタと浮動小数点レジスタは同じ物理レジスタ領域を共有するため (同時に使用することはできません)、 **`__m64`** 同じ関数で型と型を使用すると、 **`float`** / **`double`** データが破損する可能性があり、例外が発生する可能性があります。
 
-同じ関数で `__m64` 型と浮動小数点型を安全に使用するには、いずれかの型を使用する各命令を、 **_m_empty ()** (MMX の場合) または **_m_femms ()** (3dnow!) の組み込みによって区切る必要があります。
+**`__m64`** 同じ関数で型と浮動小数点型を安全に使用するには、いずれかの型を使用する各命令を **_m_empty ()** (MMX の場合) または **_M_femms ()** (3dnow!) の組み込みによって区切る必要があります。
 
 次の例では、C4730 が生成されます。
 

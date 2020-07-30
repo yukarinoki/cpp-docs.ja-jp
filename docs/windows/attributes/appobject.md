@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222161"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,7 +25,7 @@ ms.locfileid: "80168513"
 
 ## <a name="remarks"></a>解説
 
-**Appobject** C++属性には、 [appobject](/windows/win32/Midl/appobject) MIDL 属性と同じ機能があります。
+**Appobject** C++ 属性には、 [appobject](/windows/win32/Midl/appobject) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -52,15 +52,15 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|`coclass`|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|`coclass`|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615906"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225073"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject コレクションの全オブジェクトの削除
 
@@ -38,7 +38,7 @@ ms.locfileid: "84615906"
 
 1. およびを使用し `GetHeadPosition` `GetNext` て、リストを反復処理します。
 
-1. 反復処理で発生した各オブジェクトを削除するには、 **delete**演算子を使用します。
+1. **`delete`** 反復処理で発生した各オブジェクトを削除するには、演算子を使用します。
 
 1. 関数を呼び出して、 `RemoveAll` これらの要素に関連付けられているオブジェクトが削除された後、リストからすべての要素を削除します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84615906"
 
 1. `GetSize`および整数のインデックス値を使用して、配列を反復処理します。
 
-1. **Delete**演算子を使用して、イテレーションで検出された各要素を削除します。
+1. **`delete`** 反復処理で見つかった各要素を削除するには、演算子を使用します。
 
 1. 関数を呼び出して、 `RemoveAll` 削除された配列からすべての要素を削除します。
 
@@ -68,7 +68,7 @@ ms.locfileid: "84615906"
 
 1. およびを使用し `GetStartPosition` `GetNextAssoc` て、配列を反復処理します。
 
-1. **Delete**演算子を使用すると、イテレーションで検出された各マップ要素のキーや値を削除できます。
+1. **`delete`** 反復処理で見つかった各マップ要素のキーまたは値を削除するには、演算子を使用します。
 
 1. 関数を呼び出して、 `RemoveAll` 削除されたすべての要素をマップから削除します。
 

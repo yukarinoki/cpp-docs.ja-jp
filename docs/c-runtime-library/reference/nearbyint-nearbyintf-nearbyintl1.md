@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216857"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -74,7 +74,7 @@ long double nearbyint( long double x ); //C++ only
 |-----------|------------|
 |*x* = ±無限大|±無限大、未変更|
 |*x* = ±0|±0、未変更|
-|*x* = NaN|(NaN)|
+|*x* = NaN|NaN|
 
 エラーは[_matherr](matherr.md)によって報告されません。具体的には、この関数は**FE_INEXACT**例外を報告しません。
 
@@ -84,13 +84,13 @@ long double nearbyint( long double x ); //C++ only
 
 浮動小数点の最大値は正確な整数であるため、この関数が単独でオーバーフローすることはありません。むしろ、使用する関数のバージョンによっては、出力で戻り値がオーバーフローすることがあります。
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**パラメーターを受け取って返す**nearbyint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **nearbyint**は常に2つの double 値を受け取り、double 値を返します。
+C++ ではオーバーロードが可能であるため、またはパラメーターを受け取って返す**nearbyint**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **nearbyint**は常に2つの double 値を受け取り、double 値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**nearbyint**、 **nearbyintf**、 **nearbyintl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -98,5 +98,5 @@ C++ ではオーバーロードが可能であるため、 **float**または**l
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [数値演算と浮動小数点のサポート](../floating-point-support.md)<br/>

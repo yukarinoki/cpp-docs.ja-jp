@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a968efa5a867a3fd0e60594784cdb11122a974b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222408"
 ---
-# <a name="isconstructible-class"></a>is_constructible クラス
+# <a name="is_constructible-class"></a>is_constructible クラス
 
 指定した引数型の使用時に型を構築できるかどうかをテストします。
 
@@ -32,13 +32,13 @@ struct is_constructible;
 *Value*\
 *T*のコンストラクターで一致する引数の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型の述語のインスタンスは、型*T*が引数の型を使用して構築可能である場合は*true を保持*し、それ以外の場合は false を保持します。 型*T*は、変数定義`T t(std::declval<Args>()...);`が整形式である場合に構築可能です。 *T*と*Args*内のすべての型は、完全な型、 **void**、または不明なバインドの配列である必要があります。
+型の述語のインスタンスは、型*T*が引数の型を使用して構築可能である場合は true を保持し、それ*以外の場合*は false を保持します。 型*T*は、変数定義が整形式である場合に構築可能です `T t(std::declval<Args>()...);` 。 *T*と*Args*内のすべての型は、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

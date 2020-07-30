@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 68dbd0b5b2e9d4fc04821a7e7e0193840b55e312
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6b1ab2e8e93fda194532fbc8d6f484aaa91249d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077125"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212970"
 ---
 # <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper 関数
 
-指定された引数の型が `IUnknown` インターフェイスから派生していることを確認します。
+指定された引数の型がインターフェイスから派生していることを確認し `IUnknown` ます。
 
 > [!IMPORTANT]
 > このテンプレートの特殊化は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。 代わりに[IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args)を使用してください。
@@ -40,11 +40,11 @@ void** IID_PPV_ARGS_Helper(
 
 ## <a name="return-value"></a>戻り値
 
-**Void**へのポインターへのポインターにキャストする引数*pp* 。
+へのポインターへのポインターにキャストする引数*pp* **`void`** 。
 
 ## <a name="remarks"></a>解説
 
-テンプレートパラメーター *T*が `IUnknown`から派生していない場合、コンパイル時エラーが生成されます。
+テンプレートパラメーター *T*がから派生していない場合、コンパイル時エラーが生成され `IUnknown` ます。
 
 ## <a name="requirements"></a>必要条件
 

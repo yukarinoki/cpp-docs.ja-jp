@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955674"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216948"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -61,21 +61,21 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>パラメーター
 
 *function*<br/>
-純粋仮想関数が呼び出されたときに呼び出される関数。 関数**の戻り値の型**は void である必要があります。
+純粋仮想関数が呼び出されたときに呼び出される関数。 **_Purecall_handler**関数の戻り値の型は void である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-以前の**すべてのハンドラー (_a**)。 前のハンドラーがなかった場合は**nullptr**を返します。
+前の **_purecall_handler**。 **`nullptr`** 以前のハンドラーがなかった場合は、を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Get_purecall_handler**関数と **_set_purecall_handler**関数は、Microsoft 固有の関数でありC++ 、コードにのみ適用されます。
+**_Get_purecall_handler**関数と **_set_purecall_handler**関数は、Microsoft 固有の関数であり、C++ コードにのみ適用されます。
 
-純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラー関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、**ハンドラー**シグネチャを持つ関数を作成し、 **_set_purecall_handler**を使用してそれを現在のハンドラーにします。
+純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラーの関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、 **_purecall_handler**シグネチャを持つ関数を作成し、 **_set_purecall_handler**を使用してそれを現在のハンドラーにします。
 
-各プロセスの**ハンドラー**は1つだけであるため、 **_set_purecall_handler**を呼び出すと、すぐにすべてのスレッドに影響します。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
+各プロセスには **_purecall_handler**が1つしかないので、を呼び出すと、すべてのスレッドが直ちに影響を受ける **_set_purecall_handler**ます。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
 
-既定の動作を復元するには、 **nullptr**引数を使用して **_set_purecall_handler**を呼び出します。
+既定の動作を復元するには、引数を使用して **_set_purecall_handler**を呼び出し **`nullptr`** ます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -83,7 +83,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 |-------------|---------------------|
 |**_get_purecall_handler**、 **_set_purecall_handler**|\<cstdlib> または \<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

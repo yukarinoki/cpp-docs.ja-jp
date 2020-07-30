@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623355"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215973"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
 
@@ -65,7 +65,7 @@ Mywinapp の include セクションに次の行を挿入*します。CPP*:
 
 クラスをプロジェクトに追加したら、一部のビュークラスメンバーのアクセシビリティを変更する必要があります。
 
-*Newview を変更します。T*コンストラクターとデストラクターのアクセス指定子を**protected**から**public**に変更します。 これにより、クラスを動的に作成および破棄し、表示される前に外観を変更することができます。
+*Newview を変更します。* **`protected`** 、コンストラクターとデストラクターのアクセス指定子をからに変更し **`public`** ます。 これにより、クラスを動的に作成および破棄し、表示される前に外観を変更することができます。
 
 変更内容を保存し、次の手順に進みます。
 

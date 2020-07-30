@@ -5,40 +5,40 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225164"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>属性のパラメーターの型 (C++/CLI および C++/CX)
 
 コンパイル時に、属性に渡される値をコンパイラに通知する必要があります。  属性のパラメーターには、次のいずれかの型を指定できます。
 
-- **bool**
+- **`bool`**
 
-- **char**、**unsigned char**
+- **`char`**, **`unsigned char`**
 
-- **short**, **unsigned short**
+- **`short`**, **`unsigned short`**
 
-- **int**、**unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **long**、**unsigned long**
+- **`long`**, **`unsigned long`**
 
-- **__int64**、**unsigned __int64**
+- **`__int64`**、**署名**されていない __int64
 
-- **float**、**double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*` または `wchar_t*` または `System::String*`
+- **`char*`** また `wchar_t*` はまたは`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>例
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ユーザー定義の属性](user-defined-attributes-cpp-component-extensions.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-ms.openlocfilehash: 15b2dbf55b18c50020140eae25a71b18ceb10b10
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5275ee6dd6680da3bf3aae0b657997f264762163
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232041"
 ---
 # <a name="compiler-error-c3019"></a>コンパイラ エラー C3019
 
 OpenMP ' for ' ステートメントのインクリメントには、正しくない形式が含まれています
 
-OpenMP `for` ループのインクリメント部分では、演算子の左辺と右辺の両方でインデックス変数を使用する必要があります。
+OpenMP ループのインクリメント部分では、 **`for`** 演算子の左辺と右辺の両方でインデックス変数を使用する必要があります。
 
 次の例では、C3019 が生成されます。
 

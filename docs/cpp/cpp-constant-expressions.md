@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32d14650450d8047a5bc0e6cf7bb06788c9b3d81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221758"
 ---
 # <a name="c-constant-expressions"></a>C++ 定数式
 
@@ -35,7 +35,7 @@ C++ では、次の宣言に定数式 (定数に評価される式) が必要で
 
 - 定数式で初期化され、const として宣言される値
 
-- **sizeof**式
+- **`sizeof`** 式
 
 定数式で有効にするには、非整数型の定数を (明示的または暗黙的に) 整数型に変換する必要があります。 したがって、次のコードは有効です。
 
@@ -44,10 +44,10 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-定数式では、整数型への明示的な変換は有効です。**sizeof**演算子のオペランドとして使用されている場合を除き、他のすべての型と派生型は無効です。
+定数式では、整数型への明示的な変換は有効です。演算子のオペランドとして使用されている場合を除き、他のすべての型と派生型は無効です **`sizeof`** 。
 
 コンマ演算子および代入演算子は定数式では使用できません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[式の型](../cpp/types-of-expressions.md)
+[式の種類](../cpp/types-of-expressions.md)

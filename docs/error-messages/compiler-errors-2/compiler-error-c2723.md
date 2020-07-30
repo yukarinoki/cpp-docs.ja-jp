@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f723fcc0a3d9626f01f2059a3d9363801221bca0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216051"
 ---
 # <a name="compiler-error-c2723"></a>コンパイラエラー C2723
 
 'function' : 'specifier' 指定子が関数の定義で誤って指定されています
 
-この指定子は、クラス宣言の外側にある関数定義では使用できません。 `virtual` 指定子は、クラス宣言内のメンバー関数宣言にしか指定できません。
+この指定子は、クラス宣言の外側にある関数定義では使用できません。 指定 **`virtual`** 子は、クラス宣言内のメンバー関数宣言に対してのみ指定できます。
 
 次の例では、C2723 を生成し、その修正方法を示しています。
 

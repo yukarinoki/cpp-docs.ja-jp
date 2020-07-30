@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 701669d1dbc6f3363f76c113dc98e38db04681a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 975710fb47bdcf3195330402acd869aba17234e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230936"
 ---
 # <a name="auto_handle-class"></a>auto_handle クラス
 
-自動リソース管理を使用して、仮想ハンドルをマネージ型に埋め込むことができます。
+自動リソース管理。仮想ハンドルをマネージ型に埋め込むために使用できます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,43 +36,43 @@ ref class auto_handle;
 ### <a name="parameters"></a>パラメーター
 
 *_element_type*<br/>
-埋め込まれるマネージ型。
+埋め込むマネージ型。
 
-## <a name="members"></a><a name="members"></a>メンバー
+## <a name="members"></a><a name="members"></a>属する
 
 ### <a name="public-constructors"></a>パブリック コンストラクター  
 
-|名前|説明|  
+|名前|[説明]|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle`コンストラクター。|  
-|[auto_handle::~auto_handle](#tilde-auto-handle)|デス`auto_handle`トラクター。|  
+|[auto_handle:: ~ auto_handle](#tilde-auto-handle)|`auto_handle`デストラクター。|  
 
 ### <a name="public-methods"></a>パブリック メソッド  
 
-|名前|説明|  
+|名前|[説明]|  
 |---------|-----------|  
 |[auto_handle::get](#get)|格納されているオブジェクトを取得します。|  
-|[auto_handle::release](#release)|オブジェクトを管理から`auto_handle`解放します。|
-|[auto_handle::reset](#reset)|現在所有しているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有します。|
-|[auto_handle::swap](#swap)|オブジェクトを別`auto_handle`の .|  
+|[auto_handle::release](#release)|オブジェクトを管理から解放 `auto_handle` します。|
+|[auto_handle::reset](#reset)|現在所有されているオブジェクトを破棄し、必要に応じて、新しいオブジェクトを所有します。|
+|[auto_handle::swap](#swap)|オブジェクトを別のオブジェクトと交換 `auto_handle` します。|  
 
-### <a name="public-operators"></a>公共事業者
+### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|  
+|名前|[説明]|  
 |---------|-----------|
-|[auto_handle::オペレーター-&gt;](#operator-arrow)|メンバー アクセス演算子。|
+|[auto_handle:: operator-&gt;](#operator-arrow)|メンバーアクセス演算子。|
 |[auto_handle::operator=](#operator-assign)|代入演算子。|
-|[auto_handle::operator auto_handle](#operator-auto-handle)|互換性のある型との`auto_handle`間の型キャスト演算子。|  
-|[auto_handle::operator bool](#operator-bool)|条件式で`auto_handle`使用する演算子。|
-|[auto_handle::オペレーター!](#operator-logical-not)|条件式で`auto_handle`使用する演算子。|  
+|[auto_handle::operator auto_handle](#operator-auto-handle)|と互換性のある型の間に型キャスト演算子が `auto_handle` あります。|  
+|[auto_handle::operator bool](#operator-bool)|条件式でを使用するための演算子 `auto_handle` 。|
+|[auto_handle:: operator!](#operator-logical-not)|条件式でを使用するための演算子 `auto_handle` 。|  
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー ファイル**\<msclr\auto_handle.h>
+**ヘッダー ファイル** \<msclr\auto_handle.h>
 
 **名前空間**msclr
 
-## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle::auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:: auto_handle
 
 `auto_handle`コンストラクター。
 
@@ -163,9 +163,9 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle::~auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
 
-デス`auto_handle`トラクター。
+`auto_handle`デストラクター。
 
 ```cpp
 ~auto_handle();
@@ -173,7 +173,7 @@ done
 
 ### <a name="remarks"></a>解説
 
-デストラクターも所有オブジェクトを破棄します。
+また、デストラクターは所有オブジェクトも destructs します。
 
 ### <a name="example"></a>例
 
@@ -210,7 +210,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_handleget"></a><a name="get"></a>auto_handle::ゲット
+## <a name="auto_handleget"></a><a name="get"></a>auto_handle:: get
 
 格納されているオブジェクトを取得します。
 
@@ -270,9 +270,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle::リリース
+## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle:: release
 
-オブジェクトを管理から`auto_handle`解放します。
+オブジェクトを管理から解放 `auto_handle` します。
 
 ```cpp
 _element_type ^ release();
@@ -280,7 +280,7 @@ _element_type ^ release();
 
 ### <a name="return-value"></a>戻り値
 
-リリースされたオブジェクト。
+解放されたオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -333,9 +333,9 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle::リセット
+## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle:: reset
 
-現在所有しているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有します。
+現在所有されているオブジェクトを破棄し、必要に応じて、新しいオブジェクトを所有します。
 
 ```cpp
 void reset(
@@ -347,7 +347,7 @@ void reset();
 ### <a name="parameters"></a>パラメーター
 
 *_new_ptr*<br/>
-(オプション)新しいオブジェクト。
+Optional新しいオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -399,9 +399,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle::スワップ
+## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle:: swap
 
-オブジェクトを別`auto_handle`の .
+オブジェクトを別のオブジェクトと交換 `auto_handle` します。
 
 ```cpp
 void swap(
@@ -412,7 +412,7 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *_right*<br/>
-オブジェクト`auto_handle`を交換する対象。
+`auto_handle`オブジェクトのスワップに使用する。
 
 ### <a name="example"></a>例
 
@@ -441,9 +441,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle::オペレーター-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle:: operator-&gt;
 
-メンバー アクセス演算子。
+メンバーアクセス演算子。
 
 ```cpp
 _element_type ^ operator->();
@@ -451,7 +451,7 @@ _element_type ^ operator->();
 
 ### <a name="return-value"></a>戻り値
 
-で`auto_handle`ラップされるオブジェクト。
+によってラップされるオブジェクト `auto_handle` 。
 
 ### <a name="example"></a>例
 
@@ -490,7 +490,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:演算子=
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:: operator =
 
 代入演算子。
 
@@ -507,11 +507,11 @@ auto_handle<_element_type> % operator=(
 ### <a name="parameters"></a>パラメーター
 
 *_right*<br/>
-現在`auto_handle``auto_handle`の に割り当てられる 。
+`auto_handle`現在のに割り当てられる `auto_handle` 。
 
 ### <a name="return-value"></a>戻り値
 
-現在`auto_handle`の 、 を`_right`所有しています。
+現在所有されている `auto_handle` `_right` 。
 
 ### <a name="example"></a>例
 
@@ -574,9 +574,9 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle::オペレーターauto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle:: operator auto_handle
 
-互換性のある型との`auto_handle`間の型キャスト演算子。
+と互換性のある型の間に型キャスト演算子が `auto_handle` あります。
 
 ```cpp
 template<typename _other_type>
@@ -585,7 +585,7 @@ operator auto_handle<_other_type>();
 
 ### <a name="return-value"></a>戻り値
 
-現在`auto_handle`のキャストは`auto_handle<_other_type>`にキャストされます。
+への現在の `auto_handle` キャスト `auto_handle<_other_type>` 。
 
 ### <a name="example"></a>例
 
@@ -629,9 +629,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle::オペレーターブール
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle:: operator bool
 
-条件式で`auto_handle`使用する演算子。
+条件式でを使用するための演算子 `auto_handle` 。
 
 ```cpp
 operator bool();
@@ -639,11 +639,11 @@ operator bool();
 
 ### <a name="return-value"></a>戻り値
 
-`true`ラップされたオブジェクトが有効な場合。`false`それ以外の場合。
+**`true`** ラップされたオブジェクトが有効な場合は。**`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
-この演算子は、整数型`_detail_class::_safe_bool`に変換できないため、`bool`実際に変換する方が安全です。
+この演算子は、実際に `_detail_class::_safe_bool` は、 **`bool`** 整数型に変換できないため、より安全なに変換されます。
 
 ### <a name="example"></a>例
 
@@ -674,9 +674,9 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle::オペレーター!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle:: operator!
 
-条件式で`auto_handle`使用する演算子。
+条件式でを使用するための演算子 `auto_handle` 。
 
 ```cpp
 bool operator!();
@@ -684,7 +684,7 @@ bool operator!();
 
 ### <a name="return-value"></a>戻り値
 
-`true`ラップされたオブジェクトが無効な場合。`false`それ以外の場合。
+**`true`** ラップされたオブジェクトが無効な場合は。**`false`** それ以外の場合は。
 
 ### <a name="example"></a>例
 

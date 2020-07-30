@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213607"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
@@ -71,17 +71,17 @@ long double cosh( long double x );  // C++ only
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± **QNAN**、 **IND**|なし|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**不正確**+**オーバーフロー**|**超え**|
+|*x* ≥ 7.104760 e + 002|**不正確** +**オーバーフロー**|**超え**|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**cosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cosh**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**cosh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **cosh**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**coshf**、 **cosl**、 **coshf**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -93,7 +93,7 @@ C++ ではオーバーロードが可能であるため、 **float 型**また�
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>

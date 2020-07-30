@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221901"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -113,7 +113,7 @@ int _fstat64i32(
 
 **_Fstat**関数は、 *fd*に関連付けられている開いているファイルに関する情報を取得し、 *buffer*によって示される構造体に格納します。 **_Stat**構造体には、次のフィールドが含まれています。
 
-|フィールド|説明|
+|フィールド|意味|
 |-|-|
 | **st_atime** | ファイルの最後のアクセスの時間。 |
 | **st_ctime** | ファイルの作成の時間。 |
@@ -132,7 +132,7 @@ Stat.h は Types.h で定義される [_dev_t](../../c-runtime-library/standard-
 
 これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル長をサポートします。 最初の数字のサフィックス (**32**または**64**) は、使用された時間の種類のサイズを示します。2番目のサフィックスは、 **i32**または**i64**のいずれかで、ファイルサイズが32ビットまたは64ビットの整数で表されるかどうかを示します。
 
-**_fstat**は **_fstat64i32**に相当し、 **struct** **_stat**には64ビットの時刻が含まれます。 これは **_USE_32BIT_TIME_T**が定義されていない場合に当てはまります。この場合、以前の動作が有効になります。**_fstat**は32ビットの時刻を使用し、**構造体** **_stat**には32ビットの時刻が含まれます。 **_Fstati64**にも同じことが当てはまります。
+**_fstat**は **_fstat64i32**に相当し、 **`struct`** **_stat**には64ビットの時刻が含まれています。 これは **_USE_32BIT_TIME_T**が定義されていない場合に当てはまります。この場合、以前の動作が有効になります。**_fstat**では32ビットの時刻が使用 **`struct`** され、 **_stat**には32ビットの時刻が含まれます。 **_Fstati64**にも同じことが当てはまります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -151,14 +151,14 @@ Stat.h は Types.h で定義される [_dev_t](../../c-runtime-library/standard-
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
-|**_fstat**|\<sys/stat.h> と \<sys/types.h>|
-|**_fstat32**|\<sys/stat.h> と \<sys/types.h>|
-|**_fstat64**|\<sys/stat.h> と \<sys/types.h>|
-|**_fstati64**|\<sys/stat.h> と \<sys/types.h>|
-|**_fstat32i64**|\<sys/stat.h> と \<sys/types.h>|
-|**_fstat64i32**|\<sys/stat.h> と \<sys/types.h>|
+|**_fstat**|\<sys/stat.h> および \<sys/types.h>|
+|**_fstat32**|\<sys/stat.h> および \<sys/types.h>|
+|**_fstat64**|\<sys/stat.h> および \<sys/types.h>|
+|**_fstati64**|\<sys/stat.h> および \<sys/types.h>|
+|**_fstat32i64**|\<sys/stat.h> および \<sys/types.h>|
+|**_fstat64i32**|\<sys/stat.h> および \<sys/types.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
@@ -229,7 +229,7 @@ Time modified : Wed May 07 15:25:11 2003
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_filelength、_filelengthi64](filelength-filelengthi64.md)<br/>

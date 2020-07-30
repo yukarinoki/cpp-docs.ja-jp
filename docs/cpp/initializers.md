@@ -1,36 +1,36 @@
 ---
 title: 初期化子
 ms.date: 07/29/2019
-description: でC++クラス、構造体、配列、および基本型を初期化する方法について説明します。
+description: C++ でクラス、構造体、配列、および基本型を初期化する方法。
 helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 98b0c07db8eb10aa47830c9926c6ebcdc3f12dcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227440"
 ---
 # <a name="initializers"></a>初期化子
 
 初期化子は変数の初期値を指定します。 変数は次のコンテキストで初期化できます。
 
-- 変数の定義内:
+- 変数の定義内: 
 
     ```cpp
     int i = 3;
     Point p1{ 1, 2 };
     ```
 
-- 関数のいずれかのパラメーターとして:
+- 関数のいずれかのパラメーターとして: 
 
     ```cpp
     set_point(Point{ 5, 6 });
     ```
 
-- 関数の戻り値として:
+- 関数の戻り値として: 
 
     ```cpp
     Point get_new_point(int x, int y) { return { x, y }; }
@@ -81,9 +81,9 @@ ms.locfileid: "79423742"
 
 - 数値変数は 0 (0.0 や 0.0000000000 など) に初期化されます。
 
-- Char 変数は `'\0'`に初期化されます。
+- Char 変数はに初期化され `'\0'` ます。
 
-- ポインターは**nullptr**に初期化されます。
+- ポインターはに初期化され **`nullptr`** ます。
 
 - 配列、[ポッド](../standard-library/is-pod-class.md)クラス、構造体、および共用体のメンバーは、ゼロ値に初期化されます。
 
@@ -114,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a>既定の初期化
+### <a name="default-initialization"></a><a name="default_initialization"></a>既定の初期化
 
-クラス、構造体、共用体の既定値初期化は、既定のコンストラクターによる初期化です。 既定のコンストラクターは、初期化式なしで、または**new**キーワードを使用して呼び出すことができます。
+クラス、構造体、共用体の既定値初期化は、既定のコンストラクターによる初期化です。 既定のコンストラクターは、初期化式なしで、またはキーワードを使用して呼び出すことができ **`new`** ます。
 
 ```cpp
 MyClass mc1;
@@ -183,7 +183,7 @@ int main() {
 
 - 匿名の一時オブジェクトが空の丸かっこまたは中かっこを使用して初期化される。
 
-- **新しい**キーワードと空のかっこまたは中かっこを使用してオブジェクトが初期化されます。
+- **`new`** キーワードと空のかっこまたは中かっこを使用してオブジェクトが初期化されます。
 
 値の初期化では次の処理が実行されます。
 
@@ -274,9 +274,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 変数が空でない中かっこまたは丸かっこを使用して初期化される。
 
-- **新しい**キーワードと空でない中かっこまたはかっこを使用して変数が初期化されています
+- 変数は、 **`new`** キーワードと空でない中かっこまたはかっこを使用して初期化されます。
 
-- 変数が**static_cast**で初期化されています
+- 変数は、を使用して初期化されます。**`static_cast`**
 
 - コンストラクターで、基底クラスと非静的メンバーが初期化子リストを使用して初期化される。
 
@@ -317,7 +317,7 @@ int main(){
 
 - 変数が初期化される。
 
-- クラスは、 **new**キーワードを使用して初期化されます。
+- クラスは、キーワードを使用して初期化されます。 **`new`**
 
 - オブジェクトが関数から返される。
 
@@ -362,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a>集計の初期化
+### <a name="aggregate-initialization"></a><a name="agginit"></a>集計の初期化
 
 集約の初期化は、リストの初期化の一形態であり、次のような配列またはクラス型 (多くの場合は構造体や共用体) に使用されます。
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 前の `myArr3` のように、宣言されているが、集計初期化中に明示的に初期化されていない配列メンバーはゼロ初期化されます。
+> 宣言されているが、集計の初期化中に明示的に初期化されていない配列メンバーは、上記のようにゼロ初期化され `myArr3` ます。
 
 #### <a name="initializing-unions-and-structs"></a>共用体と構造体の初期化
 
@@ -523,7 +523,7 @@ Reference-type 変数は、以下の場合にのみ初期化子なしで宣言�
     class c {public:   int& i;};
     ```
 
-- **Extern**として明示的に指定された変数の宣言。 次に例を示します。
+- として明示的に指定された変数の宣言 **`extern`** 。 次に例を示します。
 
     ```cpp
     extern int& iVal;
@@ -534,10 +534,10 @@ reference-type 変数を初期化する場合、コンパイラではオブジ�
 ![参照型の初期化のためのデシジョングラフ](../cpp/media/vc38s71.gif "参照型の初期化のためのデシジョングラフ") <br/>
 参照型の初期化のためのデシジョングラフ
 
-Volatile 型 ( **volatile** *typename* <strong>&</strong> *identifier* **) への**参照は、同じ型の**volatile**オブジェクト、または**volatile**として宣言されていないオブジェクトを使用して初期化できます。 ただし、その型の**const**オブジェクトを使用して初期化することはできません。 同様に、const**型への**参照 ( **const** *typename* <strong>&</strong> *identifier*として宣言) は、同じ型の**const**オブジェクト (または、その型への変換または**const**として宣言されていないオブジェクトによる変換を含むすべてのオブジェクト) を使用して初期化できます。 ただし、その型の**volatile**オブジェクトを使用して初期化することはできません。
+**`volatile`** 型 (typename identifier として宣言) への参照は **`volatile`** *typename* <strong>&</strong> *identifier* **`volatile`** 、同じ型のオブジェクト、またはとして宣言されていないオブジェクトを使用して初期化でき **`volatile`** ます。 ただし、 **`const`** その型のオブジェクトを使用して初期化することはできません。 同様に、 **`const`** (typename 識別子として宣言された) 型への参照は、 **`const`** *typename* <strong>&</strong> *identifier* **`const`** 同じ型のオブジェクト (またはその型への変換があるもの、またはとして宣言されていないオブジェクト) を使用して初期化でき **`const`** ます。 ただし、 **`volatile`** その型のオブジェクトを使用して初期化することはできません。
 
-**Const**または**volatile**キーワードで修飾されていない参照は、 **const**および**volatile**として宣言されたオブジェクトでのみ初期化できます。
+またはキーワードで修飾されていない参照は、 **`const`** **`volatile`** 以外として宣言されたオブジェクトでのみ初期化でき **`const`** **`volatile`** ます。
 
 ### <a name="initialization-of-external-variables"></a>外部変数の初期化
 
-自動変数、静的変数、外部変数の宣言には初期化子を含めることができます。 ただし、外部変数の宣言には、変数が**extern**として宣言されていない場合にのみ、初期化子を含めることができます。
+自動変数、静的変数、外部変数の宣言には初期化子を含めることができます。 ただし、外部変数の宣言には、変数がとして宣言されていない場合にのみ、初期化子を含めることができ **`extern`** ます。

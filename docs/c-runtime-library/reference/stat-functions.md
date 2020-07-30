@@ -118,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918321"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229338"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -206,7 +206,7 @@ int _wstat64i32(
 
 これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル長をサポートします。 最初の数字のサフィックス (**32**または**64**) は、使用された時間の種類のサイズを示します。2番目のサフィックスは、 **i32**または**i64**のいずれかで、ファイルサイズが32ビットまたは64ビットの整数で表されるかどうかを示します。
 
-**_stat**は **_stat64i32**に相当し、 **struct** **_stat**には64ビットの時刻が含まれます。 これは **_USE_32BIT_TIME_T**が定義されていない場合に当てはまります。この場合、以前の動作が有効になります。**_stat**は32ビットの時刻を使用し、**構造体** **_stat**には32ビットの時刻が含まれます。 **_Stati64**にも同じことが当てはまります。
+**_stat**は **_stat64i32**に相当し、 **`struct`** **_stat**には64ビットの時刻が含まれています。 これは **_USE_32BIT_TIME_T**が定義されていない場合に当てはまります。この場合、以前の動作が有効になります。**_stat**では32ビットの時刻が使用 **`struct`** され、 **_stat**には32ビットの時刻が含まれます。 **_Stati64**にも同じことが当てはまります。
 
 > [!NOTE]
 > **_wstat**は、Windows Vista のシンボリックリンクでは機能しません。 このような場合、 **_wstat**は常に0のファイルサイズを報告します。 **_stat**は、シンボリックリンクで正しく機能します。
@@ -258,10 +258,10 @@ Sysi で定義された **_stat**構造体。H には、次のフィールドが
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>、その後に \<sys/stat.h>|\<errno.h>|
-|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>、その後に \<sys/stat.h> または \<wchar.h>|\<errno.h>|
+|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>次の後\<sys/stat.h>|\<errno.h>|
+|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>の後に \<sys/stat.h> または\<wchar.h>|\<errno.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -330,7 +330,7 @@ Time modified : Thu Feb 07 14:39:36 2002
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbbeb2fe8d122cd3ca396900ee1b3806e2069b7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425353"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202884"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits クラス
 
@@ -90,21 +90,21 @@ template <class Type>
 
 ### <a name="parameters"></a>パラメーター
 
-*[種類]* \
-プロパティがテスト、照会、設定対象になる基本的な要素のデータ型。 *型*は、 **const**、 **volatile**、または**const volatile**として宣言することもできます。
+*各種*\
+プロパティがテスト、照会、設定対象になる基本的な要素のデータ型。 *型*は **`const`** 、、、 **`volatile`** またはとして宣言することもでき **`const volatile`** ます。
 
 ## <a name="remarks"></a>解説
 
-ヘッダーは、型**wchar_t**、 **bool**、 **char**、 **signed char**、 **unsigned char**、 **short**、 **unsigned short**、 **int**、 **unsigned int** **、long、** **unsigned long**、 **float**、 **double**、 **long double**、 **long long**、 **unsigned long long**、 **char16_t**、および**char32_t**の型の明示的な特殊化を定義します。 これらの明示的な特殊化では、メンバー [numeric_limits:: is_specialized](#is_specialized)は**true**で、関連するすべてのメンバーには意味のある値があります。 プログラムによって、その他の明示的な特殊化を行えます。 クラスのほとんどのメンバー関数は、 **float**の実装の可能性を記述またはテストします。
+ヘッダーには、型、、、、、、、、、、、、、、、、、およびの型の明示的な特殊化が定義されて **`wchar_t`** **`bool`** **`char`** **`signed char`** **`unsigned char`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** **`float`** **`double`** **`long double`** **`long long`** **`unsigned long long`** **`char16_t`** **`char32_t`** います。 これらの明示的な特殊化では、メンバー [numeric_limits:: is_specialized](#is_specialized)は **`true`** で、関連するすべてのメンバーには意味のある値があります。 プログラムによって、その他の明示的な特殊化を行えます。 クラスのほとんどのメンバー関数は、の可能な実装について記述またはテスト **`float`** します。
 
-任意の特殊化の場合、メンバーに有効な値が含まれません。 意味のある値を持たないメンバーオブジェクトは 0 (または**false**) を格納し、意味のある値を返さないメンバー関数は `Type(0)`を返します。
+任意の特殊化の場合、メンバーに有効な値が含まれません。 意味のある値を持たないメンバーオブジェクトは、0 (または) を格納 **`false`** し、意味のある値を返さないメンバー関数はを返し `Type(0)` ます。
 
 ## <a name="static-functions-and-constants"></a>静的な関数と定数
 
 |||
 |-|-|
 |[denorm_min](#denorm_min)|0 以外の最小の非正規化値を返します。|
-|[数字](#digits)|型が精度を失うことなく表現できる基数桁数を返します。|
+|[数値](#digits)|型が精度を失うことなく表現できる基数桁数を返します。|
 |[digits10](#digits10)|型が精度を失うことなく表現できる小数点数桁数を返します。|
 |[epsilon](#epsilon)|1 と、データ型が表すことのできる 1 より大きい最小値との差を返します。|
 |[has_denorm](#has_denorm)|型が非正規化値を許可するかどうかをテストします。|
@@ -112,15 +112,15 @@ template <class Type>
 |[has_infinity](#has_infinity)|型が正の無限大を表すことができるかどうかをテストします。|
 |[has_quiet_NaN](#has_quiet_nan)|型が非シグナル化である非表示の非数 (NAN) の表現を持っているかどうかをテストします。|
 |[has_signaling_NaN](#has_signaling_nan)|型がシグナルを発生する非数 (NAN) を表せるかどうかをテストします。|
-|[infinity](#infinity)|型の正の無限大の表現 (使用可能な場合)。|
+|[~](#infinity)|型の正の無限大の表現 (使用可能な場合)。|
 |[is_bounded](#is_bounded)|型が表すことができる値のセットが有限かどうかをテストします。|
 |[is_exact](#is_exact)|型で実行される計算に丸め誤差がないかどうかをテストします。|
 |[is_iec559](#is_iec559)|型が IEC 559 標準に準拠しているかどうかをテストします。|
 |[is_integer](#is_integer)|型が整数を表せるかどうかをテストします。|
 |[is_modulo](#is_modulo)|型が剰余を表せるかどうかをテストします。|
 |[is_signed](#is_signed)|型が符号付きを表せるかどうかをテストします。|
-|[is_specialized](#is_specialized)|クラステンプレート `numeric_limits`で型に明示的な特殊化が定義されているかどうかをテストします。|
-|[lowest](#lowest)|負の最小有限値を返します。|
+|[is_specialized](#is_specialized)|型にクラステンプレートで定義されている明示的な特殊化があるかどうかをテスト `numeric_limits` します。|
+|[降順](#lowest)|負の最小有限値を返します。|
 |[max](#max)|型の最大の有限値を返します。|
 |[max_digits10](#max_digits10)|その型の 2 つの値が別個の異なる 10 進表現であることを確証するために必要な 10 進桁数を返します。|
 |[max_exponent](#max_exponent)|基数を累乗した場合に、浮動小数点型が有限値として表すことができる正の整数の最大指数を返します。|
@@ -129,14 +129,14 @@ template <class Type>
 |[min_exponent](#min_exponent)|基数の底を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。|
 |[min_exponent10](#min_exponent10)|10 の基数を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。|
 |[quiet_NaN](#quiet_nan)|型の静かな非数表現 (NAN) を返します。|
-|[radix](#radix)|型の表現に使用される、基数と呼ばれる整数の底を返します。|
+|[ベース](#radix)|型の表現に使用される、基数と呼ばれる整数の底を返します。|
 |[round_error](#round_error)|型の丸め誤差の最大値を返します。|
 |[round_style](#round_style)|実装において、浮動小数点値を整数値に丸め処理を行うために選択可能なさまざまな方式を記述した値を返します。|
 |[signaling_NaN](#signaling_nan)|型のシグナリング非数 (NAN) の表現を返します。|
 |[tinyness_before](#tinyness_before)|型が、値を丸める前に正規化された値として表現するには小さすぎることを確認できるかどうかをテストします。|
-|[traps](#traps)|型において算術例外に関するレポートをトラップするように実装されているかどうかをテストします。|
+|[落とし穴](#traps)|型において算術例外に関するレポートをトラップするように実装されているかどうかをテストします。|
 
-### <a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
 
 0 以外の最小の非正規化値を返します。
 
@@ -150,9 +150,9 @@ static constexpr Type denorm_min() throw();
 
 #### <a name="remarks"></a>解説
 
-**long double**は、 C++コンパイラの**double**と同じです。
+**`long double`** は、 **`double`** C++ コンパイラの場合と同じです。
 
-関数は、型の最小値を返します。これは、 [has_denorm](#has_denorm)が `denorm_present`と等しくない場合の[最小](#min)値と同じです。
+関数は、型の最小値を返します。これは[has_denorm](#has_denorm)がと等しく[ない場合の最小値](#min)と同じ `denorm_present` です。
 
 #### <a name="example"></a>例
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a>続く
+### <a name="digits"></a><a name="digits"></a>続く
 
 型が精度を失うことなく表現できる基数桁数を返します。
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a>digits10
 
 型が精度を失うことなく表現できる小数点数桁数を返します。
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a>epsilon
+### <a name="epsilon"></a><a name="epsilon"></a>epsilon
 
 関数は、1 と、データ型が表現可能な 1 より大きい最小値との間の差を返します。
 
@@ -297,7 +297,7 @@ static constexpr Type epsilon() throw();
 
 #### <a name="remarks"></a>解説
 
-値は、**float** 型の場合は FLT_EPSILON です。 型の `epsilon` は、*N* + `epsilon`N +  が表現可能になるように、正の浮動小数点数 *N* の最小値になります。
+型の値は FLT_EPSILON です **`float`** 。 `epsilon`型の場合、 *n* *N*  +  `epsilon`  +  *n*は表現可能な最小の正の浮動小数点数です。
 
 #### <a name="example"></a>例
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
 
 型が非正規化値を許可するかどうかをテストします。
 
@@ -345,11 +345,11 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>戻り値
 
-**const**`float_denorm_style` 型の列挙値で、型が非正規化値を許可するかどうかを示します。
+型 **`const`** `float_denorm_style` が非正規化値を許可するかどうかを示す、型の列挙値。
 
 #### <a name="remarks"></a>解説
 
-メンバーは、正規化されていない値を持つ浮動小数点型の `denorm_present` を格納します。指数部は実質的に可変数です。
+メンバーは、 `denorm_present` 正規化されていない値を持つ浮動小数点型を格納します。これは実質的に指数ビットの可変数です。
 
 #### <a name="example"></a>例
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
 
 精度の損失が、不正確な結果ではなく、非正規化の損失として検出されるかどうかをテストします。
 
@@ -391,7 +391,7 @@ static constexpr bool has_denorm_loss = false;
 
 #### <a name="return-value"></a>戻り値
 
-精度の損失が非正規化の損失として検出される場合は **true**、そうでない場合は **false**。
+**`true`** 非正規化損失として精度の低下が検出された場合は、**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
 
 型が正の無限大を表すことができるかどうかをテストします。
 
@@ -437,11 +437,11 @@ static constexpr bool has_infinity = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が正の無限大を表すことができる場合は **true**、それ以外の場合は **false**。
+**`true`** 型が正の無限大の表現を持つ場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-メンバーは、**is_iec559** が [true](#is_iec559) の場合は **true** を返します。
+Is_iec559 がの場合、メンバーはを返し **`true`** [is_iec559](#is_iec559) **`true`** ます。
 
 #### <a name="example"></a>例
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
 
 型が静かな (シグナルを発生させない) 非数 (NaN) を表せるかどうかをテストします。
 
@@ -483,11 +483,11 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="return-value"></a>戻り値
 
-**type** が静かな NaN を表せる場合は **true**、それ以外の場合は **false**。
+**`true`****型**が quiet NAN の表現を持つ場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-静かな NaN は、式でのその存在についてのシグナルを発生させない非数のエンコードです。 戻り値は、**is_iec559** が true の場合は [true](#is_iec559) です。
+静かな NaN は、式でのその存在についてのシグナルを発生させない非数のエンコードです。 **`true`** [Is_iec559](#is_iec559)が true の場合、戻り値はです。
 
 #### <a name="example"></a>例
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
 
 型がシグナルを発生する非数 (NAN) を表せるかどうかをテストします。
 
@@ -529,11 +529,11 @@ static constexpr bool has_signaling_NaN = false;
 
 #### <a name="return-value"></a>戻り値
 
-型がシグナルを発生する NAN を表せる場合は **true**、それ以外の場合は **false**。
+**`true`** 型にシグナル化 NAN の表現がある場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-シグナルを発生する NaN は、式でのその存在についてのシグナルを発生させる非数のエンコードです。 戻り値は、**is_iec559** が true の場合は [true](#is_iec559) です。
+シグナルを発生する NaN は、式でのその存在についてのシグナルを発生させる非数のエンコードです。 **`true`** [Is_iec559](#is_iec559)が true の場合、戻り値はです。
 
 #### <a name="example"></a>例
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a>~
+### <a name="infinity"></a><a name="infinity"></a>~
 
 型の正の無限大の表現 (使用可能な場合)。
 
@@ -579,7 +579,7 @@ static constexpr Type infinity() throw();
 
 #### <a name="remarks"></a>解説
 
-[has_infinity](#has_infinity) が **true** である場合にのみ、戻り値に意味があります。
+戻り値は、 [has_infinity](#has_infinity)がの場合にのみ意味が **`true`** あります。
 
 #### <a name="example"></a>例
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
 
 型が表すことができる値のセットが有限かどうかをテストします。
 
@@ -629,11 +629,11 @@ static constexpr bool is_bounded = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が表すことができる値のセットが範囲指定されている場合は **true**、それ以外の場合は **false**。
+**`true`** 型が表現可能な値の範囲付きセットを持つ場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-定義済みのすべての型が表すことができる値のセットは範囲指定されており、**true** を返します。
+定義済みのすべての型には、表現可能な値の範囲が設定され、を返し **`true`** ます。
 
 #### <a name="example"></a>例
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a>is_exact
 
 型で実行される計算に丸め誤差がないかどうかをテストします。
 
@@ -683,11 +683,11 @@ static constexpr bool is_exact = false;
 
 #### <a name="return-value"></a>戻り値
 
-計算に丸め誤差がない場合は **true**、それ以外の場合は **false**。
+**`true`** 計算に丸め誤差がない場合は、**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-定義済みのすべての整数型には値の正確な表現があり、**false** を返します。 固定小数点表現または有理表現も正確であると見なされますが、浮動小数点表現は正確ではありません。
+定義済みのすべての整数型は、その値を正確に表現し、を返し **`false`** ます。 固定小数点表現または有理表現も正確であると見なされますが、浮動小数点表現は正確ではありません。
 
 #### <a name="example"></a>例
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
 
 型が IEC 559 標準に準拠しているかどうかをテストします。
 
@@ -737,7 +737,7 @@ static constexpr bool is_iec559 = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が IEC 559 標準に準拠している場合は **true**、それ以外の場合は **false**。
+**`true`** 型が IEC 559 標準に準拠している場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a>is_integer
 
 型が整数を表せるかどうかをテストします。
 
@@ -787,7 +787,7 @@ static constexpr bool is_integer = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が整数を表せる場合は **true**、それ以外の場合は **false**。
+**`true`** 型に整数表現がある場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -827,9 +827,9 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
 
-**type** が剰余を表せるかどうかをテストします。
+**型**にモジュロ表現があるかどうかをテストします。
 
 ```cpp
 static constexpr bool is_modulo = false;
@@ -837,7 +837,7 @@ static constexpr bool is_modulo = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が剰余を表せる場合は **true**、それ以外の場合は **false**。
+**`true`** 型にモジュロ表現がある場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a>is_signed
 
 型が符号付きを表せるかどうかをテストします。
 
@@ -887,7 +887,7 @@ static constexpr bool is_signed = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が符号付きを表せる場合は **true**、それ以外の場合は **false**。
+**`true`** 型に符号付きの表現がある場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -927,9 +927,9 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
 
-クラステンプレート `numeric_limits`で型に明示的な特殊化が定義されているかどうかをテストします。
+型にクラステンプレートで定義されている明示的な特殊化があるかどうかをテスト `numeric_limits` します。
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -937,11 +937,11 @@ static constexpr bool is_specialized = false;
 
 #### <a name="return-value"></a>戻り値
 
-型にクラステンプレートで明示的な特殊化が定義されている場合は**true** 。それ以外の場合は**false** 。
+**`true`** 型にクラステンプレートで明示的な特殊化が定義されている場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
-ポインター以外のすべてのスカラー型には、クラステンプレート `numeric_limits`に対して明示的な特殊化が定義されています。
+ポインター以外のすべてのスカラー型には、クラステンプレートに対して明示的な特殊化が定義されてい `numeric_limits` ます。
 
 #### <a name="example"></a>例
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a>降順
+### <a name="lowest"></a><a name="lowest"></a>降順
 
 負の最小有限値を返します。
 
@@ -995,9 +995,9 @@ static constexpr Type lowest() throw();
 
 #### <a name="remarks"></a>解説
 
-型に対して最も負の有限値を返します (通常、整数型の場合は `min()`、浮動小数点型の場合は `-max()`)。 `is_bounded` が**true**の場合、戻り値は意味があります。
+型の負の最小有限値 (通常、整数型の場合は `min()` と浮動小数点型の場合は `-max()`) を返します。 がの場合、戻り値は意味が `is_bounded` **`true`** あります。
 
-### <a name="max"></a>制限
+### <a name="max"></a><a name="max"></a>制限
 
 型の最大の有限値を返します。
 
@@ -1011,7 +1011,7 @@ static constexpr Type max() throw();
 
 #### <a name="remarks"></a>解説
 
-最大有限値は、 **INT**型の場合は INT_MAX、 **float**型の場合は FLT_MAX です。 [is_bounded](#is_bounded) が **true** である場合、戻り値に意味があります。
+最大有限値は、型 **`int`** と型の FLT_MAX に INT_MAX **`float`** ます。 [Is_bounded](#is_bounded)がの場合、戻り値は意味が **`true`** あります。
 
 #### <a name="example"></a>例
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
 
 その型の別個の 2 つの値が別個の 10 進表現であることを確証するために必要な 10 進桁数を返します。
 
@@ -1055,7 +1055,7 @@ static constexpr int max_digits10 = 0;
 
 このメンバーは、その型の別個の 2 つの値が別個の 10 進表現であることを確証するために必要な 10 進桁数を格納します。
 
-### <a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
 
 基数を累乗した場合に、浮動小数点型が有限値として表すことができる正の整数の最大指数を返します。
 
@@ -1069,7 +1069,7 @@ static constexpr int max_exponent = 0;
 
 #### <a name="remarks"></a>解説
 
-メンバー関数の戻り値は、浮動小数点型に対してのみ意味があります。 `max_exponent` は、**float** 型の場合は値 FLT_MAX_EXP です。
+メンバー関数の戻り値は、浮動小数点型に対してのみ意味があります。 `max_exponent`は、型の FLT_MAX_EXP 値です **`float`** 。
 
 #### <a name="example"></a>例
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
 
 10 の基数を累乗した場合に、浮動小数点型が有限値として表すことができる正の整数の最大指数を返します。
 
@@ -1115,7 +1115,7 @@ static constexpr int max_exponent10 = 0;
 
 #### <a name="remarks"></a>解説
 
-メンバー関数の戻り値は、浮動小数点型に対してのみ意味があります。 `max_exponent` は、**float** 型の場合は値 FLT_MAX_10 です。
+メンバー関数の戻り値は、浮動小数点型に対してのみ意味があります。 `max_exponent`は、型の FLT_MAX_10 値です **`float`** 。
 
 #### <a name="example"></a>例
 
@@ -1147,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-### <a name="min"></a>」
+### <a name="min"></a><a name="min"></a> 分
 
 型の最小の正規化値を返します。
 
@@ -1161,7 +1161,7 @@ static constexpr Type min() throw();
 
 #### <a name="remarks"></a>解説
 
-最小正規化値は、 **INT**型の場合は INT_MIN、 **float**型の場合は FLT_MIN です。 [Is_bounded](#is_bounded)が**true**の場合、または[is_signed](#is_signed)が**false**の場合、戻り値は意味があります。
+正規化された最小値は、型の場合は INT_MIN、 **`int`** 型の場合は FLT_MIN に **`float`** なります。 [Is_bounded](#is_bounded)がの場合、 **`true`** または[is_signed](#is_signed)がの場合、戻り値は意味が **`false`** あります。
 
 #### <a name="example"></a>例
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
 
 基数の底を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。
 
@@ -1211,7 +1211,7 @@ static constexpr int min_exponent = 0;
 
 #### <a name="remarks"></a>解説
 
-メンバー関数は、浮動小数点型に対してのみ意味があります。 `min_exponent` は、**float** 型の場合は値 FLT_MIN_EXP です。
+メンバー関数は、浮動小数点型に対してのみ意味があります。 `min_exponent`は、型の FLT_MIN_EXP 値です **`float`** 。
 
 #### <a name="example"></a>例
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
 
 10 の基数を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。
 
@@ -1257,7 +1257,7 @@ static constexpr int min_exponent10 = 0;
 
 #### <a name="remarks"></a>解説
 
-メンバー関数は、浮動小数点型に対してのみ意味があります。 `min_exponent10` は、**float** 型の場合は値 FLT_MIN_10_EXP です。
+メンバー関数は、浮動小数点型に対してのみ意味があります。 `min_exponent10`は、型の FLT_MIN_10_EXP 値です **`float`** 。
 
 #### <a name="example"></a>例
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
 
 型の静かな非数表現 (NAN) を返します。
 
@@ -1303,7 +1303,7 @@ static constexpr Type quiet_NaN() throw();
 
 #### <a name="remarks"></a>解説
 
-[has_quiet_NaN](#has_quiet_nan) が **true** である場合にのみ、戻り値に意味があります。
+戻り値は、 [has_quiet_NaN](#has_quiet_nan)がの場合にのみ意味が **`true`** あります。
 
 #### <a name="example"></a>例
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a>ベース
+### <a name="radix"></a><a name="radix"></a>ベース
 
 型の表現に使用される、基数と呼ばれる整数の底を返します。
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a>round_error
 
 型の丸め誤差の最大値を返します。
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a>round_style
 
 実装において、浮動小数点値を整数値に丸め処理を行うために選択可能なさまざまな方式を記述した値を返します。
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
 
 型のシグナリング非数 (NAN) の表現を返します。
 
@@ -1484,7 +1484,7 @@ static constexpr Type signaling_NaN() throw();
 
 #### <a name="remarks"></a>解説
 
-[has_signaling_NaN](#has_signaling_nan) が **true** である場合にのみ、戻り値に意味があります。
+戻り値は、 [has_signaling_NaN](#has_signaling_nan)がの場合にのみ意味が **`true`** あります。
 
 #### <a name="example"></a>例
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
 
 型が、値を丸める前に正規化された値として表現するには小さすぎることを確認できるかどうかをテストします。
 
@@ -1520,7 +1520,7 @@ static constexpr bool tinyness_before = false;
 
 #### <a name="return-value"></a>戻り値
 
-型が丸めの前に小さい値を検出できる場合は**true** 。できない場合は**false** 。
+**`true`** 型が丸めの前に小さい値を検出できる場合は。**`false`** そうでない場合。
 
 #### <a name="remarks"></a>解説
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a>落とし穴
+### <a name="traps"></a><a name="traps"></a>落とし穴
 
 型において算術例外に関するレポートをトラップするように実装されているかどうかをテストします。
 
@@ -1570,7 +1570,7 @@ static constexpr bool traps = false;
 
 #### <a name="return-value"></a>戻り値
 
-型においてトラップが実装されている場合は **true**、実装されていない場合は **false**。
+**`true`** 型に対してトラップが実装されている場合は。**`false`** それ以外の場合は。
 
 #### <a name="example"></a>例
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 712503d08221d29a61323946008f2f36a467cb31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438646"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234329"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (2 フェーズの名前参照の無効化)
 
-**/Permissive-** の下にあるC++ **/zc: twoPhase**は、元の準拠していない Microsoft コンパイラ動作を使用して、クラステンプレートと関数テンプレートを解析およびインスタンス化するようコンパイラに指示します。
+**/Permissive-** の下にある **/zc: twoPhase**は、元の準拠していない Microsoft C++ コンパイラ動作を使用して、クラステンプレートと関数テンプレートを解析およびインスタンス化するようコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
 > **/Zc: twoPhase-**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Visual Studio 2017 バージョン15.3 以降: [/permissive-](permissive-standards-conformance.md)では、コンパイラはテンプレート名の解決に2フェーズの名前参照を使用します。 また、 **/zc: twoPhase**を指定した場合、コンパイラは、以前の非準拠クラステンプレートと関数テンプレートの名前解決および置換動作に戻ります。 **/Permissive-** が指定されていない場合、非準拠の動作が既定値になります。
 
@@ -42,7 +42,7 @@ Visual Studio 2017 バージョン15.3 以降: [/permissive-](permissive-standar
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   テンプレート宣言、`template <typename T>`、クラス head `class Derived`、および基底クラスリスト `public Base<T>` は解析されますが、テンプレート本体はトークンストリームとしてキャプチャされます。
+   テンプレート宣言、 `template <typename T>` 、クラス head、 `class Derived` および基底クラスリストは `public Base<T>` 解析されますが、テンプレート本体はトークンストリームとしてキャプチャされます。
 
 - 関数テンプレートを解析するとき、コンパイラは関数のシグネチャのみを解析します。 関数本体が解析されることはありません。 代わりに、トークンストリームとしてキャプチャされます。
 
@@ -92,7 +92,7 @@ zctwophase.cpp
 Microsoft one-phase
 ```
 
-**/Permissive-** の下で準拠モードでコンパイルされると、このプログラムは "`Standard two-phase`" を出力します。これは、コンパイラがテンプレートに到達したときに `func` の2番目のオーバーロードが表示されないためです。 **/Zc: twoPhase-** を追加すると、プログラムは "`Microsoft one-phase`" を出力します。 出力は、 **/permissive-** を指定しない場合と同じです。
+**/Permissive-** の下で準拠モードでコンパイルされると、このプログラムは " `Standard two-phase` " を出力します。これは、 `func` コンパイラがテンプレートに到達したときにの2番目のオーバーロードが表示されないためです。 **/Zc: twoPhase-** を追加すると、プログラムは "" を出力し `Microsoft one-phase` ます。 出力は、 **/permissive-** を指定しない場合と同じです。
 
 *依存名*は、テンプレートパラメーターに依存する名前です。 これらの名前の参照動作は、 **/zc: twoPhase-** の下でも異なります。 準拠モードでは、依存名がテンプレートの定義の時点でバインドされていません。 代わりに、テンプレートをインスタンス化するときに、コンパイラによって検索されます。 依存する関数名を持つ関数呼び出しの場合、名前は、テンプレート定義の呼び出しサイトで表示される関数にバインドされます。 引数依存の参照からの追加のオーバーロードは、テンプレート定義の時点でも、テンプレートのインスタンス化の時点でも追加されます。
 
@@ -150,21 +150,21 @@ func(int)
 NS::func(NS::S)
 ```
 
-**/Permissive-** の下の準拠モードでは、呼び出し `tfunc(1729)` が `void func(long)` のオーバーロードに解決されます。 **/Zc: twoPhase-** のように、`void func(int)` のオーバーロードには解決されません。 これは、修飾されていない `func(int)` がテンプレートの定義の後に宣言され、引数依存の参照によって見つからないためです。 ただし `void func(S)` は引数依存の参照に参加するため、テンプレート関数の後で宣言されている場合でも、呼び出し `tfunc(s)`のセットに追加されます。
+**/Permissive-** の下の準拠モードでは、呼び出しは `tfunc(1729)` オーバーロードに解決され `void func(long)` ます。 `void func(int)` **/Zc: twoPhase-** のように、オーバーロードには解決されません。 これは、非修飾 `func(int)` がテンプレートの定義の後で宣言され、引数依存の参照によって見つからないためです。 ただし、 `void func(S)` は引数依存の参照に参加するため、 `tfunc(s)` テンプレート関数の後に宣言されている場合でも、呼び出し用に設定されたオーバーロードに追加されます。
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2段階に準拠するようにコードを更新する
 
-以前のバージョンのコンパイラでは、キーワード `template` を必要とせC++ず、標準で必要とされるすべての場所で `typename` ます。 これらのキーワードは、参照の最初のフェーズでコンパイラが依存名を解析する方法を明確にするために、いくつかの位置で必要になります。 例 :
+以前のバージョンのコンパイラでは、キーワード、 **`template`** および **`typename`** C++ 標準で必要とされるすべての場所を必要としません。 これらのキーワードは、参照の最初のフェーズでコンパイラが依存名を解析する方法を明確にするために、いくつかの位置で必要になります。 次に例を示します。
 
 `T::Foo<a || b>(c);`
 
-準拠コンパイラは、`Foo` を `T`のスコープ内の変数として解析します。つまり、このコードは左オペランドとして `T::foo < a` を持つ論理 or 式であり、右オペランドとして `b > (c)` ます。 `Foo` を関数テンプレートとして使用する場合は、`template` キーワードを追加することで、それがテンプレートであることを示す必要があります。
+準拠するコンパイラは、 `Foo` のスコープ内で変数として解析し `T` ます。つまり、このコードは、左側のオペランドとして、右のオペランドとしてを持つ論理 or 式です `T::foo < a` `b > (c)` 。 関数テンプレートとしてを使用する場合は、キーワードを追加すること `Foo` で、それがテンプレートであることを示す必要があり **`template`** ます。
 
 `T::template Foo<a || b>(c);`
 
-Visual Studio 2017 バージョン15.3 以降のバージョンでは、 **/permissive-** と **/zc: twoPhase**が指定されている場合、コンパイラは `template` キーワードを使用せずにこのコードを許可します。 このコードは、制限された方法でのみテンプレートを解析するため、`a || b`の引数を持つ関数テンプレートへの呼び出しとして解釈されます。 上記のコードは、最初のフェーズでは解析されません。 2番目のフェーズでは、`T::Foo` が変数ではなくテンプレートであることを通知するのに十分なコンテキストがあるため、コンパイラはキーワードを使用しません。
+Visual Studio 2017 バージョン15.3 以降のバージョンでは、 **/permissive-** と **/zc: twoPhase**が指定されている場合、コンパイラはキーワードを使用せずにこのコードを許可し **`template`** ます。 このコードは、限定された方法でテンプレートを解析するだけなので、引数を持つ関数テンプレートへの呼び出しとして解釈され `a || b` ます。 上記のコードは、最初のフェーズでは解析されません。 2番目のフェーズでは、が変数ではなくテンプレートであることを示すのに十分なコンテキストがある `T::Foo` ため、コンパイラはキーワードの使用を強制しません。
 
-この動作は、関数テンプレート本体、初期化子、既定の引数、および noexcept 引数の名前の前にキーワード `typename` を削除することによっても表示できます。 例 :
+この動作は、 **`typename`** 関数テンプレート本体、初期化子、既定の引数、および noexcept 引数の名前の前にキーワードを削除することによっても確認できます。 次に例を示します。
 
 ```cpp
 template<typename T>
@@ -174,7 +174,7 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-関数本体でキーワード `typename` を使用しない場合、このコードは **/Permissive-/zc: twoPhase の**下でコンパイルされますが、 **/permissive-** だけではコンパイルされません。 `typename` キーワードは、`TYPE` が依存していることを示すために必要です。 **/Zc: twoPhase の**下では本文が解析されないため、コンパイラはキーワードを必要としません。 **/Permissive-** 準拠モードでは、`typename` キーワードのないコードではエラーが生成されます。 Visual Studio 2017 バージョン15.3 以降の準拠にコードを移行するには、`typename` キーワードがない場所に挿入します。
+関数本体でキーワードを使用しない場合 **`typename`** 、このコードは **/permissive-/Zc: twoPhase**でコンパイルされますが、 **/permissive-** だけではコンパイルされません。 **`typename`** キーワードは、が依存していることを示すために必要です `TYPE` 。 **/Zc: twoPhase の**下では本文が解析されないため、コンパイラはキーワードを必要としません。 **/Permissive-** 準拠モードでは、キーワードのないコードが **`typename`** エラーを生成します。 Visual Studio 2017 バージョン15.3 以降の準拠にコードを移行するには、 **`typename`** キーワードが欠落している場所に挿入します。
 
 同様に、次のコードサンプルを考えてみます。
 
@@ -186,18 +186,18 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-**/Permissive-/zc: twoPhase-** 以前のコンパイラでは、コンパイラは2行目の `template` キーワードのみを必要とします。 準拠モードでは、コンパイラは、`T::X<T>` がテンプレートであることを示すために、4行目の `template` キーワードも必要になりました。 このキーワードが欠落しているコードを探し、コードが標準に準拠するように指定します。
+**/Permissive-/zc: twoPhase-** 以前のコンパイラでは、コンパイラは **`template`** 2 行目のキーワードのみを必要とします。 準拠モードでは、コンパイラは、がテンプレートであること **`template`** を示すために、4行目のキーワードも必要になりました `T::X<T>` 。 このキーワードが欠落しているコードを探し、コードが標準に準拠するように指定します。
 
-準拠に関する問題の詳細については、「 [ C++ Visual Studio での準拠の強化](../../overview/cpp-conformance-improvements.md)」と「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
+準拠に関する問題の詳細については、「 [Visual Studio での C++ 準拠の機能強化](../../overview/cpp-conformance-improvements.md)」と「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
 1. **/Zc: twoPhase**を含めるように "**追加オプション**" プロパティを変更し、[ **OK]** を選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [/Zc (準拠)](zc-conformance.md)

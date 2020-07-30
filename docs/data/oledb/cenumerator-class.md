@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211797"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214920"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
@@ -50,13 +50,13 @@ class CEnumerator :
 
 |||
 |-|-|
-|[検索](#find)|使用可能なプロバイダー (データソース) を検索し、指定した名前のプロバイダーを探します。|
-|[GetMoniker](#getmoniker)|現在のレコードの `IMoniker` インターフェイスを取得します。|
+|[Find](#find)|使用可能なプロバイダー (データソース) を検索し、指定した名前のプロバイダーを探します。|
+|[GetMoniker](#getmoniker)|`IMoniker`現在のレコードのインターフェイスを取得します。|
 |[[ファイル]](#open)|列挙子を開きます。|
 
 ## <a name="remarks"></a>解説
 
-このクラスから間接的に `ISourcesRowset` データを取得できます。
+`ISourcesRowset`このクラスから間接的にデータを取得できます。
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
 
@@ -75,11 +75,11 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="return-value"></a>戻り値
 
-名前が見つかった場合は**true** 。 それ以外の場合は、 **false**です。
+**`true`** 名前が見つかった場合は。 それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-この名前は、 [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスの `SOURCES_NAME` メンバーにマップされます。
+この名前は、 `SOURCES_NAME` [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスのメンバーにマップされます。
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
@@ -126,17 +126,17 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 から列挙子のモニカーを指すポインターです。
 
 *pClsid*<br/>
-から列挙子の `CLSID` へのポインター。
+から`CLSID`列挙子のへのポインターです。
 
-*enumerator*<br/>
+*子*<br/>
 から列挙子への参照です。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

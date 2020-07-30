@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234147"
 ---
 # <a name="_expand"></a>_expand
 
@@ -71,7 +71,7 @@ void *_expand(
 
 ブロックを移動せずに特定のサイズに拡張するために使用できるメモリが不足している場合、関数は**NULL**を返します。 **_expand**は、要求よりも小さいサイズに拡張されたブロックを返しません。 エラーが発生した場合、 **errno**はエラーの性質を示します。 **Errno**の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 項目の新しいサイズを確認するには、 **_msize**を使用します。 **Void**以外の型へのポインターを取得するには、戻り値に型キャストを使用します。
+戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 項目の新しいサイズを確認するには、 **_msize**を使用します。 以外の型へのポインターを取得するには **`void`** 、戻り値に型キャストを使用します。
 
 ## <a name="remarks"></a>解説
 
@@ -88,7 +88,7 @@ void *_expand(
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 

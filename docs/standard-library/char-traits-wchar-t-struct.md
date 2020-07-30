@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b2504dbb124ccca7f9b27619585abb2b5795f92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219171"
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 構造体
+# <a name="char_traitsltwchar_tgt-struct"></a>char_traits&lt;wchar_t&gt; 構造体
 
-テンプレート構造体**char_traits\<chartype**を特殊化したクラスを**wchar_t**型の要素に > します。
+テンプレート構造体を特殊化したクラスは、型の要素に** \<CharType> char_traits** **`wchar_t`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,17 +25,17 @@ template <>
 struct char_traits<wchar_t>;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-特殊化により、構造体は、この種類の**wchar_t**のオブジェクトを操作するライブラリ関数を利用できます。
+特殊化により、構造体は、この型のオブジェクトを操作するライブラリ関数を利用でき **`wchar_t`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<string>
+**ヘッダー:**\<string>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [char_traits 構造体](../standard-library/char-traits-struct.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

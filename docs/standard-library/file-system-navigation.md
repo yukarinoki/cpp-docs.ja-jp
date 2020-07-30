@@ -1,22 +1,22 @@
 ---
 title: ファイル システムのナビゲーション
-description: C++ 標準ライブラリファイルシステム API を使用してファイルシステムをナビゲートする方法。
+description: C++ 標準ライブラリファイルシステム Api を使用してファイルシステムを移動する方法。
 ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26abe2fad6cacf8959507f15e967278e85254024
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368425"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203287"
 ---
 # <a name="file-system-navigation"></a>ファイル システムのナビゲーション
 
-\<filesystem> ヘッダーは、File System Technical Specification ISO/IEC TS 18822:2015 (最終ドラフト: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) を実装し、型および関数により、ファイル システムを移動するためのプラットフォームに依存しないコードを記述できます。 クロスプラットフォームであるため、Windows システムには関係のない API が含まれています。 たとえば、Windows`is_fifo(const path&)`では常に**false を**返します。
+\<filesystem>ヘッダーは、C++ ファイルシステムの技術仕様 iso/IEC TS 18822:2015 (最終的なドラフト: [ISO/IEC jtc 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) を実装し、ファイルシステム内を移動するためのプラットフォームに依存しないコードを記述するための型と関数を備えています。 クロスプラットフォームであるため、Windows システムに関連しない Api が含まれています。 たとえば、は `is_fifo(const path&)` 常に **`false`** Windows でを返します。
 
 ## <a name="overview"></a>概要
 
-\<filesystem> API を次のタスクに使用します。
+Api は、 \<filesystem> 次のタスクに使用します。
 
 - 指定のパスの下のファイルとディレクトリを反復処理します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "81368425"
 
 ### <a name="constructing-and-composing-paths"></a>パスの構成および描画
 
-(XP 以降の) Windows のパスは、ネイティブで Unicode で格納されます。 [path](../standard-library/path-class.md)クラスは、必要なすべての文字列変換を自動的に実行します。 ワイド文字配列と幅字配列の両方の引数、`std::string`および`std::wstring`UTF8 または UTF16 としてフォーマットされた型を受け取ります。 `path` クラスは、パスの区切り記号も自動的に正規化します。 コンストラクターの引数のディレクトリの区切り記号として単一のスラッシュを使用することができます。 この区切り記号を使用すると、同じ文字列を使用して、Windows 環境と UNIX 環境の両方にパスを格納できます。
+(XP 以降の) Windows のパスは、ネイティブで Unicode で格納されます。 [Path](../standard-library/path-class.md)クラスでは、すべての必要な文字列変換が自動的に行われます。 ワイド文字配列とナロー文字配列の両方の引数を受け取り、 `std::string` 型と型の両方を `std::wstring` UTF8 または UTF16 として書式設定します。 `path` クラスは、パスの区切り記号も自動的に正規化します。 コンストラクターの引数のディレクトリの区切り記号として単一のスラッシュを使用することができます。 この区切り記号を使用すると、同じ文字列を使用して、Windows と UNIX の両方の環境にパスを格納できます。
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -42,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-2 つのパスを連結する際、オーバーロードされた `/` と `/=` 演算子を使用できますが、これは `+` および `+=` の `std::string` と `std::wstring`演算子と似ています。 `path`このオブジェクトは、区切り記号を指定しないと便利です。
+2 つのパスを連結する際、オーバーロードされた `/` と `/=` 演算子を使用できますが、これは `+` および `+=` の `std::string` と `std::wstring`演算子と似ています。 `path`オブジェクトを使用すると、不要な場合に区切り記号を指定できます。
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -51,7 +51,7 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>パスの確認
 
-path クラスには、パス自体のさまざまな部分に関する情報を返すメソッドがいくつかあります。 この情報は、参照するファイル・システム・エンティティーに関する情報とは異なります。 ルート、相対パス、ファイル名、および、ファイル拡張子などを取得できます。 階層内のすべてのフォルダーを確認するために、パス オブジェクトで反復処理することができます。 パス オブジェクトを反復処理する方法を次の例に示します。 また、部品に関する情報を取得する方法も説明します。
+Path クラスには、パス自体のさまざまな部分に関する情報を返すメソッドがいくつかあります。 この情報は、参照されるファイルシステムエンティティに関する情報とは異なります。 ルート、相対パス、ファイル名、および、ファイル拡張子などを取得できます。 階層内のすべてのフォルダーを確認するために、パス オブジェクトで反復処理することができます。 次の例は、パスオブジェクトを反復処理する方法を示しています。 また、その部分に関する情報を取得する方法について説明します。
 
 ```cpp
 // filesystem_path_example.cpp
@@ -120,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>パスの比較
 
-`path` クラスは、 `std::string` および `std::wstring`と同じ比較演算子をオーバーロードします。 2 つのパスを比較する場合、区切り記号が正規化された後に文字列比較を行います。 末尾のスラッシュ (または円記号) が欠落している場合、そのスラッシュは追加されず、比較に影響します。 パスの値を比較する方法を次の例に示します。
+`path` クラスは、 `std::string` および `std::wstring`と同じ比較演算子をオーバーロードします。 2つのパスを比較する場合は、区切り記号が正規化された後に文字列比較を行います。 末尾のスラッシュ (または円記号) が不足している場合は追加されず、比較に影響します。 パスの値を比較する方法を次の例に示します。
 
 ```cpp
 wstring ComparePaths()
@@ -155,7 +155,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 
 ### <a name="converting-between-path-and-string-types"></a>パスと文字列型の間の変換
 
-`path` オブジェクトは `std::wstring` または `std::string`に暗黙的に変換できます。 これは、次の例に示すように[、wofstream::open](../standard-library/basic-ofstream-class.md#open)などの関数にパスを渡すことができるという意味です。
+`path` オブジェクトは `std::wstring` または `std::string`に暗黙的に変換できます。 これは、次の例に示すように、 [wofstream:: open](../standard-library/basic-ofstream-class.md#open)などの関数にパスを渡すことができることを意味します。
 
 ```cpp
 // filesystem_path_conversion.cpp
@@ -208,6 +208,6 @@ Press Enter to exit
 
 ## <a name="iterating-directories-and-files"></a>ディレクトリとファイルを反復する
 
-\<filesystem> ヘッダーは、[directory_iterator](../standard-library/directory-iterator-class.md) 型を提供して、1 つのディレクトリを反復し、[recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) クラスはディレクトリとサブディレクトリを再帰的に反復します。 `path` オブジェクトを渡して反復子を構成した後、反復子はパス内の最初の directory_entry を指します。 既定のコンストラクターを呼び出すことで、終了反復子を作成します。
+ヘッダーは、 \<filesystem> 1 つのディレクトリを反復処理するための[directory_iterator](../standard-library/directory-iterator-class.md)型を提供し、 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)クラスはディレクトリとそのサブディレクトリを再帰的に反復処理します。 `path` オブジェクトを渡して反復子を構成した後、反復子はパス内の最初の directory_entry を指します。 既定のコンストラクターを呼び出すことで、終了反復子を作成します。
 
-ディレクトリを反復処理する場合、いくつかの種類のアイテムが見つかる場合があります。 これらの項目には、ディレクトリ、ファイル、シンボリック リンク、ソケット ファイルなどがあります。 `directory_iterator` は、[directory_entry](../standard-library/directory-entry-class.md) オブジェクトとして項目を返します。
+ディレクトリの反復処理では、いくつかの種類の項目が検出される場合があります。 これらの項目には、ディレクトリ、ファイル、シンボリックリンク、ソケットファイルなどが含まれます。 `directory_iterator` は、[directory_entry](../standard-library/directory-entry-class.md) オブジェクトとして項目を返します。

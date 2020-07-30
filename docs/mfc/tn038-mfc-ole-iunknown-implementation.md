@@ -16,19 +16,19 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 9ceb903ec38bc0ad7cfdee1c59babd2379422ac3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302355"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230442"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-OLE 2 の中核は、"OLE コンポーネント オブジェクト モデル (COM: Component Object Model)" です。 COM は、複数のオブジェクトが相互に協調して通信するための基準を定義しています。 この定義には、オブジェクトにメソッドをディスパッチする方法など、"オブジェクト" を外から見たときの詳細が含まれています。 COM にはまた、基底クラスが定義されています。COM 対応のクラスはすべてこのクラスから派生します。 この基底クラスは[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)です。 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスはC++クラスと呼ばれますが、com は、1つの言語に固有ではありません。 C、PASCAL、または com オブジェクトのバイナリレイアウトをサポートするその他の言語で実装できます。
+OLE 2 の中核は、"OLE コンポーネント オブジェクト モデル (COM: Component Object Model)" です。 COM は、複数のオブジェクトが相互に協調して通信するための基準を定義しています。 この定義には、オブジェクトにメソッドをディスパッチする方法など、"オブジェクト" を外から見たときの詳細が含まれています。 COM にはまた、基底クラスが定義されています。COM 対応のクラスはすべてこのクラスから派生します。 この基底クラスは[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)です。 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスは C++ クラスと呼ばれますが、com は任意の言語に固有ではありません。 C、PASCAL、または com オブジェクトのバイナリレイアウトをサポートするその他の言語で実装できます。
 
 OLE は、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生したすべてのクラスを "インターフェイス" として参照します。 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)などの "インターフェイス" が実装されていないため、これは重要な違いです。 この "インターフェイス" と呼ばれるクラスは、オブジェクト間の通信プロトコルだけを定義し、その具体的な実装は定義していません。 これは、システムの最大限の柔軟性を確保するためです。 MFC/C++ プログラムの既定の動作は、MFC (Microsoft Foundation Class) によって実装されます。
 
@@ -45,9 +45,9 @@ public:
 ```
 
 > [!NOTE]
-> この説明では、必要な呼び出し規約の詳細の一部 (`__stdcall` など) を省略しています。
+> など、特定の必要な呼び出し規約 **`__stdcall`** の詳細は、この図では残されています。
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)メンバー関数は、オブジェクトのメモリ管理を制御します。 COM は、参照カウント スキームを使用してオブジェクトを追跡します。 C++ と異なり、オブジェクトが直接参照されることはありません。 COM オブジェクトは、常にポインターを通じて参照されます。 オブジェクトを使用して所有者が終了したときにオブジェクトを解放するために、オブジェクトの[リリース](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)メンバーが呼び出されます (従来C++のオブジェクトに対して実行されるように、operator delete を使用するのではありません)。 参照カウント スキームを使用することで、単一オブジェクトに対する多重参照を管理できます。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)の実装では、オブジェクトの参照カウントが保持されます。オブジェクトは、参照カウントが0になるまで削除されません。
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)メンバー関数は、オブジェクトのメモリ管理を制御します。 COM は、参照カウント スキームを使用してオブジェクトを追跡します。 C++ と異なり、オブジェクトが直接参照されることはありません。 COM オブジェクトは、常にポインターを通じて参照されます。 オブジェクトを使用して所有者が終了したときにオブジェクトを解放するために、オブジェクトの[リリース](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)メンバーが呼び出されます (従来の C++ オブジェクトに対して実行されるように、operator delete を使用するのではありません)。 参照カウント スキームを使用することで、単一オブジェクトに対する多重参照を管理できます。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)の実装では、オブジェクトの参照カウントが保持されます。オブジェクトは、参照カウントが0になるまで削除されません。
 
 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)は、実装の観点からは非常に簡単です。 実装では次の処理を行うだけです。
 
@@ -68,7 +68,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))メンバー関数は、もう少し興味深いものです。 メンバー関数だけが[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)であるオブジェクトを使用するのは非常に興味深いものではなく、オブジェクトが[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)よりも多くの処理を実行するように指示すると便利です。 ここで、 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))が役に立ちます。 QueryInterface を使用すると、1 つのオブジェクトが複数の "インターフェイス" を持つことができます。 これらのインターフェイスは、通常、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生し、新しいメンバー関数を追加することによって機能を追加します。 COM インターフェイスでは、インターフェイス内でメンバー変数を宣言せず、メンバー関数はすべて純粋仮想として宣言します。 次に例を示します。
+[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))メンバー関数は、もう少し興味深いものです。 メンバー関数だけが[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)であるオブジェクトを使用するのは非常に興味深いものではなく、オブジェクトが[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)よりも多くの処理を実行するように指示すると便利です。 ここで、 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))が役に立ちます。 QueryInterface を使用すると、1 つのオブジェクトが複数の "インターフェイス" を持つことができます。 これらのインターフェイスは、通常、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生し、新しいメンバー関数を追加することによって機能を追加します。 COM インターフェイスでは、インターフェイス内でメンバー変数を宣言せず、メンバー関数はすべて純粋仮想として宣言します。 たとえば、次のように入力します。
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)がある場合に iprintinterface を取得するには、`IID`の`IPrintInterface`を使用して [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) を呼び出します。 `IID` は、インターフェイスを一意に識別する 128 ビットの数値です。 各インターフェイスには、開発者や OLE によって定義された `IID` があります。 *PUnk*が[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)オブジェクトへのポインターである場合、iprintinterface を取得するコードは次のようになります。
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)がある場合に IPrintInterface を取得するには、のを使用して[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))を呼び出し `IID` `IPrintInterface` ます。 `IID` は、インターフェイスを一意に識別する 128 ビットの数値です。 各インターフェイスには、開発者や OLE によって定義された `IID` があります。 *PUnk*が[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)オブジェクトへのポインターである場合、iprintinterface を取得するコードは次のようになります。
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -90,7 +90,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-これは非常に簡単ですが、iprintinterface と[iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスの[両方をサポート](/windows/win32/api/unknwn/nn-unknwn-iunknown)するオブジェクトを実装する方法は簡単ですが、iprintinterface を実装することにより、iprintinterface は iunknown から直接派生するため、 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)は自動的にサポートされます。 例:
+これは非常に簡単ですが、iprintinterface と[iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスの[両方をサポート](/windows/win32/api/unknwn/nn-unknwn-iunknown)するオブジェクトを実装する方法は簡単ですが、iprintinterface を実装することにより、iprintinterface は iunknown から直接派生するため、 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)は自動的にサポートされます。 次に例を示します。
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -102,7 +102,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)の実装は、上記で実装したものとまったく同じになります。 `CPrintObj::QueryInterface` は次のようになります。
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)の実装は、上記で実装したものとまったく同じになります。 `CPrintObj::QueryInterface`次のようになります。
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -240,7 +240,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 
 MFC/OLE には "インターフェイス マップ" の実装が含まれています。この実装は概念や実行方法が、MFC の "メッセージ マップ" や "ディスパッチ マップ" に似ています。 MFC インターフェイス マップには、次の基本機能があります。
 
-- クラスに組み込まれている`CCmdTarget` [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) の標準実装。
+- クラスに組み込まれている[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)の標準実装 `CCmdTarget` 。
 
 - [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)によって変更された参照カウントのメンテナンス
 
@@ -256,7 +256,7 @@ MFC/OLE には "インターフェイス マップ" の実装が含まれてい�
 
 集計の詳細については、「[集計](/windows/win32/com/aggregation)」を参照してください。
 
-MFC インターフェイス マップの基点は `CCmdTarget` クラスです。 `CCmdTarget` "has *-a*" 参照カウントと、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)実装に関連付けられているすべてのメンバー関数 (参照カウントなどが `CCmdTarget`) です。 OLE COM をサポートするクラスを作成するには `CCmdTarget` の派生クラスを作成し、マクロや `CCmdTarget` メンバー関数を利用して必要なインターフェイスを実装します。 MFC 実装では、上の例で示したように各インターフェイスの実装で入れ子になったクラスが使用され、 IUnknown の標準実装によって簡略化されています。また、コード簡略化のために多くのマクロも用意されています。
+MFC インターフェイス マップの基点は `CCmdTarget` クラスです。 `CCmdTarget`"has *-a*" 参照カウントと、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)実装に関連付けられているすべてのメンバー関数 (参照カウントなど `CCmdTarget` )。 OLE COM をサポートするクラスを作成するには `CCmdTarget` の派生クラスを作成し、マクロや `CCmdTarget` メンバー関数を利用して必要なインターフェイスを実装します。 MFC 実装では、上の例で示したように各インターフェイスの実装で入れ子になったクラスが使用され、 IUnknown の標準実装によって簡略化されています。また、コード簡略化のために多くのマクロも用意されています。
 
 ## <a name="interface-map-basics"></a>インターフェイス マップの基本
 
@@ -274,9 +274,9 @@ MFC インターフェイス マップの基点は `CCmdTarget` クラスです�
 
 6. 入れ子になったクラスとして、サポートするインターフェイスを実装します。
 
-7. METHOD_PROLOGUE マクロを使用して、親の `CCmdTarget`派生オブジェクトにアクセスします。
+7. METHOD_PROLOGUE マクロを使用して、親の `CCmdTarget` 派生オブジェクトにアクセスします。
 
-8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)、および[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))は、これらの関数の `CCmdTarget` 実装 (`ExternalAddRef`、`ExternalRelease`、および `ExternalQueryInterface`) に委任できます。
+8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)、および[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))は `CCmdTarget` 、これらの関数の実装 ( `ExternalAddRef` 、、および) に委任でき `ExternalRelease` `ExternalQueryInterface` ます。
 
 上の例の CPrintEditObj の場合は次のように実装できます。
 
@@ -300,7 +300,7 @@ protected:
 };
 ```
 
-この宣言によって `CCmdTarget` 派生クラスが作成されます。 DECLARE_INTERFACE_MAP マクロは、このクラスがカスタムインターフェイスマップを持つことをフレームワークに指示します。 さらに、BEGIN_INTERFACE_PART および END_INTERFACE_PART のマクロでは、入れ子になったクラスを定義します。この例では、CEditObj と CPrintObj という名前を使用しています (X は、"C" で始まるグローバルクラスと入れ子になったクラスを区別するためにのみ使用されます。"I" で開始します)。 これらの入れ子になった 2 つのクラスのそれぞれに、入れ子になった 2 つのメンバー m_CEditObj と m_CPrintObj が作成されます。 これらのマクロは、自動的に[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)、および[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))関数を宣言します。したがって、このインターフェイスに固有の関数 (EditObject と PrintObject) のみを宣言します (OLE マクロ STDMETHOD を使用して、ターゲットプラットフォームに対して **_stdcall**と仮想キーワードが適切に提供されるようにします)。
+この宣言によって `CCmdTarget` 派生クラスが作成されます。 DECLARE_INTERFACE_MAP マクロは、このクラスがカスタムインターフェイスマップを持つことをフレームワークに指示します。 さらに、BEGIN_INTERFACE_PART および END_INTERFACE_PART マクロは、入れ子になったクラスを定義します。この例では、CEditObj と CPrintObj という名前を使用しています (X は、"C" で始まり、"I" で始まるインターフェイスクラスの入れ子になったクラスを区別するためにのみ使用されます)。 これらの入れ子になった 2 つのクラスのそれぞれに、入れ子になった 2 つのメンバー m_CEditObj と m_CPrintObj が作成されます。 これらのマクロは、自動的に[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)、および[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))関数を宣言します。したがって、このインターフェイスに固有の関数 (EditObject と PrintObject) のみを宣言します (OLE マクロ STDMETHOD を使用して、ターゲットプラットフォームに対して **_stdcall**と仮想キーワードが適切に提供されるようにします)。
 
 このクラスに対するインターフェイス マップを実装するには:
 
@@ -311,7 +311,7 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-これにより IID_IPrintInterface IID と m_CPrintObj、IID_IEditInterface IID と m_CEditObj が関連付けられます。 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) (`CCmdTarget::ExternalQueryInterface`) の `CCmdTarget` 実装では、このマップを使用して、要求されたときに m_CPrintObj および m_CEditObj へのポインターを返します。 `IID_IUnknown` に対するエントリをマップに含める必要はありません。`IID_IUnknown` が要求されると、マップの先頭のインターフェイス (この場合は m_CPrintObj) が使用されます。
+これにより IID_IPrintInterface IID と m_CPrintObj、IID_IEditInterface IID と m_CEditObj が関連付けられます。 `CCmdTarget` [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) () の実装では、 `CCmdTarget::ExternalQueryInterface` このマップを使用して、要求された場合に m_CPrintObj および m_CEditObj へのポインターを返します。 `IID_IUnknown` に対するエントリをマップに含める必要はありません。`IID_IUnknown` が要求されると、マップの先頭のインターフェイス (この場合は m_CPrintObj) が使用されます。
 
 BEGIN_INTERFACE_PART マクロによって自動的に[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 、 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))関数が宣言されていても、それを実装する必要があります。
 
@@ -356,7 +356,7 @@ CEditPrintObj::CPrintObj の実装は、上の CEditPrintObj::CEditObj の定義
 フレームワーク内部でもメッセージ マップが使用されています。 このため、フレームワーク クラス (`COleServerDoc` など) の派生クラスを作成すると、そのクラスは自動的に数種類のインターフェイスを持つことになります。また、このインターフェイスを変更したり、まったく新しいインターフェイスに置き換えたりすることもできます。 これは、フレームワークが基底クラスからのインターフェイス マップの継承を完全にサポートしているためです。 これは、BEGIN_INTERFACE_MAP が2番目のパラメーターとして、基底クラスの名前を受け取る理由です。
 
 > [!NOTE]
-> 通常は、MFC から埋め込みに特殊化したインターフェイスを継承しても、MFC の組み込み OLE インターフェイスの実装を再利用できません。 これはできません。これは、METHOD_PROLOGUE マクロを使用して、含まれている `CCmdTarget`派生オブジェクトにアクセスする場合、`CCmdTarget`派生オブジェクトからの埋め込みオブジェクトの*固定オフセット*を意味するためです。 たとえば `COleClientItem::XAdviseSink` では、MFC 実装から埋め込みの XMyAdviseSink を派生できません。これは XAdviseSink では、`COleClientItem` オブジェクトの先頭からのオフセット値が異なる値になるためです。
+> 通常は、MFC から埋め込みに特殊化したインターフェイスを継承しても、MFC の組み込み OLE インターフェイスの実装を再利用できません。 これは可能ではありません。これは、METHOD_PROLOGUE マクロを使用して、それを含む派生オブジェクトにアクセスすることで、派生したオブジェクト `CCmdTarget` からの埋め込みオブジェクトの*固定オフセット*を意味するため `CCmdTarget` です。 たとえば `COleClientItem::XAdviseSink` では、MFC 実装から埋め込みの XMyAdviseSink を派生できません。これは XAdviseSink では、`COleClientItem` オブジェクトの先頭からのオフセット値が異なる値になるためです。
 
 > [!NOTE]
 > ただし、これらの関数に MFC の既定の動作を求めるときは、MFC 実装に処理を任せることができます。 これは `IOleInPlaceFrame` クラスで MFC 実装の `COleFrameHook` (XOleInPlaceFrame) によって行われます。このクラスは多くの関数に対して m_xOleInPlaceUIWindow に処理を任せます。 この設計は、多数のインターフェイスを含むオブジェクトの実行時サイズを小さくする目的で選択されます。この処理ではバック ポインター (前の m_pParent など) は不要です。
@@ -369,7 +369,7 @@ MFC はスタンドアロンの COM オブジェクトのほかに、集約も�
 
 ### <a name="using-an-aggregate-object"></a>集約オブジェクトの利用
 
-集約オブジェクトを使用するには、集約を QueryInterface 機構に結び付ける必要があります。 つまり、本体オブジェクトに最初から含まれているかのように集約オブジェクトを動作させる必要があります。 これは、入れ子になったオブジェクトが IID にマップされる INTERFACE_PART マクロに加えて、MFC のインターフェイスマップ機構とどのように関連付けられているのか、`CCmdTarget` 派生クラスの一部として集計オブジェクトを宣言することもできます。 これを行うには、INTERFACE_AGGREGATE マクロを使用します。 これにより、インターフェイスマップ機構に統合されるメンバー変数 ( [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)または派生クラスへのポインターである必要があります) を指定できます。 が呼び出されたときに`CCmdTarget::ExternalQueryInterface`ポインターが NULL でない場合、 `IID`要求されたがによっ`IID` `CCmdTarget`てサポートされるネイティブのではない場合、フレームワークは、集計オブジェクトの [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) メンバー関数を自動的に呼び出します。オブジェクト自体。
+集約オブジェクトを使用するには、集約を QueryInterface 機構に結び付ける必要があります。 つまり、本体オブジェクトに最初から含まれているかのように集約オブジェクトを動作させる必要があります。 これは、入れ子になったオブジェクトが IID にマップされる INTERFACE_PART マクロに加えて、MFC のインターフェイスマップ機構とどのように関連付けられているのかによって、派生クラスの一部として集約オブジェクトを宣言することもでき `CCmdTarget` ます。 これを行うには、INTERFACE_AGGREGATE マクロを使用します。 これにより、インターフェイスマップ機構に統合されるメンバー変数 ( [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)または派生クラスへのポインターである必要があります) を指定できます。 が呼び出されたときにポインターが NULL でない場合、要求された `CCmdTarget::ExternalQueryInterface` [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) `IID` が `IID` オブジェクト自体によってサポートされているネイティブのではない場合、フレームワークは集計オブジェクトの QueryInterface メンバー関数を自動的に呼び出します `CCmdTarget` 。
 
 #### <a name="to-use-the-interface_aggregate-macro"></a>マクロ INTERFACE_AGGREGATE を使用するには
 
@@ -379,7 +379,7 @@ MFC はスタンドアロンの COM オブジェクトのほかに、集約も�
 
 3. 適切な時点で (普通は `CCmdTarget::OnCreateAggregates` 内) このメンバー変数を NULL 値以外の値に初期化します。
 
-例:
+次に例を示します。
 
 ```cpp
 class CAggrExample : public CCmdTarget
@@ -443,7 +443,7 @@ m_lpAggrInner 変数はコンストラクターによって NULL に初期化さ
 void EnableAggregation();
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 この種のオブジェクトについて OLE 集約をサポートする場合、この関数を派生クラスのコンストラクターで呼び出します。 この関数を呼び出すことによって、集約可能オブジェクトに必要な特別な IUnknown 実装が用意されます。
 
@@ -464,7 +464,7 @@ IID への far ポインター (QueryInterface の第 1 引数)
 *ppvObj*<br/>
 IUnknown* へのポインター (QueryInterface の第 2 引数)
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 IUnknown を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 この関数はオブジェクトのインターフェイス マップに基づき、標準的なデータ駆動型の QueryInterface を実行します。 この関数の戻り値は HRESULT 型にキャストする必要があります。 集約オブジェクトの場合、この関数はローカルなインターフェイス マップを使用せずに、"controlling IUnknown" を呼び出します。
 
@@ -474,7 +474,7 @@ IUnknown を実装するとき、クラスが実装する各インターフェ�
 DWORD ExternalAddRef();
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 IUnknown::AddRef を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 戻り値は、CCmdTarget オブジェクトの新しい参照カウント値を示します。 集約オブジェクトの場合、この関数はローカルな参照カウントを操作せずに、"controlling IUnknown" を呼び出します。
 
@@ -484,7 +484,7 @@ IUnknown::AddRef を実装するとき、クラスが実装する各インター
 DWORD ExternalRelease();
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 IUnknown::Release を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 戻り値は、オブジェクトの新しい参照カウント値を示します。 集約オブジェクトの場合、この関数はローカルな参照カウントを操作せずに、"controlling IUnknown" を呼び出します。
 
@@ -494,7 +494,7 @@ IUnknown::Release を実装するとき、クラスが実装する各インタ�
 DECLARE_INTERFACE_MAP
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロは、`CCmdTarget` からの派生クラスのうち、インターフェイス マップを持つすべてのクラスで使用します。 DECLARE_MESSAGE_MAP とほとんど同じ方法で使用されます。 このマクロ呼び出しは、クラス定義 (通常はヘッダー (.H) ファイル内) で使用します。 DECLARE_INTERFACE_MAP を持つクラスは、実装ファイル () でインターフェイスマップを定義する必要があります。CPP) を BEGIN_INTERFACE_MAP し、END_INTERFACE_MAP マクロを使用します。
 
@@ -513,15 +513,15 @@ END_INTERFACE_PART(localClass)
 *iface*<br/>
 このクラスによって実装されるインターフェイスの名前
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 クラスが実装する各インターフェイスに対して、BEGIN_INTERFACE_PART と END_INTERFACE_PART のペアを持っている必要があります。 これらのマクロでは、OLE インターフェイスから派生させるローカル クラスと、そのクラスの埋め込みメンバー変数を定義します。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)、および[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))メンバーは、自動的に宣言されます。 実装するインターフェイスの一部である他のメンバー関数の宣言を含める必要があります (これらの宣言は、BEGIN_INTERFACE_PART と END_INTERFACE_PART マクロの間に配置されます)。
 
-*Iface*引数は、`IAdviseSink`、`IPersistStorage` (または独自のカスタムインターフェイス) など、実装する OLE インターフェイスです。
+*Iface*引数は `IAdviseSink` 、、、 `IPersistStorage` (または独自のカスタムインターフェイス) などの実装する OLE インターフェイスです。
 
 *Localclass*引数は、定義されるローカルクラスの名前です。 名前の先頭には 'X' が自動的に付けられます。 この名前付け規則は、グローバル クラス名との競合を回避するためです。 また、埋め込みメンバーの名前は、' m_x ' で始まることを除いて、 *Localclass*名と同じになります。
 
-例:
+次に例を示します。
 
 ```cpp
 BEGIN_INTERFACE_PART(MyAdviseSink, IAdviseSink)
@@ -536,7 +536,7 @@ END_INTERFACE_PART(MyAdviseSink)
 これによって IAdviseSink から派生されるローカル クラス XMyAdviseSink が定義されます。またこのクラスのメンバー名は m_xMyAdviseSink になります。
 
 > [!NOTE]
-> `STDMETHOD`_ で始まる行は、OLE2 から基本的にコピーされます。H とを少し変更しました。 OLE2.H からコピーすると、発見が困難なエラーを回避できます。
+> _ で始まる行 `STDMETHOD` は、基本的に OLE2 からコピーされます。H とを少し変更しました。 OLE2.H からコピーすると、発見が困難なエラーを回避できます。
 
 ### <a name="begin_interface_map-and-end_interface_map--macro-descriptions"></a>BEGIN_INTERFACE_MAP、END_INTERFACE_MAP - マクロの説明
 
@@ -553,7 +553,7 @@ END_INTERFACE_MAP
 *baseClass*<br/>
 *クラス*の派生元のクラス。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 実装ファイルでは、BEGIN_INTERFACE_MAP マクロと END_INTERFACE_MAP マクロを使用して、インターフェイスマップを実際に定義します。 実装される各インターフェイスには、1つ以上の INTERFACE_PART マクロの呼び出しがあります。 クラスで使用される集計ごとに、1つのマクロ呼び出し INTERFACE_AGGREGATE ます。
 
@@ -574,7 +574,7 @@ INTERFACE_PART(theClass, iid, localClass)
 *localClass*<br/>
 ローカル クラスの名前。'X' は付けません。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロは、オブジェクトがサポートする各インターフェイスの BEGIN_INTERFACE_MAP マクロと END_INTERFACE_MAP マクロの間で使用されます。 これにより、*クラス*および*localclass*によって示されるクラスのメンバーに IID をマップできます。 ' M_x ' が*Localclass*に自動的に追加されます。 1 個のメンバーに複数の `IID` を割り当てることもできます。 これは、"最派生" インターフェイスを 1 個だけ作成し、これをすべての中間インターフェイスとして使用するときにも役に立ちます。 この方法を使用した例が `IOleInPlaceFrameWindow` インターフェイスです。 このインターフェイスの階層構造は次のようになっています。
 
@@ -585,7 +585,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-オブジェクトが `IOleInPlaceFrameWindow`を実装している場合、クライアントは、`IOleUIWindow`、`IOleWindow`、または[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)のいずれのインターフェイスにも `QueryInterface` できます (実際に実装しているインターフェイス `IOleInPlaceFrameWindow`)。 これを処理するには、複数の INTERFACE_PART マクロを使用して、すべての基本インターフェイスを `IOleInPlaceFrameWindow` インターフェイスにマップします。
+オブジェクトがを実装している場合、 `IOleInPlaceFrameWindow` クライアントは `QueryInterface` `IOleUIWindow` 、 `IOleWindow` "最派生" インターフェイス (実際に実装しているインターフェイス) 以外に、、、または[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)のいずれかのインターフェイスを使用できます。 `IOleInPlaceFrameWindow` これを処理するには、複数の INTERFACE_PART マクロを使用して、すべての基本インターフェイスをインターフェイスにマップし `IOleInPlaceFrameWindow` ます。
 
 クラス定義ファイルには次のように記述されます。
 
@@ -619,11 +619,11 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 *theAggr*<br/>
 集約するメンバー変数の名前。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロは、クラスが集約オブジェクトを使用することをフレームワークに知らせます。 BEGIN_INTERFACE_PART と END_INTERFACE_PART のマクロの間に表示される必要があります。 集計オブジェクトは、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生した独立したオブジェクトです。 集計と INTERFACE_AGGREGATE マクロを使用することにより、集約でサポートされているすべてのインターフェイスが、オブジェクトによって直接サポートされていると思われるようにすることができます。 *Theaggr*引数は、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生したクラスのメンバー変数の名前です (直接または間接的)。 すべての INTERFACE_AGGREGATE マクロは、インターフェイスマップに配置するときに INTERFACE_PART マクロに従う必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

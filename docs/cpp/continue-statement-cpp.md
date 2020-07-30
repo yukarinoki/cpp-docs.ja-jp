@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180278"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229000"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。
 
-- **Do**または**while**ループでは、次のイテレーションは**do**または**while**ステートメントの制御式を再評価することによって開始されます。
+- **`do`** またはループでは **`while`** 、次の反復処理では、またはステートメントの制御式が再評価によって開始され **`do`** **`while`** ます。
 
-- **For**ループで (構文 `for`(`init-expr`; `cond-expr`; `loop-expr`)) を使用すると、`loop-expr` 句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
+- **`for`**(構文を使用した) ループで `for( <init-expr> ; <cond-expr> ; <loop-expr> )` `<loop-expr>` は、句が実行されます。 次に、`<cond-expr>` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
 
-次の例では、 **continue**ステートメントを使用して、コードのセクションをバイパスし、ループの次の反復処理を開始する方法を示します。
+次の例では、 **`continue`** ステートメントを使用して、コードのセクションをバイパスし、ループの次の反復処理を開始する方法を示します。
 
 ## <a name="example"></a>例
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジャンプ ステートメント](../cpp/jump-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

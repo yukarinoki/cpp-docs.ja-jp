@@ -1,19 +1,19 @@
 ---
-title: CReBar と CReBarCtrl の比較
+title: CReBar とCReBarCtrl の比較
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228636"
 ---
-# <a name="crebar-vs-crebarctrl"></a>CReBar と CReBarCtrl の比較
+# <a name="crebar-vs-crebarctrl"></a>CReBar とCReBarCtrl の比較
 
 MFC には、 [CReBar](reference/crebar-class.md)と[crebarctrl](reference/crebarctrl-class.md) (Windows コモンコントロール API をラップする) の2つのクラスが用意されています。 `CReBar`rebar コモンコントロールのすべての機能を提供し、必要な共通コントロール設定と構造体の多くを処理します。
 
@@ -24,7 +24,7 @@ Visual C++ には、rebar コモンコントロールを利用する2つの方�
 - を使用して rebar を作成 `CReBar` し、 [CReBar:: GetReBarCtrl](reference/crebar-class.md#getrebarctrl)を呼び出して、メンバー関数へのアクセスを取得し `CReBarCtrl` ます。
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`は、rebar オブジェクトの**this**ポインターをキャストするインラインメンバー関数です。 これは、実行時に関数呼び出しにオーバーヘッドがないことを意味します。
+    >  `CReBar::GetReBarCtrl`は、 **`this`** rebar オブジェクトのポインターをキャストするインラインメンバー関数です。 これは、実行時に関数呼び出しにオーバーヘッドがないことを意味します。
 
 - [Crebarctrl](reference/crebarctrl-class.md)のコンストラクターを使用して rebar を作成します。
 
@@ -33,4 +33,4 @@ Visual C++ には、rebar コモンコントロールを利用する2つの方�
 ## <a name="see-also"></a>関連項目
 
 [CReBarCtrl の使い方](using-crebarctrl.md)<br/>
-[制限](controls-mfc.md)
+[コントロール](controls-mfc.md)

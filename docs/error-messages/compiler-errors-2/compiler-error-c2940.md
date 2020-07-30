@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2940
 ms.assetid: af6bf2bf-8de6-4cfd-bbf0-4c6b32a30edf
-ms.openlocfilehash: 9477a2da32040db67a143a59d940c5f1cbe94904
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b951b7f50c5735f59692582486c9bf57b2f67cd4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740443"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233393"
 ---
 # <a name="compiler-error-c2940"></a>コンパイラ エラー C2940
 
 'class': type-class-id がローカル typedef として再定義されています
 
-ジェネリック クラスまたはテンプレート クラスはローカル `typedef`として使用できません。
+ジェネリッククラスまたはテンプレートクラスをローカルとして使用することはできません **`typedef`** 。
 
 次の例では C2940 が生成されます。
 

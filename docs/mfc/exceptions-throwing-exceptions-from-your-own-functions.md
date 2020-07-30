@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622743"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223188"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外処理 : 独自関数からの例外のスロー
 
 Mfc またはその他のライブラリの関数によってスローされた例外をキャッチするためだけに、MFC 例外処理パラダイムを使用することができます。 ライブラリコードによってスローされた例外をキャッチするだけでなく、例外的な状況に遭遇する可能性のある関数を記述する場合は、独自のコードから例外をスローすることができます。
 
-例外がスローされると、現在の関数の実行は停止され、最も内側の例外フレームの**catch**ブロックに直接ジャンプします。 例外メカニズムは、関数からの通常の終了パスをバイパスします。 そのため、通常の終了時に削除されるメモリブロックを必ず削除してください。
+例外がスローされると、現在の関数の実行は停止され、 **`catch`** 最も内側の例外フレームのブロックに直接ジャンプします。 例外メカニズムは、関数からの通常の終了パスをバイパスします。 そのため、通常の終了時に削除されるメモリブロックを必ず削除してください。
 
 #### <a name="to-throw-an-exception"></a>例外をスローするには
 

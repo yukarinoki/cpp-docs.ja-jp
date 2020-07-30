@@ -1,6 +1,6 @@
 ---
-title: クラス
-ms.date: 09/12/2018
+title: COleCmdUI クラス
+ms.date: 07/24/2020
 f1_keywords:
 - COleCmdUI
 - AFXDOCOBJ/COleCmdUI
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 1b7a6b21a3ad778b4a5ca345b1aaf42875810e4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c21d9b504656e6bba5ca693e57958743bb1b8309
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376264"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233211"
 ---
-# <a name="colecmdui-class"></a>クラス
+# <a name="colecmdui-class"></a>COleCmdUI クラス
 
 アプリケーションの `IOleCommandTarget`ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class COleCmdUI : public CCmdUI
 ```
 
@@ -37,23 +37,23 @@ class COleCmdUI : public CCmdUI
 
 |名前|説明|
 |----------|-----------------|
-|[次のコマンドを実行します。](#colecmdui)|`COleCmdUI` オブジェクトを構築します。|
+|[COleCmdUI::COleCmdUI](#colecmdui)|`COleCmdUI` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を有効にします。](#enable)|enable コマンド フラグを設定またはクリアします。|
-|[をクリックします。](#setcheck)|オン/オフトグル コマンドの状態を設定します。|
-|[をクリックします。](#settext)|コマンドのテキスト名またはステータス文字列を返します。|
+|[COleCmdUI:: Enable](#enable)|Enable コマンドフラグを設定または解除します。|
+|[COleCmdUI::SetCheck](#setcheck)|オン/オフのトグルコマンドの状態を設定します。|
+|[COleCmdUI:: SetText](#settext)|コマンドのテキスト名またはステータス文字列を返します。|
 
 ## <a name="remarks"></a>解説
 
-DocObjects が有効になっていないアプリケーションでは、ユーザーがアプリケーションのメニューを表示すると、MFC はUPDATE_COMMAND_UIの処理を行います。 各通知には、特定のコマンドの状態を反映するように操作できる[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトが与えられます。 ただし、アプリケーションで DocObjects が有効になっている場合、MFC は通知UPDATE_OLE_COMMAND_UI処理`COleCmdUI`し、オブジェクトを割り当てます。
+DocObjects が有効になっていないアプリケーションでは、ユーザーがアプリケーションのメニューを表示すると、MFC は、通知を UPDATE_COMMAND_UI します。 各通知には、特定のコマンドの状態を反映するために操作できる[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトが付与されます。 ただし、アプリケーションが DocObjects に対して有効になっている場合、MFC は通知 UPDATE_OLE_COMMAND_UI 処理し、オブジェクトを割り当て `COleCmdUI` ます。
 
-`COleCmdUI`を使用すると、コンテナのユーザインタフェース(FileNew、Open、Printなど)から発信されたコマンドを DocObject が受け取ることができ、コンテナは DocObject のユーザインタフェースから生成されたコマンドを受け取ることができます。 同`IDispatch`じコマンドをディスパッチするために使用できますが、`IOleCommandTarget`通常は引数を持たない標準のコマンド セットに依存しており、型情報は含まないため、クエリと実行を簡単に行えます。 `COleCmdUI`を使用して、DocObject ユーザー インターフェイス コマンドのその他のプロパティを有効、更新、および設定できます。 コマンドを呼び出す場合は、[呼](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)び出します。
+`COleCmdUI`DocObject が、コンテナーのユーザーインターフェイス (FileNew、Open、Print など) で発生したコマンドを受け取ることができるようにします。また、DocObject のユーザーインターフェイスで生成されたコマンドをコンテナーが受信できるようにします。 は `IDispatch` 、同じコマンドをディスパッチするために使用できますが、は、 `IOleCommandTarget` 標準のコマンドセット (通常は引数を含まない) に依存していて、型情報が関係していないため、より簡単なクエリおよび実行方法を提供します。 `COleCmdUI`DocObject user interface コマンドの他のプロパティを有効にしたり、更新したり、設定したりするために使用できます。 コマンドを起動する場合は、 [COleServerDoc:: OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)を呼び出します。
 
-ドキュトオブジェクトの詳細については、[を](../../mfc/reference/cdocobjectserver-class.md)参照[してください。](../../mfc/reference/cdocobjectserveritem-class.md)
+DocObjects の詳細については、「 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) and [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -63,13 +63,13 @@ DocObjects が有効になっていないアプリケーションでは、ユー
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdocobj.h
+**ヘッダー:** afxdocob
 
-## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>次のコマンドを実行します。
+## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI
 
-特定のユーザー`COleCmdUI`インターフェイス コマンドに関連付けられたオブジェクトを構築します。
+特定の `COleCmdUI` ユーザーインターフェイスコマンドに関連付けられたオブジェクトを構築します。
 
-```
+```cpp
 COleCmdUI(
     OLECMD* rgCmds,
     ULONG cCmds,
@@ -79,55 +79,55 @@ COleCmdUI(
 ### <a name="parameters"></a>パラメーター
 
 *rgCmds*<br/>
-指定された GUID に関連付けられているサポートされているコマンドの一覧。 この`OLECMD`構造体は、コマンドをコマンド・フラグに関連付けます。
+指定した GUID に関連付けられている、サポートされているコマンドの一覧。 `OLECMD`構造体はコマンドをコマンドフラグに関連付けます。
 
 *cCmds*<br/>
-*rgCmds*内のコマンドの数。
+*RgCmds*内のコマンドの数。
 
-*グループ化*<br/>
+*pGroup*<br/>
 コマンドのセットを識別する GUID へのポインター。
 
 ### <a name="remarks"></a>解説
 
-この`COleCmdUI`オブジェクトは、メニュー項目やコントロール バー ボタンなどの DocObject ユーザー インターフェイス オブジェクトを更新するためのプログラム インターフェイスを提供します。 ユーザー インターフェイス オブジェクトは、`COleCmdUI`オブジェクトを介して有効、無効、チェック、およびクリアできます。
+オブジェクトには、 `COleCmdUI` メニュー項目やコントロールバーボタンなどの DocObject ユーザーインターフェイスオブジェクトを更新するためのプログラムインターフェイスが用意されています。 オブジェクトを使用して、ユーザーインターフェイスオブジェクトを有効にしたり、無効にしたり、チェックしたり、クリアしたりでき `COleCmdUI` ます。
 
-## <a name="colecmduienable"></a><a name="enable"></a>を有効にします。
+## <a name="colecmduienable"></a><a name="enable"></a>COleCmdUI:: Enable
 
-この関数を呼び出して、`COleCmdUI`オブジェクトのコマンド フラグをOLECOMDF_ENABLEDに設定します。
+この関数を呼び出して、オブジェクトのコマンドフラグを OLECOMDF_ENABLED に設定します。これにより `COleCmdUI` 、コマンドが使用可能で有効になっていることをインターフェイスに通知したり、コマンドフラグをクリアしたりできます。
 
-```
+```cpp
 virtual void Enable(BOOL bOn);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ボン*<br/>
-オブジェクトに関連付けられたコマンドを`COleCmdUI`有効にするか無効にするかを示します。 0 以外のコマンドは有効です。0 を指定すると、コマンドは無効になります。
+*楽しい*<br/>
+オブジェクトに関連付けられたコマンドを有効にするか無効にするかを示し `COleCmdUI` ます。 0以外の場合、コマンドを有効にします。0の場合、コマンドは無効になります。
 
-## <a name="colecmduisetcheck"></a><a name="setcheck"></a>をクリックします。
+## <a name="colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck
 
-オン/オフトグル コマンドの状態を設定します。
+この関数を呼び出して、on/off トグルコマンドの状態を設定します。
 
-```
+```cpp
 virtual void SetCheck(int nCheck);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nチェック*<br/>
-オン/オフトグル コマンドを設定する状態を決定する値。 値は次のとおりです。
+*n*<br/>
+オン/オフの切り替えコマンドを設定する状態を決定する値。 値は次のとおりです。
 
-|[値]|説明|
+|値|[説明]|
 |-----------|-----------------|
 |**1**|コマンドを on に設定します。|
-|**2**|コマンドを不確定に設定します。このコマンドの属性は、関連する選択のオンとオフの両方の状態にあるため、状態を特定できません。|
+|**2**|コマンドを不確定に設定します。このコマンドの属性が関連する選択項目のオン状態とオフ状態の両方にあるため、状態を特定できません。|
 |その他の値|コマンドを off に設定します。|
 
-## <a name="colecmduisettext"></a><a name="settext"></a>をクリックします。
+## <a name="colecmduisettext"></a><a name="settext"></a>COleCmdUI:: SetText
 
-コマンドのテキスト名またはステータス文字列を返します。
+コマンドのテキスト名またはステータス文字列を返すには、この関数を呼び出します。
 
-```
+```cpp
 virtual void SetText(LPCTSTR lpszText);
 ```
 
@@ -139,4 +139,4 @@ virtual void SetText(LPCTSTR lpszText);
 ## <a name="see-also"></a>関連項目
 
 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[階層図](../../mfc/hierarchy-chart.md)

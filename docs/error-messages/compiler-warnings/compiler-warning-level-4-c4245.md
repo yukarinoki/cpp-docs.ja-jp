@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 321451f0cc2ac538dbd0779001e22be047a3cc4d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 15105bb82409edd7bb7ca9ddd10b831b6dc3be94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196137"
 ---
 # <a name="compiler-warning-level-4-c4245"></a>コンパイラの警告 (レベル 4) C4245
 
-' conversion ': ' type1 ' から ' type1 ' への変換、符号付き/符号なしの不一致
+> '*conversion*': '*type1*' から ' type1 ' への変換、符号付き/符号*なしの不一致*
 
-負の値を持つ符号付き**定数**を `unsigned`に変換しようとしました。
+**`signed const`** 負の値を持つ型を型に変換しようとしました **`unsigned`** 。
 
 次の例では、C4245 が生成されます。
 

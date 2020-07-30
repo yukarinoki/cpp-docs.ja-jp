@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 432cb1b6910db5ea735288edfbf6aa9e10f0a486
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d351ae064b8c9bdd0599a1d6981166371a62af58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216610"
 ---
 # <a name="calling-conventions"></a>呼び出し規則
 
@@ -21,16 +21,16 @@ X64 プロセッサの呼び出し規約の詳細については、「[呼び出
 
 ## <a name="topics-in-this-section"></a>このセクションのトピック
 
-- [引数の引き渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)(`__cdecl`、`__stdcall`、`__fastcall`など)
+- [引数の引き渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)( **`__cdecl`** 、、 **`__stdcall`** **`__fastcall`** 、その他)
 
 - [呼び出しの例: 関数プロトタイプと呼び出し](../cpp/calling-example-function-prototype-and-call.md)
 
-- [生の関数呼び出しを使用してカスタムプロローグ/エピローグコードを記述する](../cpp/naked-function-calls.md)
+- [naked 関数の呼び出しを使用したカスタム プロローグ/エピローグ コードの作成](../cpp/naked-function-calls.md)
 
 - [浮動小数点コプロセッサと呼び出し規約](../cpp/floating-point-coprocessor-and-calling-conventions.md)
 
-- [互換性のために残されている呼び出し規約](../cpp/obsolete-calling-conventions.md)
+- [古い呼び出し規則](../cpp/obsolete-calling-conventions.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)

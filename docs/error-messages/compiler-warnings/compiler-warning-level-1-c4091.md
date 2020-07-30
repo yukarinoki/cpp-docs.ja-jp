@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163911"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233341"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>コンパイラの警告 (レベル 1) C4091
 
@@ -21,7 +21,7 @@ ms.locfileid: "80163911"
 
 ## <a name="example"></a>例
 
-ユーザー定義型の宣言の先頭にある `__declspec` 属性は、その型の変数に適用されます。 C4091 は、変数が宣言されていないことを示します。 次の例では、C4091 が生成されます。
+**`__declspec`** ユーザー定義型の宣言の先頭にある属性は、その型の変数に適用されます。 C4091 は、変数が宣言されていないことを示します。 次の例では、C4091 が生成されます。
 
 ```cpp
 // C4091.cpp

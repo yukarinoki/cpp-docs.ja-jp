@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216025"
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 
@@ -41,25 +41,25 @@ class-body
 (省略可能) 追加の宣言情報。 属性と属性クラスについては、「属性」を参照してください。
 
 *class-key*<br/>
-**class** または **typename** のいずれか。
+**`class`** または**`typename`**
 
-*type-parameter-identifier(s)* 。型パラメーターの名前を指定する識別子のコンマ区切りの一覧。
+*type-parameter-identifier(s)*。型パラメーターの名前を指定する識別子のコンマ区切りの一覧。
 
 *constraint-clauses*<br/>
 型パラメーターの制約を指定する **where** 句の一覧 (コンマ区切りではありません)。 次の書式を使用します。
 
-> **ここ***で、型パラメーターの識別子* **:** *制約リスト* **...**
+> **ここ***で、型パラメーターの識別子* **:** *制約リスト***...**  
 
 *constraint-list*<br/>
-*クラスまたはインターフェイス*[`,` *...* ]
+*クラスまたはインターフェイス*[ `,` *...*]
 
 *accessibility-modifiers*<br/>
-ジェネリック クラスのアクセシビリティ修飾子。 Windows ランタイムでは、許可される唯一の修飾子は **private** です。 共通言語ランタイムでは、許可される修飾子は **private** と **public** です。
+ジェネリック クラスのアクセシビリティ修飾子。 Windows ランタイムの場合、許可される修飾子はだけ **`private`** です。 共通言語ランタイムの場合、許可される修飾子は **`private`** と **`public`** です。
 
 *identifier*<br/>
 ジェネリック クラスの名前。任意の有効な C++ 識別子です。
 
-*modifiers*<br/>
+*ド*<br/>
 (省略可能) 許可される修飾子は **sealed** と **abstract** です。
 
 *base-list*<br/>
@@ -69,9 +69,9 @@ class-body
 フィールド、メンバー関数などを含む、クラスの本文。
 
 *declarators*<br/>
-この型の任意の変数の宣言。 例: `^`*identifier*[`,` ...]
+この型の任意の変数の宣言。 例: `^` *identifier*[ `,` ...]
 
-次のようなジェネリック クラスを宣言できます (**typename** の代わりに **class** キーワードを使用できることに注意してください)。 この例では、`ItemType`、`KeyType`、および `ValueType` は、型の指定場所では不明な型です。 `HashTable<int, int>` は、ジェネリック型 `HashTable<KeyType, ValueType>` の構築型です。 1 つのジェネリック型から、多数の異なる構築型を構築できます。 ジェネリック クラスから構築された構築型は、他の ref クラス型のように扱われます。
+このようなジェネリッククラスを宣言できます (の代わりにキーワードを使用すること **`class`** もでき **`typename`** ます)。 この例では、`ItemType`、`KeyType`、および `ValueType` は、型の指定場所では不明な型です。 `HashTable<int, int>` は、ジェネリック型 `HashTable<KeyType, ValueType>` の構築型です。 1 つのジェネリック型から、多数の異なる構築型を構築できます。 ジェネリック クラスから構築された構築型は、他の ref クラス型のように扱われます。
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-ジェネリック型引数として、両方の値型 (**int** や **double** などの組み込み型、またはユーザー定義の値型) と参照型を使用できます。 ジェネリック定義内の構文は、どちらでも同じです。 構文上、不明な型は、参照型であるかのように扱われます。 ただし、ランタイムは、実際に使用される型が値型であるかどうかを判断し、メンバーに直接アクセスするために生成される適切なコードに置換できます。 ジェネリック型引数として使用される値型はボックス化されないため、ボックス化に関連するパフォーマンスの低下は発生しません。 ジェネリックの本文内で使用される構文では、`T^` ではなく、`->` と `.` にする必要があります。 型パラメーターでの [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) の使用は、値引数が値型の場合は、ランタイムによって、値型の単純な作成であると適切に解釈されます。
+値型 (やなどの組み込み型 **`int`** また **`double`** はユーザー定義値型) と参照型のどちらも、ジェネリック型引数として使用できます。 ジェネリック定義内の構文は、どちらでも同じです。 構文上、不明な型は、参照型であるかのように扱われます。 ただし、ランタイムは、実際に使用される型が値型であるかどうかを判断し、メンバーに直接アクセスするために生成される適切なコードに置換できます。 ジェネリック型引数として使用される値型はボックス化されないため、ボックス化に関連するパフォーマンスの低下は発生しません。 ジェネリックの本文内で使用される構文では、`.` ではなく、`T^` と `->` にする必要があります。 型パラメーターでの [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) の使用は、値引数が値型の場合は、ランタイムによって、値型の単純な作成であると適切に解釈されます。
 
-型パラメーターで使用できる型に対して、[ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)があるジェネリック クラスを宣言することもできます。 次の例では、`ItemType` で使用される任意の型で `IItem` インターフェイスを実装する必要があります。 たとえば **を実装しない**int`IItem` を使用しようとすると、型引数が制約を満たしていないという理由でコンパイル時エラーが発生します。
+型パラメーターで使用できる型に対して、[ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)があるジェネリック クラスを宣言することもできます。 次の例では、`ItemType` で使用される任意の型で `IItem` インターフェイスを実装する必要があります。 を実装していないなどを使用しようとすると、 **`int`** `IItem` 型引数が制約を満たしていないため、コンパイル時エラーが発生します。
 
 ```cpp
 // generic_classes_2.cpp
@@ -108,7 +108,7 @@ where ItemType : IItem
 ref class Stack {};
 ```
 
-同じ名前空間のジェネリック クラスは、型パラメーターの数または型を変更するだけではオーバーロードできません。 ただし、各クラスが別の名前空間にある場合はオーバーロードできます。 たとえば、名前空間 `MyClass` と `MyClass<ItemType>` にある次の 2 つのクラス (`A` と `B`) について考えます。 この 2 つのクラスは、3 番目の名前空間 C 内でオーバーロードできます。
+同じ名前空間のジェネリック クラスは、型パラメーターの数または型を変更するだけではオーバーロードできません。 ただし、各クラスが別の名前空間にある場合はオーバーロードできます。 たとえば、名前空間 `A` と `B` にある次の 2 つのクラス (`MyClass` と `MyClass<ItemType>`) について考えます。 この 2 つのクラスは、3 番目の名前空間 C 内でオーバーロードできます。
 
 ```cpp
 // generic_classes_3.cpp
@@ -159,7 +159,7 @@ ref class MyClass : IInterface<ItemType> {};
 
 ## <a name="example"></a>例
 
-次の例では、適切な型引数 (\<int **、** double **、および** string **) を使用して、ジェネリック クラス MyClass**ItemType> の 3 つの異なるインスタンスが作成されます。
+次の例では、ジェネリッククラス MyClass の3つの異なるインスタンス \<ItemType> が、適切な型引数 ( **`int`** 、 **`double`** 、および**string**) を使用して作成されます。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -284,7 +284,7 @@ Test1
 
 ## <a name="example"></a>例
 
-次の例では、ジェネリック クラス `ProtectData` 内に非ジェネリック メソッド `MyClass<ItemType>` を宣言します。 このメソッドは、クラス型パラメーター `ItemType` をオープン構築型のシグニチャ内で使用します。
+次の例では、ジェネリック クラス `MyClass<ItemType>` 内に非ジェネリック メソッド `ProtectData` を宣言します。 このメソッドは、クラス型パラメーター `ItemType` をオープン構築型のシグニチャ内で使用します。
 
 ```cpp
 // generics_non_generic_methods1.cpp
@@ -665,7 +665,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-次の例では、1 つのフィールド `MyGenStruct` があるジェネリック構造体 `myField`を宣言し、そのフィールドに異なる型 (**int**、**double**、`String^`) の値を割り当てます。
+次の例では、1つのフィールドを持つジェネリック構造体を宣言 `MyGenStruct` `myField` し、別の型 ( **`int`** 、、) の値を **`double`** `String^` このフィールドに代入します。
 
 ```cpp
 // generics_generic_struct1.cpp
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジェネリック](generics-cpp-component-extensions.md)

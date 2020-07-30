@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 9c25593df27f7c4e742eb109aeb5e94ba6fdba8c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760362"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218196"
 ---
 # <a name="compiler-error-c2676"></a>コンパイラ エラー C2676
 
@@ -19,7 +19,7 @@ ms.locfileid: "74760362"
 
 この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2676 が生成されます。
 
@@ -51,11 +51,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-C2676 は、参照型の `this` ポインターでポインター演算を試行した場合にも発生することがあります。
+C2676 は、参照型のポインターに対してポインター演算を実行しようとした場合にも発生する可能性があり **`this`** ます。
 
-`this` ポインターは、参照型の型ハンドルのポインターです。 詳細については、「 [this ポインターのセマンティクス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)」を参照してください。
+**`this`** ポインターは、参照型のハンドル型です。 詳細については、「 [this ポインターのセマンティクス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)」を参照してください。
 
 次の例では、C2676 が生成されます。
 

@@ -2,12 +2,12 @@
 title: アクセラレータおよび accelerator_view オブジェクトの使用
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215895"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 
@@ -94,7 +94,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>共有メモリ
 
-共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。 Accelerator プロパティ[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)は、アクセラレータが共有メモリをサポートしている場合は**true**を返し、 [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)プロパティはに割り当てられたメモリの既定の[access_type](reference/concurrency-namespace-enums-amp.md#access_type)を取得し `accelerator` ます。たとえば、に関連付けられている**配列**s `accelerator` や `array_view` 、でアクセスされるオブジェクト `accelerator` です。
+共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。 アクセラレータが共有メモリをサポートしている場合は[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)を返し、 **`true`** [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)プロパティはに割り当てられたメモリの既定の[access_type](reference/concurrency-namespace-enums-amp.md#access_type)を取得し `accelerator` ます。たとえば、に関連付けられた**配列**s `accelerator` や `array_view` 、でアクセスされるオブジェクト `accelerator` です。
 
 C++ AMP ランタイムは、各 `access_type` に最適な既定の `accelerator` を自動的に選択しますが、CPU からの読み込み、CPU からの書き込み、またはその両方が行われる場合、共有メモリのパフォーマンス特性 (帯域幅と待機時間) は専用 (共有されない) のアクセラレータ メモリのパフォーマンス特性より悪い場合があります。 共有メモリが CPU からの読み取りと書き込みの専用メモリと同様に使用される場合、ランタイムは既定値が `access_type_read_write` となり、それ以外の場合、ランタイムは保守的な既定値 `access_type` を選択し、計算のカーネルのメモリ アクセス パターンが別の `access_type` を利用する場合は、アプリケーションがそれをオーバーライドできるようにします。
 
@@ -131,7 +131,7 @@ int main()
 
 ## <a name="changing-the-default-accelerator"></a>既定のアクセラレータを変更する
 
-`accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 後続の関数呼び出しでアクセラレータを変更すると、 **false**が返されます。 `parallel_for_each` の呼び出しに別のアクセラレータを使用する場合は、この記事の「複数のアクセラレータを使用する」のセクションを参照してください。 次のコード例では、既定のアクセラレータをエミュレートおよびディスプレイへの接続が行われておらず、倍精度をサポートしているアクセラレータに設定します。
+`accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 アクセラレータを変更するための後続の関数呼び出しでは、が返さ **`false`** れます。 `parallel_for_each` の呼び出しに別のアクセラレータを使用する場合は、この記事の「複数のアクセラレータを使用する」のセクションを参照してください。 次のコード例では、既定のアクセラレータをエミュレートおよびディスプレイへの接続が行われておらず、倍精度をサポートしているアクセラレータに設定します。
 
 ```cpp
 bool pick_accelerator()
