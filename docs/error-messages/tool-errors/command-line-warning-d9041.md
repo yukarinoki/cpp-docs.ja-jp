@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 7c685a1ca3195ad4ab52bab8b5d32b1a51534b24
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e685e9bd0ffb58065f20f466131f8894baaf359f
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196576"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389728"
 ---
 # <a name="command-line-warning-d9041"></a>コマンド ラインの警告 D9041
 
-'/option ' の値 ' value ' が無効です。' value ' を想定しています。この警告を指定するときに、コマンドラインオプションに '/analyze ' を追加します
+> '/*option-name*' の値 '*option-value*' が無効です。'*仮定値 ' と*想定します。この警告を指定するときに、コマンドラインオプションに '/analyze ' を追加します
 
-**/Analyze**コマンドラインオプションを指定せずに、 **/wd**、 **/we**、 **/wo**、または **/wl**コマンドラインオプションにコード分析の警告番号が追加されました。 このエラーを解決するには、 **/analyze**コマンドラインオプションを追加するか、適切な **/w**コマンドラインオプションから無効な警告番号を削除します。
+**`/wd`** **`/we`** **`/wo`** **`/wl`** コマンドラインオプションを指定せずに、、、、またはコマンドラインオプションにコード分析の警告番号が追加されました **`/analyze`** 。 このエラーを解決するには、 **`/analyze`** コマンドラインオプションを追加するか、適切なコマンドラインオプションから無効な警告番号を削除し **`/w`** ます。
 
 ## <a name="example"></a>例
 
 次のコマンドラインの例では、警告 D9041 が生成されます。
 
-```
+```cmd
 cl /EHsc /LD /wd6001 filename.cpp
 ```
 
-警告を修正するには、 **/analyze**コマンドラインオプションを追加します。 ご使用のバージョンのコンパイラで **/analyze**がサポートされていない場合は、 **/wd**オプションから無効な警告番号を削除してください。
+この警告を修正するには、 **`/analyze`** コマンドラインオプションを追加します。 **`/analyze`** ご使用のバージョンのコンパイラでがサポートされていない場合は、オプションから無効な警告番号を削除して **`/wd`** ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コマンド ライン エラー D8000 から D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [MSVC コンパイラ オプション](../../build/reference/compiler-options.md)

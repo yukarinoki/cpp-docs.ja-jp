@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216688"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389949"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core Guidelines チェッカーリファレンス
 
-このセクションでは、C++ Core Guidelines チェッカーの警告を示します。 コード分析の詳細については、「 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis) 」および「[クイックスタート: C/c + + のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)」を参照してください。
+このセクションでは、C++ Core Guidelines チェッカーの警告を示します。 コード分析の詳細については、「 [ `/analyze` (コード分析)](/cpp/build/reference/analyze-code-analysis) 」および「[クイックスタート: C/c + + のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)」を参照してください。
 
 > [!NOTE]
 > いくつかの警告は複数のグループに属しており、すべての警告に完全な参照トピックが含まれているわけではありません。
