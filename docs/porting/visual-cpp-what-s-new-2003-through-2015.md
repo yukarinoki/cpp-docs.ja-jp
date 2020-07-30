@@ -2,12 +2,12 @@
 title: Visual C++ 2003 ～ 2015 の新機能
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e0fc576e8478a8d86d54daee22d797744eb870b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219457"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389936"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1850,7 +1850,7 @@ Microsoft 固有の **__nullptr**キーワードはと同じ意味を持ち **`n
 
 #### <a name="analyze-warnings"></a>/analyze の警告
 
-`/analyze` (Enterprise コード分析) のほとんどの警告が、CRT (C ランタイム) ライブラリ、MFC ライブラリ、ATL ライブラリから削除されました。
+ほとんどの **`/analyze`** (エンタープライズコード分析) 警告は、C ランタイム (CRT)、MFC、および ATL ライブラリから削除されました。
 
 #### <a name="animation-and-d2d-support"></a>アニメーションおよび D2D のサポート
 

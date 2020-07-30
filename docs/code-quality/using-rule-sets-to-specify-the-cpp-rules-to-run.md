@@ -1,21 +1,21 @@
 ---
 title: 規則セットを使用した実行対象の C++ 規則の指定
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373854"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389819"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行対象の C++ 規則を指定する
 
-Visual Studio では、コード分析に関連する特定のプロジェクトのニーズに合わせてカスタム*規則セット*を作成および変更できます。 既定の規則セットはに格納され `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` ます。
+Visual Studio では、コード分析に関連する特定のプロジェクトのニーズに合わせてカスタム*規則セット*を作成および変更できます。 既定の規則セットはに格納され *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* ます。
 
-**Visual Studio 2017 バージョン15.7 以降:** 任意のテキストエディターを使用してカスタム規則セットを作成し、使用しているビルドシステムに関係なく、コマンドラインビルドで適用できます。 詳細については、「 [/analyze: ルールセット](/cpp/build/reference/analyze-code-analysis)」を参照してください。
+**Visual Studio 2017 バージョン15.7 以降:** 任意のテキストエディターを使用してカスタム規則セットを作成し、使用しているビルドシステムに関係なく、コマンドラインビルドで適用できます。 詳細については、「[`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)」を参照してください。
 
 Visual Studio でカスタム C++ 規則セットを作成するには、Visual Studio IDE で C/c + + プロジェクトを開く必要があります。 次に、規則セットエディターで標準規則セットを開き、特定の規則を追加または削除し、必要に応じて、コード分析によって規則に違反したと判断されたときに発生するアクションを変更します。
 
@@ -23,19 +23,40 @@ Visual Studio でカスタム C++ 規則セットを作成するには、Visual 
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>既存の 1 つの規則セットからカスタム規則を作成するには
 
+::: moniker range="<=vs-2017"
+
 1. ソリューションエクスプローラーで、プロジェクトのショートカットメニューを開き、[**プロパティ**] を選択します。
 
-1. [**プロパティ**] タブで、[**コード分析**] を選択します。
+1. [**プロパティページ**] ダイアログボックスで、[**構成プロパティ**] [ > **コード分析**] > **[全般**] プロパティページを選択します。
 
 1. [**規則セット**] ドロップダウンリストで、次のいずれかの操作を行います。
 
    - カスタマイズする規則セットを選択します。
 
-     \- または
+     \- - または -
 
    - **\<Browse...>** 一覧にない既存の規則セットを指定する場合に選択します。
 
 1. [**開く**] を選択すると、ルールセットエディターにルールが表示されます。
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. ソリューションエクスプローラーで、プロジェクトのショートカットメニューを開き、[**プロパティ**] を選択します。
+
+1. [**プロパティページ**] ダイアログボックスで、[**構成プロパティ**] [ > **コード分析**] [ > **Microsoft** ] プロパティページを選択します。
+
+1. [**アクティブな規則**] ドロップダウンリストで、次のいずれかの操作を行います。
+
+   - カスタマイズする規則セットを選択します。
+
+     \- - または -
+
+   - **\<Browse...>** 一覧にない既存の規則セットを指定する場合に選択します。
+
+1. [**開く**] を選択すると、ルールセットエディターにルールが表示されます。
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>規則セット エディターで規則セットを変更するには
 
@@ -77,41 +98,23 @@ Visual Studio でカスタム C++ 規則セットを作成するには、Visual 
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>テキストエディターでルールセットを作成するには
 
-カスタム規則セットは、テキストエディターで作成し、拡張機能のある任意の場所に格納 `.ruleset` し、 [/analyze: ルールセット](/cpp/build/reference/analyze-code-analysis)コンパイラオプションを使用してで適用できます。
+カスタムルールセットは、テキストエディターで作成し、拡張機能のある任意の場所に保存 *`.ruleset`* し、コンパイラオプションを使用してで適用でき [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) ます。
 
 次の例は、開始点として使用できる基本的な規則セットファイルを示しています。
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>ルールセットスキーマ
 
-次のルールセットスキーマでは、ルールセットファイルの XML スキーマについて説明します。 ルールセットスキーマはに格納されて `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` います。 これを使用すると、プログラムによって独自のルールセットを作成したり、カスタムルールセットが正しい形式に準拠しているかどうかを検証したりすることができます。 詳細については、「[方法: XSD スキーマに基づいて XML ドキュメントを作成](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)する」を参照してください。
+次のルールセットスキーマでは、ルールセットファイルの XML スキーマについて説明します。 ルールセットスキーマはに格納されて *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* います。 これを使用すると、プログラムによって独自のルールセットを作成したり、カスタムルールセットが正しい形式に準拠しているかどうかを検証したりすることができます。 詳細については、「[方法: XSD スキーマに基づいて XML ドキュメントを作成](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)する」を参照してください。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -236,7 +239,7 @@ Visual Studio でカスタム C++ 規則セットを作成するには、Visual 
 
 スキーマ要素の詳細:
 
-| Schema 要素 | [説明] |
+| Schema 要素 | 説明 |
 |--------------------|--------------|
 | `TLocalization` | ルールセットファイルの名前、ルールセットファイルの説明、ローカライズされたリソースを含むリソースアセンブリの名前、ローカライズされたリソースのベース名など、ローカライズ情報 |
 | `TRuleHintPaths` | ルールセットファイルを検索するためのヒントとして使用されるファイルパス |
