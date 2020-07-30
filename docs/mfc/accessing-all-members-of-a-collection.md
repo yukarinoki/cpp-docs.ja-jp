@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214179"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 
@@ -42,11 +42,11 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 
    この例では、 `CPerson` オブジェクトへのポインターを格納する型付きポインター配列を使っています。 この配列は、定義済みの非テンプレート クラスである `CObArray`クラスから派生しています。 `GetAt` は `CPerson` オブジェクトへのポインターを返します。 型付きポインター コレクション クラスの場合は、配列でもリストでも、最初のパラメーターで基本クラスを指定し、2 番目のパラメーターで格納するデータの型を指定します。
 
-   `CTypedPtrArray`また、クラスは **[]** 演算子をオーバーロードして、配列の要素にアクセスするために通常の配列添字構文を使用できるようにします。 上記**の for**ループの本体のステートメントの代わりに、
+   `CTypedPtrArray`また、クラスは **[]** 演算子をオーバーロードして、配列の要素にアクセスするために通常の配列添字構文を使用できるようにします。 上のループの本体にあるステートメントの代わりに、 **`for`**
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   この演算子は **const** バージョンと非**const** バージョンがあります。 **const** バージョンは、 **const** の配列に対して呼び出され、代入ステートメントの右側にのみ表示されます。
+   この演算子は **`const`** 、バージョンと非バージョンの両方に存在し **`const`** ます。 **`const`** 配列に対して呼び出されるバージョンは、 **`const`** 代入ステートメントの右側にのみ表示されます。
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>リストを反復処理するには
 

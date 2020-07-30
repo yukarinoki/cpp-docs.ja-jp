@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b6b7bb54d5dce48dc6fce517eb0c909b0284da2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233445"
 ---
 # <a name="compiler-error-c2885"></a>コンパイラ エラー C2885
 
@@ -19,9 +19,9 @@ ms.locfileid: "74760929"
 
 [Using](../../cpp/using-declaration.md)宣言を正しく使用しませんでした。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。入れ子になった型への `using` 宣言を持つことは無効になります。入れ子になった型に対しては、各参照を明示的に修飾するか、名前空間に型を配置するか、typedef を作成する必要があります。
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。入れ子にされた型への宣言を持つことは無効になります。入れ子になった **`using`** 型に対する各参照を明示的に修飾するか、型を名前空間に配置するか、typedef を作成します。
 
 次の例では、C2885 が生成されます。
 
@@ -52,9 +52,9 @@ int main () {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-`using` キーワードをクラスメンバーと共に使用する場合C++ 、では、そのメンバーを別のクラス (派生クラス) 内で定義する必要があります。
+**`using`** クラスメンバーでキーワードを使用する場合、C++ では、そのメンバーを別のクラス (派生クラス) 内で定義する必要があります。
 
 次の例では、C2885 が生成されます。
 

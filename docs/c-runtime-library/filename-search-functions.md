@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226243"
 ---
 # <a name="filename-search-functions"></a>ファイル名検索関数
 
@@ -37,7 +37,7 @@ ms.locfileid: "75300311"
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_findfirst` 関数は `filespec` 引数で指定されたファイルと一致するファイル名の最初のインスタンスに関する情報を提供します。 `filespec` では、ホスト オペレーティング システムでサポートされているいかなるワイルドカード文字の組み合わせも使用できます。
 
@@ -76,7 +76,7 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 標準。 ファイルにその他の属性は設定されておらず、制限なく読み取りや書き込みができます。 値: 0x00。
 
 `_A_RDONLY`<br/>
-読み取り専用。 書き込み用にファイルを開くことや、同じ名前を持つファイルを作成することはできません。 値: 0x01。
+読み取り専用です。 書き込み用にファイルを開くことや、同じ名前を持つファイルを作成することはできません。 値: 0x01。
 
 `_A_SUBDIR`<br/>
 サブディレクトリ。 値: 0x10。
@@ -88,7 +88,7 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 
 `_find` 関数を入れ子にできます。 たとえば、 `_findfirst` または `_findnext` への呼び出しでサブディレクトリのファイルを見つけた場合、 `_findfirst` または `_findnext`への別の呼び出しで新しい検索を開始することができます。
 
-`_wfindfirst` と `_wfindnext` は、 `_findfirst` と `_findnext`のワイド文字バージョンです。 ワイド文字バージョンの構造体の引数は IO.h と Wchar.h で定義されている `_wfinddata_t` データ型です。 このデータ型のフィールドは、 `_finddata_t` では名前フィールドが `_wfinddata_t` 型ではなく `wchar_t` 型であることを除き、 `char`データ型と同じです。 それ以外では、 `_wfindfirst` と `_wfindnext` の動作は `_findfirst` と `_findnext`と同じです。
+`_wfindfirst` と `_wfindnext` は、 `_findfirst` と `_findnext`のワイド文字バージョンです。 ワイド文字バージョンの構造体の引数は IO.h と Wchar.h で定義されている `_wfinddata_t` データ型です。 このデータ型のフィールドは、データ型のフィールドと同じですが、 `_finddata_t` `_wfinddata_t` name フィールドのフィールドは型ではなく型である点が異なり **`wchar_t`** **`char`** ます。 それ以外では、 `_wfindfirst` と `_wfindnext` の動作は `_findfirst` と `_findnext`と同じです。
 
 `_findfirst` と `_findnext` は 64 ビット時刻型を使用します。 従来の 32 ビット時刻型を使用する場合は、 `_USE_32BIT_TIME_T`を定義できます。 名前に `32` サフィックスを持つこれらの関数のバージョンは 32 ビット時刻型を使用し、 `64` サフィックスを持つものは 64 ビットの時刻型を使用します。
 
@@ -98,15 +98,15 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 
 |構造体|時刻型|ファイル サイズの型|
 |---------------|---------------|--------------------|
-|`_finddata_t`、`_wfinddata_t`|`__time64_t`|`_fsize_t`|
-|`_finddata32_t`、`_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`、`__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`、`_wfinddata32i64_t`|`__time32_t`|`__int64`|
-|`_finddata64i32_t`、`_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
+|`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
+|`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
+|`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` は `unsigned long` (32 ビット) の `typedef` です。
+`_fsize_t`は、 **`typedef`** **`unsigned long`** (32 ビット) のです。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // crt_find.c
@@ -158,4 +158,4 @@ N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 
 ## <a name="see-also"></a>関連項目
 
-[システム コール](../c-runtime-library/system-calls.md)
+[システムコール](../c-runtime-library/system-calls.md)

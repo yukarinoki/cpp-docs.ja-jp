@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404307"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231859"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -170,7 +170,7 @@ class CButton : public CWnd
 
 ダイアログリソースからオブジェクトを作成すると、 `CButton` ユーザーが `CButton` ダイアログボックスを閉じたときにオブジェクトが自動的に破棄されます。
 
-ウィンドウ内にオブジェクトを作成する場合は `CButton` 、そのオブジェクトを破棄する必要がある場合があります。 `CButton`**新しい**関数を使用してヒープにオブジェクトを作成する場合、ユーザーが Windows ボタンコントロールを閉じたときに破棄するには、オブジェクトに対して**delete**を呼び出す必要があります。 オブジェクトをスタックに作成した場合 `CButton` 、または親ダイアログオブジェクトに埋め込んだ場合は、自動的に破棄されます。
+ウィンドウ内にオブジェクトを作成する場合は `CButton` 、そのオブジェクトを破棄する必要がある場合があります。 関数を使用してヒープにオブジェクトを作成する場合は、 `CButton` **`new`** **`delete`** ユーザーが Windows ボタンコントロールを閉じたときにオブジェクトを破棄するために、を呼び出す必要があります。 オブジェクトをスタックに作成した場合 `CButton` 、または親ダイアログオブジェクトに埋め込んだ場合は、自動的に破棄されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -1120,7 +1120,7 @@ BOOL SetTextMargin(RECT* pmargin);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CComboBox クラス](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic クラス](../../mfc/reference/cstatic-class.md)<br/>

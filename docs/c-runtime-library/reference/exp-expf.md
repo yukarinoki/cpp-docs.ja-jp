@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234173"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -77,7 +77,7 @@ long double expl(
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± Quiet NaN、不確定|None|_DOMAIN|
+|± Quiet NaN、不確定|なし|_DOMAIN|
 |±無限大|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
@@ -86,13 +86,13 @@ long double expl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**または**long double**引数を受け取る**exp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **exp**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、または引数を受け取る**exp**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **exp**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須の C ヘッダー|必須の C++ ヘッダー|
+|機能|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|---------------------|---|
 |**exp**, **、** **expl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -121,6 +121,6 @@ exp( 2.302585 ) = 10.000000
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>
 [_CIexp](../../c-runtime-library/ciexp.md)<br/>

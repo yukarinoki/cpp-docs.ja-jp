@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220809"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
@@ -18,15 +18,15 @@ ms.locfileid: "75299079"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
-|属性: <br /><br /> レベル|アイテム|ストレージ クラス<br /><br /> 指定子|結果: <br /><br /> 有効期間|可視性|
+|属性:<br /><br /> レベル|アイテム|ストレージ クラス<br /><br /> 指定子|結果:<br /><br /> 有効期間|可視性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|ファイル スコープ|変数定義|**static**|Global|発生元のソース ファイルの剰余残りの部分|
-||変数宣言|**extern**|Global|発生元のソース ファイルの剰余残りの部分|
-||関数プロトタイプまたは定義|**static**|Global|単一のソース ファイル|
-||関数プロトタイプ|**extern**|Global|ソース ファイルの残りの部分|
-|ブロック スコープ|変数宣言|**extern**|Global|ブロック|
-||変数定義|**static**|Global|ブロック|
-||変数定義|**auto** か **register**|ローカル|ブロック|
+|ファイル スコープ|変数定義|**`static`**|Global|発生元のソース ファイルの剰余残りの部分|
+||変数宣言|**`extern`**|Global|発生元のソース ファイルの剰余残りの部分|
+||関数プロトタイプまたは定義|**`static`**|Global|単一のソース ファイル|
+||関数プロトタイプ|**`extern`**|Global|ソース ファイルの残りの部分|
+|ブロック スコープ|変数宣言|**`extern`**|Global|ブロックする|
+||変数定義|**`static`**|Global|ブロックする|
+||変数定義|**`auto`** または **`register`**|ローカル|ブロック|
 
 ## <a name="example"></a>例
 

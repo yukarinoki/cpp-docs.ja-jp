@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 3bf4065b4c409e1baad3183cc8ccbd8c97d43d5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5dacf0b80acfd376db6738ef0d3bdc881c4c1736
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212320"
 ---
 # <a name="hash_set-class"></a>hash_set クラス
 
@@ -111,11 +111,11 @@ class hash_set
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 hash_set に格納される要素のデータ型。
 
-*特徴*\
-2 つの関数オブジェクトを含む型、2 つの要素値を並べ替えキーとして比較して相対的な順序を決定できる二項述語と、要素のキー値を符号`size_t`なし整数型にマッピングする単項述語であるハッシュ関数である 2 つの関数の比較の 1 つです。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
+*名札*\
+2つの関数オブジェクトを含む型。2つの要素の値を並べ替えキーとして比較してその相対順序を決定できる二項述語と、要素のキー値を型の符号なし整数にマップする単項述語であるハッシュ関数の2つの関数オブジェクトを含む型 `size_t` 。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
 
 *アロケーター*\
 メモリの hash_set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
@@ -132,7 +132,7 @@ hash_set は次のようなものです。
 
 - 一意のクラスです。これは、各要素が一意のキーを持つ必要があるためです。 hash_set は単純な連想コンテナーでもあるため、要素も一意です。
 
-- クラス テンプレートは、提供される機能はジェネリックであり、要素またはキーとして含まれる特定のデータ型とは無関係であるためです。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
+- クラステンプレートは、提供される機能がジェネリックであり、要素またはキーとして含まれる特定のデータ型に依存しないためです。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
 
 並べ替えでのハッシュの主な利点は、効率に優れていることです。コンテナー内にある要素を並べ替えるとき、その時間は要素の数の対数に比例しますが、適切なハッシュを実行すると、挿入、削除、検索にかかる平均時間は一定しています。 set 内の要素の値は直接変更できません。 代わりに、以前の値を削除し、新しい値の要素を挿入する必要があります。
 
@@ -140,9 +140,9 @@ hash_set は次のようなものです。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_set は最適な連想コンテナーとなっている必要があります。 hash_set の要素は一意であり、独自の並べ替えキーとして機能します。 この種類の構造体のモデルは、単語が 1 回だけ出現する可能性がある単語の順序付きのリストです。 キーワードを複数設定できる場合は、hash_multiset が適切なコンテナー構造体となります。 値が一意のキーワードのリストにアタッチされている必要がある場合、hash_map がこのデータを格納するのに適切な構造体です。 キーが一意でない場合は、hash_multimap が最適なコンテナーです。
 
-hash_setは、value_compare型の格納されたハッシュ`Traits`オブジェクトを呼び出すことによって、制御するシーケンスを順序[付](#value_compare)けます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、*hash_compare<Key, less\<Key> >* クラスのオブジェクトと同様に動作する必要があります。 具体的には、Key`key`型のすべての値に対して、Trait(`key`) 呼び出しによって型size_tの値の分布が生成されます。
+Hash_set は、value_compare 型の格納されたハッシュオブジェクトを呼び出すことによって、制御するシーケンスを並べ替え `Traits` ます。 [value_compare](#value_compare) 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、><の hash_compare クラスのオブジェクトと同じように動作する必要があり* \<Key> ます。* 具体的には、Key 型のすべての値について、 `key` 呼び出しの特徴 () によって `key` size_t 型の値の分布が生成されます。
 
-通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語*f*( *x*, *y*) は、2 つの引数オブジェクト x と y を持ち、戻り値が真または偽の関数オブジェクトです。 hash_set に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (*x* と *y*) が、*f*( *x*, *y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
+通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語*f*( *x*, *y*) は、2つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_set に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (*x* と *y*) が、*f*( *x*, *y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
 被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、順序関数、コンテナー オブジェクトに格納されるハッシュ テーブルの現在のサイズによって異なります。 ハッシュ テーブルの現在のサイズは特定できないため、通常は、被制御シーケンス内の要素の順序を予測することはできません。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を具体的に指す反復子だけが無効化されます。
 
@@ -150,38 +150,38 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
-|[Hash_set](#hash_set)|空の `hash_set`、または他の `hash_set` の全体または一部のコピーである hash_multiset を構築します。|
+|[hash_set](#hash_set)|空の `hash_set`、または他の `hash_set` の全体または一部のコピーである hash_multiset を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `hash_set` クラスを表す型。|
-|[const_iterator](#const_iterator)|`const` 内の 1 つの `hash_set` 要素を読み取ることができる双方向反復子を提供する型。|
-|[const_pointer](#const_pointer)|内の**const**要素へのポインターを提供する型`hash_set`。|
-|[const_reference](#const_reference)|に格納されている**const**要素への参照を提供`hash_set`する型。 **const**|
-|[const_reverse_iterator](#const_reverse_iterator)|内の任意の**const**要素を読み取ることができる双方向反復子を提供する`hash_set`型。|
+|[const_iterator](#const_iterator)|内の要素を読み取ることができる双方向反復子を提供する型 **`const`** `hash_set` 。|
+|[const_pointer](#const_pointer)|内の要素へのポインターを提供する型 **`const`** `hash_set` 。|
+|[const_reference](#const_reference)|**`const`** `hash_set` 読み取りと操作の実行のために、に格納されている要素への参照を提供する型 **`const`** 。|
+|[const_reverse_iterator](#const_reverse_iterator)|内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** `hash_set` 。|
 |[difference_type](#difference_type)|`hash_set` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
-|[反復 子](#iterator)|`hash_set` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
+|[反](#iterator)|`hash_set` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_set` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|並べ替えキーとしてキャパシティ内に `hash_set` の要素として格納されるオブジェクトを表す型。|
-|[ポインター (pointer)](#pointer)|`hash_set` 内の要素へのポインターを提供する型。|
-|[参照](#reference)|`hash_set` に格納されている要素への参照を提供する型。|
+|[pointer](#pointer)|`hash_set` 内の要素へのポインターを提供する型。|
+|[reference](#reference)|`hash_set` に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|反転された `hash_set` 内の 1 つの要素を読み取り、または変更できる双方向反復子を提供する型。|
-|[Size_type](#size_type)|`hash_set` 内の要素の数を表すことができる符号なし整数型。|
+|[size_type](#size_type)|`hash_set` 内の要素の数を表すことができる符号なし整数型。|
 |[value_compare](#value_compare)|2 つの関数オブジェクト、すなわち、`hash_set` の 2 つの要素の値を比較してその相対順序を判断できるクラス比較の二項述語と、要素のハッシュを計算する単項述語を提供する型です。|
-|[Value_type](#value_type)|値としてキャパシティ内に `hash_set` の要素として格納されるオブジェクトを表す型。|
+|[value_type](#value_type)|値としてキャパシティ内に `hash_set` の要素として格納されるオブジェクトを表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[開始](#begin)|`hash_set` 内の最初の要素を指す反復子を返します。|
+|[初め](#begin)|`hash_set` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`hash_set` 内の最初の要素を指す定数反復子を返します。|
-|[クエンド](#cend)|`hash_set` 内の最後の要素の次の位置を指す定数反復子を返します。|
-|[クリア](#clear)|`hash_set` のすべての要素を消去します。|
+|[cend](#cend)|`hash_set` 内の最後の要素の次の位置を指す定数反復子を返します。|
+|[オフ](#clear)|`hash_set` のすべての要素を消去します。|
 |[count](#count)|パラメーター指定したキーに一致するキーを持つ、`hash_set` 内の要素の数を返します。|
 |[crbegin](#crbegin)|反転された `hash_set` 内の最初の要素を指す定数反復子を返します。|
 |[crend](#crend)|反転された `hash_set` 内の最後の要素の次の位置を指す定数反復子を返します。|
@@ -193,13 +193,13 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |[erase](#erase)|`hash_set` 内の要素または要素の範囲を指定した位置から削除するか、または指定したキーと一致する要素を削除します。|
 |[find](#find)|指定したキーと同じキーを持つ、`hash_set` 内の要素の位置を指す反復子を返します。|
 |[get_allocator](#get_allocator)|`allocator` の構築に使用される `hash_set` オブジェクトのコピーを返します。|
-|[挿入](#insert)|`hash_set` に要素または要素範囲を挿入します。|
+|[insert](#insert)|`hash_set` に要素または要素範囲を挿入します。|
 |[key_comp](#key_comp)|`hash_set` 内のキーを並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 |[lower_bound](#lower_bound)|指定したキー以上のキーを持つ、`hash_set` 内の最初の要素を指す反復子を返します。|
 |[max_size](#max_size)|`hash_set` の最大長を返します。|
 |[rbegin](#rbegin)|反転された `hash_set` 内の最初の要素を指す反復子を返します。|
 |[rend](#rend)|反転された `hash_set` 内の最後の要素の次の位置を指す反復子を返します。|
-|[サイズ](#size)|`hash_set` 内の要素数を返します。|
+|[size](#size)|`hash_set` 内の要素数を返します。|
 |[スワップ](#swap)|2 つの `hash_set` の要素を交換します。|
 |[upper_bound](#upper_bound)|指定したキー以上のキーを持つ、`hash_set` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|`hash_set` の要素キー値をハッシュおよび順序付けするために使用するハッシュ特性オブジェクトのコピーを取得します。|
@@ -208,15 +208,15 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 
 |演算子|説明|
 |-|-|
-|[hash_set:演算子=](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
+|[hash_set:: operator =](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<hash_set>
+**ヘッダー:**\<hash_set>
 
 **名前空間:** stdext
 
-## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set::allocator_type
+## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set:: allocator_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -229,15 +229,15 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>解説
 
-`allocator_type`はテンプレート パラメータ*のアロケーター*のシノニムです。
+`allocator_type`は、テンプレートパラメーター*アロケーター*のシノニムです。
 
-*アロケーター*の詳細については、「クラスのhash_set」の「解説[」を参照](../standard-library/hash-set-class.md)してください。
+*アロケーター*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="example"></a>例
 
 `allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="hash_setbegin"></a><a name="begin"></a>hash_set::開始
+## <a name="hash_setbegin"></a><a name="begin"></a>hash_set:: begin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -256,7 +256,7 @@ hash_set 内の最初の要素、または空の hash_set の次の位置を指�
 
 ### <a name="remarks"></a>解説
 
-の戻り値`begin`が に`const_iterator`代入されている場合、hash_setオブジェクトの要素は変更できません。 の戻り値`begin`が に`iterator`代入されている場合、hash_setオブジェクトの要素を変更できます。
+の戻り値 `begin` がに割り当てられている場合 `const_iterator` 、hash_set オブジェクト内の要素は変更できません。 の戻り値 `begin` がに割り当てられている場合 `iterator` 、hash_set オブジェクト内の要素を変更できます。
 
 ### <a name="example"></a>例
 
@@ -298,7 +298,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2
 ```
 
-## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set::cbegin
+## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set:: cbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -345,7 +345,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_setcend"></a><a name="cend"></a>hash_set::cend
+## <a name="hash_setcend"></a><a name="cend"></a>hash_set:: cend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -393,7 +393,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_setclear"></a><a name="clear"></a>hash_set::クリア
+## <a name="hash_setclear"></a><a name="clear"></a>hash_set:: clear
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -437,12 +437,12 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.
 ```
 
-## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set::const_iterator
+## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set:: const_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
 
-hash_set の 1 つの **const** 要素を読み取ることができる双方向反復子を提供する型。
+Hash_set 内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
@@ -456,12 +456,12 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` の使用例については、[begin](#begin) の例をご覧ください。
 
-## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set::const_pointer
+## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set:: const_pointer
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
 
-hash_set 内の **const** 要素へのポインターを提供する型。
+Hash_set 内の要素へのポインターを提供する型 **`const`** 。
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_pointer const_pointer;
@@ -471,14 +471,14 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_pointer` 型で要素の値を変更することはできません。
 
-ほとんどの場合、**const** hash_set オブジェクト内の要素にアクセスするには、[const_iterator](#const_iterator) を使用する必要があります。
+ほとんどの場合、hash_set オブジェクト内の要素にアクセスするには、 [const_iterator](#const_iterator)を使用する必要があり **`const`** ます。
 
-## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set::const_reference
+## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set:: const_reference
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
 
-読み取りと **const** 操作の実行のために、hash_set に格納された **const** 要素への参照を提供する型。
+**`const`** 読み取りと操作の実行のために hash_set に格納されている要素への参照を提供する型 **`const`** 。
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reference const_reference;
@@ -520,12 +520,12 @@ int main( )
 The first element in the hash_set is 10.
 ```
 
-## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set::const_reverse_iterator
+## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
 
-hash_set の 任意の **const** 要素を読み取ることができる双方向反復子を提供する型。
+Hash_set 内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
@@ -539,7 +539,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例をご覧ください。
 
-## <a name="hash_setcount"></a><a name="count"></a>hash_set::カウント
+## <a name="hash_setcount"></a><a name="count"></a>hash_set:: count
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -552,7 +552,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 照合される hash_set の要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -565,7 +565,7 @@ hash_set に一致するキーを持つ要素が含まれていない場合は 0
 
 メンバー関数は、次の範囲内の要素の数を返します。
 
-\[lower_bound(*キー*) upper_bound(*キー*) 。
+\[lower_bound (*キー*)、upper_bound (*キー*))。
 
 ### <a name="example"></a>例
 
@@ -603,7 +603,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set::クリbegin
+## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set:: crbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -655,7 +655,7 @@ int main( )
 The first element in the reversed hash_set is 30.
 ```
 
-## <a name="hash_setcrend"></a><a name="crend"></a>hash_set::クレンド
+## <a name="hash_setcrend"></a><a name="crend"></a>hash_set:: crend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -708,7 +708,7 @@ int main( )
 The last element in the reversed hash_set is 10.
 ```
 
-## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set::difference_type
+## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set::d ifference_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -785,7 +785,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.
 ```
 
-## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set::エムプレイス
+## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set:: emplace
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -803,11 +803,11 @@ emplace(
 
 |パラメーター|説明|
 |-|-|
-|*ヴァル*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_set](../standard-library/hash-set-class.md) に挿入される要素の値。|
+|*val*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_set](../standard-library/hash-set-class.md) に挿入される要素の値。|
 
 ### <a name="return-value"></a>戻り値
 
-メンバー`emplace`関数は、挿入が行われた場合は**true**を返す**ブール**コンポーネントを返し`hash_set`、キーに同等の値を持つ要素が既に含まれ、反復子コンポーネントが新しい要素が挿入されたアドレスまたは要素が既に配置されている場所を返す場合は**false**を返します。
+この `emplace` メンバー関数は、 **`bool`** **`true`** 挿入が行われた場合、および **`false`** その `hash_set` キーが順序の同じ値を持つ要素が既に含まれていて、その反復子コンポーネントが新しい要素が挿入されたアドレスまたは要素が既に存在していたアドレスを返す場合に、そのコンポーネントがを返すペアを返します。
 
 ### <a name="remarks"></a>解説
 
@@ -837,7 +837,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set::emplace_hint
+## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set:: emplace_hint
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -855,8 +855,8 @@ iterator emplace(
 
 |パラメーター|説明|
 |-|-|
-|*ヴァル*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_set](../standard-library/hash-set-class.md) に挿入される要素の値。|
-|*_where*|正しい挿入ポイントの検索を開始する場所  (挿入ポイントが _Where の直後にある場合、挿入は対数時間ではなく償却定数時間*で*発生する可能性があります。|
+|*val*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_set](../standard-library/hash-set-class.md) に挿入される要素の値。|
+|*_Where*|正しい挿入ポイントの検索を開始する場所  (挿入ポイントが *_Where*の直後にある場合は、対数時間ではなく、償却定数時間で挿入できます)。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -864,7 +864,7 @@ iterator emplace(
 
 ### <a name="remarks"></a>解説
 
-挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で発生する可能性があります。
+挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -892,7 +892,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setempty"></a><a name="empty"></a>hash_set::空
+## <a name="hash_setempty"></a><a name="empty"></a>hash_set:: empty
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -905,7 +905,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-hash_set が空の場合は **true**、hash_set が空ではない場合は **false**。
+**`true`** hash_set が空の場合は。**`false`** hash_set が空でない場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -941,7 +941,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.
 ```
 
-## <a name="hash_setend"></a><a name="end"></a>hash_set::終了
+## <a name="hash_setend"></a><a name="end"></a>hash_set:: end
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -960,7 +960,7 @@ hash_set 内の最後の要素の次の位置を指す双方向反復子。 hash
 
 ### <a name="remarks"></a>解説
 
-`end`は、イテレータがhash_setの終わりに達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
+`end`は、反復子が hash_set の末尾に達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
 
 ### <a name="example"></a>例
 
@@ -1004,7 +1004,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2
 ```
 
-## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set::equal_range
+## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set:: equal_range
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1019,14 +1019,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
 1 番目がそのキーの [lower_bound](../standard-library/set-class.md#lower_bound)、2 番目がそのキーの [upper_bound](../standard-library/set-class.md#upper_bound) である、反復子のペア。
 
-メンバー関数から返されたペア PR の最初の反復器にアクセスするには、`pr`を使用します。 **まず**、下限の反復器を逆参照するには、 (\*`pr`を使用します。 **最初**に). メンバー関数によって返されるペア`pr`の 2 番目の反復器にアクセスするには、`pr`を使用します。 **2 番目**のを、上限の反復器を逆参照するには、 \* `pr`( を使用します。 **2 番目**)。
+メンバー関数によって返されたペア pr の最初の反復子にアクセスするには、を使用し `pr` ます。 **最初**に、下限の反復子を逆参照するには、(を使用し \* `pr` ます。 **最初**)。 `pr`メンバー関数によって返されたペアの2番目の反復子にアクセスするには、を使用し `pr` ます。 **次**に、上限の反復子を逆参照するには、(を使用し \* `pr` ます。 **2 番目**)。
 
 ### <a name="remarks"></a>解説
 
@@ -1089,7 +1089,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ```
 
-## <a name="hash_seterase"></a><a name="erase"></a>hash_set::消去
+## <a name="hash_seterase"></a><a name="erase"></a>hash_set:: erase
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1106,7 +1106,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_where*\
+*_Where*\
 hash_set から削除する要素の位置。
 
 *まずは*\
@@ -1115,7 +1115,7 @@ hash_set から削除する最初の要素の位置。
 *前の*\
 hash_set から削除する最後の要素の次の位置。
 
-*キー*\
+*レジストリ*\
 hash_set から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -1209,7 +1209,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ```
 
-## <a name="hash_setfind"></a><a name="find"></a>hash_set::検索
+## <a name="hash_setfind"></a><a name="find"></a>hash_set:: find
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1224,18 +1224,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 検索対象の hash_set 内の要素の並べ替えキーによって照合される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
-`iterator`指定`const_iterator`したキーと等価な要素の位置を指定するか、またはキーに一致するものが見つからない場合に、hash_setの最後の要素の次の位置を指定します。
+`iterator` `const_iterator` 指定したキーと等しい要素の位置を指すまたは。キーの一致が検出されない場合は、hash_set 内の最後の要素の次の位置を指すまたは。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、並べ替えキーが、比較可能度の低い関係に基`equivalent`づいて順序付けを誘導する二項述語の下で引数キーに対するソート キーを持つhash_set内の要素をアドレス指定する反復子を返します。
+このメンバー関数は、 `equivalent` 小なり比較関係に基づいて順序を誘発する二項述語の下で、並べ替えキーが引数キーである hash_set 内の要素をアドレス指定する反復子を返します。
 
-の戻り値`find`が に`const_iterator`代入されている場合、hash_setオブジェクトは変更できません。 の戻り値`find`が`iterator`に代入されている場合、hash_setオブジェクトを変更できます。
+の戻り値 `find` がに割り当てられている場合 `const_iterator` 、hash_set オブジェクトを変更することはできません。 の戻り値 `find` がに割り当てられている場合 `iterator` 、hash_set オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1287,7 +1287,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set::get_allocator
+## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set:: get_allocator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1300,9 +1300,9 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>戻り値
 
-hash_setがメモリを管理するために使用するアロケーターで、テンプレート パラメーター*の Allocator*です。
+Hash_set が、テンプレートパラメーター*アロケーター*であるメモリを管理するために使用するアロケーター。
 
-*アロケーター*の詳細については、「クラスのhash_set」の「解説[」を参照](../standard-library/hash-set-class.md)してください。
+*アロケーター*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1363,7 +1363,7 @@ int main( )
 }
 ```
 
-## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set::hash_set
+## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set:: hash_set
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1421,10 +1421,10 @@ hash_set(
 
 |パラメーター|説明|
 |-|-|
-|*アル*|この `hash_set` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
-|*作曲*|`const Traits` 内の要素の並べ替えに使用される、`hash_set` 型の比較関数。既定では `hash_compare` です。|
-|*そうです*|構築された `hash_set` のコピー元となる `hash_set`。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
+|*ウムアルクラ*|この `hash_set` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
+|*コンペティション*|`const Traits` 内の要素の並べ替えに使用される、`hash_set` 型の比較関数。既定では `hash_compare` です。|
+|*Right*|構築された `hash_set` のコピー元となる `hash_set`。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
 |*前の*|コピーする要素範囲を超える最初の要素の位置。|
 
 ### <a name="remarks"></a>解説
@@ -1435,9 +1435,9 @@ hash_set(
 
 すべてのコンストラクターは、`Traits` 型の関数オブジェクトを格納します。このオブジェクトは `hash_set` のキーの順序を確立するために使用され、後で [hash_set::key_comp](#key_comp) を呼び出して取得することができます。 `Traits` の詳細については、[hash_set クラス](../standard-library/hash-set-class.md)のトピックをご覧ください。
 
-1 番目のコンストラクターは、空の初期 `hash_set` を作成します。2 番目のコンストラクターは要素の順序を確立するために使用する比較関数の型 (`Comp`) を指定し、3 番目のコンストラクターは使用するアロケーターの型 (`Al`) を明示的に指定します。 キーワード `explicit` は、特定の種類の自動型変換が実行されないようにします。
+1 番目のコンストラクターは、空の初期 `hash_set` を作成します。2 番目のコンストラクターは要素の順序を確立するために使用する比較関数の型 (`Comp`) を指定し、3 番目のコンストラクターは使用するアロケーターの型 (`Al`) を明示的に指定します。 キーワードを入力すると、 **`explicit`** 特定の種類の自動型変換が抑制されます。
 
-4 番目と 5 番目のコンストラクターは`hash_set``Right`、 のコピーを指定します。
+4番目と5番目のコンストラクターは、のコピーを指定し `hash_set` `Right` ます。
 
 最後の 6 番目、7 番目、および 8 番目のコンストラクターは、要素の initializer_list を使用します。
 
@@ -1447,7 +1447,7 @@ hash_set(
 
 `hash_set` コンテナー内にある要素の実際の順序は、ハッシュ関数、順序関数、ハッシュ テーブルの現在のサイズに応じて異なります。順序関数のみによって要素の順序が決定されるセット コンテナーとは異なり、通常は要素の順序を予測できません。
 
-## <a name="hash_setinsert"></a><a name="insert"></a>hash_set::挿入
+## <a name="hash_setinsert"></a><a name="insert"></a>hash_set:: insert
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1476,15 +1476,15 @@ void insert(
 |-|-|
 |*Val*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、`hash_set` に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (挿入ポイントが `_Where` の直後にある場合、挿入処理は対数時間ではなく償却定数時間で実行できます)。|
-|*まずは*|`hash_set` からコピーされる最初の要素の位置。|
+|*First*|`hash_set` からコピーされる最初の要素の位置。|
 |*前の*|`hash_set` からコピーされる最後の要素の次の位置。|
 |*IList*|要素のコピー元の initializer_list。|
 
 ### <a name="return-value"></a>戻り値
 
-`insert`最初のメンバー関数は、挿入が行われた場合は**true**を返す**ブール**コンポーネントを返し、キーに同等の値を持つ要素が`hash_set`既に含まれ、反復子コンポーネントが新しい要素が挿入されたアドレスまたは要素が既に配置されている場所を返す場合は**false**を返します。
+1つ目の `insert` メンバー関数は、 **`bool`** **`true`** 挿入が行われた場合はを返し、 **`false`** その `hash_set` キーが順序に等しい値を持つ要素が既に含まれていて、その反復子コンポーネントが、新しい要素が挿入された、または要素が既に存在していたアドレスを返すというペアを返します。
 
-このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返されるペア`pr`の**bool**コンポーネントにアクセスするには`pr.second`、 を使用し、それを逆`*(pr.second)`参照するには、 を使用します。
+このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 **`bool`** `pr` このメンバー関数によって返されたペアのコンポーネントにアクセスするにはを使用し、 `pr.second` 逆参照するにはを使用し `*(pr.second)` ます。
 
 2 番目の `insert` メンバー関数は、`hash_set` に新しい要素が挿入された位置を指す反復子を返します。
 
@@ -1494,7 +1494,7 @@ void insert(
 
 3 番目のメンバー関数は、指定した `hash_set` の範囲 [ `First`, `Last`) 内の反復子が指す各要素に対応する `hash_set` に要素値のシーケンスを挿入します。
 
-## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set::反復器
+## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set:: iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1507,13 +1507,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>解説
 
-型`iterator`を使用して、要素の値を変更できます。
+型は、 `iterator` 要素の値を変更するために使用できます。
 
 ### <a name="example"></a>例
 
 `iterator` の宣言方法や使用方法の例については、[begin](#begin) の例をご覧ください。
 
-## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set::key_comp
+## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set:: key_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1526,9 +1526,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-hash_setが要素の順序を指定するために使用する関数オブジェクトを*返します。*
+Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの*特徴*です。
 
-*トレイト*の詳細については[、「hash_setクラス](../standard-library/hash-set-class.md)」トピックを参照してください。
+*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1536,7 +1536,7 @@ hash_setが要素の順序を指定するために使用する関数オブジェ
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
-これは、**true**並べ`_xVal`替え順序`_yVal`の前に、並べ替え順序と等しくない場合に true を返します。
+は、 **`true`** `_xVal` 並べ替え順序においてとがに等しくない場合にを返し `_yVal` ます。
 
 [key_compare](#key_compare) および [value_compare](#value_compare) は両方ともテンプレート パラメーター *Traits* のシノニムです。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -1589,7 +1589,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set::key_compare
+## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set:: key_compare
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1602,9 +1602,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare`はテンプレート パラメータ*Traits*の同義語です。
+`key_compare`は、テンプレートパラメーターの*特徴*のシノニムです。
 
-*トレイト*の詳細については[、「hash_setクラス](../standard-library/hash-set-class.md)」トピックを参照してください。
+*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
 `key_compare` および [value_compare](#value_compare) は、ともにテンプレート パラメーター *Traits* のシノニムです。 どちらも set および multiset クラスで使用でき、そこでは同一ですが、map および multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -1612,7 +1612,7 @@ typedef Traits key_compare;
 
 `key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例を参照してください。
 
-## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set::key_type
+## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set:: key_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1625,9 +1625,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type`はテンプレート パラメータ Key の同義語*です*。
+`key_type`は、テンプレートパラメーター*キー*のシノニムです。
 
-*Key*の詳細については、「[クラス](../standard-library/hash-set-class.md)のhash_set」の「解説」を参照してください。
+*キー*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 `key_type` および [value_type](#value_type) は両方ともテンプレート パラメーター *Key* のシノニムです。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -1635,7 +1635,7 @@ typedef Key key_type;
 
 `key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例を参照してください。
 
-## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set::lower_bound
+## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set:: lower_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1650,12 +1650,12 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
-引数`iterator`キー`const_iterator`以上のキーを持つhash_set内の要素の位置、またはキーに一致するものが見つからない場合は、hash_setの最後の要素の次の位置を指定する要素を指定します。
+`iterator` `const_iterator` 引数キー以上のキーを持つ hash_set 内の要素の位置を指すまたは。キーの一致が検出されない場合は、hash_set 内の最後の要素の次の位置を指す。
 
 ### <a name="remarks"></a>解説
 
@@ -1709,7 +1709,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set::max_size
+## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set:: max_size
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1747,7 +1747,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set:演算子=
+## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set:: operator =
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1768,7 +1768,7 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="remarks"></a>解説
 
-の既存の要素を削除した後、`hash_set``operator=`*右*の要素を コピーするか、または の`hash_set`内容を に移動します。
+内の既存の要素を消去した後、 `hash_set` `operator=` の内容*をに*コピーまたは移動し `hash_set` ます。
 
 ### <a name="example"></a>例
 
@@ -1808,7 +1808,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set::pオインター
+## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set::p ointer
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1821,11 +1821,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 
 ### <a name="remarks"></a>解説
 
-型`pointer`を使用して、要素の値を変更できます。
+型は、 `pointer` 要素の値を変更するために使用できます。
 
 ほとんどの場合、hash_set オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set::始まり
+## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set:: rbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1908,7 +1908,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreference"></a><a name="reference"></a>hash_set::参照
+## <a name="hash_setreference"></a><a name="reference"></a>hash_set:: reference
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -1958,7 +1958,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.
 ```
 
-## <a name="hash_setrend"></a><a name="rend"></a>hash_set::レンド
+## <a name="hash_setrend"></a><a name="rend"></a>hash_set:: rend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2044,7 +2044,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set::reverse_iterator
+## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2063,7 +2063,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例を参照してください。
 
-## <a name="hash_setsize"></a><a name="size"></a>hash_set::サイズ
+## <a name="hash_setsize"></a><a name="size"></a>hash_set:: size
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2110,7 +2110,7 @@ The hash_set length is 1.
 The hash_set length is now 2.
 ```
 
-## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set::size_type
+## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set:: size_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2127,7 +2127,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 `size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
 
-## <a name="hash_setswap"></a><a name="swap"></a>hash_set::スワップ
+## <a name="hash_setswap"></a><a name="swap"></a>hash_set:: swap
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2201,7 +2201,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.
 ```
 
-## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set::upper_bound
+## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set:: upper_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2216,12 +2216,12 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
-`iterator`引数キー`const_iterator`以上のキーを持つhash_set内の要素の位置、またはキーに一致するものが見つからない場合はhash_setの最後の要素の次の位置を指定する要素を指定します。
+`iterator` `const_iterator` 引数キー以上のキーを持つ hash_set 内の要素の位置を指す、またはキーの一致が検出されない場合は hash_set 内の最後の要素の次の位置を指す、または。
 
 ### <a name="remarks"></a>解説
 
@@ -2275,7 +2275,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.
 ```
 
-## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set::value_comp
+## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set:: value_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2288,9 +2288,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-hash_setが要素の順序を指定するために使用する関数オブジェクトを*返します。*
+Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの*比較*です。
 
-*比較*の詳細については[、「hash_set クラス](../standard-library/hash-set-class.md)」トピックの「解説」を参照してください。
+*比較*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -2298,9 +2298,9 @@ hash_setが要素の順序を指定するために使用する関数オブジェ
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
-これは、**true**並べ`_xVal`替え順序`_yVal`の前に、並べ替え順序と等しくない場合に true を返します。
+は、 **`true`** `_xVal` 並べ替え順序においてとがに等しくない場合にを返し `_yVal` ます。
 
-[value_compare](../standard-library/set-class.md#value_compare)と[key_compare](../standard-library/set-class.md#key_compare)の両方がテンプレート パラメータ*Compare*の同義語であることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
+[Value_compare](../standard-library/set-class.md#value_compare)と[key_compare](../standard-library/set-class.md#key_compare)の両方がテンプレートパラメーター*比較*のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
 ### <a name="example"></a>例
 
@@ -2351,7 +2351,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set::value_compare
+## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set:: value_compare
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2364,17 +2364,17 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>解説
 
-`value_compare`はテンプレート パラメータ*Traits*の同義語です。
+`value_compare`は、テンプレートパラメーターの*特徴*のシノニムです。
 
-*トレイト*の詳細については[、「hash_setクラス](../standard-library/hash-set-class.md)」トピックを参照してください。
+*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
-テンプレート パラメーター *Traits*の[key_compareと](#key_compare)`value_compare`同義語の両方があることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
+[Key_compare](#key_compare)との両方 `value_compare` が、テンプレートパラメーターの*特徴*のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
 ### <a name="example"></a>例
 
 `value_compare` の宣言方法や使用方法の例については、[value_comp](#value_comp) の例を参照してください。
 
-## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set::value_type
+## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set:: value_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -2423,5 +2423,5 @@ The hash_set has elements: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

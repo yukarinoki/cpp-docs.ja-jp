@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217247"
 ---
 # <a name="helpstringdll"></a>typelib
 
@@ -30,7 +30,7 @@ ms.locfileid: "80168123"
 
 ## <a name="remarks"></a>解説
 
-**Helpstringdll** C++属性には、 [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 属性と同じ機能があります。
+**Helpstringdll** C++ 属性には、 [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -53,14 +53,14 @@ __interface IMyI
 
 |||
 |-|-|
-|**対象**|**クラス**、**インターフェイス**、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`class`**、 **interface**、interface メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

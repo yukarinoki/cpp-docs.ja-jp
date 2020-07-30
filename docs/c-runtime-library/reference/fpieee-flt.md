@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: 8835a3184300f1c56f1123a09aa48cd34a387c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6a77dcba06b58191781900d4e24202c6335cfb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213568"
 ---
 # <a name="_fpieee_flt"></a>_fpieee_flt
 
@@ -64,28 +64,28 @@ Windows NT 例外情報構造体へのポインター。
 
 **_Fpieee_flt**の戻り値は、*ハンドラー*によって返される値です。 そのため、構造化例外処理 (SEH) 機構の except 句で IEEE フィルター ルーチンが使用される場合があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Fpieee_flt**関数は、IEEE 浮動小数点例外用のユーザー定義トラップハンドラーを呼び出し、関連するすべての情報を提供します。 このルーチンは SEH 機構の例外フィルターとして機能し、必要に応じて独自の IEEE 例外ハンドラーが呼び出されます。
 
-**_FPIEEE_RECORD**構造体には、IEEE 浮動小数点例外に関する情報が含まれています (Fpieee. h に定義されています)。 この構造体は、 **_fpieee_flt**によってユーザー定義トラップハンドラーに渡されます。
+Fpieee. h に定義されている **_FPIEEE_RECORD**構造体には、IEEE 浮動小数点例外に関する情報が含まれています。 この構造体は、 **_fpieee_flt**によってユーザー定義トラップハンドラーに渡されます。
 
 |_FPIEEE_RECORD フィールド|説明|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**Precision**|これらの**符号なし** **int**フィールドには、例外が発生した時点の浮動小数点環境に関する情報が含まれます。|
-|**操作**|この**符号なし** **int**フィールドは、トラップを発生させた操作の種類を示します。 型が比較 ( **_FpCodeCompare**) の場合**は、_FPIEEE_COMPARE_RESULT フィールドに**特殊な値 (fpieee. h で定義) のいずれかを指定できます。 変換の種類 ( **_FpCodeConvert**) は、浮動小数点変換操作中にトラップが発生したことを示します。 **Operand1**と**結果**の型を調べて、試行されている変換の種類を特定できます。|
+|**RoundingMode**<br/>**[精度]**|これらのフィールドには、 **`unsigned int`** 例外が発生した時点の浮動小数点環境に関する情報が含まれます。|
+|**操作**|この **`unsigned int`** フィールドは、トラップを発生させた操作の種類を示します。 型が比較 (**_FpCodeCompare**) の場合は、(Fpieee. h に定義されている) 特別な **_FPIEEE_COMPARE_RESULT**値の1つを**RESULT. Value**フィールドに指定できます。 変換の種類 (**_FpCodeConvert**) は、浮動小数点変換操作中にトラップが発生したことを示します。 **Operand1**と**結果**の型を調べて、試行されている変換の種類を特定できます。|
 |**Operand1**<br/>**Operand2**<br/>**結果**|これらの **_FPIEEE_VALUE**構造体は、提案された結果とオペランドの型と値を示します。 各構造体には、次のフィールドが含まれます。<br /><br /> **オペレーティング andvalid** -応答する値が有効かどうかを示すフラグ。<br />**Format** -対応する値のデータ型。 対応する値が有効でなくても、形式の種類が返されることがあります。<br />**値**-結果またはオペランドのデータ値。|
-|**原因**<br/>**Enable**<br/>**ステータス**|**_FPIEEE_EXCEPTION_FLAGS**は、浮動小数点例外の種類ごとに1つのビットフィールドを格納します。 これらのフィールドと、[_controlfp](control87-controlfp-control87-2.md) に指定される例外をマスクするために使用される引数との間には対応関係があります。 各ビットの正確な意味はコンテキストに依存します。<br /><br /> **原因**-各ビットセットビットは、発生した特定の例外を示します。<br />**Enable** -各設定ビットは、特定の例外が現在マスク解除されていることを示します。<br />**Status** -各設定ビットは、特定の例外が現在保留中であることを示します。 これには、 **_controlfp**によってマスクされたために発生していない例外が含まれます。|
+|**原因**<br/>**有効化**<br/>**状態**|**_FPIEEE_EXCEPTION_FLAGS**は、浮動小数点例外の種類ごとに1つのビットフィールドを格納します。 これらのフィールドと、[_controlfp](control87-controlfp-control87-2.md) に指定される例外をマスクするために使用される引数との間には対応関係があります。 各ビットの正確な意味はコンテキストに依存します。<br /><br /> **原因**-各ビットセットビットは、発生した特定の例外を示します。<br />**Enable** -各設定ビットは、特定の例外が現在マスク解除されていることを示します。<br />**Status** -各設定ビットは、特定の例外が現在保留中であることを示します。 これには、 **_controlfp**によってマスクされたために発生していない例外も含まれます。|
 
-無効になっている保留中の例外は、有効にされたときに発生します。 これにより、 **_fpieee_flt**を例外フィルターとして使用するときに未定義の動作が発生する可能性があります。 浮動小数点例外を有効にする前に、必ず [_clearfp](clear87-clearfp.md) を呼び出してください。
+無効になっている保留中の例外は、有効にされたときに発生します。 これにより、 **_fpieee_flt**を例外フィルターとして使用する場合に、未定義の動作が発生する可能性があります。 浮動小数点例外を有効にする前に、必ず [_clearfp](clear87-clearfp.md) を呼び出してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fpieee_flt**|\<fpieee.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -156,6 +156,6 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[_control87、_controlfp、 \_ _control87_2](control87-controlfp-control87-2.md)<br/>
 [_controlfp_s](controlfp-s.md)<br/>

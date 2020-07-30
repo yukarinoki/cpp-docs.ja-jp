@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: ad4b6dcaf6db1a8abe5b81b4d630e84b54fbaa63
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff60e05c7d14104e164e8251a9146f8b0d0dcde3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376870"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203924"
 ---
 # <a name="atomic_flag-structure"></a>atomic_flag 構造体
 
-**bool**フラグをアトミックに設定およびクリアするオブジェクトを記述します。 アトミック フラグの操作は常にロック制御不要です。
+フラグをアトミックに設定およびクリアするオブジェクトを記述し **`bool`** ます。 アトミック フラグの操作は常にロック制御不要です。
 
 ## <a name="syntax"></a>構文
 
@@ -29,8 +29,8 @@ struct atomic_flag;
 
 |名前|説明|
 |----------|-----------------|
-|[クリア](#clear)|格納されているフラグを**false**に設定します。|
-|[test_and_set](#test_and_set)|格納されているフラグを**true**に設定し、初期フラグ値を返します。|
+|[オフ](#clear)|格納されているフラグをに設定 **`false`** します。|
+|[test_and_set](#test_and_set)|に格納されているフラグをに設定 **`true`** し、初期フラグ値を返します。|
 
 ## <a name="remarks"></a>解説
 
@@ -38,13 +38,13 @@ struct atomic_flag;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:**\<アトミック>
+**ヘッダー:**\<atomic>
 
 **名前空間:** std
 
-## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag::クリア
+## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag:: clear
 
-指定した[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で`*this`に格納される**bool**フラグを**false**に設定します。
+**`bool`** **`*this`** **`false`** 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、に格納されているフラグをに設定します。
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -56,9 +56,9 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 *順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
-## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag::test_and_set
+## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag:: test_and_set
 
-指定した[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内の`*this`に格納される**bool**フラグを**true**に設定します。
+**`bool`** **`*this`** **`true`** 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、に格納されているフラグをに設定します。
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -72,8 +72,8 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="return-value"></a>戻り値
 
-`*this` に格納されているフラグの初期値。
+に格納されているフラグの初期値 **`*this`** 。
 
 ## <a name="see-also"></a>関連項目
 
-[\<原子>](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

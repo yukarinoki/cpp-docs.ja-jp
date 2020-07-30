@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213269"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 制限指定子は、関数宣言およびラムダ宣言に適用できます。 制限は、関数のコードに適用され、また、C++ Accelerated Massive Parallelism (C++ AMP) ランタイムを使用するアプリケーションの関数の動作に適用されます。
 
 > [!NOTE]
-> **__Declspec**ストレージクラス属性の一部である**restrict**キーワードの詳細については、「 [restrict](../cpp/restrict.md)」を参照してください。
+> **`restrict`** ストレージクラス属性の一部であるキーワードの詳細については **`__declspec`** 、「 [restrict](../cpp/restrict.md)」を参照してください。
 
-**Restrict**句の形式は次のとおりです。
+**`restrict`** 句の形式は次のとおりです。
 
 |句|説明|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "86404939"
 
 ## <a name="remarks"></a>解説
 
-**Restrict**キーワードは、コンテキストキーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 **Restrict**句を持たない関数は、句を持つ関数と同じです `restrict(cpu)` 。
+キーワードは、 **`restrict`** コンテキストキーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 句を持たない関数は、 **`restrict`** 句を持つ関数と同じです `restrict(cpu)` 。
 
 `restrict(amp)` 句を持つ関数には次の制限があります。
 
@@ -39,7 +39,7 @@ ms.locfileid: "86404939"
 
 - 関数はインライン化できる必要があります。
 
-- 関数は、 **int**、 **unsigned int**、 **float**、および**double**の各変数、およびこれらの型のみを含むクラスと構造体のみを宣言できます。 **bool**も使用できますが、複合型で使用する場合は、4バイトでアラインする必要があります。
+- 関数は、、、 **`int`** 、およびの各変数だけでは、 **`unsigned int`** これらの **`float`** **`double`** 型のみを含むクラスと構造体を宣言できます。 **`bool`** も使用できますが、複合型で使用する場合は、4バイトでアラインする必要があります。
 
 - ラムダ関数は、参照によってキャプチャできず、また、ポインターをキャプチャできません。
 
@@ -61,19 +61,19 @@ ms.locfileid: "86404939"
 
   - ポインターへのポインター
 
-  - **goto**ステートメント。
+  - **`goto`** 命令.
 
   - ラベル付きステートメント
 
-  - **try**、 **catch**、または**throw**ステートメントを実行します。
+  - **`try`**、 **`catch`** 、または **`throw`** ステートメント。
 
   - グローバル変数
 
   - 静的変数 代わりに[Tile_static キーワード](../cpp/tile-static-keyword.md)を使用してください。
 
-  - **dynamic_cast**キャスト。
+  - **`dynamic_cast`** 色合い.
 
-  - **Typeid**演算子。
+  - **`typeid`** 演算子。
 
   - asm 宣言
 

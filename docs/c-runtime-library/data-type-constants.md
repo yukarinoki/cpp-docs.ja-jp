@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636931"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215167"
 ---
 # <a name="data-type-constants"></a>データ型定数
 
@@ -159,29 +159,29 @@ ms.locfileid: "50636931"
 ```
 
 > [!NOTE]
-> [/J](../build/reference/j-default-char-type-is-unsigned.md) コンパイラ オプションは、既定の **char** 型を **unsigned** に変更します。
+> [`/J`](../build/reference/j-default-char-type-is-unsigned.md)コンパイラオプションは、既定の **`char`** 型をからに変更し **`signed char`** **`unsigned char`** ます。
 
-|定数|[値]|説明|
+|定数|値|説明|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|**char** のビット数|
-|**SCHAR_MIN**|(-128)|最小符号付き **char** 値|
-|**SCHAR_MAX**|127|最大符号付き **char** 値|
-|**UCHAR_MAX**|255 (0xff)|最大**符号なし** **char** 値|
-|**CHAR_MIN**|(-128) (**/J** オプションが使用される場合は 0)|最小 **char** 値|
-|**CHAR_MAX**|127 (**/J** オプションが使用される場合は 255)|最大 **char** 値|
-|**MB_LEN_MAX**|5|マルチバイト **char** の最大バイト数|
-|**SHRT_MIN**|-32768|最小符号付き **short** 値|
-|**SHRT_MAX**|32767|最大符号付き **short** 値|
-|**USHRT_MAX**|65535 (0xffff)|最大**符号なし** **short** 値|
-|**INT_MIN**|(-2147483647 - 1)|最小符号付き **int** 値|
-|**INT_MAX**|2147483647|最大符号付き **int** 値|
-|**UINT_MAX**|4294967295 (0xffffffff)|最大**符号なし** **int** 値|
-|**LONG_MIN**|(-2147483647L - 1)|最小符号付き **long** 値|
-|**LONG_MAX**|2147483647L|最大符号付き **long** 値|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大**符号なし** **long** 値|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|最小署名付き **long** **long** または **__int64** 値|
-|**LLONG_MAX**|9223372036854775807LL|最大署名付き **long** **long** または **__int64** 値|
-|**ULLONG_MAX**|0xffffffffffffffffull|最大**符号なし** **long** **long** 値|
+|**CHAR_BIT**|8|のビット数**`char`**|
+|**SCHAR_MIN**|(-128)|最小 **`signed char`** 値|
+|**SCHAR_MAX**|127|最大 **`signed char`** 値|
+|**UCHAR_MAX**|255 (0xff)|最大 **`unsigned char`** 値|
+|**CHAR_MIN**|(-128)(オプションが **`/J`** 使用された場合は 0)|最小 **`char`** 値|
+|**CHAR_MAX**|127 (オプションが **`/J`** 使用されている場合は 255)|最大 **`char`** 値|
+|**MB_LEN_MAX**|5|マルチバイトの最大バイト数**`char`**|
+|**SHRT_MIN**|-32768|最小 **`signed short`** 値|
+|**SHRT_MAX**|32767|最大 **`signed short`** 値|
+|**USHRT_MAX**|65535 (0xffff)|最大 **`unsigned short`** 値|
+|**INT_MIN**|(-2147483647 - 1)|最小 **`signed int`** 値|
+|**INT_MAX**|2147483647|最大 **`signed int`** 値|
+|**UINT_MAX**|4294967295 (0xffffffff)|最大 **`unsigned int`** 値|
+|**LONG_MIN**|(-2147483647L - 1)|最小 **`signed long`** 値|
+|**LONG_MAX**|2147483647L|最大 **`signed long`** 値|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大 **`unsigned long`** 値|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|最小 **`signed long long`** 値または **`__int64`** 値|
+|**LLONG_MAX**|9223372036854775807LL|最大 **`signed long long`** 値または **`__int64`** 値|
+|**ULLONG_MAX**|0xffffffffffffffffull|最大 **`unsigned long long`** 値|
 |**_I8_MIN**|(-127i8 - 1)|最小符号付き 8 ビット値|
 |**_I8_MAX**|127i8|最大符号付き 8 ビット値|
 |**_UI8_MAX**|0xffui8|最大符号なし 8 ビット値|
@@ -202,16 +202,16 @@ ms.locfileid: "50636931"
 
 ## <a name="floating-point-type-constants"></a>浮動小数点型定数
 
-次の定数は、**long** **double**、**double**、**float** データ型の範囲とその他の特徴を与えます。 これらの定数を使用するには、ソース ファイルに float.h ヘッダーをインクルードします。
+次の定数は、、、およびデータ型の範囲とその他の特性を指定し **`long double`** **`double`** **`float`** ます。 これらの定数を使用するには、ソース ファイルに float.h ヘッダーをインクルードします。
 
 ```C
 #include <float.h>
 ```
 
-|定数|[値]|説明|
+|定数|値|説明|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|丸め精度の有効桁数|
-|**DBL_DIG**|16|有効桁数|
+|**DBL_DIG**|15|有効桁数|
 |**DBL_EPSILON**|2.2204460492503131e-016|1.0 + **DBL_EPSILON** != 1.0 のように最小|
 |**DBL_HAS_SUBNORM**|1|入力は正常未満 (非正規) 数をサポートします|
 |**DBL_MANT_DIG**|53|有効桁 (仮数) のビット数|
@@ -236,7 +236,7 @@ ms.locfileid: "50636931"
 |**FLT_MIN_EXP**|(-125)|最小 2 進指数|
 |**FLT_RADIX**|2|指数の基数|
 |**FLT_TRUE_MIN**|1.401298464e-45F|正常未満の正の最小数|
-|**LDBL_DIG**|16|有効桁数|
+|**LDBL_DIG**|15|有効桁数|
 |**LDBL_EPSILON**|2.2204460492503131e-016|1.0 + **LDBL_EPSILON** != 1.0 のように最小|
 |**LDBL_HAS_SUBNORM**|1|入力は正常未満 (非正規) 数をサポートします|
 |**LDBL_MANT_DIG**|53|有効桁 (仮数) のビット数|

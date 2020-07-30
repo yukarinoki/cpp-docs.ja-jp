@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: c507a9ae42afc5081c290d38464aa7f24c277d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72d18eb50f8d85fb10d5af3ffce08c5b74947531
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222096"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 属性)
 
@@ -20,9 +20,7 @@ ms.locfileid: "80166121"
 ## <a name="syntax"></a>構文
 
 ```cpp
-[ uuid(
-   "uuid"
-) ]
+[ uuid( "uuid" ) ]
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -32,17 +30,17 @@ ms.locfileid: "80166121"
 
 ## <a name="remarks"></a>解説
 
-インターフェイスまたはクラスの定義で**uuid** C++属性が指定されていない場合はC++ 、Microsoft コンパイラによって指定されます。 **Uuid**を指定する場合は、引用符を含める必要があります。
+インターフェイスまたはクラスの定義で C++ 属性が指定されていない場合は、 `uuid` Microsoft c++ コンパイラによって提供されます。 を指定する場合は、 `uuid` 引用符を含める必要があります。
 
-**Uuid**を指定しないと、コンピューター上の異なる属性プロジェクトで同じ名前を持つインターフェイスまたはクラスに対して、コンパイラによって同じ GUID が生成されます。
+を指定しないと `uuid` 、コンピューター上の異なる属性プロジェクトで同じ名前を持つインターフェイスまたはクラスに対して、コンパイラによって同じ GUID が生成されます。
 
-Uuidgen.exe または Guidgen.exe を使用して、独自の一意の Id を生成できます。 (これらのツールのいずれかを実行するには、 **[スタート]** ボタンをクリックし、メニューの **[実行]** をクリックします。 次に、必要なツールの名前を入力します)。
+Uuidgen.exe または Guidgen.exe を使用して、独自の一意の Id を生成できます。 (これらのツールのいずれかを実行するには、[**スタート**] ボタンをクリックし、メニューの [**実行**] をクリックします。 次に、必要なツールの名前を入力します)。
 
-ATL を使用しないプロジェクトで使用する場合、 **uuid**属性を指定することは、 [uuid](../../cpp/uuid-cpp.md) **__declspec**修飾子を指定することと同じです。 クラスの**uuid**を取得するには、を使用し[__uuidof](../../cpp/uuidof-operator.md)
+ATL を使用しないプロジェクトで使用する場合、属性を指定すること `uuid` は[uuid](../../cpp/uuid-cpp.md)修飾子を指定することと同じです **`__declspec`** 。 クラスのを取得するに `uuid` は、を使用し[__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>例
 
-**Uuid**の使用例については、[バインド](bindable.md)可能な例を参照してください。
+の使用例については、[バインド](bindable.md)可能な例を参照してください `uuid` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -50,17 +48,17 @@ ATL を使用しないプロジェクトで使用する場合、 **uuid**属性�
 
 |||
 |-|-|
-|**対象**|**class**、 **struct**、 **interface**、 **union**、**列挙型**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|`class`, `struct`, `interface`, `union`, `enum`|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [uuid](/windows/win32/Midl/uuid)

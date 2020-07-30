@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955188"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229442"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
@@ -71,19 +71,19 @@ wchar_t *_wgetdcwd_nolock(
 *駆動*<br/>
 ディスク ドライブ。
 
-*バッファー*<br/>
+*格納*<br/>
 パスの格納場所。
 
 *maxlen*<br/>
-文字数でのパスの最大長: **_getdcwd**の場合は**char** 、 **_wgetdcwd**の場合は**wchar_t**です。
+文字数でのパスの最大長: **`char`** **_getdcwd**の場合は、 **`wchar_t`** **_wgetdcwd**の場合は。
 
 ## <a name="return-value"></a>戻り値
 
 「[_getdcwd、_wgetdcwd](getdcwd-wgetdcwd.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_getdcwd_nolock**と **_wgetdcwd_nolock**はそれぞれ **_getdcwd**と **_wgetdcwd**と同じですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getdcwd_nolock**と **_wgetdcwd_nolock**は、それぞれ **_getdcwd**および **_wgetdcwd**と同じですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,11 +98,11 @@ wchar_t *_wgetdcwd_nolock(
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

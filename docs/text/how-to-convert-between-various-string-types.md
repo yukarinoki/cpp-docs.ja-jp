@@ -7,18 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: ff07bf7a00be36f28620735c48128f973d9fe791
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224501"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
 
-このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となる文字列の型には、 `char *` `wchar_t*`、 、 [、 _bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>が含まれます。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。
+このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となる文字列型には `char *` 、 `wchar_t*` 、、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、およびがあり <xref:System.String?displayProperty=fullName> ます。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。
 
-## <a name="converting-from-char-"></a>文字からの変換\*
+## <a name="converting-from-char-"></a>変換 (char から)\*
 
 ## <a name="example"></a>例
 
@@ -119,7 +119,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>wchar_tからの変換\*
+## <a name="converting-from-wchar_t-"></a>変換 (wchar_t から)\*
 
 ## <a name="example"></a>例
 
@@ -459,7 +459,7 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` は、TCHAR データ型に基づいています。この TCHAR データ型は、シンボル `_UNICODE` が定義されているかどうかに依存します。 `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
+このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` は、TCHAR データ型に基づいています。この TCHAR データ型は、シンボル `_UNICODE` が定義されているかどうかに依存します。 が定義されて `_UNICODE` いない場合、 `TCHAR` は char として定義され、 `CString` マルチバイト文字の文字列を含みます。が定義されている場合 `_UNICODE` 、 `TCHAR` はに定義され、 **`wchar_t`** `CString` ワイド文字列が含まれます。
 
 `CStringA` は、`CString` のマルチバイト文字列バージョンであり、`CStringW` はワイド文字列バージョンです。 `CStringA` および `CStringW` のどちらでも、コンパイル方法の決定に `_UNICODE` は使用されません。 このサンプルでは `CStringA` および `CStringW` を使用して、バッファー サイズ割り当てと出力処理のわずかな違いを明確化しています。
 
@@ -699,7 +699,7 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-この例では、ワイド文字 (Unicode) [System::String](/dotnet/api/system.string)から上記の他の文字列型に変換する方法を示します。
+この例では、ワイド文字 (Unicode) [System:: string](/dotnet/api/system.string)から、上記の他の文字列型に変換する方法を示します。
 
 ### <a name="code"></a>コード
 
@@ -803,10 +803,10 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>関連項目
 
 [ATL および MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)<br/>
-[C スタイル文字列に関連する CString 演算](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[方法: 標準文字列を System::String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[方法: System::String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[方法: システムを変換::文字列をwchar_t* または char に変換する\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[C スタイルの文字列に関連する CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[方法: 標準文字列を System:: String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[方法: System:: String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[方法: System:: String を wchar_t * または char に変換する\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [CComBSTR を使用したプログラミング](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>

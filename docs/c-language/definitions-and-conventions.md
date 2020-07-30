@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226380"
 ---
 # <a name="definitions-and-conventions"></a>定義と規則
 
@@ -28,7 +28,7 @@ ms.locfileid: "62234437"
 |属性|説明|
 |---------------|-----------------|
 |*nonterminal*|斜体は、非終端要素を示します。|
-|**const**|太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。|
+|**`const`**|太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。|
 |<sub>opt</sub>|後ろに <sub>opt</sub> が続く非終端要素は、常に省略可能です。|
 |既定のタイプフェイス|このタイプフェイスで記述されているか、示されているセット内の文字は、C ステートメント内で終端要素として使用できます。|
 

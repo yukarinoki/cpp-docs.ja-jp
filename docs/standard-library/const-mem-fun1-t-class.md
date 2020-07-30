@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 93d0e7a116c7c7ba7a2ed1cb46fd88585a99120d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689752"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228324"
 ---
 # <a name="const_mem_fun1_t-class"></a>const_mem_fun1_t クラス
 
-ポインター引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
+ポインター引数を使用して **`const`** 初期化するときに、1つの引数を取るメンバー関数を二項関数オブジェクトとして呼び出すことができるようにするアダプタークラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -30,23 +30,23 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>パラメーター
 
-*member_ptr* \
+*member_ptr*\
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*左*\
-*Member_ptr*メンバー関数が呼び出される**const**オブジェクト。
+*左側*\
+**`const`** *Member_ptr*メンバー関数が呼び出されるオブジェクト。
 
-*右*\
-*Member_ptr*に渡される引数。
+*そうです*\
+*Member_ptr*に指定される引数。
 
 ## <a name="return-value"></a>戻り値
 
 適合可能な二項関数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートには、 *member_ptr*のコピーが格納されます。これは、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要があります。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
+クラステンプレートには*member_ptr*のコピーが格納されます。このコピーは、プライベートメンバーオブジェクト内のクラスのメンバー関数へのポインターである必要があり `Type` ます。 そのメンバー関数は、 `operator()` を返すように定義さ `(left->member_ptr)(right) const` れています。
 
 ## <a name="example"></a>例
 
-`const_mem_fun1_t` のコンストラクターが直接使用されることはほとんどありません。 メンバー関数を調整するには、`mem_fn` を使用します。 メンバー関数アダプターの使用例については、「 [mem_fn](../standard-library/functional-functions.md#mem_fn) 」を参照してください。
+`const_mem_fun1_t` のコンストラクターが直接使用されることはほとんどありません。 `mem_fn`は、メンバー関数を調整するために使用されます。 メンバー関数アダプターの使用方法の例については、「 [mem_fn](../standard-library/functional-functions.md#mem_fn) 」を参照してください。

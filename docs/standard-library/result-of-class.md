@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: ab575ac31936e7003f19fc2ceb3c5b1727d0728c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688995"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202312"
 ---
 # <a name="result_of-class"></a>result_of クラス
 
@@ -37,19 +37,19 @@ template<class T>
 
 ### <a name="parameters"></a>パラメーター
 
-*Fn* \
+*1億*\
 照会する呼び出し可能型。
 
-*Argtypes* \
+*ArgTypes*\
 照会する呼び出し可能型の引数リストの種類。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このテンプレートを使用して、コンパイル時に `Fn` の結果の型 (`ArgTypes`) を決定します。ここで、 *Fn*は呼び出し可能な型、関数への参照、または*argtypes*の型の引数リストを使用して呼び出される呼び出し可能な型への参照です。 未評価の式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` が整形式である場合、クラステンプレートの `type` メンバーは `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` の結果の型に名前を指定します。 それ以外の場合、クラステンプレートには `type` メンバーがありません。 型*Fn*とパラメーターパックの*argtypes*のすべての型は、完全な型、 **void**、または不明なバインドの配列である必要があります。 C++ 17 で[invoke_result](invoke-result-class.md)を使用することは推奨されていません。
+このテンプレートを使用して、コンパイル時に () の結果の型を決定し `Fn` `ArgTypes` ます。ここで、 *Fn*は呼び出し可能な型、関数への参照、または、 *argtypes*の型の引数リストを使用して呼び出される呼び出し可能な型への参照です。 `type` `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 未評価の式が整形式である場合、クラステンプレートのメンバーはの結果型に名前を指定し `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` ます。 それ以外の場合、クラステンプレートにはメンバーがありません `type` 。 型*Fn*とパラメーターパックの*argtypes*のすべての型は、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。 C++ 17 での[invoke_result](invoke-result-class.md)を優先するために非推奨となりました。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

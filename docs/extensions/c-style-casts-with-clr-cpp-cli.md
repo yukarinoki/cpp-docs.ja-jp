@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219795"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C スタイル キャストと /clr (C++/CLI)
 
@@ -34,7 +34,7 @@ CLR 型で使用すると、コンパイラは、C スタイルのキャスト�
 
 C スタイルのキャストは推奨されません。 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md) でコンパイルするときは、[safe_cast](safe-cast-cpp-component-extensions.md) を使用してください。
 
-次の例では、**const_cast** にマップされる C スタイルのキャストを示します。
+次のサンプルは、にマップされる C スタイルのキャストを示して **`const_cast`** います。
 
 ```cpp
 // cstyle_casts_1.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-次の例では、**safe_cast** と **const_cast** にマップされる C スタイルのキャストを示します。
+次のサンプルは、 **safe_cast**プラスにマップされる C スタイルのキャストを示して **`const_cast`** います。
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-次の例では、**static_cast** にマップされる C スタイルのキャストを示します。
+次のサンプルは、にマップされる C スタイルのキャストを示して **`static_cast`** います。
 
 ```cpp
 // cstyle_casts_4.cpp
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-次の例では、**static_cast** と **const_cast** にマップされる C スタイルのキャストを示します。
+次のサンプルは、+ にマップされる C スタイルのキャストを示して **`static_cast`** **`const_cast`** います。
 
 ```cpp
 // cstyle_casts_5.cpp
@@ -160,6 +160,6 @@ int main() {
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

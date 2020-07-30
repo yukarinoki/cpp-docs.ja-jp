@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57aa4ec366588f71f41a747a2dc5127f87ea2e2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222200"
 ---
 # <a name="sub_match-class"></a>sub_match クラス
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>パラメーター
 
-*ビッドイット*\
+*BidIt*\
 サブマッチ用の反復子の型。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは[、regex_search](../standard-library/regex-functions.md#regex_search) [regex_match キャプチャ](../standard-library/regex-functions.md#regex_match)グループに一致する文字のシーケンスを指定するオブジェクトを表します。 [match_results Class](../standard-library/match-results-class.md) 型のオブジェクトは、検索に使用された正規表現内のキャプチャ グループごとに 1 つずつ、これらのオブジェクトの配列を保持します。
+クラステンプレートは、 [regex_match](../standard-library/regex-functions.md#regex_match)また[regex_search](../standard-library/regex-functions.md#regex_search)はの呼び出しでキャプチャグループと一致した文字のシーケンスを指定するオブジェクトを表します。 [match_results Class](../standard-library/match-results-class.md) 型のオブジェクトは、検索に使用された正規表現内のキャプチャ グループごとに 1 つずつ、これらのオブジェクトの配列を保持します。
 
 キャプチャ グループがオブジェクトのデータ メンバーと一致しなかった場合は、 `matched` が false を保持し、2 つの反復子の `first` と `second` (ベース `std::pair`から継承) が等しくなります。 キャプチャ グループが一致した場合は、 `matched` が true を保持し、反復子 `first` がキャプチャ グループと一致したターゲット シーケンスの最初の文字を指し、反復子 `second` がキャプチャ グループと一致したターゲット シーケンスの最後の文字の 1 つ先の位置を指します。 長さ 0 の一致の場合は、メンバー `matched` が true を保持し、2 つの反復子が等しくなり、両方が一致した位置を指します。
 
@@ -58,26 +58,26 @@ class sub_match
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[difference_type](#difference_type)|反復子の差の型です。|
-|[反復 子](#iterator)|反復子の型。|
-|[Value_type](#value_type)|要素の型。|
+|[反](#iterator)|反復子の型。|
+|[value_type](#value_type)|要素の型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[比較](#compare)|サブマッチをシーケンスと比較します。|
+|[対照](#compare)|サブマッチをシーケンスと比較します。|
 |[length](#length)|サブマッチの長さを返します。|
-|[一致](#matched)|一致が成功したかどうかを示します。|
-|[Str](#str)|サブマッチを文字列に変換します。|
+|[付ける](#matched)|一致が成功したかどうかを示します。|
+|[引数](#str)|サブマッチを文字列に変換します。|
 
 ### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[演算子basic_stringvalue_type><](#op_basic_string_lt_value_type_gt)|サブマッチを文字列にキャストします。|
+|[演算子 basic_string<value_type>](#op_basic_string_lt_value_type_gt)|サブマッチを文字列にキャストします。|
 
 ## <a name="example"></a>例
 
@@ -133,11 +133,11 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<regex>
+**ヘッダー:**\<regex>
 
 **名前空間:** std
 
-## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match::比較
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match:: compare
 
 サブマッチをシーケンスと比較します。
 
@@ -152,10 +152,10 @@ int compare(const value_type *ptr) const;
 *そうです*\
 比較するサブマッチ。
 
-*Str*\
+*引数*\
 比較対象の文字列。
 
-*Ptr*\
+*ポインター*\
 null で終わる比較対象のシーケンス。
 
 ### <a name="remarks"></a>解説
@@ -170,7 +170,7 @@ null で終わる比較対象のシーケンス。
 
 正の値。それ以外の場合は、正の値が返されます。
 
-## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::difference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::d ifference_type
 
 反復子の差の型です。
 
@@ -182,7 +182,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 typedef は、`iterator_traits<BidIt>::difference_type` の同意語です。
 
-## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match::反復器
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match:: iterator
 
 反復子の型。
 
@@ -194,7 +194,7 @@ typedef BidIt iterator;
 
 この typedef は、テンプレート型引数 `Bidit` のシノニムです。
 
-## <a name="sub_matchlength"></a><a name="length"></a>sub_match:長さ
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match:: length
 
 サブマッチの長さを返します。
 
@@ -206,7 +206,7 @@ difference_type length() const;
 
 メンバー関数は、一致するシーケンスの長さを返します。または、一致するシーケンスが存在しない場合、0 を返します。
 
-## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::一致
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match:: 一致
 
 一致が成功したかどうかを示します。
 
@@ -216,9 +216,9 @@ bool matched;
 
 ### <a name="remarks"></a>解説
 
-メンバーは、**true**関連付けられたキャプチャ グループ`*this`が正規表現の一致の一部であった場合にのみ true を保持します。
+メンバーは、 **`true`** に関連付けられたキャプチャグループ **`*this`** が正規表現に一致する場合にのみ保持されます。
 
-## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::演算子basic_stringvalue_type&lt;&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match:: operator basic_string &lt; value_type&gt;
 
 サブマッチを文字列にキャストします。
 
@@ -230,7 +230,7 @@ operator basic_string<value_type>() const;
 
 このメンバー演算子は、 `str()`を返します。
 
-## <a name="sub_matchstr"></a><a name="str"></a>sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match:: str
 
 サブマッチを文字列に変換します。
 
@@ -242,7 +242,7 @@ basic_string<value_type> str() const;
 
 このメンバー関数は、`basic_string<value_type>(first, second)` を返します。
 
-## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match:: value_type
 
 要素の型。
 
@@ -256,5 +256,5 @@ typedef は、`iterator_traits<BidIt>::value_type` の同意語です。
 
 ## <a name="see-also"></a>関連項目
 
-[\<正規表現>](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)

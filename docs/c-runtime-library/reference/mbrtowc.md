@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229429"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -51,7 +51,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>パラメーター
 
 *wchar*<br/>
-変換されたワイド文字の文字列を受け取るワイド文字のアドレス (型**wchar_t**)。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
+変換されたワイド文字の文字列 (型) を受け取るワイド文字のアドレス **`wchar_t`** 。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
 
 *mbchar*<br/>
 バイト シーケンスのアドレス (マルチバイト文字)。
@@ -209,12 +209,12 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

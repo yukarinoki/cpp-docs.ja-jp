@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234069"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16、mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>パラメーター
 
 *インストール*\
-変換する UTF-8 マルチバイト文字に相当する**char16_t**または**char32_t**へのポインター。 Null の場合、関数は値を格納しません。
+**`char16_t`** **`char32_t`** 変換する utf-8 マルチバイト文字へのポインター。 Null の場合、関数は値を格納しません。
 
 *電源*\
 変換する UTF-8 マルチバイト文字の文字列へのポインター。
@@ -91,7 +91,7 @@ UTF-8 マルチバイト文字列を1つ以上の出力文字に解釈するた�
 
 **Mbrtoc16**関数は、 *source*から最大*max_bytes*バイトを読み取り、最初の完全な有効な utf-8 マルチバイト文字を検索してから、等価の utf-16 文字を*変換先*に格納します。 文字にサロゲートペアなどの複数の UTF-16 出力文字が必要な場合、 *state*値は、次に**mbrtoc16**を呼び出したときに、次の utf-16 文字を*変換先*に格納するように設定されます。 **Mbrtoc32**関数は同じですが、出力は32文字として格納されます。
 
-*Source*が null の場合、これらの関数は、source に対して**null** `""`の引数を使用して行われた呼び出しに相当する*ものを返し*ます。また、 *source*に対しては1、 *max_bytes*の場合は1を返します。 *Destination*と*max_bytes*の渡された値は無視されます。
+*Source*が null の場合、これらの関数は、source に対して**null**の引数を使用して行われた呼び出しに相当する*ものを返し* `""` ます。また、 *source*に対しては1、 *max_bytes*の場合は1を返します。 *Destination*と*max_bytes*の渡された値は無視されます。
 
 *Source*が null でない場合、関数は文字列の先頭から開始し、最大*max_bytes*バイトを検査して、次の utf-8 マルチバイト文字 (シフトシーケンスを含む) を完了するために必要なバイト数を決定します。 検査されたバイトに有効な UTF-8 マルチバイト文字が含まれている場合、関数はその文字を等価の16ビットまたは32ビットのワイド文字に変換します。 *Destination*が null でない場合、関数は最初の (および場合によっては唯一の) 結果の文字を変換先に格納します。 追加の出力文字が必要な場合、値は*状態*で設定されるため、後続の関数の呼び出しで追加の文字が出力され、値-3 が返されます。 これ以上出力文字が不要な場合は、 *state*が初期のシフト状態に設定されます。
 
@@ -101,7 +101,7 @@ UTF-8 以外のマルチバイト文字を UTF-16 LE 文字に変換するには
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**mbrtoc16**、 **mbrtoc32**|\<uchar.h>|\<cuchar>|
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225424"
 ---
 # <a name="compiler-error-c2707"></a>コンパイラエラー C2707
 
@@ -19,15 +19,15 @@ ms.locfileid: "74760440"
 
 構造化例外処理の組み込みは、特定のコンテキストでは無効です。
 
-- 例外フィルターまたは `__except` ブロックの外部 `_exception_code()`
+- `_exception_code()`例外フィルターまたはブロックの外側 **`__except`**
 
-- 例外フィルターの外部 `_exception_info()`
+- `_exception_info()`例外フィルターの外側
 
-- `__finally` ブロックの外側 `_abnormal_termination()`
+- `_abnormal_termination()`ブロックの外側 **`__finally`**
 
 このエラーを解決するには、例外処理の組み込みが適切なコンテキストに配置されていることを確認してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2707 が生成されます。
 

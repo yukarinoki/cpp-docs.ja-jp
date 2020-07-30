@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942334"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213594"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,11 +55,11 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>戻り値
 
-有効なデバッグヒープポインターが渡されると、 **_CrtReportBlockType**関数は、ブロックの型とサブタイプを**int**の形式で返します。無効なポインターを渡された場合、関数は -1 を返します。
+有効なデバッグヒープポインターが渡されると、 **_CrtReportBlockType**関数は、ブロックの型とサブタイプをの形式で返し **`int`** ます。 無効なポインターを渡された場合、関数は -1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtReportBlockType**によって返される型と**サブタイプを**抽出するには、戻り値に対してマクロの **_BLOCK_TYPE**と crtdbg.h (両方で定義されている) を使用します。
+**_CrtReportBlockType**によって返される型とサブタイプを抽出するには、戻り値に対してマクロ **_BLOCK_TYPE**と **_BLOCK_SUBTYPE** (両方とも crtdbg.h に定義されています) を使用します。
 
 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
@@ -69,7 +69,7 @@ int _CrtReportBlockType(
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 

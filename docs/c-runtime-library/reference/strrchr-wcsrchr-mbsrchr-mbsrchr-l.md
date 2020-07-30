@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911160"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231300"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -135,13 +135,13 @@ NULL で終わる検索対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-関数`strrchr`は、 *str*で最後に出現した*c* ( **char**型に変換) を検索します。 検索には、終端の null 文字が含まれます。
+関数は、 `strrchr` str で最後に見つかった*c* (に変換された) を検索し **`char`** ます。 *str* 検索には、終端の null 文字が含まれます。
 
 `wcsrchr` 関数と `_mbsrchr` 関数は、 `strrchr`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
 
-C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 これらの関数の**const**と**const**以外の両方のバージョンが使用できる場合、マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されます。 両方の C++ オーバーロードに非**定数**の動作が必要な場合は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数は **`const`** 最初の引数のポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 へのポインターを受け取るオーバーロードでは、 **`const`** へのポインターが返されます。非へのポインターを受け取るバージョンでは、以外のへのポインターが **`const`** **`const`** 返され **`const`** ます。 マクロ _CRT_CONST_CORRECT_OVERLOADS は、 **`const`** **`const`** これらの関数のバージョンと非バージョンの両方を使用できる場合に定義されます。 **`const`** 両方の C++ オーバーロードに対して非動作が必要な場合は、シンボル _CONST_RETURN を定義します。
 
-`_mbsrchr` はそのパラメーターを検証します。 *Str*が NULL の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可され`errno`た場合、は EINVAL `_mbsrchr`に設定され、0を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbsrchr` はそのパラメーターを検証します。 *Str*が NULL の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 `errno` は EINVAL に設定され、 `_mbsrchr` 0 を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの LC_CTYPE カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -156,7 +156,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
 |`wcsrchr`|\<string.h> または \<wchar.h>|
@@ -171,7 +171,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

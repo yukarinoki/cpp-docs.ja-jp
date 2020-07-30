@@ -2,12 +2,12 @@
 title: 型システム (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404627"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221550"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 
@@ -39,7 +39,7 @@ C++ で記述されたユニバーサル Windows プラットフォームアプ�
 |-|-|
 |**メタデータで公開**|**メタデータで非公開**|
 |public|private|
-|protected|internal|
+|protected|内部|
 |public protected|private protected|
 
 .winmd ファイルの内容を表示するために、 **オブジェクト ブラウザー** を使用できます。 Windows に含まれる Windows ランタイムコンポーネントは、Windows の winmd ファイルにあります。 既定の winmd ファイルには、C++/CX で使用される基本的な型が含まれています。また、platform.object には、Platform 名前空間からの追加の型が含まれています。 既定では、これら3つの winmd ファイルは、ユニバーサル Windows プラットフォームアプリのすべての C++ プロジェクトに含まれています。
@@ -63,7 +63,7 @@ Windows API 自体が、名前空間ごとに構成された、十分にファ�
 
 Windows ランタイムでは、UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Char16、Boolean、および String の基本型が定義されています。 C++/CX では、uint16、uint32、uint64、int16、int32、int64、float32、float64、および char16 として、既定の名前空間の基本的な数値型がサポートされています。 ブール値と文字列も、Platform 名前空間で定義されます。
 
-C++/CX では、uint8 も定義 `unsigned char` されています。これは Windows ランタイムではサポートされておらず、パブリック api では使用できません。
+C++/CX では、uint8 も定義 **`unsigned char`** されています。これは Windows ランタイムではサポートされておらず、パブリック api では使用できません。
 
 基本型を null 許容にするには、 [Platform::IBox インターフェイス](../cppcx/platform-ibox-interface.md) にラップします。 詳細については、「 [値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
@@ -71,7 +71,7 @@ C++/CX では、uint8 も定義 `unsigned char` されています。これは W
 
 ### <a name="strings"></a>文字列
 
-Windows ランタイム文字列は、16ビットの UNICODE 文字の変更できないシーケンスです。 Windows ランタイム文字列はとして投影され `Platform::String^` ます。 このクラスは、文字列の作成、操作、および `wchar_t`への変換 (およびその逆) のためのメソッドを提供します。
+Windows ランタイム文字列は、16ビットの UNICODE 文字の変更できないシーケンスです。 Windows ランタイム文字列はとして投影され `Platform::String^` ます。 このクラスには、文字列の構築、操作、およびからの変換のためのメソッドが用意されて **`wchar_t`** います。
 
 詳細については、「 [文字列](../cppcx/strings-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
@@ -109,7 +109,7 @@ Windows ランタイムクラスは、参照によってコピーされるため
 
 詳細については、「 [部分クラス](../cppcx/partial-classes-c-cx.md)
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>プロパティ
 
 プロパティは、任意の Windows ランタイム型のパブリックデータメンバーであり、get/set メソッドのペアとして実装されます。 クライアント コードは、パブリック フィールドのようにプロパティにアクセスします。 カスタムの get または set コードを必要とするプロパティは、 *trivial プロパティ* と呼ばれ、明示的な get または set メソッドを使用せずに宣言できます。
 
@@ -133,7 +133,7 @@ Windows ランタイムインターフェイスは、ref クラスまたは ref 
 
 詳細については、「[インターフェイス](../cppcx/interfaces-c-cx.md)」を参照してください。
 
-### <a name="enums"></a>列挙体
+### <a name="enums"></a>列挙型
 
 Windows ランタイムの列挙型クラスは、C++ のスコープ列挙型に似ています。 基になる型は int32 です。[Flags] 属性が適用された場合、基になる型は uint32 です。
 
@@ -151,7 +151,7 @@ C++/CX では、カスタムの例外の種類、 [std::exception](../standard-l
 
 詳細については、「 [例外](../cppcx/exceptions-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
-### <a name="events"></a>イベント
+### <a name="events"></a>events
 
 イベントは、型がデリゲート型の、ref クラスまたは ref 構造体のパブリック メンバーです。 イベントに対して可能なのは、所有するクラスによる呼び出し (つまり、発生) だけです。 ただし、クライアント コードが独自の関数を提供することはできます。それらの関数はイベント ハンドラーと呼ばれ、所有クラスでイベントが発生したときに呼び出されます。
 

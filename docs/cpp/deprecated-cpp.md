@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221680"
 ---
 # <a name="deprecated-c"></a>非推奨 (C++)
 
-このトピックでは、Microsoft 固有の非推奨の declspec 宣言について説明します。 C++ 14 `[[deprecated]]` 属性、およびその属性を Microsoft 固有の declspec またはプラグマと共に使用する場合のガイダンスについては、「 [ C++標準属性](attributes.md)」を参照してください。
+このトピックでは、Microsoft 固有の非推奨の declspec 宣言について説明します。 C++ 14 属性に関する情報 `[[deprecated]]` と、その属性を使用するタイミングと Microsoft 固有の declspec またはプラグマに関するガイダンスについては、「 [C++ 標準属性](attributes.md)」を参照してください。
 
-次に示す例外を使用して、**非**推奨の宣言は、[非推奨](../preprocessor/deprecated-c-cpp.md)のプラグマと同じ機能を提供します。
+次に示す例外では、 **`deprecated`** [非推奨](../preprocessor/deprecated-c-cpp.md)のプラグマと同じ機能が宣言に用意されています。
 
-- **非推奨**の宣言を使用すると、関数オーバーロードの特定の形式を非推奨として指定できます。一方、プラグマフォームは、関数名のすべてのオーバーロードされた形式に適用されます。
+- **`deprecated`** 宣言を使用すると、関数オーバーロードの特定の形式を非推奨として指定できます。一方、プラグマフォームは、関数名のすべてのオーバーロードされた形式に適用されます。
 
-- **非推奨**の宣言を使用すると、コンパイル時に表示されるメッセージを指定できます。 このメッセージのテキストをマクロから取り込むことができます。
+- **`deprecated`** 宣言を使用すると、コンパイル時に表示されるメッセージを指定できます。 このメッセージのテキストをマクロから取り込むことができます。
 
-- マクロは、**非**推奨のプラグマでのみ非推奨としてマークできます。
+- マクロは、プラグマで非推奨としてのみマークでき **`deprecated`** ます。
 
-コンパイラが非推奨の識別子または標準の[`[[deprecated]]`](attributes.md)属性の使用を検出すると、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。
+コンパイラが非推奨の識別子または標準属性の使用を検出すると [`[[deprecated]]`](attributes.md) 、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

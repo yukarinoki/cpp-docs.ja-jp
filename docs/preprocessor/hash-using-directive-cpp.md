@@ -1,5 +1,5 @@
 ---
-title: '#using ディレクティブ (C++/cli)'
+title: '#using ディレクティブ (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
 - friend_as_cpp
@@ -12,69 +12,69 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 5dae5c277055157aef5451c19ee020fbbd2aaccb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220197"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219431"
 ---
-# <a name="using-directive-ccli"></a>#using ディレクティブ (C++/cli)
+# <a name="using-directive-ccli"></a>#using ディレクティブ (C++/CLI)
 
 [/Clr](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルされたプログラムにメタデータをインポートします。
 
 ## <a name="syntax"></a>構文
 
-> **#using** *ファイル* **[as_friend]**
+> **`#using`***ファイル*[ **`as_friend`** ]
 
 ### <a name="parameters"></a>パラメーター
 
 *拡張子*\
-MSIL .dll、.exe、.netmodule、または .obj。例えば以下のようにします。
+Microsoft 中間言語 (MSIL) *`.dll`* 、 *`.exe`* 、、 *`.netmodule`* または *`.obj`* ファイル。 たとえば、次のように入力します。
 
 `#using <MyComponent.dll>`
 
-**as_friend**\
-*ファイル*内のすべての型がアクセス可能であることを指定します。 詳細については、「 [FriendC++Assemblies ()](../dotnet/friend-assemblies-cpp.md)」を参照してください。
+**`as_friend`**\
+*ファイル*内のすべての型がアクセス可能であることを指定します。 詳細については、「[フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*ファイル*は、マネージデータとマネージコンストラクト用にインポートする Microsoft 中間言語 (MSIL) ファイルにすることができます。 .Dll ファイルにアセンブリマニフェストが含まれている場合は、マニフェストで参照されているすべての .dll がインポートされ、作成しているアセンブリはメタデータ内の*ファイル*をアセンブリ参照として一覧表示します。
+*ファイル*は、マネージデータとマネージコンストラクト用にインポートする Microsoft 中間言語 (MSIL) ファイルにすることができます。 DLL にアセンブリマニフェストが含まれている場合は、マニフェストで参照されるすべての Dll がインポートされます。 作成中のアセンブリによって、メタデータ内の*ファイル*がアセンブリ参照として一覧表示されます。
 
-*ファイル*にアセンブリが含まれていない場合 (*ファイル*がモジュールの場合)、現在の (アセンブリ) アプリケーションのモジュールからの型情報を使用しない場合は、そのモジュールがアセンブリの一部であることを示すオプションがあります。[/assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)を使用します。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。
+*ファイル*にアセンブリが含まれていない (*ファイル*がモジュールである) 場合、現在の (アセンブリ) アプリケーションのモジュールからの型情報を使用しないことが考えられます。 [/Assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)を使用して、モジュールがアセンブリの一部であることを示すことができます。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。
 
-**#Using**を使用する代わりに、 [/fu](../build/reference/fu-name-forced-hash-using-file.md)コンパイラオプションを使用することもできます。
+使用する代わりに、 **`#using`** [/fu](../build/reference/fu-name-forced-hash-using-file.md)コンパイラオプションを使用することもできます。
 
-**#using**に渡される .exe アセンブリは、.Net Visual Studio コンパイラ (Visual Basic またはビジュアルC#など) のいずれかを使用してコンパイルする必要があります。  `/clr` でコンパイルされた .exe アセンブリからメタデータをインポートしようとすると、ファイルの読み込み例外が発生します。
+に渡される .exe アセンブリは **`#using`** 、.Net Visual Studio コンパイラ (Visual Basic または Visual C# など) のいずれかを使用してコンパイルする必要があります。  でコンパイルされた .exe アセンブリからメタデータをインポートしようとすると **`/clr`** 、ファイル読み込み例外が発生します。
 
 > [!NOTE]
-> **#Using**で参照されるコンポーネントは、コンパイル時にインポートされた別のバージョンのファイルを使用して実行できます。これにより、クライアントアプリケーションで予期しない結果が発生します。
+> で参照されるコンポーネントは、 **`#using`** コンパイル時にインポートされた別のバージョンのファイルで実行できます。これにより、クライアントアプリケーションで予期しない結果が発生します。
 
 コンパイラがアセンブリ (モジュールではありません) 内の型を認識できるようにするには、型を強制的に解決する必要があります。 これは、たとえば、型のインスタンスを定義することによって強制的に行うことができます。 コンパイラのアセンブリの型名を解決する方法は他にもあります。 たとえば、アセンブリ内の型から継承する場合、型名はコンパイラに認識されます。
 
-[__Declspec (thread)](../cpp/thread.md)を使用したソースコードからビルドされたメタデータをインポートする場合、スレッドのセマンティクスはメタデータに保存されません。 たとえば、 **__declspec (thread)** で宣言された変数が、.NET Framework 共通言語ランタイム用に構築されたプログラムでコンパイルされ、 **#using**経由でインポートされる場合、変数に **__declspec (thread)** セマンティクスはありません。
+使用するソースコードからビルドされたメタデータをインポートする場合 [`__declspec(thread)`](../cpp/thread.md) 、スレッドのセマンティクスはメタデータに保存されません。 たとえば、として宣言 **`__declspec(thread)`** され、.NET Framework 共通言語ランタイム用に構築されたプログラムでコンパイルされた変数と、を使用してインポートされた変数には、 **`#using`** **`__declspec(thread)`** 変数に対するセマンティクスがありません。
 
-**#Using**によって参照されるファイル内のインポートされたすべての型 (マネージとネイティブの両方) は使用できますが、コンパイラはネイティブ型を定義ではなく宣言として扱います。
+によって参照されるファイル内のインポートされたすべての型 (マネージとネイティブの両方) **`#using`** は使用できますが、コンパイラはネイティブ型を定義ではなく宣言として扱います。
 
-`/clr` でコンパイルするときには、mscorlib.dll が自動的に参照されます。
+mscorlib.dll は、を使用してコンパイルするときに自動的に参照され **`/clr`** ます。
 
-LIBPATH 環境変数は、コンパイラが **#using**に渡されたファイル名を解決するときに検索するディレクトリを指定します。
+LIBPATH 環境変数は、コンパイラがに渡されたファイル名を解決するときに検索するディレクトリを指定し **`#using`** ます。
 
 コンパイラは、次のパスに従って参照を検索します。
 
-- **#Using**ステートメントで指定されたパスです。
+- ステートメントで指定されたパス **`#using`** 。
 
 - 現在のフォルダー。
 
 - .NET Framework のシステム ディレクトリ。
 
-- [/Ai](../build/reference/ai-specify-metadata-directories.md)コンパイラオプションを使用して追加されたディレクトリ。
+- コンパイラオプションを使用して追加されたディレクトリ [`/AI`](../build/reference/ai-specify-metadata-directories.md) 。
 
 - LIBPATH 環境変数のディレクトリ。
 
 ## <a name="example"></a>例
 
-アセンブリ (C) をビルドし、それ自体が別のアセンブリ (A) を参照するアセンブリ (B) を参照する場合、C での型のいずれかを明示的に使用しない限り、アセンブリ A を明示的に参照する必要はありません。
+第3のアセンブリを参照する2番目のアセンブリを参照するアセンブリを構築できます。 型のいずれかを明示的に使用する場合にのみ、最初のアセンブリから3番目のアセンブリを明示的に参照する必要があります。
 
 ```cpp
 // using_assembly_A.cpp
@@ -97,7 +97,7 @@ public:
 
 ## <a name="example"></a>例
 
-次の例では、 *using_assembly_A*で定義されている型をプログラムが使用していないため、 *using_assembly_A*を参照しない場合、コンパイラエラーは発生しません。
+次の例では、コンパイラは、 *using_assembly_A.dll*の参照に関するエラーを報告しません。これは、プログラムが*using_assembly_A .cpp*で定義されている型を使用しないためです。
 
 ```cpp
 // using_assembly_C.cpp
@@ -111,4 +111,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[プリプロセッサディレクティブ](../preprocessor/preprocessor-directives.md)
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234121"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -83,13 +83,13 @@ long double fabsl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **fabs** \<cmath> ヘッダーを含めた場合は、fabs のオーバーロードを呼び出すことができます。 C プログラムでは、 **fabs**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、ヘッダーをインクルードすると、 **fabs**のオーバーロードを呼び出すことができ \<cmath> ます。 C プログラムでは、 **fabs**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須の C ヘッダー|必須の C++ ヘッダー|
+|機能|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|-----------------------|---------------------------|
 |**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -101,6 +101,6 @@ C++ ではオーバーロードが可能であるため、 **fabs** \<cmath> ヘ
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>

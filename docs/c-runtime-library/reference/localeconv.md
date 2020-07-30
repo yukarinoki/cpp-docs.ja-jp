@@ -28,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916409"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218638"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -53,16 +53,16 @@ struct lconv *localeconv( void );
 
 **Localeconv**関数は、現在のロケールの数値書式設定に関する詳細情報を取得します。 この情報は、**lconv** 型の構造体で格納されます。 **lconv** 構造体は、LOCALE.H で定義され、次のメンバーが含まれます。
 
-|フィールド|説明|
+|フィールド|意味|
 |-|-|
 decimal_point、<br/>_W_decimal_point|通貨数量の数量の小数点文字へのポインター。
 thousands_sep、<br/>_W_thousands_sep|通貨数量の数量の小数点の左にある数字のグループを区切る文字へのポインター。
-グループ化|通貨数量数量の各桁のグループのサイズを格納する**char**サイズの整数へのポインター。
+グループ化|**`char`** 通貨数量数量の各桁のグループのサイズを格納するサイズが設定された整数へのポインター。
 int_curr_symbol、<br/>_W_int_curr_symbol|現在のロケールの国際通貨記号へのポインター。 最初の 3 文字は、*ISO 4217 Codes for the Representation of Currency and Funds* 規格で定義されている英字の国際通貨記号を指定します。 4 文字目 (null 文字の直前) は、国際通貨記号と通貨の数量を区切ります。
 currency_symbol、<br/>_W_currency_symbol|現在のロケールの現地通貨記号へのポインター。
 mon_decimal_point、<br/>_W_mon_decimal_point|通貨数量の小数点文字へのポインター。
 mon_thousands_sep、<br/>_W_mon_thousands_sep|通貨数量の小数点以下の桁のグループの区切り記号へのポインター。
-mon_grouping|通貨数量の各桁のグループのサイズを格納する**char**サイズの整数へのポインター。
+mon_grouping|**`char`** 通貨数量の各桁のグループのサイズを格納する、サイズが設定された整数へのポインター。
 positive_sign、<br/>_W_positive_sign|負でない通貨数量の符号を示す文字列。
 negative_sign、<br/>_W_negative_sign|負の通貨数量の符号を示す文字列。
 int_frac_digits|国際方式で書式化された通貨数量の小数点より右側の桁数。
@@ -74,9 +74,9 @@ n_sep_by_space|書式化された負の通貨数量の値と通貨記号をス�
 p_sign_posn|書式化された負でない通貨数量での正符号の位置。
 n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
-指定されている場合を除き、と`wchar_t *`のバージョン`char *`を持つ**lconv**構造体のメンバーは、文字列へのポインターです。 **""** (または**wchar_t** <strong>\*</strong>の**L "** ") に一致するものは、長さが0か、現在のロケールでサポートされていません。 **Decimal_point**と **_W_decimal_point**は常にサポートされ、長さは0以外であることに注意してください。
+指定されている場合を除き、とのバージョンを持つ**lconv**構造体のメンバー `char *` は、 `wchar_t *` 文字列へのポインターです。 **""** (の場合は**L ""** ) のいずれか **`wchar_t`** <strong>\*</strong> がゼロの長さであるか、現在のロケールでサポートされていません。 **Decimal_point**と **_W_decimal_point**は常にサポートされ、長さは0以外であることに注意してください。
 
-構造体の**char**メンバーは、文字ではなく、小さい負以外の数値です。 そのいずれかが **CHAR_MAX** に相当する場合は、現在のロケールではサポートされていません。
+**`char`** 構造体のメンバーは、文字ではなく、小さい負以外の数値です。 そのいずれかが **CHAR_MAX** に相当する場合は、現在のロケールではサポートされていません。
 
 **Grouping**と**mon_grouping**の値は、次の規則に従って解釈されます。
 
@@ -120,7 +120,7 @@ n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 
@@ -132,7 +132,7 @@ n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
 ## <a name="see-also"></a>関連項目
 
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

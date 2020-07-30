@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 74a8684c619e2cfbd5417950aa6108ad93511bf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4348941e065680a54f9bd0c9f5b7ab2ff1af5e56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376754"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219223"
 ---
 # <a name="basic_regex-class"></a>basic_regex クラス
 
@@ -29,18 +29,18 @@ class basic_regex
 *Elem*\
 一致させる要素の型。
 
-*ラックストレイツ*\
+*RXtraits*\
 要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、正規表現を保持するオブジェクトを記述します。 このクラス テンプレートのオブジェクトは、regex_match、regex_search、[regex_match](../standard-library/regex-functions.md#regex_match)および[regex_search](../standard-library/regex-functions.md#regex_search)[regex_replace](../standard-library/regex-functions.md#regex_replace)のテンプレート関数に、適切なテキスト文字列引数と共に渡され、正規表現に一致するテキストを検索できます。 このクラス テンプレートには **、char**型の要素の型定義[regex](../standard-library/regex-typedefs.md#regex)と、型**wchar_t**の要素の[wregex](../standard-library/regex-typedefs.md#wregex)の 2 つの特殊化があります。
+クラステンプレートは、正規表現を保持するオブジェクトを表します。 このクラステンプレートのオブジェクトは、正規表現に一致するテキストを検索するために、適切なテキスト文字列引数と共に、テンプレート関数[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、および[regex_replace](../standard-library/regex-functions.md#regex_replace)に渡すことができます。 このクラステンプレートの特殊化は2つあり、型の要素の型定義[regex](../standard-library/regex-typedefs.md#regex) **`char`** と型の要素の[wregex](../standard-library/regex-typedefs.md#wregex)を使用し **`wchar_t`** ます。
 
-テンプレート引数*RXtraits*は、クラス テンプレートがサポートする正規表現の構文のさまざまな重要なプロパティを記述します。 これらの正規表現の特徴を指定するクラスは[、class](../standard-library/regex-traits-class.md)型のオブジェクトと同じ外部インターフェイスregex_traits必要があります。
+テンプレート引数*RXtraits*は、クラステンプレートがサポートする正規表現の構文のさまざまな重要なプロパティについて説明します。 これらの正規表現の特徴を指定するクラスは、 [Regex_traits クラス](../standard-library/regex-traits-class.md)型のオブジェクトと同じ外部インターフェイスを持つ必要があります。
 
 一部の関数は、正規表現を定義するオペランド シーケンスを受け取ります。 その場合、オペランド シーケンスは次のような方法で指定できます。
 
-`ptr`-- 終了要素`value_type()`が値で、オペランドシーケンスの一部ではない場合に始まる **(null**ポインター`ptr`であってはならない) から始まる NULL で終わるシーケンス (C 文字列、char 型の*Elem*など)
+`ptr`: (null ポインターではない) から始まる、null で終わるシーケンス (型の*Elem*の場合は C 文字列など **`char`** )。 `ptr` 終端の要素は値であり、 `value_type()` オペランドシーケンスの一部ではありません
 
 `ptr`、`count` : `count` (null ポインター以外) で始まる `ptr` 個の要素のシーケンスとして。
 
@@ -50,44 +50,44 @@ class basic_regex
 
 `right` : `basic_regex` オブジェクト `right` として。
 
-これらのメンバー関数は`flags`*、RXtraits*型で記述されているオプションに加えて、正規表現の解釈に関するさまざまなオプションを指定する引数も受け取ります。
+これらのメンバー関数は、 `flags` *RXtraits*型で記述されているものに加えて、正規表現の解釈に関するさまざまなオプションを指定する引数も受け取ります。
 
 ### <a name="members"></a>メンバー
 
-|メンバー|Default value|
+|メンバー|既定値|
 |-|-|
-|パブリック静的な定数flag_type icase|regex_constants::icase|
-|パブリック静的定数flag_type nosubs|regex_constants::ノサブス|
-|パブリック静的な定数flag_type最適化|regex_constants::最適化|
-|パブリック静的コンストflag_type照合|regex_constants::照合|
-|パブリック静的コンストflag_type ECMAScript|regex_constants::ECMAスクリプト|
-|パブリック静的な定数flag_type基本|regex_constants::基本|
-|パブリック静的な定数flag_type拡張|regex_constants::拡張|
-|パブリック静的コンストflag_type awk|regex_constants::awk|
-|パブリック静的 const flag_type grep|regex_constants::グレップ|
-|パブリック静的定数flag_type egrep|regex_constants::egrep|
+|public static const flag_type icase|regex_constants:: icase|
+|public static const flag_type nosubs|regex_constants:: nosubs|
+|public static const flag_type optimize|regex_constants:: optimize|
+|パブリック static const flag_type collate|regex_constants:: collate|
+|ECMAScript の public static const flag_type|regex_constants:: ECMAScript|
+|public static const flag_type basic|regex_constants:: basic|
+|パブリック static const flag_type 拡張|regex_constants:: extended|
+|public static const flag_type awk|regex_constants:: awk|
+|public static const flag_type grep|regex_constants:: grep|
+|public static const flag_type egrep|regex_constants:: egrep|
 |プライベート RXtraits の特徴||
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[basic_regex](#basic_regex)|正規表現オブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[flag_type](#flag_type)|構文オプション フラグの型です。|
 |[locale_type](#locale_type)|格納されているロケール オブジェクトの型。|
-|[Value_type](#value_type)|要素型。|
+|[value_type](#value_type)|要素型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[割り当てる](#assign)|値を正規表現オブジェクトに代入します。|
-|[フラグ](#flags)|構文のオプション フラグを返します。|
+|[assign](#assign)|値を正規表現オブジェクトに代入します。|
+|[flags](#flags)|構文のオプション フラグを返します。|
 |[getloc](#getloc)|格納されているロケール オブジェクトを返します。|
 |[imbue](#imbue)|格納されているロケール オブジェクトを変更します。|
 |[mark_count](#mark_count)|一致した部分式の数を返します。|
@@ -97,11 +97,11 @@ class basic_regex
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_eq)|値を正規表現オブジェクトに代入します。|
+|[operator =](#op_eq)|値を正規表現オブジェクトに代入します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<regex>
+**ヘッダー:**\<regex>
 
 **名前空間:** std
 
@@ -196,7 +196,7 @@ getloc == imbued == true
 match("abc") == true
 ```
 
-## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex::割り当て
+## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex:: assign
 
 値を正規表現オブジェクトに代入します。
 
@@ -230,28 +230,28 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*海峡*\
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*スタロック*\
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
-*Init*\
+*初期化*\
 範囲ソースの入力反復子の型。
 
 *そうです*\
 コピーする Regex ソース。
 
-*Ptr*\
+*ポインター*\
 コピーするシーケンスの先頭を指すポインター。
 
-*フラグ*\
+*示す*\
 コピー中に追加する構文オプション フラグ。
 
-*レン/TD>*\
+*len/TD>*\
 コピーするシーケンスの長さ。
 
-*Str*\
+*引数*\
 コピーする文字列。
 
 *まずは*\
@@ -260,14 +260,14 @@ basic_regex& assign(
 *前の*\
 コピーするシーケンスの最後。
 
-*Ilist*\
+*IList*\
 コピーする initializer_list。
 
 ### <a name="remarks"></a>解説
 
-いずれのメンバー関数も、`*this` が保持している正規表現を、オペランド シーケンスが保持している正規表現に置き換えて、`*this` を返します。
+各メンバー関数は、によって保持されている正規表現を、 **`*this`** オペランドシーケンスで記述された正規表現に置き換えてから、を返し **`*this`** ます。
 
-## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex::basic_regex
+## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex:: basic_regex
 
 正規表現オブジェクトを構築します。
 
@@ -304,28 +304,28 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>パラメーター
 
-*海峡*\
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*スタロック*\
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
-*Init*\
+*初期化*\
 範囲ソースの入力反復子の型。
 
 *そうです*\
 コピーする Regex ソース。
 
-*Ptr*\
+*ポインター*\
 コピーするシーケンスの先頭を指すポインター。
 
-*フラグ*\
+*示す*\
 コピー中に追加する構文オプション フラグ。
 
-*レン/TD>*\
+*len/TD>*\
 コピーするシーケンスの長さ。
 
-*Str*\
+*引数*\
 コピーする文字列。
 
 *まずは*\
@@ -334,7 +334,7 @@ explicit basic_regex(
 *前の*\
 コピーするシーケンスの最後。
 
-*Ilist*\
+*IList*\
 コピーする initializer_list。
 
 ### <a name="remarks"></a>解説
@@ -343,9 +343,9 @@ explicit basic_regex(
 
 1 つ目のコンストラクターは、空の `basic_regex` オブジェクトを構築します。 それ以外のコンストラクターは、オペランド シーケンスで記述された正規表現を保持する `basic_regex` オブジェクトを構築します。
 
-空`basic_regex`のオブジェクト[は、](../standard-library/regex-functions.md#regex_search)、 regex_search 、 または[regex_replace](../standard-library/regex-functions.md#regex_replace) [regex_match](../standard-library/regex-functions.md#regex_match)に渡された場合、どの文字シーケンスにも一致しません。
+空 `basic_regex` のオブジェクトは、 [regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、または[regex_replace](../standard-library/regex-functions.md#regex_replace)に渡されたときに、どの文字シーケンスとも一致しません。
 
-## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex::flag_type
+## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex:: flag_type
 
 構文オプション フラグの型です。
 
@@ -357,7 +357,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 この型は [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type)のシノニムです。
 
-## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex::フラグ
+## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex:: flags
 
 構文のオプション フラグを返します。
 
@@ -369,7 +369,7 @@ flag_type flags() const;
 
 このメンバー関数は、[basic_regex::assign](#assign) メンバー関数のうち直前に呼び出された関数に渡された `flag_type` 引数の値を返します。これに当たる呼び出しが行われていなかった場合は、コンストラクターに渡した値が返されます。
 
-## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex::ゲットロック
+## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex:: getloc
 
 格納されているロケール オブジェクトを返します。
 
@@ -379,9 +379,9 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は`traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`を返します。
+このメンバー関数は `traits.` [regex_traits:: getloc](../standard-library/regex-traits-class.md#getloc)を返し `()` ます。
 
-## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex::インビュー
+## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex:: imbue
 
 格納されているロケール オブジェクトを変更します。
 
@@ -391,14 +391,14 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*\
+*loc*\
 格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は空に`*this`し`traits.`[、regex_traits::インブーを](../standard-library/regex-traits-class.md#imbue)`(loc)`返します。
+このメンバー関数は、を空に **`*this`** して `traits.` [regex_traits:: imbue](../standard-library/regex-traits-class.md#imbue)を返し `(loc)` ます。
 
-## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex::locale_type
+## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex:: locale_type
 
 格納されているロケール オブジェクトの型。
 
@@ -410,7 +410,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 この型は [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type)のシノニムです。
 
-## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex::mark_count
+## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex:: mark_count
 
 一致した部分式の数を返します。
 
@@ -422,7 +422,7 @@ unsigned mark_count() const;
 
 メンバー関数は、正規表現のキャプチャ グループの数を返します。
 
-## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex::演算子=
+## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex:: operator =
 
 値を正規表現オブジェクトに代入します。
 
@@ -437,23 +437,23 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*海峡*\
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*スタロック*\
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
 *そうです*\
 コピーする Regex ソース。
 
-*Str*\
+*引数*\
 コピーする文字列。
 
 ### <a name="remarks"></a>解説
 
-それぞれの演算子が、 `*this` に保持されている正規表現を、オペランド シーケンスで記述された正規表現に置き換えてから、 `*this`を返します。
+それぞれの演算子は、によって保持されている正規表現を、 **`*this`** オペランドシーケンスで記述された正規表現に置き換えてから、を返し **`*this`** ます。
 
-## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex::スワップ
+## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex:: swap
 
 2 つの正規表現オブジェクトを交換します。
 
@@ -468,9 +468,9 @@ void swap(basic_regex& right) throw();
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、 と*の*間`*this`で正規表現を入れ替えます。 一定時間に実行し、例外をスローしません。
+このメンバー関数は、との間で正規表現を交換し **`*this`** ます。 *right* 一定時間に実行し、例外をスローしません。
 
-## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex::value_type
+## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex:: value_type
 
 要素型。
 
@@ -480,14 +480,14 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレート パラメータ*Elem*のシノニムです。
+この型は、テンプレートパラメーター *Elem*のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 
-[\<正規表現>](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [regex_match](../standard-library/regex-functions.md#regex_match)\
 [regex_search](../standard-library/regex-functions.md#regex_search)\
 [regex_replace](../standard-library/regex-functions.md#regex_replace)\
-[Regex](../standard-library/regex-typedefs.md#regex)\
-[ドレネックス](../standard-library/regex-typedefs.md#wregex)\
+[regex](../standard-library/regex-typedefs.md#regex)\
+[wregex](../standard-library/regex-typedefs.md#wregex)\
 [regex_traits クラス](../standard-library/regex-traits-class.md)

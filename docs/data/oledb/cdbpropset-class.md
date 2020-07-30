@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216493"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 
-`DBPROPSET` 構造体から継承し、キーフィールドと `AddProperty` アクセスメソッドを初期化するコンストラクターを追加します。
+は `DBPROPSET` 構造体から継承し、キーフィールドおよびアクセスメソッドを初期化するコンストラクターを追加し `AddProperty` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -61,7 +61,7 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[AddProperty](#addproperty)|プロパティセットにプロパティを追加します。|
 |[CDBPropSet](#cdbpropset)|コンストラクターです。|
-|[SetGUID](#setguid)|`DBPROPSET` 構造の `guidPropertySet` フィールドを設定します。|
+|[SetGUID](#setguid)|`guidPropertySet`構造体のフィールドを設定 `DBPROPSET` します。|
 
 ### <a name="operators"></a>オペレーター
 
@@ -71,7 +71,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ## <a name="remarks"></a>解説
 
-OLE DB プロバイダーとコンシューマーは、`DBPROPSET` 構造体を使用して `DBPROP` 構造体の配列を渡します。 各 `DBPROP` 構造体は、設定できる1つのプロパティを表します。
+OLE DB プロバイダーとコンシューマーは、構造体を使用して `DBPROPSET` 構造体の配列を渡し `DBPROP` ます。 各 `DBPROP` 構造体は、設定できる1つのプロパティを表します。
 
 ## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
 
@@ -97,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>パラメーター
 
 *dwPropertyID*<br/>
-から追加するプロパティの ID。 プロパティセットに追加された `DBPROP` 構造体の `dwPropertyID` を初期化するために使用します。
+から追加するプロパティの ID。 `dwPropertyID` `DBPROP` プロパティセットに追加された構造体のを初期化するために使用します。
 
 *var*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用されるバリアント。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるバリアント。
 
 *szValue*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用される文字列。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される文字列。
 
 *bValue*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用する `BYTE` またはブール値。
+から`BYTE` `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるまたはブール値。
 
 *N 値*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用される整数値。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される整数値。
 
 *fltValue*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用される浮動小数点値。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される浮動小数点値。
 
 *dblValue*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用される倍精度浮動小数点値。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される倍精度浮動小数点値。
 
 *cyValue*<br/>
-からプロパティセットに追加された `DBPROP` 構造体のプロパティ値を初期化するために使用される CY の通貨値。
+から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される CY の通貨値。
 
 ### <a name="return-value"></a>戻り値
 
-プロパティが正常に追加された場合は**true** 。 それ以外の場合は、 **false**です。
+**`true`** プロパティが正常に追加された場合は。 それ以外の場合は **`false`** 。
 
 ## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
-コンストラクターです。 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の `rgProperties`、`cProperties`、および `guidPropertySet` の各フィールドを初期化します。
+コンストラクターです。 `rgProperties` `cProperties` `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の、、およびの各フィールドを初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -141,14 +141,14 @@ CDBPropSet();
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-から`guidPropertySet` フィールドを初期化するために使用される GUID。
+からフィールドを初期化するために使用される GUID `guidPropertySet` 。
 
 *propset*<br/>
-からコピー構築用の別の `CDBPropSet` オブジェクト。
+から`CDBPropSet`コピー構築用の別のオブジェクト。
 
 ## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
 
-`DBPROPSET` 構造体の `guidPropertySet` フィールドを設定します。
+`guidPropertySet`構造体のフィールドを設定 `DBPROPSET` します。
 
 ### <a name="syntax"></a>構文
 
@@ -159,7 +159,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-から[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の `guidPropertySet` フィールドを設定するために使用される GUID。
+から`guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体のフィールドを設定するために使用される GUID。
 
 ### <a name="remarks"></a>解説
 
@@ -175,10 +175,10 @@ void SetGUID(const GUID& guid) throw();
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET 構造](/previous-versions/windows/desktop/ms714367(v=vs.85))体
+[DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367(v=vs.85)) 
 [DBPROP 構造体](/previous-versions/windows/desktop/ms717970(v=vs.85))

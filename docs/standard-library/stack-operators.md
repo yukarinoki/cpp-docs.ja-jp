@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217416"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; operators
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しくないかどうかを調べます。
 
@@ -35,15 +35,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-stack 同士が等しくない場合は **true**、stack 同士が等しい場合は **false**。
+**`true`** スタックまたはスタックが等しくない場合は。**`false`** スタックまたはスタックが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより小さいかどうかを調べます。
 
@@ -100,15 +100,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の queue が演算子の右辺の queue 未満である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のスタックがより小さく、演算子の右辺のスタックと等しくない場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以下かどうかを調べます。
 
@@ -184,15 +184,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の stack が演算子の右辺の stack 以下である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のスタックが演算子の右側のスタック以下である場合は、です ()。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しいかどうかを調べます。
 
@@ -251,15 +251,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-stack 同士が等しい場合は **true**、stack 同士が等しくない場合は **false**。
+**`true`** スタックまたはスタックが等しい場合は。**`false`** スタックまたはスタックが等しくない場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより大きいかどうかを調べます。
 
@@ -316,15 +316,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の stack が演算子の右辺の stack より大きい場合や等しくない場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のスタックが、演算子の右辺のスタックと等しくなく、かつ等しい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以上かどうかを調べます。
 
@@ -385,15 +385,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `stack` 型オブジェクト。
 
-*右*\
+*そうです*\
 `stack` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の stack が演算子の右辺の stack より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のスタックが、演算子の右辺のスタックより厳密に小さい場合は、それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 

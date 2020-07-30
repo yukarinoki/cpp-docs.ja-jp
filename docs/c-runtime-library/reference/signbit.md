@@ -6,16 +6,16 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356330"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216740"
 ---
 # <a name="signbit"></a>signbit
 
-浮動小数点値が負の値であるかどうかを判断します。
+浮動小数点値が負であるかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,23 +44,23 @@ inline bool signbit(
 
 ## <a name="return-value"></a>戻り値
 
-**signbit** 0 以外の値を返します (**true** C++ で) 場合、引数*x*負の値または負の無限大します。 0 を返します (**false** C++ の) 引数が負以外の正の無限大または NAN の場合。
+**signbit** **`true`** 引数*x*が負の値または負の無限大である場合、Signbit は、(C++ では) 0 以外の値を返します。 **`false`** 引数が負でない、正の無限大、または NAN の場合は、0 (C++ では) を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**signbit**マクロとして、C、C++ としてコンパイル時に、オーバー ロードされたインライン関数をコンパイルする場合。
+**signbit**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされる場合はオーバーロードされたインライン関数です。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> または \<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

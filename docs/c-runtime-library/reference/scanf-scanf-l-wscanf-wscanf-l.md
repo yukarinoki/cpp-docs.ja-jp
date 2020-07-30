@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079208"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231352"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 標準入力ストリームから書式付きデータを読み取ります。 これらの関数のセキュリティを強化したバージョンを使用できます。「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」をご覧ください。
 
 > [!NOTE]
-> Visual Studio 2015 では、`printf` および `scanf` の関数ファミリが**inline**として宣言され、`<stdio.h>` と `<conio.h>` のヘッダーに移動されました。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「[ビジュアルC++の変更履歴 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
+> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -97,7 +97,7 @@ int _wscanf_l(
 
 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -117,16 +117,16 @@ int _wscanf_l(
 |**_tscanf**|**scanf**|**scanf**|**wscanf**|
 |**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
-詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
+詳細については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -166,12 +166,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

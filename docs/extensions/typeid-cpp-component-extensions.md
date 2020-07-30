@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181747"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225112"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI および C++/CX)
 
@@ -68,15 +68,15 @@ type::typeid
 
 ### <a name="remarks"></a>解説
 
-`typeid` を使用して、コンパイル時に型の <xref:System.Type> を取得します。
+**`typeid`** は、 <xref:System.Type> コンパイル時に型のを取得するために使用されます。
 
-`typeid` の機能は、実行時に <xref:System.Type.GetType%2A> または <xref:System.Object.GetType%2A> を使用して型の System::Type を取得することに似ています。 ただし、typeid には型名をパラメーターとしてのみ指定できます。  型のインスタンスを使用して、その System::Type 名を取得するには、GetType を使用します。
+**`typeid`** は、 `System::Type` 実行時にまたはを使用して型のを取得するのと似てい <xref:System.Type.GetType%2A> <xref:System.Object.GetType%2A> ます。 ただし、では、 **`typeid`** パラメーターとして型名のみが受け入れられます。  型のインスタンスを使用して名前を取得する場合は `System::Type` 、を使用し `GetType` ます。
 
-`typeid` はコンパイル時に型名 (型) を評価できる必要がありますが、GetType は実行時に返す型を評価します。
+**`typeid`** はコンパイル時に型名 (型) を評価できる必要がありますが、GetType は実行時に返される型を評価します。
 
-`typeid` には、ネイティブ型の名前またはネイティブ型の名前の共通言語ランタイム エイリアスを指定できます。詳細については、「[C++ ネイティブ型と等価な .NET Framework ネイティブ型](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)」を参照してください。
+**`typeid`** ネイティブ型名またはネイティブ型名の共通言語ランタイムエイリアスを受け取ることができます。詳細については、「 [C++ ネイティブ型に相当する .NET Framework (c++/cli)」を](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)参照してください。
 
-`typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  type_info 構造体を取得するには、[typeid 演算子](../cpp/typeid-operator.md)を使用します。
+**`typeid`** はネイティブ型とも連携しますが、は引き続きを返し `System::Type` ます。  Type_info 構造体を取得するには、 [ `typeid` 演算子](../cpp/typeid-operator.md)を使用します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -116,7 +116,7 @@ G
 System.Single*
 ```
 
-次の例では、System::Type 型の変数を使用して型の属性を取得できることを示しています。  この例を見るとわかるように、一部の型では、`typeid` を使用するために typedef を作成する必要があります。
+次の例では、System::Type 型の変数を使用して型の属性を取得できることを示しています。  また、一部の型では、使用する typedef を作成する必要があることも示してい **`typeid`** ます。
 
 ```cpp
 // keyword__typeid_2.cpp
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684422"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201961"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -24,24 +24,24 @@ ms.locfileid: "72684422"
 #include <type_traits>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-@No__t_0type_traits > のクラスとテンプレートは、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
+のクラスとテンプレート \<type_traits> は、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
 
-ヘルパークラス `integral_constant` とそのテンプレートの特殊化 `true_type` と `false_type` 型の述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が*true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型述語が*false を保持*する場合、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
+ヘルパークラス `integral_constant` とそのテンプレートは特殊化され、 `true_type` `false_type` 型述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が*true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型の述語が*false を保持*している場合は、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
 
 *型修飾子*または*変換の特徴*は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
 
 ### <a name="alias-templates"></a>エイリアス テンプレート
 
-型の特徴の式を簡単にするために、`typename some_trait<T>::type` の[エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md)が用意されています。ここで、 *some_trait*はクラステンプレート名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
+型の特徴式を単純化するために、の[エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` が用意されています。 *some_trait*はクラステンプレート名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-これらは、`type` メンバーの指定されたエイリアスです。
+これらは、メンバーの指定されたエイリアスです `type` 。
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|型が**void**であるかどうかをテストします。|
+|[is_void](../standard-library/is-void-class.md)|型がであるかどうかをテスト **`void`** します。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|型が `std::nullptr_t` であるかどうかをテストします。|
 |[is_integral](../standard-library/is-integral-class.md)|型が整数型であるかどうかをテストします。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|型が浮動小数点型であるかどうかをテストします。|
@@ -89,7 +89,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|型が参照であるかどうかをテストします。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|型が演算型であるかどうかをテストします。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|型が**void**または算術型であるかどうかをテストします。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|型がまたは演算であるかどうかをテスト **`void`** します。|
 |[is_object](../standard-library/is-object-class.md)|型がオブジェクト型であるかどうかをテストします。|
 |[is_scalar](../standard-library/is-scalar-class.md)|型がスカラーであるかどうかをテストします。|
 |[is_compound](../standard-library/is-compound-class.md)|型が非スカラーであるかどうかをテストします。|
@@ -99,13 +99,13 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|型が**const**であるかどうかをテストします。|
-|[is_volatile](../standard-library/is-volatile-class.md)|型が**volatile**かどうかをテストします。|
+|[is_const](../standard-library/is-const-class.md)|型がであるかどうかをテスト **`const`** します。|
+|[is_volatile](../standard-library/is-volatile-class.md)|型がであるかどうかをテスト **`volatile`** します。|
 |[is_trivial](../standard-library/is-trivial-class.md)|型が単純であるかどうかをテストします。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|型が普通にコピー可能であるかどうかをテストします。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|型が標準レイアウト型であるかどうかをテストします。|
 |[is_pod](../standard-library/is-pod-class.md)|型が POD であるかどうかをテストします。|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|型が、`constexpr` 変数にしたり、`constexpr` 関数で使用したりできるかどうかをテストします。|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|型を変数にすることも、関数で使用できるかどうかをテストし **`constexpr`** **`constexpr`** ます。|
 |[is_empty](../standard-library/is-empty-class.md)|型が空のクラスであるかどうかをテストします。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|型がポリモーフィックなクラスであるかどうかをテストします。|
 |[is_abstract](../standard-library/is-abstract-class.md)|型が抽象クラスであるかどうかをテストします。|
@@ -153,8 +153,8 @@ using add_const_t = typename add_const<T>::type;
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|型のアラインメントを取得します。|
-|[rank](../standard-library/rank-class.md)|配列の次元数を取得します。|
-|[extent](../standard-library/extent-class.md)|指定した次元にある要素の数を取得します。|
+|[ランク](../standard-library/rank-class.md)|配列の次元数を取得します。|
+|[エクステント](../standard-library/extent-class.md)|指定した次元にある要素の数を取得します。|
 
 型の関係
 
@@ -168,9 +168,9 @@ const/volatile の変更
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|型から**const**型を生成します。|
-|[add_volatile](../standard-library/add-volatile-class.md)|型から**volatile**型を生成します。|
-|[add_cv](../standard-library/add-cv-class.md)|型から**const volatile**型を生成します。|
+|[add_const](../standard-library/add-const-class.md)|型 **`const`** から型を生成します。|
+|[add_volatile](../standard-library/add-volatile-class.md)|型 **`volatile`** から型を生成します。|
+|[add_cv](../standard-library/add-cv-class.md)|型 **`const volatile`** から型を生成します。|
 |[remove_const](../standard-library/remove-const-class.md)|型から非 const 型を生成します。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|型から非 volatile 型を生成します。|
 |[remove_cv](../standard-library/remove-cv-class.md)|型から非 const の非 volatile 型を生成します。|
@@ -211,8 +211,8 @@ const/volatile の変更
 |[aligned_storage](../standard-library/aligned-storage-class.md)|整列された型の初期化されていないメモリを割り当てます。|
 |[aligned_union](../standard-library/aligned-union-class.md)|重要なコンストラクターまたはデストラクターを含む整列された共用体の初期化されていないメモリを割り当てます。|
 |[common_type](../standard-library/common-type-class.md)|パラメーター パックのすべての型の共通の型を生成します。|
-|[conditional](../standard-library/conditional-class.md)|条件が true の場合は、最初に指定された型が生成され、それ以外の場合、2 番目に指定された型になります。|
-|[decay](../standard-library/decay-class.md)|値で渡されように型を生成します。 非参照、非定数、非揮発の型、または型へのポインターを作成します。|
+|[付](../standard-library/conditional-class.md)|条件が true の場合は、最初に指定された型が生成され、それ以外の場合、2 番目に指定された型になります。|
+|[decay](../standard-library/decay-class.md)|値で渡された型を生成します。 非参照、非定数、非揮発の型、または型へのポインターを作成します。|
 |[enable_if](../standard-library/enable-if-class.md)|条件が true の場合は、指定された型が生成され、それ以外の場合、型は生成されません。|
 |[invoke_result](invoke-result-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 17 で追加されました。 |
 |[result_of](../standard-library/result-of-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 14 では非推奨となりました。 |
@@ -222,8 +222,8 @@ const/volatile の変更
 
 |||
 |-|-|
-|[組み合わせる](../standard-library/conjunction-class.md)||
-|[論理](../standard-library/disjunction-class.md)||
+|[論理積](../standard-library/conjunction-class.md)||
+|[論理和](../standard-library/disjunction-class.md)||
 |[正負](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>関連項目

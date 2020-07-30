@@ -2,12 +2,12 @@
 title: アップグレード時の潜在的な問題の概要 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231638"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
-(Microsoft Visual C++ 6.0 以前では、 **wchar_t**は組み込み型として実装されていませんが、unsigned short の typedef として wchar で宣言されていました)。C++ 標準では、 **wchar_t**が組み込み型である必要があります。 typedef バージョンを使用すると、移植性の問題が発生することがあります。 以前のバージョンの Visual Studio からアップグレードしているとき、コードが **wchar_t** を符号なし **short** に暗黙的に変換しようとしたために C2664 コンパイル エラーが発生した場合は、`/Zc:wchar_t-` を設定するのではなく、コードを変更してエラーを修正することをお勧めします。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+(Microsoft Visual C++ 6.0 以前では、 **`wchar_t`** は組み込み型として実装されていませんが、unsigned short の typedef として wchar で宣言されていました)。C++ 標準では、 **`wchar_t`** が組み込み型である必要があります。 typedef バージョンを使用すると、移植性の問題が発生することがあります。 以前のバージョンの Visual Studio からアップグレードするときに、コードがをに暗黙的に変換しようとしているためにコンパイラエラー C2664 が発生した場合は、を **`wchar_t`** 設定するのではなく、コードを変更してエラーを修正することをお **`unsigned short`** 勧めし `/Zc:wchar_t-` ます。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>リンカー オプション /NODEFAULTLIB、/ENTRY、および /NOENTRY を使用したアップグレード
 

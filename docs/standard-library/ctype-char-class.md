@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688158"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220965"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; クラス
 
-クラスは **、char 型**に `ctype\<CharType>` クラステンプレートの明示的な特殊化であり、 **char**型の文字のさまざまなプロパティを特徴付けるためにロケールファセットとして使用できるオブジェクトを記述します。
+クラスは、クラステンプレートを型に明示的に特殊化したもの `ctype\<CharType>` **`char`** であり、型の文字のさまざまなプロパティを特徴付けるためにロケールファセットとして使用できるオブジェクトを記述し **`char`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -104,32 +104,32 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 明示的な特殊化は、いくつかの点でクラステンプレートとは異なります。
 
-- Ctype マスクテーブルの最初の要素へのポインター (型 `ctype_base::mask` の UCHAR_MAX + 1 要素の配列) を格納するクラス ctype < `char` > のオブジェクト。 ctype\< **Elem**> オブジェクトが破棄されるとき、(`operator delete[]` を利用して) 配列を削除するかどうかを示すブール値も格納します。
+- クラスのオブジェクトは `ctype<char>` 、ctype マスクテーブルの最初の要素へのポインター、型の UCHAR_MAX + 1 要素の配列を格納 `ctype_base::mask` します。 また、 `operator delete[]` ctype オブジェクトが破棄されたときに、を使用して配列を削除するかどうかを示すブール型オブジェクトも格納し \< **Elem**> ます。
 
-- 唯一のパブリックコンストラクターを使用すると、`tab`、ctype マスクテーブル、`del` を指定できます。ブール値オブジェクトは、ctype < `char` > オブジェクトが破棄されたときに配列を削除する場合は true、参照カウントパラメーター参照にも指定できます。
+- 唯一のパブリックコンストラクターを使用すると `tab` 、、ctype マスクテーブル、およびを指定でき `del` ます。ブール値オブジェクトは、オブジェクトが破棄されたときに配列が削除される場合は true、 `ctype<char>` 参照カウントパラメーター参照にも指定できます。
 
-- プロテクトメンバー関数 `table` は、格納されている ctype マスクテーブルを返します。
+- プロテクトメンバー関数は、 `table` 格納されている ctype マスクテーブルを返します。
 
-- @No__t_0 静的メンバーオブジェクトは、ctype マスクテーブル内の要素の最小数を指定します。
+- 静的メンバーオブジェクトは、 `table_size` ctype マスクテーブル内の要素の最小数を指定します。
 
-- プロテクト静的メンバー関数 `classic_table` ("C" ロケールに適した ctype マスクテーブルを返します)。
+- プロテクト静的メンバー関数 `classic_table` ("C" ロケールに適した ctype マスクテーブルを返します。
 
 - 保護されている仮想メンバー関数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)、[do_scan_not](../standard-library/ctype-class.md#do_scan_not) はありません。 それに対応するパブリック メンバー関数が同等の操作を実行します。
 
 メンバー関数の [do_narrow](../standard-library/ctype-class.md#do_narrow) と [do_widen](../standard-library/ctype-class.md#do_widen) は、要素を変更せずにコピーします。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[facet クラス](locale-class.md#facet_class)\
+[ファセットクラス](locale-class.md#facet_class)\
 [ctype_base クラス](../standard-library/ctype-base-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

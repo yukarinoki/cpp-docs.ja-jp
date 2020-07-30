@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507015"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216727"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -79,7 +79,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sin**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**sin**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **sin**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

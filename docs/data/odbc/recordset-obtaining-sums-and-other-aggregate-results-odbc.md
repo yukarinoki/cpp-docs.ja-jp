@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225710"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>レコードセット: 集計値の計算 (ODBC)
 
@@ -36,7 +36,7 @@ ms.locfileid: "81368651"
 
 - **COUNT** では、任意のデータ型の列においてレコードの数をカウントします。
 
-これらの SQL 関数は、データ ソースからレコードを抽出するためではなく、データ ソース内のレコードに関する統計情報を取得するために使用します。 作成されるレコードセットは通常、1 つの値を含む 1 つのレコードで構成されます (すべての列が集計列である場合)。 (GROUP **BY**句を使用した場合は、複数のレコードが存在する可能性があります)。この値は、SQL 関数によって実行された計算または抽出の結果です。
+これらの SQL 関数は、データ ソースからレコードを抽出するためではなく、データ ソース内のレコードに関する統計情報を取得するために使用します。 作成されるレコードセットは通常、1 つの値を含む 1 つのレコードで構成されます (すべての列が集計列である場合)。 ( **GROUP by**句を使用した場合、複数のレコードが存在する可能性があります)。この値は、SQL 関数によって実行される計算または抽出の結果です。
 
 > [!TIP]
 > SQL **GROUP BY** 句 (および場合によって **HAVING** 句) を SQL ステートメントに追加するには、`m_strFilter`の末尾に追加します。 次に例を示します。
@@ -50,13 +50,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 > 一部の集計演算子では、集計される列とは異なるデータ型が返されます。
 
-- **SUM** および **AVG** では、次に大きいデータ型が返される場合があります (たとえば、`int` を使用した呼び出しで **LONG** や **double** が返されます)。
+- **SUM**と**AVG**は次の大きなデータ型を返す場合があります (たとえば、を指定してを呼び出すと、 **`int`** **LONG**またはが返さ **`double`** れます)。
 
 - **COUNT** では通常、ターゲット列の型に関係なく **LONG** が返されます。
 
 - **MAX** および **MIN** では、計算する列と同じデータ型が返されます。
 
-     たとえば、**クラスの追加**ウィザードでは、Sales 列に対応する `long` `m_lSales` が作成されますが、集計結果を対応するためには、これを `double m_dblSumSales` データ メンバーに置き換える必要があります。 次の例を参照してください。
+     たとえば、クラスの**追加**ウィザードは **`long`** `m_lSales` Sales 列を格納するために作成しますが、集計結果を格納するには、これをデータメンバーに置き換える必要があり `double m_dblSumSales` ます。 次の例を参照してください。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>レコードセットの集計結果を取得するには
 
@@ -85,7 +85,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-変更後:
+移動先:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);

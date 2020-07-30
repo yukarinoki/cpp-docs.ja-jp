@@ -7,12 +7,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a1ed4f374f133abd0233826d1b58896d49576cf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178983"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225866"
 ---
 # <a name="return-statement-c"></a>return ステートメント (C++)
 
@@ -26,15 +26,15 @@ return [expression];
 
 ## <a name="remarks"></a>解説
 
-`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型から関数の**戻り値**の型への変換では、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、「[一時オブジェクト](../cpp/temporary-objects.md)」を参照してください。
+`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型から関数の型への変換で **`return`** は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、「[一時オブジェクト](../cpp/temporary-objects.md)」を参照してください。
 
-`expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンストラクターとデストラクター、および**void**型の関数は、 **return**ステートメントで式を指定することはできません。 他のすべての型の関数は、 **return**ステートメントで式を指定する必要があります。
+`expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンストラクターとデストラクター、および型の関数 **`void`** は、ステートメントで式を指定することはできません **`return`** 。 他のすべての型の関数は、ステートメントで式を指定する必要があり **`return`** ます。
 
-制御のフローが関数定義を囲むブロックを終了すると、式のない**return**ステートメントが実行された場合と同じ結果になります。 これは、値を返すように宣言された関数では無効です。
+制御のフローが関数定義を囲むブロックを終了すると、 **`return`** 式のないステートメントが実行された場合と同じ結果になります。 これは、値を返すように宣言された関数では無効です。
 
-関数は、任意の数の**return**ステートメントを持つことができます。
+関数には、任意の数のステートメントを含めることができ **`return`** ます。
 
-次の例では、return ステートメントで式を使用して、2つの整数のうち最大の**値**を取得します。
+次の例では、ステートメントで式を使用して **`return`** 、2つの整数のうち最大の値を取得します。
 
 ## <a name="example"></a>例
 
@@ -56,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジャンプ ステートメント](../cpp/jump-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

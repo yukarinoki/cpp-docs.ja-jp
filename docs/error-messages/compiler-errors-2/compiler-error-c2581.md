@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a632d6a47afb29b8bb46761c3188391905eda842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755435"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206875"
 ---
 # <a name="compiler-error-c2581"></a>コンパイラ エラー C2581
 
 ' type ': 静的 ' operator = ' 関数は無効です
 
-代入 (`=`) 演算子が `static`として正しく宣言されていません。 代入演算子を `static`にすることはできません。 詳細については、「[ユーザー定義のC++演算子 (/cli)](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
+代入 ( `=` ) 演算子がとして正しく宣言されてい **`static`** ません。 代入演算子をにすることはできません **`static`** 。 詳細については、「[ユーザー定義の演算子 (C++/cli)](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2581 が生成されます。
 

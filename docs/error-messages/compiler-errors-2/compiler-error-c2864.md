@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cfa928c84fbf6c841e3caaf51dda526a7ae184fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998668"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212658"
 ---
 # <a name="compiler-error-c2864"></a>コンパイラ エラー C2864
 
 > '*メンバー名*': クラス内初期化子を持つ静的データメンバーは、非 volatile const 整数型である必要があります
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`volatile`、非`const`、または整数型として定義されている `static` データメンバーを初期化するには、メンバー定義ステートメントを使用します。 宣言で初期化することはできません。
+**`static`**、、以外の整数型として定義されているデータメンバーを初期化するには、 **`volatile`** **`const`** メンバー定義ステートメントを使用します。 宣言で初期化することはできません。
 
 ## <a name="example"></a>例
 

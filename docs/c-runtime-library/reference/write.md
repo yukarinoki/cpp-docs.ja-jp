@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916704"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211620"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +68,7 @@ int _write(
 
 ファイルがテキストモードで開かれている場合、各ラインフィード文字は出力のキャリッジリターンラインフィードのペアで置き換えられます。 置換は戻り値には影響しません。
 
-ファイルが Unicode 変換モードで開かれている場合 (たとえば、 *fd*が **_open**または **_sopen**を使用して開かれ、 **_O_WTEXT**を含むモードパラメーターを使用して起動された場合)。 **_O_U16TEXT**、または **_O_U8TEXT**。 **fopen**を使用して開かれている場合、または、 **ccs = unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用して開かれている場合、または **_setmode**を使用してモードが unicode 変換モードに変更された場合、*バッファー*は**utf-16**データを含む**wchar_t**の配列へのポインターとし このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+ファイルが Unicode 変換モードで開かれている場合 (たとえば、 *fd*が **_open**または **_sopen**を使用して開かれ、 **_O_WTEXT**を含むモードパラメーターを使用して起動された場合)。 **_O_U16TEXT**、または **_O_U8TEXT**。 **fopen**を使用して開いた場合、または、 **ccs = unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用して開かれている場合、またはモードが **_setmode**を使用して unicode 変換モードに変更された場合、*バッファー*は **`wchar_t`** **utf-16**データを含むの配列へのポインターとして解釈さ このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
 ## <a name="remarks"></a>解説
 
@@ -80,7 +80,7 @@ int _write(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
@@ -146,7 +146,7 @@ Wrote 36 bytes to file.
 
 ## <a name="see-also"></a>関連項目
 
-[下位入出力](../../c-runtime-library/low-level-i-o.md)<br/>
+[低レベル i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

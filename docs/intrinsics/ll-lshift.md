@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221811"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230520"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
@@ -40,21 +40,21 @@ unsigned __int64 __ll_lshift(
 
 ## <a name="return-value"></a>戻り値
 
-ビットによって左`nBit`にシフトされたマスク。
+ビットによって左にシフトされたマスク `nBit` 。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__ll_lshift`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-64ビットアーキテクチャ`nBit`のプログラムをコンパイルし、が63よりも大きい場合、シフトするビット数は`nBit`モジュロ64になります。 32ビットアーキテクチャ`nBit`のプログラムをコンパイルし、が31より大きい場合、シフトするビット数は`nBit`モジュロ32になります。
+64ビットアーキテクチャのプログラムをコンパイルし、 `nBit` が63よりも大きい場合、シフトするビット数はモジュロ64になり `nBit` ます。 32ビットアーキテクチャのプログラムをコンパイルし、 `nBit` が31より大きい場合、シフトするビット数は `nBit` モジュロ32になります。
 
-名前`ll`のは、(`__int64`) に対する`long long`操作であることを示します。
+名前のは、 `ll` () に対する操作であることを示し **`long long`** **`__int64`** ます。
 
 ## <a name="example"></a>例
 
@@ -77,14 +77,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 10000
 ```
 
 > [!NOTE]
-> 左シフト演算に署名されていないバージョンはありません。 これは、 `__ll_lshift`既に符号なしの入力パラメーターが使用されているためです。 右シフトとは異なり、左シフトには符号に依存しません。これは、シフトされた値の符号に関係なく、結果の最下位ビットが常に0に設定されるためです。
+> 左シフト演算に署名されていないバージョンはありません。 これは、 `__ll_lshift` 既に符号なしの入力パラメーターが使用されているためです。 右シフトとは異なり、左シフトには符号に依存しません。これは、シフトされた値の符号に関係なく、結果の最下位ビットが常に0に設定されるためです。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 2d73155e36909efb1a7261f9fe45c2431525437a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 72215b7a3fff638daf02f136e3a107ce8a8a00d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233913"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS および MBCS データ型
 
-1 つのマルチバイト文字または 1 つのマルチバイト文字の 1 バイトを処理する Microsoft MBCS ランタイム ライブラリ ルーチンでは、`unsigned int` 引数が想定されます (0x00 <= 文字の値 <= 0xFFFF および 0x00 <= バイト値 <= 0xFF の場合)。 マルチバイトのバイトまたは文字列のコンテキスト内の文字を処理する MBCS ルーチンでは、マルチバイト文字列が `unsigned char` ポインターとして表示されることが想定されます。
+1つのマルチバイト文字またはマルチバイト文字の1バイトだけを処理する Microsoft MBCS ランタイムライブラリルーチンでは、引数を指定する必要が **`unsigned int`** あります (0x00 <= 文字値 <= 0xffff、0x00 <= バイト値 <= 0xff)。 マルチバイトのバイトまたは文字列コンテキスト内の文字を処理する MBCS ルーチンでは、マルチバイト文字列がポインターとして表現されることを想定して **`unsigned char`** います。
 
 > [!CAUTION]
-> マルチバイト文字の各バイトは 8 ビットの **char** で表すことができます。 ただし、0x7F よりも大きい値を持つ SBCS または型が **char** の MBCS 1 バイト文字は負になります。 このような文字が直接 **int** または **long** に変換されると、結果がコンパイラによって符号拡張され、予期しない結果が生じることがあります。
+> マルチバイト文字の各バイトは8ビットで表すことができ **`char`** ます。 ただし、0x7F よりも大きい値を持つ型の SBCS または MBCS の1バイト文字 **`char`** は負になります。 このような文字が直接またはに変換されると、 **`int`** **`long`** 結果はコンパイラによって符号拡張されるため、予期しない結果が発生する可能性があります。
 
-そのため、マルチバイト文字のバイトを 8 ビット `unsigned char` で表すことが最善の方法となります。 また、負の結果を避けるためには、単に型 **char** の 1 バイト文字を **int** または **long** に変換する前に `unsigned char` に変換します。
+したがって、マルチバイト文字のバイトを8ビットとして表すことをお勧めし **`unsigned char`** ます。 または、負の結果を回避するには、型の1バイト文字を **`char`** またはに変換する前に、単にをに変換し **`unsigned char`** **`int`** **`long`** ます。
 
-SBCS の文字列処理関数の中には、(符号付きの) **char**<strong>\*</strong> パラメーターを受け取るものがあります。このため、**_MBCS** を定義すると、型の不一致を知らせるコンパイラの警告が生成されます。 この警告を回避する方法を 3 つ、効率の順に次に示します。
+一部の SBCS 文字列処理関数は (符号付き) **`char`** <strong>\*</strong> パラメーターを受け取るため、 **_MBCS**が定義されていると、型の不一致コンパイラの警告が発生します。 この警告を回避する方法を 3 つ、効率の順に次に示します。
 
-1. TCHAR.H のタイプ セーフなインライン関数を使用します。 これが既定の動作です。
+1. TCHAR.H のタイプ セーフなインライン関数を使用します。 これは既定の動作です。
 
 1. コマンド ラインで **_MB_MAP_DIRECT** を定義して、TCHAR.H の直接マクロを使用します。 この場合は、型を手作業で一致させる必要があります。 これは一番速い方法ですが、タイプ セーフではありません。
 

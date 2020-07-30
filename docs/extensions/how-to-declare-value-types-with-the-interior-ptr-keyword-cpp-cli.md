@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172283"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195578"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>説明
 
-値型で、**this** ポインターが interior_ptr と評価されます。
+値型では、 **`this`** ポインターは interior_ptr に評価されます。
 
-値型 `V` の非静的メンバー関数の本文で、**this** は `interior_ptr<V>` 型の式であり、その値が関数によって呼び出されるオブジェクトのアドレスになります。
+値型の静的でないメンバー関数の本体で `V` **`this`** は、は、 `interior_ptr<V>` 関数が呼び出されるオブジェクトのアドレスを値とする型の式です。
 
 ### <a name="code"></a>コード
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

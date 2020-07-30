@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
-ms.openlocfilehash: 9cd46f7a8a0762fcae2bdec15b9b4be6384adb25
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f5780c299eb4da03ece3611ee55062ee7ebcdaae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212788"
 ---
 # <a name="compiler-error-c2273"></a>コンパイラ エラー C2273
 
 ' type ': '-> ' 演算子の右辺が正しくありません。
 
-型は `->` 演算子の右オペランドとして表示されます。
+型は、演算子の右オペランドとして表示され `->` ます。
 
-このエラーは、ユーザー定義型変換にアクセスしようとした場合に発生する可能性があります。 キーワードを使用して-> と `type`を `operator` します。
+このエラーは、ユーザー定義型変換にアクセスしようとした場合に発生する可能性があります。 -> との間にキーワードを使用し **`operator`** `type` ます。
 
 次の例では、C2273 が生成されます。
 

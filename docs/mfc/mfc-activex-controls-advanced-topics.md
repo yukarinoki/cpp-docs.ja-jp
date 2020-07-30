@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225034"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 
@@ -69,7 +69,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 1. [**プロパティ名**] ボックスに「」と入力 `Array` します。
 
-1. [**プロパティの種類**] ボックスで、[ **short**] を選択します。
+1. [**プロパティの種類**] ボックスで、を選択し **`short`** ます。
 
 1. [**実装**の種類] で、[ **Get/Set メソッド**] をクリックします。
 
@@ -97,7 +97,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 最後に、 `GetArray` 関数と関数の実装 `SetArray` がの末尾に追加されます。CPP ファイル。 ほとんどの場合、プロパティの値を返すように Get 関数を変更します。 Set 関数には、通常、プロパティが変更される前または後に実行する必要があるコードが含まれます。
 
-このプロパティを使用するには、パラメーター化されたプロパティの値を格納するために、control クラスで**short**型の2次元配列メンバー変数を宣言します。 次に、パラメーターで示されているように、適切な行と列に格納されている値を返すように Get 関数を変更し、行と列のパラメーターによって参照される値を更新するように Set 関数を変更します。
+このプロパティを使用するには、パラメーター化された **`short`** プロパティの値を格納するために、型のコントロールクラスで2次元配列のメンバー変数を宣言します。 次に、パラメーターで示されているように、適切な行と列に格納されている値を返すように Get 関数を変更し、行と列のパラメーターによって参照される値を更新するように Set 関数を変更します。
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>ActiveX コントロールでのエラーの処理
 
@@ -107,7 +107,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 ### <a name="activex-control-error-codes"></a>ActiveX コントロールのエラーコード
 
-|エラー|説明|
+|エラー|[説明]|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|
 |CTL_E_OVERFLOW|オーバーフロー|
@@ -174,7 +174,7 @@ ActiveX コントロールのキーボードインターフェイスを処理す
 
 - メンバー変数の追加ウィザードを使用して、[**制御変数**] を選択し、コントロールの ID を選択します。 メンバー変数名を入力し、コントロールの**種類**としてコントロールのラッパークラスを選択します。
 
-     \- または -
+     または
 
 - ローカル変数とサブクラスをダイアログ項目として宣言します。 次のようなコードを挿入し `CMyCtrl` ます (はラッパークラス、IDC_MYCTRL1 はコントロールの ID です)。
 

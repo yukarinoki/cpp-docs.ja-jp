@@ -24,12 +24,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945409"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215102"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s、vwscanf_s
 
@@ -60,20 +60,20 @@ int vwscanf_s(
 
 正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は、エラーの場合は**EOF** 、ファイルの終端文字または文字列の終端文字が最初に文字を読み取ろうとしたときに検出される場合はです。 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **vscanf_s**と**vwscanf_s**は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Vscanf_s**関数は、標準入力ストリーム**stdin**からデータを読み取り、 *arglist*引数リストによって指定された場所にデータを書き込みます。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**vwscanf_s**は、 **vscanf_s**のワイド文字バージョンです。**vwscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **vwscanf_s**と**vscanf_s**は同じように動作します。 **vscanf_s**は、UNICODE ストリームからの入力をサポートしていません。
+**vwscanf_s**は**vscanf_s**のワイド文字バージョンです。**vwscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **vwscanf_s**と**vscanf_s**は同じように動作します。 **vscanf_s**は、UNICODE ストリームからの入力をサポートしていません。
 
-**Vscanf**と**vwscanf**とは異なり、 **vscanf_s**と**vwscanf_s**では、[] で囲まれた**c**、 **c**、 **s**、 **s**、または文字列の各コントロールセットのすべての入力パラメーターに対してバッファーサイズを指定する必要があります。 バッファー サイズ (文字単位) は、バッファーまたは変数のポインターの直後に追加パラメーターとして渡されます。 **Wchar_t**文字列のバッファーサイズ (文字数) は、バイト単位のサイズと同じではありません。
+**Vscanf**と**vwscanf**とは異なり、 **vscanf_s**と**vwscanf_s**では、 **[]** で囲まれた**c**、 **c**、 **s**、 **s**、または文字列コントロールセットのすべての入力パラメーターに対してバッファーサイズを指定する必要があります。 バッファー サイズ (文字単位) は、バッファーまたは変数のポインターの直後に追加パラメーターとして渡されます。 文字列のバッファーサイズ **`wchar_t`** がバイト単位のサイズと同じではありません。
 
 バッファー サイズには、終端 null も含まれます。 幅指定フィールドを使用して、読み取られたトークンがバッファーに確実に収まるようにすることができます。 幅指定フィールドが使用されない場合で、読み取られたトークンがバッファーに収まらない場合、そのバッファーには何も書き込まれません。
 
 > [!NOTE]
-> *Size*パラメーターは、 **size_t**ではなく**unsigned**型です。
+> *Size*パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
 
 詳細については、「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
@@ -81,9 +81,9 @@ int vwscanf_s(
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtscanf_s (_m)**|**vscanf_s**|**vscanf_s**|**vwscanf_s**|
+|**_vtscanf_s**|**vscanf_s**|**vscanf_s**|**vwscanf_s**|
 
-詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
+詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -92,7 +92,7 @@ int vwscanf_s(
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -159,7 +159,7 @@ The contents are: 36 92.300003 y n Wide characters
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

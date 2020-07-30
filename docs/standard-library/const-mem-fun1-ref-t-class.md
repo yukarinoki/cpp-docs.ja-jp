@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9f426b7280872846695e204f2c9843d2622fe19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688176"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228337"
 ---
 # <a name="const_mem_fun1_ref_t-class"></a>const_mem_fun1_ref_t クラス
 
-参照引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
+**`const`** 参照引数で初期化するときに、1つの引数を受け取るメンバー関数を二項関数オブジェクトとして呼び出すことができるようにするアダプタークラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -31,22 +31,22 @@ template <class Result, class Type, class Arg>
 
 ### <a name="parameters"></a>パラメーター
 
-*Pm* \
+*Pm*\
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*左*\
-*Pm*メンバー関数が呼び出される**const**オブジェクト。
+*左側*\
+**`const`** *Pm*メンバー関数が呼び出されるオブジェクト。
 
-*右*\
+*そうです*\
 *Pm*に渡される引数。
 
 ## <a name="return-value"></a>戻り値
 
 適合可能な二項関数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要がある、 *Pm*のコピーを格納します。 これは、(\* `left` *Pm*) (`right`) **const**を返すように、そのメンバー関数 `operator()` を定義します。
+クラステンプレートは、 *Pm* `Type` プライベートメンバーオブジェクト内のクラスのメンバー関数へのポインターである必要がある Pm のコピーを格納します。 そのメンバー関数は `operator()` ( `left` \* *Pm*) () を返すように定義さ `right` れて **`const`** います。
 
 ## <a name="example"></a>例
 

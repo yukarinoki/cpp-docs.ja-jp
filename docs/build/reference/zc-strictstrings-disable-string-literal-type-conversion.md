@@ -11,28 +11,28 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: 954088955a3f1530bb298aadbc35c7dd74150b7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315665"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211893"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (文字列リテラル型の変換の無効化)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(文字列リテラル型の変換を無効にします)
 
-指定された場合、コンパイラは、文字列リテラルを使用して初期化されたポインターに対して `const` 修飾による標準への厳密な準拠を要求します。
+指定した場合、コンパイラは、 **`const`** 文字列リテラルを使用して初期化されたポインターに対して厳密修飾準拠を必要とします。
 
 ## <a name="syntax"></a>構文
 
-> **/Zc:strictStrings**[**-**]
+> **`/Zc:strictStrings`**[**`-`**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場合 **/Zc:strictStrings**を指定すると、コンパイラは、標準の C++`const`型として、文字列リテラルの 'の配列`const char`' または 'の配列`const wchar_t`' 宣言によって、します。 文字列リテラルは変更不可であり、文字列リテラルの内容を変更しようとすると、実行時にアクセス違反エラーが発生します。 文字列ポインターは `const` として宣言して文字列リテラルで初期化するか、明示的な `const_cast` を使用して非 `const` ポインターを初期化する必要があります。 既定では、場合 **/Zc:strictStrings-** を指定すると、コンパイラは C++ の標準を強制しない`const`文字列リテラルを使用して初期化された文字列ポインターの制限があります。
+を指定した場合、 **`/Zc:strictStrings`** コンパイラは、 **`const`** 宣言に応じて、文字列リテラルの標準 C++ の修飾を、型 ' 配列 ' または ' 配列 ' の型として適用し `const char` `const wchar_t` ます。 文字列リテラルは変更不可であり、文字列リテラルの内容を変更しようとすると、実行時にアクセス違反エラーが発生します。 文字列ポインターをとして宣言して **`const`** 文字列リテラルを使用して初期化するか、明示的なを使用して **`const_cast`** 非ポインターを初期化する必要があり **`const`** ます。 既定では、またはが指定されている場合、コンパイラは、 **`/Zc:strictStrings-`** **`const`** 文字列リテラルを使用して初期化された文字列ポインターに標準 C++ の修飾を強制しません。
 
-**/Zc:strictStrings**オプションは既定でオフです。 [/Permissive -](permissive-standards-conformance.md)コンパイラ オプションでは、このオプションは、暗黙的に設定しますを使用してオーバーライドできます **/Zc:strictStrings-** します。
+**`/Zc:strictStrings`** 既定では、このオプションはオフになっています。 [`/permissive-`](permissive-standards-conformance.md)コンパイラオプションはこのオプションを暗黙的に設定しますが、を使用してオーバーライドすることもでき **`/Zc:strictStrings-`** ます。
 
-使用して、 **/Zc:strictStrings**不適切なコードのコンパイルを回避するにはオプションです。 この例では、単純な宣言エラーが実行時のクラッシュを招くことを示しています。
+オプションを使用して、 **`/Zc:strictStrings`** 不適切なコードをコンパイルしないようにします。 この例では、単純な宣言エラーが実行時のクラッシュを招くことを示しています。
 
 ```cpp
 // strictStrings_off.cpp
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-ときに **/Zc:strictStrings**が有効にすると、同じコードでの宣言でエラーを報告`str`します。
+を有効にすると、 **`/Zc:strictStrings`** 同じコードによっての宣言でエラーが報告され `str` ます。
 
 ```cpp
 // strictStrings_on.cpp
@@ -55,21 +55,21 @@ int main() {
 }
 ```
 
-`auto` を使用して文字列ポインターを宣言すると、正しい `const` ポインター型宣言がコンパイラによって作成されます。 `const` ポインターの内容を変更しようとすると、コンパイラによってエラーとして報告されます。
+を使用して文字列ポインターを宣言する場合、 **`auto`** コンパイラは正しい **`const`** ポインター型宣言を作成します。 ポインターの内容を変更しようとすると、 **`const`** コンパイラによってエラーとして報告されます。
 
 > [!NOTE]
-> Visual Studio 2013 での C++ 標準ライブラリはサポートしていません、 **/Zc:strictStrings**デバッグ コンパイラ オプションをビルドします。 いくつか表示される場合[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)ビルドでエラー出力、原因があります。
+> Visual Studio 2013 の C++ 標準ライブラリでは、 **`/Zc:strictStrings`** デバッグビルドのコンパイラオプションはサポートされていません。 ビルド出力に複数の[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)エラーが表示される場合は、これが原因である可能性があります。
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. 変更、**追加オプション**含めるプロパティを **/Zc:strictStrings**選び、 **OK**します。
+1. を含めるように "**追加オプション**" プロパティを変更し、[ **`/Zc:strictStrings`** **OK]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](zc-conformance.md)<br/>
+[`/Zc`互換性](zc-conformance.md)<br/>

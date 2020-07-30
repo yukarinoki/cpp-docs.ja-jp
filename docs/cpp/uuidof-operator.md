@@ -10,14 +10,14 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226972"
 ---
-# <a name="__uuidof-operator"></a>__uuidof 演算子
+# <a name="__uuidof-operator"></a>`__uuidof` 演算子
 
 **Microsoft 固有の仕様**
 
@@ -25,26 +25,24 @@ ms.locfileid: "80187792"
 
 ## <a name="syntax"></a>構文
 
-```
-__uuidof (expression)
-```
+> **`__uuidof (`***式***`)`**
 
 ## <a name="remarks"></a>解説
 
 *式*には、型名、ポインター、参照、またはその型の配列、これらの型に特化したテンプレート、またはこれらの型の変数を指定できます。 引数は、アタッチされた GUID を見つけるためにコンパイラが使用できる限り有効です。
 
-この組み込みの特別なケースとして、引数として**0**または NULL が指定されている場合があります。 この場合、 **__uuidof**はゼロで構成された GUID を返します。
+この組み込みの特別なケースとして、引数として**0**または NULL が指定されている場合があります。 この場合、 **`__uuidof`** はゼロで構成された GUID を返します。
 
 このキーワードを使用すると、次のものにアタッチされている GUID を抽出できます。
 
-- [Uuid](../cpp/uuid-cpp.md)拡張属性によるオブジェクト。
+- 拡張属性によってオブジェクト [`uuid`](../cpp/uuid-cpp.md) 。
 
-- [モジュール](../windows/attributes/module-cpp.md)属性を使用して作成されたライブラリブロック。
+- 属性を使用して作成されたライブラリブロック [`module`](../windows/attributes/module-cpp.md) 。
 
 > [!NOTE]
-> デバッグビルドでは、 **__uuidof**は常に (実行時に) オブジェクトを動的に初期化します。 リリースビルドでは、 **__uuidof**は静的に (コンパイル時に) オブジェクトを初期化できます。
+> デバッグビルドでは、は **`__uuidof`** 常に (実行時に) 動的にオブジェクトを初期化します。 リリースビルドでは、は **`__uuidof`** 静的に (コンパイル時に) オブジェクトを初期化できます。
 
-以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_uuidof**は **__uuidof**のシノニムになります。
+以前のバージョンとの互換性のために、 **`_uuidof`** **`__uuidof`** コンパイラオプションの [ [ `/Za` \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、はのシノニムになります。
 
 ## <a name="example"></a>例
 
@@ -73,7 +71,7 @@ int main() {
 
 ## <a name="comments"></a>説明
 
-ライブラリ名がスコープ内にない場合は、 **__uuidof**ではなく `__LIBID_` を使用できます。 次に例を示します。
+ライブラリ名がスコープ内にない場合は、の代わりにを使用でき `__LIBID_` **`__uuidof`** ます。 次に例を示します。
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
@@ -81,7 +79,7 @@ StringFromCLSID(__LIBID_, &lpolestr);
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

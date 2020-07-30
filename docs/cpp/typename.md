@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223513"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 テンプレート定義内の名前がテンプレート引数に依存する修飾名である場合は、このキーワードを使用する必要があります。修飾名が依存していない場合は省略可能です。 詳細については、「[テンプレートと名前解決](../cpp/templates-and-name-resolution.md)」を参照してください。
 
-**typename**は、テンプレート宣言または定義内の任意の型で使用できます。 テンプレート基底クラスへのテンプレート引数として使用する場合を除いて、このキーワードを基底クラス リストで使用することはできません。
+**`typename`** テンプレート宣言または定義内の任意の型で使用できます。 テンプレート基底クラスへのテンプレート引数として使用する場合を除いて、このキーワードを基底クラス リストで使用することはできません。
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename**キーワードは、テンプレートパラメーターリストの**クラス**の代わりに使用することもできます。 たとえば、次のステートメントは意味的に等価です。
+キーワードは、 **`typename`** **`class`** テンプレートパラメーターリストでの代わりに使用することもできます。 たとえば、次のステートメントは意味的に等価です。
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [テンプレート](../cpp/templates-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

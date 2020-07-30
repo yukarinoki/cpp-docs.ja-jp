@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183379"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213022"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
 
@@ -38,11 +38,11 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。
+STAThreadAttribute 属性は、 [Platform:: Object クラス](../cppcx/platform-object-class.md)から継承されます。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。
 
 |名前|説明|
 |----------|-----------------|
-|[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|
+|[STAThreadAttribute::Equals](#equals)|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|
 |[STAThreadAttribute::ToString](#tostring)|現在のオブジェクトを表す文字列を返します。|
 
@@ -54,9 +54,9 @@ STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-obj
 
 **ヘッダー:** collection.h
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 STAThreadAttribute クラスの新しいインスタンスを初期化します。
 
@@ -66,9 +66,9 @@ STAThreadAttribute クラスの新しいインスタンスを初期化します�
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
 
-指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。
+指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。
 
 ### <a name="syntax"></a>構文
 
@@ -79,13 +79,13 @@ public:virtual override bool Equals( Object^ obj );
 ### <a name="parameters"></a>パラメーター
 
 *obj*<br/>
-比較対象のオブジェクト。
+比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが、それ以外の場合は**false**します。
+**`true`** オブジェクトが等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
 
 このインスタンスのハッシュ コードを返します。
 
@@ -99,7 +99,7 @@ public:int GetHashCode();
 
 対象のインスタンスのハッシュ コード。
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
 
 現在のオブジェクトを表す文字列を返します。
 
@@ -115,4 +115,4 @@ public:String^ ToString();
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

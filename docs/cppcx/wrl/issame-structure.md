@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371340"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216558"
 ---
 # <a name="issame-structure"></a>IsSame 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -36,11 +36,11 @@ struct IsSame<T1, T1>;
 型。
 
 *T2*<br/>
-別のタイプ。
+別の型。
 
 ## <a name="remarks"></a>解説
 
-指定した型が、別の指定した型と同じであるかどうかをテストします。
+指定した1つの型が、指定した別の型と同じかどうかをテストします。
 
 ## <a name="members"></a>メンバー
 
@@ -48,7 +48,7 @@ struct IsSame<T1, T1>;
 
 名前                    | 説明
 ----------------------- | --------------------------------------------------
-[イサマ::値](#value) | ある型が別の型と同じであるかどうかを示します。
+[IsSame:: 値](#value) | 一方の型が別の型と同じかどうかを示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -56,13 +56,13 @@ struct IsSame<T1, T1>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** 内部.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="issamevalue"></a><a name="value"></a>イサマ::値
+## <a name="issamevalue"></a><a name="value"></a>IsSame:: 値
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 template <typename T1, typename T2>
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>解説
 
-ある型が別の型と同じであるかどうかを示します。
+一方の型が別の型と同じかどうかを示します。
 
-`value`は、テンプレートパラメータが同じ場合は**true、** テンプレートパラメータが異なる場合は**false**です。
+`value`**`true`** テンプレートパラメーターが同じである場合は、 **`false`** テンプレートパラメーターが異なる場合はです。

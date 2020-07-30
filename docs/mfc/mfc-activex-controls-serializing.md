@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621198"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225021"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール : シリアル化
 
@@ -58,13 +58,13 @@ ActiveX コントロールウィザードを使用してコントロールプロ
 |**PX_Bool ()**|型のブール型プロパティをシリアル化します。|
 |**PX_Color ()**|型の色プロパティをシリアル化します。|
 |**PX_Currency ()**|型**CY** (currency) プロパティをシリアル化します。|
-|**PX_Double ()**|**Double**型のプロパティをシリアル化します。|
+|**PX_Double ()**|型プロパティをシリアル化 **`double`** します。|
 |**PX_Font ()**|フォントの種類のプロパティをシリアル化します。|
-|**PX_Float ()**|**Float**型プロパティをシリアル化します。|
+|**PX_Float ()**|型プロパティをシリアル化 **`float`** します。|
 |**PX_IUnknown ()**|型のプロパティをシリアル化 `LPUNKNOWN` します。|
-|**PX_Long ()**|**Long**型プロパティをシリアル化します。|
+|**PX_Long ()**|型プロパティをシリアル化 **`long`** します。|
 |**PX_Picture ()**|型 Picture プロパティをシリアル化します。|
-|**PX_Short ()**|**Short**型のプロパティをシリアル化します。|
+|**PX_Short ()**|型プロパティをシリアル化 **`short`** します。|
 |**PXstring( )**|型プロパティをシリアル化 `CString` します。|
 |**PX_ULong ()**|型**ULONG**プロパティをシリアル化します。|
 |**PX_UShort ()**|型**USHORT**プロパティをシリアル化します。|

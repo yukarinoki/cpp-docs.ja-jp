@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188052"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232184"
 ---
 # <a name="transfers-of-control"></a>制御の移動
 
-**Switch**ステートメントで**goto**ステートメントまたは**case**ラベルを使用して、初期化子を越えて分岐するプログラムを指定できます。 初期化子を含む宣言がジャンプ ステートメントの発生元のブロックで囲まれたブロックに存在しない限り、このようなコードは無効です。
+ステートメント **`goto`** または **`case`** ステートメント内のラベルを使用し **`switch`** て、初期化子を越えて分岐するプログラムを指定できます。 初期化子を含む宣言がジャンプ ステートメントの発生元のブロックで囲まれたブロックに存在しない限り、このようなコードは無効です。
 
-次の例は、オブジェクト `total`、`ch`、`i` を宣言して初期化するループを示します。 また、初期化子を超えて制御を転送する、間違った**goto**ステートメントもあります。
+次の例は、オブジェクト `total`、`ch`、`i` を宣言して初期化するループを示します。 また、 **`goto`** 初期化子を超えて制御を転送するエラーステートメントもあります。
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-前の例では、 **goto**ステートメントは、`i`の初期化を超えて制御を転送しようとします。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。
+前の例では、 **`goto`** ステートメントは、の初期化を超えて制御を転送しようとして `i` います。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。
 
-**While**ステートメントの*ステートメント*として機能するブロックで宣言された `total` および `ch`のオブジェクトは、 **break**ステートメントを使用してブロックが終了したときに破棄されます。
+ステートメントを `total` `ch` 使用してブロックを終了すると、ステートメントの*ステートメント*として機能するブロックで宣言されたオブジェクトと **`while`** が破棄され **`break`** ます。

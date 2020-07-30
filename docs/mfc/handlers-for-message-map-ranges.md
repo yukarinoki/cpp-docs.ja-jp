@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231911"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 
@@ -143,7 +143,7 @@ ms.locfileid: "84621691"
 
 `OnButtonClicked`1 つの**BN_CLICKED**メッセージのハンドラーはパラメーターを受け取りません。 ボタンの範囲に対する同じハンドラーは、1つの**UINT**を受け取ります。 余分なパラメーターを使用すると、 **BN_CLICKED**メッセージの生成を担当する特定のコントロールを識別できます。
 
-この例に示すコードは、一般的な例です。メッセージ範囲内のに渡された値を変換し、その `int` ような場合にアサートします。 次に、どのボタンがクリックされたかに応じて、別のアクションを実行することができます。
+この例に示すコードは、一般的な例です。メッセージ範囲内のに渡された値を変換し、その **`int`** ような場合にアサートします。 次に、どのボタンがクリックされたかに応じて、別のアクションを実行することができます。
 
 ## <a name="see-also"></a>関連項目
 

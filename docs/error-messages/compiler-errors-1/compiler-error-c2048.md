@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2048
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
-ms.openlocfilehash: 039be85541a7cd3864187433e5b3299bca7d067e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 483e4d706a1c08899e6cd6e1ec561a21ed805014
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740131"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210437"
 ---
 # <a name="compiler-error-c2048"></a>コンパイラ エラー C2048
 
 switch 文の中に 2 つ以上の 'default' があります。
 
-`switch` ステートメントに複数の `default` ラベルが含まれています。 このエラーを解決するには、 `default` ラベルを 1 つ削除します。
+**`switch`** ステートメントに複数のラベルが含まれてい **`default`** ます。 エラーを解決するには、いずれかの **`default`** ラベルを削除します。
 
 次の例では C2048 が生成されます。
 
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C2048b.cpp

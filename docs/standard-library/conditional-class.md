@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228376"
 ---
 # <a name="conditional-class"></a>conditional クラス
 
@@ -39,13 +39,13 @@ B が true の場合の型の結果。
 *T2*\
 B が false の場合の型の結果。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*B*が**true**と`conditional<B, T1, T2>::type`評価されると、テンプレートメンバー typedef は*T1*に評価され、 *b*が**false**と評価されると*T2*に評価されます。
+B がと評価されると、テンプレートメンバー typedef は `conditional<B, T1, T2>::type` *T1*に評価され、 *B* **`true`** *b*がに評価されると*T2*に評価され **`false`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

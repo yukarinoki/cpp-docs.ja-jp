@@ -5,25 +5,25 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 1a46cc7681a2556aee8e856be6ce1fd7cc01686a
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096024"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222772"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>チュートリアル: アプリケーションへの CTaskDialog の追加
 
 このチュートリアルでは、 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) の概要と、そのクラスをアプリケーションに追加する方法について説明します。
 
-は`CTaskDialog` 、windows Vista 以降の windows メッセージボックスに代わるタスクダイアログボックスです。 `CTaskDialog` は Windows メッセージ ボックスを改良したものであり、機能も追加されます。 Visual Studio では、Windows メッセージボックスは引き続きサポートされています。
+は、 `CTaskDialog` Windows Vista 以降の windows メッセージボックスに代わるタスクダイアログボックスです。 `CTaskDialog` は Windows メッセージ ボックスを改良したものであり、機能も追加されます。 Visual Studio では、Windows メッセージボックスは引き続きサポートされています。
 
 > [!NOTE]
-> Windows Vista より前のバージョンの Windows では、 `CTaskDialog`はサポートされていません。 以前のバージョンの Windows でアプリケーションを実行するユーザーにもメッセージを表示するには、代替のダイアログ ボックス オプションをプログラミングしておく必要があります。 静的メソッドである [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) を使用することで、ユーザーのコンピューターで `CTaskDialog`の Windows メッセージ ボックスに代わるタスク ダイアログ ボックスです。 また、 `CTaskDialog` を使用できるのは、アプリケーションが Unicode ライブラリを使用してビルドされている場合に限られます。
+> Windows Vista より前のバージョンの Windows では、はサポートされていません `CTaskDialog` 。 以前のバージョンの Windows でアプリケーションを実行するユーザーにもメッセージを表示するには、代替のダイアログ ボックス オプションをプログラミングしておく必要があります。 静的メソッドである [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) を使用することで、ユーザーのコンピューターで `CTaskDialog`の Windows メッセージ ボックスに代わるタスク ダイアログ ボックスです。 また、 `CTaskDialog` を使用できるのは、アプリケーションが Unicode ライブラリを使用してビルドされている場合に限られます。
 
 `CTaskDialog` では、情報を収集して表示するためのオプション要素がいくつかサポートされています。 たとえば、 `CTaskDialog` では、コマンド リンク、カスタマイズされたボタン、カスタマイズされたアイコン、およびフッターを表示できます。 さらに、 `CTaskDialog` には、タスク ダイアログ ボックスの状態を照会して、ユーザーが選択したオプション要素を確認するためのメソッドもいくつか用意されています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
@@ -33,11 +33,11 @@ ms.locfileid: "71096024"
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Windows メッセージ ボックスを CTaskDialog に置き換える
 
-次の手順では、 `CTaskDialog`の最も基本的な使用法である、Windows メッセージ ボックスの置き換えについて説明します。 この例では、タスク ダイアログ ボックスに関連付けられているアイコンも変更します。 アイコンを変更すると`CTaskDialog` 、が Windows メッセージボックスと同じ表示になります。
+次の手順では、 `CTaskDialog`の最も基本的な使用法である、Windows メッセージ ボックスの置き換えについて説明します。 この例では、タスク ダイアログ ボックスに関連付けられているアイコンも変更します。 アイコンを変更すると、が `CTaskDialog` Windows メッセージボックスと同じ表示になります。
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Windows メッセージ ボックスを CTaskDialog に置き換えるには
 
-1. **Mfc アプリケーションウィザード**を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 「[チュートリアル:新しい MFC シェルコントロール](walkthrough-using-the-new-mfc-shell-controls.md)を使用して、お使いのバージョンの Visual Studio のウィザードを開く方法について説明します。
+1. **Mfc アプリケーションウィザード**を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については[、「チュートリアル: 新しい MFC シェルコントロールの使用](walkthrough-using-the-new-mfc-shell-controls.md)」を参照してください。
 
 1. *MyProject*を呼び出します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71096024"
     }
     ```
 
-1. 手順 5. の `if` ステートメントの後にあるかっこ内に、次のコードを挿入します。 このコードによって、 `CTaskDialog`が作成されます。
+1. 手順 5. のステートメントの後にある角かっこの間に次のコードを挿入し **`if`** ます。 このコードによって、 `CTaskDialog`が作成されます。
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
@@ -84,7 +84,7 @@ ms.locfileid: "71096024"
     taskDialog.DoModal();
     ```
 
-が Windows メッセージボックスと同じアイコンを表示し`CTaskDialog`ないようにする場合は、手順 7. を避けることができます。 この手順を実行しない場合`CTaskDialog` 、には、アプリケーションが表示したときにアイコンが表示されません。
+が `CTaskDialog` Windows メッセージボックスと同じアイコンを表示しないようにする場合は、手順 7. を避けることができます。 この手順を実行しない場合、には、 `CTaskDialog` アプリケーションが表示したときにアイコンが表示されません。
 
 アプリケーションをコンパイルして実行します。 アプリケーションの起動後、タスク ダイアログ ボックスが表示されます。
 
@@ -94,7 +94,7 @@ ms.locfileid: "71096024"
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>CTaskDialog に機能を追加するには
 
-1. **[リソース ビュー]** 移動します。 **リソースビュー**が表示されない場合は、 **[表示]** メニューから開くことができます。
+1. **[リソース ビュー]** 移動します。 **リソースビュー**が表示されない場合は、[**表示**] メニューから開くことができます。
 
 1. **[リソース ビュー]** を展開して、 **[ストリング テーブル]** フォルダーを選択します。 そのフォルダーを展開し、 **[ストリング テーブル]** エントリをダブルクリックします。
 
@@ -163,7 +163,7 @@ ms.locfileid: "71096024"
     }
     ```
 
-手順9のコードで、で`PROCESS IF`始まるコメントを、指定した条件で実行するコードに置き換えます。
+手順9のコードで、で始まるコメントを、指定し `PROCESS IF` た条件で実行するコードに置き換えます。
 
 アプリケーションをコンパイルして実行します。 新しいコントロールと追加した情報を使用するタスク ダイアログ ボックスが表示されます。
 
@@ -177,7 +177,7 @@ ms.locfileid: "71096024"
 
 1. `if (CTaskDialog::IsSupported())` ステートメントの右角かっこにカーソルを移動します。
 
-1. `if` ステートメントの右角かっこの直前 ( `else` ブロックの前) に、次のコードを挿入します。
+1. ステートメントの右角かっこの直前 **`if`** (ブロックの前) に次のコードを挿入し **`else`** ます。
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -189,10 +189,10 @@ ms.locfileid: "71096024"
 
 アプリケーションをコンパイルして実行します。 2 つのタスク ダイアログ ボックスが表示されます。 最初のダイアログボックスは、 **CTaskDialog プロシージャに機能を追加するため**のです。2番目のダイアログボックスは、最後の手順からのものです。
 
-これらの例では`CTaskDialog`、で使用できるすべてのオプションについては説明しませんが、作業を開始するには役立ちます。 このクラスの詳細については、「 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 」を参照してください。
+これらの例では、で使用できるすべてのオプションについては説明しません `CTaskDialog` が、作業を開始するには役立ちます。 このクラスの詳細については、「 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
+[ダイアログボックス](../mfc/dialog-boxes.md)<br/>
 [CTaskDialog クラス](../mfc/reference/ctaskdialog-class.md)<br/>
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)
+[CTaskDialog:: CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

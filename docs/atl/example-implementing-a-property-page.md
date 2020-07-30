@@ -4,14 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224358"
 ---
-# <a name="example-implementing-a-property-page"></a>例: プロパティ ページの実装
+# <a name="example-implementing-a-property-page"></a>例: プロパティページの実装
 
 ::: moniker range="vs-2019"
 
@@ -53,7 +53,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 |----------|-----------|
 |タイトル|TextDocument|
 |Doc String|VCUE TextDocument のプロパティ|
-|Helpfile|*\<空白の>*|
+|Helpfile|*\<blank>*|
 
 このウィザード ページに設定した値は、プロパティ ページ コンテナーが `IPropertyPage::GetPageInfo` を呼び出したときに返されます。 その後の文字列の処理はコンテナーによって決まりますが、通常は、ユーザーがページを識別するために使用されます。 Title は、通常、ページ上部のタブに表示され、Doc String は、ステータス バーまたはツールヒント上に表示できます (ただし、標準プロパティ フレームではこの文字列はまったく使用されません)。
 
@@ -90,7 +90,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-さらに、`IPropertyPageImpl` 基底クラスを参照する必要があります。次の **typedef** を `CDocProperties` クラスに追加します。
+また、基底クラスを参照する必要もあります `IPropertyPageImpl` 。クラスに次の内容を追加し **`typedef`** `CDocProperties` ます。
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
@@ -173,5 +173,5 @@ End Module
 
 ## <a name="see-also"></a>関連項目
 
-[プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
+[[プロパティ ページ]](../atl/atl-com-property-pages.md)<br/>
 [ATLPages の例](../overview/visual-cpp-samples.md)

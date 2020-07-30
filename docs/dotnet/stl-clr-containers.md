@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544839"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214868"
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
 
-STL/CLR ライブラリは、 C++標準ライブラリと同様のコンテナーで構成されていますが、.NET Framework のマネージ環境内で実行されます。 これは、実際C++の標準ライブラリを使用して最新の状態に保たれることはなく、従来のサポートのために維持されます。
+STL/CLR ライブラリは、C++ 標準ライブラリと同様のコンテナーで構成されていますが、.NET Framework のマネージ環境内で実行されます。 これは、実際の C++ 標準ライブラリを使用して最新の状態に保たれることはなく、従来のサポートのために維持されます。
 
-このドキュメントでは、コンテナー要素の要件、コンテナーに挿入できる要素の種類、コンテナー内の要素の所有権に関する問題など、STL/CLR のコンテナーの概要について説明します。 必要に応じて、ネイティブC++標準ライブラリと STL/CLR の違いについて説明します。
+このドキュメントでは、コンテナー要素の要件、コンテナーに挿入できる要素の種類、コンテナー内の要素の所有権に関する問題など、STL/CLR のコンテナーの概要について説明します。 必要に応じて、ネイティブ C++ 標準ライブラリと STL/CLR の違いについて説明します。
 
 ## <a name="requirements-for-container-elements"></a>コンテナー要素の要件
 
@@ -37,7 +37,7 @@ STL/CLR コンテナーは、次の2種類の要素のいずれかを保持で�
 
 ### <a name="handles-to-reference-types"></a>型を参照するハンドル
 
-参照型へのハンドルを、STL/CLR コンテナーに挿入できます。 CLR を対象C++とするのハンドルは、ネイティブC++のポインターに似ています。 詳細については、「[オブジェクト演算子へのハンドル (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」を参照してください。
+参照型へのハンドルを、STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ のハンドルは、ネイティブ C++ のポインターに似ています。 詳細については、「[オブジェクト演算子へのハンドル (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」を参照してください。
 
 #### <a name="example"></a>例
 
@@ -136,7 +136,7 @@ int main()
 
 #### <a name="example"></a>例
 
-次の例では、Employee オブジェクトを `cliext::set`に挿入する方法を示します。
+次の例は、に Employee オブジェクトを挿入する方法を示して `cliext::set` います。
 
 ```cpp
 // cliext_container_valid_reference.cpp
@@ -229,11 +229,11 @@ int main()
 
 また、ボックス化が解除された値型を STL/CLR コンテナーに挿入することもできます。 ボックス化が解除された値型は、参照型に*ボックス*化されていない値型です。
 
-値型の要素には、`int`などの標準値型のいずれかを指定することも、`value class`のようなユーザー定義の値型を指定することもできます。 詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
+値型の要素には、などの標準値型のいずれかを指定することも、 **`int`** ユーザー定義の値型 (など) を指定することもでき **`value class`** ます。 詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
 #### <a name="example"></a>例
 
-次の例では、Employee クラスを値型にすることによって、最初の例を変更します。 この値型は、最初の例と同様に `cliext::set` に挿入されます。
+次の例では、Employee クラスを値型にすることによって、最初の例を変更します。 この値型は、最初の例と同様にに挿入され `cliext::set` ます。
 
 ```cpp
 // cliext_container_valid_valuetype.cpp
@@ -310,6 +310,6 @@ STL/CLR 内のコンテナーは、値のセマンティクスで動作します
 
 ハンドルオブジェクトのコンテナーの clear または erase メソッドを呼び出すと、ハンドルが参照するオブジェクトがメモリから解放されません。 オブジェクトを明示的に削除する必要があります。これらのオブジェクトはマネージヒープに存在するため、オブジェクトが使用されなくなったと判断した後に、ガベージコレクターによるメモリの解放を許可する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

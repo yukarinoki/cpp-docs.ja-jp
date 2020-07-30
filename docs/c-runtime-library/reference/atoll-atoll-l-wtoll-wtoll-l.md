@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218716"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-文字列を**長****長**整数に変換します。
+文字列を整数に変換 **`long long`** します。
 
 ## <a name="syntax"></a>構文
 
@@ -81,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**long** **型**の値を返します。 **Atoll**の戻り値は、入力をその型の値に変換できない場合は0になります。
+各関数は、 **`long long`** 入力文字を数値として解釈することによって生成される値を返します。 **Atoll**の戻り値は、入力をその型の値に変換できない場合は0になります。
 
 大きな正の整数値によるオーバーフローの場合、 **atoll**は**LLONG_MAX**を返し、負の整数値が大きいオーバーフローの場合は**LLONG_MIN**を返します。
 
@@ -89,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、文字列を**long** **長**整数値に変換します。
+これらの関数は、文字列を整数値に変換し **`long long`** ます。
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85d1b29fddece741aa94364bb6edfdf3b973faaf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213178"
 ---
 # <a name="__stdcall"></a>__stdcall
 
-**__Stdcall**呼び出し規約は、Win32 API 関数を呼び出すために使用されます。 呼び出し先がスタックを消去するので、コンパイラによって `vararg` 関数が **__cdecl**されます。 この呼び出し規則を使用する関数には、関数プロトタイプが必要です。 **__Stdcall**修飾子は Microsoft 固有です。
+**`__stdcall`** 呼び出し規約は、Win32 API 関数を呼び出すために使用されます。 呼び出し先がスタックを消去するので、コンパイラは関数を作成し `vararg` **`__cdecl`** ます。 この呼び出し規則を使用する関数には、関数プロトタイプが必要です。 **`__stdcall`** 修飾子は Microsoft 固有です。
 
 ## <a name="syntax"></a>構文
 
-> *戻り値の型* **\_\_stdcall** *[* **(** *引数リスト* **)** ]
+> *戻り値の型* **`__stdcall`***関数名*[ **`(`** *引数リスト* **`)`** ]
 
 ## <a name="remarks"></a>解説
 
@@ -32,16 +32,16 @@ ms.locfileid: "80178541"
 |引数を渡す順序|右から左。|
 |引数渡し規約|ポインターまたは参照型が渡されない場合は、値渡し。|
 |スタック メンテナンスの役割|呼び出された関数が、自分の引数をスタックからポップします。|
-|名前装飾規約|アンダースコア (_) は、名前の前に付けられます。 名前の後に、アットマーク (@) と、引数リストのバイト数 (10 進数) が続きます。 したがって、`int func( int a, double b )` として宣言された関数は次のように修飾されます: `_func@12`|
+|名前装飾規約|`_`名前の先頭にアンダースコア () が付きます。 名前の後にアットマーク () が続き、その `@` 後に引数リストのバイト数 (10 進数) が続きます。 したがって、`int func( int a, double b )` として宣言された関数は次のように修飾されます: `_func@12`|
 |大文字と小文字の変換規約|なし|
 
-[/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラオプションは、異なる呼び出し規約で明示的に宣言されていないすべての関数に **__stdcall**を指定します。
+[/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラオプションは、 **`__stdcall`** 別の呼び出し規約で明示的に宣言されていないすべての関数に対してを指定します。
 
-以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_stdcall**は **__stdcall**のシノニムになります。
+以前のバージョンとの互換性のために、 **`_stdcall`** **`__stdcall`** コンパイラオプションの [ [ `/Za` \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、はのシノニムになります。
 
-**__Stdcall**修飾子を使用して宣言された関数は、 [__cdecl](../cpp/cdecl.md)を使用して宣言された関数と同じ方法で値を返します。
+修飾子を使用して宣言された関数 **`__stdcall`** は、を使用して宣言された関数と同じ方法で戻り [`__cdecl`](../cpp/cdecl.md) ます。
 
-ARM および x64 プロセッサでは、 **__stdcall**が受け入れられ、コンパイラによって無視されます。ARM および x64 アーキテクチャでは、規約により、可能な限り引数がレジスタに渡され、その後の引数はスタックで渡されます。
+ARM および x64 プロセッサで **`__stdcall`** は、はコンパイラによって受け入れられ、無視されます。 arm および x64 アーキテクチャでは、可能な場合は引数がレジスタに渡され、その後の引数はスタックで渡されます。
 
 静的でないクラス関数がアウトオブラインで宣言されている場合、アウトオブラインの宣言で呼び出し規約の修飾子を指定する必要はありません。 つまり、クラスの静的でないメンバー メソッドの場合は、宣言時に指定された呼び出し規約が定義の時点で仮定されます。 次のクラス定義の場合、
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-(
+this
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -65,7 +65,7 @@ void __stdcall CMyClass::mymethod() { return; }
 
 ## <a name="example"></a>例
 
-次の例では、 **__stdcall**を使用すると、すべての `WINAPI` 関数型が標準呼び出しとして処理されます。
+次の例では、 **`__stdcall`** `WINAPI` 標準呼び出しとして処理されるすべての関数型の結果を使用しています。
 
 ```cpp
 // Example of the __stdcall keyword
@@ -74,7 +74,7 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
+[引数の引き渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

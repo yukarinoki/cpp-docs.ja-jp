@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219691"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -41,7 +41,7 @@ __identifier(C++_keyword)
 
 **例**
 
-次の例では、C# で **template** という名前のクラスが作成され、DLL として配布されます。 **template** クラスを使用する C++/CLI プログラムでは、 **__identifier** キーワードは **template** が標準 C++ のキーワードであるという事実が隠されます。
+次の例では、という名前のクラス `template` が C# で作成され、DLL として配布されます。 クラスを使用する C++/CLI プログラムで `template` は、キーワードは、 **`__identifier`** 標準 c++ キーワードであるファクトを隠し `template` ます。
 
 ```csharp
 // identifier_template.cs
@@ -73,7 +73,7 @@ int main() {
 
 ### <a name="examples"></a>例
 
-次の例では、C# で **template** という名前のクラスが作成され、DLL として配布されます。 **template** クラスを使用する C++/CLI プログラムでは、 **__identifier** キーワードは **template** が標準 C++ のキーワードであるという事実が隠されます。
+次の例では、という名前のクラス `template` が C# で作成され、DLL として配布されます。 クラスを使用する C++/CLI プログラムで `template` は、キーワードは、 **`__identifier`** 標準 c++ キーワードであるファクトを隠し `template` ます。
 
 ```csharp
 // identifier_template.cs
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)<br/>
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

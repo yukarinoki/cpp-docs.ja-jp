@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 074d3989ce48b0b6d69206e3f83c374a2ec65c93
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a5814536e88add5b15f577588d571a06eda6151c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142815"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226712"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>方法: メッセージ ブロック フィルターを使用する
 
@@ -38,7 +38,7 @@ ms.locfileid: "77142815"
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-今回の `transformer` オブジェクトは素数のみを処理します。 前の例の `transformer` オブジェクトはすべてのメッセージを処理します。 したがって、前の例では、送信メッセージの数と受信メッセージの数が一致する必要があります。 この例では、 [concurrency:: send](reference/concurrency-namespace-functions.md#send)関数の結果を使用して、`transformer` オブジェクトから受信するメッセージの数を決定します。 `send` 関数は、メッセージバッファーがメッセージを受け入れる場合は**true** 、メッセージバッファーがメッセージを拒否する場合は**false**を返します。 したがって、メッセージ バッファーがメッセージを受け入れる回数は、素数の数と一致します。
+今回の `transformer` オブジェクトは素数のみを処理します。 前の例の `transformer` オブジェクトはすべてのメッセージを処理します。 したがって、前の例では、送信メッセージの数と受信メッセージの数が一致する必要があります。 この例では、 [concurrency:: send](reference/concurrency-namespace-functions.md#send)関数の結果を使用して、オブジェクトから受信するメッセージの数を決定し `transformer` ます。 この関数は、メッセージ `send` **`true`** バッファーがメッセージを受け入れたときと、メッセージバッファーがメッセージを拒否したときにを返し **`false`** ます。 したがって、メッセージ バッファーがメッセージを受け入れる回数は、素数の数と一致します。
 
 ## <a name="example"></a>例
 
@@ -48,11 +48,11 @@ ms.locfileid: "77142815"
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`primes-filter.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `primes-filter.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 > **cl.exe/EHsc primes-filter**
 
-## <a name="robust-programming"></a>堅牢性の高いプログラミング
+## <a name="robust-programming"></a>信頼性の高いプログラミング
 
 ラムダ関数、関数ポインター、または関数オブジェクトをフィルター関数として使用できます。 各フィルター関数の形式は次のいずれかになります。
 
@@ -63,9 +63,9 @@ bool (T const &)
 
 データの不必要なコピーをなくすには、値で伝達される集約型を扱うときに 2 番目の形式を使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[チュートリアル: データフロー エージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-[transformer クラス](../../parallel/concrt/reference/transformer-class.md)
+[トランスフォーマークラス](../../parallel/concrt/reference/transformer-class.md)

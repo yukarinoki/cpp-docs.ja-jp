@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231703"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry クラス
 
@@ -35,27 +35,27 @@ class multi_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>パラメーター
 
 *_Block*<br/>
-`multi_link_registry` オブジェクトに格納されているブロックデータ型。
+オブジェクトに格納されているブロックデータ型 `multi_link_registry` 。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|`multi_link_registry` オブジェクトを構築します。|
 |[~ multi_link_registry デストラクター](#dtor)|`multi_link_registry` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[add](#add)|`multi_link_registry` オブジェクトへのリンクを追加します。 ( [Network_link_registry:: add](network-link-registry-class.md#add)をオーバーライドします)。|
-|[begin](#begin)|`multi_link_registry` オブジェクト内の最初の要素を指す反復子を返します。 ( [Network_link_registry:: begin](network-link-registry-class.md#begin)をオーバーライドします)。|
-|[contains](#contains)|`multi_link_registry` オブジェクトで、指定したブロックを検索します。 ( [Network_link_registry:: contains](network-link-registry-class.md#contains)をオーバーライドします)。|
-|[count](#count)|`multi_link_registry` オブジェクト内の項目の数をカウントします。 ( [Network_link_registry:: count](network-link-registry-class.md#count)をオーバーライドします)。|
-|[remove](#remove)|`multi_link_registry` オブジェクトからリンクを削除します。 ( [Network_link_registry:: remove](network-link-registry-class.md#remove)をオーバーライドします)。|
-|[set_bound](#set_bound)|`multi_link_registry` オブジェクトが保持できるリンクの数の上限を設定します。|
+|[add](#add)|オブジェクトへのリンクを追加し `multi_link_registry` ます。 ( [Network_link_registry:: add](network-link-registry-class.md#add)をオーバーライドします)。|
+|[初め](#begin)|オブジェクト内の最初の要素を指す反復子を返し `multi_link_registry` ます。 ( [Network_link_registry:: begin](network-link-registry-class.md#begin)をオーバーライドします)。|
+|[contains](#contains)|`multi_link_registry`指定されたブロックのオブジェクトを検索します。 ( [Network_link_registry:: contains](network-link-registry-class.md#contains)をオーバーライドします)。|
+|[count](#count)|オブジェクト内の項目の数をカウントし `multi_link_registry` ます。 ( [Network_link_registry:: count](network-link-registry-class.md#count)をオーバーライドします)。|
+|[remove](#remove)|オブジェクトからリンクを削除 `multi_link_registry` します。 ( [Network_link_registry:: remove](network-link-registry-class.md#remove)をオーバーライドします)。|
+|[set_bound](#set_bound)|オブジェクトが保持できるリンクの数の上限を設定 `multi_link_registry` します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -63,15 +63,15 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 `multi_link_registry`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add"></a>アドイン
+## <a name="add"></a><a name="add"></a>アドイン
 
-`multi_link_registry` オブジェクトへのリンクを追加します。
+オブジェクトへのリンクを追加し `multi_link_registry` ます。
 
 ```cpp
 virtual void add(_EType _Link);
@@ -82,13 +82,13 @@ virtual void add(_EType _Link);
 *_Link*<br/>
 追加するブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-リンクが既にレジストリに存在する場合、またはバインドされているが既に `set_bound` 関数で設定されていて、リンクが削除されている場合、このメソッドは[invalid_link_target](invalid-link-target-class.md)例外をスローします。
+リンクが既に[invalid_link_target](invalid-link-target-class.md)レジストリに存在する場合、またはバインドされたが既に関数で設定されていて、 `set_bound` リンクが削除された後である場合、メソッドは invalid_link_target 例外をスローします。
 
-## <a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a>初め
 
-`multi_link_registry` オブジェクト内の最初の要素を指す反復子を返します。
+オブジェクト内の最初の要素を指す反復子を返し `multi_link_registry` ます。
 
 ```cpp
 virtual iterator begin();
@@ -96,15 +96,15 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>戻り値
 
-`multi_link_registry` オブジェクト内の最初の要素を指す反復子。
+オブジェクト内の最初の要素を指す反復子 `multi_link_registry` 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-終了状態は、`NULL` リンクによって示されます。
+終了状態はリンクによって示され `NULL` ます。
 
-## <a name="contains"></a>は
+## <a name="contains"></a><a name="contains"></a>は
 
-`multi_link_registry` オブジェクトで、指定したブロックを検索します。
+`multi_link_registry`指定されたブロックのオブジェクトを検索します。
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -113,15 +113,15 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>パラメーター
 
 *_Link*<br/>
-`multi_link_registry` オブジェクト内で検索されるブロックへのポインター。
+オブジェクト内で検索されるブロックへのポインター `multi_link_registry` 。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたブロックが見つかった場合は**true** 、それ以外の場合は**false** 。
+**`true`** 指定されたブロックが見つかった場合は **`false`** 。それ以外の場合は。
 
-## <a name="count"></a>数
+## <a name="count"></a><a name="count"></a>数
 
-`multi_link_registry` オブジェクト内の項目の数をカウントします。
+オブジェクト内の項目の数をカウントし `multi_link_registry` ます。
 
 ```cpp
 virtual size_t count();
@@ -131,7 +131,7 @@ virtual size_t count();
 
 `multi_link_registry` オブジェクト内の項目の数。
 
-## <a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
 
 `multi_link_registry` オブジェクトを構築します。
 
@@ -139,7 +139,7 @@ virtual size_t count();
 multi_link_registry();
 ```
 
-## <a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
 
 `multi_link_registry` オブジェクトを破棄します。
 
@@ -147,13 +147,13 @@ multi_link_registry();
 virtual ~multi_link_registry();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メソッドは、すべてのリンクが削除される前に呼び出された場合、 [invalid_operation](invalid-operation-class.md)例外をスローします。
 
-## <a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a>から
 
-`multi_link_registry` オブジェクトからリンクを削除します。
+オブジェクトからリンクを削除 `multi_link_registry` します。
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -166,11 +166,11 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>戻り値
 
-リンクが見つかり、削除された場合は**true** 、それ以外の場合は**false** 。
+**`true`** リンクが見つかり、削除された場合は **`false`** 。それ以外の場合は。
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-`multi_link_registry` オブジェクトが保持できるリンクの数の上限を設定します。
+オブジェクトが保持できるリンクの数の上限を設定 `multi_link_registry` します。
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -179,13 +179,13 @@ void set_bound(size_t _MaxLinks);
 ### <a name="parameters"></a>パラメーター
 
 *_MaxLinks*<br/>
-`multi_link_registry` オブジェクトが保持できるリンクの最大数。
+オブジェクトが保持できるリンクの最大数 `multi_link_registry` 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-バインドされたが設定されると、エントリのリンクを解除すると、`multi_link_registry` オブジェクトは変更できない状態になり、`add` を呼び出すと `invalid_link_target` 例外がスローされます。
+バインドされたが設定されると、エントリのリンクを解除すると、オブジェクトは、 `multi_link_registry` さらにを呼び出して例外をスローする、変更できない状態になり `add` `invalid_link_target` ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [single_link_registry クラス](single-link-registry-class.md)

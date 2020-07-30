@@ -1,5 +1,5 @@
 ---
-title: '左辺値参照宣言子: &amp;'
+title: 左辺値参照宣言子:&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225983"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>左辺値参照宣言子: &amp;
+# <a name="lvalue-reference-declarator-amp"></a>左辺値参照宣言子:&amp;
 
 オブジェクトのアドレスを保持しますが、オブジェクトのように構文的に実行されます。
 
@@ -30,7 +30,7 @@ lvalue 参照は、オブジェクトの別名と考えることができます�
 
 アドレスを特定のポインター型に変換できるオブジェクトは、類似した参照型にも変換できます。 たとえば、アドレスを `char *` 型に変換できるオブジェクトは、`char &` 型にも変換できます。
 
-参照宣言を[アドレス演算子](../cpp/address-of-operator-amp.md)の使用と混同しないようにしてください。 `&`*識別子*の前に**int**や**char**などの型がある場合は、*識別子*が型への参照として宣言されます。 `&`*識別子*の前に型がない場合は、アドレス演算子の使用法が使用されます。
+参照宣言を[アドレス演算子](../cpp/address-of-operator-amp.md)の使用と混同しないようにしてください。 識別子の前にやなどの型がある場合は、 `&` *identifier* **`int`** **`char`** *識別子*が型への参照として宣言されます。 識別子の前に型がない場合は、 `&` *identifier*アドレス演算子の使用法が使用されます。
 
 ## <a name="example"></a>例
 
@@ -71,7 +71,7 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [参照](../cpp/references-cpp.md)<br/>
 [参照型関数の引数](../cpp/reference-type-function-arguments.md)<br/>

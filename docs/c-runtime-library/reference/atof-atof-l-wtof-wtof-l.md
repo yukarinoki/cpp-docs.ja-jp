@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232587"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -94,7 +94,7 @@ double _wtof_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**double**値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
+各関数は、 **`double`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
 
 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
@@ -127,8 +127,8 @@ double _wtof_l(
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
-|**_wtof**、 **_wtof_l**|C: \<stdlib.h > または \<wchar.h > C++: \<cstdlib >、\<stdlib.h > または \<wchar.h >|
+|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib> 、 \<stdlib.h> 、 \<cmath> または\<math.h>|
+|**_wtof**、 **_wtof_l**|C: \<stdlib.h> または \<wchar.h> C++: \<cstdlib> 、 \<stdlib.h> または\<wchar.h>|
 
 ## <a name="example"></a>例
 
@@ -184,8 +184,8 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

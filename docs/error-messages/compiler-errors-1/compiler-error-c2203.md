@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
-ms.openlocfilehash: db36afa1376a0b64b3e110acd1722d3e0f2af449
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4a078cd4c64bbb8d301aa3e4817272d23e3acbb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758958"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216311"
 ---
 # <a name="compiler-error-c2203"></a>コンパイラ エラー C2203
 
 delete 演算子で配列の境界を指定することはできません
 
-**/Za** (ANSI) オプションを使用すると、`delete` 演算子は配列全体を削除できますが、配列の一部または特定のメンバーを削除することはできません。
+**/Za** (ANSI) オプションを使用すると、演算子は配列 **`delete`** 全体を削除できますが、配列の一部または特定のメンバーを削除することはできません。
 
 次の例では、C2203 が生成されます。
 

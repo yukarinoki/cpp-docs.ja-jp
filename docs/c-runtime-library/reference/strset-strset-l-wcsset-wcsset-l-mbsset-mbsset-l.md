@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234004"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -130,7 +130,7 @@ NULL で終わる、設定される文字列。
 
 ## <a name="remarks"></a>解説
 
-**_Strset**関数は、 **char**型に変換された*str*のすべての文字 (終端の null 文字を除く) を*c*に設定します。 **_wcsset**と **_mbsset_l**は **_strset**のワイド文字バージョンとマルチバイト文字バージョンであり、引数と戻り値のデータ型はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**_Strset**関数は、 *str*のすべての文字 (終端の null 文字を除く) を*c*に変換し、をに変換 **`char`** します。 **_wcsset**と **_mbsset_l**は **_strset**のワイド文字バージョンとマルチバイト文字バージョンであり、引数と戻り値のデータ型はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
 **_mbsset**は、そのパラメーターを検証します。 *Str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsset**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strset**と **_wcsset**では、パラメーターは検証されません。
 
@@ -150,7 +150,7 @@ NULL で終わる、設定される文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strset**|\<string.h>|
 |**_strset_l**|\<tchar.h>|
@@ -187,7 +187,7 @@ After:  *******************************
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

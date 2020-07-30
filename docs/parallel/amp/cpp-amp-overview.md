@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404848"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222759"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -60,7 +60,7 @@ void StandardMethod() {
 
 - データ: データは 3 個の配列で構成されています。 すべてランク (1) と長さ (5) が同じです。
 
-- :イテレーション: 最初の `for` ループは配列の要素を反復処理するメカニズムを提供します。 合計を計算するために実行するコードは、最初の `for` ブロックに含まれています。
+- イテレーション: 最初の **`for`** ループは、配列内の要素を反復処理するメカニズムを提供します。 合計を計算するために実行するコードは、最初のブロックに含まれてい **`for`** ます。
 
 - インデックス: `idx` 変数は、配列の各要素にアクセスします。
 
@@ -238,7 +238,7 @@ for (int i = 0; i < 5; i++)
 
 共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。
 
-関連するアクセラレータがサポートする場合、`array` オブジェクトを使用して、共有メモリの使用のきめ細かな制御を指定できます。 アクセラレータが共有メモリをサポートするかどうかは、アクセラレータの[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)プロパティによって決定されます。これは、共有メモリがサポートされている場合に**true**を返します。 共有メモリがサポートされている場合、アクセラレータでのメモリ割り当ての既定の[Access_type 列挙](reference/concurrency-namespace-enums-amp.md#access_type)は、プロパティによって決定され `default_cpu_access_type` ます。 既定では、`array` オブジェクトと `array_view` のオブジェクトはプライマリに関連する `access_type` と同じ `accelerator` を取得します。
+関連するアクセラレータがサポートする場合、`array` オブジェクトを使用して、共有メモリの使用のきめ細かな制御を指定できます。 アクセラレータが共有メモリをサポートするかどうかは、アクセラレータの[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)プロパティによって決定されます。このプロパティは、 **`true`** 共有メモリがサポートされている場合にを返します。 共有メモリがサポートされている場合、アクセラレータでのメモリ割り当ての既定の[Access_type 列挙](reference/concurrency-namespace-enums-amp.md#access_type)は、プロパティによって決定され `default_cpu_access_type` ます。 既定では、`array` オブジェクトと `array_view` のオブジェクトはプライマリに関連する `access_type` と同じ `accelerator` を取得します。
 
 の[array:: Cpu_access_type データメンバー](reference/array-class.md#cpu_access_type)プロパティを明示的に設定することにより、 `array` 共有メモリの使用方法をきめ細かく制御できます。これにより、計算カーネルのメモリアクセスパターンに基づいて、ハードウェアのパフォーマンス特性に合わせてアプリを最適化できます。 `array_view` は、関連付けられている `cpu_access_type` と同じ `array` を反映するか、または、array_view がデータ ソースを使用せずに構築される場合は、その `access_type` は、まずストレージを割り当てるようにする環境を反映します。 つまり、まずホスト (CPU) によってアクセスされた場合は、CPU データ ソースに対して作成されたかのように動作し、キャプチャによって関連付けられた `access_type` の `accelerator_view` を共有します。ただし、まず `accelerator_view` によってアクセスされた場合は、その `array` 上で作成された `accelerator_view` に対して作成されたかのように動作し、`array` の `access_type` を共有します。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数値演算ライブラリ
 
-C++ AMP には 2 つの数値演算ライブラリが含まれます。 [Concurrency::p Recise_math 名前空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)の倍精度ライブラリでは、倍精度関数がサポートされています。 また、ハードウェアでの倍精度サポートは必要ですが、単精度関数もサポートします。 [C99 仕様 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)に準拠しています。 アクセラレータは倍精度を完全にサポートしている必要があります。 [Accelerator:: Supports_double_precision データメンバー](reference/accelerator-class.md#supports_double_precision)の値を確認することによって、それが実行されるかどうかを判断できます。 [Concurrency:: Fast_math 名前空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)の高速数値演算ライブラリには、別の一連の数値演算関数が含まれています。 これらの関数は、`float` のオペランドのみをサポートするため、実行速度は速くなりますが、精度は倍精度数値演算ライブラリほど高くありません。 関数はヘッダーファイルに含まれ \<amp_math.h> ており、すべてがで宣言されてい `restrict(amp)` ます。 ヘッダーファイル内の関数は、 \<cmath> との両方の名前空間にインポートされ `fast_math` `precise_math` ます。 **Restrict**キーワードは、バージョンと C++ AMP バージョンを区別するために使用され \<cmath> ます。 次のコードは、計算のドメインにある各値の高速メソッドを使用して、10 を底とする対数を計算します。
+C++ AMP には 2 つの数値演算ライブラリが含まれます。 [Concurrency::p Recise_math 名前空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)の倍精度ライブラリでは、倍精度関数がサポートされています。 また、ハードウェアでの倍精度サポートは必要ですが、単精度関数もサポートします。 [C99 仕様 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)に準拠しています。 アクセラレータは倍精度を完全にサポートしている必要があります。 [Accelerator:: Supports_double_precision データメンバー](reference/accelerator-class.md#supports_double_precision)の値を確認することによって、それが実行されるかどうかを判断できます。 [Concurrency:: Fast_math 名前空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)の高速数値演算ライブラリには、別の一連の数値演算関数が含まれています。 これらの関数は、オペランドだけをサポートして **`float`** いますが、より高速に実行されますが、倍精度の数値演算ライブラリの場合ほど正確ではありません。 関数はヘッダーファイルに含まれ \<amp_math.h> ており、すべてがで宣言されてい `restrict(amp)` ます。 ヘッダーファイル内の関数は、 \<cmath> との両方の名前空間にインポートされ `fast_math` `precise_math` ます。 **`restrict`** キーワードは、バージョンと C++ AMP バージョンを区別するために使用され \<cmath> ます。 次のコードは、計算のドメインにある各値の高速メソッドを使用して、10 を底とする対数を計算します。
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [Writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md): テクスチャへの書き込み専用アクセスを提供します。
 
-- Short vector Library: **int**、 `uint` 、 **float**、 **double**、[標準](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)に基づく長さ2、3、および4の短いベクター型のセットを定義します。
+- Short vector Library: **`int`** 、、 `uint` **`float`** 、 **`double`** 、[標準](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)に基づく長さ2、3、および4の短いベクター型のセットを定義します。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>ユニバーサル Windows プラットフォーム (UWP) アプリ
 

@@ -1,6 +1,9 @@
 ---
 title: 'ビット処理排他的 OR 演算子: ^'
-ms.date: 11/04/2016
+description: C++ 標準言語の排他または演算子の構文で、を使用します。
+ms.date: 07/23/2020
+f1_keywords:
+- xor_cpp
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -10,30 +13,29 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229104"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>ビット処理排他的 OR 演算子: ^
 
 ## <a name="syntax"></a>構文
 
-```
-expression ^ expression
-```
+> *式* **`^`***式*
 
 ## <a name="remarks"></a>解説
 
-ビットごとの排他的 OR 演算子 ( **^** ) は、最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。
+ビットごとの排他的 OR 演算子 () は、 **`^`** 最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 1番目のオペランドのビットが0でもう一方のビットが1の場合、対応する結果ビットは1に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。
 
-ビットごとの排他的 OR 演算子のオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
+演算子へのオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
 
-## <a name="operator-keyword-for-"></a>^ の演算子キーワード
+## <a name="operator-keyword-for-"></a>^ の Operator キーワード
 
-**Xor**演算子は **^** に相当するテキストです。 プログラムの**xor**演算子にアクセスするには、ヘッダーファイル `iso646.h`を含める方法と、 [/za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張機能を無効にする) コンパイラオプションを使用してコンパイルする方法の2つの方法があります。
+C++ **`xor`** では、の代替スペルとしてを指定し **`^`** ます。 C では、代替のスペルは、ヘッダーにマクロとして指定され \<iso646.h> ます。 C++ では、代替のスペルはキーワードです。\<iso646.h>または C++ と同等のの使用 \<ciso646> は非推奨とされます。 Microsoft C++ では、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) またはコンパイラオプションを使用して、 [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 別のスペルチェックを有効にする必要があります。
+
 
 ## <a name="example"></a>例
 
@@ -51,6 +53,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[C++ の組み込み演算子、優先順位、および結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

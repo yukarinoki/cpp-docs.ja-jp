@@ -8,18 +8,18 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8cd035686a07285f52fe24aa7ab4f360619d5e1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229078"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-このキーワードは組み込みの型です。 この型の変数には、 [true](../cpp/true-cpp.md)と[false](../cpp/false-cpp.md)の値を指定できます。 条件式の型は**bool**であるため、 **bool**型の値を持つことになります。 たとえば、`i!=0` は `i`の値に応じて TRUE または FALSE になります。
+このキーワードは組み込みの型です。 この型の変数は、値およびを持つことができ [`true`](../cpp/true-cpp.md) [`false`](../cpp/false-cpp.md) ます。 条件式の型は **`bool`** であるため、型の値を持ち **`bool`** ます。 たとえば、に `i != 0` は、 **`true`** **`false`** の値に応じてまたはが含まれるようになりました `i` 。
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): 後置または前置インクリメントまたはデクリメント演算子のオペランドを**bool**型にすることはできません。 言い換えると、**ブール**型の変数 `b` した場合、次の式は使用できなくなります。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): 後置または前置インクリメントまたはデクリメント演算子のオペランドを型にすることはできません **`bool`** 。 つまり、型の変数を指定すると、次の `b` **`bool`** 式は使用できなくなります。
 
 ```cpp
     b++;
@@ -28,7 +28,7 @@ ms.locfileid: "80190496"
     --b;
 ```
 
-値 TRUE と FALSE には、次のリレーションシップがあります。
+およびの値には、 **`true`** **`false`** 次のリレーションシップがあります。
 
 ```cpp
 !false == true
@@ -41,16 +41,17 @@ ms.locfileid: "80190496"
 if (condexpr1) statement1;
 ```
 
-`condexpr1` が TRUE の場合、`statement1` は常に実行されます。`condexpr1` が FALSE の場合、`statement1` は実行されません。
+がの場合 `condexpr1` **`true`** 、 `statement1` は常に実行されます。 `condexpr1` がの場合 **`false`** 、 `statement1` は実行されません。
 
-後置または前置 **++** 演算子が**bool**型の変数に適用されると、変数は TRUE に設定されます。
-**Visual Studio 2017 バージョン15.3 以降**:**ブール**値の operator + + は言語から削除されたため、サポートされなくなりました。
+後置または前置 **`++`** 演算子が型の変数に適用されると **`bool`** 、変数はに設定され **`true`** ます。
 
-後置または前置 **--** 演算子は、この型の変数には適用できません。
+**Visual Studio 2017 バージョン15.3 以降**: のは言語から削除され、サポートされ `operator++` なくなり **`bool`** ました。
 
-**Bool**型は、整数の上位変換に関与します。 **Bool**型の右辺値は**int**型の r 値に変換できますが、FALSE はゼロになり、TRUE は1になります。 別個の型として、 **bool**はオーバーロードの解決に関与します。
+後置または前置演算子は、 **`--`** この型の変数には適用できません。
 
-## <a name="see-also"></a>参照
+この **`bool`** 型は、既定の整数の上位変換に参加します。 型の右辺値 **`bool`** を型の右辺値に変換できます。これは **`int`** ゼロに **`false`** **`true`** なり、1になります。 別個の型として、は **`bool`** オーバーロードの解決に参加します。
+
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[組み込みの型](../cpp/fundamental-types-cpp.md)
+[組み込み型](../cpp/fundamental-types-cpp.md)

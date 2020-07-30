@@ -6,16 +6,16 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410760"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217325"
 ---
 # <a name="buffer-overflow"></a>バッファー オーバーフロー
 
-文字のサイズを変更すると、バッファーに文字を配置するときに問題が発生することができます。 次のコードは、文字列から文字をコピー、 `sz`、バッファーに`rgch`:
+文字のサイズが異なると、バッファーに文字を挿入するときに問題が発生する可能性があります。 文字列の文字をバッファーにコピーする次のコードについて考えてみ `sz` `rgch` ます。
 
 ```cpp
 cb = 0;
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-疑問が浮かびます。最後のバイトが先行バイトをコピーしますか? 次は問題が解決しない、バッファー オーバーフローする可能性がある可能性があるため。
+質問は、最後のバイトが先頭バイトをコピーしたかどうかということです。 次の例では、バッファーがオーバーフローする可能性があるため、問題は解決されません。
 
 ```cpp
 cb = 0;
@@ -35,7 +35,7 @@ while( cb < sizeof( rgch ) )
 }
 ```
 
-`_mbccpy`呼び出しが正しいことを行う試行-1 つまたは 2 バイトかどうかは、すべての文字をコピーします。 エントリの文字が 2 バイト幅の場合、コピーする最後の文字が、バッファーが適合しないアカウントにはなりません。 解決するには。
+`_mbccpy`この呼び出しは、正しい操作を試行します。1または2バイトであるかどうかにかかわらず、完全な文字をコピーします。 ただし、文字が2バイト幅の場合、コピーされた最後の文字がバッファーに合わないことは考慮されません。 正しい解決策は次のとおりです。
 
 ```cpp
 cb = 0;
@@ -47,7 +47,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }
 ```
 
-このコードは、ループでバッファーのオーバーフローのテストを使用してテスト`_mbclen`によって示される現在の文字のサイズをテストする`sz`します。 呼び出すことによって、`_mbsnbcpy`関数のコードを置き換えることができます、**中**1 行のコードをループします。 例:
+このコードは、を使用し `_mbclen` て、が指す現在の文字のサイズをテストするループテストで、バッファーオーバーフローが発生する可能性があるかどうかをテストし `sz` ます。 関数を呼び出すことによって、 `_mbsnbcpy` ループ内のコードを **`while`** 1 行のコードに置き換えることができます。 次に例を示します。
 
 ```cpp
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
@@ -55,4 +55,4 @@ _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 
 ## <a name="see-also"></a>関連項目
 
-[MBCS のプログラミングについて](../text/mbcs-programming-tips.md)
+[MBCS のプログラミングに関するヒント](../text/mbcs-programming-tips.md)

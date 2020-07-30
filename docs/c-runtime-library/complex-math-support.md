@@ -7,16 +7,16 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66186093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215180"
 ---
 # <a name="c-complex-math-support"></a>C の複雑な数値演算のサポート
 
-Microsoft C ランタイム ライブラリ (CRT) では、ISO C99 で必要とされる関数をすべて含む、複雑な数値演算ライブラリ関数を提供しています。 コンパイラは **complex** または **_Complex** のキーワードを直接にはサポートしないため、Microsoft の実装では構造体型を使って複素数を表します。
+Microsoft C ランタイム ライブラリ (CRT) では、ISO C99 で必要とされる関数をすべて含む、複雑な数値演算ライブラリ関数を提供しています。 コンパイラはまたはキーワードを直接サポートしていない **`complex`** **`_Complex`** ため、Microsoft の実装では構造体型を使用して複素数を表します。
 
 これらの関数は、正確性とパフォーマンスのバランスをとるために実装されます。 正確に丸めた結果を生成するには非常にコストがかかる場合があるため、正確に丸めた結果の近似値を効率的に生成できるように当該関数が設計されました。 ほとんどのケースでは、生成される結果は正確に丸めた結果の +/- 1 ulp の誤差範囲内に収まります。ただし、不正確さがそれより大きくなる場合もあります。
 
@@ -28,19 +28,19 @@ complex.h ヘッダーの Microsoft 実装では、次の型が C99 標準ネイ
 
 |標準の型|Microsoft の型|
 |-|-|
-|**float complex** または **float _Complex**|**_Fcomplex**|
-|**double complex** または **double _Complex**|**_Dcomplex**|
-|**long double complex** または **long double _Complex**|**_Lcomplex**|
+|**`float complex`** または **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** または **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** または **`long double _Complex`**|**_Lcomplex**|
 
 math.h ヘッダーは個別の型 **struct _complex** を定義します。これは [_cabs](../c-runtime-library/reference/cabs.md) 関数で使用されます。 **struct _complex** 型は同等の複雑な数値演算関数 [cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md) では使用されません。
 
 ## <a name="complex-constants-and-macros"></a>複雑な定数とマクロ
 
-**I** は `{ 0.0f, 1.0f }` で初期化された **float** 複合型の **_Fcomplex** として定義されます。
+**I**は、によって初期化 **_Fcomplex**複合型として定義されてい `{ 0.0f, 1.0f }` ます。
 
 ## <a name="trigonometric-functions"></a>三角関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[cacos、cacosf、cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|複素数の複雑な逆余弦を計算する|
 |[casin、casinf、casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|複素数の複雑な逆正弦を計算する|
@@ -49,9 +49,9 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 |[csin、csinf、csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|複素数の複雑な正弦を計算する|
 |[ctan、ctanf、ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|複素数の複雑な正接を計算する|
 
-## <a name="hyperbolic-functions"></a>ハイパーボリック関数
+## <a name="hyperbolic-functions"></a>双曲線関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[cacosh、cacoshf、cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|複素数の複雑な逆双曲線余弦を計算する|
 |[casinh、casinhf、casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|複素数の複雑な逆双曲線正弦を計算する|
@@ -62,7 +62,7 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 
 ## <a name="exponential-and-logarithmic-functions"></a>指数関数と対数関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[cexp、cexpf、cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|複素数の *e* を底とする複素指数関数を計算する|
 |[clog、clogf、clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|複素数の *e* を底とする複素自然対数を計算する|
@@ -70,15 +70,15 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 
 ## <a name="power-and-absolute-value-functions"></a>べき関数と絶対値関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|複素数の絶対値 (ノルム、係数、大きさとも呼ばれる) を計算する|
 |[cpow、cpowf、cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|複合べき関数 x<sup>y</sup> を計算する|
 |[csqrt、csqrtf、csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|複素数の複雑な平方根を計算する|
 
-## <a name="manipulation-functions"></a>データ操作関数
+## <a name="manipulation-functions"></a>操作関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[_Cbuild、_FCbuild、_LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|実数部と虚数部から複素数を構築する|
 |[carg、cargf、cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|複素数の引数 (位相角とも呼ばれる) を計算する|
@@ -92,7 +92,7 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 
 複素数は Microsoft コンパイラでネイティブな型ではないため、標準の算術演算子は複合型に定義されていません。 便宜上、次の複雑な数値演算ライブラリ関数は、ユーザー コードでの複素数の限られた操作を有効にするために提供されています。
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[_Cmulcc、_FCmulcc、_LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|2 つの複素数を乗算する|
 |[_Cmulcr、_FCmulcr、_LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|複雑な浮動小数を乗算する|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375838"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232860"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
@@ -57,7 +57,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>解説
 
-この関数は、呼び出しスレッドを少なくとも*Rel_time*で指定された時間ブロックします。 この関数では、例外がスローされません。
+関数は、 *Rel_time*によって指定された時間以上、呼び出し元スレッドをブロックします。 この関数では、例外がスローされません。
 
 ## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
@@ -79,9 +79,9 @@ void sleep_until(const xtime *Abs_time);
 
 この関数では、例外がスローされません。
 
-## <a name="swap"></a><a name="swap"></a>スワップ
+## <a name="swap"></a><a name="swap"></a>フォト
 
-2 つの**スレッド**オブジェクトの状態を入れ替えます。
+2 つの `thread` オブジェクトの状態を交換します。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-左**のスレッド**オブジェクト。
+*左側*\
+左側の `thread` オブジェクト。
 
 *そうです*\
-右の**スレッド**オブジェクト。
+右側の `thread` オブジェクト。
 
 ### <a name="remarks"></a>解説
 
 関数は `Left.swap(Right)` を呼び出します。
 
-## <a name="yield"></a><a name="yield"></a>収量
+## <a name="yield"></a><a name="yield"></a>得
 
 現在のスレッドが通常引き続き実行される場合であっても、他のスレッドを実行するようオペレーティング システムに通知します。
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>関連項目
 
-[\<スレッド>](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)

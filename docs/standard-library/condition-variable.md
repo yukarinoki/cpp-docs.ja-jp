@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457380"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222538"
 ---
-# <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
+# <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
 条件が true になるまで待機するオブジェクトを作成するために使用される、[condition_variable](../standard-library/condition-variable-class.md) クラスと [condition_variable_any](../standard-library/condition-variable-any-class.md) クラスを定義します。
 
@@ -19,14 +19,14 @@ ms.locfileid: "68457380"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<condition_variable >
+**ヘッダー:**\<condition_variable>
 
 **名前空間:** std
 
 > [!NOTE]
 > **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 条件変数を待機するコードでは `mutex` を使用する必要もあります。 呼び出しスレッドは、条件変数を待機する関数を呼び出す前に、`mutex` をロックする必要があります。 呼び出された関数が戻ると、`mutex` はロックされます。 条件が true になるまでスレッドが待機している間は、`mutex` はロックされません。 予測できない結果にならないように、条件変数を待機する各スレッドでは同じ `mutex` オブジェクトを使用する必要があります。
 
@@ -49,9 +49,9 @@ while (condition is false)
 
 - `wait_for` は指定された `time interval` の間待機します。
 
-これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語が**true**になるまで、メソッドはを返しません。
+これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 メソッドは、述語がになるまでを返しません **`true`** 。
 
-各クラスには、条件が**true**であることを条件変数に通知するために使用される2つのメソッドもあります。
+各クラスには、条件がであることを条件変数に通知するために使用される2つのメソッドもあり **`true`** ます。
 
 - `notify_one` は、条件変数を待機しているスレッドの 1 つをウェイクアップします。
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [condition_variable クラス](../standard-library/condition-variable-class.md)\
 [condition_variable_any クラス](../standard-library/condition-variable-any-class.md)

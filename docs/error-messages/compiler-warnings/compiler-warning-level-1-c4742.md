@@ -1,27 +1,31 @@
 ---
 title: コンパイラの警告 (レベル 1) C4742
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 f1_keywords:
 - C4742
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: af97c72f496177d2e94cf18f9685ac33c5e62404
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6ecd082a9f6d690414761d11d3a0adf101f87c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185660"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233237"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>コンパイラの警告 (レベル 1) C4742
 
-' file1 ' と ' file2 ' では、' var ' の配置が異なります。数値と数値
+> '*変数*' は、'*file1*' と '*file2*' で異なるアラインメントを含んでいます: *number1*と*number2*
 
-2つのファイルで参照または定義された外部変数は、それらのファイル内で異なるアラインメントを持ちます。 この警告は、コンパイラが*file1*の変数の `__alignof` が*file2*の変数の `__alignof` と異なることを検出した場合に生成されます。 異なるファイルで変数を宣言するとき、または異なるファイルで一致しない `#pragma pack` を使用することによって、互換性のない型を使用することが原因である可能性があります。
+2つのファイルで参照または定義された外部変数は、それらのファイル内で異なるアラインメントを持ちます。
+
+## <a name="remarks"></a>解説
+
+この警告は、コンパイラが file1 の変数に対して、file2 の変数に対してと異なることを検出した場合に生成され **`alignof`** *file1* **`alignof`** ます。 *file2* 異なるファイルで変数を宣言する場合、または異なるファイルで一致しない場合に、互換性のない型を使用することによって、この問題が発生することがあり `#pragma pack` ます。
 
 この警告を解決するには、同じ型定義を使用するか、変数に別の名前を使用します。
 
-詳細については、「 [pack](../../preprocessor/pack.md) And [__alignof Operator](../../cpp/alignof-operator.md)」を参照してください。
+詳細については、「」および「演算子」を参照してください [`pack`](../../preprocessor/pack.md) 。 [ `alignof` ](../../cpp/alignof-operator.md)
 
 ## <a name="example"></a>例
 
@@ -34,8 +38,6 @@ struct X {
    char x, y, z, w;
 } global;
 ```
-
-## <a name="example"></a>例
 
 次の例では、C4742 が生成されます。
 

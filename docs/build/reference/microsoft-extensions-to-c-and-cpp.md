@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231508"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C および C++ の Microsoft 拡張機能
 
@@ -42,11 +42,11 @@ Visual C++ は、ANSI C および ANSI C++ 標準を次のように拡張しま�
 
 ## <a name="keywords"></a>キーワード
 
-複数のキーワードが追加されます。 一覧で[キーワード](../../cpp/keywords-cpp.md)、先頭 2 つのアンダー スコアがあるキーワードは、Visual C の拡張機能。
+複数のキーワードが追加されます。 [キーワード](../../cpp/keywords-cpp.md)の一覧では、先頭に2つのアンダースコアが付いているキーワードは Visual C++ の拡張機能です。
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>静的 const の整数型 (または列挙型) のメンバーのクラス定義外
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Static const 整数 (または列挙型) メンバーのクラス外定義
 
-標準 (**/Za**)、次のように、データ メンバーの場合、クラスの定義を行う必要があります。
+標準 (**/za**) では、次に示すように、データメンバーのクラス外定義を行う必要があります。
 
 ```cpp
 class CMyClass  {
@@ -57,9 +57,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-**/Ze**クラスの定義は静的で定数の型の整数および列挙データ メンバーの省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。
+**/Ze**では、クラス外定義は static、const 整数、および const 列挙型のデータメンバーに対しては省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。
 
-使用して、クラスの定義がヘッダーでファイルとヘッダー ファイルが含まれている複数のソース ファイルで提供されるときにエラーを回避する[selectany](../../cpp/selectany.md)します。 例:
+クラス外定義がヘッダーファイルに指定されていて、ヘッダーファイルが複数のソースファイルに含まれている場合にエラーが発生しないようにするには、 [selectany](../../cpp/selectany.md)を使用します。 次に例を示します。
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -69,7 +69,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 
 C++ コンパイラおよび C コンパイラは、次の種類の非 ANSI キャストをサポートします。
 
-- 左辺値を生成するための非 ANSI キャスト。 例えば:
+- 左辺値を生成するための非 ANSI キャスト。 次に例を示します。
 
    ```C
    char *p;
@@ -85,7 +85,7 @@ C++ コンパイラおよび C コンパイラは、次の種類の非 ANSI キ�
    p = ( char * )(( int * )p + 1 );
    ```
 
-- 関数ポインターからデータ ポインターへの非 ANSI キャスト。 例えば:
+- 関数ポインターからデータ ポインターへの非 ANSI キャスト。 次に例を示します。
 
    ```C
    int ( * pfunc ) ();
@@ -117,7 +117,7 @@ C コンパイラでは、次のように 2 つのスラッシュ (//) で始ま
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>スコープ
+## <a name="scope"></a>Scope
 
 C コンパイラでは、次のようなスコープ関連のコードを記述できます。
 
@@ -178,7 +178,7 @@ C コンパイラでは、以下のデータ宣言およびデータ定義の機
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- ビット フィールド以外の基本型を持つ**符号なし int**または**int を署名**します。
+- または以外の基本型を持つビットフィールド **`unsigned int`** **`signed int`** 。
 
 - 型がない宣言子:
 
@@ -230,13 +230,13 @@ C コンパイラでは、以下のデータ宣言およびデータ定義の機
    }
    ```
 
-## <a name="intrinsic-floating-point-functions"></a>浮動小数点の組み込み関数
+## <a name="intrinsic-floating-point-functions"></a>組み込み浮動小数点関数
 
-両方 x86 C++ コンパイラおよび C コンパイラのインライン生成をサポート、 `atan`、 `atan2`、 `cos`、 `exp`、 `log`、 `log10`、 `sin`、 `sqrt`、および`tan`関数と **/Oi**を指定します。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。
+X86 C++ コンパイラと C コンパイラはどちらも `atan` 、 `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` **/Oi**が指定されている場合、、、、、、、、、およびの各関数のインライン生成をサポートしています。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const ポインター パラメーターへの参照を関数に非 const ポインター パラメーターを渡すことが必要です。
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const ポインターパラメーターへの参照を必要とする関数に非定数ポインターパラメーターを渡す
 
-これは C++ の拡張機能です。 このコードはコンパイルで **/Ze**:
+これは C++ の拡張機能です。 このコードは、 **/ze**を使用してコンパイルします。
 
 ```cpp
 typedef   int   T;
@@ -258,17 +258,17 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646 します。H は有効になっていません
+## <a name="iso646h-not-enabled"></a>ISO646.H が有効ではありません
 
-**/Ze**、表示形式は次の演算子を使用する場合は、iso646.h をインクルードする必要があります。
+**/Ze**では、次の演算子のテキスト形式を使用する場合は、iso646 を含める必要があります。
 
-- & & (および)
+- && (AND)
 
-- & = (and_eq)
+- &= (and_eq)
 
-- (& a) (bitand)
+- & (bitand)
 
-- &#124;(bitor)
+- &#124; (bitor)
 
 - ~ (compl)
 
@@ -276,7 +276,7 @@ void func ()
 
 - != (not_eq)
 
-- &#124;&#124;(または)
+- &#124;&#124; (OR)
 
 - &#124;= (or_eq)
 
@@ -284,9 +284,9 @@ void func ()
 
 - ^= (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>文字列リテラルのアドレスが型 const char でない const char (*)
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>文字列リテラルのアドレスの型が const char [] ではありません。 const char (*) [] ではありません
 
-次の例の出力は`char const (*)[4]` **/Za**が`char const [4]` **/Ze**します。
+次の例では `char const (*)[4]` 、 **/za**の下で、/ze の下に出力し `char const [4]` ます。 **/Ze**
 
 ```cpp
 #include <stdio.h>
@@ -302,4 +302,4 @@ int main()
 
 - [/Za、/Ze (言語拡張機能の無効化)](za-ze-disable-language-extensions.md)
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+- [MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

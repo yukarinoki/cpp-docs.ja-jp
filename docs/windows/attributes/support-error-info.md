@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211958"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -26,17 +26,17 @@ ms.locfileid: "80166147"
 ### <a name="parameters"></a>パラメーター
 
 *error_interface*<br/>
-`IErrorInfo`を実装するインターフェイスの識別子。
+を実装するインターフェイスの識別子 `IErrorInfo` 。
 
 ## <a name="remarks"></a>解説
 
-**support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 オブジェクトがエラーをサポートするには、オブジェクトによって `IErrorInfo` インターフェイスのメソッドが実装されている必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。
+**support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 オブジェクトがエラーをサポートするには、インターフェイスのメソッドが `IErrorInfo` オブジェクトによって実装されている必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。
 
-この属性により、 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 この結果、`ISupportErrorInfo` の既定の実装が生成され、1つのインターフェイスがオブジェクトに対してエラーを生成するときに使用できます。
+この属性により、 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 この結果、 `ISupportErrorInfo` 1 つのインターフェイスがオブジェクトに対してエラーを生成するときに、およびの既定の実装が使用されます。
 
 ## <a name="example"></a>例
 
-次のコードは、`ISupportErrorInfo` インターフェイスの既定のサポートを `CMyClass` オブジェクトに追加します。
+次のコードでは、インターフェイスの既定のサポートがオブジェクトに追加されて `ISupportErrorInfo` `CMyClass` います。
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,14 +64,14 @@ class CMyClass
 
 |||
 |-|-|
-|**対象**|**class**|
-|**反復可能**|はい|
-|**必要な属性**|なし|
+|**適用対象**|**`class`**|
+|**Repeatable**|はい|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)

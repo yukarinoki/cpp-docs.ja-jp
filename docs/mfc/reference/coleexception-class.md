@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: COleException クラス
 ms.date: 11/04/2016
 f1_keywords:
 - COleException
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 737c9e669990f4de6ae18cdc7662c131ad61516f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233198"
 ---
-# <a name="coleexception-class"></a>クラス
+# <a name="coleexception-class"></a>COleException クラス
 
 OLE 操作に関する例外条件を表します。
 
@@ -31,21 +31,21 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[:Pロセス](#process)|キャッチされた例外を OLE リターン コードに変換します。|
+|[COleException::P rocess](#process)|キャッチされた例外を OLE のリターンコードに変換します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[例外::m_sc](#m_sc)|例外の理由を示す状態コードが含まれています。|
+|[COleException:: m_sc](#m_sc)|例外の理由を示すステータスコードを格納します。|
 
 ## <a name="remarks"></a>解説
 
-クラス`COleException`には、例外の理由を示す状態コードを保持するパブリック データ メンバーが含まれています。
+クラスには、 `COleException` 例外の原因を示す状態コードを保持するパブリックデータメンバーが含まれています。
 
-一般に、オブジェクトを`COleException`直接作成しないでください。代わりに[、AfxThrowOleException を](exception-processing.md#afxthrowoleexception)呼び出す必要があります。
+一般に、オブジェクトを直接作成することは避けてください。 `COleException` 代わりに、 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)を呼び出す必要があります。
 
 例外の詳細については、「[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md) 」および「[例外: OLE 例外](../../mfc/exceptions-ole-exceptions.md)」を参照してください。
 
@@ -61,9 +61,9 @@ class COleException : public CException
 
 **ヘッダー :** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>例外::m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException:: m_sc
 
-このデータ メンバは、例外の理由を示す OLE ステータス コードを保持します。
+このデータメンバーは、例外の原因を示す OLE ステータスコードを保持します。
 
 ```
 SCODE m_sc;
@@ -71,17 +71,17 @@ SCODE m_sc;
 
 ### <a name="remarks"></a>解説
 
-この変数の値は[、AfxThrowOleException](exception-processing.md#afxthrowoleexception)によって設定されます。
+この変数の値は、 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)によって設定されます。
 
-SCODE の詳細については、Windows SDK[の COM エラー コードの構造](/windows/win32/com/structure-of-com-error-codes)を参照してください。
+SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>:Pロセス
+## <a name="coleexceptionprocess"></a><a name="process"></a>COleException::P rocess
 
-**処理**メンバー関数を呼び出して、キャッチされた例外を OLE 状態コードに変換します。
+キャッチされた例外を OLE ステータスコードに変換するには、**プロセス**メンバー関数を呼び出します。
 
 ```
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -89,19 +89,19 @@ static SCODE PASCAL Process(const CException* pAnyException);
 
 ### <a name="parameters"></a>パラメーター
 
-*例外*<br/>
+*pAnyException*<br/>
 キャッチされた例外へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-OLE ステータス コード。
+OLE ステータスコード。
 
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
-> この関数は**静的**です。
+> この関数は **`static`** です。
 
-SCODE の詳細については、Windows SDK[の COM エラー コードの構造](/windows/win32/com/structure-of-com-error-codes)を参照してください。
+SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -109,6 +109,6 @@ SCODE の詳細については、Windows SDK[の COM エラー コードの構�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
-[クラスの例外](../../mfc/reference/cexception-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[MFC のサンプル CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[CException クラス](../../mfc/reference/cexception-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)

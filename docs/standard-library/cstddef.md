@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222525"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-C 標準ライブラリヘッダー \<stddef.h > をインクルードし、関連`std`する名前を名前空間に追加します。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
+C 標準ライブラリヘッダーをインクルード \<stddef.h> し、関連する名前を `std` 名前空間に追加します。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言された名前が、名前空間で宣言され `std` ます。
 
 > [!NOTE]
-> \<cstddef > には**byte**型が含まれており、 **wchar_t**型は含まれません。
+> \<cstddef>に型**バイト**が含まれていますが、型が含まれていません **`wchar_t`** 。
 
 ## <a name="syntax"></a>構文
 
@@ -52,7 +52,7 @@ namespace std {
 すべてのスカラー型のアラインメント要件が少なくとも優れており、すべてのコンテキストでアラインメント要件がサポートされている POD 型。
 
 *nullptr_t*\
-**Nullptr**式の型のシノニム。 **Nullptr**アドレスは取得できませんが、左辺値である別の*nullptr_t*オブジェクトのアドレスを取得できます。
+式の型のシノニム **`nullptr`** 。 アドレスを **`nullptr`** 取得することはできませんが、左辺値である別の*nullptr_t*オブジェクトのアドレスを取得できます。
 
 ## <a name="byte-class"></a>byte クラス
 
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

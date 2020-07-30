@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49fef050393f7196fe26aa172ac02792ae5c717e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212229"
 ---
-# <a name="isvoid-class"></a>is_void クラス
+# <a name="is_void-class"></a>is_void クラス
 
 型が void であるかどうかをテストします。
 
@@ -30,9 +30,9 @@ struct is_void;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*T*が**void**または cv で修飾された形式の**void**である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型の述語のインスタンスは、 *T*が **`void`** または cv で修飾された形式の場合は true を保持し **`void`** ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -68,7 +68,7 @@ is_void<void> == true
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

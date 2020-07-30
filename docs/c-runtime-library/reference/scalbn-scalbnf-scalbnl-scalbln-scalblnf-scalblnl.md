@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231378"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -107,26 +107,26 @@ long double scalblnl(
 *x*<br/>
 浮動小数点値。
 
-*期限*<br/>
+*exp*<br/>
 整数の指数。
 
 ## <a name="return-value"></a>戻り値
 
-**Scalbn**関数は、成功した場合に*x* \* **FLT_RADIX**<sup>exp</sup>の値を返します。 オーバーフロー時 ( *x*の符号によって異なります)、 **scalbn**は +/- **HUGE_VAL**; を返します。**errno**値は**ERANGE**に設定されます。
+**Scalbn**関数は、 *x* \* 成功した場合に x **FLT_RADIX**<sup>exp</sup>の値を返します。 オーバーフロー時 ( *x*の符号によって異なります)、 **scalbn**は +/- **HUGE_VAL**; を返します。**errno**値は**ERANGE**に設定されます。
 
 **Errno**および考えられるエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**FLT_RADIX**は、浮動\<小数点のネイティブな基数として> で定義されます。バイナリシステムでは、値は2、 **scalbn**は[ldexp](ldexp.md)に相当します。
+**FLT_RADIX**は \<float.h> 、ネイティブ浮動小数点基数としてで定義されます。バイナリシステムでは、値は2で、 **scalbn**は[ldexp](ldexp.md)と等価です。
 
-C++ ではオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取って返す、 **scalbn**の**オーバーロードを呼び**出すことができます。 C プログラムでは、 **scalbn**は常に**double**と**int**を受け取り、 **double**を返します。また、**スケール bln**は常に double と**long** **を受け取り**、 **double**を返します。
+C++ ではオーバーロードが可能であるため、または型を受け取って返す**scalbn**の**オーバーロードを呼び**出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **scalbn**は常にとを受け取り、を **`double`** **`int`** 返し **`double`** ます。また、**スケール bln**は常にとを受け取り、を **`double`** **`long`** 返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**scalbn**、 **scalbnf**、 **btree bnl**、**スケール bln**、 **、スケール** **blnl**|\<math.h>|\<cmath>|
 
@@ -158,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf、modff、modfl](modf-modff-modfl.md)<br/>

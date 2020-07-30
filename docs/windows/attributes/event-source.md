@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e187e57f21e9c94068c0b3396b93deed617fef2a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167070"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232769"
 ---
 # <a name="event_source"></a>event_source
 
@@ -35,7 +35,7 @@ ms.locfileid: "80167070"
 
 - アンマネージ C/C++ コード用の`native` (アンマネージ クラスの既定)。
 
-- COM コード用の`com` 。 =`com``type`場合は、`coclass` を使用する必要があります。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
+- COM コード用の`com` 。 When を使用する必要があり `coclass` `type` = `com` ます。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -44,16 +44,16 @@ ms.locfileid: "80167070"
     ```
 
 *optimize*<br/>
-*Type*が `native`の場合、`optimize=size`を指定して、`optimize=speed` クラス内のすべてのイベントに対して4バイト (最小) のストレージがあることを示すことができます (既定)。ストレージの 4 * (イベントの数) バイトがあることを示します。
+*型*がの場合は `native` 、を指定して `optimize=size` 、クラスのすべてのイベントに対して4バイト (最小) のストレージがあることを示すことができ `optimize=speed` ます。または (既定値) ストレージの 4 * (イベントの数) バイトがあることを示します。
 
 *decorate*<br/>
-*Type*が `native`の場合、`decorate=false`を指定して、結合された (.mrg) ファイルの拡張名に外側のクラス名を含めないように指定できます。 [/Fx](../../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 `decorate=false`(既定) の場合、マージされたファイルには完全修飾型名が生成されます。
+*Type*がの場合は `native` 、を指定して `decorate=false` 、結合された (.mrg) ファイル内の拡張名に外側のクラス名を含めることができないことを示すことができます。 [/Fx](../../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 `decorate=false`既定では、マージされたファイルには完全修飾型名が生成されます。
 
 ## <a name="remarks"></a>解説
 
 **event_source** C++ 属性では、それが適用されているクラスまたは構造がイベント ソースとなることを指定します。
 
-**event_source** は、 [event_receiver](event-receiver.md) 属性と [__event](../../cpp/event.md) キーワードと共に使用します。 イベントレシーバーを作成するには、`event_receiver` を使用します。 イベントソース内のメソッドに **__event**を使用して、それらのメソッドをイベントとして指定します。
+**event_source** は、 [event_receiver](event-receiver.md) 属性と [__event](../../cpp/event.md) キーワードと共に使用します。 `event_receiver`イベントレシーバーを作成するには、を使用します。 **`__event`** イベントソース内のメソッドでを使用して、これらのメソッドをイベントとして指定します。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
@@ -64,14 +64,14 @@ ms.locfileid: "80167070"
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|`type`=場合の**コクラス**`com`|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|**コクラス**`type`=`com`|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>

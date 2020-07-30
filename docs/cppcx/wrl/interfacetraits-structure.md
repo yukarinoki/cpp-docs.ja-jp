@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216571"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -50,38 +50,38 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 *I0*<br/>
 インターフェイスの名前。
 
-*クロークタイプ*<br/>
-および の場合`RuntimeClass`、サポートされているインターフェイス ID の一覧に含めないインターフェイス。 `Implements` `ChainInterfaces`
+*Cloaの種類*<br/>
+、、およびの場合 `RuntimeClass` `Implements` `ChainInterfaces` 、サポートされているインターフェイス id のリストに含まれないインターフェイス。
 
 ## <a name="remarks"></a>解説
 
-インターフェイスの共通の特性を実装します。
+インターフェイスの一般的な特性を実装します。
 
-2 番目のテンプレートは、クロークされたインターフェイスの特殊化です。 3 番目のテンプレートは、Nil パラメータの特殊化です。
+2番目のテンプレートは、クロークされたインターフェイスの特殊化です。 3番目のテンプレートは、Nil パラメーターの特殊化です。
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>パブリック型定義
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>パブリック Typedef
 
 名前   | 説明
 ------ | ------------------------------------------
-`Base` | *I0*テンプレート パラメーターの同義語。
+`Base` | *I0* template パラメーターのシノニム。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                   | 説明
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[インターフェイストレイト::CanCastTo](#cancastto)               | 指定したポインターを へのポインターにキャストできるかどうかを示します`Base`。
-[インターフェイストレイツ::キャストトベース](#casttobase)             | 指定したポインターを へのポインターにキャスト`Base`します。
-[インターフェイストレイト::キャストは不明](#casttounknown)       | 指定したポインターを へのポインターにキャスト`IUnknown`します。
-[インターフェイストレイト::フィルアレイウィズイッド](#fillarraywithiid) | index 引数で指定された`Base`配列要素にのインターフェイス ID を割り当てます。
-[インターフェイストレイツ::検証](#verify)                     | 正しく派生`Base`していることを確認します。
+[InterfaceTraits:: CanCastTo](#cancastto)               | 指定したポインターをへのポインターにキャストできるかどうかを示し `Base` ます。
+[InterfaceTraits:: CastToBase](#casttobase)             | 指定したポインターをへのポインターにキャストし `Base` ます。
+[InterfaceTraits:: CastToUnknown](#casttounknown)       | 指定したポインターをへのポインターにキャストし `IUnknown` ます。
+[InterfaceTraits:: FillArrayWithIid](#fillarraywithiid) | のインターフェイス ID を、 `Base` index 引数で指定された配列要素に割り当てます。
+[InterfaceTraits:: Verify](#verify)                     | が適切に派生していることを確認 `Base` します。
 
 ### <a name="public-constants"></a>パブリック定数
 
 名前                                   | 説明
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[インターフェイストレイツ::Iidカウント](#iidcount) | 現在`InterfaceTraits`のオブジェクトに関連付けられているインターフェイス ID の数を保持します。
+[InterfaceTraits:: IidCount](#iidcount) | 現在のオブジェクトに関連付けられているインターフェイス Id の数を保持し `InterfaceTraits` ます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -89,13 +89,13 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** 実装.h
+**Header:** を実装します。
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>インターフェイストレイト::CanCastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits:: CanCastTo
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 template<typename T>
@@ -108,28 +108,28 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*<br/>
+*ptr*<br/>
 型へのポインターの名前。
 
 *riid*<br/>
-のインターフェイス`Base`ID。
+のインターフェイス ID `Base` 。
 
-*Ppv*<br/>
-この操作が成功すると、 *ppv*は で指定`Base`されたインターフェイスを指します。 それ以外の場合 *、ppv*は に`nullptr`設定されます。
+*ppv*<br/>
+この操作が成功した場合、 *ppv*はによって指定されたインターフェイスをポイントし `Base` ます。 それ以外の場合、 *ppv*はに設定され **`nullptr`** ます。
 
 ### <a name="return-value"></a>戻り値
 
-この操作が成功し *、ptr*がポインタにキャストされる場合`Base`は**true。** それ以外の場合**は false。**
+**`true`** この操作が成功し、 *ptr*がへのポインターにキャストされている場合は `Base` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-指定したポインターを へのポインターにキャストできるかどうかを示します`Base`。
+指定したポインターをへのポインターにキャストできるかどうかを示し `Base` ます。
 
-の詳細については`Base`、「[パブリック型定義](#public-typedefs)」セクションを参照してください。
+の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>インターフェイストレイツ::キャストトベース
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits:: CastToBase
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 template<typename T>
@@ -141,10 +141,10 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-*パラメータ ptr*の型。
+パラメーター *ptr*の型。
 
-*Ptr*<br/>
-*型*T へのポインター。
+*ptr*<br/>
+型*T*へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -152,13 +152,13 @@ static __forceinline Base* CastToBase(
 
 ### <a name="remarks"></a>解説
 
-指定したポインターを へのポインターにキャスト`Base`します。
+指定したポインターをへのポインターにキャストし `Base` ます。
 
-の詳細については`Base`、「[パブリック型定義](#public-typedefs)」セクションを参照してください。
+の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>インターフェイストレイト::キャストは不明
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits:: CastToUnknown
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 template<typename T>
@@ -170,24 +170,24 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-*パラメータ ptr*の型。
+パラメーター *ptr*の型。
 
-*Ptr*<br/>
-*T*型へのポインター 。
+*ptr*<br/>
+*T*型へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-派生元の IUnknown`Base`へのポインター。
+の派生元である IUnknown へのポインター `Base` 。
 
 ### <a name="remarks"></a>解説
 
-指定したポインターを へのポインターにキャスト`IUnknown`します。
+指定したポインターをへのポインターにキャストし `IUnknown` ます。
 
-の詳細については`Base`、「[パブリック型定義](#public-typedefs)」セクションを参照してください。
+の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>インターフェイストレイト::フィルアレイウィズイッド
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits:: FillArrayWithIid
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -198,23 +198,23 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
-0 から始まるインデックス値を含むフィールドへのポインター。
+*インデックス*<br/>
+0から始まるインデックス値を格納しているフィールドへのポインター。
 
-*Iid*<br/>
-インターフェイス ID の配列。
+*iid が*<br/>
+インターフェイス Id の配列。
 
 ### <a name="remarks"></a>解説
 
-index 引数で指定された`Base`配列要素にのインターフェイス ID を割り当てます。
+のインターフェイス ID を、 `Base` index 引数で指定された配列要素に割り当てます。
 
-この API の名前とは対照的に、1 つの配列要素のみが変更されます。配列全体ではありません。
+この API の名前とは対照的に、1つの配列要素のみが変更されます。配列全体ではありません。
 
-の詳細については`Base`、「[パブリック型定義](#public-typedefs)」セクションを参照してください。
+の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>インターフェイストレイツ::Iidカウント
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits:: IidCount
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 static const unsigned long IidCount = 1;
@@ -222,11 +222,11 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>解説
 
-現在`InterfaceTraits`のオブジェクトに関連付けられているインターフェイス ID の数を保持します。
+現在のオブジェクトに関連付けられているインターフェイス Id の数を保持し `InterfaceTraits` ます。
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>インターフェイストレイツ::検証
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits:: Verify
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 __forceinline static void Verify();
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>解説
 
-正しく派生`Base`していることを確認します。
+が適切に派生していることを確認 `Base` します。
 
-の詳細については`Base`、「[パブリック型定義](#public-typedefs)」セクションを参照してください。
+の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。

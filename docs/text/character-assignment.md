@@ -5,16 +5,16 @@ helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-ms.openlocfilehash: 88c42435d336ba78e87c9acfe3ada5fddbd18fb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f627f88ca2b1d3533d3690cd0316ee047a327ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410747"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217312"
 ---
 # <a name="character-assignment"></a>文字の代入
 
-これで、次の例を検討してください、**中に**ループは、別の文字列に 'X' 以外のすべての文字をコピー、文字列をスキャンします。
+次の例では、ループによって **`while`** 文字列がスキャンされ、' X ' 以外のすべての文字が別の文字列にコピーされます。
 
 ```cpp
 while( *sz2 )
@@ -26,7 +26,7 @@ while( *sz2 )
 }
 ```
 
-コードのコピーにあるバイト`sz2`によって示される場所に`sz1`、インクリメントし、`sz1`次のバイトを受信します。 場合の次の文字`sz2`2 バイト文字への代入は`sz1`最初のバイトのみをコピーします。 次のコードは、文字を安全にコピーする移植可能な関数とにインクリメント`sz1`と`sz2`正しく。
+このコードは、のバイトをが `sz2` 指す位置にコピー `sz1` し、 `sz1` 次のバイトを受け取るようにインクリメントします。 ただし、の次の文字 `sz2` が2バイト文字の場合、の割り当てによって `sz1` 最初のバイトのみがコピーされます。 次のコードでは、ポータブル関数を使用して文字を安全にコピーし、もう1つをインクリメントして適切にコピーしてい `sz1` `sz2` ます。
 
 ```cpp
 while( *sz2 )
@@ -44,5 +44,5 @@ while( *sz2 )
 
 ## <a name="see-also"></a>関連項目
 
-[MBCS のプログラミングについて](../text/mbcs-programming-tips.md)<br/>
+[MBCS のプログラミングに関するヒント](../text/mbcs-programming-tips.md)<br/>
 [文字の比較](../text/character-comparison.md)

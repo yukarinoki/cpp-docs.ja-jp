@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232457"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -75,9 +75,9 @@ int wmemcmp(
 |0|*buffer1*は*buffer2*と同じです。|
 |> 0|*buffer1* *buffer2*より大きい|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Buffer1*と*buffer2*の最初の*カウント*文字を比較し、それらの関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値は、 **memcmp**では**unsigned** **char** 、 **wmemcmp**では**wchar_t**として解釈されます。
+*Buffer1*と*buffer2*の最初の*カウント*文字を比較し、それらの関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値は、memcmp の場合と同様に解釈され、 **`unsigned char`** **memcmp** **`wchar_t`** **wmemcmp**の場合と同様に解釈されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -86,7 +86,7 @@ int wmemcmp(
 |**memcmp**|\<memory.h> または \<string.h>|
 |**wmemcmp**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218684"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -83,11 +83,11 @@ long double floorl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**floor**のオーバーロードを呼び出すことができます。 C プログラムでは、 **floor**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す**floor**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **floor**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |機能|必須ヘッダー|
 |--------------|---------------------|

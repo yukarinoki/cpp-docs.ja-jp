@@ -1,5 +1,5 @@
 ---
-title: ドキュメント/ビュー アーキテクチャの全体像
+title: ドキュメント/ビューアーキテクチャの全体像
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623446"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214192"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの全体像
 
@@ -27,7 +27,7 @@ ms.locfileid: "84623446"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>ビューからドキュメントデータへのアクセスを取得する
 
-ビューはドキュメントのデータにアクセスします。 [Getdocument](reference/cview-class.md#getdocument)関数は、ドキュメントへのポインターを返すか、ビュークラスを `friend` ドキュメントクラスの C++ にします。 その後、ビューはデータへのアクセスを使用してデータを取得し、描画や操作を行う準備ができたときにデータを取得します。
+ビューはドキュメントのデータにアクセスします。 [Getdocument](reference/cview-class.md#getdocument)関数は、ドキュメントへのポインターを返すか、ビュークラスを **`friend`** ドキュメントクラスの C++ にします。 その後、ビューはデータへのアクセスを使用してデータを取得し、描画や操作を行う準備ができたときにデータを取得します。
 
 たとえば、ビューの[OnDraw](reference/cview-class.md#ondraw)メンバー関数から、ビューはを使用して `GetDocument` ドキュメントポインターを取得します。 次に、そのポインターを使用して `CString` 、ドキュメント内のデータメンバーにアクセスします。 このビューでは、文字列が関数に渡され `TextOut` ます。 この例のコードを確認するには、「[ビューでの描画](drawing-in-a-view.md)」を参照してください。
 

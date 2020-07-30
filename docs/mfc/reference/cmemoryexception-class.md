@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CMemoryException クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71b17e777db9d6351192da7cffd075b3a64553bd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222928"
 ---
-# <a name="cmemoryexception-class"></a>クラス
+# <a name="cmemoryexception-class"></a>CMemoryException クラス
 
 メモリ不足例外条件を表します。
 
@@ -29,15 +29,15 @@ class CMemoryException : public CSimpleException
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[::Cメモリ例外](#cmemoryexception)|`CMemoryException` オブジェクトを構築します。|
+|[CMemoryException:: CMemoryException](#cmemoryexception)|`CMemoryException` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>解説
 
-これ以上の資格は必要ありません。 メモリ例外は、**新しい**. たとえば、 を使用して`malloc`独自のメモリ関数を記述する場合は、メモリ例外をスローする責任があります。
+これ以上の修飾は必要ありません。 メモリ例外は、によって自動的にスローされ **`new`** ます。 たとえば、を使用して独自のメモリ関数を記述する場合 `malloc` は、メモリ例外をスローする必要があります。
 
-の詳細については、「[例外処理 (MFC) 」](../../mfc/exception-handling-in-mfc.md)を参照してください。 `CMemoryException`
+の詳細については `CMemoryException` 、「[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,9 +51,9 @@ class CMemoryException : public CSimpleException
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afx.h
+**ヘッダー:** afx
 
-## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>::Cメモリ例外
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException:: CMemoryException
 
 `CMemoryException` オブジェクトを構築します。
 
@@ -63,9 +63,9 @@ CMemoryException();
 
 ### <a name="remarks"></a>解説
 
-このコンストラクターを直接使用するのではなく、グローバル関数[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)を呼び出してください。 このグローバル関数は、以前に割り当てられたメモリに例外オブジェクトを構築するため、メモリ不足の状況で成功する可能性があります。 例外処理の詳細については、 の記事の[「例外](../exception-handling-in-mfc.md)」を参照してください。
+このコンストラクターを直接使用するのではなく、グローバル関数[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)を呼び出します。 以前に割り当てられたメモリに例外オブジェクトが構築されるため、このグローバル関数はメモリ不足の状態で成功する可能性があります。 例外処理の詳細については、「[例外](../exception-handling-in-mfc.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの例外](cexception-class.md)<br/>
-[階層グラフ](../hierarchy-chart.md)
+[CException クラス](cexception-class.md)<br/>
+[階層図](../hierarchy-chart.md)

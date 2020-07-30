@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231573"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++)
 
@@ -141,9 +141,9 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    この関数のパラメーターと戻り値の詳細については、「 [WinMain entry point](/windows/win32/api/winbase/nf-winbase-winmain)」を参照してください。
 
    > [!NOTE]
-   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、 **__declspec**宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化しています。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
+   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化して **`__declspec`** います。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
 
-1. Windows デスクトッププログラムでは、 &lt; windows .h> が必要です。 &lt;tchar.h> はマクロを定義します。これは、 `TCHAR` 最終的には、プロジェクトで UNICODE シンボルが定義されている場合は**wchar_t**に解決され、それ以外の場合は**char**に解決されます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は必要なく、 **wchar_t**直接使用することができます。
+1. Windows デスクトッププログラムでは、 &lt; windows .h> が必要です。 &lt;tchar.h> はマクロを定義します。 `TCHAR` このマクロは、最終的には、 **`wchar_t`** プロジェクトで UNICODE シンボルが定義されている場合に解決されます。それ以外の場合は、に解決され **`char`** ます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は不要で、直接だけを使用でき **`wchar_t`** ます。
 
    ```cpp
    #include <windows.h>
@@ -588,7 +588,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![DesktopApp プロジェクトを実行する](../build/media/desktop-app-project-run-157.PNG "DesktopApp プロジェクトを実行する")
 
-おめでとうございます。 このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
+お疲れさまでした。 このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
 
 ## <a name="see-also"></a>関連項目
 

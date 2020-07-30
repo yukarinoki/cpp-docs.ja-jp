@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2050
 ms.assetid: 66aaed7d-00db-4ce1-a9d6-4447c1cf07ce
-ms.openlocfilehash: e3d100387264af4a3f9bba8b9934fc6ca1d0d5a6
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e2eb6f323b5ae377c42bee4ad6ff8d83a1d3c16b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739180"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221303"
 ---
 # <a name="compiler-error-c2050"></a>コンパイラエラー C2050
 
 switch 式が整数ではありません
 
-`switch` 式は、整数以外の値に評価されます。 このエラーを解決するには、switch ステートメントで整数値のみを使用します。
+式は、 **`switch`** 整数以外の値に評価されます。 このエラーを解決するには、switch ステートメントで整数値のみを使用します。
 
 次の例では、C2050 が生成されます。
 
@@ -34,7 +34,7 @@ int main() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C2050b.cpp

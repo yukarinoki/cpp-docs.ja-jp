@@ -1,5 +1,5 @@
 ---
-title: Cウィンドウクラス
+title: CWindow クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CWindow
@@ -153,16 +153,16 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 98bda96ba1d1b81400c4e628f16ad5ebb83a349e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229949"
 ---
-# <a name="cwindow-class"></a>Cウィンドウクラス
+# <a name="cwindow-class"></a>CWindow クラス
 
-このクラスは、ウィンドウを操作するためのメソッドを提供します。
+このクラスには、ウィンドウを操作するためのメソッドが用意されています。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -179,206 +179,206 @@ class CWindow
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウ::Cウィンドウ](#cwindow)|コンストラクターです。|
+|[CWindow:: CWindow](#cwindow)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウ::アレンジアイコニックウィンドウ](#arrangeiconicwindows)|最小化されたすべての子ウィンドウを整列します。|
-|[Cウィンドウ::添付](#attach)|`CWindow`オブジェクトにウィンドウをアタッチします。|
-|[ウィンドウ::ペイントを開始](#beginpaint)|ウィンドウを描画する準備をします。|
-|[ウィンドウ::ブリングウィンドウトップ](#bringwindowtotop)|ウィンドウを Z オーダーの先頭に移動します。|
-|[ウィンドウ::センターウィンドウ](#centerwindow)|ウィンドウを指定したウィンドウの中央に移動します。|
-|[Cウィンドウ::クリップボードチェーンの変更](#changeclipboardchain)|クリップボード ビューアのチェーンからウィンドウを削除します。|
-|[ウィンドウ::チェックドルグボタン](#checkdlgbutton)|指定したボタンのチェック状態を変更します。|
-|[ウィンドウ::チェックラジオボタン](#checkradiobutton)|指定されたラジオ ボタンをチェックします。|
-|[ウィンドウ::子ウィンドウのソースポイント](#childwindowfrompoint)|指定したポイントを含む子ウィンドウを取得します。|
-|[ウィンドウ::子供ウィンドウからポイント](#childwindowfrompointex)|指定したポイントを含む特定の種類の子ウィンドウを取得します。|
-|[ウィンドウ::クライアントの画面](#clienttoscreen)|クライアント座標を画面座標に変換します。|
-|[ウィンドウ::作成](#create)|ウィンドウを作成します。|
-|[Cウィンドウ::作成キャレット](#createcaret)|システム キャレットの新しい図形を作成します。|
-|[Cウィンドウ::グレーキャレットを作成します。](#creategraycaret)|システム キャレットの灰色の四角形を作成します。|
-|[Cウィンドウ::ソリッドキャレットを作成します。](#createsolidcaret)|システム キャレットの四角形を作成します。|
-|[ウィンドウ::Dフェファーウィンドウポス](#deferwindowpos)|指定したウィンドウの指定された複数ウィンドウ位置の構造体を更新します。|
-|[ウィンドウ::Dエストロイウィンドウ](#destroywindow)|オブジェクトに関連付けられているウィンドウを`CWindow`破棄します。|
-|[Cウィンドウ::Dエタッハ](#detach)|ウィンドウをオブジェクトから切り`CWindow`離します。|
-|[ウィンドウ::Dルグディリスト](#dlgdirlist)|指定したパスまたはファイル名に一致するすべてのファイルの名前をリスト ボックスに入力します。|
-|[ウィンドウ::Dルグディリストコンボボックス](#dlgdirlistcombobox)|指定したパスまたはファイル名に一致するすべてのファイルの名前をコンボ ボックスに入力します。|
-|[Cウィンドウ::Dルグディを選択](#dlgdirselect)|リスト ボックスから現在の選択を取得します。|
-|[コンボボックス:D](#dlgdirselectcombobox)|コンボ ボックスから現在の選択範囲を取得します。|
-|[ウィンドウ::Dラゴラアクセプ](#dragacceptfiles)|ウィンドウがドラッグされたファイルを受け入れるかどうかを登録します。|
-|[ウィンドウ::Dローメニューバー](#drawmenubar)|ウィンドウのメニュー バーを再描画します。|
-|[ウィンドウ::有効スクロールバー](#enablescrollbar)|スクロール バーの矢印を有効または無効にします。|
-|[ウィンドウ::ウィンドウを有効にします。](#enablewindow)|入力を有効または無効にします。|
-|[ウィンドウ::エンドペイント](#endpaint)|描画の終了を示します。|
-|[ウィンドウ::フラッシュウィンドウ](#flashwindow)|ウィンドウを 1 回フラッシュします。|
-|[ウィンドウ::ゲットクライアントレクト](#getclientrect)|クライアント領域の座標を取得します。|
-|[ウィンドウ::ゲットDC](#getdc)|クライアント領域のデバイス コンテキストを取得します。|
-|[ウィンドウ::ゲプテックス](#getdcex)|クライアント領域のデバイス コンテキストを取得し、クリッピング オプションを許可します。|
-|[ウィンドウ::ゲット子孫ウィンドウ](#getdescendantwindow)|指定した子孫ウィンドウを取得します。|
-|[ウィンドウ::ゲットドルグコントロール](#getdlgcontrol)|指定したコントロールのインターフェイスを取得します。|
-|[ウィンドウ::取得ドルーグCtrlID](#getdlgctrlid)|ウィンドウの識別子を取得します (子ウィンドウの場合のみ)。|
-|[ウィンドウ::ゲットドルグホスト](#getdlghost)|ATL コントロール ホスティング コンテナーへのインターフェイスへのポインターを取得します。|
-|[ウィンドウ::ゲットドルグアイテム](#getdlgitem)|指定した子ウィンドウを取得します。|
-|[ウィンドウ::ゲットドルグアイテムイント](#getdlgitemint)|コントロールのテキストを整数に変換します。|
-|[ウィンドウ::テキストを取得します。](#getdlgitemtext)|コントロールのテキストを取得します。|
-|[ウィンドウ::ゲテックススタイル](#getexstyle)|拡張ウィンドウ スタイルを取得します。|
-|[ウィンドウ::フォントを取得します。](#getfont)|ウィンドウの現在のフォントを取得します。|
-|[ウィンドウ::ゲットホットキー](#gethotkey)|ウィンドウに関連付けられているホット キーを決定します。|
-|[ウィンドウ::ゲットアイコン](#geticon)|ウィンドウの大きいアイコンまたは小さいアイコンを取得します。|
-|[ウィンドウ::取得ラストアクティブポップアップ](#getlastactivepopup)|最後にアクティブなポップアップ ウィンドウを取得します。|
-|[ウィンドウ::ゲットメニュー](#getmenu)|ウィンドウのメニューを取得します。|
-|[ウィンドウ::次のグループアイテム](#getnextdlggroupitem)|コントロールのグループ内の前のコントロールまたは次のコントロールを取得します。|
-|[ウィンドウ::ゲットネクドルグタブアイテム](#getnextdlgtabitem)|WS_TABSTOP スタイルを持つ前または次のコントロールを取得します。|
-|[ウィンドウ::ゲットペアレント](#getparent)|直接の親ウィンドウを取得します。|
-|[ウィンドウ::ゲットスクロール情報](#getscrollinfo)|スクロール バーのパラメーターを取得します。|
-|[ウィンドウ::ゲットスクロールポス](#getscrollpos)|スクロール ボックスの位置を取得します。|
-|[ウィンドウ::ゲットスクロール範囲](#getscrollrange)|スクロール バーの範囲を取得します。|
-|[ウィンドウ::ゲットスタイル](#getstyle)|ウィンドウ スタイルを取得します。|
-|[ウィンドウ::システムメニューを取得します。](#getsystemmenu)|変更用のシステム メニューのコピーを作成します。|
-|[ウィンドウ::取得トップレベル親](#gettoplevelparent)|最上位レベルの親ウィンドウまたはオーナー ウィンドウを取得します。|
-|[ウィンドウ::取得トップレベルウィンドウ](#gettoplevelwindow)|トップレベルの所有者ウィンドウを取得します。|
-|[ウィンドウ::ゲットトップウィンドウ](#gettopwindow)|最上位の子ウィンドウを取得します。|
-|[ウィンドウ::取得更新レクト](#getupdaterect)|更新領域を完全に囲む最小の四角形の座標を取得します。|
-|[ウィンドウ::ゲットアップルグン](#getupdatergn)|更新領域を取得し、指定した領域にコピーします。|
-|[ウィンドウ::ウィンドウを取得します。](#getwindow)|指定したウィンドウを取得します。|
-|[ウィンドウ::ウィンドウコンテキストヘルプId](#getwindowcontexthelpid)|ウィンドウのヘルプ コンテキスト識別子を取得します。|
-|[ウィンドウ::取得ウィンドウDC](#getwindowdc)|ウィンドウ全体のデバイス コンテキストを取得します。|
-|[ウィンドウ::ゲットウィンドウロング](#getwindowlong)|指定したオフセットの 32 ビット値を追加のウィンドウ メモリに取得します。|
-|[ウィンドウ::ゲットウィンドウロングプター](#getwindowlongptr)|指定したウィンドウに関する情報を取得します。|
-|[ウィンドウ::ウィンドウ配置](#getwindowplacement)|表示状態と位置を取得します。|
-|[ウィンドウ::ウィンドウプロセスID](#getwindowprocessid)|ウィンドウを作成したプロセスの識別子を取得します。|
-|[ウィンドウ::ゲットウィンドウレック](#getwindowrect)|ウィンドウの境界寸法を取得します。|
-|[ウィンドウ::ゲットウィンドウルグン](#getwindowrgn)|ウィンドウ領域のコピーを取得します。|
-|[ウィンドウ::テキストを取得します。](#getwindowtext)|ウィンドウのテキストを取得します。|
-|[ウィンドウ::テキストの長さを取得します。](#getwindowtextlength)|ウィンドウのテキストの長さを取得します。|
-|[ウィンドウ::ウィンドウスレッドID](#getwindowthreadid)|指定したウィンドウを作成したスレッドの識別子を取得します。|
-|[ウィンドウ::ウィンドウワードを取得します。](#getwindowword)|指定したオフセットの 16 ビット値を追加のウィンドウ メモリに取得します。|
-|[ウィンドウ::ゴトドルグCtrl](#gotodlgctrl)|キーボード フォーカスをダイアログ ボックスのコントロールに設定します。|
-|[ウィンドウ::ハイドキャレット](#hidecaret)|システム キャレットを非表示にします。|
-|[ウィンドウ::ハイライトメニューアイテム](#hilitemenuitem)|トップ レベルのメニュー項目からハイライトを強調表示または削除します。|
-|[Cウィンドウ::無効化](#invalidate)|クライアント領域全体を無効にします。|
-|[Cウィンドウ::無効にする](#invalidaterect)|指定された四角形内のクライアント領域を無効にします。|
-|[Cウィンドウ::無効化Rgn](#invalidatergn)|指定した領域内のクライアント領域を無効にします。|
-|[ウィンドウ::イズチャイルド](#ischild)|指定したウィンドウが子ウィンドウかどうかを判断します。|
-|[ウィンドウ::メッセージ](#isdialogmessage)|メッセージが指定されたダイアログ ボックスに対するものかどうかを判断します。|
-|[ウィンドウ::IsDlgボタンチェック](#isdlgbuttonchecked)|ボタンのチェック状態を決定します。|
-|[Cウィンドウ::アイシコニック](#isiconic)|ウィンドウを最小化するかどうかを決定します。|
-|[ウィンドウ::イズペアレントダイアログ](#isparentdialog)|コントロールの親ウィンドウがダイアログ ウィンドウかどうかを判断します。|
-|[ウィンドウ::イズウィンドウ](#iswindow)|指定したウィンドウ ハンドルが既存のウィンドウを識別するかどうかを判断します。|
-|[ウィンドウ::IsWindow が有効です。](#iswindowenabled)|ウィンドウが入力に対して有効かどうかを判断します。|
-|[ウィンドウ::イズウィンドウユニコード](#iswindowunicode)|指定したウィンドウがネイティブな Unicode ウィンドウかどうかを判断します。|
-|[ウィンドウ::イズウィンドウ表示](#iswindowvisible)|ウィンドウの可視性の状態を決定します。|
-|[ウィンドウ::ズーム](#iszoomed)|ウィンドウを最大化するかどうかを決定します。|
-|[ウィンドウ::キルタイマー](#killtimer)|タイマー イベントを破棄します。|
-|[ウィンドウ::ロックウィンドウ更新](#lockwindowupdate)|ウィンドウでの描画を無効または有効にします。|
-|[ウィンドウ::マップウィンドウポイント](#mapwindowpoints)|一連の点を、ウィンドウの座標空間から別のウィンドウの座標空間に変換します。|
-|[ウィンドウ::メッセージボックス](#messagebox)|メッセージ ボックスを表示します。|
-|[ウィンドウ::スタイルを変更します。](#modifystyle)|ウィンドウ スタイルを変更します。|
-|[ウィンドウ::スタイルを変更します。](#modifystyleex)|拡張ウィンドウ スタイルを変更します。|
-|[ウィンドウ::ウィンドウの移動](#movewindow)|ウィンドウのサイズと位置を変更します。|
-|[ウィンドウ::次のDlgCtrl](#nextdlgctrl)|キーボード フォーカスをダイアログ ボックスの次のコントロールに設定します。|
-|[Cウィンドウ::クリップボードを開く](#openclipboard)|クリップボードを開きます。|
-|[ウィンドウ::Postメッセージ](#postmessage)|ウィンドウを作成したスレッドに関連付けられたメッセージ キューにメッセージを配置します。 スレッドがメッセージを処理するのを待たずに戻ります。|
-|[ウィンドウ::P](#prevdlgctrl)|キーボード フォーカスをダイアログ ボックスの前のコントロールに設定します。|
-|[Cウィンドウ::Pリント](#print)|指定したデバイス コンテキストでウィンドウを描画することを要求します。|
-|[Cウィンドウ::Pリントクライアント](#printclient)|ウィンドウのクライアント領域を指定されたデバイス コンテキストで描画することを要求します。|
-|[ウィンドウ::ウィンドウの再描画](#redrawwindow)|クライアント領域の指定された四角形または領域を更新します。|
-|[Cウィンドウ::リリースDC](#releasedc)|デバイス コンテキストを解放します。|
-|[Cウィンドウ::リサイズクライアント](#resizeclient)|ウィンドウのサイズを変更します。|
-|[ウィンドウ::スクリーントクライアント](#screentoclient)|画面座標をクライアント座標に変換します。|
-|[ウィンドウ::スクロールウィンドウ](#scrollwindow)|指定したクライアント領域をスクロールします。|
-|[ウィンドウ::スクロールウィンドウEx](#scrollwindowex)|追加機能を使用して、指定したクライアント領域をスクロールします。|
-|[ウィンドウ::メッセージを送信します。](#senddlgitemmessage)|コントロールにメッセージを送信します。|
-|[メッセージの送信](#sendmessage)|ウィンドウにメッセージを送信し、ウィンドウ プロシージャがメッセージを処理するまでは戻りません。|
-|[子孫にメッセージを送る](#sendmessagetodescendants)|指定した子孫ウィンドウにメッセージを送信します。|
-|[ウィンドウ::メッセージを送信します。](#sendnotifymessage)|ウィンドウにメッセージを送信します。 ウィンドウが呼び出し元のスレッドによって`SendNotifyMessage`作成された場合、ウィンドウ プロシージャがメッセージを処理するまでは戻りません。 それ以外の場合は、すぐに戻ります。|
-|[ウィンドウ::セットアクティブウィンドウ](#setactivewindow)|ウィンドウをアクティブにします。|
-|[Cウィンドウ::セットキャプチャ](#setcapture)|それ以降のすべてのマウス入力をウィンドウに送信します。|
-|[Cウィンドウ::クリップボードビューアを設定します。](#setclipboardviewer)|ウィンドウをクリップボード ビューア チェーンに追加します。|
-|[ウィンドウ::セットドルグCtrlID](#setdlgctrlid)|ウィンドウの識別子を変更します。|
-|[ウィンドウ::セットドルグアイテムイント](#setdlgitemint)|コントロールのテキストを整数値の文字列形式に変更します。|
-|[ウィンドウ::テキストを設定します。](#setdlgitemtext)|コントロールのテキストを変更します。|
-|[ウィンドウ::セットフォーカス](#setfocus)|ウィンドウに入力フォーカスを設定します。|
-|[ウィンドウ::フォントを設定します。](#setfont)|ウィンドウの現在のフォントを変更します。|
-|[ウィンドウ::セットホットキー](#sethotkey)|ホット キーをウィンドウに関連付けます。|
-|[ウィンドウ::セットアイコン](#seticon)|ウィンドウの大きいアイコンまたは小さいアイコンを変更します。|
-|[ウィンドウ::セットメニュー](#setmenu)|ウィンドウの現在のメニューを変更します。|
-|[ウィンドウ::セットペアレント](#setparent)|親ウィンドウを変更します。|
-|[ウィンドウ::セットリドロー](#setredraw)|再描画フラグを設定またはクリアします。|
-|[ウィンドウ::セットスクロール情報](#setscrollinfo)|スクロール バーのパラメータを設定します。|
-|[ウィンドウ::セットスクロールポス](#setscrollpos)|スクロール ボックスの位置を変更します。|
-|[ウィンドウ::セットスクロール範囲](#setscrollrange)|スクロール バーの範囲を変更します。|
-|[ウィンドウ::セットタイマー](#settimer)|タイマー イベントを作成します。|
-|[ウィンドウ::ウィンドウコンテキストヘルプId](#setwindowcontexthelpid)|ウィンドウのヘルプ コンテキスト識別子を設定します。|
-|[ウィンドウ::セットウィンドウロング](#setwindowlong)|指定したオフセットの 32 ビット値を追加ウィンドウ メモリに設定します。|
-|[ウィンドウ::セットウィンドウロングプター](#setwindowlongptr)|指定したウィンドウの属性を変更し、追加ウィンドウ メモリ内の指定したオフセットに値を設定します。|
-|[ウィンドウ::セットウィンドウ配置](#setwindowplacement)|表示状態と位置を設定します。|
-|[ウィンドウ::セットウィンドウポス](#setwindowpos)|サイズ、位置、および Z の順序を設定します。|
-|[ウィンドウ::セットウィンドウルグン](#setwindowrgn)|ウィンドウのウィンドウ領域を設定します。|
-|[ウィンドウ::テキストを設定します。](#setwindowtext)|ウィンドウのテキストを変更します。|
-|[ウィンドウ::ウィンドウワードを設定します。](#setwindowword)|指定したオフセットの 16 ビット値を追加ウィンドウ メモリに設定します。|
-|[ウィンドウ::ショーキャレット](#showcaret)|システム キャレットを表示します。|
-|[ウィンドウ::ショー所有ポップアップ](#showownedpopups)|ウィンドウが所有するポップアップ ウィンドウの表示と非表示を切り替えます。|
-|[ウィンドウ::ショースクロールバー](#showscrollbar)|スクロール バーの表示と非表示を切り替えます。|
-|[ウィンドウ::ショーウィンドウ](#showwindow)|ウィンドウの表示状態を設定します。|
-|[ウィンドウ::ショーウィンドウ同期](#showwindowasync)|別のスレッドによって作成されたウィンドウの表示状態を設定します。|
-|[ウィンドウ::更新ウィンドウ](#updatewindow)|クライアント領域を更新します。|
-|[Cウィンドウ::検証レクト](#validaterect)|指定された四角形内のクライアント領域を検証します。|
-|[ウィンドウ::検証Rgn](#validatergn)|指定した領域内のクライアント領域を検証します。|
-|[ウィンドウ::ウィンヘルプ](#winhelp)|Windows ヘルプを起動します。|
+|[CWindow:: Eiconicwindows](#arrangeiconicwindows)|最小化されたすべての子ウィンドウを整列します。|
+|[CWindow:: Attach](#attach)|ウィンドウをオブジェクトにアタッチ `CWindow` します。|
+|[CWindow:: BeginPaint](#beginpaint)|ウィンドウの描画を準備します。|
+|[CWindow:: BringWindowToTop](#bringwindowtotop)|ウィンドウを Z オーダーの最上部に移動します。|
+|[CWindow:: 中央ウィンドウ](#centerwindow)|ウィンドウを指定されたウィンドウに揃えます。|
+|[CWindow:: ChangeClipboardChain](#changeclipboardchain)|クリップボードビューアーのチェインからウィンドウを削除します。|
+|[CWindow:: CheckDlgButton](#checkdlgbutton)|指定したボタンのチェック状態を変更します。|
+|[CWindow:: CheckRadioButton](#checkradiobutton)|指定されたオプションボタンを確認します。|
+|[CWindow:: ChildWindowFromPoint](#childwindowfrompoint)|指定したポイントを含む子ウィンドウを取得します。|
+|[CWindow:: ChildWindowFromPointEx](#childwindowfrompointex)|指定したポイントを含む特定の種類の子ウィンドウを取得します。|
+|[CWindow:: ClientToScreen](#clienttoscreen)|クライアント座標を画面座標に変換します。|
+|[CWindow:: Create](#create)|ウィンドウを作成します。|
+|[CWindow:: CreateCaret](#createcaret)|システムキャレットの新しい図形を作成します。|
+|[CWindow:: Createグレーのキャレット](#creategraycaret)|システムキャレットの灰色の四角形を作成します。|
+|[CWindow:: CreateSolidCaret](#createsolidcaret)|システムキャレットの塗りつぶされた四角形を作成します。|
+|[CWindow::D eferWindowPos](#deferwindowpos)|指定したウィンドウの指定した複数ウィンドウ位置の構造体を更新します。|
+|[CWindow::D estroyWindow](#destroywindow)|オブジェクトに関連付けられているウィンドウを破棄 `CWindow` します。|
+|[CWindow::D etach](#detach)|ウィンドウをオブジェクトからデタッチ `CWindow` します。|
+|[CWindow::D lgDirList](#dlgdirlist)|リストボックスに、指定したパスまたはファイル名に一致するすべてのファイルの名前を入力します。|
+|[CWindow::D lgDirListComboBox](#dlgdirlistcombobox)|コンボボックスに、指定したパスまたはファイル名に一致するすべてのファイルの名前を入力します。|
+|[CWindow::D lgDirSelect](#dlgdirselect)|リスト ボックスから現在の選択を取得します。|
+|[CWindow::D lgDirSelectComboBox](#dlgdirselectcombobox)|コンボボックスから現在の選択範囲を取得します。|
+|[CWindow::D ragAcceptFiles](#dragacceptfiles)|ウィンドウがドラッグされたファイルを受け入れるかどうかを登録します。|
+|[CWindow::D rawMenuBar](#drawmenubar)|ウィンドウのメニューバーを再描画します。|
+|[CWindow:: EnableScrollBar](#enablescrollbar)|スクロールバーの矢印を有効または無効にします。|
+|[CWindow:: EnableWindow](#enablewindow)|入力を有効または無効にします。|
+|[CWindow:: EndPaint](#endpaint)|描画の終了を示します。|
+|[CWindow:: FlashWindow](#flashwindow)|ウィンドウを 1 回フラッシュします。|
+|[CWindow:: GetClientRect](#getclientrect)|クライアント領域の座標を取得します。|
+|[CWindow:: GetDC](#getdc)|クライアント領域のデバイスコンテキストを取得します。|
+|[CWindow:: GetDCEx](#getdcex)|クライアント領域のデバイスコンテキストを取得し、クリッピングオプションを許可します。|
+|[CWindow:: GetDescendantWindow](#getdescendantwindow)|指定した子孫ウィンドウを取得します。|
+|[CWindow:: GetDlgControl](#getdlgcontrol)|指定したコントロールのインターフェイスを取得します。|
+|[CWindow:: GetDlgCtrlID](#getdlgctrlid)|ウィンドウの識別子を取得します (子ウィンドウの場合のみ)。|
+|[CWindow:: GetDlgHost](#getdlghost)|ATL コントロールのホストコンテナーへのインターフェイスへのポインターを取得します。|
+|[CWindow:: GetDlgItem](#getdlgitem)|指定した子ウィンドウを取得します。|
+|[CWindow:: GetDlgItemInt](#getdlgitemint)|コントロールのテキストを整数に変換します。|
+|[CWindow:: GetDlgItemText](#getdlgitemtext)|コントロールのテキストを取得します。|
+|[CWindow:: GetExStyle](#getexstyle)|拡張ウィンドウスタイルを取得します。|
+|[CWindow:: GetFont](#getfont)|ウィンドウの現在のフォントを取得します。|
+|[CWindow:: GetHotKey](#gethotkey)|ウィンドウに関連付けられているホットキーを決定します。|
+|[CWindow:: GetIcon](#geticon)|ウィンドウの大きいアイコンまたは小さいアイコンを取得します。|
+|[CWindow:: GetLastActivePopup](#getlastactivepopup)|直前にアクティブになったポップアップウィンドウを取得します。|
+|[CWindow:: GetMenu](#getmenu)|ウィンドウのメニューを取得します。|
+|[CWindow:: GetNextDlgGroupItem](#getnextdlggroupitem)|コントロールのグループ内の前後のコントロールを取得します。|
+|[CWindow:: GetNextDlgTabItem](#getnextdlgtabitem)|WS_TABSTOP スタイルを持つ直前または次のコントロールを取得します。|
+|[CWindow:: GetParent](#getparent)|直接の親ウィンドウを取得します。|
+|[CWindow:: GetScrollInfo](#getscrollinfo)|スクロールバーのパラメーターを取得します。|
+|[CWindow:: GetScrollPos](#getscrollpos)|スクロールボックスの位置を取得します。|
+|[CWindow:: GetScrollRange](#getscrollrange)|スクロールバーの範囲を取得します。|
+|[CWindow:: GetStyle](#getstyle)|ウィンドウスタイルを取得します。|
+|[CWindow:: GetSystemMenu](#getsystemmenu)|変更のために [システム] メニューのコピーを作成します。|
+|[CWindow:: GetTopLevelParent](#gettoplevelparent)|最上位レベルの親ウィンドウまたはオーナーウィンドウを取得します。|
+|[CWindow:: GetTopLevelWindow](#gettoplevelwindow)|最上位レベルのオーナーウィンドウを取得します。|
+|[CWindow:: GetTopWindow](#gettopwindow)|トップレベルの子ウィンドウを取得します。|
+|[CWindow:: GetUpdateRect](#getupdaterect)|更新領域を完全に囲む最小の四角形の座標を取得します。|
+|[CWindow:: GetUpdateRgn](#getupdatergn)|更新領域を取得し、指定した領域にコピーします。|
+|[CWindow:: GetWindow](#getwindow)|指定されたウィンドウを取得します。|
+|[CWindow:: GetWindowContextHelpId](#getwindowcontexthelpid)|ウィンドウのヘルプコンテキスト識別子を取得します。|
+|[CWindow:: GetWindowDC](#getwindowdc)|ウィンドウ全体のデバイスコンテキストを取得します。|
+|[CWindow:: GetWindowLong](#getwindowlong)|指定したオフセット位置にある32ビット値を追加ウィンドウメモリに取得します。|
+|[CWindow:: GetWindowLongPtr](#getwindowlongptr)|指定されたオフセットの値を追加ウィンドウメモリに含む、指定されたウィンドウに関する情報を取得します。|
+|[CWindow:: GetWindowPlacement](#getwindowplacement)|表示状態と位置を取得します。|
+|[CWindow:: GetWindowProcessID](#getwindowprocessid)|ウィンドウを作成したプロセスの識別子を取得します。|
+|[CWindow:: GetWindowRect](#getwindowrect)|ウィンドウの境界ディメンションを取得します。|
+|[CWindow:: GetWindowRgn](#getwindowrgn)|ウィンドウのウィンドウ領域のコピーを取得します。|
+|[CWindow:: GetWindowText](#getwindowtext)|ウィンドウのテキストを取得します。|
+|[CWindow:: GetWindowTextLength](#getwindowtextlength)|ウィンドウのテキストの長さを取得します。|
+|[CWindow:: GetWindowThreadID](#getwindowthreadid)|指定したウィンドウを作成したスレッドの識別子を取得します。|
+|[CWindow:: GetWindowWord](#getwindowword)|指定したオフセット位置にある16ビット値を追加ウィンドウメモリに取得します。|
+|[CWindow:: GotoDlgCtrl](#gotodlgctrl)|ダイアログボックス内のコントロールにキーボードフォーカスを設定します。|
+|[CWindow:: HideCaret](#hidecaret)|システムキャレットを非表示にします。|
+|[CWindow:: HiliteMenuItem](#hilitemenuitem)|トップレベルのメニュー項目の強調表示を強調表示または解除します。|
+|[CWindow:: 無効化](#invalidate)|クライアント領域全体を無効にします。|
+|[CWindow:: InvalidateRect](#invalidaterect)|指定された四角形内のクライアント領域を無効にします。|
+|[CWindow:: InvalidateRgn](#invalidatergn)|指定された領域内のクライアント領域を無効にします。|
+|[CWindow:: IsChild](#ischild)|指定したウィンドウが子ウィンドウかどうかを判断します。|
+|[CWindow:: IsDialogMessage](#isdialogmessage)|指定されたダイアログボックスに対してメッセージが意図されているかどうかを判断します。|
+|[CWindow:: IsDlgButtonChecked](#isdlgbuttonchecked)|ボタンのチェックの状態を決定します。|
+|[CWindow:: IsIconic](#isiconic)|ウィンドウが最小化されているかどうかを判断します。|
+|[CWindow:: Isparc Entdialog](#isparentdialog)|コントロールの親ウィンドウがダイアログウィンドウかどうかを判断します。|
+|[CWindow:: IsWindow](#iswindow)|指定したウィンドウハンドルが既存のウィンドウを識別するかどうかを判断します。|
+|[CWindow:: IsWindowEnabled](#iswindowenabled)|ウィンドウで入力が有効になっているかどうかを判断します。|
+|[CWindow:: IsWindowUnicode](#iswindowunicode)|指定されたウィンドウがネイティブ Unicode ウィンドウかどうかを判断します。|
+|[CWindow:: IsWindowVisible](#iswindowvisible)|ウィンドウの表示状態を決定します。|
+|[CWindow:: IsZoomed](#iszoomed)|ウィンドウが最大化されているかどうかを判断します。|
+|[CWindow:: の実行タイマー](#killtimer)|タイマーイベントを破棄します。|
+|[CWindow:: LockWindowUpdate](#lockwindowupdate)|ウィンドウで描画を無効または有効にします。|
+|[CWindow:: MapWindowPoints](#mapwindowpoints)|ウィンドウの座標空間の点のセットを別のウィンドウの座標空間に変換します。|
+|[CWindow:: MessageBox](#messagebox)|メッセージ ボックスを表示します。|
+|[CWindow:: ModifyStyle](#modifystyle)|ウィンドウスタイルを変更します。|
+|[CWindow:: Modifyスタイル Ex](#modifystyleex)|拡張ウィンドウスタイルを変更します。|
+|[CWindow:: MoveWindow](#movewindow)|ウィンドウのサイズと位置を変更します。|
+|[CWindow:: NextDlgCtrl](#nextdlgctrl)|ダイアログボックスの次のコントロールにキーボードフォーカスを設定します。|
+|[CWindow:: OpenClipboard](#openclipboard)|クリップボードを開きます。|
+|[CWindow::P ostMessage](#postmessage)|ウィンドウを作成したスレッドに関連付けられているメッセージキューにメッセージを配置します。 スレッドがメッセージを処理するのを待たずにを返します。|
+|[CWindow::P revDlgCtrl](#prevdlgctrl)|ダイアログボックスの前のコントロールにキーボードフォーカスを設定します。|
+|[CWindow::P rint](#print)|指定されたデバイスコンテキストでウィンドウを描画するように要求します。|
+|[CWindow::P rintClient](#printclient)|指定されたデバイスコンテキストでウィンドウのクライアント領域を描画するように要求します。|
+|[CWindow:: RedrawWindow](#redrawwindow)|クライアント領域の指定した四角形または領域を更新します。|
+|[CWindow:: ReleaseDC](#releasedc)|デバイスコンテキストを解放します。|
+|[CWindow:: ResizeClient](#resizeclient)|ウィンドウのサイズを変更します。|
+|[CWindow:: ScreenToClient](#screentoclient)|画面座標をクライアント座標に変換します。|
+|[CWindow:: ScrollWindow](#scrollwindow)|指定したクライアント領域をスクロールします。|
+|[CWindow:: ScrollWindowEx](#scrollwindowex)|追加機能を使用して、指定したクライアント領域をスクロールします。|
+|[CWindow:: SendDlgItemMessage](#senddlgitemmessage)|コントロールにメッセージを送信します。|
+|[CWindow:: SendMessage](#sendmessage)|ウィンドウにメッセージを送信し、ウィンドウプロシージャがメッセージを処理するまでは戻りません。|
+|[CWindow:: SendMessageToDescendants](#sendmessagetodescendants)|指定した子孫ウィンドウにメッセージを送信します。|
+|[CWindow:: SendNotifyMessage](#sendnotifymessage)|ウィンドウにメッセージを送信します。 ウィンドウが呼び出し元のスレッドによって作成された場合、 `SendNotifyMessage` はウィンドウプロシージャがメッセージを処理するまでを返しません。 それ以外の場合は、直ちに戻ります。|
+|[CWindow:: SetActiveWindow](#setactivewindow)|ウィンドウをアクティブにします。|
+|[CWindow:: SetCapture](#setcapture)|後続のすべてのマウス入力をウィンドウに送信します。|
+|[CWindow:: Setクリップボードビューアー](#setclipboardviewer)|ウィンドウをクリップボードビューアーチェーンに追加します。|
+|[CWindow:: SetDlgCtrlID](#setdlgctrlid)|ウィンドウの識別子を変更します。|
+|[CWindow:: SetDlgItemInt](#setdlgitemint)|コントロールのテキストを整数値の文字列形式に変更します。|
+|[CWindow:: SetDlgItemText](#setdlgitemtext)|コントロールのテキストを変更します。|
+|[CWindow:: SetFocus](#setfocus)|ウィンドウに入力フォーカスを設定します。|
+|[CWindow:: SetFont](#setfont)|ウィンドウの現在のフォントを変更します。|
+|[CWindow:: SetHotKey](#sethotkey)|ホットキーをウィンドウに関連付けます。|
+|[CWindow:: SetIcon](#seticon)|ウィンドウの大きいアイコンまたは小さいアイコンを変更します。|
+|[CWindow:: SetMenu](#setmenu)|ウィンドウの現在のメニューを変更します。|
+|[CWindow:: SetParent](#setparent)|親ウィンドウを変更します。|
+|[CWindow:: SetRedraw](#setredraw)|再描画フラグを設定またはクリアします。|
+|[CWindow:: SetScrollInfo](#setscrollinfo)|スクロールバーのパラメーターを設定します。|
+|[CWindow:: SetScrollPos](#setscrollpos)|スクロールボックスの位置を変更します。|
+|[CWindow:: SetScrollRange](#setscrollrange)|スクロールバーの範囲を変更します。|
+|[CWindow:: SetTimer](#settimer)|タイマーイベントを作成します。|
+|[CWindow:: SetWindowContextHelpId](#setwindowcontexthelpid)|ウィンドウのヘルプコンテキスト識別子を設定します。|
+|[CWindow:: SetWindowLong](#setwindowlong)|指定したオフセットで32ビット値を追加ウィンドウメモリに設定します。|
+|[CWindow:: SetWindowLongPtr](#setwindowlongptr)|指定されたウィンドウの属性を変更します。また、余分なウィンドウメモリ内の指定したオフセットに値を設定します。|
+|[CWindow:: SetWindowPlacement](#setwindowplacement)|状態と位置の表示を設定します。|
+|[CWindow:: SetWindowPos](#setwindowpos)|サイズ、位置、および Z の順序を設定します。|
+|[CWindow:: SetWindowRgn](#setwindowrgn)|ウィンドウのウィンドウ領域を設定します。|
+|[CWindow:: SetWindowText](#setwindowtext)|ウィンドウのテキストを変更します。|
+|[CWindow:: SetWindowWord](#setwindowword)|指定したオフセットで、追加のウィンドウメモリに16ビットの値を設定します。|
+|[CWindow:: ShowCaret](#showcaret)|システムキャレットを表示します。|
+|[CWindow:: ShowOwnedPopups](#showownedpopups)|ウィンドウによって所有されているポップアップウィンドウの表示と非表示を切り替えます。|
+|[CWindow:: ShowScrollBar](#showscrollbar)|スクロールバーの表示と非表示を切り替えます。|
+|[CWindow:: ShowWindow](#showwindow)|ウィンドウの表示状態を設定します。|
+|[CWindow:: ShowWindowAsync](#showwindowasync)|別のスレッドによって作成されたウィンドウの表示状態を設定します。|
+|[CWindow:: UpdateWindow](#updatewindow)|クライアント領域を更新します。|
+|[CWindow:: ValidateRect](#validaterect)|指定された四角形内のクライアント領域を検証します。|
+|[CWindow:: ValidateRgn](#validatergn)|指定された領域内のクライアント領域を検証します。|
+|[CWindow:: WinHelp](#winhelp)|Windows ヘルプを起動します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[Cウィンドウ::オペレーターHWND](#operator_hwnd)|オブジェクトを`CWindow`HWND に変換します。|
-|[Cウィンドウ::演算子 =](#operator_eq)|HWND をオブジェクトに`CWindow`割り当てます。|
+|[CWindow:: operator HWND](#operator_hwnd)|オブジェクトを `CWindow` HWND に変換します。|
+|[CWindow:: operator =](#operator_eq)|オブジェクトに HWND を割り当て `CWindow` ます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウ::m_hWnd](#m_hwnd)|オブジェクトに関連付けられたウィンドウへの`CWindow`ハンドル。|
-|[ウィンドウ::rc デフォルト](#rcdefault)|既定のウィンドウサイズを含みます。|
+|[CWindow:: m_hWnd](#m_hwnd)|オブジェクトに関連付けられているウィンドウへのハンドル `CWindow` 。|
+|[CWindow:: rcDefault](#rcdefault)|既定のウィンドウのサイズが含まれます。|
 
 ## <a name="remarks"></a>解説
 
-`CWindow`には、ATL でウィンドウを操作するための基本機能が用意されています。 多くのメソッド`CWindow`は、単に Win32 API 関数の 1 つをラップします。 たとえば、プロトタイプと を比較`CWindow::ShowWindow`します。 `ShowWindow`
+`CWindow`ATL でウィンドウを操作するための基本機能を提供します。 メソッドの多くは、 `CWindow` 単に Win32 API 関数の1つをラップしています。 たとえば、とのプロトタイプを比較 `CWindow::ShowWindow` し `ShowWindow` ます。
 
-|Cウィンドウメソッド|Win32 関数|
+|CWindow メソッド|Win32 関数|
 |--------------------|--------------------|
-|**ブールショーウィンドウ(int);** `nCmdShow` **);**|**ブールショーウィンドウ(HWND、int);** `hWnd` **, int** `nCmdShow` **);**|
+|**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|
 
-`CWindow::ShowWindow`最初のパラメーターとして渡`ShowWindow``CWindow::m_hWnd`すことによって Win32 関数を呼び出します。 Win32 関数を直接ラップするメソッドはすべて`CWindow`メンバーを`m_hWnd`渡します。そのため、ドキュメントの`CWindow`多くは、Windows SDK を参照します。
+`CWindow::ShowWindow``ShowWindow`最初のパラメーターとしてを渡すことによって、Win32 関数を呼び出し `CWindow::m_hWnd` ます。 `CWindow`Win32 関数を直接ラップするすべてのメソッドは、メンバーを渡します。 `m_hWnd` そのため、ドキュメントの多く `CWindow` は、Windows SDK を参照します。
 
 > [!NOTE]
-> ウィンドウ関連の Win32 関数のすべてが`CWindow`でラップされるわけではありません`CWindow`。
+> すべてのウィンドウ関連の Win32 関数はによってラップされるわけではなく `CWindow` 、すべての `CWindow` メソッドが win32 関数をラップするわけではありません。
 
-`CWindow::m_hWnd`は、ウィンドウを識別する HWND を格納します。 HWND は、次の場合にオブジェクトにアタッチされます。
+`CWindow::m_hWnd`ウィンドウを識別する HWND を格納します。 次の場合に HWND がオブジェクトにアタッチされます。
 
-- のコンストラクタで`CWindow`HWND を指定します。
+- のコンストラクターで HWND を指定し `CWindow` ます。
 
 - `CWindow::Attach` を呼び出します。
 
-- 演算子`CWindow` **=** を使用します。
+- `CWindow`の**演算子 =** を使用します。
 
-- から派生した次のクラスのいずれかを使用して、ウィンドウを作成または`CWindow`サブクラスします。
+- から派生した次のいずれかのクラスを使用して、ウィンドウを作成またはサブクラス化し `CWindow` ます。
 
-[ウィンドウインプル](../../atl/reference/cwindowimpl-class.md)新しいウィンドウを作成したり、既存のウィンドウをサブクラス化したりできます。
+[CWindowImpl](../../atl/reference/cwindowimpl-class.md)新しいウィンドウを作成したり、既存のウィンドウをサブクラス化したりできます。
 
-[ウィンドウ](../../atl/reference/ccontainedwindowt-class.md)別のオブジェクトに含まれるウィンドウを実装します。 新しいウィンドウを作成したり、既存のウィンドウをサブクラス化することができます。
+[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)別のオブジェクト内に含まれるウィンドウを実装します。 新しいウィンドウを作成したり、既存のウィンドウをサブクラス化したりすることができます。
 
-[ダイアログプル](../../atl/reference/cdialogimpl-class.md)モーダルまたはモードレスダイアログ ボックスを作成できます。
+[CDialogImpl](../../atl/reference/cdialogimpl-class.md)モーダルまたはモードレスのダイアログボックスを作成できます。
 
-ウィンドウの詳細については[、Windows](/windows/win32/winmsg/windows) SDK の Windows とその後のトピックを参照してください。 ATL でのウィンドウの使用の詳細については[、「ATL ウィンドウ クラス](../../atl/atl-window-classes.md)」を参照してください。
+Windows の詳細については、「Windows SDK」の「 [windows](/windows/win32/winmsg/windows)とそれ以降のトピック」を参照してください。 ATL で windows を使用する方法の詳細については、「 [Atl ウィンドウクラス](../../atl/atl-window-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="cwindowarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>ウィンドウ::アレンジアイコニックウィンドウ
+## <a name="cwindowarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWindow:: Eiconicwindows
 
 最小化されたすべての子ウィンドウを整列します。
 
@@ -388,11 +388,11 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のアレンジアイコニックウィンドウ](/windows/win32/api/winuser/nf-winuser-arrangeiconicwindows)を参照してください。
+Windows SDK の「並べ替え[Eiconicwindows](/windows/win32/api/winuser/nf-winuser-arrangeiconicwindows) 」を参照してください。
 
-## <a name="cwindowattach"></a><a name="attach"></a>Cウィンドウ::添付
+## <a name="cwindowattach"></a><a name="attach"></a>CWindow:: Attach
 
-*hWndNew*で識別されるウィンドウをオブジェクトに`CWindow`アタッチします。
+*HWndNew*で識別されるウィンドウをオブジェクトにアタッチし `CWindow` ます。
 
 ```cpp
 void Attach(HWND hWndNew) throw();
@@ -400,16 +400,16 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*新しい*<br/>
-[in]ウィンドウへのハンドル。
+*hWndNew*<br/>
+からウィンドウを処理するハンドル。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#1](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]
 
-## <a name="cwindowbeginpaint"></a><a name="beginpaint"></a>ウィンドウ::ペイントを開始
+## <a name="cwindowbeginpaint"></a><a name="beginpaint"></a>CWindow:: BeginPaint
 
-ウィンドウを描画する準備をします。
+ウィンドウの描画を準備します。
 
 ```
 HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
@@ -417,15 +417,15 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の開始ペイント](/windows/win32/api/winuser/nf-winuser-beginpaint)を参照してください。
+Windows SDK の「 [Beginpaint](/windows/win32/api/winuser/nf-winuser-beginpaint) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-## <a name="cwindowbringwindowtotop"></a><a name="bringwindowtotop"></a>ウィンドウ::ブリングウィンドウトップ
+## <a name="cwindowbringwindowtotop"></a><a name="bringwindowtotop"></a>CWindow:: BringWindowToTop
 
-ウィンドウを Z オーダーの先頭に移動します。
+ウィンドウを Z オーダーの最上部に移動します。
 
 ```
 BOOL BringWindowToTop() throw();
@@ -433,15 +433,15 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウのトップを表示](/windows/win32/api/winuser/nf-winuser-bringwindowtotop)する」を参照してください。
+Windows SDK の「 [Bringwindowtotop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#3](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]
 
-## <a name="cwindowcenterwindow"></a><a name="centerwindow"></a>ウィンドウ::センターウィンドウ
+## <a name="cwindowcenterwindow"></a><a name="centerwindow"></a>CWindow:: 中央ウィンドウ
 
-ウィンドウを指定したウィンドウの中央に移動します。
+ウィンドウを指定されたウィンドウに揃えます。
 
 ```
 BOOL CenterWindow(HWND hWndCenter = NULL) throw();
@@ -449,20 +449,20 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*フーンドセンター*<br/>
-[in]中央に配置するウィンドウのハンドル。 このパラメーターが NULL (既定値) の場合、メソッドは、ウィンドウが子ウィンドウの場合は *、hWndCenter*をウィンドウの親ウィンドウに設定します。 それ以外の場合は *、hWndCenter*がウィンドウのオーナーウィンドウに設定されます。
+*hWndCenter*<br/>
+から中央に配置するウィンドウへのハンドル。 このパラメーターが NULL (既定値) の場合、メソッドは*hWndCenter*をウィンドウの親ウィンドウに設定します (子ウィンドウの場合)。 それ以外の場合は、 *hWndCenter*をウィンドウのオーナーウィンドウに設定します。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウの中央揃えが成功した場合は TRUE。それ以外の場合は FALSE。
+ウィンドウが正常に中央に配置されている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#4](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]
 
-## <a name="cwindowchangeclipboardchain"></a><a name="changeclipboardchain"></a>Cウィンドウ::クリップボードチェーンの変更
+## <a name="cwindowchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWindow:: ChangeClipboardChain
 
-クリップボード ビューアのチェーンからウィンドウを削除します。
+クリップボードビューアーのチェインからウィンドウを削除します。
 
 ```
 BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
@@ -470,9 +470,9 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「クリップボードチェーンの変更](/windows/win32/api/winuser/nf-winuser-changeclipboardchain)」を参照してください。
+Windows SDK の「 [ChangeClipboardChain](/windows/win32/api/winuser/nf-winuser-changeclipboardchain) 」を参照してください。
 
-## <a name="cwindowcheckdlgbutton"></a><a name="checkdlgbutton"></a>ウィンドウ::チェックドルグボタン
+## <a name="cwindowcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWindow:: CheckDlgButton
 
 指定したボタンのチェック状態を変更します。
 
@@ -482,11 +482,11 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「チェックドルグボタン](/windows/win32/api/winuser/nf-winuser-checkdlgbutton)」を参照してください。
+Windows SDK の[Checkdlgbutton](/windows/win32/api/winuser/nf-winuser-checkdlgbutton)を参照してください。
 
-## <a name="cwindowcheckradiobutton"></a><a name="checkradiobutton"></a>ウィンドウ::チェックラジオボタン
+## <a name="cwindowcheckradiobutton"></a><a name="checkradiobutton"></a>CWindow:: CheckRadioButton
 
-指定されたラジオ ボタンをチェックします。
+指定されたオプションボタンを確認します。
 
 ```
 BOOL CheckRadioButton(
@@ -497,9 +497,9 @@ BOOL CheckRadioButton(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ラジオ ボタンの確認](/windows/win32/api/winuser/nf-winuser-checkradiobutton)」を参照してください。
+Windows SDK の[Checkradiobutton](/windows/win32/api/winuser/nf-winuser-checkradiobutton)を参照してください。
 
-## <a name="cwindowchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>ウィンドウ::子ウィンドウのソースポイント
+## <a name="cwindowchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWindow:: ChildWindowFromPoint
 
 指定したポイントを含む子ウィンドウを取得します。
 
@@ -509,9 +509,9 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「子ウィンドウの一覧](/windows/win32/api/winuser/nf-winuser-childwindowfrompoint)」を参照してください。
+Windows SDK の「 [ChildWindowFromPoint](/windows/win32/api/winuser/nf-winuser-childwindowfrompoint) 」を参照してください。
 
-## <a name="cwindowchildwindowfrompointex"></a><a name="childwindowfrompointex"></a>ウィンドウ::子供ウィンドウからポイント
+## <a name="cwindowchildwindowfrompointex"></a><a name="childwindowfrompointex"></a>CWindow:: ChildWindowFromPointEx
 
 指定したポイントを含む特定の種類の子ウィンドウを取得します。
 
@@ -521,9 +521,9 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウから見るポイント」](/windows/win32/api/winuser/nf-winuser-childwindowfrompointex)を参照してください。
+Windows SDK の「 [Childwindowfrompointex](/windows/win32/api/winuser/nf-winuser-childwindowfrompointex) 」を参照してください。
 
-## <a name="cwindowclienttoscreen"></a><a name="clienttoscreen"></a>ウィンドウ::クライアントの画面
+## <a name="cwindowclienttoscreen"></a><a name="clienttoscreen"></a>CWindow:: ClientToScreen
 
 クライアント座標を画面座標に変換します。
 
@@ -534,11 +534,11 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のクライアントを](/windows/win32/api/winuser/nf-winuser-clienttoscreen)参照してください。
+Windows SDK の「 [Clienttoscreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) 」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
+このメソッドの2番目のバージョンでは、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
-## <a name="cwindowcreate"></a><a name="create"></a>ウィンドウ::作成
+## <a name="cwindowcreate"></a><a name="create"></a>CWindow:: Create
 
 ウィンドウを作成します。
 
@@ -556,45 +556,45 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*<br/>
-[in]ウィンドウのクラスへのポインター。
+*lpstrWndClass*<br/>
+からウィンドウのクラスへのポインター。
 
-*スーンドペアレント*<br/>
-[in]親ウィンドウまたはオーナー ウィンドウへのハンドル。
+*hWndParent*<br/>
+から親ウィンドウまたはオーナーウィンドウへのハンドル。
 
-*Rect*<br/>
-[in]ウィンドウの位置を指定[する型](../../atl/reference/u-rect-class.md)_U_RECT変数。 既定値は NULL です。 このパラメーターが NULL の場合、`CWindow::rcDefault`の値が使用されます。
+*rect*<br/>
+からウィンドウの位置を指定[_U_RECT](../../atl/reference/u-rect-class.md)型の変数。 既定値は NULL です。 このパラメーターが NULL の場合、の値 `CWindow::rcDefault` が使用されます。
 
-*ウィンドウ名*<br/>
-[in]ウィンドウの名前を指定します。 既定値は NULL です。
+*szWindowName*<br/>
+からウィンドウの名前を指定します。 既定値は NULL です。
 
-*Dwstyle*<br/>
-[in]ウィンドウのスタイル。 既定値は 0 で、スタイルが指定されていません。 使用可能な値の一覧については、Windows SDK[の「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
+*dwStyle*<br/>
+からウィンドウのスタイル。 既定値は0で、スタイルが指定されていないことを意味します。 使用可能な値の一覧については、Windows SDK の「 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 」を参照してください。
 
-*ドウェエクススタイル*<br/>
-[in]拡張ウィンドウ スタイル。 既定値は 0 で、拡張スタイルが指定されていません。 使用可能な値の一覧については、Windows SDK[の「ウィンドウエクスックスの作成](/windows/win32/api/winuser/nf-winuser-createwindowexw)」を参照してください。
+*dwExStyle*<br/>
+から拡張ウィンドウスタイル。 既定値は0です。これは、拡張スタイルが指定されていないことを意味します。 使用可能な値の一覧については、Windows SDK の「 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 」を参照してください。
 
-*メニューオイド*<br/>
-[in]メニューまたはウィンドウ識別子へのハンドル[を指定する](../../atl/reference/u-menuorid-class.md)型_U_MENUorID変数。 デフォルト値は 0U です。
+*MenuOrID*<br/>
+からメニューまたはウィンドウ識別子を識別するハンドルを指定[_U_MENUorID](../../atl/reference/u-menuorid-class.md)型の変数。 既定値は0U です。
 
-*を作成します。*<br/>
-[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)構造体に含まれるウィンドウ作成データへのポインター。
+*lpCreateParam*<br/>
+[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)構造体に格納されているウィンドウ作成データへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は、m_hWnd で指定された、新しく作成されたウィンドウへのハンドル[。](#m_hwnd) それ以外の場合は NULL。
+成功した場合は、 [m_hWnd](#m_hwnd)によって指定された、新しく作成されたウィンドウへのハンドル。 それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
 `CWindow::rcDefault` は `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};` と定義されます。
 
-詳細については、Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
+詳細については、Windows SDK の「 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 」を参照してください。
 
-**注***MenuOrID*パラメーターの値として 0 を使用する場合は、コンパイラ エラーを回避するために 0U (既定値) を指定する必要があります。
+**メモ**0を*Menuorid*パラメーターの値として使用する場合は、コンパイラエラーを回避するために、0u (既定値) として指定する必要があります。
 
-## <a name="cwindowcreatecaret"></a><a name="createcaret"></a>Cウィンドウ::作成キャレット
+## <a name="cwindowcreatecaret"></a><a name="createcaret"></a>CWindow:: CreateCaret
 
-システム キャレットの新しい図形を作成します。
+システムキャレットの新しい図形を作成します。
 
 ```
 BOOL CreateCaret(HBITMAP pBitmap) throw();
@@ -602,11 +602,11 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「作成」](/windows/win32/api/winuser/nf-winuser-createcaret)を参照してください。
+Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
-## <a name="cwindowcreategraycaret"></a><a name="creategraycaret"></a>Cウィンドウ::グレーキャレットを作成します。
+## <a name="cwindowcreategraycaret"></a><a name="creategraycaret"></a>CWindow:: Createグレーのキャレット
 
-システム キャレットの灰色の四角形を作成します。
+システムキャレットの灰色の四角形を作成します。
 
 ```
 BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
@@ -614,13 +614,13 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「作成」](/windows/win32/api/winuser/nf-winuser-createcaret)を参照してください。
+Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
-ビットマップ ハンドル パラメーターの HBITMAP 1 を Win32 関数に渡します。
+Win32 関数のビットマップハンドルパラメーターに (HBITMAP) 1 を渡します。
 
-## <a name="cwindowcreatesolidcaret"></a><a name="createsolidcaret"></a>Cウィンドウ::ソリッドキャレットを作成します。
+## <a name="cwindowcreatesolidcaret"></a><a name="createsolidcaret"></a>CWindow:: CreateSolidCaret
 
-システム キャレットの四角形を作成します。
+システムキャレットの塗りつぶされた四角形を作成します。
 
 ```
 BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
@@ -628,11 +628,11 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「作成」](/windows/win32/api/winuser/nf-winuser-createcaret)を参照してください。
+Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
-ビットマップ ハンドル パラメーターの HBITMAP 0 を Win32 関数に渡します。
+Win32 関数のビットマップハンドルパラメーターに (HBITMAP) 0 を渡します。
 
-## <a name="cwindowcwindow"></a><a name="cwindow"></a>ウィンドウ::Cウィンドウ
+## <a name="cwindowcwindow"></a><a name="cwindow"></a>CWindow:: CWindow
 
 コンストラクターです。
 
@@ -643,18 +643,18 @@ CWindow(HWND hWnd = NULL) throw();
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]ウィンドウへのハンドル。
+からウィンドウを処理するハンドル。
 
 ### <a name="remarks"></a>解説
 
-m_hWnd[メンバーを](#m_hwnd) *hWnd*に初期化します。
+[M_hWnd](#m_hwnd)メンバーを*hWnd*に初期化します。既定では NULL です。
 
 > [!NOTE]
-> `CWindow::CWindow`ウィンドウは作成されません。 クラス[CWindowImpl](../../atl/reference/cwindowimpl-class.md) [、CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)、および[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (`CWindow`その派生元) には、ウィンドウまたはダイアログ ボックスを作成するメソッドが`CWindow::m_hWnd`用意され、その後にに割り当てられます。 また、ウィンドウの Win32[関数](/windows/win32/api/winuser/nf-winuser-createwindoww)を使用することもできます。
+> `CWindow::CWindow`ウィンドウを作成しません。 クラス[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)、および[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (すべてがから派生) は、 `CWindow` ウィンドウまたはダイアログボックスを作成するメソッドを提供し、その後に割り当てられ `CWindow::m_hWnd` ます。 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32 関数を使用することもできます。
 
-## <a name="cwindowdeferwindowpos"></a><a name="deferwindowpos"></a>ウィンドウ::Dフェファーウィンドウポス
+## <a name="cwindowdeferwindowpos"></a><a name="deferwindowpos"></a>CWindow::D eferWindowPos
 
-指定したウィンドウの指定された複数ウィンドウ位置の構造体を更新します。
+指定したウィンドウの指定した複数ウィンドウ位置の構造体を更新します。
 
 ```
 HDWP DeferWindowPos(
@@ -669,11 +669,11 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウポスを延期](/windows/win32/api/winuser/nf-winuser-deferwindowpos)する」を参照してください。
+Windows SDK の「 [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) 」を参照してください。
 
-## <a name="cwindowdestroywindow"></a><a name="destroywindow"></a>ウィンドウ::Dエストロイウィンドウ
+## <a name="cwindowdestroywindow"></a><a name="destroywindow"></a>CWindow::D estroyWindow
 
-オブジェクトに関連付けられたウィンドウを`CWindow`破棄し[、m_hWnd](#m_hwnd)を NULL に設定します。
+オブジェクトに関連付けられているウィンドウを破棄 `CWindow` し、 [M_HWND](#m_hwnd)を NULL に設定します。
 
 ```
 BOOL DestroyWindow() throw();
@@ -681,17 +681,17 @@ BOOL DestroyWindow() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウの破棄](/windows/win32/api/winuser/nf-winuser-destroywindow)」を参照してください。
+Windows SDK の「 [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) 」を参照してください。
 
-オブジェクト自体を`CWindow`破壊しません。
+オブジェクト自体は破棄されません `CWindow` 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#5](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]
 
-## <a name="cwindowdetach"></a><a name="detach"></a>Cウィンドウ::Dエタッハ
+## <a name="cwindowdetach"></a><a name="detach"></a>CWindow::D etach
 
-オブジェクトから[m_hWnd](#m_hwnd)を`CWindow`デタッチし、NULL に設定`m_hWnd`します。
+オブジェクトから[m_hWnd](#m_hwnd)をデタッチ `CWindow` し、 `m_hWnd` を NULL に設定します。
 
 ```
 HWND Detach() throw();
@@ -699,15 +699,15 @@ HWND Detach() throw();
 
 ### <a name="return-value"></a>戻り値
 
-`CWindow`オブジェクトに関連付けられている HWND。
+オブジェクトに関連付けられている HWND `CWindow` 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#6](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]
 
-## <a name="cwindowdlgdirlist"></a><a name="dlgdirlist"></a>ウィンドウ::Dルグディリスト
+## <a name="cwindowdlgdirlist"></a><a name="dlgdirlist"></a>CWindow::D lgDirList
 
-指定したパスまたはファイル名に一致するすべてのファイルの名前をリスト ボックスに入力します。
+リストボックスに、指定したパスまたはファイル名に一致するすべてのファイルの名前を入力します。
 
 ```
 int DlgDirList(
@@ -719,11 +719,11 @@ int DlgDirList(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の DlgDir リスト](/windows/win32/api/winuser/nf-winuser-dlgdirlistw)を参照してください。
+Windows SDK の「 [DlgDirList](/windows/win32/api/winuser/nf-winuser-dlgdirlistw) 」を参照してください。
 
-## <a name="cwindowdlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>ウィンドウ::Dルグディリストコンボボックス
+## <a name="cwindowdlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWindow::D lgDirListComboBox
 
-指定したパスまたはファイル名に一致するすべてのファイルの名前をコンボ ボックスに入力します。
+コンボボックスに、指定したパスまたはファイル名に一致するすべてのファイルの名前を入力します。
 
 ```
 int DlgDirListComboBox(
@@ -735,9 +735,9 @@ int DlgDirListComboBox(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の DlgDir リストコンボ ボックス](/windows/win32/api/winuser/nf-winuser-dlgdirlistcomboboxw)を参照してください。
+Windows SDK の「 [DlgDirListComboBox](/windows/win32/api/winuser/nf-winuser-dlgdirlistcomboboxw) 」を参照してください。
 
-## <a name="cwindowdlgdirselect"></a><a name="dlgdirselect"></a>Cウィンドウ::Dルグディを選択
+## <a name="cwindowdlgdirselect"></a><a name="dlgdirselect"></a>CWindow::D lgDirSelect
 
 リスト ボックスから現在の選択を取得します。
 
@@ -750,11 +750,11 @@ BOOL DlgDirSelect(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の DlgDirSelectEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectexw)を参照してください。
+Windows SDK の「 [DlgDirSelectEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectexw) 」を参照してください。
 
-## <a name="cwindowdlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>コンボボックス:D
+## <a name="cwindowdlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWindow::D lgDirSelectComboBox
 
-コンボ ボックスから現在の選択範囲を取得します。
+コンボボックスから現在の選択範囲を取得します。
 
 ```
 BOOL DlgDirSelectComboBox(
@@ -765,9 +765,9 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の DlgDir 選択コンボボックスを](/windows/win32/api/winuser/nf-winuser-dlgdirselectcomboboxexw)参照してください。
+Windows SDK の「 [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectcomboboxexw) 」を参照してください。
 
-## <a name="cwindowdragacceptfiles"></a><a name="dragacceptfiles"></a>ウィンドウ::Dラゴラアクセプ
+## <a name="cwindowdragacceptfiles"></a><a name="dragacceptfiles"></a>CWindow::D ragAcceptFiles
 
 ウィンドウがドラッグされたファイルを受け入れるかどうかを登録します。
 
@@ -777,11 +777,11 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="remarks"></a>解説
 
-「Windows SDK[のドラッグアクシードファイル](/windows/win32/api/shellapi/nf-shellapi-dragacceptfiles)」を参照してください。
+Windows SDK の「 [Dragacceptfiles](/windows/win32/api/shellapi/nf-shellapi-dragacceptfiles) 」を参照してください。
 
-## <a name="cwindowdrawmenubar"></a><a name="drawmenubar"></a>ウィンドウ::Dローメニューバー
+## <a name="cwindowdrawmenubar"></a><a name="drawmenubar"></a>CWindow::D rawMenuBar
 
-ウィンドウのメニュー バーを再描画します。
+ウィンドウのメニューバーを再描画します。
 
 ```
 BOOL DrawMenuBar() throw();
@@ -789,11 +789,11 @@ BOOL DrawMenuBar() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「メニューバーの描画](/windows/win32/api/winuser/nf-winuser-drawmenubar)」を参照してください。
+Windows SDK の「 [DrawMenuBar](/windows/win32/api/winuser/nf-winuser-drawmenubar) 」を参照してください。
 
-## <a name="cwindowenablescrollbar"></a><a name="enablescrollbar"></a>ウィンドウ::有効スクロールバー
+## <a name="cwindowenablescrollbar"></a><a name="enablescrollbar"></a>CWindow:: EnableScrollBar
 
-スクロール バーの矢印を有効または無効にします。
+スクロールバーの矢印を有効または無効にします。
 
 ```
 BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
@@ -801,9 +801,9 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「スクロール バーを有効](/windows/win32/api/winuser/nf-winuser-enablescrollbar)にする」を参照してください。
+Windows SDK の「 [EnableScrollBar](/windows/win32/api/winuser/nf-winuser-enablescrollbar) 」を参照してください。
 
-## <a name="cwindowenablewindow"></a><a name="enablewindow"></a>ウィンドウ::ウィンドウを有効にします。
+## <a name="cwindowenablewindow"></a><a name="enablewindow"></a>CWindow:: EnableWindow
 
 入力を有効または無効にします。
 
@@ -813,13 +813,13 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウの有効化](/windows/win32/api/winuser/nf-winuser-enablewindow)」を参照してください。
+Windows SDK の「 [Enablewindow](/windows/win32/api/winuser/nf-winuser-enablewindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#7](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]
 
-## <a name="cwindowendpaint"></a><a name="endpaint"></a>ウィンドウ::エンドペイント
+## <a name="cwindowendpaint"></a><a name="endpaint"></a>CWindow:: EndPaint
 
 描画の終了を示します。
 
@@ -829,13 +829,13 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「エンドペイント](/windows/win32/api/winuser/nf-winuser-endpaint)」を参照してください。
+Windows SDK の「 [Endpaint](/windows/win32/api/winuser/nf-winuser-endpaint) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-## <a name="cwindowflashwindow"></a><a name="flashwindow"></a>ウィンドウ::フラッシュウィンドウ
+## <a name="cwindowflashwindow"></a><a name="flashwindow"></a>CWindow:: FlashWindow
 
 ウィンドウを 1 回フラッシュします。
 
@@ -845,9 +845,9 @@ BOOL FlashWindow(BOOL bInvert) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「フラッシュ ウィンドウ](/windows/win32/api/winuser/nf-winuser-flashwindow)」を参照してください。
+Windows SDK の「 [FlashWindow](/windows/win32/api/winuser/nf-winuser-flashwindow) 」を参照してください。
 
-## <a name="cwindowgetclientrect"></a><a name="getclientrect"></a>ウィンドウ::ゲットクライアントレクト
+## <a name="cwindowgetclientrect"></a><a name="getclientrect"></a>CWindow:: GetClientRect
 
 クライアント領域の座標を取得します。
 
@@ -857,15 +857,15 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「クライアントの取得」](/windows/win32/api/winuser/nf-winuser-getclientrect)を参照してください。
+Windows SDK の「 [Getclientrect](/windows/win32/api/winuser/nf-winuser-getclientrect) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#8](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]
 
-## <a name="cwindowgetdc"></a><a name="getdc"></a>ウィンドウ::ゲットDC
+## <a name="cwindowgetdc"></a><a name="getdc"></a>CWindow:: GetDC
 
-クライアント領域のデバイス コンテキストを取得します。
+クライアント領域のデバイスコンテキストを取得します。
 
 ```
 HDC GetDC() throw();
@@ -873,15 +873,15 @@ HDC GetDC() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の取得DC](/windows/win32/api/winuser/nf-winuser-getdc)を参照してください。
+Windows SDK の「 [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-## <a name="cwindowgetdcex"></a><a name="getdcex"></a>ウィンドウ::ゲプテックス
+## <a name="cwindowgetdcex"></a><a name="getdcex"></a>CWindow:: GetDCEx
 
-クライアント領域のデバイス コンテキストを取得し、クリッピング オプションを許可します。
+クライアント領域のデバイスコンテキストを取得し、クリッピングオプションを許可します。
 
 ```
 HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
@@ -889,11 +889,11 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex)を参照してください。
+Windows SDK の「 [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) 」を参照してください。
 
-## <a name="cwindowgetdescendantwindow"></a><a name="getdescendantwindow"></a>ウィンドウ::ゲット子孫ウィンドウ
+## <a name="cwindowgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWindow:: GetDescendantWindow
 
-指定された識別子で指定された子孫ウィンドウを検索します。
+指定した識別子で指定した子孫ウィンドウを検索します。
 
 ```
 HWND GetDescendantWindow(int nID) const throw();
@@ -902,7 +902,7 @@ HWND GetDescendantWindow(int nID) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]取得する子孫ウィンドウの識別子。
+から取得する子孫ウィンドウの識別子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -910,11 +910,11 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="remarks"></a>解説
 
-`GetDescendantWindow`は、直接の子ウィンドウだけでなく、子ウィンドウのツリー全体を検索します。
+`GetDescendantWindow`直下の子であるウィンドウだけでなく、子ウィンドウのツリー全体を検索します。
 
-## <a name="cwindowgetdlgcontrol"></a><a name="getdlgcontrol"></a>ウィンドウ::ゲットドルグコントロール
+## <a name="cwindowgetdlgcontrol"></a><a name="getdlgcontrol"></a>CWindow:: GetDlgControl
 
-複合コントロールまたはコントロール ホスト ダイアログでホストされている ActiveX コントロールのインターフェイスへのポインターを取得します。
+複合コントロールまたはコントロールホストダイアログでホストされている ActiveX コントロールのインターフェイスへのポインターを取得するには、この関数を呼び出します。
 
 ```
 HRESULT GetDlgControl(
@@ -926,23 +926,23 @@ HRESULT GetDlgControl(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]取得するコントロールのリソース ID。
+から取得するコントロールのリソース ID。
 
-*Iid*<br/>
-[in]コントロールから取得するインターフェイスの ID。
+*iid*<br/>
+からコントロールから取得するインターフェイスの ID です。
 
 *ppCtrl*<br/>
-[アウト]インターフェイスへのポインター。
+入出力インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または有効なエラー HRESULT に対してS_OKを返します。 たとえば *、nID*で指定されたコントロールが見つからない場合はE_FAILを返し、コントロールが見つかった場合はE_NOINTERFACEを返しますが *、iid*で指定されたインターフェイスをサポートしていません。
+成功した場合は S_OK を返し、有効な場合は HRESULT を返します。 たとえば、関数は、 *nID*によって指定されたコントロールが見つからない場合に E_FAIL を返します。また、コントロールが見つかった場合は E_NOINTERFACE を返しますが、 *iid*によって指定されたインターフェイスをサポートしていません。
 
 ### <a name="remarks"></a>解説
 
-このポインターを使用して、インターフェイス上のメソッドを呼び出すことができます。
+このポインターを使用して、インターフェイスのメソッドを呼び出すことができます。
 
-## <a name="cwindowgetdlgctrlid"></a><a name="getdlgctrlid"></a>ウィンドウ::取得ドルーグCtrlID
+## <a name="cwindowgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWindow:: GetDlgCtrlID
 
 ウィンドウの識別子を取得します (子ウィンドウの場合のみ)。
 
@@ -952,11 +952,11 @@ int GetDlgCtrlID() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「GetDlgCtrlID」](/windows/win32/api/winuser/nf-winuser-getdlgctrlid)を参照してください。
+Windows SDK の「 [Getdlgctrlid](/windows/win32/api/winuser/nf-winuser-getdlgctrlid) 」を参照してください。
 
-## <a name="cwindowgetdlghost"></a><a name="getdlghost"></a>ウィンドウ::ゲットドルグホスト
+## <a name="cwindowgetdlghost"></a><a name="getdlghost"></a>CWindow:: GetDlgHost
 
-ATL コントロール ホスティング コンテナーへのインターフェイスへのポインターを取得します。
+ATL コントロールのホストコンテナーへのインターフェイスへのポインターを取得します。
 
 ```
 HRESULT GetDlgHost(
@@ -968,23 +968,23 @@ HRESULT GetDlgHost(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]取得するコントロールのリソース ID。
+から取得するコントロールのリソース ID。
 
-*Iid*<br/>
-[in]コントロールから取得するインターフェイスの ID。
+*iid*<br/>
+からコントロールから取得するインターフェイスの ID です。
 
-*ホスト*<br/>
-[アウト]インターフェイスへのポインター。
+*ppHost*<br/>
+入出力インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-*iid*で指定されたウィンドウがコントロール コンテナであり、要求されたインターフェイスを取得できる場合に、S_OKを返します。 ウィンドウがコントロール コンテナでない場合、または要求されたインターフェイスを取得できなかった場合に、E_FAILを返します。 指定した ID のウィンドウが見つからない場合、戻り値は HRESULT_FROM_WIN32(ERROR_CONTROL_ID_NOT_FOUND) になります。
+*Iid*によって指定されたウィンドウがコントロールコンテナーであり、要求されたインターフェイスを取得できる場合は S_OK を返します。 ウィンドウがコントロールコンテナーでない場合、または要求されたインターフェイスを取得できなかった場合は E_FAIL を返します。 指定された ID のウィンドウが見つからなかった場合、戻り値は HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND) と等しくなります。
 
 ### <a name="remarks"></a>解説
 
-このポインターを使用して、インターフェイス上のメソッドを呼び出すことができます。
+このポインターを使用して、インターフェイスのメソッドを呼び出すことができます。
 
-## <a name="cwindowgetdlgitem"></a><a name="getdlgitem"></a>ウィンドウ::ゲットドルグアイテム
+## <a name="cwindowgetdlgitem"></a><a name="getdlgitem"></a>CWindow:: GetDlgItem
 
 指定した子ウィンドウを取得します。
 
@@ -994,9 +994,9 @@ HWND GetDlgItem(int nID) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「GetDlgItem」](/windows/win32/api/winuser/nf-winuser-getdlgitem)を参照してください。
+Windows SDK の「 [Getdlgitem](/windows/win32/api/winuser/nf-winuser-getdlgitem) 」を参照してください。
 
-## <a name="cwindowgetdlgitemint"></a><a name="getdlgitemint"></a>ウィンドウ::ゲットドルグアイテムイント
+## <a name="cwindowgetdlgitemint"></a><a name="getdlgitemint"></a>CWindow:: GetDlgItemInt
 
 コントロールのテキストを整数に変換します。
 
@@ -1009,9 +1009,9 @@ UINT GetDlgItemInt(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「GetDlgItemInt」](/windows/win32/api/winuser/nf-winuser-getdlgitemint)を参照してください。
+Windows SDK の「 [Getdlgitemint](/windows/win32/api/winuser/nf-winuser-getdlgitemint) 」を参照してください。
 
-## <a name="cwindowgetdlgitemtext"></a><a name="getdlgitemtext"></a>ウィンドウ::テキストを取得します。
+## <a name="cwindowgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWindow:: GetDlgItemText
 
 コントロールのテキストを取得します。
 
@@ -1028,15 +1028,15 @@ BOOL GetDlgItemText(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「GetDlgItemText」](/windows/win32/api/winuser/nf-winuser-getdlgitemtextw)を参照してください。
+Windows SDK の「 [Getdlgitemtext](/windows/win32/api/winuser/nf-winuser-getdlgitemtextw) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-このメソッドの 2 番目のバージョンでは、コントロールのテキストを BSTR にコピーできます。 このバージョンは、テキストが正常にコピーされた場合は TRUE を返します。それ以外の場合は FALSE。
+このメソッドの2番目のバージョンでは、コントロールのテキストを BSTR にコピーできます。 このバージョンは、テキストが正常にコピーされた場合に TRUE を返します。それ以外の場合は FALSE。
 
-## <a name="cwindowgetexstyle"></a><a name="getexstyle"></a>ウィンドウ::ゲテックススタイル
+## <a name="cwindowgetexstyle"></a><a name="getexstyle"></a>CWindow:: GetExStyle
 
-ウィンドウの拡張ウィンドウ スタイルを取得します。
+ウィンドウの拡張ウィンドウスタイルを取得します。
 
 ```
 DWORD GetExStyle() const throw();
@@ -1048,15 +1048,15 @@ DWORD GetExStyle() const throw();
 
 ### <a name="remarks"></a>解説
 
-通常のウィンドウ スタイルを取得するには[、GetStyle](#getstyle)を呼び出します。
+通常のウィンドウスタイルを取得するには、 [GetStyle](#getstyle)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#10](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]
 
-## <a name="cwindowgetfont"></a><a name="getfont"></a>ウィンドウ::フォントを取得します。
+## <a name="cwindowgetfont"></a><a name="getfont"></a>CWindow:: GetFont
 
-ウィンドウに[WM_GETFONT](/windows/win32/winmsg/wm-getfont)メッセージを送信して、ウィンドウの現在のフォントを取得します。
+ウィンドウに[WM_GETFONT](/windows/win32/winmsg/wm-getfont)メッセージを送信することによって、ウィンドウの現在のフォントを取得します。
 
 ```
 HFONT GetFont() const throw();
@@ -1064,11 +1064,11 @@ HFONT GetFont() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-フォント ハンドル。
+フォントハンドル。
 
-## <a name="cwindowgethotkey"></a><a name="gethotkey"></a>ウィンドウ::ゲットホットキー
+## <a name="cwindowgethotkey"></a><a name="gethotkey"></a>CWindow:: GetHotKey
 
-WM_GETHOTKEY メッセージを送信して、ウィンドウに関連付けられているホット キーを決定します。
+WM_GETHOTKEY メッセージを送信することによって、ウィンドウに関連付けられているホットキーを決定します。
 
 ```
 DWORD GetHotKey() const throw();
@@ -1076,11 +1076,11 @@ DWORD GetHotKey() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウに関連付けられているホット キーの仮想キー コードと修飾子。 使用可能な修飾子の一覧については、Windows SDK の[WM_GETHOTKEY](/windows/win32/inputdev/wm-gethotkey)を参照してください。 標準の仮想キー コードの一覧については、Winuser.h を参照してください。
+ウィンドウに関連付けられているホットキーの仮想キーコードと修飾子。 使用可能な修飾子の一覧については、Windows SDK の「 [WM_GETHOTKEY](/windows/win32/inputdev/wm-gethotkey) 」を参照してください。 標準の仮想キーコードの一覧については、「Winuser. h」を参照してください。
 
-## <a name="cwindowgeticon"></a><a name="geticon"></a>ウィンドウ::ゲットアイコン
+## <a name="cwindowgeticon"></a><a name="geticon"></a>CWindow:: GetIcon
 
-ウィンドウの大きいアイコンまたは小さいアイコンのハンドルを取得します。
+ウィンドウの大きいアイコンまたは小さいアイコンへのハンドルを取得します。
 
 ```
 HICON GetIcon(BOOL bBigIcon = TRUE) const;
@@ -1088,20 +1088,20 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ビグビコン*<br/>
-[in]TRUE (既定値) の場合、メソッドは大きいアイコンを返します。 それ以外の場合は、小さなアイコンを返します。
+*bBigIcon*<br/>
+からTRUE (既定値) の場合、メソッドは大きいアイコンを返します。 それ以外の場合は、小さいアイコンが返されます。
 
 ### <a name="return-value"></a>戻り値
 
-アイコン ハンドル。
+アイコンハンドル。
 
 ### <a name="remarks"></a>解説
 
 `GetIcon`[WM_GETICON](/windows/win32/winmsg/wm-geticon)メッセージをウィンドウに送信します。
 
-## <a name="cwindowgetlastactivepopup"></a><a name="getlastactivepopup"></a>ウィンドウ::取得ラストアクティブポップアップ
+## <a name="cwindowgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWindow:: GetLastActivePopup
 
-最後にアクティブなポップアップ ウィンドウを取得します。
+直前にアクティブになったポップアップウィンドウを取得します。
 
 ```
 HWND GetLastActivePopup() const throw();
@@ -1109,9 +1109,9 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「最後のアクティブ ポップアップを取得](/windows/win32/api/winuser/nf-winuser-getlastactivepopup)する」を参照してください。
+Windows SDK の「 [Getlastactivepopup](/windows/win32/api/winuser/nf-winuser-getlastactivepopup) 」を参照してください。
 
-## <a name="cwindowgetmenu"></a><a name="getmenu"></a>ウィンドウ::ゲットメニュー
+## <a name="cwindowgetmenu"></a><a name="getmenu"></a>CWindow:: GetMenu
 
 ウィンドウのメニューを取得します。
 
@@ -1121,11 +1121,11 @@ HMENU GetMenu() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「メニューの取得](/windows/win32/api/winuser/nf-winuser-getmenu)」を参照してください。
+Windows SDK の「 [Getmenu](/windows/win32/api/winuser/nf-winuser-getmenu) 」を参照してください。
 
-## <a name="cwindowgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>ウィンドウ::次のグループアイテム
+## <a name="cwindowgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWindow:: GetNextDlgGroupItem
 
-コントロールのグループ内の前のコントロールまたは次のコントロールを取得します。
+コントロールのグループ内の前後のコントロールを取得します。
 
 ```
 HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
@@ -1133,11 +1133,11 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「次のグループアイテムを取得](/windows/win32/api/winuser/nf-winuser-getnextdlggroupitem)する」を参照してください。
+Windows SDK の「 [GetNextDlgGroupItem](/windows/win32/api/winuser/nf-winuser-getnextdlggroupitem) 」を参照してください。
 
-## <a name="cwindowgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>ウィンドウ::ゲットネクドルグタブアイテム
+## <a name="cwindowgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWindow:: GetNextDlgTabItem
 
-WS_TABSTOP スタイルを持つ前または次のコントロールを取得します。
+WS_TABSTOP スタイルを持つ直前または次のコントロールを取得します。
 
 ```
 HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
@@ -1145,9 +1145,9 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「次のタブアイテムを取得](/windows/win32/api/winuser/nf-winuser-getnextdlgtabitem)する」を参照してください。
+Windows SDK の「 [GetNextDlgTabItem](/windows/win32/api/winuser/nf-winuser-getnextdlgtabitem) 」を参照してください。
 
-## <a name="cwindowgetparent"></a><a name="getparent"></a>ウィンドウ::ゲットペアレント
+## <a name="cwindowgetparent"></a><a name="getparent"></a>CWindow:: GetParent
 
 直接の親ウィンドウを取得します。
 
@@ -1157,15 +1157,15 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「親の取得](/windows/win32/api/winuser/nf-winuser-getparent)」を参照してください。
+Windows SDK の「 [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#11](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]
 
-## <a name="cwindowgetscrollinfo"></a><a name="getscrollinfo"></a>ウィンドウ::ゲットスクロール情報
+## <a name="cwindowgetscrollinfo"></a><a name="getscrollinfo"></a>CWindow:: GetScrollInfo
 
-スクロール バーのパラメーターを取得します。
+スクロールバーのパラメーターを取得します。
 
 ```
 BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
@@ -1173,11 +1173,11 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 
 ### <a name="remarks"></a>解説
 
-「Windows SDK[の GetScrollInfo」](/windows/win32/api/winuser/nf-winuser-getscrollinfo)を参照してください。
+Windows SDK の「 [GetScrollInfo](/windows/win32/api/winuser/nf-winuser-getscrollinfo) 」を参照してください。
 
-## <a name="cwindowgetscrollpos"></a><a name="getscrollpos"></a>ウィンドウ::ゲットスクロールポス
+## <a name="cwindowgetscrollpos"></a><a name="getscrollpos"></a>CWindow:: GetScrollPos
 
-スクロール ボックスの位置を取得します。
+スクロールボックスの位置を取得します。
 
 ```
 int GetScrollPos(int nBar) const throw();
@@ -1185,11 +1185,11 @@ int GetScrollPos(int nBar) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「スクロールポイントを取得](/windows/win32/api/winuser/nf-winuser-getscrollpos)する」を参照してください。
+Windows SDK の「 [Getscrollpos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 」を参照してください。
 
-## <a name="cwindowgetscrollrange"></a><a name="getscrollrange"></a>ウィンドウ::ゲットスクロール範囲
+## <a name="cwindowgetscrollrange"></a><a name="getscrollrange"></a>CWindow:: GetScrollRange
 
-スクロール バーの範囲を取得します。
+スクロールバーの範囲を取得します。
 
 ```
 BOOL GetScrollRange(
@@ -1200,11 +1200,11 @@ BOOL GetScrollRange(
 
 ### <a name="remarks"></a>解説
 
-「Windows SDK[の取得スクロール範囲](/windows/win32/api/winuser/nf-winuser-getscrollrange)」を参照してください。
+Windows SDK の「 [Getscrollrange](/windows/win32/api/winuser/nf-winuser-getscrollrange) 」を参照してください。
 
-## <a name="cwindowgetstyle"></a><a name="getstyle"></a>ウィンドウ::ゲットスタイル
+## <a name="cwindowgetstyle"></a><a name="getstyle"></a>CWindow:: GetStyle
 
-ウィンドウのウィンドウ スタイルを取得します。
+ウィンドウのウィンドウスタイルを取得します。
 
 ```
 DWORD GetStyle() const throw();
@@ -1216,15 +1216,15 @@ DWORD GetStyle() const throw();
 
 ### <a name="remarks"></a>解説
 
-拡張ウィンドウ スタイルを取得するには[、GetExStyle](#getexstyle)を呼び出します。
+拡張ウィンドウスタイルを取得するには、 [Getexstyle](#getexstyle)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#12](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]
 
-## <a name="cwindowgetsystemmenu"></a><a name="getsystemmenu"></a>ウィンドウ::システムメニューを取得します。
+## <a name="cwindowgetsystemmenu"></a><a name="getsystemmenu"></a>CWindow:: GetSystemMenu
 
-変更用のシステム メニューのコピーを作成します。
+変更のために [システム] メニューのコピーを作成します。
 
 ```
 HMENU GetSystemMenu(BOOL bRevert) const throw();
@@ -1232,11 +1232,11 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「システム メニューの取得](/windows/win32/api/winuser/nf-winuser-getsystemmenu)」を参照してください。
+Windows SDK の「 [GetSystemMenu](/windows/win32/api/winuser/nf-winuser-getsystemmenu) 」を参照してください。
 
-## <a name="cwindowgettoplevelparent"></a><a name="gettoplevelparent"></a>ウィンドウ::取得トップレベル親
+## <a name="cwindowgettoplevelparent"></a><a name="gettoplevelparent"></a>CWindow:: GetTopLevelParent
 
-ウィンドウの最上位の親ウィンドウを取得します。
+ウィンドウのトップレベルの親ウィンドウを取得します。
 
 ```
 HWND GetTopLevelParent() const throw();
@@ -1244,11 +1244,11 @@ HWND GetTopLevelParent() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-最上位の親ウィンドウへのハンドル。
+最上位レベルの親ウィンドウへのハンドル。
 
-## <a name="cwindowgettoplevelwindow"></a><a name="gettoplevelwindow"></a>ウィンドウ::取得トップレベルウィンドウ
+## <a name="cwindowgettoplevelwindow"></a><a name="gettoplevelwindow"></a>CWindow:: GetTopLevelWindow
 
-ウィンドウの最上位レベルの親ウィンドウまたはオーナー ウィンドウを取得します。
+ウィンドウのトップレベルの親ウィンドウまたはオーナーウィンドウを取得します。
 
 ```
 HWND GetTopLevelWindow() const throw();
@@ -1256,11 +1256,11 @@ HWND GetTopLevelWindow() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-最上位の所有者ウィンドウへのハンドル。
+最上位レベルのオーナーウィンドウへのハンドル。
 
-## <a name="cwindowgettopwindow"></a><a name="gettopwindow"></a>ウィンドウ::ゲットトップウィンドウ
+## <a name="cwindowgettopwindow"></a><a name="gettopwindow"></a>CWindow:: GetTopWindow
 
-最上位の子ウィンドウを取得します。
+トップレベルの子ウィンドウを取得します。
 
 ```
 HWND GetTopWindow() const throw();
@@ -1268,13 +1268,13 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「トップ ウィンドウを取得](/windows/win32/api/winuser/nf-winuser-gettopwindow)する」を参照してください。
+Windows SDK の「 [Gettopwindow](/windows/win32/api/winuser/nf-winuser-gettopwindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#13](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]
 
-## <a name="cwindowgetupdaterect"></a><a name="getupdaterect"></a>ウィンドウ::取得更新レクト
+## <a name="cwindowgetupdaterect"></a><a name="getupdaterect"></a>CWindow:: GetUpdateRect
 
 更新領域を完全に囲む最小の四角形の座標を取得します。
 
@@ -1284,9 +1284,9 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「更新の修正プログラムの取得](/windows/win32/api/winuser/nf-winuser-getupdaterect)」を参照してください。
+Windows SDK の「 [GetUpdateRect](/windows/win32/api/winuser/nf-winuser-getupdaterect) 」を参照してください。
 
-## <a name="cwindowgetupdatergn"></a><a name="getupdatergn"></a>ウィンドウ::ゲットアップルグン
+## <a name="cwindowgetupdatergn"></a><a name="getupdatergn"></a>CWindow:: GetUpdateRgn
 
 更新領域を取得し、指定した領域にコピーします。
 
@@ -1296,11 +1296,11 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「更新プログラムの取得](/windows/win32/api/winuser/nf-winuser-getupdatergn)」を参照してください。
+Windows SDK の「 [GetUpdateRgn](/windows/win32/api/winuser/nf-winuser-getupdatergn) 」を参照してください。
 
-## <a name="cwindowgetwindow"></a><a name="getwindow"></a>ウィンドウ::ウィンドウを取得します。
+## <a name="cwindowgetwindow"></a><a name="getwindow"></a>CWindow:: GetWindow
 
-指定したウィンドウを取得します。
+指定されたウィンドウを取得します。
 
 ```
 HWND GetWindow(UINT nCmd) const throw();
@@ -1308,11 +1308,11 @@ HWND GetWindow(UINT nCmd) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows `GetWindow` SDK を参照してください。
+Windows SDK の「」を参照してください `GetWindow` 。
 
-## <a name="cwindowgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>ウィンドウ::ウィンドウコンテキストヘルプId
+## <a name="cwindowgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWindow:: GetWindowContextHelpId
 
-ウィンドウのヘルプ コンテキスト識別子を取得します。
+ウィンドウのヘルプコンテキスト識別子を取得します。
 
 ```
 DWORD GetWindowContextHelpId() const throw();
@@ -1320,11 +1320,11 @@ DWORD GetWindowContextHelpId() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウコンテキストヘルプId」](/windows/win32/api/winuser/nf-winuser-getwindowcontexthelpid)を参照してください。
+Windows SDK の「 [GetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-getwindowcontexthelpid) 」を参照してください。
 
-## <a name="cwindowgetwindowdc"></a><a name="getwindowdc"></a>ウィンドウ::取得ウィンドウDC
+## <a name="cwindowgetwindowdc"></a><a name="getwindowdc"></a>CWindow:: GetWindowDC
 
-ウィンドウ全体のデバイス コンテキストを取得します。
+ウィンドウ全体のデバイスコンテキストを取得します。
 
 ```
 HDC GetWindowDC() throw();
@@ -1332,15 +1332,15 @@ HDC GetWindowDC() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ DC](/windows/win32/api/winuser/nf-winuser-getwindowdc)を取得する」を参照してください。
+Windows SDK の「 [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#14](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]
 
-## <a name="cwindowgetwindowlong"></a><a name="getwindowlong"></a>ウィンドウ::ゲットウィンドウロング
+## <a name="cwindowgetwindowlong"></a><a name="getwindowlong"></a>CWindow:: GetWindowLong
 
-指定したオフセットの 32 ビット値を追加のウィンドウ メモリに取得します。
+指定したオフセット位置にある32ビット値を追加ウィンドウメモリに取得します。
 
 ```
 LONG GetWindowLong(int nIndex) const throw();
@@ -1348,14 +1348,14 @@ LONG GetWindowLong(int nIndex) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウロングを取得](/windows/win32/api/winuser/nf-winuser-getwindowlongw)する」を参照してください。
+Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を参照してください。
 
 > [!NOTE]
-> 32 ビットバージョンと 64 ビットバージョンの両方の Windows と互換性のあるコードを記述するには[、CWindow::GetWindowLongPtr](#getwindowlongptr)を使用します。
+> 32ビット版と64ビット版の両方の Windows と互換性のあるコードを記述するには、 [CWindow:: GetWindowLongPtr](#getwindowlongptr)を使用します。
 
-## <a name="cwindowgetwindowlongptr"></a><a name="getwindowlongptr"></a>ウィンドウ::ゲットウィンドウロングプター
+## <a name="cwindowgetwindowlongptr"></a><a name="getwindowlongptr"></a>CWindow:: GetWindowLongPtr
 
-指定したウィンドウに関する情報を取得します。
+指定されたオフセットの値を追加ウィンドウメモリに含む、指定されたウィンドウに関する情報を取得します。
 
 ```
 LONG_PTR GetWindowLongPtr(int nIndex) const throw();
@@ -1363,18 +1363,18 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウロングプターを取得](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw)する」を参照してください。
+Windows SDK の「 [GetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-ポインターまたはハンドルを取得する場合、この関数はメソッドに`CWindow::GetWindowLong`優先します。
+ポインターまたはハンドルを取得している場合、この関数はメソッドよりも優先され `CWindow::GetWindowLong` ます。
 
 > [!NOTE]
-> ポインターとハンドルは、32 ビット Windows では 32 ビット、64 ビット Windows では 64 ビットです。
+> ポインターとハンドルは、32ビットの Windows では32ビット、64ビットの Windows では64ビットです。
 
-32 ビットバージョンと 64 ビット版の Windows の両方と互換性のあるコード`CWindow::GetWindowLongPtr`を作成するには、 を使用します。
+32ビット版と64ビット版の両方の Windows と互換性のあるコードを記述するには、を使用 `CWindow::GetWindowLongPtr` します。
 
-## <a name="cwindowgetwindowplacement"></a><a name="getwindowplacement"></a>ウィンドウ::ウィンドウ配置
+## <a name="cwindowgetwindowplacement"></a><a name="getwindowplacement"></a>CWindow:: GetWindowPlacement
 
 表示状態と位置を取得します。
 
@@ -1384,9 +1384,9 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ配置](/windows/win32/api/winuser/nf-winuser-getwindowplacement)」を参照してください。
+Windows SDK の[Getwindowplacement](/windows/win32/api/winuser/nf-winuser-getwindowplacement)を参照してください。
 
-## <a name="cwindowgetwindowprocessid"></a><a name="getwindowprocessid"></a>ウィンドウ::ウィンドウプロセスID
+## <a name="cwindowgetwindowprocessid"></a><a name="getwindowprocessid"></a>CWindow:: GetWindowProcessID
 
 ウィンドウを作成したプロセスの識別子を取得します。
 
@@ -1396,15 +1396,15 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウスレッドプロセス ID」](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid)を参照してください。
+Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#15](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]
 
-## <a name="cwindowgetwindowrect"></a><a name="getwindowrect"></a>ウィンドウ::ゲットウィンドウレック
+## <a name="cwindowgetwindowrect"></a><a name="getwindowrect"></a>CWindow:: GetWindowRect
 
-ウィンドウの境界寸法を取得します。
+ウィンドウの境界ディメンションを取得します。
 
 ```
 BOOL GetWindowRect(LPRECT lpRect) const throw();
@@ -1412,11 +1412,11 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウレツを取得](/windows/win32/api/winuser/nf-winuser-getwindowrect)する」を参照してください。
+Windows SDK の「 [Getwindowrect](/windows/win32/api/winuser/nf-winuser-getwindowrect) 」を参照してください。
 
-## <a name="cwindowgetwindowrgn"></a><a name="getwindowrgn"></a>ウィンドウ::ゲットウィンドウルグン
+## <a name="cwindowgetwindowrgn"></a><a name="getwindowrgn"></a>CWindow:: GetWindowRgn
 
-ウィンドウ領域のコピーを取得します。
+ウィンドウのウィンドウ領域のコピーを取得します。
 
 ```
 int GetWindowRgn(HRGN hRgn) throw();
@@ -1424,9 +1424,9 @@ int GetWindowRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウルグンを取得](/windows/win32/api/winuser/nf-winuser-getwindowrgn)する」を参照してください。
+Windows SDK の「 [Getwindowrgn](/windows/win32/api/winuser/nf-winuser-getwindowrgn) 」を参照してください。
 
-## <a name="cwindowgetwindowtext"></a><a name="getwindowtext"></a>ウィンドウ::テキストを取得します。
+## <a name="cwindowgetwindowtext"></a><a name="getwindowtext"></a>CWindow:: GetWindowText
 
 ウィンドウのテキストを取得します。
 
@@ -1438,16 +1438,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpsz ストリングブフ*<br/>
+*lpszStringBuf*<br/>
 ウィンドウのテキストの書き込み先のバッファー。
 
-*カウントカウント*<br/>
+*nMaxCount*<br/>
 バッファーのサイズ (文字単位)。書き込むことができる最大文字数でもあります。
 
-*テキスト*<br/>
-ウィンドウ テキストを格納する BSTR。
+*bstrText*<br/>
+ウィンドウテキストを格納する BSTR。
 
-*str テキスト*<br/>
+*strText*<br/>
 ウィンドウのテキストを保存する `CString`。
 
 ### <a name="return-value"></a>戻り値
@@ -1456,11 +1456,11 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウテキストを取得](/windows/win32/api/winuser/nf-winuser-getwindowtextw)する」を参照してください。
+Windows SDK の[Getwindowtext](/windows/win32/api/winuser/nf-winuser-getwindowtextw)を参照してください。
 
-このメソッドの 2 番目のバージョンでは、テキストを BSTR に格納できます。3 番目のバージョンでは、結果を[CString](../../atl-mfc-shared/reference/cstringt-class.md)に`CSimpleString`格納できます`CString`。
+このメソッドの2番目のバージョンでは、テキストを BSTR に格納できます。3番目のバージョンでは、 [CString](../../atl-mfc-shared/reference/cstringt-class.md) `CSimpleString` がの基本クラスであるため、結果を CString に格納でき `CString` ます。
 
-## <a name="cwindowgetwindowtextlength"></a><a name="getwindowtextlength"></a>ウィンドウ::テキストの長さを取得します。
+## <a name="cwindowgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWindow:: GetWindowTextLength
 
 ウィンドウのテキストの長さを取得します。
 
@@ -1470,9 +1470,9 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウテキストの長さ](/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw)」を参照してください。
+Windows SDK の「 [GetWindowTextLength](/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw) 」を参照してください。
 
-## <a name="cwindowgetwindowthreadid"></a><a name="getwindowthreadid"></a>ウィンドウ::ウィンドウスレッドID
+## <a name="cwindowgetwindowthreadid"></a><a name="getwindowthreadid"></a>CWindow:: GetWindowThreadID
 
 指定したウィンドウを作成したスレッドの識別子を取得します。
 
@@ -1482,15 +1482,15 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウスレッドプロセス ID」](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid)を参照してください。
+Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#16](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]
 
-## <a name="cwindowgetwindowword"></a><a name="getwindowword"></a>ウィンドウ::ウィンドウワードを取得します。
+## <a name="cwindowgetwindowword"></a><a name="getwindowword"></a>CWindow:: GetWindowWord
 
-指定したオフセットの 16 ビット値を追加のウィンドウ メモリに取得します。
+指定したオフセット位置にある16ビット値を追加ウィンドウメモリに取得します。
 
 ```
 WORD GetWindowWord(int nIndex) const throw();
@@ -1498,11 +1498,11 @@ WORD GetWindowWord(int nIndex) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウロングを取得](/windows/win32/api/winuser/nf-winuser-getwindowlongw)する」を参照してください。
+Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を参照してください。
 
-## <a name="cwindowgotodlgctrl"></a><a name="gotodlgctrl"></a>ウィンドウ::ゴトドルグCtrl
+## <a name="cwindowgotodlgctrl"></a><a name="gotodlgctrl"></a>CWindow:: GotoDlgCtrl
 
-キーボード フォーカスをダイアログ ボックスのコントロールに設定します。
+ダイアログボックス内のコントロールにキーボードフォーカスを設定します。
 
 ```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
@@ -1510,11 +1510,11 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のWM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl)を参照してください。
+Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
-## <a name="cwindowhidecaret"></a><a name="hidecaret"></a>ウィンドウ::ハイドキャレット
+## <a name="cwindowhidecaret"></a><a name="hidecaret"></a>CWindow:: HideCaret
 
-システム キャレットを非表示にします。
+システムキャレットを非表示にします。
 
 ```
 BOOL HideCaret() throw();
@@ -1522,15 +1522,15 @@ BOOL HideCaret() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「隠しキャレット](/windows/win32/api/winuser/nf-winuser-hidecaret)」を参照してください。
+Windows SDK の「 [HideCaret](/windows/win32/api/winuser/nf-winuser-hidecaret) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#17](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]
 
-## <a name="cwindowhilitemenuitem"></a><a name="hilitemenuitem"></a>ウィンドウ::ハイライトメニューアイテム
+## <a name="cwindowhilitemenuitem"></a><a name="hilitemenuitem"></a>CWindow:: HiliteMenuItem
 
-トップ レベルのメニュー項目からハイライトを強調表示または削除します。
+トップレベルのメニュー項目の強調表示を強調表示または解除します。
 
 ```
 BOOL HiliteMenuItem(
@@ -1541,9 +1541,9 @@ BOOL HiliteMenuItem(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ハイライトメニュー項目](/windows/win32/api/winuser/nf-winuser-hilitemenuitem)」を参照してください。
+Windows SDK の「 [HiliteMenuItem](/windows/win32/api/winuser/nf-winuser-hilitemenuitem) 」を参照してください。
 
-## <a name="cwindowinvalidate"></a><a name="invalidate"></a>Cウィンドウ::無効化
+## <a name="cwindowinvalidate"></a><a name="invalidate"></a>CWindow:: 無効化
 
 クライアント領域全体を無効にします。
 
@@ -1553,15 +1553,15 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「無効にする」](/windows/win32/api/winuser/nf-winuser-invalidaterect)を参照してください。
+Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 」を参照してください。
 
-Win32 関数`RECT`にパラメーターの`InvalidateRect`NULL を渡します。
+は、パラメーターに対して NULL を `RECT` `InvalidateRect` Win32 関数に渡します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#18](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]
 
-## <a name="cwindowinvalidaterect"></a><a name="invalidaterect"></a>Cウィンドウ::無効にする
+## <a name="cwindowinvalidaterect"></a><a name="invalidaterect"></a>CWindow:: InvalidateRect
 
 指定された四角形内のクライアント領域を無効にします。
 
@@ -1571,11 +1571,11 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「無効にする」](/windows/win32/api/winuser/nf-winuser-invalidaterect)を参照してください。
+Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 」を参照してください。
 
-## <a name="cwindowinvalidatergn"></a><a name="invalidatergn"></a>Cウィンドウ::無効化Rgn
+## <a name="cwindowinvalidatergn"></a><a name="invalidatergn"></a>CWindow:: InvalidateRgn
 
-指定した領域内のクライアント領域を無効にします。
+指定された領域内のクライアント領域を無効にします。
 
 ```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
@@ -1583,13 +1583,13 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「InvalidateRgn」](/windows/win32/api/winuser/nf-winuser-invalidatergn)を参照してください。
+Windows SDK の「 [InvalidateRgn](/windows/win32/api/winuser/nf-winuser-invalidatergn) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-**Void**戻り値の型を`InvalidateRgn`指定しますが、Win32 関数は常に TRUE を返します。
+**`void`** 戻り値の型を指定し `InvalidateRgn` ます。 Win32 関数は常に TRUE を返します。
 
-## <a name="cwindowischild"></a><a name="ischild"></a>ウィンドウ::イズチャイルド
+## <a name="cwindowischild"></a><a name="ischild"></a>CWindow:: IsChild
 
 指定したウィンドウが子ウィンドウかどうかを判断します。
 
@@ -1599,11 +1599,11 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「IsChild」](/windows/win32/api/winuser/nf-winuser-ischild)を参照してください。
+Windows SDK の「 [Ischild](/windows/win32/api/winuser/nf-winuser-ischild) 」を参照してください。
 
-## <a name="cwindowisdialogmessage"></a><a name="isdialogmessage"></a>ウィンドウ::メッセージ
+## <a name="cwindowisdialogmessage"></a><a name="isdialogmessage"></a>CWindow:: IsDialogMessage
 
-メッセージが指定されたダイアログ ボックスに対するものかどうかを判断します。
+指定されたダイアログボックスに対してメッセージが意図されているかどうかを判断します。
 
 ```
 BOOL IsDialogMessage(LPMSG lpMsg) throw();
@@ -1611,11 +1611,11 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ダイアログ メッセージ](/windows/win32/api/winuser/nf-winuser-isdialogmessagew)」を参照してください。
+Windows SDK の「 [IsDialogMessage](/windows/win32/api/winuser/nf-winuser-isdialogmessagew) 」を参照してください。
 
-## <a name="cwindowisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>ウィンドウ::IsDlgボタンチェック
+## <a name="cwindowisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWindow:: IsDlgButtonChecked
 
-ボタンのチェック状態を決定します。
+ボタンのチェックの状態を決定します。
 
 ```
 UINT IsDlgButtonChecked(int nIDButton) const throw();
@@ -1623,11 +1623,11 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK で[チェックされたボタン](/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked)を参照してください。
+Windows SDK の「 [Isdlgbuttonchecked](/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked) 」を参照してください。
 
-## <a name="cwindowisiconic"></a><a name="isiconic"></a>Cウィンドウ::アイシコニック
+## <a name="cwindowisiconic"></a><a name="isiconic"></a>CWindow:: IsIconic
 
-ウィンドウを最小化するかどうかを決定します。
+ウィンドウが最小化されているかどうかを判断します。
 
 ```
 BOOL IsIconic() const throw();
@@ -1635,15 +1635,15 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「アイコニック](/windows/win32/api/winuser/nf-winuser-isiconic)」を参照してください。
+Windows SDK の「 [Isiconic](/windows/win32/api/winuser/nf-winuser-isiconic) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#19](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]
 
-## <a name="cwindowisparentdialog"></a><a name="isparentdialog"></a>ウィンドウ::イズペアレントダイアログ
+## <a name="cwindowisparentdialog"></a><a name="isparentdialog"></a>CWindow:: Isparc Entdialog
 
-コントロールの親ウィンドウがダイアログ ウィンドウかどうかを判断します。
+コントロールの親ウィンドウがダイアログウィンドウかどうかを判断します。
 
 ```
 BOOL IsParentDialog() throw();
@@ -1651,11 +1651,11 @@ BOOL IsParentDialog() throw();
 
 ### <a name="return-value"></a>戻り値
 
-親ウィンドウがダイアログボックスの場合は TRUE を返し、それ以外の場合は FALSE を返します。
+親ウィンドウがダイアログの場合は TRUE、それ以外の場合は FALSE を返します。
 
-## <a name="cwindowiswindow"></a><a name="iswindow"></a>ウィンドウ::イズウィンドウ
+## <a name="cwindowiswindow"></a><a name="iswindow"></a>CWindow:: IsWindow
 
-指定したウィンドウ ハンドルが既存のウィンドウを識別するかどうかを判断します。
+指定したウィンドウハンドルが既存のウィンドウを識別するかどうかを判断します。
 
 ```
 BOOL IsWindow() throw();
@@ -1663,15 +1663,15 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「IsWindow」](/windows/win32/api/winuser/nf-winuser-iswindow)を参照してください。
+Windows SDK の[Iswindow](/windows/win32/api/winuser/nf-winuser-iswindow)を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#20](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]
 
-## <a name="cwindowiswindowenabled"></a><a name="iswindowenabled"></a>ウィンドウ::IsWindow が有効です。
+## <a name="cwindowiswindowenabled"></a><a name="iswindowenabled"></a>CWindow:: IsWindowEnabled
 
-ウィンドウが入力に対して有効かどうかを判断します。
+ウィンドウで入力が有効になっているかどうかを判断します。
 
 ```
 BOOL IsWindowEnabled() const throw();
@@ -1679,15 +1679,15 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[で「IsWindow が有効」](/windows/win32/api/winuser/nf-winuser-iswindowenabled)を参照してください。
+Windows SDK で[Iswindowenabled](/windows/win32/api/winuser/nf-winuser-iswindowenabled)を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#21](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]
 
-## <a name="cwindowiswindowvisible"></a><a name="iswindowvisible"></a>ウィンドウ::イズウィンドウ表示
+## <a name="cwindowiswindowvisible"></a><a name="iswindowvisible"></a>CWindow:: IsWindowVisible
 
-ウィンドウの可視性の状態を決定します。
+ウィンドウの表示状態を決定します。
 
 ```
 BOOL IsWindowVisible() const throw();
@@ -1695,15 +1695,15 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[で「ウィンドウ表示](/windows/win32/api/winuser/nf-winuser-iswindowvisible)」を参照してください。
+Windows SDK で[Iswindowvisible](/windows/win32/api/winuser/nf-winuser-iswindowvisible)を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#22](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]
 
-## <a name="cwindowiswindowunicode"></a><a name="iswindowunicode"></a>ウィンドウ::イズウィンドウユニコード
+## <a name="cwindowiswindowunicode"></a><a name="iswindowunicode"></a>CWindow:: IsWindowUnicode
 
-指定したウィンドウがネイティブな Unicode ウィンドウかどうかを判断します。
+指定されたウィンドウがネイティブ Unicode ウィンドウかどうかを判断します。
 
 ```
 BOOL IsWindowUnicode() throw();
@@ -1711,15 +1711,15 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウユニコード](/windows/win32/api/winuser/nf-winuser-iswindowunicode)」を参照してください。
+Windows SDK の「 [Iswindowunicode](/windows/win32/api/winuser/nf-winuser-iswindowunicode) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#23](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]
 
-## <a name="cwindowiszoomed"></a><a name="iszoomed"></a>ウィンドウ::ズーム
+## <a name="cwindowiszoomed"></a><a name="iszoomed"></a>CWindow:: IsZoomed
 
-ウィンドウを最大化するかどうかを決定します。
+ウィンドウが最大化されているかどうかを判断します。
 
 ```
 BOOL IsZoomed() const throw();
@@ -1727,11 +1727,11 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「IsZoomed」](/windows/win32/api/winuser/nf-winuser-iszoomed)を参照してください。
+Windows SDK の「 [Iszoomed](/windows/win32/api/winuser/nf-winuser-iszoomed) 」を参照してください。
 
-## <a name="cwindowkilltimer"></a><a name="killtimer"></a>ウィンドウ::キルタイマー
+## <a name="cwindowkilltimer"></a><a name="killtimer"></a>CWindow:: の実行タイマー
 
-によって作成されたタイマー イベントを`CWindow::SetTimer`破棄します。
+によって作成されたタイマーイベントを破棄 `CWindow::SetTimer` します。
 
 ```
 BOOL KillTimer(UINT nIDEvent) throw();
@@ -1739,11 +1739,11 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のキルタイマー](/windows/win32/api/winuser/nf-winuser-killtimer)を参照してください。
+「Windows SDK での[「」を](/windows/win32/api/winuser/nf-winuser-killtimer)参照してください。
 
-## <a name="cwindowlockwindowupdate"></a><a name="lockwindowupdate"></a>ウィンドウ::ロックウィンドウ更新
+## <a name="cwindowlockwindowupdate"></a><a name="lockwindowupdate"></a>CWindow:: LockWindowUpdate
 
-[ウィンドウでの](/windows/win32/api/winuser/nf-winuser-lockwindowupdate)描画を無効または有効にします。
+[Lockwindowupdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) Win32 関数を呼び出して、ウィンドウ内の描画を無効または有効にします。
 
 ```
 BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
@@ -1751,28 +1751,28 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロック*<br/>
-[in]TRUE (既定値) の場合、ウィンドウはロックされます。 それ以外の場合は、ロックが解除されます。
+*帯*<br/>
+からTRUE (既定値) の場合、ウィンドウはロックされます。 それ以外の場合は、ロックが解除されます。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウが正常にロックされている場合は TRUE。それ以外の場合は FALSE。
+ウィンドウが正常にロックされた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*bLock*が TRUE の場合、このメソッドは[m_hWnd](#m_hwnd) Win32 関数に渡します。それ以外の場合は、NULL を渡します。
+*BLock*が TRUE の場合、このメソッドは[m_hWnd](#m_hwnd)を Win32 関数に渡します。それ以外の場合は、NULL を渡します。
 
-## <a name="cwindowm_hwnd"></a><a name="m_hwnd"></a>ウィンドウ::m_hWnd
+## <a name="cwindowm_hwnd"></a><a name="m_hwnd"></a>CWindow:: m_hWnd
 
-オブジェクトに関連付けられたウィンドウへのハンドルを`CWindow`格納します。
+オブジェクトに関連付けられたウィンドウへのハンドルを格納 `CWindow` します。
 
 ```
 HWND m_hWnd throw() throw();
 ```
 
-## <a name="cwindowmapwindowpoints"></a><a name="mapwindowpoints"></a>ウィンドウ::マップウィンドウポイント
+## <a name="cwindowmapwindowpoints"></a><a name="mapwindowpoints"></a>CWindow:: MapWindowPoints
 
-一連の点を、ウィンドウの座標空間から別のウィンドウの座標空間に変換します。
+ウィンドウの座標空間の点のセットを別のウィンドウの座標空間に変換します。
 
 ```
 int MapWindowPoints(
@@ -1787,11 +1787,11 @@ int MapWindowPoints(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウポイント](/windows/win32/api/winuser/nf-winuser-mapwindowpoints)」を参照してください。
+Windows SDK の「 [Mapwindowpoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) 」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
+このメソッドの2番目のバージョンでは、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
-## <a name="cwindowmessagebox"></a><a name="messagebox"></a>ウィンドウ::メッセージボックス
+## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow:: MessageBox
 
 メッセージ ボックスを表示します。
 
@@ -1804,15 +1804,15 @@ int MessageBox(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のメッセージ ボックス](/windows/win32/api/winuser/nf-winuser-messagebox)を参照してください。
+Windows SDK の[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#24](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]
 
-## <a name="cwindowmodifystyle"></a><a name="modifystyle"></a>ウィンドウ::スタイルを変更します。
+## <a name="cwindowmodifystyle"></a><a name="modifystyle"></a>CWindow:: ModifyStyle
 
-オブジェクトのウィンドウ スタイルを`CWindow`変更します。
+オブジェクトのウィンドウスタイルを変更 `CWindow` します。
 
 ```
 BOOL ModifyStyle(
@@ -1823,42 +1823,42 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>パラメーター
 
-*dw削除*<br/>
-[in]スタイルの変更中に削除するウィンドウ スタイルを指定します。
+*dwRemove*<br/>
+からスタイルの変更中に削除されるウィンドウスタイルを指定します。
 
 *dwAdd*<br/>
-[in]スタイルの変更時に追加するウィンドウ スタイルを指定します。
+からスタイルの変更時に追加するウィンドウスタイルを指定します。
 
-*Nflags*<br/>
-[in]ウィンドウ位置のフラグ。 使用可能な値の一覧については、Windows SDK の[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)関数を参照してください。
+*nFlags*<br/>
+からウィンドウの配置フラグ。 使用可能な値の一覧については、Windows SDK の「 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)関数」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウ スタイルが変更された場合は TRUE。それ以外の場合は FALSE。
+ウィンドウスタイルが変更された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-追加または削除するスタイルは、ビットごとの OR ( &#124; ) 演算子を使用して組み合わせることができます。 使用可能なウィンドウ スタイルについては、Windows SDK の[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)関数を参照してください。
+追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用可能なウィンドウスタイルについては、Windows SDKfor の[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)関数を参照してください。
 
-*nFlags が*0`ModifyStyle`以外の場合は、Win32 関数`SetWindowPos`を呼び出し *、nFlags*と次の 4 つのフラグを組み合わせてウィンドウを再描画します。
+*Nflags*が0以外の場合、は `ModifyStyle` Win32 関数を呼び出し、 `SetWindowPos` *nflags*を次の4つのフラグと組み合わせてウィンドウを再描画します。
 
-- SWP_NOSIZE 現在のサイズを保持します。
+- SWP_NOSIZE は現在のサイズを保持します。
 
-- SWP_NOMOVE 現在の位置を保持します。
+- SWP_NOMOVE は現在の位置を保持します。
 
-- SWP_NOZORDER 現在の Z オーダーを保持します。
+- SWP_NOZORDER は現在の Z オーダーを保持します。
 
-- SWP_NOACTIVATE ウィンドウをアクティブにしません。
+- SWP_NOACTIVATE では、ウィンドウはアクティブになりません。
 
-ウィンドウの拡張スタイルを変更するには[、ModifyStyleEx](#modifystyleex)を呼び出します。
+ウィンドウの拡張スタイルを変更するには、 [modifystyles ex](#modifystyleex)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#25](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]
 
-## <a name="cwindowmodifystyleex"></a><a name="modifystyleex"></a>ウィンドウ::スタイルを変更します。
+## <a name="cwindowmodifystyleex"></a><a name="modifystyleex"></a>CWindow:: Modifyスタイル Ex
 
-オブジェクトの拡張ウィンドウ スタイルを`CWindow`変更します。
+オブジェクトの拡張ウィンドウスタイルを変更 `CWindow` します。
 
 ```
 BOOL ModifyStyleEx(
@@ -1869,40 +1869,40 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dw削除*<br/>
-[in]スタイルの変更中に削除する拡張スタイルを指定します。
+*dwRemove*<br/>
+からスタイルの変更中に削除される拡張スタイルを指定します。
 
 *dwAdd*<br/>
-[in]スタイルの変更時に追加する拡張スタイルを指定します。
+からスタイルの変更時に追加する拡張スタイルを指定します。
 
-*Nflags*<br/>
-[in]ウィンドウ位置のフラグ。 使用可能な値の一覧については、Windows SDK の[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)関数を参照してください。
+*nFlags*<br/>
+からウィンドウの配置フラグ。 使用可能な値の一覧については、Windows SDK の「 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)関数」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-拡張ウィンドウ スタイルが変更された場合は TRUE。それ以外の場合は FALSE。
+拡張ウィンドウスタイルが変更された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-追加または削除するスタイルは、ビットごとの OR ( &#124; ) 演算子を使用して組み合わせることができます。 使用可能な拡張スタイルについては、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数を参照してください。
+追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用できる拡張スタイルについては、Windows SDKfor の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数を参照してください。
 
-*nFlags が*0`ModifyStyleEx`以外の場合は、Win32 関数`SetWindowPos`を呼び出し *、nFlags*と次の 4 つのフラグを組み合わせてウィンドウを再描画します。
+*Nflags*が0以外の場合、は `ModifyStyleEx` Win32 関数を呼び出し、 `SetWindowPos` *nflags*を次の4つのフラグと組み合わせてウィンドウを再描画します。
 
-- SWP_NOSIZE 現在のサイズを保持します。
+- SWP_NOSIZE は現在のサイズを保持します。
 
-- SWP_NOMOVE 現在の位置を保持します。
+- SWP_NOMOVE は現在の位置を保持します。
 
-- SWP_NOZORDER 現在の Z オーダーを保持します。
+- SWP_NOZORDER は現在の Z オーダーを保持します。
 
-- SWP_NOACTIVATE ウィンドウをアクティブにしません。
+- SWP_NOACTIVATE では、ウィンドウはアクティブになりません。
 
-通常のウィンドウ スタイルを使用してウィンドウを変更するには[、ModifyStyle](#modifystyle)を呼び出します。
+通常のウィンドウスタイルを使用してウィンドウを変更するには、 [Modifystyle](#modifystyle)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#26](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]
 
-## <a name="cwindowmovewindow"></a><a name="movewindow"></a>ウィンドウ::ウィンドウの移動
+## <a name="cwindowmovewindow"></a><a name="movewindow"></a>CWindow:: MoveWindow
 
 ウィンドウのサイズと位置を変更します。
 
@@ -1921,13 +1921,13 @@ BOOL MoveWindow(
 
 ### <a name="remarks"></a>解説
 
-トップレベルウィンドウオブジェクトの場合、x と y のパラメータは画面の左上隅を基準にしています。 子ウィンドウ オブジェクトの場合、親ウィンドウのクライアント領域の左上隅を基準にしています。
+トップレベルウィンドウオブジェクトの場合、x および y パラメーターは画面の左上隅を基準とした相対値です。 子ウィンドウオブジェクトの場合は、親ウィンドウのクライアント領域の左上隅を基準とした相対的なオブジェクトです。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを決定します。
+このメソッドの2番目のバージョンでは、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを決定します。
 
-## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>ウィンドウ::次のDlgCtrl
+## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow:: NextDlgCtrl
 
-キーボード フォーカスをダイアログ ボックスの次のコントロールに設定します。
+ダイアログボックスの次のコントロールにキーボードフォーカスを設定します。
 
 ```cpp
 void NextDlgCtrl() const throw();
@@ -1935,9 +1935,9 @@ void NextDlgCtrl() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のWM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl)を参照してください。
+Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
-## <a name="cwindowopenclipboard"></a><a name="openclipboard"></a>Cウィンドウ::クリップボードを開く
+## <a name="cwindowopenclipboard"></a><a name="openclipboard"></a>CWindow:: OpenClipboard
 
 クリップボードを開きます。
 
@@ -1947,27 +1947,27 @@ BOOL OpenClipboard() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK で[クリップボードを開く](/windows/win32/api/winuser/nf-winuser-openclipboard)を参照してください。
+Windows SDK の[Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard)を参照してください。
 
-## <a name="cwindowoperator-hwnd"></a><a name="operator_hwnd"></a>Cウィンドウ::オペレーターHWND
+## <a name="cwindowoperator-hwnd"></a><a name="operator_hwnd"></a>CWindow:: operator HWND
 
-オブジェクトを`CWindow`HWND に変換します。
+オブジェクトを `CWindow` HWND に変換します。
 
 ```
 operator HWND() const throw();
 ```
 
-## <a name="cwindowoperator-"></a><a name="operator_eq"></a>Cウィンドウ::演算子 =
+## <a name="cwindowoperator-"></a><a name="operator_eq"></a>CWindow:: operator =
 
-m_hWnd メンバを に設定`CWindow`して、HWND[m_hWnd](#m_hwnd)をオブジェクト`hWnd`に割り当てます。
+`CWindow` [M_hWnd](#m_hwnd)メンバーをに設定することにより、オブジェクトに HWND を割り当て `hWnd` ます。
 
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```
 
-## <a name="cwindowpostmessage"></a><a name="postmessage"></a>ウィンドウ::Postメッセージ
+## <a name="cwindowpostmessage"></a><a name="postmessage"></a>CWindow::P ostMessage
 
-ウィンドウを作成したスレッドに関連付けられたメッセージ キューにメッセージを配置します。
+ウィンドウを作成したスレッドに関連付けられているメッセージキューにメッセージを配置します。
 
 ```
 BOOL PostMessage(
@@ -1978,17 +1978,17 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の投稿メッセージ](/windows/win32/api/winuser/nf-winuser-postmessagew)を参照してください。
+Windows SDK の「 [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew) 」を参照してください。
 
-スレッドがメッセージを処理するのを待たずに戻ります。
+スレッドがメッセージを処理するのを待たずにを返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#27](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]
 
-## <a name="cwindowprevdlgctrl"></a><a name="prevdlgctrl"></a>ウィンドウ::P
+## <a name="cwindowprevdlgctrl"></a><a name="prevdlgctrl"></a>CWindow::P revDlgCtrl
 
-キーボード フォーカスをダイアログ ボックスの前のコントロールに設定します。
+ダイアログボックスの前のコントロールにキーボードフォーカスを設定します。
 
 ```cpp
 void PrevDlgCtrl() const throw();
@@ -1996,11 +1996,11 @@ void PrevDlgCtrl() const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のWM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl)を参照してください。
+Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
-## <a name="cwindowprint"></a><a name="print"></a>Cウィンドウ::Pリント
+## <a name="cwindowprint"></a><a name="print"></a>CWindow::P rint
 
-指定したデバイス コンテキストで描画することを要求する[ウィンドウにWM_PRINT](/windows/win32/gdi/wm-print)メッセージを送信します。
+[WM_PRINT](/windows/win32/gdi/wm-print)メッセージをウィンドウに送信して、指定したデバイスコンテキストで描画するように要求します。
 
 ```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
@@ -2008,27 +2008,27 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Hdc*<br/>
-[in]デバイス コンテキストへのハンドル。
+*hDC*<br/>
+からデバイスコンテキストを処理するハンドル。
 
 *dwFlags*<br/>
-[in]描画オプションを指定します。 次のフラグを 1 つ以上組み合わせることができます。
+から描画オプションを指定します。 次のフラグの1つまたは複数を組み合わせることができます。
 
-- PRF_CHECKVISIBLE ウィンドウが表示されている場合にのみ描画します。
+- ウィンドウが表示されている場合にのみ、PRF_CHECKVISIBLE 描画します。
 
-- PRF_CHILDREN 表示されているすべての子ウィンドウを描画します。
+- 表示されているすべての子ウィンドウを描画 PRF_CHILDREN ます。
 
 - PRF_CLIENT ウィンドウのクライアント領域を描画します。
 
-- PRF_ERASEBKGND ウィンドウを描画する前に背景を消去します。
+- ウィンドウを描画する前に背景を消去 PRF_ERASEBKGND ます。
 
 - PRF_NONCLIENT ウィンドウの非クライアント領域を描画します。
 
-- PRF_OWNED 所有しているウィンドウをすべて描画します。
+- 所有されているすべてのウィンドウを描画 PRF_OWNED ます。
 
-## <a name="cwindowprintclient"></a><a name="printclient"></a>Cウィンドウ::Pリントクライアント
+## <a name="cwindowprintclient"></a><a name="printclient"></a>CWindow::P rintClient
 
-指定したデバイス コンテキストでクライアント領域を描画するように要求するために[、WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)メッセージをウィンドウに送信します。
+指定されたデバイスコンテキストでクライアント領域を描画するように要求するために、 [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)メッセージをウィンドウに送信します。
 
 ```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
@@ -2036,35 +2036,35 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Hdc*<br/>
-[in]デバイス コンテキストへのハンドル。
+*hDC*<br/>
+からデバイスコンテキストを処理するハンドル。
 
 *dwFlags*<br/>
-[in]描画オプションを指定します。 次のフラグを 1 つ以上組み合わせることができます。
+から描画オプションを指定します。 次のフラグの1つまたは複数を組み合わせることができます。
 
-- PRF_CHECKVISIBLE ウィンドウが表示されている場合にのみ描画します。
+- ウィンドウが表示されている場合にのみ、PRF_CHECKVISIBLE 描画します。
 
-- PRF_CHILDREN 表示されているすべての子ウィンドウを描画します。
+- 表示されているすべての子ウィンドウを描画 PRF_CHILDREN ます。
 
 - PRF_CLIENT ウィンドウのクライアント領域を描画します。
 
-- PRF_ERASEBKGND ウィンドウを描画する前に背景を消去します。
+- ウィンドウを描画する前に背景を消去 PRF_ERASEBKGND ます。
 
 - PRF_NONCLIENT ウィンドウの非クライアント領域を描画します。
 
-- PRF_OWNED 所有しているウィンドウをすべて描画します。
+- 所有されているすべてのウィンドウを描画 PRF_OWNED ます。
 
-## <a name="cwindowrcdefault"></a><a name="rcdefault"></a>ウィンドウ::rc デフォルト
+## <a name="cwindowrcdefault"></a><a name="rcdefault"></a>CWindow:: rcDefault
 
-既定のウィンドウサイズを含みます。
+既定のウィンドウのサイズが含まれます。
 
 ```
 static RECT rcDefault;
 ```
 
-## <a name="cwindowredrawwindow"></a><a name="redrawwindow"></a>ウィンドウ::ウィンドウの再描画
+## <a name="cwindowredrawwindow"></a><a name="redrawwindow"></a>CWindow:: RedrawWindow
 
-クライアント領域の指定された四角形または領域を更新します。
+クライアント領域の指定した四角形または領域を更新します。
 
 ```
 BOOL RedrawWindow(
@@ -2077,15 +2077,15 @@ throw()
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウの再描画](/windows/win32/api/winuser/nf-winuser-redrawwindow)」を参照してください。
+Windows SDK の「 [Redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#28](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]
 
-## <a name="cwindowreleasedc"></a><a name="releasedc"></a>Cウィンドウ::リリースDC
+## <a name="cwindowreleasedc"></a><a name="releasedc"></a>CWindow:: ReleaseDC
 
-デバイス コンテキストを解放します。
+デバイスコンテキストを解放します。
 
 ```
 int ReleaseDC(HDC hDC);
@@ -2093,15 +2093,15 @@ int ReleaseDC(HDC hDC);
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のリリースDC](/windows/win32/api/winuser/nf-winuser-releasedc)を参照してください。
+Windows SDK の「 [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-## <a name="cwindowresizeclient"></a><a name="resizeclient"></a>Cウィンドウ::リサイズクライアント
+## <a name="cwindowresizeclient"></a><a name="resizeclient"></a>CWindow:: ResizeClient
 
-ウィンドウのサイズを指定したクライアント領域サイズに変更します。
+ウィンドウのサイズを指定したクライアント領域のサイズに変更します。
 
 ```
 BOOL ResizeClient(
@@ -2112,16 +2112,16 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>パラメーター
 
-*n幅*<br/>
+*nWidth*<br/>
 ウィンドウの新しい幅 (ピクセル単位)。
 
 *nHeight*<br/>
 ウィンドウの新しい高さ (ピクセル単位)。
 
-*引き出し*<br/>
-変更を再描画するかどうかを示すフラグ。 デフォルトは FALSE で、ウィンドウが変更を再描画しないことを示します。
+*より描画*<br/>
+変更を再描画するかどうかを示すフラグです。 既定値は FALSE で、ウィンドウが変更を再描画しないことを示します。
 
-## <a name="cwindowscreentoclient"></a><a name="screentoclient"></a>ウィンドウ::スクリーントクライアント
+## <a name="cwindowscreentoclient"></a><a name="screentoclient"></a>CWindow:: ScreenToClient
 
 画面座標をクライアント座標に変換します。
 
@@ -2132,11 +2132,11 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「スクリーンツークライアント](/windows/win32/api/winuser/nf-winuser-screentoclient)」を参照してください。
+Windows SDK の[Screentoclient](/windows/win32/api/winuser/nf-winuser-screentoclient)を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
+このメソッドの2番目のバージョンでは、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体の座標を変換できます。
 
-## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>ウィンドウ::スクロールウィンドウ
+## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow:: ScrollWindow
 
 指定したクライアント領域をスクロールします。
 
@@ -2150,9 +2150,9 @@ BOOL ScrollWindow(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[のスクロール ウィンドウ](/windows/win32/api/winuser/nf-winuser-scrollwindow)を参照してください。
+Windows SDK の「 [ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow) 」を参照してください。
 
-## <a name="cwindowscrollwindowex"></a><a name="scrollwindowex"></a>ウィンドウ::スクロールウィンドウEx
+## <a name="cwindowscrollwindowex"></a><a name="scrollwindowex"></a>CWindow:: ScrollWindowEx
 
 追加機能を使用して、指定したクライアント領域をスクロールします。
 
@@ -2169,9 +2169,9 @@ int ScrollWindowEx(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「スクロールウィンドウEx」](/windows/win32/api/winuser/nf-winuser-scrollwindowex)を参照してください。
+Windows SDK の「 [ScrollWindowEx](/windows/win32/api/winuser/nf-winuser-scrollwindowex) 」を参照してください。
 
-## <a name="cwindowsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>ウィンドウ::メッセージを送信します。
+## <a name="cwindowsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWindow:: SendDlgItemMessage
 
 コントロールにメッセージを送信します。
 
@@ -2185,11 +2185,11 @@ LRESULT SendDlgItemMessage(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「送信 DlgItemMessage」](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew)を参照してください。
+Windows SDK の「 [SendDlgItemMessage](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew) 」を参照してください。
 
-## <a name="cwindowsendmessage"></a><a name="sendmessage"></a>メッセージの送信
+## <a name="cwindowsendmessage"></a><a name="sendmessage"></a>CWindow:: SendMessage
 
-ウィンドウにメッセージを送信し、ウィンドウ プロシージャがメッセージを処理するまでは戻りません。
+ウィンドウにメッセージを送信し、ウィンドウプロシージャがメッセージを処理するまでは戻りません。
 
 ```
 LRESULT SendMessage(
@@ -2206,15 +2206,15 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の送信メッセージ](/windows/win32/api/winuser/nf-winuser-sendmessage)を参照してください。
+Windows SDK の「 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#29](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]
 
-## <a name="cwindowsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>子孫にメッセージを送る
+## <a name="cwindowsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWindow:: SendMessageToDescendants
 
-指定されたメッセージを`CWindow`オブジェクトの直接の子すべてに送信します。
+指定したメッセージをオブジェクトのすべての直下の子に送信し `CWindow` ます。
 
 ```cpp
 void SendMessageToDescendants(
@@ -2227,22 +2227,22 @@ void SendMessageToDescendants(
 ### <a name="parameters"></a>パラメーター
 
 *message*<br/>
-[in]送信されるメッセージ。
+から送信されるメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
-*bディープ*<br/>
-[in]TRUE (既定値) の場合、メッセージはすべての子孫ウィンドウに送信されます。それ以外の場合は、直接の子ウィンドウにのみ送信されます。
+*bDeep*<br/>
+からTRUE (既定値) の場合、メッセージはすべての子孫ウィンドウに送信されます。それ以外の場合は、直接の子ウィンドウにのみ送信されます。
 
 ### <a name="remarks"></a>解説
 
-*bDeep*が TRUE の場合、メッセージは他のすべての子孫ウィンドウに送信されます。
+*Bdeep*が TRUE の場合、他のすべての子孫ウィンドウにもメッセージが送信されます。
 
-## <a name="cwindowsendnotifymessage"></a><a name="sendnotifymessage"></a>ウィンドウ::メッセージを送信します。
+## <a name="cwindowsendnotifymessage"></a><a name="sendnotifymessage"></a>CWindow:: SendNotifyMessage
 
 ウィンドウにメッセージを送信します。
 
@@ -2255,11 +2255,11 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「通知メッセージの送信](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew)」を参照してください。
+Windows SDK の「 [Sendnotifymessage](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) 」を参照してください。
 
-ウィンドウが呼び出し元のスレッドによって`SendNotifyMessage`作成された場合、ウィンドウ プロシージャがメッセージを処理するまでは戻りません。 それ以外の場合は、すぐに戻ります。
+ウィンドウが呼び出し元のスレッドによって作成された場合、 `SendNotifyMessage` はウィンドウプロシージャがメッセージを処理するまでを返しません。 それ以外の場合は、直ちに戻ります。
 
-## <a name="cwindowsetactivewindow"></a><a name="setactivewindow"></a>ウィンドウ::セットアクティブウィンドウ
+## <a name="cwindowsetactivewindow"></a><a name="setactivewindow"></a>CWindow:: SetActiveWindow
 
 ウィンドウをアクティブにします。
 
@@ -2269,15 +2269,15 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「アクティブ ウィンドウの設定](/windows/win32/api/winuser/nf-winuser-setactivewindow)」を参照してください。
+Windows SDK の「 [SetActiveWindow](/windows/win32/api/winuser/nf-winuser-setactivewindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#30](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]
 
-## <a name="cwindowsetcapture"></a><a name="setcapture"></a>Cウィンドウ::セットキャプチャ
+## <a name="cwindowsetcapture"></a><a name="setcapture"></a>CWindow:: SetCapture
 
-それ以降のすべてのマウス入力をウィンドウに送信します。
+後続のすべてのマウス入力をウィンドウに送信します。
 
 ```
 HWND SetCapture() throw();
@@ -2285,11 +2285,11 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「セットキャプチャ](/windows/win32/api/winuser/nf-winuser-setcapture)」を参照してください。
+Windows SDK の「 [SetCapture](/windows/win32/api/winuser/nf-winuser-setcapture) 」を参照してください。
 
-## <a name="cwindowsetclipboardviewer"></a><a name="setclipboardviewer"></a>Cウィンドウ::クリップボードビューアを設定します。
+## <a name="cwindowsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWindow:: Setクリップボードビューアー
 
-ウィンドウをクリップボード ビューア チェーンに追加します。
+ウィンドウをクリップボードビューアーチェーンに追加します。
 
 ```
 HWND SetClipboardViewer() throw();
@@ -2297,11 +2297,11 @@ HWND SetClipboardViewer() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「クリップボードビューアの設定](/windows/win32/api/winuser/nf-winuser-setclipboardviewer)」を参照してください。
+Windows SDK の「 [Setクリップボードビューアー](/windows/win32/api/winuser/nf-winuser-setclipboardviewer) 」を参照してください。
 
-## <a name="cwindowsetdlgctrlid"></a><a name="setdlgctrlid"></a>ウィンドウ::セットドルグCtrlID
+## <a name="cwindowsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWindow:: SetDlgCtrlID
 
-ウィンドウの識別子を指定した値に設定します。
+ウィンドウの識別子を指定された値に設定します。
 
 ```
 int SetDlgCtrlID(int nID) throw();
@@ -2310,13 +2310,13 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]ウィンドウの識別子に設定する新しい値。
+からウィンドウの識別子に設定する新しい値。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ウィンドウの前の識別子。それ以外の場合は 0。
+成功した場合は、ウィンドウの前の識別子。それ以外の場合は0です。
 
-## <a name="cwindowsetdlgitemint"></a><a name="setdlgitemint"></a>ウィンドウ::セットドルグアイテムイント
+## <a name="cwindowsetdlgitemint"></a><a name="setdlgitemint"></a>CWindow:: SetDlgItemInt
 
 コントロールのテキストを整数値の文字列形式に変更します。
 
@@ -2329,9 +2329,9 @@ BOOL SetDlgItemInt(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「セットドlgItemInt」](/windows/win32/api/winuser/nf-winuser-setdlgitemint)を参照してください。
+Windows SDK の「 [Setdlgitemint](/windows/win32/api/winuser/nf-winuser-setdlgitemint) 」を参照してください。
 
-## <a name="cwindowsetdlgitemtext"></a><a name="setdlgitemtext"></a>ウィンドウ::テキストを設定します。
+## <a name="cwindowsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWindow:: SetDlgItemText
 
 コントロールのテキストを変更します。
 
@@ -2341,9 +2341,9 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「セットドlg アイテムテキスト](/windows/win32/api/winuser/nf-winuser-setdlgitemtextw)」を参照してください。
+Windows SDK の「 [Setdlgitemtext](/windows/win32/api/winuser/nf-winuser-setdlgitemtextw) 」を参照してください。
 
-## <a name="cwindowsetfocus"></a><a name="setfocus"></a>ウィンドウ::セットフォーカス
+## <a name="cwindowsetfocus"></a><a name="setfocus"></a>CWindow:: SetFocus
 
 ウィンドウに入力フォーカスを設定します。
 
@@ -2353,15 +2353,15 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「セットフォーカス](/windows/win32/api/winuser/nf-winuser-setfocus)」を参照してください。
+Windows SDK の「 [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#31](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]
 
-## <a name="cwindowsetfont"></a><a name="setfont"></a>ウィンドウ::フォントを設定します。
+## <a name="cwindowsetfont"></a><a name="setfont"></a>CWindow:: SetFont
 
-ウィンドウに[WM_SETFONT](/windows/win32/winmsg/wm-setfont)メッセージを送信して、ウィンドウの現在のフォントを変更します。
+ウィンドウに[WM_SETFONT](/windows/win32/winmsg/wm-setfont)メッセージを送信することによって、ウィンドウの現在のフォントを変更します。
 
 ```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
@@ -2369,15 +2369,15 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hフォント*<br/>
-[in]新しいフォントへのハンドル。
+*hFont*<br/>
+から新しいフォントを処理するハンドル。
 
-*引き出し*<br/>
-[in]TRUE (既定値) の場合、ウィンドウが再描画されます。 それ以外の場合、スキーマ所有ではありません。
+*より描画*<br/>
+からTRUE (既定値) の場合、ウィンドウは再描画されます。 それ以外の場合、スキーマ所有ではありません。
 
-## <a name="cwindowsethotkey"></a><a name="sethotkey"></a>ウィンドウ::セットホットキー
+## <a name="cwindowsethotkey"></a><a name="sethotkey"></a>CWindow:: SetHotKey
 
-WM_SETHOTKEY メッセージを送信して、ホット キーをウィンドウに関連付けます。
+WM_SETHOTKEY メッセージを送信することによって、ホットキーをウィンドウに関連付けます。
 
 ```
 int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
@@ -2385,19 +2385,19 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*キーコード*<br/>
-[in]ホット キーの仮想キー コード。 標準の仮想キー コードの一覧については、Winuser.h を参照してください。
+*wVirtualKeyCode*<br/>
+からホットキーの仮想キーコード。 標準の仮想キーコードの一覧については、「Winuser. h」を参照してください。
 
-*w修飾子*<br/>
-[in]ホット キーの修飾子。 使用可能な値の一覧については、Windows SDK のWM_SETHOTKEYを参照してください。
+*wModifiers*<br/>
+からホットキーの修飾子。 使用可能な値の一覧については、Windows SDK の「WM_SETHOTKEY」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-可能な戻り値の一覧については、Windows SDK の[WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey)を参照してください。
+返される可能性のある戻り値の一覧については、Windows SDK の「 [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) 」を参照してください。
 
-## <a name="cwindowseticon"></a><a name="seticon"></a>ウィンドウ::セットアイコン
+## <a name="cwindowseticon"></a><a name="seticon"></a>CWindow:: SetIcon
 
-ウィンドウの大きいアイコンまたは小さいアイコンを *、hIcon*で識別されるアイコンに設定します。
+ウィンドウの大きいアイコンまたは小さいアイコンを、 *hIcon*によって識別されるアイコンに設定します。
 
 ```
 HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
@@ -2405,11 +2405,11 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Hicon*<br/>
-[in]新しいアイコンへのハンドル。
+*hIcon*<br/>
+から新しいアイコンを示すハンドル。
 
-*ビグビコン*<br/>
-[in]TRUE (既定値) の場合、メソッドは大きいアイコンを設定します。 それ以外の場合は、小さなアイコンを設定します。
+*bBigIcon*<br/>
+からTRUE (既定値) の場合、メソッドは大きいアイコンを設定します。 それ以外の場合は、小さいアイコンを設定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2419,7 +2419,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 `SetIcon`[WM_SETICON](/windows/win32/winmsg/wm-seticon)メッセージをウィンドウに送信します。
 
-## <a name="cwindowsetmenu"></a><a name="setmenu"></a>ウィンドウ::セットメニュー
+## <a name="cwindowsetmenu"></a><a name="setmenu"></a>CWindow:: SetMenu
 
 ウィンドウの現在のメニューを変更します。
 
@@ -2429,9 +2429,9 @@ BOOL SetMenu(HMENU hMenu) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「セットメニュー](/windows/win32/api/winuser/nf-winuser-setmenu) 」を参照してください。
+Windows SDK の「 [Setmenu](/windows/win32/api/winuser/nf-winuser-setmenu) 」を参照してください。
 
-## <a name="cwindowsetparent"></a><a name="setparent"></a>ウィンドウ::セットペアレント
+## <a name="cwindowsetparent"></a><a name="setparent"></a>CWindow:: SetParent
 
 親ウィンドウを変更します。
 
@@ -2441,15 +2441,15 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「セットペアレント](/windows/win32/api/winuser/nf-winuser-setparent)」を参照してください。
+Windows SDK の「 [Setparent](/windows/win32/api/winuser/nf-winuser-setparent) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#32](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]
 
-## <a name="cwindowsetredraw"></a><a name="setredraw"></a>ウィンドウ::セットリドロー
+## <a name="cwindowsetredraw"></a><a name="setredraw"></a>CWindow:: SetRedraw
 
-ウィンドウに[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)メッセージを送信して、再描画フラグを設定またはクリアします。
+[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)メッセージをウィンドウに送信することによって、再描画フラグを設定またはクリアします。
 
 ```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
@@ -2457,20 +2457,20 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*引き出し*<br/>
-[in]再描画フラグの状態を指定します。 TRUE (既定値) の場合は、再描画フラグが設定されます。FALSE の場合、フラグはクリアされます。
+*より描画*<br/>
+から再描画フラグの状態を指定します。 TRUE (既定値) の場合、再描画フラグが設定されます。FALSE の場合、フラグはクリアされます。
 
 ### <a name="remarks"></a>解説
 
-変更`SetRedraw`を再描画できるようにするか、変更が再描画されないようにする呼び出し。
+を呼び出して、変更を再描画できるようにするか、変更が再 `SetRedraw` 描画されないようにします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#33](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]
 
-## <a name="cwindowsetscrollinfo"></a><a name="setscrollinfo"></a>ウィンドウ::セットスクロール情報
+## <a name="cwindowsetscrollinfo"></a><a name="setscrollinfo"></a>CWindow:: SetScrollInfo
 
-スクロール バーのパラメータを設定します。
+スクロールバーのパラメーターを設定します。
 
 ```
 int SetScrollInfo(
@@ -2481,11 +2481,11 @@ int SetScrollInfo(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「セットスクロール情報](/windows/win32/api/winuser/nf-winuser-setscrollinfo)」を参照してください。
+Windows SDK の「 [SetScrollInfo](/windows/win32/api/winuser/nf-winuser-setscrollinfo) 」を参照してください。
 
-## <a name="cwindowsetscrollpos"></a><a name="setscrollpos"></a>ウィンドウ::セットスクロールポス
+## <a name="cwindowsetscrollpos"></a><a name="setscrollpos"></a>CWindow:: SetScrollPos
 
-スクロール ボックスの位置を変更します。
+スクロールボックスの位置を変更します。
 
 ```
 int SetScrollPos(
@@ -2496,11 +2496,11 @@ int SetScrollPos(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「セットスクロールポス](/windows/win32/api/winuser/nf-winuser-setscrollpos)」を参照してください。
+Windows SDK の「 [SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos) 」を参照してください。
 
-## <a name="cwindowsetscrollrange"></a><a name="setscrollrange"></a>ウィンドウ::セットスクロール範囲
+## <a name="cwindowsetscrollrange"></a><a name="setscrollrange"></a>CWindow:: SetScrollRange
 
-スクロール バーの範囲を変更します。
+スクロールバーの範囲を変更します。
 
 ```
 BOOL SetScrollRange(
@@ -2512,11 +2512,11 @@ BOOL SetScrollRange(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「セットスクロール範囲](/windows/win32/api/winuser/nf-winuser-setscrollrange)」を参照してください。
+Windows SDK の「 [SetScrollRange](/windows/win32/api/winuser/nf-winuser-setscrollrange) 」を参照してください。
 
-## <a name="cwindowsettimer"></a><a name="settimer"></a>ウィンドウ::セットタイマー
+## <a name="cwindowsettimer"></a><a name="settimer"></a>CWindow:: SetTimer
 
-タイマー イベントを作成します。
+タイマーイベントを作成します。
 
 ```
 UINT SetTimer(
@@ -2527,11 +2527,11 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「タイマーの設定](/windows/win32/api/winuser/nf-winuser-settimer)」を参照してください。
+Windows SDK の「 [SetTimer](/windows/win32/api/winuser/nf-winuser-settimer) 」を参照してください。
 
-## <a name="cwindowsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>ウィンドウ::ウィンドウコンテキストヘルプId
+## <a name="cwindowsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWindow:: SetWindowContextHelpId
 
-ウィンドウのヘルプ コンテキスト識別子を設定します。
+ウィンドウのヘルプコンテキスト識別子を設定します。
 
 ```
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
@@ -2539,11 +2539,11 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウコンテキストヘルプId」](/windows/win32/api/winuser/nf-winuser-setwindowcontexthelpid)を参照してください。
+Windows SDK の「 [SetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-setwindowcontexthelpid) 」を参照してください。
 
-## <a name="cwindowsetwindowlong"></a><a name="setwindowlong"></a>ウィンドウ::セットウィンドウロング
+## <a name="cwindowsetwindowlong"></a><a name="setwindowlong"></a>CWindow:: SetWindowLong
 
-指定したオフセットの 32 ビット値を追加ウィンドウ メモリに設定します。
+指定したオフセットで32ビット値を追加ウィンドウメモリに設定します。
 
 ```
 LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
@@ -2551,14 +2551,14 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウロングを設定](/windows/win32/api/winuser/nf-winuser-setwindowlongw)する」を参照してください。
+Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 」を参照してください。
 
 > [!NOTE]
-> 32 ビットバージョンと 64 ビットバージョンの両方の Windows と互換性のあるコードを記述するには[、CWindow::SetWindowLongPtr](#setwindowlongptr)を使用します。
+> 32ビット版と64ビット版の両方の Windows と互換性のあるコードを記述するには、 [CWindow:: SetWindowLongPtr](#setwindowlongptr)を使用します。
 
-## <a name="cwindowsetwindowlongptr"></a><a name="setwindowlongptr"></a>ウィンドウ::セットウィンドウロングプター
+## <a name="cwindowsetwindowlongptr"></a><a name="setwindowlongptr"></a>CWindow:: SetWindowLongPtr
 
-指定したウィンドウの属性を変更し、追加ウィンドウ メモリ内の指定したオフセットに値を設定します。
+指定されたウィンドウの属性を変更します。また、余分なウィンドウメモリ内の指定したオフセットに値を設定します。
 
 ```
 LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
@@ -2566,13 +2566,13 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ長Ptr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw)を設定する」を参照してください。
+Windows SDK の「 [SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) 」を参照してください。
 
-この関数はメソッドに優先します`CWindow::SetWindowLong`。 32 ビットバージョンと 64 ビット版の Windows の両方と互換性のあるコード`CWindow::SetWindowLongPtr`を作成するには、 を使用します。
+この関数は、メソッドよりも優先さ `CWindow::SetWindowLong` れます。 32ビット版と64ビット版の両方の Windows と互換性のあるコードを記述するには、を使用 `CWindow::SetWindowLongPtr` します。
 
-## <a name="cwindowsetwindowplacement"></a><a name="setwindowplacement"></a>ウィンドウ::セットウィンドウ配置
+## <a name="cwindowsetwindowplacement"></a><a name="setwindowplacement"></a>CWindow:: SetWindowPlacement
 
-表示状態と位置を設定します。
+状態と位置の表示を設定します。
 
 ```
 BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
@@ -2580,9 +2580,9 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ配置](/windows/win32/api/winuser/nf-winuser-setwindowplacement)」を参照してください。
+Windows SDK の「 [SetWindowPlacement](/windows/win32/api/winuser/nf-winuser-setwindowplacement) 」を参照してください。
 
-## <a name="cwindowsetwindowpos"></a><a name="setwindowpos"></a>ウィンドウ::セットウィンドウポス
+## <a name="cwindowsetwindowpos"></a><a name="setwindowpos"></a>CWindow:: SetWindowPos
 
 サイズ、位置、および Z の順序を設定します。
 
@@ -2603,11 +2603,11 @@ BOOL SetWindowPos(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウポスの設定](/windows/win32/api/winuser/nf-winuser-setwindowpos)」を参照してください。
+Windows SDK の「 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 」を参照してください。
 
-このメソッドの 2 番目のバージョンでは[、RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを設定します。
+このメソッドの2番目のバージョンでは、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体を使用して、ウィンドウの新しい位置、幅、および高さを設定します。
 
-## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>ウィンドウ::セットウィンドウルグン
+## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow:: SetWindowRgn
 
 ウィンドウのウィンドウ領域を設定します。
 
@@ -2617,9 +2617,9 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウルグン](/windows/win32/api/winuser/nf-winuser-setwindowrgn)」を参照してください。
+Windows SDK の「 [SetWindowRgn](/windows/win32/api/winuser/nf-winuser-setwindowrgn) 」を参照してください。
 
-## <a name="cwindowsetwindowtext"></a><a name="setwindowtext"></a>ウィンドウ::テキストを設定します。
+## <a name="cwindowsetwindowtext"></a><a name="setwindowtext"></a>CWindow:: SetWindowText
 
 ウィンドウのテキストを変更します。
 
@@ -2629,15 +2629,15 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウテキストの設定](/windows/win32/api/winuser/nf-winuser-setwindowtextw)」を参照してください。
+Windows SDK の「 [SetWindowText](/windows/win32/api/winuser/nf-winuser-setwindowtextw) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#34](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]
 
-## <a name="cwindowsetwindowword"></a><a name="setwindowword"></a>ウィンドウ::ウィンドウワードを設定します。
+## <a name="cwindowsetwindowword"></a><a name="setwindowword"></a>CWindow:: SetWindowWord
 
-指定したオフセットの 16 ビット値を追加ウィンドウ メモリに設定します。
+指定したオフセットで、追加のウィンドウメモリに16ビットの値を設定します。
 
 ```
 WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
@@ -2645,11 +2645,11 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウロングを設定](/windows/win32/api/winuser/nf-winuser-setwindowlongw)する」を参照してください。
+Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 」を参照してください。
 
-## <a name="cwindowshowcaret"></a><a name="showcaret"></a>ウィンドウ::ショーキャレット
+## <a name="cwindowshowcaret"></a><a name="showcaret"></a>CWindow:: ShowCaret
 
-システム キャレットを表示します。
+システムキャレットを表示します。
 
 ```
 BOOL ShowCaret() throw();
@@ -2657,15 +2657,15 @@ BOOL ShowCaret() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK の[「ショーキャレット](/windows/win32/api/winuser/nf-winuser-showcaret)」を参照してください。
+Windows SDK の「 [Showcaret](/windows/win32/api/winuser/nf-winuser-showcaret) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#35](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]
 
-## <a name="cwindowshowownedpopups"></a><a name="showownedpopups"></a>ウィンドウ::ショー所有ポップアップ
+## <a name="cwindowshowownedpopups"></a><a name="showownedpopups"></a>CWindow:: ShowOwnedPopups
 
-ウィンドウが所有するポップアップ ウィンドウの表示と非表示を切り替えます。
+ウィンドウによって所有されているポップアップウィンドウの表示と非表示を切り替えます。
 
 ```
 BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
@@ -2673,11 +2673,11 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ショー所有](/windows/win32/api/winuser/nf-winuser-showownedpopups)ポップアップ」を参照してください。
+Windows SDK の「 [ShowOwnedPopups](/windows/win32/api/winuser/nf-winuser-showownedpopups) 」を参照してください。
 
-## <a name="cwindowshowscrollbar"></a><a name="showscrollbar"></a>ウィンドウ::ショースクロールバー
+## <a name="cwindowshowscrollbar"></a><a name="showscrollbar"></a>CWindow:: ShowScrollBar
 
-スクロール バーの表示と非表示を切り替えます。
+スクロールバーの表示と非表示を切り替えます。
 
 ```
 BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
@@ -2685,9 +2685,9 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「スクロール バーの表示](/windows/win32/api/winuser/nf-winuser-showscrollbar)」を参照してください。
+Windows SDK の「 [Showscrollbar](/windows/win32/api/winuser/nf-winuser-showscrollbar) 」を参照してください。
 
-## <a name="cwindowshowwindow"></a><a name="showwindow"></a>ウィンドウ::ショーウィンドウ
+## <a name="cwindowshowwindow"></a><a name="showwindow"></a>CWindow:: ShowWindow
 
 ウィンドウの表示状態を設定します。
 
@@ -2697,13 +2697,13 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ](/windows/win32/api/winuser/nf-winuser-showwindow)表示」を参照してください。
+Windows SDK の「 [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#36](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]
 
-## <a name="cwindowshowwindowasync"></a><a name="showwindowasync"></a>ウィンドウ::ショーウィンドウ同期
+## <a name="cwindowshowwindowasync"></a><a name="showwindowasync"></a>CWindow:: ShowWindowAsync
 
 別のスレッドによって作成されたウィンドウの表示状態を設定します。
 
@@ -2713,9 +2713,9 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ウィンドウ非同期の表示](/windows/win32/api/winuser/nf-winuser-showwindowasync)」を参照してください。
+Windows SDK の「 [Showwindowasync](/windows/win32/api/winuser/nf-winuser-showwindowasync) 」を参照してください。
 
-## <a name="cwindowupdatewindow"></a><a name="updatewindow"></a>ウィンドウ::更新ウィンドウ
+## <a name="cwindowupdatewindow"></a><a name="updatewindow"></a>CWindow:: UpdateWindow
 
 クライアント領域を更新します。
 
@@ -2725,13 +2725,13 @@ BOOL UpdateWindow() throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「更新ウィンドウ](/windows/win32/api/winuser/nf-winuser-updatewindow)」を参照してください。
+Windows SDK の「 [Updatewindow](/windows/win32/api/winuser/nf-winuser-updatewindow) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#37](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]
 
-## <a name="cwindowvalidaterect"></a><a name="validaterect"></a>Cウィンドウ::検証レクト
+## <a name="cwindowvalidaterect"></a><a name="validaterect"></a>CWindow:: ValidateRect
 
 指定された四角形内のクライアント領域を検証します。
 
@@ -2741,11 +2741,11 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の検証Rect](/windows/win32/api/winuser/nf-winuser-validaterect)を参照してください。
+Windows SDK の「 [ValidateRect](/windows/win32/api/winuser/nf-winuser-validaterect) 」を参照してください。
 
-## <a name="cwindowvalidatergn"></a><a name="validatergn"></a>ウィンドウ::検証Rgn
+## <a name="cwindowvalidatergn"></a><a name="validatergn"></a>CWindow:: ValidateRgn
 
-指定した領域内のクライアント領域を検証します。
+指定された領域内のクライアント領域を検証します。
 
 ```
 BOOL ValidateRgn(HRGN hRgn) throw();
@@ -2753,9 +2753,9 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の検証 Rgn](/windows/win32/api/winuser/nf-winuser-validatergn)を参照してください。
+Windows SDK の「 [ValidateRgn](/windows/win32/api/winuser/nf-winuser-validatergn) 」を参照してください。
 
-## <a name="cwindowwinhelp"></a><a name="winhelp"></a>ウィンドウ::ウィンヘルプ
+## <a name="cwindowwinhelp"></a><a name="winhelp"></a>CWindow:: WinHelp
 
 Windows ヘルプを起動します。
 
@@ -2768,7 +2768,7 @@ BOOL WinHelp(
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「ヘルプ](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
+Windows SDK の「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

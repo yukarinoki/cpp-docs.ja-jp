@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232535"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>戻り値
 
-fgetchar は、読み取り文字を**int**として`EOF`返すか、エラーまたはファイルの末尾を示すを返します。 ** \_** fgetwchar は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返すか`WEOF` 、エラーまたはファイルの末尾を示すを返します。 ** \_** どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
+** \_ fgetchar**は、として読み取られた文字を返す **`int`** か、 `EOF` エラーまたはファイルの末尾を示すを返します。 ** \_ fgetwchar**は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返すか、 `WEOF` エラーまたはファイルの末尾を示すを返します。 どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
 
 ## <a name="remarks"></a>解説
 
 これらの関数は、 **stdin**から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**_fgetchar**はと同じ`fgetc( stdin )`です。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は **_fgetchar**のワイド文字バージョンです。
+**_fgetchar**はと同じです `fgetc( stdin )` 。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は **_fgetchar**のワイド文字バージョンです。
 
 これらの関数は ANSI 規格と互換性がありません。
 
@@ -78,7 +78,7 @@ fgetchar は、読み取り文字を**int**として`EOF`返すか、エラー�
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> または \<wchar.h>|

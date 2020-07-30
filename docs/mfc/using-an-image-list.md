@@ -6,27 +6,27 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: 0d9566739a15e5d216eb052a7265313850515648
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 710831ea8ef6b52292ba3e8eb84a69575c6c7508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226829"
 ---
 # <a name="using-an-image-list"></a>イメージ リストの使い方
 
-イメージ リストの一般的な使用方法は、次のパターンに従います。
+イメージリストの一般的な使用方法は、次のパターンに従います。
 
-- [CImageList](../mfc/reference/cimagelist-class.md)オブジェクトを構築し、その[Create](../mfc/reference/cimagelist-class.md#create)関数のオーバーロードのいずれかを呼び出して、イメージ リストを作成`CImageList`し、オブジェクトにアタッチします。
+- [CImageList](../mfc/reference/cimagelist-class.md)オブジェクトを構築し、その[create](../mfc/reference/cimagelist-class.md#create)関数のいずれかのオーバーロードを呼び出して、イメージリストを作成し、それをオブジェクトにアタッチし `CImageList` ます。
 
-- イメージ リストの作成時にイメージを追加しなかった場合は[、Add](../mfc/reference/cimagelist-class.md#add)または[Read](../mfc/reference/cimagelist-class.md#read)メンバー関数を呼び出してイメージ リストにイメージを追加します。
+- イメージリストの作成時にイメージを追加していない場合は、 [add](../mfc/reference/cimagelist-class.md#add)または[Read](../mfc/reference/cimagelist-class.md#read)メンバー関数を呼び出すことによってイメージの一覧にイメージを追加します。
 
-- そのコントロールの適切なメンバー関数を呼び出してイメージ リストをコントロールに関連付けるか、イメージ リストの Draw メンバー関数を使用してイメージ リストからイメージを自分で[描画](../mfc/reference/cimagelist-class.md#draw)します。
+- イメージリストをコントロールに関連付けるには、そのコントロールの適切なメンバー関数を呼び出すか、イメージリストの[描画](../mfc/reference/cimagelist-class.md#draw)メンバー関数を使用してイメージリストからイメージを描画します。
 
-- イメージ リストの組み込みのドラッグサポートを使用して、ユーザーがイメージをドラッグできるようにする可能性があります。
+- イメージリストのドラッグに対する組み込みサポートを使用して、ユーザーがイメージをドラッグできるようにします。
 
 > [!NOTE]
-> **new**演算子を使用してイメージ リストを作成した場合は、`CImageList`オブジェクトを破棄する必要があります。
+> イメージリストが演算子で作成されている場合は、 **`new`** 操作が完了したら、そのオブジェクトを破棄する必要があり `CImageList` ます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268754"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203963"
 ---
 # <a name="any-class"></a>任意のクラス
 
-値を持たないコンス トラクターの要件を満たす任意の型のインスタンス ストアに、クラスの状態任意のオブジェクトが呼び出されます。
+コンストラクターの要件を満たす任意の型のインスタンスを格納します。または、クラスのオブジェクトの状態と呼ばれる値も持っていません。
 
-格納されているインスタンスは、含まれている値と呼ばれます。 2 つの状態は、両方の値を持つありませんか、または値を持つ両方と、含まれている値が同じ場合に、同じです。
+格納されているインスタンスは、含まれている値と呼ばれます。 両方の状態に値がない場合、または両方に値があり、含まれている値が同じ場合、2つの状態は同じになります。
 
 ## <a name="syntax"></a>構文
 
@@ -40,27 +40,27 @@ class any
 
 |||
 |-|-|
-|[any](#any)|`any` 型のオブジェクトを構築します。|
+|[いつ](#any)|`any` 型のオブジェクトを構築します。|
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
 |[emplace](#emplace)|任意の値を設定します。|
-|[has_value](#has_value)|返します**true**がいずれかの値。|
+|[has_value](#has_value)|**`true`** に値がある場合はを返します。|
 |[reset](#reset)|Any をリセットします。|
-|[swap](#swap)|交換する 2 つのオブジェクト。|
+|[スワップ](#swap)|2つのオブジェクトを交換します。|
 |[type](#type)|任意の型を返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#op_eq)|別のコピーのいずれかをすべて置き換えます。|
+|[operator =](#op_eq)|Any を別ののコピーで置き換えます。|
 
-## <a name="any"></a> 任意
+## <a name="any"></a><a name="any"></a>いつ
 
-`any` 型のオブジェクトを構築します。 また、デストラクターが含まれます。
+`any` 型のオブジェクトを構築します。 には、デストラクターも含まれています。
 
 ```cpp
 constexpr any() noexcept;
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 任意の値を設定します。
 
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-返します**true**がいずれかの値。
+**`true`** に値がある場合はを返します。
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> 演算子 =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-別のコピーのいずれかをすべて置き換えます。
+Any を別ののコピーで置き換えます。
 
 ```cpp
 any& operator=(const any& right);
@@ -109,9 +109,9 @@ template <class T>
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-いずれかのいずれかにコピーします。
+Any にコピーされる。
 
-## <a name="reset"></a> リセット
+## <a name="reset"></a><a name="reset"></a>解除
 
 Any をリセットします。
 
@@ -119,15 +119,15 @@ Any をリセットします。
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a><a name="swap"></a>フォト
 
-交換する 2 つのオブジェクト。
+2つのオブジェクトを交換します。
 
 ```cpp
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> 型
+## <a name="type"></a><a name="type"></a> 型
 
 任意の型を返します。
 

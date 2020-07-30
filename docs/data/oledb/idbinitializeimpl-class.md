@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210770"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218326"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IDBInitializeImpl`から派生したクラス。
+から派生したクラス `IDBInitializeImpl` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 |||
 |-|-|
-|[Initialize](#initialize)|プロバイダーを起動します。|
+|[初期化する](#initialize)|プロバイダーを起動します。|
 |[解除](#uninitialize)|プロバイダーを停止します。|
 
 ### <a name="data-members"></a>データ メンバー
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>解説
 
-これらのフラグは、データソースオブジェクトのさまざまな属性の状態を指定または示します。 には、次の**列挙**値が1つ以上含まれています。
+これらのフラグは、データソースオブジェクトのさまざまな属性の状態を指定または示します。 次の値が1つ以上含まれてい **`enum`** ます。
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -171,7 +171,7 @@ DB プロパティ情報の実装オブジェクトへのポインター。
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

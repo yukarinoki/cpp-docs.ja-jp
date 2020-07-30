@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187506"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213126"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-Virtual**キーワードは**、仮想関数または仮想基底クラスを宣言します。
+キーワードは、 **`virtual`** 仮想関数または仮想基底クラスを宣言します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ virtual [access-specifier] base-class-name
 メンバー関数を宣言します。
 
 *アクセス指定子*<br/>
-基底クラス ( **public**、 **protected** 、または**private**) へのアクセスレベルを定義します。 は、 **virtual**キーワードの前または後に置くことができます。
+基本クラス、、またはへのアクセスレベルを定義 **`public`** **`protected`** **`private`** します。 キーワードの前または後に置くことができ **`virtual`** ます。
 
 *基底クラス名*<br/>
 以前に宣言されたクラス型を識別します。
@@ -48,6 +48,6 @@ virtual [access-specifier] base-class-name
 
 次のキーワードも参照してください: [class](../cpp/class-cpp.md)、 [private](../cpp/private-cpp.md)、 [public](../cpp/public-cpp.md)、 [protected](../cpp/protected-cpp.md)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)

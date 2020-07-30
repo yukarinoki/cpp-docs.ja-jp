@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1e1b13960c84d4e03c6316c451c690f8b5a6236e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212866"
 ---
 # <a name="compiler-error-c2061"></a>コンパイラエラー C2061
 
 構文エラー: 識別子 ' identifier '
 
-コンパイラは、予期されていなかった識別子を検出しました。 使用する前に `identifier` が宣言されていることを確認してください。
+コンパイラは、予期されていなかった識別子を検出しました。 を `identifier` 使用する前に、が宣言されていることを確認します。
 
-初期化子は、かっこで囲むことができます。 この問題を回避するには、宣言子をかっこで囲むか、`typedef`にします。
+初期化子は、かっこで囲むことができます。 この問題を回避するには、宣言子をかっこで囲むか、をに設定し **`typedef`** ます。
 
 このエラーは、コンパイラがクラステンプレート引数として式を検出した場合にも発生する可能性があります。型であることをコンパイラに通知するには、 [typename](../../cpp/typename.md)を使用します。
 

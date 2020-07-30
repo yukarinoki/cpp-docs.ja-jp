@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917940"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216818"
 ---
 # <a name="realloc"></a>realloc
 
@@ -67,13 +67,13 @@ void *realloc(
 
 ## <a name="return-value"></a>戻り値
 
-**realloc**は、再割り当てされた (移動される可能性もある) メモリブロックへの**void**ポインターを返します。
+**realloc**は **`void`** 、再割り当てされた (移動される可能性もある) メモリブロックへのポインターを返します。
 
 指定されたサイズまでブロックを拡張するのに十分なメモリがない場合、元のブロックは変更されず、 **NULL**が返されます。
 
 *Size*が0の場合、 *memblock*が指すブロックは解放されます。戻り値は**NULL**で、 *memblock*は解放されたブロックを指しています。
 
-戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 **Void**以外の型へのポインターを取得するには、戻り値に型キャストを使用します。
+戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 以外の型へのポインターを取得するには **`void`** 、戻り値に型キャストを使用します。
 
 ## <a name="remarks"></a>解説
 
@@ -83,7 +83,7 @@ void *realloc(
 
 **realloc**は、メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ**を超えた場合に、 **errno**を**ENOMEM**に設定します。 その他のエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-**realloc**は、C++ の[_set_new_mode](set-new-mode.md)関数を使用して新しいハンドラーモードを設定するために**malloc**を呼び出します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドして、 **realloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+**realloc**は、C++ の[_set_new_mode](set-new-mode.md)関数を使用して新しいハンドラーモードを設定するために**malloc**を呼び出します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドして、 **realloc**がメモリの割り当てに失敗したときに、 **malloc**は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```C
 _set_new_mode(1);
@@ -93,15 +93,15 @@ _set_new_mode(1);
 
 アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **realloc**は[_realloc_dbg](realloc-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**realloc**はと`__declspec(noalias)` `__declspec(restrict)`マークされています。つまり、関数はグローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**realloc**はとマークされてい `__declspec(noalias)` `__declspec(restrict)` ます。つまり、関数はグローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**realloc**|\<stdlib.h> と \<malloc.h>|
+|**realloc**|\<stdlib.h> および \<malloc.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

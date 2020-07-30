@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4092
 ms.assetid: 396ae826-a892-4327-bd66-f4762376d72b
-ms.openlocfilehash: 6786d692785dbca575d4b241b7b3e3d40575b686
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 675e6ccbc516734a405620aa74eaa04ff2f75087
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198550"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219990"
 ---
 # <a name="compiler-warning-level-4-c4092"></a>コンパイラの警告 (レベル 4) C4092
 
-sizeof は ' unsigned long ' を返します
+> sizeof は ' unsigned long ' を返します
 
-`sizeof` 演算子のオペランドが非常に大きいため、`sizeof` は unsigned **long**を返しました。 この警告は、Microsoft 拡張機能 ([/ze](../../build/reference/za-ze-disable-language-extensions.md)) で発生します。 ANSI 互換 (/Za) では、代わりに結果が切り捨てられます。
+演算子のオペランドが **`sizeof`** 非常に大きいため、 **`sizeof`** が返されました **`unsigned long`** 。 この警告は、Microsoft 拡張機能 () で発生し [`/Ze`](../../build/reference/za-ze-disable-language-extensions.md) ます。 ANSI 互換 ( **`/Za`** ) では、代わりに結果が切り捨てられます。

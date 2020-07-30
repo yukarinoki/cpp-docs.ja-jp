@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943225"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221966"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
 
@@ -56,28 +56,28 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 構築する複素数の実数部。
 
-*imaginary*<br/>
+*仮想*<br/>
 構築する複素数の虚数部。
 
 ## <a name="return-value"></a>戻り値
 
-指定された浮動小数点型の値に対する複素数 (*実数*、*虚数* \* i) を**表す、** **_Fcomplex**、または **_Lcomplex**構造体。
+指定され **_Fcomplex**た浮動小 **_Lcomplex**数点型の値に対する複素数 (*実数*、*虚数*) を表す **_Dcomplex**、_Fcomplex、または _Lcomplex 構造体 \* 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Cbuild**、 **(fcbuild**)、および**lcbuild**関数は、複合型の作成を簡略化します。 表示される複素数の実数部と虚数部を取得するには、 [creal、crealf、creal](creal-crealf-creall.md) 、および[cimag、cimagf、cimagf](cimag-cimagf-cimagl.md)関数を使用します。
+**_Cbuild**、 **_FCbuild**、および **_LCbuild**の各関数は、複合型の作成を簡略化します。 表示される複素数の実数部と虚数部を取得するには、 [creal、crealf、creal](creal-crealf-creall.md) 、および[cimag、cimagf、cimagf](cimag-cimagf-cimagl.md)関数を使用します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**_Cbuild**、( **fcbuild**)、 **lcbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**、 **_FCbuild**、 **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-これらの関数は、Microsoft 固有の関数です。 型 **(_t**、 **_Fcomplex**、および **_Lcomplex** ) は、実装されていない C99 ネイティブ型に対して、それぞれ**Complex**、 **float**、および**long double complex**の各型に相当します。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex**型はそれぞれ、実装されていない C99 ネイティブ型、、およびに相当し **`double _Complex`** **`float _Complex`** **`long double _Complex`** ます。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc、_FCmulcc、_LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr、_FCmulcr、_LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>

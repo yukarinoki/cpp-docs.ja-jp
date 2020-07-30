@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909335"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213516"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -98,7 +98,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 *x*<br/>
 開始する浮動小数点値。
 
-*前年*<br/>
+*y*<br/>
 移動する浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -109,7 +109,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 パラメーターの型が*y*の場合を除き、 **nextafter**関数と**nextafter**関数ファミリは同等です。 *X*と*y*が等しい場合、返される値は、戻り値の型に変換された*y*になります。
 
-C++ ではオーバーロードが可能である\<ため、cmath> を含めた場合は、 **float**型および**long** **double**型を返す**nextafter**と**nextafter**のオーバーロードを呼び出すことができます。 C プログラムでは、 **nextafter**と**nextafter**は常に**double**を返します。
+C++ ではオーバーロードが可能であるため、を含めると、 \<cmath> その戻り値と型を、 **nextafter**と**nextafter**オーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **nextafter**と**nextafter**は常にを返し **`double`** ます。
 
 **_Nextafter**関数と **_nextafterf**関数は、Microsoft 固有の関数です。 **_Nextafterf**関数は、x64 用にコンパイルする場合にのみ使用できます。
 
@@ -117,7 +117,7 @@ C++ ではオーバーロードが可能である\<ため、cmath> を含めた�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nextafter**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> または \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> または \<cfloat>|
@@ -126,5 +126,5 @@ C++ ではオーバーロードが可能である\<ため、cmath> を含めた�
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

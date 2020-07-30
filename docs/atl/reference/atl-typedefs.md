@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 26e4e80ed3110351130731e6030427d25fc4a0ea
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168736"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228038"
 ---
 # <a name="atl-typedefs"></a>ATL Typedefs
 
@@ -44,10 +44,10 @@ Active Template Library には、次の typedef が含まれています。
 |[CComDispatchDriver](#ccomdispatchdriver)|このクラスは、COM インターフェイスポインターを管理します。|
 |[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。|
 |[CComObjectThreadModel](#ccomobjectthreadmodel)|使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。|
-|[CContainedWindow](#ccontainedwindow)|このクラスは、の`CContainedWindowT`特殊化です。|
-|[CPath](#cpath)|を使用`CString`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
-|[CPathA](#cpatha)|を使用`CStringA`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
-|[CPathW](#cpathw)|を使用`CStringW`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
+|[CContainedWindow](#ccontainedwindow)|このクラスは、の特殊化です `CContainedWindowT` 。|
+|[CPath](#cpath)|を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CString` 。|
+|[CPathA](#cpatha)|を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CStringA` 。|
+|[CPathW](#cpathw)|を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CStringW` 。|
 |[CSimpleValArray](#csimplevalarray)|単純型を格納するための配列を表します。|
 |[DefaultThreadTraits](#defaultthreadtraits)|既定のスレッド特徴クラス。|
 |[LPCURL](#lpcurl)|定数[CUrl](../../atl/reference/curl-class.md)オブジェクトへのポインター。|
@@ -161,23 +161,23 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>解説
 
-アプリケーションで使用されるスレッドモデルに応じて、 **typedef**名`CComGlobalsThreadModel`は[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラスは`typedef` 、重要なセクションクラスを参照するための追加の名前を提供します。
+アプリケーションで使用されるスレッドモデルに応じて、 **`typedef`** 名前は `CComGlobalsThreadModel` [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラス **`typedef`** は、重要なセクションクラスを参照するための追加の名前を提供します。
 
 > [!NOTE]
 > `CComGlobalsThreadModel`はクラス[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)を参照していません。
 
-を`CComGlobalsThreadModel`使用すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
+を使用 `CComGlobalsThreadModel` すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-に`CComGlobalsThreadModel`加えて、ATL には**typedef**名[CComObjectThreadModel](#ccomobjectthreadmodel)が用意されています。 によって参照さ`typedef`れるクラスは、次の表に示すように、使用されるスレッドモデルによって異なります。
+に加え `CComGlobalsThreadModel` て、ATL には CComObjectThreadModel という名前が付いて **`typedef`** います。 [CComObjectThreadModel](#ccomobjectthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
 
 |Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
 
-単一`CComObjectThreadModel`のオブジェクトクラス内で使用します。 プログラム`CComGlobalsThreadModel`でグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
+`CComObjectThreadModel`単一のオブジェクトクラス内で使用します。 `CComGlobalsThreadModel`プログラムでグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -201,23 +201,23 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>解説
 
-アプリケーションで使用されるスレッドモデルに応じて、 `typedef`名前`CComObjectThreadModel`は[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラスは`typedef` 、重要なセクションクラスを参照するための追加の名前を提供します。
+アプリケーションで使用されるスレッドモデルに応じて、 **`typedef`** 名前は `CComObjectThreadModel` [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラス **`typedef`** は、重要なセクションクラスを参照するための追加の名前を提供します。
 
 > [!NOTE]
 > `CComObjectThreadModel`はクラス[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)を参照していません。
 
-を`CComObjectThreadModel`使用すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
+を使用 `CComObjectThreadModel` すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-に`CComObjectThreadModel`加えて、ATL には**typedef**名[CComGlobalsThreadModel](#ccomglobalsthreadmodel)が用意されています。 各**typedef**によって参照されるクラスは、次の表に示すように、使用されるスレッドモデルによって異なります。
+に加え `CComObjectThreadModel` て、ATL には CComGlobalsThreadModel という名前が付いて **`typedef`** います。 [CComGlobalsThreadModel](#ccomglobalsthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
 
 |Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
 
-単一`CComObjectThreadModel`のオブジェクトクラス内で使用します。 プログラム`CComGlobalsThreadModel`でグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
+`CComObjectThreadModel`単一のオブジェクトクラス内で使用します。 `CComGlobalsThreadModel`プログラムでグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -225,7 +225,7 @@ S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
 
 ## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow
 
-このクラスは、の`CContainedWindowT`特殊化です。
+このクラスは、の特殊化です `CContainedWindowT` 。
 
 ```cpp
 typedef CContainedWindowT<CWindow> CContainedWindow;
@@ -237,11 +237,11 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ### <a name="remarks"></a>解説
 
-`CContainedWindow`は[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)の特殊化です。 基底クラスまたは特徴を変更する場合は、を`CContainedWindowT`直接使用します。
+`CContainedWindow`は[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)の特殊化です。 基底クラスまたは特徴を変更する場合は、を `CContainedWindowT` 直接使用します。
 
 ## <a name="cpath"></a><a name="cpath"></a>CPath
 
-を使用`CString`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。
+を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CString` 。
 
 ```cpp
 typedef CPathT<CString> CPath;
@@ -253,7 +253,7 @@ typedef CPathT<CString> CPath;
 
 ## <a name="cpatha"></a><a name="cpatha"></a>CPathA
 
-を使用`CStringA`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。
+を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CStringA` 。
 
 ```cpp
 typedef CPathT<CStringA> CPathA;
@@ -265,7 +265,7 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="cpathw"></a><a name="cpathw"></a>CPathW
 
-を使用`CStringW`した[cpatht](../../atl/reference/cpatht-class.md)の特殊化。
+を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化 `CStringW` 。
 
 ```cpp
 typedef ATL::CPathT<CStringW> CPathW;
@@ -343,4 +343,4 @@ typedef CUrl* LPURL;
 [関数](../../atl/reference/atl-functions.md)<br/>
 [グローバル変数](../../atl/reference/atl-global-variables.md)<br/>
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
-[マクロ](../../atl/reference/atl-macros.md)
+[[マクロ]](../../atl/reference/atl-macros.md)

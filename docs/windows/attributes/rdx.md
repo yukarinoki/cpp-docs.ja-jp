@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232756"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,11 +32,11 @@ ms.locfileid: "80214631"
 Optional設定する値フィールドを指定します。 この名前の値フィールドがキーにまだ存在しない場合は、追加されます。
 
 *regtype*<br/>
-追加するレジストリキーの種類。 次のいずれかを指定できます: `text`、`dword`、`binary`、または `CString`。
+追加するレジストリキーの種類。 、、 `text` `dword` `binary` 、またはのいずれかを指定できます `CString` 。
 
 ## <a name="remarks"></a>解説
 
-**Rdx** C++属性は、COM コンポーネントの既存のレジストリキーを作成または変更します。 属性は、ターゲットメンバーを実装するオブジェクトに BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`、BEGIN_RDX_MAP マクロの結果として挿入された関数を使用して、レジストリとデータメンバーの間でデータを転送できます。
+**Rdx** C++ 属性は、COM コンポーネントの既存のレジストリキーを作成または変更します。 属性は、ターゲットメンバーを実装するオブジェクトに BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`BEGIN_RDX_MAP マクロの結果として挿入された関数を使用して、レジストリとデータメンバーの間でデータを転送できます。
 
 この属性は、[コクラス](coclass.md)、 [progid](progid.md)、または[vi_progid](vi-progid.md)属性、またはこれらの属性のいずれかを意味するその他の属性と組み合わせて使用できます。
 
@@ -46,9 +46,9 @@ Optional設定する値フィールドを指定します。 この名前の値�
 
 |||
 |-|-|
-|**対象**|**クラス**または**構造体**のメンバー|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`class`** または **`struct`** メンバー|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
 [registration_script](registration-script.md)

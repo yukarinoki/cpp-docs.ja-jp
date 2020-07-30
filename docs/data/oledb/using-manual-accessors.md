@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: a6c0e5236702229a61a828344ba5d0d288898aee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b76c6a2d0af404bc526fee8f511320a58ffd86ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218287"
 ---
 # <a name="using-manual-accessors"></a>手動アクセサーの使用
 
@@ -25,26 +25,26 @@ ms.locfileid: "80209327"
 
 - 複数のリターン行セットがあるかどうかを確認する
 
-OLE DB コンシューマーテンプレートでこれらの操作を行うには、`CManualAccessor` クラスを使用して次の手順を実行します。
+OLE DB コンシューマーテンプレートでこれらの操作を行うには、 `CManualAccessor` クラスを使用して次の手順を実行します。
 
-1. `CManualAccessor` をテンプレートパラメーターとして `CCommand` オブジェクトを開きます。
+1. `CCommand`で `CManualAccessor` テンプレートパラメーターとしてオブジェクトを開きます。
 
     ```cpp
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;
     ```
 
-1. `IDBSchemaRowset` インターフェイスのセッションに対してクエリを実行し、プロシージャパラメーターの行セットを使用します。 `IDBSchemaRowset` インターフェイスが使用できない場合は、`ICommandWithParameters` インターフェイスを照会します。 詳細については、`GetParameterInfo` を呼び出してください。 どちらのインターフェイスも使用できない場合は、パラメーターがないと見なすことができます。
+1. インターフェイスのセッションに対してクエリ `IDBSchemaRowset` を実行し、プロシージャパラメーターの行セットを使用します。 インターフェイスが使用できない場合は、 `IDBSchemaRowset` インターフェイスを照会し `ICommandWithParameters` ます。 `GetParameterInfo`情報を参照してください。 どちらのインターフェイスも使用できない場合は、パラメーターがないと見なすことができます。
 
-1. 各パラメーターに対して `AddParameterEntry` を呼び出して、パラメーターを追加し、設定します。
+1. 各パラメーターに対してを呼び出し、 `AddParameterEntry` パラメーターを追加して設定します。
 
-1. 行セットを開きますが、bind パラメーターを**false**に設定します。
+1. 行セットを開き、bind パラメーターをに設定 **`false`** します。
 
-1. `GetColumnInfo` を呼び出して、出力列を取得します。 `AddBindEntry` を使用して、出力列をバインドに追加します。
+1. `GetColumnInfo`を呼び出して、出力列を取得します。 を使用して、 `AddBindEntry` 出力列をバインドに追加します。
 
-1. `GetNextResult` を呼び出して、使用可能な行セットがあるかどうかを確認します。 手順 2. ~ 5. を繰り返します。
+1. を呼び出して、 `GetNextResult` 使用可能な行セットがあるかどうかを確認します。 手順 2. ~ 5. を繰り返します。
 
-手動アクセサーの例については、 [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)サンプルの「`CDBListView::CallProcedure`」を参照してください。
+手動アクセサーの例については、 `CDBListView::CallProcedure` [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)サンプルの「」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [アクセサーの使用](../../data/oledb/using-accessors.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626143"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230494"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール : カスタム プロパティの追加
 
@@ -62,7 +62,7 @@ ms.locfileid: "84626143"
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
-1. [**プロパティの種類**] ボックスで、[ **short**] を選択します。
+1. [**プロパティの種類**] ボックスで、を選択し **`short`** ます。
 
 1. Get 関数と Set 関数に一意の名前を入力するか、既定の名前をそのまま使用します。
 
@@ -95,6 +95,6 @@ CircleOffset カスタムプロパティを追加すると、プロパティの�
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール : プロパティ](mfc-activex-controls-properties.md)<br/>
+[MFC ActiveX コントロール: プロパティ](mfc-activex-controls-properties.md)<br/>
 [MFC ActiveX コントロール: メソッド](mfc-activex-controls-methods.md)<br/>
 [COleControl クラス](reference/colecontrol-class.md)

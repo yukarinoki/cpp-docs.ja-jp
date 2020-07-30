@@ -1,14 +1,14 @@
 ---
-title: クラス、構造体、および共用体のブレースの初期化
-description: C++ クラス、構造体、または共用体でかっこ初期化を使用する
+title: クラス、構造体、および共用体の中かっこの初期化
+description: 任意の C++ クラス、構造体、または共用体と共に中かっこの初期化を使用する
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d862ff01ef7375c9d46791f7549d8a07682c3586
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227427"
 ---
 # <a name="brace-initialization"></a>かっこ初期化
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-クラスまたは構造体にコンストラクターがない場合は、クラスでメンバーが宣言されている順序でリスト要素を指定します。 クラスにコンストラクターがある場合は、パラメーターの順序で要素を指定します。 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
+クラスまたは構造体にコンストラクターがない場合は、メンバーがクラス内で宣言されている順序でリスト要素を指定します。 クラスにコンストラクターがある場合は、パラメーターの順序で要素を指定します。 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-括弧初期化は、通常初期化を行う任意の場所 (関数パラメーターや戻り値、または**new**キーワードなど) で使用できます。
+かっこ初期化は、通常、初期化を行うときに使用できます。たとえば、関数パラメーターや戻り値として、またはキーワードを使用し **`new`** ます。
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-**/std:c++17**モードでは、空のかっこの初期化の規則は、少し制限が厳しい。 [派生コンストラクターと拡張集約初期化](constructors-cpp.md#extended_aggregate)を参照してください。
+**/Std: c++ 17**モードでは、空の中かっこの初期化に関する規則の方が若干制限されています。 「[派生コンストラクターと拡張集計の初期化」を](constructors-cpp.md#extended_aggregate)参照してください。
 
-## <a name="initializer_list-constructors"></a>initializer_listコンストラクター
+## <a name="initializer_list-constructors"></a>initializer_list コンストラクター
 
-[initializer_list Class](../standard-library/initializer-list-class.md)は、コンストラクターや他のコンテキストで使用できる、指定した型のオブジェクトのリストを表します。 かっこ初期化を使用して、initializer_list を構築できます。
+[Initializer_list クラス](../standard-library/initializer-list-class.md)は、コンストラクターとその他のコンテキストで使用できる、指定した型のオブジェクトのリストを表します。 かっこ初期化を使用して、initializer_list を構築できます。
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
-> このクラスを使用するには[\<、initializer_list>](../standard-library/initializer-list.md)ヘッダーを含める必要があります。
+> このクラスを使用するには、ヘッダーを含める必要があり [\<initializer_list>](../standard-library/initializer-list.md) ます。
 
 `initializer_list` をコピーできます。 この場合、新しいリストのメンバーは、元のリストのメンバーを参照します。
 

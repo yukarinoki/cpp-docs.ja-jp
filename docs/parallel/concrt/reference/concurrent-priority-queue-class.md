@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 1d8651d1391ded2970a00a7429c36f341a438659
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 024bd2a100b8a0b871d98a5e6001858b55977565
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143216"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230364"
 ---
 # <a name="concurrent_priority_queue-class"></a>concurrent_priority_queue クラス
 
@@ -49,9 +49,9 @@ template <typename T,
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |`allocator_type`|同時優先順位キューのアロケータークラスを表す型。|
 |`const_reference`|同時実行優先順位キューに格納されている型の要素への const 参照を表す型。|
@@ -61,13 +61,13 @@ template <typename T,
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[concurrent_priority_queue](#ctor)|オーバーロードされます。 同時優先順位キューを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[オフ](#clear)|同時実行優先度内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。|
 |[empty](#empty)|このメソッドが呼び出されたときに、同時優先順位キューが空かどうかをテストします。 このメソッドはコンカレンシー セーフです。|
@@ -79,25 +79,25 @@ template <typename T,
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
+|[operator =](#operator_eq)|オーバーロードされます。 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`concurrent_priority_queue` クラスの詳細については、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
+クラスの詳細につい `concurrent_priority_queue` ては、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `concurrent_priority_queue`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concurrent_priority_queue
 
 **名前空間:** concurrency
 
-## <a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a>クリア
 
 同時実行優先度内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -105,11 +105,11 @@ template <typename T,
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`clear` は同時実行セーフではありません。 このメソッドを呼び出すときに、他のスレッドが同時優先順位キューに対してメソッドを呼び出していないことを確認する必要があります。 `clear` はメモリを解放しません。
+`clear`は同時実行セーフではありません。 このメソッドを呼び出すときに、他のスレッドが同時優先順位キューに対してメソッドを呼び出していないことを確認する必要があります。 `clear`はメモリを解放しません。
 
-## <a name="ctor"></a>concurrent_priority_queue
+## <a name="concurrent_priority_queue"></a><a name="ctor"></a>concurrent_priority_queue
 
 同時優先順位キューを構築します。
 
@@ -161,21 +161,21 @@ concurrent_priority_queue(
 *_Src*<br/>
 要素のコピー元または移動元の `concurrent_priority_queue` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-すべてのコンストラクターは、アロケーターオブジェクト `_Al` を格納し、優先順位キューを初期化します。
+すべてのコンストラクターは、アロケーターオブジェクトを格納 `_Al` し、優先順位キューを初期化します。
 
 最初のコンストラクターは、空の初期優先順位キューを指定し、必要に応じてアロケーターを指定します。
 
-2番目のコンストラクターは、初期容量 `_Init_capacity` の優先順位キューを指定し、必要に応じてアロケーターを指定します。
+2番目のコンストラクターは、初期容量の優先キューを指定 `_Init_capacity` し、必要に応じてアロケーターを指定します。
 
-3番目のコンストラクターは、反復子の範囲 [`_Begin`、`_End`) によって指定された値を指定し、必要に応じてアロケーターを指定します。
+3番目のコンストラクターは、反復子の範囲 [,) によって指定された値を指定 `_Begin` し、必要に応じてアロケーターを指定し `_End` ます。
 
-4番目と5番目のコンストラクターは、優先順位キュー `_Src`のコピーを指定します。
+4番目と5番目のコンストラクターは、優先順位キューのコピーを指定し `_Src` ます。
 
-6番目と7番目のコンストラクターは、優先順位キュー `_Src`の移動を指定します。
+6番目と7番目のコンストラクターは、優先順位キューの移動を指定し `_Src` ます。
 
-## <a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a>指定
 
 このメソッドが呼び出されたときに、同時優先順位キューが空かどうかをテストします。 このメソッドはコンカレンシー セーフです。
 
@@ -185,9 +185,9 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-関数が呼び出された時点で優先順位キューが空だった場合は**true** 、それ以外の場合は**false** 。
+**`true`** 関数が呼び出された時点で優先順位キューが空だった場合は **`false`** 。それ以外の場合は。
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 同時優先順位キューを構築するために使用されるアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。
 
@@ -197,9 +197,9 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>戻り値
 
-`concurrent_priority_queue` オブジェクトを構築するために使用されるアロケーターのコピー。
+オブジェクトの構築に使用されるアロケーターのコピー `concurrent_priority_queue` 。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
 
@@ -218,7 +218,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 この `concurrent_priority_queue` オブジェクトへの参照。
 
-## <a name="push"></a>押し付け
+## <a name="push"></a><a name="push"></a>押し付け
 
 同時優先順位キューに要素を追加します。 このメソッドはコンカレンシー セーフです。
 
@@ -233,7 +233,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 同時優先順位キューに追加する要素。
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a>幅
 
 同時優先順位キュー内の要素の数を返します。 このメソッドはコンカレンシー セーフです。
 
@@ -243,13 +243,13 @@ size_type size() const;
 
 ### <a name="return-value"></a>戻り値
 
-この `concurrent_priority_queue` オブジェクト内の要素の数。
+このオブジェクト内の要素の数 `concurrent_priority_queue` 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-返されるサイズには、関数 `push`の呼び出しによって追加されたすべての要素が含まれることが保証されます。 ただし、保留中の同時操作の結果が反映されない場合があります。
+返されるサイズには、関数の呼び出しによって追加されたすべての要素が含まれることが保証され `push` ます。 ただし、保留中の同時操作の結果が反映されない場合があります。
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a>フォト
 
 2つの同時優先順位キューの内容を交換します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -262,7 +262,7 @@ void swap(concurrent_priority_queue& _Queue);
 *_Queue*<br/>
 コンテンツの交換先の `concurrent_priority_queue` オブジェクト。
 
-## <a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a>try_pop
 
 キューが空でない場合は、キューから最も優先順位の高い要素を削除して返します。 このメソッドはコンカレンシー セーフです。
 
@@ -277,9 +277,9 @@ bool try_pop(reference _Elem);
 
 ### <a name="return-value"></a>戻り値
 
-値がポップされた場合は**true** 、それ以外の場合は**false** 。
+**`true`** 値がポップされた場合は **`false`** 。それ以外の場合は。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)

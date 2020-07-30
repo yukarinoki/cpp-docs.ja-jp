@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9297c0062a3c64a4e830e083b515aef41416e527
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230962"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 値クラス
 
-ブール値を表します。 `bool`と同じ。
+ブール値を表します。 と等価の **`bool`** 。
 
 ## <a name="syntax"></a>構文
 
@@ -30,13 +30,13 @@ public value struct Boolean
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 ## <a name="see-also"></a>関連項目
 

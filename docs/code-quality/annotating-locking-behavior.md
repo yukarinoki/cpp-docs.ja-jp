@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404025"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232366"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 
@@ -116,7 +116,7 @@ SAL は、重要なセクション、ミューテックス、スピンロック�
 |`_Moves_lock_(target, source)`|`move constructor`オブジェクトからにロック状態を転送する操作について説明し `source` `target` ます。 は `target` 新しく構築されたオブジェクトと見なされるため、以前の状態が失われ、状態に置き換えられ `source` ます。 また、は、 `source` ロック数または別名ターゲットを使用せずにクリーン状態にリセットされますが、エイリアスを指すエイリアスは変更されません。|
 |`_Replaces_lock_(target, source)`|`move assignment operator`ソースから状態を転送する前にターゲットロックが解放されるセマンティクスについて説明します。 これは、の前にを付けたものと見なすことができ `_Moves_lock_(target, source)` `_Releases_lock_(target)` ます。|
 |`_Swaps_locks_(left, right)`|オブジェクトを想定し、その状態を交換する標準の動作について説明し `swap` `left` `right` ます。 交換される状態には、ロック数とエイリアスターゲット (存在する場合) が含まれます。 オブジェクトおよびオブジェクトを指すエイリアスは `left` `right` 変更されません。|
-|`_Detaches_lock_(detached, lock)`|ロックラッパーの種類で、含まれているリソースと関連付け解除を許可するシナリオについて説明します。 これは、が内部ポインターを操作する方法と似 `std::unique_ptr` ています。プログラマはポインターを抽出し、スマートポインターコンテナーをクリーンな状態にしておくことができます。 同様のロジックはでサポートされて `std::unique_lock` おり、カスタムロックラッパーで実装できます。 デタッチされたロックは、その状態 (ロックカウントとエイリアスターゲットが存在する場合) を保持しますが、ラッパーは、独自のエイリアスを保持しながら、ゼロロックカウントとエイリアスターゲットを含まないようにリセットされます。 ロック数に対する操作 (解放および取得) はありません。 この注釈はとまったく同じように動作し `_Moves_lock_` ますが、デタッチされた引数はではなくである必要がある点が異なり `return` `this` ます。|
+|`_Detaches_lock_(detached, lock)`|ロックラッパーの種類で、含まれているリソースと関連付け解除を許可するシナリオについて説明します。 これは、が内部ポインターを操作する方法と似 `std::unique_ptr` ています。プログラマはポインターを抽出し、スマートポインターコンテナーをクリーンな状態にしておくことができます。 同様のロジックはでサポートされて `std::unique_lock` おり、カスタムロックラッパーで実装できます。 デタッチされたロックは、その状態 (ロックカウントとエイリアスターゲットが存在する場合) を保持しますが、ラッパーは、独自のエイリアスを保持しながら、ゼロロックカウントとエイリアスターゲットを含まないようにリセットされます。 ロック数に対する操作 (解放および取得) はありません。 この注釈はとまったく同じように動作し `_Moves_lock_` ますが、デタッチされた引数はではなくである必要がある点が異なり **`return`** **`this`** ます。|
 
 ## <a name="see-also"></a>関連項目
 

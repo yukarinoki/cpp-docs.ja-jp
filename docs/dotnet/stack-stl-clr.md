@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208326"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214889"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-このテンプレートクラスは、後入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプター `stack` を使用すると、基になるコンテナーをプッシュダウンスタックとして管理できます。
+このテンプレートクラスは、後入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプターは、 `stack` 基になるコンテナーをプッシュダウンスタックとして管理するために使用します。
 
-次の説明では、`GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、`Value^`します。 同様に、`GContainer` は*コンテナー*と同じですが、後者が参照型である場合は `Container^`ます。
+次の説明で、 `GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、*コンテナー*と同じです。この場合、は `Container^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -88,13 +88,13 @@ template<typename Value,
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/stack >
+**ヘッダー:**\<cliext/stack>
 
 **名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
-|型定義|説明|
+|型の定義|説明|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[stack::container_type (STL/CLR)](#container_type)|基になるコンテナーの型。|
@@ -117,26 +117,26 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|最後の要素にアクセスします。|
 |[stack::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
 
-|プロパティ|説明|
+|プロパティ|Description|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|最後の要素にアクセスします。|
 
 |演算子|説明|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator!= (stack) (STL/CLR)](#op_neq)|`stack` オブジェクトが別の `stack` オブジェクトと等しくないかどうかを判断します。|
-|[operator< (stack) (STL/CLR)](#op_lt)|`stack` オブジェクトが、別の `stack` オブジェクトより小さいかどうかを判断します。|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|`stack` オブジェクトが、別の `stack` オブジェクト以下かどうかを判断します。|
-|[operator== (stack) (STL/CLR)](#op_eq)|`stack` オブジェクトが別の `stack` オブジェクトと等しいかどうかを判断します。|
-|[operator> (stack) (STL/CLR)](#op_gt)|`stack` オブジェクトが、別の `stack` オブジェクトより大きいかどうかを判断します。|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|`stack` オブジェクトが、別の `stack` オブジェクト以上かどうかを判断します。|
+|[operator! = (stack) (STL/CLR)](#op_neq)|オブジェクトが別のオブジェクトと等しくないかどうかを判断し `stack` `stack` ます。|
+|[operator< (stack) (STL/CLR)](#op_lt)|`stack`オブジェクトが別のオブジェクトより小さいかどうかを判断し `stack` ます。|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|オブジェクトが別のオブジェクト以下かどうかを判断し `stack` `stack` ます。|
+|[operator== (stack) (STL/CLR)](#op_eq)|オブジェクトが別のオブジェクトと等しいかどうかを判断し `stack` `stack` ます。|
+|[operator> (stack) (STL/CLR)](#op_gt)|`stack`オブジェクトが他のオブジェクトより大きいかどうかを判断し `stack` ます。|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|オブジェクトが別のオブジェクト以上かどうかを判断し `stack` `stack` ます。|
 
 ## <a name="interfaces"></a>インターフェイス
 
 |インターフェイス|説明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|オブジェクトを複製します。|
-|IStack\<値、コンテナー >|汎用コンテナーアダプターを維持します。|
+|IStack\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
 ## <a name="remarks"></a>解説
 
@@ -156,12 +156,12 @@ void assign(stack<Value, Container>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 挿入するコンテナーアダプター。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、基になるコンテナーに `right.get_container()` を割り当てます。 スタックの内容全体を変更するには、これを使用します。
+このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 スタックの内容全体を変更するには、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`に相当します。 スタックが空であるかどうかをテストするために使用します。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 [Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)に相当 `() == 0` します。 スタックが空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -471,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。 (`GValue` は、`value_type` が ref 型である場合は `value_type` または `value_type^` です)。
+この型は、 `GValue` このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する型のオブジェクトを表します。 (はであるか、 `GValue` `value_type` `value_type^` `value_type` が ref 型である場合はです)。
 
 ### <a name="example"></a>例
 
@@ -571,12 +571,12 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするコンテナーアダプター。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -673,7 +673,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの末尾に `val` 値を持つ要素を挿入します。 このメソッドを使用して、別の要素をスタックに追加します。
+このメンバー関数は、 `val` 被制御シーケンスの末尾に値を持つ要素を挿入します。 このメソッドを使用して、別の要素をスタックに追加します。
 
 ### <a name="example"></a>例
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかについては、「 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`」を参照してください。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかは、 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -869,7 +869,7 @@ explicit stack(container_type% wrapped);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするオブジェクト。
 
 *回り*<br/>
@@ -887,13 +887,13 @@ explicit stack(container_type% wrapped);
 
 `stack(stack<Value, Container>% right);`
 
-`right.get_container()`のコピーである、ラップされたコンテナーを作成します。 このメソッドを使用して、スタックオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、スタックオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `stack(stack<Value, Container>^ right);`
 
-`right->get_container()`のコピーである、ラップされたコンテナーを作成します。 これを使用して、スタックオブジェクト `*right`によって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right->get_container()` ます。 これを使用して、スタックオブジェクトによって制御されるシーケンスのコピーである最初の被制御シーケンスを指定し `*right` ます。
 
 コンストラクター:
 
@@ -1161,15 +1161,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator&lt; (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>演算子 &lt; (stack) (STL/CLR)
 
 スタックは比較していません。
 
@@ -1232,15 +1232,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `right->size()``() <` を返します。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator&lt;= (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator &lt; = (stack) (STL/CLR)
 
 スタックが以下であるかどうかを比較します。
 
@@ -1303,15 +1303,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1374,15 +1374,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのスタックが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのスタックが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator&gt; (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>演算子 &gt; (stack) (STL/CLR)
 
 スタックが比較を超えています。
 
@@ -1445,15 +1445,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう*かをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう*かをテストします。
 
 ### <a name="example"></a>例
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator&gt;= (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator &gt; = (stack) (STL/CLR)
 
 スタックが以上比較します。
 
@@ -1516,15 +1516,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

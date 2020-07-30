@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: aac308905a01a52a4ce5ee0fa3be03f2f33ac1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223708"
 ---
 # <a name="goto-statement-c"></a>goto ステートメント (C++)
 
-**Goto**ステートメントは無条件で指定した識別子によってラベル付けステートメントに制御を転送します。
+ステートメントは、 **`goto`** 指定された識別子によってラベル付けされたステートメントに、無条件で制御を転送します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,13 +23,13 @@ ms.locfileid: "62153698"
 goto identifier;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `identifier` で指定されたラベル付きステートメントは、現在の関数内にある必要があります。 すべての `identifier` 名は内部の名前空間のメンバーであるため、他の識別子と干渉することはありません。
 
-ステートメント ラベルにのみ意味のある、 **goto**ステートメントです。 それ以外の場合、ステートメント ラベルは無視されます。 ラベルは再宣言できません。
+ステートメントラベルは、ステートメントに対してのみ意味があります。 **`goto`** それ以外の場合、ステートメントラベルは無視されます。 ラベルは再宣言できません。
 
-A **goto**コントロールをその場所にスコープ内の任意の変数の初期化をスキップする場所に移動するステートメントが許可されていません。 次の例では、C2362 が発生します。
+**`goto`** ステートメントでは、その場所のスコープ内にある変数の初期化をスキップする場所への制御の転送は許可されていません。 次の例では、C2362 が発生します。
 
 ```cpp
 int goto_fn(bool b)
@@ -48,13 +48,13 @@ exit:
 }
 ```
 
-使用するスタイルのプログラミングをお勧め、 **break**、**continue**と**return**ステートメントの代わりに、 **goto**ステートメントたびに考えられる。 ただし、ため、 **break**ステートメント、ループの 1 つだけのレベルから抜けるを使用する必要があります、 **goto**深く入れ子になったループを終了するステートメント。
+可能な限り **`break`** 、 **`continue`** **`return`** ステートメントの代わりに、、およびの各ステートメントを使用するのに適したプログラミングスタイルです **`goto`** 。 ただし、ステートメントは **`break`** ループの1つのレベルのみから終了するので、ステートメントを使用して **`goto`** 深い入れ子になったループを終了する必要がある場合があります。
 
-ラベルの詳細については、 **goto**ステートメントを参照してください[ラベル付きステートメント](../cpp/labeled-statements.md)します。
+ラベルとステートメントの詳細については **`goto`** 、「[ラベル付きステートメント](../cpp/labeled-statements.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-この例で、 **goto**ステートメントに制御というラベルの位置を転送`stop`とき`i`が 3 に等しい。
+この例では、 **`goto`** ステートメントによって、が3に等しい場合にラベルが付けられたポイントに制御が移り `stop` `i` ます。
 
 ```cpp
 // goto_statement.cpp

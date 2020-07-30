@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e6ab9ec0f6f55ab0be9624b7343b087b41f2a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214787"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215245"
 ---
 # <a name="length_is"></a>length_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80214787"
 
 ## <a name="remarks"></a>解説
 
-**Length_is** C++属性には、 [length_is](/windows/win32/Midl/length-is) MIDL 属性と同じ機能があります。
+**Length_is** C++ 属性には、 [length_is](/windows/win32/Midl/length-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -42,17 +42,17 @@ ms.locfileid: "80214787"
 
 |||
 |-|-|
-|**対象**|**構造体**または**共用体**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`struct`** またはのフィールド **`union`** 、インターフェイスパラメーター、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>

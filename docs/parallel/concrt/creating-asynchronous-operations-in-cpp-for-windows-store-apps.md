@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: a12900f3145f0dde797fe56c893442e1632cc01c
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213932"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ での UWP アプリ用の非同期操作の作成
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404513"
 
 - 内部非同期操作の取り消しを可能にするには、キャンセル トークンを使用します。
 
-- `create_async` の関数の動作は、渡される処理関数の戻り値の型によって異なります。 タスク ( `task<T>` または `task<void>`) を返す処理関数は、 `create_async`を呼び出したコンテキストで同期的に実行されます。 `T` または `void` を返す処理関数は、任意のコンテキストで実行されます。
+- `create_async` の関数の動作は、渡される処理関数の戻り値の型によって異なります。 タスク ( `task<T>` または `task<void>`) を返す処理関数は、 `create_async`を呼び出したコンテキストで同期的に実行されます。 `T`任意のコンテキストでを返すか、または実行する処理関数 **`void`** 。
 
 - [concurrency::task::then](reference/task-class.md#then) メソッドを使用すると、順次実行タスクのチェーンを作成できます。 UWP アプリでは、タスクの継続の既定のコンテキストは、そのタスクがどのように構築されたかによって異なります。 非同期アクションをタスク コンストラクターに渡すことによってタスクが作成されている場合、または非同期アクションを返すラムダ式を渡すことによってタスクが作成されている場合は、そのタスクのすべての継続の既定のコンテキストは、現在のコンテキストです。 タスクが非同期アクションから構築されていない場合、既定ではタスクの継続に任意のコンテキストが使用されます。 既定のコンテキストを [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) クラスでオーバーライドできます。
 
@@ -63,7 +63,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 [Windows:: Foundation:: IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 結果を返し、進行状況を報告する、非同期操作を表します。
 
-*アクション* の概念は、非同期タスクが値を生成しないことを意味します ( `void`を返す関数を考えてみてください)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、タスクの完了を表す Windows ランタイム非同期アクションまたは操作を作成します。 関数は、 `create_async` 処理関数 (通常はラムダ式) を受け取り、内部的にオブジェクトを作成 `task` し、4つの非同期 Windows ランタイムインターフェイスのいずれかでそのタスクをラップします。
+*アクション*の概念は、非同期タスクが値を生成しないことを意味します (を返す関数を考えてみ **`void`** ます)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、タスクの完了を表す Windows ランタイム非同期アクションまたは操作を作成します。 関数は、 `create_async` 処理関数 (通常はラムダ式) を受け取り、内部的にオブジェクトを作成 `task` し、4つの非同期 Windows ランタイムインターフェイスのいずれかでそのタスクをラップします。
 
 > [!NOTE]
 > `create_async`別の言語または別の Windows ランタイムコンポーネントからアクセスできる機能を作成する必要がある場合にのみ、を使用します。 同じコンポーネントの C++ コードで操作が生成、実行されることがわかっている場合には、 `task` クラスを直接使用します。
@@ -79,8 +79,8 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 |この Windows ランタイムインターフェイスを作成するには|`create_async`|これらのパラメーターの型を処理関数に渡して、暗黙的なキャンセル トークンを使用する|これらのパラメーターの型を処理関数に渡して、明示的なキャンセル トークンを使用する|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|`void` または `task<void>`|(なし)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|`void` または `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** もしくは`task<void>`|(なし)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** もしくは`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` または `task<T>`|(なし)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` または `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -92,7 +92,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>例: C++ Windows ランタイムコンポーネントの作成と C からの使用\#
 
-多くのコンピューティング処理を要する操作を実行するために、XAML と C# を使用して UI と C++ Windows ランタイムコンポーネントを定義するアプリを考えてみましょう。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4つの Windows ランタイム非同期タスクインターフェイスの違いを説明するために、Visual Studio で、空の**ソリューション**を作成して名前を付けることによって、を開始し `Primes` ます。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドは、 [Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)オブジェクトを返します。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
+多くのコンピューティング処理を要する操作を実行するために、XAML と C# を使用して UI と C++ Windows ランタイムコンポーネントを定義するアプリを考えてみましょう。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4つの Windows ランタイム非同期タスクインターフェイスの違いを説明するために、Visual Studio で、空の**ソリューション**を作成して名前を付けることによって、を開始し `Primes` ます。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 各 **`public`** メソッドは、4つの非同期インターフェイスのいずれかを定義します。 値を返すメソッドは、 [Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)オブジェクトを返します。 進行状況を報告するメソッドは、 **`double`** 完了した作業全体の割合を定義する値を生成します。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -169,7 +169,7 @@ UI があるアプリケーションでは、ASTA (アプリケーション STA)
 
 [!code-cpp[concrt-windowsstore-commonwords#3](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_8.h)]
 
-次の `using` ステートメントを MainPage.cpp に追加します。
+次の **`using`** ステートメントを mainpage.xaml に追加します。
 
 [!code-cpp[concrt-windowsstore-commonwords#4](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_9.cpp)]
 

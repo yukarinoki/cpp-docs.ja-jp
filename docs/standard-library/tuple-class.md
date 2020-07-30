@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257105"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215544"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*\
+*TN5250*\
 N 番目の tuple 要素の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-クラステンプレートは、`T1`、`T2`、...、`TN`の型の N 個のオブジェクトをそれぞれ `0 <= N <= Nmax`で格納するオブジェクトを表します。 `tuple<T1, T2, ..., TN>` 組インスタンスの範囲は、そのテンプレート引数の `N` 数です。 テンプレート引数の `Ti` と、その型の対応する格納値のインデックスが `i - 1`ます。 このドキュメントでは、1から N の型に番号を付けますが、対応するインデックス値の範囲は 0 ~ N-1 です。
+クラステンプレートは、、 `T1` `T2` 、...、 `TN` 、それぞれの型の N 個のオブジェクトを格納するオブジェクトを `0 <= N <= Nmax` 記述します。 組のインスタンスの範囲 `tuple<T1, T2, ..., TN>` は、 `N` そのテンプレート引数の数です。 テンプレート引数のインデックスと、 `Ti` その型の対応する格納された値が `i - 1` です。 このドキュメントでは、1から N の型に番号を付けますが、対応するインデックス値の範囲は 0 ~ N-1 です。
 
 ## <a name="example"></a>例
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 `tuple` オブジェクトを割り当てます。
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-\ の*解除*
+*ウン*\
 N 番目のコピーされたタプル要素の型。
 
-*右*\
+*そうです*\
 コピー元のタプル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-最初の2つのメンバー演算子は、*右*の要素を `*this`の対応する要素に代入します。 3 番目のメンバー演算子は、`right.first` のインデックス 0 位置の要素に `*this` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
+最初の2つのメンバー演算子は、の要素をの対応する*要素に代入*し **`*this`** ます。 3番目のメンバー演算子は、 `right.first` のインデックス0位置にある要素に、インデックス1の要素にを割り当て **`*this`** `right.second` ます。 3つのすべてのメンバー演算子は **`*this`** 、を返します。
 
 残りのメンバー演算子はそれ以前のコンストラクターと似ていますが、[Rvalue 参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>フォト
+## <a name="swap"></a><a name="tuple_swap"></a>フォト
 
 2 つのタプルの要素を交換します。
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 要素が組*right*の要素と交換される組。
 
-*右*\
+*そうです*\
 要素が*左*の組の要素と交換される組。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、`left.swap(right)` を実行します。
 
-## <a name="tuple"></a>タプル
+## <a name="tuple"></a><a name="tuple"></a>タプル
 
 `tuple` オブジェクトを構築します。
 
@@ -246,13 +246,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-\ の*解除*
+*ウン*\
 N 番目のコピーされたタプル要素の型。
 
-*右*\
+*そうです*\
 コピー元のタプル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 つ目のコンストラクターは、要素が既定で構築されるオブジェクトを構築します。
 

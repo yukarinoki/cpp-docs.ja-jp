@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: f8935408c6e9b43347d4ad6088505a461e254ae2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2adbadecacb41a8e92cd36f55da9b376b4e1b006
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227518"
 ---
 # <a name="__event"></a>__event
 
@@ -29,26 +29,26 @@ __event member-declarator;
 
 ## <a name="remarks"></a>解説
 
-**__eventキーワード**は、メソッド宣言、インターフェイス宣言、またはデータ メンバー宣言に適用できます。 ただし **、__event**キーワードを使用して、入れ子になったクラスのメンバーを修飾することはできません。
+キーワードは、 **`__event`** メソッド宣言、インターフェイス宣言、またはデータメンバー宣言に適用できます。 ただし、キーワードを使用して、 **`__event`** 入れ子になったクラスのメンバーを修飾することはできません。
 
 イベント ソースとイベント レシーバーがネイティブ C++、COM、またはマネージド (.NET Framework) であるかによって、次の構成体をイベントとして使用できます。
 
 |ネイティブ C++|COM (COM)|マネージド (.NET Framework)|
 |------------------|---------|--------------------------------|
-|Method|—|メソッド|
+|Method|—|method|
 |—|interface|—|
 |—|—|データ メンバー (data member)|
 
-イベント レシーバーで[__hook](../cpp/hook.md)を使用して、ハンドラー メソッドをイベント メソッドに関連付けます。 **__event**キーワードを使用してイベントを作成すると、そのイベントにフックされたすべてのイベント ハンドラーが、イベントの呼び出し時に呼び出されることに注意してください。
+ハンドラーメソッドをイベントメソッドに関連付けるには、イベントレシーバーで[__hook](../cpp/hook.md)を使用します。 キーワードを使用してイベントを作成した後 **`__event`** 、イベントが呼び出されると、そのイベントにフックされたすべてのイベントハンドラーが呼び出されることに注意してください。
 
-**__event**メソッド宣言は定義を持つことはできません。定義は暗黙的に生成されるため、イベント メソッドは通常のメソッドであるかのように呼び出すことができます。
+**`__event`** メソッド宣言には定義を含めることができません。定義は暗黙的に生成されるため、通常のメソッドと同様にイベントメソッドを呼び出すことができます。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="native-events"></a>ネイティブ イベント
 
-ネイティブ イベントはメソッドです。 戻り値の型は、通常は HRESULT または**void**ですが、**列挙型**を含む任意の整数型を指定できます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すときのエラー条件が定義されていると、発生するイベントは他のデリゲートを呼び出します。
+ネイティブ イベントはメソッドです。 戻り値の型は、通常は HRESULT またはですが、を **`void`** 含む任意の整数型にすることができ **`enum`** ます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すときのエラー条件が定義されていると、発生するイベントは他のデリゲートを呼び出します。
 
 ```cpp
 // Examples of native C++ events:
@@ -56,26 +56,26 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-サンプル コードについては、「[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)」を参照してください。
+サンプルコードについては、「[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)」を参照してください。
 
 ## <a name="com-events"></a>COM イベント
 
-COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターは、マルチキャスト*時に* *out*パラメーターが役に立たないため、パラメーターに含める必要があります (ただし、これは厳密には適用されません)。 *out*パラメーターを使用すると、レベル 1 の警告が発行されます。
+COM イベントはインターフェイスです。 イベントソースインターフェイスのメソッドのパラメーターは、パラメーター*に含ま*れている必要があります (ただし、これは厳密には適用されません)。これは、 *out*パラメーターがマルチキャストでは役に立たないためです。 *Out*パラメーターを使用すると、レベル1の警告が発行されます。
 
-戻り値の型は、通常は HRESULT または**void**ですが、**列挙型**を含む任意の整数型を指定できます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラは、生成された IDL でイベント ソース インターフェイスを[ソース](../windows/attributes/source-cpp.md)として自動的にマークします。
+戻り値の型は通常、HRESULT またはです **`void`** が、などの任意の整数型を指定でき **`enum`** ます。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラは、生成された IDL の[ソース](../windows/attributes/source-cpp.md)としてイベントソースインターフェイスを自動的にマークすることに注意してください。
 
-[__interface](../cpp/interface.md)キーワードは、COM イベント ソース**の__event**後に必ず必要です。
+COM イベントソースの場合、 [__interface](../cpp/interface.md)キーワードは常にである必要が **`__event`** あります。
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-サンプル コードについては[、COM でのイベント処理](../cpp/event-handling-in-com.md)を参照してください。
+サンプルコードについては、「 [COM でのイベント処理](../cpp/event-handling-in-com.md)」を参照してください。
 
 ## <a name="managed-events"></a>マネージド イベント
 
-新しい構文でのイベントのコーディングについては[、event](../extensions/event-cpp-component-extensions.md)を参照してください。
+新しい構文でのイベントのコーディングの詳細については、「 [event](../extensions/event-cpp-component-extensions.md)」を参照してください。
 
 マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用する場合、デリゲートの戻り値の型は[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)に準拠している必要があります。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、「[デリゲートとイベント](../dotnet/delegates-and-events.md)」を参照してください。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
 
@@ -129,7 +129,7 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[Keywords](../cpp/keywords-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
 [イベント処理](../cpp/event-handling.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>
 [event_receiver](../windows/attributes/event-receiver.md)<br/>

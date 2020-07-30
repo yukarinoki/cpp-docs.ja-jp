@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233640"
 ---
 # <a name="reference-type-function-arguments"></a>Reference-Type Function Arguments (参照型関数の引数)
 
@@ -67,9 +67,9 @@ int main()
 }
 ```
 
-上記のコードは、メンバー選択演算子を使用して参照渡しで渡された構造体のメンバーにアクセスすることを示しています (**.**) ポインター メンバー選択演算子ではなく (**->**)。
+前のコードでは、参照によって渡される構造体のメンバーに、ポインターメンバー選択演算子 () ではなく、メンバー選択演算子 (**.**) を使用してアクセスすることを示してい **->** ます。
 
-参照型として渡された引数が非ポインター型の構文を観察しますが、ポインター型の 1 つの重要な特性を保持、: として宣言しない限り変更可能な**const**します。 前のコードの意図は `date` オブジェクトを変更することではないため、より適切な関数プロトタイプは次のとおりです。
+参照型として渡される引数は非ポインター型の構文を観察しますが、ポインター型の1つの重要な特性を保持します。として宣言しない限り、変更 **`const`** できます。 前のコードの意図は `date` オブジェクトを変更することではないため、より適切な関数プロトタイプは次のとおりです。
 
 ```cpp
 long DateOfYear( const Date& date );
@@ -77,7 +77,7 @@ long DateOfYear( const Date& date );
 
 このプロトタイプによって、関数 `DateOfYear` が引数を変更しないことが保証されます。
 
-標準変換があるために、参照型を受け取るようにプロトタイプ宣言された任意の関数は、代わりに、同じ型のオブジェクトを受け取ることができます*typename*に*typename*  <strong>&</strong>.
+参照型を受け取るようにプロトタイプ宣言された関数は、 *typename*から*typename*への標準変換があるため、その代わりに同じ型のオブジェクトを受け取ることができ <strong>&</strong> ます。
 
 ## <a name="see-also"></a>関連項目
 

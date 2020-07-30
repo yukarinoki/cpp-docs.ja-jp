@@ -1,30 +1,30 @@
 ---
 title: nullptr
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 f1_keywords:
 - nullptr_cpp
 helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
-ms.openlocfilehash: 51df20ea00e5dd77ab1fc1a2a01253b8f788ad0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 801ae927d6c9fb70c3187d10269e87097a879bfc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358854"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223630"
 ---
 # <a name="nullptr"></a>nullptr
 
-任意の生ポインター型に変換可能な `std::nullptr_t` 型の null ポインター定数を指定します。  キーワード**nullptr**を使用しても、ヘッダーを含めずに使用できますが、コードで`std::nullptr_t`type を使用する場合は、ヘッダー`<cstddef>`を含めて定義する必要があります。
+キーワードは、 **`nullptr`** 型の null ポインター定数を指定し `std::nullptr_t` ます。これは、任意の生ポインター型に変換できます。  ヘッダーを含めずにキーワードを使用することもできますが、 **`nullptr`** コードで型を使用する場合は、 `std::nullptr_t` ヘッダーを含めることによって定義する必要があり `<cstddef>` ます。
 
 > [!NOTE]
-> **nullptr**キーワードは、マネージ コード アプリケーションの C++/CLI でも定義され、ISO 標準 C++ キーワードとの交換はできません。 マネージ コードを対象とする[/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを使用してコードをコンパイルする場合は`__nullptr`、コンパイラがネイティブ C++ の解釈を使用することを保証する必要があるコード行で使用します。 詳細については、 [nullptr](../extensions/nullptr-cpp-component-extensions.md)を参照してください。
+> キーワードは、 **`nullptr`** マネージコードアプリケーションの c++/cli でも定義されており、ISO 標準 C++ キーワードと置き換えることはできません。 マネージコードをターゲットとするコンパイラオプションを使用してコードをコンパイルする場合は [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) 、 `__nullptr` コンパイラがネイティブ C++ の解釈を使用することを保証する必要がある任意のコード行でを使用します。 詳細については、「 [ `nullptr` (c++/cli および c++/cx)](../extensions/nullptr-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-NULL またはゼロ (`0`) を NULL ポインター定数として使用しないでください。**nullptr**は、誤用に対して脆弱ではなく、ほとんどの状況で動作する方が良いです。  たとえば、`func(std::pair<const char *, double>)` が指定されている場合に、`func(std::make_pair(NULL, 3.14))` を呼び出すとコンパイラ エラーが発生します。  NULL マクロは `0` に展開します。したがって、`std::make_pair(0, 3.14)` の呼び出しでは、func() の `std::pair<int, double>` パラメーター型に変換可能ではない `std::pair<const char *, double>` が返されます。  `func(std::make_pair(nullptr, 3.14))` は `std::make_pair(nullptr, 3.14)` に変換可能な `std::pair<std::nullptr_t, double>` を返すので、`std::pair<const char *, double>` の呼び出しは正常にコンパイルされます。
+`NULL`Null ポインター定数としてまたは 0 () を使用しないでください。を使用 `0` **`nullptr`** すると、誤用に対する脆弱性が低くなり、ほとんどの状況でより適切に動作します。  たとえば、`func(std::pair<const char *, double>)` が指定されている場合に、`func(std::make_pair(NULL, 3.14))` を呼び出すとコンパイラ エラーが発生します。  マクロは `NULL` に展開される `0` ため、呼び出しはを `std::make_pair(0, 3.14)` 返します。これは、 `std::pair<int, double>` `std::pair<const char *, double>` のパラメーター型に変換できません `func` 。  `func(std::make_pair(nullptr, 3.14))` は `std::make_pair(nullptr, 3.14)` に変換可能な `std::pair<std::nullptr_t, double>` を返すので、`std::pair<const char *, double>` の呼び出しは正常にコンパイルされます。
 
 ## <a name="see-also"></a>関連項目
 
-[Keywords](../cpp/keywords-cpp.md)<br/>
-[nullptr](../extensions/nullptr-cpp-component-extensions.md)(C++/CLI)
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[`nullptr`(C++/CLI および C++/CX)](../extensions/nullptr-cpp-component-extensions.md)

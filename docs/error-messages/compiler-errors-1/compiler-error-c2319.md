@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2319
 ms.assetid: 25263e6e-f5ba-4d2c-8727-8c2d8ca2e5ce
-ms.openlocfilehash: b3da0297558a9b8281f9c4756a54a577cc78a682
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: af9c0f0395e29c384ddc06f9a029f29c921e71c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747918"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221238"
 ---
 # <a name="compiler-error-c2319"></a>コンパイラ エラー C2319
 
 'try/catch' の後に複合ステートメントを指定する必要があります。 '{' が必要です
 
-`try` または `catch` ステートメントの後に `try` または `catch` ブロックが見つかりません。 ブロックは中かっこで囲む必要があります。
+また **`try`** は **`catch`** ステートメントの後に、またはブロックが見つかりません **`try`** **`catch`** 。 ブロックは中かっこで囲む必要があります。
 
 次の例では C2319 が生成されます。
 

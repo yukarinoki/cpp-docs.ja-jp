@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914660"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216935"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
@@ -197,7 +197,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>解説
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、および **_ui64toa**の各関数は、指定され*た値*引数の数字を null で終わる文字列に変換し、結果を格納*します (* **_itoa**、 **_ltoa**、**および _ultoa**の場合は最大33文字、_i64toa の場合は65、 **_ui64toa の場合**は **)。** 場合*基数*が10、*値*が負の場合、格納されている文字列の最初の文字**-** は負符号 () です。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**、および **_ui64tow**の各関数は、それぞれ **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**のワイド文字バージョンです。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、および **_ui64toa**の各関数は、指定され*た値*引数の数字を null で終わる文字列に変換し、結果を格納*します (* **_itoa**、 **_ltoa**、**および _ultoa**の場合は最大33文字、_i64toa の場合は65、 **_ui64toa の場合**は **)。** 場合*基数*が10、*値*が負の場合、格納されている文字列の最初の文字は負符号 ( **-** ) です。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**、および **_ui64tow**の各関数は、それぞれ **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**のワイド文字バージョンです。
 
 > [!IMPORTANT]
 > これらの関数は、小さすぎるバッファーの末尾を越えて書き込むことができます。 バッファーオーバーランを防ぐには、*バッファー*が、変換された数字と末尾の null 文字および符号文字を保持するのに十分な大きさであることを確認します。 これらの関数を誤用すると、コードに重大なセキュリティ上の問題が発生する可能性があります。
@@ -233,14 +233,14 @@ POSIX 名**itoa**、 **ltoa**、および**ultoa**は、 **_itoa**、 **_ltoa**�
 
 ||||
 |-|-|-|
-|関数|radix|マクロ|
+|関数|radix|[マクロ]|
 |**_itoa**、 **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**、 **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**、 **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa**、 **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**、 **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-この例では、変換数マクロを使用して、基数が2である**unsigned long long**を格納するのに十分な大きさのバッファーを定義します。
+この例では、変換数マクロを使用して、基数2にを格納するのに十分な大きさのバッファーを定義し **`unsigned long long`** ます。
 
 ```cpp
 #include <wchar.h>
@@ -264,7 +264,7 @@ int main()
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**itoa**、 **ltoa**、 **ultoa**|\<stdlib.h>|
 |**_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**|\<stdlib.h>|

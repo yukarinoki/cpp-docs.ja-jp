@@ -5,24 +5,24 @@ helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 54b53f96d487e466106fe92a01affa7bd3e55c16
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455272"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228259"
 ---
 # <a name="inputoutput-streams"></a>入出力ストリーム
 
-ヘッダー ファイル \<istream> で定義される `basic_iostream` は、入力および出力の両方の文字ベースの I/O ストリームを処理するオブジェクトのクラス テンプレートです。
+`basic_iostream`は、ヘッダーファイルで定義されてい \<istream> ます。これは、入力と出力の両方の文字ベース i/o ストリームを処理するオブジェクトのクラステンプレートです。
 
-`basic_iostream` の文字に固有の特殊化を定義し、コードを読みやすくするのに役立つ 2 つの typedef があります。`iostream` (ヘッダー ファイル \<iostream> と混同しないでください) は、`basic_iostream<char>` に基づいている I/O ストリームです。`wiostream` は、`basic_iostream<wchar_t>` に基づいている I/O ストリームです。
+との文字固有の特殊化を定義する typedef が2つあり `basic_iostream` ます。 `iostream` (ヘッダーファイルと混同しないでください \<iostream> ) は、に基づく i/o ストリームです。 `basic_iostream<char>` `wiostream` は、に基づく `basic_iostream<wchar_t>` i/o ストリームですが、はに基づいています。
 
 詳細については、「[basic_iostream クラス](../standard-library/basic-iostream-class.md)」、「[iostream](../standard-library/basic-iostream-class.md)」、および「[wiostream](../standard-library/basic-iostream-class.md)」を参照してください。
 
 `basic_iostream` からはクラス テンプレート `basic_fstream` が派生され、これ、ファイルとの間で文字データをストリーミングするのに使用されます。
 
-`basic_fstream` の文字に固有の特殊化を提供する typedef もあります。 これらは `wfstream`、char に基づくファイル i/o ストリームであり、wchar_t に基づくファイル i/o ストリームであるという形式になっています。  `fstream` 詳細については、「[basic_fstream クラス](../standard-library/basic-fstream-class.md)」、「[fstream](../standard-library/basic-fstream-class.md)」、および「[wfstream](../standard-library/basic-fstream-class.md)」を参照してください。 これらの typedef を使用するには、ヘッダー ファイル \<fstream> を含める必要があります。
+`basic_fstream` の文字に固有の特殊化を提供する typedef もあります。 これらは、に `fstream` 基づくファイル i/o ストリームであり、 **`char`** `wfstream` に基づくファイル i/o ストリームです。これは、に基づいてい **`wchar_t`** ます。 詳細については、「[basic_fstream クラス](../standard-library/basic-fstream-class.md)」、「[fstream](../standard-library/basic-fstream-class.md)」、および「[wfstream](../standard-library/basic-fstream-class.md)」を参照してください。 これらの typedef を使用するには、ヘッダーファイルをインクルードする必要があり \<fstream> ます。
 
 > [!NOTE]
 > `basic_fstream` オブジェクトを使用してファイル I/O を実行する場合、基になるバッファーに、個別に指定された読み取りと書き込みの位置が含まれていても、現在の入力位置と現在の出力位置が一緒に関連付けられるため、一部のデータを読み取ると、出力位置が移動します。
