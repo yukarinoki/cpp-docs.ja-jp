@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425251"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232925"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 演算子
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトと等しくないかどうかをテストします。
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-キューが等しくない場合は **true**。キューが等しい場合は **false**。
+**`true`** キューが等しくない場合は、**`false`** キューが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトより小さいかどうかをテストします。
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の queue が演算子の右辺の queue 未満である場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左側のキューが、演算子の右側のキューの値未満であり、かつ等しくない場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクト以下かどうかをテストします。
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の queue が演算子の右辺の queue より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の queue が演算子の右辺のキューより厳密に小さい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左側の queue オブジェクトが右側の queue オブジェクトと等しいかどうかをテストします。
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-キューが等しくない場合は **true**。キューが等しい場合は **false**。
+**`true`** キューが等しくない場合は、**`false`** キューが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトより大きいかどうかをテストします。
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の queue が演算子の右辺の queue より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の queue が演算子の右辺のキューより厳密に小さい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクト以上かどうかをテストします。
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `queue` 型オブジェクト。
 
-*右*\
+*そうです*\
 `queue` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の queue が演算子の右辺の queue より厳密に小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の queue が演算子の右辺のキューより厳密に小さい場合は、。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 

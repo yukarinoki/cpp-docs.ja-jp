@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2267
 ms.assetid: ea63bebb-6208-4367-8440-39be07f9c360
-ms.openlocfilehash: c897f8e6b38743ee98ec29707b222901ddde9d7c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0a72470feb79a226fe0f167364eeaea7dec9fd4d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208474"
 ---
 # <a name="compiler-error-c2267"></a>コンパイラ エラー C2267
 
 ' function ': ブロックスコープを持つ静的関数は無効です
 
-ローカル関数は `static`として宣言されています。 静的関数にはグローバルスコープが必要です。
+ローカル関数が宣言されて **`static`** います。 静的関数にはグローバルスコープが必要です。
 
 次の例では、C2267 が生成されます。
 

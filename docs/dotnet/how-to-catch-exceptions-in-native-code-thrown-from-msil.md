@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221355"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>方法: MSIL からスローされるネイティブ コードの例外をキャッチする
 
-ネイティブコードでは、MSIL からネイティブC++の例外をキャッチできます。  CLR 例外は `__try` と `__except`でキャッチできます。
+ネイティブコードでは、MSIL からネイティブ C++ 例外をキャッチできます。  CLR 例外は、およびでキャッチでき `__try` **`__except`** ます。
 
-詳細については、「[構造化例外処理 (C++C/)](../cpp/structured-exception-handling-c-cpp.md) 」および「[例外とエラー処理のための最新C++のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)」を参照してください。
+詳細については、「[構造化例外処理 (C/c + +)](../cpp/structured-exception-handling-c-cpp.md) 」および「[例外とエラー処理のための最新の C++ のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [例外処理](../extensions/exception-handling-cpp-component-extensions.md)

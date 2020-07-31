@@ -1,5 +1,5 @@
 ---
-title: ロケール
+title: Locale
 ms.date: 04/11/2018
 f1_keywords:
 - c.international
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744382"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189585"
 ---
-# <a name="locale"></a>ロケール
+# <a name="locale"></a>Locale
 
 *ロケール*とは、プログラムをカスタマイズするために使用できる国または地域と言語を表します。 ロケールに依存するカテゴリとしては、日付や通貨の値の表示形式などがあります。 詳細については、「[ロケールのカテゴリ](../c-runtime-library/locale-categories.md)」を参照してください。
 
@@ -25,11 +25,11 @@ ms.locfileid: "57744382"
 
 各スレッドで独自のロケールを設定するか、プログラム内のすべてのスレッドで同じロケールを共有するかどうかを制御するには、[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) を使用します。 詳細については、「[ロケールとコード ページ](../text/locales-and-code-pages.md)」を参照してください。
 
-次の表に示す関数のセキュリティを強化したバージョンは、**_s** ("secure") というサフィックスによって表されます。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
+次の表に示す関数のセキュリティを強化したバージョンは、**_s** ("secure") というサフィックスによって表されます。 詳細については、「[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
 
 ## <a name="locale-dependent-routines"></a>ロケールに依存するルーチン
 
-|ルーチンによって返される値|使用|**setlocale** カテゴリの設定の依存関係|
+|ルーチンによって返される値|用途|**setlocale** カテゴリの設定の依存関係|
 |-------------|---------|---------------------------------------------|
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字を浮動小数点型の値に変換|**LC_NUMERIC**|
 |[atoi、_atoi_l、_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|文字を整数型の値に変換|**LC_NUMERIC**|
@@ -47,7 +47,7 @@ ms.locfileid: "57744382"
 |[mbtowc、_mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|マルチバイト文字を対応するワイド文字に変換|**LC_CTYPE**|
 |[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 関数|書式付き出力を書き出す|**LC_NUMERIC** (小数点文字の出力を決定)|
 |[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数|書式付き入力を読み取る|**LC_NUMERIC** (基数文字が認識されます)|
-|[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|プログラムのロケールを選択する|利用不可|
+|[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|プログラムのロケールを選択する|適用なし|
 |[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|2 つの文字列の文字を比較する|**LC_COLLATE**|
 |[_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)|大文字小文字に関係なく、2 つの文字列を比較する|**LC_CTYPE**|
 |[_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|2 つの文字列の文字を比較する (大文字小文字を区別しない)|**LC_COLLATE**|
@@ -56,8 +56,8 @@ ms.locfileid: "57744382"
 |[_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|2 つの文字列の先頭の **n** 文字を比較する (大文字小文字を区別しない)|**LC_COLLATE**|
 |[strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|指定された **format** 引数に従って日付と時刻の値を書式設定する|**LC_TIME**|
 |[_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)、[_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|指定した文字列内の大文字をその位置で小文字に変換する|**LC_CTYPE**|
-|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|文字列を **double** 型の値に変換する|**LC_NUMERIC** (基数文字が認識されます)|
-|[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|文字列を **long** 型の値に変換する|**LC_NUMERIC** (基数文字が認識されます)|
+|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|文字列を値に変換する **`double`**|**LC_NUMERIC** (基数文字が認識されます)|
+|[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|文字列を値に変換する **`long`**|**LC_NUMERIC** (基数文字が認識されます)|
 |[strtoul、_strtoul_l、wcstoul、_wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|文字列を unsigned long 型の値に変換する|**LC_NUMERIC** (基数文字が認識されます)|
 |[_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)、[_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|文字列内の小文字をその位置で大文字に変換する|**LC_CTYPE**|
 |[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|ロケールに従って文字列を照合形式に変換する|**LC_COLLATE**|

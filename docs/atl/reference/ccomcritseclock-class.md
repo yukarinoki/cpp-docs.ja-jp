@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CComCritSecLock クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224293"
 ---
-# <a name="ccomcritseclock-class"></a>クラス
+# <a name="ccomcritseclock-class"></a>CComCritSecLock クラス
 
-このクラスには、クリティカル セクション オブジェクトをロックおよびロック解除するためのメソッドが用意されています。
+このクラスには、クリティカルセクションオブジェクトをロックおよびロック解除するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -29,34 +29,34 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>パラメーター
 
-*トロック*<br/>
+*TLock*<br/>
 ロックおよびロック解除するオブジェクト。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[クコムクリットセックロック::CComクリットセックロック](#ctor)|コンストラクターです。|
-|[クコムクリットセックロック::~Cコムクリットセックロック](#dtor)|デストラクターです。|
+|[CComCritSecLock::CComCritSecLock](#ctor)|コンストラクターです。|
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[クコムクリットセックロック::ロック](#lock)|クリティカル セクション オブジェクトをロックします。|
-|[クコムクリットセックロック::ロック解除](#unlock)|クリティカル セクション オブジェクトのロックを解除します。|
+|[CComCritSecLock:: Lock](#lock)|クリティカルセクションオブジェクトをロックするには、このメソッドを呼び出します。|
+|[CComCritSecLock:: Unlock](#unlock)|クリティカルセクションオブジェクトのロックを解除するには、このメソッドを呼び出します。|
 
 ## <a name="remarks"></a>解説
 
-このクラスを使用して[、CComCriticalSection クラスまたは CComAutoCriticalSection](../../atl/reference/ccomcriticalsection-class.md)クラス[CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)よりも安全な方法でオブジェクトをロックおよびロック解除します。
+このクラスを使用して、 [CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)または[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)よりも安全な方法でオブジェクトをロックおよびロック解除します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>クコムクリットセックロック::CComクリットセックロック
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
 
 コンストラクターです。
 
@@ -66,17 +66,17 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>パラメーター
 
-*Cs*<br/>
-クリティカル セクション オブジェクト。
+*同時*<br/>
+クリティカルセクションオブジェクト。
 
-*b イニシャルロック*<br/>
-初期ロック状態: **true**はロックされていることを意味します。
+*bInitialLock*<br/>
+初期ロック状態: ロックされている **`true`** ことを意味します。
 
 ### <a name="remarks"></a>解説
 
-クリティカル セクション オブジェクトを初期化します。
+クリティカルセクションオブジェクトを初期化します。
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>クコムクリットセックロック::~Cコムクリットセックロック
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock
 
 デストラクターです。
 
@@ -86,11 +86,11 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="remarks"></a>解説
 
-クリティカル セクション オブジェクトのロックを解除します。
+クリティカルセクションオブジェクトのロックを解除します。
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>クコムクリットセックロック::ロック
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock:: Lock
 
-クリティカル セクション オブジェクトをロックします。
+クリティカルセクションオブジェクトをロックするには、このメソッドを呼び出します。
 
 ```
 HRESULT Lock() throw();
@@ -98,15 +98,15 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが正常にロックされたかどうかS_OK、またはエラー HRESULT エラーが発生した場合に返します。
+オブジェクトが正常にロックされている場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトが既にロックされている場合は、デバッグ ビルドで ASSERT エラーが発生します。
+オブジェクトが既にロックされている場合は、デバッグビルドでアサートエラーが発生します。
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>クコムクリットセックロック::ロック解除
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock:: Unlock
 
-クリティカル セクション オブジェクトのロックを解除します。
+クリティカルセクションオブジェクトのロックを解除するには、このメソッドを呼び出します。
 
 ```cpp
 void Unlock() throw();
@@ -114,9 +114,9 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトが既にロック解除されている場合は、デバッグ ビルドで ASSERT エラーが発生します。
+オブジェクトが既にロック解除されている場合は、デバッグビルドでアサートエラーが発生します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[クラスの自動変換クラス](../../atl/reference/ccomautocriticalsection-class.md)
+[CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)

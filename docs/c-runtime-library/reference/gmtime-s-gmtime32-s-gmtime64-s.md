@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916229"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213555"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -85,8 +85,8 @@ errno_t _gmtime64_s(
 
 |*tmDest*|*sourceTime*|戻り値|*Tmdest*の値|
 |-----------|------------|------------|--------------------|
-|**空白**|any|**EINVAL**|変更されません。|
-|Not **NULL** (有効なメモリを指す)|**空白**|**EINVAL**|すべてのフィールドが-1 に設定されます。|
+|**NULL**|any|**EINVAL**|変更されません。|
+|Not **NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが-1 に設定されます。|
 |**NULL**以外|< 0|**EINVAL**|すべてのフィールドが-1 に設定されます。|
 
 最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
@@ -98,7 +98,7 @@ errno_t _gmtime64_s(
 > [!NOTE]
 > 対象の環境によって、夏時間が有効かどうか判断されます。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間を計算します。
 
-次の表に示すように、構造体の各フィールドは**int**型です。
+**`int`** 次の表に示すように、構造体の各フィールドの型はです。
 
 |フィールド|説明|
 |-|-|
@@ -120,9 +120,9 @@ errno_t _gmtime64_s(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime> また\<は time .h>|
+|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime> または \<time.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

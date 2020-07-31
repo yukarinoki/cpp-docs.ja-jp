@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: c6d54cf8b6704eec2a9e6af890c5c80c67106995
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9b1c3d1de662451432fe4fa0f058c503dc1f7b39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220120"
 ---
 # <a name="compiler-warning-c4936"></a>コンパイラの警告 C4936
 
@@ -21,7 +21,7 @@ ms.locfileid: "80165003"
 
 **/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-`__declspec` 修飾子が使用されましたが、この `__declspec` 修飾子は、いずれかの [/clr](../../build/reference/clr-common-language-runtime-compilation.md) オプションでコンパイルされた場合にのみ有効です。
+**`__declspec`** 修飾子が使用されましたが **`__declspec`** 、この修飾子は、いずれかの[/clr](../../build/reference/clr-common-language-runtime-compilation.md)オプションでコンパイルされた場合にのみ有効です。
 
 詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「 [process](../../cpp/process.md)」を参照してください。
 

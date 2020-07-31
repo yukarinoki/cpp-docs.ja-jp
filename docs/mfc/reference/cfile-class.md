@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 1f12e15c89d14be8936e6414ea82ce5a6e7e1d10
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81755003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212463"
 ---
 # <a name="cfile-class"></a>CFile クラス
 
@@ -83,66 +83,66 @@ class CFile : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[ファイル::Cファイル](#cfile)|パスまたはファイル`CFile`ハンドルからオブジェクトを構築します。|
+|[CFile:: CFile](#cfile)|`CFile`パスまたはファイルハンドルからオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cファイル::中止](#abort)|警告とエラーをすべて無視してファイルを閉じます。|
-|[ファイル::閉じる](#close)|ファイルを閉じてオブジェクトを削除します。|
-|[ファイル::D](#duplicate)|このファイルに基づいて、重複するオブジェクトを作成します。|
-|[ファイル::フラッシュ](#flush)|書き込みがまだ行われていないデータをフラッシュします。|
-|[ファイル名::ファイル名を取得します。](#getfilename)|選択したファイルのファイル名を取得します。|
-|[ファイル::ファイルパスを取得します。](#getfilepath)|選択したファイルの完全なファイル パスを取得します。|
-|[ファイル::ファイルタイトルを取得します。](#getfiletitle)|選択したファイルのタイトルを取得します。|
-|[ファイル::ゲットレングス](#getlength)|ファイルの長さを取得します。|
-|[ファイル::取得位置](#getposition)|現在のファイル ポインターを取得します。|
-|[ファイル::ステータスを取得します。](#getstatus)|開いているファイルの状態を取得するか、静的バージョンで、指定したファイル (静的、仮想関数) の状態を取得します。|
-|[ファイル::ロックレンジ](#lockrange)|ファイル内のバイトの範囲をロックします。|
-|[ファイル::開く](#open)|エラー テスト オプションを使用してファイルを安全に開きます。|
-|[ファイル::読み取り](#read)|現在のファイル位置にあるファイルからデータを読み取ります (バッファされていない)。|
-|[ファイル::削除](#remove)|指定したファイルを削除します (静的関数)。|
-|[Cファイル::名前の変更](#rename)|指定したファイルの名前を変更します (静的関数)。|
-|[ファイル::シーク](#seek)|現在のファイル ポインタを配置します。|
-|[ファイル::シークトビギン](#seektobegin)|現在のファイル ポインタをファイルの先頭に配置します。|
-|[ファイル::シークトーエンド](#seektoend)|現在のファイル ポインタをファイルの末尾に配置します。|
-|[ファイル::セットファイルパス](#setfilepath)|選択したファイルの完全なファイル パスを設定します。|
-|[ファイル::セットレングス](#setlength)|ファイルの長さを変更します。|
-|[ファイル::セットステータス](#setstatus)|指定したファイルのステータスを設定します (静的関数、仮想関数)。|
-|[ファイル::ロック解除範囲](#unlockrange)|ファイル内のバイト範囲のロックを解除します。|
-|[ファイル::書き込み](#write)|ファイル内のデータを現在のファイル位置に書き込みます。|
+|[CFile:: Abort](#abort)|すべての警告とエラーを無視してファイルを閉じます。|
+|[CFile:: Close](#close)|ファイルを閉じて、オブジェクトを削除します。|
+|[CFile::D u](#duplicate)|このファイルに基づいて、重複するオブジェクトを構築します。|
+|[CFile:: Flush](#flush)|書き込まれていないデータをフラッシュします。|
+|[CFile:: GetFileName](#getfilename)|選択されたファイルのファイル名を取得します。|
+|[CFile:: GetFilePath](#getfilepath)|選択したファイルの完全なファイルパスを取得します。|
+|[CFile:: GetFileTitle](#getfiletitle)|選択したファイルのタイトルを取得します。|
+|[CFile:: GetLength](#getlength)|ファイルの長さを取得します。|
+|[CFile:: GetPosition](#getposition)|現在のファイルポインターを取得します。|
+|[CFile:: GetStatus](#getstatus)|開いているファイルの状態を取得します。または、静的なバージョンの場合は、指定されたファイル (静的、仮想関数) の状態を取得します。|
+|[CFile:: LockRange](#lockrange)|ファイル内のバイトの範囲をロックします。|
+|[CFile:: Open](#open)|エラーテストオプションを使用してファイルを安全に開きます。|
+|[CFile:: 読み取り](#read)|現在のファイル位置にあるファイルからデータを読み取り (バッファリングされない)。|
+|[CFile:: Remove](#remove)|指定されたファイル (静的関数) を削除します。|
+|[CFile:: 名前の変更](#rename)|指定されたファイルの名前を変更します (静的関数)。|
+|[CFile:: Seek](#seek)|現在のファイルポインターを配置します。|
+|[CFile:: SeekToBegin](#seektobegin)|ファイルの先頭に現在のファイルポインターを移動します。|
+|[CFile:: SeekToEnd](#seektoend)|ファイルの末尾に現在のファイルポインターを移動します。|
+|[CFile:: SetFilePath](#setfilepath)|選択したファイルの完全なファイルパスを設定します。|
+|[CFile:: SetLength](#setlength)|ファイルの長さを変更します。|
+|[CFile:: SetStatus](#setstatus)|指定されたファイルの状態 (静的、仮想関数) を設定します。|
+|[CFile:: UnlockRange](#unlockrange)|ファイル内のバイトの範囲をロック解除します。|
+|[CFile:: 書き込み](#write)|ファイル内のデータを現在のファイル位置に書き込みます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[Cファイル::演算子ハンドル](#operator_handle)|`CFile`オブジェクトへのハンドル。|
+|[CFile:: operator ハンドル](#operator_handle)|オブジェクトへのハンドル `CFile` 。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ファイル::hファイルNull](#hfilenull)|オブジェクトが`CFile`有効なハンドルを持つかどうかを判断します。|
-|[ファイル::m_hFile](#m_hfile)|通常は、オペレーティング システムのファイル ハンドルが含まれています。|
+|[CFile:: hFileNull](#hfilenull)|`CFile`オブジェクトが有効なハンドルを持っているかどうかを判断します。|
+|[CFile:: m_hFile](#m_hfile)|通常、にはオペレーティングシステムのファイルハンドルが含まれます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ファイル::m_pTM](#m_ptm)|オブジェクトへの`CAtlTransactionManager`ポインター。|
+|[CFile:: m_pTM](#m_ptm)|オブジェクトへのポインター `CAtlTransactionManager` 。|
 
 ## <a name="remarks"></a>解説
 
-バッファされていないバイナリ ディスク入出力サービスを直接提供し、間接的に派生クラスを通じてテキスト ファイルとメモリ ファイルをサポートします。 `CFile`この`CArchive`クラスと連携して、Microsoft Foundation クラス オブジェクトのシリアル化をサポートします。
+このクラスは、バッファリングされていないバイナリディスク入出力サービスを直接提供し、派生クラスを通じてテキストファイルとメモリファイルを間接的にサポートします。 `CFile`は、クラスと連携して、 `CArchive` Microsoft Foundation class オブジェクトのシリアル化をサポートします。
 
-このクラスとその派生クラスの間の階層的な関係により、プログラムはポリモーフィック`CFile`インターフェイスを通じてすべてのファイル オブジェクトを操作できます。 たとえば、メモリ ファイルはディスク ファイルのように動作します。
+このクラスとその派生クラスの間の階層リレーションシップにより、プログラムはポリモーフィックインターフェイスを介してすべてのファイルオブジェクトを操作でき `CFile` ます。 たとえば、メモリファイルはディスクファイルのように動作します。
 
-汎用`CFile`ディスク I/O に使用し、その派生クラスを使用します。 ディスク`ofstream`ファイルに`iostream`送信される書式付きテキストに使用するクラスまたはその他の Microsoft クラス。
+`CFile`汎用ディスク i/o には、とその派生クラスを使用します。 `ofstream`またはその他の Microsoft クラスを使用し `iostream` て、フォーマットされたテキストをディスクファイルに送信します。
 
-通常、ディスクファイルは構築時に自動的に`CFile`開かれ、破壊時に閉じられます。 静的メンバー関数を使用すると、ファイルを開かずにファイルの状態を調べられます。
+通常、ディスクファイルは構築時に自動的に開かれ、 `CFile` 破棄時に閉じられます。 静的メンバー関数を使用すると、ファイルを開かずにファイルの状態を問い合わせることができます。
 
-`CFile`の使用方法の詳細については、『 ランタイム ライブラリ リファレンス 』[の「MFC のファイル](../../mfc/files-in-mfc.md)」および[「ファイル処理](../../c-runtime-library/file-handling.md)」を*参照してください*。
+の使用方法の詳細については `CFile` 、「 [MFC の記事ファイル](../../mfc/files-in-mfc.md)」と「*ランタイムライブラリリファレンス*」の「[ファイル処理](../../c-runtime-library/file-handling.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -152,11 +152,11 @@ class CFile : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afx.h
+**ヘッダー:** afx
 
-## <a name="cfileabort"></a><a name="abort"></a>Cファイル::中止
+## <a name="cfileabort"></a><a name="abort"></a>CFile:: Abort
 
-このオブジェクトに関連付けられたファイルを閉じ、ファイルを読み取りまたは書き込みできないようにします。
+このオブジェクトに関連付けられているファイルを閉じて、読み取りまたは書き込みのためにファイルを使用できないようにします。
 
 ```
 virtual void Abort();
@@ -164,17 +164,17 @@ virtual void Abort();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトを破棄する前にファイルを閉じなければ、デストラクタはファイルを閉じます。
+オブジェクトを破棄する前にファイルを閉じていない場合は、デストラクターによってファイルが閉じられます。
 
-例外を処理する場合、2`CFile::Abort`つの`CFile::Close`重要な点で異なります。 まず、失敗`Abort`は`Abort`無視されるため、関数はエラー時に例外をスローしません。 次に`Abort`、ファイルが開かれていない場合、または以前に閉じられた場合は **、ASSERT**しません。
+例外を処理する場合、は、 `CFile::Abort` `CFile::Close` 2 つの重要な点でとは異なります。 まず、 `Abort` ではエラーが無視されるため、関数はエラー発生時に例外をスローしません `Abort` 。 2番目は、 `Abort` ファイルが開かれていない場合、または以前に閉じられた場合には**アサート**しません。
 
-**new**を使用してヒープに`CFile`オブジェクトを割り当てた場合は、ファイルを閉じた後で削除する必要があります。 `Abort`に`m_hFile`設定`CFile::hFileNull`されます。
+**`new`** ヒープにオブジェクトを割り当てる場合は `CFile` 、ファイルを閉じた後でオブジェクトを削除する必要があります。 `Abort``m_hFile`をに設定 `CFile::hFileNull` します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]
 
-## <a name="cfilecfile"></a><a name="cfile"></a>ファイル::Cファイル
+## <a name="cfilecfile"></a><a name="cfile"></a>CFile:: CFile
 
 `CFile` オブジェクトを構築して初期化します。
 
@@ -195,21 +195,21 @@ CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>パラメーター
 
-*hファイル*<br/>
+*hFile*<br/>
 `CFile` オブジェクトにアタッチするためのファイル ハンドル。
 
-*ファイル名*<br/>
+*lpszFileName*<br/>
 `CFile` オブジェクトにアタッチするための相対パスまたは完全パス。
 
-*フラグを開く*<br/>
+*Noペンフラグ*<br/>
 指定されたファイルのファイル アクセス オプションのビットごとの組み合わせ (OR)。 使用できるオプションについては、「解説」を参照してください。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-次の 5 つの表は *、nOpenFlags*パラメーターに使用できるオプションを示しています。
+次の5つの表は、 *Noの flags*パラメーターで使用可能なオプションを示しています。
 
 次のファイル アクセス モード オプションから 1 つのみ選択します。 既定のファイル アクセス モードは `CFile::modeRead` であり、これは読み取り専用です。
 
@@ -224,7 +224,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 |値|説明|
 |-----------|-----------------|
 |`CFile::typeBinary`|バイナリ モードを設定します (派生クラスのみで使用されます)。|
-|`CFile::typeText`|キャリッジ リターンとライン フィードのペア (派生クラスでのみ使用) の特別な処理を使用して、テキスト モードを設定します。|
+|`CFile::typeText`|復帰とラインフィードのペアに対して特別な処理を行うテキストモードを設定します (派生クラスでのみ使用されます)。|
 |`CFile::typeUnicode`|Unicode モードを設定します (派生クラスのみで使用されます)。 アプリケーションが Unicode 構成でビルドされた場合、テキストは Unicode 形式でファイルに書き込まれます。 BOM はファイルに書き込まれません。|
 
 次のファイル共有モード オプションから 1 つのみ選択します。 既定のファイル共有モードは `CFile::shareExclusive` であり、これは排他的です。
@@ -240,17 +240,17 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 |値|説明|
 |-----------|-----------------|
-|`CFile::modeCreate`|ファイルが存在しない場合は、新しいファイルを作成します。 ファイルが既に存在する場合は、上書きされ、最初は長さ 0 に設定されます。|
-|`CFile::modeNoTruncate`|ファイルが存在しない場合は、新しいファイルを作成します。それ以外の場合は、ファイルが既に存在する場合は`CFile`、オブジェクトにアタッチされます。|
+|`CFile::modeCreate`|ファイルが存在しない場合は、新しいファイルを作成します。 ファイルが既に存在する場合は、上書きされ、最初は長さが0に設定されます。|
+|`CFile::modeNoTruncate`|ファイルが存在しない場合は、新しいファイルを作成します。それ以外の場合、ファイルが既に存在する場合は、オブジェクトにアタッチされ `CFile` ます。|
 
-説明に従って次のファイル キャッシュ オプションを選択します。 デフォルトでは、オプションとして使用できない汎用キャッシュ方式が使用されます。
+説明に従って次のファイル キャッシュ オプションを選択します。 既定では、オプションとして使用できない汎用のキャッシュスキームがシステムによって使用されます。
 
 |値|説明|
 |-----------|-----------------|
-|`CFile::osNoBuffer`|システムはファイルの中間キャッシュを使用しません。 このオプションを選択すると、次の 2 つのオプションは取り消されます。|
-|`CFile::osRandomAccess`|ファイル キャッシュはランダム アクセスに対して最適化されます。 このオプションとシーケンシャルスキャンオプションの両方を使用しないでください。|
-|`CFile::osSequentialScan`|ファイル キャッシュは順次アクセスに対して最適化されます。 このオプションとランダム アクセス オプションの両方を使用しないでください。|
-|`CFile::osWriteThrough`|書き込み操作は、遅延なく行われます。|
+|`CFile::osNoBuffer`|システムは、ファイルの中間キャッシュを使用しません。 このオプションを選択すると、次の 2 つのオプションは取り消されます。|
+|`CFile::osRandomAccess`|ファイル キャッシュはランダム アクセスに対して最適化されます。 このオプションと順次スキャンオプションの両方を使用しないでください。|
+|`CFile::osSequentialScan`|ファイル キャッシュは順次アクセスに対して最適化されます。 このオプションとランダムアクセスオプションの両方を使用しないでください。|
+|`CFile::osWriteThrough`|書き込み操作は遅延なしで実行されます。|
 
 ファイル ハンドルが継承されないようにするために、次のセキュリティ オプションを選択します。 既定では、新しい子プロセスはファイル ハンドルを使用できます。
 
@@ -258,13 +258,13 @@ CAtlTransactionManager オブジェクトへのポインター。
 |-----------|-----------------|
 |`CFile::modeNoInherit`|子プロセスがファイル ハンドルを使用できないようにします。|
 
-既定のコンストラクターはメンバーを初期化しますが、`CFile`オブジェクトにファイルをアタッチしません。 このコンストラクターを使用した後[、CFile::Open](#open)メソッドを使用してファイルを開き、`CFile`オブジェクトにアタッチします。
+既定のコンストラクターはメンバーを初期化しますが、オブジェクトにはファイルをアタッチしません `CFile` 。 このコンストラクターを使用した後、 [CFile:: open](#open)メソッドを使用してファイルを開き、オブジェクトにアタッチし `CFile` ます。
 
 1 つのパラメーターを持つコンストラクターでは、メンバーは初期化され、既存のファイルが `CFile` オブジェクトにアタッチされます。
 
 2 つのパラメーターを持つコンストラクターでは、メンバーは初期化され、指定されたファイルを開くことが試行されます。 このコンストラクターによって、指定されたファイルが正常に開かれると、ファイルは `CFile` オブジェクトにアタッチされます。それ以外の場合は、このコンストラクターによって `CInvalidArgException` オブジェクトへのポインターがスローされます。 例外の処理方法の詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
-指定した`CFile`ファイルが正常に開かれた場合、オブジェクトが破棄されると、このファイルは`CFile`自動的に閉じられます。それ以外の場合は、オブジェクトにアタッチされなくなった後に、ファイルを明示的に`CFile`閉じる必要があります。
+`CFile`指定されたファイルが正常に開かれた場合、オブジェクトが破棄されると、このファイルは自動的に閉じられます `CFile` 。それ以外の場合は、オブジェクトにアタッチされなくなった後に、ファイルを明示的に閉じる必要があり `CFile` ます。
 
 ### <a name="example"></a>例
 
@@ -272,9 +272,9 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]
 
-## <a name="cfileclose"></a><a name="close"></a>ファイル::閉じる
+## <a name="cfileclose"></a><a name="close"></a>CFile:: Close
 
-このオブジェクトに関連付けられたファイルを閉じ、ファイルを読み取りまたは書き込みできないようにします。
+このオブジェクトに関連付けられているファイルを閉じて、読み取りまたは書き込みのためにファイルを使用できないようにします。
 
 ```
 virtual void Close();
@@ -282,17 +282,17 @@ virtual void Close();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトを破棄する前にファイルを閉じなければ、デストラクタはファイルを閉じます。
+オブジェクトを破棄する前にファイルを閉じていない場合は、デストラクターによってファイルが閉じられます。
 
-**new**を使用してヒープに`CFile`オブジェクトを割り当てた場合は、ファイルを閉じた後で削除する必要があります。 `Close`に`m_hFile`設定`CFile::hFileNull`されます。
+**`new`** ヒープにオブジェクトを割り当てる場合は `CFile` 、ファイルを閉じた後でオブジェクトを削除する必要があります。 `Close``m_hFile`をに設定 `CFile::hFileNull` します。
 
 ### <a name="example"></a>例
 
-[CFile::CFile](#cfile)の例を参照してください。
+[Cfile:: cfile](#cfile)の例を参照してください。
 
-## <a name="cfileduplicate"></a><a name="duplicate"></a>ファイル::D
+## <a name="cfileduplicate"></a><a name="duplicate"></a>CFile::D u
 
-指定したファイルの`CFile`複製オブジェクトを作成します。
+`CFile`指定されたファイルの重複するオブジェクトを構築します。
 
 ```
 virtual CFile* Duplicate() const;
@@ -300,15 +300,15 @@ virtual CFile* Duplicate() const;
 
 ### <a name="return-value"></a>戻り値
 
-重複オブジェクト`CFile`へのポインター。
+重複するオブジェクトへのポインター `CFile` 。
 
 ### <a name="remarks"></a>解説
 
-この関数は、C ランタイム関数`_dup`と同等です。
+この関数は、C ランタイム関数に相当 `_dup` します。
 
-## <a name="cfileflush"></a><a name="flush"></a>ファイル::フラッシュ
+## <a name="cfileflush"></a><a name="flush"></a>CFile:: Flush
 
-ファイル バッファに残っているデータを強制的にファイルに書き込みます。
+ファイルバッファー内の残りのデータを強制的にファイルに書き込みます。
 
 ```
 virtual void Flush();
@@ -316,15 +316,15 @@ virtual void Flush();
 
 ### <a name="remarks"></a>解説
 
-の`Flush`使用は、バッファの`CArchive`フラッシュを保証するものではありません。 アーカイブを使用している場合は、最初に[CArchive::フラッシュを](../../mfc/reference/carchive-class.md#flush)呼び出します。
+を使用すると、 `Flush` バッファーのフラッシュは保証されません `CArchive` 。 アーカイブを使用している場合は、最初に[CArchive:: Flush](../../mfc/reference/carchive-class.md#flush)を呼び出します。
 
 ### <a name="example"></a>例
 
-[CFile::セットファイルパス](#setfilepath)の例を参照してください。
+[CFile:: SetFilePath](#setfilepath)の例を参照してください。
 
-## <a name="cfilegetfilename"></a><a name="getfilename"></a>ファイル名::ファイル名を取得します。
+## <a name="cfilegetfilename"></a><a name="getfilename"></a>CFile:: GetFileName
 
-指定したファイルの名前を取得します。
+このメンバー関数を呼び出して、指定したファイルの名前を取得します。
 
 ```
 virtual CString GetFileName() const;
@@ -336,19 +336,19 @@ virtual CString GetFileName() const;
 
 ### <a name="remarks"></a>解説
 
-たとえば、ファイル`GetFileName``c:\windows\write\myfile.wri`に関するメッセージをユーザーに生成するために呼び出すと、ファイル名`myfile.wri`、 が返されます。
+たとえば、 `GetFileName` を呼び出してファイルに関するメッセージをユーザーに生成すると、 `c:\windows\write\myfile.wri` ファイル名が返され `myfile.wri` ます。
 
-ファイルのパス全体を取得するには、名前を含めて[GetFilePath](#getfilepath)を呼び出します。 ファイルのタイトルを返す場合`myfile`( )[を呼び](#getfiletitle)出します。
+名前を含むファイルのパス全体を取得するには、 [Getfilepath](#getfilepath)を呼び出します。 ファイルのタイトル () を返すには `myfile` 、 [GetFileTitle](#getfiletitle)を呼び出します。
 
 ### <a name="example"></a>例
 
-このコードフラグメントは、システムを開きます。INI ファイルを WINDOWS ディレクトリに保存します。 見つかった場合、この例は「出力」に示すように、名前とパスとタイトルを出力します。
+このコード片では、WINDOWS ディレクトリ内の SYSTEM.INI ファイルを開きます。 見つかった場合、この例では、[出力] に示されているように、名前とパス、およびタイトルが出力されます。
 
 [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]
 
-## <a name="cfilegetfilepath"></a><a name="getfilepath"></a>ファイル::ファイルパスを取得します。
+## <a name="cfilegetfilepath"></a><a name="getfilepath"></a>CFile:: GetFilePath
 
-指定したファイルの完全パスを取得します。
+このメンバー関数を呼び出して、指定したファイルの完全パスを取得します。
 
 ```
 virtual CString GetFilePath() const;
@@ -356,21 +356,21 @@ virtual CString GetFilePath() const;
 
 ### <a name="return-value"></a>戻り値
 
-指定したファイルの完全パス。
+指定されたファイルの完全パス。
 
 ### <a name="remarks"></a>解説
 
-たとえば、ファイルに関する`GetFilePath`メッセージをユーザーに生成するために呼び出すと`c:\windows\write\myfile.wri`、ファイル パス`c:\windows\write\myfile.wri`、 が返されます。
+たとえば、を呼び出して、 `GetFilePath` ファイルに関するメッセージをユーザーに生成すると、 `c:\windows\write\myfile.wri` ファイルパス `c:\windows\write\myfile.wri` が返されます。
 
-ファイルの名前だけを返す場合は、`myfile.wri` [GetFileName](#getfilename)を呼び出します。 ファイルのタイトルを返す場合`myfile`( )[を呼び](#getfiletitle)出します。
+ファイル () の名前だけを取得するには `myfile.wri` 、 [getfilename](#getfilename)を呼び出します。 ファイルのタイトル () を返すには `myfile` 、 [GetFileTitle](#getfiletitle)を呼び出します。
 
 ### <a name="example"></a>例
 
-[「ファイル名の取得](#getfilename)」の例を参照してください。
+[Getfilename](#getfilename)の例を参照してください。
 
-## <a name="cfilegetfiletitle"></a><a name="getfiletitle"></a>ファイル::ファイルタイトルを取得します。
+## <a name="cfilegetfiletitle"></a><a name="getfiletitle"></a>CFile:: GetFileTitle
 
-ファイルのファイル タイトル (表示名) を取得します。
+ファイルのファイルタイトル (表示名) を取得するには、このメンバー関数を呼び出します。
 
 ```
 virtual CString GetFileTitle() const;
@@ -382,15 +382,15 @@ virtual CString GetFileTitle() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ファイルのタイトルを取得するために[GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)を呼び出します。 成功した場合、このメソッドは、システムがファイル名をユーザーに表示するために使用する文字列を返します。 それ以外の場合、メソッドは[PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)を呼び出して、基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 つまり、ファイル拡張子が返されるファイル タイトル文字列に必ずしも含まれているとは限りません。 詳細については、Windows SDK[の「ファイル タイトル](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)と[パス検索ファイル名](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)」を参照してください。
+このメソッドは、 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)を呼び出して、ファイルのタイトルを取得します。 成功した場合、メソッドは、ユーザーにファイル名を表示するためにシステムが使用する文字列を返します。 それ以外の場合、メソッドは[Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)を呼び出して、基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 つまり、返されたファイルのタイトル文字列にファイル拡張子が必ず含まれているわけではありません。 詳細については、Windows SDK の「 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)と[pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) 」を参照してください。
 
-ファイルのパス全体を取得するには、名前を含めて[GetFilePath](#getfilepath)を呼び出します。 ファイルの名前だけを返す場合は[、GetFileName](#getfilename)を呼び出します。
+名前を含むファイルのパス全体を取得するには、 [Getfilepath](#getfilepath)を呼び出します。 ファイル名のみを返すには、 [Getfilename](#getfilename)を呼び出します。
 
 ### <a name="example"></a>例
 
-[「ファイル名の取得](#getfilename)」の例を参照してください。
+[Getfilename](#getfilename)の例を参照してください。
 
-## <a name="cfilegetlength"></a><a name="getlength"></a>ファイル::ゲットレングス
+## <a name="cfilegetlength"></a><a name="getlength"></a>CFile:: GetLength
 
 ファイルの現在の論理長をバイト単位で取得します。
 
@@ -406,9 +406,9 @@ virtual ULONGLONG GetLength() const;
 
 [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]
 
-## <a name="cfilegetposition"></a><a name="getposition"></a>ファイル::取得位置
+## <a name="cfilegetposition"></a><a name="getposition"></a>CFile:: GetPosition
 
-ファイル ポインタの現在の値を`Seek`取得します。
+ファイルポインターの現在の値を取得します。これは、後でを呼び出すときに使用でき `Seek` ます。
 
 ```
 virtual ULONGLONG GetPosition() const;
@@ -416,15 +416,15 @@ virtual ULONGLONG GetPosition() const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイル ポインター。
+ファイルポインター。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-## <a name="cfilegetstatus"></a><a name="getstatus"></a>ファイル::ステータスを取得します。
+## <a name="cfilegetstatus"></a><a name="getstatus"></a>CFile:: GetStatus
 
-このメソッドは、指定したオブジェクト インスタンスまたは`CFile`指定したファイル パスに関連するステータス情報を取得します。
+このメソッドは、指定された `CFile` オブジェクトインスタンスまたは指定されたファイルパスに関連するステータス情報を取得します。
 
 ```
 BOOL GetStatus(CFileStatus& rStatus) const;
@@ -437,36 +437,36 @@ static BOOL PASCAL GetStatus(
 
 ### <a name="parameters"></a>パラメーター
 
-*rステータス*<br/>
-状態情報を受け取る`CFileStatus`ユーザー提供の構造体への参照。 構造`CFileStatus`には、次のフィールドがあります。
+*rStatus*<br/>
+ステータス情報を受け取るユーザー指定の `CFileStatus` 構造体への参照。 `CFileStatus`構造体には、次のフィールドがあります。
 
-- `CTime m_ctime`ファイルが作成された日時。
+- `CTime m_ctime`ファイルが作成された日付と時刻。
 
-- `CTime m_mtime`ファイルが最後に変更された日時。
+- `CTime m_mtime`ファイルが最後に変更された日付と時刻。
 
-- `CTime m_atime`ファイルが読み取りのために最後にアクセスされた日時。
+- `CTime m_atime`ファイルが読み取り用に最後にアクセスされた日付と時刻。
 
-- `ULONGLONG m_size`DIR コマンドによって報告されるファイルの論理サイズ (バイト単位)。
+- `ULONGLONG m_size`DIR コマンドによって報告されたファイルの論理サイズ (バイト単位)。
 
 - `BYTE m_attribute`ファイルの属性バイト。
 
 - `char m_szFullName[_MAX_PATH]`Windows 文字セットの絶対ファイル名。
 
-*ファイル名*<br/>
-目的のファイルへのパスを示す Windows 文字セット内の文字列。 パスは、相対パスまたは絶対パス、またはネットワーク パス名を含めることができます。
+*lpszFileName*<br/>
+Windows 文字セット内の、目的のファイルへのパスを表す文字列。 相対パスまたは絶対パスを指定することも、ネットワークパス名を含めることもできます。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定したファイルの状態情報が正常に取得された場合は TRUE。それ以外の場合は FALSE。
+指定したファイルのステータス情報が正常に取得された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-非静的バージョンのオブジェクト`GetStatus`に関連付けられたオープン・ファイルの状況情報を取得`CFile`します。  静的バージョンのの`GetStatus`場合、ファイルを実際に開かずに指定のファイル パスからファイルのステータスを取得します。 このバージョンは、ファイルの存在権とアクセス権をテストする場合に便利です。
+非静的バージョンのは、 `GetStatus` 指定されたオブジェクトに関連付けられている開いているファイルのステータス情報を取得し `CFile` ます。  の静的バージョンでは、ファイルを `GetStatus` 実際に開くことなく、指定されたファイルパスからファイルの状態を取得します。 このバージョンは、ファイルの存在とアクセス権のテストに役立ちます。
 
-構造体`m_attribute`のメンバーは`CFileStatus`、ファイル属性セットを参照します。 この`CFile`クラスは **、ファイル属性**をシンボル的に指定できるように、属性列挙型を提供します。
+`m_attribute`構造体のメンバーは、 `CFileStatus` ファイル属性セットを参照します。 クラスは、 `CFile` ファイル属性をシンボルとして指定できるように、**属性**の列挙型を提供します。
 
 ```
 enum Attribute {
@@ -484,9 +484,9 @@ enum Attribute {
 
 [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]
 
-## <a name="cfilehfilenull"></a><a name="hfilenull"></a>ファイル::hファイルNull
+## <a name="cfilehfilenull"></a><a name="hfilenull"></a>CFile:: hFileNull
 
-オブジェクトに対して有効なファイル ハンドルが`CFile`存在するかどうかを判断します。
+オブジェクトの有効なファイルハンドルが存在するかどうかを判断し `CFile` ます。
 
 ```
 static AFX_DATA const HANDLE hFileNull;
@@ -494,15 +494,15 @@ static AFX_DATA const HANDLE hFileNull;
 
 ### <a name="remarks"></a>解説
 
-この定数は、オブジェクトに`CFile`有効なファイル ハンドルがあるかどうかを判断するために使用されます。
+この定数は、 `CFile` オブジェクトに有効なファイルハンドルがあるかどうかを判断するために使用されます。
 
-次の例は、この操作を示しています。
+この操作の例を次に示します。
 
 [!code-cpp[NVC_MFCFiles#22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]
 
-## <a name="cfilelockrange"></a><a name="lockrange"></a>ファイル::ロックレンジ
+## <a name="cfilelockrange"></a><a name="lockrange"></a>CFile:: LockRange
 
-オープン・ファイル内のバイト範囲をロックし、ファイルがすでにロックされている場合は例外をスローします。
+開いているファイルのバイト範囲をロックし、ファイルが既にロックされている場合は例外をスローします。
 
 ```
 virtual void LockRange(
@@ -512,28 +512,28 @@ virtual void LockRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウォポス*<br/>
-ロックするバイト範囲の開始位置のバイト オフセット。
+*dwPos*<br/>
+ロックするバイト範囲の先頭のバイトオフセット。
 
-*カウントカウント*<br/>
+*dwCount*<br/>
 ロックする範囲内のバイト数。
 
 ### <a name="remarks"></a>解説
 
-ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの複数の領域をロックできますが、重複する領域は使用できません。
+ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの複数の領域をロックすることはできますが、重複する領域は許可されません。
 
-メンバー関数を使用して領域の`UnlockRange`ロックを解除する場合、バイト範囲は、以前にロックされていた領域に正確に対応している必要があります。 この`LockRange`関数は隣接する領域をマージしません。 2 つのロックされた領域が隣接している場合は、各リージョンのロックを個別に解除する必要があります。
+メンバー関数を使用して領域のロックを解除する場合 `UnlockRange` 、バイト範囲は、以前にロックされていた領域と正確に対応している必要があります。 `LockRange`関数は隣接する領域を結合しません。 2つのロックされた領域が隣接している場合は、各領域を個別にロック解除する必要があります。
 
 > [!NOTE]
-> この関数は、-derived クラス`CMemFile`では使用できません。
+> この関数は、派生クラスでは使用できません `CMemFile` 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-## <a name="cfilem_hfile"></a><a name="m_hfile"></a>ファイル::m_hFile
+## <a name="cfilem_hfile"></a><a name="m_hfile"></a>CFile:: m_hFile
 
-開いているファイルのオペレーティング システム ファイル ハンドルが含まれています。
+開いているファイルのオペレーティングシステムファイルハンドルを格納します。
 
 ```
 HANDLE m_hFile;
@@ -541,13 +541,13 @@ HANDLE m_hFile;
 
 ### <a name="remarks"></a>解説
 
-`m_hFile`は、UINT 型のパブリック変数です。 ハンドルが`CFile::hFileNull`割り当てられていない場合は、オペレーティング システムに依存しない空のファイル インジケーターが含まれます。
+`m_hFile`UINT 型のパブリック変数です。 これには `CFile::hFileNull` 、ハンドルが割り当てられていない場合に、オペレーティングシステムに依存しない空のファイルインジケーターが含まれます。
 
-メンバーの`m_hFile`意味は派生クラスに依存するため、の使用はお勧めしません。 `m_hFile`クラスの非ポリモーフィックな使用をサポートする便宜上パブリック メンバーにします。
+`m_hFile`メンバーの意味は派生クラスに依存しているため、の使用は推奨されていません。 `m_hFile`は、クラスの非ポリモーフィックな使用をサポートするために、パブリックメンバーになりました。
 
-## <a name="cfilem_ptm"></a><a name="m_ptm"></a>ファイル::m_pTM
+## <a name="cfilem_ptm"></a><a name="m_ptm"></a>CFile:: m_pTM
 
-`CAtlTransactionManager`オブジェクトへのポインター。
+オブジェクトへのポインター `CAtlTransactionManager` 。
 
 ```
 CAtlTransactionManager* m_pTM;
@@ -555,9 +555,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cfileopen"></a><a name="open"></a>ファイル::開く
+## <a name="cfileopen"></a><a name="open"></a>CFile:: Open
 
-オーバーロードされます。 `Open`は、既定`CFile`のコンストラクターで使用するように設計されています。
+オーバーロードされます。 `Open`は、既定のコンストラクターで使用するように設計されてい `CFile` ます。
 
 ```
 virtual BOOL Open(
@@ -574,36 +574,36 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
-目的のファイルへのパスを含む文字列。 パスは、相対パス、絶対パス、またはネットワーク名 (UNC) です。
+*lpszFileName*<br/>
+目的のファイルへのパスを含む文字列。 パスには、相対パス、絶対パス、またはネットワーク名 (UNC) を指定できます。
 
-*フラグを開く*<br/>
-ファイルの共有モードとアクセス モードを定義する UINT。 ファイルを開くときに実行するアクションを指定します。 オプションは、ビットごとの OR ( **&#124;** ) 演算子を使用して組み合わせることができます。 アクセス権と共有オプションが 1 つ必要です。と`modeCreate``modeNoInherit`モードはオプションです。 モード オプションの一覧については[、CFile](#cfile)コンストラクターを参照してください。
+*Noペンフラグ*<br/>
+ファイルの共有モードとアクセスモードを定義する UINT。 ファイルを開くときに実行するアクションを指定します。 ビットごとの OR ( **&#124;** ) 演算子を使用して、オプションを組み合わせることができます。 1つのアクセス許可と1つの共有オプションが必要です。`modeCreate`モードと `modeNoInherit` モードは省略可能です。 モードオプションの一覧については、「 [CFile](#cfile)コンストラクター」を参照してください。
 
 *pError*<br/>
 失敗した操作の状態を受け取る既存のファイル例外オブジェクトへのポインター。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-オープンが成功した場合は 0 以外。それ以外の場合は 0。 *pError*パラメーターは、0 が返された場合にのみ意味があります。
+開いたが成功した場合は0以外の。それ以外の場合は0です。 この*パラメーターは*、0が返された場合にのみ意味があります。
 
 ### <a name="remarks"></a>解説
 
-2`Open`つの関数は、ファイルを開くための "安全な" メソッドであり、障害は通常の予期される状態です。
+2つの `Open` 関数は、ファイルを開くための "安全な" メソッドであり、エラーが通常の予期される条件になります。
 
-コンストラクターが`CFile`エラー条件で例外をスローしている間に、`Open`エラー条件の場合は FALSE を返します。 `Open`ただし[、CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトを初期化してエラーを記述することはできます。 *pError*パラメーターを指定しない場合、または*pError*に NULL を渡`Open`した場合は、FALSE を返`CFileException`し、. 既存`CFileException`の にポインターを渡して`Open`エラーが発生すると、関数はそのエラーを説明する情報を入力します。 `Open`どちらの場合も例外はスローされません。
+コンストラクターは `CFile` エラー条件で例外をスローしますが、 `Open` エラー状態の場合は FALSE を返します。 `Open`でも、エラーを説明するために[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトを初期化することはできます。 *パラメーターを指定しない*場合、またはの*場合に NULL*を渡すと、は `Open` FALSE を返し、をスローしません `CFileException` 。 既存のにポインターを渡し、エラーが発生した場合 `CFileException` `Open` 、関数はそのエラーを説明する情報を入力します。 `Open`どちらの場合も、例外はスローされません。
 
-次の表に、`Open`の結果の可能性を示します。
+次の表では、の考えられる結果について説明し `Open` ます。
 
-|`pError`|エラーが発生しました|戻り値|コンテンツ|
+|`pError`|エラーが発生しました|戻り値|CFileException コンテンツ|
 |--------------|------------------------|------------------|----------------------------|
 |NULL|いいえ|TRUE|該当なし|
-|ptr から`CFileException`|いいえ|TRUE|変更なし|
+|ptr`CFileException`|いいえ|TRUE|変更なし|
 |NULL|はい|FALSE|該当なし|
-|ptr から`CFileException`|はい|FALSE|エラーを記述するために初期化|
+|ptr`CFileException`|はい|FALSE|エラーを記述するように初期化されました|
 
 ### <a name="example"></a>例
 
@@ -611,17 +611,17 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]
 
-## <a name="cfileoperator-handle"></a><a name="operator_handle"></a>Cファイル::演算子ハンドル
+## <a name="cfileoperator-handle"></a><a name="operator_handle"></a>CFile:: operator ハンドル
 
-この演算子を使用して、オブジェクトへのハンドル`CFile`を、を想定する[ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex)や[GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime)などの関数に渡`HANDLE`します。
+この演算子を使用して、オブジェクトへのハンドルを `CFile` 、を想定する[ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex)や[getfiletime](/windows/win32/api/fileapi/nf-fileapi-getfiletime)などの関数に渡し `HANDLE` ます。
 
 ```
 operator HANDLE() const;
 ```
 
-## <a name="cfileread"></a><a name="read"></a>ファイル::読み取り
+## <a name="cfileread"></a><a name="read"></a>CFile:: 読み取り
 
-オブジェクトに関連付けられたファイルからデータをバッファーに`CFile`読み込みます。
+オブジェクトに関連付けられているファイルからバッファーにデータを読み取り `CFile` ます。
 
 ```
 virtual UINT Read(
@@ -632,22 +632,22 @@ virtual UINT Read(
 ### <a name="parameters"></a>パラメーター
 
 *lpBuf*<br/>
-ファイルから読み取られたデータを受け取るユーザー指定のバッファーへのポインター。
+ファイルから読み取ったデータを受信するための、ユーザーが指定したバッファーへのポインター。
 
-*nカウント*<br/>
-ファイルから読み取る最大バイト数。 テキスト モード ファイルの場合、復帰線フィードのペアは 1 文字としてカウントされます。
+*nCount*<br/>
+ファイルから読み取る最大バイト数です。 テキストモードファイルの場合、キャリッジリターンラインフィードのペアは単一の文字としてカウントされます。
 
 ### <a name="return-value"></a>戻り値
 
-バッファーに転送するバイト数。 すべての`CFile`クラスについて、ファイルの末尾に達した場合、戻り値は*nCount*より小さくなる可能性があります。
+バッファーに転送するバイト数。 すべてのクラスについて `CFile` 、ファイルの末尾に到達した場合、戻り値は*nCount*より小さくなることがあります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]
 
-別の例については[、「CFile::Open」を参照](#open)してください。
+別の例については、「 [CFile:: Open](#open)」を参照してください。
 
-## <a name="cfileremove"></a><a name="remove"></a>ファイル::削除
+## <a name="cfileremove"></a><a name="remove"></a>CFile:: Remove
 
 この静的関数は、パスで指定されたファイルを削除します。
 
@@ -659,23 +659,23 @@ static void PASCAL Remove(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
-目的のファイルへのパスを表す文字列。 パスは、相対パスまたは絶対パスとすることができ、ネットワーク名を含むことができます。
+*lpszFileName*<br/>
+目的のファイルへのパスを表す文字列。 パスは、相対パスまたは絶対パスにすることができ、ネットワーク名を含めることができます。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-`Remove`ディレクトリを削除しません。
+`Remove`ディレクトリは削除されません。
 
-`Remove`接続されているファイルが開いている場合、またはファイルを削除できない場合、メンバー関数は例外をスローします。 この関数は DEL コマンドと同じです。
+`Remove`接続されたファイルが開いている場合、またはファイルを削除できない場合、メンバー関数は例外をスローします。 この関数は、DEL コマンドに相当します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]
 
-## <a name="cfilerename"></a><a name="rename"></a>Cファイル::名前の変更
+## <a name="cfilerename"></a><a name="rename"></a>CFile:: 名前の変更
 
 この静的関数は、指定されたファイルの名前を変更します。
 
@@ -688,26 +688,26 @@ static void PASCAL Rename(
 
 ### <a name="parameters"></a>パラメーター
 
-*名前*<br/>
+*lpszOldName*<br/>
 古いパス。
 
-*新しい名前を指定します。*<br/>
+*lpszNewName*<br/>
 新しいパス。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-ディレクトリ名を変更できません。 この関数は REN コマンドと同等です。
+ディレクトリの名前を変更することはできません。 この関数は、REN コマンドに相当します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]
 
-## <a name="cfileseek"></a><a name="seek"></a>ファイル::シーク
+## <a name="cfileseek"></a><a name="seek"></a>CFile:: Seek
 
-開いているファイル内のファイル ポインタを再配置します。
+開いているファイル内のファイルポインターを移動します。
 
 ```
 virtual ULONGLONG Seek(
@@ -717,29 +717,29 @@ UINT nFrom);
 
 ### <a name="parameters"></a>パラメーター
 
-*lオフ*<br/>
-ファイル ポインタを移動するバイト数。 正の値を指定すると、ファイル ポインタはファイルの末尾に向かって移動します。負の値を指定すると、ファイル ポインタがファイルの先頭に移動します。
+*lOff*<br/>
+ファイルポインターを移動するバイト数。 正の値は、ファイルポインターをファイルの末尾に移動します。負の値を指定すると、ファイルポインターがファイルの先頭に移動します。
 
-*nから*<br/>
-求める位置。 可能な値については、「解説」を参照してください。
+*n*<br/>
+シークする位置。 使用可能な値については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合はファイル ポインタの位置。それ以外の場合、戻り値は未定義になり、`CFileException`例外へのポインターがスローされます。
+メソッドが正常に実行された場合は、ファイルポインターの位置。それ以外の場合、戻り値は未定義で、例外へのポインター `CFileException` がスローされます。
 
 ### <a name="remarks"></a>解説
 
-次の表は *、nFrom*パラメーターの値を示しています。
+次の表に、 *Nfrom*パラメーターに使用できる値を示します。
 
 |値|説明|
 |-----------|-----------------|
 |`CFile::begin`|ファイルの先頭からシークします。|
-|`CFile::current`|ファイル ポインタの現在の場所からシークします。|
+|`CFile::current`|ファイルポインターの現在の場所からシークします。|
 |`CFile::end`|ファイルの末尾からシークします。|
 
-ファイルを開くと、ファイルポインタはファイルの先頭である0に置かれます。
+ファイルが開かれると、ファイルポインターはファイルの先頭の0に位置します。
 
-ファイル ポインタは、ファイルの末尾を越えた位置に設定できます。 この場合、ファイルに書き込むまでファイルのサイズは大きくなりません。
+ファイルポインターは、ファイルの末尾を越える位置に設定できます。 この場合、ファイルに書き込むまでファイルのサイズは増加しません。
 
 このメソッドの例外ハンドラーは、例外が処理された後に例外オブジェクトを削除する必要があります。
 
@@ -747,9 +747,9 @@ UINT nFrom);
 
 [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]
 
-## <a name="cfileseektobegin"></a><a name="seektobegin"></a>ファイル::シークトビギン
+## <a name="cfileseektobegin"></a><a name="seektobegin"></a>CFile:: SeekToBegin
 
-ファイル ポインタの値をファイルの先頭に設定します。
+ファイルポインターの値をファイルの先頭に設定します。
 
 ```cpp
 void SeekToBegin();
@@ -763,9 +763,9 @@ void SeekToBegin();
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-## <a name="cfileseektoend"></a><a name="seektoend"></a>ファイル::シークトーエンド
+## <a name="cfileseektoend"></a><a name="seektoend"></a>CFile:: SeekToEnd
 
-ファイル ポインタの値をファイルの論理終端に設定します。
+ファイルポインターの値をファイルの論理上の末尾に設定します。
 
 ```
 ULONGLONG SeekToEnd();
@@ -783,9 +783,9 @@ ULONGLONG SeekToEnd();
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-## <a name="cfilesetfilepath"></a><a name="setfilepath"></a>ファイル::セットファイルパス
+## <a name="cfilesetfilepath"></a><a name="setfilepath"></a>CFile:: SetFilePath
 
-ファイルのパスを指定します。 たとえば[、CFile](../../mfc/reference/cfile-class.md)オブジェクトが構築されたときにファイルのパスが使用できない場合は、そのパスを呼`SetFilePath`び出して指定します。
+ファイルのパスを指定するには、この関数を呼び出します。 たとえば、 [CFile](../../mfc/reference/cfile-class.md)オブジェクトが構築されたときにファイルのパスを使用できない場合は、 `SetFilePath` を呼び出して指定します。
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -793,21 +793,21 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 
 ### <a name="parameters"></a>パラメーター
 
-*新しい名前を指定します。*<br/>
+*lpszNewName*<br/>
 新しいパスを指定する文字列へのポインター。
 
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
-> `SetFilePath`ファイルを開いたり、ファイルを作成したりすることはありません。オブジェクトを`CFile`パス名に関連付けるだけで、使用できます。
+> `SetFilePath`ファイルを開いたり、ファイルを作成したりすることはありません。単にオブジェクトを `CFile` パス名に関連付けることにより、そのオブジェクトを使用できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]
 
-## <a name="cfilesetlength"></a><a name="setlength"></a>ファイル::セットレングス
+## <a name="cfilesetlength"></a><a name="setlength"></a>CFile:: SetLength
 
-ファイルの長さを変更します。
+ファイルの長さを変更するには、この関数を呼び出します。
 
 ```
 virtual void SetLength(ULONGLONG dwNewLen);
@@ -815,21 +815,21 @@ virtual void SetLength(ULONGLONG dwNewLen);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドニューレン*<br/>
-ファイルの必要な長さ (バイト単位)。 この値は、ファイルの現在の長さより大きい場合も小さくすることもできます。 ファイルは、必要に応じて拡張または切り捨てられます。
+*dwNewLen*<br/>
+ファイルの必要な長さ (バイト単位)。 この値は、ファイルの現在の長さより大きいか小さくすることができます。 ファイルは、必要に応じて拡張または切り捨てられます。
 
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
-> では`CMemFile`、この関数はオブジェクトを`CMemoryException`スローする可能性があります。
+> では `CMemFile` 、この関数はオブジェクトをスローする可能性が `CMemoryException` あります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]
 
-## <a name="cfilesetstatus"></a><a name="setstatus"></a>ファイル::セットステータス
+## <a name="cfilesetstatus"></a><a name="setstatus"></a>CFile:: SetStatus
 
-このファイルの場所に関連付けられているファイルのステータスを設定します。
+このファイルの場所に関連付けられているファイルの状態を設定します。
 
 ```
 static void PASCAL SetStatus(
@@ -840,28 +840,28 @@ static void PASCAL SetStatus(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
-目的のファイルへのパスを表す文字列。 パスは、相対パスまたは絶対パスとすることができ、ネットワーク名を含むことができます。
+*lpszFileName*<br/>
+目的のファイルへのパスを表す文字列。 パスは、相対パスまたは絶対パスにすることができ、ネットワーク名を含めることができます。
 
 *status*<br/>
-新しいステータス情報を格納するバッファ。 メンバー関数`GetStatus`を呼び出して、`CFileStatus`構造体に現在の値を事前入力し、必要に応じて変更を加えます。 値が 0 の場合、対応するステータスアイテムは更新されません。 構造体の説明については[、GetStatus](#getstatus)メンバー関数を`CFileStatus`参照してください。
+新しいステータス情報を格納しているバッファー。 メンバー関数を呼び出して、 `GetStatus` 現在の `CFileStatus` 値で構造体を事前に設定し、必要に応じて変更を行います。 値が0の場合、対応するステータス項目は更新されません。 構造体の説明については、 [GetStatus](#getstatus)メンバー関数を参照してください `CFileStatus` 。
 
-*Ptm*<br/>
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-時刻を設定するには、 `m_mtime` *status*のフィールドを変更します。
+時刻を設定するには、 `m_mtime` *状態*のフィールドを変更します。
 
-ファイルの属性のみを変更しようとして`SetStatus`呼び出しを行い、ファイルステータス構造体の`m_mtime`メンバーが 0 以外の場合、属性も影響を受ける可能性があります (タイムスタンプの変更は属性に影響を与える可能性があります)。 ファイルの属性のみを変更する場合は、まずファイルステータス構造体の`m_mtime`メンバーを 0 に設定してから、 を呼び出します`SetStatus`。
+ファイルの属性のみを変更しようとしてを呼び出したときに、 `SetStatus` `m_mtime` ファイル状態構造体のメンバーが0以外の場合は、属性も影響を受ける可能性があります (タイムスタンプを変更すると、属性に副作用が生じる可能性があります)。 ファイルの属性のみを変更する場合は、まず、 `m_mtime` ファイル状態構造体のメンバーを0に設定してから、を呼び出し `SetStatus` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]
 
-## <a name="cfileunlockrange"></a><a name="unlockrange"></a>ファイル::ロック解除範囲
+## <a name="cfileunlockrange"></a><a name="unlockrange"></a>CFile:: UnlockRange
 
-開いているファイル内のバイト範囲のロックを解除します。
+開いているファイルのバイト範囲をロック解除します。
 
 ```
 virtual void UnlockRange(
@@ -871,26 +871,26 @@ virtual void UnlockRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウォポス*<br/>
-ロック解除するバイト範囲の開始位置のバイト オフセット。
+*dwPos*<br/>
+ロックを解除するバイト範囲の先頭のバイトオフセット。
 
-*カウントカウント*<br/>
-ロック解除する範囲内のバイト数。
+*dwCount*<br/>
+ロックを解除する範囲内のバイト数。
 
 ### <a name="remarks"></a>解説
 
-詳細については[、LockRange](#lockrange)メンバー関数の説明を参照してください。
+詳細については、 [LockRange](#lockrange)メンバー関数の説明を参照してください。
 
 > [!NOTE]
-> この関数は、-derived`CMemFile`クラスでは使用できません。
+> この関数は、派生クラスでは使用できません `CMemFile` 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-## <a name="cfilewrite"></a><a name="write"></a>ファイル::書き込み
+## <a name="cfilewrite"></a><a name="write"></a>CFile:: 書き込み
 
-バッファーからオブジェクトに関連付けられたファイルにデータを`CFile`書き込みます。
+バッファーからオブジェクトに関連付けられたファイルにデータを書き込み `CFile` ます。
 
 ```
 virtual void Write(
@@ -901,25 +901,25 @@ virtual void Write(
 ### <a name="parameters"></a>パラメーター
 
 *lpBuf*<br/>
-ファイルに書き込まれるデータを格納するユーザーが指定したバッファーへのポインター。
+ファイルに書き込まれるデータを格納する、ユーザーが指定したバッファーへのポインター。
 
-*nカウント*<br/>
-バッファーから転送されるバイト数。 テキスト モード ファイルの場合、復帰線フィードのペアは 1 文字としてカウントされます。
+*nCount*<br/>
+バッファーから転送されるバイト数。 テキストモードファイルの場合、キャリッジリターンラインフィードのペアは単一の文字としてカウントされます。
 
 ### <a name="remarks"></a>解説
 
-`Write`ディスク満杯条件を含むいくつかの条件に応答して例外をスローします。
+`Write`では、ディスク全体の条件など、いくつかの条件に応じて例外がスローされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-また[、CFile::CFile](#cfile)と[CFile::開くの](#open)例も参照してください。
+また、 [cfile:: cfile](#cfile)と[Cfile:: Open](#open)の例も参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル ドローCLI](../../overview/visual-cpp-samples.md)<br/>
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラスを指定します。](../../mfc/reference/cstdiofile-class.md)<br/>
-[CMemファイルクラス](../../mfc/reference/cmemfile-class.md)
+[MFC のサンプル DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
+[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CStdioFile クラス](../../mfc/reference/cstdiofile-class.md)<br/>
+[CMemFile クラス](../../mfc/reference/cmemfile-class.md)

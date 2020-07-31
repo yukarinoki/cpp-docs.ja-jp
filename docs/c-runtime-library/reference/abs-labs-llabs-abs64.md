@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171412"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221992"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -78,7 +78,7 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **long** **、long** **long**、 **float**、 **double**、および**long** **double**値を取得して返す**abs**のオーバーロードを呼び出すことができます。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムでは、 **abs**は常に**int**を受け取り、返します。
+C++ ではオーバーロードが可能であるため、 **abs** 、、 **`long`** **`long long`** **`float`** 、 **`double`** 、およびの値を受け取って返す abs のオーバーロードを呼び出すことができ **`long double`** ます。 これらのオーバーロードは、ヘッダーで定義されてい \<cmath> ます。 C プログラムでは、 **abs**は常にを受け取り、を返し **`int`** ます。
 
 **Microsoft 固有**: 任意の整数型を使用して表すことができる負の整数の範囲は、その型を使用して表すことができる正の整数の範囲より大きいため、変換できないこれらの関数に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数は引数の値を変更せずに返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 これは、 **abs**関数を使用して正の値を保証することができないことを意味します。
 
@@ -89,7 +89,7 @@ float abs( float n );   // C++ only
 |**abs**、 **labs**、 **llabs**|\<math.h> または \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h>、または \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> または \<stdlib.h>|
 
-のC++オーバーロードされたバージョンの**abs**を使用するには、\<cmath > ヘッダーを含める必要があります。
+C++ で**abs**のオーバーロードされたバージョンを使用するには、ヘッダーを含める必要があり \<cmath> ます。
 
 ## <a name="example"></a>例
 
@@ -148,10 +148,10 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
 [imaxabs](imaxabs.md)

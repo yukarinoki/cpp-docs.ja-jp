@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140831"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193966"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation クラス
 
-このクラスは、`_BeginOversubscription` パラメーターを**true**に設定して `Context::Oversubscribe` メソッドを前に呼び出すことなく、`_BeginOversubscription` パラメーターを**false**に設定して `Context::Oversubscribe` メソッドを呼び出すとスローされる例外を表します。
+このクラスは、パラメーターが `Context::Oversubscribe` `_BeginOversubscription` に設定され **`false`** たメソッドを前に呼び出すことなく、パラメーターをに設定してメソッドを呼び出した場合にスローされる例外を表し `Context::Oversubscribe` `_BeginOversubscription` **`true`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 `invalid_oversubscribe_operation` オブジェクトを構築します。|
 
@@ -39,13 +39,13 @@ class invalid_oversubscribe_operation : public std::exception;
 
 `invalid_oversubscribe_operation`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 `invalid_oversubscribe_operation` オブジェクトを構築します。
 
@@ -60,6 +60,6 @@ invalid_oversubscribe_operation() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

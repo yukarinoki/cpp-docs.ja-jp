@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a15220cb02a48fb11936b69e5830412f1221108
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230676"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>コンパイラの警告 (レベル 1) C4436
 
 コンストラクターまたはデストラクター内の仮想ベース ' class1 ' から ' class2 ' への dynamic_cast は、/vd2 を使用して部分的に構築されたオブジェクトで失敗するか、#pragma vtordisp (2) が有効な ' class2 ' を定義しています。
 
-コンパイラで、次の特性を持つ `dynamic_cast` 操作が検出されました。
+コンパイラで、 **`dynamic_cast`** 次の特性を持つ操作が検出されました。
 
 - キャストは、基底クラスポインターから派生クラスポインターへのキャストです。
 
 - 派生クラスは、実質的に基底クラスを継承します。
 
-- 派生クラスには、仮想ベースの `vtordisp` フィールドがありません。
+- 派生クラスに `vtordisp` 仮想ベースのフィールドがありません。
 
 - キャストは、派生クラスのコンストラクターまたはデストラクター、または派生クラスからさらに継承するクラスにあります。
 
-警告は、部分的に構築されたオブジェクトで動作している場合に、`dynamic_cast` が正しく実行されない可能性があることを示します。  これは、派生コンストラクターまたはデストラクターが、さらに派生したオブジェクトのサブオブジェクト上で動作している場合に発生します。  警告で指定された派生クラスがそれ以上派生していない場合は、警告を無視できます。
+警告は、が **`dynamic_cast`** 部分的に構築されたオブジェクトで動作している場合に、が正しく動作しない可能性があることを示します。  これは、派生コンストラクターまたはデストラクターが、さらに派生したオブジェクトのサブオブジェクト上で動作している場合に発生します。  警告で指定された派生クラスがそれ以上派生していない場合は、警告を無視できます。
 
 ## <a name="example"></a>例
 
-次の例では、C4436 を生成し、不足している `vtordisp` フィールドから発生するコード生成の問題を示します。
+次の例では、C4436 を生成し、不足しているフィールドから発生するコード生成の問題を示し `vtordisp` ます。
 
 ```cpp
 // C4436.cpp
@@ -73,7 +73,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

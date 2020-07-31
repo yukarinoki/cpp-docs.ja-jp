@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232795"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,11 +25,11 @@ Com インターフェイスを実装できる COM オブジェクトを作成�
 
 ## <a name="remarks"></a>解説
 
-**Coclass** C++属性は、生成された .idl ファイルにコクラスコンストラクトを配置します。
+**コクラス**C++ 属性は、生成された .idl ファイルにコクラスコンストラクトを配置します。
 
 コクラスを定義するときに、 [uuid](uuid-cpp-attributes.md)、 [version](version-cpp.md)、[スレッド](threading-cpp.md)、 [vi_progid](vi-progid.md)、および[progid](progid.md)属性を指定することもできます。 これらのいずれかが指定されていない場合は、生成されます。
 
-2つのヘッダーファイルに**コクラス**属性を持つクラスが含まれていて、guid を指定していない場合、コンパイラは両方のクラスに同じ guid を使用します。これにより、MIDL エラーが発生します。  したがって、**コクラス**を使用する場合は、`uuid` 属性を使用する必要があります。
+2つのヘッダーファイルに**コクラス**属性を持つクラスが含まれていて、guid を指定していない場合、コンパイラは両方のクラスに同じ guid を使用します。これにより、MIDL エラーが発生します。  したがって、コクラスを使用する場合は、属性を使用する必要があり `uuid` ます。 **coclass**
 
 **ATL プロジェクト**
 
@@ -39,29 +39,29 @@ Com インターフェイスを実装できる COM オブジェクトを作成�
 
 - オブジェクトの COM クラスファクトリをサポートするために、コードまたはデータを挿入します。
 
-- `IUnknown` 実装するコードまたはデータを挿入し、オブジェクトを COM によって作成可能なオブジェクトにします。
+- 実装するコードまたはデータを挿入 `IUnknown` し、オブジェクトを COM によって作成可能なオブジェクトにします。
 
 具体的には、次の基本クラスがターゲットオブジェクトに追加されます。
 
 - [CComCoClass クラス](../../atl/reference/ccomcoclass-class.md)には、オブジェクトの既定のクラスファクトリと集計モデルが用意されています。
 
-- [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)には、[スレッド](threading-cpp.md)属性によって指定されたスレッドモデルクラスに基づくテンプレートがあります。 `threading` 属性が指定されていない場合、既定のスレッドモデルはアパートメントです。
+- [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)には、[スレッド](threading-cpp.md)属性によって指定されたスレッドモデルクラスに基づくテンプレートがあります。 `threading`属性が指定されていない場合、既定のスレッドモデルはアパートメントです。
 
 - [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)は、 [noncreatable](noncreatable.md)属性が対象のオブジェクトに対して指定されていない場合に追加されます。
 
 最後に、埋め込み IDL を使用して定義されていないデュアルインターフェイスは、対応する[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)クラスに置き換えられます。 デュアルインターフェイスが埋め込み IDL で定義されている場合、基本リスト内の特定のインターフェイスは変更されません。
 
-また、**コクラス**属性は、挿入されたコードまたは `GetObjectCLSID`の場合に、基底クラス `CComCoClass`の静的メソッドとして、次の関数を使用できるようにします。
+また、**コクラス**属性は、挿入されたコードまたはの場合、 `GetObjectCLSID` 基底クラスの静的メソッドとして、次の関数を使用できるようにし `CComCoClass` ます。
 
-- `UpdateRegistry` は、ターゲットクラスのクラスファクトリを登録します。
+- `UpdateRegistry`ターゲットクラスのクラスファクトリを登録します。
 
-- 登録に関連する `GetObjectCLSID`は、ターゲットクラスの CLSID を取得するためにも使用できます。
+- `GetObjectCLSID`また、登録に関連するを使用して、ターゲットクラスの CLSID を取得することもできます。
 
-- `GetObjectFriendlyName` 既定では、"\<*ターゲットクラス名*> `Object`" という形式の文字列が返されます。 この関数が既に存在する場合は、追加されません。 この関数をターゲットクラスに追加して、自動的に生成されたものよりもわかりやすい名前を返します。
+- `GetObjectFriendlyName`既定では、"" という形式の文字列が返さ \<*target class name*> `Object` れます。 この関数が既に存在する場合は、追加されません。 この関数をターゲットクラスに追加して、自動的に生成されたものよりもわかりやすい名前を返します。
 
-- 登録に関連する `GetProgID`は、 [progid](progid.md)属性で指定された文字列を返します。
+- `GetProgID`(登録に関連する) は、 [progid](progid.md)属性で指定された文字列を返します。
 
-- `GetVersionIndependentProgID` には `GetProgID`と同じ機能がありますが、 [vi_progid](vi-progid.md)で指定された文字列が返されます。
+- `GetVersionIndependentProgID`はと同じ機能を持ち `GetProgID` ますが、 [vi_progid](vi-progid.md)で指定された文字列を返します。
 
 COM マップに関連する次の変更は、ターゲットクラスに対して行われます。
 
@@ -69,7 +69,7 @@ COM マップに関連する次の変更は、ターゲットクラスに対し�
 
 - COM マップに[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)マクロが挿入されます。
 
-クラスの .idl ファイルで生成されるコクラスの名前は、クラスと同じ名前になります。  たとえば、次のサンプルを参照すると、MIDL によって生成されたヘッダーファイルを介してクライアントで、コクラス `CMyClass`のクラス ID にアクセスするには、`CLSID_CMyClass`を使用します。
+クラスの .idl ファイルで生成されるコクラスの名前は、クラスと同じ名前になります。  たとえば、とは、次のサンプルを参照しています。コクラスのクラス ID にアクセスするには、 `CMyClass` クライアントの MIDL によって生成されたヘッダーファイルを使用し `CLSID_CMyClass` ます。
 
 ## <a name="example"></a>例
 
@@ -131,17 +131,17 @@ public:
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](appobject.md)

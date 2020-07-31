@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218573"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -97,18 +97,18 @@ float _logbf(
 
 **Logb**関数は、浮動小数点引数*x*の指数値を抽出します。ただし、 *x*は無限範囲で表されます。 引数*x*が非正規化されている場合は、正規化されているかのように扱われます。
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**logb**のオーバーロードを呼び出すことができます。 C プログラムでは、 **logb**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**logb**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **logb**は常にを受け取り、を返し **`double`** ます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|None|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |±0|ZERODIVIDE|_SING|
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**、 **logb**、 **logb**、 **_logbf**|\<math.h>|
@@ -121,5 +121,5 @@ C++ ではオーバーロードが可能であるため、 **float**または**l
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

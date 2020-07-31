@@ -1,5 +1,5 @@
 ---
-title: クラスを検索します。
+title: CFindReplaceDialog クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CFindReplaceDialog
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: 7a12d0520d070d74afd9fa91e828970d14c82700
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92429bc17301d6615c87de958f38a717528e9544
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212437"
 ---
-# <a name="cfindreplacedialog-class"></a>クラスを検索します。
+# <a name="cfindreplacedialog-class"></a>CFindReplaceDialog クラス
 
-アプリケーションに標準の文字列の検索/置換ダイアログ ボックスを実装できます。
+アプリケーションで、標準的な文字列の [検索と置換] ダイアログボックスを実装できます。
 
 ## <a name="syntax"></a>構文
 
@@ -55,51 +55,51 @@ class CFindReplaceDialog : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[置換ダイアログを検索します。](#cfindreplacedialog)|`CFindReplaceDialog`オブジェクトを構築します。|
+|[CFindReplaceDialog:: CFindReplaceDialog](#cfindreplacedialog)|オブジェクトを構築するには、この関数を呼び出し `CFindReplaceDialog` ます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[置換ダイアログ::作成](#create)|ダイアログ ボックスを`CFindReplaceDialog`作成して表示します。|
-|[次を検索ダイアログ::次を検索します。](#findnext)|ユーザーが次に検索する検索文字列を検索するかどうかを調べます。|
-|[置換ダイアログ::文字列を検索します。](#getfindstring)|現在の検索文字列を取得します。|
-|[置換ダイアログを検索します。](#getnotifier)|登録されたメッセージ ハンドラーの`FINDREPLACE`構造体を取得します。|
-|[置換ダイアログ::文字列を置換します。](#getreplacestring)|現在の置換文字列を取得します。|
-|[置換ダイアログを検索::終了](#isterminating)|ダイアログ ボックスが終了しているかどうかを調べます。|
-|[置換ダイアログを検索::マッチケース](#matchcase)|ユーザーが検索文字列の大文字と小文字を正確に一致させるかどうかを調べます。|
-|[置換ダイアログ::マッチホールワード](#matchwholeword)|ユーザーが単語全体を一致させるかどうかを調べます。|
-|[置換ダイアログ::すべて置換](#replaceall)|ユーザーが文字列のすべての出現を置換するかどうかを調べます。|
-|[置換ダイアログ::現在の置換](#replacecurrent)|現在の単語を置換するかどうかを確認します。|
-|[検索置換ダイアログ::検索ダウン](#searchdown)|ユーザーが検索を下方向に進めるかどうかを判断します。|
+|[CFindReplaceDialog:: Create](#create)|ダイアログボックスを作成して表示し `CFindReplaceDialog` ます。|
+|[CFindReplaceDialog:: FindNext](#findnext)|この関数を呼び出して、ユーザーが次に見つかった検索文字列を検索するかどうかを判断します。|
+|[CFindReplaceDialog:: GetFindString](#getfindstring)|現在の検索文字列を取得するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: GetNotifier](#getnotifier)|`FINDREPLACE`登録されているメッセージハンドラーの構造体を取得するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: GetReplaceString](#getreplacestring)|現在の置換文字列を取得するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: IsTerminating](#isterminating)|ダイアログボックスが終了しているかどうかを判断するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: MatchCase](#matchcase)|ユーザーが検索文字列の大文字と小文字を正確に一致させるかどうかを判断するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: MatchWholeWord](#matchwholeword)|ユーザーが単語全体を照合するかどうかを判断するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: ReplaceAll](#replaceall)|この関数を呼び出して、ユーザーがすべての文字列を置換する必要があるかどうかを判断します。|
+|[CFindReplaceDialog:: ReplaceCurrent](#replacecurrent)|ユーザーが現在の単語を置き換える必要があるかどうかを判断するには、この関数を呼び出します。|
+|[CFindReplaceDialog:: SearchDown](#searchdown)|ユーザーが検索を下方向に進めることを希望するかどうかを判断するには、この関数を呼び出します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[置換ダイアログ::m_fr](#m_fr)|オブジェクトをカスタマイズするために使用する`CFindReplaceDialog`構造体。|
+|[CFindReplaceDialog:: m_fr](#m_fr)|オブジェクトをカスタマイズするために使用される構造体 `CFindReplaceDialog` 。|
 
 ## <a name="remarks"></a>解説
 
-他の Windows コモン ダイアログ`CFindReplaceDialog`ボックスとは異なり、オブジェクトはモードレスで、ユーザーは画面上で他のウィンドウと対話できます。 オブジェクトには、[検索]`CFindReplaceDialog`ダイアログ ボックスと [検索/置換] ダイアログ ボックスの 2 種類があります。 ダイアログ ボックスでは、検索文字列の入力と検索/置換を行うことができますが、検索や置換のいずれの機能も実行しません。 これらをアプリケーションに追加する必要があります。
+他のウィンドウのコモンダイアログボックスとは異なり、 `CFindReplaceDialog` オブジェクトはモードレスであり、ユーザーは画面上に他のウィンドウと対話できます。 オブジェクトには `CFindReplaceDialog` 、[検索] ダイアログボックスと [検索と置換] ダイアログボックスの2種類があります。 ダイアログボックスでは、検索の入力や文字列の検索/置換を行うことができますが、検索または置換関数は実行されません。 これらは、アプリケーションに追加する必要があります。
 
-オブジェクトを`CFindReplaceDialog`構築するには、指定されたコンストラクタ (引数を持たない) を使用します。 これはモードレス ダイアログ ボックスなので、スタックではなく**new**演算子を使用して、ヒープ上にオブジェクトを割り当てます。
+オブジェクトを構築するには `CFindReplaceDialog` 、指定されたコンストラクター (引数を持たない) を使用します。 これはモードレスダイアログボックスであるため、スタックではなく、演算子を使用してヒープにオブジェクトを割り当て **`new`** ます。
 
-オブジェクトが`CFindReplaceDialog`作成されたら[、Create](#create)メンバー関数を呼び出してダイアログ ボックスを作成および表示する必要があります。
+`CFindReplaceDialog`オブジェクトが構築されたら、 [create](#create) member 関数を呼び出してダイアログボックスを作成し、表示する必要があります。
 
-[m_fr構造体](#m_fr)を使用して、 を呼び出`Create`す前にダイアログ ボックスを初期化します。 構造体`m_fr`の型は[FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)です。 この構造体の詳細については、Windows SDK を参照してください。
+を呼び出す前に、 [m_fr](#m_fr)構造体を使用してダイアログボックスを初期化し `Create` ます。 `m_fr`構造体の型は、 [FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)です。 この構造の詳細については、Windows SDK を参照してください。
 
-親ウィンドウに検索/置換要求の通知を受け取るには、Windows [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数を使用し、この登録されたメッセージを処理するフレーム ウィンドウで[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)メッセージ マップ マクロを使用する必要があります。
+親ウィンドウに検索/置換要求が通知されるようにするには、Windows [Registerwindowmessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数を使用し、この登録されたメッセージを処理するフレームウィンドウで[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)のメッセージマップマクロを使用する必要があります。
 
-ユーザーがメンバ関数を使用してダイアログ ボックスを終了するかどうか決定`IsTerminating`できます。
+ユーザーがメンバー関数を使用してダイアログボックスを終了するかどうかを決定でき `IsTerminating` ます。
 
-`CFindReplaceDialog`は、COMMDLG に依存します。Windows バージョン 3.1 以降に付属の DLL ファイル。
+`CFindReplaceDialog`は、Windows バージョン3.1 以降に付属している COMMDLG.DLL ファイルに依存しています。
 
-ダイアログ ボックスをカスタマイズするには、 から`CFindReplaceDialog`クラスを派生し、カスタム ダイアログ テンプレートを提供し、拡張コントロールからの通知メッセージを処理するメッセージ マップを追加します。 未処理のメッセージは、基本クラスに渡す必要があります。
+ダイアログボックスをカスタマイズするには、からクラスを派生させ、 `CFindReplaceDialog` カスタムダイアログテンプレートを指定して、拡張コントロールからの通知メッセージを処理するメッセージマップを追加します。 未処理のメッセージは、基本クラスに渡す必要があります。
 
-フック機能のカスタマイズは不要です。
+フック関数のカスタマイズは必要ありません。
 
-の詳細`CFindReplaceDialog`については、「 コモン[ダイアログ クラス](../../mfc/common-dialog-classes.md)」を参照してください。
+の使用方法の詳細につい `CFindReplaceDialog` ては、「[コモンダイアログクラス](../../mfc/common-dialog-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -117,9 +117,9 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdlgs.h
+**ヘッダー:** afxdlgs
 
-## <a name="cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a>置換ダイアログを検索します。
+## <a name="cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a>CFindReplaceDialog:: CFindReplaceDialog
 
 `CFindReplaceDialog` オブジェクトを構築します。
 
@@ -129,19 +129,19 @@ CFindReplaceDialog();
 
 ### <a name="remarks"></a>解説
 
-`CFindReplaceDialog`オブジェクトはモードレス ダイアログ ボックスであるため **、new**演算子を使用してヒープ上に構築する必要があります。
+`CFindReplaceDialog`オブジェクトはモードレスダイアログボックスであるため、演算子を使用してヒープ上に作成する必要があり **`new`** ます。
 
-破棄中、フレームワークはダイアログ ボックスへのポインター上**で削除を**実行しようとします。 スタック上にダイアログ ボックスを作成した場合 **、this**ポインターは存在せず、未定義の動作が発生する可能性があります。
+破棄中、フレームワークはダイアログボックスへのポインターに対して**この削除**を実行しようとします。 スタックにダイアログボックスを作成した場合、 **`this`** ポインターは存在せず、未定義の動作が発生する可能性があります。
 
-オブジェクトの`CFindReplaceDialog`構築の詳細については[、「CFindReplaceDialog」の概要を参照](../../mfc/reference/cfindreplacedialog-class.md)してください。 ダイアログ ボックスを表示するには[、CFindReplaceDialog::Create](#create)メンバー関数を使用します。
+オブジェクトの構築の詳細につい `CFindReplaceDialog` ては、「 [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)の概要」を参照してください。 ダイアログボックスを表示するには、 [CFindReplaceDialog:: Create](#create) member 関数を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]
 
-## <a name="cfindreplacedialogcreate"></a><a name="create"></a>置換ダイアログ::作成
+## <a name="cfindreplacedialogcreate"></a><a name="create"></a>CFindReplaceDialog:: Create
 
-の値に応じて、[検索] または [検索/置換] ダイアログ`bFindDialogOnly`ボックス オブジェクトを作成して表示します。
+の値に応じて、[検索] または [検索と置換] のいずれかのダイアログボックスオブジェクトを作成して表示し `bFindDialogOnly` ます。
 
 ```
 virtual BOOL Create(
@@ -154,28 +154,28 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*唯一の情報*<br/>
-[**検索**] ダイアログ ボックスを表示するには、このパラメーターを TRUE に設定します。 **[検索/置換**] ダイアログ ボックスを表示するには、FALSE に設定します。
+*Bfindの場合のみ*<br/>
+[**検索**] ダイアログボックスを表示するには、このパラメーターを TRUE に設定します。 [**検索と置換**] ダイアログボックスを表示するには、FALSE に設定します。
 
-*lpszFind何*<br/>
-ダイアログ ボックスが表示されたときの既定の検索文字列へのポインター。 NULL の場合、ダイアログ ボックスには既定の検索文字列は含まれません。
+*lpszFindWhat*<br/>
+ダイアログボックスが表示されるときの既定の検索文字列へのポインター。 NULL の場合、ダイアログボックスには既定の検索文字列が含まれません。
 
-*一緒に置き換える*<br/>
-ダイアログ ボックスが表示されたときの既定の置換文字列へのポインター。 NULL の場合、ダイアログ ボックスには既定の置換文字列は含まれません。
+*lpszReplaceWith*<br/>
+ダイアログボックスが表示されたときの既定の置換文字列へのポインター。 NULL の場合、ダイアログボックスには既定の置換文字列が含まれていません。
 
 *dwFlags*<br/>
-ダイアログ ボックスの設定をカスタマイズするために使用できる 1 つ以上のフラグを、ビットごとの OR 演算子を使用して組み合わせます。 デフォルト値はFR_DOWNで、検索を下方向に進めます。 これらのフラグの詳細については、Windows SDK の[FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)構造体を参照してください。
+ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 既定値は FR_DOWN です。これは、検索が下方向に進むことを指定します。 これらのフラグの詳細については、Windows SDK の[FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)構造体を参照してください。
 
 *pParentWnd*<br/>
-ダイアログ ボックスの親ウィンドウまたはオーナー ウィンドウへのポインター。 これは、検索/置換アクションが要求されたことを示す特別なメッセージを受け取るウィンドウです。 NULL の場合、アプリケーションのメイン ウィンドウが使用されます。
+ダイアログボックスの親またはオーナーウィンドウへのポインター。 これは、検索と置換の操作が要求されたことを示す特別なメッセージを受信するウィンドウです。 NULL の場合、アプリケーションのメインウィンドウが使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックス オブジェクトが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
+ダイアログボックスオブジェクトが正常に作成された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-親ウィンドウに検索/置換要求が通知されるようにするには、戻り値がアプリケーションのインスタンスに固有のメッセージ番号である Windows [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数を使用する必要があります。 フレーム ウィンドウには、この登録済みメッセージを処理するコールバック関数 (`OnFindReplace`次の例では) を宣言するメッセージ マップ エントリが必要です。 次のコード例は、という名前のフレーム ウィンドウ クラスに対してこれを`CMyRichEditView`行う方法の例です。
+親ウィンドウに検索/置換要求が通知されるようにするには、Windows [Registerwindowmessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数を使用する必要があります。この関数の戻り値は、アプリケーションのインスタンスに固有のメッセージ番号になります。 フレームウィンドウには、 `OnFindReplace` この登録されたメッセージを処理するコールバック関数 (次の例では) を宣言するメッセージマップエントリが必要です。 次のコードフラグメントは、という名前のフレームウィンドウクラスに対してこれを実行する方法の例です `CMyRichEditView` 。
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 
@@ -183,15 +183,15 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCDocView#173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]
 
-`OnFindReplace`関数内で、ユーザーの意図を解釈するには[、CFindReplaceDialog:::FindNext](#findnext)と[CFindReplaceDialog::IsTerminating](#isterminating)メソッドを使用して、検索/置換操作のコードを作成します。
+関数内では、 `OnFindReplace` [CFindReplaceDialog:: FindNext](#findnext)メソッドと[CFindReplaceDialog:: IsTerminating](#isterminating)メソッドを使用してユーザーの意図を解釈し、検索/置換操作のためのコードを作成します。
 
 ### <a name="example"></a>例
 
-  次の例[を](#cfindreplacedialog)参照してください。
+  [CFindReplaceDialog:: CFindReplaceDialog](#cfindreplacedialog)の例を参照してください。
 
-## <a name="cfindreplacedialogfindnext"></a><a name="findnext"></a>次を検索ダイアログ::次を検索します。
+## <a name="cfindreplacedialogfindnext"></a><a name="findnext"></a>CFindReplaceDialog:: FindNext
 
-コールバック関数からこの関数を呼び出して、ユーザーが検索文字列の次の出現箇所を検索するかどうかを判断します。
+コールバック関数からこの関数を呼び出して、ユーザーが次に出現する検索文字列の検索を希望するかどうかを判断します。
 
 ```
 BOOL FindNext() const;
@@ -199,9 +199,9 @@ BOOL FindNext() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが検索文字列の次の出現箇所を検索する場合は 0 以外の値を返します。それ以外の場合は 0。
+ユーザーが検索文字列の次の出現箇所を検索する場合は0以外の値。それ以外の場合は0です。
 
-## <a name="cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a>置換ダイアログ::文字列を検索します。
+## <a name="cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a>CFindReplaceDialog:: GetFindString
 
 コールバック関数からこの関数を呼び出して、検索する既定の文字列を取得します。
 
@@ -217,9 +217,9 @@ CString GetFindString() const;
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-## <a name="cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a>置換ダイアログを検索します。
+## <a name="cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a>CFindReplaceDialog:: GetNotifier
 
-現在の [置換の検索] ダイアログ ボックスへのポインターを取得します。
+現在の [検索置換] ダイアログボックスへのポインターを取得するには、この関数を呼び出します。
 
 ```
 static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
@@ -228,25 +228,25 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ### <a name="parameters"></a>パラメーター
 
 *lParam*<br/>
-フレーム ウィンドウの`OnFindReplace`メンバー関数に渡される*lparam*値。
+フレームウィンドウのメンバー関数に渡される*lparam*値 `OnFindReplace` 。
 
 ### <a name="return-value"></a>戻り値
 
-現在のダイアログ ボックスへのポインター。
+現在のダイアログボックスへのポインター。
 
 ### <a name="remarks"></a>解説
 
-コールバック関数内で使用して、現在のダイアログ ボックスにアクセスし、そのメンバー関数を呼び出`m_fr`し、構造体にアクセスする必要があります。
+現在のダイアログボックスにアクセスし、そのメンバー関数を呼び出して、構造体にアクセスするには、コールバック関数内で使用する必要があり `m_fr` ます。
 
 ### <a name="example"></a>例
 
-[置換の検索] ダイアログ ボックスから通知を受け取るために OnFindReplace ハンドラーを登録する方法の例については[、「CFindReplaceDialog::Create」](#create)を参照してください。
+[検索する文字列] ダイアログボックスから通知を受信するために OnFindReplace ハンドラーを登録する方法の例については、「 [CFindReplaceDialog:: Create](#create) 」を参照してください。
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-## <a name="cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a>置換ダイアログ::文字列を置換します。
+## <a name="cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a>CFindReplaceDialog:: GetReplaceString
 
-現在の置換文字列を取得します。
+現在の置換文字列を取得するには、この関数を呼び出します。
 
 ```
 CString GetReplaceString() const;
@@ -254,15 +254,15 @@ CString GetReplaceString() const;
 
 ### <a name="return-value"></a>戻り値
 
-見つかった文字列を置き換える既定の文字列。
+検出された文字列を置き換える既定の文字列。
 
 ### <a name="example"></a>例
 
-  次の例[を](#getfindstring)参照してください。
+  [CFindReplaceDialog:: GetFindString](#getfindstring)の例を参照してください。
 
-## <a name="cfindreplacedialogisterminating"></a><a name="isterminating"></a>置換ダイアログを検索::終了
+## <a name="cfindreplacedialogisterminating"></a><a name="isterminating"></a>CFindReplaceDialog:: IsTerminating
 
-コールバック関数内でこの関数を呼び出して、ユーザーがダイアログ ボックスを終了することを決定したかどうかを確認します。
+ユーザーがダイアログボックスを終了するかどうかを判断するには、コールバック関数内でこの関数を呼び出します。
 
 ```
 BOOL IsTerminating() const;
@@ -270,19 +270,19 @@ BOOL IsTerminating() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーがダイアログ ボックスを終了する場合は 0 以外の値を返します。それ以外の場合は 0。
+ユーザーがダイアログボックスを終了することを決定した場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-この関数が 0 以外の値を返`DestroyWindow`す場合は、現在のダイアログ ボックスのメンバー関数を呼び出し、ダイアログ ボックスのポインタ変数を NULL に設定する必要があります。 必要に応じて、最後に入力した検索/置換テキストを保存し、それを使用して次の検索/置換ダイアログボックスを初期化することもできます。
+この関数が0以外の値を返す場合は、 `DestroyWindow` 現在のダイアログボックスのメンバー関数を呼び出し、ダイアログボックスのポインター変数を NULL に設定する必要があります。 必要に応じて、最後に入力した検索テキストと置換テキストを格納し、それを使用して次の [検索と置換] ダイアログボックスを初期化することもできます。
 
 ### <a name="example"></a>例
 
-  次の例[を](#getfindstring)参照してください。
+  [CFindReplaceDialog:: GetFindString](#getfindstring)の例を参照してください。
 
-## <a name="cfindreplacedialogm_fr"></a><a name="m_fr"></a>置換ダイアログ::m_fr
+## <a name="cfindreplacedialogm_fr"></a><a name="m_fr"></a>CFindReplaceDialog:: m_fr
 
-オブジェクトをカスタマイズするために`CFindReplaceDialog`使用します。
+オブジェクトをカスタマイズするために使用 `CFindReplaceDialog` します。
 
 ```
 FINDREPLACE m_fr;
@@ -290,17 +290,17 @@ FINDREPLACE m_fr;
 
 ### <a name="remarks"></a>解説
 
-`m_fr`は、[型 FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)の構造体です。 そのメンバーは、ダイアログ ボックス オブジェクトの特性を格納します。 オブジェクトを`CFindReplaceDialog`作成した後で、ダイアログ`m_fr`ボックスのさまざまな値を変更できます。
+`m_fr`は、 [FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)型の構造体です。 そのメンバーは、ダイアログボックスオブジェクトの特性を格納します。 オブジェクトを構築した後 `CFindReplaceDialog` 、を使用し `m_fr` てダイアログボックスのさまざまな値を変更できます。
 
-この構造体の詳細については、Windows SDK`FINDREPLACE`の構造を参照してください。
+この構造体の詳細については、Windows SDK の構造体を参照してください `FINDREPLACE` 。
 
 ### <a name="example"></a>例
 
-  次の例[を](#cfindreplacedialog)参照してください。
+  [CFindReplaceDialog:: CFindReplaceDialog](#cfindreplacedialog)の例を参照してください。
 
-## <a name="cfindreplacedialogmatchcase"></a><a name="matchcase"></a>置換ダイアログを検索::マッチケース
+## <a name="cfindreplacedialogmatchcase"></a><a name="matchcase"></a>CFindReplaceDialog:: MatchCase
 
-ユーザーが検索文字列の大文字と小文字を正確に一致させるかどうかを調べます。
+ユーザーが検索文字列の大文字と小文字を正確に一致させるかどうかを判断するには、この関数を呼び出します。
 
 ```
 BOOL MatchCase() const;
@@ -308,11 +308,11 @@ BOOL MatchCase() const;
 
 ### <a name="return-value"></a>戻り値
 
-検索文字列の大文字と小文字が正確に一致する検索文字列の出現箇所を検索する場合は 0 以外の値を返します。それ以外の場合は 0。
+検索文字列の大文字と小文字を正確に一致する検索文字列の出現箇所を検索する場合は0以外の値。それ以外の場合は0です。
 
-## <a name="cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a>置換ダイアログ::マッチホールワード
+## <a name="cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a>CFindReplaceDialog:: MatchWholeWord
 
-ユーザーが単語全体を一致させるかどうかを調べます。
+ユーザーが単語全体を照合するかどうかを判断するには、この関数を呼び出します。
 
 ```
 BOOL MatchWholeWord() const;
@@ -320,11 +320,11 @@ BOOL MatchWholeWord() const;
 
 ### <a name="return-value"></a>戻り値
 
-検索文字列の単語全体のみを一致させる場合は 0 以外の値を指定します。それ以外の場合は 0。
+検索文字列の単語全体だけを照合する場合は0以外の値。それ以外の場合は0です。
 
-## <a name="cfindreplacedialogreplaceall"></a><a name="replaceall"></a>置換ダイアログ::すべて置換
+## <a name="cfindreplacedialogreplaceall"></a><a name="replaceall"></a>CFindReplaceDialog:: ReplaceAll
 
-ユーザーが文字列のすべての出現を置換するかどうかを調べます。
+この関数を呼び出して、ユーザーがすべての文字列を置換する必要があるかどうかを判断します。
 
 ```
 BOOL ReplaceAll() const;
@@ -332,11 +332,11 @@ BOOL ReplaceAll() const;
 
 ### <a name="return-value"></a>戻り値
 
-置換文字列に一致するすべての文字列を置換することをユーザーが要求した場合は 0 以外の値を返します。それ以外の場合は 0。
+置換文字列に一致するすべての文字列を置換するようユーザーが要求した場合は0以外の値。それ以外の場合は0です。
 
-## <a name="cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a>置換ダイアログ::現在の置換
+## <a name="cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a>CFindReplaceDialog:: ReplaceCurrent
 
-現在の単語を置換するかどうかを確認します。
+ユーザーが現在の単語を置き換える必要があるかどうかを判断するには、この関数を呼び出します。
 
 ```
 BOOL ReplaceCurrent() const;
@@ -344,11 +344,11 @@ BOOL ReplaceCurrent() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されている文字列を置換文字列に置き換える必要がある場合は 0 以外の値を返します。それ以外の場合は 0。
+現在選択されている文字列を置換文字列に置換するようユーザーが要求した場合は0以外の値。それ以外の場合は0です。
 
-## <a name="cfindreplacedialogsearchdown"></a><a name="searchdown"></a>検索置換ダイアログ::検索ダウン
+## <a name="cfindreplacedialogsearchdown"></a><a name="searchdown"></a>CFindReplaceDialog:: SearchDown
 
-ユーザーが検索を下方向に進めるかどうかを判断します。
+ユーザーが検索を下方向に進めることを希望するかどうかを判断するには、この関数を呼び出します。
 
 ```
 BOOL SearchDown() const;
@@ -356,9 +356,9 @@ BOOL SearchDown() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが下方向に検索を続行する場合は 0 以外の値を指定します。ユーザーが検索を上方向に進める場合は 0。
+ユーザーが検索を下方向に進める場合は0以外。ユーザーが検索を上方向に進める場合は0。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../mfc/reference/ccommondialog-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)

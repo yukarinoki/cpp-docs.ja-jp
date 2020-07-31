@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224436"
 ---
 # <a name="hidden"></a>hidden
 
@@ -25,7 +25,7 @@ ms.locfileid: "80168097"
 
 ## <a name="remarks"></a>解説
 
-**Hidden** C++属性には、[隠し](/windows/win32/Midl/hidden)MIDL 属性と同じ機能があります。
+**Hidden** C++ 属性には、 [hidden](/windows/win32/Midl/hidden) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -37,14 +37,14 @@ ms.locfileid: "80168097"
 
 |||
 |-|-|
-|**対象**|**interface**、 **class**、 **struct**、method、property|
-|**反復可能**|いいえ|
-|**必要な属性**|**coclass** (**クラス**または**構造体**に適用される場合)|
+|**適用対象**|**interface**、 **`class`** 、 **`struct`** 、メソッド、プロパティ|
+|**Repeatable**|いいえ|
+|**必須属性**|**coclass** (またはに適用された場合 **`class`** **`struct`** )|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

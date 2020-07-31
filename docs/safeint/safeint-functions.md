@@ -1,6 +1,6 @@
 ---
 title: SafeInt 関数
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219340"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 
-SafeInt ライブラリには、[SafeInt クラス](safeint-class.md)のインスタンスを作成せずに使える関数がいくつか用意されています。 1 つの数値演算を整数のオーバーフローから保護したい場合、これらの関数を使えます。 複数の数値演算を保護したい場合は、`SafeInt` オブジェクトを作成する必要があります。 これらの関数を複数回使うよりも、`SafeInt` オブジェクトを作成する方が効率的です。
+SafeInt ライブラリには、[SafeInt クラス](safeint-class.md)のインスタンスを作成せずに使える関数がいくつか用意されています。 1 つの数値演算を整数のオーバーフローから保護したい場合、これらの関数を使えます。 複数の数値演算を保護したい場合は、`SafeInt` オブジェクトを作成する必要があります。 `SafeInt`これらの関数を複数回使用するよりも、オブジェクトを作成する方が効率的です。
 
 これらの関数を使うと、2 つの異なる型のパラメーターを比較したり、それらで数値演算を実行したりできます。最初に同じ型に変換する必要はありません。
 
@@ -51,7 +51,7 @@ SafeInt ライブラリには、[SafeInt クラス](safeint-class.md)のイン�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-関数                      | 説明
+機能                      | 説明
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | 2 つの数値を加算し、オーバーフローから保護します。
 [SafeCast](#safecast)         | ある型のパラメーターを別の型にキャストします。
@@ -94,7 +94,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -118,7 +118,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safedivide"></a><a name="safedivide"></a>保存
 
@@ -136,21 +136,21 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>パラメーター
 
 *\t*<br/>
-[入力] 除数。 これは T 型である必要があります。
+[入力] 被除数。 これは T 型である必要があります。
 
 *u*<br/>
-[入力] 被除数。 これは U 型である必要があります。
+[入力] 除数。 これは U 型である必要があります。
 
 *result*<br/>
 [出力] `SafeDivide` の結果が格納されるパラメーター。
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
-2 つの数値を比較し、それらが等しいかどうかを判定します。
+2つの数値を比較して、等しいかどうかを確認します。
 
 ```cpp
 template<typename T, typename U>
@@ -170,9 +170,9 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* と *u* が等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*と*u*が等しい場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドでは `==` が強化されます。`SafeEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -198,9 +198,9 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも大きい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*より大きい場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SafeGreaterThan` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
@@ -226,9 +226,9 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも大きいか等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*以上の場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SafeGreaterThanEquals` では標準の比較演算子が強化され、2 つの異なる型の数値を比較できます。
 
@@ -250,13 +250,13 @@ inline bool SafeLessThan (
 [入力] 最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
-[入力] 2 番目の数値。 これは `U` 型である必要があります。
+から2番目の数値。 これは `U` 型である必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも小さい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*未満の場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドでは標準の比較演算子が強化されます。`SafeLessThan` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -282,9 +282,9 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* が *u* よりも小さいか等しい場合は **true**。それ以外の場合は **false**。
+**`true`***t*が*u*以下の場合それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `SafeLessThanEquals` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
@@ -314,7 +314,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -342,11 +342,11 @@ inline bool SafeMultiply (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は `true`。エラーが発生した場合は `false`。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
-2 つの数値が等しくないかどうかを判定します。
+2つの数値が等しくないかどうかを判断します。
 
 ```cpp
 template<typename T, typename U>
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>戻り値
 
-*t* と *u* が等しくない場合は **true**。それ以外の場合は **false**。
+**`true`***t*と*u*が等しくない場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドでは `!=` が強化されます。`SafeNotEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
@@ -398,4 +398,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は **true**。エラーが発生した場合は **false**。
+**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。

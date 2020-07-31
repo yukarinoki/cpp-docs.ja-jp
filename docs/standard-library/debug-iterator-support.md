@@ -1,5 +1,5 @@
 ---
-title: 反復子のデバッグのサポート
+title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231586"
 ---
-# <a name="debug-iterator-support"></a>反復子のデバッグのサポート
+# <a name="debug-iterator-support"></a>Debug Iterator Support
 
 Visual C++ ランタイム ライブラリは、反復子の不正な使用を検出し、実行時にアサートしてダイアログ ボックスを表示します。 反復子のデバッグのサポートを有効にするには、デバッグ バージョンの C++ 標準ライブラリと C ランタイム ライブラリを使ってプログラムをコンパイルする必要があります。 詳しくは、「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」をご覧ください。 チェックを行う反復子を使う方法については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -130,7 +130,7 @@ int main()
 
 ## <a name="iterators-going-out-of-scope"></a>スコープ外に出る反復子
 
-また、デバッグ反復子チェックでは **、for ループスコープが終了**したときに**for**ループで宣言されている反復子変数がスコープ外になります。
+また、デバッグ反復子チェックにより、ループで宣言されている反復子変数も、 **`for`** ループスコープが終了したときにスコープ外になり **`for`** ます。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -173,6 +173,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)

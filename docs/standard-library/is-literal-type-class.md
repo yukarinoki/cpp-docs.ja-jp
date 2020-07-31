@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d5b750755f2499c89e91e497ed03244a11484871
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212255"
 ---
-# <a name="isliteraltype-class"></a>is_literal_type クラス
+# <a name="is_literal_type-class"></a>is_literal_type クラス
 
-型を `constexpr` 変数として使用できるか、または `constexpr` 関数で構築、使用、または返すことができるかをテストします。
+型を変数として使用できるか、または **`constexpr`** 関数から構築、使用、または返すかをテストし **`constexpr`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -29,13 +29,13 @@ struct is_literal_type;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*T*が*リテラル型*である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 リテラル型は、 **void**、スカラー型、参照型、リテラル型の配列、またはリテラルクラス型のいずれかになります。 リテラル クラス型は、単純なデストラクターを持つクラス型であり、集計の型であるか、または少なくとも 1 つのムーブ禁止、コピー禁止の `constexpr` コンストラクターを持ち、そのすべての基底クラスと非静的データ メンバーは、非 volatile のリテラル型です。 リテラルの型は常にリテラル型ですが、リテラル型の概念は、コンパイラがコンパイル時に `constexpr` として評価できるあらゆるものを含みます。
+型*T*が*リテラル型*である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 リテラル型は **`void`** 、スカラー型、参照型、リテラル型の配列、またはリテラルクラス型のいずれかです。 リテラルクラス型は、自明なデストラクターを持つクラス型、つまり集計型であるか、少なくとも1つの移動できない非コピーコンストラクターを持つクラス型で、 **`constexpr`** その基本クラスと非静的データメンバーのすべてが非 volatile リテラル型です。 リテラルの型は常にリテラル型ですが、リテラル型の概念には、コンパイラがコンパイル時にとして評価できるすべてのものが含まれ **`constexpr`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

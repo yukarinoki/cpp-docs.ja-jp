@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232444"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -71,7 +71,7 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 底。
 
-*前年*<br/>
+*y*<br/>
 指数。
 
 ## <a name="return-value"></a>戻り値
@@ -90,15 +90,15 @@ long double pow( long double x, int y );  // C++ only
 
 **pow**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、 **pow**は常に2つの**double**値を受け取り、 **double**値を返します。
+C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、 **pow**は常に2つの値を受け取り、 **`double`** 値を返し **`double`** ます。
 
-`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを**double**、 **float**、または**long** **double**にキャストします。
+`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを **`double`** 、、 **`float`** またはにキャスト **`long double`** します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> または \<cmath>|
 
@@ -127,7 +127,7 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md) <br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md) <br/>
 [exp、expf、expl](exp-expf.md) <br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md) <br/>
 [sqrt、sqrtf、sqrtl](sqrt-sqrtf-sqrtl.md) <br/>

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3d645cc09c61402059e9a86679c10ee703ee8031
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215804"
 ---
 # <a name="event-class"></a>event クラス
 
-同時実行ランタイムを明示的に認識する手動リセット イベントです。
+コンカレンシー ランタイムを明示的に認識する手動リセット イベントです。
 
 ## <a name="syntax"></a>構文
 
@@ -32,13 +32,13 @@ class event;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[~ イベントデストラクター](#dtor)|イベントを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[reset](#reset)|イベントを非シグナル状態にリセットします。|
 |[set](#set)|イベントを通知します。|
@@ -47,11 +47,11 @@ class event;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|待機がタイムアウトしないことを示す値。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 詳細については、「[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
 
@@ -59,13 +59,13 @@ class event;
 
 `event`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>場合
+## <a name="event"></a><a name="ctor"></a> イベント
 
 新しいイベントを構築します。
 
@@ -73,9 +73,9 @@ class event;
 _CRTIMP event();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-## <a name="dtor"></a>~ イベント
+## <a name="event"></a><a name="dtor"></a>~ イベント
 
 イベントを破棄します。
 
@@ -83,11 +83,11 @@ _CRTIMP event();
 ~event();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デストラクターが実行されるとイベントで待機するスレッドがなくなると想定されます。 まだ待機しているスレッドと共にイベントが破棄されるようにすると、未定義の動作が発生します。
 
-## <a name="reset"></a>解除
+## <a name="reset"></a><a name="reset"></a>解除
 
 イベントを非シグナル状態にリセットします。
 
@@ -95,7 +95,7 @@ _CRTIMP event();
 void reset();
 ```
 
-## <a name="set"></a>一連
+## <a name="set"></a><a name="set"></a>一連
 
 イベントを通知します。
 
@@ -103,11 +103,11 @@ void reset();
 void set();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 イベントを通知すると、イベントを待機している任意の数のコンテキストが実行できるようになります。
 
-## <a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
 
 待機がタイムアウトしないことを示す値。
 
@@ -115,7 +115,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a>待機
 
 イベントがシグナル状態になるのを待機します。
 
@@ -126,16 +126,16 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ### <a name="parameters"></a>パラメーター
 
 *_Timeout*<br/>
-待機がタイムアウトするまでのミリ秒数を示します。`COOPERATIVE_TIMEOUT_INFINITE` 値は、タイムアウトがないことを示します。
+待機がタイムアウトするまでのミリ秒数を示します。値は、 `COOPERATIVE_TIMEOUT_INFINITE` タイムアウトがないことを示します。
 
 ### <a name="return-value"></a>戻り値
 
 待機条件が満たされた場合は、値 `0` を返します。それ以外の場合は、イベントがシグナル状態になることなく待機がタイムアウトしたことを示す `COOPERATIVE_WAIT_TIMEOUT` 値を返します。
 
 > [!IMPORTANT]
-> ユニバーサル Windows プラットフォーム (UWP) アプリでは、ASTA スレッドで `wait` を呼び出さないでください。この呼び出しは現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。
+> ユニバーサル Windows プラットフォーム (UWP) アプリでは、ASTA スレッドでを呼び出さないでください `wait` 。この呼び出しは現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。
 
-## <a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
 
 複数のイベントがシグナル状態になるのを待機します。
 
@@ -156,22 +156,22 @@ static size_t __cdecl wait_for_multiple(
 配列内のイベントの数は、`_PPEvents` パラメーターで指定されます。
 
 *_FWaitAll*<br/>
-値が**true**に設定されている場合、パラメーターでは、`_PPEvents` パラメーターに指定された配列内のすべてのイベントが、待機を満たすためにシグナル状態になる必要があることを指定します。 値が**false**に設定されている場合は、`_PPEvents` パラメーターに指定された配列内のすべてのイベントがシグナル状態になることを指定します。
+値に設定されている場合、パラメーター **`true`** は、パラメーターで指定された配列内のすべてのイベント `_PPEvents` が、待機を満たすためにシグナル状態になる必要があることを指定します。 値に設定 **`false`** されている場合は、パラメーターに指定された配列内のすべてのイベントがシグナル状態になることを指定し `_PPEvents` ます。
 
 *_Timeout*<br/>
-待機がタイムアウトするまでのミリ秒数を示します。`COOPERATIVE_TIMEOUT_INFINITE` 値は、タイムアウトがないことを示します。
+待機がタイムアウトするまでのミリ秒数を示します。値は、 `COOPERATIVE_TIMEOUT_INFINITE` タイムアウトがないことを示します。
 
 ### <a name="return-value"></a>戻り値
 
 待機条件が満たされた場合は、`_PPEvents` パラメーターに指定された配列内の、待機条件を満たしたインデックス。それ以外の場合は、条件が満たされることなく待機がタイムアウトしたことを示す `COOPERATIVE_WAIT_TIMEOUT` 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`_FWaitAll` パラメーターの値を `true` に設定した場合は、すべてのイベントがシグナル状態になって初めて待機条件を満たしたことになります。その場合、この関数によって返されるインデックスには、`COOPERATIVE_WAIT_TIMEOUT` 値ではないという事実を除いて、特別な意味はありません。
+パラメーター `_FWaitAll` が値に設定されていて、すべてのイベントが待機に応じる必要があることを **`true`** 示す場合、関数によって返されるインデックスは、値ではないという点以外に特別な意味を持ちません `COOPERATIVE_WAIT_TIMEOUT` 。
 
 > [!IMPORTANT]
-> ユニバーサル Windows プラットフォーム (UWP) アプリでは、ASTA スレッドで `wait_for_multiple` を呼び出さないでください。この呼び出しは現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。
+> ユニバーサル Windows プラットフォーム (UWP) アプリでは、ASTA スレッドでを呼び出さないでください `wait_for_multiple` 。この呼び出しは現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

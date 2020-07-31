@@ -2,16 +2,16 @@
 title: default::(type_name)::Equals メソッド
 ms.date: 12/30/2016
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: 57143da18e98ed2d034343726ac96a92b4d1b23c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2e50cd10217dbf5c639a131e758264c7cd8f68a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225788"
 ---
 # <a name="defaulttype_nameequals-method"></a>default::(type_name)::Equals メソッド
 
-指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判定します。
+指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,9 +28,9 @@ bool Equals(
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが等しい場合は**true** 、それ以外の場合は**false**。
+**`true`** オブジェクトが等しい場合は。それ以外の場合は **`false`** 。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **サポートされている最低限のクライアント:** Windows 8
 
@@ -40,6 +40,6 @@ bool Equals(
 
 **ヘッダー:** vccorlib.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[default 名前空間](../cppcx/default-namespace.md)
+[既定の名前空間](../cppcx/default-namespace.md)

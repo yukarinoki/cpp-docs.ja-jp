@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206194"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229299"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
@@ -112,11 +112,11 @@ errno_t _mbscpy_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 追加先の文字列バッファーの場所。
 
 *dest_size*<br/>
-ナロー関数とマルチバイト関数の場合は、**文字**単位の出力先文字列バッファーのサイズ、ワイド関数の場合は**wchar_t**単位です。 この値は、0より大きく、 **RSIZE_MAX**以上である必要があります。 このサイズのアカウントで、文字列の後に続くが使用されていることを確認し `NULL` ます。
+ナロー関数とマルチバイト関数の場合は、ターゲット文字列バッファーのサイズ **`char`** (単位)、 **`wchar_t`** ワイド関数の場合は単位です。 この値は、0より大きく、 **RSIZE_MAX**以上である必要があります。 このサイズのアカウントで、文字列の後に続くが使用されていることを確認し `NULL` ます。
 
 *src*<br/>
 null で終わる元の文字列バッファー。
@@ -130,7 +130,7 @@ null で終わる元の文字列バッファー。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*dest_size*|*src*|戻り値|*Dest*の内容|
+|*先*|*dest_size*|*src*|戻り値|*Dest*の内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|変更されない|
 |any|any|**NULL**|**EINVAL**|*dest*[0] が0に設定される|

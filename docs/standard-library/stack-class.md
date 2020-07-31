@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453789"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224631"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -44,15 +44,15 @@ class stack
 スタックに格納される要素のデータ型。
 
 *コンテナー*\
-スタックを実装するために使用する基になるコンテナーの型。 既定値は、クラス `deque` *\<Type>* です。
+スタックを実装するために使用する基になるコンテナーの型。 既定値はクラス `deque` *\<Type>* です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Stack オブジェクトの最初`Type`のテンプレートパラメーターで指定されるクラスの要素は[value_type](#value_type)と同義であり、2番目のテンプレートによって指定`Container`される、基になるコンテナークラスの要素の型と一致している必要があります。引き. その`Type`型のオブジェクトをコピーし、その型の変数に値を割り当てることができるように、は割り当て可能である必要があります。
+`Type`Stack オブジェクトの最初のテンプレートパラメーターで指定するクラスの要素は[value_type](#value_type)と同義であり、 `Container` 2 番目のテンプレートパラメーターで指定されている、基になるコンテナークラスの要素の型と一致している必要があります。 その `Type` 型のオブジェクトをコピーし、その型の変数に値を割り当てることができるように、は割り当て可能である必要があります。
 
-Stack に適した基になるコンテナークラスには、 [deque](../standard-library/deque-class.md)、 [list クラス](../standard-library/list-class.md)、 [vector クラス](../standard-library/vector-class.md)などがあります。また、 `back`、 `push_back`、および`pop_back`の操作をサポートするその他のすべてのシーケンスコンテナーがあります。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
+Stack に適した基になるコンテナークラスには、 [deque](../standard-library/deque-class.md)、 [list クラス](../standard-library/list-class.md)、 [vector クラス](../standard-library/vector-class.md)などがあり `back` ます。また、、、およびの操作をサポートするその他のすべてのシーケンスコンテナーがあり `push_back` `pop_back` ます。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
-Stack オブジェクトは、クラスの要素が等値比較可能であり`Type` 、かつ、クラス`Type`の要素が比較可能でない場合にのみ小なり比較される場合にのみ等価比較が可能です。
+Stack オブジェクトは、クラスの要素が等値比較可能であり、かつ、クラスの要素が比較可能でない場合にのみ小なり比較される場合にのみ等価比較が可能 `Type` `Type` です。
 
 - stack クラスは、後入れ先出し (LIFO) のデータ構造をサポートしています。 思い描くのに助けとなるのは、積み重ねられた皿です。 要素 (皿) は、積み重ねの一番上からのみ挿入、検査、または削除できます。積み重ねの一番上に相当するのは、基本のコンテナーの末尾にある最後の要素です。 一番上の要素にのみアクセスできる制限があることが、stack クラスを使用する理由です。
 
@@ -68,7 +68,7 @@ Stack オブジェクトは、クラスの要素が等値比較可能であり`T
 |-|-|
 |[stack](#stack)|空であるか、基本のコンテナー オブジェクトのコピーである `stack` を構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -81,20 +81,20 @@ Stack オブジェクトは、クラスの要素が等値比較可能であり`T
 |||
 |-|-|
 |[empty](#empty)|`stack` が空かどうかをテストします。|
-|[pop](#pop)|`stack` の先頭から要素を削除します。|
+|[ショート](#pop)|`stack` の先頭から要素を削除します。|
 |[push](#push)|`stack` の先頭に要素を追加します。|
 |[size](#size)|`stack` 内の要素数を返します。|
 |[top](#top)|`stack` の先頭にある要素への参照を返します。|
 
-## <a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a>container_type
 
-適合される基本のコンテナーを提供する型。
+適合されるように、基本のコンテナーを提供する型。
 
 ```cpp
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Container` のシノニムです。 3 つの C++ 標準ライブラリ シーケンス コンテナー クラス (vector クラス、list クラス、既定の deque クラス) はすべて、stack オブジェクトの基本のコンテナーとしての使用要件を満たしています。 こうした要件を満たすユーザー定義型を使用することもできます。
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 `container_type` の宣言方法や使用方法の例については、[stack::stack](#stack) の例を参照してください。
 
-## <a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a>指定
 
 stack が空かどうかをテストします。
 
@@ -114,7 +114,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-set が空の場合は **true**、set が空ではない場合は **false**。
+**`true`** スタックが空の場合は。**`false`** スタックが空でない場合は。
 
 ### <a name="example"></a>例
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>ショート
+## <a name="pop"></a><a name="pop"></a>ショート
 
 stack の先頭から要素を削除します。
 
@@ -157,7 +157,7 @@ stack の先頭から要素を削除します。
 void pop();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数を適用するには、stack を空にすることはできません。 stack の先頭は最も直近に追加された要素によって占有される位置であり、コンテナーの末尾にある最後の要素になります。
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>押し付け
+## <a name="push"></a><a name="push"></a>押し付け
 
 要素をスタックの一番上に追加します。
 
@@ -218,7 +218,7 @@ void push(const Type& val);
 *val*\
 スタックの先頭に追加される要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 stack の先頭は最も直近に追加された要素によって占有される位置であり、コンテナーの末尾にある最後の要素になります。
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a>幅
 
 stack 内の要素数を返します。
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 stack 内の要素の数を表すことができる符号なし整数型。
 
@@ -303,15 +303,15 @@ stack 内の要素の数を表すことができる符号なし整数型。
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、stack によって採用された基本コンテナーの `size_type` のシノニムです。
 
 ### <a name="example"></a>例
 
-`size_type` の宣言方法や使用方法の例については、[size](#size) の例をご覧ください。
+`size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
 
-## <a name="stack"></a>スタック
+## <a name="stack"></a><a name="stack"></a>スタック
 
 空であるか、基本のコンテナー クラスのコピーである stack を構築します。
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>ページのトップへ
+## <a name="top"></a><a name="top"></a>ページのトップへ
 
 stack の先頭にある要素への参照を返します。
 
@@ -379,11 +379,11 @@ const_reference top() const;
 
 stack の先頭にあるコンテナーの最後の要素への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 メンバー関数を適用するには、stack を空にすることはできません。 stack の先頭は最も直近に追加された要素によって占有される位置であり、コンテナーの末尾にある最後の要素になります。
 
-の`top`戻り値が`const_reference`に割り当てられている場合、stack オブジェクトを変更することはできません。 の`top`戻り値が`reference`に割り当てられている場合は、stack オブジェクトを変更できます。
+の戻り値がに割り当てられている場合、 `top` `const_reference` stack オブジェクトを変更することはできません。 の戻り値がに割り当てられている場合は、 `top` `reference` stack オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 stack 内に要素として格納されるオブジェクトの種類を表す型。
 
@@ -424,7 +424,7 @@ stack 内に要素として格納されるオブジェクトの種類を表す�
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、stack によって採用された基本コンテナーの `value_type` のシノニムです。
 
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

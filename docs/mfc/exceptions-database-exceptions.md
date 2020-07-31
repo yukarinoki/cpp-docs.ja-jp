@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624669"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217962"
 ---
 # <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 
@@ -38,7 +38,7 @@ DAO (obsolete) と ODBC のどちらを使用している場合でも、この�
 
 フレームワークによって定義されたリターンコードに加えて、 **AFX_SQL_ERROR_XXX**フォームの名前が付いているため、一部の[CDBExceptions](reference/cdbexception-class.md)は[ODBC](../data/odbc/odbc-basics.md)のリターンコードに基づいています。 このような例外のリターンコードには**SQL_ERROR_XXX**の形式の名前があります。
 
-データベースクラスが返すことができるリターンコード (フレームワーク定義と ODBC 定義の両方) は、クラスの[m_nRetCode](reference/cdbexception-class.md#m_nretcode)データメンバーの下に記載されてい `CDBException` ます。 ODBC で定義されているリターンコードに関する追加情報については、MSDN ライブラリの ODBC SDK*プログラマーズリファレンスを参照*してください。
+データベースクラスが返すことができるリターンコード (フレームワーク定義と ODBC 定義の両方) は、クラスの[m_nRetCode](reference/cdbexception-class.md#m_nretcode)データメンバーの下に記載されてい `CDBException` ます。 Odbc で定義されているリターンコードの詳細については、 [Odbc プログラマーズリファレンスを参照](/sql/odbc/reference/odbc-programmer-s-reference)してください。
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>DAO 例外に使用されるエラーコード
 
@@ -54,11 +54,11 @@ DAO エラー、DAO エラーオブジェクトの種類、DAO エラーのコ�
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>データベース例外処理の例
 
-次の例では、 **new**演算子を使用して、ヒープに対して[CRecordset](reference/crecordset-class.md)から派生したオブジェクトを構築し、そのレコードセット (ODBC データソース用) を開きます。 同様の DAO クラスの例については、以下の「DAO 例外の例」を参照してください。
+次の例では、演算子を使用して、ヒープ上に[CRecordset](reference/crecordset-class.md)から派生したオブジェクトを構築 **`new`** し、そのレコードセット (ODBC データソース用) を開きます。 同様の DAO クラスの例については、以下の「DAO 例外の例」を参照してください。
 
 ### <a name="odbc-exception-example"></a>ODBC 例外の例
 
-[Open](reference/crecordset-class.md#open)メンバー関数は、(ODBC クラスの[CDBException](reference/cdbexception-class.md)型の) 例外をスローする可能性があるため、このコードは `Open` try ブロックを使用し**て**呼び出しを角かっこで囲みます。 後続の**catch**ブロックはをキャッチ `CDBException` します。 という例外オブジェクト自体を調べることもでき `e` ますが、この場合は、レコードセットを作成しようとしたときに失敗したことを把握しておく必要があります。 **Catch**ブロックは、メッセージボックスを表示し、レコードセットオブジェクトを削除してクリーンアップします。
+[Open](reference/crecordset-class.md#open)メンバー関数は、(ODBC クラスの[CDBException](reference/cdbexception-class.md)型の) 例外をスローする可能性があるため、このコードはブロックを使用して呼び出しを角かっこ `Open` で囲み **`try`** ます。 後続の **`catch`** ブロックはをキャッチ `CDBException` します。 という例外オブジェクト自体を調べることもでき `e` ますが、この場合は、レコードセットを作成しようとしたときに失敗したことを把握しておく必要があります。 ブロックは、 **`catch`** メッセージボックスを表示し、レコードセットオブジェクトを削除してクリーンアップします。
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909945"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231391"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath、_wfullpath
 
@@ -71,7 +71,7 @@ wchar_t *_wfullpath(
 相対パス名。
 
 *maxLength*<br/>
-絶対パス名バッファー (*Abspath*) の最大長。 この長さは、 **_fullpath**の場合はバイト単位ですが、 **_wfullpath**の場合はワイド文字 (**wchar_t**) になります。
+絶対パス名バッファー (*Abspath*) の最大長。 この長さは、 **_fullpath**の場合はバイト単位ですが、 **`wchar_t`** **_wfullpath**の場合はワイド文字 () になります。
 
 ## <a name="return-value"></a>戻り値
 
@@ -109,7 +109,7 @@ By default, this function's global state is scoped to the application. To change
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> または \<wchar.h>|
@@ -153,7 +153,7 @@ Full path is: C:\Documents and Settings\user\test
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd、_wgetdcwd](getdcwd-wgetdcwd.md)<br/>
 [_makepath、_wmakepath](makepath-wmakepath.md)<br/>

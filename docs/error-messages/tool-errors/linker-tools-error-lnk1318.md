@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183580"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446702"
 ---
 # <a name="linker-tools-error-lnk1318"></a>リンカー ツール エラー LNK1318
 
@@ -24,7 +24,7 @@ PDB ファイルを開く、読み取り、または書き込んでいるとき�
 
 - ビルドディレクトリでクリーン操作を実行し、ソリューションの完全なビルドを実行します。
 
-- コンピューターを再起動するか、mspdbsrv プロセスが存在しないことを確認し、TaskManager で強制終了します。
+- コンピューターを再起動するか、mspdbsrv.exe プロセスに応答していないかどうかを確認し、TaskManager で強制終了します。
 
 - プロジェクトディレクトリのウイルス対策チェックをオフにします。
 
@@ -32,4 +32,4 @@ PDB ファイルを開く、読み取り、または書き込んでいるとき�
 
 - 64ビットでホストされたツールセットを使用してビルドしてみてください。
 
-- リンクをシリアル化して、必要に応じて並列リンクの問題を軽減します。 このエラーは、mspdbsrv がリンクの1つのインスタンスによって起動された場合に発生する可能性があります。また、リンクの別のインスタンスが使用される前にシャットダウンされます。 この修正の欠点は、プロジェクトのビルドが完了するまでに時間がかかる場合があることです。
+- リンクをシリアル化して、必要に応じて並列リンクの問題を軽減します。 このエラーは、mspdbsrv.exe がリンクの1つのインスタンスによって起動された場合に発生する可能性があります。また、リンクの別のインスタンスが使用される前にシャットダウンされます。 この修正の欠点は、プロジェクトのビルドが完了するまでに時間がかかる場合があることです。

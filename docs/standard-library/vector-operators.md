@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427573"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224540"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 演算子
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-vector が等しくない場合は **true**。vector が等しい場合は **false**。
+**`true`** ベクターが等しくない場合は。**`false`** ベクターが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかを調べます。
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の vector が演算子の右辺の vector より小さい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の vector が演算子の右辺の vector より小さい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以下かどうかを調べます。
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の vector が演算子の右辺の vector 以下の場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の vector が演算子の右辺のベクトル以下である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -178,9 +178,9 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
-演算子の左辺のオブジェクトが右辺のオブジェクトと等しいかどうかを調べます。
+演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
 
 ```cpp
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の vector が演算子の右辺の vector と等しい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の vector が演算子の右辺のベクトルと等しい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより大きいかどうかを調べます。
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の vector が演算子の右辺の vector より大きい場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺の vector が演算子の右辺の vector より大きい場合は、です。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以上であるかどうかを調べます。
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `vector` 型オブジェクト。
 
-*右*\
+*そうです*\
 `vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺の vector が演算子の右辺の vector 以上の場合は **true**、それ以外の場合は **false**。
+**`true`** 演算子の左辺のベクターがベクターの右辺のベクトル以上である場合は、を返します。それ以外の場合は **`false`** 。
 
 ### <a name="example"></a>例
 

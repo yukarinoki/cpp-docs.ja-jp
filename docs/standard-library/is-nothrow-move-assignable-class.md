@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 92e3364843b5614c9fa108d33605b35962726aa2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217741"
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable クラス
+# <a name="is_nothrow_move_assignable-class"></a>is_nothrow_move_assignable クラス
 
-型が **nothrow** ムーブ代入演算子を持つかどうかをテストします。
+型に移動代入演算子があるかどうかをテスト **`nothrow`** します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,16 +26,16 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 型が nothrow の移動代入演算子*を持つ場合*、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

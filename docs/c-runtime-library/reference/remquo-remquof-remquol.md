@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216792"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -71,19 +71,19 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>戻り値
 
-その後、 *x* / *y*の浮動小数点の剰余**を返します**。 *Y*の値が0.0 の場合、 **Remquo** quiet NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
+その後、 *x*y の浮動小数点の剰余**を返し**  /  *y*ます。 *Y*の値が0.0 の場合、 **Remquo** quiet NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Remquo** *は x* / *y* \* *y* *f*  + *f* *f* *x* *y* *i* *f* *i* *x* = の浮動小数点の剰余 f を計算します。ここで、i は整数、f は x と同じ符号、f の絶対値は y の絶対値よりも小さくなっています。
+**Remquo** *は x y の浮動*小数点の剰余*f*を計算します。ここで、  /  *y* *x*  =  *i* \* *y*  +  *f* *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなっています。
 
-C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を取得して返すように、 **remquo**オーバーロードを呼び出すことができます。 C プログラムでは、 **remquo**常に2つの**double**引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す、 **remquo**オーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **remquo**常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
 |**remquo** **remquof**、 **remquol**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -116,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod、fmodf](fmod-fmodf.md)<br/>

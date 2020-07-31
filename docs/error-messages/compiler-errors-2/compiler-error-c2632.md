@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8ea3a106e8819bf067203f220ca51e17b87bfe46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225463"
 ---
 # <a name="compiler-error-c2632"></a>コンパイラエラー C2632
 
@@ -26,7 +26,7 @@ ms.locfileid: "74754694"
 int float i;   // C2632
 ```
 
-このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。 `bool` が適切な型になりました。 以前のバージョンでは、`bool` は typedef であり、その名前で識別子を作成することができました。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。 **`bool`** は、適切な型になりました。 以前のバージョンでは、は **`bool`** typedef であり、その名前を持つ識別子を作成できました。
 
 次の例では、C2632 が生成されます。
 
@@ -36,4 +36,4 @@ int float i;   // C2632
 void f(int bool);   // C2632
 ```
 
-このエラーを解決して、visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio でコードが有効になるようにするには、識別子の名前を変更します。
+このエラーを解決して、Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C++ でコードが有効になるようにするには、識別子の名前を変更します。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172479"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219755"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>パラメーター
 
-*type-parameter*<br/>
+*型パラメーター*<br/>
 制約が適用される、いずれかの型パラメーター。
 
 *constraint list*<br/>
@@ -37,13 +37,13 @@ where type-parameter: constraint list
 
 一覧には、クラスを含めることもできます。 型引数で基底クラスの制約を満たすには、制約と同じクラスにするか、制約から派生する必要があります。
 
-**gcnew()** を指定して型引数にパラメーターのないコンストラクターが含まれている必要があること、または **ref class** を指定して型引数に参照型 (任意のクラス、インターフェイス、デリゲート、または配列型) が含まれている必要があること、または **value class** を指定して型引数に値型が含まれていることを指定することもできます。 Nullable\<T> を除く任意の値型を指定できます。
+**gcnew()** を指定して型引数にパラメーターのないコンストラクターが含まれている必要があること、または **ref class** を指定して型引数に参照型 (任意のクラス、インターフェイス、デリゲート、または配列型) が含まれている必要があること、または **value class** を指定して型引数に値型が含まれていることを指定することもできます。 Null 許容型を除くすべての値型 \<T> を指定できます。
 
 制約としてジェネリック パラメーターを指定することもできます。 制約が適用されている型に提供される型引数は、制約の型から派生する必要があります。 これは、生の型制約と呼ばれます。
 
 ## <a name="remarks"></a>解説
 
-制約句は **where**、型パラメーター、コロン ( **:** )、および制約で構成され、型パラメーターに対する制約の性質を規定します。 **where** は状況依存キーワードです。詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 複数の **where** 句はスペースで分離します。
+制約句は **where**、型パラメーター、コロン (**:**)、および制約で構成され、型パラメーターに対する制約の性質を規定します。 **where** は状況依存キーワードです。詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 複数の **where** 句はスペースで分離します。
 
 制約を型パラメーターに適用して、ジェネリック型またはメソッドの引数として使用できる型に制限を課します。
 
@@ -64,7 +64,7 @@ ref class List {};
 
 型パラメーターを介して型引数のクラスの静的メソッドを呼び出すことはできません。それらは、実際の名前付きの型を介してのみ呼び出すことができます。
 
-**int** や **double** などの組み込み型を含め、制約を値型にすることはできません。 値型は派生クラスを持つことができないため、1 つのクラスのみが制約を満たすことができます。 その場合は、特定の値の型に置き換えられた型パラメーターを使用して、ジェネリックを書き換えることができます。
+制約は、やなどの組み込み型を含め、値型にすることはできません **`int`** **`double`** 。 値型は派生クラスを持つことができないため、1 つのクラスのみが制約を満たすことができます。 その場合は、特定の値の型に置き換えられた型パラメーターを使用して、ジェネリックを書き換えることができます。
 
 不明な型でメソッドやインターフェイスがサポートされていることが制約で示唆されない限り、コンパイラで不明な型のメソッドやその他の機能は使用できないため、制約が必要な場合があります。
 
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジェネリック](generics-cpp-component-extensions.md)

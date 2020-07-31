@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076935"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228753"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>コンパイラの警告 (レベル 4) C4471
 
 '*enumeration*': 対象範囲外の列挙の事前宣言には基になる型 (int と仮定) を指定する必要があります
 
-対象範囲外の列挙の事前宣言が見つかりましたが、基になる型に指定子がありません。 既定では、 C++ビジュアルは `int` が列挙型の基になる型であると想定します。 別の明示的な型が指定されている場合や、初期化子によって別の型が暗黙的に設定されている場合など、列挙定義で別の型が使用されていると、問題が発生する可能性があります。 また、移植性の問題がある場合もあります。その他のコンパイラでは、`int` が列挙型の基になる型であるとは見なされません。
+対象範囲外の列挙の事前宣言が見つかりましたが、基になる型に指定子がありません。 既定では、Visual C++ **`int`** は列挙体の基になる型であると見なされます。 別の明示的な型が指定されている場合や、初期化子によって別の型が暗黙的に設定されている場合など、列挙定義で別の型が使用されていると、問題が発生する可能性があります。 また、移植性の問題がある場合もあります。他のコンパイラは **`int`** 、が列挙型の基になる型であると想定していません。
 
 既定では、この警告はオフになっています。/Wall または/w*N*4471 を使用してコマンドラインで有効にすることも、ソースファイルで #pragma[警告](../../preprocessor/warning.md)を使用することもできます。
 

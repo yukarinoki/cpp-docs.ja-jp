@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 238310791baebc941ad23b798adc1ea2e7fffcbb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218508"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -51,22 +51,22 @@ PVOID __RTDynamicCast (
 *VfDelta*<br/>
 オブジェクト内の仮想関数ポインターのオフセット。
 
-*SrcType*<br/>
+*Desttype*<br/>
 `inptr` パラメーターでポイントするオブジェクトのスタティック型。
 
 *TargetType*<br/>
 キャストの意図した結果。
 
 *isReference*<br/>
-入力が参照の場合は **true**、ポインターの場合は **false**。
+**`true`** 入力が参照である場合は。**`false`** 入力がポインターである場合は。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は適切なサブオブジェクトへのポインター、それ以外の場合は **NULL**。
+成功した場合は、適切なサブオブジェクトへのポインター。それ以外の場合は**NULL**。
 
 ## <a name="exceptions"></a>例外
 
-`bad_cast()` への入力が参照でありキャストに失敗した場合は `dynamic_cast<>`。
+`dynamic_cast<>` への入力が参照でありキャストに失敗した場合は `bad_cast()`。
 
 ## <a name="remarks"></a>解説
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226920"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 構造体
 
-初期化されていないハンドルの共通の特性を定義します。
+初期化されていないハンドルの一般的な特性を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,16 +32,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-名前   | 説明
+名前   | [説明]
 ------ | ---------------------
-`Type` | ハンドルの同義語。
+`Type` | ハンドルのシノニム。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-名前                                                  | 説明
+名前                                                  | [説明]
 ----------------------------------------------------- | -----------------------------
-[ハンドルヌルトレイツ::閉じる](#close)                     | 指定したハンドルを閉じます。
-[ハンドルヌルトレイト::無効な値を取得します。](#getinvalidvalue) | 無効なハンドルを表します。
+[HANDLENullTraits:: Close](#close)                     | 指定されたハンドルを閉じます。
+[HANDLENullTraits:: GetInvalidValue](#getinvalidvalue) | は無効なハンドルを表します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,13 +49,13 @@ struct HANDLENullTraits;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
+**名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>ハンドルヌルトレイツ::閉じる
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits:: Close
 
-指定したハンドルを閉じます。
+指定されたハンドルを閉じます。
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
+*h*<br/>
 閉じるハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-ハンドル*h が*正常に終了した場合**は true。** それ以外の場合**は false。**
+**`true`***ハンドルが*正常に閉じられた場合は。それ以外の場合は **`false`** 。
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>ハンドルヌルトレイト::無効な値を取得します。
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits:: GetInvalidValue
 
-無効なハンドルを表します。
+は無効なハンドルを表します。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>戻り値
 
-常に `nullptr` を返します。
+常にを返し **`nullptr`** ます。

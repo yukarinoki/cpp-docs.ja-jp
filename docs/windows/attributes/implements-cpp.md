@@ -1,21 +1,21 @@
 ---
-title: 実装 (C++ COM 属性)
+title: implements (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217234"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。
+IDL コクラスのメンバーとして強制されるディスパッチインターフェイスを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,14 +27,14 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 ### <a name="parameters"></a>パラメーター
 
 *interfaces*<br/>
-コンマ区切りの IDL コクラスのメンバーとなるインターフェイスの一覧。 1 つのインターフェイスを指定するための簡略化された方法が**実装 (** *interface_name* **)** します。
+IDL コクラスのメンバーになるインターフェイスのコンマ区切りのリスト。 1つのインターフェイスを指定するための簡単な方法は、 **(** *interface_name* **)** を実装することです。
 
-*dispinterfaces*<br/>
-コンマ区切りの IDL コクラスのメンバーとなるディスパッチ インターフェイスの一覧。 1 つのディスパッチ インターフェイスを指定するための簡略化された方法が**実装 (dispinterface =** *場合* **)** します。
+*ディスパッチ*<br/>
+IDL コクラスのメンバーになるディスパッチインターフェイスのコンマ区切りのリスト。 単一のディスパッチインターフェイスを指定するための簡単な方法は、 **(ディスパッチインターフェイス =** *dispinterface_name* **)** を実装することです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定が唯一の COM インターフェイスに基本クラスの`coclass`IDL コクラスに追加されます。 **実装**IDL にするには、他のインターフェイスを強制することができます`coclass`メンバー。
+既定では、の基本クラスである COM インターフェイスのみ `coclass` が IDL コクラスに追加されます。 **implements**を使用すると、他のインターフェイスを強制的に IDL メンバーにすることができ `coclass` ます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,18 +42,18 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|はい|
-|**必要な属性**|なし|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|はい|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例は、3 つの部分には: .idl ファイルとその関連 .h ファイルと、C++ ファイル。
+次の例は、.idl ファイルとそれに関連付けられている .h ファイル、および C++ ファイルの3つの部分に分かれています。
 
-コンパイラで使用できる次の .idl ファイルを想定しています。
+次の .idl ファイルがあるとします。これは、コンパイラで使用できます。
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>例
 
-次の .h ファイルも、コンパイラに使用する必要があります。
+また、次の .h ファイルもコンパイラで使用できる必要があります。
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>例
 
-を実装せず、次のプログラムで`IBar1`、 `IBar2`、と`ISna`されません、`coclass`生成された IDL にします。
+次のプログラムでは、を実装しないと、、、、およびは、生成された IDL のに `IBar1` `IBar2` 含まれ `ISna` ません `coclass` 。
 
 ```cpp
 // attr_implements.cpp

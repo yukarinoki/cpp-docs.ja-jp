@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 11acb4c7162a17ff763a574c27c186061ae476a7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371354"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211529"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +32,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
+*常用*<br/>
 基本データ型。
 
 *派生*<br/>
@@ -42,7 +42,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 一方の型がもう一方の型の基本クラスであるかどうかをテストします。
 
-最初のテンプレートは、型が基本型から派生しているかどうかを**テストします。** **true** 2 番目のテンプレートは、型がそれ自体から派生しているかどうかをテスト**します。**
+1つ目のテンプレートでは、型が基本型から派生しているかどうかをテストします。この場合、またはが発生する可能性があり **`true`** **`false`** ます。 2番目のテンプレートは、型がそれ自体から派生しているかどうかをテストします。これは常にを生成 **`false`** します。
 
 ## <a name="members"></a>メンバー
 
@@ -50,7 +50,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 名前                            | 説明
 ------------------------------- | --------------------------------------------------
-[ストベースオブストリクスト::値](#value) | ある型が別の型のベースであるかどうかを示します。
+[IsBaseOfStrict:: value](#value) | 一方の型が別の型のベースであるかどうかを示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,13 +58,13 @@ struct IsBaseOfStrict<Base, Base>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** 内部.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="isbaseofstrictvalue"></a><a name="value"></a>ストベースオブストリクスト::値
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict:: value
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
@@ -72,6 +72,6 @@ static const bool value = __is_base_of(Base, Derived);
 
 ### <a name="remarks"></a>解説
 
-ある型が別の型のベースであるかどうかを示します。
+一方の型が別の型のベースであるかどうかを示します。
 
-`value`型`Base`が型`Derived`の基本クラスの場合は**true、** それ以外の場合は**false**です。
+`value`**`true`** 型 `Base` が型の基底クラスである場合は `Derived` 、それ以外の場合はです **`false`** 。

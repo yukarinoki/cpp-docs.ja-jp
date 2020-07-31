@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218729"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -91,7 +91,7 @@ long _wtol_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**long 型**の値を返します。 入力をその型の値に変換できない場合、戻り値は**atol**の0L になります。
+各関数は、 **`long`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、戻り値は**atol**の0L になります。
 
 大きな正の整数値によるオーバーフローの場合、 **atol**は**LONG_MAX**を返します。大きな負の整数値によるオーバーフローの場合、 **LONG_MIN**が返されます。 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
@@ -125,7 +125,7 @@ long _wtol_l(
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**_atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> と \<wchar.h>|
+|**_atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> および \<wchar.h>|
 
 ## <a name="example"></a>例
 
@@ -179,8 +179,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

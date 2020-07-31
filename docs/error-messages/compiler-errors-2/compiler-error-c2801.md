@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cfb89c79534318ab1fbcaa06667d594bfe2f1157
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760674"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214595"
 ---
 # <a name="compiler-error-c2801"></a>コンパイラ エラー C2801
 
@@ -19,19 +19,19 @@ ms.locfileid: "74760674"
 
 次の演算子は、非静的メンバーとしてのみオーバーロードできます。
 
-- 割り当ての `=`
+- 割り当て`=`
 
-- クラスメンバーアクセス `->`
+- クラスメンバーアクセス`->`
 
-- 時 `[]`
+- 時`[]`
 
-- 関数呼び出し `()`
+- 関数呼び出し`()`
 
 考えられる C2801 原因:
 
 - オーバーロードされた演算子は、クラス、構造体、または共用体のメンバーではありません。
 
-- オーバーロードされた演算子は `static`として宣言されます。
+- オーバーロードされた演算子が宣言されて **`static`** います。
 
 - 次の例では、C2801 が生成されます。
 

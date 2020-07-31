@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
-ms.openlocfilehash: 059518462bd7a0463fd03fec6434acbbda7ee60a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fdc129be94fce3f97eca988d8080e9d01fd48248
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221095"
 ---
 # <a name="compiler-error-c3384"></a>コンパイラ エラー C3384
 
 'type_parameter': 値の制約および ref 制約を同時に使用することはできません
 
-ジェネリック型を `value class` と `ref class`の両方に制限することはできません。
+ジェネリック型をとの両方に制限することはできません **`value class`** **`ref class`** 。
 
 詳細については、「[ジェネリック型パラメーターの制約 (C++/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3384 が生成されます。
 

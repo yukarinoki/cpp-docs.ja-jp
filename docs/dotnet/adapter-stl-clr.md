@@ -48,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216441"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-STL/CLR ヘッダー `<cliext/adapter>` は、2つのテンプレートクラス (`collection_adapter` と `range_adapter`) を指定し、テンプレート関数を `make_collection`します。
+STL/CLR ヘッダーは、 `<cliext/adapter>` 2 つのテンプレートクラス ( `collection_adapter` と `range_adapter` ) と、テンプレート関数を指定し `make_collection` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -65,9 +65,9 @@ STL/CLR ヘッダー `<cliext/adapter>` は、2つのテンプレートクラス
 #include <cliext/adapter>
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/adapter >
+**ヘッダー:**\<cliext/adapter>
 
 **名前空間:** cliext
 
@@ -78,7 +78,7 @@ STL/CLR ヘッダー `<cliext/adapter>` は、2つのテンプレートクラス
 |[collection_adapter (STL/CLR)](#collection_adapter)|基本クラスライブラリ (BCL) コレクションを範囲としてラップします。|
 |[range_adapter (STL/CLR)](#range_adapter)|範囲を BCL コレクションとしてラップします。|
 
-|関数|説明|
+|機能|説明|
 |--------------|-----------------|
 |[make_collection (STL/CLR)](#make_collection)|反復子ペアを使用して範囲アダプターを作成します。|
 
@@ -86,7 +86,7 @@ STL/CLR ヘッダー `<cliext/adapter>` は、2つのテンプレートクラス
 
 ## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-STL/CLR コンテナーとして使用するために .NET コレクションをラップします。 `collection_adapter` は、単純な STL/CLR コンテナーオブジェクトを記述するテンプレートクラスです。 これは、基本クラスライブラリ (BCL) インターフェイスをラップし、被制御シーケンスを操作するために使用する反復子ペアを返します。
+STL/CLR コンテナーとして使用するために .NET コレクションをラップします。 `collection_adapter`は、単純な STL/CLR コンテナーオブジェクトを記述するテンプレートクラスです。 これは、基本クラスライブラリ (BCL) インターフェイスをラップし、被制御シーケンスを操作するために使用する反復子ペアを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -134,14 +134,14 @@ template<typename Key,
 |ICollection|要素のグループを保持します。|
 |IList|要素の順序付けられたグループを保持します。|
 |IDictionary|{Key, value} のペアのセットを保持します。|
-|IEnumerable\<値 >|型指定された要素を通じてシーケンス処理を行います。|
-|ICollection\<値 >|型指定された要素のグループを保持します。|
-|IList\<値 >|型指定された要素の順序付けられたグループを保持します。|
-|IDictionary\<値 >|型指定された {key, value} のペアのセットを保持します。|
+|IEnumerable\<Value>|型指定された要素を通じてシーケンス処理を行います。|
+|ICollection\<Value>|型指定された要素のグループを保持します。|
+|IList\<Value>|型指定された要素の順序付けられたグループを保持します。|
+|IDictionary\<Value> |型指定された {key, value} のペアのセットを保持します。|
 
 ### <a name="members"></a>メンバー
 
-|型定義|説明|
+|型の定義|説明|
 |---------------------|-----------------|
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[collection_adapter::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
@@ -160,13 +160,13 @@ template<typename Key,
 |[collection_adapter::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[collection_adapter::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|
 
-|演算子|説明|
+|演算子|Description|
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|格納されている BCL ハンドルを置き換えます。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このテンプレートクラスを使用して、BCL コンテナーを STL/CLR コンテナーとして操作します。 `collection_adapter` は、要素のシーケンスを制御する BCL インターフェイスへのハンドルを格納します。 `collection_adapter` オブジェクト `X` は、要素に順番にアクセスするために使用する入力反復子 `X.begin()` と `X.end()` のペアを返します。 一部の特殊化では、被制御シーケンスの長さを決定するために `X.size()` を作成することもできます。
+このテンプレートクラスを使用して、BCL コンテナーを STL/CLR コンテナーとして操作します。 は、 `collection_adapter` BCL インターフェイスへのハンドルを格納します。これは、要素のシーケンスを制御します。 オブジェクトは、 `collection_adapter` `X` 要素に `X.begin()` `X.end()` 順番にアクセスするために使用する入力反復子のペアを返します。 また、一部の特殊化では、 `X.size()` 被制御シーケンスの長さを決定するためにも記述できます。
 
 ## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: base (STL/CLR)
 
@@ -178,7 +178,7 @@ template<typename Key,
 Coll^ base();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されている BCL インターフェイスハンドルを返します。
 
@@ -222,7 +222,7 @@ base() same = True
 iterator begin();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定する入力反復子を返します。
 
@@ -278,37 +278,37 @@ collection_adapter(Coll^ collection);
 
 #### <a name="parameters"></a>パラメーター
 
-*collection*<br/>
+*表す*<br/>
 ラップする BCL ハンドル。
 
-*right*<br/>
+*そうです*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
 `collection_adapter();`
 
-`nullptr`を使用して、格納されているハンドルを初期化します。
+で格納されているハンドルを初期化 **`nullptr`** します。
 
 コンストラクター:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-`right.`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`を使用して、格納されているハンドルを初期化します。
+`right.` [collection_adapter:: BASE (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)を使用して、格納されているハンドルを初期化 `()` します。
 
 コンストラクター:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-`right->`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`を使用して、格納されているハンドルを初期化します。
+`right->` [collection_adapter:: BASE (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)を使用して、格納されているハンドルを初期化 `()` します。
 
 コンストラクター:
 
 `collection_adapter(Coll^ collection);`
 
-`collection`を使用して、格納されているハンドルを初期化します。
+で格納されているハンドルを初期化 `collection` します。
 
 ### <a name="example"></a>例
 
@@ -367,7 +367,7 @@ x x x x x x
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、署名された要素の数を表します。
 
@@ -419,7 +419,7 @@ end()-begin() = 3
 iterator end();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示す入力反復子を返します。
 
@@ -464,9 +464,9 @@ a b c
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの入力反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
+この型は、 `T1` 被制御シーケンスの入力反復子として使用できる未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -509,9 +509,9 @@ a b c
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター `Key`のシノニムであり、`IDictionary` または `IDictionary<Value>`に特化されています。それ以外の場合は定義されません。
+この型は、またはの特殊化のテンプレートパラメーターのシノニムです。それ以外の場合は、定義され `Key` `IDictionary` `IDictionary<Value>` ません。
 
 ### <a name="example"></a>例
 
@@ -559,9 +559,9 @@ int main()
 typedef Value mapped_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター `Value`のシノニムであり、`IDictionary` または `IDictionary<Value>`に特化されています。それ以外の場合は定義されません。
+この型は、またはの特殊化のテンプレートパラメーターのシノニムです。それ以外の場合は、定義され `Value` `IDictionary` `IDictionary<Value>` ません。
 
 ### <a name="example"></a>例
 
@@ -611,12 +611,12 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、格納されている BCL ハンドルを*右側*の格納されている bcl ハンドルのコピーで置き換えます。
+メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている BCL ハンドルを*右側*の格納されている bcl ハンドルのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -666,7 +666,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -714,9 +714,9 @@ a b c
 size_type size();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 `IEnumerable` または `IEnumerable<Value>`の特殊化では定義されていません。
+このメンバー関数は、被制御シーケンスの長さを返します。 またはの特殊化では定義されていません `IEnumerable` `IEnumerable<Value>` 。
 
 ### <a name="example"></a>例
 
@@ -757,7 +757,7 @@ size() = 6
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、負でない要素数を表します。
 
@@ -804,12 +804,12 @@ void swap(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメンバー関数は、格納されている BCL ハンドルを `*this` と*right*の間で交換します。
+このメンバー関数は、格納されている BCL ハンドルをとの間で交換し **`*this`** ます。 *right*
 
 ### <a name="example"></a>例
 
@@ -871,9 +871,9 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この型は、特殊化に存在する場合は、テンプレートパラメーター*値*のシノニムです。それ以外の場合は、`System::Object^`のシノニムになります。
+この型は、特殊化に存在する場合は、テンプレートパラメーター*値*のシノニムです。それ以外の場合は、のシノニムになり `System::Object^` ます。
 
 ### <a name="example"></a>例
 
@@ -912,7 +912,7 @@ a b c
 
 ## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
 
-反復子ペアから `range_adapter` を作成します。
+`range_adapter`反復子ペアからを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -932,9 +932,9 @@ template<typename Iter>
 *last*<br/>
 ラップする2番目の反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このテンプレート関数は `gcnew range_adapter<Iter>(first, last)` を返します。 これを使用して、1組の反復子から `range_adapter<Iter>` オブジェクトを構築します。
+このテンプレート関数は `gcnew range_adapter<Iter>(first, last)` を返します。 このメソッドを使用して、 `range_adapter<Iter>` 1 組の反復子からオブジェクトを構築します。
 
 ### <a name="example"></a>例
 
@@ -1029,7 +1029,7 @@ template<typename Iter>
 |<xref:System.Collections.Generic.IEnumerable%601>|コレクション内の型指定された要素を反復処理します。|
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Range_adapter は、要素のシーケンスを区切る反復子のペアを格納します。 オブジェクトには、要素を順番に反復処理できる4つの BCL インターフェイスが実装されています。 このテンプレートクラスを使用して、BCL コンテナーと同じように STL/CLR 範囲を操作します。
 
@@ -1045,12 +1045,12 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、格納されている反復子ペアを*右*の格納されている反復子ペアのコピーに置き換えることができます。
+メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている反復子ペアを*右*の格納されている反復子ペアのコピーに置き換えることができます。
 
 ### <a name="example"></a>例
 
@@ -1111,10 +1111,10 @@ range_adapter(Iter first, Iter last);
 *last*<br/>
 ラップする2番目の反復子。
 
-*right*<br/>
+*そうです*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -1132,7 +1132,7 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-`*right`に格納されているペアをコピーすることにより、格納された反復子ペアを初期化します。
+に格納されているペアをコピーすることにより、格納された反復子ペアを初期化し `*right` ます。
 
 コンストラクター:
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212049"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution クラス
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Int タイプ*\
-整数の結果の型は、既定**では int**になります。可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*IntType*\
+結果の型が整数である場合、は既定でに **`int`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、すべての値が等しく可能性が高いように、ユーザー指定の整数型の値を分布と共に生成する包括分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、すべての値が均等になるように、分布を使用してユーザー指定の整数型の値を生成する包括的包含分布を記述します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="example"></a>例
 
@@ -175,11 +175,11 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:: uniform_int_distribution
 
 分布を作成します。
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*A*\
+*ある*\
 乱数値の下限 (包含的)。
 
-*B*\
+*b*\
 乱数値の上限 (包含的)。
 
-*Parm*\
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>解説
 
 **前提条件:**`a ≤ b`
 
-最初のコンストラクターは *、格納された*値が*a*を保持し、格納された b 値が*b*値*b*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、値*を*保持し、格納さ*れて*いる*b*値が値*b*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::pラム_タイプ
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p aram_type
 
 分布のパラメーターを格納します。
 
@@ -227,10 +227,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*A*\
+*ある*\
 乱数値の下限 (包含的)。
 
-*B*\
+*b*\
 乱数値の上限 (包含的)。
 
 *そうです*\
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b95e512f89ee1ff32ca9f1bea51bce643d185a2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220523"
 ---
 # <a name="criticalsection-class"></a>CriticalSection クラス
 
-クリティカル セクション オブジェクトを表します。
+クリティカルセクションオブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,26 +38,26 @@ class CriticalSection;
 
 ## <a name="members"></a>メンバー
 
-### <a name="constructor"></a>Constructor
+### <a name="constructor"></a>コンストラクター
 
 名前                                                        | 説明
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[クリティカルセクション::クリティカルセクション](#criticalsection)        | ミューテックス オブジェクトに似ていますが、単一のプロセスのスレッドのみが使用できる同期オブジェクトを初期化します。
-[クリティカルセクション::~クリティカルセクション](#tilde-criticalsection) | 現在`CriticalSection`のオブジェクトを初期化解除し、破棄します。
+[CriticalSection:: CriticalSection](#criticalsection)        | Mutex オブジェクトに似た同期オブジェクトを初期化しますが、1つのプロセスのスレッドだけが使用できます。
+[CriticalSection:: ~ CriticalSection](#tilde-criticalsection) | 現在のオブジェクトを初期化して破棄し `CriticalSection` ます。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                 | 説明
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
-[クリティカルセクション::IsValid](#isvalid) | 現在のクリティカル セクションが有効かどうかを示します。
-[クリティカルセクション::ロック](#lock)       | 指定したクリティカル セクション オブジェクトの所有権を待機します。 呼び出し元のスレッドに所有権が付与されると、関数は戻ります。
-[クリティカルセクション::トライロック](#trylock) | ブロックせずにクリティカル セクションに入ろうとします。 呼び出しが成功すると、呼び出し元スレッドはクリティカル セクションの所有権を取得します。
+[CriticalSection:: IsValid](#isvalid) | 現在のクリティカルセクションが有効かどうかを示します。
+[CriticalSection:: Lock](#lock)       | 指定したクリティカルセクションオブジェクトの所有権を待機します。 関数は、呼び出し元のスレッドに所有権が付与されると、を返します。
+[CriticalSection:: TryLock](#trylock) | ブロックせずにクリティカルセクションを入力しようとします。 呼び出しが成功すると、呼び出し元のスレッドはクリティカルセクションの所有権を取得します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                        | 説明
 --------------------------- | ----------------------------------------
-[クリティカルセクション::cs_](#cs) | クリティカル セクション データ メンバーを宣言します。
+[CriticalSection:: cs_](#cs) | クリティカルセクションのデータメンバーを宣言します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,21 +65,21 @@ class CriticalSection;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー
+**名前空間:** Microsoft:: WRL:: Wrapper
 
-## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>クリティカルセクション::~クリティカルセクション
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
 
-現在`CriticalSection`のオブジェクトを初期化解除し、破棄します。
+現在のオブジェクトを初期化して破棄し `CriticalSection` ます。
 
 ```cpp
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>クリティカルセクション::クリティカルセクション
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSection:: CriticalSection
 
-ミューテックス オブジェクトに似ていますが、単一のプロセスのスレッドのみが使用できる同期オブジェクトを初期化します。
+Mutex オブジェクトに似た同期オブジェクトを初期化しますが、1つのプロセスのスレッドだけが使用できます。
 
 ```cpp
 explicit CriticalSection(
@@ -89,16 +89,16 @@ explicit CriticalSection(
 
 ### <a name="parameters"></a>パラメーター
 
-*スピンカウント*<br/>
-クリティカル セクション オブジェクトのスピン カウント。 既定値は 0 です。
+*spincount*<br/>
+クリティカルセクションオブジェクトのスピンカウント。 既定値は 0 です。
 
 ### <a name="remarks"></a>解説
 
-クリティカル セクションとスピンカウントの詳細については、Windows `InitializeCriticalSectionAndSpinCount` API の`Synchronization`ドキュメネーションのセクションの関数を参照してください。
+クリティカルセクションと spincounts の詳細については、 `InitializeCriticalSectionAndSpinCount` `Synchronization` Windows API ドキュメントの「」セクションの関数を参照してください。
 
-## <a name="criticalsectioncs_"></a><a name="cs"></a>クリティカルセクション::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection:: cs_
 
-クリティカル セクション データ メンバーを宣言します。
+クリティカルセクションのデータメンバーを宣言します。
 
 ```cpp
 CRITICAL_SECTION cs_;
@@ -106,11 +106,11 @@ CRITICAL_SECTION cs_;
 
 ### <a name="remarks"></a>解説
 
-このデータ メンバーは保護されています。
+このデータメンバーは保護されています。
 
-## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>クリティカルセクション::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection:: IsValid
 
-現在のクリティカル セクションが有効かどうかを示します。
+現在のクリティカルセクションが有効かどうかを示します。
 
 ```cpp
 bool IsValid() const;
@@ -118,11 +118,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-既定では、常に**true を**返します。
+既定では、は常にを返し **`true`** ます。
 
-## <a name="criticalsectionlock"></a><a name="lock"></a>クリティカルセクション::ロック
+## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSection:: Lock
 
-指定したクリティカル セクション オブジェクトの所有権を待機します。 呼び出し元のスレッドに所有権が付与されると、関数は戻ります。
+指定したクリティカルセクションオブジェクトの所有権を待機します。 関数は、呼び出し元のスレッドに所有権が付与されると、を返します。
 
 ```cpp
 SyncLock Lock();
@@ -134,20 +134,20 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>パラメーター
 
-*cs*<br/>
-ユーザー指定のクリティカル セクション オブジェクト。
+*同時*<br/>
+ユーザーが指定したクリティカルセクションオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-現在のクリティカル セクションのロックを解除するために使用できるロック オブジェクト。
+現在のクリティカルセクションのロックを解除するために使用できるロックオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-最初`Lock`の関数は、現在のクリティカル セクション オブジェクトに影響します。 2`Lock`番目の関数は、ユーザー指定のクリティカル セクションに影響します。
+最初の `Lock` 関数は、現在のクリティカルセクションオブジェクトに影響します。 2番目の関数は、 `Lock` ユーザーが指定したクリティカルセクションに影響します。
 
-## <a name="criticalsectiontrylock"></a><a name="trylock"></a>クリティカルセクション::トライロック
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSection:: TryLock
 
-ブロックせずにクリティカル セクションに入ろうとします。 呼び出しが成功すると、呼び出し元スレッドはクリティカル セクションの所有権を取得します。
+ブロックせずにクリティカルセクションを入力しようとします。 呼び出しが成功すると、呼び出し元のスレッドはクリティカルセクションの所有権を取得します。
 
 ```cpp
 SyncLock TryLock();
@@ -159,13 +159,13 @@ static SyncLock TryLock(
 
 ### <a name="parameters"></a>パラメーター
 
-*cs*<br/>
-ユーザー指定のクリティカル セクション オブジェクト。
+*同時*<br/>
+ユーザーが指定したクリティカルセクションオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-クリティカル セクションが正常に入力された場合、または現在のスレッドが既にクリティカル セクションを所有している場合は、0 以外の値。 別のスレッドが既にクリティカル セクションを所有している場合は 0。
+クリティカルセクションが正常に入力された場合、または現在のスレッドがクリティカルセクションを既に所有している場合は、0以外の値。 別のスレッドがクリティカルセクションを既に所有している場合は0。
 
 ### <a name="remarks"></a>解説
 
-最初`TryLock`の関数は、現在のクリティカル セクション オブジェクトに影響します。 2`TryLock`番目の関数は、ユーザー指定のクリティカル セクションに影響します。
+最初の `TryLock` 関数は、現在のクリティカルセクションオブジェクトに影響します。 2番目の関数は、 `TryLock` ユーザーが指定したクリティカルセクションに影響します。

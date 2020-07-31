@@ -97,18 +97,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: 811b96cca1fbf661def181d16dcb6a02c6c398d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4907665c25f65affab0fc2c0bbd37f70d6a3c352
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208495"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211047"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
-このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー `multiset` を使用して、要素のシーケンスを (ほぼ) バランスのとれたノードのツリーとして管理します。各ノードには1つの要素が格納されます。
+このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーを使用し `multiset` て、要素のシーケンスを (ほぼ) 均衡のとれたノードのツリーとして管理します。各ノードには1つの要素が格納されます。
 
-以下の説明では、`GValue` は `GKey`と同じですが、後者が ref 型である場合を除き、*キー*と同じです。この場合、`Key^`します。
+以下の説明で `GValue` は、はと同じですが、 `GKey` 後者が参照型である場合を除いて、*キー*と同じです。この場合、は `Key^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -133,13 +133,13 @@ template<typename Key>
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/set >
+**ヘッダー:**\<cliext/set>
 
 **名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
-|型定義|説明|
+|型の定義|説明|
 |---------------------|-----------------|
 |[multiset::const_iterator (STL/CLR)](#const_iterator)|被制御シーケンスの定数反復子の型です。|
 |[multiset::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
@@ -184,12 +184,12 @@ template<typename Key>
 |演算子|説明|
 |--------------|-----------------|
 |[multiset::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator!= (multiset) (STL/CLR)](#op_neq)|`multiset` オブジェクトが別の `multiset` オブジェクトと等しくないかどうかを判断します。|
-|[operator< (multiset) (STL/CLR)](#op_lt)|`multiset` オブジェクトが、別の `multiset` オブジェクトより小さいかどうかを判断します。|
-|[operator<= (multiset) (STL/CLR)](#op_lteq)|`multiset` オブジェクトが、別の `multiset` オブジェクト以下かどうかを判断します。|
-|[operator== (multiset) (STL/CLR)](#op_eq)|`multiset` オブジェクトが別の `multiset` オブジェクトと等しいかどうかを判断します。|
-|[operator> (multiset) (STL/CLR)](#op_gt)|`multiset` オブジェクトが、別の `multiset` オブジェクトより大きいかどうかを判断します。|
-|[operator>= (multiset) (STL/CLR)](#op_gteq)|`multiset` オブジェクトが、別の `multiset` オブジェクト以上かどうかを判断します。|
+|[operator! = (マルチセット) (STL/CLR)](#op_neq)|オブジェクトが別のオブジェクトと等しくないかどうかを判断し `multiset` `multiset` ます。|
+|[operator< (マルチセット) (STL/CLR)](#op_lt)|`multiset`オブジェクトが別のオブジェクトより小さいかどうかを判断し `multiset` ます。|
+|[operator<= (マルチセット) (STL/CLR)](#op_lteq)|オブジェクトが別のオブジェクト以下かどうかを判断し `multiset` `multiset` ます。|
+|[operator = = (マルチセット) (STL/CLR)](#op_eq)|オブジェクトが別のオブジェクトと等しいかどうかを判断し `multiset` `multiset` ます。|
+|[operator> (multiset) (STL/CLR)](#op_gt)|`multiset`オブジェクトが他のオブジェクトより大きいかどうかを判断し `multiset` ます。|
+|[operator>= (マルチセット) (STL/CLR)](#op_gteq)|オブジェクトが別のオブジェクト以上かどうかを判断し `multiset` `multiset` ます。|
 
 ## <a name="interfaces"></a>インターフェイス
 
@@ -200,33 +200,33 @@ template<typename Key>
 |<xref:System.Collections.ICollection>|要素のグループを維持します。|
 |<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番に処理します。|
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
-|ITree キー、値 >\<|ジェネリックコンテナーを管理します。|
+|ITree\<Key, Value>|ジェネリックコンテナーを管理します。|
 
 ## <a name="remarks"></a>解説
 
 オブジェクトは、制御するシーケンスのストレージを個々のノードとして割り当て、解放します。 要素は、ノード間のリンクを変更することによって、ノード間のリンクを変更することによって順序を維持する、(ほぼ) 均衡ツリーに挿入されます。ノード間でのコンテンツのコピーは行われません。 つまり、要素を自由に挿入および削除できます。
 
-オブジェクトは、[マルチセット:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 マルチセットを作成するときに、格納されているデリゲートオブジェクトを指定できます。delegate オブジェクトを指定しない場合、既定では `operator<(key_type, key_type)`の比較が行われます。 この格納されているオブジェクトにアクセスするには、メンバー関数[マルチセット:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`を呼び出します。
+オブジェクトは、[マルチセット:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 マルチセットを作成するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(key_type, key_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[マルチセット:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)を呼び出し `()` ます。
 
-このようなデリゲートオブジェクトは、[マルチセット:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)型のキーに対して厳密弱順序を強制する必要があります。 つまり、`X` と `Y`の2つのキーについては、次のようになります。
+このようなデリゲートオブジェクトは、[マルチセット:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)型のキーに対して厳密弱順序を強制する必要があります。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
 
-`key_comp()(X, Y)` は、すべての呼び出しで同じブール値を返します。
+`key_comp()(X, Y)`すべての呼び出しで同じブール型の結果を返します。
 
-`key_comp()(X, Y)` が true の場合、`key_comp()(Y, X)` は false である必要があります。
+`key_comp()(X, Y)`が true の場合、は `key_comp()(Y, X)` false である必要があります。
 
-`key_comp()(X, Y)` が true の場合、`Y`前に `X` が順序付けられていると言います。
+`key_comp()(X, Y)`が true の場合、 `X` はの前に並べられてい `Y` ます。
 
-`!key_comp()(X, Y) && !key_comp()(Y, X)` が true の場合、`X` と `Y` は等価の順序付けと呼ばれます。
+`!key_comp()(X, Y) && !key_comp()(Y, X)`が true の場合、 `X` と `Y` は等価の順序付けと呼ばれます。
 
-被制御シーケンスの `Y` の前にある要素 `X` の場合、`key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラス[セット (STL/CLR)](../dotnet/set-stl-clr.md)とは異なり、テンプレートクラス `multiset` のオブジェクトでは、すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
+`X`被制御シーケンスの前にある要素の場合 `Y` 、 `key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラス[セット (STL/CLR)](../dotnet/set-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトでは、 `multiset` すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
 
 各要素は、"値" と "値" の両方として機能します。 シーケンスは、シーケンス内の要素数の対数に比例した数の操作で、任意の要素の検索、挿入、および削除を許可する方法で表現されます (対数時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-マルチセットは双方向反復子をサポートします。つまり、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインすることができます。 特殊なヘッドノードは、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`によって返される反復子に対応します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 マルチセット反復子をインクリメントしてヘッドノードに移動すると、`end()`と等しいかどうかが比較されます。 ただし、`end()`によって返される反復子を逆参照することはできません。
+マルチセットは双方向反復子をサポートします。つまり、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインすることができます。 特殊なヘッドノードは、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 マルチセット反復子をインクリメントしてヘッドノードに移動すると、と等しいかどうかが比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
 
 ランダムアクセス反復子を必要とする数値の位置を指定することで、マルチセット要素を直接参照することはできないことに注意してください。
 
-マルチセット反復子は、関連付けられたマルチセットノードへのハンドルを格納します。このノードは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 マルチセットの反復子は、関連付けられているマルチセットノードが一部のマルチセットに関連付けられている限り有効です。 さらに、有効な反復子は dereferencable です。これを使用すると、指定した要素の値にアクセスしたり変更したりすることができます。これは、`end()`と等しくない場合に限ります。
+マルチセット反復子は、関連付けられたマルチセットノードへのハンドルを格納します。このノードは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 マルチセットの反復子は、関連付けられているマルチセットノードが一部のマルチセットに関連付けられている限り有効です。 さらに、有効な反復子は dereferencable です。これを使用すると、に指定した要素の値にアクセスしたり、変更したりすることができ `end()` ます。
 
 要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
 
@@ -292,7 +292,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、[マルチセット](../dotnet/multiset-erase-stl-clr.md):: [begin](../dotnet/multiset-begin-stl-clr.md) (stl/clr)`(``(),` マルチセット:: [end](../dotnet/multiset-end-stl-clr.md) (stl/clr)`())`を効果的に呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+このメンバー関数は、マルチセット:: [erase (stl/clr](../dotnet/multiset-erase-stl-clr.md) ) マルチセット:: begin (stl/clr) マルチセット: `(` [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md) `(),` [: end (stl/clr)](../dotnet/multiset-end-stl-clr.md)を効果的に呼び出し `())` ます。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -350,7 +350,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数双方向反復子として使用できる、未指定の型 `T2` のオブジェクトを表します。
+この型は、 `T2` 被制御シーケンスの定数双方向反復子として使用できる、未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -437,7 +437,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
+この型は、 `T4` 被制御シーケンスの定数反転反復子として使用できる、未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -587,7 +587,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、[マルチセット:: size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`に相当します。 このメソッドは、マルチセットが空かどうかをテストするために使用します。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、[マルチセット:: size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)に相当 `() == 0` します。 このメソッドは、マルチセットが空かどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -693,7 +693,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、[マルチセット:: lower_bound (stl/clr)](../dotnet/multiset-lower-bound-stl-clr.md)`(key),`[マルチセット:: upper_bound (stl/clr)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))``cliext::pair<iterator, iterator>(` 反復子のペアを返します。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
+このメンバー関数は、反復子 `cliext::pair<iterator, iterator>(` [マルチセット:: lower_bound (stl/clr)](../dotnet/multiset-lower-bound-stl-clr.md)のペアを返します。 `(key),` [マルチセット:: upper_bound (stl/clr)](../dotnet/multiset-upper-bound-stl-clr.md) `(key))` 。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
 ### <a name="example"></a>例
 
@@ -764,9 +764,9 @@ size_type erase(key_type key)
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後の最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()` します。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数*は、* が指す被制御シーケンスの要素を削除し、そのような要素が存在しない場合は、削除された要素の後に残っている最初の要素、または[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)を指定する反復子を返し `()` ます。 このメソッドを使用して、1つの要素を削除します。
 
-2番目のメンバー関数は、被制御シーケンスの要素を [`first`、`last`) の範囲で削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は `end()` します。 これを使用して、0個以上の連続する要素を削除します。
+2番目のメンバー関数は、範囲 [,) 内の被制御シーケンスの要素を削除 `first` `last` し、削除された要素の後に残っている最初の要素を指定する反復子を返します。その `end()` ような要素が存在しない場合は、を返します。 これを使用して、0個以上の連続する要素を削除します。
 
 3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
 
@@ -837,7 +837,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>解説
 
-被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`を返します。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
+被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)が返さ `()` れます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
 ### <a name="example"></a>例
 
@@ -1064,7 +1064,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
+この型は、 `GValue` このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1128,7 +1128,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 挿入する範囲の末尾。
 
-*right*<br/>
+*そうです*<br/>
 挿入する列挙体。
 
 *val*<br/>
@@ -1145,7 +1145,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
 
-3番目のメンバー関数は、シーケンス [`first`、`last`) を挿入します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
+3番目のメンバー関数は、シーケンス [,) を挿入し `first` `last` ます。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
 
 4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
@@ -1231,7 +1231,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの双方向反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
+この型は、 `T1` 被制御シーケンスの双方向反復子として使用できる、未指定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1442,7 +1442,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の最初の要素 `X` を決定します。 そのような要素が存在しない場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)を返します。それ以外の場合は、を `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -1499,7 +1499,7 @@ static value_type make_value(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、キーが*キー*である `value_type` オブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
+このメンバー関数は、キー `value_type` が*key*であるオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
 ### <a name="example"></a>例
 
@@ -1560,7 +1560,7 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 被制御シーケンスの順序付け述語。
 
-*right*<br/>
+*そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
 ### <a name="remarks"></a>解説
@@ -1569,7 +1569,7 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `multiset();`
 
-既定の順序述語 `key_compare()`を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、空の初期被制御シーケンスを指定します。
+既定の順序述語を使用して、要素を含まない被制御シーケンスを初期化し `key_compare()` ます。 このメソッドを使用して、既定の順序述語を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
@@ -1581,25 +1581,25 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `multiset(multiset<Key>% right);`
 
-既定の順序述語を使用して、シーケンス [`right.begin()`、`right.end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、マルチセットオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+`right.begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 このメソッドを使用して、既定の順序述語を使用して、マルチセットオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `multiset(multiset<Key>^ right);`
 
-既定の順序述語を使用して、シーケンス [`right->begin()`、`right->end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、マルチセットオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+`right->begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 このメソッドを使用して、既定の順序述語を使用して、マルチセットオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `template<typename InIter> multiset(InIter first, InIter last);`
 
-既定の順序述語を使用して、シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにし、既定の順序述語を使用します。
+`first`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `last` ます。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにし、既定の順序述語を使用します。
 
 コンストラクター:
 
 `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`
 
-順序述語*pred*を使用して、被制御シーケンスを [`first`、`last`) のシーケンスで初期化します。 このメソッドを使用して、被制御シーケンスを、指定した順序述語を使用して別のシーケンスのコピーにします。
+順序述語 pred を使用して、被制御シーケンスをシーケンス [,) で初期化 `first` `last` します。 *pred* このメソッドを使用して、被制御シーケンスを、指定した順序述語を使用して別のシーケンスのコピーにします。
 
 コンストラクター:
 
@@ -1711,12 +1711,12 @@ multiset<Key>% operator=(multiset<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするコンテナー。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1908,7 +1908,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
+この型は、 `T3` 被制御シーケンスの反転反復子として使用できる指定されていない型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1950,7 +1950,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「[マルチセット:: empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`」を参照してください。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかについては、「[マルチセット:: empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -2052,12 +2052,12 @@ void swap(multiset<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コンテンツを交換するコンテナー。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、`this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
+このメンバー関数は、との間で被制御シーケンスを交換し **`this`** ます。 *right* この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2175,7 +2175,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の `X` 最後の要素を決定します。 そのような要素が存在しない場合、または被制御シーケンスの最後の要素が `X` の場合は、[マルチセット:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を超えて最初の要素を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、または `X` が被制御シーケンスの最後の要素である場合は、[マルチセット:: END (STL/CLR)](../dotnet/multiset-end-stl-clr.md)を返し `()` ます。それ以外の場合は、最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2316,7 +2316,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は `generic_value`の同意語です。
+この型は `generic_value` の同意語です。
 
 ### <a name="example"></a>例
 
@@ -2363,15 +2363,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2419,7 +2419,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a>operator&lt; (マルチセット) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a>演算子 &lt; (マルチセット) (STL/CLR)
 
 比較より小さいリスト。
 
@@ -2433,15 +2433,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->size() < right->size()` を返します。このメソッドを使用して、2つのマルチセットが要素別に比較されるときに、 *left*が*right*の前に並べられるかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つのマルチセットが要素で比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a>operator&lt;= (マルチセット) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a>operator &lt; = (マルチセット) (STL/CLR)
 
 以下を比較します。
 
@@ -2503,15 +2503,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのマルチセットが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのマルチセットが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2573,15 +2573,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a>operator&gt; (マルチセット) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a>演算子 &gt; (マルチセット) (STL/CLR)
 
 比較よりも大きいリストです。
 
@@ -2643,15 +2643,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されたときに、 *right*の後に*左*を並べるかどうかをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのマルチセットが要素ごとに比較されたときに、 *right*の後に*左*を並べるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a>operator&gt;= (マルチセット) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a>operator &gt; = (マルチセット) (STL/CLR)
 
 以上の比較を一覧表示します。
 
@@ -2713,15 +2713,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのマルチセットが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのマルチセットが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

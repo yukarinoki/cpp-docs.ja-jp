@@ -1,6 +1,7 @@
 ---
 title: _com_ptr_t 抽出
-ms.date: 11/04/2016
+description: _Com_ptr_t クラスの抽出演算子について説明します。
+ms.date: 07/07/2020
 f1_keywords:
 - _com_ptr_t::operatorInterface&
 - _com_ptr_t::operatorbool
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220575"
 ---
-# <a name="_com_ptr_t-extractors"></a>_com_ptr_t 抽出
+# <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`器
 
 **Microsoft 固有の仕様**
 
@@ -35,7 +36,7 @@ ms.locfileid: "80190028"
 
 ## <a name="syntax"></a>構文
 
-```
+```c++
 operator Interface*( ) const throw( );
 operator Interface&( ) const;
 Interface& operator*( ) const;
@@ -46,20 +47,21 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>解説
 
-- **Operator interface** <strong>\*</strong>は、カプセル化されたインターフェイスポインターを返します。 NULL の場合もあります。
+- **`operator Interface*`** カプセル化されたインターフェイスポインターを返します。 NULL の場合もあります。
 
-- **Operator インターフェイス &** カプセル化されたインターフェイスポインターへの参照を返し、ポインターが NULL の場合はエラーを発行します。
+- **`operator Interface&`** カプセル化されたインターフェイスポインターへの参照を返し、ポインターが NULL の場合はエラーを発行します。
 
-- **operator** <strong>\*</strong>演算子を使用すると、スマートポインターオブジェクトは、逆参照時に実際にカプセル化されたインターフェイスのように動作します。
+- **`operator*`** スマートポインターオブジェクトが、逆参照時に実際にカプセル化されたインターフェイスであるかのように動作することを許可します。
 
-- **演算子->** スマートポインターオブジェクトが、逆参照時に実際にカプセル化されたインターフェイスであるかのように動作することを許可します。
+- **`operator->`** スマートポインターオブジェクトが、逆参照時に実際にカプセル化されたインターフェイスであるかのように動作することを許可します。
 
-- **& 演算子**カプセル化されたインターフェイスポインターをすべて解放し、NULL で置き換えて、カプセル化されたポインターのアドレスを返します。 これにより、インターフェイスポインターを返す*out*パラメーターを持つ関数に、アドレスを使用してスマートポインターを渡すことができます。
+- **`operator&`** カプセル化されたインターフェイスポインターをすべて解放し、NULL で置き換えて、カプセル化されたポインターのアドレスを返します。 この演算子を使用すると、インターフェイスポインターを返す*out*パラメーターを持つ関数に、アドレスを指定してスマートポインターを渡すことができます。
 
-- **bool 演算子**スマートポインターオブジェクトを条件式で使用できるようにします。 この演算子は、ポインターが NULL でない場合に TRUE を返します。
+- **`operator bool`** スマートポインターオブジェクトを条件式で使用できるようにします。 **`true`** ポインターが NULL でない場合、この演算子はを返します。
 
-**Microsoft 固有の仕様はここまで**
+  > [!NOTE]
+  > **`operator bool`** はとして宣言されていないため **`explicit`** 、 `_com_ptr_t` はに暗黙的に変換可能で **`bool`** 、任意のスカラー型に変換できます。 これにより、コードに予期しない結果が生じる可能性があります。 この変換の意図しない使用を防ぐために、[コンパイラの警告 (レベル 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)を有効にします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

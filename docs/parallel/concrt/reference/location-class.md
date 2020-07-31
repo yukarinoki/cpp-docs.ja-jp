@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182695"
 ---
 # <a name="location-class"></a>location クラス
 
@@ -31,37 +31,37 @@ class location;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[location](#ctor)|オーバーロードされます。 `location` オブジェクトを構築します。|
 |[~ location デストラクター](#dtor)|`location` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[現在の](#current)|呼び出し元のスレッドが実行している最も具体的な場所を表す `location` オブジェクトを返します。|
-|[from_numa_node](#from_numa_node)|指定された NUMA ノードを表す `location` オブジェクトを返します。|
+|[現在の](#current)|`location`呼び出し元のスレッドが実行している最も具体的な場所を表すオブジェクトを返します。|
+|[from_numa_node](#from_numa_node)|`location`指定された NUMA ノードを表すオブジェクトを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator!=](#operator_neq)|2つの `location` オブジェクトが異なる場所を表しているかどうかを判断します。|
-|[operator=](#operator_eq)|別の `location` オブジェクトの内容をこのオブジェクトに割り当てます。|
-|[operator==](#operator_eq_eq)|2つの `location` オブジェクトが同じ場所を表しているかどうかを判断します。|
+|[operator! =](#operator_neq)|2つのオブジェクトが異なる場所を表しているかどうかを判断し `location` ます。|
+|[operator =](#operator_eq)|別のオブジェクトの内容 `location` をこのオブジェクトに割り当てます。|
+|[operator = =](#operator_eq_eq)|2つ `location` のオブジェクトが同じ場所を表しているかどうかを判断します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `location`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="dtor"></a>~ location
+## <a name="location"></a><a name="dtor"></a>~ location
 
 `location` オブジェクトを破棄します。
 
@@ -69,9 +69,9 @@ class location;
 ~location();
 ```
 
-## <a name="current"></a>現在の
+## <a name="current"></a><a name="current"></a>現在の
 
-呼び出し元のスレッドが実行している最も具体的な場所を表す `location` オブジェクトを返します。
+`location`呼び出し元のスレッドが実行している最も具体的な場所を表すオブジェクトを返します。
 
 ```cpp
 static location __cdecl current();
@@ -81,9 +81,9 @@ static location __cdecl current();
 
 呼び出し元のスレッドが実行している最も具体的な場所を表す場所。
 
-## <a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
 
-指定された NUMA ノードを表す `location` オブジェクトを返します。
+`location`指定された NUMA ノードを表すオブジェクトを返します。
 
 ```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
@@ -96,9 +96,9 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 
 ### <a name="return-value"></a>戻り値
 
-`_NumaNodeNumber` パラメーターによって指定された NUMA ノードを表す場所。
+パラメーターで指定された NUMA ノードを表す場所 `_NumaNodeNumber` 。
 
-## <a name="ctor"></a>設置
+## <a name="location"></a><a name="ctor"></a>設置
 
 `location` オブジェクトを構築します。
 
@@ -128,13 +128,13 @@ location(
 *_PBinding*<br/>
 Optionalポインターをバインドしています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 構築された既定の場所は、システム全体を表します。
 
-## <a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a>operator! =
 
-2つの `location` オブジェクトが異なる場所を表しているかどうかを判断します。
+2つのオブジェクトが異なる場所を表しているかどうかを判断し `location` ます。
 
 ```cpp
 bool operator!= (const location& _Rhs) const;
@@ -143,15 +143,15 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
-オペランド `location`。
+オペランド `location` 。
 
 ### <a name="return-value"></a>戻り値
 
-2つの場所が異なる場合は**true** 、それ以外の場合は**false** 。
+**`true`** 2つの場所が異なる場合は **`false`** 。それ以外の場合は。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
-別の `location` オブジェクトの内容をこのオブジェクトに割り当てます。
+別のオブジェクトの内容 `location` をこのオブジェクトに割り当てます。
 
 ```cpp
 location& operator= (const location& _Rhs);
@@ -164,9 +164,9 @@ location& operator= (const location& _Rhs);
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
-2つの `location` オブジェクトが同じ場所を表しているかどうかを判断します。
+2つ `location` のオブジェクトが同じ場所を表しているかどうかを判断します。
 
 ```cpp
 bool operator== (const location& _Rhs) const;
@@ -175,12 +175,12 @@ bool operator== (const location& _Rhs) const;
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
-オペランド `location`。
+オペランド `location` 。
 
 ### <a name="return-value"></a>戻り値
 
-2つの場所が同一の場合は**true** 、それ以外の場合は**false** 。
+**`true`** 2つの場所が同一である場合は **`false`** 。それ以外の場合は。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

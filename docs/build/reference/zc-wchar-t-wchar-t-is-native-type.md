@@ -12,46 +12,46 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 114ed4a279b66571c0dc81fc1139dcdc59c17eae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446162"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234316"
 ---
-# <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
+# <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
-`wchar_t` を、C++ 標準に従って組み込み型として解析します。
+**`wchar_t`** C++ 標準に従って、組み込み型として解析します。
 
 ## <a name="syntax"></a>構文
 
-> **/Zc:wchar_t**[**-**]
+> **/Zc: wchar_t**[ **-** ]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場合 **/Zc:wchar_t** 、`wchar_t`としてコンパイルされたコードで組み込みの整数型のキーワードは、C++します。 場合 **/Zc:wchar_t-** (マイナス記号) で指定された、またはコードで C としてコンパイルされた、`wchar_t`組み込み型ではありません。 代わりに、`wchar_t`として定義されている場合は、`typedef`の`unsigned short`標準ヘッダー stddef.h でします。 (Microsoft による実装を定義、stddef.h に含まれているもう 1 つのヘッダーとその他の標準ヘッダー。)
+**/Zc: wchar_t**が on の場合、 **`wchar_t`** は C++ としてコンパイルされたコード内の組み込みの整数型のキーワードです。 **/Zc: wchar_t-** (マイナス記号付き) が指定されている場合、または C としてコンパイルされたコードの場合、 **`wchar_t`** は組み込み型ではありません。 代わりに、 **`wchar_t`** は、 **`typedef`** 正規ヘッダー stddef.h ののとして定義されます **`unsigned short`** 。 (Microsoft の実装では、stddef.h およびその他の標準ヘッダーに含まれる別のヘッダーでそれを定義しています)。
 
-お勧めしません **/Zc:wchar_t-** ため、C++標準である必要があります`wchar_t`組み込み型を指定します。 `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 Visual Studio の以前のバージョンからアップグレードし、コンパイラ エラーが発生したかどうかは[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`エラーを修正するコードを変更することをお勧めします。設定ではなく **/Zc:wchar_t-** します。
+**/Zc: wchar_t を**お勧めしません。 C++ 標準では、が組み込み型である必要があるためです **`wchar_t`** 。 バージョンを使用する **`typedef`** と、移植性の問題が発生する可能性があります。 以前のバージョンの Visual Studio からアップグレードするときに、コードがをに暗黙的に変換しようとしているためにコンパイラエラー [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)が発生した場合は、 **`wchar_t`** **`unsigned short`** **/zc: wchar_t-** を設定するのではなく、コードを変更してエラーを修正することをお勧めします。
 
-**/Zc:wchar_t**オプションが既定では  C++ 、コンパイル、C のコンパイルでは無視されます。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/Zc:wchar_t**します。
+**/Zc: wchar_t**オプションは、C++ コンパイルでは既定でオンになっており、C コンパイルでは無視されます。 [/Permissive-](permissive-standards-conformance.md)オプションは、 **/zc: wchar_t**には影響しません。
 
-Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装されます。 Microsoft 固有のネイティブ型にマップされます`__wchar_t`します。 詳細については`wchar_t`を参照してください[データ型の範囲](../../cpp/data-type-ranges.md)と[基本的な型](../../cpp/fundamental-types-cpp.md)します。
+Microsoft **`wchar_t`** では、2バイトの符号なしの値としてを実装します。 これは、Microsoft 固有のネイティブ型にマップさ **`__wchar_t`** れます。 の詳細について **`wchar_t`** は、「[データ型の範囲](../../cpp/data-type-ranges.md)」と「[基本型](../../cpp/fundamental-types-cpp.md)」を参照してください。
 
-まだ使用する古いコードの相互運用する新しいコードを記述する場合、`typedef`版`wchar_t`、両方のオーバー ロードを行うことができます、`unsigned short`と`__wchar_t`のバリエーション`wchar_t`と、コードをリンクすることができるように、コードをコンパイル **/Zc:wchar_t**またはなしでコンパイルされたコード。 それ以外の場合でとなしのライブラリの 2 つの異なるビルドを提供する必要が **/Zc:wchar_t**を有効にします。 この場合も、以前のコードのビルドには、新しいコードをコンパイルするときに使用するコンパイラを使用することをお勧めします。 さまざまなコンパイラでコンパイルされたバイナリを混在させないでください。
+以前のバージョンのを使用している古いコードと相互運用する必要がある新しいコードを記述する場合は、 **`typedef`** **`wchar_t`** **`unsigned short`** **`__wchar_t`** **`wchar_t`** **/zc: wchar_t**でコンパイルしたコードまたはそれを使用せずにコンパイルされたコードとコードをリンクできるように、とのバリエーションの両方にオーバーロードを指定できます。 それ以外の場合は、ライブラリの2つの異なるビルドを提供する必要があります。1つはで、もう1つは **/zc: wchar_t**が有効になっていません。 この場合も、以前のコードのビルドには、新しいコードをコンパイルするときに使用するコンパイラを使用することをお勧めします。 さまざまなコンパイラでコンパイルされたバイナリを混在させないでください。
 
-ときに **/Zc:wchar_t**が指定されている **\_WCHAR\_T\_定義**と**\_ネイティブ\_WCHAR\_T\_定義**シンボルが定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
+**/Zc: wchar_t**が指定されている場合、 ** \_ wchar の \_ \_ 定義**されたシンボルと** \_ ネイティブ \_ wchar の \_ \_ 定義**済みのシンボルが定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
 
-に、コードがコンパイラ COM グローバル関数を使用する場合 **/Zc:wchar_t**は既定では、お勧め comsupp.lib への明示的な参照を変更するようになりました (のいずれかから、[コメント プラグマ](../../preprocessor/comment-c-cpp.md)か、または、コマンド ライン) comsuppw.lib または comsuppwd.lib のいずれかにします。 (指定してコンパイルする必要がある場合 **/Zc:wchar_t-** comsupp.lib を使用します)。comdef.h のヘッダー ファイルを含めると、適切なライブラリが自動的に指定されます。 コンパイラ COM サポートについては、次を参照してください。[コンパイラ COM サポート](../../cpp/compiler-com-support.md)します。
+**/Zc: wchar_t**が既定でオンになっているため、コードでコンパイラ COM グローバル関数を使用する場合は、明示的な参照を (comment プラグマまたはコマンドラインで) 明示的に参照することをお勧めします ([コメントプラグマ](../../preprocessor/comment-c-cpp.md)またはコマンドラインから)。 ( **/Zc: wchar_t**を使用してコンパイルする必要がある場合は、comsupp .lib を使用します)。Comdef .h ヘッダーファイルをインクルードする場合は、適切なライブラリが指定されています。 コンパイラの COM サポートの詳細については、「[コンパイラの Com サポート](../../cpp/compiler-com-support.md)」を参照してください。
 
-`wchar_t` C コードをコンパイルするときに、組み込み型がサポートされていません。 Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
+**`wchar_t`** 組み込み型は、C コードをコンパイルするときにはサポートされません。 Visual C++ の準拠に関する問題の詳細については、「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **言語**ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **言語**] ページを選択します。
 
-1. 変更、 **wchar_t をビルトイン型として扱う**プロパティ。
+1. "**組み込み型として wchar_t を扱う**" プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

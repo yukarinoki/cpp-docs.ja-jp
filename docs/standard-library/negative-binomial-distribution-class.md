@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212203"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution クラス
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Int タイプ*\
-整数の結果の型は、既定**では int**になります。可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*IntType*\
+結果の型が整数である場合、は既定でに **`int`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、負の二項分布の離散確率関数に従って分布する、ユーザー指定の整数型の値を生成する分布、または指定がない場合は**int**型を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、 **`int`** 負の二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-プロパティ メンバ`k()`と`p()`、現在格納されている分布パラメータ値*k*と*p*をそれぞれ返します。
+プロパティメンバー `k()` とは `p()` それぞれ、現在格納されている分布パラメーターの値*k*と*p*を返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -93,9 +93,9 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-負の二項分布離散確率関数の詳細については、Wolfram MathWorld の記事[「負二項分布](https://go.microsoft.com/fwlink/p/?linkid=400516)」を参照してください。
+負の二項分布の離散確率関数の詳細については、「Wolfram MathWorld」の「[負の二項分布](https://go.microsoft.com/fwlink/p/?linkid=400516)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -217,11 +217,11 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
 
 分布を作成します。
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*K*\
+*kb*\
 `k` 分布パラメーター。
 
-*P*\
+*irtran-p*\
 `p` 分布パラメーター。
 
-*Parm*\
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>解説
@@ -249,20 +249,20 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::pラム_タイプ
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
 
 分布のパラメーターを格納します。
 
-構造体param_type { typedef negative_binomial_distribution`<`> distribution_typeresult_typeresult_type; param_type (result_type k = 1、 倍精度 p = 0.5); result_type k() const; double p() const;
+struct param_type {typedef negative_binomial_distribution `<` result_type> distribution_type; param_type (result_type k = 1、double p = 0.5); result_type k () const; double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>パラメーター
 
-*K*\
+*kb*\
 `k` 分布パラメーター。
 
-*P*\
+*irtran-p*\
 `p` 分布パラメーター。
 
 *そうです*\
@@ -276,4 +276,4 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

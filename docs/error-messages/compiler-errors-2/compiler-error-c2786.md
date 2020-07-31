@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 60e921c17cd2b3f9462df77094162bb3f1eff379
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206680"
 ---
 # <a name="compiler-error-c2786"></a>コンパイラエラー C2786
 
 ' type ': __uuidof の無効なオペランドです
 
-[__Uuidof](../../cpp/uuidof-operator.md)演算子は、GUID が割り当てられたユーザー定義型、またはそのようなユーザー定義型のオブジェクトを受け取ります。  次の原因が考えられます。
+[__Uuidof](../../cpp/uuidof-operator.md)演算子は、GUID が割り当てられたユーザー定義型、またはそのようなユーザー定義型のオブジェクトを受け取ります。  考えられる原因:
 
 1. 引数がユーザー定義型ではありません。
 
-1. `__uuidof` が引数から GUID を抽出できません。
+1. **`__uuidof`** 引数から GUID を抽出できません。
 
 次の例では、C2786 が生成されます。
 

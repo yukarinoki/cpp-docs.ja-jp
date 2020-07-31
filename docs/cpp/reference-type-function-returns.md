@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188299"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233627"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 
@@ -73,7 +73,7 @@ cout << "x = " << ThePoint.x() << "\n"
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 x = 7
@@ -86,7 +86,7 @@ main 関数のスコープに ThePoint オブジェクトが残っており、�
 
 参照型の宣言には、次のような場合を除き、初期化子を含める必要があります。
 
-- 明示的な**extern**宣言
+- 明示的な **`extern`** 宣言
 
 - クラス メンバーの宣言
 
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-コンパイラは、`warning C4172: returning address of local variable or temporary`の場合に警告を発行します。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。
+この場合、コンパイラは警告を発行し `warning C4172: returning address of local variable or temporary` ます。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [参照](../cpp/references-cpp.md)

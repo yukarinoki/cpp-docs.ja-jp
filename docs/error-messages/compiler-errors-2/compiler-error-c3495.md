@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a67d4d859e3a9dd2241f14a476492df0fd3e6b8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223422"
 ---
 # <a name="compiler-error-c3495"></a>コンパイラ エラー C3495
 
 'var': ラムダ キャプチャには自動ストレージ存続期間が指定されている必要があります
 
-`static` または `extern`とマークされている変数など、自動ストレージ存続期間がない変数をキャプチャすることはできません。
+またはとマークされている変数など、自動ストレージ存続期間がない変数をキャプチャすることはできません **`static`** **`extern`** 。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- `static` または `extern` 変数をラムダ式のキャプチャ リストに渡さないでください。
+- **`static`** または変数を、 **`extern`** ラムダ式のキャプチャリストに渡さないでください。
 
 ## <a name="example"></a>例
 
-次の例では、 `static` 変数 `n` がラムダ式のキャプチャ リストにあるため、C3495 が生成されます。
+次の例では、 **`static`** `n` ラムダ式のキャプチャリストに変数があるため、C3495 が生成されます。
 
 ```cpp
 // C3495.cpp
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

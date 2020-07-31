@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: aaa60e26d0a9bf99076f29124097b0629ce6f5d0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: dfeedad18b3ebcefedff446699f074c86037a4a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222876"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor クラス
 
@@ -31,35 +31,35 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[カーソルを待つ](#cwaitcursor)|オブジェクトを`CWaitCursor`構築し、待機カーソルを表示します。|
+|[CWaitCursor::CWaitCursor](#cwaitcursor)|オブジェクトを構築 `CWaitCursor` し、待機カーソルを表示します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[カーソルを置く::復元](#restore)|変更後に待機カーソルを復元します。|
+|[CWaitCursor:: Restore](#restore)|変更された待機カーソルを復元します。|
 
 ## <a name="remarks"></a>解説
 
-`CWaitCursor`は基本クラスを持っていません。
+`CWaitCursor`に基底クラスがありません。
 
-Windows プログラミングの良い方法では、時間の経過に応じて操作を実行する場合は、待機カーソルを表示する必要があります。
+優れた Windows プログラミング手法を使用するには、時間がかかる操作を実行するたびに待機カーソルを表示する必要があります。
 
-待機カーソルを表示するには、長い操作`CWaitCursor`を実行するコードの前に変数を定義するだけです。 オブジェクトのコンストラクターによって、待機カーソルが自動的に表示されます。
+待機カーソルを表示するには、時間の `CWaitCursor` かかる操作を実行するコードの前に変数を定義するだけです。 オブジェクトのコンストラクターによって自動的に待機カーソルが表示されます。
 
-オブジェクトがスコープ外に出ると (`CWaitCursor`オブジェクトが宣言されているブロックの最後)、そのデストラクターはカーソルを前のカーソルに設定します。 つまり、オブジェクトは必要なクリーンアップを自動的に実行します。
-
-> [!NOTE]
-> コンストラクタとデストラクタの動作により、`CWaitCursor`オブジェクトは常にローカル変数として宣言され、グローバル変数として宣言されることも **、new**.
-
-メッセージ ボックスやダイアログ ボックスの表示など、カーソルが変更される可能性のある操作を実行する場合は[、Restore](#restore)メンバー関数を呼び出して待機カーソルを復元します。 待機カーソルが現在表示`Restore`されている場合でも、呼び出しは大丈夫です。
-
-待機カーソルを表示するもう 1 つの方法は[、CCmdTarget:::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor) [、CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)、およびおそらく[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)の組み合わせを使用することです。 ただし、`CWaitCursor`時間のかかる操作を完了したときにカーソルを前のカーソルに設定する必要がないため、使いやすくなります。
+オブジェクトがスコープ外に出ると ( `CWaitCursor` オブジェクトが宣言されているブロックの末尾)、そのデストラクターはカーソルを前のカーソルに設定します。 つまり、オブジェクトは、必要なクリーンアップを自動的に実行します。
 
 > [!NOTE]
-> MFC は[、CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)仮想関数を使用してカーソルを設定および復元します。 この関数をオーバーライドして、カスタム動作を提供できます。
+> コンストラクターとデストラクターがどのように動作するかによっ `CWaitCursor` て、オブジェクトは常にローカル変数として宣言されます。グローバル変数として宣言されることも、で割り当てられることもありません **`new`** 。
+
+メッセージボックスやダイアログボックスの表示など、カーソルが変更される可能性のある操作を実行する場合は、 [restore](#restore)メンバー関数を呼び出して待機カーソルを復元します。 `Restore`待機カーソルが現在表示されている場合でも、を呼び出すことはできます。
+
+待機カーソルを表示するもう1つの方法は、 [ccmdtarget:: BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)、 [Ccmdtarget:: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)、および[RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)の組み合わせを使用することです。 ただし、 `CWaitCursor` 長い操作が終了したときにカーソルを前のカーソルに設定する必要がないため、を使用する方が簡単です。
+
+> [!NOTE]
+> MFC では、 [CWinApp::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)仮想関数を使用してカーソルを設定し、復元します。 この関数をオーバーライドして、カスタム動作を提供できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -73,9 +73,9 @@ Windows プログラミングの良い方法では、時間の経過に応じて
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>カーソルを待つ
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor
 
-待機カーソルを表示するには、長い操作`CWaitCursor`を実行するコードの前にオブジェクトを宣言するだけです。
+待機カーソルを表示するには、時間の `CWaitCursor` かかる操作を実行するコードの前にオブジェクトを宣言するだけです。
 
 ```
 CWaitCursor();
@@ -83,22 +83,22 @@ CWaitCursor();
 
 ### <a name="remarks"></a>解説
 
-コンストラクターによって、待機カーソルが自動的に表示されます。
+コンストラクターによって自動的に待機カーソルが表示されます。
 
-オブジェクトがスコープ外に出ると (`CWaitCursor`オブジェクトが宣言されているブロックの最後)、そのデストラクターはカーソルを前のカーソルに設定します。 つまり、オブジェクトは必要なクリーンアップを自動的に実行します。
+オブジェクトがスコープ外に出ると ( `CWaitCursor` オブジェクトが宣言されているブロックの末尾)、そのデストラクターはカーソルを前のカーソルに設定します。 つまり、オブジェクトは、必要なクリーンアップを自動的に実行します。
 
-関数の一部でのみ待機カーソルをアクティブにするために、ブロックの最後 (関数の末尾の前にある場合があります) でデストラクターが呼び出されるという事実を利用できます。 この手法は、次の 2 番目の例に示します。
+ブロックの最後 (関数の末尾の前) でデストラクターが呼び出され、待機カーソルが関数の一部でアクティブになるという事実を利用できます。このような場合は、 この手法については、次の2番目の例を参照してください。
 
 > [!NOTE]
-> コンストラクタとデストラクタの動作により、`CWaitCursor`オブジェクトは常にローカル変数として宣言され、グローバル変数として宣言されることも **、new**.
+> コンストラクターとデストラクターがどのように動作するかによっ `CWaitCursor` て、オブジェクトは常にローカル変数として宣言されます。グローバル変数として宣言されることも、で割り当てられることもありません **`new`** 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-## <a name="cwaitcursorrestore"></a><a name="restore"></a>カーソルを置く::復元
+## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor:: Restore
 
-待機カーソルを復元するには、メッセージ ボックスやダイアログ ボックスの表示など、操作の実行後にこの関数を呼び出します。
+待機カーソルを復元するには、メッセージボックスやダイアログボックスの表示などの操作を実行した後に、この関数を呼び出します。これにより、待機カーソルが別のカーソルに変わる可能性があります。
 
 ```cpp
 void Restore();
@@ -106,9 +106,9 @@ void Restore();
 
 ### <a name="remarks"></a>解説
 
-待機カーソルが現在表示`Restore`されている場合でも呼び出しは OK です。
+`Restore`待機カーソルが現在表示されている場合でも、を呼び出すことはできます。
 
-`CWaitCursor`オブジェクトが宣言されている関数以外の関数で待機カーソルを復元する必要がある場合は[、CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)を呼び出すことができます。
+オブジェクトが宣言されている関数以外の関数で待機カーソルを復元する必要がある場合は `CWaitCursor` 、 [CCmdTarget:: RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)を呼び出すことができます。
 
 ### <a name="example"></a>例
 
@@ -116,9 +116,9 @@ void Restore();
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[を開始します。](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
-[をクリックします。](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
-[をクリックします。](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
-[クウィナップ::Dウェイトカーソル](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[方法: Microsoft Foundation クラス アプリケーションでマウス カーソルを変更する](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CCmdTarget:: BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
+[CCmdTarget:: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
+[CCmdTarget:: RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
+[CWinApp::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
+[操作方法: Microsoft Foundation Class アプリケーションでマウスカーソルを変更する](https://go.microsoft.com/fwlink/p/?linkid=128044)

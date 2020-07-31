@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205310"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207954"
 ---
 # <a name="compiler-error-c2441"></a>コンパイラ エラー C2441
 
@@ -21,9 +21,9 @@ ms.locfileid: "80205310"
 
 **/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-既定では、変数は、 **/clr: pure**の下のアプリケーションドメインごとに設定されます。 **/Clr: pure**の下で `__declspec(process)` とマークされた変数は、あるアプリケーションドメインで変更され、別のアプリケーションドメインで読み取られた場合、エラーが発生しやすくなります。
+既定では、変数は、 **/clr: pure**の下のアプリケーションドメインごとに設定されます。 `__declspec(process)` **/Clr: pure**の下でマークされた変数は、あるアプリケーションドメインで変更され、別のアプリケーションドメインで読み取られた場合、エラーが発生しやすくなります。
 
-したがって、コンパイラは、プロセスごとの変数を **/clr: pure**の下で `const` し、すべてのアプリケーションドメインで読み取り専用にします。
+したがって、コンパイラは、プロセスごとの変数を **`const`** **/clr: pure**の下に強制的に適用し、すべてのアプリケーションドメインで読み取り専用にします。
 
 詳細については、「 [process](../../cpp/process.md) and [/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; 演算子'
+title: '&lt;string_view &gt; 演算子'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076402"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222238"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 演算子
+# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 演算子
 
-これらの演算子を使用すると、暗黙的な変換が提供される2つの string_view オブジェクト、string_view とその他の文字列オブジェクト ( [std:: string](basic-string-class.md)、 **char\*** など) を比較できます。
+これらの演算子を使用すると、暗黙的な変換が提供される2つの string_view オブジェクト、string_view とその他の文字列オブジェクト ( [std:: string](basic-string-class.md)、 **char \* **など) を比較できます。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[オペレーター "" sv](#op_sv)|
+|[operator = =](#op_eq_eq)|[オペレーター "" sv](#op_sv)|
 
 ## <a name="operator"></a><a name="op_neq"></a>operator! =
 
@@ -57,15 +57,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側のオブジェクトが右側のオブジェクトと等しく辞書式ない場合は**true**を返します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクトと等しくない場合は、辞書式になります。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -75,7 +75,7 @@ bool operator!=(
 
 ## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
-演算子の左辺のオブジェクトが右辺のオブジェクトと等しいかどうかを調べます。
+演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
 
 ```cpp
 template <class CharType, class Traits>
@@ -96,15 +96,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側のオブジェクトが右側のオブジェクトと辞書式等しい場合は**true**を返します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクトと等しい場合は、辞書式を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -112,7 +112,7 @@ bool operator==(
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 同じ数の要素を持ち、要素がすべて等しい場合、2つのオブジェクトは等しくなります。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかをテストし sidestring_view
 
@@ -135,15 +135,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は**true**を返します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は、それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以下かどうかを調べます。
 
@@ -196,21 +196,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側のオブジェクトが右側のオブジェクト以下である場合は**true**を辞書式します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクト以下である場合は、辞書式を返します。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-「 [Operator&lt;](#op_lt)」を参照してください。
+「[演算子 &lt; ](#op_lt)」を参照してください。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>演算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
 
 String_view を出力ストリームに書き込みます。
 
@@ -225,7 +225,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 *Ostr*\
 書き込み先の出力ストリーム。
 
-*Str*\
+*引数*\
 出力ストリームに入力する string_view。
 
 ### <a name="return-value"></a>戻り値
@@ -236,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
 
-## <a name="operatorgt"></a><a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより大きいかどうかを調べます。
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左辺のオブジェクトが右辺の string_view オブジェクトよりも大きい場合は**true**を返します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側の string_view オブジェクトよりも大きい場合はです。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-「 [Operator&lt;](#op_lt)」を参照してください。
+「[演算子 &lt; ](#op_lt)」を参照してください。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以上であるかどうかを調べます。
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*左側*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*右*\
-比較する `basic_string_view` 変換可能な文字列型または型のオブジェクト。
+*そうです*\
+変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
 
-演算子の左側のオブジェクトが右側のオブジェクト以上で辞書式場合は**true**を指定します。それ以外の場合は**false**。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクト以上である場合は、辞書式の場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-「 [Operator&lt;](#op_lt)」を参照してください。
+「[演算子 &lt; ](#op_lt)」を参照してください。
 
 ## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>演算子 "" sv (string_view リテラル)
 
-文字列リテラルから string_view を構築します。 名前空間 `std::literals::string_view_literals`が必要です。
+文字列リテラルから string_view を構築します。 名前空間が必要 `std::literals::string_view_literals` です。
 
 ### <a name="example"></a>例
 
@@ -327,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<string_view >](../standard-library/string-view.md)
+[\<string_view>](../standard-library/string-view.md)

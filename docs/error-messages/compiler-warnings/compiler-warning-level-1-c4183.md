@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-ms.openlocfilehash: 4c2c7ce23cfaea5ebf31e78d84b7ff7fbdbf4c85
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cff62c18442cd6d55a9444bb86944b691145b9fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231924"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>コンパイラの警告 (レベル 1) C4183
 
 ' identifier ': 戻り値の型がありません。' int ' を返すメンバー関数であると想定されます
 
-クラスまたは構造体のメンバー関数のインライン定義に戻り値の型がありません。 このメンバー関数は、`int`の既定の戻り値の型を持つと見なされます。
+クラスまたは構造体のメンバー関数のインライン定義に戻り値の型がありません。 このメンバー関数は、の既定の戻り値の型を持つと見なされ **`int`** ます。
 
 次の例では、C4183 が生成されます。
 

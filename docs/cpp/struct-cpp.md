@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330584"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231118"
 ---
 # <a name="struct-c"></a>struct (C++ )
 
-**struct**キーワードは構造体型や構造体型の変数を定義します。
+キーワードは、構造体 **`struct`** 型または構造体型の変数を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,44 +29,44 @@ ms.locfileid: "62330584"
 
 #### <a name="parameters"></a>パラメーター
 
-*template-spec*<br/>
-テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレートの仕様](templates-cpp.md)します。
+*テンプレート-仕様*<br/>
+テンプレートの指定 (省略可能)。 詳細については、「[テンプレートの仕様](templates-cpp.md)」を参照してください。
 
 *struct*<br/>
-**struct**キーワード。
+**`struct`** キーワード。
 
-*ms-decl-spec*<br/>
-ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。
+*ms の宣言*<br/>
+ストレージ クラスの指定 (省略可能)。 詳細については、 [__declspec](../cpp/declspec.md)キーワードを参照してください。
 
-*タグ*<br/>
-構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。
+*番号*<br/>
+構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、「[匿名クラス型](../cpp/anonymous-class-types.md)」を参照してください。
 
 *base-list*<br/>
-この構造体がメンバーを継承するクラスまたは構造体のオプション リスト 詳細は [基本クラス](../cpp/base-classes.md)を参照してください。 アクセス指定子 ([public](../cpp/public-cpp.md)、[private](../cpp/private-cpp.md)、[protected](../cpp/protected-cpp.md))および [virtual](../cpp/virtual-cpp.md)キーワードが、各基本クラス名または構造体名の前に付きます。 詳細については、[メンバー アクセス コントロール](member-access-control-cpp.md)のメンバー アクセス テーブルを参照してください。
+この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 詳細については、「[基底クラス](../cpp/base-classes.md)」を参照してください。 各基底クラスまたは構造体の名前の前には、アクセス指定子 ([public](../cpp/public-cpp.md)、 [private](../cpp/private-cpp.md)、 [protected](../cpp/protected-cpp.md)) と[virtual](../cpp/virtual-cpp.md)キーワードを付けることができます。 詳細については、「[クラスメンバーへのアクセスの制御](member-access-control-cpp.md)」のメンバーアクセステーブルを参照してください。
 
-*member-list*<br/>
-構造体のメンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。 ここで唯一の違いは**struct**の代わりに使用が**class**します。
+*メンバーリスト*<br/>
+構造体のメンバーのリスト。 詳細については、[クラスメンバーの概要](../cpp/class-member-overview.md)に関するトピックを参照してください。 ここでの唯一の違いは、 **`struct`** の代わりにを使用することです **`class`** 。
 
 *declarators*<br/>
-構造体の名前を指定する宣言リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 構造体のすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**public**します。 データ メンバーがあるために、初期化子リストは構造体で一般的な**public**既定。  参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。
+構造体の名前を指定する宣言子リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 構造体のすべてのデータメンバーがである場合は、宣言子に初期化子リストを含めることができ **`public`** ます。 初期化子リストは、データメンバーが既定であるため、構造で共通 **`public`** です。  詳細については、「[宣言子の概要](../cpp/overview-of-declarators.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 構造体型はユーザー定義の複合データ型です。 この型は異なる型のフィールドやメンバーで構成されます。
 
-C++ では、構造体はクラスと同じメンバーが実行される点を除いて**public**既定。
+C++ では、構造体はクラスと同じですが、そのメンバーが既定でである点が異なり **`public`** ます。
 
-マネージ クラスと c++ 構造体について/cli CLI を参照してください[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)します。
+C++/CLI のマネージクラスと構造体の詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="using-a-structure"></a>構造体の使用
 
-C では、明示的に使用する必要あります、**struct**キーワードを構造体を宣言します。 C++ では使用する必要はありません、**struct**キーワード、型が定義した後にします。
+C では、 **`struct`** 構造体を宣言するためにキーワードを明示的に使用する必要があります。 C++ では、 **`struct`** 型が定義された後にキーワードを使用する必要はありません。
 
 右中かっことセミコロンの間に 1 つ以上のコンマ区切りの変数名を挿入することで構造体型を定義している場合は、変数を宣言してもかまいません。
 
 構造体の変数は初期化できます。 各変数の初期化は中かっこで囲む必要があります。
 
-関連情報については、[class](../cpp/class-cpp.md)、[Unions](../cpp/unions.md)、および [列挙型](../cpp/enumerations-cpp.md)を参照してください。
+関連情報については、「[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[列挙型](../cpp/enumerations-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 

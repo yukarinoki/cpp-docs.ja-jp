@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222993"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb クラス
 
@@ -53,7 +53,7 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>メンバー
 
-`CMapWordToOb` のメンバー関数は、 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CString` または**char**への**const**ポインターが表示されている場合は、代わりに WORD を使用します。
+のメンバー関数 `CMapWordToOb` は、 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 `CString` **`const`** 関数パラメーターまたは戻り値として、またはへのポインターが表示されている場合は **`char`** 、WORD を置き換えます。
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
 |[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
 |[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -87,19 +87,19 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。 `SetAt`の場合は演算子を代入します。|
+|[CMapWordToOb:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。に対する演算子の代入 `SetAt` 。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`CMapWordToOb` には、要素のシリアル化とダンプをサポートするための IMPLEMENT_SERIAL マクロが組み込まれています。 各要素は、マップがアーカイブに格納されている場合は、オーバーロードされた挿入 ( **<<** ) 演算子または `Serialize` メンバー関数と共にシリアル化されます。
+`CMapWordToOb`には、要素のシリアル化とダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 各要素は、マップがアーカイブに格納されている場合は、オーバーロードされた挿入 ( **<<** ) 演算子またはメンバー関数と共にシリアル化され `Serialize` ます。
 
-個々のワード `CObject` 要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+個々のワード要素のダンプが必要な場合は、 `CObject` ダンプコンテキストの深さを1以上に設定する必要があります。
 
-`CMapWordToOb` オブジェクトが削除されるか、またはその要素が削除されると、`CObject` ポインターが削除されます。 `CObject` ポインターによって参照されているオブジェクトは破棄されません。
+`CMapWordToOb`オブジェクトが削除されるか、またはその要素が削除されると、 `CObject` ポインターは削除されます。 ポインターによって参照 `CObject` されているオブジェクトは破棄されません。
 
-`CMapWordToOb`の詳細については、「[コレクション](../../mfc/collections.md)」を参照してください。
+の詳細については `CMapWordToOb` 、「[コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,11 +107,11 @@ class CMapWordToOb : public CObject
 
 `CMapWordToOb`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

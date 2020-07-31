@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7241d903e44329eb8fd50155059355a470fb7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226621"
 ---
 # <a name="ccomenum-class"></a>CComEnum クラス
 
@@ -46,17 +46,17 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 *ThreadModel*<br/>
 クラスのスレッドモデル。 このパラメーターの既定値は、プロジェクトで使用されるグローバルオブジェクトスレッドモデルです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComEnum`配列に基づいて COM 列挙子オブジェクトを定義します。 このクラスは、 C++標準ライブラリコンテナーに基づいて列挙子を実装する[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)に似ています。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
+`CComEnum`配列に基づいて COM 列挙子オブジェクトを定義します。 このクラスは、C++ 標準ライブラリコンテナーに基づく列挙子を実装する[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)に似ています。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
 ## <a name="to-use-this-class"></a>このクラスを使用するには:
 
-- このクラスの特殊化を**typedef**します。
+- **`typedef`** このクラスの特殊化。
 
-- の`CComObject`特殊化では、テンプレート引数として**typedef**を使用します。
+- を特殊化した **`typedef`** テンプレート引数としてを使用し `CComObject` ます。
 
-- `CComObject`特殊化のインスタンスを作成します。
+- 特殊化のインスタンスを作成 `CComObject` します。
 
 - [CComEnumImpl:: Init](../../atl/reference/ccomenumimpl-class.md#init)を呼び出して、列挙子オブジェクトを初期化します。
 
@@ -84,11 +84,11 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-このテンプレート関数を使用すると、次`_NewEnum`に示すように、コレクションインターフェイスのプロパティを実装できます。
+このテンプレート関数を使用する `_NewEnum` と、次に示すように、コレクションインターフェイスのプロパティを実装できます。
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-このコードは、 `IEnumVariant`インターフェイスを`CComEnum`使用してバリアントのベクターを公開するの**typedef**を作成します。 クラス`CVariantArrayCollection`は、この`CreateEnumerator`型の列挙子オブジェクトを操作し、必要な引数を渡すことを専門としています。
+このコードは、 **`typedef`** `CComEnum` インターフェイスを使用してバリアントのベクターを公開するのを作成し `IEnumVariant` ます。 クラスは、 `CVariantArrayCollection` `CreateEnumerator` この型の列挙子オブジェクトを操作し、必要な引数を渡すことを専門としています。
 
 ## <a name="see-also"></a>関連項目
 

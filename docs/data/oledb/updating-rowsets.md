@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212944"
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 
@@ -31,7 +31,7 @@ ms.locfileid: "65525300"
 > [!NOTE]
 > ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
-**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを作成する場合、 **[変更]** 、 **[挿入]** 、 **[削除]** の 3 つのチェック ボックスのうちの 1 つ以上をオンにすれば、更新操作をサポートできます。 これらのオプションを選択すると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。
+**ATL OLE DB コンシューマーウィザード**を使用してコンシューマーを作成する場合、[**変更**]、[**挿入**]、および [**削除**] の3つのチェックボックスのうち1つ以上を選択すると、更新操作をサポートできます。 これらのオプションを選択すると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。
 
 - `DBPROPVAL_UP_CHANGE` では、行のデータ値を変更できます。
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (既定値) は、現在の行を次の行にインクリメントして、挿入された行を指すように指定します。
+- **`false`**(既定値) は、現在の行が次の行にインクリメントすることを指定します (この場合、挿入された行を指します)。
 
-- **true** は、現在の行をそのままの場所に残すように指定します。
+- **`true`** 現在の行をそのままにすることを指定します。
 
 次のコードは、`Products` テーブルの列にバインドされたデータ メンバーの値を設定してから、`Insert` を呼び出して、これらの値を持つ新しい行を行セットの 100 行目の後に挿入します。 定義されていないデータが新しい行に含まれないように、すべての列値を設定することをお勧めします。
 
@@ -208,6 +208,6 @@ product.Update();                 // Update row 101 now
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset クラス](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

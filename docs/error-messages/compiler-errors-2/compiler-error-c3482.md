@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0463f6de51e324bd02c8b766fd39909ee2803ecd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743134"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212580"
 ---
 # <a name="compiler-error-c3482"></a>コンパイラ エラー C3482
 
 'this' は非静的メンバー関数内でのラムダ キャプチャとしてのみ使用できます
 
-静的メソッドまたはグローバル関数で宣言されているラムダ式のキャプチャ リストに `this` を渡すことはできません。
+**`this`** 静的メソッドまたはグローバル関数で宣言されているラムダ式のキャプチャリストにを渡すことはできません。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
 - 外側の関数を静的でないメソッドに変換します。または、
 
-- ラムダ式のキャプチャ リストから `this` ポインターを削除します。
+- **`this`** ラムダ式のキャプチャリストからポインターを削除します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3482 が生成されます。
 
@@ -43,6 +43,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

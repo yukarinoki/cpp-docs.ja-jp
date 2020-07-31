@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940172"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189780"
 ---
 # <a name="is-isw-routines"></a>is、isw 系ルーチン
 
@@ -35,7 +35,7 @@ ms.locfileid: "70940172"
 |[isascii、__isascii、iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower、iswlower、_islower_l、_iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank、iswblank、_isblank_l、_iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint、iswprint、_isprint_l、_iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct、iswpunct、_ispunct_l、_iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym、iscsymf、__iscsym、\__iswcsym、\__iscsymf、\__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym、iscsymf、__iscsym、 \_ _iswcsym、 \_ _iscsymf、 \_ _iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype、iswctype、_isctype_l、_iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper、_isupper_l、iswupper、_iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit、iswdigit、_isdigit_l、_iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
@@ -43,14 +43,14 @@ ms.locfileid: "70940172"
 
 これらのルーチンは、文字が指定条件を満たしているかどうかをテストします。
 
-**is`EOF` ルーチンは、-1 (** ) から **UCHAR_MAX** (0xFF) までの任意の整数の引数に対して意味のある結果を生成します。 `int` 型の引数が必要です。
+**is`EOF` ルーチンは、-1 (**) から **UCHAR_MAX** (0xFF) までの任意の整数の引数に対して意味のある結果を生成します。 予期される引数の型は **`int`** です。
 
 > [!CAUTION]
-> **is** ルーチンで `char` 型の引数を渡すと、予測できない結果が発生する可能性があります。 0x7F よりも大きい値を持つ `char` 型の SBCS または MBCS の 1 バイト文字は負になります。 `char` が渡されると、コンパイラはその値を符号付き `int` または符号付き **long** に変換することがあります。 この値は、コンパイラによって符号拡張されることがあり、予想外の結果になることがあります。
+> **Is**ルーチンの場合、型の引数を渡すと、 **`char`** 予測できない結果が生じる可能性があります。 値が0x7F よりも大きい型の SBCS または MBCS の1バイト文字 **`char`** は負です。 が渡されると、 **`char`** コンパイラは値をまたはに変換する場合があり **`signed int`** **`signed long`** ます。 この値は、コンパイラによって符号拡張されることがあり、予想外の結果になることがあります。
 
-**isw** ルーチンは、-1 (**WEOF**) から 0xFFFF までの任意の整数値に対して意味のある結果を生成します。 **wint_t** データ型は、WCHAR.H で **unsigned short** として定義されており、任意のワイド文字またはワイド文字のファイル終端 (**WEOF**) 値を保持できます。
+**isw** ルーチンは、-1 (**WEOF**) から 0xFFFF までの任意の整数値に対して意味のある結果を生成します。 **Wint_t**のデータ型は、WCHAR で定義されています。H はとして、 **`unsigned short`** 任意のワイド文字またはワイド文字のファイル終端 (**WEOF**) 値を保持できます。
 
-出力値は、ロケールの `LC_CTYPE` カテゴリの設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
+出力値は、ロケールの `LC_CTYPE` カテゴリの設定で決まります。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
 "C" ロケールでは、**is** ルーチンのテスト条件は次のようになります。
 
@@ -129,19 +129,19 @@ ASCII 文字のワイド文字表現 (0x0000 - 0x007F)。
 
 |*desc* 引数の値|iswctype( *c, desc* ) と同等|
 |------------------------------|----------------------------------------|
-|**_ALPHA**|**iswalpha(** `c` **)**|
+|**_ALPHA**|**iswalpha (** `c` **)**|
 |**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_CONTROL**|**iswcntrl(** `c` **)**|
 |**_DIGIT**|**iswdigit(** `c` **)**|
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph (** `c` **)**|
 |**_LOWER**|**iswlower(** `c` **)**|
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
-|**_PUNCT**|**iswpunct(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint (** `c` **)**|
+|**_PUNCT**|**iswpunct (** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper(** `c` **)**|
-|**_HEX**|**iswxdigit(** `c` **)**|
+|**_HEX**|**iswxdigit (** `c` **)**|
 
 `iswdigit`<br/>
 10 進数字に対応するワイド文字。
@@ -205,7 +205,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 00            AS  C                              .
@@ -344,4 +344,4 @@ int main( void )
 [ロケール](../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[to 系関数](../c-runtime-library/to-functions.md)
+[関数に](../c-runtime-library/to-functions.md)

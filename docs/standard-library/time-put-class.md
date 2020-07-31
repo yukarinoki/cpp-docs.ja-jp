@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 10691de0a583dc7d5a66c319968d90978bf59480
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4f7b609493e16d3d1c0a9ab6274ed6f5bfd7b033
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367996"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212112"
 ---
 # <a name="time_put-class"></a>time_put クラス
 
-クラス テンプレートは、時刻値から型のシーケンスへの変換を制御するロケール ファセットとして機能するオブジェクトを表`CharType`します。
+クラステンプレートは、時刻値から型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表し `CharType` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype*\
+*CharType*\
 文字をエンコードするためにプログラム内で使用される型。
 
-*出力反復器*\
+*OutputIterator*\
 時刻の put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>解説
@@ -47,13 +47,13 @@ class time_put : public locale::facet;
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[time_put](#time_put)|`time_put` 型のオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表すために使用される型。|
 |[iter_type](#iter_type)|出力反復子を表す型。|
@@ -63,15 +63,15 @@ class time_put : public locale::facet;
 |メンバー関数|説明|
 |-|-|
 |[do_put](#do_put)|時刻と日付の情報を `CharType` のシーケンスとして出力する仮想関数。|
-|[置く](#put)|時刻と日付の情報を `CharType` のシーケンスとして出力します。|
+|[投入](#put)|時刻と日付の情報を `CharType` のシーケンスとして出力します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
-## <a name="time_putchar_type"></a><a name="char_type"></a>time_put::char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a>time_put:: char_type
 
 ロケールによって使用される文字を表すために使用される型。
 
@@ -83,7 +83,7 @@ typedef CharType char_type;
 
 この型は、テンプレート パラメーター `CharType` のシノニムです。
 
-## <a name="time_putdo_put"></a><a name="do_put"></a>time_put::do_put
+## <a name="time_putdo_put"></a><a name="do_put"></a>time_put::d o_put
 
 時刻と日付の情報を `CharType` のシーケンスとして出力する仮想関数。
 
@@ -119,15 +119,15 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>解説
 
-仮想プロテクト メンバー関数は、 型の`next`オブジェクト\*`_Pt`に格納されている時刻値から始`tm`まる順次要素を生成します。 関数は、生成された出力を超える、次に要素を挿入する場所を指定する反復子を返します。
+プロテクト仮想メンバー関数は、 `next` オブジェクトに格納されている時刻値から \* `_Pt` 型のシーケンシャルな要素を生成 `tm` します。 関数は、生成された出力を超える、次に要素を挿入する場所を指定する反復子を返します。
 
-出力は、配列に一連の`strftime`**char**要素を生成するために、 で使用されるのと同じ規則で生成され、最後の引数は *_Pt。* このような**char**要素は、単純な 1 対`CharType`1 のマッピングによって、型の等価な要素にマップされると想定されます。 *_Mod*がゼロの場合、有効な形式は "%F" で、F は *_Fmt*に置き換えられます。 それ以外の場合、有効な形式は "%MF" で、M は *_Mod*に置き換えられます。
+出力は、によって使用されるのと同じ規則によって生成され `strftime` ます。最後の引数は *_Pt*で、一連の **`char`** 要素を配列に生成します。 これらの各 **`char`** 要素は `CharType` 、単純な1対1のマッピングによって、型の同等の要素にマップされると見なされます。 *_Mod*が0の場合、有効な形式は "% F" です。 F は *_Fmt*に置き換えられます。 それ以外の場合、有効な形式は "% MF" です。ここで、M は *_Mod*に置き換えられます。
 
 ### <a name="example"></a>例
 
 [put](#put) の例 (`do_put` を呼び出す) を参照してください。
 
-## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put::iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put:: iter_type
 
 出力反復子を表す型。
 
@@ -139,7 +139,7 @@ typedef OutputIterator iter_type;
 
 この型は、テンプレート パラメーター `OutputIterator` のシノニムです。
 
-## <a name="time_putput"></a><a name="put"></a>time_put::pット
+## <a name="time_putput"></a><a name="put"></a>time_put::p ut
 
 時刻と日付の情報を `CharType` のシーケンスとして出力します。
 
@@ -168,7 +168,7 @@ iter_type put(iter_type next,
 未使用。
 
 *_Fill*\
-間隔に使用される`CharType`型の文字。
+`CharType`スペーシングに使用される型の文字。
 
 *_Pt*\
 出力される時刻と日付の情報。
@@ -191,7 +191,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は`next`[、do_put](#do_put)、 `_Fill` `_Pt`、 `_Fmt` `_Mod`、 `_Iosbase`、 、 、 を返します。 2 番目のメンバー関数\*`next`は、 % 以外の`first`間隔`last`[ , ) 内の要素を ++ にコピーします。 パーセントの後に、間隔*C*[ `first`, ]`last`の文字 C が`next` = `do_put`続`next`く`_Iosbase`場合`_Fill`、`_Pt`関数は ( , , , , , *,* C , 0) を評価し *、C*を超えてスキップします。ただし *、C*がセット EOQ# の修飾子文字で、その後に間隔`C2`[ , `first` `last`] の文字が続`next` = `do_put`く`next`場合`_Iosbase`、`_Fill`関数`_Pt`は`C2`( , , `C2`, , *,*, ) を評価し、 をスキップします。
+1つ目のメンバー関数は、 [do_put](#do_put)(、、、、 `next` 、) を返し `_Iosbase` `_Fill` `_Pt` `_Fmt` `_Mod` ます。 2番目のメンバー関数は、 \* `next` % (%) 以外の間隔 [,) 内のすべての要素を + + にコピーし `first` `last` ます。 間隔 [,) のパーセントの後に文字*C*が続く場合、 `first` `last` 関数は代わりに `next`  =  `do_put` (、、、 `next` `_Iosbase` `_Fill` `_Pt` 、 *c*、0) を評価し、 *c*をスキップします。ただし、 *C*が set EOQ # の修飾子文字であり、その後に間隔 [,) の文字が続いている場合、 `C2` `first` `last` 関数は代わりに (、、、、 `next`  =  `do_put` `next` `_Iosbase` `_Fill` `_Pt` `C2` 、 *C*) を評価し、それ以降はスキップし `C2` ます。
 
 ### <a name="example"></a>例
 
@@ -237,7 +237,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_puttime_put"></a><a name="time_put"></a>time_put::time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a>time_put:: time_put
 
 `time_put` 型のオブジェクトのコンストラクター。
 
@@ -252,7 +252,7 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="remarks"></a>解説
 
-*_Refs*パラメータとその有意性の値は次のとおりです。
+*_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -260,10 +260,10 @@ explicit time_put(size_t _Refs = 0);
 
 - \>1: これらの値は定義されていません。
 
-コンストラクターは、基本オブジェクトを[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*) で初期化します。
+コンストラクターは、 [locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*) を使用して、その基本オブジェクトを初期化します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<ロケール>](../standard-library/locale.md)\
-[time_baseクラス](../standard-library/time-base-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[time_base クラス](../standard-library/time-base-class.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

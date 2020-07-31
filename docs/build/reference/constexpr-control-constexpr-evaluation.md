@@ -9,16 +9,16 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223864"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (constexpr の評価の制御)
 
-**/Constexpr**コンパイラオプションを使用して、コンパイル時に**constexpr**の評価のパラメーターを制御します。
+**/Constexpr**コンパイラオプションを使用して、 **`constexpr`** コンパイル時に評価用のパラメーターを制御します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,15 +28,15 @@ ms.locfileid: "82825592"
 
 ## <a name="arguments"></a>引数
 
-**深さ**<em>n</em>再帰的な**constexpr**関数呼び出しの深さを*n*レベルに制限します。 既定値は 512 です。
+**深さ**<em>n</em>再帰関数呼び出しの深さ **`constexpr`** を*n*レベルに制限します。 既定値は 512 です。
 
-**バックトレース**<em>N</em>は、診断で最大*N 個*の**constexpr**評価を示します。 既定値は 10 です。
+**バックトレース**<em>n</em>では、診断で最大*n 個* **`constexpr`** の評価が表示されます。 既定値は 10 です。
 
-**手順**<em>n</em> *n*ステップ後に**constexpr**評価を終了します。 既定値は10万です。
+**手順**<em>n</em> **`constexpr`** *n*ステップ後の評価を終了します。 既定値は10万です。
 
 ## <a name="remarks"></a>解説
 
-**/Constexpr**コンパイラオプションは、 **constexpr**式のコンパイル時の評価を制御します。 評価手順、再帰レベル、およびバックトレースの深さは、コンパイラが**constexpr**の評価に過度に時間をかけないようにするために制御されます。 **Constexpr**言語要素の詳細については、「 [constexpr (C++)](../../cpp/constexpr-cpp.md)」を参照してください。
+**/Constexpr**コンパイラオプションは、式のコンパイル時の評価を制御し **`constexpr`** ます。 評価手順、再帰レベル、およびバックトレースの深さは、コンパイラによる評価に時間がかかりすぎるのを防ぐために制御され **`constexpr`** ます。 言語要素の詳細につい **`constexpr`** ては、「 [Constexpr (C++)](../../cpp/constexpr-cpp.md)」を参照してください。
 
 **/Constexpr**オプションは、Visual Studio 2015 以降で使用できます。
 
@@ -50,9 +50,9 @@ ms.locfileid: "82825592"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

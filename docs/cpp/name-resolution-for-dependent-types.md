@@ -2,16 +2,16 @@
 title: 依存する型の名前解決
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161154"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227310"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 
-テンプレート定義の修飾名に**typename**を使用して、指定された修飾名が型を識別することをコンパイラに通知します。 詳細については、「 [typename](../cpp/typename.md)」を参照してください。
+テンプレート定義内の修飾名にを使用して、 **`typename`** 指定された修飾名が型を識別することをコンパイラに伝えます。 詳細については、「 [typename](../cpp/typename.md)」を参照してください。
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-依存する名前の名前参照では、テンプレート定義のコンテキストの両方から名前が調べられます。次の例では、このコンテキストによって `myFunction(char)`が検出され、テンプレートのインスタンス化のコンテキストが確認されます。次の例では、テンプレートは main でインスタンス化されています。このため、`MyNamespace::myFunction` はインスタンス化の時点から参照でき、より良い一致として選択されます。 `MyNamespace::myFunction` の名前を変更した場合、`myFunction(char)` が代わりに呼び出されます。
+依存名の名前参照によって、テンプレート定義のコンテキストの名前が検証されます。次の例では、このコンテキストでは、 `myFunction(char)` テンプレートのインスタンス化のコンテキストが検索されます。次の例では、テンプレートは main でインスタンス化されています。したがって、は、 `MyNamespace::myFunction` インスタンス化の時点から参照でき、より良い一致として選択されます。 `MyNamespace::myFunction` の名前を変更した場合、`myFunction(char)` が代わりに呼び出されます。
 
 すべての名前は依存名のように解決されます。 いずれにしても、名前の衝突が発生する可能性がある場合は、完全修飾名を使用することをお勧めします。
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Int MyNamespace::myFunction
@@ -121,6 +121,6 @@ int main() {
 
 あいまいさを解消する規則に準拠している必要があるのは、既定で、C++ は `AY::Rebind` がテンプレートでないと仮定し、そのためコンパイラは次の "`<`" を "より小さい" と解釈するためです。 "`Rebind`" を山かっことして正しく解析できるように、`<` がテンプレートであることを知っている必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [名前解決](../cpp/templates-and-name-resolution.md)

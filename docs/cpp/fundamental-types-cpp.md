@@ -1,6 +1,6 @@
 ﻿---
 title: 組み込み型 (C++)
-ms.date: 12/11/2019
+ms.date: 07/22/2020
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -46,62 +46,114 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73486dd4d81fc91007f078ec5c509bcb963d2706
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232275"
 ---
 # <a name="built-in-types-c"></a>組み込み型 (C++)
 
-組み込み型 (*基本型*とも呼ばれます) は、 C++言語標準によって指定され、コンパイラに組み込まれています。 組み込み型は、どのヘッダーファイルでも定義されていません。 組み込み型は、整数、浮動小数点、および void の3つのカテゴリに分類されます。 整数型は整数を処理できます。 浮動小数点型は小数部分を含む可能性がある値を指定することができます。
+組み込み型 (*基本型*とも呼ばれます) は、C++ 言語標準によって指定され、コンパイラに組み込まれています。 組み込み型は、どのヘッダーファイルでも定義されていません。 組み込み型は、*整数*、*浮動小数点*、および*void*の3つの主なカテゴリに分類されます。 整数型は整数を表します。 浮動小数点型では、小数部を含む可能性のある値を指定できます。 多くの組み込み型は、コンパイラによって個別の型として扱われます。 ただし、一部の型は*シノニム*であるか、またはコンパイラによって同等の型として扱われます。
 
-[void](void-cpp.md) 型は一連の空の値を示します。 **Void**型の変数は指定できません。これは主に、値を返さない関数を宣言したり、型指定されていないデータまたは任意の型のデータへのジェネリックポインターを宣言したりするために使用されます。 任意の式を明示的に変換するか、 **void**型にキャストできます。 ただし、このような式は次の用途に制限されています。
+## <a name="void-type"></a>void 型
+
+この [`void`](void-cpp.md) 型は、値の空のセットを表します。 型の変数 **`void`** を指定することはできません。 型は主に、値を返さない関数を宣言したり、型指定されてい **`void`** ないデータまたは任意の型のデータへのジェネリックポインターを宣言するために使用されます。 任意の式を明示的に変換するか、型にキャストすることができ **`void`** ます。 ただし、このような式は次の用途に制限されています。
 
 - 式ステートメント (詳細については、「[式](expressions-cpp.md)」を参照してください)。
 
 - コンマ演算子の左のオペランド (詳細については、「[コンマ演算子](comma-operator.md)」を参照してください)。
 
-- 条件演算子の 2 番目または 3 番目のオペランド (`? :`) (詳細については、「[条件演算子を使用した式](conditional-operator-q.md)」を参照してください)。
+- 条件演算子の 2 番目または 3 番目のオペランド (`? :`)  (詳細については、「[条件演算子を使用した式](conditional-operator-q.md)」を参照してください)。
 
-次の表では、相互に関連する型サイズの制限について説明します。 これらの制限は、 C++標準によって義務付けられており、Microsoft の実装に依存しません。 特定の組み込み型の絶対サイズが標準で指定されていません。
+## <a name="stdnullptr_t"></a>std:: nullptr_t
 
-### <a name="built-in-type-size-restrictions"></a>組み込みの型サイズの制限
+キーワード **`nullptr`** は、型の null ポインター定数で、 `std::nullptr_t` 任意の生ポインター型に変換できます。 詳細については、「[`nullptr`](nullptr.md)」を参照してください。
 
-|カテゴリ|種類|内容|
-|--------------|----------|--------------|
-|整数型|**char**|型**char**は、通常、基本実行文字セットのメンバーを含む整数型です。既定では、これは Microsoft C++では ASCII です。<br /><br /> コンパイラC++は、 **char**、 **signed char**、 **unsigned char**型の変数を異なる型を持つものとして扱います。 **Char**型の変数は、/j コンパイルオプションが使用されていない限り、既定では**signed char**型であるかのように**int**に昇格されます。 この場合、これらは**unsigned char**型として扱われ、符号拡張なしで**int**に昇格されます。|
-||**bool**|型**bool**は、 **true**または**false**の2つの値のいずれかを持つことができる整数型です。 そのサイズは、指定されていません。|
-||**short**|型**short int** (または単に**short**) は、 **char**型のサイズ以下の整数型であり、 **int**型のサイズ以下になります。<br /><br /> **Short**型のオブジェクトは、 **signed** short または**unsigned short**として宣言できます。 **Signed short**は**short**のシノニムです。|
-||**int**|型の**int**は、 **short**型のサイズ以下の整数型で、 **long**型のサイズ以下の値になりません。<br /><br /> **Int**型のオブジェクトは、 **signed int**または**unsigned int**として宣言できます。**Signed int**は**int**のシノニムです。|
-||**__int8**、 **__int16**、 **__int32**、 **__int64**|サイズが設定された整数 `__int n`( `n` は整数変数のビット単位のサイズ) **__int8**、 **__int16**、 **__int32** 、および **__int64**は、Microsoft 固有のキーワードです。 すべての型がすべてのアーキテクチャで使用できるわけではありません。 ( **__int128**はサポートされていません)。|
-||**long**|**Long**型 (または**long int**) は、 **int**型のサイズ以上の整数型です。(Windows では**long**は**int**と同じサイズです)。<br /><br /> **Long**型のオブジェクトは、 **signed** long または**unsigned long**として宣言できます。 **Signed long**は、 **long 型**のシノニムです。|
-||**long long**|符号なし**long**より大きい。<br /><br /> **Long long**型のオブジェクトは、 **signed** long long または**unsigned long long**として宣言できます。 **signed** long long は long **long**のシノニムです。|
-||**wchar_t**、 **__wchar_t**|**Wchar_t**型の変数はワイド文字またはマルチバイト文字型を指定します。 既定では、 **wchar_t**はネイティブ型ですが、 [/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)を使用して、 **unsigned short**の typedef **wchar_t**することができます。 **__Wchar_t**型は、ネイティブ**Wchar_t**型の Microsoft 固有のシノニムです。<br /><br /> ワイド文字型を指定するには、文字や文字列リテラルの前に L のプレフィックスを使用します。|
-|浮動小数点数|**float**|型**float**は、最小の浮動小数点型です。|
-||**double**|型**double**は**float**型以上の浮動小数点型であり、 **long double**型のサイズ以下です (double 型)。<br /><br /> Microsoft 固有: **long double**と**double**の表現は同じです。 ただし、 **long double**と**double**は別個の型です。|
-||**long double**|**Long double**型は**double**型以上の浮動小数点型です。|
+## <a name="boolean-type"></a>ブール型
 
-**Microsoft 固有の仕様**
+型には [`bool`](bool-cpp.md) 、との値を指定でき [`true`](../cpp/true-cpp.md) [`false`](../cpp/false-cpp.md) ます。 型のサイズは **`bool`** 実装固有です。 Microsoft 固有の実装の詳細については、「[組み込み型のサイズ](#sizes-of-built-in-types)」を参照してください。
 
-次の表に、Microsoft C++の組み込み型に必要なストレージの容量を示します。 特に、64ビットのオペレーティングシステムでは、**長さ**が4バイトであることに注意してください。
+## <a name="character-types"></a>文字型
 
-### <a name="sizes-of-built-in-types"></a>組み込み型のサイズ
+この **`char`** 型は、基本実行文字セットのメンバーを効率的にエンコードする文字表現型です。 C++ コンパイラは、、、および型の変数を **`char`** **`signed char`** 異なる型で扱い **`unsigned char`** ます。
 
-|種類|Size|
-|----------|----------|
-|**bool**、 **char**、 **unsigned char**、 **signed char**、 **__int8**|1 バイト|
-|**__int16**、 **short**、 **unsigned short**、 **wchar_t**、 **__wchar_t**|2 バイト|
-|**float**、 **__int32**、 **int**、 **unsigned int**、 **long**、 **unsigned long**|4 バイト|
-|**double**、 **__int64**、long **double**、 **long long**|8 バイト|
+**Microsoft 固有**: **`char`** **`int`** **`signed char`** [`/J`](../build/reference/j-default-char-type-is-unsigned.md) コンパイルオプションが使用されていない場合、型の変数は既定で as from 型としてに昇格されます。 この場合、型として扱わ **`unsigned char`** れ、符号拡張なしでに上位変換され **`int`** ます。
 
-**Microsoft 固有の仕様はここまで**
+型の変数 **`wchar_t`** はワイド文字またはマルチバイト文字型です。 **`L`** ワイド文字型を指定するには、文字または文字列リテラルの前にプレフィックスを使用します。
 
-型ごとの値の範囲の概要については、「 [データ型の範囲](data-type-ranges.md) 」を参照してください。
+**Microsoft 固有**: 既定では、 **`wchar_t`** はネイティブ型ですが、を使用し [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ての typedef を作成することができ **`wchar_t`** **`unsigned short`** ます。 この **`__wchar_t`** 型は、ネイティブ型の Microsoft 固有のシノニムです **`wchar_t`** 。
 
-型変換の詳細については、「 [標準変換](standard-conversions.md)」を参照してください。
+この **`char8_t`** 型は、utf-8 文字表現に使用されます。 これはと同じ表現を持ちますが、 **`unsigned char`** コンパイラによって個別の型として扱われます。 **`char8_t`** 型は c++ 20 で新しく追加されたものです。 **Microsoft 固有**: の使用に **`char8_t`** は、 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) コンパイラオプションが必要です。
 
-## <a name="see-also"></a>参照
+この **`char16_t`** 型は、utf-16 文字表現に使用されます。 UTF-16 コード単位を表すのに十分な大きさである必要があります。 これは、コンパイラによって個別の型として扱われます。
+
+この **`char32_t`** 型は、32文字表現に使用されます。 32 UTF-8 コード単位を表すのに十分な大きさである必要があります。 これは、コンパイラによって個別の型として扱われます。
+
+## <a name="floating-point-types"></a>浮動小数点型
+
+浮動小数点型では、IEEE-754 表現を使用して、さまざまな大きくなりに対して小数値の近似値を指定します。 次の表は、C++ の浮動小数点型と、浮動小数点型のサイズに対する比較の制限を示しています。 これらの制限は、C++ 標準によって義務付けられており、Microsoft の実装に依存しません。 組み込み浮動小数点型の絶対サイズが標準で指定されていません。
+
+| Type | 内容 |
+|--|--|
+| **`float`** | 型 **`float`** は、C++ の最小の浮動小数点型です。 |
+| **`double`** | 型 **`double`** は、型と同じか、 **`float`** または型のサイズ以下の浮動小数点型です **`long double`** 。 |
+| **`long double`** | 型 **`long double`** は、型以上の浮動小数点型です **`double`** 。 |
+
+**Microsoft 固有**: との表現 **`long double`** **`double`** は同じです。 ただし、 **`long double`** と **`double`** は、コンパイラによって個別の型として扱われます。 Microsoft C++ コンパイラは、4 ~ 8 バイトの IEEE-754 浮動小数点表現を使用します。 詳細については、「 [IEEE 浮動小数点表現](../build/ieee-floating-point-representation.md)」を参照してください。
+
+## <a name="integer-types"></a>整数型
+
+**`int`** 型は、既定の基本整数型です。 実装固有の範囲のすべての整数を表すことができます。
+
+*符号付き*整数表現とは、正と負の両方の値を保持できる値のことです。 既定で使用されるか、または修飾子キーワードが存在する場合に使用され **`signed`** ます。 **`unsigned`** 修飾子キーワードは、負以外の値のみを保持できる*符号なし*の表現を指定します。
+
+サイズ修飾子は、使用する整数表現の幅をビット単位で指定します。 この言語では **`short`** 、、 **`long`** 、および修飾子がサポートされて **`long long`** います。 型は、 **`short`** 少なくとも16ビット幅である必要があります。 型は、 **`long`** 32 ビット幅以上である必要があります。 型は、 **`long long`** 64 ビット幅以上である必要があります。 標準では、整数型の間のサイズの関係を指定します。
+
+`1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long)`
+
+の実装では、各型の最小サイズ要件とサイズリレーションシップの両方を維持する必要があります。 ただし、実際のサイズは、実装によって異なります。 Microsoft 固有の実装の詳細については、「[組み込み型のサイズ](#sizes-of-built-in-types)」を参照してください。
+
+**`int`** **`signed`** 、 **`unsigned`** 、またはサイズ修飾子が指定されている場合、キーワードは省略できます。 修飾子と **`int`** 型 (存在する場合) は、任意の順序で表示される場合があります。 たとえば、 **`short unsigned`** とは **`unsigned int short`** 同じ型を参照します。
+
+### <a name="integer-type-synonyms"></a>整数型のシノニム
+
+次の種類のグループは、コンパイラによってシノニムと見なされます。
+
+- **`short`**, **`short int`**, **`signed short`**, **`signed short int`**
+
+- **`unsigned short`**, **`unsigned short int`**
+
+- **`int`**, **`signed`**, **`signed int`**
+
+- **`unsigned`**, **`unsigned int`**
+
+- **`long`**, **`long int`**, **`signed long`**, **`signed long int`**
+
+- **`unsigned long`**, **`unsigned long int`**
+
+- **`long long`**, **`long long int`**, **`signed long long`**, **`signed long long int`**
+
+- **`unsigned long long`**, **`unsigned long long int`**
+
+**Microsoft 固有**の整数型には、特定の幅 **`__int8`** 、 **`__int16`** 型、型、および型が含ま **`__int32`** **`__int64`** れます。 これらの型は、 **`signed`** および修飾子を使用でき **`unsigned`** ます。 データ型は、型と同義であり、型と同義であり、型と同義であり、型と同義です **`__int8`** **`char`** **`__int16`** **`short`** **`__int32`** **`int`** **`__int64`** **`long long`** 。
+
+## <a name="sizes-of-built-in-types"></a>組み込み型のサイズ
+
+多くの組み込み型には、実装定義のサイズがあります。 次の表に、Microsoft C++ の組み込み型に必要なストレージの容量を示します。 特に、 **`long`** 64 ビットのオペレーティングシステムでも、は4バイトです。
+
+| Type | サイズ |
+|--|--|
+| **`bool`**, **`char`**, **`char8_t`**, **`unsigned char`**, **`signed char`**, **`__int8`** | 1 バイト |
+| **`char16_t`**, **`__int16`**, **`short`**, **`unsigned short`**, **`wchar_t`**, **`__wchar_t`** | 2 バイト |
+| **`char32_t`**, **`float`**, **`__int32`**, **`int`**, **`unsigned int`**, **`long`**, **`unsigned long`** | 4 バイト |
+| **`double`**, **`__int64`**, **`long double`**, **`long long`**, **`unsigned long long`** | 8 バイト |
+
+各型の値の範囲の概要については、「[データ型の範囲](data-type-ranges.md)」を参照してください。
+
+型変換の詳細については、「[標準変換](standard-conversions.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
 
 [データ型の範囲](data-type-ranges.md)

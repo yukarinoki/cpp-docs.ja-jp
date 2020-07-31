@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: a15b3552e6b67fb0347a14c48414741edf31ac93
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168267"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215258"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -30,7 +30,7 @@ COM オブジェクトの既定の vtable を持つ、指定されたインタ�
 
 ## <a name="remarks"></a>解説
 
-**Defaultvtable** C++属性には、 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 属性と同じ機能があります。
+**Defaultvtable** C++ 属性には、 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -68,14 +68,14 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|**coclass**|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|**coclass**|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)

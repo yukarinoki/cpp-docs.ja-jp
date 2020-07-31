@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: d960e5a5e2d7ad2d2b650095c42e9afea7bfe7fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219873"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>コンパイラの警告 (レベル 4) C4295
 
@@ -21,7 +21,7 @@ ms.locfileid: "70924847"
 
 ## <a name="example"></a>例
 
-次の例では、C4295 が生成されます。 この問題を解決するには、配列のサイズを大きく宣言し、初期化子文字列から終端の null を保持するか、配列初期化子リストを使用して、これが null で終わる`char`文字列ではなくの配列であることを明確にすることができます。
+次の例では、C4295 が生成されます。 この問題を解決するには、配列のサイズを大きく宣言し、初期化子文字列から終端の null を保持するか、配列初期化子リストを使用して、これが null で終わる文字列ではなくの配列であることを明確にすることができ **`char`** ます。
 
 ```C
 // C4295.c

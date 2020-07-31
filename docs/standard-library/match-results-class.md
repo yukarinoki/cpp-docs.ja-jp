@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 31154a38f8bbcb879fd871f1eb1bf5a4b15af79b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ce9ed987baf63f2cc9f095e2955a8165e977193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212216"
 ---
 # <a name="match_results-class"></a>match_results クラス
 
@@ -26,65 +26,65 @@ class match_results
 
 ## <a name="parameters"></a>パラメーター
 
-*ビッドイット*\
+*BidIt*\
 サブマッチ用の反復子の型。
 
-*Alloc*\
+*割り当て*\
 ストレージを管理するためのアロケーターの型です。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、正規表現検索によって生成される型`sub_match<BidIt>`の要素の変更不可能なシーケンスを制御するオブジェクトを表します。 各要素は、それに対応するキャプチャ グループと一致したサブシーケンスを指します。
+クラステンプレートは、 `sub_match<BidIt>` 正規表現の検索によって生成される型の要素の変更不可能なシーケンスを制御するオブジェクトを表します。 各要素は、それに対応するキャプチャ グループと一致したサブシーケンスを指します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[match_results](#match_results)|オブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[char_type](#char_type)|要素の型。|
 |[const_iterator](#const_iterator)|サブマッチ用の const 反復子の型。|
 |[const_reference](#const_reference)|要素の定数参照の型。|
 |[difference_type](#difference_type)|反復子の差の型です。|
-|[反復 子](#iterator)|サブマッチ用の反復子の型。|
-|[参照](#reference)|要素の参照の型。|
-|[Size_type](#size_type)|サブマッチ数の型。|
+|[反](#iterator)|サブマッチ用の反復子の型。|
+|[reference](#reference)|要素の参照の型。|
+|[size_type](#size_type)|サブマッチ数の型。|
 |[string_type](#string_type)|文字列の型。|
-|[Value_type](#value_type)|サブマッチの型。|
+|[value_type](#value_type)|サブマッチの型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[開始](#begin)|サブマッチのシーケンスの最初を指定します。|
+|[初め](#begin)|サブマッチのシーケンスの最初を指定します。|
 |[empty](#empty)|サブマッチが存在しないかどうかをテストします。|
 |[end](#end)|サブマッチのシーケンスの最後を指定します。|
-|[形式](#format)|サブマッチの形式を設定します。|
+|[format](#format)|サブマッチの形式を設定します。|
 |[get_allocator](#get_allocator)|格納されているアロケーターを返します。|
 |[length](#length)|サブマッチの長さを返します。|
 |[max_size](#max_size)|サブマッチの最大数を取得します。|
-|[位置](#position)|サブグループの開始オフセットを取得します。|
-|[プレフィックス](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
-|[サイズ](#size)|サブマッチの数をカウントします。|
-|[Str](#str)|サブマッチが返されます。|
-|[サフィックス](#suffix)|最後のサブマッチ後に、シーケンスを取得します。|
+|[移動](#position)|サブグループの開始オフセットを取得します。|
+|[prefix](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
+|[size](#size)|サブマッチの数をカウントします。|
+|[引数](#str)|サブマッチが返されます。|
+|[suffix](#suffix)|最後のサブマッチ後に、シーケンスを取得します。|
 |[スワップ](#swap)|2 つの match_results オブジェクトを交換します。|
 
 ### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_eq)|match_results オブジェクトをコピーします。|
-|[演算子\[\]](#op_at)|サブオブジェクトにアクセスします。|
+|[operator =](#op_eq)|match_results オブジェクトをコピーします。|
+|[operator\[\]](#op_at)|サブオブジェクトにアクセスします。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<regex>
+**ヘッダー:**\<regex>
 
 **名前空間:** std
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results::allocator_type
+## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results:: allocator_type
 
 ストレージを管理するためのアロケーターの型です。
 
@@ -198,9 +198,9 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>解説
 
-typedef はテンプレート引数*Alloc*の同義語です。
+Typedef は、テンプレート引数*Alloc*のシノニムです。
 
-## <a name="match_resultsbegin"></a><a name="begin"></a>match_results::開始
+## <a name="match_resultsbegin"></a><a name="begin"></a>match_results:: begin
 
 サブマッチのシーケンスの最初を指定します。
 
@@ -212,7 +212,7 @@ const_iterator begin() const;
 
 このメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示すランダム アクセス反復子を返します。
 
-## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results::char_type
+## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results:: char_type
 
 要素の型。
 
@@ -224,7 +224,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 この typedef は、検索された文字シーケンスの要素の型である `iterator_traits<BidIt>::value_type`型のシノニムです。
 
-## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results::const_iterator
+## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results:: const_iterator
 
 サブマッチ用の const 反復子の型。
 
@@ -236,7 +236,7 @@ typedef T0 const_iterator;
 
 typedef は、被制御シーケンスの定数ランダム アクセス反復子として使用できるオブジェクトを表します。
 
-## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results::const_reference
+## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results:: const_reference
 
 要素の定数参照の型。
 
@@ -248,7 +248,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 この typedef は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
-## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::difference_type
+## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::d ifference_type
 
 反復子の差の型です。
 
@@ -260,7 +260,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 typedef は `iterator_traits<BidIt>::difference_type`型の同意語です。被制御シーケンスの要素を指す任意の 2 つの反復子の差を表現することが可能なオブジェクトを表します。
 
-## <a name="match_resultsempty"></a><a name="empty"></a>match_results::空
+## <a name="match_resultsempty"></a><a name="empty"></a>match_results:: empty
 
 サブマッチが存在しないかどうかをテストします。
 
@@ -272,7 +272,7 @@ bool empty() const;
 
 このメンバー関数は、正規表現検索に失敗した場合にのみ true を返します。
 
-## <a name="match_resultsend"></a><a name="end"></a>match_results::終了
+## <a name="match_resultsend"></a><a name="end"></a>match_results:: end
 
 サブマッチのシーケンスの最後を指定します。
 
@@ -284,7 +284,7 @@ const_iterator end() const;
 
 このメンバー関数は、シーケンスの最後を越えたところを示す反復子を返します。
 
-## <a name="match_resultsformat"></a><a name="format"></a>match_results:形式
+## <a name="match_resultsformat"></a><a name="format"></a>match_results:: format
 
 サブマッチの形式を設定します。
 
@@ -298,25 +298,25 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>パラメーター
 
-*アウトイット*\
+*OutIt*\
 出力反復子の型。
 
-*乙*\
+*入出力*\
 書き込み先の出力ストリーム。
 
-*Fmt*\
+*fmt*\
 書式指定文字列。
 
-*フラグ*\
+*示す*\
 書式指定フラグ。
 
 ### <a name="remarks"></a>解説
 
-各メンバー関数は、 *fmt*形式の制御下で書式付きテキストを生成します。 最初のメンバー関数は、書式付きテキストを引数*out*で定義されたシーケンスに書き込み、out を返*します*。2 番目のメンバー関数は、書式設定されたテキストのコピーを保持する文字列オブジェクトを返します。
+各メンバー関数は、 *fmt*形式のコントロールの下に書式付きテキストを生成します。 1つ目のメンバー関数は、書式設定されたテキストを引数*out*によって定義されたシーケンスに書き込み、*を返します*。2番目のメンバー関数は、書式設定されたテキストのコピーを保持する文字列オブジェクトを返します。
 
 書式指定されたテキストを生成する際、 書式指定文字列内のリテラル テキストは、ターゲット シーケンスにコピーされるのが一般的です。 書式指定文字列内の各エスケープ シーケンスは、それが表すテキストに置き換えられます。 コピーと置換の詳細な動作は、関数に渡された書式指定フラグによって制御されます。
 
-## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results::get_allocator
+## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results:: get_allocator
 
 格納されているアロケーターを返します。
 
@@ -326,9 +326,9 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は `sub_match` オブジェクトを割り当てる `*this` で使用されるアロケーター オブジェクトのコピーを返します。
+このメンバー関数は、オブジェクトを割り当てるためにによって使用されるアロケーターオブジェクトのコピーを返し **`*this`** `sub_match` ます。
 
-## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results::反復器
+## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results:: iterator
 
 サブマッチ用の反復子の型。
 
@@ -340,7 +340,7 @@ typedef const_iterator iterator;
 
 この型は、被制御シーケンスのランダム アクセス反復子として使用できるオブジェクトを表します。
 
-## <a name="match_resultslength"></a><a name="length"></a>match_results::長さ
+## <a name="match_resultslength"></a><a name="length"></a>match_results:: length
 
 サブマッチの長さを返します。
 
@@ -357,7 +357,7 @@ difference_type length(size_type sub = 0) const;
 
 このメンバー関数は、`(*this)[sub].length()` を返します。
 
-## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results::match_results
+## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results:: match_results
 
 オブジェクトを構築します。
 
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*\
+*割り当て*\
 格納するアロケーター オブジェクト。
 
 *そうです*\
@@ -377,9 +377,9 @@ match_results(const match_results& right);
 
 ### <a name="remarks"></a>解説
 
-1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2 番目のコンストラクターは`match_results`、 *right*のコピーであるオブジェクトを構築します。
+1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2番目のコンストラクターは、 `match_results` *right*のコピーであるオブジェクトを構築します。
 
-## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results::max_size
+## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results:: max_size
 
 サブマッチの最大数を取得します。
 
@@ -391,7 +391,7 @@ size_type max_size() const;
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
-## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results::演算子=
+## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results:: operator =
 
 match_results オブジェクトをコピーします。
 
@@ -406,9 +406,9 @@ match_results& operator=(const match_results& right);
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、 によって`*this`制御されるシーケンスを*right*で制御されるシーケンスのコピーに置き換えます。
+メンバー演算子は、によって制御されるシーケンスを、 **`*this`** *right*で制御されるシーケンスのコピーと置き換えます。
 
-## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results::演算子[]
+## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results:: operator []
 
 サブオブジェクトにアクセスします。
 
@@ -418,14 +418,14 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*N*\
+*非該当*\
 サブマッチのインデックス。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスの要素*n*への参照、またはキャプチャ グループ`sub_match`n`size() <= n`が一致の*n*一部でない場合は空のオブジェクトへの参照を返します。
+このメンバー関数は、被制御シーケンスの要素*n*への参照、また `sub_match` `size() <= n` はキャプチャグループ*n*が一致に含まれていない場合は空のオブジェクトへの参照を返します。
 
-## <a name="match_resultsposition"></a><a name="position"></a>match_results::pの
+## <a name="match_resultsposition"></a><a name="position"></a>match_results::p o
 
 サブグループの開始オフセットを取得します。
 
@@ -442,7 +442,7 @@ difference_type position(size_type sub = 0) const;
 
 このメンバー関数は、 `std::distance(prefix().first, (*this)[sub].first)`、つまり、ターゲット シーケンス内の最初の文字から被制御シーケンスの要素 `n` によって示されるサブマッチ内の最初の文字までの距離を返します。
 
-## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::p修正
+## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::p プレフィックス
 
 最初のサブマッチの前のシーケンスを取得します。
 
@@ -454,7 +454,7 @@ const_reference prefix() const;
 
 このメンバー関数は、ターゲット シーケンスの先頭から始まって `sub_match<BidIt>` で終わる文字シーケンスを指す、`(*this)[0].first` 型のオブジェクトへの参照を返します。つまり、この参照は一致したサブシーケンスの直前のテキストを指すことになります。
 
-## <a name="match_resultsreference"></a><a name="reference"></a>match_results::参照
+## <a name="match_resultsreference"></a><a name="reference"></a>match_results:: reference
 
 要素の参照の型。
 
@@ -466,7 +466,7 @@ typedef const_reference reference;
 
 この型は、 `const_reference`型のシノニムです。
 
-## <a name="match_resultssize"></a><a name="size"></a>match_results::サイズ
+## <a name="match_resultssize"></a><a name="size"></a>match_results:: size
 
 サブマッチの数をカウントします。
 
@@ -478,7 +478,7 @@ size_type size() const;
 
 このメンバー関数は、検索に使用された正規表現内のキャプチャ グループの数 + 1 を返します。検索が実行されなかった場合は 0 を返します。
 
-## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results::size_type
+## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results:: size_type
 
 サブマッチ数の型。
 
@@ -490,7 +490,7 @@ typedef typename Alloc::size_type size_type;
 
 この型は、 `Alloc::size_type`型のシノニムです。
 
-## <a name="match_resultsstr"></a><a name="str"></a>match_results::str
+## <a name="match_resultsstr"></a><a name="str"></a>match_results:: str
 
 サブマッチが返されます。
 
@@ -507,7 +507,7 @@ string_type str(size_type sub = 0) const;
 
 このメンバー関数は、`string_type((*this)[sub])` を返します。
 
-## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results::string_type
+## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results:: string_type
 
 文字列の型。
 
@@ -519,7 +519,7 @@ typedef basic_string<char_type> string_type;
 
 この型は、 `basic_string<char_type>`型のシノニムです。
 
-## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results::接尾辞
+## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results:: suffix
 
 最後のサブマッチ後に、シーケンスを取得します。
 
@@ -531,7 +531,7 @@ const_reference suffix() const;
 
 このメンバー関数は、 `sub_match<BidIt>` から始まってターゲット シーケンスの末尾で終わる文字シーケンスを指す (つまり、一致したサブシーケンスに続くテキストを指す) `(*this)[size() - 1].second` 型のオブジェクトへの参照を返します。
 
-## <a name="match_resultsswap"></a><a name="swap"></a>match_results::スワップ
+## <a name="match_resultsswap"></a><a name="swap"></a>match_results:: swap
 
 2 つの match_results オブジェクトを交換します。
 
@@ -546,9 +546,9 @@ void swap(const match_results& right) throw();
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、一定の時間`*this`で*内容*を入れ替え、例外をスローしません。
+このメンバー関数は、との内容を **`*this`** 一定の時間だけ交換し、例外をスローしません。 *right*
 
-## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results::value_type
+## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results:: value_type
 
 サブマッチの型。
 
@@ -562,4 +562,4 @@ typedef は、型 `sub_match<BidIt>` の同意語です。
 
 ## <a name="see-also"></a>関連項目
 
-[\<正規表現>](../standard-library/regex.md)
+[\<regex>](../standard-library/regex.md)

@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825929"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404061"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outp、_outp、_outpw、_outpd
 
-ポート、`outp`バイト (、 `_outp`)、ワード (`outpw`、 `_outpw`)、またはダブルワード (`_outpd`) を出力します。
+ポート、バイト (、)、 `outp` `_outp` ワード ( `outpw` 、 `_outpw` )、またはダブルワード () を出力し `_outpd` ます。
 
 > [!IMPORTANT]
 > これらは古い関数です。 Visual Studio 2015 以降では、CRT では使用できません。
@@ -61,15 +61,15 @@ ms.locfileid: "82825929"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,7 +78,7 @@ unsigned long _outpd(
 *ポート*\
 ポート番号。
 
-*databyte、dataword*\
+*data_byte、data_word*\
 出力値。
 
 ## <a name="return-value"></a>戻り値
@@ -87,15 +87,17 @@ unsigned long _outpd(
 
 ## <a name="remarks"></a>解説
 
-`_outp`、 `_outpw`、 `_outpd` の各関数は、指定された出力ポートへそれぞれバイト、ワード、ダブルワードを 1 つ書き込みます。 *Port*引数には、0 ~ 65535 の範囲の任意の符号なし整数を指定できます。*databyte*は、0-255 の範囲の任意の整数を指定できます。と*dataword*は、整数の範囲内の任意の値、符号なし短整数、および符号なし長整数をそれぞれ使用できます。
+`_outp`、 `_outpw`、 `_outpd` の各関数は、指定された出力ポートへそれぞれバイト、ワード、ダブルワードを 1 つ書き込みます。 *Port*引数には、0 ~ 65535 の範囲の任意の符号なし整数を指定できます。 *data_byte* 0-255 の範囲の任意の整数を指定できます。 *data_word* 、整数、符号なし短整数、および符号なし長整数の範囲の任意の値を指定できます。
 
-これらの関数は I/O ポートへ直接書き込まれるため、ユーザー コードで使用できません。 これらのオペレーティング システムでの I/O ポートの使用方法については、MSDN で「Serial Communications in Win32 (Win32 のシリアル通信)」を検索してください。
+これらの関数は i/o ポートに直接書き込みを行うため、ユーザーモードの Windows コードでは使用できません。
 
-と`outp` `outpw`の名前は、関数`_outp`および関数の古い名前`_outpw`で、非推奨とされています。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
+Windows オペレーティングシステムでの i/o ポートの使用の詳細については、「 [Serial Communications](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))」を参照してください。
+
+`outp`との `outpw` 名前は、関数および関数の古い名前で、非推奨とされてい `_outp` `_outpw` ます。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_outp`|\<conio.h>|
 |`_outpw`|\<conio.h>|
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)\
-[sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

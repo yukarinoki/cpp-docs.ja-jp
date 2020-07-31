@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b604819391629d057850c17466807e7c329c472d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919447"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198594"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -71,7 +71,7 @@ size_t fwrite(
 
 **Fwrite**関数は、*バッファー*から出力*ストリーム*に、最大*サイズ*の項目*数*を書き込みます。 *ストリーム*に関連付けられているファイルポインター (存在する場合) は、実際に書き込まれたバイト数によってインクリメントされます。 *ストリーム*がテキストモードで開かれている場合、各ラインフィードは復帰とラインフィードのペアで置き換えられます。 この置き換えは、戻り値には影響しません。
 
-*ストリーム*が Unicode 変換モードで開かれている場合 (たとえば、 **fopen**を呼び出し、 **ccs = Unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用して*ストリーム*を開く場合、または、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを**使用**してモードを Unicode 変換モードに変更した場合、_setmode*バッファー*は utf-16 データを含む**wchar_t**の配列へのポインターとして解釈されます。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+*ストリーム*が Unicode 変換モードで開かれている場合 (たとえば、 **fopen**を呼び出し、ccs = **Unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用して*ストリーム*を開いた場合、または、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを**使用**してモードを Unicode 変換モードに変更した場合、_setmode*バッファー*は utf-16 データを含むの配列へのポインターとして解釈され **`wchar_t`** ます。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
 この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「 **_fwrite_nolock**」を参照してください。
 
@@ -79,7 +79,7 @@ size_t fwrite(
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 

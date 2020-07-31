@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232600"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -74,13 +74,13 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**atanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **atanh**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**atanh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **atanh**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -116,7 +116,7 @@ atanh( 0.655794 ) = 0.785398
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>

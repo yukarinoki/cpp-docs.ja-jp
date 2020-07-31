@@ -1,36 +1,38 @@
 ---
-title: 'ビット処理包括的 OR 演算子: |'
-ms.date: 06/14/2018
+title: 'ビットごとの包括的 OR 演算子: &#124;'
+description: C++ 標準言語のビットごとの包括的 OR 演算子の構文で、を使用します。
+ms.date: 07/23/2020
 f1_keywords:
 - '|'
+- bitor_cpp
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
 - bitwise operators [C++], OR operator
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 38def2b1ac585c751699227d2a065b45145d290d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 76f80c2101b3acfac71dc4d8ad1be4a999f69aa5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190756"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229091"
 ---
-# <a name="bitwise-inclusive-or-operator-"></a>ビット処理包括的 OR 演算子: |
+# <a name="bitwise-inclusive-or-operator-124"></a>ビットごとの包括的 OR 演算子: &#124;
 
 ## <a name="syntax"></a>構文
 
-> *expression1* **|** *expression2*
+> *expression1* **`|`** *expression2*
 
 ## <a name="remarks"></a>解説
 
-ビットごとの包括的 OR 演算子 **&#124;** () は、最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。
+ビットごとの包括的 OR 演算子 () は、 **`|`** 最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 どちらかのビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。
 
-ビットごとの包括的 OR 演算子のオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
+演算子へのオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
 
-## <a name="operator-keyword-for-124"></a>の Operator キーワード&#124;
+## <a name="operator-keyword-for-124"></a>&#124; の Operator キーワード
 
-**ビット or**演算子は、に **&#124;** 相当するテキストです。 プログラムの**bitor**演算子にアクセスするには、次の2つの方法があります。ヘッダーファイル \<iso646 > を含めるか、または[/za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張機能を無効にする) コンパイラオプションを使用してコンパイルします。
+C++ **`bitor`** では、の代替スペルとしてを指定し **`|`** ます。 C では、代替のスペルは、ヘッダーにマクロとして指定され \<iso646.h> ます。 C++ では、代替のスペルはキーワードです。\<iso646.h>または C++ と同等のの使用 \<ciso646> は非推奨とされます。 Microsoft C++ では、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) またはコンパイラオプションを使用して、 [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 別のスペルチェックを有効にする必要があります。
 
 ## <a name="example"></a>例
 
@@ -49,7 +51,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[C ビット処理演算子](../c-language/c-bitwise-operators.md)
+[C++ の組み込み演算子、優先順位、および結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C のビット処理演算子](../c-language/c-bitwise-operators.md)

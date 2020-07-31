@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6e31220fa6b15d958e94e82322467cd73e1c3a6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452786"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215700"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible クラス
+# <a name="is_default_constructible-class"></a>is_default_constructible クラス
 
 型が既定のコンストラクターを持つかどうかをテストします。
 
@@ -29,9 +29,9 @@ struct is_default_constructible;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*T*が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型*T*は、完全な型、 **void**、または不明なバインドの配列である必要があります。
+型*T*が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型*T*は完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
 ## <a name="example"></a>例
 
@@ -69,7 +69,7 @@ is_default_constructible<Simple2> == false
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

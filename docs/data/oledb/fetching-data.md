@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409060"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184645"
 ---
 # <a name="fetching-data"></a>データのフェッチ
 
-データ ソース、セッション、および行セット オブジェクトを開いた後は、データをフェッチできます。 、を使用するアクセサーの種類によっては、列をバインドする必要があります。
+データソース、セッション、および行セットオブジェクトを開いた後、データをフェッチできます。 使用しているアクセサーの種類によっては、列のバインドが必要になる場合があります。
 
 ## <a name="to-fetch-data"></a>データをフェッチするには
 
-1. 適切なを使用して行セットを開く**オープン**コマンド。
+1. 適切な**open**コマンドを使用して、行セットを開きます。
 
-1. 使用している場合`CManualAccessor`、これをまだ完了していない場合は、出力列をバインドします。 次の例がから取得した、 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプル。 列をバインドするには、呼び出す`GetColumnInfo`、し、次の例に示すように、バインドでアクセサーを作成します。
+1. を使用している場合は `CManualAccessor` 、出力列をバインドします (まだ作成していない場合)。 次の例は、 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプルから抜粋したものです。 列をバインドするには、を呼び出し、 `GetColumnInfo` 次の例に示すように、バインディングを使用してアクセサーを作成します。
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ ms.locfileid: "62409060"
     rs.Bind();
     ```
 
-1. 書き込みを**中**ループを使用してデータを取得します。 ループでは、呼び出す`MoveNext`カーソルを進めるし、次の例に示すように、S_OK に対して戻り値をテストします。
+1. ループを記述し **`while`** てデータを取得します。 次の例に示すように、ループ内でを呼び出して `MoveNext` カーソルを進め、戻り値を S_OK に対してテストします。
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ ms.locfileid: "62409060"
     }
     ```
 
-1. 内で、**中**ループ、アクセサーの型に従ってデータをフェッチできます。
+1. ループ内では、 **`while`** アクセサーの型に応じてデータをフェッチできます。
 
-   - 使用する場合、 [CAccessor](../../data/oledb/caccessor-class.md)クラス、データ メンバーを含んでいるユーザー レコードが必要です。 次の例に示すようにそのデータ メンバーを使用してデータにアクセスすることができます。
+   - [CAccessor](../../data/oledb/caccessor-class.md)クラスを使用する場合は、データメンバーを含むユーザーレコードが必要です。 次の例に示すように、これらのデータメンバーを使用してデータにアクセスできます。
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ ms.locfileid: "62409060"
         }
         ```
 
-   - 使用する場合、`CDynamicAccessor`または`CDynamicParameterAccessor`クラスにアクセスする関数を使用してデータをフェッチできます`GetValue`と`GetColumn`次の例のようにします。 使用するデータの種類を決定する場合を使用して、`GetType`します。
+   - クラスまたはクラスを使用する場合は、 `CDynamicAccessor` `CDynamicParameterAccessor` 次の `GetValue` 例に示すように、アクセスする関数とを使用してデータをフェッチでき `GetColumn` ます。 使用しているデータの種類を確認する場合は、を使用 `GetType` します。
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ ms.locfileid: "62409060"
         }
         ```
 
-   - 使用する場合`CManualAccessor`、独自のデータ メンバーを指定、自分でバインドおよび次の例に示すように、直接アクセスする必要があります。
+   - を使用する場合は `CManualAccessor` 、次の例に示すように、独自のデータメンバーを指定し、それらを自分でバインドして、直接アクセスする必要があります。
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -92,4 +92,4 @@ ms.locfileid: "62409060"
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)

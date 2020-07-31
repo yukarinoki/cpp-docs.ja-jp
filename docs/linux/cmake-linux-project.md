@@ -1,14 +1,14 @@
 ---
 title: Visual Studio で Linux CMake プロジェクトを作成および構成する
 description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
-ms.date: 05/03/2020
+ms.date: 06/22/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: c12e32801c992f6ba3675327b9ae537890202a4c
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 2149b102c452149070d59c9645ce34a5977a6057
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765761"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269729"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
@@ -120,7 +120,13 @@ Linux 用 Windows サブシステムをターゲットにするには、メイ�
 
 ![Linux での CMake キャッシュの生成](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
 
+### <a name="intellisense"></a>Intellisense
+
 Visual Studio は、これらを Linux マシンからローカルの Windows コンピューター上のディレクトリに自動的にコピーして、リモートの Linux システムのヘッダーに IntelliSense のサポートを提供します。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
+
+### <a name="locale"></a>ロケール
+
+詳細については、「[Linux ターゲットのロケール](configure-a-linux-project.md#locale)」を参照してください。
 
 ## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> CMake プロジェクトをデバッグする
 

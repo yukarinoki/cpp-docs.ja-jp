@@ -7,14 +7,14 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-ms.openlocfilehash: c4887d85e01344c171fb0fdfe957f2d8a669ff6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a0eaf0a3bc0617dbcd1f43805af8a95291e7e47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188168"
 ---
-# <a name="hook"></a>__hook
+# <a name="__hook"></a>__hook
 
 ハンドラー メソッドをイベントに関連付けます。
 
@@ -35,67 +35,67 @@ long __hook(
 
 ### <a name="parameters"></a>パラメーター
 
-*& SourceClass::EventMethod*<br/>
+*&SourceClass:: EventMethod*<br/>
 イベント ハンドラー メソッドをフックする先のイベント メソッドへのポインター。
 
-- ネイティブ C++ イベント:*SourceClass*はイベント ソース クラスと*EventMethod*はイベントです。
+- ネイティブ C++ イベント: *Sourceclass*はイベントソースクラスであり、 *eventmethod*はイベントです。
 
-- COM イベント:*SourceClass*はイベント ソース インターフェイスと*EventMethod*そのメソッドの 1 つです。
+- COM イベント: *Sourceclass*はイベントソースインターフェイスであり、 *eventmethod*はそのメソッドの1つです。
 
-- マネージ イベント:*SourceClass*はイベント ソース クラスと*EventMethod*はイベントです。
+- マネージイベント: *Sourceclass*はイベントソースクラスであり、 *eventmethod*はイベントです。
 
 *interface*<br/>
-フックされているインターフェイス名*受信者*である COM イベント レシーバーにのみ、 *layout_dependent*のパラメーター、 [event_receiver](../windows/attributes/event-receiver.md)属性が**true**します。
+*受信側*にフックされるインターフェイス名。 [event_receiver](../windows/attributes/event-receiver.md)属性の*LAYOUT_DEPENDENT*パラメーターがである COM イベントレシーバーに対してのみ使用され **`true`** ます。
 
 *source*<br/>
-イベント ソースのインスタンスへのポインター。 コードに応じて`type`で指定されている`event_receiver`、*ソース*次のいずれかを指定できます。
+イベント ソースのインスタンスへのポインター。 `type`に指定されたコードに応じて `event_receiver` 、 *source*は次のいずれかになります。
 
 - ネイティブ イベント ソース オブジェクト ポインター。
 
-- `IUnknown`-ベース ポインター (COM ソース)。
+- `IUnknown`ベースのポインター (COM ソース)。
 
 - マネージド オブジェクトのポインター (マネージド イベントの場合)。
 
-*& ReceiverClass::HandlerMethod*<br/>
-イベントにフックするイベント ハンドラー メソッドへのポインター。 ハンドラーが同じではへの参照またはクラスのメソッドとして指定します。クラス名を指定しない場合 **_ _hook**クラスで呼び出されることを前提としています。
+*ReceiverClass:: ハンドラメソッド&*<br/>
+イベントにフックするイベント ハンドラー メソッドへのポインター。 ハンドラーは、クラスのメソッドまたは同じに対する参照として指定されています。クラス名を指定しない場合、は、 **`__hook`** クラスが呼び出されることを前提としています。
 
-- ネイティブ C++ イベント:*ReceiverClass*はイベント レシーバー クラスと`HandlerMethod`はハンドラーです。
+- ネイティブ C++ イベント: *Receiverclass*はイベントレシーバークラスであり、 `HandlerMethod` はハンドラーです。
 
-- COM イベント:*ReceiverClass*はイベント レシーバー インターフェイスと`HandlerMethod`そのハンドラーの 1 つです。
+- COM イベント: *Receiverclass*はイベントレシーバーインターフェイスであり、 `HandlerMethod` ハンドラーの1つです。
 
-- マネージ イベント:*ReceiverClass*はイベント レシーバー クラスと`HandlerMethod`はハンドラーです。
+- マネージイベント: *Receiverclass*はイベントレシーバークラスであり、 `HandlerMethod` はハンドラーです。
 
-*受信側*<br/>
-(省略可能)イベント レシーバー クラスのインスタンスへのポインター。 受信側を指定しない場合、既定はレシーバー クラスまたは構造体です **_ _hook**が呼び出されます。
+*受取*<br/>
+Optionalイベントレシーバークラスのインスタンスへのポインター。 レシーバーを指定しない場合、既定値は、が呼び出されるレシーバークラスまたは構造体です **`__hook`** 。
 
 ## <a name="usage"></a>使用法
 
 イベント レシーバー クラス外の main を含む、任意の関数スコープで使用できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込み関数を使用して **_ _hook**関連付けるかフックをイベント メソッドのハンドラー メソッドに、イベント レシーバー内で。 ソースで指定されたイベントが発生すると、指定されたハンドラーが呼び出されます。 複数のイベント ハンドラーを 1 つのイベントに、または複数のイベントを 1 つのイベント ハンドラーにフックすることができます。
+イベントレシーバーで組み込み関数を使用し **`__hook`** て、ハンドラーメソッドをイベントメソッドに関連付けるか、フックします。 ソースで指定されたイベントが発生すると、指定されたハンドラーが呼び出されます。 複数のイベント ハンドラーを 1 つのイベントに、または複数のイベントを 1 つのイベント ハンドラーにフックすることができます。
 
-2 つの形式がある **_ _hook**します。 ある COM イベント レシーバーを具体的には、ほとんどの場合、最初 (引数が 4 つ) の形式を使用することができます、 *layout_dependent*のパラメーター、 [event_receiver](../windows/attributes/event-receiver.md)属性が**false**.
+には、2つの形式があり **`__hook`** ます。 ほとんどの場合、最初の (4 つの引数) 形式を使用できます。具体的には、 [event_receiver](../windows/attributes/event-receiver.md)属性の*layout_dependent*パラメーターがである COM イベントレシーバーに対して使用し **`false`** ます。
 
-このような場合、メソッドの 1 つでイベントを発生させる前に、インターフェイスのすべてのメソッドをフックする必要はありません。イベントを処理するメソッドのみフックする必要があります。 2 番目 (引数が 2 つ) の形式を使用する **_ _hook**を COM イベント レシーバーにのみ*layout_dependent* **= true**します。
+このような場合、メソッドの 1 つでイベントを発生させる前に、インターフェイスのすべてのメソッドをフックする必要はありません。イベントを処理するメソッドのみフックする必要があります。 の2番目 (引数が2つ) の形式は、 **`__hook`** *layout_dependent* **= true**である COM イベントレシーバーに対してのみ使用できます。
 
-**_ _hook** long 型の値を返します。 ゼロ以外の戻り値は、エラーが発生したことを示します (マネージド イベントは例外をスローします)。
+**`__hook`** long 型の値を返します。 ゼロ以外の戻り値は、エラーが発生したことを示します (マネージド イベントは例外をスローします)。
 
 コンパイラは、イベントが存在するかどうかをチェックし、イベント プロシージャがデリゲート シグネチャと一致することを確認します。
 
-COM イベントを除き、 **_ _hook**と **_ _unhook**イベント レシーバーの外部で呼び出すことができます。
+COM イベントを除き、およびは **`__hook`** 、 **`__unhook`** イベントレシーバーの外部で呼び出すことができます。
 
-使用する代わりに **_ _hook** + = 演算子を使用することです。
+を使用する代わりに、 **`__hook`** + = 演算子を使用することもできます。
 
-新しい構文でマネージ イベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
+新しい構文でのマネージイベントのコーディングの詳細については、「 [event](../extensions/event-cpp-component-extensions.md)」を参照してください。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="example"></a>例
 
-参照してください[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)と[COM でのイベント処理](../cpp/event-handling-in-com.md)サンプル。
+サンプルについては、「[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)」および「 [COM でのイベント](../cpp/event-handling-in-com.md)処理」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

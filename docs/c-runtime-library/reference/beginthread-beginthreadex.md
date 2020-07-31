@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234277"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -88,7 +88,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 *arglist*<br/>
 新しいスレッドに渡される引数リストまたは**NULL**。
 
-*Security*<br/>
+*セキュリティ*<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *セキュリティ*が**NULL**の場合、ハンドルを継承することはできません。 Windows 95 アプリケーションの場合は**NULL**にする必要があります。
 
 *initflag*<br/>
@@ -109,13 +109,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="remarks"></a>解説
 
-**_Beginthread**関数は、 *start_address*でルーチンの実行を開始するスレッドを作成します。 *Start_address*のルーチンは、 **__cdecl** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、戻り値を持つことはできません。 スレッドは、ルーチンから戻ると自動的に終了します。 スレッドの詳細については、「[旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
+**_Beginthread**関数は、 *start_address*でルーチンの実行を開始するスレッドを作成します。 *Start_address*のルーチンは、 **`__cdecl`** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、戻り値を持つことはできません。 スレッドは、ルーチンから戻ると自動的に終了します。 スレッドの詳細については、「[旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
 
 **_beginthreadex**は、 **_beginthread**よりも厳密に Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API に似ています。 **_beginthreadex**は、次の方法で **_beginthread**とは異なります。
 
 - **_beginthreadex**には、 *initflag*、 *Security*、 **threadaddr**という3つの追加パラメーターがあります。 新しいスレッドは、指定されたセキュリティを使用して中断状態で作成でき、スレッド識別子である*thrdaddr*を使用してアクセスできます。
 
-- **_Beginthreadex**に渡される*start_address*のルーチンは、 **__stdcall** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、スレッドの終了コードを返す必要があります。
+- **_Beginthreadex**に渡される*start_address*のルーチンは、 **`__stdcall`** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、スレッドの終了コードを返す必要があります。
 
 - **_beginthreadex**は、-1l ではなく、エラーが発生した場合は0を返します。
 
@@ -144,7 +144,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -331,6 +331,6 @@ Counter should be 1000000; it is-> 1000000
 
 - [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread、_endthreadex](endthread-endthreadex.md)
-- [取り消し](abort.md)
+- [を呼び出してプログラム実行を終了する際、](abort.md)
 - [終了、_Exit、_exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

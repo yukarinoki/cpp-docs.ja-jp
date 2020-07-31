@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216909"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -122,7 +122,7 @@ long long int llrintl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lrint**と**llrint**は常に**double**を受け取ります。
+C++ ではオーバーロードが可能であるため、型と型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lrint**と**llrint**は常にを受け取り **`double`** ます。
 
 *X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
@@ -132,7 +132,7 @@ C++ ではオーバーロードが可能であるため、 **float**型および
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
@@ -140,4 +140,4 @@ C++ ではオーバーロードが可能であるため、 **float**型および
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>

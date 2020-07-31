@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215141"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -90,7 +90,7 @@ size_t _wcsftime_l(
 出力する文字列。
 
 *maxsize*<br/>
-文字数 (**char**または**wchar_t**) で計測される、 *strdest*バッファーのサイズ。
+*Strdest*バッファーのサイズ。文字 ( **`char`** または) で計測さ **`wchar_t`** れます。
 
 *format*<br/>
 書式指定文字列。
@@ -123,7 +123,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format*引数は1つ以上のコードで構成されます。**printf**と同様に、書式設定コードの前にはパーセント記号**%**() が付きます。 で**%** 始まらない文字は、そのまま*strdest*にコピーされます。 現在のロケールの**LC_TIME**カテゴリは、 **strftime**の出力形式に影響します。 ( **LC_TIME**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください)。**Strftime**関数と**wcsftime**関数は、現在設定されているロケールを使用します。 これらの関数の **_strftime_l**および **_wcsftime_l**バージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*Format*引数は1つ以上のコードで構成されます。**printf**と同様に、書式設定コードの前にはパーセント記号 () が付き **%** ます。 で始まらない文字は、その **%** まま*strdest*にコピーされます。 現在のロケールの**LC_TIME**カテゴリは、 **strftime**の出力形式に影響します。 ( **LC_TIME**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください)。**Strftime**関数と**wcsftime**関数は、現在設定されているロケールを使用します。 これらの関数の **_strftime_l**および **_wcsftime_l**バージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **Strftime**関数は、次の書式設定コードをサポートしています。
 
@@ -168,9 +168,9 @@ size_t _wcsftime_l(
 |**% Z**|レジストリ設定に応じて、ロケールのタイムゾーン名またはタイムゾーンの省略形。タイムゾーンが不明の場合は文字なし|
 |**%%**|パーセント記号|
 
-**Printf**関数と同様に、フラグ**#** は任意の書式指定コードにプレフィックスを付けることができます。 その場合、書式コードの説明は次のように変更します。
+**Printf**関数と同様に、 **#** フラグは任意の書式指定コードにプレフィックスを付けることができます。 その場合、書式コードの説明は次のように変更します。
 
-|[書式コード]|説明|
+|[書式コード]|意味|
 |-----------------|-------------|
 |**% #a**、 **% #A**、 **% #b**、% **#B**、 **% #g**、 **% #G**、 **% #h**、 **% #n**、 **%**#p、 **% #t**、 **% #u**、 **% #w**、 **% #X**、 **% #z、%** **#Z、****%#%**|**#** フラグは無視されます。|
 |**% #c**|ロケールに適した長い日付と時刻の表現。 たとえば、"Tuesday, March 14, 1995, 12:41:29" です。|
@@ -179,9 +179,12 @@ size_t _wcsftime_l(
 
 **% V**、 **% g**、および **% g**によって生成された ISO 8601 週と週ベースの年は、月曜日に開始する週を使用します。 week 1 は1月4日の週です。この週は、少なくとも4日を含む1週間です。 年の最初の月曜日が2、3、または4の場合、前の日は前の年の最後の週の一部になります。 その日、 **% V**は53に置き換えられ、 **% g**と **% g**の両方が前の年の数字に置き換えられます。
 
+> [!NOTE]
+> から返されたポインターを持つ関数の1つを使用すると、 `strftime` `tm` `gmtime` および指定子を使用して出力された値は `%Z` `%z` 正確ではなくなります。 これは、 `tm` C 標準で指定されている構造体には、タイムゾーン名とオフセットの情報が含まれていないためです。 代わりに、グローバル変数[ `_timezone` とを `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)使用してタイムゾーン情報が設定されます。
+
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
 |**wcsftime**|\<time.h> または \<wchar.h>|
@@ -196,7 +199,7 @@ size_t _wcsftime_l(
 
 ## <a name="see-also"></a>関連項目
 
-[国](../../c-runtime-library/locale.md) <br/>
+[ロケール](../../c-runtime-library/locale.md) <br/>
 [時間管理](../../c-runtime-library/time-management.md) <br/>
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

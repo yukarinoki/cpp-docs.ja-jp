@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222447"
 ---
-# <a name="isclass-class"></a>is_class クラス
+# <a name="is_class-class"></a>is_class クラス
 
 型がクラスであるかどうかをテストします。
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が**クラス**、 `cv-qualified` **構造体**、またはそのいずれかの形式として定義されている型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型*Ty*がまたはとして定義された型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し **`class`** **`struct`** `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -65,7 +65,7 @@ is_class<int> == false
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

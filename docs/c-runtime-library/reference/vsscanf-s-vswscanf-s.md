@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189000"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s、vswscanf_s
 
@@ -52,11 +52,11 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 格納されるデータ。
 
 *format*<br/>
-書式指定文字列。 詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
+書式指定文字列。 詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 *arglist*<br/>
 可変個引数リスト。
@@ -67,9 +67,9 @@ int vswscanf_s(
 
 *Buffer*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
-エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Vsscanf_s**関数は、 *arglist*引数リストの各引数によって指定された場所に*バッファー*からデータを読み取ります。 引数リストの引数は、*形式*の型指定子に対応する型を持つ変数へのポインターを指定します。 セキュリティレベルの低いバージョン**vsscanf**とは異なり、 **[]** で囲まれている型フィールド文字**c**、 **c**、 **s**、 **s**、または文字列コントロールセットを使用する場合は、バッファーサイズのパラメーターが必要です。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。
 
@@ -78,17 +78,17 @@ int vswscanf_s(
 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターは、 **size_t**ではなく**unsigned**型です。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
 
 *Format*引数は、入力フィールドの解釈を制御し、 **scanf_s**関数の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**vswscanf_s**は、 **vsscanf_s**のワイド文字バージョンです。**vswscanf_s**の引数はワイド文字列です。 **vsscanf_s**では、マルチバイトの16進文字は処理されません。 **vswscanf_s**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **vswscanf_s**と**vsscanf_s**は同じように動作します。
+**vswscanf_s**は**vsscanf_s**のワイド文字バージョンです。**vswscanf_s**する引数はワイド文字列です。 **vsscanf_s**では、マルチバイトの16進文字は処理されません。 **vswscanf_s**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **vswscanf_s**と**vsscanf_s**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vstscanf_s (_d)**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
+|**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
 ## <a name="requirements"></a>必要条件
 
@@ -97,7 +97,7 @@ int vswscanf_s(
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -157,5 +157,5 @@ Real:     = 15.000000
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf、vswscanf](vsscanf-vswscanf.md)<br/>

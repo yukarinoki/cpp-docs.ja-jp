@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951941"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232470"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -75,10 +75,10 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 バッファーへのポインター。
 
-*c*<br/>
+*40u-c*<br/>
 検索する文字。
 
 *count*<br/>
@@ -88,11 +88,11 @@ const wchar_t *wmemchr(
 
 成功した場合は、*バッファー*内の*c*の最初の位置へのポインターを返します。 それ以外の場合は、NULL を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`memchr`次に、 *buffer*の最初の*count*文字で c の最初の出現箇所を探します。 `wmemchr` *C*が見つかったとき、または最初の*カウント*文字をチェックしたときに停止します。
+`memchr``wmemchr`次に、 *buffer*の最初の*count*文字で*c*の最初の出現箇所を探します。 *C*が見つかったとき、または最初の*カウント*文字をチェックしたときに停止します。
 
-C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 マクロ\_CRT\_const正しい\_オーバーロードは、これらの関数の const バージョンと非 const バージョンの両方が使用可能な場合に定義されます。\_ C++のC++両方のオーバーロードに非**定数**の動作が必要な場合は、const \_\_RETURN シンボルを定義します。
+C では、これらの関数は **`const`** 最初の引数のポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 へのポインターを受け取るオーバーロードでは、 **`const`** へのポインターが返されます。非へのポインターを受け取るバージョンでは、以外のへのポインターが **`const`** **`const`** 返され **`const`** ます。 マクロ \_ CRT \_ CONST \_ 正しい \_ オーバーロードは、 **`const`** **`const`** これらの関数のバージョンと非バージョンの両方が使用可能な場合に定義されます。 **`const`** C++ の両方の c++ オーバーロードに対して非動作が必要な場合は、CONST RETURN シンボルを定義し \_ \_ ます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -101,7 +101,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 |`memchr`|\<memory.h> または \<string.h>|
 |`wmemchr`|\<wchar.h>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -138,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 String to be searched:

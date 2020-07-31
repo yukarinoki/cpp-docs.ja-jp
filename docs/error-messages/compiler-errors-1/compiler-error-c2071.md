@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd815bf90b135f65072a56911c7c4b0f054fcfec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757749"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210073"
 ---
 # <a name="compiler-error-c2071"></a>コンパイラエラー C2071
 
 '識別子' : ストレージ クラスが正しくありません。
 
-無効な[ストレージクラス](../../c-language/c-storage-classes.md)を使用して `identifier` が宣言されました。 1 つの識別子に複数のストレージ クラスが指定されている場合や、定義がストレージ クラスの宣言と互換性がない場合に、このエラーが発生することがあります。
+`identifier`が無効な[ストレージクラス](../../c-language/c-storage-classes.md)で宣言されました。 1 つの識別子に複数のストレージ クラスが指定されている場合や、定義がストレージ クラスの宣言と互換性がない場合に、このエラーが発生することがあります。
 
-この問題を解決するには、識別子の目的のストレージクラス (`static` や `extern`など) を理解し、一致するように宣言を修正します。
+この問題を解決するには、識別子の目的のストレージクラス (やなど **`static`** ) を理解 **`extern`** し、一致するように宣言を修正します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C2071 エラーが生成されます。
 
@@ -36,7 +36,7 @@ struct D {
 };
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C2071 エラーが生成されます。
 

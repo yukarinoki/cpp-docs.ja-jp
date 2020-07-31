@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-ms.openlocfilehash: 10178d2cd40af60603b908a9351b8e14d12c5570
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2949aba53ba7a2e977405cf2e03c22f3aeac646
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210034"
 ---
 # <a name="compiler-error-c2152"></a>コンパイラ エラー C2152
 
 ' identifier ': 異なる属性を持つ関数へのポインター
 
-1つの呼び出し規約 (`__cdecl`、`__stdcall`、または `__fastcall`) を持つ関数へのポインターは、別の呼び出し規約を持つ関数へのポインターに割り当てられます。
+1つの呼び出し規約 (、、または) を持つ関数へのポインター **`__cdecl`** **`__stdcall`** は、別の **`__fastcall`** 呼び出し規約を持つ関数へのポインターに割り当てられます。

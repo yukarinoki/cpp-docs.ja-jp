@@ -6,16 +6,16 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223916"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼び出し規則、パラメーター、および戻り値の型
 
-ヘルパー ルーチンのプロトタイプ:
+ヘルパー ルーチンのプロトタイプ: 
 
 ```
 FARPROC WINAPI __delayLoadHelper2(
@@ -27,9 +27,9 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>パラメーター
 
 *pidd*<br/>
-さまざまなインポート関連データのオフセット、バインディング情報のタイムスタンプ、記述子コンテンツに関する詳細情報を提供する一連の属性を格納している `ImgDelayDescr` への `const` ポインター。 現時点では、属性が1つだけ存在します。 `dlattrRva`は、記述子内のアドレスが相対仮想アドレスであることを示します。 詳細については、「 *delayimp. h*」の宣言を参照してください。
+**`const`** `ImgDelayDescr` さまざまなインポート関連データのオフセット、バインディング情報のタイムスタンプ、記述子コンテンツに関する詳細情報を提供する一連の属性を格納するへのポインター。 現在、属性は1つだけです `dlattrRva` 。これは、記述子のアドレスが相対仮想アドレスであることを示します。 詳細については、「 *delayimp. h*」の宣言を参照してください。
 
-`PCImgDelayDescr` 構造体の定義については、「[構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
+構造体の定義につい `PCImgDelayDescr` ては、「[構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
 *ppfnIATEntry*<br/>
 遅延読み込みインポートアドレステーブル (IAT) のスロットへのポインター。インポートされた関数のアドレスで更新されます。 ヘルパールーチンは、この場所に返されるのと同じ値を格納する必要があります。
@@ -50,7 +50,7 @@ FARPROC WINAPI __delayLoadHelper2(
 
 ## <a name="remarks"></a>解説
 
-ヘルパー関数の呼び出し規則は `__stdcall` です。 戻り値の型は関係ありません。したがって、FARPROC が使用されます。 この機能には C リンケージがあります。
+ヘルパー関数の呼び出し規約はです **`__stdcall`** 。 戻り値の型は関係ありません。したがって、FARPROC が使用されます。 この機能には C リンケージがあります。
 
 遅延読み込みヘルパーの戻り値は、ヘルパー ルーチンを通知フックとして使用するつもりでない限り、渡された関数ポインターの場所に保存する必要があります。 その場合、戻すべき適切な関数ポインターを探すコードが必要です。 リンカーが生成するサンク コードは、その戻り値をインポートの実際のターゲットとして扱い、そこに直接ジャンプします。
 
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ヘルパー関数について](understanding-the-helper-function.md)

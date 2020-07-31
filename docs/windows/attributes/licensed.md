@@ -1,21 +1,21 @@
 ---
-title: ライセンス済みC++ (COM 属性)
+title: ライセンス済み (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b1a356f3a7e224cb85c15b8aa725a5f0469157
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201714"
 ---
 # <a name="licensed"></a>licensed
 
-適用先の COM オブジェクトがライセンスされており、`IClassFactory2`を使用してインスタンス化する必要があることを示します。
+適用先の COM オブジェクトがライセンスされており、を使用してインスタンス化する必要があることを示し `IClassFactory2` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214761"
 
 ## <a name="remarks"></a>解説
 
-**ライセンス** C++された属性には、[ライセンス](/windows/win32/Midl/licensed)された MIDL 属性と同じ機能があります。
+**ライセンス**された C++ 属性には、[ライセンス](/windows/win32/Midl/licensed)された MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -54,14 +54,14 @@ public:
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|`coclass`|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|`coclass`|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216896"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -99,7 +99,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>戻り値
 
-**Lround**関数と**llround**関数では、最も近い**long**型または**long** **型の整数が** *x*に返されます。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Lround**関数と**llround**関数では、最も近い値 **`long`** または **`long long`** 整数が*x*に返されます。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -107,13 +107,13 @@ long long llroundl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、**浮動小数**点と**long** **double**型の値を受け取って返す**lround**または**llround**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lround**と**llround**は常に**double**を取得して返します。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す**lround**または**llround**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lround**と**llround**は常にを受け取り、を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
@@ -157,7 +157,7 @@ lroundl(-3.500000) is -4
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
 [fmod、fmodf](fmod-fmodf.md)<br/>

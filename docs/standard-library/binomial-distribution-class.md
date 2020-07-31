@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230247"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution クラス
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Int タイプ*\
-整数の結果の型は、既定**では int**になります。可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*IntType*\
+結果の型が整数である場合、は既定でに **`int`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-*ウルン*\
-均一乱数発生器エンジン。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*URNG*\
+均一乱数ジェネレーターエンジン。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、ユーザー指定の整数型の値を生成する分布、または指定がない場合は**int**型を生成する分布を表し、二項分布離散確率関数に従って分布します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、 **`int`** 二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-プロパティ メンバ`t()`と`p()`、現在格納されている分布パラメータ値*t*および*p*をそれぞれ返します。
+プロパティメンバー `t()` とは `p()` それぞれ、現在格納されている分布パラメーター値*t*と*p*を返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -96,7 +96,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[二項分布](https://go.microsoft.com/fwlink/p/?linkid=398469)」を参照してください。
 
@@ -227,11 +227,11 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
 
 分布を作成します。
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*T*\
+*\t*\
 `t` 分布パラメーター。
 
-*P*\
+*irtran-p*\
 `p` 分布パラメーター。
 
-*Parm*\
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>解説
 
 **前提条件:** `0 ≤ t` および `0.0 ≤ p ≤ 1.0`
 
-最初のコンストラクターは、格納された*p*値が*p*値を保持し、その格納された*t*値が*t*の値を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、格納された*p*値が*p*の値を保持し、格納されている*t*値が値*t*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::pラム_タイプ
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 
@@ -277,10 +277,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*T*\
+*\t*\
 `t` 分布パラメーター。
 
-*P*\
+*irtran-p*\
 `p` 分布パラメーター。
 
 *そうです*\
@@ -294,4 +294,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

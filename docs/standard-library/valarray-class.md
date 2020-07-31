@@ -28,32 +28,32 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: da7a1a8ca4aca88cda4eb3153c169629b76843da
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212023"
 ---
 # <a name="valarray-class"></a>valarray クラス
 
-クラステンプレートは、配列として格納される `Type` 型の要素のシーケンスを制御するオブジェクトを記述します。このオブジェクトは、高速な数値演算を実行するために設計されており、計算パフォーマンスのために最適化されています。
+クラステンプレートは、配列として格納される型の要素のシーケンスを制御するオブジェクトを記述します。このオブジェクトは、 `Type` 高速な数値演算を実行するように設計されており、計算パフォーマンスのために最適化されています。
 
 ## <a name="remarks"></a>解説
 
 このクラスは、順序付けられた値のセットからなる数学的な概念の表現で、要素はゼロから順に番号が付けられます。 このクラスは、[vector](../standard-library/vector-class.md) などのファースト クラスのシーケンス コンテナーがサポートする機能の一部 (すべてではない) をサポートするため、コンテナーによく似たものとして記述されます。 これは、次の2つの重要な点でクラステンプレートベクターとは異なります。
 
-- *Xarr* = cos ( *yarr*) + sin ( *zarr*) など、同じ型および長さの `valarray<Type>` オブジェクトの対応する要素間の算術演算を定義します。
+- `valarray<Type>` *Xarr* = cos ( *yarr*) + sin ( *zarr*) など、同じ型および長さのオブジェクトの対応する要素間の算術演算が多数定義されています。
 
-- これは、[演算子&#91;](#op_at)をオーバーロードすることによって、`valarray<Type>` オブジェクトの添字を表すさまざまな方法を定義します。
+- これは、 `valarray<Type>` [演算子の&#91;&#93;](#op_at)をオーバーロードすることで、オブジェクトの添字を行うさまざまな方法を定義します。
 
-クラス `Type`のオブジェクト。
+クラスのオブジェクト `Type` :
 
 - 従来の動作で、パブリックな既定のコンストラクター、デストラクター、コピー コンストラクター、および代入演算子が用意されています。
 
 - 従来の動作で、必要に応じて浮動小数点型に対して定義される算術演算子と数学関数を定義します。
 
-特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 `Type` クラスのオブジェクトに対する操作では、例外をスローすることはできません。
+特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 クラスのオブジェクトに対する操作では、 `Type` 例外がスローされない場合があります。
 
 ## <a name="members"></a>メンバー
 
@@ -73,12 +73,12 @@ ms.locfileid: "79427603"
 
 |||
 |-|-|
-|[apply](#apply)|`valarray` 内の各要素に対して指定された関数を適用します。|
+|[付ける](#apply)|`valarray` 内の各要素に対して指定された関数を適用します。|
 |[cshift](#cshift)|指定された位置数で、`valarray` 内のすべての要素を周期的にシフトします。|
-|[free](#free)|`valarray` によって使用されるメモリを解放します。|
+|[空け](#free)|`valarray` によって使用されるメモリを解放します。|
 |[max](#max)|`valarray` 内の最大要素を検索します。|
 |[min](#min)|`valarray` 内の最小要素を検索します。|
-|[resize](#resize)|必要に応じて要素を追加または削除して、`valarray` 内の要素数を指定された数に変更します。|
+|[サイズ](#resize)|必要に応じて要素を追加または削除して、`valarray` 内の要素数を指定された数に変更します。|
 |[shift](#shift)|`valarray` 内のすべての要素を指定された位置数だけシフトします。|
 |[size](#size)|`valarray` 内の要素数を検索します。|
 |[sum](#sum)|`valarray` 内にある長さが 0 以外の要素すべての合計を求めます。|
@@ -88,24 +88,24 @@ ms.locfileid: "79427603"
 
 |||
 |-|-|
-|[operator!](#op_not)|`NOT` 内の各要素の論理 `valarray` 値を取得する、単項演算子。|
-|[operator%=](#op_mod_eq)|指定された `valarray` または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。|
+|[operator!](#op_not)|`valarray` 内の各要素の論理 `NOT` 値を取得する、単項演算子。|
+|[% = 演算子](#op_mod_eq)|指定された `valarray` または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。|
 |[operator&=](#op_and_eq)|配列内の要素のビットごとの `AND` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
 |[operator>>=](#op_gt_gt_eq)|`valarray` オペランドの各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の `valarray` で指定された要素ごとの量だけ右にシフトさせます。|
 |[operator<<=](#op_lt_lt_eq)|`valarray` オペランドの各要素のビットを、指定された位置数だけ左にシフトさせるか、2 番目の `valarray` で指定された要素ごとの量だけ左にシフトさせます。|
-|[operator*=](#op_star_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` に対して乗算します。|
-|[operator+](#op_add)|`valarray` 内の各要素に正符号を適用する単項演算子。|
-|[operator+=](#op_add_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` に対して加算します。|
-|[operator-](#operator-)|`valarray` 内の各要素に負符号を適用する単項演算子。|
+|[operator * =](#op_star_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` に対して乗算します。|
+|[演算子 +](#op_add)|`valarray` 内の各要素に正符号を適用する単項演算子。|
+|[演算子 + =](#op_add_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` に対して加算します。|
+|[operator](#operator-)|`valarray` 内の各要素に負符号を適用する単項演算子。|
 |[operator-=](#operator-_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` から減算します。|
 |[operator/=](#op_div_eq)|オペランド `valarray` を、指定された `valarray` の要素か要素型の値で要素ごとに除算します。|
-|[operator=](#op_eq)|値が直接指定されているか、または他の `valarray` か `valarray`、`slice_array`、`gslice_array`、や `mask_array` の一部として値が指定されている `indirect_array` に要素を代入します。|
+|[operator =](#op_eq)|値が直接指定されているか、または他の `valarray` か `slice_array`、`gslice_array`、`mask_array`、や `indirect_array` の一部として値が指定されている `valarray` に要素を代入します。|
 |[operator&#91;&#93;](#op_at)|指定されたインデックスまたは指定されたサブセットにある、要素またはその値への参照を返します。|
-|[operator^=](#op_xor_eq)|配列と、指定された valarray か要素型の値のどちらか一方との間で行われた、要素ごとの排他的論理 OR 演算子 (`XOR`) を取得します。|
+|[演算子 ^ =](#op_xor_eq)|配列と、指定された valarray か要素型の値のどちらか一方との間で行われた、要素ごとの排他的論理 OR 演算子 (`XOR`) を取得します。|
 |[operator&#124;=](#op_or_eq)|配列内の要素のビットごとの `OR` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
-|[operator~](#op_dtor)|`NOT` 内の各要素のビットごとの `valarray` 値を取得する単項演算子。|
+|[演算子 ~](#op_dtor)|`valarray` 内の各要素のビットごとの `NOT` 値を取得する単項演算子。|
 
-## <a name="apply"></a>付ける
+## <a name="apply"></a><a name="apply"></a>付ける
 
 valarray 内の各要素に対して、指定された関数を適用します。
 
@@ -117,10 +117,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Func (型)* \
+*_Func (型)*\
 オペランド valarray の各要素に適用する関数オブジェクト。
 
-*_Func (Const 型 &)* \
+*_Func (const 型&)*\
 オペランド valarray の各要素に適用する const の関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -129,7 +129,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、> 型の[valarray](../standard-library/valarray-class.md) **\<型**のオブジェクトを返します。長さ[サイズ](#size)*は、各要素が*`_Func((*this)[I])`したものです。
+このメンバー関数は、長さサイズのクラス[valarray](../standard-library/valarray-class.md)のオブジェクトを返し **\<Type>** ます。このオブジェクトは、それぞれの要素が含ま[size](#size)*れて* `_Func((*this)[I])` います。
 
 ### <a name="example"></a>例
 
@@ -181,7 +181,7 @@ The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```
 
-## <a name="cshift"></a>cshift
+## <a name="cshift"></a><a name="cshift"></a>cshift
 
 指定された位置数で、valarray 内のすべての要素を循環的にシフトします。
 
@@ -191,7 +191,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*\
+*数*\
 要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
@@ -200,7 +200,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="remarks"></a>解説
 
-正の値の場合は、要素を周期的に左の*カウント* *でシフトし*ます。
+正の値の場合は、要素を周期的に左の*カウント**でシフトし*ます。
 
 負の値の*カウント*は、要素を周期的に右に*カウント*します。
 
@@ -259,7 +259,7 @@ The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```
 
-## <a name="free"></a>空け
+## <a name="free"></a><a name="free"></a>空け
 
 valarray によって使用されるメモリを解放します。
 
@@ -278,7 +278,7 @@ v = valarray<T>();
 // equivalent to v.free()
 ```
 
-## <a name="max"></a>制限
+## <a name="max"></a><a name="max"></a>制限
 
 valarray 内の最大要素を検索します。
 
@@ -292,7 +292,7 @@ Type max() const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、**演算子\<** または **> 演算子**をクラス `Type`の要素のペアの間に適用して値を比較します。このとき、要素 `Type`に演算子を指定する必要があります。
+このメンバー関数は、クラスの要素のペアの間に**演算子 \<** or **operator> **を適用することによって値を比較し `Type` ます。このとき、要素には演算子を指定する必要があり `Type` ます。
 
 ### <a name="example"></a>例
 
@@ -331,7 +331,7 @@ The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
 The largest element in the valarray is: 13.
 ```
 
-## <a name="min"></a>」
+## <a name="min"></a><a name="min"></a> 分
 
 valarray 内の最小要素を検索します。
 
@@ -345,7 +345,7 @@ Type min() const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、**演算子\<** または **> 演算子**をクラス `Type`の要素のペアの間に適用して値を比較します。このとき、要素 `Type`に演算子を指定する必要があります。
+このメンバー関数は、クラスの要素のペアの間に**演算子 \<** or **operator> **を適用することによって値を比較し `Type` ます。このとき、要素には演算子を指定する必要があり `Type` ます。
 
 ### <a name="example"></a>例
 
@@ -383,7 +383,7 @@ The smallest element in the valarray is: -9.
 */
 ```
 
-## <a name="op_not"></a>operator!
+## <a name="operator"></a><a name="op_not"></a>operator!
 
 valarray 内の各要素の論理 **NOT** 値を取得する、単項演算子。
 
@@ -399,7 +399,7 @@ valarray<bool> operator!() const;
 
 論理演算 **NOT** は要素を否定します。これはすべてのゼロを 1 に変換し、すべての非ゼロ値を 1 と見なしてそれをゼロに変換するからです。 ブール値から成る返される valarray は、オペランド valarray と同じサイズです。
 
-また、ビットごとの**not**[valarray:: operator ~](#op_dtor)もあります。これは、valarray の**char**および**int**要素のバイナリ表現内の個々のビットのレベルで否定されます。
+また、 **NOT**valarray の要素と要素のバイナリ表現内の個々のビットのレベルを否定する、ビットごとの not[valarray:: operator ~](#op_dtor)もあります。 **`char`** **`int`**
 
 ### <a name="example"></a>例
 
@@ -442,7 +442,7 @@ The element-by-element result of the logical NOT operator! is the
 valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="op_mod_eq"></a>% = 演算子
+## <a name="operator"></a><a name="op_mod_eq"></a>% = 演算子
 
 指定された valarray または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。
 
@@ -454,7 +454,7 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>演算子&amp;=
+## <a name="operatoramp"></a><a name="op_and_eq"></a>operator&amp;=
 
 配列内の要素と、指定された valarray の対応する要素か要素型の値のどちらか一方とのビット演算 **AND** を取得します。
 
@@ -521,18 +521,18 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
-オペランド valarray を使用して論理 `AND` によって要素ごとに結合する、valarray またはオペランド valarray と同一の要素型の値。
+*そうです*\
+オペランド valarray と論理によって要素ごとに結合される、valarray またはオペランド valarray と同一の要素型の値 `AND` 。
 
 ### <a name="return-value"></a>戻り値
 
-オペランド valarray の要素ごとの論理 `AND` を要素と*して持つ*valarray。
+`AND`オペランド valarray の要素ごとの論理*和を要素*とする valarray。
 
 ### <a name="remarks"></a>解説
 
-ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **longdouble**、 **void**、 **bool**など、より複雑なデータ型では使用できません。
+ビットごとの演算は、およびデータ型とバリアントのビットを操作するためにのみ使用できます。また、、 **`char`** **`int`** **`float`** **`double`** 、 **longdouble**、 **`void`** 、 **`bool`** など、より複雑なデータ型では使用できません。
 
-ビットごとの AND は論理 `AND` と同じ真理テーブルを持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット*b*1 と*b*2 を指定した*場合、両方のビット*が true の場合、b 1 `AND` *b*2 が**true**になります。1つ以上のが false の場合は**false** 。
+ビットごとの AND は論理と同じ真理テーブルを持ち `AND` ますが、個々のビットのレベルでデータ型に適用されます。 ビット*b*1 と*b*2 では、両方のビットが true の場合、 *b*1 `AND` *b*2 はになり **`true`** ます。 **`false`** 少なくとも1つのが false の場合はです。
 
 ### <a name="example"></a>例
 
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>演算子&gt;&gt;=
+## <a name="operatorgtgt"></a><a name="op_gt_gt_eq"></a>operator&gt;&gt;=
 
 valarray オペランドの各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ右にシフトさせます。
 
@@ -594,7 +594,7 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>演算子&lt;&lt;=
+## <a name="operatorltlt"></a><a name="op_lt_lt_eq"></a>operator&lt;&lt;=
 
 valarray オペランドの各要素のビットを、指定された位置数だけ左にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ左にシフトさせます。
 
@@ -665,7 +665,7 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -726,7 +726,7 @@ on the operand array is the valarray:
 ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a>operator * =
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray に対して乗算します。
 
@@ -738,7 +738,7 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray に対して要素ごとに乗算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -792,7 +792,7 @@ valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 */
 ```
 
-## <a name="op_add"></a>演算子 +
+## <a name="operator"></a><a name="op_add"></a>演算子 +
 
 valarray 内の各要素に正符号を適用する単項演算子。
 
@@ -845,7 +845,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 ```
 
-## <a name="op_add_eq"></a>演算子 + =
+## <a name="operator"></a><a name="op_add_eq"></a>演算子 + =
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray に対して加算します。
 
@@ -857,7 +857,7 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray に対して要素ごとに加算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -912,7 +912,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a>operator
+## <a name="operator-"></a><a name="operator-"></a>operator
 
 valarray 内の各要素に負符号を適用する単項演算子。
 
@@ -965,7 +965,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 ```
 
-## <a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray から減算します。
 
@@ -977,7 +977,7 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray から要素ごとに減算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1032,7 +1032,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a>operator/=
 
 オペランド valarray を、指定された valarray の要素か要素型の値で要素ごとに除算します。
 
@@ -1044,7 +1044,7 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1099,7 +1099,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 valarray に要素を代入します。その値は、直接、または他の valarray の一部として指定することも、slice_array、gslice_array、mask_array、または indirect_array で指定することもできます。
 
@@ -1121,7 +1121,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray にコピーされる valarray。
 
 *val*\
@@ -1209,7 +1209,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 
 ```
 
-## <a name="op_at"></a>演算子 []
+## <a name="operator"></a><a name="op_at"></a>演算子 []
 
 指定されたインデックスまたは指定されたサブセットにある、要素またはその値への参照を返します。
 
@@ -1258,15 +1258,15 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー演算子は、 <strong>\*</strong>によって制御される要素のシーケンスを選択するいくつかの方法を提供するためにオーバーロードされています。 5 つのメンバー演算子の最初のグループは、[operator=](#op_eq) (および他の代入演算子) のさまざまなオーバーロードと共に機能し、制御されるシーケンスの選択的置換 (スライス) を可能にします。 選択された要素は存在していなければなりません。
+このメンバー演算子は、 <strong> \* この</strong>によって制御されている要素のシーケンスを選択するいくつかの方法を提供するためにオーバーロードされています。 5 つのメンバー演算子の最初のグループは、[operator=](#op_eq) (および他の代入演算子) のさまざまなオーバーロードと共に機能し、制御されるシーケンスの選択的置換 (スライス) を可能にします。 選択された要素は存在していなければなりません。
 
-1 または 2 に定義された [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使用してコンパイルすると、valarray の境界外の要素にアクセスしようとした場合にランタイム エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md) 」を参照してください。
+1 または 2 に定義された [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使用してコンパイルすると、valarray の境界外の要素にアクセスしようとした場合にランタイム エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
 ### <a name="example"></a>例
 
 演算子の宣言と使用の方法を示す例については、[slice::slice](../standard-library/slice-class.md#slice) と [gslice::gslice](../standard-library/gslice-class.md#gslice) の例を参照してください。
 
-## <a name="op_xor_eq"></a>演算子 ^ =
+## <a name="operator"></a><a name="op_xor_eq"></a>演算子 ^ =
 
 配列と、指定された valarray か要素型の値のどちらか一方との間で行われた、要素ごとの排他的論理 OR 演算子 (**XOR**) を取得します。
 
@@ -1278,7 +1278,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray との排他的論理 **XOR** により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1287,7 +1287,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="remarks"></a>解説
 
-排他的論理 or ( **XOR**と呼ばれます) には、次のセマンティクスがあります。指定された要素*e*1 と*e*2, *e*1 **XOR** *e*2 は、要素の1つだけが true の場合に**true**になります。両方の要素が false の場合、または両方の要素が true の場合は**false** 。
+排他的論理 or ( **XOR**とも呼ばれます) には、次のセマンティクスがあります。指定された要素*e*1 と*e*2、 *e*1 **XOR** *e*2 は、 **`true`** 要素の1つだけが true の場合は、両方の要素が false の場合は、両方の要素が true の場合はです。 **`false`**
 
 ### <a name="example"></a>例
 
@@ -1341,7 +1341,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
 ```
 
-## <a name="op_or_eq"></a>operator&#124;=
+## <a name="operator124"></a><a name="op_or_eq"></a>operator&#124;=
 
 配列内の要素と、指定された valarray の対応する要素か要素型の値のどちらか一方とのビット演算 `OR` を取得します。
 
@@ -1353,18 +1353,18 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 オペランド valarray とのビット演算 `OR` により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
-オペランド valarray の要素ごとのビットごとの `OR` を要素*として*持つ valarray。
+`OR`オペランド valarray を*right*で要素ごとにビットごとに要素として持つ valarray。
 
 ### <a name="remarks"></a>解説
 
-ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **longdouble**、 **void**、 **bool**など、より複雑なデータ型では使用できません。
+ビットごとの演算は、およびデータ型とバリアントのビットを操作するためにのみ使用できます。また、、 **`char`** **`int`** **`float`** **`double`** 、 **longdouble**、 **`void`** 、 **`bool`** など、より複雑なデータ型では使用できません。
 
-ビット演算 `OR` は論理 `OR` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット*b*1 と*b*2 が指定されている場合、b 1 `OR` *b*2*は、少なく*とも1つのビットが true の場合に**true**になります。両方のビットが false の場合は**false** 。
+ビット演算 `OR` は論理 `OR` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット*b*1 と*b*2 が指定されている場合、1 *b* `OR` *b* **`true`** つ以上のビットが true の場合、b 1 b 2 はになり **`false`** ます。両方のビットが false の場合はです。
 
 ### <a name="example"></a>例
 
@@ -1424,9 +1424,9 @@ operator|= is the valarray:
 ( 1 0 1 3 3 4 7 6 7 9 ).
 ```
 
-## <a name="op_dtor"></a>演算子 ~
+## <a name="operator"></a><a name="op_dtor"></a>演算子 ~
 
-Valarray 内の各要素のビットごとの `NOT` 値を取得する単項演算子。
+`NOT`Valarray 内の各要素のビットごとの値を取得する単項演算子。
 
 ```cpp
 valarray<Type> operator~() const;
@@ -1434,13 +1434,13 @@ valarray<Type> operator~() const;
 
 ### <a name="return-value"></a>戻り値
 
-オペランド valarray の要素値のビットごとの `NOT` であるブール値の valarray。
+`NOT`オペランド valarray の要素値のビットごとのブール値の valarray。
 
 ### <a name="remarks"></a>解説
 
-ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **longdouble**、 **void**、 **bool**などのより複雑なデータ型では使用できません。
+ビットごとの演算は、およびデータ型とバリアントのビットを操作するためにのみ使用できます。また、、 **`char`** **`int`** **`float`** **`double`** 、 **longdouble**、 **`void`** 、 **`bool`** またはその他の複雑なデータ型には使用できません。
 
-ビット演算 `NOT` は論理 `NOT` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット *b* がある場合、*b* が false なら、~ *b* は true です。*b* が true なら false になります。 論理**not**[演算子です。](#op_not) 要素レベルで適用され、すべての非ゼロ値を**true**としてカウントし、結果はブール値の valarray になります。 これに対し、ビットごとの `NOToperator~`は、ビットごとの演算の結果に応じて、0または1以外の値の valarray になる場合があります。
+ビット演算 `NOT` は論理 `NOT` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット *b* がある場合、*b* が false なら、~ *b* は true です。*b* が true なら false になります。 論理**not**[演算子です。](#op_not) 要素レベルで適用され、すべての非ゼロ値をとしてカウントし **`true`** ます。結果はブール値の valarray になります。 これに対し、ビットごとの演算では、 `NOToperator~` ビットごとの演算の結果に応じて、0または1以外の値の valarray が発生する可能性があります。
 
 ### <a name="example"></a>例
 
@@ -1523,7 +1523,7 @@ is the negative of the original elements the
 valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
 ```
 
-## <a name="resize"></a>サイズ
+## <a name="resize"></a><a name="resize"></a>サイズ
 
 valarray 内の要素の数を指定された数に変更します。
 
@@ -1599,7 +1599,7 @@ The valarray contains ( 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 ).
 The number of elements in the resized valarray is: 15.
 ```
 
-## <a name="shift"></a>転換
+## <a name="shift"></a><a name="shift"></a>転換
 
 valarray 内のすべての要素を指定された位置数だけシフトします。
 
@@ -1609,7 +1609,7 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*\
+*数*\
 要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
@@ -1674,7 +1674,7 @@ The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a>幅
 
 valarray 内の要素の数を調べます。
 
@@ -1751,7 +1751,7 @@ the operand valarray va2(12) is now: ( 0 1 2 3 4 5 6 7 8 9 10 11 ).
 The number of elements in the valarray va2 is still: 12.
 ```
 
-## <a name="sum"></a>求め
+## <a name="sum"></a><a name="sum"></a>求め
 
 valarray 内にある長さが 0 以外の要素すべての合計を求めます。
 
@@ -1765,7 +1765,7 @@ Type sum() const;
 
 ### <a name="remarks"></a>解説
 
-長さが1より大きい場合、メンバー関数は、クラス `Type`の要素のペアの間に `operator+=` を適用することによって値を合計に追加します。この演算子は `Type`型の要素に対して指定する必要があります。
+長さが1より大きい場合、メンバー関数は、クラスの要素のペアの間にを適用することによって値を合計に追加し `operator+=` `Type` ます。この演算子は、型の要素に対して指定する必要があり `Type` ます。
 
 ### <a name="example"></a>例
 
@@ -1801,7 +1801,7 @@ The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
 ```
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a>フォト
 
 2 つの `valarray` の要素を交換します。
 
@@ -1811,14 +1811,14 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 交換する要素を提供する `valarray`。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行されます。例外がスローされることはなく、参照や、ポインター、2 つの被制御シーケンス内の要素を指定する反復子が無効にされることもありません。
+このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* この処理は一定時間に実行されます。例外がスローされることはなく、参照や、ポインター、2 つの被制御シーケンス内の要素を指定する反復子が無効にされることもありません。
 
-## <a name="valarray"></a>valarray
+## <a name="valarray"></a><a name="valarray"></a>valarray
 
 特定のサイズの valarray や特定の値の要素を持つ valarray を構築します。また、他の valarray のコピーやサブセットとして valarray を構築します。
 
@@ -1860,16 +1860,16 @@ valarray(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*\
+*数*\
 valarray 内の要素の数。
 
 *Val*\
 valarray 内の要素の初期化に使用する値。
 
-*Ptr*\
+*ポインター*\
 valarray 内の要素の初期化に使用する値へのポインター。
 
-*右*\
+*そうです*\
 新しい valarray を初期化するための既存の valarray。
 
 *SliceArray*\
@@ -1878,10 +1878,10 @@ valarray 内の要素の初期化に使用する値へのポインター。
 *GsliceArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ gslice_array。
 
-*Maskarray*\
+*MaskArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ mask_array。
 
-*Indarray*\
+*IndArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ indirect_array。
 
 *IList*\
@@ -1893,11 +1893,11 @@ valarray 内の要素の初期化に使用する値へのポインター。
 
 - 明示的な `valarray(size_t Count)` の場合、各要素は既定のコンストラクターで初期化されます。
 
-- `valarray(const Type& Val, Count)`の場合、各要素は*Val*で初期化されます。
+- で `valarray(const Type& Val, Count)` は、各要素は*Val*で初期化されます。
 
 - `valarray(const Type* Ptr, Count)` の場合、位置 `I` にある要素が `Ptr`[`I`] で初期化されます。
 
-他の各コンストラクターは、オブジェクトを、引数に指定されたサブセットによって決定される valarray\<Type> オブジェクトに初期化します。
+残りの各コンストラクターは、 \<Type> 引数で指定されたサブセットによって決定される valarray オブジェクトにオブジェクトを初期化します。
 
 最後のコンストラクターは、その前に示したコンストラクターと同じですが、[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -1954,7 +1954,7 @@ va[slice( 2, 4, 3)] = ( 0 0 0 )
 1 2 3 4
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 valarray に格納された要素の型を表す型。
 
@@ -1964,7 +1964,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレート パラメーター `Type`のシノニムです。
+この型は、テンプレート パラメーター `Type` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

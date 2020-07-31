@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224592"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread クラス
 
@@ -32,9 +32,9 @@ class sync_per_thread
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|[説明]|
 |---------------|-----------------|
-|*Cache*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
 
 ## <a name="remarks"></a>解説
 
@@ -44,17 +44,17 @@ class sync_per_thread
 
 |メンバー関数|説明|
 |-|-|
-|[割り当てる](#allocate)|メモリのブロックを割り当てます。|
-|[解放](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
+|[allocate](#allocate)|メモリのブロックを割り当てます。|
+|[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<allocators>
+**ヘッダー:**\<allocators>
 
 **名前空間:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::割り当て
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: allocate
 
 メモリのブロックを割り当てます。
 
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|[説明]|
 |---------------|-----------------|
 |*count*|割り当てられる配列内の要素の数。|
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 メンバー関数は、呼び出しの結果を、現在のスレッドに属しているキャッシュ オブジェクトの `cache::allocate(count)` に返します。 現在のスレッドにキャッシュ オブジェクトが割り当てられていない場合は、最初にキャッシュ オブジェクトを割り当ててください。
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d割り当て
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d eallocate
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -82,16 +82,16 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|[説明]|
 |---------------|-----------------|
-|*Ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
 |*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
 ### <a name="remarks"></a>解説
 
 メンバー関数は、現在のスレッドに属しているキャッシュ オブジェクトの `deallocate` を呼び出します。 現在のスレッドにキャッシュ オブジェクトが割り当てられていない場合は、最初にキャッシュ オブジェクトを割り当ててください。
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::等しい
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: equals
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -101,17 +101,17 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|[説明]|
 |---------------|-----------------|
-|*Cache*|同期フィルターのキャッシュ オブジェクト。|
+|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
 |*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-このオブジェクトまたは現在のスレッドの*Other*に対してキャッシュ オブジェクトが割り当てられていない場合は**false。** そうでない場合は、`operator==` を 2 つのキャッシュ オブジェクトに割り当てた結果を返します。
+**`false`** このオブジェクトに対して、または*現在のスレッドでキャッシュ*オブジェクトが割り当てられていない場合は。 そうでない場合は、`operator==` を 2 つのキャッシュ オブジェクトに割り当てた結果を返します。
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[\<アロケーター>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

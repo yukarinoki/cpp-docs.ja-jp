@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185335"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214387"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>コンパイラの警告 (レベル 4) C4437
 
@@ -19,21 +19,21 @@ ms.locfileid: "80185335"
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-コンパイラで、次の特性を持つ `dynamic_cast` 操作が検出されました。
+コンパイラで、 **`dynamic_cast`** 次の特性を持つ操作が検出されました。
 
 - キャストは、基底クラスポインターから派生クラスポインターへのキャストです。
 
 - 派生クラスは、実質的に基底クラスを継承します。
 
-- 派生クラスには、仮想ベースの `vtordisp` フィールドがありません。
+- 派生クラスに `vtordisp` 仮想ベースのフィールドがありません。
 
 - キャストが、派生クラスのコンストラクターまたはデストラクターで見つからないか、派生クラスからさらに継承されるクラス (それ以外の場合はコンパイラ警告 C4436 が発行されます) にあります。
 
-警告は、部分的に構築されたオブジェクトで動作している場合に、`dynamic_cast` が正しく実行されない可能性があることを示します。  この状況は、外側の関数が、警告で指定された派生クラスを継承するクラスのコンストラクターまたはデストラクターから呼び出された場合に発生します。  警告で指定された派生クラスがそれ以上派生しない場合、またはオブジェクトの構築時または破棄時に外側の関数が呼び出されない場合は、警告を無視できます。
+警告は、が **`dynamic_cast`** 部分的に構築されたオブジェクトで動作している場合に、が正しく動作しない可能性があることを示します。  この状況は、外側の関数が、警告で指定された派生クラスを継承するクラスのコンストラクターまたはデストラクターから呼び出された場合に発生します。  警告で指定された派生クラスがそれ以上派生しない場合、またはオブジェクトの構築時または破棄時に外側の関数が呼び出されない場合は、警告を無視できます。
 
 ## <a name="example"></a>例
 
-次の例では、C4437 を生成し、不足している `vtordisp` フィールドから発生するコード生成の問題を示します。
+次の例では、C4437 を生成し、不足しているフィールドから発生するコード生成の問題を示し `vtordisp` ます。
 
 ```cpp
 // C4437.cpp
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

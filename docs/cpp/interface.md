@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233718"
 ---
 # <a name="__interface"></a>__interface
 
 **Microsoft 固有の仕様**
 
-Microsoft C++インターフェイスは、次のように定義できます。
+Microsoft C++ インターフェイスは、次のように定義できます。
 
 - 0 個以上の基本インターフェイスから継承できます。
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>解説
 
-これらC++の規則で[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)を実装することもできますが、 **__interface**適用されます。
+C++ の[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)は、これらの規則で実装できますが、 **`__interface`** 適用されます。
 
 次にインターフェイスの定義例を示します。
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface**は、 [novtable](../cpp/novtable.md) **__declspec**修飾子を意味します。
+**`__interface`**[novtable](../cpp/novtable.md) **`__declspec`** 修飾子を意味します。
 
 ## <a name="example"></a>例
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [インターフェイス属性](../windows/attributes/interface-attributes.md)

@@ -6,16 +6,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212177"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 関数
 
-## <a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>解説
 
-現在の `new_handler`を返します。
+現在のを返し `new_handler` ます。
 
-## <a name="launder"></a>launder
+## <a name="launder"></a><a name="launder"></a>launder
 
 ```cpp
 template <class T>
@@ -34,12 +34,12 @@ template <class T>
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*\
+*ポインター*\
 *T*に似た型のオブジェクトを保持する、メモリ内のバイトのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-X を指す*T\** 型の値。
+X を指す*T \* *型の値。
 
 ### <a name="remarks"></a>解説
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a>nothrow
 
-**Nothrow**バージョンの**new**および**delete**の引数として使用されるオブジェクトを提供します。
+およびのバージョンの引数として使用されるオブジェクトを提供し **`nothrow`** **`new`** **`delete`** ます。
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -73,9 +73,9 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="example"></a>例
 
-[ を関数パラメーターとして使用する方法の例については、「](../standard-library/new-operators.md#op_new)operator new[」および「](../standard-library/new-operators.md#op_new_arr)operator new&#91;&#93;`std::nothrow_t`」を参照してください。
+`std::nothrow_t` を関数パラメーターとして使用する方法の例については、[operator new](../standard-library/new-operators.md#op_new) および [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) に関する記事をご覧ください。
 
-## <a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
 
 メモリを割り当てようとしたときに**operator new**が失敗したときに呼び出されるユーザー関数をインストールします。
 
@@ -86,7 +86,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>パラメーター
 
 *Pnew*\
-インストールする `new_handler`。
+`new_handler`インストールする。
 
 ### <a name="return-value"></a>戻り値
 

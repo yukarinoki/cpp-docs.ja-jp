@@ -9,23 +9,23 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-ms.openlocfilehash: f16e466ebb5f31231411eaaf9a1a85bfcc46a34d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 781b60c8973593039c0fdfa2f457170e95048597
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192536"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>インライン アセンブリでの C++ 関数の呼び出し
 
 **Microsoft 固有の仕様**
 
-`__asm` ブロックは、オーバーロードされC++ていないグローバル関数のみを呼び出すことができます。 オーバーロードされたグローバルC++関数またはC++メンバー関数を呼び出すと、コンパイラはエラーを発行します。
+ブロックは、 **`__asm`** オーバーロードされていないグローバル C++ 関数のみを呼び出すことができます。 オーバーロードされたグローバル C++ 関数または C++ メンバー関数を呼び出すと、コンパイラはエラーを発行します。
 
-**Extern "C"** リンケージで宣言されたすべての関数を呼び出すこともできます。 これにより、すべての標準C++ヘッダーファイルで**extern "C"** リンケージを持つライブラリ関数が宣言されるため、プログラム内の `__asm` ブロックで C ライブラリ関数を呼び出すことができます。
+**Extern "C"** リンケージで宣言されたすべての関数を呼び出すこともできます。 これにより、 **`__asm`** すべての標準ヘッダーファイルで**Extern "C"** リンケージを持つライブラリ関数が宣言されるため、C++ プログラム内のブロックで c ライブラリ関数を呼び出すことができます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>
+[インラインアセンブラー](../../assembler/inline/inline-assembler.md)<br/>

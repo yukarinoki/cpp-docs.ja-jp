@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365612"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186361"
 ---
 # <a name="single-inheritance"></a>単一継承
 
 継承の一般的な形態である "単一継承" では、クラスの持つ基底クラスは 1 つだけです。 次の図に示す関係を考えます。
 
-![基本の単一&#45;継承グラフ](../cpp/media/vc38xj1.gif "基本の単一&#45;継承グラフ") <br/>
+![基本的な単一&#45;継承グラフ](../cpp/media/vc38xj1.gif "基本的な単一&#45;継承グラフ") <br/>
 単純な単一継承のグラフ
 
 図における一般から特殊への流れに注意してください。 ほとんどのクラス階層のデザインにあるもう 1 つの一般的な属性は、派生クラスが基底クラスと "kind of" (種類) 関係を持つことです。 図では、`Book` は `PrintedDocument` の 1 種であり、`PaperbackBook` は `book` の 1 種です。
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 各クラスが派生される基底クラスは、派生クラスを宣言する前に宣言されています。 基底クラスについて前方参照の宣言を指定するだけでは十分ではありません。完全な宣言である必要があります。
 
-前の例では、アクセス指定子**public**が使用されています。 パブリック、プロテクト、およびプライベート継承の意味については、「[メンバー アクセス制御](../cpp/member-access-control-cpp.md)」を参照してください。
+前の例では、アクセス指定子 **`public`** が使用されています。 Public、protected、および private の継承の意味については、「[メンバー-Access Control](../cpp/member-access-control-cpp.md) 」を参照してください。
 
 クラスは、次の図に示すように、多くの特定のクラスの基底クラスとして機能します。
 
@@ -154,4 +154,4 @@ int main() {
 `Document` クラスには `PrintNameOf` 関数があるため、ライブラリの各ブックの名前を出力できますが、ドキュメントの型に固有の情報の一部 (`Book` のページ番号、`HelpFile` のバイト数など) が省略される可能性があります。
 
 > [!NOTE]
-> 基底クラスで `PrintNameOf` のような関数の実装を強制するのは、多くの場合、最適なデザインではありません。 [仮想関数は](../cpp/virtual-functions.md)、他の設計の選択肢を提供しています。
+> 基底クラスで `PrintNameOf` のような関数の実装を強制するのは、多くの場合、最適なデザインではありません。 [仮想関数](../cpp/virtual-functions.md)は、他の設計上の代替手段を提供します。

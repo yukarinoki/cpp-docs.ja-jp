@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199046"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220055"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>コンパイラの警告 (レベル 3) C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-ただし、この警告は、クラスのインスタンスを使用して**静的**メンバー関数を呼び出す場合にも発生します。
+ただし、この警告は、 **`static`** クラスのインスタンスを使用してメンバー関数を呼び出す場合にも発生します。
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-この場合、コンパイラは、**静的**関数にアクセスするために `si` に関する情報を使用しますが、**静的**関数を呼び出すためにクラスのインスタンスは必要ありません。そのため、警告が出てきます。 この警告を解決するには、次のようにします。
+この場合、コンパイラはに関する情報を使用して関数にアクセスします `si` **`static`** が、関数を呼び出すためにクラスのインスタンスは必要ありません。したがって、警告が表示され **`static`** ます。 この警告を解決するには、次のようにします。
 
-- コンストラクターを追加します。コンパイラは、`func`への呼び出しで `si` のインスタンスを使用します。
+- コンストラクターを追加します。コンパイラは、の呼び出しでのインスタンスを使用し `si` `func` ます。
 
-- `func`の定義から**static**キーワードを削除します。
+- **`static`** の定義からキーワードを削除 `func` します。
 
-- **静的**関数を明示的に呼び出す: `int y = S::func();`します。
+- 関数を **`static`** 明示的に呼び出し `int y = S::func();` ます。

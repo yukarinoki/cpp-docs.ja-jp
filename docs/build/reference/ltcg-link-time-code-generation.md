@@ -1,6 +1,7 @@
 ---
 title: /LTCG (リンク時のコード生成)
-ms.date: 05/16/2019
+description: MSVC リンカーオプション/LTCG は、プログラム全体の最適化のためのリンク時のコード生成を可能にします。
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCLinkerTool.LinkTimeCodeGeneration
 - VC.Project.VCConfiguration.WholeProgramOptimization
@@ -13,88 +14,88 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400627"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180800"
 ---
-# <a name="ltcg-link-time-code-generation"></a>/LTCG (リンク時のコード生成)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(リンク時のコード生成)
 
-**/LTCG** を使用して、プログラム全体の最適化を実行するか、またはガイド付き最適化のプロファイル (PGO) インストルメンテーションを作成し、トレーニングを実行して、ガイド付き最適化のプロファイルによるビルドを作成します。
+を使用すると、 **`/LTCG`** プログラム全体の最適化を実行したり、ガイド付き最適化のプロファイル (pgo) インストルメンテーションを作成したり、トレーニングを実行したり、ガイド付き最適化ビルドを作成したりすることができます。
 
 ## <a name="syntax"></a>構文
 
-> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
+> **`/LTCG`**[**`:`**{**`INCREMENTAL`**|**`NOSTATUS`**|**`STATUS`**|**`OFF`**}]
 
 これらのオプションは、Visual Studio 2015 から非推奨とされます。
 
-> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
+> **`/LTCG:`**{**`PGINSTRUMENT`**|**`PGOPTIMIZE`**|**`PGUPDATE`**}
 
 ### <a name="arguments"></a>引数
 
-**INCREMENTAL**<br/>
-(省略可能) プロジェクト全体ではなく、編集によって影響を受けたファイル セットにのみ、リンカーによってプログラム全体の最適化またはリンク時のコード生成 (LTCG) を適用することを指定します。 既定では、 **/LTCG** が指定されるとこのフラグは設定されず、プログラム全体の最適化を使用してプロジェクト全体がリンクされます。
+**`INCREMENTAL`**<br/>
+Optionalリンカーが、プロジェクト全体ではなく、編集の影響を受けるファイルに対して、プログラム全体の最適化またはリンク時のコード生成 (LTCG) のみを適用するように指定します。 を指定した場合、既定では、このフラグは設定されません **`/LTCG`** 。また、プロジェクト全体がプログラム全体の最適化を使用してリンクされます。
 
-**NOSTATUS** &#124; **STATUS**<br/>
+**`NOSTATUS`**&#124;**`STATUS`**<br/>
 (省略可能) リンクの何パーセントが完了したかを示す進行状況のインジケーターをリンカーによって表示するかどうかを指定します。 既定では、この状態情報は表示されません。
 
-**OFF**<br/>
-(省略可能) リンク時のコード生成を無効にします。 この動作は、コマンド ラインで **/LTCG** が指定されていない場合と同じです。
+**`OFF`**<br/>
+(省略可能) リンク時のコード生成を無効にします。 この動作は、 **`/LTCG`** コマンドラインでが指定されていない場合と同じです。
 
-**PGINSTRUMENT**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、 **/LTCG** と [/GENPROFILE または /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) を使用して、ガイド付き最適化のプロファイル用にインストルメント化されたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **/LTCG:PGI** です。
+**`PGINSTRUMENT`**<br/>
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、、 **`/LTCG`** 、 `[/GENPROFILE` または] (genprofile-fastgenprofile-generate-profiling-instrumented-build.md) を使用して、 `/FASTGENPROFILE` ガイド付き最適化のプロファイル用にインストルメント化されたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGI`** です。
 
-**PGOPTIMIZE**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、 **/LTCG** と [/USEPROFILE](useprofile.md) を使用して、最適化されたイメージを作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **/LTCG:PGO** です。
+**`PGOPTIMIZE`**<br/>
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、 [`/USEPROFILE`](useprofile.md) 最適化されたイメージを作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGO`** です。
 
-**PGUPDATE**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、 **/LTCG** と **/USEPROFILE** を使用して、最適化されたイメージを再作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **/LTCG:PGU** です。
+**`PGUPDATE`**<br/>
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、 **`/USEPROFILE`** 最適化されたイメージをリビルドします。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGU`** です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/LTCG** オプションでは、コンパイラを呼び出してプログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
+オプションは、 **`/LTCG`** コンパイラを呼び出してプログラム全体の最適化を実行するようにリンカーを設定します。 または、ガイド付き最適化のプロファイルを実行することもできます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
 
-次の例外を除き、以前の PGO 初期化の組み合わせである **/LTCG** オプションと **/GENPROFILE** オプションで指定されていないリンカー オプションを、PGO の組み合わせである **/LTCG** と **/USEPROFILE** に追加することはできません。
+次の例外を除き、との PGO の組み合わせにリンカーオプションを追加することはできません **`/LTCG`** **`/USEPROFILE`** 。これは **`/LTCG`** 、およびオプションの以前の pgo 初期化の組み合わせでは指定されませんでした **`/GENPROFILE`** 。
 
-- [/BASE](base-base-address.md)
+- [`/BASE`](base-base-address.md)
 
-- [/FIXED](fixed-fixed-base-address.md)
+- [`/FIXED`](fixed-fixed-base-address.md)
 
-- **/LTCG**
+- **`/LTCG`**
 
-- [/MAP](map-generate-mapfile.md)
+- [`/MAP`](map-generate-mapfile.md)
 
-- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
+- [`/MAPINFO`](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
+- [`/NOLOGO`](nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](out-output-file-name.md)
+- [`/OUT`](out-output-file-name.md)
 
-- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
+- [`/PGD`](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](pdb-use-program-database.md)
+- [`/PDB`](pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
+- [`/PDBSTRIPPED`](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](stub-ms-dos-stub-file-name.md)
+- [`/STUB`](stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](verbose-print-progress-messages.md)
+- [`/VERBOSE`](verbose-print-progress-messages.md)
 
-**/LTCG** と **/USEPROFILE** を使用してビルドする際に、PGO の初期化のために **/LTCG** オプションおよび **/GENPROFILE** オプションと共に指定されているリンカー オプションを指定する必要はありません。これらは暗黙的に指定されます。
+およびを使用して PGO を初期化するオプションと共に指定されたすべてのリンカーオプションは、 **`/LTCG`** **`/GENPROFILE`** とを使用してビルドするときに指定する必要はありません。これらは暗黙的に指定され **`/LTCG`** **`/USEPROFILE`** ます。
 
-この記事ではこれ以降、リンク時のコード生成の観点から **/LTCG** について説明します。
+この記事の残りの部分では、によって実行されるリンク時のコード生成について説明し **`/LTCG`** ます。
 
-**/LTCG** は [/GL](gl-whole-program-optimization.md) で暗黙的に指定されます。
+**`/LTCG`** は、で暗黙的に使用され [`/GL`](gl-whole-program-optimization.md) ます。
 
-**/GL** モジュールまたは MSIL モジュールを使用してコンパイルされたモジュールを渡された場合、リンカーにより、リンク時のコード生成が呼び出されます (「[リンカー入力としての .netmodule ファイル](netmodule-files-as-linker-input.md)」を参照)。 明示的に **/LTCG** を指定せずに **/GL** モジュールまたは MSIL モジュールをリンカーに渡すと、最終的にリンカーによってこれが検出され、 **/LTCG** を使用してリンクが再実行されます。 明示的に **/LTCG** を指定した上で **/GL** モジュールや MSIL モジュールをリンカーに渡すと、最大限に高速のパフォーマンスでビルドが実行されます。
+リンカーは、または MSIL モジュールを使用してコンパイルされたモジュールが渡されると、リンク時のコード生成を呼び出し **`/GL`** ます (「 [ `.netmodule` リンカー入力とし](netmodule-files-as-linker-input.md)てのファイル」を参照してください)。 **`/LTCG`** または MSIL モジュールをリンカーに渡すときに明示的にを指定しない場合 **`/GL`** 、リンカーは最終的にこの状況を検出し、を使用してリンクを再起動し **`/LTCG`** ます。 **`/LTCG`** **`/GL`** と MSIL モジュールをリンカーに渡して、最速のビルドパフォーマンスを実現するには、明示的にを指定します。
 
-パフォーマンスをさらに高速にするには、 **/LTCG:INCREMENTAL** を使用します。 このオプションを指定すると、リンカーは、プロジェクト全体ではなく、ソース ファイルの変更によって影響を受ける一連のファイルのみを再び最適化します。 これにより、リンクに必要な時間を大幅に削減できます。 これは、インクリメンタル リンクと同じオプションではありません。
+さらに高速なパフォーマンスを実現するには、を使用 **`/LTCG:INCREMENTAL`** します。 このオプションは、プロジェクト全体ではなく、ソースファイルの変更によって影響を受けるファイルのみを再最適化するようにリンカーに指示します。 このオプションを使用すると、必要なリンク時間を大幅に短縮できます。 このオプションは、[インクリメンタルリンク](incremental-link-incrementally.md)と同じオプションではありません。
 
-**/LTCG** は、[/INCREMENTAL](incremental-link-incrementally.md) では使用できません。
+**`/LTCG`** は、では使用 [`/INCREMENTAL`](incremental-link-incrementally.md) できません。
 
-[/Og](og-global-optimizations.md)、[/O1](o1-o2-minimize-size-maximize-speed.md)、[/O2](o1-o2-minimize-size-maximize-speed.md)、または [/Ox](ox-full-optimization.md) を使用してコンパイルされたモジュールを、 **/LTCG** を使用してリンクすると、次の最適化が実行されます。
+を使用して、、、 **`/LTCG`** 、またはを使用してコンパイルされたモジュールをリンクすると、 [`/Og`](og-global-optimizations.md) [`/O1`](o1-o2-minimize-size-maximize-speed.md) [`/O2`](o1-o2-minimize-size-maximize-speed.md) [`/Ox`](ox-full-optimization.md) 次の最適化が実行されます。
 
 - クロス モジュールのインライン化
 
@@ -111,9 +112,9 @@ ms.locfileid: "67400627"
 > [!NOTE]
 > リンカーにより、各関数のコンパイルにどの最適化が使用されたかが判断され、リンク時に同じ最適化が適用されます。
 
-**/LTCG** と **/Ogt** を使用すると、二重配置の最適化が適用されます。
+およびを使用する **`/LTCG`** と、 **`/O2`** ダブルアラインメントの最適化が行われます。
 
-**/LTCG** と **/Ogs** を指定すると、二重配置は実行されません。 アプリケーション内のほとんどの関数が速度を対象としてコンパイルされ、数個の関数がサイズを対象としてコンパイルされている (たとえば、[optimize](../../preprocessor/optimize.md) プラグマを使用) 場合、コンパイラにより、二重配置を必要とする関数が呼び出されると、サイズを対象として最適化された関数が二重配置されます。
+**`/LTCG`** とが指定されている場合 **`/O1`** 、double アラインメントは実行されません。 アプリケーション内のほとんどの関数が、サイズに対してコンパイルされたいくつかの関数 (たとえば、プラグマを使用して) をコンパイルした場合、 [`optimize`](../../preprocessor/optimize.md) サイズに合わせて最適化された関数は、2つの配置を必要とする関数を呼び出すと、コンパイラによって二重に配置されます。
 
 コンパイラで関数のすべての呼び出しサイトを特定できる場合、コンパイラでは関数に対する明示的な呼び出し規約の修飾子が無視され、関数の呼び出し規約の最適化が試行されます。
 
@@ -123,28 +124,28 @@ ms.locfileid: "67400627"
 
 - 使用されていないパラメーターを削除する
 
-関数ポインターを介して関数が呼び出された場合、または **/GL** を使用してコンパイルされたモジュールの外部から関数が呼び出された場合、コンパイラでは関数の呼び出し規約の最適化は試行されません。
+関数が関数ポインターを通じて呼び出された場合、またはを使用してコンパイルされたモジュールの外部から関数が呼び出された場合 **`/GL`** 、コンパイラは関数の呼び出し規約の最適化を試行しません。
 
 > [!NOTE]
-> **/LTCG** を使用して `mainCRTStartup` を再定義した場合、アプリケーションでは、グローバル オブジェクトの初期化前に実行されるユーザー コードに関連する、予期しない動作を生じる可能性があります。 この問題に対処するには次の 3 つの方法があります。`mainCRTStartup` を再定義しないこと、 **/LTCG** を使用して `mainCRTStartup` が含まれているファイルをコンパイルしないこと、グローバル変数とグローバル オブジェクトは静的に初期化すること。
+> とを使用する場合 **`/LTCG`** `mainCRTStartup` 、アプリケーションは、グローバルオブジェクトが初期化される前に実行されるユーザーコードに関連する、予測できない動作を持つことができます。 この問題に対処するには、再定義しない `mainCRTStartup` 、を使用してを含むファイルをコンパイルしない、 `mainCRTStartup` **`/LTCG`** グローバル変数とオブジェクトを静的に初期化する、の3つの方法があります。
 
-### <a name="ltcg-and-msil-modules"></a>/LTCG モジュールと MSIL モジュール
+### <a name="ltcg-and-msil-modules"></a>`/LTCG`および MSIL モジュール
 
-[/GL](gl-whole-program-optimization.md) と [/clr](clr-common-language-runtime-compilation.md) を使用してコンパイルされたモジュールは、 **/LTCG** が指定されている場合にリンカーへの入力として使用できます。
+およびを使用してコンパイルされたモジュール [`/GL`](gl-whole-program-optimization.md) [`/clr`](clr-common-language-runtime-compilation.md) は、が指定されている場合にリンカーへの入力として使用でき **`/LTCG`** ます。
 
-- **/LTCG** では、ネイティブ オブジェクト ファイル、および混在ネイティブ/マネージド オブジェクト ファイル ( **/clr** を使用してコンパイルされる) を受け付けることができます。 **/clr:pure** および **/clr:safe** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。
+- **`/LTCG`** ネイティブオブジェクトファイル、および (を使用してコンパイルされた) 混在したネイティブ/マネージオブジェクトファイルを受け入れることができ **`/clr`** ます。 **`/clr:pure`** および **`/clr:safe`** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 以降ではサポートされていません。
 
-- **/LTCG:PGI** では、 **/GL** や **/clr** を使用してコンパイルされたネイティブ モジュールは受け付けられません
+- **`/LTCG:PGI`** およびを使用してコンパイルされたネイティブモジュールを受け入れません。 **`/GL`****`/clr`**
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」を参照してください。
 
-1. **[構成プロパティ]**  >  **[全般]** プロパティ ページを選択します。
+1. **構成プロパティ**の  >  **[全般**] プロパティページを選択します。
 
 1. **[プログラム全体の最適化]** プロパティを変更します。
 
-または、 **/LTCG** を特定のビルドに適用するために、メニュー バーで **[ビルド]**  >  **[ガイド付き最適化のプロファイル]** を選択する、あるいは、プロジェクトのショートカット メニューから [ガイド付き最適化のプロファイル] のいずれかのオプションを選択するという方法もあります。
+**`/LTCG`** **Build**  >  また、メニューバーで [ビルド**プロファイルガイド付き最適化**] を選択するか、プロジェクトのショートカットメニューの [ガイド付き最適化のプロファイル] オプションのいずれかを選択して、特定のビルドにも適用できます。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -152,5 +153,5 @@ ms.locfileid: "67400627"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーのリファレンス](linking.md)
-- [MSVC リンカー オプション](linker-options.md)
+[MSVC リンカーリファレンス](linking.md)\
+[MSVC リンカー オプション](linker-options.md)

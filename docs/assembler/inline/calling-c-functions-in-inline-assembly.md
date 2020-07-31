@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192627"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>インライン アセンブリでの C 関数の呼び出し
 
 **Microsoft 固有の仕様**
 
-`__asm` ブロックは c ライブラリルーチンなどの C 関数を呼び出すことができます。 次の例では、`printf` ライブラリルーチンを呼び出します。
+ブロックは c **`__asm`** ライブラリルーチンなどの c 関数を呼び出すことができます。 次の例では、 `printf` ライブラリルーチンを呼び出します。
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -56,10 +56,10 @@ int main( void )
 printf( format, hello, world );
 ```
 
-この例では、`world`、`hello`、および `format`へのポインターをその順序でプッシュし、`printf`を呼び出します。
+この例では、、、およびへのポインターをこの `world` `hello` `format` 順序でプッシュした後、を呼び出し `printf` ます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>
+[インラインアセンブラー](../../assembler/inline/inline-assembler.md)<br/>

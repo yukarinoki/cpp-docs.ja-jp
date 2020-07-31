@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "79544412"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214244"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new (vtable の新しいスロット) (C++/CLI および C++/CX)
 
-**new** キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。
+キーワードは、 **`new`** 仮想メンバーが vtable の新しいスロットを取得することを示します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -26,23 +26,23 @@ Windows ランタイムではサポートされません。
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`/clr` のコンパイルでは、**new** は、仮想メンバーが vtable の新しいスロットを取得することを示します。つまり、関数で基底クラスのメソッドをオーバーライドしません。
+コンパイルでは `/clr` 、 **`new`** 仮想メンバーが vtable に新しいスロットを取得することを示します。この関数は基底クラスのメソッドをオーバーライドしません。
 
-**new** を指定すると、関数の IL に newslot 修飾子が追加されます。  newslot の詳細については、次のトピックを参照してください。
+**`new`** 関数の IL に newslot 修飾子を追加します。  newslot の詳細については、次のトピックを参照してください。
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
 - <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
 ### <a name="examples"></a>例
 
-**new** の効果の例を次に示します。
+次の例は、の効果を示して **`new`** います。
 
 ```cpp
 // newslot.cpp
@@ -103,7 +103,7 @@ D::g() called
 E::f() called
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)<br/>
 [オーバーライド指定子](override-specifiers-cpp-component-extensions.md)

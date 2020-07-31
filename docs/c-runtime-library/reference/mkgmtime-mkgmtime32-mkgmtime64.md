@@ -43,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc8ccfc628a0f0c5dd649dbb5cf3bd0b552b5d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914648"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216883"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-**構造体** **tm**で表される utc 時刻を**TIME_T**型で表される utc 時刻に変換します。
+Tm で表される UTC 時刻を **`struct`** **tm** **time_t**型で表される utc 時刻に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -71,7 +71,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*\
-変換する**struct** **tm**としての UTC 時刻へのポインター。
+**`struct`** 変換する**tm**としての UTC 時刻へのポインター。
 
 ## <a name="return-value"></a>戻り値
 

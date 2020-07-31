@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 115a1b6c2157a139786c0b8762a9a614bbcd6deb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455863"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217728"
 ---
-# <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible クラス
+# <a name="is_nothrow_move_constructible-class"></a>is_nothrow_move_constructible クラス
 
-型に **nothrow** 移動コンストラクターが存在するかどうかをテストします。
+型に移動コンストラクターがあるかどうかをテスト **`nothrow`** します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,16 +26,16 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 型に nothrow 移動*コンストラクターがある*場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231079"
 ---
 # <a name="subscripting"></a>添字演算子
 
-添字演算子 ( **[]** ) は、関数呼び出し演算子のように、二項演算子と見なされます。 添字演算子は 1 つの引数を受け取る非静的メンバー関数である必要があります。 この引数は任意の型にでき、目的の配列の添字を指定します。
+添字演算子 (**[]**) は、関数呼び出し演算子のように、二項演算子と見なされます。 添字演算子は 1 つの引数を受け取る非静的メンバー関数である必要があります。 この引数は任意の型にでき、目的の配列の添字を指定します。
 
 ## <a name="example"></a>例
 
-次の例は、境界チェックを実装する**int**型のベクターを作成する方法を示しています。
+次の例は、 **`int`** 境界チェックを実装する型のベクターを作成する方法を示しています。
 
 ```cpp
 // subscripting.cpp
@@ -91,10 +91,10 @@ Element: [10] = 10
 
 ## <a name="comments"></a>説明
 
-前のプログラムで `i` が10に達すると、 **operator []** は、範囲外の添字が使用されていることを検出し、エラーメッセージを発行します。
+`i`前のプログラムでが10に達すると、 **operator []** は、範囲外の添字が使用されていることを検出し、エラーメッセージを発行します。
 
 関数**演算子 []** は参照型を返すことに注意してください。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [演算子のオーバーロード](../cpp/operator-overloading.md)

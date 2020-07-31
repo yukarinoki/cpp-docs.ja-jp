@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cfa03706bc6030b337009f7228466a26e242aa6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221537"
 ---
 # <a name="mixin-structure"></a>MixIn 構造体
 
@@ -31,14 +31,14 @@ struct MixIn;
 
 ### <a name="parameters"></a>パラメーター
 
-*導出*<br/>
+*派生*<br/>
 [Implements](implements-structure.md)構造体から派生した型。
 
 *MixInType*<br/>
 基本型。
 
 *hasImplements*<br/>
-*MixInType*が、基本型の現在の実装から派生している場合は**true** 。それ以外の場合は**false** 。
+**`true`***MixInType*が現在の実装から派生した場合、基本データ型はです。**`false`** それ以外の場合は。
 
 ## <a name="remarks"></a>解説
 
@@ -54,6 +54,6 @@ struct MixIn;
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 名前空間](microsoft-wrl-namespace.md)

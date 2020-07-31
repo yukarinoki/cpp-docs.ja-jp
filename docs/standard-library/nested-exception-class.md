@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441618"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212190"
 ---
 # <a name="nested_exception-class"></a>nested_exception クラス
 
@@ -30,11 +30,11 @@ class nested_exception {
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#op_as)||
+|[operator =](#op_as)||
 
 ### <a name="functions"></a>関数
 
@@ -43,13 +43,13 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|格納されている例外をスローします。|
 |[nested_ptr](#nested_ptr)|格納されている例外を返します。|
 
-### <a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,25 +57,25 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>戻り値
 
-この `nested_exception` オブジェクトによってキャプチャされた、格納されている例外。
+このオブジェクトによってキャプチャされた格納された例外 `nested_exception` 。
 
-### <a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
-`nested_ptr()` が null ポインターを返す場合、関数は `std::terminate()`を呼び出します。 それ以外の場合は、`*this`によってキャプチャされた格納済みの例外をスローします。
+が `nested_ptr()` null ポインターを返す場合、関数はを呼び出し `std::terminate()` ます。 それ以外の場合は、によってキャプチャされた格納済みの例外をスローし **`*this`** ます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<例外 >
+**ヘッダー:**\<exception>
 
 **名前空間:** std
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[例外クラス](../standard-library/exception-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception クラス](../standard-library/exception-class.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

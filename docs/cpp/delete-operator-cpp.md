@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189469"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221693"
 ---
 # <a name="delete-operator-c"></a>delete 演算子 (C++)
 
@@ -21,12 +21,12 @@ ms.locfileid: "80189469"
 
 ## <a name="syntax"></a>構文
 
-> [`::`] `delete`*キャスト式*\
-> [`::`] `delete []`*キャスト式*
+> [ `::` ] `delete` *キャスト式*\
+> [ `::` ] `delete []` *キャスト式*
 
 ## <a name="remarks"></a>解説
 
-*キャスト式*の引数は、 [new 演算子](../cpp/new-operator-cpp.md)で作成されたオブジェクトに対して以前に割り当てられたメモリブロックへのポインターである必要があります。 **Delete**演算子の結果は**void**型であるため、値を返しません。 次に例を示します。
+*キャスト式*の引数は、 [new 演算子](../cpp/new-operator-cpp.md)で作成されたオブジェクトに対して以前に割り当てられたメモリブロックへのポインターである必要があります。 **`delete`** 演算子の結果は型である **`void`** ため、値を返しません。 次に例を示します。
 
 ```cpp
 CDialog* MyDialog = new CDialog;
@@ -34,9 +34,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;
 ```
 
-**New**で割り当てられていないオブジェクトへのポインターに対して**delete**を使用すると、予測できない結果になります。 ただし、値が0のポインターに対して**delete**を使用することはできます。 このようにプロビジョニングすると、**新しい**エラーが発生した場合に、新しい操作の結果を削除しても問題はあり**ません。** 詳細については、「 [new および Delete 演算子](../cpp/new-and-delete-operators.md)」を参照してください。
+**`delete`** で割り当てられていないオブジェクトへのポインターでを使用すると、 **`new`** 予測できない結果になります。 ただし、 **`delete`** 値が0のポインターでを使用することはできます。 このプロビジョニングは、が失敗したときに0を返す場合に、 **`new`** 失敗した操作の結果を削除しても問題がないことを意味 **`new`** します。 詳細については、「 [new および Delete 演算子](../cpp/new-and-delete-operators.md)」を参照してください。
 
-**New**演算子と**delete**演算子は、配列を含む組み込み型にも使用できます。 `pointer` が配列を参照している場合は、`pointer`する前に空のかっこ (`[]`) を配置します。
+**`new`** および演算子は、 **`delete`** 配列を含む組み込み型にも使用できます。 が `pointer` 配列を参照している場合は、次の前に空の角かっこ () を配置し `[]` `pointer` ます。
 
 ```cpp
 int* set = new int[100];
@@ -44,13 +44,13 @@ int* set = new int[100];
 delete [] set;
 ```
 
-オブジェクトに対して**delete**演算子を使用すると、そのメモリの割り当てが解除されます。 オブジェクトを削除した後でポインターを逆参照するプログラムは、予期しない結果になるか、クラッシュする可能性があります。
+オブジェクトに対して演算子を使用すると **`delete`** 、そのメモリの割り当てが解除されます。 オブジェクトを削除した後でポインターを逆参照するプログラムは、予期しない結果になるか、クラッシュする可能性があります。
 
-クラスオブジェクトのメモリの割り当てを解除するために delete を使用すると、オブジェクトのメモリの割り当てが解除される前に、オブジェクトのデストラクターが呼び出されます (オブジェクトにデストラクターがある場合)。 **delete** C++
+**`delete`** を使用して C++ クラスオブジェクトのメモリの割り当てを解除すると、オブジェクトのメモリの割り当てが解除される前に、オブジェクトのデストラクターが呼び出されます (オブジェクトにデストラクターがある場合)。
 
-**Delete**演算子のオペランドが変更可能な左辺値の場合、オブジェクトが削除された後、その値は未定義になります。
+演算子のオペランド **`delete`** が変更可能な左辺値の場合、オブジェクトが削除された後、その値は未定義になります。
 
-[/Sdl (追加のセキュリティチェックを有効にする)](/cpp/build/reference/sdl-enable-additional-security-checks)コンパイラオプションが指定されている場合、 **delete**演算子のオペランドは、オブジェクトが削除された後、無効な値に設定されます。
+[/Sdl (追加のセキュリティチェックを有効にする)](/cpp/build/reference/sdl-enable-additional-security-checks)コンパイラオプションが指定されている場合、 **`delete`** オブジェクトが削除された後、演算子のオペランドが無効な値に設定されます。
 
 ## <a name="using-delete"></a>delete の使用
 
@@ -80,20 +80,20 @@ int main()
 }
 ```
 
-次の2つのケースでは、未定義の結果が生成されます。オブジェクトでの delete (`delete []`) の配列形式の使用と、配列に対する delete の nonarray 形式の使用です。
+次の2つのケースでは、未定義の結果が生成されます。オブジェクトに対して array 形式の delete () を使用 `delete []` し、配列で delete の nonarray 形式を使用します。
 
 ## <a name="example"></a>例
 
-**Delete**の使用例については、「 [new operator](../cpp/new-operator-cpp.md)」を参照してください。
+の使用例について **`delete`** は、「 [new operator](../cpp/new-operator-cpp.md)」を参照してください。
 
 ## <a name="how-delete-works"></a>delete の動作方法
 
 Delete 演算子は、関数**operator delete**を呼び出します。
 
-クラス型 ([クラス](../cpp/class-cpp.md)、[構造体](../cpp/struct-cpp.md)、または[共用体](../cpp/unions.md)) ではないオブジェクトの場合、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトの場合、delete 式が単項スコープ解決演算子 (`::`) で始まる場合、割り当て解除関数の名前はグローバルスコープで解決されます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。
+クラス型 ([クラス](../cpp/class-cpp.md)、[構造体](../cpp/struct-cpp.md)、または[共用体](../cpp/unions.md)) ではないオブジェクトの場合、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトの場合、delete 式が単項スコープ解決演算子 () で始まる場合、割り当て解除関数の名前はグローバルスコープで解決され `::` ます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)\
-[キーワード](../cpp/keywords-cpp.md)\
-[new および delete 演算子](../cpp/new-and-delete-operators.md)
+[Keywords](../cpp/keywords-cpp.md)\
+[new 演算子と delete 演算子](../cpp/new-and-delete-operators.md)

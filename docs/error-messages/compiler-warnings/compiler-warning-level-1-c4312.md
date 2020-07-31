@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: d76b08a31cacdc4e2e367a236ce98ec5204ac3e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233263"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>コンパイラの警告 (レベル 1) C4312
 
 '操作' :  'type1' からより大きいサイズの 'type2' へ変換します。
 
-この警告は、32 ビット値を 64 ビット ポインター型に割り当てようとしたことを検出します。たとえば、32 ビット `int` または `long` を 64 ビット ポインターにキャストした場合などです。
+この警告は、32ビット値を64ビットポインター型に割り当てようとしたことを検出します。たとえば、32ビット **`int`** または **`long`** 64 ビットのポインターにキャストします。
 
 この変換は、符号拡張が発生する場合、32 ビットに収まるポインター値であっても安全でないことがあります。 負の 32 ビット整数が 64 ビット ポインター型に割り当てられる場合、符号拡張によって、ポインター値が整数の値とは異なるメモリ アドレスを参照するようになります。
 

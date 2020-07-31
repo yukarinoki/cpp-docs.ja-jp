@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d730441772f021bbece9af8313229543e432b2d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197294"
 ---
 # <a name="compiler-warning-c4485"></a>コンパイラの警告 C4485
 
 ' override_function ': 基本 ref クラスメソッド ' base_class_function ' と一致しますが、' new ' または ' override ' に設定されていません。' new ' (および ' virtual ') が想定されています
 
-アクセサーは、基底クラスのアクセサー関数である、`virtual` キーワードの有無にかかわらずオーバーライドします。ただし、`override` または `new` 指定子は、オーバーライドする関数シグネチャの一部ではありませんでした。 この警告を解決するには、`new` または `override` 指定子を追加します。
+アクセサーは、基本クラスのアクセサー関数であるか、キーワードなしでオーバーライド **`virtual`** `override` されますが、または **`new`** 指定子は、オーバーライドする関数シグネチャの一部ではありませんでした。 **`new`** `override` この警告を解決するには、または指定子を追加します。
 
 詳細については、「 [override](../../extensions/override-cpp-component-extensions.md)と[new (vtable の新しいスロット)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) 」を参照してください。
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 681f5a64c3e2902c66facbd4f0ac3a3663a7e79d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 715a823784aaa75f9abe349ef0a7ddc9e5d607d1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218352"
 ---
 # <a name="weakref-class"></a>WeakRef クラス
 
@@ -43,29 +43,29 @@ class WeakRef : public ComPtr<IWeakReference>;
 |名前|説明|
 |----------|-----------------|
 |[WeakRef::WeakRef コンストラクター](#weakref)|`WeakRef` クラスの新しいインスタンスを初期化します。|
-|[WeakRef::~WeakRef デストラクター](#tilde-weakref)|クラスの現在のインスタンスを初期化解除`WeakRef`します。|
+|[WeakRef::~WeakRef デストラクター](#tilde-weakref)|クラスの現在のインスタンスを初期化解除 `WeakRef` します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[WeakRef::As メソッド](#as)|指定した`ComPtr`インターフェイスを表す指定したポインター パラメーターを設定します。|
-|[WeakRef::AsIID メソッド](#asiid)|指定した`ComPtr`インターフェイス ID を表す指定したポインター パラメーターを設定します。|
+|[WeakRef::As メソッド](#as)|指定された `ComPtr` インターフェイスを表すように、指定されたポインターパラメーターを設定します。|
+|[WeakRef::AsIID メソッド](#asiid)|指定された `ComPtr` インターフェイス ID を表すように、指定されたポインターパラメーターを設定します。|
 |[WeakRef::CopyTo メソッド](#copyto)|使用可能なインターフェイスへのポインターがあるなら、指定されたポインター変数にそれを割り当てます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[WeakRef::operator& 演算子](#operator-ampersand-operator)|現在`WeakRef`の`ComPtrRef`オブジェクトを表すオブジェクトを返します。|
+|[WeakRef::operator& 演算子](#operator-ampersand-operator)|`ComPtrRef`現在のオブジェクトを表すオブジェクトを返し `WeakRef` ます。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクト`WeakRef`は、オブジェクトに関連付けられた*厳密な参照*を保持しており、有効または無効な場合があります。 メソッドを`As()``AsIID()`呼び出して、厳密な参照を取得します。 強い参照が有効な場合、関連付けられているオブジェクトにアクセスできます。 強い参照が無効な場合 (`nullptr`)、関連付けられているオブジェクトにアクセスできません。
+オブジェクトは、 `WeakRef` オブジェクトに関連付けられている*強い参照*を保持し、有効または無効にすることができます。 `As()` `AsIID()` 強い参照を取得するには、メソッドまたはメソッドを呼び出します。 強い参照が有効な場合、関連付けられているオブジェクトにアクセスできます。 強い参照が無効な場合 ( **`nullptr`** )、関連付けられたオブジェクトにはアクセスできません。
 
-オブジェクト`WeakRef`は通常、外部スレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用されます。 たとえば、ファイル オブジェクト`WeakRef`への参照からオブジェクトを構築します。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。
+オブジェクトは、 `WeakRef` 通常、外部のスレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用されます。 たとえば、 `WeakRef` ファイルオブジェクトへの参照からオブジェクトを構築します。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。
 
-なお、Windows 10 SDK では [As](#as)、 [AsIID](#asiid) 、 [CopyTo](#copyto) の各メソッドの動作が変更されています。 以前は、これらのメソッドのいずれかを呼び出した後で、 `WeakRef` `nullptr`をチェックして、次のコードのように、厳密な参照が正常に取得されたかどうかを確認できることができました。
+なお、Windows 10 SDK では [As](#as)、 [AsIID](#asiid) 、 [CopyTo](#copyto) の各メソッドの動作が変更されています。 以前は、これらのメソッドのいずれかを呼び出した後、 `WeakRef` 次のコードに示すように、を使用して、 **`nullptr`** 強い参照が正常に取得されたかどうかを確認できました。
 
 ```cpp
 WeakRef wr;
@@ -84,7 +84,7 @@ if(wr == nullptr)
 }
 ```
 
-上記のコードは、Windows 10 SDK (以降) の使用時には機能しません。 代わりに、 に渡されたポインターを`nullptr`確認します。
+上記のコードは、Windows 10 SDK (以降) の使用時には機能しません。 代わりに、に渡されたポインターを確認して **`nullptr`** ください。
 
 ```cpp
 if (strongRef == nullptr)
@@ -105,17 +105,17 @@ if (strongRef == nullptr)
 
 **名前空間:** Microsoft::WRL
 
-## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>弱い参照::~弱い参照デストラクタ
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>WeakRef:: ~ WeakRef デストラクター
 
-クラスの現在のインスタンスを初期化解除`WeakRef`します。
+クラスの現在のインスタンスを初期化解除 `WeakRef` します。
 
 ```cpp
 ~WeakRef();
 ```
 
-## <a name="weakrefas-method"></a><a name="as"></a>WeakRef::メソッドとして
+## <a name="weakrefas-method"></a><a name="as"></a>WeakRef:: As メソッド
 
-指定した`ComPtr`インターフェイスを表す指定したポインター パラメーターを設定します。
+指定された `ComPtr` インターフェイスを表すように、指定されたポインターパラメーターを設定します。
 
 ```cpp
 template<typename U>
@@ -134,28 +134,28 @@ HRESULT As(
 *U*<br/>
 インターフェイス ID。
 
-*Ptr*<br/>
-この操作が完了すると、パラメーター U を表すオブジェクトが*返されます*。
+*ptr*<br/>
+この操作が完了したときに、パラメーター *U*を表すオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-- この操作が成功した場合はS_OK。それ以外の場合は、操作が失敗した理由を示す HRESULT を`nullptr`返し *、ptr*が に設定されます。
+- この操作が成功した場合は S_OK します。それ以外の場合は、操作が失敗した理由を示す HRESULT と、 *ptr*がに設定され **`nullptr`** ます。
 
-- S_OKこの操作が成功したが、現在`WeakRef`のオブジェクトが既に解放されている場合。 *パラメータ ptr*は`nullptr`に設定されています。
+- この操作が成功したが、現在の `WeakRef` オブジェクトが既に解放されている場合は S_OK します。 パラメーター *ptr*はに設定されて **`nullptr`** います。
 
-- この操作が成功した場合S_OKが、現在`WeakRef`のオブジェクトがパラメータ*U*から派生していない場合。*パラメータ ptr*は`nullptr`に設定されています。
+- この操作が成功したが、現在の `WeakRef` オブジェクトがパラメーター *U*から派生していない場合は S_OK。パラメーター *ptr*はに設定されて **`nullptr`** います。
 
 ### <a name="remarks"></a>解説
 
-パラメーター *U*が`IWeakReference`、または から`IInspectable`派生していない場合は、エラーが生成されます。
+パラメーター *U*がの場合 `IWeakReference` 、またはから派生していない場合は、エラーが生成され `IInspectable` ます。
 
 最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレートは、 [auto](../../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。
 
-Windows 10 SDK 以降では、このメソッドは、`WeakRef`弱い`nullptr`参照を取得できなかった場合にインスタンスを設定しないため、 の`WeakRef`を`nullptr`チェックするコードをエラー チェックしないようにする必要があります。 代わりに、 *ptr*をチェックしてください`nullptr`。
+Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドはインスタンスをに設定しません `WeakRef` **`nullptr`** 。そのため、を確認するエラーチェックコードは避けてください `WeakRef` **`nullptr`** 。 代わりに、 *ptr*を確認 **`nullptr`** してください。
 
-## <a name="weakrefasiid-method"></a><a name="asiid"></a>弱い参照::AsIID メソッド
+## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef:: AsIID メソッド
 
-指定した`ComPtr`インターフェイス ID を表す指定したポインター パラメーターを設定します。
+指定された `ComPtr` インターフェイス ID を表すように、指定されたポインターパラメーターを設定します。
 
 ```cpp
 HRESULT AsIID(
@@ -169,26 +169,26 @@ HRESULT AsIID(
 *riid*<br/>
 インターフェイス ID。
 
-*Ptr*<br/>
-この操作が完了すると、パラメータ riid を表すオブジェクトが*返されます*。
+*ptr*<br/>
+この操作が完了したときに、パラメーター *riid*を表すオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-- この操作が成功した場合はS_OK。それ以外の場合は、操作が失敗した理由を示す HRESULT を`nullptr`返し *、ptr*が に設定されます。
+- この操作が成功した場合は S_OK します。それ以外の場合は、操作が失敗した理由を示す HRESULT と、 *ptr*がに設定され **`nullptr`** ます。
 
-- S_OKこの操作が成功したが、現在`WeakRef`のオブジェクトが既に解放されている場合。 *パラメータ ptr*は`nullptr`に設定されています。
+- この操作が成功したが、現在の `WeakRef` オブジェクトが既に解放されている場合は S_OK します。 パラメーター *ptr*はに設定されて **`nullptr`** います。
 
-- この操作が成功しても、現在`WeakRef`のオブジェクトがパラメータ*riid*から派生していない場合S_OK。 *パラメータ ptr*は`nullptr`に設定されています。 (詳細については、「解説」を参照してください。)
+- この操作が成功したが、現在の `WeakRef` オブジェクトがパラメーター *riid*から派生していない場合は S_OK。 パラメーター *ptr*はに設定されて **`nullptr`** います。 (詳細については、「解説」を参照してください。)
 
 ### <a name="remarks"></a>解説
 
-パラメータ*riid*が から`IInspectable`派生していない場合は、エラーが発生します。 このエラーは、戻り値よりも優先されます。
+パラメーター *riid*がから派生していない場合、エラーが生成され `IInspectable` ます。 このエラーは、戻り値よりも優先されます。
 
 最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレート (ここでは示されていないが、ヘッダー ファイルでは宣言されている) は、 [auto](../../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。
 
-Windows 10 SDK 以降では、このメソッドは、`WeakRef`弱い`nullptr`参照を取得できなかった場合にインスタンスを設定しないため、 の`WeakRef`を`nullptr`チェックするコードをエラー チェックしないようにする必要があります。 代わりに、 *ptr*をチェックしてください`nullptr`。
+Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドはインスタンスをに設定しません `WeakRef` **`nullptr`** 。そのため、を確認するエラーチェックコードは避けてください `WeakRef` **`nullptr`** 。 代わりに、 *ptr*を確認 **`nullptr`** してください。
 
-## <a name="weakrefcopyto-method"></a><a name="copyto"></a>ウィークレフ::メソッドへのコピー
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a>WeakRef:: CopyTo メソッド
 
 使用可能なインターフェイスへのポインターがあるなら、指定されたポインター変数にそれを割り当てます。
 
@@ -211,27 +211,27 @@ HRESULT CopyTo(
 ### <a name="parameters"></a>パラメーター
 
 *U*<br/>
-インターフェイスを`IInspectable`指します。 *U*が から`IInspectable`派生していない場合は、エラーが発生します。
+インターフェイスをポインター `IInspectable` します。 *U*がから派生していない場合、エラーが生成され `IInspectable` ます。
 
 *riid*<br/>
-インターフェイス ID。 *riid*が から`IWeakReference`派生していない場合は、エラーが発生します。
+インターフェイス ID。 *Riid*がから派生していない場合、エラーが生成され `IWeakReference` ます。
 
-*Ptr*<br/>
-または への二重間接ポインター `IInspectable` `IWeakReference`。
+*ptr*<br/>
+またはへの二重間接 `IInspectable` ポインター `IWeakReference` 。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 詳細については、「解説」を参照**してください**。
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 詳細については、「**解説**」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-S_OK の戻り値はこの操作が成功したことを示しますが、弱い参照が強い参照に解決されたかどうかは示していません。 S_OKが返された場合は、パラメータ*p*が強い参照であることをテストします。つまり、パラメータ*p*が と等`nullptr`しくない場合です。
+S_OK の戻り値はこの操作が成功したことを示しますが、弱い参照が強い参照に解決されたかどうかは示していません。 S_OK が返された場合は、パラメーター *p*が強い参照であることをテストします。つまり、パラメーター *p*はと等しくありません **`nullptr`** 。
 
-Windows 10 SDK 以降では、このメソッドは、`WeakRef`弱い`nullptr`参照を取得できなかった場合にインスタンスを設定しないため、 の`WeakRef`を`nullptr`チェックするコードをエラー チェックしないようにする必要があります。 代わりに、 *ptr*をチェックしてください`nullptr`。
+Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドはインスタンスをに設定しません `WeakRef` **`nullptr`** 。そのため、のを確認するエラーチェックコードは避けてください `WeakRef` **`nullptr`** 。 代わりに、 *ptr*を確認 **`nullptr`** してください。
 
-## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>弱い参照::&amp;演算子演算子
+## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef:: operator &amp; 演算子
 
-現在`WeakRef`の`ComPtrRef`オブジェクトを表すオブジェクトを返します。
+`ComPtrRef`現在のオブジェクトを表すオブジェクトを返し `WeakRef` ます。
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()
@@ -239,13 +239,13 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 ### <a name="return-value"></a>戻り値
 
-現在`ComPtrRef``WeakRef`のオブジェクトを表すオブジェクト。
+`ComPtrRef`現在のオブジェクトを表すオブジェクト `WeakRef` 。
 
 ### <a name="remarks"></a>解説
 
-これは、コードで使用するためのものではない内部ヘルパー演算子です。
+これは、コードで使用することを意図していない内部ヘルパー演算子です。
 
-## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>弱い参照::弱い参照のコンス トラクター
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef:: WeakRef コンストラクター
 
 `WeakRef` クラスの新しいインスタンスを初期化します。
 
@@ -274,9 +274,9 @@ WeakRef(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*<br/>
-現在`WeakRef`のオブジェクトを初期化する既存のオブジェクトへのポインター、参照、または右辺値参照。
+*ptr*<br/>
+現在のオブジェクトを初期化する既存のオブジェクトへのポインター、参照、または右辺値参照 `WeakRef` 。
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、空`WeakRef`のオブジェクトを初期化します。 2 番目のコンストラクターは`WeakRef`、ポインターからインターフェイスへのオブジェクト`IWeakReference`を初期化します。 3 番目のコンストラクターは`WeakRef`、オブジェクトへの参照からオブジェクト`ComPtr<IWeakReference>`を初期化します。 4 番目と 5 番目の`WeakRef`コンストラクターは、`WeakRef`別のオブジェクトのオブジェクトを初期化します。
+最初のコンストラクターは、空のオブジェクトを初期化し `WeakRef` ます。 2番目のコンストラクターは、 `WeakRef` インターフェイスへのポインターからオブジェクトを初期化し `IWeakReference` ます。 3番目のコンストラクターは、オブジェクトへの参照からオブジェクトを初期化し `WeakRef` `ComPtr<IWeakReference>` ます。 4番目と5番目のコンストラクターは、オブジェクトを別のオブジェクトから初期化し `WeakRef` `WeakRef` ます。

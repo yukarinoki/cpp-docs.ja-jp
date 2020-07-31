@@ -1,17 +1,17 @@
 ---
-title: スレッド処理C++ (COM 属性)
+title: スレッド処理 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214501"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193069"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,23 +28,23 @@ COM オブジェクトのスレッド処理モデルを指定します。
 *model*<br/>
 Optional次のいずれかのスレッドモデル:
 
-- `apartment` (アパートメントスレッド)
+- `apartment`(アパートメントスレッド)
 
-- `neutral` (ユーザーインターフェイスを持たないコンポーネントの .NET Framework)
+- `neutral`(ユーザーインターフェイスのないコンポーネント .NET Framework)
 
-- `single` (単純なスレッド処理)
+- `single`(単純なスレッド処理)
 
-- `free` (フリースレッド)
+- `free`(フリースレッド)
 
-- `both` (アパートメントおよびフリースレッド)
+- `both`(アパートメントおよびフリースレッド)
 
 既定値は `apartment` です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-**スレッド** C++属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
+**スレッド**化 C++ 属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
 
-ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、*モデル*で指定されたスレッドモデルは、`coclass` 属性によって挿入される[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラスにテンプレートパラメーターとして渡されます。
+ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、*モデル*で指定されたスレッドモデルは、属性によって挿入される[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラスにテンプレートパラメーターとして渡され `coclass` ます。
 
 **スレッド**属性は、 [event_source](event-source.md)へのアクセスも保護します。
 
@@ -58,17 +58,17 @@ ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**|
-|**反復可能**|いいえ|
-|**必要な属性**|**coclass**|
+|**適用対象**|**`class`**, **`struct`**|
+|**Repeatable**|いいえ|
+|**必須属性**|**coclass**|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [ニュートラルアパートメント](/windows/win32/cossdk/neutral-apartments)

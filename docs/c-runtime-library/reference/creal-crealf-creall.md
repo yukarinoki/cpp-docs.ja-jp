@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14d7bc25e514a217a6ab1160d41895ce2473b409
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171217"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189351"
 ---
 # <a name="creal-crealf-creall"></a>creal、crealf、creall
 
@@ -68,7 +68,7 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**または **_Lcomplex**値を受け取る**creal**のオーバーロードを呼び出し、 **float 型**または**long double 型**の値を返すことができます。 C プログラムでは、 **creal**は常に **_Dcomplex**値を受け取り、 **double**値を返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex**または **_Lcomplex**値を受け取り、または値を返す**creal**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **creal**は常に **_Dcomplex**値を受け取り、 **`double`** 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -76,11 +76,11 @@ long double creal( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**creal**、 **crealf**、 **creal**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型は、それぞれ、実装されていないネイティブ C99 型**float _Complex**、 **double _Complex**、および**long double _Complex**に相当する、Microsoft 固有のものです。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型は、それぞれ、実装されていないネイティブ C99 型**float _Complex**、 **double _Complex**、および**long double _Complex**に相当する、Microsoft 固有のものです。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild、_FCbuild、_LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>

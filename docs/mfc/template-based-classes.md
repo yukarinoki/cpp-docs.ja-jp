@@ -22,20 +22,20 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 29f5f815b62835aedbca1f79b797f826ea53d83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eceee4421b43515b9b246f4af26a1a3741c6b25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230455"
 ---
 # <a name="template-based-classes"></a>テンプレート ベースのクラス
 
-この資料では、MFC バージョン 3.0 以降のタイプ セーフなテンプレート ベースのコレクション クラスについて説明します。 これらのテンプレートを使用してタイプ セーフなコレクションを作成する方が便利で、テンプレートに基づくコレクション クラスを使用するよりも効果的にタイプ セーフを提供できます。
+この記事では、MFC バージョン3.0 以降のタイプセーフなテンプレートベースのコレクションクラスについて説明します。 これらのテンプレートを使用してタイプセーフなコレクションを作成する方が便利で、テンプレートに基づいていないコレクションクラスを使用するよりも、型の安全性をより効果的に提供できます。
 
-MFC では、テンプレート ベースのコレクションの 2 つのカテゴリを事前に定義します。
+MFC 事前には、テンプレートベースのコレクションの2つのカテゴリがあります。
 
-- [シンプルな配列、リスト、マップのクラス](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
+- [単純な配列、リスト、およびマップクラス](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
    `CArray`, `CList`, `CMap`
 
@@ -43,74 +43,74 @@ MFC では、テンプレート ベースのコレクションの 2 つのカテ
 
    `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
-単純なコレクション クラスはすべて クラス`CObject`から派生しているため、シリアル化、動的作成、およびその他のプロパティ`CObject`を継承します。 型指定されたポインター コレクション クラスでは、派生元のクラスを指定する必要があります`CPtrList``CPtrArray`。 新しいコレクション クラスは指定された基本クラスを継承し、新しいクラスのメンバー関数は、タイプ セーフを適用するために、基本クラスのメンバーへのカプセル化された呼び出しを使用します。
+単純なコレクションクラスはすべてクラスから派生するので、 `CObject` のシリアル化、動的な作成、およびその他のプロパティを継承し `CObject` ます。 型指定されたポインターコレクションクラスでは、派生元のクラスを指定する必要があります。これは、やなど、MFC によって定義済みの非テンプレートポインターコレクションのいずれかである必要があり `CPtrList` `CPtrArray` ます。 新しいコレクションクラスは、指定された基底クラスを継承し、新しいクラスのメンバー関数は、基底クラスのメンバーへのカプセル化された呼び出しを使用して、タイプセーフを適用します。
 
-C++ テンプレートの詳細については *、『C++ 言語リファレンス*』の[「テンプレート](../cpp/templates-cpp.md)」を参照してください。
+C++ テンプレートの詳細については、「 *C++ 言語リファレンス*」の「[テンプレート](../cpp/templates-cpp.md)」を参照してください。
 
-## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>単純な配列、リスト、およびマップ テンプレートの使用
+## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>単純な配列、リスト、マップテンプレートの使用
 
-単純なコレクション テンプレートを使用するには、これらのコレクションに格納できるデータの種類と、コレクション宣言で使用するパラメーターを把握する必要があります。
+単純なコレクションテンプレートを使用するには、これらのコレクションに格納できるデータの種類と、コレクション宣言で使用するパラメーターを把握しておく必要があります。
 
-### <a name="simple-array-and-list-usage"></a><a name="_core_simple_array_and_list_usage"></a>単純な配列とリストの使用
+### <a name="simple-array-and-list-usage"></a><a name="_core_simple_array_and_list_usage"></a>単純な配列とリストの使用法
 
-単純な配列とリスト クラス[CArray](../mfc/reference/carray-class.md)と[CList](../mfc/reference/clist-class.md)は *、TYPE*と`ARG_TYPE`TYPE の 2 つのパラメータを受け取ります。 これらのクラスには *、TYPE*パラメーターで指定する任意のデータ型を格納できます。
+単純な配列クラスとリストクラス[CArray](../mfc/reference/carray-class.md)と[CList](../mfc/reference/clist-class.md)では *、との*2 つのパラメーターを受け取ります。 `ARG_TYPE` これらのクラスは、*型*パラメーターで指定する任意のデータ型を格納できます。
 
-- 基本的な C++ データ型 **(int** **、char**、float など **)**
+- 、、などの基本的な C++ データ型 **`int`** **`char`****`float`**
 
 - C++ の構造体とクラス
 
-- 定義するその他のタイプ
+- 定義するその他の型
 
-便宜上、効率を高めるために *、ARG_TYPE*パラメータを使用して関数の引数の型を指定できます。 通常 *、TYPE*パラメーターで指定した型への参照として*ARG_TYPE*を指定します。 次に例を示します。
+利便性と効率性を高めるために、 *ARG_TYPE*パラメーターを使用して関数の引数の型を指定できます。 通常は、*型*パラメーターで指定した型への参照として*ARG_TYPE*を指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]
 
-最初の例では`myArray`**、int**s を含む配列コレクションを宣言します。 2 番目の例では、`myList`オブジェクトを格納`CPerson`するリスト コレクション を宣言します。 コレクション クラスの特定のメンバー関数は *、ARG_TYPE*テンプレート パラメーターで指定された型の引数を受け取ります。 たとえば、クラス`CArray`の`Add`メンバー関数は *、ARG_TYPE*引数を受け取ります。
+最初の例では、を含む配列コレクションを宣言して `myArray` **`int`** います。 2番目の例では、オブジェクトを格納するリストコレクションを宣言し `myList` `CPerson` ます。 コレクションクラスの特定のメンバー関数は、 *ARG_TYPE*テンプレートパラメーターによって型が指定された引数を受け取ります。 たとえば、 `Add` クラスのメンバー関数は、 `CArray` *ARG_TYPE*の引数を受け取ります。
 
 [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]
 
-### <a name="simple-map-usage"></a><a name="_core_simple_map_usage"></a>単純なマップの使用
+### <a name="simple-map-usage"></a><a name="_core_simple_map_usage"></a>単純なマップの使用法
 
-単純なマップ クラス[CMap](../mfc/reference/cmap-class.md)には *、KEY* *、ARG_KEY*、*値*、および*ARG_VALUE*の 4 つのパラメータが使用されます。 配列クラスやリスト クラスと同様に、map クラスは任意のデータ型を格納できます。 格納するデータのインデックスと順序付けが行われる配列やリストとは異なり、関連付けるキーと値をマップします。 *KEY*パラメーターは、マップに格納されているデータにアクセスするために使用されるキーのデータ型を指定します。 *KEY*の型が構造体またはクラスの場合 *、ARG_KEY*パラメータは通常 *、KEY*で指定された型への参照です。 *VALUE*パラメーターは、マップに格納されている項目のタイプを指定します。 *ARG_VALUE*の型が構造体またはクラスの場合、*通常、ARG_VALUE*パラメータは*VALUE*で指定された型への参照です。 次に例を示します。
+単純なマップクラス[CMap](../mfc/reference/cmap-class.md)は、*キー*、 *ARG_KEY*、*値*、 *ARG_VALUE*の4つのパラメーターを受け取ります。 配列クラスやリストクラスと同様に、マップクラスは任意のデータ型を格納できます。 格納するデータのインデックスと順序を指定する配列やリストとは異なり、マップにはキーと値を関連付けるために、値に関連付けられているキーを指定することによってマップに格納されている値にアクセスします。 *KEY*パラメーターは、マップに格納されているデータにアクセスするために使用されるキーのデータ型を指定します。 *キー*の型が構造体またはクラスの場合、通常、 *ARG_KEY*パラメーターは、 *key*で指定された型への参照です。 *値*パラメーターは、マップに格納されている項目の種類を指定します。 *ARG_VALUE*の型が構造体またはクラスの場合、通常、 *ARG_VALUE*パラメーターは*VALUE*で指定された型への参照です。 次に例を示します。
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
-最初の例では`MY_STRUCT`、値を格納し **、int**キーでアクセスし`MY_STRUCT`、参照によってアクセスされたアイテムを返します。 2 番目の`CPerson`例では、値を格納`CString`し、キーでアクセスし、アクセスされたアイテムへの参照を返します。 この例では、姓で人を検索する単純なアドレス帳を表している場合があります。
+最初の例では、 `MY_STRUCT` 値を格納し、キーによってアクセス **`int`** し、アクセスされた `MY_STRUCT` 項目を参照渡しで返します。 2番目の例では、 `CPerson` 値を格納し、キーによってアクセス `CString` し、アクセスされた項目への参照を返します。 この例では、姓によって人物を検索する単純なアドレス帳を表す場合があります。
 
-*KEY*パラメータは型`CString`で *、KEY_TYPE*パラメータは型`LPCSTR`であるため、キーは型のアイテムとしてマップに格納されますが、型`CString`のポインターなど`SetAt`で参照される関数で参照されます。 `LPCSTR` 次に例を示します。
+*キー*パラメーターが型であり、 `CString` *KEY_TYPE*パラメーターが型であるため `LPCSTR` 、キーは型の項目としてマップに格納され `CString` ますが、型のポインターによってなどの関数で参照され `SetAt` `LPCSTR` ます。 次に例を示します。
 
 [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]
 
-## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>型指定されたポインター コレクション テンプレートの使用
+## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>型指定されたポインターのコレクションテンプレートの使用
 
-型指定されたポインターコレクション テンプレートを使用するには、これらのコレクションに格納できるデータの種類と、コレクション宣言で使用するパラメーターを把握する必要があります。
+型指定されたポインターのコレクションテンプレートを使用するには、これらのコレクションに格納できるデータの種類と、コレクション宣言で使用するパラメーターを把握しておく必要があります。
 
-### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>型付きポインター配列とリストの使用法
+### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>型指定されたポインターの配列とリストの使用法
 
-型指定されたポインター配列とリスト クラス[の CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)と[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)は *、BASE_CLASS*と TYPE の 2 つのパラメーターを受け取*ります*。 これらのクラスには *、TYPE*パラメーターで指定した任意のデータ型を格納できます。 ポインターを格納する非テンプレート コレクション クラスの 1 つから派生します。この基本クラスは*BASE_CLASS*で指定します。 配列の場合は、`CObArray`または`CPtrArray`を使用します。 リストの場合は、 `CObList` `CPtrList`または を使用します。
+型指定されたポインターの配列とリストクラス[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)と[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)は、 *BASE_CLASS*と*型*の2つのパラメーターを受け取ります。 これらのクラスは、*型*パラメーターで指定する任意のデータ型を格納できます。 これらは、ポインターを格納する非テンプレートコレクションクラスの1つから派生します。この基本クラスは*BASE_CLASS*で指定します。 配列の場合は、 `CObArray` またはを使用し `CPtrArray` ます。 リストについては、またはを使用し `CObList` `CPtrList` ます。
 
-実際には、たとえば`CObList`、基底クラスに基づいてコレクションを宣言すると、その基本クラスのメンバーを継承するだけでなく、基本クラスのメンバーへの呼び出しをカプセル化することでタイプ セーフな型セーフを提供する多数の追加のタイプ セーフメンバー関数および演算子も宣言します。 これらのカプセル化は、必要なすべての型変換を管理します。 次に例を示します。
+実際には、に基づいてコレクションを宣言すると、 `CObList` 新しいクラスがその基底クラスのメンバーを継承するだけでなく、さらに多くのタイプセーフなメンバー関数と演算子も宣言し、基底クラスのメンバーへの呼び出しをカプセル化することによってタイプセーフを提供することができます。 これらのカプセル化は、必要なすべての型変換を管理します。 次に例を示します。
 
 [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]
 
-最初の例では、型指定されたポインター配列`myArray`を宣言`CObArray`します。 配列は、オブジェクト (`CPerson`クラス`CPerson`から派生した) へのポインターを格納`CObject`および返します。 任意のメンバー関数`CObArray`を呼び出すか、新しいタイプ セーフ`GetAt`関数と`ElementAt`関数を呼び出すか、タイプ セーフな [ **]** 演算子を使用できます。
+最初の例では、から派生した型指定されたポインター配列を宣言して `myArray` `CObArray` います。 配列は、 `CPerson` オブジェクト ( `CPerson` はから派生したクラス) へのポインターを格納し、返し `CObject` ます。 任意のメンバー関数を呼び出すことができ `CObArray` ます。または、新しいタイプセーフ関数と関数を呼び出すことも、 `GetAt` `ElementAt` タイプセーフな **[]** 演算子を使用することもできます。
 
-2 番目の例では、型指定されたポインター`myList`リスト`CPtrList`を宣言します。 リストは、オブジェクトへの`MY_STRUCT`ポインタを格納し、返します。 に`CPtrList`基づくクラスは、 から`CObject`派生していないオブジェクトへのポインターを格納するために使用されます。 `CTypedPtrList`には、タイプ セーフなメンバ関数が多数`GetHead``GetPrev``GetAt`あります`GetTail`。 `RemoveHead` `RemoveTail` `GetNext`
+2番目の例では、から派生した型指定されたポインターのリストを宣言して `myList` `CPtrList` います。 リストは、オブジェクトへのポインターを格納し、返し `MY_STRUCT` ます。 に基づくクラスは、 `CPtrList` から派生していないオブジェクトへのポインターを格納するために使用され `CObject` ます。 `CTypedPtrList`には、、、、、、、 `GetHead` `GetTail` `RemoveHead` `RemoveTail` `GetNext` `GetPrev` およびと `GetAt` いうタイプセーフなメンバー関数が多数あります。
 
-### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>型指定されたポインター マップの使用法
+### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>型指定されたポインターマップの使用法
 
-型指定されたポインター マップ クラス[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)は *、BASE_CLASS、KEY*、および VALUE の 3 つのパラメータを受け取*ります*。 *KEY* *BASE_CLASS*パラメーターは、新`CMapPtrToWord`しいクラス 、 、 `CMapPtrToPtr`、 `CMapStringToPtr` `CMapWordToPtr`、`CMapStringToOb`など派生元のクラスを指定します。 *KEY*は KEY*に類似*`CMap`しています : ルックアップに使用されるキーのタイプを指定します。 *VALUE*は *、VALUE* in`CMap`に類似しています: マップに格納されているオブジェクトのタイプを指定します。 次に例を示します。
+型指定されたポインターのマップクラス[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)は、 *BASE_CLASS*、*キー*、および*値*の3つのパラメーターを受け取ります。 *BASE_CLASS*パラメーターは、新しいクラスの派生元のクラス (、、、、など) を指定し `CMapPtrToWord` `CMapPtrToPtr` `CMapStringToPtr` `CMapWordToPtr` `CMapStringToOb` ます。 *キー*はの*キー*に似 `CMap` ています。これは、参照に使用されるキーの種類を指定します。 *値*はの*値*に似ています。 `CMap` map に格納されているオブジェクトの種類を指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
-最初の例は、に基づく`CMapPtrToPtr`マップです`CString`— ポインタにマップされたキー`MY_STRUCT`を使用します。 タイプ セーフ`Lookup`なメンバー関数を呼び出すことによって、格納されたポインターを検索できます。 **[ ]** 演算子を使用して、格納されているポインターを検索し、見つからない場合は追加できます。 また、タイプ セーフ`GetNextAssoc`関数を使用してマップを反復処理することもできます。 クラスの他のメンバー関数を呼び`CMapPtrToPtr`出すこともできます。
+最初の例は、に基づくマップで、 `CMapPtrToPtr` へのポインターにマップされたキーを使用 `CString` `MY_STRUCT` します。 型セーフなメンバー関数を呼び出すことによって、格納されているポインターを検索でき `Lookup` ます。 **[]** 演算子を使用して、格納されているポインターを検索し、見つからない場合は追加できます。 また、タイプセーフな関数を使用してマップを反復処理でき `GetNextAssoc` ます。 クラスの他のメンバー関数を呼び出すこともでき `CMapPtrToPtr` ます。
 
-2 番目の例は、オブジェクト`CMapStringToOb`への格納されたポインターにマップされた文字列キーを使用する`CMyObject`マップです。 前の段落で説明したタイプ セーフメンバを使用することも、class`CMapStringToOb`のメンバを呼び出すことができます。
+2番目の例は、に基づくマップで、 `CMapStringToOb` オブジェクトへの格納されたポインターにマップされる文字列キーを使用 `CMyObject` します。 前の段落で説明したのと同じタイプセーフメンバーを使用することも、クラスのメンバーを呼び出すこともでき `CMapStringToOb` ます。
 
 > [!NOTE]
-> 型へのポインターや参照ではなく *、VALUE*パラメーターに**クラス**または**構造体**の型を指定する場合、クラスまたは構造体にコピー コンストラクターが必要です。
+> **`class`** **`struct`** 型へのポインターまたは参照ではなく、*値*パラメーターにまたは型を指定する場合は、クラスまたは構造体にコピーコンストラクターが必要です。
 
-詳細については、「[タイプ セーフなコレクションを作成する方法](../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。
+詳細については、「[タイプセーフなコレクションを作成する方法](../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a51e87980eba90eb4e543a3d07a44c1b170334e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214556"
 ---
 # <a name="compiler-error-c2992"></a>コンパイラ エラー C2992
 
 'class' : 型パラメーター リストが無効であるか、または不足しています。
 
-クラスの前に、パラメーターがないか、無効である `template` または **generic** キーワードが指定されています。
+クラスの前に、パラメーターがないか、または無効な、 **`template`** または**generic**キーワードが指定されています。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C2992 が生成されます。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 823b28deae3e3cfc18cdad8d37007bf8e8cff494
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221056"
 ---
 # <a name="compiler-error-c3389"></a>コンパイラ エラー C3389
 
@@ -21,7 +21,7 @@ ms.locfileid: "80201137"
 
 **/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-使用される[__declspec](../../cpp/declspec.md)修飾子は、プロセスごとの状態を意味します。  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)は、 [appdomain](../../cpp/appdomain.md)ごとの状態を意味します。  したがって、`keyword` **__declspec**修飾子を指定して変数を宣言し、 **/clr: pure**を指定してコンパイルすることはできません。
+使用される[__declspec](../../cpp/declspec.md)修飾子は、プロセスごとの状態を意味します。  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)は、 [appdomain](../../cpp/appdomain.md)ごとの状態を意味します。  そのため、修飾子を使用して変数を宣言 `keyword` **`__declspec`** し、 **/clr: pure**を指定してコンパイルすることはできません。
 
 ## <a name="example"></a>例
 

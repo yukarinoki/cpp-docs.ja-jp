@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373557"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211152"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory クラス
 
@@ -29,14 +29,14 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
+*常用*<br/>
 基本クラス。
 
 ## <a name="remarks"></a>解説
 
 基本クラスは、既定のコンストラクターを提供する必要があります。
 
-次のコード例は、アクティブ`SimpleClassFactory`[にできるクラスウィズファクトリーEx](activatableclass-macros.md)マクロを使用する方法を示しています。
+次のコード例は、ActivatableClassWithFactoryEx マクロでを使用する方法を示して `SimpleClassFactory` います。 [ActivatableClassWithFactoryEx](activatableclass-macros.md)
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -74,11 +74,11 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** モジュール.h
+**ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>メソッドを作成します。
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory:: CreateInstance メソッド
 
 指定したインターフェイスのインスタンスを作成します。
 
@@ -92,16 +92,16 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>パラメーター
 
-*プンクアウター*<br/>
-必要があります`nullptr`;それ以外の場合は、戻り値はCLASS_E_NOAGGREGATION。
+*pUnkOuter*<br/>
+はである必要があります。 **`nullptr`** それ以外の場合、戻り値は CLASS_E_NOAGGREGATION になります。
 
-集計をサポートしていません。 集約がサポートされ、作成されるオブジェクトが集約の一部であった場合 *、pUnkOuter*は集約の制御インターフェース`IUnknown`へのポインターになります。
+SimpleClassFactory では集計はサポートされていません。 集計がサポートされており、作成されるオブジェクトが集計の一部であった場合、 *pUnkOuter*は、集計の制御インターフェイスへのポインターになり `IUnknown` ます。
 
 *riid*<br/>
 作成するオブジェクトのインターフェイス ID。
 
-*オブジェクト*<br/>
-この操作が完了すると *、riid*パラメーターで指定されたオブジェクトのインスタンスへのポインター。
+*ppvObject*<br/>
+この操作が完了したら、 *riid*パラメーターによって指定されたオブジェクトのインスタンスへのポインターを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -109,4 +109,4 @@ STDMETHOD( CreateInstance )(
 
 ### <a name="remarks"></a>解説
 
-定義`__WRL_STRICT__`されている場合、クラス テンプレート パラメーターで指定された基本クラスが[RuntimeClass](runtimeclass-class.md)から派生していない場合、またはクラシック Com または WinRtClassicComMix[ランタイムクラスタイプ](runtimeclasstype-enumeration.md)の列挙値で構成されていない場合、アサート エラーが生成されます。
+が定義されている場合 `__WRL_STRICT__` 、クラステンプレートパラメーターに指定された基本クラスが[RuntimeClass](runtimeclass-class.md)から派生していないか、Classiccom または WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md)列挙値で構成されていない場合、アサートエラーが生成されます。

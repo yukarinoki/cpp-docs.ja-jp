@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
-ms.openlocfilehash: 5e9444356e536a8369dbcf62cac3c7538d9da5dd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3794a1ce0fcbe60c06cb3efca45a3081e85c17ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210021"
 ---
 # <a name="compiler-error-c2180"></a>コンパイラ エラー C2180
 
 制御式には、型 'type' が指定されています。
 
-`if`、`while`、`for`、`do` のいずれかのステートメントの制御式は、`void` にキャストした式です。 この問題を解決するには、制御式を、`bool` を生成する制御式または `bool` に変換できる型に変更します。
+**`if`**、、 **`while`** **`for`** 、またはステートメントの制御式 **`do`** は、にキャストされた式です **`void`** 。 この問題を解決するには、制御式を、 **`bool`** に変換できる型または型を生成する式に変更し **`bool`** ます。
 
 次の例では C2180 が生成されます。
 

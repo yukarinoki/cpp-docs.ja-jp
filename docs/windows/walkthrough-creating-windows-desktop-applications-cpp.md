@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206207"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231573"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++)
 
@@ -57,7 +57,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-153.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-153.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -83,7 +83,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-153.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-153.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -113,7 +113,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![新しい項目を DesktopApp プロジェクトに追加する](../build/media/desktop-app-project-add-new-item-150.gif "新しい項目を DesktopApp プロジェクトに追加する")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 [**追加**] を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 [**名前**] ボックスに、ファイルの名前を入力します (たとえば、 *HelloWindowsDesktop*)。 **[追加]** をクリックします。
 
    ![アプリケーションプロジェクトへの .cpp ファイルの追加](../build/media/desktop-app-add-cpp-file-150.png "アプリケーションプロジェクトへの .cpp ファイルの追加")
 
@@ -141,9 +141,9 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    この関数のパラメーターと戻り値の詳細については、「 [WinMain entry point](/windows/win32/api/winbase/nf-winbase-winmain)」を参照してください。
 
    > [!NOTE]
-   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、 **__declspec**宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化しています。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
+   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化して **`__declspec`** います。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
 
-1. Windows デスクトッププログラムでは、 &lt; windows .h> が必要です。 &lt;tchar.h> はマクロを定義します。これは、 `TCHAR` 最終的には、プロジェクトで UNICODE シンボルが定義されている場合は**wchar_t**に解決され、それ以外の場合は**char**に解決されます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は必要なく、 **wchar_t**直接使用することができます。
+1. Windows デスクトッププログラムでは、 &lt; windows .h> が必要です。 &lt;tchar.h> はマクロを定義します。 `TCHAR` このマクロは、最終的には、 **`wchar_t`** プロジェクトで UNICODE シンボルが定義されている場合に解決されます。それ以外の場合は、に解決され **`char`** ます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は不要で、直接だけを使用でき **`wchar_t`** ます。
 
    ```cpp
    #include <windows.h>
@@ -389,7 +389,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    ```
 
    `HDC`コードはデバイスコンテキストを示すハンドルであり、ウィンドウのクライアント領域に描画するために使用されます。 `BeginPaint` `EndPaint` クライアント領域で描画を準備して完了するには、関数と関数を使用します。 `BeginPaint`クライアント領域に描画するために使用される表示デバイスコンテキストへのハンドルを返します。`EndPaint`描画要求を終了し、デバイスコンテキストを解放します。
-   
+
 1. 通常、アプリケーションは他の多くのメッセージを処理します。 たとえば、ウィンドウが最初に作成されたときに[WM_CREATE](/windows/win32/winmsg/wm-create) 、ウィンドウが閉じられたときに[WM_DESTROY](/windows/win32/winmsg/wm-destroy)ます。 単純でも完成した `WndProc` 関数のコードを次に示します。
 
    ```cpp
@@ -588,7 +588,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![DesktopApp プロジェクトを実行する](../build/media/desktop-app-project-run-157.PNG "DesktopApp プロジェクトを実行する")
 
-おめでとうございます! このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
+お疲れさまでした。 このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
 
 ## <a name="see-also"></a>関連項目
 

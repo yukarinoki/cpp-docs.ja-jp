@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615570"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405027"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
@@ -68,11 +68,9 @@ MFC には、インターネットプログラミングをサポートするク�
 
 - [DHTML コントロールに対する ATL のサポート](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>詳細については、Web サイトを参照してください。
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Web サイトの詳細情報
 
-Microsoft インターネットテクノロジの詳細については、 [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322)の Web サイトを参照してください。 (リンクは予告なしに変更される可能性があります)。
-
-開発者向けのこの Web サイトには、Microsoft 開発ツールとテクノロジの使用に関する情報が含まれています。また、最近のカンファレンスと今後予定されているカンファレンスに関する記事を参照 このページでは、.NET や XML デベロッパーセンターなど、関連する多くの開発者向けサイトに移動できます。 ベータ版の Sdk とサンプルをダウンロードすることもできます。
+Microsoft インターネットテクノロジの詳細については、「 [Microsoft Docs](https://docs.microsoft.com/)」を参照してください。
 
 [World Wide Web コンソーシアム (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)は、HTML、HTTP、CGI、およびその他の World Wide Web テクノロジの仕様を発行します。
 

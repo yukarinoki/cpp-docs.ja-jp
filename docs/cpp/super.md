@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160828"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213152"
 ---
-# <a name="__super"></a>__super
+# `__super`
 
 **Microsoft 固有の仕様**
 
@@ -29,9 +29,9 @@ __super::member_function();
 
 オーバーロード解決フェーズ時にすべてのアクセス可能な基底クラス メソッドが考慮され、最優先の一致を示す関数が呼び出されます。
 
-**__super**は、メンバー関数の本体内でのみ使用できます。
+**`__super`** は、メンバー関数の本体内でのみ使用できます。
 
-**__super**は、using 宣言では使用できません。 詳細については、「 [Using 宣言」を](../cpp/using-declaration.md)参照してください。
+**`__super`** using 宣言と共に使用することはできません。 詳細については、「 [Using 宣言」を](../cpp/using-declaration.md)参照してください。
 
 コードを挿入する[属性](../windows/attributes/attributes-alphabetical-reference.md)の導入により、コードには既知の名前ではないが、呼び出すメソッドを含む1つ以上の基底クラスが含まれている場合があります。
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [キーワード](../cpp/keywords-cpp.md)

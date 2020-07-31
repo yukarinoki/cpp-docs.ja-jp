@@ -4,30 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 2cf399501c0eab32e8bee80dfcb98d870c0193cb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215461"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>挿入演算子と制御形式の使用
 
-このトピックでは、独自のクラスに対して書式を制御する方法と挿入演算子を作成する方法について説明します。 すべての標準 C++ のデータ型であらかじめプログラミングされている挿入 ( **<<** ) 演算子は、出力ストリーム オブジェクトにバイトを送信します。 挿入演算子は定義済み "マニピュレーター" と共に機能します。マニピュレーターとは、整数引数の既定の書式を変更する要素です。
+このトピックでは、独自のクラスに対して書式を制御する方法と挿入演算子を作成する方法について説明します。 **<<** すべての標準 C++ データ型のあらかじめプログラミングである挿入 () 演算子は、出力ストリームオブジェクトにバイトを送信します。 挿入演算子は定義済み "マニピュレーター" と共に機能します。マニピュレーターとは、整数引数の既定の書式を変更する要素です。
 
 次のオプションを使用して、書式を制御できます。
 
 - [出力幅](#vclrfoutputwidthanchor3)
 
-- [アラインメント](#vclrfalignmentanchor4)
+- [Alignment](#vclrfalignmentanchor4)
 
-- [精度](#vclrfprecisionanchor5)
+- [[精度]](#vclrfprecisionanchor5)
 
-- [基数](#vclrfradixanchor6)
+- [ベース](#vclrfradixanchor6)
 
-## <a name="vclrfoutputwidthanchor3"></a> 出力幅
+## <a name="output-width"></a><a name="vclrfoutputwidthanchor3"></a> 出力幅
 
-出力を配置するには、 `setw`マニピュレーターをストリームに配置するか、 `width`メンバー関数を呼び出すことによって、各項目の出力幅を指定します。 この例では、列に値を 10 文字の幅に右揃えで出力します。
+出力を配置するには、マニピュレーターをストリームに配置するか、 `setw` メンバー関数を呼び出すことによって、各項目の出力幅を指定し `width` ます。 この例では、列に値を 10 文字の幅に右揃えで出力します。
 
 ```cpp
 // output_width.cpp
@@ -55,7 +55,7 @@ int main( )
 
 10 文字の幅に満たない値に対しては先頭に空白文字が追加されます。
 
-フィールドを埋め込むには、 `fill`メンバー関数を使用します。この関数は、幅が指定されているフィールドの埋め込み文字の値を設定します。 既定では、空白文字です。 数値の列を埋めるのにアスタリスクを使用する場合は、前の **for** ループを次のように変更します。
+フィールドを埋め込むには、 `fill` メンバー関数を使用します。この関数は、幅が指定されているフィールドの埋め込み文字の値を設定します。 既定では、空白文字です。 アスタリスクを使用して数値の列を埋め込むには、前のループを次のように変更し **`for`** ます。
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -94,7 +94,7 @@ int main( )
 }
 ```
 
-この`width`メンバー関数は、iostream \<> で宣言されています。 `setw` または他の引数付きのマニピュレーターを使用する場合は、\<iomanip> をインクルードする必要があります。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
+`width`メンバー関数はで宣言されて \<iostream> います。 `setw`または引数を伴う他のマニピュレーターを使用する場合は、を含める必要があり \<iomanip> ます。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
 
 ```Output
    Zoot      1.23
@@ -103,11 +103,11 @@ int main( )
    Stan   4358.24
 ```
 
-`setw` また`width`は値の切り捨てを行いません。 書式付き出力がこの幅を超えた場合、ストリームの精度の設定に従い、値全体が出力されます。 `setw` と`width`は、次のフィールドのみに影響します。 フィールドが 1 つ出力されると、フィールドの幅は既定の動作 (既定の幅) に戻ります。 ただし、その他のストリームの形式オプションは変更されるまで有効です。
+`setw`または `width` 値の切り捨てを行いません。 書式付き出力がこの幅を超えた場合、ストリームの精度の設定に従い、値全体が出力されます。 `setw`と `width` は、次のフィールドのみに影響します。 フィールドが 1 つ出力されると、フィールドの幅は既定の動作 (既定の幅) に戻ります。 ただし、その他のストリームの形式オプションは変更されるまで有効です。
 
-## <a name="vclrfalignmentanchor4"></a> アラインメント
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>配置
 
-出力ストリームは、既定で右揃えのテキストになります。 前の例のように名前を左揃えにし、数値を右揃えにするには、**for** ループを次のように置き換えます。
+出力ストリームは、既定で右揃えのテキストになります。 前の例の名前を左揃えにし、数値を右揃えにするには、次のようにループを置き換え **`for`** ます。
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -126,13 +126,13 @@ Al         653.7
 Stan     4358.24
 ```
 
-[setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 と`width` `setiosflags` `resetiosflags`とは異なり、との効果は永続的です。 `setw`
+[setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 ととは異なり `width` `setw` 、との効果 `setiosflags` `resetiosflags` は永続的です。
 
-## <a name="vclrfprecisionanchor5"></a> 精度
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>精度
 
-浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 が`scientific`設定されている場合は、3.4669773 + 003 として出力されます。
+浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 `scientific`が設定されている場合は、3.4669773 + 003 として出力されます。
 
-有効桁 1 桁で[アライン](#vclrfalignmentanchor4)された浮動小数点数値を表示するには、**for** ループを次のように置き換えます。
+1[つの有意](#vclrfalignmentanchor4)な桁と共に表示される浮動小数点数を表示するには、次のようにループを置き換え **`for`** ます。
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -155,7 +155,7 @@ Al        7e+02
 Stan      4e+03
 ```
 
-指数表記を削除するには、**for** ループの前に次のステートメントを挿入します。
+指数表記を削除するには、ループの前に次のステートメントを挿入し **`for`** ます。
 
 ```cpp
 cout << setiosflags(ios::fixed);
@@ -170,7 +170,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-`ios::fixed`フラグをに変更すると`ios::scientific`、プログラムによって次のように出力されます。
+フラグをに変更すると `ios::fixed` 、プログラムによって次のように `ios::scientific` 出力されます。
 
 ```cpp
 Zoot    1.2e+00
@@ -179,11 +179,11 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-この場合も、小数点以下 1 桁まで出力されます。 `ios::fixed` また`ios::scientific`はが設定されている場合、有効桁数の値によって小数点の後の桁数が決まります。 どちらのフラグも設定されていない場合、精度の値は、全体の有効桁数を決定します。 `resetiosflags` マニピュレーターは、これらのフラグをオフにします。
+この場合も、小数点以下 1 桁まで出力されます。 または `ios::fixed` が設定されている場合 `ios::scientific` 、有効桁数の値によって小数点の後の桁数が決まります。 どちらのフラグも設定されていない場合、精度の値は、全体の有効桁数を決定します。 `resetiosflags` マニピュレーターは、これらのフラグをオフにします。
 
-## <a name="vclrfradixanchor6"></a> 基数
+## <a name="radix"></a><a name="vclrfradixanchor6"></a>ベース
 
-、 `dec` 、`oct`および`hex`マニピュレーターは、入力と出力の既定の基数を設定します。 たとえば、マニピュレーターを`hex`出力ストリームに挿入すると、オブジェクトは整数の内部データ表現を16進数の出力形式に正しく変換します。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は`dec` (decimal) です。
+`dec`、 `oct` 、およびマニピュレーターは、 `hex` 入力と出力の既定の基数を設定します。 たとえば、マニピュレーターを出力ストリームに挿入すると、 `hex` オブジェクトは整数の内部データ表現を16進数の出力形式に正しく変換します。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は `dec` (decimal) です。
 
 ## <a name="quoted-strings-c14"></a>引用符で囲まれた文字列 (C++14)
 
@@ -201,7 +201,7 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-この動作は手動で克服できますが、文字列のラウンドトリップをより簡単にするために`std::quoted` 、c++ 14 \<では iomanip > にストリームマニピュレーターが追加されます。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
+この動作は手動で克服できますが、文字列のラウンド トリップをより簡単に行うために、C++14 では、\<iomanip> に `std::quoted` ストリーム マニピュレーターが追加されます。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
 
 区切り記号はストリームオブジェクト内にのみ存在します。抽出された文字列には存在しませんが、 [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)によって返される文字列に含まれています。
 

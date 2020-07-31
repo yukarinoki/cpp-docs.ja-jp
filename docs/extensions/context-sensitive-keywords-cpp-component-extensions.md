@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182176"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219743"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>状況依存キーワード (C++/CLI および C++/CX)
 
@@ -38,7 +38,7 @@ ms.locfileid: "80182176"
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [リテラル](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ ms.locfileid: "80182176"
 
 ### <a name="examples"></a>例
 
-次のコード例では、適切なコンテキストで **property** 状況依存キーワードを使用して、プロパティと変数を定義できることを示します。
+次のコード例は、適切なコンテキストで、 **`property`** 状況依存のキーワードを使用してプロパティと変数を定義できることを示しています。
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

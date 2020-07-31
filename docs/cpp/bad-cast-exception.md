@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 11b42c9e6210c2432563bba43c55517abd4265fe
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2efe5be5e44751831a56b29cfc629df2d21843f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245952"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229182"
 ---
 # <a name="bad_cast-exception"></a>bad_cast 例外
 
-**Bad_cast**例外は、参照型へのキャストが失敗した結果として、 **dynamic_cast**演算子によってスローされます。
+**Bad_cast**例外は、 **`dynamic_cast`** 参照型へのキャストが失敗した結果として、演算子によってスローされます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,7 +26,7 @@ catch (bad_cast)
    statement
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **Bad_cast**のインターフェイスは次のとおりです。
 
@@ -34,7 +34,7 @@ catch (bad_cast)
 class bad_cast : public exception
 ```
 
-次のコードには、 **bad_cast**例外をスローする失敗した**dynamic_cast**の例が含まれています。
+次のコードには、bad_cast 例外をスローする、失敗したの例が含まれてい **`dynamic_cast`** ます。 **bad_cast**
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -72,7 +72,7 @@ Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-次に、 **try**ブロック内のキャストの意味を次のように逆にします。
+次に、ブロック内のキャストの意味を次のように逆にし **`try`** ます。
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -88,17 +88,17 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|機能|[説明]|
 |-|-|
 |[結果](#what)|TBD|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
-|[operator=](#op_eq)|1つの `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。|
+|[operator =](#op_eq)|ある `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。|
 
-## <a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a><a name="bad_cast"></a>bad_cast
 
 `bad_cast` 型のオブジェクトのコンストラクター。
 
@@ -107,22 +107,22 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-1つの `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。
+ある `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a>結果
+## <a name="what"></a><a name="what"></a>結果
 
 ```cpp
 const char* what() const noexcept override;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)\
-[キーワード](../cpp/keywords-cpp.md)\
-[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)
+[dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)\
+[Keywords](../cpp/keywords-cpp.md)\
+[例外とエラー処理に関する最新の C++ のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)

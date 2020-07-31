@@ -1,22 +1,22 @@
 ---
-title: コンパイラ エラー C2696
+title: コンパイラエラー C2696
 ms.date: 11/04/2016
 f1_keywords:
 - C2696
 helpviewer_keywords:
 - C2696
 ms.assetid: 6c6eb7df-1230-4346-9a73-abf14c20785d
-ms.openlocfilehash: 340a5d0596160b6c9c7bcfc78aed812f8c5f3fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6af217dbcd871ac4edd1852042144802388545b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367604"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216090"
 ---
-# <a name="compiler-error-c2696"></a>コンパイラ エラー C2696
+# <a name="compiler-error-c2696"></a>コンパイラエラー C2696
 
-管理対象の型 'type' の一時オブジェクトを作成することはできません。
+マネージド型 ' type ' の一時オブジェクトを作成することはできません
 
-参照`const`アンマネージ プログラムが、コンパイラはコンス トラクターを呼び出すし、スタック上に一時オブジェクトを作成します。 ただし、マネージ クラスはスタックで作成できません。
+アンマネージプログラムでへの参照を行う **`const`** と、コンパイラがコンストラクターを呼び出し、スタックに一時オブジェクトを作成します。 ただし、マネージクラスをスタックに作成することはできません。
 
-C2696 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C2696 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax**を使用してのみ到達可能です。

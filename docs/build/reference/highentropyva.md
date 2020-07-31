@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -HIGHENTROPYVA editbin option
 - /HIGHENTROPYVA editbin option
 ms.assetid: ef4b7c63-440d-40ca-b39d-edefb3217505
-ms.openlocfilehash: 90d3c868eaab85e3b1a2a416c9aa14b0e27ec8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc12c0673764460b4af5eb7cf3b394d9666e81
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270225"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404101"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 
@@ -21,16 +21,17 @@ ms.locfileid: "62270225"
 
 ## <a name="syntax"></a>構文
 
-> **/HIGHENTROPYVA** **[:NO]**
+> **`/HIGHENTROPYVA`**[**`:NO`**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションのヘッダーを変更する、*実行可能イメージ*、.dll ファイルまたは .exe ファイルを 64 ビット アドレスの ASLR がサポートされているかどうかを示します。 このオプションを実行可能ファイルおよび依存するモジュールのすべてに設定すると、64 ビット ASLR をサポートするオペレーティング システムは、読み込み時に 64 ビットの仮想アドレス空間でランダム化されたアドレスを使用して、実行可能イメージのセグメントのベース アドレスをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
+このオプションは、 *executable image* *`.dll`* *`.exe`* 64 ビットのアドレス ASLR のサポートを示すために、実行可能イメージファイル (たとえば、ファイルやファイル) のヘッダーを変更します。 効果を与えるには、実行可能ファイルと、それが依存するすべてのモジュールに対してオプションを設定します。 その後、64ビット ASLR をサポートするオペレーティングシステムは、ランダム化された64ビットの仮想アドレスを使用して、読み込み時に実行可能イメージのセグメントをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
 
-既定では、リンカーができるように **/HIGHENTROPYVA** 64 ビット実行可能ファイルのイメージ。 このオプションが必要です[/LARGEADDRESSAWARE](largeaddressaware.md)も 64 ビット イメージに対して既定で有効になっています。 **/HIGHENTROPYVA**は、32 ビット実行可能イメージに適用可能なオプションが無視されます。 このオプションを明示的に無効にするには、 **/HIGHENTROPYVA:NO**します。 このオプションに影響を与える、 [/DYNAMICBASE](dynamicbase.md)オプションも設定する必要があります。
+既定では、リンカーは **`/HIGHENTROPYVA`** 64 ビットの実行可能イメージを有効にします。 このオプションには、との両方が必要です [`/DYNAMICBASE`](dynamicbase.md) [`/LARGEADDRESSAWARE`](largeaddressaware.md) 。これは、64ビットイメージに対しても既定で有効になっています。 **`/HIGHENTROPYVA`** 32ビットの実行可能イメージには適用できません。オプションは無視されます。 このオプションを明示的に無効にするには、を使用し **`/HIGHENTROPYVA:NO`** ます。
 
 ## <a name="see-also"></a>関連項目
 
-- [EDITBIN オプション](editbin-options.md)
-- [/DYNAMICBASE](dynamicbase.md)
-- [Windows ISV Software Security Defenses](https://msdn.microsoft.com/library/bb430720.aspx)
+[EDITBIN オプション](editbin-options.md)\
+[`/DYNAMICBASE`](dynamicbase.md)\
+[`/LARGEADDRESSAWARE`](largeaddressaware.md)\
+[Windows ISV ソフトウェアセキュリティ防御](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

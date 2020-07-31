@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332254"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220549"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`基になるインターフェイスポインターを表す型を宣言します。 を使用し `ComPtr<>` て変数を宣言し、矢印のメンバーアクセス演算子 ( `->` ) を使用してインターフェイスメンバー関数にアクセスします。
 
-スマートポインターの詳細については、MSDN ライブラリの[Com コーディング方法](/windows/win32/LearnWin32/com-coding-practices)に関する記事の「Com スマートポインター」サブセクションを参照してください。
+スマートポインターの詳細については、 [com のコーディング方法](/windows/win32/LearnWin32/com-coding-practices)に関する記事の「Com スマートポインター」サブセクションを参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>解説
 
-このヘルパー関数は、STDMETHOD マクロを使用することによって生じる不要なオーバーヘッドを除去します。 この関数は、で `IUnknown` `private` はなく型を作成 `virtual` します。
+このヘルパー関数は、STDMETHOD マクロを使用することによって生じる不要なオーバーヘッドを除去します。 この関数は、で `IUnknown` **`private`** はなく型を作成 **`virtual`** します。
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は、 `true` オブジェクト*a*がオブジェクト*b*と等しい場合はを生成します。それ以外の場合はを返し `false` ます。
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しい場合はを生成します。それ以外の場合はを返し **`false`** ます。
 
-2番目と3番目の演算子は、 `true` オブジェクト*a*がと等しい場合はを、 `nullptr` それ以外の場合はを生成します `false` 。
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しい場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は、オブジェクト a がオブジェクト b と等しくない場合はを生成します。 `true` それ以外の場合はを返し*a* *b* `false` ます。
+最初の演算子は、 **`true`** オブジェクト*a*がオブジェクト*b*と等しくない場合はを、それ以外の場合はを生成 **`false`** します。
 
-2番目と3番目の演算子は、オブジェクト a がと等しくない場合はを生成します。 `true` *a* `nullptr` それ以外の場合はを返し `false` ます。
+2番目と3番目の演算子は、 **`true`** オブジェクト*a*がと等しくない場合はを、 **`nullptr`** それ以外の場合はを生成します **`false`** 。
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: ブール型
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスがこのに関連付けられている場合は、 `ComPtr` [bool struct:: Member](boolstruct-structure.md#member)データメンバーのアドレス。それ以外の場合は `nullptr` 。
+インターフェイスがこのに関連付けられている場合は、 `ComPtr` [bool struct:: Member](boolstruct-structure.md#member)データメンバーのアドレス。それ以外の場合は **`nullptr`** 。
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 

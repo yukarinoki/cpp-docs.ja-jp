@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233926"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -85,7 +85,7 @@ int _timespec64_get(
 
 **Microsoft 固有の仕様**
 
-これらの関数では、*ベース*値として**TIME_UTC**のみがサポートされます。 これにより、 *time_spec*の値が、現地時刻 (UTC) のエポックの開始日午前0時 (UTC) から1970年1月1日深夜0時 (UTC) の秒数およびナノ秒数に設定されます。 **構造体** **_timespec32**では、 **tv_sec**は **__time32_t**値です。 **構造体** **_timespec64**では、 **tv_sec**は **__time64_t**値です。 **構造体**の**timespec**では、 **tv_sec**は**time_t**型です。これは、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されているかどうかに応じて、32ビットまたは64ビットの長さになります。 **Timespec_get**関数は、_USE_32BIT_TIME_T が定義されている場合に **_timespec32_get**を呼び出すインライン関数です。それ以外の場合は、 **_timespec64_get**を呼び出します。
+これらの関数では、*ベース*値として**TIME_UTC**のみがサポートされます。 これにより、 *time_spec*の値が、現地時刻 (UTC) のエポックの開始日午前0時 (UTC) から1970年1月1日深夜0時 (UTC) の秒数およびナノ秒数に設定されます。 **`struct`** **_Timespec32**では、 **tv_sec**は **__time32_t**の値です。 **`struct`** **_Timespec64**では、 **tv_sec**は **__time64_t**の値です。 **`struct`** **Timespec**では、 **tv_sec**は**time_t**型です。これは、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されているかどうかに応じて、32ビットまたは64ビットの長さになります。 **Timespec_get**関数は、_USE_32BIT_TIME_T が定義されている場合に **_timespec32_get**を呼び出すインライン関数です。それ以外の場合は、 **_timespec64_get**を呼び出します。
 
 **End Microsoft 固有の仕様**
 
@@ -93,9 +93,9 @@ int _timespec64_get(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h>、C++: \<ctime> または \<time.h>|
+|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h> 、C++: \<ctime> または\<time.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

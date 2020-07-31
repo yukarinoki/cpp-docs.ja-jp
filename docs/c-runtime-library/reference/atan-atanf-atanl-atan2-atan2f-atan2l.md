@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506781"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232613"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
@@ -97,7 +97,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能であるため、 **float**または**long** **double**引数を受け取る**atan**と**atan2**のオーバーロードを呼び出すことができます。 C プログラムでは、 **atan**と**atan2**は常に**2**つの引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能であるため、または引数を受け取る**atan**と**atan2**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **atan**と**atan2**は常に引数を受け取り、 **`double`** を返し **`double`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218664"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -79,7 +79,7 @@ wchar_t *_wgetdcwd(
 **NULL**が指定されている場合、この関数は**malloc**を使用して少なくとも*maxlen*のサイズのバッファーを割り当てます。 **_getdcwd**の戻り値は、割り当てられたバッファーへのポインターです。 バッファーは、 **free**を呼び出してポインターを渡すことによって解放できます。
 
 *maxlen*<br/>
-パスの最大長を文字数で指定する0以外の正の整数。 **_getdcwd**の場合は**char** 、 **_wgetdcwd**の場合は**wchar_t** 。
+パスの最大長を文字数で指定する0以外の正の整数。 _getdcwd の場合は、 **`char`** **_getdcwd** **`wchar_t`** **_wgetdcwd**の場合は。
 
 *Maxlen*が0以下の場合は、無効なパラメーターハンドラーが呼び出されます。 詳細については、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」を参照してください。
 
@@ -111,7 +111,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<direct.h> または \<wchar.h>|
@@ -124,7 +124,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951259"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213503"
 ---
 # <a name="offsetof-macro"></a>offsetof マクロ
 
@@ -54,9 +54,9 @@ size_t offsetof(
 
 **offsetof**は、親データ構造体の先頭から、指定されたメンバーのオフセットをバイト単位で返します。 ビット フィールドには定義されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Offsetof**マクロは、 *structName*で指定された構造体の先頭からのバイト*単位のオフセット*を**size_t**型の値として返します。 **Struct**キーワードを使用して型を指定できます。
+**Offsetof**マクロは、 *structName*によって指定された構造*体の先頭から* **size_t**型の値としてオフセットをバイト単位で返します。 キーワードを使用して型を指定でき **`struct`** ます。
 
 > [!NOTE]
 > **offsetof**は関数ではなく、C プロトタイプを使用して記述することはできません。
@@ -67,7 +67,7 @@ size_t offsetof(
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -75,4 +75,4 @@ size_t offsetof(
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>

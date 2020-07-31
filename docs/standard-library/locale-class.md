@@ -1,6 +1,6 @@
 ---
 title: locale クラス
-ms.date: 03/19/2019
+ms.date: 07/20/2020
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 2581c5cdacc9e542f5d911860128dcf5526621ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224826"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -50,14 +50,14 @@ static locale::id id;
 
 これらのファセットの定義済みのグループは、従来の標準 C ライブラリでは `setlocale` 関数で管理されていた[ロケールのカテゴリ](#category)を表します。
 
-カテゴリ`collate`(LC_COLLATE)には、ファセットが含まれます。
+Category `collate` (LC_COLLATE) には、次のファセットが含まれます。
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-カテゴリ`ctype`(LC_CTYPE)には、ファセットが含まれます。
+Category `ctype` (LC_CTYPE) には、次のファセットが含まれます。
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-カテゴリ`monetary`(LC_MONETARY)には、ファセットが含まれます。
+Category `monetary` (LC_MONETARY) には、次のファセットが含まれます。
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-カテゴリ`numeric`(LC_NUMERIC)には、ファセットが含まれます。
+Category `numeric` (LC_NUMERIC) には、次のファセットが含まれます。
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-カテゴリ`time`(LC_TIME)には、ファセットが含まれます。
+Category `time` (LC_TIME) には、次のファセットが含まれます。
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,18 +101,18 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-カテゴリ`messages`(LC_MESSAGES)にはファセットが含まれます。
+Category `messages` (LC_MESSAGES) には、次のファセットが含まれます。
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-(最後のカテゴリは POSIX で必須ですが、C 標準では必須ではありません)。
+(最後のカテゴリは POSIX では必須ですが、C 標準には必要ありません)。
 
-これらの定義済みファセットの一部は、数値の`iostream`テキスト シーケンスとの間の変換を制御するために、クラスによって使用されます。
+これらの定義済みのファセットの一部は、 `iostream` テキストシーケンスとの間での数値の変換を制御するために、クラスによって使用されます。
 
-クラス ロケールのオブジェクトは、ロケール名を [string](../standard-library/string-typedefs.md#string) クラスのオブジェクトとして格納します。 無効なロケール名を使用してロケールのファセットまたはロケール オブジェクトを構築すると、[runtime_error](../standard-library/runtime-error-class.md) クラスのオブジェクトがスローされます。 格納されているロケール名は`"*"`、ロケール オブジェクトが C スタイルのロケールがオブジェクトで表されるロケールと正確に一致することを確認できない場合です。 それ以外の場合は、 name[を呼び](#name)`().c_str())`出`setlocale(LC_ALL , locale_object.`すことによって、標準 C`locale_object`ライブラリ内の一部のロケール オブジェクトに対応するロケールを確立できます。
+クラス ロケールのオブジェクトは、ロケール名を [string](../standard-library/string-typedefs.md#string) クラスのオブジェクトとして格納します。 無効なロケール名を使用してロケールのファセットまたはロケール オブジェクトを構築すると、[runtime_error](../standard-library/runtime-error-class.md) クラスのオブジェクトがスローされます。 `"*"`ロケールオブジェクトが、C スタイルのロケールがオブジェクトによって表されるロケールと完全に対応していることを特定できない場合、格納されるロケール名はです。 それ以外の場合は、名前を呼び出すことによって、標準 C ライブラリ内でロケールオブジェクトに対応するロケールを設定でき `locale_object` `setlocale(LC_ALL , locale_object.` [name](#name) `().c_str())` ます。
 
 この実装では、次の静的メンバー関数を呼び出すことによって、
 
@@ -120,13 +120,13 @@ messages<wchar_t>
 static locale empty();
 ```
 
-ファセットがないロケール オブジェクトを構築することもできます。 また、透過的なロケールでもあります。 テンプレート関数が[has_facet](../standard-library/locale-functions.md#has_facet)[し、use_facet](../standard-library/locale-functions.md#use_facet)が要求されたファセットを透過ロケールで見つけることができない場合、最初にグローバル ロケールを調べ、次に透過的な場合はクラシック ロケールを調べてください。 だから、あなたは書くことができます:
+ファセットがないロケール オブジェクトを構築することもできます。 透過的なロケールでもあります。 テンプレート関数が use_facet [has_facet](../standard-library/locale-functions.md#has_facet)で[use_facet](../standard-library/locale-functions.md#use_facet) 、要求されたファセットが透過的なロケールで見つからない場合は、最初にグローバルロケールを参照し、次に、それが透過的な場合はクラシックロケールを参照します。 そのため、次のように記述できます。
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-以降の挿入は[`cout`](../standard-library/iostream.md#cout)、グローバル ロケールの現在の状態によって仲介されます。 次のように記述することもできます。
+後続のへの挿入 [`cout`](../standard-library/iostream.md#cout) は、グローバルロケールの現在の状態によって仲介されます。 次のように記述することもできます。
 
 ```cpp
 locale loc(locale::empty(),
@@ -140,53 +140,53 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|[説明]|
 |-|-|
-|[ロケール](#locale)|ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。|
+|[locale](#locale)|ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[category](#category)|標準ファセット ファミリを示すビットマスク値を指定する整数型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|[説明]|
 |-|-|
-|[組み合わせる](#combine)|ターゲット ロケールに指定されたロケールのファセットを挿入します。|
+|[結合](#combine)|ターゲット ロケールに指定されたロケールのファセットを挿入します。|
 |[name](#name)|格納されているロケール名を返します。|
 
 ### <a name="static-functions"></a>静的関数
 
 |||
 |-|-|
-|[クラシック](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
-|[グローバル](#global)|プログラムの既定のロケールをリセットします。|
+|[classic](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
+|[global](#global)|プログラムの既定のロケールをリセットします。|
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
-|[演算子=](#op_eq)|ロケールを割り当てます。|
-|[演算子!=](#op_neq)|2 つのロケールが等しくないかどうかをテストします。|
-|[演算子( )](#op_call)|2 つの `basic_string` オブジェクトを比較します。|
-|[演算子==](#op_eq_eq)|2 つのロケールが等しいかどうかをテストします。|
+|[operator =](#op_eq)|ロケールを割り当てます。|
+|[operator! =](#op_neq)|2 つのロケールが等しくないかどうかをテストします。|
+|[operator ()](#op_call)|2 つの `basic_string` オブジェクトを比較します。|
+|[operator = =](#op_eq_eq)|2 つのロケールが等しいかどうかをテストします。|
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|クラス|[説明]|
 |-|-|
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[`id`](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
-## <a name="localecategory"></a><a name="category"></a>ロケール::カテゴリ
+## <a name="localecategory"></a><a name="category"></a>locale:: category
 
 標準ファセット ファミリを示すビットマスク値を指定する整数型。
 
@@ -204,29 +204,29 @@ static const int none = 0;
 
 ### <a name="remarks"></a>解説
 
-この型は、クラス ロケールに対してローカルなビットマスク型の異なる要素のグループを表したり、対応する C ロケール カテゴリを表すために使用できる**int**型のシノニムです。 要素は次のとおりです。
+この型は、 **`int`** クラスロケールに対してローカルなビットマスク型の個別の要素のグループを表すことができる型のシノニムです。または、対応する C ロケールカテゴリのいずれかを表すために使用できます。 要素は次のとおりです。
 
-- `collate`C カテゴリLC_COLLATEに対応します。
+- `collate`。 C カテゴリに対応する LC_COLLATE
 
-- `ctype`C カテゴリLC_CTYPEに対応します。
+- `ctype`。 C カテゴリに対応する LC_CTYPE
 
-- `monetary`C カテゴリLC_MONETARYに対応します。
+- `monetary`。 C カテゴリに対応する LC_MONETARY
 
-- `numeric`C カテゴリLC_NUMERICに対応します。
+- `numeric`。 C カテゴリに対応する LC_NUMERIC
 
-- `time`C カテゴリ LC_TIMEに対応します。
+- `time`。 C カテゴリに対応する LC_TIME
 
-- `messages`のは、POSIX カテゴリLC_MESSAGES
+- `messages`POSIX カテゴリに対応する LC_MESSAGES
 
-さらに 2 つの有用な値を次に示します。
+次の2つの便利な値があります。
 
-- `none`、C カテゴリのどれもに対応
+- `none`。 C カテゴリのいずれにも対応しません。
 
-- `all`、すべてのカテゴリのC結合に対応するLC_ALL
+- `all`。すべてのカテゴリの C 共用体に対応 LC_ALL
 
-&#124; のように、これらの定数を使用`OR`して、任意のカテゴリ のグループを`monetary`表`time`すことができます。
+`OR`&#124; のように、これらの定数と共にを使用すると、任意のカテゴリグループを表すことができ `monetary` `time` ます。
 
-## <a name="localeclassic"></a><a name="classic"></a>ロケール::クラシック
+## <a name="localeclassic"></a><a name="classic"></a>locale:: classic
 
 この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。
 
@@ -240,7 +240,7 @@ C ロケールへの参照。
 
 ### <a name="remarks"></a>解説
 
-クラシック C ロケールは、標準 C ライブラリ内の米国英語 ASCII ロケールです。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
+Classic C ロケールは、標準 C ライブラリ内の米国英語の ASCII ロケールです。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
 
 ### <a name="example"></a>例
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>ロケール::結合
+## <a name="localecombine"></a><a name="combine"></a>locale:: 結合
 
 ターゲット ロケールに指定されたロケールのファセットを挿入します。
 
@@ -297,7 +297,7 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、 に`Facet`リストされているファセットをこのオブジェクトに置き換えるか、**\*これに**追加するロケール オブジェクト*source_locale*返します。
+** \* この**メンバー関数は、 `Facet` *source_locale*に示されているファセットをで置換または追加するロケールオブジェクトを返します。
 
 ### <a name="example"></a>例
 
@@ -346,13 +346,13 @@ private:
 
 ### <a name="remarks"></a>解説
 
-class`facet`のオブジェクトをコピーまたは割り当てることはできません。 クラス `locale::facet` から派生したオブジェクトは構築および破棄できますが、厳密な意味での基底クラスのオブジェクトは構築および破棄できません。 通常は、 での`_Myfac`で、`facet`から派生した`locale`オブジェクトを構築します。`locale loc(locale::classic(), new _Myfac);`
+クラスのオブジェクトをコピーしたり、割り当てたりすることはできません `facet` 。 クラス `locale::facet` から派生したオブジェクトは構築および破棄できますが、厳密な意味での基底クラスのオブジェクトは構築および破棄できません。 通常は、を構築する `_Myfac` ときにから派生したオブジェクトを構築します。 `facet` `locale``locale loc(locale::classic(), new _Myfac);`
 
-このような場合、基本クラス`facet`のコンストラクターは、参照引数を 0*references*にする必要があります。 オブジェクトが不要になった場合は削除されるため、オブジェクトの有効期間に責任を持つまれなケースでのみ、ゼロ以外の*参照*引数を指定します。
+このような場合、基底クラスのコンストラクターには、 `facet` ゼロ*参照*引数が必要です。 オブジェクトが不要になった場合は削除されます。そのため、オブジェクトの有効期間に対して責任があるまれなケースでのみ、0以外の*参照*引数を指定します。
 
-## <a name="localeglobal"></a><a name="global"></a>ロケール::グローバル
+## <a name="localeglobal"></a><a name="global"></a>locale:: global
 
-プログラムの既定のロケールをリセットします。 この呼び出しは、C および C++ のグローバル ロケールに影響します。
+プログラムの既定のロケールをリセットします。 この呼び出しは、C と C++ の両方のグローバルロケールに影響します。
 
 ```cpp
 static locale global(const locale& new_default_locale);
@@ -414,11 +414,11 @@ class id
 
 ### <a name="remarks"></a>解説
 
-このメンバー クラスは、一意の各ロケール ファセットに必要な静的メンバー オブジェクトを表します。 class`id`のオブジェクトをコピーまたは割り当てることはできません。
+このメンバー クラスは、一意の各ロケール ファセットに必要な静的メンバー オブジェクトを表します。 クラスのオブジェクトをコピーしたり、割り当てたりすることはできません `id` 。
 
-## <a name="localelocale"></a><a name="locale"></a>ロケール::ロケール
+## <a name="localelocale"></a><a name="locale"></a>locale:: locale
 
-ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。 また、デストラクターが含まれています。
+ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。 には、デストラクターも含まれています。
 
 ```cpp
 locale();
@@ -443,7 +443,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 *from_locale*\
 新しいロケールを構築する際にコピーされるロケール。
 
-*他*\
+*他の*\
 カテゴリの選択元となるロケール。
 
 *new_category*\
@@ -454,23 +454,23 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、グローバル ロケールと一致するようにオブジェクトを初期化します。 2 番目と 3 番目のコンストラクターは、ロケール名と一致する動作を持つすべてのロケールカテゴリ*を初期化locale_name。* 残りのコンストラクターは*from_locale*コピーしますが、例外は次のとおりです。
+最初のコンストラクターは、グローバル ロケールと一致するようにオブジェクトを初期化します。 2番目と3番目のコンストラクターは、すべてのロケールカテゴリを初期化して、ロケール名*locale_name*との動作が一致するようにします。 残りのコンストラクターは*from_locale*をコピーします。ただし、次の点に注意してください。
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-は、C *&new_category*がゼロ以外のカテゴリ C に対応する*その他*のファセットから置き換えられます。
+C & *new_category*が0以外のカテゴリ c に対応する*他の*ファセットを置き換えます。
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-は、カテゴリ`locale(locale_name, all)`*replace_category*`replace_category & new_category`に対応するファセットから置き換えられます。
+`locale(locale_name, all)`カテゴリ*replace_category*に対応するファセットから、が0以外のものに置き換え `replace_category & new_category` ます。
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-*new_facet*が null ポインターでない場合は、ファセット*new_facetfrom_locale*に置き換える (または追加) します。 *new_facet*
+*new_facet*が null ポインターではない場合は、ファセット*new_facet* *from_locale*を (またはに追加して) 置換します。
 
-ロケール名*locale_name*が null ポインタであるか、または無効な場合、関数は[runtime_error](../standard-library/runtime-error-class.md)をスローします。
+ロケール名*locale_name*が null ポインターである場合、または無効な場合、関数は[runtime_error](../standard-library/runtime-error-class.md)をスローします。
 
 ### <a name="example"></a>例
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>ロケール::名前
+## <a name="localename"></a><a name="name"></a>locale:: name
 
 格納されているロケール名を返します。
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>ロケール::演算子=
+## <a name="localeoperator"></a><a name="op_eq"></a>locale:: operator =
 
 ロケールを割り当てます。
 
@@ -559,7 +559,7 @@ The name of the current locale is: German_Germany.1252.
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>ロケール::演算子!=
+## <a name="localeoperator"></a><a name="op_neq"></a>locale:: operator! =
 
 2 つのロケールが等しくないかどうかをテストします。
 
@@ -574,11 +574,11 @@ bool operator!=(const locale& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ロケールが同じロケールのコピーでない場合に**true**となるブール値。 ロケールが同じロケールのコピーである場合は **、false**です。
+**`true`** ロケールが同じロケールのコピーでない場合は、ブール値。 ロケールが **`false`** 同じロケールのコピーである場合は、
 
 ### <a name="remarks"></a>解説
 
-2 つのロケールは、同じロケールの場合、一方が他方のコピーである場合、または同じ名前を持つ場合は等しくなります。
+2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 
 ### <a name="example"></a>例
 
@@ -620,9 +620,9 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>ロケール::演算子()
+## <a name="localeoperator"></a><a name="op_call"></a>locale:: operator ()
 
-2 つの `basic_string` オブジェクトを比較します。
+`basic_string`このロケールの std:: collate ファセットによって定義された辞書式比較規則に従って、2つのオブジェクトを比較し <charT> ます。
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -633,21 +633,15 @@ bool operator()(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
-左側の文字列。
+*左側*\
+比較する最初の文字列。
 
 *そうです*\
-右側の文字列。
+比較する 2 番目の文字列。
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、以下の値を返します。
-
-- 最初のシーケンスが 2 番目のシーケンスより小さい場合は、-1。
-
-- 2 番目のシーケンスが最初のシーケンスより小さい場合は、+1。
-
-- シーケンスが等しい場合は 0。
+- **`true`***left*が辞書式未満の場合*は、それ以外の場合*は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -659,7 +653,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-これは、関数オブジェクトとしてロケールオブジェクトを使用できることを意味します。
+これは、locale オブジェクトを関数オブジェクトとして使用できることを意味します。
 
 ### <a name="example"></a>例
 
@@ -673,8 +667,8 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 int main( )
 {
    using namespace std;
-   wchar_t *sa = L"ztesting";
-   wchar_t *sb = L"\0x00DFtesting";
+   const wchar_t *sa = L"ztesting";
+   const wchar_t *sb = L"\0x00DFtesting";
    basic_string<wchar_t> a( sa );
    basic_string<wchar_t> b( sb );
 
@@ -692,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>ロケール::演算子==
+## <a name="localeoperator"></a><a name="op_eq_eq"></a>locale:: operator = =
 
 2 つのロケールが等しいかどうかをテストします。
 
@@ -707,11 +701,11 @@ bool operator==(const locale& right) const;
 
 ### <a name="return-value"></a>戻り値
 
-ロケールが同じロケールのコピーである場合に**true**となるブール値。 ロケールが同じロケールのコピーでない場合は **、false**です。
+**`true`** ロケールが同じロケールのコピーである場合は、ブール値。 **`false`** ロケールが同じロケールのコピーではない場合です。
 
 ### <a name="remarks"></a>解説
 
-2 つのロケールは、同じロケールの場合、一方が他方のコピーである場合、または同じ名前を持つ場合は等しくなります。
+2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 
 ### <a name="example"></a>例
 
@@ -759,7 +753,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>関連項目
 
-[\<ロケール>](../standard-library/locale.md)\
-[コード ページ](../c-runtime-library/code-pages.md)\
-[ロケール名、言語、国/地域の文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[コードページ](../c-runtime-library/code-pages.md)\
+[ロケール名、言語、および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

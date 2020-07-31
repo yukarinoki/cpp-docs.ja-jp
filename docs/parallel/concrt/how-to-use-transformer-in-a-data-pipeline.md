@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: c8cf1801d0262e3a2995d520604374ea22352fa0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4eb490ecf51abea324f20395279bff2d74b7af77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215856"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>方法: データ パイプラインでトランスフォーマーを使用する
 
@@ -37,25 +37,25 @@ ms.locfileid: "77141895"
 
 [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
 
-この例の結果は、次のようになります。
+この例を実行すると、次の出力が生成されます。
 
 ```Output
 The result is -42.
 ```
 
-一般に、データ パイプラインのステージは、入力値と異なる種類の値を出力します。 この例では、2 番目のステージは入力として `int` 型の値を取得し、出力としてその値の平方根 (`double` 型) を生成します。
+一般に、データ パイプラインのステージは、入力値と異なる種類の値を出力します。 この例では、2番目のステージは入力として型の値を取得 **`int`** し、その値の平方根 (a) を出力として生成し **`double`** ます。
 
 > [!NOTE]
 > この例のデータ パイプラインは、例示のみを目的としています。 各変換操作での処理量が少ないため、メッセージ パッシングを実行するのに必要なオーバーヘッドがデータ パイプラインを使用するメリットを上回る場合があります。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`data-pipeline.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `data-pipeline.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 > **cl.exe/EHsc data-pipeline**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

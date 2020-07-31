@@ -1,68 +1,68 @@
 ---
-title: '&lt;バリアント&gt;'
+title: '&lt;variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 7a812ccc3c8cb2a660c01ad2b17ea75b5d5c9542
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232821"
 ---
-# <a name="ltvariantgt"></a>&lt;バリアント&gt;
+# <a name="ltvariantgt"></a>&lt;variant&gt;
 
-バリアント オブジェクトを保持し、値を管理します。 場合は、バリアントは、値の型はバリアントに指定されたテンプレート引数の型のいずれかを指定する必要があります、値を保持します。 これらのテンプレート引数には、代替手段は呼び出されます。
+バリアントオブジェクトは、値を保持して管理します。 バリアントが値を保持している場合、その値の型は variant に指定されたテンプレート引数の型のいずれかである必要があります。 これらのテンプレート引数は、代替と呼ばれます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<バリアント型 >
+**ヘッダー:**\<variant>
 
 **名前空間:** std
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|演算子の左側にあるバリエーション オブジェクトが右側にあるバリアント型のオブジェクトと等しいかどうかをテストします。|
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|演算子の左側にあるバリエーション オブジェクトが右側にあるバリエーション オブジェクトと等しくないかどうかをテストします。|
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|演算子の左側にあるバリエーション オブジェクトが右側にあるバリエーション オブジェクトより小さいかどうかをテストします。|
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|右側にあるバリアント型のオブジェクトと等しいまたはそれよりも小さいがの場合は、バリアントは、演算子の左側にあるオブジェクトを調べます。|
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|演算子の左側にあるバリエーション オブジェクトが右側にあるバリエーション オブジェクトより大きいかどうかをテストします。|
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|演算子の左側にあるバリエーション オブジェクトが右側にあるバリエーション オブジェクト以上かどうかをテストします。|
+|[operator = =](../standard-library/forward-list-operators.md#op_eq_eq)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクトと等しいかどうかをテストします。|
+|[operator! =](../standard-library/forward-list-operators.md#op_neq)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクトと等しくないかどうかをテストします。|
+|[<演算子](../standard-library/forward-list-operators.md#op_lt)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクトより小さいかどうかをテストします。|
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクト以下かどうかをテストしますです。|
+|[>演算子](../standard-library/forward-list-operators.md#op_gt)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクトより大きいかどうかをテストします。|
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクト以上かどうかをテストしますです。|
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
-|[get](../standard-library/variant-functions.md#get)|オブジェクトの変化形を取得します。|
-|[get_if](../standard-library/variant-functions.md#get_if)|存在する場合は、オブジェクトの変化形を取得します。|
-|[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|返す**true**バリアントが存在する場合。|
-|[swap](../standard-library/variant-functions.md#swap)|スワップを**バリアント**します。|
-|[参照してください。](../standard-library/variant-functions.md#visit)|次の移動**バリアント**します。|
+|[get](../standard-library/variant-functions.md#get)|オブジェクトのバリアントを取得します。|
+|[get_if](../standard-library/variant-functions.md#get_if)|オブジェクトが存在する場合は、そのバリアントを取得します。|
+|[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|**`true`** バリアントが存在する場合は、を返します。|
+|[スワップ](../standard-library/variant-functions.md#swap)|**バリアント**を交換します。|
+|[ごと](../standard-library/variant-functions.md#visit)|次の**バリアント**に移動します。|
 
 ### <a name="classes"></a>クラス
 
 |||
 |-|-|
-|[bad_variant_access](../standard-library/bad-variant-access-class.md)|オブジェクトがバリアント オブジェクトの値に無効なアクセスをレポートするためにスローします。|
-|[バリアント](../standard-library/variant.md)|か、オブジェクトは、その代替の型のいずれかまたは値がないの値を保持します。|
+|[bad_variant_access](../standard-library/bad-variant-access-class.md)|Variant オブジェクトの値への無効なアクセスを報告するためにスローされるオブジェクト。|
+|[variant](../standard-library/variant.md)|別の型のいずれかの値を保持するか、値を持たないオブジェクト。|
 
 ### <a name="structs"></a>構造体
 
 |||
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
-|[monostate](../standard-library/monostate-structure.md)|バリアント型の既定値を構築できる一種の代替型。|
+|[モノの状態](../standard-library/monostate-structure.md)|バリアント型を既定として構築できるようにするバリアントの代替型。|
 |[uses_allocator](../standard-library/uses-allocator-structure.md)||
-|[variant_alternative](../standard-library/variant-alternative-structure.md)|バリアント型のオブジェクトを支援します。|
-|[variant_size](../standard-library/variant-size-structure.md)|バリアント型のオブジェクトを支援します。|
+|[variant_alternative](../standard-library/variant-alternative-structure.md)|Variant オブジェクトを支援します。|
+|[variant_size](../standard-library/variant-size-structure.md)|Variant オブジェクトを支援します。|
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |||
 |-|-|

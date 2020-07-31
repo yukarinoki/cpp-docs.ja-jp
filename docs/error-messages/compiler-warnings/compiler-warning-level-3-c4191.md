@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198966"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220029"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>コンパイラの警告 (レベル 3) C4191
 
@@ -25,11 +25,11 @@ ms.locfileid: "80198966"
 
 - 引数または戻り値の型のサイズ、型のカテゴリ、または分類が異なる場合。
 
-- 引数リストの長さが異なる場合 ( `__cdecl`では、短い方の引数リストが varargs であっても、長い方のリストから短い方へキャストされる場合のみ)。
+- 引数リストの長さが異なり **`__cdecl`** ます (on は、短い方が varargs の場合でも、長いリストから短いリストにキャストした場合のみ)。
 
-- 関数へのポインターに対してエイリアス化されたデータへのポインター ( **void** <strong>\*</strong>以外)。
+- **`void`** 関数へのポインターに対してエイリアス化されたデータへのポインター (以外 <strong>\*</strong> )。
 
-- その他の型の違いによって、 `reinterpret_cast`でエラーまたは警告が発生する場合。
+- その他の型の違いにより、でエラーまたは警告が生成さ **`reinterpret_cast`** れます。
 
 結果として得られたポインターを使用して関数を呼び出すと、プログラムがクラッシュする可能性があります。
 

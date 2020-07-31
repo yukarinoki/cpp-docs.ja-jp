@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182020"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218027"
 ---
 # <a name="generic-interfaces-ccli"></a>ジェネリック インターフェイス (C++/CLI)
 
@@ -36,7 +36,7 @@ ms.locfileid: "80182020"
 (省略可能) 追加の宣言情報。 属性と属性クラスについては、「**属性**」を参照してください。
 
 *class-key*<br/>
-**class** または **typename**。
+**`class`** または **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 コンマ区切りの識別子の一覧。
@@ -45,7 +45,7 @@ ms.locfileid: "80182020"
 「[ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)」に指定された書式を使用します。
 
 *accessibility-modifiers*<br/>
-(省略可能) アクセシビリティ修飾子 (例: **public、private**)。
+Optionalアクセシビリティ修飾子 (例: **public、private**)。
 
 *identifier*<br/>
 インターフェイスの名前。
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>例
 
-この例では、ジェネリック インターフェイス `IMyGenIface` と、`IMySpecializedInt` を特殊化する 2 つの非ジェネリック インターフェイス (`ImySpecializedString` と `IMyGenIface`) を宣言します。 次に、2 つの特殊化されたインターフェイスが、2 つのクラス (`MyIntClass` と `MyStringClass`) で実装されます。 この例では、ジェネリック インターフェイスを特殊化し、ジェネリック インターフェイスと非ジェネリック インターフェイスをインスタンス化し、インターフェイスの明示的に実装されたメンバーを呼び出します。
+この例では、ジェネリック インターフェイス `IMyGenIface` と、`IMyGenIface` を特殊化する 2 つの非ジェネリック インターフェイス (`IMySpecializedInt` と `ImySpecializedString`) を宣言します。 次に、2 つの特殊化されたインターフェイスが、2 つのクラス (`MyIntClass` と `MyStringClass`) で実装されます。 この例では、ジェネリック インターフェイスを特殊化し、ジェネリック インターフェイスと非ジェネリック インターフェイスをインスタンス化し、インターフェイスの明示的に実装されたメンバーを呼び出します。
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジェネリック](generics-cpp-component-extensions.md)

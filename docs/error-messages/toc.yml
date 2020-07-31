@@ -4254,6 +4254,8 @@
           href: compiler-warnings/c5046.md
         - name: コンパイラ警告 (レベル 1) C5105
           href: compiler-warnings/c5105.md
+        - name: コンパイラの警告 (レベル 1) C5208
+          href: compiler-warnings/c5208.md
 - name: コンパイラのバージョンによるコンパイラ警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 既定で無効になっているコンパイラ警告

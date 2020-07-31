@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 849f3c8406c43b0efc2d34837e00fee6ff64e52a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193784"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 関数
 
@@ -49,9 +49,9 @@ exception_ptr current_exception();
 
 catch ブロックで `current_exception` 関数を呼び出します。 例外が処理中で、catch ブロックで例外をキャッチできる場合、`current_exception` 関数は、例外を参照する `exception_ptr` オブジェクトを返します。 それ以外の場合、関数は null `exception_ptr` オブジェクトを返します。
 
-`current_exception` 関数は、 **catch**ステートメントで[例外宣言](../cpp/try-throw-and-catch-statements-cpp.md)ステートメントが指定されているかどうかに関係なく、処理中の例外をキャプチャします。
+関数は、 `current_exception` **`catch`** ステートメントが[例外宣言](../cpp/try-throw-and-catch-statements-cpp.md)ステートメントを指定しているかどうかに関係なく、処理中の例外をキャプチャします。
 
-現在の例外のデストラクターは、例外を再スローしない場合は、 **catch**ブロックの最後に呼び出されます。 ただし、デストラクターで `current_exception` 関数を呼び出しても、その関数は現在の例外を参照する `exception_ptr` オブジェクトを返します。
+現在の例外のデストラクターは、例外を再スローしない場合、ブロックの最後に呼び出され **`catch`** ます。 ただし、デストラクターで `current_exception` 関数を呼び出しても、その関数は現在の例外を参照する `exception_ptr` オブジェクトを返します。
 
 `current_exception` 関数を連続して呼び出すと、現在の例外のさまざまなコピーを参照する `exception_ptr` オブジェクトが返されます。 その結果、オブジェクトは、異なるコピーを参照しているため、コピーが同じバイナリ値を持っている場合でも、比較においては等しくないと評価されます。
 
@@ -66,7 +66,7 @@ template <class E>
 
 ### <a name="parameters"></a>パラメーター
 
-*Except*\
+*ば*\
 コピーする例外を持つクラス。 通常は、[例外クラス](../standard-library/exception-class.md) オブジェクトを `make_exception_ptr` 関数への引数として指定しますが、任意のクラスのオブジェクトを引数に使用できます。
 
 ### <a name="return-value"></a>戻り値
@@ -89,7 +89,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*\
+*Irtran-p*\
 再スローするためにキャッチされる例外。 *P*が null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)の場合、関数は[std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
 
 ### <a name="remarks"></a>解説
@@ -170,7 +170,7 @@ template <class E>
 
 ### <a name="remarks"></a>解説
 
-ポリモーフィックなクラス型でない場合、または `nested_exception` にアクセスできないかあいまいである場合は、何の影響もありません。 それ以外の場合、は動的なキャストを実行します。
+ポリモーフィックなクラス型でない場合、またはにアクセスできない場合やあいまいな場合は、何の影響もあり `nested_exception` ません。 それ以外の場合、は動的なキャストを実行します。
 
 ## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
@@ -230,13 +230,13 @@ void terminate();
 
 ### <a name="remarks"></a>解説
 
-関数は、 **void**型の関数である terminate ハンドラーを呼び出します。 `terminate` がプログラムによって直接呼び出された場合、終了ハンドラーは、 [set_terminate](../standard-library/exception-functions.md#set_terminate)の呼び出しによって最後に設定されたものになります。 Throw 式の評価中に、他のいくつかの理由によって `terminate` が呼び出された場合、終了ハンドラーは、throw 式を評価した直後に有効なものになります。
+関数は、型の関数である terminate ハンドラーを呼び出し **`void`** ます。 `terminate`がプログラムによって直接呼び出された場合、終了ハンドラーは[set_terminate](../standard-library/exception-functions.md#set_terminate)を呼び出すことによって最後に設定されたものになります。 `terminate`Throw 式の評価中に、他のいくつかの理由によってが呼び出された場合、終了ハンドラーは、throw 式を評価した直後に有効なものになります。
 
-終了ハンドラーは、呼び出し元に戻らない場合があります。 プログラムの起動時に、終了ハンドラーは `abort`を呼び出す関数です。
+終了ハンドラーは、呼び出し元に戻らない場合があります。 プログラムの起動時、終了ハンドラーはを呼び出す関数です `abort` 。
 
 ### <a name="example"></a>例
 
-[ の使用例については、「](../standard-library/exception-functions.md#set_unexpected)set_unexpected`terminate`」を参照してください。
+`terminate` の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。
 
 ## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
@@ -251,7 +251,7 @@ template <class T> [[noreturn]]
 
 ## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
-スローされた例外が現在処理されている場合にのみ **true** を返します。
+**`true`** スローされた例外が現在処理されている場合にのみ、を返します。
 
 ```cpp
 bool uncaught_exception();
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>戻り値
 
-Throw 式の評価を完了した後、一致するハンドラーで例外宣言の初期化が完了する前、または throw 式の結果として[予期しない](../standard-library/exception-functions.md#unexpected)呼び出しを行った後に**true**を返します。 特に、例外のアンワインド中に呼び出されるデストラクターから呼び出された場合、`uncaught_exception` は**true**を返します。 デバイス上で、`uncaught_exception` は Windows CE 5.00 以降のバージョン (Windows Mobile 2005 プラットフォームを含む) でのみサポートされます。
+**`true`** スロー式の評価が完了してから、一致するハンドラーで例外宣言の初期化が完了するか、または throw 式の結果として[予期しない](../standard-library/exception-functions.md#unexpected)呼び出しを行った後に、を返します。 特に、 `uncaught_exception` は、 **`true`** 例外のアンワインド中に呼び出されるデストラクターから呼び出されると、を返します。 デバイス上で、`uncaught_exception` は Windows CE 5.00 以降のバージョン (Windows Mobile 2005 プラットフォームを含む) でのみサポートされます。
 
 ### <a name="example"></a>例
 
@@ -326,7 +326,7 @@ void unexpected();
 
 C++ 標準では、関数が throw のリストにない例外をスローした場合に、`unexpected` を呼び出す必要があります。 現在の実装では、これをサポートしていません。 次の例では、予期しないハンドラーを呼び出す `unexpected` を直接呼び出します。
 
-関数は、 **void**型の関数である予期しないハンドラーを呼び出します。 `unexpected` がプログラムによって直接呼び出される場合、予期しないハンドラーは、[set_unexpected](../standard-library/exception-functions.md#set_unexpected) の呼び出しによって最も新しく設定されたものとなります。
+関数は、予期しないハンドラー (型の関数) を呼び出し **`void`** ます。 `unexpected` がプログラムによって直接呼び出される場合、予期しないハンドラーは、[set_unexpected](../standard-library/exception-functions.md#set_unexpected) の呼び出しによって最も新しく設定されたものとなります。
 
 予期しないハンドラーは、呼び出し元に戻らない場合があります。 次の処理を行って実行を終了する場合があります。
 
@@ -334,10 +334,10 @@ C++ 標準では、関数が throw のリストにない例外をスローした
 
 - [bad_exception](../standard-library/bad-exception-class.md) 型のオブジェクトをスローする。
 
-- [Terminate](../standard-library/exception-functions.md#terminate)、`abort`、または**exit**(`int`) を呼び出しています。
+- [Terminate](../standard-library/exception-functions.md#terminate)、またはを呼び出して `abort` `exit` います。
 
 プログラムの起動時に、予期しないハンドラーは、[terminate](../standard-library/exception-functions.md#terminate) を呼び出す関数となります。
 
 ### <a name="example"></a>例
 
-[ の使用例については、「](../standard-library/exception-functions.md#set_unexpected)set_unexpected`unexpected`」を参照してください。
+`unexpected` の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215089"
 ---
 # <a name="wctob"></a>wctob
 
@@ -58,7 +58,7 @@ int wctob(
 
 ## <a name="remarks"></a>解説
 
-**Wctob**関数は、マルチバイト文字が1バイト長の場合に、 *wchar*に含まれるワイド文字を、戻り値**int**値で渡される対応するマルチバイト文字に変換します。
+**Wctob**関数は、 *wchar* **`int`** マルチバイト文字が1バイト長の場合に、wchar に含まれるワイド文字を、戻り値によって渡される対応するマルチバイト文字に変換します。
 
 **Wctob**が失敗し、対応するマルチバイト文字が検出されなかった場合、関数は**errno**を**EILSEQ**に設定し、-1 を返します。
 
@@ -66,7 +66,7 @@ int wctob(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
@@ -109,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

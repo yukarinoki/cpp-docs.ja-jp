@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915150"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234212"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-**倍精度浮動**小数点数を文字列に変換します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_ecvt](ecvt.md) です。
+数値を **`double`** 文字列に変換します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_ecvt](ecvt.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -92,10 +92,10 @@ errno_t _ecvt_s(
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|戻り値|*バッファー*内の値|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**空白**|any|any|any|any|any|**EINVAL**|変更されません。|
+|**NULL**|any|any|any|any|any|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|<=0|any|any|any|any|**EINVAL**|変更されません。|
-|any|any|any|any|**空白**|any|**EINVAL**|変更されません。|
-|any|any|any|any|any|**空白**|**EINVAL**|変更されません。|
+|any|any|any|any|**NULL**|any|**EINVAL**|変更されません。|
+|any|any|any|any|any|**NULL**|**EINVAL**|変更されません。|
 
 ## <a name="security-issues"></a>セキュリティの問題
 
@@ -119,7 +119,7 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
@@ -160,7 +160,7 @@ Converted value: 12000
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>

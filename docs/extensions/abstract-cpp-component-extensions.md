@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516167"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214296"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++/CLI および C++/CX)
 
@@ -29,11 +29,11 @@ ms.locfileid: "65516167"
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`***戻り値の型*の*メンバー-関数識別子* **() abstract;**
 
 ### <a name="remarks"></a>解説
 
-最初の例の構文では、abstract (抽象) にするクラスを宣言します。 *class-declaration* コンポーネントは、ネイティブ C++ 宣言 (**class** クラス **struct**) が可能です。`/ZW` または `/clr` コンパイラ オプションが指定された場合は、C++ 拡張機能宣言 (**ref class** または **ref struct**) が可能です。
+最初の例の構文では、abstract (抽象) にするクラスを宣言します。 *クラス宣言*コンポーネントには、ネイティブ c++ 宣言 (** `class` * * * * または)、または **`struct`** **コンパイラオプションが指定されている場合は c++ 拡張宣言 (ref クラス * * または**ref 構造体**) のいずれかを `/ZW` 指定でき `/clr` ます。
 
 2 つ目の例の構文では、仮想メンバー関数を抽象として宣言します。 関数を抽象として宣言することは、純粋仮想関数として宣言することと同じです。 メンバー関数を抽象として宣言すると、外側のクラスも抽象として宣言されます。
 
@@ -41,23 +41,23 @@ ms.locfileid: "65516167"
 
 コンパイル時に、型の特徴が `__is_abstract(type)` である抽象型であるかどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-**abstract** キーワードは状況依存のオーバーライド指定子です。 状況依存キーワードの詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 オーバーライド指定子の詳細については、「[How to:Declare Override Specifiers in Native Compilations (方法: ネイティブ コンパイルでオーバーライド指定子を宣言する)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
+**abstract** キーワードは状況依存のオーバーライド指定子です。 状況依存キーワードの詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 オーバーライド指定子の詳細については、「[方法: ネイティブコンパイルでオーバーライド指定子を宣言](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)する」を参照してください。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
 詳細については、「[Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、`X` クラスが **abstract** とマークされているため、エラーが生成されます。
 
@@ -102,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

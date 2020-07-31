@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228701"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI および C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>パラメーター
 
 *interface_access*<br/>
-アセンブリの外部のインターフェイスのアクセシビリティ。  指定できる値は **public** と **private** です。  既定値は **private** です。 入れ子になったインターフェイスでは、*interface_access* 指定子は指定できません。
+アセンブリの外部のインターフェイスのアクセシビリティ。  指定できる値は **`public`** 、および **`private`** です。  **`private`** は既定値です。 入れ子になったインターフェイスでは、*interface_access* 指定子は指定できません。
 
 *name*<br/>
 インターフェイスの名前。
 
 *inherit_access*<br/>
-*base_interface* のアクセシビリティ。  基底インターフェイスで許可されるアクセシビリティは **public** (既定値) だけです。
+*base_interface* のアクセシビリティ。  基本インターフェイスに対して許可されているアクセシビリティは、 **`public`** (既定値) だけです。
 
 *base_interface*<br/>
 (省略可能) インターフェイス *name* の基底インターフェイス。
@@ -63,7 +63,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 コンパイル時に、型が `__is_interface_class(type)` のインターフェイスかどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-開発環境では、キーワード (例: `interface class`) を強調表示し、F1 を押すことで、これらのキーワードの F1 ヘルプを取得できます。
+開発環境では、キーワード (など) を強調表示して F1 キーを押すことで、これらのキーワードの F1 ヘルプを取得でき **`interface class`** ます。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

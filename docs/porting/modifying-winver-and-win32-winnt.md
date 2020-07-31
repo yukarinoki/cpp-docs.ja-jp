@@ -1,25 +1,25 @@
 ---
 title: WINVER および _WIN32_WINNT の更新
-description: アップグレードされた Visual Studio C++プロジェクトで WINVER と _WIN32_WINNT マクロを更新するタイミングと方法。
-ms.date: 01/22/2020
+description: アップグレードされた Visual Studio C++ プロジェクトで WINVER と _WIN32_WINNT マクロを更新するタイミングと方法。
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725697"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141055"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>WINVER および _WIN32_WINNT の更新
 
-Windows SDK を使用する場合は、コードを実行できる Windows のバージョンを指定できます。 プリプロセッサマクロ**WINVER**と **_WIN32_WINNT**は、コードがサポートするオペレーティングシステムの最小バージョンを指定します。 Visual Studio と Microsoft C++コンパイラは、WINDOWS 7 SP1 以降を対象としています。 以前のツールセットには、Windows XP SP4、Windows Server 2003 SP4、Vista、および Windows Server 2008 のサポートが含まれています。 Windows 95、Windows 98、Windows ME、Windows NT、および Windows 2000 はサポートされていません。
+Windows SDK を使用する場合は、コードを実行できる Windows のバージョンを指定できます。 プリプロセッサマクロ**WINVER**と **_WIN32_WINNT**は、コードがサポートするオペレーティングシステムの最小バージョンを指定します。 Visual Studio および Microsoft C++ コンパイラは、Windows 7 SP1 以降を対象としています。 以前のツールセットには、Windows XP SP2、Windows Server 2003 SP1、Vista、および Windows Server 2008 のサポートが含まれています。 Windows 95、Windows 98、Windows ME、Windows NT、および Windows 2000 はサポートされていません。
 
 古いプロジェクトをアップグレードするときに、 **WINVER**または **_WIN32_WINNT**マクロを更新することが必要になる場合があります。 サポートされていないバージョンの Windows に対して値が割り当てられている場合は、これらのマクロに関連するコンパイルエラーが発生する可能性があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 マクロを変更するには、ヘッダーファイル (たとえば、Windows を対象とするいくつかのプロジェクトテンプレートに含まれる*targetver*) で、次の行を追加します。
 

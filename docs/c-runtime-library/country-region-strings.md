@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443440"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373568"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>国/地域別文字列
 
-国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 Windows オペレーティング システムのさまざまなバージョンでサポートされている国と地域名の一覧については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「**Appendix A: Product Behavior**」(付録 A: 製品の動作) に記載されている表の、 **[Language]** 、 **[Location]** 、[[Language tag]](https://msdn.microsoft.com/library/cc233982.aspx) 列をご覧ください。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
+国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 さまざまな Windows オペレーティングシステムのバージョンでサポートされている国と地域の名前の一覧については、「[付録 a:](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS-lcid での製品の動作」の表の**言語**、**場所**、および**言語タグ**に関する列を参照してください。 \[ windows 言語コード識別子 (lcid) リファレンス。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
 
 ## <a name="additional-supported-country-and-region-strings"></a>サポートされるその他の国/地域識別文字列
 
@@ -21,7 +21,7 @@ Microsoft の C ランタイム ライブラリの実装では、次の追加の
 
 |国/地域識別文字列|省略形|同等のロケール名|
 |----------------------------|------------------|----------------------------|
-|america|米国|ja-JP|
+|america|USA|ja-JP|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
 |czech|CZE|cs-CZ|
@@ -42,10 +42,10 @@ Microsoft の C ランタイム ライブラリの実装では、次の追加の
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|米国|ja-JP|
-|us|米国|ja-JP|
+|united-states|USA|ja-JP|
+|us|USA|ja-JP|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ロケール名、言語、および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [言語識別文字列](../c-runtime-library/language-strings.md)<br/>

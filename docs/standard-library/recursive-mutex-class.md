@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217611"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex クラス
 
-*ミューテックス型*を表します。 [mutex](../standard-library/mutex-class-stl.md) とは異なり、既にロックされているオブジェクトのロック メソッドを呼び出す動作は詳細に定義されています。
+*Mutex 型*を表します。 [mutex](../standard-library/mutex-class-stl.md) とは異なり、既にロックされているオブジェクトのロック メソッドを呼び出す動作は詳細に定義されています。
 
 ## <a name="syntax"></a>構文
 
@@ -44,17 +44,17 @@ class recursive_mutex;
 
 |名前|説明|
 |----------|-----------------|
-|[ロック](#lock)|呼び出しスレッドがミューテックスの所有権を取得するまでそのスレッドをブロックします。|
+|[lock](#lock)|呼び出しスレッドがミューテックスの所有権を取得するまでそのスレッドをブロックします。|
 |[try_lock](#try_lock)|ブロックせずにミューテックスの所有権を取得しようとします。|
-|[ロック 解除](#unlock)|ミューテックスの所有権を解放します。|
+|[ロック](#unlock)|ミューテックスの所有権を解放します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:**\<ミューテックス>
+**ヘッダー:**\<mutex>
 
 **名前空間:** std
 
-## <a name="lock"></a><a name="lock"></a>ロック
+## <a name="lock"></a><a name="lock"></a>制限
 
 呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。
 
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドが の所有権を正常に取得した場合`mutex`、または呼び出し元の`mutex**; otherwise, **false`スレッドが 既にを所有している場合は true です。
+**`true`** メソッドがの所有権を正常に取得した場合 `mutex` は。呼び出し元のスレッドがを既に所有している場合は `mutex**; otherwise, **false` 。
 
 ### <a name="remarks"></a>解説
 
-呼び出し元のスレッド`mutex`が 既に を所有している場合、関数はすぐに**true**を返し、前のロックは有効なままです。
+呼び出し元のスレッドが既にを所有している場合、 `mutex` 関数はすぐにを返し、 **`true`** 前のロックは有効のままになります。
 
-## <a name="unlock"></a><a name="unlock"></a>ロック 解除
+## <a name="unlock"></a><a name="unlock"></a>ロック
 
 ミューテックスの所有権を解放します。
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<ミューテックス>](../standard-library/mutex.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

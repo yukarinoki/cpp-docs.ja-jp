@@ -9,47 +9,47 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232691"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (関数のエクスポート)
 
-プログラムから名前または序数、または、データでの関数をエクスポートします。
+関数を名前または序数 (またはデータ) でプログラムからエクスポートします。
 
 ## <a name="syntax"></a>構文
 
-> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>**[,NONAME]** **[,DATA]**
+> **/Export:**<em>entryname</em>[**, \@ **<em>ordinal</em>[**,**]] [**, DATA**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Export**オプションが他のプログラムを関数を呼び出すか、データを使用するために、プログラムからエクスポートする関数またはデータ項目を指定します。 エクスポートは、通常は DLL で定義されます。
+**/Export**オプションは、プログラムからエクスポートする関数またはデータ項目を指定します。これにより、他のプログラムが関数を呼び出したり、データを使用したりできるようになります。 通常、エクスポートは DLL で定義されます。
 
-*Entryname*関数またはデータ項目の名前は、呼び出し元プログラムで使用されます。 *序数に基づく*を指定しない場合は、1 ~ 65,535; の範囲内のエクスポート テーブルにインデックスを指定します*序数*、いずれかのリンクが割り当てられます。 **NONAME**キーワード関数をエクスポート序数としてのみせず、 *entryname*します。
+*Entryname*は、呼び出し元のプログラムによって使用される関数またはデータ項目の名前です。 *序数*1 ~ 65535 の範囲で、エクスポートテーブルのインデックスを指定します。*序数*を指定しない場合、LINK は1を割り当てます。 Entryname**キーワードを**使用すると、関数は序数として*entryname*のみエクスポートされます。
 
-**データ**キーワードは、エクスポートされた項目がデータ項目を指定します。 使用して、クライアント プログラム内のデータ項目を宣言する必要があります**extern _declspec**します。
+**Data**キーワードは、エクスポートされたアイテムがデータアイテムであることを指定します。 クライアントプログラムのデータ項目は、 **extern __declspec (dllimport)** を使用して宣言する必要があります。
 
-使用の推奨される順序で、定義をエクスポートするための 4 つの方法はあります。
+定義をエクスポートするには、次の4つの方法を使用することをお勧めします。
 
-1. [方式](../../cpp/dllexport-dllimport.md)でソース コード
+1. ソースコード内の[__declspec (dllexport)](../../cpp/dllexport-dllimport.md)
 
-1. [エクスポート](exports.md).def ファイル内のステートメント
+1. .Def ファイル内の[エクスポート](exports.md)ステートメント
 
-1. LINK コマンドで、/EXPORT 仕様
+1. LINK コマンドでの /EXPORT の指定
 
-1. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。
+1. ソースコード内のの形式の[コメント](../../preprocessor/comment-c-cpp.md)ディレクティブ `#pragma comment(linker, "/export: definition ")` 。
 
-これらすべてのメソッドは、同じプログラム内で使用できます。 リンクは、エクスポートを含むプログラムをビルドも作成、インポート ライブラリのビルドで .exp ファイルを使用しない場合。
+これらのメソッドはすべて、同じプログラムで使用できます。 リンクがエクスポートを含むプログラムをビルドする場合、ビルドで .exp ファイルが使用されていない限り、インポートライブラリも作成されます。
 
-リンクは、装飾された識別子の形式。 コンパイラは、.obj ファイルの作成時に識別子を修飾します。 場合*entryname*その非装飾にはリンカーに指定された形式 (ソース コードに表示されます)、リンクは、名前を照合しようとしています。 一意の一致が見つからない場合、リンクは、エラー メッセージを発行します。 使用して、 [DUMPBIN](dumpbin-reference.md)を取得するためのツール、[装飾名](decorated-names.md)リンカーに指定する必要がある場合は、識別子の形式。
+リンクは、修飾形式の識別子を使用します。 コンパイラは、.obj ファイルを作成するときに識別子を装飾します。 *Entryname*が、ソースコードに示されているように、非装飾形式でリンカーに指定されている場合、リンクは名前と一致するように試みます。 一意の一致が見つからない場合は、リンクによってエラーメッセージが表示されます。 [DUMPBIN](dumpbin-reference.md)ツールを使用して、識別子をリンカーに指定する必要がある場合に、[修飾名](decorated-names.md)の形式を取得します。
 
 > [!NOTE]
-> 宣言されている C 識別子の装飾形式を指定しない`__cdecl`または`__stdcall`します。
+> **`__cdecl`** またはとして宣言されている C 識別子の装飾形式を指定しないでください **`__stdcall`** 。
 
-非装飾関数名をエクスポートし、ビルド構成に応じてさまざまなエクスポートが (たとえば、32 ビットまたは 64 ビットのビルド) である必要がある場合は、各構成の別の DEF ファイルを使用できます。 (プリプロセッサの条件付きディレクティブは使用できません DEF ファイルにします。)代わりに、使用することができます、`#pragma comment`関数宣言の前にディレクティブここで、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
+修飾されていない関数名をエクスポートする必要があり、ビルド構成 (たとえば、32ビットまたは64ビットのビルド) によって異なるエクスポートがある場合は、構成ごとに異なる DEF ファイルを使用できます。 (プリプロセッサの条件付きディレクティブは DEF ファイルでは使用できません)。代わりに、次に示すように、 `#pragma comment` 関数宣言の前にディレクティブを使用することもできます。ここで、は非 `PlainFuncName` 装飾名、 `_PlainFuncName@4` は関数の装飾名です。
 
 ```cpp
 #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
@@ -58,11 +58,11 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
 
-1. オプションを入力して、**追加オプション**ボックス。
+1. [**追加オプション**] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

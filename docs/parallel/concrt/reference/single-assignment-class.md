@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 0d302f4f7f85737d9c3b2368e3ae04d88bc1a370
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6b92508c81311774816e804eb36ac8fbfb2aa82b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219561"
 ---
 # <a name="single_assignment-class"></a>single_assignment クラス
 
@@ -46,35 +46,35 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[single_assignment](#ctor)|オーバーロードされます。 `single_assignment` メッセージング ブロックを構築します。|
-|[~ single_assignment デストラクター](#dtor)|`single_assignment` メッセージングブロックを破棄します。|
+|[~ single_assignment デストラクター](#dtor)|`single_assignment`メッセージングブロックを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[has_value](#has_value)|この `single_assignment` メッセージングブロックが値を使用して初期化されているかどうかを確認します。|
-|[value](#value)|`single_assignment` messaging ブロックに格納されているメッセージの現在のペイロードへの参照を取得します。|
+|[value](#value)|メッセージングブロックに格納されているメッセージの現在のペイロードへの参照を取得し `single_assignment` ます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[accept_message](#accept_message)|この `single_assignment` メッセージングブロックによって提供されたメッセージを受け取り、メッセージのコピーを呼び出し元に返します。|
-|[consume_message](#consume_message)|`single_assignment` によって既に提供され、ターゲットによって予約されているメッセージを使用して、メッセージのコピーを呼び出し元に返します。|
-|[link_target_notification](#link_target_notification)|新しいターゲットがこの `single_assignment` メッセージングブロックにリンクされていることを通知するコールバック。|
-|[propagate_message](#propagate_message)|`ISource` ブロックからこの `single_assignment` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。|
-|[propagate_to_any_targets](#propagate_to_any_targets)|`message _PMessage` をこの `single_assignment` メッセージングブロックに配置し、リンクされたすべてのターゲットに提供します。|
+|[accept_message](#accept_message)|このメッセージングブロックによって提供されたメッセージを受け入れ `single_assignment` 、呼び出し元にメッセージのコピーを返します。|
+|[consume_message](#consume_message)|によって提供され、ターゲットによって予約されているメッセージを使用して、 `single_assignment` メッセージのコピーを呼び出し元に返します。|
+|[link_target_notification](#link_target_notification)|新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `single_assignment` 。|
+|[propagate_message](#propagate_message)|`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `single_assignment` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。|
+|[propagate_to_any_targets](#propagate_to_any_targets)|を `message _PMessage` このメッセージングブロックに配置し、リンクされた `single_assignment` すべてのターゲットに提供します。|
 |[release_message](#release_message)|以前のメッセージ予約を解放します。 ( [Source_block:: release_message](source-block-class.md#release_message)をオーバーライドします。)|
-|[reserve_message](#reserve_message)|この `single_assignment` メッセージングブロックによって以前に提供されたメッセージを予約します。 ( [Source_block:: reserve_message](source-block-class.md#reserve_message)をオーバーライドします。)|
+|[reserve_message](#reserve_message)|このメッセージングブロックによって以前に提供されたメッセージを予約 `single_assignment` します。 ( [Source_block:: reserve_message](source-block-class.md#reserve_message)をオーバーライドします。)|
 |[resume_propagation](#resume_propagation)|予約が解放された後、伝達を再開します。 ( [Source_block:: resume_propagation](source-block-class.md#resume_propagation)をオーバーライドします。)|
-|[send_message](#send_message)|`ISource` ブロックからのメッセージを、この `single_assignment` メッセージングブロックに同期的に渡します。 これは、ソースブロックによって呼び出されたときに、`send` メソッドによって呼び出されます。|
+|[send_message](#send_message)|`ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `single_assignment` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`single_assignment` メッセージングブロックは、メッセージのコピーを各ターゲットに伝達します。
+`single_assignment`メッセージングブロックは、メッセージのコピーを各ターゲットに伝達します。
 
 詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
@@ -90,15 +90,15 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 `single_assignment`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-この `single_assignment` メッセージングブロックによって提供されたメッセージを受け取り、メッセージのコピーを呼び出し元に返します。
+このメッセージングブロックによって提供されたメッセージを受け入れ `single_assignment` 、呼び出し元にメッセージのコピーを返します。
 
 ```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
@@ -107,19 +107,19 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-提供された `message` オブジェクトの `runtime_object_identity`。
+提供された `runtime_object_identity` `message` オブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
+`message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`single_assignment` メッセージングブロックは、現在保持されているメッセージの所有権を譲渡するのではなく、メッセージのコピーをターゲットに返します。
+メッセージングブロックは、現在保持されて `single_assignment` いるメッセージの所有権を譲渡するのではなく、メッセージのコピーをターゲットに返します。
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
-`single_assignment` によって既に提供され、ターゲットによって予約されているメッセージを使用して、メッセージのコピーを呼び出し元に返します。
+によって提供され、ターゲットによって予約されているメッセージを使用して、 `single_assignment` メッセージのコピーを呼び出し元に返します。
 
 ```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
@@ -128,17 +128,17 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-使用されている `message` オブジェクトの `runtime_object_identity`。
+使用 `runtime_object_identity` `message` されているオブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
+`message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`accept`と似ていますが、常に `reserve`の呼び出しが前に続きます。
+に似 `accept` ていますが、の前には常にが呼び出され `reserve` ます。
 
-## <a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
 この `single_assignment` メッセージングブロックが値を使用して初期化されているかどうかを確認します。
 
@@ -148,11 +148,11 @@ bool has_value() const;
 
 ### <a name="return-value"></a>戻り値
 
-ブロックが値を受け取った場合は**true** 、それ以外の場合は**false** 。
+**`true`** ブロックが値を受け取った場合は **`false`** 。それ以外の場合は。
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-新しいターゲットがこの `single_assignment` メッセージングブロックにリンクされていることを通知するコールバック。
+新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `single_assignment` 。
 
 ```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
@@ -163,9 +163,9 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 新しくリンクされたターゲットへのポインター。
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-`ISource` ブロックからこの `single_assignment` メッセージングブロックに非同期的にメッセージを渡します。 これは、ソースブロックによって呼び出されたときに、`propagate` メソッドによって呼び出されます。
+`ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `single_assignment` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ virtual message_status propagate_message(
 
 対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
 
-## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-`message` `_PMessage` をこの `single_assignment` メッセージングブロックに配置し、リンクされたすべてのターゲットに提供します。
+を `message` `_PMessage` このメッセージングブロックに配置し、リンクされた `single_assignment` すべてのターゲットに提供します。
 
 ```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
@@ -196,9 +196,9 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-この `single_assignment` メッセージングブロックが所有権を取得した `message` へのポインター。
+`message`この `single_assignment` メッセージングブロックが所有権を取得したへのポインター。
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 以前のメッセージ予約を解放します。
 
@@ -209,11 +209,11 @@ virtual void release_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-解放される `message` オブジェクトの `runtime_object_identity`。
+`runtime_object_identity` `message` 解放されるオブジェクトの。
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-この `single_assignment` メッセージングブロックによって以前に提供されたメッセージを予約します。
+このメッセージングブロックによって以前に提供されたメッセージを予約 `single_assignment` します。
 
 ```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
@@ -222,17 +222,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>パラメーター
 
 *_MsgId*<br/>
-予約されている `message` オブジェクトの `runtime_object_identity`。
+`runtime_object_identity` `message` 予約されているオブジェクトの。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが正常に予約されている場合は**true** 、それ以外の場合は**false** 。
+**`true`** メッセージが正常に予約された場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`reserve` が呼び出された後、 **true**が返された場合は、メッセージの所有権を取得または解放するために、`consume` または `release` のいずれかを呼び出す必要があります。
+が呼び出された後、 `reserve` がを返す場合 **`true`** `consume` は、 `release` メッセージの所有権を取得または解放するためにまたはのいずれかを呼び出す必要があります。
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 予約が解放された後、伝達を再開します。
 
@@ -240,9 +240,9 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-`ISource` ブロックからのメッセージを、この `single_assignment` メッセージングブロックに同期的に渡します。 これは、ソースブロックによって呼び出されたときに、`send` メソッドによって呼び出されます。
+`ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `single_assignment` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
 ```cpp
 virtual message_status send_message(
@@ -262,7 +262,7 @@ virtual message_status send_message(
 
 対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
 
-## <a name="ctor"></a>single_assignment
+## <a name="single_assignment"></a><a name="ctor"></a>single_assignment
 
 `single_assignment` メッセージング ブロックを構築します。
 
@@ -298,23 +298,23 @@ single_assignment(
 *_PScheduleGroup*<br/>
 その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `single_assignment` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
-`filter_method` 型は、提供されたメッセージを受け入れるかどうかを判断するために、この `single_assignment` メッセージングブロックによって呼び出される、シグネチャ `bool (T const &)` のファンクタです。
+この型は、提供された `filter_method` `bool (T const &)` メッセージを `single_assignment` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="dtor"></a>~ single_assignment
+## <a name="single_assignment"></a><a name="dtor"></a>~ single_assignment
 
-`single_assignment` メッセージングブロックを破棄します。
+`single_assignment`メッセージングブロックを破棄します。
 
 ```cpp
 ~single_assignment();
 ```
 
-## <a name="value"></a>数値
+## <a name="value"></a><a name="value"></a> の値
 
-`single_assignment` messaging ブロックに格納されているメッセージの現在のペイロードへの参照を取得します。
+メッセージングブロックに格納されているメッセージの現在のペイロードへの参照を取得し `single_assignment` ます。
 
 ```cpp
 T const& value();
@@ -324,12 +324,12 @@ T const& value();
 
 格納されているメッセージのペイロード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメソッドは、`single_assignment` メッセージングブロックに現在メッセージが格納されていない場合、メッセージが到着するまで待機します。
+このメソッドは、メッセージングブロックにメッセージが現在格納されていない場合、メッセージが到着するまで待機 `single_assignment` します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [overwrite_buffer クラス](overwrite-buffer-class.md)<br/>
 [unbounded_buffer クラス](unbounded-buffer-class.md)

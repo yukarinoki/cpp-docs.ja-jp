@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187701"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185607"
 ---
 # <a name="_variant_t-extractors"></a>_variant_t 抽出
 
 **Microsoft 固有の仕様**
 
-カプセル化された `VARIANT` オブジェクトからデータを抽出します。
+カプセル化されたオブジェクトからデータを抽出 `VARIANT` します。
 
 ## <a name="syntax"></a>構文
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>解説
 
-カプセル化された `VARIANT`から生データを抽出します。 `VARIANT` が適切な型でない場合は、`VariantChangeType` を使用して変換が試行され、エラーが発生したときにエラーが生成されます。
+カプセル化されたから生データを抽出 `VARIANT` します。 が適切な型では `VARIANT` ない場合、 `VariantChangeType` は変換を試行するために使用され、エラーが発生するとエラーが生成されます。
 
-- **operator short ()** **短**整数値を抽出します。
+- **operator short ()****`short`** 整数値を抽出します。
 
-- **operator long ()** **長**整数値を抽出します。
+- **operator long ()****`long`** 整数値を抽出します。
 
-- **operator float ()** **Float**数値を抽出します。
+- **operator float ()** 数値を抽出 **`float`** します。
 
-- **double 演算子 ()** **2**つの整数値を抽出します。
+- **double 演算子 ()****`double`** 整数値を抽出します。
 
-- **OPERATOR CY ()** `CY` オブジェクトを抽出します。
+- **OPERATOR CY ()** オブジェクトを抽出 `CY` します。
 
-- **bool () 演算子** **ブール**値を抽出します。
+- **bool () 演算子**値を抽出 **`bool`** します。
 
-- **演算子 DECIMAL ()** `DECIMAL` 値を抽出します。
+- **演算子 DECIMAL ()** 値を抽出 `DECIMAL` します。
 
-- **BYTE () 演算子**`BYTE` 値を抽出します。
+- **BYTE () 演算子**値を抽出 `BYTE` します。
 
-- **operator _bstr_t ()** `_bstr_t` オブジェクトにカプセル化された文字列を抽出します。
+- **operator _bstr_t ()** オブジェクトにカプセル化された文字列を抽出し `_bstr_t` ます。
 
-- **演算子 IDispatch\*()** カプセル化された `VARIANT`からディスパッチインターフェイスポインターを抽出します。 結果のポインターに対して `AddRef` が呼び出されるため、`Release` を呼び出して解放します。
+- **Operator IDispatch \* ()** は、カプセル化されたからディスパッチインターフェイスポインターを抽出 `VARIANT` します。 `AddRef`は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
 
-- **操作 IUnknown\*()** カプセル化された `VARIANT`から COM インターフェイスポインターを抽出します。 結果のポインターに対して `AddRef` が呼び出されるため、`Release` を呼び出して解放します。
+- **Operator IUnknown \* ()** は、カプセル化されたから COM インターフェイスポインターを抽出 `VARIANT` します。 `AddRef`は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_variant_t クラス](../cpp/variant-t-class.md)

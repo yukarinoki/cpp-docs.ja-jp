@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a281f7fd77c0a68fca3a8fcfa163758ec464f1d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368713"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212359"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution クラス
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*リアルタイプ*\
-浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*RealType*\
+浮動小数点演算の結果の型は、既定ではに **`double`** なります。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-*ウルン*\
-乱数ジェネレーター エンジン。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+*URNG*\
+乱数ジェネレーターエンジン。 使用できる型については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、ユーザー指定の整数型の値を生成する分布を表します。 **double** 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、指数分布に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
-分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
+配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 指数分布の詳細については、Wolfram MathWorld の記事「[指数分布](https://go.microsoft.com/fwlink/p/?linkid=401098)」を参照してください。
 
@@ -167,11 +167,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution::exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:: exponential_distribution
 
 分布を作成します。
 
@@ -185,7 +185,7 @@ explicit exponential_distribution(const param_type& parm);
 *ラムダ*\
 `lambda` 分布パラメーター。
 
-*Parm*\
+*parm*\
 分布の作成に使用されるパラメーター パッケージ。
 
 ### <a name="remarks"></a>解説
@@ -196,7 +196,7 @@ explicit exponential_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::pアラム_タイプ
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p aram_type
 
 分布のパラメーターを格納します。
 
@@ -227,4 +227,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

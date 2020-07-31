@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172387"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195695"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI および C++/CX)
 
@@ -40,8 +40,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>パラメーター
 
-*modifier*<br/>
-イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  可能な値は **static** と **virtual** です。
+*変換*<br/>
+イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は **`static`** 、および **`virtual`** です。
 
 *delegate*<br/>
 [デリゲート](delegate-cpp-component-extensions.md)。このデリゲートのシグネチャがイベント ハンドラーと一致する必要があります。
@@ -50,10 +50,10 @@ modifiereventdelegate^ event_name
 イベントの名前です。
 
 *return_value*<br/>
-イベントのアクセサー メソッドの戻り値。  検証可能にするために、戻り値の型は **void** にする必要があります。
+イベントのアクセサー メソッドの戻り値。  検証可能にするには、戻り値の型がである必要があり **`void`** ます。
 
 *parameters*<br/>
-(省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
+(省略可能) *delegate* パラメーターのシグネチャと一致する、`raise` メソッドのパラメーター。
 
 ### <a name="remarks"></a>解説
 
@@ -104,8 +104,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>パラメーター
 
-*modifier*<br/>
-イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  可能な値は **static** と **virtual** です。
+*変換*<br/>
+イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は **`static`** 、および **`virtual`** です。
 
 *delegate*<br/>
 [デリゲート](delegate-cpp-component-extensions.md)。このデリゲートのシグネチャがイベント ハンドラーと一致する必要があります。
@@ -114,10 +114,10 @@ modifiereventdelegate^ event_name
 イベントの名前です。
 
 *return_value*<br/>
-イベントのアクセサー メソッドの戻り値。  検証可能にするために、戻り値の型は **void** にする必要があります。
+イベントのアクセサー メソッドの戻り値。  検証可能にするには、戻り値の型がである必要があり **`void`** ます。
 
 *parameters*<br/>
-(省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
+(省略可能) *delegate* パラメーターのシグネチャと一致する、`raise` メソッドのパラメーター。
 
 ### <a name="remarks"></a>解説
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-次のコード例では、単純なイベントの `raise` メソッドを生成するために使用するロジックを示しています。イベントに 1 つ以上のサブスクライバーがある場合、`raise` メソッドを呼び出すと、暗黙的または明示的にデリゲートが呼び出されます。 デリゲートの戻り値の型が **void** ではなく、なおかつイベント サブスクライバーが存在しない場合、`raise` メソッドはデリゲート型の既定値を返します。 イベント サブスクライバーが存在しない場合に `raise` メソッドを呼び出すと、単純に返されるだけで、例外は発生しません。 デリゲートの戻り値の型が **void** 以外の場合、デリゲート型が返されます。
+次のコード例では、単純なイベントの `raise` メソッドを生成するために使用するロジックを示しています。イベントに 1 つ以上のサブスクライバーがある場合、`raise` メソッドを呼び出すと、暗黙的または明示的にデリゲートが呼び出されます。 デリゲートの戻り値の型がではなく、 **`void`** イベントサブスクライバーがゼロの場合、 `raise` メソッドはデリゲート型の既定値を返します。 イベント サブスクライバーが存在しない場合に `raise` メソッドを呼び出すと、単純に返されるだけで、例外は発生しません。 デリゲートの戻り値の型がでない場合は、 **`void`** デリゲート型が返されます。
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

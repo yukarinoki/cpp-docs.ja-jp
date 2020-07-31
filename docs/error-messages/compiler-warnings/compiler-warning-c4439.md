@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: c125fa84119c62e3090611c9a841f46eee759711
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: baf74733c94fdb03f130d2300d0918845cc4de4c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223331"
 ---
 # <a name="compiler-warning-c4439"></a>コンパイラの警告 C4439
 
 ' function ': シグネチャのマネージ型を持つ関数定義には __clrcall の呼び出し規約が必要です
 
-コンパイラは、呼び出し規約を[__clrcall](../../cpp/clrcall.md)に暗黙的に置き換えました。 この警告を解決するには、`__cdecl` または `__stdcall` 呼び出し規約を削除します。
+コンパイラは、呼び出し規約をに暗黙的に置き換えました [`__clrcall`](../../cpp/clrcall.md) 。 この警告を解決するに **`__cdecl`** は、またはの呼び出し規約を削除し **`__stdcall`** ます。
 
-C4439 は常にエラーとして発行されます。 この警告は、`#pragma warning` または **/wd**で無効にすることができます。詳細については、「 [warning](../../preprocessor/warning.md)または[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、](../../build/reference/compiler-option-warning-level.md) /W3、/W4、/Wall、/wd、/we、/WO、/Wv、/wx (警告レベル)」を参照してください。
+C4439 は常にエラーとして発行されます。 この警告は、またはで無効にできます `#pragma warning` 。詳細については、 **`/wd`** 「 [warning](../../preprocessor/warning.md) or [/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/wx (警告レベル)](../../build/reference/compiler-option-warning-level.md) 」を参照してください。
 
 ## <a name="example"></a>例
 

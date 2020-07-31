@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2894
 ms.assetid: 4e250579-2b59-4993-a6f4-49273e7ecf06
-ms.openlocfilehash: ffc87008c1874f8f5c7e275778237f611dcbb5af
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6909843539747b285a5390a66a7a323e4e9c5d00
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223461"
 ---
 # <a name="compiler-error-c2894"></a>コンパイラ エラー C2894
 
 テンプレートを ' C ' リンケージを持つように宣言することはできません
 
-このエラーは、`extern` "C" ブロック内で定義されたテンプレートが原因で発生する可能性があります。
+このエラーは、ブロック内で定義されたテンプレートが原因で発生する場合があり `extern "C"` ます。
 
 次の例では、C2894 が生成されます。
 
