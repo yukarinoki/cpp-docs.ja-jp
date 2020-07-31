@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e9999d43226cb5daf22ef70af636efd616d41d47
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687868"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470954"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
@@ -23,14 +23,14 @@ Iostreams 全体で使用される複数のクラステンプレートへの前�
 #include <iosfwd>
 ```
 
-## <a name="typedefs"></a>Typedef
+## <a name="typedefs"></a>Typedefs
 
 ```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
 
-// wchar_t TYPE DEFINITIONS
+// char TYPE DEFINITIONS
 typedef basic_ios<char, char_traits<char>> ios;
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 typedef basic_istream<char, char_traits<char>> istream;
@@ -59,7 +59,6 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
-};
 ```
 
 ## <a name="forward-declarations-and-class-templates"></a>事前宣言とクラステンプレート
@@ -128,7 +127,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
 [iostreams の規則](../standard-library/iostreams-conventions.md)

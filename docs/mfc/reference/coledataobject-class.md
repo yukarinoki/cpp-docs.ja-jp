@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e9cb8c452cc3eea32b6eed9bf23fb454344c105d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214088"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470941"
 ---
 # <a name="coledataobject-class"></a>COleDataObject クラス
 
@@ -68,7 +68,7 @@ class COleDataObject
 |[COleDataObject:: IsDataAvailable](#isdataavailable)|指定された形式でデータを使用できるかどうかを確認します。|
 |[COleDataObject:: Release](#release)|関連付けられたオブジェクトをデタッチして解放し `IDataObject` ます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `COleDataObject`に基底クラスがありません。
 
@@ -76,7 +76,7 @@ class COleDataObject
 
 このクラスを使用すると、指定した形式のデータが存在するかどうかを判断できます。 また、使用可能なデータ形式を列挙したり、特定の形式が使用可能かどうかを確認してから、適切な形式でデータを取得することもできます。 オブジェクトの取得は、 [CFile](../../mfc/reference/cfile-class.md)、HGLOBAL、構造体の使用など、いくつかの方法で実現でき `STGMEDIUM` ます。
 
-詳細については、Windows SDK の[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体を参照してください。
+詳細については、Windows SDK の[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体を参照してください。
 
 アプリケーションでのデータオブジェクトの使用の詳細については、「[データオブジェクトとデータソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)」を参照してください。
 
@@ -106,7 +106,7 @@ OLE データオブジェクトをポイントします。
 *bAutoRelease*<br/>
 オブジェクトが破棄されたときに OLE データオブジェクトを解放する場合は TRUE、それ以外の場合は `COleDataObject` FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 詳細については、Windows SDK の「 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 」を参照してください。
 
@@ -122,7 +122,7 @@ BOOL AttachClipboard();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > この関数を呼び出すと、このデータオブジェクトが解放されるまでクリップボードがロックされます。 データオブジェクトは、のデストラクターで解放され `COleDataObject` ます。 詳細については、「Win32 置かの[Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 」を参照してください。
@@ -135,7 +135,7 @@ BOOL AttachClipboard();
 void BeginEnumFormats();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 を呼び出した後 `BeginEnumFormats` 、このデータオブジェクトでサポートされている最初の形式の位置が格納されます。 を連続し `GetNextFormat` て呼び出すと、データオブジェクトで使用可能な形式の一覧が列挙されます。
 
@@ -151,7 +151,7 @@ void BeginEnumFormats();
 COleDataObject();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 他の関数を呼び出す前に、 [COleDataObject:: Attach](#attach)または[COleDataObject:: attachclipboard](#attachclipboard)の呼び出しを行う必要があり `COleDataObject` ます。
 
@@ -170,7 +170,7 @@ LPDATAOBJECT Detach();
 
 デタッチされた OLE データオブジェクトへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 ## <a name="coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject:: GetData
 
@@ -189,7 +189,7 @@ BOOL GetData(
 データが返される形式。 このパラメーターには、定義済みのクリップボード形式、またはネイティブ Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値のいずれかを指定できます。
 
 *lpStgMedium*<br/>
-データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体を指します。
+データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体を指します。
 
 *lpFormatEtc*<br/>
 データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、構造体の他のフィールドに既定値が使用され `FORMATETC` ます。
@@ -198,9 +198,9 @@ BOOL GetData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)、および[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
+詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)、および[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
 
 詳細については、Windows SDK の「 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 」を参照してください。
 
@@ -226,7 +226,7 @@ CFile* GetFileData(
 
 `CFile` `CFile` 成功した場合は、データを格納している新しいまたは派生したオブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 データが格納されているメディアによっては、戻り値が指す実際の型が、、またはになる場合があり `CFile` `CSharedFile` `COleStreamFile` ます。
 
@@ -259,7 +259,7 @@ HGLOBAL GetGlobalData(
 
 成功した場合は、データを格納しているグローバルメモリブロックのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 詳細については、Windows SDK の「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
 
@@ -282,7 +282,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 別の形式が使用可能な場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 [COleDataObject:: BeginEnumFormats](#beginenumformats)を呼び出した後、このデータオブジェクトでサポートされている最初の形式の位置が格納されます。 を連続し `GetNextFormat` て呼び出すと、データオブジェクトで使用可能な形式の一覧が列挙されます。 使用可能な形式の一覧を表示するには、これらの関数を使用します。
 
@@ -312,7 +312,7 @@ BOOL IsDataAvailable(
 
 指定された形式でデータを使用できる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この関数は `GetData` 、、 `GetFileData` 、またはを呼び出す前に便利です `GetGlobalData` 。
 
@@ -332,7 +332,7 @@ BOOL IsDataAvailable(
 void Release();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `IDataObject`は、、または `COleDataObject` `Attach` `AttachClipboard` フレームワークによって明示的にまたはを呼び出すことによってに関連付けられました。 の*bAutoRelease*パラメーターが FALSE の場合、 `Attach` オブジェクトは解放さ `IDataObject` れません。 この場合、呼び出し元は、 `IDataObject` [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)を呼び出すことによって、を解放します。
 

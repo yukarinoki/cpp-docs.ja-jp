@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 99b4ff27a7686972bcbc85478998b52ed713ab5b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 54fd987d683a9236531baee3afbb9ee61be623e2
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754264"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470759"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog クラス
 
-色選択ダイアログ ボックスをアプリケーションに組み込むことができます。
+色の選択ダイアログボックスをアプリケーションに組み込むことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,53 +43,53 @@ class CColorDialog : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ::Cカラーダイアログ](#ccolordialog)|`CColorDialog` オブジェクトを構築します。|
+|[CColorDialog::CColorDialog](#ccolordialog)|`CColorDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ:Doモーダル](#domodal)|色のダイアログ ボックスを表示し、ユーザーが選択できるようにします。|
-|[ダイアログ::取得カラー](#getcolor)|選択した`COLORREF`色の値を含む構造体を返します。|
-|[ダイアログ::保存されたカスタムカラーを取得します。](#getsavedcustomcolors)|ユーザーが作成したカスタムカラーを取得します。|
-|[ダイアログ::現在の色を設定します。](#setcurrentcolor)|現在の色選択を指定した色に強制的に適用します。|
+|[CColorDialog::D oModal](#domodal)|色のダイアログボックスを表示し、ユーザーが選択できるようにします。|
+|[CColorDialog:: GetColor](#getcolor)|`COLORREF`選択された色の値を格納している構造体を返します。|
+|[CColorDialog:: GetSavedCustomColors](#getsavedcustomcolors)|ユーザーが作成したカスタム色を取得します。|
+|[CColorDialog::SetCurrentColor](#setcurrentcolor)|現在の色の選択を指定した色にします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[カラーダイアログ::オンコロック](#oncolorok)|ダイアログ ボックスに入力した色を検証するには、オーバーライドします。|
+|[CColorDialog:: OnColorOK](#oncolorok)|ダイアログボックスに入力された色を検証するには、をオーバーライドします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ::m_cc](#m_cc)|ダイアログ ボックスの設定をカスタマイズするために使用する構造体。|
+|[CColorDialog:: m_cc](#m_cc)|ダイアログボックスの設定をカスタマイズするために使用される構造体。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-オブジェクト`CColorDialog`は、表示システムに定義された色のリストを持つダイアログボックスです。 ユーザーは、一覧から特定の色を選択または作成できます。
+`CColorDialog`オブジェクトは、表示システムに対して定義されている色の一覧を含むダイアログボックスです。 ユーザーは、リストから特定の色を選択または作成できます。これは、ダイアログボックスが終了したときにアプリケーションに戻されます。
 
-オブジェクトを`CColorDialog`構築するには、指定されたコンストラクターを使用するか、新しいクラスを派生させ、独自のカスタム コンストラクターを使用します。
+オブジェクトを構築するに `CColorDialog` は、指定されたコンストラクターを使用するか、新しいクラスを派生させ、独自のカスタムコンストラクターを使用します。
 
-ダイアログ ボックスを作成したら[、m_cc](#m_cc)構造体の値を設定または変更して、ダイアログ ボックスのコントロールの値を初期化できます。 *m_cc*構造体の型は[、CHOOSECOLOR](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1)です。
+ダイアログボックスが構築されたら、 [m_cc](#m_cc)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 *M_cc*構造体の型は[CHOOSECOLOR](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)です。
 
-ダイアログ ボックスのコントロールを初期化した後、メンバー関数`DoModal`を呼び出してダイアログ ボックスを表示し、ユーザーが色を選択できるようにします。 `DoModal`は、ダイアログ ボックスの [OK] ボタンまたは [キャンセル] (IDCANCEL) ボタンのいずれかをユーザーが選択した状態で返します。
+ダイアログボックスのコントロールを初期化した後、 `DoModal` メンバー関数を呼び出してダイアログボックスを表示し、ユーザーが色を選択できるようにします。 `DoModal`ダイアログボックスの [OK] (IDOK) または [キャンセル] (IDCANCEL) ボタンのいずれかをユーザーが選択したものを返します。
 
-IDOK を返す場合`DoModal`は、メンバー`CColorDialog`関数の 1 つを使用して、ユーザーが入力した情報を取得できます。
+が `DoModal` IDOK を返す場合は、のメンバー関数のいずれかを使用し `CColorDialog` て、ユーザーが入力した情報を取得できます。
 
-Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を使用して、ダイアログ ボックスの初期化中にエラーが発生したかどうかを確認し、エラーの詳細を確認できます。
+Windows の[Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を使用すると、ダイアログボックスの初期化中にエラーが発生したかどうかを確認し、エラーの詳細を調べることができます。
 
-`CColorDialog`は、COMMDLG に依存します。Windows バージョン 3.1 以降に付属の DLL ファイル。
+`CColorDialog`は、Windows バージョン3.1 以降に付属している COMMDLG.DLL ファイルに依存しています。
 
-ダイアログ ボックスをカスタマイズするには、 から`CColorDialog`クラスを派生し、カスタム ダイアログ テンプレートを提供し、拡張コントロールからの通知メッセージを処理するメッセージ マップを追加します。 未処理のメッセージは、基本クラスに渡す必要があります。
+ダイアログボックスをカスタマイズするには、からクラスを派生させ、 `CColorDialog` カスタムダイアログテンプレートを指定して、拡張コントロールからの通知メッセージを処理するメッセージマップを追加します。 未処理のメッセージは、基本クラスに渡す必要があります。
 
-フック機能のカスタマイズは不要です。
+フック関数のカスタマイズは必要ありません。
 
 > [!NOTE]
-> 一部のインストールでは`CColorDialog`、フレームワークを使用して他`CDialog`のオブジェクトをグレーにした場合、オブジェクトは灰色の背景で表示されません。
+> 一部のインストールでは、 `CColorDialog` フレームワークを使用して他のオブジェクトをグレーで表示した場合、オブジェクトはグレーの背景で表示されません `CDialog` 。
 
-の使用`CColorDialog`の詳細については、「[コモン ダイアログ クラス](../../mfc/common-dialog-classes.md)」を参照してください。
+の使用方法の詳細につい `CColorDialog` ては、「[コモンダイアログクラス](../../mfc/common-dialog-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,9 +107,9 @@ Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgexte
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdlgs.h
+**ヘッダー:** afxdlgs
 
-## <a name="ccolordialogccolordialog"></a><a name="ccolordialog"></a>ダイアログ::Cカラーダイアログ
+## <a name="ccolordialogccolordialog"></a><a name="ccolordialog"></a>CColorDialog::CColorDialog
 
 `CColorDialog` オブジェクトを構築します。
 
@@ -123,21 +123,21 @@ CColorDialog(
 ### <a name="parameters"></a>パラメーター
 
 *clrInit*<br/>
-既定の色の選択。 値を指定しない場合、デフォルトは RGB(0,0,0) (黒) になります。
+既定の色の選択。 値が指定されていない場合、既定値は RGB (0, 0, 0) (黒) です。
 
 *dwFlags*<br/>
-ダイアログ ボックスの機能と外観をカスタマイズするフラグのセット。 詳細については、Windows SDK の[「CHOOSECOLOR」](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1)構造を参照してください。
+ダイアログボックスの機能と外観をカスタマイズするフラグのセット。 詳細については、Windows SDK の[CHOOSECOLOR](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)構造体を参照してください。
 
 *pParentWnd*<br/>
-ダイアログ ボックスの親ウィンドウまたはオーナー ウィンドウへのポインター。
+ダイアログボックスの親またはオーナーウィンドウへのポインター。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]
 
-## <a name="ccolordialogdomodal"></a><a name="domodal"></a>ダイアログ:Doモーダル
+## <a name="ccolordialogdomodal"></a><a name="domodal"></a>CColorDialog::D oModal
 
-Windows の共通の色のダイアログ ボックスを表示し、ユーザーが色を選択できるようにします。
+Windows の [共通色] ダイアログボックスを表示し、ユーザーが色を選択できるようにするには、この関数を呼び出します。
 
 ```
 virtual INT_PTR DoModal();
@@ -145,23 +145,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK または ID キャンセル。 IDCANCEL が返された場合は、エラーが発生したかどうかを判断するのには関数[を](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)呼び出します。
+IDOK または IDCANCEL。 IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを確認します。
 
 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-[m_cc](#m_cc)構造体のメンバーを設定してさまざまな色のダイアログ ボックス オプションを初期化する場合は、ダイアログ ボックス オブジェクト`DoModal`が構築された後に呼び出す前に、この操作を行う必要があります。
+[M_cc](#m_cc)構造体のメンバーを設定して、さまざまな色のダイアログボックスオプションを初期化する場合は、を呼び出す前に、 `DoModal` ダイアログボックスオブジェクトが構築された後にこの操作を行う必要があります。
 
-を呼`DoModal`び出した後、他のメンバー関数を呼び出して、ユーザーが入力した設定または情報をダイアログ ボックスに取得できます。
+を呼び出した後 `DoModal` 、他のメンバー関数を呼び出して、ユーザーがダイアログボックスに入力した設定または情報を取得できます。
 
 ### <a name="example"></a>例
 
-  [の](#ccolordialog)例を参照してください。
+  [CColorDialog:: CColorDialog](#ccolordialog)の例を参照してください。
 
-## <a name="ccolordialoggetcolor"></a><a name="getcolor"></a>ダイアログ::取得カラー
+## <a name="ccolordialoggetcolor"></a><a name="getcolor"></a>CColorDialog:: GetColor
 
-ユーザーが選択した色`DoModal`に関する情報を取得するために呼び出した後、この関数を呼び出します。
+を呼び出した後 `DoModal` に、ユーザーが選択した色に関する情報を取得するために、この関数を呼び出します。
 
 ```
 COLORREF GetColor() const;
@@ -169,15 +169,15 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-カラー ダイアログ ボックスで選択した色の RGB 情報を含む[COLORREF](/windows/win32/gdi/colorref)値。
+[色] ダイアログボックスで選択した色の RGB 情報を含む[COLORREF](/windows/win32/gdi/colorref)値。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]
 
-## <a name="ccolordialoggetsavedcustomcolors"></a><a name="getsavedcustomcolors"></a>ダイアログ::保存されたカスタムカラーを取得します。
+## <a name="ccolordialoggetsavedcustomcolors"></a><a name="getsavedcustomcolors"></a>CColorDialog:: GetSavedCustomColors
 
-`CColorDialog`オブジェクトは、ユーザーが色を選択するだけでなく、最大 16 個のカスタム カラーを定義することを許可します。
+`CColorDialog`オブジェクトを選択すると、ユーザーは色を選択するだけでなく、最大16個のカスタムカラーを定義できます。
 
 ```
 static COLORREF* PASCAL GetSavedCustomColors();
@@ -185,37 +185,37 @@ static COLORREF* PASCAL GetSavedCustomColors();
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが作成したカスタム カラーを格納する 16 個の RGB カラー値の配列へのポインター。
+ユーザーが作成したカスタム色を格納する16色の RGB カラー値の配列へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-メンバー`GetSavedCustomColors`関数は、これらの色へのアクセスを提供します。 これらの色は[、DoModal](#domodal)が IDOK を返した後に取得できます。
+`GetSavedCustomColors`このメンバー関数は、これらの色へのアクセスを提供します。 これらの色は、 [DoModal](#domodal)から IDOK が返された後に取得できます。
 
-返される配列の 16 個の RGB 値は、それぞれ RGB(255,255,255) (白) に初期化されます。 ユーザーが選択したカスタムカラーは、アプリケーション内のダイアログボックス呼び出しの間にのみ保存されます。 アプリケーションの呼び出しの間にこれらの色を保存する場合は、初期化 (.INI) ファイル。
+返された配列内の16の RGB 値はそれぞれ、RGB (255255255) (白) に初期化されます。 ユーザーが選択したユーザー設定の色は、アプリケーション内のダイアログボックスの呼び出しの間にのみ保存されます。 アプリケーションの呼び出しの間にこれらの色を保存する場合は、初期化 () など、他の方法で保存する必要があります。INI) ファイル。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]
 
-## <a name="ccolordialogm_cc"></a><a name="m_cc"></a>ダイアログ::m_cc
+## <a name="ccolordialogm_cc"></a><a name="m_cc"></a>CColorDialog:: m_cc
 
-ダイアログ ボックスの特性と値をメンバに格納する[CHOOSECOLOR](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1)型の構造体。
+ダイアログボックスの特性と値を格納するメンバーを持つ、 [CHOOSECOLOR](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)型の構造体。
 
 ```
 CHOOSECOLOR m_cc;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-オブジェクトを`CColorDialog`作成した後[、DoModal](#domodal)メンバー関数を呼び出す前に *、m_cc*を使用してダイアログ ボックスのさまざまな側面を設定できます。
+オブジェクトを構築した後 `CColorDialog` 、 *m_cc*を使用して、 [DoModal](#domodal)メンバー関数を呼び出す前にダイアログボックスのさまざまな側面を設定できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]
 
-## <a name="ccolordialogoncolorok"></a><a name="oncolorok"></a>カラーダイアログ::オンコロック
+## <a name="ccolordialogoncolorok"></a><a name="oncolorok"></a>CColorDialog:: OnColorOK
 
-ダイアログ ボックスに入力した色を検証するには、オーバーライドします。
+ダイアログボックスに入力された色を検証するには、をオーバーライドします。
 
 ```
 virtual BOOL OnColorOK();
@@ -223,31 +223,31 @@ virtual BOOL OnColorOK();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスを閉じないようにする場合は 0 以外の値を指定します。それ以外の場合は 0 を指定すると、入力された色を受け入れます。
+ダイアログボックスを閉じない場合は0以外の。それ以外の場合は、0を指定すると、入力された色が受け入れられます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-ユーザーが色ダイアログ ボックスで選択した色のカスタム検証を行う場合にのみ、この関数をオーバーライドします。
+[色] ダイアログボックスでユーザーが選択した色のカスタム検証を提供する場合にのみ、この関数をオーバーライドします。
 
-ユーザーは、次の 2 つの方法のいずれかで色を選択できます。
+ユーザーは、次の2つの方法のいずれかで色を選択できます。
 
-- カラー パレットの色をクリックします。 選択したカラーの RGB 値が、適切な RGB 編集ボックスに反映されます。
+- カラーパレットの色をクリックします。 選択した色の RGB 値が、適切な RGB 編集ボックスに反映されます。
 
 - RGB 編集ボックスに値を入力する
 
-オーバーライド`OnColorOK`を使用すると、アプリケーション固有の理由でユーザーが共通の色ダイアログ ボックスに入力した色を拒否できます。
+上書き `OnColorOK` を使用すると、アプリケーション固有の理由により、ユーザーが一般的な色のダイアログボックスに入力した色を拒否することができます。
 
-通常、フレームワークは既定の色の検証を提供し、無効な色が入力された場合にメッセージ ボックスを表示するため、この関数を使用する必要はありません。
+通常、この関数を使用する必要はありません。これは、フレームワークによって色の既定の検証が提供され、無効な色が入力された場合にメッセージボックスが表示されるためです。
 
-色選択を強制するために、内部`OnColorOK`から[SetCurrentColor](#setcurrentcolor)を呼び出すことができます。 いったん`OnColorOK`起動された (つまり、ユーザーが**OK**をクリックして色の変更を受け入れる) 場合は[、GetColor](#getcolor)を呼び出して新しい色の RGB 値を取得できます。
+内から[SetCurrentColor](#setcurrentcolor)を呼び出して `OnColorOK` 、色の選択を強制することができます。 `OnColorOK`が起動した (つまり、ユーザーが **[OK]** をクリックして色の変更を受け入れる) と、 [getcolor](#getcolor)を呼び出して新しい色の RGB 値を取得できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]
 
-## <a name="ccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>ダイアログ::現在の色を設定します。
+## <a name="ccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor
 
-clr*で指定*された`DoModal`色の値に現在の色の選択を強制するために呼び出した後、この関数を呼び出します。
+を呼び出した後 `DoModal` に、この関数を呼び出して、現在の色の選択を*clr*で指定された色の値に強制的に適用します。
 
 ```cpp
 void SetCurrentColor(COLORREF clr);
@@ -255,20 +255,20 @@ void SetCurrentColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*Clr*<br/>
+*clr*<br/>
 RGB カラー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-この関数は、メッセージ ハンドラまたは の`OnColorOK`内部から呼び出されます。 ダイアログ ボックスは *、clr*パラメーターの値に基づいてユーザーの選択を自動的に更新します。
+この関数は、メッセージハンドラーまたは内から呼び出され `OnColorOK` ます。 ダイアログボックスによって、 *clr*パラメーターの値に基づいてユーザーの選択が自動的に更新されます。
 
 ### <a name="example"></a>例
 
-  [「CColorDialog::OnColorOK」](#oncolorok)の例を参照してください。
+  [CColorDialog:: OnColorOK](#oncolorok)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MDI のサンプル](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル ドローCLI](../../overview/visual-cpp-samples.md)<br/>
-[クラス](../../mfc/reference/ccommondialog-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[MFC のサンプル MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
+[CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)
