@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 8723c3f09a5e9a8eecf0e552c9f5a7fd9b7f6c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e39832f942eb1473be913112fde1d37ddf05674
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226367"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C)
 
 **Microsoft 固有の仕様**
 
-DLL インターフェイスは、システム内のプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ)、つまり、**dllimport** または `dllexport` として宣言されたすべての項目を参照します。 DLL インターフェイスに含まれるすべての宣言では、**dllimport** か `dllexport` の属性を指定する必要があります。 ただし、定義で指定できるのは `dllexport` 属性のみです。 たとえば、次の関数定義はコンパイラ エラーになります。
+DLL インターフェイスでは、システム内のプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ)、つまり、 **`dllimport`** または `dllexport` として宣言されたすべての項目が参照されます。 DLL インターフェイスに含まれるすべての宣言では、 **`dllimport`** または `dllexport` の属性を指定する必要があります。 ただし、定義で指定できるのは `dllexport` 属性のみです。 たとえば、次の関数定義はコンパイラ エラーになります。
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -46,7 +46,7 @@ DllImport int i = 10;      /* Error; this is a definition. */
 DllExport int i = 10;      /* Okay: this is an export definition. */
 ```
 
-`dllexport` の使用は定義を意味し、**dllimport** は宣言を意味します。 宣言を強制するには、`extern` と共に `dllexport` キーワードを使用する必要があります。このようにしない場合、暗黙の定義になります。
+`dllexport` の使用は定義を意味するのに対し、 **`dllimport`** は宣言を意味します。 宣言を強制するには、`dllexport` と共に **`extern`** キーワードを使用する必要があります。このようにしない場合、暗黙の定義になります。
 
 ```
 #define DllImport   __declspec( dllimport )

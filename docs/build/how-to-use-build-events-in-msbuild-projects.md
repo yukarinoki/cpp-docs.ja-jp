@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
-ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.openlocfilehash: 7c35abbcabe62da2e60fbc2393c575e7c3872cf3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224007"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用する
 
@@ -17,7 +17,7 @@ ms.locfileid: "70060071"
 
 これら 3 つのビルドイベントはそれぞれ、実行されるコマンド要素 (`<Command>`) と、**MSBuild** でビルド イベントが実行されるときに表示されるメッセージ要素 (`<Message>`) による項目定義グループで表されます。 各要素は省略可能です。同じ要素を複数回指定した場合は、最後の指定が優先されます。
 
-省略可能な *use-in-build* 要素 (`<`*build-event*`UseInBuild>`) をプロパティ グループに指定すると、ビルド イベントが実行されるかどうかを示すことができます。 *use-in-build* 要素の内容の値は、**true** または **false** です。 既定では、対応する *use-in-build* 要素が `false` に設定されていない限り、ビルド イベントが実行されます。
+省略可能な *use-in-build* 要素 (`<`*build-event*`UseInBuild>`) をプロパティ グループに指定すると、ビルド イベントが実行されるかどうかを示すことができます。 *use-in-build* 要素の内容の値は、 **`true`** または **`false`** です。 既定では、対応する *use-in-build* 要素が **`false`** に設定されていない限り、ビルド イベントが実行されます。
 
 次の表は、各ビルド イベント XML 要素の一覧です。
 

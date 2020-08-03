@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46173ceebd7291336c18d36203d1e4dc59ce46d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313364"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222005"
 ---
 # <a name="break-statement-c"></a>break ステートメント (C)
 
-`break` ステートメントは、それを囲む最も近い `do`、`for`、`switch`、または `while` の各ステートメントの実行を終了します。 制御は、終了したステートメントの後に続くステートメントに移動します。
+**`break`** ステートメントでは、それを囲む最も近い **`do`** 、 **`for`** 、 **`switch`** 、または **`while`** の各ステートメントの実行が終了されます。 制御は、終了したステートメントの後に続くステートメントに移動します。
 
 ## <a name="syntax"></a>構文
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**
 
-`break` ステートメントは、`switch` ステートメント内で個々の case の処理を終了するためによく使用されます。 囲む反復ステートメントまたは `switch` ステートメントがない場合、エラーが生成されます。
+**`break`** ステートメントは、 **`switch`** ステートメント内の特定ので case の処理を終了するためによく使用されます。 囲む反復ステートメントまたは **`switch`** ステートメントがない場合、エラーが生成されます。
 
-入れ子になったステートメント内では、`break` ステートメントは、それを直接囲む `do`、`for`、`switch`、または `while` の各ステートメントだけを終了させます。 `return` ステートメントまたは `goto` ステートメントを使用して、入れ子構造から別の場所に制御を移すことができます。
+入れ子になったステートメント内では、 **`break`** ステートメントにより、それを直接囲む **`do`** 、 **`for`** 、 **`switch`** 、または **`while`** の各ステートメントだけが終了されます。 **`return`** ステートメントまたは **`goto`** ステートメントを使用して、入れ子構造から別の場所に制御を移すことができます。
 
-`break` ステートメントの例を次に示します。
+**`break`** ステートメントの例を次に示します。
 
 ```
 #include <stdio.h>

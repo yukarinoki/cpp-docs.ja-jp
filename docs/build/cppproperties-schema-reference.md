@@ -3,12 +3,12 @@ title: CppProperties.json リファレンス
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224059"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json リファレンス
 
@@ -28,7 +28,7 @@ CMake を使用していない "フォルダーを開く" プロジェクトで�
 |`forcedInclude`|すべてのコンパイル単位に自動的にインクルードされるヘッダー (MSVC の /FI または clang の -include に対応します)|
 |`undefines`|未定義にするマクロのリスト (MSVC の /U に対応します)|
 |`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc、または Clang に対する定義済みのアーキテクチャ固有バリアントの 1 つを指定できます。|
-|`environments`|コマンド プロンプトで環境変数のように動作し、${env.\<VARIABLE>} マクロを使用してアクセスする、ユーザー定義の変数のセット。|
+|`environments`|ユーザー定義の変数のセット。コマンド プロンプトで環境変数のように動作し、${env.\<VARIABLE>} マクロを使用してアクセスします。|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode 値
 
@@ -85,7 +85,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 ## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> ユーザー定義環境
 
-必要に応じて `environments` プロパティを使用して、変数のセットを *CppProperties.json* にグローバルに、または構成単位で定義できます。 これらの変数は、"フォルダーを開く" プロジェクトのコンテキストで環境変数と同じように動作し、ここで定義された後に、*tasks.vs.json* および *launch.vs.json* から ${env.\<VARIABLE>} 構文を使用してアクセスできます。 ただし、これらは、 Visual Studio が内部で使用するコマンド プロンプトで実際の環境変数として設定されるとは限りません。
+必要に応じて `environments` プロパティを使用して、変数のセットを *CppProperties.json* にグローバルに、または構成単位で定義できます。 これらの変数は、"フォルダーを開く" プロジェクトのコンテキストで環境変数と同じように動作し、${env.\<VARIABLE>} 構文を使用して、ここで定義された後に *tasks.vs.json* および *launch.vs.json* からアクセスできます。 ただし、これらは、 Visual Studio が内部で使用するコマンド プロンプトで実際の環境変数として設定されるとは限りません。
 
 **Visual Studio 2019 バージョン 16.4 以降:** *CppProperties.json* で定義されている構成固有の変数は、`inheritEnvironments` を設定しなくても、デバッグ ターゲットとタスクによって自動的に選択されます。 デバッグ ターゲットは、*CppProperties.json* で指定した環境で自動的に起動されます。
 
@@ -160,7 +160,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 ## <a name="troubleshoot-intellisense-errors"></a>IntelliSense エラーのトラブルシューティング
 
-予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **[true]** に設定にします。 まずは、 **[ログ記録レベル]** を 5 に設定し、 **[ログ フィルター]** を 8 に設定してみてください。
+予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **`true`** に設定にします。 まずは、 **[ログ記録レベル]** を 5 に設定し、 **[ログ フィルター]** を 8 に設定してみてください。
 
 ![診断ログ記録](media/diagnostic-logging.png)
 

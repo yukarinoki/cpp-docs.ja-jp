@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295686"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229793"
 ---
 # <a name="mutual-imports"></a>相互インポート
 
@@ -41,14 +41,14 @@ ms.locfileid: "62295686"
 
 次の図は、2 つの相互インポート DLL (DLL1 と DLL2) の解決策を示しています。 手順 1 では、DLL1 で、/DEF オプションを指定して LIB を実行します。 手順 1 の結果、DLL1.lib、インポート ライブラリ、および DLL1.exp が生成されます。手順 2 では、インポート ライブラリを使用して DLL2 をビルドします。その結果、DLL2 のシンボルのインポート ライブラリが生成されます。 手順 3 では、DLL1.exp および DLL2.lib を入力として使用して DLL1 をビルドします。 DLL2 のインポート ライブラリのビルドには LIB が使用されなかったため、DLL2 の .exp ファイルは必要ありません。
 
-![相互インポートを使用して 2 つの DLL をリンクする](media/vc37yj1.gif "相互インポートを使用して 2 つの DLL をリンクする")<br/>
+![相互インポートを使って 2 つの DLL をリンクする](media/vc37yj1.gif "相互インポートを使って 2 つの DLL をリンクする")<br/>
 相互インポートを使った 2 つの DLL のリンク
 
 ## <a name="limitations-of-_afxext"></a>_AFXEXT の制限事項
 
 MFC 拡張 DLL の複数のレイヤーがない限り、`_AFXEXT` プリプロセッサ シンボルを MFC 拡張 DLL に使用できます。 MFC クラスから派生する独自の MFC 拡張 DLL のクラスがあり、そこから呼び出すか派生する MFC 拡張 DLL がある場合は、あいまいさを避けるために独自のプリプロセッサ シンボルを使用する必要があります。
 
-問題は、Win32 では、DLL からエクスポートする場合は **__declspec(dllexport)** として、DLL からインポートする場合は **__declspec(dllimport)** として明示的にデータを宣言する必要があることです。 `_AFXEXT` を定義するとき、MFC ヘッダーに **AFX_EXT_CLASS** が正しく定義されていることを確認します。
+問題は、Win32 では、DLL からエクスポートする場合は **`__declspec(dllexport)`** として、DLL からインポートする場合は **`__declspec(dllimport)`** として明示的にデータを宣言する必要があることです。 `_AFXEXT` を定義するとき、MFC ヘッダーに **AFX_EXT_CLASS** が正しく定義されていることを確認します。
 
 複数のレイヤーがある場合、MFC 拡張 DLL によって別の MFC 拡張 DLL から他のクラスがインポートされるだけでなく、新しいクラスがエクスポートされる可能性があるため、**AFX_EXT_CLASS** などの 1 つのシンボルでは不十分です。 この問題を解決するには、DLL を使用するのではなく、DLL 自体をビルドしていることを示す特別なプリプロセッサ シンボルを使用します。 たとえば、A.dll と B.dll という 2 つの MFC 拡張 DLL があるとします。 それぞれによって、A.h と B.h のいくつかのクラスがエクスポートされます。 B.dll には A.dll のクラスが使用されます。 ヘッダー ファイルは次のようになります。
 

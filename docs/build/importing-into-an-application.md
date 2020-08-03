@@ -6,20 +6,20 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b858b2ed1b07c143ba24bacbc51c6bba50e3860
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188887"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231521"
 ---
 # <a name="importing-into-an-application"></a>アプリケーションへのインポート
 
 次の 2 つの方法を使用して関数をアプリケーションにインポートできます。
 
-- メイン アプリケーションの関数定義でキーワード **__declspec (dllimport)** を使用する
+- メイン アプリケーションの関数定義でキーワード **`__declspec(dllimport)`** を使用する
 
-- **__declspec (dllimport)** と共にモジュール定義 (.def) ファイルを使用する
+- **`__declspec(dllimport)`** と共にモジュール定義 (.def) ファイルを使用する
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 

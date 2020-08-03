@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218924"
 ---
 # <a name="array-declarations"></a>配列の宣言
 
@@ -38,7 +38,7 @@ ms.locfileid: "62313546"
 
 *constant-expression* は省略可能であるため、構文には以下の 2 つの形式があります。
 
-- 最初の形式は、配列変数の定義です。 角かっこ内の *constant-expression* 引数には、配列内の要素数を指定します。 *constant-expression* は、存在する場合、0 より大きい整数型の値を持つ必要があります。 各要素は、*type-specifier* で指定した型になります。これには、`void` を除く任意の型を指定できます。 配列の要素を関数型にすることはできません。
+- 最初の形式は、配列変数の定義です。 角かっこ内の *constant-expression* 引数には、配列内の要素数を指定します。 *constant-expression* は、存在する場合、0 より大きい整数型の値を持つ必要があります。 各要素は、*type-specifier* で指定した型になります。これには、 **`void`** を除く任意の型を指定できます。 配列の要素を関数型にすることはできません。
 
 - 2 番目の形式は、別の場所で定義されている変数の宣言です。 この場合、角かっこ内の *constant-expression* 引数を省略しますが、角かっこは必要です。 この形式を使用できるのは、以前に配列を初期化しているか、パラメーターとして宣言している場合、または、プログラム内の他の場所で明示的に定義された配列への参照として宣言している場合だけです。
 
@@ -72,7 +72,7 @@ char A[2][3];
 float matrix[10][15];
 ```
 
-`matrix` という 2 次元配列には 150 の要素があり、それぞれが **float** 型です。
+`matrix` という 2 次元配列には 150 個の要素があり、それぞれが **`float`** 型です。
 
 ```C
 struct {
@@ -86,11 +86,11 @@ struct {
 extern char *name[];
 ```
 
-このステートメントは、`char` へのポインターの配列の型と名前を宣言しています。 `name` の実際の定義は、他の場所で発生します。
+このステートメントでは、 **`char`** へのポインターの配列の型と名前が宣言されています。 `name` の実際の定義は、他の場所で発生します。
 
 **Microsoft 固有の仕様**
 
-配列の最大サイズを保持するために必要な整数型は、**size_t** のサイズになります。 STDDEF.H ヘッダー ファイルに定義されている **size_t** は、0x00000000 - 0x7CFFFFFF の範囲の `unsigned int` です。
+配列の最大サイズを保持するために必要な整数型は、**size_t** のサイズになります。 STDDEF.H ヘッダー ファイルで定義されている **size_t** は、0x00000000 - 0x7CFFFFFF の範囲の **`unsigned int`** です。
 
 **Microsoft 固有の仕様はここまで**
 

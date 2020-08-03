@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227999"
 ---
 # <a name="c-logical-operators"></a>C 論理演算子
 
@@ -34,7 +34,7 @@ ms.locfileid: "62326587"
 
 ## <a name="remarks"></a>Remarks
 
-論理演算子は通常の算術変換を実行しません。 代わりに、0 との等価性において各オペランドを評価します。 論理演算の結果は 0 または 1 になります。 結果の型は **int** です。
+論理演算子は通常の算術変換を実行しません。 代わりに、0 との等価性において各オペランドを評価します。 論理演算の結果は 0 または 1 になります。 結果の型は **`int`** です。
 
 C の論理演算子について、以下に説明します。
 

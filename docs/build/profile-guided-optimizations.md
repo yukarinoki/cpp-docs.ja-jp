@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777319"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232730"
 ---
 # <a name="profile-guided-optimizations"></a>ガイド付き最適化のプロファイル
 
@@ -68,7 +68,7 @@ ms.locfileid: "84777319"
 
 - **関数のレイアウト** - コールグラフおよびプロファイルされた呼び出し元/呼び出し先の動作に基づいて、同じ実行パスになる傾向のある関数が同じセクション内に配置されます。
 
-- **条件付き分岐の最適化** - ガイド付き最適化のプロファイルにより、値プローブを使用して、switch ステートメント内の特定の値が他の値よりも頻繁に使用されているかどうかを確認できます。  この値は switch ステートメントから取得できます。  同じことを `if`...`else` 命令でも行うことができます。この場合、オプティマイザーは、`if`...`else`を順序付けることができるため、`if` ブロックまたは `else` ブロックのどちらがより頻繁に true になるかに応じて、いずれかのブロックが先に配置されます。
+- **条件付き分岐の最適化** - ガイド付き最適化のプロファイルにより、値プローブを使用して、switch ステートメント内の特定の値が他の値よりも頻繁に使用されているかどうかを確認できます。  この値は switch ステートメントから取得できます。  同じことを **`if`** ... **`else`** 命令でも行うことができます。この場合、オプティマイザーによって **`if`** ... **`else`** の順序付けが可能なため、 **`if`** ブロックまたは **`else`** ブロックのどちらがより頻繁に true になるかに応じて、いずれかのブロックが先に配置されます。
 
 - **実行されないコードの分離** - プロファイルの実行中に呼び出されないコードを、一連のセクションの最後に追加される特別なセクションに移動します。 これにより、頻繁に使用されるページからこのセクションが切り離されます。
 

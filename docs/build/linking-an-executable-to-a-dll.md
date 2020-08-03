@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422836"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223942"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 
@@ -94,7 +94,7 @@ DLL のいずれかに、`DllMain` などの初期化および終了コード用
 
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) または同様の関数を呼び出して、DLL を読み込み、モジュール ハンドルを取得します。
 
-- [GetProcAddress](getprocaddress.md) を呼び出して、アプリケーションが呼び出すエクスポートされた各関数への関数ポインターを取得します。 アプリケーションではポインターを通じて DLL の関数が呼び出されるため、コンパイラでは外部参照が生成されません。このため、インポート ライブラリとリンクする必要はありません。 ただし、呼び出すエクスポートされた関数の呼び出しシグネチャを定義する、`typedef` または `using` ステートメントが必要です。
+- [GetProcAddress](getprocaddress.md) を呼び出して、アプリケーションが呼び出すエクスポートされた各関数への関数ポインターを取得します。 アプリケーションではポインターを通じて DLL の関数が呼び出されるため、コンパイラでは外部参照が生成されません。このため、インポート ライブラリとリンクする必要はありません。 ただし、呼び出すエクスポートされた関数の呼び出しシグネチャを定義する、 **`typedef`** または **`using`** ステートメントが必要です。
 
 - DLL の終了時に [FreeLibrary](freelibrary-and-afxfreelibrary.md) を呼び出します。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211646"
 ---
 # <a name="structure-and-union-members"></a>構造体と共用体のメンバー
 
@@ -27,7 +27,7 @@ ms.locfileid: "82825692"
 
 ここでは、メンバー選択式の 2 つの形式について説明します。
 
-1. 最初の形式で、*postfix-expression* は **struct** 型または **union** 型の値を表し、*identifier* はその構造体または共用体のメンバーを指定します。 *postfix-expression* が左辺値の場合、この演算の値は *identifier* の値で、左辺値です。 詳細については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
+1. 最初の形式で、*postfix-expression* は型 **`struct`** または **`union`** の値を表し、*identifier* はその構造体または共用体のメンバーを指定します。 *postfix-expression* が左辺値の場合、この演算の値は *identifier* の値で、左辺値です。 詳細については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
 
 1. 2 番目の形式では、*postfix-expression* は構造体または共用体へのポインターを表し、*identifier* はその構造体または共用体のメンバーを指定します。 値は *identifier* の値で、左辺値です。
 

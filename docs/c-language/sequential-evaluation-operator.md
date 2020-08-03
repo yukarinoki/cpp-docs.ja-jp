@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227778"
 ---
 # <a name="sequential-evaluation-operator"></a>順次評価演算子
 
@@ -23,7 +23,7 @@ ms.locfileid: "62158522"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
-順次評価演算子の左のオペランドは、`void` 式として評価されます。 演算の結果は右のオペランドと同じ値と型を持ちます。 各オペランドは任意の型にすることができます。 順次評価演算子では、オペランド間の型変換や左辺値の生成は実行されません。 最初のオペランドの後にシーケンス ポイントがあります。つまり、左オペランドを評価したことによるすべての副作用は、右オペランドの評価が開始される前に完了します。 詳細については、「[シーケンス ポイント](../c-language/c-sequence-points.md)」を参照してください。
+順次評価演算子の左のオペランドは、 **`void`** 式として評価されます。 演算の結果は右のオペランドと同じ値と型を持ちます。 各オペランドは任意の型にすることができます。 順次評価演算子では、オペランド間の型変換や左辺値の生成は実行されません。 最初のオペランドの後にシーケンス ポイントがあります。つまり、左オペランドを評価したことによるすべての副作用は、右オペランドの評価が開始される前に完了します。 詳細については、「[シーケンス ポイント](../c-language/c-sequence-points.md)」を参照してください。
 
 順次評価演算子は、通常、1 つの式しか許可されないコンテキストで 2 つ以上の式を評価するために使用されます。
 
@@ -37,7 +37,7 @@ ms.locfileid: "62158522"
 for ( i = j = 1; i + j < 20; i += i, j-- );
 ```
 
-この例では、**for** ステートメントの 3 番目の式の各オペランドは、個別に評価されます。 左のオペランド `i += i` が最初に評価され、次に、右のオペランド `j--` が評価されます。
+この例では、 **`for`** ステートメントの 3 番目の式の各オペランドは、個別に評価されます。 左のオペランド `i += i` が最初に評価され、次に、右のオペランド `j--` が評価されます。
 
 ```
 func_one( x, y + 2, z );

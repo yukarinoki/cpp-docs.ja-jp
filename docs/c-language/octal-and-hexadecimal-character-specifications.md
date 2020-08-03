@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229585"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8 進文字と 16 進文字の仕様
 
@@ -22,7 +22,7 @@ ms.locfileid: "64343365"
 
 同様に、16 進数のエスケープ シーケンスには 1 桁以上を使用する必要がありますが、2 桁目と 3 桁目は省略できます。 したがって、 **\x8**、 **\x08**、または **\x008** として、バックスペース文字に 16 進数のエスケープ シーケンスを指定できます。
 
-8 進数または 16 進数のエスケープ シーケンスの値は、文字定数の型 **unsigned char** およびワイド文字定数の型 `wchar_t` の表現可能な値の範囲内である必要があります。 ワイド文字定数については、「[マルチバイト文字とワイド文字](../c-language/multibyte-and-wide-characters.md)」を参照してください。
+8 進数または 16 進数のエスケープ シーケンスの値は、文字定数の型 **`unsigned char`** およびワイド文字定数の型 **`wchar_t`** の表現可能な値の範囲内である必要があります。 ワイド文字定数については、「[マルチバイト文字とワイド文字](../c-language/multibyte-and-wide-characters.md)」を参照してください。
 
 8 進数のエスケープ定数とは異なり、エスケープ シーケンスでの 16 進数の桁数に制限はありません。 16 進数のエスケープ シーケンスは、16 進数ではない数字では最初の文字で終了します。 16 進数の数字には **a** から **f** の文字が含まれるため、エスケープ シーケンスが目的の数字で終わることを確認する注意が必要です。 混乱を回避するには、マクロ定義に 8 進形式または 16 進形式の文字定義を配置できます:
 

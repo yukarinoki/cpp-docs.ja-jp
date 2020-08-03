@@ -2,12 +2,12 @@
 title: 式の概要
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1660690c6d36aa1dbdc025d6afe92e19ff941463
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220835"
 ---
 # <a name="summary-of-expressions"></a>式の概要
 
@@ -51,7 +51,7 @@ ms.locfileid: "62157819"
 &nbsp;&nbsp;&nbsp;&nbsp; **--**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`sizeof`**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
 
 *unary-operator*: 次のいずれか<br/>
@@ -74,15 +74,11 @@ ms.locfileid: "62157819"
 
 *shift-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **\<\<**  *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **>>**  *additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  * *\<\<**  *additive-expression*<br/> &nbsp;&nbsp;&nbsp;&nbsp;* shift-expression*  **>>**  *additive-expression*
 
 *relational-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<=**  *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>=**  *shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<**  *shift-expression*<br/> &nbsp;&nbsp;&nbsp;&nbsp;* relational-expression*  **>**  *shift-expression*<br/> &nbsp;&nbsp;&nbsp;&nbsp;* relational-expression*  * *\<=**  *shift-expression*<br/> &nbsp;&nbsp;&nbsp;&nbsp;* relational-expression*  **>=**  *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>

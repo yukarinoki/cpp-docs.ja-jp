@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857139"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228012"
 ---
 # <a name="c-function-definitions"></a>C 関数定義
 
@@ -81,13 +81,13 @@ ms.locfileid: "74857139"
 *compound-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
-関数宣言を変更できるストレージ クラスの指定子は **extern** と **static** のみです。 **extern** 指定子は、関数が他のファイルから参照できること、つまり、関数名がリンカーにエクスポートされることを指定します。 **static** 指定子は、関数が他のファイルから参照できないこと、つまり、名前がリンカーによってエクスポートされないことを示します。 関数定義にストレージ クラスが現れない場合、**extern** と見なされます。 いずれの場合も、関数は定義位置からファイルの末尾まで常に参照可能です。
+関数宣言を変更できるストレージ クラスの指定子は **`extern`** と **`static`** だけです。 **`extern`** 指定子は、関数が他のファイルから参照できること、つまり、関数名はリンカーにエクスポートされることを指定します。 **`static`** 指定子は、関数が他のファイルから参照できないこと、つまり、名前がリンカーによってエクスポートされないことを示します。 ストレージ クラスが関数定義に表示されない場合、 **`extern`** と見なされます。 いずれの場合も、関数は定義位置からファイルの末尾まで常に参照可能です。
 
 省略可能な *declaration-specifiers* と必須の *declarator* によって、関数の戻り値の型と名前が指定されます。 *declarator* は、関数の名前を指定する識別子と、関数名の後に続くかっこの組み合わせです。 省略可能な *attribute-seq* 非終端要素は、「[関数の属性](../c-language/function-attributes.md)」で定義する Microsoft 固有の機能です。
 
 (*declarator* 構文内の) *direct-declarator* は、定義されている関数の名前とそのパラメーターの識別子を指定します。 *direct-declarator* に *parameter-type-list* が含まれる場合、そのリストですべてのパラメーターの型を指定します。 このような宣言は、それ以降の関数の呼び出しに対する関数プロトタイプとしても機能します。
 
-関数定義の *declaration-list* の *declaration* は、**register** 以外の *storage-class-specifier* を含めることはできません。 *declaration-specifiers* 構文の *type-specifier* は、**register** ストレージ クラスが **int** 型の値に対して指定されている場合にのみ省略できます。
+関数定義の *declaration-list* の *declaration* には、 **`register`** 以外の *storage-class-specifier* を含めることはできません。 *declaration-specifiers* 構文の *type-specifier* は、 **`register`** ストレージ クラスが **`int`** 型の値に対して指定されている場合にのみ省略できます。
 
 *compound-statement* は、ローカル変数宣言、外部で宣言された項目への参照、およびステートメントを含む関数本体です。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328962"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215999"
 ---
 # <a name="add-a-member-variable"></a>メンバー変数を追加する
 
@@ -34,7 +34,7 @@ ms.locfileid: "58328962"
 
 1. ダイアログ エディターに表示されたダイアログ ボックスで、メンバー変数を追加するコントロールを右クリックします。
 
-1. ショートカット メニューで、**[変数の追加]** を選択して[メンバー変数の追加ウィザード](#add-member-variable-wizard)を表示します。
+1. ショートカット メニューで、 **[変数の追加]** を選択して[メンバー変数の追加ウィザード](#add-member-variable-wizard)を表示します。
 
    > [!NOTE]
    > 既定値が既に**コントロール ID** に提供されています。
@@ -49,7 +49,7 @@ ms.locfileid: "58328962"
 
 1. 変数を追加するクラスを右クリックします。
 
-1. ショートカット メニューで、**[追加]**、**[変数の追加]** の順に選択して、メンバー変数の追加ウィザードを表示します。
+1. ショートカット メニューで、 **[追加]** 、 **[変数の追加]** の順に選択して、メンバー変数の追加ウィザードを表示します。
 
 1. 適切なウィザード ボックスに情報を指定します。 詳細については、「[メンバー変数の追加ウィザード](#add-member-variable-wizard)」を参照してください。
 
@@ -66,7 +66,7 @@ ms.locfileid: "58328962"
 
 - **アクセス**
 
-  メンバー変数へのアクセス権を設定します。 アクセス修飾子とは、メンバー変数に対して他のクラスが持つアクセス権を指定するキーワードです。 アクセス権の指定の詳細については、「[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)」を参照してください。 メンバー変数のアクセス レベルは、既定では `public` に設定されます。
+  メンバー変数へのアクセス権を設定します。 アクセス修飾子とは、メンバー変数に対して他のクラスが持つアクセス権を指定するキーワードです。 アクセス権の指定の詳細については、「[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)」を参照してください。 メンバー変数のアクセス レベルは、既定では **`public`** に設定されます。
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
@@ -82,15 +82,15 @@ ms.locfileid: "58328962"
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
-  - ダイアログ ボックス コントロールのメンバー変数を追加する場合、このボックスにはコントロールまたは値に対して返されるオブジェクトの型が入力されます。 **[コントロール]** を選択した場合、**[変数の型]** により **[コントロール ID]** ボックスで選択したコントロールの基底クラスが指定されます。 ダイアログ ボックス コントロールに値を保持することができ、**[値]** を選択した場合、**[変数の型]** によってコントロールで保持できる値の適切な型が指定されます。 詳細については、「[ダイアログ ボックス コントロールおよび変数の型](#dialog-box-controls-and-variable-types)」を参照してください。
+  - ダイアログ ボックス コントロールのメンバー変数を追加する場合、このボックスにはコントロールまたは値に対して返されるオブジェクトの型が入力されます。 **[コントロール]** を選択した場合、 **[変数の型]** により **[コントロール ID]** ボックスで選択したコントロールの基底クラスが指定されます。 ダイアログ ボックス コントロールに値を保持することができ、 **[値]** を選択した場合、 **[変数の型]** によってコントロールで保持できる値の適切な型が指定されます。 詳細については、「[ダイアログ ボックス コントロールおよび変数の型](#dialog-box-controls-and-variable-types)」を参照してください。
 
-    この値は、**[コントロール ID]** の選択内容によって異なり、変更することができません。
+    この値は、 **[コントロール ID]** の選択内容によって異なり、変更することができません。
 
 - **変数名**
 
@@ -102,7 +102,7 @@ ms.locfileid: "58328962"
 
 - **コントロール ID**
 
-  追加するコントロール変数の ID を設定します。 メンバー変数を追加するコントロールの型の ID をリストから選択します。 このリストは、**[コントロール変数]** ボックスが選択されている場合にのみアクティブとなり、さらにダイアログ ボックスに既に追加されているコントロールの ID に限定されます。 たとえば、標準的な **[OK]** ボタンの場合、コントロール ID は **IDOK** です。
+  追加するコントロール変数の ID を設定します。 メンバー変数を追加するコントロールの型の ID をリストから選択します。 このリストは、 **[コントロール変数]** ボックスが選択されている場合にのみアクティブとなり、さらにダイアログ ボックスに既に追加されているコントロールの ID に限定されます。 たとえば、標準的な **[OK]** ボタンの場合、コントロール ID は **IDOK** です。
 
   |オプション|説明|
   |------------|-----------------|
@@ -123,11 +123,11 @@ ms.locfileid: "58328962"
 
 - **最小値**
 
-  変数の型が `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、[COLECurrency](../mfc/reference/colecurrency-class.md)、または [CTime](../atl-mfc-shared/reference/ctime-class.md) である場合にのみ使用できます。 スケールまたは日付の範囲に許容される最小値を示します。
+  変数の型が `BOOL`、 **`int`** 、`UINT`、 **`long`** 、`DWORD`、 **`float`** 、 **`double`** 、`BYTE`、 **`short`** 、[COLECurrency](../mfc/reference/colecurrency-class.md)、または [CTime](../atl-mfc-shared/reference/ctime-class.md) である場合にのみ使用できます。 スケールまたは日付の範囲に許容される最小値を示します。
 
 - **最大値**
 
-  変数の型が `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、`COLECurrency`、または `CTime` である場合にのみ使用できます。 スケールまたは日付の範囲に許容される最大値を示します。
+  変数の型が `BOOL`、 **`int`** 、`UINT`、 **`long`** 、`DWORD`、 **`float`** 、 **`double`** 、`BYTE`、 **`short`** 、`COLECurrency`、または `CTime` である場合にのみ使用できます。 スケールまたは日付の範囲に許容される最大値を示します。
 
 - **.h ファイル**
 
@@ -147,10 +147,10 @@ ms.locfileid: "58328962"
 
 次の表は、MFC と[ダイアログ エディター](../windows/dialog-editor.md)でサポートされているすべてのダイアログ ボックス コントロール型をまとめたものです。 また、それらの使用可能な型と値も示されています。
 
-|コントロール|コントロール型|コントロール変数の型|値変数の型|最小/最大値 (値の型のみ)|
+|Control|コントロール型|コントロール変数の型|値変数の型|最小/最大値 (値の型のみ)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |アニメーション コントロール|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|なし、コントロールのみ|N/A|
-|ボタン|ボタン|[CButton](../mfc/reference/cbutton-class.md)|なし、コントロールのみ|N/A|
+|Button|ボタン|[CButton](../mfc/reference/cbutton-class.md)|なし、コントロールのみ|N/A|
 |チェック ボックス|チェック|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|最小値/最大値|
 |コンボ ボックス|コンボ ボックス|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|最大文字数|
 |日時指定コントロール|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|最小値/最大値|
@@ -162,8 +162,8 @@ ms.locfileid: "58328962"
 |プログレス コントロール|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|なし、コントロールのみ|N/A|
 |リッチ エディット 2 コントロール|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|最大文字数|
 |リッチ エディット コントロール|RICHEDIT|`CRichEditCtrl`|`CString`|最大文字数|
-|スクロール バー (垂直または水平)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|最小値/最大値|
-|Slider コントロール|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|最小値/最大値|
+|スクロール バー (垂直または水平)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|最小値/最大値|
+|Slider コントロール|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|最小値/最大値|
 |スピン コントロール|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|なし、コントロールのみ|N/A|
 |タブ コントロール|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|なし、コントロールのみ|N/A|
 |ツリー コントロール|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|なし、コントロールのみ|N/A|

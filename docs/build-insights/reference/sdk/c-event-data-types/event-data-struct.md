@@ -1,6 +1,6 @@
 ---
-title: EVENT_DATA構造
-description: C++ ビルド インサイト SDK EVENT_DATA構造リファレンス。
+title: EVENT_DATA 構造体
+description: C++ Build Insights SDK の EVENT_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ce396febe278c5e7c34fe170939c9522913f92a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325604"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229923"
 ---
-# <a name="event_data-structure"></a>EVENT_DATA構造
+# <a name="event_data-structure"></a>EVENT_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`EVENT_DATA`構造体は、分析セッションまたは再ロギング セッションから受信したイベントを記述します。 これらのセッションは、[分析](../functions/analyze.md)、[分析 A](../functions/analyze-a.md)、[分析 W](../functions/analyze-w.md)、[リローグ](../functions/relog.md)、[再ログ](../functions/relog-a.md)、 または[RelogW](../functions/relog-w.md)関数を呼び出すことによって開始されます。
+`EVENT_DATA` 構造体によって、分析セッションまたは再ログ セッションから受信したイベントが表されます。 これらのセッションは、[Analyze](../functions/analyze.md)、[AnalyzeA](../functions/analyze-a.md)、[AnalyzeW](../functions/analyze-w.md)、[Relog](../functions/relog.md)、[RelogA](../functions/relog-a.md)、または [RelogW](../functions/relog-w.md) 関数を呼び出すことによって開始されます。
 
 ## <a name="syntax"></a>構文
 
@@ -60,30 +60,30 @@ typedef struct EVENT_DATA_TAG
 
 |  |  |
 |--|--|
-| `EventId` | イベントを識別する番号。 イベント識別子の一覧については、「 [EVENT_ID](event-id-enum.md)」 を参照してください。 |
-| `EventInstanceId` | トレース内の現在のイベントを一意に識別する番号。 同じトレースを複数回分析または再ログしても、この値は変わりません。 このフィールドを使用して、複数の分析または再ロギングパスで同じトレースを渡す場合に同じイベントを識別します。 |
-| `TickFrequency` | ティック単位で測定された期間を評価するときに使用する 1 秒あたりのティック数。 |
-| `StartTimestamp` | イベントが *[アクティビティ*] の場合、このフィールドはアクティビティの開始時にキャプチャされたティック値に設定されます。 このイベントが*単純イベント*の場合、このフィールドはイベント発生時にキャプチャされたティック値に設定されます。 |
-| `StopTimestamp` | イベントが *[アクティビティ*] の場合、このフィールドはアクティビティが停止した時点でキャプチャされたティック値に設定されます。 このアクティビティの停止イベントがまだ受信されていない場合、このフィールドはゼロに設定されます。 このイベントが*単純イベント*の場合、このフィールドはゼロに設定されます。 |
-| `ExclusiveDurationTicks` | このイベントが *[アクティビティ*] の場合、このフィールドは、このアクティビティで直接発生したティック数に設定されます。 子アクティビティで発生したティックの数は除外されます。 *単純なイベント*の場合、このフィールドは 0 に設定されています。 |
-| `CPUTicks` | このイベントが *[アクティビティ*] の場合、このフィールドは、このアクティビティ中に発生した CPU ティックの数に設定されます。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、CPU がアクティビティ内のコードを実行している場合にのみカウントされます。 アクティビティに関連付けられたスレッドがスリープ状態の場合、CPU ティックはカウントされません。 *単純なイベント*の場合、このフィールドは 0 に設定されています。 |
-| `ExclusiveCPUTicks` | このフィールドは、子アクティビティで`CPUTicks`発生した CPU ティックが含まれていない点を除いて、 と同じ意味を持ちます。 *単純なイベント*の場合、このフィールドは 0 に設定されています。 |
-| `WallClockTimeResponsibilityTicks` | このイベントが *[アクティビティ*] の場合、このフィールドは、このアクティビティが全体のウォール クロック時間に対する貢献度を表すティック数に設定されます。 ウォールクロックの時間責任ティックは、通常のティックとは異なります。 ウォールクロック時間の責任ティックは、アクティビティ間の並列性を考慮に入れます。 たとえば、2 つの並列アクティビティの期間が 50 ティックで、開始時間と終了時間が同じ場合があります。 この場合、両方とも 25 ティックの壁時計の時間責任が割り当てられます。 *単純なイベント*の場合、このフィールドは 0 に設定されています。 |
-| `ExclusiveWallClockTimeResponsibilityTicks` | このフィールドは、子アクティビティの`WallClockTimeResponsibilityTicks`ウォールクロック時間の責任ティックが含まれていない点を除いて、 と同じ意味を持ちます。 *単純なイベント*の場合、このフィールドは 0 に設定されています。 |
-| `Data` | イベントに格納されている追加データへのポイント。 フィールドによって、指し示されるデータの種類が`EventId`異なります。 |
+| `EventId` | イベントを識別する番号です。 イベント識別子の一覧については、[EVENT_ID](event-id-enum.md) に関する記事をご覧ください。 |
+| `EventInstanceId` | トレース内の現在のイベントを一意に識別する番号です。 この値は、同じトレースを複数回分析またはログに再記録しても変わりません。 このフィールドを使用して、同じトレースに対する複数の分析または再ログのパスから同じイベントを識別します。 |
+| `TickFrequency` | ティック単位で計測された期間を評価するときに使用する、1 秒あたりのティック数。 |
+| `StartTimestamp` | イベントが "*アクティビティ*" である場合、このフィールドは、アクティビティの開始時にキャプチャされたティック値に設定されます。 このイベントが "*シンプルなイベント*" である場合、このフィールドは、イベントの発生時にキャプチャされたティック値に設定されます。 |
+| `StopTimestamp` | イベントが "*アクティビティ*" である場合、このフィールドは、アクティビティの停止時にキャプチャされたティック値に設定されます。 このアクティビティに対する停止イベントがまだ受信されていない場合、このフィールドは 0 に設定されます。 このイベントが "*シンプルなイベント*" である場合、このフィールドは 0 に設定されます。 |
+| `ExclusiveDurationTicks` | このイベントが "*アクティビティ*" である場合、このフィールドは、このアクティビティで直接発生したティック数に設定されます。 子アクティビティで発生したティック数は除外されます。 "*シンプルなイベント*" の場合、このフィールドは 0 に設定されます。 |
+| `CPUTicks` | このイベントが "*アクティビティ*" である場合、このフィールドは、このアクティビティの実行中に発生した CPU ティック数に設定されます。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、アクティビティ内のコードが CPU によって実行されている場合にのみカウントされます。 アクティビティに関連付けられているスレッドがスリープ状態のときには、CPU ティックはカウントされません。 "*シンプルなイベント*" の場合、このフィールドは 0 に設定されます。 |
+| `ExclusiveCPUTicks` | このフィールドは `CPUTicks` と同じ意味を持ちますが、子アクティビティで発生した CPU ティックは含まれません。 "*シンプルなイベント*" の場合、このフィールドは 0 に設定されます。 |
+| `WallClockTimeResponsibilityTicks` | このイベントが "*アクティビティ*" である場合、このフィールドには、全体的な実時間に対するこのアクティビティの影響を表すティック数が設定されます。 実時間の責任ティックは、通常のティックとは異なります。 実時間の責任ティックでは、アクティビティ間の並列処理が考慮されます。 たとえば、2 つの並列アクティビティが 50 ティックの期間を持ち、開始時刻と終了時刻が同じであるとします。 この場合、両方に 25 ティックの実時間の責任が割り当てられます。 "*シンプルなイベント*" の場合、このフィールドは 0 に設定されます。 |
+| `ExclusiveWallClockTimeResponsibilityTicks` | このフィールドは `WallClockTimeResponsibilityTicks` と同じ意味を持ちます。ただし、子アクティビティの実時間の責任ティックは含まれません。 "*シンプルなイベント*" の場合、このフィールドは 0 に設定されます。 |
+| `Data` | イベントに格納されている追加データを示します。 示されているデータの型は、`EventId` フィールドによって異なります。 |
 | `ProcessId` | イベントが発生したプロセスの識別子。 |
 | `ThreadId` | イベントが発生したスレッドの識別子。 |
-| `ProcessorIndex` | イベントが発生したインデックスが 0 個の CPU 番号。 |
-| `EventName` | で`EventId`識別されるエンティティの名前を含む ANSI 文字列。 |
-| `EventWideName` | で`EventId`識別されるエンティティの名前を含むワイド文字列。 |
+| `ProcessorIndex` | イベントが発生した (インデックスが 0 から始まる) CPU 番号。 |
+| `EventName` | `EventId` によって識別されるエンティティの名前を含む ANSI 文字列。 |
+| `EventWideName` | `EventId` によって識別されるエンティティの名前を含むワイド文字列。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-の多くの`EVENT_DATA`フィールドにはティック数が含まれています。 C++ ビルドインサイトは、ウィンドウのパフォーマンス カウンターをティックのソースとして使用します。 ティック数は`TickFrequency`、秒などの適切な時間単位に変換するために、フィールドと一緒に使用する必要があります。 この変換を実行するには、以下の例を参照してください。 `EVENT_DATA`アクティビティの通常のティック数のフィールドは含まれていません。 この値を取得するには、 `StartTimestamp` `StopTimestamp`から減算します。 `EVENT_DATA`は、C API ユーザーが使用するための構造です。 C++ API ユーザーの場合[、Event](../cpp-event-data-types/event.md)のようなクラスは自動的に時間変換を行います。
+`EVENT_DATA` の多くのフィールドには、ティック数が含まれています。 C++ Build Insights では、ティックのソースとして Window のパフォーマンス カウンターが使用されます。 ティック数は `TickFrequency` フィールドと共に使用して、秒などの適切な時間単位に変換する必要があります。 この変換の実行方法については、以下の例を参照してください。 `EVENT_DATA` には、アクティビティの通常のティック数を表すフィールドは含まれていません。 この値を取得するには、`StopTimestamp` から `StartTimestamp` を減算します。 `EVENT_DATA` は、C API ユーザーが使用することを意図した構造体です。 C++ API ユーザーの場合、[Event](../cpp-event-data-types/event.md) などのクラスによって、時間の変換が自動的に実行されます。
 
-フィールドの値は`EVENT_DATA``Data`、フィールド`EventId`の値によって異なります。 の値`Data`は、以下の表で説明します。 一部のエンティティ識別子は、次の表に含まれる可能性があります。 この場合、`Data`フィールドは 0 に`nullptr`設定されます。
+`EVENT_DATA` の `Data` フィールドの値は、その `EventId` フィールドの値によって異なります。 `Data` の値について、次の表で説明します。 次の表では、エンティティ識別子の一部が不足している場合があります。 その場合、`Data` フィールドは **`nullptr`** または 0 に設定されます。
 
-| `EventId` 値 | 指定先の型`Data` |
+| `EventId` の値 | `Data` が指す型 |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |

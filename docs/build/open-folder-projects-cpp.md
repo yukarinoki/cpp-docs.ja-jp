@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229806"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio での C++ ビルド システムの [フォルダーを開く] のサポート
 
@@ -119,7 +119,7 @@ MinGW-W64 構成を追加すると、JSON は次のようになります。
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense 診断を有効にする
 
-期待した IntelliSense が表示されない場合は、トラブルシューティングを実行できます。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **[true]** に設定にします。 最初は、 **[ログ記録レベル]** を [5] に設定し、 **[ログ フィルター]** を [8] に設定します。
+予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **`true`** に設定にします。 最初は、 **[ログ記録レベル]** を [5] に設定し、 **[ログ フィルター]** を [8] に設定します。
 
 ![診断ログ記録](media/diagnostic-logging.png)
 

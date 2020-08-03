@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299105"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226354"
 ---
 # <a name="one-dimensional-arrays"></a>1 次元配列
 
@@ -49,11 +49,11 @@ b[a]
 
 加算演算子の変換規則 (「[加法演算子](../c-language/c-additive-operators.md)」で指定) に従って、ポインターによってアドレス指定される型の長さを掛けることで、整数値がアドレス オフセットに変換されます。
 
-たとえば `line` 識別子が `int` 値の配列を参照しているとします。 次の手順は、添字式 `line[ i ]` の評価に使用されます。
+たとえば、識別子 `line` で **`int`** 値の配列が参照されているとします。 次の手順は、添字式 `line[ i ]` の評価に使用されます。
 
-1. 整数値 `i` は `int` 項目の長さとして定義されたバイト数によって乗算されます。 `i` の変換後の値は、`i` `int` の位置を表します。
+1. 整数値 `i` は **`int`** 項目の長さとして定義されたバイト数によって乗算されます。 `i` の変換後の値では、`i` **`int`** の位置が表されます。
 
-1. この変換された値が元のポインター値 (`line`) に追加され、`line` からのオフセットが `i` `int` の位置であるアドレスが生成されます。
+1. この変換された値が元のポインター値 (`line`) に追加され、`line` からのオフセットが `i` **`int`** の位置であるアドレスが生成されます。
 
 1. 間接演算子は新しいアドレスに適用されます。 結果は、その部分での配列要素の値です (直感的な `line [ i ]`)。
 

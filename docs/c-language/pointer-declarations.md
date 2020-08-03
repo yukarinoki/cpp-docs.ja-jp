@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232153"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211763"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 
@@ -40,9 +40,9 @@ ms.locfileid: "62232153"
 
 *type-specifier* は、オブジェクトの型を指定します。指定できる型は、任意の基本型、構造体型、または共用体型です。 ポインター変数は、関数、配列、および他のポインターを指すこともできます (より複雑なポインター型の宣言および解釈については、「[さらに複雑な宣言子の解釈](../c-language/interpreting-more-complex-declarators.md)」を参照)。
 
-*type-specifier* **void** を作成すると、ポインターが参照する型を後から指定できます。 このような項目は、"**void** へのポインター" と呼ばれ、`void *` と記述します。 *void* へのポインターとして宣言された変数は、任意の型のオブジェクトを指すために使用できます。 ただし、ポインターに対する操作やポインターが指すオブジェクトに対する操作のほとんどは、それが指す型を操作ごとに明示的に指定して実行する必要があります (**char** <strong>\*</strong> 型と **void** <strong>\*</strong> 型の変数は代入互換性があり、型キャストは不要です)。このような変換には型キャストを使用します (詳細については、「[型キャスト変換](../c-language/type-cast-conversions.md)」を参照)。
+*type-specifier* **`void`** を作成すると、ポインターが参照する型を後から指定できます。 このような項目は、" **`void`** へのポインター" と呼ばれ、`void *` と記述します。 *void* へのポインターとして宣言された変数は、任意の型のオブジェクトを指すために使用できます。 ただし、ポインターに対する操作やポインターが指すオブジェクトに対する操作のほとんどは、それが指す型を操作ごとに明示的に指定して実行する必要があります ( **`char`** <strong>\*</strong> 型と **`void`** <strong>\*</strong> 型の変数は代入互換性があり、型キャストは不要です)。このような変換には型キャストを使用します (詳細については、「[型キャスト変換](../c-language/type-cast-conversions.md)」を参照)。
 
-*type-qualifier* には、**const** か **volatile** のいずれか、または両方を指定できます。 **const** はポインターがプログラム自体によって変更できないことを指定し、**volatile** はプログラムによるコントロール以外のプロセスによって適切に変更できることを指定します (**const** と **volatile** の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照)。
+*type-qualifier* には、 **`const`** か **`volatile`** のいずれか、または両方を指定できます。 **`const`** はポインターがプログラム自体によって変更できないことを指定し、 **`volatile`** はプログラムによるコントロール以外のプロセスによって適切に変更できることを指定します ( **`const`** と **`volatile`** の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照してください)。
 
 *declarator* は変数に名前を付けます。これには、型修飾子を含めることができます。 たとえば、*declarator* が配列を表す場合、ポインターの型を配列へのポインターに変更できます。
 
@@ -56,26 +56,26 @@ ms.locfileid: "62232153"
 char *message; /* Declares a pointer variable named message */
 ```
 
-*message* ポインターは、**char** 型の変数を指しています。
+*message* ポインターは、 **`char`** 型の変数を指しています。
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-*pointers* 配列には 10 個の要素があり、各要素は **int** 型の変数へのポインターです。
+*pointers* 配列には 10 個の要素があり、各要素は **`int`** 型の変数へのポインターです。
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-この*ポインター*変数は、10 個の要素を持つ配列を指します。 この配列の各要素は **int** 型です。
+この*ポインター*変数は、10 個の要素を持つ配列を指します。 この配列の各要素は **`int`** 型です。
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-ポインター *x* が別の **int** 値を指すように変更することはできますが、指す値自体を変更することはできません。
+ポインター *x* が別の **`int`** 値を指すように変更することはできますが、指す値自体を変更することはできません。
 
 ```
 const int some_object = 5 ;
@@ -85,7 +85,7 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-これらの宣言の中で、変数 *y* は、**int** 値への定数ポインターとして宣言されています。 このポインターが指す値を変更することはできますが、ポインター自体は常に同じ場所、つまり *fixed_object* のアドレスを指す必要があります。 同様に、*z* は定数ポインターです。しかし、プログラムによって値を変更できない **int** を指すことが併せて宣言されています。 指定子 **volatile** を追加することで、*z* が指す **const int** の値はプログラムによって変更できないが、プログラムと同時に実行されているプロセスによって適切に変更できることが指定されます。 *w* の宣言は、指す値がプログラムによって変更できず、ポインターもプログラムによって変更できないことを指定しています。
+これらの宣言の中で、変数 *y* は、 **`int`** 値への定数ポインターとして宣言されています。 このポインターが指す値を変更することはできますが、ポインター自体は常に同じ場所、つまり *fixed_object* のアドレスを指す必要があります。 同様に、*z* は定数ポインターです。しかし、プログラムによって値を変更できない **`int`** を指すことが併せて宣言されています。 指定子 **`volatile`** を追加することで、*z* が指す **const int** の値はプログラムによって変更できないが、プログラムと同時に実行されているプロセスによって適切に変更できることが指定されます。 *w* の宣言は、指す値がプログラムによって変更できず、ポインターもプログラムによって変更できないことを指定しています。
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-変数 *line* には *list* という構造体型があります。 この *list* 構造体型には、**char** 値へのポインター、**int** 値、別の *list* 構造体へのポインター、の 3 つのメンバーが含まれています。
+変数 *line* には *list* という構造体型があります。 この *list* 構造体型には、 **`char`** 値へのポインター、 **`int`** 値、別の *list* 構造体へのポインター、の 3 つのメンバーが含まれています。
 
 ```
 struct id

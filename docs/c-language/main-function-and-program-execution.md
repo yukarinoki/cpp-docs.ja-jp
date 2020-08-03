@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123943"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211789"
 ---
 # <a name="main-function-and-program-execution"></a>main 関数とプログラム実行
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Remarks
 
-ソース プログラム内の関数は、1 つ以上の特定のタスクを実行します。 **main** 関数は、これらの関数を呼び出して、それぞれのタスクを実行することができます。 **main** が別の関数を呼び出すときは、その関数の最初のステートメントから実行が開始されるように、その関数に実行制御を渡します。 関数は、`return` ステートメントが実行されたとき、または関数の終わりに達したときに、**main** に制御を戻します。
+ソース プログラム内の関数は、1 つ以上の特定のタスクを実行します。 **main** 関数は、これらの関数を呼び出して、それぞれのタスクを実行することができます。 **main** が別の関数を呼び出すときは、その関数の最初のステートメントから実行が開始されるように、その関数に実行制御を渡します。 関数は、 **`return`** ステートメントが実行されたとき、または関数の終わりに達したときに、**main** に制御を戻します。
 
 **main** も含めて、任意の関数を、パラメーターを持つように宣言できます。 "パラメーター" または "仮パラメーター" という用語は、関数に渡された値を受け取る識別子を指します。 パラメーターに引数を渡す方法については、「[パラメーター](../c-language/parameters.md)」を参照してください。 ある関数が別の関数を呼び出すとき、呼び出される関数は呼び出す関数からパラメーターの値を受け取ります。 これらの値は、"引数" と呼ばれます。 **main** には、コマンド ラインから引数を受け取れるように、次の形式を使用して仮パラメーターを宣言できます。
 

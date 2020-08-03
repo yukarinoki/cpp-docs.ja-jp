@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325664"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223747"
 ---
 # <a name="c-identifiers"></a>C 識別子
 
@@ -34,7 +34,7 @@ int main()
 
 識別子を宣言した後、それ以降のプログラム ステートメントでその識別子を使用して、関連する値を参照できます。
 
-`goto` ステートメントでは、ステートメント ラベルと呼ばれる特殊な識別子を使用できます (宣言は「[型の宣言](../c-language/declarations-and-types.md)」で説明し、ステートメント ラベルは [goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md) に関するページで説明します)。
+**`goto`** ステートメントでは、ステートメント ラベルと呼ばれる特殊な識別子を使用できます。 (宣言は「[型の宣言](../c-language/declarations-and-types.md)」で説明し、ステートメント ラベルは [goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md) に関するページで説明します)。
 
 ## <a name="syntax"></a>構文
 
@@ -50,7 +50,7 @@ int main()
 *digit*: 次のいずれか<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-識別子名の先頭文字は `nondigit` (つまり、英字の大文字か小文字、またはアンダースコア文字) にする必要があります。 ANSI の規定により、外部識別子の名前では 6 個の有意文字、内部 (関数内) 識別子の名前では 31 個の有意文字を使用できます。 外部識別子 (グローバル スコープで宣言されるか、`extern` ストレージ クラスで宣言された識別子) は、リンカーなど他のソフトウェアで処理する必要があるため、追加の名前付け規約の影響を受ける場合があります。
+識別子名の先頭文字は `nondigit` (つまり、英字の大文字か小文字、またはアンダースコア文字) にする必要があります。 ANSI の規定により、外部識別子の名前では 6 個の有意文字、内部 (関数内) 識別子の名前では 31 個の有意文字を使用できます。 外部識別子 (グローバル スコープで宣言されるか、 **`extern`** ストレージ クラスで宣言された識別子) は、リンカーなど他のソフトウェアで処理する必要があるため、追加の名前付け規約の影響を受ける場合があります。
 
 **Microsoft 固有の仕様**
 

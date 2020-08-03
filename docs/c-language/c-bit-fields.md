@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234290"
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 
@@ -22,9 +22,9 @@ ms.locfileid: "62326496"
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
 
-*constant-expression* は、フィールドの幅 (ビット単位) を指定します。 `declarator` の *type-specifier* は、`unsigned int`、**signed int**、または `int` である必要があります。*constant-expression* は負ではない整数値である必要があります。 値がゼロの場合、宣言には `declarator` がありません。 ビット フィールド、ビット フィールドへのポインター、およびビット フィールドを返す関数の配列は使用できません。 省略可能な `declarator` はビット フィールドの名前を指定します。 ビット フィールドは構造体の一部としてしか宣言できません。 アドレス演算子 ( **&** ) は、ビット フィールド コンポーネントに適用できません。
+*constant-expression* は、フィールドの幅 (ビット単位) を指定します。 `declarator` の *type-specifier* は、 **`unsigned int`** 、 **`signed int`** 、または **`int`** である必要があります。*constant-expression* は負でない整数値である必要があります。 値がゼロの場合、宣言には `declarator` がありません。 ビット フィールド、ビット フィールドへのポインター、およびビット フィールドを返す関数の配列は使用できません。 省略可能な `declarator` はビット フィールドの名前を指定します。 ビット フィールドは構造体の一部としてしか宣言できません。 アドレス演算子 ( **&** ) は、ビット フィールド コンポーネントに適用できません。
 
-名前のないビット フィールドは参照できません。実行時の内容は予測できません。 これらはアラインメントのために "ダミー" フィールドとして使用できます。 幅が 0 として指定された、名前のないビット フィールドは、*struct-declaration-list* 内でそれに続くメンバーのストレージが、`int` 境界で開始されることを保証します。
+名前のないビット フィールドは参照できません。実行時の内容は予測できません。 これらはアラインメントのために "ダミー" フィールドとして使用できます。 幅が 0 として指定された、名前のないビット フィールドにより、*struct-declaration-list* 内でそれに続くメンバーのストレージが、 **`int`** 境界で開始されることが保証されます。
 
 ビット フィールドは、ビット パターンを含めるための十分な長さを持つ必要があります。 たとえば、次の 2 つのステートメントは正しくありません。
 
@@ -51,7 +51,7 @@ struct
 
 **Microsoft 固有の仕様**
 
-`int` として定義されたビット フィールドは、符号付きとして扱われます。 ANSI C 規格への Microsoft 拡張機能を使用すると、ビット フィールドに対して `char` および **long** 型 (**Signed** と `unsigned` の両方) が許されます。 **long**、**short**、または `char` (**Signed** または `unsigned`) 基本型の名前のないビット フィールドは、基本型に適した境界に強制的にアラインメントされます。
+**`int`** として定義されたビット フィールドは、 **`signed`** として扱われます。 ANSI C 標準への Microsoft 拡張機能を使用すると、ビット フィールドに対して **`char`** 型と **`long`** 型 ( **`signed`** 、 **`unsigned`** 両方) が許可されます。 基本型が **`long`** 、 **`short`** 、または **`char`** ( **`signed`** または **`unsigned`** ) である名前のないビット フィールドは、基本型に適した境界に強制的にアラインメントされます。
 
 ビット フィールドは、整数内で最下位ビットから最上位ビットへと割り当てられます。 次のコードでは、
 

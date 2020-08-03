@@ -15,12 +15,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229637"
 ---
 # <a name="indirection-and-address-of-operators"></a>間接演算子とアドレス演算子
 
@@ -58,7 +58,7 @@ double d;
 pa = &a[5];
 ```
 
-この例では、間接演算子 ( __&#42;__ ) は、`pa` に格納されているアドレスにある `int` 値にアクセスするために使用されます。 その値は整数変数 `x` に代入されます。
+この例では、間接参照演算子 ( __&#42;__ ) は、`pa` に格納されているアドレスにある **`int`** 値にアクセスするために使用されます。 その値は整数変数 `x` に代入されます。
 
 ```C
 x = *pa;

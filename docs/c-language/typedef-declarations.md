@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346107"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190066"
 ---
 # <a name="typedef-declarations"></a>typedef 宣言
 
@@ -30,18 +30,18 @@ typedef 宣言は、変数または関数宣言と同様に解釈されますが
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
@@ -49,7 +49,7 @@ typedef 宣言は、変数または関数宣言と同様に解釈されますが
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-typedef 宣言は型を作成しないことに注意してください。 既存の型のシノニム、またはその他の方法で指定できる型の名前を作成します。 Typedef 名を型指定子として使用するときは、特定の型指定子と組み合わせることはできますが、それ以外とはできません。 使用できる修飾子には **const** と `volatile` が含まれます。
+typedef 宣言は型を作成しないことに注意してください。 既存の型のシノニム、またはその他の方法で指定できる型の名前を作成します。 Typedef 名を型指定子として使用するときは、特定の型指定子と組み合わせることはできますが、それ以外とはできません。 使用できる修飾子には **`const`** と **`volatile`** があります。
 
 typedef 名は、通常の識別子を使用して名前空間を共有します (詳細については、「[名前空間](../c-language/name-spaces.md)」を参照してください)。 そのため、プログラムは同じ名前の typedef 名とローカル スコープ識別子を持つことができます。 次に例を示します。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226530"
 ---
 # <a name="bitwise-shift-operators"></a>ビット処理シフト演算子
 
@@ -27,7 +27,7 @@ ms.locfileid: "62326028"
 
 どちらのオペランドも整数値である必要があります。 これらの演算子は通常の算術変換を実行します。結果の型は、変換後の左オペランドの型です。
 
-左方向へシフトする場合、空いた右のビットは 0 に設定されます。 右方向へシフトする場合、空いた左ビットは、変換後に最初のオペランドの型に基づいて埋められます。 型が `unsigned` の場合は 0 に設定されます。 それ以外の場合は、符号ビットのコピーで埋められます。 オーバーフローのない左シフト演算子の例を次に示します。
+左方向へシフトする場合、空いた右のビットは 0 に設定されます。 右方向へシフトする場合、空いた左ビットは、変換後に最初のオペランドの型に基づいて埋められます。 型が **`unsigned`** の場合は 0 に設定されます。 それ以外の場合は、符号ビットのコピーで埋められます。 オーバーフローのない左シフト演算子の例を次に示します。
 
 ```C
 expr1 << expr2

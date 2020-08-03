@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 753a51fa8e2c87b77a54e5e93522e5f11585b610
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234248"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200076"
 ---
 # <a name="dll-import-and-export-functions"></a>DLL インポートおよびエクスポート関数
 
@@ -22,9 +22,9 @@ ms.locfileid: "62234248"
 
 このトピックの最も完全な最新情報は「[dllexport、dllimport](../cpp/dllexport-dllimport.md)」で確認できます。
 
-**dllimport** および `dllexport` ストレージ クラス修飾子は C 言語への Microsoft 固有の拡張です。 これらの修飾子は、クライアント (実行可能ファイルまたは別の DLL) に DLL のインターフェイスを明示的に定義します。 関数を `dllexport` として宣言すると、モジュール定義 (.DEF) ファイルが不要になります。 また、データとオブジェクトに対して **dllimport** および `dllexport` 修飾子を使用することもできます。
+**`dllimport`** および `dllexport` ストレージクラス修飾子は C 言語への Microsoft 固有の拡張です。 これらの修飾子は、クライアント (実行可能ファイルまたは別の DLL) に DLL のインターフェイスを明示的に定義します。 関数を `dllexport` として宣言すると、モジュール定義 (.DEF) ファイルが不要になります。 また、データとオブジェクトに対して修飾子 **`dllimport`** と `dllexport` を使用することもできます。
 
-**dllimport** および `dllexport` ストレージ クラス修飾子は、この例に示すように拡張属性構文のキーワード、`__declspec` と共に使用する必要があります。
+**`dllimport`** および `dllexport` ストレージクラス修飾子は、この例に示すように拡張属性構文のキーワード、 **`__declspec`** と共に使用する必要があります。
 
 ```
 #define DllImport   __declspec( dllimport )

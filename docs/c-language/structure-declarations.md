@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157805"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217052"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 
@@ -26,8 +26,8 @@ ms.locfileid: "62157805"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -53,7 +53,7 @@ ms.locfileid: "62157805"
 
 *struct-declaration-list* は構造体メンバーの型と名前を指定します。 *struct-declaration-list* 引数は、1 つまたは複数の変数またはビット フィールドの宣言を含みます。
 
-*struct-declaration-list* で宣言された各変数は構造体型のメンバーとして定義されます。 *struct-declaration-list* 内での変数宣言は、このセクションで説明されている他の変数宣言と同じ形式ですが、ストレージ クラスの指定子または初期化子を含むことはできません。 構造体メンバーは、`void`、不完全な型、または関数型を除く任意の変数型を持つことができます。
+*struct-declaration-list* で宣言された各変数は構造体型のメンバーとして定義されます。 *struct-declaration-list* 内での変数宣言は、このセクションで説明されている他の変数宣言と同じ形式ですが、ストレージ クラスの指定子または初期化子を含むことはできません。 構造体メンバーは、 **`void`** 、不完全な型、または関数型を除く任意の変数型を持つことができます。
 
 メンバーを、そのメンバーを含む構造体の型を持つように宣言することはできません。 ただし、構造体型にタグがある場合は、メンバーを、そのメンバーを含む構造体型へのポインターとして宣言できます。 これにより、構造体のリンク リストを作成できます。
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` 構造体は、3 つのメンバー、`name`、`id`、`class` を持ちます。 `name` メンバーは 20 要素の配列で、`id` と `class` は、それぞれ `int` 型と **long** 型を持つ単純なメンバーです。 識別子 `employee` は構造体識別子です。
+`employee` 構造体は、3 つのメンバー、`name`、`id`、`class` を持ちます。 `name` メンバーは 20 要素の配列で、`id` と `class` は、それぞれ **`int`** 型と **`long`** 型を持つ単純なメンバーです。 識別子 `employee` は構造体識別子です。
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-`complex` 構造体は、**float** 型の 2 つのメンバー、`x` および `y` を持ちます。 この構造体型にはタグがないため、無名または匿名になります。
+`complex` 構造体は、 **`float`** 型の 2 つのメンバー、`x` および `y` を持ちます。 この構造体型にはタグがないため、無名または匿名になります。
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-この構造体の最初の 2 つのメンバーは `char` 変数と **float** 値へのポインターです。 3 番目のメンバー `next` は、定義されている構造体型へのポインターとして宣言されています (`sample`)。
+この構造体の最初の 2 つのメンバーは **`char`** 変数と **`float`** 値へのポインターです。 3 番目のメンバー `next` は、定義されている構造体型へのポインターとして宣言されています (`sample`)。
 
 無名構造体は、名前が付いたタグが不要な場合に便利です。 1 つの宣言ですべての構造体インスタンスが定義される場合は、これに該当します。 次に例を示します。
 
@@ -149,9 +149,9 @@ struct somestruct
 
 コンパイラは、構造体の最後のメンバーとして可変長配列またはサイズが 0 の配列を許可します。 これは、使用されるさまざまな状況によって定数配列のサイズが異なるときに便利な場合があります。 このような構造体の宣言は次のようになります。
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
+**`struct`** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
-可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に `sizeof` 演算子を適用すると、可変長配列のサイズには 0 が想定されます。
+可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に **`sizeof`** 演算子を適用すると、可変長配列のサイズには 0 が想定されます。
 
 構造体宣言は、別の構造体または共用体のメンバーである場合は、宣言子なしで指定できます。 フィールド名は、外側を囲む構造に昇格されます。 たとえば、無名の構造体では次のようになります。
 

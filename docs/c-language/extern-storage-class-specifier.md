@@ -8,16 +8,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217104"
 ---
 # <a name="extern-storage-class-specifier"></a>extern ストレージ クラス指定子
 
-ストレージ クラス指定子 **extern** を使用して宣言された変数は、別のソース ファイルで定義されている同じ名前の変数への参照となります。 これは、外部レベル変数の定義を可視化するために使用されます。 **extern** として宣言された変数自体に記憶域は割り当てられません。これは単なる名前です。
+ストレージクラス指定子 **`extern`** を使用して宣言された変数は、別のソース ファイルで定義されている同じ名前の変数への参照となります。 これは、外部レベル変数の定義を可視化するために使用されます。 **`extern`** として宣言された変数自体に記憶域は割り当てられません。これは単なる名前です。
 
 ## <a name="example"></a>例
 
@@ -59,9 +59,9 @@ void func(void)
 }
 ```
 
-この例では、変数 `i` は Source1.c 内で、初期値 1 として定義されます。 Source2.c 内での **extern** 宣言は、そのファイル内で 'i' を可視化します。
+この例では、変数 `i` は Source1.c 内で、初期値 1 として定義されます。 Source2.c 内での **`extern`** 宣言は、そのファイル内で 'i' を可視化します。
 
-`func` 関数では、**static** ポインター変数 `external_i` を初期化するために、グローバル変数 `i` のアドレスが使用されます。 グローバル変数の有効期間が **static** である、つまりプログラム実行中にアドレスが変わることがないので、これは機能します。 次に、変数 `i` は、`func` のスコープ内で、初期値 16 のローカル変数として定義されます。 この定義は、外部レベルの `i` の値には影響しません。この値は、ローカル変数用にその名前を使用することで隠されています。 ここでグローバルな `i` の値にアクセスするには、`external_i` ポインターを使用するしかありません。
+`func` 関数では、 **`static`** ポインター変数 `external_i` を初期化するために、グローバル変数 `i` のアドレスが使用されます。 グローバル変数の有効期間が **`static`** である、つまりプログラム実行中にアドレスが変わることがないので、これは機能します。 次に、変数 `i` は、`func` のスコープ内で、初期値 16 のローカル変数として定義されます。 この定義は、外部レベルの `i` の値には影響しません。この値は、ローカル変数用にその名前を使用することで隠されています。 ここでグローバルな `i` の値にアクセスするには、`external_i` ポインターを使用するしかありません。
 
 ## <a name="see-also"></a>関連項目
 

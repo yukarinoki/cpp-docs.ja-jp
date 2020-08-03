@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343418"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227817"
 ---
 # <a name="null-statement-c"></a>Null ステートメント (C)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64343418"
 
 ## <a name="remarks"></a>Remarks
 
-**do**、**for**、**if**、`while` などのステートメントでは、ステートメント本体に実行可能なステートメントを記述する必要があります。 null ステートメントは、実質的なステートメント本体が不要な場合にこの構文の要件を満たします。
+**`do`** 、 **`for`** 、 **`if`** 、 **`while`** などのステートメントでは、ステートメント本体に実行可能なステートメントを記述する必要があります。 null ステートメントは、実質的なステートメント本体が不要な場合にこの構文の要件を満たします。
 
 null ステートメントは、他の C ステートメントと同様、前にラベルを付けることができます。 ステートメントではない項目 (複合ステートメントの右中かっこ (}) など) にラベルを付けるには、null ステートメントにラベルを付け、それを項目の直前に挿入して同じ効果を得ることができます。
 
@@ -35,7 +35,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-この例では、**for** ステートメントのループ式 `line[i++] = 0` によって、`line` の最初の 10 要素を 0 に初期化します。 それ以上のステートメントが不要であるため、ステートメント本体には null ステートメントを使用します。
+この例では、 **`for`** ステートメントのループ式 `line[i++] = 0` によって、`line` の最初の 10 要素を 0 に初期化します。 それ以上のステートメントが不要であるため、ステートメント本体には null ステートメントを使用します。
 
 ## <a name="see-also"></a>関連項目
 

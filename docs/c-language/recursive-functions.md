@@ -7,18 +7,18 @@ helpviewer_keywords:
 - functions [C], calling recursively
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
-ms.openlocfilehash: 82f0c820ab75fda4bae83db78fa402d7a07cb7fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8979d386c6fc3415cd50159250db8488cb917cee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232134"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199517"
 ---
 # <a name="recursive-functions"></a>再帰関数
 
-C プログラムのどの関数も、再帰的に、つまり、その関数自体を呼び出すことができます。 再帰呼び出しの数は、スタックのサイズに制限されます。 スタック サイズを設定するリンカー オプションについては、[/STACK (スタック割り当て)](../build/reference/stack-stack-allocations.md)/(/STACK) リンカーオプションに関するページをご覧ください。 関数が呼び出されるたびに、以前の未完了の呼び出しの値が上書きされないように、新しいストレージがパラメーター、**auto** 変数、および **register** 変数に割り当てられます。 パラメーターは、作成元の関数のインスタンスにのみ直接アクセスできます。 前のパラメーターは、関数のその後のインスタンスに直接アクセスできません。
+C プログラムのどの関数も、再帰的に、つまり、その関数自体を呼び出すことができます。 再帰呼び出しの数は、スタックのサイズに制限されます。 スタック サイズを設定するリンカー オプションについては、「[`/STACK` (スタック割り当て)](../build/reference/stack-stack-allocations.md)」リンカー オプションを参照してください。 関数が呼び出されるたびに、以前の未完了の呼び出しの値が上書きされないように、新しいストレージがパラメーター、変数 **`auto`** および **`register`** 変数に割り当てられます。 パラメーターは、作成元の関数のインスタンスにのみ直接アクセスできます。 前のパラメーターは、関数のその後のインスタンスに直接アクセスできません。
 
-**"静的"** ストレージで宣言された変数は、再帰呼び出しごとに新しいストレージを必要としないことに注意してください。 このようなストレージは、プログラムの有効期間にわたって存続します。 このような変数への各参照は、同じストレージ領域にアクセスします。
+**`static`** ストレージで宣言された変数は、再帰呼び出しごとに新しいストレージを必要としないことに注意してください。 このようなストレージは、プログラムの有効期間にわたって存続します。 このような変数への各参照は、同じストレージ領域にアクセスします。
 
 ## <a name="example"></a>例
 

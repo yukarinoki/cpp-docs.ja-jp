@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 039b86eec024daf8e3473bba5d89f190507f3cfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2cc8062368b89e38b5f96b3134742123af24310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335455"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231482"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>タイム クリティカルなコードを高速化するためのヒント
 
@@ -107,7 +107,7 @@ CPU キャッシュ ヒットでは、プログラムで 10-20 クロック サ�
 
 Microsoft Foundation Classes (MFC) は、コードの作成を大幅に簡略化します。 タイム クリティカルなコードを作成する場合、一部のクラスに特有のオーバーヘッドについて理解する必要があります。 タイム クリティカルなコードが使用する MFC コードがパフォーマンス要件を満たしているかどうか確認します。 次は、知っておく必要のある MFC クラスと関数の一覧です。
 
-- `CString` MFC は C ランタイム ライブラリを呼び出して、[CString](../atl-mfc-shared/reference/cstringt-class.md) にメモリを動的に割り当てます。 一般に、`CString` の効率は、他の動的に割り当てられる文字列と同等です。 また他の動的に割り当てられた文字列と同様に、動的な割り当てとリリースのオーバーヘッドがあります。 多くの場合、スタックの単純な `char` 配列は同じ用途を速く行うことができます。 定数文字列を保存するのに `CString` は使用しません。 代わりに、`const char *` を使用してください。 `CString` オブジェクトで行う操作には何らかのオーバーヘッドがあります。 ランタイム ライブラリの[文字列機能](../c-runtime-library/string-manipulation-crt.md)を使用するほうが速い可能性があります。
+- `CString` MFC は C ランタイム ライブラリを呼び出して、[CString](../atl-mfc-shared/reference/cstringt-class.md) にメモリを動的に割り当てます。 一般に、`CString` の効率は、他の動的に割り当てられる文字列と同等です。 また他の動的に割り当てられた文字列と同様に、動的な割り当てとリリースのオーバーヘッドがあります。 多くの場合、スタック上のシンプルな **`char`** 配列を使用して、同じ処理をより高速に実行できます。 定数文字列を保存するのに `CString` は使用しません。 代わりに、`const char *` を使用してください。 `CString` オブジェクトで行う操作には何らかのオーバーヘッドがあります。 ランタイム ライブラリの[文字列機能](../c-runtime-library/string-manipulation-crt.md)を使用するほうが速い可能性があります。
 
 - `CArray` [CArray](../mfc/reference/carray-class.md) には通常の配列にはない柔軟性がありますが、使用するプログラムでは必要ない可能性があります。 配列に特定の制限があることを知っている場合、代わりにグローバル固定配列を使用できます。 `CArray` を使用する場合、`CArray::SetSize` を使ってそのサイズを設定し、要素の数を指定します。再割り当てが必要なときにはこれを利用して拡張します。 それ以外の場合、要素を追加すると配列に対して頻繁に再割り当てとコピーが行われるため、非効率的となり、メモリが断片化されます。 また、配列に項目を挿入すると、`CArray` は続く項目をメモリに移動するため、配列を増やす必要が生じる場合があります。 これらの操作によって、キャッシュ ミスやページ フォールトが生じることがあります。 MFC が使用するコードを見直すと、自分のシナリオに応じてより具体的に記述することで、パフォーマンスを向上できる可能性があります。 `CArray` はテンプレートであるため、たとえば特定の型に応じて `CArray` 特殊化することもできます。
 

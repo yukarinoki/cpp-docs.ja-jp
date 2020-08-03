@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227934"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>可変個の引数を使用した呼び出し
 
@@ -24,7 +24,7 @@ ms.locfileid: "82032110"
 
 可変個の引数で関数を呼び出すには、単に関数の呼び出しに任意の数の引数を指定します。 例は、C ランタイム ライブラリの `printf` 関数です。 関数呼び出しでは、パラメーター リストまたは引数の型のリストで宣言された型の名前ごとに、1 つの引数を含める必要があります。
 
-関数呼び出しで指定されたすべての引数は、`__fastcall` 呼び出し規約を指定しない限り、スタックに配置されます。 関数のために宣言されたパラメーターの数により、いくつの引数がタスクから取得され、パラメーターに代入されるかが決定します。 スタックからの追加の引数の取得と、存在する引数の数の判断は、自分で行う必要があります。 STDARG.H ファイルには、可変数の引数を受け取る関数の引数にアクセスするための ANSI 形式マクロが含まれています。 また、VARARGS.H の XENIX- スタイルのマクロは引き続きサポートされます。
+関数呼び出しで指定したすべての引数は、 **`__fastcall`** 呼び出し規則を指定しない限り、スタックに配置されます。 関数のために宣言されたパラメーターの数により、いくつの引数がタスクから取得され、パラメーターに代入されるかが決定します。 スタックからの追加の引数の取得と、存在する引数の数の判断は、自分で行う必要があります。 STDARG.H ファイルには、可変数の引数を受け取る関数の引数にアクセスするための ANSI 形式マクロが含まれています。 また、VARARGS.H の XENIX- スタイルのマクロは引き続きサポートされます。
 
 このサンプル宣言は、可変個の引数を受け取る関数用です。
 

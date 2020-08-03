@@ -6,20 +6,20 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f121d978962fe7fc03aa453fb0a16650aa2727
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220874"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport に関する規則と制限
 
 **Microsoft 固有の仕様**
 
-- **dllimport** 属性または `dllexport` 属性を指定しないで関数を宣言した場合、その関数は DLL インターフェイスの一部とは見なされません。 したがって、関数の定義は、該当のモジュール内か、同じプログラムの別のモジュール内に存在している必要があります。 関数を DLL インターフェイスに含める場合は、その関数の定義を他のモジュールで `dllexport` として宣言する必要があります。 それ以外の場合、リンカー エラーがクライアントのビルド時に生成されます。
+- **`dllimport`** 属性または `dllexport` 属性を指定しないで関数を宣言した場合、その関数は DLL インターフェイスの一部とは見なされません。 したがって、関数の定義は、該当のモジュール内か、同じプログラムの別のモジュール内に存在している必要があります。 関数を DLL インターフェイスに含める場合は、その関数の定義を他のモジュールで `dllexport` として宣言する必要があります。 それ以外の場合、リンカー エラーがクライアントのビルド時に生成されます。
 
-- プログラムの 1 つのモジュールに、同じ関数の **dllimport** 宣言と `dllexport` 宣言が含まれる場合は、`dllexport` 属性が **dllimport** 属性よりも優先されます。 ただし、コンパイラの警告が生成されます。 次に例を示します。
+- プログラムの 1 つのモジュールに、同じ関数の **`dllimport`** 宣言と `dllexport` 宣言が含まれる場合は、`dllexport` 属性が **`dllimport`** 属性より優先されます。 ただし、コンパイラの警告が生成されます。 次に例を示します。
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -31,7 +31,7 @@ ms.locfileid: "62158428"
 
     ```
 
-- **dllimport** 属性で宣言されたデータ オブジェクトのアドレスで静的なデータ ポインターを初期化することはできません。 たとえば、次のコードはエラーになります。
+- **`dllimport`** 属性で宣言されたデータ オブジェクトのアドレスを使用して、静的なデータ ポインターを初期化することはできません。 たとえば、次のコードはエラーになります。
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -50,7 +50,7 @@ ms.locfileid: "62158428"
 
     ```
 
-- **dllimport** と宣言された関数のアドレスで静的関数ポインターを初期化すると、ポインターは、関数のアドレスではなく、DLL のインポート サンク (制御を関数に渡すコード スタブ) のアドレスに設定されます。 この代入はエラー メッセージを生成しません。
+- **`dllimport`** と宣言された関数のアドレスで静的関数ポインターを初期化すると、ポインターは、関数のアドレスではなく、DLL のインポート サンク (制御を関数に渡すコード スタブ) のアドレスに設定されます。 この代入はエラー メッセージを生成しません。
 
     ```
     #define DllImport   __declspec( dllimport )

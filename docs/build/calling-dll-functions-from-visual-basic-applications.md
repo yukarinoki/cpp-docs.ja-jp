@@ -10,20 +10,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d792dac45d69a0857bda551d1f3c03fc3d03d1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229884"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 
 Visual Basic アプリケーション (や Pascal、Fortran などの他の言語で書かれたアプリケーション) から C/C++ DLL 内の関数を呼び出すには、正しい呼び出し規則を使い、コンパイラによって名前装飾されずに、エクスポートされる必要があります。
 
-`__stdcall` は、関数の正しい呼び出し規則を作成します。つまり、呼び出された関数がスタックをクリアし、パラメーターは右から左へ渡されます。ただし、関数名は異なる方法で装飾されます。 このため、 **__declspec(dllexport)** が DLL 内のエクスポート関数で使用される場合は、装飾名がエクスポートされます。
+**`__stdcall`** は、関数の正しい呼び出し規則を作成します。つまり、呼び出された関数がスタックをクリアし、パラメーターは右から左へ渡されます。ただし、関数名は異なる方法で装飾されます。 このため、 **`__declspec(dllexport)`** が DLL 内のエクスポート関数で使用される場合は、装飾名がエクスポートされます。
 
-`__stdcall` で装飾された名前には、シンボル名の前にアンダースコア ( **\_** ) が付けられ、シンボルの後にはアット マーク ( **\@** ) が付けられ、その後に引数リストのバイト数 (必要なスタック空間) が付けられます。 結果として、宣言時の関数は次のようになります。
+**`__stdcall`** で装飾された名前には、シンボル名の前にアンダースコア ( **\_** ) が付けられ、シンボルの後にはアット マーク ( **\@** ) が付けられ、その後に引数リストのバイト数 (必要なスタック空間) が付けられます。 結果として、宣言時の関数は次のようになります。
 
 ```C
 int __stdcall func (int a, double b)
@@ -31,15 +31,15 @@ int __stdcall func (int a, double b)
 
 は、出力の `_func@12` として修飾されます。
 
-C の呼び出し規則 (`__cdecl`) による装飾では、名前は `_func` となります。
+C の呼び出し規則 ( **`__cdecl`** ) による装飾では、名前は `_func` となります。
 
-装飾名を取得するには、[/MAP](reference/map-generate-mapfile.md) を使用します。 **__declspec(dllexport)** を使うと、以下の処理が行われます。
+装飾名を取得するには、[/MAP](reference/map-generate-mapfile.md) を使用します。 **`__declspec(dllexport)`** を使用すると、次の処理が行われます。
 
-- 関数が C の呼び出し規則 (`__cdecl`) を使用してエクスポートされる場合、先頭のアンダースコア ( **\_** ) は名前のエクスポート時に除去されます。
+- 関数が C の呼び出し規則 ( **`__cdecl`** ) を使用してエクスポートされる場合、先頭のアンダースコア ( **\_** ) は名前のエクスポート時に除去されます。
 
-- エクスポートされる関数が C の呼び出し規則を使わない場合 (`__stdcall` など) は、装飾名がエクスポートされます。
+- エクスポートされる関数が C の呼び出し規則を使わない場合 ( **`__stdcall`** など) は、装飾名がエクスポートされます。
 
-スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
+スタックがクリアされた場所をオーバーライドする方法はないので、 **`__stdcall`** を使う必要があります。 **`__stdcall`** を使って装飾を外すには、.def ファイルの EXPORTS セクションのエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
 
 ```C
 int  __stdcall MyFunc (int a, double b);

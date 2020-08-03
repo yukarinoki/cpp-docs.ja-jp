@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228025"
 ---
 # <a name="c-floating-point-constants"></a>C 浮動小数点定数
 
@@ -56,16 +56,16 @@ ms.locfileid: "62325680"
 25E-4     /* =  0.0025 */
 ```
 
-浮動小数点定数は、負符号 ( **-** ) が前にない限り、正の値です。 この場合、負符号は単項算術否定演算子として扱われます。 浮動小数点定数には、`float`、`double`、または `long double` 型があります。
+浮動小数点定数は、負符号 ( **-** ) が前にない限り、正の値です。 この場合、負符号は単項算術否定演算子として扱われます。 浮動小数点定数には、 **`float`** 、 **`double`** 、または **`long double`** 型があります。
 
-**f**、**F**、**l**、または **L** のサフィックスのない浮動小数点定数は、`double` 型を持ちます。 文字 **f** または **F** がサフィックスの場合、定数の型は `float` になります。 末尾に文字 **l** また **L** が付いている場合、`long double` 型になります。 次に例を示します。
+**f**、**F**、**l**、または **L** のサフィックスのない浮動小数点定数の型は **`double`** になります。 文字 **f** または **F** がサフィックスの場合、定数の型は **`float`** になります。 末尾に文字 **l** また **L** が付いている場合は、 **`long double`** 型になります。 次に例を示します。
 
 ```C
 10.0L  /* Has type long double  */
 10.0F  /* Has type float        */
 ```
 
-Microsoft C コンパイラは、`double` 型と同じように内部的に `long double` を表すことに注意してください。 `double`、`float`、および `long double` 型については、「[基本型の格納](../c-language/storage-of-basic-types.md)」を参照してください。
+Microsoft C コンパイラでは、 **`long double`** が内部的に **`double`** 型と同じように表されることに注意してください。 **`double`** 、 **`float`** 、および **`long double`** 型については、「[基本型の格納](../c-language/storage-of-basic-types.md)」を参照してください。
 
 次の例に示すように、浮動小数点定数の整数の部分を省略できます。 数値 .75 は、次のようなさまざまな方法で表現されます。
 

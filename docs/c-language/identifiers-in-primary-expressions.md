@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-ms.openlocfilehash: 053720bcdf635a7e09363712259b558d93a2972c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6ad5a47230c6ba4bb2c0d636e50779b65483875
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229663"
 ---
 # <a name="identifiers-in-primary-expressions"></a>一次式の識別子
 
-識別子は、整数、**浮動小数点**、`enum`、`struct`、**共用体**、配列、ポインター、または関数型を持つことができます。 識別子は、オブジェクトの指定として宣言された場合 (その場合は左辺値)、または関数として宣言された場合 (その場合は関数指定子) の一次式です。 左辺値の定義については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
+識別子は、整数、 **`float`** 、 **`enum`** 、 **`struct`** 、 **`union`** 、配列、ポインター、または関数型を持つことができます。 識別子は、オブジェクトの指定として宣言された場合 (その場合は左辺値)、または関数として宣言された場合 (その場合は関数指定子) の一次式です。 左辺値の定義については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
 
 配列識別子によって表されるポインター値は変数ではないので、配列識別子は、代入演算の左オペランドを形成することができず、したがって変更可能な左辺値ではありません。
 

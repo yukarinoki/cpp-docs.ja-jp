@@ -1,6 +1,6 @@
 ---
-title: マッチイベント
-description: C++ ビルド インサイト SDK マッチイベント関数リファレンス。
+title: MatchEvent
+description: C++ Build Insights SDK MatchEvent 関数リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224111"
 ---
-# <a name="matchevent"></a>マッチイベント
+# <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`MatchEvent`関数は、イベントの種類のリストに対してイベントを照合するために使用されます。 イベントがリスト内の型と一致する場合は、ハンドラーに転送され、さらに処理されます。
+`MatchEvent` 関数は、イベントをイベントの型のリストと照合するために使用されます。 イベントがリスト内の型と一致する場合は、後続の処理のためにハンドラーに転送されます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-一致させる最初のイベントの種類。
+*TEvent*\
+照合する最初のイベントの型。
 
-*Tイベント*\
-一致させる残りのイベントタイプ。
+*TEvents*\
+照合する残りのイベントの型。
 
-*呼び出し可能*\
-をサポート`operator()`する型。 この演算子に渡される引数の詳細については、*呼び出し可能パラメーター*の説明を参照してください。
+*TCallable*\
+`operator()` をサポートする型。 この演算子に渡される引数の詳細については、*callable* パラメーターの説明を参照してください。
 
-*Tエクストラアルグ*\
-に渡された追加の引数の`MatchEvent`型。
+*TExtraArgs*\
+`MatchEvent` に渡された追加の引数の型。
 
-*イベント*\
-*TEvent*および*TEvents*で記述されているイベントの種類と照合するイベント。
+*event*\
+*TEvent* と *TEvents* によって記述されるイベントの型と照合するイベント。
 
-*呼び出し*\
-`MatchEvent`呼び出しは、イベントを*TEvent*および*TEvents*で記述されたイベントの種類と正常に一致した後に*呼び出し可能*です。 *呼び出し可能*に渡される最初の引数は、一致したイベントタイプの r 値です。 *extraArgs*パラメータ パックは、*呼び出し可能*の残りのパラメータで完全に転送されます。  
+*callable*\
+`MatchEvent` では、*TEvent* および *TEvents* によって記述されるイベントの型のいずれかとイベントが正常に照合された後、*callable* が呼び出されます。 *callable* に渡される最初の引数は、一致したイベントの型の右辺値です。 *extraArgs* パラメーター パックは、*callable* の残りのパラメーターで完全に転送されます。  
 
-*エクストラ引数*\
-一致したイベントの種類と共に*呼び出し可能*に完全に転送される引数。
+*extraArgs*\
+一致したイベントの型と共に *callable* に完全に転送される引数。
 
 ### <a name="return-value"></a>戻り値
 
-一致が成功した場合は**true、** そうでない場合は**false**の**ブール**値。
+正常に一致した場合は **`true`** であり、それ以外の場合は **`false`** である **`bool`** 値。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-*TEvent*パラメータおよび*TEvents*パラメータに使用するイベントタイプは *、キャプチャ クラス*のリストから選択されます。 イベントの一覧と、イベントの照合に使用できるキャプチャ クラスについては、[イベント テーブル](../event-table.md)を参照してください。
+*TEvent* および *TEvents* パラメーターに使用するイベントの型は、"*キャプチャ クラス*" のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="example"></a>例
 

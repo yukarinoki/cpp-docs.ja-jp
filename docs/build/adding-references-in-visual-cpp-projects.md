@@ -1,4 +1,4 @@
-﻿---
+---
 title: C++ プロジェクト内のライブラリとコンポーネントの使用
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229910"
 ---
 # <a name="consuming-libraries-and-components"></a>ライブラリとコンポーネントの使用
 
@@ -98,11 +98,11 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
 - **ローカル サテライト アセンブリをコピー (C++/CLI)**
 
-   ビルド時に、参照するアセンブリのサテライト アセンブリをターゲットの場所に自動的にコピーするかどうかを指定します。 **[ローカルにコピー]** が **true** の場合にのみ使用します。
+   ビルド時に、参照するアセンブリのサテライト アセンブリをターゲットの場所に自動的にコピーするかどうかを指定します。 **[ローカルにコピー]** が **`true`** の場合のみ使用します。
 
 - **参照アセンブリの出力**
 
-   このアセンブリがビルド処理で使用されることを指定します。 **true** の場合、ビルド時にコンパイラのコマンド ラインでアセンブリが使用されます。
+   このアセンブリがビルド処理で使用されることを指定します。 **`true`** の場合、ビルド時にコンパイラのコマンド ラインでアセンブリが使用されます。
 
 ### <a name="project-to-project-reference-properties"></a>プロジェクト間参照プロパティ
 
@@ -158,7 +158,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
 - **厳密な名前**
 
-   参照が厳密な名前を持つ場合は`true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
+   参照されるアセンブリが厳密な名前を持つ場合は **`true`** です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
 
 - **Version**
 

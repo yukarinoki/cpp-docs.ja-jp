@@ -4,12 +4,12 @@ description: Visual Studio を使用して CMake デバッガー設定を構成�
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224085"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -124,7 +124,7 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
 次のオプションを使用して、リモート デバッグ マシンからビルド マシン (CMakeSettings.json で定義) を分離します。
 
 - `remoteMachineName`:リモート デバッグ マシン。 ビルド マシンと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
-- `disableDeploy`:既定値は `false` です。 ビルドとデバッグの分離が無効になっているかどうかを示します。 このオプションが `false` の場合、2 つの異なるマシンでビルドとデバッグを実行できます。
+- `disableDeploy`:既定値は **`false`** です。 ビルドとデバッグの分離が無効になっているかどうかを示します。 このオプションが **`false`** の場合、2 つの異なるマシンでビルドとデバッグを実行できます。
 - `deployDirectory`:実行可能ファイルがコピーされる `remoteMachineName` 上のディレクトリへの完全な UNIX パス。
 - `deploy`:配置の詳細設定の配列。 配置プロセスをより細かく制御する場合にのみ、これらの設定を構成する必要があります。 既定では、リモート デバッグ マシンには、デバッグ プロセスに必要なファイルのみが配置されます。
   - `sourceMachine`:ファイルまたはディレクトリのコピー元のマシン。 **Ctrl + Space** キーを押して、接続マネージャーに格納されているすべてのリモート接続を一覧表示します。 WSL でネイティブにビルドする場合、このオプションは無視されます。
@@ -211,7 +211,7 @@ Visual Studio では、基になるデバッガーを直接操作するカスタ
 
 - `visualizerFile`:このプロセスをデバッグするときに使用する [.natvis ファイル](/visualstudio/debugger/create-custom-views-of-native-objects)。 このオプションは `gdb` 再フォーマットと互換性がありません。 このプロパティを設定する場合は `showDisplayString` も設定します。
 
-- `showDisplayString`:`visualizerFile` が指定されている場合に表示文字列を有効にするブール値。 このオプションを `true` に設定すると、デバッグ中にパフォーマンスが低下する可能性があります。
+- `showDisplayString`:`visualizerFile` が指定されている場合に表示文字列を有効にするブール値。 このオプションを **`true`** に設定すると、デバッグ中にパフォーマンスが低下する可能性があります。
 
 - `setupCommands`:基になるデバッガーを設定するために実行する 1 つ以上の `gdb` コマンド。
 

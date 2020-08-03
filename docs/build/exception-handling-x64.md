@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303198"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224046"
 ---
 # <a name="x64-exception-handling"></a>x64 での例外処理
 
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** は、この関数内の RIP の値です。 この値は、例外アドレスか、制御が確立元の関数から離れたアドレスです。 RIP は、制御がこの関数内の保護されたコンストラクト内にあるかどうかを判断するために使用されます。たとえば、`__try`/`__except` または `__try`/`__finally` の `__try` ブロックなどです。
+**ControlPc** は、この関数内の RIP の値です。 この値は、例外アドレスか、制御が確立元の関数から離れたアドレスです。 RIP は、制御がこの関数内の保護されたコンストラクト内にあるかどうかを判断するために使用されます。たとえば、`__try`/ **`__except`** または `__try`/ **`__finally`** の `__try` ブロックなどです。
 
 **ImageBase** は、この関数を含むモジュールのイメージ ベース (読み込みアドレス) であり、関数エントリで使用される 32 ビット オフセットと、相対アドレスを記録するアンワインド情報に追加されます。
 

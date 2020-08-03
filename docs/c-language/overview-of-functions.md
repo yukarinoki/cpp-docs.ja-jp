@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c9f24b049ee8e9a33557f3262cd6abcc624957
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217065"
 ---
 # <a name="overview-of-functions"></a>関数の概要
 
@@ -20,7 +20,7 @@ ms.locfileid: "62232287"
 
 コンパイラは、プロトタイプを使用して、後続の関数呼び出しの引数の型を関数のパラメーターと比較し、必要な場合はいつでも引数の型をパラメーターの型に変換します。
 
-関数呼び出しは、呼び出し元の関数から呼び出された関数に実行制御を渡します。 引数 (存在する場合) は、呼び出された関数に値渡しされます。 呼び出された関数内で `return` ステートメントを実行すると、呼び出し元の関数に制御を戻し、場合によっては値を返します。
+関数呼び出しは、呼び出し元の関数から呼び出された関数に実行制御を渡します。 引数 (存在する場合) は、呼び出された関数に値渡しされます。 呼び出された関数内で **`return`** ステートメントを実行すると、呼び出し元の関数に制御を戻し、場合によっては値を返します。
 
 ## <a name="see-also"></a>関連項目
 

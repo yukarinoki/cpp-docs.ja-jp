@@ -4,12 +4,12 @@ description: GitHub にアーカイブされている Visual Studio C++ サン�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: 0862f6b512f7278f878ade53b320ad5298bccf68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80215099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226764"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ のサンプル
 
@@ -246,7 +246,7 @@ Visual Studio の以前のバージョンにも、C++ のサンプル コード�
 | [ListHdr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | コモン コントロール MFC クラスである `CListCtrl` および `CHeaderCtrl` の使用方法を示します。 |
 | [MDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | ドキュメントとビューを使用しない MDI アプリケーションです。 |
 | [MDIDocVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | ドキュメントおよびビュー アーキテクチャを使用する MDI のサンプルの更新版です。 |
-| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | `CImage`、`__m64` データ型、およびデバイスに依存しないビットマップ (DIB: Device-Independent Bitmap) の使い方を示します。 |
+| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | `CImage`、 **`__m64`** データ型、およびデバイスに依存しないビットマップ (DIB: Device-Independent Bitmap) の使い方を示します。 |
 | [Modeless](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | MFC の `CDialog` オブジェクトをモードレス ダイアログ ボックスとして使用する例を示します。 |
 | [Multipad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | ユーザーが複数のテキスト ファイルを一度に開いて編集できる簡易テキスト エディターです。 |
 | [Npp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | メモ帳に似たインターフェイス (SDI) アプリケーションの実装方法を示します。 テキスト メッセージを編集し、Windows メッセージ API (MAPI) を使用して他のユーザーやシステムに送信できます。 |

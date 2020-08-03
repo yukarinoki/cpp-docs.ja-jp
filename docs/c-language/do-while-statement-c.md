@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218872"
 ---
 # <a name="do-while-statement-c"></a>do-while ステートメント (C)
 
@@ -19,7 +19,7 @@ ms.locfileid: "79438591"
 
 ## <a name="syntax"></a>構文
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp; **`do`**  *statement*  **while (**  *expression*  **) ;**
 
 *do-while* ステートメント内の *expression* は、ループの本体が実行された後で評価されます。 したがって、ループの本体は、常に少なくとも 1 回は実行されます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "79438591"
 
 1. 次に、*expression* が評価されます。 *expression* が false の場合、*do-while* ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
 
-*do-while* ステートメントは、**break**、**goto**、または **return** ステートメントがステートメントの本体で実行されたときにも終了できます。
+*do-while* ステートメントは、 **`break`** 、 **`goto`** 、または **`return`** ステートメントがステートメント本体で実行されたときにも終了できます。
 
 *do-while* ステートメントの例を次に示します。
 

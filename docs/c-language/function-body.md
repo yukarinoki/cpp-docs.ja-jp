@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229702"
 ---
 # <a name="function-body"></a>関数本体
 
@@ -28,9 +28,9 @@ ms.locfileid: "74857100"
 *compound-statement*: /\* 関数本体 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
-関数本体で宣言された変数 ("*ローカル変数*") は、他の指定がない限り、**auto** ストレージ クラスになります。 関数が呼び出されると、ローカル変数のストレージが作成され、ローカルの初期化が実行されます。 実行制御は、*compound-statement* の最初のステートメントに渡され、**return** ステートメントが実行されるか、関数本体の終端に到達するまで続行されます。 次に、関数が呼び出された位置に制御が戻ります。
+関数本体で宣言された変数 ("*ローカル変数*") は、他の指定がない限り、 **`auto`** ストレージ クラスになります。 関数が呼び出されると、ローカル変数のストレージが作成され、ローカルの初期化が実行されます。 実行制御は、*compound-statement* の最初のステートメントに渡され、 **`return`** ステートメントが実行されるか、関数本体の終端に到達するまで続行されます。 次に、関数が呼び出された位置に制御が戻ります。
 
-関数が値を返す場合は、式を含む **return** ステートメントが実行される必要があります。 関数の戻り値は、**return** ステートメントが実行されない場合や、**return** ステートメントに式が含まれない場合は、未定義となります。
+関数によって値が返される場合は、式を含む **`return`** ステートメントが実行される必要があります。 **`return`** ステートメントが実行されない場合、または **`return`** ステートメントに式が含まれない場合、関数の戻り値は未定義です。
 
 ## <a name="see-also"></a>関連項目
 

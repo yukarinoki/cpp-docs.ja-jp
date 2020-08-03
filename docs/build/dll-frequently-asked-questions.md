@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e12817e016376d5b76ec67e8bd10fbd3e85dbdda
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229845"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -29,7 +29,7 @@ DLL に関してよく寄せられる質問 (FAQ) を以下に取り上げます
 
 ## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a> MFC DLL から複数のスレッドを作成できますか。
 
-初期化中を除き、MFC DLL では、**TlsAlloc** などの Win32 スレッド ローカル ストレージ (TLS) 関数を使用してスレッド ローカル ストレージを割り当てる限り、複数のスレッドを安全に作成できます。 ただし、MFC DLL で **__declspec(thread)** を使用してスレッド ローカル ストレージを割り当てる場合、クライアント アプリケーションは暗黙的に DLL にリンクされている必要があります。 クライアント アプリケーションが明示的に DLL にリンクされている場合、**LoadLibrary** を呼び出しても DLL は正常に読み込まれません。 DLL のスレッド ローカル変数の詳細については、「[thread](../cpp/thread.md)」を参照してください。
+初期化中を除き、MFC DLL では、**TlsAlloc** などの Win32 スレッド ローカル ストレージ (TLS) 関数を使用してスレッド ローカル ストレージを割り当てる限り、複数のスレッドを安全に作成できます。 ただし、MFC DLL で **`__declspec(thread)`** を使用してスレッド ローカル ストレージを割り当てる場合、クライアント アプリケーションは暗黙的に DLL にリンクされている必要があります。 クライアント アプリケーションが明示的に DLL にリンクされている場合、**LoadLibrary** を呼び出しても DLL は正常に読み込まれません。 DLL のスレッド ローカル変数の詳細については、「[thread](../cpp/thread.md)」を参照してください。
 
 起動中に新しい MFC スレッドを作成する MFC DLL は、アプリケーションによって読み込まれると応答を停止します。 これには、次の内部で `AfxBeginThread` または `CWinThread::CreateThread` を呼び出してスレッドを作成する場合も含まれます。
 
@@ -55,7 +55,7 @@ DLL に関してよく寄せられる質問 (FAQ) を以下に取り上げます
 
 使用する DLL が MFC に静的にリンクされている標準 MFC DLL である場合、それを MFC に動的にリンクされている標準 MFC DLL に変更すると、ファイル サイズが小さくなります。
 
-DLL にエクスポートされた関数が多数ある場合は、.def ファイルを使用して ( **__declspec(dllexport)** を使用するのではなく) 関数をエクスポートし、エクスポートされた各関数に対して .def ファイルの [NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)を使用します。 NONAME 属性を指定すると、関数名ではなく序数値だけが DLL のエクスポート テーブルに格納され、ファイル サイズが小さくなります。
+DLL にエクスポートされた関数が多数ある場合は、.def ファイルを使用して ( **`__declspec(dllexport)`** を使用するのではなく) 関数をエクスポートし、エクスポートされた各関数に対して .def ファイルの [NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)を使用します。 NONAME 属性を指定すると、関数名ではなく序数値だけが DLL のエクスポート テーブルに格納され、ファイル サイズが小さくなります。
 
 アプリケーションに暗黙的にリンクされる DLL は、アプリケーションの読み込み時に読み込まれます。 読み込み時のパフォーマンスを向上させるには、その DLL を複数の DLL に分割してみてください。 呼び出し元のアプリケーションが読み込みの直後に必要とするすべての関数を 1 つの DLL に配置し、呼び出し元のアプリケーションがその DLL に暗黙的にリンクするようにします。 呼び出し元のアプリケーションがすぐには必要としないその他の関数を別の DLL に配置し、アプリケーションがその DLL に明示的にリンクするようにします。 詳細については、[実行可能ファイルと DLL のリンク](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)に関する記事をご覧ください。
 

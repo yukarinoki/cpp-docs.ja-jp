@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217130"
 ---
 # <a name="conditional-expression-operator"></a>条件式演算子
 
@@ -37,13 +37,13 @@ C 言語では、三項演算子として条件式演算子 ( **? :** ) を使�
 
 - *expression* と *conditional-expression* が両方とも同じ構造体型、共用体型、またはポインター型の場合、演算結果はそれと同じ構造体型、共用体型、またはポインター型になります。
 
-- 両方のオペランドが `void` 型の場合、結果は `void` 型になります。
+- 両方のオペランドが **`void`** 型の場合、結果は **`void`** 型になります。
 
-- 一方のオペランドが任意の型のオブジェクトへのポインターであり、もう一方のオペランドが `void` へのポインターである場合、そのオブジェクトへのポインターが `void` へのポインターに変換され、結果は `void` へのポインターになります。
+- 一方のオペランドが任意の型のオブジェクトへのポインターであり、もう一方のオペランドが **`void`** へのポインターである場合、そのオブジェクトへのポインターが **`void`** へのポインターに変換され、結果は **`void`** へのポインターになります。
 
 - *expression* または *conditional-expression* のいずれかがポインターであり、もう一方のオペランドが値 0 の定数式である場合、結果はポインター型になります。
 
-ポインターの型を比較する際、ポインターが指している型の型修飾子 (**const** または `volatile`) は重要ではありません。ただし、結果の型は、条件式を構成する両方の要素の型修飾子を継承します。
+ポインターの型を比較する際、ポインターが指している型の型修飾子 ( **`const`** または **`volatile`** ) は重要ではありません。ただし、結果の型は、条件式を構成する両方の要素の型修飾子を継承します。
 
 ## <a name="examples"></a>使用例
 

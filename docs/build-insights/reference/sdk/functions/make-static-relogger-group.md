@@ -1,6 +1,6 @@
 ---
-title: リロガーグループを作成します。
-description: C++ ビルド インサイト SDK MakeStaticReloggerグループ関数リファレンス。
+title: MakeStaticReloggerGroup
+description: C++ Build Insights SDK MakeStaticReloggerGroup 関数リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 75b638537cb8e0cdeeb5476a3f5277e8e90d9baf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323913"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224163"
 ---
-# <a name="makestaticreloggergroup"></a>リロガーグループを作成します。
+# <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-関数`MakeStaticReloggerGroup`は[、Relog](relog.md)などの関数に渡すことができる静的なリロガー グループを作成するために使用されます。 リロガー グループのメンバーは、トレース内のすべてのイベントが処理されるまで、左から右に 1 つずつイベントを受け取ります。
+`MakeStaticReloggerGroup` 関数は、[Relog](relog.md) などの関数に渡すことができる静的リロガー グループを作成するために使用されます。 リロガー グループのメンバーは、トレース内のすべてのイベントが処理されるまで、左から右に 1 つずつイベントを受け取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -36,18 +36,18 @@ auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 
 ### <a name="parameters"></a>パラメーター
 
-*トレーロガープター*\
-このパラメーターは常に推定されます。
+*TReloggerPtrs*\
+このパラメーターは常に推測されます。
 
-*リロガー*\
-静的リロガー グループに含まれている[IRelogger](../other-types/irelogger-class.md)ポインターのパラメーター パック。 これらのポインターは、生、 `std::unique_ptr`、または`std::shared_ptr`、 です。 [IAnalyzer](../other-types/ianalyzer-class.md)ポインターは、継承`IRelogger`関係のためにポインターとも見なされます。
+*reloggers*\
+静的リロガー グループに含められた [`IRelogger`](../other-types/irelogger-class.md) ポインターのパラメーター パック。 これらのポインターには、生、`std::unique_ptr`、または `std::shared_ptr` を使用できます。 継承関係のため、[`IAnalyzer`](../other-types/ianalyzer-class.md) ポインターは `IRelogger` ポインターとも見なされます。
 
 ### <a name="return-value"></a>戻り値
 
-静的リロガー グループ。 **auto**キーワードを使用して、戻り値を取得します。
+静的リロガー グループ。 戻り値を取得するには、 **`auto`** キーワードを使用します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-動的リロガー グループとは異なり、静的リロガー グループのメンバーはコンパイル時に認識されている必要があります。 さらに、静的リロガー グループには、ポリモーフィックな動作を持たない[IRelogger](../other-types/irelogger-class.md)ポインターが含まれています。 静的リロガー グループを使用して Windows (ETW) トレースのイベント トレースを分析`IRelogger`する場合、インターフェイスへの呼び出しは常にリロガー グループ メンバーによって直接指すオブジェクトに解決されます。 この柔軟性の低下には、イベント処理時間が短縮される可能性があります。 リロガー グループのメンバーがコンパイル時に認識できない場合、またはポインターに多態的な動作が`IRelogger`必要な場合は、動的リロガー グループを使用することを検討してください。 代わりに[MakeDynamicReloggerGroup](make-dynamic-relogger-group.md)を呼び出して動的リロガー グループを使用できます。
+動的リロガー グループとは異なり、静的リロガー グループのメンバーは、コンパイル時に既知である必要があります。 また、静的リロガー グループには、ポリモーフィックな動作を持たない [`IRelogger`](../other-types/irelogger-class.md) ポインターが含まれています。 静的リロガー グループを使用して Windows イベント トレーシング (ETW) のトレースを分析する場合、`IRelogger` インターフェイスへの呼び出しは、常に、リロガー グループのメンバーによって直接指し示されているオブジェクトに解決されます。 このように柔軟性が低いことで、イベント処理時間が短縮される可能性があります。 コンパイル時にリロガー グループのメンバーがわからない場合、または `IRelogger` ポインターに対してポリモーフィックな動作が必要な場合は、動的リロガー グループの使用を検討します。 代わりに [`MakeDynamicReloggerGroup`](make-dynamic-relogger-group.md) を呼び出すことによって、動的リロガー グループを使用できます。
 
 ::: moniker-end

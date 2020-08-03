@@ -1,6 +1,6 @@
 ---
-title: メイクアップスタティックアナライザグループ
-description: C++ ビルド インサイト SDK メイクスタティックアナライザグループ関数リファレンス。
+title: MakeStaticAnalyzerGroup
+description: C++ Build Insights SDK MakeStaticAnalyzerGroup 関数リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72f7f5d7a408436902394451a52dd66efe1d93f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 81c5654c78e086af1c33d0791768ceea52575c51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323942"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224176"
 ---
-# <a name="makestaticanalyzergroup"></a>メイクアップスタティックアナライザグループ
+# <a name="makestaticanalyzergroup"></a>MakeStaticAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`MakeStaticAnalyzerGroup`関数は、[分析](analyze.md)や[再ログ](relog.md)などの関数に渡すことができる静的アナライザーグループを作成するために使用されます。 アナライザー グループのメンバは、トレース内のすべてのイベントが分析されるまで、イベントを左から右に 1 つずつ受け取ります。
+`MakeStaticAnalyzerGroup` 関数は、[`Analyze`](analyze.md) や [`Relog`](relog.md) などの関数に渡すことができる静的アナライザー グループを作成するために使用されます。 アナライザー グループのメンバーは、トレース内のすべてのイベントが分析されるまで、左から右に 1 つずつイベントを受け取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -36,18 +36,18 @@ auto MakeStaticAnalyzerGroup(TAnalyzerPtrs... analyzers);
 
 ### <a name="parameters"></a>パラメーター
 
-*Tアナライザー*\
-このパラメーターは常に推定されます。
+*TAnalyzerPtrs*\
+このパラメーターは常に推測されます。
 
-*アナライザー*\
-静的アナライザー グループに含まれる[IAnalyzer](../other-types/ianalyzer-class.md)ポインターのパラメーター パック。 これらのポインターは、生、 `std::unique_ptr`、または`std::shared_ptr`、 です。
+*analyzers*\
+静的アナライザー グループに含められる [`IAnalyzer`](../other-types/ianalyzer-class.md) ポインターのパラメーター パック。 これらのポインターには、生、`std::unique_ptr`、または `std::shared_ptr` を使用できます。
 
 ### <a name="return-value"></a>戻り値
 
-静的アナライザー グループ。 **auto**キーワードを使用して、戻り値を取得します。
+静的アナライザー グループ。 戻り値を取得するには、 **`auto`** キーワードを使用します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-動的アナライザーグループとは異なり、静的アナライザーグループのメンバーはコンパイル時に認識されている必要があります。 さらに、静的アナライザー グループには、ポリモーフィックな動作を持たない[IAnalyzer](../other-types/ianalyzer-class.md)ポインターが含まれています。 静的アナライザー グループを使用して Windows イベント トレース (ETW) トレースを`IAnalyzer`分析する場合、インターフェイスへの呼び出しは常にアナライザー グループ メンバーによって直接ポイントされたオブジェクトに解決されます。 この柔軟性の低下には、イベント処理時間が短縮される可能性があります。 コンパイル時にアナライザー グループのメンバーが認識できない場合、または`IAnalyzer`ポインターに対してポリモーフィックな動作が必要な場合は、動的アナライザー グループの使用を検討してください。 動的アナライザー グループを使用するには、代わりに[メイクダイナミック アナライザグループを](make-static-analyzer-group.md)呼び出します。
+動的アナライザー グループとは異なり、静的アナライザー グループのメンバーは、コンパイル時に既知である必要があります。 また、静的アナライザー グループには、ポリモーフィックな動作を持たない [`IAnalyzer`](../other-types/ianalyzer-class.md) ポインターが含まれています。 静的アナライザー グループを使用して Windows イベント トレーシング (ETW) のトレースを分析する場合、`IAnalyzer` インターフェイスへの呼び出しは、常に、アナライザー グループのメンバーによって直接指し示されているオブジェクトに解決されます。 このように柔軟性が低いことで、イベント処理時間が短縮される可能性があります。 コンパイル時にアナライザー グループのメンバーがわからない場合、または `IAnalyzer` ポインターに対してポリモーフィックな動作が必要な場合は、動的アナライザー グループの使用を検討します。 動的アナライザー グループを使用するには、代わりに [`MakeDynamicAnalyzerGroup`](make-static-analyzer-group.md) を呼び出します。
 
 ::: moniker-end

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42547828e78566982053d22e8288fe1ccbe6e26b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229533"
 ---
 # <a name="simple-variable-declarations"></a>単純変数の宣言
 
@@ -31,7 +31,7 @@ ms.locfileid: "62158237"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
-演算型、構造体型、共用体型、列挙型、void 型、および `typedef` の名前によって表される型については、型指定子がすべての型情報を提供するため、単純な宣言子を宣言で使用できます。 ポインター型、配列型、および関数型では、より複雑な宣言子が必要です。
+演算型、構造体型、共用体型、列挙型、void 型、および **`typedef`** の名前によって表される型については、型指定子がすべての型情報を提供するため、単純な宣言子を宣言で使用できます。 ポインター型、配列型、および関数型では、より複雑な宣言子が必要です。
 
 同じ宣言で複数の変数を指定するために、コンマ ( **,** ) で区切られた識別子のリストを使用できます。 宣言で定義されているすべての変数に、同じ基本型があります。 次に例を示します。
 
@@ -40,7 +40,7 @@ int x, y;        /* Declares two simple variables of type int */
 int const z = 1; /* Declares a constant value of type int */
 ```
 
-変数 `x` および `y` は、特定の実装の `int` 型で定義されるセットに任意の値を保持できます。 簡単なオブジェクト `z` は値 1 に初期化され、変更できません。
+変数 `x` および `y` は、特定の実装の **`int`** 型で定義されるセットに任意の値を保持できます。 簡単なオブジェクト `z` は値 1 に初期化され、変更できません。
 
 `z` の宣言の対象が初期化されていない静的変数であるか、宣言がファイル スコープで行われた場合、初期値 0 を受け取り、その値は変更できません。
 
@@ -49,7 +49,7 @@ unsigned long reply, flag; /* Declares two variables
                               named reply and flag     */
 ```
 
-この例では、両方の変数 (`reply` と `flag`) は `unsigned long` 型を持ち、符号なし整数値を保持します。
+この例では、両方の変数 (`reply` と `flag`) は **`unsigned long`** 型を持ち、符号なし整数値を保持します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630464"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213945"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -397,7 +397,7 @@ __VS 2019 16.6__ は、Visual Studio 2019 バージョン 16.6 でサポート�
 
 ### <a name="notes"></a>メモ
 
-<a name="note_A"></a> __A__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) モードには、動的例外指定は実装されておらず、`throw()` は引き続き `__declspec(nothrow)` のシノニムとして扱われています。 C++ 17 では、1 つの形跡を除き、動的例外指定が P0003R5 でほとんど削除されています。`throw()` は廃止され、`noexcept` のシノニムとして動作する必要があります。 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) モードの MSVC は、`throw()` に `noexcept` と同じ動作 (つまり、終了を使った強制) を与えることによって、標準に準拠するようになりました。
+<a name="note_A"></a> __A__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) モードには、動的例外指定は実装されておらず、`throw()` は引き続き `__declspec(nothrow)` のシノニムとして扱われています。 C++ 17 では、1 つの形跡を除き、動的例外指定が P0003R5 でほとんど削除されています。`throw()` は廃止され、 **`noexcept`** のシノニムとして動作する必要があります。 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) モードの MSVC は、`throw()` に **`noexcept`** と同じ動作 (つまり、終了を使った強制) を与えることによって、標準に準拠するようになりました。
 
 コンパイラ オプション [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) を指定すると、以前の `__declspec(nothrow)` の動作が要求されます。 `throw()` は、C++20 で削除される可能性があります。 標準および実装へ、これらの変更に対応するコードを移行するのを支援するために、[`/std:c++17`](../build/reference/std-specify-language-standard-version.md) と [`/permissive-`](../build/reference/permissive-standards-conformance.md) に、例外の指定の問題の新しいコンパイラ警告が追加されました。
 

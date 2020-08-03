@@ -9,22 +9,22 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 075962758773660085ae0b98b668c264524cc6aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dc6dc14efe2a7ccf46c41477ed4fd6d1956856
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224033"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 
-**__declspec(dllexport)** キーワードを使うと、データ、関数、クラス、クラスのメンバー関数を DLL からエクスポートできます。 **__declspec(dllexport)** は、オブジェクト ファイルにエクスポート ディレクティブを追加するので、.def ファイルは不要です。
+**`__declspec(dllexport)`** キーワードを使用すると、データ、関数、クラス、クラスのメンバー関数を DLL からエクスポートできます。 **`__declspec(dllexport)`** では、オブジェクト ファイルにエクスポート ディレクティブが追加されるので、.def ファイルを使用する必要はありません。
 
-この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 **__declspec(dllexport)** を使用する場合は、名前付け規約の変更に対応するためだけに、DLL とその従属する .exe ファイルを再コンパイルする必要があります。
+この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 **`__declspec(dllexport)`** を使用する場合は、名前付け規則の変更に対応するためだけに、DLL とその従属する .exe ファイルを再コンパイルする必要があります。
 
-序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただし、.def ファイルに加えて **__declspec(dllexport)** を使うと、ビルド エラーが発生しません。
+序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただし、.def ファイルに加えて **`__declspec(dllexport)`** を使用すると、ビルド エラーが発生しません。
 
-関数をエクスポートするには、呼び出し規約キーワードが指定されている場合、 **__declspec(dllexport)** キーワードは呼び出し規約キーワードの左に記述します。 次に例を示します。
+関数をエクスポートするには、呼び出し規則キーワードが指定されている場合、 **`__declspec(dllexport)`** キーワードは呼び出し規則キーワードの左に記述します。 次に例を示します。
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -40,13 +40,13 @@ class __declspec(dllexport) CExampleExport : public CObject
 > [!NOTE]
 > `__declspec(dllexport)` は、`__clrcall` 呼び出し規則を伴う関数には適用できません。
 
-DLL のビルド時には通常、エクスポートする関数のプロトタイプやクラスを含むヘッダー ファイルを作成し、そのヘッダー ファイル内の宣言に **__declspec(dllexport)** を追加します。 コードを読みやすくするために、次のように **__declspec(dllexport)** 用のマクロを定義して、そのマクロをエクスポートする各シンボルに使います。
+DLL のビルド時には通常、エクスポートする関数のプロトタイプやクラスを含むヘッダー ファイルを作成し、そのヘッダー ファイル内の宣言に **`__declspec(dllexport)`** を追加します。 コードを読みやすくするために、次のように **`__declspec(dllexport)`** 用のマクロを定義して、そのマクロをエクスポートする各シンボルに使用します。
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec(dllexport)** は、関数名を DLL のエクスポート テーブルに格納します。 テーブル サイズの最適化方法については、「[名前ではなく序数値による DLL 関数のエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)」を参照してください。
+**`__declspec(dllexport)`** では、関数名は DLL のエクスポート テーブルに格納されます。 テーブル サイズの最適化方法については、「[名前ではなく序数値による DLL 関数のエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)」を参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 

@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446871"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226790"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -249,7 +249,7 @@ Visual Studio 2017 には、C++ 環境に対する多くの更新プログラム
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
-コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらの機能は、 **`/std:c++17`** オプションで使用できます。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements.md)に関するページをご覧ください。
+コンパイラでは C++17 の新機能の約 75% がサポートされています。その中には構造化バインド、 **`constexpr`** ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの **`noexcept`** の追加が含まれます。 これらの機能は、 **`/std:c++17`** オプションで使用できます。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements.md)に関するページをご覧ください。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
 
@@ -296,7 +296,7 @@ Visual C++ ランタイムの性能が継続的に上がります。生成され
 
 Microsoft C++ コンパイラは Intel の AVX-512 をサポートしています。 これには、AVX-512 の新しい機能を 128 ビットおよび 256 ビット ワイド レジスタに取り込むベクトル長命令が含まれています。
 
-[/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) オプションを利用すれば、全般的に C++17 モードを使用しながら、C++14 バージョンの `noexcept` に戻すことができます。 このオプションでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。 詳細については、「[動的例外指定の削除と noexcept](cpp-conformance-improvements.md#noexcept_removal)」を参照してください。
+[/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) オプションを使用すると、全般的に C++17 モードを使用しながら、C++14 バージョンの **`noexcept`** に戻すことができます。 このオプションでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。 詳細については、「[動的例外指定の削除と noexcept](cpp-conformance-improvements.md#noexcept_removal)」を参照してください。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
 
@@ -314,7 +314,7 @@ Microsoft C++ コンパイラは Intel の AVX-512 をサポートしていま�
 - 以前はコードが永続的にブロックされていた `std::promise` の移動代入演算子が修正されました。
 - `atomic<T*>` の `T*` への暗黙の変換でコンパイラのエラーが修正されました。
 - `pointer_traits<Ptr>` で `Ptr::rebind<U>` が適切に検出されるようになりました。
-- `const` の減算演算子に不足した `move_iterator` 修飾子が修正されました。
+- `move_iterator` の減算演算子に不足した **`const`** 修飾子が修正されました。
 - `propagate_on_container_copy_assignment` および `propagate_on_container_move_assignment` を要求するステートフルなユーザー定義アロケーターのサイレントかつ不適切な codegen が修正されました。
 - `atomic<T>` でオーバーロードされた `operator&()` が許容されるようになりました。
 - 間違った `bind()` 呼び出しのコンパイラ診断が若干向上しています。
@@ -335,8 +335,8 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 - Clang -**Wmicrosoft-exception-spec** によって報告された "宣言での例外指定が以前の宣言と一致しない" 問題も修正しました。
 - Clang と C1XX によって報告された mem-initializer-list 順序付けの警告も修正しました。
 - 順序なしのコンテナーは、コンテナー自体がスワップされるときにハッシュ関数や述語のスワップを行っていませんでした。 現在は行うようになりました。
-- 多くのコンテナー スワップ操作は、マークされた `noexcept` となりました (標準ライブラリが non-`propagate_on_container_swap` non-equal-allocator の未定義の動作条件を検出したときに、例外をスローすることがないため)。
-- 多くの `vector<bool>` 操作が、マークされた `noexcept` になりました。
+- 多くのコンテナー スワップ操作は、マークされた **`noexcept`** となりました (標準ライブラリが non-`propagate_on_container_swap` non-equal-allocator の未定義の動作条件を検出したときに、例外をスローすることがないため)。
+- 多くの `vector<bool>` 操作が、マークされた **`noexcept`** になりました。
 - 標準ライブラリは、アロケーター `value_type` (C++17 モードで) の照合をオプトアウト エスケープ ハッチで強制するようになりました。
 - `basic_string` への self-range-insert が文字列の内容をスクランブルする場合の条件の一部を修正しました。 (注: ベクターへの self-range-insert は、標準によって引き続き禁止されています。)
 - `basic_string::shrink_to_fit()` は、アロケーターの `propagate_on_container_swap` によって影響を受けることがなくなりました。
@@ -360,7 +360,7 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 
 - \<any\>、\<string_view\>、`apply()`、`make_from_tuple()` を追加しました。
 - \<optional\>、\<variant\>、`shared_ptr::weak_type`、\<cstdalign\> を追加しました。
-- `min(initializer_list)`、`max(initializer_list)`、および `minmax(initializer_list)` で、さらに `min_element()`、`max_element()`、および `minmax_element()` で C++14 `constexpr` が有効になりました。
+- `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`、`max_element()`、`minmax_element()` で、C++14 の **`constexpr`** が有効になりました。
 
 詳細については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
 
@@ -368,11 +368,11 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 
 - C++17 の追加機能がいくつか実装されました。 詳細については、「[Microsoft C++ 言語の準拠表](cpp-conformance-improvements.md#improvements_153)」を参照してください。
 - P0602R0 "variant と optional は自明的にコピー/移動を伝達する必要がある" を実装しました。
-- 標準ライブラリでは、[/GR-](../build/reference/gr-enable-run-time-type-information.md) オプションで無効にされた動的 RTTI が正式に許容されるようになりました。 `dynamic_pointer_cast()` と `rethrow_if_nested()` には本質的に `dynamic_cast` が必要なため、標準ライブラリでは **`/GR-`** の指定時にこれらの関数が `=delete` としてマークされるようになりました。
+- 標準ライブラリでは、[/GR-](../build/reference/gr-enable-run-time-type-information.md) オプションで無効にされた動的 RTTI が正式に許容されるようになりました。 `dynamic_pointer_cast()` と `rethrow_if_nested()` には本質的に **`dynamic_cast`** が必要なため、標準ライブラリでは **`/GR-`** の指定時にこれらの関数が `=delete` としてマークされるようになりました。
 - 動的 RTTI が **`/GR-`** で無効にされた場合でも、`typeid(SomeType)` の形式の "static RTTI" は引き続き使用可能で、標準ライブラリの一部のコンポーネントを強化します。 標準ライブラリでは、 **`/D_HAS_STATIC_RTTI=0`** でこの機能の無効化もサポートされるようになりました。 このフラグでは、`std::any`、`std::function` の `target()` および `target_type()` メンバー関数、さらに `std::shared_ptr` および `std::weak_ptr` の `get_deleter()` フレンド メンバー関数も無効になることに注意してください。
-- 標準ライブラリでは、条件付きで定義されたマクロではなく、無条件で C++14 `constexpr` を使用するようになりました。
+- 標準ライブラリでは、条件付きで定義されたマクロではなく、無条件で C++14 **`constexpr`** が使用されるようになりました。
 - 標準ライブラリでは、エイリアス テンプレートを内部で使用するようになりました。
-- 標準ライブラリでは、`nullptr_t{}` ではなく、`nullptr` を内部で使用するようになりました。 (NULL は内部で使用できなくなりました。 0 を null として内部で使用している箇所は、徐々に削除されています。)
+- 標準ライブラリでは、`nullptr_t{}` ではなく、 **`nullptr`** が内部で使用されるようになりました。 (NULL は内部で使用できなくなりました。 0 を null として内部で使用している箇所は、徐々に削除されています。)
 - 標準ライブラリでは、様式上 `std::forward()` を誤用するのではなく、`std::move()` を内部で使用するようになりました。
 - `static_assert(false, "message")` を `#error message` に変更しました。 この変更により、`#error` でコンパイルが即時中止されるため、コンパイラによる診断が向上します。
 - 標準ライブラリでは、関数を `__declspec(dllimport)` としてマークしなくなりました。 最新のリンカー テクノロジでは、それが不要になりました。
@@ -439,7 +439,7 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
-- 構造化例外処理 (SEH) を使用する関数に `std::atomic` の実装をインライン展開することを防ぐ `noexcept` との相互作用を回避しました。
+- 構造化例外処理 (SEH) を使用する関数に `std::atomic` の実装をインライン展開することを妨げる、 **`noexcept`** との相互作用が回避されました。
 - 標準ライブラリの `_Deallocate()` 内部関数を変更してより小さなコードに最適化し、より多くの場所にインライン化できるようにしました。
 - `std::try_lock()` を変更し、再帰の代わりにパック展開を使用するようにしました。
 - `std::lock()` のデッドロック回避アルゴリズムを改善し、すべてのロックで `try_lock()` を使用するのではなく、`lock()` 操作を使用するようにしました。
@@ -456,7 +456,7 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 - `basic_string` の変化を伴う操作が、インプレースでサイズ変更するのではなく、目的の状態で、再割り当てバッファーを構築するようになりました。 たとえば、文字列の先頭に挿入すると、挿入後にコンテンツが 1 回だけ移動されるようになりました。 下に移動されるか、新しく割り当てられたバッファーに移動されます。 再割り当ての場合、最初に新しく割り当てられたバッファーに移動されてから下に移動されることはなくなりました。
 - \<string\> 内の C 標準ライブラリを呼び出す操作では、`errno` のアドレスをキャッシュに格納することで、TLS でのやり取りを繰り返さないようになりました。
 - `is_pointer` の実装を簡素化しました。
-- 関数ベースの SFINAE 式から `struct` および `void_t` ベースへの変更が完了しました。
+- 関数ベースの SFINAE 式から **`struct`** および `void_t` ベースへの変更が完了しました。
 - 標準ライブラリのアルゴリズムで、ポスト インクリメントの反復子を使用しないようになりました。
 - 64 ビット システムで 32 ビットのアロケーターを使用した場合の切り捨ての警告を修正しました。
 - non-POCMA non-equal-allocator の場合に、バッファーが使用可能な場合は再利用することによって、`std::vector` 移動割り当てがより効率的になるようになりました。
@@ -657,7 +657,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **`/b
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
-- 新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 (`goto` や不良キャストなど) が確認されます。
+- 新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 ( **`goto`** や不良キャストなど) が確認されます。
 
 - 15.3 で使われていた警告番号の一部は 15.5 では使われなくなりました。 より具体的なチェックに置換されました。
 

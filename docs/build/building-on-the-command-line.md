@@ -1,8 +1,8 @@
 ---
 title: コマンド ラインから Microsoft C++ ツールセットを使用する
-description: Visual Studio IDE の外にあるコマンド ラインから Microsoft C++ コンパイラ ツールチェーン (MSVC) を使用します。
+description: Visual Studio IDE の外にあるコマンド ラインから Microsoft C++ (MSVC) コンパイラ ツールセットを使用します。
 ms.custom: conceptual
-ms.date: 11/12/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,19 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229897"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>コマンド ラインから Microsoft C++ ツールセットを使用する
 
-Visual Studio に含まれているツールを使用し、コマンド ラインで C と C++ のアプリケーションをビルドできます。 Microsoft C++ (MSVC) コンパイラ ツールセットは、VISUAL Studio IDE を含まないスタンドアロン パッケージとしてダウンロードすることもできます。
+Visual Studio に含まれているツールを使用し、コマンド ラインで C と C++ のアプリケーションをビルドできます。 Microsoft C++ (MSVC) コンパイラ ツールセットは、スタンドアロン パッケージとしてダウンロードすることもできます。 Visual Studio IDE を使用する予定がない場合は、インストールする必要はありません。
+
+> [!NOTE]
+> この記事では、個々のコンパイラ、リンカー、ライブラリアン、その他の基本的なツールを使うように環境を設定する方法について説明します。 ネイティブのプロジェクト ビルド システム (MSBuild) では、この記事で説明されているような環境は使用されません。 コマンド ラインから MSBuild を使用する方法については、「[コマンド ラインでの MSBuild - C++](msbuild-visual-cpp.md)」をご覧ください。
 
 ## <a name="download-and-install-the-tools"></a>ツールのダウンロードとインストール
 
@@ -123,7 +126,7 @@ Visual Studio インストーラーでいずれかの C++ ワークロードを�
 
 既存のコマンド ウィンドウで特定のビルド アーキテクチャを指定する最も簡単な方法は、vcvarsall.bat ファイルを使用することです。 環境変数を設定し、ネイティブ 32 ビットまたは 64 ビット コンパイルのコマンド ラインを構成するには vcvarsall.bat を使用します。 引数を使用すると、x86、x64、ARM、または ARM64 プロセッサのクロスコンパイルを指定できます。 Microsoft Store、ユニバーサル Windows プラットフォーム、または Windows デスクトップ プラットフォームを対象にできます。 使用する Windows SDK を指定し、プラットフォーム ツールセットのバージョンを選択することもできます。
 
-引数なしで使用すると、32 ビット Windows Desktop を対象として現在の x86 ネイティブ コンパイラを使用するための環境変数が構成されます。 引数を追加し、ネイティブまたはクロス コンパイラ ツールを使用するように環境を構成できます。 コンピューターにインストールされていない構成または使用できない構成を指定すると、vcvarsall.bat によってエラー メッセージが表示されます。
+引数なしで使用すると、32 ビット Windows Desktop を対象として現在の x86 ネイティブ コンパイラを使用するための環境変数が構成されます。 引数を追加し、ネイティブまたはクロス コンパイラ ツールを使用するように環境を構成できます。 コンピューターにインストールされていない構成、または使用できない構成を指定すると、vcvarsall.bat によってエラー メッセージが表示されます。
 
 ### <a name="vcvarsall-syntax"></a>vcvarsall 構文
 
@@ -231,16 +234,20 @@ Visual Studio インストール ディレクトリが反映されるように�
 [リンク](reference/linking.md)<br/>
 リンカー (link.exe) は、コンパイルされたオブジェクト ファイルおよびライブラリをアプリおよび DLL にリンクするために使用します。
 
-[MSBuild](msbuild-visual-cpp.md)<br/>
-MSBuild (msbuild.exe) とプロジェクト ファイル (.vcxproj) を使用し、ビルドを構成し、ツールセットを間接的に呼び出します。 これは、Visual Studio IDE で **[プロジェクトのビルド]** コマンドまたは **[ソリューションのビルド]** コマンドを実行することと同じです。 コマンド ラインから MSBuild を実行することは上級向けのシナリオであり、一般的には推奨されません。
-
-[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-DEVENV (devenv.exe) は、Visual Studio IDE を表示せずに特定のビルド コマンドを実行するために、 **/Build** や **/Clean** などのコマンド ライン スイッチと組み合わせて使用します。 一般的に、DEVENV は MSBuild を直接使用することよりも推奨されます。複雑な MSBuild を Visual Studio に処理させることができるためです。
-
 [NMAKE](reference/nmake-reference.md)<br/>
 Windows で NMAKE (nmake.exe) を使用し、従来のメイクファイルに基づいて C++ プロジェクトをビルドします。
 
-コマンド ラインでビルドするとき、F1 コマンドでヘルプを瞬時に表示することはできません。 代わりに、検索エンジンを使用して警告、エラー、メッセージに関する情報を取得できます。あるいは、オフラインのヘルプ ファイルを使用できます。 [docs.microsoft.com](https://docs.microsoft.com/cpp/) で検索を使用するには、ページの一番上にある検索ボックスを使用します。
+コマンド ラインでビルドするとき、F1 コマンドでヘルプを瞬時に表示することはできません。 代わりに、検索エンジンを使用して警告、エラー、メッセージに関する情報を取得できます。 また、オフラインのヘルプ ファイルをダウンロードして使用することもできます。 [docs.microsoft.com](https://docs.microsoft.com/cpp/) で検索を使用するには、記事の上部にある検索ボックスにクエリを入力します。
+
+## <a name="command-line-project-management-tools"></a>コマンド ライン プロジェクト管理ツール
+
+Visual Studio IDE では、MSBuild に基づくネイティブ プロジェクト ビルド システムが使用されます。 MSBuild を直接呼び出すことも、IDE を使わずにネイティブ プロジェクト システムを使用することもできます。
+
+[MSBuild](msbuild-visual-cpp.md)<br/>
+MSBuild (msbuild.exe) とプロジェクト ファイル (.vcxproj) を使用し、ビルドを構成し、ツールセットを間接的に呼び出します。 これは、Visual Studio IDE で **[プロジェクトのビルド]** コマンドまたは **[ソリューションのビルド]** コマンドを実行することと同じです。 コマンド ラインから MSBuild を実行することは上級向けのシナリオであり、一般的には推奨されません。 Visual Studio バージョン 16.5 以降では、使用するツールセットとライブラリを制御するために MSBuild でコマンド ライン環境が使用されることはありません。
+
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+DEVENV (devenv.exe) は、Visual Studio IDE を表示せずに特定のビルド コマンドを実行するために、 **/Build** や **/Clean** などのコマンド ライン スイッチと組み合わせて使用します。 一般的に、DEVENV は MSBuild を直接使用することよりも推奨されます。複雑な MSBuild を Visual Studio に処理させることができるためです。 Visual Studio バージョン 16.5 以降では、使用するツールセットとライブラリを制御するために DEVENV でコマンド ライン環境が使用されることはありません。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

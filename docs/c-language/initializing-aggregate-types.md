@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229624"
 ---
 # <a name="initializing-aggregate-types"></a>集約型の初期化
 
@@ -51,7 +51,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 固有の仕様**
 
-配列の最大サイズは **size_t** によって定義されます。 STDDEF.H ヘッダー ファイルに定義されている **size_t** は、0x00000000 - 0x7CFFFFFF の範囲の `unsigned int` です。
+配列の最大サイズは **size_t** によって定義されます。 STDDEF.H ヘッダー ファイルで定義されている **size_t** は、0x00000000 - 0x7CFFFFFF の範囲の **`unsigned int`** です。
 
 **Microsoft 固有の仕様はここまで**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 この構造では、行 1 の最初の左中かっこは 3 つの構造体の配列である `nlist[0]` の初期化を開始します。 値 1、2、および 3 は最初の構造体の 3 つのメンバーに割り当てられます。 次の右中かっこが見つかった場合 (値 3 の後)、`nlist[0]` の初期化は完了し、3 つの構造体配列の残りの 2 つの構造体は自動的に 0 に初期化されます。 同様に、`{ 4,5,6 }` は `nlist` の 2 番目の行の最初の構造体を初期化します。 `nlist[1]` の残りの 2 つ構造体は 0 に設定されます。 コンパイラは、次の初期化子リスト ( `{ 7,8,9 }` ) を見つけると、`nlist[2]` の初期化を試みます。 `nlist` には 2 行しかないため、この試行によりエラーが発生します。
 
-次の例では、`int` の `x` の 3 つのメンバーが 1、2、および 3 にそれぞれ初期化されます。
+次の例では、`x` の 3 つの **`int`** メンバーが、それぞれ 1、2、3 に初期化されます。
 
 ```C
 struct list

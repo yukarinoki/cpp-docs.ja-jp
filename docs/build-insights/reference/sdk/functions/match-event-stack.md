@@ -1,6 +1,6 @@
 ---
-title: イベントスタックを一致させる
-description: C++ ビルド インサイト SDK マッチイベントスタック関数リファレンス。
+title: MatchEventStack
+description: C++ Build Insights SDK MatchEventStack 関数リファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323874"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224124"
 ---
-# <a name="matcheventstack"></a>イベントスタックを一致させる
+# <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`MatchEventStack`関数は、イベント スタックを特定のイベント階層と照合するために使用されます。 一致した階層は、さらに処理するためにハンドラに転送されます。 イベント、イベント スタック、および階層の詳細については、[イベント テーブル](../event-table.md)を参照してください。
+`MatchEventStack` 関数は、イベント スタックを特定のイベント階層と照合するために使用されます。 一致した階層は、後続の処理のためにハンドラーに転送されます。 イベント、イベント スタック、階層の詳細については、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-イベント スタックで一致させる長子の型。
+*TEvent*\
+イベント スタックで照合する最上位の親の型。
 
-*Tイベント*\
-イベント スタックで一致させる残りの型。
+*TEvents*\
+イベント スタックで照合する残りの型。
 
-*呼び出し可能*\
-をサポート`operator()`する型。 この演算子に渡される引数の詳細については、*呼び出し可能パラメーター*の説明を参照してください。
+*TCallable*\
+`operator()` をサポートする型。 この演算子に渡される引数の詳細については、*callable* パラメーターの説明を参照してください。
 
-*Tエクストラアルグ*\
-に渡される余分な引数の型`MatchEventStack`。
+*TExtraArgs*\
+`MatchEventStack` に渡される追加の引数の型。
 
-*イベントスタック*\
-*TEvent*および*TEvents*で記述されたイベントタイプ階層に一致するイベントスタック。
+*eventStack*\
+*TEvent* と *TEvents* によって記述されるイベントの型の階層と照合するイベント スタック。
 
-*呼び出し*\
-イベント スタックと*TEvent*および*TEvents*で記述されたイベントタイプ階層と`MatchEventStack`のマッチングが正常に行われた場合は *、呼び出し可能*. これは、イベント階層内の各型に対して、1 つの r 値引数を*呼び出し可能*に渡します。 *extraArgs*パラメータ パックは、*呼び出し可能*の残りのパラメータで完全に転送されます。
+*callable*\
+*TEvent* および *TEvents* によって記述されるイベント型階層とイベント スタックが正常に照合されると、`MatchEventStack` によって *callable* が呼び出されます。 *callable* には、イベント階層内の型ごとに 1 つの右辺値引数が渡されます。 *extraArgs* パラメーター パックは、*callable* の残りのパラメーターで完全に転送されます。
 
-*エクストラ引数*\
-一致したイベントの種類と共に*呼び出し可能*に完全に転送される引数。
+*extraArgs*\
+一致したイベントの型と共に *callable* に完全に転送される引数。
 
 ### <a name="return-value"></a>戻り値
 
-一致が成功した場合は**true、** それ以外の場合は**false**の**ブール**値。
+正常に一致した場合は **`true`** であり、それ以外の場合は **`false`** である **`bool`** 値。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-*イベントスタック*の最後のイベントは、連結された\[ *TEvent*の最後のエントリと常に一致*します。*\]型リスト。 他のすべての*TEvent*と*TEvents*のエントリは、最後のエントリを除く*イベントスタック*内の任意の位置に一致することができます( 同じ順序にする場合)。
+*eventStack* の最後のイベントは、連結された \[*TEvent*, *TEvents...* \] 型リストの最後のエントリと常に照合されます。 *TEvent* と *TEvents* の他のすべてのエントリは、同じ順序になっている限り、*eventStack* 内の最後を除く任意の位置と照合できます。
 
-*TEvent*パラメータおよび*TEvents*パラメータに使用するイベントタイプは *、キャプチャ クラス*のリストから選択されます。 イベントの一覧と、イベントの照合に使用できるキャプチャ クラスについては、[イベント テーブル](../event-table.md)を参照してください。
+*TEvent* および *TEvents* パラメーターに使用するイベントの型は、"*キャプチャ クラス*" のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="example"></a>例
 

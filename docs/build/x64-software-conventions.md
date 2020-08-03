@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422722"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223773"
 ---
 # <a name="x64-software-conventions"></a>x64 でのソフトウェア規約
 
@@ -18,7 +18,7 @@ ms.locfileid: "79422722"
 
 ## <a name="overview-of-x64-calling-conventions"></a>x64 呼び出し規則の概要
 
-x86 と x64 の 2 つの重要な違いは、64 ビットのアドレス指定機能と、一般的な用途のための 16 個の 64 ビット レジスタのフラット セットです。 拡張レジスタ セットにより、x64 では [__fastcall](../cpp/fastcall.md) 呼び出し規則と、RISC ベースの例外処理モデルが使用されます。 `__fastcall` 規則では、最初の 4 つの引数にレジスタを使用し、スタック フレームを使用して追加の引数を渡します。 レジスタの使用、スタック パラメーター、戻り値、スタック アンワインドなど、x64 呼び出し規則の詳細については、「[x64 での呼び出し規則](x64-calling-convention.md)」を参照してください。
+x86 と x64 の 2 つの重要な違いは、64 ビットのアドレス指定機能と、一般的な用途のための 16 個の 64 ビット レジスタのフラット セットです。 拡張レジスタ セットにより、x64 では [__fastcall](../cpp/fastcall.md) 呼び出し規則と、RISC ベースの例外処理モデルが使用されます。 **`__fastcall`** 規則では、最初の 4 つの引数にレジスタを使用し、スタック フレームを使用して追加の引数を渡します。 レジスタの使用、スタック パラメーター、戻り値、スタック アンワインドなど、x64 呼び出し規則の詳細については、「[x64 での呼び出し規則](x64-calling-convention.md)」を参照してください。
 
 ## <a name="enable-optimization-for-x64"></a>x64 の最適化を有効にする
 
@@ -47,19 +47,19 @@ x86 と x64 の 2 つの重要な違いは、64 ビットのアドレス指定�
 |||||
 |-|-|-|-|
 |スカラー型|C データ型|ストレージ サイズ (バイト単位)|推奨されるアラインメント|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|単語|
-|**UINT16**|**unsigned short**|2|単語|
-|**INT32**|**int**、**long**|4|ダブルワード|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|単語|
+|**UINT16**|**`unsigned short`**|2|単語|
+|**INT32**|**`int`** , **`long`**|4|ダブルワード|
 |**UINT32**|**unsigned int、unsigned long**|4|ダブルワード|
-|**INT64**|**__int64**|8|クアッドワード|
+|**INT64**|**`__int64`**|8|クアッドワード|
 |**UINT64**|**unsigned __int64**|8|クアッドワード|
-|**FP32 (単精度)**|**float**|4|ダブルワード|
-|**FP64 (倍精度)**|**double**|8|クアッドワード|
+|**FP32 (単精度)**|**`float`**|4|ダブルワード|
+|**FP64 (倍精度)**|**`double`**|8|クアッドワード|
 |**POINTER**|__\*__|8|クアッドワード|
-|**__m64**|**struct __m64**|8|クアッドワード|
-|**__m128**|**struct __m128**|16|オクタワード|
+|**`__m64`**|**struct __m64**|8|クアッドワード|
+|**`__m128`**|**struct __m128**|16|オクタワード|
 
 ### <a name="aggregates-and-unions"></a>集約と共用体
 
@@ -82,19 +82,19 @@ x86 と x64 の 2 つの重要な違いは、64 ビットのアドレス指定�
 ||||
 |-|-|-|
 |スカラー型|C データ型|必須のアラインメント|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|単語|
-|**UINT16**|**unsigned short**|単語|
-|**INT32**|**int**、**long**|ダブルワード|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|単語|
+|**UINT16**|**`unsigned short`**|単語|
+|**INT32**|**`int`** , **`long`**|ダブルワード|
 |**UINT32**|**unsigned int、unsigned long**|ダブルワード|
-|**INT64**|**__int64**|クアッドワード|
+|**INT64**|**`__int64`**|クアッドワード|
 |**UINT64**|**unsigned __int64**|クアッドワード|
-|**FP32 (単精度)**|**float**|ダブルワード|
-|**FP64 (倍精度)**|**double**|クアッドワード|
+|**FP32 (単精度)**|**`float`**|ダブルワード|
+|**FP64 (倍精度)**|**`double`**|クアッドワード|
 |**POINTER**|<strong>\*</strong>|クアッドワード|
-|**__m64**|**struct __m64**|クアッドワード|
-|**__m128**|**struct __m128**|オクタワード|
+|**`__m64`**|**struct __m64**|クアッドワード|
+|**`__m128`**|**struct __m128**|オクタワード|
 
 次の集約アラインメント規則が適用されます。
 
@@ -206,12 +206,12 @@ x64 アーキテクチャには、16 個の汎用レジスタ (これ以降、�
 |RBX|非 volatile|呼び出し先によって保持される必要があります。|
 |RBP|非 volatile|フレーム ポインターとして使用できます。呼び出し先によって保持される必要があります。|
 |RSP|非 volatile|スタック ポインター|
-|XMM0, YMM0|Volatile|1 番目の FP 引数。`__vectorcall` が使用された場合の 1 番目のベクター型引数。|
-|XMM1, YMM1|Volatile|2 番目の FP 引数。`__vectorcall` が使用された場合の 2 番目のベクター型引数。|
-|XMM2, YMM2|Volatile|3 番目の FP 引数。`__vectorcall` が使用された場合の 3 番目のベクター型引数。|
-|XMM3, YMM3|Volatile|4 番目の FP 引数。`__vectorcall` が使用された場合の 4 番目のベクター型引数。|
-|XMM4, YMM4|Volatile|必要に応じて、呼び出し元によって保持される必要があります。`__vectorcall` が使用された場合の 5 番目のベクター型引数。|
-|XMM5, YMM5|Volatile|必要に応じて、呼び出し元によって保持される必要があります。`__vectorcall` が使用された場合の 6 番目のベクター型引数。|
+|XMM0, YMM0|Volatile|1 番目の FP 引数。 **`__vectorcall`** が使用された場合の 1 番目のベクター型引数|
+|XMM1, YMM1|Volatile|2 番目の FP 引数。 **`__vectorcall`** が使用された場合の 2 番目のベクター型引数|
+|XMM2, YMM2|Volatile|3 番目の FP 引数。 **`__vectorcall`** が使用された場合の 3 番目のベクター型引数|
+|XMM3, YMM3|Volatile|4 番目の FP 引数。 **`__vectorcall`** が使用された場合の 4 番目のベクター型引数|
+|XMM4, YMM4|Volatile|必要に応じて、呼び出し元によって保持される必要があります。 **`__vectorcall`** が使用された場合の 5 番目のベクター型引数|
+|XMM5, YMM5|Volatile|必要に応じて、呼び出し元によって保持される必要があります。 **`__vectorcall`** が使用された場合の 6 番目のベクター型引数|
 |XMM6:XMM15, YMM6:YMM15|非 volatile (XMM)、volatile (YMM の上半分)|呼び出し先によって保持される必要があります。 必要に応じて、呼び出し元によって YMM レジスタが保持される必要があります。|
 
 関数の終了時および C ランタイム ライブラリの呼び出しと Windows システムの呼び出しに対する関数の入力時に、CPU フラグ レジスタの方向フラグがクリアされることが想定されます。

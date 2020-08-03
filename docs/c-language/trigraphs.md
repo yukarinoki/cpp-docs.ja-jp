@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227752"
 ---
 # <a name="trigraphs"></a>トライグラフ
 
@@ -28,7 +28,7 @@ C ソース プログラムのソース文字セットは 7 ビットの ASCII �
 
 C++ 17 では、言語からトライグラフが削除されます。 実装ではトライグラフを物理ソース ファイルから*基本ソース文字セット*への実装定義マッピングの一部として引き続きサポートできるものの、標準ではそれをしないよう実装に対して勧めています。 C++14 までトライグラフは C と同様にサポートされていました。
 
-既定で無効になっていますが、Visual C++ はトライグラフの置換をサポートし続けます。 トライグラフの置換を有効にする方法の詳細については、「[/Zc:trigraphs (トライグラフの置換)](../build/reference/zc-trigraphs-trigraphs-substitution.md)」をご覧ください。
+既定で無効になっていますが、Visual C++ はトライグラフの置換をサポートし続けます。 トライグラフの置換を有効にする方法の詳細については、「[`/Zc:trigraphs` (トライグラフの置換)](../build/reference/zc-trigraphs-trigraphs-substitution.md)」をご覧ください。
 
 次の表は、9 つのトライグラフ シーケンスを示しています。 最初の列の区切り文字がソース ファイルに出現すると、すべて 2 番目の列の対応する文字に置き換えられます。
 
@@ -36,19 +36,19 @@ C++ 17 では、言語からトライグラフが削除されます。 実装で
 
 | トライグラフ | 区切り文字 |
 |----------|-----------------------|
-| ??= | # |
-| ??( | \[ |
-| ??/ | \\ |
-| ??) | ] |
-| ??' | ^ |
-| ??\< | { |
-| ??! | &#124; |
-| ??> | } |
-| ??- | ~ |
+| `??=` | `#` |
+| `??(` | `[` |
+| `??/` | `\` |
+| `??)` | `]` |
+| `??'` | `^` |
+| `??<` | `{` |
+| `??!` | `|` |
+| `??>` | `}` |
+| `??-` | `~` |
 
 トライグラフは、常に 1 つのソース文字として処理されます。 トライグラフの変換は、文字列リテラルと文字定数のエスケープ文字を認識する前の、最初の[変換フェーズ](../preprocessor/phases-of-translation.md)で実行されます。 認識されるのは、上の表に示した 9 つのトライグラフだけです。 他の文字シーケンスは、変換されません。
 
-文字エスケープ シーケンス **\\?** を使用すると、トライグラフに似た文字シーケンスが誤ってトライグラフとして解釈されないようにできます。 (エスケープ シーケンスについては、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください。)たとえば、`What??!` ステートメントを使用して文字列 `printf` を印刷しようとして、次のようにしたとします。
+文字エスケープ シーケンス **`\?`** を使用すると、トライグラフに似た文字シーケンスが誤ってトライグラフとして解釈されないようにできます。 (エスケープ シーケンスについては、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください。)たとえば、`What??!` ステートメントを使用して文字列 `printf` を印刷しようとして、次のようにしたとします。
 
 ```C
 printf( "What??!\n" );
@@ -64,5 +64,5 @@ printf( "What?\?!\n" );
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc:trigraphs (トライグラフの置換)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[`/Zc:trigraphs` (トライグラフの置換)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [C の識別子](../c-language/c-identifiers.md)

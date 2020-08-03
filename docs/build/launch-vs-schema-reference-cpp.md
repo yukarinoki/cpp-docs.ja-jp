@@ -3,12 +3,12 @@ title: launch.vs.json スキーマ リファレンス (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: ff4713642ab95a9bbc31f1a06236de459e53f9c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323050"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223955"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.json スキーマ リファレンス (C++)
 
@@ -27,8 +27,8 @@ ms.locfileid: "81323050"
 |`inheritEnvironments`|array|複数のソースから継承された環境変数のセットを指定します。 *CMakeSettings.json* や *CppProperties.json* などのファイルでいくつかの変数を定義し、デバッグ コンテキストで使用できるようにすることが可能です。  **Visual Studio 16.4:** :`env.VARIABLE_NAME` 構文を使用して、ターゲットごとに環境変数を指定します。 変数の設定を解除するには、変数を "null" に設定します。|
 |`args`|array|起動されたプログラムに渡されるコマンドライン引数を指定します。|
 |`currentDir`|string|ビルド ターゲットへの完全なディレクトリ パスを指定します。 これは、このパラメーターが設定されていない限り、自動的に検出されます。|
-|`noDebug`|boolean|起動されたプログラムをデバッグするかどうかを指定します。 指定されない場合、このパラメーターの既定値は `false` です。|
-|`stopOnEntry`|boolean|プロセスが起動され、デバッガーがアタッチされたらすぐに中断するかどうかを指定します。 このパラメーターの既定値は `false` です。|
+|`noDebug`|boolean|起動されたプログラムをデバッグするかどうかを指定します。 指定されない場合、このパラメーターの既定値は **`false`** です。|
+|`stopOnEntry`|boolean|プロセスが起動され、デバッガーがアタッチされたらすぐに中断するかどうかを指定します。 このパラメーターの既定値は **`false`** です。|
 |`remoteMachine`|string|プログラムが起動されたリモート マシンの名前を指定します。|
 |`env`|array| カスタム環境変数のキーと値のリストを指定します。 env:{"myEnv":"myVal"}。|
 |`portName`|string|実行中のプロセスにアタッチするときのポートの名前を指定します。|
@@ -58,9 +58,9 @@ ms.locfileid: "81323050"
 |`launchCompleteCommand`|string|デバッガーが完全にセットアップされた後に、ターゲット プロセスを実行するために実行するコマンド。 使用できる値は、"exec-run"、"exec-continue"、"None" です。 既定値は "exec-run" です。|
 |`debugServerPath`|string|起動するデバッグ サーバーの完全なパス (省略可能)。 既定値は null です。|
 |`debugServerArgs`|string|デバッグ サーバー引数 (省略可能)。 既定値は null です。|
-|`filterStderr`|boolean|サーバー開始のパターンを stderr ストリームから検索し、stderr をデバッグ出力にログ記録します。 既定値は `false` です。|
+|`filterStderr`|boolean|サーバー開始のパターンを stderr ストリームから検索し、stderr をデバッグ出力にログ記録します。 既定値は **`false`** です。|
 |`coreDumpPath`|string|指定したプログラムのコア ダンプ ファイルへの完全なパス (省略可能)。 既定値は null です。|
-externalConsole|boolean|true の場合、デバッグ対象のためにコンソールが起動します。 `false` の場合、コンソールは起動しません。 既定値は `false` です。 注:このオプションは、場合によっては技術的な理由で無視されます。|
+externalConsole|boolean|true の場合、デバッグ対象のためにコンソールが起動します。 **`false`** の場合、コンソールは起動しません。 既定値は **`false`** です。 注:このオプションは、場合によっては技術的な理由で無視されます。|
 |`pipeTransport`|string|これを指定した場合、デバッガーは、Visual Studio と MI 対応デバッガー (gdb など) の間で標準入力/出力をリレーするパイプとして別の実行可能ファイルを利用し、リモート コンピューターに接続します。 使用できる値: 1 つ以上の[パイプ トランスポート オプション](#pipe_transport_options)。|
 
 ## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a> セットアップ コマンドを起動する
@@ -71,7 +71,7 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 |-|-|-|
 |`text`|string|実行するデバッガー コマンド。|
 |`description`|string|コマンドの説明 (省略可能)。|
-|`ignoreFailures`|boolean|true に設定すると、コマンドからの失敗が無視されます。 既定値は `false` です。|
+|`ignoreFailures`|boolean|true に設定すると、コマンドからの失敗が無視されます。 既定値は **`false`** です。|
 
 ## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a> パイプ トランスポート オプション
 
@@ -84,7 +84,7 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 |`pipeArgs`|array|接続を構成するためにパイプ プログラムに渡すコマンド ライン引数。|
 |`debuggerPath`|string|ターゲット マシン上のデバッガーへの完全なパス。例: /usr/bin/gdb。|
 |`pipeEnv`|object|パイプ プログラムに渡す環境変数。|
-|`quoteArgs`|boolean|個々の引数に (スペースやタブなどの) 文字が含まれる場合に引用符で囲むかどうか。 `false` に設定すると、デバッガー コマンドを自動的に引用符で囲むことはなくなります。 既定値は `true` です。|
+|`quoteArgs`|boolean|個々の引数に (スペースやタブなどの) 文字が含まれる場合に引用符で囲むかどうか。 **`false`** に設定すると、デバッガー コマンドを自動的に引用符で囲むことはなくなります。 既定値は **`true`** です。|
 
 ## <a name="source-file-map-options"></a><a name="source_file_map_options"></a> ソース ファイル マップ オプション
 
@@ -93,4 +93,4 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 ||||
 |-|-|-|
 |`editorPath`|string|エディターが配置するソース コードの場所。|
-|`useForBreakpoints`|boolean|ブレークポイントを設定する場合は、このソース マッピングを使用する必要があります。 `false` に設定すると、ブレークポイントを設定するのにファイル名と行番号のみが使用されます。 `true` に設定すると、ブレークポイントは、このソース マッピングが使用されている場合にのみ、ファイルへの完全パスと行番号で設定されます。 それ以外の場合は、ファイル名と行番号のみがブレークポイントの設定に使用されます。 既定値は `true` です。|
+|`useForBreakpoints`|boolean|ブレークポイントを設定する場合は、このソース マッピングを使用する必要があります。 **`false`** に設定すると、ブレークポイントを設定するのにファイル名と行番号のみが使用されます。 **`true`** に設定すると、ブレークポイントは、このソース マッピングが使用されている場合にのみ、ファイルへの完全パスと行番号で設定されます。 それ以外の場合は、ファイル名と行番号のみがブレークポイントの設定に使用されます。 既定値は **`true`** です。|

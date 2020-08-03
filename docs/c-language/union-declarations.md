@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291042"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213698"
 ---
 # <a name="union-declarations"></a>共用体の宣言
 
@@ -24,8 +24,8 @@ ms.locfileid: "62291042"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -44,14 +44,14 @@ ms.locfileid: "62291042"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
 
-**union** の型の変数は、その型で定義されている値のいずれか 1 つを保存します。 同じ規則が構造体と共有体の宣言を制御します。 共有体には、ビット フィールドも設定できます。
+**`union`** の型の変数は、その型で定義されている値のいずれか 1 つを保存します。 同じ規則が構造体と共有体の宣言を制御します。 共有体には、ビット フィールドも設定できます。
 
-共有体のメンバーは不完全な型、`void` 型、または関数型を持つことができません。 したがって、メンバーを共用体のインスタンスにすることはできませんが、宣言されている共用体型へのポインターにすることはできます。
+共用体のメンバーは不完全な型、 **`void`** 型、または関数型を持つことができません。 したがって、メンバーを共用体のインスタンスにすることはできませんが、宣言されている共用体型へのポインターにすることはできます。
 
 共有体型宣言は、テンプレートだけです。 メモリは、変数が宣言されるまで予約されません。
 
 > [!NOTE]
-> 2 の型の 1 つの共用体が宣言され、一方の値が格納されていても、もう一方の型で共用体にアクセスできる場合、結果は信頼できません。 たとえば、**float** と `int` の共用体が宣言されます。 **float** 値が保存されますが、プログラムは `int` として値にアクセスします。 このような場合、値は **float** 値の内部ストレージによって異なります。 整数値は信頼できません。
+> 2 の型の 1 つの共用体が宣言され、一方の値が格納されていても、もう一方の型で共用体にアクセスできる場合、結果は信頼できません。 たとえば、 **`float`** と **`int`** の共用体が宣言されます。 **`float`** 値が保存されますが、プログラムでは後で **`int`** として値にアクセスします。 このような場合、値は **`float`** 値の内部ストレージによって異なります。 整数値は信頼できません。
 
 ## <a name="examples"></a>例
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-`screen` 配列には 2,000 の要素が含まれます。 配列の各要素は、2 つのメンバー `window1` と `screenval` を持つ個別の共用体です。 `window1` メンバーは、2 つのビット フィールド メンバー (`icon` と `color`) を持つ構造体です。 `screenval` メンバーは `int` です。 常に、各共用体の要素は `int` によって表される `screenval` か `window1` によって表される構造体を保持します。
+`screen` 配列には 2,000 の要素が含まれます。 配列の各要素は、2 つのメンバー `window1` と `screenval` を持つ個別の共用体です。 `window1` メンバーは、2 つのビット フィールド メンバー (`icon` と `color`) を持つ構造体です。 `screenval` メンバーは **`int`** です。 常に、各共用体の要素は `screenval` によって表される **`int`** か `window1` によって表される構造体を保持します。
 
 **Microsoft 固有の仕様**
 

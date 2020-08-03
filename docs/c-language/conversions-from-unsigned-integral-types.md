@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998789"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226465"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>符号なし整数型からの変換
 
@@ -35,7 +35,7 @@ printf_s( "%hd\n", j );   // Prints -3
 
 **Microsoft 固有の仕様**
 
-Microsoft コンパイラでは、**unsigned** (または **unsigned int**) と **unsigned long** は区別されますが同等の型です。 **unsigned int** 値の変換は、**unsigned long** の変換と同様に実行されます。
+Microsoft コンパイラでは、 **`unsigned`** (または **`unsigned int`** ) と **`unsigned long`** は区別されますが、同等の型です。 **`unsigned int`** 値の変換は、 **`unsigned long`** の変換と同様に実行されます。
 
 **Microsoft 固有の仕様はここまで**
 
@@ -45,46 +45,46 @@ Microsoft コンパイラでは、**unsigned** (または **unsigned int**) と 
 
 |From|終了|メソッド|
 |----------|--------|------------|
-|**unsigned char**|**char**|ビット パターンを維持、上位ビットが符号ビットになる。|
-|**unsigned char**|**short**|ゼロ拡張。|
-|**unsigned char**|**long**|ゼロ拡張。|
-|**unsigned char**|**long long**|ゼロ拡張。|
-|**unsigned char**|**unsigned short**|ゼロ拡張。|
-|**unsigned char**|**unsigned long**|ゼロ拡張。|
-|**unsigned char**|**unsigned long long**|ゼロ拡張。|
-|**unsigned char**|**float**|**long** への変換、**long** から **float** への変換。|
-|**unsigned char**|**double**|**long** への変換、**long** から **double** への変換。|
-|**unsigned char**|**long double**|**long** への変換、**long** から **double** への変換。|
-|**unsigned short**|**char**|下位バイトを維持。|
-|**unsigned short**|**short**|ビット パターンを維持、上位ビットが符号ビットになる。|
-|**unsigned short**|**long**|ゼロ拡張。|
-|**unsigned short**|**long long**|ゼロ拡張。|
-|**unsigned short**|**unsigned char**|下位バイトを維持。|
-|**unsigned short**|**unsigned long**|ゼロ拡張。|
-|**unsigned short**|**unsigned long long**|ゼロ拡張。|
-|**unsigned short**|**float**|**long** への変換、**long** から **float** への変換。|
-|**unsigned short**|**double**|**long** への変換、**long** から **double** への変換。|
-|**unsigned short**|**long double**|**long** への変換、**long** から **double** への変換。|
-|**unsigned long**|**char**|下位バイトを維持。|
-|**unsigned long**|**short**|下位ワードを維持。|
-|**unsigned long**|**long**|ビット パターンを維持、上位ビットが符号ビットになる。|
-|**unsigned long**|**long long**|ゼロ拡張。|
-|**unsigned long**|**unsigned char**|下位バイトを維持。|
-|**unsigned long**|**unsigned short**|下位ワードを維持。|
-|**unsigned long**|**unsigned long long**|ゼロ拡張。|
-|**unsigned long**|**float**|**long** への変換、**long** から **float** への変換。|
-|**unsigned long**|**double**|**double** への直接変換。|
-|**unsigned long**|**long double**|**long** への変換、**long** から **double** への変換。|
-|**unsigned long long**|**char**|下位バイトを維持。|
-|**unsigned long long**|**short**|下位ワードを維持。|
-|**unsigned long long**|**long**|下位 dword を維持。|
-|**unsigned long long**|**long long**|ビット パターンを維持、上位ビットが符号ビットになる。|
-|**unsigned long long**|**unsigned char**|下位バイトを維持。|
-|**unsigned long long**|**unsigned short**|下位ワードを維持。|
-|**unsigned long long**|**unsigned long**|下位 dword を維持。|
-|**unsigned long long**|**float**|**long** への変換、**long** から **float** への変換。|
-|**unsigned long long**|**double**|**double** への直接変換。|
-|**unsigned long long**|**long double**|**long** への変換、**long** から **double** への変換。|
+|**`unsigned char`**|**`char`**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**`unsigned char`**|**`short`**|ゼロ拡張。|
+|**`unsigned char`**|**`long`**|ゼロ拡張。|
+|**`unsigned char`**|**`long long`**|ゼロ拡張。|
+|**`unsigned char`**|**`unsigned short`**|ゼロ拡張。|
+|**`unsigned char`**|**`unsigned long`**|ゼロ拡張。|
+|**`unsigned char`**|**`unsigned long long`**|ゼロ拡張。|
+|**`unsigned char`**|**`float`**|**`long`** への変換、 **`long`** を **`float`** に変換|
+|**`unsigned char`**|**`double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
+|**`unsigned char`**|**`long double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
+|**`unsigned short`**|**`char`**|下位バイトを維持。|
+|**`unsigned short`**|**`short`**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**`unsigned short`**|**`long`**|ゼロ拡張。|
+|**`unsigned short`**|**`long long`**|ゼロ拡張。|
+|**`unsigned short`**|**`unsigned char`**|下位バイトを維持。|
+|**`unsigned short`**|**`unsigned long`**|ゼロ拡張。|
+|**`unsigned short`**|**`unsigned long long`**|ゼロ拡張。|
+|**`unsigned short`**|**`float`**|**`long`** への変換、 **`long`** を **`float`** に変換|
+|**`unsigned short`**|**`double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
+|**`unsigned short`**|**`long double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
+|**`unsigned long`**|**`char`**|下位バイトを維持。|
+|**`unsigned long`**|**`short`**|下位ワードを維持。|
+|**`unsigned long`**|**`long`**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**`unsigned long`**|**`long long`**|ゼロ拡張。|
+|**`unsigned long`**|**`unsigned char`**|下位バイトを維持。|
+|**`unsigned long`**|**`unsigned short`**|下位ワードを維持。|
+|**`unsigned long`**|**`unsigned long long`**|ゼロ拡張。|
+|**`unsigned long`**|**`float`**|**`long`** への変換、 **`long`** を **`float`** に変換|
+|**`unsigned long`**|**`double`**|**`double`** への直接変換|
+|**`unsigned long`**|**`long double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
+|**`unsigned long long`**|**`char`**|下位バイトを維持。|
+|**`unsigned long long`**|**`short`**|下位ワードを維持。|
+|**`unsigned long long`**|**`long`**|下位 dword を維持。|
+|**`unsigned long long`**|**`long long`**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**`unsigned long long`**|**`unsigned char`**|下位バイトを維持。|
+|**`unsigned long long`**|**`unsigned short`**|下位ワードを維持。|
+|**`unsigned long long`**|**`unsigned long`**|下位 dword を維持。|
+|**`unsigned long long`**|**`float`**|**`long`** への変換、 **`long`** を **`float`** に変換|
+|**`unsigned long long`**|**`double`**|**`double`** への直接変換|
+|**`unsigned long long`**|**`long double`**|**`long`** への変換、 **`long`** を **`double`** に変換|
 
 ## <a name="see-also"></a>関連項目
 

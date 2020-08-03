@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217169"
 ---
 # <a name="c-storage-classes"></a>C ストレージ クラス
 
@@ -27,18 +27,18 @@ C には、次のストレージ クラス指定子が用意されています�
 ## <a name="syntax"></a>構文
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft 固有の仕様 \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **`auto`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`register`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`static`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`__declspec (`** *extended-decl-modifier-seq* **`)`**  /\* Microsoft 固有 \*/
 
-`__declspec` を除いて、宣言の *declaration-specifier* では 1 個の *storage-class-specifier* のみ使用できます。 ストレージ クラスの指定が行われない場合、ブロック内の宣言により自動オブジェクトが作成されます。
+**`__declspec`** を除いて、宣言の *declaration-specifier* では 1 個の *storage-class-specifier* のみ使用できます。 ストレージ クラスの指定が行われない場合、ブロック内の宣言により自動オブジェクトが作成されます。
 
-**auto** または **register** 指定子で宣言された項目にはローカルの有効期間があります。 **static** または `extern` 指定子で宣言された項目にはグローバルの有効期間があります。
+**`auto`** または **`register`** 指定子で宣言された項目にはローカルの有効期間があります。 **`static`** または **`extern`** 指定子で宣言された項目にはグローバルの有効期間があります。
 
-`typedef` および `__declspec` は他の 4 つの *storage-class-specifier* 終端要素とは意味が異なるため、個別に説明しています。 `typedef` の具体的な情報については、「[Typedef Declarations (Typedef の宣言)](../c-language/typedef-declarations.md)」をご覧ください。 `__declspec` の具体的な情報については、[拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)に関するページをご覧ください。
+**`typedef`** および **`__declspec`** は他の 4 つの *storage-class-specifier* 終端要素とは意味が異なるため、個別に説明しています。 **`typedef`** の具体的な情報については、「[`typedef` の宣言](../c-language/typedef-declarations.md)」を参照してください。 **`__declspec`** の具体的な情報については、[拡張ストレージクラス属性](../c-language/c-extended-storage-class-attributes.md)に関するページを参照してください。
 
 ソース ファイル内の変数と関数宣言の配置は、ストレージ クラスと可視性にも影響します。 すべての関数定義の外部にある宣言は、"外部レベル" での記述と呼ばれます。 関数定義内での宣言は、"内部レベル" で記述されます。
 

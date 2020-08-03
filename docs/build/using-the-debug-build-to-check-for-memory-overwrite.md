@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 42e3a7f1f1c34ba5a263adfca7496c24e162ab5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213750"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>デバッグ ビルドを使用したメモリ上書きのチェック
 
@@ -21,7 +21,7 @@ afxMemDF |= checkAlwaysMemDF;
 
 デバッグ メモリ アロケーターによって、すべてのメモリ割り当ての周りにガード バイトが配置されます。 ただし、このようなガード バイトは、変更されている (メモリの上書きが示されている) かどうかをチェックしない限り、役に立ちません。 そうでなければ、実際のところ、これはメモリの上書きを回避できる可能性がある単なるバッファーです。
 
-`checkAlwaysMemDF` を有効にすると、**new** または **delete** が呼び出されるたびに `AfxCheckMemory` 関数を呼び出すように MFC に強制することになります。 メモリの上書きが検出された場合、次のような TRACE メッセージが生成されます。
+`checkAlwaysMemDF` を有効にすると、 **`new`** または **`delete`** が呼び出されるたびに `AfxCheckMemory` 関数を呼び出すように MFC に強制することになります。 メモリの上書きが検出された場合、次のような TRACE メッセージが生成されます。
 
 ```
 Damage Occurred! Block=0x5533

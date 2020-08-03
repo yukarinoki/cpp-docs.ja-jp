@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219678"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>チュートリアル: プロジェクトのデバッグ (C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "67400977"
 
 1. プログラムを実行するには、メニュー バーで **[デバッグ]**  >  **[ステップ オーバー]** の順に選択するか、**F10** キーを押します。
 
-   `Cardgame` コンストラクターが実行されるたびに `totalParticipants` の値が増加します。 `PlayGames` 関数が返されると、`Cardgame` インスタンスがスコープ外に出て削除される (デストラクターが呼び出される) ため、`totalParticipants` が減少します。 `return` ステートメントが実行される直前に、`totalParticipants` は 0 になります。
+   `Cardgame` コンストラクターが実行されるたびに `totalParticipants` の値が増加します。 `PlayGames` 関数が返されると、`Cardgame` インスタンスがスコープ外に出て削除される (デストラクターが呼び出される) ため、`totalParticipants` が減少します。 **`return`** ステートメントが実行される直前に、`totalParticipants` は 0 になります。
 
 1. プログラムが終了するまで続行するか、またはメニュー バーの **[デバッグ]**  >  **[実行]** を選択するか **F5** キーを選択して続行します。
 

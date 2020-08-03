@@ -7,18 +7,18 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218898"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversions to and from Pointer Types (ポインター型との間の変換)
 
 ある型の値へのポインターは、別の型へのポインターに変換できます。 ただし、結果は、各型のストレージのアラインメント要件とサイズの違いにより、未定義になることがあります。 オブジェクトへのポインターは、型のストレージ アラインメントの厳密さが同じか、それ以下のオブジェクトへのポインターに変更でき、変更なしで元に戻すことができます。
 
-`void` へのポインターは、情報の制限や損失なしに任意の型へのポインターとの間で変換できます。 結果が元の型に戻される場合、元のポインターが復元されます。
+**`void`** へのポインターは、情報の制限や損失なしに任意の型へのポインターとの間で変換できます。 結果が元の型に戻される場合、元のポインターが復元されます。
 
 ポインターが、型は同じでも修飾子が異なるか、修飾子の追加された別のポインターに変換される場合、新しいポインターは、新しい修飾子の制限を除いて、古いポインターと同じになります。
 
@@ -34,7 +34,7 @@ ms.locfileid: "62312417"
 
 - 整数型のサイズがポインター型のサイズと異なる場合、整数型は最初に「[符号付き整数型からの変換](../c-language/conversions-from-signed-integral-types.md)」と「[符号なし整数型からの変換](../c-language/conversions-from-unsigned-integral-types.md)」の表で指定された変換パスを使用して、ポインターのサイズに変換されます。 その後、これがポインター値として扱われます。
 
-値 0 の整数定数式、または **void** <strong>\*</strong> 型にキャストされた整数定数式は、型キャスト、代入、または任意の型のポインターとの比較によって変換できます。 これによって、同じ型の別の null ポインターと等しい null ポインターが生成されます。しかし、この null ポインターは、関数またはオブジェクトへのポインターとは等しくありません。 定数 0 以外の整数はポインター型に変換することができますが、結果は移植できません。
+値 0 の整数定数式、または **`void`** <strong>\*</strong> 型にキャストされた整数定数式は、型キャスト、代入、または任意の型のポインターとの比較によって変換できます。 これによって、同じ型の別の null ポインターと等しい null ポインターが生成されます。しかし、この null ポインターは、関数またはオブジェクトへのポインターとは等しくありません。 定数 0 以外の整数はポインター型に変換することができますが、結果は移植できません。
 
 ## <a name="see-also"></a>関連項目
 
