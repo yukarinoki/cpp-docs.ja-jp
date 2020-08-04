@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214101"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520643"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 
@@ -77,7 +77,7 @@ class COleDispatchDriver
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|またはオブジェクトの破棄中にを解放するかどうかを指定し `IDispatch` `ReleaseDispatch` ます。|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|`IDispatch`このにアタッチされているインターフェイスへのポインターを示し `COleDispatchDriver` ます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `COleDispatchDriver`に基底クラスがありません。
 
@@ -117,7 +117,7 @@ void AttachDispatch(
 *bAutoRelease*<br/>
 このオブジェクトがスコープ外になるときにディスパッチが解放されるかどうかを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この関数は、 `IDispatch` オブジェクトに既にアタッチされている `COleDispatchDriver` ポインターを解放します。
 
@@ -146,13 +146,13 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 *dispatchSrc*<br/>
 既存のオブジェクトへの参照 `COleDispatchDriver` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
-フォーム `COleDispatchDriver` ( `LPDISPATCH lpDispatch` 、 **BOOL** `bAutoRelease`  =  **TRUE**) は[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイスに接続します。
+フォームは `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイスに接続します。
 
-フォーム `COleDispatchDriver` () は、既存のオブジェクトを **`const`** `COleDispatchDriver` &  `dispatchSrc` コピーし、 `COleDispatchDriver` 参照カウントをインクリメントします。
+フォームは `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` 既存のオブジェクトをコピー `COleDispatchDriver` し、参照カウントをインクリメントします。
 
-フォーム `COleDispatchDriver` () はオブジェクトを作成し `COleDispatchDriver` ますが、インターフェイスには接続しません `IDispatch` 。 引数を指定せずに () を使用する前に、 `COleDispatchDriver` `IDispatch` [COleDispatchDriver:: CreateDispatch](#createdispatch)または[COleDispatchDriver:: attachdispatch](#attachdispatch)を使用してに接続する必要があります。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
+フォームは `COleDispatchDriver( )` オブジェクトを作成し `COleDispatchDriver` ますが、インターフェイスには接続しません `IDispatch` 。 引数を指定せずにを使用する前に、 `COleDispatchDriver( )` `IDispatch` [COleDispatchDriver:: CreateDispatch](#createdispatch)または[COleDispatchDriver:: attachdispatch](#attachdispatch)を使用してに接続する必要があります。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -203,7 +203,7 @@ LPDISPATCH DetachDispatch();
 
 以前にアタッチされた OLE オブジェクトへのポインター `IDispatch` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 `IDispatch`が解放されていません。
 
@@ -272,13 +272,13 @@ void AFX_CDECL InvokeHelper(
 *...*<br/>
 *Pbparaminfo*で指定された型のパラメーターの変数リスト。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 *Pbparaminfo*パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 引数の変数一覧は、構文宣言では、 **...** で表されます。
 
 *Vtret*引数に使用できる値は、varenum 列挙体から取得されます。 使用できる値は次のとおりです。
 
-|Symbol|戻り値の型|
+|シンボル|戻り値の型|
 |------------|-----------------|
 |VT_EMPTY|**`void`**|
 |VT_I2|**`short`**|
@@ -312,7 +312,7 @@ TRUE の場合、 [m_lpDispatch](#m_lpdispatch)によってアクセスされる
 BOOL m_bAutoRelease;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 既定で `m_bAutoRelease` は、はコンストラクターで TRUE に設定されます。
 
@@ -330,7 +330,7 @@ COM オブジェクトの解放の詳細については、「Windows SDK での[
 LPDISPATCH m_lpDispatch;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 この `m_lpDispatch` データメンバーは、LPDISPATCH 型のパブリック変数です。
 
@@ -373,7 +373,7 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 自動リリースがこの接続に対して設定されている場合、この関数は `IDispatch::Release` インターフェイスを解放する前にを呼び出します。
 

@@ -2,12 +2,12 @@
 title: 1. はじめに
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 60a5090814b722cc0d9f6e51ab9038e697a4ed2a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2857565f7838ae45ff88ea53ba714e1418116ff
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231651"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521175"
 ---
 # <a name="1-introduction"></a>1.はじめに
 
@@ -91,7 +91,7 @@ ms.locfileid: "87231651"
 
   制御のシリアルフロー、一連のプライベート変数、共有変数へのアクセスを持つ実行エンティティ。
 
-- 可変
+- 変数
 
   名前空間名によって修飾され、オブジェクトに名前を持つ識別子。
 

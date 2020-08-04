@@ -1,4 +1,4 @@
-﻿---
+---
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:
@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228948"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521123"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ ms.locfileid: "87228948"
 
 ## <a name="grammar"></a>文法
 
-*宣言子*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *拡張宣言-seq*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*拡張宣言*修飾子の*拡張-seq-seq*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *`extended-decl-modifier`* <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***番号***`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ ms.locfileid: "87228948"
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get-func-name_ &#124; **`,put=`** _put-name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ ms.locfileid: "87228948"
 
 拡張属性の文法では、Microsoft 固有のストレージクラス属性である、、、、、、、、、、、、、、、、、、、、およびがサポートさ [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) れてい [`thread`](../cpp/thread.md) ます。 また、これらの COM オブジェクト属性 (および) もサポートしてい [`property`](../cpp/property-cpp.md) [`uuid`](../cpp/uuid-cpp.md) ます。
 
-、、、、、、、、、、 **`code_seg`** **`dllexport`** およびの **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** 各ストレージクラス属性は、適用先のオブジェクトまたは関数の宣言のプロパティにすぎません。 属性は、 **`thread`** データとオブジェクトにのみ影響します。 **`naked`** 属性と **`spectre`** 属性は、関数にのみ影響します。 **`dllimport`** 属性と **`dllexport`** 属性は、関数、データ、およびオブジェクトに影響します。 **`property`**、 **`selectany`** 、および**uu'id**属性は、COM オブジェクトに影響を与えます。
+、、、、、、、、、、 **`code_seg`** **`dllexport`** およびの **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** 各ストレージクラス属性は、適用先のオブジェクトまたは関数の宣言のプロパティにすぎません。 属性は、 **`thread`** データとオブジェクトにのみ影響します。 **`naked`** 属性と **`spectre`** 属性は、関数にのみ影響します。 **`dllimport`** 属性と **`dllexport`** 属性は、関数、データ、およびオブジェクトに影響します。 **`property`**、、およびの各属性は、 **`selectany`** **`uuid`** COM オブジェクトに影響を与えます。
 
 以前のバージョンとの互換性を維持するために、 **`_declspec`** **`__declspec`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、はのシノニムになります。
 

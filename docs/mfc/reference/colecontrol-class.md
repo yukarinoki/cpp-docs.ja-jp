@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470920"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520695"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -1186,7 +1186,7 @@ void AFX_CDECL FireEvent(
 
 *Pbparams*引数は、スペースで区切られた**VTS_** の一覧です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用できる値は次のとおりです。
 
-|Symbol|パラメーターのタイプ|
+|シンボル|パラメーターのタイプ|
 |------------|--------------------|
 |VTS_COLOR|OLE_COLOR|
 |VTS_FONT|`IFontDisp*`|
@@ -1204,7 +1204,7 @@ void AFX_CDECL FireEvent(
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべてのバリアント型に対して追加のバリアント定数が定義されています。 これらの定数には、 **VTS_P**規約を使用して名前が付けられ `constantname` ます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
+> Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべてのバリアント型に対して追加のバリアント定数が定義されています。 これらの定数には、VTS_P 規約を使用して名前が付けられ \<CONSTANT-NAME> ます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl:: 焼討 Keydown
 
@@ -1989,7 +1989,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="remarks"></a>Remarks
 
-通常、これを行うには、コントロールのウィンドウがドロップ先として登録されている必要があります。 ただし、コントロールには独自のウィンドウがないため、コンテナーは独自のウィンドウをドロップ先として使用します。 コントロールは、 `IDropTarget` 適切なタイミングでコンテナーが呼び出しを委任できるインターフェイスの実装を提供するだけです。 例:
+通常、これを行うには、コントロールのウィンドウがドロップ先として登録されている必要があります。 ただし、コントロールには独自のウィンドウがないため、コンテナーは独自のウィンドウをドロップ先として使用します。 コントロールは、 `IDropTarget` 適切なタイミングでコンテナーが呼び出しを委任できるインターフェイスの実装を提供するだけです。 次に例を示します。
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2448,7 +2448,7 @@ virtual BOOL OnEdit(
 
 これは、コントロールの OLEIVERB_UIACTIVATE 動詞を呼び出すのと同じ効果があります。
 
-この関数は、通常、ON_OLEVERB メッセージマップエントリのハンドラー関数として使用されます。 これにより、コントロールの "オブジェクト" メニューで "編集" 動詞を使用できるようになります。 例:
+この関数は、通常、ON_OLEVERB メッセージマップエントリのハンドラー関数として使用されます。 これにより、コントロールの "オブジェクト" メニューで "編集" 動詞を使用できるようになります。 次に例を示します。
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 

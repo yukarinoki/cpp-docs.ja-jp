@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f521e8ec083cd158212b3ae9cb9fcf26edc7e76
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454991"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520513"
 ---
-# <a name="underflowerror-class"></a>underflow_error クラス
+# <a name="underflow_error-class"></a>underflow_error クラス
 
 このクラスは、算術アンダーフローを通知するためにスローされる例外すべてに対する基底クラスとして機能します。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-[what](../standard-library/exception-class.md) によって返される値は、**message**`.`[data](../standard-library/basic-string-class.md#data) のコピーです。
+によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<stdexcept>
+**ヘッダー:**\<stdexcept>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [runtime_error クラス](../standard-library/runtime-error-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

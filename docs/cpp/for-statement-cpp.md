@@ -1,29 +1,29 @@
-﻿---
+---
 title: for ステートメント (C++)
 description: Microsoft Visual Studio C++ の標準 C++ for ステートメントへの参照。
 f1_keywords:
 - for_cpp
-ms.date: 04/14/2020
+ms.date: 07/31/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b32a50e376113f9f9d550d4984d05fc8c675f14d
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231183"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520850"
 ---
-# <a name="for-statement-c"></a>for ステートメント (C++)
+# <a name="for-statement-c"></a>`for`ステートメント (C++)
 
-条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントの詳細については、「[範囲ベースの For ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)」を参照してください。
+条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースのステートメントの詳細につい **`for`** ては、「[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **`for (`***init-式* **`;`** 指定した*式* **`;`***ループ式***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_諸表_**`;`**
+> **`for (`** *`init-expression`* **`;`** *`cond-expression`* **`;`** *`loop-expression`* **`)`**\
+> &emsp;*`statement`*
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 ステートメントを使用し **`for`** て、指定された回数だけ実行する必要があるループを構築します。
 
@@ -31,11 +31,11 @@ ms.locfileid: "87231183"
 
 ### <a name="for-loop-elements"></a>for ループ要素
 
-|構文の名前|実行タイミング|[説明]|
-|-----------------|-------------------|-----------------|
-|`init-expression`|ステートメントの他の要素の前に **`for`** 、 `init-expression` が1回だけ実行されます。 その後、制御は `cond-expression` に渡されます。|ループ インデックスを初期化するためによく使用されます。 式または宣言を含めることができます。|
-|`cond-expression`|最初のイテレーションを含む `statement` の各イテレーションの実行前。 `statement` は、`cond-expression` が true (0 以外) に評価された場合にのみ実行されます。|整数型に評価される式、または整数型へのあいまいでない変換が行われるクラス型。 通常、for ループの終了条件をテストするために使用します。|
-|`loop-expression`|`statement` の各イテレーションの終了時。 `loop-expression` の実行後に `cond-expression` が実行されます。|通常、ループ インデックスのインクリメントに使用します。|
+| 構文名 | 実行時 | 説明 |
+|--|--|--|
+| *`init-expression`* | ステートメントの他の要素の前に **`for`** 、 *`init-expression`* が1回だけ実行されます。 次に、コントロールがに渡さ *`cond-expression`* れます。 | ループ インデックスを初期化するためによく使用されます。 式または宣言を含めることができます。 |
+| *`cond-expression`* | 最初のイテレーションを含め、の各イテレーションの実行前 *`statement`* 。 *`statement`* が *`cond-expression`* true (0 以外) に評価される場合にのみ、が実行されます。 | 整数型に評価される式、または整数型へのあいまいでない変換が行われるクラス型。 通常、for ループの終了条件をテストするために使用します。 |
+| *`loop-expression`* | 各イテレーションの終了時 *`statement`* 。 *`loop-expression`* が実行されると、 *`cond-expression`* が評価されます。 | 通常、ループ インデックスのインクリメントに使用します。 |
 
 次の例では、ステートメントを使用するさまざまな方法を示し **`for`** ます。
 
@@ -60,11 +60,11 @@ int main() {
     while (i < 2){
         cout << i++;
     }
+    // Output: 01
 }
-    // Output: 012
 ```
 
-`init-expression` と `loop-expression` には、コンマで区切った複数のステートメントを含めることができます。 次に例を示します。
+*`init-expression`* と *`loop-expression`* には、コンマで区切られた複数のステートメントを含めることができます。 次に例を示します。
 
 ```cpp
 #include <iostream>
@@ -82,7 +82,7 @@ int main(){
     i + j = 19
 ```
 
-`loop-expression` はインクリメントまたはデクリメントするか、他の方法で変更することができます。
+*`loop-expression`* インクリメントまたはデクリメントしたり、他の方法で変更したりできます。
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-ループは、 **`for`** 内の[break](../cpp/break-statement-cpp.md)、 [return](../cpp/return-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md) (ループの外側のラベル付きステートメントに対する **`for`** ) が実行されると終了 `statement` します。 ループ内の[continue](../cpp/continue-statement-cpp.md)ステートメントは **`for`** 、現在のイテレーションのみを終了します。
+ループは、内の、、、 **`for`** [`break`](../cpp/break-statement-cpp.md) または[return](../cpp/return-statement-cpp.md) [`goto`](../cpp/goto-statement-cpp.md) (ループの外側のラベル付きステートメントに対する **`for`** ) が実行されると終了 *`statement`* します。 [`continue`](../cpp/continue-statement-cpp.md)ループ内のステートメントは **`for`** 、現在のイテレーションのみを終了します。
 
-を省略した場合は、と見なされ、 `cond-expression` **`true`** **`for`** **`break`** **`return`** 内で、、またはがないとループは終了しません **`goto`** `statement` 。
+を省略した場合は、と見なされ、 *`cond-expression`* **`true`** **`for`** **`break`** **`return`** 内で、、またはがないとループは終了しません **`goto`** *`statement`* 。
 
-ステートメントの3つのフィールドは **`for`** 通常、初期化、終了のテスト、および増分のために使用されますが、これらのフィールドはこれらの使用に限定されません。 たとえば、次のコードは、数値 0 ～ 4 を出力します。 この場合、`statement` は null ステートメントです。
+ステートメントの3つのフィールドは **`for`** 通常、初期化、終了のテスト、および増分のために使用されますが、これらのフィールドはこれらの使用に限定されません。 たとえば、次のコードは、数値 0 ～ 4 を出力します。 この場合、 *`statement`* は null ステートメントです。
 
 ```cpp
 #include <iostream>
@@ -118,7 +118,7 @@ int main()
 }
 ```
 
-## <a name="for-loops-and-the-c-standard"></a>for ループおよび C++ 標準
+## <a name="for-loops-and-the-c-standard"></a>`for`ループと C++ 標準
 
 C++ 標準では、ループの終了後に、ループで宣言された変数がスコープ外に出てくるということが示されて **`for`** **`for`** います。 次に例を示します。
 

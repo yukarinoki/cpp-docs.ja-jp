@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229104"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521162"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>ビット処理排他的 OR 演算子: ^
 
@@ -26,9 +26,9 @@ ms.locfileid: "87229104"
 
 > *式* **`^`***式*
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-ビットごとの排他的 OR 演算子 () は、 **`^`** 最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 1番目のオペランドのビットが0でもう一方のビットが1の場合、対応する結果ビットは1に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。
+ビットごとの排他的 OR 演算子 () は、 **`^`** 最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 一方のオペランドのビットが0で、もう一方のオペランドのビットが1の場合、対応する結果のビットは1に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。
 
 演算子へのオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
 

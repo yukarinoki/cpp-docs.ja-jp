@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: c88b9e3af5d00a3d2c0b3146783b0babe9d0a01a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 740ae69948a8f1975872f223ba51fb669121a891
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447595"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520889"
 ---
-# <a name="lengtherror-class"></a>length_error クラス
+# <a name="length_error-class"></a>length_error クラス
 
 このクラスは、生成を試みたオブジェクトが長すぎて指定できないことを通知するためにスローされる例外すべてに対する基底クラスとして機能します。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-[what](../standard-library/exception-class.md) によって返される値は、**message**`.`[data](../standard-library/basic-string-class.md#data) のコピーです。
+によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -77,11 +77,11 @@ Type class std::length_error
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<stdexcept>
+**ヘッダー:**\<stdexcept>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [logic_error クラス](../standard-library/logic-error-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

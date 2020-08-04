@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-ms.openlocfilehash: c4c4436c32f5f23c6bea119e95b165631384f583
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a860e10994934ae0e97950fddb14e573f8752833
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451116"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520902"
 ---
-# <a name="runtimeerror-class"></a>runtime_error クラス
+# <a name="runtime_error-class"></a>runtime_error クラス
 
 このクラスは、プログラムの実行時にのみ検出可能なエラーを通知するためにスローされる例外すべてに対する基底クラスとして機能します。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-[exception クラス](../standard-library/exception-class.md)によって返される値は、**message**`.`[data](../standard-library/basic-string-class.md#data) のコピーです。
+によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -63,11 +63,11 @@ Type class std::runtime_error
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<stdexcept>
+**ヘッダー:**\<stdexcept>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [exception クラス](../standard-library/exception-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

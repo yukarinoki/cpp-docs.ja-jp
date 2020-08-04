@@ -1,6 +1,6 @@
 ---
 title: /cgthreads (コード生成スレッド)
-ms.date: 11/04/2016
+ms.date: 07/31/2020
 f1_keywords:
 - /cgthreads
 helpviewer_keywords:
@@ -9,43 +9,46 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: df353eb255c731478863ed6088cafa1cc38053fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294695"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520876"
 ---
-# <a name="cgthreads-code-generation-threads"></a>/cgthreads (コード生成スレッド)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(コード生成スレッド)
 
 最適化とコード生成に使用するための cl.exe スレッドの数を設定します。
 
 ## <a name="syntax"></a>構文
 
-```
-/cgthreads[1-8]
-```
+> **`/cgthreads1`**\
+> **`/cgthreads2`**\
+> **`/cgthreads3`**\
+> **`/cgthreads4`**\
+> **`/cgthreads5`**\
+> **`/cgthreads6`**\
+> **`/cgthreads7`**\
+> **`/cgthreads8`**
 
 ## <a name="arguments"></a>引数
 
-*number*<br/>
-cl.exe が使用できるスレッドの最大数で、1 から 8 の範囲。
+**`cgthreadsN`**\
+cl.exe が使用するスレッドの最大数。 *N*は 1 ~ 8 の範囲の数値です。
 
 ## <a name="remarks"></a>Remarks
 
-**/Cgthreads**オプションは、cl.exe のスレッドの最大数を使用して並列での最適化およびコード コンパイルの生成のフェーズを指定します。 できませんの間にスペースに注意してください。 **/cgthreads**と`number`引数。 既定では、cl.exe は 4 つのスレッドを使用する場合と **/cgthreads4**指定されました。 より多くのプロセッサ コアが使用できる場合、より大きい `number` 値はビルド時間を改善できます。 このオプションと結合されている場合に特に役立ちます[/GL (Whole Program Optimization)](gl-whole-program-optimization.md)します。
+オプションは、 **`cgthreads`** コンパイルの最適化およびコード生成のフェーズで並列に使用 cl.exe スレッドの最大数を指定します。 **`cgthreads`** と*number*引数の間にはスペースを使用できないことに注意してください。 既定では、が指定されている場合と同様に、cl.exe は4つのスレッドを使用し **`/cgthreads4`** ます。 使用可能なプロセッサコアが多い場合は、*数値*を大きくするとビルド時間が短縮されます。 このオプションは、 [ `/GL` (プログラム全体の最適化)](gl-whole-program-optimization.md)と組み合わせた場合に特に便利です。
 
-ビルドでは複数のレベルの並列化を指定できます。 Msbuild.exe スイッチ **/maxcpucount**並列に実行できる MSBuild プロセスの数を指定します。 [/MP (複数のプロセスを使用したビルド)](mp-build-with-multiple-processes.md)コンパイラ フラグを同時にソース ファイルをコンパイルする cl.exe プロセスの数を指定します。 **/Cgthreads**オプションは、それぞれの cl.exe プロセスで使用されるスレッドの数を指定します。 プロセッサは、プロセッサ コアの数しかスレッドを同時に実行できないため、これらすべてのオプションに、より大きな値を同時に設定するのは効果的ではなく、逆効果になる場合もあります。 プロジェクトの並行ビルドする方法の詳細については、次を参照してください。[複数プロジェクトの並行ビルド](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)します。
+ビルドでは複数のレベルの並列化を指定できます。 msbuild.exe スイッチは、 **`/maxcpucount`** 並列で実行できる MSBuild プロセスの数を指定します。 [ `/MP` (複数のプロセスを使用したビルド)](mp-build-with-multiple-processes.md)コンパイラフラグは、ソースファイルを同時にコンパイルする cl.exe プロセスの数を指定します。 オプションは、 **`cgthreads`** 各 cl.exe プロセスによって使用されるスレッドの数を指定します。 プロセッサは、プロセッサコアの数と同時に実行できるスレッドは1つだけです。 これらのオプションのすべてに対して大きな値を同時に指定することはできず、逆の場合もあります。 プロジェクトを並行してビルドする方法の詳細については、「[複数のプロジェクトの並行](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)ビルド」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ**、 **C/C++** フォルダー。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. 選択、**コマンドライン**プロパティ ページ。
-
-1. 変更、**追加オプション**含めるプロパティを **/cgthreads**`N`ここで、`N`は 1 から 8 の値を選び**OK**。
+1. [**追加オプション**] プロパティを変更して **`cgthreadsN`** 、を含めます。ここで、 *`N`* は 1 ~ 8 の値です。次に、[ **OK]** を選択します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -53,5 +56,5 @@ cl.exe が使用できるスレッドの最大数で、1 から 8 の範囲。
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラオプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

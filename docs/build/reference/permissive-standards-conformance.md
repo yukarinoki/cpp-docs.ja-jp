@@ -1,4 +1,4 @@
-﻿---
+---
 title: /permissive- (標準への準拠)
 description: Microsoft C++/permissive-(標準準拠) コンパイラオプションのリファレンスガイド。
 ms.date: 06/04/2020
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217208"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520552"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準への準拠)
 
@@ -26,7 +26,7 @@ ms.locfileid: "87217208"
 
 > **`/permissive-`**
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 このオプションは、Visual Studio 2017 以降でサポートされています。
 
@@ -240,13 +240,13 @@ Visual Studio 2017 バージョン15.3 より前のバージョンのコンパ�
 
 この変更によって発生する可能性のある一般的なエラーは次のとおりです。
 
-- **`error C2593`**`: 'operator ?' is ambiguous`
+- `error C2593: 'operator ?' is ambiguous`
 
-- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
+- `error C2679: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
+- `error C2678: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
+- `error C2446: ':': no conversion from 'B' to 'A'`
 
 この問題を引き起こす可能性がある一般的なコードパターンは、クラス C によって、別の型 T からの非明示的なコンストラクターと、非明示的な変換演算子の両方が T 型に提供されている場合です。この場合、2番目の引数を3番目の引数の型に変換し、3番目の引数を2番目の引数の型に変換することは、有効な変換です。 どちらも有効であるため、標準に従ってあいまいです。
 

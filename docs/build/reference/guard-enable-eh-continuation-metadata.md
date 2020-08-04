@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190521"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520526"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (EH 継続メタデータを有効にする)
 
@@ -23,7 +23,7 @@ ms.locfileid: "87190521"
 
 > **`/guard:ehcont`**[**`-`**]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 オプションを指定 **`/guard:ehcont`** すると、コンパイラは、バイナリのすべての有効な例外処理継続ターゲットの相対仮想アドレス (RVA) の並べ替えられたリストを生成します。 これは、ランタイムと命令ポインターの検証で使用され `NtContinue` `SetThreadContext` ます。 既定で **`/guard:ehcont`** は、はオフであり、明示的に有効にする必要があります。 このオプションを明示的に無効にするには、を使用し **`/guard:ehcont-`** ます。
 
@@ -51,9 +51,9 @@ Comdat で見つかったが、を使用してコンパイルされていない 
 
 リンカーがメタデータを生成できない場合は、次のいずれかのエラーが出力されます。
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 バイナリに EHCONT データが含まれているかどうかを確認するには、バイナリのロード構成をダンプするときに次の要素を探します。
 

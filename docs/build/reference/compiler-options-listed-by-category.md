@@ -1,16 +1,16 @@
 ---
 title: カテゴリ別のコンパイラ オプション
 description: Microsoft C/c + + コンパイラのコマンドラインオプションのカテゴリ別の参照リスト。
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223877"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520954"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
@@ -24,7 +24,7 @@ ms.locfileid: "87223877"
 | [`/O2`](o1-o2-minimize-size-maximize-speed.md) | コードを最速化します。 |
 | [`/Ob`](ob-inline-function-expansion.md) | 関数のインライン展開を制御します。 |
 | [`/Od`](od-disable-debug.md) | 最適化を無効にします。 |
-| [`/Og`](og-global-optimizations.md) | 非推奨。 グローバル最適化を使用します。 |
+| [`/Og`](og-global-optimizations.md) | 非推奨になりました。 グローバル最適化を使用します。 |
 | [`/Oi`](oi-generate-intrinsic-functions.md) | 組み込み関数を生成します。 |
 | [`/Os`](os-ot-favor-small-code-favor-fast-code.md) | 実行可能ファイルで、サイズの小ささを優先させます。 |
 | [`/Ot`](os-ot-favor-small-code-favor-fast-code.md) | 実行可能ファイルで、実行速度を優先させます。 |
@@ -42,12 +42,12 @@ ms.locfileid: "87223877"
 | [`/fp`](fp-specify-floating-point-behavior.md) | 浮動小数点の動作を指定します。 |
 | [`/GA`](ga-optimize-for-windows-application.md) | Windows アプリケーション用に最適化します。 |
 | [`/Gd`](gd-gr-gv-gz-calling-convention.md) | **`__cdecl`** 呼び出し規約を使用します。 (x86 のみ) |
-| [`/Ge`](ge-enable-stack-probes.md) | 非推奨。 スタック プローブをアクティブにします。 |
+| [`/Ge`](ge-enable-stack-probes.md) | 非推奨になりました。 スタック プローブをアクティブにします。 |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | 文字列プールを有効にします。 |
 | [`/Gh`](gh-enable-penter-hook-function.md) | フック関数 `_penter`を呼び出します。 |
 | [`/GH`](gh-enable-pexit-hook-function.md) | フック関数 `_pexit`を呼び出します。 |
 | [`/GL`](gl-whole-program-optimization.md) | プログラム全体の最適化を有効にします。 |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | 非推奨。 簡易リビルドを有効にします。 |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | 非推奨になりました。 簡易リビルドを有効にします。 |
 | [`/GR`](gr-enable-run-time-type-information.md) | ランタイム型情報 (RTTI: Run-Time Type Information) を有効にします。 |
 | [`/Gr`](gd-gr-gv-gz-calling-convention.md) | **`__fastcall`** 呼び出し規約を使用します。 (x86 のみ) |
 | [`/GS`](gs-buffer-security-check.md) | バッファーのセキュリティをチェックします。 |
@@ -57,14 +57,14 @@ ms.locfileid: "87223877"
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | EH 継続メタデータを有効にします。 |
 | [`/Gv`](gd-gr-gv-gz-calling-convention.md) | **`__vectorcall`** 呼び出し規約を使用します。 (x86 と x64 のみ)。 |
 | [`/Gw`](gw-optimize-global-data.md) | プログラム全体のグローバル データの最適化を有効にします。 |
-| [`/GX`](gx-enable-exception-handling.md) | 非推奨。 同期例外処理を有効にします。 代わりにを使用 [`/EH`](eh-exception-handling-model.md) してください。 |
+| [`/GX`](gx-enable-exception-handling.md) | 非推奨になりました。 同期例外処理を有効にします。 代わりにを使用 [`/EH`](eh-exception-handling-model.md) してください。 |
 | [`/Gy`](gy-enable-function-level-linking.md) | 関数レベルのリンクを有効にします。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨。 高速チェックを有効にします (と同じ [`/RTC1`](rtc-run-time-error-checks.md) ) |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨になりました。 高速チェックを有効にします (と同じ [`/RTC1`](rtc-run-time-error-checks.md) ) |
 | [`/Gz`](gd-gr-gv-gz-calling-convention.md) | **`__stdcall`** 呼び出し規約を使用します。 (x86 のみ) |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラオプションは、x64 コンパイラ (ネイティブコンパイルおよびクロスコンパイル) に対してのみ使用できます。 |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | ホットパッチ可能なイメージを作成します。 |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | 高速超越関数を生成します。 |
-| [`/QIfist`](qifist-suppress-ftol.md) | 非推奨。 浮動小数点型から整数型への変換が必要なときには、ヘルパー関数 `_ftol` を呼び出しません。 (x86 のみ) |
+| [`/QIfist`](qifist-suppress-ftol.md) | 非推奨になりました。 浮動小数点型から整数型への変換が必要なときには、ヘルパー関数 `_ftol` を呼び出しません。 (x86 のみ) |
 | [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | `fwait` **`try`** ブロック内のコマンドを削除します。 |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Intel JCC erratum マイクロコード更新のパフォーマンスへの影響を軽減します。 |
 | [`/Qpar`](qpar-auto-parallelizer.md) | ループの自動並列化を有効にします。 |
@@ -125,7 +125,7 @@ ms.locfileid: "87223877"
 | [`/Z7`](z7-zi-zi-debug-information-format.md) | C 7.0 互換のデバッグ情報を生成します。 |
 | [`/Za`](za-ze-disable-language-extensions.md) | C89 言語拡張を無効にします。 |
 | [`/Zc`](zc-conformance.md) | の標準動作を指定し [`/Ze`](za-ze-disable-language-extensions.md) ます。 |
-| [`/Ze`](za-ze-disable-language-extensions.md) | 非推奨。 C89 言語拡張を有効にします。 |
+| [`/Ze`](za-ze-disable-language-extensions.md) | 非推奨になりました。 C89 言語拡張を有効にします。 |
 | [`/Zf`](zf.md) | 並列ビルドでの PDB 生成時間を改善します。 |
 | [`/ZH`](zh.md) | デバッグ情報のチェックサムに MD5、SHA-1、または SHA-256 を指定します。 |
 | [`/ZI`](z7-zi-zi-debug-information-format.md) | エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。 (x86 のみ) |
@@ -159,10 +159,10 @@ ms.locfileid: "87223877"
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | .obj ファイル内のアドレス指定可能なセクションの数を増やします。 |
 | [`/c`](c-compile-without-linking.md) | リンクを行わないでコンパイルします。 |
 | [`/cgthreads`](cgthreads-code-generation-threads.md) | 最適化およびコード生成に使用する*cl.exe*スレッド数を指定します。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
 | [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 診断テキストで*cl.exe*に渡されるソースコードファイルの完全パスを表示します。 |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | PDB ファイルへの書き込みを*MSPDBSRV.EXE*によって強制的にシリアル化します。 |
-| [`/H`](h-restrict-length-of-external-names.md) | 非推奨。 外部名 (パブリック名) の長さを制限します。 |
+| [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
 | [`/HELP`](help-compiler-command-line-help.md) | コンパイラ オプションのリストを出力します。 |
 | [`/J`](j-default-char-type-is-unsigned.md) | 既定の型を変更 **`char`** します。 |
 | [`/JMC`](jmc.md) | ネイティブ C++ マイコードのみデバッグをサポートします。 |
@@ -171,11 +171,12 @@ ms.locfileid: "87223877"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | 著作権情報を表示しません。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 追加のセキュリティ機能と警告を有効にします。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | コンパイル時にすべてのインクルード ファイルの一覧を表示します。 |
+| [`/sourceDependencies`](sourcedependencies.md) | ヘッダー、モジュール、およびその他のソースの依存関係を一覧表示します。 |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | C ソース ファイルを指定します。 |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | すべてのソースファイルが C であることを指定します。 |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | C++ ソース ファイルを指定します。 |
 | [`/TP`](tc-tp-tc-tp-specify-source-file-type.md) | すべてのソースファイルが C++ であることを指定します。 |
-| [`/V`](v-version-number.md) | 非推奨。 バージョン文字列を設定します。 |
+| [`/V`](v-version-number.md) | 非推奨になりました。 バージョン文字列を設定します。 |
 | [`/w`](compiler-option-warning-level.md) | すべての警告を無効にします。 |
 | [`/W0`, `/W1`, `/W2`, `/W3`, `/W4`](compiler-option-warning-level.md) | 出力警告レベルを設定します。 |
 | [`/w1`, `/w2`, `/w3`, `/w4`](compiler-option-warning-level.md) | 指定した警告の警告レベルを設定します。 |
@@ -187,7 +188,7 @@ ms.locfileid: "87223877"
 | [`/Wv`](compiler-option-warning-level.md) | 新しいバージョンのコンパイラで導入された警告を無効にします。 |
 | [`/WX`](compiler-option-warning-level.md) | 警告をエラーとして扱います。 |
 | [`/Yc`](yc-create-precompiled-header-file.md) | *`.PCH`* ファイルを作成します。 |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | 非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりにを使用 [`/Zi`](z7-zi-zi-debug-information-format.md) してください。 |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | 非推奨になりました。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりにを使用 [`/Zi`](z7-zi-zi-debug-information-format.md) してください。 |
 | [`/Yl`](yl-inject-pch-reference-for-debug-library.md) | デバッグ ライブラリの作成時に PCH の参照を挿入します。 |
 | [`/Yu`](yu-use-precompiled-header-file.md) | ビルド時にプリコンパイル済みヘッダー ファイルを使用します。 |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | 現在のビルドで、他のすべてのプリコンパイル済みヘッダー コンパイラ オプションを無視します。 |
@@ -214,21 +215,21 @@ ms.locfileid: "87223877"
 
 | オプション | 目的 |
 |--|--|
-| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 非推奨。 代わりに[ `/LN` (MSIL モジュールの作成)](ln-create-msil-module.md)を使用してください。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
-| [`/Fr`](fr-fr-create-dot-sbr-file.md) | 非推奨。 ローカル変数を含まないブラウザー情報ファイルを作成します。 |
-| [`/Ge`](ge-enable-stack-probes.md) | 非推奨。 スタック プローブをアクティブにします。 既定でオンになっています。 |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | 非推奨。 簡易リビルドを有効にします。 |
-| [`/GX`](gx-enable-exception-handling.md) | 非推奨。 同期例外処理を有効にします。 代わりにを使用 [`/EH`](eh-exception-handling-model.md) してください。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨。 高速チェックを有効にします 代わりにを使用 [`/RTC1`](rtc-run-time-error-checks.md) してください。 |
-| [`/H`](h-restrict-length-of-external-names.md) | 非推奨。 外部名 (パブリック名) の長さを制限します。 |
-| [`/Og`](og-global-optimizations.md) | 非推奨。 グローバル最適化を使用します。 |
-| [`/QIfist`](qifist-suppress-ftol.md) | 非推奨。 浮動小数点型から整数型に変換する方法を指定するために使われていました。 |
-| [`/V`](v-version-number.md) | 非推奨。 *`.obj`* ファイルバージョン文字列を設定します。 |
+| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 非推奨になりました。 代わりに[ `/LN` (MSIL モジュールの作成)](ln-create-msil-module.md)を使用してください。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+| [`/Fr`](fr-fr-create-dot-sbr-file.md) | 非推奨になりました。 ローカル変数を含まないブラウザー情報ファイルを作成します。 |
+| [`/Ge`](ge-enable-stack-probes.md) | 非推奨になりました。 スタック プローブをアクティブにします。 既定でオンになっています。 |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | 非推奨になりました。 簡易リビルドを有効にします。 |
+| [`/GX`](gx-enable-exception-handling.md) | 非推奨になりました。 同期例外処理を有効にします。 代わりにを使用 [`/EH`](eh-exception-handling-model.md) してください。 |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨になりました。 高速チェックを有効にします 代わりにを使用 [`/RTC1`](rtc-run-time-error-checks.md) してください。 |
+| [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
+| [`/Og`](og-global-optimizations.md) | 非推奨になりました。 グローバル最適化を使用します。 |
+| [`/QIfist`](qifist-suppress-ftol.md) | 非推奨になりました。 浮動小数点型から整数型に変換する方法を指定するために使われていました。 |
+| [`/V`](v-version-number.md) | 非推奨になりました。 *`.obj`* ファイルバージョン文字列を設定します。 |
 | [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | 互換性のために残されています。 64 ビット移植性の問題を検出します。 |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | 非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりにを使用 [`/Zi`](z7-zi-zi-debug-information-format.md) してください。 |
-| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | 非推奨。 for ループ スコープの準拠を無効にします。 |
-| [`/Ze`](za-ze-disable-language-extensions.md) | 非推奨。 言語拡張機能を有効にします。 |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | 非推奨になりました。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりにを使用 [`/Zi`](z7-zi-zi-debug-information-format.md) してください。 |
+| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | 非推奨になりました。 for ループ スコープの準拠を無効にします。 |
+| [`/Ze`](za-ze-disable-language-extensions.md) | 非推奨になりました。 言語拡張機能を有効にします。 |
 | [`/Zg`](zg-generate-function-prototypes.md) | Visual Studio 2015 で削除されました。 関数プロトタイプを生成します。 |
 
 ## <a name="see-also"></a>関連項目

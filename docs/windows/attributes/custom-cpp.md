@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215323"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521253"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215323"
 *value*<br/>
 バリアントに含めることができる値。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **カスタム**C++ 属性を使用すると、情報がタイプライブラリに配置されます。 タイプライブラリからカスタム値を読み取るツールが必要です。
 
@@ -44,12 +44,10 @@ ms.locfileid: "87215323"
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
-|||
-|-|-|
-|**適用対象**|COM 以外の**インターフェイス**、 **`class`** 、 **`enum`** s、 `idl_module` メソッド、インターフェイスメンバー、インターフェイスパラメーター、s **`typedef`** 、 **`union`** **`struct`** s|
-|**Repeatable**|はい|
-|**必須属性**|**coclass** (クラスで使用される場合)|
-|**無効な属性**|なし|
+- **適用対象**: 非 COM `interface` 、 `idl_module` メソッド、インターフェイスメンバー、インターフェイスパラメーター、、、、 **`typedef`** **`class`** **`enum`** **`union`** 、および **`struct`** 型。
+- **Repeatable**: はい。
+- **必須の属性**: **coclass** (クラスで使用される場合)。
+- **無効な属性**: なし。
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
