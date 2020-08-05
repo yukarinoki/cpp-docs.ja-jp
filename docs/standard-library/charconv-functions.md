@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230197"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565951"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 関数
 
@@ -23,9 +23,9 @@ ms.locfileid: "87230197"
 |[to_chars](#to_chars) | 整数または浮動小数点値をのシーケンスに変換 **`char`** します。 |
 |[from_chars](#from_chars) | のシーケンスを **`char`** 整数または浮動小数点値に変換します。 |
 
-これらの変換関数は、パフォーマンスのためにチューニングされており、最短ラウンドトリップ動作もサポートしています。 最短ラウンドトリップの動作では、数値が文字に変換されるときに、その文字を浮動小数点型に変換するときに元の数値の復旧を可能にするために、十分な精度だけが書き込まれます。
+これらの変換関数は、パフォーマンスのためにチューニングされており、最短ラウンドトリップ動作もサポートしています。 最短のラウンドトリップ動作は、数値が文字に変換されるときに、その文字を浮動小数点型に変換するときに元の数値の復旧を可能にするために、十分な有効桁数のみが書き込まれることを意味します。
 
-- 文字を数値に変換する場合、数値を null で終了する必要はありません。 同様に、数値を文字に変換しても、結果は null で終了しません。
+- 文字を数値に変換する場合、数値を null で終了する必要はありません。 同様に、数値を文字に変換する場合、結果は null で終了しません。
 - 変換関数はメモリを割り当てません。 バッファーは常に所有しています。
 - 変換関数は、をスローしません。 変換が成功したかどうかを判断できる結果が返されます。
 - 変換関数は、ランタイムの丸めモードを区別しません。
@@ -95,15 +95,15 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="remarks"></a>解説
 
-[Chars_format](chars-format-class.md)パラメーターを受け取る関数は、次のように、を使用しているかのように変換指定子を決定します。がの場合、変換指定子は、がの場合は、がである場合は、がである場合は、がの場合 `printf()` は `f` `fmt` `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` (先頭に "0x" `fmt` `chars_format::hex` `g` `fmt` `chars_format::general` を付けません)、がの場合は 最短の固定表記法を指定しても、値が非常に大きい場合や非常に小さい場合には、最小の表現になる可能性があるため、出力が長くなる可能性があります。
+[Chars_format](chars-format-class.md)パラメーターを受け取る関数は、次のようにを使用しているかのように変換指定子を決定します。がの場合、変換指定子は、がの場合は、がである場合は、がである場合はになり、がの場合はになり `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` `fmt` `chars_format::general` ます。 最短の固定表記法を指定しても、値が非常に大きい場合や非常に小さい場合には、最小の表現になる可能性があるため、出力が長くなる可能性があります。
 
-次の表では、およびパラメーターのさまざまな組み合わせについて、変換の動作について説明し `fmt` `precision` ます。 「最も短いラウンドトリップ」という用語は、対応する関数を使用してその表現を解析するために必要な桁数の最小値を書き込むことを意味し `from_chars` ます。
+次の表では、およびパラメーターのさまざまな組み合わせについて、変換の動作について説明し `fmt` `precision` ます。 "最短ラウンドトリップ動作" という用語は、対応する関数を使用してその表現を解析するために必要な桁数の最小値を書き込むことを意味し `from_chars` ます。
 
 | `fmt`との `precision` 組み合わせ | 出力 |
 |--|--|
 |  どちらもオフ | 固定表記または指数表記のいずれかが短い場合は、tiebreaker として固定されています。</br>この動作は、パラメーターを受け取るオーバーロードによってシミュレートすることはできません `fmt` 。 |
-| `fmt` | 指定された書式に対する最短のラウンドトリップ動作 (最も短い指数形式など)。 |
-| `fmt` および `precision` | 指定された有効桁数を使用し `printf()` ます。短いラウンドトリップ動作は不要です。 |
+| `fmt` | 指定された形式の最小ラウンドトリップ動作 (最も短い指数形式など)。 |
+| `fmt` および `precision` | は、最短ラウンドトリップ動作を行わずに、指定された有効桁数と `printf()` スタイルを使用します。 |
 
 ### <a name="return-value"></a>戻り値
 
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>必要条件
+
+**ヘッダー:**\<charconv>
+
+**名前空間:** std
+
+/std: c++ 17 以降が必要です。
+
 ## <a name="see-also"></a>関連項目
 
 [\<charconv>](charconv.md)  
-[ラウンドトリップを行う最短の10進数文字列](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[ラウンドトリップ](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ を行う最短の10進数文字列[printf () 書式指定子](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
