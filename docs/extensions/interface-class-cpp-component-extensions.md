@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228701"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807746"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI および C++/CX)
 
@@ -24,9 +24,8 @@ ms.locfileid: "87228701"
 ### <a name="syntax"></a>構文
 
 ```cpp
-interface_access
-interface class
-name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+interface_access interface class name : inherit_access base_interface {};
+interface_access interface struct name : inherit_access base_interface {};
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -43,7 +42,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *base_interface*<br/>
 (省略可能) インターフェイス *name* の基底インターフェイス。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 **interface struct** は **interface class** と同等です。
 
@@ -53,7 +52,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 インターフェイスから派生するクラスまたは構造体は、インターフェイスのすべてのメンバーを実装する必要があります。 インターフェイス *name* の実装時に、`base_interface` の一覧のインターフェイスも実装する必要があります。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [インターフェイス静的コンストラクター](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -67,7 +66,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
@@ -77,7 +76,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)
 
@@ -85,7 +84,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 次のコード例では、インターフェイスで clock 関数の動作を定義する方法を示します。
 

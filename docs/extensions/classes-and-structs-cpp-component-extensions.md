@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228727"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807772"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
@@ -29,13 +29,10 @@ ms.locfileid: "87228727"
 ### <a name="syntax"></a>構文
 
 ```cpp
-      class_access
-      ref class
-      name
-      modifier :  inherit_accessbase_type {};
-class_accessref structnamemodifier :  inherit_accessbase_type {};
-class_accessvalue classnamemodifier :  inherit_accessbase_type {};
-class_accessvalue structnamemodifier :  inherit_accessbase_type {};
+class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref struct name modifier : inherit_access base_type {};
+class_access value class name modifier : inherit_access base_type {};
+class_access value struct name modifier : inherit_access base_type {};
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -57,7 +54,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 詳細については、Windows ランタイムと共通言語ランタイムに関するセクションで、このパラメーターの言語別の説明を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 **Ref クラス**または**値クラス**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造**体または**値構造体**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
 
@@ -85,7 +82,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 [Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)と「[値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)」を参照してください。
 
@@ -104,7 +101,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
 次の表に、「**すべてのランタイム**」セクションに示されている構文の C++/CLI に固有の違いを示します。
 
