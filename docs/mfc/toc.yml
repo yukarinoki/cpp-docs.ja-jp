@@ -400,7 +400,7 @@
               href: activation-cpp.md
             - name: 'アクティベーション:動詞'
               href: activation-verbs.md
-        - name: コンテナー
+        - name: Containers
           expanded: false
           items:
             - name: コンテナー
@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: ツール バー コントロールのスタイル
           href: reference/toolbar-control-styles.md
+        - name: BufferCommand 列挙体
+          href: reference/buffercommand-enumeration.md
         - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: UICheckState 列挙体
