@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226790"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390001"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -513,12 +513,11 @@ C++ 用のクロスプラットフォーム Web API である CPPRestSDK が、�
 
 リファクタリングとコード ナビゲーションに IntelliSense エンジンを使用する C++ 演算のいくつかがより速く実行されます。 次の数値は Visual Studio Chromium ソリューションと 3500 件のプロジェクトに基づきます。
 
-|||
-|-|-|
-|機能|パフォーマンス改善|
-|名前の変更|5.3x|
-|シグネチャの変更 |4.5x|
-|[すべての参照の検索]|4.7x|
+| 機能 | パフォーマンス改善 |
+|--|--|
+| 名前の変更 | 5.3x |
+| シグネチャの変更 | 4.5x |
+| [すべての参照の検索] | 4.7x |
 
 C++ では、Ctrl を押しながら **[定義へ移動]** をクリックできるようになりました。マウス操作で簡単に定義に移動できます。 Productivity Power Tools パックの構造ビジュアライザーが既定で製品にも含まれるようになりました。
 
@@ -667,7 +666,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **`/b
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
 
-- 実行するコード分析ルールを指定できる [/analyze: ruleset](../build/reference/analyze-code-analysis.md) のサポートの追加。
+- 実行するコード分析ルールを指定できる [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) のサポートの追加。
 - 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017 での単体テスト

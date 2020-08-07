@@ -12,12 +12,12 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: bfbca4ae87d84286b94120eaf24de928ae75f3c9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200323"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520682"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>データ型指定子と同等物
 
@@ -25,22 +25,22 @@ ms.locfileid: "87200323"
 
 ## <a name="type-specifiers-and-equivalents"></a>型指定子と同等の形式
 
-|型指定子|同等の形式|
-|--------------------|---------------------|
-|**`signed char`** 1|**`char`**|
-|**`signed int`**|**`signed`** , **`int`**|
-|**`signed short int`**|**`short`** , **`signed short`**|
-|**`signed long int`**|**`long`** , **`signed long`**|
-|**`unsigned char`**|—|
-|**`unsigned int`**|**`unsigned`**|
-|**`unsigned short int`**|**`unsigned short`**|
-|**`unsigned long int`**|**`unsigned long`**|
-|**`float`**|—|
-|**`long double`** 2|—|
+| 型指定子 | 同等の形式 |
+|--|--|
+| **`signed char`** <sup>1</sup> | **`char`** |
+| **`signed int`** | **`signed`** , **`int`** |
+| **`signed short int`** | **`short`** , **`signed short`** |
+| **`signed long int`** | **`long`** , **`signed long`** |
+| **`unsigned char`** | — |
+| **`unsigned int`** | **`unsigned`** |
+| **`unsigned short int`** | **`unsigned short`** |
+| **`unsigned long int`** | **`unsigned long`** |
+| **`float`** | — |
+| **`long double`** <sup>2</sup> | — |
 
-1   **`char`** 型を既定で unsigned にすると ( **`/J`** コンパイラ オプションを指定)、 **`signed char`** を **`char`** と短縮できません。
+<sup>1</sup> **`char`** 型を既定で unsigned にすると ( **`/J`** コンパイラ オプションを指定)、 **`signed char`** を **`char`** と短縮できません。
 
-2   32 ビットまたは 64 ビット オペレーティング システムの Microsoft C コンパイラでは **`long double`** が **`double`** 型にマップされます。
+<sup>2</sup> 32 ビットまたは 64 ビット オペレーティング システムの Microsoft C コンパイラでは **`long double`** が **`double`** 型にマップされます。
 
 **Microsoft 固有の仕様**
 
