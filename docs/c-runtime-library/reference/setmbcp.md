@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918826"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88086969"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -61,16 +61,6 @@ int _setmbcp(
 
 **_Setmbcp**関数は、新しいマルチバイトコードページを指定します。 既定では、ランタイム システムはマルチバイト コード ページを、システムの既定の ANSI コード ページに自動的に設定します。 マルチバイト コード ページの設定は、ロケールに依存していないすべてのマルチバイトのルーチンに影響します。 ただし、現在のロケールに対して定義されているコードページを使用するように **_setmbcp**に指示することはできます (次のマニフェスト定数と関連する動作の結果の一覧を参照してください)。 マルチバイト コード ページではなく、ロケールのコード ページに依存しているマルチバイトのルーチンの一覧については、「[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)」を参照してください。
 
-マルチバイト コード ページは、次のランタイム ライブラリ ルーチンによる、マルチバイト文字の処理にも影響します。
-
-||||
-|-|-|-|
-|[_exec 関数](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[_spawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-
-また、マルチバイト文字の*argv*または*envp*プログラム引数をパラメーターとして受け取るすべてのランタイムライブラリルーチン ( **_exec**や **_spawn**ファミリなど) は、マルチバイトコードページに従ってこれらの文字列を処理します。 そのため、これらのルーチンは、マルチバイトコードページを変更する **_setmbcp**を呼び出すことによっても影響を受けます。
-
 *Codepage*引数は、次のいずれかの値に設定できます。
 
 - **_MB_CP_ANSI**プログラムの起動時にオペレーティングシステムから取得した ANSI コードページを使用します。
@@ -89,7 +79,7 @@ int _setmbcp(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
