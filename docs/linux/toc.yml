@@ -12,11 +12,11 @@
       href: ../linux/connectionmanager-reference.md
 - name: Visual Studio で MSBuild を使用して Linux プロジェクトをビルドする
   items:
-    - name: 新しい Linux プロジェクトを作成する
+    - name: Linux MSBuild プロジェクトの作成
       href: ../linux/create-a-new-linux-project.md
-    - name: Linux プロジェクトを構成する
+    - name: Linux MSBuild プロジェクトの構成
       href: ../linux/configure-a-linux-project.md
-    - name: Linux プロジェクトのデプロイ、実行、デバッグ
+    - name: Linux MSBuild プロジェクトのデプロイ、実行、デバッグ
       href: ../linux/deploy-run-and-debug-your-linux-project.md
     - name: Linux プロジェクト プロパティ ページの参照
       items:
@@ -44,8 +44,10 @@
           href: ../linux/prop-pages/remote-ar-linux.md
 - name: Visual Studio で CMake を使用して Linux プロジェクトをビルドする
   items:
-    - name: Linux CMake プロジェクトの作成と構成
+    - name: Linux CMake プロジェクトを作成する
       href: ../linux/cmake-linux-project.md
+    - name: Linux CMake プロジェクトを構成する
+      href: ../linux/cmake-linux-configure.md
     - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
       href: ../build/get-started-linux-cmake.md
 - name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
