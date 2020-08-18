@@ -1,24 +1,22 @@
 ---
-title: Visual Studio で C++ Linux プロジェクトを配置、実行、デバッグする
-description: Visual Studio の Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
-ms.date: 06/07/2019
+title: Visual Studio で Linux MSBuild C++ プロジェクトを配置、実行、デバッグする
+description: Visual Studio で MSBuild ベースの Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
+ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404412"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043890"
 ---
-# <a name="deploy-run-and-debug-your-linux-project"></a>Linux プロジェクトのデプロイ、実行、デバッグ
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Linux MSBuild プロジェクトのデプロイ、実行、デバッグ
 
 ::: moniker range="vs-2015"
-
-Linux サポートは Visual Studio 2017 以降で使用できます。
-
+Linux サポートは Visual Studio 2017 以降で使用できます。 これらのバージョンのドキュメントを表示するには、目次の上にある **[バージョン]** ドロップダウンを **Visual Studio 2017** または **Visual Studio 2019** に設定します。
 ::: moniker-end
 
-Visual Studio で Linux C++ プロジェクトを作成し、[Linux 接続マネージャー](connect-to-your-remote-linux-computer.md)でプロジェクトに接続したら、プロジェクトを実行し、デバッグできます。 リモート ターゲットでコードをコンパイル、実行、デバッグします。
+Visual Studio で MSBuild ベースの Linux C++ プロジェクトを作成し、[Linux 接続マネージャー](connect-to-your-remote-linux-computer.md)でプロジェクトに接続したら、プロジェクトを実行し、デバッグできます。 リモート ターゲットでコードをコンパイル、実行、デバッグします。
 
 ::: moniker range="vs-2019"
 
@@ -52,9 +50,9 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    ::: moniker-end
 
-   - **gdbserver** モードでは、GDB はローカルに実行され、リモート システム上の gdbserver に接続します。  Linux コンソール ウィンドウはこのモードだけをサポートすることに注意してください。
+   - **gdbserver** モードでは、GDB はローカルに実行され、リモート システム上の gdbserver に接続します。
 
-   - **gdb** モードでは、Visual Studio デバッガーによりリモート システム上で GDB が実行されます。 GDB のローカル バージョンがターゲット コンピューターにインストールされているバージョンと互換性がない場合には、こちらの方が適切なオプションです。 |
+   - **gdb** モードでは、Visual Studio デバッガーによりリモート システム上で GDB が実行されます。 GDB のローカル バージョンがターゲット コンピューターにインストールされているバージョンと互換性がない場合には、こちらの方が適切なオプションです。 Linux コンソール ウィンドウではこのモードだけがサポートされています。
 
    > [!NOTE]
    > gdbserver デバッグ モードでブレークポイントに到達できない場合、gdb モードを試してください。 最初にリモート ターゲットに gdb を[インストール](download-install-and-setup-the-linux-development-workload.md)する必要があります。
@@ -65,7 +63,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    ![リモート ターゲット](media/remote_target.png)
 
-   リモート ターゲットに接続していない場合、[Linux 接続マネージャー](connect-to-your-remote-linux-computer.md)を利用してリモート ターゲットに接続するように求める指示が表示されます。
+   リモート ターゲットにまだ接続していない場合、[Linux 接続マネージャー](connect-to-your-remote-linux-computer.md)を利用してリモート ターゲットに接続するように求める指示が表示されます。
 
    ![リモート アーキテクチャ](media/architecture.png)
 
@@ -83,7 +81,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    **F10** や **F11** などのコマンド キーを押すことで、現在の状態のアプリケーションと対話したり、変数を表示したり、コードをステップ実行したりできるようになりました。
 
-1. Linux コンソールを利用してアプリと対話する場合、 **[デバッグ]、[Linux コンソール]** の順に選びます。
+1. Linux コンソールを利用してアプリと対話する場合、**[デバッグ]、[Linux コンソール]** の順に選びます。
 
    ![[Linux Console] (Linux コンソール) メニュー](media/consolemenu.png)
 
@@ -91,19 +89,16 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    ![Linux コンソール ウィンドウ](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options-msbuild-based-projects"></a>その他のデバッグ オプションを構成する (MSBuild ベースのプロジェクト)
+## <a name="configure-other-debugging-options-msbuild-projects"></a>その他のデバッグ オプションを構成する (MSBuild プロジェクト)
 
 - プロジェクトの **[デバッグ]** プロパティ ページの **[プログラムの引数]** 項目を使って、実行可能ファイルにコマンド ライン引数を渡すことができます。
+- プロジェクトの **[デバッグ]** プロパティ ページの **[起動前コマンド]** を使用して、`DISPLAY` 環境変数をエクスポートできます。 例: `export DISPLAY=:0.0`
 
    ![プログラムの引数](media/settings_programarguments.png)
 
 - **[追加のデバッガー コマンド]** エントリを使って、特定のデバッガー オプションを GDB に渡すことができます。  たとえば、SIGILL (無効な命令) シグナルを無視することができます。  **handle** コマンドを使用してこれを実現できます。上の図のように、以下を **[追加のデバッガー コマンド]** エントリに追加します。
 
    `handle SIGILL nostop noprint`
-
-## <a name="configure-other-debugging-options-cmake-projects"></a>その他のデバッグ オプションを構成する (CMake プロジェクト)
-
-CMake プロジェクト用の追加のコマンドライン引数を launch.vs.json ファイルに指定できます。 詳細については、「[CMake プロジェクトをデバッグする](cmake-linux-project.md#debug_cmake_project)」をご覧ください。
 
 ## <a name="debug-with-attach-to-process"></a>[プロセスにアタッチ] を使用してデバッグする
 
@@ -128,13 +123,11 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> ビルド用とデバッグ用に異なるコンピューターを指定する
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> MSBuild ベースの Linux プロジェクトでビルド用とデバッグ用に異なるコンピューターを指定する
 
 Visual Studio 2019 バージョン 16.1 では、MSBuild ベースの Linux プロジェクトとリモート Linux マシンをターゲットとする CMake プロジェクトの両方で、リモート ビルド マシンとリモート デバッグ マシンを分離できます。 たとえば、IoT シナリオをターゲットにするときに、.x64 でクロスコンパイルを行い、ARM デバイスに配置できます。
 
-### <a name="msbuild-based-projects"></a>MSBuild ベースのプロジェクト
-
-既定では、リモート デバッグ マシンはリモート ビルド マシンと同じです ( **[構成プロパティ]**  >  **[全般]**  >  **[リモート ビルド マシン]** )。 新しいリモート デバッグ マシンを指定するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[構成プロパティ]**  >  **[デバッグ]**  >  **[リモート デバッグ マシン]** に移動します。  
+既定では、リモート デバッグ マシンはリモート ビルド マシンと同じです ( **[構成プロパティ]**  >  **[全般]**  >  **[リモート ビルド マシン]** )。 新しいリモート デバッグ マシンを指定するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[構成プロパティ]** > **[デバッグ]** > **[リモート デバッグ マシン]** に移動します。  
 
 ![Linux リモート デバッグ マシン](media/linux-remote-debug-machine.png)
 
@@ -176,7 +169,6 @@ IntelliSense では、確立済みのすべてのリモート接続の一覧が�
 配置を完全に制御する場合は、launch.vs.json ファイルに次のコード ブロックを追加できます。 プレースホルダーを必ず実際の値に置き換えてください。
 
 ```json
-
 "disableDeploy": false,
 "deployDirectory": "~\foo",
 "deploy" : [
@@ -188,7 +180,6 @@ IntelliSense では、確立済みのすべてのリモート接続の一覧が�
       "executable": "false"
    }
 ]
-
 ```
 
 ::: moniker-end

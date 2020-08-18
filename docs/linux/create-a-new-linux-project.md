@@ -1,16 +1,16 @@
 ---
-title: Visual Studio で新しい C++ Linux プロジェクトを作成する
-ms.date: 10/24/2019
+title: Visual Studio で Linux MSBuild C++ プロジェクトを作成する
+ms.date: 08/04/2020
 description: Visual Studio で新しい MSBuild ベースの Linux プロジェクトを作成します。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 1e79dd50756b71aabae7ccec75e57178898e7720
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364348"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043851"
 ---
-# <a name="create-a-new-linux-project"></a>新しい Linux プロジェクトを作成する
+# <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio で Linux MSBuild C++ プロジェクトを作成する
 
 ::: moniker range="vs-2015"
 
@@ -42,7 +42,7 @@ Visual Studio 2017 で新しい Linux プロジェクトを作成するには、
 
 ## <a name="next-steps"></a>次の手順
 
-[Linux プロジェクトを構成する](configure-a-linux-project.md)
+[MSBuild Linux プロジェクトを構成する](configure-a-linux-project.md)
 
 ::: moniker-end
 
@@ -72,6 +72,6 @@ Visual Studio 2019 で新しい Linux プロジェクトを作成するには、
 
 ## <a name="next-steps"></a>次の手順
 
-[Linux プロジェクトを構成する](configure-a-linux-project.md)
+[Linux MSBuild プロジェクトの構成](configure-a-linux-project.md)
 
 ::: moniker-end

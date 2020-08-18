@@ -1,14 +1,14 @@
 ---
 title: C++ 準拠の強化
-ms.date: 05/18/2020
+ms.date: 08/04/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-ms.openlocfilehash: 65e4f12c8fcf1ce0013f9ae272333a26a557186d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea0b871651d1cf0c8719e8d5f22df5ab42e69e14
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213958"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807824"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -130,7 +130,7 @@ int main()
 }
 ```
 
-エラーを回避するには、 **`constexpr`** 修飾子を削除するか、準拠モードを `/std:c++17` に変更します。
+エラーを回避するには、 **`constexpr`** 修飾子を削除するか、準拠モードを **`/std:c++17`** に変更します。
 
 ### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` エラー コード
 
@@ -164,7 +164,7 @@ int main()
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6)。 C++20 では、UTF-8 コード単位を表すための新しい文字型が追加されます。 C++20 の `u8` 文字列リテラルには、以前の `const char[N]` に代わり、型 `const char8_t[N]` が与えられます。 [N2231](https://wg14.link/n2231) では、C 標準に同様の変更が提案されています。 **`char8_t`** 下位互換性改善の提案が [P1423r3](https://wg21.link/p1423r3) に記載されています。 **`/Zc:char8_t`** コンパイラ オプションを指定すると、Microsoft C++ コンパイラでは、Visual Studio 2019 バージョン 16.1 の **`char8_t`** のサポートが追加されます。 将来的にこれは [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) でサポートされます。これは、 **`/Zc:char8_t-`** 経由で C++17 の動作に戻すことができます。 IntelliSense の動力源となる EDG コンパイラではまだそれがサポートされていません。そのため、誤った IntelliSense のみのエラーが表示されますが、それは実際のコンパイルに影響を与えません。
+[P0482r6](https://wg21.link/p0482r6)。 C++20 では、UTF-8 コード単位を表すための新しい文字型が追加されます。 C++20 の `u8` 文字列リテラルには、以前の `const char[N]` に代わり、型 `const char8_t[N]` が与えられます。 [N2231](https://wg14.link/n2231) では、C 標準に同様の変更が提案されています。 **`char8_t`** 下位互換性改善の提案が [P1423r3](https://wg21.link/p1423r3) に記載されています。 **`/Zc:char8_t`** コンパイラ オプションを指定すると、Microsoft C++ コンパイラでは、Visual Studio 2019 バージョン 16.1 の **`char8_t`** のサポートが追加されます。 将来的にこれは [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) でサポートされます。これは、 **`/Zc:char8_t-`** 経由で C++17 の動作に戻すことができます。 IntelliSense に機能を提供する EDG コンパイラでは、それはまだサポートされていません。 誤った IntelliSense のみのエラーが表示される場合がありますが、実際のコンパイルには影響ありません。
 
 #### <a name="example"></a>例
 
@@ -175,7 +175,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 ### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>std::type_identity メタ関数と std::identity 関数オブジェクト
 
-[P0887R1 type_identity](https://wg21.link/p0887r1). 非推奨 `std::identity` クラス テンプレート拡張が削除され、C++20 `std::type_identity` メタ関数と `std::identity` 関数オブジェクトに置換されました。 いずれも [/std:c++latest](../build/reference/std-specify-language-standard-version.md) でのみ利用できます。
+[P0887R1 type_identity](https://wg21.link/p0887r1). 非推奨 `std::identity` クラス テンプレート拡張が削除され、C++20 `std::type_identity` メタ関数と `std::identity` 関数オブジェクトに置換されました。 いずれも [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) でのみ利用できます。
 
 次の例では、Visual Studio 2017 の `std::identity` (\<type_traits> で定義) に対して非推奨警告 C4996 が生成されます。
 
@@ -202,7 +202,7 @@ long j = static_cast<long>(i);
 
 ### <a name="syntax-checks-for-generic-lambdas"></a>汎用ラムダの構文チェック
 
-新しいラムダ プロセッサにより、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) または **`/experimental:newLambdaProcessor`** を使用する他の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
+新しいラムダ プロセッサにより、[`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) で、または **`/experimental:newLambdaProcessor`** を使用する他のに似の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
 
 Visual Studio 2017 の場合、このコードは警告なくコンパイルされますが、Visual Studio 2019 ではエラー C2760 `syntax error: unexpected token '\<id-expr>', expected 'id-expression'` が発生します。
 
@@ -230,7 +230,7 @@ void f() {
 
 ### <a name="designated-initialization"></a>初期化の指定
 
-[P0329R4](https://wg21.link/p0329r4) (C++20) 初期化の指定により、集計初期化で、`Type t { .member = expr }` 構文を使用し、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
+[P0329R4](https://wg21.link/p0329r4) (C++20) "*初期化の指定*" により、集計初期化で `Type t { .member = expr }` 構文を使用して、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
 
 ### <a name="new-and-updated-standard-library-functions-c20"></a>新規および更新された標準ライブラリ関数 (C++20)
 
@@ -241,9 +241,9 @@ void f() {
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a> 16.2 の準拠の強化
 
-### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 関数
+### <a name="noexcept-constexpr-functions"></a>`noexcept` `constexpr` 関数
 
-constexpr 関数では、定数式で使用される場合、既定では **`noexcept`** が考慮されなくなりました。 この動作変更は、[CWG 1351](https://wg21.link/cwg1351) の解決に由来し、[/permissive-](../build/reference/permissive-standards-conformance.md) で有効になっています。 次の例は、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2338 が生成されます。
+定数式で使用する場合、 **`constexpr`** 関数は既定では **`noexcept`** と見なされなくなりました。 この動作変更は、[CWG 1351](https://wg21.link/cwg1351) の解決によるものであり、[`/permissive-`](../build/reference/permissive-standards-conformance.md) で有効になります。 次の例は、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2338 が生成されます。
 
 ```cpp
 constexpr int f() { return 0; }
@@ -265,9 +265,15 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>異なる列挙型を持つバイナリ式
 
-一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](https://wg21.link/p1120r0)) では非推奨です。
+C++ 20 では、次の両方が当てはまる場合、オペランドでの通常の算術変換は非推奨になりました。
 
-Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっていると、次のコードでレベル 4 の警告が生成されます。
+- 1 つのオペランドは列挙型である。
+
+- もう 1 つは、別の列挙型または浮動小数点型である。
+
+詳細については、[P1120R0](https://wg21.link/p1120r0) を参照してください。
+
+Visual Studio 2019 バージョン 16.2 以降では、[`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっていると、次のコードでレベル 4 の警告が生成されます。
 
 ```cpp
 enum E1 { a };
@@ -307,7 +313,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>配列の等価比較と関係比較
 
-C++20 ([P1120R0](https://wg21.link/p1120r0)) では、配列型の 2 つのオペランドの等価比較と関係比較は非推奨とされます。 言い換えると、2 つの配列間の比較演算を使用すると (ランクと範囲の類似性に関係なく) 警告が発生するようになりました。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっている場合、次のコードでは C5056: `operator '==': deprecated for array types` が生成されます。
+C++20 ([P1120R0](https://wg21.link/p1120r0)) では、配列型の 2 つのオペランドの等価比較と関係比較は非推奨とされます。 言い換えると、2 つの配列間の比較演算を使用すると (ランクと範囲の類似性に関係なく) 警告が発生するようになりました。 Visual Studio 2019 バージョン 16.2 以降では、[`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっている場合、次のコードでは C5056: `operator '==': deprecated for array types` が生成されます。
 
 ```cpp
 int main() {
@@ -389,7 +395,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>char* のストリーム抽出演算子が削除されました
 
-ポインターから文字へのストリーム抽出演算子が削除され、文字配列の抽出演算子に置き換えられました ([P0487R1](https://wg21.link/p0487r1) による)。 WG21 では、削除されたオーバーロードは安全でないと見なされます。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードでは、次の例で C2679: `binary '>>': no operator found which takes a right-hand operand of type 'char*' (or there is no acceptable conversion)` が生成されるようになりました。
+ポインターから文字へのストリーム抽出演算子が削除され、文字配列の抽出演算子に置き換えられました ([P0487R1](https://wg21.link/p0487r1) による)。 WG21 では、削除されたオーバーロードは安全でないと見なされます。 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) モードでは、次の例で C2679: `binary '>>': no operator found which takes a right-hand operand of type 'char*' (or there is no acceptable conversion)` が生成されるようになりました。
 
 ```cpp
    char x[42];
@@ -407,11 +413,11 @@ std::cin >> x;
 
 ### <a name="new-keywords-requires-and-concept"></a>新しいキーワード `requires` と `concept`
 
-Microsoft C++ コンパイラに新しいキーワード **`requires`** と **`concept`** が追加されました。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードでそのいずれかを識別子として使用しようとすると、コンパイラによって C2059: `syntax error` が発生します。
+Microsoft C++ コンパイラに新しいキーワード **`requires`** と **`concept`** が追加されました。 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) モードでそのいずれかを識別子として使用しようとすると、コンパイラで C2059: `syntax error` が発生します。
 
 ### <a name="constructors-as-type-names-disallowed"></a>型名としてのコンストラクターが許可されない
 
-コンストラクター名は、クラス テンプレート特殊化のエイリアスの後に修飾名で表示される場合、挿入されたクラス名とは見なされなくなりました。 これまでは、他のエンティティを宣言するために、コンストラクターを型名として使用することが許可されていました。 次の例では、C3646: `'TotalDuration': unknown override specifier` が生成されるようになりました。
+コンストラクター名は、クラス テンプレート特殊化のエイリアスの後に修飾名で表示される場合、コンパイラでは挿入されたクラス名と見なされなくなりました。 これまでは、他のエンティティを宣言するための型名として、コンストラクターを使用できました。 次の例では、C3646: `'TotalDuration': unknown override specifier` が生成されるようになりました。
 
 ```cpp
 #include <chrono>
@@ -434,7 +440,7 @@ class Foo {
 
 ### <a name="stricter-checking-of-extern-c-functions"></a>`extern "C"` 関数のより厳密なチェック
 
-異なる名前空間で **`extern "C"`** 関数が宣言されている場合、以前のバージョンの Microsoft C++ コンパイラでは、宣言に互換性があるかどうかがチェックされませんでした。 Visual Studio 2019 バージョン 16.3 では、コンパイラによってこのようなチェックが実行されます。 [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによってエラー C2371 `redefinition; different basic types` と C2733 `you cannot overload a function with C linkage` が生成されます。
+異なる名前空間で **`extern "C"`** 関数が宣言されている場合、以前のバージョンの Microsoft C++ コンパイラでは、宣言に互換性があるかどうかがチェックされませんでした。 Visual Studio 2019 バージョン 16.3 以降では、コンパイラによって互換性がチェックされます。 [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによってエラー C2371 `redefinition; different basic types` と C2733 `you cannot overload a function with C linkage` が生成されます。
 
 ```cpp
 using BOOL = int;
@@ -570,7 +576,7 @@ void f(T (&buffer)[Size], int& size_read)
 
 ### <a name="user-provided-specializations-of-type-traits"></a>型特性のユーザー指定の特殊化
 
-MSVC コンパイラでは、標準のサブ句 *meta.rqmts* に準拠して、`std` 名前空間で指定された `type_traits` テンプレートのいずれかに対するユーザー定義の特殊化が検出されると、エラーが発生するようになりました。 特に指定しない限り、このような特殊化によって未定義の動作が発生します。 次の例はこのルールに違反しているため、未定義の動作が発生します。また、 **`static_assert`** はエラー C2338 によって失敗します。
+MSVC コンパイラでは、標準の *meta.rqmts* サブ句に準拠して、`std` 名前空間で指定された `type_traits` テンプレートのいずれかに対するユーザー定義の特殊化が検出されると、エラーが発生するようになりました。 特に指定しない限り、このような特殊化によって未定義の動作が発生します。 次の例はこのルールに違反しているため、未定義の動作が発生します。また、 **`static_assert`** はエラー C2338 によって失敗します。
 
 ```cpp
 #include <type_traits>
@@ -738,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>プリプロセッサ出力によって改行が維持される
 
-実験用のプリプロセッサでは、`/experimental:preprocessor` と共に `/P` または `/E` を使用するとき、改行と空白が維持されるようになりました。 この変更は `/d1experimental:preprocessor:oldWhitespace` を利用して向こうにできます。
+実験用のプリプロセッサでは、 **`/experimental:preprocessor`** と共に **`/P`** または **`/E`** を使用するとき、改行と空白が維持されるようになりました。 この変更は、 **`/d1experimental:preprocessor:oldWhitespace`** を使用して無効にできます。
 
 このようなサンプル ソースがあります。
 
@@ -748,14 +754,14 @@ line m(
 ) line
 ```
 
-`/E` の以前の出力は次のようになっていました。
+**`/E`** の以前の出力は次のようになっていました。
 
 ```Output
 line line
 #line 2
 ```
 
-`/E` の新しい出力は次のようになります。
+**`/E`** の新しい出力は次のようになります。
 
 ```Output
 line
@@ -833,10 +839,9 @@ void f() {
 
 ### <a name="tls-guard-changes"></a>TLS ガードの変更
 
-以前、DLL のスレッドローカル変数は、DLL を読み込んだスレッド以外、DLL が読み込まれる前に存在したスレッドで最初に使用されるまで正しく初期化されませんでした。 この欠陥が修正されました。
-このような DLL のスレッドローカル変数は、そのようなスレッドで最初に使用される直前に初期化されます。
+以前は、DLL のスレッドローカル変数が正しく初期化されていませんでした。 DLL を読み込んだスレッド以外では、DLL が読み込まれる前に存在したスレッドで最初に使用されるまで、正しく初期化されませんでした。 この欠陥が修正されました。 このような DLL のスレッドローカル変数は、そのようなスレッドで最初に使用される直前に初期化されます。
 
-スレッドローカル変数の使用時に初期化するためのこの新しいテスト ビヘイビアーは、`/Zc:tlsGuards-` コンパイラ スイッチを使用して無効にできます。 あるいは、特定のスレッドローカル変数に `[[msvc:no_tls_guard]]` 属性を追加するという方法もあります。
+スレッドローカル変数の使用時に初期化するためのこの新しいテスト ビヘイビアーは、 **`/Zc:tlsGuards-`** コンパイラ スイッチを使用して無効にできます。 あるいは、特定のスレッドローカル変数に `[[msvc:no_tls_guard]]` 属性を追加するという方法もあります。
 
 ### <a name="better-diagnosis-of-call-to-deleted-functions"></a>削除された関数の呼び出しの診断機能向上
 
@@ -1040,7 +1045,7 @@ typedef struct S_ : B {
 
 ### <a name="default-argument-import-in-ccli"></a>C++/CLIでの既定の引数のインポート
 
-.NET Core での既定の引数を持つ API 数が増加しているため、C++/CLI での既定の引数のインポートがサポートされるようになりました。 この変更により、次の例のように、複数のオーバーロードが宣言されている既存のコードが破損する可能性があります。
+.NET Core では、既定の引数を持つ API の数が増えています。 そのため、C++/CLI で既定の引数のインポートがサポートされるようになりました。 この変更により、次の例のように、複数のオーバーロードが宣言されている既存のコードが破損する可能性があります。
 
 ```cpp
 public class R {
@@ -1057,9 +1062,102 @@ public class R {
 
 両方のオーバーロードがこの引数リストと一致しているため、コンパイラによってエラー C2668 が出力されます。 2 番目のオーバーロードでは、2 番目の引数は既定の引数によって設定されます。 この問題を回避するには、冗長なオーバーロード (1) を削除します。 または、完全な引数リストを使用し、既定の引数を明示的に指定します。
 
+## <a name="conformance-improvements-in-visual-studio-2019-version-167"></a><a name="improvements_167"></a> Visual Studio 2019 バージョン 16.7 の準拠の強化
+
+### <a name="definition-of-is-trivially-copyable"></a>"*普通にコピー可能である*" の定義
+
+C++20 では、"*トリビアルにコピー可能である*" の定義が変更されました。 クラスに **`volatile`** 修飾型の非静的データ メンバーが含まれている場合、それにより、コンパイラによって生成されたコピーまたは移動コンストラクター、あるいはコピーまたは移動代入演算子は非トリビアルである、ということは意味されなくなりました。 この変更は、C++ 標準化委員会により障害レポートとしてさかのぼって適用されました。 MSVC では、 **`/std:c++14`** や **`/std:c++latest`** などの異なる言語モードでは、コンパイラの動作は変更されません。
+
+新しい動作の例を次に示します。
+
+```cpp
+#include <type_traits>
+
+struct S
+{
+    volatile int m;
+};
+
+static_assert(std::is_trivially_copyable_v<S>, "Meow!");
+```
+
+このコードは、Visual Studio 2019 バージョン 16.7 より前のバージョンの MSVC ではコンパイルされません。 この変更を検出するために使用できる、既定でオフ コンパイラ警告があります。 **`cl /W4 /w45220`** を使用して上記のコードをコンパイルすると、次の警告が表示されます。
+
+警告 C5220: `'S::m': a non-static data member with a volatile qualified type no longer implies that compiler generated copy/move constructors and copy/move assignment operators are non trivial`
+
+### <a name="pointer-to-member-and-string-literal-conversions-to-bool-are-narrowing"></a>メンバーへのポインターおよび文字列リテラルの `bool` への変換は縮小変換である
+
+C++ 標準化委員会で最近採用された障害レポート [P1957R2](https://wg21.link/p1957r2) では、`T*` ->  **`bool`** は縮小変換と見なされています。 MSVC の実装のバグが修正されました。これにより、以前は `T*` ->  **`bool`** は縮小変換として診断されましたが、文字列リテラルの **`bool`** への変換、またはメンバーへのポインターの **`bool`** への変換は診断されませんでした。
+
+次のプログラムは、Visual Studio 2019 バージョン16.7 では不適切な形式になります。
+
+```cpp
+struct X { bool b; };
+void f(X);
+
+int main() {
+    f(X { "whoops?" }); // error: conversion from 'const char [8]' to 'bool' requires a narrowing conversion
+
+    int (X::* p) = nullptr;
+    f(X { p }); // error: conversion from 'int X::*' to 'bool' requires a narrowing conversion
+}
+```
+
+このコードを修正するには、 **`nullptr`** に対する明示的な比較を追加するか、縮小変換の形式が正しくなくなるようなコンテキストを回避します。
+
+```cpp
+struct X { bool b; };
+void f(X);
+
+int main() {
+    f(X { "whoops?" != nullptr }); // Absurd, but OK
+
+    int (X::* p) = nullptr;
+    f(X { p != nullptr }); // OK
+}
+```
+
+### <a name="nullptr_t-is-only-convertible-to-bool-as-a-direct-initialization"></a>`nullptr_t` は、直接的な初期化として `bool` にのみ変換可能である
+
+C++11 では、 **`nullptr`** は "*直接変換*" として **`bool`** にのみ変換可能です。たとえば、中かっこで囲まれた初期化子リストを使用して **`bool`** を初期化するときなどです。 この制限は、MSVC では適用されませんでした。 現在の MSVC では、[`/permissive-`](../build/reference/permissive-standards-conformance.md) でルールが実装されています。 暗黙的な変換は、不正な形式として診断されるようになりました。 直接初期化 `bool b(nullptr)` が有効であるため、 **`bool`** へのコンテキスト変換は引き続き許可されます。
+
+ほとんどの場合、次の例に示すように、このエラーは **`nullptr`** を **`false`** に置き換えることによって解決できます。
+
+```cpp
+struct S { bool b; };
+void g(bool);
+bool h() { return nullptr; } // error, should be 'return false;'
+
+int main() {
+    bool b1 = nullptr; // error: cannot convert from 'nullptr' to 'bool'
+    S s { nullptr }; // error: cannot convert from 'nullptr' to 'bool'
+    g(nullptr); // error: cannot convert argument 1 from 'nullptr' to 'bool'
+
+    bool b2 { nullptr }; // OK: Direct-initialization
+    if (!nullptr) {} // OK: Contextual conversion to bool
+}
+```
+
+### <a name="conforming-initialization-behavior-for-array-initializations-with-missing-initializers"></a>初期化子がない配列の初期化に対する初期化動作への準拠
+
+以前は、初期化子がない配列の初期化について、MSVC の動作は準拠していませんでした。 MSVC では、初期化子がない各配列要素に対して常に既定のコンストラクターが呼び出されていました。 標準の動作では、空の中かっこで囲まれた初期化子リスト ( **`{}`** ) を使用して各要素を初期化します。 空の中かっこで囲まれた初期化子リストの初期化コンテキストはコピー初期化であり、明示的なコンストラクターの呼び出しは許可されません。 また、初期化に `{}` を使用すると、既定のコンストラクターではなく `std::initializer_list` を受け取るコンストラクターが呼び出される可能性があるため、ランタイムにも違いがあります。 準拠動作は、[`/permissive-`](../build/reference/permissive-standards-conformance.md) で有効にされます。
+
+変更された動作の例を次に示します。
+
+```cpp
+struct B {
+    explicit B() {}
+};
+
+void f() {
+    B b1[1]{}; // Error in /permissive-, because aggregate init calls explicit ctor
+    B b2[1]; // OK: calls default ctor for each array element
+}
+```
+
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
 
-### <a name="reinterpret_cast-in-a-constexpr-function"></a>constexpr 関数の reinterpret_cast
+### <a name="reinterpret_cast-in-a-constexpr-function"></a>`constexpr` 関数での `reinterpret_cast`
 
 **`constexpr`** 関数では **`reinterpret_cast`** は無効です。 これまでは、Microsoft C++ コンパイラによって **`reinterpret_cast`** は **`constexpr`** のコンテキストで使用される場合に限り拒否されていました。 Visual Studio 2019 では、すべての言語標準モードで、コンパイラにより **`constexpr`** 関数の定義で **`reinterpret_cast`** が正しく診断されます。 次のコードでは、C3615: `constexpr function 'f' cannot result in a constant expression` が生成されるようになりました。
 
@@ -1092,9 +1190,9 @@ for (wchar_t ch : ws)
 }
 ```
 
-### <a name="incorrect-calls-to--and---under-clr-or-zw-are-now-correctly-detected"></a>/clr または /ZW で += や -= の間違った呼び出しを正しく検出できるようになりました
+### <a name="incorrect-calls-to--and---under-clr-or-zw-are-now-correctly-detected"></a>`/clr` または `/ZW` での `+=` や `-=` の誤った呼び出しが正しく検出されるようになった
 
-`/clr` または `/ZW` で += や -= の無効な呼び出しに対して、コンパイラが何も表示せずにエラーを無視し、何のコードも生成しないというバグが Visual Studio 2017 にありました。 次のコードは Visual Studio 2017 ではエラーなしでコンパイルされますが、Visual Studio 2019 ではエラー C2845: `'System::String ^': pointer arithmetic not allowed on this type` が正しく発生します。
+Visual Studio 2017 では、 **`/clr`** または **`/ZW`** での **`+=`** や **`-=`** の無効な呼び出しに対して、コンパイラで何も表示されずにエラーが無視され、何のコードも生成されないというバグが発生しました。 次のコードは Visual Studio 2017 ではエラーなしでコンパイルされますが、Visual Studio 2019 ではエラー C2845: `'System::String ^': pointer arithmetic not allowed on this type` が正しく発生します。
 
 ```cpp
 public enum class E { e };
@@ -1105,11 +1203,11 @@ void f(System::String ^s)
 }
 ```
 
-この例のエラーを回避するには、`s += E::e.ToString();` のように、ToString() で演算子を使用します。
+この例のエラーを回避するには、`s += E::e.ToString();` のように、`ToString()` メソッドで **`+=`** 演算子を使用します。
 
 ### <a name="initializers-for-inline-static-data-members"></a>インライン静的データ メンバーの初期化子
 
-**`inline`** および **static constexpr** 初期化子内の無効なメンバー アクセスが正しく検出されるようになりました。 次の例は Visual Studio 2017 ではエラーなくコンパイルされますが、 **`/std:c++17`** モードの Visual Studio 2019 では、エラー C2248: `cannot access private member declared in class 'X'` が発生します。
+**`inline`** 初期化子と **`static constexpr`** 初期化子内の無効なメンバー アクセスが、正しく検出されるようになりました。 次の例は Visual Studio 2017 ではエラーなくコンパイルされますが、 **`/std:c++17`** モードの Visual Studio 2019 では、エラー C2248: `cannot access private member declared in class 'X'` が発生します。
 
 ```cpp
 struct X
@@ -1136,9 +1234,9 @@ struct X
 
 ### <a name="c4800-reinstated"></a>C4800 の復帰
 
-MSVC には以前、 **`bool`** への暗黙的変換に関するパフォーマンス警告 C4800 がありました。 これは煩わしく、かつ非表示にできなかったため、Visual Studio 2017 で削除されました。 しかしながら、Visual Studio 2017 が使用されている間、この警告が役に立った事例についてたくさんのフィードバックがありました。 Visual Studio 2019 では、慎重に調整された C4800 とそれに付属する C4165 を復帰させました。 いずれの警告も、簡単に非表示にできます。それには、明示的な型変換を使用するか、該当する型の 0 と比較します。 C4800 は既定でオフのレベル 4 警告であり、C4165 は既定でオフのレベル 3 警告です。 いずれも `/Wall` コンパイラ オプションで検出できます。
+MSVC には以前、 **`bool`** への暗黙的変換に関するパフォーマンス警告 C4800 がありました。 これは煩わしく、かつ非表示にできなかったため、Visual Studio 2017 で削除されました。 しかしながら、Visual Studio 2017 が使用されている間、この警告が役に立った事例についてたくさんのフィードバックがありました。 Visual Studio 2019 では、慎重に調整された C4800 とそれに付属する C4165 を復帰させました。 いずれの警告も、簡単に非表示にできます。それには、明示的な型変換を使用するか、該当する型の 0 と比較します。 C4800 は既定でオフのレベル 4 警告であり、C4165 は既定でオフのレベル 3 警告です。 いずれも **`/Wall`** コンパイラ オプションで検出できます。
 
-次の例では C4800 と C4165 が `/Wall` の下で発生します。
+次の例では、 **`/Wall`** で C4800 と C4165 が発生します。
 
 ```cpp
 bool test(IUnknown* p)
@@ -1164,7 +1262,7 @@ bool test(IUnknown* p)
 
 ### <a name="local-class-member-function-doesnt-have-a-body"></a>ローカル クラスのメンバー関数に本体がない
 
-Visual Studio 2017 では、警告 C4822: `Local class member function doesn't have a body` が、コンパイラ オプション `/w14822` が明示的に設定されている場合にのみ発生します。 これは `/Wall` では表示されません。 Visual Studio 2019 では、C4822 はデフォルトでオフの警告であり、`/w14822` を明示的に設定しなくても `/Wall` の下で見つかります。
+Visual Studio 2017 では、警告 C4822: `Local class member function doesn't have a body` は、コンパイラ オプション **`/w14822`** が明示的に設定されている場合にのみ発生します。 これは **`/Wall`** では表示されません。 Visual Studio 2019 では、C4822 は既定でオフの警告であり、 **`/w14822`** を明示的に設定しなくても **`/Wall`** で検出できるようになります。
 
 ```cpp
 void example()
@@ -1176,9 +1274,9 @@ void example()
 }
 ```
 
-### <a name="function-template-bodies-containing-constexpr-if-statements"></a>constexpr if ステートメントを含む関数テンプレートの本体
+### <a name="function-template-bodies-containing-if-constexpr-statements"></a>`if constexpr` ステートメントを含む関数テンプレートの本体
 
-**if constexpr** ステートメントを含むテンプレート関数の本体では、一部の [/permissive-](../build/reference/permissive-standards-conformance.md) 解析関連チェックが有効になっています。 たとえば、Visual Studio 2017 では、次のコードで C7510: `'Type': use of dependent type name must be prefixed with 'typename'` が生成されるのは **`/permissive-`** オプションが設定されていない場合のみです。 Visual Studio 2019 の場合、 **`/permissive-`** オプションが設定されていても、同じコードでエラーが発生します。
+**`if constexpr`** ステートメントが含まれるテンプレート関数の本体では、一部の [`/permissive-`](../build/reference/permissive-standards-conformance.md) 解析関連チェックが有効になっています。 たとえば、Visual Studio 2017 では、次のコードで C7510: `'Type': use of dependent type name must be prefixed with 'typename'` が生成されるのは **`/permissive-`** オプションが設定されていない場合のみです。 Visual Studio 2019 の場合、 **`/permissive-`** オプションが設定されていても、同じコードでエラーが発生します。
 
 ```cpp
 template <typename T>
@@ -1278,7 +1376,7 @@ int main()
 
 ### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>\<xkeycheck.h> キーワード強制の修正
 
-標準ライブラリのマクロを置換するキーワード強制 \<xkeycheck.h> が汎用的なメッセージではなく、検出された実際に問題となるキーワードを表示するように修正されました。 また、C++ 20 キーワード対応となり、IntelliSense でランダムのキーワードがマクロであるととらえられることがなくなりました。
+キーワードを置き換えるマクロに対する \<xkeycheck.h> での標準ライブラリの強制が修正されました。 ライブラリでは、汎用メッセージではなく、検出された実際の問題のキーワードが生成されるようになりました。 また、C++ 20 キーワード対応となり、IntelliSense でランダムのキーワードがマクロであるととらえられることがなくなりました。
 
 ### <a name="allocator-types-no-longer-deprecated"></a>非推奨でなくなったアロケーター型
 
@@ -1288,7 +1386,7 @@ int main()
 
 標準では呼び出されず、C4244 絞り込み警告を誤って非表示にしていた不適切な **`static_cast`** が `std::string` から削除されました。 `std::string::string(const wchar_t*, const wchar_t*)` を呼び出そうとすると、C4244 `narrowing a wchar_t into a char` が正しく出力されるようになりました。
 
-### <a name="various-filesystem-correctness-fixes"></a>さまざまな \<filesystem> 正確性の修正
+### <a name="various-fixes-for-filesystem-correctness"></a>\<filesystem> の正確性に関するさまざまな修正
 
 - ディレクトリの最後の書き込み時刻を変更しようとすると失敗する `std::filesystem::last_write_time` が修正されました。
 - `std::filesystem::directory_entry` コンストラクターには、存在しないターゲット パスが指定されたとき、例外をスローせず、エラー結果が格納されるようになりました。
@@ -1314,7 +1412,7 @@ int main()
 
 ### <a name="fixes-for-iterator-unwrapping"></a>反復子ラッピング解除の修正
 
-C++ チームのブログ記事「[VS 2017 15.8 での STL の機能と修正](https://devblogs.microsoft.com/cppblog/stl-features-and-fixes-in-vs-2017-15-8/)」で説明されているように、一部の反復子ラッピング解除機構は、プログラマとユーザーの統合を目的として、Visual Studio 2017 15.8 で最初に公開されました。 この機構では、標準ライブラリ反復子から派生する反復子のラッピングが解除されなくなりました。 たとえば、`std::vector<int>::iterator` から派生し、動作をカスタマイズしようとするユーザーには、標準ライブラリ アルゴリズムを呼び出すとき、ポインターの動作ではなく、カスタマイズされた動作が与えられるようになりました。
+一部の反復子ラッピング解除機構は、プログラマとユーザーの統合を目的として、Visual Studio 2017 15.8 で最初に公開されました。 これについては、C++ チームのブログ記事「[VS 2017 15.8 での STL の機能と修正](https://devblogs.microsoft.com/cppblog/stl-features-and-fixes-in-vs-2017-15-8/)」で説明されていました。 この機構では、標準ライブラリ反復子から派生する反復子のラッピングが解除されなくなりました。 たとえば、`std::vector<int>::iterator` から派生し、動作をカスタマイズしようとするユーザーには、標準ライブラリ アルゴリズムを呼び出すとき、ポインターの動作ではなく、カスタマイズされた動作が与えられるようになりました。
 
 順序付けられていないコンテナー `reserve` 関数は、[LWG 2156](https://cplusplus.github.io/LWG/issue2156) に説明があるように、N 要素に予約されるようになりました。
 
@@ -1322,21 +1420,21 @@ C++ チームのブログ記事「[VS 2017 15.8 での STL の機能と修正](h
 
 - 以前は、`condition_variable::wait_for(seconds::max())` など、同時実行ライブラリに渡されていた一部の時間値がオーバーフローしていました。 このようなオーバーフローが解消され、うわべではランダムの 29 日周期で動作が変わりました (基礎となる Win32 API で受け取られる uint32_t ミリ秒がオーバーフローしたとき)。
 
-- \<ctime> ヘッダーでは、グローバル名前空間で宣言できることに加え、名前空間 `std` で `timespec` と `timespec_get` を正しく宣言できるようになりました。
+- \<ctime> ヘッダーでは、`timespec` と `timespec_get` が名前空間 `std` で正しく宣言されるようになり、グローバル名前空間でも宣言されています。
 
 ### <a name="various-fixes-for-containers"></a>コンテナーのさまざまな修正
 
 - 標準ライブラリのさまざまな内部コンテナー関数がプライベートになり、IntelliSense が使いやすくなりました。 MSVC の今後のリリースでは、メンバーをプライベートにする修正が追加される予定です。
 
-- `list`、`map`、`unordered_map` のようなノードベース コンテナーが破損する、例外の安全性における正確性の問題が解消されました。 `propagate_on_container_copy_assignment` または `propagate_on_container_move_assignment` の再代入演算の間、古いアロケーターを持つコンテナーのセンチネル ノードを解放し、古いアロケーターで POCCA/POCMA 代入を行い、新しいアロケーターからセンチネル ノードの取得を試みました。 この代入に失敗した場合、コンテナーは破損し、さらには破棄できなくなります。センチネル ノードを持つと、データ構造を変えられなくなるためです。 このコードは、既存のセンチネル ノードを破棄する前に、ソース コンテナーのアロケーターから新しいセンチネル ノードを割り当てるように修正されました。
+- `list`、`map`、`unordered_map` のようなノードベース コンテナーが破損する、例外の安全性における正確性の問題が解消されました。 `propagate_on_container_copy_assignment` または `propagate_on_container_move_assignment` の再代入演算の間、古いアロケーターを持つコンテナーのセンチネル ノードを解放し、古いアロケーターで POCCA/POCMA 代入を行い、新しいアロケーターからセンチネル ノードの取得を試みました。 この割り当てが失敗した場合、コンテナーは破損しました。 センチネル ノードを持つとハード データ構造不変であるため、破棄さえできなくなります。 このコードは、既存のセンチネル ノードを破棄する前に、ソース コンテナーのアロケーターを使用して新しいセンチネル ノードを作成するように修正されました。
 
 - `is_always_equal` が宣言されたアロケーターの場合でも、常に `propagate_on_container_copy_assignment`、`propagate_on_container_move_assignment`、`propagate_on_container_swap` に基づいてアロケーターをコピー、移動、スワップするようにコンテナーが修正されました。
 
-- [P0083 「マップと設定のスプライス」](https://wg21.link/p0083r3)に基づき、rvalue コンテナーを受け取るコンテナーの結合および抽出メンバー関数向けのオーバーロードが追加されました
+- rvalue コンテナーを受け取るコンテナー結合関数およびメンバー抽出関数に対してオーバーロードが追加されました 詳細については、[P0083 「マップと設定のスプライス」](https://wg21.link/p0083r3)を参照してください
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` での \\r\\n => \\n の処理
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` での `\r\n`` => `\n` の処理
 
-\\r\\n => \\n 処理の一環として、与えられたバッファーの一部を一時的に書き込まないよう、`std::basic_istream::read` が修正されました。 この変更により、Visual Studio 2017 15.8 において 4K を超える読み込みで得られるパフォーマンス上のいくつかの長所を放棄することになります。 ただし、文字ごとに 3 つの仮想呼び出しを回避することから得られる効率性の改善が残されています。
+`\r\n` => `\n` 処理の一環として、与えられたバッファーの一部を一時的に書き込まないよう、`std::basic_istream::read` が修正されました。 この変更により、Visual Studio 2017 15.8 において 4K を超える読み込みで得られるパフォーマンス上のいくつかの長所を放棄することになります。 ただし、文字ごとに 3 つの仮想呼び出しを回避することから得られる効率性の改善が残されています。
 
 ### <a name="stdbitset-constructor"></a>`std::bitset` コンストラクター
 
@@ -1400,6 +1498,123 @@ struct Comparer  {
 
 ```
 
+## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019-version-167"></a><a name="updates_167"></a> Visual Studio 2019 バージョン 16.7 のバグの修正および動作の変更
+
+### <a name="initialization-of-class-members-with-overloaded-names-is-correctly-sequenced"></a>オーバーロードされた名前を持つクラス メンバーの初期化が正しい順序で行われる
+
+型名もデータ メンバーの名前としてオーバーロードされているときの、クラス データ メンバーの内部表現で、バグが見つかりました。 このバグにより、集約の初期化とメンバーの初期化の順序で不整合が発生しました。 正しい初期化コードが生成されるようになりました。 ただし、この変更により、次の例のように正しくない順序のメンバーに誤って依存しているソースで、エラーまたは警告が発生する可能性があります。
+
+```cpp
+// Compiling with /w15038 now gives:
+// warning C5038: data member 'Outer::Inner' will be initialized after data member 'Outer::v'
+struct Outer {
+    Outer(int i, int j) : Inner{ i }, v{ j } {}
+
+    struct Inner { int x; };
+    int v;
+    Inner Inner; // 'Inner' is both a type name and data member name in the same scope
+};
+```
+
+以前のバージョンのコンストラクターでは、データ メンバー `v` より前に、データ メンバー `Inner` が誤って初期化されていました。 (C++ の標準では、初期化の順序は、メンバーの宣言の順序と同じである必要があります)。 生成されたコードが標準に従うようになったので、メンバー初期化リストは順不同になります。 この例では、コンパイラによって警告が生成されます。 この問題を解決するには、宣言の順序を反映するように、メンバー初期化子リストの順序を変更します。
+
+### <a name="overload-resolution-involving-integral-overloads-and-long-arguments"></a>整数オーバーロードと `long` 引数を含むオーバーロードの解決
+
+C++ 標準では、標準変換として **`long`** から **`int`** への変換を優先度付けする必要があります。 以前の MSVC コンパイラでは、それが整数の上位変換として不適切に優先度付けされ、オーバーロードの解決に対して上位に優先度付けされます。 この優先度付けによって、あいまいであると見なす必要がある場合に、オーバーロードの解決が正常に解決される可能性があります。
+
+コンパイラにより、[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードで優先度付けが正しく考慮されるようになりました。 次の例のように、無効なコードが適切に診断されます。
+
+```cpp
+void f(long long);
+void f(int);
+
+int main() {
+    long x {};
+    f(x); // error: 'f': ambiguous call to overloaded function
+    f(static_cast<int>(x)); // OK
+}
+```
+
+この問題を解決するには、いくつかの方法があります。
+
+- 呼び出しサイトで、渡す引数の型を **`int`** に変更します。 変数の型を変更することも、キャストすることもできます。
+
+- 呼び出しサイトが多い場合は、 **`long`** 引数を受け取る別のオーバーロードを追加できます。 この関数では、引数をキャストして **`int`** オーバーロードに転送します。
+
+### <a name="use-of-undefined-variable-with-internal-linkage"></a>内部リンケージでの未定義の変数の使用
+
+Visual Studio 2019 バージョン16.7 より前のバージョンの MSVC では、内部リンケージがあり、定義されていない **`extern`** と宣言された変数の使用が認められていました。 このような変数は他の翻訳単位で定義できず、有効なプログラムを作成することもできません。 コンパイラで、コンパイル時にこのケースが診断されるようになりました。 エラーは、未定義の静的関数に対するエラーに似ています。
+
+```cpp
+namespace {
+    extern int x; // Not a definition, but has internal linkage because of the anonymous namespace
+}
+
+int main()
+{
+    return x; // Use of 'x' that no other translation unit can possibly define.
+}
+```
+
+このプログラムは、以前は誤ってコンパイルおよびリンクされましたが、現在は以下が出力されます。
+
+エラー C7631: `'anonymous-namespace'::x': variable with internal linkage declared but not defined`
+
+このような変数は、使用されるのと同じ翻訳単位で定義する必要があります。 たとえば、明示的な初期化子または別の定義を指定できます。
+
+### <a name="type-completeness-and-derived-to-base-pointer-conversions"></a>型の完全性と派生から基底へのポインターの変換
+
+C++20 より前の C++ 標準での、派生クラスから基底クラスへの変換では、派生クラスが完全なクラス型である必要はありませんでした。 C++標準化委員会において、すべてのバージョンの C++ 言語に適用される遡及効果のある障害レポートの変更が承認されました。 この変更により、変換プロセスは `std::is_base_of` などの型の特徴と一致するようになり、派生クラスは完全なクラス型であることが必要になります。
+
+次に例を示します。
+
+```cpp
+template<typename A, typename B>
+struct check_derived_from
+{
+    static A a;
+    static constexpr B* p = &a;
+};
+
+struct W { };
+struct X { };
+struct Y { };
+
+// With this change this code will fail as Z1 is not a complete class type
+struct Z1 : X, check_derived_from<Z1, X>
+{
+};
+
+// This code failed before and it will still fail after this change
+struct Z2 : check_derived_from<Z2, Y>, Y
+{
+};
+
+// With this change this code will fail as Z3 is not a complete class type
+struct Z3 : W
+{
+    check_derived_from<Z3, W> cdf;
+};
+```
+
+この動作変更は、 **`/std:c++latest`** だけでなく、MSVC のすべての C++ 言語モードに適用されます。
+
+### <a name="narrowing-conversions-are-more-consistently-diagnosed"></a>縮小変換がより一貫して診断される
+
+MSVC では、中かっこで囲まれたリスト初期化子での縮小変換に関する警告が出力されます。 以前のコンパイラでは、基になる大きな **`enum`** 型から、より狭い整数型への縮小変換が診断されませんでした。 (コンパイラでは、変換ではなく、整数の上位変換であると誤って見なされました)。 縮小変換が意図的なものである場合は、初期化子の引数で **`static_cast`** を使用することによって警告を回避できます。 または、より大きな変換先の整数型を選択します。
+
+次に、明示的な **`static_cast`** を使用して警告に対応する例を示します。
+
+```cpp
+enum E : long long { e1 };
+struct S { int i; };
+
+void f(E e) {
+    S s = { e }; // warning: conversion from 'E' to 'int' requires a narrowing conversion
+    S s1 = { static_cast<int>(e) }; // Suppress warning with explicit conversion
+}
+```
+
 ::: moniker-end
 
 ::: moniker range="vs-2017"
@@ -1418,7 +1633,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **`constexpr
 
 ### <a name="c14-extended-constexpr"></a>C++14:拡張された `constexpr`
 
-**`constexpr`** として宣言された式には、特定の種類の宣言、if および switch ステートメント、loop ステートメント、constexpr 式の評価内で有効期間が開始されたオブジェクトの変異を含めることができます。 さらに、 **`constexpr`** の非静的メンバー関数を暗黙的に **`const`** しなければならないという要件はなくなりました。 詳細については、「[Relaxing constraints on constexpr functions](https://wg21.link/n3652)」 (constexpr 関数に対する制約の緩和) を参照してください。
+**`constexpr`** として宣言された式には、特定の種類の宣言、if および switch ステートメント、loop ステートメント、 **`constexpr`** 式の評価内で有効期間が開始されたオブジェクトの変異を含めることができます。 さらに、 **`constexpr`** の非静的メンバー関数を暗黙的に **`const`** しなければならないという要件はなくなりました。 詳細については、「[`constexpr` 関数に対する制約の緩和](https://wg21.link/n3652)」を参照してください。
 
 ### <a name="c17-terse-static_assert"></a>C++17:簡易 `static_assert`
 
@@ -1426,11 +1641,11 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **`constexpr
 
 ### <a name="c17-fallthrough-attribute"></a>C++17: `[[fallthrough]]` 属性
 
-**`/std:c++17`** モードで、`[[fallthrough]]` 属性は、フォールスルー動作を意図するコンパイラに対するヒントとして switch ステートメントのコンテキスト内で使用できます。 この属性により、コンパイラがこのような場合に警告を発行することを防止できます。 詳細については、「[Wording for \[\[fallthrough\]\] attribute ([[fallthrough]] 属性の用語)](https://wg21.link/p0188r0)」を参照してください。
+**`/std:c++17`** モードで、`[[fallthrough]]` 属性は、フォールスルー動作を意図するコンパイラに対するヒントとして switch ステートメントのコンテキスト内で使用できます。 この属性により、コンパイラがこのような場合に警告を発行することを防止できます。 詳細については、「[`[[fallthrough]]` 属性の用語](https://wg21.link/p0188r0)」を参照してください。
 
 ### <a name="generalized-range-based-for-loops"></a>範囲ベースの for-loop (汎用)
 
-範囲ベースの for ループでは、`begin()` および `end()` が同じ型のオブジェクトを返す必要はなくなりました。 この変更により、`end()` で [range-v3](https://github.com/ericniebler/range-v3) および completed-but-not-quite-published 範囲の技術仕様で使用される sentinel を返すことができます。 詳細については、「[Generalizing the Range-Based For Loop](https://wg21.link/p0184r0)」 (範囲ベースの for loop の汎用化) を参照してください。
+範囲ベースの for ループでは、`begin()` および `end()` が同じ型のオブジェクトを返す必要はなくなりました。 この変更により、`end()` で [range-v3](https://github.com/ericniebler/range-v3) および completed-but-not-quite-published 範囲の技術仕様で使用される sentinel を返すことができます。 詳細については、「[範囲ベースの `for` ループの汎用化](https://wg21.link/p0184r0)」を参照してください。
 
 ## <a name="conformance-improvements-in-153"></a><a name="improvements_153"></a> 15.3 の準拠の強化
 
@@ -1460,7 +1675,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **`constexpr
 
 ### <a name="construction-rules-for-enum-class-values"></a>`enum class` の値の構築ルール
 
-スコープ列挙の基になる型から列挙型自体への、暗黙的な非縮小の変換が追加されました。 この変換は、その定義で列挙子を導入せず、ソースでリスト初期化構文を使用している場合に使用できます。 詳細については、「[Construction Rules for enum class Values](https://wg21.link/p0138r2)」(列挙型クラスの値の構築ルール) と[列挙](../cpp/enumerations-cpp.md#no_enumerators)に関する記事をご覧ください。
+非縮小のスコープ列挙に対して暗黙的な変換を使用できるようになりました。 スコープ列挙の基になる型から列挙型自体に変換されます。 この変換は、その定義で列挙子を導入せず、ソースでリスト初期化構文を使用している場合に使用できます。 詳細については、「[Construction Rules for enum class Values](https://wg21.link/p0138r2)」(列挙型クラスの値の構築ルール) と[列挙](../cpp/enumerations-cpp.md#no_enumerators)に関する記事をご覧ください。
 
 ### <a name="capturing-this-by-value"></a>`*this` の値によるキャプチャ
 
@@ -1510,7 +1725,7 @@ Visual Studio の以前のバージョンでは、変数が **`extern`** とし�
 
 [P0358R1](https://wg21.link/p0358r1)`std::not_fn` の新しい表現は、ラッパー呼び出し時の値のカテゴリの伝達をサポートします。
 
-### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`、`shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
 
 [P0414R2](https://wg21.link/p0414r2) ライブラリ基盤から C++ 17 への `shared_ptr` の変更のマージ。 \[14]
 
@@ -1757,7 +1972,7 @@ int main()
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-Visual Studio 2017 では、初期化子リストを使用したオブジェクトの作成に関連するコンパイラ エラーが正しく発生します。 これらのエラーは、Visual Studio 2015 ではキャッチされなかったため、クラッシュまたは未定義の実行時の動作を引き起こす可能性がありました。 N4594 13.3.1.7p1 のとおり、copy-list-initialization で、コンパイラは、オーバーロードの解決のために明示的なコンストラクターを考慮する必要がありますが、その特定のオーバーロードが選択された場合にエラーを発生させる必要があります。
+Visual Studio 2017 では、初期化子リストを使用したオブジェクトの作成に関連するコンパイラ エラーが正しく発生します。 これらのエラーは、Visual Studio 2015 ではキャッチされなかったため、クラッシュまたは未定義の実行時の動作を引き起こす可能性がありました。 N4594 13.3.1.7p1 のとおり、copy-list-initialization で、コンパイラは、オーバーロードの解決のために明示的なコンストラクターを考慮する必要があります。 ただし、その特定のオーバーロードが選択された場合、エラーを発生させる必要があります。
 
 次の 2 つの例は、Visual Studio 2017 ではなく Visual Studio 2015 でコンパイルします。
 
@@ -1783,7 +1998,7 @@ A a1{ 1 };
 const A& a2{ 1 };
 ```
 
-Visual Studio 2015 では、コンパイラは、誤って copy-list-initialization を通常の copy-initialization と同じ方法で処理しました。これは、単なるオーバーロードの解決のためのコンストラクターの変換と見なされます。 次の例では、Visual Studio 2015 は、MyInt(23) を選択しましたが、Visual Studio 2017 は正しくエラーを発生させます。
+Visual Studio 2015 では、コンパイラは、誤って copy-list-initialization を通常の copy-initialization と同じ方法で処理しました。これは、単なるオーバーロードの解決のためのコンストラクターの変換と見なされます。 次の例では、Visual Studio 2015 で `MyInt(23)` を選択しています。 Visual Studio 2017 ではエラーが正しく発生します。
 
 ```cpp
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
@@ -1828,7 +2043,7 @@ int main()
 
 ### <a name="deprecated-typedefs"></a>非推奨の typedef
 
-Visual Studio 2017 は、クラスまたは構造体で宣言されている非推奨の typedef に関する正しい警告を発行するようになりました。 次の例では、Visual Studio 2015 では警告なしでコンパイルしますが、Visual Studio 2017 は C4996 を生成します。
+Visual Studio 2017 は、クラスまたは構造体で宣言されている非推奨の typedef に関する正しい警告を発行するようになりました。 次の Visual Studio 2015 の例では、警告なしでコンパイルされます。 Visual Studio 2017 では C4996 が生成されます。
 
 ```cpp
 struct A
@@ -1907,7 +2122,7 @@ int main()
     printf("%i\n", static_cast<int>(s))
 ```
 
-CString を使用して構築および管理される文字列の場合、指定されている `operator LPCTSTR()` を使用して、書式設定文字列によって予期されている C ポインターに CString オブジェクトをキャストする必要があります。
+`CString` を使用して構築および管理される文字列の場合、指定されている `operator LPCTSTR()` を使用して、書式設定文字列によって予期されている C ポインターに `CString` オブジェクトをキャストする必要があります。
 
 ```cpp
 CString str1;
@@ -1953,7 +2168,7 @@ int main()
 
 ### <a name="missing-template-argument-lists"></a>見つからないテンプレート引数リスト
 
-Visual Studio 2015 以前では、テンプレートがテンプレート パラメーター リストに含まれている場合、コンパイラでは見つからないテンプレート引数リストが診断されませんでした。たとえば、既定のテンプレート引数の一部、または非型テンプレート パラメーターが見つからなかった場合などです。 この問題により、コンパイラのクラッシュや実行時の予期しない動作などの予期しない動作が発生する可能性があります。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
+Visual Studio 2015 以前のコンパイラでは、不足しているすべてのテンプレート引数リストが診断されませんでした。 テンプレート パラメーター リストに不足しているテンプレートが含まれている場合、たとえば既定のテンプレート引数または非型テンプレート パラメーターの一部が見つからなかった場合、注意されませんでした。 この問題により、コンパイラのクラッシュや実行時の予期しない動作などの予期しない動作が発生する可能性があります。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
 
 ```cpp
 template <class T> class ListNode;
@@ -2105,7 +2320,7 @@ static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 
 マネージド関数からネイティブ関数を呼び出すには、マーシャリングが必要です。 CLR はマーシャリングを実行しますが、C++ のセマンティクスを理解していません。 ネイティブ オブジェクトを値で渡した場合、CLR はオブジェクトのコピー コンストラクターを呼び出すか、または `BitBlt` を使いますが、それによって実行時に未定義の動作が発生する可能性があります。
 
-コンパイラでは、コンパイル時に、削除されたコピー コンストラクターを含むネイティブ オブジェクトがネイティブとマネージドの境界を越えて値で渡されることを確認すると、警告が生成されるようになりました。 コンパイル時に認識できない場合のためには、実行時チェックが挿入されて、不適切な形式のマーシャリングが発生すると直ちにプログラムが `std::terminate` を呼び出せるようにします。 Visual Studio 2017 バージョン 15.3 では、次のコードに対して警告 C4606 `'A': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise, the runtime behavior is undefined.` が生成されます
+コンパイラでは、コンパイル時に、削除されたコピー コンストラクターを含むネイティブ オブジェクトがネイティブとマネージドの境界を越えて値で渡されるエラーが検出されると、警告が生成されるようになりました。 コンパイル時に認識できない場合のためには、実行時チェックが挿入されて、不適切な形式のマーシャリングが発生すると直ちにプログラムが `std::terminate` を呼び出せるようにします。 Visual Studio 2017 バージョン 15.3 では、次のコードに対して警告 C4606 `'A': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise, the runtime behavior is undefined.` が生成されます
 
 ```cpp
 class A
@@ -2188,7 +2403,7 @@ C++ では、 **`this`** は X へのポインター型の prvalue です。 **`
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>アクセスできない基底クラスへの変換
 
-Visual Studio 2017 バージョン 15.3 では、アクセスできない基底クラスに型を変換しようとすると、エラーになります。 コンパイラでは、エラー C2243: `'type cast': conversion from 'D *' to 'B *' exists, but is inaccessible` が発生するようになりました。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 コンパイラは、このようなコードを検出すると、C2243 を生成するようになりました。
+Visual Studio 2017 バージョン 15.3 では、アクセスできない基底クラスに型を変換しようとすると、エラーになります。 コンパイラでは、エラー C2243: `'type cast': conversion from 'D *' to 'B *' exists, but is inaccessible` が発生するようになりました。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 コンパイラでは、次のようなコードが検出されると、C2243 が生成されるようになりました。
 
 ```cpp
 #include <memory>
@@ -2204,7 +2419,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>メンバー関数のアウトオブライン定義で既定の引数が許可されない
 
-テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、[/permissive-](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
+テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、[`/permissive-`](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
 
 Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では、警告 C5034: `'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments` が発生します。
 
@@ -2407,7 +2622,7 @@ void f()
 
 ### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: ローカル関数宣言と引数依存の参照
 
-ローカル関数宣言では、外側のスコープ内の関数が非表示になり、引数依存の参照が無効になります。 ただし、以前のバージョンのコンパイラでは、このケースで引数依存の参照が実行されていました。 これにより、誤ったオーバーロードが選択され、予期しない実行時の動作が発生する可能性がありました。 通常、このエラーは、ローカル関数宣言のシグネチャが正しくないことが原因で発生します。 次の例では、Visual Studio 2017 バージョン 15.3 で C2660 `'f': function does not take two arguments` が正しく発生します。
+ローカル関数宣言では、外側のスコープ内の関数が非表示になり、引数依存の参照が無効になります。 ただし、以前のバージョンのコンパイラでは、このケースで引数依存の参照が常に行われました。 これにより、誤ったオーバーロードが選択され、予期しない実行時の動作が発生する可能性がありました。 通常、このエラーは、ローカル関数宣言のシグネチャが正しくないことが原因で発生します。 次の例では、Visual Studio 2017 バージョン 15.3 で C2660 `'f': function does not take two arguments` が正しく発生します。
 
 ```cpp
 struct S {};
@@ -2503,7 +2718,7 @@ int main()
 
 ### <a name="exception-handlers"></a>例外ハンドラー
 
-配列または関数型への参照のハンドラーは、どの例外オブジェクトとも一致することはできません。 コンパイラは、このルールを正しく優先し、レベル 4 の警告を発生させるようになりました。 **`/Zc:strictStrings`** を使用するときに **`char*`** または `wchar_t*` のハンドラーを文字列リテラルと一致させることもできなくなりました。
+配列または関数型への参照のハンドラーは、どの例外オブジェクトとも一致することはできません。 コンパイラは、このルールを正しく優先し、レベル 4 の警告を発生させるようになりました。 **`/Zc:strictStrings`** を使用するときに `char*` または `wchar_t*` のハンドラーを文字列リテラルと一致させることもできなくなりました。
 
 ```cpp
 int main()
@@ -2685,7 +2900,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
    #pragma warning (pop)
    ```
 
-### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> Extern constexpr リンケージ
+### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> `extern constexpr` リンケージ
 
 Visual Studio の以前のバージョンでは、変数が **`extern`** としてマークされている場合でも、コンパイラは常に **`constexpr`** 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ ( **`/Zc:externConstexpr`** ) により、正しい標準準拠の動作が可能になります。 最終的にこの動作は既定値になります。
 
@@ -2697,7 +2912,7 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-ヘッダー ファイルには、宣言された変数 **extern constexpr** が含まれている場合、重複する宣言を正しく組み合わせるために、`__declspec(selectany)` のマークを付ける必要があります。
+ヘッダー ファイルには、宣言された変数 **`extern constexpr`** が含まれている場合、重複する宣言を正しく組み合わせるために、`__declspec(selectany)` のマークを付ける必要があります。
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -2747,7 +2962,7 @@ static_assert(std::is_convertible<D *, B *>::value, "fail");
 
 C++ 17 では、`throw()` は **`noexcept`** のエイリアスで、`throw(<type list>)` と `throw(...)` は削除されているので、特定の型に **`noexcept`** が含まれる場合があります。 この変更により、C++14 またはそれ以前に準拠したコードのソース互換性の問題が生じる可能性があります。 **`/Zc:noexceptTypes-`** スイッチを利用すれば、全般的に C++17 モードを使用しながら、C++14 バージョンの **`noexcept`** に戻すことができます。 これでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。
 
-コンパイラは、C++ 17 モードの宣言で、または新しい警告 C5043 と [/permissive-](../build/reference/permissive-standards-conformance.md) を使用して、より多くの一致しない例外の指定を診断するようになりました。
+コンパイラでは、C++ 17 モードの宣言で、または新しい警告 C5043 と [`/permissive-`](../build/reference/permissive-standards-conformance.md) を使用して、より多くの一致しない例外の指定を診断するようになりました。
 
 次のコードでは、Visual Studio 2017 バージョン 15.5 で **`/std:c++17`** スイッチを適用するときに、C5043 および C5040 が生成されます。
 
@@ -2783,7 +2998,7 @@ struct B : A {
 
 ### <a name="inline-variables"></a>インライン変数
 
-静的 Constexpr データ メンバーは、暗黙的にインラインになり、クラス内でその宣言がそれらの定義になるようになりました。 静的 Constexpr データ メンバーのアウトオブライン定義は、冗長であり、現在は非推奨とされます。 Visual Studio 2017 バージョン 15.5 では、 **`/std:c++17`** スイッチが適用されると、次のコードによって警告 C5041 `'size': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17` が生成されるようになりました。
+静的 **`constexpr`** データ メンバーは、暗黙的に **`inline`** になり、クラス内でその宣言がそれらの定義になるようになりました。 **`static constexpr`** データ メンバーのアウトオブライン定義は、冗長であり、現在は非推奨とされます。 Visual Studio 2017 バージョン 15.5 では、 **`/std:c++17`** スイッチが適用されると、次のコードによって警告 C5041 `'size': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17` が生成されるようになりました。
 
 ```cpp
 struct X {
@@ -3075,7 +3290,7 @@ using  X [[deprecated("msg")]] = T;
 
 これにより、マニフェストで依存する基底クラスを参照できるようになります。 以前は、依存する基底クラスで定義されている名前を使用することがコンパイラにより許可されていました。 これは、インスタンス化中にすべての型が解決されると、それらが参照されるためです。 現在は、そのようなコードはエラーとして扱われます。 このような場合、変数を基底クラス型で修飾するか、`this->` ポインターを使用するなどして依存させることで、インスタンス化のときに変数が参照されるように強制できます。
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによって C3861: `'base_value': identifier not found` が発生するようになりました。
+[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、次のコードに対して C3861: `'base_value': identifier not found` が発生するようになりました。
 
 ```cpp
 template <class T>
@@ -3117,7 +3332,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>それ自体にデリゲートするコンストラクター
 
-C++ 標準では、コンストラクターがそれ自体にデリゲートするときにはコンパイラで診断を出力することを提案しています。 Microsoft C++ コンパイラの [/std:c++17](../build/reference/std-specify-language-standard-version.md) モードと [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードで、C7535: `'X::X': delegating constructor calls itself` が発生するようになりました。
+C++ 標準では、コンストラクターがそれ自体にデリゲートするときにはコンパイラで診断を出力することを提案しています。 Microsoft C++ コンパイラの [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) モードと [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) モードでは、C7535: `'X::X': delegating constructor calls itself` が発生するようになりました。
 
 このエラーがないと、次のプログラムでコンパイルされますが、無限ループが生成されます。
 
@@ -3144,9 +3359,9 @@ public:
 
 [offsetof](../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 この用法は、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 標準ライブラリの一部としてリリースされている `offsetof` マクロはコンパイラ組み込み型 ( **__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の `offsetof` を定義しています。
 
-Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの **`reinterpret_cast`** 演算子が既定のモードで表示される領域がコンパイラにより制約されます。 [/permissive-](../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で `offsetof` の結果を使用すると、警告 C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` または C2975 `invalid template argument, expected compile-time constant expression` を発生させるコードが生成される場合があります。
+Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの **`reinterpret_cast`** 演算子が既定のモードで表示される領域がコンパイラにより制約されます。 [`/permissive-`](../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で `offsetof` の結果を使用すると、警告 C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` または C2975 `invalid template argument, expected compile-time constant expression` を発生させるコードが生成される場合があります。
 
-次のコードでは、 **`/default`** モードと **`/std:c++17`** モードで C4644 が、[/permissive-](../build/reference/permissive-standards-conformance.md) モードで C2975 が発生します。
+次のコードでは、 **`/default`** モードと **`/std:c++17`** モードでは C4644 が、[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは C2975 が発生します。
 
 ```cpp
 struct Data {
@@ -3188,7 +3403,7 @@ int main()
 
 以前のバージョンの Microsoft C++ コンパイラでは、基底クラスがパック拡張の対象でもあった場合、cv 修飾子が含まれることを検出しませんでした。
 
-Visual Studio 2017 バージョン 15.8 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、次のコードにより C3770 `'const S': is not a valid base class` が発生します。
+Visual Studio 2017 バージョン 15.8 の [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、次のコードにより C3770 `'const S': is not a valid base class` が発生します。
 
 ```cpp
 template<typename... T>
@@ -3204,9 +3419,9 @@ int main()
 
 ### <a name="template-keyword-and-nested-name-specifiers"></a>`template` キーワードと nested-name-specifier
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで **`template`** キーワードが必要になりました。
+[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで **`template`** キーワードが必要になりました。
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによって C7510: `'example': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled` が発生するようになりました。
+[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによって C7510: `'example': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled` が発生するようになりました。
 
 ```cpp
 template<typename T> struct Base
@@ -3438,4 +3653,4 @@ Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全�
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)
+[Microsoft C++ 言語の準拠表](visual-cpp-language-conformance.md)
