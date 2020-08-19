@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390001"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144179"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -636,7 +636,7 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 
 **Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジでのデスクトップ アプリケーションのパッケージ化が大幅に簡略化されます。 **[ファイル] > [新規] > [プロジェクト] > [インストール] > [Visual C++] > [ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
 
-新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 標準に準拠した C++ コンパイラを使用して、Windows ランタイム API を使用および作成できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳しくは、「[C++/WinRT: Modern C++ for the Windows Runtime (C++/WinRT: Windows ランタイム用の最新の C++)](https://moderncpp.com/)」をご覧ください。
+新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 標準に準拠した C++ コンパイラを使用して、Windows ランタイム API を使用および作成できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳細については、「[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)」を参照してください。
 
 Windows SDK Insider プレビューのビルド 17025 以降、C++/WinRT が Windows SDK に含まれるようになりました。 詳細については、「[C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/)」 (C++/WinRT が Windows SDK に追加されました) を参照してください。
 
