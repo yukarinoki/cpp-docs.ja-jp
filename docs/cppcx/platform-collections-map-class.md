@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 30dbc71a03c398c77124738b2477a3563191d50d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214985"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610908"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -49,7 +49,7 @@ ref class Map sealed;
 
 *__is_valid_winrt_type ()**K*および*V*の型を検証し、型がマップに格納できない場合はわかりやすいエラーメッセージを提供する、コンパイラによって生成される関数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 使用できる型は次のとおりです。
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、 [windows:: foundation:: collections:: IMap<の windows:: foundation \<K,V> > ](/uwp/api/windows.foundation.collections.imap-2) :: collections:: IMap の実装であり、パブリック Windows ランタイムインターフェイスで渡される型です。 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を[Windows:: Foundation:: Collections:: IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)に変更します。
+マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、パブリック Windows ランタイムインターフェイスで渡される[Windows:: Foundation:: Collections: \<Windows::Foundation::Collections::IKeyValuePair\<K,V> > : IMap](/uwp/api/windows.foundation.collections.imap-2)型と[IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)型の C++ の具象実装です。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を[Windows:: Foundation:: Collections:: IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)に変更します。
 
 詳細については、[コレクション](../cppcx/collections-c-cx.md) を参照してください。
 
@@ -93,7 +93,7 @@ ref class Map sealed;
 |||
 |-|-|
 |名前|説明|
-|[Map:: MapChanged](#mapchanged)イベント|マップが変更されたときに発生します。|
+|[Map:: MapChanged](#mapchanged) イベント|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -105,7 +105,7 @@ ref class Map sealed;
 
 **名前空間:** Platform::Collections
 
-## <a name="mapclear-method"></a><a name="clear"></a>Map:: Clear メソッド
+## <a name="mapclear-method"></a><a name="clear"></a> Map:: Clear メソッド
 
 現在のマップ オブジェクトから、すべてのキー/値ペアを削除します。
 
@@ -115,7 +115,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="mapfirst-method"></a><a name="first"></a>Map:: First メソッド
+## <a name="mapfirst-method"></a><a name="first"></a> Map:: First メソッド
 
 Map 内の最初の要素を指定する反復子を返し **`nullptr`** ます。マップが空の場合はを返します。
 
@@ -130,11 +130,11 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 マップ内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMap->First();` 」のように入力します。
 
-## <a name="mapgetview-method"></a><a name="getview"></a>Map:: GetView メソッド
+## <a name="mapgetview-method"></a><a name="getview"></a> Map:: GetView メソッド
 
 現在のマップの読み取り専用ビューを返します。これは、 [Windows:: Foundation:: collections:: IMapView \<K,V> ](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスを実装する[Platform:: Collections:: mapview クラス](../cppcx/platform-collections-mapview-class.md)です。
 
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `MapView` オブジェクト。
 
-## <a name="maphaskey-method"></a><a name="haskey"></a>Map:: HasKey メソッド
+## <a name="maphaskey-method"></a><a name="haskey"></a> Map:: HasKey メソッド
 
 指定したキーが現在のマップに格納されているかどうかを判定します。
 
@@ -167,7 +167,7 @@ Map 要素の検索に使用するキー。 *キー*の型は typename *K*です
 
 **`true`** キーが見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="mapinsert-method"></a><a name="insert"></a>Map:: Insert メソッド
+## <a name="mapinsert-method"></a><a name="insert"></a> Map:: Insert メソッド
 
 指定したキー/値ペアを現在のマップ オブジェクトに追加します。
 
@@ -187,9 +187,9 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在のマップ内の既存の要素のキーが*キー*と一致し、その要素の値部分が*value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値*のパラメーターがキーと値のペアに*なり、現在*のマップに追加されている場合は。
+**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値*のパラメーターがキーと値のペアに*なり、現在*のマップに追加されている場合は。
 
-## <a name="maplookup-method"></a><a name="lookup"></a>Map:: Lookup メソッド
+## <a name="maplookup-method"></a><a name="lookup"></a> Map:: Lookup メソッド
 
 キーがある場合は、型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -208,11 +208,11 @@ V Lookup(K key);
 
 *キー*とペアになる値。 戻り値の型は typename *V*です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-キーが存在しない場合は、 [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md)がスローされます。
+キーが存在しない場合は、 [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) がスローされます。
 
-## <a name="mapmap-constructor"></a><a name="ctor"></a>Map:: Map コンストラクター
+## <a name="mapmap-constructor"></a><a name="ctor"></a> Map:: Map コンストラクター
 
 マップ クラスの新しいインスタンスを初期化します。
 
@@ -246,7 +246,7 @@ Map(
 *last*<br/>
 現在のマップを初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
-## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Map:: MapChanged イベント
+## <a name="mapmapchanged-event"></a><a name="mapchanged"></a> Map:: MapChanged イベント
 
 項目がマップに挿入されたときまたはマップから削除されたときに発生します。
 
@@ -264,7 +264,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 C# または Visual Basic project IMap を IDictionary として使用するアプリを Windows ランタイム \<K,V> \<K,V> します。
 
-## <a name="mapremove-method"></a><a name="remove"></a>Map:: Remove メソッド
+## <a name="mapremove-method"></a><a name="remove"></a> Map:: Remove メソッド
 
 指定したキー/値ペアを現在のマップ オブジェクトから削除します。
 
@@ -279,7 +279,7 @@ virtual void Remove(K key);
 *key*<br/>
 キー/値ペアのキー部分。 *キー*の型は typename *K*です。
 
-## <a name="mapsize-method"></a><a name="size"></a>Map:: Size メソッド
+## <a name="mapsize-method"></a><a name="size"></a> Map:: Size メソッド
 
 Map 内の[Windows:: Foundation:: Collections:: ikeyvaluepair<k, \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素の数を返します。
 

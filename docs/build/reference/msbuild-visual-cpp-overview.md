@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190495"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610850"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ プロジェクトの MSBuild の内部
 
@@ -23,15 +23,15 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ vctargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン*\\
 
   ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。 *バージョン*のプレースホルダーは、visual studio のバージョン: V160 for visual studio 2019、V150 For visual studio 2017 を参照しています。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ vctargets \\ プラットフォーム \\ *プラットフォーム*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ プラットフォーム \\ *プラットフォーム*\\
 
   親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ vctargets \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets セット \\ *ツールセット*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets \\ *セットツールセット*\\
 
   指定の *toolset* を使用してビルドで Visual C++ アプリケーションを生成するためのディレクトリが含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。 *ツールセット*プレースホルダーは、ツールセットサブディレクトリを表します。
 
@@ -65,7 +65,7 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 - *ドライブ*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets \\ *セット*\\
 
-  ビルドによる Visual Studio 2008 または Visual Studio 2010 アプリケーションの生成を可能にするパスには、*バージョン*が含まれていません。 これらのバージョンでは、*プラットフォーム*のプレースホルダーは、Itanium、Win32、または x64 サブディレクトリを表します。 *toolset* プレースホルダーは、v90 または v100 ツールセット サブディレクトリを表します。
+  ビルドによる Visual Studio 2008 または Visual Studio 2010 アプリケーションの生成を可能にするパスには、 *バージョン*が含まれていません。 これらのバージョンでは、 *プラットフォーム* のプレースホルダーは、Itanium、Win32、または x64 サブディレクトリを表します。 *toolset* プレースホルダーは、v90 または v100 ツールセット サブディレクトリを表します。
 
 ## <a name="support-files"></a>サポート ファイル
 
@@ -112,7 +112,7 @@ Visual Studio のサポート ファイル内には、ターゲットが数多�
 | Target | 説明 |
 | ------ | ----------- |
 | BscMake | Microsoft Browse Information Maintenance Utility ツール (bscmake.exe) を実行します。 |
-| ビルド | プロジェクトをビルドします。<br /><br /> このターゲットは、プロジェクトの既定値です。 |
+| Build | プロジェクトをビルドします。<br /><br /> このターゲットは、プロジェクトの既定値です。 |
 | ClCompile | MSVC コンパイラ ツール (cl.exe) を実行します。 |
 | Clean | 一時ビルド ファイルおよび中間ビルド ファイルを削除します。 |
 | Lib | Microsoft 32-Bit Library Manager ツール (lib.exe) を実行します。 |

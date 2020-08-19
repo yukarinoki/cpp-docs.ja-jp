@@ -2,12 +2,12 @@
 title: コレクション (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233510"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610947"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
@@ -39,7 +39,7 @@ Windows ランタイムは、コレクションおよび関連する型のイン
 > [!IMPORTANT]
 > 独自のプログラム内のシーケンスを渡している場合は、 `Vector` か `std::vector` のどちらかを使用します。それらの方が `IVector`より効率的であるためです。 ABI を介してコンテナーを渡す場合にのみ、 `IVector` を使用します。
 >
-> Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、IVector<Platform:: Array \<T>> を戻り値またはメソッドパラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
+> Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、を `IVector<Platform::Array<T>>` 戻り値またはメソッドパラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
 `Vector<T>` は、コレクションでの項目の追加、削除、およびアクセスに必要なメソッドを提供します。暗黙的に `IVector<T>`に変換可能です。 `Vector<T>`のインスタンスで STL アルゴリズム使用することもできます。 次の例は、基本的な使用法をいくつか示しています。 [begin 関数](../cppcx/begin-function.md) と [end 関数](../cppcx/end-function.md) は `Platform::Collections` 名前空間のもので、 `std` 名前空間のものではありません。
 
@@ -98,7 +98,7 @@ void FindButton(UIElementCollection^ col)
 
 コレクションは、シーケンス コレクションと関連コレクションそれぞれの変更可能バージョンと読み取り専用バージョンという 4 つのカテゴリに分類されます。 さらに、C++/CX は、コレクションへのアクセスを簡略化する3つの反復子クラスを提供することで、コレクションを拡張します。
 
-変更可能なコレクションの要素は変更できますが、 *ビュー*と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 [Platform:: collections:: vector](../cppcx/platform-collections-vector-class.md)コレクションまたは[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) collection の要素には、反復子またはコレクションの[Vector:: GetAt](../cppcx/platform-collections-vector-class.md#getat)とインデックスを使用してアクセスできます。 連想コレクションの要素には、コレクションの[Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup)とキーを使用してアクセスできます。
+変更可能なコレクションの要素は変更できますが、 *ビュー*と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 [Platform:: collections:: vector](../cppcx/platform-collections-vector-class.md)コレクションまたは[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) collection の要素には、反復子またはコレクションの[Vector:: GetAt](../cppcx/platform-collections-vector-class.md#getat)とインデックスを使用してアクセスできます。 連想コレクションの要素には、コレクションの [Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup) とキーを使用してアクセスできます。
 
 [Platform:: Collections:: Map クラス](../cppcx/platform-collections-map-class.md)<br/>
 変更可能な関連コレクション。 マップ要素は、キーと値のペアです。 キーを検索してその関連付けられた値を取得することと、キーと値のペアをすべて繰り返すことの両方がサポートされています。
@@ -121,11 +121,11 @@ STL 入力反復子の要件を満たす STL の反復子。
 変更可能な STL ランダム アクセス反復子の要件を満たす STL 反復子。
 
 [Platform:: Collections:: VectorViewIterator クラス](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-STL ランダムアクセス反復子の要件を満たす STL 反復子 **`const`** 。
+STL ランダムアクセス反復子の要件を満たす STL 反復子  **`const`** 。
 
 ### <a name="begin-and-end-functions"></a>begin() および end() 関数
 
-STL を使用して、、、、および任意のオブジェクトを処理することを簡略化するために `Vector` `VectorView` `Map` `MapView` `Windows::Foundation::Collections` 、C++/cx は[begin 関数](../cppcx/begin-function.md)と[end 関数](../cppcx/end-function.md)の非メンバー関数のオーバーロードをサポートしています。
+STL を使用して、、、、および任意のオブジェクトを処理することを簡略化するために `Vector` `VectorView` `Map` `MapView` `Windows::Foundation::Collections` 、C++/cx は [begin 関数](../cppcx/begin-function.md) と [end 関数](../cppcx/end-function.md) の非メンバー関数のオーバーロードをサポートしています。
 
 次の表は、使用できる反復子と関数の一覧を示しています。
 

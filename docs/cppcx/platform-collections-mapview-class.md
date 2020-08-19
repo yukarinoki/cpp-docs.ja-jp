@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214998"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610895"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 
@@ -44,7 +44,7 @@ ref class MapView sealed;
 *C*<br/>
 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: \<K> less](../standard-library/less-struct.md)です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 MapView は、アプリケーションバイナリインターフェイス (ABI) を通じて渡される[Windows:: Foundation \<K,V> :: Collections:: IMapView](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
@@ -76,7 +76,7 @@ MapView は、アプリケーションバイナリインターフェイス (ABI)
 
 **名前空間:** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>MapView:: First メソッド
+## <a name="mapviewfirst-method"></a><a name="first"></a> MapView:: First メソッド
 
 マップ ビュー内の最初の要素を指定する反復子を返します。
 
@@ -91,11 +91,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 マップ ビュー内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView:: HasKey メソッド
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView:: HasKey メソッド
 
 現在の MapView に、指定されたキーが含まれているかどうかを判定します。
 
@@ -115,7 +115,7 @@ MapView 要素の検索に使用するキー。 *キー*の型は typename *K*�
 
 **`true`** キーが見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView:: Lookup メソッド
+## <a name="mapviewlookup-method"></a><a name="lookup"></a> MapView:: Lookup メソッド
 
 型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -134,7 +134,7 @@ MapView の要素の検索に使用するキー。 の型 `key` は Typename *K*
 
 `key` とペアになる値。 戻り値の型は typename *V*です。
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView:: MapView コンストラクター
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView:: MapView コンストラクター
 
 MapView クラスの新しいインスタンスを初期化します。
 
@@ -166,7 +166,7 @@ MapView(
 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクト。
 
 *m*<br/>
-現在の MapView を初期化するために使用されるへの参照または[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 。
+現在の MapView を初期化するために使用されるへの参照または [左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 。
 
 *first*<br/>
 現在の MapView を初期化するために使用される要素の範囲内の最初の要素の入力反復子。
@@ -175,9 +175,9 @@ MapView(
 現在の MapView を初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
 *自動車*<br/>
-[Std:: initializer_list<\<K,V> > std::p](../standard-library/initializer-list-class.md) 、その要素が mapview に挿入されます。
+Mapview に挿入される要素を含む[std:: initializer_list \<std::pair\<K,V> > ](../standard-library/initializer-list-class.md) 。
 
-## <a name="mapviewsize-method"></a><a name="size"></a>MapView:: Size メソッド
+## <a name="mapviewsize-method"></a><a name="size"></a> MapView:: Size メソッド
 
 現在の MapView オブジェクトの要素数を返します。
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 現在の MapView 内の要素数。
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>MapView:: Split メソッド
+## <a name="mapviewsplit-method"></a><a name="split"></a> MapView:: Split メソッド
 
 現在の MapView を 2 つの MapView オブジェクトに分割します。 このメソッドは操作不可です。
 
@@ -213,7 +213,7 @@ void Split(
 *第第のパーティション*<br/>
 元の MapView オブジェクトの 2 番目の部分。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは操作可能ではありません。これは何も実行しません。
 

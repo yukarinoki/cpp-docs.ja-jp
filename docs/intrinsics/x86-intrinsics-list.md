@@ -1,6 +1,6 @@
-﻿---
+---
 title: x86 組み込み一覧
-description: Visual Studio でマイクロソフト C++ コンパイラでサポートされている x64 (AMD64) の組み込みのリファレンス リスト。
+description: Visual Studio の Microsoft C++ コンパイラでサポートされている x64 (AMD64) 組み込みのリファレンスリスト。
 ms.date: 02/28/2020
 f1_keywords:
 - intrin/_addcarry_u16
@@ -1138,6 +1138,39 @@ f1_keywords:
 - immintrin/_xsaveopt
 - immintrin/_xsetbv
 - immintrin/_xtest
+- XMMINTRIN/_m_maskmovq
+- XMMINTRIN/_m_pavgb
+- XMMINTRIN/_m_pavgw
+- XMMINTRIN/_m_pextrw
+- XMMINTRIN/_m_pinsrw
+- XMMINTRIN/_m_pmaxsw
+- XMMINTRIN/_m_pmaxub
+- XMMINTRIN/_m_pminsw
+- XMMINTRIN/_m_pminub
+- XMMINTRIN/_m_pmovmskb
+- XMMINTRIN/_m_pmulhuw
+- XMMINTRIN/_m_psadbw
+- XMMINTRIN/_m_pshufw
+- XMMINTRIN/_mm_avg_pu16
+- XMMINTRIN/_mm_avg_pu8
+- XMMINTRIN/_mm_cvt_pi2ps
+- XMMINTRIN/_mm_cvt_ps2pi
+- XMMINTRIN/_mm_cvtpi32_ps
+- XMMINTRIN/_mm_cvtps_pi32
+- XMMINTRIN/_mm_cvtt_ps2pi
+- XMMINTRIN/_mm_cvttps_pi32
+- XMMINTRIN/_mm_extract_pi16
+- XMMINTRIN/_mm_insert_pi16
+- XMMINTRIN/_mm_maskmove_si64
+- XMMINTRIN/_mm_max_pi16
+- XMMINTRIN/_mm_max_pu8
+- XMMINTRIN/_mm_min_pi16
+- XMMINTRIN/_mm_min_pu8
+- XMMINTRIN/_mm_movemask_pi8
+- XMMINTRIN/_mm_mulhi_pu16
+- XMMINTRIN/_mm_sad_pu8
+- XMMINTRIN/_mm_shuffle_pi16
+- XMMINTRIN/_mm_stream_pi
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
@@ -2276,16 +2309,16 @@ helpviewer_keywords:
 - _xsaveopt x86 intrinsic
 - _xsetbv x86 intrinsic
 - _xtest x86 intrinsic
-ms.openlocfilehash: fabc622552003dad3b26d6dfc4e184f1627ce50b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: f13be5ddaa79382e3d58e96b2f4aaa0d7f9d6566
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754302"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610921"
 ---
 # <a name="x86-intrinsics-list"></a>x86 組み込み一覧
 
-このドキュメントでは、X86 が対象とされるときに Microsoft C/C++ コンパイラがサポートする組み込みについて説明します。
+このドキュメントでは、Microsoft C/c + + コンパイラが、x86 が対象とする場合にサポートする組み込みの一覧を示します。
 
 各組み込みの詳細については、対象とするプロセッサに応じて、次の技術情報も参照してください。
 
@@ -2297,9 +2330,9 @@ ms.locfileid: "81754302"
 
 - [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://software.intel.com/isa-extensions)
 
-- [インテル アドバンスド・ベクター・エクステンションの概要](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Intel Advanced Vector Extensions の概要](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD 開発者ガイド、ISA ドキュメント&マニュアル](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 開発者ガイド、マニュアル & ISA ドキュメント](https://developer.amd.com/resources/developer-guides-manuals/)
 
 ## <a name="x86-intrinsics"></a>x86 組み込み
 
@@ -2307,23 +2340,23 @@ ms.locfileid: "81754302"
 
 |組み込みの名前|テクノロジ|ヘッダー|関数プロトタイプ|
 |--------------------|----------------|------------|------------------------|
-|_addcarry_u16||intrin.h|符号なし char _addcarry_u16 (符号なし char、符号なしの短い、符号\*なしの短い、符号なし短い、 符号なし短い )|
-|[_addcarry_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarry_u32)||intrin.h|符号なし char _addcarry_u32 (符号なし char、符号なし int、符号なし int、符号なし int \*)|
-|_addcarry_u8||intrin.h|符号なし char _addcarry_u8 (符号なし char、符号なし char、符号なし\*文字、符号なし char、符号なし char )|
-|[_addcarryx_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarryx_u32)|ADX [2]|immintrin.h|符号なし char _addcarryx_u32 (符号なし char、符号なし int、符号なし int、符号なし int \*)|
-|[__addfsbyte](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsbyte (符号なし長、符号なし文字)|
-|[__addfsdword](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsdword(符号なし長、符号なし長)|
-|[__addfsword](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsword(符号なし長、符号なしショート)|
-|[_AddressOfReturnAddress](addressofreturnaddress.md)||intrin.h|ボイド\*_AddressOfReturnAddress(ボイド)|
-|[_andn_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_andn_u32)|BMI [1]|ammintrin.h|符号なし int _andn_u32 (符号なし、符号なし int)|
-|[_bextr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bextr_u32)|BMI|ammintrin.h, immintrin.h|符号なし int _bextr_u32(符号なし、符号なし、符号なし int、 符号なし int)|
-|_bextri_u32|ABM [1]|ammintrin.h|符号なし int _bextri_u32 (符号なし、符号なし int)|
-|[_BitScanForward](bitscanforward-bitscanforward64.md)||intrin.h|符号なし char _BitScanForward (\*符号なし長、符号なし長)|
-|[_BitScanReverse](bitscanreverse-bitscanreverse64.md)||intrin.h|符号なし char _BitScanReverse(符号\*なし長、符号なし長)|
-|[_bittest](bittest-bittest64.md)||intrin.h|符号なし文字_bittest(長い\*定数、長い)|
-|[_bittestandcomplement](bittestandcomplement-bittestandcomplement64.md)||intrin.h|符号なし文字_bittestandcomplement(長\*い、 長い)|
-|[_bittestandreset](bittestandreset-bittestandreset64.md)||intrin.h|符号なし文字_bittestandreset(長\*い、 長い)|
-|[_bittestandset](bittestandset-bittestandset64.md)||intrin.h|符号なし文字_bittestandset(長\*い、 長い)|
+|_addcarry_u16||intrin.h|unsigned char _addcarry_u16 (unsigned char、unsigned short、unsigned short、unsigned short \* )|
+|[_addcarry_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarry_u32)||intrin.h|unsigned char _addcarry_u32 (unsigned char、unsigned int、unsigned int、unsigned int \* )|
+|_addcarry_u8||intrin.h|unsigned char _addcarry_u8 (unsigned char、unsigned char、unsigned char、unsigned char \* )|
+|[_addcarryx_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarryx_u32)|ADX [2]|immintrin.h|unsigned char _addcarryx_u32 (unsigned char、unsigned int、unsigned int、unsigned int \* )|
+|[__addfsbyte](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsbyte (unsigned long、unsigned char)|
+|[__addfsdword](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsdword (unsigned long、unsigned long)|
+|[__addfsword](addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsword (unsigned long、unsigned short)|
+|[_AddressOfReturnAddress](addressofreturnaddress.md)||intrin.h|void \* _AddressOfReturnAddress (void)|
+|[_andn_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_andn_u32)|BMI [1]|ammintrin.h|unsigned int _andn_u32 (符号なし整数、符号なし int)|
+|[_bextr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bextr_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _bextr_u32 (符号なし整数、符号なし整数、符号なし int)|
+|_bextri_u32|ABM [1]|ammintrin.h|unsigned int _bextri_u32 (符号なし整数、符号なし int)|
+|[_BitScanForward](bitscanforward-bitscanforward64.md)||intrin.h|unsigned char _BitScanForward (unsigned long \* 、unsigned long)|
+|[_BitScanReverse](bitscanreverse-bitscanreverse64.md)||intrin.h|unsigned char _BitScanReverse (unsigned long \* 、unsigned long)|
+|[_bittest](bittest-bittest64.md)||intrin.h|unsigned char _bittest (long const \* , long)|
+|[_bittestandcomplement](bittestandcomplement-bittestandcomplement64.md)||intrin.h|unsigned char _bittestandcomplement (long \* 、long)|
+|[_bittestandreset](bittestandreset-bittestandreset64.md)||intrin.h|unsigned char _bittestandreset (long \* 、long)|
+|[_bittestandset](bittestandset-bittestandset64.md)||intrin.h|unsigned char _bittestandset (long \* 、long)|
 |_blcfill_u32|ABM [1]|ammintrin.h|unsigned int _blcfill_u32(unsigned int)|
 |_blci_u32|ABM [1]|ammintrin.h|unsigned int _blci_u32(unsigned int)|
 |_blcic_u32|ABM [1]|ammintrin.h|unsigned int _blcic_u32(unsigned int)|
@@ -2334,92 +2367,92 @@ ms.locfileid: "81754302"
 |_blsic_u32|ABM [1]|ammintrin.h|unsigned int _blsic_u32(unsigned int)|
 |[_blsmsk_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_blsmsk_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _blsmsk_u32(unsigned int)|
 |[_blsr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_blsr_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _blsr_u32(unsigned int)|
-|[_bzhi_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bzhi_u32)|BMI [2]|immintrin.h|符号なし int _bzhi_u32 (符号なし、符号なし int)|
+|[_bzhi_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bzhi_u32)|BMI [2]|immintrin.h|unsigned int _bzhi_u32 (符号なし整数、符号なし int)|
 |_clac|SMAP|intrin.h|void _clac(void)|
-|[__cpuid](cpuid-cpuidex.md)||intrin.h|ボイド__cpuid(int \*,int)|
-|[__cpuidex](cpuid-cpuidex.md)||intrin.h|ボイド __cpuidex(int \*、int、int)|
+|[__cpuid](cpuid-cpuidex.md)||intrin.h|void __cpuid (int \* , int)|
+|[__cpuidex](cpuid-cpuidex.md)||intrin.h|void __cpuidex (int \* , int, int)|
 |[__debugbreak](debugbreak.md)||intrin.h|void __debugbreak(void)|
 |[_disable](disable.md)||intrin.h|void _disable(void)|
-|[_div64](div64.md)||intrin.h| int \_div64(\__int64, int, int \*)|
-|[__emul](emul-emulu.md)||intrin.h|__int64 [パスカル/cdecl] \__emul(int,int)|
-|[__emulu](emul-emulu.md)||intrin.h|符号なし__int64 [pascal/cdecl]\__emulu(符号なし int、符号なし int)|
+|[_div64](div64.md)||intrin.h| int \_ div64 ( \_ _int64, int, int \* )|
+|[__emul](emul-emulu.md)||intrin.h|__int64 [pascal/cdecl] \_ _emul (int, int)|
+|[__emulu](emul-emulu.md)||intrin.h|unsigned __int64 [pascal/cdecl] \_ _emulu (符号なし整数、符号なし int)|
 |[_enable](enable.md)||intrin.h|void _enable(void)|
 |[__fastfail](fastfail.md)||intrin.h|void __fastfail(unsigned int)|
-|[_fxrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxrstor)|FXSR [2]|immintrin.h|void _fxrstor(void\*const)|
-|[_fxsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxsave)|FXSR [2]|immintrin.h|ボイド_fxsave(ボイド\*)|
+|[_fxrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxrstor)|FXSR [2]|immintrin.h|void _fxrstor (void const \* )|
+|[_fxsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxsave)|FXSR [2]|immintrin.h|void _fxsave (void \* )|
 |[__getcallerseflags](getcallerseflags.md)||intrin.h|(unsigned int __getcallerseflags())|
 |[__halt](halt.md)||intrin.h|void __halt(void)|
-|[__inbyte](inbyte.md)||intrin.h|符号なし文字__inbyte(符号なし短)|
-|[__inbytestring](inbytestring.md)||intrin.h|void __inbytestring (符号なしの短い\*、符号なし char 、符号なし長)|
+|[__inbyte](inbyte.md)||intrin.h|unsigned char __inbyte (unsigned short)|
+|[__inbytestring](inbytestring.md)||intrin.h|void __inbytestring (unsigned short、unsigned char \* 、unsigned long)|
 |[__incfsbyte](incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsbyte(unsigned long)|
 |[__incfsdword](incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsdword(unsigned long)|
 |[__incfsword](incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsword(unsigned long)|
-|[__indword](indword.md)||intrin.h|符号なし長__indword(符号なしショート)|
-|[__indwordstring](indwordstring.md)||intrin.h|void __indwordstring(符号なしの短い、\*符号なし長、符号なし長)|
+|[__indword](indword.md)||intrin.h|unsigned long __indword (unsigned short)|
+|[__indwordstring](indwordstring.md)||intrin.h|void __indwordstring (unsigned short、unsigned long \* 、unsigned long)|
 |[__int2c](int2c.md)||intrin.h|void __int2c(void)|
-|[_InterlockedAddLargeStatistic](interlockedaddlargestatistic.md)||intrin.h|長い\__InterlockedAddLargeStatistic(_int64\*揮発性、長)|
-|[_InterlockedAnd](interlockedand-intrinsic-functions.md)||intrin.h|ロング_InterlockedAnd(長揮発性\*、長)|
-|[_InterlockedAnd_HLEAcquire](interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedAnd_HLEAcquire(長\*揮発性、長い)|
-|[_InterlockedAnd_HLERelease](interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedAnd_HLERelease(長\*揮発性、長い)|
-|[_InterlockedAnd16](interlockedand-intrinsic-functions.md)||intrin.h|ショート_InterlockedAnd16(ショート揮発性\*、ショート)|
-|[_InterlockedAnd8](interlockedand-intrinsic-functions.md)||intrin.h|char _InterlockedAnd8(char\*揮発性、char)|
-|[_interlockedbittestandreset](interlockedbittestandreset-intrinsic-functions.md)||intrin.h|符号なし文字_interlockedbittestandreset(長\*い、 長い)|
-|[_interlockedbittestandreset_HLEAcquire](interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|符号なし文字_interlockedbittestandreset_HLEAcquire(長\*い 、 長い)|
-|[_interlockedbittestandreset_HLERelease](interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|符号なし文字_interlockedbittestandreset_HLERelease(長\*い、 長い)|
-|[_interlockedbittestandset](interlockedbittestandset-intrinsic-functions.md)||intrin.h|符号なし文字_interlockedbittestandset(長\*い 、 長い)|
-|[_interlockedbittestandset_HLEAcquire](interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|符号なし文字_interlockedbittestandset_HLEAcquire(長\*い、 長い)|
-|[_interlockedbittestandset_HLERelease](interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|符号なし文字_interlockedbittestandset_HLERelease(長\*い 、 長い)|
-|[_InterlockedCompareExchange](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|ロング_InterlockedCompareExchange(長揮発性\*、長い、長い)|
-|[_InterlockedCompareExchange_HLEAcquire](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedCompareExchange_HLEAcquire(長\*揮発性、長い、長い)|
-|[_InterlockedCompareExchange_HLERelease](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedCompareExchange_HLERelease(長\*い揮発性、長い、長い)|
-|[_InterlockedCompareExchange16](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|短い_InterlockedCompareExchange16(短\*い揮発性 、短い、短い)|
-|[_InterlockedCompareExchange64](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|__int64_InterlockedCompareExchange64(\_揮発性\*_int64、_int64、_int64) \_ \_|
-|[_InterlockedCompareExchange64_HLEAcquire](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64_InterlockedCompareExchange64_HLEAcquire(\_揮発性\*_int64、_int64、_int64) \_ \_|
-|[_InterlockedCompareExchange64_HLERelease](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64_InterlockedCompareExchange64_HLERelease(\_揮発性\*_int64 \_、_int64、_int64) \_|
-|[_InterlockedCompareExchange8](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|文字_InterlockedCompareExchange8(char \*volatile 、char、char)|
-|[_InterlockedCompareExchangePointer](interlockedcompareexchangepointer-intrinsic-functions.md)||intrin.h|ボイド\*_InterlockedCompareExchangePointer (\*ボイド\*揮発性\*,\*ボイド , ボイド )|
-|[_InterlockedCompareExchangePointer_HLEAcquire](interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|ボイド\*_InterlockedCompareExchangePointer_HLEAcquire(ボイド\*揮発性\*、\*ボイド\*、 ボイド )|
-|[_InterlockedCompareExchangePointer_HLERelease](interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|ボイド\*_InterlockedCompareExchangePointer_HLERelease(ボイド\*揮発性\*、\*ボイド、\*ボイド)|
-|[_InterlockedDecrement](interlockeddecrement-intrinsic-functions.md)||intrin.h|ロング_InterlockedDecrement(長揮発性\*)|
-|[_InterlockedDecrement16](interlockeddecrement-intrinsic-functions.md)||intrin.h|ショート_InterlockedDecrement16(ショート揮発性\*)|
-|[_InterlockedExchange](interlockedexchange-intrinsic-functions.md)||intrin.h|長い_InterlockedExchange(長\*揮発性、長い)|
-|[_InterlockedExchange_HLEAcquire](interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedExchange_HLEAcquire(長\*揮発性、長い)|
-|[_InterlockedExchange_HLERelease](interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|ロング_InterlockedExchange_HLERelease(長揮発性\*、ロング)|
-|[_InterlockedExchange16](interlockedexchange-intrinsic-functions.md)||intrin.h|短い_InterlockedExchange16(短\*い揮発性、短い)|
-|[_InterlockedExchange8](interlockedexchange-intrinsic-functions.md)||intrin.h|char _InterlockedExchange8(char \*volatile 、char)|
-|[_InterlockedExchangeAdd](interlockedexchangeadd-intrinsic-functions.md)||intrin.h|長い_InterlockedExchangeAdd(長\*揮発性、長い)|
-|[_InterlockedExchangeAdd_HLEAcquire](interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedExchangeAdd_HLEAcquire(長\*揮発性、長い)|
-|[_InterlockedExchangeAdd_HLERelease](interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedExchangeAdd_HLERelease(長\*揮発性、長)|
+|[_InterlockedAddLargeStatistic](interlockedaddlargestatistic.md)||intrin.h|長い _InterlockedAddLargeStatistic ( \_ _int64 volatile \* 、long)|
+|[_InterlockedAnd](interlockedand-intrinsic-functions.md)||intrin.h|長い _InterlockedAnd (long volatile \* 、long)|
+|[_InterlockedAnd_HLEAcquire](interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedAnd_HLEAcquire (long volatile \* 、long)|
+|[_InterlockedAnd_HLERelease](interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedAnd_HLERelease (long volatile \* 、long)|
+|[_InterlockedAnd16](interlockedand-intrinsic-functions.md)||intrin.h|短い _InterlockedAnd16 (短い揮発性 \* 、短い)|
+|[_InterlockedAnd8](interlockedand-intrinsic-functions.md)||intrin.h|char _InterlockedAnd8 (char volatile \* 、char)|
+|[_interlockedbittestandreset](interlockedbittestandreset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandreset (long \* 、long)|
+|[_interlockedbittestandreset_HLEAcquire](interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLEAcquire (long \* 、long)|
+|[_interlockedbittestandreset_HLERelease](interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLERelease (long \* 、long)|
+|[_interlockedbittestandset](interlockedbittestandset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandset (long \* 、long)|
+|[_interlockedbittestandset_HLEAcquire](interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLEAcquire (long \* 、long)|
+|[_interlockedbittestandset_HLERelease](interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLERelease (long \* 、long)|
+|[_InterlockedCompareExchange](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|長い _InterlockedCompareExchange (long volatile \* 、long、long)|
+|[_InterlockedCompareExchange_HLEAcquire](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedCompareExchange_HLEAcquire (long volatile \* 、long、long)|
+|[_InterlockedCompareExchange_HLERelease](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedCompareExchange_HLERelease (long volatile \* 、long、long)|
+|[_InterlockedCompareExchange16](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|短い _InterlockedCompareExchange16 (短い揮発性 \* 、短い、短い)|
+|[_InterlockedCompareExchange64](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|__int64 _InterlockedCompareExchange64 ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|[_InterlockedCompareExchange64_HLEAcquire](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLEAcquire ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|[_InterlockedCompareExchange64_HLERelease](interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLERelease ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|[_InterlockedCompareExchange8](interlockedcompareexchange-intrinsic-functions.md)||intrin.h|char _InterlockedCompareExchange8 (char volatile \* 、char、char)|
+|[_InterlockedCompareExchangePointer](interlockedcompareexchangepointer-intrinsic-functions.md)||intrin.h|void \* _InterlockedCompareExchangePointer (void \* volatile \* 、void \* 、void \* )|
+|[_InterlockedCompareExchangePointer_HLEAcquire](interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedCompareExchangePointer_HLEAcquire (void \* volatile \* 、void \* 、void \* )|
+|[_InterlockedCompareExchangePointer_HLERelease](interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedCompareExchangePointer_HLERelease (void \* volatile \* 、void \* 、void \* )|
+|[_InterlockedDecrement](interlockeddecrement-intrinsic-functions.md)||intrin.h|長い _InterlockedDecrement (長 volatile \* )|
+|[_InterlockedDecrement16](interlockeddecrement-intrinsic-functions.md)||intrin.h|短い _InterlockedDecrement16 (短い揮発性 \* )|
+|[_InterlockedExchange](interlockedexchange-intrinsic-functions.md)||intrin.h|長い _InterlockedExchange (long volatile \* 、long)|
+|[_InterlockedExchange_HLEAcquire](interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedExchange_HLEAcquire (long volatile \* 、long)|
+|[_InterlockedExchange_HLERelease](interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedExchange_HLERelease (long volatile \* 、long)|
+|[_InterlockedExchange16](interlockedexchange-intrinsic-functions.md)||intrin.h|短い _InterlockedExchange16 (短い揮発性 \* 、短い)|
+|[_InterlockedExchange8](interlockedexchange-intrinsic-functions.md)||intrin.h|char _InterlockedExchange8 (char volatile \* 、char)|
+|[_InterlockedExchangeAdd](interlockedexchangeadd-intrinsic-functions.md)||intrin.h|長い _InterlockedExchangeAdd (long volatile \* 、long)|
+|[_InterlockedExchangeAdd_HLEAcquire](interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedExchangeAdd_HLEAcquire (long volatile \* 、long)|
+|[_InterlockedExchangeAdd_HLERelease](interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedExchangeAdd_HLERelease (long volatile \* 、long)|
 |[_InterlockedExchangeAdd16](interlockedexchangeadd-intrinsic-functions.md)||intrin.h|short _InterlockedExchangeAdd16(short volatile *, short)|
-|[_InterlockedExchangeAdd8](interlockedexchangeadd-intrinsic-functions.md)||intrin.h|文字_InterlockedExchangeAdd8(char \*volatile 、char)|
-|[_InterlockedExchangePointer](interlockedexchangepointer-intrinsic-functions.md)||intrin.h|ボイド\*_InterlockedExchangePointer(ボイド\*揮発性\*、ボイド\*)|
-|[_InterlockedExchangePointer_HLEAcquire](interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|ボイド\*_InterlockedExchangePointer_HLEAcquire(ボイド\*揮発性\*、\*ボイド)|
-|[_InterlockedExchangePointer_HLERelease](interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|ボイド\*_InterlockedExchangePointer_HLERelease(ボイド\*揮発性\*、\*ボイド)|
-|[_InterlockedIncrement](interlockedincrement-intrinsic-functions.md)||intrin.h|ロング_InterlockedIncrement(長揮発性\*)|
-|[_InterlockedIncrement16](interlockedincrement-intrinsic-functions.md)||intrin.h|短い_InterlockedIncrement16(短\*揮発性)|
-|[_InterlockedOr](interlockedor-intrinsic-functions.md)||intrin.h|長い_InterlockedOr(長\*揮発性、長)|
-|[_InterlockedOr_HLEAcquire](interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedOr_HLEAcquire(長\*揮発性、長い)|
-|[_InterlockedOr_HLERelease](interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedOr_HLERelease(長\*揮発性、長い)|
-|[_InterlockedOr16](interlockedor-intrinsic-functions.md)||intrin.h|ショート_InterlockedOr16(短揮発性\*、ショート)|
-|[_InterlockedOr8](interlockedor-intrinsic-functions.md)||intrin.h|char _InterlockedOr8(char \*volatile 、char)|
-|[_InterlockedXor](interlockedxor-intrinsic-functions.md)||intrin.h|ロング_InterlockedXor(長揮発性\*、ロング)|
-|[_InterlockedXor_HLEAcquire](interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|ロング_InterlockedXor_HLEAcquire(長揮発性\*、長)|
-|[_InterlockedXor_HLERelease](interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い_InterlockedXor_HLERelease(長\*揮発性、長)|
-|[_InterlockedXor16](interlockedxor-intrinsic-functions.md)||intrin.h|短い_InterlockedXor16(短\*い揮発性、短い)|
-|[_InterlockedXor8](interlockedxor-intrinsic-functions.md)||intrin.h|文字_InterlockedXor8(char\*揮発性、char)|
-|[__invlpg](invlpg.md)||intrin.h|ボイド__invlpg(ボイド\*)|
-|[_invpcid](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_invpcid)|INVPCID [2]|immintrin.h|void _invpcid (符号なし int, void \*)|
-|[__inword](inword.md)||intrin.h|符号なしの短__inword (符号なしショート)|
-|[__inwordstring](inwordstring.md)||intrin.h|void __inwordstring(符号なしの短い、\*符号なしの短い、符号なし長)|
-|_lgdt||intrin.h|ボイド_lgdt(ボイド\*)|
-|[__lidt](lidt.md)||intrin.h|ボイド__lidt(ボイド\*)|
-|[__ll_lshift](ll-lshift.md)||intrin.h|符号なし__int64 [パスカル/cdecl] \__ll_lshift(\_符号なし_int64、int)|
-|[__ll_rshift](ll-rshift.md)||intrin.h|__int64 [パスカル/cdecl] \_\__ll_rshift(_int64、int)|
-|_load_be_u16<br /><br /> [_loadbe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i16&expand=3071)|MOVBE|immintrin.h|符号なしの短い_load_be_u16(void const);\*<br /><br /> 短い_loadbe_i16(ボイド\*定数);[3]|
-|_load_be_u32<br /><br /> [_loadbe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i32&expand=3072)|MOVBE|immintrin.h|符号なし int _load_be_u32(void const);\*<br /><br /> int _loadbe_i32(void\*const);[3]|
-|__llwpcb|LWP [1]|ammintrin.h|ボイド__llwpcb(ボイド\*)|
-|__lwpins32|LWP [1]|ammintrin.h|符号なし char __lwpins32 (符号なし、符号なし、符号なし int、符号なし int)|
-|__lwpval32|LWP [1]|ammintrin.h|void __lwpval32 (符号なし、符号なし、符号なし int、 符号なし int)|
+|[_InterlockedExchangeAdd8](interlockedexchangeadd-intrinsic-functions.md)||intrin.h|char _InterlockedExchangeAdd8 (char volatile \* 、char)|
+|[_InterlockedExchangePointer](interlockedexchangepointer-intrinsic-functions.md)||intrin.h|void \* _InterlockedExchangePointer (void \* volatile \* 、void \* )|
+|[_InterlockedExchangePointer_HLEAcquire](interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedExchangePointer_HLEAcquire (void \* volatile \* 、void \* )|
+|[_InterlockedExchangePointer_HLERelease](interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedExchangePointer_HLERelease (void \* volatile \* 、void \* )|
+|[_InterlockedIncrement](interlockedincrement-intrinsic-functions.md)||intrin.h|長い _InterlockedIncrement (長 volatile \* )|
+|[_InterlockedIncrement16](interlockedincrement-intrinsic-functions.md)||intrin.h|短い _InterlockedIncrement16 (短い揮発性 \* )|
+|[_InterlockedOr](interlockedor-intrinsic-functions.md)||intrin.h|長い _InterlockedOr (long volatile \* 、long)|
+|[_InterlockedOr_HLEAcquire](interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedOr_HLEAcquire (long volatile \* 、long)|
+|[_InterlockedOr_HLERelease](interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedOr_HLERelease (long volatile \* 、long)|
+|[_InterlockedOr16](interlockedor-intrinsic-functions.md)||intrin.h|短い _InterlockedOr16 (短い揮発性 \* 、短い)|
+|[_InterlockedOr8](interlockedor-intrinsic-functions.md)||intrin.h|char _InterlockedOr8 (char volatile \* 、char)|
+|[_InterlockedXor](interlockedxor-intrinsic-functions.md)||intrin.h|長い _InterlockedXor (long volatile \* 、long)|
+|[_InterlockedXor_HLEAcquire](interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedXor_HLEAcquire (long volatile \* 、long)|
+|[_InterlockedXor_HLERelease](interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|長い _InterlockedXor_HLERelease (long volatile \* 、long)|
+|[_InterlockedXor16](interlockedxor-intrinsic-functions.md)||intrin.h|短い _InterlockedXor16 (短い揮発性 \* 、短い)|
+|[_InterlockedXor8](interlockedxor-intrinsic-functions.md)||intrin.h|char _InterlockedXor8 (char volatile \* 、char)|
+|[__invlpg](invlpg.md)||intrin.h|void __invlpg (void \* )|
+|[_invpcid](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_invpcid)|INVPCID [2]|immintrin.h|void _invpcid (符号なし int, void \* )|
+|[__inword](inword.md)||intrin.h|unsigned short __inword (unsigned short)|
+|[__inwordstring](inwordstring.md)||intrin.h|void __inwordstring (unsigned short、unsigned short \* 、unsigned long)|
+|_lgdt||intrin.h|void _lgdt (void \* )|
+|[__lidt](lidt.md)||intrin.h|void __lidt (void \* )|
+|[__ll_lshift](ll-lshift.md)||intrin.h|unsigned __int64 [pascal/cdecl] \_ _ll_lshift (符号なし \_ _int64, int)|
+|[__ll_rshift](ll-rshift.md)||intrin.h|__int64 [pascal/cdecl] \_ _ll_rshift ( \_ _int64, int)|
+|_load_be_u16<br /><br /> [_loadbe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i16&expand=3071)|MOVBE|immintrin.h|unsigned short _load_be_u16 (void const \* );<br /><br /> short _loadbe_i16 (void const \* );番|
+|_load_be_u32<br /><br /> [_loadbe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i32&expand=3072)|MOVBE|immintrin.h|unsigned int _load_be_u32 (void const \* );<br /><br /> int _loadbe_i32 (void const \* ) です。番|
+|__llwpcb|LWP [1]|ammintrin.h|void __llwpcb (void \* )|
+|__lwpins32|LWP [1]|ammintrin.h|unsigned char __lwpins32 (符号なし整数、符号なし整数、符号なし int)|
+|__lwpval32|LWP [1]|ammintrin.h|void __lwpval32 (符号なし整数、符号なし整数、符号なし int)|
 |[__lzcnt](lzcnt16-lzcnt-lzcnt64.md)|LZCNT|intrin.h|unsigned int __lzcnt(unsigned int)|
 |[_lzcnt_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_lzcnt_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _lzcnt_u32(unsigned int)|
 |[__lzcnt16](lzcnt16-lzcnt-lzcnt64.md)|LZCNT|intrin.h|unsigned short __lzcnt16(unsigned short)|
@@ -2427,1097 +2460,1097 @@ ms.locfileid: "81754302"
 |_m_femms|3DNOW|intrin.h|void _m_femms(void)|
 |_m_from_float|3DNOW|intrin.h|__m64 _m_from_float(float)|
 |[_m_from_int](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_from_int)|MMX|intrin.h|__m64 _m_from_int(int)|
-|[_m_maskmovq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_maskmovq)|SSE|intrin.h|ボイド_m_maskmovq(_m64、_m64、\_\_文字\*)|
-|[_m_packssdw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packssdw)|MMX|intrin.h|__m64_m_packssdw(_m64、_m64)\_ \_|
-|[_m_packsswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packsswb)|MMX|intrin.h|__m64_m_packsswb(_m64、_m64)\_ \_|
-|[_m_packuswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packuswb)|MMX|intrin.h|__m64_m_packuswb(_m64、_m64)\_ \_|
-|[_m_paddb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddb)|MMX|intrin.h|__m64_m_paddb(_m64、_m64)\_ \_|
-|[_m_paddd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddd)|MMX|intrin.h|__m64_m_paddd(_m64、_m64)\_ \_|
-|[_m_paddsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsb)|MMX|intrin.h|__m64_m_paddsb(_m64、_m64)\_ \_|
-|[_m_paddsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsw)|MMX|intrin.h|__m64_m_paddsw(_m64、_m64)\_ \_|
-|[_m_paddusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusb)|MMX|intrin.h|__m64_m_paddusb(_m64、_m64)\_ \_|
-|[_m_paddusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusw)|MMX|intrin.h|__m64_m_paddusw(_m64、_m64)\_ \_|
-|[_m_paddw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddw)|MMX|intrin.h|__m64_m_paddw(_m64、_m64)\_ \_|
-|[_m_pand](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pand)|MMX|intrin.h|__m64_m_pand(_m64、_m64)\_ \_|
-|[_m_pandn](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pandn)|MMX|intrin.h|__m64_m_pandn(_m64、_m64)\_ \_|
-|[_m_pavgb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgb)|SSE|intrin.h|__m64_m_pavgb(_m64、_m64)\_ \_|
-|_m_pavgusb|3DNOW|intrin.h|__m64_m_pavgusb(_m64、_m64)\_ \_|
-|[_m_pavgw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgw)|SSE|intrin.h|__m64_m_pavgw(_m64、_m64)\_ \_|
-|[_m_pcmpeqb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqb)|MMX|intrin.h|__m64_m_pcmpeqb(_m64、_m64)\_ \_|
-|[_m_pcmpeqd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqd)|MMX|intrin.h|__m64_m_pcmpeqd(_m64、_m64)\_ \_|
-|[_m_pcmpeqw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqw)|MMX|intrin.h|__m64_m_pcmpeqw(_m64、_m64)\_ \_|
-|[_m_pcmpgtb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtb)|MMX|intrin.h|__m64_m_pcmpgtb(_m64、_m64)\_ \_|
-|[_m_pcmpgtd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtd)|MMX|intrin.h|__m64_m_pcmpgtd(_m64、_m64)\_ \_|
-|[_m_pcmpgtw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtw)|MMX|intrin.h|__m64_m_pcmpgtw(_m64、_m64)\_ \_|
-|[_m_pextrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pextrw)|SSE|intrin.h|int _m_pextrw(_m64、int)\_|
-|_m_pf2id|3DNOW|intrin.h|__m64_m_pf2id(_m64)\_|
-|_m_pf2iw|3DNOWEXT|intrin.h|__m64_m_pf2iw(_m64)\_|
-|_m_pfacc|3DNOW|intrin.h|__m64_m_pfacc(_m64、_m64)\_ \_|
-|_m_pfadd|3DNOW|intrin.h|__m64_m_pfadd(_m64、_m64)\_ \_|
-|_m_pfcmpeq|3DNOW|intrin.h|__m64_m_pfcmpeq(_m64、_m64)\_ \_|
-|_m_pfcmpge|3DNOW|intrin.h|__m64_m_pfcmpge(_m64、_m64)\_ \_|
-|_m_pfcmpgt|3DNOW|intrin.h|__m64_m_pfcmpgt(_m64、_m64)\_ \_|
-|_m_pfmax|3DNOW|intrin.h|__m64_m_pfmax(_m64、_m64)\_ \_|
-|_m_pfmin|3DNOW|intrin.h|__m64_m_pfmin(_m64、_m64)\_ \_|
-|_m_pfmul|3DNOW|intrin.h|__m64_m_pfmul(_m64、_m64)\_ \_|
-|_m_pfnacc|3DNOWEXT|intrin.h|__m64_m_pfnacc(_m64、_m64)\_ \_|
-|_m_pfpnacc|3DNOWEXT|intrin.h|__m64_m_pfpnacc(_m64、_m64)\_ \_|
-|_m_pfrcp|3DNOW|intrin.h|__m64 _m_pfrcp(_m64)\_|
-|_m_pfrcpit1|3DNOW|intrin.h|__m64_m_pfrcpit1(_m64、_m64)\_ \_|
-|_m_pfrcpit2|3DNOW|intrin.h|__m64_m_pfrcpit2(_m64、_m64)\_ \_|
-|_m_pfrsqit1|3DNOW|intrin.h|__m64_m_pfrsqit1(_m64、_m64)\_ \_|
-|_m_pfrsqrt|3DNOW|intrin.h|__m64_m_pfrsqrt(_m64)\_|
-|_m_pfsub|3DNOW|intrin.h|__m64_m_pfsub(_m64、_m64)\_ \_|
-|_m_pfsubr|3DNOW|intrin.h|__m64_m_pfsubr(_m64、_m64)\_ \_|
-|_m_pi2fd|3DNOW|intrin.h|__m64_m_pi2fd(_m64)\_|
-|_m_pi2fw|3DNOWEXT|intrin.h|__m64_m_pi2fw(_m64)\_|
-|[_m_pinsrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pinsrw)|SSE|intrin.h|__m64_m_pinsrw(_m64、int、int)\_|
-|[_m_pmaddwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaddwd)|MMX|intrin.h|__m64 _m_pmaddwd(_m64、_m64)\_ \_|
-|[_m_pmaxsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxsw)|SSE|intrin.h|__m64_m_pmaxsw(_m64、_m64)\_ \_|
-|[_m_pmaxub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxub)|SSE|intrin.h|__m64_m_pmaxub(_m64、_m64)\_ \_|
-|[_m_pminsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminsw)|SSE|intrin.h|__m64_m_pminsw(_m64、_m64)\_ \_|
-|[_m_pminub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminub)|SSE|intrin.h|__m64_m_pminub(_m64、_m64)\_ \_|
-|[_m_pmovmskb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmovmskb)|SSE|intrin.h|int _m_pmovmskb(_m64)\_|
-|_m_pmulhrw|3DNOW|intrin.h|__m64_m_pmulhrw(_m64、_m64)\_ \_|
-|[_m_pmulhuw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhuw)|SSE|intrin.h|__m64_m_pmulhuw(_m64、_m64)\_ \_|
-|[_m_pmulhw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhw)|MMX|intrin.h|__m64_m_pmulhw(_m64、_m64)\_ \_|
-|[_m_pmullw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmullw)|MMX|intrin.h|__m64_m_pmullw(_m64、_m64)\_ \_|
-|[_m_por](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_por)|MMX|intrin.h|__m64_m_por(_m64、_m64)\_ \_|
-|_m_prefetch|3DNOW|intrin.h|ボイド_m_prefetch(ボイド\*)|
-|_m_prefetchw|3DNOW|intrin.h|ボイド_m_prefetchw(ボイド\*)|
-|[_m_psadbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psadbw)|SSE|intrin.h|__m64_m_psadbw(_m64、_m64)\_ \_|
-|[_m_pshufw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pshufw)|SSE|intrin.h|__m64_m_pshufw(_m64、int)\_|
-|[_m_pslld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslld)|MMX|intrin.h|__m64_m_pslld(_m64、_m64)\_ \_|
-|[_m_pslldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslldi)|MMX|intrin.h|__m64_m_pslldi(_m64、int)\_|
-|[_m_psllq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllq)|MMX|intrin.h|__m64_m_psllq(_m64、_m64)\_ \_|
-|[_m_psllqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllqi)|MMX|intrin.h|__m64_m_psllqi(_m64、int)\_|
-|[_m_psllw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllw)|MMX|intrin.h|__m64_m_psllw(_m64、_m64)\_ \_|
-|[_m_psllwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllwi)|MMX|intrin.h|__m64_m_psllwi(_m64、int)\_|
-|[_m_psrad](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrad)|MMX|intrin.h|__m64_m_psrad(_m64、_m64)\_ \_|
-|[_m_psradi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psradi)|MMX|intrin.h|__m64_m_psradi(_m64、int)\_|
-|[_m_psraw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psraw)|MMX|intrin.h|__m64_m_psraw(_m64、_m64)\_ \_|
-|[_m_psrawi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrawi)|MMX|intrin.h|__m64_m_psrawi(_m64、int)\_|
-|[_m_psrld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrld)|MMX|intrin.h|__m64_m_psrld(_m64、_m64)\_ \_|
-|[_m_psrldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrldi)|MMX|intrin.h|__m64_m_psrldi(_m64、int)\_|
-|[_m_psrlq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlq)|MMX|intrin.h|__m64_m_psrlq(_m64、_m64)\_ \_|
-|[_m_psrlqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlqi)|MMX|intrin.h|__m64_m_psrlqi(_m64、int)\_|
-|[_m_psrlw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlw)|MMX|intrin.h|__m64_m_psrlw(_m64、_m64)\_ \_|
-|[_m_psrlwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlwi)|MMX|intrin.h|__m64_m_psrlwi(_m64、int)\_|
-|[_m_psubb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubb)|MMX|intrin.h|__m64_m_psubb(_m64、_m64)\_ \_|
-|[_m_psubd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubd)|MMX|intrin.h|__m64_m_psubd(_m64、_m64)\_ \_|
-|[_m_psubsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsb)|MMX|intrin.h|__m64_m_psubsb(_m64、_m64)\_ \_|
-|[_m_psubsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsw)|MMX|intrin.h|__m64_m_psubsw(_m64、_m64)\_ \_|
-|[_m_psubusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusb)|MMX|intrin.h|__m64_m_psubusb(_m64、_m64)\_ \_|
-|[_m_psubusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusw)|MMX|intrin.h|__m64_m_psubusw(_m64、_m64)\_ \_|
-|[_m_psubw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubw)|MMX|intrin.h|__m64_m_psubw(_m64、_m64)\_ \_|
-|_m_pswapd|3DNOWEXT|intrin.h|__m64_m_pswapd(_m64)\_|
-|[_m_punpckhbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhbw)|MMX|intrin.h|__m64_m_punpckhbw(_m64、_m64)\_ \_|
-|[_m_punpckhdq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhdq)|MMX|intrin.h|__m64_m_punpckhdq(_m64、_m64)\_ \_|
-|[_m_punpckhwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhwd)|MMX|intrin.h|__m64_m_punpckhwd(_m64、_m64)\_ \_|
-|[_m_punpcklbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklbw)|MMX|intrin.h|__m64_m_punpcklbw(_m64、_m64)\_ \_|
-|[_m_punpckldq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckldq)|MMX|intrin.h|__m64_m_punpckldq(_m64、_m64)\_ \_|
-|[_m_punpcklwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklwd)|MMX|intrin.h|__m64_m_punpcklwd(_m64、_m64)\_ \_|
-|[_m_pxor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pxor)|MMX|intrin.h|__m64_m_pxor(_m64、_m64)\_ \_|
-|_m_to_float|3DNOW|intrin.h|フロート_m_to_float(_m64)\_|
-|[_m_to_int](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_to_int)|MMX|intrin.h|int _m_to_int(_m64)\_|
-|[_mm_abs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi16)|SSSE3|intrin.h|__m128i_mm_abs_epi16(_m128i)\_|
-|[_mm_abs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi32)|SSSE3|intrin.h|__m128i_mm_abs_epi32(_m128i)\_|
-|[_mm_abs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi8)|SSSE3|intrin.h|__m128i_mm_abs_epi8(_m128i)\_|
-|[_mm_abs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi16)|SSSE3|intrin.h|__m64_mm_abs_pi16(_m64)\_|
-|[_mm_abs_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi32)|SSSE3|intrin.h|__m64 _mm_abs_pi32(_m64)\_|
-|[_mm_abs_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi8)|SSSE3|intrin.h|__m64_mm_abs_pi8_m64)\_|
-|[_mm_add_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi16)|SSE2|intrin.h|__m128i_mm_add_epi16(_m128i、_m128i)\_ \_|
-|[_mm_add_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi32)|SSE2|intrin.h|__m128i_mm_add_epi32(_m128i、_m128i)\_ \_|
-|[_mm_add_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi64)|SSE2|intrin.h|__m128i_mm_add_epi64(_m128i、_m128i)\_ \_|
-|[_mm_add_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi8)|SSE2|intrin.h|__m128i_mm_add_epi8(_m128i、_m128i)\_ \_|
-|[_mm_add_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pd)|SSE2|intrin.h|__m128d_mm_add_pd(_m128d、_m128d)\_ \_|
-|[_mm_add_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi8)|MMX|mmintrin.h|__m64_mm_add_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_add_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi16)|MMX|mmintrin.h|__m64_mm_add_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_add_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi32)|MMX|mmintrin.h|__m64_mm_add_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_add_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ps)|SSE|intrin.h|__m128_mm_add_ps(_m128、_m128)\_ \_|
-|[_mm_add_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_sd)|SSE2|intrin.h|__m128d_mm_add_sd(_m128d、_m128d)\_ \_|
-|[_mm_add_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_si64)|SSE2|intrin.h|__m64_mm_add_si64(_m64、_m64)\_ \_|
-|[_mm_add_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ss)|SSE|intrin.h|__m128_mm_add_ss(_m128、_m128)\_ \_|
-|[_mm_adds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi16)|SSE2|intrin.h|__m128i_mm_adds_epi16(_m128i、_m128i)\_ \_|
-|[_mm_adds_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi8)|SSE2|intrin.h|__m128i_mm_adds_epi8(_m128i、_m128i)\_ \_|
-|[_mm_adds_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epu16)|SSE2|intrin.h|__m128i_mm_adds_epu16(_m128i、_m128i)\_ \_|
-|[_mm_adds_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epu8)|SSE2|intrin.h|__m128i_mm_adds_epu8(_m128i、_m128i)\_ \_|
-|[_mm_adds_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pi8)|MMX|mmintrin.h|__m64_mm_adds_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_adds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pi16)|MMX|mmintrin.h|__m64_mm_adds_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_adds_pu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pu8)|MMX|mmintrin.h|__m64_mm_adds_pu8(_m64、_m64)\_ \_[3]|
-|[_mm_adds_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pu16)|MMX|mmintrin.h|__m64_mm_adds_pu16(_m64、_m64)\_ \_[3]|
-|[_mm_addsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_addsub_pd)|SSE3|intrin.h|__m128d_mm_addsub_pd(_m128d、_m128d)\_ \_|
-|[_mm_addsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_addsub_ps)|SSE3|intrin.h|__m128_mm_addsub_ps(_m128、_m128)\_ \_|
-|[_mm_aesdec_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesdec_si128)|AESNI [2]|immintrin.h|__m128i_mm_aesdec_si128(_m128i、_m128i)\_ \_|
-|[_mm_aesdeclast_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesdeclast_si128)|AESNI [2]|immintrin.h|__m128i_mm_aesdeclast_si128(_m128i、_m128i)\_ \_|
-|[_mm_aesenc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesenc_si128)|AESNI [2]|immintrin.h|__m128i_mm_aesenc_si128(_m128i、_m128i)\_ \_|
-|[_mm_aesenclast_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesenclast_si128)|AESNI [2]|immintrin.h|__m128i_mm_aesenclast_si128(_m128i、_m128i)\_ \_|
-|[_mm_aesimc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesimc_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesimc_si128\_( _m128i)|
-|[_mm_aeskeygenassist_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aeskeygenassist_si128)|AESNI [2]|immintrin.h|__m128i_mm_aeskeygenassist_si128\_(_m128i、const int)|
-|[_mm_alignr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_epi8)|SSSE3|intrin.h|__m128i_mm_alignr_epi8(_m128i、_m128i、int)\_ \_|
-|[_mm_alignr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_pi8)|SSSE3|intrin.h|__m64_mm_alignr_pi8(_m64、_m64、int)\_ \_|
-|[_mm_and_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_pd)|SSE2|intrin.h|__m128d_mm_and_pd(_m128d、_m128d)\_ \_|
-|[_mm_and_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_ps)|SSE|intrin.h|__m128_mm_and_ps(_m128、_m128)\_ \_|
-|[_mm_and_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_si64)|MMX|mmintrin.h|__m64_mm_and_si64(_m64、_m64)\_ \_[3]|
-|[_mm_and_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_si128)|SSE2|intrin.h|__m128i_mm_and_si128(_m128i、_m128i)\_ \_|
-|[_mm_andnot_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_pd)|SSE2|intrin.h|__m128d_mm_andnot_pd(_m128d、_m128d)\_ \_|
-|[_mm_andnot_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_ps)|SSE|intrin.h|__m128_mm_andnot_ps(_m128、_m128)\_ \_|
-|[_mm_andnot_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_si64)|MMX|mmintrin.h|__m64_mm_andnot_si64(_m64、_m64)\_ \_[3]|
-|[_mm_andnot_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_si128)|SSE2|intrin.h|__m128i_mm_andnot_si128(_m128i、_m128i)\_ \_|
-|[_mm_avg_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_avg_epu16)|SSE2|intrin.h|__m128i_mm_avg_epu16(_m128i、_m128i)\_ \_|
-|[_mm_avg_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_avg_epu8)|SSE2|intrin.h|__m128i_mm_avg_epu8(_m128i、_m128i)\_ \_|
-|[_mm_blend_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_epi16)|SSE41|intrin.h|__m128i_mm_blend_epi16\_(_m128i、_m128i、const \_int)|
-|[_mm_blend_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_blend_epi32(_m128i、_m128i、const\_ \_int)|
-|[_mm_blend_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_pd)|SSE41|intrin.h|__m128d_mm_blend_pd\_(_m128d、_m128d、const \_int)|
-|[_mm_blend_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_ps)|SSE41|intrin.h|__m128_mm_blend_ps(_m128、_m128、const\_ \_int)|
-|[_mm_blendv_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_epi8)|SSE41|intrin.h|__m128i_mm_blendv_epi8(_m128i、_m128i、_m128i)\_ \_ \_|
-|[_mm_blendv_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_pd)|SSE41|intrin.h|__m128d_mm_blendv_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_blendv_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_ps)|SSE41|intrin.h|__m128_mm_blendv_ps(_m128、_m128、_m128)\_ \_ \_|
+|[_m_maskmovq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_maskmovq)|SSE|intrin.h|void _m_maskmovq ( \_ _m64、 \_ _m64、char \* )|
+|[_m_packssdw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packssdw)|MMX|intrin.h|__m64 _m_packssdw ( \_ _m64、 \_ _m64)|
+|[_m_packsswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packsswb)|MMX|intrin.h|__m64 _m_packsswb ( \_ _m64、 \_ _m64)|
+|[_m_packuswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packuswb)|MMX|intrin.h|__m64 _m_packuswb ( \_ _m64、 \_ _m64)|
+|[_m_paddb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddb)|MMX|intrin.h|__m64 _m_paddb ( \_ _m64、 \_ _m64)|
+|[_m_paddd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddd)|MMX|intrin.h|__m64 _m_paddd ( \_ _m64、 \_ _m64)|
+|[_m_paddsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsb)|MMX|intrin.h|__m64 _m_paddsb ( \_ _m64、 \_ _m64)|
+|[_m_paddsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsw)|MMX|intrin.h|__m64 _m_paddsw ( \_ _m64、 \_ _m64)|
+|[_m_paddusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusb)|MMX|intrin.h|__m64 _m_paddusb ( \_ _m64、 \_ _m64)|
+|[_m_paddusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusw)|MMX|intrin.h|__m64 _m_paddusw ( \_ _m64、 \_ _m64)|
+|[_m_paddw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddw)|MMX|intrin.h|__m64 _m_paddw ( \_ _m64、 \_ _m64)|
+|[_m_pand](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pand)|MMX|intrin.h|__m64 _m_pand ( \_ _m64、 \_ _m64)|
+|[_m_pandn](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pandn)|MMX|intrin.h|__m64 _m_pandn ( \_ _m64、 \_ _m64)|
+|[_m_pavgb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgb)|SSE|intrin.h|__m64 _m_pavgb ( \_ _m64、 \_ _m64)|
+|_m_pavgusb|3DNOW|intrin.h|__m64 _m_pavgusb ( \_ _m64、 \_ _m64)|
+|[_m_pavgw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgw)|SSE|intrin.h|__m64 _m_pavgw ( \_ _m64、 \_ _m64)|
+|[_m_pcmpeqb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqb)|MMX|intrin.h|__m64 _m_pcmpeqb ( \_ _m64、 \_ _m64)|
+|[_m_pcmpeqd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqd)|MMX|intrin.h|__m64 _m_pcmpeqd ( \_ _m64、 \_ _m64)|
+|[_m_pcmpeqw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqw)|MMX|intrin.h|__m64 _m_pcmpeqw ( \_ _m64、 \_ _m64)|
+|[_m_pcmpgtb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtb)|MMX|intrin.h|__m64 _m_pcmpgtb ( \_ _m64、 \_ _m64)|
+|[_m_pcmpgtd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtd)|MMX|intrin.h|__m64 _m_pcmpgtd ( \_ _m64、 \_ _m64)|
+|[_m_pcmpgtw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtw)|MMX|intrin.h|__m64 _m_pcmpgtw ( \_ _m64、 \_ _m64)|
+|[_m_pextrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pextrw)|SSE|intrin.h|int _m_pextrw ( \_ _m64, int)|
+|_m_pf2id|3DNOW|intrin.h|__m64 _m_pf2id ( \_ _m64)|
+|_m_pf2iw|3DNOWEXT|intrin.h|__m64 _m_pf2iw ( \_ _m64)|
+|_m_pfacc|3DNOW|intrin.h|__m64 _m_pfacc ( \_ _m64、 \_ _m64)|
+|_m_pfadd|3DNOW|intrin.h|__m64 _m_pfadd ( \_ _m64、 \_ _m64)|
+|_m_pfcmpeq|3DNOW|intrin.h|__m64 _m_pfcmpeq ( \_ _m64、 \_ _m64)|
+|_m_pfcmpge|3DNOW|intrin.h|__m64 _m_pfcmpge ( \_ _m64、 \_ _m64)|
+|_m_pfcmpgt|3DNOW|intrin.h|__m64 _m_pfcmpgt ( \_ _m64、 \_ _m64)|
+|_m_pfmax|3DNOW|intrin.h|__m64 _m_pfmax ( \_ _m64、 \_ _m64)|
+|_m_pfmin|3DNOW|intrin.h|__m64 _m_pfmin ( \_ _m64、 \_ _m64)|
+|_m_pfmul|3DNOW|intrin.h|__m64 _m_pfmul ( \_ _m64、 \_ _m64)|
+|_m_pfnacc|3DNOWEXT|intrin.h|__m64 _m_pfnacc ( \_ _m64、 \_ _m64)|
+|_m_pfpnacc|3DNOWEXT|intrin.h|__m64 _m_pfpnacc ( \_ _m64、 \_ _m64)|
+|_m_pfrcp|3DNOW|intrin.h|__m64 _m_pfrcp ( \_ _m64)|
+|_m_pfrcpit1|3DNOW|intrin.h|__m64 _m_pfrcpit1 ( \_ _m64、 \_ _m64)|
+|_m_pfrcpit2|3DNOW|intrin.h|__m64 _m_pfrcpit2 ( \_ _m64、 \_ _m64)|
+|_m_pfrsqit1|3DNOW|intrin.h|__m64 _m_pfrsqit1 ( \_ _m64、 \_ _m64)|
+|_m_pfrsqrt|3DNOW|intrin.h|__m64 _m_pfrsqrt ( \_ _m64)|
+|_m_pfsub|3DNOW|intrin.h|__m64 _m_pfsub ( \_ _m64、 \_ _m64)|
+|_m_pfsubr|3DNOW|intrin.h|__m64 _m_pfsubr ( \_ _m64、 \_ _m64)|
+|_m_pi2fd|3DNOW|intrin.h|__m64 _m_pi2fd ( \_ _m64)|
+|_m_pi2fw|3DNOWEXT|intrin.h|__m64 _m_pi2fw ( \_ _m64)|
+|[_m_pinsrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pinsrw)|SSE|intrin.h|__m64 _m_pinsrw ( \_ _m64、int、int)|
+|[_m_pmaddwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaddwd)|MMX|intrin.h|__m64 _m_pmaddwd ( \_ _m64、 \_ _m64)|
+|[_m_pmaxsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxsw)|SSE|intrin.h|__m64 _m_pmaxsw ( \_ _m64、 \_ _m64)|
+|[_m_pmaxub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxub)|SSE|intrin.h|__m64 _m_pmaxub ( \_ _m64、 \_ _m64)|
+|[_m_pminsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminsw)|SSE|intrin.h|__m64 _m_pminsw ( \_ _m64、 \_ _m64)|
+|[_m_pminub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminub)|SSE|intrin.h|__m64 _m_pminub ( \_ _m64、 \_ _m64)|
+|[_m_pmovmskb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmovmskb)|SSE|intrin.h|int _m_pmovmskb ( \_ _m64)|
+|_m_pmulhrw|3DNOW|intrin.h|__m64 _m_pmulhrw ( \_ _m64、 \_ _m64)|
+|[_m_pmulhuw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhuw)|SSE|intrin.h|__m64 _m_pmulhuw ( \_ _m64、 \_ _m64)|
+|[_m_pmulhw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhw)|MMX|intrin.h|__m64 _m_pmulhw ( \_ _m64、 \_ _m64)|
+|[_m_pmullw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmullw)|MMX|intrin.h|__m64 _m_pmullw ( \_ _m64、 \_ _m64)|
+|[_m_por](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_por)|MMX|intrin.h|__m64 _m_por ( \_ _m64、 \_ _m64)|
+|_m_prefetch|3DNOW|intrin.h|void _m_prefetch (void \* )|
+|_m_prefetchw|3DNOW|intrin.h|void _m_prefetchw (void \* )|
+|[_m_psadbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psadbw)|SSE|intrin.h|__m64 _m_psadbw ( \_ _m64、 \_ _m64)|
+|[_m_pshufw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pshufw)|SSE|intrin.h|__m64 _m_pshufw ( \_ _m64, int)|
+|[_m_pslld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslld)|MMX|intrin.h|__m64 _m_pslld ( \_ _m64、 \_ _m64)|
+|[_m_pslldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslldi)|MMX|intrin.h|__m64 _m_pslldi ( \_ _m64, int)|
+|[_m_psllq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllq)|MMX|intrin.h|__m64 _m_psllq ( \_ _m64、 \_ _m64)|
+|[_m_psllqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllqi)|MMX|intrin.h|__m64 _m_psllqi ( \_ _m64, int)|
+|[_m_psllw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllw)|MMX|intrin.h|__m64 _m_psllw ( \_ _m64、 \_ _m64)|
+|[_m_psllwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllwi)|MMX|intrin.h|__m64 _m_psllwi ( \_ _m64, int)|
+|[_m_psrad](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrad)|MMX|intrin.h|__m64 _m_psrad ( \_ _m64、 \_ _m64)|
+|[_m_psradi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psradi)|MMX|intrin.h|__m64 _m_psradi ( \_ _m64, int)|
+|[_m_psraw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psraw)|MMX|intrin.h|__m64 _m_psraw ( \_ _m64、 \_ _m64)|
+|[_m_psrawi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrawi)|MMX|intrin.h|__m64 _m_psrawi ( \_ _m64, int)|
+|[_m_psrld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrld)|MMX|intrin.h|__m64 _m_psrld ( \_ _m64、 \_ _m64)|
+|[_m_psrldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrldi)|MMX|intrin.h|__m64 _m_psrldi ( \_ _m64, int)|
+|[_m_psrlq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlq)|MMX|intrin.h|__m64 _m_psrlq ( \_ _m64、 \_ _m64)|
+|[_m_psrlqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlqi)|MMX|intrin.h|__m64 _m_psrlqi ( \_ _m64, int)|
+|[_m_psrlw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlw)|MMX|intrin.h|__m64 _m_psrlw ( \_ _m64、 \_ _m64)|
+|[_m_psrlwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlwi)|MMX|intrin.h|__m64 _m_psrlwi ( \_ _m64, int)|
+|[_m_psubb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubb)|MMX|intrin.h|__m64 _m_psubb ( \_ _m64、 \_ _m64)|
+|[_m_psubd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubd)|MMX|intrin.h|__m64 _m_psubd ( \_ _m64、 \_ _m64)|
+|[_m_psubsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsb)|MMX|intrin.h|__m64 _m_psubsb ( \_ _m64、 \_ _m64)|
+|[_m_psubsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsw)|MMX|intrin.h|__m64 _m_psubsw ( \_ _m64、 \_ _m64)|
+|[_m_psubusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusb)|MMX|intrin.h|__m64 _m_psubusb ( \_ _m64、 \_ _m64)|
+|[_m_psubusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusw)|MMX|intrin.h|__m64 _m_psubusw ( \_ _m64、 \_ _m64)|
+|[_m_psubw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubw)|MMX|intrin.h|__m64 _m_psubw ( \_ _m64、 \_ _m64)|
+|_m_pswapd|3DNOWEXT|intrin.h|__m64 _m_pswapd ( \_ _m64)|
+|[_m_punpckhbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhbw)|MMX|intrin.h|__m64 _m_punpckhbw ( \_ _m64、 \_ _m64)|
+|[_m_punpckhdq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhdq)|MMX|intrin.h|__m64 _m_punpckhdq ( \_ _m64、 \_ _m64)|
+|[_m_punpckhwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhwd)|MMX|intrin.h|__m64 _m_punpckhwd ( \_ _m64、 \_ _m64)|
+|[_m_punpcklbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklbw)|MMX|intrin.h|__m64 _m_punpcklbw ( \_ _m64、 \_ _m64)|
+|[_m_punpckldq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckldq)|MMX|intrin.h|__m64 _m_punpckldq ( \_ _m64、 \_ _m64)|
+|[_m_punpcklwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklwd)|MMX|intrin.h|__m64 _m_punpcklwd ( \_ _m64、 \_ _m64)|
+|[_m_pxor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pxor)|MMX|intrin.h|__m64 _m_pxor ( \_ _m64、 \_ _m64)|
+|_m_to_float|3DNOW|intrin.h|float _m_to_float ( \_ _m64)|
+|[_m_to_int](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_to_int)|MMX|intrin.h|int _m_to_int ( \_ _m64)|
+|[_mm_abs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi16)|SSSE3|intrin.h|__m128i _mm_abs_epi16 ( \_ _m128i)|
+|[_mm_abs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi32)|SSSE3|intrin.h|__m128i _mm_abs_epi32 ( \_ _m128i)|
+|[_mm_abs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi8)|SSSE3|intrin.h|__m128i _mm_abs_epi8 ( \_ _m128i)|
+|[_mm_abs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi16)|SSSE3|intrin.h|__m64 _mm_abs_pi16 ( \_ _m64)|
+|[_mm_abs_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi32)|SSSE3|intrin.h|__m64 _mm_abs_pi32 ( \_ _m64)|
+|[_mm_abs_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi8)|SSSE3|intrin.h|__m64 _mm_abs_pi8 ( \_ _m64)|
+|[_mm_add_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi16)|SSE2|intrin.h|__m128i _mm_add_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_add_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi32)|SSE2|intrin.h|__m128i _mm_add_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_add_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi64)|SSE2|intrin.h|__m128i _mm_add_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_add_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi8)|SSE2|intrin.h|__m128i _mm_add_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_add_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pd)|SSE2|intrin.h|__m128d _mm_add_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_add_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi8)|MMX|mmintrin .h|__m64 _mm_add_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_add_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi16)|MMX|mmintrin .h|__m64 _mm_add_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_add_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pi32)|MMX|mmintrin .h|__m64 _mm_add_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_add_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ps)|SSE|intrin.h|__m128 _mm_add_ps ( \_ _m128、 \_ _m128)|
+|[_mm_add_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_sd)|SSE2|intrin.h|__m128d _mm_add_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_add_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_si64)|SSE2|intrin.h|__m64 _mm_add_si64 ( \_ _m64、 \_ _m64)|
+|[_mm_add_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ss)|SSE|intrin.h|__m128 _mm_add_ss ( \_ _m128、 \_ _m128)|
+|[_mm_adds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi16)|SSE2|intrin.h|__m128i _mm_adds_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_adds_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi8)|SSE2|intrin.h|__m128i _mm_adds_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_adds_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epu16)|SSE2|intrin.h|__m128i _mm_adds_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_adds_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epu8)|SSE2|intrin.h|__m128i _mm_adds_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_adds_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pi8)|MMX|mmintrin .h|__m64 _mm_adds_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_adds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pi16)|MMX|mmintrin .h|__m64 _mm_adds_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_adds_pu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pu8)|MMX|mmintrin .h|__m64 _mm_adds_pu8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_adds_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_pu16)|MMX|mmintrin .h|__m64 _mm_adds_pu16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_addsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_addsub_pd)|SSE3|intrin.h|__m128d _mm_addsub_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_addsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_addsub_ps)|SSE3|intrin.h|__m128 _mm_addsub_ps ( \_ _m128、 \_ _m128)|
+|[_mm_aesdec_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesdec_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesdec_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_aesdeclast_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesdeclast_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesdeclast_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_aesenc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesenc_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesenc_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_aesenclast_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesenclast_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesenclast_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_aesimc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesimc_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesimc_si128 ( \_ _m128i)|
+|[_mm_aeskeygenassist_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aeskeygenassist_si128)|AESNI [2]|immintrin.h|__m128i _mm_aeskeygenassist_si128 ( \_ _m128i、const int)|
+|[_mm_alignr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_epi8)|SSSE3|intrin.h|__m128i _mm_alignr_epi8 ( \_ _m128i、 \_ _m128i、int)|
+|[_mm_alignr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_pi8)|SSSE3|intrin.h|__m64 _mm_alignr_pi8 ( \_ _m64、 \_ _m64、int)|
+|[_mm_and_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_pd)|SSE2|intrin.h|__m128d _mm_and_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_and_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_ps)|SSE|intrin.h|__m128 _mm_and_ps ( \_ _m128、 \_ _m128)|
+|[_mm_and_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_si64)|MMX|mmintrin .h|__m64 _mm_and_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_and_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_si128)|SSE2|intrin.h|__m128i _mm_and_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_andnot_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_pd)|SSE2|intrin.h|__m128d _mm_andnot_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_andnot_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_ps)|SSE|intrin.h|__m128 _mm_andnot_ps ( \_ _m128、 \_ _m128)|
+|[_mm_andnot_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_si64)|MMX|mmintrin .h|__m64 _mm_andnot_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_andnot_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_andnot_si128)|SSE2|intrin.h|__m128i _mm_andnot_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_avg_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_avg_epu16)|SSE2|intrin.h|__m128i _mm_avg_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_avg_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_avg_epu8)|SSE2|intrin.h|__m128i _mm_avg_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_blend_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_epi16)|SSE41|intrin.h|__m128i _mm_blend_epi16 ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_blend_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_blend_epi32 ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_blend_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_pd)|SSE41|intrin.h|__m128d _mm_blend_pd ( \_ _m128d、 \_ _m128d、const int)|
+|[_mm_blend_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blend_ps)|SSE41|intrin.h|__m128 _mm_blend_ps ( \_ _m128、 \_ _m128、const int)|
+|[_mm_blendv_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_epi8)|SSE41|intrin.h|__m128i _mm_blendv_epi8 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|[_mm_blendv_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_pd)|SSE41|intrin.h|__m128d _mm_blendv_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_blendv_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_blendv_ps)|SSE41|intrin.h|__m128 _mm_blendv_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
 |[_mm_broadcast_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcast_ss)|AVX [2]|immintrin.h|__m128 _mm_broadcast_ss(float const *)|
-|[_mm_broadcastb_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastb_epi8)|AVX2 [2]|immintrin.h|__m128i_mm_broadcastb_epi8(_m128i)\_|
-|[_mm_broadcastd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastd_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_broadcastd_epi32(_m128i)\_|
-|[_mm_broadcastq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastq_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_broadcastq_epi64(_m128i)\_|
-|[_mm_broadcastsd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastsd_pd)|AVX2 [2]|immintrin.h|__m128d_mm_broadcastsd_pd(_m128d)\_|
-|[_mm_broadcastss_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastss_ps)|AVX2 [2]|immintrin.h|__m128_mm_broadcastss_ps(_m128)\_|
-|[_mm_broadcastw_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastw_epi16)|AVX2 [2]|immintrin.h|__m128i_mm_broadcastw_epi16_m128i)\_|
-|[_mm_castpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castpd_ps)|SSSE3|intrin.h|__m128_mm_castpd_ps(_m128d)\_|
-|[_mm_castpd_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castpd_si128)|SSSE3|intrin.h|__m128i _mm_castpd_si128(\__m128d)|
-|[_mm_castps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castps_pd)|SSSE3|intrin.h|__m128d_mm_castps_pd(_m128)\_|
-|[_mm_castps_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castps_si128)|SSSE3|intrin.h|__m128i _mm_castps_si128_m128)\_|
-|[_mm_castsi128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_pd)|SSSE3|intrin.h|__m128d_mm_castsi128_pd(_m128i)\_|
-|[_mm_castsi128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_ps)|SSSE3|intrin.h|__m128_mm_castsi128_ps(_m128i)\_|
-|[_mm_clflush](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clflush)|SSE2|intrin.h|void _mm_clflush (void const \*)|
-|[_mm_clmulepi64_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clmulepi64_si128)|PCLMULQDQ [2]|immintrin.h|__m128i_mm_clmulepi64_si128(_m128i、_m128i、const\_ \_int)|
-|_mm_cmov_si128|XOP [1]|ammintrin.h|__m128i_mm_cmov_si128(_m128i、_m128i、_m128i)\_ \_ \_|
-|[_mm_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_pd)|AVX [2]|immintrin.h|__m128d_mm_cmp_pd(_m128d、_m128d、const\_ \_int)|
-|[_mm_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_ps)|AVX [2]|immintrin.h|__m128_mm_cmp_ps(_m128、_m128、const\_ \_int)|
-|[_mm_cmp_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_sd)|AVX [2]|immintrin.h|__m128d_mm_cmp_sd(_m128d、_m128d、const\_ \_int)|
-|[_mm_cmp_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_ss)|AVX [2]|immintrin.h|__m128_mm_cmp_ss(_m128、_m128、const\_ \_int)|
-|[_mm_cmpeq_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi16)|SSE2|intrin.h|__m128i_mm_cmpeq_epi16(_m128i、_m128i)\_ \_|
-|[_mm_cmpeq_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi32)|SSE2|intrin.h|__m128i_mm_cmpeq_epi32(_m128i、_m128i)\_ \_|
-|[_mm_cmpeq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi64)|SSE41|intrin.h|__m128i_mm_cmpeq_epi64(_m128i、_m128i)\_ \_|
-|[_mm_cmpeq_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi8)|SSE2|intrin.h|__m128i_mm_cmpeq_epi8(_m128i、_m128i)\_ \_|
-|[_mm_cmpeq_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pd)|SSE2|intrin.h|__m128d_mm_cmpeq_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpeq_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi8)|MMX|mmintrin.h|__m64_mm_cmpeq_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_cmpeq_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi16)|MMX|mmintrin.h|__m64_mm_cmpeq_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_cmpeq_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi32)|MMX|mmintrin.h|__m64_mm_cmpeq_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_cmpeq_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_ps)|SSE|intrin.h|__m128_mm_cmpeq_ps(_m128、_m128)\_ \_|
-|[_mm_cmpeq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_sd)|SSE2|intrin.h|__m128d_mm_cmpeq_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpeq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_ss)|SSE|intrin.h|__m128_mm_cmpeq_ss(_m128、_m128)\_ \_|
-|[_mm_cmpestra](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestra)|SSE42|intrin.h|int _mm_cmpestra(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpestrc](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrc)|SSE42|intrin.h|int _mm_cmpestrc(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpestri](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestri)|SSE42|intrin.h|int _mm_cmpestri(_m128i、_m128i、_m128i、int、const\_ \_int)|
-|[_mm_cmpestrm](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrm)|SSE42|intrin.h|__m128i_mm_cmpestrm(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpestro](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestro)|SSE42|intrin.h|int _mm_cmpestro(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpestrs](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrs)|SSE42|intrin.h|int _mm_cmpestrs(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpestrz](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrz)|SSE42|intrin.h|int _mm_cmpestrz(_m128i、int、_m128i、int、const\_ \_int)|
-|[_mm_cmpge_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_pd)|SSE2|intrin.h|__m128d_mm_cmpge_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpge_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_ps)|SSE|intrin.h|__m128_mm_cmpge_ps(_m128、_m128)\_ \_|
-|[_mm_cmpge_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_sd)|SSE2|intrin.h|__m128d_mm_cmpge_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpge_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_ss)|SSE|intrin.h|__m128_mm_cmpge_ss(_m128、_m128)\_ \_|
-|[_mm_cmpgt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi16)|SSE2|intrin.h|__m128i_mm_cmpgt_epi16(_m128i、_m128i)\_ \_|
-|[_mm_cmpgt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi32)|SSE2|intrin.h|__m128i_mm_cmpgt_epi32(_m128i、_m128i)\_ \_|
-|[_mm_cmpgt_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi64)|SSE42|intrin.h|__m128i_mm_cmpgt_epi64(_m128i、_m128i)\_ \_|
-|[_mm_cmpgt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi8)|SSE2|intrin.h|__m128i_mm_cmpgt_epi8(_m128i、_m128i)\_ \_|
-|[_mm_cmpgt_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi8)|MMX|mmintrin.h|__m64_mm_cmpgt_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_cmpgt_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi16)|MMX|mmintrin.h|__m64_mm_cmpgt_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_cmpgt_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi32)|MMX|mmintrin.h|__m64_mm_cmpgt_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_cmpgt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pd)|SSE2|intrin.h|__m128d_mm_cmpgt_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpgt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_ps)|SSE|intrin.h|__m128_mm_cmpgt_ps(_m128、_m128)\_ \_|
-|[_mm_cmpgt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_sd)|SSE2|intrin.h|__m128d_mm_cmpgt_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpgt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_ss)|SSE|intrin.h|__m128_mm_cmpgt_ss(_m128、_m128)\_ \_|
-|[_mm_cmpistra](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistra)|SSE42|intrin.h|int _mm_cmpistra(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistrc](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrc)|SSE42|intrin.h|int _mm_cmpistrc(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistri](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistri)|SSE42|intrin.h|int _mm_cmpistri(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistrm](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrm)|SSE42|intrin.h|__m128i_mm_cmpistrm(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistro](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistro)|SSE42|intrin.h|int _mm_cmpistro(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistrs](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrs)|SSE42|intrin.h|int _mm_cmpistrs(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmpistrz](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrz)|SSE42|intrin.h|int _mm_cmpistrz(_m128i、_m128i、const\_ \_int)|
-|[_mm_cmple_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_pd)|SSE2|intrin.h|__m128d_mm_cmple_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmple_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_ps)|SSE|intrin.h|__m128_mm_cmple_ps(_m128、_m128)\_ \_|
-|[_mm_cmple_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_sd)|SSE2|intrin.h|__m128d_mm_cmple_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmple_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_ss)|SSE|intrin.h|__m128_mm_cmple_ss(_m128、_m128)\_ \_|
-|[_mm_cmplt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi16)|SSE2|intrin.h|__m128i_mm_cmplt_epi16(_m128i、_m128i)\_ \_|
-|[_mm_cmplt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi32)|SSE2|intrin.h|__m128i_mm_cmplt_epi32(_m128i、_m128i)\_ \_|
-|[_mm_cmplt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi8)|SSE2|intrin.h|__m128i_mm_cmplt_epi8(_m128i、_m128i)\_ \_|
-|[_mm_cmplt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_pd)|SSE2|intrin.h|__m128d_mm_cmplt_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmplt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_ps)|SSE|intrin.h|__m128_mm_cmplt_ps(_m128、_m128)\_ \_|
-|[_mm_cmplt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_sd)|SSE2|intrin.h|__m128d_mm_cmplt_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmplt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_ss)|SSE|intrin.h|__m128_mm_cmplt_ss(_m128、_m128)\_ \_|
-|[_mm_cmpneq_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_pd)|SSE2|intrin.h|__m128d_mm_cmpneq_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpneq_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_ps)|SSE|intrin.h|__m128_mm_cmpneq_ps(_m128、_m128)\_ \_|
-|[_mm_cmpneq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_sd)|SSE2|intrin.h|__m128d_mm_cmpneq_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpneq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_ss)|SSE|intrin.h|__m128_mm_cmpneq_ss(_m128、_m128)\_ \_|
-|[_mm_cmpnge_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_pd)|SSE2|intrin.h|__m128d_mm_cmpnge_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnge_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_ps)|SSE|intrin.h|__m128_mm_cmpnge_ps(_m128、_m128)\_ \_|
-|[_mm_cmpnge_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_sd)|SSE2|intrin.h|__m128d_mm_cmpnge_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnge_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_ss)|SSE|intrin.h|__m128_mm_cmpnge_ss(_m128、_m128)\_ \_|
-|[_mm_cmpngt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_pd)|SSE2|intrin.h|__m128d_mm_cmpngt_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpngt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_ps)|SSE|intrin.h|__m128_mm_cmpngt_ps(_m128、_m128)\_ \_|
-|[_mm_cmpngt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_sd)|SSE2|intrin.h|__m128d_mm_cmpngt_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpngt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_ss)|SSE|intrin.h|__m128_mm_cmpngt_ss(_m128、_m128)\_ \_|
-|[_mm_cmpnle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_pd)|SSE2|intrin.h|__m128d_mm_cmpnle_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_ps)|SSE|intrin.h|__m128_mm_cmpnle_ps(_m128、_m128)\_ \_|
-|[_mm_cmpnle_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_sd)|SSE2|intrin.h|__m128d_mm_cmpnle_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnle_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_ss)|SSE|intrin.h|__m128_mm_cmpnle_ss(_m128、_m128)\_ \_|
-|[_mm_cmpnlt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_pd)|SSE2|intrin.h|__m128d_mm_cmpnlt_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnlt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_ps)|SSE|intrin.h|__m128_mm_cmpnlt_ps(_m128、_m128)\_ \_|
-|[_mm_cmpnlt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_sd)|SSE2|intrin.h|__m128d_mm_cmpnlt_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpnlt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_ss)|SSE|intrin.h|__m128_mm_cmpnlt_ss(_m128、_m128)\_ \_|
-|[_mm_cmpord_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_pd)|SSE2|intrin.h|__m128d_mm_cmpord_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpord_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_ps)|SSE|intrin.h|__m128_mm_cmpord_ps(_m128、_m128)\_ \_|
-|[_mm_cmpord_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_sd)|SSE2|intrin.h|__m128d_mm_cmpord_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpord_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_ss)|SSE|intrin.h|__m128_mm_cmpord_ss(_m128、_m128)\_ \_|
-|[_mm_cmpunord_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_pd)|SSE2|intrin.h|__m128d_mm_cmpunord_pd(_m128d、_m128d)\_ \_|
-|[_mm_cmpunord_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ps)|SSE|intrin.h|__m128_mm_cmpunord_ps(_m128、_m128)\_ \_|
-|[_mm_cmpunord_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_sd)|SSE2|intrin.h|__m128d_mm_cmpunord_sd(_m128d、_m128d)\_ \_|
-|[_mm_cmpunord_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ss)|SSE|intrin.h|__m128_mm_cmpunord_ss(_m128、_m128)\_ \_|
-|_mm_com_epi16|XOP [1]|ammintrin.h|__m128i_mm_com_epi16(_m128i、_m128i、int)\_ \_|
-|_mm_com_epi32|XOP [1]|ammintrin.h|__m128i_mm_com_epi32(_m128i、_m128i、int)\_ \_|
-|_mm_com_epi64|XOP [1]|ammintrin.h|__m128i_mm_com_epi32(_m128i、_m128i、int)\_ \_|
-|_mm_com_epi8|XOP [1]|ammintrin.h|__m128i_mm_com_epi8(_m128i、_m128i、int)\_ \_|
-|_mm_com_epu16|XOP [1]|ammintrin.h|__m128i_mm_com_epu16(_m128i、_m128i、int)\_ \_|
-|_mm_com_epu32|XOP [1]|ammintrin.h|__m128i_mm_com_epu32(_m128i、_m128i、int)\_ \_|
-|_mm_com_epu64|XOP [1]|ammintrin.h|__m128i_mm_com_epu32(_m128i、_m128i、int)\_ \_|
-|_mm_com_epu8|XOP [1]|ammintrin.h|__m128i_mm_com_epu8(_m128i、_m128i、int)\_ \_|
-|[_mm_comieq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_sd)|SSE2|intrin.h|int _mm_comieq_sd(_m128d、_m128d)\_ \_|
-|[_mm_comieq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_ss)|SSE|intrin.h|int _mm_comieq_ss(_m128、_m128)\_ \_|
-|[_mm_comige_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comige_sd)|SSE2|intrin.h|int _mm_comige_sd(_m128d、_m128d)\_ \_|
-|[_mm_comige_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comige_ss)|SSE|intrin.h|int _mm_comige_ss(_m128、_m128)\_ \_|
-|[_mm_comigt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comigt_sd)|SSE2|intrin.h|int _mm_comigt_sd(_m128d、_m128d)\_ \_|
-|[_mm_comigt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comigt_ss)|SSE|intrin.h|int _mm_comigt_ss(_m128、_m128)\_ \_|
-|[_mm_comile_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comile_sd)|SSE2|intrin.h|int _mm_comile_sd(_m128d、_m128d)\_ \_|
-|[_mm_comile_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comile_ss)|SSE|intrin.h|int _mm_comile_ss(_m128、_m128)\_ \_|
-|[_mm_comilt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comilt_sd)|SSE2|intrin.h|int _mm_comilt_sd(_m128d、_m128d)\_ \_|
-|[_mm_comilt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comilt_ss)|SSE|intrin.h|int _mm_comilt_ss(_m128、_m128)\_ \_|
-|[_mm_comineq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_sd)|SSE2|intrin.h|int _mm_comineq_sd(_m128d、_m128d)\_ \_|
-|[_mm_comineq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_ss)|SSE|intrin.h|int _mm_comineq_ss(_m128、_m128)\_ \_|
-|[_mm_crc32_u16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u16)|SSE42|intrin.h|符号なし int _mm_crc32_u16 (符号なし、符号なし短)|
-|[_mm_crc32_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u32)|SSE42|intrin.h|符号なし int _mm_crc32_u32 (符号なし、符号なし int)|
-|[_mm_crc32_u8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u8)|SSE42|intrin.h|符号なし int _mm_crc32_u8(符号なし、符号なし char)|
-|[_mm_cvt_pi2ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_pi2ps)|SSE|intrin.h|__m128_mm_cvt_pi2ps(_m128、_m64)\_ \_|
-|[_mm_cvt_ps2pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_ps2pi)|SSE|intrin.h|__m64_mm_cvt_ps2pi(_m128)\_|
-|[_mm_cvt_si2ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_si2ss)|SSE|intrin.h|__m128_mm_cvt_si2ss(_m128、int)\_|
-|[_mm_cvt_ss2si](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_ss2si)|SSE|intrin.h|int _mm_cvt_ss2si(\__m128)|
-|[_mm_cvtepi16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi16_epi32)|SSE41|intrin.h|__m128i_mm_cvtepi16_epi32(_m128i)\_|
-|[_mm_cvtepi16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi16_epi64)|SSE41|intrin.h|__m128i_mm_cvtepi16_epi64(_m128i)\_|
-|[_mm_cvtepi32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_epi64)|SSE41|intrin.h|__m128i_mm_cvtepi32_epi64(_m128i)\_|
-|[_mm_cvtepi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_pd)|SSE2|intrin.h|__m128d_mm_cvtepi32_pd(_m128i)\_|
-|[_mm_cvtepi32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_ps)|SSE2|intrin.h|__m128_mm_cvtepi32_ps(_m128i)\_|
-|[_mm_cvtepi8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi16)|SSE41|intrin.h|__m128i _mm_cvtepi8_epi16\_( _m128i)|
-|[_mm_cvtepi8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi32)|SSE41|intrin.h|__m128i_mm_cvtepi8_epi32\_(_m128i)|
-|[_mm_cvtepi8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi64)|SSE41|intrin.h|__m128i _mm_cvtepi8_epi64\_( _m128i )|
-|[_mm_cvtepu16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu16_epi32)|SSE41|intrin.h|__m128i_mm_cvtepu16_epi32(_m128i)\_|
-|[_mm_cvtepu16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu16_epi64)|SSE41|intrin.h|__m128i_mm_cvtepu16_epi64(_m128i)\_|
-|[_mm_cvtepu32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu32_epi64)|SSE41|intrin.h|__m128i_mm_cvtepu32_epi64(_m128i)\_|
-|[_mm_cvtepu8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi16)|SSE41|intrin.h|__m128i_mm_cvtepu8_epi16\_( _m128i)|
-|[_mm_cvtepu8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi32)|SSE41|intrin.h|__m128i_mm_cvtepu8_epi32\_(_m128i)|
-|[_mm_cvtepu8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi64)|SSE41|intrin.h|__m128i_mm_cvtepu8_epi64\_(_m128i)|
-|[_mm_cvtpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_epi32)|SSE2|intrin.h|__m128i_mm_cvtpd_epi32(_m128d)\_|
-|[_mm_cvtpd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_pi32)|SSE2|intrin.h|__m64_mm_cvtpd_pi32(_m128d)\_|
-|[_mm_cvtpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_ps)|SSE2|intrin.h|__m128_mm_cvtpd_ps(_m128d)\_|
-|[_mm_cvtph_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtph_ps)|F16C [2]|immintrin.h|__m128_mm_cvtph_ps(_m128i)\_|
-|[_mm_cvtpi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpi32_pd)|SSE2|intrin.h|__m128d_mm_cvtpi32_pd(_m64)\_|
-|[_mm_cvtps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_epi32)|SSE2|intrin.h|__m128i_mm_cvtps_epi32(_m128)\_|
-|[_mm_cvtps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_pd)|SSE2|intrin.h|__m128d_mm_cvtps_pd(_m128)\_|
-|[_mm_cvtps_ph](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_ph)|F16C [2]|immintrin.h|__m128i_mm_cvtps_ph(_m128、const\_int)|
-|[_mm_cvtsd_f64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_f64)|SSSE3|intrin.h|ダブル_mm_cvtsd_f64(_m128d)\_|
-|[_mm_cvtsd_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_si32)|SSE2|intrin.h|int _mm_cvtsd_si32(\__m128d)|
-|[_mm_cvtsd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_ss)|SSE2|intrin.h|__m128_mm_cvtsd_ss(_m128、_m128d)\_ \_|
-|[_mm_cvtsi128_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi128_si32)|SSE2|intrin.h|int _mm_cvtsi128_si32(\__m128i)|
-|[_mm_cvtsi32_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi32_sd)|SSE2|intrin.h|__m128d_mm_cvtsi32_sd(_m128d、int)\_|
+|[_mm_broadcastb_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastb_epi8)|AVX2 [2]|immintrin.h|__m128i _mm_broadcastb_epi8 ( \_ _m128i)|
+|[_mm_broadcastd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastd_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_broadcastd_epi32 ( \_ _m128i)|
+|[_mm_broadcastq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastq_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_broadcastq_epi64 ( \_ _m128i)|
+|[_mm_broadcastsd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastsd_pd)|AVX2 [2]|immintrin.h|__m128d _mm_broadcastsd_pd ( \_ _m128d)|
+|[_mm_broadcastss_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastss_ps)|AVX2 [2]|immintrin.h|__m128 _mm_broadcastss_ps ( \_ _m128)|
+|[_mm_broadcastw_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_broadcastw_epi16)|AVX2 [2]|immintrin.h|__m128i _mm_broadcastw_epi16 ( \_ _m128i)|
+|[_mm_castpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castpd_ps)|SSSE3|intrin.h|__m128 _mm_castpd_ps ( \_ _m128d)|
+|[_mm_castpd_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castpd_si128)|SSSE3|intrin.h|__m128i _mm_castpd_si128 ( \_ _m128d)|
+|[_mm_castps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castps_pd)|SSSE3|intrin.h|__m128d _mm_castps_pd ( \_ _m128)|
+|[_mm_castps_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castps_si128)|SSSE3|intrin.h|__m128i _mm_castps_si128 ( \_ _m128)|
+|[_mm_castsi128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_pd)|SSSE3|intrin.h|__m128d _mm_castsi128_pd ( \_ _m128i)|
+|[_mm_castsi128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_ps)|SSSE3|intrin.h|__m128 _mm_castsi128_ps ( \_ _m128i)|
+|[_mm_clflush](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clflush)|SSE2|intrin.h|void _mm_clflush (void const \* )|
+|[_mm_clmulepi64_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clmulepi64_si128)|PCLMULQDQ [2]|immintrin.h|__m128i _mm_clmulepi64_si128 ( \_ _m128i、 \_ _m128i、const int)|
+|_mm_cmov_si128|XOP [1]|ammintrin.h|__m128i _mm_cmov_si128 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|[_mm_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_pd)|AVX [2]|immintrin.h|__m128d _mm_cmp_pd ( \_ _m128d、 \_ _m128d、const int)|
+|[_mm_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_ps)|AVX [2]|immintrin.h|__m128 _mm_cmp_ps ( \_ _m128、 \_ _m128、const int)|
+|[_mm_cmp_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_sd)|AVX [2]|immintrin.h|__m128d _mm_cmp_sd ( \_ _m128d、 \_ _m128d、const int)|
+|[_mm_cmp_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_ss)|AVX [2]|immintrin.h|__m128 _mm_cmp_ss ( \_ _m128、 \_ _m128、const int)|
+|[_mm_cmpeq_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi16)|SSE2|intrin.h|__m128i _mm_cmpeq_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpeq_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi32)|SSE2|intrin.h|__m128i _mm_cmpeq_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpeq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi64)|SSE41|intrin.h|__m128i _mm_cmpeq_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpeq_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_epi8)|SSE2|intrin.h|__m128i _mm_cmpeq_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpeq_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pd)|SSE2|intrin.h|__m128d _mm_cmpeq_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpeq_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi8)|MMX|mmintrin .h|__m64 _mm_cmpeq_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpeq_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi16)|MMX|mmintrin .h|__m64 _mm_cmpeq_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpeq_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_pi32)|MMX|mmintrin .h|__m64 _mm_cmpeq_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpeq_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_ps)|SSE|intrin.h|__m128 _mm_cmpeq_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpeq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_sd)|SSE2|intrin.h|__m128d _mm_cmpeq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpeq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpeq_ss)|SSE|intrin.h|__m128 _mm_cmpeq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpestra](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestra)|SSE42|intrin.h|int _mm_cmpestra ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestrc](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrc)|SSE42|intrin.h|int _mm_cmpestrc ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestri](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestri)|SSE42|intrin.h|int _mm_cmpestri ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestrm](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrm)|SSE42|intrin.h|__m128i _mm_cmpestrm ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestro](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestro)|SSE42|intrin.h|int _mm_cmpestro ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestrs](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrs)|SSE42|intrin.h|int _mm_cmpestrs ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpestrz](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpestrz)|SSE42|intrin.h|int _mm_cmpestrz ( \_ _m128i、int、 \_ _m128i、int、const int)|
+|[_mm_cmpge_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_pd)|SSE2|intrin.h|__m128d _mm_cmpge_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpge_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_ps)|SSE|intrin.h|__m128 _mm_cmpge_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpge_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_sd)|SSE2|intrin.h|__m128d _mm_cmpge_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpge_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpge_ss)|SSE|intrin.h|__m128 _mm_cmpge_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpgt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi16)|SSE2|intrin.h|__m128i _mm_cmpgt_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpgt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi32)|SSE2|intrin.h|__m128i _mm_cmpgt_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpgt_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi64)|SSE42|intrin.h|__m128i _mm_cmpgt_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpgt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_epi8)|SSE2|intrin.h|__m128i _mm_cmpgt_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmpgt_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi8)|MMX|mmintrin .h|__m64 _mm_cmpgt_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpgt_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi16)|MMX|mmintrin .h|__m64 _mm_cmpgt_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpgt_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pi32)|MMX|mmintrin .h|__m64 _mm_cmpgt_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_cmpgt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_pd)|SSE2|intrin.h|__m128d _mm_cmpgt_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpgt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_ps)|SSE|intrin.h|__m128 _mm_cmpgt_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpgt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_sd)|SSE2|intrin.h|__m128d _mm_cmpgt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpgt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpgt_ss)|SSE|intrin.h|__m128 _mm_cmpgt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpistra](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistra)|SSE42|intrin.h|int _mm_cmpistra ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistrc](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrc)|SSE42|intrin.h|int _mm_cmpistrc ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistri](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistri)|SSE42|intrin.h|int _mm_cmpistri ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistrm](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrm)|SSE42|intrin.h|__m128i _mm_cmpistrm ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistro](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistro)|SSE42|intrin.h|int _mm_cmpistro ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistrs](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrs)|SSE42|intrin.h|int _mm_cmpistrs ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmpistrz](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpistrz)|SSE42|intrin.h|int _mm_cmpistrz ( \_ _m128i、 \_ _m128i、const int)|
+|[_mm_cmple_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_pd)|SSE2|intrin.h|__m128d _mm_cmple_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmple_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_ps)|SSE|intrin.h|__m128 _mm_cmple_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmple_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_sd)|SSE2|intrin.h|__m128d _mm_cmple_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmple_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmple_ss)|SSE|intrin.h|__m128 _mm_cmple_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmplt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi16)|SSE2|intrin.h|__m128i _mm_cmplt_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmplt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi32)|SSE2|intrin.h|__m128i _mm_cmplt_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmplt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_epi8)|SSE2|intrin.h|__m128i _mm_cmplt_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_cmplt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_pd)|SSE2|intrin.h|__m128d _mm_cmplt_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmplt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_ps)|SSE|intrin.h|__m128 _mm_cmplt_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmplt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_sd)|SSE2|intrin.h|__m128d _mm_cmplt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmplt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmplt_ss)|SSE|intrin.h|__m128 _mm_cmplt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpneq_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_pd)|SSE2|intrin.h|__m128d _mm_cmpneq_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpneq_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_ps)|SSE|intrin.h|__m128 _mm_cmpneq_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpneq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_sd)|SSE2|intrin.h|__m128d _mm_cmpneq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpneq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpneq_ss)|SSE|intrin.h|__m128 _mm_cmpneq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnge_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_pd)|SSE2|intrin.h|__m128d _mm_cmpnge_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnge_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_ps)|SSE|intrin.h|__m128 _mm_cmpnge_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnge_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_sd)|SSE2|intrin.h|__m128d _mm_cmpnge_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnge_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnge_ss)|SSE|intrin.h|__m128 _mm_cmpnge_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpngt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_pd)|SSE2|intrin.h|__m128d _mm_cmpngt_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpngt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_ps)|SSE|intrin.h|__m128 _mm_cmpngt_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpngt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_sd)|SSE2|intrin.h|__m128d _mm_cmpngt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpngt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpngt_ss)|SSE|intrin.h|__m128 _mm_cmpngt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_pd)|SSE2|intrin.h|__m128d _mm_cmpnle_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_ps)|SSE|intrin.h|__m128 _mm_cmpnle_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnle_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_sd)|SSE2|intrin.h|__m128d _mm_cmpnle_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnle_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnle_ss)|SSE|intrin.h|__m128 _mm_cmpnle_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnlt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_pd)|SSE2|intrin.h|__m128d _mm_cmpnlt_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnlt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_ps)|SSE|intrin.h|__m128 _mm_cmpnlt_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpnlt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_sd)|SSE2|intrin.h|__m128d _mm_cmpnlt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpnlt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpnlt_ss)|SSE|intrin.h|__m128 _mm_cmpnlt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpord_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_pd)|SSE2|intrin.h|__m128d _mm_cmpord_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpord_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_ps)|SSE|intrin.h|__m128 _mm_cmpord_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpord_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_sd)|SSE2|intrin.h|__m128d _mm_cmpord_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpord_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpord_ss)|SSE|intrin.h|__m128 _mm_cmpord_ss ( \_ _m128、 \_ _m128)|
+|[_mm_cmpunord_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_pd)|SSE2|intrin.h|__m128d _mm_cmpunord_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpunord_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ps)|SSE|intrin.h|__m128 _mm_cmpunord_ps ( \_ _m128、 \_ _m128)|
+|[_mm_cmpunord_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_sd)|SSE2|intrin.h|__m128d _mm_cmpunord_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_cmpunord_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ss)|SSE|intrin.h|__m128 _mm_cmpunord_ss ( \_ _m128、 \_ _m128)|
+|_mm_com_epi16|XOP [1]|ammintrin.h|__m128i _mm_com_epi16 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epi32|XOP [1]|ammintrin.h|__m128i _mm_com_epi32 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epi64|XOP [1]|ammintrin.h|__m128i _mm_com_epi32 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epi8|XOP [1]|ammintrin.h|__m128i _mm_com_epi8 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epu16|XOP [1]|ammintrin.h|__m128i _mm_com_epu16 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epu32|XOP [1]|ammintrin.h|__m128i _mm_com_epu32 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epu64|XOP [1]|ammintrin.h|__m128i _mm_com_epu32 ( \_ _m128i、 \_ _m128i、int)|
+|_mm_com_epu8|XOP [1]|ammintrin.h|__m128i _mm_com_epu8 ( \_ _m128i、 \_ _m128i、int)|
+|[_mm_comieq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_sd)|SSE2|intrin.h|int _mm_comieq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comieq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_ss)|SSE|intrin.h|int _mm_comieq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_comige_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comige_sd)|SSE2|intrin.h|int _mm_comige_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comige_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comige_ss)|SSE|intrin.h|int _mm_comige_ss ( \_ _m128、 \_ _m128)|
+|[_mm_comigt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comigt_sd)|SSE2|intrin.h|int _mm_comigt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comigt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comigt_ss)|SSE|intrin.h|int _mm_comigt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_comile_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comile_sd)|SSE2|intrin.h|int _mm_comile_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comile_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comile_ss)|SSE|intrin.h|int _mm_comile_ss ( \_ _m128、 \_ _m128)|
+|[_mm_comilt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comilt_sd)|SSE2|intrin.h|int _mm_comilt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comilt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comilt_ss)|SSE|intrin.h|int _mm_comilt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_comineq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_sd)|SSE2|intrin.h|int _mm_comineq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_comineq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_ss)|SSE|intrin.h|int _mm_comineq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_crc32_u16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u16)|SSE42|intrin.h|unsigned int _mm_crc32_u16 (符号なし int, unsigned short)|
+|[_mm_crc32_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u32)|SSE42|intrin.h|unsigned int _mm_crc32_u32 (符号なし整数、符号なし int)|
+|[_mm_crc32_u8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u8)|SSE42|intrin.h|unsigned int _mm_crc32_u8 (符号なし int, unsigned char)|
+|[_mm_cvt_pi2ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_pi2ps)|SSE|intrin.h|__m128 _mm_cvt_pi2ps ( \_ _m128、 \_ _m64)|
+|[_mm_cvt_ps2pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_ps2pi)|SSE|intrin.h|__m64 _mm_cvt_ps2pi ( \_ _m128)|
+|[_mm_cvt_si2ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_si2ss)|SSE|intrin.h|__m128 _mm_cvt_si2ss ( \_ _m128, int)|
+|[_mm_cvt_ss2si](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_ss2si)|SSE|intrin.h|int _mm_cvt_ss2si ( \_ _m128)|
+|[_mm_cvtepi16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi16_epi32)|SSE41|intrin.h|__m128i _mm_cvtepi16_epi32 ( \_ _m128i)|
+|[_mm_cvtepi16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi16_epi64)|SSE41|intrin.h|__m128i _mm_cvtepi16_epi64 ( \_ _m128i)|
+|[_mm_cvtepi32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_epi64)|SSE41|intrin.h|__m128i _mm_cvtepi32_epi64 ( \_ _m128i)|
+|[_mm_cvtepi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_pd)|SSE2|intrin.h|__m128d _mm_cvtepi32_pd ( \_ _m128i)|
+|[_mm_cvtepi32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi32_ps)|SSE2|intrin.h|__m128 _mm_cvtepi32_ps ( \_ _m128i)|
+|[_mm_cvtepi8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi16)|SSE41|intrin.h|__m128i _mm_cvtepi8_epi16 ( \_ _m128i)|
+|[_mm_cvtepi8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi32)|SSE41|intrin.h|__m128i _mm_cvtepi8_epi32 ( \_ _m128i)|
+|[_mm_cvtepi8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepi8_epi64)|SSE41|intrin.h|__m128i _mm_cvtepi8_epi64 ( \_ _m128i)|
+|[_mm_cvtepu16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu16_epi32)|SSE41|intrin.h|__m128i _mm_cvtepu16_epi32 ( \_ _m128i)|
+|[_mm_cvtepu16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu16_epi64)|SSE41|intrin.h|__m128i _mm_cvtepu16_epi64 ( \_ _m128i)|
+|[_mm_cvtepu32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu32_epi64)|SSE41|intrin.h|__m128i _mm_cvtepu32_epi64 ( \_ _m128i)|
+|[_mm_cvtepu8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi16)|SSE41|intrin.h|__m128i _mm_cvtepu8_epi16 ( \_ _m128i)|
+|[_mm_cvtepu8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi32)|SSE41|intrin.h|__m128i _mm_cvtepu8_epi32 ( \_ _m128i)|
+|[_mm_cvtepu8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtepu8_epi64)|SSE41|intrin.h|__m128i _mm_cvtepu8_epi64 ( \_ _m128i)|
+|[_mm_cvtpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_epi32)|SSE2|intrin.h|__m128i _mm_cvtpd_epi32 ( \_ _m128d)|
+|[_mm_cvtpd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_pi32)|SSE2|intrin.h|__m64 _mm_cvtpd_pi32 ( \_ _m128d)|
+|[_mm_cvtpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_ps)|SSE2|intrin.h|__m128 _mm_cvtpd_ps ( \_ _m128d)|
+|[_mm_cvtph_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtph_ps)|F16C [2]|immintrin.h|__m128 _mm_cvtph_ps ( \_ _m128i)|
+|[_mm_cvtpi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpi32_pd)|SSE2|intrin.h|__m128d _mm_cvtpi32_pd ( \_ _m64)|
+|[_mm_cvtps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_epi32)|SSE2|intrin.h|__m128i _mm_cvtps_epi32 ( \_ _m128)|
+|[_mm_cvtps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_pd)|SSE2|intrin.h|__m128d _mm_cvtps_pd ( \_ _m128)|
+|[_mm_cvtps_ph](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_ph)|F16C [2]|immintrin.h|__m128i _mm_cvtps_ph ( \_ _m128、const int)|
+|[_mm_cvtsd_f64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_f64)|SSSE3|intrin.h|double _mm_cvtsd_f64 ( \_ _m128d)|
+|[_mm_cvtsd_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_si32)|SSE2|intrin.h|int _mm_cvtsd_si32 ( \_ _m128d)|
+|[_mm_cvtsd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_ss)|SSE2|intrin.h|__m128 _mm_cvtsd_ss ( \_ _m128、 \_ _m128d)|
+|[_mm_cvtsi128_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi128_si32)|SSE2|intrin.h|int _mm_cvtsi128_si32 ( \_ _m128i)|
+|[_mm_cvtsi32_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi32_sd)|SSE2|intrin.h|__m128d _mm_cvtsi32_sd ( \_ _m128d, int)|
 |[_mm_cvtsi32_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi32_si128)|SSE2|intrin.h|__m128i _mm_cvtsi32_si128(int)|
-|[_mm_cvtsi32_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi32_si64)|MMX|mmintrin.h|__m64 _mm_cvtsi32_si64(int) [3]|
-|[_mm_cvtsi64_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi64_si32)|MMX|mmintrin.h|int _mm_cvtsi64_si32 (__m64) [3]|
-|[_mm_cvtss_f32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtss_f32)|SSSE3|intrin.h|フロート_mm_cvtss_f32(_m128)\_|
-|[_mm_cvtss_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtss_sd)|SSE2|intrin.h|__m128d_mm_cvtss_sd(_m128d、_m128)\_ \_|
-|[_mm_cvtt_ps2pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtt_ps2pi)|SSE|intrin.h|__m64_mm_cvtt_ps2pi_m128)\_|
-|[_mm_cvtt_ss2si](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtt_ss2si)|SSE|intrin.h|int _mm_cvtt_ss2si(_m128)\_|
-|[_mm_cvttpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttpd_epi32)|SSE2|intrin.h|__m128i_mm_cvttpd_epi32_m128d)\_|
-|[_mm_cvttpd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttpd_pi32)|SSE2|intrin.h|__m64_mm_cvttpd_pi32(_m128d)\_|
-|[_mm_cvttps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttps_epi32)|SSE2|intrin.h|__m128i_mm_cvttps_epi32(_m128)\_|
-|[_mm_cvttsd_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttsd_si32)|SSE2|intrin.h|int _mm_cvttsd_si32(_m128d)\_|
-|[_mm_div_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_pd)|SSE2|intrin.h|__m128d_mm_div_pd(_m128d、_m128d)\_ \_|
-|[_mm_div_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_ps)|SSE|intrin.h|__m128_mm_div_ps(_m128、_m128)\_ \_|
-|[_mm_div_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_sd)|SSE2|intrin.h|__m128d_mm_div_sd(_m128d、_m128d)\_ \_|
-|[_mm_div_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_ss)|SSE|intrin.h|__m128_mm_div_ss(_m128、_m128)\_ \_|
-|[_mm_dp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_dp_pd)|SSE41|intrin.h|__m128d_mm_dp_pd(_m128d、_m128d、const\_ \_int)|
-|[_mm_dp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_dp_ps)|SSE41|intrin.h|__m128_mm_dp_ps(_m128、_m128、const\_ \_int)|
-|[_mm_empty](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_empty)|MMX|mmintrin.h|ボイド_mm_empty (ボイド) [3]|
-|[_mm_extract_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi16)|SSE2|intrin.h|int _mm_extract_epi16(_m128i、int)\_|
-|[_mm_extract_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi32)|SSE41|intrin.h|int _mm_extract_epi32(_m128i、const\_int)|
-|[_mm_extract_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi8)|SSE41|intrin.h|int _mm_extract_epi8\_( _m128i、 const int)|
-|[_mm_extract_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_ps)|SSE41|intrin.h|int _mm_extract_ps(_m128、const\_int)|
-|[_mm_extract_si64](mm-extract-si64-mm-extracti-si64.md)|SSE4a|intrin.h|__m128i_mm_extract_si64(_m128i、_m128i)\_ \_|
-|[_mm_extracti_si64](mm-extract-si64-mm-extracti-si64.md)|SSE4a|intrin.h|__m128i_mm_extracti_si64(_m128i、int、int)\_|
-|[_mm_fmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_pd)|FMA [2]|immintrin.h|__m128d_mm_fmadd_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_ps)|FMA [2]|immintrin.h|__m128_mm_fmadd_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fmadd_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_sd)|FMA [2]|immintrin.h|__m128d_mm_fmadd_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmadd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_ss)|FMA [2]|immintrin.h|__m128_mm_fmadd_ss(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fmaddsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmaddsub_pd)|FMA [2]|immintrin.h|__m128d_mm_fmaddsub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmaddsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmaddsub_ps)|FMA [2]|immintrin.h|__m128_mm_fmaddsub_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_pd)|FMA [2]|immintrin.h|__m128d_mm_fmsub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_ps)|FMA [2]|immintrin.h|__m128_mm_fmsub_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fmsub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_sd)|FMA [2]|immintrin.h|__m128d_mm_fmsub_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmsub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_ss)|FMA [2]|immintrin.h|__m128_mm_fmsub_ss(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fmsubadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsubadd_pd)|FMA [2]|immintrin.h|__m128d_mm_fmsubadd_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fmsubadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsubadd_ps)|FMA [2]|immintrin.h|__m128_mm_fmsubadd_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fnmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_pd)|FMA [2]|immintrin.h|__m128d_mm_fnmadd_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fnmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_ps)|FMA [2]|immintrin.h|__m128_mm_fnmadd_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fnmadd_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_sd)|FMA [2]|immintrin.h|__m128d_mm_fnmadd_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fnmadd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_ss)|FMA [2]|immintrin.h|__m128_mm_fnmadd_ss(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fnmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_pd)|FMA [2]|immintrin.h|__m128d_mm_fnmsub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ps)|FMA [2]|immintrin.h|__m128_mm_fnmsub_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_fnmsub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_sd)|FMA [2]|immintrin.h|__m128d_mm_fnmsub_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|[_mm_fnmsub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ss)|FMA [2]|immintrin.h|__m128_mm_fnmsub_ss(_m128、_m128、_m128)\_ \_ \_|
-|_mm_frcz_pd|XOP [1]|ammintrin.h|__m128d_mm_frcz_pd(_m128d)\_|
-|_mm_frcz_ps|XOP [1]|ammintrin.h|__m128_mm_frcz_ps(_m128)\_|
-|_mm_frcz_sd|XOP [1]|ammintrin.h|__m128d_mm_frcz_sd(_m128d、_m128d)\_ \_|
-|_mm_frcz_ss|XOP [1]|ammintrin.h|__m128_mm_frcz_ss(_m128、_m128)\_ \_|
+|[_mm_cvtsi32_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi32_si64)|MMX|mmintrin .h|__m64 _mm_cvtsi32_si64 (int) [3]|
+|[_mm_cvtsi64_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi64_si32)|MMX|mmintrin .h|int _mm_cvtsi64_si32 (__m64) [3]|
+|[_mm_cvtss_f32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtss_f32)|SSSE3|intrin.h|float _mm_cvtss_f32 ( \_ _m128)|
+|[_mm_cvtss_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtss_sd)|SSE2|intrin.h|__m128d _mm_cvtss_sd ( \_ _m128d、 \_ _m128)|
+|[_mm_cvtt_ps2pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtt_ps2pi)|SSE|intrin.h|__m64 _mm_cvtt_ps2pi ( \_ _m128)|
+|[_mm_cvtt_ss2si](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtt_ss2si)|SSE|intrin.h|int _mm_cvtt_ss2si ( \_ _m128)|
+|[_mm_cvttpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttpd_epi32)|SSE2|intrin.h|__m128i _mm_cvttpd_epi32 ( \_ _m128d)|
+|[_mm_cvttpd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttpd_pi32)|SSE2|intrin.h|__m64 _mm_cvttpd_pi32 ( \_ _m128d)|
+|[_mm_cvttps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttps_epi32)|SSE2|intrin.h|__m128i _mm_cvttps_epi32 ( \_ _m128)|
+|[_mm_cvttsd_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvttsd_si32)|SSE2|intrin.h|int _mm_cvttsd_si32 ( \_ _m128d)|
+|[_mm_div_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_pd)|SSE2|intrin.h|__m128d _mm_div_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_div_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_ps)|SSE|intrin.h|__m128 _mm_div_ps ( \_ _m128、 \_ _m128)|
+|[_mm_div_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_sd)|SSE2|intrin.h|__m128d _mm_div_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_div_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_div_ss)|SSE|intrin.h|__m128 _mm_div_ss ( \_ _m128、 \_ _m128)|
+|[_mm_dp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_dp_pd)|SSE41|intrin.h|__m128d _mm_dp_pd ( \_ _m128d、 \_ _m128d、const int)|
+|[_mm_dp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_dp_ps)|SSE41|intrin.h|__m128 _mm_dp_ps ( \_ _m128、 \_ _m128、const int)|
+|[_mm_empty](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_empty)|MMX|mmintrin .h|void _mm_empty (void) [3]|
+|[_mm_extract_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi16)|SSE2|intrin.h|int _mm_extract_epi16 ( \_ _m128i, int)|
+|[_mm_extract_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi32)|SSE41|intrin.h|int _mm_extract_epi32 ( \_ _m128i、const int)|
+|[_mm_extract_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_epi8)|SSE41|intrin.h|int _mm_extract_epi8 ( \_ _m128i、const int)|
+|[_mm_extract_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_extract_ps)|SSE41|intrin.h|int _mm_extract_ps ( \_ _m128、const int)|
+|[_mm_extract_si64](mm-extract-si64-mm-extracti-si64.md)|SSE4a|intrin.h|__m128i _mm_extract_si64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_extracti_si64](mm-extract-si64-mm-extracti-si64.md)|SSE4a|intrin.h|__m128i _mm_extracti_si64 ( \_ _m128i、int、int)|
+|[_mm_fmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_pd)|FMA [2]|immintrin.h|__m128d _mm_fmadd_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_ps)|FMA [2]|immintrin.h|__m128 _mm_fmadd_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fmadd_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_sd)|FMA [2]|immintrin.h|__m128d _mm_fmadd_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmadd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmadd_ss)|FMA [2]|immintrin.h|__m128 _mm_fmadd_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fmaddsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmaddsub_pd)|FMA [2]|immintrin.h|__m128d _mm_fmaddsub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmaddsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmaddsub_ps)|FMA [2]|immintrin.h|__m128 _mm_fmaddsub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_pd)|FMA [2]|immintrin.h|__m128d _mm_fmsub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_ps)|FMA [2]|immintrin.h|__m128 _mm_fmsub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fmsub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_sd)|FMA [2]|immintrin.h|__m128d _mm_fmsub_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmsub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsub_ss)|FMA [2]|immintrin.h|__m128 _mm_fmsub_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fmsubadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsubadd_pd)|FMA [2]|immintrin.h|__m128d _mm_fmsubadd_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fmsubadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fmsubadd_ps)|FMA [2]|immintrin.h|__m128 _mm_fmsubadd_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fnmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_pd)|FMA [2]|immintrin.h|__m128d _mm_fnmadd_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fnmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_ps)|FMA [2]|immintrin.h|__m128 _mm_fnmadd_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fnmadd_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_sd)|FMA [2]|immintrin.h|__m128d _mm_fnmadd_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fnmadd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmadd_ss)|FMA [2]|immintrin.h|__m128 _mm_fnmadd_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fnmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_pd)|FMA [2]|immintrin.h|__m128d _mm_fnmsub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ps)|FMA [2]|immintrin.h|__m128 _mm_fnmsub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_fnmsub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_sd)|FMA [2]|immintrin.h|__m128d _mm_fnmsub_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|[_mm_fnmsub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ss)|FMA [2]|immintrin.h|__m128 _mm_fnmsub_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_frcz_pd|XOP [1]|ammintrin.h|__m128d _mm_frcz_pd ( \_ _m128d)|
+|_mm_frcz_ps|XOP [1]|ammintrin.h|__m128 _mm_frcz_ps ( \_ _m128)|
+|_mm_frcz_sd|XOP [1]|ammintrin.h|__m128d _mm_frcz_sd ( \_ _m128d、 \_ _m128d)|
+|_mm_frcz_ss|XOP [1]|ammintrin.h|__m128 _mm_frcz_ss ( \_ _m128、 \_ _m128)|
 |[_mm_getcsr](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_getcsr)|SSE|intrin.h|unsigned int _mm_getcsr(void)|
-|[_mm_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi16)|SSSE3|intrin.h|__m128i_mm_hadd_epi16(_m128i、_m128i)\_ \_|
-|[_mm_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi32)|SSSE3|intrin.h|__m128i_mm_hadd_epi32(_m128i、_m128i)\_ \_|
-|[_mm_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pd)|SSE3|intrin.h|__m128d_mm_hadd_pd(_m128d、_m128d)\_ \_|
-|[_mm_hadd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi16)|SSSE3|intrin.h|__m64_mm_hadd_pi16(_m64、_m64)\_ \_|
-|[_mm_hadd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi32)|SSSE3|intrin.h|__m64_mm_hadd_pi32(_m64、_m64)\_ \_|
-|[_mm_hadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_ps)|SSE3|intrin.h|__m128_mm_hadd_ps(_m128、_m128)\_ \_|
-|_mm_haddd_epi16|XOP [1]|ammintrin.h|__m128i_mm_haddd_epi16(_m128i)\_|
-|_mm_haddd_epi8|XOP [1]|ammintrin.h|__m128i_mm_haddd_epi8(_m128i)\_|
-|_mm_haddd_epu16|XOP [1]|ammintrin.h|__m128i_mm_haddd_epu16(_m128i)\_|
-|_mm_haddd_epu8|XOP [1]|ammintrin.h|__m128i_mm_haddd_epu8(_m128i)\_|
-|_mm_haddq_epi16|XOP [1]|ammintrin.h|__m128i_mm_haddq_epi16(_m128i)\_|
-|_mm_haddq_epi32|XOP [1]|ammintrin.h|__m128i_mm_haddq_epi32(_m128i)\_|
-|_mm_haddq_epi8|XOP [1]|ammintrin.h|__m128i_mm_haddq_epi8(_m128i)\_|
-|_mm_haddq_epu16|XOP [1]|ammintrin.h|__m128i_mm_haddq_epu16(_m128i)\_|
-|_mm_haddq_epu32|XOP [1]|ammintrin.h|__m128i_mm_haddq_epu32(_m128i)\_|
-|_mm_haddq_epu8|XOP [1]|ammintrin.h|__m128i_mm_haddq_epu8(_m128i)\_|
-|[_mm_hadds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_epi16)|SSSE3|intrin.h|__m128i_mm_hadds_epi16(_m128i、_m128i)\_ \_|
-|[_mm_hadds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_pi16)|SSSE3|intrin.h|__m64_mm_hadds_pi16(_m64、_m64)\_ \_|
-|_mm_haddw_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddw_epi8(_m128i)\_|
-|_mm_haddw_epu8|XOP [1]|ammintrin.h|__m128i_mm_haddw_epu8(_m128i)\_|
-|[_mm_hsub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi16)|SSSE3|intrin.h|__m128i_mm_hsub_epi16(_m128i、_m128i)\_ \_|
-|[_mm_hsub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi32)|SSSE3|intrin.h|__m128i_mm_hsub_epi32(_m128i、_m128i)\_ \_|
-|[_mm_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pd)|SSE3|intrin.h|__m128d_mm_hsub_pd(_m128d、_m128d)\_ \_|
-|[_mm_hsub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi16)|SSSE3|intrin.h|__m64_mm_hsub_pi16(_m64、_m64)\_ \_|
-|[_mm_hsub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi32)|SSSE3|intrin.h|__m64_mm_hsub_pi32(_m64、_m64)\_ \_|
-|[_mm_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_ps)|SSE3|intrin.h|__m128_mm_hsub_ps(_m128、_m128)\_ \_|
-|_mm_hsubd_epi16|XOP [1]|ammintrin.h|__m128i_mm_hsubd_epi16(_m128i)\_|
-|_mm_hsubq_epi32|XOP [1]|ammintrin.h|__m128i_mm_hsubq_epi32(_m128i)\_|
-|[_mm_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_epi16)|SSSE3|intrin.h|__m128i_mm_hsubs_epi16(_m128i、_m128i)\_ \_|
-|[_mm_hsubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_pi16)|SSSE3|intrin.h|__m64_mm_hsubs_pi16(_m64、_m64)\_ \_|
-|_mm_hsubw_epi8|XOP [1]|ammintrin.h|__m128i_mm_hsubw_epi8(_m128i)\_|
-|[_mm_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_i32gather_epi32(int \*const \_、_m128i、const int)|
-|[_mm_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_i32gather_epi64(_int64\_コン\*スト\_、_m128i、const int)|
-|[_mm_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i32gather_pd(二\*重\_定数 、_m128i、const int)|
-|[_mm_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_ps)|AVX2 [2]|immintrin.h|__m128_mm_i32gather_ps(浮動小数点数\* \_、_m128i、const int)|
-|[_mm_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi32(int \* \_const 、_m128i、const int)|
-|[_mm_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi64)|AVX2 [2]|immintrin.h|\___m128i_mm_i64gather_epi64(_int64const \* \_、_m128i、const int)|
-|[_mm_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d_mm_i64gather_pd(二重\*定数\_、_m128i、const int)|
-|[_mm_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_ps)|AVX2 [2]|immintrin.h|__m128_mm_i64gather_ps(浮動小数点数\* \_、_m128i、const int)|
-|[_mm_insert_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi16)|SSE2|intrin.h|__m128i_mm_insert_epi16(_m128i、int、int)\_|
-|[_mm_insert_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi32)|SSE41|intrin.h|__m128i_mm_insert_epi32(_m128i、int、const\_int)|
-|[_mm_insert_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi8)|SSE41|intrin.h|__m128i _mm_insert_epi8\_( _m128i, int, const int)|
-|[_mm_insert_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_ps)|SSE41|intrin.h|__m128_mm_insert_ps(_m128、_m128、const\_ \_int)|
-|[_mm_insert_si64](mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i_mm_insert_si64(_m128i、_m128i)\_ \_|
-|[_mm_inserti_si64](mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i_mm_inserti_si64(_m128i、_m128i、int、int)\_ \_|
-|[_mm_lddqu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lddqu_si128)|SSE3|intrin.h|__m128i _mm_lddqu_si128(\_\*_m128i const )|
+|[_mm_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi16)|SSSE3|intrin.h|__m128i _mm_hadd_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi32)|SSSE3|intrin.h|__m128i _mm_hadd_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pd)|SSE3|intrin.h|__m128d _mm_hadd_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_hadd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi16)|SSSE3|intrin.h|__m64 _mm_hadd_pi16 ( \_ _m64、 \_ _m64)|
+|[_mm_hadd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi32)|SSSE3|intrin.h|__m64 _mm_hadd_pi32 ( \_ _m64、 \_ _m64)|
+|[_mm_hadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_ps)|SSE3|intrin.h|__m128 _mm_hadd_ps ( \_ _m128、 \_ _m128)|
+|_mm_haddd_epi16|XOP [1]|ammintrin.h|__m128i _mm_haddd_epi16 ( \_ _m128i)|
+|_mm_haddd_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddd_epi8 ( \_ _m128i)|
+|_mm_haddd_epu16|XOP [1]|ammintrin.h|__m128i _mm_haddd_epu16 ( \_ _m128i)|
+|_mm_haddd_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddd_epu8 ( \_ _m128i)|
+|_mm_haddq_epi16|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi16 ( \_ _m128i)|
+|_mm_haddq_epi32|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi32 ( \_ _m128i)|
+|_mm_haddq_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi8 ( \_ _m128i)|
+|_mm_haddq_epu16|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu16 ( \_ _m128i)|
+|_mm_haddq_epu32|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu32 ( \_ _m128i)|
+|_mm_haddq_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu8 ( \_ _m128i)|
+|[_mm_hadds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_epi16)|SSSE3|intrin.h|__m128i _mm_hadds_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hadds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_pi16)|SSSE3|intrin.h|__m64 _mm_hadds_pi16 ( \_ _m64、 \_ _m64)|
+|_mm_haddw_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddw_epi8 ( \_ _m128i)|
+|_mm_haddw_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddw_epu8 ( \_ _m128i)|
+|[_mm_hsub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi16)|SSSE3|intrin.h|__m128i _mm_hsub_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hsub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi32)|SSSE3|intrin.h|__m128i _mm_hsub_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pd)|SSE3|intrin.h|__m128d _mm_hsub_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_hsub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi16)|SSSE3|intrin.h|__m64 _mm_hsub_pi16 ( \_ _m64、 \_ _m64)|
+|[_mm_hsub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi32)|SSSE3|intrin.h|__m64 _mm_hsub_pi32 ( \_ _m64、 \_ _m64)|
+|[_mm_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_ps)|SSE3|intrin.h|__m128 _mm_hsub_ps ( \_ _m128、 \_ _m128)|
+|_mm_hsubd_epi16|XOP [1]|ammintrin.h|__m128i _mm_hsubd_epi16 ( \_ _m128i)|
+|_mm_hsubq_epi32|XOP [1]|ammintrin.h|__m128i _mm_hsubq_epi32 ( \_ _m128i)|
+|[_mm_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_epi16)|SSSE3|intrin.h|__m128i _mm_hsubs_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_hsubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_pi16)|SSSE3|intrin.h|__m64 _mm_hsubs_pi16 ( \_ _m64、 \_ _m64)|
+|_mm_hsubw_epi8|XOP [1]|ammintrin.h|__m128i _mm_hsubw_epi8 ( \_ _m128i)|
+|[_mm_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi32 (int const \* 、 \_ _m128i、const int)|
+|[_mm_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi64 ( \_ _int64 const \* 、 \_ _m128i、const int)|
+|[_mm_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i32gather_pd (二重 const \* 、 \_ _m128i、const int)|
+|[_mm_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i32gather_ps (float const \* 、 \_ _m128i、const int)|
+|[_mm_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi32 (int const \* 、 \_ _m128i、const int)|
+|[_mm_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi64 ( \_ _int64 const \* 、 \_ _m128i、const int)|
+|[_mm_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i64gather_pd (二重 const \* 、 \_ _m128i、const int)|
+|[_mm_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i64gather_ps (float const \* 、 \_ _m128i、const int)|
+|[_mm_insert_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi16)|SSE2|intrin.h|__m128i _mm_insert_epi16 ( \_ _m128i、int、int)|
+|[_mm_insert_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi32)|SSE41|intrin.h|__m128i _mm_insert_epi32 ( \_ _m128i、int、const int)|
+|[_mm_insert_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi8)|SSE41|intrin.h|__m128i _mm_insert_epi8 ( \_ _m128i、int、const int)|
+|[_mm_insert_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_ps)|SSE41|intrin.h|__m128 _mm_insert_ps ( \_ _m128、 \_ _m128、const int)|
+|[_mm_insert_si64](mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i _mm_insert_si64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_inserti_si64](mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i _mm_inserti_si64 ( \_ _m128i、 \_ _m128i、int、int)|
+|[_mm_lddqu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lddqu_si128)|SSE3|intrin.h|__m128i _mm_lddqu_si128 ( \_ _m128i const \* )|
 |[_mm_lfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lfence)|SSE2|intrin.h|void _mm_lfence(void)|
-|[_mm_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_pd)|SSE2|intrin.h|__m128d _mm_load_pd(\*ダブル)|
-|[_mm_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps)|SSE|intrin.h|__m128_mm_load_ps(フロー\*ト)|
-|[_mm_load_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps1)|SSE|intrin.h|__m128_mm_load_ps1(フロー\*ト)|
-|[_mm_load_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_sd)|SSE2|intrin.h|__m128d_mm_load_sd(ダブル\*)|
-|[_mm_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_si128)|SSE2|intrin.h|__m128i\__mm_load_si128(\*_m128i )|
-|[_mm_load_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ss)|SSE|intrin.h|__m128_mm_load_ss(フロー\*ト)|
-|[_mm_load1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load1_pd)|SSE2|intrin.h|__m128d_mm_load1_pd(ダブル\*)|
-|[_mm_loaddup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loaddup_pd)|SSE3|intrin.h|__m128d _mm_loaddup_pd(二\*重定数)|
-|[_mm_loadh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pd)|SSE2|intrin.h|__m128d_mm_loadh_pd(_m128d、\_ダブル\*)|
-|[_mm_loadh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pi)|SSE|intrin.h|__m128_mm_loadh_pi(_m128、_m64)\_ \_\*|
-|[_mm_loadl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_epi64)|SSE2|intrin.h|\*__m128i_mm_loadl_epi64_m128i)\_|
-|[_mm_loadl_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pd)|SSE2|intrin.h|__m128d_mm_loadl_pd(_m128d、\_ダブル\*)|
-|[_mm_loadl_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pi)|SSE|intrin.h|__m128_mm_loadl_pi(_m128、_m64)\_ \_\*|
-|[_mm_loadr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_pd)|SSE2|intrin.h|__m128d _mm_loadr_pd(\*ダブル)|
-|[_mm_loadr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_ps)|SSE|intrin.h|__m128_mm_loadr_ps(フロー\*ト)|
-|[_mm_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_pd)|SSE2|intrin.h|__m128d_mm_loadu_pd(ダブル\*)|
-|[_mm_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_ps)|SSE|intrin.h|__m128_mm_loadu_ps(フロー\*ト)|
-|[_mm_loadu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_si128)|SSE2|intrin.h|__m128i\__mm_loadu_si128(\*_m128i )|
-|_mm_macc_epi16|XOP [1]|ammintrin.h|__m128i_mm_macc_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_macc_epi32|XOP [1]|ammintrin.h|__m128i_mm_macc_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_macc_pd|FMA4 [1]|ammintrin.h|__m128d_mm_macc_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_macc_ps|FMA4 [1]|ammintrin.h|__m128_mm_macc_ps(_m128、_m128、_m128)\_ \_ \_|
-|_mm_macc_sd|FMA4 [1]|ammintrin.h|__m128d_mm_macc_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_macc_ss|FMA4 [1]|ammintrin.h|__m128_mm_macc_ss(_m128、_m128、_m128)\_ \_ \_|
-|_mm_maccd_epi16|XOP [1]|ammintrin.h|__m128i_mm_maccd_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_macchi_epi32|XOP [1]|ammintrin.h|__m128i_mm_macchi_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_macclo_epi32|XOP [1]|ammintrin.h|__m128i_mm_macclo_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maccs_epi16|XOP [1]|ammintrin.h|__m128i_mm_maccs_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maccs_epi32|XOP [1]|ammintrin.h|__m128i_mm_maccs_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maccsd_epi16|XOP [1]|ammintrin.h|__m128i_mm_maccsd_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maccshi_epi32|XOP [1]|ammintrin.h|__m128i_mm_maccshi_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maccslo_epi32|XOP [1]|ammintrin.h|__m128i_mm_maccslo_epi32(_m128i、_m128i、_m128i)\_ \_ \_|
-|[_mm_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_madd_epi16)|SSE2|intrin.h|__m128i_mm_madd_epi16(_m128i、_m128i)\_ \_|
-|[_mm_madd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_madd_pi16)|MMX|mmintrin.h|__m64_mm_madd_pi16(_m64、_m64)\_ \_[3]|
-|_mm_maddd_epi16|XOP [1]|ammintrin.h|__m128i_mm_maddd_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maddsd_epi16|XOP [1]|ammintrin.h|__m128i_mm_maddsd_epi16(_m128i、_m128i、_m128i)\_ \_ \_|
-|_mm_maddsub_pd|FMA4 [1]|ammintrin.h|__m128d_mm_maddsub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_maddsub_ps|FMA4 [1]|ammintrin.h|__m128_mm_maddsub_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_epi16)|SSSE3|intrin.h|__m128i_mm_maddubs_epi16(_m128i、_m128i)\_ \_|
-|[_mm_maddubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_pi16)|SSSE3|intrin.h|__m64_mm_maddubs_pi16(_m64、_m64)\_ \_|
-|[_mm_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_mask_i32gather_epi32(_m128i、_m128i、_m128i、_m128i、const\_ \* \_ \_int)|
-|[_mm_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_mask_i32gather_epi64(_m128i、_int64\_\_コン\*スト\_、_m128i、_m128i、const \_int)|
-|[_mm_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d_mm_mask_i32gather_pd(_m128d、\_二重\*定数\_、_m128i、_m128d、const \_int)|
-|[_mm_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m128_mm_mask_i32gather_ps(_m128、\_フロート\*コン\_スト、_m128i、_m128、const \_int)|
-|[_mm_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_mask_i64gather_epi32(_m128i、int\_ \*const \_、_m128i、_m128i、const \_int)|
-|[_mm_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_mask_i64gather_epi64(_m128i、_int64const \*\_ \_ \_、_m128i、_m128i、const \_int)|
-|[_mm_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d_mm_mask_i64gather_pd(_m128d、\_二重\*定数\_、_m128i、_m128d、const \_int)|
-|[_mm_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128_mm_mask_i64gather_ps(_m128、\_フロート\*コン\_スト、_m128i、_m128、const \_int)|
-|[_mm_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_maskload_epi32(イント・\*コン\_スト、_m128i)|
-|[_mm_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi64)|AVX2 [2]|immintrin.h|\___m128i_mm_maskload_epi64(_int64const \* \_、_m128i)|
-|[_mm_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_pd)|AVX [2]|immintrin.h|__m128d_mm_maskload_pd(二重\*定数\_、_m128i)|
-|[_mm_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_ps)|AVX [2]|immintrin.h|__m128_mm_maskload_ps(フロート\*コン\_スト 、_m128i)|
-|[_mm_maskmoveu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskmoveu_si128)|SSE2|intrin.h|ボイド_mm_maskmoveu_si128(_m128i、_m128i、\_\_文字\*)|
-|[_mm_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi32)|AVX2 [2]|immintrin.h|ボイド_mm_maskstore_epi32(int \* \_, \__m128i, _m128i)|
-|[_mm_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi64)|AVX2 [2]|immintrin.h|ボイド_mm_maskstore_epi64(_int64、_m128i、_m128i)\_ \* \_ \_|
-|[_mm_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_pd)|AVX [2]|immintrin.h|void _mm_maskstore_pd(\*ダブル\_、_m128i、_m128d) \_|
-|[_mm_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_ps)|AVX [2]|immintrin.h|ボイド_mm_maskstore_ps(フロー\*ト\_、_m128i、_m128) \_|
-|[_mm_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi16)|SSE2|intrin.h|__m128i_mm_max_epi16(_m128i、_m128i)\_ \_|
-|[_mm_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi32)|SSE41|intrin.h|__m128i_mm_max_epi32(_m128i、_m128i)\_ \_|
-|[_mm_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi8)|SSE41|intrin.h|__m128i_mm_max_epi8(_m128i、_m128i)\_ \_|
-|[_mm_max_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu16)|SSE41|intrin.h|__m128i_mm_max_epu16(_m128i、_m128i)\_ \_|
-|[_mm_max_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu32)|SSE41|intrin.h|__m128i_mm_max_epu32(_m128i、_m128i)\_ \_|
-|[_mm_max_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu8)|SSE2|intrin.h|__m128i_mm_max_epu8(_m128i、_m128i)\_ \_|
-|[_mm_max_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_pd)|SSE2|intrin.h|__m128d_mm_max_pd(_m128d、_m128d)\_ \_|
-|[_mm_max_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_ps)|SSE|intrin.h|__m128_mm_max_ps(_m128、_m128)\_ \_|
-|[_mm_max_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_sd)|SSE2|intrin.h|__m128d_mm_max_sd(_m128d、_m128d)\_ \_|
-|[_mm_max_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_ss)|SSE|intrin.h|__m128_mm_max_ss(_m128、_m128)\_ \_|
+|[_mm_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_pd)|SSE2|intrin.h|__m128d _mm_load_pd (double \* )|
+|[_mm_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps)|SSE|intrin.h|__m128 _mm_load_ps (float \* )|
+|[_mm_load_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps1)|SSE|intrin.h|__m128 _mm_load_ps1 (float \* )|
+|[_mm_load_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_sd)|SSE2|intrin.h|__m128d _mm_load_sd (double \* )|
+|[_mm_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_si128)|SSE2|intrin.h|__m128i _mm_load_si128 ( \_ _m128i \* )|
+|[_mm_load_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ss)|SSE|intrin.h|__m128 _mm_load_ss (float \* )|
+|[_mm_load1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load1_pd)|SSE2|intrin.h|__m128d _mm_load1_pd (double \* )|
+|[_mm_loaddup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loaddup_pd)|SSE3|intrin.h|__m128d _mm_loaddup_pd (二重 const \* )|
+|[_mm_loadh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pd)|SSE2|intrin.h|__m128d _mm_loadh_pd ( \_ _m128d、double \* )|
+|[_mm_loadh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pi)|SSE|intrin.h|__m128 _mm_loadh_pi ( \_ _m128、 \_ _m64 \* )|
+|[_mm_loadl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_epi64)|SSE2|intrin.h|__m128i _mm_loadl_epi64 ( \_ _m128i \* )|
+|[_mm_loadl_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pd)|SSE2|intrin.h|__m128d _mm_loadl_pd ( \_ _m128d、double \* )|
+|[_mm_loadl_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pi)|SSE|intrin.h|__m128 _mm_loadl_pi ( \_ _m128、 \_ _m64 \* )|
+|[_mm_loadr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_pd)|SSE2|intrin.h|__m128d _mm_loadr_pd (double \* )|
+|[_mm_loadr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_ps)|SSE|intrin.h|__m128 _mm_loadr_ps (float \* )|
+|[_mm_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_pd)|SSE2|intrin.h|__m128d _mm_loadu_pd (double \* )|
+|[_mm_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_ps)|SSE|intrin.h|__m128 _mm_loadu_ps (float \* )|
+|[_mm_loadu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_si128)|SSE2|intrin.h|__m128i _mm_loadu_si128 ( \_ _m128i \* )|
+|_mm_macc_epi16|XOP [1]|ammintrin.h|__m128i _mm_macc_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_macc_epi32|XOP [1]|ammintrin.h|__m128i _mm_macc_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_macc_pd|FMA4 [1]|ammintrin.h|__m128d _mm_macc_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_macc_ps|FMA4 [1]|ammintrin.h|__m128 _mm_macc_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_macc_sd|FMA4 [1]|ammintrin.h|__m128d _mm_macc_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_macc_ss|FMA4 [1]|ammintrin.h|__m128 _mm_macc_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_maccd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccd_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_macchi_epi32|XOP [1]|ammintrin.h|__m128i _mm_macchi_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_macclo_epi32|XOP [1]|ammintrin.h|__m128i _mm_macclo_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maccs_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccs_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maccs_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccs_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maccsd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccsd_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maccshi_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccshi_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maccslo_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccslo_epi32 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|[_mm_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_madd_epi16)|SSE2|intrin.h|__m128i _mm_madd_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_madd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_madd_pi16)|MMX|mmintrin .h|__m64 _mm_madd_pi16 ( \_ _m64、 \_ _m64) [3]|
+|_mm_maddd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maddd_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maddsd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maddsd_epi16 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|_mm_maddsub_pd|FMA4 [1]|ammintrin.h|__m128d _mm_maddsub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_maddsub_ps|FMA4 [1]|ammintrin.h|__m128 _mm_maddsub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_epi16)|SSSE3|intrin.h|__m128i _mm_maddubs_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_maddubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_pi16)|SSSE3|intrin.h|__m64 _mm_maddubs_pi16 ( \_ _m64、 \_ _m64)|
+|[_mm_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi32 ( \_ _m128i、int const \* 、 \_ _m128i、 \_ _m128i、const int)|
+|[_mm_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi64 ( \_ _m128i、 \_ _int64 const \* 、 \_ _m128i、 \_ _m128i、const int)|
+|[_mm_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i32gather_pd ( \_ _m128d、二重 const \* 、 \_ _m128i、 \_ _m128d、const int)|
+|[_mm_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i32gather_ps ( \_ _m128、float const \* 、 \_ _m128i、 \_ _m128、const int)|
+|[_mm_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi32 ( \_ _m128i、int const \* 、 \_ _m128i、 \_ _m128i、const int)|
+|[_mm_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi64 ( \_ _m128i、 \_ _int64 const \* 、 \_ _m128i、 \_ _m128i、const int)|
+|[_mm_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i64gather_pd ( \_ _m128d、二重 const \* 、 \_ _m128i、 \_ _m128d、const int)|
+|[_mm_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i64gather_ps ( \_ _m128、float const \* 、 \_ _m128i、 \_ _m128、const int)|
+|[_mm_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi32 (int const \* 、 \_ _m128i)|
+|[_mm_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi64 ( \_ _int64 const \* 、 \_ _m128i)|
+|[_mm_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_pd)|AVX [2]|immintrin.h|__m128d _mm_maskload_pd (二重 const \* 、 \_ _m128i)|
+|[_mm_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_ps)|AVX [2]|immintrin.h|__m128 _mm_maskload_ps (float const \* 、 \_ _m128i)|
+|[_mm_maskmoveu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskmoveu_si128)|SSE2|intrin.h|void _mm_maskmoveu_si128 ( \_ _m128i、 \_ _m128i、char \* )|
+|[_mm_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi32 (int \* , \_ _m128i, \_ _m128i)|
+|[_mm_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi64 ( \_ _int64 \* 、 \_ _m128i、 \_ _m128i)|
+|[_mm_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_pd)|AVX [2]|immintrin.h|void _mm_maskstore_pd (double \* 、 \_ _m128i、 \_ _m128d)|
+|[_mm_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_ps)|AVX [2]|immintrin.h|void _mm_maskstore_ps (float \* 、 \_ _m128i、 \_ _m128)|
+|[_mm_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi16)|SSE2|intrin.h|__m128i _mm_max_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi32)|SSE41|intrin.h|__m128i _mm_max_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi8)|SSE41|intrin.h|__m128i _mm_max_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu16)|SSE41|intrin.h|__m128i _mm_max_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu32)|SSE41|intrin.h|__m128i _mm_max_epu32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epu8)|SSE2|intrin.h|__m128i _mm_max_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_max_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_pd)|SSE2|intrin.h|__m128d _mm_max_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_max_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_ps)|SSE|intrin.h|__m128 _mm_max_ps ( \_ _m128、 \_ _m128)|
+|[_mm_max_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_sd)|SSE2|intrin.h|__m128d _mm_max_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_max_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_ss)|SSE|intrin.h|__m128 _mm_max_ss ( \_ _m128、 \_ _m128)|
 |[_mm_mfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mfence)|SSE2|intrin.h|void _mm_mfence(void)|
-|[_mm_min_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi16)|SSE2|intrin.h|__m128i_mm_min_epi16(_m128i、_m128i)\_ \_|
-|[_mm_min_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi32)|SSE41|intrin.h|__m128i_mm_min_epi32(_m128i、_m128i)\_ \_|
-|[_mm_min_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi8)|SSE41|intrin.h|__m128i_mm_min_epi8(_m128i、_m128i)\_ \_|
-|[_mm_min_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu16)|SSE41|intrin.h|__m128i_mm_min_epu16(_m128i、_m128i)\_ \_|
-|[_mm_min_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu32)|SSE41|intrin.h|__m128i_mm_min_epu32(_m128i、_m128i)\_ \_|
-|[_mm_min_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu8)|SSE2|intrin.h|__m128i_mm_min_epu8(_m128i、_m128i)\_ \_|
-|[_mm_min_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_pd)|SSE2|intrin.h|__m128d_mm_min_pd(_m128d、_m128d)\_ \_|
-|[_mm_min_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_ps)|SSE|intrin.h|__m128_mm_min_ps(_m128、_m128)\_ \_|
-|[_mm_min_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_sd)|SSE2|intrin.h|__m128d_mm_min_sd(_m128d、_m128d)\_ \_|
-|[_mm_min_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_ss)|SSE|intrin.h|__m128_mm_min_ss(_m128、_m128)\_ \_|
-|[_mm_minpos_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_minpos_epu16)|SSE41|intrin.h|__m128i_mm_minpos_epu16(_m128i)\_|
-|[_mm_monitor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_monitor)|SSE3|intrin.h|void _mm_monitor (void const*、 符号なし int、符号なし int)|
-|[_mm_move_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_epi64)|SSE2|intrin.h|__m128i_mm_move_epi64(_m128i)\_|
-|[_mm_move_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_sd)|SSE2|intrin.h|__m128d_mm_move_sd(_m128d、_m128d)\_ \_|
-|[_mm_move_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_ss)|SSE|intrin.h|__m128_mm_move_ss(_m128、_m128)\_ \_|
-|[_mm_movedup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movedup_pd)|SSE3|intrin.h|__m128d_mm_movedup_pd(_m128d)\_|
-|[_mm_movehdup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movehdup_ps)|SSE3|intrin.h|__m128_mm_movehdup_ps(\__m128)|
-|[_mm_movehl_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movehl_ps)|SSE|intrin.h|__m128_mm_movehl_ps(_m128、_m128)\_ \_|
-|[_mm_moveldup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_moveldup_ps)|SSE3|intrin.h|__m128_mm_moveldup_ps_m128)\_|
-|[_mm_movelh_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movelh_ps)|SSE|intrin.h|__m128_mm_movelh_ps(_m128、_m128)\_ \_|
-|[_mm_movemask_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_epi8)|SSE2|intrin.h|int _mm_movemask_epi8(\__m128i)|
-|[_mm_movemask_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_pd)|SSE2|intrin.h|int _mm_movemask_pd(\__m128d)|
-|[_mm_movemask_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_ps)|SSE|intrin.h|int _mm_movemask_ps(_m128)\_|
-|[_mm_movepi64_pi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movepi64_pi64)|SSE2|intrin.h|__m64_mm_movepi64_pi64(_m128i)\_|
-|[_mm_movpi64_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movpi64_epi64)|SSE2|intrin.h|__m128i_mm_movpi64_epi64(_m64)\_|
-|[_mm_mpsadbw_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mpsadbw_epu8)|SSE41|intrin.h|__m128i_mm_mpsadbw_epu8(_m128i、_m128i、const\_ \_int)|
-|_mm_msub_pd|FMA4 [1]|ammintrin.h|__m128d_mm_msub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_msub_ps|FMA4 [1]|ammintrin.h|__m128_mm_msub_ps(_m128、_m128、_m128)\_ \_ \_|
-|_mm_msub_sd|FMA4 [1]|ammintrin.h|__m128d_mm_msub_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_msub_ss|FMA4 [1]|ammintrin.h|__m128_mm_msub_ss(_m128、_m128、_m128)\_ \_ \_|
-|_mm_msubadd_pd|FMA4 [1]|ammintrin.h|__m128d_mm_msubadd_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_msubadd_ps|FMA4 [1]|ammintrin.h|__m128_mm_msubadd_ps(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_mul_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_epi32)|SSE41|intrin.h|__m128i_mm_mul_epi32(_m128i、_m128i)\_ \_|
-|[_mm_mul_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_epu32)|SSE2|intrin.h|__m128i_mm_mul_epu32(_m128i、_m128i)\_ \_|
-|[_mm_mul_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_pd)|SSE2|intrin.h|__m128d_mm_mul_pd(_m128d、_m128d)\_ \_|
-|[_mm_mul_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ps)|SSE|intrin.h|__m128_mm_mul_ps(_m128、_m128)\_ \_|
-|[_mm_mul_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_sd)|SSE2|intrin.h|__m128d_mm_mul_sd(_m128d、_m128d)\_ \_|
-|[_mm_mul_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ss)|SSE|intrin.h|__m128_mm_mul_ss(_m128、_m128)\_ \_|
-|[_mm_mul_su32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_su32)|SSE2|intrin.h|__m64_mm_mul_su32(_m64、_m64)\_ \_|
-|[_mm_mulhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epi16)|SSE2|intrin.h|__m128i_mm_mulhi_epi16(_m128i、_m128i)\_ \_|
-|[_mm_mulhi_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epu16)|SSE2|intrin.h|__m128i_mm_mulhi_epu16(_m128i、_m128i)\_ \_|
-|[_mm_mulhi_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_pi16)|MMX|mmintrin.h|__m64_mm_mulhi_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_mulhrs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_epi16)|SSSE3|intrin.h|__m128i_mm_mulhrs_epi16(_m128i、_m128i)\_ \_|
-|[_mm_mulhrs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_pi16)|SSSE3|intrin.h|__m64_mm_mulhrs_pi16(_m64、_m64)\_ \_|
-|[_mm_mullo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi16)|SSE2|intrin.h|__m128i_mm_mullo_epi16(_m128i、_m128i)\_ \_|
-|[_mm_mullo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi32)|SSE41|intrin.h|__m128i_mm_mullo_epi32(_m128i、_m128i)\_ \_|
-|[_mm_mullo_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_pi16)|MMX|mmintrin.h|__m64_mm_mullo_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_mwait](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mwait)|SSE3|intrin.h|void _mm_mwait (符号なし、符号なし int)|
-|_mm_nmacc_pd|FMA4 [1]|ammintrin.h|__m128d_mm_nmacc_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_nmacc_ps|FMA4 [1]|ammintrin.h|__m128_mm_nmacc_ps(_m128、_m128、_m128)\_ \_ \_|
-|_mm_nmacc_sd|FMA4 [1]|ammintrin.h|__m128d_mm_nmacc_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_nmacc_ss|FMA4 [1]|ammintrin.h|__m128_mm_nmacc_ss(_m128、_m128、_m128)\_ \_ \_|
-|_mm_nmsub_pd|FMA4 [1]|ammintrin.h|__m128d_mm_nmsub_pd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_nmsub_ps|FMA4 [1]|ammintrin.h|__m128_mm_nmsub_ps(_m128、_m128、_m128)\_ \_ \_|
-|_mm_nmsub_sd|FMA4 [1]|ammintrin.h|__m128d_mm_nmsub_sd(_m128d、_m128d、_m128d)\_ \_ \_|
-|_mm_nmsub_ss|FMA4 [1]|ammintrin.h|__m128_mm_nmsub_ss(_m128、_m128、_m128)\_ \_ \_|
-|[_mm_or_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_pd)|SSE2|intrin.h|__m128d_mm_or_pd(_m128d、_m128d)\_ \_|
-|[_mm_or_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_ps)|SSE|intrin.h|__m128_mm_or_ps(_m128、_m128)\_ \_|
-|[_mm_or_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_si64)|MMX|mmintrin.h|__m64_mm_or_si64(_m64、_m64)\_ \_[3]|
-|[_mm_or_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_si128)|SSE2|intrin.h|__m128i_mm_or_si128(_m128i、_m128i)\_ \_|
-|[_mm_packs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_epi16)|SSE2|intrin.h|__m128i_mm_packs_epi16(_m128i、_m128i)\_ \_|
-|[_mm_packs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_epi32)|SSE2|intrin.h|__m128i_mm_packs_epi32(_m128i、_m128i)\_ \_|
-|[_mm_packs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pi16)|MMX|mmintrin.h|__m64_mm_packs_pi16 (__m64、__m64) [3]|
-|[_mm_packs_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pi32)|MMX|mmintrin.h|__m64_mm_packs_pi32 (__m64、__m64) [3]|
-|[_mm_packs_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pu16)|MMX|mmintrin.h|__m64_mm_packs_pu16 (__m64、__m64) [3]|
-|[_mm_packus_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi16)|SSE2|intrin.h|__m128i_mm_packus_epi16(_m128i、_m128i)\_ \_|
-|[_mm_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi32)|SSE41|intrin.h|__m128i_mm_packus_epi32(_m128i、_m128i)\_ \_|
+|[_mm_min_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi16)|SSE2|intrin.h|__m128i _mm_min_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi32)|SSE41|intrin.h|__m128i _mm_min_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epi8)|SSE41|intrin.h|__m128i _mm_min_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu16)|SSE41|intrin.h|__m128i _mm_min_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu32)|SSE41|intrin.h|__m128i _mm_min_epu32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_epu8)|SSE2|intrin.h|__m128i _mm_min_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_min_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_pd)|SSE2|intrin.h|__m128d _mm_min_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_min_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_ps)|SSE|intrin.h|__m128 _mm_min_ps ( \_ _m128、 \_ _m128)|
+|[_mm_min_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_sd)|SSE2|intrin.h|__m128d _mm_min_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_min_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_ss)|SSE|intrin.h|__m128 _mm_min_ss ( \_ _m128、 \_ _m128)|
+|[_mm_minpos_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_minpos_epu16)|SSE41|intrin.h|__m128i _mm_minpos_epu16 ( \_ _m128i)|
+|[_mm_monitor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_monitor)|SSE3|intrin.h|void _mm_monitor (void const *、unsigned int、unsigned int)|
+|[_mm_move_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_epi64)|SSE2|intrin.h|__m128i _mm_move_epi64 ( \_ _m128i)|
+|[_mm_move_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_sd)|SSE2|intrin.h|__m128d _mm_move_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_move_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_ss)|SSE|intrin.h|__m128 _mm_move_ss ( \_ _m128、 \_ _m128)|
+|[_mm_movedup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movedup_pd)|SSE3|intrin.h|__m128d _mm_movedup_pd ( \_ _m128d)|
+|[_mm_movehdup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movehdup_ps)|SSE3|intrin.h|__m128 _mm_movehdup_ps ( \_ _m128)|
+|[_mm_movehl_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movehl_ps)|SSE|intrin.h|__m128 _mm_movehl_ps ( \_ _m128、 \_ _m128)|
+|[_mm_moveldup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_moveldup_ps)|SSE3|intrin.h|__m128 _mm_moveldup_ps ( \_ _m128)|
+|[_mm_movelh_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movelh_ps)|SSE|intrin.h|__m128 _mm_movelh_ps ( \_ _m128、 \_ _m128)|
+|[_mm_movemask_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_epi8)|SSE2|intrin.h|int _mm_movemask_epi8 ( \_ _m128i)|
+|[_mm_movemask_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_pd)|SSE2|intrin.h|int _mm_movemask_pd ( \_ _m128d)|
+|[_mm_movemask_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movemask_ps)|SSE|intrin.h|int _mm_movemask_ps ( \_ _m128)|
+|[_mm_movepi64_pi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movepi64_pi64)|SSE2|intrin.h|__m64 _mm_movepi64_pi64 ( \_ _m128i)|
+|[_mm_movpi64_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movpi64_epi64)|SSE2|intrin.h|__m128i _mm_movpi64_epi64 ( \_ _m64)|
+|[_mm_mpsadbw_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mpsadbw_epu8)|SSE41|intrin.h|__m128i _mm_mpsadbw_epu8 ( \_ _m128i、 \_ _m128i、const int)|
+|_mm_msub_pd|FMA4 [1]|ammintrin.h|__m128d _mm_msub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_msub_ps|FMA4 [1]|ammintrin.h|__m128 _mm_msub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_msub_sd|FMA4 [1]|ammintrin.h|__m128d _mm_msub_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_msub_ss|FMA4 [1]|ammintrin.h|__m128 _mm_msub_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_msubadd_pd|FMA4 [1]|ammintrin.h|__m128d _mm_msubadd_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_msubadd_ps|FMA4 [1]|ammintrin.h|__m128 _mm_msubadd_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_mul_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_epi32)|SSE41|intrin.h|__m128i _mm_mul_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mul_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_epu32)|SSE2|intrin.h|__m128i _mm_mul_epu32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mul_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_pd)|SSE2|intrin.h|__m128d _mm_mul_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_mul_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ps)|SSE|intrin.h|__m128 _mm_mul_ps ( \_ _m128、 \_ _m128)|
+|[_mm_mul_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_sd)|SSE2|intrin.h|__m128d _mm_mul_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_mul_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ss)|SSE|intrin.h|__m128 _mm_mul_ss ( \_ _m128、 \_ _m128)|
+|[_mm_mul_su32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_su32)|SSE2|intrin.h|__m64 _mm_mul_su32 ( \_ _m64、 \_ _m64)|
+|[_mm_mulhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epi16)|SSE2|intrin.h|__m128i _mm_mulhi_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mulhi_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epu16)|SSE2|intrin.h|__m128i _mm_mulhi_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mulhi_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_pi16)|MMX|mmintrin .h|__m64 _mm_mulhi_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_mulhrs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_epi16)|SSSE3|intrin.h|__m128i _mm_mulhrs_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mulhrs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_pi16)|SSSE3|intrin.h|__m64 _mm_mulhrs_pi16 ( \_ _m64、 \_ _m64)|
+|[_mm_mullo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi16)|SSE2|intrin.h|__m128i _mm_mullo_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mullo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi32)|SSE41|intrin.h|__m128i _mm_mullo_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_mullo_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_pi16)|MMX|mmintrin .h|__m64 _mm_mullo_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_mwait](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mwait)|SSE3|intrin.h|void _mm_mwait (符号なし整数、符号なし int)|
+|_mm_nmacc_pd|FMA4 [1]|ammintrin.h|__m128d _mm_nmacc_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_nmacc_ps|FMA4 [1]|ammintrin.h|__m128 _mm_nmacc_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_nmacc_sd|FMA4 [1]|ammintrin.h|__m128d _mm_nmacc_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_nmacc_ss|FMA4 [1]|ammintrin.h|__m128 _mm_nmacc_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_nmsub_pd|FMA4 [1]|ammintrin.h|__m128d _mm_nmsub_pd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_nmsub_ps|FMA4 [1]|ammintrin.h|__m128 _mm_nmsub_ps ( \_ _m128、 \_ _m128、 \_ _m128)|
+|_mm_nmsub_sd|FMA4 [1]|ammintrin.h|__m128d _mm_nmsub_sd ( \_ _m128d、 \_ _m128d、 \_ _m128d)|
+|_mm_nmsub_ss|FMA4 [1]|ammintrin.h|__m128 _mm_nmsub_ss ( \_ _m128、 \_ _m128、 \_ _m128)|
+|[_mm_or_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_pd)|SSE2|intrin.h|__m128d _mm_or_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_or_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_ps)|SSE|intrin.h|__m128 _mm_or_ps ( \_ _m128、 \_ _m128)|
+|[_mm_or_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_si64)|MMX|mmintrin .h|__m64 _mm_or_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_or_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_or_si128)|SSE2|intrin.h|__m128i _mm_or_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_packs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_epi16)|SSE2|intrin.h|__m128i _mm_packs_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_packs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_epi32)|SSE2|intrin.h|__m128i _mm_packs_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_packs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pi16)|MMX|mmintrin .h|__m64 _mm_packs_pi16 (__m64、__m64) [3]|
+|[_mm_packs_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pi32)|MMX|mmintrin .h|__m64 _mm_packs_pi32 (__m64、__m64) [3]|
+|[_mm_packs_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packs_pu16)|MMX|mmintrin .h|__m64 _mm_packs_pu16 (__m64、__m64) [3]|
+|[_mm_packus_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi16)|SSE2|intrin.h|__m128i _mm_packus_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi32)|SSE41|intrin.h|__m128i _mm_packus_epi32 ( \_ _m128i、 \_ _m128i)|
 |[_mm_pause](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_pause)|SSE2|intrin.h|void _mm_pause(void)|
-|_mm_perm_epi8|XOP [1]|ammintrin.h|__m128i_mm_perm_epi8(_m128i、_m128i、_m128i)\_ \_ \_|
-|[_mm_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_pd)|AVX [2]|immintrin.h|__m128d_mm_permute_pd(_m128d、int)\_|
-|[_mm_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_ps)|AVX [2]|immintrin.h|__m128_mm_permute_ps(_m128、int)\_|
-|_mm_permute2_pd|XOP [1]|ammintrin.h|__m128d_mm_permute2_pd(_m128d、_m128d、_m128i、int)\_ \_ \_|
-|_mm_permute2_ps|XOP [1]|ammintrin.h|__m128_mm_permute2_ps(_m128、_m128、_m128i、int)\_ \_ \_|
-|[_mm_permutevar_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_pd)|AVX [2]|immintrin.h|__m128d_mm_permutevar_pd(_m128d、_m128i)\_ \_|
-|[_mm_permutevar_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_ps)|AVX [2]|immintrin.h|__m128_mm_permutevar_ps(_m128、_m128i)\_ \_|
+|_mm_perm_epi8|XOP [1]|ammintrin.h|__m128i _mm_perm_epi8 ( \_ _m128i、 \_ _m128i、 \_ _m128i)|
+|[_mm_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_pd)|AVX [2]|immintrin.h|__m128d _mm_permute_pd ( \_ _m128d, int)|
+|[_mm_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_ps)|AVX [2]|immintrin.h|__m128 _mm_permute_ps ( \_ _m128, int)|
+|_mm_permute2_pd|XOP [1]|ammintrin.h|__m128d _mm_permute2_pd ( \_ _m128d、 \_ _m128d、 \_ _m128i、int)|
+|_mm_permute2_ps|XOP [1]|ammintrin.h|__m128 _mm_permute2_ps ( \_ _m128、 \_ _m128、 \_ _m128i、int)|
+|[_mm_permutevar_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_pd)|AVX [2]|immintrin.h|__m128d _mm_permutevar_pd ( \_ _m128d、 \_ _m128i)|
+|[_mm_permutevar_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_ps)|AVX [2]|immintrin.h|__m128 _mm_permutevar_ps ( \_ _m128、 \_ _m128i)|
 |[_mm_popcnt_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_popcnt_u32)|POPCNT|intrin.h|int _mm_popcnt_u32(unsigned int)|
-|[_mm_prefetch](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_prefetch)|SSE|intrin.h|ボイド _mm_prefetch(char*, int)|
-|[_mm_rcp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ps)|SSE|intrin.h|__m128_mm_rcp_ps(_m128)\_|
-|[_mm_rcp_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ss)|SSE|intrin.h|__m128_mm_rcp_ss(_m128)\_|
-|_mm_rot_epi16|XOP [1]|ammintrin.h|__m128i_mm_rot_epi16(_m128i、_m128i)\_ \_|
-|_mm_rot_epi32|XOP [1]|ammintrin.h|__m128i_mm_rot_epi32(_m128i、_m128i)\_ \_|
-|_mm_rot_epi64|XOP [1]|ammintrin.h|__m128i_mm_rot_epi64(_m128i、_m128i)\_ \_|
-|_mm_rot_epi8|XOP [1]|ammintrin.h|__m128i_mm_rot_epi8(_m128i、_m128i)\_ \_|
-|_mm_roti_epi16|XOP [1]|ammintrin.h|__m128i_mm_rot_epi16(_m128i、int)\_|
-|_mm_roti_epi32|XOP [1]|ammintrin.h|__m128i_mm_rot_epi32(_m128i、int)\_|
-|_mm_roti_epi64|XOP [1]|ammintrin.h|__m128i_mm_rot_epi64(_m128i、int)\_|
-|_mm_roti_epi8|XOP [1]|ammintrin.h|__m128i_mm_rot_epi8(_m128i、int)\_|
-|[_mm_round_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_pd)|SSE41|intrin.h|__m128d_mm_round_pd(_m128d、const\_int)|
-|[_mm_round_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_ps)|SSE41|intrin.h|__m128_mm_round_ps(_m128、const\_int)|
-|[_mm_round_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_sd)|SSE41|intrin.h|__m128d_mm_round_sd(_m128d、_m128d、const\_ \_int)|
-|[_mm_round_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_ss)|SSE41|intrin.h|__m128_mm_round_ss(_m128、_m128、const\_ \_int)|
-|[_mm_rsqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rsqrt_ps)|SSE|intrin.h|__m128_mm_rsqrt_ps(_m128)\_|
-|[_mm_rsqrt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rsqrt_ss)|SSE|intrin.h|__m128_mm_rsqrt_ss(_m128)\_|
-|[_mm_sad_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sad_epu8)|SSE2|intrin.h|__m128i_mm_sad_epu8(_m128i、_m128i)\_ \_|
-|[_mm_set_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi16)|SSE2|intrin.h|__m128i_mm_set_epi16(短い、短い、短い、短い、短い、短い、短い)|
-|[_mm_set_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi32)|SSE2|intrin.h|__m128i_mm_set_epi32(int、int、int、int)|
-|[_mm_set_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi64)|SSE2|intrin.h|__m128i_mm_set_epi64(_m64、_m64)\_ \_|
-|[_mm_set_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi8)|SSE2|intrin.h|__m128i _mm_set_epi8(char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
-|[_mm_set_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pd)|SSE2|intrin.h|__m128d _mm_set_pd(ダブル、ダブル)|
-|[_mm_set_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi16)|MMX|intrin.h|__m64_mm_set_pi16(短い、短い、短い、短い)|
-|[_mm_set_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi32)|MMX|intrin.h|__m64_mm_set_pi32(int,int)|
-|[_mm_set_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi8)|MMX|intrin.h|__m64_mm_set_pi8(char、char、char、char、char、char、char、char)|
-|[_mm_set_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_ps)|SSE|intrin.h|__m128_mm_set_ps(フロート、フロート、フロート、フロート)|
+|[_mm_prefetch](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_prefetch)|SSE|intrin.h|void _mm_prefetch (char *, int)|
+|[_mm_rcp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ps)|SSE|intrin.h|__m128 _mm_rcp_ps ( \_ _m128)|
+|[_mm_rcp_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ss)|SSE|intrin.h|__m128 _mm_rcp_ss ( \_ _m128)|
+|_mm_rot_epi16|XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 ( \_ _m128i、 \_ _m128i)|
+|_mm_rot_epi32|XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 ( \_ _m128i、 \_ _m128i)|
+|_mm_rot_epi64|XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 ( \_ _m128i、 \_ _m128i)|
+|_mm_rot_epi8|XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 ( \_ _m128i、 \_ _m128i)|
+|_mm_roti_epi16|XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 ( \_ _m128i, int)|
+|_mm_roti_epi32|XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 ( \_ _m128i, int)|
+|_mm_roti_epi64|XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 ( \_ _m128i, int)|
+|_mm_roti_epi8|XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 ( \_ _m128i, int)|
+|[_mm_round_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_pd)|SSE41|intrin.h|__m128d _mm_round_pd ( \_ _m128d、const int)|
+|[_mm_round_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_ps)|SSE41|intrin.h|__m128 _mm_round_ps ( \_ _m128、const int)|
+|[_mm_round_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_sd)|SSE41|intrin.h|__m128d _mm_round_sd ( \_ _m128d、 \_ _m128d、const int)|
+|[_mm_round_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_ss)|SSE41|intrin.h|__m128 _mm_round_ss ( \_ _m128、 \_ _m128、const int)|
+|[_mm_rsqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rsqrt_ps)|SSE|intrin.h|__m128 _mm_rsqrt_ps ( \_ _m128)|
+|[_mm_rsqrt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rsqrt_ss)|SSE|intrin.h|__m128 _mm_rsqrt_ss ( \_ _m128)|
+|[_mm_sad_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sad_epu8)|SSE2|intrin.h|__m128i _mm_sad_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_set_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi16)|SSE2|intrin.h|__m128i _mm_set_epi16 (short、short、short、short、short、short、short、short)|
+|[_mm_set_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi32)|SSE2|intrin.h|__m128i _mm_set_epi32 (int, int, int, int)|
+|[_mm_set_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi64)|SSE2|intrin.h|__m128i _mm_set_epi64 ( \_ _m64、 \_ _m64)|
+|[_mm_set_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi8)|SSE2|intrin.h|__m128i _mm_set_epi8 (char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
+|[_mm_set_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pd)|SSE2|intrin.h|__m128d _mm_set_pd (double、double)|
+|[_mm_set_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi16)|MMX|intrin.h|__m64 _mm_set_pi16 (short、short、short、short)|
+|[_mm_set_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi32)|MMX|intrin.h|__m64 _mm_set_pi32 (int, int)|
+|[_mm_set_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi8)|MMX|intrin.h|__m64 _mm_set_pi8 (char、char、char、char、char、char、char、char)|
+|[_mm_set_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_ps)|SSE|intrin.h|__m128 _mm_set_ps (float、float、float、float)|
 |[_mm_set_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_ps1)|SSE|intrin.h|__m128 _mm_set_ps1(float)|
 |[_mm_set_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_sd)|SSE2|intrin.h|__m128d _mm_set_sd(double)|
 |[_mm_set_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_ss)|SSE|intrin.h|__m128 _mm_set_ss(float)|
 |[_mm_set1_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi16)|SSE2|intrin.h|__m128i _mm_set1_epi16(short)|
 |[_mm_set1_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi32)|SSE2|intrin.h|__m128i _mm_set1_epi32(int)|
-|[_mm_set1_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi64)|SSE2|intrin.h|__m128i_mm_set1_epi64(_m64)\_|
+|[_mm_set1_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi64)|SSE2|intrin.h|__m128i _mm_set1_epi64 ( \_ _m64)|
 |[_mm_set1_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi8)|SSE2|intrin.h|__m128i _mm_set1_epi8(char)|
 |[_mm_set1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pd)|SSE2|intrin.h|__m128d _mm_set1_pd(double)|
 |[_mm_set1_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pi16)|MMX|intrin.h|__m64 _mm_set1_pi16(short)|
 |[_mm_set1_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pi32)|MMX|intrin.h|__m64 _mm_set1_pi32(int)|
 |[_mm_set1_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pi8)|MMX|intrin.h|__m64 _mm_set1_pi8(char)|
 |[_mm_setcsr](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setcsr)|SSE|intrin.h|void _mm_setcsr(unsigned int)|
-|_mm_setl_epi64|SSE2|intrin.h|__m128i_mm_setl_epi64(_m128i)\_|
-|[_mm_setr_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi16)|SSE2|intrin.h|__m128i_mm_setr_epi16(短い、短い、短い、短い、短い、短い、短い)|
-|[_mm_setr_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi32)|SSE2|intrin.h|__m128i_mm_setr_epi32(int、int、int、int)|
-|[_mm_setr_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi64)|SSE2|intrin.h|__m128i_mm_setr_epi64(_m64、_m64)\_ \_|
-|[_mm_setr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi8)|SSE2|intrin.h|__m128i _mm_setr_epi8(char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
-|[_mm_setr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pd)|SSE2|intrin.h|__m128d_mm_setr_pd(ダブル、ダブル)|
-|[_mm_setr_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi16)|MMX|intrin.h|__m64_mm_setr_pi16(短い、短い、短い、短い)|
-|[_mm_setr_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi32)|MMX|intrin.h|__m64_mm_setr_pi32(int,int)|
-|[_mm_setr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi8)|MMX|intrin.h|__m64_mm_setr_pi8(char、char、char、char、char、char、char、char、char)|
-|[_mm_setr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_ps)|SSE|intrin.h|__m128_mm_setr_ps(フロート、フロート、フロート、フロート)|
+|_mm_setl_epi64|SSE2|intrin.h|__m128i _mm_setl_epi64 ( \_ _m128i)|
+|[_mm_setr_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi16)|SSE2|intrin.h|__m128i _mm_setr_epi16 (short、short、short、short、short、short、short、short)|
+|[_mm_setr_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi32)|SSE2|intrin.h|__m128i _mm_setr_epi32 (int, int, int, int)|
+|[_mm_setr_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi64)|SSE2|intrin.h|__m128i _mm_setr_epi64 ( \_ _m64、 \_ _m64)|
+|[_mm_setr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi8)|SSE2|intrin.h|__m128i _mm_setr_epi8 (char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
+|[_mm_setr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pd)|SSE2|intrin.h|__m128d _mm_setr_pd (double、double)|
+|[_mm_setr_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi16)|MMX|intrin.h|__m64 _mm_setr_pi16 (short、short、short、short)|
+|[_mm_setr_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi32)|MMX|intrin.h|__m64 _mm_setr_pi32 (int, int)|
+|[_mm_setr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi8)|MMX|intrin.h|__m64 _mm_setr_pi8 (char、char、char、char、char、char、char、char)|
+|[_mm_setr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_ps)|SSE|intrin.h|__m128 _mm_setr_ps (float、float、float、float)|
 |[_mm_setzero_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_pd)|SSE2|intrin.h|__m128d _mm_setzero_pd(void)|
 |[_mm_setzero_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_ps)|SSE|intrin.h|__m128 _mm_setzero_ps(void)|
 |[_mm_setzero_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_si128)|SSE2|intrin.h|__m128i _mm_setzero_si128(void)|
 |[_mm_setzero_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_si64)|MMX|intrin.h|__m64 _mm_setzero_si64(void)|
 |[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)|SSE|intrin.h|void _mm_sfence(void)|
-|_mm_sha_epi16|XOP [1]|ammintrin.h|__m128i_mm_sha_epi16(_m128i、_m128i)\_ \_|
-|_mm_sha_epi32|XOP [1]|ammintrin.h|__m128i_mm_sha_epi32(_m128i、_m128i)\_ \_|
-|_mm_sha_epi64|XOP [1]|ammintrin.h|__m128i_mm_sha_epi64(_m128i、_m128i)\_ \_|
-|_mm_sha_epi8|XOP [1]|ammintrin.h|__m128i_mm_sha_epi8(_m128i、_m128i)\_ \_|
-|_mm_shl_epi16|XOP [1]|ammintrin.h|__m128i_mm_shl_epi16(_m128i、_m128i)\_ \_|
-|_mm_shl_epi32|XOP [1]|ammintrin.h|__m128i_mm_shl_epi32(_m128i、_m128i)\_ \_|
-|_mm_shl_epi64|XOP [1]|ammintrin.h|__m128i_mm_shl_epi64(_m128i、_m128i)\_ \_|
-|_mm_shl_epi8|XOP [1]|ammintrin.h|__m128i_mm_shl_epi8(_m128i、_m128i)\_ \_|
-|[_mm_shuffle_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi32)|SSE2|intrin.h|__m128i_mm_shuffle_epi32(_m128i、int)\_|
-|[_mm_shuffle_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi8)|SSSE3|intrin.h|__m128i_mm_shuffle_epi8(_m128i、_m128i)\_ \_|
-|[_mm_shuffle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pd)|SSE2|intrin.h|__m128d_mm_shuffle_pd(_m128d、_m128d、int)\_ \_|
-|[_mm_shuffle_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pi8)|SSSE3|intrin.h|__m64_mm_shuffle_pi8(_m64、_m64)\_ \_|
-|[_mm_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_ps)|SSE|intrin.h|__m128_mm_shuffle_ps(_m128、_m128、\_\_未署名整数)|
-|[_mm_shufflehi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflehi_epi16)|SSE2|intrin.h|__m128i_mm_shufflehi_epi16(_m128i、int)\_|
-|[_mm_shufflelo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflelo_epi16)|SSE2|intrin.h|__m128i_mm_shufflelo_epi16(_m128i、int)\_|
-|[_mm_sign_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi16)|SSSE3|intrin.h|__m128i_mm_sign_epi16(_m128i、_m128i)\_ \_|
-|[_mm_sign_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi32)|SSSE3|intrin.h|__m128i_mm_sign_epi32(_m128i、_m128i)\_ \_|
-|[_mm_sign_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi8)|SSSE3|intrin.h|__m128i_mm_sign_epi8(_m128i、_m128i)\_ \_|
-|[_mm_sign_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi16)|SSSE3|intrin.h|__m64_mm_sign_pi16(_m64、_m64)\_ \_|
-|[_mm_sign_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi32)|SSSE3|intrin.h|__m64_mm_sign_pi32(_m64、_m64)\_ \_|
-|[_mm_sign_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi8)|SSSE3|intrin.h|__m64_mm_sign_pi8(_m64、_m64)\_ \_|
-|[_mm_sll_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi16)|SSE2|intrin.h|__m128i_mm_sll_epi16(_m128i、_m128i)\_ \_|
-|[_mm_sll_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi32)|SSE2|intrin.h|__m128i_mm_sll_epi32(_m128i、_m128i)\_ \_|
-|[_mm_sll_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi64)|SSE2|intrin.h|__m128i_mm_sll_epi64(_m128i、_m128i)\_ \_|
-|[_mm_sll_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_pi16)|MMX|mmintrin.h|__m64_mm_sll_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_sll_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_pi32)|MMX|mmintrin.h|__m64_mm_sll_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_sll_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_si64)|MMX|mmintrin.h|__m64_mm_sll_si64(_m64、_m64)\_ \_[3]|
-|[_mm_slli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi16)|SSE2|intrin.h|__m128i_mm_slli_epi16(_m128i、int)\_|
-|[_mm_slli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi32)|SSE2|intrin.h|__m128i_mm_slli_epi32(_m128i、int)\_|
-|[_mm_slli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi64)|SSE2|intrin.h|__m128i_mm_slli_epi64(_m128i、int)\_|
-|[_mm_slli_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_pi16)|MMX|mmintrin.h|__m64_mm_slli_pi16(_m64、int)\_[3]|
-|[_mm_slli_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_pi32)|MMX|mmintrin.h|__m64_mm_slli_pi32(_m64、int)\_[3]|
-|[_mm_slli_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_si64)|MMX|mmintrin.h|__m64_mm_slli_si64(_m64、int)\_[3]|
-|[_mm_slli_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_si128)|SSE2|intrin.h|__m128i_mm_slli_si128(_m128i、int)\_|
-|[_mm_sllv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sllv_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_sllv_epi32(_m128i、_m128i)\_ \_|
-|[_mm_sllv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sllv_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_sllv_epi64(_m128i、_m128i)\_ \_|
-|[_mm_sqrt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_pd)|SSE2|intrin.h|__m128d_mm_sqrt_pd(_m128d)\_|
-|[_mm_sqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_ps)|SSE|intrin.h|__m128 _mm_sqrt_ps(\__m128)|
-|[_mm_sqrt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_sd)|SSE2|intrin.h|__m128d_mm_sqrt_sd(_m128d、_m128d)\_ \_|
-|[_mm_sqrt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_ss)|SSE|intrin.h|__m128 _mm_sqrt_ss(_m128)\_|
-|[_mm_sra_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_epi16)|SSE2|intrin.h|__m128i_mm_sra_epi16(_m128i、_m128i)\_ \_|
-|[_mm_sra_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_epi32)|SSE2|intrin.h|__m128i_mm_sra_epi32(_m128i、_m128i)\_ \_|
-|[_mm_sra_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_pi16)|MMX|mmintrin.h|__m64_mm_sra_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_sra_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_pi32)|MMX|mmintrin.h|__m64_mm_sra_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_srai_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_epi16)|SSE2|intrin.h|__m128i_mm_srai_epi16(_m128i、int)\_|
-|[_mm_srai_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_epi32)|SSE2|intrin.h|__m128i_mm_srai_epi32(_m128i、int)\_|
-|[_mm_srai_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_pi16)|MMX|mmintrin.h|__m64 _mm_srai_pi16(_m64、int)\_[3]|
-|[_mm_srai_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_pi32)|MMX|mmintrin.h|__m64_mm_srai_pi32(_m64、int)\_[3]|
-|[_mm_srav_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srav_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_srav_epi32(_m128i、_m128i)\_ \_|
-|[_mm_srl_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi16)|SSE2|intrin.h|__m128i_mm_srl_epi16(_m128i、_m128i)\_ \_|
-|[_mm_srl_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi32)|SSE2|intrin.h|__m128i_mm_srl_epi32(_m128i、_m128i)\_ \_|
-|[_mm_srl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi64)|SSE2|intrin.h|__m128i_mm_srl_epi64(_m128i、_m128i)\_ \_|
-|[_mm_srl_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_pi16)|MMX|mmintrin.h|__m64_mm_srl_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_srl_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_pi32)|MMX|mmintrin.h|__m64_mm_srl_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_srl_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_si64)|MMX|mmintrin.h|__m64_mm_srl_si64(_m64、_m64)\_ \_[3]|
-|[_mm_srli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi16)|SSE2|intrin.h|__m128i_mm_srli_epi16(_m128i、int)\_|
-|[_mm_srli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi32)|SSE2|intrin.h|__m128i_mm_srli_epi32(_m128i、int)\_|
-|[_mm_srli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi64)|SSE2|intrin.h|__m128i_mm_srli_epi64(_m128i、int)\_|
-|[_mm_srli_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_pi16)|MMX|mmintrin.h|__m64_mm_srli_pi16(_m64、int)\_[3]|
-|[_mm_srli_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_pi32)|MMX|mmintrin.h|__m64_mm_srli_pi32(_m64、int)\_[3]|
-|[_mm_srli_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_si64)|MMX|mmintrin.h|__m64_mm_srli_si64(_m64、int)\_[3]|
-|[_mm_srli_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_si128)|SSE2|intrin.h|__m128i_mm_srli_si128(_m128i、int)\_|
-|[_mm_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi32)|AVX2 [2]|immintrin.h|__m128i_mm_srlv_epi32(_m128i、_m128i)\_ \_|
-|[_mm_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi64)|AVX2 [2]|immintrin.h|__m128i_mm_srlv_epi64(_m128i、_m128i)\_ \_|
-|[_mm_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_pd)|SSE2|intrin.h|ボイド_mm_store_pd(ダブル\* \_、_m128d)|
-|[_mm_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps)|SSE|intrin.h|ボイド_mm_store_ps(フロー\*ト\_、_m128)|
-|[_mm_store_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps1)|SSE|intrin.h|ボイド_mm_store_ps1(フロー\*ト\_、_m128)|
-|[_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)|SSE2|intrin.h|ボイド_mm_store_sd(ダブル\* \_、_m128d)|
-|[_mm_store_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_si128)|SSE2|intrin.h|ボイド_mm_store_si128(_m128i、_m128i)\_\* \_|
-|[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)|SSE|intrin.h|ボイド_mm_store_ss(フロー\*ト\_、_m128)|
-|[_mm_store1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store1_pd)|SSE2|intrin.h|ボイド _mm_store1_pd(\*ダブル\_、 _m128d)|
-|[_mm_storeh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pd)|SSE2|intrin.h|ボイド_mm_storeh_pd(ダブル\* \_, _m128d)|
-|[_mm_storeh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pi)|SSE|intrin.h|ボイド_mm_storeh_pi(_m64、_m128)\_\* \_|
-|[_mm_storel_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_epi64)|SSE2|intrin.h|ボイド_mm_storel_epi64(\_\*_m128i \_, _m128i)|
-|[_mm_storel_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pd)|SSE2|intrin.h|ボイド_mm_storel_pd(ダブル\* \_、_m128d)|
-|[_mm_storel_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pi)|SSE|intrin.h|ボイド_mm_storel_pi(_m64、_m128)\_\* \_|
-|[_mm_storer_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_pd)|SSE2|intrin.h|ボイド_mm_storer_pd(ダブル\* \_、_m128d)|
-|[_mm_storer_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_ps)|SSE|intrin.h|ボイド_mm_storer_ps(フロー\*ト\_、_m128)|
-|[_mm_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_pd)|SSE2|intrin.h|ボイド_mm_storeu_pd(ダブル\* \_、 _m128d)|
-|[_mm_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_ps)|SSE|intrin.h|ボイド_mm_storeu_ps(フロー\*ト\_、_m128)|
-|[_mm_storeu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_si128)|SSE2|intrin.h|ボイド_mm_storeu_si128(_m128i、_m128i)\_\* \_|
-|[_mm_stream_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_load_si128)|SSE41|intrin.h|__m128i\__mm_stream_load_si128(\*_m128i )|
-|[_mm_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pd)|SSE2|intrin.h|ボイド_mm_stream_pd(ダブル\* \_、_m128d)|
-|[_mm_stream_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pi)|SSE|intrin.h|ボイド_mm_stream_pi(_m64、_m64)\_\* \_|
-|[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)|SSE|intrin.h|ボイド_mm_stream_ps(フロー\*ト\_、_m128)|
-|[_mm_stream_sd](mm-stream-sd.md)|SSE4a|intrin.h|ボイド_mm_stream_sd(ダブル\* \_,_m128d)|
-|[_mm_stream_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si128)|SSE2|intrin.h|ボイド_mm_stream_si128(_m128i、_m128i)\_\* \_|
-|[_mm_stream_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si32)|SSE2|intrin.h|ボイド_mm_stream_si32(int\*, int)|
-|[_mm_stream_ss](mm-stream-ss.md)|SSE4a|intrin.h|ボイド_mm_stream_ss(フロー\*ト\_、_m128)|
-|[_mm_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi16)|SSE2|intrin.h|__m128i_mm_sub_epi16(_m128i、_m128i)\_ \_|
-|[_mm_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi32)|SSE2|intrin.h|__m128i_mm_sub_epi32(_m128i、_m128i)\_ \_|
-|[_mm_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi64)|SSE2|intrin.h|__m128i_mm_sub_epi64(_m128i、_m128i)\_ \_|
-|[_mm_sub_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi8)|SSE2|intrin.h|__m128i_mm_sub_epi8(_m128i、_m128i)\_ \_|
-|[_mm_sub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pd)|SSE2|intrin.h|__m128d_mm_sub_pd(_m128d、_m128d)\_ \_|
-|[_mm_sub_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi8)|MMX|mmintrin.h|__m64_mm_sub_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_sub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi16)|MMX|mmintrin.h|__m64_mm_sub_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_sub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi32)|MMX|mmintrin.h|__m64_mm_sub_pi32(_m64、_m64)\_ \_[3]|
-|[_mm_sub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ps)|SSE|intrin.h|__m128_mm_sub_ps(_m128、_m128)\_ \_|
-|[_mm_sub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_sd)|SSE2|intrin.h|__m128d_mm_sub_sd(_m128d、_m128d)\_ \_|
-|[_mm_sub_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_si64)|SSE2|intrin.h|__m64_mm_sub_si64(_m64、_m64)\_ \_|
-|[_mm_sub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ss)|SSE|intrin.h|__m128_mm_sub_ss(_m128、_m128)\_ \_|
-|[_mm_subs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi16)|SSE2|intrin.h|__m128i_mm_subs_epi16(_m128i、_m128i)\_ \_|
-|[_mm_subs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi8)|SSE2|intrin.h|__m128i_mm_subs_epi8(_m128i、_m128i)\_ \_|
-|[_mm_subs_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epu16)|SSE2|intrin.h|__m128i_mm_subs_epu16(_m128i、_m128i)\_ \_|
-|[_mm_subs_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epu8)|SSE2|intrin.h|__m128i_mm_subs_epu8(_m128i、_m128i)\_ \_|
-|[_mm_subs_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pi8)|MMX|mmintrin.h|__m64_mm_subs_pi8(_m64、_m64)\_ \_[3]|
-|[_mm_subs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pi16)|MMX|mmintrin.h|__m64_mm_subs_pi16(_m64、_m64)\_ \_[3]|
-|[_mm_subs_pu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pu8)|MMX|mmintrin.h|__m64_mm_subs_pu8(_m64、_m64)\_ \_[3]|
-|[_mm_subs_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pu16)|MMX|mmintrin.h|__m64_mm_subs_pu16(_m64、_m64)\_ \_[3]|
-|[_mm_testc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_pd)|AVX [2]|immintrin.h|int _mm_testc_pd(_m128d、_m128d)\_ \_|
-|[_mm_testc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_ps)|AVX [2]|immintrin.h|int _mm_testc_ps(_m128、_m128)\_ \_|
-|[_mm_testc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_si128)|SSE41|intrin.h|int _mm_testc_si128(_m128i、_m128i)\_ \_|
-|[_mm_testnzc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_pd)|AVX [2]|immintrin.h|int _mm_testnzc_pd(_m128d、_m128d)\_ \_|
-|[_mm_testnzc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_ps)|AVX [2]|immintrin.h|int _mm_testnzc_ps(_m128、_m128)\_ \_|
-|[_mm_testnzc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_si128)|SSE41|intrin.h|int _mm_testnzc_si128(_m128i、_m128i)\_ \_|
-|[_mm_testz_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_pd)|AVX [2]|immintrin.h|int _mm_testz_pd(_m128d、_m128d)\_ \_|
-|[_mm_testz_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_ps)|AVX [2]|immintrin.h|int _mm_testz_ps(_m128、_m128)\_ \_|
-|[_mm_testz_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_si128)|SSE41|intrin.h|int _mm_testz_si128(_m128i、_m128i)\_ \_|
-|[_mm_ucomieq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomieq_sd)|SSE2|intrin.h|int _mm_ucomieq_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomieq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomieq_ss)|SSE|intrin.h|int _mm_ucomieq_ss(_m128、_m128)\_ \_|
-|[_mm_ucomige_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomige_sd)|SSE2|intrin.h|int _mm_ucomige_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomige_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomige_ss)|SSE|intrin.h|int _mm_ucomige_ss(_m128、_m128)\_ \_|
-|[_mm_ucomigt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomigt_sd)|SSE2|intrin.h|int _mm_ucomigt_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomigt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomigt_ss)|SSE|intrin.h|int _mm_ucomigt_ss(_m128、_m128)\_ \_|
-|[_mm_ucomile_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomile_sd)|SSE2|intrin.h|int _mm_ucomile_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomile_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomile_ss)|SSE|intrin.h|int _mm_ucomile_ss(_m128、_m128)\_ \_|
-|[_mm_ucomilt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomilt_sd)|SSE2|intrin.h|int _mm_ucomilt_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomilt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomilt_ss)|SSE|intrin.h|int _mm_ucomilt_ss(_m128、_m128)\_ \_|
-|[_mm_ucomineq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomineq_sd)|SSE2|intrin.h|int _mm_ucomineq_sd(_m128d、_m128d)\_ \_|
-|[_mm_ucomineq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomineq_ss)|SSE|intrin.h|int _mm_ucomineq_ss(_m128、_m128)\_ \_|
-|[_mm_unpackhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi16)|SSE2|intrin.h|__m128i_mm_unpackhi_epi16(_m128i、_m128i)\_ \_|
-|[_mm_unpackhi_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi32)|SSE2|intrin.h|__m128i_mm_unpackhi_epi32(_m128i、_m128i)\_ \_|
-|[_mm_unpackhi_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi64)|SSE2|intrin.h|__m128i_mm_unpackhi_epi64(_m128i、_m128i)\_ \_|
-|[_mm_unpackhi_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi8)|SSE2|intrin.h|__m128i_mm_unpackhi_epi8(_m128i、_m128i)\_ \_|
-|[_mm_unpackhi_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pd)|SSE2|intrin.h|__m128d_mm_unpackhi_pd(_m128d、_m128d)\_ \_|
-|[_mm_unpackhi_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi8)|MMX|mmintrin.h|__m64 _mm_unpackhi_pi8 (__m64、__m64) [3]|
-|[_mm_unpackhi_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi16)|MMX|mmintrin.h|__m64_mm_unpackhi_pi16 (__m64、__m64) [3]|
-|[_mm_unpackhi_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi32)|MMX|mmintrin.h|__m64_mm_unpackhi_pi32 (__m64、__m64) [3]|
-|[_mm_unpackhi_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_ps)|SSE|intrin.h|__m128_mm_unpackhi_ps(_m128、_m128)\_ \_|
-|[_mm_unpacklo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi16)|SSE2|intrin.h|__m128i_mm_unpacklo_epi16(_m128i、_m128i)\_ \_|
-|[_mm_unpacklo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi32)|SSE2|intrin.h|__m128i_mm_unpacklo_epi32(_m128i、_m128i)\_ \_|
-|[_mm_unpacklo_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi64)|SSE2|intrin.h|__m128i_mm_unpacklo_epi64(_m128i、_m128i)\_ \_|
-|[_mm_unpacklo_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi8)|SSE2|intrin.h|__m128i_mm_unpacklo_epi8(_m128i、_m128i)\_ \_|
-|[_mm_unpacklo_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pd)|SSE2|intrin.h|__m128d_mm_unpacklo_pd(_m128d、_m128d)\_ \_|
-|[_mm_unpacklo_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi8)|MMX|mmintrin.h|__m64_mm_unpacklo_pi8 (__m64、__m64) [3]|
-|[_mm_unpacklo_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi16)|MMX|mmintrin.h|__m64_mm_unpacklo_pi16 (__m64、__m64) [3]|
-|[_mm_unpacklo_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi32)|MMX|mmintrin.h|__m64_mm_unpacklo_pi32 (__m64、__m64) [3]|
-|[_mm_unpacklo_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_ps)|SSE|intrin.h|__m128_mm_unpacklo_ps(_m128、_m128)\_ \_|
-|[_mm_xor_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_pd)|SSE2|intrin.h|__m128d_mm_xor_pd(_m128d、_m128d)\_ \_|
-|[_mm_xor_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_ps)|SSE|intrin.h|__m128_mm_xor_ps(_m128、_m128)\_ \_|
-|[_mm_xor_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_si64)|MMX|mmintrin.h|__m64_mm_xor_si64(_m64、_m64)\_ \_[3]|
-|[_mm_xor_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_si128)|SSE2|intrin.h|__m128i_mm_xor_si128(_m128i、_m128i)\_ \_|
-|[_mm256_abs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_abs_epi16(_m256i)\_|
-|[_mm256_abs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_abs_epi32(_m256i)\_|
-|[_mm256_abs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_abs_epi8(_m256i)\_|
-|[_mm256_add_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_add_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_add_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_add_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_add_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_add_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_add_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_add_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_add_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_pd)|AVX [2]|immintrin.h|__m256d_mm256_add_pd(_m256d、_m256d)\_ \_|
-|[_mm256_add_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_ps)|AVX [2]|immintrin.h|__m256_mm256_add_ps(_m256、_m256)\_ \_|
-|[_mm256_adds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_adds_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_adds_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_adds_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_adds_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_adds_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_adds_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_adds_epu8(_m256i、_m256i)\_ \_|
-|[_mm256_addsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_addsub_pd)|AVX [2]|immintrin.h|__m256d_mm256_addsub_pd(_m256d、_m256d)\_ \_|
-|[_mm256_addsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_addsub_ps)|AVX [2]|immintrin.h|__m256_mm256_addsub_ps(_m256、_m256)\_ \_|
-|[_mm256_alignr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_alignr_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_alignr_epi8(_m256i、_m256i、const\_ \_int)|
-|[_mm256_and_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_pd)|AVX [2]|immintrin.h|__m256d_mm256_and_pd(_m256d、_m256d)\_ \_|
-|[_mm256_and_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_ps)|AVX [2]|immintrin.h|__m256_mm256_and_ps(_m256、_m256)\_ \_|
-|[_mm256_and_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_and_si256(_m256i、_m256i)\_ \_|
-|[_mm256_andnot_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_pd)|AVX [2]|immintrin.h|__m256d_mm256_andnot_pd(_m256d、_m256d)\_ \_|
-|[_mm256_andnot_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_ps)|AVX [2]|immintrin.h|__m256_mm256_andnot_ps(_m256、_m256)\_ \_|
-|[_mm256_andnot_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_andnot_si256(_m256i、_m256i)\_ \_|
-|[_mm256_avg_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_avg_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_avg_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_avg_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_avg_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_avg_epu8(_m256i、_m256i)\_ \_|
-|[_mm256_blend_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_blend_epi16(_m256i、_m256i、const\_ \_int)|
-|[_mm256_blend_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_blend_epi32(_m256i、_m256i、const\_ \_int)|
-|[_mm256_blend_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_pd)|AVX [2]|immintrin.h|__m256d_mm256_blend_pd(_m256d、_m256d、const\_ \_int)|
-|[_mm256_blend_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_ps)|AVX [2]|immintrin.h|__m256_mm256_blend_ps(_m256、_m256、const\_ \_int)|
-|[_mm256_blendv_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_blendv_epi8(_m256i、_m256i、_m256i)\_ \_ \_|
-|[_mm256_blendv_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_pd)|AVX [2]|immintrin.h|__m256d_mm256_blendv_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_blendv_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_ps)|AVX [2]|immintrin.h|__m256_mm256_blendv_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_broadcast_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_pd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_pd(\_ \*_m128d const )|
-|[_mm256_broadcast_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ps)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ps(\_ \*_m128 const )|
-|[_mm256_broadcast_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_sd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_sd(二\*重定数)|
-|[_mm256_broadcast_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ss)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ss(浮動小数点\*定数)|
-|[_mm256_broadcastb_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastb_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_broadcastb_epi8\_( _m128i)|
-|[_mm256_broadcastd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastd_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_broadcastd_epi32(_m128i)\_|
-|[_mm256_broadcastq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastq_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_broadcastq_epi64_m128i)\_|
-|[_mm256_broadcastsd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastsd_pd)|AVX2 [2]|immintrin.h|__m256d_mm256_broadcastsd_pd(_m128d)\_|
-|[_mm256_broadcastsi128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastsi128_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_broadcastsi128_si256(_m128i)\_|
-|[_mm256_broadcastss_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastss_ps)|AVX2 [2]|immintrin.h|__m256_mm256_broadcastss_ps(_m128)\_|
-|[_mm256_broadcastw_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastw_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_broadcastw_epi16(_m128i)\_|
-|[_mm256_castpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd_ps)|AVX [2]|immintrin.h|__m256_mm256_castpd_ps(_m256d)\_|
-|[_mm256_castpd_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd_si256)|AVX [2]|immintrin.h|__m256i_mm256_castpd_si256(_m256d)\_|
-|[_mm256_castpd128_pd256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd128_pd256)|AVX [2]|immintrin.h|__m256d_mm256_castpd128_pd256(_m128d)\_|
-|[_mm256_castpd256_pd128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd256_pd128)|AVX [2]|immintrin.h|__m128d_mm256_castpd256_pd128_m256d)\_|
-|[_mm256_castps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps_pd)|AVX [2]|immintrin.h|__m256d_mm256_castps_pd(_m256)\_|
-|[_mm256_castps_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps_si256)|AVX [2]|immintrin.h|__m256i_mm256_castps_si256(_m256)\_|
-|[_mm256_castps128_ps256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps128_ps256)|AVX [2]|immintrin.h|__m256_mm256_castps128_ps256(_m128)\_|
-|[_mm256_castps256_ps128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps256_ps128)|AVX [2]|immintrin.h|__m128_mm256_castps256_ps128(_m256)\_|
-|[_mm256_castsi128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi128_si256)|AVX [2]|immintrin.h|__m256i_mm256_castsi128_si256(_m128i)\_|
-|[_mm256_castsi256_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_pd)|AVX [2]|immintrin.h|__m256d_mm256_castsi256_pd(\__m256i)|
-|[_mm256_castsi256_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_ps)|AVX [2]|immintrin.h|__m256_mm256_castsi256_ps(_m256i)\_|
-|[_mm256_castsi256_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_si128)|AVX [2]|immintrin.h|__m128i _mm256_castsi256_si128(_m256i)\_|
-|_mm256_cmov_si256|XOP [1]|ammintrin.h|__m256i_mm256_cmov_si256(_m256i、_m256i、_m256i)\_ \_ \_|
-|[_mm256_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_pd)|AVX [2]|immintrin.h|__m256d_mm256_cmp_pd(_m256d、_m256d、const\_ \_int)|
-|[_mm256_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_ps)|AVX [2]|immintrin.h|__m256_mm256_cmp_ps(_m256、_m256、const\_ \_int)|
-|[_mm256_cmpeq_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpeq_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_cmpeq_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpeq_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_cmpeq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpeq_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_cmpeq_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpeq_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_cmpgt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpgt_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_cmpgt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpgt_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_cmpgt_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpgt_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_cmpgt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_cmpgt_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_cvtepi16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi16_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi16_epi32(_m128i)\_|
-|[_mm256_cvtepi16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi16_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi16_epi64(_m128i)\_|
-|[_mm256_cvtepi32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi32_epi64(_m128i)\_|
-|[_mm256_cvtepi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_pd)|AVX [2]|immintrin.h|__m256d_mm256_cvtepi32_pd(_m128i)\_|
-|[_mm256_cvtepi32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_ps)|AVX [2]|immintrin.h|__m256_mm256_cvtepi32_ps(_m256i)\_|
-|[_mm256_cvtepi8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi8_epi16(_m128i)\_|
-|[_mm256_cvtepi8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi8_epi32(_m128i)\_|
-|[_mm256_cvtepi8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepi8_epi64(_m128i)\_|
-|[_mm256_cvtepu16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu16_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu16_epi32_m128i)\_|
-|[_mm256_cvtepu16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu16_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu16_epi64(_m128i)\_|
-|[_mm256_cvtepu32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu32_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu32_epi64(_m128i)\_|
-|[_mm256_cvtepu8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu8_epi16(_m128i)\_|
-|[_mm256_cvtepu8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu8_epi32(_m128i)\_|
-|[_mm256_cvtepu8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_cvtepu8_epi64(_m128i)\_|
-|[_mm256_cvtpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtpd_epi32)|AVX [2]|immintrin.h|__m128i_mm256_cvtpd_epi32(_m256d)\_|
-|[_mm256_cvtpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtpd_ps)|AVX [2]|immintrin.h|__m128_mm256_cvtpd_ps(_m256d)\_|
-|[_mm256_cvtph_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtph_ps)|F16C [2]|immintrin.h|__m256_mm256_cvtph_ps(_m128i)\_|
-|[_mm256_cvtps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_epi32)|AVX [2]|immintrin.h|__m256i_mm256_cvtps_epi32(_m256)\_|
-|[_mm256_cvtps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_pd)|AVX [2]|immintrin.h|__m256d_mm256_cvtps_pd(_m128)\_|
-|[_mm256_cvtps_ph](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_ph)|F16C [2]|immintrin.h|__m128i_mm256_cvtps_ph(_m256、const\_int)|
-|[_mm256_cvttpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvttpd_epi32)|AVX [2]|immintrin.h|__m128i_mm256_cvttpd_epi32(_m256d)\_|
-|[_mm256_cvttps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvttps_epi32)|AVX [2]|immintrin.h|__m256i_mm256_cvttps_epi32(_m256)\_|
-|[_mm256_div_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_div_pd)|AVX [2]|immintrin.h|__m256d_mm256_div_pd(_m256d、_m256d)\_ \_|
-|[_mm256_div_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_div_ps)|AVX [2]|immintrin.h|__m256_mm256_div_ps(_m256、_m256)\_ \_|
-|[_mm256_dp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_dp_ps)|AVX [2]|immintrin.h|__m256_mm256_dp_ps(_m256、_m256、const\_ \_int)|
-|[_mm256_extractf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_pd)|AVX [2]|immintrin.h|__m128d_mm256_extractf128_pd(_m256d、const\_int)|
-|[_mm256_extractf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_ps)|AVX [2]|immintrin.h|__m128_mm256_extractf128_ps(_m256、const\_int)|
-|[_mm256_extractf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_si256)|AVX [2]|immintrin.h|__m128i_mm256_extractf128_si256(_m256i、const\_int)|
-|[_mm256_extracti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extracti128_si256)|AVX2 [2]|immintrin.h|__m128i_mm256_extracti128_si256(_m256i、int)\_|
-|[_mm256_fmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_pd)|FMA [2]|immintrin.h|__m256d_mm256_fmadd_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_ps)|FMA [2]|immintrin.h|__m256_mm256_fmadd_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_fmaddsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmaddsub_pd)|FMA [2]|immintrin.h|__m256d_mm256_fmaddsub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fmaddsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmaddsub_ps)|FMA [2]|immintrin.h|__m256_mm256_fmaddsub_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_fmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsub_pd)|FMA [2]|immintrin.h|__m256d_mm256_fmsub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsub_ps)|FMA [2]|immintrin.h|__m256_mm256_fmsub_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_fmsubadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsubadd_pd)|FMA [2]|immintrin.h|__m256d_mm256_fmsubadd_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fmsubadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsubadd_ps)|FMA [2]|immintrin.h|__m256_mm256_fmsubadd_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_fnmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmadd_pd)|FMA [2]|immintrin.h|__m256d_mm256_fnmadd_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fnmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmadd_ps)|FMA [2]|immintrin.h|__m256_mm256_fnmadd_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_fnmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_pd)|FMA [2]|immintrin.h|__m256d_mm256_fnmsub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|[_mm256_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_ps)|FMA [2]|immintrin.h|__m256_mm256_fnmsub_ps(_m256、_m256、_m256)\_ \_ \_|
-|_mm256_frcz_pd|XOP [1]|ammintrin.h|__m256d_mm256_frcz_pd(_m256d)\_|
-|_mm256_frcz_ps|XOP [1]|ammintrin.h|__m256_mm256_frcz_ps(_m256)\_|
-|[_mm256_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_hadd_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_hadd_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_pd)|AVX [2]|immintrin.h|__m256d_mm256_hadd_pd(_m256d、_m256d)\_ \_|
-|[_mm256_hadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_ps)|AVX [2]|immintrin.h|__m256_mm256_hadd_ps(_m256、_m256)\_ \_|
-|[_mm256_hadds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadds_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_hadds_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_hsub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_hsub_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_hsub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_hsub_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_pd)|AVX [2]|immintrin.h|__m256d_mm256_hsub_pd(_m256d、_m256d)\_ \_|
-|[_mm256_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_ps)|AVX [2]|immintrin.h|__m256_mm256_hsub_ps(_m256、_m256)\_ \_|
-|[_mm256_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsubs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_hsubs_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi32(int \* \_const 、_m256i、const int)|
-|[_mm256_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_i32gather_epi64(_int64\_コン\*スト\_、_m128i、const int)|
-|[_mm256_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i32gather_pd(二\*重\_定数 、_m128i、const int)|
-|[_mm256_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_ps)|AVX2 [2]|immintrin.h|__m256_mm256_i32gather_ps(浮動小数点数\* \_、_m256i、const int)|
-|[_mm256_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_i64gather_epi32(int \*const \_、_m256i、const int)|
-|[_mm256_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi64)|AVX2 [2]|immintrin.h|\___m256i_mm256_i64gather_epi64(_int64const \* \_、_m256i、const int)|
-|[_mm256_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i64gather_pd(二\*重\_定数、_m256i、const int)|
-|[_mm256_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_ps)|AVX2 [2]|immintrin.h|__m128_mm256_i64gather_ps(浮動小数点数\* \_、_m256i、const int)|
-|[_mm256_insertf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_pd)|AVX [2]|immintrin.h|__m256d_mm256_insertf128_pd(_m256d、_m128d、int)\_ \_|
-|[_mm256_insertf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_ps)|AVX [2]|immintrin.h|__m256_mm256_insertf128_ps(_m256、_m128、int)\_ \_|
-|[_mm256_insertf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_si256)|AVX [2]|immintrin.h|__m256i_mm256_insertf128_si256(_m256i、_m128i、int)\_ \_|
-|[_mm256_inserti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_inserti128_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_inserti128_si256(_m256i、_m128i、int)\_ \_|
-|[_mm256_lddqu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_lddqu_si256)|AVX [2]|immintrin.h|__m256i\__mm256_lddqu_si256( \*_m256i )|
-|[_mm256_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_pd)|AVX [2]|immintrin.h|__m256d _mm256_load_pd(二\*重定数)|
-|[_mm256_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_ps)|AVX [2]|immintrin.h|__m256_mm256_load_ps(フロート\*定数)|
-|[_mm256_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_si256)|AVX [2]|immintrin.h|__m256i\__mm256_load_si256( \*_m256i )|
-|[_mm256_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_pd)|AVX [2]|immintrin.h|__m256d _mm256_loadu_pd(二\*重定数)|
-|[_mm256_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_ps)|AVX [2]|immintrin.h|__m256 _mm256_loadu_ps(浮動小数点\*定数)|
-|[_mm256_loadu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_si256)|AVX [2]|immintrin.h|__m256i\__mm256_loadu_si256( \*_m256i )|
-|_mm256_macc_pd|FMA4 [1]|ammintrin.h|__m256d_mm_macc_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_macc_ps|FMA4 [1]|ammintrin.h|__m256_mm_macc_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_madd_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_madd_epi16(_m256i、_m256i)\_ \_|
-|_mm256_maddsub_pd|FMA4 [1]|ammintrin.h|__m256d_mm_maddsub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_maddsub_ps|FMA4 [1]|ammintrin.h|__m256_mm_maddsub_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maddubs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_maddubs_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_mask_i32gather_epi32(_m256i、int\_ \*const \_、_m256i、_m256i、const \_int)|
-|[_mm256_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_mask_i32gather_epi64(_m256i、_int64\_\_コン\*スト\_、_m128i、_m256i、const \_int)|
-|[_mm256_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d_mm256_mask_i32gather_pd(_m256d、\_二重\*const、_m128i、_m256d、const \_ \_int)|
-|[_mm256_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m256_mm256_mask_i32gather_ps(_m256、\_フロート\*コン\_スト、_m256i、_m256、const \_int)|
-|[_mm256_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i_mm256_mask_i64gather_epi32(_m128i、int\_ \*const \_、_m256i、_m128i、const \_int)|
-|[_mm256_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_mask_i64gather_epi64(_m256i、_int64\_\_コン\*スト\_、_m256i、_m256i、const \_int)|
-|[_mm256_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d_mm256_mask_i64gather_pd(_m256d、\_二重\*const、_m256i、_m256d、const \_ \_int)|
-|[_mm256_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128_mm256_mask_i64gather_ps(_m128、\_フロート\*コン\_スト、_m256i、_m128、const \_int)|
-|[_mm256_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_maskload_epi32(イント・\*コン\_スト 、_m256i)|
-|[_mm256_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_maskload_epi64(_int64\_コン\*スト\_、_m256i)|
-|[_mm256_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_pd)|AVX [2]|immintrin.h|__m256d_mm256_maskload_pd(ダブルコン\*スト\_、_m256i)|
-|[_mm256_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_ps)|AVX [2]|immintrin.h|__m256_mm256_maskload_ps(浮動小数点数\*、_m256i) \_|
-|[_mm256_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi32)|AVX2 [2]|immintrin.h|ボイド_mm256_maskstore_epi32(int \* \_, \__m256i, _m256i)|
-|[_mm256_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi64)|AVX2 [2]|immintrin.h|ボイド_mm256_maskstore_epi64(_int64、_m256i、_m256i)\_ \* \_ \_|
-|[_mm256_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_pd)|AVX [2]|immintrin.h|void _mm256_maskstore_pd(\*ダブル\_、 \__m256i、_m256d)|
-|[_mm256_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_ps)|AVX [2]|immintrin.h|ボイド_mm256_maskstore_ps(フロー\*ト\_、_m256i、_m256) \_|
-|[_mm256_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_max_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_max_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu32)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epu32(_m256i、_m256i)\_ \_|
-|[_mm256_max_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_max_epu8(_m256i、_m256i)\_ \_|
-|[_mm256_max_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_pd)|AVX [2]|immintrin.h|__m256d_mm256_max_pd(_m256d、_m256d)\_ \_|
-|[_mm256_max_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_ps)|AVX [2]|immintrin.h|__m256_mm256_max_ps(_m256、_m256)\_ \_|
-|[_mm256_min_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_min_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_min_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_min_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_min_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu32)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epu32(_m256i、_m256i)\_ \_|
-|[_mm256_min_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_min_epu8(_m256i、_m256i)\_ \_|
-|[_mm256_min_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_pd)|AVX [2]|immintrin.h|__m256d_mm256_min_pd(_m256d、_m256d)\_ \_|
-|[_mm256_min_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_ps)|AVX [2]|immintrin.h|__m256_mm256_min_ps(_m256、_m256)\_ \_|
-|[_mm256_movedup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movedup_pd)|AVX [2]|immintrin.h|__m256d_mm256_movedup_pd_m256d)\_|
-|[_mm256_movehdup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movehdup_ps)|AVX [2]|immintrin.h|__m256_mm256_movehdup_ps(_m256)\_|
-|[_mm256_moveldup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_moveldup_ps)|AVX [2]|immintrin.h|__m256_mm256_moveldup_ps(_m256)\_|
-|[_mm256_movemask_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_epi8)|AVX2 [2]|immintrin.h|int _mm256_movemask_epi8(\__m256i)|
-|[_mm256_movemask_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_pd)|AVX [2]|immintrin.h|int _mm256_movemask_pd(_m256d)\_|
-|[_mm256_movemask_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_ps)|AVX [2]|immintrin.h|int _mm256_movemask_ps(_m256)\_|
-|[_mm256_mpsadbw_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mpsadbw_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_mpsadbw_epu8(_m256i、_m256i、const\_ \_int)|
-|_mm256_msub_pd|FMA4 [1]|ammintrin.h|__m256d_mm_msub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_msub_ps|FMA4 [1]|ammintrin.h|__m256_mm_msub_ps(_m256、_m256、_m256)\_ \_ \_|
-|_mm256_msubadd_pd|FMA4 [1]|ammintrin.h|__m256d_mm_msubadd_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_msubadd_ps|FMA4 [1]|ammintrin.h|__m256_mm_msubadd_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_mul_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_mul_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_mul_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_epu32)|AVX2 [2]|immintrin.h|__m256i_mm256_mul_epu32(_m256i、_m256i)\_ \_|
-|[_mm256_mul_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_pd)|AVX [2]|immintrin.h|__m256d_mm256_mul_pd(_m256d、_m256d)\_ \_|
-|[_mm256_mul_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_ps)|AVX [2]|immintrin.h|__m256_mm256_mul_ps(_m256、_m256)\_ \_|
-|[_mm256_mulhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhi_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_mulhi_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_mulhi_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhi_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_mulhi_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_mulhrs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhrs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_mulhrs_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_mullo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mullo_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_mullo_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_mullo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mullo_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_mullo_epi32(_m256i、_m256i)\_ \_|
-|_mm256_nmacc_pd|FMA4 [1]|ammintrin.h|__m256d_mm_nmacc_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_nmacc_ps|FMA4 [1]|ammintrin.h|__m256_mm_nmacc_ps(_m256、_m256、_m256)\_ \_ \_|
-|_mm256_nmsub_pd|FMA4 [1]|ammintrin.h|__m256d_mm_nmsub_pd(_m256d、_m256d、_m256d)\_ \_ \_|
-|_mm256_nmsub_ps|FMA4 [1]|ammintrin.h|__m256_mm_nmsub_ps(_m256、_m256、_m256)\_ \_ \_|
-|[_mm256_or_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_pd)|AVX [2]|immintrin.h|__m256d_mm256_or_pd(_m256d、_m256d)\_ \_|
-|[_mm256_or_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_ps)|AVX [2]|immintrin.h|__m256_mm256_or_ps(_m256、_m256)\_ \_|
-|[_mm256_or_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_or_si256(_m256i、_m256i)\_ \_|
-|[_mm256_packs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_packs_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_packs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packs_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_packs_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_packus_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packus_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_packus_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packus_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_packus_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_pd)|AVX [2]|immintrin.h|__m256d_mm256_permute_pd(_m256d、int)\_|
-|[_mm256_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_ps)|AVX [2]|immintrin.h|__m256_mm256_permute_ps(_m256、int)\_|
-|_mm256_permute2_pd|XOP [1]|ammintrin.h|__m256d_mm256_permute2_pd(_m256d、_m256d、_m256i、int)\_ \_ \_|
-|_mm256_permute2_ps|XOP [1]|ammintrin.h|__m256_mm256_permute2_ps(_m256、_m256、_m256i、int)\_ \_ \_|
-|[_mm256_permute2f128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_pd)|AVX [2]|immintrin.h|__m256d_mm256_permute2f128_pd(_m256d、_m256d、int)\_ \_|
-|[_mm256_permute2f128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_ps)|AVX [2]|immintrin.h|__m256_mm256_permute2f128_ps(_m256、_m256、int)\_ \_|
-|[_mm256_permute2f128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_si256)|AVX [2]|immintrin.h|__m256i_mm256_permute2f128_si256(_m256i、_m256i、int)\_ \_|
-|[_mm256_permute2x128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2x128_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_permute2x128_si256(_m256i、_m256i、const\_ \_int)|
-|[_mm256_permute4x64_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute4x64_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_permute4x64_epi64\_(_m256i、const int)|
-|[_mm256_permute4x64_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute4x64_pd)|AVX2 [2]|immintrin.h|__m256d_mm256_permute4x64_pd(_m256d、const\_int)|
-|[_mm256_permutevar_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar_pd)|AVX [2]|immintrin.h|__m256d_mm256_permutevar_pd(_m256d、_m256i)\_ \_|
-|[_mm256_permutevar_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar_ps)|AVX [2]|immintrin.h|__m256_mm256_permutevar_ps(_m256、_m256i)\_ \_|
-|[_mm256_permutevar8x32_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar8x32_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_permutevar8x32_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_permutevar8x32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar8x32_ps)|AVX2 [2]|immintrin.h|__m256_mm256_permutevar8x32_ps(_m256、_m256i)\_ \_|
-|[_mm256_rcp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_rcp_ps)|AVX [2]|immintrin.h|__m256_mm256_rcp_ps(_m256)\_|
-|[_mm256_round_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_round_pd)|AVX [2]|immintrin.h|__m256d_mm256_round_pd(_m256d、int)\_|
-|[_mm256_round_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_round_ps)|AVX [2]|immintrin.h|__m256_mm256_round_ps(_m256、int)\_|
-|[_mm256_rsqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_rsqrt_ps)|AVX [2]|immintrin.h|__m256_mm256_rsqrt_ps(_m256)\_|
-|[_mm256_sad_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sad_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_sad_epu8(_m256i、_m256i)\_ \_|
+|_mm_sha_epi16|XOP [1]|ammintrin.h|__m128i _mm_sha_epi16 ( \_ _m128i、 \_ _m128i)|
+|_mm_sha_epi32|XOP [1]|ammintrin.h|__m128i _mm_sha_epi32 ( \_ _m128i、 \_ _m128i)|
+|_mm_sha_epi64|XOP [1]|ammintrin.h|__m128i _mm_sha_epi64 ( \_ _m128i、 \_ _m128i)|
+|_mm_sha_epi8|XOP [1]|ammintrin.h|__m128i _mm_sha_epi8 ( \_ _m128i、 \_ _m128i)|
+|_mm_shl_epi16|XOP [1]|ammintrin.h|__m128i _mm_shl_epi16 ( \_ _m128i、 \_ _m128i)|
+|_mm_shl_epi32|XOP [1]|ammintrin.h|__m128i _mm_shl_epi32 ( \_ _m128i、 \_ _m128i)|
+|_mm_shl_epi64|XOP [1]|ammintrin.h|__m128i _mm_shl_epi64 ( \_ _m128i、 \_ _m128i)|
+|_mm_shl_epi8|XOP [1]|ammintrin.h|__m128i _mm_shl_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_shuffle_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi32)|SSE2|intrin.h|__m128i _mm_shuffle_epi32 ( \_ _m128i, int)|
+|[_mm_shuffle_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi8)|SSSE3|intrin.h|__m128i _mm_shuffle_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_shuffle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pd)|SSE2|intrin.h|__m128d _mm_shuffle_pd ( \_ _m128d、 \_ _m128d、int)|
+|[_mm_shuffle_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pi8)|SSSE3|intrin.h|__m64 _mm_shuffle_pi8 ( \_ _m64、 \_ _m64)|
+|[_mm_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_ps)|SSE|intrin.h|__m128 _mm_shuffle_ps ( \_ _m128、 \_ _m128、unsigned int)|
+|[_mm_shufflehi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflehi_epi16)|SSE2|intrin.h|__m128i _mm_shufflehi_epi16 ( \_ _m128i, int)|
+|[_mm_shufflelo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflelo_epi16)|SSE2|intrin.h|__m128i _mm_shufflelo_epi16 ( \_ _m128i, int)|
+|[_mm_sign_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi16)|SSSE3|intrin.h|__m128i _mm_sign_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sign_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi32)|SSSE3|intrin.h|__m128i _mm_sign_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sign_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi8)|SSSE3|intrin.h|__m128i _mm_sign_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sign_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi16)|SSSE3|intrin.h|__m64 _mm_sign_pi16 ( \_ _m64、 \_ _m64)|
+|[_mm_sign_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi32)|SSSE3|intrin.h|__m64 _mm_sign_pi32 ( \_ _m64、 \_ _m64)|
+|[_mm_sign_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi8)|SSSE3|intrin.h|__m64 _mm_sign_pi8 ( \_ _m64、 \_ _m64)|
+|[_mm_sll_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi16)|SSE2|intrin.h|__m128i _mm_sll_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sll_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi32)|SSE2|intrin.h|__m128i _mm_sll_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sll_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi64)|SSE2|intrin.h|__m128i _mm_sll_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sll_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_pi16)|MMX|mmintrin .h|__m64 _mm_sll_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sll_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_pi32)|MMX|mmintrin .h|__m64 _mm_sll_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sll_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_si64)|MMX|mmintrin .h|__m64 _mm_sll_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_slli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi16)|SSE2|intrin.h|__m128i _mm_slli_epi16 ( \_ _m128i, int)|
+|[_mm_slli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi32)|SSE2|intrin.h|__m128i _mm_slli_epi32 ( \_ _m128i, int)|
+|[_mm_slli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_epi64)|SSE2|intrin.h|__m128i _mm_slli_epi64 ( \_ _m128i, int)|
+|[_mm_slli_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_pi16)|MMX|mmintrin .h|__m64 _mm_slli_pi16 ( \_ _m64, int) [3]|
+|[_mm_slli_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_pi32)|MMX|mmintrin .h|__m64 _mm_slli_pi32 ( \_ _m64, int) [3]|
+|[_mm_slli_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_si64)|MMX|mmintrin .h|__m64 _mm_slli_si64 ( \_ _m64, int) [3]|
+|[_mm_slli_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_slli_si128)|SSE2|intrin.h|__m128i _mm_slli_si128 ( \_ _m128i, int)|
+|[_mm_sllv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sllv_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_sllv_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sllv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sllv_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_sllv_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sqrt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_pd)|SSE2|intrin.h|__m128d _mm_sqrt_pd ( \_ _m128d)|
+|[_mm_sqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_ps)|SSE|intrin.h|__m128 _mm_sqrt_ps ( \_ _m128)|
+|[_mm_sqrt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_sd)|SSE2|intrin.h|__m128d _mm_sqrt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_sqrt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sqrt_ss)|SSE|intrin.h|__m128 _mm_sqrt_ss ( \_ _m128)|
+|[_mm_sra_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_epi16)|SSE2|intrin.h|__m128i _mm_sra_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sra_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_epi32)|SSE2|intrin.h|__m128i _mm_sra_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sra_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_pi16)|MMX|mmintrin .h|__m64 _mm_sra_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sra_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sra_pi32)|MMX|mmintrin .h|__m64 _mm_sra_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_srai_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_epi16)|SSE2|intrin.h|__m128i _mm_srai_epi16 ( \_ _m128i, int)|
+|[_mm_srai_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_epi32)|SSE2|intrin.h|__m128i _mm_srai_epi32 ( \_ _m128i, int)|
+|[_mm_srai_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_pi16)|MMX|mmintrin .h|__m64 _mm_srai_pi16 ( \_ _m64, int) [3]|
+|[_mm_srai_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srai_pi32)|MMX|mmintrin .h|__m64 _mm_srai_pi32 ( \_ _m64, int) [3]|
+|[_mm_srav_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srav_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_srav_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_srl_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi16)|SSE2|intrin.h|__m128i _mm_srl_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_srl_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi32)|SSE2|intrin.h|__m128i _mm_srl_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_srl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_epi64)|SSE2|intrin.h|__m128i _mm_srl_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_srl_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_pi16)|MMX|mmintrin .h|__m64 _mm_srl_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_srl_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_pi32)|MMX|mmintrin .h|__m64 _mm_srl_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_srl_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srl_si64)|MMX|mmintrin .h|__m64 _mm_srl_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_srli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi16)|SSE2|intrin.h|__m128i _mm_srli_epi16 ( \_ _m128i, int)|
+|[_mm_srli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi32)|SSE2|intrin.h|__m128i _mm_srli_epi32 ( \_ _m128i, int)|
+|[_mm_srli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_epi64)|SSE2|intrin.h|__m128i _mm_srli_epi64 ( \_ _m128i, int)|
+|[_mm_srli_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_pi16)|MMX|mmintrin .h|__m64 _mm_srli_pi16 ( \_ _m64, int) [3]|
+|[_mm_srli_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_pi32)|MMX|mmintrin .h|__m64 _mm_srli_pi32 ( \_ _m64, int) [3]|
+|[_mm_srli_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_si64)|MMX|mmintrin .h|__m64 _mm_srli_si64 ( \_ _m64, int) [3]|
+|[_mm_srli_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_si128)|SSE2|intrin.h|__m128i _mm_srli_si128 ( \_ _m128i, int)|
+|[_mm_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_srlv_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_srlv_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_pd)|SSE2|intrin.h|void _mm_store_pd (double \* 、 \_ _m128d)|
+|[_mm_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps)|SSE|intrin.h|void _mm_store_ps (float \* 、 \_ _m128)|
+|[_mm_store_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps1)|SSE|intrin.h|void _mm_store_ps1 (float \* 、 \_ _m128)|
+|[_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)|SSE2|intrin.h|void _mm_store_sd (double \* 、 \_ _m128d)|
+|[_mm_store_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_si128)|SSE2|intrin.h|void _mm_store_si128 ( \_ _m128i \* 、 \_ _m128i)|
+|[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)|SSE|intrin.h|void _mm_store_ss (float \* 、 \_ _m128)|
+|[_mm_store1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store1_pd)|SSE2|intrin.h|void _mm_store1_pd (double \* 、 \_ _m128d)|
+|[_mm_storeh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pd)|SSE2|intrin.h|void _mm_storeh_pd (double \* 、 \_ _m128d)|
+|[_mm_storeh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pi)|SSE|intrin.h|void _mm_storeh_pi ( \_ _m64 \* 、 \_ _m128)|
+|[_mm_storel_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_epi64)|SSE2|intrin.h|void _mm_storel_epi64 ( \_ _m128i \* 、 \_ _m128i)|
+|[_mm_storel_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pd)|SSE2|intrin.h|void _mm_storel_pd (double \* 、 \_ _m128d)|
+|[_mm_storel_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pi)|SSE|intrin.h|void _mm_storel_pi ( \_ _m64 \* 、 \_ _m128)|
+|[_mm_storer_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_pd)|SSE2|intrin.h|void _mm_storer_pd (double \* 、 \_ _m128d)|
+|[_mm_storer_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_ps)|SSE|intrin.h|void _mm_storer_ps (float \* 、 \_ _m128)|
+|[_mm_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_pd)|SSE2|intrin.h|void _mm_storeu_pd (double \* 、 \_ _m128d)|
+|[_mm_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_ps)|SSE|intrin.h|void _mm_storeu_ps (float \* 、 \_ _m128)|
+|[_mm_storeu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_si128)|SSE2|intrin.h|void _mm_storeu_si128 ( \_ _m128i \* 、 \_ _m128i)|
+|[_mm_stream_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_load_si128)|SSE41|intrin.h|__m128i _mm_stream_load_si128 ( \_ _m128i \* )|
+|[_mm_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pd)|SSE2|intrin.h|void _mm_stream_pd (double \* 、 \_ _m128d)|
+|[_mm_stream_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pi)|SSE|intrin.h|void _mm_stream_pi ( \_ _m64 \* 、 \_ _m64)|
+|[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)|SSE|intrin.h|void _mm_stream_ps (float \* 、 \_ _m128)|
+|[_mm_stream_sd](mm-stream-sd.md)|SSE4a|intrin.h|void _mm_stream_sd (double \* 、 \_ _m128d)|
+|[_mm_stream_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si128)|SSE2|intrin.h|void _mm_stream_si128 ( \_ _m128i \* 、 \_ _m128i)|
+|[_mm_stream_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si32)|SSE2|intrin.h|void _mm_stream_si32 (int \* , int)|
+|[_mm_stream_ss](mm-stream-ss.md)|SSE4a|intrin.h|void _mm_stream_ss (float \* 、 \_ _m128)|
+|[_mm_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi16)|SSE2|intrin.h|__m128i _mm_sub_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi32)|SSE2|intrin.h|__m128i _mm_sub_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi64)|SSE2|intrin.h|__m128i _mm_sub_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sub_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi8)|SSE2|intrin.h|__m128i _mm_sub_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_sub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pd)|SSE2|intrin.h|__m128d _mm_sub_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_sub_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi8)|MMX|mmintrin .h|__m64 _mm_sub_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi16)|MMX|mmintrin .h|__m64 _mm_sub_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pi32)|MMX|mmintrin .h|__m64 _mm_sub_pi32 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_sub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ps)|SSE|intrin.h|__m128 _mm_sub_ps ( \_ _m128、 \_ _m128)|
+|[_mm_sub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_sd)|SSE2|intrin.h|__m128d _mm_sub_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_sub_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_si64)|SSE2|intrin.h|__m64 _mm_sub_si64 ( \_ _m64、 \_ _m64)|
+|[_mm_sub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ss)|SSE|intrin.h|__m128 _mm_sub_ss ( \_ _m128、 \_ _m128)|
+|[_mm_subs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi16)|SSE2|intrin.h|__m128i _mm_subs_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_subs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi8)|SSE2|intrin.h|__m128i _mm_subs_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_subs_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epu16)|SSE2|intrin.h|__m128i _mm_subs_epu16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_subs_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epu8)|SSE2|intrin.h|__m128i _mm_subs_epu8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_subs_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pi8)|MMX|mmintrin .h|__m64 _mm_subs_pi8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_subs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pi16)|MMX|mmintrin .h|__m64 _mm_subs_pi16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_subs_pu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pu8)|MMX|mmintrin .h|__m64 _mm_subs_pu8 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_subs_pu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_pu16)|MMX|mmintrin .h|__m64 _mm_subs_pu16 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_testc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_pd)|AVX [2]|immintrin.h|int _mm_testc_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_testc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_ps)|AVX [2]|immintrin.h|int _mm_testc_ps ( \_ _m128、 \_ _m128)|
+|[_mm_testc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testc_si128)|SSE41|intrin.h|int _mm_testc_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_testnzc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_pd)|AVX [2]|immintrin.h|int _mm_testnzc_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_testnzc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_ps)|AVX [2]|immintrin.h|int _mm_testnzc_ps ( \_ _m128、 \_ _m128)|
+|[_mm_testnzc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testnzc_si128)|SSE41|intrin.h|int _mm_testnzc_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_testz_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_pd)|AVX [2]|immintrin.h|int _mm_testz_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_testz_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_ps)|AVX [2]|immintrin.h|int _mm_testz_ps ( \_ _m128、 \_ _m128)|
+|[_mm_testz_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_testz_si128)|SSE41|intrin.h|int _mm_testz_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm_ucomieq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomieq_sd)|SSE2|intrin.h|int _mm_ucomieq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomieq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomieq_ss)|SSE|intrin.h|int _mm_ucomieq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_ucomige_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomige_sd)|SSE2|intrin.h|int _mm_ucomige_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomige_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomige_ss)|SSE|intrin.h|int _mm_ucomige_ss ( \_ _m128、 \_ _m128)|
+|[_mm_ucomigt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomigt_sd)|SSE2|intrin.h|int _mm_ucomigt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomigt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomigt_ss)|SSE|intrin.h|int _mm_ucomigt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_ucomile_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomile_sd)|SSE2|intrin.h|int _mm_ucomile_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomile_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomile_ss)|SSE|intrin.h|int _mm_ucomile_ss ( \_ _m128、 \_ _m128)|
+|[_mm_ucomilt_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomilt_sd)|SSE2|intrin.h|int _mm_ucomilt_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomilt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomilt_ss)|SSE|intrin.h|int _mm_ucomilt_ss ( \_ _m128、 \_ _m128)|
+|[_mm_ucomineq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomineq_sd)|SSE2|intrin.h|int _mm_ucomineq_sd ( \_ _m128d、 \_ _m128d)|
+|[_mm_ucomineq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_ucomineq_ss)|SSE|intrin.h|int _mm_ucomineq_ss ( \_ _m128、 \_ _m128)|
+|[_mm_unpackhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi16)|SSE2|intrin.h|__m128i _mm_unpackhi_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpackhi_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi32)|SSE2|intrin.h|__m128i _mm_unpackhi_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpackhi_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi64)|SSE2|intrin.h|__m128i _mm_unpackhi_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpackhi_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_epi8)|SSE2|intrin.h|__m128i _mm_unpackhi_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpackhi_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pd)|SSE2|intrin.h|__m128d _mm_unpackhi_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_unpackhi_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi8)|MMX|mmintrin .h|__m64 _mm_unpackhi_pi8 (__m64、__m64) [3]|
+|[_mm_unpackhi_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi16)|MMX|mmintrin .h|__m64 _mm_unpackhi_pi16 (__m64、__m64) [3]|
+|[_mm_unpackhi_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_pi32)|MMX|mmintrin .h|__m64 _mm_unpackhi_pi32 (__m64、__m64) [3]|
+|[_mm_unpackhi_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpackhi_ps)|SSE|intrin.h|__m128 _mm_unpackhi_ps ( \_ _m128、 \_ _m128)|
+|[_mm_unpacklo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi16)|SSE2|intrin.h|__m128i _mm_unpacklo_epi16 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpacklo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi32)|SSE2|intrin.h|__m128i _mm_unpacklo_epi32 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpacklo_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi64)|SSE2|intrin.h|__m128i _mm_unpacklo_epi64 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpacklo_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_epi8)|SSE2|intrin.h|__m128i _mm_unpacklo_epi8 ( \_ _m128i、 \_ _m128i)|
+|[_mm_unpacklo_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pd)|SSE2|intrin.h|__m128d _mm_unpacklo_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_unpacklo_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi8)|MMX|mmintrin .h|__m64 _mm_unpacklo_pi8 (__m64、__m64) [3]|
+|[_mm_unpacklo_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi16)|MMX|mmintrin .h|__m64 _mm_unpacklo_pi16 (__m64、__m64) [3]|
+|[_mm_unpacklo_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_pi32)|MMX|mmintrin .h|__m64 _mm_unpacklo_pi32 (__m64、__m64) [3]|
+|[_mm_unpacklo_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_unpacklo_ps)|SSE|intrin.h|__m128 _mm_unpacklo_ps ( \_ _m128、 \_ _m128)|
+|[_mm_xor_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_pd)|SSE2|intrin.h|__m128d _mm_xor_pd ( \_ _m128d、 \_ _m128d)|
+|[_mm_xor_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_ps)|SSE|intrin.h|__m128 _mm_xor_ps ( \_ _m128、 \_ _m128)|
+|[_mm_xor_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_si64)|MMX|mmintrin .h|__m64 _mm_xor_si64 ( \_ _m64、 \_ _m64) [3]|
+|[_mm_xor_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_xor_si128)|SSE2|intrin.h|__m128i _mm_xor_si128 ( \_ _m128i、 \_ _m128i)|
+|[_mm256_abs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_abs_epi16 ( \_ _m256i)|
+|[_mm256_abs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_abs_epi32 ( \_ _m256i)|
+|[_mm256_abs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_abs_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_abs_epi8 ( \_ _m256i)|
+|[_mm256_add_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_add_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_add_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_add_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_add_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_add_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_add_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_add_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_add_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_pd)|AVX [2]|immintrin.h|__m256d _mm256_add_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_add_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_add_ps)|AVX [2]|immintrin.h|__m256 _mm256_add_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_adds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_adds_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_adds_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_adds_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_adds_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_adds_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_adds_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_adds_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_adds_epu8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_addsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_addsub_pd)|AVX [2]|immintrin.h|__m256d _mm256_addsub_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_addsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_addsub_ps)|AVX [2]|immintrin.h|__m256 _mm256_addsub_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_alignr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_alignr_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_alignr_epi8 ( \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_and_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_pd)|AVX [2]|immintrin.h|__m256d _mm256_and_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_and_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_ps)|AVX [2]|immintrin.h|__m256 _mm256_and_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_and_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_and_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_and_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_andnot_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_pd)|AVX [2]|immintrin.h|__m256d _mm256_andnot_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_andnot_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_ps)|AVX [2]|immintrin.h|__m256 _mm256_andnot_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_andnot_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_andnot_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_andnot_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_avg_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_avg_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_avg_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_avg_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_avg_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_avg_epu8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_blend_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_blend_epi16 ( \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_blend_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_blend_epi32 ( \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_blend_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_pd)|AVX [2]|immintrin.h|__m256d _mm256_blend_pd ( \_ _m256d、 \_ _m256d、const int)|
+|[_mm256_blend_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blend_ps)|AVX [2]|immintrin.h|__m256 _mm256_blend_ps ( \_ _m256、 \_ _m256、const int)|
+|[_mm256_blendv_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_blendv_epi8 ( \_ _m256i、 \_ _m256i、 \_ _m256i)|
+|[_mm256_blendv_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_pd)|AVX [2]|immintrin.h|__m256d _mm256_blendv_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_blendv_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_ps)|AVX [2]|immintrin.h|__m256 _mm256_blendv_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_broadcast_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_pd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_pd ( \_ _m128d const \* )|
+|[_mm256_broadcast_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ps)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ps ( \_ _m128 const \* )|
+|[_mm256_broadcast_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_sd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_sd (二重 const \* )|
+|[_mm256_broadcast_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ss)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ss (float const \* )|
+|[_mm256_broadcastb_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastb_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastb_epi8 ( \_ _m128i)|
+|[_mm256_broadcastd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastd_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastd_epi32 ( \_ _m128i)|
+|[_mm256_broadcastq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastq_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastq_epi64 ( \_ _m128i)|
+|[_mm256_broadcastsd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastsd_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_broadcastsd_pd ( \_ _m128d)|
+|[_mm256_broadcastsi128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastsi128_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastsi128_si256 ( \_ _m128i)|
+|[_mm256_broadcastss_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastss_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_broadcastss_ps ( \_ _m128)|
+|[_mm256_broadcastw_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastw_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastw_epi16 ( \_ _m128i)|
+|[_mm256_castpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd_ps)|AVX [2]|immintrin.h|__m256 _mm256_castpd_ps ( \_ _m256d)|
+|[_mm256_castpd_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd_si256)|AVX [2]|immintrin.h|__m256i _mm256_castpd_si256 ( \_ _m256d)|
+|[_mm256_castpd128_pd256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd128_pd256)|AVX [2]|immintrin.h|__m256d _mm256_castpd128_pd256 ( \_ _m128d)|
+|[_mm256_castpd256_pd128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castpd256_pd128)|AVX [2]|immintrin.h|__m128d _mm256_castpd256_pd128 ( \_ _m256d)|
+|[_mm256_castps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps_pd)|AVX [2]|immintrin.h|__m256d _mm256_castps_pd ( \_ _m256)|
+|[_mm256_castps_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps_si256)|AVX [2]|immintrin.h|__m256i _mm256_castps_si256 ( \_ _m256)|
+|[_mm256_castps128_ps256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps128_ps256)|AVX [2]|immintrin.h|__m256 _mm256_castps128_ps256 ( \_ _m128)|
+|[_mm256_castps256_ps128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castps256_ps128)|AVX [2]|immintrin.h|__m128 _mm256_castps256_ps128 ( \_ _m256)|
+|[_mm256_castsi128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi128_si256)|AVX [2]|immintrin.h|__m256i _mm256_castsi128_si256 ( \_ _m128i)|
+|[_mm256_castsi256_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_pd)|AVX [2]|immintrin.h|__m256d _mm256_castsi256_pd ( \_ _m256i)|
+|[_mm256_castsi256_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_ps)|AVX [2]|immintrin.h|__m256 _mm256_castsi256_ps ( \_ _m256i)|
+|[_mm256_castsi256_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_si128)|AVX [2]|immintrin.h|__m128i _mm256_castsi256_si128 ( \_ _m256i)|
+|_mm256_cmov_si256|XOP [1]|ammintrin.h|__m256i _mm256_cmov_si256 ( \_ _m256i、 \_ _m256i、 \_ _m256i)|
+|[_mm256_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_pd)|AVX [2]|immintrin.h|__m256d _mm256_cmp_pd ( \_ _m256d、 \_ _m256d、const int)|
+|[_mm256_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_ps)|AVX [2]|immintrin.h|__m256 _mm256_cmp_ps ( \_ _m256、 \_ _m256、const int)|
+|[_mm256_cmpeq_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpeq_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpeq_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpeq_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpeq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpeq_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpeq_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpeq_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpgt_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpgt_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpgt_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpgt_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpgt_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpgt_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cmpgt_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpgt_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpgt_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_cvtepi16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi16_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi16_epi32 ( \_ _m128i)|
+|[_mm256_cvtepi16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi16_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi16_epi64 ( \_ _m128i)|
+|[_mm256_cvtepi32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi32_epi64 ( \_ _m128i)|
+|[_mm256_cvtepi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_pd)|AVX [2]|immintrin.h|__m256d _mm256_cvtepi32_pd ( \_ _m128i)|
+|[_mm256_cvtepi32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi32_ps)|AVX [2]|immintrin.h|__m256 _mm256_cvtepi32_ps ( \_ _m256i)|
+|[_mm256_cvtepi8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi8_epi16 ( \_ _m128i)|
+|[_mm256_cvtepi8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi8_epi32 ( \_ _m128i)|
+|[_mm256_cvtepi8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepi8_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepi8_epi64 ( \_ _m128i)|
+|[_mm256_cvtepu16_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu16_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu16_epi32 ( \_ _m128i)|
+|[_mm256_cvtepu16_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu16_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu16_epi64 ( \_ _m128i)|
+|[_mm256_cvtepu32_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu32_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu32_epi64 ( \_ _m128i)|
+|[_mm256_cvtepu8_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu8_epi16 ( \_ _m128i)|
+|[_mm256_cvtepu8_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu8_epi32 ( \_ _m128i)|
+|[_mm256_cvtepu8_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtepu8_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_cvtepu8_epi64 ( \_ _m128i)|
+|[_mm256_cvtpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtpd_epi32)|AVX [2]|immintrin.h|__m128i _mm256_cvtpd_epi32 ( \_ _m256d)|
+|[_mm256_cvtpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtpd_ps)|AVX [2]|immintrin.h|__m128 _mm256_cvtpd_ps ( \_ _m256d)|
+|[_mm256_cvtph_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtph_ps)|F16C [2]|immintrin.h|__m256 _mm256_cvtph_ps ( \_ _m128i)|
+|[_mm256_cvtps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_epi32)|AVX [2]|immintrin.h|__m256i _mm256_cvtps_epi32 ( \_ _m256)|
+|[_mm256_cvtps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_pd)|AVX [2]|immintrin.h|__m256d _mm256_cvtps_pd ( \_ _m128)|
+|[_mm256_cvtps_ph](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvtps_ph)|F16C [2]|immintrin.h|__m128i _mm256_cvtps_ph ( \_ _m256、const int)|
+|[_mm256_cvttpd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvttpd_epi32)|AVX [2]|immintrin.h|__m128i _mm256_cvttpd_epi32 ( \_ _m256d)|
+|[_mm256_cvttps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cvttps_epi32)|AVX [2]|immintrin.h|__m256i _mm256_cvttps_epi32 ( \_ _m256)|
+|[_mm256_div_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_div_pd)|AVX [2]|immintrin.h|__m256d _mm256_div_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_div_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_div_ps)|AVX [2]|immintrin.h|__m256 _mm256_div_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_dp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_dp_ps)|AVX [2]|immintrin.h|__m256 _mm256_dp_ps ( \_ _m256、 \_ _m256、const int)|
+|[_mm256_extractf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_pd)|AVX [2]|immintrin.h|__m128d _mm256_extractf128_pd ( \_ _m256d、const int)|
+|[_mm256_extractf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_ps)|AVX [2]|immintrin.h|__m128 _mm256_extractf128_ps ( \_ _m256、const int)|
+|[_mm256_extractf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_si256)|AVX [2]|immintrin.h|__m128i _mm256_extractf128_si256 ( \_ _m256i、const int)|
+|[_mm256_extracti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extracti128_si256)|AVX2 [2]|immintrin.h|__m128i _mm256_extracti128_si256 ( \_ _m256i, int)|
+|[_mm256_fmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmadd_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_ps)|FMA [2]|immintrin.h|__m256 _mm256_fmadd_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_fmaddsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmaddsub_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmaddsub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fmaddsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmaddsub_ps)|FMA [2]|immintrin.h|__m256 _mm256_fmaddsub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_fmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsub_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmsub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsub_ps)|FMA [2]|immintrin.h|__m256 _mm256_fmsub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_fmsubadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsubadd_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmsubadd_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fmsubadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmsubadd_ps)|FMA [2]|immintrin.h|__m256 _mm256_fmsubadd_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_fnmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmadd_pd)|FMA [2]|immintrin.h|__m256d _mm256_fnmadd_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fnmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmadd_ps)|FMA [2]|immintrin.h|__m256 _mm256_fnmadd_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_fnmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_pd)|FMA [2]|immintrin.h|__m256d _mm256_fnmsub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|[_mm256_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_ps)|FMA [2]|immintrin.h|__m256 _mm256_fnmsub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|_mm256_frcz_pd|XOP [1]|ammintrin.h|__m256d _mm256_frcz_pd ( \_ _m256d)|
+|_mm256_frcz_ps|XOP [1]|ammintrin.h|__m256 _mm256_frcz_ps ( \_ _m256)|
+|[_mm256_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hadd_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_hadd_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_pd)|AVX [2]|immintrin.h|__m256d _mm256_hadd_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_hadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_ps)|AVX [2]|immintrin.h|__m256 _mm256_hadd_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_hadds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadds_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hadds_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_hsub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hsub_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_hsub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_hsub_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_pd)|AVX [2]|immintrin.h|__m256d _mm256_hsub_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_ps)|AVX [2]|immintrin.h|__m256 _mm256_hsub_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsubs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hsubs_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi32 (int const \* 、 \_ _m256i、const int)|
+|[_mm256_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi64 ( \_ _int64 const \* 、 \_ _m128i、const int)|
+|[_mm256_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i32gather_pd (二重 const \* 、 \_ _m128i、const int)|
+|[_mm256_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_i32gather_ps (float const \* 、 \_ _m256i、const int)|
+|[_mm256_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi32 (int const \* 、 \_ _m256i、const int)|
+|[_mm256_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi64 ( \_ _int64 const \* 、 \_ _m256i、const int)|
+|[_mm256_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i64gather_pd (二重 const \* 、 \_ _m256i、const int)|
+|[_mm256_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_i64gather_ps (float const \* 、 \_ _m256i、const int)|
+|[_mm256_insertf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_pd)|AVX [2]|immintrin.h|__m256d _mm256_insertf128_pd ( \_ _m256d、 \_ _m128d、int)|
+|[_mm256_insertf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_ps)|AVX [2]|immintrin.h|__m256 _mm256_insertf128_ps ( \_ _m256、 \_ _m128、int)|
+|[_mm256_insertf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_si256)|AVX [2]|immintrin.h|__m256i _mm256_insertf128_si256 ( \_ _m256i、 \_ _m128i、int)|
+|[_mm256_inserti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_inserti128_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_inserti128_si256 ( \_ _m256i、 \_ _m128i、int)|
+|[_mm256_lddqu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_lddqu_si256)|AVX [2]|immintrin.h|__m256i _mm256_lddqu_si256 ( \_ _m256i \* )|
+|[_mm256_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_pd)|AVX [2]|immintrin.h|__m256d _mm256_load_pd (二重 const \* )|
+|[_mm256_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_ps)|AVX [2]|immintrin.h|__m256 _mm256_load_ps (float const \* )|
+|[_mm256_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_si256)|AVX [2]|immintrin.h|__m256i _mm256_load_si256 ( \_ _m256i \* )|
+|[_mm256_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_pd)|AVX [2]|immintrin.h|__m256d _mm256_loadu_pd (二重 const \* )|
+|[_mm256_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_ps)|AVX [2]|immintrin.h|__m256 _mm256_loadu_ps (float const \* )|
+|[_mm256_loadu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_si256)|AVX [2]|immintrin.h|__m256i _mm256_loadu_si256 ( \_ _m256i \* )|
+|_mm256_macc_pd|FMA4 [1]|ammintrin.h|__m256d _mm_macc_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_macc_ps|FMA4 [1]|ammintrin.h|__m256 _mm_macc_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_madd_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_madd_epi16 ( \_ _m256i、 \_ _m256i)|
+|_mm256_maddsub_pd|FMA4 [1]|ammintrin.h|__m256d _mm_maddsub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_maddsub_ps|FMA4 [1]|ammintrin.h|__m256 _mm_maddsub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maddubs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_maddubs_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi32 ( \_ _m256i、int const \* 、 \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi64 ( \_ _m256i、 \_ _int64 const \* 、 \_ _m128i、 \_ _m256i、const int)|
+|[_mm256_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i32gather_pd ( \_ _m256d、二重 const \* 、 \_ _m128i、 \_ _m256d、const int)|
+|[_mm256_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_mask_i32gather_ps ( \_ _m256、float const \* 、 \_ _m256i、 \_ _m256、const int)|
+|[_mm256_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm256_mask_i64gather_epi32 ( \_ _m128i、int const \* 、 \_ _m256i、 \_ _m128i、const int)|
+|[_mm256_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i64gather_epi64 ( \_ _m256i、 \_ _int64 const \* 、 \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i64gather_pd ( \_ _m256d、二重 const \* 、 \_ _m256i、 \_ _m256d、const int)|
+|[_mm256_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_mask_i64gather_ps ( \_ _m128、float const \* 、 \_ _m256i、 \_ _m128、const int)|
+|[_mm256_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi32 (int const \* 、 \_ _m256i)|
+|[_mm256_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi64 ( \_ _int64 const \* 、 \_ _m256i)|
+|[_mm256_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_pd)|AVX [2]|immintrin.h|__m256d _mm256_maskload_pd (二重 const \* 、 \_ _m256i)|
+|[_mm256_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_ps)|AVX [2]|immintrin.h|__m256 _mm256_maskload_ps (float const \* 、 \_ _m256i)|
+|[_mm256_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi32 (int \* , \_ _m256i, \_ _m256i)|
+|[_mm256_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi64 ( \_ _int64 \* 、 \_ _m256i、 \_ _m256i)|
+|[_mm256_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_pd)|AVX [2]|immintrin.h|void _mm256_maskstore_pd (double \* 、 \_ _m256i、 \_ _m256d)|
+|[_mm256_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_ps)|AVX [2]|immintrin.h|void _mm256_maskstore_ps (float \* 、 \_ _m256i、 \_ _m256)|
+|[_mm256_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu32)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epu32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epu8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_max_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_pd)|AVX [2]|immintrin.h|__m256d _mm256_max_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_max_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_ps)|AVX [2]|immintrin.h|__m256 _mm256_max_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_min_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu32)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epu32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_min_epu8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_min_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_pd)|AVX [2]|immintrin.h|__m256d _mm256_min_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_min_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_min_ps)|AVX [2]|immintrin.h|__m256 _mm256_min_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_movedup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movedup_pd)|AVX [2]|immintrin.h|__m256d _mm256_movedup_pd ( \_ _m256d)|
+|[_mm256_movehdup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movehdup_ps)|AVX [2]|immintrin.h|__m256 _mm256_movehdup_ps ( \_ _m256)|
+|[_mm256_moveldup_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_moveldup_ps)|AVX [2]|immintrin.h|__m256 _mm256_moveldup_ps ( \_ _m256)|
+|[_mm256_movemask_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_epi8)|AVX2 [2]|immintrin.h|int _mm256_movemask_epi8 ( \_ _m256i)|
+|[_mm256_movemask_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_pd)|AVX [2]|immintrin.h|int _mm256_movemask_pd ( \_ _m256d)|
+|[_mm256_movemask_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_movemask_ps)|AVX [2]|immintrin.h|int _mm256_movemask_ps ( \_ _m256)|
+|[_mm256_mpsadbw_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mpsadbw_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_mpsadbw_epu8 ( \_ _m256i、 \_ _m256i、const int)|
+|_mm256_msub_pd|FMA4 [1]|ammintrin.h|__m256d _mm_msub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_msub_ps|FMA4 [1]|ammintrin.h|__m256 _mm_msub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|_mm256_msubadd_pd|FMA4 [1]|ammintrin.h|__m256d _mm_msubadd_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_msubadd_ps|FMA4 [1]|ammintrin.h|__m256 _mm_msubadd_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_mul_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_mul_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mul_epu32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_epu32)|AVX2 [2]|immintrin.h|__m256i _mm256_mul_epu32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mul_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_pd)|AVX [2]|immintrin.h|__m256d _mm256_mul_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_mul_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mul_ps)|AVX [2]|immintrin.h|__m256 _mm256_mul_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_mulhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhi_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_mulhi_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mulhi_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhi_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_mulhi_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mulhrs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mulhrs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_mulhrs_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mullo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mullo_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_mullo_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_mullo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mullo_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_mullo_epi32 ( \_ _m256i、 \_ _m256i)|
+|_mm256_nmacc_pd|FMA4 [1]|ammintrin.h|__m256d _mm_nmacc_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_nmacc_ps|FMA4 [1]|ammintrin.h|__m256 _mm_nmacc_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|_mm256_nmsub_pd|FMA4 [1]|ammintrin.h|__m256d _mm_nmsub_pd ( \_ _m256d、 \_ _m256d、 \_ _m256d)|
+|_mm256_nmsub_ps|FMA4 [1]|ammintrin.h|__m256 _mm_nmsub_ps ( \_ _m256、 \_ _m256、 \_ _m256)|
+|[_mm256_or_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_pd)|AVX [2]|immintrin.h|__m256d _mm256_or_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_or_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_ps)|AVX [2]|immintrin.h|__m256 _mm256_or_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_or_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_or_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_or_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_packs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_packs_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_packs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packs_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_packs_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_packus_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packus_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_packus_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packus_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_packus_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_pd)|AVX [2]|immintrin.h|__m256d _mm256_permute_pd ( \_ _m256d, int)|
+|[_mm256_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_ps)|AVX [2]|immintrin.h|__m256 _mm256_permute_ps ( \_ _m256, int)|
+|_mm256_permute2_pd|XOP [1]|ammintrin.h|__m256d _mm256_permute2_pd ( \_ _m256d、 \_ _m256d、 \_ _m256i、int)|
+|_mm256_permute2_ps|XOP [1]|ammintrin.h|__m256 _mm256_permute2_ps ( \_ _m256、 \_ _m256、 \_ _m256i、int)|
+|[_mm256_permute2f128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_pd)|AVX [2]|immintrin.h|__m256d _mm256_permute2f128_pd ( \_ _m256d、 \_ _m256d、int)|
+|[_mm256_permute2f128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_ps)|AVX [2]|immintrin.h|__m256 _mm256_permute2f128_ps ( \_ _m256、 \_ _m256、int)|
+|[_mm256_permute2f128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_si256)|AVX [2]|immintrin.h|__m256i _mm256_permute2f128_si256 ( \_ _m256i、 \_ _m256i、int)|
+|[_mm256_permute2x128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2x128_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_permute2x128_si256 ( \_ _m256i、 \_ _m256i、const int)|
+|[_mm256_permute4x64_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute4x64_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_permute4x64_epi64 ( \_ _m256i、const int)|
+|[_mm256_permute4x64_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute4x64_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_permute4x64_pd ( \_ _m256d、const int)|
+|[_mm256_permutevar_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar_pd)|AVX [2]|immintrin.h|__m256d _mm256_permutevar_pd ( \_ _m256d、 \_ _m256i)|
+|[_mm256_permutevar_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar_ps)|AVX [2]|immintrin.h|__m256 _mm256_permutevar_ps ( \_ _m256、 \_ _m256i)|
+|[_mm256_permutevar8x32_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar8x32_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_permutevar8x32_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_permutevar8x32_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permutevar8x32_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_permutevar8x32_ps ( \_ _m256、 \_ _m256i)|
+|[_mm256_rcp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_rcp_ps)|AVX [2]|immintrin.h|__m256 _mm256_rcp_ps ( \_ _m256)|
+|[_mm256_round_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_round_pd)|AVX [2]|immintrin.h|__m256d _mm256_round_pd ( \_ _m256d, int)|
+|[_mm256_round_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_round_ps)|AVX [2]|immintrin.h|__m256 _mm256_round_ps ( \_ _m256, int)|
+|[_mm256_rsqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_rsqrt_ps)|AVX [2]|immintrin.h|__m256 _mm256_rsqrt_ps ( \_ _m256)|
+|[_mm256_sad_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sad_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_sad_epu8 ( \_ _m256i、 \_ _m256i)|
 |[_mm256_set_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_epi16)|AVX [2]|immintrin.h|(__m256i _mm256_set_epi16(short|
-|[_mm256_set_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_epi32)|AVX [2]|immintrin.h|__m256i _mm256_set_epi32(int、int、int、int、int、int、int)|
-|[_mm256_set_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_epi8)|AVX [2]|immintrin.h|__m256i _mm256_set_epi8(char、 char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
-|[_mm256_set_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_pd)|AVX [2]|immintrin.h|__m256d _mm256_set_pd(ダブル、ダブル、ダブル、ダブル)|
-|[_mm256_set_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_ps)|AVX [2]|immintrin.h|__m256_mm256_set_ps(フロート、フロート、フロート、フロート、フロート、フロート、フロート)|
+|[_mm256_set_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_epi32)|AVX [2]|immintrin.h|__m256i _mm256_set_epi32 (int、int、int、int、int、int、int、int)|
+|[_mm256_set_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_epi8)|AVX [2]|immintrin.h|__m256i _mm256_set_epi8 (char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char, char)|
+|[_mm256_set_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_pd)|AVX [2]|immintrin.h|__m256d _mm256_set_pd (double、double、double、double)|
+|[_mm256_set_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set_ps)|AVX [2]|immintrin.h|__m256 _mm256_set_ps (float、float、float、float、float、float、float、float)|
 |[_mm256_set1_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set1_epi16)|AVX [2]|immintrin.h|__m256i _mm256_set1_epi16(short)|
 |[_mm256_set1_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set1_epi32)|AVX [2]|immintrin.h|__m256i _mm256_set1_epi32(int)|
 |[_mm256_set1_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set1_epi8)|AVX [2]|immintrin.h|__m256i _mm256_set1_epi8(char)|
 |[_mm256_set1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set1_pd)|AVX [2]|immintrin.h|__m256d _mm256_set1_pd(double)|
 |[_mm256_set1_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_set1_ps)|AVX [2]|immintrin.h|__m256 _mm256_set1_ps(float)|
 |[_mm256_setr_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_epi16)|AVX [2]|immintrin.h|(__m256i _mm256_setr_epi16(short|
-|[_mm256_setr_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_epi32)|AVX [2]|immintrin.h|__m256i_mm256_setr_epi32(int、int、int、int、int、int、int)|
+|[_mm256_setr_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_epi32)|AVX [2]|immintrin.h|__m256i _mm256_setr_epi32 (int、int、int、int、int、int、int、int)|
 |[_mm256_setr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_epi8)|AVX [2]|immintrin.h|(__m256i _mm256_setr_epi8(char|
-|[_mm256_setr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_pd)|AVX [2]|immintrin.h|__m256d_mm256_setr_pd(ダブル、ダブル、ダブル、ダブル)|
-|[_mm256_setr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_ps)|AVX [2]|immintrin.h|__m256_mm256_setr_ps(フロート、フロート、フロート、フロート、フロート、フロート、フロート)|
+|[_mm256_setr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_pd)|AVX [2]|immintrin.h|__m256d _mm256_setr_pd (double、double、double、double)|
+|[_mm256_setr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setr_ps)|AVX [2]|immintrin.h|__m256 _mm256_setr_ps (float、float、float、float、float、float、float、float)|
 |[_mm256_setzero_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setzero_pd)|AVX [2]|immintrin.h|__m256d _mm256_setzero_pd(void)|
 |[_mm256_setzero_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setzero_ps)|AVX [2]|immintrin.h|__m256 _mm256_setzero_ps(void)|
 |[_mm256_setzero_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_setzero_si256)|AVX [2]|immintrin.h|__m256i _mm256_setzero_si256(void)|
-|[_mm256_shuffle_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_shuffle_epi32(_m256i、const\_int)|
-|[_mm256_shuffle_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_shuffle_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_shuffle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_pd)|AVX [2]|immintrin.h|__m256d_mm256_shuffle_pd(_m256d、_m256d、const\_ \_int)|
-|[_mm256_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_ps)|AVX [2]|immintrin.h|__m256_mm256_shuffle_ps(_m256、_m256、const\_ \_int)|
-|[_mm256_shufflehi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shufflehi_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_shufflehi_epi16(_m256i、const\_int)|
-|[_mm256_shufflelo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shufflelo_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_shufflelo_epi16(_m256i、const\_int)|
-|[_mm256_sign_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_sign_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_sign_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_sign_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_sign_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_sign_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_sll_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_sll_epi16(_m256i、_m128i)\_ \_|
-|[_mm256_sll_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_sll_epi32(_m256i、_m128i)\_ \_|
-|[_mm256_sll_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_sll_epi64(_m256i、_m128i)\_ \_|
-|[_mm256_slli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_slli_epi16(_m256i、int)\_|
-|[_mm256_slli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_slli_epi32(_m256i、int)\_|
-|[_mm256_slli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_slli_epi64(_m256i、int)\_|
-|[_mm256_slli_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_slli_si256(_m256i、int)\_|
-|[_mm256_sllv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sllv_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_sllv_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_sllv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sllv_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_sllv_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_sqrt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sqrt_pd)|AVX [2]|immintrin.h|__m256d_mm256_sqrt_pd_m256d)\_|
-|[_mm256_sqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sqrt_ps)|AVX [2]|immintrin.h|__m256_mm256_sqrt_ps(_m256)\_|
-|[_mm256_sra_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sra_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_sra_epi16(_m256i、_m128i)\_ \_|
-|[_mm256_sra_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sra_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_sra_epi32(_m256i、_m128i)\_ \_|
-|[_mm256_srai_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srai_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_srai_epi16(_m256i、int)\_|
-|[_mm256_srai_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srai_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_srai_epi32(_m256i、int)\_|
-|[_mm256_srav_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srav_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_srav_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_srl_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_srl_epi16(_m256i、_m128i)\_ \_|
-|[_mm256_srl_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_srl_epi32(_m256i、_m128i)\_ \_|
-|[_mm256_srl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_srl_epi64(_m256i、_m128i)\_ \_|
-|[_mm256_srli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_srli_epi16(_m256i、int)\_|
-|[_mm256_srli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_srli_epi32(_m256i、int)\_|
-|[_mm256_srli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_srli_epi64(_m256i、int)\_|
-|[_mm256_srli_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_srli_si256(_m256i、int)\_|
-|[_mm256_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_srlv_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_srlv_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_pd)|AVX [2]|immintrin.h|ボイド_mm256_store_pd(ダブル\* \_、 _m256d)|
-|[_mm256_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_ps)|AVX [2]|immintrin.h|ボイド_mm256_store_ps(フロー\*ト\_、_m256)|
-|[_mm256_store_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_si256)|AVX [2]|immintrin.h|ボイド_mm256_store_si256(_m256i、_m256i)\_ \* \_|
-|[_mm256_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_pd)|AVX [2]|immintrin.h|void _mm256_storeu_pd(\*ダブル\_, _m256d)|
-|[_mm256_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_ps)|AVX [2]|immintrin.h|ボイド_mm256_storeu_ps(フロー\*ト\_、_m256)|
-|[_mm256_storeu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_si256)|AVX [2]|immintrin.h|ボイド_mm256_storeu_si256(_m256i、_m256i)\_ \* \_|
-|[_mm256_stream_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_load_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_stream_load_si256(\__m256i \*const )|
-|[_mm256_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_pd)|AVX [2]|immintrin.h|ボイド__mm256_stream_pd(ダブル\* \_、_m256d)|
-|[_mm256_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_ps)|AVX [2]|immintrin.h|ボイド_mm256_stream_ps(フロー\*ト\_、_m256)|
-|[_mm256_stream_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_si256)|AVX [2]|immintrin.h|ボイド__mm256_stream_si256(_m256i、_m256i)\_ \* \_|
-|[_mm256_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_sub_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_sub_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_sub_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_sub_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_sub_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_sub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_pd)|AVX [2]|immintrin.h|__m256d_mm256_sub_pd(_m256d、_m256d)\_ \_|
-|[_mm256_sub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_ps)|AVX [2]|immintrin.h|__m256_mm256_sub_ps(_m256、_m256)\_ \_|
-|[_mm256_subs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_subs_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_subs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_subs_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_subs_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epu16)|AVX2 [2]|immintrin.h|__m256i_mm256_subs_epu16(_m256i、_m256i)\_ \_|
-|[_mm256_subs_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epu8)|AVX2 [2]|immintrin.h|__m256i_mm256_subs_epu8(_m256i、_m256i)\_ \_|
-|[_mm256_testc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_pd)|AVX [2]|immintrin.h|int _mm256_testc_pd(_m256d、_m256d)\_ \_|
-|[_mm256_testc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_ps)|AVX [2]|immintrin.h|int _mm256_testc_ps(_m256、_m256)\_ \_|
-|[_mm256_testc_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_si256)|AVX [2]|immintrin.h|int _mm256_testc_si256(_m256i、_m256i)\_ \_|
-|[_mm256_testnzc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_pd)|AVX [2]|immintrin.h|int _mm256_testnzc_pd(_m256d、_m256d)\_ \_|
-|[_mm256_testnzc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_ps)|AVX [2]|immintrin.h|int _mm256_testnzc_ps(_m256、_m256)\_ \_|
-|[_mm256_testnzc_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_si256)|AVX [2]|immintrin.h|int _mm256_testnzc_si256(_m256i、_m256i)\_ \_|
-|[_mm256_testz_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_pd)|AVX [2]|immintrin.h|int _mm256_testz_pd(_m256d、_m256d)\_ \_|
-|[_mm256_testz_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_ps)|AVX [2]|immintrin.h|int _mm256_testz_ps(_m256、_m256)\_ \_|
-|[_mm256_testz_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_si256)|AVX [2]|immintrin.h|int _mm256_testz_si256(_m256i、_m256i)\_ \_|
-|[_mm256_unpackhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_unpackhi_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_unpackhi_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_unpackhi_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_unpackhi_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_unpackhi_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_unpackhi_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_unpackhi_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_unpackhi_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_pd)|AVX [2]|immintrin.h|__m256d_mm256_unpackhi_pd(_m256d、_m256d)\_ \_|
-|[_mm256_unpackhi_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_ps)|AVX [2]|immintrin.h|__m256_mm256_unpackhi_ps(_m256、_m256)\_ \_|
-|[_mm256_unpacklo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi16)|AVX2 [2]|immintrin.h|__m256i_mm256_unpacklo_epi16(_m256i、_m256i)\_ \_|
-|[_mm256_unpacklo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi32)|AVX2 [2]|immintrin.h|__m256i_mm256_unpacklo_epi32(_m256i、_m256i)\_ \_|
-|[_mm256_unpacklo_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi64)|AVX2 [2]|immintrin.h|__m256i_mm256_unpacklo_epi64(_m256i、_m256i)\_ \_|
-|[_mm256_unpacklo_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi8)|AVX2 [2]|immintrin.h|__m256i_mm256_unpacklo_epi8(_m256i、_m256i)\_ \_|
-|[_mm256_unpacklo_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_pd)|AVX [2]|immintrin.h|__m256d_mm256_unpacklo_pd(_m256d、_m256d)\_ \_|
-|[_mm256_unpacklo_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_ps)|AVX [2]|immintrin.h|__m256_mm256_unpacklo_ps(_m256、_m256)\_ \_|
-|[_mm256_xor_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_pd)|AVX [2]|immintrin.h|__m256d_mm256_xor_pd(_m256d、_m256d)\_ \_|
-|[_mm256_xor_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_ps)|AVX [2]|immintrin.h|__m256_mm256_xor_ps(_m256、_m256)\_ \_|
-|[_mm256_xor_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_si256)|AVX2 [2]|immintrin.h|__m256i_mm256_xor_si256(_m256i、_m256i)\_ \_|
+|[_mm256_shuffle_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_shuffle_epi32 ( \_ _m256i、const int)|
+|[_mm256_shuffle_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_shuffle_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_shuffle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_pd)|AVX [2]|immintrin.h|__m256d _mm256_shuffle_pd ( \_ _m256d、 \_ _m256d、const int)|
+|[_mm256_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shuffle_ps)|AVX [2]|immintrin.h|__m256 _mm256_shuffle_ps ( \_ _m256、 \_ _m256、const int)|
+|[_mm256_shufflehi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shufflehi_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_shufflehi_epi16 ( \_ _m256i、const int)|
+|[_mm256_shufflelo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_shufflelo_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_shufflelo_epi16 ( \_ _m256i、const int)|
+|[_mm256_sign_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_sign_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sign_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sign_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sign_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sign_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_sign_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sll_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_sll_epi16 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_sll_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sll_epi32 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_sll_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sll_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_sll_epi64 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_slli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_slli_epi16 ( \_ _m256i, int)|
+|[_mm256_slli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_slli_epi32 ( \_ _m256i, int)|
+|[_mm256_slli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_slli_epi64 ( \_ _m256i, int)|
+|[_mm256_slli_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_slli_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_slli_si256 ( \_ _m256i, int)|
+|[_mm256_sllv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sllv_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sllv_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sllv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sllv_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_sllv_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sqrt_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sqrt_pd)|AVX [2]|immintrin.h|__m256d _mm256_sqrt_pd ( \_ _m256d)|
+|[_mm256_sqrt_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sqrt_ps)|AVX [2]|immintrin.h|__m256 _mm256_sqrt_ps ( \_ _m256)|
+|[_mm256_sra_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sra_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_sra_epi16 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_sra_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sra_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sra_epi32 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_srai_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srai_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_srai_epi16 ( \_ _m256i, int)|
+|[_mm256_srai_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srai_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srai_epi32 ( \_ _m256i, int)|
+|[_mm256_srav_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srav_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srav_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_srl_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_srl_epi16 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_srl_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srl_epi32 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_srl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srl_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_srl_epi64 ( \_ _m256i、 \_ _m128i)|
+|[_mm256_srli_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_srli_epi16 ( \_ _m256i, int)|
+|[_mm256_srli_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srli_epi32 ( \_ _m256i, int)|
+|[_mm256_srli_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_srli_epi64 ( \_ _m256i, int)|
+|[_mm256_srli_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_srli_si256 ( \_ _m256i, int)|
+|[_mm256_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srlv_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_srlv_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_pd)|AVX [2]|immintrin.h|void _mm256_store_pd (double \* 、 \_ _m256d)|
+|[_mm256_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_ps)|AVX [2]|immintrin.h|void _mm256_store_ps (float \* 、 \_ _m256)|
+|[_mm256_store_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_si256)|AVX [2]|immintrin.h|void _mm256_store_si256 ( \_ _m256i \* 、 \_ _m256i)|
+|[_mm256_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_pd)|AVX [2]|immintrin.h|void _mm256_storeu_pd (double \* 、 \_ _m256d)|
+|[_mm256_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_ps)|AVX [2]|immintrin.h|void _mm256_storeu_ps (float \* 、 \_ _m256)|
+|[_mm256_storeu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_si256)|AVX [2]|immintrin.h|void _mm256_storeu_si256 ( \_ _m256i \* 、 \_ _m256i)|
+|[_mm256_stream_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_load_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_stream_load_si256 ( \_ _m256i const \* )|
+|[_mm256_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_pd)|AVX [2]|immintrin.h|void __mm256_stream_pd (double \* 、 \_ _m256d)|
+|[_mm256_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_ps)|AVX [2]|immintrin.h|void _mm256_stream_ps (float \* 、 \_ _m256)|
+|[_mm256_stream_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_si256)|AVX [2]|immintrin.h|void __mm256_stream_si256 ( \_ _m256i \* 、 \_ _m256i)|
+|[_mm256_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sub_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_sub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_pd)|AVX [2]|immintrin.h|__m256d _mm256_sub_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_sub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_ps)|AVX [2]|immintrin.h|__m256 _mm256_sub_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_subs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_subs_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_subs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_subs_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_subs_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epu16)|AVX2 [2]|immintrin.h|__m256i _mm256_subs_epu16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_subs_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_subs_epu8)|AVX2 [2]|immintrin.h|__m256i _mm256_subs_epu8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_testc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_pd)|AVX [2]|immintrin.h|int _mm256_testc_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_testc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_ps)|AVX [2]|immintrin.h|int _mm256_testc_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_testc_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testc_si256)|AVX [2]|immintrin.h|int _mm256_testc_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_testnzc_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_pd)|AVX [2]|immintrin.h|int _mm256_testnzc_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_testnzc_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_ps)|AVX [2]|immintrin.h|int _mm256_testnzc_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_testnzc_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testnzc_si256)|AVX [2]|immintrin.h|int _mm256_testnzc_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_testz_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_pd)|AVX [2]|immintrin.h|int _mm256_testz_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_testz_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_ps)|AVX [2]|immintrin.h|int _mm256_testz_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_testz_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_testz_si256)|AVX [2]|immintrin.h|int _mm256_testz_si256 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpackhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_unpackhi_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpackhi_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_unpackhi_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpackhi_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_unpackhi_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpackhi_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_unpackhi_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpackhi_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_pd)|AVX [2]|immintrin.h|__m256d _mm256_unpackhi_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_unpackhi_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpackhi_ps)|AVX [2]|immintrin.h|__m256 _mm256_unpackhi_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_unpacklo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_unpacklo_epi16 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpacklo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_unpacklo_epi32 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpacklo_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_unpacklo_epi64 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpacklo_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_unpacklo_epi8 ( \_ _m256i、 \_ _m256i)|
+|[_mm256_unpacklo_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_pd)|AVX [2]|immintrin.h|__m256d _mm256_unpacklo_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_unpacklo_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_unpacklo_ps)|AVX [2]|immintrin.h|__m256 _mm256_unpacklo_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_xor_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_pd)|AVX [2]|immintrin.h|__m256d _mm256_xor_pd ( \_ _m256d、 \_ _m256d)|
+|[_mm256_xor_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_ps)|AVX [2]|immintrin.h|__m256 _mm256_xor_ps ( \_ _m256、 \_ _m256)|
+|[_mm256_xor_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_xor_si256 ( \_ _m256i、 \_ _m256i)|
 |[_mm256_zeroall](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_zeroall)|AVX [2]|immintrin.h|void _mm256_zeroall(void)|
 |[_mm256_zeroupper](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_zeroupper)|AVX [2]|immintrin.h|void _mm256_zeroupper(void)|
-|[__movsb](movsb.md)||intrin.h|void __movsb (符号\*なし char 、\*符号なし char const 、 size_t)|
-|[__movsd](movsd.md)||intrin.h|void __movsd(符号なし\*長い 、\*符号なし長い定数 、 size_t)|
-|[__movsw](movsw.md)||intrin.h|void __movsw (符号\*なしショート 、\*符号なし短い定数 、 size_t)|
-|_mulx_u32|BMI [2]|immintrin.h|符号なし int _mulx_u32 (符号なし、符号なし、符号なし int、符号なし int\*)|
+|[__movsb](movsb.md)||intrin.h|void __movsb (unsigned char \* 、unsigned char const \* 、size_t)|
+|[__movsd](movsd.md)||intrin.h|void __movsd (unsigned long \* 、unsigned long const \* 、size_t)|
+|[__movsw](movsw.md)||intrin.h|void __movsw (unsigned short \* 、unsigned short const \* 、size_t)|
+|_mulx_u32|BMI [2]|immintrin.h|unsigned int _mulx_u32 (符号なし整数、符号なし整数、符号なし int \* )|
 |[__nop](nop.md)||intrin.h|void __nop(void)|
 |__nvreg_restore_fence||intrin.h|void __nvreg_restore_fence(void)|
 |__nvreg_save_fence||intrin.h|void __nvreg_save_fence(void)|
-|[__outbyte](outbyte.md)||intrin.h|void __outbyte (符号なしの短い、符号なしの文字)|
-|[__outbytestring](outbytestring.md)||intrin.h|void __outbytestring (符号なしの短い\*、符号なし char 、符号なし長)|
-|[__outdword](outdword.md)||intrin.h|void __outdword (符号なしの短い、符号なし長)|
-|[__outdwordstring](outdwordstring.md)||intrin.h|void __outdwordstring(符号なしの短い、\*符号なし長、符号なし長)|
-|[__outword](outword.md)||intrin.h|void __outword(符号なしショート、符号なしショート)|
-|[__outwordstring](outwordstring.md)||intrin.h|void __outwordstring(符号なしの短い、\*符号なしの短い、符号なし長)|
-|[_pdep_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pdep_u32)|BMI [2]|immintrin.h|符号なし int _pdep_u32(符号なし、符号なし int)|
-|[_pext_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pext_u32)|BMI [2]|immintrin.h|符号なし int _pext_u32 (符号なし、符号なし int)|
+|[__outbyte](outbyte.md)||intrin.h|void __outbyte (unsigned short、unsigned char)|
+|[__outbytestring](outbytestring.md)||intrin.h|void __outbytestring (unsigned short、unsigned char \* 、unsigned long)|
+|[__outdword](outdword.md)||intrin.h|void __outdword (unsigned short、unsigned long)|
+|[__outdwordstring](outdwordstring.md)||intrin.h|void __outdwordstring (unsigned short、unsigned long \* 、unsigned long)|
+|[__outword](outword.md)||intrin.h|void __outword (unsigned short、unsigned short)|
+|[__outwordstring](outwordstring.md)||intrin.h|void __outwordstring (unsigned short、unsigned short \* 、unsigned long)|
+|[_pdep_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pdep_u32)|BMI [2]|immintrin.h|unsigned int _pdep_u32 (符号なし整数、符号なし int)|
+|[_pext_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pext_u32)|BMI [2]|immintrin.h|unsigned int _pext_u32 (符号なし整数、符号なし int)|
 |[__popcnt](popcnt16-popcnt-popcnt64.md)|POPCNT|intrin.h|unsigned int __popcnt(unsigned int)|
 |[__popcnt16](popcnt16-popcnt-popcnt64.md)|POPCNT|intrin.h|unsigned short __popcnt16(unsigned short)|
-|[_rdrand16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand16_step)|RDRAND [2]|immintrin.h|int _rdrand16_step (符号\*なしショート)|
-|[_rdrand32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand32_step)|RDRAND [2]|immintrin.h|int _rdrand32_step (符号なし\*int )|
-|[_rdseed16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed16_step)|RDSEED [2]|immintrin.h|int _rdseed16_step (符号\*なしショート)|
-|[_rdseed32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed32_step)|RDSEED [2]|immintrin.h|int _rdseed32_step (符号なし\*int )|
-|[__rdtsc](rdtsc.md)||intrin.h|未署名の\___int64 _rdtsc(無効)|
-|[__rdtscp](rdtscp.md)|RDTSCP|intrin.h|署名されていない__int64 \__rdtscp (署名なし\*の int )|
+|[_rdrand16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand16_step)|RDRAND [2]|immintrin.h|int _rdrand16_step (unsigned short \* )|
+|[_rdrand32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand32_step)|RDRAND [2]|immintrin.h|int _rdrand32_step (符号なし int \* )|
+|[_rdseed16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed16_step)|RDSEED [2]|immintrin.h|int _rdseed16_step (unsigned short \* )|
+|[_rdseed32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed32_step)|RDSEED [2]|immintrin.h|int _rdseed32_step (符号なし int \* )|
+|[__rdtsc](rdtsc.md)||intrin.h|署名されていない __int64 \_ _rdtsc (void)|
+|[__rdtscp](rdtscp.md)|RDTSCP|intrin.h|符号なし __int64 \_ _rdtscp (unsigned int \* )|
 |[_ReadBarrier](readbarrier.md)||intrin.h|void _ReadBarrier(void)|
 |[__readcr0](readcr0.md)||intrin.h|unsigned long __readcr0(void)|
 |[__readcr2](readcr2.md)||intrin.h|unsigned long __readcr2(void)|
@@ -3526,39 +3559,39 @@ ms.locfileid: "81754302"
 |[__readcr8](readcr8.md)||intrin.h|unsigned long __readcr8(void)|
 |[__readdr](readdr.md)||intrin.h|unsigned __readdr(unsigned)|
 |[__readeflags](readeflags.md)||intrin.h|unsigned __readeflags(void)|
-|[__readfsbyte](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|符号なし文字__readfsbyte(符号なし長)|
-|[__readfsdword](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|符号なし長__readfsdword(符号なし長)|
-|[__readfsword](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|符号なしの短__readfsword(符号なし長)|
-|[__readmsr](readmsr.md)||intrin.h|未署名の\___int64 _readmsr(符号なし長)|
-|[__readpmc](readpmc.md)||intrin.h|符号なし__int64 \__readpmc(符号なし長)|
+|[__readfsbyte](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|unsigned char __readfsbyte (unsigned long)|
+|[__readfsdword](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|unsigned long __readfsdword (unsigned long)|
+|[__readfsword](readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|unsigned short __readfsword (unsigned long)|
+|[__readmsr](readmsr.md)||intrin.h|符号なし __int64 \_ _readmsr (unsigned long)|
+|[__readpmc](readpmc.md)||intrin.h|符号なし __int64 \_ _readpmc (unsigned long)|
 |[_ReadWriteBarrier](readwritebarrier.md)||intrin.h|void _ReadWriteBarrier(void)|
-|[_ReturnAddress](returnaddress.md)||intrin.h|ボイド\*_ReturnAddress(ボイド)|
-|_rorx_u32|BMI [2]|immintrin.h|符号なし int _rorx_u32 (符号なし、const 符号なし int)|
-|[_rotl16](rotl8-rotl16.md)||intrin.h|符号なしの短い_rotl16(符号なしの短い、符号なし char)|
-|[_rotl8](rotl8-rotl16.md)||intrin.h|符号なし文字_rotl8(符号なし文字、符号なし char)|
-|[_rotr16](rotr8-rotr16.md)||intrin.h|符号なしの短い_rotr16(符号なしの短い、符号なし char)|
-|[_rotr8](rotr8-rotr16.md)||intrin.h|符号なし文字_rotr8(符号なし文字、符号なし char)|
+|[_ReturnAddress](returnaddress.md)||intrin.h|void \* _ReturnAddress (void)|
+|_rorx_u32|BMI [2]|immintrin.h|unsigned int _rorx_u32 (符号なし int、const unsigned int)|
+|[_rotl16](rotl8-rotl16.md)||intrin.h|unsigned short _rotl16 (unsigned short、unsigned char)|
+|[_rotl8](rotl8-rotl16.md)||intrin.h|unsigned char _rotl8 (unsigned char, unsigned char)|
+|[_rotr16](rotr8-rotr16.md)||intrin.h|unsigned short _rotr16 (unsigned short、unsigned char)|
+|[_rotr8](rotr8-rotr16.md)||intrin.h|unsigned char _rotr8 (unsigned char, unsigned char)|
 |_rsm||intrin.h|void _rsm(void)|
-|_sarx_i32|BMI [2]|immintrin.h|int _sarx_i32(int、未署名の int)|
-|[__segmentlimit](segmentlimit.md)||intrin.h|符号なし長__segmentlimit(符号なし長)|
-|_sgdt||intrin.h|ボイド_sgdt(ボイド\*)|
-|_shlx_u32|BMI [2]|immintrin.h|符号なし int _shlx_u32 (符号なし、符号なし int)|
-|_shrx_u32|BMI [2]|immintrin.h|符号なし int _shrx_u32 (符号なし、符号なし int)|
-|[__sidt](sidt.md)||intrin.h|ボイド__sidt(ボイド\*)|
-|__slwpcb|LWP [1]|ammintrin.h|ボイド\*__slwpcb(ボイド)|
+|_sarx_i32|BMI [2]|immintrin.h|int _sarx_i32 (int, unsigned int)|
+|[__segmentlimit](segmentlimit.md)||intrin.h|unsigned long __segmentlimit (unsigned long)|
+|_sgdt||intrin.h|void _sgdt (void \* )|
+|_shlx_u32|BMI [2]|immintrin.h|unsigned int _shlx_u32 (符号なし整数、符号なし int)|
+|_shrx_u32|BMI [2]|immintrin.h|unsigned int _shrx_u32 (符号なし整数、符号なし int)|
+|[__sidt](sidt.md)||intrin.h|void __sidt (void \* )|
+|__slwpcb|LWP [1]|ammintrin.h|void \* __slwpcb (void)|
 |_stac|SMAP|intrin.h|void _stac(void)|
-|_store_be_u16<br /><br /> [_storebe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i16&expand=5141)|MOVBE|immintrin.h|void _store_be_u16(void \*、 符号なしショート)<br /><br /> ボイド_storebe_i16(void,\*短い);[3]|
-|_store_be_u32<br /><br /> [_storebe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i32&expand=5142)|MOVBE|immintrin.h|void _store_be_u32(void \*、 符号なし int);<br /><br /> ボイド_storebe_i32(ボイド\*、int);[3]|
-|_Store_HLERelease|HLE [2]|immintrin.h|ボイド_Store_HLERelease(長揮発性\*、長)|
-|_StorePointer_HLERelease|HLE [2]|immintrin.h|ボイド_StorePointer_HLERelease(ボイド\*揮発性\*、\*ボイド)|
-|[__stosb](stosb.md)||intrin.h|void __stosb(符号なし\*文字、符号なし文字、size_t)|
-|[__stosd](stosd.md)||intrin.h|void __stosd(符号なし\*長、符号なし長、size_t)|
-|[__stosw](stosw.md)||intrin.h|void __stosw(符号なし\*ショート、符号なしショート、size_t)|
-|_subborrow_u16||intrin.h|符号なし char _subborrow_u16 (符号なし char、符号なしの短い、符号\*なしの短い、符号なしの短い)|
-|[_subborrow_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_subborrow_u32)||intrin.h|符号なし char _subborrow_u32 (符号なし char、符号なし int、符号なし int、符号なし int \*)|
-|_subborrow_u8||intrin.h|符号なし char _subborrow_u8 (符号なし char、符号なし char、符号なし\*文字、符号なし char、符号なし char )|
+|_store_be_u16<br /><br /> [_storebe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i16&expand=5141)|MOVBE|immintrin.h|void _store_be_u16 (void \* , unsigned short);<br /><br /> void _storebe_i16 (void \* , short);番|
+|_store_be_u32<br /><br /> [_storebe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i32&expand=5142)|MOVBE|immintrin.h|void _store_be_u32 (void \* , unsigned int);<br /><br /> void _storebe_i32 (void \* , int);番|
+|_Store_HLERelease|HLE [2]|immintrin.h|void _Store_HLERelease (long volatile \* 、long)|
+|_StorePointer_HLERelease|HLE [2]|immintrin.h|void _StorePointer_HLERelease (void \* volatile \* 、void \* )|
+|[__stosb](stosb.md)||intrin.h|void __stosb (unsigned char \* 、unsigned char、size_t)|
+|[__stosd](stosd.md)||intrin.h|void __stosd (unsigned long \* 、unsigned long、size_t)|
+|[__stosw](stosw.md)||intrin.h|void __stosw (unsigned short \* 、unsigned short、size_t)|
+|_subborrow_u16||intrin.h|unsigned char _subborrow_u16 (unsigned char、unsigned short、unsigned short、unsigned short \* )|
+|[_subborrow_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_subborrow_u32)||intrin.h|unsigned char _subborrow_u32 (unsigned char、unsigned int、unsigned int、unsigned int \* )|
+|_subborrow_u8||intrin.h|unsigned char _subborrow_u8 (unsigned char、unsigned char、unsigned char、unsigned char \* )|
 |[__svm_clgi](svm-clgi.md)||intrin.h|void __svm_clgi(void)|
-|[__svm_invlpga](svm-invlpga.md)||intrin.h|ボイド__svm_invlpga(ボイド\*、int)|
+|[__svm_invlpga](svm-invlpga.md)||intrin.h|void __svm_invlpga (void \* , int)|
 |[__svm_skinit](svm-skinit.md)||intrin.h|void __svm_skinit(int)|
 |[__svm_stgi](svm-stgi.md)||intrin.h|void __svm_stgi(void)|
 |[__svm_vmload](svm-vmload.md)||intrin.h|void __svm_vmload(size_t)|
@@ -3568,35 +3601,35 @@ ms.locfileid: "81754302"
 |[_tzcnt_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_tzcnt_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _tzcnt_u32(unsigned int)|
 |_tzmsk_u32|ABM [1]|ammintrin.h|unsigned int _tzmsk_u32(unsigned int)|
 |[__ud2](ud2.md)||intrin.h|void __ud2(void)|
-|[_udiv64](udiv64.md)||intrin.h|符号なし int \_udiv64 \_(未署名の_int64、符号なし int、符号なし int \*)|
-|[__ull_rshift](ull-rshift.md)||intrin.h|符号なし__int64 [パスカル/cdecl] \__ull_rshift(\_符号なし_int64、int)|
+|[_udiv64](udiv64.md)||intrin.h|unsigned int \_ udiv64 (unsigned \_ _int64、unsigned int、unsigned int \* )|
+|[__ull_rshift](ull-rshift.md)||intrin.h|unsigned __int64 [pascal/cdecl] \_ _ull_rshift (符号なし \_ _int64, int)|
 |[__vmx_off](vmx-off.md)||intrin.h|void __vmx_off(void)|
-|[__vmx_vmptrst](vmx-vmptrst.md)||intrin.h|void __vmx_vmptrst (\_署名\*されていない_int64 )|
+|[__vmx_vmptrst](vmx-vmptrst.md)||intrin.h|void __vmx_vmptrst (unsigned \_ _int64 \* )|
 |[__wbinvd](wbinvd.md)||intrin.h|void __wbinvd(void)|
 |[_WriteBarrier](writebarrier.md)||intrin.h|void _WriteBarrier(void)|
 |[__writecr0](writecr0.md)||intrin.h|void __writecr0(unsigned long)|
 |[__writecr3](writecr3.md)||intrin.h|void __writecr3(unsigned long)|
 |[__writecr4](writecr4.md)||intrin.h|void __writecr4(unsigned long)|
 |[__writecr8](writecr8.md)||intrin.h|void __writecr8(unsigned long)|
-|[__writedr](writedr.md)||intrin.h|void __writedr (未署名、未署名)|
+|[__writedr](writedr.md)||intrin.h|void __writedr (符号なし、符号なし)|
 |[__writeeflags](writeeflags.md)||intrin.h|void __writeeflags(unsigned)|
-|[__writefsbyte](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsbyte (符号なし長、符号なし文字)|
-|[__writefsdword](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsdword(符号なし長、符号なし長)|
-|[__writefsword](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsword(符号なし長、符号なしショート)|
-|[__writemsr](writemsr.md)||intrin.h|void __writemsr (符号なし長、\_符号なし_int64)|
+|[__writefsbyte](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsbyte (unsigned long、unsigned char)|
+|[__writefsdword](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsdword (unsigned long、unsigned long)|
+|[__writefsword](writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsword (unsigned long、unsigned short)|
+|[__writemsr](writemsr.md)||intrin.h|void __writemsr (unsigned long、unsigned \_ _int64)|
 |[_xabort](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xabort)|RTM [2]|immintrin.h|void _xabort(unsigned int)|
 |[_xbegin](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xbegin)|RTM [2]|immintrin.h|unsigned _xbegin(void)|
 |[_xend](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xend)|RTM [2]|immintrin.h|void _xend(void)|
 |[_xgetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xgetbv)|XSAVE [2]|immintrin.h|unsigned __int64 _xgetbv(unsigned int)|
-|[_xrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xrstor)|XSAVE [2]|immintrin.h|void _xrstor(void\*const \_、符号なし_int64)|
-|[_xsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsave)|XSAVE [2]|immintrin.h|void _xsave(void\*、\_符号なし_int64)|
-|[_xsaveopt](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsaveopt)|XSAVEOPT [2]|immintrin.h|void _xsaveopt\*(void \_, 未署名_int64)|
-|[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (符号なし、符号\_なし_int64)|
+|[_xrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xrstor)|XSAVE [2]|immintrin.h|void _xrstor (void const \* 、unsigned \_ _int64)|
+|[_xsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsave)|XSAVE [2]|immintrin.h|void _xsave (void \* 、unsigned \_ _int64)|
+|[_xsaveopt](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsaveopt)|XSAVEOPT [2]|immintrin.h|void _xsaveopt (void \* 、unsigned \_ _int64)|
+|[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (符号なし整数、符号なし \_ _int64)|
 |[_xtest](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xtest)|XTEST [2]|immintrin.h|unsigned char _xtest(void)|
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](compiler-intrinsics.md)\
+[コンパイラの組み込み](compiler-intrinsics.md)\
 [ARM 組み込み](arm-intrinsics.md)\
 [ARM64 組み込み](arm64-intrinsics.md)\
 [x64 (amd64) 組み込み](x64-amd64-intrinsics-list.md)

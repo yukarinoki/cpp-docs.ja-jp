@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318656"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610700"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -30,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>メンバー
 
-プラットフォーム::配列は、プラットフォームからすべてのメソッドを継承します[:WriteOnlyArrayクラス](../cppcx/platform-writeonlyarray-class.md)とのプロパティ`Value`を実装します[Platform::IBoxArray Interface](../cppcx/platform-iboxarray-interface.md)。
+Platform:: Array は、 [platform:: WriteOnlyArray クラス](../cppcx/platform-writeonlyarray-class.md) からすべてのメソッドを継承し、 `Value` [Platform:: iboxarray インターフェイス](../cppcx/platform-iboxarray-interface.md)のプロパティを実装します。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[Array コンストラクター](#ctor)|クラス テンプレート パラメーター *T*で指定された型の 1 次元の変更可能な配列を初期化します。|
+|[Array コンストラクター](#ctor)|クラステンプレートパラメーター *T*によって指定された型の、変更可能な1次元配列を初期化します。|
 
 ### <a name="methods"></a>メソッド
 
-[「プラットフォーム::WriteOnlyArray クラス](../cppcx/platform-writeonlyarray-class.md)」を参照してください。
+[Platform:: WriteOnlyArray クラス](../cppcx/platform-writeonlyarray-class.md)を参照してください。
 
 ### <a name="properties"></a>プロパティ
 
 |||
 |-|-|
-|[配列::値](#value)|現在の配列へのハンドルを取得します。|
+|[Array:: Value](#value)|現在の配列へのハンドルを取得します。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この Array クラスはシール クラスであり、継承できません。
 
-Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、IVector<プラットフォーム::配列\<T>> を戻り値またはメソッド パラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
+Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、を `IVector<Platform::Array<T>>` 戻り値またはメソッドパラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
-プラットフォームを使用するタイミングと方法の詳細については、「[配列と WriteOnlyArray」](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
+Platform:: Array を使用するタイミングと方法の詳細については、「 [array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 
-このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、platform.winmd で定義されたパブリック型ではないため、IntelliSense では表示されますが、オブジェクト ブラウザーでは表示されません。
+このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、IntelliSense では表示できますが、オブジェクトブラウザーでは表示されません。これは、platform. winmd で定義されているパブリック型ではないためです。
 
 ### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/ZW**
 
-## <a name="array-constructors"></a><a name="ctor"></a>配列コンストラクタ
+## <a name="array-constructors"></a><a name="ctor"></a> 配列コンストラクター
 
-クラス テンプレート パラメーター *T*で指定された型の 1 次元の変更可能な配列を初期化します。
+クラステンプレートパラメーター *T*によって指定された型の、変更可能な1次元配列を初期化します。
 
 ## <a name="syntax"></a>構文
 
@@ -78,17 +78,17 @@ Array(T* data, unsigned int size);
 *T*<br/>
 クラス テンプレート パラメーター。
 
-*サイズ*<br/>
+*size*<br/>
 配列の要素数。
 
-*データ*<br/>
+*data*<br/>
 この Array オブジェクトを初期化するために使用する型 `T` のデータ配列へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-プラットフォームのインスタンスを作成する方法の詳細については、「[配列と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
+Platform:: Array のインスタンスを作成する方法の詳細については、「 [array および WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 
-## <a name="arrayget-method"></a><a name="get"></a>配列::メソッドを取得します。
+## <a name="arrayget-method"></a><a name="get"></a> Array:: get メソッド
 
 指定されたインデックス位置にある配列要素への参照を取得します。
 
@@ -100,14 +100,14 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>パラメーター
 
-*index*<br/>
-配列の要素を識別する 0 から始まるインデックス。 最小インデックスは 0 で、最大インデックスは Array コンストラクタ`size`のパラメータで指定された値[です](#ctor)。
+*インデックス*<br/>
+配列の要素を識別する 0 から始まるインデックス。 最小インデックスは0、最大インデックスは `size` [配列コンストラクター](#ctor)のパラメーターによって指定された値です。
 
 ### <a name="return-value"></a>戻り値
 
 `index` パラメーターで指定された配列要素。
 
-## <a name="arrayvalue-property"></a><a name="value"></a>配列::値プロパティ
+## <a name="arrayvalue-property"></a><a name="value"></a> Array:: Value プロパティ
 
 現在の配列へのハンドルを取得します。
 
