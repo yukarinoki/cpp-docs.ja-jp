@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 9f1a984d38bed9dd3795164e355c7ccac100ae6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232886"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562078"
 ---
 # <a name="sync_shared-class"></a>sync_shared クラス
 
@@ -32,15 +32,14 @@ class sync_shared
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+*Cache*\
+同期フィルターに関連付けられているキャッシュの型。 、、またはを指定でき [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) ます。
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[allocate](#allocate)|メモリのブロックを割り当てます。|
+|[割当て](#allocate)|メモリのブロックを割り当てます。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
@@ -50,7 +49,7 @@ class sync_shared
 
 **名前空間:** stdext
 
-## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared:: allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a> sync_shared:: allocate
 
 メモリのブロックを割り当てます。
 
@@ -60,9 +59,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*count*|割り当てられる配列内の要素の数。|
+*数*\
+割り当てられる配列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -72,7 +70,7 @@ void *allocate(std::size_t count);
 
 メンバー関数はミューテックスをロックし、`cache.allocate(count)` を呼び出し、ミューテックスをロック解除し、以前の `cache.allocate(count)` の呼び出しの結果を返します。 `cache` はキャッシュ オブジェクトを表します。
 
-## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::d eallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a> sync_shared::d eallocate
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
+*ポインター*\
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
+
+*数*\
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、ミューテックスをロックし、`cache.deallocate(ptr, count)` (`cache` はキャッシュ オブジェクトを表す) を呼び出し、その後ミューテックスをロック解除します。
 
-## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared:: equals
+## <a name="sync_sharedequals"></a><a name="equals"></a> sync_shared:: equals
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -101,10 +100,11 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。|
-|*その他*|等しいかどうかを比較するキャッシュ。|
+*Cache*\
+同期フィルターに関連付けられているキャッシュの型。
+
+*他の*\
+等しいかどうかを比較するキャッシュ。
 
 ### <a name="return-value"></a>戻り値
 

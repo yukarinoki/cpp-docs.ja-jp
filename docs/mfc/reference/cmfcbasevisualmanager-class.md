@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CMFCBaseVisualManager クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseVisualManager
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754890"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561324"
 ---
-# <a name="cmfcbasevisualmanager-class"></a>クラス
+# <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager クラス
 
-派生ビジュアル マネージャーと Windows テーマ API 間のレイヤー。
+派生ビジュアルマネージャーと Windows テーマ API 間のレイヤー。
 
-`CMFCBaseVisualManager`UxTheme.dll が使用可能な場合は読み込み、Windows テーマ API メソッドへのアクセスを管理します。
+`CMFCBaseVisualManager` 使用可能な場合は UxTheme.dll を読み込み、Windows Theme API メソッドへのアクセスを管理します。
 
-このクラスは内部使用専用です。
+このクラスは、内部でのみ使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -56,7 +56,7 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名前|説明|
-|[マネージャーマネージャー](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
+|[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -64,42 +64,42 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名前|説明|
-|[:Dロー チェック ボックス](#drawcheckbox)|現在の Windows テーマを使用してチェック ボックス コントロールを描画します。|
-|[をクリック :Dします。](#drawcomboborder)|現在の Windows テーマを使用してコンボ ボックスの境界線を描画します。|
-|[をクリック :Dします。](#drawcombodropbutton)|現在の Windows テーマを使用してコンボ ボックスのドロップダウン ボタンを描画します。|
-|[ダブルクリックトビラのマネージャー::Dロープッシュボタン](#drawpushbutton)|現在の Windows テーマを使用してプッシュ ボタンを描画します。|
-|[:Dローラジオボタン](#drawradiobutton)|現在の Windows テーマを使用して、ラジオ ボタン コントロールを描画します。|
-|[をクリック :Dします。](#drawstatusbarprogress)|現在の Windows テーマを使用して、ステータス バー コントロール ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) にプログレス バーを描画します。|
-|[ウィンドウウィンドウ::フィルバーペイン](#fillrebarpane)|現在の Windows テーマを使用して、Rebar コントロールの背景を塗りつぶします。|
-|[ウィンドウズマネージャー::ウィンドウズテーマ](#getstandardwindowstheme)|現在の Windows テーマを取得します。|
+|[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|現在の Windows テーマを使用して、チェックボックスコントロールを描画します。|
+|[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|現在の Windows テーマを使用して、コンボボックスの境界線を描画します。|
+|[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|現在の Windows テーマを使用して、コンボボックスのドロップダウンボタンを描画します。|
+|[CMFCBaseVisualManager::D Rawpのボタン](#drawpushbutton)|現在の Windows テーマを使用してプッシュボタンを描画します。|
+|[CMFCBaseVisualManager::D rawRadioButton](#drawradiobutton)|現在の Windows テーマを使用して、オプションボタンコントロールを描画します。|
+|[CMFCBaseVisualManager::D rawStatusBarProgress](#drawstatusbarprogress)|現在の Windows テーマを使用して、ステータスバーコントロール ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) にプログレスバーを描画します。|
+|[CMFCBaseVisualManager:: FillReBarPane](#fillrebarpane)|現在の Windows テーマを使用して rebar コントロールの背景を塗りつぶします。|
+|[CMFCBaseVisualManager:: GetStandardWindowsTheme](#getstandardwindowstheme)|現在の Windows テーマを取得します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |||
 |-|-|
 |名前|説明|
-|[テーマをクリーンアップします。](#cleanupthemes)|で`CloseThemeData`取得されたすべてのハンドルを`UpdateSystemColors`呼び出します。|
-|[システムカラーの更新](#updatesystemcolors)|ウィンドウ`OpenThemeData`、ツールバー、ボタンなど、さまざまなコントロールを描画するためのハンドルを取得するための呼び出し。|
+|[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`で取得したすべてのハンドルのを呼び出し `UpdateSystemColors` ます。|
+|[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|を呼び出して、 `OpenThemeData` さまざまなコントロール (ウィンドウ、ツールバー、ボタンなど) を描画するハンドルを取得します。|
 
 ## <a name="remarks"></a>解説
 
 このクラスのオブジェクトを直接インスタンス化する必要はありません。
 
-すべてのビジュアル マネージャーの基本クラスであるため[、CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)を呼び出して、現在のビジュアル マネージャーへのポインターを取得し、そのポインターを`CMFCBaseVisualManager`使用するためのメソッドにアクセスするだけです。 ただし、現在の Windows テーマを使用してコントロールを表示する必要がある場合は、インターフェイスを`CMFCVisualManagerWindows`使用することをおし、
+すべてのビジュアルマネージャーの基本クラスであるため、 [Cmfcvisualmanager:: GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)を呼び出し、現在のビジュアルマネージャーへのポインターを取得し、 `CMFCBaseVisualManager` そのポインターを使用するためのメソッドにアクセスするだけです。 ただし、現在の Windows テーマを使用してコントロールを表示する必要がある場合は、インターフェイスを使用することをお勧めし `CMFCVisualManagerWindows` ます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[ビジュアル マネージャー](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afx ビジュアルマネージャー.h
+**ヘッダー:** afxvisualmanager
 
-## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>テーマをクリーンアップします。
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a> CMFCBaseVisualManager:: CleanUpThemes
 
-で`CloseThemeData`取得されたすべてのハンドルを`UpdateSystemColors`呼び出します。
+`CloseThemeData`で取得したすべてのハンドルのを呼び出し `UpdateSystemColors` ます。
 
 ```cpp
 void CleanUpThemes();
@@ -107,9 +107,9 @@ void CleanUpThemes();
 
 ### <a name="remarks"></a>解説
 
-内部使用専用です。
+内部使用のみ。
 
-## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>マネージャーマネージャー
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a> CMFCBaseVisualManager:: CMFCBaseVisualManager
 
 `CMFCBaseVisualManager` オブジェクトを構築して初期化します。
 
@@ -117,9 +117,9 @@ void CleanUpThemes();
 CMFCBaseVisualManager();
 ```
 
-## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>:Dロー チェック ボックス
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a> CMFCBaseVisualManager::D rawCheckBox
 
-現在の Windows テーマを使用してチェック ボックス コントロールを描画します。
+現在の Windows テーマを使用して、チェックボックスコントロールを描画します。
 
 ```
 virtual BOOL DrawCheckBox(
@@ -136,42 +136,42 @@ virtual BOOL DrawCheckBox(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター
+からデバイスコンテキストへのポインター
 
-*Rect*<br/>
-[in]チェック ボックスの外接する四角形。
+*rect*<br/>
+からチェックボックスの外接する四角形。
 
-*b強調表示*<br/>
-[in]チェック ボックスを強調表示するかどうかを指定します。
+*bHighlighted 表示*<br/>
+からチェックボックスを強調表示するかどうかを指定します。
 
-*nステート*<br/>
-[in] 0 がチェックされていない場合は、1 はチェックされた正常、
+*nState*<br/>
+[入力] オフの場合は0、チェックされた通常の場合は1
 
-混合正常の場合は 2。
+混合法線の場合は2。
 
-*b有効*<br/>
-[in]チェック ボックスを有効にするかどうかを指定します。
+*bEnabled*<br/>
+からチェックボックスをオンにするかどうかを指定します。
 
-*bPressed*<br/>
-[in]チェック ボックスを押すかどうかを指定します。
+*bPressed れた状態*<br/>
+からチェックボックスをオンにするかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*nState*の値は、次のチェック ボックス スタイルに対応します。
+*NState*の値は、次のチェックボックスのスタイルに対応しています。
 
-|nステート|チェック ボックスのスタイル|
+|nState|チェックボックスのスタイル|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>をクリック :Dします。
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a> CMFCBaseVisualManager::D rawComboBorder
 
-現在の Windows テーマを使用してコンボ ボックスの境界線を描画します。
+現在の Windows テーマを使用して、コンボボックスの境界線を描画します。
 
 ```
 virtual BOOL DrawComboBorder(
@@ -185,27 +185,27 @@ virtual BOOL DrawComboBorder(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*Rect*<br/>
-[in]コンボ ボックスの枠線の外接する四角形。
+*rect*<br/>
+からコンボボックスの境界線の外接する四角形。
 
-*b無効*<br/>
-[in]コンボ ボックスの境界線を無効にするかどうかを指定します。
+*bDisabled*<br/>
+からコンボボックスの境界線を無効にするかどうかを指定します。
 
-*ビスドロップ*<br/>
-[in]コンボ ボックスの境界線を下にドロップするかどうかを指定します。
+*bIsDropped*<br/>
+からコンボボックスの境界線をドロップダウンするかどうかを指定します。
 
-*bIs強調表示*<br/>
-[in]コンボ ボックスの境界線を強調表示するかどうかを指定します。
+*bIsHighlighted*<br/>
+からコンボボックスの境界線を強調表示するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>をクリック :Dします。
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a> CMFCBaseVisualManager::D rawComboDropButton
 
-現在の Windows テーマを使用してコンボ ボックスのドロップダウン ボタンを描画します。
+現在の Windows テーマを使用して、コンボボックスのドロップダウンボタンを描画します。
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -218,21 +218,28 @@ virtual BOOL DrawComboDropButton(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pDC*|[in]デバイス コンテキストへのポインター。|
-|*Rect*|[in]コンボ ボックスのドロップダウン ボタンの外接する四角形。|
-|*b無効*|[in]コンボ ボックスのドロップダウン ボタンが無効かどうかを指定します。|
-|*ビスドロップ*|[in]コンボ ボックスのドロップダウン ボタンをドロップダウンするかどうかを指定します。|
-|*bIs強調表示*|[in]コンボ ボックスのドロップダウン ボタンを強調表示するかどうかを指定します。|
+*pDC*\
+からデバイスコンテキストへのポインター。
+
+*rect*\
+からコンボボックスのドロップダウンボタンの外接する四角形。
+
+*bDisabled*\
+からコンボボックスのドロップダウンボタンを無効にするかどうかを指定します。
+
+*bIsDropped*\
+からコンボボックスのドロップダウンボタンをドロップダウンにするかどうかを指定します。
+
+*bIsHighlighted*\
+からコンボボックスのドロップダウンボタンを強調表示するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>ダブルクリックトビラのマネージャー::Dロープッシュボタン
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a> CMFCBaseVisualManager::D Rawpのボタン
 
-現在の Windows テーマを使用してプッシュ ボタンを描画します。
+現在の Windows テーマを使用してプッシュボタンを描画します。
 
 ```
 virtual BOOL DrawPushButton(
@@ -245,24 +252,24 @@ virtual BOOL DrawPushButton(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*Rect*<br/>
-[in]プッシュ ボタンの外接する四角形。
+*rect*<br/>
+からプッシュボタンの外接する四角形。
 
-*ボタン*<br/>
-[in]描画する[CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)オブジェクトへのポインター。
+*pButton*<br/>
+から描画する [Cmfcbutton クラス](../../mfc/reference/cmfcbutton-class.md) オブジェクトへのポインター。
 
-*ui状態*<br/>
-[in]無視。 状態は*pButton*から取得されます。
+*uiState*<br/>
+から無効. 状態は *Pbutton*から取得されます。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>:Dローラジオボタン
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a> CMFCBaseVisualManager::D rawRadioButton
 
-現在の Windows テーマを使用して、ラジオ ボタン コントロールを描画します。
+現在の Windows テーマを使用して、オプションボタンコントロールを描画します。
 
 ```
 virtual BOOL DrawRadioButton(
@@ -277,30 +284,30 @@ virtual BOOL DrawRadioButton(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*Rect*<br/>
-[in]ラジオ ボタンの外接する四角形。
+*rect*<br/>
+からオプションボタンの外接する四角形。
 
-*b強調表示*<br/>
-[in]ラジオ ボタンを強調表示するかどうかを指定します。
+*bHighlighted 表示*<br/>
+からオプションボタンを強調表示するかどうかを指定します。
 
-*bチェック*<br/>
-[in]ラジオ ボタンをオンにするかどうかを指定します。
+*bChecked*<br/>
+からオプションボタンをオンにするかどうかを指定します。
 
-*b有効*<br/>
-[in]ラジオ ボタンを有効にするかどうかを指定します。
+*bEnabled*<br/>
+からオプションボタンを有効にするかどうかを指定します。
 
-*bPressed*<br/>
-[in]ラジオ ボタンを押すかどうかを指定します。
+*bPressed れた状態*<br/>
+からオプションボタンを押すかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>をクリック :Dします。
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a> CMFCBaseVisualManager::D rawStatusBarProgress
 
-現在の Windows テーマを使用して、ステータス バー コントロール ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) に進行状況バーを描画します。
+現在の Windows テーマを使用して、ステータスバーコントロール ( [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)) の進行状況バーを描画します。
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -318,39 +325,39 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*をクリックします。*<br/>
-[in]ステータス バーへのポインター。 この値は無視されます。
+*pStatusBar*<br/>
+からステータスバーへのポインター。 この値は無視されます。
 
-*レクトプログレス*<br/>
-[in]*pDC*座標の進行状況バーの外接する四角形。
+*rectProgress*<br/>
+から *PDC* 座標のプログレスバーの外接する四角形。
 
 *nProgressTotal*<br/>
-[in]進行状況の合計値。
+から進行状況の合計値。
 
 *nProgressCurr*<br/>
-[in]現在の進行状況の値。
+から現在の進行状況の値。
 
 *clrBar*<br/>
-[in]開始色。 `CMFCBaseVisualManager`これは無視されます。 派生クラスは、カラー グラデーションに使用できます。
+から開始色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスでは、カラーグラデーションに使用できます。
 
 *clrProgressBarDest*<br/>
-[in]終了色。 `CMFCBaseVisualManager`これは無視されます。 派生クラスは、カラー グラデーションに使用できます。
+から最後の色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスでは、カラーグラデーションに使用できます。
 
 *clrProgressText*<br/>
-[in]進捗状況のテキストの色。 `CMFCBaseVisualManager`これは無視されます。 テキストの色は で`afxGlobalData.clrBtnText`定義されます。
+から進行状況のテキストの色。 `CMFCBaseVisualManager` これは無視されます。 テキストの色はによって定義され `afxGlobalData.clrBtnText` ます。
 
 *bProgressText*<br/>
-[in]進行状況テキストを表示するかどうかを指定します。
+から進行状況のテキストを表示するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>ウィンドウウィンドウ::フィルバーペイン
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a> CMFCBaseVisualManager:: FillReBarPane
 
-現在の Windows テーマを使用して、Rebar コントロールの背景を塗りつぶします。
+現在の Windows テーマを使用して rebar コントロールの背景を塗りつぶします。
 
 ```
 virtual void FillReBarPane(
@@ -362,19 +369,19 @@ virtual void FillReBarPane(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*pバー*<br/>
-[in]背景を描画するペインへのポインター。
+*pBar*<br/>
+から背景を描画する必要があるペインへのポインター。
 
-*レクトクライアント*<br/>
-[in]塗りつぶす領域の外接する四角形。
+*rectClient*<br/>
+から塗りつぶす領域の外接する四角形。
 
 ### <a name="return-value"></a>戻り値
 
-テーマ API が有効になっている場合は TRUE。それ以外の場合は FALSE。
+Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>ウィンドウズマネージャー::ウィンドウズテーマ
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a> CMFCBaseVisualManager:: GetStandardWindowsTheme
 
 現在の Windows テーマを取得します。
 
@@ -384,21 +391,21 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されている Windows テーマの色。 次の列挙値のいずれかです。
+現在選択されている Windows テーマの色。 次のいずれかの列挙値を指定できます。
 
-- `WinXpTheme_None`- テーマが有効になっていません。
+- `WinXpTheme_None` -テーマが有効になっていません。
 
-- `WinXpTheme_NonStandard`- 標準以外のテーマが選択されています(テーマが選択されているが、下のリストからは選択されていません)。
+- `WinXpTheme_NonStandard` -非標準のテーマが選択されています (つまり、テーマは選択されていますが、以下の一覧からは選択されていません)。
 
-- `WinXpTheme_Blue`- 青いテーマ(ルナ)。
+- `WinXpTheme_Blue` -blue theme (Luna)。
 
-- `WinXpTheme_Olive`- オリーブのテーマ
+- `WinXpTheme_Olive` -オリーブテーマ。
 
-- `WinXpTheme_Silver`- シルバーのテーマ。
+- `WinXpTheme_Silver` -シルバーテーマ。
 
-## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>システムカラーの更新
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a> CMFCBaseVisualManager:: UpdateSystemColors
 
-ウィンドウ`OpenThemeData`、ツールバー、ボタンなど、さまざまなコントロールを描画するためのハンドルを取得するための呼び出し。
+を呼び出して、 `OpenThemeData` さまざまなコントロール (ウィンドウ、ツールバー、ボタンなど) を描画するハンドルを取得します。
 
 ```cpp
 void UpdateSystemColors();
@@ -406,9 +413,9 @@ void UpdateSystemColors();
 
 ### <a name="remarks"></a>解説
 
-内部使用専用です。
+内部使用のみ。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

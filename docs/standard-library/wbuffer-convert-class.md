@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688539"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561116"
 ---
 # <a name="wbuffer_convert-class"></a>wbuffer_convert クラス
 
@@ -27,15 +27,18 @@ class wbuffer_convert
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Codecvt*|変換オブジェクトを表す[ロケール](../standard-library/locale-class.md) ファセット。|
-|*Elem*|ワイド文字要素型。|
-|*Traits*|*Elem* と関連付けられている特徴。|
+*Codecvt*\
+変換オブジェクトを表す[ロケール](../standard-library/locale-class.md) ファセット。
 
-## <a name="remarks"></a>Remarks
+*Elem*\
+ワイド文字要素型。
 
-このクラステンプレートは、`_Elem` 型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス `Traits` によって記述されており、`std::streambuf` 型のバイトストリームバッファーとの間で伝送されます。
+*名札*\
+*Elem* と関連付けられている特徴。
+
+## <a name="remarks"></a>解説
+
+このクラステンプレートは、型の要素の転送を制御するストリームバッファーを記述します。これは、文字の特徴がクラスによって記述されている型の要素の転送を、 `_Elem` `Traits` 型のバイトストリームバッファーとの間で制御し `std::streambuf` ます。
 
 `Elem` 値のシーケンスとマルチバイト シーケンスとの間の変換は、クラス `Codecvt<Elem, char, std::mbstate_t>` のオブジェクトによって実行されます。このことは、標準コード変換ファセット `std::codecvt<Elem, char, std::mbstate_t>` の要件を満たしています。
 

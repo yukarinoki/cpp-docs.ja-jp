@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231859"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561987"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -105,11 +105,11 @@ class CButton : public CWnd
 |----------|-----------------|
 |[CButton:: Create](#create)|Windows のボタンコントロールを作成し、オブジェクトにアタッチし `CButton` ます。|
 |[CButton::D rawItem](#drawitem)|オーナー描画オブジェクトを描画するには、をオーバーライド `CButton` します。|
-|[CButton:: GetBitmap](#getbitmap)|以前に[SetBitmap](#setbitmap)で設定されたビットマップのハンドルを取得します。|
+|[CButton:: GetBitmap](#getbitmap)|以前に [SetBitmap](#setbitmap)で設定されたビットマップのハンドルを取得します。|
 |[CButton:: GetButtonStyle](#getbuttonstyle)|ボタンコントロールスタイルに関する情報を取得します。|
 |[CButton:: GetCheck](#getcheck)|ボタンコントロールのチェックの状態を取得します。|
-|[CButton:: GetCursor](#getcursor)|以前に[SetCursor](#setcursor)で設定したカーソルイメージのハンドルを取得します。|
-|[CButton:: GetIcon](#geticon)|以前に[SetIcon](#seticon)で設定したアイコンのハンドルを取得します。|
+|[CButton:: GetCursor](#getcursor)|以前に [SetCursor](#setcursor)で設定したカーソルイメージのハンドルを取得します。|
+|[CButton:: GetIcon](#geticon)|以前に [SetIcon](#seticon)で設定したアイコンのハンドルを取得します。|
 |[CButton:: GetIdealSize](#getidealsize)|ボタンコントロールの理想的なサイズを取得します。|
 |[CButton:: GetImageList](#getimagelist)|ボタンコントロールのイメージリストを取得します。|
 |[CButton:: GetNote](#getnote)|現在のコマンドリンクコントロールのノートコンポーネントを取得します。|
@@ -143,7 +143,7 @@ class CButton : public CWnd
 
 一般的なボタンは、チェックボックス、オプションボタン、およびプッシュボタンです。 オブジェクトは、 `CButton` [Create](#create) member 関数による初期化時に指定された[ボタンスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)に従って、これらのいずれかになります。
 
-さらに、から派生した[Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)クラスは、 `CButton` テキストではなくビットマップイメージでラベル付けされたボタンコントロールの作成をサポートしています。 では、 `CBitmapButton` ボタンの上下の状態に対して個別のビットマップを使用できます。
+さらに、から派生した [Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md) クラスは、 `CButton` テキストではなくビットマップイメージでラベル付けされたボタンコントロールの作成をサポートしています。 では、 `CBitmapButton` ボタンの上下の状態に対して個別のビットマップを使用できます。
 
 ボタンコントロールは、ダイアログテンプレートから作成することも、コード内で直接作成することもできます。 どちらの場合も、最初にコンストラクターを呼び出し `CButton` `CButton` てオブジェクトを構築した後、メンバー関数を呼び出して `Create` Windows ボタンコントロールを作成し、それをオブジェクトにアタッチし `CButton` ます。
 
@@ -155,7 +155,7 @@ class CButton : public CWnd
 
 **オン \_ **_通知_ **(** _id_, _memberFxn_ **)**
 
-ここで、 *id*で通知を送信するコントロールの子ウィンドウ id を指定します。 *memberFxn*は、通知を処理するために記述した親メンバー関数の名前です。
+ここで、 *id* で通知を送信するコントロールの子ウィンドウ id を指定します。 *memberFxn* は、通知を処理するために記述した親メンバー関数の名前です。
 
 親の関数プロトタイプは次のとおりです。
 
@@ -186,7 +186,7 @@ class CButton : public CWnd
 
 **ヘッダー:** afxwin.h
 
-## <a name="cbuttoncbutton"></a><a name="cbutton"></a>CButton:: CButton
+## <a name="cbuttoncbutton"></a><a name="cbutton"></a> CButton:: CButton
 
 `CButton` オブジェクトを構築します。
 
@@ -198,7 +198,7 @@ CButton();
 
 [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]
 
-## <a name="cbuttoncreate"></a><a name="create"></a>CButton:: Create
+## <a name="cbuttoncreate"></a><a name="create"></a> CButton:: Create
 
 Windows のボタンコントロールを作成し、オブジェクトにアタッチし `CButton` ます。
 
@@ -217,7 +217,7 @@ virtual BOOL Create(
 ボタンコントロールのテキストを指定します。
 
 *dwStyle*<br/>
-ボタンコントロールのスタイルを指定します。 ボタン[スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)の任意の組み合わせをボタンに適用します。
+ボタンコントロールのスタイルを指定します。 ボタン [スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles) の任意の組み合わせをボタンに適用します。
 
 *rect*<br/>
 ボタンコントロールのサイズと位置を指定します。 `CRect`オブジェクトまたは構造体のいずれかを指定でき `RECT` ます。
@@ -238,7 +238,7 @@ virtual BOOL Create(
 
 WS_VISIBLE スタイルが指定されている場合、アクティブ化してボタンを表示するために必要なすべてのメッセージが button コントロールに送信されます。
 
-次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)をボタンコントロールに適用します。
+次の [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) をボタンコントロールに適用します。
 
 - 常に WS_CHILD
 
@@ -254,7 +254,7 @@ WS_VISIBLE スタイルが指定されている場合、アクティブ化して
 
 [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]
 
-## <a name="cbuttondrawitem"></a><a name="drawitem"></a>CButton::D rawItem
+## <a name="cbuttondrawitem"></a><a name="drawitem"></a> CButton::D rawItem
 
 オーナー描画ボタンの外観が変更されたときにフレームワークによって呼び出されます。
 
@@ -269,7 +269,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="remarks"></a>解説
 
-オーナー描画のボタンには、BS_OWNERDRAW スタイルが設定されています。 オーナー描画オブジェクトの描画を実装するには、このメンバー関数をオーバーライド `CButton` します。 アプリケーションでは、メンバー関数が終了する前に、 *lpDrawItemStruct*で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
+オーナー描画のボタンには、BS_OWNERDRAW スタイルが設定されています。 オーナー描画オブジェクトの描画を実装するには、このメンバー関数をオーバーライド `CButton` します。 アプリケーションでは、メンバー関数が終了する前に、 *lpDrawItemStruct* で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
 
 [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles)スタイル値も参照してください。
 
@@ -277,9 +277,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]
 
-## <a name="cbuttongetbitmap"></a><a name="getbitmap"></a>CButton:: GetBitmap
+## <a name="cbuttongetbitmap"></a><a name="getbitmap"></a> CButton:: GetBitmap
 
-このメンバー関数を呼び出して、ボタンに関連付けられている、以前に[SetBitmap](#setbitmap)で設定したビットマップのハンドルを取得します。
+このメンバー関数を呼び出して、ボタンに関連付けられている、以前に [SetBitmap](#setbitmap)で設定したビットマップのハンドルを取得します。
 
 ```
 HBITMAP GetBitmap() const;
@@ -293,7 +293,7 @@ HBITMAP GetBitmap() const;
 
 [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]
 
-## <a name="cbuttongetbuttonstyle"></a><a name="getbuttonstyle"></a>CButton:: GetButtonStyle
+## <a name="cbuttongetbuttonstyle"></a><a name="getbuttonstyle"></a> CButton:: GetButtonStyle
 
 ボタンコントロールスタイルに関する情報を取得します。
 
@@ -303,13 +303,13 @@ UINT GetButtonStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-このオブジェクトのボタンスタイルを返し `CButton` ます。 この関数は、他のウィンドウスタイルではなく、 [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles)スタイル値のみを返します。
+このオブジェクトのボタンスタイルを返し `CButton` ます。 この関数は、他のウィンドウスタイルではなく、 [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) スタイル値のみを返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]
 
-## <a name="cbuttongetcheck"></a><a name="getcheck"></a>CButton:: GetCheck
+## <a name="cbuttongetcheck"></a><a name="getcheck"></a> CButton:: GetCheck
 
 オプションボタンまたはチェックボックスのチェックの状態を取得します。
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON、または BS_3STATE スタイルを使用して作成されたボタンコントロールからの戻り値は、次のいずれかの値になります。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態がオフになっています。|
 |BST_CHECKED|ボタンの状態がチェックされます。|
@@ -333,7 +333,7 @@ BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUT
 
 [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]
 
-## <a name="cbuttongetcursor"></a><a name="getcursor"></a>CButton:: GetCursor
+## <a name="cbuttongetcursor"></a><a name="getcursor"></a> CButton:: GetCursor
 
 このメンバー関数を呼び出して、ボタンに関連付けられているカーソルのハンドルを取得します。これは、 [SetCursor](#setcursor)で設定されています。
 
@@ -349,9 +349,9 @@ HCURSOR GetCursor();
 
 [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]
 
-## <a name="cbuttongeticon"></a><a name="geticon"></a>CButton:: GetIcon
+## <a name="cbuttongeticon"></a><a name="geticon"></a> CButton:: GetIcon
 
-このメンバー関数を呼び出して、ボタンに関連付けられている[SetIcon](#seticon)で以前に設定したアイコンのハンドルを取得します。
+このメンバー関数を呼び出して、ボタンに関連付けられている [SetIcon](#seticon)で以前に設定したアイコンのハンドルを取得します。
 
 ```
 HICON GetIcon() const;
@@ -365,7 +365,7 @@ HICON GetIcon() const;
 
 [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]
 
-## <a name="cbuttongetidealsize"></a><a name="getidealsize"></a>CButton:: GetIdealSize
+## <a name="cbuttongetidealsize"></a><a name="getidealsize"></a> CButton:: GetIdealSize
 
 ボタンコントロールの理想的なサイズを取得します。
 
@@ -384,9 +384,9 @@ BOOL GetIdealSize(SIZE* psize);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK の [[ボタン](/windows/win32/controls/buttons)] セクションで説明されているように、BCM_GETIDEALSIZE メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK の [ [ボタン](/windows/win32/controls/buttons) ] セクションで説明されているように、BCM_GETIDEALSIZE メッセージの機能をエミュレートします。
 
-## <a name="cbuttongetimagelist"></a><a name="getimagelist"></a>CButton:: GetImageList
+## <a name="cbuttongetimagelist"></a><a name="getimagelist"></a> CButton:: GetImageList
 
 ボタンコントロールからイメージリストを取得するには、このメソッドを呼び出します。
 
@@ -405,9 +405,9 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK の [[ボタン](/windows/win32/controls/buttons)] セクションで説明されているように、BCM_GETIMAGELIST メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK の [ [ボタン](/windows/win32/controls/buttons) ] セクションで説明されているように、BCM_GETIMAGELIST メッセージの機能をエミュレートします。
 
-## <a name="cbuttongetnote"></a><a name="getnote"></a>CButton:: GetNote
+## <a name="cbuttongetnote"></a><a name="getnote"></a> CButton:: GetNote
 
 現在のコマンドリンクコントロールに関連付けられているノートテキストを取得します。
 
@@ -421,16 +421,17 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*lpszNote*|入出力バッファーへのポインター。呼び出し元が割り当てと割り当て解除を行います。 戻り値が TRUE の場合、現在のコマンドリンクコントロールに関連付けられているノートテキストがバッファーに格納されます。それ以外の場合、バッファーは変更されません。|
-|*cchNote*|[入力、出力]符号なし整数変数へのポインター。<br /><br /> このメソッドが呼び出されると、変数には、 *Lpsznote*パラメーターによって指定されたバッファーのサイズが格納されます。<br /><br /> このメソッドから制御が戻るときに、戻り値が TRUE の場合、現在のコマンドリンクコントロールに関連付けられているメモのサイズが変数に格納されます。 戻り値が FALSE の場合、変数には、メモを格納するために必要なバッファーサイズが格納されます。|
+*lpszNote*\
+入出力バッファーへのポインター。呼び出し元が割り当てと割り当て解除を行います。 戻り値が TRUE の場合、現在のコマンドリンクコントロールに関連付けられているノートテキストがバッファーに格納されます。それ以外の場合、バッファーは変更されません。
+
+*cchNote*\
+[入力、出力]符号なし整数変数へのポインター。 このメソッドが呼び出されると、変数には、 *Lpsznote* パラメーターによって指定されたバッファーのサイズが格納されます。 このメソッドから制御が戻るときに、戻り値が TRUE の場合、現在のコマンドリンクコントロールに関連付けられているメモのサイズが変数に格納されます。 戻り値が FALSE の場合、変数には、メモを格納するために必要なバッファーサイズが格納されます。
 
 ### <a name="return-value"></a>戻り値
 
-最初のオーバーロードでは、現在のコマンドリンクコントロールに関連付けられているノートテキストを含む[CString](../../atl-mfc-shared/using-cstring.md)オブジェクト。
+最初のオーバーロードでは、現在のコマンドリンクコントロールに関連付けられているノートテキストを含む [CString](../../atl-mfc-shared/using-cstring.md) オブジェクト。
 
-または
+- または -
 
 2番目のオーバーロードでは、このメソッドが成功した場合は TRUE になります。それ以外の場合は FALSE。
 
@@ -438,9 +439,9 @@ BOOL GetNote(
 
 このメソッドは、ボタンスタイルが BS_COMMANDLINK または BS_DEFCOMMANDLINK コントロールでのみ使用します。
 
-このメソッドは、Windows SDK で説明されている[BCM_GETNOTE](/windows/win32/Controls/bcm-getnote)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_GETNOTE](/windows/win32/Controls/bcm-getnote) メッセージを送信します。
 
-## <a name="cbuttongetnotelength"></a><a name="getnotelength"></a>CButton:: GetNoteLength
+## <a name="cbuttongetnotelength"></a><a name="getnotelength"></a> CButton:: GetNoteLength
 
 現在のコマンドリンクコントロールのノートテキストの長さを取得します。
 
@@ -456,9 +457,9 @@ UINT GetNoteLength() const;
 
 このメソッドは、ボタンスタイルが BS_COMMANDLINK または BS_DEFCOMMANDLINK コントロールでのみ使用します。
 
-このメソッドは、Windows SDK で説明されている[BCM_GETNOTELENGTH](/windows/win32/Controls/bcm-getnotelength)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_GETNOTELENGTH](/windows/win32/Controls/bcm-getnotelength) メッセージを送信します。
 
-## <a name="cbuttongetsplitglyph"></a><a name="getsplitglyph"></a>CButton:: GetSplitGlyph
+## <a name="cbuttongetsplitglyph"></a><a name="getsplitglyph"></a> CButton:: GetSplitGlyph
 
 現在の分割ボタンコントロールに関連付けられているグリフを取得します。
 
@@ -476,11 +477,11 @@ TCHAR GetSplitGlyph() const;
 
 このメソッドは、ボタンスタイルが BS_SPLITBUTTON または BS_DEFSPLITBUTTON コントロールでのみ使用します。
 
-このメソッドは、 `mask` BCSIF_GLYPH フラグを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーからグリフを取得し `himlGlyph` ます。
+このメソッドは、 `mask` BCSIF_GLYPH フラグを使用して [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを初期化し、Windows SDK で説明されている [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーからグリフを取得し `himlGlyph` ます。
 
-## <a name="cbuttongetsplitimagelist"></a><a name="getsplitimagelist"></a>CButton:: GetSplitImageList
+## <a name="cbuttongetsplitimagelist"></a><a name="getsplitimagelist"></a> CButton:: GetSplitImageList
 
-現在の分割ボタンコントロールの[イメージリスト](../../mfc/reference/cimagelist-class.md)を取得します。
+現在の分割ボタンコントロールの [イメージリスト](../../mfc/reference/cimagelist-class.md) を取得します。
 
 ```
 CImageList* GetSplitImageList() const;
@@ -494,9 +495,9 @@ CImageList* GetSplitImageList() const;
 
 このメソッドは、ボタンスタイルが BS_SPLITBUTTON または BS_DEFSPLITBUTTON コントロールでのみ使用します。
 
-このメソッドは、 `mask` BCSIF_IMAGE フラグを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーからイメージリストを取得し `himlGlyph` ます。
+このメソッドは、 `mask` BCSIF_IMAGE フラグを使用して [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを初期化し、Windows SDK で説明されている [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーからイメージリストを取得し `himlGlyph` ます。
 
-## <a name="cbuttongetsplitinfo"></a><a name="getsplitinfo"></a>CButton:: GetSplitInfo
+## <a name="cbuttongetsplitinfo"></a><a name="getsplitinfo"></a> CButton:: GetSplitInfo
 
 ウィンドウが現在の分割ボタンコントロールを描画する方法を決定するパラメーターを取得します。
 
@@ -506,9 +507,8 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pInfo*|入出力現在の分割ボタンコントロールに関する情報を受け取る[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体へのポインター。 呼び出し元は、構造体の割り当てを行います。|
+*pInfo*\
+入出力現在の分割ボタンコントロールに関する情報を受け取る [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体へのポインター。 呼び出し元は、構造体の割り当てを行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -518,9 +518,9 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 このメソッドは、ボタンスタイルが BS_SPLITBUTTON または BS_DEFSPLITBUTTON コントロールでのみ使用します。
 
-このメソッドは、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) メッセージを送信します。
 
-## <a name="cbuttongetsplitsize"></a><a name="getsplitsize"></a>CButton:: GetSplitSize
+## <a name="cbuttongetsplitsize"></a><a name="getsplitsize"></a> CButton:: GetSplitSize
 
 現在の分割ボタンコントロールのドロップダウンコンポーネントの外接する四角形を取得します。
 
@@ -530,9 +530,8 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pSize*|入出力四角形の説明を受け取る[サイズ](/windows/win32/api/windef/ns-windef-size)構造体へのポインター。|
+*pSize*\
+入出力四角形の説明を受け取る [サイズ](/windows/win32/api/windef/ns-windef-size) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -544,9 +543,9 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 分割ボタンコントロールが展開されると、リストコントロールやページャーコントロールなどのドロップダウンコンポーネントが表示されます。 このメソッドは、ドロップダウンコンポーネントを含む外接する四角形を取得します。
 
-このメソッドは、 `mask` BCSIF_SIZE フラグを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーから外接する四角形を取得し `size` ます。
+このメソッドは、 `mask` BCSIF_SIZE フラグを使用して [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを初期化し、Windows SDK で説明されている [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーから外接する四角形を取得し `size` ます。
 
-## <a name="cbuttongetsplitstyle"></a><a name="getsplitstyle"></a>CButton:: GetSplitStyle
+## <a name="cbuttongetsplitstyle"></a><a name="getsplitstyle"></a> CButton:: GetSplitStyle
 
 現在の分割ボタンコントロールを定義する分割ボタンのスタイルを取得します。
 
@@ -556,7 +555,7 @@ UINT GetSplitStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを参照してください。
+分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -564,9 +563,9 @@ UINT GetSplitStyle() const;
 
 分割ボタンのスタイルでは、ウィンドウが分割ボタンアイコンを描画する配置、縦横比、およびグラフィカルな形式を指定します。
 
-このメソッドは、 `mask` BCSIF_STYLE フラグを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーから分割ボタンのスタイルを取得し `uSplitStyle` ます。
+このメソッドは、 `mask` BCSIF_STYLE フラグを使用して [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを初期化し、Windows SDK で説明されている [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) メッセージにその構造体を送信します。 メッセージ関数がを返すと、このメソッドは構造体のメンバーから分割ボタンのスタイルを取得し `uSplitStyle` ます。
 
-## <a name="cbuttongetstate"></a><a name="getstate"></a>CButton:: GetState
+## <a name="cbuttongetstate"></a><a name="getstate"></a> CButton:: GetState
 
 ボタンコントロールの状態を取得します。
 
@@ -594,7 +593,7 @@ BS_3STATE または BS_AUTO3STATE ボタンのスタイルを持つボタンコ�
 
 [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]
 
-## <a name="cbuttongettextmargin"></a><a name="gettextmargin"></a>CButton:: GetTextMargin
+## <a name="cbuttongettextmargin"></a><a name="gettextmargin"></a> CButton:: GetTextMargin
 
 オブジェクトのテキストの余白を取得するには、このメソッドを呼び出し `CButton` ます。
 
@@ -617,9 +616,9 @@ BOOL GetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK の [[ボタン](/windows/win32/controls/buttons)] セクションで説明されているように、BCM_GETTEXTMARGIN メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK の [ [ボタン](/windows/win32/controls/buttons) ] セクションで説明されているように、BCM_GETTEXTMARGIN メッセージの機能をエミュレートします。
 
-## <a name="cbuttonsetbitmap"></a><a name="setbitmap"></a>CButton:: SetBitmap
+## <a name="cbuttonsetbitmap"></a><a name="setbitmap"></a> CButton:: SetBitmap
 
 このメンバー関数を呼び出して、新しいビットマップをボタンに関連付けます。
 
@@ -652,7 +651,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 - BS_VCENTER
 
-ボタンごとに4つのビットマップを使用する[Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、で `SetBitmap` は、ボタンごとにビットマップが1つだけ使用されます。 このボタンが押されると、ビットマップが下と右にシフトされます。
+ボタンごとに4つのビットマップを使用する [Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、で `SetBitmap` は、ボタンごとにビットマップが1つだけ使用されます。 このボタンが押されると、ビットマップが下と右にシフトされます。
 
 操作が完了したら、ビットマップを解放する必要があります。
 
@@ -660,7 +659,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]
 
-## <a name="cbuttonsetbuttonstyle"></a><a name="setbuttonstyle"></a>CButton:: SetButtonStyle
+## <a name="cbuttonsetbuttonstyle"></a><a name="setbuttonstyle"></a> CButton:: SetButtonStyle
 
 ボタンのスタイルを変更します。
 
@@ -673,7 +672,7 @@ void SetButtonStyle(
 ### <a name="parameters"></a>パラメーター
 
 *nStyle*<br/>
-ボタンの[スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を指定します。
+ボタンの [スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を指定します。
 
 *より描画*<br/>
 ボタンを再描画するかどうかを指定します。 0以外の値を指定すると、ボタンが再描画されます。 0の値を指定しても、ボタンは再描画されません。 既定では、ボタンが再描画されます。
@@ -686,7 +685,7 @@ void SetButtonStyle(
 
 [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]
 
-## <a name="cbuttonsetcheck"></a><a name="setcheck"></a>CButton:: SetCheck
+## <a name="cbuttonsetcheck"></a><a name="setcheck"></a> CButton:: SetCheck
 
 オプションボタンまたはチェックボックスのチェック状態を設定またはリセットします。
 
@@ -699,7 +698,7 @@ void SetCheck(int nCheck);
 *n*<br/>
 チェックの状態を指定します。 このパラメーターには、次のいずれかを指定できます。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態を [オフ] に設定します。|
 |BST_CHECKED|ボタンの状態を [オン] に設定します。|
@@ -713,7 +712,7 @@ void SetCheck(int nCheck);
 
 [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]
 
-## <a name="cbuttonsetcursor"></a><a name="setcursor"></a>CButton:: SetCursor
+## <a name="cbuttonsetcursor"></a><a name="setcursor"></a> CButton:: SetCursor
 
 このメンバー関数を呼び出して、新しいカーソルをボタンに関連付けます。
 
@@ -746,13 +745,13 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 - BS_VCENTER
 
-ボタンごとに4つのビットマップを使用する[Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、で `SetCursor` は、ボタンごとに1つのカーソルのみが使用されます。 このボタンが押されると、カーソルが下と右に移動したように見えます。
+ボタンごとに4つのビットマップを使用する [Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、で `SetCursor` は、ボタンごとに1つのカーソルのみが使用されます。 このボタンが押されると、カーソルが下と右に移動したように見えます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]
 
-## <a name="cbuttonsetdropdownstate"></a><a name="setdropdownstate"></a>CButton:: SetDropDownState
+## <a name="cbuttonsetdropdownstate"></a><a name="setdropdownstate"></a> CButton:: SetDropDownState
 
 現在の分割ボタンコントロールのドロップダウン状態を設定します。
 
@@ -762,9 +761,8 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*fDropDown*|からBST_DROPDOWNPUSHED の状態を設定する場合は TRUE。それ以外の場合は FALSE。|
+*fDropDown*\
+からBST_DROPDOWNPUSHED の状態を設定する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -772,9 +770,9 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="remarks"></a>解説
 
-分割ボタンコントロールには BS_SPLITBUTTON または BS_DEFSPLITBUTTON のスタイルがあり、その右側のボタンとドロップダウン矢印で構成されます。 詳細については、「[ボタンのスタイル](/windows/win32/Controls/button-styles)」を参照してください。 通常、ドロップダウンの状態は、ユーザーがドロップダウン矢印をクリックしたときに設定されます。 コントロールのドロップダウン状態をプログラムで設定するには、このメソッドを使用します。 ドロップダウン矢印は、状態を示すために影付きで描画されます。
+分割ボタンコントロールには BS_SPLITBUTTON または BS_DEFSPLITBUTTON のスタイルがあり、その右側のボタンとドロップダウン矢印で構成されます。 詳細については、「 [ボタンのスタイル](/windows/win32/Controls/button-styles)」を参照してください。 通常、ドロップダウンの状態は、ユーザーがドロップダウン矢印をクリックしたときに設定されます。 コントロールのドロップダウン状態をプログラムで設定するには、このメソッドを使用します。 ドロップダウン矢印は、状態を示すために影付きで描画されます。
 
-このメソッドは、Windows SDK で説明されている[BCM_SETDROPDOWNSTATE](/windows/win32/Controls/bcm-setdropdownstate)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_SETDROPDOWNSTATE](/windows/win32/Controls/bcm-setdropdownstate) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -788,7 +786,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]
 
-## <a name="cbuttonsetelevationrequired"></a><a name="setelevationrequired"></a>CButton:: SetElevationRequired
+## <a name="cbuttonsetelevationrequired"></a><a name="setelevationrequired"></a> CButton:: SetElevationRequired
 
 現在のボタンコントロールの状態をに設定します `elevation required` 。これは、コントロールが管理者特権のセキュリティアイコンを表示するために必要です。
 
@@ -798,9 +796,8 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*fElevationRequired*|から状態を設定する場合 `elevation required` は TRUE、それ以外の場合は FALSE。|
+*fElevationRequired*\
+から状態を設定する場合 `elevation required` は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -810,9 +807,9 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ボタンまたはコマンドリンクコントロールでアクションを実行するために管理者特権のセキュリティアクセス許可が必要な場合は、コントロールを状態に設定し `elevation required` ます。 その後、Windows によって、コントロールのユーザーアカウント制御 (UAC) シールドアイコンが表示されます。 詳細については、「[ユーザー アカウント制御](/windows/win32/uxguide/winenv-uac)」を参照してください。
 
-このメソッドは、Windows SDK で説明されている[BCM_SETSHIELD](/windows/win32/Controls/bcm-setshield)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_SETSHIELD](/windows/win32/Controls/bcm-setshield) メッセージを送信します。
 
-## <a name="cbuttonseticon"></a><a name="seticon"></a>CButton:: SetIcon
+## <a name="cbuttonseticon"></a><a name="seticon"></a> CButton:: SetIcon
 
 このメンバー関数を呼び出して、新しいアイコンをボタンに関連付けます。
 
@@ -845,13 +842,13 @@ HICON SetIcon(HICON hIcon);
 
 - BS_VCENTER
 
-ボタンごとに4つのビットマップを使用する[Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、では、 `SetIcon` ボタンごとに1つのアイコンのみが使用されます。 このボタンが押されると、アイコンが右にシフトされます。
+ボタンごとに4つのビットマップを使用する [Cbitmapbutton](../../mfc/reference/cbitmapbutton-class.md)とは異なり、では、 `SetIcon` ボタンごとに1つのアイコンのみが使用されます。 このボタンが押されると、アイコンが右にシフトされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]
 
-## <a name="cbuttonsetimagelist"></a><a name="setimagelist"></a>CButton:: SetImageList
+## <a name="cbuttonsetimagelist"></a><a name="setimagelist"></a> CButton:: SetImageList
 
 オブジェクトのイメージリストを設定するには、このメソッドを呼び出し `CButton` ます。
 
@@ -870,9 +867,9 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK の [[ボタン](/windows/win32/controls/buttons)] セクションで説明されているように、BCM_SETIMAGELIST メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK の [ [ボタン](/windows/win32/controls/buttons) ] セクションで説明されているように、BCM_SETIMAGELIST メッセージの機能をエミュレートします。
 
-## <a name="cbuttonsetnote"></a><a name="setnote"></a>CButton:: SetNote
+## <a name="cbuttonsetnote"></a><a name="setnote"></a> CButton:: SetNote
 
 現在のコマンドリンクコントロールのノートテキストを設定します。
 
@@ -882,9 +879,8 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*lpszNote*|からコマンドリンクコントロールのノートテキストとして設定されている Unicode 文字列へのポインター。|
+*lpszNote*\
+からコマンドリンクコントロールのノートテキストとして設定されている Unicode 文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -894,7 +890,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 このメソッドは、ボタンスタイルが BS_COMMANDLINK または BS_DEFCOMMANDLINK コントロールでのみ使用します。
 
-このメソッドは、Windows SDK で説明されている[BCM_SETNOTE](/windows/win32/Controls/bcm-setnote)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_SETNOTE](/windows/win32/Controls/bcm-setnote) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -908,7 +904,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]
 
-## <a name="cbuttonsetsplitglyph"></a><a name="setsplitglyph"></a>CButton:: SetSplitGlyph
+## <a name="cbuttonsetsplitglyph"></a><a name="setsplitglyph"></a> CButton:: SetSplitGlyph
 
 指定したグリフを現在の分割ボタンコントロールに関連付けます。
 
@@ -918,9 +914,8 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*chGlyph*|から分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。|
+*chGlyph*\
+から分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -934,7 +929,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 このメソッドは、 `mask` BCSIF_GLYPH フラグと Chglyph パラメーターを持つメンバーを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化 `himlGlyph` し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 *chGlyph*
 
-## <a name="cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a>CButton:: SetSplitImageList
+## <a name="cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a> CButton:: SetSplitImageList
 
 [イメージリスト](../../mfc/reference/cimagelist-class.md)を現在の分割ボタンコントロールに関連付けます。
 
@@ -944,9 +939,8 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pSplitImageList*|から現在の分割ボタンコントロールに割り当てる[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトへのポインター。|
+*pSplitImageList*\
+から現在の分割ボタンコントロールに割り当てる [CImageList](../../mfc/reference/cimagelist-class.md) オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -958,7 +952,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 このメソッドは、 `mask` BCSIF_IMAGE フラグと pSplitImageList パラメーターを使用してメンバーを指定して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化 `himlGlyph` し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 *pSplitImageList*
 
-## <a name="cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a>CButton:: SetSplitInfo
+## <a name="cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a> CButton:: SetSplitInfo
 
 ウィンドウが現在の分割ボタンコントロールを描画する方法を決定するパラメーターを指定します。
 
@@ -968,9 +962,8 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pInfo*|から現在の分割ボタンコントロールを定義する[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体へのポインター。|
+*pInfo*\
+から現在の分割ボタンコントロールを定義する [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -980,7 +973,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 このメソッドは、ボタンスタイルが BS_SPLITBUTTON または BS_DEFSPLITBUTTON コントロールでのみ使用します。
 
-このメソッドは、Windows SDK で説明されている[BCM_SETSPLITINFO](/windows/win32/Controls/bcm-setsplitinfo)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [BCM_SETSPLITINFO](/windows/win32/Controls/bcm-setsplitinfo) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -994,7 +987,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]
 
-## <a name="cbuttonsetsplitsize"></a><a name="setsplitsize"></a>CButton:: SetSplitSize
+## <a name="cbuttonsetsplitsize"></a><a name="setsplitsize"></a> CButton:: SetSplitSize
 
 現在の分割ボタンコントロールのドロップダウンコンポーネントの外接する四角形を設定します。
 
@@ -1004,9 +997,8 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pSize*|から外接する四角形を記述する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体へのポインター。|
+*pSize*\
+から外接する四角形を記述する [サイズ](/windows/win32/api/windef/ns-windef-size) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1032,7 +1024,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]
 
-## <a name="cbuttonsetsplitstyle"></a><a name="setsplitstyle"></a>CButton:: SetSplitStyle
+## <a name="cbuttonsetsplitstyle"></a><a name="setsplitstyle"></a> CButton:: SetSplitStyle
 
 現在の分割ボタンコントロールのスタイルを設定します。
 
@@ -1042,9 +1034,8 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*uSplitStyle*|から分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを参照してください。|
+*uSplitStyle*\
+から分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1054,7 +1045,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 このメソッドは、ボタンスタイルが BS_SPLITBUTTON または BS_DEFSPLITBUTTON コントロールでのみ使用します。
 
-分割ボタンのスタイルでは、ウィンドウが分割ボタンアイコンを描画する配置、縦横比、およびグラフィカルな形式を指定します。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを参照してください。
+分割ボタンのスタイルでは、ウィンドウが分割ボタンアイコンを描画する配置、縦横比、およびグラフィカルな形式を指定します。 詳細については、 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 構造体のメンバーを参照してください。
 
 このメソッドは、 `mask` BCSIF_STYLE フラグと Usplitstyle パラメーターを持つメンバーを使用して[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)構造体のメンバーを初期化 `uSplitStyle` し、Windows SDK で説明されている[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)メッセージにその構造体を送信します。 *uSplitStyle*
 
@@ -1070,7 +1061,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]
 
-## <a name="cbuttonsetstate"></a><a name="setstate"></a>CButton:: SetState
+## <a name="cbuttonsetstate"></a><a name="setstate"></a> CButton:: SetState
 
 ボタンコントロールを強調表示するかどうかを設定します。
 
@@ -1093,7 +1084,7 @@ void SetState(BOOL bHighlight);
 
 [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]
 
-## <a name="cbuttonsettextmargin"></a><a name="settextmargin"></a>CButton:: SetTextMargin
+## <a name="cbuttonsettextmargin"></a><a name="settextmargin"></a> CButton:: SetTextMargin
 
 オブジェクトのテキストの余白を設定するには、このメソッドを呼び出し `CButton` ます。
 
@@ -1112,7 +1103,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK の [[ボタン](/windows/win32/controls/buttons)] セクションで説明されているように、BCM_SETTEXTMARGIN メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK の [ [ボタン](/windows/win32/controls/buttons) ] セクションで説明されているように、BCM_SETTEXTMARGIN メッセージの機能をエミュレートします。
 
 ## <a name="see-also"></a>関連項目
 

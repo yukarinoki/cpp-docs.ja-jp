@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217455"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560453"
 ---
 # <a name="span-class-c-standard-library"></a>span クラス (C++ 標準ライブラリ)
 
@@ -73,12 +73,13 @@ template<class T, size_t Extent = dynamic_extent>
 class span;
 ```
 
-### <a name="template-parameters"></a>Template parameters
+### <a name="template-parameters"></a>テンプレート パラメーター
 
-|パラメーター|説明|
-|-|-|
-|`T`| スパン内の要素の型。 |
-|`Extent`| コンパイル時に指定した場合にスパン内の要素の数。 それ以外の `std::dynamic_extent` 場合は、実行時に要素の数が指定されます。 |
+`T`\
+ スパン内の要素の型。
+
+`Extent`\
+ コンパイル時に指定した場合にスパン内の要素の数。 それ以外の  `std::dynamic_extent` 場合は、実行時に要素の数が指定されます。
 
 [控除ガイド](#deduction_guides)
 
@@ -549,7 +550,7 @@ constexpr reference operator[](size_type offset) const;
 
 ### <a name="return-value"></a>戻り値
 
-位置の*オフセット*位置にある要素への参照。 位置が無効な場合、動作は定義されていません。
+位置の *オフセット*位置にある要素への参照。 位置が無効な場合、動作は定義されていません。
 
 ### <a name="example"></a>例
 
@@ -742,7 +743,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 ### <a name="remarks"></a>解説
 
-`rend`span [:: end](#end)が span で使用されるのと同様に、反転スパンと共に使用されます。 これを使用して、逆順反復子がスパンの末尾に達したかどうかをテストします。
+`rend` span [:: end](#end) が span で使用されるのと同様に、反転スパンと共に使用されます。 これを使用して、逆順反復子がスパンの末尾に達したかどうかをテストします。
 
 によって返された値を `rend` 逆参照することはできません。
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`コンストラクター.
+`span` コンストラクター.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ span(const span<T, OtherExtent>& other) noexcept
 |---------|---------|
 |`span()` | 空のスパンを構築します。 テンプレートパラメーターがまたはの場合にのみ、オーバーロードの解決時に考慮 `Extent` され `0` `dynamic_extent` ます。|
 |`span(It first, size_type count)` | 反復子の最初の要素からスパンを構築 `count` `first` します。  テンプレートパラメーターがでない場合にのみ、オーバーロードの解決時に考慮さ `Extent` `dynamic_extent` れます。 |
-|`span(It first, End last)` | 終了位置に達するまで、反復子の要素からスパンを構築し `first` `last` ます。 テンプレートパラメーターがでない場合にのみ、オーバーロードの解決時に考慮さ `Extent` `dynamic_extent` れます。 `It`はである必要があり `contiguous_iterator` ます。  |
+|`span(It first, End last)` | 終了位置に達するまで、反復子の要素からスパンを構築し `first` `last` ます。 テンプレートパラメーターがでない場合にのみ、オーバーロードの解決時に考慮さ `Extent` `dynamic_extent` れます。 `It` はである必要があり `contiguous_iterator` ます。  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  `N`指定した配列の要素からスパンを構築します。 テンプレートパラメーターがまたはと等しい場合にのみ、オーバーロード解決時に考慮 `Extent` され `dynamic_extent` `N` ます。 |
 |`span(R&& r)` |  範囲からスパンを構築します。 テンプレートパラメーターがでない場合にのみ、オーバーロードの解決に参加 `Extent` `dynamic_extent` します。|
 |`span(const span& other)` |  コンパイラによって生成されたコピーコンストラクター。 スパンが要素を保持するためのメモリを割り当てないため、データポインターの簡易コピーは安全です。 |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>控除ガイド
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> 控除ガイド
 
 次の推定ガイドがスパンに提供されています。
 

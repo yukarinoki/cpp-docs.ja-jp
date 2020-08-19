@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 01d282585133d55ee3f7ec96c212705c2afca9d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 47b82a198a52a61bd5558bd59a38b1d328fa67b2
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617425"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562585"
 ---
 # <a name="allocator_suballoc-class"></a>allocator_suballoc クラス
 
@@ -27,11 +27,10 @@ class allocator_suballoc;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Type*|アロケーターによって割り当てられた要素の型。|
+*各種*\
+アロケーターによって割り当てられた要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを*name*パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 

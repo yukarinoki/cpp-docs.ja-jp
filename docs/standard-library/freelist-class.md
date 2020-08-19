@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 7425f99f7966548bdb1f94d3007382eeb99863df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193225"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561207"
 ---
 # <a name="freelist-class"></a>freelist クラス
 
@@ -30,14 +30,15 @@ class freelist : public Max
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Sz*|割り当てられる配列内の要素の数。|
-|*制限*|フリー リストに格納される要素の最大数を示す最大クラス。 最大クラスは、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。|
+*Sz*\
+割り当てられる配列内の要素の数。
+
+*制限*\
+フリー リストに格納される要素の最大数を示す最大クラス。 最大クラスは、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。
 
 ## <a name="remarks"></a>解説
 
-このクラステンプレートは、size *Sz*のメモリブロックのリストを管理します。このリストの最大長は *、最大で*渡されるクラスによって決定されます。
+このクラステンプレートは、size *Sz* のメモリブロックのリストを管理します。このリストの最大長は *、最大で*渡されるクラスによって決定されます。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -58,7 +59,7 @@ class freelist : public Max
 
 **名前空間:** stdext
 
-## <a name="freelistfreelist"></a><a name="freelist"></a>freelist:: freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a> freelist:: freelist
 
 `freelist` 型のオブジェクトを構築します。
 
@@ -68,7 +69,7 @@ freelist();
 
 ### <a name="remarks"></a>解説
 
-## <a name="freelistpop"></a><a name="pop"></a>freelist::p op
+## <a name="freelistpop"></a><a name="pop"></a> freelist::p op
 
 フリー リストから最初のメモリ ブロックを削除します。
 
@@ -84,7 +85,7 @@ void *pop();
 
 このメンバー関数は、リストが空の場合、NULL を返します。 それ以外の場合は、空き一覧から最初のメモリ ブロックを削除します。
 
-## <a name="freelistpush"></a><a name="push"></a>freelist::p u
+## <a name="freelistpush"></a><a name="push"></a> freelist::p u
 
 メモリ ブロックをリストに追加します。
 
@@ -94,9 +95,8 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|フリー リストに追加するメモリ ブロックへのポインター。|
+*ポインター*\
+フリー リストに追加するメモリ ブロックへのポインター。
 
 ### <a name="return-value"></a>戻り値
 

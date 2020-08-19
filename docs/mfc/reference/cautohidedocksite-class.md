@@ -1,5 +1,5 @@
 ---
-title: クラスを自動非表示にする
+title: CAutoHideDockSite クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoHideDockSite
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753003"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562013"
 ---
-# <a name="cautohidedocksite-class"></a>クラスを自動非表示にする
+# <a name="cautohidedocksite-class"></a>CAutoHideDockSite クラス
 
-`CAutoHideDockSite` [CDockSite クラス](../../mfc/reference/cdocksite-class.md)を拡張して、ドッキング ペインの自動非表示を実装します。
+は `CAutoHideDockSite` [CDockSite クラス](../../mfc/reference/cdocksite-class.md) を拡張して、自動非表示のドッキングペインを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,27 +54,27 @@ class CAutoHideDockSite : public CDockSite
 |||
 |-|-|
 |名前|説明|
-|`CAutoHideDockSite::AllowShowOnPaneMenu`|が`CAutoHideDockSite`ペイン メニューに表示されるかどうかを示します。|
-|[C 自動ハイドドックサイト::缶アクセプドペイン](#canacceptpane)|基本ペイン オブジェクトが[CMFCAutoHideBar クラス](../../mfc/reference/cmfcautohidebar-class.md)から派生しているかどうかを判断します。|
-|[C オートハイドドックサイト::DockPane](#dockpane)|ペインをこの`CAuotHideDockSite`オブジェクトにドッキングします。|
-|[を取得します。](#getalignrect)|ドッキング サイトのサイズを画面座標で取得します。|
-|[C 自動ハイドドックサイト::ペインの位置変更](#repositionpanes)|グローバルマージンとボタン間隔を`CAutoHideDockSite`持つペインを再描画します。|
-|[C オートハイドドックサイト::オフセット左](#setoffsetleft)|ドッキング バーの左側の余白を設定します。|
-|[C オートハイドドックサイト::オフセット右](#setoffsetright)|ドッキング バーの右側に余白を設定します。|
-|[C 自動ハイドドックサイト::自動隠しモードを設定解除](#unsetautohidemode)|上のオブジェクト[に対して CMFC 自動隠しバー::自動非表示モードを呼](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)び出します。 `CAutoHideDockSite`|
+|`CAutoHideDockSite::AllowShowOnPaneMenu`|がペインメニューに表示されるかどうかを示し `CAutoHideDockSite` ます。|
+|[CAutoHideDockSite:: CanAcceptPane](#canacceptpane)|基本ペインオブジェクトが [Cmfcautohidebar クラス](../../mfc/reference/cmfcautohidebar-class.md)から派生したものかどうかを判断します。|
+|[CAutoHideDockSite::D ockPane](#dockpane)|このオブジェクトにペインをドッキング `CAuotHideDockSite` します。|
+|[CAutoHideDockSite:: GetAlignRect](#getalignrect)|ドックサイトのサイズを画面座標で取得します。|
+|[CAutoHideDockSite:: RepositionPanes](#repositionpanes)|`CAutoHideDockSite`全体の余白とボタンの間隔を使用して、ペインを上に再描画します。|
+|[CAutoHideDockSite:: SetOffsetLeft](#setoffsetleft)|ドッキングバーの左側に余白を設定します。|
+|[CAutoHideDockSite:: SetOffsetRight](#setoffsetright)|ドッキングバーの右側に余白を設定します。|
+|[CAutoHideDockSite:: UnSetAutoHideMode](#unsetautohidemode)|のオブジェクトに対して [Cmfcautohidebar:: UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) を呼び出し `CAutoHideDockSite` ます。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |||
 |-|-|
 |名前|説明|
-|[C オートハイドドックサイト::m_nExtraSpace](#m_nextraspace)|ツール バーとドッキング バーの端の間のスペースのサイズを定義します。 このスペースは、ドッキングスペースの配置に応じて、左端または上端から測定されます。|
+|[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|ツールバーとドッキングバーの端との間のスペースのサイズを定義します。 この領域は、ドッキング領域の配置に応じて左端または上端から測定されます。|
 
 ## <a name="remarks"></a>解説
 
-[CFrameWndEx::有効に自動非表示ウィンドウを](../../mfc/reference/cframewndex-class.md#enableautohidepanes)呼び出すと、フレームワークは自動的`CAutoHideDockSite`にオブジェクトを作成します。 ほとんどの場合、このクラスを直接インスタンス化したり使用したりする必要はありません。
+[CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)を呼び出すと、フレームワークによってオブジェクトが自動的に作成さ `CAutoHideDockSite` れます。 ほとんどの場合、このクラスを直接インスタンス化または使用する必要はありません。
 
-ドッキング バーは、ドッキング ペインの左側と[CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)の左側との間のギャップです。
+ドッキングバーは、dock ペインの左側と [Cmfcautohidebutton クラス](../../mfc/reference/cmfcautohidebutton-class.md)の左側との間の間隔です。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -90,17 +90,17 @@ class CAutoHideDockSite : public CDockSite
 
 ## <a name="example"></a>例
 
-オブジェクトから`CAutoHideDockSite``CMFCAutoHideBar`オブジェクトを取得する方法と、ドッキング バーの左右の余白を設定する方法を次の例に示します。
+次の例は、オブジェクトからオブジェクトを取得する方法 `CAutoHideDockSite` `CMFCAutoHideBar` と、ドッキングバーの左右の余白を設定する方法を示しています。
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afx オートハイドドックサイト.h
+**ヘッダー:** afxautohidedocksite
 
-## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a>C 自動ハイドドックサイト::缶アクセプドペイン
+## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a> CAutoHideDockSite:: CanAcceptPane
 
-基本ペインが[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)オブジェクトであるか、またはから`CMFCAutoHideBar`派生しているかどうかを判断します。
+基本ペインが [Cmfcautohidebar](../../mfc/reference/cmfcautohidebar-class.md) オブジェクトであるか、またはから派生しているかを判断し `CMFCAutoHideBar` ます。
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -108,22 +108,20 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|||
-|-|-|
-|パラメーター|説明|
-|*pバー*|[in]フレームワークがテストする基本ペイン。|
+*pBar*\
+からフレームワークによってテストされる基本ペイン。
 
 ### <a name="return-value"></a>戻り値
 
-*pBar*がから`CMFCAutoHideBar`派生している場合は TRUE。それ以外の場合は FALSE。
+*Pbar*がから派生している場合は TRUE `CMFCAutoHideBar` 。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ベース ペイン オブジェクトが から`CMFCAutoHideBar`派生している場合は、`CAutoHideDockSite`を格納できます。
+基本ペインオブジェクトがから派生している場合は、 `CMFCAutoHideBar` を含めることができ `CAutoHideDockSite` ます。
 
-## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a>C オートハイドドックサイト::DockPane
+## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a> CAutoHideDockSite::D ockPane
 
-この[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)オブジェクトにペインをドッキングします。
+この [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) オブジェクトにペインをドッキングします。
 
 ```
 virtual void DockPane(
@@ -134,22 +132,24 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>パラメーター
 
-|||
-|-|-|
-|パラメーター|説明|
-|*Pwnd*|[in]フレームワークがドッキングするペイン。|
-|*ドックメソッド*|[in]ペインのドッキング オプション。|
-|*Lprect*|[in]ドッキングペインの境界を指定する四角形。|
+*pWnd*\
+からフレームワークがドッキングするウィンドウ。
+
+*dockMethod*\
+からペインのドッキングオプション。
+
+*lpRect*\
+からドッキングされたペインの境界を指定する四角形。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、将来使用するために用意されているパラメーター *dockMethod*は使用されません。
+既定の実装では、パラメーター *dockMethod*は使用されません。このパラメーターは将来使用するために用意されています。
 
-*lpRect*が NULL の場合、フレームワークは、ドッキング サイトの既定の場所にペインを配置します。 ドッキング サイトが水平である場合、既定の位置はドッキング サイトの左端にあります。 それ以外の場合、既定の場所は、ドッキング サイトの上部にあります。
+*LpRect*が NULL の場合、フレームワークはペインをドッキングサイトの既定の場所に配置します。 Dock サイトが横方向の場合、既定の場所は dock サイトの左端にあります。 それ以外の場合、既定の場所は dock サイトの上部にあります。
 
-## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a>を取得します。
+## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a> CAutoHideDockSite:: GetAlignRect
 
-ドッキング サイトのサイズを画面座標で取得します。
+ドックサイトのサイズを画面座標で取得します。
 
 ```cpp
 void GetAlignRect(CRect& rect) const;
@@ -157,18 +157,16 @@ void GetAlignRect(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|||
-|-|-|
-|パラメーター|説明|
-|*Rect*|[in]四角形への参照。 このメソッドは、ドッキング サイトのサイズをこの四角形に格納します。|
+*rect*\
+から四角形への参照。 メソッドは、この四角形にドッキングサイトのサイズを格納します。
 
 ### <a name="remarks"></a>解説
 
-四角形はオフセットマージンに合わせて調整され、含まれないようにします。
+四角形は、余白が含まれないように調整されます。
 
-## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a>C オートハイドドックサイト::m_nExtraSpace
+## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a> CAutoHideDockSite:: m_nExtraSpace
 
-[CAutoHideDockSite クラス](../../mfc/reference/cautohidedocksite-class.md)の端と[CMFCAutoHideBar クラスの間](../../mfc/reference/cmfcautohidebar-class.md)のスペースのサイズです。
+[CAutoHideDockSite クラス](../../mfc/reference/cautohidedocksite-class.md)の端と[Cmfcautohidebar クラス](../../mfc/reference/cmfcautohidebar-class.md)オブジェクトとの間のスペースのサイズ。
 
 ```
 static int m_nExtraSpace;
@@ -176,11 +174,11 @@ static int m_nExtraSpace;
 
 ### <a name="remarks"></a>解説
 
-に`CMFCAutoHideBar`ドッキングされている場合、`CAutoHideDockSite`は、ドッキング サイト全体を占有しないでください。 このグローバル変数は、左または上の境界`CMFCAutoHideBar`と対応する`CAutoHideDockSite`エッジの間の余分なスペースを制御します。 上端または左端のどちらを使用するかは、現在の配置によって異なります。
+`CMFCAutoHideBar`がにドッキングされている場合 `CAutoHideDockSite` 、dock サイト全体を占有することはできません。 このグローバル変数は、の左または上の境界線と、対応するエッジとの間の余分なスペースを制御し `CMFCAutoHideBar` `CAutoHideDockSite` ます。 上端と左端のどちらを使用するかは、現在の配置によって異なります。
 
-## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a>C オートハイドドックサイト::オフセット左
+## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a> CAutoHideDockSite:: SetOffsetLeft
 
-ドッキング バーの左側の余白を設定します。
+ドッキングバーの左側に余白を設定します。
 
 ```cpp
 void SetOffsetLeft(int nOffset);
@@ -188,16 +186,16 @@ void SetOffsetLeft(int nOffset);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-[in]新しいオフセット。
+*nOffset*<br/>
+から新しいオフセット。
 
 ### <a name="remarks"></a>解説
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)オブジェクトは、オブジェクト上に`CAutoHideDockSite`静的に配置されます。 つまり、ユーザーはオブジェクトの`CMFCAutoHideBar`場所を手動で変更できません。 この`SetOffsetLeft`メソッドは、左端`CMFCAutoHideBar`の左側と左端の間の間隔を制御します`CAutoHideDockSite`。
+[Cmfcautohidebar](../../mfc/reference/cmfcautohidebar-class.md) オブジェクトは、オブジェクトに静的に配置され `CAutoHideDockSite` ます。 これは、ユーザーがオブジェクトの場所を手動で変更できないことを意味し `CMFCAutoHideBar` ます。 `SetOffsetLeft`メソッドは、の左端と左側の間の間隔を制御し `CMFCAutoHideBar` `CAutoHideDockSite` ます。
 
-## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a>C オートハイドドックサイト::オフセット右
+## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a> CAutoHideDockSite:: SetOffsetRight
 
-ドッキング バーの右側に余白を設定します。
+ドッキングバーの右側に余白を設定します。
 
 ```cpp
 void SetOffsetRight(int nOffset);
@@ -205,16 +203,16 @@ void SetOffsetRight(int nOffset);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-[in]新しいオフセット。
+*nOffset*<br/>
+から新しいオフセット。
 
 ### <a name="remarks"></a>解説
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)オブジェクトは、オブジェクト上に`CAutoHideDockSite`静的に配置されます。 つまり、ユーザーは`CMFCAutoHideBar`オブジェクトの場所を手動で変更できません。 この`SetOffsetRight`メソッドは、右端`CMFCAutoHideBar`の右側と右側の間の間隔を制御します`CAutoHideDockSite`。
+[Cmfcautohidebar](../../mfc/reference/cmfcautohidebar-class.md) オブジェクトは、オブジェクトに静的に配置され `CAutoHideDockSite` ます。 これは、ユーザーがオブジェクトの場所を手動で変更できないことを意味し `CMFCAutoHideBar` ます。 メソッドは、の右端 `SetOffsetRight` と右端の間の間隔を制御し `CMFCAutoHideBar` `CAutoHideDockSite` ます。
 
-## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a>C 自動ハイドドックサイト::ペインの位置変更
+## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a> CAutoHideDockSite:: RepositionPanes
 
-ペインを[再描画します](../../mfc/reference/cautohidedocksite-class.md)。
+[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)のペインを再描画します。
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -222,18 +220,16 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>パラメーター
 
-|||
-|-|-|
-|パラメーター|説明|
-|*レクトニュークライアントエリア*|[in]予約値。|
+*rectNewClientArea*\
+から予約済みの値。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では *、rectNewClientArea を*使用しません。 グローバル ツールバーの余白とボタンの間隔を使用してペインを再描画します。
+既定の実装では、 *rectNewClientArea*は使用されません。 グローバルツールバーの余白とボタンの間隔を使用して、ウィンドウを再描画します。
 
-## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a>C 自動ハイドドックサイト::自動隠しモードを設定解除
+## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a> CAutoHideDockSite:: UnSetAutoHideMode
 
-ドッキング サイト上のオブジェクトに対[して CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)を呼び出します。
+Dock サイトのオブジェクトに対して [Cmfcautohidebar:: UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) を呼び出します。
 
 ```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
@@ -241,17 +237,15 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 ### <a name="parameters"></a>パラメーター
 
-|||
-|-|-|
-|パラメーター|説明|
-|*閉じ込ツールバー*|[in]上にある[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)オブジェクト ペインへのポインター `CAutoHideDockSite`。|
+*pAutoHideToolbar*\
+からにある [Cmfcautohidebar](../../mfc/reference/cmfcautohidebar-class.md) オブジェクトペインへのポインター `CAutoHideDockSite` 。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは *、pAutoHideToolbar*を含む行を検索します。 この場合`CMFCAutoHideBar.UnSetAutoHideMode`、その行`CMFCAutoHideBar`のすべてのオブジェクトが必要になります。 *pAutoHideToolbar*が見つからないか、NULL の場合、この`CMFCAutoHideBar.UnSetAutoHideMode`メソッド`CMFCAutoHideBar``CAutoHideDockSite`は、 .
+このメソッドは、 *Pautohidetoolbar*を含む行を検索します。 このメソッドは `CMFCAutoHideBar.UnSetAutoHideMode` 、 `CMFCAutoHideBar` その行のすべてのオブジェクトを呼び出します。 *Pautohidetoolbar*が見つからないか、NULL の場合、このメソッドはの `CMFCAutoHideBar.UnSetAutoHideMode` すべてのオブジェクトに対してを呼び出し `CMFCAutoHideBar` `CAutoHideDockSite` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CDockSite クラス](../../mfc/reference/cdocksite-class.md)

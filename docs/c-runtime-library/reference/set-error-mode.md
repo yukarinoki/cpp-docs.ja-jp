@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948562"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562039"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
@@ -57,22 +57,22 @@ int _set_error_mode(
 
 エラーが発生した場合、以前の設定または-1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **__Error_mode**の値を設定することによって、エラー出力シンクを制御します。 たとえば、出力を標準エラーに転送したり、 **MessageBox** API を使用したりすることができます。
 
 *Mode_val*パラメーターは、次のいずれかの値に設定できます。
 
-|パラメーター|説明|
+|値|説明|
 |---------------|-----------------|
 |**_OUT_TO_DEFAULT**|エラーシンクは **__app_type**によって決定されます。|
-|**標準 (_E)**|エラー シンクは、標準エラーです。|
-|**メッセージボックス (_D)**|エラー シンクは、メッセージ ボックスです。|
-|**_REPORT_ERRMODE**|現在の **__error_mode**値を報告します。|
+|**_OUT_TO_STDERR**|エラー シンクは、標準エラーです。|
+|**_OUT_TO_MSGBOX**|エラー シンクは、メッセージ ボックスです。|
+|**_REPORT_ERRMODE**|現在の **__error_mode** 値を報告します。|
 
-リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **_set_error_mode**は**errno**を**EINVAL**に設定し、-1 を返します。
+リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **_set_error_mode** **errno** を **EINVAL** に設定し、-1 を返します。
 
-[Assert](assert-macro-assert-wassert.md)と共に使用すると、 **_set_error_mode**は失敗したステートメントをダイアログボックスに表示し、プログラムの実行を続行できるように、 **[無視]** ボタンを選択するオプションを提供します。
+[Assert](assert-macro-assert-wassert.md)と共に使用すると、 **_set_error_mode**によってダイアログボックスに失敗したステートメントが表示され、[**無視**] ボタンをクリックすると、プログラムの実行を続行できるようになります。
 
 ## <a name="requirements"></a>必要条件
 

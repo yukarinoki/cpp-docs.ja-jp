@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912144"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562026"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -52,20 +52,27 @@ void _tzset( void );
 
 **_Tzset**関数は、環境変数**TZ**の現在の設定を使用して、 **_daylight**、 **_timezone**、および **_tzname**の3つのグローバル変数に値を割り当てます。 これらの変数は、世界協定時刻 (UTC) から現地時刻への修正や、システム時刻から UTC を計算するための[時間](time-time32-time64.md)関数によって、 [_ftime](ftime-ftime32-ftime64.md)関数と[localtime](localtime-localtime32-localtime64.md)関数によって使用されます。 **TZ**環境変数を設定するには、次の構文を使用します。
 
-> **set TZ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ =**_tzn_ \[ **+**&#124;**-** ]*hh* \[ **:**_mm_ \[ **:**_ss_]] [*dzn*]
 
-|パラメーター|説明|
-|-|-|
-| *tzn* | PST など、3 文字のタイム ゾーンの名前。 現地時刻から UTC への適切なオフセットを指定する必要があります。 |
-| *hh* | UTC と現地時刻の時差。 正の値のための符号 (+) オプション。 |
-| *mm* | 分。 *Hh*からコロン (**:**) で区切られます。 |
-| *秒* | 秒。 *Mm*からコロン (**:**) で区切られます。 |
-| *dzn* | PDT など、3 文字の夏時間のタイム ゾーン。 地域で夏時間が適用されない場合は、 *dzn*の値を指定せずに**TZ**を設定します。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。 |
+ *tzn* \
+ PST など、3 文字のタイム ゾーンの名前。 現地時刻から UTC への適切なオフセットを指定する必要があります。
+
+ *桁* \
+ UTC と現地時刻の時差。 正の値のための符号 (+) オプション。
+
+ *297* \
+ 分。 *Hh*からコロン (**:**) で区切られます。
+
+ *秒* \
+ 秒。 *Mm*からコロン (**:**) で区切られます。
+
+ *dzn* \
+ PDT など、3 文字の夏時間のタイム ゾーン。 地域で夏時間が適用されない場合は、 *dzn*の値を指定せずに**TZ**を設定します。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。
 
 > [!NOTE]
 > 計算時には時差の符号に注意してください。 時差は現地時刻から UTC に変換する場合のオフセットである (逆ではない) であるため、符号は直感的に考えるものとは逆である場合があります。 UTC より早いタイム ゾーンの場合、時差は負になります。UTC より遅い場合、時差は正になります。
 
-たとえば、 **TZ**環境変数をドイツの現在のタイムゾーンに対応するように設定するには、コマンドラインで次のように入力します。
+たとえば、 **TZ** 環境変数をドイツの現在のタイムゾーンに対応するように設定するには、コマンドラインで次のように入力します。
 
 > **set TZ = GST-1GDT**
 
@@ -80,15 +87,15 @@ void _tzset( void );
 |**_daylight**|**TZ**設定で夏時間のタイムゾーンが指定されている場合は0以外の値それ以外の場合は0です。|1|
 |**_timezone**|現地時刻と UTC の秒単位での時差。|28800 (28800 秒は 8 時間に相当)|
 |**_tzname**[0]|**TZ**環境変数からのタイムゾーン名の文字列値です。**TZ**が設定されていない場合は空です。|PST|
-|**_tzname**[1]|夏時間のタイムゾーンの文字列値。**TZ**環境変数から夏時間のタイムゾーンが省略されている場合は空です。|PDT|
+|**_tzname**[1]|夏時間のタイムゾーンの文字列値。 **TZ** 環境変数から夏時間のタイムゾーンが省略されている場合は空です。|PDT|
 
-上の表に示す **_daylight**および **_tzname**配列の既定値は、"PST8PDT" に対応しています。 DST ゾーンが**TZ**環境変数から省略された場合、 **_daylight**の値は0になり、 [_ftime](ftime-ftime32-ftime64.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、および[localtime](localtime-localtime32-localtime64.md)関数は、それぞれの dst フラグに対して0を返します。
+上の表に示す **_daylight** および **_tzname** 配列の既定値は、"PST8PDT" に対応しています。 DST ゾーンが **TZ** 環境変数から省略された場合、 **_daylight** の値は0になり、 [_ftime](ftime-ftime32-ftime64.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、および [localtime](localtime-localtime32-localtime64.md) 関数は、それぞれの dst フラグに対して0を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 

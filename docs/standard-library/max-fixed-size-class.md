@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 23aa10a3398c3f20de73eb2ac6fa1372efdc32e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e62884c83d71b4e9f1902fa4bc7f52f5e0a4e0ee
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228207"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561688"
 ---
 # <a name="max_fixed_size-class"></a>max_fixed_size クラス
 
@@ -36,13 +36,12 @@ class max_fixed_size
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*制限*|`freelist` に格納する要素の最大数を決定する、最大クラス。|
+*制限*\
+`freelist` に格納する要素の最大数を決定する、最大クラス。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|[説明]|
+|コンストラクター|説明|
 |-|-|
 |[max_fixed_size](#max_fixed_size)|`max_fixed_size` 型のオブジェクトを構築します。|
 
@@ -62,7 +61,7 @@ class max_fixed_size
 
 **名前空間:** stdext
 
-## <a name="max_fixed_sizeallocated"></a><a name="allocated"></a>max_fixed_size:: 割り当て済み
+## <a name="max_fixed_sizeallocated"></a><a name="allocated"></a> max_fixed_size:: 割り当て済み
 
 割り当てられたメモリ ブロックの数を増やします。
 
@@ -72,15 +71,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*_Nx*|増分値。|
+*_Nx*\
+増分値。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、to 演算子による呼び出しが成功するたびに呼び出され `cache_freelist::allocate` **`new`** ます。 引数 *_Nx*は、演算子によって割り当てられたチャンク内のメモリブロックの数です **`new`** 。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、to 演算子による呼び出しが成功するたびに呼び出され `cache_freelist::allocate` **`new`** ます。 引数 *_Nx* は、演算子によって割り当てられたチャンク内のメモリブロックの数です **`new`** 。
 
-## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a>max_fixed_size::d eallocated
+## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a> max_fixed_size::d eallocated
 
 割り当てられたメモリ ブロックの数を減らします。
 
@@ -90,15 +88,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*_Nx*|増分値。|
+*_Nx*\
+増分値。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、to 演算子による各呼び出しの後に呼び出され `cache_freelist::deallocate` **`delete`** ます。 引数 *_Nx*は、演算子によって割り当て解除されたチャンク内のメモリブロックの数です **`delete`** 。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、to 演算子による各呼び出しの後に呼び出され `cache_freelist::deallocate` **`delete`** ます。 引数 *_Nx* は、演算子によって割り当て解除されたチャンク内のメモリブロックの数です **`delete`** 。
 
-## <a name="max_fixed_sizefull"></a><a name="full"></a>max_fixed_size:: full
+## <a name="max_fixed_sizefull"></a><a name="full"></a> max_fixed_size:: full
 
 フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。
 
@@ -114,7 +111,7 @@ bool full();
 
 このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しでが返された場合 **`true`** 、は `deallocate` メモリブロックをフリーリストに格納します。 false を返す場合は、 `deallocate` 演算子を呼び出して **`delete`** ブロックの割り当てを解除します。
 
-## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a>max_fixed_size:: max_fixed_size
+## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a> max_fixed_size:: max_fixed_size
 
 `max_fixed_size` 型のオブジェクトを構築します。
 
@@ -126,7 +123,7 @@ max_fixed_size();
 
 このコンストラクターは、格納された値 `_Nblocks` をゼロに初期化します。
 
-## <a name="max_fixed_sizereleased"></a><a name="released"></a>max_fixed_size:: 解放されました
+## <a name="max_fixed_sizereleased"></a><a name="released"></a> max_fixed_size:: 解放されました
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -138,7 +135,7 @@ void released();
 
 格納された `_Nblocks`を減らします。 `released`現在の[最大クラス](../standard-library/allocators-header.md)のメンバー関数は、 `cache_freelist::allocate` フリーリストからメモリブロックが削除されるたびに、によって呼び出されます。
 
-## <a name="max_fixed_sizesaved"></a><a name="saved"></a>max_fixed_size:: saved
+## <a name="max_fixed_sizesaved"></a><a name="saved"></a> max_fixed_size:: saved
 
 フリー リスト上のメモリ ブロックの数を減らします。
 

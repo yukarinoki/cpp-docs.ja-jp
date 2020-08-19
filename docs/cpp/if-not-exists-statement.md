@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: 3e0eb550830a1689d440e3b471759a98f1eef0ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e99fcee440bd69eabafec693df99d347f3aee828
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187258"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560284"
 ---
 # <a name="__if_not_exists-statement"></a>__if_not_exists ステートメント
 
@@ -27,10 +27,11 @@ statements
 
 #### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*identifier*|存在をテストしたい識別子。|
-|*命令*|*識別子*が存在しない場合に実行する1つ以上のステートメント。|
+*identifier*\
+存在をテストしたい識別子。
+
+*命令*\
+*識別子*が存在しない場合に実行する1つ以上のステートメント。
 
 ## <a name="remarks"></a>解説
 
@@ -45,7 +46,7 @@ statements
 
 - オーバーロードされた関数をテストする場合、特定の形式のオーバーロードはテストできません。
 
-ステートメントの補数は、 **`__if_not_exists`** [__if_exists](../cpp/if-exists-statement.md)ステートメントです。
+ステートメントの補数は、 **`__if_not_exists`** [__if_exists](../cpp/if-exists-statement.md) ステートメントです。
 
 ## <a name="example"></a>例
 

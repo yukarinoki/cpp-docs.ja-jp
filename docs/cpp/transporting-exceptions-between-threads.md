@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186101"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561363"
 ---
 # <a name="transporting-exceptions-between-threads"></a>スレッド間の例外転送
 
-Microsoft C++ コンパイラ (MSVC) では、あるスレッドから別のスレッドへの*例外の転送*をサポートしています。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 MSVC は、転送例外を実装するために、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型、 [current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)の各関数を提供します。
+Microsoft C++ コンパイラ (MSVC) では、あるスレッドから別のスレッドへの *例外の転送* をサポートしています。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 MSVC は、転送例外を実装するために、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 型、 [current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) の各関数を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,18 +40,23 @@ namespace std
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*不明*|`exception_ptr` 型を実装するために使用される未指定の内部クラス。|
-|*irtran-p*|例外を参照する `exception_ptr` オブジェクト。|
-|*つまり*|例外を表すクラス。|
-|*e*|パラメーター `E` クラスのインスタンス。|
+*不明*\
+`exception_ptr` 型を実装するために使用される未指定の内部クラス。
+
+*irtran-p*\
+例外を参照する `exception_ptr` オブジェクト。
+
+*つまり*\
+例外を表すクラス。
+
+*つまり*\
+パラメーター `E` クラスのインスタンス。
 
 ## <a name="return-value"></a>戻り値
 
 `current_exception` 関数は、現在進行中の例外を参照する `exception_ptr` オブジェクトを返します。 処理中の例外がない場合、関数は、例外に関連付けられていない `exception_ptr` オブジェクトを返します。
 
-関数は、 `make_exception_ptr` `exception_ptr` *e*パラメーターによって指定された例外を参照するオブジェクトを返します。
+関数は、 `make_exception_ptr` `exception_ptr` *e* パラメーターによって指定された例外を参照するオブジェクトを返します。
 
 ## <a name="remarks"></a>解説
 
@@ -63,9 +68,9 @@ namespace std
 
 ### <a name="solution"></a>解決策
 
-上記のシナリオを処理するために、C++ 標準はスレッド間での例外の転送をサポートしています。 セカンダリスレッドが例外をスローした場合、その例外は*現在の例外*になります。 現実の世界と同じように、現在の例外は*フライト中で*あると言われています。 現在の例外は、スローされた時点から、それをキャッチする例外ハンドラーによって返されるまでが処理中です。
+上記のシナリオを処理するために、C++ 標準はスレッド間での例外の転送をサポートしています。 セカンダリスレッドが例外をスローした場合、その例外は *現在の例外*になります。 現実の世界と同じように、現在の例外は *フライト中で*あると言われています。 現在の例外は、スローされた時点から、それをキャッチする例外ハンドラーによって返されるまでが処理中です。
 
-セカンダリスレッドは、ブロック内の現在の例外をキャッチ **`catch`** してから、関数を呼び出して `current_exception` 例外をオブジェクトに格納でき `exception_ptr` ます。 `exception_ptr` オブジェクトはセカンダリ スレッドとプライマリ スレッドで使用できる必要があります。 たとえば、`exception_ptr` オブジェクトは、アクセスがミューテックスによって制御されるグローバル変数にすることができます。 "*トランスポートの例外*" という用語は、あるスレッドの例外が、別のスレッドからアクセスできる形式に変換できることを意味します。
+セカンダリスレッドは、ブロック内の現在の例外をキャッチ **`catch`** してから、関数を呼び出して `current_exception` 例外をオブジェクトに格納でき `exception_ptr` ます。 `exception_ptr` オブジェクトはセカンダリ スレッドとプライマリ スレッドで使用できる必要があります。 たとえば、`exception_ptr` オブジェクトは、アクセスがミューテックスによって制御されるグローバル変数にすることができます。 " *トランスポートの例外* " という用語は、あるスレッドの例外が、別のスレッドからアクセスできる形式に変換できることを意味します。
 
 次に、プライマリ スレッドが `rethrow_exception` 関数を呼び出します。これは、`exception_ptr` オブジェクトから例外を抽出してスローします。 例外がスローされると、プライマリ スレッドで現在の例外になります。 つまり、例外はプライマリ スレッドで発生したように見えます。
 
@@ -114,7 +119,7 @@ C++ 標準委員会の提案の詳細については、「Language Support for T
 
 ### <a name="details"></a>詳細
 
-関数は、 `current_exception` **`catch`** ステートメントが[例外宣言](../cpp/try-throw-and-catch-statements-cpp.md)ステートメントを指定しているかどうかに関係なく、処理中の例外をキャプチャします。
+関数は、 `current_exception` **`catch`** ステートメントが [例外宣言](../cpp/try-throw-and-catch-statements-cpp.md) ステートメントを指定しているかどうかに関係なく、処理中の例外をキャプチャします。
 
 現在の例外のデストラクターは、例外を再スローしない場合、ブロックの最後に呼び出され **`catch`** ます。 ただし、デストラクターで `current_exception` 関数を呼び出しても、その関数は現在の例外を参照する `exception_ptr` オブジェクトを返します。
 
@@ -134,7 +139,7 @@ SEH 例外をキャッチする場合、`EXCEPTION_RECORD.ExceptionInformation` 
 
 ## <a name="rethrow_exception-function"></a>rethrow_exception 関数
 
-キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。 関数の*p*パラメーターが null の場合、 `rethrow_exception` `exception_ptr` 関数は[std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
+キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。 関数の *p* パラメーターが null の場合、 `rethrow_exception` `exception_ptr` 関数は [std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
 
 抽出された例外はプライマリ スレッドで現在の例外になり、他の例外と同様に扱うことができます。 例外をキャッチした場合は、すぐに処理するか、ステートメントを使用し **`throw`** て上位レベルの例外ハンドラーに送信することができます。 それ以外の場合は、何も実行されず、既定のシステム例外ハンドラーによってプロセスが終了されます。
 

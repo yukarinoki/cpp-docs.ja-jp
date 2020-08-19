@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 8694f450642b4d179562ef03a609eaf96004eb34
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4722a9c535207b21098db4e33810340d99e6b6a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222421"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561441"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset クラス
 
@@ -138,9 +138,9 @@ hash_multiset は次のとおりです。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_multiset は最適な連想コンテナーとなっている必要があります。 hash_multiset の要素は複数の場合があり、それ自体の並べ替えキーとして機能する場合があるため、キーは一意ではありません。 この種類の構造体のモデルは、単語が複数回出現する可能性がある単語の順序付きのリストです。 単語が複数回出現することが許可されていない場合は、hash_set が適切なコンテナー構造体です。 一意の定義が値として一意のキーワードのリストにアタッチされている場合は、hash_map がこのデータを格納するのに適切な構造体です。 定義が一意でない場合は、hash_multimap が最適なコンテナーです。
 
-hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、クラスのオブジェクトと同じように動作する必要があり `hash_compare<Key, less<Key> >` ます。 具体的には、型のすべての値*キー*について、 `Key` 呼び出しによって `Trait(Key)` 型の値の分布が生成され `size_t` ます。
+hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、クラスのオブジェクトと同じように動作する必要があり `hash_compare<Key, less<Key> >` ます。 具体的には、型のすべての値 *キー* について、 `Key` 呼び出しによって `Trait(Key)` 型の値の分布が生成され `size_t` ます。
 
-通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語*f*( *x*, *y*) は、2つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_multiset に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (x と y) が、*f*( *x*,*y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
+通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_multiset に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (x と y) が、*f*( *x*,*y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
 被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、順序関数、コンテナー オブジェクトに格納されるハッシュ テーブルの現在のサイズによって異なります。 ハッシュ テーブルの現在のサイズは特定できないため、通常は、被制御シーケンス内の要素の順序を予測することはできません。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を具体的に指す反復子だけが無効化されます。
 
@@ -214,7 +214,7 @@ hash_multiset クラスに用意されている反復子は双方向反復子で
 
 **名前空間:** stdext
 
-## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a>hash_multiset:: allocator_type
+## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a> hash_multiset:: allocator_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -229,7 +229,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="hash_multisetbegin"></a><a name="begin"></a>hash_multiset:: begin
+## <a name="hash_multisetbegin"></a><a name="begin"></a> hash_multiset:: begin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -290,7 +290,7 @@ The first element of hms1 is 1
 The first element of hms1 is now 2
 ```
 
-## <a name="hash_multisetcbegin"></a><a name="cbegin"></a>hash_multiset:: cbegin
+## <a name="hash_multisetcbegin"></a><a name="cbegin"></a> hash_multiset:: cbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -337,7 +337,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_multisetcend"></a><a name="cend"></a>hash_multiset:: cend
+## <a name="hash_multisetcend"></a><a name="cend"></a> hash_multiset:: cend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -385,7 +385,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_multisetclear"></a><a name="clear"></a>hash_multiset:: clear
+## <a name="hash_multisetclear"></a><a name="clear"></a> hash_multiset:: clear
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -429,7 +429,7 @@ The size of the hash_multiset is initially 2.
 The size of the hash_multiset after clearing is 0.
 ```
 
-## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a>hash_multiset:: const_iterator
+## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a> hash_multiset:: const_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -448,7 +448,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` の使用例については、[begin](#begin) の例をご覧ください。
 
-## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a>hash_multiset:: const_pointer
+## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a> hash_multiset:: const_pointer
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -463,9 +463,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 `const_pointer` 型で要素の値を変更することはできません。
 
-ほとんどの場合、hash_multiset オブジェクト内の要素にアクセスするには、 [const_iterator](#const_iterator)を使用する必要があり **`const`** ます。
+ほとんどの場合、hash_multiset オブジェクト内の要素にアクセスするには、 [const_iterator](#const_iterator) を使用する必要があり **`const`** ます。
 
-## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a>hash_multiset:: const_reference
+## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a> hash_multiset:: const_reference
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -512,7 +512,7 @@ int main( )
 The first element in the hash_multiset is 10.
 ```
 
-## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator
+## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> hash_multiset:: const_reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -531,7 +531,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例を参照してください。
 
-## <a name="hash_multisetcount"></a><a name="count"></a>hash_multiset:: count
+## <a name="hash_multisetcount"></a><a name="count"></a> hash_multiset:: count
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 
 メンバー関数は、次の範囲内の要素の数を返します。
 
-\[lower_bound (*キー*)、upper_bound (*キー*))。
+\[ lower_bound (*キー*)、upper_bound (*キー*))。
 
 ### <a name="example"></a>例
 
@@ -594,7 +594,7 @@ The number of elements in hms1 with a sort key of 1 is: 2.
 The number of elements in hms1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a>hash_multiset:: crbegin
+## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a> hash_multiset:: crbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -646,7 +646,7 @@ int main( )
 The first element in the reversed hash_multiset is 30.
 ```
 
-## <a name="hash_multisetcrend"></a><a name="crend"></a>hash_multiset:: crend
+## <a name="hash_multisetcrend"></a><a name="crend"></a> hash_multiset:: crend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -699,7 +699,7 @@ int main( )
 The last element in the reversed hash_multiset is 10.
 ```
 
-## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a>hash_multiset::d ifference_type
+## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a> hash_multiset::d ifference_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -779,7 +779,7 @@ The number '20' occurs 2 times in hash_multiset hms1.
 The number of elements in the hash_multiset hms1 is 3.
 ```
 
-## <a name="hash_multisetemplace"></a><a name="emplace"></a>hash_multiset:: emplace
+## <a name="hash_multisetemplace"></a><a name="emplace"></a> hash_multiset:: emplace
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -793,9 +793,8 @@ iterator insert(ValTy&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。|
+*val*\
+挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -829,7 +828,7 @@ int main( )
 After the emplace insertion, hms3 contains a.
 ```
 
-## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a>hash_multiset:: emplace_hint
+## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a> hash_multiset:: emplace_hint
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -849,7 +848,7 @@ iterator insert(
 挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。
 
 *どこ*\
-正しい挿入ポイントの検索を開始する場所  (挿入ポイントが*where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
+正しい挿入ポイントの検索を開始する場所  (挿入ポイントが *where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -857,7 +856,7 @@ iterator insert(
 
 ### <a name="remarks"></a>解説
 
-挿入ポイントが*位置*の直後にある場合、挿入は対数時間ではなく、償却定数時間で実行できます。
+挿入ポイントが *位置*の直後にある場合、挿入は対数時間ではなく、償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -885,7 +884,7 @@ int main( )
 After the emplace insertion, hms1 contains a.
 ```
 
-## <a name="hash_multisetempty"></a><a name="empty"></a>hash_multiset:: empty
+## <a name="hash_multisetempty"></a><a name="empty"></a> hash_multiset:: empty
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -898,7 +897,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** hash_multiset が空の場合は。**`false`** hash_multiset が空でない場合は。
+**`true`** hash_multiset が空の場合は。 **`false`** hash_multiset が空でない場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -934,7 +933,7 @@ The hash_multiset hms1 is not empty.
 The hash_multiset hms2 is empty.
 ```
 
-## <a name="hash_multisetend"></a><a name="end"></a>hash_multiset:: end
+## <a name="hash_multisetend"></a><a name="end"></a> hash_multiset:: end
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -953,7 +952,7 @@ hash_multiset リスト内の最後の要素の次の位置を指す双方向反
 
 ### <a name="remarks"></a>解説
 
-`end`は、反復子が hash_multiset の末尾に達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
+`end` は、反復子が hash_multiset の末尾に達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
 
 ### <a name="example"></a>例
 
@@ -997,7 +996,7 @@ The last element of hms1 is 3
 The last element of hms1 is now 2
 ```
 
-## <a name="hash_multisetequal_range"></a><a name="equal_range"></a>hash_multiset:: equal_range
+## <a name="hash_multisetequal_range"></a><a name="equal_range"></a> hash_multiset:: equal_range
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1019,7 +1018,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 1 番目がそのキーの [lower_bound](#lower_bound)、2 番目がそのキーの [upper_bound](#upper_bound) である、反復子のペア。
 
-`pr`メンバー関数によって返されたペアの最初の反復子にアクセスするには、を使用し `pr` ます。 **最初**に、下限の反復子を逆参照するには、(を使用し \* `pr` ます。 **最初**)。 `pr`メンバー関数によって返されたペアの2番目の反復子にアクセスするには、を使用し `pr` ます。 **次**に、上限の反復子を逆参照するには、(を使用し \* `pr` ます。 **2 番目**)。
+`pr`メンバー関数によって返されたペアの最初の反復子にアクセスするには、を使用し `pr` ます。 **最初** に、下限の反復子を逆参照するには、(を使用し \* `pr` ます。 **最初**)。 `pr`メンバー関数によって返されたペアの2番目の反復子にアクセスするには、を使用し `pr` ます。 **次** に、上限の反復子を逆参照するには、(を使用し \* `pr` ます。 **2 番目**)。
 
 ### <a name="example"></a>例
 
@@ -1084,7 +1083,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_multiset hms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="hash_multiseterase"></a><a name="erase"></a>hash_multiset:: erase
+## <a name="hash_multiseterase"></a><a name="erase"></a> hash_multiset:: erase
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1207,7 +1206,7 @@ After another element with a key equal to that of the 2nd element
 is deleted, the hash_multiset hms3 is: 0 3.
 ```
 
-## <a name="hash_multisetfind"></a><a name="find"></a>hash_multiset:: find
+## <a name="hash_multisetfind"></a><a name="find"></a> hash_multiset:: find
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1285,7 +1284,7 @@ The hash_multiset hms1 doesn't have an element with a key of 40.
 The element of hms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a>hash_multiset:: get_allocator
+## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a> hash_multiset:: get_allocator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1361,7 +1360,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a>hash_multiset:: hash_multiset
+## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a> hash_multiset:: hash_multiset
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1448,7 +1447,7 @@ hash_multiset(
 
 ハッシュされた設定コンテナー内にある要素の実際の順序は、ハッシュ関数、順序関数、ハッシュ テーブルの現在のサイズに応じて異なります。通常、順序関数のみによって要素の順序が決定される場合、設定コンテナーでの要素の順序を予測することはできません。
 
-## <a name="hash_multisetinsert"></a><a name="insert"></a>hash_multiset:: insert
+## <a name="hash_multisetinsert"></a><a name="insert"></a> hash_multiset:: insert
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1494,7 +1493,7 @@ iterator insert(
 挿入される要素が hash_multiset にまだ含まれていない場合、一般的には、キーが同じ順序付けになる要素が hash_multiset にまだ含まれていない場合に、hash_multiset に挿入される要素の値。
 
 *どこ*\
-正しい挿入ポイントの検索を開始する場所  (挿入ポイントが*where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
+正しい挿入ポイントの検索を開始する場所  (挿入ポイントが *where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
 
 *まずは*\
 hash_multiset からコピーされる最初の要素の位置。
@@ -1515,9 +1514,9 @@ hash_multiset からコピーされる最後の要素の次の位置。
 
 ### <a name="remarks"></a>解説
 
-挿入ポイントが*位置*の直後にある場合、挿入は、対数時間ではなく、insert のヒントバージョンに対して償却定数時間で実行できます。
+挿入ポイントが *位置*の直後にある場合、挿入は、対数時間ではなく、insert のヒントバージョンに対して償却定数時間で実行できます。
 
-## <a name="hash_multisetiterator"></a><a name="iterator"></a>hash_multiset:: iterator
+## <a name="hash_multisetiterator"></a><a name="iterator"></a> hash_multiset:: iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1534,9 +1533,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="example"></a>例
 
-の宣言方法や使用方法の例については、 [begin](#begin)の例を参照してください `iterator` 。
+の宣言方法や使用方法の例については、 [begin](#begin) の例を参照してください `iterator` 。
 
-## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a>hash_multiset:: key_comp
+## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a> hash_multiset:: key_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1549,7 +1548,7 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーの要素のハッシュと順序付けに使用される関数オブジェクトを含む、hash_multiset テンプレートパラメーターの*特徴*を返します。
+コンテナーの要素のハッシュと順序付けに使用される関数オブジェクトを含む、hash_multiset テンプレートパラメーターの *特徴*を返します。
 
 *特徴*の詳細については、 [hash_multiset クラス](../standard-library/hash-multiset-class.md)に関するトピックを参照してください。
 
@@ -1612,7 +1611,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a>hash_multiset:: key_compare
+## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a> hash_multiset:: key_compare
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1625,7 +1624,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare`は、テンプレートパラメーターの*特徴*のシノニムです。
+`key_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
 
 *特徴*の詳細については、 [hash_multiset クラス](../standard-library/hash-multiset-class.md)に関するトピックを参照してください。
 
@@ -1635,7 +1634,7 @@ typedef Traits key_compare;
 
 `key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例をご覧ください。
 
-## <a name="hash_multisetkey_type"></a><a name="key_type"></a>hash_multiset:: key_type
+## <a name="hash_multisetkey_type"></a><a name="key_type"></a> hash_multiset:: key_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1648,7 +1647,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type`は、テンプレートパラメーター*キー*のシノニムです。
+`key_type` は、テンプレートパラメーター *キー*のシノニムです。
 
 `key_type` および [value_type](../standard-library/hash-set-class.md#value_type) は両方ともテンプレート パラメーター *Key* のシノニムです。 どちらも set および multiset クラスで使用でき、そこでは同一ですが、map および multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -1658,7 +1657,7 @@ typedef Key key_type;
 
 `key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a>hash_multiset:: lower_bound
+## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a> hash_multiset:: lower_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1725,7 +1724,7 @@ int main() {
 }
 ```
 
-## <a name="hash_multisetmax_size"></a><a name="max_size"></a>hash_multiset:: max_size
+## <a name="hash_multisetmax_size"></a><a name="max_size"></a> hash_multiset:: max_size
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1763,7 +1762,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetoperator"></a><a name="op_eq"></a>hash_multiset:: operator =
+## <a name="hash_multisetoperator"></a><a name="op_eq"></a> hash_multiset:: operator =
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1778,13 +1777,12 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*そうです*|`hash_multiset` にコピーする [hash_multiset](../standard-library/hash-multiset-class.md)。|
+*そうです*\
+`hash_multiset` にコピーする [hash_multiset](../standard-library/hash-multiset-class.md)。
 
 ### <a name="remarks"></a>解説
 
-内の既存の要素を消去した後、 `hash_multiset` `operator=` の内容*をに*コピーまたは移動し `hash_multiset` ます。
+内の既存の要素を消去した後、 `hash_multiset` `operator=` の内容 *をに* コピーまたは移動し `hash_multiset` ます。
 
 ### <a name="example"></a>例
 
@@ -1824,7 +1822,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetpointer"></a><a name="pointer"></a>hash_multiset::p ointer
+## <a name="hash_multisetpointer"></a><a name="pointer"></a> hash_multiset::p ointer
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1841,7 +1839,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ほとんどの場合、multiset オブジェクト内の要素にアクセスするには、[反復子](#iterator) を使用する必要があります。
 
-## <a name="hash_multisetrbegin"></a><a name="rbegin"></a>hash_multiset:: rbegin
+## <a name="hash_multisetrbegin"></a><a name="rbegin"></a> hash_multiset:: rbegin
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1924,7 +1922,7 @@ The reversed hash_multiset is: 30 20 10
 After the erasure, the first element in the reversed hash_multiset is 20.
 ```
 
-## <a name="hash_multisetreference"></a><a name="reference"></a>hash_multiset:: reference
+## <a name="hash_multisetreference"></a><a name="reference"></a> hash_multiset:: reference
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -1974,7 +1972,7 @@ The first element in the hash_multiset is 10.
 The first element in the hash_multiset is now 15.
 ```
 
-## <a name="hash_multisetrend"></a><a name="rend"></a>hash_multiset:: rend
+## <a name="hash_multisetrend"></a><a name="rend"></a> hash_multiset:: rend
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2060,7 +2058,7 @@ The reversed hash_multiset is: 30 20 10 .
 After the erasure, the last element in the reversed hash_multiset is 20.
 ```
 
-## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a>hash_multiset:: reverse_iterator
+## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a> hash_multiset:: reverse_iterator
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2079,7 +2077,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
 
-## <a name="hash_multisetsize"></a><a name="size"></a>hash_multiset:: size
+## <a name="hash_multisetsize"></a><a name="size"></a> hash_multiset:: size
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2126,7 +2124,7 @@ The hash_multiset length is 1.
 The hash_multiset length is now 2.
 ```
 
-## <a name="hash_multisetsize_type"></a><a name="size_type"></a>hash_multiset:: size_type
+## <a name="hash_multisetsize_type"></a><a name="size_type"></a> hash_multiset:: size_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2143,7 +2141,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 `size_type` の宣言方法や使用方法の例については、[size](#size) の例をご覧ください。
 
-## <a name="hash_multisetswap"></a><a name="swap"></a>hash_multiset:: swap
+## <a name="hash_multisetswap"></a><a name="swap"></a> hash_multiset:: swap
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2217,7 +2215,7 @@ After swapping with hms2, list hms1 is: 200 100.
 After swapping with hms3, list hms1 is: 300.
 ```
 
-## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a>hash_multiset:: upper_bound
+## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a> hash_multiset:: upper_bound
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2295,7 +2293,7 @@ The first element of hms1 with a key greater than
 that of the initial element of hms1 is: 20.
 ```
 
-## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a>hash_multiset:: value_comp
+## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a> hash_multiset:: value_comp
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2308,7 +2306,7 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーの要素をハッシュおよび順序付けするために使用される関数オブジェクトを含む、hash_multiset テンプレートパラメーターの*特徴*を返します。
+コンテナーの要素をハッシュおよび順序付けするために使用される関数オブジェクトを含む、hash_multiset テンプレートパラメーターの *特徴*を返します。
 
 *特徴*の詳細については、 [hash_multiset クラス](../standard-library/hash-multiset-class.md)に関するトピックを参照してください。
 
@@ -2376,7 +2374,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of hms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ```
 
-## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a>hash_multiset:: value_compare
+## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a> hash_multiset:: value_compare
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -2389,7 +2387,7 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>解説
 
-`value_compare`は、テンプレートパラメーターの*特徴*のシノニムです。
+`value_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
 
 *特徴*の詳細については、 [hash_multiset クラス](../standard-library/hash-multiset-class.md)に関するトピックを参照してください。
 
@@ -2399,7 +2397,7 @@ typedef key_compare value_compare;
 
 `value_compare` の宣言方法や使用方法の例については、[value_comp](#value_comp) の例をご覧ください。
 
-## <a name="hash_multisetvalue_type"></a><a name="value_type"></a>hash_multiset:: value_type
+## <a name="hash_multisetvalue_type"></a><a name="value_type"></a> hash_multiset:: value_type
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。

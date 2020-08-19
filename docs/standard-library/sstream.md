@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6ab2164e4969a2320f67d479062808b33b0869f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212138"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560297"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-割り当てられた配列オブジェクトに格納されているシーケンスの iostreams 操作をサポートする複数のクラステンプレートを定義します。 このようなシーケンスは、クラステンプレート[basic_string](../standard-library/basic-string-class.md)のオブジェクトとの間で簡単に変換できます。
+割り当てられた配列オブジェクトに格納されているシーケンスの iostreams 操作をサポートする複数のクラステンプレートを定義します。 このようなシーケンスは、クラステンプレート [basic_string](../standard-library/basic-string-class.md)のオブジェクトとの間で簡単に変換できます。
 
 ## <a name="syntax"></a>構文
 
@@ -70,10 +70,11 @@ void swap (
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
-|---------------|-----------------|
-|*左側*|`sstream` オブジェクトへの参照。|
-|*そうです*|`sstream` オブジェクトへの参照。|
+*左側*\
+`sstream` オブジェクトへの参照。
+
+*そうです*\
+`sstream` オブジェクトへの参照。
 
 ## <a name="remarks"></a>解説
 

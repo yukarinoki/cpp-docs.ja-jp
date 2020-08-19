@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 6a8ead5f1014e7f750e01988241ab020431312da
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376802"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561779"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream クラス
 
-[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **クラス basic_stringbuf Tr** **、>** のストリーム バッファーからの要素およびエンコードされたオブジェクトの抽出を制御するオブジェクトについて`Alloc`説明します。
+[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、> クラス basic_stringbuf のストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し `Alloc` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*\
+*割り当て*\
 アロケーター クラス。
 
 *Elem*\
@@ -45,17 +45,17 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは **、Elem** `Alloc` **、Tr、>** [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< クラスのストリーム バッファーから要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表し、*その*文字の特徴はクラス*Tr*によって決定され、その要素はクラス*Alloc*のアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+クラステンプレートは、elem、Tr、> の各[basic_stringbuf](../standard-library/basic-stringbuf-class.md)クラスのストリームバッファーから、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し <  **Elem** **Tr** `Alloc` ます。 *elem*型の要素は、文字の特徴が*tr*クラスによって決定され、その要素が*Alloc*クラスのアロケーターによって割り当てられている要素を持ちます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[basic_istringstream](#basic_istringstream)|`basic_istringstream` 型のオブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|この型は、テンプレート パラメーター `Alloc` のシノニムです。|
 
@@ -63,23 +63,23 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 |メンバー関数|説明|
 |-|-|
-|[rdbuf](#rdbuf)|>`pointer`に[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`する型の格納されたストリーム バッファーの`Tr`アドレス`Alloc`を返します。|
-|[Str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
+|[rdbuf](#rdbuf)|型の格納されているストリームバッファーのアドレスを `pointer` [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、> に返し `Alloc` ます。|
+|[引数](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 |[スワップ](#swap)|この `basic_istringstream` オブジェクト内の値を、提供されるオブジェクトの値と交換します。|
 
 ### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_eq)|オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。|
+|[operator =](#op_eq)|オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<sstream>
+**ヘッダー:**\<sstream>
 
 **名前空間:** std
 
-## <a name="basic_istringstreamallocator_type"></a><a name="allocator_type"></a>basic_istringstream::allocator_type
+## <a name="basic_istringstreamallocator_type"></a><a name="allocator_type"></a> basic_istringstream:: allocator_type
 
 この型は、テンプレート パラメーター `Alloc` のシノニムです。
 
@@ -87,7 +87,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_istringstreambasic_istringstream"></a><a name="basic_istringstream"></a>basic_istringstream::basic_istringstream
+## <a name="basic_istringstreambasic_istringstream"></a><a name="basic_istringstream"></a> basic_istringstream:: basic_istringstream
 
 `basic_istringstream` 型のオブジェクトを構築します。
 
@@ -108,21 +108,21 @@ basic_istringstream(
 *_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*Str*\
-`basic_string` 型オブジェクト。
+*引数*\
+`basic_string` 型のオブジェクト。
 
 *そうです*\
 `basic_istringstream` オブジェクトの右辺値参照。
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、クラス[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`の格納された`sb`オブジェクトである`sb`[basic_istream](../standard-library/basic-istream-class.md)( ) を`Tr`呼`Alloc`び出して、基本クラスを初期化>。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
+最初のコンストラクターは[basic_istream](../standard-library/basic-istream-class.md)() を呼び出すことによって基底クラスを初期化し `sb` ます。ここで、 `sb` は、クラス[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、 `Alloc`> の格納されているオブジェクトです。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
 
 2 番目のコンストラクターが `basic_istream(sb)` を呼び出して基底クラスを初期化します。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
 
-3 番目のコンストラクターは、右辺値参照として扱われる*right*の内容でオブジェクトを初期化します。
+3番目のコンストラクターは、右辺値参照として扱われる *right*の内容を使用してオブジェクトを初期化します。
 
-## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a>basic_istringstream::演算子=
+## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a> basic_istringstream:: operator =
 
 オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。
 
@@ -137,11 +137,11 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="remarks"></a>解説
 
-メンバ演算子は、オブジェクトの内容を*right*の内容に置き換えます。
+メンバー演算子は、右辺値参照の移動代入として扱われる、オブジェクトの内容を *右*の内容に置き換えます。
 
-## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a>basic_istringstream::rdbuf
+## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a> basic_istringstream:: rdbuf
 
-> の**Elem** **、Tr**`pointer`に格納されているストリーム バッファーの`Alloc`アドレスを[返](../standard-library/basic-stringbuf-class.md)< basic_stringbuf。
+型の格納されたストリームバッファーのアドレス `pointer` を[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、 `Alloc`> に返します。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,13 +149,13 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>戻り値
 
-`pointer` **elem** **、Tr、><basic_stringbuf**するタイプの格納されたストリームバッファの`Alloc`アドレス。
+`pointer` **Elem**、 **Tr**、>< basic_stringbuf する型の格納されたストリームバッファーのアドレス `Alloc` 。
 
 ### <a name="example"></a>例
 
 `rdbuf` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_istringstreamstr"></a><a name="str"></a>basic_istringstream::str
+## <a name="basic_istringstreamstr"></a><a name="str"></a> basic_istringstream:: str
 
 文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。
 
@@ -173,17 +173,17 @@ void str(
 
 ### <a name="return-value"></a>戻り値
 
-制御シーケンスが**\*、この**メソッド[によって](../standard-library/basic-string-class.md)< 制御されるシーケンスの`Alloc`コピーである、クラス basic_string**Elem** **、Tr**、>のオブジェクトを返します。
+[basic_string](../standard-library/basic-string-class.md) <  **Elem** **Tr** `Alloc` 制御されたシーケンスが** \* this**によって制御されるシーケンスのコピーである Elem、Tr、> basic_string クラスのオブジェクトを返します。
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は[rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str)を返します。 2 番目のメンバー`rdbuf` -> 関数は`_Newstr` **str**( ) を呼び出します。
+1つ目のメンバー関数は、 [rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str)を返します。 2番目のメンバー関数は `rdbuf`  ->  **str**() を呼び出し `_Newstr` ます。
 
 ### <a name="example"></a>例
 
-を使用する例については[、 basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)を参照`str`してください。
+の使用例については、「 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 」を参照してください `str` 。
 
-## <a name="basic_istringstreamswap"></a><a name="swap"></a>basic_istringstream::スワップ
+## <a name="basic_istringstreamswap"></a><a name="swap"></a> basic_istringstream:: swap
 
 2 つの `basic_istringstream` オブジェクトの値を交換します。
 
@@ -193,16 +193,15 @@ void swap(basic_istringstream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*そうです*|`basic_istringstream` オブジェクトへの `lvalue` 参照。|
+*そうです*\
+`basic_istringstream` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、このオブジェクトの値と*right*の値を交換します。
+このメンバー関数は、このオブジェクトの値と *right*の値を交換します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

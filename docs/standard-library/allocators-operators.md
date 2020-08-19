@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204561"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561219"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 演算子
 
@@ -20,7 +20,7 @@ ms.locfileid: "87204561"
 |-|-|
 |[operator! =](#op_neq)|[operator = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 指定したクラスのアロケーター オブジェクト間の非等値をテストします。
 
@@ -33,20 +33,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*左側*|不等性をテストする一方のアロケーター オブジェクト。|
-|*そうです*|不等性をテストする一方のアロケーター オブジェクト。|
+*左側*\
+不等性をテストする一方のアロケーター オブジェクト。
+
+*そうです*\
+不等性をテストする一方のアロケーター オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** アロケーターオブジェクトが等しくない場合は、**`false`** アロケーターオブジェクトが等しい場合は。
+**`true`** アロケーターオブジェクトが等しくない場合は、 **`false`** アロケーターオブジェクトが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
 このテンプレート演算子は `!(left == right)` を返します。
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 指定したクラスのアロケーター オブジェクト間の等値をテストします。
 
@@ -59,14 +60,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*左側*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
-|*そうです*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
+*左側*\
+等しいかどうかをテストする一方のアロケーター オブジェクト。
+
+*そうです*\
+等しいかどうかをテストする一方のアロケーター オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** アロケーターオブジェクトが等しい場合は。**`false`** アロケーターオブジェクトが等しくない場合。
+**`true`** アロケーターオブジェクトが等しい場合は。 **`false`** アロケーターオブジェクトが等しくない場合。
 
 ### <a name="remarks"></a>解説
 

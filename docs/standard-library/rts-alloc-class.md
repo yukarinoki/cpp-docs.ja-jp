@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228129"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560557"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc クラス
 
-Rts_alloc クラステンプレートは、キャッシュインスタンスの配列を保持し、コンパイル時ではなく実行時に割り当てと割り当て解除に使用するインスタンスを決定する[フィルター](../standard-library/allocators-header.md)を記述します。
+Rts_alloc クラステンプレートは、キャッシュインスタンスの配列を保持し、コンパイル時ではなく実行時に割り当てと割り当て解除に使用するインスタンスを決定する [フィルター](../standard-library/allocators-header.md) を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +32,8 @@ class rts_alloc
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*キャッシュ*|配列に含まれているキャッシュ インスタンスの型。 これは、[cache_chunklist クラス](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+*Cache*\
+配列に含まれているキャッシュ インスタンスの型。 、、またはを指定でき [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) ます。
 
 ## <a name="remarks"></a>解説
 
@@ -44,7 +43,7 @@ class rts_alloc
 
 |メンバー関数|説明|
 |-|-|
-|[allocate](#allocate)|メモリのブロックを割り当てます。|
+|[割当て](#allocate)|メモリのブロックを割り当てます。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
@@ -54,7 +53,7 @@ class rts_alloc
 
 **名前空間:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc:: allocate
 
 メモリのブロックを割り当てます。
 
@@ -64,9 +63,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*count*|割り当てられる配列内の要素の数。|
+*数*\
+割り当てられる配列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -74,9 +72,9 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は `caches[_IDX].allocate(count)` 、 `_IDX` 要求されたブロックサイズの*カウント*によってインデックスが決定されるを返します。また、 *count*が大きすぎる場合は、を返し `operator new(count)` ます。 キャッシュ オブジェクトを表す `cache`。
+このメンバー関数は `caches[_IDX].allocate(count)` 、 `_IDX` 要求されたブロックサイズの *カウント*によってインデックスが決定されるを返します。また、 *count* が大きすぎる場合は、を返し `operator new(count)` ます。 キャッシュ オブジェクトを表す `cache`。
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -86,16 +84,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
+*ポインター*\
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
+
+*数*\
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は `caches[_IDX].deallocate(ptr, count)` 、 `_IDX` 要求されたブロックサイズの*カウント*によってインデックスが決定されるを呼び出します。 *count*が大きすぎる場合は、を返し `operator delete(ptr)` ます。
+このメンバー関数は `caches[_IDX].deallocate(ptr, count)` 、 `_IDX` 要求されたブロックサイズの *カウント*によってインデックスが決定されるを呼び出します。 *count* が大きすぎる場合は、を返し `operator delete(ptr)` ます。
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: equals
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: equals
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -105,10 +104,11 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Cache*|フィルターに関連付けられているキャッシュ オブジェクト。|
-|*_Other*|等しいかどうかを比較するキャッシュ オブジェクト。|
+*_Cache*\
+フィルターに関連付けられているキャッシュ オブジェクト。
+
+*_Other*\
+等しいかどうかを比較するキャッシュ オブジェクト。
 
 ### <a name="remarks"></a>解説
 
