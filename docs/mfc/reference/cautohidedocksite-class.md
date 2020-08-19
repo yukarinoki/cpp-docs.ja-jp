@@ -67,7 +67,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|名前|説明|
+|Name|説明|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|ツールバーとドッキングバーの端との間のスペースのサイズを定義します。 この領域は、ドッキング領域の配置に応じて左端または上端から測定されます。|
 
 ## <a name="remarks"></a>解説

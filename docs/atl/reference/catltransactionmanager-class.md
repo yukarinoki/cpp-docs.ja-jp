@@ -77,7 +77,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|フォールバックがサポートされている場合は TRUE。それ以外の場合は FALSE。|
 |[m_hTransaction](#m_htransaction)|トランザクションハンドル。|

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: f98b5698ff14349abf9300799f00c6d9121bcf65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222265"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561649"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size クラス
 
@@ -55,7 +55,7 @@ class max_variable_size
 
 **名前空間:** stdext
 
-## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size:: 割り当て済み
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a> max_variable_size:: 割り当て済み
 
 割り当てられたメモリ ブロックの数を増やします。
 
@@ -65,15 +65,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Nx*|増分値。|
+*_Nx*\
+増分値。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、格納されている値に *_Nx*を追加し `_Nallocs` ます。 このメンバー関数は、to 演算子による呼び出しが成功するたびに呼び出され `cache_freelist::allocate` **`new`** ます。 引数 *_Nx*は、演算子によって割り当てられたチャンク内のメモリブロックの数です **`new`** 。
+このメンバー関数は、格納されている値に *_Nx* を追加し `_Nallocs` ます。 このメンバー関数は、to 演算子による呼び出しが成功するたびに呼び出され `cache_freelist::allocate` **`new`** ます。 引数 *_Nx* は、演算子によって割り当てられたチャンク内のメモリブロックの数です **`new`** 。
 
-## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::d eallocated
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a> max_variable_size::d eallocated
 
 割り当てられたメモリ ブロックの数を減らします。
 
@@ -83,15 +82,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Nx*|増分値。|
+*_Nx*\
+増分値。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、格納されている値から *_Nx*を減算し `_Nallocs` ます。 このメンバー関数は、to 演算子による各呼び出しの後に呼び出され `cache_freelist::deallocate` **`delete`** ます。 引数 *_Nx*は、演算子によって割り当て解除されたチャンク内のメモリブロックの数です **`delete`** 。
+このメンバー関数は、格納されている値から *_Nx* を減算し `_Nallocs` ます。 このメンバー関数は、to 演算子による各呼び出しの後に呼び出され `cache_freelist::deallocate` **`delete`** ます。 引数 *_Nx* は、演算子によって割り当て解除されたチャンク内のメモリブロックの数です **`delete`** 。
 
-## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size:: full
+## <a name="max_variable_sizefull"></a><a name="full"></a> max_variable_size:: full
 
 フリー リストにメモリ ブロックを追加する必要があるかどうかを示す値を返します。
 
@@ -107,7 +105,7 @@ bool full();
 
 このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しでが返された場合 **`true`** 、は `deallocate` メモリブロックをフリーリストに格納します。 false を返す場合は、 `deallocate` 演算子を呼び出して **`delete`** ブロックの割り当てを解除します。
 
-## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size:: max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a> max_variable_size:: max_variable_size
 
 `max_variable_size` 型のオブジェクトを構築します。
 
@@ -119,7 +117,7 @@ max_variable_size();
 
 このコンストラクターは、格納された値 `_Nblocks` および `_Nallocs` をゼロに初期化します。
 
-## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size:: 解放されました
+## <a name="max_variable_sizereleased"></a><a name="released"></a> max_variable_size:: 解放されました
 
 フリー リスト上のメモリ ブロックの数を減らします。
 
@@ -131,7 +129,7 @@ void released();
 
 このメンバー関数は、格納された値 `_Nblocks` を減らします。 現在の最大クラスの `released` メンバー関数は、`cache_freelist::allocate` によって、フリー リストからメモリ ブロックが削除されるたびに、呼び出されます。
 
-## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size:: saved
+## <a name="max_variable_sizesaved"></a><a name="saved"></a> max_variable_size:: saved
 
 フリー リスト上のメモリ ブロックの数を減らします。
 

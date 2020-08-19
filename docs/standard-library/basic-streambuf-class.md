@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 594cec7d4898960cb78284dcbb5ad677027cd947
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219210"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561831"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf クラス
 
@@ -195,7 +195,7 @@ class basic_streambuf;
 |[pubseekoff](#pubseekoff)|派生クラスでオーバーライドされるプロテクト仮想関数 [seekoff](#seekoff) を呼び出します。|
 |[pubseekpos](#pubseekpos)|派生クラスでオーバーライドされ、現在のポインターの位置をリセットするプロテクト仮想関数 [seekpos](#seekpos) を呼び出します。|
 |[pubsetbuf](#pubsetbuf)|派生クラスでオーバーライドされるプロテクト仮想関数 [setbuf](#setbuf) を呼び出します。|
-|[pubsync](#pubsync)|派生クラスでオーバーライドされ、このバッファーに関連付けられている外部ストリームを更新するプロテクト仮想関数[sync](#sync)を呼び出します。|
+|[pubsync](#pubsync)|派生クラスでオーバーライドされ、このバッファーに関連付けられている外部ストリームを更新するプロテクト仮想関数 [sync](#sync)を呼び出します。|
 |[sbumpc](#sbumpc)|ストリーム ポインターを移動させながら、現在の要素を読み取って返します。|
 |[seekoff](#seekoff)|プロテクト仮想メンバー関数が、制御されているストリームの現在の位置を変更しようと試みます。|
 |[seekpos](#seekpos)|プロテクト仮想メンバー関数が、制御されているストリームの現在の位置を変更しようと試みます。|
@@ -212,7 +212,7 @@ class basic_streambuf;
 |[stossc](#stossc)|ストリーム内の現在の要素の直後に移動します。|
 |[sungetc](#sungetc)|ストリームから単一の文字を取得します。|
 |[スワップ](#swap)|このオブジェクトの値を、指定した `basic_streambuf` オブジェクト パラメーターの値と交換します。|
-|[頻度](#sync)|制御されているストリームと関連付けられている外部ストリームとの同期を試みるプロテクト仮想関数。|
+|[sync](#sync)|制御されているストリームと関連付けられている外部ストリームとの同期を試みるプロテクト仮想関数。|
 |[uflow](#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[アンダー](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[xsgetn](#xsgetn)|入力ストリームから要素を抽出するプロテクト仮想関数。|
@@ -230,7 +230,7 @@ class basic_streambuf;
 
 **名前空間:** std
 
-## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf:: basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a> basic_streambuf:: basic_streambuf
 
 `basic_streambuf` 型のオブジェクトを構築します。
 
@@ -249,9 +249,9 @@ basic_streambuf(const basic_streambuf& right);
 
 最初の保護されたコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、`locale::classic` をロケール オブジェクトに格納します。 詳細については、「[locale::classic](../standard-library/locale-class.md#classic)」を参照してください。
 
-2番目のプロテクトコンストラクターは、ポインターとロケールを*右*からコピーします。
+2番目のプロテクトコンストラクターは、ポインターとロケールを *右*からコピーします。
 
-## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf:: char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
 型名を **Elem** テンプレート パラメーターに関連付けます。
 
@@ -259,7 +259,7 @@ basic_streambuf(const basic_streambuf& right);
 typedef Elem char_type;
 ```
 
-## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf:: eback
+## <a name="basic_streambufeback"></a><a name="eback"></a> basic_streambuf:: eback
 
 入力バッファーの先頭を指すポインターを返すプロテクト関数。
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 バッファーの先頭を指すポインター。
 
-## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf:: egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a> basic_streambuf:: egptr
 
 入力バッファーの末尾の直後を指すポインターを返すプロテクト関数。
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 入力バッファーの末尾の直後を指すポインター。
 
-## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf:: epptr
+## <a name="basic_streambufepptr"></a><a name="epptr"></a> basic_streambuf:: epptr
 
 出力バッファーの末尾の直後を指すポインターを返すプロテクト関数。
 
@@ -295,9 +295,9 @@ char_type *epptr() const;
 
 出力バッファーの末尾の直後を指すポインター。
 
-## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf:: gbump
+## <a name="basic_streambufgbump"></a><a name="gbump"></a> basic_streambuf:: gbump
 
-入力バッファーの次のポインターに*カウント*を追加するプロテクト関数。
+入力バッファーの次のポインターに *カウント* を追加するプロテクト関数。
 
 ```cpp
 void gbump(int count);
@@ -308,7 +308,7 @@ void gbump(int count);
 *数*\
 マウス ポインターを進める量。
 
-## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf:: getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a> basic_streambuf:: getloc
 
 basic_streambuf オブジェクトのロケールを取得します。
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf:: gptr
+## <a name="basic_streambufgptr"></a><a name="gptr"></a> basic_streambuf:: gptr
 
 入力バッファーの次の要素を指すポインターを返すプロテクト関数。
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 入力バッファーの次の要素へのポインター。
 
-## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf:: imbue
+## <a name="basic_streambufimbue"></a><a name="imbue"></a> basic_streambuf:: imbue
 
 [Pubimbue](#pubimbue)によって呼び出されるプロテクト仮想関数。
 
@@ -371,7 +371,7 @@ virtual void imbue(const locale& _Loc);
 
 既定の動作では、何も行いません。
 
-## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf:: in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a> basic_streambuf:: in_avail
 
 バッファーから読み取る準備が整っている要素の数を返します。
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf:: int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a> basic_streambuf:: int_type
 
 basic_streambuf スコープ内の型名をテンプレート パラメーター内の型のいずれかと関連付けます。
 
@@ -413,7 +413,7 @@ basic_streambuf スコープ内の型名をテンプレート パラメーター
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf:: off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a> basic_streambuf:: off_type
 
 basic_streambuf スコープ内の型名をテンプレート パラメーター内の型のいずれかと関連付けます。
 
@@ -421,7 +421,7 @@ basic_streambuf スコープ内の型名をテンプレート パラメーター
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf:: operator =
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a> basic_streambuf:: operator =
 
 別の `basic_streambuf` オブジェクトの値をこのオブジェクトに割り当てます。
 
@@ -436,9 +436,9 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="remarks"></a>解説
 
-プロテクトメンバー演算子は、入力バッファーと出力バッファーを制御するポインターを*右*からコピーします。 また、`right.`[getloc()](#getloc) を `locale object` に格納します。 が返さ **`*this`** れます。
+プロテクトメンバー演算子は、入力バッファーと出力バッファーを制御するポインターを *右* からコピーします。 また、`right.`[getloc()](#getloc) を `locale object` に格納します。 が返さ **`*this`** れます。
 
-## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf:: overflow
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a> basic_streambuf:: overflow
 
 いっぱいのバッファーに新しい文字が挿入されたときに呼び出すことができる、プロテクト仮想関数。
 
@@ -473,7 +473,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 消費の定義は、派生クラスによって異なります。 たとえば、`filebuf` クラスが文字をファイルに書き込むのに対し、`strstreambuf` クラスは、文字をそのバッファーに保持して、(バッファーが動的として指定されている場合は) オーバーフローへの呼び出しに応えてバッファーを拡張します。 この拡張は、古いバッファーを解放して、新しいより大きなバッファーで置換することで実現されます。 ポインターは必要に応じて調整されます。
 
-## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf::p backfail
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a> basic_streambuf::p backfail
 
 要素を入力ストリームに戻そうと試み、その要素を現在の要素に (ネクスト ポインターによって指されるように) するプロテクト仮想メンバー関数。
 
@@ -500,7 +500,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 - 一般的な入力ストリームと出力ストリームがあるストリーム バッファーの場合、出力バッファーの先頭とネクスト ポインターの間の一部またはすべての要素をいくつかの外部の宛先に書き出すことで、戻り位置を使用可能にすることができます。
 
-## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::p base
+## <a name="basic_streambufpbase"></a><a name="pbase"></a> basic_streambuf::p base
 
 出力バッファーの先頭を指すポインターを返すプロテクト関数。
 
@@ -512,9 +512,9 @@ char_type *pbase() const;
 
 出力バッファーの先頭を指すポインター。
 
-## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::p バンプ
+## <a name="basic_streambufpbump"></a><a name="pbump"></a> basic_streambuf::p バンプ
 
-出力バッファーの次のポインターに*カウント*を追加するプロテクト関数。
+出力バッファーの次のポインターに *カウント* を追加するプロテクト関数。
 
 ```cpp
 void pbump(int count);
@@ -525,7 +525,7 @@ void pbump(int count);
 *数*\
 書き込み位置を前方に移動する文字数。
 
-## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::p os_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a> basic_streambuf::p os_type
 
 basic_streambuf スコープ内の型名をテンプレート パラメーター内の型のいずれかと関連付けます。
 
@@ -533,7 +533,7 @@ basic_streambuf スコープ内の型名をテンプレート パラメーター
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::p ptr
+## <a name="basic_streambufpptr"></a><a name="pptr"></a> basic_streambuf::p ptr
 
 出力バッファーの次の要素を指すポインターを返すプロテクト関数。
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 出力バッファーの次の要素を指すポインター。
 
-## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::p ubimbue
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a> basic_streambuf::p ubimbue
 
 basic_streambuf オブジェクトのロケールを設定します。
 
@@ -570,7 +570,7 @@ locale pubimbue(const locale& _Loc);
 
 `pubimbue` の使用例については、「[basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)」を参照してください。
 
-## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::p ubseekoff
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a> basic_streambuf::p ubseekoff
 
 派生クラスでオーバーライドされるプロテクト仮想関数 [seekoff](#seekoff) を呼び出します。
 
@@ -599,9 +599,9 @@ pos_type pubseekoff(off_type _Off,
 
 ポインターを *_Way*の相対位置に移動します。
 
-## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::p ubseekpos
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p ubseekpos
 
-派生クラスでオーバーライドされるプロテクト仮想関数[seekpos](#seekpos)を呼び出し、現在のポインターの位置をリセットします。
+派生クラスでオーバーライドされるプロテクト仮想関数 [seekpos](#seekpos)を呼び出し、現在のポインターの位置をリセットします。
 
 ```cpp
 pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
@@ -623,7 +623,7 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 このメンバー関数は、[seekpos](#seekpos)(_ *Sp*, `_Which`) を返します。
 
-## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::p ubsetbuf
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a> basic_streambuf::p ubsetbuf
 
 派生クラスでオーバーライドされるプロテクト仮想関数 [setbuf](#setbuf) を呼び出します。
 
@@ -645,7 +645,7 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 [Setbuf](#setbuf)( `_Buffer` ,) を返し `count` ます。
 
-## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::p ubsync
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a> basic_streambuf::p ubsync
 
 派生クラスでオーバーライドされ、このバッファーに関連付けられた外部ストリームを更新するプロテクト仮想関数 [sync](#sync) を呼び出します。
 
@@ -657,7 +657,7 @@ int pubsync();
 
 [同期](#sync)を返します。失敗した場合は-1 を返します。
 
-## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf:: sbumpc
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a> basic_streambuf:: sbumpc
 
 ストリーム ポインターを移動させながら、現在の要素を読み取って返します。
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf:: seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a> basic_streambuf:: seekoff
 
 制御対象ストリームの現在の位置を変更しようと試みるプロテクト仮想メンバー関数。
 
@@ -738,7 +738,7 @@ virtual pos_type seekoff(
 
 関数はストリームの位置の変更に成功すると、結果のストリームの位置を返します。複数の位置の変更に成功した場合は、結果のストリームの位置のうちの 1 つを返します。 それ以外の場合は、無効なストリームの位置が返されます。 既定の動作では、無効なストリームの位置を返します。
 
-## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf:: seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a> basic_streambuf:: seekpos
 
 制御対象ストリームの現在の位置を変更しようと試みるプロテクト仮想メンバー関数。
 
@@ -766,7 +766,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 関数はストリームの位置の変更に成功すると、結果のストリームの位置を返します。複数の位置の変更に成功した場合は、結果のストリームの位置のうちの 1 つを返します。 それ以外の場合は、無効なストリームの位置 (-1) を返します。 既定の動作では、無効なストリームの位置を返します。
 
-## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf:: setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a> basic_streambuf:: setbuf
 
 各派生ストリーム バッファーに固有の操作を実行するプロテクト仮想メンバー関数。
 
@@ -792,7 +792,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 「[basic_filebuf](../standard-library/basic-filebuf-class.md)」を参照してください。 `setbuf` は `streambuf` オブジェクトが使用するメモリ領域を提供します。 派生クラス内の定義でのバッファーの使用方法。
 
-## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf:: setg
+## <a name="basic_streambufsetg"></a><a name="setg"></a> basic_streambuf:: setg
 
 開始ポインターの _ *Gbeg*、ネクスト ポインターの `_Gnext`、およびエンド ポインターの `_Gend` を入力バッファー用に格納するプロテクト関数。
 
@@ -813,9 +813,9 @@ void setg(char_type* _Gbeg,
 *_Gend*\
 バッファーの末尾を指すポインター。
 
-## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf:: setp
+## <a name="basic_streambufsetp"></a><a name="setp"></a> basic_streambuf:: setp
 
-開始ポインターに *_Pbeg*を格納し、出力バッファーのエンドポインターに *_Pend*するプロテクト関数。
+開始ポインターに *_Pbeg* を格納し、出力バッファーのエンドポインターに *_Pend* するプロテクト関数。
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -829,7 +829,7 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 *_Pend*\
 バッファーの末尾を指すポインター。
 
-## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf:: sgetc
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a> basic_streambuf:: sgetc
 
 ストリーム内の位置を変更せずに、現在の要素を返します。
 
@@ -865,9 +865,9 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf:: sgetn
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: sgetn
 
-最大文字*数*を入力バッファーから抽出し、指定されたバッファー *ptr*に格納します。
+最大文字 *数* を入力バッファーから抽出し、指定されたバッファー *ptr*に格納します。
 
 渡された値が正しいことの確認を呼び出し元に依存するため、このメソッドは安全ではない可能性があります。
 
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf:: showmanyc
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a> basic_streambuf:: showmanyc
 
 入力ストリームから抽出できる文字数のカウントを返し、プログラムが無期限の待機状態にならないようにするプロテクト仮想メンバー関数。
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 既定の動作では、0 が返されます。
 
-## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf:: snextc
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a> basic_streambuf:: snextc
 
 現在の要素を読み取り、次の要素を返します。
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf:: sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a> basic_streambuf:: sputbackc
 
 ストリームに char_type を配置します。
 
@@ -991,7 +991,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>解説
 
-戻り位置が使用可能で、 *_Ch*その位置に格納されている文字と等しいかどうかを比較する場合、メンバー関数は入力バッファーの次のポインターをデクリメントし、 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返し `_Ch` ます。 それ以外の場合は、 [pbackfail](#pbackfail)() を返し `_Ch` ます。
+戻り位置が使用可能で、 *_Ch* その位置に格納されている文字と等しいかどうかを比較する場合、メンバー関数は入力バッファーの次のポインターをデクリメントし、 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返し `_Ch` ます。 それ以外の場合は、 [pbackfail](#pbackfail)() を返し `_Ch` ます。
 
 ### <a name="example"></a>例
 
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf:: sputc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a> basic_streambuf:: sputc
 
 ストリームに単一の文字を渡します。
 
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf:: sputn
+## <a name="basic_streambufsputn"></a><a name="sputn"></a> basic_streambuf:: sputn
 
 ストリームに文字列を渡します。
 
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf:: stossc
+## <a name="basic_streambufstossc"></a><a name="stossc"></a> basic_streambuf:: stossc
 
 ストリーム内の現在の要素の直後に移動します。
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf:: sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a> basic_streambuf:: sungetc
 
 ストリームから単一の文字を取得します。
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf:: swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf:: swap
 
 このオブジェクトの値を、指定した `basic_streambuf` オブジェクトの値と交換します。
 
@@ -1200,15 +1200,14 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*そうです*|値を交換するために使用される `basic_streambuf` オブジェクトの左辺値参照。|
+*そうです*\
+値を交換するために使用される `basic_streambuf` オブジェクトの左辺値参照。
 
 ### <a name="remarks"></a>解説
 
-プロテクトメンバー関数は、およびを制御するすべてのポインターを*右*に交換し `input buffer` `output buffer` ます。 `right.`[getloc()](#getloc) も `locale` オブジェクトと交換します。
+プロテクトメンバー関数は、およびを制御するすべてのポインターを *右* に交換し `input buffer` `output buffer` ます。 `right.`[getloc()](#getloc) も `locale` オブジェクトと交換します。
 
-## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf:: sync
+## <a name="basic_streambufsync"></a><a name="sync"></a> basic_streambuf:: sync
 
 制御されているストリームと関連付けられている外部ストリームとの同期を試みるプロテクト仮想関数。
 
@@ -1224,7 +1223,7 @@ virtual int sync();
 
 `sync` には出力バッファーの開始ポインターとネクスト ポインター間の任意の要素の記述が必要です。 入力バッファーのネクスト ポインターとエンド ポインター間の任意の要素を戻す必要はありません。
 
-## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf:: traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a> basic_streambuf:: traits_type
 
 型名を **Tr** テンプレート パラメーターに関連付けます。
 
@@ -1232,7 +1231,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf:: uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a> basic_streambuf:: uflow
 
 入力ストリームから現在の要素を抽出するプロテクト仮想関数。
 
@@ -1256,7 +1255,7 @@ virtual int_type uflow();
 
 関数が失敗した場合は、 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)を返すか、例外をスローします。 それ以外の場合、上記のように変換された入力ストリームの現在の要素 `ch` を返して、入力バッファーのネクスト ポインターを進めます。 既定の動作では、[underflow](#underflow) を呼び出し、その関数が **traits_type::eof** を返す場合は、**traits_type::eof** を返します。 それ以外の場合、関数は上記のように変換された入力ストリームの現在の要素 **ch** を返して、入力バッファーのネクスト ポインターを進めます。
 
-## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf:: アンダーフロー
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a> basic_streambuf:: アンダーフロー
 
 入力ストリームから現在の要素を抽出するプロテクト仮想関数。
 
@@ -1286,7 +1285,7 @@ virtual int_type underflow();
 
 `strstreambuf` クラスでは、`underflow` は [egptr](#egptr) ポインターを調整して、`overflow` への呼び出しによって動的に割り当てられたストレージにアクセスします。
 
-## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf:: xsgetn
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a> basic_streambuf:: xsgetn
 
 入力ストリームから要素を抽出するプロテクト仮想関数。
 
@@ -1314,7 +1313,7 @@ virtual streamsize xsgetn(
 
 プロテクト仮想メンバー関数は、 [sbumpc](#sbumpc)を繰り返し呼び出した場合と同じように、入力ストリームから最大*数*の要素を抽出し、それらを*ptr*で始まる配列に格納します。 実際に抽出された要素の数を返します。
 
-## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf:: xsputn
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: xsputn
 
 出力ストリームに要素を挿入するプロテクト仮想関数。
 
@@ -1336,7 +1335,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、 *ptr*から始まる配列から、 [sputc](#sputc)を繰り返し呼び出した場合と同じように、最大*数*の要素を出力ストリームに挿入します。 すべての*カウント*文字が書き込まれるか、を呼び出すとが返されると、出力ストリームへの文字の挿入は停止し `sputc( count)` `traits::eof()` ます。 実際に挿入された要素の数を返します。
+プロテクト仮想メンバー関数は、 *ptr*から始まる配列から、 [sputc](#sputc)を繰り返し呼び出した場合と同じように、最大*数*の要素を出力ストリームに挿入します。 すべての *カウント* 文字が書き込まれるか、を呼び出すとが返されると、出力ストリームへの文字の挿入は停止し `sputc( count)` `traits::eof()` ます。 実際に挿入された要素の数を返します。
 
 ## <a name="see-also"></a>関連項目
 

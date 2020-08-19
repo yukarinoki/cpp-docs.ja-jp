@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 4e7eba94084a96c833136e4c92de481fdc435c7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183111"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561675"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 
@@ -194,15 +194,15 @@ class CComboBox : public CWnd
 
 リストボックス内の現在選択されている項目 (存在する場合) は、静的コントロールまたは編集コントロールに表示されます。 また、コンボボックスにドロップダウンリストのスタイルがある場合、ユーザーはリスト内のいずれかの項目の最初の文字を入力できます。リストボックスが表示されている場合は、その最初の文字が次の項目を強調表示します。
 
-次の表は、3つのコンボボックス[スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を比較したものです。
+次の表は、3つのコンボボックス [スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を比較したものです。
 
-|スタイル|リストボックスが表示されているとき|静的コントロールまたは編集コントロール|
+|Style|リストボックスが表示されているとき|静的コントロールまたは編集コントロール|
 |-----------|-------------------------------|-----------------------------|
 |シンプル|Always (常に)|編集|
 |Drop-down|ドロップダウンしたとき|編集|
 |ドロップダウン リスト|ドロップダウンしたとき|静的|
 
-オブジェクトを作成するには、ダイアログテンプレートを使用するか、 `CComboBox` コード内で直接作成します。 どちらの場合も、最初にコンストラクターを呼び出して `CComboBox` オブジェクトを構築 `CComboBox` し、次に[create](#create) member 関数を呼び出してコントロールを作成し、オブジェクトにアタッチし `CComboBox` ます。
+オブジェクトを作成するには、ダイアログテンプレートを使用するか、 `CComboBox` コード内で直接作成します。 どちらの場合も、最初にコンストラクターを呼び出して `CComboBox` オブジェクトを構築 `CComboBox` し、次に [create](#create) member 関数を呼び出してコントロールを作成し、オブジェクトにアタッチし `CComboBox` ます。
 
 コンボボックスから親 (通常はから派生したクラス) に送信される Windows 通知メッセージを処理する場合は `CDialog` 、各メッセージの親クラスにメッセージマップエントリとメッセージハンドラーメンバー関数を追加します。
 
@@ -220,7 +220,7 @@ class CComboBox : public CWnd
 
 考えられるメッセージマップエントリは次のとおりです。
 
-- ON_CBN_CLOSEUP (Windows 3.1 以降)コンボボックスのリストボックスが閉じられました。 この通知メッセージは、 [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボボックスには送信されません。
+- ON_CBN_CLOSEUP (Windows 3.1 以降)コンボボックスのリストボックスが閉じられました。 この通知メッセージは、 [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを持つコンボボックスには送信されません。
 
 - ユーザーがコンボボックスのリストボックス内の文字列をダブルクリック ON_CBN_DBLCLK ます。 この通知メッセージは、CBS_SIMPLE スタイルが適用されたコンボボックスに対してのみ送信されます。 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルまたは[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを使用しているコンボボックスでは、シングルクリックでリストボックスが非表示になっているため、ダブルクリックを行うことはできません。
 
@@ -238,7 +238,7 @@ class CComboBox : public CWnd
 
 - コンボボックス ON_CBN_KILLFOCUS、入力フォーカスが失われています。
 
-- コンボボックスのリストボックスで選択した内容が、ユーザーがリストボックスをクリックするか、方向キーを使用して選択を変更した結果として変更されることを ON_CBN_SELCHANGE します。 このメッセージを処理する場合、コンボボックスのエディットコントロール内のテキストは、 `GetLBText` または他の同様の関数を使用してのみ取得できます。 `GetWindowText`使用できません。
+- コンボボックスのリストボックスで選択した内容が、ユーザーがリストボックスをクリックするか、方向キーを使用して選択を変更した結果として変更されることを ON_CBN_SELCHANGE します。 このメッセージを処理する場合、コンボボックスのエディットコントロール内のテキストは、 `GetLBText` または他の同様の関数を使用してのみ取得できます。 `GetWindowText` 使用できません。
 
 - コンボボックス ON_CBN_SETFOCUS 入力フォーカスを受け取ります。
 
@@ -246,7 +246,7 @@ class CComboBox : public CWnd
 
 オブジェクトを別のウィンドウオブジェクト内に埋め込む場合は `CComboBox` 、そのオブジェクトを破棄する必要はありません。 スタックにオブジェクトを作成すると `CComboBox` 、そのオブジェクトは自動的に破棄されます。 関数を使用してヒープにオブジェクトを作成する場合 `CComboBox` **`new`** 、 **`delete`** Windows のコンボボックスが破棄されたときにオブジェクトを破棄するには、オブジェクトでを呼び出す必要があります。
 
-**メモ**WM_KEYDOWN メッセージと WM_CHAR メッセージを処理する場合は、コンボボックスの [編集] コントロールと [リストボックス] コントロールをサブクラス化し、およびからクラスを派生させ、 `CEdit` `CListBox` それらのメッセージのハンドラーを派生クラスに追加する必要があります。 詳細については、「 [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)」を参照してください。
+**メモ** WM_KEYDOWN メッセージと WM_CHAR メッセージを処理する場合は、コンボボックスの [編集] コントロールと [リストボックス] コントロールをサブクラス化し、およびからクラスを派生させ、 `CEdit` `CListBox` それらのメッセージのハンドラーを派生クラスに追加する必要があります。 詳細については、「 [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -262,7 +262,7 @@ class CComboBox : public CWnd
 
 **ヘッダー:** afxwin.h
 
-## <a name="ccomboboxaddstring"></a><a name="addstring"></a>CComboBox:: AddString
+## <a name="ccomboboxaddstring"></a><a name="addstring"></a> CComboBox:: AddString
 
 コンボボックスのリストボックスに文字列を追加します。
 
@@ -281,18 +281,18 @@ int AddString(LPCTSTR lpszString);
 
 ### <a name="remarks"></a>解説
 
-リストボックスが[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルで作成されなかった場合、文字列はリストの末尾に追加されます。 それ以外の場合は、文字列がリストに挿入され、リストが並べ替えられます。
+リストボックスが [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルで作成されなかった場合、文字列はリストの末尾に追加されます。 それ以外の場合は、文字列がリストに挿入され、リストが並べ替えられます。
 
 > [!NOTE]
 > この関数は、Windows コントロールではサポートされていません `ComboBoxEx` 。 このコントロールの詳細については、Windows SDK の「 [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) 」を参照してください。
 
-リスト内の特定の位置に文字列を挿入するには、 [Insertstring](#insertstring)メンバー関数を使用します。
+リスト内の特定の位置に文字列を挿入するには、 [Insertstring](#insertstring) メンバー関数を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox:: CComboBox
+## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a> CComboBox:: CComboBox
 
 `CComboBox` オブジェクトを構築します。
 
@@ -304,7 +304,7 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-## <a name="ccomboboxclear"></a><a name="clear"></a>CComboBox:: Clear
+## <a name="ccomboboxclear"></a><a name="clear"></a> CComboBox:: Clear
 
 コンボボックスのエディットコントロール内の現在の選択項目を削除 (クリア) します。
 
@@ -314,13 +314,13 @@ void Clear();
 
 ### <a name="remarks"></a>解説
 
-現在の選択範囲を削除し、削除された内容をクリップボードに配置するには、 [Cut](#cut)メンバー関数を使用します。
+現在の選択範囲を削除し、削除された内容をクリップボードに配置するには、 [Cut](#cut) メンバー関数を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]
 
-## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox:: CompareItem
+## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a> CComboBox:: CompareItem
 
 並べ替えられたオーナー描画コンボボックスのリストボックスの部分における新しい項目の相対位置を決定するために、フレームワークによって呼び出されます。
 
@@ -353,7 +353,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-## <a name="ccomboboxcopy"></a><a name="copy"></a>CComboBox:: コピー
+## <a name="ccomboboxcopy"></a><a name="copy"></a> CComboBox:: コピー
 
 コンボボックスのエディットコントロール内の現在の選択項目を CF_TEXT 形式でクリップボードにコピーします。
 
@@ -365,7 +365,7 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-## <a name="ccomboboxcreate"></a><a name="create"></a>CComboBox:: Create
+## <a name="ccomboboxcreate"></a><a name="create"></a> CComboBox:: Create
 
 コンボボックスを作成し、オブジェクトにアタッチし `CComboBox` ます。
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 コンボボックスのスタイルを指定します。 [コンボボックススタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)の任意の組み合わせをボックスに適用します。
 
 *rect*<br/>
-コンボボックスの位置とサイズを指します。 には、 [RECT 構造体](/windows/win32/api/windef/ns-windef-rect)またはオブジェクトを指定でき `CRect` ます。
+コンボボックスの位置とサイズを指します。 には、 [RECT 構造体](/windows/win32/api/windef/ns-windef-rect) またはオブジェクトを指定でき `CRect` ます。
 
 *pParentWnd*<br/>
 コンボボックスの親ウィンドウ (通常は) を指定し `CDialog` ます。 NULL にすることはできません。
@@ -399,11 +399,11 @@ virtual BOOL Create(
 
 オブジェクトを構築するには、 `CComboBox` 2 つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create` を呼び出します。これにより、Windows のコンボボックスが作成され、オブジェクトにアタッチさ `CComboBox` れます。
 
-を実行すると、 `Create` Windows によって[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)のメッセージがコンボボックスに送信されます。
+を実行すると、 `Create` Windows によって [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) のメッセージがコンボボックスに送信されます。
 
-これらのメッセージは、既定では、基本クラスの[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)の各メンバー関数によって処理され `CWnd` ます。 既定のメッセージ処理を拡張するには、からクラスを派生させ、 `CComboBox` 新しいクラスにメッセージマップを追加して、前のメッセージハンドラーメンバー関数をオーバーライドします。 `OnCreate`たとえば、新しいクラスに必要な初期化を実行する場合は、をオーバーライドします。
+これらのメッセージは、既定では、基本クラスの [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)、および [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) の各メンバー関数によって処理され `CWnd` ます。 既定のメッセージ処理を拡張するには、からクラスを派生させ、 `CComboBox` 新しいクラスにメッセージマップを追加して、前のメッセージハンドラーメンバー関数をオーバーライドします。 `OnCreate`たとえば、新しいクラスに必要な初期化を実行する場合は、をオーバーライドします。
 
-次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)をコンボボックスコントロールに適用します。 :
+次の [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) をコンボボックスコントロールに適用します。 :
 
 - 常に WS_CHILD
 
@@ -423,7 +423,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-## <a name="ccomboboxcut"></a><a name="cut"></a>CComboBox:: Cut
+## <a name="ccomboboxcut"></a><a name="cut"></a> CComboBox:: Cut
 
 コンボボックスエディットコントロール内の現在の選択項目を削除 (切り取り) し、削除されたテキストを CF_TEXT 形式でクリップボードにコピーします。
 
@@ -433,13 +433,13 @@ void Cut();
 
 ### <a name="remarks"></a>解説
 
-削除されたテキストをクリップボードに配置せずに現在の選択項目を削除するには、 [Clear](#clear)メンバー関数を呼び出します。
+削除されたテキストをクリップボードに配置せずに現在の選択項目を削除するには、 [Clear](#clear) メンバー関数を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]
 
-## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::D eleteItem
+## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a> CComboBox::D eleteItem
 
 ユーザーがオーナー描画オブジェクトから項目を削除したとき、 `CComboBox` またはコンボボックスを破棄したときに、フレームワークによって呼び出されます。
 
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDeleteItemStruct*<br/>
-削除された項目に関する情報を格納している Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)構造体への long ポインター。 この構造体の説明については、「 [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 」を参照してください。
+削除された項目に関する情報を格納している Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) 構造体への long ポインター。 この構造体の説明については、「 [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -460,9 +460,9 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::D eleteString
+## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a> CComboBox::D eleteString
 
-コンボボックスから、[位置] の*項目を削除*します。
+コンボボックスから、[位置] の *項目を削除* します。
 
 ```
 int DeleteString(UINT nIndex);
@@ -485,7 +485,7 @@ int DeleteString(UINT nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-## <a name="ccomboboxdir"></a><a name="dir"></a>CComboBox::D ir
+## <a name="ccomboboxdir"></a><a name="dir"></a> CComboBox::D ir
 
 ファイル名またはドライブの一覧をコンボボックスのリストボックスに追加します。
 
@@ -498,7 +498,7 @@ int Dir(
 ### <a name="parameters"></a>パラメーター
 
 *attr*<br/>
-には、 **`enum`** [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus)に記述された値、または次の値の任意の組み合わせを指定できます。
+には、 **`enum`** [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) に記述された値、または次の値の任意の組み合わせを指定できます。
 
 - DDL_READWRITE ファイルの読み取りまたは書き込みを行うことができます。
 
@@ -531,7 +531,7 @@ int Dir(
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox: rawItem:D
+## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a> CComboBox: rawItem:D
 
 オーナー描画コンボボックスの外観が変化したときにフレームワークによって呼び出されます。
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-必要な描画の種類に関する情報を格納している[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)構造体へのポインター。
+必要な描画の種類に関する情報を格納している [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-## <a name="ccomboboxfindstring"></a><a name="findstring"></a>CComboBox:: FindString
+## <a name="ccomboboxfindstring"></a><a name="findstring"></a> CComboBox:: FindString
 
 コンボボックスのリストボックス内の指定したプレフィックスを含む最初の文字列を検索します (選択しません)。
 
@@ -567,7 +567,7 @@ int FindString(
 ### <a name="parameters"></a>パラメーター
 
 *nStartAfter*<br/>
-最初に検索される項目の前にある項目の0から始まるインデックスを格納します。 検索がリストボックスの下部に到達すると、リストボックスの一番上から*Nstartafter*によって指定された項目に戻ります。 -1 の場合、リストボックス全体が最初から検索されます。
+最初に検索される項目の前にある項目の0から始まるインデックスを格納します。 検索がリストボックスの下部に到達すると、リストボックスの一番上から *Nstartafter*によって指定された項目に戻ります。 -1 の場合、リストボックス全体が最初から検索されます。
 
 *lpszString*<br/>
 検索するプレフィックスを含む、null で終わる文字列を指します。 検索は大文字と小文字が区別されないため、この文字列には大文字と小文字の任意の組み合わせを含めることができます。
@@ -584,7 +584,7 @@ int FindString(
 
 [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]
 
-## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox:: FindStringExact
+## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a> CComboBox:: FindStringExact
 
 メンバー関数を呼び出して、 `FindStringExact` *lpszFind*で指定した文字列と一致する最初のリストボックスの文字列 (コンボボックス内) を検索します。
 
@@ -608,13 +608,13 @@ Null で終わる検索対象の文字列を指します。 この文字列に�
 
 ### <a name="remarks"></a>解説
 
-コンボボックスがオーナー描画スタイルを使用して作成され、 [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルが指定されていない場合、は `FindStringExact` *lpszFind*の値に対してダブルワード値を照合しようとします。
+コンボボックスがオーナー描画スタイルを使用して作成され、 [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルが指定されていない場合、は `FindStringExact` *lpszFind*の値に対してダブルワード値を照合しようとします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]
 
-## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox:: GetComboBoxInfo
+## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a> CComboBox:: GetComboBoxInfo
 
 オブジェクトの情報を取得 `CComboBox` します。
 
@@ -633,9 +633,9 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、 [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) メッセージの機能をエミュレートします。
 
-## <a name="ccomboboxgetcount"></a><a name="getcount"></a>CComboBox:: GetCount
+## <a name="ccomboboxgetcount"></a><a name="getcount"></a> CComboBox:: GetCount
 
 コンボボックスのリストボックスの部分に含まれる項目の数を取得するには、このメンバー関数を呼び出します。
 
@@ -651,7 +651,7 @@ int GetCount() const;
 
 [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]
 
-## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox:: GetCueBanner
+## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a> CComboBox:: GetCueBanner
 
 コンボボックスコントロールに表示されるキューテキストを取得します。
 
@@ -665,16 +665,17 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*lpszText*|入出力キューバナーテキストを受け取るバッファーへのポインター。|
-|*cchText*|から*LpszText*パラメーターが指すバッファーのサイズ。|
+*lpszText*\
+入出力キューバナーテキストを受け取るバッファーへのポインター。
+
+*cchText*\
+から *LpszText* パラメーターが指すバッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
-最初のオーバーロードでは、存在する場合は、キューバナーテキストを含む[CString](../../atl-mfc-shared/using-cstring.md)オブジェクト。それ以外の場合は、 `CString` 長さが0のオブジェクト。
+最初のオーバーロードでは、存在する場合は、キューバナーテキストを含む [CString](../../atl-mfc-shared/using-cstring.md) オブジェクト。それ以外の場合は、 `CString` 長さが0のオブジェクト。
 
-または
+- または -
 
 2番目のオーバーロードでは、このメソッドが成功した場合は TRUE になります。それ以外の場合は FALSE。
 
@@ -682,9 +683,9 @@ BOOL GetCueBanner(
 
 キューテキストは、コンボボックスコントロールの入力領域に表示されるプロンプトです。 ユーザーが入力を提供するまで、キューのテキストが表示されます。
 
-このメソッドは、Windows SDK で説明されている[CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) メッセージを送信します。
 
-## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox:: GetCurSel
+## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a> CComboBox:: GetCurSel
 
 コンボボックス内のどの項目が選択されているかを判断するには、このメンバー関数を呼び出します。
 
@@ -698,13 +699,13 @@ int GetCurSel() const;
 
 ### <a name="remarks"></a>解説
 
-`GetCurSel`リスト内のインデックスを返します。
+`GetCurSel` リスト内のインデックスを返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]
 
-## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox:: GetDroppedControlRect
+## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a> CComboBox:: GetDroppedControlRect
 
 メンバー関数を呼び出して、 `GetDroppedControlRect` ドロップダウンコンボボックスの表示 (ドロップダウン) リストボックスの画面座標を取得します。
 
@@ -715,13 +716,13 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lprect*<br/>
-座標を受け取る[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)をポイントします。
+座標を受け取る [RECT 構造体](/windows/win32/api/windef/ns-windef-rect) をポイントします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]
 
-## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox:: GetDroppedState
+## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a> CComboBox:: GetDroppedState
 
 メンバー関数を呼び出して、 `GetDroppedState` ドロップダウンコンボボックスのリストボックスが表示されている (ドロップダウンされている) かどうかを判断します。
 
@@ -737,7 +738,7 @@ BOOL GetDroppedState() const;
 
 [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]
 
-## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox:: GetDroppedWidth
+## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a> CComboBox:: GetDroppedWidth
 
 コンボボックスのリストボックスの最小許容幅 (ピクセル単位) を取得するには、この関数を呼び出します。
 
@@ -751,7 +752,7 @@ int GetDroppedWidth() const;
 
 ### <a name="remarks"></a>解説
 
-この関数は、 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)または[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボボックスにのみ適用されます。
+この関数は、 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) または [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを持つコンボボックスにのみ適用されます。
 
 既定では、ドロップダウンリストボックスで許容される最小幅は0です。 許容される最小幅は、 [SetDroppedWidth](#setdroppedwidth)を呼び出すことによって設定できます。 コンボボックスのリストボックスの部分が表示されている場合、その幅は、許容される最小幅またはコンボボックスの幅のうち、大きい方になります。
 
@@ -759,7 +760,7 @@ int GetDroppedWidth() const;
 
   [SetDroppedWidth](#setdroppedwidth)の例を参照してください。
 
-## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox:: GetEditSel
+## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a> CComboBox:: GetEditSel
 
 コンボボックスの編集コントロールの現在の選択範囲の開始文字と終了文字の位置を取得します。
 
@@ -775,7 +776,7 @@ DWORD GetEditSel() const;
 
 [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]
 
-## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox:: GetExtendedUI
+## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a> CComboBox:: GetExtendedUI
 
 メンバー関数を呼び出して、 `GetExtendedUI` コンボボックスに既定のユーザーインターフェイスまたは拡張ユーザーインターフェイスがあるかどうかを確認します。
 
@@ -791,7 +792,7 @@ BOOL GetExtendedUI() const;
 
 拡張ユーザーインターフェイスは、次の方法で識別できます。
 
-- スタティックコントロールをクリックすると、 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルのコンボボックスに対してのみリストボックスが表示されます。
+- スタティックコントロールをクリックすると、 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルのコンボボックスに対してのみリストボックスが表示されます。
 
 - 下方向キーを押すと、リストボックスが表示されます (F4 は無効になります)。
 
@@ -801,7 +802,7 @@ BOOL GetExtendedUI() const;
 
 [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]
 
-## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox:: GetHorizontalExtent
+## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a> CComboBox:: GetHorizontalExtent
 
 コンボボックスから、コンボボックスのリストボックスの部分を水平方向にスクロールできる幅 (ピクセル単位) を取得します。
 
@@ -821,7 +822,7 @@ UINT GetHorizontalExtent() const;
 
 [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]
 
-## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox:: GetItemData
+## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a> CComboBox:: GetItemData
 
 指定したコンボボックス項目に関連付けられている、アプリケーションが提供した32ビット値を取得します。
 
@@ -846,7 +847,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]
 
-## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox:: GetItemDataPtr
+## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a> CComboBox:: GetItemDataPtr
 
 指定したコンボボックス項目に関連付けられた、アプリケーションが提供した32ビット値をポインターとして取得し **`void`** <strong>\*</strong> ます ()。
 
@@ -867,7 +868,7 @@ void* GetItemDataPtr(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]
 
-## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox:: GetItemHeight
+## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a> CComboBox:: GetItemHeight
 
 メンバー関数を呼び出して、 `GetItemHeight` コンボボックス内のリスト項目の高さを取得します。
 
@@ -878,7 +879,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-高さを取得するコンボボックスのコンポーネントを指定します。 *NIndex*パラメーターが-1 の場合、コンボボックスの編集コントロール (または静的テキスト) 部分の高さが取得されます。 コンボボックスに[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルが設定されている場合、 *nIndex*は、高さを取得するリスト項目の0から始まるインデックスを指定します。 それ以外の場合は、 *nIndex*を0に設定する必要があります。
+高さを取得するコンボボックスのコンポーネントを指定します。 *NIndex*パラメーターが-1 の場合、コンボボックスの編集コントロール (または静的テキスト) 部分の高さが取得されます。 コンボボックスに [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルが設定されている場合、 *nIndex* は、高さを取得するリスト項目の0から始まるインデックスを指定します。 それ以外の場合は、 *nIndex* を0に設定する必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -888,7 +889,7 @@ int GetItemHeight(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]
 
-## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox:: GetLBText
+## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a> CComboBox:: GetLBText
 
 コンボボックスのリストボックスから文字列を取得します。
 
@@ -925,7 +926,7 @@ void GetLBText(
 
 [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]
 
-## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox:: GetLBTextLen
+## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a> CComboBox:: GetLBTextLen
 
 コンボボックスのリストボックス内の文字列の長さを取得します。
 
@@ -946,7 +947,7 @@ int GetLBTextLen(int nIndex) const;
 
   「 [CComboBox:: GetLBText](#getlbtext)」の例を参照してください。
 
-## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox:: GetLocale
+## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a> CComboBox:: GetLocale
 
 コンボボックスによって使用されるロケールを取得します。
 
@@ -966,7 +967,7 @@ LCID GetLocale() const;
 
   「 [CComboBox:: SetLocale](#setlocale)」の例を参照してください。
 
-## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox:: GetMinVisible
+## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a> CComboBox:: GetMinVisible
 
 現在のコンボボックスコントロールのドロップダウンリストに表示される項目の最小数を取得します。
 
@@ -980,9 +981,9 @@ int GetMinVisible() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) メッセージを送信します。
 
-## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox:: GetTopIndex
+## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a> CComboBox:: GetTopIndex
 
 コンボボックスのリストボックスの部分に表示されている最初の項目の0から始まるインデックスを取得します。
 
@@ -1002,7 +1003,7 @@ int GetTopIndex() const;
 
 [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]
 
-## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox:: InitStorage
+## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a> CComboBox:: InitStorage
 
 コンボボックスのリストボックスの部分にリストボックス項目を格納するためのメモリを割り当てます。
 
@@ -1028,15 +1029,15 @@ int InitStorage(
 
 のリストボックスの部分に多数の項目を追加する前に、この関数を呼び出し `CComboBox` ます。
 
-Windows 95/98 のみ: *wParam*パラメーターは16ビット値に制限されます。 これは、リストボックスに32767を超える項目を含めることができないことを意味します。 項目の数は制限されていますが、リストボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
+Windows 95/98 のみ: *wParam* パラメーターは16ビット値に制限されます。 これは、リストボックスに32767を超える項目を含めることができないことを意味します。 項目の数は制限されていますが、リストボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
 
-この関数は、多数の項目 (100 を超える) を持つリストボックスの初期化を高速化するのに役立ちます。 事前は、指定された量のメモリを使用して、後続の[Addstring](#addstring)、 [insertstring](#insertstring)、および[Dir](#dir)関数が可能な限り最短の時間を取るようにします。 パラメーターには、推定値を使用できます。 過大評価を使用すると、いくつかの追加メモリが割り当てられます。過小評価を行う場合、通常の割り当ては、事前に割り当てられた量を超える項目に使用されます。
+この関数は、多数の項目 (100 を超える) を持つリストボックスの初期化を高速化するのに役立ちます。 事前は、指定された量のメモリを使用して、後続の [Addstring](#addstring)、 [insertstring](#insertstring)、および [Dir](#dir) 関数が可能な限り最短の時間を取るようにします。 パラメーターには、推定値を使用できます。 過大評価を使用すると、いくつかの追加メモリが割り当てられます。過小評価を行う場合、通常の割り当ては、事前に割り当てられた量を超える項目に使用されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]
 
-## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox:: InsertString
+## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a> CComboBox:: InsertString
 
 コンボ ボックスのリスト ボックスに文字列を挿入します。
 
@@ -1069,7 +1070,7 @@ int InsertString(
 
 [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]
 
-## <a name="ccomboboxlimittext"></a><a name="limittext"></a>CComboBox:: LimitText
+## <a name="ccomboboxlimittext"></a><a name="limittext"></a> CComboBox:: LimitText
 
 ユーザーがコンボボックスのエディットコントロールに入力できるテキストの長さをバイト単位で制限します。
 
@@ -1084,19 +1085,19 @@ BOOL LimitText(int nMaxChars);
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0以外の。 スタイル[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を持つコンボボックスまたはエディットコントロールのないコンボボックスに対して呼び出された場合、戻り値は CB_ERR です。
+成功した場合は0以外の。 スタイル [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) を持つコンボボックスまたはエディットコントロールのないコンボボックスに対して呼び出された場合、戻り値は CB_ERR です。
 
 ### <a name="remarks"></a>解説
 
-コンボボックスにスタイル[CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)が指定されていない場合、テキスト制限を編集コントロールのサイズより大きく設定しても効果はありません。
+コンボボックスにスタイル [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)が指定されていない場合、テキスト制限を編集コントロールのサイズより大きく設定しても効果はありません。
 
-`LimitText`ユーザーが入力できるテキストのみを制限します。 このメソッドは、メッセージの送信時にエディットコントロールに既に存在するテキストには影響しません。また、リストボックス内の文字列が選択されている場合は、エディットコントロールにコピーされるテキストの長さにも影響しません。
+`LimitText` ユーザーが入力できるテキストのみを制限します。 このメソッドは、メッセージの送信時にエディットコントロールに既に存在するテキストには影響しません。また、リストボックス内の文字列が選択されている場合は、エディットコントロールにコピーされるテキストの長さにも影響しません。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]
 
-## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox:: MeasureItem
+## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a> CComboBox:: MeasureItem
 
 オーナー描画スタイルを持つコンボボックスが作成されたときに、フレームワークによって呼び出されます。
 
@@ -1113,7 +1114,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 既定では、このメンバー関数は何も行いません。 このメンバー関数をオーバーライドし、構造体に入力して、 `MEASUREITEMSTRUCT` コンボボックスのリストボックスのサイズをウィンドウに通知します。 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを使用してコンボボックスを作成した場合、フレームワークはリストボックスの各項目に対してこのメンバー関数を呼び出します。 それ以外の場合、このメンバーは1回だけ呼び出されます。
 
-の[SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem)メンバー関数で作成されたオーナー描画コンボボックスで CBS_OWNERDRAWFIXED スタイルを使用する場合は、 `CWnd` さらにプログラミングに関する考慮事項が伴います。 [テクニカルノート 14](../../mfc/tn014-custom-controls.md)の説明を参照してください。
+の [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) メンバー関数で作成されたオーナー描画コンボボックスで CBS_OWNERDRAWFIXED スタイルを使用する場合は、 `CWnd` さらにプログラミングに関する考慮事項が伴います。 [テクニカルノート 14](../../mfc/tn014-custom-controls.md)の説明を参照してください。
 
 構造の説明については、「 [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 」を参照してください `MEASUREITEMSTRUCT` 。
 
@@ -1121,7 +1122,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-## <a name="ccomboboxpaste"></a><a name="paste"></a>CComboBox::P aste
+## <a name="ccomboboxpaste"></a><a name="paste"></a> CComboBox::P aste
 
 クリップボードのデータを、現在のカーソル位置にあるコンボボックスの編集コントロールに挿入します。
 
@@ -1137,7 +1138,7 @@ void Paste();
 
 [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]
 
-## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox:: ResetContent
+## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a> CComboBox:: ResetContent
 
 リストボックスからすべての項目を削除し、コンボボックスのコントロールを編集します。
 
@@ -1149,7 +1150,7 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]
 
-## <a name="ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox:: SelectString
+## <a name="ccomboboxselectstring"></a><a name="selectstring"></a> CComboBox:: SelectString
 
 コンボボックスのリストボックス内の文字列を検索し、その文字列が見つかった場合は、リストボックス内の文字列を選択して、編集コントロールにコピーします。
 
@@ -1162,7 +1163,7 @@ int SelectString(
 ### <a name="parameters"></a>パラメーター
 
 *nStartAfter*<br/>
-最初に検索される項目の前にある項目の0から始まるインデックスを格納します。 検索がリストボックスの下部に到達すると、リストボックスの一番上から*Nstartafter*によって指定された項目に戻ります。 -1 の場合、リストボックス全体が最初から検索されます。
+最初に検索される項目の前にある項目の0から始まるインデックスを格納します。 検索がリストボックスの下部に到達すると、リストボックスの一番上から *Nstartafter*によって指定された項目に戻ります。 -1 の場合、リストボックス全体が最初から検索されます。
 
 *lpszString*<br/>
 検索するプレフィックスを含む、null で終わる文字列を指します。 検索は大文字と小文字が区別されないため、この文字列には大文字と小文字の任意の組み合わせを含めることができます。
@@ -1181,7 +1182,7 @@ int SelectString(
 
 [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]
 
-## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox:: SetCueBanner
+## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a> CComboBox:: SetCueBanner
 
 コンボボックスコントロールに表示されるキューテキストを設定します。
 
@@ -1191,9 +1192,8 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*lpszText*|からキューテキストを格納している null で終わるバッファーへのポインター。|
+*lpszText*\
+からキューテキストを格納している null で終わるバッファーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1203,7 +1203,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 キューテキストは、コンボボックスコントロールの入力領域に表示されるプロンプトです。 ユーザーが入力を提供するまで、キューのテキストが表示されます。
 
-このメソッドは、Windows SDK で説明されている[CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -1217,7 +1217,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox:: SetCurSel
+## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a> CComboBox:: SetCurSel
 
 コンボボックスのリストボックスで文字列を選択します。
 
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]
 
-## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox:: SetDroppedWidth
+## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a> CComboBox:: SetDroppedWidth
 
 コンボボックスのリストボックスの最小許容幅 (ピクセル単位) を設定するには、この関数を呼び出します。
 
@@ -1261,7 +1261,7 @@ int SetDroppedWidth(UINT nWidth);
 
 ### <a name="remarks"></a>解説
 
-この関数は、 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)または[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボボックスにのみ適用されます。
+この関数は、 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) または [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを持つコンボボックスにのみ適用されます。
 
 既定では、ドロップダウンリストボックスで許容される最小幅は0です。 コンボボックスのリストボックスの部分が表示されている場合、その幅は、許容される最小幅またはコンボボックスの幅のうち、大きい方になります。
 
@@ -1269,7 +1269,7 @@ int SetDroppedWidth(UINT nWidth);
 
 [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]
 
-## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox:: SetEditSel
+## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a> CComboBox:: SetEditSel
 
 コンボボックスの編集コントロールで文字を選択します。
 
@@ -1289,7 +1289,7 @@ BOOL SetEditSel(
 
 ### <a name="return-value"></a>戻り値
 
-メンバー関数が成功した場合は0以外の。それ以外の場合は0です。 が `CComboBox` [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持っている場合、またはリストボックスがない場合は CB_ERR です。
+メンバー関数が成功した場合は0以外の。それ以外の場合は0です。 が `CComboBox` [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを持っている場合、またはリストボックスがない場合は CB_ERR です。
 
 ### <a name="remarks"></a>解説
 
@@ -1302,9 +1302,9 @@ BOOL SetEditSel(
 
   「 [CComboBox:: GetEditSel](#geteditsel)」の例を参照してください。
 
-## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox:: SetExtendedUI
+## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a> CComboBox:: SetExtendedUI
 
-メンバー関数を呼び出して、 `SetExtendedUI` 既定のユーザーインターフェイス、または[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)または[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボボックスの拡張ユーザーインターフェイスのいずれかを選択します。
+メンバー関数を呼び出して、 `SetExtendedUI` 既定のユーザーインターフェイス、または [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) または [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを持つコンボボックスの拡張ユーザーインターフェイスのいずれかを選択します。
 
 ```
 int SetExtendedUI(BOOL bExtended = TRUE);
@@ -1333,7 +1333,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
   「 [CComboBox:: GetExtendedUI](#getextendedui)」の例を参照してください。
 
-## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox:: SetHorizontalExtent
+## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a> CComboBox:: SetHorizontalExtent
 
 コンボボックスのリストボックスの部分を水平方向にスクロールできる幅をピクセル単位で設定します。
 
@@ -1348,13 +1348,13 @@ void SetHorizontalExtent(UINT nExtent);
 
 ### <a name="remarks"></a>解説
 
-リストボックスの幅がこの値よりも小さい場合、水平スクロールバーはリストボックス内の項目を水平方向にスクロールします。 リストボックスの幅がこの値以上の場合、水平スクロールバーは非表示になります。コンボボックスに[CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルが設定されている場合は、無効になります。
+リストボックスの幅がこの値よりも小さい場合、水平スクロールバーはリストボックス内の項目を水平方向にスクロールします。 リストボックスの幅がこの値以上の場合、水平スクロールバーは非表示になります。コンボボックスに [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルが設定されている場合は、無効になります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]
 
-## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox:: SetItemData
+## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a> CComboBox:: SetItemData
 
 コンボボックス内の指定した項目に関連付けられている32ビット値を設定します。
 
@@ -1384,7 +1384,7 @@ int SetItemData(
 
 [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]
 
-## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox:: SetItemDataPtr
+## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a> CComboBox:: SetItemDataPtr
 
 コンボボックス内の指定した項目に関連付けられている32ビット値を、指定したポインター () に設定し **`void`** <strong>\*</strong> ます。
 
@@ -1414,7 +1414,7 @@ int SetItemDataPtr(
 
 [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]
 
-## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox:: SetItemHeight
+## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a> CComboBox:: SetItemHeight
 
 メンバー関数を呼び出して、コンボボックス `SetItemHeight` 内のリスト項目の高さ、またはコンボボックスの編集コントロール (または静的テキスト) 部分の高さを設定します。
 
@@ -1429,7 +1429,7 @@ int SetItemHeight(
 *nIndex*<br/>
 リスト項目の高さ、またはコンボボックスの編集コントロール (または静的テキスト) 部分の高さを設定するかどうかを指定します。
 
-コンボボックスに[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルが設定されている場合、 *nIndex*は、高さを設定するリスト項目の0から始まるインデックスを指定します。それ以外の場合、 *nIndex*は0にする必要があり、すべてのリスト項目の高さが設定されます。
+コンボボックスに [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルが設定されている場合、 *nIndex* は、高さを設定するリスト項目の0から始まるインデックスを指定します。それ以外の場合、 *nIndex* は0にする必要があり、すべてのリスト項目の高さが設定されます。
 
 *NIndex*が-1 の場合は、コンボボックスの編集コントロールまたは静的テキスト部分の高さを設定します。
 
@@ -1448,7 +1448,7 @@ int SetItemHeight(
 
 [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]
 
-## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox:: SetLocale
+## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a> CComboBox:: SetLocale
 
 このコンボボックスのロケール識別子を設定します。
 
@@ -1473,7 +1473,7 @@ LCID SetLocale(LCID nNewLocale);
 
 [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]
 
-## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox:: SetMinVisibleItems
+## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a> CComboBox:: SetMinVisibleItems
 
 現在のコンボボックスコントロールのドロップダウンリストに表示される項目の最小数を設定します。
 
@@ -1483,9 +1483,8 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*非表示*|から表示項目の最小数を指定します。|
+*非表示*\
+から表示項目の最小数を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1493,7 +1492,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -1507,7 +1506,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox:: SetTopIndex
+## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a> CComboBox:: SetTopIndex
 
 コンボボックスのリストボックスの部分に特定の項目が確実に表示されるようにします。
 
@@ -1532,7 +1531,7 @@ int SetTopIndex(int nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]
 
-## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox:: ShowDropDown
+## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a> CComboBox:: ShowDropDown
 
 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)または[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを持つコンボボックスのリストボックスの表示と非表示を切り替えます。
 
@@ -1549,7 +1548,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
 既定では、このスタイルのコンボボックスにリストボックスが表示されます。
 
-このメンバー関数は、 [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを使用して作成されたコンボボックスには影響しません。
+このメンバー関数は、 [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルを使用して作成されたコンボボックスには影響しません。
 
 ### <a name="example"></a>例
 

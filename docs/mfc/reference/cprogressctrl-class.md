@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: eda19ca2b94978201806e60d2ae8399e00e13f1f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751126"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561519"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -65,37 +65,37 @@ class CProgressCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#cprogressctrl)|`CProgressCtrl` オブジェクトを構築します。|
+|[CProgressCtrl:: CProgressCtrl](#cprogressctrl)|`CProgressCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[作成](#create)|プログレス バー コントロールを作成し、`CProgressCtrl`オブジェクトにアタッチします。|
-|[をクリックします。](#createex)|指定した Windows 拡張スタイルを使用してプログレス コントロールを`CProgressCtrl`作成し、オブジェクトにアタッチします。|
-|[をクリックします。](#getbarcolor)|現在のプログレス バー コントロールの進行状況インジケーター バーの色を取得します。|
-|[をクリックします。](#getbkcolor)|現在のプログレス バーの背景色を取得します。|
-|[をクリックします。](#getpos)|プログレス バーの現在の位置を取得します。|
-|[をクリックします。](#getrange)|プログレス バー コントロールの範囲の下限と上限を取得します。|
-|[状態を取得します。](#getstate)|現在のプログレス バー コントロールの状態を取得します。|
-|[をクリックします。](#getstep)|現在のプログレス バー コントロールの進行状況バーのステップインクリメントを取得します。|
-|[をクリックします。](#offsetpos)|プログレス バー コントロールの現在位置を指定した増分で進め、新しい位置を反映するようにバーを再描画します。|
-|[をクリックします。](#setbarcolor)|現在のプログレス バー コントロールの進行状況インジケーター バーの色を設定します。|
-|[をクリックします。](#setbkcolor)|プログレス バーの背景色を設定します。|
-|[コグレスCtrl::セットマーキー](#setmarquee)|現在のプログレス バー コントロールのマーキー モードをオンまたはオフにします。|
-|[をクリックします。](#setpos)|プログレス バー コントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。|
-|[をクリックします。](#setrange)|プログレス バー コントロールの最小範囲と最大範囲を設定し、新しい範囲を反映するようにバーを再描画します。|
-|[状態を設定します。](#setstate)|現在の進行状況バー コントロールの状態を設定します。|
-|[をクリックします。](#setstep)|プログレス バー コントロールのステップインクリメントを指定します。|
-|[をクリックします。](#stepit)|進捗バー コントロールの現在位置をステップ増分[(SetStep](#setstep)を参照) だけ進み、新しい位置を反映するようにバーを再描画します。|
+|[CProgressCtrl:: Create](#create)|プログレスバーコントロールを作成し、オブジェクトにアタッチし `CProgressCtrl` ます。|
+|[CProgressCtrl:: CreateEx](#createex)|指定された Windows 拡張スタイルを使用してプログレスコントロールを作成し、オブジェクトにアタッチし `CProgressCtrl` ます。|
+|[CProgressCtrl:: GetBarColor](#getbarcolor)|現在の進行状況バーコントロールのプログレスインジケーターバーの色を取得します。|
+|[CProgressCtrl:: GetBkColor](#getbkcolor)|現在の進行状況バーの背景色を取得します。|
+|[CProgressCtrl:: GetPos](#getpos)|プログレスバーの現在位置を取得します。|
+|[CProgressCtrl:: GetRange](#getrange)|プログレスバーコントロールの範囲の下限と上限を取得します。|
+|[CProgressCtrl:: GetState](#getstate)|現在の進行状況バーコントロールの状態を取得します。|
+|[CProgressCtrl:: GetStep](#getstep)|現在の進行状況バーコントロールのプログレスバーの増分値を取得します。|
+|[CProgressCtrl:: OffsetPos](#offsetpos)|プログレスバーコントロールの現在位置を指定されたインクリメントだけ進め、新しい位置を反映するようにバーを再描画します。|
+|[CProgressCtrl:: SetBarColor](#setbarcolor)|現在の進行状況バーコントロールのプログレスインジケーターバーの色を設定します。|
+|[CProgressCtrl:: SetBkColor](#setbkcolor)|プログレスバーの背景色を設定します。|
+|[CProgressCtrl:: SetMarquee](#setmarquee)|現在の進行状況バーコントロールに対してマーキーモードをオンまたはオフにします。|
+|[CProgressCtrl:: SetPos](#setpos)|プログレスバーコントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。|
+|[CProgressCtrl:: SetRange](#setrange)|プログレスバーコントロールの範囲の最小値と最大値を設定し、新しい範囲を反映するようにバーを再描画します。|
+|[CProgressCtrl:: SetState](#setstate)|現在の進行状況バー コントロールの状態を設定します。|
+|[CProgressCtrl:: SetStep](#setstep)|プログレスバーコントロールのステップインクリメントを指定します。|
+|[CProgressCtrl:: StepIt](#stepit)|プログレスバーコントロールの現在位置をステップごとに進めます (「 [Setstep](#setstep)」を参照)。新しい位置を反映するようにバーを再描画します。|
 
 ## <a name="remarks"></a>解説
 
-進行状況バー コントロールは、アプリケーションが時間のかかる操作の進行状況を示すために使用できるウィンドウです。 これは、操作の進行に合ったシステムの強調表示色で、左から右に徐々に塗りつぶされる四角形で構成されます。
+進行状況バーコントロールは、時間のかかる操作の進行状況を示すためにアプリケーションで使用できるウィンドウです。 操作の進行に合わせてシステムの強調表示色を使用して、左から右に徐々に入力される四角形で構成されます。
 
-プログレス バー コントロールには、範囲と現在位置があります。 範囲は操作の合計期間を表し、現在の位置は、アプリケーションが操作を完了するための進行状況を表します。 ウィンドウ プロシージャでは、範囲と現在位置を使用して、強調表示色で塗りつぶすプログレス バーの割合を決定します。 範囲と現在位置の値は符号付き整数で表されるため、現在の位置値の可能な範囲は -2,147,483,648 から 2,147,483,647 までです。
+プログレスバーコントロールには、範囲と現在位置があります。 この範囲は操作の合計期間を表し、現在の位置は、アプリケーションが操作の完了に向けた進行状況を表します。 ウィンドウプロシージャは、範囲と現在位置を使用して、強調表示色で塗りつぶすプログレスバーの割合を決定します。 範囲と現在位置の値は符号付き整数として表現されるため、現在の位置の値の有効範囲は-2147483648 ~ 2147483647 です。
 
-の使用方法`CProgressCtrl`の詳細については、「[コントロール](../../mfc/controls-mfc.md)」および[「CProgressCtrl](../../mfc/using-cprogressctrl.md)の使用」を参照してください。
+の使用方法の詳細について `CProgressCtrl` は、「 [Controls](../../mfc/controls-mfc.md) and [using CProgressCtrl](../../mfc/using-cprogressctrl.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -111,7 +111,7 @@ class CProgressCtrl : public CWnd
 
 **ヘッダー:** afxcmn.h
 
-## <a name="cprogressctrlcprogressctrl"></a><a name="cprogressctrl"></a>をクリックします。
+## <a name="cprogressctrlcprogressctrl"></a><a name="cprogressctrl"></a> CProgressCtrl:: CProgressCtrl
 
 `CProgressCtrl` オブジェクトを構築します。
 
@@ -121,15 +121,15 @@ CProgressCtrl();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトを構築した`CProgressCtrl`後、プロ`CProgressCtrl::Create`グレス バー コントロールを作成する呼び出し。
+オブジェクトを構築した後 `CProgressCtrl` 、 `CProgressCtrl::Create` を呼び出して進行状況バーコントロールを作成します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]
 
-## <a name="cprogressctrlcreate"></a><a name="create"></a>作成
+## <a name="cprogressctrlcreate"></a><a name="create"></a> CProgressCtrl:: Create
 
-プログレス バー コントロールを作成し、`CProgressCtrl`オブジェクトにアタッチします。
+プログレスバーコントロールを作成し、オブジェクトにアタッチし `CProgressCtrl` ます。
 
 ```
 virtual BOOL Create(
@@ -141,37 +141,37 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dwstyle*<br/>
-プログレス バー コントロールのスタイルを指定します。 Windows SDK の[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)で説明されているウィンドウ スタイルの任意の組み合わせを適用し、次のプログレス バー コントロール スタイルに加えて、コントロールに適用します。
+*dwStyle*<br/>
+プログレスバーコントロールのスタイルを指定します。 次のプログレスバーコントロールスタイルに加えて、Windows SDK の [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) で説明されているウィンドウスタイルの任意の組み合わせをコントロールに適用します。
 
-- PBS_VERTICAL 進捗状況の情報を上から下に縦に表示します。 このフラグを指定しない場合、進行状況バー コントロールは左から右に水平に表示されます。
+- PBS_VERTICAL は、進行状況に関する情報を垂直方向、上から下に表示します。 このフラグがない場合、進行状況バーコントロールは水平方向に左から右に表示されます。
 
-- PBS_SMOOTH 進行状況バー コントロールで、段階的にスムーズに塗りつぶされます。 このフラグを指定しないと、コントロールはブロックで塗りつぶされます。
+- PBS_SMOOTH は、進行状況バーコントロールに徐々に滑らかな塗りつぶしを表示します。 このフラグが設定されていない場合、コントロールはブロックで塗りつぶされます。
 
-*Rect*<br/>
-プログレス バー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指定できます。 コントロールは子ウィンドウである必要があるため、指定された座標は*pParentWnd*のクライアント領域を基準にしています。
+*rect*<br/>
+プログレスバーコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体のいずれかになります。 コントロールは子ウィンドウである必要があるため、指定された座標は *pParentWnd*のクライアント領域に対して相対的になります。
 
 *pParentWnd*<br/>
-プログレス バー コントロールの親ウィンドウを指定`CDialog`します。 NULL にすることはできません。
+プログレスバーコントロールの親ウィンドウ (通常は) を指定し `CDialog` ます。 NULL にすることはできません。
 
 *nID*<br/>
-プログレス バー コントロールの ID を指定します。
+プログレスバーコントロールの ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが`CProgressCtrl`正常に作成された場合は TRUE。それ以外の場合は FALSE。
+オブジェクトが正常に作成された場合は TRUE `CProgressCtrl` 。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトは`CProgressCtrl`2 つの手順で作成します。 まず、オブジェクトを作成するコンストラクターを`CProgressCtrl`呼び出し、次`Create`に を呼び出します。
+オブジェクトを構築するには、 `CProgressCtrl` 2 つの手順を実行します。 まず、コンストラクターを呼び出してオブジェクトを作成 `CProgressCtrl` し、 `Create` を呼び出します。これにより、進行状況バーコントロールが作成されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]
 
-## <a name="cprogressctrlcreateex"></a><a name="createex"></a>をクリックします。
+## <a name="cprogressctrlcreateex"></a><a name="createex"></a> CProgressCtrl:: CreateEx
 
-コントロール (子ウィンドウ) を作成し、オブジェクトに関連`CProgressCtrl`付けます。
+コントロール (子ウィンドウ) を作成し、オブジェクトに関連付け `CProgressCtrl` ます。
 
 ```
 virtual BOOL CreateEx(
@@ -184,14 +184,14 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウェエクススタイル*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の*DwExStyle*パラメーター[を](/windows/win32/api/winuser/nf-winuser-createwindowexw)参照してください。
+*dwExStyle*<br/>
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
 
-*Dwstyle*<br/>
-プログレス バー コントロールのスタイルを指定します。 Windows SDK の[「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」で説明されているウィンドウ スタイルの任意の組み合わせを適用します。
+*dwStyle*<br/>
+プログレスバーコントロールのスタイルを指定します。 Windows SDK の [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) で説明されているウィンドウスタイルの任意の組み合わせを適用します。
 
-*Rect*<br/>
-作成するウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
+*rect*<br/>
+*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -205,11 +205,11 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-[`CreateEx`[作成]](#create)の代わりに、Windows 拡張スタイルの序文で指定された拡張 Windows スタイル**を適用WS_EX_。**
+`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
-## <a name="cprogressctrlgetbarcolor"></a><a name="getbarcolor"></a>をクリックします。
+## <a name="cprogressctrlgetbarcolor"></a><a name="getbarcolor"></a> CProgressCtrl:: GetBarColor
 
-現在のプログレス バー コントロールの進行状況インジケーター バーの色を取得します。
+現在の進行状況バーコントロールのプログレスインジケーターバーの色を取得します。
 
 ```
 COLORREF GetBarColor() const;
@@ -217,15 +217,15 @@ COLORREF GetBarColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-[COLORREF](/windows/win32/gdi/colorref)値として表される現在のプログレス バーの色、または進行状況インジケータ バーの色が既定の色の場合はCLR_DEFAULT。
+[COLORREF](/windows/win32/gdi/colorref)値として表される現在の進行状況バーの色。プログレスインジケーターバーの色が既定の色の場合は CLR_DEFAULT。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK に記載されている[PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor) メッセージを送信します。
 
-## <a name="cprogressctrlgetbkcolor"></a><a name="getbkcolor"></a>をクリックします。
+## <a name="cprogressctrlgetbkcolor"></a><a name="getbkcolor"></a> CProgressCtrl:: GetBkColor
 
-現在のプログレス バーの背景色を取得します。
+現在の進行状況バーの背景色を取得します。
 
 ```
 COLORREF GetBkColor() const;
@@ -233,15 +233,15 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-COLORREF 値として表される、現在のプログレ[COLORREF](/windows/win32/gdi/colorref)ス バーの背景色。
+現在の進行状況バーの背景色 ( [COLORREF](/windows/win32/gdi/colorref) 値として表されます)。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor) メッセージを送信します。
 
-## <a name="cprogressctrlgetpos"></a><a name="getpos"></a>をクリックします。
+## <a name="cprogressctrlgetpos"></a><a name="getpos"></a> CProgressCtrl:: GetPos
 
-プログレス バーの現在の位置を取得します。
+プログレスバーの現在位置を取得します。
 
 ```
 int GetPos();
@@ -249,19 +249,19 @@ int GetPos();
 
 ### <a name="return-value"></a>戻り値
 
-プログレス バー コントロールの位置。
+プログレスバーコントロールの位置。
 
 ### <a name="remarks"></a>解説
 
-進行状況バー コントロールの位置は、画面上の物理的な位置ではなく[、SetRange](#setrange)で示された上下の範囲の間にあります。
+プログレスバーコントロールの位置は、画面上の物理的な位置ではなく、 [SetRange](#setrange)に示されている上限と下限の間にあります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]
 
-## <a name="cprogressctrlgetrange"></a><a name="getrange"></a>をクリックします。
+## <a name="cprogressctrlgetrange"></a><a name="getrange"></a> CProgressCtrl:: GetRange
 
-プログレス バー コントロールの現在の下限と上限 、または範囲を取得します。
+プログレスバーコントロールの現在の下限、上限、または範囲を取得します。
 
 ```cpp
 void GetRange(
@@ -271,23 +271,23 @@ void GetRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*nローワー*<br/>
-プログレス バー コントロールの下限を受け取る整数への参照。
+*nLower*<br/>
+プログレスバーコントロールの下限を受け取る整数への参照。
 
-*nアッパー*<br/>
-進行状況バー コントロールの上限を受け取る整数への参照。
+*nUpper*<br/>
+プログレスバーコントロールの上限を受け取る整数への参照。
 
 ### <a name="remarks"></a>解説
 
-この関数は、下限と上限の値を*nLower*および*nUpper*で参照される整数にそれぞれコピーします。
+この関数は、上限と上限の値をそれぞれ *Nlower* と *nlower*によって参照される整数にコピーします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-## <a name="cprogressctrlgetstate"></a><a name="getstate"></a>状態を取得します。
+## <a name="cprogressctrlgetstate"></a><a name="getstate"></a> CProgressCtrl:: GetState
 
-現在のプログレス バー コントロールの状態を取得します。
+現在の進行状況バーコントロールの状態を取得します。
 
 ```
 int GetState() const;
@@ -295,17 +295,17 @@ int GetState() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の進行状況バー コントロールの状態は、次のいずれかの値です。
+現在の進行状況バーコントロールの状態。次の値のいずれかになります。
 
 |値|State|
 |-----------|-----------|
 |PBST_NORMAL|進行中|
-|PBST_ERROR|Error|
+|PBST_ERROR|エラー|
 |PBST_PAUSED|一時停止|
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK に記載されている[PBM_GETSTATE](/windows/win32/Controls/pbm-getstate)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_GETSTATE](/windows/win32/Controls/pbm-getstate) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -315,13 +315,13 @@ int GetState() const;
 
 ### <a name="example"></a>例
 
-現在のプログレス バー コントロールの状態を取得するコード例を次に示します。
+次のコード例では、現在の進行状況バーコントロールの状態を取得します。
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]
 
-## <a name="cprogressctrlgetstep"></a><a name="getstep"></a>をクリックします。
+## <a name="cprogressctrlgetstep"></a><a name="getstep"></a> CProgressCtrl:: GetStep
 
-現在のプログレス バー コントロールの進行状況バーのステップインクリメントを取得します。
+現在の進行状況バーコントロールのプログレスバーの増分値を取得します。
 
 ```
 int GetStep() const;
@@ -329,13 +329,13 @@ int GetStep() const;
 
 ### <a name="return-value"></a>戻り値
 
-プログレス バーのステップインクリメント。
+プログレスバーのステップインクリメント。
 
 ### <a name="remarks"></a>解説
 
-ステップ増分は[、CProgressCtrl::Step の](#stepit)呼び出しによって、進行状況バーの現在位置が増加する量です。
+ステップインクリメントは、 [CProgressCtrl:: StepIt](#stepit) を呼び出すことによって進行状況バーの現在位置を増やす量です。
 
-このメソッドは、Windows SDK に記載されている[PBM_GETSTEP](/windows/win32/Controls/pbm-getstep)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_GETSTEP](/windows/win32/Controls/pbm-getstep) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -345,13 +345,13 @@ int GetStep() const;
 
 ### <a name="example"></a>例
 
-現在のプログレス バー コントロールのステップ インクリメントを取得するコード例を次に示します。
+次のコード例では、現在の進行状況バーコントロールのステップインクリメントを取得します。
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]
 
-## <a name="cprogressctrloffsetpos"></a><a name="offsetpos"></a>をクリックします。
+## <a name="cprogressctrloffsetpos"></a><a name="offsetpos"></a> CProgressCtrl:: OffsetPos
 
-進行状況バー コントロールの現在位置を*nPos*で指定された増分値だけ進め、新しい位置を反映するようにバーを再描画します。
+プログレスバーコントロールの現在位置を *nPos* で指定された増分に進め、新しい位置を反映するようにバーを再描画します。
 
 ```
 int OffsetPos(int nPos);
@@ -359,20 +359,20 @@ int OffsetPos(int nPos);
 
 ### <a name="parameters"></a>パラメーター
 
-*Npo*<br/>
-職位を進める金額です。
+*nPos*<br/>
+位置を進める量。
 
 ### <a name="return-value"></a>戻り値
 
-プログレス バー コントロールの前の位置。
+プログレスバーコントロールの前の位置。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]
 
-## <a name="cprogressctrlsetbarcolor"></a><a name="setbarcolor"></a>をクリックします。
+## <a name="cprogressctrlsetbarcolor"></a><a name="setbarcolor"></a> CProgressCtrl:: SetBarColor
 
-現在のプログレス バー コントロールの進行状況インジケーター バーの色を設定します。
+現在の進行状況バーコントロールのプログレスインジケーターバーの色を設定します。
 
 ```
 COLORREF SetBarColor(COLORREF clrBar);
@@ -380,19 +380,18 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*clrBar*|[in]進行状況インジケーター バーの新しい色を指定する[COLORREF](/windows/win32/gdi/colorref)値。 プログレス バーが既定の色を使用するようにするには、CLR_DEFAULTを指定します。|
+*clrBar*\
+からプログレスインジケーターバーの新しい色を指定する [COLORREF](/windows/win32/gdi/colorref) 値。 CLR_DEFAULT を指定すると、進行状況バーで既定の色が使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-進行状況インジケーター バーの前の色は[、COLORREF](/windows/win32/gdi/colorref)値として表され、または進行状況インジケーター バーの色が既定の色の場合はCLR_DEFAULT。
+[COLORREF](/windows/win32/gdi/colorref)値として表された、進行状況インジケーターバーの前の色。進行状況インジケーターバーの色が既定の色の場合は CLR_DEFAULT。
 
 ### <a name="remarks"></a>解説
 
-この`SetBarColor`メソッドは、Windows Vista[のテーマ](/windows/win32/Controls/visual-styles-overview)が有効でない場合にのみ、プログレス バーの色を設定します。
+メソッドは、 `SetBarColor` Windows Vista [テーマ](/windows/win32/Controls/visual-styles-overview) が有効でない場合にのみ、進行状況バーの色を設定します。
 
-このメソッドは、Windows SDK に記載されている[PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -402,13 +401,13 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="example"></a>例
 
-次のコード例では、プログレス バーの色を赤、緑、青、または既定に変更します。
+次のコード例では、進行状況バーの色を赤、緑、青、または既定値に変更します。
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]
 
-## <a name="cprogressctrlsetbkcolor"></a><a name="setbkcolor"></a>をクリックします。
+## <a name="cprogressctrlsetbkcolor"></a><a name="setbkcolor"></a> CProgressCtrl:: SetBkColor
 
-プログレス バーの背景色を設定します。
+プログレスバーの背景色を設定します。
 
 ```
 COLORREF SetBkColor(COLORREF clrNew);
@@ -417,19 +416,19 @@ COLORREF SetBkColor(COLORREF clrNew);
 ### <a name="parameters"></a>パラメーター
 
 *clrNew*<br/>
-新しい背景色を指定する COLORREF 値。 プログレス バーの既定の背景色を使用するCLR_DEFAULT値を指定します。
+新しい背景色を指定する COLORREF 値。 CLR_DEFAULT の値を指定して、進行状況バーの既定の背景色を使用します。
 
 ### <a name="return-value"></a>戻り値
 
-背景色を示す[COLORREF](/windows/win32/gdi/colorref)値、または背景色が既定の色である場合はCLR_DEFAULT。
+前の背景色を示す [COLORREF](/windows/win32/gdi/colorref) 値。背景色が既定の色の場合は CLR_DEFAULT。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]
 
-## <a name="cprogressctrlsetmarquee"></a><a name="setmarquee"></a>コグレスCtrl::セットマーキー
+## <a name="cprogressctrlsetmarquee"></a><a name="setmarquee"></a> CProgressCtrl:: SetMarquee
 
-現在のプログレス バー コントロールのマーキー モードをオンまたはオフにします。
+現在の進行状況バーコントロールに対してマーキーモードをオンまたはオフにします。
 
 ```
 BOOL SetMarquee(
@@ -439,10 +438,11 @@ BOOL SetMarquee(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*マーキーモード*|[in]マーキーモードをオンにするにはTRUE、マーキーモードをオフにするにはFALSE。|
-|*n間隔*|[in]マーキー アニメーションの更新間隔 (ミリ秒単位)。|
+*fMarqueeMode*\
+からマーキーモードをオンにする場合は TRUE、マーキーモードをオフにする場合は FALSE。
+
+*N 期間*\
+からマーキーアニメーションの更新間の時間 (ミリ秒)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -450,9 +450,9 @@ BOOL SetMarquee(
 
 ### <a name="remarks"></a>解説
 
-マーキーモードがオンになっている場合、プログレスバーはアニメーション化され、劇場のマーキーの看板のようにスクロールします。
+[マーキーモード] をオンにすると、進行状況バーがアニメーション化され、シアターマーキーでのサインオンのようにスクロールします。
 
-このメソッドは、Windows SDK に記載されている[PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -462,13 +462,13 @@ BOOL SetMarquee(
 
 ### <a name="example"></a>例
 
-マーキー スクロール アニメーションを開始および停止するコード例を次に示します。
+次のコード例では、マーキースクロールアニメーションを開始および停止します。
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]
 
-## <a name="cprogressctrlsetpos"></a><a name="setpos"></a>をクリックします。
+## <a name="cprogressctrlsetpos"></a><a name="setpos"></a> CProgressCtrl:: SetPos
 
-*nPos*で指定された進行状況バー コントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。
+*NPos*によって指定された進行状況バーコントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。
 
 ```
 int SetPos(int nPos);
@@ -476,24 +476,24 @@ int SetPos(int nPos);
 
 ### <a name="parameters"></a>パラメーター
 
-*Npo*<br/>
-プログレス バー コントロールの新しい位置。
+*nPos*<br/>
+プログレスバーコントロールの新しい位置。
 
 ### <a name="return-value"></a>戻り値
 
-プログレス バー コントロールの前の位置。
+プログレスバーコントロールの前の位置。
 
 ### <a name="remarks"></a>解説
 
-進行状況バー コントロールの位置は、画面上の物理的な位置ではなく[、SetRange](#setrange)で示された上下の範囲の間にあります。
+プログレスバーコントロールの位置は、画面上の物理的な位置ではなく、 [SetRange](#setrange)に示されている上限と下限の間にあります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]
 
-## <a name="cprogressctrlsetrange"></a><a name="setrange"></a>をクリックします。
+## <a name="cprogressctrlsetrange"></a><a name="setrange"></a> CProgressCtrl:: SetRange
 
-プログレス バー コントロールの範囲の上限と下限を設定し、新しい範囲を反映するようにバーを再描画します。
+プログレスバーコントロールの範囲の上限と下限を設定し、新しい範囲を反映するようにバーを再描画します。
 
 ```cpp
 void SetRange(
@@ -507,21 +507,21 @@ void SetRange32(
 
 ### <a name="parameters"></a>パラメーター
 
-*nローワー*<br/>
-範囲の下限を指定します (デフォルトは 0)。
+*nLower*<br/>
+範囲の下限を指定します (既定値は 0)。
 
-*nアッパー*<br/>
-範囲の上限を指定します (デフォルトは 100)。
+*nUpper*<br/>
+範囲の上限を指定します (既定値は 100)。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数`SetRange32`は、進行状況コントロールの 32 ビット範囲を設定します。
+このメンバー関数は、 `SetRange32` プログレスコントロールの32ビット範囲を設定します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]
 
-## <a name="cprogressctrlsetstate"></a><a name="setstate"></a>状態を設定します。
+## <a name="cprogressctrlsetstate"></a><a name="setstate"></a> CProgressCtrl:: SetState
 
 現在の進行状況バー コントロールの状態を設定します。
 
@@ -531,9 +531,12 @@ int SetState(int iState);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*iState*|[in]進行状況バーを設定する状態。 次のいずれかの値を使用します。<br /><br /> - PBST_NORMAL - 進行中<br />- PBST_ERROR - エラー<br />- PBST_PAUSED - 一時停止|
+*iState*\
+からプログレスバーを設定する状態。 次のいずれかの値を使用します。
+
+- `PBST_NORMAL` -進行中
+- `PBST_ERROR` -エラー
+- `PBST_PAUSED` -一時停止
 
 ### <a name="return-value"></a>戻り値
 
@@ -541,7 +544,7 @@ int SetState(int iState);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PBM_SETSTATE](/windows/win32/Controls/pbm-setstate)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている [PBM_SETSTATE](/windows/win32/Controls/pbm-setstate) メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -555,9 +558,9 @@ int SetState(int iState);
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]
 
-## <a name="cprogressctrlsetstep"></a><a name="setstep"></a>をクリックします。
+## <a name="cprogressctrlsetstep"></a><a name="setstep"></a> CProgressCtrl:: SetStep
 
-プログレス バー コントロールのステップインクリメントを指定します。
+プログレスバーコントロールのステップインクリメントを指定します。
 
 ```
 int SetStep(int nStep);
@@ -565,26 +568,26 @@ int SetStep(int nStep);
 
 ### <a name="parameters"></a>パラメーター
 
-*nステップ*<br/>
-新しいステップ増分。
+*nStep*<br/>
+新しいステップインクリメント。
 
 ### <a name="return-value"></a>戻り値
 
-前のステップ増分。
+前のステップのインクリメント。
 
 ### <a name="remarks"></a>解説
 
-ステップ増分は、プログレスバーの現在位置`CProgressCtrl::StepIt`を増やす呼び出しの量です。
+ステップインクリメントは、の呼び出しによって `CProgressCtrl::StepIt` 進行状況バーの現在位置を増やす量です。
 
-デフォルトのステップ増分は 10 です。
+既定のステップインクリメントは10です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]
 
-## <a name="cprogressctrlstepit"></a><a name="stepit"></a>をクリックします。
+## <a name="cprogressctrlstepit"></a><a name="stepit"></a> CProgressCtrl:: StepIt
 
-進捗バー コントロールの現在位置をステップ増分で進め、新しい位置を反映するようにバーを再描画します。
+プログレスバーコントロールの現在位置をステップごとに進め、新しい位置を反映するようにバーを再描画します。
 
 ```
 int StepIt();
@@ -592,11 +595,11 @@ int StepIt();
 
 ### <a name="return-value"></a>戻り値
 
-プログレス バー コントロールの前の位置。
+プログレスバーコントロールの前の位置。
 
 ### <a name="remarks"></a>解説
 
-ステップの増分は、メンバー関数`CProgressCtrl::SetStep`によって設定されます。
+ステップインクリメントは、メンバー関数によって設定され `CProgressCtrl::SetStep` ます。
 
 ### <a name="example"></a>例
 
@@ -604,6 +607,6 @@ int StepIt();
 
 ## <a name="see-also"></a>関連項目
 
-[サンプル CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[階層図](../../mfc/hierarchy-chart.md)

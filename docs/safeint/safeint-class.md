@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219353"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560962"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
 整数オーバーフローを防ぐことができるように整数のプリミティブを拡張し、さまざまな種類の整数を比較してみましょう。
 
 > [!NOTE]
-> SafeInt ライブラリの最新バージョンは、にあり [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) ます。 SafeInt ライブラリを使用するには、リポジトリを複製し、`#include "SafeInt.hpp"`
+> SafeInt ライブラリの最新バージョンは、にあり [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) ます。 SafeInt ライブラリを使用するには、リポジトリを複製し、 `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>構文
 
@@ -33,17 +33,23 @@ class SafeInt;
 
 ### <a name="parameters"></a>パラメーター
 
-| Template  |  説明 |
-|--------|------------|
-| T         |  `SafeInt` で置き換えられる整数またはブール値パラメーターの型。 |
-| E         |  エラー処理ポリシーを定義する列挙データ型。 |
-| U         |  第 2 オペランドの整数またはブール値パラメーターの型。 |
+*`T`*\
+`SafeInt` で置き換えられる整数またはブール値パラメーターの型。
 
-| パラメーター  |  [説明] |
-|---------|-----------------|
-| *rhs*      |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *i*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *列*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+*`E`*\
+エラー処理ポリシーを定義する列挙データ型。
+
+*`U`*\
+第 2 オペランドの整数またはブール値パラメーターの型。
+
+*rhs*\
+[in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。
+
+*私*\
+[in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。
+
+*列*\
+[in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。
 
 ## <a name="members"></a>メンバー
 
@@ -174,7 +180,7 @@ class SafeInt;
 
 `SafeInt` と整数型との比較演算は、いずれの方向でも実行できます。 たとえば、`SafeInt<int>(x) < y` と `y> SafeInt<int>(x)` はどちらも有効であり、同じ結果が返されます。
 
-多くの二項演算子は、2つの異なる型の使用をサポートしていません `SafeInt` 。 その一例は `&` 演算子です。 `SafeInt<T, E> & int`はサポートされますが、はサポートされていません `SafeInt<T, E> & SafeInt<U, E>` 。 後者の例では、コンパイラはどの型のパラメーターを返すべきかを認識していません。 この問題の解決策の 1 つは、2 つ目のパラメーターを基本データ型にキャストすることです。 同じパラメーターを使用して、`SafeInt<T, E> & (U)SafeInt<U, E>` でこれを実行できます。
+多くの二項演算子は、2つの異なる型の使用をサポートしていません `SafeInt` 。 その一例は `&` 演算子です。 `SafeInt<T, E> & int` はサポートされますが、はサポートされていません `SafeInt<T, E> & SafeInt<U, E>` 。 後者の例では、コンパイラはどの型のパラメーターを返すべきかを認識していません。 この問題の解決策の 1 つは、2 つ目のパラメーターを基本データ型にキャストすることです。 同じパラメーターを使用して、`SafeInt<T, E> & (U)SafeInt<U, E>` でこれを実行できます。
 
 > [!NOTE]
 > どのようなビットごとの演算でも、2 つの異なるパラメーターのサイズを同じにする必要があります。 サイズが異なると、コンパイラからは [ASSERT](../mfc/reference/diagnostic-services.md#assert) 例外がスローされます。 この操作の結果は、正確であるとは限りません。 この問題を解決するには、より大きなパラメーターと同じサイズになるまで、小さい方のパラメーターをキャストします。
@@ -248,7 +254,7 @@ int main()
 
 **名前空間:** なし
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt:: SafeInt
 
 `SafeInt` オブジェクトを構築します。
 
@@ -277,11 +283,11 @@ SafeInt (const U& i)
 `u`<br/>
 [in] 型 U の `SafeInt`。新しい `SafeInt` オブジェクトは、*u* と同じ値になりますが、型は T になります。
 
-`U`に格納されているデータの型 `SafeInt` 。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしで、8 ~ 64 ビットの範囲で指定できます。
+`U` に格納されているデータの型 `SafeInt` 。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしで、8 ~ 64 ビットの範囲で指定できます。
 
 ### <a name="remarks"></a>解説
 
-コンストラクターの入力パラメーター *i* または *u* は、ブール型、文字型、または整数型にする必要があります。 別の型のパラメーターの場合、 `SafeInt` クラスは[static_assert](../cpp/static-assert.md)を呼び出して、無効な入力パラメーターを示します。
+コンストラクターの入力パラメーター *i* または *u* は、ブール型、文字型、または整数型にする必要があります。 別の型のパラメーターの場合、 `SafeInt` クラスは [static_assert](../cpp/static-assert.md) を呼び出して、無効な入力パラメーターを示します。
 
 テンプレート型 `U` を使用するコンストラクターでは、入力パラメーターが `T` に指定された型に自動的に変換されます。 `SafeInt` クラスでは、データの損失なしでデータが変換されます。 データ `E` を失わずにデータを型に変換できない場合、エラーハンドラーに報告し `T` ます。
 

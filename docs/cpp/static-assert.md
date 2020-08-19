@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213217"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560635"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,20 +26,21 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*定数式*|ブール型に変換できる整数定数式。<br /><br /> 評価された式が 0 (false) の場合は、*文字列リテラル*パラメーターが表示され、コンパイルはエラーで失敗します。 式が0以外 (true) の場合、 **`static_assert`** 宣言は無効です。|
-|*string-literal*|*定数式*のパラメーターが0の場合に表示されるメッセージ。 メッセージは、コンパイラの[基本文字セット](../c-language/ascii-character-set.md)内の文字の文字列です。つまり、[マルチバイト文字またはワイド文字](../c-language/multibyte-and-wide-characters.md)ではありません。|
+*定数式*\
+ブール型に変換できる整数定数式。 評価された式が 0 (false) の場合は、 *文字列リテラル* パラメーターが表示され、コンパイルはエラーで失敗します。 式が0以外 (true) の場合、 **`static_assert`** 宣言は無効です。
+
+*文字列-リテラル*\
+*定数式*のパラメーターが0の場合に表示されるメッセージ。 メッセージは、コンパイラの [基本文字セット](../c-language/ascii-character-set.md) 内の文字の文字列です。つまり、 [マルチバイト文字またはワイド文字](../c-language/multibyte-and-wide-characters.md)ではありません。
 
 ## <a name="remarks"></a>解説
 
-宣言の*定数式*のパラメーターは、 **`static_assert`** ソフトウェアの*アサーション*を表します。 ソフトウェアのアサーションは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true の場合、 **`static_assert`** 宣言は無効です。 条件が false の場合、アサーションは失敗し、コンパイラは*文字列リテラル*パラメーターにメッセージを表示し、コンパイルはエラーで失敗します。 Visual Studio 2017 以降では、文字列リテラルパラメーターは省略可能です。
+宣言の *定数式* のパラメーターは、 **`static_assert`** ソフトウェアの *アサーション*を表します。 ソフトウェアのアサーションは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true の場合、 **`static_assert`** 宣言は無効です。 条件が false の場合、アサーションは失敗し、コンパイラは *文字列リテラル* パラメーターにメッセージを表示し、コンパイルはエラーで失敗します。 Visual Studio 2017 以降では、文字列リテラルパラメーターは省略可能です。
 
-この **`static_assert`** 宣言は、コンパイル時にソフトウェアのアサーションをテストします。 これに対し、 [Assert マクロおよび _assert および _wassert 関数](../c-runtime-library/reference/assert-macro-assert-wassert.md)は、実行時にソフトウェアアサーションをテストし、領域または時間で実行時のコストを発生させることになります。 宣言は、テンプレート **`static_assert`** 引数を*定数式*のパラメーターに含めることができるため、テンプレートのデバッグに特に便利です。
+この **`static_assert`** 宣言は、コンパイル時にソフトウェアのアサーションをテストします。 これに対し、 [Assert マクロおよび _assert および _wassert 関数](../c-runtime-library/reference/assert-macro-assert-wassert.md) は、実行時にソフトウェアアサーションをテストし、領域または時間で実行時のコストを発生させることになります。 宣言は、テンプレート **`static_assert`** 引数を *定数式* のパラメーターに含めることができるため、テンプレートのデバッグに特に便利です。
 
-**`static_assert`** 宣言が検出されると、コンパイラは構文エラーの宣言を調べます。 コンパイラは、テンプレートパラメーターに依存していない場合、*定数式*パラメーターを直ちに評価します。 それ以外の場合、コンパイラは、テンプレートがインスタンス化されるときに*定数式*パラメーターを評価します。 その結果、コンパイラは、宣言を検出したときに一度、テンプレートがインスタンス化されたときに再度、診断メッセージを発行することがあります。
+**`static_assert`** 宣言が検出されると、コンパイラは構文エラーの宣言を調べます。 コンパイラは、テンプレートパラメーターに依存していない場合、 *定数式* パラメーターを直ちに評価します。 それ以外の場合、コンパイラは、テンプレートがインスタンス化されるときに *定数式* パラメーターを評価します。 その結果、コンパイラは、宣言を検出したときに一度、テンプレートがインスタンス化されたときに再度、診断メッセージを発行することがあります。
 
 キーワードは、 **`static_assert`** 名前空間、クラス、またはブロックスコープで使用できます。 (キーワードは、 **`static_assert`** プログラムに新しい名前が導入されていない場合でも、名前空間のスコープで使用できるため、技術的には宣言です)。
 
@@ -55,7 +56,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 ## <a name="description"></a>説明
 
-次の例では、 **`static_assert`** 宣言にクラススコープが含まれています。 は、 **`static_assert`** テンプレートパラメーターが*plain old data* (ポッド) 型であることを確認します。 コンパイラは宣言 **`static_assert`** されているときに宣言を調べますが、 *constant-expression* `basic_string` クラステンプレートがでインスタンス化されるまで、定数式のパラメーターは評価されません `main()` 。
+次の例では、 **`static_assert`** 宣言にクラススコープが含まれています。 は、 **`static_assert`** テンプレートパラメーターが *plain old data* (ポッド) 型であることを確認します。 コンパイラは宣言 **`static_assert`** されているときに宣言を調べますが、 *constant-expression* `basic_string` クラステンプレートがでインスタンス化されるまで、定数式のパラメーターは評価されません `main()` 。
 
 ## <a name="example"></a>例
 

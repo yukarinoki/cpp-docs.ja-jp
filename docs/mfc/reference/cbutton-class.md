@@ -321,7 +321,7 @@ int GetCheck() const;
 
 BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON、または BS_3STATE スタイルを使用して作成されたボタンコントロールからの戻り値は、次のいずれかの値になります。
 
-|値|説明|
+|値|意味|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態がオフになっています。|
 |BST_CHECKED|ボタンの状態がチェックされます。|
@@ -698,7 +698,7 @@ void SetCheck(int nCheck);
 *n*<br/>
 チェックの状態を指定します。 このパラメーターには、次のいずれかを指定できます。
 
-|値|説明|
+|値|意味|
 |-----------|-------------|
 |BST_UNCHECKED|ボタンの状態を [オフ] に設定します。|
 |BST_CHECKED|ボタンの状態を [オン] に設定します。|

@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: a2f9f22b2dc215aed1fabf11344a59081e4269cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83b2b1a97972fa63f7cf7d2b9a6a48b49dbeda8d
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217351"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562520"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset クラス
 
@@ -157,12 +157,17 @@ class unordered_multiset;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*[キー]*|キーの型。|
-|*ハッシュ*|ハッシュ関数のオブジェクト型。|
-|*Pred*|等価比較関数のオブジェクト型。|
-|*割り当て*|アロケーター クラス。|
+*レジストリ*\
+キーの型。
+
+*ハッシュ*\
+ハッシュ関数のオブジェクト型。
+
+*Pred*\
+等価比較関数のオブジェクト型。
+
+*割り当て*\
+アロケーター クラス。
 
 ## <a name="members"></a>メンバー
 
@@ -187,7 +192,7 @@ class unordered_multiset;
 |メンバー関数|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
-|[bucket](#bucket)|キー値のバケット番号を取得します。|
+|[つぶし](#bucket)|キー値のバケット番号を取得します。|
 |[bucket_count](#bucket_count)|バケット数を取得します。|
 |[bucket_size](#bucket_size)|バケットのサイズを取得します。|
 |[cbegin](#cbegin)|被制御シーケンスの先頭を指定します。|
@@ -220,7 +225,7 @@ class unordered_multiset;
 
 ## <a name="remarks"></a>解説
 
-このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_multiset::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_multiset::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_multiset:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_multiset:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート[Unordered_set クラス](../standard-library/unordered-set-class.md)とは異なり、型のオブジェクトで `unordered_multiset` `key_eq()(X, Y)` は、被制御シーケンスの任意の2つの要素に対してが常に false になるとは限りません。 つまり、キーの重複が許されることになります。
+このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_multiset::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_multiset::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_multiset:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_multiset:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート [Unordered_set クラス](../standard-library/unordered-set-class.md)とは異なり、型のオブジェクトで `unordered_multiset` `key_eq()(X, Y)` は、被制御シーケンスの任意の2つの要素に対してが常に false になるとは限りません。 つまり、キーの重複が許されることになります。
 
 このオブジェクトには、さらに、適切とされるバケットあたりの最大平均要素数を指定する最大テーブル占有率が格納されます。 要素を挿入することによって[unordered_multiset:: load_factor](#load_factor)が `()` 最大占有率を超える場合、コンテナーはバケット数を増やし、必要に応じてハッシュテーブルを再構築します。
 
@@ -234,7 +239,7 @@ class unordered_multiset;
 
 **名前空間:** std
 
-## <a name="unordered_multisetallocator_type"></a><a name="allocator_type"></a>unordered_multiset:: allocator_type
+## <a name="unordered_multisetallocator_type"></a><a name="allocator_type"></a> unordered_multiset:: allocator_type
 
 ストレージを管理するためのアロケーターの型です。
 
@@ -272,7 +277,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multisetbegin"></a><a name="begin"></a>unordered_multiset:: begin
+## <a name="unordered_multisetbegin"></a><a name="begin"></a> unordered_multiset:: begin
 
 被制御シーケンスまたはバケットの先頭を指定します。
 
@@ -288,13 +293,12 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
-|-|-|
-|*nbucket*|バケット番号。|
+*nbucket*\
+バケット番号。
 
 ### <a name="remarks"></a>解説
 
-最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
+最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket* の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -340,7 +344,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetbucket"></a><a name="bucket"></a>unordered_multiset:: バケット
+## <a name="unordered_multisetbucket"></a><a name="bucket"></a> unordered_multiset:: バケット
 
 キー値のバケット番号を取得します。
 
@@ -396,7 +400,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multisetbucket_count"></a><a name="bucket_count"></a>unordered_multiset:: bucket_count
+## <a name="unordered_multisetbucket_count"></a><a name="bucket_count"></a> unordered_multiset:: bucket_count
 
 バケット数を取得します。
 
@@ -481,7 +485,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetbucket_size"></a><a name="bucket_size"></a>unordered_multiset:: bucket_size
+## <a name="unordered_multisetbucket_size"></a><a name="bucket_size"></a> unordered_multiset:: bucket_size
 
 バケットのサイズを取得します。
 
@@ -496,7 +500,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、バケット数*nbucket*のサイズを返します。
+このメンバー関数は、バケット数 *nbucket*のサイズを返します。
 
 ### <a name="example"></a>例
 
@@ -537,7 +541,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multisetcbegin"></a><a name="cbegin"></a>unordered_multiset:: cbegin
+## <a name="unordered_multisetcbegin"></a><a name="cbegin"></a> unordered_multiset:: cbegin
 
 **`const`** 範囲内の最初の要素を指す反復子を返します。
 
@@ -563,7 +567,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="unordered_multisetcend"></a><a name="cend"></a>unordered_multiset:: cend
+## <a name="unordered_multisetcend"></a><a name="cend"></a> unordered_multiset:: cend
 
 **`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
 
@@ -591,7 +595,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="unordered_multisetclear"></a><a name="clear"></a>unordered_multiset:: clear
+## <a name="unordered_multisetclear"></a><a name="clear"></a> unordered_multiset:: clear
 
 すべての要素を削除します。
 
@@ -658,7 +662,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetconst_iterator"></a><a name="const_iterator"></a>unordered_multiset:: const_iterator
+## <a name="unordered_multisetconst_iterator"></a><a name="const_iterator"></a> unordered_multiset:: const_iterator
 
 被制御シーケンスの定数反復子の型です。
 
@@ -701,7 +705,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_multiset:: const_local_iterator
+## <a name="unordered_multisetconst_local_iterator"></a><a name="const_local_iterator"></a> unordered_multiset:: const_local_iterator
 
 被制御シーケンスの定数バケット反復子の型です。
 
@@ -749,7 +753,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetconst_pointer"></a><a name="const_pointer"></a>unordered_multiset:: const_pointer
+## <a name="unordered_multisetconst_pointer"></a><a name="const_pointer"></a> unordered_multiset:: const_pointer
 
 要素への定数ポインターの型です。
 
@@ -795,7 +799,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetconst_reference"></a><a name="const_reference"></a>unordered_multiset:: const_reference
+## <a name="unordered_multisetconst_reference"></a><a name="const_reference"></a> unordered_multiset:: const_reference
 
 要素への定数参照の型です。
 
@@ -841,7 +845,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetcount"></a><a name="count"></a>unordered_multiset:: count
+## <a name="unordered_multisetcount"></a><a name="count"></a> unordered_multiset:: count
 
 指定したキーに一致する要素の数を検索します。
 
@@ -896,7 +900,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="unordered_multisetdifference_type"></a><a name="difference_type"></a>unordered_multiset::d ifference_type
+## <a name="unordered_multisetdifference_type"></a><a name="difference_type"></a> unordered_multiset::d ifference_type
 
 2 つの要素間の距離を表す、符号付きの型です。
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="unordered_multisetemplace"></a><a name="emplace"></a>unordered_multiset:: emplace
+## <a name="unordered_multisetemplace"></a><a name="emplace"></a> unordered_multiset:: emplace
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を挿入します。
 
@@ -966,9 +970,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*args*|unordered_multiset に挿入される要素を構築するために転送される引数。|
+*value*\
+unordered_multiset に挿入される要素を構築するために転送される引数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -982,7 +985,7 @@ iterator emplace(Args&&... args);
 
 コード例については、「[multiset::emplace](../standard-library/multiset-class.md#emplace)」を参照してください。
 
-## <a name="unordered_multisetemplace_hint"></a><a name="emplace_hint"></a>unordered_multiset:: emplace_hint
+## <a name="unordered_multisetemplace_hint"></a><a name="emplace_hint"></a> unordered_multiset:: emplace_hint
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を、配置ヒントと一緒に挿入します。
 
@@ -995,10 +998,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*args*|unordered_multiset に挿入される要素を構築するために転送される引数。|
-|*where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
+*value*\
+unordered_multiset に挿入される要素を構築するために転送される引数。
+
+*どこ*\
+正しい挿入ポイントの検索を開始する場所に関するヒント。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1012,7 +1016,7 @@ iterator emplace_hint(
 
 コード例については、「[set::emplace_hint](../standard-library/set-class.md#emplace_hint)」をご覧ください。
 
-## <a name="unordered_multisetempty"></a><a name="empty"></a>unordered_multiset:: empty
+## <a name="unordered_multisetempty"></a><a name="empty"></a> unordered_multiset:: empty
 
 要素が存在しないかどうかをテストします。
 
@@ -1079,7 +1083,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetend"></a><a name="end"></a>unordered_multiset:: end
+## <a name="unordered_multisetend"></a><a name="end"></a> unordered_multiset:: end
 
 被制御シーケンスの末尾を指定します。
 
@@ -1097,7 +1101,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="remarks"></a>解説
 
-最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の末尾の次の位置を示す前方反復子を返します。
+最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket*の末尾の次の位置を示す前方反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -1145,7 +1149,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetequal_range"></a><a name="equal_range"></a>unordered_multiset:: equal_range
+## <a name="unordered_multisetequal_range"></a><a name="equal_range"></a> unordered_multiset:: equal_range
 
 指定したキーに一致する範囲を検索します。
 
@@ -1214,7 +1218,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="unordered_multiseterase"></a><a name="erase"></a>unordered_multiset:: erase
+## <a name="unordered_multiseterase"></a><a name="erase"></a> unordered_multiset:: erase
 
 unordered_multiset 内の要素または要素範囲を指定した位置から削除するか、指定したキーと一致する要素を削除します。
 
@@ -1254,7 +1258,7 @@ size_type erase(
 
 コード例については、「[set::erase](../standard-library/set-class.md#erase)」をご覧ください。
 
-## <a name="unordered_multisetfind"></a><a name="find"></a>unordered_multiset:: find
+## <a name="unordered_multisetfind"></a><a name="find"></a> unordered_multiset:: find
 
 指定したキーに一致する要素を検索します。
 
@@ -1314,7 +1318,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="unordered_multisetget_allocator"></a><a name="get_allocator"></a>unordered_multiset:: get_allocator
+## <a name="unordered_multisetget_allocator"></a><a name="get_allocator"></a> unordered_multiset:: get_allocator
 
 格納されているアロケーター オブジェクトを取得します。
 
@@ -1352,7 +1356,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multisethash_function"></a><a name="hash"></a>unordered_multiset:: hash_function
+## <a name="unordered_multisethash_function"></a><a name="hash"></a> unordered_multiset:: hash_function
 
 格納されているハッシュ関数オブジェクトを取得します。
 
@@ -1390,7 +1394,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multisethasher"></a><a name="hasher"></a>unordered_multiset:: hasher
+## <a name="unordered_multisethasher"></a><a name="hasher"></a> unordered_multiset:: hasher
 
 ハッシュ関数の型です。
 
@@ -1428,7 +1432,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multisetinsert"></a><a name="insert"></a>unordered_multiset:: insert
+## <a name="unordered_multisetinsert"></a><a name="insert"></a> unordered_multiset:: insert
 
 unordered_multiset に要素または要素範囲を挿入します。
 
@@ -1468,15 +1472,26 @@ IList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*Val*|unordered_multiset に挿入する要素の値。|
-|*Where*|正しい挿入ポイントの検索を開始する場所 |
-|*ValTy*|Unordered_multiset が[value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。|
-|*First*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
-|*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
-|*IList*|要素のコピー元の[initializer_list](../standard-library/initializer-list.md) 。|
+*Val*\
+unordered_multiset に挿入する要素の値。
+
+*どこ*\
+正しい挿入ポイントの検索を開始する場所 
+
+*ValTy*\
+Unordered_multiset が [value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として *Val* を完全に転送するテンプレートパラメーター。
+
+*まずは*\
+コピーされる最初の要素の位置。
+
+*前の*\
+コピーされる最後の要素の次の位置。
+
+*InputIterator*\
+[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。
+
+*IList*\
+要素のコピー元の [initializer_list](../standard-library/initializer-list.md) 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1492,7 +1507,7 @@ IList);
 
 コンテナーの [value_type](../standard-library/map-class.md#value_type) はそのコンテナーに属する typedef であり、set の場合、`unordered_multiset<V>::value_type` は `const V` 型です。
 
-範囲のメンバー関数 (5) は、範囲内の反復子によってアドレス指定された各要素に対応する unordered_multiset に要素値のシーケンスを挿入します。 `[First, Last)` したがって、 *Last*は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `m.insert(v.begin(), v.end());` は、`v` のすべての要素を `m` に挿入します。
+範囲のメンバー関数 (5) は、範囲内の反復子によってアドレス指定された各要素に対応する unordered_multiset に要素値のシーケンスを挿入します。 `[First, Last)` したがって、 *Last* は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `m.insert(v.begin(), v.end());` は、`v` のすべての要素を `m` に挿入します。
 
 初期化子リストのメンバー関数 (6) は [initializer_list](../standard-library/initializer-list.md) を使用して、unordered_multiset に要素をコピーします。
 
@@ -1500,7 +1515,7 @@ IList);
 
 コード例については、「[multiset::insert](../standard-library/multiset-class.md#insert)」を参照してください。
 
-## <a name="unordered_multisetiterator"></a><a name="iterator"></a>unordered_multiset:: iterator
+## <a name="unordered_multisetiterator"></a><a name="iterator"></a> unordered_multiset:: iterator
 
 unordered_multiset 内の要素を読み取ることができる、定数の[前方反復子](../standard-library/forward-iterator-tag-struct.md)を提供する型。
 
@@ -1512,7 +1527,7 @@ typedef implementation-defined iterator;
 
 **反復子**の宣言方法や使用方法の例については、[begin](../standard-library/multiset-class.md#begin) の例を参照してください。
 
-## <a name="unordered_multisetkey_eq"></a><a name="key_eq"></a>unordered_multiset:: key_eq
+## <a name="unordered_multisetkey_eq"></a><a name="key_eq"></a> unordered_multiset:: key_eq
 
 格納されている比較関数オブジェクトを取得します。
 
@@ -1552,7 +1567,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multisetkey_equal"></a><a name="key_equal"></a>unordered_multiset:: key_equal
+## <a name="unordered_multisetkey_equal"></a><a name="key_equal"></a> unordered_multiset:: key_equal
 
 比較関数の型です。
 
@@ -1592,7 +1607,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multisetkey_type"></a><a name="key_type"></a>unordered_multiset:: key_type
+## <a name="unordered_multisetkey_type"></a><a name="key_type"></a> unordered_multiset:: key_type
 
 順序付けキーの型です。
 
@@ -1646,7 +1661,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="unordered_multisetload_factor"></a><a name="load_factor"></a>unordered_multiset:: load_factor
+## <a name="unordered_multisetload_factor"></a><a name="load_factor"></a> unordered_multiset:: load_factor
 
 バケットごとの平均要素数をカウントします。
 
@@ -1714,7 +1729,7 @@ int main()
 }
 ```
 
-## <a name="unordered_multisetlocal_iterator"></a><a name="local_iterator"></a>unordered_multiset:: local_iterator
+## <a name="unordered_multisetlocal_iterator"></a><a name="local_iterator"></a> unordered_multiset:: local_iterator
 
 バケット反復子の型。
 
@@ -1762,7 +1777,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_multiset:: max_bucket_count
+## <a name="unordered_multisetmax_bucket_count"></a><a name="max_bucket_count"></a> unordered_multiset:: max_bucket_count
 
 最大バケット数を取得します。
 
@@ -1848,7 +1863,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetmax_load_factor"></a><a name="max_load_factor"></a>unordered_multiset:: max_load_factor
+## <a name="unordered_multisetmax_load_factor"></a><a name="max_load_factor"></a> unordered_multiset:: max_load_factor
 
 バケットあたりの最大要素数を取得または設定します。
 
@@ -1865,7 +1880,7 @@ void max_load_factor(float factor);
 
 ### <a name="remarks"></a>解説
 
-1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を*係数*に置き換えます。
+1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数*に置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1941,7 +1956,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetmax_size"></a><a name="max_size"></a>unordered_multiset:: max_size
+## <a name="unordered_multisetmax_size"></a><a name="max_size"></a> unordered_multiset:: max_size
 
 被制御シーケンスの最大サイズを取得します。
 
@@ -1976,7 +1991,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="unordered_multisetoperator"></a><a name="op_eq"></a>unordered_multiset:: operator =
+## <a name="unordered_multisetoperator"></a><a name="op_eq"></a> unordered_multiset:: operator =
 
 ハッシュ テーブルをコピーします。
 
@@ -1988,9 +2003,8 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*そうです*|`unordered_multiset` にコピーする [unordered_multiset](../standard-library/unordered-multiset-class.md)。|
+*そうです*\
+`unordered_multiset` にコピーする [unordered_multiset](../standard-library/unordered-multiset-class.md)。
 
 ### <a name="remarks"></a>解説
 
@@ -2033,7 +2047,7 @@ int main( )
 }
 ```
 
-## <a name="unordered_multisetpointer"></a><a name="pointer"></a>unordered_multiset::p ointer
+## <a name="unordered_multisetpointer"></a><a name="pointer"></a> unordered_multiset::p ointer
 
 要素へのポインターの型です。
 
@@ -2080,7 +2094,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetreference"></a><a name="reference"></a>unordered_multiset:: reference
+## <a name="unordered_multisetreference"></a><a name="reference"></a> unordered_multiset:: reference
 
 要素への参照の型です。
 
@@ -2127,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetrehash"></a><a name="rehash"></a>unordered_multiset:: rehash
+## <a name="unordered_multisetrehash"></a><a name="rehash"></a> unordered_multiset:: rehash
 
 ハッシュ テーブルをリビルドします。
 
@@ -2142,7 +2156,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、バケットの数を少なくとも*nbuckets*に変更し、必要に応じてハッシュテーブルを再構築します。
+このメンバー関数は、バケットの数を少なくとも *nbuckets* に変更し、必要に応じてハッシュテーブルを再構築します。
 
 ### <a name="example"></a>例
 
@@ -2205,7 +2219,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetsize"></a><a name="size"></a>unordered_multiset:: size
+## <a name="unordered_multisetsize"></a><a name="size"></a> unordered_multiset:: size
 
 要素の数をカウントします。
 
@@ -2272,7 +2286,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetsize_type"></a><a name="size_type"></a>unordered_multiset:: size_type
+## <a name="unordered_multisetsize_type"></a><a name="size_type"></a> unordered_multiset:: size_type
 
 2 つの要素間の距離を表す、符号なしの型です。
 
@@ -2308,7 +2322,7 @@ int main()
 size == 0
 ```
 
-## <a name="unordered_multisetswap"></a><a name="swap"></a>unordered_multiset:: swap
+## <a name="unordered_multisetswap"></a><a name="swap"></a> unordered_multiset:: swap
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2380,7 +2394,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetunordered_multiset"></a><a name="unordered_multiset"></a>unordered_multiset:: unordered_multiset
+## <a name="unordered_multisetunordered_multiset"></a><a name="unordered_multiset"></a> unordered_multiset:: unordered_multiset
 
 コンテナー オブジェクトを構築します。
 
@@ -2434,31 +2448,42 @@ unordered_multiset(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*InputIterator*|反復子の型。|
-|*ウムアルクラ*|格納するアロケーター オブジェクト。|
-|*コンペティション*|格納する比較関数オブジェクト。|
-|*ハッシュ*|格納するハッシュ関数オブジェクト。|
-|*Bucket_count*|最小バケット数。|
-|*Right*|コピーするコンテナー。|
-|*IList*|コピー元の initializer_list。|
+*InputIterator*\
+反復子の型。
+
+*ウムアルクラ*\
+格納するアロケーター オブジェクト。
+
+*コンペティション*\
+格納する比較関数オブジェクト。
+
+*ハッシュ*\
+格納するハッシュ関数オブジェクト。
+
+*Bucket_count*\
+最小バケット数。
+
+*そうです*\
+コピーするコンテナー。
+
+*IList*\
+コピー元の initializer_list。
 
 ### <a name="remarks"></a>解説
 
-1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 つ目のコンストラクターは、要素値 `[First, Last)` のシーケンスを挿入します。 4番目のコンストラクターは、*右*に移動して、シーケンスのコピーを指定します。
+1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 つ目のコンストラクターは、要素値 `[First, Last)` のシーケンスを挿入します。 4番目のコンストラクターは、 *右*に移動して、シーケンスのコピーを指定します。
 
-さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は*Right*から取得されます。 それ以外の場合:
+さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は *Right*から取得されます。 それ以外の場合:
 
-バケットの最小数は、引数*Bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値としてここで説明されている既定値になり `N0` ます。
+バケットの最小数は、引数 *Bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値としてここで説明されている既定値になり `N0` ます。
 
-ハッシュ関数オブジェクトは、引数*ハッシュ*(存在する場合) です。それ以外の場合は `Hash()` です。
+ハッシュ関数オブジェクトは、引数 *ハッシュ*(存在する場合) です。それ以外の場合は `Hash()` です。
 
-比較関数オブジェクトは、引数*Comp*(存在する場合) です。それ以外の場合は `Comp()` です。
+比較関数オブジェクトは、引数 *Comp*(存在する場合) です。それ以外の場合は `Comp()` です。
 
-アロケーターオブジェクトは、引数*Al*(存在する場合) です。それ以外の場合は `Alloc()` です。
+アロケーターオブジェクトは、引数 *Al*(存在する場合) です。それ以外の場合は `Alloc()` です。
 
-## <a name="unordered_multisetvalue_type"></a><a name="value_type"></a>unordered_multiset:: value_type
+## <a name="unordered_multisetvalue_type"></a><a name="value_type"></a> unordered_multiset:: value_type
 
 要素の型。
 

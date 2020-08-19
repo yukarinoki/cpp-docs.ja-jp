@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a712b6da89433b9db6de9f2a676bf6e89d2e0e6e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169891"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560824"
 ---
 # <a name="create-a-c-makefile-project"></a>C++ メイクファイル プロジェクトを作成する
 
-*makefile* は、一連の C++ ソース コード ファイルをコンパイルし、リンクする (あるいは*ビルド*する) 方法を含むテキスト ファイルです。 *make* プログラムによってメイクファイルが読み取られ、コンパイラ、リンカー、そしておそらくは他のプログラムが呼び出され、実行可能ファイルが作成されます。 Microsoft の *make* プログラム実装は [NMAKE](nmake-reference.md) と呼ばれています。
+*makefile* は、一連の C++ ソース コード ファイルをコンパイルし、リンクする (あるいは*ビルド*する) 方法を含むテキスト ファイルです。 *make* プログラムによってメイクファイルが読み取られ、コンパイラ、リンカー、そしておそらくは他のプログラムが呼び出され、実行可能ファイルが作成されます。 Microsoft による *make* プログラムの実装は、 [NMAKE](nmake-reference.md)と呼ばれています。
 
 既存のメイクファイル プロジェクトがある場合、Visual Studio IDE でそれをコード化またはデバッグするとき、次の選択肢が表示されます。
 
-- 既存のメイクファイルを使用して、Visual Studio で IntelliSense に使用する .vcxproj ファイルを構成するメイクファイル プロジェクトを、Visual Studio で作成します。 (ネイティブ MSBuild プロジェクトで取得した IDE 機能の一部は使用できません)。「[メイクファイルプロジェクトを作成するには」を](#create_a_makefile_project)参照してください。
+- 既存のメイクファイルを使用して、Visual Studio で IntelliSense に使用する .vcxproj ファイルを構成するメイクファイル プロジェクトを、Visual Studio で作成します。 (ネイティブ MSBuild プロジェクトで取得した IDE 機能の一部は使用できません)。「 [メイクファイルプロジェクトを作成するには」を](#create_a_makefile_project) 参照してください。
 - **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 元のメイクファイルは、この後は使用されません。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](../how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
-- **Visual Studio 2017 以降**: MSBuild システムを使用しなくても、 **[フォルダーを開く**] 機能を使用して、メイクファイルプロジェクトをそのまま編集およびビルドできます。 詳細については、「[Open Folder projects for C++](../open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) をご覧ください。
+- **Visual Studio 2017 以降**: MSBuild システムを使用しなくても、 **[フォルダーを開く** ] 機能を使用して、メイクファイルプロジェクトをそのまま編集およびビルドできます。 詳細については、「[Open Folder projects for C++](../open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) をご覧ください。
 - **Visual Studio 2019 以降**: LINUX 用 UNIX メイクファイルプロジェクトを作成します。
 
 ## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクト テンプレートでメイクファイル プロジェクトを作成するには
@@ -38,9 +38,9 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Visual Studio 2019 でメイクファイル プロジェクトを作成するには
 
-1. Visual Studio のメイン メニューで、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** を選択し、検索ボックスに「makefile」と入力します。 または、 **[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]**  >  **[全般]** (Visual Studio 2015) または **[その他]** (Visual Studio 2017) を展開し、Windows と Linux のどちらが対象であるかに応じて 2 つのオプションから選択します。
+1. Visual Studio のメインメニューから、[**ファイル**] [新規] [プロジェクト] の順に選択し、  >  **New**  >  **Project**検索ボックスに「メイクファイル」と入力します。 または、**[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]** > **[全般]** (Visual Studio 2015) または **[その他]** (Visual Studio 2017) を展開し、Windows と Linux のどちらが対象であるかに応じて 2 つのオプションから選択します。
 
-1. **Windows のみ**: **[デバッグ構成の設定]** ページで、デバッグビルドとリテールビルドのためのコマンド、出力、クリーン、およびリビルドの情報を指定します。 リリース構成に別の設定を指定する場合は、 **[次へ]** をクリックします。
+1. **Windows のみ**: [ **デバッグ構成の設定** ] ページで、デバッグビルドとリテールビルドのためのコマンド、出力、クリーン、およびリビルドの情報を指定します。 リリース構成に別の設定を指定する場合は、**[次へ]** をクリックします。
 
 1. **[完了]** をクリックしてダイアログを閉じ、**ソリューション エクスプローラー**で新しく作成したプロジェクトを開きます。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Visual Studio 2015 または Visual Studio 2017 でメイクファイル プロジェクトを作成するには
 
-1. Visual Studio のスタート ページで、 **[新しいプロジェクト]** 検索ボックスに「makefile」と入力します。 あるいは、 **[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]** 、 > [全般] **(Visual Studio 2015) または**[その他] **(Visual Studio 2017) の順に展開し、[テンプレート] ウィンドウの**[メイクファイル プロジェクト]** を選択してプロジェクト ウィザードを開きます。
+1. Visual Studio のスタート ページで、**[新しいプロジェクト]** 検索ボックスに「makefile」と入力します。 または、[**新しいプロジェクト**] ダイアログボックスで**Visual C++**  >  **全般**(visual studio 2015) または**その他**(visual studio 2017) を展開し、[テンプレート] ペインで [**メイクファイルプロジェクト**] を選択して、プロジェクトウィザードを開きます。
 
 1. **[アプリケーションの設定]** ページで、デバッグと製品ビルドに対してコマンド、出力、クリーンアップ、およびリビルドに関する情報を指定します。
 
@@ -76,15 +76,15 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 特定のプロジェクト設定またはコンパイラ オプションが間違っていると、メイクファイル プロジェクトで IntelliSense が失敗します。 次の手順に従って、IntelliSense が想定どおりに動作するようにメイクファイル プロジェクトを構成します。
 
-1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
+1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 
-1. **[NMake]** プロパティ ページを選択し、 **[IntelliSense]** のプロパティを適宜変更します。
+1. **[NMake]** プロパティ ページを選択し、**[IntelliSense]** のプロパティを適宜変更します。
 
    - **[プリプロセッサの定義]** プロパティでメイクファイル プロジェクトのプリプロセッサ シンボルを定義します。 詳細については、「[/D (プリプロセッサの定義)](d-preprocessor-definitions.md)」を参照してください。
 
-   - メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されるファイル参照を解決する目的でコンパイラが検索するディレクトリの一覧を、 **[インクルードの検索パス]** プロパティで指定します。 詳細については、「[/I (追加インクルード ディレクトリ)](i-additional-include-directories.md)」を参照してください。
+   - メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されるファイル参照を解決する目的でコンパイラが検索するディレクトリの一覧を、**[インクルードの検索パス]** プロパティで指定します。 詳細については、「[/I (追加インクルード ディレクトリ)](i-additional-include-directories.md)」を参照してください。
 
    - コマンド ウィンドウから CL.EXE を利用してビルドするプロジェクトの場合、メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されるファイル参照を解決する目的でコンパイラが検索するディレクトリの一覧を、**INCLUDE** 環境変数で指定します。
 
@@ -100,12 +100,12 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 1. **[すべて保存]** コマンドを使用し、変更後のプロジェクト設定を保存します。
 
-次回、Visual Studio 開発環境でメイクファイル プロジェクトを開くとき、 **[ソリューションのクリーン]** コマンドを実行し、それからメイクファイル プロジェクトで **[ソリューションのビルド]** コマンドを実行します。 IntelliSense が IDE で正しく動作するはずです。
+次回、Visual Studio 開発環境でメイクファイル プロジェクトを開くとき、**[ソリューションのクリーン]** コマンドを実行し、それからメイクファイル プロジェクトで **[ソリューションのビルド]** コマンドを実行します。 IntelliSense が IDE で正しく動作するはずです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IntelliSense の使用](/visualstudio/ide/using-intellisense)<br>
-[NMAKE リファレンス](nmake-reference.md)<br>
-方法:[メイクファイル内の特殊文字](special-characters-in-a-makefile.md)
-[既存のコードからプロジェクトをC++作成](../how-to-create-a-cpp-project-from-existing-code.md)する<br/>
+[NMAKE のリファレンス](nmake-reference.md)<br>
+[方法: 既存のコードから C++ プロジェクトを作成する](../how-to-create-a-cpp-project-from-existing-code.md)<br>
+[メイクファイルの特殊文字](special-characters-in-a-makefile.md)<br/>
 [メイクファイルの内容](contents-of-a-makefile.md)<br/>

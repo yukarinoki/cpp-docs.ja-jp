@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 4caf2cc2b6aa7494f343d10709f3190cb41631be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dac4dc1182de32af485d37a00ff96370ea8d8943
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232912"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562117"
 ---
 # <a name="sync_none-class"></a>sync_none クラス
 
@@ -32,15 +32,14 @@ class sync_none
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|`Cache`|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+`Cache`\
+同期フィルターに関連付けられているキャッシュの型。 、、またはを指定でき [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) ます。
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[allocate](#allocate)|メモリのブロックを割り当てます。|
+|[割当て](#allocate)|メモリのブロックを割り当てます。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
@@ -50,7 +49,7 @@ class sync_none
 
 **名前空間:** stdext
 
-## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none:: allocate
+## <a name="sync_noneallocate"></a><a name="allocate"></a> sync_none:: allocate
 
 メモリのブロックを割り当てます。
 
@@ -60,15 +59,14 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*count*|割り当てられる配列内の要素の数。|
+*数*\
+割り当てられる配列内の要素の数。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は `cache.allocate(count)` を返します。ここで、`cache` はキャッシュ オブジェクトです。
 
-## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::d eallocate
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a> sync_none::d eallocate
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -78,16 +76,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
+*ポインター*\
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
+
+*数*\
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は `cache.deallocate(ptr, count)` を呼び出します。ここで、`cache` はキャッシュ オブジェクトを表します。
 
-## <a name="sync_noneequals"></a><a name="equals"></a>sync_none:: equals
+## <a name="sync_noneequals"></a><a name="equals"></a> sync_none:: equals
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -97,10 +96,11 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
-|*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
+*Cache*\
+同期フィルターのキャッシュ オブジェクト。
+
+*他の*\
+等しいかどうかを比較するキャッシュ オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

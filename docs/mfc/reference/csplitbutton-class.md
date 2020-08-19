@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 38fceed1cc42ca0aac2e6ddaf145db273c95771d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 484cef2787c9e5c166a7b20b017251b559d7221c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753132"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562546"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
-クラス`CSplitButton`は分割ボタン コントロールを表します。 分割ボタン コントロールは、ユーザーがボタンのメイン領域をクリックすると既定の動作を実行し、ユーザーがボタンのドロップダウン矢印をクリックするとドロップダウン メニューを表示します。
+クラスは、 `CSplitButton` 分割ボタンコントロールを表します。 分割ボタン コントロールは、ユーザーがボタンのメイン領域をクリックすると既定の動作を実行し、ユーザーがボタンのドロップダウン矢印をクリックするとドロップダウン メニューを表示します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,26 +37,26 @@ class CSplitButton : public CButton
 
 |名前|説明|
 |----------|-----------------|
-|[スプリットボタン::Cスプリットボタン](#csplitbutton)|`CSplitButton` オブジェクトを構築します。|
+|[CSplitButton:: CSplitButton](#csplitbutton)|`CSplitButton` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[スプリットボタン::作成](#create)|指定したスタイルを使用して分割ボタン コントロールを作成し、現在`CSplitButton`のオブジェクトにアタッチします。|
-|[スプリットボタン::セットドロップダウンメニュー](#setdropdownmenu)|ユーザーが現在の分割ボタン コントロールのドロップダウン矢印をクリックしたときに表示されるドロップダウン メニューを設定します。|
+|[CSplitButton:: Create](#create)|指定されたスタイルを使用して分割ボタンコントロールを作成し、現在のオブジェクトにアタッチし `CSplitButton` ます。|
+|[CSplitButton:: SetDropDownMenu](#setdropdownmenu)|ユーザーが現在の分割ボタンコントロールのドロップダウン矢印をクリックしたときに表示されるドロップダウンメニューを設定します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[スプリットボタン::オンドロップダウン](#ondropdown)|ユーザーが現在の分割ボタン コントロールのドロップダウン矢印をクリックしたときにシステムが送信するBCN_DROPDOWN通知を処理します。|
+|[CSplitButton:: OnDropDown](#ondropdown)|ユーザーが現在の分割ボタンコントロールのドロップダウン矢印をクリックしたときにシステムが送信する BCN_DROPDOWN 通知を処理します。|
 
 ## <a name="remarks"></a>解説
 
-クラス`CSplitButton`は[CButton](../../mfc/reference/cbutton-class.md)クラスから派生します。 分割ボタン コントロールは、スタイルがBS_SPLITBUTTONボタン コントロールです。 ユーザーがドロップダウン矢印をクリックすると、カスタム メニューが表示されます。 詳細については、「[ボタン スタイル](/windows/win32/Controls/button-styles)」のBS_SPLITBUTTONおよびBS_DEFSPLITBUTTONスタイルを参照してください。
+クラスは、 `CSplitButton` [CButton](../../mfc/reference/cbutton-class.md) クラスから派生します。 分割ボタンコントロールは、スタイルが BS_SPLITBUTTON ボタンコントロールです。 ユーザーがドロップダウン矢印をクリックすると、カスタムメニューが表示されます。 詳細については、「BS_SPLITBUTTON [」](/windows/win32/Controls/button-styles)および「BS_DEFSPLITBUTTON スタイル」を参照してください。
 
-次の図は、ページャー コントロールと (1) 分割ボタン コントロールを含むダイアログ ボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されます。
+次の図は、ページャーコントロールと (1) 分割ボタンコントロールを含むダイアログボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されています。
 
 ![splitbutton およびページャー コントロールを含むダイアログ。](../../mfc/reference/media/splitbutton_pager.png "splitbutton およびページャー コントロールを含むダイアログ。")
 
@@ -78,11 +78,11 @@ class CSplitButton : public CButton
 
 このクラスは、Windows Vista 以降でサポートされています。
 
-このクラスの追加要件については、「 [Windows Vista コモン コントロールのビルド要件](../../mfc/build-requirements-for-windows-vista-common-controls.md)」を参照してください。
+このクラスの追加要件については、「 [Windows Vista コモンコントロールのビルド要件](../../mfc/build-requirements-for-windows-vista-common-controls.md)」を参照してください。
 
-## <a name="csplitbuttoncreate"></a><a name="create"></a>スプリットボタン::作成
+## <a name="csplitbuttoncreate"></a><a name="create"></a> CSplitButton:: Create
 
-指定したスタイルを使用して分割ボタン コントロールを作成し、現在`CSplitButton`のオブジェクトにアタッチします。
+指定されたスタイルを使用して分割ボタンコントロールを作成し、現在のオブジェクトにアタッチし `CSplitButton` ます。
 
 ```
 virtual BOOL Create(
@@ -94,20 +94,25 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Dwstyle*|[in]コントロールに適用するスタイルのビットごとの組み合わせ (OR)。 詳細については、「ボタン[スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。|
-|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。|
-|*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの非 null ポインター。|
-|*nID*|[in]コントロールの ID。|
+*dwStyle*\
+からコントロールに適用されるスタイルのビットごとの組み合わせ (または)。 詳細については、「 [ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。
+
+*rect*\
+からコントロールの位置とサイズを格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体への参照。
+
+*pParentWnd*\
+からコントロールの親ウィンドウである [CWnd](../../mfc/reference/cwnd-class.md) オブジェクトへの null 以外のポインター。
+
+*nID*\
+からコントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>スプリットボタン::Cスプリットボタン
+## <a name="csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a> CSplitButton:: CSplitButton
 
-`CSplitButton` オブジェクトを構築します。 コンストラクターのパラメーターは、ユーザーが分割ボタン コントロールのドロップダウン矢印をクリックしたときに表示されるサブメニューを指定します。
+`CSplitButton` オブジェクトを構築します。 コンストラクターのパラメーターは、ユーザーが分割ボタンコントロールのドロップダウン矢印をクリックしたときに表示されるサブメニューを指定します。
 
 ```
 CSplitButton();
@@ -120,19 +125,22 @@ CSplitButton(CMenu* pMenu)
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*nメニューID*|[in]メニュー バーのリソース ID。|
-|*をクリックします。*|[in]サブメニューのリソース ID。|
-|*メニュー*|[in]サブメニューを指定する[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトへのポインター。 オブジェクト`CSplitButton`がスコープ外に`CMenu`出ると、オブジェクトと関連付けられた`CSplitButton`HMENU が削除されます。|
+*nMenuId*\
+からメニューバーのリソース ID。
+
+*nSubMenuId*\
+からサブメニューのリソース ID。
+
+*pMenu*\
+からサブメニューを指定する [CMenu](../../mfc/reference/cmenu-class.md) オブジェクトへのポインター。 オブジェクトは、オブジェクトが `CSplitButton` `CMenu` スコープ外に出ると、オブジェクトとそれに関連付けられている HMENU を削除し `CSplitButton` ます。
 
 ### <a name="remarks"></a>解説
 
-分割ボタン コントロールを作成し、オブジェクトにアタッチするには[、CSplitButton::Create](#create) `CSplitButton`メソッドを使用します。
+[CSplitButton:: Create](#create)メソッドを使用して分割ボタンコントロールを作成し、それをオブジェクトにアタッチし `CSplitButton` ます。
 
-## <a name="csplitbuttonondropdown"></a><a name="ondropdown"></a>スプリットボタン::オンドロップダウン
+## <a name="csplitbuttonondropdown"></a><a name="ondropdown"></a> CSplitButton:: OnDropDown
 
-ユーザーが現在の分割ボタン コントロールのドロップダウン矢印をクリックしたときにシステムが送信するBCN_DROPDOWN通知を処理します。
+ユーザーが現在の分割ボタンコントロールのドロップダウン矢印をクリックしたときにシステムが送信する BCN_DROPDOWN 通知を処理します。
 
 ```
 afx_msg void OnDropDown(
@@ -142,18 +150,19 @@ afx_msg void OnDropDown(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*pNMHDR*|[in][BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知に関する情報を含む[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)構造体へのポインター。|
-|*結果*|[アウト](使用されず、値は返されません。[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知の戻り値。|
+*pNMHDR*\
+から[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知に関する情報を格納している[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)構造体へのポインター。
+
+*pResult*\
+入出力(使用されません。値は返されません)。 [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) 通知の戻り値。
 
 ### <a name="remarks"></a>解説
 
-ユーザーが分割ボタン コントロールのドロップダウン矢印をクリックすると、メソッドが処理するBCN_DROPDOWN通知メッセージが送信されます`OnDropDown`。 ただし、オブジェクト`CSplitButton`は、分割ボタン コントロールを含むコントロールにBCN_DROPDOWN通知を転送しません。 したがって、そのコントロールは通知に応答してカスタム 動作をサポートできません。
+分割ボタンコントロールのドロップダウン矢印をクリックすると、システムによって BCN_DROPDOWN 通知メッセージが送信されます。このメッセージは、メソッドによって `OnDropDown` 処理されます。 ただし、オブジェクトは、 `CSplitButton` 分割ボタンコントロールを含むコントロールに BCN_DROPDOWN 通知を転送しません。 そのため、格納しているコントロールは、通知に応答してカスタム動作をサポートすることはできません。
 
-コントロールがサポートするカスタム 動作を実装するには、オブジェクトではなく、BS_SPLITBUTTONのスタイルを持つ[CButton](../../mfc/reference/cbutton-class.md) `CSplitButton`オブジェクトを使用します。 次に、オブジェクトにBCN_DROPDOWN通知のハンドラーを`CButton`実装します。 詳細については、「ボタン[スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。
+格納しているコントロールがサポートするカスタム動作を実装するには、オブジェクトではなく、BS_SPLITBUTTON のスタイルを持つ [CButton](../../mfc/reference/cbutton-class.md) オブジェクトを使用し `CSplitButton` ます。 次に、オブジェクトに BCN_DROPDOWN 通知のハンドラーを実装し `CButton` ます。 詳細については、「 [ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。
 
-分割ボタン コントロール自体がサポートするカスタム アクションを実装するには、[メッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)を使用します。 クラスから独自のクラスを`CSplitButton`派生させ、名前を付けます。たとえば、CMySplitButton。 次に、次のメッセージ マップをアプリケーションに追加して、BCN_DROPDOWN通知を処理します。
+分割ボタンコントロール自体がサポートするカスタムアクションを実装するには、 [メッセージリフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)を使用します。 クラスから独自のクラスを派生させ `CSplitButton` 、CMySplitButton などの名前を指定します。 次に、BCN_DROPDOWN 通知を処理するために、次のメッセージマップをアプリケーションに追加します。
 
 ```
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -162,9 +171,9 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()
 ```
 
-## <a name="csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>スプリットボタン::セットドロップダウンメニュー
+## <a name="csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a> CSplitButton:: SetDropDownMenu
 
-ユーザーが現在の分割ボタン コントロールのドロップダウン矢印をクリックしたときに表示されるドロップダウン メニューを設定します。
+ユーザーが現在の分割ボタンコントロールのドロップダウン矢印をクリックしたときに表示されるドロップダウンメニューを設定します。
 
 ```cpp
 void SetDropDownMenu(
@@ -176,28 +185,31 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*nメニューID*|[in]メニュー バーのリソース ID。|
-|*をクリックします。*|[in]サブメニューのリソース ID。|
-|*メニュー*|[in]サブメニューを指定する[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトへのポインター。 オブジェクト`CSplitButton`がスコープ外に`CMenu`出ると、オブジェクトと関連付けられた`CSplitButton`HMENU が削除されます。|
+*nMenuId*\
+からメニューバーのリソース ID。
+
+*nSubMenuId*\
+からサブメニューのリソース ID。
+
+*pMenu*\
+からサブメニューを指定する [CMenu](../../mfc/reference/cmenu-class.md) オブジェクトへのポインター。 オブジェクトは、オブジェクトが `CSplitButton` `CMenu` スコープ外に出ると、オブジェクトとそれに関連付けられている HMENU を削除し `CSplitButton` ます。
 
 ### <a name="remarks"></a>解説
 
-*nMenuId*パラメーターは、メニュー バー項目の水平方向のリストであるメニュー バーを識別します。 *nSubMenuId*パラメーターは、サブメニューを識別する 0 から始まるインデックス番号です。 たとえば、一般的なアプリケーションには、メニュー バーの項目である "ファイル"、"編集"、および "ヘルプ" を含むメニューがあります。 "ファイル" メニュー バーの項目には、メニュー項目 "開く"、"閉じる"、"終了" を含むサブメニューがあります。 分割ボタン コントロールのドロップダウン矢印をクリックすると、コントロールはメニュー バーではなく指定されたサブメニューを表示します。
+*Nmenuid*パラメーターは、メニューバー項目の水平方向の一覧であるメニューバーを識別します。 *Nsubmenuid*パラメーターは、サブメニューを識別する0から始まるインデックス番号です。これは、各メニューバー項目に関連付けられているメニュー項目のドロップダウンリストです。 たとえば、一般的なアプリケーションには、メニューバー項目 "File"、"Edit"、および "Help" を含むメニューがあります。 "ファイル" メニューバー項目には、メニュー項目 "Open"、"Close"、および "Exit" を含むサブメニューがあります。 分割ボタンコントロールのドロップダウン矢印をクリックすると、コントロールにはメニューバーではなく、指定されたサブメニューが表示されます。
 
-次の図は、ページャー コントロールと (1) 分割ボタン コントロールを含むダイアログ ボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されます。
+次の図は、ページャーコントロールと (1) 分割ボタンコントロールを含むダイアログボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されています。
 
 ![splitbutton およびページャー コントロールを含むダイアログ。](../../mfc/reference/media/splitbutton_pager.png "splitbutton およびページャー コントロールを含むダイアログ。")
 
 ### <a name="example"></a>例
 
-次のコード例の最初のステートメントは、[メソッドを示](#setdropdownmenu)しています。 メニューは、メニュー バー ID と自動的に名前を付けた Visual Studio リソース エディターを使用して作成IDR_MENU1。 *nSubMenuId*パラメーターは 0 で、メニュー バーの唯一のサブメニューを参照します。
+次のコード例の最初のステートメントは、 [CSplitButton:: SetDropDownMenu](#setdropdownmenu) メソッドを示しています。 Visual Studio リソースエディターを使用してメニューを作成しました。このメニューには、メニューバー ID、IDR_MENU1 という名前が自動的に付けられます。 *Nsubmenuid*パラメーター (ゼロ) は、メニューバーの唯一のサブメニューを参照します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
 [CSplitButton クラス](../../mfc/reference/csplitbutton-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)

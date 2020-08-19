@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|名前|説明|
+|Name|説明|
 |`m_CmdUsage`|`CMap`コマンドを使用量カウントにマップするオブジェクト。|
 |`m_nMinUsagePercentage`|頻繁に使用されるコマンドの使用率の最小値です。|
 |`m_nStartCount`|このオブジェクトによって追跡データの最小量が収集されたかどうかを判断するために使用される開始カウンター。|

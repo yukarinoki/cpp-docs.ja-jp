@@ -77,7 +77,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|名前|説明|
+|Name|説明|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`で取得したすべてのハンドルのを呼び出し `UpdateSystemColors` ます。|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|を呼び出して、 `OpenThemeData` さまざまなコントロール (ウィンドウ、ツールバー、ボタンなど) を描画するハンドルを取得します。|
 

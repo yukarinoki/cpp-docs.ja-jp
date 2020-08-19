@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205003"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562637"
 ---
 # <a name="allocator_base-class"></a>allocator_base クラス
 
@@ -58,10 +58,11 @@ class allocator_base
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Type*|アロケーターによって割り当てられた要素の型。|
-|*同期*|アロケーターの同期ポリシー。[sync_none クラス](sync-none-class.md)、[sync_per_container クラス](sync-per-container-class.md)、[sync_per_thread クラス](sync-per-thread-class.md)、[sync_shared クラス](sync-shared-class.md)のいずれかです。|
+*各種*\
+アロケーターによって割り当てられた要素の型。
+
+*頻度*\
+アロケーターの同期ポリシー。[sync_none クラス](sync-none-class.md)、[sync_per_container クラス](sync-per-container-class.md)、[sync_per_thread クラス](sync-per-thread-class.md)、[sync_shared クラス](sync-shared-class.md)のいずれかです。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -88,7 +89,7 @@ class allocator_base
 |[_Charalloc](#charalloc)|型の配列のストレージを割り当て **`char`** ます。|
 |[_Chardealloc](#chardealloc)|型の要素を含む配列のストレージを解放 **`char`** します。|
 |[address](#address)|値が指定されたオブジェクトのアドレスを検索します。|
-|[allocate](#allocate)|指定された要素数だけは格納できるメモリのブロックを割り当てます。|
+|[割当て](#allocate)|指定された要素数だけは格納できるメモリのブロックを割り当てます。|
 |[構築](#construct)|指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[倒す](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
@@ -100,7 +101,7 @@ class allocator_base
 
 **名前空間:** stdext
 
-## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
+## <a name="allocator_base_charalloc"></a><a name="charalloc"></a> allocator_base:: _Charalloc
 
 型の配列のストレージを割り当て **`char`** ます。
 
@@ -110,9 +111,8 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*count*|割り当てられる配列内の要素の数。|
+*数*\
+割り当てられる配列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 このメンバー関数は、再バインドをコンパイルできないコンパイラでコンパイルした場合に、コンテナーによって使用されます。 この関数は、同期フィルターの `allocate` 関数への呼び出しの結果を返すことで、ユーザー定義のアロケーターに `_Charalloc` を実装します。
 
-## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
+## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a> allocator_base:: _Chardealloc
 
 型の要素を含む配列のストレージを解放 **`char`** します。
 
@@ -132,16 +132,17 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
+*ポインター*\
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
+
+*数*\
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、再バインドをコンパイルできないコンパイラでコンパイルした場合に、コンテナーによって使用されます。 この関数は、同期フィルターの `deallocate` 関数を呼び出すことで、ユーザー定義のアロケーターに `_Chardealloc` を実装します。 と `_Charalloc` 等しいを比較し **`*this`** 、同じサイズと型の配列オブジェクトを割り当てるアロケーターオブジェクトに対して、への呼び出しによってポインター ptr が既に返されている必要があります。 `_Chardealloc` は例外をスローしません。
 
-## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: address
+## <a name="allocator_baseaddress"></a><a name="address"></a> allocator_base:: address
 
 値が指定されたオブジェクトのアドレスを検索します。
 
@@ -164,7 +165,7 @@ const_pointer address(const_reference val);
 
 このメンバー関数は、`&val` を返すことで、ユーザー定義のアロケーターに実装されます。
 
-## <a name="allocator_baseallocate"></a><a name="allocate"></a>allocator_base:: allocate
+## <a name="allocator_baseallocate"></a><a name="allocate"></a> allocator_base:: allocate
 
 指定された要素数だけは格納できるメモリのブロックを割り当てます。
 
@@ -177,10 +178,11 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Nx*|割り当てられる配列内の要素の数。|
-|*_Hint*|このパラメーターは無視されます。|
+*_Nx*\
+割り当てられる配列内の要素の数。
+
+*_Hint*\
+このパラメーターは無視されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -190,7 +192,7 @@ pointer allocate(size_type _Nx);
 
 メンバー関数は、`_Nx == 1` の場合、Type `*` 型の同期フィルターの `allocate` 関数への呼び出しの結果を返すことで、ユーザー定義のアロケーターにメモリ割り当てを実装します。それ以外の場合は、`operator new(_Nx * sizeof(Type))` への呼び出しの結果を返すことで、Type `*` 型にキャストします。
 
-## <a name="allocator_baseallocator_base"></a><a name="allocator_base"></a>allocator_base:: allocator_base
+## <a name="allocator_baseallocator_base"></a><a name="allocator_base"></a> allocator_base:: allocator_base
 
 `allocator_base` 型のオブジェクトを構築します。
 
@@ -203,15 +205,14 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*そうです*|コピーするアロケーター オブジェクト。|
+*そうです*\
+コピーするアロケーター オブジェクト。
 
 ### <a name="remarks"></a>解説
 
 1 つ目のコンストラクターは、[allocator_base](allocator-base-class.md) インスタンスを構築します。 2 番目のコンストラクターは、`allocator_base<Type, _Sync>` インスタンス `a`、`allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a` などのいずれかに対し、`allocator_base` インスタンスを構築します。
 
-## <a name="allocator_baseconst_pointer"></a><a name="const_pointer"></a>allocator_base:: const_pointer
+## <a name="allocator_baseconst_pointer"></a><a name="const_pointer"></a> allocator_base:: const_pointer
 
 アロケーターによって管理されるオブジェクトの型に対する定数ポインターを提供する型。
 
@@ -219,7 +220,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 typedef const Type *const_pointer;
 ```
 
-## <a name="allocator_baseconst_reference"></a><a name="const_reference"></a>allocator_base:: const_reference
+## <a name="allocator_baseconst_reference"></a><a name="const_reference"></a> allocator_base:: const_reference
 
 アロケーターによって管理されるオブジェクトの型に対する定数参照を提供する型。
 
@@ -227,7 +228,7 @@ typedef const Type *const_pointer;
 typedef const Type& const_reference;
 ```
 
-## <a name="allocator_baseconstruct"></a><a name="construct"></a>allocator_base:: construct
+## <a name="allocator_baseconstruct"></a><a name="construct"></a> allocator_base:: construct
 
 指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。
 
@@ -237,16 +238,17 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|オブジェクトが構築される場所へのポインター。|
-|*val*|構築されるオブジェクトが初期化される値。|
+*ポインター*\
+オブジェクトが構築される場所へのポインター。
+
+*val*\
+構築されるオブジェクトが初期化される値。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、`new((void*)ptr Type(val)` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
-## <a name="allocator_basedeallocate"></a><a name="deallocate"></a>allocator_base::d eallocate
+## <a name="allocator_basedeallocate"></a><a name="deallocate"></a> allocator_base::d eallocate
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -256,16 +258,17 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*_Nx*|記憶域から割り当てを解除されるオブジェクトの数。|
+*ポインター*\
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
+
+*_Nx*\
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、`_Nx == 1` の場合は同期フィルター `Sync` で `deallocate(ptr)` を呼び出すことで、それ以外の場合は `operator delete(_Nx * ptr)` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
-## <a name="allocator_basedestroy"></a><a name="destroy"></a>allocator_base::d estroy
+## <a name="allocator_basedestroy"></a><a name="destroy"></a> allocator_base::d estroy
 
 オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。
 
@@ -275,15 +278,14 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|破棄するオブジェクトのアドレスを指定するポインター。|
+*ポインター*\
+破棄するオブジェクトのアドレスを指定するポインター。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、`ptr->~Type()` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
-## <a name="allocator_basedifference_type"></a><a name="difference_type"></a>allocator_base::d ifference_type
+## <a name="allocator_basedifference_type"></a><a name="difference_type"></a> allocator_base::d ifference_type
 
 アロケーターによって管理されるオブジェクトの型に対するポインターの値の差を表すことができる符号付き整数型。
 
@@ -291,7 +293,7 @@ void destroy(pointer ptr);
 typedef std::ptrdiff_t difference_type;
 ```
 
-## <a name="allocator_basemax_size"></a><a name="max_size"></a>allocator_base:: max_size
+## <a name="allocator_basemax_size"></a><a name="max_size"></a> allocator_base:: max_size
 
 空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、型 `Type` の要素の数を返します。
 
@@ -307,7 +309,7 @@ size_type max_size() const;
 
 このメンバー関数は、`0 < (size_t)-1 / sizeof(Type)` の場合は `(size_t)-1 / sizeof(Type)` を返すことで、それ以外は `1` を返すことで、ユーザー定義のアロケーターに実装されます。
 
-## <a name="allocator_basepointer"></a><a name="pointer"></a>allocator_base::p ointer
+## <a name="allocator_basepointer"></a><a name="pointer"></a> allocator_base::p ointer
 
 アロケーターによって管理されるオブジェクトの型に対するポインターを提供する型。
 
@@ -315,7 +317,7 @@ size_type max_size() const;
 typedef Type *pointer;
 ```
 
-## <a name="allocator_basereference"></a><a name="reference"></a>allocator_base:: reference
+## <a name="allocator_basereference"></a><a name="reference"></a> allocator_base:: reference
 
 アロケーターによって管理されるオブジェクトの型に対する参照を提供する型。
 
@@ -323,7 +325,7 @@ typedef Type *pointer;
 typedef Type& reference;
 ```
 
-## <a name="allocator_basesize_type"></a><a name="size_type"></a>allocator_base:: size_type
+## <a name="allocator_basesize_type"></a><a name="size_type"></a> allocator_base:: size_type
 
 型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型 `allocator_base` 。
 
@@ -331,7 +333,7 @@ typedef Type& reference;
 typedef std::size_t size_type;
 ```
 
-## <a name="allocator_basevalue_type"></a><a name="value_type"></a>allocator_base:: value_type
+## <a name="allocator_basevalue_type"></a><a name="value_type"></a> allocator_base:: value_type
 
 アロケーターによって管理される型。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: d38307c4ae19e5f87d0dbcca8943dc1c3f239917
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 51a88e6ec4eca693c652635e1574e3611d7217cd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232899"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562104"
 ---
 # <a name="sync_per_container-class"></a>sync_per_container クラス
 
@@ -28,9 +28,8 @@ class sync_per_container
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+*Cache*\
+同期フィルターに関連付けられているキャッシュの型。 、、またはを指定でき [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) ます。
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -44,7 +43,7 @@ class sync_per_container
 
 **名前空間:** stdext
 
-## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container:: equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a> sync_per_container:: equals
 
 2 つのキャッシュが等しいかどうかを比較します。
 
@@ -54,10 +53,11 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|[説明]|
-|---------------|-----------------|
-|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
-|*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
+*Cache*\
+同期フィルターのキャッシュ オブジェクト。
+
+*他の*\
+等しいかどうかを比較するキャッシュ オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

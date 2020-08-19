@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: 124c49b22566e44989fd30a3274c2d121532eef4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 340a4e51c82f1799ebea138ce230393825b9e636
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617473"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562611"
 ---
 # <a name="allocator_fixed_size-class"></a>allocator_fixed_size クラス
 
@@ -29,11 +29,10 @@ class allocator_fixed_size;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Type*|アロケーターによって割り当てられた要素の型。|
+*各種*\
+アロケーターによって割り当てられた要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを*name*パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
