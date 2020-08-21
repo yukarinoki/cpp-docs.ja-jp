@@ -1,18 +1,19 @@
 ---
 title: '&lt;charconv &gt; 関数'
-ms.date: 07/22/2020
+description: <charconv>整数または浮動小数点値を文字との間で変換するライブラリ関数について説明します。
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565951"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722155"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 関数
 
@@ -91,7 +92,7 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="return-value"></a>戻り値
 
-変換の結果を格納している[to_chars_result](to-chars-result-structure.md) 。
+変換の結果を格納している [to_chars_result](to-chars-result-structure.md) 。
 
 ### <a name="remarks"></a>解説
 
@@ -99,15 +100,11 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 次の表では、およびパラメーターのさまざまな組み合わせについて、変換の動作について説明し `fmt` `precision` ます。 "最短ラウンドトリップ動作" という用語は、対応する関数を使用してその表現を解析するために必要な桁数の最小値を書き込むことを意味し `from_chars` ます。
 
-| `fmt`との `precision` 組み合わせ | 出力 |
+| `fmt` との `precision` 組み合わせ | 出力 |
 |--|--|
 |  どちらもオフ | 固定表記または指数表記のいずれかが短い場合は、tiebreaker として固定されています。</br>この動作は、パラメーターを受け取るオーバーロードによってシミュレートすることはできません `fmt` 。 |
 | `fmt` | 指定された形式の最小ラウンドトリップ動作 (最も短い指数形式など)。 |
 | `fmt` および `precision` | は、最短ラウンドトリップ動作を行わずに、指定された有効桁数と `printf()` スタイルを使用します。 |
-
-### <a name="return-value"></a>戻り値
-
-変換の結果を保持する[to_chars_result](to-chars-result-structure.md) 。
 
 ### <a name="example"></a>例
 

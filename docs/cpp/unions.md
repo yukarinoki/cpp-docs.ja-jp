@@ -1,47 +1,50 @@
 ---
-title: Unions
-ms.date: 05/06/2019
+title: union
+description: C++ の標準の union class 型とキーワード、その使用法と制限事項について説明します。
+ms.date: 08/18/2020
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
-- class types [C++], unions as
+- class type [C++], union as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+no-loc:
+- union
+- struct
+- enum
+- class
+- static
+ms.openlocfilehash: a4dc07df5e7858dffe62478509ee1d8dc759ce96
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213139"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722181"
 ---
-# <a name="unions"></a>Unions
+# `union`
 
 > [!NOTE]
-> C++ 17 以降では、 **std:: variant**クラスは共用体のタイプセーフな代替です。
+> C++ 17 以降では、は `std::variant` class のタイプセーフな代替です union 。
 
-**`union`** はユーザー定義型で、すべてのメンバーが同じメモリ位置を共有します。 これは、任意のどの時点においても、共用体のメンバー一覧にあるオブジェクトがただ 1 つだけ共用体に含まれていることを意味します。 また、共用体のメンバー数には関係なく、最大のメンバーを格納するのに必要なメモリーだけが常に使用されることも意味します。
+**`union`** はユーザー定義型で、すべてのメンバーが同じメモリ位置を共有します。 この定義は、任意の時点で、が union メンバーの一覧から1つ以上のオブジェクトを含むことができないことを意味します。 また、に含まれるメンバーの数に関係なく、 union 常に、最大のメンバーを格納するのに十分なメモリのみが使用されることを意味します。
 
-共用体は多数のオブジェクトやメモリの制限がある場合、メモリの節約に役立ちます。 ただし、書き込まれた最後のメンバーに常にアクセスするようにする責任はプログラマにあるため、正しく使用するには特に注意が必要です。 重要なコンストラクターを持つメンバーの種類がある場合、追加のコードを記述してそのメンバーの構築および破棄を明示的に実行する必要があります。 共用体を使用する前に、解決すべき問題が、基本クラスと派生クラスを使用することでより適切に表現できないか検討します。
+は、 union 多数のオブジェクトがあり、メモリが限られている場合にメモリを節約するために役立ちます。 ただし、を union 正しく使用するには、特別な注意が必要です。 自分が割り当てたのと同じメンバーに常にアクセスできるようにする責任があります。 いずれかのメンバー型に自明でないまたはが含まれている場合は struct 、そのメンバーを明示的に使用して破棄するために、追加のコードを記述する必要があり struct ます。 を使用する前に union 、解決しようとしている問題が、基本 class 型と派生型を使用してより適切に表現できるかどうかを検討してください class 。
 
 ## <a name="syntax"></a>構文
 
-```cpp
-union [name]  { member-list };
-```
+> **`union`***`tag`* <sub>opt</sub> **`{`** 選択 *`member-list`***`};`**
 
 ### <a name="parameters"></a>パラメーター
 
-*name*<br/>
-共用体に付ける型名。
+*`tag`*<br/>
+に指定された型名 union 。
 
-*メンバーリスト*<br/>
-共用体に含めることができるメンバー。 「解説」を参照してください。
+*`member-list`*<br/>
+に union 格納できるメンバー。
 
-## <a name="remarks"></a>解説
+## <a name="declare-a-no-locunion"></a>を宣言する union
 
-## <a name="declaring-a-union"></a>共用体の宣言
-
-次のように、キーワードを使用して共用体の宣言を開始 **`union`** し、メンバーリストを中かっこで囲みます。
+キーワードを使用しての宣言を開始 union **`union`** し、メンバーリストを中かっこで囲みます。
 
 ```cpp
 // declaring_a_union.cpp
@@ -54,6 +57,7 @@ union RecordType    // Declare a simple union type
     double d;
     int *int_ptr;
 };
+
 int main()
 {
     RecordType t;
@@ -62,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="using-unions"></a>共用体の使用
+## <a name="use-a-no-locunion"></a>使用する union
 
-前の例では、共用体にアクセスするすべてのコードが、データを保持しているメンバーを知る必要がありました。 この問題の最も一般的な解決策は、共用体を構造体で囲み、共用体に現在格納されているデータの種類を示す列挙メンバーを同じ構造体に追加することです。 これは*判別共用体*と呼ばれ、次の例は基本的なパターンを示しています。
+前の例では、にアクセスするすべてのコードが、データを保持して union いるメンバーを認識している必要があります。 この問題の最も一般的な解決策は、*判別 union *と呼ばれます。 でを囲み、に union struct 現在格納されている enum メンバーの型を示すメンバーを含め union ます。 次の例に、基本的なパターンを示します。
 
 ```cpp
 #include <queue>
@@ -107,16 +111,27 @@ struct Input
 void Process_Temp(TempData t) {}
 void Process_Wind(WindData w) {}
 
-// Container for all the data records
-queue<Input> inputs;
-void Initialize();
+void Initialize(std::queue<Input>& inputs)
+{
+    Input first;
+    first.type = WeatherDataType::Temperature;
+    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
+    inputs.push(first);
+
+    Input second;
+    second.type = WeatherDataType::Wind;
+    second.wind = { 204, 1418859354, 14, 27 };
+    inputs.push(second);
+}
 
 int main(int argc, char* argv[])
 {
-    Initialize();
+    // Container for all the data records
+    queue<Input> inputs;
+    Initialize(inputs);
     while (!inputs.empty())
     {
-        Input i = inputs.front();
+        Input const i = inputs.front();
         switch (i.type)
         {
         case WeatherDataType::Temperature:
@@ -133,29 +148,17 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-
-void Initialize()
-{
-    Input first, second;
-    first.type = WeatherDataType::Temperature;
-    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
-    inputs.push(first);
-
-    second.type = WeatherDataType::Wind;
-    second.wind = { 204,1418859354, 14, 27 };
-    inputs.push(second);
-}
 ```
 
-前の例で、入力構造体の共用体には名前がないことに注意してください。 これは無名共用体であり、そのメンバーには、構造体の直接のメンバーの場合と同様にアクセスできます。 無名共用体の詳細については、以下のセクションを参照してください。
+前の例では、の union に `Input` struct 名前がないため、 *匿名*と呼ばれてい union ます。 そのメンバーは、のメンバーであるかのように直接アクセスでき struct ます。 匿名の使用方法の詳細については、 union 「[匿名 union ](#anonymous_unions) 」セクションを参照してください。
 
-もちろん、前の例で示した問題は、共通の基本クラスから派生するクラスを使用して、コンテナー内の各オブジェクトのランタイムの型に基づいてコードを分岐することによっても解決できます。 この結果、コードの維持や理解は容易になりますが、共用体を使用するよりは低速になる場合があります。 また、共用体を使用すると、全く関連のない型を格納することや、共用体変数自体の種類を変更せずに格納されている値の型を動的に変更することができます。 そのため、要素にさまざまな型のさまざまな値を格納する MyUnionType の異種配列を作成できます。
+前の例は、共通の基本クラスから派生した型を使用して解決できる問題を示して class class います。 コンテナー内の各オブジェクトのランタイム型に基づいてコードを分岐することができます。 コードの保守と理解は簡単ですが、を使用するよりも時間がかかることがあり union ます。 また、を使用すると、関連のない union 型を格納できます。 を union 使用すると、変数自体の型を変更することなく、格納されている値の型を動的に変更でき union ます。 たとえば、 `MyUnionType` さまざまな型の異なる値を格納する要素を持つ、の異種配列を作成できます。
 
-前の例の `Input` 構造体は誤用されやすいので注意してください。 データを保持するメンバーにアクセスするには、ユーザーが識別子を正しく使用する必要があります。 次の例で示すように、共用体をプライベートにし、特別なアクセス関数を指定することで、誤用を防ぐことができます。
+この例では、を誤用するのは簡単です `Input` struct 。 データを保持するメンバーにアクセスするには、識別子を正しく使用する必要があります。 union **`private`** 次の例に示すように、と特別なアクセス機能を提供することにより、誤用を防ぐことができます。
 
-## <a name="unrestricted-unions-c11"></a>無制限の共用体 (C++11)
+## <a name="unrestricted-no-locunion-c11"></a>無制限 union (c++ 11)
 
-C++03 およびそれ以前では、クラス型を持つ非静的データ メンバーを共用体に含める場合、その型にはユーザーが指定したコンス トラクター、デストラクター、または代入演算子を含めることができませんでした。 C++11 では、これらの制限が削除されています。 共用体にこのようなメンバーを含める場合、コンパイラは、ユーザー指定外の特殊なメンバー関数を削除済みとして自動的にマークします。 共用体がクラスまたは構造体の内部にある無名共用体の場合、ユーザー指定外のクラスまたは構造体の特殊なメンバー関数は削除済みとしてマークされます。 次の例で、この特殊処理が必要なメンバーが共用体のメンバーのいずれかに含まれるケースの処理方法を示します。
+C++ 03 以前では、型が union ユーザーによって static 指定された型でない限り、型を持つ非データメンバーを含めることができ class struct struct ます。 C++11 では、これらの制限が削除されています。 このようなメンバーをに含めた場合 union 、ユーザーによって指定されていない特殊なメンバー関数はコンパイラによって自動的にマークされ **`deleted`** ます。 unionがまたは内の匿名である場合、 union ユーザーが指定し class struct ないまたはの特殊なメンバー関数は class とし struct てマークされ **`deleted`** ます。 このケースを処理する方法を次の例に示します。 のメンバーの1つ union に、この特別な処理を必要とするメンバーがあります。
 
 ```cpp
 // for MyVariant
@@ -513,99 +516,13 @@ int main()
     char c;
     cin >> c;
 }
-#include <queue>
-#include <iostream>
-using namespace std;
-
-enum class WeatherDataType
-{
-    Temperature, Wind
-};
-
-struct TempData
-{
-    TempData() : StationId(""), time(0), current(0), maxTemp(0), minTemp(0) {}
-    TempData(string id, time_t t, double cur, double max, double min)
-        : StationId(id), time(t), current(cur), maxTemp(max), minTemp(0) {}
-    string StationId;
-    time_t time = 0;
-    double current;
-    double maxTemp;
-    double minTemp;
-};
-
-struct WindData
-{
-    int StationId;
-    time_t time;
-    int speed;
-    short direction;
-};
-
-struct Input
-{
-    Input() {}
-    Input(const Input&) {}
-
-    ~Input()
-    {
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-    }
-
-    WeatherDataType type;
-    void SetTemp(const TempData& td)
-    {
-        type = WeatherDataType::Temperature;
-
-        // must use placement new because of string member!
-        new(&temp) TempData(td);
-    }
-
-    TempData GetTemp()
-    {
-        if (type == WeatherDataType::Temperature)
-            return temp;
-        else
-            throw logic_error("Can't return TempData when Input holds a WindData");
-    }
-    void SetWind(WindData wd)
-    {
-        // Explicitly delete struct member that has a
-        // non-trivial constructor
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-        wind = wd; //placement new not required.
-    }
-    WindData GetWind()
-    {
-        if (type == WeatherDataType::Wind)
-        {
-            return wind;
-        }
-        else
-            throw logic_error("Can't return WindData when Input holds a TempData");
-    }
-
-private:
-
-    union
-    {
-        TempData temp;
-        WindData wind;
-    };
-};
 ```
 
-共用体には参照を保存できません。 共用体は継承をサポートしていないため、共用体自体を基本クラスとして使用することや、もう 1 つのクラスから継承すること、仮想関数を含めることはできません。
+は union 参照を格納できません。 は、 union 継承もサポートしていません。 つまり、を union ベースとして使用し class たり、別のから継承したり、仮想関数を使用したりすることはできません class 。
 
-## <a name="initializing-unions"></a>共用体の初期化
+## <a name="initialize-a-no-locunion"></a> を初期化しますunion
 
-中かっこで囲まれた式を代入して、同じステートメントで共用体の宣言と初期化を実行できます。 この式は評価され、共用体の最初のフィールドに割り当てられます。
+union中かっこで囲まれた式を割り当てることにより、同じステートメントでを宣言して初期化することができます。 式が評価され、の最初のフィールドに割り当てられ union ます。
 
 ```cpp
 #include <iostream>
@@ -623,7 +540,7 @@ int main()
     union NumericType Values = { 10 };   // iValue = 10
     cout << Values.iValue << endl;
     Values.dValue = 3.1416;
-    cout << Values.dValue) << endl;
+    cout << Values.dValue << endl;
 }
 /* Output:
 10
@@ -631,32 +548,30 @@ int main()
 */
 ```
 
-`NumericType` 共用体は、次の図に示すように、メモリ内に配置されます (概念上)。
+は、 `NumericType` union 次の図に示すように、メモリに配置されます (概念的には)。
 
-![数値型共用体のデータ ストレージ](../cpp/media/vc38ul1.png "NumericType 共用体でのデータの格納") <br/>
-数値型共用体のデータ ストレージ
+![数値型のデータの格納::: no loc (union):::](../cpp/media/vc38ul1.png "NumericType::: no loc (union)::: のデータの格納") <br/>
+で `NumericType` のデータの格納 union
 
-## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>匿名共用体
+## <a name="anonymous-no-locunion"></a><a name="anonymous_unions"></a> 非同期 union
 
-無名共用体は、*クラス名*または*宣言子リスト*を使用せずに宣言されている共用体です。
+匿名 union は、またはを使用せずに宣言されてい *`class-name`* *`declarator-list`* ます。
 
-```cpp
-union  {  member-list  }
-```
+> **`union  {`**  *`member-list`*  **`}`**
 
-無名共用体で宣言されている名前は非メンバー変数のように直接使用されます。 そのため、無名共用体で宣言された名前は前後のスコープで一意である必要があります。
+匿名で宣言された名前 union は、非メンバー変数のように直接使用されます。 これは、匿名で宣言された名前が、 union 外側のスコープ内で一意である必要があることを意味します。
 
-名前付き共用体の制限に加えて、匿名共用体には次の追加の制限が適用されます。
+匿名の場合、次の union 追加の制限が適用されます。
 
-- また、 **`static`** ファイルまたは名前空間スコープで宣言されているかのように宣言する必要があります。
+- ファイルまたは名前空間スコープで宣言されている場合は、としても宣言する必要があり **`static`** ます。
 
-- メンバーのみを持つことができ **`public`** **`private`** 、 **`protected`** 匿名共用体のメンバーはエラーを生成します。
+- メンバーのみを持つことができ **`public`** ます。 **`private`** **`protected`** 匿名のとのメンバーによって union エラーが生成されます。
 
-- メンバー関数を含めることはできません。
+- メンバー関数を持つことはできません。
 
 ## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[class](../cpp/class-cpp.md)<br/>
-[struct](../cpp/struct-cpp.md)
+[`class`](../cpp/class-cpp.md)<br/>
+[`struct`](../cpp/struct-cpp.md)
