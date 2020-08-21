@@ -48,6 +48,8 @@
       href: ../linux/cmake-linux-project.md
     - name: Linux CMake プロジェクトを構成する
       href: ../linux/cmake-linux-configure.md
+    - name: CMake デバッグ セッションを構成する
+      href: ../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json
     - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
       href: ../build/get-started-linux-cmake.md
 - name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
