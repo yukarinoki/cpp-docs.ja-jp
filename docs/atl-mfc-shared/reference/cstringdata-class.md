@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746840"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832114"
 ---
 # <a name="cstringdata-class"></a>CStringData クラス
 
@@ -40,54 +40,54 @@ struct CStringData
 
 ### <a name="methods"></a>メソッド
 
-|||
+|名前|説明|
 |-|-|
-|[AddRef](#addref)|文字列データ オブジェクトの参照カウントをインクリメントします。|
-|[データ](#data)|文字列オブジェクトの文字データを取得します。|
-|[IsLocked](#islocked)|関連付けられた文字列オブジェクトのバッファがロックされているかどうかを判断します。|
-|[IsShared](#isshared)|関連付けられた文字列オブジェクトのバッファが現在共有されているかどうかを判断します。|
-|[[Lock] (ロック)](#lock)|関連付けられた文字列オブジェクトのバッファーをロックします。|
+|[AddRef](#addref)|文字列データオブジェクトの参照カウントをインクリメントします。|
+|[data](#data)|文字列オブジェクトの文字データを取得します。|
+|[IsLocked](#islocked)|関連付けられた文字列オブジェクトのバッファーがロックされているかどうかを判断します。|
+|[IsShared](#isshared)|関連付けられている文字列オブジェクトのバッファーが現在共有されているかどうかを判断します。|
+|[[Lock] (ロック)](#lock)|関連付けられている文字列オブジェクトのバッファーをロックします。|
 |[リリース](#release)|指定した文字列オブジェクトを解放します。|
-|[ロック 解除](#unlock)|関連付けられた文字列オブジェクトのバッファをロック解除します。|
+|[ロック](#unlock)|関連付けられている文字列オブジェクトのバッファーのロックを解除します。|
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+|名前|説明|
 |-|-|
-|[長さ](#nalloclength)|s 内の割り`XCHAR`当てられたデータの長さ (終端 NULL を含まない)|
-|[長さ](#ndatalength)|s 内で現在使用`XCHAR`されているデータの長さ (終端 NULL を含まない)|
-|[n参照](#nrefs)|オブジェクトの現在の参照カウント。|
-|[をクリックします。](#pstringmgr)|この文字列オブジェクトの文字列マネージャーへのポインター。|
+|[nAllocLength](#nalloclength)|S で割り当てられたデータの長さ `XCHAR` (終端の null は含まない)|
+|[nDataLength](#ndatalength)|内で現在使用されているデータの長さ `XCHAR` (終端の null は含まない)|
+|[nRefs](#nrefs)|オブジェクトの現在の参照カウント。|
+|[pStringMgr](#pstringmgr)|この文字列オブジェクトの文字列マネージャーへのポインター。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、カスタム文字列マネージャーを実装する開発者のみが使用する必要があります。 カスタム文字列マネージャーの詳細については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
+このクラスは、カスタム文字列マネージャーを実装する開発者によってのみ使用されます。 カスタム文字列マネージャーの詳細については、「[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md) 」を参照してください。
 
-このクラスは[、CStringT 、CSimpleStringT、CFixedStringT](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトなど、より[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)高い文字列オブジェクトに関連[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)付けられたさまざまな種類の情報とデータをカプセル化します。 すべての上位の文字列オブジェクトには、関連付けられた`CStringData`オブジェクトへのポインターが含まれているため、複数の文字列オブジェクトが同じ文字列データオブジェクトを指すことができます。 この関係は、`nRefs``CStringData`オブジェクトの参照カウント ( ) で表されます。
+このクラスは、 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)、 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)、 [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md) オブジェクトなど、より上位の文字列オブジェクトに関連付けられているさまざまな種類の情報とデータをカプセル化します。 上位のすべての string オブジェクトには、関連付けられたオブジェクトへのポインターが含まれてい `CStringData` ます。これにより、複数の string オブジェクトが同じ文字列データオブジェクトを指すことができます。 このリレーションシップは、オブジェクトの参照カウント () によって表され `nRefs` `CStringData` ます。
 
 > [!NOTE]
-> 場合によっては、文字列型 ( など`CFixedString`) は、複数の上位の文字列オブジェクトと文字列データオブジェクトを共有しません。 詳細については、「[メモリ管理」および「CStringT」](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
+> 場合によっては、文字列型 (など) は、複数 `CFixedString` の上位の文字列オブジェクトと文字列データオブジェクトを共有しません。 詳細については、「 [メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)」を参照してください。
 
-このデータは、次の要素で構成されます。
+このデータは次のもので構成されます。
 
-- 文字列のメモリ マネージャー [(IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)型) です。
+- 文字列のメモリマネージャー ( [IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)型)。
 
-- 文字列の現在の長さ ( [nDataLength](#ndatalength)) を指定します。
+- 文字列の現在の長さ ( [Ndatalength](#ndatalength))。
 
-- 文字列の割り当てられた長さ ( [nAllocLength](#nalloclength)) 。 パフォーマンス上の理由から、現在の文字列の長さとは異なる場合があります。
+- 文字列の割り当てられた長さ ( [nAllocLength](#nalloclength))。 パフォーマンス上の理由から、これは現在の文字列の長さと異なる場合があります。
 
-- `CStringData`オブジェクトの現在の参照カウント ( [nRefs](#nrefs)) です。 この値は、同じ`CStringData`オブジェクトを共有している文字列オブジェクトの数を決定するときに使用されます。
+- オブジェクトの現在の参照カウント ( [Nrefs](#nrefs)) `CStringData` 。 この値は、同じオブジェクトを共有する文字列オブジェクトの数を決定するために使用され `CStringData` ます。
 
-- 文字列の実際の文字バッファー ([データ](#data)) です。
+- 文字列の実際の文字バッファー ( [データ](#data))。
 
    > [!NOTE]
-   > 文字列オブジェクトの実際の文字バッファーは、文字列マネージャーによって割り当てられ、オブジェクトに`CStringData`追加されます。
+   > 文字列オブジェクトの実際の文字バッファーは文字列マネージャーによって割り当てられ、オブジェクトに追加され `CStringData` ます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsimpstr.h
+**ヘッダー:** atl. h
 
-## <a name="cstringdataaddref"></a><a name="addref"></a>を使用します。
+## <a name="cstringdataaddref"></a><a name="addref"></a> CStringData:: AddRef
 
 文字列オブジェクトの参照カウントをインクリメントします。
 
@@ -100,9 +100,9 @@ void AddRef() throw();
 文字列オブジェクトの参照カウントをインクリメントします。
 
 > [!NOTE]
-> 負のカウントは文字列バッファーがロックされていることを示すため、負の参照カウントを持つ文字列に対してこのメソッドを呼び出しません。
+> 負の数は文字列バッファーがロックされていることを示すため、負の値を持つ文字列に対してこのメソッドを呼び出さないでください。
 
-## <a name="cstringdatadata"></a><a name="data"></a>:dタータ
+## <a name="cstringdatadata"></a><a name="data"></a> CStringData: ata:d
 
 文字列オブジェクトの文字バッファーへのポインターを返します。
 
@@ -116,12 +116,12 @@ void* data() throw();
 
 ### <a name="remarks"></a>解説
 
-関連付けられた文字列オブジェクトの現在の文字バッファーを返します。
+この関数を呼び出して、関連付けられている文字列オブジェクトの現在の文字バッファーを返します。
 
 > [!NOTE]
-> このバッファは`CStringData`、オブジェクトによって割り当てられませんが、必要に応じて文字列マネージャによって割り当てられます。 割り当てられると、バッファーは文字列データ オブジェクトに追加されます。
+> このバッファーは、オブジェクトによって割り当てられるのではなく、 `CStringData` 必要に応じて文字列マネージャーによって割り当てられます。 割り当てられた場合、バッファーは文字列データオブジェクトに追加されます。
 
-## <a name="cstringdataislocked"></a><a name="islocked"></a>を指定します。
+## <a name="cstringdataislocked"></a><a name="islocked"></a> CStringData:: IsLocked
 
 文字バッファーがロックされているかどうかを判断します。
 
@@ -135,9 +135,9 @@ bool IsLocked() const throw();
 
 ### <a name="remarks"></a>解説
 
-文字列オブジェクトの文字バッファーが現在ロックされているかどうかを調べます。
+文字列オブジェクトの文字バッファーが現在ロックされているかどうかを判断するには、この関数を呼び出します。
 
-## <a name="cstringdataisshared"></a><a name="isshared"></a>を使用します。
+## <a name="cstringdataisshared"></a><a name="isshared"></a> CStringData::IsShared
 
 文字バッファーが共有されているかどうかを判断します。
 
@@ -151,11 +151,11 @@ bool IsShared() const throw();
 
 ### <a name="remarks"></a>解説
 
-文字列データ オブジェクトの文字バッファーが現在複数の文字列オブジェクト間で共有されているかどうかを調べます。
+文字列データオブジェクトの文字バッファーが現在複数の文字列オブジェクト間で共有されているかどうかを判断するには、この関数を呼び出します。
 
-## <a name="cstringdatalock"></a><a name="lock"></a>ロック
+## <a name="cstringdatalock"></a><a name="lock"></a> CStringData:: Lock
 
-関連付けられた文字列オブジェクトの文字バッファーをロックします。
+関連付けられている文字列オブジェクトの文字バッファーをロックします。
 
 ```cpp
 void Lock() throw();
@@ -163,12 +163,12 @@ void Lock() throw();
 
 ### <a name="remarks"></a>解説
 
-文字列データ オブジェクトの文字バッファーをロックします。 ロックとロック解除は、開発者が文字バッファーに直接アクセスする必要がある場合に使用されます。 ロックの良い例は、[のロック バッファ](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)メソッドと[ロック バッファロック メソッド](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)によって示されています。 `CSimpleStringT`
+文字列データオブジェクトの文字バッファーをロックするには、この関数を呼び出します。 ロックとロック解除は、文字バッファーへの直接アクセスが開発者に必要な場合に使用されます。 ロックの例としては、の [Lockbuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) メソッドと [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) メソッドが挙げられ `CSimpleStringT` ます。
 
 > [!NOTE]
-> 文字バッファーは、バッファーが上位のストリング・オブジェクト間で共有されていない場合にのみロックできます。
+> バッファーが上位の文字列オブジェクト間で共有されていない場合にのみ、文字バッファーをロックできます。
 
-## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a>を返します。
+## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a> CStringData::nAllocLength
 
 割り当てられた文字バッファーの長さ。
 
@@ -178,9 +178,9 @@ int nAllocLength;
 
 ### <a name="remarks"></a>解説
 
-割り当てられたデータ バッファの長さを`XCHAR`s に格納します (終端 null は含まれません)。
+割り当てられたデータバッファーの長さを s に格納し `XCHAR` ます (終端の null は含まれません)。
 
-## <a name="cstringdatandatalength"></a><a name="ndatalength"></a>データを返します。
+## <a name="cstringdatandatalength"></a><a name="ndatalength"></a> CStringData:: nDataLength
 
 文字列オブジェクトの現在の長さ。
 
@@ -190,11 +190,11 @@ int nDataLength;
 
 ### <a name="remarks"></a>解説
 
-現在使用されているデータの長さを`XCHAR`s に格納します (終端 null は含まれません)。
+現在使用されているデータの長さを s に格納 `XCHAR` します (終端の null は含まれません)。
 
-## <a name="cstringdatanrefs"></a><a name="nrefs"></a>を返します。
+## <a name="cstringdatanrefs"></a><a name="nrefs"></a> CStringData:: nRefs
 
-文字列データ オブジェクトの参照カウント。
+文字列データオブジェクトの参照カウント。
 
 ```
 long nRefs;
@@ -202,11 +202,11 @@ long nRefs;
 
 ### <a name="remarks"></a>解説
 
-文字列データ オブジェクトの参照カウントを格納します。 このカウントは、文字列データ オブジェクトに関連付けられている、より大きい文字列オブジェクトの数を示します。 負の値は、文字列データ オブジェクトが現在ロックされていることを示します。
+文字列データオブジェクトの参照カウントを格納します。 この数は、文字列データオブジェクトに関連付けられている上位の文字列オブジェクトの数を示します。 負の値は、文字列データオブジェクトが現在ロックされていることを示します。
 
-## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a>:p文字列を返します。
+## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a> CStringData::p StringMgr
 
-関連付けられた文字列オブジェクトのメモリ マネージャー。
+関連付けられている文字列オブジェクトのメモリマネージャー。
 
 ```
 IAtlStringMgr* pStringMgr;
@@ -214,11 +214,11 @@ IAtlStringMgr* pStringMgr;
 
 ### <a name="remarks"></a>解説
 
-関連付けられた文字列オブジェクトのメモリ マネージャーを格納します。 メモリ マネージャと文字列の詳細については、「[メモリ管理」および「CStringT」](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
+関連付けられている文字列オブジェクトのメモリマネージャーを格納します。 メモリマネージャーと文字列の詳細については、「 [メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)」を参照してください。
 
-## <a name="cstringdatarelease"></a><a name="release"></a>::リリース
+## <a name="cstringdatarelease"></a><a name="release"></a> CStringData:: Release
 
-文字列データ オブジェクトの参照カウントをデクリメントします。
+文字列データオブジェクトの参照カウントをデクリメントします。
 
 ```cpp
 void Release() throw();
@@ -226,15 +226,15 @@ void Release() throw();
 
 ### <a name="remarks"></a>解説
 
-参照カウントがゼロに達した場合に構造体を`CStringData`解放して、参照カウントを減らします。 これは通常、文字列オブジェクトが削除された場合に行われるため、文字列データオブジェクトを参照する必要がなくなります。
+参照カウントをデクリメントし、 `CStringData` 参照カウントがゼロになった場合に構造体を解放するには、この関数を呼び出します。 これは、通常、文字列オブジェクトが削除され、その結果、文字列データオブジェクトを参照する必要がなくなった場合に実行されます。
 
-たとえば、次のコードは、`CStringData::Release`に関連付けられた`str1`文字列データ オブジェクトを呼び出します。
+たとえば、次のコードは、 `CStringData::Release` に関連付けられている文字列データオブジェクトに対してを呼び出し `str1` ます。
 
 [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]
 
-## <a name="cstringdataunlock"></a><a name="unlock"></a>ロック解除
+## <a name="cstringdataunlock"></a><a name="unlock"></a> CStringData:: Unlock
 
-関連付けられた文字列オブジェクトの文字バッファーのロックを解除します。
+関連付けられている文字列オブジェクトの文字バッファーのロックを解除します。
 
 ```cpp
 void Unlock() throw();
@@ -242,14 +242,14 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>解説
 
-文字列データ オブジェクトの文字バッファーをロック解除します。 いったんロックが解除されると、そのバッファは共有可能になり、参照カウントが可能になります。
+文字列データオブジェクトの文字バッファーのロックを解除するには、この関数を呼び出します。 バッファーのロックが解除されると、そのバッファーは共有可能になり、参照カウントされる可能性があります。
 
 > [!NOTE]
-> の`Lock`各呼び出しは、 への対応`Unlock`する呼び出しと一致する必要があります。
+> への各呼び出しは `Lock` 、対応するへの呼び出しによって照合される必要があり `Unlock` ます。
 
-ロックとロック解除は、開発者が文字列データを共有しないようにする必要がある場合に使用されます。 ロックの良い例は、[のロック バッファ](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)メソッドと[ロック バッファロック メソッド](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)によって示されています。 `CSimpleStringT`
+ロックとロック解除は、開発者が文字列データを共有しないようにする必要がある場合に使用します。 ロックの例としては、の [Lockbuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) メソッドと [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) メソッドが挙げられ `CSimpleStringT` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

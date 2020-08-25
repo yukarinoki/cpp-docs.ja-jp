@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561324"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834298"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager クラス
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|現在の Windows テーマを使用して、チェックボックスコントロールを描画します。|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|現在の Windows テーマを使用して、コンボボックスの境界線を描画します。|
 |[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|現在の Windows テーマを使用して、コンボボックスのドロップダウンボタンを描画します。|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|||
+|名前|説明|
 |-|-|
-|Name|説明|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`で取得したすべてのハンドルのを呼び出し `UpdateSystemColors` ます。|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|を呼び出して、 `OpenThemeData` さまざまなコントロール (ウィンドウ、ツールバー、ボタンなど) を描画するハンドルを取得します。|
 

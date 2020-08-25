@@ -1,4 +1,4 @@
-﻿---
+---
 title: raw_storage_iterator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217637"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831425"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator クラス
 
@@ -46,26 +46,26 @@ template <class OutputIterator, class Type>
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|指定した基になる出力反復子を使用して、生のストレージの反復子を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[element_type](#element_type)|生のストレージ反復子によって格納される要素を記述する型を提供します。|
 |[iter_type](#iter_type)|生のストレージ反復子の基になる反復子を記述する型を提供します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator](#op_star)|出力反復子式を実装するために使用される逆参照演算子 \* `ii`  =  `x` 。|
 |[operator =](#op_eq)|\* `i`  =  `x` メモリに格納するための生のストレージ反復子式を実装するために使用される代入演算子。|
 |[+ + 演算子](#op_add_add)|生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 生のストレージ反復子によって格納される要素を記述する型を提供します。
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 この型は、raw_storage_iterator クラステンプレートパラメーターのシノニムです `Type` 。
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 生のストレージ反復子の基になる反復子を記述する型を提供します。
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 この型は、テンプレート パラメーター `ForwardIterator` のシノニムです。
 
-### <a name="operator"></a><a name="op_star"></a>operator\*
+### <a name="operator"></a><a name="op_star"></a> operator\*
 
 生のストレージ反復子式 \* *ii*  =  *x*を実装するために使用される逆参照演算子。
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a> operator =
 
 \* *i*  =  メモリに格納するための生のストレージ反復子式 i*x*を実装するために使用される代入演算子。
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>+ + 演算子
+### <a name="operator"></a><a name="op_add_add"></a> + + 演算子
 
 生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 指定した基になる出力反復子を使用して、生のストレージの反復子を構築します。
 

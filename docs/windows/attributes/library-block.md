@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13988abc12eb0b136dfc8d2c0d597005b56f0526
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214774"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834117"
 ---
 # <a name="library_block"></a>library_block
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214774"
 
 ## <a name="remarks"></a>解説
 
-構造体をライブラリブロック内に配置すると、参照されているかどうかに関係なく、そのコンストラクトがタイプライブラリに渡されます。 既定では、[コクラス](coclass.md)、[ディスパッチインターフェイス](dispinterface.md)、および[idl_module](idl-module.md)属性によって変更されたコンストラクトのみがライブラリブロックに配置されます。
+構造体をライブラリブロック内に配置すると、参照されているかどうかに関係なく、そのコンストラクトがタイプライブラリに渡されます。 既定では、 [コクラス](coclass.md)、 [ディスパッチインターフェイス](dispinterface.md)、および [idl_module](idl-module.md) 属性によって変更されたコンストラクトのみがライブラリブロックに配置されます。
 
 ## <a name="example"></a>例
 
@@ -44,18 +44,16 @@ __interface IMyInterface {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)

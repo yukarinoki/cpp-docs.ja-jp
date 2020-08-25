@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831139"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体
 
-イメージ エディター ダイアログ ボックスでイメージを変更するために使用する描画モードを指定します。
+イメージエディターダイアログボックスでイメージを変更するために使用する描画モードを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,25 +33,24 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>メンバー
 
-|||
-|-|-|
 |名前|説明|
-|IMAGE_EDIT_MODE_PEN|個々 のピクセルの描画に使用します。|
-|IMAGE_EDIT_MODE_FILL|現在のカーソル位置の色を含むすべての隣接する領域を塗りつぶすために使用します。|
+|-|-|
+|IMAGE_EDIT_MODE_PEN|個々のピクセルを描画するために使用されます。|
+|IMAGE_EDIT_MODE_FILL|現在のカーソル位置にある色を含むすべての隣接領域を塗りつぶすために使用されます。|
 |IMAGE_EDIT_MODE_LINE|線を描画するために使用します。|
 |IMAGE_EDIT_MODE_RECT|四角形を描画するために使用します。|
 |IMAGE_EDIT_MODE_ELLIPSE|楕円を描画するために使用します。|
-|IMAGE_EDIT_MODE_COLOR|現在のカーソル位置にある現在の色を色に設定するために使用します。|
+|IMAGE_EDIT_MODE_COLOR|現在の色を現在のカーソル位置の色に設定するために使用します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CMFCImagePaintArea`と`CMFCImageEditorDialog`クラスでは、この列挙体を使用して、現在の描画モードを設定します。 描画モードと現在の色は、イメージ エディター ダイアログ ボックスで画像領域の変更に使用されます。 詳細については`CMFCImagePaintArea`と`CMFCImageEditorDialog`を参照してください[CMFCImagePaintArea クラス](../../mfc/reference/cmfcimagepaintarea-class.md)と[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
+`CMFCImagePaintArea`クラスと `CMFCImageEditorDialog` クラスは、この列挙を使用して現在の描画モードを設定します。 描画モードと現在の色は、[イメージエディター] ダイアログボックスの画像領域を変更するために使用されます。 およびの詳細について `CMFCImagePaintArea` `CMFCImageEditorDialog` は、「 [CMFCImagePaintArea クラス](../../mfc/reference/cmfcimagepaintarea-class.md) 」および「 [cmfcimageeditordialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)」を参照してください。
 
-イメージから IMAGE_EDIT_MODE_COLOR の描画モードを使用して色を選択すると、フレームワークは IMAGE_EDIT_MODE_PEN を現在の描画モードを設定します。
+IMAGE_EDIT_MODE_COLOR 描画モードを使用してイメージから色を選択すると、フレームワークによって現在の描画モードが IMAGE_EDIT_MODE_PEN に設定されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afximagepaintarea.h
+**ヘッダー:** afximagepaintarea
 
 ## <a name="see-also"></a>関連項目
 

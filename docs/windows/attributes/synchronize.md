@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7edbaa4e572af18bec9b3b6bef54594d6511390
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214514"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831672"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214514"
 
 ## <a name="remarks"></a>解説
 
-**Synchronize** C++属性は、オブジェクトのターゲットメソッドを同期するためのサポートを実装します。 同期を使用すると、ターゲットメソッドのアクセスを制御することによって、複数のオブジェクトが共通のリソース (クラスのメソッドなど) を使用できるようになります。
+**Synchronize** C++ 属性は、オブジェクトのターゲットメソッドを同期するためのサポートを実装します。 同期を使用すると、ターゲットメソッドのアクセスを制御することによって、複数のオブジェクトが共通のリソース (クラスのメソッドなど) を使用できるようになります。
 
-この属性によって挿入されたコードは、ターゲットメソッドの先頭にある適切な `Lock` メソッド (スレッドモデルによって決まります) を呼び出します。 メソッドが終了すると、`Unlock` が自動的に呼び出されます。 これらの関数の詳細については、「 [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock) 」を参照してください。
+この属性によって挿入されたコードは、 `Lock` ターゲットメソッドの先頭にある (スレッドモデルによって決定される) 適切なメソッドを呼び出します。 メソッドが終了すると、 `Unlock` が自動的に呼び出されます。 これらの関数の詳細については、「 [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock) 」を参照してください。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、`progid` が適用されている場合、`vi_progid` と `coclass` も適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が適用されている場合、 `progid` `vi_progid` と `coclass` も適用されます。
 
 ## <a name="example"></a>例
 
-次のコードは、`CMyClass` オブジェクトの `UpdateBalance` メソッドの同期を提供します。
+次のコードは、オブジェクトのメソッドの同期を提供し `UpdateBalance` `CMyClass` ます。
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -62,17 +62,15 @@ class CMyClass {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|Class メソッド、メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
+|**適用対象**|Class メソッド、メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|、、またはが1つ以上あり `coclass` `progid` `vi_progid` ます。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)

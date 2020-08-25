@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560869"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831802"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator クラス
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|`CMFCRibbonSeparator` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCRibbonSeparator:: AddToListBox](#addtolistbox)|[**カスタマイズ**] ダイアログボックスの [**コマンド**] ボックスの一覧に区切り記号を追加します。 ( [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)をオーバーライドします)。|
 |`CMFCRibbonSeparator::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |`CMFCRibbonSeparator::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|||
+|名前|説明|
 |-|-|
-|Name|説明|
 |[CMFCRibbonSeparator:: CopyFrom](#copyfrom)|区切り記号のメンバー変数を別のオブジェクトから設定するコピーメソッド。|
 |[CMFCRibbonSeparator:: GetRegularSize](#getregularsize)|区切り記号のサイズを返します。|
 |[CMFCRibbonSeparator:: IsSeparator](#isseparator)|区切り記号かどうかを示します。|

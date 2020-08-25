@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212190"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836440"
 ---
 # <a name="nested_exception-class"></a>nested_exception クラス
 
@@ -30,26 +30,26 @@ class nested_exception {
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
-|[operator =](#op_as)||
+|[operator =](#op_as)|代入演算子。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|格納されている例外をスローします。|
 |[nested_ptr](#nested_ptr)|格納されている例外を返します。|
 
-### <a name="operator"></a><a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a> operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a> nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -59,7 +59,7 @@ exception_ptr nested_ptr() const;
 
 このオブジェクトによってキャプチャされた格納された例外 `nested_exception` 。
 
-### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a> rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;

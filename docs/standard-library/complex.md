@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222577"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831503"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "87222577"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**:\<complex>
+**ヘッダー**: \<complex>
 
 **名前空間:** std
 
@@ -62,17 +62,17 @@ ms.locfileid: "87222577"
 
 - デカルト形式の虚数要素、または虚数部 *b*。
 
-- 複素数*r*の剰余または絶対値。
+- 複素数 *r*の剰余または絶対値。
 
-- 引数またはフェーズアングル*p* (ラジアン)。
+- 引数またはフェーズアングル *p* (ラジアン)。
 
 特に指定しない限り、複数の値を返すことができる関数は、-πより大きく + π以下の引数のプリンシパル値を返して単一の値を保持する必要があります。 すべての角度はラジアンで表現する必要があります。ここで、円には2πラジアン (360 °) があります。
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[絶対](../standard-library/complex-functions.md#abs)|複素数の係数を計算します。|
 |[acos](../standard-library/complex-functions.md#acos)||
@@ -100,22 +100,22 @@ ms.locfileid: "87222577"
 |[タンジェント](../standard-library/complex-functions.md#tan)|複素数のタンジェントを返します。|
 |[tanh](../standard-library/complex-functions.md#tanh)|複素数のハイパーボリック タンジェントを返します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator! =](../standard-library/complex-operators.md#op_neq)|2 つの複素数の間の非同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
 |[operator](../standard-library/complex-operators.md#op_star)|2 つの複素数を乗算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
 |[演算子 +](../standard-library/complex-operators.md#op_add)|2 つの複素数を加算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
 |[operator](../standard-library/complex-operators.md#operator-)|2 つの複素数を減算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
 |[operator](../standard-library/complex-operators.md#op_div)|2 つの複素数を除算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
-|[<演算子\<](../standard-library/complex-operators.md#op_lt_lt)|出力ストリームに複素数を挿入するテンプレート関数。|
+|[<演算子 \<](../standard-library/complex-operators.md#op_lt_lt)|出力ストリームに複素数を挿入するテンプレート関数。|
 |[operator = =](../standard-library/complex-operators.md#op_eq_eq)|2 つの複素数の間の同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
-|[>>演算子](../standard-library/complex-operators.md#op_gt_gt)|入力ストリームから複素数を抽出するテンプレート関数。|
+|[>>演算子 ](../standard-library/complex-operators.md#op_gt_gt)|入力ストリームから複素数を抽出するテンプレート関数。|
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[作業\<double>](../standard-library/complex-double.md)|明示的に特殊化されたクラステンプレートは、順序付けされたオブジェクトのペア (型の両方) を格納するオブジェクトを記述します **`double`** 。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
 |[作業\<float>](../standard-library/complex-float.md)|明示的に特殊化されたクラステンプレートは、順序付けされたオブジェクトのペア (型の両方) を格納するオブジェクトを記述します **`float`** 。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
@@ -124,9 +124,9 @@ ms.locfileid: "87222577"
 
 ### <a name="literals"></a>リテラル
 
-ヘッダーは、 \<complex> 実数部がゼロで、虚数部が入力パラメーターの値である複素数を作成する、次の[ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)を定義します。
+ヘッダーは、 \<complex> 実数部がゼロで、虚数部が入力パラメーターの値である複素数を作成する、次の [ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md) を定義します。
 
-|||
+|宣言|説明|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|戻り値: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}` を返します。|

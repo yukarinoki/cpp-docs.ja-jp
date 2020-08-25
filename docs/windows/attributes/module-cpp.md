@@ -1,17 +1,17 @@
 ---
-title: モジュール (C++ COM 属性)
+title: module (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 9d4f9e23aaf182e28930ba3a4462b07533ba9015
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b6cde0baaae9901258e90ededf05c60cb13a7dc1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833973"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -26,54 +26,54 @@ ms.locfileid: "81754384"
 ### <a name="parameters"></a>パラメーター
 
 *type*<br/>
-(オプション)次のいずれかを指定できます。
+Optional次のいずれかを指定できます。
 
-- `dll`結果として生成される DLL をインプロセス COM サーバーとして機能させる関数とクラスを追加します。 これが既定値です。
+- `dll` 結果の DLL がインプロセス COM サーバーとして機能することを許可する関数およびクラスを追加します。 これが既定値です。
 
-- `exe`結果として生成される実行可能ファイルをプロセス外の COM サーバーとして機能させる関数とクラスを追加します。
+- `exe` 生成された実行可能ファイルがアウトプロセス COM サーバーとして機能することを許可する関数およびクラスを追加します。
 
-- `service`結果として生成される実行可能ファイルを NT サービスとして機能させる関数とクラスを追加します。
+- `service` 結果の実行可能ファイルが NT サービスとして機能することを許可する関数およびクラスを追加します。
 
-- `unspecified`モジュール属性に関連する ATL コードの挿入を無効にします: ATL モジュール クラス、グローバル インスタンス_AtlModule、およびエントリ ポイント関数の挿入。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
+- `unspecified` モジュール属性に関連する ATL コードの挿入を無効にします。 ATL モジュールクラスの挿入、グローバルインスタンス _AtlModule エントリポイント関数。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
 
 *name*<br/>
-(オプション)ライブラリ ブロックの名前。
+Optionalライブラリブロックの名前。
 
 *version*<br/>
-(オプション)ライブラリ ブロックに割り当てるバージョン番号。 既定値は 1.0 です。
+Optionalライブラリブロックに割り当てるバージョン番号です。 既定値は 1.0 です。
 
-*Uuid*<br/>
+*uuid*<br/>
 ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 識別子 *__uuidof(* libraryname **)** *を使用して、ライブラリ ブロックの* **uuid**を取得する必要がある場合があります。
 
-*Lcid*<br/>
+*lcid*<br/>
 ローカリゼーション パラメーターです。 詳細については、「 [lcid](/windows/win32/Midl/lcid) 」を参照してください。
 
-*コントロール*<br/>
-(オプション)ライブラリ内のすべてのコクラスがコントロールであることを指定します。
+*control*<br/>
+Optionalライブラリ内のすべてのコクラスがコントロールであることを指定します。
 
 *helpstring*<br/>
 タイプ ライブラリを指定します。
 
 *typelib*<br/>
-(オプション)ドキュメント文字列検索の実行に使用する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/win32/Midl/helpstringdll) 」を参照してください。
+Optionalドキュメント文字列検索を実行するために使用する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/win32/Midl/helpstringdll) 」を参照してください。
 
-*Helpfile*<br/>
-(オプション)タイプ ライブラリの**ヘルプ**ファイルの名前。
+*helpfile*<br/>
+Optionalタイプライブラリの **ヘルプ** ファイルの名前。
 
 *helpcontext*<br/>
-(オプション)このタイプ ライブラリの**ヘルプ ID。**
+Optionalこのタイプライブラリの **ヘルプ ID** です。
 
 *helpstringcontext*<br/>
-(オプション)詳細については、[ヘルプ文字列コンテキスト](helpstringcontext.md)を参照してください。
+Optional詳細については、「 [helpstringcontext](helpstringcontext.md) 」を参照してください。
 
-*隠さ れた*<br/>
-(オプション)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
+*表示*<br/>
+Optionalライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
-*制限*<br/>
-(オプション)ライブラリのメンバーは任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
+*限定*<br/>
+Optionalライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
-*カスタム*<br/>
-(オプション)1 つ以上の属性。これは[カスタム](custom-cpp.md)属性に似ています。 *カスタム*の最初のパラメーターは、属性の GUID です。 次に例を示します。
+*ショー*<br/>
+Optional1つまたは複数の属性。これは、 [カスタム](custom-cpp.md) 属性に似ています。 *カスタム*の最初のパラメーターは、属性の GUID です。 次に例を示します。
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -93,21 +93,21 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 .idl ファイルでは、1 つのライブラリ ブロックが許可されています。 ソース コードに複数のモジュールのエントリがある場合、実装されている最新のパラメーター値と結合されます。
 
-この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 上記の動作に加えて、属性は正しい型のグローバル オブジェクト`_AtlModule`(と呼ばれる) と追加のサポート コードを挿入します。 属性がスタンドアロンの場合、正しいモジュールの種類から派生したクラスが挿入されます。 属性がクラスに適用された場合、正しいモジュールの種類の基本クラスが追加されます。 正しい型は *、type*パラメーターの値によって決まります。
+この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 上記の動作に加えて、属性は、 `_AtlModule` 正しい型と追加のサポートコードのグローバルオブジェクト (と呼ばれます) も挿入します。 属性がスタンドアロンの場合、正しいモジュールの種類から派生したクラスが挿入されます。 属性がクラスに適用された場合、正しいモジュールの種類の基本クラスが追加されます。 正しい型は、 *型* パラメーターの値によって決まります。
 
-- `type` = **Dll**
+- `type` = **dll**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/win32/Dlls/dllmain)、 [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)です。
 
-- `type` = **exe**
+- `type` = **excel.exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)として使用されます。
 
-- `type` = **サービス**
+- `type` = **処理**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)として使用されます。
 
-- `type` = **未指定**
+- `type` = **不明**
 
    モジュール属性と関連する ATL コードの挿入を無効にします。
 
@@ -148,12 +148,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|任意の場所|
-|**再現**|いいえ|
+|**Repeatable**|いいえ|
 |**必須属性**|なし|
 |**無効な属性**|なし|
 
@@ -164,10 +162,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
-[型定義、列挙型、和集合、および構造体の属性](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
 [ライブラリ](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
-[Helpfile](helpfile.md)<br/>
+[helpfile](helpfile.md)<br/>
 [version](version-cpp.md)

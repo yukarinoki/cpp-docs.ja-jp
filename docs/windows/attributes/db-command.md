@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831373"
 ---
 # <a name="db_command"></a>db_command
 
@@ -62,13 +62,13 @@ OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例
 
   - ** \[ in、out] は、** 入力/出力パラメーターとしてメンバー変数をバインドします。
 
-- *szvarx*、 *nvarx*は、現在のスコープ内のメンバー変数に解決されます。
+- *szvarx*、 *nvarx* は、現在のスコープ内のメンバー変数に解決されます。
 
 - **)** は、データ バインディング ブロックの終了を示します。
 
-コマンド文字列に \[ [in]、[out]、[in/out] などの指定子が1つ以上含まれている場合 \[ \[ 、 **db_command**はパラメーターマップを作成します。
+コマンド文字列に \[ [in]、[out]、[in/out] などの指定子が1つ以上含まれている場合 \[ \[ 、 **db_command** はパラメーターマップを作成します。
 
-コマンド文字列に db_column] や bindto などの1つ以上のパラメーターが含まれている場合 \[ \[ 、 **db_command**によって行セットとアクセサーマップが生成され、これらのバインドされた変数を処理できます。 詳しくは、「 [db_accessor](db-accessor.md) 」をご覧ください。
+コマンド文字列に db_column] や bindto などの1つ以上のパラメーターが含まれている場合 \[ \[ 、 **db_command** によって行セットとアクセサーマップが生成され、これらのバインドされた変数を処理できます。 詳しくは、「 [db_accessor](db-accessor.md) 」をご覧ください。
 
 > [!NOTE]
 > \[*bindtype*]クラスレベルで**db_command**を使用する場合、構文と*バインド*パラメーターは無効です。
@@ -127,7 +127,7 @@ OLE DB コンシューマーは、**db_command** によって作成された [CC
 
 この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
-このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、「[方法: データベースに接続して既存のオブジェクトを参照](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)し、[新しい接続を追加](/visualstudio/data-tools/add-new-connections)する」を参照してください。
+このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、「 [方法: データベースに接続して既存のオブジェクトを参照](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) し、 [新しい接続を追加](/visualstudio/data-tools/add-new-connections)する」を参照してください。
 
 ```cpp
 // db_command.h
@@ -238,9 +238,7 @@ int main() {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、method、local|
 |**Repeatable**|いいえ|

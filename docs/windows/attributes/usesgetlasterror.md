@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3d3c292554350d85296971a9bd3620909ef47c7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831633"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-この関数を呼び出したときにエラーが発生した場合に、呼び出し元が `GetLastError` を呼び出してエラーコードを取得できることを呼び出し元に通知します。
+この関数を呼び出したときにエラーが発生した場合に、呼び出し元がを呼び出してエラーコードを取得できることを呼び出し元に通知し `GetLastError` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166134"
 
 ## <a name="remarks"></a>解説
 
-Has **getlasterror** C++属性に[は、すべて](/windows/win32/Midl/usesgetlasterror)の機能と同じ機能があります。
+Has **getlasterror** C++ 属性に [は、すべて](/windows/win32/Midl/usesgetlasterror) の機能と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -33,17 +33,15 @@ Has **getlasterror** C++属性に[は、すべて](/windows/win32/Midl/usesgetla
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|**module**属性|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**module** 属性|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)

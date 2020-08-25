@@ -63,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 40ac0b248e1e90dae29a787d59f6ded9581aca70
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 189f97e72f1cb87de7e4c4a388128c2a76c42961
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210601"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832439"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl クラス
 
-OLE DB [Ierrorrecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスを実装し、 **CAtlArray <** `RecordClass` **>** 型のデータメンバー ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) に対してレコードの追加と取得を行います。
+OLE DB [Ierrorrecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスを実装し、 **CAtlArray<** 型のデータメンバー ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) にレコードを追加して、レコードを取得し `RecordClass` **>** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -84,7 +84,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IErrorRecordsImpl`から派生したクラス。
+から派生したクラス `IErrorRecordsImpl` 。
 
 *RecordClass*<br/>
 OLE DB エラーオブジェクトを表すクラス。
@@ -97,7 +97,7 @@ OLE DB エラーオブジェクトを表すクラス。
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetErrorDescriptionString](#geterrordescriptionstring)|エラーレコードからエラー説明文字列を取得します。|
 |[GetErrorGUID](#geterrorguid)|エラーの GUID をエラーレコードから取得します。|
@@ -107,22 +107,22 @@ OLE DB エラーオブジェクトを表すクラス。
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[AddErrorRecord](#adderrorrecord)|OLE DB error オブジェクトにレコードを追加します。|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|リターンコードやプロバイダー固有のエラー番号など、エラーに関する基本的な情報を返します。|
 |[GetCustomErrorObject](#getcustomerrorobject)|カスタムエラーオブジェクトのインターフェイスへのポインターを返します。|
-|[GetErrorInfo](#geterrorinfo)|指定されたレコードの[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスポインターを返します。|
+|[GetErrorInfo](#geterrorinfo)|指定されたレコードの [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) インターフェイスポインターを返します。|
 |[GetErrorParameters](#geterrorparameters)|エラーパラメーターを返します。|
 |[GetRecordCount](#getrecordcount)|OLE DB レコードオブジェクト内のレコードの数を返します。|
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[m_rgErrors](#rgerrors)|エラーレコードの配列。|
 
-## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a>Ierrorrecordシム Pl:: GetErrorDescriptionString
+## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a> Ierrorrecordシム Pl:: GetErrorDescriptionString
 
 エラーレコードからエラー説明文字列を取得します。
 
@@ -135,13 +135,13 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 #### <a name="parameters"></a>パラメーター
 
 *rCurError*<br/>
-`IErrorInfo` インターフェイス内の `ERRORINFO` レコード。
+`ERRORINFO`インターフェイス内のレコード `IErrorInfo` 。
 
 ### <a name="return-value"></a>戻り値
 
 エラーを説明する文字列へのポインター。
 
-## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a>Ierrorrecordシム Pl:: GetErrorGUID
+## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a> Ierrorrecordシム Pl:: GetErrorGUID
 
 エラーの GUID をエラーレコードから取得します。
 
@@ -154,13 +154,13 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 #### <a name="parameters"></a>パラメーター
 
 *rCurError*<br/>
-`IErrorInfo` インターフェイス内の `ERRORINFO` レコード。
+`ERRORINFO`インターフェイス内のレコード `IErrorInfo` 。
 
 ### <a name="return-value"></a>戻り値
 
 エラーの GUID への参照。
 
-## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a>Ierrorrecordシム Pl:: GetErrorHelpContext
+## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a> Ierrorrecordシム Pl:: GetErrorHelpContext
 
 エラーレコードからヘルプコンテキスト ID を取得します。
 
@@ -173,13 +173,13 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 #### <a name="parameters"></a>パラメーター
 
 *rCurError*<br/>
-`IErrorInfo` インターフェイス内の `ERRORINFO` レコード。
+`ERRORINFO`インターフェイス内のレコード `IErrorInfo` 。
 
 ### <a name="return-value"></a>戻り値
 
 エラーのヘルプコンテキスト ID。
 
-## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a>Ierrorrecordシム Pl:: GetErrorHelpFile
+## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a> Ierrorrecordシム Pl:: GetErrorHelpFile
 
 エラーレコードからヘルプファイルのパス名を取得します。
 
@@ -192,13 +192,13 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 #### <a name="parameters"></a>パラメーター
 
 *rCurError*<br/>
-`IErrorInfo` インターフェイス内の `ERRORINFO` レコード。
+`ERRORINFO`インターフェイス内のレコード `IErrorInfo` 。
 
 ### <a name="return-value"></a>戻り値
 
 エラーのヘルプファイルのパス名を含む文字列へのポインター。
 
-## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a>Ierrorrecordシム Pl:: GetErrorSource
+## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a> Ierrorrecordシム Pl:: GetErrorSource
 
 エラーレコードからのエラーの原因となったソースコードを取得します。
 
@@ -211,13 +211,13 @@ LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 #### <a name="parameters"></a>パラメーター
 
 *rCurError*<br/>
-`IErrorInfo` インターフェイス内の `ERRORINFO` レコード。
+`ERRORINFO`インターフェイス内のレコード `IErrorInfo` 。
 
 ### <a name="return-value"></a>戻り値
 
 エラーのソースコードを格納している文字列へのポインター。
 
-## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a>Ierrorrecordシム Pl:: AddErrorRecord
+## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a> Ierrorrecordシム Pl:: AddErrorRecord
 
 OLE DB error オブジェクトにレコードを追加します。
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: adderrorrecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>Ierrorrecordシム Pl:: GetBasicErrorInfo
+## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> Ierrorrecordシム Pl:: GetBasicErrorInfo
 
 リターンコードやプロバイダー固有のエラー番号など、エラーに関する基本的な情報を返します。
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: getbasicerrorinfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a>Ierrorrecordシム Pl:: GetCustomErrorObject
+## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a> Ierrorrecordシム Pl:: GetCustomErrorObject
 
 カスタムエラーオブジェクトのインターフェイスへのポインターを返します。
 
@@ -266,9 +266,9 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a>Ierrorrecordシム Pl:: GetErrorInfo
+## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a> Ierrorrecordシム Pl:: GetErrorInfo
 
-指定されたレコードの[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスポインターを返します。
+指定されたレコードの [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) インターフェイスポインターを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a>Ierrorrecordシム Pl:: GetErrorParameters
+## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a> Ierrorrecordシム Pl:: GetErrorParameters
 
 エラーパラメーターを返します。
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a>Ierrorrecordシム Pl:: GetRecordCount
+## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a> Ierrorrecordシム Pl:: GetRecordCount
 
 OLE DB レコードオブジェクト内のレコードの数を返します。
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 」を参照してください。
 
-## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a>Ierrorrecordシム Pl:: m_rgErrors
+## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a> Ierrorrecordシム Pl:: m_rgErrors
 
 エラーレコードの配列。
 
@@ -321,7 +321,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 CAtlArray< RecordClass > m_rgErrors;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

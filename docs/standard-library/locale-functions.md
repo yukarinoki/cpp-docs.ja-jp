@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224813"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833245"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 関数
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[isdigit](#isdigit)\
+[isgraph](#isgraph)\
+[islower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[isupper](#isupper)\
+[isxdigit](#isxdigit)\
+[tolower](#tolower)\
+[toupper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 特定のファセットが指定されたロケールに格納されているかどうかをテストします。
 
@@ -67,7 +75,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** ロケールに対してテストされたファセットがある場合は。**`false`** そうでない場合はです。
+**`true`** ロケールに対してテストされたファセットがある場合は。 **`false`** そうでない場合はです。
 
 ### <a name="remarks"></a>解説
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isalnum
+## <a name="isalnum"></a><a name="isalnum"></a> isalnum
 
 ロケールの要素が英字または数字であるかどうかをテストします。
 
@@ -113,7 +121,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が英数字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が英数字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="example"></a>例
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 ロケールの要素が英字であるかどうかをテストします。
 
@@ -180,7 +188,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素がアルファベットの場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素がアルファベットの場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 ロケールの要素が制御文字であるかどうかをテストします。
 
@@ -245,7 +253,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が制御文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が制御文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>isdigit
+## <a name="isdigit"></a><a name="isdigit"></a> isdigit
 
 ロケールの要素が数字であるかどうかをテストします。
 
@@ -310,7 +318,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が数字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が数字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 ロケールの要素が英字または句読点であるかどうかをテストします。
 
@@ -375,7 +383,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が英数字または句読点文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が英数字または句読点文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>islower
+## <a name="islower"></a><a name="islower"></a> islower
 
 ロケールの要素が小文字であるかどうかをテストします。
 
@@ -440,7 +448,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が小文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が小文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 ロケールの要素が印刷可能な文字であるかどうかをテストします。
 
@@ -505,7 +513,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が印刷可能である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が印刷可能である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 ロケールの要素が句読点であるかどうかをテストします。
 
@@ -569,7 +577,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が区切り文字の場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が区切り文字の場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 ロケールの要素が空白文字であるかどうかをテストします。
 
@@ -634,7 +642,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が空白文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が空白文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>isupper
+## <a name="isupper"></a><a name="isupper"></a> isupper
 
 ロケールの要素が大文字であるかどうかをテストします。
 
@@ -699,7 +707,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が大文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が大文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 ロケールの要素が 16 進数を表すために使用される文字であるかどうかをテストします。
 
@@ -764,7 +772,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** テストされた要素が16進数を表すために使用される文字である場合は。**`false`** それ以外の場合は。
+**`true`** テストされた要素が16進数を表すために使用される文字である場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>tolower
+## <a name="tolower"></a><a name="tolower"></a> tolower
 
 文字を小文字に変換します。
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>toupper
+## <a name="toupper"></a><a name="toupper"></a> toupper
 
 文字を大文字に変換します。
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 ロケールに格納されている指定された型のファセットへの参照を返します。
 

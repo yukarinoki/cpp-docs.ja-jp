@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834194"
 ---
 # <a name="db_table"></a>db_table
 
@@ -29,7 +29,7 @@ OLE DB テーブルを開きます。
 データベーステーブルの名前を指定する文字列 ("Products" など)。
 
 *name*<br/>
-Optionalテーブルを操作するために使用するハンドルの名前。 複数の結果行を返す場合は、このパラメーターを指定する必要があります。 **db_table**は、指定された*名前*を持つ変数を生成します。この変数は、行セットを走査したり、複数のアクションクエリを実行したりするために使用できます。
+Optionalテーブルを操作するために使用するハンドルの名前。 複数の結果行を返す場合は、このパラメーターを指定する必要があります。 **db_table** は、指定された *名前* を持つ変数を生成します。この変数は、行セットを走査したり、複数のアクションクエリを実行したりするために使用できます。
 
 *source_name*<br/>
 Optionalコマンドを実行するために `CSession` 属性が適用されているクラスの変数またはインスタンス `db_source` 。 「 [db_source](db-source.md)」をご覧ください。
@@ -39,7 +39,7 @@ Optionalこのデータベースコマンドの HRESULT を受け取る変数を
 
 ## <a name="remarks"></a>解説
 
-**db_table**は、テーブルを開くために OLE DB コンシューマーによって使用される[CTable](../../data/oledb/ctable-class.md)オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 を使用し `db_column` てテーブル列を変数にバインドします。 `db_param` パラメーターの区切り記号 (パラメーターの型の設定など) を使用します。
+**db_table** は、テーブルを開くために OLE DB コンシューマーによって使用される [CTable](../../data/oledb/ctable-class.md) オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 を使用し `db_column` てテーブル列を変数にバインドします。 `db_param` パラメーターの区切り記号 (パラメーターの型の設定など) を使用します。
 
 コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
 
@@ -64,9 +64,7 @@ class CProducts {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

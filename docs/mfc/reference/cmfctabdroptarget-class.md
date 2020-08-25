@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834233"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget クラス
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCTabDropTarget:: OnDragEnter](#ondragenter)|ユーザーがオブジェクトをタブウィンドウにドラッグしたときに、フレームワークによって呼び出されます。 ( [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)をオーバーライドします)。|
 |[CMFCTabDropTarget:: OnDragLeave](#ondragleave)|フォーカスのあるタブウィンドウの外側でオブジェクトをドラッグすると、フレームワークによって呼び出されます。 ( [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave)をオーバーライドします。)|
 |[CMFCTabDropTarget:: OnDragOver](#ondragover)|フォーカスのあるタブウィンドウにユーザーがオブジェクトをドラッグしたときに、フレームワークによって呼び出されます。 ( [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)をオーバーライドします。)|

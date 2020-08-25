@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182500"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831464"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -107,34 +107,34 @@ public:
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[function](#function)|空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[result_type](#result_type)|格納された呼び出し可能オブジェクトの戻り値の型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[assign](#assign)|呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。|
 |[スワップ](#swap)|2 つの呼び出し可能オブジェクトを入れ替えます。|
 |[target](#target)|格納されている呼び出し可能オブジェクトが指定されたとおりに呼び出し可能かどうかをテストします。|
 |[target_type](#target_type)|呼び出し可能オブジェクトの型情報を取得します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[指定されていない演算子](#op_unspecified)|格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。|
 |[operator ()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
 |[operator =](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
 
-## <a name="assign"></a><a name="assign"></a>割り当てる
+## <a name="assign"></a><a name="assign"></a> 割り当てる
 
 呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。
 
@@ -163,7 +163,7 @@ template <class Fx, class Alloc>
 
 ### <a name="remarks"></a>解説
 
-各メンバー関数は、によって保持されているを `callable object` **`*this`** 、として渡される呼び出し可能オブジェクトに置き換え `operand` ます。 両方とも、アロケーターオブジェクト*Ax*を使用してストレージを割り当てます。
+各メンバー関数は、によって保持されているを `callable object` **`*this`** 、として渡される呼び出し可能オブジェクトに置き換え `operand` ます。 両方とも、アロケーターオブジェクト *Ax*を使用してストレージを割り当てます。
 
 ## <a name="function"></a><a name="function"></a> 関数
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>指定されていない演算子
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> 指定されていない演算子
 
 格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>operator ()
+## <a name="operator"></a><a name="op_call"></a> operator ()
 
 呼び出し可能オブジェクトを呼び出します。
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 格納されている呼び出し可能オブジェクトを置き換えます。
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 格納された呼び出し可能オブジェクトの戻り値の型。
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの呼び出し可能オブジェクトを入れ替えます。
 
@@ -576,9 +576,9 @@ template <class Fty2>
 
 ### <a name="remarks"></a>解説
 
-型*Fty2*は、引数の型と戻り値の型に対して呼び出し可能である必要があり `T1, T2, ..., TN` `Ret` ます。 `target_type() == typeid(Fty2)` の場合、メンバー テンプレート関数は、ターゲット オブジェクトのアドレスを返し、それ以外の場合は、0 を返します。
+型 *Fty2* は、引数の型と戻り値の型に対して呼び出し可能である必要があり `T1, T2, ..., TN` `Ret` ます。 `target_type() == typeid(Fty2)` の場合、メンバー テンプレート関数は、ターゲット オブジェクトのアドレスを返し、それ以外の場合は、0 を返します。
 
-型*Fty2*は、引数型に対して呼び出し可能であり `T1, T2, ..., TN` 、型 `Ret` の左辺値の場合、 `fn, t1, t2, ..., tN` それぞれが `Fty2, T1, T2, ..., TN` `INVOKE(fn, t1, t2, ..., tN)` 適切な形式であり、がでない場合はに変換可能である場合は、戻り値の型として使用 `Ret` **`void`** `Ret` できます。
+型 *Fty2* は、引数型に対して呼び出し可能であり `T1, T2, ..., TN` 、型 `Ret` の左辺値の場合、 `fn, t1, t2, ..., tN` それぞれが `Fty2, T1, T2, ..., TN` `INVOKE(fn, t1, t2, ..., tN)` 適切な形式であり、がでない場合はに変換可能である場合は、戻り値の型として使用 `Ret` **`void`** `Ret` できます。
 
 ### <a name="example"></a>例
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 呼び出し可能オブジェクトの型情報を取得します。
 

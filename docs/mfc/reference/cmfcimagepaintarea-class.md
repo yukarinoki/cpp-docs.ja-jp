@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562156"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831152"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea クラス
 
@@ -37,17 +37,15 @@ class CMFCImagePaintArea : public CButton
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCImagePaintArea:: CMFCImagePaintArea](#cmfcimagepaintarea)|`CMFCImagePaintArea` オブジェクトを構築します。|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCImagePaintArea:: GetMode](#getmode)|現在の描画モードを取得します。|
 |[CMFCImagePaintArea:: SetBitmap](#setbitmap)|画像領域のビットマップイメージを設定します。|
 |[CMFCImagePaintArea:: SetColor](#setcolor)|現在の描画色を設定します。|

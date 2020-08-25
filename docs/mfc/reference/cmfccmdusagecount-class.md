@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834278"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|既定のコンストラクターです。|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCCmdUsageCount:: AddCmd](#addcmd)|指定したコマンドに関連付けられているカウンターを1つずつインクリメントします。|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|指定したコマンド ID に関連付けられている使用状況カウントを取得します。|
 |[CMFCCmdUsageCount:: HasEnoughInformation](#hasenoughinformation)|このオブジェクトによって追跡データの最小量が収集されたかどうかを判断します。|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+|名前|説明|
 |-|-|
-|Name|説明|
 |`m_CmdUsage`|`CMap`コマンドを使用量カウントにマップするオブジェクト。|
 |`m_nMinUsagePercentage`|頻繁に使用されるコマンドの使用率の最小値です。|
 |`m_nStartCount`|このオブジェクトによって追跡データの最小量が収集されたかどうかを判断するために使用される開始カウンター。|

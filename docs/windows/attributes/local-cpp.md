@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dea62653478e451af00fa47b72984f3b580aadc0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214748"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834090"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214748"
 
 ## <a name="remarks"></a>解説
 
-**ローカル** C++属性には、[ローカル](/windows/win32/Midl/local)の MIDL 属性と同じ機能があります。
+**ローカル**C++ 属性には、[ローカル](/windows/win32/Midl/local)の MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -33,18 +33,16 @@ ms.locfileid: "80214748"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|**インターフェイス**、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**インターフェイス**、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|`dispinterface`|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

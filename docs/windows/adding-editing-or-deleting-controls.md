@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831685"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>方法: コントロールを追加、編集、または削除する (C++)
 
-ダイアログ**エディター**を使用すると、ダイアログボックス内のコントロールの追加、サイズ変更、編集、および削除を行うことができます。 また、ID などのコントロールのプロパティや、実行時に最初に表示されるかどうかを編集することもできます。
+ダイアログ **エディター**を使用すると、ダイアログボックス内のコントロールの追加、サイズ変更、編集、および削除を行うことができます。 また、ID などのコントロールのプロパティや、実行時に最初に表示されるかどうかを編集することもできます。
 
-ダイアログ**エディターで**作業している場合は、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)に [**ダイアログエディター** ] タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「[ツールボックスの使用](/visualstudio/ide/using-the-toolbox)」および「[ツールボックスウィンドウの表示と非表示](showing-or-hiding-the-dialog-editor-toolbar.md)を切り替える」を参照してください。
+ダイアログ**エディターで**作業している場合は、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)に [**ダイアログエディター** ] タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「 [ツールボックスの使用](/visualstudio/ide/using-the-toolbox) 」および「 [ツールボックスウィンドウの表示と非表示](showing-or-hiding-the-dialog-editor-toolbar.md)を切り替える」を参照してください。
 
 > [!TIP]
 > **ダイアログエディター**を使用する場合、多くの場合、マウスの右ボタンを選択すると、頻繁に使用するコマンドのショートカットメニューを表示できます。
@@ -68,9 +68,9 @@ ms.locfileid: "84623459"
 
    - コントロールを配置する場所でダイアログボックスを選択すると、コントロールが選択した場所に表示されます。
 
-   - コントロールを [**ツールボックス**] ウィンドウからダイアログボックス上の場所にドラッグアンドドロップします。 その後、コントロールを移動したり、サイズと形状を変更したりできます。
+   - コントロールを [ **ツールボックス** ] ウィンドウからダイアログボックス上の場所にドラッグアンドドロップします。 その後、コントロールを移動したり、サイズと形状を変更したりできます。
 
-   - [**ツールボックス**] ウィンドウでコントロールをダブルクリックすると、ダイアログボックスに表示されます。 コントロールを好きな位置に移動します。
+   - [ **ツールボックス** ] ウィンドウでコントロールをダブルクリックすると、ダイアログボックスに表示されます。 コントロールを好きな位置に移動します。
 
 ### <a name="to-add-multiple-controls"></a>複数のコントロールを追加するには
 
@@ -82,7 +82,7 @@ ms.locfileid: "84623459"
 
 ### <a name="to-size-a-control-while-you-add-it"></a>コントロールを追加するときにサイズを変更するには
 
-1. [**ツールボックス**] ウィンドウでコントロールを選択します。
+1. [ **ツールボックス** ] ウィンドウでコントロールを選択します。
 
 1. 十字カーソルとして表示されるカーソルを配置します。この場合、新しいコントロールの左上隅がダイアログボックスに表示されます。
 
@@ -94,11 +94,11 @@ ms.locfileid: "84623459"
 1. マウスのボタンを離します。 指定したサイズのダイアログボックスにコントロールが表示されます。
 
 > [!TIP]
-> コントロールの境界線のサイズ変更ハンドルを移動すると、ダイアログボックスにドロップした後でコントロールのサイズを変更できます。 詳細については、「[個々のコントロールのサイズ変更](../windows/sizing-individual-controls.md)」を参照してください。
+> コントロールの境界線のサイズ変更ハンドルを移動すると、ダイアログボックスにドロップした後でコントロールのサイズを変更できます。 詳細については、「 [個々のコントロールのサイズ変更](../windows/sizing-individual-controls.md)」を参照してください。
 
 ### <a name="to-add-a-custom-control"></a>カスタム コントロールを追加するには
 
-ダイアログボックスにカスタムコントロールを追加できます。 **ツールボックス**の [**カスタムコントロール**] アイコンを選択し、ダイアログボックスにドラッグします。 コントロールを追加するには `Syslink` 、カスタムコントロールを追加し、コントロールの [**クラス**] プロパティをに変更し `Syslink` ます。 この操作により、プロパティが更新され、コントロールのプロパティが表示され `Syslink` ます。 MFC ラッパークラスの詳細については、「 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)」を参照してください。
+ダイアログボックスにカスタムコントロールを追加できます。 **ツールボックス**の [**カスタムコントロール**] アイコンを選択し、ダイアログボックスにドラッグします。 コントロールを追加するには `Syslink` 、カスタムコントロールを追加し、コントロールの [ **クラス** ] プロパティをに変更し `Syslink` ます。 この操作により、プロパティが更新され、コントロールのプロパティが表示され `Syslink` ます。 MFC ラッパークラスの詳細については、「 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)」を参照してください。
 
 ## <a name="edit-controls"></a>コントロールの編集
 
@@ -112,18 +112,18 @@ ms.locfileid: "84623459"
 1. [プロパティウィンドウ](/visualstudio/ide/reference/properties-window)で、コントロールのプロパティを変更します。
 
    > [!NOTE]
-   > ボタン、オプションボタン、またはチェックボックスコントロールの**Bitmap**プロパティを**True**に設定すると、スタイル BS_BITMAP がコントロールに対して実装されます。 詳細については、「[ボタンのスタイル](../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。 ビットマップをコントロールに関連付ける例については、「 [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)」を参照してください。 **ダイアログエディター**では、コントロールにビットマップが表示されません。
+   > ボタン、オプションボタン、またはチェックボックスコントロールの **Bitmap** プロパティを **True**に設定すると、スタイル BS_BITMAP がコントロールに対して実装されます。 詳細については、「 [ボタンのスタイル](../mfc/reference/styles-used-by-mfc.md#button-styles)」を参照してください。 ビットマップをコントロールに関連付ける例については、「 [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)」を参照してください。 **ダイアログエディター**では、コントロールにビットマップが表示されません。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>コントロールのプロパティへの変更を元に戻すには
 
 1. **ダイアログエディター**でコントロールにフォーカスがあることを確認します。
 
-1. メニューにアクセスして、[元に戻す] を**編集**  >  **Undo**します。 フォーカスがコントロールにない場合、[**元に戻す**] コマンドは使用できません。
+1. メニューにアクセスして、[元に戻す] を**編集**  >  **Undo**します。 フォーカスがコントロールにない場合、[ **元に戻す** ] コマンドは使用できません。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>ボタン以外のダイアログ ボックス コントロールのメンバー変数を定義するには
 
 > [!NOTE]
-> このプロセスは、MFC プロジェクト内のダイアログコントロールにのみ適用されます。 ATL プロジェクトでは、[**新しい Windows メッセージとイベントハンドラー** ] ダイアログボックスを使用する必要があります。 詳細については、「[ユーザーインターフェイスオブジェクトに関連付けられたメッセージ型](../mfc/reference/message-types-associated-with-user-interface-objects.md)」、「[メッセージハンドラーの編集](../mfc/reference/editing-a-message-handler.md)」、および「[リフレクションメッセージ用のメッセージハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)」を参照してください。
+> このプロセスは、MFC プロジェクト内のダイアログコントロールにのみ適用されます。 ATL プロジェクトでは、[ **新しい Windows メッセージとイベントハンドラー** ] ダイアログボックスを使用する必要があります。 詳細については、「 [ユーザーインターフェイスオブジェクトに関連付けられたメッセージ型](../mfc/reference/message-types-associated-with-user-interface-objects.md)」、「 [メッセージハンドラーの編集](../mfc/reference/editing-a-message-handler.md)」、および「 [リフレクションメッセージ用のメッセージハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)」を参照してください。
 
 1. [ダイアログエディター](dialog-editor.md)で、コントロールを選択します。
 
@@ -131,9 +131,9 @@ ms.locfileid: "84623459"
 
    [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)が表示されます。
 
-1. [**メンバー変数の追加**ウィザード] に適切な情報を入力します。 詳細については、「[ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)」を参照してください。
+1. [ **メンバー変数の追加** ウィザード] に適切な情報を入力します。 詳細については、「 [ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)」を参照してください。
 
-1. [ **OK** ] を選択して、**ダイアログエディター**に戻ります。
+1. [ **OK** ] を選択して、 **ダイアログエディター**に戻ります。
 
 > [!TIP]
 > ダイアログ ボックス コントロールから既存のハンドラーにジャンプするには、コントロールをダブルクリックします。
@@ -154,44 +154,62 @@ ms.locfileid: "84623459"
 
 1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc*ファイルをダブルクリックします。
 
-1. ダイアログオプションの下で、[**バージョン情報**] ボックスをダブルクリックします。
+1. ダイアログオプションの下で、[ **バージョン情報** ] ボックスをダブルクリックします。
 
-1. ダイアログボックスに**IP アドレスコントロール**を追加します。
+1. ダイアログボックスに **IP アドレスコントロール** を追加します。
 
-1. すべてを保存して**リビルド**します。
+1. すべてを保存して **リビルド**します。
 
 1. プログラムを実行します。
 
-1. ダイアログボックスの [**ヘルプ**] メニューで、[**バージョン情報**] コマンドを選択して、ダイアログボックスが表示されないことを確認します。
+1. ダイアログボックスの [ **ヘルプ** ] メニューで、[ **バージョン情報** ] コマンドを選択して、ダイアログボックスが表示されないことを確認します。
 
-現在、ダイアログ**エディター**では、次のコモンコントロールまたはリッチエディットコントロールをダイアログボックスにドラッグアンドドロップしたときに、プロジェクトにコードが自動的に追加されません。 また、この問題が発生したときに、Visual Studio によってエラーまたは警告が表示されることもありません。 修正するには、コントロールのコードを手動で追加します。
+現在、ダイアログ **エディター** では、次のコモンコントロールまたはリッチエディットコントロールをダイアログボックスにドラッグアンドドロップしたときに、プロジェクトにコードが自動的に追加されません。 また、この問題が発生したときに、Visual Studio によってエラーまたは警告が表示されることもありません。 修正するには、コントロールのコードを手動で追加します。
 
-||||
-|-|-|-|
-|スライダー コントロール|ツリーコントロール|Date Time Picker|
-|スピンコントロール|タブコントロール|Month Calendar|
-|プログレスコントロール|アニメーションコントロール|IP アドレスの管理|
-|ホットキー|リッチエディットコントロール|拡張コンボボックス|
-|リストコントロール|リッチエディット2.0 コントロール|カスタム コントロール|
+:::row:::
+   :::column span="":::
+      アニメーションコントロール \
+      カスタムコントロール \
+      日付と時刻の選択 \
+      拡張コンボボックス
+   :::column-end:::
+   :::column span="":::
+      ホットキー \
+      IP アドレスコントロール \
+      リストコントロール \
+      Month Calendar
+   :::column-end:::
+   :::column span="":::
+      プログレスコントロール \
+      リッチエディット2.0 コントロール \
+      リッチエディットコントロール \
+      スライダー コントロール
+   :::column-end:::
+   :::column span="":::
+      スピンコントロール \
+      タブコントロール \
+      ツリーコントロール
+   :::column-end:::
+:::row-end:::
 
-ダイアログボックスでコモンコントロールを使用するには、ダイアログボックスを作成する前に、 [Initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)を呼び出す必要があり `AFXInitCommonControls` ます。
+ダイアログボックスでコモンコントロールを使用するには、ダイアログボックスを作成する前に、 [Initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) を呼び出す必要があり `AFXInitCommonControls` ます。
 
-RichEdit コントロールを使用するには、を呼び出す必要があり `LoadLibrary` ます。 詳細については、「Windows SDK の[リッチエディットコントロールについて](/windows/win32/Controls/about-rich-edit-controls)」および「[リッチエディットコントロールの概要](../mfc/overview-of-the-rich-edit-control.md)」を参照してください。
+RichEdit コントロールを使用するには、を呼び出す必要があり `LoadLibrary` ます。 詳細については、「Windows SDK の [リッチエディットコントロールについて](/windows/win32/Controls/about-rich-edit-controls) 」および「 [リッチエディットコントロールの概要](../mfc/overview-of-the-rich-edit-control.md)」を参照してください。
 
 > [!NOTE]
-> MFC で RichEdit コントロールを使用するには、まず[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)を呼び出して、Richedit 2.0 コントロール (riched20.dll) を読み込む必要があります。DLL) を呼び出すか、 [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)を呼び出して古い RichEdit 1.0 コントロール (RICHED32) を読み込みます。DLL)。
+> MFC で RichEdit コントロールを使用するには、まず [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) を呼び出して、Richedit 2.0 コントロール (RICHED20.DLL) を読み込むか、 [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) を呼び出して古い RichEdit 1.0 コントロール (RICHED32.DLL) を読み込む必要があります。
 >
-> 古い RichEdit 1.0 コントロールで現在の[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラスを使用できますが、 `CRichEditCtrl` は richedit 2.0 コントロールをサポートするように設計されています。 RichEdit 1.0 と RichEdit 2.0 は似ているため、ほとんどのメソッドは動作します。 ただし、1.0 と2.0 のコントロールにはいくつかの違いがあるため、一部のメソッドが正しく機能しないか、まったく動作しない可能性があります。
+> 古い RichEdit 1.0 コントロールで現在の [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) クラスを使用できますが、 `CRichEditCtrl` は richedit 2.0 コントロールをサポートするように設計されています。 RichEdit 1.0 と RichEdit 2.0 は似ているため、ほとんどのメソッドは動作します。 ただし、1.0 と2.0 のコントロールにはいくつかの違いがあるため、一部のメソッドが正しく機能しないか、まったく動作しない可能性があります。
 
 ### <a name="activex-controls"></a>ActiveX コントロール
 
-Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。 詳細については、「 [MFC Activex コントロール](../mfc/mfc-activex-controls.md)と[activex コントロールコンテナー](../mfc/activex-control-containers.md)」を参照してください。
+Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。 詳細については、「 [MFC Activex コントロール](../mfc/mfc-activex-controls.md) と [activex コントロールコンテナー](../mfc/activex-control-containers.md)」を参照してください。
 
-[ **Activex コントロールの挿入**] ダイアログボックスを使用すると、ダイアログ[エディター](dialog-editor.md)を使用しているときに、activex コントロールをダイアログボックスに挿入できます。 このダイアログには、次のプロパティが含まれています。
+[ **Activex コントロールの挿入** ] ダイアログボックスを使用すると、ダイアログ [エディター](dialog-editor.md)を使用しているときに、activex コントロールをダイアログボックスに挿入できます。 このダイアログには、次のプロパティが含まれています。
 
 |プロパティ|説明|
 |---|---|
-|**ActiveX コントロール**|ActiveX コントロールの一覧を表示します。<br/><br/>このダイアログボックスからコントロールを挿入しても、ラッパークラスは生成されません。 ラッパークラスが必要な場合は、[クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)を使用して作成します。「[クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。<br/><br/>ActiveX コントロールがこのダイアログボックスに表示されない場合は、ベンダーの指示に従ってコントロールをインストールしてみてください。|
+|**ActiveX コントロール**|ActiveX コントロールの一覧を表示します。<br/><br/>このダイアログボックスからコントロールを挿入しても、ラッパークラスは生成されません。 ラッパークラスが必要な場合は、 [クラスビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して作成します。「 [クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。<br/><br/>ActiveX コントロールがこのダイアログボックスに表示されない場合は、ベンダーの指示に従ってコントロールをインストールしてみてください。|
 |**パス**|ActiveX コントロールが検出されたファイルを表示します。|
 
 > [!CAUTION]
@@ -199,11 +217,11 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 
 #### <a name="to-add-an-activex-control"></a>ActiveX コントロールを追加するには
 
-1. ダイアログ**エディター**でダイアログボックスを開きます。
+1. ダイアログ **エディター**でダイアログボックスを開きます。
 
 1. ダイアログボックスの本文の任意の場所を右クリックし、[ **ActiveX コントロールの挿入**] を選択します。
 
-   [ **Activex コントロールの挿入**] ダイアログボックスが表示され、システム上のすべての ActiveX コントロールが表示されます。 ダイアログ ボックスの下部には、ActiveX コントロール ファイルへのパスが表示されます。
+   [ **Activex コントロールの挿入** ] ダイアログボックスが表示され、システム上のすべての ActiveX コントロールが表示されます。 ダイアログ ボックスの下部には、ActiveX コントロール ファイルへのパスが表示されます。
 
 1. ダイアログボックスに追加するコントロールを選択し、[ **OK]** をクリックします。
 
@@ -214,14 +232,14 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>ActiveX コントロールのプロパティを編集するには
 
-独立系ベンダーによって提供される ActiveX コントロールには、独自のプロパティと特性が用意されている場合があります。 これらのプロパティは、[**プロパティ**] ウィンドウに表示されます。 ActiveX コントロールのライターによって作成されたプロパティページは、[**プロパティページ**] ダイアログボックスに表示されます。 (特定の ActiveX コントロールの**プロパティページ**を表示するには、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)の [**プロパティページ**] ボタンを選択します)。
+独立系ベンダーによって提供される ActiveX コントロールには、独自のプロパティと特性が用意されている場合があります。 これらのプロパティは、[ **プロパティ** ] ウィンドウに表示されます。 ActiveX コントロールのライターによって作成されたプロパティページは、[ **プロパティページ** ] ダイアログボックスに表示されます。 (特定の ActiveX コントロールの**プロパティページ**を表示するには、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)の [**プロパティページ**] ボタンを選択します)。
 
 - **ActiveX**コントロールを選択し、メニュー**ビュー**のプロパティページにアクセスして  >  **Property Page** 、プロパティを表示します。 必要に応じて、プロパティページで変更を行います。
 
    Activex コントロールの一部として表示されるプロパティシートに応じて、ActiveX コントロールのプロパティページにはさまざまなタブが表示されます。
 
 > [!NOTE]
-> この手順は、プロパティページを使用して ActiveX コントロールを編集する場合に適用されます。 また、[新しい**プロパティ**] ウィンドウで ActiveX プロパティを参照および編集することもできます。
+> この手順は、プロパティページを使用して ActiveX コントロールを編集する場合に適用されます。 また、[新しい **プロパティ** ] ウィンドウで ActiveX プロパティを参照および編集することもできます。
 
 ## <a name="requirements"></a>必要条件
 

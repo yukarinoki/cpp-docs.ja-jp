@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214683"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833037"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-`IDispatch` の実装に、インターフェイスの説明に示されているプロパティとメソッドのみが含まれ、実行時に追加のメンバーで拡張できないことを指定します。
+実装に、 `IDispatch` インターフェイスの説明に示されているプロパティとメソッドのみが含まれ、実行時に追加のメンバーで拡張できないことを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,13 +25,13 @@ ms.locfileid: "80214683"
 
 ## <a name="remarks"></a>解説
 
-**非拡張** C++属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
+**非拡張**C++ 属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
 
 **非拡張**を使用する場合は、 [oleautomation](oleautomation.md)属性も必要です。
 
 ## <a name="example"></a>例
 
-次のコードは、**非拡張**属性の使用方法を示しています。
+次のコードは、 **非拡張** 属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -50,18 +50,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|**interface**|
-|**反復可能**|いいえ|
-|**必要な属性**|`dual` と `oleautomation`、または `dispinterface`|
+|**適用対象**|**interface**|
+|**Repeatable**|いいえ|
+|**必須属性**|`dual` and `oleautomation` 、or `dispinterface`|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)

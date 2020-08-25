@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222564"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831478"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any クラス
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|`condition_variable_any` オブジェクトを構築します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[notify_all](#notify_all)|`condition_variable_any` オブジェクトを待機しているすべてのスレッドのブロックを解除します。|
 |[notify_one](#notify_one)|`condition_variable_any` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 `condition_variable_any` オブジェクトを構築します。
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 十分なメモリが使用できない場合、コンストラクターは `not_enough_memory` エラー コードがある [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 他のリソースをいくつか使用できないためにオブジェクトが構築できない場合、コンストラクターは `system_error` エラー コードがある `resource_unavailable_try_again` オブジェクトをスローします。
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 `condition_variable_any` オブジェクトを待機しているすべてのスレッドのブロックを解除します。
 
@@ -73,7 +73,7 @@ condition_variable_any();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 `condition_variable_any` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。
 
@@ -81,7 +81,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 スレッドをブロックします。
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。
 
@@ -137,13 +137,13 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="return-value"></a>戻り値
 
-最初のメソッドは、 `cv_status::timeout` *Rel_time*が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+最初のメソッドは、 `cv_status::timeout` *Rel_time* が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
 2番目のメソッドは、 *Pred*の値を返します。
 
 ### <a name="remarks"></a>解説
 
-最初のメソッドは、 `condition_variable_any` オブジェクトが[notify_one](../standard-library/condition-variable-class.md#notify_one)または[notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または*Rel_time*が経過するまでブロックします。 また、擬似的に開始することもできます。
+最初のメソッドは、 `condition_variable_any` オブジェクトが [notify_one](../standard-library/condition-variable-class.md#notify_one) または [notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または *Rel_time* が経過するまでブロックします。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。
 
@@ -198,7 +198,7 @@ void wait_until(
 
 ### <a name="remarks"></a>解説
 
-最初のメソッドは、 `condition_variable` オブジェクトが[notify_one](../standard-library/condition-variable-class.md#notify_one)または[notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または*Abs_time*するまでブロックします。 また、擬似的に開始することもできます。
+最初のメソッドは、 `condition_variable` オブジェクトが [notify_one](../standard-library/condition-variable-class.md#notify_one) または [notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または *Abs_time*するまでブロックします。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 

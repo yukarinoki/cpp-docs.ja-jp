@@ -1,31 +1,31 @@
 ---
-title: ウィンドウズメッセージマクロ
+title: Windows メッセージのマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329410"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834441"
 ---
-# <a name="windows-messages-macros"></a>ウィンドウズメッセージマクロ
+# <a name="windows-messages-macros"></a>Windows メッセージのマクロ
 
-このマクロはウィンドウ メッセージを転送します。
+このマクロは、ウィンドウメッセージを転送します。
 
-|||
+|名前|説明|
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|ウィンドウが受信したメッセージを別のウィンドウに転送して処理するために使用します。|
+|[WM_FORWARDMSG](#wm_forwardmsg)|ウィンドウによって受信されたメッセージを別のウィンドウに転送して処理する場合に使用します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a> WM_FORWARDMSG
 
-このマクロは、ウィンドウが受信したメッセージを別のウィンドウに転送して処理します。
+このマクロは、ウィンドウによって受信されたメッセージを別のウィンドウに転送して処理します。
 
 ```
 WM_FORWARDMSG
@@ -33,23 +33,23 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが処理された場合は 0 以外、処理されない場合は 0 以外の値を返します。
+メッセージが処理された場合は0以外の値。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-WM_FORWARDMSGを使用して、ウィンドウが受信したメッセージを別のウィンドウに転送して処理します。 LPARAM および WPARAM パラメーターは、次のように使用されます。
+WM_FORWARDMSG を使用して、ウィンドウによって受信されたメッセージを別のウィンドウに転送して処理します。 LPARAM と WPARAM のパラメーターは次のように使用されます。
 
 |パラメーター|使用法|
 |---------------|-----------|
-|Wparam|ユーザーが定義するデータ|
-|Lparam|メッセージに関する`MSG`情報を含む構造体へのポインター|
+|WPARAM|ユーザーによって定義されたデータ|
+|LPARAM|`MSG`メッセージに関する情報を格納している構造体へのポインター。|
 
 ### <a name="example"></a>例
 
-次の例では、`m_hWndOther`このメッセージを受信する他のウィンドウを表します。
+次の例では、は、 `m_hWndOther` このメッセージを受信する他のウィンドウを表します。
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[マクロ](../../atl/reference/atl-macros.md)
+[[マクロ]](../../atl/reference/atl-macros.md)

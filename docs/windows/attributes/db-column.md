@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222148"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833116"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,7 +25,7 @@ ms.locfileid: "87222148"
 
 ### <a name="parameters"></a>パラメーター
 
-*ordinal*<br/>
+*数値*<br/>
 `DBCOLUMNINFO`データをバインドする行セット内のフィールドに対応する序数列番号 (序数) または列名 (ANSI または Unicode 文字列)。 数値を使用する場合は、連続する序数 (例: 1、2、3、5) をスキップできます。 使用する OLE DB プロバイダーでサポートされている場合は、名前にスペースを含めることができます。 たとえば、次のいずれかの形式を使用できます。
 
 ```cpp
@@ -34,7 +34,7 @@ ms.locfileid: "87222148"
 ```
 
 *dbtype*<br/>
-Optional列エントリの OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85)) 。
+Optional列エントリの OLE DB [型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85)) 。
 
 *有効桁数 (precision)*<br/>
 Optional列エントリに使用される有効桁数。 詳細については、 `bPrecision` [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の要素の説明を参照してください。
@@ -50,7 +50,7 @@ Optional列のサイズを保持するために使用されるメンバー変数
 
 ## <a name="remarks"></a>解説
 
-**db_column**は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)、および[COLUMN_ENTRY](../../data/oledb/column-entry.md)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))を操作して、指定された列をバインドします。 **Db_column**属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
+**db_column** は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)、および [COLUMN_ENTRY](../../data/oledb/column-entry.md)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85)) を操作して、指定された列をバインドします。 **Db_column**属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
 
 **Db_column**は、 [db_table](db-table.md)または[db_command](db-command.md)の属性と組み合わせて使用します。
 
@@ -100,9 +100,7 @@ class CProducts {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、メソッド|
 |**Repeatable**|いいえ|

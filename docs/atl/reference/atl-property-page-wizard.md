@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321678"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833934"
 ---
 # <a name="atl-property-page-wizard"></a>ATL プロパティ ページ ウィザード
 
@@ -41,9 +41,8 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 オブジェクトを実装するために作成される C++ クラスの情報を指定します。
 
-|||
-|-|-|
 |期間|定義|
+|-|-|
 |**短い名前**|オブジェクトの省略名を設定します。 指定する名前によって、クラスと **[コクラス]** の名前、ファイル (**.cpp** と **.h**) の名前、**[種類]** の名前、**[ProgID]** が決まります (各フィールドを個別に変更しない限り)。|
 |**.h ファイル**|新しいオブジェクトのクラスにヘッダー ファイルの名前を設定します。 既定では、この名前は **[短い名前]** で指定した名前に基づきます。 選択した場所にファイル名を保存するには、あるいはクラス宣言を既存のファイルに追加するには、省略記号ボタンをクリックします。 既存のファイルを選択した場合、ウィザードで **[完了]** をクリックするまで、ファイルはウィザードによって選択した場所に保存されません。<br /><br /> ウィザードではファイルは上書きされません。 既存のファイルの名前を選択する場合、**[完了]** をクリックすると、ウィザードからクラス宣言をファイルのコンテンツに追加するかどうかを指定するように求められます。 ファイルを追加するには、**[はい]** をクリックします。ウィザードに戻り、別のファイル名を指定するには、**[いいえ]** をクリックします。|
 |**クラス**|このオブジェクトを実装するクラスの名前を設定します。 この名前は **[短い名前]** で指定した名前に基づき、クラス名の一般的なプレフィックスである 'C' が先頭に付きます。|
@@ -61,11 +60,11 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
    > [!NOTE]
    > 属性を使ってプロジェクトを作成するか、このウィザード ページ上でプロパティ ページで属性を使うことを示す場合、ATL には `coclass` 属性が含まれていないため、このオプションを変更することはできません。
 
-- **Type**
+- **種類**
 
    レジストリに表示されるオブジェクトの説明を設定します。
 
-- **Progid**
+- **ProgID**
 
    オブジェクトの CLSID の代わりにコンテナーで使用できる名前を設定します。
 
@@ -75,4 +74,4 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 [オプション、ATL プロパティ ページ ウィザード](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [文字列、ATL プロパティ ページ ウィザード](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[例: プロパティ ページの実装](../../atl/example-implementing-a-property-page.md)
+[例: プロパティページの実装](../../atl/example-implementing-a-property-page.md)

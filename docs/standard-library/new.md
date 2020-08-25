@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fe2d0e57c0746f25187028b85157d66ee736ca4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212164"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836427"
 ---
 # <a name="ltnewgt"></a>&lt;新規&gt;
 
@@ -29,31 +29,31 @@ ms.locfileid: "87212164"
 
 ## <a name="members"></a>メンバー
 
-### <a name="objects"></a>Objects
+### <a name="objects"></a>オブジェクト
 
-|||
+|名前|説明|
 |-|-|
 |[nothrow](../standard-library/new-functions.md#nothrow)|およびのバージョンの引数として使用されるオブジェクトを提供し **`nothrow`** **`new`** **`delete`** ます。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|新しいハンドラーとして使用するのに適した関数を指す型。|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 |[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
 |[launder](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|メモリ割り当ての試行に新たに失敗した場合に呼び出されるユーザー関数をインストールします。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[delete 演算子](../standard-library/new-operators.md#op_delete)|個々のオブジェクトに対するストレージの割り当てを解除する削除式によって呼び出される関数。|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|オブジェクトの配列に対するストレージの割り当てを解除する削除式によって呼び出される関数。|
@@ -62,13 +62,13 @@ ms.locfileid: "87212164"
 
 ### <a name="enums"></a>列挙型
 
-|||
+|名前|説明|
 |-|-|
 |[align_val_t](../standard-library/new-operators.md#op_align_val_t)||
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[bad_alloc クラス](../standard-library/bad-alloc-class.md)|このクラスは、割り当て要求が成功しなかったことを示すためにスローされる例外を記述します。|
 |[bad_array_new_length クラス](../standard-library/bad-array-new-length.md)||

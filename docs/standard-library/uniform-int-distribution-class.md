@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212049"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831412"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution クラス
 
@@ -78,10 +78,8 @@ public:
 
 クラステンプレートは、すべての値が均等になるように、分布を使用してユーザー指定の整数型の値を生成する包括的包含分布を記述します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 プロパティ メンバー `a()` は、現在格納されている分布の最小限度値を返し、`b()` は、現在格納されている最大限度値を返します。 この分布クラスの場合、これらの最小値と最大値は、一般的なプロパティ関数 `min()` と `max()` で返される値と同じです。
 
@@ -179,7 +177,7 @@ Distribution for 200 samples:
 
 **名前空間:** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:: uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a> uniform_int_distribution:: uniform_int_distribution
 
 分布を作成します。
 
@@ -204,11 +202,11 @@ explicit uniform_int_distribution(const param_type& parm);
 
 **前提条件:**`a ≤ b`
 
-1つ目のコンストラクターは、値*を*保持し、格納さ*れて*いる*b*値が値*b*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、値 *を* 保持し、格納さ *れて* いる *b* 値が値 *b*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p aram_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a> uniform_int_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212125"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833181"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -43,25 +43,25 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 |[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string`型の要素に基づいたクラステンプレートの特殊化を記述する型 **`char16_t`** 。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string`型の要素に基づいたクラステンプレートの特殊化を記述する型 **`char32_t`** 。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[演算子 +](../standard-library/string-operators.md#op_add)|2 つの文字列オブジェクトを連結します。|
 |[operator! =](../standard-library/string-operators.md#op_neq)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと等しくないかどうかを調べます。|
 |[operator = =](../standard-library/string-operators.md#op_eq_eq)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと等しいかどうかを調べます。|
-|[<演算子](../standard-library/string-operators.md#op_lt)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより小さいかどうかを調べます。|
+|[<演算子 ](../standard-library/string-operators.md#op_lt)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより小さいかどうかを調べます。|
 |[operator<=](../standard-library/string-operators.md#op_lt_eq)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクト以下かどうかを調べます。|
-|[<演算子\<](../standard-library/string-operators.md#op_lt_lt)|出力ストリームに文字列を挿入するテンプレート関数。|
-|[>演算子](../standard-library/string-operators.md#op_gt)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより大きいかどうかを調べます。|
+|[<演算子 \<](../standard-library/string-operators.md#op_lt_lt)|出力ストリームに文字列を挿入するテンプレート関数。|
+|[>演算子 ](../standard-library/string-operators.md#op_gt)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/string-operators.md#op_gt_eq)|演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクト以上かどうかを調べます。|
-|[>>演算子](../standard-library/string-operators.md#op_gt_gt)|入力ストリームから文字列を抽出するテンプレート関数。|
+|[>>演算子 ](../standard-library/string-operators.md#op_gt_gt)|入力ストリームから文字列を抽出するテンプレート関数。|
 
 ### <a name="specialized-template-functions"></a>特殊テンプレート関数
 
-|||
+|名前|説明|
 |-|-|
-|hash|文字列のハッシュを生成します。|
+|`hash`|文字列のハッシュを生成します。|
 |[スワップ](../standard-library/string-functions.md#swap)|2 つの文字列の、文字の配列を交換します。|
 |[stod](../standard-library/string-functions.md#stod)|文字シーケンスをに変換 **`double`** します。|
 |[stof](../standard-library/string-functions.md#stof)|文字シーケンスをに変換 **`float`** します。|
@@ -88,7 +88,7 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 ### <a name="specializations"></a>特殊化
 
-|||
+|名前|説明|
 |-|-|
 |[char_traits \<char> 構造体](../standard-library/char-traits-char-struct.md)|テンプレート構造体を `char_traits` \<CharType> 型の要素に特殊化した構造体 **`char`** 。|
 |[char_traits<wchar_t> 構造体](../standard-library/char-traits-wchar-t-struct.md)|テンプレート構造体を `char_traits` \<CharType> 型の要素に特殊化した構造体 **`wchar_t`** 。|
