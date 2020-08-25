@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 3a3839f88d23ce6ebb1754a64362433eb7a042dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838401"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection クラス
 
@@ -86,16 +86,16 @@ class CDataConnection
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CDataConnection](#cdataconnection)|コンストラクターです。 オブジェクトをインスタンス化し、初期化し `CDataConnection` ます。|
 |[コピー](#copy)|既存のデータ接続のコピーを作成します。|
 |[[ファイル]](#open)|初期化文字列を使用して、データソースへの接続を開きます。|
 |[OpenNewSession](#opennewsession)|現在の接続で新しいセッションを開きます。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[BOOL 演算子](#op_bool)|現在のセッションが開いているかどうかを判断します。|
 |[bool 演算子](#op_bool_ole)|現在のセッションが開いているかどうかを判断します。|
@@ -106,16 +106,16 @@ class CDataConnection
 
 ## <a name="remarks"></a>解説
 
-`CDataConnection`は、クライアントを作成するのに便利なクラスです。これは、必要なオブジェクト (データソースとセッション) と、データソースに接続するときに必要な作業の一部をカプセル化するためです。
+`CDataConnection` は、クライアントを作成するのに便利なクラスです。これは、必要なオブジェクト (データソースとセッション) と、データソースに接続するときに必要な作業の一部をカプセル化するためです。
 
-を使用しない場合は `CDataConnection` 、オブジェクトを作成し、 `CDataSource` その[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)メソッドを呼び出してから、 [CSession](../../data/oledb/csession-class.md)オブジェクトのインスタンスを作成し、その[Open](../../data/oledb/csession-open.md)メソッドを呼び出した後、 [CCommand](../../data/oledb/ccommand-class.md)オブジェクトを作成し、その * メソッドを呼び出す必要があり `Open` ます。
+を使用しない場合は `CDataConnection` 、オブジェクトを作成し、 `CDataSource` その [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) メソッドを呼び出してから、 [CSession](../../data/oledb/csession-class.md) オブジェクトのインスタンスを作成し、その [Open](../../data/oledb/csession-open.md) メソッドを呼び出した後、 [CCommand](../../data/oledb/ccommand-class.md) オブジェクトを作成し、その * メソッドを呼び出す必要があり `Open` ます。
 
 では `CDataConnection` 、接続オブジェクトを作成し、初期化文字列を渡してから、その接続を使用してコマンドを開くだけです。 データベースへの接続を繰り返し使用する予定がある場合は、接続を開いたままにしておくことをお勧めします。これには便利な方法が用意されてい `CDataConnection` ます。
 
 > [!NOTE]
 > 複数のセッションを処理する必要があるデータベースアプリケーションを作成する場合は、 [Opennewsession](../../data/oledb/cdataconnection-opennewsession.md)を使用する必要があります。
 
-## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a>CDataConnection:: CDataConnection
+## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection:: CDataConnection
 
 オブジェクトをインスタンス化し、初期化し `CDataConnection` ます。
 
@@ -137,7 +137,7 @@ CDataConnection(const CDataConnection &ds);
 
 2番目のオーバーライドは、指定した `CDataConnection` データ接続オブジェクトと同等の設定で新しいオブジェクトを作成します。
 
-## <a name="cdataconnectioncopy"></a><a name="copy"></a>CDataConnection:: Copy
+## <a name="cdataconnectioncopy"></a><a name="copy"></a> CDataConnection:: Copy
 
 既存のデータ接続のコピーを作成します。
 
@@ -152,7 +152,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 からコピーする既存のデータ接続への参照。
 
-## <a name="cdataconnectionopen"></a><a name="open"></a>CDataConnection:: Open
+## <a name="cdataconnectionopen"></a><a name="open"></a> CDataConnection:: Open
 
 初期化文字列を使用して、データソースへの接続を開きます。
 
@@ -171,7 +171,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 標準の HRESULT です。
 
-## <a name="cdataconnectionopennewsession"></a><a name="opennewsession"></a>CDataConnection:: OpenNewSession
+## <a name="cdataconnectionopennewsession"></a><a name="opennewsession"></a> CDataConnection:: OpenNewSession
 
 現在の接続オブジェクトのデータソースを使用して、新しいセッションを開きます。
 
@@ -194,7 +194,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 標準の HRESULT です。
 
-## <a name="cdataconnectionoperator-bool"></a><a name="op_bool"></a>CDataConnection:: operator BOOL
+## <a name="cdataconnectionoperator-bool"></a><a name="op_bool"></a> CDataConnection:: operator BOOL
 
 現在のセッションが開いているかどうかを判断します。
 
@@ -206,9 +206,9 @@ operator BOOL() throw();
 
 ### <a name="remarks"></a>解説
 
-**BOOL** (MFC typedef) 値を返します。 **TRUE**は、現在のセッションが開いていることを示します。**FALSE**は、現在のセッションが閉じられていることを示します。
+**BOOL** (MFC typedef) 値を返します。 **TRUE** は、現在のセッションが開いていることを示します。 **FALSE** は、現在のセッションが閉じられていることを示します。
 
-## <a name="cdataconnectionoperator-bool-ole-db"></a><a name="op_bool_ole"></a>CDataConnection:: operator bool (OLE DB)
+## <a name="cdataconnectionoperator-bool-ole-db"></a><a name="op_bool_ole"></a> CDataConnection:: operator bool (OLE DB)
 
 現在のセッションが開いているかどうかを判断します。
 
@@ -222,7 +222,7 @@ operator bool() throw();
 
 **`bool`**(C++ データ型) 値を返します。 **`true`** は、現在のセッションが開いていることを示します。は **`false`** 、現在のセッションが閉じられていることを示します。
 
-## <a name="cdataconnectionoperator-cdatasourceamp"></a><a name="op_cdata_amp"></a>CDataConnection:: operator CDataSource&amp;
+## <a name="cdataconnectionoperator-cdatasourceamp"></a><a name="op_cdata_amp"></a> CDataConnection:: operator CDataSource&amp;
 
 格納されているオブジェクトへの参照を返し `CDataSource` ます。
 
@@ -244,7 +244,7 @@ operator const CDataSource&() throw();
 
 [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]
 
-## <a name="cdataconnectionoperator-cdatasource"></a><a name="op_cdata_star"></a>CDataConnection:: operator CDataSource *
+## <a name="cdataconnectionoperator-cdatasource"></a><a name="op_cdata_star"></a> CDataConnection:: operator CDataSource *
 
 格納されているオブジェクトへのポインターを返し `CDataSource` ます。
 
@@ -260,7 +260,7 @@ operator const CDataSource*() throw();
 
 使用例については、「 [Operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 」を参照してください。
 
-## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a>CDataConnection:: operator CSession&amp;
+## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> CDataConnection:: operator CSession&amp;
 
 格納されているオブジェクトへの参照を返し `CSession` ます。
 
@@ -282,7 +282,7 @@ operator const CSession&();
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="cdataconnectionoperator-csession"></a><a name="op_csession_star"></a>CDataConnection:: operator CSession *
+## <a name="cdataconnectionoperator-csession"></a><a name="op_csession_star"></a> CDataConnection:: operator CSession *
 
 格納されているオブジェクトへのポインターを返し `CSession` ます。
 

@@ -7,24 +7,25 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e4d49b01f9602d5e6d7316a3a258ffa69bbcc369
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452451"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839037"
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準ライブラリの概要
 
-すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には、 \< C++標準では必要ない\<2 つの追加ヘッダー hash_map > と hash_set > が含まれています。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
+すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には C++ 標準では必要ない 2 つの追加ヘッダー、\<hash_map> と \<hash_set> が含まれています。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
 
 C++ ライブラリのフリースタンディング実装では、これらのヘッダーの一部のみが提供されます。
 
-|||
-|-|-|
-|[\<cstddef>](../standard-library/cstddef.md)|[\<<cstdlib>](../standard-library/cstdlib.md) (少なくとも関数 `abort`、`atexit`、`exit` を宣言する)|
-|[\<exception>](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
-|[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
+[\<cstdarg>](../standard-library/cstdarg.md)\
+[\<cstddef>](../standard-library/cstddef.md)\
+[\<cstdlib>](../standard-library/cstdlib.md) (少なくとも関数、 `abort` `atexit` 、およびの宣言 `exit` )
+[\<exception>](../standard-library/exception.md)\
+[\<limits>](../standard-library/limits.md)\
+[\<new>](../standard-library/new.md)
 
 C++ のライブラリのヘッダーには 2 つの広範な再分割があります。
 
@@ -34,7 +35,7 @@ C++ のライブラリのヘッダーには 2 つの広範な再分割があり�
 
 このセクションでは、以下のセクションについて説明します。
 
-- [C++ ライブラリ ヘッダーの使用](../standard-library/using-cpp-library-headers.md)
+- [C++ ライブラリヘッダーの使用](../standard-library/using-cpp-library-headers.md)
 
 - [C++ ライブラリの規則](../standard-library/cpp-library-conventions.md)
 
@@ -44,13 +45,13 @@ C++ のライブラリのヘッダーには 2 つの広範な再分割があり�
 
 - [安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)
 
-- [Checked Iterators](../standard-library/checked-iterators.md)
+- [チェックを行う反復子](../standard-library/checked-iterators.md)
 
 - [反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)
 
-- [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+- [C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)
 
-- [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+- [C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 - [stdext 名前空間](../standard-library/stdext-namespace.md)
 
@@ -60,4 +61,4 @@ Visual C++ ランタイム ライブラリの詳細については、「[CRT ラ
 
 ## <a name="see-also"></a>関連項目
 
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

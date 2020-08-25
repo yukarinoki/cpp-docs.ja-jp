@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: 30bf7726b35d762be2bbbd119e0303894879cd3d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8e4053bf16672d693adc104c9e88bb46a67ba7dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752648"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845914"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo クラス
 
-クラス`CMDITabInfo`は、パラメーターを渡すために使用[されます。](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) MDI タブ付きグループの動作を制御するために、このクラスのメンバーを設定します。
+クラスは、 `CMDITabInfo` [CMDIFrameWndEx:: EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) メソッドにパラメーターを渡すために使用されます。 MDI タブ付きグループの動作を制御するために、このクラスのメンバーを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -57,31 +57,31 @@ class CMDITabInfo
 
 |名前|説明|
 |----------|-----------------|
-|[コマンドインフォ::シリアライズ](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。|
+|[CMDITabInfo:: Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[コマンドインフォ::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|アクティブなタブのラベルに**閉じる**ボタンを表示するかどうかを指定します。|
-|[コマンドインフォ::m_bAutoColor](#m_bautocolor)|MDI タブに色を付けるかどうかを指定します。|
-|[コマンドインフォ::m_bDocumentMenu](#m_bdocumentmenu)|開いているドキュメントの一覧を表示するポップアップ メニューをタブ グループに表示するか、スクロール ボタンを表示するかを指定します。|
-|[コマンドインフォ::m_bEnableTabSwap](#m_benabletabswap)|ユーザーがドラッグしてタブの位置を入れ替えできるかどうかを指定します。|
-|[コマンドインフォ::m_bFlatFrame](#m_bflatframe)|タブにフラット フレームを設定するかどうかを指定します。|
-|[コマンドインフォ::m_bTabCloseButton](#m_btabclosebutton)|各タブ ラベルに**閉じる**ボタンを表示するかどうかを指定します。|
-|[コマンドインフォ::m_bTabCustomTooltips](#m_btabcustomtooltips)|カスタム ツールヒントを有効にするかどうかを指定します。|
-|[コマンドインフォ::m_bTabIcons](#m_btabicons)|MDI タブにアイコンを表示するかどうかを指定します。|
-|[コマンドインフォ::m_nTabBorderSize](#m_ntabbordersize)|各タブ ウィンドウの境界線のサイズを指定します。|
-|[コマンドインフォ::m_style](#m_style)|タブ ラベルのスタイルを指定します。|
-|[コマンドインフォ::m_tabLocation](#m_tablocation)|タブのラベルをページの上部または下部のどちらに配置するかを指定します。|
+|[CMDITabInfo:: m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|アクティブなタブのラベルに [ **閉じる** ] ボタンを表示するかどうかを指定します。|
+|[CMDITabInfo:: m_bAutoColor](#m_bautocolor)|MDI タブに色を設定するかどうかを指定します。|
+|[CMDITabInfo:: m_bDocumentMenu](#m_bdocumentmenu)|開いているドキュメントの一覧を表示するポップアップメニューをタブグループに表示するか、スクロールボタンを表示するかを指定します。|
+|[CMDITabInfo:: m_bEnableTabSwap](#m_benabletabswap)|ユーザーがタブの位置をドラッグして入れ替えることができるかどうかを指定します。|
+|[CMDITabInfo:: m_bFlatFrame](#m_bflatframe)|タブにフラットフレームがあるかどうかを指定します。|
+|[CMDITabInfo:: m_bTabCloseButton](#m_btabclosebutton)|各タブラベルに [ **閉じる** ] ボタンを表示するかどうかを指定します。|
+|[CMDITabInfo:: m_bTabCustomTooltips](#m_btabcustomtooltips)|カスタムツールヒントを有効にするかどうかを指定します。|
+|[CMDITabInfo:: m_bTabIcons](#m_btabicons)|MDI タブにアイコンを表示するかどうかを指定します。|
+|[CMDITabInfo:: m_nTabBorderSize](#m_ntabbordersize)|各タブウィンドウの境界線のサイズを指定します。|
+|[CMDITabInfo:: m_style](#m_style)|タブラベルのスタイルを指定します。|
+|[CMDITabInfo:: m_tabLocation](#m_tablocation)|タブラベルをページの上部または下部に配置するかどうかを指定します。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、フレームワークが作成する MDI タブ グループのパラメーターを指定します。
+このクラスは、フレームワークによって作成される MDI タブグループのパラメーターを指定します。
 
 ## <a name="example"></a>例
 
-クラス内のさまざまなメンバー変数の値を設定する方法を次の例に`CMDITabInfo`示します。
+クラスのさまざまなメンバー変数の値を設定する方法を次の例に示し `CMDITabInfo` ます。
 
 [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]
 
@@ -91,11 +91,11 @@ class CMDITabInfo
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmdiクライアントエリアウンド.h
+**ヘッダー:** afxmdiclientareawnd
 
-## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>コマンドインフォ::m_bActiveTabCloseButton;
+## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a> CMDITabInfo:: m_bActiveTabCloseButton;
 
-アクティブなタブのラベルに**閉じる**ボタンを表示するかどうかを指定します。
+アクティブなタブのラベルに [ **閉じる** ] ボタンを表示するかどうかを指定します。
 
 ```
 BOOL m_bActiveTabCloseButton;
@@ -103,11 +103,11 @@ BOOL m_bActiveTabCloseButton;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、アクティブなタブのラベルに**閉じる**ボタンが表示されます。 **[閉じる**] ボタンは、タブ領域の右上隅から削除されます。 そうしないと、アクティブなタブのラベルに**閉じる**ボタンは表示されません。 タブ領域の右上隅に**閉じる**ボタンが表示されます。
+TRUE の場合、アクティブなタブのラベルには [ **閉じる** ] ボタンが表示されます。 タブ領域の右上隅から [ **閉じる** ] ボタンが削除されます。 それ以外の場合、アクティブなタブのラベルには [ **閉じる** ] ボタンが表示されません。 タブ領域の右上隅に [ **閉じる** ] ボタンが表示されます。
 
-## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a>コマンドインフォ::m_bAutoColor
+## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a> CMDITabInfo:: m_bAutoColor
 
-各 MDI タブに独自の色があるかどうかを指定します。
+各 MDI タブに独自の色を設定するかどうかを指定します。
 
 ```
 BOOL m_bAutoColor;
@@ -115,11 +115,11 @@ BOOL m_bAutoColor;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、各タブは独自の色を持ちます。 色のセットは MFC ライブラリによって管理されます。 それ以外の場合、タブは白で表示されます。 既定値は FALSE です。
+TRUE の場合、各タブには独自の色が設定されます。 一連の色は、MFC ライブラリによって管理されます。 それ以外の場合は、タブが白で表示されます。 既定値は FALSE です。
 
-## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a>コマンドインフォ::m_bDocumentMenu
+## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a> CMDITabInfo:: m_bDocumentMenu
 
-各タブに、タブ領域の右端に開いているドキュメントの一覧を表示するポップアップ メニューを表示するかどうかを指定します。
+タブ領域の右端に開いているドキュメントの一覧を表示するポップアップメニューを各タブに表示するかどうかを指定します。
 
 ```
 BOOL m_bDocumentMenu;
@@ -127,11 +127,11 @@ BOOL m_bDocumentMenu;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、各タブ ウィンドウには、タブ領域の右端に開いているドキュメントの一覧を表示するポップアップ メニューが表示されます。それ以外の場合、タブウィンドウはタブ領域の右端にスクロールボタンを表示します。 既定値は FALSE です。
+TRUE の場合、各タブウィンドウには、タブ領域の右端に開いているドキュメントの一覧を示すポップアップメニューが表示されます。それ以外の場合、タブウィンドウにはタブ領域の右端にスクロールボタンが表示されます。 既定値は FALSE です。
 
-## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a>コマンドインフォ::m_bEnableTabSwap
+## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a> CMDITabInfo:: m_bEnableTabSwap
 
-ユーザーがドラッグしてタブの位置を入れ替えできるかどうかを指定します。
+ユーザーがタブの位置をドラッグして入れ替えることができるかどうかを指定します。
 
 ```
 BOOL m_bEnableTabSwap;
@@ -141,17 +141,17 @@ BOOL m_bEnableTabSwap;
 
 TRUE の場合、ユーザーはタブをドラッグしてタブの位置を変更できます。 それ以外の場合、ユーザーはタブの位置を変更できません。 既定値は TRUE です。
 
-## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a>コマンドインフォ::m_bFlatFrame
+## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a> CMDITabInfo:: m_bFlatFrame
 
-各タブ ウィンドウにフラット フレームを設定するかどうかを指定します。
+各タブウィンドウにフラットなフレームを表示するかどうかを指定します。
 
 ```
 BOOL m_bFlatFrame;
 ```
 
-## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a>コマンドインフォ::m_bTabCloseButton
+## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a> CMDITabInfo:: m_bTabCloseButton
 
-各タブ ウィンドウに **[閉じる**] ボタンを表示するかどうかを指定します。
+各タブウィンドウに [ **閉じる** ] ボタンを表示するかどうかを指定します。
 
 ```
 BOOL m_bTabCloseButton;
@@ -159,9 +159,9 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、各タブ ウィンドウにはタブの右端に **[閉じる**] ボタン**Close**が表示されます。 既定値は TRUE です。
+TRUE の場合、各タブウィンドウにタブの右端に [ **閉じる** ] ボタンが表示されます。それ以外の場合は、[ **閉じる** ] ボタンが表示されません。 既定値は TRUE です。
 
-## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>コマンドインフォ::m_bTabCustomTooltips
+## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a> CMDITabInfo:: m_bTabCustomTooltips
 
 タブにツールヒントを表示するかどうかを指定します。
 
@@ -171,9 +171,9 @@ BOOL m_bTabCustomTooltips;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、アプリケーションはメイン フレームにAFX_WM_ON_GET_TAB_TOOLTIPメッセージを送信します。 このメッセージは、ON_REGISTERED_MESSAGE マクロを使用して処理できます。
+TRUE の場合、アプリケーションは AFX_WM_ON_GET_TAB_TOOLTIP メッセージをメインフレームに送信します。 このメッセージは、ON_REGISTERED_MESSAGE マクロを使用して処理できます。
 
-## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a>コマンドインフォ::m_bTabIcons
+## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a> CMDITabInfo:: m_bTabIcons
 
 MDI タブにアイコンを表示するかどうかを指定します。
 
@@ -183,11 +183,11 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>解説
 
-TRUE の場合、各 MDI タブにアイコンが表示されます。 既定値は FALSE です。
+TRUE の場合、各 MDI タブにアイコンが表示されます。それ以外の場合、アイコンはタブに表示されません。 既定値は FALSE です。
 
-## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a>コマンドインフォ::m_nTabBorderSize
+## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a> CMDITabInfo:: m_nTabBorderSize
 
-各タブ ウィンドウの境界線のサイズをピクセル単位で指定します。
+各タブウィンドウの境界線のサイズをピクセル単位で指定します。
 
 ```
 int m_nTabBorderSize;
@@ -195,11 +195,11 @@ int m_nTabBorderSize;
 
 ### <a name="remarks"></a>解説
 
-[デフォルト値を](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)返します。
+[Cmfcvisualmanager:: GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) 既定値を返します。
 
-## <a name="cmditabinfom_style"></a><a name="m_style"></a>コマンドインフォ::m_style
+## <a name="cmditabinfom_style"></a><a name="m_style"></a> CMDITabInfo:: m_style
 
-タブ ラベルのスタイルを指定します。
+タブラベルのスタイルを指定します。
 
 ```
 CMFCTabCtrl::Style m_style
@@ -207,20 +207,20 @@ CMFCTabCtrl::Style m_style
 
 ### <a name="remarks"></a>解説
 
-タブ ラベルに次のスタイルのいずれかを指定します。
+タブラベルに対して次のいずれかのスタイルを指定します。
 
-|||
+|マクロ|説明|
 |-|-|
 |STYLE_3D|3D スタイル。  |
-|STYLE_3D_ONENOTE|マイクロソフトの OneNote スタイル。  |
-|STYLE_3D_VS2005|2005 年のスタイルです。  |
-|STYLE_3D_SCROLLED|長方形のタブラベルを持つ 3D スタイル。  |
-|STYLE_FLAT_SHARED_HORZ_SCROLL|水平スクロール バーが共有されたフラット スタイル。  |
-|STYLE_3D_ROUNDED_SCROLL|ラウンドタブラベル付きの3Dスタイル。  |
+|STYLE_3D_ONENOTE|Microsoft OneNote スタイル。  |
+|STYLE_3D_VS2005|Microsoft Visual Studio 2005 スタイル。  |
+|STYLE_3D_SCROLLED|四角形のタブラベル付きの3D スタイル。  |
+|STYLE_FLAT_SHARED_HORZ_SCROLL|共有された水平スクロールバーを持つフラットスタイル。  |
+|STYLE_3D_ROUNDED_SCROLL|丸いタブラベル付きの3D スタイル。  |
 
-## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a>コマンドインフォ::m_tabLocation
+## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a> CMDITabInfo:: m_tabLocation
 
-タブのラベルをページの上部または下部のどちらに配置するかを指定します。
+タブラベルをページの上部または下部に配置するかどうかを指定します。
 
 ```
 CMFCTabCtrl::Location m_tabLocation;
@@ -228,15 +228,15 @@ CMFCTabCtrl::Location m_tabLocation;
 
 ### <a name="remarks"></a>解説
 
-タブに適用するには、次の場所フラグのいずれかを選択します。
+次のいずれかの場所フラグをタブに適用します。
 
 - LOCATION_BOTTOM: タブラベルはページの下部にあります。
 
-- LOCATION_TOP: タブラベルはページの上部にあります
+- LOCATION_TOP: タブラベルはページの上部にあります。
 
-## <a name="cmditabinfoserialize"></a><a name="serialize"></a>コマンドインフォ::シリアライズ
+## <a name="cmditabinfoserialize"></a><a name="serialize"></a> CMDITabInfo:: Serialize
 
-このオブジェクトをアーカイブまたはアーカイブから読み取るか書き込みます。
+アーカイブまたはアーカイブからこのオブジェクトの読み取りまたは書き込みを行います。
 
 ```cpp
 void Serialize(CArchive& ar);
@@ -244,12 +244,12 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*ar*<br/>
-[in]シリアル化する[CArchive クラス](../../mfc/reference/carchive-class.md)オブジェクト。
+*金*<br/>
+からシリアル化する [CArchive クラス](../../mfc/reference/carchive-class.md) オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを作成します。](../../mfc/reference/cmdiframewndex-class.md)<br/>
+[CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)<br/>
 [MDI タブ付きグループ](../../mfc/mdi-tabbed-groups.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: a7df541049aafd191e969eaa392ab3706f171926
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224605"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845654"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
@@ -34,14 +34,14 @@ ms.locfileid: "87224605"
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[strstreambuf クラス](../standard-library/strstreambuf-class.md)|クラスは、配列オブジェクトに格納されている要素のシーケンスとの間での要素の転送を制御するストリームバッファーを記述し **`char`** ます。|
 |[istrstream クラス](../standard-library/istrstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーからの、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。|
 |[ostrstream クラス](../standard-library/ostrstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーへの、要素とエンコードされたオブジェクトの挿入を制御するオブジェクトを表します。|
 |[strstream クラス](../standard-library/strstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーを使用して要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
 ```cpp
 void freeze(bool freezefl = true);

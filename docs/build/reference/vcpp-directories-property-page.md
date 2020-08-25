@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470798"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846031"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
@@ -38,7 +38,7 @@ ms.locfileid: "87470798"
 
 クロスプラット フォーム プロジェクトの **[VC++ ディレクトリ]** プロパティ ページは外観が異なることに注意してください。 Linux C++ プロジェクトに固有の情報については、「[VC++ ディレクトリ (Linux C++)](../../linux/prop-pages/directories-linux.md)」を参照してください。
 
-Visual Studio の*プロジェクトプロパティ*に慣れていない場合は、まず[Visual studio で C++ コンパイラとビルドプロパティを設定](../working-with-project-properties.md)することをお勧めします。
+Visual Studio の *プロジェクトプロパティ* に慣れていない場合は、まず [Visual studio で C++ コンパイラとビルドプロパティを設定](../working-with-project-properties.md)することをお勧めします。
 
 **VC++ ディレクトリ** プロパティの既定の設定は、プロジェクトの種類によって異なります。 デスクトップ プロジェクトの場合、特定のプラットフォーム ツールセットの C++ ツールの場所と、Windows SDK の場所が含まれます。 **プラットフォーム ツールセット**と **Windows SDK バージョン**は、**[構成プロパティ]** > **[全般]** ページで変更できます。
 
@@ -66,7 +66,7 @@ Visual Studio の*プロジェクトプロパティ*に慣れていない場合�
 
 マクロの詳細と、可能な限りハードコーディングされたパスではなく、マクロを使用する必要がある理由については、「 [Visual Studio での C++ コンパイラとビルドプロパティの設定](../working-with-project-properties.md)」を参照してください。
 
-一般的に使用されるマクロの一覧については、「[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)」を参照してください。
+一般的に使用されるマクロの一覧については、「 [ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)」を参照してください。
 
 独自のマクロは次の 2 通りの方法で定義できます。
 
@@ -74,7 +74,7 @@ Visual Studio の*プロジェクトプロパティ*に慣れていない場合�
 
 - .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](../working-with-project-properties.md)」 (プロパティ ページ マクロ) を参照してください。
 
-詳細については、ブログの投稿[「VC++ Directories](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories)」 (VC++ ディレクトリ)、「[Inherited Properties and Property Sheets](https://docs.microsoft.com/cpp/build/project-property-inheritance)」 (継承されたプロパティとプロパティ シート)、および「[Visual Studio 2010 C++ Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)」 (Visual Studio 2010 C++ プロジェクト アップグレード ガイド) を参照してください。
+詳細については、 [Visual studio プロジェクトでのプロパティの継承](../project-property-inheritance.md)に関する記事と、「 [VC + + ディレクトリ](/archive/blogs/vsproject/vc-directories)」、「 [Visual Studio 2010 C++ プロジェクトアップグレードガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)」を参照してください。
 
 ## <a name="directory-types"></a>ディレクトリの種類
 
@@ -90,7 +90,7 @@ Visual Studio の*プロジェクトプロパティ*に慣れていない場合�
 [#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブによってソース コード内で参照されるアセンブリおよびモジュール (メタデータ) ファイルを検索するディレクトリ。 **LIBPATH** 環境変数に対応します。
 
 **ライブラリ ディレクトリ**<br/>
-ライブラリ (.lib) ファイル (ランタイム ライブラリを含む) を検索するディレクトリ。 **LIB** 環境変数に対応します。 この設定は、.obj ファイルには適用されません。.obj ファイルにリンクするには、[**構成プロパティ**]  >  **リンカー**の  >  **[全般**] プロパティページで、[**追加のライブラリの依存関係**] を選択し、ファイルの相対パスを指定します。 詳細については、「[リンカープロパティページ](linker-property-pages.md)」を参照してください。
+ライブラリ (.lib) ファイル (ランタイム ライブラリを含む) を検索するディレクトリ。 **LIB** 環境変数に対応します。 この設定は、.obj ファイルには適用されません。.obj ファイルにリンクするには、[**構成プロパティ**]  >  **リンカー**の  >  **[全般**] プロパティページで、[**追加のライブラリの依存関係**] を選択し、ファイルの相対パスを指定します。 詳細については、「 [リンカープロパティページ](linker-property-pages.md)」を参照してください。
 
 **ライブラリ WinRT ディレクトリ**<br/>
 ユニバーサル Windows プラットフォーム (UWP) アプリで WinRT ライブラリ ファイルを検索するためのディレクトリ。

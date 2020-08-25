@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610908"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839141"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -41,7 +41,7 @@ ref class Map sealed;
 *Kb*<br/>
 キー/値ペア内のキーの型。
 
-*画像*<br/>
+*V*<br/>
 キー/値ペア内の値の型。
 
 *C*<br/>
@@ -49,7 +49,7 @@ ref class Map sealed;
 
 *__is_valid_winrt_type ()**K*および*V*の型を検証し、型がマップに格納できない場合はわかりやすいエラーメッセージを提供する、コンパイラによって生成される関数。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 使用できる型は次のとおりです。
 
@@ -88,12 +88,11 @@ ref class Map sealed;
 |[Map::Remove](#remove)|指定したキー/値ペアを現在のマップ オブジェクトから削除します。|
 |[Map:: Size](#size)|現在のマップ オブジェクト内の要素数を返します。|
 
-### <a name="events"></a>events
+### <a name="events"></a>イベント
 
-|||
-|-|-|
-|名前|説明|
-|[Map:: MapChanged](#mapchanged) イベント|マップが変更されたときに発生します。|
+| 名前 | 説明 |
+|--|--|
+| [Map:: MapChanged](#mapchanged) イベント | マップが変更されたときに発生します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -130,7 +129,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 マップ内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMap->First();` 」のように入力します。
 
@@ -208,7 +207,7 @@ V Lookup(K key);
 
 *キー*とペアになる値。 戻り値の型は typename *V*です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 キーが存在しない場合は、 [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) がスローされます。
 

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: 5a35efb3ca1590931ce1db5fd12d7c930b258286
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218404"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839089"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -63,7 +63,7 @@ Vector オブジェクトに含まれている要素の型。
 
 **Vector**クラスは、 [Windows:: Foundation:: Collections:: Ivector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ の具象実装です。
 
-パブリックの戻り値またはパラメーターで**Vector**型を使用しようとすると、コンパイラエラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+パブリックの戻り値またはパラメーターで **Vector** 型を使用しようとすると、コンパイラエラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -91,12 +91,11 @@ Vector オブジェクトに含まれている要素の型。
 |[Vector::SetAt](#setat)|現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。|
 |[Vector:: Size](#size)|現在のベクター オブジェクトの要素数を返します。|
 
-### <a name="events"></a>events
+### <a name="events"></a>イベント
 
-|||
-|-|-|
-|名前|説明|
-|イベント[ウィンドウ:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector が変更されたときに発生します。|
+| 名前 | 説明 |
+|--|--|
+| イベント [ウィンドウ:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) | Vector が変更されたときに発生します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -108,7 +107,7 @@ Vector オブジェクトに含まれている要素の型。
 
 **名前空間:** Platform::Collections
 
-## <a name="vectorappend-method"></a><a name="append"></a>Vector:: Append メソッド
+## <a name="vectorappend-method"></a><a name="append"></a> Vector:: Append メソッド
 
 指定された項目を、現在の Vector の最後の項目の後に挿入します。
 
@@ -123,7 +122,7 @@ virtual void Append(T item);
 *インデックス*<br/>
 Vector に挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorclear-method"></a><a name="clear"></a>Vector:: Clear メソッド
+## <a name="vectorclear-method"></a><a name="clear"></a> Vector:: Clear メソッド
 
 現在のベクター内のすべての要素を削除します。
 
@@ -133,7 +132,7 @@ Vector に挿入する項目。 *項目*の型は、 *T*型名によって定義
 virtual void Clear();
 ```
 
-## <a name="vectorfirst-method"></a><a name="first"></a>Vector:: First メソッド
+## <a name="vectorfirst-method"></a><a name="first"></a> Vector:: First メソッド
 
 Vector 内の最初の要素を指す反復子を返します。
 
@@ -153,7 +152,7 @@ First () によって返される反復子を保持する便利な方法は、�
 
 STL 関数に渡す反復子のペアが必要な場合は、free 関数の[windows:: foundation:: collections:: begin](../cppcx/begin-function.md)および[Windows:: Foundation:: collections:: end](../cppcx/end-function.md)を使用します。
 
-## <a name="vectorgetat-method"></a><a name="getat"></a>Vector:: GetAt メソッド
+## <a name="vectorgetat-method"></a><a name="getat"></a> Vector:: GetAt メソッド
 
 指定されたインデックスで識別される現在のベクターの要素を取得します。
 
@@ -170,9 +169,9 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="return-value"></a>戻り値
 
-*Index*パラメーターによって指定された要素。 要素の型は、 *T*型名によって定義されます。
+*Index*パラメーターによって指定された要素。 要素の型は、 *T* 型名によって定義されます。
 
-## <a name="vectorgetmany-method"></a><a name="getmany"></a>Vector:: GetMany メソッド
+## <a name="vectorgetmany-method"></a><a name="getmany"></a> Vector:: GetMany メソッド
 
 指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得し、呼び出し元が割り当てた配列にコピーします。
 
@@ -198,9 +197,9 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>解説
 
-この関数は、直接クライアント コードで使用することを目的としたものではありません。 Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md)で内部的に使用されます。
+この関数は、直接クライアント コードで使用することを目的としたものではありません。 Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md) で内部的に使用されます。
 
-## <a name="vectorgetview-method"></a><a name="getview"></a>Vector:: GetView メソッド
+## <a name="vectorgetview-method"></a><a name="getview"></a> Vector:: GetView メソッド
 
 Vector の読み取り専用ビュー、つまり IVectorView を返します。
 
@@ -214,7 +213,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 IVectorView オブジェクト。
 
-## <a name="vectorindexof-method"></a><a name="indexof"></a>Vector:: IndexOf メソッド
+## <a name="vectorindexof-method"></a><a name="indexof"></a> Vector:: IndexOf メソッド
 
 現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。
 
@@ -230,7 +229,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 検索する項目。
 
 *インデックス*<br/>
-パラメーター*値*が見つかった場合は、項目の0から始まるインデックス。それ以外の場合は0です。
+パラメーター *値* が見つかった場合は、項目の0から始まるインデックス。それ以外の場合は0です。
 
 *インデックス*パラメーターは、項目がベクターの最初の要素であるか、項目が見つからなかった場合は0になります。 戻り値がの場合、項目が見つかり、それが最初の要素になります。 **`true`** それ以外の場合、項目は見つかりませんでした。
 
@@ -242,7 +241,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 IndexOf は、std::find_if を使用して項目を検索します。 このため、find_if が必要とする等価比較を有効にするために、カスタム要素の種類で == および != 演算子をオーバーロードする必要があります。
 
-## <a name="vectorinsertat-method"></a><a name="insertat"></a>Vector:: InsertAt メソッド
+## <a name="vectorinsertat-method"></a><a name="insertat"></a> Vector:: InsertAt メソッド
 
 現在のベクター内の指定したインデックスによって識別される要素の位置に、指定した項目を挿入します。
 
@@ -260,7 +259,7 @@ virtual void InsertAt(unsigned int index, T item)
 *item*<br/>
 *Index*で指定された要素のベクターに挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorremoveat-method"></a><a name="removeat"></a>Vector:: RemoveAt メソッド
+## <a name="vectorremoveat-method"></a><a name="removeat"></a> Vector:: RemoveAt メソッド
 
 現在のベクターから指定されたインデックスで識別される要素を削除します。
 
@@ -275,7 +274,7 @@ virtual void RemoveAt(unsigned int index);
 *インデックス*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
-## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>Vector:: RemoveAtEnd メソッド
+## <a name="vectorremoveatend-method"></a><a name="removeatend"></a> Vector:: RemoveAtEnd メソッド
 
 現在の Vector の末尾から要素を削除します。
 
@@ -285,7 +284,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>Vector:: ReplaceAll メソッド
+## <a name="vectorreplaceall-method"></a><a name="replaceall"></a> Vector:: ReplaceAll メソッド
 
 現在のベクターの要素を削除し、指定された配列の要素を挿入します。
 
@@ -300,7 +299,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *→*<br/>
 *T*型名によって定義される型を持つオブジェクトの配列。
 
-## <a name="vectorsetat-method"></a><a name="setat"></a>Vector:: SetAt メソッド
+## <a name="vectorsetat-method"></a><a name="setat"></a> Vector:: SetAt メソッド
 
 現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。
 
@@ -318,7 +317,7 @@ virtual void SetAt(unsigned int index, T item);
 *item*<br/>
 指定された要素に代入する値。 *項目*の型は、 *T*型名によって定義されます。
 
-## <a name="vectorsize-method"></a><a name="size"></a>Vector:: Size メソッド
+## <a name="vectorsize-method"></a><a name="size"></a> Vector:: Size メソッド
 
 現在のベクター オブジェクトの要素数を返します。
 
@@ -332,7 +331,7 @@ virtual property unsigned int Size;
 
 現在の Vector 内の要素数。
 
-## <a name="vectorvector-constructor"></a><a name="ctor"></a>Vector:: Vector コンストラクター
+## <a name="vectorvector-constructor"></a><a name="ctor"></a> Vector:: Vector コンストラクター
 
 ベクター クラスの新しいインスタンスを初期化します。
 
@@ -358,10 +357,10 @@ Vector(std::initializer_list<T> il);
 ### <a name="parameters"></a>パラメーター
 
 *ある*<br/>
-ベクターを初期化するために使用される[std:: array](../standard-library/array-class-stl.md) 。
+ベクターを初期化するために使用される [std:: array](../standard-library/array-class-stl.md) 。
 
 *→*<br/>
-ベクターを初期化するために使用される[Platform:: Array](../cppcx/platform-array-class.md) 。
+ベクターを初期化するために使用される [Platform:: Array](../cppcx/platform-array-class.md) 。
 
 *初期化*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの型。

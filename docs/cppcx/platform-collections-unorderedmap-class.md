@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839128"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -32,7 +32,7 @@ ref class Map sealed;
 *Kb*<br/>
 キー/値ペア内のキーの型。
 
-*画像*<br/>
+*V*<br/>
 キー/値ペア内の値の型。
 
 *C*<br/>
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-**UnorderedMap**は基本的に、Windows ランタイム型のストレージをサポートする[std:: unordered_map](../standard-library/unordered-map-class.md)のラッパーです。 これは、パブリック Windows ランタイムインターフェイスで渡される[Windows:: Foundation:: Collections:: IMap](/uwp/api/windows.foundation.collections.imap-2)型と[IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)型の具象実装です。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)に変更します。
+**UnorderedMap** は基本的に、Windows ランタイム型のストレージをサポートする [std:: unordered_map](../standard-library/unordered-map-class.md) のラッパーです。 これは、パブリック Windows ランタイムインターフェイスで渡される [Windows:: Foundation:: Collections:: IMap](/uwp/api/windows.foundation.collections.imap-2) 型と [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 型の具象実装です。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)に変更します。
 
 詳細については、[コレクション](../cppcx/collections-c-cx.md) を参照してください。
 
@@ -77,12 +77,11 @@ ref class Map sealed;
 |[UnorderedMap:: Remove](#remove)|指定したキー/値ペアを現在のマップ オブジェクトから削除します。|
 |[UnorderedMap:: Size](#size)|現在のマップ オブジェクト内の要素数を返します。|
 
-### <a name="events"></a>events
+### <a name="events"></a>イベント
 
-|||
-|-|-|
-|名前|説明|
-|[Map:: MapChanged](#mapchanged)イベント|マップが変更されたときに発生します。|
+| 名前 | 説明 |
+|--|--|
+| [Map:: MapChanged](#mapchanged) イベント | マップが変更されたときに発生します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -94,7 +93,7 @@ ref class Map sealed;
 
 **名前空間:** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>UnorderedMap:: Clear メソッド
+## <a name="unorderedmapclear-method"></a><a name="clear"></a> UnorderedMap:: Clear メソッド
 
 現在の UnorderedMap オブジェクトから、すべてのキー/値ペアを削除します。
 
@@ -104,7 +103,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap:: First メソッド
+## <a name="unorderedmapfirst-method"></a><a name="first"></a> UnorderedMap:: First メソッド
 
 順序なしのマップ内の最初の[Windows:: Foundation:: Collections:: \<K,V> ikeyvaluepair<k,](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を指定する反復子を返します。
 
@@ -124,7 +123,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myUnorderedMap->First();` 」のように入力します。
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap:: GetView メソッド
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a> UnorderedMap:: GetView メソッド
 
 現在の UnorderedMap の読み取り専用ビューを返します。これは、 [Windows:: Foundation:: collections:: IMapView:: IMapView](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスを実装する[Platform:: Collections:: UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)です。
 
@@ -138,7 +137,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` オブジェクト。
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>UnorderedMap:: HasKey メソッド
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a> UnorderedMap:: HasKey メソッド
 
 指定したキーが現在の UnorderedMap に格納されているかどうかを判定します。
 
@@ -159,7 +158,7 @@ UnorderedMap 要素の検索に使用するキー。 *キー*の型は typename 
 
 **`true`** キーが見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>UnorderedMap:: Insert メソッド
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a> UnorderedMap:: Insert メソッド
 
 指定したキー/値ペアを現在の UnorderedMap オブジェクトに追加します。
 
@@ -182,9 +181,9 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在のマップ内の既存の要素のキーが*キー*と一致し、その要素の値部分が*value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値**のパラメーター*がキーと値のペアになり、現在の UnorderedMap に追加されている場合は。
+**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値**のパラメーター*がキーと値のペアになり、現在の UnorderedMap に追加されている場合は。
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>UnorderedMap:: Lookup メソッド
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> UnorderedMap:: Lookup メソッド
 
 型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -205,7 +204,7 @@ UnorderedMap の要素の検索に使用するキー。 *キー*の型は typena
 
 *キー*とペアになる値。 戻り値の型は typename *V*です。
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap:: MapChanged
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap:: MapChanged
 
 項目がマップに挿入されたときまたはマップから削除されたときに発生します。
 
@@ -223,7 +222,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 C# または Visual Basic プロジェクトの IMap として Windows ランタイムアプリを \<K,V> IDictionary として \<K,V> します。
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>UnorderedMap:: Remove メソッド
+## <a name="unorderedmapremove-method"></a><a name="remove"></a> UnorderedMap:: Remove メソッド
 
 指定したキー/値ペアを UnorderedMap オブジェクトから削除します。
 
@@ -239,7 +238,7 @@ virtual void Remove(
 *key*<br/>
 キー/値ペアのキー部分。 *キー*の型は typename *K*です。
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap:: Size メソッド
+## <a name="unorderedmapsize-method"></a><a name="size"></a> UnorderedMap:: Size メソッド
 
 UnorderedMap 内の[Windows:: Foundation:: Collections:: ikeyvaluepair<k, \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素の数を返します。
 
@@ -253,7 +252,7 @@ virtual property unsigned int Size;
 
 順序なしのマップの要素数。
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>UnorderedMap:: UnorderedMap コンストラクター
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a> UnorderedMap:: UnorderedMap コンストラクター
 
 UnorderedMap クラスの新しいインスタンスを初期化します。
 
@@ -347,13 +346,13 @@ UnorderedMap(
 2 つのキーを比較してそれらが等しいかどうかを判定できる関数オブジェクト。 このパラメーターの既定値は[std: \<K> : equal_to](../standard-library/equal-to-struct.md)です。
 
 *H*<br/>
-キーのハッシュ値を生成する関数オブジェクト。 このパラメーターの既定値は、クラスがサポートするキーの種類の[ハッシュクラス 1](../standard-library/hash-class.md)です。
+キーのハッシュ値を生成する関数オブジェクト。 このパラメーターの既定値は、クラスがサポートするキーの種類の [ハッシュクラス 1](../standard-library/hash-class.md) です。
 
 *m*<br/>
 現在の UnorderedMap を初期化するために使用される[std:: unordered_map](../standard-library/unordered-map-class.md)への参照または[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 *自動車*<br/>
-Std: [: initializer_list](../standard-library/initializer-list-class.md) : マップを初期化するために使用される[std::p air](../standard-library/pair-structure.md)オブジェクト。
+Std: [: initializer_list](../standard-library/initializer-list-class.md) : マップを初期化するために使用される [std::p air](../standard-library/pair-structure.md) オブジェクト。
 
 *first*<br/>
 現在の UnorderedMap を初期化するために使用される要素の範囲内の最初の要素の入力反復子。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5cf2bb8fab75c64d74a2f28964b3019200dad51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214566"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846018"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214566"
 
 ## <a name="remarks"></a>解説
 
-**Requestedit** C++属性には、 [requestedit](/windows/win32/Midl/requestedit) MIDL 属性と同じ機能があります。
+**Requestedit** C++ 属性には、 [requestedit](/windows/win32/Midl/requestedit) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -33,22 +33,20 @@ ms.locfileid: "80214566"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[データ メンバー属性](data-member-attributes.md)<br/>
+[データメンバー属性](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)

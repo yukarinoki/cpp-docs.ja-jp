@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216506"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838348"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 
@@ -81,9 +81,9 @@ class CDataSource
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
-|[[閉じる]](#close)|接続を閉じます。|
+|[閉じる](#close)|接続を閉じます。|
 |[GetInitializationString](#getinitializationstring)|現在開いているデータソースの初期化文字列を取得します。|
 |[GetProperties](#getproperties)|接続されたデータソースに対して現在設定されているプロパティの値を取得します。|
 |[GetProperty](#getproperty)|接続されたデータソースに対して現在設定されている単一のプロパティの値を取得します。|
@@ -95,11 +95,11 @@ class CDataSource
 
 ## <a name="remarks"></a>解説
 
-1つの接続に対して1つ以上のデータベースセッションを作成できます。 これらのセッションは、によって表され `CSession` ます。 でセッションを作成する前に、 [CDataSource:: Open](../../data/oledb/cdatasource-open.md)を呼び出して接続を開く必要があり `CSession::Open` ます。
+1つの接続に対して1つ以上のデータベースセッションを作成できます。 これらのセッションは、によって表され `CSession` ます。 でセッションを作成する前に、 [CDataSource:: Open](../../data/oledb/cdatasource-open.md) を呼び出して接続を開く必要があり `CSession::Open` ます。
 
-の使用例については `CDataSource` 、 [CatDB](../../overview/visual-cpp-samples.md)サンプルを参照してください。
+の使用例については `CDataSource` 、 [CatDB](../../overview/visual-cpp-samples.md) サンプルを参照してください。
 
-## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: Close
+## <a name="cdatasourceclose"></a><a name="close"></a> CDataSource:: Close
 
 ポインターを解放して接続を閉じ `m_spInit` ます。
 
@@ -109,7 +109,7 @@ class CDataSource
 void Close() throw();
 ```
 
-## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource:: GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a> CDataSource:: GetInitializationString
 
 現在開いているデータソースの初期化文字列を取得します。
 
@@ -136,7 +136,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 結果の初期化文字列を使用して、後でこのデータソース接続を再び開くことができます。
 
-## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource:: GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a> CDataSource:: GetProperties
 
 接続されたデータソースオブジェクトに対して要求されたプロパティ情報を返します。
 
@@ -161,7 +161,7 @@ Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBPropertie
 
 1つのプロパティを取得するには、 [GetProperty](../../data/oledb/cdatasource-getproperty.md)を使用します。
 
-## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource:: GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: GetProperty
 
 接続されているデータソースオブジェクトの指定されたプロパティの値を返します。
 
@@ -192,7 +192,7 @@ HRESULT GetProperty(const GUID& guid,
 
 複数のプロパティを取得するには、 [GetProperties](../../data/oledb/cdatasource-getproperties.md)を使用します。
 
-## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: Open
+## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: Open
 
 、、またはモニカーを使用してデータソースへの接続を開き `CLSID` `ProgID` `CEnumerator` ます。または、ユーザーにロケーターダイアログボックスを表示させることもできます。
 
@@ -240,10 +240,10 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-から`CLSID`データプロバイダーの。
+から `CLSID` データプロバイダーの。
 
 *pPropSet*<br/>
-から設定するプロパティと値を格納している[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。
+から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。
 
 *nPropertySets*<br/>
 から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
@@ -264,7 +264,7 @@ HRESULT Open(LPCSTR szProgID,
 [入力] プログラム ID。
 
 *子*<br/>
-から呼び出し元がを指定していない場合に、接続を開くためのモニカーを取得するために使用される[CEnumerator](../../data/oledb/cenumerator-class.md)オブジェクト `CLSID` 。
+から呼び出し元がを指定していない場合に、接続を開くためのモニカーを取得するために使用される [CEnumerator](../../data/oledb/cenumerator-class.md) オブジェクト `CLSID` 。
 
 *hWnd*<br/>
 [入力] ダイアログ ボックスの親であるウィンドウへのハンドル。 *HWnd*パラメーターを使用する関数オーバーロードを使用すると、サービスコンポーネントが自動的に呼び出されます。詳細については、「解説」を参照してください。
@@ -280,7 +280,7 @@ HRESULT Open(LPCSTR szProgID,
 
 *HWnd*パラメーターを使用するメソッドオーバーロードは、oledb32.dll 内のサービスコンポーネントを持つデータソースオブジェクトを開きます。この DLL には、リソースプーリング、自動トランザクション参加などのサービスコンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
-*HWnd*パラメーターを使用しないメソッドオーバーロードは、oledb32.dll のサービスコンポーネントを使用せずに、データソースオブジェクトを開きます。 これらの関数オーバーロードで開かれた[CDataSource](../../data/oledb/cdatasource-class.md)オブジェクトは、サービスコンポーネントの機能を使用できなくなります。
+*HWnd*パラメーターを使用しないメソッドオーバーロードは、oledb32.dll のサービスコンポーネントを使用せずに、データソースオブジェクトを開きます。 これらの関数オーバーロードで開かれた [CDataSource](../../data/oledb/cdatasource-class.md) オブジェクトは、サービスコンポーネントの機能を使用できなくなります。
 
 ### <a name="example"></a>例
 
@@ -288,7 +288,7 @@ HRESULT Open(LPCSTR szProgID,
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource:: OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a> CDataSource:: OpenFromFileName
 
 ユーザー指定のファイル名で指定されたファイルからデータ ソースを開きます。
 
@@ -303,7 +303,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] ファイル名、通常はデータ ソース接続 (.UDL) ファイル。
 
-データリンクファイル (.udl ファイル) の詳細については、Windows SDK の「[データリンク API の概要](/previous-versions/windows/desktop/ms718102(v=vs.85))」を参照してください。
+データリンクファイル (.udl ファイル) の詳細については、Windows SDK の「 [データリンク API の概要](/previous-versions/windows/desktop/ms718102(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -313,7 +313,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
-## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource:: OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a> CDataSource:: OpenFromInitializationString
 
 ユーザー指定の初期化文字列によって指定されたデータソースを開きます。
 
@@ -342,7 +342,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。
 
-## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource:: OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a> CDataSource:: OpenWithPromptFileName
 
 このメソッドは、ダイアログ ボックスをユーザーに表示し、ユーザーが指定したファイルを使用してデータ ソースを開きます。
 
@@ -373,7 +373,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
-## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource:: OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a> CDataSource:: OpenWithServiceComponents
 
 oledb32.dll 内のサービス コンポーネントを使用してデータ ソース オブジェクトを開きます。
 
@@ -392,16 +392,16 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-から`CLSID`データプロバイダーの。
+から `CLSID` データプロバイダーの。
 
 *szProgID*<br/>
 [入力] データ プロバイダーのプログラム ID。
 
 *pPropset*<br/>
-から設定するプロパティと値を格納している[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 *PPropset*で同じプロパティが複数回指定されている場合、使用される値はプロバイダー固有です。 *Ulpropsets*がゼロの場合、このパラメーターは無視されます。
+から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 *PPropset*で同じプロパティが複数回指定されている場合、使用される値はプロバイダー固有です。 *Ulpropsets*がゼロの場合、このパラメーターは無視されます。
 
 *ulPropSets*<br/>
-から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。 この値が0の場合、プロバイダーは*pPropset*を無視します。
+から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。 この値が0の場合、プロバイダーは *pPropset*を無視します。
 
 ### <a name="return-value"></a>戻り値
 

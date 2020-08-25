@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f90893390bc67cb495e646f61e3d61a994e42e50
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166342"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845992"
 ---
 # <a name="retval"></a>retval
 
@@ -25,9 +25,9 @@ ms.locfileid: "80166342"
 
 ## <a name="remarks"></a>解説
 
-**Retval** C++属性には、 [retval](/windows/win32/Midl/retval) MIDL 属性と同じ機能があります。
+**Retval** C++ 属性には、 [retval](/windows/win32/Midl/retval) MIDL 属性と同じ機能があります。
 
-**retval**は、関数の宣言の最後の引数に指定されている必要があります。
+**retval** は、関数の宣言の最後の引数に指定されている必要があります。
 
 ## <a name="example"></a>例
 
@@ -35,18 +35,16 @@ ms.locfileid: "80166342"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイスパラメーター、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|**out**|
+|**適用対象**|インターフェイスパラメーター、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|**out**|
 |**無効な属性**|**in**|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167337"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838921"
 ---
 # <a name="call_as"></a>call_as
 
-リモート関数が呼び出されたときにローカル関数が呼び出されるように、[ローカル](local-cpp.md)関数をリモート関数にマップできるようにします。
+リモート関数が呼び出されたときにローカル関数が呼び出されるように、 [ローカル](local-cpp.md) 関数をリモート関数にマップできるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -30,11 +30,11 @@ ms.locfileid: "80167337"
 
 ## <a name="remarks"></a>解説
 
-**Call_as** C++属性には、 [call_as](/windows/win32/Midl/call-as) MIDL 属性と同じ機能があります。
+**Call_as** C++ 属性には、 [call_as](/windows/win32/Midl/call-as) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、 **call_as**を使用して、リモート処理不可能関数 (`f1`) をリモート処理可能な関数 (`Remf1`) にマップする方法を示しています。
+次のコードは、 **call_as** を使用して、リモート処理不可能関数 () をリモート処理可能 `f1` な関数 () にマップする方法を示してい `Remf1` ます。
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -50,19 +50,17 @@ __interface IMInterface {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[local](local-cpp.md)
+[地元の](local-cpp.md)

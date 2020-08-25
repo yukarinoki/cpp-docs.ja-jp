@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166641"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838842"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166641"
 
 ## <a name="remarks"></a>解説
 
-**Ms_union** C++属性には、 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 属性と同じ機能があります。
+**Ms_union** C++ 属性には、 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -56,18 +56,16 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|カプセル化されていない共用体|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|カプセル化されていない共用体|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|`dispinterface`|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)
+[Typedef、Enum、Union、および Struct 属性](typedef-enum-union-and-struct-attributes.md)

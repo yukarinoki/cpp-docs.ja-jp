@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 634a78274a9c7a4ed75466b083f4ee4880401630
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230170"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845680"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution クラス
 
@@ -76,10 +76,8 @@ public:
 
 クラステンプレートは、カイ2乗分布に従って分布した、ユーザー指定の浮動小数点型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|
-|`chi_squared_distribution::operator()`||[param_type](#param_type)|
+[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
+[param_type](#param_type)
 
 プロパティ関数 `n()` は、格納されている分布パラメーター `n` の値を返します。
 
@@ -224,7 +222,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:: chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a> chi_squared_distribution:: chi_squared_distribution
 
 分布を作成します。
 
@@ -249,7 +247,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p aram_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a> chi_squared_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

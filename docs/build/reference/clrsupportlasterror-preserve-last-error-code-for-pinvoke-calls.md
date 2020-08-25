@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 19930591c2d0406c68b1a408622a49c9e8b1d551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 071846e18dfef6cad0b7c5fb983dac3f6c85a689
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839167"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)
 
-**/CLRSUPPORTLASTERROR**は、既定でオンになって **、/clr**でコンパイルされたコードから DLLS のネイティブ関数を呼び出すことができる P/Invoke 機構を通じて呼び出される関数の最後のエラー コードを保持します。
+既定でオンになっている **/CLRSUPPORTLASTERROR**は、P/Invoke 機構を通じて呼び出された関数の最後のエラーコードを保持します。これにより、 **/clr**でコンパイルされたコードから dll 内のネイティブ関数を呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,45 +26,14 @@ ms.locfileid: "81322276"
 
 ## <a name="remarks"></a>解説
 
-最後のエラー コードを保持すると、パフォーマンスが低下します。  最後のエラー コードを保持することによるパフォーマンスへの影響を受けたくない場合は **、/CLRSUPPORTLASTERROR:NO**を使用してください。
+最後のエラーコードを保持することは、パフォーマンスの低下を意味します。  最新のエラーコードを保持することによるパフォーマンスへの影響を避ける場合は、  **/CLRSUPPORTLASTERROR: NO**とリンクします。
 
-**/CLRSUPPORTLASTERROR:SYSTEMDLL**を使用してリンクすると、パフォーマンスへの影響を最小限に抑えることができます。  システム DLL は、次のいずれかとして定義されます。
-
-|||||
-|-|-|-|-|
-|ACLUI.Dll|アクティブド。Dll|アドプティフ。Dll|ADVAPI32.Dll|
-|アシクフィルトDll|認証されます。Dll|AVICAP32.Dll|AVIFIL32.Dll|
-|キャビネット。Dll|クリュサピ。Dll|COMCTL32.Dll|COMDLG32.Dll|
-|コンスVCS。Dll|クレドイ。Dll|クリプト32。Dll|クリプトネット。Dll|
-|クリプトイ。Dll|D3D8THK.Dll|DBGENG.Dll|DBGHELP.Dll|
-|DCIMAN32.Dll|DNSAPI。Dll|DSPROP.Dll|スイエクスタDll|
-|GDI32.Dll|GLU32.Dll|HLINK.Dll|ICM32.Dll|
-|イメージHLP.Dll|IMM32.Dll|イフプアピ。Dll|IPROP。Dll|
-|カーネル32。Dll|KSUSER。Dll|ロードパーフ。Dll|LZ32.Dll|
-|MAPI32。Dll|MGMTAPI.Dll|モブシンク。Dll|Mpr。Dll|
-|MPRAPI.Dll|MQRT.Dll|MSACM32.Dll|MSCMS.Dll|
-|Msi。Dll|MSIMG32.Dll|MSRATING。Dll|MSTASK.Dll|
-|MSVFW32.Dll|MSWSOCK.Dll|MTXEX.Dll|NDDEAPI.Dll|
-|NETAPI32.Dll|NPPツール。Dll|を使用します。Dll|をクリックします。Dll|
-|を実行します。Dll|ODBC32.Dll|ODBCBCP.Dll|OLE32.Dll|
-|オレACC。Dll|オレオート32。Dll|オレドグ。Dll|オープングル32。Dll|
-|Pdh。Dll|ポワープロ。Dll|QOSNAME.Dll|クエリ。Dll|
-|RASAPI32.Dll|ラスドアルグ。Dll|ラッサピ。Dll|リセチルDll|
-|豊か20。Dll|RPCNS4.Dll|RPCRT4.Dll|Rtm。Dll|
-|RTUTILS.Dll|スカードルグ。Dll|SECUR32.Dll|センサピ。Dll|
-|Setupapi。Dll|Sfc。Dll|Shell32。Dll|シュフォルダ。Dll|
-|SHLWAPI.Dll|シスブクップ。Dll|SNMPAPI.Dll|SRクライアント。Dll|
-|Sti。Dll|TAPI32.Dll|トラフィック。Dll|Url。Dll|
-|URLMON.Dll|User32。Dll|Userenv。Dll|USP10.Dll|
-|UXTHEME.Dll|VDMDBG.Dll|バージョン。Dll|ウィンファックス。Dll|
-|WINHTTP。Dll|Wininet。Dll|ウィンMM。Dll|WINSカード。Dll|
-|ウィントラスト。Dll|WLDAP32.Dll|WOW32.Dll|WS2_32.DLL|
-|WSNMP32.Dll|WSOCK32.DLL|WTSAPI32.Dll|1000Dll|
+**/CLRSUPPORTLASTERROR: SYSTEMDLL**とリンクすることで、パフォーマンスへの影響を最小限に抑えることができます。この場合、システム dll 内の関数の最後のエラーコードのみが保持されます。
 
 > [!NOTE]
-> 最後のエラーを保持することは、同じモジュール内の CLR コードで使用されるアンマネージ関数ではサポートされていません。
+> 同じモジュールで CLR コードによって使用されるアンマネージ関数では、最後のエラーの保持はサポートされていません。
 
-- 詳細については、「 [/clr (共通言語ランタイムのコンパイル)」](clr-common-language-runtime-compilation.md)を参照してください。
+- 詳細については、「 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
@@ -74,15 +43,15 @@ ms.locfileid: "81322276"
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. [追加オプション] ボックスに**オプション**を入力します。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
 ## <a name="example"></a>例
 
-次のサンプルでは、最後のエラーを変更する 1 つのエクスポート関数を持つネイティブ DLL を定義します。
+次の例では、最後のエラーを変更するエクスポートされた関数を1つ持つネイティブ DLL を定義します。
 
 ```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
@@ -99,7 +68,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>例
 
-次のサンプルでは、DLL を使用して **、/CLRSUPPORTLASTERROR**の使用方法を示します。
+次の例では、DLL を使用して、 **/CLRSUPPORTLASTERROR**の使用方法を示しています。
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp

@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212124"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838465"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 
@@ -126,7 +126,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[AddRefRows](#addrefrows)|参照カウントをインクリメントします。|
 |[CBulkRowset](#cbulkrowset)|コンストラクターです。|
@@ -136,16 +136,16 @@ class CBulkRowset : public CRowset<TAccessor>
 |[MovePrev](#moveprev)|前の行に移動します。|
 |[MoveToBookmark](#movetobookmark)|ブックマークによってマークされた行、またはそのブックマークの指定したオフセット位置にある行をフェッチします。|
 |[MoveToRatio](#movetoratio)|行セット内の小数位置から始まる行をフェッチします。|
-|[ReleaseRows](#releaserows)|現在の行 (`m_nCurrentRow`) をゼロに設定し、すべての行を解放します。|
+|[ReleaseRows](#releaserows)|現在の行 ( `m_nCurrentRow` ) をゼロに設定し、すべての行を解放します。|
 |[SetRows](#setrows)|1回の呼び出しで取得される行ハンドルの数を設定します。|
 
 ## <a name="example"></a>例
 
-`CBulkRowset` クラスの使用例を次に示します。
+クラスの使用例を次に示し `CBulkRowset` ます。
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a> CBulkRowset:: AddRefRows
 
 [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))を呼び出して、一括行セットから現在取得されているすべての行の参照カウントをインクリメントします。
 
@@ -159,9 +159,9 @@ HRESULT AddRefRows() throw();
 
 標準の HRESULT です。
 
-## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
 
-新しい `CBulkRowset` オブジェクトを作成し、既定の行数を10に設定します。
+新しいオブジェクトを作成 `CBulkRowset` し、既定の行数を10に設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -169,7 +169,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a> CBulkRowset:: MoveFirst
 
 データの最初の行を取得します。
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 標準の HRESULT です。
 
-## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a> CBulkRowset:: MoveLast
 
 最後の行に移動します。
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 標準の HRESULT です。
 
-## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a> CBulkRowset:: MoveNext
 
 次のデータ行を取得します。
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 標準の HRESULT です。 行セットの末尾に到達すると、DB_S_ENDOFROWSET を返します。
 
-## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a> CBulkRowset:: MovePrev
 
 前の行に移動します。
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 標準の HRESULT です。
 
-## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a> CBulkRowset:: MoveToBookmark
 
 ブックマークまたは指定されたオフセット (*lSkip*) にある行を、そのブックマークからフェッチします。
 
@@ -238,7 +238,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>パラメーター
 
-*ブックマーク*<br/>
+*bookmark*<br/>
 からデータをフェッチする場所を示すブックマーク。
 
 *lSkip*<br/>
@@ -248,7 +248,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 *OLE DB プログラマーリファレンス*の「 [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) 」を参照してください。
 
-## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset:: MoveToRatio
 
 行セット内の小数位置から始まる行をフェッチします。
 
@@ -273,13 +273,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 ### <a name="remarks"></a>解説
 
-`MoveToRatio` は、次の式に従って、おおよその行をフェッチします。
+`MoveToRatio` 次の式に従って、おおよその行をフェッチします。
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-ここで `RowsetSize` には行セットのサイズを指定します。 この数式の精度は、特定のプロバイダーによって異なります。 詳細については、 *OLE DB プログラマーリファレンス*の「 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 」を参照してください。
+ここで `RowsetSize` 、は行セットのサイズです (行単位)。 この数式の精度は、特定のプロバイダーによって異なります。 詳細については、 *OLE DB プログラマーリファレンス*の「 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 」を参照してください。
 
-## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset:: ReleaseRows
 
 [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))を呼び出して、一括行セットから現在取得されているすべての行の参照カウントをデクリメントします。
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 標準の HRESULT です。
 
-## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a> CBulkRowset:: SetRows
 
 各呼び出しによって取得される行ハンドルの数を設定します。
 
@@ -312,7 +312,7 @@ void SetRows(DBROWCOUNT nRows) throw();
 
 この関数を呼び出す場合は、行セットを開く前ににする必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

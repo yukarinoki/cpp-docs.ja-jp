@@ -1,17 +1,17 @@
 ---
-title: バインド可能C++ (COM 属性)
+title: バインド可能 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167356"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838972"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,9 +25,9 @@ ms.locfileid: "80167356"
 
 ## <a name="remarks"></a>解説
 
-**バインド** C++可能な属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または[propputref](propputref.md)属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
+**バインド**可能な C++ 属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または [propputref](propputref.md) 属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
 
-次の MFC サンプルは、**バインド**可能の使用方法を示しています。
+次の MFC サンプルは、 **バインド**可能の使用方法を示しています。
 
 - [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
@@ -37,7 +37,7 @@ ms.locfileid: "80167356"
 
 ## <a name="example"></a>例
 
-次のコードは、プロパティで**バインド**可能なを使用する方法を示しています。
+次のコードは、プロパティで **バインド** 可能なを使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -60,18 +60,16 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

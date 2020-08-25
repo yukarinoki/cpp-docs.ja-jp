@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228181"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838553"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -51,7 +51,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[lock_guard クラス](../standard-library/lock-guard-class.md)|オブジェクトを作成し、そのデストラクタ―が `mutex` のロックを解除するためにインスタンス化できるテンプレートを表します。|
 |[mutex クラス (C++ 標準ライブラリ)](../standard-library/mutex-class-stl.md)|mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で相互排他を適用します。|
@@ -61,9 +61,9 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 |[timed_mutex クラス](../standard-library/timed-mutex-class.md)|timed mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で時間制限ブロックのある相互排他を適用します。|
 |[unique_lock クラス](../standard-library/unique-lock-class.md)|`mutex` のロックとロック解除を管理するオブジェクトを作成するためにインスタンス化できるテンプレートを表します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|指定された呼び出し可能オブジェクトが、実行中に 1 回だけ呼び出されるメカニズムを提供します。|
 |[lock](../standard-library/mutex-functions.md#lock)|デッドロックなしですべての引数をロックしようとします。|
@@ -72,7 +72,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="structs"></a>構造体
 
-|||
+|名前|説明|
 |-|-|
 |[adopt_lock_t 構造体](../standard-library/adopt-lock-t-structure.md)|`adopt_lock` の定義に使用する型を表します。|
 |[defer_lock_t 構造体](../standard-library/defer-lock-t-structure.md)|`unique_lock` のオーバーロード コンストラクターの 1 つを選択するために使用される、`defer_lock` オブジェクトを定義する型を表します。|
@@ -81,7 +81,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="variables"></a>変数
 
-|||
+|名前|説明|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|`lock_guard` と `unique_lock` のコンストラクターに渡されるオブジェクを表し、同じコンストラクターに渡されるミューテックス オブジェクトがロックされていることを示します。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|`unique_lock` のコンストラクターに渡すことのできるオブジェクトを表し、コンストラクターがそれに渡されるミューテックス オブジェクトをロックしないことを示しています。|

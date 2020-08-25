@@ -29,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211108"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845667"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
-さまざまな OLE DB プロパティインターフェイス (`IDBProperties`、`IDBProperties`、`IRowsetInfo`など) のプロパティを実装します。
+さまざまな OLE DB プロパティインターフェイス (、、など) のプロパティを `IDBProperties` 実装 `IDBProperties` `IRowsetInfo` します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`BEGIN_PROPSET_MAP`を格納しているクラス。
+を格納しているクラス `BEGIN_PROPSET_MAP` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetPropValue](#getpropvalue)|プロパティセットからプロパティを取得します。|
 |[IsValidValue](#isvalidvalue)|プロパティを設定する前に値を検証するために使用されます。|
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 このクラスのほとんどは実装の詳細です。
 
-`CUtlProps` には、内部的にプロパティを設定するための2つのメンバー ( [getpropvalue](../../data/oledb/cutlprops-getpropvalue.md)と[setpropvalue](../../data/oledb/cutlprops-setpropvalue.md)) が含まれています。
+`CUtlProps` 内部的にプロパティを設定するための2つのメンバー ( [getpropvalue](../../data/oledb/cutlprops-getpropvalue.md) と [setpropvalue](../../data/oledb/cutlprops-setpropvalue.md)) が含まれています。
 
 プロパティセットマップで使用されるマクロの詳細については、「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 」および「 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)」を参照してください。
 
-## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
 プロパティセットからプロパティを取得します。
 
@@ -101,9 +101,9 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は `Failure` し、成功した場合は S_OK します。
+`Failure` 失敗した場合は、成功した場合は S_OK。
 
-## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a> CUtlProps:: IsValidValue
 
 プロパティを設定する前に値を検証するために使用されます。
 
@@ -130,7 +130,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 プロパティの設定に使用しようとしている値に対して実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、パスワードテーブルに対して DBPROP_AUTH_PASSWORD を検証して、有効な値を判断することができます。
 
-## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a> CUtlProps:: OnInterfaceRequested
 
 コンシューマーがオブジェクト作成インターフェイスの1つでメソッドを呼び出したときに、オプションのインターフェイスの要求を処理します。
 
@@ -143,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>パラメーター
 
 *riid*<br/>
-から要求されたインターフェイスの IID。 詳細については、 *OLE DB プログラマーのリファレンス*( *MDAC SDK*) に含まれる `ICommand::Execute` の*riid*パラメーターの説明を参照してください。
+から要求されたインターフェイスの IID。 詳細については、 *riid* `ICommand::Execute` *OLE DB プログラマーのリファレンス*( *MDAC SDK*) にある、の riid パラメーターの説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
-コンシューマーがオブジェクト作成インターフェイス (`IDBCreateSession`、`IDBCreateCommand`、`IOpenRowset`、`ICommand`など) のいずれかでメソッドを呼び出した場合、`OnInterfaceRequested` は省略可能なインターフェイスのコンシューマー要求を処理します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーが `IID_IRowsetLocate`を要求した場合、`OnInterfaceRequested` `DBPROP_IRowsetLocate` インターフェイスを設定します。 これにより、行セットの作成時に適切な状態が維持されます。
+`OnInterfaceRequested` コンシューマーがオブジェクト作成インターフェイス (、、、など) のいずれかでメソッドを呼び出したときに、オプションのインターフェイスのコンシューマー要求を処理 `IDBCreateSession` `IDBCreateCommand` `IOpenRowset` `ICommand` します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーから要求された場合、は `IID_IRowsetLocate` `OnInterfaceRequested` インターフェイスを設定し `DBPROP_IRowsetLocate` ます。 これにより、行セットの作成時に適切な状態が維持されます。
 
-コンシューマーが `IOpenRowset::OpenRowset` または `ICommand::Execute`を呼び出すと、このメソッドが呼び出されます。
+このメソッドは、コンシューマーがまたはを呼び出したときに呼び出され `IOpenRowset::OpenRowset` `ICommand::Execute` ます。
 
-コンシューマーがオブジェクトを開き、オプションのインターフェイスを要求する場合、プロバイダーはそのインターフェイスに関連付けられたプロパティを VARIANT_TRUE に設定する必要があります。 プロパティ固有の処理を許可するには、プロバイダーの `Execute` メソッドが呼び出される前に `OnInterfaceRequested` が呼び出されます。 既定では、`OnInterfaceRequested` は次のインターフェイスを処理します。
+コンシューマーがオブジェクトを開き、オプションのインターフェイスを要求する場合、プロバイダーはそのインターフェイスに関連付けられたプロパティを VARIANT_TRUE に設定する必要があります。 プロパティ固有の処理を許可するに `OnInterfaceRequested` は、プロバイダーのメソッドが呼び出される前に、が呼び出され `Execute` ます。 既定では、は `OnInterfaceRequested` 次のインターフェイスを処理します。
 
 - `IRowsetLocate`
 
@@ -165,7 +165,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 他のインターフェイスを処理する場合は、関数を処理するために、データソース、セッション、コマンド、または行セットクラスでこの関数をオーバーライドします。 このオーバーライドでは、通常の set/get プロパティインターフェイスを使用して、設定プロパティにチェーンプロパティも設定されていることを確認する必要があります (「 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)」を参照してください)。
 
-## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 
 プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。
 
@@ -194,11 +194,11 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 ### <a name="example"></a>例
 
-この関数では、ユーザーは `DBPROP*` パラメーターからプロパティ ID を取得します。 これで、ID をプロパティとチェーンに比較することができます。 プロパティが見つかった場合は、他のプロパティと共に設定されるプロパティを使用して `SetProperties` が呼び出されます。 この場合、1つが `DBPROP_IRowsetLocate`、`DBPROP_LITERALBOOKMARKS`、または `DBPROP_ORDEREDBOOKMARKS` プロパティを取得すると、`DBPROP_BOOKMARKS` プロパティを設定できます。
+この関数では、ユーザーはパラメーターからプロパティ ID を取得し `DBPROP*` ます。 これで、ID をプロパティとチェーンに比較することができます。 プロパティが見つかった場合 `SetProperties` は、他のプロパティと共に設定されるプロパティを使用してが呼び出されます。 この場合、1つが、、のいずれかのプロパティを取得すると、 `DBPROP_IRowsetLocate` `DBPROP_LITERALBOOKMARKS` プロパティを `DBPROP_ORDEREDBOOKMARKS` 設定でき `DBPROP_BOOKMARKS` ます。
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a> CUtlProps:: SetPropValue
 
 プロパティセット内のプロパティを設定します。
 
@@ -223,9 +223,9 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は `Failure` し、成功した場合は S_OK します。
+`Failure` 失敗した場合は、成功した場合は S_OK。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
